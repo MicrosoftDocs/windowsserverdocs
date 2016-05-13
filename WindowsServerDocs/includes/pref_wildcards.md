@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Boxes in Computer Name (NetBIOS only), Domain, Site, Terminal Session, and User (if not matched by SID) targeting items accept single character (?) and multiple character (*) wildcards.</Token>

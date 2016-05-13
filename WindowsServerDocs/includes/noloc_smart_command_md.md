@@ -1,0 +1,1 @@
+To open a command prompt, on the **Start** screen, type **cmd**, and then click **command prompt**.

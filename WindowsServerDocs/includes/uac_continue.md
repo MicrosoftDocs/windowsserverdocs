@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">On the <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">User Account Control</ui> page, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Continue</ui>.</Token>

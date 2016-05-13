@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">If you change this parameter, you must stop and restart the POP3 service. For more information on changing the POP3 service state, see Related Topics.</Token>

@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">On the computer in the target domain on which ADMT is installed, log on by using the ADMT account migration account.</Token>

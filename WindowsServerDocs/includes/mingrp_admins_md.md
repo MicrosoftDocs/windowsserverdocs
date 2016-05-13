@@ -1,0 +1,1 @@
+Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.

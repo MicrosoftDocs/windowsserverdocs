@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Due to its dependency on the IPX/SPX protocol, Client Service for NetWare is not available on Windows XP 64-Bit Edition and the 64-bit versions of the Windows Server 2003 family.</Token>

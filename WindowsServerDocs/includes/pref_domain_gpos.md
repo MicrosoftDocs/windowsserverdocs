@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Preference items are available only in domain-based GPOs.</Token>

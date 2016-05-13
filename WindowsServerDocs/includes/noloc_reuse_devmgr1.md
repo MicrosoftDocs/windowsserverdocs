@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">In the console tree, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Computer Management</ui>, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">System Tools</ui>, and then click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Device Manager</ui>.</Token>

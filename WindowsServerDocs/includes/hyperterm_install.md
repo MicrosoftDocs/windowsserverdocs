@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">HyperTerminal is not installed by default. For information on how to install HyperTerminal, see Related Topics.</Token>

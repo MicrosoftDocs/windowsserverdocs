@@ -1,0 +1,1 @@
+Windows Storage Server 2012 R2 Standard

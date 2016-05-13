@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">This procedure can also be performed remotely with the Licensing administrative tool. For more information, click <legacyBold xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Related Topics</legacyBold>.</Token>

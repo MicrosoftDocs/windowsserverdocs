@@ -1,0 +1,22 @@
+---
+title: DirectAccess Test Lab Guides
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-networking
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
+---
+# DirectAccess Test Lab Guides
+Following are links to the test lab guides for DirectAccess in [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)], [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] and [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)].
+
+-   [Test Lab Guide: Demonstrate DirectAccess in a cluster with Windows NLB](assetId:///f3e5209b-aaa9-49a7-b523-0a130ec10a4b)
+
+-   [Test Lab Guide: Demonstrate a DirectAccess multisite deployment](assetId:///3f2308e3-aa31-49db-b69b-91d1827ef7a2)
+
+-   [Test Lab Guide: Demonstrate DirectAccess with OTP authentication and RSA SecurID](assetId:///616db45d-f151-4abe-aecf-5f5060095a67)
+
+

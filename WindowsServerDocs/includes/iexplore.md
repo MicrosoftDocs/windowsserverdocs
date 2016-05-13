@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">To open Internet Explorer, click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Start</ui>, point to <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">All programs</ui>, and then click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Internet Explorer</ui>.</Token>

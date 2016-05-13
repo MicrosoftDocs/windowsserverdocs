@@ -1,0 +1,1 @@
+ Review details about default group memberships at [Active Directory Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkID=150761) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=150761\). 

@@ -1,0 +1,1 @@
+In the console tree under **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.

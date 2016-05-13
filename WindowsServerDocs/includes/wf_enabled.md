@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows Firewall is enabled. For more information, see <link xlink:href="f516f33a-929a-4250-8052-580cf70b22eb" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Enable Windows Firewall with no exceptions</link>.</Token>

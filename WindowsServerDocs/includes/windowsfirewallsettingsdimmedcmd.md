@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">If you get an "Access Denied" message when you run a command, you do not have administrative rights to configure Windows Firewall. If you get an "Ok" message but the command does not take effect, the setting might be managed by Group Policy. </Token>

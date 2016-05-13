@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink"><br xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" />Microsoft has moved information about this technology to the TechNet website so that up-to-date information is available to you.</Token>

@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">By default, all users can pause, resume, restart, and cancel printing of their own documents. However, to manage documents printed by other users, you must have the Manage Documents permission, which is one of several printer permissions.</Token>

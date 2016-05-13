@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">This Netsh command is available in Windows Server 2008, but is not available in Windows Server 2008 R2.</Token>
