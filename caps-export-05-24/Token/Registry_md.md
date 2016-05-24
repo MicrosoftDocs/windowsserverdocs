@@ -1,0 +1,1 @@
+Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.

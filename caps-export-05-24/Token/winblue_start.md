@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">On the <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Start</ui> screen, click the <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Apps</ui> arrow. On the <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Apps</ui> screen, type</Token>

@@ -1,0 +1,1 @@
+ If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**. 

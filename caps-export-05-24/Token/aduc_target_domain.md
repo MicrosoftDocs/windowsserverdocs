@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Ensure that you are connected to the correct domain. To connect to the appropriate domain, in the details pane, right-click the Active Directory Users and Computers object, and then click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Change Domain</ui>.</Token>

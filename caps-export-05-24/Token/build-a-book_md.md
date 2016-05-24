@@ -1,0 +1,1 @@
+To digitally save or print pages from this library, click **Export** \(in the upper\-right corner of the page\), and then follow the instructions.

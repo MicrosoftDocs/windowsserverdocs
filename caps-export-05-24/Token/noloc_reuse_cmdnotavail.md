@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows XP and the Windows Server 2003 family of products do not use this command. It is included only to preserve compatibility with existing MS-DOS files, but it has no effect at the command line because the functionality is automatic.</Token>

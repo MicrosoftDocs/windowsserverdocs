@@ -1,0 +1,1 @@
+ In the Failover Cluster Management snap\-in, if the cluster you want to configure is not displayed, in the console tree, right\-click **Failover Cluster Management**, click **Manage a Cluster**, and select or specify the cluster you want. 

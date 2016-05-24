@@ -1,0 +1,1 @@
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**.

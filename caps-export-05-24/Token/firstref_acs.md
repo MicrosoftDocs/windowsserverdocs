@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft Azure Active Directory Access Control (also known as Access Control Service or ACS)</Token>

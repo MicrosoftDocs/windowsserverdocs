@@ -1,0 +1,1 @@
+You can use item\-level targeting to change the scope of preference items.

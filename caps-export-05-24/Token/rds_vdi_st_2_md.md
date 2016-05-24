@@ -1,0 +1,1 @@
+VDI standard deployment

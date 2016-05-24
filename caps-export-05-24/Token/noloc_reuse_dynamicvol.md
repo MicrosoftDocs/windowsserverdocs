@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Dynamic disks are not supported on portable computers, removable disks, detachable disks that use Universal Serial Bus (USB) or IEEE 1394 (also called FireWire) interfaces, or on disks connected to shared SCSI buses.</Token>

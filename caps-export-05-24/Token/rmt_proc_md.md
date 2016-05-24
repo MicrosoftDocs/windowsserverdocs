@@ -1,0 +1,1 @@
+ Open Server Manager. Click **Start**, point to **Administrative Tools**, and then click **Server Manager**. 

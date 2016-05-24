@@ -1,0 +1,20 @@
+---
+title: KMS Client Setup Keys for Volume Activation
+ms.custom: na
+ms.prod: windows-server-2012-r2
+ms.reviewer: na
+ms.suite: na
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: d7f8bdc7-4744-48d7-8c71-00a57a777e93
+author: jaimeo
+---
+# KMS Client Setup Keys for Volume Activation
+By default, the [!INCLUDE[nextref_client_7](../Token/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](../Token/nextref_server_7_md.md)] and later operating systems use KMS for activation. In volume installations, the setup key is installed by default, which makes the system a KMS client. If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable setup key \(GVLK\) from [Appendix A: KMS Client Setup Keys](http://technet.microsoft.com/library/jj612867.aspx) by using **slmgr \/ipk <setup key>**.  
+  
+## See also  
+  
+-   [Volume Activation Technical Reference](../Topic/Volume-Activation-Technical-Reference.md)  
+  
+-   [Volume Activation Overview](../Topic/Volume-Activation-Overview.md)  
+  
