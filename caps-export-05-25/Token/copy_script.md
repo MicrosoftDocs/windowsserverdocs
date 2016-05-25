@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Copy the script to Notepad, and save the file with a .wsf file name extension in the same folder as the AdmtConstants.vbs file.</Token>

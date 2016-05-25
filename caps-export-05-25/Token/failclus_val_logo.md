@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft supports a failover cluster solution only if the complete configuration (servers, network, and storage) can pass all tests in the Validate a Configuration wizard. In addition, all hardware components in the solution must be marked as "Certified for Windows Server 2008."</Token>

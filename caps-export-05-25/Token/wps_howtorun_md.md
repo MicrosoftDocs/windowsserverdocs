@@ -1,0 +1,1 @@
+This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).

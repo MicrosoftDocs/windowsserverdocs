@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">You can also use Group Policy settings to perform this procedure and configure other Windows Firewall settings.</Token>

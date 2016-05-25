@@ -1,0 +1,1 @@
+To open a Command Prompt window, click **Start**, point to **All Programs**, click **Accessories**, and then click **Command Prompt**.

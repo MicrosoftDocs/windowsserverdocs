@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Review details about default group memberships at <externalLink xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><linkText>Active Directory Local and Domain Default Groups</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkID=150761</linkUri></externalLink> (http://go.microsoft.com/fwlink/?LinkID=150761).</Token>

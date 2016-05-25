@@ -1,0 +1,1 @@
+Press F3 to display a list of variables from which you can select.

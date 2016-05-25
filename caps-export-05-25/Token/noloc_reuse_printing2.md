@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Right-click the icon for the printer you are using, and then click <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Printing Preferences</ui>.</Token>

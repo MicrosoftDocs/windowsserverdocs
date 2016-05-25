@@ -1,0 +1,1 @@
+*If you are trying to solve an issue with your personal computer, you should check the help page at [How can we help you?](http://windows.microsoft.com/windows/support#1TC=windows-8)*

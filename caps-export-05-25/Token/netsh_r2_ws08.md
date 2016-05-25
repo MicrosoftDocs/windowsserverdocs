@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Unless otherwise noted in this reference, Netsh commands in Windows Server 2008 R2 provide the same functionality as the Netsh commands in Windows Server 2008.</Token>

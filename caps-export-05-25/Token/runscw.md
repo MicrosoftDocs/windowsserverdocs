@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Run the Security Configuration Wizard. For more information, see <link xlink:href="38f0693d-59eb-45ca-980d-31fe03eb54df" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Security Configuration Wizard Overview</link>.</Token>

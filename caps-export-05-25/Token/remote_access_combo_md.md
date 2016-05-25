@@ -1,0 +1,1 @@
+**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service \(RRAS\) into a single Remote Access role.

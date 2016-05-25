@@ -1,0 +1,1 @@
+To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](http://technet.microsoft.com/library/dn747893.aspx).

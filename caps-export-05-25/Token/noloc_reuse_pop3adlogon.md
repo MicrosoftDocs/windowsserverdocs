@@ -1,0 +1,1 @@
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">If you are using Active Directory integrated authentication, you must log on to the Active Directory domain, not the local computer, to perform this procedure.</Token>
