@@ -1,2 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink"><maml:para xmlns:maml="http://ddue.schemas.microsoft.com/authoring/2003/5"><maml:legacyBold>[This information is preliminary and subject to change.]</maml:legacyBold></maml:para>
-        </Token>

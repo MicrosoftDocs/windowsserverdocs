@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Internet Connection Firewall is included only in the original releases of Windows Server 2003, Standard Edition, and Windows Server 2003, Enterprise Edition.</Token>

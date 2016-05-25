@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">You must be logged on as a member of the Administrators or the Power Users group to complete this procedure. If your computer is connected to a network, network policy settings might also prevent you from completing this procedure.</Token>

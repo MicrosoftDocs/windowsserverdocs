@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Print Server for Macintosh is not available on the 64-bit versions of the Windows operating systems.</Token>

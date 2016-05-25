@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">This topic does not apply to Windows Server 2003, Web Edition.</Token>

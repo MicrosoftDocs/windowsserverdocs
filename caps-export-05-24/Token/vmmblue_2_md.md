@@ -1,1 +1,0 @@
-Virtual Machine Manager

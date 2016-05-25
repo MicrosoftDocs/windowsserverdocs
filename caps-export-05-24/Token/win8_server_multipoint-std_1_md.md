@@ -1,1 +1,0 @@
-Windows® MultiPoint® Server 2012 Standard

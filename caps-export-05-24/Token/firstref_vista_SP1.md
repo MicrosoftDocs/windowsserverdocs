@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows Vista® with Service Pack 1 (SP1)</Token>

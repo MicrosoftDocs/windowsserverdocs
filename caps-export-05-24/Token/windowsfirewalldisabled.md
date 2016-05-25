@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">On Windows Server 2003, Windows Firewall is turned off by default and the Windows Firewall/Internet Connection Sharing service is disabled by default. You might have to start the Windows Firewall/Internet Connection Sharing service if you try to perform this procedure and you have never started Windows Firewall.</Token>

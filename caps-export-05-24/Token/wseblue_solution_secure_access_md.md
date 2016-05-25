@@ -1,1 +1,0 @@
-To learn how to securely access business data on any Internet\-connected device from any location, see [Secure remote access in small and midsize businesses](http://technet.microsoft.com/library/dn629457.aspx).

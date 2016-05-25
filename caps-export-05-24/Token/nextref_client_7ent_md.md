@@ -1,1 +1,0 @@
-Windows 7 Enterprise
