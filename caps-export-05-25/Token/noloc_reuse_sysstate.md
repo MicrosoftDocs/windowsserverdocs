@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">System State data contains most elements of a system's configuration, but it might not include all of the information that you require to recover your system from a failure. Therefore, it is recommended that you back up all boot and system volumes, including the System State, when you back up your system.</Token>

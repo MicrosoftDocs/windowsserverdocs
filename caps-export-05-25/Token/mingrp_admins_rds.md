@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Membership in the local <ui xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Administrators</ui> group, or equivalent, on the RD Session Host server that you plan to configure, is the minimum required to complete this procedure.</Token>

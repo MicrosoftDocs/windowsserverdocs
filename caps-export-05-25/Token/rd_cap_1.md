@@ -1,1 +1,0 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Remote Desktop connection authorization policy (RD CAP)</Token>

@@ -1,1 +1,0 @@
-System Center Technical Preview Virtual Machine Manager
