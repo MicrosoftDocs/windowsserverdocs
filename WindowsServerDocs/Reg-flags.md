@@ -7,14 +7,15 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a6314fd-ac97-4121-9e5c-81a75ca303ba
+author: jaimeo
 ---
 # Reg flags
-Insert introduction here.
-
-## Section Heading
-Insert section body here.
-
-### Subsection Heading
-Insert subsection body here.
-
+Insert introduction here.  
+  
+## Section Heading  
+Insert section body here.  
+  
+### Subsection Heading  
+Insert subsection body here.  
+  
 

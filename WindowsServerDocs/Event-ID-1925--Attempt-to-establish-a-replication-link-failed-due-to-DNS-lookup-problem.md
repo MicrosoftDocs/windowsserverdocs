@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 6460101a-f188-47c7-aa53-172422d48606
+author: Femila
 ---
 # Event ID 1925: Attempt to establish a replication link failed due to DNS lookup problem
 <?xml version="1.0" encoding="utf-8"?>

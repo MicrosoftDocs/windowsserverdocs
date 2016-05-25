@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: d8e0b934-be71-4929-b377-d3330c6811e9
+author: Femila
 ---
 # Event ID 1388 or 1988: A lingering object is detected
 <?xml version="1.0" encoding="utf-8"?>

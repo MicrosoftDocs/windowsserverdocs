@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: d3a01966-74c9-4c49-ba11-354b9acf7519
+author: Femila
 ---
 # Replication error 1396 Logon Failure The target account name is incorrect
 <?xml version="1.0" encoding="utf-8"?>

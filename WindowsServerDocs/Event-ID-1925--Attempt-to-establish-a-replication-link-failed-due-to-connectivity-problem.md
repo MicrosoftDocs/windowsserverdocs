@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: ebf1d707-ec04-43a2-83ed-a61b70d57627
+author: Femila
 ---
 # Event ID 1925: Attempt to establish a replication link failed due to connectivity problem
 <?xml version="1.0" encoding="utf-8"?>

@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: b506eb78-51ad-4be2-b205-85756cabe766
+author: Femila
 ---
 # Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)
 <?xml version="1.0" encoding="utf-8"?>

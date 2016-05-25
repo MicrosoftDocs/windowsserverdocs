@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 15df3aec-0e5c-41da-a7c6-7710d57f9ffd
+author: Femila
 ---
 # Event ID 2088: DNS lookup failure occurred with replication success
 <?xml version="1.0" encoding="utf-8"?>

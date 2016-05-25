@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 83f03f7a-2818-4805-8af2-e397f0be4aa1
+author: Femila
 ---
 # Replication error 8524 The DSA operation is unable to proceed because of a DNS lookup failure
 <?xml version="1.0" encoding="utf-8"?>

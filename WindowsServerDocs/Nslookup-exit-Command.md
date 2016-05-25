@@ -9,21 +9,21 @@ ms.topic: article
 ms.assetid: 970ece99-fc5e-4103-9f97-ca080af1f212
 ---
 # Nslookup exit Command
-Exits **nslookup**.
-
-## Syntax
-
-```
-Nslookup /exit
-```
-
-## Parameters
-
-|Parameter|Description|
-|-------------|---------------|
-|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-
-## Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-
+Exits **nslookup**.  
+  
+## Syntax  
+  
+```  
+Nslookup /exit  
+```  
+  
+## Parameters  
+  
+|Parameter|Description|  
+|-------------|---------------|  
+|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|  
+  
+## Additional references  
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+  
 

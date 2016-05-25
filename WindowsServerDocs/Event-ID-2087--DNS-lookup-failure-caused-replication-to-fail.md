@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 85b1d179-f53e-4f95-b0b8-5b1c096a8076
+author: Femila
 ---
 # Event ID 2087: DNS lookup failure caused replication to fail
 <?xml version="1.0" encoding="utf-8"?>

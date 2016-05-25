@@ -5,6 +5,7 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.assetid: 811652d2-d6ca-4eed-8fe4-bbd48261b20b
+author: Femila
 ---
 # Appendix B: Do Not Use a Lag Site as a Disaster Recovery Strategy
 <?xml version="1.0" encoding="utf-8"?>

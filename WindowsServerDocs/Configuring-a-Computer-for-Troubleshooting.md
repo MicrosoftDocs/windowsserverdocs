@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: dcf023ca-4e29-4893-a699-8a5c3e1f4980
+author: Femila
 ---
 # Configuring a Computer for Troubleshooting
 <?xml version="1.0" encoding="utf-8"?>

@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 87acf6ce-5166-4ab4-b8d7-42b03bab226a
+author: Femila
 ---
 # Replication error 5 Access is denied
 <?xml version="1.0" encoding="utf-8"?>

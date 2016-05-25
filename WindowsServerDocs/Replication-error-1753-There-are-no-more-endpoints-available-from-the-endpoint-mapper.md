@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: f7022f0d-0099-410c-8178-c654e624bc42
+author: Femila
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
 <?xml version="1.0" encoding="utf-8"?>
