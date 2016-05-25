@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 8d8439ba-9a88-48ed-80da-fae13fda82d6
+author: Femila
 ---
 # Replication error 8606 Insufficient attributes were given to create an object
 <?xml version="1.0" encoding="utf-8"?>

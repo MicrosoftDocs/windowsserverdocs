@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: eee53935-a1f0-4c65-9386-e0f5d97bdb6b
+author: Femila
 ---
 # Event ID 2042: It has been too long since this machine replicated
 <?xml version="1.0" encoding="utf-8"?>

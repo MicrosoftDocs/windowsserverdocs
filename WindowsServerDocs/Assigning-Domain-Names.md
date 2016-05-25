@@ -9,25 +9,26 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 93594c1f-8d9d-4fa6-89bf-efaa6feeb491
+author: Femila
 ---
 # Assigning Domain Names
-You must assign a name to every domain in your plan. Active Directory Domain Services \(AD DS\) domains have two types of names: Domain Name System \(DNS\) names and NetBIOS names. In general, both names are visible to end users. The DNS names of Active Directory domains include two parts, a prefix and a suffix. When creating domain names, first determine the DNS prefix. This is the first label in the DNS name of the domain. The suffix is determined when you select the name of the forest root domain. The following table lists the prefix naming rules for DNS names.
-
-|Rule|Explanation|
-|--------|---------------|
-|Select a prefix that is not likely to become outdated.|Avoid names such as a product line or operating system that might change in the future. We recommend using geographical names.|
-|Select a prefix that includes Internet standard characters only.|A\-Z, a\-z, 0\-9, and \(\-\), but not entirely numerical.|
-|Include 15 characters or less in the prefix.|If you choose a prefix length of 15 characters or less, the NetBIOS name is the same as the prefix.|
-
-For more information, see Naming conventions in Active Directory for computers, domains, sites, and OUs \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=106629](http://go.microsoft.com/fwlink/?LinkId=106629)\).
-
-> [!NOTE]
-> [!INCLUDE[ad_dcpromotext](includes/ad_dcpromotext_md.md)]
-
-If the current NetBIOS name of the domain is inappropriate to represent the region or fails to satisfy the prefix naming rules, select a new prefix. In this case, the NetBIOS name of the domain is different from the DNS prefix of the domain.
-
-For each new domain that you deploy, select a prefix that is appropriate for the region and that satisfies prefix naming rules. We recommend that the NetBIOS name of the domain be the same as the DNS prefix.
-
-Document the DNS prefix and NetBIOS names that you select for each domain in your forest. You can add the DNS and NetBIOS name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains. To open it, download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip from Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\) and open "Domain Planning" \(DSSLOGI\_5.doc\).
-
+You must assign a name to every domain in your plan. Active Directory Domain Services \(AD DS\) domains have two types of names: Domain Name System \(DNS\) names and NetBIOS names. In general, both names are visible to end users. The DNS names of Active Directory domains include two parts, a prefix and a suffix. When creating domain names, first determine the DNS prefix. This is the first label in the DNS name of the domain. The suffix is determined when you select the name of the forest root domain. The following table lists the prefix naming rules for DNS names.  
+  
+|Rule|Explanation|  
+|--------|---------------|  
+|Select a prefix that is not likely to become outdated.|Avoid names such as a product line or operating system that might change in the future. We recommend using geographical names.|  
+|Select a prefix that includes Internet standard characters only.|A\-Z, a\-z, 0\-9, and \(\-\), but not entirely numerical.|  
+|Include 15 characters or less in the prefix.|If you choose a prefix length of 15 characters or less, the NetBIOS name is the same as the prefix.|  
+  
+For more information, see Naming conventions in Active Directory for computers, domains, sites, and OUs \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=106629](http://go.microsoft.com/fwlink/?LinkId=106629)\).  
+  
+> [!NOTE]  
+> [!INCLUDE[ad_dcpromotext](includes/ad_dcpromotext_md.md)]  
+  
+If the current NetBIOS name of the domain is inappropriate to represent the region or fails to satisfy the prefix naming rules, select a new prefix. In this case, the NetBIOS name of the domain is different from the DNS prefix of the domain.  
+  
+For each new domain that you deploy, select a prefix that is appropriate for the region and that satisfies prefix naming rules. We recommend that the NetBIOS name of the domain be the same as the DNS prefix.  
+  
+Document the DNS prefix and NetBIOS names that you select for each domain in your forest. You can add the DNS and NetBIOS name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains. To open it, download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip from Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\) and open "Domain Planning" \(DSSLOGI\_5.doc\).  
+  
 

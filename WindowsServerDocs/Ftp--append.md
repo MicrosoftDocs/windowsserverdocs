@@ -7,41 +7,42 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c1a133c-31dc-41a4-9eb9-258efd79804d
+author: vhorne
 ---
 # Ftp: append
-Appends a local file to a file on the remote computer using the current file type setting. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
-
-## Syntax
-
-```
-Append <LocalFile> [RemoteFile]
-```
-
-### Parameters
-
-|Parameter|Description|
-|-------------|---------------|
-|<LocalFile>|Specifies the local file to add.|
-|\[RemoteFile\]|Specifies the file on the remote computer to which <LocalFile> is added.|
-
-## Remarks
-If *RemoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.
-
-## <a name="BKMK_Examples"></a>Examples
-Append file1.txt to file2.txt on the remote computer.
-
-```
-append file1.txt file2.txt
-```
-
-Append the local file1.txt to a file named file1.txt on the remote computer.
-
-```
-Append file1.txt
-```
-
-## Additional references
-
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-
+Appends a local file to a file on the remote computer using the current file type setting. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+  
+## Syntax  
+  
+```  
+Append <LocalFile> [RemoteFile]  
+```  
+  
+### Parameters  
+  
+|Parameter|Description|  
+|-------------|---------------|  
+|<LocalFile>|Specifies the local file to add.|  
+|\[RemoteFile\]|Specifies the file on the remote computer to which <LocalFile> is added.|  
+  
+## Remarks  
+If *RemoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.  
+  
+## <a name="BKMK_Examples"></a>Examples  
+Append file1.txt to file2.txt on the remote computer.  
+  
+```  
+append file1.txt file2.txt  
+```  
+  
+Append the local file1.txt to a file named file1.txt on the remote computer.  
+  
+```  
+Append file1.txt  
+```  
+  
+## Additional references  
+  
+-   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+  
 

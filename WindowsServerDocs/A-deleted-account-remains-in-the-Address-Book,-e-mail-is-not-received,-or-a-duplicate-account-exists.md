@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 89ba26cf-e64c-4728-b9bf-2e445f2303bf
+author: Femila
 ---
 # A deleted account remains in the Address Book, e-mail is not received, or a duplicate account exists
 <?xml version="1.0" encoding="utf-8"?>

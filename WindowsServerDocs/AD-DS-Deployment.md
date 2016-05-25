@@ -11,22 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 980b5c19-bf50-4ee1-8398-4376e8619948
+author: Femila
 ---
 # AD DS Deployment
-This guide covers how to install and remove Active Directory Domain Services \(AD DS\) in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], and important issues to be aware of when you add new domain controllers to an existing Active Directory environment.
-
--   [What's New in Active Directory Domain Services Installation and Removal](What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)
-
--   [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md)
-
--   [Install Active Directory Domain Services &#40;Level 100&#41;](Install-Active-Directory-Domain-Services--Level-100-.md)
-
--   [Steps for removing Active Directory Domain Services](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c)
-
--   [AD DS Installation and Removal Wizard Page Descriptions](AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md)
-
--   [Changes Made by Adprep.exe](Changes-Made-by-Adprep.exe.md)
-
--   [Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md)
-
+This guide covers how to install and remove Active Directory Domain Services \(AD DS\) in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], and important issues to be aware of when you add new domain controllers to an existing Active Directory environment.  
+  
+-   [What's New in Active Directory Domain Services Installation and Removal](What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)  
+  
+-   [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md)  
+  
+-   [Install Active Directory Domain Services &#40;Level 100&#41;](Install-Active-Directory-Domain-Services--Level-100-.md)  
+  
+-   [Steps for removing Active Directory Domain Services](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c)  
+  
+-   [AD DS Installation and Removal Wizard Page Descriptions](AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md)  
+  
+-   [Changes Made by Adprep.exe](Changes-Made-by-Adprep.exe.md)  
+  
+-   [Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md)  
+  
 

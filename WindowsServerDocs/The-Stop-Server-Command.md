@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: adff42ca-464f-4f05-ba25-e24e8d702981
 ---
 # The Stop Server Command
-Stops services for Windows Deployment Services.
-
-## Subcommands
-
-|Subcommand|Description|
-|--------------|---------------|
-|[Subcommand: stop-Server](Subcommand--stop-Server.md)|Stops all services on a Windows Deployment Services server \(Deployment Server\).|
-|[Subcommand: stop-TransportServer](Subcommand--stop-TransportServer.md)|Stops all services on a Transport Server.|
-
+Stops services for Windows Deployment Services.  
+  
+## Subcommands  
+  
+|Subcommand|Description|  
+|--------------|---------------|  
+|[Subcommand: stop-Server](Subcommand--stop-Server.md)|Stops all services on a Windows Deployment Services server \(Deployment Server\).|  
+|[Subcommand: stop-TransportServer](Subcommand--stop-TransportServer.md)|Stops all services on a Transport Server.|  
+  
 

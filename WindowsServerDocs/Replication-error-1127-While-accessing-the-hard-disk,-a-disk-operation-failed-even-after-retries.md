@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: b2381837-cd5c-433a-ba9c-37eae91e57c2
+author: Femila
 ---
 # Replication error 1127 While accessing the hard disk, a disk operation failed even after retries
 <?xml version="1.0" encoding="utf-8"?>

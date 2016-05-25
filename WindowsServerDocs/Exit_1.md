@@ -9,17 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ac45e72-eb3e-4c88-8d92-0b71a58bea36
+author: JasonGerend
 ---
 # Exit_1
-Exits DiskShadow.
-
-## Syntax
-
-```
-exit
-```
-
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
-
+Exits DiskShadow.  
+  
+## Syntax  
+  
+```  
+exit  
+```  
+  
+#### Additional references  
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+  
 

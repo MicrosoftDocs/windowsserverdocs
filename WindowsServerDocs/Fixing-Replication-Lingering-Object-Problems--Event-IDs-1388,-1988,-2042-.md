@@ -9,6 +9,7 @@ ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.assetid: 53ea71ae-4ecb-475a-935b-cd6a9afff02e
+author: Femila
 ---
 # Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)
 <?xml version="1.0" encoding="utf-8"?>

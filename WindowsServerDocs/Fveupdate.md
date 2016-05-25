@@ -9,6 +9,6 @@ ms.topic: article
 ms.assetid: f2603607-9421-4e8d-b9bf-c5519814b39f
 ---
 # Fveupdate
-FveUpdate is an internally used tool that is run by setup when a computer is upgraded from [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] or [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] to [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]. It updates the metadata associated with BitLocker to the latest version. This tool cannot be run independently.
-
+FveUpdate is an internally used tool that is run by setup when a computer is upgraded from [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] or [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] to [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]. It updates the metadata associated with BitLocker to the latest version. This tool cannot be run independently.  
+  
 
