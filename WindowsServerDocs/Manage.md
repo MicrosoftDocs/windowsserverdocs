@@ -5,8 +5,8 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ac7c79a9-e53a-474e-9476-7fab141b62e8
-author: britw
+ms.assetid: 99f2aef4-bda6-4c65-b370-4d603d8c041b
+author: coreyp
 ---
 # Manage
 ## Welcome to CAPS Markdown Editor!  

@@ -1,14 +1,14 @@
 ---
-title: Plan
+title: Plan-1
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e0a69a8d-2ca9-45cc-affd-c3e0c9c81af3
+ms.assetid: 87c5cb37-4761-4e4e-a8a1-bae61f8f09fb
 author: britw
 ---
-# Plan
+# Plan-1
 ## Welcome to CAPS Markdown Editor!  
   
 CAPS is using GitHub Flavored Markdown(GFM) which is one of the most popular Markdown flavor. Lets' learn how to make your customized document with below rules.    
