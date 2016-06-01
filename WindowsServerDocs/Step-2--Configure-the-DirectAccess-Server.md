@@ -8,93 +8,77 @@ ms.technology:
   - techgroup-networking
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
-author: vhorne
+ms.assetid: 8d2daaf6-17d8-481c-bc6a-b24b756452ce
+author: coreyp
 ---
 # Step 2: Configure the DirectAccess Server
-This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](Plan-a-Basic-DirectAccess-Deployment.md).  
+This topic describes how to configure the client and server settings required for a basic Remote Access deployment using the Enable DirectAccess Wizard. Before beginning the deployment steps, ensure that you have completed the planning steps described in Step 2: Plan the Remote Access deployment.  
   
 |Task|Description|  
 |--------|---------------|  
-|Install the Remote Access role|Install the Remote Access role.|  
-|Configure DirectAccess Using the Getting Started Wizard|The new Getting Started Wizard presents a greatly simplified configuration experience. The wizard masks the complexity of DirectAccess, and allows for an automated setup in a few simple steps. The wizard provides a seamless experience for the administrator by configuring Kerberos proxy automatically to eliminate the need for an internal PKI deployment.|  
-|Update clients with the DirectAccess configuration|To receive the DirectAccess settings, clients must update group policy while connected to the intranet.|  
+|Configure DirectAccess clients|Configure the Remote Access server with the security groups containing DirectAccess clients.|  
+|Configure the Network Topology|Configure Remote Access server settings.|  
+|Configure the DNS Suffix Search List|Modify the Suffix search list if desired.|  
+|GPO Configuration|Modify the GPOs if desired.|  
+  
+### To Start the Enable DirectAcces Wizard  
+  
+1.  In the **Start** screen click **Routing and Remote Access** and the Enable DirectAcces Wizard will start automatically unless you have selected **Do not show this screen again**.  
+  
+2.  If the wizard does not start automatically, right\-click the server node in the **Routing and Remote Access** tree, and then click **Enable DirectAccess**.  
+  
+3.  Click **Next**.  
+  
+## <a name="BKMK_Clients"></a>Configure DirectAccess clients  
+For a client computer to be provisioned to use DirectAccess it must belong to the selected security group. After DirectAccess is configured, client computers in the security group are provisioned to receive the DirectAccess group policy.  
+  
+#### To configure DirectAccess clients  
+  
+1.  On the **Select Groups** page, click **Add**.  
+  
+2.  On the **Select Groups** dialog box, select the security groups containing DirectAccess client computers.  
+  
+3.  Select the **Enable DirectAccess for mobile computers only** check box to allow only mobile computers to access the internal network.  
+  
+4.  Select the **Use force tunneling** check box to route all client traffic \(to the internal network and to the Internet\) through the Remote Access server.  
+  
+5.  Click **Next**.  
+  
+## <a name="BKMK_Server"></a>Configure the Network Topology  
+To deploy Remote Access, you need to configure the Remote Access server with the correct network adapters, a public URL for the Remote Access server to which client computers can connect \(the connect to address\), and an IP\-HTTPS certificate whose subject matches the connect to address.  
+  
+#### To configure the network topology  
+  
+1.  On the **Network Topology** page, click the deployment topology that will be used in your organization. In **Type the public name or IPv4 address used by clients to connect to the Remote Access server**, enter the public name for the deployment \(this name matches the subject name of the IP\-HTTPS certificate, for example, edge1.contoso.com\), and then click **Next**.  
+  
+## <a name="BKMK_GPO"></a>Configure the DNS Suffix Search List  
+  
+#### To configure the DNS suffix search list  
+  
+1.  Select **Configure DirectAccess Clients with DNS client suffix search list** to specify additional suffixes for client name searches.  
+  
+2.  Type a new suffix name in **New Suffix:** and then click **Add**. Additionally, you can change the search order and remove suffixes from **Domain Suffixes to use:**  
+  
+For DNS clients, you can configure a DNS domain suffix search list that extends or revises their DNS search capabilities. By adding additional suffixes to the list, you can search for short, unqualified computer names in more than one specified DNS domain. Then, if a DNS query fails, the DNS Client service can use this list to append other name suffix endings to your original name and repeat DNS queries to the DNS server for these alternate FQDNs.For computers and servers, the following default DNS search behavior is predetermined and used when completing and resolving short, unqualified names.When the suffix search list is empty or unspecified, the primary DNS suffix of the computer is appended to short unqualified names, and a DNS query is used to resolve the resultant FQDN. If this query fails, the computer can try additional queries for alternate FQDNs by appending any connection\-specific DNS suffix configured for network connections.If no connection\-specific suffixes are configured or queries for these resultant connection\-specific FQDNs fail, then the client can then begin to retry queries based on systematic reduction of the primary suffix \(also known as devolution\).For example, if the primary suffix were "example.microsoft.com", the devolution process would be able to retry queries for the short name by searching for it in the "microsoft.com" and "com" domains.When the suffix search list is not empty and has at least one DNS suffix specified, attempts to qualify and resolve short DNS names is limited to searching only those FQDNs made possible by the specified suffix list. If queries for all FQDNs formed as a result of appending and trying each suffix in the list are not resolved, the query process fails, producing a "name not found" result.  
+  
+> [!WARNING]  
+> If the domain suffix list is used, clients continue to send additional alternate queries based on different DNS domain names when a query is not answered or resolved. Once a name is resolved using an entry in the suffix list, unused list entries are not tried. For this reason, it is most efficient to order the list with the most used domain suffixes first.  
+>   
+> Domain name suffix searches are used only when a DNS name entry is not fully qualified. To fully qualify a DNS name, a trailing period \(.\) is entered at the end of the name.  
   
 > [!NOTE]  
-> [!INCLUDE[wps_howtorun](includes/wps_howtorun_md.md)]  
+> In a disjoint name space scenario \(where one or more domain computers has an DNS suffix that does not match the Active Directory domain to which the computers belong\), you should ensure that the search list is customized to include all the required suffixes. The Remote Access wizard will by default configure the Active Directory DNS name as the primary DNS suffix on the client. Admin should ensure that he adds the DNS suffix used by clients for name resolution.  
   
-## <a name="BKMK_Role"></a>Install the Remote Access role  
-To deploy Remote Access, you must install the Remote Access role on a server in your organization that will act as the Remote Access server.  
+## GPO Configuration  
+**GPO Settings** – The DirectAccess server GPO name and Client GPO name are listed. Additionally, you can modify the GPO selection settings.  
   
-#### To install the Remote Access role  
+DirectAccess settings configured when you configure Remote Access are collected into Group Policy Objects \(GPO\). Two GPOs are populated automatically with DirectAccess settings, and distributed as follows:  
   
-1.  On the Remote Access server, in the [!INCLUDE[sm](includes/sm_md.md)] console, in the **Dashboard**, click **Add roles and features**.  
+1.  DirectAccess client GPO—This GPO contains client settings, including IPv6 transition technology settings, NRPT entries, and Windows Firewall with Advanced Security connection security rules. The GPO is applied to the security groups specified for the client computers.  
   
-2.  Click **Next** three times to get to the server role selection screen.  
+2.  DirectAccess server GPO—This GPO contains the DirectAccess configuration settings that are applied to any server configured as a Remote Access server in your deployment. It also contains Windows Firewall with Advanced Security connection security rules.  
   
-3.  On the **Select server roles** dialog, select **Remote Access**, and then click **Next**.  
-  
-4.  On the **Select features** dialog, click **Next**.  
-  
-5.  Click **Next**, and then on the **Select role services** dialog, click the **DirectAccess and VPN \(RAS\)** check box.  
-  
-6.  Click **Add Features**, click **Next**, and then click **Install**.  
-  
-7.  On the **Installation progress** dialog, verify that the installation was successful, and then click **Close**.  
-  
-![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**  
-  
-[!INCLUDE[wps_proc_intro](includes/wps_proc_intro_md.md)]  
-  
-```  
-Install-WindowsFeature RemoteAccess -IncludeManagementTools  
-```  
-  
-## Configure DirectAccess with the Getting Started Wizard  
-  
-#### To configure DirectAccess using the Getting Started Wizard  
-  
-1.  In Server Manager click **Tools**, and then click **Remote Access Management**.  
-  
-2.  In the Remote Access Management console, select the role service to configure in the left navigation pane, and then click **Run the Getting Started Wizard**.  
-  
-3.  Click **Deploy DirectAccess only**.  
-  
-4.  Select the topology of your network configuration and type the public name to which remote access clients will connect. Click **Next**.  
-  
-    > [!NOTE]  
-    > By default, the Getting Started Wizard deploys DirectAccess to all laptops and notebook computers in the domain by applying a WMI filter to the client settings GPO.  
-  
-5.  Click **Finish**.  
-  
-6.  Since there is no PKI used in this deployment, if certificates are not found, the wizard will automatically provision self\-signed certificates for IP\-HTTPS and the Network Location Server, and will automatically enable Kerberos proxy. The wizard will also enable NAT64 and DNS64 for protocol translation in the IPv4\-only environment. After the wizard successfully completes applying the configuration, click **Close**.  
-  
-7.  In the console tree of the Remote Access Management console, select **Operations Status**. Wait until the status of all monitors display as "Working". In the Tasks pane under Monitoring, click **Refresh** periodically to update the display.  
-  
-## Update clients with the DirectAccess configuration  
-  
-#### To update DirectAccess clients  
-  
-1.  Open PowerShell as an administrator.  
-  
-2.  In the PowerShell window, type **gpupdate** and then press **ENTER**.  
-  
-3.  Wait for the computer policy update to complete successfully.  
-  
-4.  Type **Get\-DnsClientNrptPolicy** and then press **ENTER**  
-  
-    The Name Resolution Policy Table \(NRPT\) entries for DirectAccess are displayed. Note that the NLS server exemption is displayed. The Getting Started wizard automatically created this DNS entry for the DirectAccess server, and provisioned an associated self\-signed certificate so that the DirectAccess server can function as the Network Location Server.  
-  
-5.  Type **Get\-NCSIPolicyConfiguration** and then press **ENTER**. The network connectivity status indicator settings deployed by the wizard are displayed. Note the value of DomainLocationDeterminationURL. Whenever this network location server URL is accessible, the client will determine that it is inside the corporate network, and NRPT settings will not be applied.  
-  
-6.  Type **Get\-DAConnectionStatus** and then press **ENTER**. Since the client can reach the network location server URL, the status will display as **ConnectedLocally**.  
-  
-## <a name="BKMK_Links"></a>Previous step  
-  
--   [Step 1: Configure the DirectAccess Infrastructure](Step-1--Configure-the-DirectAccess-Infrastructure.md)  
-  
-## Next step  
-  
--   [Step 3: Verify the Deployment](Step-3--Verify-the-Deployment.md)  
+## Summary  
+Once the Remote Access configuration is complete the **Summary** will be displayed. You can change configured setting or click **Finish** to apply the configuration  
   
 

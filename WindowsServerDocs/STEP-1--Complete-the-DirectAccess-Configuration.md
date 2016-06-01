@@ -8,7 +8,7 @@ ms.technology:
   - techgroup-networking
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e1e15544-b575-4f39-af0b-771bfae8b0b7
+ms.assetid: e523bec8-29e2-4c6d-a8ff-e8bc5768cac2
 author: coreyp
 ---
 # STEP 1: Complete the DirectAccess Configuration

@@ -1,5 +1,5 @@
 ---
-title: Step 1: Plan an Advanced Single Server Deployment
+title: Step 1: Plan an Advanced Single-Server Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.technology:
   - techgroup-networking
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 96538cbb-7d6c-4860-9ec7-b1834284ad10
+ms.assetid: 00389c64-235c-4bc4-a41b-a27b6eccafcf
 author: coreyp
 ---
-# Step 1: Plan an Advanced Single Server Deployment
-The first step in planning a Remote Access with one\-time password \(OTP\) client authentication deployment is to plan and configure an advanced single server deployment.  
+# Step 1: Plan an Advanced Single-Server Deployment
+The first step in planning a Remote Access load\-balanced cluster is to plan and configure an advanced single server deployment.  
   
 ## Plan a single server deployment  
-Before you deploy Remote Access with OTP, make sure that you have completed all the steps to deploy a single Remote Access server. See [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6). Then continue to [Step 2: Plan the RADIUS server deployment](assetId:///913954de-8be6-4fb8-82f5-fa9c0944a959).  
+Before you deploy a Remote Access load\-balanced cluster, make sure that you have completed all the planning steps to deploy a single Remote Access server. See [Plan an advanced Remote Access deployment](assetId:///fc9ef16f-2f93-493a-9b55-c21df5e4b73d). Then continue to [Step 2: Plan cluster servers](assetId:///8fe1f2cd-2611-4eda-a1c7-16bc02377b7e).  
   
 

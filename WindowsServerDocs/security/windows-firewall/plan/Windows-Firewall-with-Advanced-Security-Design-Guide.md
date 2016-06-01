@@ -1,0 +1,74 @@
+---
+title: Windows Firewall with Advanced Security Design Guide
+ms.custom: na
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-networking
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 3f0e7836-2e85-43b2-8896-d76bcbe7d896
+---
+# Windows Firewall with Advanced Security Design Guide
+[!INCLUDE[wfas](includes/wfas_md.md)] in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], and [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] is a host firewall that helps secure the computer in two ways. First, it can filter the network traffic permitted to enter the computer from the network, and also control what network traffic the computer is allowed to send to the network. Second, [!INCLUDE[wfas](includes/wfas_md.md)] supports IPsec, which enables you to require authentication from any computer that is attempting to communicate with your computer. When authentication is required, computers that cannot authenticate cannot communicate with your computer. By using IPsec, you can also require that specific network traffic be encrypted to prevent it from being read or intercepted while in transit between computers.
+
+The interface for [!INCLUDE[wfas](includes/wfas_md.md)] is much more capable and flexible than the consumer\-friendly interface found in the Windows Firewall Control Panel. They both interact with the same underlying services, but provide different levels of control over those services. While the Windows Firewall Control Panel meets the needs for protecting a single computer in a home environment, it does not provide enough centralized management or security features to help secure more complex network traffic found in a typical business enterprise environment.
+
+For more overview information about [!INCLUDE[wfas](includes/wfas_md.md)] and see [Windows Firewall with Advanced Security Overview](assetId:///9ae80ae1-a693-48ed-917a-f03ea92b550d).
+
+## About this guide
+This guide provides recommendations to help you to choose or create a design for deploying [!INCLUDE[wfas](includes/wfas_md.md)] in your enterprise environment. The guide describes some of the common goals for using [!INCLUDE[wfas](includes/wfas_md.md)], and then helps you map the goals that apply to your scenario to the designs that are presented in this guide.
+
+This guide is intended for the IT professional who has been assigned the task of deploying firewall and IPsec technologies on an organization's network to help meet the organization's security goals.
+
+[!INCLUDE[wfas](includes/wfas_md.md)] should be part of a comprehensive security solution that implements a variety of security technologies, such as perimeter firewalls, intrusion detection systems, virtual private networking \(VPN\), IEEE 802.1X authentication for wireless and wired connections, and IPsec connection security rules.
+
+To successfully use this guide, you need a good understanding of both the capabilities provided by [!INCLUDE[wfas](includes/wfas_md.md)], and how to deliver configuration settings to your managed computers by using Group Policy in Active Directory.
+
+You can use the deployment goals to form one of these [!INCLUDE[wfas](includes/wfas_md.md)] designs, or a custom design that combines elements from those presented here:
+
+-   **Basic firewall policy design**. Restricts network traffic in and out of your computers to only that which is needed and authorized.
+
+-   **Domain isolation policy design**. Prevents computers that are domain members from receiving unsolicited network traffic from computers that are not domain members. Additional "zones" can be established to support the special requirements of some computers, such as:
+
+    -   A "boundary zone" for computers that must be able to receive requests from non\-isolated computers.
+
+    -   An "encryption zone" for computers that store sensitive data that must be protected during network transmission.
+
+-   **Server isolation policy design**. Restricts access to a server to only a limited group of authorized users and computers. Commonly configured as a zone in a domain isolation design, but can also be configured as a stand\-alone design, providing many of the benefits of domain isolation to a small set of computers.
+
+-   **Certificate\-based isolation policy design**. This design is a complement to either of the previous two designs, and supports any of their capabilities. It uses cryptographic certificates that are deployed to clients and servers for authentication, instead of the Kerberos V5 authentication used by default in Active Directory. This enables computers that are not part of an Active Directory domain, such as computers running operating systems other than Windows, to participate in your isolation solution.
+
+In addition to descriptions and example for each design, you will find guidelines for gathering required data about your environment. You can then use these guidelines to plan and design your [!INCLUDE[wfas](includes/wfas_md.md)] deployment. After you read this guide, and finish gathering, documenting, and mapping your organization's requirements, you have the information that you need to begin deploying [!INCLUDE[wfas](includes/wfas_md.md)] using the guidance in the [!INCLUDE[wfas](includes/wfas_md.md)] Deployment Guide.
+
+You can find the [!INCLUDE[wfas](includes/wfas_md.md)] Deployment Guide at these locations:
+
+-   \(Web page\)
+
+-   \(Downloadable Word document\)
+
+## Terminology used in this guide
+The following table identifies and defines terms used throughout this guide.
+
+|Term|Definition|
+|--------|--------------|
+|Active Directory domain|A group of computers and users managed by an administrator by using Active Directory Domain Services \(AD DS\). Computers in a domain share a common directory database and security policies. Multiple domains can co\-exist in a "forest," with trust relationships that establish the forest as the security boundary.|
+|Authentication|A process that enables the sender of a message to prove its identity to the receiver. For connection security in Windows, authentication is implemented by the IPsec protocol suite.|
+|Boundary zone|A subset of the computers in an isolated domain that must be able to receive unsolicited and non\-authenticated network traffic from computers that are not members of the isolated domain. Computers in the boundary zone request but do not require authentication. They use IPsec to communicate with other computers in the isolated domain.|
+|Connection security rule|A rule in [!INCLUDE[wfas](includes/wfas_md.md)] that contains a set of conditions and an action to be applied to network packets that match the conditions. The action can allow the packet, block the packet, or require the packet to be protected by IPsec. In previous versions of Windows, this was called an *IPsec rule*.|
+|Certificate\-based isolation|A way to add computers that cannot use Kerberos V5 authentication to an isolated domain, by using an alternate authentication technique. Every computer in the isolated domain and the computers that cannot use Kerberos V5 are provided with a computer certificate that can be used to authenticate with each other. Certificate\-based isolation requires a way to create and distribute an appropriate certificate \(if you choose not to purchase one from a commercial certificate provider\).|
+|Domain isolation|A technique for helping protect the computers in an organization by requiring that the computers authenticate each other's identity before exchanging information, and refusing connection requests from computers that cannot authenticate. Domain isolation takes advantage of Active Directory domain membership and the Kerberos V5 authentication protocol available to all members of the domain. Also see "Isolated domain" in this table.|
+|Encryption zone|A subset of the computers in an isolated domain that process sensitive data. Computers that are part of the encryption zone have all network traffic encrypted to prevent viewing by non\-authorized users. Computers that are part of the encryption zone also typically are subject to the access control restrictions of server isolation.|
+|Firewall rule|A rule in [!INCLUDE[wfas](includes/wfas_md.md)] that contains a set of conditions used to determine whether a network packet is allowed to pass through the firewall.<br /><br />By default, the firewall rules in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], and [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] block unsolicited inbound network traffic. Likewise, by default, all outbound network traffic is allowed. The firewall included in previous versions of Windows only filtered inbound network traffic.|
+|Internet Protocol security \(IPsec\)|A set of industry\-standard, cryptography\-based protection services and protocols. IPsec protects all protocols in the TCP\/IP protocol suite except Address Resolution Protocol \(ARP\).|
+|IPsec policy|A collection of connection security rules that provide the required protection to network traffic entering and leaving the computer. The protection includes authentication of both the sending and receiving computer, integrity protection of the network traffic exchanged between them, and can include encryption.|
+|Isolated domain|An Active Directory domain \(or an Active Directory forest, or set of domains with two\-way trust relationships\) that has Group Policy settings applied to help protect its member computers by using IPsec connection security rules. Members of the isolated domain require authentication on all unsolicited inbound connections \(with exceptions handled by the other zones\).<br /><br />In this guide, the term *isolated domain* refers to the IPsec concept of a group of computers that can share authentication. The term *Active Directory domain* refers to the group of computers that share a security database by using Active Directory.|
+|Server isolation|A technique for using group membership to restrict access to a server that is typically already a member of an isolated domain. The additional protection comes from using the authentication credentials of the requesting computer to determine its group membership, and then only allowing access if the computer account \(and optionally the user account\) is a member of an authorized group.|
+|Solicited network traffic|Network traffic that is sent in response to a request. By default, [!INCLUDE[wfas](includes/wfas_md.md)] allows all solicited network traffic through.|
+|Unsolicited network traffic|Network traffic that is not a response to an earlier request, and that the receiving computer cannot necessarily anticipate. By default, [!INCLUDE[wfas](includes/wfas_md.md)] blocks all unsolicited network traffic.|
+|Zone|A zone is a logical grouping of computers that share common IPsec policies because of their communications requirements. For example, the boundary zone permits inbound connections from non\-trusted computers. The encryption zone requires that all connections be encrypted.<br /><br />This is not related to the term zone as used by Domain Name System \(DNS\).|
+
+**Next:**[Understanding the Windows Firewall with Advanced Security Design Process](https://technet.microsoft.com/library/cc731951.aspx)
+
+
