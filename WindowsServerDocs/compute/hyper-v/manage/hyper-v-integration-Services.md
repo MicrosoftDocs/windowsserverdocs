@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: b0aea34c-5bbf-4b8c-bca9-8195c490d251
 author: cwatsonmsft
 ---
-# Integration Services
+# Hyper-V Integration Services
 Hyper\-V integration services, are a bundled set of software which, when installed in the virtual machine improves integration between the host server and the virtual machine. Integration services come pre\-installed in most supported guest operating systems.  
   
 The following topics list the guest operating systems supported in virtual machines running in Hyper\-V on Windows Server 2012 and Windows Server 2012 R2 for use as guest operating systems:  
