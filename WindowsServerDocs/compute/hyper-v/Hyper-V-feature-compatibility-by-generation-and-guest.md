@@ -19,7 +19,7 @@ The tables in this article show you the generations and operating systems that a
   
 Keep in mind that some features rely on hardware or other infrastructure. For hardware details, see [System Requirements](https://technet.microsoft.com/library/mt608570.aspx). In some cases, a feature can be used with any supported guest operating system. For details on which operating systems are supported, see:  
   
-* [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/library/dn531030(ws.12).aspx)  
+* [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/library/dn531030.aspx)  
 * [Supported Windows guest operating systems](https://technet.microsoft.com/library/mt126119.aspx)  
   
 ## Availability and backup  
@@ -56,7 +56,7 @@ Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------  
 Hot add/removal of virtual network adapter | 2 | Any supported guest  
 Legacy virtual network adapter | 1 | Any supported guest  
-Single root input/output virtualization \(SR-IOV) | 1 and 2 | 64-bit Windows guests, starting with [!INCLUDE[win8_server_2_mdincludes/win8_server_2_md.md)] and [!INCLUDE[win8_client_2_mdincludes/win8_client_2_md.md)].  
+Single root input/output virtualization \(SR-IOV) | 1 and 2 | 64-bit Windows guests, starting with [!INCLUDE[win8_server_2_md](../../includes/win8_server_2_md.md)] and [!INCLUDE[win8_client_2_md](../../includes/win8_client_2_md.md)].  
 Virtual machine multi queue (VMMQ) | 1 and 2  | Any supported guest  
   
 ## Remote connection experience  

@@ -62,25 +62,24 @@ The following table shows what generation 1 and generation 2 virtual machines su
   
 |64\-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-|[!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]|✔|✔|  
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]|✔|✔|  
+|[!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|✔|✔|  
+|[!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)]|✔|✔|  
 |Windows Server 2008 R2|✔|✖|  
 |Windows Server 2008|✔|✖|  
-|[!INCLUDE[winthreshold_client_1](includes/winthreshold_client_1_md.md)]|✔|✔|  
-|[!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)]|✔|✔|  
-|[!INCLUDE[win8_client_2](includes/win8_client_2_md.md)]|✔|✔|  
+|[!INCLUDE[winthreshold_client_1](../../../includes/winthreshold_client_1_md.md)]|✔|✔|  
+|[!INCLUDE[winblue_client_2](../../../includes/winblue_client_2_md.md)]|✔|✔|  
+|[!INCLUDE[win8_client_2](../../../includes/win8_client_2_md.md)]|✔|✔|  
 |Windows 7|✔|✖|  
   
 The following table shows what generation 1 and generation 2 virtual machines support for 32\-bit versions of Windows as guest operating systems.  
   
 |32\-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-|[!INCLUDE[winthreshold_client_1](includes/winthreshold_client_1_md.md)]|✔|✖|  
-|[!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)]|✔|✖|  
-|[!INCLUDE[win8_client_2](includes/win8_client_2_md.md)]|✔|✖|  
+|[!INCLUDE[winthreshold_client_1](../../../includes/winthreshold_client_1_md.md)]|✔|✖|  
+|[!INCLUDE[winblue_client_2](../../../includes/winblue_client_2_md.md)]|✔|✖|  
+|[!INCLUDE[win8_client_2](../../../includes/win8_client_2_md.md)]|✔|✖|  
 |Windows 7|✔|✖|  
   
-For more information, see [Generation 2 Virtual Machine Overview](Generation-2-Virtual-Machine-Overview.md).  
   
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of Red Hat Enterprise Linux \(RHEL\) and CentOS as guest operating systems.  
@@ -91,7 +90,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |RHEL\/CentOS 6.x Series|✔|✖|  
 |RHEL\/CentOS 5.x Series|✔|✖|  
   
-For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper\-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
+For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper\-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Debian"></a>Debian guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of Debian as guest operating systems.  
@@ -101,7 +100,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |Debian 7.0\-7.10|✔|✖|  
 |Devian 8.0\-8.4|✔|✔|  
   
-For more information, see [Debian virtual machines on Hyper\-V](Supported-Debian-virtual-machines-on-Hyper-V.md).  
+For more information, see [Debian virtual machines on Hyper\-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_FreeBSD"></a>FreeBSD guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of FreeBSD as guest operating systems.  
@@ -112,7 +111,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |FreeBSD 9.1 and 9.3|✔|✖|  
 |FreeBSD 8.4|✔|✖|  
   
-For more information, see [FreeBSD virtual machines on Hyper\-V](Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
+For more information, see [FreeBSD virtual machines on Hyper\-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Oracle"></a>Oracle Linux guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for Red Hat Compatible Kernel Series versions as guest operating systems.  
@@ -130,7 +129,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |Oracle Linux UEK R3 QU2|✔|✖|  
 |Oracle Linux UEK R3 QU1|✔|✖|  
   
-For more information, see [Oracle Linux virtual machines on Hyper\-V](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
+For more information, see [Oracle Linux virtual machines on Hyper\-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_SUSE"></a>SUSE guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of SUSE as guest operating systems.  
@@ -143,7 +142,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |SUSE Linux Enterprise Server 11 SP3|✔|✖|  
 |Open SUSE 12.3|✔|✖|  
   
-For more information, see [SUSE virtual machines on Hyper\-V](Supported-SUSE-virtual-machines-on-Hyper-V.md).  
+For more information, see [SUSE virtual machines on Hyper\-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Ubuntu"></a>Ubuntu guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of Ubuntu as guest operating systems.  
@@ -153,7 +152,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |Ubuntu 14.04 and later versions|✔|✔|  
 |Ubuntu 12.04|✔|✖|  
   
-For more information, see [Ubuntu virtual machines on Hyper\-V](Supported-Ubuntu-virtual-machines-on-Hyper-V.md).  
+For more information, see [Ubuntu virtual machines on Hyper\-V](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md).  
   
 ## <a name="BKMK_Boot"></a>How can I boot the virtual machine?  
 The following table shows which boot methods are supported by generation 1 and generation 2 virtual machines.  
@@ -169,11 +168,11 @@ The following table shows which boot methods are supported by generation 1 and g
 ## <a name="BKMK_Advantages"></a>What are the advantages of using generation 2 virtual machines?  
 Here are some of the advantages you get when you use a generation 2 virtual machine:  
   
--   **Secure Boot** – This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that’s not supported by Secure Boot, you can disable it after the virtual machine’s created.  For more information, see [Secure Boot](assetId:///fa233171-694e-484f-95fe-1dea0ab2a310).  
+-   **Secure Boot** – This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that’s not supported by Secure Boot, you can disable it after the virtual machine’s created.  For more information, see [Secure Boot](https://technet.microsoft.com/library/dn486875.aspx).  
   
     To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.  
   
--   **Larger boot volume** \- The maximum boot volume for generation 2 virtual machines is 64TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper\-V Virtual Hard Disk Format Overview](assetId:///248806ae-6797-46d1-b1be-24cbf1bafba4).  
+-   **Larger boot volume** \- The maximum boot volume for generation 2 virtual machines is 64TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper\-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
   
  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
  
@@ -245,7 +244,7 @@ To enable kernel debugging by using a COM port, follow these steps:
    
 ## See Also  
 
-[Linux and FreeBSD Virtual Machines on Hyper\-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) 
+[Linux and FreeBSD Virtual Machines on Hyper\-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) 
 [Use local resources on Hyper-V virtual machine with VMConnect](https://technet.microsoft.com/library/dn282274.aspx) 
 [Plan for Hyper-V scalability in Windows Server 2016](https://technet.microsoft.com/library/jj680093.aspx)
   

@@ -14,7 +14,7 @@ author: jpjofre
 ---
 # Manage Hyper-V on Windows Server 2016 Technical Preview
 **This is preliminary content and subject to change.**  
-Use the resources in this section to help you manage Hyper-V on [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)].   
+Use the resources in this section to help you manage Hyper-V on [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)].   
 -   [Choose between standard or production checkpoints](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
 -   [Enable or disable checkpoints](Enable-or-disable-checkpoints-in-Hyper-V.md)  
 -   [Manage Windows virtual machines with PowerShell Direct](Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
