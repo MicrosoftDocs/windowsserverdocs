@@ -15,9 +15,9 @@ author: KBDAzure
 # System requirements for Hyper-V on Windows Server 2016 Technical Preview
 **This is preliminary content and subject to change.**  
   
-Hyper\-V has specific hardware requirements, and some Hyper\-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper\-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper\-V exceed the general minimum requirements for [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] because a virtualization environment requires more computing resources.  
+Hyper\-V has specific hardware requirements, and some Hyper\-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper\-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper\-V exceed the general minimum requirements for [!INCLUDE[winthreshold_server_2_md../../includes/winthreshold_server_2_md.md)] because a virtualization environment requires more computing resources.  
   
-If you're already using Hyper\-V, it's likely that you can use your existing hardware. The general hardware requirements haven't changed significantly from [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)].  But, you will need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second\-level address translation \(SLAT\) is now required instead of recommended.  
+If you're already using Hyper\-V, it's likely that you can use your existing hardware. The general hardware requirements haven't changed significantly from [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].  But, you will need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second\-level address translation \(SLAT\) is now required instead of recommended.  
   
 For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows-Server-Technical-Preview.md).  
   
@@ -81,4 +81,5 @@ These virtual machines rely on virtualization\-based security, which supports se
   
 -   Windows Server 2016 Technical Preview, Windows Server 2012R2 or Windows Server 2012 as the guest operating system  
   
+
 
