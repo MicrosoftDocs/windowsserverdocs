@@ -47,24 +47,24 @@ Update-VMVersion <vmname>
 The following table shows which virtual machine configuration versions are supported by Hyper-V hosts that run on specific versions of Windows operating systems.  
 |Hyper-V host Windows version|	Supported virtual machine configuration versions|  
 |-|-|  
-|[!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)]|	7.1, 7.0, 6.2, 5.0|  
-|[!INCLUDE[winthreshold_client_2_mdincludes/winthreshold_client_2_md.md)] build 10565 or later|	7.0, 6.2, 5.0 |  
-|[!INCLUDE[winthreshold_client_2_mdincludes/winthreshold_client_2_md.md)] builds earlier than 10565  |	6.2, 5.0 |  
-|[!INCLUDE[winblue_server_2_mdincludes/winblue_server_2_md.md)]|	5.0|  
-|[!INCLUDE[winblue_client_2_mdincludes/winblue_client_2_md.md)]	|5.0|  
+|[!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)]|	7.1, 7.0, 6.2, 5.0|  
+|[!INCLUDE[winthreshold_client_2_md](../../../includes/winthreshold_client_2_md.md)] build 10565 or later|	7.0, 6.2, 5.0 |  
+|[!INCLUDE[winthreshold_client_2_md](../../../includes/winthreshold_client_2_md.md)] builds earlier than 10565  |	6.2, 5.0 |  
+|[!INCLUDE[winblue_server_2_md](../../../includes/winblue_server_2_md.md)]|	5.0|  
+|[!INCLUDE[winblue_client_2_md](../../../includes/winblue_client_2_md.md)]	|5.0|  
   
 Run the PowerShell cmdlet [Get-VMHostSupportedVersion](https://technet.microsoft.com/library/mt653838.aspx) to see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see what the default is, run the following command.  
  ```  
 Get-VMHostSupportedVersion -Default  
  ```  
- If you need to create a virtual machine that you can move to a Hyper-V Host that runs an older version of Windows, use the [New-VM](https://technet.microsoft.com/library/hh848537.aspx) cmdlet with the -version parameter. For example, to create a virtual machine that you can move to a Hyper-V host that runs [!INCLUDE[winblue_server_2_mdincludes/winblue_server_2_md.md)], run the following command. This command will create a virtual machine named "WindowsCV5" with a configuration version 5.0.  
+ If you need to create a virtual machine that you can move to a Hyper-V Host that runs an older version of Windows, use the [New-VM](https://technet.microsoft.com/library/hh848537.aspx) cmdlet with the -version parameter. For example, to create a virtual machine that you can move to a Hyper-V host that runs [!INCLUDE[winblue_server_2_md](../../../includes/winblue_server_2_md.md)], run the following command. This command will create a virtual machine named "WindowsCV5" with a configuration version 5.0.  
   ```  
 New-VM -Name "WindowsCV5" -Version 5.0  
  ```  
    
 Why should I upgrade the virtual machine configuration version?  
 ---  
-When you move or import a virtual machine to a computer that runs Hyper-V on [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2_mdincludes/winthreshold_client_2_md.md)], the virtual machine’s configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version. You can't downgrade the virtual machine configuration version after you've upgraded it.  
+When you move or import a virtual machine to a computer that runs Hyper-V on [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2_md](../../../includes/winthreshold_client_2_md.md)], the virtual machine’s configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version. You can't downgrade the virtual machine configuration version after you've upgraded it.  
   
    
 The virtual machine configuration version represents the compatibility of the virtual machine’s configuration, saved state, and snapshot files with the version of Hyper-V. When you update the configuration version, you change the file structure that is used to store the virtual machines configuration and the checkpoint files. You also update the configuration version to the latest version supported by that Hyper-V host. Upgraded virtual machines use a new configuration file format, which is designed to increase the efficiency of reading and writing virtual machine configuration data. The upgrade also reduces the potential for data corruption in the event of a storage failure.  
@@ -95,5 +95,5 @@ The following table shows the minimum virtual machine configuration version requ
 |Virtual Trusted Platform Module (vTPM)|7.0|  
 |Virtual machine multi queues (VMMQ)|7.1|   
   
-For more information about these features, see [What's new in Hyper-V on Windows Server 2016](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).
+For more information about these features, see [What's new in Hyper-V on Windows Server 2016](../What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).
 

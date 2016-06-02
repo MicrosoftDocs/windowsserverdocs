@@ -15,7 +15,7 @@ author: cwatsonmsft
 # Manage Windows virtual machines with PowerShell Direct
 **This is preliminary content and subject to change.**  
   
-You can use PowerShell Direct to remotely manage a [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)] or [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] virtual machine from a  [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)] or [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] Hyper\-V host. PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper\-V host or the virtual machine. This makes it easier for Hyper\-V Administrators to automate and script virtual machine management and configuration.  
+You can use PowerShell Direct to remotely manage a [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)] or [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] virtual machine from a  [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)] or [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] Hyper\-V host. PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper\-V host or the virtual machine. This makes it easier for Hyper\-V Administrators to automate and script virtual machine management and configuration.  
   
 There are two ways to run PowerShell Direct:  
   
@@ -70,9 +70,9 @@ To create a PowerShell Direct session on a virtual machine,
   
 -   You must supply valid user credentials for the virtual machine.  
   
--   The host operating system must run [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)], [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], or higher version.  
+-   The host operating system must run [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)], [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)], or higher version.  
   
--   The virtual machine must run [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)], [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], or higher version.  
+-   The virtual machine must run [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)], [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)], or higher version.  
   
 You can use the [Get-VM](http://technet.microsoft.com/library/hh848479.aspx) cmdlet to check that the credentials you're using have the Hyper\-V administrator role and to see which VMs are running locally on the host and booted.  
   

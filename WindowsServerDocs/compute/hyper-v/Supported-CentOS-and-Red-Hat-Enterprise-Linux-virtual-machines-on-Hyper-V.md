@@ -15,7 +15,7 @@ author: cwatsonmsft
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 The following feature distribution maps indicate the features that are present in built\-in and downloadable versions of Linux Integration Services. The known issues and workarounds for each distribution are listed after the tables.  
   
-The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V (available since Red Hat Enterprise Linux 6.4) are sufficient for Red Hat Enterprise Linux guests to run using the high performance synthetic devices on Hyper-V hosts.  These built-in drivers are certified by Red Hat for this use. Certified configurations can be viewed on this Red Hat web page: [Red Hat Certification Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server). It isn't necessary to download and install Linux Integration Services packages from the Microsoft Download Center, and doing so may limit your Red Hat support as described in Red Hat Knowledgebase article 1067: [Red Hat Knowledgebase 1067]( https://access.redhat.com/articles/1067).   
+The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V (available since Red Hat Enterprise Linux 6.4) are sufficient for Red Hat Enterprise Linux guests to run using the high performance synthetic devices on Hyper-V hosts.  These built-in drivers are certified by Red Hat for this use. Certified configurations can be viewed on this Red Hat web page: [Red Hat Certification Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server). It isn't necessary to download and install Linux Integration Services packages from the Microsoft Download Center, and doing so may limit your Red Hat support as described in Red Hat Knowledgebase article 1067: [Red Hat Knowledgebase 1067](https://access.redhat.com/articles/1067).   
   
 Because of potential conflicts between the built\-in LIS support and the downloadable LIS support when you upgrade the kernel, disable automatic updates, uninstall the LIS downloadable packages, update the kernel, reboot, and then install the latest LIS release, and reboot again.  
   
@@ -158,7 +158,7 @@ This series has a supported 32\-bit PAE kernel available. There is no built\-in 
   
 2.  Static IP injection may not work if Network Manager has been configured for a given synthetic network adapter on the virtual machine. For smooth functioning of static IP injection please make sure that either Network Manager is either turned off completely or has been turned off for a specific network adapter through its ifcfg\-ethX file.  
   
-3.  On [!INCLUDE[winblue_server_2_mdincludes/winblue_server_2_md.md)] while using virtual fibre channel devices, make sure that logical unit number 0 \(LUN 0\) has been populated. If LUN 0 has not been populated, a Linux virtual machine might not be able to mount fibre channel devices natively.  
+3.  On [!INCLUDE[winblue_server_2_md](../../includes/winblue_server_2_md.md)] while using virtual fibre channel devices, make sure that logical unit number 0 \(LUN 0\) has been populated. If LUN 0 has not been populated, a Linux virtual machine might not be able to mount fibre channel devices natively.  
   
 4.  If there are open file handles during a live virtual machine backup operation, then in some corner cases, the backed\-up VHDs might have to undergo a file system consistency check \(fsck\) on restore.  
   
@@ -182,7 +182,7 @@ This series has a supported 32\-bit PAE kernel available. There is no built\-in 
   
     -   Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.  
   
-10. If you are using Dynamic Memory on a [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] or  [!INCLUDE[winblue_server_2_mdincludes/winblue_server_2_md.md)] operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to hot\-add failures, and you may not see any memory increase in a guest operating system.  
+10. If you are using Dynamic Memory on a [!INCLUDE[winthreshold_server_2_md](../../includes/winthreshold_server_2_md.md)] or  [!INCLUDE[winblue_server_2_md](../../includes/winblue_server_2_md.md)] operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to hot\-add failures, and you may not see any memory increase in a guest operating system.  
   
 11. Certain distributions, including those using LIS 4.0 and 4.1, only provide Ballooning support and do not provide Hot\-Add support. In such a scenario, the dynamic memory feature can be used by setting the Startup memory parameter to a value which is equal to the Maximum memory parameter. This results in all the requisite memory being Hot\-Added to the virtual machine at boot time and then later depending upon the memory requirements of the host, Hyper\-V can freely allocate or deallocate memory from the guest using Ballooning. Please configure **Startup Memory** and **Minimum Memory** at or above the recommended value for the distribution.  
   
@@ -190,7 +190,7 @@ This series has a supported 32\-bit PAE kernel available. There is no built\-in 
   
 13. The key\/value pair \(KVP\) infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
   
-14. On [!INCLUDE[winblue_server_2_mdincludes/winblue_server_2_md.md)] Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper\-V Manager** or you can disable it using Powershell:  
+14. On [!INCLUDE[winblue_server_2_md](../../includes/winblue_server_2_md.md)] Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper\-V Manager** or you can disable it using Powershell:  
   
     ```  
     Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  

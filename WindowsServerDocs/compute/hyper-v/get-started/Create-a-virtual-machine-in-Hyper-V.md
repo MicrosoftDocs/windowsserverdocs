@@ -15,7 +15,7 @@ author: jpjofre
 # Create a virtual machine in Hyper-V
 **This is preliminary content and subject to change.**  
   
-Learn how to create a virtual machine by using Hyper\-V Manager and [!INCLUDE[wps_2](includes/wps_2_md.md)] and what options you have when you create a virtual machine in Hyper\-V Manager.  
+Learn how to create a virtual machine by using Hyper\-V Manager and [!INCLUDE[wps_2](../../../includes/wps_2_md.md)] and what options you have when you create a virtual machine in Hyper\-V Manager.  
   
 In this article,  
   
@@ -43,9 +43,9 @@ In this article,
   
 ## <a name="BKMK_PowerShell"></a>Create a virtual machine by using Windows PowerShell  
   
-1.  On the Windows desktop, click the Start button and type any part of the name **[!INCLUDE[wps_2](includes/wps_2_md.md)]**.  
+1.  On the Windows desktop, click the Start button and type any part of the name **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]**.  
   
-2.  Right\-click **[!INCLUDE[wps_2](includes/wps_2_md.md)]** and select **Run as administrator**.  
+2.  Right\-click **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]** and select **Run as administrator**.  
   
 3.  Get the name of the virtual switch that you want the virtual machine to use by using [Get-VMSwitch](https://technet.microsoft.com/library/hh848499.aspx).  For example,  
   
@@ -56,7 +56,7 @@ In this article,
 4.  Use the [New-VM](https://technet.microsoft.com/library/hh848537.aspx) cmdlet to create the  virtual machine.  See the following examples.  
   
     > [!NOTE]  
-    > If you may move this virtual machine to a Hyper\-V host that runs Windows Server 2012 R2, use the \-Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] isn't supported by [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions).  
+    > If you may move this virtual machine to a Hyper\-V host that runs Windows Server 2012 R2, use the \-Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] isn't supported by [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)] or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions).  
   
     -   **Existing virtual hard disk** \- To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
         **\-Name** is the name that you provide for the virtual machine that you’re creating.  
@@ -64,7 +64,7 @@ In this article,
         **\-BootDevice** is the device that the virtual machine boots to  when it starts like the network adapter \(NetworkAdapter\) or virtual hard disk \(VHD\).  
         **\-VHDPath** is the path to the virtual machine disk that you want to use.  
         **\-Path** is the path to store the virtual machine configuration files.  
-        **\-Generation** is the virtual machine generation. Use generation 1 for VHD and generation 2 for VHDX. See [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](assetId:///02e31413-6140-4723-a8d6-46c7f667792d)  
+        **\-Generation** is the virtual machine generation. Use generation 1 for VHD and generation 2 for VHDX. See [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md)  
         **\-Switch** is the name of the virtual switch that you want the virtual machine to use to connect to other virtual machines or the network. See [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).  
   
         ```  
@@ -108,10 +108,10 @@ In this article,
 ## <a name="BKMK_Options"></a>Options in Hyper\-V Manager New Virtual Machine Wizard  
 The following table lists the options you can pick when you create a virtual machine in Hyper\-V Manager and the defaults for each.  
   
-|Page|Default for [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] and [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)]|Other options|  
+|Page|Default for [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] and [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)]|Other options|  
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |**Specify Name and Location**|Name:  New Virtual Machine.<br /><br />Location:  **C:\\ProgramData\\Microsoft\\Windows\\Hyper\-V\\**.|You can also enter your own name and choose another location for the virtual machine.<br /><br />This is where the virtual machine configuration files will be stored.|  
-|**Specify Generation**|Generation 1|You can also choose to create a Generation 2 virtual machine. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](assetId:///02e31413-6140-4723-a8d6-46c7f667792d)|  
+|**Specify Generation**|Generation 1|You can also choose to create a Generation 2 virtual machine. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md)|  
 |**Assign Memory**|Startup memory: 1024 MB<br /><br />Dynamic memory: **not selected**|You can set the startup memory from 32MB to 5902MB.<br /><br />You can also choose to use Dynamic Memory. For more information, see [Hyper-V Dynamic Memory Overview](http://technet.microsoft.com/library/hh831766.aspx).|  
 |**Configure Networking**|Not connected|You can select a network connection for the virtual machine to use from a list of existing virtual switches. See [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).|  
 |**Connect Virtual Hard Disk**|Create a virtual hard disk<br /><br />Name: <*vmname*>.vhdx<br /><br />**Location**: **C:\\Users\\Public\\Documents\\Hyper\-V\\Virtual Hard Disks\\**<br /><br />**Size**: 127GB|You can also choose to use an existing virtual hard disk or wait and attach a virtual hard disk later.|  
@@ -122,12 +122,12 @@ The following table lists the options you can pick when you create a virtual mac
   
 - [New-VM](https://technet.microsoft.com/library/hh848537.aspx)  
   
-- [Supported virtual machine configuration versions](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions)  
+- [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions)  
   
--   [Should I create a generation 1 or 2 virtual machine in Hyper-V?](assetId:///02e31413-6140-4723-a8d6-46c7f667792d)  
+-   [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md)  
   
 -   [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md)  
   
--  [Configure Hyper-V](Configure-Hyper-V-on-Windows-Server-2016-Technical-Preview.md)  
+-  [Configure Hyper-V](../manage/Configure-Hyper-V-on-Windows-Server-2016-Technical-Preview.md)  
   
 
