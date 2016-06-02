@@ -1,0 +1,35 @@
+---
+title: Telnet: display
+ms.custom: na
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 9272086c-3aaa-405d-ac71-652f25e2eb34
+author: vhorne
+---
+# Telnet: display
+Displays operating parameters. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+  
+## Syntax  
+  
+```  
+d[isplay]  
+```  
+  
+### Parameters  
+none  
+  
+## <a name="BKMK_Examples"></a>Examples  
+Display operating parameters.  
+  
+```  
+d  
+```  
+  
+## Additional references  
+  
+-   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+  
+
