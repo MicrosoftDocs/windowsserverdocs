@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: b0aea34c-5bbf-4b8c-bca9-8195c490d251
 author: cwatsonmsft
 ---
-# Integration Services
+# Hyper-V Integration Services
 Hyper\-V integration services, are a bundled set of software which, when installed in the virtual machine improves integration between the host server and the virtual machine. Integration services come pre\-installed in most supported guest operating systems.  
   
 The following topics list the guest operating systems supported in virtual machines running in Hyper\-V on Windows Server 2012 and Windows Server 2012 R2 for use as guest operating systems:  
@@ -21,12 +21,12 @@ The following topics list the guest operating systems supported in virtual machi
   
 -   [Supported Guest Operating Systems for Hyper\-V in Windows Server 2012 and Windows 8](assetId:///91958199-798d-4ac5-a019-3ed95c0cd2b8)  
   
--   For supported Linux distributions as a guest operating systems on Hyper\-V, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
+-   For supported Linux distributions as a guest operating systems on Hyper\-V, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
   
 > [!NOTE]  
 > -   You might need to update the integration services installed in your virtual machines after the release of hotfix, service pack or after a virtual machine has been moved to host running a newer version of Windows Server. For more information about how to upgrade the integration services, see [Install or upgrade integration services](assetId:///243b5705-96c9-4ec7-9ec5-c68a22b0d42d#BKMK_step4)  
-> -   For more information about updates and hotfixes for [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] that apply to Hyper\-V see, [Hyper\-V: Update List for Windows Server 2012](http://social.technet.microsoft.com/wiki/contents/articles/15576.hyper-v-update-list-for-windows-server-2012.aspx).  
-> -   For more information about updates and hotfixes for [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] that apply to Hyper\-V see, [Hyper\-V: Update List for Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/20885.hyper-v-update-list-for-windows-server-2012-r2.aspx).  
+> -   For more information about updates and hotfixes for [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] that apply to Hyper\-V see, [Hyper\-V: Update List for Windows Server 2012](http://social.technet.microsoft.com/wiki/contents/articles/15576.hyper-v-update-list-for-windows-server-2012.aspx).  
+> -   For more information about updates and hotfixes for [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)] that apply to Hyper\-V see, [Hyper\-V: Update List for Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/20885.hyper-v-update-list-for-windows-server-2012-r2.aspx).  
   
 ## Available Integration Services  
 After the integration services software package has been installed in the virtual machine, the following integration services can be presented to the virtual machine. The operating system running in the virtual machine must support the selected services.  
@@ -36,12 +36,12 @@ The following is the list of the integration services that can be configure in t
 |Service name|Server settings|Guest operating system|  
 |----------------|-------------------|--------------------------|  
 |**Default virtual machine setting**|**Supported on Hyper\-V running on Windows Server version**|**Windows service name**|**Linux driver \/ daemon name**|  
-|[Operating system shutdown](Integration-Services.md#BKMK_Shutdown)|Enabled|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]|**Hyper\-V Guest Shutdown Service**|hv\_utils|  
-|[Time synchronization](Integration-Services.md#BKMK_time)|Enabled|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]|**Hyper\-V Time Synchronization Service**|hv\_utils|  
-|[Data Exchange](Integration-Services.md#BKMK_KVP)|Enabled|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]|**Hyper\-V Data Exchange Service**|hv\_utils and hv\_kvp\_daemon|  
-|[Heartbeat](Integration-Services.md#BKMK_heartbeat)|Enabled|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]|**Hyper\-V Heartbeat Service**|hv\_utils|  
-|[Backup \(volume snapshot\)](Integration-Services.md#BKMK_backup)|Enabled|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]|**Hyper\-V Volume Shadow Copy Requestor**|hv\_utils and hv\_vss\_daemon|  
-|[Guest services](Integration-Services.md#BKMK_guest)|Not enabled|[!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]|**Hyper\-V Guest Services Interface**|hv\_utils and hv\_fcopy\_daemon|  
+|[Operating system shutdown](Integration-Services.md#BKMK_Shutdown)|Enabled|[!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|**Hyper\-V Guest Shutdown Service**|hv\_utils|  
+|[Time synchronization](Integration-Services.md#BKMK_time)|Enabled|[!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|**Hyper\-V Time Synchronization Service**|hv\_utils|  
+|[Data Exchange](Integration-Services.md#BKMK_KVP)|Enabled|[!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|**Hyper\-V Data Exchange Service**|hv\_utils and hv\_kvp\_daemon|  
+|[Heartbeat](Integration-Services.md#BKMK_heartbeat)|Enabled|[!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|**Hyper\-V Heartbeat Service**|hv\_utils|  
+|[Backup \(volume snapshot\)](Integration-Services.md#BKMK_backup)|Enabled|[!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|**Hyper\-V Volume Shadow Copy Requestor**|hv\_utils and hv\_vss\_daemon|  
+|[Guest services](Integration-Services.md#BKMK_guest)|Not enabled|[!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|**Hyper\-V Guest Services Interface**|hv\_utils and hv\_fcopy\_daemon|  
   
 > [!TIP]  
 > On Linux virtual machines you can check to see if the integration services driver and daemons are running by running the following commands.  

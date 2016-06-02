@@ -16,7 +16,7 @@ author: cwatsonmsft
 **This is preliminary content and subject to change.**  
 Hyper-V supports several versions of Windows Server, Windows, and Linux distributions to run as virtual machine guest operating systems. This article covers supported Windows Server and Windows guest operating systems. For Linux and FreeBSD distributions, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
     
-Some operating systems have the integration services built\-in. Others require that you install or upgrade integration services as a separate step after you set up the operating system in the virtual machine. For more information, see the sections below and  [Integration Services](assetId:///b0aea34c-5bbf-4b8c-bca9-8195c490d251).  
+Some operating systems have the integration services built\-in. Others require that you install or upgrade integration services as a separate step after you set up the operating system in the virtual machine. For more information, see the sections below and  [Integration Services](https://technet.microsoft.com/library/dn798297.aspx).  
   
 ## Supported Windows Server guest operating systems  
 The following table lists the Windows Server operating systems supported in [!INCLUDE[winthreshold_server_1](../../includes/winthreshold_server_1_md.md)] for use as guest operating systems in Hyper\-V virtual machines, as well as provides information about integration services.  
@@ -49,8 +49,8 @@ Use the topics in the  following table for information about guest operating sys
 |Host operating system|Topic|  
 |-------------------------|---------|  
 |Windows 10|[Supported Guest Operating Systems for Client Hyper-V in Windows 10](http://msdn.microsoft.com/virtualization/hyperv_on_windows/about/supported_guest_os)|  
-|Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](assetId:///0a3a974c-1714-47c8-88ca-8c1124dda369)<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|  
-|Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](assetId:///91958199-798d-4ac5-a019-3ed95c0cd2b8)|  
+|Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](https://technet.microsoft.com/library/dn792027.aspx)<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|  
+|Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](https://technet.microsoft.com/library/dn792028.aspx)|  
 |Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](http://technet.microsoft.com/library/cc794868.aspx)|  
   
 ## How Microsoft provides support for guest operating systems  

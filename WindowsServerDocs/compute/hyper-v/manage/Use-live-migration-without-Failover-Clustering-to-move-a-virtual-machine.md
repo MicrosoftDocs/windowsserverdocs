@@ -19,9 +19,9 @@ To be able to do this, you'll need:
 
  - A user account that's a member of the local Hyper\-V Administrators group or the Administrators group on both the source and destination computers. 
   
-- The Hyper\-V role in [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](Set-up-hosts-for-live-migration.md). 
+- The Hyper\-V role in [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)] installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](Set-up-hosts-for-live-migration.md). 
   
-- The Hyper\-V management tools installed on a computer running [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2_mdincludes/winthreshold_client_2_md.md)], unless the tools are installed on the source or destination server and you'll run them from there.  
+- The Hyper\-V management tools installed on a computer running [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2_md](../../../includes/winthreshold_client_2_md.md)], unless the tools are installed on the source or destination server and you'll run them from there.  
    
 ## <a name="BKMK_Step3"></a>Use Hyper-V Manager to move a running virtual machine  
   
@@ -53,7 +53,7 @@ If you haven’t set up constrained delegation, you must sign in to source serve
   
 **Failed to establish a connection with host***\<computer name>***: No credentials are available in the security package \0x8009030E\).**
   
- To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. \(Note that this requires domain administrator credentials.\) For instructions, see [Set up hosts for live migration](Set-up-hosts-for-live-migration.md). 
+ To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. \(Note that this requires domain administrator credentials.\) For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration.md). 
  
  ### Failed because the host hardware isn't compatible
  

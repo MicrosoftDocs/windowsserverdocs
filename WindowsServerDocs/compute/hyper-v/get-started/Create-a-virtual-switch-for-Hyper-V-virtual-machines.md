@@ -25,7 +25,7 @@ Virtual machine networking can be a complex subject. And there are several new v
   
 2.  Select **Action** > **Virtual Switch Manager**.  
   
-    ![](media/Hyper-V-Action-VSwitchManager.png)  
+    ![](../../../media/Hyper-V-Action-VSwitchManager.png)  
   
 3.  Choose the type of virtual switch you want.  
   
@@ -41,7 +41,7 @@ Virtual machine networking can be a complex subject. And there are several new v
   
 6.  If you select External, choose the network adapter \(NIC\) that you want to use and any other options described in the following table.  
   
-    ![](media/Hyper-V-NewVSwitch-ExternalOptions.png)  
+    ![](../../../media/Hyper-V-NewVSwitch-ExternalOptions.png)  
   
     |Setting name|Description|  
     |----------------|---------------|  
@@ -50,13 +50,13 @@ Virtual machine networking can be a complex subject. And there are several new v
   
 7.  If you want to isolates network traffic from the management Hyper\-V host operating system or other virtual machines that share the same virtual switch, select **Enable virtual LAN identification for management operating system**. You can change the VLAN ID to any number or leave the default. This is the virtual LAN identification number that the management operating system will use for all network communication through this virtual switch.  
   
-    ![](media/Hyper-V-NewSwitch-VLAN.png)  
+    ![](../../../media/Hyper-V-NewSwitch-VLAN.png)  
   
 8.  Click **OK**.  
   
 9. Click **Yes**.  
   
-    ![](media/Hyper-V-NewVSwitch-DisruptNetwork.png)  
+    ![](../../../media/Hyper-V-NewVSwitch-DisruptNetwork.png)  
   
 ## <a name="BKMK_WPS"></a>Create a virtual switch by using Windows PowerShell  
   
@@ -88,7 +88,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
     ```  
   
-For more advanced [!INCLUDE[wps_2](includes/wps_2_md.md)] scripts that cover improved or new virtual switch features in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
+For more advanced [!INCLUDE[wps_2](../../../includes/wps_2_md.md)] scripts that cover improved or new virtual switch features in [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)], see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
   
 ## Next step  
 [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)  

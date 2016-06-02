@@ -20,7 +20,7 @@ A basic understanding of networking in Hyper\-V helps you plan networking for vi
 ## Hyper\-V networking basics  
 Basic networking in Hyper\-V is fairly simple. It uses two parts — a virtual switch and a virtual networking adapter. You'll need at least one of each  to establish networking for a virtual machine. The virtual switch connects to any Ethernet\-based network. The virtual network adapter connects to a port on the virtual switch, which makes it possible for a virtual machine to use a network.  
   
-The easiest way to establish basic networking is to create a virtual switch when you install Hyper\-V. Then, when you create a virtual machine, you can  connect it to the switch. Connecting to the switch automatically adds a virtual network adapter to the virtual machine. For instructions, see [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).  
+The easiest way to establish basic networking is to create a virtual switch when you install Hyper\-V. Then, when you create a virtual machine, you can  connect it to the switch. Connecting to the switch automatically adds a virtual network adapter to the virtual machine. For instructions, see [Create a virtual switch for Hyper-V virtual machines](../get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).  
   
 To handle different types of networking, you can add virtual switches and virtual network adapters. All switches are part of the Hyper\-V host, but each virtual network adapter belongs to only one virtual machine.  
   

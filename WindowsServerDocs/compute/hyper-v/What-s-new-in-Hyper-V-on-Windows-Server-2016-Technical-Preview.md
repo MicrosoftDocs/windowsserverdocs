@@ -15,7 +15,7 @@ author: KBDAzure
 # What&#39;s new in Hyper-V on Windows Server 2016 Technical Preview
 **This is preliminary content and subject to change.**  
   
-This article explains the new and changed functionality of Hyper\-V on [!INCLUDE[winthreshold_server_1](../../includes/winthreshold_server_1_md.md)] and [!INCLUDE[winthreshold_mshvs_1](../../includes/winthreshold_mshvs_1_md.md)]. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper\-V on [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)], you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
+This article explains the new and changed functionality of Hyper\-V on [!INCLUDE[winthreshold_server_1](../../includes/winthreshold_server_1_md.md)] and [!INCLUDE[winthreshold_mshvs_1](../../includes/winthreshold_mshvs_1_md.md)]. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper\-V on [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)], you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
   
 Here's what's included in this article and whether the functionality is new or updated.  
   
@@ -131,7 +131,7 @@ After you update the cluster functional level:
   
 -   You can enable new Hyper\-V features.  
   
--   To make new virtual machine features available, use the Update\-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
+-   To make new virtual machine features available, use the Update\-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
   
 -   You can't add a node to the Hyper\-V Cluster that runs [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].  
   
@@ -163,7 +163,7 @@ The version represents the compatibility of the virtual machine’s configuratio
   
 If you move or import a virtual machine to a server that runs Hyper\-V on [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] from [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)], the virtual machine’s configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)]. But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   
-For instructions on checking and upgrading the version, see [Upgrade virtual machine version](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md). This article also lists the version in which some features were introduced.   
+For instructions on checking and upgrading the version, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md). This article also lists the version in which some features were introduced.   
   
 > [!IMPORTANT]  
 > -   After you update the  version, you can't move the virtual machine to a server that runs [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].  

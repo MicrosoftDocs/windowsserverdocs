@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 561ca108-0adc-4809-aece-9b768e9cdaff
 author: cwatsonmsft
 ---
-# Migrate host
+# Migrate Hyper-V host
 ## Welcome to CAPS Markdown Editor!  
   
 CAPS is using GitHub Flavored Markdown(GFM) which is one of the most popular Markdown flavor. Lets' learn how to make your customized document with below rules.    

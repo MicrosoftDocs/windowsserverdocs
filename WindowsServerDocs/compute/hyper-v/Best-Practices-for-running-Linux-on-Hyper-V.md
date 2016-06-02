@@ -80,6 +80,6 @@ After resizing a VHD or VHDX, administrators should use a utility like fdisk or 
   
 -   [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)  
   
--   [Deploy a Hyper-V Cluster](assetId:///636c67f7-de15-4e23-ad6a-119a8d43d819)  
+-   [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx)  
   
 
