@@ -130,7 +130,7 @@ This table shows the roles and features that are available in this release of Na
 |-------------------|----------|  
 |Hyper\-V role|\-Compute|  
 |Failover Clustering|\-Clustering|  
-|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].|\-OEMDrivers|  
+|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)].|\-OEMDrivers|  
 |File Server role and other storage components|\-Storage|  
 |Windows Defender Antimalware, including a default signature file|\-Defender|  
 |Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default  
