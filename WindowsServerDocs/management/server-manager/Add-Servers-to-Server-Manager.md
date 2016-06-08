@@ -11,16 +11,16 @@ ms.topic: article
 ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
 ---
 # Add Servers to Server Manager
-In [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)], you can manage multiple remote servers by using a single [!INCLUDE[sm](includes/sm_md.md)] console. Servers that you want to manage by using [!INCLUDE[sm](includes/sm_md.md)] can be running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], or [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)]. Note that you cannot manage a newer release of Windows Server with an older release of [!INCLUDE[sm](includes/sm_md.md)].
+In Windows Server® 2016 Technical Preview, you can manage multiple remote servers by using a single Server Manager console. Servers that you want to manage by using Server Manager can be running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008 . Note that you cannot manage a newer release of Windows Server with an older release of Server Manager.
 
-This topic describes how to add servers to the [!INCLUDE[sm](includes/sm_md.md)] server pool.
+This topic describes how to add servers to the Server Manager server pool.
 
 > [!NOTE]
-> In our tests, [!INCLUDE[sm](includes/sm_md.md)] in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single [!INCLUDE[sm](includes/sm_md.md)] console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running [!INCLUDE[sm](includes/sm_md.md)]. As the amount of data you want to display approaches that computer’s resource capacity, you can experience slow responses from [!INCLUDE[sm](includes/sm_md.md)], and delays in the completion of refreshes. To help increase the number of servers that you can manage by using [!INCLUDE[sm](includes/sm_md.md)], we recommend limiting the event data that [!INCLUDE[sm](includes/sm_md.md)] gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise\-level number of servers in your organization, we recommend evaluating products in the [Microsoft® System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
+> In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer’s resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise\-level number of servers in your organization, we recommend evaluating products in the [Microsoft® System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
 > 
-> [!INCLUDE[sm](includes/sm_md.md)] can receive only online or offline status from servers that are running Windows Server 2003. Although you can use [!INCLUDE[sm](includes/sm_md.md)] to perform management tasks on servers that are running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] or [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], you cannot add roles and features to servers that are running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] or Windows Server 2003.
+> Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
 > 
-> [!INCLUDE[sm](includes/sm_md.md)] cannot be used to manage a newer release of the Windows Server operating system. [!INCLUDE[sm](includes/sm_md.md)] running on [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)], or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] cannot be used to manage servers that are running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].
+> Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1, or Windows 8 cannot be used to manage servers that are running Windows Server 2016 Technical Preview.
 
 This topic contains the following sections.
 
@@ -29,7 +29,7 @@ This topic contains the following sections.
 -   [Provide credentials with the Manage As command](#BKMK_creds)
 
 ## <a name="BKMK_creds"></a>Provide credentials with the Manage As command
-As you add remote servers to [!INCLUDE[sm](includes/sm_md.md)], some of the servers that you add might require different user account credentials to access or manage them. To specify credentials for a managed server that are different from those you use to log on to the computer on which you are running [!INCLUDE[sm](includes/sm_md.md)], use the **Manage As** command after you add a server to [!INCLUDE[sm](includes/sm_md.md)], which is accessible by right\-clicking the entry for a managed server in the **Servers** tile of a role or group home page. Clicking **Manage As** opens the **Windows Security** dialog box, in which you can provide a user name that has access rights on the managed server, in one of the following formats.
+As you add remote servers to Server Manager, some of the servers that you add might require different user account credentials to access or manage them. To specify credentials for a managed server that are different from those you use to log on to the computer on which you are running Server Manager, use the **Manage As** command after you add a server to Server Manager, which is accessible by right\-clicking the entry for a managed server in the **Servers** tile of a role or group home page. Clicking **Manage As** opens the **Windows Security** dialog box, in which you can provide a user name that has access rights on the managed server, in one of the following formats.
 
 -   *User name*
 
@@ -37,7 +37,7 @@ As you add remote servers to [!INCLUDE[sm](includes/sm_md.md)], some of the serv
 
 -   *Domain*\\*User name*
 
-The **Windows Security** dialog box that is opened by the **Manage As** command cannot accept smart card credentials; providing smart card credentials through [!INCLUDE[sm](includes/sm_md.md)] is not supported. Credentials that you provide for a managed server by using the **Manage As** command are cached, and persist as long as you are managing the server by using the same computer on which you are currently running [!INCLUDE[sm](includes/sm_md.md)], or as long as you do not overwrite them by specifying blank or different credentials for the same server. If you export your [!INCLUDE[sm](includes/sm_md.md)] settings to other computers, or configure your domain profile to be roaming to allow [!INCLUDE[sm](includes/sm_md.md)] settings to be used on other computers, **Manage As** credentials for servers in your server pool are not stored in the roaming profile. [!INCLUDE[sm](includes/sm_md.md)] users must add them on each computer from which they want to manage.
+The **Windows Security** dialog box that is opened by the **Manage As** command cannot accept smart card credentials; providing smart card credentials through Server Manager is not supported. Credentials that you provide for a managed server by using the **Manage As** command are cached, and persist as long as you are managing the server by using the same computer on which you are currently running Server Manager, or as long as you do not overwrite them by specifying blank or different credentials for the same server. If you export your Server Manager settings to other computers, or configure your domain profile to be roaming to allow Server Manager settings to be used on other computers, **Manage As** credentials for servers in your server pool are not stored in the roaming profile. Server Manager users must add them on each computer from which they want to manage.
 
 After you add servers to manage by following procedures in this topic, but before you use the **Manage As** command to specify alternate credentials that might be required to manage a server that you have added, the following manageability status errors can be displayed for the server:
 
@@ -48,10 +48,10 @@ After you add servers to manage by following procedures in this topic, but befor
 -   Online \- Access denied
 
 > [!NOTE]
-> Roles and features that do not support the **Manage As** command include Remote Desktop Services \(RDS\) and IP Address Management \(IPAM\) Server. If you cannot manage the remote RDS or IPAM server by using the same credentials you are using on the computer on which you are running [!INCLUDE[sm](includes/sm_md.md)], try adding the account you typically use to manage these remote servers to the Administrators group on the computer that is running [!INCLUDE[sm](includes/sm_md.md)]. Then, log on to the computer that is running [!INCLUDE[sm](includes/sm_md.md)] with the account you use to manage the remote server that is running RDS or IPAM.
+> Roles and features that do not support the **Manage As** command include Remote Desktop Services \(RDS\) and IP Address Management \(IPAM\) Server. If you cannot manage the remote RDS or IPAM server by using the same credentials you are using on the computer on which you are running Server Manager, try adding the account you typically use to manage these remote servers to the Administrators group on the computer that is running Server Manager. Then, log on to the computer that is running Server Manager with the account you use to manage the remote server that is running RDS or IPAM.
 
 ## <a name="BKMK_add"></a>Add servers to manage
-You can add servers to [!INCLUDE[sm](includes/sm_md.md)] to manage by using any of three methods in the **Add Servers** dialog box.
+You can add servers to Server Manager to manage by using any of three methods in the **Add Servers** dialog box.
 
 -   **Active Directory® Domain Services** Add servers to manage that Active Directory finds in the same domain as the local computer.
 
@@ -61,11 +61,11 @@ You can add servers to [!INCLUDE[sm](includes/sm_md.md)] to manage by using any 
 
 #### To add servers to the server pool
 
-1.  If [!INCLUDE[sm](includes/sm_md.md)] is already open, go on to the next step. If [!INCLUDE[sm](includes/sm_md.md)] is not already open, open it by doing one of the following.
+1.  If Server Manager is already open, go on to the next step. If Server Manager is not already open, open it by doing one of the following.
 
-    -   On the Windows desktop, start [!INCLUDE[sm](includes/sm_md.md)] by clicking **Server Manager** in the Windows taskbar.
+    -   On the Windows desktop, start Server Manager by clicking **Server Manager** in the Windows taskbar.
 
-    -   On the Windows **Start** screen, click the [!INCLUDE[sm](includes/sm_md.md)] tile.
+    -   On the Windows **Start** screen, click the Server Manager tile.
 
 2.  On the **Manage** menu, click **Add Servers**.
 
@@ -80,17 +80,17 @@ You can add servers to [!INCLUDE[sm](includes/sm_md.md)] to manage by using any 
 4.  When you are finished adding servers, click **OK**.
 
 ### Add and manage servers in workgroups
-Although adding servers that are in workgroups to [!INCLUDE[sm](includes/sm_md.md)] might be successful, after they are added, the **Manageability** column of the **Servers** tile—on a role or group page that includes a workgroup server—can display **Credentials not valid** errors that occur while trying to connect to or collect data from the remote, workgroup server.
+Although adding servers that are in workgroups to Server Manager might be successful, after they are added, the **Manageability** column of the **Servers** tile—on a role or group page that includes a workgroup server—can display **Credentials not valid** errors that occur while trying to connect to or collect data from the remote, workgroup server.
 
 These or similar errors can occur in the following conditions.
 
--   The managed server is in the same workgroup as the computer that is running [!INCLUDE[sm](includes/sm_md.md)].
+-   The managed server is in the same workgroup as the computer that is running Server Manager.
 
--   The managed server is in a different workgroup from the computer that is running [!INCLUDE[sm](includes/sm_md.md)].
+-   The managed server is in a different workgroup from the computer that is running Server Manager.
 
 -   One of the computers is in a workgroup, while the other is in a domain.
 
--   The computer that is running [!INCLUDE[sm](includes/sm_md.md)] is in a workgroup, and remote, managed servers are on a different subnet.
+-   The computer that is running Server Manager is in a workgroup, and remote, managed servers are on a different subnet.
 
 -   Both computers are in domains, but there is no trust relationship between the two domains.
 
@@ -100,13 +100,13 @@ These or similar errors can occur in the following conditions.
 
 ##### To add remote workgroup servers to Server Manager
 
-1.  On the computer that is running [!INCLUDE[sm](includes/sm_md.md)], add the workgroup server name to the **TrustedHosts** list. This is a requirement of NTLM authentication. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
+1.  On the computer that is running Server Manager, add the workgroup server name to the **TrustedHosts** list. This is a requirement of NTLM authentication. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
 
     ```
     Set-Item wsman:\localhost\Client\TrustedHosts Server01 -Concatenate -Force
     ```
 
-2.  Determine whether the workgroup server that you want to manage is in the same subnet as the computer on which you are running [!INCLUDE[sm](includes/sm_md.md)].
+2.  Determine whether the workgroup server that you want to manage is in the same subnet as the computer on which you are running Server Manager.
 
     If the two computers are in the same subnet, or if the workgroup server’s network profile is set to **Private** in the **Network and Sharing Center**, go on to the next step.
 
@@ -121,44 +121,44 @@ These or similar errors can occur in the following conditions.
     New-ItemProperty -Name LocalAccountTokenFilterPolicy -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -propertyType DWord -value 1
     ```
 
-4.  On the computer on which you are running [!INCLUDE[sm](includes/sm_md.md)], open the **All Servers** page.
+4.  On the computer on which you are running Server Manager, open the **All Servers** page.
 
-5.  If the computer that is running [!INCLUDE[sm](includes/sm_md.md)] and the target workgroup server are in the same workgroup, skip to the last step. If the two computers are not in the same workgroup, right\-click the target workgroup server in the **Servers** tile, and then click **Manage as**.
+5.  If the computer that is running Server Manager and the target workgroup server are in the same workgroup, skip to the last step. If the two computers are not in the same workgroup, right\-click the target workgroup server in the **Servers** tile, and then click **Manage as**.
 
 6.  Log on to the workgroup server by using the built\-in Administrator account for the workgroup server.
 
-7.  Verify that [!INCLUDE[sm](includes/sm_md.md)] is able to connect to and collect data from the workgroup server by refreshing the **All Servers** page, and then viewing the manageability status for the workgroup server.
+7.  Verify that Server Manager is able to connect to and collect data from the workgroup server by refreshing the **All Servers** page, and then viewing the manageability status for the workgroup server.
 
 ##### To add remote servers when Server Manager is running on a workgroup computer
 
-1.  On the computer that is running [!INCLUDE[sm](includes/sm_md.md)], add remote servers to the local computer’s **TrustedHosts** list in a [!INCLUDE[wps_2](includes/wps_2_md.md)] session. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
+1.  On the computer that is running Server Manager, add remote servers to the local computer’s **TrustedHosts** list in a Windows PowerShell session. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
 
     ```
     Set-Item wsman:\localhost\Client\TrustedHosts Server01 -Concatenate -Force
     ```
 
-2.  Determine whether the server that you want to manage is in the same subnet as the workgroup computer on which you are running [!INCLUDE[sm](includes/sm_md.md)].
+2.  Determine whether the server that you want to manage is in the same subnet as the workgroup computer on which you are running Server Manager.
 
     If the two computers are in the same subnet, or if the workgroup computer’s network profile is set to **Private** in the **Network and Sharing Center**, go on to the next step.
 
-    If they are not in the same subnet, or if the workgroup computer’s network profile is not set to **Private**, on the workgroup computer that is running [!INCLUDE[sm](includes/sm_md.md)], change the inbound **Windows Remote Management \(HTTP\-In\)** setting in Windows Firewall to explicitly allow connections from remote computers by adding the computer names on the **Computers** tab of the setting’s **Properties** dialog box.
+    If they are not in the same subnet, or if the workgroup computer’s network profile is not set to **Private**, on the workgroup computer that is running Server Manager, change the inbound **Windows Remote Management \(HTTP\-In\)** setting in Windows Firewall to explicitly allow connections from remote computers by adding the computer names on the **Computers** tab of the setting’s **Properties** dialog box.
 
-3.  On the computer on which you are running [!INCLUDE[sm](includes/sm_md.md)], open the **All Servers** page.
+3.  On the computer on which you are running Server Manager, open the **All Servers** page.
 
-4.  Verify that [!INCLUDE[sm](includes/sm_md.md)] is able to connect to and collect data from the remote server by refreshing the **All Servers** page, and then viewing the manageability status for the remote server. If the **Servers** tile still displays a manageability error for the remote server, go on to the next step.
+4.  Verify that Server Manager is able to connect to and collect data from the remote server by refreshing the **All Servers** page, and then viewing the manageability status for the remote server. If the **Servers** tile still displays a manageability error for the remote server, go on to the next step.
 
-5.  Log off of the computer on which you are running [!INCLUDE[sm](includes/sm_md.md)], and then log on again by using the built\-in Administrator account. Repeat the preceding step, to verify that [!INCLUDE[sm](includes/sm_md.md)] is able to connect to and collect data from the remote server.
+5.  Log off of the computer on which you are running Server Manager, and then log on again by using the built\-in Administrator account. Repeat the preceding step, to verify that Server Manager is able to connect to and collect data from the remote server.
 
 If you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_Remote_Troubleshooting](http://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
 
 ### Add and manage servers in clusters
-You can use [!INCLUDE[sm](includes/sm_md.md)] to manage servers that are in failover clusters \(also called server clusters or MSCS\). Servers that are in failover clusters—whether the cluster nodes are physical or virtual—have some unique behaviors and management limitations in [!INCLUDE[sm](includes/sm_md.md)].
+You can use Server Manager to manage servers that are in failover clusters \(also called server clusters or MSCS\). Servers that are in failover clusters—whether the cluster nodes are physical or virtual—have some unique behaviors and management limitations in Server Manager.
 
--   Both physical and virtual servers in clusters are automatically added to [!INCLUDE[sm](includes/sm_md.md)] when one server in the cluster is added to [!INCLUDE[sm](includes/sm_md.md)]. Similarly, when you remove a clustered server from [!INCLUDE[sm](includes/sm_md.md)], you are prompted to remove other servers in the cluster.
+-   Both physical and virtual servers in clusters are automatically added to Server Manager when one server in the cluster is added to Server Manager. Similarly, when you remove a clustered server from Server Manager, you are prompted to remove other servers in the cluster.
 
--   [!INCLUDE[sm](includes/sm_md.md)] does not display data for clustered virtual servers, because the data is dynamic, and is identical to data for the server on which the virtual clustered node is hosted. You can select the server that is hosting the virtual server to view its data.
+-   Server Manager does not display data for clustered virtual servers, because the data is dynamic, and is identical to data for the server on which the virtual clustered node is hosted. You can select the server that is hosting the virtual server to view its data.
 
--   If you add a server to [!INCLUDE[sm](includes/sm_md.md)] by using the server’s virtual cluster object name, the virtual object name is displayed in [!INCLUDE[sm](includes/sm_md.md)] instead of the physical server name \(expected\).
+-   If you add a server to Server Manager by using the server’s virtual cluster object name, the virtual object name is displayed in Server Manager instead of the physical server name \(expected\).
 
 -   You cannot install roles and features on a clustered virtual server.
 

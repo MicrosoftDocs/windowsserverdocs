@@ -30,11 +30,11 @@ The following procedures explain how to open the Local Group Policy Editor from 
 
 #### To open the Local Group Policy Editor from the command line
 
--   [!INCLUDE[winblue_start](includes/winblue_start_md.md)]**gpedit.msc**, and then press **ENTER**.
+-   On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type**gpedit.msc**, and then press **ENTER**.
 
 #### To open the Local Group Policy Editor as a snap\-in
 
-1.  [!INCLUDE[winblue_start](includes/winblue_start_md.md)]**mmc**, and then press **ENTER**.
+1.  On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type**mmc**, and then press **ENTER**.
 
 2.  On the **File** menu, click **Add\/Remove Snap\-in**.
 

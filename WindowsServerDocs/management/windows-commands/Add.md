@@ -14,7 +14,7 @@ ms.assetid: 6ac1f002-9702-4b55-8e4e-2098f3bb4fa9
 Mirrors the simple volume with focus to the specified disk.
 
 > [!IMPORTANT]
-> This DiskPart command is not available in any edition of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)].
+> This DiskPart command is not available in any edition of Windows Vista.
 
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 

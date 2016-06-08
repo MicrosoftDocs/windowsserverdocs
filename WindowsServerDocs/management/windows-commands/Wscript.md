@@ -41,7 +41,7 @@ wscript[<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/j
 
 -   Performing this task does not require you to have administrative credentials. Therefore, as a security best practice, consider performing this task as a user without administrative credentials.
 
--   [!INCLUDE[noloc_smart_command](includes/noloc_smart_command_md.md)]
+-   To open a command prompt, on the **Start** screen, type **cmd**, and then click **command prompt**.
 
 -   Each parameter is optional; however, you cannot specify script arguments without specifying a script. If you do not specify a script or any script arguments, **wscript.exe** displays the **Windows Script Host Settings** dialog box, which you can use to set global scripting properties for all scripts that **wscript.exe** runs on the local computer.
 

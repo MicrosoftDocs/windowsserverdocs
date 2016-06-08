@@ -19,7 +19,7 @@ Additionally, you can manage Preferences using Windows PowerShell. For informati
 ## Data Sources extension  
 Group Policy includes the Data Sources preference extension. This extension allows you to centrally configure Open Database Connectivity \(ODBC\) data source names for user or computers.  
   
-You can create and configure Data Source preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Data Source preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration** or **User Configuration**  
   
@@ -29,16 +29,16 @@ You can create and configure Data Source preference items for any domain\-based 
   
 **└ Data Sources**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Data Source item  
 Data source preference items allow you to create, update, replace, and delete user and system data sources. Data sources store information about how to connect to a data provider. Before you create a Data Source preference item, you should review the behavior of each type of action possible with this extension.  
   
 ##### To create a new Data Source preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Data Sources** node, point to **New**, and select **Data Source**.  
   
@@ -46,12 +46,12 @@ Data source preference items allow you to create, update, replace, and delete us
   
 5.  Enter data source settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 ### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether a data source with the same name exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether a data source with the same name exists.  
   
 |||  
 |-|-|  
@@ -65,11 +65,11 @@ Data source preference items allow you to create, update, replace, and delete us
 |||  
 |-|-|  
 |**User Data Source** or **System Data Source**|Select the visibility of the data source name. User data sources are available to users receiving the preference item. System data sources are available to all the users of the computer \(including the Local System\).|  
-|**Data Source Name**|Type the name used to identify the data source. This field accepts preference processing variables. [!INCLUDE[pref_f3](includes/pref_f3_md.md)] You can import a local data source name into the Data Source preference item. Click Browse **\(…\)** to display a list of the data sources names on the current computer. **Important:** Attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
+|**Data Source Name**|Type the name used to identify the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select. You can import a local data source name into the Data Source preference item. Click Browse **\(…\)** to display a list of the data sources names on the current computer. **Important:** Attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
 |**Driver**|Type the name of the ODBC driver used to connect to the data provider. Click Browse **\(…\)** to choose from a list of ODBC drivers.|  
-|**Description**|Provide text used to describe the data source. This field accepts preference processing variables. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**Description**|Provide text used to describe the data source. This field accepts preference processing variables. Press F3 to display a list of variables from which you can select.|  
 |**User Name**|Type the user name used to connect to the indicated data provider.|  
-|**Password**|Type the password used to connect to the indicated data provider. Type the same password in the **Confirm Password** box. **Security Note:** [!INCLUDE[pref_pwd](includes/pref_pwd_md.md)]|  
+|**Password**|Type the password used to connect to the indicated data provider. Type the same password in the **Confirm Password** box. **Security Note:** This password is protected by 256\-bit Advanced Encryption Standard \(AES\) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
 |**Attributes**|Data Source item attributes allow you to supply additional information for the data provider. Each attribute consists of an attribute name and its associated value.<br /><br />-   Click **Add** to create new attributes in the Data Source item.<br />-   Click **Remove** to delete existing attributes.<br />-   Click **Change** to alter the attribute name or value. **Important:** Attributes are automatically populated when importing an existing data source name into a Data Source preference item.|  
   
 #### Additional considerations  
@@ -78,12 +78,12 @@ Data source preference items allow you to create, update, replace, and delete us
   
 -   Use the **Replace** action to remove attributes from existing data source names.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Devices extension  
-You can create and configure Device preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Device preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration** or **User Configuration**  
   
@@ -93,7 +93,7 @@ You can create and configure Device preference items for any domain\-based Group
   
 **└ Devices**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 Device preference items allow you to enable or disable classes of or types of hardware devices. Device classes allow you to enable or disable a broader ranger of device types. Device types allow you to enable or disable a specific type of hardware device. For example, disabling the device class **DVD\/CD\-ROM drives** disables all hardware devices within the selected class. Disabling the device type **MS CD\/DVD\-ROM ATA Device** only disables hardware devices of that type, not the entire class. Before you create a Device preference item, you should review the behavior of each type of action possible with this extension.  
   
@@ -104,9 +104,9 @@ Device preference items allow you to enable or disable classes of or types of ha
   
 ##### To create a new Device preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Devices** node, point to **New**, and select **Device**.  
   
@@ -114,9 +114,9 @@ Device preference items allow you to enable or disable classes of or types of ha
   
 5.  Enter device settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 ### Actions  
   
@@ -142,14 +142,14 @@ Device preference items allow you to enable or disable classes of or types of ha
   
 -   The **Remove this item when it is no longer applied** is available only when the item action is set to **Do not use this device \(disabled\)**. Removing the preference item enables the device.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Folder Options extension  
 Group Policy includes the Folder Options extension. This extension allows you to configure various Windows Explorer settings such as file type and application start\-up associations, and folder view options.  
   
-You can create and configure File Type, Open With, and Folder Options preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure File Type, Open With, and Folder Options preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration** or **User Configuration**  
   
@@ -159,32 +159,32 @@ You can create and configure File Type, Open With, and Folder Options preference
   
 **└ Folder Options**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Folder Options \(at least Windows Vista\) item  
   
 ##### To create a new Folder Options preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan_user_only](includes/pref_ctrlpan_user_only_md.md)]  
+2.  In the console tree under **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Folder Options** node, point to **New**, and select **Folder Options \(Windows Vista and later\)**.  
   
 4.  In the **New Folder Options Properties** dialog box, enter folder options settings for Group Policy to configure.  
   
-5.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+5.  Click the **Common** tab and configure any options desired.  
   
-6.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+6.  Click **OK**. The new preference item appears in the results pane.  
   
 ### How to create an Open With item  
 The Open With preference item allows you to create, configure, and delete an Open With association with a specific file name extension. Before you create an Open With preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new Open With preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan_user_only](includes/pref_ctrlpan_user_only_md.md)]  
+2.  In the console tree under **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Folder Options** node, point to **New**, and select **Open With**.  
   
@@ -192,12 +192,12 @@ The Open With preference item allows you to create, configure, and delete an Ope
   
 5.  Enter Open With settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the Open With association already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the Open With association already exists.  
   
 |||  
 |-|-|  
@@ -210,26 +210,26 @@ The Open With preference item allows you to create, configure, and delete an Ope
   
 |||  
 |-|-|  
-|**File name extension**|Type the extension of the file to associate with the specified application. [!INCLUDE[pref_f3](includes/pref_f3_md.md)] **Note:** You do not need to insert the period before the file name extension.|  
-|**Associated Program**|Type the path and name of the application you want to associate with the file name extension. Alternatively, you can click Browse **\(…\)** and select the application. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**File name extension**|Type the extension of the file to associate with the specified application. Press F3 to display a list of variables from which you can select. **Note:** You do not need to insert the period before the file name extension.|  
+|**Associated Program**|Type the path and name of the application you want to associate with the file name extension. Alternatively, you can click Browse **\(…\)** and select the application. Press F3 to display a list of variables from which you can select.|  
 |**Set as default**|Select this check box to make the associated application the default application Windows uses to open the file name extension.|  
   
 ##### Additional considerations  
   
 -   Open With appears on the Windows Explorer's shortcut menu when there is more than one Open With association.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ### How to create a File Type item  
 The File Type preference item allows you to create, configure, and delete file name extensions associated with a particular class of files \(such as text documents\). Additionally, the preference item allows you to associate applications for opening, editing, and other actions as well as icons to file specific file types. Before you create a File Type preference item, you should review the behavior of each type of action possible with the item.  
   
 ##### To create a new File Type preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan_comp_only](includes/pref_ctrlpan_comp_only_md.md)]  
+2.  In the console tree under **Computer Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Folder Options** node, point to **New**, and select **File Type**.  
   
@@ -237,12 +237,12 @@ The File Type preference item allows you to create, configure, and delete file n
   
 5.  Enter file type settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the file type association already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the file type association already exists.  
   
 |||  
 |-|-|  
@@ -255,8 +255,8 @@ The File Type preference item allows you to create, configure, and delete file n
   
 |||  
 |-|-|  
-|**File extension**|Type the extension of the file to associate with the specified application. [!INCLUDE[pref_f3](includes/pref_f3_md.md)] **Note:** You do not need to insert the period before the file name extension.|  
-|**Associated class**|Choose from the list of registered classes the one you want to associate with the file type. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**File extension**|Type the extension of the file to associate with the specified application. Press F3 to display a list of variables from which you can select. **Note:** You do not need to insert the period before the file name extension.|  
+|**Associated class**|Choose from the list of registered classes the one you want to associate with the file type. Press F3 to display a list of variables from which you can select.|  
   
 #### Configure class settings  
 Select **Configure class settings** to configure advanced class settings.  
@@ -269,9 +269,9 @@ Select **Configure class settings** to configure advanced class settings.
   
 -   Each subaction configured replaces in full any subaction of the same name that was previously registered under the **Associated** class. Apart from overwriting a subaction, this item does not support removing subactions, or other items in the **Actions** list.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Internet Settings extension  
 Group Policy includes the Internet Settings preference extension. For users, this extension allows you to:  
@@ -282,7 +282,7 @@ Group Policy includes the Internet Settings preference extension. For users, thi
   
 -   Configure several Internet settings while leaving others to the discretion of each end user. \(For example, you can specify proxy server settings while allowing users to modify accessibility options.\)  
   
-You can create and configure Internet Explorer preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Internet Explorer preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **User Configuration**  
   
@@ -292,12 +292,12 @@ You can create and configure Internet Explorer preference items for any domain\-
   
 **└ Internet Settings**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ## Local Users and Groups extension  
 Group Policy includes the Local Users and Groups preference extension. This extension allows you to centrally manage local users and groups on domain member computers.  
   
-You can create and configure Local User and Local Group preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Local User and Local Group preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration** or **User Configuration**  
   
@@ -307,16 +307,16 @@ You can create and configure Local User and Local Group preference items for any
   
 **└ Local Users and Groups**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Local Group item  
 Local Group preference items allow you to centrally create, delete, and rename local groups. Also, you can use these preference items to change local group memberships. Before you create a local group preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new Local Group preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Local Users and Groups** node, point to **New**, and select **Local Group**.  
   
@@ -324,12 +324,12 @@ Local Group preference items allow you to centrally create, delete, and rename l
   
 5.  Enter local group settings for Group Policy to configure or remove  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether a group with the same name exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether a group with the same name exists.  
   
 |||  
 |-|-|  
@@ -344,7 +344,7 @@ Local Group preference items allow you to centrally create, delete, and rename l
 |-|-|  
 |**Group Name**|Type the name of the targeted local group. The preference extension creates a new group with this name if the group does not exist. If the group exists, the preference extension uses the group with this name as the target of the requested action.|  
 |**Rename to:**|Type in the new name of the local group. This option is only available when using the **Update** action. The preference extension renames the group with the name that matches in the **Group Name** box to the name provided in the **Rename to** box.|  
-|**Description**|Text used to describe the purpose or use of the local group. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**Description**|Text used to describe the purpose or use of the local group. Press F3 to display a list of variables from which you can select.|  
 |**Add the current user**|Use this setting to include the currently logged on user as a member of the local group. **Note:** This setting is available only when editing the preference item under **User Configuration**.|  
 |**Remove the current user**|Use this setting to delete the currently logged on user's membership in the local group. **Note:** This setting is available only when editing the preference item under **User Configuration**.|  
 |**Do not configure for the current user**|Use this setting if you do not want the currently logged\-on user added to or removed from the local group. **Note:** This setting is available only when editing the preference item under **User Configuration**.|  
@@ -362,18 +362,18 @@ Local Group preference items allow you to centrally create, delete, and rename l
   
 -   The Local Group item action **Update** modifies the settings of a local group, but does not change the security identifier of the local group.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ### How to create a Local User item  
 Local User preference items allow you to centrally create, delete, and rename local users. Also, you can use this preference item to change local user passwords. Before you create a local user preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new Local User preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Local Users and Groups** node, point to **New**, and select **Local User**.  
   
@@ -381,12 +381,12 @@ Local User preference items allow you to centrally create, delete, and rename lo
   
 5.  Enter local user settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether a user with the same name \(or, for built\-in accounts, security identifier \[SID\]\) exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether a user with the same name \(or, for built\-in accounts, security identifier \[SID\]\) exists.  
   
 |||  
 |-|-|  
@@ -401,9 +401,9 @@ Local User preference items allow you to centrally create, delete, and rename lo
 |-|-|  
 |**User Name**|Type the name of the targeted local user. The preference extension creates a new user with this name if the user does not exist. If the user exists, the preference extension uses the user with this name as the target of the requested action.|  
 |**Rename to:**|Type the new name of the local user. This option is only available when using the **Update** action. The preference extension renames the user with the name that matches in the **User Name** box to the name provided in the **Rename to** box.|  
-|**Full name**|Text used to display the full name of the local user. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
-|**Description**|Text used to describe the purpose or use of the local user. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
-|**Password**|Type the password used when creating, replacing, or updating a local user. Type the same password in the **Confirm Password** box **Security Note:** [!INCLUDE[pref_pwd](includes/pref_pwd_md.md)]|  
+|**Full name**|Text used to display the full name of the local user. Press F3 to display a list of variables from which you can select.|  
+|**Description**|Text used to describe the purpose or use of the local user. Press F3 to display a list of variables from which you can select.|  
+|**Password**|Type the password used when creating, replacing, or updating a local user. Type the same password in the **Confirm Password** box **Security Note:** This password is protected by 256\-bit Advanced Encryption Standard \(AES\) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
 |**User must change password at next logon**|Use this setting if you want to force the newly created or updated local user to change their password at their next logon.|  
 |**Account is disabled**|Use this setting if you want to disable the newly created or updated local user.|  
 |**Account never expires**|Use this setting if you do not want the newly created or updated local user account to expire. Deselect the setting to force the newly created or updated local user account to expire. Then, choose an expiration date from the **Account expires** list.|  
@@ -414,12 +414,12 @@ Local User preference items allow you to centrally create, delete, and rename lo
   
 -   The Local User item action **Update** modifies the settings of a local user, but does not change the security identifier of the local user.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Network Options extension  
-You can create and configure VPN connection and dial\-up networking connection preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure VPN connection and dial\-up networking connection preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration** or **User Configuration**  
   
@@ -429,16 +429,16 @@ You can create and configure VPN connection and dial\-up networking connection p
   
 **└ Network Options**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Dial\-Up Connection item  
 The Network Options extension allows you to centrally create, modify, and delete dial\-up networking and virtual private network \(VPN\) connections. Before you create a network option preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new Dial\-Up Connection preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Network Options** node, point to **New**, and select **Dial\-Up Connection**.  
   
@@ -446,12 +446,12 @@ The Network Options extension allows you to centrally create, modify, and delete
   
 5.  Enter dial\-up networking connection settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the dial\-up networking connection already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the dial\-up networking connection already exists.  
   
 |||  
 |-|-|  
@@ -466,25 +466,25 @@ The Network Options extension allows you to centrally create, modify, and delete
 |-|-|  
 |**User connection**|Use this setting to make the newly created or updated connection visible only to the applied user.|  
 |**All users connection**|Use this setting to make the newly created or updated connection visible to all users on the computer.|  
-|**Connection Name**|Text used to name the connection. [!INCLUDE[pref_f3](includes/pref_f3_md.md)] You can import a dial\-up networking connection into the Dial\-Up Connection preference item. Click Browse **\(…\)** to display a list of dial\-up connections for the current computer.|  
-|**Phone Number**|Text used to indicate the phone number the connection uses. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**Connection Name**|Text used to name the connection. Press F3 to display a list of variables from which you can select. You can import a dial\-up networking connection into the Dial\-Up Connection preference item. Click Browse **\(…\)** to display a list of dial\-up connections for the current computer.|  
+|**Phone Number**|Text used to indicate the phone number the connection uses. Press F3 to display a list of variables from which you can select.|  
   
 ##### Additional considerations  
   
--   Dial\-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)] or [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] operating systems.  
+-   Dial\-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the  Windows Server® 2008 R2  or  Windows Server 2008  operating systems.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ### How to create a VPN Connection item  
 The Network Options extension allows you to centrally create, modify, and delete dial\-up networking and virtual private network \(VPN\) connections. Before you create a network option preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new VPN Connection preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Network Options** node, point to **New**, and select **VPN Connection**.  
   
@@ -492,12 +492,12 @@ The Network Options extension allows you to centrally create, modify, and delete
   
 5.  Enter VPN connection settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the VPN connection already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the VPN connection already exists.  
   
 |||  
 |-|-|  
@@ -512,8 +512,8 @@ The Network Options extension allows you to centrally create, modify, and delete
 |-|-|  
 |**User connection**|Use this setting to make the newly created or updated connection visible only to the applied user.|  
 |**All users connection**|Use this setting to make the newly created or updated connection visible to all users on the computer.|  
-|**Connection Name**|Text used to name the connection. [!INCLUDE[pref_f3](includes/pref_f3_md.md)] You can import a virtual private network connection into a virtual private network preference item. Click Browse **\(…\)** to display a list of virtual private network connections from the current computer.|  
-|**IP Address** or **DNS name**|Type the IP address of the remote computer. Or, select the **Use DNS name** box and type the fully qualified domain name of the remote computer. **Note:** [!INCLUDE[ipv6not](includes/ipv6not_md.md)]|  
+|**Connection Name**|Text used to name the connection. Press F3 to display a list of variables from which you can select. You can import a virtual private network connection into a virtual private network preference item. Click Browse **\(…\)** to display a list of virtual private network connections from the current computer.|  
+|**IP Address** or **DNS name**|Type the IP address of the remote computer. Or, select the **Use DNS name** box and type the fully qualified domain name of the remote computer. **Note:** IPv6 addresses are not supported.|  
 |**Dial another connection first**|Type the name of the dial\-up network connection that this connection established prior to connecting to the virtual private network.|  
 |**Show icon in notification area when connected**|Displays an animated icon in the notification area when connected.|  
   
@@ -528,14 +528,14 @@ Use the **Network** tab to choose the type of VPN connection for the preference 
   
 ##### Additional considerations  
   
--   Dial\-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)] or [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] operating systems.  
+-   Dial\-Up Connection preference items and VPN Connection preference items are not supported in a Server Core installation of the  Windows Server® 2008 R2  or  Windows Server 2008  operating systems.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Power Options extension  
-You can create and configure Power Plan, Power Options, and Power Scheme preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Power Plan, Power Options, and Power Scheme preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration** or **User Configuration**  
   
@@ -545,7 +545,7 @@ You can create and configure Power Plan, Power Options, and Power Scheme prefere
   
 **└ Power Options**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Power Plan item  
 Power Plan preference items configure sleep and display options for managing power consumption.  
@@ -554,20 +554,20 @@ You configure Power Plan items just as you would configure advanced power settin
   
 ##### To create a new Power Plan preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Power Options** node, point to **New**, and select **Power Plan \(Windows Vista and later\)**.  
   
 4.  In the **New Power Plan \(Windows Vista and later\) Properties** dialog box, enter power options settings for Group Policy to configure.  
   
-5.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+5.  Click the **Common** tab and configure any options desired.  
   
-6.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+6.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the power plan already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the power plan already exists.  
   
 |||  
 |-|-|  
@@ -584,12 +584,12 @@ You configure Power Plan items just as you would configure advanced power settin
   
 -   Settings that are applied to the computer become active when the computer is started without a logged\-on user. However, Power Plan preference items, which support Group Policy background updates, can reset power settings when computer policy is applied without a logged\-on user.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Printers extension  
-Group Policy includes the Printers preference extension. This extension allows you to create, configure, and delete local, shared, and TCP\/IP printers. You can create and configure Printer preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+Group Policy includes the Printers preference extension. This extension allows you to create, configure, and delete local, shared, and TCP\/IP printers. You can create and configure Printer preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration** or **User Configuration**  
   
@@ -599,16 +599,16 @@ Group Policy includes the Printers preference extension. This extension allows y
   
 **└ Printers**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Local Printer item  
 The Printers preference extension allows you to create, configure, and delete local printers by using the Local Printer preference item. Before you create a Local Printer preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new Local Printer preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Printers** node, point to **New**, and select **Local Printer**.  
   
@@ -616,12 +616,12 @@ The Printers preference extension allows you to create, configure, and delete lo
   
 5.  Enter local printer settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the printer connection already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the printer connection already exists.  
   
 |||  
 |-|-|  
@@ -634,26 +634,26 @@ The Printers preference extension allows you to create, configure, and delete lo
   
 |||  
 |-|-|  
-|**Connection Name**|Type the name of the targeted local printer. The preference extension creates a new local printer with this name if the local printer does not exist. If the printer exists, the preference extension uses the local printer with this name as the target of the requested action. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**Connection Name**|Type the name of the targeted local printer. The preference extension creates a new local printer with this name if the local printer does not exist. If the printer exists, the preference extension uses the local printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select.|  
 |**Port**|Choose a local port from the supplied list or type the name of the local port.|  
 |**Printer path**|Type or click Browse **\(…\)** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver. The actual printer should be physically connected to the workstation.|  
 |**Set this printer as the default printer**|Select this check box to make the local printer the default Windows printer for the current user.|  
-|**Location**|Type text to describe where the printer is located. This information appears in the printer's **Location** box. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
-|**Comment**|Type text that provides additional comments about the printer. This information appears in the printer's **Comments** box. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**Location**|Type text to describe where the printer is located. This information appears in the printer's **Location** box. Press F3 to display a list of variables from which you can select.|  
+|**Comment**|Type text that provides additional comments about the printer. This information appears in the printer's **Comments** box. Press F3 to display a list of variables from which you can select.|  
   
 ##### Additional considerations  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ### How to create a Shared Printer item  
   
 ##### To create a new Shared Printer preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan_user_only](includes/pref_ctrlpan_user_only_md.md)]  
+2.  In the console tree under **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Printers** node, point to **New**, and select **Shared Printer**.  
   
@@ -661,12 +661,12 @@ The Printers preference extension allows you to create, configure, and delete lo
   
 5.  Enter shared printer settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the printer connection already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the printer connection already exists.  
   
 |||  
 |-|-|  
@@ -693,18 +693,18 @@ The Printers preference extension allows you to create, configure, and delete lo
   
 -   Shared Printer items always use the security context of the current user to map printer connections and set the default printer status.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ### How to create a TCP\/IP Printer item  
 The Printers preference extension allows you to create, configure, and delete TCP\/IP printers by using the TCP\/IP Printer preference item. Before you create a TCP\/IP Printer preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new TCP\/IP Printer preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Printers** node, point to **New**, and select **TCP\/IP Printer**.  
   
@@ -712,12 +712,12 @@ The Printers preference extension allows you to create, configure, and delete TC
   
 5.  Enter TCP\/IP printer settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the printer connection already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the printer connection already exists.  
   
 |||  
 |-|-|  
@@ -730,26 +730,26 @@ The Printers preference extension allows you to create, configure, and delete TC
   
 |||  
 |-|-|  
-|**IP Address** or **DNS name**|Type the IP address of the remote printer. Or select the **Use DNS name** check box and type the fully qualified domain name of the remote printer. **Important:** The Printers preference extension uses the TCP\/IP address or the DNS Name to determine if a TCP\/IP printer exists when a Local Name is not provided. **Note:** [!INCLUDE[ipv6not](includes/ipv6not_md.md)]|  
-|**Local Name**|Type the local name of the targeted TCP\/IP printer connection. The preference extension creates a new TCP\/IP printer connection with this name if one does not exist. If a TCP\/IP printer connection with this name exists, the preference extension uses the TCP\/IP printer with this name as the target of the requested action. [!INCLUDE[pref_f3](includes/pref_f3_md.md)] **Important:** The Printers preference extension uses Local Name to determine if a TCP\/IP printer exists when a Local Name is provided. Otherwise, the preference extension uses the TCP\/IP address or the DNS Name to determine if the TCP\/IP connection exits.|  
+|**IP Address** or **DNS name**|Type the IP address of the remote printer. Or select the **Use DNS name** check box and type the fully qualified domain name of the remote printer. **Important:** The Printers preference extension uses the TCP\/IP address or the DNS Name to determine if a TCP\/IP printer exists when a Local Name is not provided. **Note:** IPv6 addresses are not supported.|  
+|**Local Name**|Type the local name of the targeted TCP\/IP printer connection. The preference extension creates a new TCP\/IP printer connection with this name if one does not exist. If a TCP\/IP printer connection with this name exists, the preference extension uses the TCP\/IP printer with this name as the target of the requested action. Press F3 to display a list of variables from which you can select. **Important:** The Printers preference extension uses Local Name to determine if a TCP\/IP printer exists when a Local Name is provided. Otherwise, the preference extension uses the TCP\/IP address or the DNS Name to determine if the TCP\/IP connection exits.|  
 |**Printer path**|Type a fully qualified UNC path or click Browse **\(…\)** to choose a fully qualified UNC path of a shared printer connection. The preference extension uses this shared connection as an installation source for the printer driver.|  
 |**Set this printer as the default printer**|Select this check box to make the local printer the default Windows printer for the current user.|  
 |**Only if a local printer is not present**|Select this check box to bypass changing the default printer if there is a local printer configured on the computer. This setting is unavailable until you select the **Set this printer as the default printer** check box. **Important:** A local printer is any printer that is not connected to a shared network printer. This includes physical printers connected to parallel, serial, and USB ports, TCP\/IP printers, and virtual printers installed through software.|  
 |**Delete all IP printer connections**|Select this check box if you want to delete all TCP\/IP printer connections for the current user. This setting is available only when the preference item's action is set to **Delete**|  
-|**Location**|Type text to describe where the printer is located. This information appears in the printer's **Location** box. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
-|**Comment**|Type text that provides additional comments about the printer. This information appears in the printer's **Comments** box. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]|  
+|**Location**|Type text to describe where the printer is located. This information appears in the printer's **Location** box. Press F3 to display a list of variables from which you can select.|  
+|**Comment**|Type text that provides additional comments about the printer. This information appears in the printer's **Comments** box. Press F3 to display a list of variables from which you can select.|  
   
 #### Port Settings  
 Use the **Port Settings** to configure the port settings beyond the standard default settings. The available settings include **Protocol**, **Raw Settings**, **LPR Settings**, and **SNMP Status**.  
   
 ##### Additional considerations  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Regional Options extension  
-You can create and configure Regional Options preference items in any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Regional Options preference items in any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **User Configuration**  
   
@@ -759,7 +759,7 @@ You can create and configure Regional Options preference items in any domain\-ba
   
 **└ Regional Options**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Regional Options item  
 You configure **Regional Options** just as you would in **Regional and Language Options** in **Control Panel**. Select the **User Locale** on the **Regional Options** tab. This selection resets the values on the remaining tabs; however, you can then modify the remaining values.  
@@ -769,28 +769,28 @@ You configure **Regional Options** just as you would in **Regional and Language 
   
 ##### To create a new Regional Options preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan_user_only](includes/pref_ctrlpan_user_only_md.md)]  
+2.  In the console tree under **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Regional Options** node, point to **New**, and select **Regional Options**.  
   
 4.  In the **New Regional Options Properties** dialog box, enter regional options settings for Group Policy to configure or remove.  
   
-5.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+5.  Click the **Common** tab and configure any options desired.  
   
-6.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+6.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Additional considerations  
   
 -   Settings that are unavailable cannot be enabled or disabled. You cannot configure these settings using a **Regional Options** preference item.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Scheduled Tasks extension  
-You can create and configure Scheduled Task or Immediate Task preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Scheduled Task or Immediate Task preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 For computers and users, this extension allows you to:  
   
@@ -812,16 +812,16 @@ For computers and users, this extension allows you to:
   
 **└ Scheduled Tasks**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to configure a Scheduled Task item  
 Scheduled Task preference items let you create, replace, update, and delete tasks and their associated properties. Before you create a Scheduled Task preference item, you should review the behavior of action possible with this extension.  
   
 ##### To create a new Scheduled Task preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Scheduled Tasks** node, point to **New**, and select **Scheduled Task \(Windows Vista and later\)**.  
   
@@ -841,12 +841,12 @@ Scheduled Task preference items let you create, replace, update, and delete task
   
     5.  Click the **Settings** tab, and enter any additional task settings for Group Policy to configure.  
   
-7.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+7.  Click the **Common** tab and configure any options desired.  
   
-8.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+8.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the task already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the task already exists.  
   
 |||  
 |-|-|  
@@ -858,13 +858,13 @@ Scheduled Task preference items let you create, replace, update, and delete task
 #### General task settings  
   
 > [!NOTE]  
-> All text fields accept preference processing variables. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]  
+> All text fields accept preference processing variables. Press F3 to display a list of variables from which you can select.  
   
 |||  
 |-|-|  
 |**Name**|Type a name for the task. This name will appear in the list of tasks in **Task Scheduler** under **Administrative Tools**. To change or delete a task, this name must match the name of the existing task as it appears in **Task Scheduler**. Preference items that configure tasks with the same task name can conflict.|  
 |**Description**|Type a description of the task. This description is visible for users or computers to which this preference item is applied.|  
-|**Security options**|Configure the security context under which the task is run.<br /><br />-   If the preference item is part of **Computer Configuration**, by default the task is run in the security context of the SYSTEM account.<br />-   If the preference item is part of **User Configuration**, by default the task is run in the security context of the logged\-on user. Unless you provide credentials, the task is run only if the user is logged on to the computer, but can continue after the user logs off.<br />-   To run a task under the security context of a specified account \(regardless of whether that account is logged on\), click **Change User or Group**, enter credentials for the account, and then click **Run whether user is logged on or not**. **Security Note:** [!INCLUDE[pref_pwd](includes/pref_pwd_md.md)]|  
+|**Security options**|Configure the security context under which the task is run.<br /><br />-   If the preference item is part of **Computer Configuration**, by default the task is run in the security context of the SYSTEM account.<br />-   If the preference item is part of **User Configuration**, by default the task is run in the security context of the logged\-on user. Unless you provide credentials, the task is run only if the user is logged on to the computer, but can continue after the user logs off.<br />-   To run a task under the security context of a specified account \(regardless of whether that account is logged on\), click **Change User or Group**, enter credentials for the account, and then click **Run whether user is logged on or not**. **Security Note:** This password is protected by 256\-bit Advanced Encryption Standard \(AES\) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
 |**Hidden**|Configure whether the task is hidden by default. In **Task Scheduler**, end\-users can click **View** and **Show Hidden Tasks** to display hidden tasks.|  
 |**Configure for**|You can restrict the options displayed to those that are also available in previous operating systems. Doing this does not configure the task or the preference item to run on earlier operating systems.|  
   
@@ -882,7 +882,7 @@ Configure any optional scheduling settings desired:
 #### Task actions  
   
 > [!NOTE]  
-> All text fields accept preference processing variables. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]  
+> All text fields accept preference processing variables. Press F3 to display a list of variables from which you can select.  
   
 A task can start a program, send an e\-mail, or display a message. If configuring a task to start a program, on the **Actions** tab click **New**, select **Start a program**, and configure the following options:  
   
@@ -897,18 +897,18 @@ By configuring options on the **Conditions** tab, you can restrict the condition
   
 ##### Additional considerations  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ### How to configure an Immediate Task \(Windows Vista and later\) item  
 Immediate Task preference items allow you to create tasks to be run immediately upon the refresh of Group Policy that are then removed. Immediate Task preference items do not provide a selection of actions or triggers because they always create a task and then delete it after it has run.  
   
 ##### To create a new Immediate Task preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Scheduled Tasks** node, point to **New**, and select **Immediate Task \(Windows Vista and later\)**.  
   
@@ -922,27 +922,27 @@ Immediate Task preference items allow you to create tasks to be run immediately 
   
     3.  Click the **Settings** tab, and enter any additional task settings for Group Policy to configure.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### General task settings  
   
 > [!NOTE]  
-> All text fields accept preference processing variables. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]  
+> All text fields accept preference processing variables. Press F3 to display a list of variables from which you can select.  
   
 |||  
 |-|-|  
 |**Name**|Type a name for the task. This name will appear in the list of tasks in **Task Scheduler** under **Administrative Tools**. To modify or delete a task, this name must match the name of the existing task as it appears in **Task Scheduler**. Preference items configuring tasks with the same task name can conflict.|  
 |**Description**|Type a description of the task. This description is visible for users or computers to which this preference item is applied.|  
-|**Security options**|Configure the security context under which the task is run.<br /><br />-   If the preference item is part of **Computer Configuration**, by default the task is run in the security context of the SYSTEM account.<br />-   If the preference item is part of **User Configuration**, by default the task is run in the security context of the logged\-on user. Unless you provide credentials, the task is run only if the user is logged on to the computer, but can continue after the user logs off.<br />-   To run a task under the security context of a specified account \(regardless of whether that account is logged on\), click **Change User or Group**, enter credentials for the account, and then click **Run whether user is logged on or not**. **Security Note:** [!INCLUDE[pref_pwd](includes/pref_pwd_md.md)]|  
+|**Security options**|Configure the security context under which the task is run.<br /><br />-   If the preference item is part of **Computer Configuration**, by default the task is run in the security context of the SYSTEM account.<br />-   If the preference item is part of **User Configuration**, by default the task is run in the security context of the logged\-on user. Unless you provide credentials, the task is run only if the user is logged on to the computer, but can continue after the user logs off.<br />-   To run a task under the security context of a specified account \(regardless of whether that account is logged on\), click **Change User or Group**, enter credentials for the account, and then click **Run whether user is logged on or not**. **Security Note:** This password is protected by 256\-bit Advanced Encryption Standard \(AES\) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
 |**Hidden**|Configure whether the task is hidden by default. In **Task Scheduler**, end\-users can click **View** and **Show Hidden Tasks** to display hidden tasks.|  
-|**Configure for**|For computers that are running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], or [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], you can restrict the options displayed to those that are also available in earlier operating systems. However, doing this does not configure the task or the preference item to run on earlier operating systems.|  
+|**Configure for**|For computers that are running  Windows Server 2008 R2 ,  Windows 7 ,  Windows Server 2008 , or Windows Vista, you can restrict the options displayed to those that are also available in earlier operating systems. However, doing this does not configure the task or the preference item to run on earlier operating systems.|  
   
 #### Task actions  
   
 > [!NOTE]  
-> All text fields accept preference processing variables. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]  
+> All text fields accept preference processing variables. Press F3 to display a list of variables from which you can select.  
   
 A task can start a program, send an e\-mail, or display a message. If configuring a task to start a program, on the **Actions** tab click **New**, select **Start a program**, and configure the following options:  
   
@@ -957,18 +957,18 @@ By configuring options on the **Conditions** tab, you can restrict the condition
   
 ##### Additional considerations  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ### How to configure a Scheduled Task item  
 Scheduled Task preference items let you create, replace, update, and delete scheduled tasks and their associated properties. Before you create a Scheduled Task preference item, you should review the behavior of each type of action possible with this extension.  
   
 ##### To create a new Scheduled Task preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan](includes/pref_ctrlpan_md.md)]  
+2.  In the console tree under **Computer Configuration** or **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Scheduled Tasks** node, point to **New**, and select **Scheduled Task**.  
   
@@ -982,12 +982,12 @@ Scheduled Task preference items let you create, replace, update, and delete sche
   
     2.  Click the **Settings** tab, and enter any additional task settings for Group Policy to configure.  
   
-7.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+7.  Click the **Common** tab and configure any options desired.  
   
-8.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+8.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Actions  
-[!INCLUDE[pref_actions](includes/pref_actions_md.md)] The behavior of the preference item varies with the action selected and whether the scheduled task already exists.  
+This type of preference item provides a choice of four actions: **Create**, **Replace**, **Update**, and **Delete**. The behavior of the preference item varies with the action selected and whether the scheduled task already exists.  
   
 |||  
 |-|-|  
@@ -999,7 +999,7 @@ Scheduled Task preference items let you create, replace, update, and delete sche
 #### Task settings  
   
 > [!NOTE]  
-> All text fields accept preference processing variables. [!INCLUDE[pref_f3](includes/pref_f3_md.md)]  
+> All text fields accept preference processing variables. Press F3 to display a list of variables from which you can select.  
   
 |||  
 |-|-|  
@@ -1008,7 +1008,7 @@ Scheduled Task preference items let you create, replace, update, and delete sche
 |**Arguments**|Type any command\-line arguments required.<br /><br />This field is available only if the action selected is **Create**, **Replace**, or **Update**.|  
 |**Start in**|To specify the working directory for the command being run \(typically to ensure the correct resolution of any relative file names\), type the working directory used when the task is run. Do not include quotation marks or a trailing slash.<br /><br />This field is available only if the action selected is **Create**, **Replace**, or **Update**.|  
 |**Comments**|Type a description of the task. This description is visible for users or computers to which this preference item is applied.<br /><br />This field is available only if the action selected is **Create**, **Replace**, or **Update**.|  
-|**Run as**|Configure the security context under which the task is run.<br /><br />-   If the preference item is part of **Computer Configuration**, by default the task is run in the security context of the SYSTEM account.<br />-   If the preference item is part of **User Configuration**, by default the task is run in the security context of the logged\-on user. The task is run only if the user is logged on to the computer, but can continue after the user logs off.<br />-   To run a task under the security context of a specified account \(enabling the task to run regardless of whether that account is logged on\), select the **Run as** check box and enter credentials for the account. **Security Note:** [!INCLUDE[pref_pwd](includes/pref_pwd_md.md)]<br /><br />These fields are available only if the action selected is **Create**, **Replace**, or **Update**.|  
+|**Run as**|Configure the security context under which the task is run.<br /><br />-   If the preference item is part of **Computer Configuration**, by default the task is run in the security context of the SYSTEM account.<br />-   If the preference item is part of **User Configuration**, by default the task is run in the security context of the logged\-on user. The task is run only if the user is logged on to the computer, but can continue after the user logs off.<br />-   To run a task under the security context of a specified account \(enabling the task to run regardless of whether that account is logged on\), select the **Run as** check box and enter credentials for the account. **Security Note:** This password is protected by 256\-bit Advanced Encryption Standard \(AES\) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.<br /><br />These fields are available only if the action selected is **Create**, **Replace**, or **Update**.|  
 |**Enabled**|Select this check box so that the task will run. To configure the task for users or computers without letting it run, clear this check box.<br /><br />This check box is available only if the action selected is **Create**, **Replace**, or **Update**.|  
   
 #### Schedule settings  
@@ -1030,14 +1030,14 @@ If creating, updating, or replacing a task, configure settings to manage the beh
   
 ##### Additional considerations  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Services extension  
 Group Policy includes the Services preference extension. This extension allows you to configure services presently installed on computers  
   
-You can create and configure Service preference items in any domain\-based Group Policy Object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Service preference items in any domain\-based Group Policy Object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **Computer Configuration**  
   
@@ -1047,16 +1047,16 @@ You can create and configure Service preference items in any domain\-based Group
   
 **└ Services**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Service item  
 The Services preference extension allows you to configure existing services on computers by using a Service preference item. Before you create a Service preference item, you should review the behavior of each type of action possible with the extension.  
   
 ##### To create a new Service preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan_comp_only](includes/pref_ctrlpan_comp_only_md.md)]  
+2.  In the console tree under **Computer Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Services** node, point to **New**, and select **Service**.  
   
@@ -1064,9 +1064,9 @@ The Services preference extension allows you to configure existing services on c
   
 5.  Enter service settings for Group Policy to configure or remove.  
   
-6.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+6.  Click the **Common** tab and configure any options desired.  
   
-7.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+7.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Service actions  
   
@@ -1093,7 +1093,7 @@ The Services preference extension allows you to configure existing services on c
 |**Allow service to interact with desktop**|Select this check box to allow the service to interact with the desktop. This setting is unavailable until you click the **Local System account** option.|  
 |**Log on as: This account**|Use this setting to change the service's logon credentials to a specific local or domain user. **This account** and **Password** settings become available once you click this option.|  
 |**This account**|Type or click browse **\(…\)** for the user name you are using for the service's logon credentials.|  
-|**Password**|Type the password used to authenticate the user. Type the same password in the **Confirm Password** box. **Security Note:** [!INCLUDE[pref_pwd](includes/pref_pwd_md.md)]|  
+|**Password**|Type the password used to authenticate the user. Type the same password in the **Confirm Password** box. **Security Note:** This password is protected by 256\-bit Advanced Encryption Standard \(AES\) encryption and stored as part of the GPO in SYSVOL. This password should be changed on a regular basis and should not be relied on as the sole method of protecting confidential data.|  
   
 #### Recovery actions  
 Configure how the computer responds if the service fails after one, two, or more attempts.  
@@ -1122,9 +1122,9 @@ Configure how the computer responds if the service fails after one, two, or more
   
 -   A password is required for all user account names except accounts for which the domain portion of the user credentials begins with NT AUTHORITY.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 ## Start Menu extension  
 Group Policy includes the Start Menu preference extension. For users, this extension allows you to:  
@@ -1137,7 +1137,7 @@ Group Policy includes the Start Menu preference extension. For users, this exten
   
 To add a shortcut to, modify a shortcut on, or remove a shortcut from the **Start** menu, use a Shortcut preference item.  
   
-You can create and configure Start Menu preference items for any domain\-based Group Policy object \(GPO\). [!INCLUDE[pref_you_config](includes/pref_you_config_md.md)]  
+You can create and configure Start Menu preference items for any domain\-based Group Policy object \(GPO\). You configure the settings by editing a GPO using the Group Policy Management Console. When editing a GPO, you can find this preference extension at the following location:  
   
 **User Configuration**  
   
@@ -1147,31 +1147,31 @@ You can create and configure Start Menu preference items for any domain\-based G
   
 **└ Start Menu**  
   
-[!INCLUDE[pref_for_info](includes/pref_for_info_md.md)]  
+For information about how to use this extension to create and configure a preference item, see the following topics:  
   
 ### How to create a Start Menu item  
 Start Menu preference items let you update the **Start** menu. Start Menu preference items do not provide a selection of actions because the only possible action is **Update**.  
   
 ##### To create a new Start Menu preference item  
   
-1.  [!INCLUDE[pref_edit_gpo](includes/pref_edit_gpo_md.md)]  
+1.  Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.  
   
-2.  [!INCLUDE[pref_ctrlpan_user_only](includes/pref_ctrlpan_user_only_md.md)]  
+2.  In the console tree under **User Configuration**, expand the **Preferences** folder, and then expand the **Control Panel Settings** folder.  
   
 3.  Right\-click the **Start Menu** node, point to **New**, and select **Start Menu \(Windows Vista and later\)**.  
   
 4.  In the **New Start Menu \(Windows Vista and later\) Properties** dialog box, enter **Start** menu options for Group Policy to configure  
   
-5.  [!INCLUDE[pref_common](includes/pref_common_md.md)]  
+5.  Click the **Common** tab and configure any options desired.  
   
-6.  [!INCLUDE[pref_ok](includes/pref_ok_md.md)]  
+6.  Click **OK**. The new preference item appears in the results pane.  
   
 #### Additional considerations  
   
 -   Settings that are unavailable cannot be enabled or disabled. You cannot configure these settings by using a Start Menu preference item.  
   
--   [!INCLUDE[pref_scope](includes/pref_scope_md.md)]  
+-   You can use item\-level targeting to change the scope of preference items.  
   
--   [!INCLUDE[pref_domain_gpos](includes/pref_domain_gpos_md.md)]  
+-   Preference items are available only in domain\-based GPOs.  
   
 

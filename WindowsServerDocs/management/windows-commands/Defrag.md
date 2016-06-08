@@ -54,7 +54,7 @@ defrag <volume> /T [/H] [/U] [/V]
 
     -   You cannot defragment file system volumes that are not **NTFS**, **FAT** or **FAT32**.
 
--   With [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], you can schedule to defragment a volume. However, you cannot schedule to defragment a Solid State Drive \(SSD\) or a volume on a Virtual Hard Disk \(VHD\) that resides on an SSD.
+-   With  Windows Server 2008 R2 ,  Windows Server 2008 , and, Windows Vista, you can schedule to defragment a volume. However, you cannot schedule to defragment a Solid State Drive \(SSD\) or a volume on a Virtual Hard Disk \(VHD\) that resides on an SSD.
 
 -   To perform this procedure, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. As a security best practice, consider using Run as to perform this procedure.
 

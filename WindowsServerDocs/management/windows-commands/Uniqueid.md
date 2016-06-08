@@ -14,7 +14,7 @@ ms.assetid: 64235a4a-b91c-46da-b9b0-68ee90571c2a
 Displays or sets the GUID partition table \(GPT\) identifier or master boot record \(MBR\) signature for the disk with focus.
 
 > [!IMPORTANT]
-> This DiskPart command is not available in any edition of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)].
+> This DiskPart command is not available in any edition of Windows Vista.
 
 ## Syntax
 

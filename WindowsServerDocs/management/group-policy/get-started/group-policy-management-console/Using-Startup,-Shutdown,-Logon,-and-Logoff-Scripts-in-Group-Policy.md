@@ -40,7 +40,7 @@ You must be a member of the Domain Administrators security group to configure sc
   
 #### To assign computer startup scripts  
   
-1.  Open the [!INCLUDE[gpmc](includes/gpmc_md.md)]. Right\-click the [!INCLUDE[gpo](includes/gpo_md.md)] you want to edit, and then click **Edit**.  
+1.  Open the Group Policy Management Console \(GPMC\). Right\-click the Group Policy Object you want to edit, and then click **Edit**.  
   
 2.  In the console tree, click **Scripts \(Startup\/Shutdown\)**. The path is **Computer Configuration\\Policies\\Windows Settings\\Scripts \(Startup\/Shutdown\)**.  
   

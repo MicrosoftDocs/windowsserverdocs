@@ -30,7 +30,7 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |diskfree|Queries the hard disk drive to determine the amount of free space on it.|
 |dismount|Dismounts a volume.|
 |<VolumePath>|Specifies the drive letter \(followed by a colon\).|
-|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to: [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] and [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)].|
+|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |<cluster>|Specifies the logical cluster number \(LCN\).|
 
 ## <a name="BKMK_examples"></a>Examples

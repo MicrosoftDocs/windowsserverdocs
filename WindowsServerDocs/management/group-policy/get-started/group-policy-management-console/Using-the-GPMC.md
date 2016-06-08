@@ -20,7 +20,7 @@ Use the following procedures to install and open the GPMC through Server Manager
   
 #### To install the GPMC  
   
-1.  [!INCLUDE[winblue_start](includes/winblue_start_md.md)] Server Manager.  
+1.  On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type Server Manager.  
   
 2.  Click **Server Manager**, and in the main pane, click **Add roles and features**.  
   
@@ -30,7 +30,7 @@ Use the following procedures to install and open the GPMC through Server Manager
   
 #### To open the GPMC  
   
-1.  [!INCLUDE[winblue_start](includes/winblue_start_md.md)] **gpmc.msc**.  
+1.  On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type **gpmc.msc**.  
   
 2.  Click **OK** or press **ENTER**.  
   

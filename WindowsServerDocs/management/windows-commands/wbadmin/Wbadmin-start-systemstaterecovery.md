@@ -19,7 +19,7 @@ To perform a system state recovery with this subcommand, you must be a member of
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
-Syntax for [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)]:
+Syntax for  Windows Server 2008 :
 
 ```
 wbadmin start systemstaterecovery
@@ -32,7 +32,7 @@ wbadmin start systemstaterecovery
 [-quiet]
 ```
 
-Syntax for [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] or later:
+Syntax for  Windows Server 2008 R2  or later:
 
 ```
 wbadmin start systemstaterecovery

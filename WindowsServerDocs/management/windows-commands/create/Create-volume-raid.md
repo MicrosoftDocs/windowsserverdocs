@@ -14,7 +14,7 @@ ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
 Creates a RAID\-5 volume using three or more specified dynamic disks.
 
 > [!IMPORTANT]
-> This DiskPart command is not available in any edition of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)].
+> This DiskPart command is not available in any edition of Windows Vista.
 
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 

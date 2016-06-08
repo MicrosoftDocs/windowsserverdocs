@@ -41,7 +41,7 @@ ktpass
 |\/princ <PrincipalName>|Specifies the principal name in the form host\/computer.contoso.com@CONTOSO.COM. **Warning:** This parameter is case sensitive. See [Remarks](#BKMK_remarks) for more information.|  
 |\/mapuser <UserAccount>|Maps the name of the Kerberos principal, which is specified by the **princ** parameter, to the specified domain account.|  
 |\/mapop {add&#124;set}|Specifies how the mapping attribute is set.<br /><br />-   **Add** adds the value of the specified local user name. This is the default.<br />-   **Set** sets the value for Data Encryption Standard \(DES\)\-only encryption for the specified local user name.|  
-|{\-&#124;\+}desonly|DES\-only encryption is set by default.<br /><br />-   **\+** Sets an account for DES\-only encryption.<br />-   **\-** Releases restriction on an account for DES\-only encryption. **Important:** Beginning with [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], Windows does not support DES by default.|  
+|{\-&#124;\+}desonly|DES\-only encryption is set by default.<br /><br />-   **\+** Sets an account for DES\-only encryption.<br />-   **\-** Releases restriction on an account for DES\-only encryption. **Important:** Beginning with  Windows 7  and  Windows Server 2008 R2 , Windows does not support DES by default.|  
 |\/in <FileName>|Specifies the .keytab file to read from a host computer that is not running the Windows operating system.|  
 |\/pass {Password&#124;\*&#124;{\-&#124;\+}rndpass}|Specifies a password for the principal user name that is specified by the **princ** parameter. Use "\*" to prompt for a password.|  
 |\/minpass|Sets the minimum length of the random password to 15 characters.|  

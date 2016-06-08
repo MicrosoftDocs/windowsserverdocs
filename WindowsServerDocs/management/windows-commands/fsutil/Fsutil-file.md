@@ -42,8 +42,8 @@ fsutil file [setzerodata] offset=<Offset> length=<Length> <FileName>
 |queryallocranges|Queries the allocated ranges for a file on an NTFS volume. Useful for determining whether a file has sparse regions.|
 |offset\=<Offset>|Specifies the start of the range that should be set to zeroes.|
 |length\=<Length>|Specifies the length of the range \(in bytes\).|
-|queryfileid|Queries the file ID of a file on an NTFS volume.<br /><br />This parameter applies to: [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] and [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)].|
-|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<br /><br />This parameter applies to: [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] and [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)].|
+|queryfileid|Queries the file ID of a file on an NTFS volume.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |<Fileid>|Specifies the ID of the file on an NTFS volume.|
 |<Volume>|Specifies the volume as drive name followed by a colon.|
 |setshortname|Sets the short name \(8.3 character\-length file name\) for a file on an NTFS volume.|

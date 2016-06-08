@@ -38,11 +38,11 @@ sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir
 
 -   If **sfc** discovers that a protected file has been overwritten, it retrieves the correct version of the file from the **systemroot\\system32\\dllcache** folder, and then replaces the incorrect file.
 
--   There are functional differences between **sfc** on Windows Server® 2003, [!INCLUDE[firstref_longhorn](includes/firstref_longhorn_md.md)], and [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)]:
+-   There are functional differences between **sfc** on Windows Server® 2003,  Windows Server® 2008 , and  Windows Server® 2008 R2 :
 
 -   For more information about **sfc** on Windows Server 2003, see [article 310747](http://go.microsoft.com/fwlink/?LinkId=227069) in the Microsoft Knowledge Base.
 
--   For more information about **sfc** on [!INCLUDE[firstref_longhorn](includes/firstref_longhorn_md.md)], and [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)], see [System File Checker](http://go.microsoft.com/fwlink/?LinkId=227071).
+-   For more information about **sfc** on  Windows Server® 2008 , and  Windows Server® 2008 R2 , see [System File Checker](http://go.microsoft.com/fwlink/?LinkId=227071).
 
 ## <a name="BKMK_examples"></a>Examples
 To verify the **kernel32.dll file**, type:

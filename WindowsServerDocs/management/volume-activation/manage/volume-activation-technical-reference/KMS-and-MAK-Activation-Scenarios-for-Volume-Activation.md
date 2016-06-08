@@ -29,9 +29,9 @@ KMS can support simple, single\-site networks and global networks. The following
 -   The implementation expanded to support a global network.
 
 #### Default KMS implementation for a single\-site network
-Contoso has 100 [!INCLUDE[nextref_client_7ent](includes/nextref_client_7ent_md.md)] clients and a mixed set of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] systems. Contoso is a flat domain \(Contoso.com\). The DNS server runs Microsoft DNS in its default configuration. This configuration supports DNS dynamic update protocol and DNS record scavenging to remove stale records.
+Contoso has 100 Windows 7 Enterprise clients and a mixed set of Windows Vista,  Windows Server 2008 , and  Windows Server 2008 R2  systems. Contoso is a flat domain \(Contoso.com\). The DNS server runs Microsoft DNS in its default configuration. This configuration supports DNS dynamic update protocol and DNS record scavenging to remove stale records.
 
-Contoso purchases a license agreement that provides a KMS key, which will activate all of its systems. The information technology \(IT\) administrator installs Contoso’s KMS host key \(CSVLK\) on two KMS hosts running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] by using the following command run locally at an elevated command prompt:
+Contoso purchases a license agreement that provides a KMS key, which will activate all of its systems. The information technology \(IT\) administrator installs Contoso’s KMS host key \(CSVLK\) on two KMS hosts running  Windows Server 2008 R2  by using the following command run locally at an elevated command prompt:
 
 ```
 Slmgr.vbs /ipk <KMS_host_key>
@@ -48,13 +48,13 @@ KMS clients on the Contoso network query DNS and receive the SRV records for bot
 #### KMS implementation in a complex, global network
 Contoso has expanded into two domains, east.contoso.com and west.contoso.com. Network traffic can pass privately between the two networks through a firewalled wide area network \(WAN\) link. This link has limited bandwidth, so resources \(including DNS\) are replicated on both sides of the WAN link to reduce traffic when possible.
 
-Contoso uses image\-based deployment. Its client systems are standardized on [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], but the [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] systems are being replaced by [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] clients.
+Contoso uses image\-based deployment. Its client systems are standardized on Windows Vista, but the Windows Vista systems are being replaced by  Windows 7  clients.
 
 Users regularly travel geographically, and their network connection changes from one domain to the other. Clients’ IP addressing is provided dynamically by DHCP, including specifying the local DNS host, local gateway address, and so on.
 
-To provide activation support for the existing [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] clients and the new [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] clients, Contoso installs four KMS hosts \(using its KMS B key\). Two KMS hosts are configured in east.contoso.com, and two are configured in west.contoso.com.
+To provide activation support for the existing Windows Vista clients and the new  Windows 7  clients, Contoso installs four KMS hosts \(using its KMS B key\). Two KMS hosts are configured in east.contoso.com, and two are configured in west.contoso.com.
 
-The IT administrator configures the KMS hosts so that the DNS SRV records drive [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] clients in the east domain to KMS\_E1, if available, or to KMS\_E2. If neither is available, the clients will attempt KMS\_W1 and, finally, KMS\_W2. Likewise, DNS in the west domain is configured so that [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] clients in the west domain will prefer contacting KMS\_W1, then KMS\_W2 and only when these fail will attempt activation with KMS\_E1 and KMS\_E2 on the far side of the WAN link.
+The IT administrator configures the KMS hosts so that the DNS SRV records drive  Windows 7  and  Windows Server 2008 R2  clients in the east domain to KMS\_E1, if available, or to KMS\_E2. If neither is available, the clients will attempt KMS\_W1 and, finally, KMS\_W2. Likewise, DNS in the west domain is configured so that  Windows 7  clients in the west domain will prefer contacting KMS\_W1, then KMS\_W2 and only when these fail will attempt activation with KMS\_E1 and KMS\_E2 on the far side of the WAN link.
 
 The IT administrator accomplishes this by making the following configuration changes \(see Table 5\):
 
@@ -82,7 +82,7 @@ Then, the administrator confirms that the Windows Firewall exceptions are set to
 |Disable KMS host caching|Slmgr \/ckhc|
 |A customer URL is set to direct users with activation issues to the Contoso help desk|HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SoftwareProtectionPlatform\\Activation<br /><br />AlternateURL \= http:\/\/contoso.com\/help|
 
-The client reference computer is KMS activated, then **sysprep \/generalize** is run. The system is shut down and imaged using ImageX from the [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] Windows Automated Installation Kit \(Windows AIK\). The Windows AIK is available to download at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=136976](http://go.microsoft.com/fwlink/?LinkId=136976).
+The client reference computer is KMS activated, then **sysprep \/generalize** is run. The system is shut down and imaged using ImageX from the  Windows 7  Windows Automated Installation Kit \(Windows AIK\). The Windows AIK is available to download at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=136976](http://go.microsoft.com/fwlink/?LinkId=136976).
 
 [Top Of Page](#Top)
 
@@ -167,7 +167,7 @@ In this scenario, the VAMT is deployed in the Core Network environment. The VAMT
 
     4.  Select the Install **MAK \(overwrite existing\)** and **Activate Now** check boxes to instruct the selected computers to activate immediately by contacting Microsoft Windows Activation over the Internet.
 
-        If an asterisk \(\*\) appears next to the text for these check boxes, the action will apply only to applicable computers. For example, a computer installed with a [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] retail edition cannot be activated using a MAK.
+        If an asterisk \(\*\) appears next to the text for these check boxes, the action will apply only to applicable computers. For example, a computer installed with a Windows Vista retail edition cannot be activated using a MAK.
 
     5.  If you are activating computers that require administrator credentials different from the those you are currently using, select **Use Alternate Credentials**.
 
@@ -182,7 +182,7 @@ In this scenario, the VAMT is used to activate workgroup computers within an Iso
 
     1.  Install the Windows AIK on a host computer in the Isolated Lab workgroup.
 
-        This computer can be running Windows XP with Service Pack 2 \(SP2\), Windows Server 2003, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].
+        This computer can be running Windows XP with Service Pack 2 \(SP2\), Windows Server 2003, Windows Vista,  Windows 7 ,  Windows Server 2008 , or  Windows Server 2008 R2 .
 
     2.  Click Start, and then click **VAMT** to open the VAMT console.
 
@@ -245,7 +245,7 @@ In this scenario, the VAMT is used to activate workgroup computers within an Iso
 
     4.  Select **Install MAK \(overwrite existing\)**.
 
-        If an asterisk \(\*\) appears next to the text for this checkbox, the action will apply only to applicable computers. For example, a computer installed with a [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] retail edition cannot be activated using a MAK.
+        If an asterisk \(\*\) appears next to the text for this checkbox, the action will apply only to applicable computers. For example, a computer installed with a Windows Vista retail edition cannot be activated using a MAK.
 
     5.  Clear the **Get Confirmation ID from Microsoft** check box, because this computer does not have Internet access.
 
@@ -256,7 +256,7 @@ In this scenario, the VAMT is used to activate workgroup computers within an Iso
         VAMT displays the Assigning Product Keys dialog box until it completes the requested action. If you selected Use Alternate Credentials, you will be prompted to enter the credentials prior to this dialog box.
 
         > [!NOTE]
-        > Selecting the **Install MAK \(overwrite existing\)** check box force\-installs a MAK on a client computer. This must be done with care. If the pre\-SP1 version of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] has been installed on the computer for more than 30 days, then its Initial Grace period has expired, and the computer will enter Reduced Functionality Mode \(RFM\) if activation is not completed successfully before the next logon. However, you can use MAK proxy activation to recover properly configured computers from RFM as long as the computers are accessible to the VAMT host. RFM only applies to the pre\-SP1 version of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)]. Windows Vista with SP1 or later, [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] will not enter RFM.
+        > Selecting the **Install MAK \(overwrite existing\)** check box force\-installs a MAK on a client computer. This must be done with care. If the pre\-SP1 version of Windows Vista has been installed on the computer for more than 30 days, then its Initial Grace period has expired, and the computer will enter Reduced Functionality Mode \(RFM\) if activation is not completed successfully before the next logon. However, you can use MAK proxy activation to recover properly configured computers from RFM as long as the computers are accessible to the VAMT host. RFM only applies to the pre\-SP1 version of Windows Vista. Windows Vista with SP1 or later,  Windows 7 ,  Windows Server 2008 , or  Windows Server 2008 R2  will not enter RFM.
 
 6.  Save the CIL:
 
@@ -389,7 +389,7 @@ In this scenario, the VAMT is used to activate workgroup computers within an Iso
         The VAMT displays the **Assigning Confirmation IDs** dialog box while it installs the CIDs on the selected computers.
 
         > [!NOTE]
-        > Selecting the **Install MAK \(overwrite existing\)** check box force\-installs a MAK. This must be done with care. If the pre\-SP1 version of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)] has been installed for more than 30 days, then its Initial Grace period has expired and it will enter RFM if activation is not completed successfully before the next logon. VAMT can be used to recover properly configured remote computers from RFM as long as they are accessible on the network. RFM only applies to the pre\-SP1 version of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)]. Windows Vista with SP1 or later, [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] will not enter RFM.
+        > Selecting the **Install MAK \(overwrite existing\)** check box force\-installs a MAK. This must be done with care. If the pre\-SP1 version of Windows Vista has been installed for more than 30 days, then its Initial Grace period has expired and it will enter RFM if activation is not completed successfully before the next logon. VAMT can be used to recover properly configured remote computers from RFM as long as they are accessible on the network. RFM only applies to the pre\-SP1 version of Windows Vista. Windows Vista with SP1 or later,  Windows 7 ,  Windows Server 2008 , and  Windows Server 2008 R2  will not enter RFM.
 
 [Top Of Page](#Top)
 
@@ -417,18 +417,18 @@ In this scenario, the VAMT is used to install and activate KMS client keys on ei
 [Top Of Page](#Top)
 
 ### <a name="Converting"></a>Converting KMS to MAK activation
-[!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] install automatically as KMS clients. To convert a KMS client to MAK activation, install a MAK. A MAK can be installed during or anytime after operating system installation.
+ Windows 7  and  Windows Server 2008 R2  install automatically as KMS clients. To convert a KMS client to MAK activation, install a MAK. A MAK can be installed during or anytime after operating system installation.
 
-A MAK key can be installed on a reference image of [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] to make all installations from that image use MAK activation instead of the default KMS activation. Doing so alleviates the need to specify a MAK in an unattended installation file.
+A MAK key can be installed on a reference image of  Windows 7  and  Windows Server 2008 R2  to make all installations from that image use MAK activation instead of the default KMS activation. Doing so alleviates the need to specify a MAK in an unattended installation file.
 
 #### Installing a MAK during operating system installation
-You can convert a KMS client to a MAK client during the initial installation of [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] by including a MAK in an unattended setup \(Unattend.xml\) file. The Unattend.xml file can be used with Setup.exe or Windows Deployment Services. For more information, see the Unattended Windows Setup Reference help file in the Windows AIK at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=136976](http://go.microsoft.com/fwlink/?LinkId=136976).
+You can convert a KMS client to a MAK client during the initial installation of  Windows 7  or  Windows Server 2008 R2  by including a MAK in an unattended setup \(Unattend.xml\) file. The Unattend.xml file can be used with Setup.exe or Windows Deployment Services. For more information, see the Unattended Windows Setup Reference help file in the Windows AIK at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=136976](http://go.microsoft.com/fwlink/?LinkId=136976).
 
 > [!NOTE]
 > The MAK is stored in clear text in the Unattend.xml file. During an unattended installation, the file Unattend.xml or AutoUnattend.xml is copied to the %SystemRoot%\\Panther folder of the target computer. However, at the end of the Setup process, the Setup program replaces it with “SENSITIVE\*DATA\*DELETED.”
 
 ### Installing a MAK after operating system installation
-You can configure a volume edition of [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] to use MAK activation by using the Control Panel System item or by running the Slmgr.vbs script:
+You can configure a volume edition of  Windows 7  or  Windows Server 2008 R2  to use MAK activation by using the Control Panel System item or by running the Slmgr.vbs script:
 
 -   To install a MAK by using System Center, click the **Change your product key** link, and then type the MAK in the **Change your product key for activation** dialog box.
 

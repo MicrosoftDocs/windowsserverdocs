@@ -9,9 +9,9 @@ ms.topic: article
 ms.assetid: 5d97fc63-0f86-4936-ba46-1d92127a1121
 ---
 # Activation Policy Values for Volume Activation
-Table 8 lists policy values for [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)].
+Table 8 lists policy values for Windows 8.1 and  Windows Server 2012 R2 .
 
-**Table 8. [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] policy values**
+**Table 8. Windows 8.1 and  Windows Server 2012 R2  policy values**
 
 |**Element**|**Client value**|**Server value**|**Range**|
 |---------------|--------------------|--------------------|-------------|

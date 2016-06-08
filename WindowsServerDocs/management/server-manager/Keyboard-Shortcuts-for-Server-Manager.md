@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
 ---
 # Keyboard Shortcuts for Server Manager
-Because [!INCLUDE[sm](includes/sm_md.md)] was fully redesigned starting in [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)], keyboard shortcuts that worked in the [!INCLUDE[sm](includes/sm_md.md)] console in [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] or [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] are not necessarily the same commands. This topic describes the new keyboard shortcuts and access keys for [!INCLUDE[sm](includes/sm_md.md)] in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and newer releases of Windows Server.
+Because Server Manager was fully redesigned starting in Windows Server® 2012, keyboard shortcuts that worked in the Server Manager console in  Windows Server 2008 R2  or  Windows Server 2008  are not necessarily the same commands. This topic describes the new keyboard shortcuts and access keys for Server Manager in  Windows Server 2012  and newer releases of Windows Server.
 
 Commands that do not have their own keyboard shortcuts or access keys are accessible by pressing the **Tab** key, and tabbing through their control group when it is in focus.
 
 ## Access keys
-**Active Control Area in [!INCLUDE[sm](includes/sm_md.md)]**
+**Active Control Area in Server Manager**
 
 **Welcome Tile**
 
@@ -44,7 +44,7 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 |Manage menu|**Alt\+M**|
 |View menu|**Alt\+V**|
 |Help menu|**Alt\+H**|
-|Open [!INCLUDE[sm](includes/sm_md.md)] Help|**F1**|
+|Open Server Manager Help|**F1**|
 |Zoom in|**Ctrl\+Plus \(\+\)**|
 |Zoom out|**Ctrl\+Minus \(\-\)**|
 |Display console at 100%|**Ctrl\+0**|
@@ -56,7 +56,7 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 |Local Server page Properties tile|**Alt\+P**|
 |Role, group, or local server page page Events tile|**Alt\+E**|
 |Role, group, or local server page Services tile|**Alt\+R**|
-|Role, group, or local server page [!INCLUDE[bpa](includes/bpa_md.md)] \(BPA\) tile|**Alt\+B**|
+|Role, group, or local server page Best Practices Analyzer \(BPA\) tile|**Alt\+B**|
 |Role, group, or local server page Performance tile|**Alt\+O**|
 |Role, group, or local server page Roles and Features tile|**Alt\+A**|
 |All Servers page Servers tile|**Alt\+A**|

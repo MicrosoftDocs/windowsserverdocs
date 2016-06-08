@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8136e3ce-9db4-412d-8680-b73051587e8c
 ---
 # Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy
-This troubleshooting topic explains the interaction between the required synchronous processing for certain Group Policy client\-side extensions \(CSEs\) and Fast Logon Optimization, which was introduced in Windows XP. Fast Logon Optimization may cause you to sign in or restart the computer multiple times before certain Group Policy settings are applied to the client computer. This topic also discusses the effect that the fast startup feature introduced in [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] has on Group Policy settings that are applied during startup or shutdown.
+This troubleshooting topic explains the interaction between the required synchronous processing for certain Group Policy client\-side extensions \(CSEs\) and Fast Logon Optimization, which was introduced in Windows XP. Fast Logon Optimization may cause you to sign in or restart the computer multiple times before certain Group Policy settings are applied to the client computer. This topic also discusses the effect that the fast startup feature introduced in Windows 8 has on Group Policy settings that are applied during startup or shutdown.
 
 ## Prerequisites
-This topic applies to computers that are running [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)], [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], Windows 7, Windows Vista, or Windows XP.
+This topic applies to computers that are running Windows 8.1, Windows 8, Windows 7, Windows Vista, or Windows XP.
 
 ## Group Policy settings and CSEs
 Policy settings are grouped into categories, such as Administrative Templates, Security Settings, Folder Redirection, Disk Quota, Software Installation, and the Group Policy preference extensions. The settings in each category require a specific CSE to process them, and each CSE has its own rules for processing settings. For this discussion, it’s important to understand that Group Policy preference extensions represent a set of client\-side extensions, not a single CSE. Each Group Policy preference extension has rules to process settings.
@@ -126,7 +126,7 @@ Although the requirement to run a client\-side extension in synchronous mode is 
 |Configure Start Menu preference extension policy processing|X|X|X|X|
 
 ## Fast Logon Optimization and Group Policy processing
-By default in [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)],  [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], Windows 7, Windows Vista, and Windows XP, the Fast Logon Optimization feature is set for domain and workgroup members. Policy settings apply asynchronously when the computer starts and when the user signs in. As a result, these operating systems do not wait for the network to be fully initialized at startup and sign\-in. Existing users are signed in by using cached credentials. This results in shorter sign\-in times. Group Policy is applied after the network becomes available.
+By default in Windows 8.1,  Windows 8, Windows 7, Windows Vista, and Windows XP, the Fast Logon Optimization feature is set for domain and workgroup members. Policy settings apply asynchronously when the computer starts and when the user signs in. As a result, these operating systems do not wait for the network to be fully initialized at startup and sign\-in. Existing users are signed in by using cached credentials. This results in shorter sign\-in times. Group Policy is applied after the network becomes available.
 
 Fast Logon Optimization is always off during sign\-in when a user:
 
@@ -195,7 +195,7 @@ At the next sign\-in, Group Policy processes synchronously. The Group Policy eng
 > When you troubleshoot Group Policy, consider that there may be interactions with multiple CSEs, and you may find that the expected behavior for a single CSE varies when combined with the processing requirements of other CSEs. For more specific examples, see the Group Policy topics in [Wiki: Group Policy Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx#Group_Policy).
 
 ## Fast startup and Group Policy processing
-Group Policy settings or scripts that are applied during startup or shutdown might not be applied on computers that are running [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] because, by default, these computers are not fully shut down by the **Shut down** command. Instead, the computer enters a hibernate state. Full shutdown only occurs when the system is set to reboot or when a pending software update or other event causes the computer to process a full shutdown. You can use the **Restart Computer** command in [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] and [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] to achieve startup or shutdown on client computers.
+Group Policy settings or scripts that are applied during startup or shutdown might not be applied on computers that are running Windows 8.1 or Windows 8 because, by default, these computers are not fully shut down by the **Shut down** command. Instead, the computer enters a hibernate state. Full shutdown only occurs when the system is set to reboot or when a pending software update or other event causes the computer to process a full shutdown. You can use the **Restart Computer** command in Windows 8.1 and Windows 8 to achieve startup or shutdown on client computers.
 
 If you do not want fast startup to apply to computers in your enterprise, you can apply a GPO that disables the **Computer Configuration\/Policies\/Administrative Templates\/System\/Shutdown\/Require use of fast startup** policy setting. Be aware that disabling this policy setting results in full shutdowns  and longer startup times for client computers. The enabled state of the **Require use of fast startup** policy setting does not take precedence over any Group Policy setting that disables hibernation.
 

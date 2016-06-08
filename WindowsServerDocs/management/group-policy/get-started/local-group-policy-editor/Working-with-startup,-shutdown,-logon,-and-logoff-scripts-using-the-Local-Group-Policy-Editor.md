@@ -29,7 +29,7 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 -   For more information about scripting, see the Group Policy Script Center \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=66013](http://go.microsoft.com/fwlink/?LinkID=66013)\).  
   
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]  
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign computer startup scripts  
   
@@ -63,17 +63,17 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   [!INCLUDE[gpolicysec](includes/gpolicysec_md.md)]  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Startup scripts are run under the Local System account, and they have the full rights that are associated with being able to run under the Local System account.  
   
--   Beginning in [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], startup scripts are run asynchronously, by default. This is a different behavior from earlier operating systems.  
+-   Beginning in Windows Vista, startup scripts are run asynchronously, by default. This is a different behavior from earlier operating systems.  
   
 -   Setting startup scripts to run synchronously may cause the boot process to run slowly.  
   
--   In [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], startup scripts that are run asynchronously will not be visible. Enabling the **Run Startup Scripts Visible** policy setting will have no effect when running startup scripts asynchronously.  
+-   In  Windows 7  and Windows Vista, startup scripts that are run asynchronously will not be visible. Enabling the **Run Startup Scripts Visible** policy setting will have no effect when running startup scripts asynchronously.  
   
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]  
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign computer shutdown scripts  
   
@@ -107,13 +107,13 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   [!INCLUDE[gpolicysec](includes/gpolicysec_md.md)]  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Shutdown scripts are run as Local System, and they have the full rights that are associated with being able to run as Local System.  
   
 -   Setting shutdown scripts to run synchronously may cause the shutdown process to run slowly.  
   
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]  
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign user logon scripts  
   
@@ -147,13 +147,13 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   [!INCLUDE[gpolicysec](includes/gpolicysec_md.md)]  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Setting logon scripts to run synchronously may cause the logon process to run slowly.  
   
 -   Logon scripts are run as User, not Administrator, and their rights are limited accordingly.  
   
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]  
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign user logoff scripts  
   
@@ -187,12 +187,12 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   [!INCLUDE[gpolicysec](includes/gpolicysec_md.md)]  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Logoff scripts are run as User, not Administrator, and their rights are limited accordingly.  
   
 -   Setting logoff scripts to run synchronously may cause the logoff process to run slowly.  
   
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]  
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 

@@ -14,7 +14,7 @@ Enables or disables flat temporary folders.
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
 > [!NOTE]
-> [!INCLUDE[rd_note-cmd-line-ref](includes/rd_note-cmd-line-ref_md.md)]
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ flattemp {/query | /enable | /disable}
 
 ## Remarks
 
--   The **flattemp** command is only available when you have installed the Terminal Server role service on a computer running [!INCLUDE[firstref_longhorn](includes/firstref_longhorn_md.md)] or the RD Session Host role service on a computer running Windows Server 2008 R2.
+-   The **flattemp** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server® 2008  or the RD Session Host role service on a computer running Windows Server 2008 R2.
 
 -   You must have administrative credentials to run **flattemp**.
 

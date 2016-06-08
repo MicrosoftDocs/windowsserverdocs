@@ -79,7 +79,7 @@ WSUS upstream and downstream servers will synchronize on the port configured by 
 
 -   On WSUS 3.2 and earlier, port 80 for HTTP and 443 for HTTPS
 
--   On WSUS 6.2 and later \(at least [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]\), port 8530 for HTTP and 8531 for HTTPS are used
+-   On WSUS 6.2 and later \(at least  Windows Server 2012 \), port 8530 for HTTP and 8531 for HTTPS are used
 
 The firewall on the WSUS server must be configured to allow inbound traffic on these ports.
 

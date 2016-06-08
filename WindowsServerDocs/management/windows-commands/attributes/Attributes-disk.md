@@ -14,7 +14,7 @@ ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92
 Displays, sets, or clears the attributes of a disk.
 
 > [!IMPORTANT]
-> This parameter is not available in any edition of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)].
+> This parameter is not available in any edition of Windows Vista.
 
 ## Syntax
 

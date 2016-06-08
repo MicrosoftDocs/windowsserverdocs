@@ -11,7 +11,7 @@ ms.assetid: b068ca77-94d8-4e19-be5e-cbee5ac759f1
 # Working with Group Policy Preference Items Using the GPMC
 This topic describes Group Policy Preferences and explains some common configuration procedures. It also contains links to topics about working with Preferences using the GPMC for Windows settings and Control Panel settings as well as item\-level targeting.
 
-Group Policy Preferences, introduced in [!INCLUDE[firstref_longhorn](includes/firstref_longhorn_md.md)], provide more than twenty Group Policy extensions that expand the range of configurable preference settings in a [!INCLUDE[gpo](includes/gpo_md.md)]. Group Policy lets you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language.
+Group Policy Preferences, introduced in  Windows Server® 2008 , provide more than twenty Group Policy extensions that expand the range of configurable preference settings in a Group Policy Object. Group Policy lets you manage drive mappings, registry settings, local users and groups, services, files, and folders without the need to learn a scripting language.
 
 For procedural information about using Preferences for Windows settings, Control Panel settings, and item\-level targeting, see:
 
@@ -22,7 +22,7 @@ For procedural information about using Preferences for Windows settings, Control
 -   [Preference Item\-Level Targeting Using the GPMC](assetId:///49c14e33-8cd1-4254-a5ab-3a3719922262)
 
 ## Overview
-Preferences let you manage all these additional settings by using the familiar [!INCLUDE[gpmc](includes/gpmc_md.md)]. Within most preference items, the user interface mimics the relevant end\-user interface for configuring these settings. This makes configuration more intuitive.
+Preferences let you manage all these additional settings by using the familiar Group Policy Management Console \(GPMC\). Within most preference items, the user interface mimics the relevant end\-user interface for configuring these settings. This makes configuration more intuitive.
 
 Within each GPO, you can create multiple preference items with each preference extension. Targeting options give you with more precise control over how Windows applies preference settings. By using item\-level targeting, you can configure each GPO to be appropriate to more users and computers.
 
@@ -223,7 +223,7 @@ Preference extensions implement the process variables that are listed here.
 |**%LogonUserSid%**|The SID of the current user.|
 |**%MacAddress%**|The first detected MAC address on the computer.|
 |**%NetPlacesDir%**|The current user's My Network Places directory.|
-|**%OsVersion%**|The operating system: [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)], [!INCLUDE[firstref_client_7](includes/firstref_client_7_md.md)], [!INCLUDE[firstref_longhorn](includes/firstref_longhorn_md.md)], [!INCLUDE[firstref_vista](includes/firstref_vista_md.md)], Windows Server 2003, Windows XP, or Unknown.|
+|**%OsVersion%**|The operating system:  Windows Server® 2008 R2 ,  Windows 7® ,  Windows Server® 2008 , Windows Vista®, Windows Server 2003, Windows XP, or Unknown.|
 |**%ProgramFilesDir%**|The Windows Program Files directory.|
 |**%ProgramsDir%**|The current user's Programs directory.|
 |**%RecentDocumentsDir%**|The current user's Recent Documents directory.|

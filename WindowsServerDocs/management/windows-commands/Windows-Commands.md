@@ -19,7 +19,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 ## <a name="BKMK_PREREQ"></a>Prerequisites
 The information that is contained in this overview applies to:
 
--   [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]
+-    Windows Server 2012 
 
 -   Windows Server 2008 R2
 
@@ -29,11 +29,11 @@ The information that is contained in this overview applies to:
 
 -   Windows Server 2003
 
--   [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)]
+-   Windows 8
 
--   [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)]
+-    Windows 7 
 
--   [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)]
+-   Windows Vista
 
 -   Windows XP
 
@@ -48,8 +48,8 @@ The information that is contained in this overview applies to:
 |[Dirquota](assetId:///e184296d-68b2-4b10-8303-7a7456f2675c)|Deprecated|Creates and manages File Server Resource Manager quotas.|
 |[Filescrn](assetId:///8f11ef55-da52-46fa-807a-33782837a80e)|Deprecated|Create and manage file groups, file screens, file screen exceptions, and file screen templates that are used to configure general administrative options for screening files.|
 |[Fondue](Fondue.md)|New|Enable optional features in Windows by downloading required files from Windows Update or a source that Group Policy specifies.|
-|[PowerShell_Ise](PowerShell_Ise.md)|New|Read, write, run, debug, and test [!INCLUDE[wps_2](includes/wps_2_md.md)] scripts and modules in a friendly, graphic\-assisted environment.|
-|[Servermanagercmd](Servermanagercmd.md)|Deprecated|Install or remove [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)].|
+|[PowerShell_Ise](PowerShell_Ise.md)|New|Read, write, run, debug, and test Windows PowerShell scripts and modules in a friendly, graphic\-assisted environment.|
+|[Servermanagercmd](Servermanagercmd.md)|Deprecated|Install or remove roles, role services, and features.|
 |[Shadow](Shadow.md)|Deprecated|Monitor an RD Session Host session.|
 |[Storrept](assetId:///4433454c-daa9-4b7a-befd-9b11d46daffa)|Deprecated|Create and manage storage reports and storage report tasks, and configure general administrative options for File Server Resource Manager.|
 

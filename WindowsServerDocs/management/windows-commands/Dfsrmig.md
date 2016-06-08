@@ -38,9 +38,9 @@ dfsrmig [/SetGlobalState <state> | /GetGlobalState | /GetMigrationState | /Creat
 
 -   Dfsrmig.exe, the migration tool for the DFS Replication service, is installed with the DFS Replication service.
 
-    For a new [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] server, Dcpromo.exe installs and starts the DFS Replication service when you promote the computer to a domain controller. When you upgrade a server from Windows Server 2003 to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], the upgrade process installs and starts the DFS Replication service. You do not need to install the DFS Replication role service to have the DFS Replication service installed and started.
+    For a new  Windows Server 2008  server, Dcpromo.exe installs and starts the DFS Replication service when you promote the computer to a domain controller. When you upgrade a server from Windows Server 2003 to  Windows Server 2008 , the upgrade process installs and starts the DFS Replication service. You do not need to install the DFS Replication role service to have the DFS Replication service installed and started.
 
--   The **dfsrmig** tool is supported only on domain controllers that run at the [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] domain functional level, because SYSVOL migration from FRS to DFS Replication is only possible on domain controllers that operate at the [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] domain functional level.
+-   The **dfsrmig** tool is supported only on domain controllers that run at the  Windows Server 2008  domain functional level, because SYSVOL migration from FRS to DFS Replication is only possible on domain controllers that operate at the  Windows Server 2008  domain functional level.
 
 -   You can run the **dfsrmig** command on any domain controller, but operations that create or manipulate AD DS objects are only allowed on read\-write capable domain controllers \(not on read\-only domain controllers\).
 

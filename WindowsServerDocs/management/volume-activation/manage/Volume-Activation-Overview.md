@@ -23,7 +23,7 @@ This technical overview for the IT professional describes the volume activation 
 ## Volume activation description  
 A number of technologies are available in Windows client and server operating systems to simplify the task of configuring the distribution and management of an organization’s volume software licenses. These technologies include:  
   
--   **The Volume Activation Services server role** Volume Activation Services is a server role Windows Server starting with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] that enables you to automate and simplify the issuance and management of Microsoft software volume licenses for a variety of scenarios and environments. With Volume Activation Services, you can install and configure the Key Management Service \(KMS\) and enable Active Directory\-based Activation.  
+-   **The Volume Activation Services server role** Volume Activation Services is a server role Windows Server starting with  Windows Server 2012  that enables you to automate and simplify the issuance and management of Microsoft software volume licenses for a variety of scenarios and environments. With Volume Activation Services, you can install and configure the Key Management Service \(KMS\) and enable Active Directory\-based Activation.  
   
 -   **Key Management Service \(KMS\)** KMS is a role service that allows organizations to activate systems within their network from a server where a KMS host has been installed. With KMS, IT pros can complete activations on their local network, eliminating the need for individual computers to connect to Microsoft for product activation. KMS does not require a dedicated system, and it can be cohosted on a system that provides other services. By default, volume editions of Windows client and server operating systems connect to a system that hosts the KMS service to request activation. No action is required from the user.  
   
@@ -32,7 +32,7 @@ A number of technologies are available in Windows client and server operating sy
     Any computers running a client or server operating system with a Generic Volume License Key \(GVLK\) that are connected to the domain will activate automatically and transparently. They will stay activated as long as they remain members of the domain and maintain periodic contact with a domain controller. Activation takes place after the licensing service starts. When this service starts, the computer running a Windows client or server operating system contacts AD DS automatically, receives the activation object, and activates without user intervention.  
   
     > [!NOTE]  
-    > AD DS must be at the schema level of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or newer to store activation objects. Domain controllers running earlier versions of Windows Server can activate clients after their schemas have been updated using the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of Adprep.exe. For more information, see [Running Adprep.exe](http://technet.microsoft.com/library/dd464018.aspx).  
+    > AD DS must be at the schema level of  Windows Server 2012  or newer to store activation objects. Domain controllers running earlier versions of Windows Server can activate clients after their schemas have been updated using the  Windows Server 2012  version of Adprep.exe. For more information, see [Running Adprep.exe](http://technet.microsoft.com/library/dd464018.aspx).  
   
 -   **Volume Activation Tools console** The Volume Activation Tools snap\-in is installed with KMS and Active\-Directory–based Activation. You can use the Volume Activation Tools console to install, activate, and manage one or more volume activation license keys in AD DS or on a KMS host.  
   
@@ -70,7 +70,7 @@ In an environment that is using a KMS host, the volume activation process is as 
 7.  The client evaluates the activation count against the license policy and activates if the activation threshold is met.  
   
     > [!NOTE]  
-    > KMS maintains an activation threshold, which requires that the organization activate at least five computers \(physical or virtual machines\) running a server operating system with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later and at least 25 client computers running [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or later. The computers running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] must connect within a 30\-day period to active KMS client computers.  
+    > KMS maintains an activation threshold, which requires that the organization activate at least five computers \(physical or virtual machines\) running a server operating system with  Windows Server 2012  or later and at least 25 client computers running Windows 8 or later. The computers running  Windows Server 2012  must connect within a 30\-day period to active KMS client computers.  
   
 In an environment that is using Active Directory\-based Activation, the volume activation process is as follows:  
   
@@ -99,7 +99,7 @@ Validating the licenses and activating tens, hundreds, or thousands of computers
 The following are common licensing and activation\-related questions.  
   
 ### What is activation?  
-Product activation is the process of validating software with the manufacturer. Activation confirms the genuine status of a product and that the product key has not been compromised. It establishes a relationship between the software’s product key and a particular installation of that software on a device. In earlier versions of the Windows operating system, activation and validation \(using the Windows Genuine tool\) occurred separately. This caused confusion for users who thought the terms were interchangeable. In Windows operating systems starting with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], activation and validation occur at the same time.  
+Product activation is the process of validating software with the manufacturer. Activation confirms the genuine status of a product and that the product key has not been compromised. It establishes a relationship between the software’s product key and a particular installation of that software on a device. In earlier versions of the Windows operating system, activation and validation \(using the Windows Genuine tool\) occurred separately. This caused confusion for users who thought the terms were interchangeable. In Windows operating systems starting with  Windows Server 2012  or Windows 8, activation and validation occur at the same time.  
   
 ### What are my activation options?  
 For released versions of Windows client and server operating systems, licenses can be obtained through the following channels:  
@@ -119,13 +119,13 @@ Customers can use one or all three of the volume activation scenarios described 
 -   **When to use the Key Management Service \(KMS\)**: KMS is the default key for volume activation clients, regardless of the Windows version they are running. If you have a network where multiple versions of Windows client and server operating systems are deployed, you will probably want to use KMS to activate them.  
   
     > [!IMPORTANT]  
-    > Installations of KMS on Windows 7 SP1 or Windows Server 2008 R2 SP1 must be updated in order to support activation of clients running operating systems starting with [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. For more information, see [An update that adds support for Windows 8 and for Windows Server 2012 to Windows Vista, Windows Server 2008, Windows 7, and Windows Server 2008 R2 KMS hosts is available](http://support.microsoft.com/kb/2757817).  
+    > Installations of KMS on Windows 7 SP1 or Windows Server 2008 R2 SP1 must be updated in order to support activation of clients running operating systems starting with Windows 8 or  Windows Server 2012 . For more information, see [An update that adds support for Windows 8 and for Windows Server 2012 to Windows Vista, Windows Server 2008, Windows 7, and Windows Server 2008 R2 KMS hosts is available](http://support.microsoft.com/kb/2757817).  
   
     KMS enables organizations to activate systems within their network, eliminating the need for individual computers to connect to Microsoft for product activation.  
   
     To use KMS activation, the computer must have the qualifying operating system license \(often obtained through OEMs as part of a new computer purchase\), and they must contain a Windows marker in the BIOS.  
   
--   **When to use Active Directory\-based Activation**: Active Directory\-based Activation simplifies the process of activating clients that are running an operating system starting with [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. In addition, it requires the AD DS schema of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later.  
+-   **When to use Active Directory\-based Activation**: Active Directory\-based Activation simplifies the process of activating clients that are running an operating system starting with Windows 8 or  Windows Server 2012 . In addition, it requires the AD DS schema of  Windows Server 2012  or later.  
   
     Activation objects themselves are not editable. However, an administrator with proper permissions can use advanced AD DS tools to view each activation object and to configure security access control lists \(ACLs\) for the activation objects to restrict access as needed. Administrators can delete activation objects, if necessary. On a local client, a user can use the command line to perform these functions if they have Write access to the activation object.  
   
@@ -135,17 +135,17 @@ Customers can use one or all three of the volume activation scenarios described 
     > For more information about configuring and using MAK activation, see the [Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?LinkId=150083)  
   
 ## System requirements  
-Volume activation services can be installed and used on any computer running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later operating system.  
+Volume activation services can be installed and used on any computer running  Windows Server 2012  or later operating system.  
   
-Active Directory\-based Activation requires that AD DS be at the schema level of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later in order to store activation objects. Domain controllers that are running earlier versions of Windows Server can activate clients after their schemas have been updated using the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of Adprep.exe.  
+Active Directory\-based Activation requires that AD DS be at the schema level of  Windows Server 2012  or later in order to store activation objects. Domain controllers that are running earlier versions of Windows Server can activate clients after their schemas have been updated using the  Windows Server 2012  version of Adprep.exe.  
   
-KMS can be installed by using the Server Manager on any computer running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later operating system. It can also be installed from the command line and used on computers running earlier versions of Windows Server.  
+KMS can be installed by using the Server Manager on any computer running  Windows Server 2012  or later operating system. It can also be installed from the command line and used on computers running earlier versions of Windows Server.  
   
 KMS can be used to activate computers running any version of Windows that can be a member of a domain.  
   
 ## Additional information  
   
-|Resource|Windows Server 2008 R2 and Windows 7|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], and [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)]|  
+|Resource|Windows Server 2008 R2 and Windows 7| Windows Server 2012 ,  Windows Server 2012 R2 , Windows 8, and Windows 8.1|  
 |------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |Product evaluation||[Test Lab Guide: Demonstrate Volume Activation Services](Test-Lab-Guide--Demonstrate-Volume-Activation-Services.md)|  
 |Procedures|[Volume Activation Operations Guide](http://go.microsoft.com/fwlink/?LinkId=150084)||  

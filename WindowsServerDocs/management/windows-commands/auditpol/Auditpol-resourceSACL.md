@@ -12,7 +12,7 @@ ms.assetid: 28771ba7-967a-45e9-9bf0-b2a2673070f0
 Configures global resource system access control lists \(SACLs\).
 
 > [!NOTE]
-> Applies only to [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].
+> Applies only to  Windows 7  and  Windows Server 2008 R2 .
 
 For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

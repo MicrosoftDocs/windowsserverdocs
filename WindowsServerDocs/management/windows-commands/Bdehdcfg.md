@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 4c92cd74-188e-4fec-b7c4-fe4e8903e032
 ---
 # Bdehdcfg
-Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption. Most installations of [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] will not need to use this tool because BitLocker setup includes the ability to prepare and repartition drives as required.
+Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption. Most installations of  Windows 7  will not need to use this tool because BitLocker setup includes the ability to prepare and repartition drives as required.
 
 > [!WARNING]
 > There is a known conflict with the **Deny write access to fixed drives not protected by BitLocker** Group Policy setting located in **Computer Configuration\\Administrative Templates\\Windows Components\\BitLocker Drive Encryption\\Fixed Data Drives**.

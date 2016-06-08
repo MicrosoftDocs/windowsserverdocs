@@ -12,7 +12,7 @@ ms.assetid: 90012116-0fb3-4f34-a819-cf4d4b4f8981
 Changes Remote Desktop Session Host \(RD Session Host\) server settings for logons, COM port mappings, and install mode.
 
 > [!NOTE]
-> [!INCLUDE[rd_note-cmd-line-ref](includes/rd_note-cmd-line-ref_md.md)]
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 
 ## Syntax
 

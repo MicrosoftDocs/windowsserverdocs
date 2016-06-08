@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
 ---
 # Klist
-Displays a list of currently cached Kerberos tickets. This information applies to [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
+Displays a list of currently cached Kerberos tickets. This information applies to  Windows Server 2012 . For examples of how this command can be used, see [Examples](#BKMK_Examples).  
   
 ## Syntax  
   
@@ -138,7 +138,7 @@ The parameters display the following information:
   
 **Other considerations**  
   
--   Klist.exe is available in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], and it requires no special installation.  
+-   Klist.exe is available in  Windows Server 2012  and Windows 8, and it requires no special installation.  
   
 ## <a name="BKMK_Examples"></a>Examples  
   

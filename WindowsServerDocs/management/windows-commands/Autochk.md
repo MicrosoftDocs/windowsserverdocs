@@ -9,9 +9,9 @@ ms.topic: article
 ms.assetid: 8787e6a3-f023-4ea5-b2d1-61c6876d8aff
 ---
 # Autochk
-Runs when the computer is started and prior to [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)] starting to verify the logical integrity of a file system.
+Runs when the computer is started and prior to  Windows Server® 2008 R2  starting to verify the logical integrity of a file system.
 
-**Autochk.exe** is a version of **Chkdsk** that runs only on NTFS disks and only before [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] starts. **Autochk** cannot be run directly from the command\-line. Instead, **Autochk** runs in the following situations:
+**Autochk.exe** is a version of **Chkdsk** that runs only on NTFS disks and only before  Windows Server 2008 R2  starts. **Autochk** cannot be run directly from the command\-line. Instead, **Autochk** runs in the following situations:
 
 -   If you try to run **Chkdsk** on the boot volume
 

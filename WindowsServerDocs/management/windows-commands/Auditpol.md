@@ -30,7 +30,7 @@ Auditpol command [<sub-command><options>]
 |\/restore|Restores the audit policy from a file that was previously created by using auditpol \/backup.<br /><br />See [Auditpol restore](Auditpol-restore.md) for syntax and options.|  
 |\/clear|Clears the audit policy.<br /><br />See [Auditpol clear](Auditpol-clear.md) for syntax and options.|  
 |\/remove|Removes all per\-user audit policy settings and disables all system audit policy settings.<br /><br />See [Auditpol remove](Auditpol-remove.md) for syntax and options.|  
-|\/resourceSACL|Configures global resource system access control lists \(SACLs\). **Note:** Applies only to [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].<br /><br />See [Auditpol resourceSACL](Auditpol-resourceSACL.md).|  
+|\/resourceSACL|Configures global resource system access control lists \(SACLs\). **Note:** Applies only to  Windows 7  and  Windows Server 2008 R2 .<br /><br />See [Auditpol resourceSACL](Auditpol-resourceSACL.md).|  
 |\/?|Displays help at the command prompt.|  
   
 ## Remarks  

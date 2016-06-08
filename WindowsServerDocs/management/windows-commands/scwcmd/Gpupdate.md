@@ -32,7 +32,7 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
   
 ## Remarks  
   
--   The **gpupdate** command is available in [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], [!INCLUDE[nextref_client_7ult](includes/nextref_client_7ult_md.md)], [!INCLUDE[nextref_client_7pro](includes/nextref_client_7pro_md.md)], [!INCLUDE[nextref_vistau](includes/nextref_vistau_md.md)], [!INCLUDE[nextref_vistae](includes/nextref_vistae_md.md)], and Windows Vista Business.  
+-   The **gpupdate** command is available in  Windows Server 2008 R2 ,  Windows Server 2008 , Windows 7 Ultimate, Windows 7 Professional, Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business.  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Force a background update of all Group Policy settings, regardless of whether they have changed.  

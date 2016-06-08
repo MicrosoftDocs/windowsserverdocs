@@ -35,10 +35,10 @@ In Figure 1, the central network has a domain controller and KMS host, which are
 
 ![](../../../media/Step-2--Evaluate-Client-Connectivity/VA_CoreNetwork.gif)
 
-If physical computers are running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or newer, use Active\-Directory\-based Activation. If you have more than 25 client computers running earlier versions of Windows, use KMS host activation.
+If physical computers are running  Windows Server 2012  or Windows 8 or newer, use Active\-Directory\-based Activation. If you have more than 25 client computers running earlier versions of Windows, use KMS host activation.
 
 > [!NOTE]
-> Clients running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or newer can activate from the domain controller or from the KMS host.
+> Clients running  Windows Server 2012  or Windows 8 or newer can activate from the domain controller or from the KMS host.
 
 If you have fewer than 25 client computers running earlier versions of Windows, use MAK activation \(by telephone, Internet, or MAK Proxy\).
 
@@ -62,7 +62,7 @@ If you have more than 25 client computers and a site that has a secure TCP\/IP c
 
 If you have remote sites with infrequent contact to the central network, use MAK activation. Site B is an example of the MAK solution.
 
-If you have a site with a secure connection to the central network, you can use the Active Directory\-based Activation for clients running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or newer operating systems, and use KMS hosts from the central network to activate all other clients. Site C is an example of this solution.
+If you have a site with a secure connection to the central network, you can use the Active Directory\-based Activation for clients running  Windows Server 2012  or Windows 8 or newer operating systems, and use KMS hosts from the central network to activate all other clients. Site C is an example of this solution.
 
 > [!NOTE]
 > The firewall configuration on the host for RPC over TCP should allow inbound traffic on TCP port 1688.

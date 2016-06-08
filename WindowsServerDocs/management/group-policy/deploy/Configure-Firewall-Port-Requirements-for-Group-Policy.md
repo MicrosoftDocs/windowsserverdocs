@@ -37,7 +37,7 @@ To use RSoP reporting for remotely targeted computers through the firewall, you 
 |TCP all ports, Winmgmt \(Windows Management Instrumentation service\)|Windows Management Instrumentation \(WMI\-in\)|
 
 ## <a name="BKMK_RemoteRsopConfig"></a>Configure firewall rules by creating a GPO from the Group Policy Reporting Firewall Ports Starter GPO and linking to the domain
-In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], Group Policy adds a new Starter GPO called, **Group Policy Reporting Firewall Ports**. This Starter GPO includes policy settings to configure the firewall rules that are specified in the previous table. This enables inbound network traffic on the ports, which is necessary to allow the GPMC to gather the Group Policy results RSoP information from a remote computer. It is a best practice to create a new GPO from this Starter GPO, and then link the new GPO to your domain with a higher precedence than the Default Domain GPO, so that you can configure all computers in the domain for remote Group Policy results reporting.
+In  Windows Server 2012 , Group Policy adds a new Starter GPO called, **Group Policy Reporting Firewall Ports**. This Starter GPO includes policy settings to configure the firewall rules that are specified in the previous table. This enables inbound network traffic on the ports, which is necessary to allow the GPMC to gather the Group Policy results RSoP information from a remote computer. It is a best practice to create a new GPO from this Starter GPO, and then link the new GPO to your domain with a higher precedence than the Default Domain GPO, so that you can configure all computers in the domain for remote Group Policy results reporting.
 
 ### <a name="BKMK_remoteProc1"></a>To create a GPO from the Group Policy Reporting Firewall Ports Starter GPO and link to the domain
 
@@ -59,9 +59,9 @@ In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], Group Policy adds a 
 
 6.  Select the GPO that you just created. Click the Up arrow until the GPO you just created is located above the Default Domain Policy. The new GPO will then have a smaller link\-order value than the Default Domain Policy.
 
-![](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+![](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
-[!INCLUDE[wps_proc_intro](includes/wps_proc_intro_md.md)]
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
 You can use the **New\-GPO** cmdlet with the **–StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New\-GPO** cmdlet to the **New\-GPLink** cmdlet.
 
@@ -87,7 +87,7 @@ To schedule a remote Group Policy refresh for domain\-joined computers you must 
 |TCP all ports, Winmgmt \(Windows Management Instrumentation service\)|Windows Management Instrumentation \(WMI\-in\)|
 
 ## <a name="BKMK_RemoteConfig2"></a>Configure firewall rules by creating a GPO from the Group Policy Remote Update Firewall Ports Starter GPO and linking to the domain
-In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], Group Policy adds a new Starter GPO called **Group Policy Remote Update Firewall Ports**. This Starter GPO includes policy settings to configure the firewall rules that are specified in the previous table. This enables inbound network traffic on the ports, which is necessary to allow the remote Group Policy refresh to run. It is a best practice to create a new GPO from this Starter GPO, and then link the new GPO to your domain with a higher precedence than the Default Domain GPO, so that you can configure all computers in the domain to enable a remote Group Policy refresh.
+In  Windows Server 2012 , Group Policy adds a new Starter GPO called **Group Policy Remote Update Firewall Ports**. This Starter GPO includes policy settings to configure the firewall rules that are specified in the previous table. This enables inbound network traffic on the ports, which is necessary to allow the remote Group Policy refresh to run. It is a best practice to create a new GPO from this Starter GPO, and then link the new GPO to your domain with a higher precedence than the Default Domain GPO, so that you can configure all computers in the domain to enable a remote Group Policy refresh.
 
 ### <a name="BKMK_remoteProc2"></a>To create a GPO from the Group Policy Remote Update Firewall Ports Starter GPO and link to the domain
 
@@ -109,9 +109,9 @@ In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], Group Policy adds a 
 
 6.  Select the GPO that you just created. Click the up arrow until the GPO you just created is above the Default Domain Policy in link order. The new GPO will then have a smaller link order value than the Default Domain Policy.
 
-![](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+![](../../media/Configure-Firewall-Port-Requirements-for-Group-Policy/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
-[!INCLUDE[wps_proc_intro](includes/wps_proc_intro_md.md)]
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
 You can use the **New\-GPO** cmdlet with the **–StarterGpoName** parameter to create a new GPO. You can then pipe the output from the **New\-GPO** cmdlet to the **New\-GPLink** cmdlet.
 

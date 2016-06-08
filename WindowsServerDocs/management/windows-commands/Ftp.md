@@ -24,7 +24,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 |\-v|Suppresses display of remote server responses.|
 |\-n|Suppresses auto\-login upon initial connection.|
 |\-g|Disables file name globbing.  **Glob** permits the use of the asterisk \(\*\) and question mark \(?\) as wildcard characters in local file and path names. For more information, see [Additional references](Ftp.md#BKMK_AdditionalRef).|
-|\-s:<FileName>|Specifies a text file that contains **ftp** commands. These commands run automatically after **ftp** starts. This parameter allows no spaces. Use this parameter instead of redirection \(**<**\). **Note:** In [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] and [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later operating systems, the text file must be written in UTF\-8.|
+|\-s:<FileName>|Specifies a text file that contains **ftp** commands. These commands run automatically after **ftp** starts. This parameter allows no spaces. Use this parameter instead of redirection \(**<**\). **Note:** In Windows 8 and  Windows Server 2012  or later operating systems, the text file must be written in UTF\-8.|
 |\-a|Specifies that any local interface can be used when binding the FTP data connection.|
 |\-A|Logs onto the FTP server as anonymous.|
 |\-x:<SendBuffer>|Overrides the default SO\_SNDBUF size of 8192.|

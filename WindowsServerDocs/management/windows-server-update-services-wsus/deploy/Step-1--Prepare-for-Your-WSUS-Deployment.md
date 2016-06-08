@@ -215,7 +215,7 @@ SQL Server, SQL Server Express, and Windows Internal Database provide the same p
 By default, the installation wizard creates and uses a Windows Internal Database that is named SUSDB.mdf. This database is located in the %windir%\\wid\\data\\ folder, where %windir% is the local drive on which the WSUS server software is installed.
 
 > [!NOTE]
-> Windows Internal Database \(WID\) was introduced in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].
+> Windows Internal Database \(WID\) was introduced in  Windows Server 2012 .
 
 WSUS supports Windows authentication only for the database. You cannot use SQL Server authentication with WSUS. If you use Windows Internal Database for the WSUS database, WSUS Setup creates an instance of SQL Server that is named server\\Microsoft\#\#WID, where server is the name of the computer. With either database option, WSUS Setup creates a database named SUSDB. The name of this database is not configurable.
 
@@ -281,7 +281,7 @@ If you are storing updates locally, and you have set up a WSUS server to downloa
 > [!NOTE]
 > Configure upstream servers to synchronize updates in all languages that are required by downstream replica servers. You will not be notified of needed updates in the unsynchronized languages.
 
-Updates will appear as **Not Applicable** on client computers that require the language. To avoid this, make sure all operating system languages are included in your WSUS server's synchronization options. You can see all the operating system languages by going to the **Computers** view of the WSUS Administration Console and sorting the computers by operating system language. However, you may want to include more languages if there are Microsoft applications in more than one language \(for example, if the French version of Microsoft Word is installed on some computers that use the English version of [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)].
+Updates will appear as **Not Applicable** on client computers that require the language. To avoid this, make sure all operating system languages are included in your WSUS server's synchronization options. You can see all the operating system languages by going to the **Computers** view of the WSUS Administration Console and sorting the computers by operating system language. However, you may want to include more languages if there are Microsoft applications in more than one language \(for example, if the French version of Microsoft Word is installed on some computers that use the English version of Windows 8.
 
 Choosing languages for an upstream server is not the same as choosing languages for a downstream server. The following procedures explain the differences.
 

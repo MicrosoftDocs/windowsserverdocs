@@ -14,7 +14,7 @@ ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
 Takes the online volume with focus to the offline state.
 
 > [!IMPORTANT]
-> This DiskPart command is not available in any edition of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)].
+> This DiskPart command is not available in any edition of Windows Vista.
 
 ## Syntax
 

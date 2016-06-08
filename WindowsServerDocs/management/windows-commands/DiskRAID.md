@@ -1122,7 +1122,7 @@ Specifies a list of iSCSI initiators to which the currently selected LUN should 
 If specified, uninstalls the disk associated with the LUN on the local system before the LUN is masked.
 
 ## Scripting DiskRAID
-DiskRAID can be scripted on any computer running [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] or Windows Server 2003 with an associated VDS hardware provider. To invoke a DiskRAID script, at the command prompt type:
+DiskRAID can be scripted on any computer running  Windows Server 2008  or Windows Server 2003 with an associated VDS hardware provider. To invoke a DiskRAID script, at the command prompt type:
 
 ```
 diskraid /s <script.txt>

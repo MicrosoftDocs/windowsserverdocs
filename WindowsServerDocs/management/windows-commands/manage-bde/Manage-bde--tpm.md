@@ -11,7 +11,7 @@ ms.assetid: 11a8530d-edd7-4fe3-ae81-b943766760fe
 # Manage-bde: tpm
 
 > [!IMPORTANT]
-> This command is not supported for use on computers running [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later operating systems. For those computers, you can use the [TPM Management cmdlets for Windows PowerShell](http://technet.microsoft.com/library/jj603116.aspx).
+> This command is not supported for use on computers running Windows 8,  Windows Server 2012  or later operating systems. For those computers, you can use the [TPM Management cmdlets for Windows PowerShell](http://technet.microsoft.com/library/jj603116.aspx).
 
 If you are using this command on computer running Windows 7 or Windows Server 2008, you can still configure the computer's Trusted Platform Module \(TPM\) using this command. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

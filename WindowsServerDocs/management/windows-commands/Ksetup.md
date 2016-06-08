@@ -71,9 +71,9 @@ ksetup
 ## Remarks
 **Ksetup** is used to change the computer settings for locating Kerberos realms. In non\-Microsoft Kerberos–based implementations, this information is usually kept in the Krb5.conf file. In Windows Server operating systems, it is kept in the registry. You can use this tool to modify these settings. These settings are used by workstations to locate Kerberos realms and by domain controllers to locate Kerberos realms for cross\-realm trust relationships.
 
-**Ksetup** initializes registry keys that the Kerberos Security Support Provider \(SSP\) uses to locate a KDC for the Kerberos realm if the computer is running Windows Server 2003, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] and is not a member of a Windows domain. After configuration, the user of a client computer that is running the Windows operating system can log on to accounts in the Kerberos realm.
+**Ksetup** initializes registry keys that the Kerberos Security Support Provider \(SSP\) uses to locate a KDC for the Kerberos realm if the computer is running Windows Server 2003,  Windows Server 2008 , or  Windows Server 2008 R2  and is not a member of a Windows domain. After configuration, the user of a client computer that is running the Windows operating system can log on to accounts in the Kerberos realm.
 
-The Kerberos version 5 protocol is the default for network authentication on computers running Windows XP Professional, Windows Vista, and [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)]. The Kerberos SSP searches the registry for the domain name of the user's realm and then resolves the name to an IP address by querying a DNS server. The Kerberos protocol can use DNS to locate KDCs by using only the realm name, but it must be specially configured to do so.
+The Kerberos version 5 protocol is the default for network authentication on computers running Windows XP Professional, Windows Vista, and  Windows 7 . The Kerberos SSP searches the registry for the domain name of the user's realm and then resolves the name to an IP address by querying a DNS server. The Kerberos protocol can use DNS to locate KDCs by using only the realm name, but it must be specially configured to do so.
 
 ## Additional references
 

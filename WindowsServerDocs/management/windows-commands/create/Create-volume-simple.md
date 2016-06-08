@@ -14,7 +14,7 @@ ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
 Creates a simple volume on the specified dynamic disk.
 
 > [!IMPORTANT]
-> For [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], this DiskPart command is only available in the [!INCLUDE[nextref_vistau](includes/nextref_vistau_md.md)], [!INCLUDE[nextref_vistae](includes/nextref_vistae_md.md)], and Windows Vista Business editions.
+> For Windows Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.
 
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 

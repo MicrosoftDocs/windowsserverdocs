@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 2b145410-fc75-4526-932d-f16b7ee3aaef
 ---
 # Gpfixup
-Fix domain name dependencies in [!INCLUDE[gpos](includes/gpos_md.md)] and Group Policy links after a domain rename operation. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Fix domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
 ## Syntax
 
@@ -38,9 +38,9 @@ Gpfixup [/v]
 
 ## Remarks
 
--   The **gpfixup** command is available in [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], except on Server Core installations.
+-   The **gpfixup** command is available in  Windows Server 2008 R2  and  Windows Server 2008 , except on Server Core installations.
 
--   Although the [!INCLUDE[gpmc_1](includes/gpmc_1_md.md)] is distributed with [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], you must install Group Policy Management as a feature through Server Manager.
+-   Although the Group Policy Management Console \(GPMC\) is distributed with  Windows Server 2008 R2  and  Windows Server 2008 , you must install Group Policy Management as a feature through Server Manager.
 
 ## <a name="BKMK_Examples"></a>Examples
 This example assumes that you have already performed a domain rename operation in which you changed the DNS name from **MyOldDnsName** to **MyNewDnsName**, and the NetBIOS name from **MyOldNetBIOSName** to **MyNewNetBIOSName**. In this example, you use the **gpfixup** command to connect to the domain controller named **MyDcDnsName** and repair GPOs and Group Policy links by updating the old domain name embedded in the GPOs and links. Status and error output is saved to a file that is named **gpfixup.log**.

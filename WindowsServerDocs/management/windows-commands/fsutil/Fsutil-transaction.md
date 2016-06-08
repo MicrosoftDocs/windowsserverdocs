@@ -40,7 +40,7 @@ fsutil transaction [rollback] <GUID>
 
 ### Remarks
 
--   Transactional NTFS was introduced in [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)].
+-   Transactional NTFS was introduced in  Windows Server 2008 .
 
 ### <a name="BKMK_examples"></a>Examples
 To display transaction information for file c:\\test.txt, type:

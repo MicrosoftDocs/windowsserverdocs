@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 732c1a7e-db8b-40c5-a218-1916138b6cb3
 ---
 # Activation Error Codes for Volume Activation
-Table 10 provides troubleshooting help for problems that occur when activating volume editions of [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] operating systems.
+Table 10 provides troubleshooting help for problems that occur when activating volume editions of  Windows 7  and  Windows Server 2008 R2  operating systems.
 
 **Table 10. Error codes and descriptions**
 
@@ -32,7 +32,7 @@ Table 10 provides troubleshooting help for problems that occur when activating 
 |0xC004F051|The Software Protection Service reported that the product key is blocked.|MAK\/KMS|The product key on the activation server is blocked by Microsoft.|Obtain a new MAK\/KMS key, install it on the system, and activate.|
 |0xC004F074|The Software Protection Service reported that the computer could not be activated. No Key Management Service \(KMS\) could be contacted. Please see the Application Event Log for additional information.|KMS Client|All KMS host systems  returned an error.|Troubleshoot errors from each event ID 12288 associated with the activation attempt.|
 ||||||
-|0xC004F06C|The Software Protection Service reported that the computer could not be activated. The Key Management Service \(KMS\) determined that the request timestamp is invalid.|KMS client|The system time on the client computer is too different from the time on the KMS host.|Time sync is important to system and network security for a variety of reasons. Fix this issue by changing the system time on the client to sync with the KMS. Use of a Network Time Protocol \(NTP\) time source or [!INCLUDE[ad_adds_2](includes/ad_adds_2_md.md)] for time synchronization is recommended. This issue uses UTP time and is independent of Time Zone selection.|
+|0xC004F06C|The Software Protection Service reported that the computer could not be activated. The Key Management Service \(KMS\) determined that the request timestamp is invalid.|KMS client|The system time on the client computer is too different from the time on the KMS host.|Time sync is important to system and network security for a variety of reasons. Fix this issue by changing the system time on the client to sync with the KMS. Use of a Network Time Protocol \(NTP\) time source or Active Directory Domain Services for time synchronization is recommended. This issue uses UTP time and is independent of Time Zone selection.|
 |0x80070005|Access denied. The requested action requires elevated privileges.|KMS client\/MAK\/KMS host|User Account Control \(UAC\) prohibits activation processes from running in a non\-elevated command prompt.|Run slmgr.vbs from an elevated command prompt. Right\-click cmd.exe, and then click Run as Administrator.|
 |0x8007232A|DNS server failure.|KMS host|The system has network or DNS issues.|Troubleshoot network and DNS.|
 |0x8007232B|DNS name does not exist.|KMS client|The KMS client cannot find KMS SRV RRs in DNS.<br /><br />If a KMS host does not exist on the network, a MAK should be installed.|Confirm that a KMS host has been installed and DNS publishing is enabled \(default\).<br /><br />If DNS is unavailable, point the KMS client to the KMS host by using slmgr.vbs \/skms <kms\_host\_name>.<br /><br />Optionally, obtain and install a MAK; then, activate the system.<br /><br />Finally, troubleshoot DNS.|

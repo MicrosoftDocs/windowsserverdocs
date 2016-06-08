@@ -12,17 +12,17 @@ ms.assetid: d33d4506-2dad-404e-a93e-0e0780dc1f85
 author: Jpjofre
 ---
 # Management and  Automation
-This collection contains tool and reference information for IT pros who want to run and manage [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)].  
+This collection contains tool and reference information for IT pros who want to run and manage Windows Server® 2016 Technical Preview.  
   
 ## In this collection  
   
 -   [Server Manager](http://technet.microsoft.com/library/mt126175.aspx)  
   
-    The content in this section describes how to use Server Manager in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] to manage both local and remote Windows\-based servers from desktop computers.  
+    The content in this section describes how to use Server Manager in Windows Server 2016 Technical Preview to manage both local and remote Windows\-based servers from desktop computers.  
   
 -   [Remote Server Administration Tools](http://technet.microsoft.com/library/mt126174.aspx)  
   
-    To ease remote server management, you can download and install Remote Server Administration Tools for [!INCLUDE[winthreshold_client_1](includes/winthreshold_client_1_md.md)]. Remote Server Administration Tools for [!INCLUDE[winthreshold_client_1](includes/winthreshold_client_1_md.md)] includes Server Manager, Microsoft Management Console \(MMC\) snap\-ins, consoles, Windows PowerShell cmdlets and providers, and some command\-line tools for managing roles and features that run on [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].  
+    To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10®. Remote Server Administration Tools for Windows 10® includes Server Manager, Microsoft Management Console \(MMC\) snap\-ins, consoles, Windows PowerShell cmdlets and providers, and some command\-line tools for managing roles and features that run on Windows Server 2016 Technical Preview.  
   
 -   [Getting Started with Windows PowerShell Workflow](http://technet.microsoft.com/library/mt126179.aspx)  
   
@@ -49,11 +49,11 @@ This collection contains tool and reference information for IT pros who want to 
   WMI is an infrastructure for management data and operations on Windows-based operating systems. You can use WMI to access management information in an enterprise environment.  
   
 ## Scripting with Windows Powershell topics  
-To learn more about what’s new in [!INCLUDE[wps_2](includes/wps_2_md.md)] 5.0, the release of [!INCLUDE[wps_2](includes/wps_2_md.md)] that is included with [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] and [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)], see [What’s New in Windows PowerShell](http://technet.microsoft.com/library/hh857339.aspx).  
+To learn more about what’s new in Windows PowerShell 5.0, the release of Windows PowerShell that is included with Windows Server 2016 Technical Preview and Windows 10, see [What’s New in Windows PowerShell](http://technet.microsoft.com/library/hh857339.aspx).  
   
-For information about how to manage [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] with [!INCLUDE[wps_2](includes/wps_2_md.md)], see [Scripting with Windows PowerShell](http://technet.microsoft.com/library/bb978526.aspx) in the TechNet Library.  
+For information about how to manage Windows Server 2016 Technical Preview with Windows PowerShell, see [Scripting with Windows PowerShell](http://technet.microsoft.com/library/bb978526.aspx) in the TechNet Library.  
   
-For [!INCLUDE[wps_2](includes/wps_2_md.md)] cmdlet Help reference topics for automating and managing [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] roles and features, see [Windows and Windows Server Automation with Windows PowerShell](http://technet.microsoft.com/library/dn249523.aspx).  
+For Windows PowerShell cmdlet Help reference topics for automating and managing Windows Server 2016 Technical Preview roles and features, see [Windows and Windows Server Automation with Windows PowerShell](http://technet.microsoft.com/library/dn249523.aspx).  
   
 ## See Also  
 [Windows Server Technical Preview](http://technet.microsoft.com/library/mt126143.aspx)  

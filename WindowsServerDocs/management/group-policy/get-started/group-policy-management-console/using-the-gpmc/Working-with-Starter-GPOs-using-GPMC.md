@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 792b9e16-d8af-4ce9-8cac-500585a1de0a
 ---
 # Working with Starter GPOs using GPMC
-This topic contains procedures for managing Starter Group Policy Objects as a Group Policy administrator using the Group Policy Management Console in [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)].
+This topic contains procedures for managing Starter Group Policy Objects as a Group Policy administrator using the Group Policy Management Console in Windows Server® 2012.
 
 ## About Starter Group Policy Objects
-Starter Group Policy Objects are derived from a [!INCLUDE[gpo](includes/gpo_md.md)], and provide the ability to store a collection of Administrative Template policy settings in a single object. You can import and export Starter GPOs, which makes them easy to distribute to other environments. When you create a new GPO from a Starter GPO, the new GPO has all of the Administrative Template policy settings and their values that were defined in the Starter GPO.
+Starter Group Policy Objects are derived from a Group Policy Object, and provide the ability to store a collection of Administrative Template policy settings in a single object. You can import and export Starter GPOs, which makes them easy to distribute to other environments. When you create a new GPO from a Starter GPO, the new GPO has all of the Administrative Template policy settings and their values that were defined in the Starter GPO.
 
 System Starter Group Policy Objects \(GPOs\) are read\-only Starter GPOs that provide a baseline of settings for a specific scenario. Like Starter GPOs, they derive from a GPO, provide the ability to store a collection of Administrative Template policy settings in a single object, and can be imported. You can determine whether a Starter GPO is a System Starter GPO by viewing the **Starter GPO type** on the **Details** tab of the Starter GPO.
 

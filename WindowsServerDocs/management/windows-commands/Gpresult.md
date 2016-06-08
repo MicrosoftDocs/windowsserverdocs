@@ -48,7 +48,7 @@ gpresult [/s <COMPUTER> [/u <USERNAME> [/p [<PASSWORD>]]]] [/user [<TARGETDOMAIN
 
 -   Because **\/v** and **\/z** produce lots of information, it is useful to redirect output to a text file \(for example, **gpresult\/z >policy.txt**\).
 
--   The **gpresult** command is available in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], Windows Server 2008 R2, Windows Server2008, [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], Windows 7, and Windows Vista.
+-   The **gpresult** command is available in  Windows Server 2012 , Windows Server 2008 R2, Windows Server2008, Windows 8, Windows 7, and Windows Vista.
 
 ## <a name="BKMK_Examples"></a>Examples
 The following example retrieves RSoP data for the remote user **targetusername** of the computer **srvmain**, and displays RSoP data about the user only. The command is run with the credentials of the user **maindom\\hiropln**, and **p@ssW23** is entered as the password for that user.

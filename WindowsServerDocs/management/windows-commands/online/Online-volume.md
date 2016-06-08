@@ -14,7 +14,7 @@ ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
 Brings volumes that are currently offline to an online state
 
 > [!IMPORTANT]
-> This command is not available in any edition of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)].
+> This command is not available in any edition of Windows Vista.
 
 > [!IMPORTANT]
 > This command will fail if it is used on a read\-only volume.

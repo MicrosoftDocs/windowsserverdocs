@@ -68,9 +68,9 @@ Group Policy Software Installation enables you to:
 
 ### Additional considerations
 
--   [!INCLUDE[gpolicysec](includes/gpolicysec_md.md)]
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
 
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to edit multiple local GPOs
 Multiple Local Group Policy is a collection of Local Group Policy objects \(LGPOs\) designed to provide improved management for computers that are not part of a domain. This collection consists of the following LGPOs:
@@ -111,7 +111,7 @@ Multiple Local Group Policy is a collection of Local Group Policy objects \(LGPO
 
     3.  User\-specific Local Group Policy.
 
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to disable user or computer policy settings in a Local Group Policy Object
 Occasionally you may want to disable policy settings rather than delete the entire Local Group Policy.
@@ -146,7 +146,7 @@ Occasionally you may want to disable policy settings rather than delete the enti
 
 -   Local Computer Policy allows you to disable both computer and user configurations. Administrators, Non\-Administrators, and User\-Specific Local Group Policies allow you to disable only the user configuration.
 
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to delete Multiple Local Group Policy Objects
 You can delete Multiple Local Group Policy objects. Use this procedure to delete Administrators, Non\-Administrators, or User\-Specific Local Group Policy objects.
@@ -176,6 +176,6 @@ You can delete Multiple Local Group Policy objects. Use this procedure to delete
 
 -   You cannot delete the Local Group Policy Object \(also known as Local Computer Policy\).
 
--   [!INCLUDE[gpedit_skus](includes/gpedit_skus_md.md)]
+-   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 

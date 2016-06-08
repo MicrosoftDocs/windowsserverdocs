@@ -12,14 +12,14 @@ ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
 author: coreyp
 ---
 # Install or Uninstall Roles, Role Services, or Features
-In [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)], the [!INCLUDE[sm](includes/sm_md.md)] console and [!INCLUDE[wps_1](includes/wps_1_md.md)] cmdlets for [!INCLUDE[sm](includes/sm_md.md)] allow installation of roles and features to local or remote servers, or offline virtual hard disks \(VHDs\). You can install multiple roles and features on a single remote server or offline VHD in a single [!INCLUDE[arfw](includes/arfw_md.md)] or [!INCLUDE[wps_2](includes/wps_2_md.md)] session.  
+In Windows Server® 2016 Technical Preview, the Server Manager console and Windows PowerShell® cmdlets for Server Manager allow installation of roles and features to local or remote servers, or offline virtual hard disks \(VHDs\). You can install multiple roles and features on a single remote server or offline VHD in a single Add Roles and Features Wizard or Windows PowerShell session.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[sm](includes/sm_md.md)] cannot be used to manage a newer release of the Windows Server operating system. [!INCLUDE[sm](includes/sm_md.md)] running on [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] cannot be used to install [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] on servers that are running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].  
+> Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012 R2  or Windows 8.1 cannot be used to install roles, role services, and features on servers that are running Windows Server 2016 Technical Preview.  
   
-You must be logged on to a server as an administrator to install or uninstall [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)]. If you are logged on to the local computer with an account that does not have administrator rights on your target server, right\-click the target server in the **Servers** tile, and then click **Manage As** to provide an account that has administrator rights. The server on which you want to mount an offline VHD must be added to [!INCLUDE[sm](includes/sm_md.md)], and you must have Administrator rights on that server.  
+You must be logged on to a server as an administrator to install or uninstall roles, role services, and features. If you are logged on to the local computer with an account that does not have administrator rights on your target server, right\-click the target server in the **Servers** tile, and then click **Manage As** to provide an account that has administrator rights. The server on which you want to mount an offline VHD must be added to Server Manager, and you must have Administrator rights on that server.  
   
-For more information about what [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] are, see [Roles, Role Services, and Features](http://go.microsoft.com/fwlink/p/?LinkId=239558).  
+For more information about what roles, role services, and features are, see [Roles, Role Services, and Features](http://go.microsoft.com/fwlink/p/?LinkId=239558).  
   
 This topic contains the following sections.  
   
@@ -36,16 +36,16 @@ This topic contains the following sections.
 -   [Install .NET Framework 3.5 and other features on-demand](#BKMK_FoD)  
   
 ## <a name="BKMK_installarfw"></a>Install roles, role services, and features by using the Add Roles and Features Wizard  
-In a single session in the [!INCLUDE[arfw](includes/arfw_md.md)], you can install [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] on the local server, a remote server that has been added to [!INCLUDE[sm](includes/sm_md.md)], or an offline VHD. For more information about how to add a server to [!INCLUDE[sm](includes/sm_md.md)] to manage, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md).  
+In a single session in the Add Roles and Features Wizard, you can install roles, role services, and features on the local server, a remote server that has been added to Server Manager, or an offline VHD. For more information about how to add a server to Server Manager to manage, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md).  
   
 > [!NOTE]  
-> If you are running [!INCLUDE[sm](includes/sm_md.md)] on [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)], you can use the [!INCLUDE[arfw](includes/arfw_md.md)] to install roles and features only on servers and offline VHDs that are running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].  
+> If you are running Server Manager on Windows Server 2016 Technical Preview or Windows 10, you can use the Add Roles and Features Wizard to install roles and features only on servers and offline VHDs that are running Windows Server 2016 Technical Preview.  
   
 #### To install roles and features by using the Add Roles and Features Wizard  
   
-1.  If [!INCLUDE[sm](includes/sm_md.md)] is already open, go on to the next step. If [!INCLUDE[sm](includes/sm_md.md)] is not already open, open it by doing one of the following.  
+1.  If Server Manager is already open, go on to the next step. If Server Manager is not already open, open it by doing one of the following.  
   
-    -   On the Windows desktop, start [!INCLUDE[sm](includes/sm_md.md)] by clicking **Server Manager** in the Windows taskbar.  
+    -   On the Windows desktop, start Server Manager by clicking **Server Manager** in the Windows taskbar.  
   
     -   On the Windows **Start** screen, click the **Server Manager** tile.  
   
@@ -60,7 +60,7 @@ In a single session in the [!INCLUDE[arfw](includes/arfw_md.md)], you can instal
     > [!NOTE]  
     > To install roles and features on offline VHDs, target VHDs must meet the following requirements.  
     >   
-    > -   VHDs must be running the release of Windows Server that matches the version of [!INCLUDE[sm](includes/sm_md.md)] you are running. See the note at the start of [Install roles, role services, and features by using the Add Roles and Features Wizard](#BKMK_installarfw).  
+    > -   VHDs must be running the release of Windows Server that matches the version of Server Manager you are running. See the note at the start of [Install roles, role services, and features by using the Add Roles and Features Wizard](#BKMK_installarfw).  
     > -   VHDs cannot have more than one system volume or partition.  
     > -   The network shared folder in which the VHD file is stored must grant the following access rights to the computer \(or local system\) account of server that you have selected to mount the VHD. User\-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.  
     >   
@@ -69,38 +69,38 @@ In a single session in the [!INCLUDE[arfw](includes/arfw_md.md)], you can instal
   
 6.  Select roles, select role services for the role if applicable, and then click **Next** to select features.  
   
-    As you proceed, the [!INCLUDE[arfw](includes/arfw_md.md)] automatically informs you if conflicts were found on the destination server that can prevent selected roles or features from installation or normal operation. You are also prompted to add any roles, role services, or features that are required by the roles or features that you have selected.  
+    As you proceed, the Add Roles and Features Wizard automatically informs you if conflicts were found on the destination server that can prevent selected roles or features from installation or normal operation. You are also prompted to add any roles, role services, or features that are required by the roles or features that you have selected.  
   
-    Additionally, if you plan to manage the role remotely, either from another server, or from a Windows client\-based computer that is running Remote Server Administration Tools, you can opt not to install management tools and snap\-ins for roles on the destination server. By default, in the [!INCLUDE[arfw](includes/arfw_md.md)], management tools are selected for installation.  
+    Additionally, if you plan to manage the role remotely, either from another server, or from a Windows client\-based computer that is running Remote Server Administration Tools, you can opt not to install management tools and snap\-ins for roles on the destination server. By default, in the Add Roles and Features Wizard, management tools are selected for installation.  
   
 7.  On the **Confirm installation selections** page, review your role, feature, and server selections. If you are ready to install, click **Install**.  
   
-    You can also export your selections to an XML\-based configuration file that you can use for unattended installations with [!INCLUDE[wps_2](includes/wps_2_md.md)]. To export the configuration you specified in this [!INCLUDE[arfw](includes/arfw_md.md)] session, click **Export configuration settings**, and then save the XML file to a convenient location.  
+    You can also export your selections to an XML\-based configuration file that you can use for unattended installations with Windows PowerShell. To export the configuration you specified in this Add Roles and Features Wizard session, click **Export configuration settings**, and then save the XML file to a convenient location.  
   
-    The **Specify an alternate source path** command on the **Confirm installation selections** page lets you specify an alternate source path for the files that are required to install roles and features on the selected server. In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and later releases of Windows Server, [Features on Demand](http://go.microsoft.com/fwlink/p/?LinkID=241573) lets you reduce the amount of disk space used by the operating system, by removing role and feature files from servers that are exclusively managed remotely. If you have removed role and feature files from a server by using the `Uninstall-WindowsFeature -Remove` cmdlet, you can install roles and features on the server in the future by specifying an alternate source path, or a share on which required role and feature files are stored. The source path or file share must grant **Read** permissions either to the **Everyone** group \(not recommended for security reasons\), or to the computer account \(*DOMAIN*\\*SERVERNAME*$\) of the destination server; granting user account access is not sufficient. For more information about Features on Demand, see [Windows Server Installation Options](http://go.microsoft.com/fwlink/p/?LinkId=241573).  
+    The **Specify an alternate source path** command on the **Confirm installation selections** page lets you specify an alternate source path for the files that are required to install roles and features on the selected server. In  Windows Server 2012  and later releases of Windows Server, [Features on Demand](http://go.microsoft.com/fwlink/p/?LinkID=241573) lets you reduce the amount of disk space used by the operating system, by removing role and feature files from servers that are exclusively managed remotely. If you have removed role and feature files from a server by using the `Uninstall-WindowsFeature -Remove` cmdlet, you can install roles and features on the server in the future by specifying an alternate source path, or a share on which required role and feature files are stored. The source path or file share must grant **Read** permissions either to the **Everyone** group \(not recommended for security reasons\), or to the computer account \(*DOMAIN*\\*SERVERNAME*$\) of the destination server; granting user account access is not sufficient. For more information about Features on Demand, see [Windows Server Installation Options](http://go.microsoft.com/fwlink/p/?LinkId=241573).  
   
-    You can specify a WIM file as an alternate feature file source when you are installing [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] on a running, physical server. The source path for a WIM file should be in the following format, with **WIM** as a prefix, and the index in which the feature files are located as a suffix: **WIM:e:\\sources\\install.wim:4**. However, you cannot use a WIM file directly as a source for installing [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] to an offline VHD; you must either mount the offline VHD and point to its mount path for source files, or you must point to a folder that contains a copy of the contents of the WIM file.  
+    You can specify a WIM file as an alternate feature file source when you are installing roles, role services, and features on a running, physical server. The source path for a WIM file should be in the following format, with **WIM** as a prefix, and the index in which the feature files are located as a suffix: **WIM:e:\\sources\\install.wim:4**. However, you cannot use a WIM file directly as a source for installing roles, role services, and features to an offline VHD; you must either mount the offline VHD and point to its mount path for source files, or you must point to a folder that contains a copy of the contents of the WIM file.  
   
-8.  After you click **Install**, the **Installation progress** page displays installation progress, results, and messages such as warnings, failures, or post\-installation configuration steps that are required for the roles or features that you installed. In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and later releases of Windows Server, you can close the [!INCLUDE[arfw](includes/arfw_md.md)] while installation is still in progress, and view installation results or other messages in the **Notifications** area at the top of the [!INCLUDE[sm](includes/sm_md.md)] console. Click the **Notifications** flag icon to see more details about installations or other tasks that you are performing in [!INCLUDE[sm](includes/sm_md.md)].  
+8.  After you click **Install**, the **Installation progress** page displays installation progress, results, and messages such as warnings, failures, or post\-installation configuration steps that are required for the roles or features that you installed. In  Windows Server 2012  and later releases of Windows Server, you can close the Add Roles and Features Wizard while installation is still in progress, and view installation results or other messages in the **Notifications** area at the top of the Server Manager console. Click the **Notifications** flag icon to see more details about installations or other tasks that you are performing in Server Manager.  
   
 ## <a name="BKMK_installwps"></a>Install roles, role services, and features by using Windows PowerShell cmdlets  
-The [!INCLUDE[sm](includes/sm_md.md)] deployment cmdlets for [!INCLUDE[wps_2](includes/wps_2_md.md)] function similarly to the GUI\-based [!INCLUDE[arfw](includes/arfw_md.md)] and [!INCLUDE[rrfw](includes/rrfw_md.md)], with an important difference. In [!INCLUDE[wps_2](includes/wps_2_md.md)], unlike in the [!INCLUDE[arfw](includes/arfw_md.md)], management tools and snap\-ins for a role are not included by default. To include management tools as part of a role installation, add the `IncludeManagementTools` parameter to the cmdlet. If you are installing roles and features on a server that is running the Server Core installation option of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later releases, you can add a role’s management tools to an installation, but GUI\-based management tools and snap\-ins cannot be installed on servers that are running the Server Core installation option of Windows Server. Only command\-line and [!INCLUDE[wps_2](includes/wps_2_md.md)] management tools can be installed on the Server Core installation option.  
+The Server Manager deployment cmdlets for Windows PowerShell function similarly to the GUI\-based Add Roles and Features Wizard and Remove Roles and Features Wizard, with an important difference. In Windows PowerShell, unlike in the Add Roles and Features Wizard, management tools and snap\-ins for a role are not included by default. To include management tools as part of a role installation, add the `IncludeManagementTools` parameter to the cmdlet. If you are installing roles and features on a server that is running the Server Core installation option of  Windows Server 2012  or later releases, you can add a role’s management tools to an installation, but GUI\-based management tools and snap\-ins cannot be installed on servers that are running the Server Core installation option of Windows Server. Only command\-line and Windows PowerShell management tools can be installed on the Server Core installation option.  
   
 #### To install roles and features by using the Install\-WindowsFeature cmdlet  
   
-1.  Do one of the following to open a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights.  
+1.  Do one of the following to open a Windows PowerShell session with elevated user rights.  
   
     > [!NOTE]  
-    > If you are installing roles and features on a remote server, you do not need to run [!INCLUDE[wps_2](includes/wps_2_md.md)] with elevated user rights.  
+    > If you are installing roles and features on a remote server, you do not need to run Windows PowerShell with elevated user rights.  
   
     -   On the Windows desktop, right\-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
   
-    -   On the Windows **Start** screen, right\-click the tile for [!INCLUDE[wps_2](includes/wps_2_md.md)], and then on the app bar, click **Run as Administrator**.  
+    -   On the Windows **Start** screen, right\-click the tile for Windows PowerShell, and then on the app bar, click **Run as Administrator**.  
   
-2.  Type **Get\-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get\-WindowsFeature \-ComputerName <***computer\_name***>**, in which *computer\_name* represents the name of a remote computer that is running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
+2.  Type **Get\-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get\-WindowsFeature \-ComputerName <***computer\_name***>**, in which *computer\_name* represents the name of a remote computer that is running Windows Server 2016 Technical Preview. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
   
     > [!NOTE]  
-    > In [!INCLUDE[wps_2](includes/wps_2_md.md)] 3.0 and later releases of [!INCLUDE[wps_2](includes/wps_2_md.md)], there is no need to import the [!INCLUDE[sm](includes/sm_md.md)] cmdlet module into the [!INCLUDE[wps_2](includes/wps_2_md.md)] session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither [!INCLUDE[wps_2](includes/wps_2_md.md)] cmdlets nor the feature names used with the cmdlets are case\-sensitive.  
+    > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case\-sensitive.  
   
 3.  Type **Get\-Help Install\-WindowsFeature**, and then press **Enter** to view the syntax and accepted parameters for the `Install-WindowsFeature` cmdlet.  
   
@@ -117,7 +117,7 @@ The [!INCLUDE[sm](includes/sm_md.md)] deployment cmdlets for [!INCLUDE[wps_2](in
     >   
     > To install roles and features on offline VHDs, target VHDs must meet the following requirements.  
     >   
-    > -   VHDs must be running the release of Windows Server that matches the version of [!INCLUDE[sm](includes/sm_md.md)] you are running. See the note at the start of [Install roles, role services, and features by using the Add Roles and Features Wizard](#BKMK_installarfw).  
+    > -   VHDs must be running the release of Windows Server that matches the version of Server Manager you are running. See the note at the start of [Install roles, role services, and features by using the Add Roles and Features Wizard](#BKMK_installarfw).  
     > -   VHDs cannot have more than one system volume or partition.  
     > -   The network shared folder in which the VHD file is stored must grant the following access rights to the computer \(or local system\) account of server that you have selected to mount the VHD. User\-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.  
     >   
@@ -134,16 +134,16 @@ The [!INCLUDE[sm](includes/sm_md.md)] deployment cmdlets for [!INCLUDE[wps_2](in
     Install-WindowsFeature –Name AD-Domain-Services,GPMC –ComputerName ContosoDC1 –IncludeManagementTools -Restart  
     ```  
   
-5.  When installation is finished, verify installation by opening the **All Servers** page in [!INCLUDE[sm](includes/sm_md.md)], selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server \(Get\-WindowsFeature \-ComputerName <*computer\_name*>\) to view a list of roles and features that are installed on the server.  
+5.  When installation is finished, verify installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server \(Get\-WindowsFeature \-ComputerName <*computer\_name*>\) to view a list of roles and features that are installed on the server.  
   
 ## <a name="BKMK_removerrfw"></a>Remove roles, role services, and features by using the Remove Roles and Features Wizard  
-You must be logged on to a server as an administrator to uninstall [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)]. If you are logged on to the local computer with an account that does not have administrator rights on your uninstallation target server, right\-click the target server in the **Servers** tile, and then click **Manage As** to provide an account that has administrator rights. The server on which you want to mount an offline VHD must be added to [!INCLUDE[sm](includes/sm_md.md)], and you must have Administrator rights on that server.  
+You must be logged on to a server as an administrator to uninstall roles, role services, and features. If you are logged on to the local computer with an account that does not have administrator rights on your uninstallation target server, right\-click the target server in the **Servers** tile, and then click **Manage As** to provide an account that has administrator rights. The server on which you want to mount an offline VHD must be added to Server Manager, and you must have Administrator rights on that server.  
   
 #### To remove roles and features by using the Remove Roles and Features Wizard  
   
-1.  If [!INCLUDE[sm](includes/sm_md.md)] is already open, go on to the next step. If [!INCLUDE[sm](includes/sm_md.md)] is not already open, open it by doing one of the following.  
+1.  If Server Manager is already open, go on to the next step. If Server Manager is not already open, open it by doing one of the following.  
   
-    -   On the Windows desktop, start [!INCLUDE[sm](includes/sm_md.md)] by clicking **Server Manager** in the Windows taskbar.  
+    -   On the Windows desktop, start Server Manager by clicking **Server Manager** in the Windows taskbar.  
   
     -   On the Windows **Start** screen, click the **Server Manager** tile.  
   
@@ -162,36 +162,36 @@ You must be logged on to a server as an administrator to uninstall [!INCLUDE[rrs
     For information about how to add servers to your server pool, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md). After you have selected the destination server, click **Next**.  
   
     > [!NOTE]  
-    > You can use the [!INCLUDE[rrfw](includes/rrfw_md.md)] to remove roles and features from servers that are running the same release of Windows Server that supports the version of [!INCLUDE[sm](includes/sm_md.md)] that you are using. You cannot remove roles, role services, or features from servers that are running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], if you are running [!INCLUDE[sm](includes/sm_md.md)] on [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)]. You cannot use the [!INCLUDE[rrfw](includes/rrfw_md.md)] to remove roles and features from servers that are running [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].  
+    > You can use the Remove Roles and Features Wizard to remove roles and features from servers that are running the same release of Windows Server that supports the version of Server Manager that you are using. You cannot remove roles, role services, or features from servers that are running Windows Server 2016 Technical Preview, if you are running Server Manager on  Windows Server 2012 R2 ,  Windows Server 2012 , or Windows 8. You cannot use the Remove Roles and Features Wizard to remove roles and features from servers that are running  Windows Server 2008  or  Windows Server 2008 R2 .  
   
 5.  Select roles, select role services for the role if applicable, and then click **Next** to select features.  
   
-    As you proceed, the [!INCLUDE[rrfw](includes/rrfw_md.md)] automatically prompts you to remove any roles, role services, or features that cannot run without the roles or features that you are removing.  
+    As you proceed, the Remove Roles and Features Wizard automatically prompts you to remove any roles, role services, or features that cannot run without the roles or features that you are removing.  
   
-    Additionally, you can opt to remove management tools and snap\-ins for roles on the destination server. By default, in the [!INCLUDE[rrfw](includes/rrfw_md.md)], management tools are selected for removal. You can leave management tools and snap\-ins if you plan to use the selected server to manage the role on other remote servers.  
+    Additionally, you can opt to remove management tools and snap\-ins for roles on the destination server. By default, in the Remove Roles and Features Wizard, management tools are selected for removal. You can leave management tools and snap\-ins if you plan to use the selected server to manage the role on other remote servers.  
   
 6.  On the **Confirm removal selections** page, review your role, feature, and server selections. If you are ready to remove the roles or features, click **Remove**.  
   
-7.  After you click **Remove**, the **Removal progress** page displays removal progress, results, and messages such as warnings, failures, or post\-removal configuration steps that are required, such as restarting the destination server. In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and later releases of Windows Server, you can close the [!INCLUDE[rrfw](includes/rrfw_md.md)] while removal is still in progress, and view removal results or other messages in the **Notifications** area at the top of the [!INCLUDE[sm](includes/sm_md.md)] console. Click the **Notifications** flag to see more details about removals or other tasks that you are performing in [!INCLUDE[sm](includes/sm_md.md)].  
+7.  After you click **Remove**, the **Removal progress** page displays removal progress, results, and messages such as warnings, failures, or post\-removal configuration steps that are required, such as restarting the destination server. In  Windows Server 2012  and later releases of Windows Server, you can close the Remove Roles and Features Wizard while removal is still in progress, and view removal results or other messages in the **Notifications** area at the top of the Server Manager console. Click the **Notifications** flag to see more details about removals or other tasks that you are performing in Server Manager.  
   
 ## <a name="BKMK_removewps"></a>Remove roles, role services, and features by using Windows PowerShell cmdlets  
-The [!INCLUDE[sm](includes/sm_md.md)] deployment cmdlets for [!INCLUDE[wps_2](includes/wps_2_md.md)] function similarly to the GUI\-based [!INCLUDE[rrfw](includes/rrfw_md.md)], with an important difference. In [!INCLUDE[wps_2](includes/wps_2_md.md)], unlike in the [!INCLUDE[rrfw](includes/rrfw_md.md)], management tools and snap\-ins for a role are not removed by default. To remove management tools as part of a role removal, add the `IncludeManagementTools` parameter to the cmdlet. If you are uninstalling roles and features from a server that is running the Server Core installation option of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or a later release of Windows Server, this parameter removes command\-line and [!INCLUDE[wps_2](includes/wps_2_md.md)] management tools for the specified roles and features.  
+The Server Manager deployment cmdlets for Windows PowerShell function similarly to the GUI\-based Remove Roles and Features Wizard, with an important difference. In Windows PowerShell, unlike in the Remove Roles and Features Wizard, management tools and snap\-ins for a role are not removed by default. To remove management tools as part of a role removal, add the `IncludeManagementTools` parameter to the cmdlet. If you are uninstalling roles and features from a server that is running the Server Core installation option of  Windows Server 2012  or a later release of Windows Server, this parameter removes command\-line and Windows PowerShell management tools for the specified roles and features.  
   
 #### To remove roles and features by using the Uninstall\-WindowsFeature cmdlet  
   
-1.  Do one of the following to open a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights.  
+1.  Do one of the following to open a Windows PowerShell session with elevated user rights.  
   
     > [!NOTE]  
-    > If you are uninstalling roles and features from a remote server, you do not need to run [!INCLUDE[wps_2](includes/wps_2_md.md)] with elevated user rights.  
+    > If you are uninstalling roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.  
   
     -   On the Windows desktop, right\-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
   
-    -   On the Windows **Start** screen, right\-click the [!INCLUDE[wps_2](includes/wps_2_md.md)] tile, and then on the app bar, click **Run as Administrator**.  
+    -   On the Windows **Start** screen, right\-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.  
   
-2.  Type **Get\-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get\-WindowsFeature \-ComputerName <***computer\_name***>**, in which *computer\_name* represents the name of a remote computer that is running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
+2.  Type **Get\-WindowsFeature** and then press **Enter** to view a list of available and installed roles and features on the local server. If the local computer is not a server, or if you want information about a remote server, run **Get\-WindowsFeature \-ComputerName <***computer\_name***>**, in which *computer\_name* represents the name of a remote computer that is running Windows Server 2016 Technical Preview. The results of the cmdlet contain the command names of roles and features that you add to your cmdlet in step 4.  
   
     > [!NOTE]  
-    > In [!INCLUDE[wps_2](includes/wps_2_md.md)] 3.0 and later releases of [!INCLUDE[wps_2](includes/wps_2_md.md)], there is no need to import the [!INCLUDE[sm](includes/sm_md.md)] cmdlet module into the [!INCLUDE[wps_2](includes/wps_2_md.md)] session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither [!INCLUDE[wps_2](includes/wps_2_md.md)] cmdlets nor the feature names used with the cmdlets are case\-sensitive.  
+    > In Windows PowerShell 3.0 and later releases of Windows PowerShell, there is no need to import the Server Manager cmdlet module into the Windows PowerShell session before running cmdlets that are part of the module. A module is automatically imported the first time you run a cmdlet that is part of the module. Also, neither Windows PowerShell cmdlets nor the feature names used with the cmdlets are case\-sensitive.  
   
 3.  Type **Get\-Help Uninstall\-WindowsFeature**, and then press **Enter** to view the syntax and accepted parameters for the `Uninstall-WindowsFeature` cmdlet.  
   
@@ -221,27 +221,27 @@ The [!INCLUDE[sm](includes/sm_md.md)] deployment cmdlets for [!INCLUDE[wps_2](in
     Uninstall-WindowsFeature –Name AD-Domain-Services,GPMC –ComputerName ContosoDC1 –IncludeManagementTools -Restart  
     ```  
   
-5.  When removal is finished, verify that the roles and features are removed by opening the **All Servers** page in [!INCLUDE[sm](includes/sm_md.md)], selecting the server from which you removed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server \(Get\-WindowsFeature \-ComputerName <*computer\_name*>\) to view a list of roles and features that are installed on the server.  
+5.  When removal is finished, verify that the roles and features are removed by opening the **All Servers** page in Server Manager, selecting the server from which you removed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server \(Get\-WindowsFeature \-ComputerName <*computer\_name*>\) to view a list of roles and features that are installed on the server.  
   
 ## <a name="BKMK_batch"></a>Install roles and features on multiple servers by running a Windows PowerShell script  
-Although you cannot use the [!INCLUDE[arfw](includes/arfw_md.md)] to install [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] on more than one target server in a single wizard session, you can use a [!INCLUDE[wps_2](includes/wps_2_md.md)] script to install [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] on multiple target servers that you are managing by using [!INCLUDE[sm](includes/sm_md.md)]. The script that you use to perform batch deployment, as this process is called, points to an XML configuration file that you can create easily by using the [!INCLUDE[arfw](includes/arfw_md.md)], and clicking **Export configuration settings** after advancing through the wizard to the **Confirm installation selections** page of the [!INCLUDE[arfw](includes/arfw_md.md)].  
+Although you cannot use the Add Roles and Features Wizard to install roles, role services, and features on more than one target server in a single wizard session, you can use a Windows PowerShell script to install roles, role services, and features on multiple target servers that you are managing by using Server Manager. The script that you use to perform batch deployment, as this process is called, points to an XML configuration file that you can create easily by using the Add Roles and Features Wizard, and clicking **Export configuration settings** after advancing through the wizard to the **Confirm installation selections** page of the Add Roles and Features Wizard.  
   
 > [!IMPORTANT]  
-> All target servers that are specified in your script must be running the release of Windows Server that matches the version of [!INCLUDE[sm](includes/sm_md.md)] you are running on the local computer. For example, if you are running [!INCLUDE[sm](includes/sm_md.md)] on [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)], you can install [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] on servers that are running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]. If GUI\-based management tools are added to the installation, the installation process automatically converts target servers that are running the Server Core installation option of Windows Server to the full installation option \(server with a full GUI, also known as running Server Graphical Shell\).  
+> All target servers that are specified in your script must be running the release of Windows Server that matches the version of Server Manager you are running on the local computer. For example, if you are running Server Manager on Windows 10, you can install roles, role services, and features on servers that are running Windows Server 2016 Technical Preview. If GUI\-based management tools are added to the installation, the installation process automatically converts target servers that are running the Server Core installation option of Windows Server to the full installation option \(server with a full GUI, also known as running Server Graphical Shell\).  
 >   
-> The script provided in this section is an example of how batch deployment can be performed by using the `Install-WindowsFeature` cmdlet and a [!INCLUDE[wps_2](includes/wps_2_md.md)] script. There are other possible scripts and methods of performing batch deployment to multiple servers. To search for or provide other scripts for deploying roles and features, search the [Script Center Repository](http://gallery.technet.microsoft.com/ScriptCenter).  
+> The script provided in this section is an example of how batch deployment can be performed by using the `Install-WindowsFeature` cmdlet and a Windows PowerShell script. There are other possible scripts and methods of performing batch deployment to multiple servers. To search for or provide other scripts for deploying roles and features, search the [Script Center Repository](http://gallery.technet.microsoft.com/ScriptCenter).  
   
 #### To install roles and features on multiple servers  
   
-1.  If you have not already done so, create an XML configuration file that contains the [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] that you want installed on multiple servers. You can create this configuration file by running the [!INCLUDE[arfw](includes/arfw_md.md)], selecting [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] that you want, and clicking **Export configuration settings** after advancing through the wizard to the **Confirm installation selections** page. Save the configuration file to a convenient location. You do not need to click **Install** or complete the wizard if you are running it only to create a configuration file.  
+1.  If you have not already done so, create an XML configuration file that contains the roles, role services, and features that you want installed on multiple servers. You can create this configuration file by running the Add Roles and Features Wizard, selecting roles, role services, and features that you want, and clicking **Export configuration settings** after advancing through the wizard to the **Confirm installation selections** page. Save the configuration file to a convenient location. You do not need to click **Install** or complete the wizard if you are running it only to create a configuration file.  
   
-2.  Do one of the following to open a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights.  
+2.  Do one of the following to open a Windows PowerShell session with elevated user rights.  
   
     -   On the Windows desktop, right\-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
   
-    -   On the Windows **Start** screen, right\-click the [!INCLUDE[wps_2](includes/wps_2_md.md)] tile, and then on the app bar, click **Run as Administrator**.  
+    -   On the Windows **Start** screen, right\-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.  
   
-3.  Copy and paste the following script into your [!INCLUDE[wps_2](includes/wps_2_md.md)] session.  
+3.  Copy and paste the following script into your Windows PowerShell session.  
   
     ```  
     function Invoke-WindowsFeatureBatchDeployment {  
@@ -280,16 +280,16 @@ Although you cannot use the [!INCLUDE[arfw](includes/arfw_md.md)] to install [!I
   
         **Invoke\-WindowsFeatureBatchDeployment –ComputerNames $ServerNames –ConfigurationFilePath C:\\Users\\Sampleuser\\Desktop\\DeploymentConfigTemplate.xml**  
   
-5.  When installation is finished, verify installation by opening the **All Servers** page in [!INCLUDE[sm](includes/sm_md.md)], selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at a specific server \(`Get-WindowsFeature -ComputerName` <*computer\_name*>\) to view a list of roles and features that are installed on the server.  
+5.  When installation is finished, verify installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at a specific server \(`Get-WindowsFeature -ComputerName` <*computer\_name*>\) to view a list of roles and features that are installed on the server.  
   
 ## <a name="BKMK_FoD"></a>Install .NET Framework 3.5 and other features on\-demand  
-Starting with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], the feature files for .NET Framework 3.5 \(which includes .NET Framework 2.0 and .NET Framework 3.0\) are not available on the local computer by default. The files have been removed. Files for features that have been removed in a Features on Demand configuration, along with feature files for .NET Framework 3.5, are available through Windows Update. By default, if feature files are not available on the destination server that is running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or later releases, the installation process searches for the missing files by connecting to Windows Update. You can override the default behavior by configuring a Group Policy setting or specifying an alternate source path during installation, whether you are installing by using the [!INCLUDE[arfw](includes/arfw_md.md)] GUI or a command line.  
+Starting with  Windows Server 2012  and Windows 8, the feature files for .NET Framework 3.5 \(which includes .NET Framework 2.0 and .NET Framework 3.0\) are not available on the local computer by default. The files have been removed. Files for features that have been removed in a Features on Demand configuration, along with feature files for .NET Framework 3.5, are available through Windows Update. By default, if feature files are not available on the destination server that is running  Windows Server 2012  or later releases, the installation process searches for the missing files by connecting to Windows Update. You can override the default behavior by configuring a Group Policy setting or specifying an alternate source path during installation, whether you are installing by using the Add Roles and Features Wizard GUI or a command line.  
   
 You can install .NET Framework 3.5 by doing one of the following.  
   
 -   Use [To install .NET Framework 3.5 by running the Install-WindowsFeature cmdlet](#BKMK_dotnetcmdlet) to add the `Source` parameter, and specify a source from which to get .NET Framework 3.5 feature files. If you do not add the `Source` parameter, the installation process first determines if a path to feature files has been specified by Group Policy settings, and if no such path is found, searches for missing feature files by using Windows Update.  
   
--   Use [To install .NET Framework 3.5 by using the Add Roles and Features Wizard](#BKMK_arfw) to specify an alternate source file location on the **Confirm installation options** page of the [!INCLUDE[arfw](includes/arfw_md.md)].  
+-   Use [To install .NET Framework 3.5 by using the Add Roles and Features Wizard](#BKMK_arfw) to specify an alternate source file location on the **Confirm installation options** page of the Add Roles and Features Wizard.  
   
 -   Use [To install .NET Framework 3.5 by using DISM](#BKMK_dism) to get files from Windows Update by default, or by specifying a source path to installation media.  
   
@@ -300,20 +300,20 @@ You can install .NET Framework 3.5 by doing one of the following.
 >   
 > Servers that are in workgroups cannot access external file shares, even if the computer account for the workgroup server has **Read** permissions on the external share. Alternate source locations that work for workgroup servers include installation media, Windows Update, and VHD or WIM files that are stored on the local workgroup server.  
 >   
-> You can specify a WIM file as an alternate feature file source when you are installing [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] on a running, physical server. The source path for a WIM file should be in the following format, with **WIM** as a prefix, and the index in which the feature files are located as a suffix: **WIM:e:\\sources\\install.wim:4**. However, you cannot use a WIM file directly as a source for installing [!INCLUDE[rrsandf_plural](includes/rrsandf_plural_md.md)] to an offline VHD; you must either mount the offline VHD and point to its mount path for source files, or you must point to a folder that contains a copy of the contents of the WIM file.  
+> You can specify a WIM file as an alternate feature file source when you are installing roles, role services, and features on a running, physical server. The source path for a WIM file should be in the following format, with **WIM** as a prefix, and the index in which the feature files are located as a suffix: **WIM:e:\\sources\\install.wim:4**. However, you cannot use a WIM file directly as a source for installing roles, role services, and features to an offline VHD; you must either mount the offline VHD and point to its mount path for source files, or you must point to a folder that contains a copy of the contents of the WIM file.  
   
 ### <a name="BKMK_dotnetcmdlet"></a>To install .NET Framework 3.5 by running the Install\-WindowsFeature cmdlet  
   
-1.  Do one of the following to open a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights.  
+1.  Do one of the following to open a Windows PowerShell session with elevated user rights.  
   
     > [!NOTE]  
-    > If you are installing roles and features from a remote server, you do not need to run [!INCLUDE[wps_2](includes/wps_2_md.md)] with elevated user rights.  
+    > If you are installing roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.  
   
     -   On the Windows desktop, right\-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
   
-    -   On the Windows **Start** screen, right\-click the [!INCLUDE[wps_2](includes/wps_2_md.md)] tile, and then on the app bar, click **Run as Administrator**.  
+    -   On the Windows **Start** screen, right\-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.  
   
-    -   On a server that is running the Server Core installation option of [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], type **powershell** into a command prompt, and then press **Enter**.  
+    -   On a server that is running the Server Core installation option of  Windows Server 2012 R2  or  Windows Server 2012 , type **powershell** into a command prompt, and then press **Enter**.  
   
 2.  Type the following command, and then press **Enter**. In the following example, the source files are located in a side\-by\-side store \(abbreviated to as **SxS**\) in installation media on drive D.  
   
@@ -325,11 +325,11 @@ You can install .NET Framework 3.5 by doing one of the following.
   
 ### <a name="BKMK_arfw"></a>To install .NET Framework 3.5 by using the Add Roles and Features Wizard  
   
-1.  On the **Manage** menu in [!INCLUDE[sm](includes/sm_md.md)], click **Add Roles and Features**.  
+1.  On the **Manage** menu in Server Manager, click **Add Roles and Features**.  
   
-2.  Select a destination server that is running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].  
+2.  Select a destination server that is running Windows Server 2016 Technical Preview.  
   
-3.  On the **Select features** page of the [!INCLUDE[arfw](includes/arfw_md.md)], select **.NET Framework 3.5**.  
+3.  On the **Select features** page of the Add Roles and Features Wizard, select **.NET Framework 3.5**.  
   
 4.  If the local computer is allowed to do so by Group Policy settings, the installation process attempts to get missing feature files by using Windows Update. Click **Install**; you do not need to go on to the next step.  
   
@@ -347,14 +347,14 @@ You can install .NET Framework 3.5 by doing one of the following.
   
 ### <a name="BKMK_dism"></a>To install .NET Framework 3.5 by using DISM  
   
-1.  Do one of the following to open a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights.  
+1.  Do one of the following to open a Windows PowerShell session with elevated user rights.  
   
     > [!NOTE]  
-    > If you are installing roles and features from a remote server, you do not need to run [!INCLUDE[wps_2](includes/wps_2_md.md)] with elevated user rights.  
+    > If you are installing roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.  
   
     -   On the Windows desktop, right\-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.  
   
-    -   On the Windows **Start** screen, right\-click the [!INCLUDE[wps_2](includes/wps_2_md.md)] tile, and then on the app bar, click **Run as Administrator**.  
+    -   On the Windows **Start** screen, right\-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.  
   
     -   On a server that is running the Server Core installation option, type **powershell** into a command prompt, and then press **Enter**.  
   

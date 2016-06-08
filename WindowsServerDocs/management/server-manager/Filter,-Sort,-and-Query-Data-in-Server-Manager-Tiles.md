@@ -12,7 +12,7 @@ ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
 author: coreyp
 ---
 # Filter, Sort, and Query Data in Server Manager Tiles
-In [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], tiles in [!INCLUDE[sm](includes/sm_md.md)] let you filter and sort data, and create and save custom queries. You can sort, use keyword filters, and run queries on list entries in the Events, Performance, [!INCLUDE[bpa](includes/bpa_md.md)], Services, and Roles and Features tiles on server role or group pages in [!INCLUDE[sm](includes/sm_md.md)].  
+In Windows Server 2016 Technical Preview, tiles in Server Manager let you filter and sort data, and create and save custom queries. You can sort, use keyword filters, and run queries on list entries in the Events, Performance, Best Practices Analyzer, Services, and Roles and Features tiles on server role or group pages in Server Manager.  
   
 This topic contains the following sections.  
   
@@ -27,9 +27,9 @@ The **Filter** text box is a quick way of reducing the list of entries that are 
   
 #### To apply a filter to the list of entries in a tile  
   
-1.  Open a role or server group page in [!INCLUDE[sm](includes/sm_md.md)].  
+1.  Open a role or server group page in Server Manager.  
   
-2.  In the **Filter** text box of an Events, Performance, [!INCLUDE[bpa](includes/bpa_md.md)], Services, or Roles and Features tile, type a string on which you want to filter.  
+2.  In the **Filter** text box of an Events, Performance, Best Practices Analyzer, Services, or Roles and Features tile, type a string on which you want to filter.  
   
     For example, if you want to see only events with an event ID of 1014, type **1014** in the **Filter** text box. All collected events that contain the string **1014** in at least one field are returned as results.  
   
@@ -38,16 +38,16 @@ The **Filter** text box is a quick way of reducing the list of entries that are 
 4.  To clear the filter, delete the string in the filter box, or click **X**.  
   
 ## <a name="BKMK_sort"></a>Sort list entries in tiles  
-Sort list entries in [!INCLUDE[sm](includes/sm_md.md)] tiles by clicking column headings. Clicking a column heading the first time sorts column values in ascending alphanumeric order \(arrow pointing up\); clicking again sorts column values in descending alphanumeric order \(arrow pointing down\).  
+Sort list entries in Server Manager tiles by clicking column headings. Clicking a column heading the first time sorts column values in ascending alphanumeric order \(arrow pointing up\); clicking again sorts column values in descending alphanumeric order \(arrow pointing down\).  
   
 ## <a name="BKMK_query"></a>Create and run custom queries on tile data  
-You can create custom queries in the Events, Performance, [!INCLUDE[bpa](includes/bpa_md.md)], Services, or Roles and Features tiles in [!INCLUDE[sm](includes/sm_md.md)]. By default, the area of the tile toolbar in which you select criteria to build a custom query is hidden; click **Expand** \(chevron button at right edge of tile toolbar\) to display query criteria.  
+You can create custom queries in the Events, Performance, Best Practices Analyzer, Services, or Roles and Features tiles in Server Manager. By default, the area of the tile toolbar in which you select criteria to build a custom query is hidden; click **Expand** \(chevron button at right edge of tile toolbar\) to display query criteria.  
   
 #### To create a custom query for tile data  
   
-1.  Open a role or server group page in [!INCLUDE[sm](includes/sm_md.md)].  
+1.  Open a role or server group page in Server Manager.  
   
-2.  In an Events, Performance, [!INCLUDE[bpa](includes/bpa_md.md)], Services, or Roles and Features tile, expand the query\-building area by clicking **Expand**.  
+2.  In an Events, Performance, Best Practices Analyzer, Services, or Roles and Features tile, expand the query\-building area by clicking **Expand**.  
   
 3.  Click **Add criteria** to open a list of attributes \(or fields\) that apply to the entries in the tile.  
   

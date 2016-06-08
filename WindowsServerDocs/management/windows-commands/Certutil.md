@@ -1200,7 +1200,7 @@ Default is to display DC certs without verification
 \[\-f\] \[\-user\] \[\-urlfetch\] \[\-dc DCName\] \[\-t Timeout\]
 
 > [!TIP]
-> The ability to specify an Active Directory Domain Services \(AD DS\) domain **\[Domain\]** and to specify a domain controller \(**\-dc**\) was added in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:
+> The ability to specify an Active Directory Domain Services \(AD DS\) domain **\[Domain\]** and to specify a domain controller \(**\-dc**\) was added in  Windows Server 2012 . To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:
 > 
 > 1.  If a domain is not specified and a specific domain controller is not specified, this option returns a list of domain controllers to process from the default domain controller.
 > 2.  If a domain is not specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.

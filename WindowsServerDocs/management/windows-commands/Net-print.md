@@ -14,7 +14,7 @@ Displays information about a specified printer queue or a specified print job, o
 For examples of how to use this command, see the [Examples](#BKMK_examples) section of this document.
 
 > [!NOTE]
-> This command has been deprecated in [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]. However, you can perform many of the same tasks using Prnjobs.vbs, Windows Management Instrumentation \(WMI\), or [!INCLUDE[wps_2](includes/wps_2_md.md)] cmdlets. For more information, see [Prnjobs.vbs](Prnjobs.vbs.md), [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkID=29991) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=29991\), [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=128426) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=128426\), and the [TechNet Script Center Gallery](http://go.microsoft.com/fwlink/?LinkId=164635) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=164635\).
+> This command has been deprecated in  Windows 7  and  Windows Server 2008 R2 . However, you can perform many of the same tasks using Prnjobs.vbs, Windows Management Instrumentation \(WMI\), or Windows PowerShell cmdlets. For more information, see [Prnjobs.vbs](Prnjobs.vbs.md), [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkID=29991) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=29991\), [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=128426) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=128426\), and the [TechNet Script Center Gallery](http://go.microsoft.com/fwlink/?LinkId=164635) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=164635\).
 
 ## Syntax
 

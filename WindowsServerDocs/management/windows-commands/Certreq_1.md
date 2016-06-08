@@ -388,7 +388,7 @@ Return to [Contents](Certreq_1.md#BKMK_Contents)
 |\-RenewOnBehalfOf|Submit a renewal on behalf of the subject identified in the signing certificate. This sets CR\_IN\_ROBO when calling [ICertRequest::Submit](http://technet.microsoft.com/subscriptions/aa385040.aspx)|  
 |\-f|Force existing files to be overwritten. This also bypasses caching templates and policy.|  
 |\-q|Use silent mode; suppress all interactive prompts.|  
-|\-Unicode|Writes Unicode output when standard output is redirected or piped to another command, which helps when invoked from [!INCLUDE[wps_1](includes/wps_1_md.md)] scripts\).|  
+|\-Unicode|Writes Unicode output when standard output is redirected or piped to another command, which helps when invoked from Windows PowerShell® scripts\).|  
 |\-UnicodeText|Sends Unicode output when writing base64 text encoded data blobs to files.|  
   
 Return to [Contents](Certreq_1.md#BKMK_Contents)  

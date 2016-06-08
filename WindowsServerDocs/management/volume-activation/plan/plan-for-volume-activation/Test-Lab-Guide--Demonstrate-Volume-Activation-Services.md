@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d4804395-4923-4ab0-9dc4-6d1f145ac69d
 ---
 # Test Lab Guide: Demonstrate Volume Activation Services
-This test lab guide describes the steps for configuring the Volume Activation Services server role in a [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] demonstration or test environment. Although the same steps can be used to deploy Volume Activation Services in a production environment, additional planning would be needed to ensure that your Volume Activation Services deployment meets the needs of your environment.
+This test lab guide describes the steps for configuring the Volume Activation Services server role in a  Windows Server 2012  demonstration or test environment. Although the same steps can be used to deploy Volume Activation Services in a production environment, additional planning would be needed to ensure that your Volume Activation Services deployment meets the needs of your environment.
 
 ## Setting up Volume Activation Services in a test environment
-The following steps are needed to set up Volume Activation Services in a [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] test lab:
+The following steps are needed to set up Volume Activation Services in a  Windows Server 2012  test lab:
 
 1.  Step 1: Set up the base test lab configuration
 
@@ -33,14 +33,14 @@ Test labs enable you to get valuable hands\-on experience with new products and 
 
 1.  Create the base configuration test lab as described in the following document: [Test Lab Guide: Base Configuration](http://go.microsoft.com/fwlink/?LinkId=236358) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=236358\). The base configuration test lab contains the following computers:
 
-    -   **DC1** A domain controller running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].
+    -   **DC1** A domain controller running  Windows Server 2012 .
 
         > [!NOTE]
-        > AD DS must be at the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] schema level to store activation objects. Domain controllers running earlier versions of Windows Server can activate clients after their schemas have been updated using the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of Adprep.exe. For more information, see [Running Adprep.exe](http://technet.microsoft.com/library/dd464018(v=WS.10).aspx).A new installation of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and AD DS with the configuration settings that are described in the base configuration test lab guide will be at the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] schema level.
+        > AD DS must be at the  Windows Server 2012  schema level to store activation objects. Domain controllers running earlier versions of Windows Server can activate clients after their schemas have been updated using the  Windows Server 2012  version of Adprep.exe. For more information, see [Running Adprep.exe](http://technet.microsoft.com/library/dd464018(v=WS.10).aspx).A new installation of  Windows Server 2012  and AD DS with the configuration settings that are described in the base configuration test lab guide will be at the  Windows Server 2012  schema level.
 
-    -   **APP1** A computer running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] that can be configured as a Key Management Service host.
+    -   **APP1** A computer running  Windows Server 2012  that can be configured as a Key Management Service host.
 
-    -   **CLIENT1** A computer running [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] to serve as a volume licensing client for Active Directory\-based Activation.
+    -   **CLIENT1** A computer running Windows 8 or  Windows Server 2012  to serve as a volume licensing client for Active Directory\-based Activation.
 
     -   **CLIENT2 \(optional\)** A computer running Windows 7 or Windows Server 2008 R2 that is added to the base configuration to test Active Directory\-based Activation and KMS activation at the same time.
 
@@ -57,7 +57,7 @@ The Volume Activation server role can be installed by using Windows Server Manag
 
 ##### To install Volume Activation Services by using Server Manager:
 
-1.  On either server running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], open **Windows Server Manager**
+1.  On either server running  Windows Server 2012 , open **Windows Server Manager**
 
 2.  Click **Manage**, click **Add Roles and Features**, and then click **Next**.
 
@@ -98,12 +98,12 @@ The Volume Activation server role can be installed by using Windows Server Manag
 
 4.  Activate the key online or by phone, and then click **Commit**. If you have no other changes, click **Close**.
 
-After the KMS host key has been activated, client computers that are joined to a domain running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] with generic volume license keys \(GVLKs\) installed will automatically activate without user intervention.
+After the KMS host key has been activated, client computers that are joined to a domain running  Windows Server 2012  or Windows 8 with generic volume license keys \(GVLKs\) installed will automatically activate without user intervention.
 
 ### Step 4: Verify that Active Directory\-based Activation works
 All Active Directory\-based Activation events are logged to the Windows Application event log under the Source: Microsoft\-Windows\-Security\-SPP. Look at Event 12308 for confirming information.
 
-With clients running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], activation should occur automatically the next time the computer is started and the user logs on.
+With clients running  Windows Server 2012  or Windows 8, activation should occur automatically the next time the computer is started and the user logs on.
 
 > [!NOTE]
 > If you set up multiple domain controllers, replication between domain controllers must be complete before clients can access this data. Therefore, in a production environment, you might need to wait until replication is complete before you start the client system and the user logs on to complete Active Directory\-based Activation.
@@ -117,10 +117,10 @@ With clients running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or 
 3.  Scroll down to the **Windows activation** section and verify that this client has been activated.
 
 > [!IMPORTANT]
-> Active Directory\-based Activation will not work for operating systems earlier than [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)]. It also will not work with Microsoft Office 2010. Use KMS volume activation to activate Windows clients and applications that do not support Active Directory\-based Activation.
+> Active Directory\-based Activation will not work for operating systems earlier than  Windows Server 2012  or Windows 8. It also will not work with Microsoft Office 2010. Use KMS volume activation to activate Windows clients and applications that do not support Active Directory\-based Activation.
 
 ### Step 5: Configure Key Management Services
-In earlier versions of Windows, Key Management Services \(KMS\) could be installed only from the command line. The following procedure describes how to complete this task by using the Volume Activation Tools console in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].
+In earlier versions of Windows, Key Management Services \(KMS\) could be installed only from the command line. The following procedure describes how to complete this task by using the Volume Activation Tools console in  Windows Server 2012 .
 
 ##### To configure KMS
 
@@ -149,7 +149,7 @@ In earlier versions of Windows, Key Management Services \(KMS\) could be install
 You can verify KMS volume activation from the KMS host server, APP1 and from the client computer, CLIENT2.
 
 > [!NOTE]
-> If you set up and configured Active Directory\-based Activation before configuring KMS activation, you must use a client computer that is not running [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]to verify that KMS activation works. Otherwise, the activation will be complete before your clients contact the server that is hosting KMS.
+> If you set up and configured Active Directory\-based Activation before configuring KMS activation, you must use a client computer that is not running Windows 8 or  Windows Server 2012 to verify that KMS activation works. Otherwise, the activation will be complete before your clients contact the server that is hosting KMS.
 
 > [!IMPORTANT]
 > KMS volume activation requires a minimum threshold of 25 computers before activation quests will be processed. The verification process described here will increment the activation count each time a client computer contacts the KMS host. However, unless the activation threshold is reached, the verification will take the form of an error message rather than a confirmation message.

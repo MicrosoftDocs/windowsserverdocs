@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: cf864f9f-2f8d-4f23-8419-00e3ffe56fb5
 ---
 # Plan for Volume Activation
-This document describes critical planning considerations that you must address to deploy Volume Activation services in your organization when you are running the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] operating system.
+This document describes critical planning considerations that you must address to deploy Volume Activation services in your organization when you are running the  Windows Server 2012  or  Windows Server 2012 R2  operating system.
 
 **In this topic:**
 

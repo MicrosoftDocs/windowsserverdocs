@@ -13,9 +13,9 @@ Group Policy is a complicated infrastructure that allows you to apply policy set
 
 In some cases, when you have a large enterprise spread over multiple countries and time zones, there could be a significant replication delay between domain controllers. GPO mismatches in version numbers between the Group Policy container and the Group Policy template, or GPO mismatches between different domain controllers, can be expected due to a delay in replication. They can also indicate an issue with Group Policy. In previous versions of Windows, there were tools \(such as **GPOTool.exe**\) to provide a view of the GPO replication, but they provided inconsistent information.
 
-In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], the Group Policy Management Console \(GPMC\) was enhanced to provide a report for the overall health state of the Group Policy infrastructure for a domain, or to scope the health view to a single GPO.
+In  Windows Server 2012 , the Group Policy Management Console \(GPMC\) was enhanced to provide a report for the overall health state of the Group Policy infrastructure for a domain, or to scope the health view to a single GPO.
 
-The GPMC domain status tab \(added in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]\) displays individual pieces of information that indicate the health of the Group Policy infrastructure with regards to domain controllers, GPO replication, and GPO versioning. This Group Policy infrastructure health status can help you find inconsistencies and anticipate issues.
+The GPMC domain status tab \(added in  Windows Server 2012 \) displays individual pieces of information that indicate the health of the Group Policy infrastructure with regards to domain controllers, GPO replication, and GPO versioning. This Group Policy infrastructure health status can help you find inconsistencies and anticipate issues.
 
 **In this document**
 
@@ -34,9 +34,9 @@ We will look at what makes up a GPO and where the parts of the GPO are stored in
 ## <a name="BKMK_Prereqs"></a>Prerequisites
 You can run Group Policy infrastructure health checks only by using the GPMC from domain\-joined computers running:
 
--   [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]
+-    Windows Server 2012  or  Windows Server 2012 R2 
 
--   [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] or [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] with Remote Server Administration Tools for [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)]
+-   Windows 8 or Windows 8.1 with Remote Server Administration Tools for Windows 8
 
 An understanding of how GPOs are stored in a domain will help you make full use of the data that is displayed on the infrastructure status page.
 
@@ -56,13 +56,13 @@ The tools used to manage Active Directory and Group Policy \(such as GPMC, the G
 
 Ideally, you would like to proactively check to make sure that all your GPOs within a domain are consistent. In the past, **GPOTool.exe** was used for this check. However, **GPOTool.exe** is limited to checking the values in the GPT.ini file, which only indicates if the versions in the Group Policy container and the Group Policy template on each domain controller are in sync.
 
-In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], the GPMC contains a more comprehensive replication check than what was previously done with **GPOTool.exe**.
+In  Windows Server 2012  and  Windows Server 2012 R2 , the GPMC contains a more comprehensive replication check than what was previously done with **GPOTool.exe**.
 
 ## <a name="BKMK_Step1"></a>Step 1: Check Group Policy infrastructure health
-[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] includes a graphical reporting feature in the GPMC that enables you to choose a baseline domain controller for comparison. You can see the current Group Policy replication status with synchronization details when a comparison finds a differential from the baseline domain controller.
+ Windows Server 2012  includes a graphical reporting feature in the GPMC that enables you to choose a baseline domain controller for comparison. You can see the current Group Policy replication status with synchronization details when a comparison finds a differential from the baseline domain controller.
 
 > [!IMPORTANT]
-> You can only run the Group Policy infrastructure status report from the GPMC. You cannot schedule this report, and there is no [!INCLUDE[wps_2](includes/wps_2_md.md)] or other command\-line equivalent.
+> You can only run the Group Policy infrastructure status report from the GPMC. You cannot schedule this report, and there is no Windows PowerShell or other command\-line equivalent.
 > 
 > The report does not persist between GPMC sessions. Do not close the GPMC until the report gathering process has completed to avoid losing the report information.
 

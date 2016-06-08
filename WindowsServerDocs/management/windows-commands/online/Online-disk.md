@@ -14,7 +14,7 @@ ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 Brings disks that are currently offline to an online state.
 
 > [!IMPORTANT]
-> This command is not available in any edition of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)].
+> This command is not available in any edition of Windows Vista.
 
 > [!IMPORTANT]
 > This command will fail if it is used on a read\-only disk.
@@ -35,7 +35,7 @@ online disk [noerr]
 
 ## Remarks
 
--   When used without parameters in [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.
+-   When used without parameters in Windows Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.
 
 -   For basic disks, this command will attempt to bring online the selected disk and all volumes on that disk.
 

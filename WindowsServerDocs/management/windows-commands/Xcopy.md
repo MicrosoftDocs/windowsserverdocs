@@ -51,8 +51,8 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |\/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
 |\/\-y|Prompts to confirm that you want to overwrite an existing destination file.|
 |\/z|Copies over a network in restartable mode.|
-|\/b|Copies the symbolic link instead of the files. This parameter was introduced in [!INCLUDE[firstref_vista](includes/firstref_vista_md.md)].|
-|\/j|Copies files without buffering. Recommended for very large files. This parameter was added introduced in [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)].|
+|\/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
+|\/j|Copies files without buffering. Recommended for very large files. This parameter was added introduced in  Windows Server® 2008 R2 .|
 |\/?|Displays help at the command prompt.|
 
 ## Remarks

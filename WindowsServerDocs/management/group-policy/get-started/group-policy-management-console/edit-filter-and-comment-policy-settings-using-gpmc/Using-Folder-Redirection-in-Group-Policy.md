@@ -16,7 +16,7 @@ Folder Redirection enables you to redirect the location of specific folders with
 ## Overview
 User settings and user files are typically stored in the local user profile, under the **Users** folder. The files in local user profiles can be accessed only from the current computer, which makes it difficult for users who use more than one computer to work with their data and synchronize settings between multiple computers. Two technologies exist to address this problem: Roaming Profiles and Folder Redirection. Both technologies have their advantages, and they can be used separately or together to create a seamless user experience from one computer to another. They also provide additional options for administrators managing user data.
 
-Folder Redirection lets administrators redirect the path of a folder to a new location. The location can be a folder on the local computer or a directory on a network file share. Users can work with documents on a server as if the documents were based on a local drive. The documents in the folder are available to the user from any computer on the network. Folder Redirection is located under **Windows Settings** in the console tree when you edit domain\-based Group Policy by using the [!INCLUDE[gpmc](includes/gpmc_md.md)]. The path is **\[Group Policy Object Name\]\\User Configuration\\Policies\\Windows Settings\\Folder Redirection**.
+Folder Redirection lets administrators redirect the path of a folder to a new location. The location can be a folder on the local computer or a directory on a network file share. Users can work with documents on a server as if the documents were based on a local drive. The documents in the folder are available to the user from any computer on the network. Folder Redirection is located under **Windows Settings** in the console tree when you edit domain\-based Group Policy by using the Group Policy Management Console \(GPMC\). The path is **\[Group Policy Object Name\]\\User Configuration\\Policies\\Windows Settings\\Folder Redirection**.
 
 ### Folders that can be redirected
 You can use the GPMC to redirect the following folders:
@@ -64,7 +64,7 @@ You can use the GPMC to redirect the following folders:
 ## Selecting a Folder Redirection target
 The **Target** tab of the folder's **Properties** box enables you to select the location of the redirected folder on a network or in the local user profile. You can choose between the following settings:
 
--   **Basic—Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the [!INCLUDE[gpo](includes/gpo_md.md)]. For this setting, you have the following options in specifying a target folder location:
+-   **Basic—Redirect everyone's folder to the same location**. This setting enables you to redirect everyone's folder to the same location and is applied to all users included in the Group Policy Object. For this setting, you have the following options in specifying a target folder location:
 
     -   **Create a folder for each user under the root path**. This option creates a folder in the form **\\\\server\\share\\User Account Name\\Folder Name**. Each user has a unique path for their redirected folder.
 
@@ -96,7 +96,7 @@ You can use Group Policy to specify another location \(in other words, "redirect
 
 #### To specify the location of folders in a user profile
 
-1.  In the GPMC console tree, right\-click the [!INCLUDE[gpo](includes/gpo_md.md)] that is linked to the site, domain, or organizational unit that contains the users whose user profile folders you want to redirect, and then click **Edit**.
+1.  In the GPMC console tree, right\-click the Group Policy Object that is linked to the site, domain, or organizational unit that contains the users whose user profile folders you want to redirect, and then click **Edit**.
 
 2.  In the Group Policy Management Editor window, right\-click the user profile folder that you want to redirect. The path of the user profile folder is **User Configuration\\Policies\\Windows Settings\\Folder Redirection\\UserProfileFolderName**
 

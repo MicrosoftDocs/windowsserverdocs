@@ -38,7 +38,7 @@ Preliminary preparation is required. Prior to using this command, you must compl
   
 4.  Create the following registry key, and then for the **DriverPaths** key you create, set the **Value Data** to **1**.  
   
--   For [!INCLUDE[firstref_client_7](includes/firstref_client_7_md.md)] navigate the Registry path: **HKEY\_LOCAL\_Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\**, and then create the keys: **UnattendSettings\\PnPUnattend\\DriverPaths\\**  
+-   For  Windows 7®  navigate the Registry path: **HKEY\_LOCAL\_Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\**, and then create the keys: **UnattendSettings\\PnPUnattend\\DriverPaths\\**  
   
 -   For Windows Vista, navigate to the Registry path: **HK\_LM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\**, and then create the keys \= **\\UnattendSettings\\PnPUnattend\\DriverPaths**.  
   

@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 669e60b8-9210-45ee-9537-3c4b7badb3de
 ---
 # Appendix A: KMS Client Setup Keys
-Computers that are running volume licensing editions of Windows 10, Windows 8.1, Windows Server 2012 R2, [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
+Computers that are running volume licensing editions of Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8,  Windows Server 2012 , Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
 **To use the keys listed here** \(which are GVLKs\), you must first have a KMS host running in your deployment. If you haven’t already configured a KMS host, see [Deploy KMS Activation](../../deploy/deploy-volume-activation/Deploy-KMS-Activation.md) for steps to set one up.
 
@@ -49,18 +49,18 @@ Computers that are running volume licensing editions of Windows 10, Windows 8.1,
 
 |Operating system edition|KMS Client Setup Key|
 |----------------------------|------------------------|
-|[!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] Professional|NG4HW\-VH26C\-733KW\-K6F98\-J8CK4|
-|[!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] Professional N|XCVCF\-2NXM9\-723PB\-MHCB7\-2RYQQ|
-|[!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] Enterprise|32JNW\-9KQ84\-P47T8\-D8GGY\-CWCK7|
-|[!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] Enterprise N|JMNMF\-RHW7P\-DMY6X\-RF3DR\-X2BQT|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]|BN3D2\-R7TKB\-3YPBD\-8DRP2\-27GG4|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] N|8N2M2\-HWPGY\-7PGT9\-HGDD8\-GVGGY|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Single Language|2WN2H\-YGCQR\-KFX6K\-CD6TF\-84YXQ|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Country Specific|4K36P\-JN4VD\-GDC6V\-KDT89\-DYFKP|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Server Standard|XC9B7\-NBPP2\-83J2H\-RHMBY\-92BT4|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] MultiPoint Standard|HM7DN\-YVMH3\-46JC3\-XYTG7\-CYQJJ|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] MultiPoint Premium|XNH6W\-2V9GX\-RGJ4K\-Y8X6F\-QGJ2G|
-|[!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Datacenter|48HP8\-DN98B\-MYWDG\-T2DCC\-8W83P|
+|Windows 8 Professional|NG4HW\-VH26C\-733KW\-K6F98\-J8CK4|
+|Windows 8 Professional N|XCVCF\-2NXM9\-723PB\-MHCB7\-2RYQQ|
+|Windows 8 Enterprise|32JNW\-9KQ84\-P47T8\-D8GGY\-CWCK7|
+|Windows 8 Enterprise N|JMNMF\-RHW7P\-DMY6X\-RF3DR\-X2BQT|
+| Windows Server 2012 |BN3D2\-R7TKB\-3YPBD\-8DRP2\-27GG4|
+| Windows Server 2012  N|8N2M2\-HWPGY\-7PGT9\-HGDD8\-GVGGY|
+| Windows Server 2012  Single Language|2WN2H\-YGCQR\-KFX6K\-CD6TF\-84YXQ|
+| Windows Server 2012  Country Specific|4K36P\-JN4VD\-GDC6V\-KDT89\-DYFKP|
+| Windows Server 2012  Server Standard|XC9B7\-NBPP2\-83J2H\-RHMBY\-92BT4|
+| Windows Server 2012  MultiPoint Standard|HM7DN\-YVMH3\-46JC3\-XYTG7\-CYQJJ|
+| Windows Server 2012  MultiPoint Premium|XNH6W\-2V9GX\-RGJ4K\-Y8X6F\-QGJ2G|
+| Windows Server 2012  Datacenter|48HP8\-DN98B\-MYWDG\-T2DCC\-8W83P|
 
 ## Windows 7 and Windows Server 2008 R2
 
