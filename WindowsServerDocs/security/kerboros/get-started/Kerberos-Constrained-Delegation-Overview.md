@@ -1,0 +1,82 @@
+---
+title: Kerberos Constrained Delegation Overview
+ms.custom: na
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-security
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
+---
+# Kerberos Constrained Delegation Overview
+This overview topic for the IT professional describes new capabilities for Kerberos constrained delegation in  Windows Server 2012 R2  and  Windows Server 2012 .
+
+**Did you mean…**
+
+-   [Kerberos Delegation](http://blogs.msdn.com/b/autz_auth_stuff/archive/2011/05/03/kerberos-delegation.aspx)
+
+-   [Domain Name System \(DNS\) Delegation](http://technet.microsoft.com/library/cc772625(WS.10).aspx)
+
+-   [Active Directory Delegation of Control](http://technet.microsoft.com/library/dd145344.aspx)
+
+## Feature description
+Kerberos constrained delegation was introduced in Windows Server 2003 to provide a safer form of delegation that could be used by services. When it is configured, constrained delegation restricts the services to which the specified server can act on the behalf of a user. This requires domain administrator privileges to configure a domain account for a service and is restricts the account to a single domain. In today’s enterprise, front\-end services are not designed to be limited to integration with only services in their domain.
+
+In earlier operating systems where the domain administrator configured the service, the service administrator had no useful way to know which front\-end services delegated to the resource services they owned. And any front\-end service that could delegate to a resource service represented a potential attack point. If a server that hosted a front\-end service was compromised, and it was configured to delegate to resource services, the resource services could also be compromised.
+
+In  Windows Server 2012 R2  and  Windows Server 2012 , ability to configure constrained delegation for the service has been transferred from the domain administrator to the service administrator. In this way, the back\-end service administrator can allow or deny front\-end services.
+
+For detailed information about constrained delegation as introduced in Windows Server 2003, see [Kerberos Protocol Transition and Constrained Delegation](http://technet.microsoft.com/library/cc739587(v=ws.10)).
+
+The  Windows Server 2012 R2  and  Windows Server 2012  implementation of the Kerberos protocol includes extensions specifically for constrained delegation.  Service for User to Proxy \(S4U2Proxy\)  allows a service to use its Kerberos service ticket for a user to obtain a service ticket from the Key Distribution Center \(KDC\) to a back\-end service. These extensions allow constrained delegation to be configured on the back\-end service’s account, which can be in another domain. For more information about these extensions, see [\[MS\-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](http://msdn.microsoft.com/library/cc246071(PROT.13).aspx) in the MSDN Library. For more information about these changes, see [What works differently](#BKMK_Differently) later in this topic.
+
+## Practical applications
+Constrained delegation  gives service administrators the ability to specify and enforce application trust boundaries by limiting the scope where application services can act on a user’s behalf. Service administrators can configure which front\-end service accounts can delegate to their back\-end services.
+
+By supporting constrained delegation across domains in  Windows Server 2012 R2  and  Windows Server 2012 , front\-end services such as Microsoft Internet Security and Acceleration \(ISA\) Server, Microsoft Forefront Threat Management Gateway, Microsoft Exchange Outlook Web Access \(OWA\), and Microsoft SharePoint Server can be configured to use constrained delegation to authenticate to servers in other domains. This provides support for across domains service solutions by using an existing Kerberos infrastructure. Kerberos constrained delegation can be managed by domain administrators or service administrators.
+
+## New and changed functionality
+**Resource\-based constrained delegation across domains**
+
+Kerberos constrained delegation can be used to provide constrained delegation when the front\-end service and the resource services are not in the same domain. Service administrators are able to configure the new delegation by specifying the domain accounts of the front\-end services which can impersonate users on the account objects of the resource services.
+
+**What value does this change add?**
+
+By supporting constrained delegation across domains, services can be configured to use constrained delegation to authenticate to servers in other domains rather than using unconstrained delegation. This provides authentication support for across domain service solutions by using an existing Kerberos infrastructure without needing to trust front\-end services to delegate to any service.
+
+**What works differently?**
+
+A change in the underlying protocol allows constrained delegation across domains. The  Windows Server 2012 R2  and  Windows Server 2012  implementation of the Kerberos protocol includes extensions to Service for User to Proxy \(S4U2Proxy\) protocol. This is a set of extensions to the Kerberos protocol that allows a service to use its Kerberos service ticket for a user to obtain a service ticket from the Key Distribution Center \(KDC\) to a back\-end service.
+
+For implementation information about these extensions, see [\[MS\-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](http://msdn.microsoft.com/library/cc246071(PROT.10).aspx) in MSDN.
+
+For more information about the basic message sequence for Kerberos delegation with a forwarded ticket\-granting ticket \(TGT\) as compared to Service for User \(S4U\) extensions, see section [1.3.3 Protocol Overview](http://msdn.microsoft.com/library/cc246080(v=prot.10).aspx) in the \[MS\-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification.
+
+To configure a resource service to allow a front\-end service access on the behalf of users, use Windows PowerShell cmdlets.
+
+-   To retrieve a list of principals, use the **Get\-ADComputer**, **Get\-ADServiceAccount**, and **Get\-ADUser** cmdlets with the **–Properties PrincipalsAllowedToDelegateToAccount** parameter.
+
+-   To configure the resource service, use the **New\-ADComputer**, **New\-ADServiceAccount**, **New\-ADUser**, **Set\-ADComputer**, **Set\-ADServiceAccount**, and **Set\-ADUser** cmdlets with the **–PrincipalsAllowedToDelegateToAccount** parameter.
+
+## <a name="BKMK_SOFT"></a>Software requirements
+Resource\-based constrained delegation can only be configured on a domain controller running  Windows Server 2012 R2  and  Windows Server 2012 , but can be applied within a mixed\-mode forest.
+
+You must apply the following hotfix to all domain controllers running  Windows Server 2012  in user account domains on the referral path between the front\-end and back\-end domains that are running operating systems earlier than Windows Server:  Resource\-based constrained delegation KDC\_ERR\_POLICY failure in environments that have Windows Server 2008 R2\-based domain controllers. For more details or to download the hotfix, see [article 2665790](http://support.microsoft.com/kb/2665790) in the Microsoft Knowledge Base.
+
+## <a name="BKMK_LINKS"></a>See also
+
+|Content type|References|
+|----------------|--------------|
+|**Product evaluation**|[What's New in Kerberos Authentication](What-s-New-in-Kerberos-Authentication.md)|
+|**Planning**|[Kerberos Protocol Transition and Constrained Delegation](http://technet.microsoft.com/library/cc739587(WS.10).aspx) in Windows Server 2003.<br /><br />[Kerberos Documentation for Windows 7, Windows Vista, Windows Server 2008 R2, and Windows Server 2008](http://technet.microsoft.com/library/cc753173(WS.10).aspx)|
+|**Deployment**|Not yet available|
+|**Operations**|Not yet available|
+|**Troubleshooting**|Not yet available|
+|**Security**|Not yet available|
+|**Tools and settings**|[\[MS\-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](http://msdn.microsoft.com/library/cc246071(PROT.10).aspx)<br /><br />[Active Directory Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/ee617195)|
+|**Community resources**|[Kerberos Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/4209.kerberos-survival-guide.aspx)|
+|**Related technologies**|[Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)|
+
+
