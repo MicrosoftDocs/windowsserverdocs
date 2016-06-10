@@ -95,13 +95,13 @@ For details and instructions, see [Nested Virtualization](https://msdn.microsoft
 ## <a name="BKMK_networking"></a>Networking features  
 New networking features include:  
   
--   **Remote direct memory access \(RDMA\) and switch embedded teaming \(SET\)**. You can set up RDMA on network adapters bound to a Hyper\-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](Software-Defined-Networking--SDN-.md#bkmk_rdma).  
+-   **Remote direct memory access \(RDMA\) and switch embedded teaming \(SET\)**. You can set up RDMA on network adapters bound to a Hyper\-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../networking/sdn/Software-Defined-Networking--SDN-.md#bkmk_rdma).  
   
 -   **Virtual machine multi queues \(VMMQ\)**. Improves on VMQ throughput by allocating multiple hardware queues per virtual machine.  The default queue becomes a set of queues for a virtual machine, and traffic is spread between the queues.  
   
 -   **Quality of service \(QoS\) for software\-defined networks**. Manages the default class of traffic through the virtual switch within the default class bandwidth.  
   
-For more about new networking features, see [What's New in Networking](What-s-New-in-Networking.md).  
+For more about new networking features, see [What's New in Networking](../networking/What-s-New-in-Networking.md).  
   
 ## <a name="BKMK_check"></a>Production checkpoints  
 Production checkpoints are “point-in-time” images of a virtual machine. These give you a way to apply a checkpoint that complies with support policies when a virtual machine runs a production workload. Production checkpoints are based on backup technology inside the guest instead of a saved state. For Windows virtual machines, the Volume Snapshot Service \(VSS\) is used. For Linux virtual machines, the file system buffers are flushed to create a checkpoint that's consistent with the file system. If you'd rather use checkpoints based on saved states, choose standard checkpoints instead. For details, see [Choose between standard or production checkpoints](https://technet.microsoft.com/library/dn872510.aspx).  
@@ -150,7 +150,7 @@ Shielded virtual machines use several features to  make it harder for Hyper-V ad
 This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as New-ClusterGroupSet, Get-ClusterGroupSet, and Add-ClusterGroupSetDependency.  
   
 ## <a name="BKMK_QoS"></a>Storage quality of service \(QoS\)  
-You can now create storage QoS policies on a Scale\-Out File Server and assign them to one or more virtual disks on Hyper\-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](Storage-Quality-of-Service.md).  
+You can now create storage QoS policies on a Scale\-Out File Server and assign them to one or more virtual disks on Hyper\-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](../storage/software-defined-storage/Storage-Quality-of-Service.md).  
   
 ## <a name="BKMK_Config"></a>Virtual machine configuration file format  
 Virtual machine configuration files use a new format that makes reading and writing configuration data more efficient. The format also makes data corruption less likely if a storage failure occurs. Virtual machine configuration data files use a .vmcx file name extension and runtime state data files use a .vmrs file name extension.  
