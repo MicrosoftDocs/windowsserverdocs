@@ -88,7 +88,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
     ```  
   
-For more advanced [!INCLUDE[wps_2](../../../includes/wps_2_md.md)] scripts that cover improved or new virtual switch features in [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)], see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
+For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016 Technical Preview, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
   
 ## Next step  
 [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)  

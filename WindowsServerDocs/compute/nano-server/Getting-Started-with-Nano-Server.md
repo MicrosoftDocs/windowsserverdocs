@@ -13,7 +13,7 @@ ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
 author: jaimeo
 ---
 # Getting Started with Nano Server
-[!INCLUDE[winthreshold_server_1](../../includes/winthreshold_server_1_md.md)] offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64\-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server. When it does restart, it restarts much faster. The Nano Server installation option is available for Standard and Datacenter editions of Windows Server 2016.  
+Windows Server® 2016 Technical Preview offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64\-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server. When it does restart, it restarts much faster. The Nano Server installation option is available for Standard and Datacenter editions of Windows Server 2016.  
   
 Nano Server is ideal for a number of scenarios:  
   
@@ -120,7 +120,7 @@ You can also create a VHD that will run Nano Server on a physical computer, usin
 8.  Obtain the IP address of the Nano Server computer and use Windows PowerShell remoting or other remote management tool to connect to and remotely manage the virtual machine.  
   
 ## <a name="BKMK_CreateImage"></a>Creating a custom Nano Server image  
-For [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)], Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.  
+For Windows Server 2016 Technical Preview, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.  
   
 You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the [Installing roles and features online](Getting-Started-with-Nano-Server.md#BKMK_online) section of this topic.  
   
@@ -130,7 +130,7 @@ This table shows the roles and features that are available in this release of Na
 |-------------------|----------|  
 |Hyper\-V role|\-Compute|  
 |Failover Clustering|\-Clustering|  
-|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)].|\-OEMDrivers|  
+|Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016 Technical Preview.|\-OEMDrivers|  
 |File Server role and other storage components|\-Storage|  
 |Windows Defender Antimalware, including a default signature file|\-Defender|  
 |Reverse forwarders for application compatibility, for example common application frameworks such as Ruby, Node.js, etc.|Now included by default  
@@ -564,7 +564,7 @@ The first time you boot Nano Server from this VHD, the other settings will be ap
 After you have joined Nano Server to a domain, add the domain user account to the Administrators group on the Nano Server.  
   
 ## <a name="BKMK_RecoveryConsole"></a>Using the Nano Server Recovery Console  
-Starting with [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)], Nano Server includes an Recovery Console that ensures you can access your Nano Server even if a network mis\-configuration interferes with connecting to the Nano Server. You can use the Recovery Console to fix the network and then use your usual remote management tools.  
+Starting with Windows Server 2016 Technical Preview, Nano Server includes an Recovery Console that ensures you can access your Nano Server even if a network mis\-configuration interferes with connecting to the Nano Server. You can use the Recovery Console to fix the network and then use your usual remote management tools.  
   
 When you boot Nano Server in either a virtual machine or on a physical computer that has a monitor and keyboard attached, you'll see a full\-screen, text\-mode logon prompt. Log into this prompt with an administrator account to see the computer name and IP address of the Nano Server. You can use these commands to navigate in this console:  
   
@@ -576,7 +576,7 @@ When you boot Nano Server in either a virtual machine or on a physical computer 
   
 -   Some screens have additional capabilities displayed on the last line of the screen. For example, if you explore a network adapter, F4 will disable the network adapter.  
   
-In [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)], the Recovery Console allows you to view and configure network adapters and TCP\/IP settings, as well as firewall rules.  
+In Windows Server 2016 Technical Preview, the Recovery Console allows you to view and configure network adapters and TCP\/IP settings, as well as firewall rules.  
   
 ## <a name="BKMK_ManageRemote"></a>Managing Nano Server remotely  
 Nano Server is managed remotely. There is no local logon capability at all, nor does it support Terminal Services. However, you have a wide variety of options for managing Nano Server remotely, including Windows PowerShell, Windows Management Instrumentation \(WMI\), Windows Remote Management, and Emergency Management Services \(EMS\).  
@@ -781,7 +781,7 @@ In this sample, the **offlineServicing** section is applied by the DISM command 
   
 > [!NOTE]  
 > -   This sample Unattend.xml does not add the Nano Server to a domain, so you should use it if you want to run Nano Server as a standalone computer or if you want to wait to join it to a domain later. The values for ComputerName and AdministratorPassword are merely examples.  
-> -   This Unattend.xml file will not work with versions of Windows prior to [!INCLUDE[winthreshold_client_1](../../includes/winthreshold_client_1_md.md)] or [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)].  
+> -   This Unattend.xml file will not work with versions of Windows prior to Windows 10® or Windows Server 2016 Technical Preview.  
   
 ```  
 <?xml version='1.0' encoding='utf-8'?>  

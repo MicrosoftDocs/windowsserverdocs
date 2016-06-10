@@ -62,22 +62,22 @@ The following table shows what generation 1 and generation 2 virtual machines su
   
 |64\-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-|[!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]|✔|✔|  
-|[!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)]|✔|✔|  
+| Windows Server 2012 R2 |✔|✔|  
+| Windows Server 2012 |✔|✔|  
 |Windows Server 2008 R2|✔|✖|  
 |Windows Server 2008|✔|✖|  
-|[!INCLUDE[winthreshold_client_1](../../../includes/winthreshold_client_1_md.md)]|✔|✔|  
-|[!INCLUDE[winblue_client_2](../../../includes/winblue_client_2_md.md)]|✔|✔|  
-|[!INCLUDE[win8_client_2](../../../includes/win8_client_2_md.md)]|✔|✔|  
+|Windows 10®|✔|✔|  
+|Windows 8.1|✔|✔|  
+|Windows 8|✔|✔|  
 |Windows 7|✔|✖|  
   
 The following table shows what generation 1 and generation 2 virtual machines support for 32\-bit versions of Windows as guest operating systems.  
   
 |32\-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-|[!INCLUDE[winthreshold_client_1](../../../includes/winthreshold_client_1_md.md)]|✔|✖|  
-|[!INCLUDE[winblue_client_2](../../../includes/winblue_client_2_md.md)]|✔|✖|  
-|[!INCLUDE[win8_client_2](../../../includes/win8_client_2_md.md)]|✔|✖|  
+|Windows 10®|✔|✖|  
+|Windows 8.1|✔|✖|  
+|Windows 8|✔|✖|  
 |Windows 7|✔|✖|  
   
   

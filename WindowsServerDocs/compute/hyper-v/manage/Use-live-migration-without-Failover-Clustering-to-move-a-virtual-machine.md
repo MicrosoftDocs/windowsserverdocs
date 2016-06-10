@@ -19,9 +19,9 @@ To be able to do this, you'll need:
 
  - A user account that's a member of the local Hyper\-V Administrators group or the Administrators group on both the source and destination computers. 
   
-- The Hyper\-V role in [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)] installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](Set-up-hosts-for-live-migration.md). 
+- The Hyper\-V role in Windows Server 2016 Technical Preview installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](Set-up-hosts-for-live-migration.md). 
   
-- The Hyper\-V management tools installed on a computer running [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2_md](../../../includes/winthreshold_client_2_md.md)], unless the tools are installed on the source or destination server and you'll run them from there.  
+- The Hyper\-V management tools installed on a computer running Windows Server 2016 Technical Preview or Windows 10, unless the tools are installed on the source or destination server and you'll run them from there.  
    
 ## <a name="BKMK_Step3"></a>Use Hyper-V Manager to move a running virtual machine  
   

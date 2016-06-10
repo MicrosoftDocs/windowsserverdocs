@@ -15,13 +15,13 @@ author: KBDAzure
 # Choose between standard or production checkpoints in Hyper-V
 **This is preliminary content and subject to change.**  
   
-Starting with [!INCLUDE[winthreshold_server_1](../../../includes/winthreshold_server_1_md.md)] and [!INCLUDE[winthreshold_client_1](../../../includes/winthreshold_client_1_md.md)], you can choose between standard and production checkpoints for each virtual machine.  
+Starting with Windows Server® 2016 Technical Preview and Windows 10®, you can choose between standard and production checkpoints for each virtual machine.  
   
 Production checkpoints are “point in time” images of a virtual machine, which can be restored later on in a way that is completely supported for all production workloads. This is achieved by using backup technology inside the guest to create the checkpoint, instead of using saved state technology.  
   
 Standard checkpoints capture the state, data, and hardware configuration of a running virtual machine and are intended for use in development and test scenarios. Standard checkpoints can be very useful if you need to recreate a specific state or condition of a running virtual machine so that you can troubleshoot a problem.  
   
-Production checkpoints are the default for new virtual machines, starting in [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] and [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)].  
+Production checkpoints are the default for new virtual machines, starting in Windows Server 2016 Technical Preview and Windows 10.  
   
 ## Change checkpoints to production or standard checkpoints  
   

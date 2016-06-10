@@ -19,7 +19,7 @@ For more information about best practices and scans, see [Run Best Practices Ana
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)]|  
+|**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  

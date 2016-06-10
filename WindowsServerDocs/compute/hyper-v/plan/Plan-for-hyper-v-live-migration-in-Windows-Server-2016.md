@@ -13,17 +13,17 @@ ms.assetid: 21a6f01a-04d2-45c8-b8c3-9edd6d5005d1
 author: cwatsonmsft
 ---
 # Plan for live migration in Windows Server 2016
-Hyper\-V live migration moves running virtual machines from one physical server to another with no impact on virtual machine availability to users. Hyper\-V in [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] and [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)] introduce the following live migration improvements:  
+Hyper\-V live migration moves running virtual machines from one physical server to another with no impact on virtual machine availability to users. Hyper\-V in  Windows Server 2012  and  Windows Server 2012 R2  introduce the following live migration improvements:  
   
 **Faster and simultaneous migration.**  
   
-In [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] live migrations are now able to utilize higher network bandwidths \(up to 10 Gigabit\) to complete migrations faster. You can also perform multiple simultaneous live migrations to enable you to move many virtual machines quickly. These changes allow you to implement high levels of mobility and flexibility in private cloud solutions.  
+In  Windows Server 2012  live migrations are now able to utilize higher network bandwidths \(up to 10 Gigabit\) to complete migrations faster. You can also perform multiple simultaneous live migrations to enable you to move many virtual machines quickly. These changes allow you to implement high levels of mobility and flexibility in private cloud solutions.  
   
-In [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)] Hyper\-V live migration has been updated to allow the administrator to select the optimal performance options when moving virtual machines to a different server. In larger scale deployments, such as private cloud deployments and hosting providers, this update can reduce the amount of time it takes to move a virtual machine to another server running Hyper\-V. The reduction in time to move a virtual machine can also reduce overhead on the network and CPU usage. For more information about live migration performance options, see [Performance options](Virtual-Machine-Live-Migration-Overview.md#BKMK_Performance).  
+In  Windows Server 2012 R2  Hyper\-V live migration has been updated to allow the administrator to select the optimal performance options when moving virtual machines to a different server. In larger scale deployments, such as private cloud deployments and hosting providers, this update can reduce the amount of time it takes to move a virtual machine to another server running Hyper\-V. The reduction in time to move a virtual machine can also reduce overhead on the network and CPU usage. For more information about live migration performance options, see [Performance options](Virtual-Machine-Live-Migration-Overview.md#BKMK_Performance).  
   
 **Live migration outside of a clustered environment.**  
   
-In [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)], you can configure a virtual machine so that it is stored on an SMB file share. You can then perform a live migration on this running virtual machine between non\-clustered servers running Hyper\-V, while the virtual machine’s storage remains on the central SMB share. This allows users to gain the benefits of virtual machine mobility without having to invest in the clustering infrastructure if they do not need guarantees of availability in their environment. \(Hyper\-V with SMB storage can also be configured with Failover Clustering if you do require high availability. For information about different configurations of Hyper\-V with SMB storage, see [Deploy Hyper\-V over SMB](assetId:///5a169fa2-f5c8-4c0d-a122-79ecdbdebc98).\)  
+In  Windows Server 2012 , you can configure a virtual machine so that it is stored on an SMB file share. You can then perform a live migration on this running virtual machine between non\-clustered servers running Hyper\-V, while the virtual machine’s storage remains on the central SMB share. This allows users to gain the benefits of virtual machine mobility without having to invest in the clustering infrastructure if they do not need guarantees of availability in their environment. \(Hyper\-V with SMB storage can also be configured with Failover Clustering if you do require high availability. For information about different configurations of Hyper\-V with SMB storage, see [Deploy Hyper\-V over SMB](assetId:///5a169fa2-f5c8-4c0d-a122-79ecdbdebc98).\)  
   
 You can also perform a live migration of a virtual machine between two non\-clustered servers running Hyper\-V when you are only using local storage for the virtual machine. \(This is sometimes referred to as a “shared nothing” live migration. In this case, the virtual machines storage is mirrored to the destination server over the network, and then the virtual machine is migrated, while it continues to run and provide network services. For instructions, see [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](../manage/Configure-Live-Migration-and-Migrating-Virtual-Machines-without-Failover-Clustering.md).  
   
@@ -31,15 +31,15 @@ This functionality allows live migration in the most basic deployments and in mo
   
 **Cross version live migration**  
   
-Upgrading to a new version of Windows Server no longer requires downtime to the virtual machines. In [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)] Hyper\-V live migration has been updated to support migrating Hyper\-V virtual machines in [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] to Hyper\-V in [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)].  
+Upgrading to a new version of Windows Server no longer requires downtime to the virtual machines. In  Windows Server 2012 R2  Hyper\-V live migration has been updated to support migrating Hyper\-V virtual machines in  Windows Server 2012  to Hyper\-V in  Windows Server 2012 R2 .  
   
-When moving a virtual machine on [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)], the specified destination server can now be a computer running [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)]. This applies to a move that is initiated in Hyper\-V Manager or when using the **Move\-VM** Windows PowerShell cmdlet.  
+When moving a virtual machine on  Windows Server 2012 , the specified destination server can now be a computer running  Windows Server 2012 R2 . This applies to a move that is initiated in Hyper\-V Manager or when using the **Move\-VM** Windows PowerShell cmdlet.  
   
 > [!NOTE]  
-> Moving a Hyper\-V virtual machine in [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)] to Hyper\-V in [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] is not supported.  
+> Moving a Hyper\-V virtual machine in  Windows Server 2012 R2  to Hyper\-V in  Windows Server 2012  is not supported.  
   
 ## Key benefits  
-Live migration of virtual machines in [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] delivers improved performance and flexibility. It is also now available inside and outside of clustered environments—both with and without shared storage.  
+Live migration of virtual machines in  Windows Server 2012  delivers improved performance and flexibility. It is also now available inside and outside of clustered environments—both with and without shared storage.  
   
 ## Requirements  
 Common requirements for any form of live migration:  
@@ -89,8 +89,8 @@ The following live migrations performance options are available.
   
 |Option|Description|  
 |----------|---------------|  
-|TCP\/IP|The memory of the virtual machine is copied to the destination server over a TCP\/IP connection. This is the same method that is used in Hyper\-V in [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)].|  
-|Compression|The memory content of the virtual machine that is being migrated is compressed and then copied to the destination server over a TCP\/IP connection. **Note:** This is the **default** setting in Hyper\-V in [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)].|  
+|TCP\/IP|The memory of the virtual machine is copied to the destination server over a TCP\/IP connection. This is the same method that is used in Hyper\-V in  Windows Server 2012 .|  
+|Compression|The memory content of the virtual machine that is being migrated is compressed and then copied to the destination server over a TCP\/IP connection. **Note:** This is the **default** setting in Hyper\-V in  Windows Server 2012 R2 .|  
 |SMB|The memory content of the virtual machine is copied to the destination server over a SMB 3.0 connection.<br /><br />-   SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access \(RDMA\) capabilities enabled.<br />-   SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<br /><br />For more information, see [Improve Performance of a File Server with SMB Direct](Improve-Performance-of-a-File-Server-with-SMB-Direct.md).|  
   
 For information about how to modify the live migration performance options, see [Step3: \[optional\] Configure performance options for live migration](Configure%20Live%20Migration%20and%20Migrating%20Virtual%20Machines%20without%20Failover%20Clustering.md#BKMK_Performance)  
@@ -129,7 +129,7 @@ After the modified memory pages are copied completely to the destination server,
   
 **4. The storage handle is moved from the source server to the destination server.**  
   
-During the fourth stage of a live migration, control of the storage associated with “test virtual machine,” such as any virtual hard disk files or physical storage attached through a virtual Fibre Channel adapter, is transferred to the destination server. \(Virtual Fibre Channel is also a new Hyper\-V feature in [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)].\)  
+During the fourth stage of a live migration, control of the storage associated with “test virtual machine,” such as any virtual hard disk files or physical storage attached through a virtual Fibre Channel adapter, is transferred to the destination server. \(Virtual Fibre Channel is also a new Hyper\-V feature in  Windows Server 2012 .\)  
   
 **5. The virtual machine is brought online on the destination server.**  
   

@@ -19,7 +19,7 @@ For more information about best practices and scans, see* [Best Practices Analyz
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)]|  
+|**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
@@ -44,7 +44,7 @@ The availability of some integration services can be managed through the virtual
   
 #### To manage the availability of integration services to a virtual machine  
   
-1.  Open [!INCLUDE[nextref_virtualname](../../../includes/nextref_virtualname_md.md)] Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
+1.  Open Hyper\-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
   
 2.  In the results pane, under **Virtual Machines**, select the virtual machine that you want to configure.  
   
