@@ -91,9 +91,9 @@ The following live migrations performance options are available.
 |----------|---------------|  
 |TCP\/IP|The memory of the virtual machine is copied to the destination server over a TCP\/IP connection. This is the same method that is used in Hyper\-V in  Windows Server 2012 .|  
 |Compression|The memory content of the virtual machine that is being migrated is compressed and then copied to the destination server over a TCP\/IP connection. **Note:** This is the **default** setting in Hyper\-V in  Windows Server 2012 R2 .|  
-|SMB|The memory content of the virtual machine is copied to the destination server over a SMB 3.0 connection.<br /><br />-   SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access \(RDMA\) capabilities enabled.<br />-   SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<br /><br />For more information, see [Improve Performance of a File Server with SMB Direct](Improve-Performance-of-a-File-Server-with-SMB-Direct.md).|  
+|SMB|The memory content of the virtual machine is copied to the destination server over a SMB 3.0 connection.<br /><br />-   SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access \(RDMA\) capabilities enabled.<br />-   SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<br /><br />For more information, see [Improve Performance of a File Server with SMB Direct](../../../storage/smb/Improve-Performance-of-a-File-Server-with-SMB-Direct.md).|  
   
-For information about how to modify the live migration performance options, see [Step3: \[optional\] Configure performance options for live migration](Configure%20Live%20Migration%20and%20Migrating%20Virtual%20Machines%20without%20Failover%20Clustering.md#BKMK_Performance)  
+For information about how to modify the live migration performance options, see [Step3: \[optional\] Configure performance options for live migration](../../failover-clustering/Configure-Live-Migration-and-Migrating-Virtual-Machines-without-Failover-Clustering.md#BKMK_Performance)    
   
 ## Technical overview  
 Hyper\-V live migration moves running virtual machines from one physical server to another with no impact on virtual machine availability to users. By pre\-copying the memory of the migrating virtual machine to the destination server, live migration minimizes the transfer time of the virtual machine. A live migration is deterministic, which means that the administrator, or script, that initiates the live migration determines which computer is used as the destination for the live migration. The guest operating system of the migrating virtual machine is not aware that the migration is happening, so no special configuration for the guest operating system is needed.  
@@ -166,6 +166,6 @@ When performing a live migration of a virtual machine between two computers with
 5.  Once the live migration is complete and the virtual machine is successfully running on the destination server, the files on the source server are deleted.  
   
 ## See Also  
-[Configure Live Migration and Migrating Virtual Machines without Failover Clustering](Configure-Live-Migration-and-Migrating-Virtual-Machines-without-Failover-Clustering.md)  
+[Configure Live Migration and Migrating Virtual Machines without Failover Clustering](../../failover-clustering/Configure-Live-Migration-and-Migrating-Virtual-Machines-without-Failover-Clustering.md)  
   
 

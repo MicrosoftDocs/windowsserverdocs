@@ -45,7 +45,7 @@ These maximums apply to each Hyper\-V host.
 |-------------|-----------|---------|  
 |Logical processors|320|Both of these must be enabled in the firmware:<br /><br />-   Hardware\-assisted virtualization<br />-   Hardware\-enforced Data Execution Prevention \(DEP\)|  
 |Memory|4 TB|None.|  
-|Network adapter teams \(NIC Teaming\)|No limits imposed by Hyper\-V.|For details, see [NIC Teaming](../../../NIC-Teaming.md).|  
+|Network adapter teams \(NIC Teaming\)|No limits imposed by Hyper\-V.|For details, see [NIC Teaming](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|  
 |Physical network adapters|No limits imposed by Hyper\-V.|None.|  
 |Running virtual machines per server|1024|None.|  
 |Storage|Limited by what is supported by the management operating system. No limits imposed by Hyper\-V.|**Note:** Microsoft supports network\-attached storage \(NAS\) when using SMB 3.0. NFS\-based storage is not supported.|  
