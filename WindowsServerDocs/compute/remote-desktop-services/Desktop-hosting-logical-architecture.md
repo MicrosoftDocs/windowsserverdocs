@@ -14,7 +14,7 @@ author: lizap
 # Desktop hosting logical architecture
 A logical architecture diagram of the software components for a basic desktop hosting service in Microsoft Azure is shown in Diagram 1.   
   
-![Basic desktop hosting deployment with RDSmedia/Basic-desktop-hosting-deployment-with-RDS.png)  
+![Basic desktop hosting deployment with RDSmedia](media/Basic-desktop-hosting-deployment-with-RDS.png)  
   
 The logical architecture diagram shows a two-layer architecture with the following layer definitions:  
   
@@ -27,9 +27,9 @@ The basic desktop hosting service can be extended in two ways:
   
 A logical architecture diagram of the software components for an extended desktop hosting service in Microsoft Azure is shown in Diagram 2.  
   
-![Extended desktop hosting with high availabilitymedia/Desktop-hosting-environment-with-Azure-IaaS.png)   
+![Extended desktop hosting with high availabilitymedia](media/Desktop-hosting-environment-with-Azure-IaaS.png)   
   
 Both the security of the extended desktop hosting service and the overall footprint of the deployment can be improved by utilizing Azure Active Directory Application Proxy (AAD Application Proxy). With AAD Application Proxy, users connect to the reverse-proxy solution hosted by Azure, removing the requirement of internet-facing RD Web and Gateway servers. A logical architecture diagram of the software components for an extended desktop hosting service with AAD Application Proxy in Microsoft Azure is shown in Diagram 3.  
   
-![Extended logical architecture with Azure SQL database, Azure AD DS, and Azure AD AppProxymedia/Extended-logical-architecture-with-Azure-SQL-database,-Azure-AD-DS,-and-Azure-AD-AppProxy.png)  
+![Extended logical architecture with Azure SQL database, Azure AD DS, and Azure AD AppProxymedia](media/Extended-logical-architecture-with-Azure-SQL-database,-Azure-AD-DS,-and-Azure-AD-AppProxy.png)  
 
