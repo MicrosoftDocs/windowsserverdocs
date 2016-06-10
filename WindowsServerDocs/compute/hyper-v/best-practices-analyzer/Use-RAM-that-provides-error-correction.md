@@ -19,7 +19,7 @@ author: KBDAzure
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)]|  
+|**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
@@ -32,7 +32,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ## Impact  
   
-*Microsoft does not support [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] on computers without error correcting RAM.*  
+*Microsoft does not support Windows Server 2016 Technical Preview on computers without error correcting RAM.*  
   
 ## Resolution  
   

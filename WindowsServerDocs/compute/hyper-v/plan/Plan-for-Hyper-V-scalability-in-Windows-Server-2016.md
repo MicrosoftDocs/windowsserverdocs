@@ -15,7 +15,7 @@ author: KBDAzure
 # Plan for Hyper-V scalability in Windows Server 2016
 **This is preliminary content and subject to change.**  
   
-This article gives you details about the maximum configuration for components you can add and remove on a Hyper\-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine as well as those that apply to the Hyper\-V host. These numbers are similar to those that apply to [!INCLUDE[winblue_server_2_md](../../../includes/winblue_server_2_md.md)].  
+This article gives you details about the maximum configuration for components you can add and remove on a Hyper\-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine as well as those that apply to the Hyper\-V host. These numbers are similar to those that apply to  Windows Server 2012 R2 .  
   
 > [!NOTE]  
 > For information about System Center Virtual Machine Manager \(VMM\), see [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994.aspx). VMM is a Microsoft product for managing a virtualized data center that is sold separately.  

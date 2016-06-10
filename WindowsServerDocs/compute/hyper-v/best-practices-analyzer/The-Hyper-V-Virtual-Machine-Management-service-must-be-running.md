@@ -19,7 +19,7 @@ author: KBDAzure
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)]|  
+|**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Error|  
 |**Category**|Prerequisites|  
@@ -56,9 +56,9 @@ Virtual machines that are running will continue to run. However, you won't be ab
   
 ### To reconfigure the service to start automatically using SC Config  
   
-1.  Open Windows PowerShell. \(From the desktop, click **Start** and start typing **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]**.\)  
+1.  Open Windows PowerShell. \(From the desktop, click **Start** and start typing **Windows PowerShell**.\)  
   
-2.  Right\-click **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]** and click **Run as administrator**.  
+2.  Right\-click **Windows PowerShell** and click **Run as administrator**.  
   
 3.  To reconfigure the service, type:  
   

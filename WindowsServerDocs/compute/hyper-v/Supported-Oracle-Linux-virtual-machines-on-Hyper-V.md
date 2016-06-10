@@ -137,7 +137,7 @@ The Oracle Linux Unbreakable Enterprise Kenel \(UEK\) is 64\-bit only and has LI
   
     -   Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.  
   
-9. If you are using Dynamic Memory on a [!INCLUDE[winthreshold_server_2_md](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winblue_server_2_md](../../includes/winblue_server_2_md.md)] operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to hot\-add failures, and you may not see any memory increase in a guest operating system.  
+9. If you are using Dynamic Memory on a Windows Server 2016 Technical Preview or  Windows Server 2012 R2  operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to hot\-add failures, and you may not see any memory increase in a guest operating system.  
   
 10. Certain distributions, including those using LIS 3.5 or LIS 4.0, only provide Ballooning support and do not provide Hot\-Add support. In such a scenario, the dynamic memory feature can be used by setting the Startup memory parameter to a value which is equal to the Maximum memory parameter. This results in all the requisite memory being Hot\-Added to the virtual machine at boot time and then later depending upon the memory requirements of the host, Hyper\-V can freely allocate or deallocate memory from the guest using Ballooning. Please configure **Startup Memory** and **Minimum Memory** at or above the recommended value for the distribution.  
   
@@ -145,7 +145,7 @@ The Oracle Linux Unbreakable Enterprise Kenel \(UEK\) is 64\-bit only and has LI
   
 12. The key\/value pair \(KVP\) infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
   
-13. On [!INCLUDE[winblue_server_2_md](../../includes/winblue_server_2_md.md)] Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper\-V Manager** or you can disable it using Powershell:  
+13. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper\-V Manager** or you can disable it using Powershell:  
   
     ```  
     Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  

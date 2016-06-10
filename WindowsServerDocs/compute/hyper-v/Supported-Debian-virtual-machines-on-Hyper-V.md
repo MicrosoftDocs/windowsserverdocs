@@ -64,7 +64,7 @@ The following feature distribution map indicates the features that are present i
   
 2.  On Windows Server 2008 R2, SCSI disks create 8 different entries in \/dev\/sd\*.  
   
-3.  [!INCLUDE[winblue_server_2_md](../../includes/winblue_server_2_md.md)], a VM with 8 cores or more will have all interrupts routed to a single vCPU.  
+3.   Windows Server 2012 R2 , a VM with 8 cores or more will have all interrupts routed to a single vCPU.  
   
 4.  Starting with Debian 8.3 the manually-installed Debian package "hyperv-daemons" contains the key-value pair, fcopy, and VSS daemons. On Debian 7.x and 8.0-8.2 the hyperv-daemons package must come from [Debian backports](https://wiki.debian.org/Backports).  
   

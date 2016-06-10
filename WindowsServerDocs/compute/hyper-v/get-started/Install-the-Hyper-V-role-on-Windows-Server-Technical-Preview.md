@@ -15,9 +15,9 @@ author: jpjofre
 # Install the Hyper-V role on Windows Server Technical Preview
 **This is preliminary content and subject to change.**  
   
-To create and run virtual machines, install the Hyper\-V role on  [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] by using  Server Manager or by using the Install\-WindowsFeature cmdlet in [!INCLUDE[wps_2](../../../includes/wps_2_md.md)].  To install the Hyper\-V role on a Nano Server, see [Getting Started with Nano Server](../../nano-server/Getting-Started-with-Nano-Server.md). For [!INCLUDE[winthreshold_client_2_md](../../../includes/winthreshold_client_2_md.md)], see [Install Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install).    
+To create and run virtual machines, install the Hyper\-V role on  Windows Server 2016 Technical Preview by using  Server Manager or by using the Install\-WindowsFeature cmdlet in Windows PowerShell.  To install the Hyper\-V role on a Nano Server, see [Getting Started with Nano Server](../../nano-server/Getting-Started-with-Nano-Server.md). For Windows 10, see [Install Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install).    
   
-Before you install [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] or enable Hyper-V, make sure your system is compatible. For more information, see [System Requirements for Windows Server](../../../System-Requirements--and-Installation.md) and [System requirements for Hyper-V on Windows Server 2016](../System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). Install the Hyper-V role after you [download and install Windows Server 2016 Technical Preview](http://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview).    
+Before you install Windows Server 2016 Technical Preview or enable Hyper-V, make sure your system is compatible. For more information, see [System Requirements for Windows Server](../../../System-Requirements--and-Installation.md) and [System requirements for Hyper-V on Windows Server 2016](../System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). Install the Hyper-V role after you [download and install Windows Server 2016 Technical Preview](http://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview).    
   
 ## <a name="BKMK_SERV"></a>Install Hyper\-V role by using Server Manager  
   
@@ -37,13 +37,13 @@ Before you install [!INCLUDE[winthreshold_server_2](../../../includes/winthresho
   
 8.  On the **Confirm installation selections** page, select **Restart the destination server automatically if required**, and then click **Install**.  
   
-9. When installation is finished, verify the installation by opening the **All Servers** page in [!INCLUDE[sm](../../../includes/sm_md.md)], selecting a server on which you installed Hyper\-V, and viewing the **Roles and Features** tile on the page for the selected server.  
+9. When installation is finished, verify the installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed Hyper\-V, and viewing the **Roles and Features** tile on the page for the selected server.  
   
 ## <a name="BKMK_PWRSH"></a>Install Hyper\-V role by using the Install\-WindowsFeature cmdlet  
   
 1.  On the Windows desktop, click the Start button and type any part of the name **Windows PowerShell**.  
   
-2.  Right\-click [!INCLUDE[wps_2](../../../includes/wps_2_md.md)] and select **Run as Administrator**.  
+2.  Right\-click Windows PowerShell and select **Run as Administrator**.  
   
 3.  To install Hyper\-V on a server you're connected to  remotely, run the following command and  replace <computer\_name> with the name of server.  
   
@@ -62,7 +62,7 @@ Before you install [!INCLUDE[winthreshold_server_2](../../../includes/winthresho
     If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.  
   
 > [!NOTE]  
-> If you install this role on a server that runs the Server Core installation option of [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] and use the parameter `-IncludeManagementTools`, only the Hyper\-V Module for [!INCLUDE[wps_2](../../../includes/wps_2_md.md)] will be installed. You can use the GUI management tool, Hyper\-V Manager,  on another computer to remotely manage a Hyper\-V host that runs on a Server Core installation.   To remotely manage a Hyper\-V host server from a computer that runs [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)], see [Install Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install).  
+> If you install this role on a server that runs the Server Core installation option of Windows Server 2016 Technical Preview and use the parameter `-IncludeManagementTools`, only the Hyper\-V Module for Windows PowerShell will be installed. You can use the GUI management tool, Hyper\-V Manager,  on another computer to remotely manage a Hyper\-V host that runs on a Server Core installation.   To remotely manage a Hyper\-V host server from a computer that runs Windows 10, see [Install Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install).  
   
 ## See also  
   

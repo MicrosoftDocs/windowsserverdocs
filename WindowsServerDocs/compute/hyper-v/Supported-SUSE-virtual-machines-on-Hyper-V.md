@@ -75,13 +75,13 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
   
 5.  Dynamic memory support is only available on 64\-bit virtual machines.  
   
-6.  If you are using Dynamic Memory on [!INCLUDE[winthreshold_server_2_md](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[win8_server_2](../../includes/win8_server_2_md.md)] operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to Hot\-Add failures, and you may not see any memory increase in a guest operating system.  
+6.  If you are using Dynamic Memory on Windows Server 2016 Technical Preview or  Windows Server 2012  operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to Hot\-Add failures, and you may not see any memory increase in a guest operating system.  
   
-7.  In [!INCLUDE[winthreshold_server_2_md](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)], the key\/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
+7.  In Windows Server 2016 Technical Preview or  Windows Server 2012 R2 , the key\/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
   
 8.  VSS backup will fail if a single partition is mounted multiple times.  
   
-9. On [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)] Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper\-V Manager or you can disable it using Powershell:  
+9. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper\-V Manager or you can disable it using Powershell:  
   
     ```  
     Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  

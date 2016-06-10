@@ -75,7 +75,7 @@ This section describes the various transition states of the  Windows Server 2012
   
 In order to keep the cluster workloads running during the Cluster OS Rolling Upgrade process, moving a cluster workload from a  Windows Server 2012 R2  node to Windows Server 2016 Technical Preview node works as if both nodes were running the  Windows Server 2012 R2  operating system. When Windows Server 2016 Technical Preview nodes are added to the cluster, they operate in a  Windows Server 2012 R2  compatibility mode. A new conceptual cluster mode, called “mixed\-OS mode”, allows nodes of different versions to exist in the same cluster \(see Figure 1\).  
   
-![](../media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Overview.png)  
+![](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Overview.png)  
   
 **Figure 1: Cluster operating system state transitions**  
   
@@ -86,13 +86,13 @@ This section illustrates and describes the four different stages of a cluster wi
   
 “Stage 1” is the initial state – we start with a  Windows Server 2012 R2  cluster.  
   
-![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage1.png)  
+![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage1.png)  
   
 **Figure 2: Initial State:  Windows Server 2012 R2  Failover Cluster \(Stage 1\)**  
   
 In “Stage 2”, two nodes have been paused, drained, evicted, reformatted, and installed with Windows Server 2016 Technical Preview.  
   
-![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage2.png)  
+![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage2.png)  
   
 **Figure 3: Intermediate State: Mixed\-OS mode:  Windows Server 2012 R2  and Windows Server 2016 Technical Preview Failover cluster \(Stage 2\)**  
   
@@ -101,20 +101,20 @@ At “Stage 3”, all of the nodes in the cluster have been upgraded to Windows 
 > [!NOTE]  
 > At this stage, the process can be fully reversed, and  Windows Server 2012 R2  nodes can be added to this cluster.  
   
-![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage3.png)  
+![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage3.png)  
   
 **Figure 4: Intermediate State: All nodes upgraded to Windows Server 2016 Technical Preview, ready for Update\-ClusterFunctionalLevel \(Stage 3\)**  
   
 After the Update\-ClusterFunctionalLevelcmdlet is run, the cluster enters “Stage 4”, where new Windows Server 2016 Technical Preview cluster features can be used.  
   
-![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage4.png)  
+![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage4.png)  
   
 **Figure 5: Final State: Windows Server 2016 Technical Preview Failover Cluster \(Stage 4\)**  
   
 ## Cluster OS Rolling Upgrade Process  
 This section describes the workflow for performing Cluster OS Rolling Upgrade.  
   
-![](../media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png)  
+![](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Workflow.png)  
   
 **Figure 6: Cluster OS Rolling Upgrade Process Workflow**  
   
@@ -130,17 +130,17 @@ Cluster OS Rolling upgrade includes the following steps:
   
     4.  Check that all cluster nodes are online \/running\/up using the **Get\-ClusterNode** cmdlet \(see Figure 7\).  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterNode.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterNode.png)  
   
         **Figure 7: Determining node status using Get\-ClusterNode PowerShell cmdlet**  
   
     5.  If you are running Cluster Aware Updates \(CAU\), verify if CAU is currently running by using the **Cluster\-Aware Updating** UI, or the **Get\-CauRun** cmdlet \(see Figure 8\). Stop CAU using the**Disable\-CauClusterRole** PowerShell cmdlet \(see Figure 9\) to prevent any nodes from being paused and drained by CAU during the Cluster OS Rolling Upgrade process .  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetCAU.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetCAU.png)  
   
         **Figure 8: Using the Get\-CAU PowerShell cmdlet to determine if Cluster Aware Updates is running on the cluster**  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_DisableCAU.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_DisableCAU.png)  
   
         **Figure 9: Disabling the Cluster Aware Updates role using the Disable\-CauClusterRole PowerShell cmdlet**  
   
@@ -148,23 +148,23 @@ Cluster OS Rolling upgrade includes the following steps:
   
     1.  Using Cluster Manager UI, select a node and use the **Pause | Drain** menu option to drain the node \(see Figure 10\) or use the Suspend\-ClusterNode PowerShell cmdlet \(see Figure 11\).  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_FCM_DrainRoles.png)  
   
         **Figure 10: Draining roles from a node using Failover Cluster Manager**  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SuspendNode.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SuspendNode.png)  
   
         **Figure 11: Draining roles from a node using Failover Cluster Manager**  
   
     2.  Using Cluster Manager UI, **Evict** the paused node from cluster, or use the Remove\-ClusterNode PowerShell cmdlet.  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_RemoveNode.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_RemoveNode.png)  
   
         **Figure 12: Remove a node from the cluster using Remove\-ClusterNode PowerShell cmdlet**  
   
     3.  Reformat the system drive and perform a “clean Operating System install” of Windows Server 2016 Technical Preview on the node using the  **Custom: Install Windows only \(advanced\)** installation \(See Figure 13\) option in  setup.exe. Avoid selecting the  **Upgrade: Install Windows and keep files, settings, and applications** option since Cluster OS Rolling Upgrade does not encourage in-place upgrade.  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_InstallOption.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_InstallOption.png)  
   
         **Figure 13: Available installation options for Windows Server 2016 Technical Preview**  
   
@@ -194,19 +194,19 @@ Cluster OS Rolling upgrade includes the following steps:
   
         Check that the name of the Virtual Switch\(s\) used are identical for all Hyper\-V host nodes in the cluster.  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_VMSwitch.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_VMSwitch.png)  
   
         **Figure 14:       Virtual Switch Manager**  
   
     12. On a Windows Server 2016 Technical Preview node \(do not use a  Windows Server 2012 R2  node\), use the Failover Cluster Manager \(see Figure 15\) to connect to the cluster.  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_AddNode.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_AddNode.png)  
   
         **Figure 15: Adding a node to the cluster using Failover Clsuter Manager**  
   
     13. Use either the Failover Cluster Manager UI  or the **Add\-ClusterNode** PowerShell cmdlet \(see Figure 16\) to  add the node to the cluster.  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_AddNode3.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_AddNode3.png)  
   
         **Figure 16: Adding a node to the cluster using Add\-ClusterNode PowerShell cmdlet**  
   
@@ -215,7 +215,7 @@ Cluster OS Rolling upgrade includes the following steps:
   
     14. After the  Windows Server 2016 Technical Preview node is successfully added to the cluster, you can \(optionally\) move some of the cluster workload to the newly added  node in order to rebalance the workload across the cluster as follows  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_MoveVMRole.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_MoveVMRole.png)  
   
         **Figure 17: Moving a cluster workload \(cluster VM role\) using Move\-ClusterVirtualMachineRole PowerShell cmdlet**  
   
@@ -236,7 +236,7 @@ Cluster OS Rolling upgrade includes the following steps:
   
     1.  Using the Failover Cluster Manager UI or the **Get\-ClusterGroup** PowerShell cmdlet, check that all cluster roles are running on the cluster as expected. In the following example, Available Storage is not being used, instead CSV is used, hence, Available Storage displays an **Offline** status \(see Figure 18\).  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterGroup.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_GetClusterGroup.png)  
   
         **Figure 18: Verifying that all cluster groups \(cluster roles\) are running using the Get\-ClusterGroup PowerShell cmdlet**  
   
@@ -244,7 +244,7 @@ Cluster OS Rolling upgrade includes the following steps:
   
     3.  Run the **Update\-ClusterFunctionalLevel** cmdlet – no errors should be returned \(see Figure 19\).  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SelectFunctionalLevel.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SelectFunctionalLevel.png)  
   
         **Figure 19: Updating the functional level of a cluster using PowerShell**  
   
@@ -254,7 +254,7 @@ Cluster OS Rolling upgrade includes the following steps:
   
     1.  If you were previously running CAU, restart it using the CAU UI or use the **Enable\-CauClusterRole** PowerShell cmdlet \(see Figure 20\).  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_EnableCAUClusterRole.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_EnableCAUClusterRole.png)  
   
         **Figure 20: Enable Cluster Aware Updates role using the Enable\-CauClusterRole PowerShell cmdlet**  
   
@@ -267,13 +267,13 @@ Cluster OS Rolling upgrade includes the following steps:
   
     2.  On each Hyper\-V host node in the cluster, use  the **Get\-VMHostSupportedVersion** PowerShell cmdlet to view the Hyper\-V VM configuration versions that are supported by the host.  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)  
          
         **Figure 21: Viewing the Hyper\-V VM configuration versions supported by the host**  
          
    3.  On each Hyper\-V host node in the cluster, Hyper\-V VM configuration versions can be upgraded by scheduling a brief maintenance window with users, backing up, , turning off virtual machines, and running the **Update\-VMVersion** PowerShell cmdlet \(see Figure 22\). This will update the virtual machine version, and enable new Hyper\-V features, eliminating the need for future Hyper\-V Integration Component \(IC\) updates. This cmdlet can be run from the Hyper\-V node that is hosting the VM, , or the –ComputerName parameter can be used to update the VM Version remotely.  In this example, here we upgrade the configuration version of VM1 from 5.0 to 7.0 to take advantage of many new Hyper\-V features associated with this VM configuration version such as Production Checkpoints (Application Consistent backups), and binary VM configuration file.  
   
-        ![](../media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
+        ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
   
         **Figure 22: Upgrading a VM version using the Update\-VMVersion PowerShell cmdlet**  
         > [!CAUTION]  

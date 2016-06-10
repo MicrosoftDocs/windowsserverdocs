@@ -19,7 +19,7 @@ author: KBDAzure
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)]  
+|**Operating System**|Windows Server 2016 Technical Preview  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
@@ -40,7 +40,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 #### To stop sharing the external virtual network with the management operating system  
   
-1.  Open [!INCLUDE[nextref_virtualname](../../../includes/nextref_virtualname_md.md)] Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
+1.  Open Hyper\-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
   
 2.  From the **Actions** menu, click **Virtual Switch Manager**.  
   
