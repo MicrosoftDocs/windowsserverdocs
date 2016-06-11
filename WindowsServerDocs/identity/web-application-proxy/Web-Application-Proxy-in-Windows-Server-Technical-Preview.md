@@ -15,13 +15,13 @@ author: kgremban
 # Web Application Proxy in Windows Server Technical Preview
 **This content is relevant for the on\-premises version of Web Application Proxy. To enable secure access to on\-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   
-The content in this section describes what's new and changed in the [!INCLUDE[adfs_webproxy]()] for [!INCLUDE[winthreshold_server_1]()]. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.  
+The content in this section describes what's new and changed in the Web Application Proxy for Windows Server® 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.  
   
 ## Web Application Proxy New Features  
   
 -   Preauthentication for HTTP Basic application publishing  
   
-    HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. [!INCLUDE[adfs_webproxy]()] traditionally interacts with [!INCLUDE[nextref_adfs2]()] using redirections which is not supported on ActiveSync clients. This new version of [!INCLUDE[adfs_webproxy]()] provides support to publish an app using HTTP basic by enabling the HTTP app to receive a non\-claims relying party trust for the application to the Federation Service.  
+    HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients. This new version of Web Application Proxy provides support to publish an app using HTTP basic by enabling the HTTP app to receive a non\-claims relying party trust for the application to the Federation Service.  
   
     For more information on HTTP basic publishing, see [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
@@ -31,7 +31,7 @@ The content in this section describes what's new and changed in the [!INCLUDE[ad
   
 -   HTTP to HTTPS redirection  
   
-    In order to make sure your users can access your app, even if they neglect to type HTTPS in the URL, [!INCLUDE[adfs_webproxy]()] now supports HTTP to HTTPS redirection.  
+    In order to make sure your users can access your app, even if they neglect to type HTTPS in the URL, Web Application Proxy now supports HTTP to HTTPS redirection.  
   
 -   HTTP Publishing  
   
@@ -39,11 +39,11 @@ The content in this section describes what's new and changed in the [!INCLUDE[ad
   
 -   Publishing of Remote Desktop Gateway apps  
   
-    For more information on RDG in [!INCLUDE[adfs_webproxy]()], see [Publishing Applications with SharePoint, Exchange and RDG](../web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)  
+    For more information on RDG in Web Application Proxy, see [Publishing Applications with SharePoint, Exchange and RDG](../web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)  
   
 -   New debug log for better troubleshooting and improved service log for complete audit trail and improved error handling  
   
-    For more information on troubleshooting, see [Troubleshooting Web Application Proxy]()  
+    For more information on troubleshooting, see [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
   
 -   Administrator Console UI improvements  
   
@@ -55,6 +55,6 @@ The content in this section describes what's new and changed in the [!INCLUDE[ad
   
 -   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
--   [Troubleshooting Web Application Proxy]()  
+-   [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
   
 

@@ -24,7 +24,7 @@ The following new features in Active Directory Domain Services \(AD DS\) improve
   
 - [Enable Microsoft Passport for Work in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)    
   
--  [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels]()  
+-  [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](active-directory-domain-services/Windows-Server-2016-Functional-Levels.md)  
   
   
 ## <a name="BKMK_PAM"></a>Privileged access management  

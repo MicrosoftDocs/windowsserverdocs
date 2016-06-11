@@ -18,13 +18,13 @@ author: billmath
   
 This document contains a list of all of the documentation areas for AD FS for Windows Server 2016.  This includes the following:  
   
-* [AD FS Overview]()  
+* [AD FS Overview](AD-FS-Overview.md)  
   
-* [AD FS Design]()  
+* [AD FS Design](active-directory-federation-services/AD-FS-Design.md)  
   
 * [AD FS Deployment](AD-FS-Deployment.md)  
   
-* [AD FS Development]()  
+* [AD FS Development](active-directory-federation-services/AD-FS-Development.md)  
   
-* [AD FS Operations]()
+* [AD FS Operations](active-directory-federation-services/AD-FS-2016-Operations.md)
 
