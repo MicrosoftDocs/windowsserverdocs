@@ -42,6 +42,6 @@ Lpq -S 10.0.0.45 -P LaserPrinter1
 #### Additional references  
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
-[Print Command Reference](Print-Command-Reference.md)  
+[Print Command Reference]()  
   
 

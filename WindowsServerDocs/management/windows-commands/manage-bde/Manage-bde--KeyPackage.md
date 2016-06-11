@@ -43,6 +43,6 @@ manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path "f:\Folder"
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Manage-bde](Manage-bde.md)
+-   [Manage-bde]()
 
 

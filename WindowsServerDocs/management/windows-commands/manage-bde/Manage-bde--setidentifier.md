@@ -38,7 +38,7 @@ manage-bde –setidentifier C:
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Manage-bde](Manage-bde.md)
+-   [Manage-bde]()
 
 -   [Using Data Recovery Agents with BitLocker](http://technet.microsoft.com/library/dd875560(WS.10).aspx)
 

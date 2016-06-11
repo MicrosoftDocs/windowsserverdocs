@@ -31,7 +31,7 @@ Secedit /configure /db <database file name> [/cfg <configuration file name>] [/o
 ## Remarks
 If the path for the log file is not provided, the default log file, \(*systemroot*\\Users \\*UserAccount*\\My Documents\\Security\\Logs\\*DatabaseName*.log\) is used.
 
-Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](Gpupdate.md).
+Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate]().
 
 ## <a name="BKMK_Examples"></a>Examples
 Perform the analysis for the security parameters on the security database, SecDbContoso.sdb, you created using the Security Configuration and Analysis snap\-in. Direct the output to the file SecAnalysisContosoFY11 with prompting so you can verify the command ran correctly.

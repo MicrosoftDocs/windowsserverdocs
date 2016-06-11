@@ -54,6 +54,6 @@ fsutil reparsepoint delete c:\server
 #### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil](Fsutil.md)
+[Fsutil]()
 
 

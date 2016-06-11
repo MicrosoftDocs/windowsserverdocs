@@ -23,7 +23,7 @@ Rundll32 <DLLname>
 
 |Parameter|Description|
 |-------------|---------------|
-|[Rundll32 printui.dll,PrintUIEntry](Rundll32-printui.dll,PrintUIEntry.md)|Displays the printer user interface|
+|[Rundll32 printui.dll,PrintUIEntry]()|Displays the printer user interface|
 
 ## Remarks
 Rundll32 can only call functions from a DLL that are explicitly written to be called by Rundll32. For more information about Rundll32 requirements see [article 164787](http://go.microsoft.com/fwlink/?LinkID=165773) in the Microsoft Knowledge Base \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=165773\).

@@ -48,6 +48,6 @@ Table 3 describes the registry settings that Volume Activation supports.
 
 -   [Volume Activation Technical Reference](../Volume-Activation-Technical-Reference.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 

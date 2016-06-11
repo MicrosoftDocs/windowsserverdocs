@@ -73,8 +73,8 @@ After you have created the list of applications, the next step is to identify th
 
 To identify the rule collections, see the following topics:
 
--   [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+-   [Select Types of Rules to Create]()
 
--   [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+-   [Determine Group Policy Structure and Rule Enforcement]()
 
 

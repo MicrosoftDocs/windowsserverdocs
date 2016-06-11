@@ -32,7 +32,7 @@ The analysis results are stored in a separate area of the database and can be vi
 
 If the path for the log file is not provided, the default log file, \(*systemroot*\\Documents and Settings\\*UserAccount*\\My Documents\\Security\\Logs\\*DatabaseName*.log\) is used.
 
-In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](Gpupdate.md).
+In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate]().
 
 ## <a name="BKMK_Examples"></a>Examples
 Perform the analysis for the security parameters on the security database, SecDbContoso.sdb, you created using the Security Configuration and Analysis snap\-in. Direct the output to the file SecAnalysisContosoFY11 with prompting so you can verify the command ran correctly.

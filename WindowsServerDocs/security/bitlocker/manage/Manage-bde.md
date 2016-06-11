@@ -22,24 +22,24 @@ manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unloc
   
 |Parameter|Description|  
 |-------------|---------------|  
-|[Manage-bde: status](Manage-bde--status.md)|Provides information about all drives on the computer, whether or not they are BitLocker\-protected.|  
-|[Manage-bde: on](Manage-bde--on.md)|Encrypts the drive and turns on BitLocker.|  
-|[Manage-bde: off](Manage-bde--off.md)|Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete.|  
-|[Manage-bde: pause](Manage-bde--pause.md)|Pauses encryption or decryption.|  
-|[Manage-bde: resume](Manage-bde--resume.md)|Resumes encryption or decryption.|  
-|[Manage-bde: lock](Manage-bde--lock.md)|Prevents access to BitLocker\-protected data.|  
-|[Manage-bde: unlock](Manage-bde--unlock.md)|Allows access to BitLocker\-protected data with a recovery password or a recovery key.|  
-|[Manage-bde: autounlock](Manage-bde--autounlock.md)|Manages automatic unlocking of data drives.|  
-|[Manage-bde: protectors](Manage-bde--protectors.md)|Manages protection methods for the encryption key.|  
-|[Manage-bde: tpm](Manage-bde--tpm.md)|Configures the computer's Trusted Platform Module \(TPM\). This command is not supported on computers running Windows 8 or **win8\_server\_2**. To manage the TPM on these computers, use either the TPM Management MMC snap\-in or the TPM Management cmdlets for Windows PowerShell.|  
-|[Manage-bde: setidentifier](Manage-bde--setidentifier.md)|Sets the drive identifier field on the drive to the value specified in the **Provide the unique identifiers for your organization** Group Policy setting.|  
-|[Manage-bde: ForceRecovery](Manage-bde--ForceRecovery.md)|Forces a BitLocker\-protected drive into recovery mode on restart. This command deletes all TPM\-related key protectors from the drive. When the computer restarts, only a recovery password or recovery key can be used to unlock the drive.|  
-|[Manage-bde: changepassword](Manage-bde--changepassword.md)|Modifies the password for a data drive.|  
-|[Manage-bde: changepin](Manage-bde--changepin.md)|Modifies the PIN for an operating system drive.|  
-|[Manage-bde: changekey](Manage-bde--changekey.md)|Modifies the startup key for an operating system drive.|  
-|[Manage-bde: KeyPackage](Manage-bde--KeyPackage.md)|Generates a key package for a drive.|  
-|[Manage-bde: upgrade](Manage-bde--upgrade.md)|Upgrades the BitLocker version.|  
-|[Manage-bde: WipeFreeSpace](Manage-bde--WipeFreeSpace.md)|Wipes the free space on a drive.|  
+|[Manage-bde: status]()|Provides information about all drives on the computer, whether or not they are BitLocker\-protected.|  
+|[Manage-bde: on]()|Encrypts the drive and turns on BitLocker.|  
+|[Manage-bde: off]()|Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete.|  
+|[Manage-bde: pause]()|Pauses encryption or decryption.|  
+|[Manage-bde: resume]()|Resumes encryption or decryption.|  
+|[Manage-bde: lock]()|Prevents access to BitLocker\-protected data.|  
+|[Manage-bde: unlock]()|Allows access to BitLocker\-protected data with a recovery password or a recovery key.|  
+|[Manage-bde: autounlock]()|Manages automatic unlocking of data drives.|  
+|[Manage-bde: protectors]()|Manages protection methods for the encryption key.|  
+|[Manage-bde: tpm]()|Configures the computer's Trusted Platform Module \(TPM\). This command is not supported on computers running Windows 8 or **win8\_server\_2**. To manage the TPM on these computers, use either the TPM Management MMC snap\-in or the TPM Management cmdlets for Windows PowerShell.|  
+|[Manage-bde: setidentifier]()|Sets the drive identifier field on the drive to the value specified in the **Provide the unique identifiers for your organization** Group Policy setting.|  
+|[Manage-bde: ForceRecovery]()|Forces a BitLocker\-protected drive into recovery mode on restart. This command deletes all TPM\-related key protectors from the drive. When the computer restarts, only a recovery password or recovery key can be used to unlock the drive.|  
+|[Manage-bde: changepassword]()|Modifies the password for a data drive.|  
+|[Manage-bde: changepin]()|Modifies the PIN for an operating system drive.|  
+|[Manage-bde: changekey]()|Modifies the startup key for an operating system drive.|  
+|[Manage-bde: KeyPackage]()|Generates a key package for a drive.|  
+|[Manage-bde: upgrade]()|Upgrades the BitLocker version.|  
+|[Manage-bde: WipeFreeSpace]()|Wipes the free space on a drive.|  
 |\-? or \/?|Displays brief Help at the command prompt.|  
 |\-help or \-h|Displays complete Help at the command prompt.|  
   

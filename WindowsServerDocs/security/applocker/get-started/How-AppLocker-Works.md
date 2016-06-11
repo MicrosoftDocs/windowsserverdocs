@@ -21,41 +21,41 @@ The following topics explain how AppLocker policies for each of the rule conditi
 
 The following topics explain how AppLocker rules and policies work:
 
--   [Understanding AppLocker Rule Behavior](Understanding-AppLocker-Rule-Behavior.md)
+-   [Understanding AppLocker Rule Behavior]()
 
--   [Understanding AppLocker Rule Exceptions](Understanding-AppLocker-Rule-Exceptions.md)
+-   [Understanding AppLocker Rule Exceptions]()
 
--   [Understanding AppLocker Rule Collections](Understanding-AppLocker-Rule-Collections.md)
+-   [Understanding AppLocker Rule Collections]()
 
--   [Understanding AppLocker Allow and Deny Actions on Rules](Understanding-AppLocker-Allow-and-Deny-Actions-on-Rules.md)
+-   [Understanding AppLocker Allow and Deny Actions on Rules]()
 
--   [Understanding AppLocker Rule Condition Types](Understanding-AppLocker-Rule-Condition-Types.md)
+-   [Understanding AppLocker Rule Condition Types]()
 
-    -   [Understanding the Publisher Rule Condition in AppLocker](Understanding-the-Publisher-Rule-Condition-in-AppLocker.md)
+    -   [Understanding the Publisher Rule Condition in AppLocker]()
 
-    -   [Understanding the Path Rule Condition in AppLocker](Understanding-the-Path-Rule-Condition-in-AppLocker.md)
+    -   [Understanding the Path Rule Condition in AppLocker]()
 
-    -   [Understanding the File Hash Rule Condition in AppLocker](Understanding-the-File-Hash-Rule-Condition-in-AppLocker.md)
+    -   [Understanding the File Hash Rule Condition in AppLocker]()
 
--   [Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
+-   [Understanding AppLocker Default Rules]()
 
-    -   [Executable Rules in AppLocker](Executable-Rules-in-AppLocker.md)
+    -   [Executable Rules in AppLocker]()
 
-    -   [Windows Installer Rules in AppLocker](Windows-Installer-Rules-in-AppLocker.md)
+    -   [Windows Installer Rules in AppLocker]()
 
-    -   [Script Rules in AppLocker](Script-Rules-in-AppLocker.md)
+    -   [Script Rules in AppLocker]()
 
-    -   [DLL Rules in AppLocker](DLL-Rules-in-AppLocker.md)
+    -   [DLL Rules in AppLocker]()
 
     -   [Packaged Apps and Packaged App Installer Rules in AppLocker](Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md)
 
 ## Additional resources
 
--   [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md)
+-   [AppLocker Policies Design Guide]()
 
--   [AppLocker Policies Deployment Guide](AppLocker-Policies-Deployment-Guide.md)
+-   [AppLocker Policies Deployment Guide]()
 
--   [Administer AppLocker](Administer-AppLocker.md)
+-   [Administer AppLocker]()
 
 ## See Also
 [AppLocker Technical Architecture](https://technet.microsoft.com/en-us/library/ee844203(v=ws.10).aspx)

@@ -34,7 +34,7 @@ This topic contains:
 
 For information about how to accomplish specific tasks using SRP, see the following:
 
--   [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](administer/Determine-Allow-Deny-List-and-Application-Inventory-for-../../Software-Restriction-Policies.md)
+-   [Determine Allow-Deny List and Application Inventory for Software Restriction Policies]()
 
 -   [Work with Software Restriction Policies Rules](administer/Work-with-Software-Restriction-Policies-Rules.md)
 

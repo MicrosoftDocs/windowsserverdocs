@@ -435,6 +435,6 @@ In the following procedure, you will use the Windows PowerShell History Viewer i
     For example, you can modify the command to add a different user to **group1**, or add **test1** to a different group.  
   
 ## See Also  
-[Advanced AD DS Management Using Active Directory Administrative Center &#40;Level 200&#41;](Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md)  
+[Advanced AD DS Management Using Active Directory Administrative Center &#40;Level 200&#41;]()  
   
 

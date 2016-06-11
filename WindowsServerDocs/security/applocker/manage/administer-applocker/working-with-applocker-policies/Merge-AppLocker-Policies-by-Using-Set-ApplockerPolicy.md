@@ -17,13 +17,13 @@ The **Set\-AppLockerPolicy** cmdlet sets the specified Group Policy Object \(GPO
 
 For information about using **Set\-AppLockerPolicy**, including syntax descriptions and parameters, see [Set\-AppLockerPolicy](http://go.microsoft.com/fwlink/?LinkId=169167) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=169167\).
 
-For information about using Windows PowerShell for AppLocker, including how to import the AppLocker cmdlets into Windows PowerShell, see [Use the AppLocker Windows PowerShell Cmdlets](Use-the-AppLocker-Windows-PowerShell-Cmdlets.md).
+For information about using Windows PowerShell for AppLocker, including how to import the AppLocker cmdlets into Windows PowerShell, see [Use the AppLocker Windows PowerShell Cmdlets]().
 
 You can also manually merge AppLocker policies. For the procedure to do this, see [Merge AppLocker Policies Manually](Merge-AppLocker-Policies-Manually.md).
 
 #### To merge a local AppLocker policy with another AppLocker policy by using LDAP paths
 
-1.  Open the PowerShell command window. For information about performing Windows PowerShell commands for AppLocker, see [Use the AppLocker Windows PowerShell Cmdlets](Use-the-AppLocker-Windows-PowerShell-Cmdlets.md).
+1.  Open the PowerShell command window. For information about performing Windows PowerShell commands for AppLocker, see [Use the AppLocker Windows PowerShell Cmdlets]().
 
 2.  At the command prompt, type **C:\\PS>Get\-AppLockerPolicy \-Local | Set\-AppLockerPolicy \-LDAP "LDAP: \/\/***<string>***" \-Merge** where *<string>* specifies the LDAP path of the unique GPO.
 

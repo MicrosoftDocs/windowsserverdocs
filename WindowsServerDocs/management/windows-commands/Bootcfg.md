@@ -22,16 +22,16 @@ Bootcfg <parameter> [arguments...]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|[Bootcfg addsw](Bootcfg-addsw.md)|Adds operating system load options for a specified operating system entry.|  
-|[Bootcfg copy](Bootcfg-copy.md)|Makes a copy of an existing boot entry, to which you can add command\-line options.|  
-|[Bootcfg dbg1394](Bootcfg-dbg1394.md)|Configures 1394 port debugging for a specified operating system entry.|  
-|[Bootcfg debug](Bootcfg-debug.md)|Adds or changes the debug settings for a specified operating system entry.|  
-|[Bootcfg default](Bootcfg-default.md)|Specifies the operating system entry to designate as the default.|  
-|[Bootcfg delete](Bootcfg-delete.md)|Deletes an operating system entry in the **\[operating systems\]** section of the Boot.ini file.|  
-|[Bootcfg ems](Bootcfg-ems.md)|Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.|  
-|[Bootcfg query](Bootcfg-query.md)|Queries and displays the \[boot loader\] and **\[operating systems\]** section entries from Boot.ini.|  
-|[Bootcfg raw](Bootcfg-raw.md)|Adds operating system load options specified as a string to an operating system entry in the **\[operating systems\]** section of the Boot.ini file.|  
-|[Bootcfg rmsw](Bootcfg-rmsw.md)|Removes operating system load options for a specified operating system entry.|  
-|[Bootcfg timeout](Bootcfg-timeout.md)|Changes the operating system time\-out value.|  
+|[Bootcfg addsw]()|Adds operating system load options for a specified operating system entry.|  
+|[Bootcfg copy]()|Makes a copy of an existing boot entry, to which you can add command\-line options.|  
+|[Bootcfg dbg1394]()|Configures 1394 port debugging for a specified operating system entry.|  
+|[Bootcfg debug]()|Adds or changes the debug settings for a specified operating system entry.|  
+|[Bootcfg default]()|Specifies the operating system entry to designate as the default.|  
+|[Bootcfg delete]()|Deletes an operating system entry in the **\[operating systems\]** section of the Boot.ini file.|  
+|[Bootcfg ems]()|Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.|  
+|[Bootcfg query]()|Queries and displays the \[boot loader\] and **\[operating systems\]** section entries from Boot.ini.|  
+|[Bootcfg raw]()|Adds operating system load options specified as a string to an operating system entry in the **\[operating systems\]** section of the Boot.ini file.|  
+|[Bootcfg rmsw]()|Removes operating system load options for a specified operating system entry.|  
+|[Bootcfg timeout]()|Changes the operating system time\-out value.|  
   
 

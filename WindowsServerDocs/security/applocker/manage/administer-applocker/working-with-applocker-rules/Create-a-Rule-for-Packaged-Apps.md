@@ -23,9 +23,9 @@ Packaged apps \(also known as Windows 8 apps\) are new to  Windows Server 2012 
 
 All the files within a package as well as the package installer share these attributes. Therefore, an AppLocker rule for a Packaged app controls both the installation as well as the running of the app. Otherwise, the publisher rules for Packaged apps are no different than the rest of the rule collections; they support exceptions, can be increased or decreased in scope, and can be assigned to users and groups.
 
-For information about the publisher condition, see [Understanding the Publisher Rule Condition in AppLocker](Understanding-the-Publisher-Rule-Condition-in-AppLocker.md).
+For information about the publisher condition, see [Understanding the Publisher Rule Condition in AppLocker]().
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](#BKMK_Using_Snapins).
 
 ### <a name="BKMK_CreatePubRuleGPO"></a>To create a Packaged app rule
 

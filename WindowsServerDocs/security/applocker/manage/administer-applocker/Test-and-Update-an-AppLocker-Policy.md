@@ -16,15 +16,15 @@ This topic discusses the steps required to test an AppLocker policy prior to dep
 You should test each set of rules to ensure that the rules perform as intended. If you use Group Policy to manage AppLocker policies, complete the following steps for each Group Policy Object \(GPO\) where you have created AppLocker rules. Because AppLocker rules are inherited from linked GPOs, you should deploy all of the rules for simultaneous testing in all of your test GPOs.
 
 ## Step 1: Enable the Audit only enforcement setting
-By using the **Audit only** enforcement setting, you can ensure that the AppLocker rules that you have created are properly configured for your organization. This setting can be enabled on the **Enforcement** tab of the **AppLocker Properties** dialog box. For the procedure to do this, see [Configure an AppLocker Policy for Audit Only](Configure-an-AppLocker-Policy-for-Audit-Only.md).
+By using the **Audit only** enforcement setting, you can ensure that the AppLocker rules that you have created are properly configured for your organization. This setting can be enabled on the **Enforcement** tab of the **AppLocker Properties** dialog box. For the procedure to do this, see [Configure an AppLocker Policy for Audit Only]().
 
 ## Step 2: Configure the Application Identity service to start automatically
-Because AppLocker uses the Application Identity service to verify the attributes of a file, you must configure it to start automatically in any one GPO that applies AppLocker rules. For the procedure to do this, see [Configure the Application Identity Service](Configure-the-Application-Identity-Service.md). For AppLocker policies that are not managed by a GPO, you must ensure that the service is running on each computer in order for the policies to be applied.
+Because AppLocker uses the Application Identity service to verify the attributes of a file, you must configure it to start automatically in any one GPO that applies AppLocker rules. For the procedure to do this, see [Configure the Application Identity Service](). For AppLocker policies that are not managed by a GPO, you must ensure that the service is running on each computer in order for the policies to be applied.
 
 ## Step 3: Test the policy
 Test the AppLocker policy to determine if your rule collection needs to be modified. Because you have created AppLocker rules, enabled the Application Identity service, and enabled the **Audit only** enforcement setting, the AppLocker policy should be present on all client computers that are configured to receive your AppLocker policy.
 
-The **Test\-AppLockerPolicy** Windows PowerShell cmdlet can be used to determine whether any of the rules in your rule collection will be blocked on your reference computers. For the procedure to do this, see [Test an AppLocker Policy by Using Test-AppLockerPolicy](Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md).
+The **Test\-AppLockerPolicy** Windows PowerShell cmdlet can be used to determine whether any of the rules in your rule collection will be blocked on your reference computers. For the procedure to do this, see [Test an AppLocker Policy by Using Test-AppLockerPolicy]().
 
 ## Step 4: Analyze AppLocker events
 You can either manually analyze AppLocker events or use the **Get\-AppLockerFileInformation** Windows PowerShell cmdlet to automate the analysis.
@@ -49,7 +49,7 @@ Repeat the previous steps 3–5 until all the rules perform as intended before a
 
 ## Additional resources
 
--   For steps to perform other AppLocker policy tasks, see [Administer AppLocker](Administer-AppLocker.md).
+-   For steps to perform other AppLocker policy tasks, see [Administer AppLocker]().
 
 ## See Also
 [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)

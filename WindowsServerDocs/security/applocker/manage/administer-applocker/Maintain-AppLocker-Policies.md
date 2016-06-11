@@ -50,26 +50,26 @@ Before modifying a policy, evaluate how the policy is currently implemented. For
 > These documents apply to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8, and  Windows 7  operating systems.
 
 ### Step 2: Export the AppLocker policy from the GPO
-Updating an AppLocker policy that is currently enforced in your production environment can have unintended results. Therefore, export the policy from the GPO and update the rule or rules by using AppLocker on your AppLocker reference or test computer. To prepare an AppLocker policy for modification, see [Export an AppLocker Policy from a GPO](Export-an-AppLocker-Policy-from-a-GPO.md)
+Updating an AppLocker policy that is currently enforced in your production environment can have unintended results. Therefore, export the policy from the GPO and update the rule or rules by using AppLocker on your AppLocker reference or test computer. To prepare an AppLocker policy for modification, see [Export an AppLocker Policy from a GPO]()
 
 ### Step 3: Update the AppLocker policy by editing the appropriate AppLocker rule
 After the AppLocker policy has been exported from the GPO into the AppLocker reference or test computer, or has been accessed on the local computer, the specific rules can be modified as required.
 
 To modify AppLocker rules, see the following:
 
--   [Edit AppLocker Rules](Edit-AppLocker-Rules.md)
+-   [Edit AppLocker Rules]()
 
--   [Merge AppLocker Policies by Using Set-ApplockerPolicy](Merge-AppLocker-Policies-by-Using-Set-ApplockerPolicy.md) or [Merge AppLocker Policies Manually](Merge-AppLocker-Policies-Manually.md)
+-   [Merge AppLocker Policies by Using Set-ApplockerPolicy]() or [Merge AppLocker Policies Manually]()
 
--   [Delete an AppLocker Rule](Delete-an-AppLocker-Rule.md)
+-   [Delete an AppLocker Rule]()
 
--   [Enforce AppLocker Rules](Enforce-AppLocker-Rules.md)
+-   [Enforce AppLocker Rules]()
 
 ### Step 4: Test the AppLocker policy
 You should test each collection of rules to ensure that the rules perform as intended. \(Because AppLocker rules are inherited from linked GPOs, you should deploy all rules for simultaneous testing in all test GPOs.\) For steps to perform this testing, see [Test and Update an AppLocker Policy](Test-and-Update-an-AppLocker-Policy.md).
 
 ### Step 5: Import the AppLocker policy into the GPO
-After testing, import the AppLocker policy back into the GPO for implementation. To update the GPO with a modified AppLocker policy, see [Import an AppLocker Policy into a GPO](Import-an-AppLocker-Policy-into-a-GPO.md).
+After testing, import the AppLocker policy back into the GPO for implementation. To update the GPO with a modified AppLocker policy, see [Import an AppLocker Policy into a GPO]().
 
 ### Step 6: Monitor the resulting policy behavior
 After deploying a policy, evaluate the policy's effectiveness.  For steps to understand the new behavior of the policy, see [Discovering the Effect of an AppLocker Policy](http://technet.microsoft.com/library/ee791823(WS.10).aspx).
@@ -86,13 +86,13 @@ Before modifying a policy, evaluate how the policy is currently implemented. To 
 ### Step 2: Update the AppLocker policy by modifying the appropriate AppLocker rule
 Rules are grouped into a collection, which can have the policy enforcement setting applied to it. By default, AppLocker rules do not allow users to open or run any files that are not specifically allowed.
 
-To modify AppLocker rules, see the appropriate topic listed on [Administer AppLocker](Administer-AppLocker.md).
+To modify AppLocker rules, see the appropriate topic listed on [Administer AppLocker]().
 
 ### Step 3: Test the AppLocker policy
 You should test each collection of rules to ensure that the rules perform as intended. For steps to perform this testing, see [Test and Update an AppLocker Policy](Test-and-Update-an-AppLocker-Policy.md).
 
 ### Step 4: Deploy the policy with the modified rule
-You can export and then import AppLocker policies to deploy the policy to other computers running Windows 8 or  Windows Server 2012 . To perform this task, see [Export an AppLocker Policy to an XML File](Export-an-AppLocker-Policy-to-an-XML-File.md) and [Import an AppLocker Policy from Another Computer](Import-an-AppLocker-Policy-from-Another-Computer.md).
+You can export and then import AppLocker policies to deploy the policy to other computers running Windows 8 or  Windows Server 2012 . To perform this task, see [Export an AppLocker Policy to an XML File]() and [Import an AppLocker Policy from Another Computer]().
 
 ### Step 5: Monitor the resulting policy behavior
 After deploying a policy, evaluate the policy's effectiveness.  For steps to understand the new behavior of the policy, see Discovering the Effect of an AppLocker Policy in [Discovering the Effect of an AppLocker Policy](http://technet.microsoft.com/library/ee791823(WS.10).aspx).
@@ -102,7 +102,7 @@ After deploying a policy, evaluate the policy's effectiveness.  For steps to und
 
 ## Additional resources
 
--   For steps to perform other AppLocker policy tasks, see [Administer AppLocker](Administer-AppLocker.md).
+-   For steps to perform other AppLocker policy tasks, see [Administer AppLocker]().
 
 ## See Also
 [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)

@@ -122,6 +122,6 @@ MAK Proxy activation can also be used with VAMT in this scenario.
 
 -   [Plan for Volume Activation](../Plan-for-Volume-Activation.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 

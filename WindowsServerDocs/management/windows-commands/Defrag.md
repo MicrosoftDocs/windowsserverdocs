@@ -97,9 +97,9 @@ Defrag /C /H /V
 
 #### <a name="BKMK_AdditionalRef"></a>Additional references
 
--   [Chkdsk](Chkdsk.md)
+-   [Chkdsk]()
 
--   [Fsutil](Fsutil.md)
+-   [Fsutil]()
 
 -   [Fsutil dirty](fsutil/Fsutil-dirty.md)
 

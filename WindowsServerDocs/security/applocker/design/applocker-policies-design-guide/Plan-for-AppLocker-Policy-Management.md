@@ -116,6 +116,6 @@ After deciding how your organization will manage your AppLocker policy, record y
 
 -   **Policy maintenance.** Detail how rules will be added to the policy and in which GPO the rules are defined.
 
-For information and steps how to document your processes, see [Document Your Application Control Management Processes](Document-Your-Application-Control-Management-Processes.md).
+For information and steps how to document your processes, see [Document Your Application Control Management Processes]().
 
 

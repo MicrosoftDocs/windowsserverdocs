@@ -34,7 +34,7 @@ You can use this command to backup your security policies on a local computer in
 
 If the path for the log file is not provided, the default log file, \(*systemroot*\\Documents and Settings\\*UserAccount*\\My Documents\\Security\\Logs\\*DatabaseName*.log\) is used.
 
-In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](Gpupdate.md).
+In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate]().
 
 ## <a name="BKMK_Examples"></a>Examples
 Export the security database and the domain security policies to an inf file and then import that file to a different database in order to replicate the security policy settings on another computer.

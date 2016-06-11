@@ -153,9 +153,9 @@ MAK can be used for individual computers or with an image that can be duplicated
   
 -   [Step 2: Evaluate Client Connectivity](Step-2--Evaluate-Client-Connectivity.md)  
   
--   [Plan for Volume Activation](Plan-for-Volume-Activation.md)  
+-   [Plan for Volume Activation]()  
   
--   [Volume Activation Overview](Volume-Activation-Overview.md)  
+-   [Volume Activation Overview]()  
   
 -   [Test Lab Guide: Demonstrate Volume Activation Services](Test-Lab-Guide--Demonstrate-Volume-Activation-Services.md)  
   

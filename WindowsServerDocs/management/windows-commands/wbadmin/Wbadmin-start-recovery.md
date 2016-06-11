@@ -95,7 +95,7 @@ wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\shar
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 -   [Start\-WBFileRecovery](http://technet.microsoft.com/library/jj902457.aspx) cmdlet
 

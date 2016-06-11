@@ -19,7 +19,7 @@ Changes the install mode for the Remote Desktop Session Host \(RD Session Host\)
 This command is the same as the **change user** command.  
   
 #### Additional references  
-[Change user](Change-user.md)  
+[Change user]()  
   
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   

@@ -24,7 +24,7 @@ The following requirements must be met or addressed before you deploy your AppLo
 -   [Event collection and analysis system](#BKMK_ReqEventCollectionSystem)
 
 ### <a name="BKMK_ReqDepPlan"></a>Deployment plan
-An AppLocker policy deployment plan is the result of investigating which applications are required and necessary in your organization, which applications are optional, and which applications are forbidden. To develop this plan, see [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md). The following table is an example of the data you need to collect and the decisions you need to make to successfully deploy AppLocker policies on the supported operating systems \(as listed in [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md)\).
+An AppLocker policy deployment plan is the result of investigating which applications are required and necessary in your organization, which applications are optional, and which applications are forbidden. To develop this plan, see [AppLocker Policies Design Guide](). The following table is an example of the data you need to collect and the decisions you need to make to successfully deploy AppLocker policies on the supported operating systems \(as listed in [Requirements to Use AppLocker]()\).
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
 |------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|------------|------------------|
@@ -50,9 +50,9 @@ An AppLocker policy deployment plan is the result of investigating which applica
 |Human Resources|Planned: Through HR triage<br /><br />Emergency: Request through Help Desk|Through HR triage; 30\-day notice required|General policy: Keep past versions for 60 months<br /><br />List policies for each application|Coordinated through HR; 30\-day notice required|
 
 ### <a name="BKMK_ReqSupportedOS"></a>Supported operating systems
-AppLocker is supported only on certain operating systems. Some features are not available on all operating systems. For more information, see [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md).
+AppLocker is supported only on certain operating systems. Some features are not available on all operating systems. For more information, see [Requirements to Use AppLocker]().
 
-Software Restriction Policies are supported in Windows XP and Windows Server 2003, in addition to the versions listed in [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md).
+Software Restriction Policies are supported in Windows XP and Windows Server 2003, in addition to the versions listed in [Requirements to Use AppLocker]().
 
 ### <a name="BKMK_ReqPolicyDistMech"></a>Policy distribution mechanism
 You need a way to distribute the AppLocker policies throughout the targeted business groups. AppLocker uses Group Policy management architecture to effectively distribute application control policies. AppLocker policies can also be configured on individual computers by using the Local Security Policy snap\-in.
@@ -60,13 +60,13 @@ You need a way to distribute the AppLocker policies throughout the targeted busi
 ### <a name="BKMK_ReqEventCollectionSystem"></a>Event collection and analysis system
 Event processing is important to understand application usage. You must have a process in place to collect and analyze AppLocker events so that application usage is appropriately restricted and understood. For procedures to monitor AppLocker events, see:
 
--   [Configure an AppLocker Policy for Audit Only](Configure-an-AppLocker-Policy-for-Audit-Only.md)
+-   [Configure an AppLocker Policy for Audit Only]()
 
--   [Configure an AppLocker Policy for Enforce Rules](Configure-an-AppLocker-Policy-for-Enforce-Rules.md)
+-   [Configure an AppLocker Policy for Enforce Rules]()
 
--   [Monitor Application Usage with AppLocker](Monitor-Application-Usage-with-AppLocker.md)
+-   [Monitor Application Usage with AppLocker]()
 
 ## See also
-[AppLocker Policies Deployment Guide](AppLocker-Policies-Deployment-Guide.md)
+[AppLocker Policies Deployment Guide]()
 
 

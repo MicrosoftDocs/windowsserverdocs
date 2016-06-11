@@ -448,6 +448,6 @@ If users install a MAK by using the user interface \(UI\), the MAK client attemp
 
 -   [Volume Activation Technical Reference](../Volume-Activation-Technical-Reference.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 

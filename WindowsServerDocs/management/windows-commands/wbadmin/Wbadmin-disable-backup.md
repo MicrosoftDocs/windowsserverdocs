@@ -30,6 +30,6 @@ wbadmin disable backup
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 

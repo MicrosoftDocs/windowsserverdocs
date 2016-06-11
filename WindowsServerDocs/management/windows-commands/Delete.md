@@ -27,7 +27,7 @@ delete volume
 |-------------|---------------|
 |[Delete disk](delete/Delete-disk.md)|Deletes a missing dynamic disk from the list of disks.|
 |[Delete partition](delete/Delete-partition.md)|Deletes a partition.|
-|[Delete volume](Delete-volume.md)|Deletes a volume.|
+|[Delete volume]()|Deletes a volume.|
 
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

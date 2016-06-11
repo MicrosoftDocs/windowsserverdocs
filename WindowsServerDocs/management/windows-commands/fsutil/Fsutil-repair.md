@@ -58,7 +58,7 @@ fsutil repair set c: 0
 #### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil](Fsutil.md)
+[Fsutil]()
 
 [Self Healing NTFS](http://go.microsoft.com/fwlink/?LinkID=165401)
 

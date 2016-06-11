@@ -110,6 +110,6 @@ wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonre
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 

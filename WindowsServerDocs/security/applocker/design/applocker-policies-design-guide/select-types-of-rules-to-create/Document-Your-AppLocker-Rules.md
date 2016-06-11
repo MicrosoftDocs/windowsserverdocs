@@ -16,11 +16,11 @@ This topic describes what rule conditions to associate with each file, how to as
 ## Record your findings
 To complete this AppLocker planning document, you should first complete the following steps:
 
-1.  [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+1.  [Determine Your Application Control Objectives]()
 
-2.  [Create List of Applications Deployed to Each Business Group](Create-List-of-Applications-Deployed-to-Each-Business-Group.md)
+2.  [Create List of Applications Deployed to Each Business Group]()
 
-3.  [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+3.  [Select Types of Rules to Create]()
 
 Document the following items for each business group or organizational unit:
 
@@ -28,7 +28,7 @@ Document the following items for each business group or organizational unit:
 
 -   The types of rule conditions that you will use to create rules, stated in order of preference.
 
-The following table details sample data for documenting rule type and rule condition findings. In addition, you should now consider whether to allow an application to run or deny permission for it to run. For information about these settings, see [Understanding AppLocker Allow and Deny Actions on Rules](Understanding-AppLocker-Allow-and-Deny-Actions-on-Rules.md).
+The following table details sample data for documenting rule type and rule condition findings. In addition, you should now consider whether to allow an application to run or deny permission for it to run. For information about these settings, see [Understanding AppLocker Allow and Deny Actions on Rules]().
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|
 |------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|
@@ -42,10 +42,10 @@ The following table details sample data for documenting rule type and rule condi
 ## Next steps
 For each rule, determine whether to use the allow or deny option. Then, three tasks remain:
 
--   [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+-   [Determine Group Policy Structure and Rule Enforcement]()
 
--   [Plan for AppLocker Policy Management](Plan-for-AppLocker-Policy-Management.md)
+-   [Plan for AppLocker Policy Management]()
 
--   [Create Your AppLocker Planning Document](Create-Your-AppLocker-Planning-Document.md)
+-   [Create Your AppLocker Planning Document]()
 
 

@@ -26,7 +26,7 @@ Deploying a central access policy includes the following phases:
 |[Maintain: Change and stage the policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.5)|Policy changes and staging|  
   
 ## <a name="BKMK_1.1"></a>Set up a test environment  
-Before you begin, you need to set up lab to test this scenario. The steps for setting up the lab are explained in detail in [Appendix B: Setting Up the Test Environment](Appendix-B--Setting-Up-the-Test-Environment.md).  
+Before you begin, you need to set up lab to test this scenario. The steps for setting up the lab are explained in detail in [Appendix B: Setting Up the Test Environment]().  
   
 ## <a name="BKMK_1.2"></a>Plan: Identify the need for policy and the configuration required for deployment  
 This section provides the high\-level series of steps that aid in the planning phase of your deployment.  
@@ -238,7 +238,7 @@ You should now have a central access rule that allows people to access documents
     > [!TIP]  
     > In your production environment, you should create a File Server Organization Unit \(OU\) and add all your file servers to this OU, to which you want to apply this policy. You can then create a group policy and add this OU to that policy..  
   
-2.  In this step, you edit the group policy object you created in [Build the domain controller](Appendix-B--Setting-Up-the-Test-Environment.md#BKMK_Build) section in the Test Environment to include the central access policy that you created. In the Group Policy Management Editor, navigate to and select the organizational unit in the domain \(contoso.com in this example\): **Group Policy Management**, **Forest: contoso.com**, **Domains**, **contoso.com**, **Contoso**, **FileServerOU**.  
+2.  In this step, you edit the group policy object you created in [Build the domain controller](#BKMK_Build) section in the Test Environment to include the central access policy that you created. In the Group Policy Management Editor, navigate to and select the organizational unit in the domain \(contoso.com in this example\): **Group Policy Management**, **Forest: contoso.com**, **Domains**, **contoso.com**, **Contoso**, **FileServerOU**.  
   
 3.  Right\-click **FlexibleAccessGPO**, and then click **Edit**.  
   

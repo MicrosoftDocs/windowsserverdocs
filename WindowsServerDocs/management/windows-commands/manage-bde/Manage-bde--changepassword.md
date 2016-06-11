@@ -38,6 +38,6 @@ manage-bde –changepassword D:
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Manage-bde](Manage-bde.md)
+-   [Manage-bde]()
 
 

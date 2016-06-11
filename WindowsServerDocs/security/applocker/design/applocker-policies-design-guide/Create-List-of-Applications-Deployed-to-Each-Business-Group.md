@@ -54,7 +54,7 @@ Identify the business group and each organizational unit \(OU\) within that grou
 -   [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
 
 ## Next steps
-Identify and develop the list of applications. Record the name of the application, whether it is signed or not as indicated by the publisher's name, and whether or not it is a mission critical, business productivity, optional, or personal application. Record the installation path of the applications. For information about how to do this, see [Document Your Application List](Document-Your-Application-List.md).
+Identify and develop the list of applications. Record the name of the application, whether it is signed or not as indicated by the publisher's name, and whether or not it is a mission critical, business productivity, optional, or personal application. Record the installation path of the applications. For information about how to do this, see [Document Your Application List]().
 
 After you have created the list of applications, the next step is to identify the rule collections, which will become the policies. This information can be added to the table under columns labeled:
 

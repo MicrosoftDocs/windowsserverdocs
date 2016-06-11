@@ -49,7 +49,7 @@ wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -ma
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 -   [Get\-WBBackupSet](http://technet.microsoft.com/library/jj902473.aspx) cmdlet
 

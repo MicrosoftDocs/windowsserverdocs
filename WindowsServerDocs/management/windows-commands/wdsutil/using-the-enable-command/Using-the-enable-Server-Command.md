@@ -34,7 +34,7 @@ WDSUTIL /Verbose /Enable-Server /Server:MyWDSServer
 #### Additional references
 [Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
-[Using the disable-Server Command](Using-the-disable-Server-Command.md)
+[Using the disable-Server Command]()
 
 [Using the get-Server Command](../using-the-get-command/Using-the-get-Server-Command.md)
 

@@ -28,7 +28,7 @@ After you select your design and gather the required information about the zones
 
 -   [Domain Isolation Policy Design](Domain-Isolation-Policy-Design.md)
 
--   [Server Isolation Policy Design](Server-Isolation-Policy-Design.md)
+-   [Server Isolation Policy Design]()
 
 -   [Certificate-based Isolation Policy Design](Certificate-based-Isolation-Policy-Design.md)
 

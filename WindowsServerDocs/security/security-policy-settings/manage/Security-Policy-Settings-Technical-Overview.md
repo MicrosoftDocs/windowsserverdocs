@@ -429,7 +429,7 @@ The following table lists relevant and supporting documentation for the Security
   
 |Technology content|Resources|  
 |----------------------|-------------|  
-|Group Policy|[Group Policy Overview](Group-Policy-Overview.md)|  
+|Group Policy|[Group Policy Overview]()|  
 |Security Tools|[Security Tools](http://technet.microsoft.com/library/cc722416(WS.10).aspx)|  
 |Security settings|[Security Policy Settings Reference](http://technet.microsoft.com/library/jj852210(v=ws.10).aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 R2 and Windows 7](http://technet.microsoft.com/library/hh125921(WS.10).aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 and Windows Vista](http://technet.microsoft.com/library/dd349791(WS.10).aspx)|  
 |Active Directory|[Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)|  

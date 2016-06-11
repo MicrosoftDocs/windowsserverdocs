@@ -40,7 +40,7 @@ Windows Vista and Windows Server 2008 cannot activate Windows 10 or Windows Serv
 
 -   [Volume Activation Technical Reference](../Volume-Activation-Technical-Reference.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 -   For actual KMS Client Setup keys, see [Appendix A: KMS Client Setup Keys](../../plan/plan-for-volume-activation/Appendix-A--KMS-Client-Setup-Keys.md)
 

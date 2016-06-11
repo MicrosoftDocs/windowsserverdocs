@@ -46,7 +46,7 @@ select vdisk file="c:\test\test.vhd"
 
 -   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
 
--   [Detach vdisk](Detach-vdisk.md)
+-   [Detach vdisk]()
 
 -   [Detail vdisk](../delete/detail/Detail-vdisk.md)
 
@@ -54,6 +54,6 @@ select vdisk file="c:\test\test.vhd"
 
 -   [Merge vdisk](../Merge-vdisk.md)
 
--   [List_1](List_1.md)
+-   [List_1]()
 
 

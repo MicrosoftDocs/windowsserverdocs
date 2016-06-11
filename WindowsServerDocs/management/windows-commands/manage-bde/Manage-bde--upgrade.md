@@ -38,7 +38,7 @@ manage-bde –upgrade C:
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Manage-bde](Manage-bde.md)
+-   [Manage-bde]()
 
 -   [Upgrading a BitLocker\-Protected Computer from Windows Vista to Windows 7](https://technet.microsoft.com/library/ee424325(v=ws.10).aspx)
 

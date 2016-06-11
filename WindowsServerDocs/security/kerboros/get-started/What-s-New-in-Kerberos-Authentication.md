@@ -96,7 +96,7 @@ In  Windows 7 , when the user signed in by using a smart card with a mapped gro
 #### <a name="BKMK_Sup4ClaimsCAarmoring"></a>Support for claims, compound authentication, and Kerberos armoring
 If you want to create access control based on claims and compound authentication, you need to deploy Dynamic Access Control. This requires that you upgrade to Kerberos clients and use the KDC, which support these new authorization types. With  Windows Server 2012 , you do not have to wait until all the domain controllers and the domain functional level are upgraded to take advantage of new access control options.
 
-For information about Dynamic Access Control in  Windows Server 2012 , see [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md) and the related topics.
+For information about Dynamic Access Control in  Windows Server 2012 , see [Dynamic Access Control: Scenario Overview]() and the related topics.
 
 **What value does this change add?**
 
@@ -425,7 +425,7 @@ For eveloping information about SetSPN, see [Service Principal Names \(SPNs\) Se
 
 -   [Kerberos Constrained Delegation Overview](Kerberos-Constrained-Delegation-Overview.md)
 
--   [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
+-   [Dynamic Access Control: Scenario Overview]()
 
 -   [Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)
 

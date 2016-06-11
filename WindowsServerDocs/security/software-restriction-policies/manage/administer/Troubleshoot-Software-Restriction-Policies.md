@@ -78,6 +78,6 @@ Software restriction policies address the problem of regulating unknown or untru
 
 1.  Investigate the System Event Log, filtering on source of “Software Restriction Policy.” The entries explicitly state which rule is implemented for each application.
 
-2.  Enable advanced logging. See [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](Determine-Allow-Deny-List-and-Application-Inventory-for-../../../Software-Restriction-Policies.md) for more information.
+2.  Enable advanced logging. See [Determine Allow-Deny List and Application Inventory for Software Restriction Policies]() for more information.
 
 

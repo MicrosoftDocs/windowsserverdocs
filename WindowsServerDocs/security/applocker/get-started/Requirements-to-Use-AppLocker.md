@@ -23,7 +23,7 @@ To use AppLocker, you need:
 -   Computers running a supported operating system to enforce the AppLocker rules that you create.
 
 > [!NOTE]
-> You can use Software Restriction Policies with AppLocker, but with some limitations. For more information, see [Use AppLocker and Software Restriction Policies in the Same Domain](Use-AppLocker-and-Software-Restriction-Policies-in-the-Same-Domain.md).
+> You can use Software Restriction Policies with AppLocker, but with some limitations. For more information, see [Use AppLocker and Software Restriction Policies in the Same Domain]().
 
 ## Operating system requirements
 The following table show the on which operating systems AppLocker features are supported.
@@ -49,16 +49,16 @@ The following table show the on which operating systems AppLocker features are s
 AppLocker is not supported on versions of the Windows operating system not listed above. Software Restriction Policies can be used with those versions. However, the SRP Basic User feature is not supported on the above operating systems.
 
 ## See also
-[Administer AppLocker](Administer-AppLocker.md)
+[Administer AppLocker]()
 
-[Monitor Application Usage with AppLocker](Monitor-Application-Usage-with-AppLocker.md)
+[Monitor Application Usage with AppLocker]()
 
-[Optimize AppLocker Performance](Optimize-AppLocker-Performance.md)
+[Optimize AppLocker Performance]()
 
-[Use AppLocker and Software Restriction Policies in the Same Domain](Use-AppLocker-and-Software-Restriction-Policies-in-the-Same-Domain.md)
+[Use AppLocker and Software Restriction Policies in the Same Domain]()
 
-[Manage Packaged Apps with AppLocker](Manage-Packaged-Apps-with-AppLocker.md)
+[Manage Packaged Apps with AppLocker]()
 
-[AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md)
+[AppLocker Policies Design Guide]()
 
 

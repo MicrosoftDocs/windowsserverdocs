@@ -34,6 +34,6 @@ The following table lists the default rules that are available for the DLL rule 
 > When DLL rules are used, AppLocker must check each DLL that an application loads. Therefore, users may experience a reduction in performance if DLL rules are used.
 
 ## See Also
-[Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
+[Understanding AppLocker Default Rules]()
 
 

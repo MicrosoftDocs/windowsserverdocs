@@ -50,7 +50,7 @@ wbadmin get versions -backupTarget:\\servername\share -machine:server01
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 -   [Get\-WBBackupTarget](http://technet.microsoft.com/library/jj902447.aspx) cmdlet
 

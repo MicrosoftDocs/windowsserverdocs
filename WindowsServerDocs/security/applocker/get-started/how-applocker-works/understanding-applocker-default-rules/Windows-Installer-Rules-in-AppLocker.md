@@ -30,6 +30,6 @@ The purpose of this collection is to allow you to control the installation of fi
 |Allow all users to run Windows Installer files that are located in the Windows Installer folder|\(Default Rule\) All Windows Installer files in %systemdrive%\\Windows\\Installer|Everyone|Path:  %windir%\\Installer\\\*|
 
 ## See Also
-[Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
+[Understanding AppLocker Default Rules]()
 
 
