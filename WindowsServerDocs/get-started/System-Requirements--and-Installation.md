@@ -12,13 +12,13 @@ ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 author: jaimeo
 ---
 # System Requirements  and Installation
-This topic addresses the information you need to install [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)]. We use the following terms to distinguish among different actions, any of which could be involved in a new [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] deployment.  
+This topic addresses the information you need to install Windows Server® 2016 Technical Preview. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 Technical Preview deployment.  
   
 -   **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. Clean installation is the only supported option for this release  
   
--   **Upgrade** means moving from your existing operating system to [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], while staying on the same hardware. For this release, upgrade to or from [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] is not supported  
+-   **Upgrade** means moving from your existing operating system to Windows Server 2016 Technical Preview, while staying on the same hardware. For this release, upgrade to or from Windows Server 2016 Technical Preview is not supported  
   
--   **Migration** means moving from your existing operating system to [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] by transferring to a different set of hardware. For this release, migration is not supported.  
+-   **Migration** means moving from your existing operating system to Windows Server 2016 Technical Preview by transferring to a different set of hardware. For this release, migration is not supported.  
   
 > [!WARNING]  
 > In this release, only clean installations are supported.  
@@ -26,7 +26,7 @@ This topic addresses the information you need to install [!INCLUDE[winthreshold_
 > In this release, you cannot mount ReFS volumes formatted by using Windows Server 2016 Technical Preview 3. These volumes will appear as "raw," though the data is intact.  If you need to recover data from those volumes, mount them using Windows Server 2016 Technical Preview 3. ReFS volumes formatted by using Windows Server 2012, Windows Server 2012 R2, or Windows Server 2016 Technical Preview 4 can be mounted in this release without issues.  
   
 > [!NOTE]  
-> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]. For more information, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
+> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016 Technical Preview. For more information, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
   
 > [!IMPORTANT]  
 > For this release, use these product keys:  
@@ -42,7 +42,7 @@ This topic addresses the information you need to install [!INCLUDE[winthreshold_
 >If you install roles before installing the update, a variety of issues can occur. If this happens, reinstall the preview release and then immediately install the update.  
   
 ## Review system requirements  
-The following are estimated system requirements for the [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]. If your computer has less than the "minimum" requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.  
+The following are estimated system requirements for the Windows Server 2016 Technical Preview. If your computer has less than the "minimum" requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.  
   
 > [!IMPORTANT]  
 > The highly diverse scope of potential deployments makes it unrealistic to state “recommended” system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
@@ -81,7 +81,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 **Minimum**: 32 GB  
   
    > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] in Server Core mode, with the Web Services \(IIS\) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Windows Server Installation Options](assetId:///ebbecbda-3d97-48fe-9599-4031ad285384).  
+    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 Technical Preview in Server Core mode, with the Web Services \(IIS\) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Windows Server Installation Options](assetId:///ebbecbda-3d97-48fe-9599-4031ad285384).  
     >   
     > The system partition will need extra space for any of the following circumstances:  
     >   

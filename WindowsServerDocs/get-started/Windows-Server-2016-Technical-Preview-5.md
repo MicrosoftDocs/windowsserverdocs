@@ -14,9 +14,9 @@ author: jaimeo
 # Windows Server 2016 Technical Preview 5
 **\[This information is preliminary and subject to change.\]**  
   
-Welcome to [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)] 5.  
+Welcome to Windows Server® 2016 Technical Preview 5.  
   
-This is the fifth release of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]. In this documentation, Windows Server is referred to as Windows Server Technical Preview unless there is a need to distinguish between this release and the previous release. This collection contains information about the following:  
+This is the fifth release of Windows Server 2016 Technical Preview. In this documentation, Windows Server is referred to as Windows Server Technical Preview unless there is a need to distinguish between this release and the previous release. This collection contains information about the following:  
   
 -   [System Requirements  and Installation](System-Requirements--and-Installation.md)  
   
