@@ -21,11 +21,11 @@ The following tools can help you administer the application control policies cre
 
 -   **Generate Default Rules tool**
 
-    AppLocker includes default rules for each rule collection accessed through the Local Security Policy snap\-in. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an AppLocker rule collection. For information about how to use this tool, see [Create AppLocker Default Rules](Create-AppLocker-Default-Rules.md).
+    AppLocker includes default rules for each rule collection accessed through the Local Security Policy snap\-in. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an AppLocker rule collection. For information about how to use this tool, see [Create AppLocker Default Rules]().
 
 -   **Automatically Generate AppLocker Rules wizard**
 
-    By using the Local Security Policy snap\-in, you can automatically generate rules for all files within a folder. The wizard will scan the specified folder and create the condition types that you choose for each file in that folder. For information about how to use this wizard, see [Run the Automatically Generate Rules Wizard](Run-the-Automatically-Generate-Rules-Wizard.md).
+    By using the Local Security Policy snap\-in, you can automatically generate rules for all files within a folder. The wizard will scan the specified folder and create the condition types that you choose for each file in that folder. For information about how to use this wizard, see [Run the Automatically Generate Rules Wizard]().
 
 -   **Group Policy**
 
@@ -39,7 +39,7 @@ The following tools can help you administer the application control policies cre
 
 -   **Event Viewer**
 
-    The AppLocker log contains information about applications that are affected by AppLocker rules. For information about using Event Viewer to review the AppLocker logs, see [Using Event Viewer with AppLocker](Using-Event-Viewer-with-AppLocker.md), and [View the AppLocker Log in Event Viewer](Monitor-Application-Usage-with-AppLocker.md#BKMK_AppLkr_View_Log).
+    The AppLocker log contains information about applications that are affected by AppLocker rules. For information about using Event Viewer to review the AppLocker logs, see [Using Event Viewer with AppLocker](), and [View the AppLocker Log in Event Viewer](#BKMK_AppLkr_View_Log).
 
 -   **AppLocker PowerShell cmdlets**
 

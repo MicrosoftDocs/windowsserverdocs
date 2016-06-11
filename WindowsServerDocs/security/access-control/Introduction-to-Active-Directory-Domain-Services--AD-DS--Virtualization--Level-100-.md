@@ -59,7 +59,7 @@ With  Windows Server 2012 , AD DS employs safeguards on virtual domain controlle
 > [!CAUTION]  
 > If a domain controller in a production environment is accidentally reverted to a snapshot, it’s advised that you consult the vendors for the applications, and services hosted on that virtual machine, for guidance on verifying the state of these programs after snapshot restore.  
   
-For more information, see [Virtualized domain controller safe restore architecture](Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch).  
+For more information, see [Virtualized domain controller safe restore architecture](#BKMK_SafeRestoreArch).  
   
 ## <a name="virtualized_dc_cloning"></a>Virtualized domain controller cloning  
 Beginning with  Windows Server 2012 , administrators can easily and safely deploy replica domain controllers by copying an existing virtual domain controller. In a virtual environment, administrators no longer have to repeatedly deploy a server image prepared by using sysprep.exe, promote the server to a domain controller and then complete additional configuration requirements for deploying each replica domain controller.  
@@ -116,7 +116,7 @@ The clone domain controller uses the security context of the source domain contr
   
 After verifying that the requesting domain controller is authorized for cloning, the PDC emulator will create a new machine identity including new account, SID, name, and password that identifies this machine as a replica domain controller and send this information back to the clone. The clone domain controller will then prepare the AD DS database files to serve as a replica and it will also clean up the machine state.  
   
-For more information, see [Virtualized domain controller cloning architecture](Virtualized-Domain-Controller-Architecture.md#BKMK_CloneArch).  
+For more information, see [Virtualized domain controller cloning architecture](#BKMK_CloneArch).  
   
 ### Cloning components  
 The cloning components include new cmdlets in the Active Directory module for Windows PowerShell and associated XML files:  
@@ -321,7 +321,7 @@ The computer name is optional. If you do not specify one, a unique name will be 
 -   A unique naming suffix of the format "–CL*nnnn*" is appended to the prefix string where *nnnn* is the next available value from 0001\-9999 that the PDC determines is not currently in use. For example, if 0047 is the next available number in the allowed range, using the preceding example of the computer name prefix SourceCo, the derived name to use for the clone computer will be set as SourceCo\-CL0047.  
   
 > [!NOTE]  
-> A global catalog server \(GC\) is required for the New\-ADDCCloneConfigFile cmdlet to work successfully. The source domain controller’s membership in the **Cloneable Domain Controllers** group must be reflected on the GC. The GC does not need to be the same domain controller as the PDC emulator, but preferably it should be in the same site. If a GC is not available, the command fails with the error “The server is not operational.” For more information, see [Virtualized Domain Controller Troubleshooting](Virtualized-Domain-Controller-Troubleshooting.md).  
+> A global catalog server \(GC\) is required for the New\-ADDCCloneConfigFile cmdlet to work successfully. The source domain controller’s membership in the **Cloneable Domain Controllers** group must be reflected on the GC. The GC does not need to be the same domain controller as the PDC emulator, but preferably it should be in the same site. If a GC is not available, the command fails with the error “The server is not operational.” For more information, see [Virtualized Domain Controller Troubleshooting]().  
   
 To create a clone domain controller named Clone1 with static IPv4 settings and specify preferred and alternate WINS servers, type:  
   
@@ -367,7 +367,7 @@ New-ADDCCloneConfigFile –Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c
 #### <a name="BKMK_OfflineMode"></a>Running New\-ADDCCloneConfigFile in offline mode  
 If you have multiple copies of source domain controller media that have been prepared for cloning \(meaning the source domain controller is authorized for cloning, the Get\-ADDCCloningExcludedApplicationList cmdlet has been run, and so on\) and you want to specify different settings for each copy of the media, you can run New\-ADDCCloneConfigFile in offline mode. This can be more efficient than individually preparing each VM, for example, by importing each copy.  
   
-In this case, domain administrators can mount the offline disk and use Remote Server Administration Tools \(RSAT\) to run the New\-ADDCCloneConfigFile cmdlet with the –offline argument in order to add the XML files, which allows for factory\-like automation using new Windows PowerShell options included in Windows Server 2012. For more information about how to mount the offline disk in order to run the New\-ADDCCloneConfigFile cmdlet in offline mode, see [Adding XML to the Offline System Disk](Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_Offline).  
+In this case, domain administrators can mount the offline disk and use Remote Server Administration Tools \(RSAT\) to run the New\-ADDCCloneConfigFile cmdlet with the –offline argument in order to add the XML files, which allows for factory\-like automation using new Windows PowerShell options included in Windows Server 2012. For more information about how to mount the offline disk in order to run the New\-ADDCCloneConfigFile cmdlet in offline mode, see [Adding XML to the Offline System Disk](#BKMK_Offline).  
   
 You should first run the cmdlet locally on the source media to ensure that prerequisite checks pass. The prerequisite checks are not performed in offline mode because the cmdlet could be run from a machine that may not be from the same domain or from a domain\-joined computer. After you run the cmdlet locally, it will create a DCCloneConfig.xml file. You may delete the DCCloneConfig.xml that is created locally if you plan to use the offline mode subsequently.  
   
@@ -499,6 +499,6 @@ Correct the cause for cloning failure and verify that the dcpromo.log does not i
   
 3.  Click **OK** and restart when prompted.  
   
-For more troubleshooting information about virtualized domain controllers, see [Virtualized Domain Controller Troubleshooting](Virtualized-Domain-Controller-Troubleshooting.md).  
+For more troubleshooting information about virtualized domain controllers, see [Virtualized Domain Controller Troubleshooting]().  
   
 

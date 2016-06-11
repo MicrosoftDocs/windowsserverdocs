@@ -98,6 +98,6 @@ fsutil file setzerodata offset=100 length=150 c:\temp\sample.txt
 #### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil](Fsutil.md)
+[Fsutil]()
 
 

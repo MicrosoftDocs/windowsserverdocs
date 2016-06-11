@@ -147,10 +147,10 @@ KMS can be used to activate computers running any version of Windows that can be
   
 |Resource|Windows Server 2008 R2 and Windows 7| Windows Server 2012 ,  Windows Server 2012 R2 , Windows 8, and Windows 8.1|  
 |------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|Product evaluation||[Test Lab Guide: Demonstrate Volume Activation Services](Test-Lab-Guide--Demonstrate-Volume-Activation-Services.md)|  
+|Product evaluation||[Test Lab Guide: Demonstrate Volume Activation Services]()|  
 |Procedures|[Volume Activation Operations Guide](http://go.microsoft.com/fwlink/?LinkId=150084)||  
 |Technical content|[Volume Activation Technical Reference Guide](http://go.microsoft.com/fwlink/?LinkId=152550)||  
-|Design, planning and deployment|[Volume Activation Planning Guide](http://go.microsoft.com/fwlink/?LinkId=155926)<br /><br />[Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?LinkId=150083)|[Plan for Volume Activation](Plan-for-Volume-Activation.md)|  
+|Design, planning and deployment|[Volume Activation Planning Guide](http://go.microsoft.com/fwlink/?LinkId=155926)<br /><br />[Volume Activation Deployment Guide](http://go.microsoft.com/fwlink/?LinkId=150083)|[Plan for Volume Activation]()|  
 |Troubleshooting|[Solutions to Common Volume Activation Errors](http://go.microsoft.com/fwlink/?LinkId=242312)||  
 |General information and additional resources|[Volume Activation Management Tool \(VAMT\) Overview](http://go.microsoft.com/fwlink/?LinkId=214550)|[Plan volume activation of Office 2013 Preview](http://technet.microsoft.com/library/ee624358(v=office.15))<br /><br />[Volume activation methods in Office 2013 Preview](http://technet.microsoft.com/library/jj219430(v=office.15))|  
   

@@ -38,7 +38,7 @@ The following table includes the sample data that was collected when you determi
 ||||Windows files|C:\\Windows|Use a default rule for the Windows path|Allow||
 
 > [!NOTE]
-> Excluding  Windows Server 2008 R2  and  Windows 7 , AppLocker can manage Windows Store apps. For information about how to add rules for these apps to your existing GPO, see [Add Rules for Packaged Apps to Existing AppLocker Rule-set](Add-Rules-for-Packaged-Apps-to-Existing-AppLocker-Rule-set.md).
+> Excluding  Windows Server 2008 R2  and  Windows 7 , AppLocker can manage Windows Store apps. For information about how to add rules for these apps to your existing GPO, see [Add Rules for Packaged Apps to Existing AppLocker Rule-set]().
 
 ## Next steps
 After you have determined the Group Policy structure and rule enforcement strategy for each business group's applications, the following tasks remain:

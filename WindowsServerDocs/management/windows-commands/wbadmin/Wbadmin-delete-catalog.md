@@ -33,7 +33,7 @@ If you delete the backup catalog for a computer, you will not be able to access 
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 -   [Remove\-WBCatalog](http://technet.microsoft.com/library/jj902445.aspx)
 

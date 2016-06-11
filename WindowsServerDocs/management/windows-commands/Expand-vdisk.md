@@ -49,7 +49,7 @@ expand vdisk maximum=20000
 
 -   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
 
--   [Detach vdisk](Detach-vdisk.md)
+-   [Detach vdisk]()
 
 -   [Detail vdisk](delete/detail/Detail-vdisk.md)
 
@@ -57,6 +57,6 @@ expand vdisk maximum=20000
 
 -   [Select vdisk](select/Select-vdisk.md)
 
--   [List_1](List_1.md)
+-   [List_1]()
 
 

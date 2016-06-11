@@ -22,14 +22,14 @@ The following diagram shows the main points in the design, planning, and deploym
 ## Resources to support the deployment process
 The following documentation contains information about designing, planning, deploying, and maintaining AppLocker policies:
 
--   For information about the AppLocker policy design and planning requirements and process, see [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md).
+-   For information about the AppLocker policy design and planning requirements and process, see [AppLocker Policies Design Guide]().
 
--   For information about the AppLocker policy deployment requirements and process, see [AppLocker Policies Deployment Guide](AppLocker-Policies-Deployment-Guide.md).
+-   For information about the AppLocker policy deployment requirements and process, see [AppLocker Policies Deployment Guide]().
 
 -   For information about AppLocker policy maintenance and monitoring for Windows Server 2008 R2 and Windows 7, see [AppLocker Operations Guide](http://go.microsoft.com/fwlink/?LinkId=160259).
 
-    For information about AppLocker policy maintenance and monitoring in versions of Windows later than Windows Server 2008 R2 and Windows 7, see [Administer AppLocker](Administer-AppLocker.md).
+    For information about AppLocker policy maintenance and monitoring in versions of Windows later than Windows Server 2008 R2 and Windows 7, see [Administer AppLocker]().
 
--   For information about AppLocker policy architecture, components, and processing, see [AppLocker Technical Reference](AppLocker-Technical-Reference.md).
+-   For information about AppLocker policy architecture, components, and processing, see [AppLocker Technical Reference]().
 
 

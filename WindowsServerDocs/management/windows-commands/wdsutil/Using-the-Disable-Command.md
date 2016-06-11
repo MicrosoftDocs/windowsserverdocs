@@ -15,7 +15,7 @@ Disables all services for Windows Deployment Services.
 
 |Subcommand|Description|
 |--------------|---------------|
-|[Using the disable-Server Command](Using-the-disable-Server-Command.md)|Disables all Windows Deployment Services services on a specified server \(Deployment Server\).|
+|[Using the disable-Server Command]()|Disables all Windows Deployment Services services on a specified server \(Deployment Server\).|
 |[Using the disable-TransportServer Command](using-the-disable-command/Using-the-disable-TransportServer-Command.md)|Disables all Windows Deployment Services services on a specified Transport Server.|
 
 

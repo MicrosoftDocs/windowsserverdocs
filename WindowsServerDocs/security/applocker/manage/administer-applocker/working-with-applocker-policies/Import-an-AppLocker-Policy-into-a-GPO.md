@@ -16,7 +16,7 @@ This topic describes the steps to import an AppLocker policy into a Group Policy
 AppLocker policies can be created as local security policies and modified like any other local security policy, or they can be created as part of a GPO and managed by using Group Policy. You can create AppLocker policies on any supported computer. For information about which Windows editions are supported, see [Requirements to Use AppLocker](http://technet.microsoft.com/library/ee424382(WS.10).aspx).
 
 > [!IMPORTANT]
-> Follow your organization's standard procedures for updating GPOs. For information about specific steps to follow for AppLocker policies, see [Maintain AppLocker Policies](Maintain-AppLocker-Policies.md).
+> Follow your organization's standard procedures for updating GPOs. For information about specific steps to follow for AppLocker policies, see [Maintain AppLocker Policies]().
 
 To complete this procedure, you must have Edit Setting permission to edit a GPO. By default, members of the **Domain Admins** group, the **Enterprise Admins** group, and the **Group Policy Creator Owners** group have this permission.
 

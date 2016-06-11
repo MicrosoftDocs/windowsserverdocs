@@ -50,6 +50,6 @@ manage-bde –tpm –takeownership 0wnerP@ss
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Manage-bde](Manage-bde.md)
+-   [Manage-bde]()
 
 

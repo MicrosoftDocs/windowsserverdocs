@@ -31,7 +31,7 @@ Runs when the computer is started and prior to  Windows Server® 2008 R2  starti
 ## Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
-[Chkdsk](Chkdsk.md)
+[Chkdsk]()
 
 [Chkntfs](Chkntfs.md)
 

@@ -157,7 +157,7 @@ Get-ADComputer –filter * -Searchbase "ou=Accounting, dc=Contoso,dc=com" | fore
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Group Policy Overview](Group-Policy-Overview.md)
+-   [Group Policy Overview]()
 
 -   [Group Policy Analysis and Troubleshooting Overview](Group-Policy-Analysis-and-Troubleshooting-Overview.md)
 

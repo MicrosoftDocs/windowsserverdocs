@@ -19,40 +19,40 @@ An AppLocker reference computer is a baseline computer you can use to configure 
 An AppLocker reference computer that is used to create and maintain AppLocker policies should contain the corresponding applications for each organizational unit \(OU\) to mimic your production environment.
 
 > [!IMPORTANT]
-> The reference computer must be running one of the supported editions of Windows. For information about operating system requirements for AppLocker, see [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md).
+> The reference computer must be running one of the supported editions of Windows. For information about operating system requirements for AppLocker, see [Requirements to Use AppLocker]().
 
 You can perform AppLocker policy testing on the reference computer by using the **Audit only** enforcement setting or Windows PowerShell cmdlets. You can also use the reference computer as part of a testing configuration that includes policies that are created by using Software Restriction Policies.
 
 ## Step 1: Automatically generate rules on the reference computer
-With AppLocker, you can automatically generate rules for all files within a folder. AppLocker scans the specified folder and creates the condition types that you choose for each file in that folder. For the procedure to do this, see [Run the Automatically Generate Rules Wizard](Run-the-Automatically-Generate-Rules-Wizard.md).
+With AppLocker, you can automatically generate rules for all files within a folder. AppLocker scans the specified folder and creates the condition types that you choose for each file in that folder. For the procedure to do this, see [Run the Automatically Generate Rules Wizard]().
 
 > [!NOTE]
 > If you run this wizard to create your first rules for a Group Policy Object \(GPO\), after you complete the wizard, you will be prompted to create the default rules, which allow critical system files to run. You can edit the default rules at any time. If your organization has decided to edit the default rules or create custom rules to allow the Windows system files to run, ensure that you delete the default rules after you replace them with your custom rules.
 
 ## Step 2: Create the default rules on the reference computer
-AppLocker includes default rules for each rule collection. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an AppLocker rule collection. You must run the default rules for each rule collection. For information about default rules and considerations for using them, see [Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md). For the procedure to create default rules, see [Create AppLocker Default Rules](Create-AppLocker-Default-Rules.md).
+AppLocker includes default rules for each rule collection. These rules are intended to help ensure that the files that are required for Windows to operate properly are allowed in an AppLocker rule collection. You must run the default rules for each rule collection. For information about default rules and considerations for using them, see [Understanding AppLocker Default Rules](). For the procedure to create default rules, see [Create AppLocker Default Rules]().
 
 > [!IMPORTANT]
 > You can use the default rules as a template when you create your own rules. This allows files within the Windows directory to run. However, these rules are only meant to function as a starter policy when you are first testing AppLocker rules.
 
 ## Step 3: Modify rules and the rule collection on the reference computer
-If AppLocker policies are currently running in your production environment, export the policies from the corresponding GPOs and save them to the reference computer. For the procedure to do this, see [Export an AppLocker Policy from a GPO](Export-an-AppLocker-Policy-from-a-GPO.md). If no AppLocker policies have been deployed, create the rules and develop the policies by using the following procedures:
+If AppLocker policies are currently running in your production environment, export the policies from the corresponding GPOs and save them to the reference computer. For the procedure to do this, see [Export an AppLocker Policy from a GPO](). If no AppLocker policies have been deployed, create the rules and develop the policies by using the following procedures:
 
--   [Create a Rule That Uses a Publisher Condition](Create-a-Rule-That-Uses-a-Publisher-Condition.md)
+-   [Create a Rule That Uses a Publisher Condition]()
 
--   [Create a Rule That Uses a File Hash Condition](Create-a-Rule-That-Uses-a-File-Hash-Condition.md)
+-   [Create a Rule That Uses a File Hash Condition]()
 
--   [Create a Rule That Uses a Path Condition](Create-a-Rule-That-Uses-a-Path-Condition.md)
+-   [Create a Rule That Uses a Path Condition]()
 
--   [Edit AppLocker Rules](Edit-AppLocker-Rules.md)
+-   [Edit AppLocker Rules]()
 
--   [Configure Exceptions for an AppLocker Rule](Configure-Exceptions-for-an-AppLocker-Rule.md)
+-   [Configure Exceptions for an AppLocker Rule]()
 
--   [Delete an AppLocker Rule](Delete-an-AppLocker-Rule.md)
+-   [Delete an AppLocker Rule]()
 
--   [Enable the DLL Rule Collection](Enable-the-DLL-Rule-Collection.md)
+-   [Enable the DLL Rule Collection]()
 
--   [Enforce AppLocker Rules](Enforce-AppLocker-Rules.md)
+-   [Enforce AppLocker Rules]()
 
 ## Step 4: Test and update AppLocker policy on the reference computer
 You should test each set of rules to ensure that they perform as intended. The **Test\-AppLockerPolicy** Windows PowerShell cmdlet can be used to determine whether any of the rules in your rule collection will be blocked on your reference computer. Perform the steps on each reference computer that you used to define the AppLocker policy. Ensure that the reference computer is joined to the domain and that it is receiving the AppLocker policy from the appropriate GPO. Because AppLocker rules are inherited from linked GPOs, you should deploy all of the rules to simultaneously test all of your test GPOs. Use the following procedures to complete this step:
@@ -67,24 +67,24 @@ You should test each set of rules to ensure that they perform as intended. The *
 ## Step 5: Export and import the policy into production
 When the AppLocker policy has been tested successfully, it can be imported into the GPO \(or imported into individual computers that are not managed by Group Policy\) and checked for its intended effectiveness. To do this, perform the following procedures:
 
--   [Export an AppLocker Policy to an XML File](Export-an-AppLocker-Policy-to-an-XML-File.md)
+-   [Export an AppLocker Policy to an XML File]()
 
--   [Import an AppLocker Policy into a GPO](Import-an-AppLocker-Policy-into-a-GPO.md) or
+-   [Import an AppLocker Policy into a GPO]() or
 
 -   [Discover the Effect of an AppLocker Policy](http://technet.microsoft.com/library/ee791823(WS.10).aspx)
 
-If the AppLocker policy enforcement setting is **Audit only** and you are satisfied that the policy is fulfilling your intent, you can change it to **Enforce rules**. For information about how to change the enforcement setting, see [Configure an AppLocker Policy for Enforce Rules](Configure-an-AppLocker-Policy-for-Enforce-Rules.md).
+If the AppLocker policy enforcement setting is **Audit only** and you are satisfied that the policy is fulfilling your intent, you can change it to **Enforce rules**. For information about how to change the enforcement setting, see [Configure an AppLocker Policy for Enforce Rules]().
 
 ## Step 6: Monitor the effect of the policy in production
 If additional refinements or updates are necessary after a policy is deployed, use the appropriate following procedures to monitor and update the policy:
 
--   [Monitor Application Usage with AppLocker](Monitor-Application-Usage-with-AppLocker.md)
+-   [Monitor Application Usage with AppLocker]()
 
--   [Edit an AppLocker Policy](Edit-an-AppLocker-Policy.md)
+-   [Edit an AppLocker Policy]()
 
--   [Refresh an AppLocker Policy](Refresh-an-AppLocker-Policy.md)
+-   [Refresh an AppLocker Policy]()
 
 ## See also
-[Deploy the AppLocker Policy into Production](Deploy-the-AppLocker-Policy-into-Production.md)
+[Deploy the AppLocker Policy into Production]()
 
 

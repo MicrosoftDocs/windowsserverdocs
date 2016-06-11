@@ -22,7 +22,7 @@ Use this topic to find the documentation resources and other technical informati
   
 -   [Refresh Group Policy settings with GPUpdate.exe](http://technet.microsoft.com/library/cc739112.aspx)  
   
--   [Security Policy Settings Overview](Security-Policy-Settings-Overview.md)  
+-   [Security Policy Settings Overview]()  
   
 -   [Remote Server Administration Tools for Windows Server 2012](Remote-Server-Administration-Tools-for-Windows-Server-2012.md)  
   
@@ -46,12 +46,12 @@ Here are some  Windows Server 2012  scenarios that use Group Policy to implement
   
 -   [Managing the Wireless Network &#40;IEEE 802.11&#41; Policies](Managing-the-Wireless-Network--IEEE-802.11--Policies.md)  
   
--   [Securing End-to-End IPsec Connections by Using IKEv2 in Windows Server 2012](Securing-End-to-End-IPsec-Connections-by-Using-IKEv2-in-Windows-Server-2012.md)  
+-   [Securing End-to-End IPsec Connections by Using IKEv2 in Windows Server 2012]()  
   
 ## <a name="BKMK_NEW"></a>New and changed functionality  
 Group Policy designs can become very complex. Various factors, such as the large number of policy settings and preference items available, the interaction between multiple policies, and inheritance options, can make it difficult to determine if Group Policy is functioning correctly on each computer.  
   
-In  Windows Server 2012 , Group Policy focused on improving the Group Policy troubleshooting experience.  Windows Server 2012 R2  expands the support for IPv6 networking, adds policy caching to reduce sign\-in times in synchronous mode, and provides more detailed event logging. For more details about these changes and more information about the additional changes in functionality that are not listed here, see [What's New in Group Policy in Windows Server 2012 \[redirected\]](assetId:///2e7bfa32-9fa9-4031-8160-d3a8c526df8d) and [What's New in Group Policy in Windows Server](What-s-New-in-Group-Policy-in-Windows-Server.md).  
+In  Windows Server 2012 , Group Policy focused on improving the Group Policy troubleshooting experience.  Windows Server 2012 R2  expands the support for IPv6 networking, adds policy caching to reduce sign\-in times in synchronous mode, and provides more detailed event logging. For more details about these changes and more information about the additional changes in functionality that are not listed here, see [What's New in Group Policy in Windows Server 2012 \[redirected\]](assetId:///2e7bfa32-9fa9-4031-8160-d3a8c526df8d) and [What's New in Group Policy in Windows Server]().  
   
 ## <a name="BKMK_LINKS"></a>See also  
   

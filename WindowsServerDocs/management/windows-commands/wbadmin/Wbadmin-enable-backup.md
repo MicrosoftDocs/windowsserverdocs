@@ -135,6 +135,6 @@ wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\d
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 

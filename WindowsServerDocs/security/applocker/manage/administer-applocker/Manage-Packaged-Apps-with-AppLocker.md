@@ -34,7 +34,7 @@ AppLocker policies for Packaged apps can only be applied to applications install
 
 AppLocker uses different rule collections to control Packaged apps and classic apps. You have the choice to control one type, the other type, or both.
 
-For information about controlling classic apps, see [Administer AppLocker](Administer-AppLocker.md).
+For information about controlling classic apps, see [Administer AppLocker]().
 
 For more information about Packaged apps, see [Packaged Apps and Packaged App Installer Rules in AppLocker](Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md).
 
@@ -46,7 +46,7 @@ You can use two methods to create an inventory of Packaged apps on a computer: t
 
 For information about how to use the **Get\-AppxPackage** Windows PowerShell cmdlet, see the [AppLocker PowerShell Command Reference](http://technet.microsoft.com/library/ee424349(WS.10).aspx).
 
-For information about creating rules for Packaged apps, see [Create a Rule for Packaged Apps](Create-a-Rule-for-Packaged-Apps.md).
+For information about creating rules for Packaged apps, see [Create a Rule for Packaged Apps]().
 
 Consider the following information when you are designing and deploying apps:
 
@@ -63,13 +63,13 @@ Just as there are differences in managing each rule collection, you need to mana
 
 1.  Gather information about which Packaged apps are running in your environment. For information about how to do this, see [Creating the List of Applications Deployed to Each Business Group](http://technet.microsoft.com/library/ee449494(WS.10).aspx).
 
-2.  Create AppLocker rules for specific Packaged apps based on your policy strategies. For more information, see [Create a Rule for Packaged Apps](Create-a-Rule-for-Packaged-Apps.md) and [Packaged Apps Default Rules in AppLocker](http://technet.microsoft.com/library/ee460941(WS.10).aspx).
+2.  Create AppLocker rules for specific Packaged apps based on your policy strategies. For more information, see [Create a Rule for Packaged Apps]() and [Packaged Apps Default Rules in AppLocker](http://technet.microsoft.com/library/ee460941(WS.10).aspx).
 
-3.  Continue to update the AppLocker policies as new Package apps are introduced into your environment. To do this, see [Add Rules for Packaged Apps to Existing AppLocker Rule-set](Add-Rules-for-Packaged-Apps-to-Existing-AppLocker-Rule-set.md).
+3.  Continue to update the AppLocker policies as new Package apps are introduced into your environment. To do this, see [Add Rules for Packaged Apps to Existing AppLocker Rule-set]().
 
 4.  Continue to monitor your environment to verify the effectiveness of the rules that are deployed in AppLocker policies. To do this, see [Monitor Application Usage with AppLocker](Monitor-Application-Usage-with-AppLocker.md).
 
 ## See Also
-[Administer AppLocker](Administer-AppLocker.md)
+[Administer AppLocker]()
 
 

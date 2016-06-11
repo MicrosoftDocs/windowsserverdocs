@@ -169,9 +169,9 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Chgport](Chgport.md)
 
--   [Chgusr](Chgusr.md)
+-   [Chgusr]()
 
--   [Chkdsk](Chkdsk.md)
+-   [Chkdsk]()
 
 -   [Chkntfs](Chkntfs.md)
 
@@ -247,7 +247,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [DiskRAID](DiskRAID.md)
 
--   [Diskshadow](Diskshadow.md)
+-   [Diskshadow]()
 
 -   [Dispdiag](Dispdiag.md)
 
@@ -331,7 +331,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Freedisk](Freedisk.md)
 
--   [Fsutil](Fsutil.md)
+-   [Fsutil]()
 
 -   [Ftp](Ftp.md)
 
@@ -353,7 +353,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Gpresult](Gpresult.md)
 
--   [Gpupdate](Gpupdate.md)
+-   [Gpupdate]()
 
 -   [Graftabl](Graftabl.md)
 
@@ -383,7 +383,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Ipxroute](Ipxroute.md)
 
--   [Irftp](Irftp.md)
+-   [Irftp]()
 
 -   [Ismserv](assetId:///cb8357b0-9eee-454b-ab62-d2c738bca16c)
 
@@ -397,7 +397,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 ### <a name="BKMK_k"></a>K
 
--   [Klist](Klist.md)
+-   [Klist]()
 
 -   [Ksetup](Ksetup.md)
 
@@ -423,7 +423,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Lpq](Lpq.md)
 
--   [Lpr](Lpr.md)
+-   [Lpr]()
 
 [Command-line reference A-Z](#BKMK_CmdRef)
 
@@ -433,7 +433,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Makecab](Makecab.md)
 
--   [Manage-bde](Manage-bde.md)
+-   [Manage-bde]()
 
 -   [mapadmin](mapadmin.md)
 
@@ -477,7 +477,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Nbtstat](Nbtstat.md)
 
--   [Netcfg](Netcfg.md)
+-   [Netcfg]()
 
 -   [Netdiag](assetId:///9fe8f3da-70dd-46ae-93ca-34d73d122db3)
 
@@ -505,7 +505,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Net view](assetId:///7140de2e-1d67-4ce7-9688-dbfae46e3fca)
 
--   [Nfsadmin](Nfsadmin.md)
+-   [Nfsadmin]()
 
 -   [Nfsshare](Nfsshare.md)
 
@@ -517,7 +517,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Nltest](assetId:///aff1e7ff-5d77-4891-94a2-92cb0e5aee53)
 
--   [Nslookup](Nslookup.md)
+-   [Nslookup]()
 
 -   [Ntbackup](Ntbackup.md)
 
@@ -525,7 +525,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Ntdsutil](assetId:///199cebb9-967c-4307-a9d7-1c0bb50dc75b)
 
--   [Ntfrsutl](Ntfrsutl.md)
+-   [Ntfrsutl]()
 
 [Command-line reference A-Z](#BKMK_CmdRef)
 
@@ -577,7 +577,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Prnport.vbs](Prnport.vbs.md)
 
--   [Prnqctl.vbs](Prnqctl.vbs.md)
+-   [Prnqctl.vbs]()
 
 -   [Prompt](Prompt.md)
 
@@ -597,7 +597,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Query](Query.md)
 
--   [Quser](Quser.md)
+-   [Quser]()
 
 -   [Qwinsta](Qwinsta.md)
 
@@ -607,7 +607,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Rasdial](assetId:///ed300a38-97e7-4373-a2cc-fa7079cd259e)
 
--   [Rcp](Rcp.md)
+-   [Rcp]()
 
 -   [Rd](Rd.md)
 
@@ -643,7 +643,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Replace](Replace.md)
 
--   [Reset session](Reset-session.md)
+-   [Reset session]()
 
 -   [Rexec](Rexec.md)
 
@@ -659,7 +659,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Rpcping](Rpcping.md)
 
--   [Rsh](Rsh.md)
+-   [Rsh]()
 
 -   [Rsm](assetId:///96874886-d9a9-4702-a3cc-457e6a5d2c32)
 
@@ -703,7 +703,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Shift](Shift.md)
 
--   [Showmount](Showmount.md)
+-   [Showmount]()
 
 -   [Shutdown](Shutdown.md)
 
@@ -737,7 +737,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Telnet](Telnet.md)
 
--   [Tftp](Tftp.md)
+-   [Tftp]()
 
 -   [Time](Time.md)
 
@@ -745,7 +745,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Title_1](Title_1.md)
 
--   [Tlntadmn](Tlntadmn.md)
+-   [Tlntadmn]()
 
 -   [Tpmvscmgr](Tpmvscmgr.md)
 
@@ -755,7 +755,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Tree](Tree.md)
 
--   [Tscon](Tscon.md)
+-   [Tscon]()
 
 -   [Tsdiscon](Tsdiscon.md)
 

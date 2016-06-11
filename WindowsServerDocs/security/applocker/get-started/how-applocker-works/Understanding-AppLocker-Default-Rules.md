@@ -30,17 +30,17 @@ These permissions settings are applied to this folder for application compatibil
 
 For information about each default rule in AppLocker, see:
 
--   [Executable Rules in AppLocker](Executable-Rules-in-AppLocker.md)
+-   [Executable Rules in AppLocker]()
 
--   [Windows Installer Rules in AppLocker](Windows-Installer-Rules-in-AppLocker.md)
+-   [Windows Installer Rules in AppLocker]()
 
--   [Script Rules in AppLocker](Script-Rules-in-AppLocker.md)
+-   [Script Rules in AppLocker]()
 
--   [DLL Rules in AppLocker](DLL-Rules-in-AppLocker.md)
+-   [DLL Rules in AppLocker]()
 
 -   [Packaged Apps and Packaged App Installer Rules in AppLocker](Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md)
 
 ## See Also
-[How AppLocker Works](How-AppLocker-Works.md)
+[How AppLocker Works]()
 
 

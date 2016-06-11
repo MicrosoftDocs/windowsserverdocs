@@ -26,7 +26,7 @@ This subcommand has no parameters.
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 -   [Get\-WBDisk](http://technet.microsoft.com/library/jj902446.aspx) cmdlet
 

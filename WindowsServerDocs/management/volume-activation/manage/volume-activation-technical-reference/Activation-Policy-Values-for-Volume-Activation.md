@@ -28,6 +28,6 @@ Table 8 lists policy values for Windows 8.1 and  Windows Server 2012 R2 .
 
 -   [Volume Activation Technical Reference](../Volume-Activation-Technical-Reference.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 

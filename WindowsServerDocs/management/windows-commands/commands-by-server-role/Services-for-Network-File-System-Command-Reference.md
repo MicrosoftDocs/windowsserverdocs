@@ -17,11 +17,11 @@ The following is a list of NFS command\-line tools.
 |-----------|---------------|
 |[mapadmin](../mapadmin.md)|Manage User Name Mapping for Microsoft Services for Network File System.|
 |[Mount](../Mount.md)|Mount Network File System \(NFS\) network shares.|
-|[Nfsadmin](Nfsadmin.md)|Manage Server for NFS and Client for NFS.|
+|[Nfsadmin]()|Manage Server for NFS and Client for NFS.|
 |[Nfsshare](../Nfsshare.md)|Control Network File System \(NFS\) shares.|
 |[Nfsstat](../Nfsstat.md)|Display or reset counts of calls made to Server for NFS.|
 |[Rpcinfo](../Rpcinfo.md)|List programs on remote computers.|
-|[Showmount](Showmount.md)|Display mounted directories.|
+|[Showmount]()|Display mounted directories.|
 |[umount](assetId:///0726324c-c45a-444d-a753-99daf5e1c83a)|Remove Network File System \(NFS\)–mounted drives.|
 
 

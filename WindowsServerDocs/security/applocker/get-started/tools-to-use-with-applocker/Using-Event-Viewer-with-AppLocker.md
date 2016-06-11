@@ -59,6 +59,6 @@ The following table contains information about the events that you can use to de
 |8027|Warning|No Packaged app rule configured.|Added in  Windows Server 2012  and Windows 8.|
 
 ## See Also
-[Tools to Use with AppLocker](Tools-to-Use-with-AppLocker.md)
+[Tools to Use with AppLocker]()
 
 

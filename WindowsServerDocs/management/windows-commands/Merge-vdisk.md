@@ -53,12 +53,12 @@ merge vdisk depth=1
 
 -   [Detail vdisk](delete/detail/Detail-vdisk.md)
 
--   [Detach vdisk](Detach-vdisk.md)
+-   [Detach vdisk]()
 
 -   [Expand vdisk](Expand-vdisk.md)
 
 -   [Select vdisk](select/Select-vdisk.md)
 
--   [List_1](List_1.md)
+-   [List_1]()
 
 

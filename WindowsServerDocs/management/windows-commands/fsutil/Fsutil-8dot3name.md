@@ -69,7 +69,7 @@ fsutil 8dot3name scan /l mylogfile.log /s d:\MyData
 ### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil](Fsutil.md)
+[Fsutil]()
 
 [Fsutil 8dot3name](Fsutil-8dot3name.md)
 

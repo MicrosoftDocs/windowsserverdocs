@@ -163,7 +163,7 @@ You can verify KMS volume activation from the KMS host server, APP1 and from the
 2.  On either CLIENT2 or APP1, open an elevated Command Prompt window, type **Slmgr \/dlv**, and then press ENTER. The response should return an error that states the KMS activation count is too low. This confirms that KMS is functioning correctly, even though the client has not been activated.
 
 ## Additional information
-For more information about Volume Activation Services, see the [Volume Activation Overview](Volume-Activation-Overview.md).
+For more information about Volume Activation Services, see the [Volume Activation Overview]().
 
 For more information that can help you prepare to deploy Volume Activation Services in your organization, see [Plan for Volume Activation](../Plan-for-Volume-Activation.md).
 

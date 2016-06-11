@@ -16,7 +16,7 @@ This topic for the IT professional introduces the concepts and describes the ste
 ## Purpose of this guide
 This guide provides steps based on your design and planning investigation for deploying application control policies by using AppLocker. It is intended for security architects, security administrators, and system administrators. Through a sequential and iterative deployment process, you can create application control policies, test and adjust the policies, and implement a method for maintaining those policies as the needs in your organization change.
 
-This guide covers the use of Software Restriction Policies \(SRP\) in conjunction with AppLocker policies to control application usage. For a comparison of SRP and AppLocker, see [Using Software Restriction Policies and AppLocker Policies](Using-Software-Restriction-Policies-and-AppLocker-Policies.md) in this guide. To understand if AppLocker is the correct application control solution for you, see [Understand AppLocker Policy Design Decisions](Understand-AppLocker-Policy-Design-Decisions.md).
+This guide covers the use of Software Restriction Policies \(SRP\) in conjunction with AppLocker policies to control application usage. For a comparison of SRP and AppLocker, see [Using Software Restriction Policies and AppLocker Policies]() in this guide. To understand if AppLocker is the correct application control solution for you, see [Understand AppLocker Policy Design Decisions]().
 
 > [!TIP]
 > To digitally save or print pages from this library, click **Export** \(in the upper\-right corner of the page\), and then follow the instructions.
@@ -32,36 +32,36 @@ The following are prerequisites or recommendations to deploying policies:
 
 -   Document your application control policy deployment plan by addressing these tasks:
 
-    -   [Understand the AppLocker Policy Deployment Process](Understand-the-AppLocker-Policy-Deployment-Process.md)
+    -   [Understand the AppLocker Policy Deployment Process]()
 
-    -   [Understand AppLocker Policy Design Decisions](Understand-AppLocker-Policy-Design-Decisions.md)
+    -   [Understand AppLocker Policy Design Decisions]()
 
-    -   [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+    -   [Determine Your Application Control Objectives]()
 
-    -   [Create List of Applications Deployed to Each Business Group](Create-List-of-Applications-Deployed-to-Each-Business-Group.md)
+    -   [Create List of Applications Deployed to Each Business Group]()
 
-    -   [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+    -   [Select Types of Rules to Create]()
 
-    -   [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+    -   [Determine Group Policy Structure and Rule Enforcement]()
 
-    -   [Plan for AppLocker Policy Management](Plan-for-AppLocker-Policy-Management.md)
+    -   [Plan for AppLocker Policy Management]()
 
-    -   [Create Your AppLocker Planning Document](Create-Your-AppLocker-Planning-Document.md)
+    -   [Create Your AppLocker Planning Document]()
 
 ## Contents of this guide
-This guide provides steps based on your design and planning investigation for deploying application control policies created and maintained by AppLocker for computers running any of the supported versions of Windows listed in [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md). It contains the following topics:
+This guide provides steps based on your design and planning investigation for deploying application control policies created and maintained by AppLocker for computers running any of the supported versions of Windows listed in [Requirements to Use AppLocker](). It contains the following topics:
 
--   [Understand the AppLocker Policy Deployment Process](Understand-the-AppLocker-Policy-Deployment-Process.md)
+-   [Understand the AppLocker Policy Deployment Process]()
 
--   [Requirements for Deploying AppLocker Policies](Requirements-for-Deploying-AppLocker-Policies.md)
+-   [Requirements for Deploying AppLocker Policies]()
 
--   [Using Software Restriction Policies and AppLocker Policies](Using-Software-Restriction-Policies-and-AppLocker-Policies.md)
+-   [Using Software Restriction Policies and AppLocker Policies]()
 
--   [Create Your AppLocker Policies](Create-Your-AppLocker-Policies.md)
+-   [Create Your AppLocker Policies]()
 
--   [Deploy the AppLocker Policy into Production](Deploy-the-AppLocker-Policy-into-Production.md)
+-   [Deploy the AppLocker Policy into Production]()
 
--   [Maintain AppLocker Policies](Maintain-AppLocker-Policies.md)
+-   [Maintain AppLocker Policies]()
 
 ## Additional resources
 

@@ -89,7 +89,7 @@ The following table provides links to additional resources that are related to s
 
 |Content type|References|
 |----------------|--------------|
-|**Product evaluation**|[What's New for Managed Service Accounts](What-s-New-for-Managed-Service-Accounts.md)<br /><br />[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<br /><br />[Service Accounts Step\-by\-Step Guide](http://technet.microsoft.com/library/dd548356(v=ws.10).aspx)<br /><br />[Getting Started with Group Managed Service Accounts](Getting-Started-with-Group-Managed-Service-Accounts.md)|
+|**Product evaluation**|[What's New for Managed Service Accounts]()<br /><br />[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<br /><br />[Service Accounts Step\-by\-Step Guide](http://technet.microsoft.com/library/dd548356(v=ws.10).aspx)<br /><br />[Getting Started with Group Managed Service Accounts]()|
 |**Deployment**|[Windows Server 2012: Group Managed Service Accounts \- Ask Premier Field Engineering \(PFE\) Platforms \- Site Home \- TechNet Blogs](http://blogs.technet.com/b/askpfeplat/archive/2012/12/17/windows-server-2012-group-managed-service-accounts.aspx)|
 |**Operations**|[Managed Service Accounts in Active Directory](http://technet.microsoft.com/library/dd378925(v=ws.10).aspx)|
 |**Tools and settings**|[Managed Service Accounts in Active Directory Domain Services](http://technet.microsoft.com/library/dd378925(v=WS.10).aspx)|

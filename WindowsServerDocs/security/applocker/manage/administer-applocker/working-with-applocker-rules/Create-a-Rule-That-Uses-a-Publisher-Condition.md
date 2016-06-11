@@ -17,9 +17,9 @@ You can use publisher conditions only for files that are digitally signed; the p
 
 Packaged app rules are by definition rules that use publisher conditions. For information about creating a packaged app rule, see [Create a Rule for Packaged Apps](Create-a-Rule-for-Packaged-Apps.md).
 
-For information about the publisher condition, see [Understanding the Publisher Rule Condition in AppLocker](Understanding-the-Publisher-Rule-Condition-in-AppLocker.md).
+For information about the publisher condition, see [Understanding the Publisher Rule Condition in AppLocker]().
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](#BKMK_Using_Snapins).
 
 ### <a name="BKMK_CreatePubRuleGPO"></a>To create a new rule with a publisher condition
 

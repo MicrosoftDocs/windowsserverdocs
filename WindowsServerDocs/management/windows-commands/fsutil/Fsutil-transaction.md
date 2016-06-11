@@ -52,7 +52,7 @@ fsutil transaction fileinfo c:\test.txt
 ### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil](Fsutil.md)
+[Fsutil]()
 
 [Transactional NTFS](http://go.microsoft.com/fwlink/?LinkID=165402)
 

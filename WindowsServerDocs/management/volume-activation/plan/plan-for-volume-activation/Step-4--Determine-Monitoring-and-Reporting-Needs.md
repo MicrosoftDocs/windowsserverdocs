@@ -70,7 +70,7 @@ Each MAK key has a predetermined number of allowed activations, based on an orga
 
 -   [Plan for Volume Activation](../Plan-for-Volume-Activation.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 -   [Volume Activation Management Tool \(VAMT\) Overview](http://go.microsoft.com/fwlink/?LinkId=214550)
 

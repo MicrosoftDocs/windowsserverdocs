@@ -15,7 +15,7 @@ This topic provides high\-level information about security settings in, and link
 
 **Did you mean…**
 
--   Group Policy \(see [Group Policy Overview](Group-Policy-Overview.md)\)
+-   Group Policy \(see [Group Policy Overview]()\)
 
 -   Threats and Countermeasures Guide \(see the resources on [Windows Server Security](http://technet.microsoft.com/windowsserver/ff843381)\)
 
@@ -64,6 +64,6 @@ The following table provides links to additional resources that can help you und
 |**Security**|[Windows Security Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/windows-security-survival-guide.aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 R2 and Windows 7](http://technet.microsoft.com/library/hh125921(WS.10).aspx)<br /><br />For  Windows Server 2012  and Windows 8, see [Microsoft Security Compliance Manager \(SCM\)](http://social.technet.microsoft.com/wiki/contents/articles/774.microsoft-security-compliance-manager-scm.aspx) in the TechNet Wiki.|
 |**Tools and settings**|[Security Policy Settings Technical Overview](Security-Policy-Settings-Technical-Overview.md)<br /><br />[Security Policy Settings Reference](Security-Policy-Settings-Reference.md)<br /><br />For Windows Server 2003, see [Security Settings Extension Technical Reference](http://technet.microsoft.com/library/cc775940(v=ws.10).aspx)<br /><br />[Download: Group Policy Settings Reference for Windows and Windows Server](http://www.microsoft.com/download/details.aspx?id=25250)|
 |**Community resources**|[Windows Security Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/windows-security-survival-guide.aspx)|
-|**Related technologies**|[Group Policy Overview](Group-Policy-Overview.md)|
+|**Related technologies**|[Group Policy Overview]()|
 
 

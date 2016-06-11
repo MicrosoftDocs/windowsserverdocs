@@ -43,6 +43,6 @@ Table 10 provides troubleshooting help for problems that occur when activating 
 
 -   [Volume Activation Technical Reference](../Volume-Activation-Technical-Reference.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 

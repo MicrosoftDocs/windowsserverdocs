@@ -144,6 +144,6 @@ Table 12 lists WMI properties and methods for the Software Protection Platform.
 
 -   [Volume Activation Technical Reference](../Volume-Activation-Technical-Reference.md)
 
--   [Volume Activation Overview](Volume-Activation-Overview.md)
+-   [Volume Activation Overview]()
 
 

@@ -21,7 +21,7 @@ Use the following table to develop your own objectives and determine which appli
 
 |Application control function|SRP|AppLocker|
 |--------------------------------|-------|-------------|
-|Scope|SRP policies can be applied to all Windows operating systems beginning with Windows XP and Windows Server 2003.|AppLocker policies apply only to the support versions of Windows listed in [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md).|
+|Scope|SRP policies can be applied to all Windows operating systems beginning with Windows XP and Windows Server 2003.|AppLocker policies apply only to the support versions of Windows listed in [Requirements to Use AppLocker]().|
 |Policy creation|SRP policies are maintained through Group Policy and only the administrator of the GPO can update the SRP policy. The administrator on the local computer can modify the SRP policies defined in the local GPO.|AppLocker policies are maintained through Group Policy and only the administrator of the GPO can update the policy. The administrator on the local computer can modify the AppLocker policies defined in the local GPO.<br /><br />AppLocker permits customization of error messages to direct users to a Web page for help.|
 |Policy maintenance|SRP policies must be updated by using the Local Security Policy snap\-in \(if the policies are created locally\) or the Group Policy Management Console \(GPMC\).|AppLocker policies can be updated by using the Local Security Policy snap\-in \(if the policies are created locally\), or the GPMC, or the Windows PowerShell AppLocker cmdlets.|
 |Policy application|SRP policies are distributed through Group Policy.|AppLocker policies are distributed through Group Policy.|
@@ -38,7 +38,7 @@ Use the following table to develop your own objectives and determine which appli
 |Support for exporting and importing policies|SRP does not support policy import\/export.|AppLocker supports the importing and exporting of policies. This allows you to create AppLocker policy on a sample computer, test it out and then export that policy and import it back into the desired GPO.|
 |Rule enforcement|Internally, SRP rules enforcement happens in the user\-mode which is less secure.|Internally, AppLocker rules for Exes and Dlls are enforced in the kernel\-mode which is more secure than enforcing them in the user\-mode.|
 
-For information about the capabilities of Software Restriction Policies, see [Software Restriction Policies Technical Overview](Software-Restriction-Policies-Technical-Overview.md).
+For information about the capabilities of Software Restriction Policies, see [Software Restriction Policies Technical Overview]().
 
 For information about the capabilities of AppLocker, see [AppLocker Technical Overview](assetId:///358610e4-88b2-40d0-b34d-dfd7ddee0ed9).
 

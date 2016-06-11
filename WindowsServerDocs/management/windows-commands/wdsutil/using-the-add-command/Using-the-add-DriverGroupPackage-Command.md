@@ -42,7 +42,7 @@ WDSUTIL /Add-DriverGroupPackage /DriverGroup:PrinterDrivers /DriverPackage:XYZ
 
 [Using the add-DriverGroupPackages Command](Using-the-add-DriverGroupPackages-Command.md)
 
-[Using the add-DriverPackage Command](Using-the-add-DriverPackage-Command.md)
+[Using the add-DriverPackage Command]()
 
 [Using the add-AllDriverPackages subcommand](Using-the-add-AllDriverPackages-subcommand.md)
 

@@ -59,8 +59,8 @@ In earlier versions of the Windows Server operating system, there were no Window
 ## In this collection
 The  following guides for planning, deploying, and managing WSUS are in this collection:
 
--   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
+-   [Deploy Windows Server Update Services]()
 
--   [Manage Updates using Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
+-   [Manage Updates using Windows Server Update Services]()
 
 

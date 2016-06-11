@@ -15,7 +15,7 @@ This topic describes the steps to force an update for an AppLocker policy in  Wi
 
 If you update the rule collection on a local computer by using the Local Security Policy snap\-in, the policy will take effect immediately. If Group Policy is used to distribute the AppLocker policy and you want to immediately implement the policy, you must manually refresh the policy. The Group Policy refresh might take several minutes, depending upon the number of policies within the Group Policy Object \(GPO\) and the number of target computers.
 
-To use Group Policy to distribute the AppLocker policy change, you need to retrieve the deployed AppLocker policy first. To prepare for the update and subsequent refresh, see [Edit an AppLocker Policy](Edit-an-AppLocker-Policy.md) and [Use the AppLocker Windows PowerShell Cmdlets](Use-the-AppLocker-Windows-PowerShell-Cmdlets.md).
+To use Group Policy to distribute the AppLocker policy change, you need to retrieve the deployed AppLocker policy first. To prepare for the update and subsequent refresh, see [Edit an AppLocker Policy]() and [Use the AppLocker Windows PowerShell Cmdlets]().
 
 To complete this procedure, you must have Edit Setting permission to edit a GPO. By default, members of the **Domain Admins** group, the **Enterprise Admins** group, and the **Group Policy Creator Owners** group have this permission.
 
@@ -27,13 +27,13 @@ To complete this procedure, you must have Edit Setting permission to edit a GPO
 
 3.  When the command finishes, close the Command Prompt window, and then verify that the intended rule behavior is correct. You can do this by checking the AppLocker event logs for events that include "policy applied."
 
-To change a policy on an individual computer, or to implement that policy on other computers, without using Group Policy, you first need to update the rule within the rule collection. For information about updating existing rules, see [Edit AppLocker Rules](Edit-AppLocker-Rules.md). For information about creating a new rule for an existing policy, see:
+To change a policy on an individual computer, or to implement that policy on other computers, without using Group Policy, you first need to update the rule within the rule collection. For information about updating existing rules, see [Edit AppLocker Rules](). For information about creating a new rule for an existing policy, see:
 
--   [Create a Rule That Uses a Publisher Condition](Create-a-Rule-That-Uses-a-Publisher-Condition.md)
+-   [Create a Rule That Uses a Publisher Condition]()
 
--   [Create a Rule That Uses a File Hash Condition](Create-a-Rule-That-Uses-a-File-Hash-Condition.md)
+-   [Create a Rule That Uses a File Hash Condition]()
 
--   [Create a Rule That Uses a Path Condition](Create-a-Rule-That-Uses-a-Path-Condition.md)
+-   [Create a Rule That Uses a Path Condition]()
 
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.
 
@@ -41,11 +41,11 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 -   Update the rule collection by using the Local Security Policy snap\-in with one of the following procedures:
 
-    -   [Edit AppLocker Rules](Edit-AppLocker-Rules.md)
+    -   [Edit AppLocker Rules]()
 
-    -   [Delete an AppLocker Rule](Delete-an-AppLocker-Rule.md)
+    -   [Delete an AppLocker Rule]()
 
-    -   [Configure Exceptions for an AppLocker Rule](Configure-Exceptions-for-an-AppLocker-Rule.md)
+    -   [Configure Exceptions for an AppLocker Rule]()
 
 When finished, the policy is in effect.
 

@@ -19,7 +19,7 @@ Displays information about user sessions on a Remote Desktop Session Host \(RD S
 This command is the same as the **query user** command.  
   
 #### Additional references  
-[Query user](Query-user.md)  
+[Query user]()  
   
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   

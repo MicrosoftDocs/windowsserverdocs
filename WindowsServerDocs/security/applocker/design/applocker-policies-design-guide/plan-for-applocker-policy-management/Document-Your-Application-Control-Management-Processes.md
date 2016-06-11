@@ -16,15 +16,15 @@ This planning topic describes the AppLocker policy maintenance information to re
 ## Record your findings
 To complete this AppLocker planning document, you should first complete the following steps:
 
-1.  [Determine Your Application Control Objectives](Determine-Your-Application-Control-Objectives.md)
+1.  [Determine Your Application Control Objectives]()
 
-2.  [Create List of Applications Deployed to Each Business Group](Create-List-of-Applications-Deployed-to-Each-Business-Group.md)
+2.  [Create List of Applications Deployed to Each Business Group]()
 
-3.  [Select Types of Rules to Create](Select-Types-of-Rules-to-Create.md)
+3.  [Select Types of Rules to Create]()
 
-4.  [Determine Group Policy Structure and Rule Enforcement](Determine-Group-Policy-Structure-and-Rule-Enforcement.md)
+4.  [Determine Group Policy Structure and Rule Enforcement]()
 
-5.  [Plan for AppLocker Policy Management](Plan-for-AppLocker-Policy-Management.md)
+5.  [Plan for AppLocker Policy Management]()
 
 The three key areas to determine for AppLocker policy management are:
 
@@ -78,6 +78,6 @@ The following table is an example of what to consider and record.
 ## Next steps
 After you have determined your application control management strategy for each of the business group's applications, the following task remains:
 
--   [Create Your AppLocker Planning Document](Create-Your-AppLocker-Planning-Document.md)
+-   [Create Your AppLocker Planning Document]()
 
 

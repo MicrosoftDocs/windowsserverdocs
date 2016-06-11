@@ -177,7 +177,7 @@ WDSUTIL /Set-server /UseDhcpPorts:No /DhcpOption60:Yes
 #### Additional references
 [Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
-[Using the disable-Server Command](Using-the-disable-Server-Command.md)
+[Using the disable-Server Command]()
 
 [Using the enable-Server Command](../using-the-enable-command/Using-the-enable-Server-Command.md)
 

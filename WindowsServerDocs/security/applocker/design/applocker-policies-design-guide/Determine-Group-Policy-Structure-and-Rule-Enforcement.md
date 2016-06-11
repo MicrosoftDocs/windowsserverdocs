@@ -15,7 +15,7 @@ This overview topic describes the process to follow when you are planning to dep
 
 You should review the following topics to learn how to structure AppLocker rules for the targeted business groups in your organization:
 
--   [Understand AppLocker Enforcement Settings](Understand-AppLocker-Enforcement-Settings.md)
+-   [Understand AppLocker Enforcement Settings]()
 
     This topic describes the AppLocker enforcement settings for rule collections.
 

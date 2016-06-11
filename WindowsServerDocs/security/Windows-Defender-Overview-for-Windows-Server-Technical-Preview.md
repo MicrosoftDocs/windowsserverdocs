@@ -41,7 +41,7 @@ To uninstall Windows Defender, start a Windows PowerShell console as an administ
 `Uninstall-WindowsFeature -Name Windows-Server-Antimalware`
 
 > [!TIP]
-> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events](windows-defender-overview-for-windows-server-technical-preview/Windows-Defender-Events.md).
+> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events]().
 
 ## <a name="BKMK_DefRun"></a>Verify Windows Defender is running
 To verify that Windows Defender is running on the server, run the following command: `sc query Windefend`. The `sc query` command returns information about the Windows Defender service. If Windows Defender is running, the `STATE` value displays `RUNNING`.
@@ -120,11 +120,11 @@ To remove exclusions, start a Windows PowerShell console as an administrator, an
 > [!TIP]
 > Custom and duplicate exclusions do not conflict with automatic exclusions.
 
-For more information about automatic exclusions, see [Automatic exclusions for Windows Defender](windows-defender-overview-for-windows-server-technical-preview/Automatic-exclusions-for-Windows-Defender.md).
+For more information about automatic exclusions, see [Automatic exclusions for Windows Defender]().
 
 ## See Also
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
-[Windows Defender Events](windows-defender-overview-for-windows-server-technical-preview/Windows-Defender-Events.md)
-[Automatic exclusions for Windows Defender](windows-defender-overview-for-windows-server-technical-preview/Automatic-exclusions-for-Windows-Defender.md)
+[Windows Defender Events]()
+[Automatic exclusions for Windows Defender]()
 
 

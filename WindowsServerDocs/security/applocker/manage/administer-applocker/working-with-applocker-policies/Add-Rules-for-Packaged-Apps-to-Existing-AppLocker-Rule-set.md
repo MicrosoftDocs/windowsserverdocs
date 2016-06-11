@@ -18,6 +18,6 @@ You can create Packaged app rules for the computers running  Windows Server 2012
 RSAT comes with the Group Policy Management Console which allows you to edit the GPO or GPOs where your existing AppLocker policy are authored. RSAT for Windows 8 has the necessary files required to author Packaged app rules. Packaged app rules will be ignored on computers running Windows 7 but will be enforced on those computers in your domain running  Windows Server 2012  and Windows 8.
 
 ## See Also
-[Administer AppLocker](Administer-AppLocker.md)
+[Administer AppLocker]()
 
 

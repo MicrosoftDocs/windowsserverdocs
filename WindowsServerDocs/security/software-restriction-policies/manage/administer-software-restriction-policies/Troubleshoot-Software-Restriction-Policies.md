@@ -14,7 +14,7 @@ ms.assetid: 4fd53736-03e7-4bf9-ba90-d1212d93e19a
 This topic describes common problems and their solutions when troubleshooting Software Restriction Policies \(SRP\) beginning with Windows Server 2008 and Windows Vista.
 
 ## Introduction
-Software Restriction Policies \(SRP\) is Group Policy\-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand\-alone computers. For more information about SRP, see the [Software Restriction Policies](Software-Restriction-Policies.md).
+Software Restriction Policies \(SRP\) is Group Policy\-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand\-alone computers. For more information about SRP, see the [Software Restriction Policies]().
 
 Beginning with  Windows Server® 2008 R2  and  Windows 7® , Windows AppLocker can be used instead of or in concert with SRP for a portion of your application control strategy. For information about AppLocker in  Windows Server 2012  and Windows 8, see the [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7).
 
@@ -78,6 +78,6 @@ Software restriction policies address the problem of regulating unknown or untru
 
 1.  Investigate the System Event Log, filtering on source of “Software Restriction Policy.” The entries explicitly state which rule is implemented for each application.
 
-2.  Enable advanced logging. See [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](Determine-Allow-Deny-List-and-Application-Inventory-for-Software-Restriction-Policies.md) for more information.
+2.  Enable advanced logging. See [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](Determine-Allow-Deny-List-and-Application-Inventory-for-) for more information.
 
 

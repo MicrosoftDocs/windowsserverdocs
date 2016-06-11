@@ -13,31 +13,31 @@ ms.assetid: d5d2dede-00f6-43d0-b320-ca2139d6fd41
 # Working with AppLocker Policies
 This topic provides links to procedural topics about creating, maintaining, and testing AppLocker policies in Windows Server® 2012 and Windows® 8.
 
--   [Configure the Application Identity Service](Configure-the-Application-Identity-Service.md)
+-   [Configure the Application Identity Service]()
 
--   [Configure an AppLocker Policy for Audit Only](Configure-an-AppLocker-Policy-for-Audit-Only.md)
+-   [Configure an AppLocker Policy for Audit Only]()
 
--   [Configure an AppLocker Policy for Enforce Rules](Configure-an-AppLocker-Policy-for-Enforce-Rules.md)
+-   [Configure an AppLocker Policy for Enforce Rules]()
 
--   [Display a Custom URL Message When Users Try to Run a Blocked Application](Display-a-Custom-URL-Message-When-Users-Try-to-Run-a-Blocked-Application.md)
+-   [Display a Custom URL Message When Users Try to Run a Blocked Application]()
 
--   [Export an AppLocker Policy from a GPO](Export-an-AppLocker-Policy-from-a-GPO.md)
+-   [Export an AppLocker Policy from a GPO]()
 
--   [Export an AppLocker Policy to an XML File](Export-an-AppLocker-Policy-to-an-XML-File.md)
+-   [Export an AppLocker Policy to an XML File]()
 
--   [Import an AppLocker Policy from Another Computer](Import-an-AppLocker-Policy-from-Another-Computer.md)
+-   [Import an AppLocker Policy from Another Computer]()
 
--   [Import an AppLocker Policy into a GPO](Import-an-AppLocker-Policy-into-a-GPO.md)
+-   [Import an AppLocker Policy into a GPO]()
 
--   [Add Rules for Packaged Apps to Existing AppLocker Rule-set](Add-Rules-for-Packaged-Apps-to-Existing-AppLocker-Rule-set.md)
+-   [Add Rules for Packaged Apps to Existing AppLocker Rule-set]()
 
--   [Merge AppLocker Policies by Using Set-ApplockerPolicy](Merge-AppLocker-Policies-by-Using-Set-ApplockerPolicy.md)
+-   [Merge AppLocker Policies by Using Set-ApplockerPolicy]()
 
--   [Merge AppLocker Policies Manually](Merge-AppLocker-Policies-Manually.md)
+-   [Merge AppLocker Policies Manually]()
 
--   [Refresh an AppLocker Policy](Refresh-an-AppLocker-Policy.md)
+-   [Refresh an AppLocker Policy]()
 
--   [Test an AppLocker Policy by Using Test-AppLockerPolicy](Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md)
+-   [Test an AppLocker Policy by Using Test-AppLockerPolicy]()
 
 ## What does AppLocker do?
 AppLocker helps reduce administrative overhead and helps reduce the organization's cost of managing computing resources by decreasing the number of help desk calls that result from users running unapproved applications. AppLocker addresses the following application security scenarios:

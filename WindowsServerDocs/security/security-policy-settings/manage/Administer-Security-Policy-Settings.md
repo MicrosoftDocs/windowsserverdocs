@@ -352,7 +352,7 @@ Secedit.exe is useful when you have multiple computers on which security must be
 ## <a name="BKMK_GroupPolicy"></a>Working with Group Policy tools  
 Group Policy is an infrastructure that allows you to specify managed configurations for users and computers through Group Policy settings and Group Policy Preferences. For Group Policy settings that affect only a local computer or user, you can use the Local Group Policy Editor. You can manage Group Policy settings and Group Policy Preferences in an Active Directory Domain Services \(AD DS\) environment through the Group Policy Management Console \(GPMC\). Group Policy management tools also are included in the Remote Server Administration Tools pack to provide a way for you to administer Group Policy settings from your desktop.  
   
-To get started with managing security settings with Group Policy, see [Group Policy Overview](Group-Policy-Overview.md).  
+To get started with managing security settings with Group Policy, see [Group Policy Overview]().  
   
 To begin using the Group Policy Management Console, see the Help for the [Group Policy Management Console](http://technet.microsoft.com/library/cc753298(v=ws.10).aspx) in the TechNet Library.  
   

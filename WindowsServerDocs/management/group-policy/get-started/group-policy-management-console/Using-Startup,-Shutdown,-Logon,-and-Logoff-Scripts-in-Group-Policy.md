@@ -12,7 +12,7 @@ author: coreyp
 # Using Startup, Shutdown, Logon, and Logoff Scripts in Group Policy
 This topic contains procedures for using the GPMC tool to configure and run four types of Group Policy.  
   
-This topic describes how to install and use scripts on a domain controller. If you want information about script use for the local computer, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor](Working-with-startup,-shutdown,-logon,-and-logoff-scripts-using-the-Local-Group-Policy-Editor.md).  
+This topic describes how to install and use scripts on a domain controller. If you want information about script use for the local computer, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor]().  
   
 Group Policy allows you to associate one or more scripting files to four triggered events:  
   

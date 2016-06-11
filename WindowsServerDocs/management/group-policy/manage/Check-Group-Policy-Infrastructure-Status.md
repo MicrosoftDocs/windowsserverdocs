@@ -151,7 +151,7 @@ If you suspect that you have an issue with SYSVOL replication, see the following
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Group Policy Overview](Group-Policy-Overview.md)
+-   [Group Policy Overview]()
 
 -   [Group Policy Analysis and Troubleshooting Overview](Group-Policy-Analysis-and-Troubleshooting-Overview.md)
 

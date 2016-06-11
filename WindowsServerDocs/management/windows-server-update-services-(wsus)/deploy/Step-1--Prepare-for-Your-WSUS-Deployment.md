@@ -459,6 +459,6 @@ After the new updates are downloaded, Automatic Updates polls the WSUS server fo
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
 
--   [Windows Server Update Services &#40;WSUS&#41;](Windows-Server-Update-Services--WSUS-.md)
+-   [Windows Server Update Services &#40;WSUS&#41;]()
 
 

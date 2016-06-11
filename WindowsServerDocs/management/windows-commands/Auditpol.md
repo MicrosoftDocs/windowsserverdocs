@@ -23,14 +23,14 @@ Auditpol command [<sub-command><options>]
   
 |Sub\-command|Description|  
 |----------------|---------------|  
-|\/get|Displays the current audit policy.<br /><br />See [Auditpol get](Auditpol-get.md) for syntax and options.|  
-|\/set|Sets the audit policy.<br /><br />See [Auditpol set](Auditpol-set.md) for syntax and options.|  
-|\/list|Displays selectable policy elements.<br /><br />See [Auditpol list](Auditpol-list.md) for syntax and options.|  
-|\/backup|Saves the audit policy to a file.<br /><br />See [Auditpol backup](Auditpol-backup.md) for syntax and options.|  
-|\/restore|Restores the audit policy from a file that was previously created by using auditpol \/backup.<br /><br />See [Auditpol restore](Auditpol-restore.md) for syntax and options.|  
-|\/clear|Clears the audit policy.<br /><br />See [Auditpol clear](Auditpol-clear.md) for syntax and options.|  
-|\/remove|Removes all per\-user audit policy settings and disables all system audit policy settings.<br /><br />See [Auditpol remove](Auditpol-remove.md) for syntax and options.|  
-|\/resourceSACL|Configures global resource system access control lists \(SACLs\). **Note:** Applies only to  Windows 7  and  Windows Server 2008 R2 .<br /><br />See [Auditpol resourceSACL](Auditpol-resourceSACL.md).|  
+|\/get|Displays the current audit policy.<br /><br />See [Auditpol get]() for syntax and options.|  
+|\/set|Sets the audit policy.<br /><br />See [Auditpol set]() for syntax and options.|  
+|\/list|Displays selectable policy elements.<br /><br />See [Auditpol list]() for syntax and options.|  
+|\/backup|Saves the audit policy to a file.<br /><br />See [Auditpol backup]() for syntax and options.|  
+|\/restore|Restores the audit policy from a file that was previously created by using auditpol \/backup.<br /><br />See [Auditpol restore]() for syntax and options.|  
+|\/clear|Clears the audit policy.<br /><br />See [Auditpol clear]() for syntax and options.|  
+|\/remove|Removes all per\-user audit policy settings and disables all system audit policy settings.<br /><br />See [Auditpol remove]() for syntax and options.|  
+|\/resourceSACL|Configures global resource system access control lists \(SACLs\). **Note:** Applies only to  Windows 7  and  Windows Server 2008 R2 .<br /><br />See [Auditpol resourceSACL]().|  
 |\/?|Displays help at the command prompt.|  
   
 ## Remarks  

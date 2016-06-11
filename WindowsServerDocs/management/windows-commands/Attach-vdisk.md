@@ -54,7 +54,7 @@ attach vdisk readonly
 
 -   [Detail vdisk](delete/detail/Detail-vdisk.md)
 
--   [Detach vdisk](Detach-vdisk.md)
+-   [Detach vdisk]()
 
 -   [Expand vdisk](Expand-vdisk.md)
 
@@ -62,6 +62,6 @@ attach vdisk readonly
 
 -   [Select vdisk](select/Select-vdisk.md)
 
--   [List_1](List_1.md)
+-   [List_1]()
 
 

@@ -32,7 +32,7 @@ This subcommand has no parameters.
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 -   [Get\-WBJob](http://technet.microsoft.com/library/jj902426.aspx) cmdlet
 

@@ -25,6 +25,6 @@ A rule can be configured to use either an allow or deny action:
 > You can use a combination of allow actions and deny actions. However, we recommend using allow actions with exceptions because deny actions override allow actions in all cases. Deny actions can also be circumvented. For example, if you configure a deny action for a file or folder path, the user can still run the file from any other path.
 
 ## See Also
-[How AppLocker Works](How-AppLocker-Works.md)
+[How AppLocker Works]()
 
 

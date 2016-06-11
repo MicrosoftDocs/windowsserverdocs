@@ -55,7 +55,7 @@ fsutil volume querycluster C: 50 0x2000
 #### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil](Fsutil.md)
+[Fsutil]()
 
 [How NTFS Works](http://go.microsoft.com/fwlink/?LinkId=183396)
 

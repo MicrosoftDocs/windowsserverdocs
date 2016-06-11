@@ -41,6 +41,6 @@ If updates are approved using an auto\-approval rule, they might still be in the
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
 
--   [Windows Server Update Services &#40;WSUS&#41;](Windows-Server-Update-Services--WSUS-.md)
+-   [Windows Server Update Services &#40;WSUS&#41;]()
 
 

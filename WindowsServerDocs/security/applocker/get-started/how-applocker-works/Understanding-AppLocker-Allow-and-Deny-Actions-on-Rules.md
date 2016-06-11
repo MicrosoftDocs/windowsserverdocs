@@ -31,6 +31,6 @@ Although you can use AppLocker to create a rule to allow all files to run and th
 > If you choose to use the deny action on rules, you must ensure that you first create rules that allow the Windows system files to run. AppLocker enforces rules for allowed applications by default, so after one or more rules have been created for a rule collection \(affecting the Windows system files\), only the applications that are listed as being allowed will be permitted to run. Therefore, creating a single rule in a rule collection to deny a malicious file from running will also deny all other files on the computer from running.
 
 ## See Also
-[How AppLocker Works](How-AppLocker-Works.md)
+[How AppLocker Works]()
 
 

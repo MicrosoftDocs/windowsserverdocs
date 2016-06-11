@@ -62,7 +62,7 @@ wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\s
 
 -   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [Wbadmin]()
 
 -   [Get\-WBBareMetalRecovery](http://technet.microsoft.com/library/jj902461.aspx) cmdlet
 

@@ -18,7 +18,7 @@ Enables you to reset \(delete\) a session on a Remote Desktop Session Host \(RD 
 This command is the same as the **reset session** command.
 
 #### Additional references
-[Reset session](Reset-session.md)
+[Reset session]()
 
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 

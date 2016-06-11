@@ -13,7 +13,7 @@ This document describes critical planning considerations that you must address t
 
 **In this topic:**
 
--   [Step 1: Review and Select Activation Methods](Step-1--Review-and-Select-Activation-Methods.md)
+-   [Step 1: Review and Select Activation Methods]()
 
 -   [Step 2: Evaluate Client Connectivity](plan-for-volume-activation/Step-2--Evaluate-Client-Connectivity.md)
 
@@ -23,6 +23,6 @@ This document describes critical planning considerations that you must address t
 
 -   [Appendix A: KMS Client Setup Keys](plan-for-volume-activation/Appendix-A--KMS-Client-Setup-Keys.md)
 
-After you have completed these planning steps, for procedures to deploy Volume Activation Services, see [Test Lab Guide: Demonstrate Volume Activation Services](plan-for-volume-activation/Test-Lab-Guide--Demonstrate-Volume-Activation-Services.md). For more information, see the [Volume Activation Overview](Volume-Activation-Overview.md).
+After you have completed these planning steps, for procedures to deploy Volume Activation Services, see [Test Lab Guide: Demonstrate Volume Activation Services](plan-for-volume-activation/Test-Lab-Guide--Demonstrate-Volume-Activation-Services.md). For more information, see the [Volume Activation Overview]().
 
 

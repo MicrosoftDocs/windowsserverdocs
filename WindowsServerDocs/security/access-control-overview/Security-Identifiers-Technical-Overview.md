@@ -300,6 +300,6 @@ The following table describes changes in SID implementation in the Windows opera
 |Restricted SID checks are implemented|Windows Server 2008, Windows Vista|When restricting SIDs are present, Windows performs two access checks. The first is the normal access check, and the second is the same access check against the restricting SIDs in the token. Both access checks must pass to allow the process to access the object.<br /><br />For more information, see [What's New for Access Control in Windows Server 2008](http://technet.microsoft.com/library/cc731677(v=ws.10).aspx).|
 
 ## See also
-[Access Control Overview](Access-Control-Overview.md)
+[Access Control Overview]()
 
 

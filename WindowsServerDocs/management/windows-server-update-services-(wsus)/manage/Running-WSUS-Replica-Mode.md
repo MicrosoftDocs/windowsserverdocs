@@ -31,7 +31,7 @@ If your WSUS server is running in replica mode, you will be able to perform only
 
 ## See also:
 
--   [Windows Server Update Services &#40;WSUS&#41;](Windows-Server-Update-Services--WSUS-.md)
+-   [Windows Server Update Services &#40;WSUS&#41;]()
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
 
