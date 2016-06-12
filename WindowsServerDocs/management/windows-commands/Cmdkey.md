@@ -1,5 +1,5 @@
 ---
-title: cmdkey
+title: Cmdkey
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fcd68ee-a14a-4b71-9300-c3f5c5d31e8e
 ---
-# cmdkey
-creates, lists, and deletes stored user names and passwords or credentials.
+# Cmdkey
+Creates, lists, and deletes stored user names and passwords or credentials.
 
-for examples of how this command can be used, see [Examples](#BKMK_examples).
+For examples of how this command can be used, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -23,18 +23,18 @@ cmdkey [{/add:<TargetName>|/generic:<TargetName>}] {/smartcard|/user:<UserName> 
 
 |Parameters|Description|
 |--------------|---------------|
-|\/add:<TargetName>|adds a user name and password to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
-|\/generic:<TargetName>|adds generic credentials to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
+|\/add:<TargetName>|Adds a user name and password to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
+|\/generic:<TargetName>|Adds generic credentials to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
 |\/smartcard|Retrieves the credential from a smart card.|
-|\/user:<UserName>|Specifies the user or account name to store with this entry. if *UserName* is not supplied, it will be requested.|
-|\/pass:<Password>|Specifies the password to store with this entry. if *Password* is not supplied, it will be requested.|
-|\/delete{:<TargetName> &#124; \/ras}|deletes a user name and password from the list. if *TargetName* is specified, that entry will be deleted. if \/ras is specified, the stored remote access entry will be deleted.|
-|\/list:<TargetName>|Displays the list of stored user names and credentials. if *TargetName* is not specified, all stored user names and credentials will be listed.|
+|\/user:<UserName>|Specifies the user or account name to store with this entry. If *UserName* is not supplied, it will be requested.|
+|\/pass:<Password>|Specifies the password to store with this entry. If *Password* is not supplied, it will be requested.|
+|\/delete{:<TargetName> &#124; \/ras}|Deletes a user name and password from the list. If *TargetName* is specified, that entry will be deleted. If \/ras is specified, the stored remote access entry will be deleted.|
+|\/list:<TargetName>|Displays the list of stored user names and credentials. If *TargetName* is not specified, all stored user names and credentials will be listed.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
--   if more than one smart card is found on the system when the \/smartcard command\-line option is used, **cmdkey** will display information about all available smart cards and then prompt the user to specify which one to use.
+-   If more than one smart card is found on the system when the \/smartcard command\-line option is used, **cmdkey** will display information about all available smart cards and then prompt the user to specify which one to use.
 
 -   Passwords will not be displayed once they are stored.
 
@@ -69,7 +69,7 @@ To delete the credential that is stored for Server01, type:
 cmdkey /delete:Server01
 ```
 
-## additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

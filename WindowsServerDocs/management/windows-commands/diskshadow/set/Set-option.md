@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 4d8d4921-9fdd-4a3c-bb0f-9df5458c4b84
 ---
 # Set option
-Sets the options for shadow copy creation. if used without parameters, **set option** displays help at the command prompt.
+Sets the options for shadow copy creation. If used without parameters, **set option** displays help at the command prompt.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ set option {[differential | plex] [transportable] [[rollbackrecover] [txfrecover
 |\[txfrecover\]|Requests VSS to make the shadow copy transactionally consistent during creation.|
 |\[noautorecover\]|Stops writers and the file system from performing any recovery changes to the shadow copy to a transactionally consistent state. **Noautorecover** cannot be used with **txfrecover** or **rollbackrecover**.|
 
-#### additional references
-[Command-Line Syntax Key](../../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
 

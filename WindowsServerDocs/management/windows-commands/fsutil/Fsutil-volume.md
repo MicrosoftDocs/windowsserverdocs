@@ -13,14 +13,14 @@ ms.assetid: 9f8ba8f0-8c3e-4508-86d9-520f309214de
 # Fsutil volume
 Dismounts a volume, or queries the hard disk drive to determine how much free space is currently available on the hard disk drive or which file is using a particular cluster.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-fsutil volume [diskfree] <volumepath>
-fsutil volume [dismount] <volumepath>
-fsutil volume [querycluster] <volumepath> <Cluster> [<Cluster>] … …
+fsutil volume [diskfree] <VolumePath>
+fsutil volume [dismount] <VolumePath>
+fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 ```
 
 ## Parameters
@@ -29,8 +29,8 @@ fsutil volume [querycluster] <volumepath> <Cluster> [<Cluster>] … …
 |-------------|---------------|
 |diskfree|Queries the hard disk drive to determine the amount of free space on it.|
 |dismount|Dismounts a volume.|
-|<volumepath>|Specifies the drive letter \(followed by a colon\).|
-|querycluster|finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|<VolumePath>|Specifies the drive letter \(followed by a colon\).|
+|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |<cluster>|Specifies the logical cluster number \(LCN\).|
 
 ## <a name="BKMK_examples"></a>Examples
@@ -52,10 +52,10 @@ To find the file\(s\) that are using the clusters, specified by the logical clus
 fsutil volume querycluster C: 50 0x2000
 ```
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil]()
+[Fsutil](Fsutil.md)
 
 [How NTFS Works](http://go.microsoft.com/fwlink/?LinkId=183396)
 

@@ -1,5 +1,5 @@
 ---
-title: How applocker Works
+title: How AppLocker Works
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -10,54 +10,54 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 954a2fe6-2608-4b81-9687-e0deb251a25e
 ---
-# How applocker Works
-This topic for the IT professional provides links to topics about applocker architecture and components, processes and interactions, rules and policies..
+# How AppLocker Works
+This topic for the IT professional provides links to topics about AppLocker architecture and components, processes and interactions, rules and policies..
 
-The following topics explain how applocker policies for each of the rule condition types are evaluated:
+The following topics explain how AppLocker policies for each of the rule condition types are evaluated:
 
--   [applocker Architecture and Components](applocker-architecture-components.md)
+-   [AppLocker Architecture and Components](AppLocker-Architecture-and-Components.md)
 
--   [applocker Processes and Interactions](applocker-processes-interactions.md)
+-   [AppLocker Processes and Interactions](AppLocker-Processes-and-Interactions.md)
 
-The following topics explain how applocker rules and policies work:
+The following topics explain how AppLocker rules and policies work:
 
--   [Understanding applocker Rule Behavior]()
+-   [Understanding AppLocker Rule Behavior](Understanding-AppLocker-Rule-Behavior.md)
 
--   [Understanding applocker Rule Exceptions]()
+-   [Understanding AppLocker Rule Exceptions](Understanding-AppLocker-Rule-Exceptions.md)
 
--   [Understanding applocker Rule Collections]()
+-   [Understanding AppLocker Rule Collections](Understanding-AppLocker-Rule-Collections.md)
 
--   [Understanding applocker Allow and Deny Actions on Rules]()
+-   [Understanding AppLocker Allow and Deny Actions on Rules](Understanding-AppLocker-Allow-and-Deny-Actions-on-Rules.md)
 
--   [Understanding applocker Rule Condition Types]()
+-   [Understanding AppLocker Rule Condition Types](Understanding-AppLocker-Rule-Condition-Types.md)
 
-    -   [Understanding the Publisher Rule Condition in applocker]()
+    -   [Understanding the Publisher Rule Condition in AppLocker](Understanding-the-Publisher-Rule-Condition-in-AppLocker.md)
 
-    -   [Understanding the Path Rule Condition in applocker]()
+    -   [Understanding the Path Rule Condition in AppLocker](Understanding-the-Path-Rule-Condition-in-AppLocker.md)
 
-    -   [Understanding the File Hash Rule Condition in applocker]()
+    -   [Understanding the File Hash Rule Condition in AppLocker](Understanding-the-File-Hash-Rule-Condition-in-AppLocker.md)
 
--   [Understanding applocker Default Rules]()
+-   [Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)
 
-    -   [Executable Rules in applocker]()
+    -   [Executable Rules in AppLocker](Executable-Rules-in-AppLocker.md)
 
-    -   [Windows Installer Rules in applocker]()
+    -   [Windows Installer Rules in AppLocker](Windows-Installer-Rules-in-AppLocker.md)
 
-    -   [Script Rules in applocker]()
+    -   [Script Rules in AppLocker](Script-Rules-in-AppLocker.md)
 
-    -   [DLL Rules in applocker]()
+    -   [DLL Rules in AppLocker](DLL-Rules-in-AppLocker.md)
 
-    -   [Packaged Apps and Packaged App Installer Rules in applocker](Packaged-Apps-and-Packaged-App-Installer-Rules-in-applocker.md)
+    -   [Packaged Apps and Packaged App Installer Rules in AppLocker](Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md)
 
 ## Additional resources
 
--   [applocker Policies Design Guide]()
+-   [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md)
 
--   [applocker Policies Deployment Guide]()
+-   [AppLocker Policies Deployment Guide](AppLocker-Policies-Deployment-Guide.md)
 
--   [Administer applocker]()
+-   [Administer AppLocker](Administer-AppLocker.md)
 
 ## See Also
-[applocker Technical Architecture](https://technet.microsoft.com/en-us/library/ee844203(v=ws.10).aspx)
+[AppLocker Technical Architecture](https://technet.microsoft.com/en-us/library/ee844203(v=ws.10).aspx)
 
 

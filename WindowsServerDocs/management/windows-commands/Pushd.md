@@ -1,5 +1,5 @@
 ---
-title: pushd
+title: Pushd
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,35 +8,35 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 396bc545-0f41-473e-b0ac-76fbbb74d390
 ---
-# pushd
+# Pushd
 Stores the current directory for use by the **popd** command, and then changes to the specified directory.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-pushd [<path>]
+pushd [<Path>]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|<path>|Specifies the directory to make the current directory. This command supports relative paths.|
+|<Path>|Specifies the directory to make the current directory. This command supports relative paths.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
 -   Every time you use the **pushd** command, a single directory is stored for your use. However, you can store multiple directories by using the **pushd** command multiple times.
 
-    The directories are stored sequentially in a virtual stack. if you use the **pushd** command once, the directory in which you use the command is placed at the bottom of the stack. if you use the command again, the second directory is placed on top of the first one. The process repeats every time you use the **pushd** command.
+    The directories are stored sequentially in a virtual stack. If you use the **pushd** command once, the directory in which you use the command is placed at the bottom of the stack. If you use the command again, the second directory is placed on top of the first one. The process repeats every time you use the **pushd** command.
 
-    You can use the **popd** command to change the current directory to the directory most recently stored by the **pushd** command. if you use the **popd** command, the directory on the top of the stack is removed from the stack and the current directory is changed to that directory. if you use the **popd** command again, the next directory on the stack is removed.
+    You can use the **popd** command to change the current directory to the directory most recently stored by the **pushd** command. If you use the **popd** command, the directory on the top of the stack is removed from the stack and the current directory is changed to that directory. If you use the **popd** command again, the next directory on the stack is removed.
 
--   if command extensions are enabled, the **pushd** command accepts either a network path or a local drive letter and path.
+-   If command extensions are enabled, the **pushd** command accepts either a network path or a local drive letter and path.
 
--   if you specify a network path, the **pushd** command temporarily assigns the highest unused drive letter \(starting with Z:\) to the specified network resource. The command then changes the current drive and directory to the specified directory on the newly assigned drive. if you use the **popd** command with command extensions enabled, the **popd** command removes the drive\-letter assignation created by **pushd**.
+-   If you specify a network path, the **pushd** command temporarily assigns the highest unused drive letter \(starting with Z:\) to the specified network resource. The command then changes the current drive and directory to the specified directory on the newly assigned drive. If you use the **popd** command with command extensions enabled, the **popd** command removes the drive\-letter assignation created by **pushd**.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example shows how you can use the **pushd** command and the **popd** command in a batch program to change the current directory from the one in which the batch program was run and then change it back:
@@ -51,9 +51,9 @@ cls
 echo All text files deleted in the %1 directory
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
-[popd](popd.md)
+[Popd](Popd.md)
 
 

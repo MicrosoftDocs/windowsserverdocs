@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getminretrydelay
+title: Bitsadmin getminretrydelay
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 54f0abab-c129-40ed-a603-50f464d26011
 ---
-# bitsadmin getminretrydelay
+# Bitsadmin getminretrydelay
 Retrieves the length of time, in seconds, that the service waits after encountering a transient error before trying to transfer the file.
 
 ## Syntax
 
 ```
-bitsadmin /GetMinRetrydelay <Job>
+bitsadmin /GetMinRetryDelay <Job>
 ```
 
 ## Parameters
@@ -27,10 +27,10 @@ bitsadmin /GetMinRetrydelay <Job>
 The following example retrieves the minimum retry delay for the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetMinRetrydelay myDownloadJob
+C:\>bitsadmin /GetMinRetryDelay myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

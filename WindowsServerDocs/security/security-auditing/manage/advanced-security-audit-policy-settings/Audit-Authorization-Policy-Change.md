@@ -15,7 +15,7 @@ This topic for the IT professional describes the Advanced Security Audit policy 
 
 Authorization policy changes that can be audited include:
 
--   Assigning or removing user rights \(privileges\) such as **SeCreateTokenPrivilege**, except for the system access rights that are audited by using the [Audit Authentication Policy Change](audit-authentication-policy-change.md) subcategory.
+-   Assigning or removing user rights \(privileges\) such as **SeCreateTokenPrivilege**, except for the system access rights that are audited by using the [Audit Authentication Policy Change](Audit-Authentication-Policy-Change.md) subcategory.
 
 -   Changing the Encrypting File System \(EFS\) policy.
 
@@ -34,6 +34,6 @@ If this policy setting is configured, the following events appear on computers r
 |4714|Encrypted data recovery policy was changed.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
+[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
 
 

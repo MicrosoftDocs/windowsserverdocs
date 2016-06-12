@@ -1,5 +1,5 @@
 ---
-title: gpresult
+title: Gpresult
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,17 +8,17 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dfaa3adf-2c83-486c-86d6-23f93c5c883c
 ---
-# gpresult
+# Gpresult
 Displays the Resultant Set of Policy \(RSoP\) information for a remote user and computer.
 
-To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports as described in the topic, [remote Resultant Set of Policy \(RSoP\) Group Policy results: ports that require firewall rules](assetId:///91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd#BKMK_remoteRSoP).
+To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports as described in the topic, [Remote Resultant Set of Policy \(RSoP\) Group Policy results: ports that require firewall rules](assetId:///91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd#BKMK_RemoteRSoP).
 
-for examples of how this command can be used, see [Examples](#BKMK_Examples).
+For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
 ## Syntax
 
 ```
-gpresult [/s <compUTER> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
+gpresult [/s <COMPUTER> [/u <USERNAME> [/p [<PASSWORD>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
 ```
 
 ## Parameters
@@ -28,23 +28,23 @@ gpresult [/s <compUTER> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN
 
 |Parameter|Description|
 |-------------|---------------|
-|\/s <compUTER>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
+|\/s <COMPUTER>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.|
 |\/u <USERNAME>|Uses the credentials of the specified user to run the command. The default user is the user who is logged on to the computer that issues the command.|
-|\/p \[<PASSWOrd>\]|Specifies the password of the user account that is provided in the **\/u** parameter. if **\/p** is omitted, **gpresult** prompts for the password. **\/p** cannot be used with **\/x** or **\/h**.|
+|\/p \[<PASSWORD>\]|Specifies the password of the user account that is provided in the **\/u** parameter. If **\/p** is omitted, **gpresult** prompts for the password. **\/p** cannot be used with **\/x** or **\/h**.|
 |\/user \[<TARGETDOMAIN>\\\]<TARGETUSER>|Specifies the remote user whose RSoP data is to be displayed.|
-|\/scope {user &#124; computer}|Displays RSoP data for either the user or the computer. if **\/scope** is omitted, **gpresult** displays RSoP data for both the user and the computer.|
+|\/scope {user &#124; computer}|Displays RSoP data for either the user or the computer. If **\/scope** is omitted, **gpresult** displays RSoP data for both the user and the computer.|
 |\[\/x &#124; \/h\] <FILENAME>|Saves the report in either XML \(**\/x**\) or HTML \(**\/h**\) format at the location and with the file name that is specified by the *FILENAME* parameter. Cannot be used with **\/u**, **\/p**, **\/r**, **\/v**, or **\/z**.|
-|\/f|forces **gpresult** to overwrite the file name that is specified in the **\/x** or **\/h** option.|
+|\/f|Forces **gpresult** to overwrite the file name that is specified in the **\/x** or **\/h** option.|
 |\/r|Displays RSoP summary data.|
 |\/v|Displays verbose policy information. This includes detailed settings that were applied with a precedence of 1.|
 |\/z|Displays all available information about Group Policy. This includes detailed settings that were applied with a precedence of 1 and higher.|
-|\/?|Displays help at the command prompt.|
+|\/?|Displays Help at the command prompt.|
 
-## remarks
+## Remarks
 
--   Group Policy is the primary administrative tool for defining and controlling how programs, network resources, and the operating system operate for users and computers in an organization. In an active directory environment, Group Policy is applied to users or computers based on their membership in sites, domains, or organizational units.
+-   Group Policy is the primary administrative tool for defining and controlling how programs, network resources, and the operating system operate for users and computers in an organization. In an Active Directory environment, Group Policy is applied to users or computers based on their membership in sites, domains, or organizational units.
 
--   Because you can apply overlapping policy settings to any computer or user, the Group Policy feature generates a resulting set of policy settings when the user logs on. **gpresult** displays the resulting set of policy settings that were enforced on the computer for the specified user when the user logged on.
+-   Because you can apply overlapping policy settings to any computer or user, the Group Policy feature generates a resulting set of policy settings when the user logs on. **Gpresult** displays the resulting set of policy settings that were enforced on the computer for the specified user when the user logged on.
 
 -   Because **\/v** and **\/z** produce lots of information, it is useful to redirect output to a text file \(for example, **gpresult\/z >policy.txt**\).
 
@@ -69,12 +69,12 @@ The following example displays RSoP data for the computer **srvmain** and the lo
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
 ```
 
-## additional references
+## Additional references
 
 -   [Group Policy TechCenter](http://go.microsoft.com/fwlink/?LinkID=145531)
 
--   [remote Resultant Set of Policy \(RSoP\) Group Policy results: ports that require firewall rules](assetId:///91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd#BKMK_remoteRSoP)
+-   [Remote Resultant Set of Policy \(RSoP\) Group Policy results: ports that require firewall rules](assetId:///91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd#BKMK_RemoteRSoP)
 
--   [Command-Line Syntax Key](commandline-syntax-key.md)
+-   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

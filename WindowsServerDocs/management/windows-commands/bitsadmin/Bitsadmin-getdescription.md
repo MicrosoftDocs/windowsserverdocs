@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getdescription
+title: Bitsadmin getdescription
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3974603-ebbe-4d31-8217-040fe2d90c85
 ---
-# bitsadmin getdescription
+# Bitsadmin getdescription
 Retrieves the description of the specified job.
 
 ## Syntax
@@ -30,7 +30,7 @@ The following example retrieves the description for the job named *myDownloadJob
 C:\>bitsadmin /GetDescription myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

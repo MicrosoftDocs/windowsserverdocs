@@ -1,5 +1,5 @@
 ---
-title: plan
+title: Plan
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -7,14 +7,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e51caa67-25ce-46fc-ab94-3609e16560b6
 ---
-# plan
-## Welcome to CAPS Markdown editor!
+# Plan
+## Welcome to CAPS Markdown Editor!
 
 CAPS is using GitHub Flavored Markdown(GFM) which is one of the most popular Markdown flavor. Lets' learn how to make your customized document with below rules.  
 
 *View the [Markdown Basics](https://help.github.com/articles/markdown-basics/)*
 *View the [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)*
-*View the [online sample](http://github.github.com/github-flavored-markdown/sample_content.html).*
+*View the [Online sample](http://github.github.com/github-flavored-markdown/sample_content.html).*
   
 Quick Guidance
 ---
@@ -23,7 +23,7 @@ When you are authoring your Markdown content in CAPS, you could get help from di
 - Use `Ctrl + space` at any place to open insert.
 - Use authoring tool bar on the top of the editor to help create your content
 
-format your content
+Format your content
 ---
 - **Paragraph**
   Paragraphs in Markdown are just one or more lines of consecutive text followed by one or more blank lines.
@@ -60,7 +60,7 @@ format your content
   ```
   You can also use authoring toolbar to achieve this
 
-- **lists**
+- **Lists**
   You can add an unordered list by preceding list items with `*` or `-`
   ```
   * Item
@@ -101,16 +101,16 @@ format your content
   ```
   ~~~~
 
-add Reference to your content
+Add Reference to your content
 ---
 - **Insert Links**
-  You can create an inline link by wrapping link text in brackets `[Link label]`, and then wrapping the link in    parentheses `(http://URL)`. 
+  You can create an inline link by wrapping link text in brackets `[Link Label]`, and then wrapping the link in    parentheses `(http://URL)`. 
   [Bing.com](http://www.bing.com)
   
   You can also create a link to an existing topic in CAPS with the authoring toolbar
   
 - **Insert Image**
-  You can reference a online image from external resource by using `![Image label]`, and then wrapping the image resource url in parentheses `(httpmediaURL)`
+  You can reference a online image from external resource by using `![Image Label]`, and then wrapping the image resource url in parentheses `(httpmediaURL)`
   
   You can also insert an image from CAPS with the authoring toolbar
 
@@ -128,7 +128,7 @@ You can also include inline Markdown format syntax such as links, bold, italics,
 
 | Name | Description          |
 | ------------- | ----------- |
-| help      | ~~Display the~~ help window.|
+| Help      | ~~Display the~~ help window.|
 | Close     | _Closes_ a window     |
 
 You can have more formatting control by including colons : within the header row, you can define text to be left-aligned, right-aligned, or center-aligned:

@@ -25,7 +25,7 @@ This policy setting is supported on versions of Windows that are designated in t
 -   Not defined
 
 ### Best practices
-Set **Minimum password length** value to 14. If the number of characters is set to 0, no password is required. In most environments, a fourteen\-character password is recommended because it is long enough to provide adequate security and still short enough for users to easily remember. This value will help provide adequate defense against a brute force attack. Adding complexity requirements will help reduce the possibility of a dictionary attack. For more information, see [Password must meet complexity requirements](password-must-meet-complexity-requirements.md).
+Set **Minimum password length** value to 14. If the number of characters is set to 0, no password is required. In most environments, a fourteen\-character password is recommended because it is long enough to provide adequate security and still short enough for users to easily remember. This value will help provide adequate defense against a brute force attack. Adding complexity requirements will help reduce the possibility of a dictionary attack. For more information, see [Password must meet complexity requirements](Password-must-meet-complexity-requirements.md).
 
 Permitting short passwords reduces security because short passwords can be easily broken with tools that perform dictionary or brute force attacks against the passwords. Requiring very long passwords can result in mistyped passwords that might cause an account lockout and subsequently increase the volume of Help Desk calls.
 
@@ -76,6 +76,6 @@ Requirements for extremely long passwords can actually decrease the security of 
 > Older versions of Windows \(such as Windows 98 and Windows NT 4.0\) do not support passwords that are longer than 14 characters. Computers that run these older operating systems are unable to authenticate with computers or domains that use accounts that require long passwords.
 
 ## See Also
-[Password Policy](password-policy.md)
+[Password Policy](Password-Policy.md)
 
 

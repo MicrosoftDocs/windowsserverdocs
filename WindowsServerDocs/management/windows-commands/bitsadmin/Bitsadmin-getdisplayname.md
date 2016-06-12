@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getdisplayname
+title: Bitsadmin getdisplayname
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5c0e76c-4cc6-42d8-ac30-30bf3dc11b9b
 ---
-# bitsadmin getdisplayname
+# Bitsadmin getdisplayname
 Retrieves the display name of the specified job.
 
 ## Syntax
@@ -30,8 +30,8 @@ The following example retrieves the display name for the job named *myDownloadJo
 C:\>bitsadmin /GetDisplayName myDownloadJob
 ```
 
-additional references
+Additional references
 
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

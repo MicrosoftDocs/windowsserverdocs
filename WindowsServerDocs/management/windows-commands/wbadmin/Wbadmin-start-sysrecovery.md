@@ -1,5 +1,5 @@
 ---
-title: wbadmin start sysrecovery
+title: Wbadmin start sysrecovery
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,24 +8,24 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95b8232f-7c42-452b-838e-15b0cf6faebe
 ---
-# wbadmin start sysrecovery
+# Wbadmin start sysrecovery
 Performs a system recovery \(bare metal recovery\) using the parameters that you specify.
 
 > [!NOTE]
-> This subcommand can be run only from the Windows recovery Environment, and it is not listed by default in the usage text of **wbadmin**. for more information, see [Windows recovery Environment \(Windows RE\) Overview](http://technet.microsoft.com/library/hh825173.aspx).
+> This subcommand can be run only from the Windows Recovery Environment, and it is not listed by default in the usage text of **Wbadmin**. For more information, see [Windows Recovery Environment \(Windows RE\) Overview](http://technet.microsoft.com/library/hh825173.aspx).
 
 To perform a system recovery with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions.
 
-for examples of how to use this subcommand, see [Examples](#BKMK_examples).
+For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
 wbadmin start sysrecovery
--version:<versionIdentifier>
--backupTarget:{<BackupDestinationvolume> | <NetworkShareHostingBackup>}
+-version:<VersionIdentifier>
+-backupTarget:{<BackupDestinationVolume> | <NetworkShareHostingBackup>}
 [-machine:<BackupMachineName>]
-[-restoreAllvolumes]
+[-restoreAllVolumes]
 [-recreateDisks]
 [-excludeDisks]
 [-skipBadClusterCheck]
@@ -36,13 +36,13 @@ wbadmin start sysrecovery
 
 |Parameter|Description|
 |-------------|---------------|
-|\-version|Specifies the version identifier for the backup to recover in MM\/DD\/YYYY\-HH:MM format. if you do not know the version identifier, type **wbadmin get versions**.|
+|\-version|Specifies the version identifier for the backup to recover in MM\/DD\/YYYY\-HH:MM format. If you do not know the version identifier, type **wbadmin get versions**.|
 |\-backupTarget|Specifies the storage location that contains the backup or backups that you want to recover. This parameter is useful when the storage location is different from where backups of this computer are usually stored.|
 |\-machine|Specifies the name of the computer that you want to recover. This parameter is useful when multiple computers have been backed up to the same location. Should be used when the **\-backupTarget** parameter is specified.|
-|\-restoreAllvolumes|recovers all volumes from the selected backup. if this parameter is not specified, only critical volumes \(volumes that contain the system state and operating system components\) are recovered. This parameter is useful when you need to recover non\-critical volumes during system recovery.|
-|\-recreateDisks|recovers a disk configuration to the state that existed when the backup was created. **Warning:** This parameter deletes all data on volumes that host operating system components. It might also delete data from data volumes.|
+|\-restoreAllVolumes|Recovers all volumes from the selected backup. If this parameter is not specified, only critical volumes \(volumes that contain the system state and operating system components\) are recovered. This parameter is useful when you need to recover non\-critical volumes during system recovery.|
+|\-recreateDisks|Recovers a disk configuration to the state that existed when the backup was created. **Warning:** This parameter deletes all data on volumes that host operating system components. It might also delete data from data volumes.|
 |\-excludeDisks|Valid only when specified with the **\-recreateDisks** parameter and must be input as a comma\-delimited list of disk identifiers \(as listed in the output of **wbadmin get disks**\). Excluded disks are not partitioned or formatted. This parameter helps preserve data on disks that you do not want modified during the recovery operation.|
-|\-skipBadClusterCheck|Skips checking your recovery disks for bad cluster information. if you are restoring to an alternate server or hardware, we recommend that you do not use this parameter. You can manually run **chkdsk \/b** on your recovery disks at any time to check them for bad clusters, and then update the file system information accordingly. **Warning:** Until you run **chkdsk** as described, the bad clusters reported on your recovered system may not be accurate.|
+|\-skipBadClusterCheck|Skips checking your recovery disks for bad cluster information. If you are restoring to an alternate server or hardware, we recommend that you do not use this parameter. You can manually run **chkdsk \/b** on your recovery disks at any time to check them for bad clusters, and then update the file system information accordingly. **Warning:** Until you run **chkdsk** as described, the bad clusters reported on your recovered system may not be accurate.|
 |\-quiet|Runs the command with no prompts to the user.|
 
 ## <a name="BKMK_examples"></a>Examples
@@ -58,12 +58,12 @@ To start recovering the information from the backup that was run on April 30, 20
 wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-#### additional references
+#### Additional references
 
--   [Command-Line Syntax Key](../commandline-syntax-key.md)
+-   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [wbadmin]()
+-   [Wbadmin](Wbadmin.md)
 
--   [Get\-WBBaremetalrecovery](http://technet.microsoft.com/library/jj902461.aspx) cmdlet
+-   [Get\-WBBareMetalRecovery](http://technet.microsoft.com/library/jj902461.aspx) cmdlet
 
 

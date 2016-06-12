@@ -1,5 +1,5 @@
 ---
-title: ren
+title: Ren
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,27 +8,27 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
 ---
-# ren
-renames files or directories. This command is the same as the **rename** command.
+# Ren
+Renames files or directories. This command is the same as the **rename** command.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-ren [<Drive>:][<path>]<FileName1> <FileName2>
-rename [<Drive>:][<path>]<FileName1> <FileName2>
+ren [<Drive>:][<Path>]<FileName1> <FileName2>
+rename [<Drive>:][<Path>]<FileName1> <FileName2>
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<path>\]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters \(**\*** and **?**\).|
+|\[<Drive>:\]\[<Path>\]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters \(**\*** and **?**\).|
 |<FileName2>|Specifies the new name for the file. You can use wildcard characters to specify new names for multiple files.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
 -   You cannot specify a new drive or path when renaming files.
 
@@ -36,7 +36,7 @@ rename [<Drive>:][<path>]<FileName1> <FileName2>
 
 -   You can use wildcard characters \(**\*** and **?**\) in either *FileName* parameter. Characters that are represented by wildcard characters in *FileName2* will be identical to the corresponding characters in *FileName1*.
 
--   *FileName2* must be a unique file name. if *FileName2* matches an existing file name, **ren** displays the following message:
+-   *FileName2* must be a unique file name. If *FileName2* matches an existing file name, **ren** displays the following message:
 
     ```
     Duplicate file name or file not found
@@ -55,7 +55,7 @@ To change the name of a directory from Chap10 to Part10, type:
 ren chap10 part10 
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

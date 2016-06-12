@@ -1,5 +1,5 @@
 ---
-title: prompt
+title: Prompt
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
 ---
-# prompt
-changes the cmd.exe command prompt. if used without parameters, **prompt** resets the command prompt to the default setting, which is the current drive letter and directory followed by the greater than symbol \(**>**\).
+# Prompt
+Changes the Cmd.exe command prompt. If used without parameters, **prompt** resets the command prompt to the default setting, which is the current drive letter and directory followed by the greater than symbol \(**>**\).
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -26,7 +26,7 @@ prompt [<Text>]
 |<Text>|Specifies the text and information that you want to include in the command prompt.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
 -   You can customize the command prompt to display any text you want, including such information as the name of the current directory, the time and date, and the Microsoft Windows version number.
 
@@ -59,7 +59,7 @@ prompt [<Text>]
     |$\+|Zero or more plus sign \(**\+**\) characters, depending on the depth of the **pushd** directory stack \(one character for each level pushed\).|
     |$m|The remote name associated with the current drive letter or the empty string if current drive is not a network drive.|
 
--   if you include the **$p** character in the text parameter, your disk is read after you enter each command \(to determine the current drive and path\). This can take extra time, especially for floppy disk drives.
+-   If you include the **$p** character in the text parameter, your disk is read after you enter each command \(to determine the current drive and path\). This can take extra time, especially for floppy disk drives.
 
 ## <a name="BKMK_examples"></a>Examples
 To set a two\-line command prompt with the current time and date on the first line and the greater than sign on the next line, type:
@@ -87,7 +87,7 @@ To manually change the command prompt to the default setting \(the current drive
 prompt $p$g
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getproxylist
+title: Bitsadmin getproxylist
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eebfa727-d8f1-4ae3-9382-6d8ffe8c3df3
 ---
-# bitsadmin getproxylist
+# Bitsadmin getproxylist
 Retrieves the proxy list for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetProxylist <Job>
+bitsadmin /GetProxyList <Job>
 ```
 
 ## Parameters
@@ -23,7 +23,7 @@ bitsadmin /GetProxylist <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## remarks
+## Remarks
 
 -   The proxy list is the list of proxy servers to use. The list is comma\-delimited.
 
@@ -31,10 +31,10 @@ bitsadmin /GetProxylist <Job>
 The following example retrieves the proxy list for the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetProxylist myDownloadJob
+C:\>bitsadmin /GetProxyList myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

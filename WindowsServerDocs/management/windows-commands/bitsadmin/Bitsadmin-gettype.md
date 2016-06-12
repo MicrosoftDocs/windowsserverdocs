@@ -1,5 +1,5 @@
 ---
-title: bitsadmin gettype
+title: Bitsadmin gettype
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bec16f04-3e95-4587-889e-3de6ad03c9c8
 ---
-# bitsadmin gettype
+# Bitsadmin gettype
 Retrieves the job type of the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /gettype <Job>
+bitsadmin /GetType <Job>
 ```
 
 ## Parameters
@@ -23,17 +23,17 @@ bitsadmin /gettype <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## remarks
+## Remarks
 The type can be DOWNLOAD, UPLOAD, UPLOAD\-REPLY, or UNKNOWN.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the job type for the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /gettype myDownloadJob
+C:\>bitsadmin /GetType myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

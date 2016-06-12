@@ -1,5 +1,5 @@
 ---
-title: detail disk
+title: Detail disk
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6b09cf40-8d93-452b-b449-5242e62a4102
 ---
-# detail disk
+# Detail disk
 Displays the properties of the selected disk and the volumes on that disk.
 
 ## Syntax
@@ -19,11 +19,11 @@ Displays the properties of the selected disk and the volumes on that disk.
 detail disk
 ```
 
-## remarks
+## Remarks
 
 -   A disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
--   if the selected disk is a virtual hard disk \(VHD\), **detail disk** reports the disk's bus type as Virtual.
+-   If the selected disk is a virtual hard disk \(VHD\), **detail disk** reports the disk's bus type as Virtual.
 
 ## <a name="BKMK_examples"></a>Examples
 To see the properties of the selected disk, and information about the volumes in the disk, type:
@@ -32,8 +32,8 @@ To see the properties of the selected disk, and information about the volumes in
 detail disk
 ```
 
-#### additional references
-[Command-Line Syntax Key](../../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 

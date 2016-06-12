@@ -69,7 +69,7 @@ You must apply the following hotfix to all domain controllers running  Windows S
 
 |Content type|References|
 |----------------|--------------|
-|**Product evaluation**|[What's New in Kerberos Authentication](whats-new-kerberos-authentication.md)|
+|**Product evaluation**|[What's New in Kerberos Authentication](What-s-New-in-Kerberos-Authentication.md)|
 |**Planning**|[Kerberos Protocol Transition and Constrained Delegation](http://technet.microsoft.com/library/cc739587(WS.10).aspx) in Windows Server 2003.<br /><br />[Kerberos Documentation for Windows 7, Windows Vista, Windows Server 2008 R2, and Windows Server 2008](http://technet.microsoft.com/library/cc753173(WS.10).aspx)|
 |**Deployment**|Not yet available|
 |**Operations**|Not yet available|
@@ -77,6 +77,6 @@ You must apply the following hotfix to all domain controllers running  Windows S
 |**Security**|Not yet available|
 |**Tools and settings**|[\[MS\-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](http://msdn.microsoft.com/library/cc246071(PROT.10).aspx)<br /><br />[Active Directory Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/ee617195)|
 |**Community resources**|[Kerberos Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/4209.kerberos-survival-guide.aspx)|
-|**Related technologies**|[Active Directory Domain Services Overview](active-directory-domain-services-overview.md)|
+|**Related technologies**|[Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)|
 
 

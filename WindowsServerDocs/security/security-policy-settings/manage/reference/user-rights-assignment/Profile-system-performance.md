@@ -87,6 +87,6 @@ Ensure that only the local Administrators group is assigned the **Profile system
 None. Restricting the **Profile system performance** user right to the local Administrators group is the default configuration.  
   
 ## See Also  
-[User Rights Assignment](user-rights-assignment.md)  
+[User Rights Assignment](User-Rights-Assignment.md)  
   
 

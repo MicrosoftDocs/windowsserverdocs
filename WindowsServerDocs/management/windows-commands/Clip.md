@@ -1,5 +1,5 @@
 ---
-title: clip
+title: Clip
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 85322d85-3376-4806-845b-93ac77fe27bf
 ---
-# clip
+# Clip
 Redirects command output from the command line to the Windows clipboard. You can then paste this text output into other programs.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -24,12 +24,12 @@ clip < <FileName>
 
 |Parameter|Description|
 |-------------|---------------|
-|<Command>|Specifies a command whose output you want to send to the Windows clipboard.|
-|<FileName>|Specifies a file whose contents you want to send to the Windows clipboard.|
+|<Command>|Specifies a command whose output you want to send to the Windows Clipboard.|
+|<FileName>|Specifies a file whose contents you want to send to the Windows Clipboard.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
-You can use the **clip** command to copy data directly into any application that can receive text from the clipboard.
+## Remarks
+You can use the **clip** command to copy data directly into any application that can receive text from the Clipboard.
 
 ## <a name="BKMK_examples"></a>Examples
 To copy the current directory listing to the Windows clipboard, type:
@@ -38,19 +38,19 @@ To copy the current directory listing to the Windows clipboard, type:
 dir | clip
 ```
 
-To copy the output of a program called Generic.awk to the Windows clipboard, type:
+To copy the output of a program called Generic.awk to the Windows Clipboard, type:
 
 ```
 awk -f generic.awk input.txt | clip
 ```
 
-To copy the contents of a file called Readme.txt to the Windows clipboard, type:
+To copy the contents of a file called Readme.txt to the Windows Clipboard, type:
 
 ```
 clip < readme.txt
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

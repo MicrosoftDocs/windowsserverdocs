@@ -1,5 +1,5 @@
 ---
-title: setx
+title: Setx
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,54 +8,54 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ef37482f-f8a8-4765-951a-2518faac3f44
 ---
-# setx
-creates or modifies environment variables in the user or system environment, without requiring programming or scripting. The **setx** command also retrieves the values of registry keys and writes them to text files.
+# Setx
+Creates or modifies environment variables in the user or system environment, without requiring programming or scripting. The **Setx** command also retrieves the values of registry keys and writes them to text files.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-setx [/s <computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] <Variable> <Value> [/m]
-setx [/s <computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] [<Variable>] /k <path> [/m]
-setx [/s <computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName> {[<Variable>] {/a <X>,<Y> | /r <X>,<Y> "<String>"} [/m] | /x} [/d <delimiters>]
+setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] <Variable> <Value> [/m]
+setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] [<Variable>] /k <Path> [/m]
+setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName> {[<Variable>] {/a <X>,<Y> | /r <X>,<Y> "<String>"} [/m] | /x} [/d <Delimiters>]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|\/s <computer>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default value is the name of the local computer.|
+|\/s <Computer>|Specifies the name or IP address of a remote computer. Do not use backslashes. The default value is the name of the local computer.|
 |\/u \[<Domain>\\\]<User name>|Runs the script with the credentials of the specified user account. The default value is the system permissions.|
 |\/p \[<Password>\]|Specifies the password of the user account that is specified in the **\/u** parameter.|
 |<Variable>|Specifies the name of the environment variable that you want to set.|
 |<Value>|Specifies the value to which you want to set the environment variable.|
-|\/k <path>|Specifies that the variable is set based on information from a registry key. The p*ath* uses the following syntax:<br /><br />`\<HIVE>\<KEY>\...\<Value>`<br /><br />for example, you might specify the following path:<br /><br />`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\timeZoneInformation\StandardName`|
+|\/k <Path>|Specifies that the variable is set based on information from a registry key. The p*ath* uses the following syntax:<br /><br />`\<HIVE>\<KEY>\...\<Value>`<br /><br />For example, you might specify the following path:<br /><br />`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName`|
 |\/f <File name>|Specifies the file that you want to use.|
 |\/a <X>,<Y>|Specifies absolute coordinates and offset as search parameters.|
 |\/r <X>,<Y> "<String>"|Specifies relative coordinates and offset from **String** as search parameters.|
 |\/m|Specifies to set the variable in the system environment. The default setting is the local environment.|
 |\/x|Displays file coordinates, ignoring the **\/a**, **\/r**, and **\/d** command\-line options.|
-|\/d <delimiters>|Specifies delimiters such as "**,**" or "**\\**" to be used in addition to the four built\-in delimiters — SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built\-in delimiters.|
+|\/d <Delimiters>|Specifies delimiters such as "**,**" or "**\\**" to be used in addition to the four built\-in delimiters — SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built\-in delimiters.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
--   The **setx** command is similar to the UNIX utility SETENV.
+-   The **Setx** command is similar to the UNIX utility SETENV.
 
--   **setx** provides the only command\-line or programmatic way to directly and permanently set system environment values. System environment variables are manually configurable through **Control Panel** or through a registry editor. The **set** command, which is internal to the command interpreter \(cmd.exe\), sets user environment variables for the current console window only.
+-   **Setx** provides the only command\-line or programmatic way to directly and permanently set system environment values. System environment variables are manually configurable through **Control Panel** or through a registry editor. The **set** command, which is internal to the command interpreter \(Cmd.exe\), sets user environment variables for the current console window only.
 
--   You can use the **setx** command to set values for user and system environment variables from one of three sources \(modes\): Command Line mode, registry mode, or File mode.
+-   You can use the **setx** command to set values for user and system environment variables from one of three sources \(modes\): Command Line Mode, Registry Mode, or File Mode.
 
--   **setx** writes variables to the master environment in the registry. Variables set with **setx** variables are available in future command windows only, not in the current command window.
+-   **Setx** writes variables to the master environment in the registry. Variables set with **setx** variables are available in future command windows only, not in the current command window.
 
--   **HKEY\_CURrenT\_USER** and **HKEY\_LOCAL\_MACHINE** are the only supported hives. reg\_DWOrd, reg\_expand\_SZ, reg\_SZ, and reg\_MULTI\_SZ are the valid **regKey** data types.
+-   **HKEY\_CURRENT\_USER** and **HKEY\_LOCAL\_MACHINE** are the only supported hives. REG\_DWORD, REG\_EXPAND\_SZ, REG\_SZ, and REG\_MULTI\_SZ are the valid **RegKey** data types.
 
--   When you gain access to **reg\_MULTI\_SZ** values in the registry, only the first item is extracted and used.
+-   When you gain access to **REG\_MULTI\_SZ** values in the registry, only the first item is extracted and used.
 
 -   You cannot use the **setx** command to remove values that have been added to the local or system environments. You can use **set** with a variable name and no value to remove a corresponding value from the local environment.
 
--   reg\_DWOrd registry values are extracted and used in hexadecimal mode.
+-   REG\_DWORD registry values are extracted and used in hexadecimal mode.
 
 -   File mode supports the parsing of carriage return and line feed \(CRLF\) text files only.
 
@@ -66,91 +66,91 @@ To set the MACHINE environment variable in the local environment to the value Br
 setx MACHINE Brand1
 ```
 
-To set the MACHINE environment variable in the system environment to the value Brand1 computer, type:
+To set the MACHINE environment variable in the system environment to the value Brand1 Computer, type:
 
 ```
-setx MACHINE "Brand1 computer" /m
+setx MACHINE "Brand1 Computer" /m
 ```
 
-To set the MYpath environment variable in the local environment to use the search path defined in the path environment variable, type:
+To set the MYPATH environment variable in the local environment to use the search path defined in the PATH environment variable, type:
 
 ```
-setx MYpath %path%
+setx MYPATH %PATH%
 ```
 
-To set the MYpath environment variable in the local environment to use the search path defined in the path environment variable after replacing **~** with **%**, type:
+To set the MYPATH environment variable in the local environment to use the search path defined in the PATH environment variable after replacing **~** with **%**, type:
 
 ```
-setx MYpath ~path~ 
+setx MYPATH ~PATH~ 
 ```
 
-To set the MACHINE environment variable in the local environment to Brand1 on a remote computer named computer1, type:
+To set the MACHINE environment variable in the local environment to Brand1 on a remote computer named Computer1, type:
 
 ```
 setx /s computer1 /u maindom\hiropln /p p@ssW23 MACHINE Brand1
 ```
 
-To set the MYpath environment variable in the local environment to use the search path defined in the path environment variable on a remote computer named computer1, type:
+To set the MYPATH environment variable in the local environment to use the search path defined in the PATH environment variable on a remote computer named Computer1, type:
 
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23 MYpath %path%
+setx /s computer1 /u maindom\hiropln /p p@ssW23 MYPATH %PATH%
 ```
 
-To set the TZONE environment variable in the local environment to the value found in the **HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Control\\timeZoneInformation\\StandardName** registry key, type:
+To set the TZONE environment variable in the local environment to the value found in the **HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Control\\TimeZoneInformation\\StandardName** registry key, type:
 
 ```
-setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\timeZoneInformation\StandardName 
+setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName 
 ```
 
-To set the TZONE environment variable in the local environment of a remote computer named computer1 to the value found in the **HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Control\\timeZoneInformation\\StandardName** registry key, type:
+To set the TZONE environment variable in the local environment of a remote computer named Computer1 to the value found in the **HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Control\\TimeZoneInformation\\StandardName** registry key, type:
 
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23 TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\timeZoneInformation\StandardName 
+setx /s computer1 /u maindom\hiropln /p p@ssW23 TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName 
 ```
 
-To set the BUILD environment variable in the system environment to the value found in the **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\WindowsNT\\Currentversion\\CurrentBuildNumber** registry key, type:
+To set the BUILD environment variable in the system environment to the value found in the **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\WindowsNT\\CurrentVersion\\CurrentBuildNumber** registry key, type:
 
 ```
-setx BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\Currentversion\CurrentBuildNumber" /m
+setx BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber" /m
 ```
 
-To set the BUILD environment variable in the system environment of a remote computer named computer1 to the value found in the **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\WindowsNT\\Currentversion\\CurrentBuildNumber** registry key, type:
+To set the BUILD environment variable in the system environment of a remote computer named Computer1 to the value found in the **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\WindowsNT\\CurrentVersion\\CurrentBuildNumber** registry key, type:
 
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23  BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Currentversion\CurrentBuildNumber" /m
+setx /s computer1 /u maindom\hiropln /p p@ssW23  BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\CurrentBuildNumber" /m
 ```
 
-To display the contents of a file named ipconfig.out, along with the contents' corresponding coordinates, type:
+To display the contents of a file named Ipconfig.out, along with the contents' corresponding coordinates, type:
 
 ```
 setx /f ipconfig.out /x
 ```
 
-To set the IPaddR environment variable in the local environment to the value found at the coordinate 5,11 in the file ipconfig.out, type:
+To set the IPADDR environment variable in the local environment to the value found at the coordinate 5,11 in the file Ipconfig.out, type:
 
 ```
-setx IPaddR /f ipconfig.out /a 5,11
+setx IPADDR /f ipconfig.out /a 5,11
 ```
 
-To set the OCTET1 environment variable in the local environment to the value found at the coordinate 5,3 in the file ipconfig.out with delimiters **"\#$\*."**, type:
+To set the OCTET1 environment variable in the local environment to the value found at the coordinate 5,3 in the file Ipconfig.out with delimiters **"\#$\*."**, type:
 
 ```
 setx OCTET1 /f ipconfig.out /a 5,3 /d "#$*." 
 ```
 
-To set the IPGatEWAY environment variable in the local environment to the value found at the coordinate 0,7 with respect to the coordinate of "Gateway" in the file ipconfig.out, type:
+To set the IPGATEWAY environment variable in the local environment to the value found at the coordinate 0,7 with respect to the coordinate of "Gateway" in the file Ipconfig.out, type:
 
 ```
-setx IPGatEWAY /f ipconfig.out /r 0,7 Gateway 
+setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway 
 ```
 
-To display the contents of a file named ipconfig.out — along with the contents' corresponding coordinates — on a computer named computer1, type:
+To display the contents of a file named Ipconfig.out — along with the contents' corresponding coordinates — on a computer named Computer1, type:
 
 ```
 setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x 
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

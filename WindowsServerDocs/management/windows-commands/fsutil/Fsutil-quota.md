@@ -11,18 +11,18 @@ ms.topic: article
 ms.assetid: ba654192-e712-4e22-95e9-7049f23bd7ac
 ---
 # Fsutil quota
-manages disk quotas on NTFS volumes to provide more precise control of network\-based storage.
+Manages disk quotas on NTFS volumes to provide more precise control of network\-based storage.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-fsutil quota [disable] <volumepath>
-fsutil quota [enforce] <volumepath>
-fsutil quota [modify] <volumepath> <Threshold> <Limit> <UserName>
-fsutil quota [query] <volumepath>
-fsutil quota [track] <volumepath>
+fsutil quota [disable] <VolumePath>
+fsutil quota [enforce] <VolumePath>
+fsutil quota [modify] <VolumePath> <Threshold> <Limit> <UserName>
+fsutil quota [query] <VolumePath>
+fsutil quota [track] <VolumePath>
 fsutil quota [violations]
 ```
 
@@ -33,15 +33,15 @@ fsutil quota [violations]
 |disable|Disables quota tracking and enforcement on the specified volume.|
 |enforce|Enforces quota usage on the specified volume.|
 |modify|Modifies an existing disk quota or creates a new quota.|
-|query|lists existing disk quotas.|
+|query|Lists existing disk quotas.|
 |track|Tracks disk usage on the specified volume.|
 |violations|Searches the system and application logs and displays a message to indicate that quota violations have been detected or that a user has reached a quota threshold or quota limit.|
-|<volumepath>|Required. Specifies the drive name followed by a colon or the GUID in the format **volume{***GUID***}**.|
+|<VolumePath>|Required. Specifies the drive name followed by a colon or the GUID in the format **Volume{***GUID***}**.|
 |<Threshold>|Sets the limit \(in bytes\) at which warnings are issued. This parameter is required for the **fsutil quota modify** command.|
 |<Limit>|Sets the maximum allowed disk usage \(in bytes\). This parameter is required for the **fsutil quota modify** command.|
 |<UserName>|Specifies the domain or user name. This parameter is required for the **fsutil quota modify** command.|
 
-## remarks
+## Remarks
 
 -   Disk quotas are implemented on a per\-volume basis, and they enable both hard and soft storage limits to be implemented on a per\-user basis.
 
@@ -51,7 +51,7 @@ fsutil quota [violations]
 To list existing disk quotas for a disk volume that is specified with the GUID, {928842df\-5a01\-11de\-a85c\-806e6f6e6963}, type:
 
 ```
-fsutil quota query volume{928842df-5a01-11de-a85c-806e6f6e6963}
+fsutil quota query Volume{928842df-5a01-11de-a85c-806e6f6e6963}
 ```
 
 To list existing disk quotas for a disk volume that is specified with the drive letter, **C:**, type:
@@ -60,9 +60,9 @@ To list existing disk quotas for a disk volume that is specified with the drive 
 Fsutil quota query C:
 ```
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil]()
+[Fsutil](Fsutil.md)
 
 

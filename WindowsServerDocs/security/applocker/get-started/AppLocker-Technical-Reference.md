@@ -1,5 +1,5 @@
 ---
-title: applocker Technical Reference
+title: AppLocker Technical Reference
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -10,60 +10,60 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 13f842de-bfbd-4111-964d-d9f34ac25781
 ---
-# applocker Technical Reference
-This overview topic for the IT professional explains the applocker application control feature and provides links to the topics in the technical reference.
+# AppLocker Technical Reference
+This overview topic for the IT professional explains the AppLocker application control feature and provides links to the topics in the technical reference.
 
-applocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. applocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications. These capabilities have been enhanced in  Windows Server 2012  and Windows 8.
+AppLocker was introduced in  Windows Server 2008 R2  and  Windows 7  that advances the application control features and functionality of Software Restriction Policies. AppLocker contains new capabilities and extensions that allow you to create rules to allow or deny applications from running based on unique identities of files and to specify which users or groups can run those applications. These capabilities have been enhanced in  Windows Server 2012  and Windows 8.
 
-The applocker Technical Reference contains the following subjects:
+The AppLocker Technical Reference contains the following subjects:
 
--   [What Is applocker?](what-applocker.md)
+-   [What Is AppLocker?](What-Is-AppLocker-.md)
 
-    This topic describes what applocker is and how its features differ from Software Restriction Policies.
+    This topic describes what AppLocker is and how its features differ from Software Restriction Policies.
 
--   [Requirements to Use applocker](requirements-use-applocker.md)
+-   [Requirements to Use AppLocker](Requirements-to-Use-AppLocker.md)
 
-    This topic lists software requirements that allow you to use applocker.
+    This topic lists software requirements that allow you to use AppLocker.
 
--   [When to Use applocker](https://technet.microsoft.com/en-us/library/ee424371(d=default,l=en-us,v=ws.10).aspx)
+-   [When to Use AppLocker](https://technet.microsoft.com/en-us/library/ee424371(d=default,l=en-us,v=ws.10).aspx)
 
-    This topic describes the scenarios and applications in which applocker is useful.
+    This topic describes the scenarios and applications in which AppLocker is useful.
 
--   [applocker Policy Use Scenarios](applocker-policy-use-scenarios.md)
+-   [AppLocker Policy Use Scenarios](AppLocker-Policy-Use-Scenarios.md)
 
-    This topic lists the various application control scenarios in which applocker policies can be effectively implemented.
+    This topic lists the various application control scenarios in which AppLocker policies can be effectively implemented.
 
--   [How applocker Works](how-applocker-works.md)
+-   [How AppLocker Works](How-AppLocker-Works.md)
 
-    This topic explains how the application identity service and the applocker engine work to set and enforce policies.
+    This topic explains how the application identity service and the AppLocker engine work to set and enforce policies.
 
--   [applocker Architecture and Components](applocker-architecture-components.md)
+-   [AppLocker Architecture and Components](AppLocker-Architecture-and-Components.md)
 
-    This topic describes the components that applocker uses for creating and applying application control policies.
+    This topic describes the components that AppLocker uses for creating and applying application control policies.
 
--   [applocker Processes and Interactions](applocker-processes-interactions.md)
+-   [AppLocker Processes and Interactions](AppLocker-Processes-and-Interactions.md)
 
-    This topic explains how applocker processes policies for both auditing and enforcing each rule collection type.
+    This topic explains how AppLocker processes policies for both auditing and enforcing each rule collection type.
 
--   [applocker Functions](applocker-functions.md)
+-   [AppLocker Functions](AppLocker-Functions.md)
 
-    This topic lists the functions and security levels for the Software Restriction Policies and applocker policies beginning with Windows Server 2003.
+    This topic lists the functions and security levels for the Software Restriction Policies and AppLocker policies beginning with Windows Server 2003.
 
--   [Security Considerations for applocker](security-considerations-applocker.md)
+-   [Security Considerations for AppLocker](Security-Considerations-for-AppLocker.md)
 
-    This topic describes the threats and vulnerabilities to applocker and how you can mitigate them.
+    This topic describes the threats and vulnerabilities to AppLocker and how you can mitigate them.
 
--   [Tools to Use with applocker](tools-use-with-applocker.md)
+-   [Tools to Use with AppLocker](Tools-to-Use-with-AppLocker.md)
 
-    This topic lists and describes the tools available to evaluate, review, create, modify, and test applocker policies.
+    This topic lists and describes the tools available to evaluate, review, create, modify, and test AppLocker policies.
 
--   [applocker Settings](applocker-settings.md)
+-   [AppLocker Settings](AppLocker-Settings.md)
 
-    This topic lists the relevant Windows operating system settings for applocker.
+    This topic lists the relevant Windows operating system settings for AppLocker.
 
--   [applocker PowerShell Command Reference](https://technet.microsoft.com/en-us/library/ee424349(d=default,l=en-us,v=ws.10).aspx)
+-   [AppLocker PowerShell Command Reference](https://technet.microsoft.com/en-us/library/ee424349(d=default,l=en-us,v=ws.10).aspx)
 
-    This topic introduces and provides links to the Windows PowerShell cmdlets that can be used to help manage applocker.
+    This topic introduces and provides links to the Windows PowerShell cmdlets that can be used to help manage AppLocker.
 
 > [!TIP]
 > To digitally save or print pages from this library, click **Export** \(in the upper\-right corner of the page\), and then follow the instructions.

@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getclientcertificate
+title: Bitsadmin getclientcertificate
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4fc8f408-085e-43a0-9fa8-3d798ef107b1
 ---
-# bitsadmin getclientcertificate
+# Bitsadmin getclientcertificate
 Retrieves the client certificate from the job.
 
 ## Syntax
@@ -30,7 +30,7 @@ The following example retrieves the client certificate for the job named *myDown
 C:\>bitsadmin / GetClientCertificate myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

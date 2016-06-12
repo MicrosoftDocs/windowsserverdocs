@@ -1,5 +1,5 @@
 ---
-title: applocker Settings
+title: AppLocker Settings
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -10,10 +10,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b3d43342-d7a5-4527-99fa-9edf100f7d9e
 ---
-# applocker Settings
-This topic for the IT professional lists the settings used by applocker.
+# AppLocker Settings
+This topic for the IT professional lists the settings used by AppLocker.
 
-The following table describes the settings and values used by applocker.
+The following table describes the settings and values used by AppLocker.
 
 |Setting|Value|
 |-----------|---------|
@@ -26,6 +26,6 @@ The following table describes the settings and values used by applocker.
 |Performance counters|Not applicable|
 
 ## See Also
-[applocker Technical Reference](applocker-technical-reference.md)
+[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
 
 

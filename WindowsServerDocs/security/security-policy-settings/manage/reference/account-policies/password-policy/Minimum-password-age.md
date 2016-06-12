@@ -68,6 +68,6 @@ Configure the **Minimum password age** policy setting to a value of at least 2 d
 If an administrator sets a password for a user but wants that user to change the password when the user first logs on, the administrator must select the **User must change password at next logon** check box, or the user cannot change the password until the next day.  
   
 ## See Also  
-[Password Policy](password-policy.md)  
+[Password Policy](Password-Policy.md)  
   
 

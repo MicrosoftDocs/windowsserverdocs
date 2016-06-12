@@ -1,5 +1,5 @@
 ---
-title: mode
+title: Mode
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,8 +9,8 @@ ms.topic: article
 ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
 author: jaimeo
 ---
-# mode
-Displays system status, changes system settings, or reconfigures ports or devices. if used without parameters, **mode** displays all the controllable attributes of the console and the available COM devices.  
+# Mode
+Displays system status, changes system settings, or reconfigures ports or devices. If used without parameters, **mode** displays all the controllable attributes of the console and the available COM devices.  
   
 You can use **mode** to perform the following tasks—each task uses a different syntax:  
   
@@ -38,11 +38,11 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
   
 |Parameter|Description|  
 |-------------|---------------|  
-|Com<M>\[:\]|Specifies the number of the async prncnfgvbshronous communications port.|  
+|Com<M>\[:\]|Specifies the number of the async Prncnfg.vbshronous communications port.|  
 |baud\=<B>|Specifies the transmission rate in bits per second. The following table lists valid abbreviations for *B* and their related rates.<br /><br />-   **11** \= 110 baud<br />-   **15** \= 150 baud<br />-   **30** \= 300 baud<br />-   **60** \= 600 baud<br />-   **12** \= 1200 baud<br />-   **24** \= 2400 baud<br />-   **48** \= 4800 baud<br />-   **96** \= 9600 baud<br />-   **19** \= 19,200 baud|  
 |parity\=<P>|Specifies how the system uses the parity bit to check for transmission errors. The following table lists valid values for *P*. The default value is **e**. Not all computers support the values **m** and **s**.<br /><br />-   **n** \= none<br />-   **e** \= even<br />-   **o** \= odd<br />-   **m** \= mark<br />-   **s** \= space|  
 |data\=<D>|Specifies the number of data bits in a character. Valid values for **d** are in the range 5 through 8. The default value is 7. Not all computers support the values 5 and 6.|  
-|stop\=<S>|Specifies the number of stop bits that define the end of a character: 1, 1.5, or 2. if the baud rate is 110, the default value is 2. Otherwise, the default value is 1. Not all computers support the value 1.5.|  
+|stop\=<S>|Specifies the number of stop bits that define the end of a character: 1, 1.5, or 2. If the baud rate is 110, the default value is 2. Otherwise, the default value is 1. Not all computers support the value 1.5.|  
 |to\={on &#124; off}|Specifies whether infinite time\-out processing is on or off. The default is off.|  
 |xon\={on &#124; off}|Specifies whether the xon or xoff protocol for data\-flow control is on or off.|  
 |odsr\={on &#124; off}|Specifies whether output handshaking that uses the Data Set Ready \(DSR\) circuit is on or off.|  
@@ -68,8 +68,8 @@ mode [<Device>] [/status]
 |\/status|Requests the status of any redirected parallel printers. You can abbreviate the **\/status** command\-line option as **\/sta**.|  
 |\/?|Displays help at the command prompt.|  
   
-##### remarks  
-if used without parameters, **mode** displays the status of all devices that are installed on your system.  
+##### Remarks  
+If used without parameters, **mode** displays the status of all devices that are installed on your system.  
   
 ## <a name="BKMK_3"></a>To redirect output from a parallel port to a serial communications port  
   
@@ -87,20 +87,20 @@ mode lpt<N>[:]=com<M>[:]
 |com<M>\[:\]|Required. Specifies the serial port. Valid values for *M* are in the range 1 through 4.|  
 |\/?|Displays help at the command prompt.|  
   
-##### remarks  
+##### Remarks  
 You must be a member of the Administrators group to redirect printing.  
   
 ##### Examples  
 To set up your system so that it sends parallel printer output to a serial printer, you must use the **mode** command twice. The first time, use **mode** to configure the serial port. The second time, use **mode** to redirect parallel printer output to the serial port you specified in the first **mode** command.  
   
-for example, if your serial printer operates at 4800 baud with even parity, and it is connected to the COM1 port \(the first serial connection on your computer\), type:  
+For example, if your serial printer operates at 4800 baud with even parity, and it is connected to the COM1 port \(the first serial connection on your computer\), type:  
   
 ```  
 mode com1 48,e,,,b  
 mode lpt1=com1  
 ```  
   
-if you redirect parallel printer output from LPT1 to COM1, but then you decide that you want to print a file by using LPT1, type the following command before you print the file:  
+If you redirect parallel printer output from LPT1 to COM1, but then you decide that you want to print a file by using LPT1, type the following command before you print the file:  
   
 ```  
 mode lpt1  
@@ -123,7 +123,7 @@ mode <Device> codepage [/status]
 |-------------|---------------|  
 |<Device>|Required. Specifies the device for which you want to select a code page. CON is the only valid name for a device.|  
 |codepage select\=|Required. Specifies which code page to use with the specified device. You can abbreviate **codepageselect** as **cpsel**.|  
-|<YYY>|Required. Specifies the number of the code page to select. The following list shows each code page that is supported and its country\/region or language.<br /><br />437: United States<br /><br />850: Multilingual \(Latin I\)<br /><br />852: Slavic \(Latin II\)<br /><br />855: Cyrillic \(Russian\)<br /><br />857: Turkish<br /><br />860: Portuguese<br /><br />861: Icelandic<br /><br />863: Canadian\-French<br /><br />865: Nordic<br /><br />866: Russian<br /><br />869: modern Greek|  
+|<YYY>|Required. Specifies the number of the code page to select. The following list shows each code page that is supported and its country\/region or language.<br /><br />437: United States<br /><br />850: Multilingual \(Latin I\)<br /><br />852: Slavic \(Latin II\)<br /><br />855: Cyrillic \(Russian\)<br /><br />857: Turkish<br /><br />860: Portuguese<br /><br />861: Icelandic<br /><br />863: Canadian\-French<br /><br />865: Nordic<br /><br />866: Russian<br /><br />869: Modern Greek|  
 |codepage|Required. Displays the numbers of the code pages \(if any\) that are selected for the specified device.|  
 |\/status|Displays the numbers of the current code pages selected for the specified device. You can abbreviate **\/status** to **\/sta**. Whether or not you specify **\/status**, **mode codepage** displays the numbers of the code pages that are selected for the specified device.|  
 |\/?|Displays help at the command prompt.|  
@@ -140,7 +140,7 @@ mode con[:] [cols=<C>] [lines=<N>]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|con\[:\]|Required. Indicates that the change applies to the Command prompt window.|  
+|con\[:\]|Required. Indicates that the change applies to the Command Prompt window.|  
 |cols\=<C>|Specifies the number of columns in the command prompt screen buffer.|  
 |lines\=<N>|Specifies the number of lines in the command prompt screen buffer.|  
 |\/?|Displays help at the command prompt.|  
@@ -162,19 +162,19 @@ mode con[:] [rate=<R> delay=<D>]
 |delay\=<D>|Specifies the amount of time that will elapse after you press and hold down a key before the character output repeats.|  
 |\/?|Displays help at the command prompt.|  
   
-##### remarks  
+##### Remarks  
   
 -   The typematic rate is the rate at which a character repeats when you hold down the key for that character. The typematic rate has two components, the rate and the delay. Some keyboards do not recognize this command.  
   
 -   Using **rate\=***R*  
   
-    Valid values are in the range 1 through 32. These values are equal to approximately 2 to 30 characters per second. The default value is 20 for IBM at\-compatible keyboards, and 21 for IBM PS\/2\-compatible keyboards. if you set the rate, you must also set the delay.  
+    Valid values are in the range 1 through 32. These values are equal to approximately 2 to 30 characters per second. The default value is 20 for IBM AT\-compatible keyboards, and 21 for IBM PS\/2\-compatible keyboards. If you set the rate, you must also set the delay.  
   
 -   Using **delay**\=*D*  
   
-    Valid values for *D* are 1, 2, 3, and 4 \(representing 0.25, 0.50, 0.75, and 1 second\). The default value is 2. if you set the delay, you must also set the rate.  
+    Valid values for *D* are 1, 2, 3, and 4 \(representing 0.25, 0.50, 0.75, and 1 second\). The default value is 2. If you set the delay, you must also set the rate.  
   
-#### additional references  
-[Command-Line Syntax Key](commandline-syntax-key.md)  
+#### Additional references  
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
 

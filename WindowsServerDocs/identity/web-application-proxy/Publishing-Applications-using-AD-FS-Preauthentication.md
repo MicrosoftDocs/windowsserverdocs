@@ -122,7 +122,7 @@ This procedure describes how to publish a claims\-based application, such as a S
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../media/publishing-applications-using-ad-fs-preauthentication/powershelllogosmall.gif)****Windows PowerShell equivalent commands****  
+![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   
@@ -204,7 +204,7 @@ This procedure describes how to publish an application that uses Integrated Wind
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../media/publishing-applications-using-ad-fs-preauthentication/powershelllogosmall.gif)****Windows PowerShell equivalent commands****  
+![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   
@@ -225,7 +225,7 @@ To publish an application for clients that use MS\-OFBA, you must add a relying 
   
 To allow Web Application Proxy to perform single sign\-on \(SSO\) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](assetId:///a0d4c023-e75b-4140-b0aa-0fdb7f28a59d#BKMK_AD).  
   
-There are no additional planning steps if the application uses claims\-based authentication. If the application used Integrated Windows authentication, see [Publish an Integrated Windows authenticated-based Application for Web Browser Clients](../web-application-proxy/../web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md#BKMK_1.2).  
+There are no additional planning steps if the application uses claims\-based authentication. If the application used Integrated Windows authentication, see [Publish an Integrated Windows authenticated-based Application for Web Browser Clients](Publishing-Applications-using-AD-FS-Preauthentication.md#BKMK_1.2).  
   
 The authentication flow for clients that use the MS\-OFBA protocol using claims\-based authentication is described below. The authentication for this scenario can either use the application token in the URL, or in the body.  
   
@@ -248,14 +248,14 @@ The authentication flow for clients that use the MS\-OFBA protocol using claims\
   
 8.  The request is redirected to the backend server. The request now contains the application token and the SSO cookie. The user is granted access to the SharePoint site and is not required to enter a user name or password to view the file.  
   
-The steps to publish an application that uses MS\-OFBA are identical to the steps for a claims\-based application or a non\-claims\-based application. For claims\-based applications, see [Publish a Claims-based Application for Web Browser Clients](../web-application-proxy/../web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md#BKMK_1.1), for non\-claims\-based applications, see [Publish an Integrated Windows authenticated-based Application for Web Browser Clients](../web-application-proxy/../web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md#BKMK_1.2). Web Application Proxy automatically detects the client and will authenticate the user as required.  
+The steps to publish an application that uses MS\-OFBA are identical to the steps for a claims\-based application or a non\-claims\-based application. For claims\-based applications, see [Publish a Claims-based Application for Web Browser Clients](Publishing-Applications-using-AD-FS-Preauthentication.md#BKMK_1.1), for non\-claims\-based applications, see [Publish an Integrated Windows authenticated-based Application for Web Browser Clients](Publishing-Applications-using-AD-FS-Preauthentication.md#BKMK_1.2). Web Application Proxy automatically detects the client and will authenticate the user as required.  
   
 ## Publish an Application that uses HTTP Basic  
 HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. For more information on HTTP Basic, see [RFC 2617](http://www.ietf.org/rfc/rfc2617.txt). Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients; most rich clients don’t support cookies or state management. Publishing an app using HTTP basic provides support for ActiveSync clients in Web Application Proxy by caching the token that is received from AD FS and serving the token from the cache to overcome this limitation and avoid a high load on AD FS. In this way Web Application Proxy enables the HTTP app to receive a non\-claims relying party trust for the application to the Federation Service. See [Plan Active Directory](assetId:///a0d4c023-e75b-4140-b0aa-0fdb7f28a59d#BKMK_AD).  
   
 The authentication flow for clients that use HTTP Basic is described below and in this diagram:  
   
-![](../media/publishing-applications-using-ad-fs-preauthentication/webapplicationproxy-httpbasicflow.png)  
+![](media/WebApplicationProxy_httpBasicflow.png)  
   
 1.  The user attempts to access a published web application a telephone client.  
   
@@ -303,7 +303,7 @@ The following procedure explains how to publish HTTP basic applications.
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../media/publishing-applications-using-ad-fs-preauthentication/powershelllogosmall.gif)****Windows PowerShell equivalent commands****  
+![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   

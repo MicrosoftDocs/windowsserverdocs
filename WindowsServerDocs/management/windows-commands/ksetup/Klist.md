@@ -1,5 +1,5 @@
 ---
-title: klist
+title: Klist
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,8 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
 ---
-# klist
-Displays a list of currently cached Kerberos tickets. This information applies to  Windows Server 2012 . for examples of how this command can be used, see [Examples](#BKMK_Examples).  
+# Klist
+Displays a list of currently cached Kerberos tickets. This information applies to  Windows Server 2012 . For examples of how this command can be used, see [Examples](#BKMK_Examples).  
   
 ## Syntax  
   
@@ -21,9 +21,9 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\-lh|Denotes the high part of the user’s locally unique identifier \(LUID\), expressed in hexadecimal. if neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
-|\-li|Denotes the low part of the user’s locally unique identifier \(LUID\), expressed in hexadecimal. if neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
-|tickets|lists the currently cached ticket\-granting\-tickets \(TGTs\), and service tickets of the specified logon session. This is the default option.|  
+|\-lh|Denotes the high part of the user’s locally unique identifier \(LUID\), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|\-li|Denotes the low part of the user’s locally unique identifier \(LUID\), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|tickets|Lists the currently cached ticket\-granting\-tickets \(TGTs\), and service tickets of the specified logon session. This is the default option.|  
 |tgt|Displays the initial Kerberos TGT.|  
 |purge|Allows you to delete all the tickets of the specified logon session.|  
 |sessions|Displays a list of logon sessions on this computer.|  
@@ -31,20 +31,20 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
 |get|Allows you to request a ticket to the target computer specified by the service principal name \(SPN\).|  
 |add\_bind|Allows you to specify a preferred domain controller for Kerberos authentication.|  
 |query\_bind|Displays a list of cached preferred domain controllers for each domain that Kerberos has contacted.|  
-|purge\_bind|removes the cached preferred domain controllers for the domains specified.|  
-|kdcoptions|Displays the Key Distribution Center \(KDC\) options specified in Rfc 4120.|  
-|\/?|Displays help for this command.|  
+|purge\_bind|Removes the cached preferred domain controllers for the domains specified.|  
+|kdcoptions|Displays the Key Distribution Center \(KDC\) options specified in RFC 4120.|  
+|\/?|Displays Help for this command.|  
   
-## remarks  
+## Remarks  
 Membership in **Domain Admins**, or equivalent, is the minimum required to run all the parameters of this command.  
   
-if no parameters are provided, klist will retrieve all the tickets for the currently logged on user.  
+If no parameters are provided, Klist will retrieve all the tickets for the currently logged on user.  
   
 The parameters display the following information:  
   
 -   **tickets**  
   
-    lists the currently cached tickets of services that you have authenticated to since logon. Displays the following attributes of all cached tickets:  
+    Lists the currently cached tickets of services that you have authenticated to since logon. Displays the following attributes of all cached tickets:  
   
     -   LogonID: The LUID  
   
@@ -52,21 +52,21 @@ The parameters display the following information:
   
     -   Server: The concatenation of the service name and the domain name of the service  
   
-    -   KerbTicket Encryption type: The encryption type that is used to encrypt the Kerberos ticket  
+    -   KerbTicket Encryption Type: The encryption type that is used to encrypt the Kerberos ticket  
   
     -   Ticket Flags: The Kerberos ticket flags  
   
-    -   start time: The time from which the ticket will be valid  
+    -   Start Time: The time from which the ticket will be valid  
   
-    -   End time: The time the ticket becomes no longer valid. When a ticket is past this time, it can no longer be used to authenticate to a service or be used for renewal  
+    -   End Time: The time the ticket becomes no longer valid. When a ticket is past this time, it can no longer be used to authenticate to a service or be used for renewal  
   
-    -   renew time: The time that a new initial authentication is required  
+    -   Renew Time: The time that a new initial authentication is required  
   
-    -   Session Key type: The encryption algorithm that is used for the session key  
+    -   Session Key Type: The encryption algorithm that is used for the session key  
   
 -   **tgt**  
   
-    lists the initial Kerberos TGT and the following attributes of the currently cached ticket:  
+    Lists the initial Kerberos TGT and the following attributes of the currently cached ticket:  
   
     -   LogonID: Identified in hexadecimal  
   
@@ -80,23 +80,23 @@ The parameters display the following information:
   
     -   AltTargetDomainName: Domain that the TGT is issued to  
   
-    -   Ticket Flags: address and target actions and type  
+    -   Ticket Flags: Address and target actions and type  
   
     -   Session Key: Key length and encryption algorithm  
   
-    -   starttime: Local computer time that the ticket was requested  
+    -   StartTime: Local computer time that the ticket was requested  
   
-    -   Endtime: time the ticket becomes no longer valid. When a ticket is past this time, it can no longer be used to authenticate to a service.  
+    -   EndTime: Time the ticket becomes no longer valid. When a ticket is past this time, it can no longer be used to authenticate to a service.  
   
-    -   renewUntil: Deadline for ticket renewal  
+    -   RenewUntil: Deadline for ticket renewal  
   
-    -   timeSkew: time difference with the Key Distribution Center \(KDC\)  
+    -   TimeSkew: Time difference with the Key Distribution Center \(KDC\)  
   
     -   EncodedTicket: Encoded ticket  
   
 -   **purge**  
   
-    Allows you to delete a specific ticket. Purging tickets destroys all tickets that you have cached, so use this attribute with caution. It might stop you from being able to authenticate to resources. if this happens, you will have to log off and log on again.  
+    Allows you to delete a specific ticket. Purging tickets destroys all tickets that you have cached, so use this attribute with caution. It might stop you from being able to authenticate to resources. If this happens, you will have to log off and log on again.  
   
     -   LogonID: Identified in hexadecimal  
   
@@ -104,19 +104,19 @@ The parameters display the following information:
   
     Allows you to list and display the information for all logon sessions on this computer.  
   
-    -   LogonID: if specified, displays the logon session only by the given value. if not specified, displays all the logon sessions on this computer.  
+    -   LogonID: If specified, displays the logon session only by the given value. If not specified, displays all the logon sessions on this computer.  
   
 -   **kcd\_cache**  
   
     Allows you to display the Kerberos constrained delegation cache information.  
   
-    -   LogonID: if specified, displays the cache information for the logon session by the given value. if not specified, displays the cache information for the current user’s logon session.  
+    -   LogonID: If specified, displays the cache information for the logon session by the given value. If not specified, displays the cache information for the current user’s logon session.  
   
 -   **get**  
   
     Allows you to request a ticket to the target that is specified by the SPN.  
   
-    -   LogonID: if specified, requests a ticket by using the logon session by the given value. if not specified, requests a ticket by using the current user’s logon session.  
+    -   LogonID: If specified, requests a ticket by using the logon session by the given value. If not specified, requests a ticket by using the current user’s logon session.  
   
     -   kdcoptions: Requests a ticket with the given KDC options  
   
@@ -134,15 +134,15 @@ The parameters display the following information:
   
 -   **kdcoptions**  
   
-    for the current list of options and their explanations, see [Rfc 4120](http://www.ietf.org/rfc/rfc4120.txt).  
+    For the current list of options and their explanations, see [RFC 4120](http://www.ietf.org/rfc/rfc4120.txt).  
   
 **Other considerations**  
   
--   klist.exe is available in  Windows Server 2012  and Windows 8, and it requires no special installation.  
+-   Klist.exe is available in  Windows Server 2012  and Windows 8, and it requires no special installation.  
   
 ## <a name="BKMK_Examples"></a>Examples  
   
-1.  When you are diagnosing an Event ID 27 while processing a ticket\-granting service \(TGS\) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
+1.  When you are diagnosing an Event ID 27 while processing a ticket\-granting service \(TGS\) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
   
     ```  
     klist   
@@ -152,13 +152,13 @@ The parameters display the following information:
     klist –li 0x3e7  
     ```  
   
-2.  When you diagnose errors and you want to know the specifics of each ticket\-granting\-ticket that is cached on the computer for a logon session, you can use klist to display the TGT information.  
+2.  When you diagnose errors and you want to know the specifics of each ticket\-granting\-ticket that is cached on the computer for a logon session, you can use Klist to display the TGT information.  
   
     ```  
     klist tgt  
     ```  
   
-3.  if you are unable to establish a connection and diagnosis might take too long, you can purge the Kerberos ticket cache, log off, and then log back on.  
+3.  If you are unable to establish a connection and diagnosis might take too long, you can purge the Kerberos ticket cache, log off, and then log back on.  
   
     ```  
     klist purge  
@@ -168,7 +168,7 @@ The parameters display the following information:
     klist purge –li 0x3e7  
     ```  
   
-4.  When you want to diagnose a logon session for a user or a service, you can use the following command to find the LogonID that is used in other klist commands.  
+4.  When you want to diagnose a logon session for a user or a service, you can use the following command to find the LogonID that is used in other Klist commands.  
   
     ```  
     klist sessions  
@@ -209,8 +209,8 @@ The parameters display the following information:
     klist purge_bind  
     ```  
   
-## additional references  
+## Additional references  
   
--   [Command-Line Syntax Key](commandline-syntax-key.md)  
+-   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
 

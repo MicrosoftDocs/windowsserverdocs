@@ -1,5 +1,5 @@
 ---
-title: whoami
+title: Whoami
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,17 +8,17 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6e3f4d5c-f1f5-4429-b602-afad2b3488bf
 ---
-# whoami
-Displays user, group and privileges information for the user who is currently logged on to the local system. if used without parameters, **whoami** displays the current domain and user name.
+# Whoami
+Displays user, group and privileges information for the user who is currently logged on to the local system. If used without parameters, **whoami** displays the current domain and user name.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
 whoami [/upn | /fqdn | /logonid]
-whoami {[/user] [/groups] [/priv]} [/fo <format>] [/nh]
-whoami /all [/fo <format>] [/nh]
+whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh]
+whoami /all [/fo <Format>] [/nh]
 ```
 
 ## Parameters
@@ -31,7 +31,7 @@ whoami /all [/fo <format>] [/nh]
 |\/user|Displays the current domain and user name and the security identifier \(SID\).|
 |\/groups|Displays the user groups to which the current user belongs.|
 |\/priv|Displays the security privileges of the current user.|
-|\/fo <format>|Specifies the output format. Valid values include:<br /><br />**table** Displays output in a table. This is the default value.<br /><br />**list** Displays output in a list.<br /><br />**csv** Displays output in comma\-separated value \(CSV\) format.|
+|\/fo <Format>|Specifies the output format. Valid values include:<br /><br />**table** Displays output in a table. This is the default value.<br /><br />**list** Displays output in a list.<br /><br />**csv** Displays output in comma\-separated value \(CSV\) format.|
 |\/all|Displays all information in the current access token, including the current user name, security identifiers \(SID\), privileges, and groups that the current user belongs to.|
 |\/nh|Specifies that the column header should not be displayed in the output. This is valid only for table and CSV formats.|
 |\/?|Displays help at the command prompt.|
@@ -55,7 +55,7 @@ To display all of the information in the current access token, type:
 whoami /all
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: applocker Functions
+title: AppLocker Functions
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -10,11 +10,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b65420d2-07bd-4955-a267-88313845d0e7
 ---
-# applocker Functions
-This topic for the IT professional lists the functions and security levels for the Software Restriction Policies \(SRP\) and applocker features.
+# AppLocker Functions
+This topic for the IT professional lists the functions and security levels for the Software Restriction Policies \(SRP\) and AppLocker features.
 
 ## Functions
-The following list includes the SRP functions beginning with Windows Server 2003 and applocker functions beginning with  Windows Server 2008 R2  and links to current documentation on MSDN:
+The following list includes the SRP functions beginning with Windows Server 2003 and AppLocker functions beginning with  Windows Server 2008 R2  and links to current documentation on MSDN:
 
 -   [SaferGetPolicyInformation Function](http://go.microsoft.com/fwlink/?LinkId=159781) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=159781\)
 
@@ -33,9 +33,9 @@ The following list includes the SRP functions beginning with Windows Server 200
 -   [SaferiIsExecutableFileType Function](http://go.microsoft.com/fwlink/?LinkId=159790) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=159790\)
 
 ## Security level ID
-applocker and SRP use the security level IDs to stipulate the access requirements to files listed in policies. The following table shows those security levels supported in SRP and applocker.
+AppLocker and SRP use the security level IDs to stipulate the access requirements to files listed in policies. The following table shows those security levels supported in SRP and AppLocker.
 
-|Security level ID|SRP|applocker|
+|Security level ID|SRP|AppLocker|
 |---------------------|-------|-------------|
 |SAFER\_LEVELID\_FULLYTRUSTED|Supported|Supported|
 |SAFER\_LEVELID\_NORMALUSER|Supported|Not supported|
@@ -43,9 +43,9 @@ applocker and SRP use the security level IDs to stipulate the access requirement
 |SAFER\_LEVELID\_UNTRUSTED|Supported|Not supported|
 |SAFER\_LEVELID\_DISALLOWED|Supported|Supported|
 
-In addition, URL zone ID is not supported in applocker.
+In addition, URL zone ID is not supported in AppLocker.
 
 ## See Also
-[applocker Technical Reference](applocker-technical-reference.md)
+[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
 
 

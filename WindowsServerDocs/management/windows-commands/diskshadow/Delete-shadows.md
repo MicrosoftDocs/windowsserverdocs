@@ -1,5 +1,5 @@
 ---
-title: delete shadows
+title: Delete shadows
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,27 +10,27 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d
 ---
-# delete shadows
-deletes shadow copies.
+# Delete shadows
+Deletes shadow copies.
 
 ## Syntax
 
 ```
-delete shadows [all | volume <volume> | oldest <volume> | set <SetID> | id <shadowID> | exposed {<Drive> | <mountPoint>}]
+delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <ShadowID> | exposed {<Drive> | <MountPoint>}]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|all|deletes all shadow copies.|
-|volume <volume>|deletes all shadow copies of the given volume.|
-|oldest <volume>|deletes the oldest shadow copy of the given volume.|
-|set <SetID>|deletes the shadow copies in the shadow copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|
-|id <shadowID>|deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|
-|exposed {<Drive> &#124; <mountPoint>}|deletes the shadow copy exposed at the specified drive letter or mount point. Specify mount points as c:\\mountPoint or by the drive letter such as p:.|
+|all|Deletes all shadow copies.|
+|volume <Volume>|Deletes all shadow copies of the given volume.|
+|oldest <Volume>|Deletes the oldest shadow copy of the given volume.|
+|set <SetID>|Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|
+|id <ShadowID>|Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|
+|exposed {<Drive> &#124; <MountPoint>}|Deletes the shadow copy exposed at the specified drive letter or mount point. Specify mount points as c:\\mountPoint or by the drive letter such as p:.|
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

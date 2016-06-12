@@ -26,9 +26,9 @@ merge vdisk depth=<n>
 
 |Parameter|Description|
 |-------------|---------------|
-|depth\=<n>|Indicates the number of parent VHD files to merge together. for example, **depth\=1** indicates that the differencing VHD will be merged with one level of the differencing chain.|
+|depth\=<n>|Indicates the number of parent VHD files to merge together. For example, **depth\=1** indicates that the differencing VHD will be merged with one level of the differencing chain.|
 
-## remarks
+## Remarks
 
 -   A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
 
@@ -41,24 +41,24 @@ To merge a differencing VHD with its parent VHD, type:
 merge vdisk depth=1
 ```
 
-## additional references
+## Additional references
 
--   [Command-Line Syntax Key](commandline-syntax-key.md)
+-   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
--   [attach vdisk](attach-vdisk.md)
+-   [Attach vdisk](Attach-vdisk.md)
 
--   [compact vdisk](compact-vdisk.md)
+-   [Compact vdisk](Compact-vdisk.md)
 
--   [create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
+-   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
 
--   [detail vdisk](delete/detail/detail-vdisk.md)
+-   [Detail vdisk](delete/detail/Detail-vdisk.md)
 
--   [Detach vdisk]()
+-   [Detach vdisk](Detach-vdisk.md)
 
--   [expand vdisk](expand-vdisk.md)
+-   [Expand vdisk](Expand-vdisk.md)
 
--   [select vdisk](select/select-vdisk.md)
+-   [Select vdisk](select/Select-vdisk.md)
 
--   [list_1]()
+-   [List_1](List_1.md)
 
 

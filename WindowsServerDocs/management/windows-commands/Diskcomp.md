@@ -1,5 +1,5 @@
 ---
-title: diskcomp
+title: Diskcomp
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
 ---
-# diskcomp
-compares the contents of two floppy disks. if used without parameters, **diskcomp** uses the current drive to compare both disks.
+# Diskcomp
+Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -27,11 +27,11 @@ diskcomp [<Drive1>: [<Drive2>:]]
 |<Drive2>|Specifies the drive containing the other floppy disk.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
 -   Using disks
 
-    The **diskcomp** command works only with floppy disks. You cannot use **diskcomp** with a hard disk. if you specify a hard disk drive for *Drive1* or *Drive2*, **diskcomp** displays the following error message:
+    The **diskcomp** command works only with floppy disks. You cannot use **diskcomp** with a hard disk. If you specify a hard disk drive for *Drive1* or *Drive2*, **diskcomp** displays the following error message:
 
     ```
     Invalid drive specification
@@ -39,42 +39,42 @@ diskcomp [<Drive1>: [<Drive2>:]]
     or is nonremovable
     ```
 
--   comparing disks
+-   Comparing disks
 
-    if all tracks on the two disks being compared are the same, **diskcomp** displays the following message:
-
-    ```
-    compare OK
-    ```
-
-    if the tracks are not the same, **diskcomp** displays a message similar to the following:
+    If all tracks on the two disks being compared are the same, **diskcomp** displays the following message:
 
     ```
-    compare error on
+    Compare OK
+    ```
+
+    If the tracks are not the same, **diskcomp** displays a message similar to the following:
+
+    ```
+    Compare error on
     side 1, track 2
     ```
 
     When **diskcomp** completes the comparison, it displays the following message:
 
     ```
-    compare another diskette (Y/N)?
+    Compare another diskette (Y/N)?
     ```
 
-    if you press Y, **diskcomp** prompts you to insert the disk for the next comparison. if you press N, **diskcomp** stops the comparison.
+    If you press Y, **diskcomp** prompts you to insert the disk for the next comparison. If you press N, **diskcomp** stops the comparison.
 
     When **diskcomp** makes the comparison, it ignores a disk's volume number.
 
 -   Omitting drive parameters
 
-    if you omit the *Drive2* parameter, **diskcomp** uses the current drive for *Drive2*. if you omit both drive parameters, **diskcomp** uses the current drive for both. if the current drive is the same as *Drive1*, **diskcomp** prompts you to swap disks as necessary.
+    If you omit the *Drive2* parameter, **diskcomp** uses the current drive for *Drive2*. If you omit both drive parameters, **diskcomp** uses the current drive for both. If the current drive is the same as *Drive1*, **diskcomp** prompts you to swap disks as necessary.
 
 -   Using one drive
 
-    if you specify the same floppy disk drive for *Drive1* and *Drive2*, **diskcomp** compares them by using one drive and prompts you to insert the disks as necessary. You might have to swap the disks more than once, depending on the capacity of the disks and the amount of available memory.
+    If you specify the same floppy disk drive for *Drive1* and *Drive2*, **diskcomp** compares them by using one drive and prompts you to insert the disks as necessary. You might have to swap the disks more than once, depending on the capacity of the disks and the amount of available memory.
 
--   comparing different types of disks
+-   Comparing different types of disks
 
-    **diskcomp** cannot compare a single\-sided disk with a double\-sided disk, nor a high\-density disk with a double\-density disk. if the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:
+    **Diskcomp** cannot compare a single\-sided disk with a double\-sided disk, nor a high\-density disk with a double\-density disk. If the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:
 
     ```
     Drive types or diskette types not compatible
@@ -82,18 +82,18 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
 -   Using **diskcomp** with networks and redirected drives
 
-    **diskcomp** does not work on a network drive or on a drive created by the **subst** command. if you attempt to use **diskcomp** with a drive of any of these types, **diskcomp** displays the following error message:
+    **Diskcomp** does not work on a network drive or on a drive created by the **subst** command. If you attempt to use **diskcomp** with a drive of any of these types, **diskcomp** displays the following error message:
 
     ```
     Invalid drive specification
     ```
 
--   comparing an original disk with a copy
+-   Comparing an original disk with a copy
 
     When you use **diskcomp** with a disk that you made by using **copy**, **diskcomp** might display a message similar to the following:
 
     ```
-    compare error on 
+    Compare error on 
     side 0, track 0
     ```
 
@@ -103,7 +103,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
     The following table explains each exit code.
 
-    |exit code|Description|
+    |Exit code|Description|
     |-------------|---------------|
     |0|Disks are the same|
     |1|Differences were found|
@@ -113,13 +113,13 @@ diskcomp [<Drive1>: [<Drive2>:]]
     To process exit codes that are returned by **diskcomp**, you can use the ERRORLEVEL environment variable on the **if** command line in a batch program.
 
 ## <a name="BKMK_examples"></a>Examples
-if your computer has only one floppy disk drive \(for example, drive A\), and you want to compare two disks, type:
+If your computer has only one floppy disk drive \(for example, drive A\), and you want to compare two disks, type:
 
 ```
 diskcomp a: a:
 ```
 
-**diskcomp** prompts you to insert each disk, as needed.
+**Diskcomp** prompts you to insert each disk, as needed.
 
 The following example illustrates how to process a **diskcomp** exit code in a batch program that uses the ERRORLEVEL environment variable on the **if** command line:
 
@@ -149,7 +149,7 @@ goto exit
 :exit
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

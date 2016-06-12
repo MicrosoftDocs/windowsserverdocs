@@ -21,13 +21,13 @@ For computers running other operating systems designated in the **Applies To** l
 
 The following sections provide information that will help you put together your basic deployment plan for implementing BitLocker in your organization:
 
--   [Using BitLocker to encrypt volumes](bitlocker-basic-deployment.md#BKMK_dep1)
+-   [Using BitLocker to encrypt volumes](BitLocker-Basic-Deployment.md#BKMK_dep1)
 
--   [Down\-level compatibility](bitlocker-basic-deployment.md#BKMK_dep2)
+-   [Down\-level compatibility](BitLocker-Basic-Deployment.md#BKMK_dep2)
 
--   [Using manage\-bde to encrypt volumes with BitLocker](bitlocker-basic-deployment.md#BKMK_dep3)
+-   [Using manage\-bde to encrypt volumes with BitLocker](BitLocker-Basic-Deployment.md#BKMK_dep3)
 
--   [Using PowerShell to encrypt volumes with BitLocker](bitlocker-basic-deployment.md#BKMK_dep4)
+-   [Using PowerShell to encrypt volumes with BitLocker](BitLocker-Basic-Deployment.md#BKMK_dep4)
 
 ## <a name="BKMK_dep1"></a>Using BitLocker to encrypt volumes
 BitLocker provides full volume encryption \(FVE\) for operating system volumes, as well as fixed and removable data volumes. To support fully encrypted operating system volumes, BitLocker uses an unencrypted system volume for the files required to boot, decrypt, and load the operating system. This volume is automatically created during a new installation of both client and server operating systems.
@@ -127,19 +127,19 @@ Table 1: Cross compatibility for Windows 8.1, Windows 8, and Windows 7 encrypted
 ### Encrypting volumes using the manage\-bde command line interface
 Manage\-bde is a command\-line utility that can be used for scripting BitLocker operations. Manage\-bde offers additional options not displayed in the BitLocker control panel. For a complete list of the options, see [Manage\-bde](http://technet.microsoft.com/library/ff829849.aspx).
 
-Manage\-bde offers a multitude of wider options for configuring BitLocker. This means that using the command syntax may require care and possibly later customization by the user. For example, using just the `managebde -on` command on a data volume will fully encrypt the volume without any authenticating protectors. A volume encrypted in this manner still requires user interaction to turn on BitLocker protection, even though the command successfully completed because an authentication method needs to be added to the volume for it to be fully protected.
+Manage\-bde offers a multitude of wider options for configuring BitLocker. This means that using the command syntax may require care and possibly later customization by the user. For example, using just the `manage-bde -on` command on a data volume will fully encrypt the volume without any authenticating protectors. A volume encrypted in this manner still requires user interaction to turn on BitLocker protection, even though the command successfully completed because an authentication method needs to be added to the volume for it to be fully protected.
 
 Command line users need to determine the appropriate syntax for a given situation. The following section covers general encryption for operating system volumes and data volumes.
 
 ### Operating system volume
-Listed below are examples of basic valid commands for operating system volumes. In general, using only the `managebde -on <drive letter>` command will encrypt the operating system volume with a TPM\-only protector and no recovery key. However, many environments require more secure protectors such as passwords or PIN and expect to be able to recover information with a recovery key.
+Listed below are examples of basic valid commands for operating system volumes. In general, using only the `manage-bde -on <drive letter>` command will encrypt the operating system volume with a TPM\-only protector and no recovery key. However, many environments require more secure protectors such as passwords or PIN and expect to be able to recover information with a recovery key.
 
 **Determining volume status**
 
 A good practice when using manage\-bde is to determine the volume status on the target system. Use the following command to determine volume status:
 
 ```
-managebde -status
+manage-bde -status
 ```
 
 This command returns the volumes on the target, current encryption status and volume type \(operating system or data\) for each volume. Using this information, users can determine the best encryption method for their environment.
@@ -149,8 +149,8 @@ This command returns the volumes on the target, current encryption status and vo
 For example, suppose that you want to enable BitLocker on a computer without a TPM chip. To properly enable BitLocker for the operating system volume, you will need to use a USB flash drive as a startup key to boot \(in this example, the drive letter E\). You would first create the startup key needed for BitLocker using the –protectors option and save it to the USB drive on E: and then begin the encryption process. You will need to reboot the computer when prompted to complete the encryption process.
 
 ```
-managebde –protectors -add C: -startupkey E:
-managebde -on C:
+manage-bde –protectors -add C: -startupkey E:
+manage-bde -on C:
 ```
 
 **Enabling BitLocker with a TPM only**
@@ -158,13 +158,13 @@ managebde -on C:
 It is possible to encrypt the operating system volume without any defined protectors using manage\-bde. The command to do this is:
 
 ```
-managebde -on C:
+manage-bde -on C:
 ```
 
 This will encrypt the drive using the TPM as the protector. If a user is unsure of the protector for a volume, they can use the \-protectors option in manage\-bde to list this information with the command:
 
 ```
-managebde -protectors -get <volume>
+manage-bde -protectors -get <volume>
 ```
 
 **Provisioning BitLocker with two protectors**
@@ -172,21 +172,21 @@ managebde -protectors -get <volume>
 Another example is a user on non\-TPM hardware who wishes to add a password and SID\-based protector to the operating system volume. In this instance, the user adds the protectors first. This is done with the command:
 
 ```
-managebde -protectors -add C: -pw -sid <user or group>
+manage-bde -protectors -add C: -pw -sid <user or group>
 ```
 
 This command will require the user to enter and then confirm the password protector before adding them to the volume. With the protectors enabled on the volume, the user just needs to turn BitLocker on.
 
 ### Data volume
-Data volumes use the same syntax for encryption as operating system volumes but they do not require protectors for the operation to complete. Encrypting data volumes can be done using the base command: `managebde -on <drive letter>` or users can choose to add protectors to the volume. It is recommended that at least one primary protector and a recovery protector be added to a data volume.
+Data volumes use the same syntax for encryption as operating system volumes but they do not require protectors for the operation to complete. Encrypting data volumes can be done using the base command: `manage-bde -on <drive letter>` or users can choose to add protectors to the volume. It is recommended that at least one primary protector and a recovery protector be added to a data volume.
 
 **Enabling BitLocker with a password**
 
 A common protector for a data volume is the password protector. In the example below, we add a password protector to the volume and turn BitLocker on.
 
 ```
-managebde -protectors -add -pw C:
-managebde -on C:
+manage-bde -protectors -add -pw C:
+manage-bde -on C:
 ```
 
 ## <a name="BKMK_dep3"></a>Using manage\-bde to encrypt volumes with BitLocker
@@ -330,7 +330,7 @@ Administrators who prefer a command line interface can utilize manage\-bde to ch
 To check the status of a volume using manage\-bde, use the following command:
 
 ```
-managebde -status <volume>
+manage-bde -status <volume>
 ```
 
 > [!NOTE]
@@ -366,13 +366,13 @@ Once decryption is complete, the drive will update its status in the control pan
 Decrypting volumes using manage\-bde is very straightforward. Decryption with manage\-bde offers the advantage of not requiring user confirmation to start the process. Manage\-bde uses the \-off command to start the decryption process. A sample command for decryption is:
 
 ```
-managebde -off C:
+manage-bde -off C:
 ```
 
 This command disables protectors while it decrypts the volume and removes all protectors when decryption is complete. If a user wishes to check the status of the decryption, they can use the following command:
 
 ```
-managebde -status C:
+manage-bde -status C:
 ```
 
 #### Decrypting volumes using the BitLocker Windows PowerShell cmdlets
@@ -391,7 +391,7 @@ Disable-BitLocker -MountPoint E:,F:,G:
 ```
 
 ## See also
-[Encrypted Hard Drive](../../encrypted-hard-drive.md)
+[Encrypted Hard Drive](../../Encrypted-Hard-Drive.md)
 
 [Prepare your organization for BitLocker: Planning and Policies](assetId:///94c445de-a32c-44d8-b520-1ec2e507f2f6)
 

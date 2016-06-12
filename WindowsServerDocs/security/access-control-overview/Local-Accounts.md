@@ -15,9 +15,9 @@ This reference topic for the IT professional describes the default local user ac
 
 **Did you mean…**
 
--   *[Active Directory Accounts](active-directory-accounts.md)*
+-   *[Active Directory Accounts](Active-Directory-Accounts.md)*
 
--   *[Microsoft Accounts](microsoft-accounts.md)*
+-   *[Microsoft Accounts](Microsoft-Accounts.md)*
 
 ## About local user accounts
 Local user accounts are stored locally on the server. These accounts can be assigned rights and permissions on a particular server, but on that server only. Local user accounts are security principals that are used to secure and manage access to the resources on a standalone or member server for services or users.
@@ -44,7 +44,7 @@ This topic describes the following:
 
     -   [Create unique passwords for local accounts with administrative rights](#SEC_Create_Unique_Passwords)
 
-For information about security principals, see [Security Principals Technical Overview](security-principals-technical-overview.md).
+For information about security principals, see [Security Principals Technical Overview](Security-Principals-Technical-Overview.md).
 
 ## <a name="Sec_Default_Accounts"></a>Default local user accounts
 The default local user accounts are built\-in accounts that are created automatically when you install the Windows Server operating system on a stand\-alone server or member server. The **Applies To** list at the beginning of this article designates the Windows operating systems to which this topic applies.
@@ -111,7 +111,7 @@ By default, the Guest account is the only member of the default Guests group, wh
 
 When an administrator enables the Guest account, it is a best practice to create a strong password for this account. In addition, the administrator on the computer should also grant only limited rights and permissions for the Guest account. For security reasons, the Guest account should not be used over the network and made accessible to other computers.
 
-When a computer is shutting down or starting up, it is possible that a guest user or anyone with local access could gain unauthorized access to the computer. To help prevent this risk, do not grant the Guest account the [Shut down the system](shut-down-system.md) user right.
+When a computer is shutting down or starting up, it is possible that a guest user or anyone with local access could gain unauthorized access to the computer. To help prevent this risk, do not grant the Guest account the [Shut down the system](Shut-down-the-system.md) user right.
 
 In addition, the guest user in the Guest account should not be able to view the event logs. After the Guest account is enabled, it is a best practice to monitor the Guest account frequently to ensure that other users cannot use services and other resources, such as resources that were unintentionally left available by a previous user.
 
@@ -183,10 +183,10 @@ The following table shows the Group Policy and registry settings that are used t
 |-|-|-|
 |**No.**|**Setting**|**Detailed Description**|
 ||Policy location|Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options|
-|1|Policy name|[User Account Control: Run all administrators in Admin Approval Mode](user-account-control-run-all-administrators-admin-approval-mode.md)|
+|1|Policy name|[User Account Control: Run all administrators in Admin Approval Mode](User-Account-Control--Run-all-administrators-in-Admin-Approval-Mode.md)|
 ||Policy setting|Enabled|
 |2|Policy location|Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options|
-||Policy name|[User Account Control: Run all administrators in Admin Approval Mode](user-account-control-run-all-administrators-admin-approval-mode.md)|
+||Policy name|[User Account Control: Run all administrators in Admin Approval Mode](User-Account-Control--Run-all-administrators-in-Admin-Approval-Mode.md)|
 ||Policy setting|Enabled|
 |3|Registry key|**HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System**|
 ||Registry value name|LocalAccountTokenFilterPolicy|
@@ -201,15 +201,15 @@ The following table shows the Group Policy and registry settings that are used t
 
 3.  In the console tree, right\-click **Group Policy Objects**, and > **New**.
 
-    ![](../media/local-accounts/localaccounts-proc1-sample1.png)
+    ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample1.png)
 
 4.  In the **New GPO** dialog box, type <***gpo\_name***>, and > **OK** where *gpo\_name* is the name of the new GPO. The GPO name indicates that the GPO is used to restrict local administrator rights from being carried over to another computer.
 
-    ![](../media/local-accounts/localaccounts-proc1-sample2.png)
+    ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample2.png)
 
 5.  In the details pane, right\-click <***gpo\_name***>, and > **Edit**.
 
-    ![](../media/local-accounts/localaccounts-proc1-sample3.png)
+    ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample3.png)
 
 6.  Ensure that UAC is enabled and that UAC restrictions apply to the default Administrator account by doing the following:
 
@@ -225,7 +225,7 @@ The following table shows the Group Policy and registry settings that are used t
 
     2.  Right\-click **Registry**, and > **New** > **Registry Item**.
 
-        ![](../media/local-accounts/localaccounts-proc1-sample4.png)
+        ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample4.png)
 
     3.  In the **New Registry Properties** dialog box, on the **General** tab, change the setting in the **Action** box to **Replace**.
 
@@ -241,7 +241,7 @@ The following table shows the Group Policy and registry settings that are used t
 
     9. Verify this configuration, and > **OK**.
 
-        ![](../media/local-accounts/localaccounts-proc1-sample5.png)
+        ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample5.png)
 
 8.  Link the GPO to the first **Workstations** organizational unit \(OU\) by doing the following:
 
@@ -249,7 +249,7 @@ The following table shows the Group Policy and registry settings that are used t
 
     2.  Right\-click the **Workstations** OU, and > **Link an existing GPO**.
 
-        ![](../media/local-accounts/localaccounts-proc1-sample6.png)
+        ![](../media/Local-Accounts/LocalAccounts_Proc1_Sample6.png)
 
     3.  Select the GPO that you just created, and > **OK**.
 
@@ -271,10 +271,10 @@ The following table shows the Group Policy settings that are used to deny networ
 |-|-|-|
 |**No.**|**Setting**|**Detailed Description**|
 ||Policy location|Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment|
-|1|Policy name|[Deny access to this computer from the network](deny-access-this-computer-from-network.md)|
+|1|Policy name|[Deny access to this computer from the network](Deny-access-to-this-computer-from-the-network.md)|
 ||Policy setting|User name of the default Administrator account<br /><br />\(Might be renamed through policy.\)|
 |2|Policy location|Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment|
-||Policy name|[Deny log on through Remote Desktop Services](deny-log-through-remote-desktop-services.md)<br /><br />\( Windows Server 2008 R2  and later.\)<br /><br />Deny logon through Terminal Services<br /><br />\( Windows Server 2008 \)|
+||Policy name|[Deny log on through Remote Desktop Services](Deny-log-on-through-Remote-Desktop-Services.md)<br /><br />\( Windows Server 2008 R2  and later.\)<br /><br />Deny logon through Terminal Services<br /><br />\( Windows Server 2008 \)|
 ||Policy setting|User name of the default Administrator account<br /><br />\(Might be renamed through policy\).|
 
 ##### To deny network logon to all local administrator accounts
@@ -287,11 +287,11 @@ The following table shows the Group Policy settings that are used to deny networ
 
 4.  In the **New GPO** dialog box, type <***gpo\_name***>, and then > **OK** where *gpo\_name* is the name of the new GPO indicates that it is being used to restrict the local administrative accounts from interactively signing in to the computer.
 
-    ![](../media/local-accounts/localaccounts-proc2-sample1.png)
+    ![](../media/Local-Accounts/LocalAccounts_Proc2_Sample1.png)
 
 5.  In the details pane, right\-click <***gpo\_name***>, and > **Edit**.
 
-    ![](../media/local-accounts/localaccounts-proc2-sample2.png)
+    ![](../media/Local-Accounts/LocalAccounts_Proc2_Sample2.png)
 
 6.  Configure the user rights to deny network logons for administrative local accounts as follows:
 
@@ -301,7 +301,7 @@ The following table shows the Group Policy settings that are used to deny networ
 
     3.  Click **Add User or Group**, type the name of the default Administrator account, and > **OK**. The default name is Administrator on US English installations, but it can be renamed either by policy or manually.
 
-        ![](../media/local-accounts/localaccounts-proc2-sample3.png)
+        ![](../media/Local-Accounts/LocalAccounts_Proc2_Sample3.png)
 
         > [!IMPORTANT]
         > In the **User and group names** box, type the user name of the account that you identified at the start of this process. Do not click **Browse** and do not type the domain name or the local computer name in this dialog box. For example, type only **Administrator**. If the text that you typed resolved to a name that is underlined, includes a computer name, or includes the domain, it restricts the wrong account and causes this mitigation to work incorrectly. Also, be careful that you do not enter the group name Administrator to prevent blocking domain accounts in that group.
@@ -362,10 +362,10 @@ Passwords can be randomized by:
 ## <a name="DHCP_References"></a>See also
 The following resources provide additional information about technologies that are related to local accounts.
 
--   [Security Principals Technical Overview](security-principals-technical-overview.md)
+-   [Security Principals Technical Overview](Security-Principals-Technical-Overview.md)
 
--   [Security Identifiers Technical Overview](security-identifiers-technical-overview.md)
+-   [Security Identifiers Technical Overview](Security-Identifiers-Technical-Overview.md)
 
--   [Access Control Overview]()
+-   [Access Control Overview](Access-Control-Overview.md)
 
 

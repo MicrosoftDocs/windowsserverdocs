@@ -1,5 +1,5 @@
 ---
-title: copy
+title: Copy
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
 author: jaimeo
 ---
-# copy
+# Copy
 Copies one or more files from one location to another.  
   
-for examples of how to use this command, see [Examples](#BKMK_examples).  
+For examples of how to use this command, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -25,10 +25,10 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 |Parameter|Description|  
 |-------------|---------------|  
 |\/d|Allows the encrypted files being copied to be saved as decrypted files at the destination.|  
-|\/v|verifies that new files are written correctly.|  
+|\/v|Verifies that new files are written correctly.|  
 |\/n|Uses a short file name, if available, when copying a file with a name longer than eight characters, or with a file name extension longer than three characters.|  
 |\/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|  
-|\/\-y|prompts you to confirm that you want to overwrite an existing destination file.|  
+|\/\-y|Prompts you to confirm that you want to overwrite an existing destination file.|  
 |\/z|Copies networked files in restartable mode.|  
 |\/a|Indicates an ASCII text file.|  
 |\/b|Indicates a binary file.|  
@@ -36,7 +36,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
 |<Destination>|Required. Specifies the location to which you want to copy a file or set of files. *Destination* can consist of a drive letter and colon, a directory name, a file name, or a combination of these.|  
 |\/?|Displays help at the command prompt.|  
   
-## remarks  
+## Remarks  
   
 -   You can copy an ASCII text file that uses an end\-of\-file character \(CTRL\+Z\) to indicate the end of the file.  
   
@@ -60,21 +60,21 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
   
 -   Using **\/v**  
   
-    if a write operation cannot be verified an error message appears. Although recording errors rarely occur with **copy**, you can use **\/v** to verify that critical data has been correctly recorded. The **\/v** command\-line option also slows down the **copy** command, because each sector recorded on the disk must be checked.  
+    If a write operation cannot be verified an error message appears. Although recording errors rarely occur with **copy**, you can use **\/v** to verify that critical data has been correctly recorded. The **\/v** command\-line option also slows down the **copy** command, because each sector recorded on the disk must be checked.  
   
 -   Using **\/y** and **\/\-y**  
   
-    if **\/y** is preset in the copycmd environment variable, you can override this setting by using **\/\-y** at the command line. By default, you are prompted when you replace this setting, unless the **copy** command is executed in a batch script.  
+    If **\/y** is preset in the COPYCMD environment variable, you can override this setting by using **\/\-y** at the command line. By default, you are prompted when you replace this setting, unless the **copy** command is executed in a batch script.  
   
--   appending files  
+-   Appending files  
   
     To append files, specify a single file for *Destination*, but multiple files for *Source* \(use wildcard characters or *File1*\+*File2*\+*File3* format\).  
   
 -   Using **\/z**  
   
-    if the connection is lost during the copy phase \(for example, if the server going offline breaks the connection\), **copy \/z** resumes after the connection is re\-established. **\/z** also displays the percentage of the copy operation that is completed for each file.  
+    If the connection is lost during the copy phase \(for example, if the server going offline breaks the connection\), **copy \/z** resumes after the connection is re\-established. **\/z** also displays the percentage of the copy operation that is completed for each file.  
   
--   copying to and from devices  
+-   Copying to and from devices  
   
     You can substitute a device name for one or more occurrences of *Source* or *Destination*.  
   
@@ -84,7 +84,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
   
 -   Using the default destination file  
   
-    if you do not specify a destination file, a copy is created with the same name, modified date, and modified time as the original file. The new copy is stored in the current directory on the current drive. if the source file is on the current drive and in the current directory and you do not specify a different drive or directory for the destination file, the **copy** command stops and displays the following error message:  
+    If you do not specify a destination file, a copy is created with the same name, modified date, and modified time as the original file. The new copy is stored in the current directory on the current drive. If the source file is on the current drive and in the current directory and you do not specify a different drive or directory for the destination file, the **copy** command stops and displays the following error message:  
   
     `File cannot be copied onto itself`  
   
@@ -92,15 +92,15 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
   
 -   Combining files  
   
-    if you specify more than one file in *Source*, **copy** combines them all into a single file using the file name specified in *Destination*. **copy** assumes the combined files are ASCII files unless you use the **\/b** option.  
+    If you specify more than one file in *Source*, **copy** combines them all into a single file using the file name specified in *Destination*. **Copy** assumes the combined files are ASCII files unless you use the **\/b** option.  
   
--   copying zero\-length files  
+-   Copying zero\-length files  
   
-    **copy** does not copy files that are 0 bytes long. Use **xcopy** to copy these files.  
+    **Copy** does not copy files that are 0 bytes long. Use **xcopy** to copy these files.  
   
 -   Changing the time and date of a file  
   
-    if you want to assign the current time and date to a file without modifying the file, use the following syntax:  
+    If you want to assign the current time and date to a file without modifying the file, use the following syntax:  
   
     ```  
     copy /b <Source> +,,  
@@ -108,11 +108,11 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
   
     The commas indicate the omission of the *Destination* parameter.  
   
--   copying files in subdirectories  
+-   Copying files in subdirectories  
   
     To copy all of a directory's files and subdirectories, use the **xcopy** command.  
   
--   The **copy** command, with different parameters, is available from the recovery Console.  
+-   The **copy** command, with different parameters, is available from the Recovery Console.  
   
 ## <a name="BKMK_examples"></a>Examples  
 To copy a file called Memo.doc to Letter.doc in the current drive and ensure that an end\-of\-file character \(CTRL\+Z\) is at the end of the copied file, type:  
@@ -127,7 +127,7 @@ To copy a file named Robin.typ from the current drive and directory to an existi
 copy robin.typ c:\birds  
 ```  
   
-if the Birds directory does not exist, the file Robin.typ is copied into a file named Birds that is located in the root directory on the disk in drive C.  
+If the Birds directory does not exist, the file Robin.typ is copied into a file named Birds that is located in the root directory on the disk in drive C.  
   
 To combine Mar89.rpt, Apr89.rpt, and May89.rpt, which are located in the current directory, and place them in a file named Report \(also in the current directory\), type:  
   
@@ -135,7 +135,7 @@ To combine Mar89.rpt, Apr89.rpt, and May89.rpt, which are located in the current
 copy mar89.rpt + apr89.rpt + may89.rpt Report  
 ```  
   
-When you combine files, **copy** marks the destination file with the current date and time. if you omit *Destination*, the files are combined and stored under the name of the first file in the list. for example, to combine all files in Report when a file named Report already exists, type:  
+When you combine files, **copy** marks the destination file with the current date and time. If you omit *Destination*, the files are combined and stored under the name of the first file in the list. For example, to combine all files in Report when a file named Report already exists, type:  
   
 ```  
 copy report + mar89.rpt + apr89.rpt + may89.rpt  
@@ -147,16 +147,16 @@ To combine all files in the current directory that have the.txt file name extens
 copy *.txt Combined.doc   
 ```  
   
-if you want to combine several binary files into one file by using wildcard characters, include **\/b**. This prevents Windows from treating CTRL\+Z as an end\-of\-file character. for example, type:  
+If you want to combine several binary files into one file by using wildcard characters, include **\/b**. This prevents Windows from treating CTRL\+Z as an end\-of\-file character. For example, type:  
   
 ```  
 copy /b *.exe Combined.exe  
 ```  
   
 > [!CAUTION]  
-> if you combine binary files, the resulting file might be unusable due to internal formatting.  
+> If you combine binary files, the resulting file might be unusable due to internal formatting.  
   
-In the following example, **copy** combines each file that has a .txt extension with its corresponding .ref file. The result is a file with the same file name but with a .doc extension. **copy** combines File1.txt with File1.ref to form File1.doc, and then **copy** combines File2.txt with File2.ref to form File2.doc, and so on. for example, type:  
+In the following example, **copy** combines each file that has a .txt extension with its corresponding .ref file. The result is a file with the same file name but with a .doc extension. **Copy** combines File1.txt with File1.ref to form File1.doc, and then **copy** combines File2.txt with File2.ref to form File2.doc, and so on. For example, type:  
   
 ```  
 copy *.txt + *.ref *.doc  
@@ -168,7 +168,7 @@ To combine all files with the .txt extension, and then combine all files with th
 copy *.txt + *.ref Combined.doc  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](commandline-syntax-key.md)  
+#### Additional references  
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
 
