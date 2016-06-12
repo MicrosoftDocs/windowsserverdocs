@@ -1,5 +1,5 @@
 ---
-title: bitsadmin list
+title: Bitsadmin list
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1416965e-e0e6-49cf-b1d4-b286d3cf8716
 ---
-# bitsadmin list
-lists the transfer jobs owned by the current user.
+# Bitsadmin list
+Lists the transfer jobs owned by the current user.
 
 ## Syntax
 
 ```
-bitsadmin /list [/allusers][/verbose]
+bitsadmin /List [/allusers][/verbose]
 ```
 
 ## Parameters
@@ -22,19 +22,19 @@ bitsadmin /list [/allusers][/verbose]
 |Parameter|Description|
 |-------------|---------------|
 |\/Allusers|Optional—lists jobs for all users|
-|\/verbose|Optional—provides detail information for each job.|
+|\/Verbose|Optional—provides detail information for each job.|
 
-## remarks
+## Remarks
 You must have administrator privileges to use the \/allusers parameter
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves information about jobs owned by the current user.
 
 ```
-C:\>bitsadmin /list 
+C:\>bitsadmin /List 
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

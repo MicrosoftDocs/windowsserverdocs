@@ -1609,7 +1609,7 @@
 #### [Storage Quality of Service](storage/software-defined-storage/Storage-Quality-of-Service.md)
 #### [Fault Domains in Windows Server 2016 Technical Preview](storage/storage-spaces/Fault-Domains-in-Windows-Server-2016-Technical-Preview.md)
 #### [Simplified SMB Multichannel and Multi-NIC Cluster Networks](Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks.md)
-### [Security](Security-and-Assurance.md)
+### [Security and Assurance](Security-and-Assurance.md)
 #### [Access Control Overview]()
 ##### [Dynamic Access Control Overview](Dynamic-)
 ##### [Security Identifiers Technical Overview](Security-Identifiers-Technical-Overview.md)

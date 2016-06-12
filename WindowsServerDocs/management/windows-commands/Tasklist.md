@@ -1,5 +1,5 @@
 ---
-title: tasklist
+title: Tasklist
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,27 +8,27 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8dbe30ee-1484-46be-917b-5ca3ff4fdc9c
 ---
-# tasklist
-Displays a list of currently running processes on the local computer or on a remote computer. **tasklist** replaces the **tlist** tool.
+# Tasklist
+Displays a list of currently running processes on the local computer or on a remote computer. **Tasklist** replaces the **tlist** tool.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-tasklist [/s <computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module> | /svc | /v}] [/fo {table | list | csv}] [/nh] [/fi <Filter> [/fi <Filter> [ ... ]]]
+tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module> | /svc | /v}] [/fo {table | list | csv}] [/nh] [/fi <Filter> [/fi <Filter> [ ... ]]]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|\/s <computer>|Specifies the name or IP address of a remote computer \(do not use backslashes\). The default is the local computer.|
+|\/s <Computer>|Specifies the name or IP address of a remote computer \(do not use backslashes\). The default is the local computer.|
 |\/u \[<Domain>\\\]<UserName>|Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **\/u** can be specified only if **\/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command.|
 |\/p <Password>|Specifies the password of the user account that is specified in the **\/u** parameter.|
-|\/m <Module>|lists all tasks with DLL modules loaded that match the given pattern name. if the module name is not specified, this option displays all modules loaded by each task.|
-|\/svc|lists all the service information for each process without truncation. Valid when the **\/fo** parameter is set to **table**.|
-|\/v|Displays verbose task information in the output. for complete verbose output without truncation, use **\/v** and **\/svc** together.|
+|\/m <Module>|Lists all tasks with DLL modules loaded that match the given pattern name. If the module name is not specified, this option displays all modules loaded by each task.|
+|\/svc|Lists all the service information for each process without truncation. Valid when the **\/fo** parameter is set to **table**.|
+|\/v|Displays verbose task information in the output. For complete verbose output without truncation, use **\/v** and **\/svc** together.|
 |\/fo {table &#124; list &#124; csv}|Specifies the format to use for the output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**.|
 |\/nh|Suppresses column headers in the output. Valid when the **\/fo** parameter is set to **table** or **csv**.|
 |\/fi <Filter>|Specifies the types of processes to include in or exclude from the query. See the following table for valid filter names, operators, and values.|
@@ -38,21 +38,21 @@ tasklist [/s <computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 
 |Filter Name|Valid Operators|Valid Values|
 |---------------|-------------------|----------------|
-|STatUS|eq, ne|RUNNING &#124; NOT RESPONDING &#124; UNKNOWN|
+|STATUS|eq, ne|RUNNING &#124; NOT RESPONDING &#124; UNKNOWN|
 |IMAGENAME|eq, ne|Image name|
 |PID|eq, ne, gt, lt, ge, le|PID value|
 |SESSION|eq, ne, gt, lt, ge, le|Session number|
 |SESSIONNAME|eq, ne|Session name|
-|CPUtime|eq, ne, gt, lt, ge, le|CPU time in the format *HH***:***MM***:***SS*, where *MM* and *SS* are between 0 and 59 and *HH* is any unsigned number|
+|CPUTIME|eq, ne, gt, lt, ge, le|CPU time in the format *HH***:***MM***:***SS*, where *MM* and *SS* are between 0 and 59 and *HH* is any unsigned number|
 |MEMUSAGE|eq, ne, gt, lt, ge, le|Memory usage in KB|
 |USERNAME|eq, ne|Any valid user name|
 |SERVICES|eq, ne|Service name|
 |WINDOWTITLE|eq, ne|Window title|
 |MODULES|eq, ne|DLL name|
 
-## remarks
+## Remarks
 
--   The WINDOWTITLE and STatUS filters are not supported when a remote system is specified.
+-   The WINDOWTITLE and STATUS filters are not supported when a remote system is specified.
 
 ## <a name="BKMK_examples"></a>Examples
 To list all tasks with a process ID greater than 1000, and display them in CSV format, type:
@@ -64,13 +64,13 @@ tasklist /v /fi "PID gt 1000" /fo csv
 To list the system processes that are currently running, type:
 
 ```
-tasklist /fi "USERNAME ne NT AUTHORITY\SYSTEM" /fi "STatUS eq running"
+tasklist /fi "USERNAME ne NT AUTHORITY\SYSTEM" /fi "STATUS eq running"
 ```
 
 To list detailed information for all processes that are currently running, type:
 
 ```
-tasklist /v /fi "STatUS eq running"
+tasklist /v /fi "STATUS eq running"
 ```
 
 To list all the service information for processes on the remote computer "Srvmain" that have a DLL name beginning with "ntdll," type:
@@ -91,7 +91,7 @@ To list the processes on the remote computer "Srvmain," using the credentials of
 tasklist /s srvmain /u maindom\hiropln /p p@ssW23
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

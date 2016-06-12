@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getreplyfilename
+title: Bitsadmin getreplyfilename
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 85447184-1732-4816-a365-2e3599551bf8
 ---
-# bitsadmin getreplyfilename
+# Bitsadmin getreplyfilename
 Gets the path of the file that contains the server reply.
 
 ## Syntax
@@ -23,7 +23,7 @@ bitsadmin /GetReplyFileName <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## remarks
+## Remarks
 Valid only for upload\-reply jobs.
 
 ## <a name="BKMK_examples"></a>Examples
@@ -33,7 +33,7 @@ The following example retrieves the reply filename for the job named *myDownload
 C:\>bitsadmin /GetReplyFileName myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

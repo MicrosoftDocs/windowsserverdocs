@@ -1,5 +1,5 @@
 ---
-title: mask
+title: Mask
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,35 +10,35 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bf301474-d74a-44e7-9fad-c8a11e7ca3bd
 ---
-# mask
-removes hardware shadow copies that were imported by using the **import** command.
+# Mask
+Removes hardware shadow copies that were imported by using the **import** command.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-mask <shadowSetID>
+mask <ShadowSetID>
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|shadowSetID|removes shadow copies that belong to the specified shadow copy Set ID.|
+|ShadowSetID|Removes shadow copies that belong to the specified Shadow Copy Set ID.|
 
-## remarks
+## Remarks
 
--   You can use an existing alias or an environment variable in place of *shadowSetID*. Use **add** without parameters to see existing aliases.
+-   You can use an existing alias or an environment variable in place of *ShadowSetID*. Use **add** without parameters to see existing aliases.
 
 ## <a name="BKMK_examples"></a>Examples
-To remove the imported shadow copy %import\_1%, type:
+To remove the imported shadow copy %Import\_1%, type:
 
 ```
-mask %import_1%
+mask %Import_1%
 ```
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

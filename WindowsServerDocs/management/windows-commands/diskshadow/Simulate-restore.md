@@ -19,13 +19,13 @@ Tests writer involvement in restore sessions on the computer without issuing **P
 simulate restore
 ```
 
-## remarks
+## Remarks
 
 -   **Simulate restore** is used to test whether or not restore with writers can be successful.
 
--   Before you can use **simulate restore**, you must load a Diskshadow metadata file by using the **load metadata** command. This loads the selected writers and components for the restore.
+-   Before you can use **simulate restore**, you must load a DiskShadow metadata file by using the **load metadata** command. This loads the selected writers and components for the restore.
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

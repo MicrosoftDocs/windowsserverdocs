@@ -14,9 +14,9 @@ ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
 This topic for the IT professional contains procedures how to administer application control policies using Software Restriction Policies \(SRP\) beginning with Windows Server 2008 and Windows Vista.
 
 ## Introduction
-Software Restriction Policies \(SRP\) is Group Policy\-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand\-alone computers. For more information about SRP, see the [Software Restriction Policies](../../software-restriction-policies.md).
+Software Restriction Policies \(SRP\) is Group Policy\-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand\-alone computers. For more information about SRP, see the [Software Restriction Policies](../../Software-Restriction-Policies.md).
 
-Beginning with  Windows Server 2008 R2  and  Windows 7 , Windows applocker can be used instead of or in concert with SRP for a portion of your application control strategy. For information about applocker in  Windows Server 2012  and Windows 8, see the [applocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7).
+Beginning with  Windows Server 2008 R2  and  Windows 7 , Windows AppLocker can be used instead of or in concert with SRP for a portion of your application control strategy. For information about AppLocker in  Windows Server 2012  and Windows 8, see the [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7).
 
 This topic contains:
 
@@ -34,11 +34,11 @@ This topic contains:
 
 For information about how to accomplish specific tasks using SRP, see the following:
 
--   [Determine Allow-Deny List and Application Inventory for Software Restriction Policies]()
+-   [Determine Allow-Deny List and Application Inventory for Software Restriction Policies](administer/Determine-Allow-Deny-List-and-Application-Inventory-for-../../Software-Restriction-Policies.md)
 
--   [Work with Software Restriction Policies Rules](administer/work-with-software-restriction-policies-rules.md)
+-   [Work with Software Restriction Policies Rules](administer/Work-with-Software-Restriction-Policies-Rules.md)
 
--   [Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus](administer/use-software-restriction-policies-help-protect-your-computer-against-email-virus.md)
+-   [Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus](administer/Use-Software-Restriction-Policies-to-Help-Protect-Your-Computer-Against-an-Email-Virus.md)
 
 ## <a name="BKMK_Open_SRP"></a>To open Software Restriction Policies
 

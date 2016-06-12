@@ -19,7 +19,7 @@ Ends a restore session and issues a **PostRestore** event to involved writers.
 end restore
 ```
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

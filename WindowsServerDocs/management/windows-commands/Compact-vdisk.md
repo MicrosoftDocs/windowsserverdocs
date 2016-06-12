@@ -1,5 +1,5 @@
 ---
-title: compact vdisk
+title: Compact vdisk
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40ca0820-67de-4160-b62a-e9bf63fe2790
 ---
-# compact vdisk
+# Compact vdisk
 Reduces the physical size of a dynamically expanding virtual hard disk \(VHD\) file. This parameter is useful because dynamically expanding VHDs increase in size as you add files, but they do not automatically reduce in size when you delete files.
 
 > [!NOTE]
@@ -22,7 +22,7 @@ Reduces the physical size of a dynamically expanding virtual hard disk \(VHD\) f
 compact vdisk
 ```
 
-## remarks
+## Remarks
 
 -   A dynamically expanding VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
 
@@ -35,24 +35,24 @@ To compact a dynamically expanding VHD, type:
 compact vdisk
 ```
 
-## additional references
+## Additional references
 
--   [Command-Line Syntax Key](commandline-syntax-key.md)
+-   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
--   [attach vdisk](attach-vdisk.md)
+-   [Attach vdisk](Attach-vdisk.md)
 
--   [create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
+-   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
 
--   [detail vdisk](delete/detail/detail-vdisk.md)
+-   [Detail vdisk](delete/detail/Detail-vdisk.md)
 
--   [Detach vdisk]()
+-   [Detach vdisk](Detach-vdisk.md)
 
--   [expand vdisk](expand-vdisk.md)
+-   [Expand vdisk](Expand-vdisk.md)
 
--   [Merge vdisk](merge-vdisk.md)
+-   [Merge vdisk](Merge-vdisk.md)
 
--   [select vdisk](select/select-vdisk.md)
+-   [Select vdisk](select/Select-vdisk.md)
 
--   [list_1]()
+-   [List_1](List_1.md)
 
 

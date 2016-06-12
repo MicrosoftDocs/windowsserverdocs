@@ -11,9 +11,9 @@ ms.topic: article
 ms.assetid: 05827d0f-3b2b-4d14-96d7-173d6f7d939a
 ---
 # Fsutil sparse
-manages sparse files.
+Manages sparse files.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -36,7 +36,7 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 |<BeginningOffset>|Specifies the offset within the file to mark as sparse.|
 |<Length>|Specifies the length of the region in the file to be marked as sparse \(in bytes\).|
 
-## remarks
+## Remarks
 
 -   A sparse file is a file with one or more regions of unallocated data in it. A program will see these unallocated regions as containing bytes with the value zero, but no disk space is used to represent these zeros. All meaningful or nonzero data is allocated, whereas all nonmeaningful data \(large strings of data that is composed of zeros\) is not allocated. When a sparse file is read, allocated data is returned as stored, and unallocated data is returned, by default, as zeros, in accordance with the C2 security requirement specification. Sparse file support allows data to be deallocated from anywhere in the file.
 
@@ -44,7 +44,7 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 
 -   Only compressed or sparse files can have zeroed ranges known to the operating system.
 
--   if the file is sparse or compressed, NTFS may deallocate disk space within the file. This sets the range of bytes to zeroes without extending the file size.
+-   If the file is sparse or compressed, NTFS may deallocate disk space within the file. This sets the range of bytes to zeroes without extending the file size.
 
 ## <a name="BKMK_examples"></a>Examples
 To mark a file named Sample.txt in the C:\\Temp directory as sparse, type:
@@ -53,9 +53,9 @@ To mark a file named Sample.txt in the C:\\Temp directory as sparse, type:
 fsutil sparse setflag c:\temp\sample.txt 
 ```
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
-[Fsutil]()
+[Fsutil](Fsutil.md)
 
 

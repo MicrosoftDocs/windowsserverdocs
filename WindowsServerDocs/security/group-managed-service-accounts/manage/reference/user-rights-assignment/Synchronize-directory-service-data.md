@@ -83,6 +83,6 @@ Ensure that no accounts are assigned the **Synchronize directory service data** 
 None. Not defined is the default configuration.
 
 ## See Also
-[User Rights Assignment](user-rights-assignment.md)
+[User Rights Assignment](User-Rights-Assignment.md)
 
 

@@ -10,9 +10,9 @@ ms.assetid: 8f3b2422-3dce-4fb4-adbb-8536b1d7da2b
 author: jaimeo
 ---
 # logman delete
-delete an existing data collector.  
+Delete an existing data collector.  
   
-for examples of how this command can be used, see [Examples](#BKMK_examples).  
+For examples of how this command can be used, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ The following command deletes the data collector perf\_log.
 logman delete perf_log  
 ```  
   
-#### additional references  
-[logman](logman.md)  
+#### Additional references  
+[Logman](Logman.md)  
   
 

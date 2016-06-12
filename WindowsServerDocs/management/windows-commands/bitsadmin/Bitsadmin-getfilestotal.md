@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getfilestotal
+title: Bitsadmin getfilestotal
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5de113e-f29c-4cd3-9392-0e300018d516
 ---
-# bitsadmin getfilestotal
+# Bitsadmin getfilestotal
 Retrieves the number of files in the specified job.
 
 ## Syntax
@@ -31,6 +31,6 @@ C:\>bitsadmin /GetFilesTotal myDownloadJob
 ```
 
 ## See Also
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

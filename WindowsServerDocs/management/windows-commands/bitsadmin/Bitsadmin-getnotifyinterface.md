@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getnotifyinterface
+title: Bitsadmin getnotifyinterface
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40bf9dd8-b167-406a-80a6-a5a6f1b8cf7f
 ---
-# bitsadmin getnotifyinterface
+# Bitsadmin getnotifyinterface
 Determines if another program has registered a COM callback interface for the specified job.
 
 ## Syntax
@@ -23,8 +23,8 @@ bitsadmin /GetNotifyInterface <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## remarks
-Displays regISTERED or UNregISTERED.
+## Remarks
+Displays REGISTERED or UNREGISTERED.
 
 > [!NOTE]
 > It is not possible to determine the program that registered the callback interface.
@@ -36,7 +36,7 @@ The following example retrieves the notify interface for the job named *myDownlo
 C:\>bitsadmin /GetNotifyInterface myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

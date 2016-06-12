@@ -29,6 +29,6 @@ If this policy setting is configured, the following event appears on computers r
 |5145|A network share object was checked to see whether the client can be granted desired access.|
 
 ## See Also
-[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
+[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
 
 

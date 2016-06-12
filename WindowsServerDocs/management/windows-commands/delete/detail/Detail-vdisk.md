@@ -1,5 +1,5 @@
 ---
-title: detail vdisk
+title: Detail vdisk
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da0f350c-1ce3-4c3f-988c-15f83402e716
 ---
-# detail vdisk
+# Detail vdisk
 Displays the properties of the selected virtual hard disk \(VHD\).
 
 ## Syntax
@@ -19,7 +19,7 @@ Displays the properties of the selected virtual hard disk \(VHD\).
 detail vdisk
 ```
 
-## remarks
+## Remarks
 
 -   A VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a vdisk and shift the focus to it.
 
@@ -30,24 +30,24 @@ To see details about the selected VHD, type:
 detail vdisk
 ```
 
-#### additional references
+#### Additional references
 
--   [Command-Line Syntax Key](../../commandline-syntax-key.md)
+-   [Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
--   [attach vdisk](../../attach-vdisk.md)
+-   [Attach vdisk](../../Attach-vdisk.md)
 
--   [compact vdisk](../../compact-vdisk.md)
+-   [Compact vdisk](../../Compact-vdisk.md)
 
--   [create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
+-   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
 
--   [Detach vdisk]()
+-   [Detach vdisk](Detach-vdisk.md)
 
--   [expand vdisk](../../expand-vdisk.md)
+-   [Expand vdisk](../../Expand-vdisk.md)
 
--   [Merge vdisk](../../merge-vdisk.md)
+-   [Merge vdisk](../../Merge-vdisk.md)
 
--   [select vdisk](../../select/select-vdisk.md)
+-   [Select vdisk](../../select/Select-vdisk.md)
 
--   [list_1]()
+-   [List_1](List_1.md)
 
 

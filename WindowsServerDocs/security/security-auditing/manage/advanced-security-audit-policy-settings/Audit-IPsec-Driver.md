@@ -52,6 +52,6 @@ If this policy setting is configured, the following events appear on computers r
 |5485|IPsec Services failed to process some IPsec filters on a plug\-and\-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap\-in to diagnose the problem.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
+[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
 
 

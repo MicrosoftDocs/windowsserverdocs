@@ -1,5 +1,5 @@
 ---
-title: online disk
+title: Online disk
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,16 +10,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 ---
-# online disk
+# Online disk
 Brings disks that are currently offline to an online state.
 
-> [!importANT]
+> [!IMPORTANT]
 > This command is not available in any edition of Windows Vista.
 
-> [!importANT]
+> [!IMPORTANT]
 > This command will fail if it is used on a read\-only disk.
 
-for instructions regarding how to use this command, see [Reactivate a Missing or offline Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207046) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207046\).
+For instructions regarding how to use this command, see [Reactivate a Missing or Offline Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207046) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207046\).
 
 ## Syntax
 
@@ -31,19 +31,19 @@ online disk [noerr]
 
 |Parameter|Description|
 |-------------|---------------|
-|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
 
-## remarks
+## Remarks
 
--   When used without parameters in Windows Vista, this command operates on a disk group. for basic disks, there is never more than one disk per group. for dynamic disks, the group includes all non\-foreign dynamic disks.
+-   When used without parameters in Windows Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.
 
--   for basic disks, this command will attempt to bring online the selected disk and all volumes on that disk.
+-   For basic disks, this command will attempt to bring online the selected disk and all volumes on that disk.
 
--   for dynamic disks, this command will attempt to bring online all disks that are not marked as foreign on the local computer. It will also attempt to bring online all volumes on the set of dynamic disks.
+-   For dynamic disks, this command will attempt to bring online all disks that are not marked as foreign on the local computer. It will also attempt to bring online all volumes on the set of dynamic disks.
 
--   if a dynamic disk in a disk group is brought online and it is the only disk in the group, then the original group is recreated and the disk is moved to that group. if there are other disks in the group and they are online, then the disk is simply added back into the group.
+-   If a dynamic disk in a disk group is brought online and it is the only disk in the group, then the original group is recreated and the disk is moved to that group. If there are other disks in the group and they are online, then the disk is simply added back into the group.
 
--   if the group of a selected disk contains mirrored or RAID\-5 volumes, this command also resynchronizes these volumes.
+-   If the group of a selected disk contains mirrored or RAID\-5 volumes, this command also resynchronizes these volumes.
 
 -   A disk must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
@@ -54,8 +54,8 @@ To bring the disk with focus online, type:
 online disk
 ```
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 

@@ -96,6 +96,6 @@ If your organization has more stringent security requirements, you can create a 
 The use of ALT key character combinations can greatly enhance the complexity of a password. However, such stringent password requirements can result in additional Help Desk requests. Alternatively, your organization could consider a requirement for all administrator passwords to use ALT characters in the 0128–0159 range. \(ALT characters outside of this range can represent standard alphanumeric characters that would not add additional complexity to the password.\)  
   
 ## See Also  
-[Password Policy](password-policy.md)  
+[Password Policy](Password-Policy.md)  
   
 

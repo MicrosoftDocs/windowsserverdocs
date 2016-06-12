@@ -77,7 +77,7 @@ After the user account is added to the Protected Users group, protection is alre
 
 The Protected Users group can be applied to domain controllers that run an operating system earlier than  Windows Server 2012 R2 . This allows the added security that is achieved by using the Protected Users group to be applied to all domain controllers. The Protected Users group can be created by  HYPERLINK "http:\/\/technet.microsoft.com\/library\/cc816944\(v\=ws.10\).aspx" transferring the primary domain controller \(PDC\) emulator role to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
-For more information, see [How to Configure Protected Accounts](how-configure-protected-accounts.md).
+For more information, see [How to Configure Protected Accounts](How-to-Configure-Protected-Accounts.md).
 
 **Built in restrictions of the Protected Users security group**
 
@@ -120,10 +120,10 @@ To enable  Windows Server 2012 R2  and Windows 8.1 protection for clients on dom
 
 ## Additional resources
 
--   [Credentials Protection and Management](../../credentials-protection-management.md)
+-   [Credentials Protection and Management](../../Credentials-Protection-and-Management.md)
 
--   [Authentication Policies and Authentication Policy Silos](authentication-policies-authentication-policy-silos.md)
+-   [Authentication Policies and Authentication Policy Silos](Authentication-Policies-and-Authentication-Policy-Silos.md)
 
--   [How to Configure Protected Accounts](how-configure-protected-accounts.md)
+-   [How to Configure Protected Accounts](How-to-Configure-Protected-Accounts.md)
 
 

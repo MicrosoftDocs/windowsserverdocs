@@ -1,5 +1,5 @@
 ---
-title: pushprinterconnections
+title: Pushprinterconnections
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,8 +9,8 @@ ms.topic: article
 ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818
 author: vhorne
 ---
-# pushprinterconnections
-Reads deployed printer Connection settings from Group Policy, and deploys\/removes printer connections as needed.  
+# Pushprinterconnections
+Reads Deployed Printer Connection settings from Group Policy, and deploys\/removes printer connections as needed.  
   
 ## Syntax  
   
@@ -23,15 +23,15 @@ pushprinterconnections <-log> <-?>
 |Parameter|Description|  
 |-------------|---------------|  
 |<\-log>|Writes a per user debug log file to %temp, or writes a per machine debug log to %windir%\\temp.|  
-|<\-?>|Displays help at the command prompt.|  
+|<\-?>|Displays Help at the command prompt.|  
   
-## remarks  
+## Remarks  
 This utility is for use in machine startup or user logon scripts, and should not be run from the command line.  
   
-## additional references  
+## Additional references  
   
--   [Command-Line Syntax Key](commandline-syntax-key.md)  
+-   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
--   [deploy printers by Using Group Policy](http://go.microsoft.com/fwlink/?LinkId=230627)  
+-   [Deploy Printers by Using Group Policy](http://go.microsoft.com/fwlink/?LinkId=230627)  
   
 

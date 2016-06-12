@@ -1,5 +1,5 @@
 ---
-title: applocker Policy Use Scenarios
+title: AppLocker Policy Use Scenarios
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -10,33 +10,33 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8c111899-0a26-427a-8cc8-51291ca3e396
 ---
-# applocker Policy Use Scenarios
-This topic for the IT professional lists the various application control scenarios in which applocker policies can be effectively implemented.
+# AppLocker Policy Use Scenarios
+This topic for the IT professional lists the various application control scenarios in which AppLocker policies can be effectively implemented.
 
-applocker can help you improve the management of application control and the maintenance of application control policies. Application control scenarios addressed by applocker can be categorized as follows:
+AppLocker can help you improve the management of application control and the maintenance of application control policies. Application control scenarios addressed by AppLocker can be categorized as follows:
 
 1.  **Application inventory**
 
-    applocker has the ability to enforce its policy in an audit\-only mode where all application access activity is collected in event logs for further analysis. Windows PowerShell cmdlets are also available to help you understand application usage and access.
+    AppLocker has the ability to enforce its policy in an audit\-only mode where all application access activity is collected in event logs for further analysis. Windows PowerShell cmdlets are also available to help you understand application usage and access.
 
 2.  **Protection against unwanted software**
 
-    applocker has the ability to deny applications from running simply by excluding them from the list of allowed applications per business group or user. If an application is not specifically identified by its publisher, installation path, or file hash, the attempt to run the application fails.
+    AppLocker has the ability to deny applications from running simply by excluding them from the list of allowed applications per business group or user. If an application is not specifically identified by its publisher, installation path, or file hash, the attempt to run the application fails.
 
 3.  **Licensing conformance**
 
-    applocker can provide an inventory of software usage within your organization, so you can identify the software that corresponds to your software licensing agreements and restrict application usage based on licensing agreements.
+    AppLocker can provide an inventory of software usage within your organization, so you can identify the software that corresponds to your software licensing agreements and restrict application usage based on licensing agreements.
 
 4.  **Software standardization**
 
-    applocker policies can be configured to allow only supported or approved applications to run on computers within a business group. This permits a more uniform application deployment.
+    AppLocker policies can be configured to allow only supported or approved applications to run on computers within a business group. This permits a more uniform application deployment.
 
 5.  **Manageability improvement**
 
-    applocker policies can be modified and deployed through your existing Group Policy infrastructure and can work in conjunction with policies created by using Software Restriction Policies. As you manage ongoing change in your support of a business group's applications, you can modify policies and use the applocker cmdlets to test the policies for the expected results. You can also design application control policies for situations in which users share computers.
+    AppLocker policies can be modified and deployed through your existing Group Policy infrastructure and can work in conjunction with policies created by using Software Restriction Policies. As you manage ongoing change in your support of a business group's applications, you can modify policies and use the AppLocker cmdlets to test the policies for the expected results. You can also design application control policies for situations in which users share computers.
 
 ### Use scenarios
-The following are examples of scenarios in which applocker can be used:
+The following are examples of scenarios in which AppLocker can be used:
 
 -   Your organization implements a policy to standardize the applications used within each business group, so you need to determine the expected usage compared to the actual usage.
 
@@ -63,9 +63,9 @@ The following are examples of scenarios in which applocker can be used:
 -   In addition to other measures, you need to control the access to sensitive data through application usage.
 
 ## See also
-To explore specific use scenarios, see [applocker Step\-by\-Step Scenarios](http://technet.microsoft.com/library/ee791835(v=ws.10).aspx).
+To explore specific use scenarios, see [AppLocker Step\-by\-Step Scenarios](http://technet.microsoft.com/library/ee791835(v=ws.10).aspx).
 
 ## See Also
-[applocker Technical Reference](applocker-technical-reference.md)
+[AppLocker Technical Reference](AppLocker-Technical-Reference.md)
 
 

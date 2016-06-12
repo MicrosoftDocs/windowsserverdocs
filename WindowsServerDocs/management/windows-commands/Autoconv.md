@@ -1,5 +1,5 @@
 ---
-title: autoconv
+title: Autoconv
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,18 +8,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17281e54-0b18-4e84-94ac-24586c82df4e
 ---
-# autoconv
-converts file allocation table \(Fat\) and Fat32 volumes to the NTFS file system, leaving existing files and directories intact at startup after **autochk** runs. volumes converted to the NTFS file system cannot be converted back to Fat or Fat32.
+# Autoconv
+Converts file allocation table \(FAT\) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact at startup after **Autochk** runs. Volumes converted to the NTFS file system cannot be converted back to FAT or FAT32.
 
-## remarks
-You cannot run **autoconv** on the command\-line. This will only be run at startup, if set through **convert.exe**.
+## Remarks
+You cannot run **Autoconv** on the command\-line. This will only be run at startup, if set through **Convert.exe**.
 
-## additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
-[autochk](autochk.md)
+[Autochk](Autochk.md)
 
-[convert](convert.md)
+[Convert](Convert.md)
 
 [Working with File Systems](http://go.microsoft.com/fwlink/?LinkId=4509)
 

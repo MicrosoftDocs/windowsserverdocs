@@ -1,5 +1,5 @@
 ---
-title: bitsadmin reset
+title: Bitsadmin reset
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e4f9d1d-072c-493f-8d7a-f6d713c3ef29
 ---
-# bitsadmin reset
+# Bitsadmin reset
 Cancels all jobs in the transfer queue that the current user owns.
 
 ## Syntax
 
 ```
-bitsadmin /reset [/AllUsers]
+bitsadmin /Reset [/AllUsers]
 ```
 
 ## Parameters
@@ -23,7 +23,7 @@ bitsadmin /reset [/AllUsers]
 |-------------|---------------|
 |AllUsers|Optional— cancels all jobs in the queue.|
 
-## remarks
+## Remarks
 You must have administrator privileges to use the **AllUsers** parameter.
 
 > [!NOTE]
@@ -33,10 +33,10 @@ You must have administrator privileges to use the **AllUsers** parameter.
 The following example cancels all the jobs in the transfer queue for the current user.
 
 ```
-C:\>bitsadmin /reset
+C:\>bitsadmin /Reset
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

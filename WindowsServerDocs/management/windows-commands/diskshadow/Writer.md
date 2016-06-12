@@ -1,5 +1,5 @@
 ---
-title: writer
+title: Writer
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,23 +10,23 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140
 ---
-# writer
-verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure. if used without parameters, **writer** displays help at the command prompt.
+# Writer
+Verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure. If used without parameters, **writer** displays help at the command prompt.
 
 ## Syntax
 
 ```
-writer verify [<writer> | <component>]
-writer exclude [<writer> | <component>]
+writer verify [<Writer> | <Component>]
+writer exclude [<Writer> | <Component>]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|verify|verifies that the specified writer or component is included in the backup or restore procedure. The backup or restore procedure will fail if the writer or component is not included.|
+|verify|Verifies that the specified writer or component is included in the backup or restore procedure. The backup or restore procedure will fail if the writer or component is not included.|
 |exclude|Excludes the specified writer or component from the backup or restore procedure.|
-|\[<writer> &#124; <component>\]|Specifies the writer or component to verify or exclude. writers are specified by writer GUID or by the writer name, for example "System writer."|
+|\[<Writer> &#124; <Component>\]|Specifies the writer or component to verify or exclude. Writers are specified by writer GUID or by the writer name, for example "System Writer."|
 
 ## <a name="BKMK_examples"></a>Examples
 To verify a writer by specifying its GUID \(for this example, 4dc3bdd4\-ab48\-4d07\-adb0\-3bee2926fd7f\), type:
@@ -35,13 +35,13 @@ To verify a writer by specifying its GUID \(for this example, 4dc3bdd4\-ab48\-4d
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
 ```
 
-To exclude a writer with the name “System writer,” type:
+To exclude a writer with the name “System Writer,” type:
 
 ```
-writer exclude "System writer"
+writer exclude "System Writer"
 ```
 
-### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

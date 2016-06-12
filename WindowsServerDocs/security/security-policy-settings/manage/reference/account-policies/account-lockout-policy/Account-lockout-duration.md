@@ -61,6 +61,6 @@ Configure the **Account lockout duration** policy setting to an appropriate valu
 Configuring the **Account lockout duration** policy setting to 0 so that accounts cannot be automatically unlocked can increase the number of requests that your organization's Help Desk receives to unlock accounts that were locked by mistake.  
   
 ## See Also  
-[Account Lockout Policy](account-lockout-policy.md)  
+[Account Lockout Policy](Account-Lockout-Policy.md)  
   
 

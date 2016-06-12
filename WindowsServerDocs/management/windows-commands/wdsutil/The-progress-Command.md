@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 8ce5e77b-e13f-4ac3-948d-31770a6c7e25
 ---
 # The progress Command
-Displays progress while a command is being executed. You can use **\/progress** with any other wdsutil commands that you run. Note that you must specify **\/verbose** and **\/progress** directly after **wdsutil**.
+Displays progress while a command is being executed. You can use **\/progress** with any other WDSUTIL commands that you run. Note that you must specify **\/verbose** and **\/progress** directly after **WDSUTIL**.
 
 ## Syntax
 
 ```
-wdsutil /progress <commands>
+WDSUTIL /progress <commands>
 ```
 
 ## Examples
 To initialize the server and display progress, type:
 
 ```
-wdsutil /verbose /Progress /Initialize-Server /Server:MyWDSServer /remInst:"C:\remoteInstall"
+WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:"C:\RemoteInstall"
 ```
 
 

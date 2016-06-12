@@ -56,6 +56,6 @@ If this policy setting is configured, the following events appear on computers r
 |6408|Registered product %1 failed and Windows Firewall is now controlling the filtering for %2 **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
+[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
 
 

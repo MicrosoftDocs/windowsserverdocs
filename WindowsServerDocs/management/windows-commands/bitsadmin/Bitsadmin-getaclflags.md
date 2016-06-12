@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getaclflags
+title: Bitsadmin getaclflags
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99266def-7479-4430-a61c-98ec433fa88b
 ---
-# bitsadmin getaclflags
+# Bitsadmin getaclflags
 Retrieves the access control list propagations flags.
 
 ## Syntax
@@ -23,16 +23,16 @@ bitsadmin /GetAclFlags <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## remarks
+## Remarks
 Displays one or more of the following flag values:
 
--   O: copy owner information with file.
+-   O: Copy owner information with file.
 
--   G: copy group information with file.
+-   G: Copy group information with file.
 
--   D: copy DACL information with file.
+-   D: Copy DACL information with file.
 
--   S: copy SACL information with file.
+-   S: Copy SACL information with file.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the access control list propagation flags for the job named *myDownloadJob*.
@@ -41,7 +41,7 @@ The following example retrieves the access control list propagation flags for th
 C:\>bitsadmin /getaclflags myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

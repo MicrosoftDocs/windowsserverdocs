@@ -1,5 +1,5 @@
 ---
-title: systeminfo
+title: Systeminfo
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,25 +8,25 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 39954968-3c2e-4d3e-9d89-c9c43347461e
 ---
-# systeminfo
+# Systeminfo
 Displays detailed configuration information about a computer and its operating system, including operating system configuration, security information, product ID, and hardware properties \(such as RAM, disk space, and network cards\).
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-systeminfo [/s <computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE | list | CSV}] [/nh]
+Systeminfo [/s <Computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE | LIST | CSV}] [/nh]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|\/s <computer>|Specifies the name or IP address of a remote computer \(do not use backslashes\). The default is the local computer.|
-|\/u <Domain>\\<UserName>|Runs the command with the account permissions of the specified user account. if **\/u** is not specified, this command uses the permissions of the user who is currently logged on to the computer that is issuing the command.|
+|\/s <Computer>|Specifies the name or IP address of a remote computer \(do not use backslashes\). The default is the local computer.|
+|\/u <Domain>\\<UserName>|Runs the command with the account permissions of the specified user account. If **\/u** is not specified, this command uses the permissions of the user who is currently logged on to the computer that is issuing the command.|
 |\/p <Password>|Specifies the password of the user account that is specified in the **\/u** parameter.|
-|\/fo <format>|Specifies the output format with one of the following values:<br /><br />TABLE: Displays output in a table.<br /><br />list: Displays output in a list.<br /><br />CSV: Displays output in Comma Separated Values format.|
+|\/fo <Format>|Specifies the output format with one of the following values:<br /><br />TABLE: Displays output in a table.<br /><br />LIST: Displays output in a list.<br /><br />CSV: Displays output in Comma Separated Values format.|
 |\/nh|Suppresses column headers in the output. Valid when the **\/fo** parameter is set to TABLE or CSV.|
 |\/?|Displays help at the command prompt.|
 
@@ -43,7 +43,7 @@ To remotely view configuration information \(in list format\) for a computer nam
 
 **systeminfo \/s srvmain2 \/u maindom\\hiropln \/p p@ssW23 \/fo list**
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: volume Activation Technical Reference
+title: Volume Activation Technical Reference
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -8,31 +8,31 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ce77a9d-2dfa-4b75-a796-bed6350b6c58
 ---
-# volume Activation Technical Reference
-These topics provide useful reference information related to volume Activation.
+# Volume Activation Technical Reference
+These topics provide useful reference information related to Volume Activation.
 
-## Technical Reference for volume Activation
+## Technical Reference for Volume Activation
 
--   [Slmgr.vbs Options for volume Activation](volume-activation-technical-reference/slmgrvbs-options-volume-activation.md)
+-   [Slmgr.vbs Options for Volume Activation](volume-activation-technical-reference/Slmgr.vbs-Options-for-Volume-Activation.md)
 
--   [registry Settings for volume Activation](volume-activation-technical-reference/registry-settings-volume-activation.md)
+-   [Registry Settings for Volume Activation](volume-activation-technical-reference/Registry-Settings-for-Volume-Activation.md)
 
--   [KMS Activation Timing and Discovery for volume Activation](volume-activation-technical-reference/kms-activation-timing-discovery-volume-activation.md)
+-   [KMS Activation Timing and Discovery for Volume Activation](volume-activation-technical-reference/KMS-Activation-Timing-and-Discovery-for-Volume-Activation.md)
 
--   [KMS and MAK Activation Scenarios for volume Activation](volume-activation-technical-reference/kms-mak-activation-scenarios-volume-activation.md)
+-   [KMS and MAK Activation Scenarios for Volume Activation](volume-activation-technical-reference/KMS-and-MAK-Activation-Scenarios-for-Volume-Activation.md)
 
--   [KMS Host Keys to Products Activated for volume Activation](volume-activation-technical-reference/kms-host-keys-products-activated-volume-activation.md)
+-   [KMS Host Keys to Products Activated for Volume Activation](volume-activation-technical-reference/KMS-Host-Keys-to-Products-Activated-for-Volume-Activation.md)
 
--   [Activation Policy Values for volume Activation](volume-activation-technical-reference/activation-policy-values-volume-activation.md)
+-   [Activation Policy Values for Volume Activation](volume-activation-technical-reference/Activation-Policy-Values-for-Volume-Activation.md)
 
--   [KMS Client Setup Keys for volume Activation](volume-activation-technical-reference/kms-client-setup-keys-volume-activation.md)
+-   [KMS Client Setup Keys for Volume Activation](volume-activation-technical-reference/KMS-Client-Setup-Keys-for-Volume-Activation.md)
 
--   [Activation Error Codes for volume Activation](volume-activation-technical-reference/activation-error-codes-volume-activation.md)
+-   [Activation Error Codes for Volume Activation](volume-activation-technical-reference/Activation-Error-Codes-for-Volume-Activation.md)
 
--   [WMI Properties and Methods for volume Activation](volume-activation-technical-reference/wmi-properties-methods-volume-activation.md)
+-   [WMI Properties and Methods for Volume Activation](volume-activation-technical-reference/WMI-Properties-and-Methods-for-Volume-Activation.md)
 
 ## See also
 
--   [volume Activation Overview](volume-activation-overview.md)
+-   [Volume Activation Overview](Volume-Activation-Overview.md)
 
 

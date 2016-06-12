@@ -30,6 +30,6 @@ If this policy setting is configured, the following event appears on computers r
 |4689|A process has exited.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
+[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
 
 

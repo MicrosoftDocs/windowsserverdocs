@@ -1,5 +1,5 @@
 ---
-title: date
+title: Date
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce6700fb-32f9-4350-a1af-5aee61d4448c
 ---
-# date
-Displays or sets the system date. if used without parameters, **date** displays the current system date setting and prompts you to enter a new date.
+# Date
+Displays or sets the system date. If used without parameters, **date** displays the current system date setting and prompts you to enter a new date.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -27,7 +27,7 @@ date [/t | <Month-Day-Year>]
 |\/t|Displays the current date without prompting you for a new date.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
 -   To change the current date, you must have administrative credentials.
 
@@ -37,10 +37,10 @@ date [/t | <Month-Day-Year>]
 
 -   Valid *Day* values are 1 through 31.
 
--   Valid *Year* values are either 00 through 99, or 1980 through 2099. if you use two digits, the values 80 through 99 correspond to the years 1980 through 1999.
+-   Valid *Year* values are either 00 through 99, or 1980 through 2099. If you use two digits, the values 80 through 99 correspond to the years 1980 through 1999.
 
 ## <a name="BKMK_examples"></a>Examples
-if command extensions are enabled, to display the current system date, type:
+If command extensions are enabled, to display the current system date, type:
 
 ```
 date /t
@@ -63,7 +63,7 @@ Enter the new date: (mm-dd-yy)
 
 To keep the current date and return to the command prompt, press ENTER. To change the current date, type the new date and then press ENTER.
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

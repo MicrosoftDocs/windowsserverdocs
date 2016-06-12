@@ -1,5 +1,5 @@
 ---
-title: recover
+title: Recover
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,25 +10,25 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cf9be2e3-90c8-4773-a201-dc503b91948e
 ---
-# recover
-recovers readable information from a bad or defective disk.
+# Recover
+Recovers readable information from a bad or defective disk.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-recover [<Drive>:][<path>]<FileName>
+recover [<Drive>:][<Path>]<FileName>
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<path>\]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
+|\[<Drive>:\]\[<Path>\]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
 |\/?|Displays help at the command prompt.|
 
-## remarks
+## Remarks
 
 -   The **recover** command reads a file, sector\-by\-sector, and recovers data from the good sectors. Data in bad sectors is lost.
 
@@ -45,7 +45,7 @@ To recover the file Story.txt in the \\Fiction directory on drive D, type:
 recover d:\fiction\story.txt 
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

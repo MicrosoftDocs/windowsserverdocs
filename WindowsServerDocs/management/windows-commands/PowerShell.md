@@ -1,5 +1,5 @@
 ---
-title: powershell
+title: PowerShell
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,54 +8,54 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 694fc970-0b6c-4046-b1b5-7eb1a0d26609
 ---
-# powershell
-Windows powershell™ is a task\-based command\-line shell and scripting language designed especially for system administration. Built on the .NET Framework, Windows powershell helps IT professionals and power users control and automate the administration of the Windows operating system and applications that run on Windows.
+# PowerShell
+Windows PowerShell™ is a task\-based command\-line shell and scripting language designed especially for system administration. Built on the .NET Framework, Windows PowerShell helps IT professionals and power users control and automate the administration of the Windows operating system and applications that run on Windows.
 
-The **powershell.exe** command\-line tool starts a Windows powershell session in a Command prompt window. When you use **powershell.exe**, you can use its optional parameters to customize the session. for example, you can start a session that uses a particular execution policy or one that excludes a Windows powershell profile. Otherwise, the session is the same as any session that is started in the Windows powershell console.
+The **PowerShell.exe** command\-line tool starts a Windows PowerShell session in a Command Prompt window. When you use **PowerShell.exe**, you can use its optional parameters to customize the session. For example, you can start a session that uses a particular execution policy or one that excludes a Windows PowerShell profile. Otherwise, the session is the same as any session that is started in the Windows PowerShell console.
 
-## Using powershell.exe
-You can use the **powershell.exe** command\-line tool to start a Windows powershell session in a Command prompt window.
+## Using PowerShell.exe
+You can use the **PowerShell.exe** command\-line tool to start a Windows PowerShell session in a Command Prompt window.
 
-1.  To start a Windows powershell session in a Command prompt window, type `powershell`. A **PS** prefix is added to the command prompt to indicate that you are in a Windows powershell session.
+1.  To start a Windows PowerShell session in a Command Prompt window, type `PowerShell`. A **PS** prefix is added to the command prompt to indicate that you are in a Windows PowerShell session.
 
-2.  To start a session with a particular execution policy, use the **executionPolicy** parameter.
-
-    ```
-    powershell.exe -executionPolicy Restricted
-    ```
-
-3.  To start a Windows powershell session without your Windows powershell profiles, use the **NoProfile** parameter.
+2.  To start a session with a particular execution policy, use the **ExecutionPolicy** parameter.
 
     ```
-    powershell.exe -NoProfile
+    PowerShell.exe -ExecutionPolicy Restricted
     ```
 
-4.  To start a session , use the **executionPolicy** parameter.
+3.  To start a Windows PowerShell session without your Windows PowerShell profiles, use the **NoProfile** parameter.
 
     ```
-    powershell.exe -executionPolicy Restricted
+    PowerShell.exe -NoProfile
     ```
 
-5.  To see the powershell.exe help file, use the following command format.
+4.  To start a session , use the **ExecutionPolicy** parameter.
 
     ```
-    powershell.exe -help, -?, /?
+    PowerShell.exe -ExecutionPolicy Restricted
     ```
 
-6.  To end a Windows powershell session in a Command prompt window, type `exit`. The typical command prompt returns.
+5.  To see the PowerShell.exe help file, use the following command format.
 
-for a complete list of the **powershell.exe** command\-line parameters, see [about\_powershell.Exe](http://go.microsoft.com/fwlink/?LinkID=113439).
+    ```
+    PowerShell.exe -help, -?, /?
+    ```
 
-## Other Ways to start Windows powershell
-for information about other ways to start Windows powershell, see [starting Windows powershell](http://go.microsoft.com/fwlink/?LinkID=135259).
+6.  To end a Windows PowerShell session in a Command Prompt window, type `exit`. The typical command prompt returns.
 
-## remarks
-Windows powershell runs on the Server Core installation option of Windows Server operating systems. However, features that require a graphic user interface, such as the [Windows powershell Integrated Scripting Environment \(ISE\)](http://technet.microsoft.com/library/hh849182), and the [Out\-GridView](http://go.microsoft.com/fwlink/?LinkID=113364) and [Show\-Command](http://go.microsoft.com/fwlink/?LinkID=217448) cmdlets, do not run on Server Core installations.
+For a complete list of the **PowerShell.exe** command\-line parameters, see [about\_PowerShell.Exe](http://go.microsoft.com/fwlink/?LinkID=113439).
+
+## Other Ways to Start Windows PowerShell
+For information about other ways to start Windows PowerShell, see [Starting Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=135259).
+
+## Remarks
+Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, features that require a graphic user interface, such as the [Windows PowerShell Integrated Scripting Environment \(ISE\)](http://technet.microsoft.com/library/hh849182), and the [Out\-GridView](http://go.microsoft.com/fwlink/?LinkID=113364) and [Show\-Command](http://go.microsoft.com/fwlink/?LinkID=217448) cmdlets, do not run on Server Core installations.
 
 ## See Also
-[about\_powershell.Exe](http://go.microsoft.com/fwlink/?LinkID=113439)
-[about\_powershell\_Ise.exe](http://go.microsoft.com/fwlink/?LinkId=256512)
-[Windows powershell](http://go.microsoft.com/fwlink/?LinkID=107116)
-[Scripting with Windows powershell](http://technet.microsoft.com/scriptcenter/dd742419)
+[about\_PowerShell.Exe](http://go.microsoft.com/fwlink/?LinkID=113439)
+[about\_PowerShell\_Ise.exe](http://go.microsoft.com/fwlink/?LinkId=256512)
+[Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
+[Scripting with Windows PowerShell](http://technet.microsoft.com/scriptcenter/dd742419)
 
 

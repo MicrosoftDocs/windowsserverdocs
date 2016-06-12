@@ -1,0 +1,47 @@
+---
+title: Configure Additional Authentication Methods for AD FS
+ms.custom: 
+  - AD
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-identity
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 8a9a0ad9-4d2c-46c9-8c51-229f1304764f
+---
+# Configure Additional Authentication Methods for AD FS
+In order to enable multi\-factor authentication \(MFA\), you must select at least one additional authentication method. By default, in Active Directory Federation Services \(AD FS\) in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)], you can select Certificate Authentication \(in other words, smart card\-based authentication\) as an additional authentication method.
+
+> [!NOTE]
+> If you select Certificate Authentication, ensure that the smart card certificates have been provisioned securely and have pin requirements.
+
+|||
+|-|-|
+|![](b93f8edc-baa1-46ad-aed5-99c8690273c0)|Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> \- [Learn about Azure Multi\-Factor Authentication.](http://aka.ms/ey6o9r)<br /> \- [Manage identities for single\-forest hybrid environments using cloud authentication.](http://aka.ms/g1jat8)<br /> \- [Manage Risk with Additional Multi\-Factor Authentication for Sensitive Applications.](http://aka.ms/kt1bbm)|
+
+## Microsoft and third\-party additional authentication methods
+You can also configure and enable Microsoft and third\-party authentication methods in [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]. Once installed and registered with [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], you can enforce MFA as part of the global or per\-relying\-party authentication policy.
+
+Below is an alphabetical list of Microsoft and third\-party providers with MFA offerings currently available for AD FS in Windows Server 2012 R2.
+
+||||
+|-|-|-|
+|**Provider**|**Offering**|**Link to learn more**|
+|Gemalto|Gemalto Identity & Security Services|[http:\/\/www.gemalto.com\/identity](http://www.gemalto.com/identity)|
+|inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
+|Login People|Login People MFA API connector for AD FS 2012 R2 \(public beta\)|[https:\/\/www.loginpeople.com](https://www.loginpeople.com)|
+|Microsoft Corp.|Microsoft Azure MFA|[Walkthrough Guide: Manage Risk with Additional Multi\-Factor Authentication for Sensitive Applications](http://technet.microsoft.com/library/dn280946.aspx) \(see step 3\)|
+|RSA, The Security Division of EMC|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](http://www.emc.com/security/rsa-securid/rsa-authentication-agents/microsoft-ad-fs.htm)|
+|SafeNet, Inc.|SafeNet Authentication Service \(SAS\) Agent for AD FS|[SafeNet Authentication Service: AD FS Agent Configuration Guide](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)|
+|Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
+|Symantec|Symantec Validation and ID Protection Service \(VIP\)|[Symantec Validation and ID Protection Service \(VIP\)](http://www.symantec.com/vip-authentication-service)|
+
+## Custom Authentication Method for AD FS in Windows Server 2012 R2
+We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](http://go.microsoft.com/fwlink/?LinkID=511980).
+
+## See Also
+[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+
+

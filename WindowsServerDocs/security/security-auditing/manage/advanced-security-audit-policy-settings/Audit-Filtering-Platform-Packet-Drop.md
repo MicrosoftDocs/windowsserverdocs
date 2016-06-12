@@ -29,6 +29,6 @@ If this policy setting is configured, the following events appear on computers r
 |5153|A more restrictive Windows Filtering Platform filter has blocked a packet.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
+[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
 
 

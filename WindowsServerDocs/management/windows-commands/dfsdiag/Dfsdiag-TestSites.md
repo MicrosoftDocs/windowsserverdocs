@@ -1,5 +1,5 @@
 ---
-title: dfsdiag TestSites
+title: Dfsdiag TestSites
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,15 +10,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 39a0d415-7eb7-4a26-861b-7ff00c45dcda
 ---
-# dfsdiag TestSites
-Checks the configuration of active directory Domain Services \(AD DS\) sites by verifying that servers that act as namespace servers or folder \(link\) targets have the same site associations on all domain controllers.
+# Dfsdiag TestSites
+Checks the configuration of Active Directory Domain Services \(AD DS\) sites by verifying that servers that act as namespace servers or folder \(link\) targets have the same site associations on all domain controllers.
 
-for examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
 
 ## Syntax
 
 ```
-dfsdiag /TestSites </Machine:<server name>| /DFSpath:<namespace root or DFS folder> [/Recurse]> [/Full]
+DFSDiag /TestSites </Machine:<server name>| /DFSPath:<namespace root or DFS folder> [/Recurse]> [/Full]
 ```
 
 ### Parameters
@@ -26,33 +26,33 @@ dfsdiag /TestSites </Machine:<server name>| /DFSpath:<namespace root or DFS fold
 |Parameter|Description|
 |-------------|---------------|
 |\/Machine:<server name>|The name of the server on which to verify the site association.|
-|\/DFSpath:<namespace root or DFS folder>|The namespace root or Distributed File System \(DFS\) folder \(link\) with targets for which to verify the site association.|
+|\/DFSPath:<namespace root or DFS folder>|The namespace root or Distributed File System \(DFS\) folder \(link\) with targets for which to verify the site association.|
 |\/Recurse|Enumerates and verifies the site associations for all folder targets under the specified namespace root.|
-|\/Full|verifies that AD DS and the registry of the server contain the same site association information.|
+|\/Full|Verifies that AD DS and the registry of the server contain the same site association information.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To TBD, type:
 
 ```
-dfsdiag /TestSites /Machine:MyServer
+DFSDiag /TestSites /Machine:MyServer
 ```
 
 To TBD, type:
 
 ```
-dfsdiag /TestSites /DFSpath:\\Contoso.com\Namespace1\Folder1 /Full
+DFSDiag /TestSites /DFSPath:\\Contoso.com\Namespace1\Folder1 /Full
 ```
 
 To TBD, type:
 
 ```
-dfsdiag /TestSites /DFSpath:\\Contoso.com\Namespace2 /Recurse /Full
+DFSDiag /TestSites /DFSPath:\\Contoso.com\Namespace2 /Recurse /Full
 ```
 
-## additional references
+## Additional references
 
--   [Command-Line Syntax Key](../commandline-syntax-key.md)
+-   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
--   [dfsdiag](../dfsdiag.md)
+-   [Dfsdiag](../Dfsdiag.md)
 
 

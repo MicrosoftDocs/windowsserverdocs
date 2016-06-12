@@ -1,5 +1,5 @@
 ---
-title: bitsadmin geterrorcount
+title: Bitsadmin geterrorcount
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8840ae78-52b0-4c7e-b592-0547359a237e
 ---
-# bitsadmin geterrorcount
+# Bitsadmin geterrorcount
 Retrieves a count of the number of times the specified job generated a transient error.
 
 ## Syntax
@@ -30,7 +30,7 @@ The following example retrieves error count information for the job named *myDow
 C:\>bitsadmin /GetErrorCount myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

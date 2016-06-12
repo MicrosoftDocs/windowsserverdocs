@@ -33,75 +33,75 @@ Audit policy settings under **Security Settings\\Advanced Audit Policy Configura
 
     Configuring policy settings in this category can help you document attempts to authenticate account data on a domain controller or on a local Security Accounts Manager \(SAM\). Unlike Logon and Logoff policy settings and events, which track attempts to access a particular computer, settings and events in this category focus on the account database that is used. This category includes the following subcategories:
 
-    -   [Audit Credential Validation](advanced-security-audit-policy-settings/audit-credential-validation.md)
+    -   [Audit Credential Validation](advanced-security-audit-policy-settings/Audit-Credential-Validation.md)
 
-    -   [Audit Kerberos Authentication Service](advanced-security-audit-policy-settings/audit-kerberos-authentication-service.md)
+    -   [Audit Kerberos Authentication Service](advanced-security-audit-policy-settings/Audit-Kerberos-Authentication-Service.md)
 
-    -   [Audit Kerberos Service Ticket Operations](advanced-security-audit-policy-settings/audit-kerberos-service-ticket-operations.md)
+    -   [Audit Kerberos Service Ticket Operations](advanced-security-audit-policy-settings/Audit-Kerberos-Service-Ticket-Operations.md)
 
-    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/audit-other-logon--logoff-events.md)
+    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/Audit-Other-Logon---Logoff-Events.md)
 
 -   **Account Management**
 
     The security audit policy settings in this category can be used to monitor changes to user and computer accounts and groups. This category includes the following subcategories:
 
-    -   [Audit Application Group Management](advanced-security-audit-policy-settings/audit-application-group-management.md)
+    -   [Audit Application Group Management](advanced-security-audit-policy-settings/Audit-Application-Group-Management.md)
 
-    -   [Audit Computer Account Management](advanced-security-audit-policy-settings/audit-computer-account-management.md)
+    -   [Audit Computer Account Management](advanced-security-audit-policy-settings/Audit-Computer-Account-Management.md)
 
-    -   [Audit Distribution Group Management](advanced-security-audit-policy-settings/audit-distribution-group-management.md)
+    -   [Audit Distribution Group Management](advanced-security-audit-policy-settings/Audit-Distribution-Group-Management.md)
 
-    -   [Audit Other Account Management Events](advanced-security-audit-policy-settings/audit-other-account-management-events.md)
+    -   [Audit Other Account Management Events](advanced-security-audit-policy-settings/Audit-Other-Account-Management-Events.md)
 
-    -   [Audit Security Group Management](advanced-security-audit-policy-settings/audit-security-group-management.md)
+    -   [Audit Security Group Management](advanced-security-audit-policy-settings/Audit-Security-Group-Management.md)
 
-    -   [Audit User Account Management](advanced-security-audit-policy-settings/audit-user-account-management.md)
+    -   [Audit User Account Management](advanced-security-audit-policy-settings/Audit-User-Account-Management.md)
 
 -   **Detailed Tracking**
 
     Detailed Tracking security policy settings and audit events can be used to monitor the activities of individual applications and users on that computer, and to understand how a computer is being used. This category includes the following subcategories:
 
-    -   [Audit DPAPI Activity](advanced-security-audit-policy-settings/audit-dpapi-activity.md)
+    -   [Audit DPAPI Activity](advanced-security-audit-policy-settings/Audit-DPAPI-Activity.md)
 
-    -   [Audit Process Creation](advanced-security-audit-policy-settings/audit-process-creation.md)
+    -   [Audit Process Creation](advanced-security-audit-policy-settings/Audit-Process-Creation.md)
 
-    -   [Audit Process Termination](advanced-security-audit-policy-settings/audit-process-termination.md)
+    -   [Audit Process Termination](advanced-security-audit-policy-settings/Audit-Process-Termination.md)
 
-    -   [Audit RPC Events](advanced-security-audit-policy-settings/audit-rpc-events.md)
+    -   [Audit RPC Events](advanced-security-audit-policy-settings/Audit-RPC-Events.md)
 
 -   **DS Access**
 
     DS Access security audit policy settings provide a detailed audit trail of attempts to access and modify objects in Active Directory Domain Services \(AD DS\). These audit events are logged only on domain controllers. This category includes the following subcategories:
 
-    -   [Audit Detailed Directory Service Replication](advanced-security-audit-policy-settings/audit-detailed-directory-service-replication.md)
+    -   [Audit Detailed Directory Service Replication](advanced-security-audit-policy-settings/Audit-Detailed-Directory-Service-Replication.md)
 
-    -   [Audit Directory Service Access](advanced-security-audit-policy-settings/audit-directory-service-access.md)
+    -   [Audit Directory Service Access](advanced-security-audit-policy-settings/Audit-Directory-Service-Access.md)
 
-    -   [Audit Directory Service Changes](advanced-security-audit-policy-settings/audit-directory-service-changes.md)
+    -   [Audit Directory Service Changes](advanced-security-audit-policy-settings/Audit-Directory-Service-Changes.md)
 
-    -   [Audit Directory Service Replication](advanced-security-audit-policy-settings/audit-directory-service-replication.md)
+    -   [Audit Directory Service Replication](advanced-security-audit-policy-settings/Audit-Directory-Service-Replication.md)
 
 -   **Logon\/Logoff**
 
     Logon\/Logoff security policy settings and audit events allow you to track attempts to log on to a computer interactively or over a network. These events are particularly useful for tracking user activity and identifying potential attacks on network resources. This category includes the following subcategories:
 
-    -   [Audit Account Lockout](advanced-security-audit-policy-settings/audit-account-lockout.md)
+    -   [Audit Account Lockout](advanced-security-audit-policy-settings/Audit-Account-Lockout.md)
 
-    -   [Audit IPsec Extended Mode](advanced-security-audit-policy-settings/audit-ipsec-extended-mode.md)
+    -   [Audit IPsec Extended Mode](advanced-security-audit-policy-settings/Audit-IPsec-Extended-Mode.md)
 
-    -   [Audit IPsec Main Mode](advanced-security-audit-policy-settings/audit-ipsec-main-mode.md)
+    -   [Audit IPsec Main Mode](advanced-security-audit-policy-settings/Audit-IPsec-Main-Mode.md)
 
-    -   [Audit IPsec Quick Mode](advanced-security-audit-policy-settings/audit-ipsec-quick-mode.md)
+    -   [Audit IPsec Quick Mode](advanced-security-audit-policy-settings/Audit-IPsec-Quick-Mode.md)
 
-    -   [Audit Logoff](advanced-security-audit-policy-settings/audit-logoff.md)
+    -   [Audit Logoff](advanced-security-audit-policy-settings/Audit-Logoff.md)
 
-    -   [Audit Logon](advanced-security-audit-policy-settings/audit-logon.md)
+    -   [Audit Logon](advanced-security-audit-policy-settings/Audit-Logon.md)
 
-    -   [Audit Network Policy Server](advanced-security-audit-policy-settings/audit-network-policy-server.md)
+    -   [Audit Network Policy Server](advanced-security-audit-policy-settings/Audit-Network-Policy-Server.md)
 
-    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/audit-other-logon--logoff-events.md)
+    -   [Audit Other Logon - Logoff Events](advanced-security-audit-policy-settings/Audit-Other-Logon---Logoff-Events.md)
 
-    -   [Audit Special Logon](advanced-security-audit-policy-settings/audit-special-logon.md)
+    -   [Audit Special Logon](advanced-security-audit-policy-settings/Audit-Special-Logon.md)
 
 -   **Object Access**
 
@@ -111,69 +111,69 @@ Audit policy settings under **Security Settings\\Advanced Audit Policy Configura
 
     This category includes the following subcategories:
 
-    -   [Audit Application Generated](advanced-security-audit-policy-settings/audit-application-generated.md)
+    -   [Audit Application Generated](advanced-security-audit-policy-settings/Audit-Application-Generated.md)
 
-    -   [Audit Certification Services](advanced-security-audit-policy-settings/audit-certification-services.md)
+    -   [Audit Certification Services](advanced-security-audit-policy-settings/Audit-Certification-Services.md)
 
-    -   [Audit Detailed File Share](advanced-security-audit-policy-settings/audit-detailed-file-share.md)
+    -   [Audit Detailed File Share](advanced-security-audit-policy-settings/Audit-Detailed-File-Share.md)
 
-    -   [Audit File Share](advanced-security-audit-policy-settings/audit-file-share.md)
+    -   [Audit File Share](advanced-security-audit-policy-settings/Audit-File-Share.md)
 
-    -   [Audit File System](advanced-security-audit-policy-settings/audit-file-system.md)
+    -   [Audit File System](advanced-security-audit-policy-settings/Audit-File-System.md)
 
-    -   [Audit Filtering Platform Connection](advanced-security-audit-policy-settings/audit-filtering-platform-connection.md)
+    -   [Audit Filtering Platform Connection](advanced-security-audit-policy-settings/Audit-Filtering-Platform-Connection.md)
 
-    -   [Audit Filtering Platform Packet Drop](advanced-security-audit-policy-settings/audit-filtering-platform-packet-drop.md)
+    -   [Audit Filtering Platform Packet Drop](advanced-security-audit-policy-settings/Audit-Filtering-Platform-Packet-Drop.md)
 
-    -   [Audit Handle Manipulation](advanced-security-audit-policy-settings/audit-handle-manipulation.md)
+    -   [Audit Handle Manipulation](advanced-security-audit-policy-settings/Audit-Handle-Manipulation.md)
 
-    -   [Audit Kernel Object](advanced-security-audit-policy-settings/audit-kernel-object.md)
+    -   [Audit Kernel Object](advanced-security-audit-policy-settings/Audit-Kernel-Object.md)
 
-    -   [Audit Other Object Access Events](advanced-security-audit-policy-settings/audit-other-object-access-events.md)
+    -   [Audit Other Object Access Events](advanced-security-audit-policy-settings/Audit-Other-Object-Access-Events.md)
 
-    -   [Audit Registry](advanced-security-audit-policy-settings/audit-registry.md)
+    -   [Audit Registry](advanced-security-audit-policy-settings/Audit-Registry.md)
 
-    -   [Audit SAM](advanced-security-audit-policy-settings/audit-sam.md)
+    -   [Audit SAM](advanced-security-audit-policy-settings/Audit-SAM.md)
 
 -   **Policy Change**
 
     Policy Change audit events allow you to track changes to important security policies on a local system or network. Because policies are typically established by administrators to help secure network resources, monitoring changes or attempts to change these policies can be an important aspect of security management for a network. This category includes the following subcategories:
 
-    -   [Audit Audit Policy Change](advanced-security-audit-policy-settings/audit-audit-policy-change.md)
+    -   [Audit Audit Policy Change](advanced-security-audit-policy-settings/Audit-Audit-Policy-Change.md)
 
-    -   [Audit Authentication Policy Change](advanced-security-audit-policy-settings/audit-authentication-policy-change.md)
+    -   [Audit Authentication Policy Change](advanced-security-audit-policy-settings/Audit-Authentication-Policy-Change.md)
 
-    -   [Audit Authorization Policy Change](advanced-security-audit-policy-settings/audit-authorization-policy-change.md)
+    -   [Audit Authorization Policy Change](advanced-security-audit-policy-settings/Audit-Authorization-Policy-Change.md)
 
-    -   [Audit Filtering Platform Policy Change](advanced-security-audit-policy-settings/audit-filtering-platform-policy-change.md)
+    -   [Audit Filtering Platform Policy Change](advanced-security-audit-policy-settings/Audit-Filtering-Platform-Policy-Change.md)
 
-    -   [Audit MPSSVC Rule-Level Policy Change](advanced-security-audit-policy-settings/audit-mpssvc-rulelevel-policy-change.md)
+    -   [Audit MPSSVC Rule-Level Policy Change](advanced-security-audit-policy-settings/Audit-MPSSVC-Rule-Level-Policy-Change.md)
 
-    -   [Audit Other Policy Change Events](advanced-security-audit-policy-settings/audit-other-policy-change-events.md)
+    -   [Audit Other Policy Change Events](advanced-security-audit-policy-settings/Audit-Other-Policy-Change-Events.md)
 
 -   **Privilege Use**
 
     Permissions on a network are granted for users or computers to complete defined tasks. Privilege Use security policy settings and audit events allow you to track the use of certain permissions on one or more systems. This category includes the following subcategories:
 
-    -   [Audit Non-Sensitive Privilege Use](advanced-security-audit-policy-settings/audit-nonsensitive-privilege-use.md)
+    -   [Audit Non-Sensitive Privilege Use](advanced-security-audit-policy-settings/Audit-Non-Sensitive-Privilege-Use.md)
 
-    -   [Audit Sensitive Privilege Use](advanced-security-audit-policy-settings/audit-sensitive-privilege-use.md)
+    -   [Audit Sensitive Privilege Use](advanced-security-audit-policy-settings/Audit-Sensitive-Privilege-Use.md)
 
-    -   [Audit Other Privilege Use Events](advanced-security-audit-policy-settings/audit-other-privilege-use-events.md)
+    -   [Audit Other Privilege Use Events](advanced-security-audit-policy-settings/Audit-Other-Privilege-Use-Events.md)
 
 -   **System**
 
     System security policy settings and audit events allow you to track system\-level changes to a computer that are not included in other categories and that have potential security implications. This category includes the following subcategories:
 
-    -   [Audit IPsec Driver](advanced-security-audit-policy-settings/audit-ipsec-driver.md)
+    -   [Audit IPsec Driver](advanced-security-audit-policy-settings/Audit-IPsec-Driver.md)
 
-    -   [Audit Other System Events](advanced-security-audit-policy-settings/audit-other-system-events.md)
+    -   [Audit Other System Events](advanced-security-audit-policy-settings/Audit-Other-System-Events.md)
 
-    -   [Audit Security State Change](advanced-security-audit-policy-settings/audit-security-state-change.md)
+    -   [Audit Security State Change](advanced-security-audit-policy-settings/Audit-Security-State-Change.md)
 
-    -   [Audit Security System Extension](advanced-security-audit-policy-settings/audit-security-system-extension.md)
+    -   [Audit Security System Extension](advanced-security-audit-policy-settings/Audit-Security-System-Extension.md)
 
-    -   [Audit System Integrity](advanced-security-audit-policy-settings/audit-system-integrity.md)
+    -   [Audit System Integrity](advanced-security-audit-policy-settings/Audit-System-Integrity.md)
 
 -   **Global Object Access**
 
@@ -188,8 +188,8 @@ Audit policy settings under **Security Settings\\Advanced Audit Policy Configura
 
     This category includes the following subcategories:
 
-    -   [File System &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/file-system-global-object-access-auditing.md)
+    -   [File System &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/File-System--Global-Object-Access-Auditing-.md)
 
-    -   [Registry &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/registry-global-object-access-auditing.md)
+    -   [Registry &#40;Global Object Access Auditing&#41;](advanced-security-audit-policy-settings/Registry--Global-Object-Access-Auditing-.md)
 
 

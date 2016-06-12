@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getnotifycmdline
+title: Bitsadmin getnotifycmdline
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 90fa33e6-aca5-4a23-82bd-19a9f13f8416
 ---
-# bitsadmin getnotifycmdline
+# Bitsadmin getnotifycmdline
 Retrieves the command\-line command that is ran when the job finishes transferring data.
 
 ## Syntax
 
 ```
-bitsadmin /GetNotifycmdLine <Job>
+bitsadmin /GetNotifyCmdLine <Job>
 ```
 
 ## Parameters
@@ -27,10 +27,10 @@ bitsadmin /GetNotifycmdLine <Job>
 The following example retrieves the command\-line command used by the service when the job named *myDownloadJob* completes.
 
 ```
-C:\>bitsadmin /GetNotifycmdLine myDownloadJob
+C:\>bitsadmin /GetNotifyCmdLine myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

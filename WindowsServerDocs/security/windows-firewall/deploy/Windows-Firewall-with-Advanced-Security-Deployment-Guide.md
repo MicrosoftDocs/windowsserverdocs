@@ -18,9 +18,9 @@ You can use Windows Firewall to control access to the computer from the network.
 ## About this guide
 This guide is intended for use by system administrators and system engineers. It provides detailed guidance for deploying a Windows Firewall with Advanced Security design that you or an infrastructure specialist or system architect in your organization has selected.
 
-Begin by reviewing the information in [Planning to Deploy Windows Firewall with Advanced Security](windows-firewall-deployment-guide/Planning-to-Deploy-windows-firewall-with-advanced-security.md).
+Begin by reviewing the information in [Planning to Deploy Windows Firewall with Advanced Security](windows-firewall-deployment-guide/Planning-to-Deploy-Windows-Firewall-with-Advanced-Security.md).
 
-If you have not yet selected a design, we recommend that you wait to follow the instructions in this guide until after you have reviewed the design options in the [Windows Firewall with Advanced Security Design Guide](../plan/windows-firewall-with-advanced-security-design-guide.md) and selected the one most appropriate for your organization.
+If you have not yet selected a design, we recommend that you wait to follow the instructions in this guide until after you have reviewed the design options in the [Windows Firewall with Advanced Security Design Guide](../plan/Windows-Firewall-with-Advanced-Security-Design-Guide.md) and selected the one most appropriate for your organization.
 
 After you select your design and gather the required information about the zones \(isolation, boundary, and encryption\), operating systems to support, and other details, you can then use this guide to deploy your Windows Firewall with Advanced Security design in your production environment. This guide provides steps for deploying any of the following primary designs that are described in the Design Guide:
 
@@ -28,11 +28,11 @@ After you select your design and gather the required information about the zones
 
 -   [Domain Isolation Policy Design](Domain-Isolation-Policy-Design.md)
 
--   [Server Isolation Policy Design]()
+-   [Server Isolation Policy Design](Server-Isolation-Policy-Design.md)
 
 -   [Certificate-based Isolation Policy Design](Certificate-based-Isolation-Policy-Design.md)
 
-Use the checklists in [Implementing Your Windows Firewall with Advanced Security Design Plan](windows-firewall-deployment-guide/Implementing-Your-windows-firewall-with-advanced-security-Design-Plan.md) to determine how best to use the instructions in this guide to deploy your particular design.
+Use the checklists in [Implementing Your Windows Firewall with Advanced Security Design Plan](windows-firewall-deployment-guide/Implementing-Your-Windows-Firewall-with-Advanced-Security-Design-Plan.md) to determine how best to use the instructions in this guide to deploy your particular design.
 
 > [!CAUTION]
 > We recommend that you use the techniques documented in this guide only for GPOs that must be deployed to the majority of the computers in your organization, and only when the OU hierarchy in your Active Directory domain does not match the deployment needs of these GPOs. These characteristics are typical of GPOs for server and domain isolation scenarios, but are not typical of most other GPOs. When the OU hierarchy supports it, deploy a GPO by linking it to the lowest level OU that contains all of the accounts to which the GPO applies.

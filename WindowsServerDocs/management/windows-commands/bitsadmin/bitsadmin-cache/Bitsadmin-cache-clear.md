@@ -1,5 +1,5 @@
 ---
-title: bitsadmin cache clear
+title: Bitsadmin cache clear
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 125426bc-5f90-4cdb-ba14-24be428c66c7
 ---
-# bitsadmin cache clear
+# Bitsadmin cache clear
 Purges the local cache.
 
 ## Syntax
@@ -24,7 +24,7 @@ The following example purges the local cache.
 C:\>bitsadmin /Cache /Clear 
 ```
 
-## additional references
-[Command-Line Syntax Key](../../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
 

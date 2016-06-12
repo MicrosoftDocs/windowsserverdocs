@@ -1,5 +1,5 @@
 ---
-title: cls
+title: Cls
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce9bf55c-bed4-47fb-8f79-a134202c4ed3
 ---
-# cls
-Clears the Command prompt window.
+# Cls
+Clears the Command Prompt window.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -26,13 +26,13 @@ cls
 |\/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_examples"></a>Examples
-To clear all information that appears in the Command prompt window and return to a blank window, type:
+To clear all information that appears in the Command Prompt window and return to a blank window, type:
 
 ```
 cls 
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

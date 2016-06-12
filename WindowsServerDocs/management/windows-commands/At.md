@@ -1,5 +1,5 @@
 ---
-title: at
+title: At
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,29 +8,29 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff18fd16-9437-4c53-8794-bfc67f5256b3
 ---
-# at
+# At
 Schedules commands and programs to run on a computer at a specified time and date. You can use **at** only when the Schedule service is running. Used without parameters, **at** lists scheduled commands.
 
 ## Syntax
-**at** \[**\\\\***computerName*\] \[{\[*ID*\] \[**\/delete**\] | **\/delete** \[**\/yes**\]}\]
+**at** \[**\\\\***ComputerName*\] \[{\[*ID*\] \[**\/delete**\] | **\/delete** \[**\/yes**\]}\]
 
-**at** \[\[**\\\\***computerName*\] *Hours***:***Minutes* \[\/**interactive**\] \[{**\/every:***date*\[**,**...\] | **\/next:***date*\[**,**...\]}\] *Command*\]
+**at** \[\[**\\\\***ComputerName*\] *Hours***:***Minutes* \[\/**interactive**\] \[{**\/every:***Date*\[**,**...\] | **\/next:***Date*\[**,**...\]}\] *Command*\]
 
 ## Parameters
-**\\\\***computerName*
-Specifies a remote computer. if you omit this parameter, **at** schedules the commands and programs on the local computer.
+**\\\\***ComputerName*
+Specifies a remote computer. If you omit this parameter, **at** schedules the commands and programs on the local computer.
 
 *ID*
 Specifies the identification number assigned to a scheduled command.
 
 **\/delete**
-Cancels a scheduled command. if you omit *ID*, all of the scheduled commands on the computer are canceled.
+Cancels a scheduled command. If you omit *ID*, all of the scheduled commands on the computer are canceled.
 
 **\/yes**
 Answers yes to all queries from the system when you delete scheduled events.
 
 *Hours***:***Minutes*
-Specifies the time when you want to run the command. time is expressed as *Hours***:***Minutes* in 24\-hour notation \(that is, 00:00 \[midnight\] through 23:59\).
+Specifies the time when you want to run the command. Time is expressed as *Hours***:***Minutes* in 24\-hour notation \(that is, 00:00 \[midnight\] through 23:59\).
 
 **\/interactive**
 Allows *Command* to interact with the desktop of the user who is logged on at the time *Command* runs.
@@ -38,29 +38,29 @@ Allows *Command* to interact with the desktop of the user who is logged on at th
 **\/every:**
 Runs *Command* on every specified day or days of the week or month \(for example, every Thursday, or the third day of every month\).
 
-*date*
-Specifies the date when you want to run the command. You can specify one or more days of the week \(that is, type **M**,**T**,**W**,**Th**,**F**,**S**,**Su**\) or one or more days of the month \(that is, type 1 through 31\). Separate multiple date entries with commas. if you omit *date*, **at** uses the current day of the month.
+*Date*
+Specifies the date when you want to run the command. You can specify one or more days of the week \(that is, type **M**,**T**,**W**,**Th**,**F**,**S**,**Su**\) or one or more days of the month \(that is, type 1 through 31\). Separate multiple date entries with commas. If you omit *Date*, **at** uses the current day of the month.
 
 **\/next:**
 Runs *Command* on the next occurrence of the day \(for example, next Thursday\).
 
 *Command*
-Specifies the Windows command, program \(that is, .exe or .com file\), or batch program \(that is, .bat or .cmd file\) that you want to run. When the command requires a path as an argument, use the absolute path \(that is, the entire path beginning with the drive letter\). if the command is on a remote computer, specify Universal Naming Convention \(UNC\) notation for the server and share name, rather than a remote drive letter.
+Specifies the Windows command, program \(that is, .exe or .com file\), or batch program \(that is, .bat or .cmd file\) that you want to run. When the command requires a path as an argument, use the absolute path \(that is, the entire path beginning with the drive letter\). If the command is on a remote computer, specify Universal Naming Convention \(UNC\) notation for the server and share name, rather than a remote drive letter.
 
 **\/?**
 Displays help at the command prompt.
 
-## remarks
+## Remarks
 
--   **schtasks** is another command\-line scheduling tool that you can use to create and manage scheduled tasks. for more information about **schtasks**, see Related Topics.
+-   **Schtasks** is another command\-line scheduling tool that you can use to create and manage scheduled tasks. For more information about **schtasks**, see Related Topics.
 
 -   Using **at**
 
     To use **at**, you must be a member of the local Administrators group.
 
--   Loading cmd.exe
+-   Loading Cmd.exe
 
-    **at** does not automatically load cmd.exe, the command interpreter, before running commands. if you are not running an executable \(.exe\) file, you must explicitly load cmd.exe at the beginning of the command as follows:
+    **At** does not automatically load Cmd.exe, the command interpreter, before running commands. If you are not running an executable \(.exe\) file, you must explicitly load Cmd.exe at the beginning of the command as follows:
 
     **cmd \/c dir > c:\\test.out**
 
@@ -69,7 +69,7 @@ Displays help at the command prompt.
     When you use **at** without command\-line options, scheduled tasks appear in a table formatted similar to the following:
 
     ```
-    Status  ID   Day        time        Command Line
+    Status  ID   Day        Time        Command Line
     OK      1    Each F     4:30 PM     net send group leads status due
     OK      2    Each M     12:00 AM    chkstor > check.file
     OK      3    Each F     11:59 PM    backup2.bat
@@ -87,16 +87,16 @@ Displays help at the command prompt.
 
     Schedule:     Each  F
 
-    time of Day:  4:30 PM
+    Time of Day:  4:30 PM
 
     Command:      net send group leads status due
     ```
 
-    After you schedule a command with **at**, especially a command that has command\-line options, check that the command syntax is correct by typing **at** without command\-line options. if the information in the Command Line column is incorrect, delete the command and retype it. if it is still incorrect, retype the command with fewer command\-line options.
+    After you schedule a command with **at**, especially a command that has command\-line options, check that the command syntax is correct by typing **at** without command\-line options. If the information in the Command Line column is incorrect, delete the command and retype it. If it is still incorrect, retype the command with fewer command\-line options.
 
 -   Viewing results
 
-    Commands scheduled with **at** run as background processes. Output is not displayed on the computer screen. To redirect output to a file, use the redirection symbol \(>\). if you redirect output to a file, you need to use the escape symbol \(^\) before the redirection symbol, whether you are using **at** at the command line or in a batch file. for example, to redirect output to Output.text, type:
+    Commands scheduled with **at** run as background processes. Output is not displayed on the computer screen. To redirect output to a file, use the redirection symbol \(>\). If you redirect output to a file, you need to use the escape symbol \(^\) before the redirection symbol, whether you are using **at** at the command line or in a batch file. For example, to redirect output to Output.text, type:
 
     **at 14:45 c:\\test.bat ^>c:\\output.txt**
 
@@ -104,7 +104,7 @@ Displays help at the command prompt.
 
 -   Changing system time
 
-    if you change the system time at a computer after you schedule a command to run with **at**, synchronize the **at** scheduler with the revised system time by typing **at** without command\-line options.
+    If you change the system time at a computer after you schedule a command to run with **at**, synchronize the **at** scheduler with the revised system time by typing **at** without command\-line options.
 
 -   Storing commands
 
@@ -112,7 +112,7 @@ Displays help at the command prompt.
 
 -   Connecting to network drives
 
-    Do not use a redirected drive for scheduled jobs that access the network. The Schedule service might not be able to access the redirected drive, or the redirected drive might not be present if a different user is logged on at the time the scheduled task runs. Instead, use UNC paths for scheduled jobs. for example:
+    Do not use a redirected drive for scheduled jobs that access the network. The Schedule service might not be able to access the redirected drive, or the redirected drive might not be present if a different user is logged on at the time the scheduled task runs. Instead, use UNC paths for scheduled jobs. For example:
 
     **at 1:00pm my\_backup \\\\server\\share**
 
@@ -120,17 +120,17 @@ Displays help at the command prompt.
 
     **at 1:00pm my\_backup x:**
 
-    if you schedule an **at** command that uses a drive letter to connect to a shared directory, include an **at** command to disconnect the drive when you are finished using the drive. if the drive is not disconnected, the assigned drive letter is not available at the command prompt.
+    If you schedule an **at** command that uses a drive letter to connect to a shared directory, include an **at** command to disconnect the drive when you are finished using the drive. If the drive is not disconnected, the assigned drive letter is not available at the command prompt.
 
 -   Tasks stopping after 72 hours
 
     By default, tasks scheduled using the **at** command stop after 72 hours. You can modify the registry to change this default value.
 
-    1.  start registry editor \(regedit.exe\).
+    1.  Start Registry Editor \(regedit.exe\).
 
     2.  Locate and click the following key in the registry: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Schedule**
 
-    3.  On the edit menu, click add Value, and then add the following registry value: Value Name: atTaskMaxHours Data type: reg\_DWOrd Radix: Decimal Value Data: 0. A value of 0 in the value data field indicates no limit, does not stop. Values from 1 through 99 indicates the number of hours.
+    3.  On the Edit menu, click Add Value, and then add the following registry value: Value Name: AtTaskMaxHours Data type: REG\_DWORD Radix: Decimal Value Data: 0. A value of 0 in the value data field indicates no limit, does not stop. Values from 1 through 99 indicates the number of hours.
 
 **Caution**
 
@@ -138,7 +138,7 @@ Displays help at the command prompt.
 
 -   Task Scheduler and the **at** command
 
-    You can use the Scheduled Tasks folder to view or modify the settings of a task that was created by using the **at** command. When you schedule a task using the **at** command, the task is listed in the Scheduled Tasks folder, with a name such as the following:**at3478**. However, if you modify an at task through the Scheduled Tasks folder, it is upgraded to a normal scheduled task. The task is no longer visible to the **at** command, and the at account setting no longer applies to it. You must explicitly enter a user account and password for the task.
+    You can use the Scheduled Tasks folder to view or modify the settings of a task that was created by using the **at** command. When you schedule a task using the **at** command, the task is listed in the Scheduled Tasks folder, with a name such as the following:**At3478**. However, if you modify an at task through the Scheduled Tasks folder, it is upgraded to a normal scheduled task. The task is no longer visible to the **at** command, and the at account setting no longer applies to it. You must explicitly enter a user account and password for the task.
 
 ## Examples
 To display a list of commands scheduled on the Marketing server, type:
@@ -161,7 +161,7 @@ To cancel all commands scheduled on the current server, clear the **at** schedul
 
 **at \/delete**
 
-To run a command that is not an executable \(that is, .exe\) file, precede the command with **cmd \/c** to load cmd.exe as follows:
+To run a command that is not an executable \(that is, .exe\) file, precede the command with **cmd \/c** to load Cmd.exe as follows:
 
 **cmd \/c dir > c:\\test.out**
 

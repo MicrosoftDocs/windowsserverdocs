@@ -30,7 +30,7 @@ Security settings can control:
   
 For information about each setting, including descriptions, default settings, and management and security considerations, see the [Security Policy Settings Reference](http://www.microsoft.com/downloads/details.aspx?FamilyID=18C90C80-8B0A-4906-A4F5-FF24CC2030FB&amp;displaylang=e&displaylang=en) in the Microsoft Download Center.  
   
-For information about how the security settings snap\-ins work, see the [Security Policy Settings Technical Overview](security-policy-settings-technical-overview.md).  
+For information about how the security settings snap\-ins work, see the [Security Policy Settings Technical Overview](Security-Policy-Settings-Technical-Overview.md).  
   
 To manage security configurations for multiple computers, you can use one of the following options:  
   
@@ -49,8 +49,8 @@ Over time, new ways to manage security policy settings have been introduced, whi
 |[Security Configuration Wizard](#BKMK_SCW)|Scw.exe<br /><br />SCW is a role\-based tool available on servers only: You can use it to create a policy that enables services, firewall rules, and settings that are required for a selected server to perform specific roles.|  
 |[Security Configuration Manager tool](#BKMK_SCMtool)|This tool set allows you to create, apply, and edit the security for your local computer, organizational unit, or domain.|  
 |[Group Policy](#BKMK_GroupPolicy)|Gpmc.msc and Gpedit.msc<br /><br />The Group Policy Management Console uses the Group Policy Object editor to expose the local Security options, which can then be incorporated into Group Policy Objects for distribution throughout the domain. The Local Group Policy Editor performs similar functions on the local computer.|  
-|Software Restriction Policies<br /><br />See [Administer Software Restriction Policies](../../software-restriction-policies/manage/administer-software-restriction-policies.md) in the TechNet Library.|Gpedit.msc<br /><br />Software Restriction Policies \(SRP\) is a Group Policy\-based feature that identifies software programs running on computers in a domain, and it controls the ability of those programs to run.|  
-|applocker<br /><br />See [Administer applocker](../../applocker/administer-applocker.md) in the TechNet Library.|Gpedit.msc<br /><br />Prevents malicious software \(malware\) and unsupported applications from affecting computers in your environment, and it prevents users in your organization from installing and using unauthorized applications.|  
+|Software Restriction Policies<br /><br />See [Administer Software Restriction Policies](../../software-restriction-policies/manage/Administer-Software-Restriction-Policies.md) in the TechNet Library.|Gpedit.msc<br /><br />Software Restriction Policies \(SRP\) is a Group Policy\-based feature that identifies software programs running on computers in a domain, and it controls the ability of those programs to run.|  
+|AppLocker<br /><br />See [Administer AppLocker](../../applocker/Administer-AppLocker.md) in the TechNet Library.|Gpedit.msc<br /><br />Prevents malicious software \(malware\) and unsupported applications from affecting computers in your environment, and it prevents users in your organization from installing and using unauthorized applications.|  
   
 ## <a name="BKMK_SecPol"></a>Using the Local Security Policy snap\-in  
 The Local Security Policy snap\-in \(Secpol.msc\) restricts the view of local policy objects to the following policies and features:  
@@ -352,7 +352,7 @@ Secedit.exe is useful when you have multiple computers on which security must be
 ## <a name="BKMK_GroupPolicy"></a>Working with Group Policy tools  
 Group Policy is an infrastructure that allows you to specify managed configurations for users and computers through Group Policy settings and Group Policy Preferences. For Group Policy settings that affect only a local computer or user, you can use the Local Group Policy Editor. You can manage Group Policy settings and Group Policy Preferences in an Active Directory Domain Services \(AD DS\) environment through the Group Policy Management Console \(GPMC\). Group Policy management tools also are included in the Remote Server Administration Tools pack to provide a way for you to administer Group Policy settings from your desktop.  
   
-To get started with managing security settings with Group Policy, see [Group Policy Overview]().  
+To get started with managing security settings with Group Policy, see [Group Policy Overview](Group-Policy-Overview.md).  
   
 To begin using the Group Policy Management Console, see the Help for the [Group Policy Management Console](http://technet.microsoft.com/library/cc753298(v=ws.10).aspx) in the TechNet Library.  
   

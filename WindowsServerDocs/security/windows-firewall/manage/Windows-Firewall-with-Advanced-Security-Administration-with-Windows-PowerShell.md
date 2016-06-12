@@ -25,7 +25,7 @@ Windows PowerShell and netsh command references are at the following locations.
 -   [Netsh Commands for Windows Firewall with Advanced Security](http://technet.microsoft.com/library/cc771920(v=ws.10))
 
 ## Scope
-This guide does not teach you the fundamentals of Windows Firewall with Advanced Security, which can be found in [Windows Firewall with Advanced Security Overview](windows-firewall-with-advanced-security-Overview.md). It does not teach the fundamentals of Windows PowerShell, and it assumes that you are familiar with the Windows PowerShell language and the basic concepts of Windows PowerShell. For more information about Windows PowerShell concepts and usage, see the reference topics in the [Additional resources](windows-firewall-with-advanced-security-administration-with-windows-powershell.md#BKMK_AdditionalResources) section of this guide.
+This guide does not teach you the fundamentals of Windows Firewall with Advanced Security, which can be found in [Windows Firewall with Advanced Security Overview](Windows-Firewall-with-Advanced-Security-Overview.md). It does not teach the fundamentals of Windows PowerShell, and it assumes that you are familiar with the Windows PowerShell language and the basic concepts of Windows PowerShell. For more information about Windows PowerShell concepts and usage, see the reference topics in the [Additional resources](Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell.md#BKMK_AdditionalResources) section of this guide.
 
 ## Audience and user requirements
 This guide is intended for IT pros, system administrators, and IT managers, and it assumes that you are familiar with Windows Firewall with Advanced Security, the Windows PowerShell language, and the basic concepts of Windows PowerShell.
@@ -52,12 +52,12 @@ To run the scripts and scriptlets in this guide, install and configure your syst
 
 |Topic|Description|
 |---------|---------------|
-|[Set profile global defaults](windows-firewall-with-advanced-security-administration-with-windows-powershell.md#BKMK_ProfileGlobalDefaults)|Enable and control firewall behavior|
-|[Deploy basic firewall rules](windows-firewall-with-advanced-security-administration-with-windows-powershell.md#BKMK_Deploying)|How to create, modify, and delete firewall rules|
-|[Manage Remotely](windows-firewall-with-advanced-security-administration-with-windows-powershell.md#BKMK_Remote)|Remote management by using `-CimSession`|
-|[Deploy basic IPsec rule settings](windows-firewall-with-advanced-security-administration-with-windows-powershell.md#BKMK_DeployingIPsec)|IPsec rules and associated parameters|
-|[Deploy secure firewall rules with IPsec](windows-firewall-with-advanced-security-administration-with-windows-powershell.md#BKMK_DeploySecureRules)|Domain and server isolation|
-|[Additional resources](windows-firewall-with-advanced-security-administration-with-windows-powershell.md#BKMK_AdditionalResources)|More information about Windows PowerShell|
+|[Set profile global defaults](Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell.md#BKMK_ProfileGlobalDefaults)|Enable and control firewall behavior|
+|[Deploy basic firewall rules](Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell.md#BKMK_Deploying)|How to create, modify, and delete firewall rules|
+|[Manage Remotely](Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell.md#BKMK_Remote)|Remote management by using `-CimSession`|
+|[Deploy basic IPsec rule settings](Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell.md#BKMK_DeployingIPsec)|IPsec rules and associated parameters|
+|[Deploy secure firewall rules with IPsec](Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell.md#BKMK_DeploySecureRules)|Domain and server isolation|
+|[Additional resources](Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell.md#BKMK_AdditionalResources)|More information about Windows PowerShell|
 
 ## <a name="BKMK_ProfileGlobalDefaults"></a>Set profile global defaults
 Global defaults set the system behavior in a per profile basis. Windows Firewall with Advanced Security supports Domain, Private, and Public profiles.
@@ -307,7 +307,7 @@ Windows PowerShell can create powerful, complex IPsec policies like in Netsh and
 
 In Netsh, the authentication and cryptographic sets were specified as a list of comma\-separated tokens in a specific format. In Windows PowerShell, rather than using default settings, you first create your desired authentication or cryptographic proposal objects and bundle them into lists in your preferred order. Then, you create one or more IPsec rules that reference these sets. The benefit of this model is that programmatic access to the information in the rules is much easier. See the following sections for clarifying examples.
 
-![](../../media/windows-firewall-with-advanced-security-administration-with-windows-powershell/createipsecrule.gif)
+![](../../media/Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell/CreateIPsecRule.gif)
 
 ### Create IPsec rules
 The following cmdlet creates basic IPsec transport mode rule in a Group Policy Object. An IPsec rule is simple to create; all that is required is the display name, and the remaining properties use default values. Inbound traffic is authenticated and integrity checked using the default quick mode and main mode settings. These default settings can be found in the MMC snap\-in under Customize IPsec Defaults.
@@ -330,7 +330,7 @@ If you want to create a custom set of quick\-mode proposals that includes both A
 
 You can then use the newly created custom quick\-mode policies when you create IPsec rules. The cryptography set object is linked to an IPsec rule object.
 
-![](../../media/windows-firewall-with-advanced-security-administration-with-windows-powershell/qmcryptoset.gif)
+![](../../media/Windows-Firewall-with-Advanced-Security-Administration-with-Windows-PowerShell/QMCryptoSet.gif)
 
 In this example, we build on the previously created IPsec rule by specifying a custom quick\-mode crypto set. The final IPsec rule requires outbound traffic to be authenticated by the specified cryptography method.
 
@@ -346,8 +346,8 @@ netsh advfirewall consec add rule name="Require Outbound Authentication" endpoin
 
 ```
 $AHandESPQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation AH,ESP –AHHash SHA1 -ESPHash SHA1 -Encryption DES3
-$qmcryptoset = New-NetIPsecQuickModeCryptoSet –DisplayName “ah:sha1+esp:sha1-des3” -Proposal $AHandESPQM –PolicyStore domain.contoso.com\gpo_name
-New-NetIPsecRule -DisplayName “Require Inbound Authentication” -InboundSecurity Require -OutboundSecurity Request -QuickModeCryptoSet $qmcryptoset.Name –PolicyStore domain.contoso.com\gpo_name
+$QMCryptoSet = New-NetIPsecQuickModeCryptoSet –DisplayName “ah:sha1+esp:sha1-des3” -Proposal $AHandESPQM –PolicyStore domain.contoso.com\gpo_name
+New-NetIPsecRule -DisplayName “Require Inbound Authentication” -InboundSecurity Require -OutboundSecurity Request -QuickModeCryptoSet $QMCryptoSet.Name –PolicyStore domain.contoso.com\gpo_name
 
 ```
 
@@ -362,7 +362,7 @@ You can leverage IKEv2 capabilities in  Windows Server 2012  by simply specifyin
 New-NetIPsecRule -DisplayName “Require Inbound Authentication” -InboundSecurity Require -OutboundSecurity Request –Phase1AuthSet MyCertAuthSet -KeyModule IKEv2 –RemoteAddress $nonWindowsGateway
 ```
 
-For more information about IKEv2, including scenarios, see [Securing End-to-End IPsec Connections by Using IKEv2 in Windows Server 2012](../deploy/securing-endtoend-ipsec-connections-by-using-ikev2-windows-server-2012.md).
+For more information about IKEv2, including scenarios, see [Securing End-to-End IPsec Connections by Using IKEv2 in Windows Server 2012](../deploy/Securing-End-to-End-IPsec-Connections-by-Using-IKEv2-in-Windows-Server-2012.md).
 
 ### Copy an IPsec rule from one policy to another
 Firewall and IPsec rules with the same rule properties can be duplicated to simplify the task of re\-creating them within different policy stores.
@@ -508,8 +508,8 @@ netsh advfirewall consec add rule name="Tunnel from 192.168.0.0/16 to 192.157.0.
 
 ```
 $QMProposal = New-NetIPsecQuickModeCryptoProposal -Encapsulation ESP -ESPHash SHA1 -Encryption DES3
-$qmcryptoset = New-NetIPsecQuickModeCryptoSet –DisplayName “esp:sha1-des3” -Proposal $QMProposal
-New-NetIPSecRule -DisplayName “Tunnel from HQ to Dallas Branch” -Mode Tunnel -LocalAddress 192.168.0.0/16 -RemoteAddress 192.157.0.0/16 -LocalTunnelEndpoint 1.1.1.1 -RemoteTunnelEndpoint 2.2.2.2 -InboundSecurity Require -OutboundSecurity Require -QuickModeCryptoSet $qmcryptoset.Name
+$QMCryptoSet = New-NetIPsecQuickModeCryptoSet –DisplayName “esp:sha1-des3” -Proposal $QMProposal
+New-NetIPSecRule -DisplayName “Tunnel from HQ to Dallas Branch” -Mode Tunnel -LocalAddress 192.168.0.0/16 -RemoteAddress 192.157.0.0/16 -LocalTunnelEndpoint 1.1.1.1 -RemoteTunnelEndpoint 2.2.2.2 -InboundSecurity Require -OutboundSecurity Require -QuickModeCryptoSet $QMCryptoSet.Name
 
 ```
 

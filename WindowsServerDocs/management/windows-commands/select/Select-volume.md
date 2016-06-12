@@ -1,5 +1,5 @@
 ---
-title: select volume
+title: Select volume
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,10 +10,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28
 ---
-# select volume
-selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.
+# Select volume
+Selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.
 
-for examples of how this command can be used, see [Examples](#BKMK_examples).
+For examples of how this command can be used, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -28,15 +28,15 @@ select volume={<n>|<d>}
 |<n>|The number of the volume to receive the focus. You can view the numbers for all volumes on the disk currently selected by using the **list volume** command in DiskPart.|
 |<d>|The drive letter or mount point path of the volume to receive the focus.|
 
-## remarks
+## Remarks
 
--   if no volume is specified, this command displays the volume that currently has the focus in the selected disk.
+-   If no volume is specified, this command displays the volume that currently has the focus in the selected disk.
 
 -   On a basic disk, selecting a volume also gives the focus to the corresponding partition.
 
--   if a volume is selected with a corresponding partition, the partition will be automatically selected.
+-   If a volume is selected with a corresponding partition, the partition will be automatically selected.
 
--   if a partition is selected with a corresponding volume, the volume will be automatically selected.
+-   If a partition is selected with a corresponding volume, the volume will be automatically selected.
 
 ## <a name="BKMK_examples"></a>Examples
 To shift the focus to volume 2, type:
@@ -63,8 +63,8 @@ To display the volume that currently has the focus in the selected disk, type:
 select volume
 ```
 
-#### additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 

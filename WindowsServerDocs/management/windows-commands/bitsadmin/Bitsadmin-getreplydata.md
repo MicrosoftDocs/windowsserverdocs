@@ -1,5 +1,5 @@
 ---
-title: bitsadmin getreplydata
+title: Bitsadmin getreplydata
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 819f97d5-b255-4b2d-9f63-0daa73915434
 ---
-# bitsadmin getreplydata
+# Bitsadmin getreplydata
 Retrieves the server's reply data in hexadecimal format.
 
 ## Syntax
@@ -23,7 +23,7 @@ bitsadmin /GetReplyData <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## remarks
+## Remarks
 Valid only for upload\-reply jobs.
 
 ## <a name="BKMK_examples"></a>Examples
@@ -33,7 +33,7 @@ The following example retrieves the reply data for the job named *myDownloadJob*
 C:\>bitsadmin /GetReplyData myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

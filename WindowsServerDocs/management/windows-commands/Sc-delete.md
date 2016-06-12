@@ -9,9 +9,9 @@ ms.topic: article
 ms.assetid: 2fe94fb3-e4d1-47b5-b999-39995ecbb644
 ---
 # Sc delete
-deletes a service subkey from the registry. if the service is running or if another process has an open handle to the service, the service is marked for deletion.
+Deletes a service subkey from the registry. If the service is running or if another process has an open handle to the service, the service is marked for deletion.
 
-for examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -27,8 +27,8 @@ sc [<ServerName>] delete [<ServiceName>]
 |<ServiceName>|Specifies the service name returned by the **getkeyname** operation.|
 |?|Displays help at the command prompt.|
 
-## remarks
-Use **add or remove Programs** on **Control Panel** to delete DHCP, DNS, or any other built\-in operating system services. Note that **add or remove Programs** will not only remove the registry subkey for the service, but it will also uninstall the service and delete any shortcuts to it.
+## Remarks
+Use **Add or Remove Programs** on **Control Panel** to delete DHCP, DNS, or any other built\-in operating system services. Note that **Add or Remove Programs** will not only remove the registry subkey for the service, but it will also uninstall the service and delete any shortcuts to it.
 
 ## <a name="BKMK_examples"></a>Examples
 To delete the service subkey **NewServ** from the registry on the local computer, type:
@@ -37,7 +37,7 @@ To delete the service subkey **NewServ** from the registry on the local computer
 sc delete newserv
 ```
 
-#### additional references
-[Command-Line Syntax Key](commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 

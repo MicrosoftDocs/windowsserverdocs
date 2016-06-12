@@ -1,5 +1,5 @@
 ---
-title: ktmutil
+title: Ktmutil
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 53bc56df-f0e5-443b-ab20-bbf8b11d4a9a
 author: jaimeo
 ---
-# ktmutil
-starts the Kernel Transaction manager utility. if used without parameters, **ktmutil** displays available subcommands.  
+# Ktmutil
+Starts the Kernel Transaction Manager utility. If used without parameters, **ktmutil** displays available subcommands.  
   
-for examples of how to use this command, see [Examples](#BKMK_examples).  
+For examples of how to use this command, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ ktmutil forget
   
 ## Parameters  
   
-## remarks  
+## Remarks  
   
 ## <a name="BKMK_examples"></a>Examples  
 To force an Indoubt transaction with GUID 311a9209\-03f4\-11dc\-918f\-00188b8f707b to commit, type:  
@@ -38,7 +38,7 @@ To force an Indoubt transaction with GUID 311a9209\-03f4\-11dc\-918f\-00188b8f70
 ktmutil force commit {311a9209-03f4-11dc-918f-00188b8f707b}  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](commandline-syntax-key.md)  
+#### Additional references  
+[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
   
 

@@ -1,5 +1,5 @@
 ---
-title: bitsadmin help
+title: Bitsadmin help
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c30d89e4-25a3-4974-a002-37138d01e077
 ---
-# bitsadmin help
+# Bitsadmin help
 Displays the command\-line usage.
 
 ## Syntax
@@ -24,7 +24,7 @@ The following example retrieves the command\-line help.
 C:\>bitsadmin /help
 ```
 
-## additional references
-[Command-Line Syntax Key](../commandline-syntax-key.md)
+## Additional references
+[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
 
 

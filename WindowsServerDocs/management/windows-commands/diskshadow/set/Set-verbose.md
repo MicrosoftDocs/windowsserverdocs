@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 93cb93c9-666f-4c74-814b-1c404a949935
 ---
 # Set verbose
-Specifies whether verbose output is provided during shadow copy creation. if used without parameters, **set verbose** displays help at the command prompt.
+Specifies whether verbose output is provided during shadow copy creation. If used without parameters, **set verbose** displays help at the command prompt.
 
 ## Syntax
 
@@ -25,11 +25,11 @@ set verbose {on | off}
 |-------------|---------------|
 |{on &#124; off}|Turns verbose mode on or off.|
 
-## remarks
+## Remarks
 
--   if verbose mode is on, **set** provides details of writer inclusion or exclusion and details of metadata compression and extraction.
+-   If verbose mode is on, **set** provides details of writer inclusion or exclusion and details of metadata compression and extraction.
 
-#### additional references
-[Command-Line Syntax Key](../../commandline-syntax-key.md)
+#### Additional references
+[Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
 
