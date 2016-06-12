@@ -75,8 +75,8 @@ Time protocols communicate between two computers to exchange time information an
 The Windows Time service uses NTP to help synchronize time across a network. NTP is an Internet time protocol that includes the discipline algorithms necessary for synchronizing clocks. NTP is a more accurate time protocol than the Simple Network Time Protocol \(SNTP\) that is used in some versions of Windows; however, W32Time continues to support SNTP to enable backward compatibility with computers running SNTP\-based time services such as Windows 2000.  
   
 ## See Also  
-[How the Windows Time Service Works](How-the-Windows-Time-Service-Works.md)  
-[Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)  
+[How the Windows Time Service Works](how-windows-time-service-works.md)  
+[Windows Time Service Tools and Settings](windows-time-service-tools-settings.md)  
 [Microsoft Knowledge Base article 902229](http://go.microsoft.com/fwlink/?LinkId=186066)  
 [Videos about the Windows Time Service](http://go.microsoft.com/fwlink/?LinkID=197277)  
   

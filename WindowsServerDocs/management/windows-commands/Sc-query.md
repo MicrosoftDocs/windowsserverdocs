@@ -11,7 +11,7 @@ ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 # Sc query
 Obtains and displays information about the specified service, driver, type of service, or type of driver.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -33,11 +33,11 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
 |group\= <GroupName>|Specifies the service group to be enumerated. By default, all groups are enumerated \(**group\= ""**\).|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   Without a space between a parameter and its value \(that is, **type\= own**, not **type\=own**\), the operation will fail.
 
--   The **query** operation displays the following information about a service: SERVICE\_NAME \(service's registry subkey name\), TYPE, STATE \(as well as states which are not available\), WIN32\_EXIT\_B, SERVICE\_EXIT\_B, CHECKPOINT, and WAIT\_HINT.
+-   The **query** operation displays the following information about a service: SERVICE\_NAME \(service's registry subkey name\), type, STatE \(as well as states which are not available\), WIN32\_exit\_B, SERVICE\_exit\_B, CHECKPOINT, and WAIT\_HINT.
 
 -   The **type\=** parameter can be used twice in some cases. The first appearance of the **type\=** parameter specifies whether to query services, drivers, or both \(**all**\). The second appearance of the **type\=** parameter specifies a type from the **create** operation to further narrow a query's scope.
 
@@ -47,7 +47,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
     Enum: more data, need 1822 bytes start resume at index 79
     ```
 
-    To display the remaining **query** information, rerun **query**, setting **bufsize\=** to be the number of bytes and setting **ri\=** to the specified index. For example, the remaining output would be displayed by typing the following at the command prompt:
+    To display the remaining **query** information, rerun **query**, setting **bufsize\=** to be the number of bytes and setting **ri\=** to the specified index. for example, the remaining output would be displayed by typing the following at the command prompt:
 
     ```
     sc query bufsize= 1822 ri= 79
@@ -103,7 +103,7 @@ To display information for drivers in the Network Driver Interface Specification
 sc query type= driver group= ndis
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 

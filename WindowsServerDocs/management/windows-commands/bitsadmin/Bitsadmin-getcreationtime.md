@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getcreationtime
+title: bitsadmin getcreationtime
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: be409cb5-ce72-41d9-aafa-edd4e230fd14
 ---
-# Bitsadmin getcreationtime
+# bitsadmin getcreationtime
 Retrieves the creation time for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetCreationTime <Job>
+bitsadmin /GetCreationtime <Job>
 ```
 
 ## Parameters
@@ -27,10 +27,10 @@ bitsadmin /GetCreationTime <Job>
 The following example retrieves the creation time for the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetCreationTime myDownloadJob
+C:\>bitsadmin /GetCreationtime myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

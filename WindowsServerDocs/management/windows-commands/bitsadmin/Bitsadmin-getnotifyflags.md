@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getnotifyflags
+title: bitsadmin getnotifyflags
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4657e6c-8959-4db7-a4af-e73d3f80ecf8
 ---
-# Bitsadmin getnotifyflags
+# bitsadmin getnotifyflags
 Retrieves the notify flags for the specified job.
 
 ## Syntax
@@ -23,7 +23,7 @@ bitsadmin /GetNotifyFlags <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## Remarks
+## remarks
 The job can contain one or more of the following notification flags.
 
 |||
@@ -40,7 +40,7 @@ The following example retrieves the notify flags for the job named *myDownloadJo
 C:\>bitsadmin /GetNotifyFlags myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

@@ -35,6 +35,6 @@ If this policy setting is configured, the following events appear on computers r
 |5168|SPN check for SMB\/SMB2 failed.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

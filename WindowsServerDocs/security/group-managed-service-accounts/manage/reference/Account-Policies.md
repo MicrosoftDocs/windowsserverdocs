@@ -15,9 +15,9 @@ This security policy setting reference provides an overview of account policies 
 
 The account policies settings include the following:
 
--   [Password Policy](Password-Policy.md)
+-   [Password Policy](password-policy.md)
 
--   [Account Lockout Policy](Account-Lockout-Policy.md)
+-   [Account Lockout Policy](account-lockout-policy.md)
 
 -   [Kerberos Policy](Kerberos-Policy.md)
 

@@ -15,9 +15,9 @@ author: billmath
 # AD FS Development
 This document contains a list of all of the documentation walkthroughs for AD FS for Windows Server 2016. This includes the following:  
   
-* [AD FS on-behalf-of Authentication in Windows Server 2016](../active-directory-federation-services/manage/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md)  
+* [AD FS on-behalf-of Authentication in Windows Server 2016](../active-directory-federation-services/manage/development/ad-fs-onbehalfof-authentication-windows-server-2016.md)  
   
-* [Enabling Open Id Connect with AD FS 2016](../active-directory-federation-services/manage/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)  
+* [Enabling Open Id Connect with AD FS 2016](../active-directory-federation-services/manage/development/enabling-openid-connect-with-ad-fs-2016.md)  
   
-* [Enabling Oauth Confidentiatl Clients with AD FS 2016](../active-directory-federation-services/manage/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
+* [Enabling Oauth Confidentiatl Clients with AD FS 2016](../active-directory-federation-services/manage/development/enabling-oauth-confidential-clients-with-ad-fs-2016.md)
 

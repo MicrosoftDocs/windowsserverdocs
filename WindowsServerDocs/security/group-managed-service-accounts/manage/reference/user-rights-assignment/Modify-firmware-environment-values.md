@@ -95,6 +95,6 @@ Ensure that only the local Administrators group is assigned the **Modify firmwar
 None. Restricting the **Modify firmware environment values** user right to the members of the local Administrators group is the default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

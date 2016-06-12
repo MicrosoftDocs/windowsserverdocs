@@ -245,7 +245,7 @@ An example of the second event is:
   
 An aberrant number of failed logons could indicate a password guessing attack. For an enterprise to provide an alert for an unusually high number of failed logons, they must first understand the normal levels of failed logons within their environment prior to a malicious security event.  
   
-For a comprehensive list of events that you should include when you monitor for signs of compromise, please see [Appendix L: Events to Monitor](../../../active-directory-domain-services/pl../../../active-directory-domain-services/pl../../../active-directory-domain-services/plan/Appendix-L--Events-to-Monitor.md).  
+For a comprehensive list of events that you should include when you monitor for signs of compromise, please see [Appendix L: Events to Monitor](../../../active-directory-domain-services/pl../../../active-directory-domain-services/pl../../../active-directory-domain-services/plan/appendix-l-events-monitor.md).  
   
 ## Active Directory Objects and Attributes to Monitor  
 The following are the accounts, groups, and attributes that you should monitor to help you detect attempts to compromise your Active Directory Domain Services installation.  
@@ -258,7 +258,7 @@ The following are the accounts, groups, and attributes that you should monitor t
   
 -   Privileged and VIP accounts in AD DS. Monitor for changes, particularly changes to attributes on the Account tab \(for example, cn, name, sAMAccountName, userPrincipalName, or userAccountControl\). In addition to monitoring the accounts, restrict who can modify the accounts to as small a set of administrative users as possible.  
   
-Refer to [Appendix L: Events to Monitor](../../../active-directory-domain-services/pl../../../active-directory-domain-services/pl../../../active-directory-domain-services/plan/Appendix-L--Events-to-Monitor.md) for a list of recommended events to monitor, their criticality ratings, and an event message summary.  
+Refer to [Appendix L: Events to Monitor](../../../active-directory-domain-services/pl../../../active-directory-domain-services/pl../../../active-directory-domain-services/plan/appendix-l-events-monitor.md) for a list of recommended events to monitor, their criticality ratings, and an event message summary.  
   
 -   Group servers by the classification of their workloads, which allows you to quickly identify the servers that should be the most closely monitored and most stringently configured  
   
@@ -294,6 +294,6 @@ All Event ID recommendations are accompanied by a criticality rating as follows:
   
 These recommendations are meant to provide a baseline guide for the administrator. All recommendations should be thoroughly reviewed prior to implementation in a production environment.  
   
-Refer to [Appendix L: Events to Monitor](../../../active-directory-domain-services/pl../../../active-directory-domain-services/pl../../../active-directory-domain-services/plan/Appendix-L--Events-to-Monitor.md) for a list of the recommended events to monitor, their criticality ratings, and an event message summary.  
+Refer to [Appendix L: Events to Monitor](../../../active-directory-domain-services/pl../../../active-directory-domain-services/pl../../../active-directory-domain-services/plan/appendix-l-events-monitor.md) for a list of the recommended events to monitor, their criticality ratings, and an event message summary.  
   
 

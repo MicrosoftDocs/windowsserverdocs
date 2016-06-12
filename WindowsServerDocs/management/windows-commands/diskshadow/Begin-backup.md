@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 8a53b5d5-e24c-4fc3-a3d8-c622c1bbf8f0
 ---
 # Begin backup
-Starts a full backup session.
+starts a full backup session.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ Starts a full backup session.
 begin backup
 ```
 
-## Remarks
+## remarks
 
 -   This command overrides the default copy backup setting.
 
-#### Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

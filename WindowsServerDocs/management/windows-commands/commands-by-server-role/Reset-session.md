@@ -1,5 +1,5 @@
 ---
-title: Reset session
+title: reset session
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
 author: jaimeo
 ---
-# Reset session
-Enables you to reset \(delete\) a session on a Remote Desktop Session Host \(RD Session Host\) server.  
+# reset session
+Enables you to reset \(delete\) a session on a remote Desktop Session Host \(rd Session Host\) server.  
   
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
   
 > [!NOTE]  
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What’s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
   
 ## Syntax  
   
@@ -29,11 +29,11 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 |-------------|---------------|  
 |<SessionName>|Specifies the name of the session that you want to reset. To determine the name of the session, use the **query session** command.|  
 |<SessionID>|Specifies the ID of the session to reset.|  
-|\/server:<ServerName>|Specifies the terminal server containing the session that you want to reset. Otherwise, the current RD Session Host server is used.|  
+|\/server:<ServerName>|Specifies the terminal server containing the session that you want to reset. Otherwise, the current rd Session Host server is used.|  
 |\/v|Displays information about the actions being performed.|  
 |\/?|Displays help at the command prompt.|  
   
-## Remarks  
+## remarks  
   
 -   You can always reset your own sessions, but you must have Full Control access permission to reset another user's session.  
   
@@ -57,9 +57,9 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
     reset session 3  
     ```  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](commandline-syntax-key.md)  
   
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](Remote-Desktop-Services--Terminal-Services--Command-Reference.md)  
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)  
   
 

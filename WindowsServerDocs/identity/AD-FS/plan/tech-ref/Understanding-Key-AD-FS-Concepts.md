@@ -43,22 +43,22 @@ When an application or service is in one network and a user account is in anothe
 
 With AD FS, organizations can bypass requests for secondary credentials by providing trust relationships \(federation trusts\) that these organizations can use to project a user's digital identity and access rights to trusted partners. In this federated environment, each organization continues to manage its own identities, but each organization can also securely project and accept identities from other organizations.
 
--   [The Role of Attribute Stores](../../../active-directory-federation-services/plan/tech-ref/key-concepts/The-Role-of-Attribute-Stores.md)
+-   [The Role of Attribute Stores](../../../active-directory-federation-services/plan/tech-ref/key-concepts/the-role-attribute-stores.md)
 
--   [The Role of the AD FS Configuration Database](../../../active-directory-federation-services/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md)
+-   [The Role of the AD FS Configuration Database](../../../active-directory-federation-services/plan/tech-ref/key-concepts/the-role-ad-fs-configuration-database.md)
 
--   [The Role of Claims](../../../active-directory-federation-services/plan/tech-ref/key-concepts/The-Role-of-Claims.md)
+-   [The Role of Claims](../../../active-directory-federation-services/plan/tech-ref/key-concepts/the-role-claims.md)
 
--   [The Role of Claim Rules](../../../active-directory-federation-services/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md)
+-   [The Role of Claim Rules](../../../active-directory-federation-services/plan/tech-ref/key-concepts/the-role-claim-rules.md)
 
--   [The Role of the Claims Engine](../../../active-directory-federation-services/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Engine.md)
+-   [The Role of the Claims Engine](../../../active-directory-federation-services/plan/tech-ref/key-concepts/the-role-claims-engine.md)
 
--   [The Role of the Claims Pipeline](../../../active-directory-federation-services/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Pipeline.md)
+-   [The Role of the Claims Pipeline](../../../active-directory-federation-services/plan/tech-ref/key-concepts/the-role-claims-pipeline.md)
 
--   [The Role of the Claim Rule Language](../../../active-directory-federation-services/plan/tech-ref/key-concepts/The-Role-of-the-Claim-Rule-Language.md)
+-   [The Role of the Claim Rule Language](../../../active-directory-federation-services/plan/tech-ref/key-concepts/the-role-claim-rule-language.md)
 
--   [Determine the Type of Claim Rule Template to Use](../../../active-directory-federation-services/plan/tech-ref/key-concepts/Determine-the-Type-of-Claim-Rule-Template-to-Use.md)
+-   [Determine the Type of Claim Rule Template to Use](../../../active-directory-federation-services/plan/tech-ref/key-concepts/determine-type-claim-rule-template-use.md)
 
--   [How URIs Are Used in AD FS](../../../active-directory-federation-services/plan/tech-ref/key-concepts/How-URIs-Are-Used-in-AD-FS.md)
+-   [How URIs Are Used in AD FS](../../../active-directory-federation-services/plan/tech-ref/key-concepts/how-uris-used-ad-fs.md)
 
 

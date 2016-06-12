@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin get priority
+title: bitsadmin get priority
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff958003-fcc8-4ad8-a9c7-868a48d9bdeb
 ---
-# Bitsadmin get priority
+# bitsadmin get priority
 Retrieves the priority of the specified job.
 
 ## Syntax
@@ -23,9 +23,9 @@ bitsadmin /GetPriority <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## Remarks
+## remarks
 
--   The priority is either FOREGROUND, HIGH, NORMAL, LOW, or UNKNOWN.
+-   The priority is either foregROUND, HIGH, NORMAL, LOW, or UNKNOWN.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the priority for the job named *myDownloadJob*.
@@ -34,7 +34,7 @@ The following example retrieves the priority for the job named *myDownloadJob*.
 C:\>bitsadmin /GetPriority myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

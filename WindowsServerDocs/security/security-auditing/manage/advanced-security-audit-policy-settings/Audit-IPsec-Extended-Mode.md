@@ -34,6 +34,6 @@ If this policy setting is configured, the following events appear on computers r
 |4984|An IPsec Extended Mode negotiation failed. The corresponding Main Mode security association has been deleted. **Note:** This event provides event audit data in the following categories: Local Endpoint, Remote Endpoint, Additional Information, and Failure Information.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

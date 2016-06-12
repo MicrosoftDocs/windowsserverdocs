@@ -1,5 +1,5 @@
 ---
-title: Create volume raid
+title: create volume raid
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,13 +10,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
 ---
-# Create volume raid
-Creates a RAID\-5 volume using three or more specified dynamic disks.
+# create volume raid
+creates a RAID\-5 volume using three or more specified dynamic disks.
 
-> [!IMPORTANT]
+> [!importANT]
 > This DiskPart command is not available in any edition of Windows Vista.
 
-For examples of how this command can be used, see [Examples](#BKMK_examples).
+for examples of how this command can be used, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -28,12 +28,12 @@ create volume raid [size=<n>] disk=<n>,<n>,<n>[,<n>,...] [align=<n>] [noerr]
 
 |Parameter|Description|
 |-------------|---------------|
-|size\=<n>|The amount of disk space, in megabytes \(MB\), that the volume will occupy on each disk. If no size is given, the largest possible RAID\-5 volume will be created. The disk with the smallest available contiguous free space determines the size for the RAID\-5 volume and the same amount of space is allocated from each disk. The actual amount of usable disk space in the RAID\-5 volume is less than the combined amount of disk space because some of the disk space is required for parity.|
+|size\=<n>|The amount of disk space, in megabytes \(MB\), that the volume will occupy on each disk. if no size is given, the largest possible RAID\-5 volume will be created. The disk with the smallest available contiguous free space determines the size for the RAID\-5 volume and the same amount of space is allocated from each disk. The actual amount of usable disk space in the RAID\-5 volume is less than the combined amount of disk space because some of the disk space is required for parity.|
 |disk\=<n>,<n>,<n>\[,<n>,...\]|The dynamic disks on which to create the RAID\-5 volume. You need at least three dynamic disks in order to create a RAID\-5 volume. An amount of space equal to **size\=<n>** is allocated on each disk.|
 |align\=<n>|Aligns all volume extents to the closest alignment boundary. Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+|noerr|for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
 
-## Remarks
+## remarks
 
 -   After you create the volume, the focus automatically shifts to the new volume.
 
@@ -44,8 +44,8 @@ To create a RAID\-5 volume of 1000 megabytes in size, using disks 1, 2 and 3, ty
 create volume raid size=1000 disk=1,2,3
 ```
 
-#### Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 

@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getbytestotal
+title: bitsadmin getbytestotal
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 784e0bfa-7b09-4262-9104-adbc9beb479b
 ---
-# Bitsadmin getbytestotal
+# bitsadmin getbytestotal
 Retrieves the size of the specified job
 
 ## Syntax
@@ -30,7 +30,7 @@ The following example retrieves the size of the job named *myDownloadJob*.
 C:\>bitsadmin /GetBytesTotal myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

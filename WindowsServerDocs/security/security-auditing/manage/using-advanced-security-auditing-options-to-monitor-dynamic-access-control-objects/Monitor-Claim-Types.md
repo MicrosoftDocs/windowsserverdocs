@@ -58,6 +58,6 @@ After you configure settings to monitor changes to claim types in AD DS, verify
     Look for event 5137. Key information to look for includes the name of the new attribute that was added, the type of claim that was created, and the user who created the claim.
 
 ### Related resource
-[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)
+[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../using-advanced-security-auditing-options-monitor-dynamic-access-control-objects.md)
 
 

@@ -40,6 +40,6 @@ If this policy setting is configured, the following events appear on computers r
 |4621|Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.|Windows Vista, Windows Server 2008|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

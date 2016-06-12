@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin setnotifyflags
+title: bitsadmin setnotifyflags
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d5763d95-94a6-45ca-9e03-891c20047e06
 ---
-# Bitsadmin setnotifyflags
+# bitsadmin setnotifyflags
 Sets the event notification flags for the specified job.
 
 ## Syntax
@@ -22,9 +22,9 @@ bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 |Parameter|Description|
 |-------------|---------------|
 |Job|The job's display name or GUID|
-|NotifyFlags|See Remarks|
+|NotifyFlags|See remarks|
 
-## Remarks
+## remarks
 The **NotfiyFlags** parameter can contain one or more of the following notification flags.
 
 |||
@@ -40,7 +40,7 @@ The following example sets the notify flags for transferred and error events job
 C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

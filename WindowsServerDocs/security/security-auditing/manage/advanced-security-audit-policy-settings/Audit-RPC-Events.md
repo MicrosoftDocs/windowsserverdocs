@@ -26,6 +26,6 @@ If this policy setting is configured, the following event appears on computers r
 |5712|A Remote Procedure Call \(RPC\) was attempted.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Dfsdiag TestDFSIntegrity
+title: dfsdiag TestDFSIntegrity
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 173ee832-26e1-4ec8-a23a-38a7d6229ac3
 ---
-# Dfsdiag TestDFSIntegrity
+# dfsdiag TestDFSIntegrity
 Checks the integrity of the Distributed File System \(DFS\) namespace by performing the following tests:
 
 -   Checks for DFS metadata corruption or inconsistencies between domain controllers.
@@ -19,12 +19,12 @@ Checks the integrity of the Distributed File System \(DFS\) namespace by perform
 
 -   Detects overlapping DFS folders \(links\), duplicate folders, and folders with overlapping folder targets.
 
-For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+for examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
 
 ## Syntax
 
 ```
-DFSDiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]
+dfsdiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]
 ```
 
 ### Parameters
@@ -33,19 +33,19 @@ DFSDiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]
 |-------------|---------------|
 |\/DFSRoot:<DFS root path>|The DFS namespace to diagnose.|
 |\/Recurse|Performs the testing including the namespace interlinks.|
-|\/Full|Verifies the consistency of share and NTFS ACLs and client side configuration on all folder targets. It also verifies that the Online property is set.|
+|\/Full|verifies the consistency of share and NTFS Acls and client side configuration on all folder targets. It also verifies that the online property is set.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To TBD, type:
 
 ```
-DFSDiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full
+dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](../commandline-syntax-key.md)
 
--   [Dfsdiag](../Dfsdiag.md)
+-   [dfsdiag](../dfsdiag.md)
 
 

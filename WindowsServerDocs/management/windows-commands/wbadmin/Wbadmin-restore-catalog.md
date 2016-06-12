@@ -1,5 +1,5 @@
 ---
-title: Wbadmin restore catalog
+title: wbadmin restore catalog
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,18 +8,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce1e24a0-821d-4353-b09d-8f82c5c4ad56
 ---
-# Wbadmin restore catalog
-Recovers a backup catalog for the local computer from a storage location that you specify.
+# wbadmin restore catalog
+recovers a backup catalog for the local computer from a storage location that you specify.
 
-To recover a backup catalog with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. \(To open an elevated command prompt right\-click **Command Prompt**, and then click **Run as administrator**.\)
+To recover a backup catalog with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. \(To open an elevated command prompt right\-click **Command prompt**, and then click **Run as administrator**.\)
 
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
+for examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
 wbadmin restore catalog
--backupTarget:{<BackupDestinationVolume> | <NetworkShareHostingBackup>}
+-backupTarget:{<BackupDestinationvolume> | <NetworkShareHostingBackup>}
 [-machine:<BackupMachineName>]
 [-quiet]
 ```
@@ -32,8 +32,8 @@ wbadmin restore catalog
 |\-machine|Specifies the name of the computer that you want to recover the backup catalog for. Use when backups for multiple computers have been stored at the same location. Should be used when **\-backupTarget** is specified.|
 |\-quiet|Runs the subcommand with no prompts to the user.|
 
-## Remarks
-If the location \(disk, DVD, or remote shared folder\) where you store your backups is damaged or lost and cannot be used to restore the backup catalog, use **wbadmin delete catalog** to delete the corrupted catalog. In this case, you should create a new backup once your backup catalog is deleted.
+## remarks
+if the location \(disk, DVD, or remote shared folder\) where you store your backups is damaged or lost and cannot be used to restore the backup catalog, use **wbadmin delete catalog** to delete the corrupted catalog. In this case, you should create a new backup once your backup catalog is deleted.
 
 ## <a name="BKMK_examples"></a>Examples
 To restore a catalog from a backup stored on disk d:, type:
@@ -48,11 +48,11 @@ To restore a catalog from a backup stored in the shared folder \\\\servername\\s
 wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 ```
 
-#### Additional references
+#### additional references
 
--   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](../commandline-syntax-key.md)
 
--   [Wbadmin]()
+-   [wbadmin]()
 
 -   [Restore\-WBCatalog](http://technet.microsoft.com/library/jj902437.aspx) cmdlet
 

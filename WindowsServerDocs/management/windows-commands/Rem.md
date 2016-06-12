@@ -1,5 +1,5 @@
 ---
-title: Rem
+title: rem
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a45b585-a83c-4ff6-badd-ff40f34cec23
 ---
-# Rem
-Records comments \(remarks\) in a batch file or CONFIG.SYS. If no comment is specified, **rem** adds vertical spacing.
+# rem
+Records comments \(remarks\) in a batch file or CONFIG.SYS. if no comment is specified, **rem** adds vertical spacing.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -26,7 +26,7 @@ rem [<Comment>]
 |<Comment>|Specifies a string of characters to include as a comment.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   The **rem** command does not display comments on the screen. You must use the **echo on** command in your batch or CONFIG.SYS file to display comments on the screen.
 
@@ -54,7 +54,7 @@ rem Set prompt to indicate current directory
 prompt $p$g
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 

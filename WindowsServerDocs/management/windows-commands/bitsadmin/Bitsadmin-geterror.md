@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin geterror
+title: bitsadmin geterror
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cbe5bca1-d2dd-4ce6-903f-f85de4a2ec6a
 ---
-# Bitsadmin geterror
+# bitsadmin geterror
 Retrieves detailed error information for the specified job.
 
 ## Syntax
@@ -30,7 +30,7 @@ The following example retrieves the error information for the job named *myDownl
 C:\>bitsadmin /GetError myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

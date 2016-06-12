@@ -36,7 +36,7 @@ To manage security configurations for multiple computers, you can use one of the
   
 -   Use the Security Templates snap\-in to create a security template that contains the security policies you want to apply, and then import the security template into a Group Policy Object. A security template is a file that represents a security configuration, and it can be imported to a GPO, applied to a local computer, or used to analyze security.  
   
-For more information about managing security configurations, see [Administer Security Policy Settings](Administer-Security-Policy-Settings.md).  
+For more information about managing security configurations, see [Administer Security Policy Settings](administer-security-policy-settings.md).  
   
 The Security Settings extension of the Local Group Policy Editor includes the following types of security policies:  
   
@@ -158,7 +158,7 @@ The following diagram shows Security Settings and related features.
   
 **Security Settings Policies and Related Features**  
   
-![](../../media/Security-Policy-Settings-Technical-Overview/secpol_components.gif)  
+![](../../media/security-policy-settings-technical-overview/secpol-components.gif)  
   
 -   **Scesrv.dll**  
   
@@ -181,7 +181,7 @@ The Security Settings extension of the Local Group Policy Editor is part of the 
   
 **Security Settings Architecture**  
   
-![](../../media/Security-Policy-Settings-Technical-Overview/secpol_architecture.gif)  
+![](../../media/security-policy-settings-technical-overview/secpol-architecture.gif)  
   
 The security settings configuration and analysis tools include a security configuration engine, which provides local computer \(non\-domain member\) and Group Policy−based configuration and analysis of security settings policies. The security configuration engine also supports the creation of security policy files. The primary features of the security configuration engine are Scecli.dll and Scesrv.dll.  
   
@@ -338,7 +338,7 @@ In the context of Group Policy processing, Security Settings policy is processed
   
     **Multiple GPOs and Merging of Security Policy**  
   
-    ![](../../media/Security-Policy-Settings-Technical-Overview/secpol_multiGPOmerge.gif)  
+    ![](../../media/security-policy-settings-technical-overview/secpol-multigpomerge.gif)  
   
 5.  The resultant security policies are stored in Secedit.sdb, the security settings database. The security engine gets the security template files and imports them to Secedit.sdb.  
   
@@ -348,7 +348,7 @@ The following figure illustrates the security settings policy processing.
   
 **Security Settings Policy Processing**  
   
-![](../../media/Security-Policy-Settings-Technical-Overview/secpol_processes.gif)  
+![](../../media/security-policy-settings-technical-overview/secpol-processes.gif)  
   
 #### Merging of security policies on domain controllers  
 Password policies, Kerberos, and some security options are only merged from GPOs that are linked at the root level on the domain. This is done to keep those settings synchronized across all domain controllers in the domain. The following security options are merged:  
@@ -432,12 +432,12 @@ The following table lists relevant and supporting documentation for the Security
 |Group Policy|[Group Policy Overview]()|  
 |Security Tools|[Security Tools](http://technet.microsoft.com/library/cc722416(WS.10).aspx)|  
 |Security settings|[Security Policy Settings Reference](http://technet.microsoft.com/library/jj852210(v=ws.10).aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 R2 and Windows 7](http://technet.microsoft.com/library/hh125921(WS.10).aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 and Windows Vista](http://technet.microsoft.com/library/dd349791(WS.10).aspx)|  
-|Active Directory|[Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)|  
+|Active Directory|[Active Directory Domain Services Overview](active-directory-domain-services-overview.md)|  
 |Sign on technologies|[Interactive Logon Technical Reference \(2003\)](http://technet.microsoft.com/library/cc781463(WS.10).aspx)|  
 |Troubleshooting|[Group Policy Infrastructure](http://technet.microsoft.com/library/dd379467(WS.10).aspx)<br /><br />[AD DS](http://technet.microsoft.com/library/ee411020(WS.10).aspx)<br /><br />[Windows Logon and Initialization](http://technet.microsoft.com/library/dd363942(WS.10).aspx)<br /><br />[TechNet Wiki: Troubleshooting Portal](http://social.technet.microsoft.com/wiki/contents/articles/2200.wiki-troubleshooting-portal.aspx)|  
-|Administer and configure|[Administer Security Policy Settings](Administer-Security-Policy-Settings.md)<br /><br />[Group Policy Management Console](http://technet.microsoft.com/library/cc753298.aspx)<br /><br />[Local Group Policy Editor](http://technet.microsoft.com/library/cc725970.aspx)|  
+|Administer and configure|[Administer Security Policy Settings](administer-security-policy-settings.md)<br /><br />[Group Policy Management Console](http://technet.microsoft.com/library/cc753298.aspx)<br /><br />[Local Group Policy Editor](http://technet.microsoft.com/library/cc725970.aspx)|  
   
 ## See Also  
-[Security Policy Settings Overview](../Security-Policy-Settings-Overview.md)  
+[Security Policy Settings Overview](../security-policy-settings-overview.md)  
   
 

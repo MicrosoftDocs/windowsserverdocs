@@ -1,5 +1,5 @@
 ---
-title: Delete
+title: delete
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,8 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 021799a3-11a2-4e7f-8fdc-fba24ca2ba21
 ---
-# Delete
-Deletes a partition or a volume. It also deletes a dynamic disk from the list of disks.
+# delete
+deletes a partition or a volume. It also deletes a dynamic disk from the list of disks.
 
 ## Syntax
 
@@ -25,12 +25,12 @@ delete volume
 
 |Parameter|Description|
 |-------------|---------------|
-|[Delete disk](delete/Delete-disk.md)|Deletes a missing dynamic disk from the list of disks.|
-|[Delete partition](delete/Delete-partition.md)|Deletes a partition.|
-|[Delete volume]()|Deletes a volume.|
+|[delete disk](delete/delete-disk.md)|deletes a missing dynamic disk from the list of disks.|
+|[delete partition](delete/delete-partition.md)|deletes a partition.|
+|[delete volume]()|deletes a volume.|
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 

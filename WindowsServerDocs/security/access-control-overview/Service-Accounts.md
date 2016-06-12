@@ -27,7 +27,7 @@ This topic contains information about the following types of service accounts:
 ### <a name="BKMK_StandaloneManagedServiceAccounts"></a>Standalone managed service accounts
 A managed service account is designed to isolate domain accounts in crucial applications, such as Internet Information Services \(IIS\), and eliminate the need for an administrator to manually administer the service principal name \(SPN\) and credentials for the accounts.
 
-To use managed service accounts, the server on which the application or service is installed must be running at least Windows Server 2008 R2. One managed service account can be used for services on a single computer. Managed service accounts cannot be shared between multiple computers, and they cannot be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group managed service account. For more information, see [Group Managed Service Accounts Overview](Group-Managed-Service-Accounts-Overview.md).
+To use managed service accounts, the server on which the application or service is installed must be running at least Windows Server 2008 R2. One managed service account can be used for services on a single computer. Managed service accounts cannot be shared between multiple computers, and they cannot be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group managed service account. For more information, see [Group Managed Service Accounts Overview](Group-Managed-service-accounts-Overview.md).
 
 In addition to the enhanced security that is provided by having individual accounts for critical services, there are four important administrative benefits associated with managed service accounts:
 
@@ -94,6 +94,6 @@ The following table provides links to additional resources that are related to s
 |**Operations**|[Managed Service Accounts in Active Directory](http://technet.microsoft.com/library/dd378925(v=ws.10).aspx)|
 |**Tools and settings**|[Managed Service Accounts in Active Directory Domain Services](http://technet.microsoft.com/library/dd378925(v=WS.10).aspx)|
 |**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](http://blogs.technet.com/b/askds/archive/2009/09/10/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)|
-|**Related technologies**|[Security Principals Technical Overview](Security-Principals-Technical-Overview.md)<br /><br />[Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)|
+|**Related technologies**|[Security Principals Technical Overview](security-principals-technical-overview.md)<br /><br />[Active Directory Domain Services Overview](active-directory-domain-services-overview.md)|
 
 

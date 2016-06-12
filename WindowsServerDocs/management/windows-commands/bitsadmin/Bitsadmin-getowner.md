@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getowner
+title: bitsadmin getowner
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5203f84c-a879-4f31-ae3e-7ea74bd63ca5
 ---
-# Bitsadmin getowner
+# bitsadmin getowner
 Retrieves the owner of the specified job.
 
 ## Syntax
@@ -30,7 +30,7 @@ The following example displays the owner for the job named *myDownloadJob*.
 C:\>bitsadmin /GetOwner myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

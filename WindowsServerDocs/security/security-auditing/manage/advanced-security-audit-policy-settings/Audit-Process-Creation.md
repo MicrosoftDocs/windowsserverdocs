@@ -27,6 +27,6 @@ If this policy setting is configured, the following events appear on computers r
 |4696|A primary token was assigned to a process.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Popd
+title: popd
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8a4c52d5-9fd1-4eac-9c0c-5767b25728ed
 ---
-# Popd
-Changes the current directory to the directory that was most recently stored by the **pushd** command.
+# popd
+changes the current directory to the directory that was most recently stored by the **pushd** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -25,13 +25,13 @@ popd
 |-------------|---------------|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   Every time you use the **pushd** command, a single directory is stored for your use. However, you can store multiple directories by using the **pushd** command multiple times.
 
-    The directories are stored sequentially in a virtual stack. If you use the **pushd** command once, the directory in which you use the command is placed at the bottom of the stack. If you use the command again, the second directory is placed on top of the first one. The process repeats every time you use the **pushd** command.
+    The directories are stored sequentially in a virtual stack. if you use the **pushd** command once, the directory in which you use the command is placed at the bottom of the stack. if you use the command again, the second directory is placed on top of the first one. The process repeats every time you use the **pushd** command.
 
-    You can use the **popd** command to change the current directory to the directory most recently stored by the **pushd** command. If you use the **popd** command, the directory on the top of the stack is removed from the stack and the current directory is changed to that directory. If you use the **popd** command again, the next directory on the stack is removed.
+    You can use the **popd** command to change the current directory to the directory most recently stored by the **pushd** command. if you use the **popd** command, the directory on the top of the stack is removed from the stack and the current directory is changed to that directory. if you use the **popd** command again, the next directory on the stack is removed.
 
 -   When command extensions are enabled, the **popd** command removes any drive\-letter assignations created by **pushd**.
 
@@ -48,11 +48,11 @@ cls
 echo All text files deleted in the %1 directory
 ```
 
-## Additional references
+## additional references
 
--   [Pushd](Pushd.md)
+-   [pushd](pushd.md)
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](commandline-syntax-key.md)
 
 -   [Command-Line Reference_1](Command-Line-Reference_1.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin setdisplayname
+title: bitsadmin setdisplayname
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 13706c53-fb5f-4879-b5ca-82531361d6e1
 ---
-# Bitsadmin setdisplayname
+# bitsadmin setdisplayname
 Sets the display name of the specified job.
 
 ## Syntax
@@ -31,7 +31,7 @@ The following example sets the display name for the job named *myDownloadJob* to
 C:\>bitsadmin /SetDisplayName myDownloadJob "Download Music Job"
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Inuse
+title: inuse
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,9 +9,9 @@ ms.topic: article
 ms.assetid: 62ff1af0-adba-4beb-8e3c-d1c87e0b38f3
 author: jaimeo
 ---
-# Inuse
-Inuse is deprecated, and is not guaranteed to be supported in future releases of Windows.  
+# inuse
+inuse is deprecated, and is not guaranteed to be supported in future releases of Windows.  
   
-This tool is included in Windows Server 2003 . For more information see [Inuse](https://technet.microsoft.com/library/dd996699(v=ws.10).aspx).  
+This tool is included in Windows Server 2003 . for more information see [inuse](https://technet.microsoft.com/library/dd996699(v=ws.10).aspx).  
   
 

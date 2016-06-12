@@ -24,10 +24,10 @@ Setting site link object properties includes the following steps:
   
 ## In this guide  
   
--   [Determining the Cost](../../active-directory-domain-services/plan/Determining-the-Cost.md)  
+-   [Determining the Cost](../../active-directory-domain-services/plan/determining-cost.md)  
   
--   [Determining the Schedule](../../active-directory-domain-services/plan/Determining-the-Schedule.md)  
+-   [Determining the Schedule](../../active-directory-domain-services/plan/determining-schedule.md)  
   
--   [Determining the Interval](../../active-directory-domain-services/plan/Determining-the-Interval.md)  
+-   [Determining the Interval](../../active-directory-domain-services/plan/determining-interval.md)  
   
 

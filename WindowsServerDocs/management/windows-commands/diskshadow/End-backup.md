@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 8ac1f283-6ecf-4523-8e96-95d435dd4f7f
 ---
 # End backup
-Ends a full backup session and issues a **BackupComplete** event with the appropriate writer state, if needed.
+Ends a full backup session and issues a **Backupcomplete** event with the appropriate writer state, if needed.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ Ends a full backup session and issues a **BackupComplete** event with the approp
 end backup
 ```
 
-## Remarks
+## remarks
 
 -   This command should be used for all full backups.
 
-#### Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

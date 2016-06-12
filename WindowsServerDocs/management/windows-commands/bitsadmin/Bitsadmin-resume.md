@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin resume
+title: bitsadmin resume
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c7540a9-a11a-4910-923a-2a2a61cbf11d
 ---
-# Bitsadmin resume
+# bitsadmin resume
 Activates a new or suspended job in the transfer queue.
 
 ## Syntax
@@ -30,8 +30,8 @@ The following example resumes the job named *myDownloadJob*.
 C:\>bitsadmin /Resume myDownloadJob
 ```
 
-Additional references
+additional references
 
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

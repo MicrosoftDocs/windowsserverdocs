@@ -1,5 +1,5 @@
 ---
-title: List shadows
+title: list shadows
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,24 +10,24 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1
 ---
-# List shadows
-Lists persistent and existing non\-persistent shadow copies that are on the system.
+# list shadows
+lists persistent and existing non\-persistent shadow copies that are on the system.
 
 ## Syntax
 
 ```
-list shadows {all | set <SetID> | id <ShadowID>}
+list shadows {all | set <SetID> | id <shadowID>}
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|all|Lists all shadow copies.|
-|set <SetID>|Lists shadow copies that belong to the specified Shadow Copy Set ID.|
-|id <ShadowID>|Lists any shadow copy with the specified shadow copy ID.|
+|all|lists all shadow copies.|
+|set <SetID>|lists shadow copies that belong to the specified shadow copy Set ID.|
+|id <shadowID>|lists any shadow copy with the specified shadow copy ID.|
 
-#### Additional references
-[Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](../../commandline-syntax-key.md)
 
 

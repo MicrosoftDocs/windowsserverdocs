@@ -28,7 +28,7 @@ The content in this topic applies to computers that are running the supported ve
 
 ### In this topic
 
--   [How security identifiers work](Security-Identifiers-Technical-Overview.md#w2k3tr_sids_how)
+-   [How security identifiers work](security-identifiers-technical-overview.md#w2k3tr_sids_how)
 
 -   [Security identifier architecture](#w2k3tr_sids_how_lpsh)
 
@@ -54,7 +54,7 @@ A security identifier is a data structure in binary format that contains a varia
 
 **SID structure**
 
-![](../media/Security-Identifiers-Technical-Overview/SID_structure.gif)
+![](../media/security-identifiers-technical-overview/sid-structure.gif)
 
 The individual values of a SID are described in the following table.
 

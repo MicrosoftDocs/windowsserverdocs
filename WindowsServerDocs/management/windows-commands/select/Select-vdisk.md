@@ -1,5 +1,5 @@
 ---
-title: Select vdisk
+title: select vdisk
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,8 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8808872a-3523-4205-a6c6-83fa738ee37a
 ---
-# Select vdisk
-Selects the specified virtual hard disk \(VHD\) and shifts the focus to it.
+# select vdisk
+selects the specified virtual hard disk \(VHD\) and shifts the focus to it.
 
 > [!NOTE]
 > This command is only applicable to Windows 7 and Windows Server 2008 R2.
@@ -36,24 +36,24 @@ To shift the focus to the VHD named Test.vhd, type:
 select vdisk file="c:\test\test.vhd"
 ```
 
-#### Additional references
+#### additional references
 
--   [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](../commandline-syntax-key.md)
 
--   [Attach vdisk](../Attach-vdisk.md)
+-   [attach vdisk](../attach-vdisk.md)
 
--   [Compact vdisk](../Compact-vdisk.md)
+-   [compact vdisk](../compact-vdisk.md)
 
--   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
+-   [create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
 
 -   [Detach vdisk]()
 
--   [Detail vdisk](../delete/detail/Detail-vdisk.md)
+-   [detail vdisk](../delete/detail/detail-vdisk.md)
 
--   [Expand vdisk](../Expand-vdisk.md)
+-   [expand vdisk](../expand-vdisk.md)
 
--   [Merge vdisk](../Merge-vdisk.md)
+-   [Merge vdisk](../merge-vdisk.md)
 
--   [List_1]()
+-   [list_1]()
 
 

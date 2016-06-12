@@ -1,5 +1,5 @@
 ---
-title: Mstsc
+title: mstsc
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 59801227-1e7e-4dbd-96e6-f54102a3ce92
 ---
-# Mstsc
-Creates connections to Remote Desktop Session Host \(RD Session Host\) servers or other remote computers, edits an existing Remote Desktop Connection \(.rdp\) configuration file, and migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.
+# mstsc
+creates connections to remote Desktop Session Host \(rd Session Host\) servers or other remote computers, edits an existing remote Desktop Connection \(.rdp\) configuration file, and migrates legacy connection files that were created with Client Connection manager to new .rdp connection files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What’s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 
 ## Syntax
 
@@ -33,16 +33,16 @@ mstsc.exe /migrate
 |<Connection File>|Specifies the name of an .rdp file for the connection.|
 |\/v:<Server\[:<Port>\]|Specifies the remote computer and, optionally, the port number to which you want to connect.|
 |\/admin|Connects you to a session for administering the server.|
-|\/f|Starts Remote Desktop Connection in full\-screen mode.|
-|\/w:<Width>|Specifies the width of the Remote Desktop window.|
-|\/h:<Height>|Specifies the height of the Remote Desktop window.|
-|\/public|Runs Remote Desktop in public mode. In public mode, passwords and bitmaps are not cached.|
-|\/span|Matches the Remote Desktop width and height with the local virtual desktop, spanning across multiple monitors if necessary.|
+|\/f|starts remote Desktop Connection in full\-screen mode.|
+|\/w:<Width>|Specifies the width of the remote Desktop window.|
+|\/h:<Height>|Specifies the height of the remote Desktop window.|
+|\/public|Runs remote Desktop in public mode. In public mode, passwords and bitmaps are not cached.|
+|\/span|Matches the remote Desktop width and height with the local virtual desktop, spanning across multiple monitors if necessary.|
 |\/edit <Connection File>|Opens the specified .rdp file for editing.|
-|\/migrate|Migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.|
+|\/migrate|Migrates legacy connection files that were created with Client Connection manager to new .rdp connection files.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   Default.rdp is stored for each user as a hidden file in the user's Documents folder. User created .rdp files are saved by default in the user's Documents folder but can be saved anywhere.
 
@@ -62,9 +62,9 @@ mstsc.exe /migrate
     mstsc /edit filename.rdp
     ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](commands-by-server-role/Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](commands-by-server-role/remote-desktop-services-terminal-services-command-reference.md)
 
 

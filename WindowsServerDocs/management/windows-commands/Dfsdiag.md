@@ -1,5 +1,5 @@
 ---
-title: Dfsdiag
+title: dfsdiag
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,13 +10,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0891e67-0187-4f18-923d-5623e6127f90
 ---
-# Dfsdiag
-The `Dfsdiag` command provides diagnostic information for DFS Namespaces.
+# dfsdiag
+The `dfsdiag` command provides diagnostic information for DFS Namespaces.
 
 ## Syntax
 
 ```
-dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| /DFSPath:<namespace root or DFS folder> [/Recurse]> [/Full] | /TestDFSConfig /DFSRoot:<namespace> | /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full] | /TestReferral /DFSPath:<DFS path for getting referrals> [/Full] | /?]
+dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| /DFSpath:<namespace root or DFS folder> [/Recurse]> [/Full] | /TestDFSConfig /DFSRoot:<namespace> | /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full] | /TestReferral /DFSpath:<DFS path for getting referrals> [/Full] | /?]
 
 ```
 
@@ -24,15 +24,15 @@ dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| 
 
 |Parameter|Description|
 |-------------|---------------|
-|[Dfsdiag TestDCs](dfsdiag/Dfsdiag-TestDCs.md)|Checks domain controller configuration.|
-|[Dfsdiag TestSites](dfsdiag/Dfsdiag-TestSites.md)|Checks site associations.|
-|[Dfsdiag TestDFSConfig](dfsdiag/Dfsdiag-TestDFSConfig.md)|Checks DFS Namespace configuration.|
-|[Dfsdiag TestDFSIntegrity](dfsdiag/Dfsdiag-TestDFSIntegrity.md)|Checks DFS Namespace integrity.|
-|[Dfsdiag TestReferral](dfsdiag/Dfsdiag-TestReferral.md)|Checks referral responses.|
+|[dfsdiag TestDCs](dfsdiag/dfsdiag-testdcs.md)|Checks domain controller configuration.|
+|[dfsdiag TestSites](dfsdiag/dfsdiag-testsites.md)|Checks site associations.|
+|[dfsdiag TestDFSConfig](dfsdiag/dfsdiag-testdfsconfig.md)|Checks DFS Namespace configuration.|
+|[dfsdiag TestDFSIntegrity](dfsdiag/dfsdiag-testdfsintegrity.md)|Checks DFS Namespace integrity.|
+|[dfsdiag TestReferral](dfsdiag/dfsdiag-testreferral.md)|Checks referral responses.|
 |\/?|Displays help at the command prompt.|
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](commandline-syntax-key.md)
 
 

@@ -21,7 +21,7 @@ The default Security Support Providers \(SSPs\) that invoke specific authenticat
 
 As shown in the following image, the SSPI in Windows provides a mechanism that carries authentication tokens over the existing communication channel between the client computer and the server. When two computers or devices need to be authenticated so that they can communicate securely, the requests for authentication are routed to the SSPI, which completes the authentication process, regardless of the network protocol currently in use. The SSPI returns transparent binary large objects. These are passed between the applications, at which point they can be passed to the SSPI layer. Thus, the SSPI enables an application to use various security models available on a computer or network without changing the interface to the security system.
 
-![](../../../media/Security-Support-Provider-Interface-Architecture/AuthN_SecuritySupportProviderInterfaceArchitecture.jpg)
+![](../../../media/security-support-provider-interface-architecture/authn-securitysupportproviderinterfacearchitecture.jpg)
 
 The following sections describe the default SSPs that interact with the SSPI. The SSPs are used in different ways in Windows operating systems to promote secure communication in an unsecure network environment.
 
@@ -43,7 +43,7 @@ The following sections describe the default SSPs that interact with the SSPI. Th
 
 Also included in this topic:
 
-[Security Support Provider selection](Security-Support-Provider-Interface-Architecture.md#BKMK_SecuritySupportProviderSelection)
+[Security Support Provider selection](security-support-provider-interface-architecture.md#BKMK_SecuritySupportProviderSelection)
 
 ### <a name="BKMK_KerbSSP"></a>Kerberos Security Support Provider
 This SSP uses only the Kerberos version 5 protocol as implemented by Microsoft. This protocol is based on the Network Working Group’s RFC 4120 and draft revisions. It is an industry standard protocol that is used with a password or a smart card for an interactive logon. It is also the preferred authentication method for services in Windows.
@@ -155,7 +155,7 @@ The TLS protocol, SSL protocol , the Private Communications Technology \(PCT\) p
 
 The protocol that is selected is the preferred authentication protocol that the client and the server can support. For example, if a server supports all the Schannel protocols and the client supports only SSL 3.0 and SSL 2.0, the authentication process uses SSL 3.0.
 
-DTLS is used when explicitly called by the application. For more information about DTLS and the other protocols that are used by the Schannel provider, see [Schannel Security Support Provider Technical Reference](../../../tls/ssl-schannel-ssp/manage/Schannel-Security-Support-Provider-Technical-Reference.md).
+DTLS is used when explicitly called by the application. For more information about DTLS and the other protocols that are used by the Schannel provider, see [Schannel Security Support Provider Technical Reference](../../../tls/ssl-schannel-ssp/manage/schannel-security-support-provider-technical-reference.md).
 
 Location: %windir%\\Windows\\System32\\Schannel.dll
 

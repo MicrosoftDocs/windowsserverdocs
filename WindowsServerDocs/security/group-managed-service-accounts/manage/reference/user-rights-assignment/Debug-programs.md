@@ -83,6 +83,6 @@ Remove the accounts of all users and groups that do not require the **Debug prog
 If you revoke this user right, no one can debug programs. However, typical circumstances rarely require this capability on production computers. If an issue arises that requires an application to be debugged on a production server, you can move the server to a different organizational unit \(OU\) temporarily and assign the **Debug programs** user right to a separate Group Policy for that OU.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

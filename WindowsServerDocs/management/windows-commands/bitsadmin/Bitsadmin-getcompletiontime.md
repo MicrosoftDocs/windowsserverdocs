@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getcompletiontime
+title: bitsadmin getcompletiontime
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7a4b3c1c-9832-4724-86b2-cce3c01bfa28
 ---
-# Bitsadmin getcompletiontime
+# bitsadmin getcompletiontime
 Retrieves the time that the job finished transferring data.
 
 ## Syntax
 
 ```
-bitsadmin /GetCompletionTime <Job>
+bitsadmin /Getcompletiontime <Job>
 ```
 
 ## Parameters
@@ -27,10 +27,10 @@ bitsadmin /GetCompletionTime <Job>
 The following example retrieves the time that the job named *myDownloadJob* finished transferring data.
 
 ```
-C:\>bitsadmin /GetCompletionTime myDownloadJob
+C:\>bitsadmin /Getcompletiontime myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

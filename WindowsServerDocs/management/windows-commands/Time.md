@@ -1,5 +1,5 @@
 ---
-title: Time
+title: time
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1276a257-7283-41da-ae80-fb4cfb311f9d
 ---
-# Time
-Displays or sets the system time. If used without parameters, **time** displays the current system time and prompts you to enter a new time.
+# time
+Displays or sets the system time. if used without parameters, **time** displays the current system time and prompts you to enter a new time.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -23,11 +23,11 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 
 |Parameter|Description|
 |-------------|---------------|
-|<HH>\[:<MM>\[:<SS>\[.<NN>\]\]\] \[am&#124;pm\]|Sets the system time to the new time specified, where *HH* is in hours \(required\), *MM* is in minutes, and *SS* is in seconds. *NN* can be used to specify hundredths of a second. If **am** or **pm** is not specified, **time** uses the 24\-hour format by default.|
+|<HH>\[:<MM>\[:<SS>\[.<NN>\]\]\] \[am&#124;pm\]|Sets the system time to the new time specified, where *HH* is in hours \(required\), *MM* is in minutes, and *SS* is in seconds. *NN* can be used to specify hundredths of a second. if **am** or **pm** is not specified, **time** uses the 24\-hour format by default.|
 |\/t|Displays the current time without prompting you for a new time.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   To change the current time, you must have administrative credentials.
 
@@ -38,7 +38,7 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 -   Valid *MM* and *SS* values are 0 through 59.
 
 ## <a name="BKMK_examples"></a>Examples
-If command extensions are enabled, to display the current system time, type:
+if command extensions are enabled, to display the current system time, type:
 
 ```
 time /t
@@ -60,7 +60,7 @@ Enter the new time:
 
 To keep the current time and return to the command prompt, press ENTER. To change the current time, type the new time and then press ENTER.
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Ver
+title: ver
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
 author: jaimeo
 ---
-# Ver
+# ver
 Displays the operating system version number.  
   
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+for examples of how to use this command, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -31,7 +31,7 @@ To obtain the version number of the operating system, type:
   
 `ver`  
   
-#### Additional references  
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+#### additional references  
+[Command-Line Syntax Key](commandline-syntax-key.md)  
   
 

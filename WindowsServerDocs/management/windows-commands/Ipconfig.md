@@ -1,5 +1,5 @@
 ---
-title: Ipconfig
+title: ipconfig
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 15071c2c-4815-4893-93b2-ab30232e312e
 ---
-# Ipconfig
+# ipconfig
 Displays all current TCP\/IP network configuration values and refreshes Dynamic Host Configuration Protocol \(DHCP\) and Domain Name System \(DNS\) settings. Used without parameters, **ipconfig** displays Internet Protocol version 4 \(IPv4\) and IPv6 addresses, subnet mask, and default gateway for all adapters.
 
 ## Syntax
@@ -28,19 +28,19 @@ ipconfig [/allcompartments] [/all] [/renew [<Adapter>]] [/release [<Adapter>]] [
 |\/registerdns|Initiates manual dynamic registration for the DNS names and IP addresses that are configured at a computer. You can use this parameter to troubleshoot a failed DNS name registration or resolve a dynamic update problem between a client and the DNS server without rebooting the client computer. The DNS settings in the advanced properties of the TCP\/IP protocol determine which names are registered in DNS.|
 |\/release \[<Adapter>\]|Sends a DHCPRELEASE message to the DHCP server to release the current DHCP configuration and discard the IP address configuration for either all adapters \(if an adapter is not specified\) or for a specific adapter if the *Adapter* parameter is included. This parameter disables TCP\/IP for adapters configured to obtain an IP address automatically. To specify an adapter name, type the adapter name that appears when you use **ipconfig** without parameters.|
 |\/release6\[<Adapter>\]|Sends a DHCPRELEASE message to the DHCPv6 server to release the current DHCP configuration and discard the IPv6 address configuration for either all adapters \(if an adapter is not specified\) or for a specific adapter if the *Adapter* parameter is included. This parameter disables TCP\/IP for adapters configured to obtain an IP address automatically. To specify an adapter name, type the adapter name that appears when you use **ipconfig** without parameters.|
-|\/renew \[<Adapter>\]|Renews DHCP configuration for all adapters \(if an adapter is not specified\) or for a specific adapter if the *Adapter* parameter is included. This parameter is available only on computers with adapters that are configured to obtain an IP address automatically. To specify an adapter name, type the adapter name that appears when you use **ipconfig** without parameters.|
-|\/renew6 \[<Adapter>\]|Renews DHCPv6 configuration for all adapters \(if an adapter is not specified\) or for a specific adapter if the *Adapter* parameter is included. This parameter is available only on computers with adapters that are configured to obtain an IPv6 address automatically. To specify an adapter name, type the adapter name that appears when you use **ipconfig** without parameters.|
-|\/setclassid <Adapter>\[ <ClassID>\]|Configures the DHCP class ID for a specified adapter. To set the DHCP class ID for all adapters, use the asterisk \(**\***\) wildcard character in place of *Adapter*. This parameter is available only on computers with adapters that are configured to obtain an IP address automatically. If a DHCP class ID is not specified, the current class ID is removed.|
+|\/renew \[<Adapter>\]|renews DHCP configuration for all adapters \(if an adapter is not specified\) or for a specific adapter if the *Adapter* parameter is included. This parameter is available only on computers with adapters that are configured to obtain an IP address automatically. To specify an adapter name, type the adapter name that appears when you use **ipconfig** without parameters.|
+|\/renew6 \[<Adapter>\]|renews DHCPv6 configuration for all adapters \(if an adapter is not specified\) or for a specific adapter if the *Adapter* parameter is included. This parameter is available only on computers with adapters that are configured to obtain an IPv6 address automatically. To specify an adapter name, type the adapter name that appears when you use **ipconfig** without parameters.|
+|\/setclassid <Adapter>\[ <ClassID>\]|Configures the DHCP class ID for a specified adapter. To set the DHCP class ID for all adapters, use the asterisk \(**\***\) wildcard character in place of *Adapter*. This parameter is available only on computers with adapters that are configured to obtain an IP address automatically. if a DHCP class ID is not specified, the current class ID is removed.|
 |\/showclassid <Adapter>|Displays the DHCP class ID for a specified adapter. To see the DHCP class ID for all adapters, use the asterisk \(**\***\) wildcard character in place of *Adapter*. This parameter is available only on computers with adapters that are configured to obtain an IP address automatically.|
-|\/?|Displays Help at the command prompt.|
+|\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
--   This command is most useful on computers that are configured to obtain an IP address automatically. This enables users to determine which TCP\/IP configuration values have been configured by DHCP, Automatic Private IP Addressing \(APIPA\), or an alternate configuration.
+-   This command is most useful on computers that are configured to obtain an IP address automatically. This enables users to determine which TCP\/IP configuration values have been configured by DHCP, Automatic Private IP addressing \(APIPA\), or an alternate configuration.
 
--   If the name you supply for *Adapter* contains any spaces, use quotation marks around the adapter name \(example: **"***Adapter Name***"**\).
+-   if the name you supply for *Adapter* contains any spaces, use quotation marks around the adapter name \(example: **"***Adapter Name***"**\).
 
--   For adapter names, **ipconfig** supports the use of the asterisk \(\*\) wildcard character to specify either adapters with names that begin with a specified string or adapters with names that contain a specified string. For example,  **Local\*** matches all adapters that start with the string Local and **\*Con\*** matches all adapters that contain the string Con.
+-   for adapter names, **ipconfig** supports the use of the asterisk \(\*\) wildcard character to specify either adapters with names that begin with a specified string or adapters with names that contain a specified string. for example,  **Local\*** matches all adapters that start with the string Local and **\*Con\*** matches all adapters that contain the string Con.
 
 ## Examples
 To display the basic TCP\/IP configuration for all adapters, type:
@@ -79,8 +79,8 @@ To set the DHCP class ID for the Local Area Connection adapter to TEST, type:
 ipconfig /setclassid "Local Area Connection" TEST
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](commandline-syntax-key.md)
 
 

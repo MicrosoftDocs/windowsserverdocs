@@ -1,5 +1,5 @@
 ---
-title: Xcopy
+title: xcopy
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,15 +8,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 ---
-# Xcopy
+# xcopy
 Copies files and directories, including subdirectories
 
-For examples of how to use this command, see [Examples](Xcopy.md#BKMK_examples)
+for examples of how to use this command, see [Examples](xcopy.md#BKMK_examples)
 
 ## Syntax
 
 ```
-Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]] [{/y | /-y}] [/z] [/b] [/j]
+xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]] [{/y | /-y}] [/z] [/b] [/j]
 ```
 
 ## Parameters
@@ -26,62 +26,62 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |<Source>|Required. Specifies the location and names of the files you want to copy. This parameter must include either a drive or a path.|
 |\[<Destination>\]|Specifies the destination of the files you want to copy. This parameter can include a drive letter and colon, a directory name, a file name, or a combination of these.|
 |\/w|Displays the following message and waits for your response before starting to copy files:<br /><br />**Press any key to begin copying file\(s\)**|
-|\/p|Prompts you to confirm whether you want to create each destination file.|
+|\/p|prompts you to confirm whether you want to create each destination file.|
 |\/c|Ignores errors.|
-|\/v|Verifies each file as it is written to the destination file to make sure that the destination files are identical to the source files.|
+|\/v|verifies each file as it is written to the destination file to make sure that the destination files are identical to the source files.|
 |\/q|Suppresses the display of **xcopy** messages.|
 |\/f|Displays source and destination file names while copying.|
 |\/l|Displays a list of files that are to be copied.|
-|\/g|Creates decrypted *Destination* files when the destination does not support encryption.|
-|\/d \[:MM\-DD\-YYYY\]|Copies source files changed on or after the specified date only. If you do not include a *MM\-DD\-YYYY* value, **xcopy** copies all *Source* files that are newer than existing *Destination* files. This command\-line option allows you to update files that have changed.|
+|\/g|creates decrypted *Destination* files when the destination does not support encryption.|
+|\/d \[:MM\-DD\-YYYY\]|Copies source files changed on or after the specified date only. if you do not include a *MM\-DD\-YYYY* value, **xcopy** copies all *Source* files that are newer than existing *Destination* files. This command\-line option allows you to update files that have changed.|
 |\/u|Copies files from *Source* that exist on *Destination* only.|
-|\/i|If *Source* is a directory or contains wildcards and *Destination* does not exist, **xcopy** assumes *Destination* specifies a directory name and creates a new directory. Then, **xcopy** copies all specified files into the new directory. By default, **xcopy** prompts you to specify whether *Destination* is a file or a directory.|
-|\/s|Copies directories and subdirectories, unless they are empty. If you omit **\/s**, **xcopy** works within a single directory.|
+|\/i|if *Source* is a directory or contains wildcards and *Destination* does not exist, **xcopy** assumes *Destination* specifies a directory name and creates a new directory. Then, **xcopy** copies all specified files into the new directory. By default, **xcopy** prompts you to specify whether *Destination* is a file or a directory.|
+|\/s|Copies directories and subdirectories, unless they are empty. if you omit **\/s**, **xcopy** works within a single directory.|
 |\/e|Copies all subdirectories, even if they are empty. Use **\/e** with the **\/s** and **\/t** command\-line options. **\/t**|
 |\/t|Copies the subdirectory structure \(that is, the tree\) only, not files. To copy empty directories, you must include the **\/e** command\-line option.|
 |\/k|Copies files and retains the read\-only attribute on *Destination* files if present on the *Source* files. By default, **xcopy** removes the read\-only attribute.|
 |\/r|Copies read\-only files.|
 |\/h|Copies files with hidden and system file attributes. By default, **xcopy** does not copy hidden or system files|
-|\/a|Copies only *Source* files that have their archive file attributes set. **\/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Additional references](Xcopy.md#BKMK_addref).|
-|\/m|Copies *Source* files that have their archive file attributes set. Unlike **\/a**, **\/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Additional references](Xcopy.md#BKMK_addref).|
-|\/n|Creates copies by using the NTFS short file or directory names. **\/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention \(that is, 8.3 characters\) is required on the *Destination* file system. The *Destination* file system can be FAT or NTFS.|
+|\/a|Copies only *Source* files that have their archive file attributes set. **\/a** does not modify the archive file attribute of the source file. for information about how to set the archive file attribute by using **attrib**, see [additional references](xcopy.md#BKMK_addref).|
+|\/m|Copies *Source* files that have their archive file attributes set. Unlike **\/a**, **\/m** turns off archive file attributes in the files that are specified in the source. for information about how to set the archive file attribute by using **attrib**, see [additional references](xcopy.md#BKMK_addref).|
+|\/n|creates copies by using the NTFS short file or directory names. **\/n** is required when you copy files or directories from an NTFS volume to a Fat volume or when the Fat file system naming convention \(that is, 8.3 characters\) is required on the *Destination* file system. The *Destination* file system can be Fat or NTFS.|
 |\/o|Copies file ownership and discretionary access control list \(DACL\) information.|
 |\/x|Copies file audit settings and system access control list \(SACL\) information \(implies **\/o**\).|
-|\/exclude:FileName1\[\+\[FileName2\]\[\+\[FileName3\]\(…\)\]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file.<br /><br />When any of the strings match any part of the absolute path of the file to be copied, that file will be excuded from being copied. For example, specifying the string, \\obj\\ or .obj will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
+|\/exclude:FileName1\[\+\[FileName2\]\[\+\[FileName3\]\(…\)\]|Specifies a list of files. at least one file must be specified. Each file will contain search strings with each string on a separate line in the file.<br /><br />When any of the strings match any part of the absolute path of the file to be copied, that file will be excuded from being copied. for example, specifying the string, \\obj\\ or .obj will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
 |\/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
-|\/\-y|Prompts to confirm that you want to overwrite an existing destination file.|
+|\/\-y|prompts to confirm that you want to overwrite an existing destination file.|
 |\/z|Copies over a network in restartable mode.|
 |\/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
 |\/j|Copies files without buffering. Recommended for very large files. This parameter was added introduced in  Windows Server® 2008 R2 .|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   Using **\/v**
 
 -   Using **\/z**
 
-    If you lose your connection during the copy phase \(for example, if the server going offline severs the connection\), it resumes after you reestablish the connection. **\/z** also displays the percentage of the copy operation completed for each file.
+    if you lose your connection during the copy phase \(for example, if the server going offline severs the connection\), it resumes after you reestablish the connection. **\/z** also displays the percentage of the copy operation completed for each file.
 
--   Using **\/y** in the COPYCMD environment variable.
+-   Using **\/y** in the copycmd environment variable.
 
-    You can use **\/y** in the COPYCMD environment variable. You can override this command by using **\/\-y** on the command line. By default, you are prompted to overwrite, unless you run **xcopy** from within a batch script.
+    You can use **\/y** in the copycmd environment variable. You can override this command by using **\/\-y** on the command line. By default, you are prompted to overwrite, unless you run **xcopy** from within a batch script.
 
--   Copying encrypted files
+-   copying encrypted files
 
-    Copying encrypted files to a volume that does not support EFS results in an error. Decrypt the files first or copy the files to a volume that does support EFS.
+    copying encrypted files to a volume that does not support EFS results in an error. Decrypt the files first or copy the files to a volume that does support EFS.
 
--   Appending files
+-   appending files
 
     To append files, specify a single file for destination, but multiple files for source \(that is, by using wildcards or file1\+file2\+file3 format\).
 
 -   Default value for *Destination*
 
-    If you omit *Destination*, the **xcopy** command copies the files to the current directory.
+    if you omit *Destination*, the **xcopy** command copies the files to the current directory.
 
 -   Specifying whether *Destination* is a file or directory
 
-    If *Destination* does not contain an existing directory and does not end with a backslash \(\\\), the following message appears:
+    if *Destination* does not contain an existing directory and does not end with a backslash \(\\\), the following message appears:
 
     ```
     Does <Destination> specify a file name or directory name on the target(F = file, D = directory)?
@@ -93,17 +93,17 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
 -   Using the **xcopy** command to set archive attribute for *Destination* files
 
-    The **xcopy** command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Additional references](Xcopy.md#BKMK_addref).
+    The **xcopy** command creates files with the archive attribute set, whether or not this attribute was set in the source file. for more information about file attributes and **attrib**, see [additional references](xcopy.md#BKMK_addref).
 
--   Comparing **xcopy** and **diskcopy**
+-   comparing **xcopy** and **diskcopy**
 
-    If you have a disk that contains files in subdirectories and you want to copy it to a disk that has a different format, use the **xcopy** command instead of **diskcopy**. Because the **diskcopy** command copies disks track by track, your source and destination disks must have the same format. The **xcopy** command does not have this requirement. Use **xcopy** unless you need a complete disk image copy.
+    if you have a disk that contains files in subdirectories and you want to copy it to a disk that has a different format, use the **xcopy** command instead of **diskcopy**. Because the **diskcopy** command copies disks track by track, your source and destination disks must have the same format. The **xcopy** command does not have this requirement. Use **xcopy** unless you need a complete disk image copy.
 
--   Exit codes for **xcopy**
+-   exit codes for **xcopy**
 
-    To process exit codes returned by **xcopy**, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Additional references](Xcopy.md#BKMK_addref). The following table lists each exit code and a description.
+    To process exit codes returned by **xcopy**, use the **ErrorLevel** parameter on the **if** command line in a batch program. for an example of a batch program that processes exit codes using **if**, see [additional references](xcopy.md#BKMK_addref). The following table lists each exit code and a description.
 
-    |Exit code|Description|
+    |exit code|Description|
     |-------------|---------------|
     |0|Files were copied without error.|
     |1|No files were found to copy.|
@@ -144,22 +144,22 @@ xcopy \rawdata \reports /d:12-29-1993 /l > xcopy.out
 
 The file xcopy.out lists every file that is to be copied.
 
-To copy the \\Customer directory and all subdirectories to the directory \\\\Public\\Address on network drive H:, retain the read\-only attribute, and be prompted when a new file is created on H:, type:
+To copy the \\Customer directory and all subdirectories to the directory \\\\Public\\address on network drive H:, retain the read\-only attribute, and be prompted when a new file is created on H:, type:
 
 ```
 xcopy \customer h:\public\address /s /e /k /p
 ```
 
-To issue the previous command, ensure that **xcopy** creates the \\Address directory if it does not exist, and suppress the message that appears when you create a new directory, add the **\/i** command\-line option as follows:
+To issue the previous command, ensure that **xcopy** creates the \\address directory if it does not exist, and suppress the message that appears when you create a new directory, add the **\/i** command\-line option as follows:
 
 ```
 xcopy \customer h:\public\address /s /e /k /p /i
 ```
 
-You can create a batch program to perform **xcopy** operations and use the batch **if** command to process the exit code if an error occurs. For example, the following batch program uses replaceable parameters for the **xcopy** source and destination parameters:
+You can create a batch program to perform **xcopy** operations and use the batch **if** command to process the exit code if an error occurs. for example, the following batch program uses replaceable parameters for the **xcopy** source and destination parameters:
 
 ```
-@echo offrem COPYIT.BAT transfers all files in all subdirectories ofrem the source drive or directory (%1) to the destinationrem drive or directory (%2)xcopy %1 %2 /s /eif errorlevel 4 goto lowmemoryif errorlevel 2 goto abortif errorlevel 0 goto exit:lowmemoryecho Insufficient memory to copy files orecho invalid drive or command-line syntax.goto exit:abortecho You pressed CTRL+C to end the copy operation.goto exit:exit 
+@echo offrem copyIT.Bat transfers all files in all subdirectories ofrem the source drive or directory (%1) to the destinationrem drive or directory (%2)xcopy %1 %2 /s /eif errorlevel 4 goto lowmemoryif errorlevel 2 goto abortif errorlevel 0 goto exit:lowmemoryecho Insufficient memory to copy files orecho invalid drive or command-line syntax.goto exit:abortecho You pressed CTRL+C to end the copy operation.goto exit:exit 
 ```
 
 To use this batch program to copy all files in the C:\\Prgmcode directory and its subdirectories to drive B, type:
@@ -168,22 +168,22 @@ To use this batch program to copy all files in the C:\\Prgmcode directory and it
 copyit c:\prgmcode b:
 ```
 
-The command interpreter substitutes **C:\\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **\/e** and **\/s** command\-line options. If **xcopy**encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **IF ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
+The command interpreter substitutes **C:\\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **\/e** and **\/s** command\-line options. if **xcopy**encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **if ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
 
-#### <a name="BKMK_addref"></a>Additional references
+#### <a name="BKMK_addref"></a>additional references
 
--   [Copy](Copy.md)
+-   [copy](copy.md)
 
--   [Move](Move.md)
+-   [move](move.md)
 
--   [Dir](Dir.md)
+-   [dir](dir.md)
 
--   [Attrib](Attrib.md)
+-   [attrib](attrib.md)
 
--   [Diskcopy](Diskcopy.md)
+-   [diskcopy](diskcopy.md)
 
--   [If](If.md)
+-   [if](if.md)
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](commandline-syntax-key.md)
 
 

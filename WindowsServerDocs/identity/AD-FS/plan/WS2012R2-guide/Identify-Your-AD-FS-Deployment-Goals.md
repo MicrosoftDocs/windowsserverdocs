@@ -86,6 +86,6 @@ The following are new AD FS capabilities in Windows Server® 2012 R2 that enable
 -   User authentication choice when more than one authentication provider is available.  
   
 ## See Also  
-[AD FS Design Guide in Windows Server 2012 R2](../AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
+[AD FS Design Guide in Windows Server 2012 R2](../ad-fs-design-guide-windows-server-2012-r2.md)  
   
 

@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin listfiles
+title: bitsadmin listfiles
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ad0d1eaa-3bd8-45e5-8f72-4da7366f0d59
 ---
-# Bitsadmin listfiles
-Lists the files in the specified job.
+# bitsadmin listfiles
+lists the files in the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /ListFiles <Job>
+bitsadmin /listFiles <Job>
 ```
 
 ## Parameters
@@ -30,7 +30,7 @@ The following example retrieves the list of files for the job named *myDownloadJ
 C:\>bitsadmin /GetNotifyFlags myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 
