@@ -13,13 +13,13 @@ ms.assetid: 3f232bc3-d012-44b0-8d25-e68c9e4a80ef
 author: billmath
 ---
 # Appendix A: Reviewing AD FS Requirements
-So that the organizational partners in your [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] deployment can collaborate successfully, you must first make sure that your corporate network infrastructure is configured to support [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] requirements for accounts, name resolution, and certificates. [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] has the following types of requirements:  
+So that the organizational partners in your Active Directory Federation Services \(AD FS\) deployment can collaborate successfully, you must first make sure that your corporate network infrastructure is configured to support AD FS requirements for accounts, name resolution, and certificates. AD FS has the following types of requirements:  
   
 > [!TIP]  
 > You can find additional AD FS resource links at the [AD FS Content Map](http://social.technet.microsoft.com/wiki/contents/articles/2735.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS Community and is monitored on a regular basis by the AD FS Product Team.  
   
 ## Hardware requirements  
-The following minimum and recommended hardware requirements apply to the [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] and [!INCLUDE[adfs2_fsp](includes/adfs2_fsp_md.md)] computers.  
+The following minimum and recommended hardware requirements apply to the federation server and federation server proxy computers.  
   
 |Hardware requirement|Minimum requirement|Recommended requirement|  
 |------------------------|-----------------------|---------------------------|  
@@ -28,7 +28,7 @@ The following minimum and recommended hardware requirements apply to the [!INCLU
 |Disk space|50 MB|100 MB|  
   
 ## Software requirements  
-AD FS relies on server functionality that is built into the [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)] operating system.  
+AD FS relies on server functionality that is built into the Windows Server® 2012 operating system.  
   
 > [!NOTE]  
 > The Federation Service and Federation Service Proxy role services cannot coexist on the same computer.  
@@ -63,7 +63,7 @@ For more information about the certificates that federation server proxies use, 
 ## Browser requirements  
 Although any current Web browser with JavaScript capability can be made to work as an AD FS client, the Web pages that are provided by default have been tested only against Internet Explorer versions 7.0, 8.0 and 9.0, Mozilla Firefox 3.0, and Safari 3.1 on Windows. JavaScript must be enabled, and cookies must be enabled for browser\-based sign\-in and sign\-out to work correctly.  
   
-The [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] product team at Microsoft successfully tested the browser and operating system configurations in the following table.  
+The AD FS product team at Microsoft successfully tested the browser and operating system configurations in the following table.  
   
 |Browser|Windows 7|Windows Vista|  
 |-----------|-------------|-----------------|  
@@ -82,28 +82,28 @@ AD FS creates session\-based and persistent cookies that must be stored on clien
 Support for TLS\/SSL is required for security reasons.  
   
 ## Network requirements  
-Configuring the following network services appropriately is critical for successful deployment of [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] in your organization.  
+Configuring the following network services appropriately is critical for successful deployment of AD FS in your organization.  
   
 ### TCP\/IP network connectivity  
-For [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] to function, TCP\/IP network connectivity must exist between the client; a domain controller; and the computers that host the Federation Service, the Federation Service Proxy \(when it is used\), and the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Web Agent.  
+For AD FS to function, TCP\/IP network connectivity must exist between the client; a domain controller; and the computers that host the Federation Service, the Federation Service Proxy \(when it is used\), and the AD FS Web Agent.  
   
 ### DNS  
-The primary network service that is critical to the operation of [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], other than Active Directory Domain Services \(AD DS\), is Domain Name System \(DNS\). When DNS is deployed, users can use friendly computer names that are easy to remember to connect to computers and other resources on IP networks.  
+The primary network service that is critical to the operation of AD FS, other than Active Directory Domain Services \(AD DS\), is Domain Name System \(DNS\). When DNS is deployed, users can use friendly computer names that are easy to remember to connect to computers and other resources on IP networks.  
   
-[!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] uses DNS for name resolution instead of the Windows Internet Name Service \(WINS\) NetBIOS name resolution that was used in Windows NT 4.0–based networks. It is still possible to use WINS for applications that require it. However, AD DS and [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] require DNS name resolution.  
+ Windows Server 2008  uses DNS for name resolution instead of the Windows Internet Name Service \(WINS\) NetBIOS name resolution that was used in Windows NT 4.0–based networks. It is still possible to use WINS for applications that require it. However, AD DS and AD FS require DNS name resolution.  
   
-The process of configuring DNS to support [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] varies, depending on whether:  
+The process of configuring DNS to support AD FS varies, depending on whether:  
   
--   Your organization already has an existing DNS infrastructure. In most scenarios, DNS is already configured throughout your network so that Web browser clients in your corporate network have access to the Internet. Because Internet access and name resolution are requirements of [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], this infrastructure is assumed to be in place for your [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] deployment.  
+-   Your organization already has an existing DNS infrastructure. In most scenarios, DNS is already configured throughout your network so that Web browser clients in your corporate network have access to the Internet. Because Internet access and name resolution are requirements of AD FS, this infrastructure is assumed to be in place for your AD FS deployment.  
   
 -   You intend to add a federated server to your corporate network. For the purpose of authenticating users in the corporate network, internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal server that is running the Federation Service. For more information, see [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md).  
   
--   You intend to add a federated server proxy to your perimeter network. When you want to authenticate user accounts that are located in the corporate network of your identity partner organization, the internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal [!INCLUDE[adfs2_fsp](includes/adfs2_fsp_md.md)]. For information about how to configure DNS to accommodate the addition of [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] proxies, see [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
+-   You intend to add a federated server proxy to your perimeter network. When you want to authenticate user accounts that are located in the corporate network of your identity partner organization, the internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal federation server proxy. For information about how to configure DNS to accommodate the addition of federation server proxies, see [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   
--   You are setting up DNS for a test lab environment. If you plan to use [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] in a test lab environment where no single root DNS server is authoritative, it is probable that you will have to set up DNS forwarders so that queries to names between two or more forests will be forwarded appropriately. For general information about how to set up an [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] test lab environment, see [AD FS Step\-by\-Step and How To Guides](http://go.microsoft.com/fwlink/?LinkId=180357) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=180357\).  
+-   You are setting up DNS for a test lab environment. If you plan to use AD FS in a test lab environment where no single root DNS server is authoritative, it is probable that you will have to set up DNS forwarders so that queries to names between two or more forests will be forwarded appropriately. For general information about how to set up an AD FS test lab environment, see [AD FS Step\-by\-Step and How To Guides](http://go.microsoft.com/fwlink/?LinkId=180357) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=180357\).  
   
 ## Attribute store requirements  
-[!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md) in the AD FS Design Guide.  
+AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md) in the AD FS Design Guide.  
   
 > [!NOTE]  
 > AD FS automatically creates an Active Directory attribute store, by default.  
@@ -111,15 +111,15 @@ The process of configuring DNS to support [!INCLUDE[nextref_adfs2](includes/next
 Attribute store requirements depend on whether your organization is acting as the account partner \(hosting the federated users\) or the resource partner \(hosting the federated application\).  
   
 ### AD DS  
-For [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] to operate successfully, domain controllers in either the account partner organization or the resource partner organization must be running Windows Server 2003 SP1, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].  
+For AD FS to operate successfully, domain controllers in either the account partner organization or the resource partner organization must be running Windows Server 2003 SP1, Windows Server 2003 R2,  Windows Server 2008 , or  Windows Server 2012 .  
   
 When AD FS is installed and configured on a domain\-joined computer, the Active Directory user account store for that domain is made available as a selectable attribute store.  
   
 > [!IMPORTANT]  
-> Because [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] requires the installation of Internet Information Services \(IIS\), we recommend that you not install the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] software on a domain controller in a production environment for security purposes. However, this configuration is supported by Microsoft Customer Service Support.  
+> Because AD FS requires the installation of Internet Information Services \(IIS\), we recommend that you not install the AD FS software on a domain controller in a production environment for security purposes. However, this configuration is supported by Microsoft Customer Service Support.  
   
 #### Schema requirements  
-[!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] does not require schema changes or functional\-level modifications to AD DS.  
+AD FS does not require schema changes or functional\-level modifications to AD DS.  
   
 #### Functional\-level requirements  
 Most AD FS features do not require AD DS functional\-level modifications to operate successfully. However, Windows Server 2008 domain functional level or higher is required for client certificate authentication to operate successfully if the certificate is explicitly mapped to a user's account in AD DS.  
@@ -131,7 +131,7 @@ If you are creating a federation server farm, you must first create a dedicated 
 When you work with other Lightweight Directory Access Protocol \(LDAP\)\-based attribute stores, you must connect to an LDAP server that supports Windows Integrated authentication. The LDAP connection string must also be written in the format of an LDAP URL, as described in RFC 2255.  
   
 ### SQL Server  
-For [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] to operate successfully, computers that host the Structured Query Language \(SQL\) Server attribute store must be running either Microsoft SQL Server 2005 or SQL Server 2008. When you work with SQL\-based attribute stores, you also must configure a connection string.  
+For AD FS to operate successfully, computers that host the Structured Query Language \(SQL\) Server attribute store must be running either Microsoft SQL Server 2005 or SQL Server 2008. When you work with SQL\-based attribute stores, you also must configure a connection string.  
   
 ### Custom attribute stores  
 You can develop custom attribute stores to enable advanced scenarios. The policy language that is built into AD FS can reference custom attribute stores so that any of the following scenarios can be enhanced:  
@@ -152,19 +152,19 @@ For more information about developing and using custom attribute stores, see [At
 Federation servers can communicate with and protect federation applications, such as claims\-aware applications.  
   
 ## Authentication requirements  
-[!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] integrates naturally with existing Windows authentication, for example, Kerberos authentication, NTLM, smart cards, and X.509 v3 client\-side certificates. Federation servers use standard Kerberos authentication to authenticate a user against a domain. Clients can authenticate by using forms\-based authentication, smart card authentication, and Windows Integrated authentication, depending on how you configure authentication.  
+AD FS integrates naturally with existing Windows authentication, for example, Kerberos authentication, NTLM, smart cards, and X.509 v3 client\-side certificates. Federation servers use standard Kerberos authentication to authenticate a user against a domain. Clients can authenticate by using forms\-based authentication, smart card authentication, and Windows Integrated authentication, depending on how you configure authentication.  
   
 The AD FS federation server proxy role makes possible a scenario in which the user authenticates externally using SSL client authentication. You can also configure the federation server role to require SSL client authentication, although typically the most seamless user experience is achieved by configuring the account federation server for Windows Integrated authentication. In this situation, AD FS has no control over what credentials the user employs for Windows desktop logon.  
   
 ### Smart card logon  
-Although [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] can enforce the type of credentials that it uses for authentication \(passwords, SSL client authentication, or Windows Integrated authentication\), it does not directly enforce authentication with smart cards. Therefore, [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] does not provide a client\-side user interface \(UI\) to obtain smart\-card personal identification number \(PIN\) credentials. This is because Windows\-based clients intentionally do not provide user credential details to [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]s or Web servers.  
+Although AD FS can enforce the type of credentials that it uses for authentication \(passwords, SSL client authentication, or Windows Integrated authentication\), it does not directly enforce authentication with smart cards. Therefore, AD FS does not provide a client\-side user interface \(UI\) to obtain smart\-card personal identification number \(PIN\) credentials. This is because Windows\-based clients intentionally do not provide user credential details to federation servers or Web servers.  
   
 ### Smart card authentication  
-Smart card authentication uses the Kerberos protocol to authenticate to an account [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]. [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] cannot be extended to add new authentication methods. The certificate in the smart card is not required to chain up to a trusted root on the client computer. Use of a smart\-card\-based certificate with [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] requires the following conditions:  
+Smart card authentication uses the Kerberos protocol to authenticate to an account federation server. AD FS cannot be extended to add new authentication methods. The certificate in the smart card is not required to chain up to a trusted root on the client computer. Use of a smart\-card\-based certificate with AD FS requires the following conditions:  
   
 -   The reader and cryptographic service provider \(CSP\) for the smart card must work on the computer where the browser is located.  
   
--   The smart card certificate must chain up to a trusted root on the account [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] and the account [!INCLUDE[adfs2_fsp](includes/adfs2_fsp_md.md)].  
+-   The smart card certificate must chain up to a trusted root on the account federation server and the account federation server proxy.  
   
 -   The certificate must map to the user account in AD DS by either of the following methods:  
   

@@ -12,20 +12,20 @@ ms.topic: article
 ms.assetid: c8785b52-589a-4079-b612-812932851509
 ---
 # The Role of the Claim Rule Language
-The [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] claim rule language acts as the administrative building block for the behavior of incoming and outgoing claims, while the claims engine acts as the processing engine for the logic in the claim rule language that defines the custom rule. For more information about how all rules are processed by the claims engine, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
+The Active Directory Federation Services \(AD FS\) claim rule language acts as the administrative building block for the behavior of incoming and outgoing claims, while the claims engine acts as the processing engine for the logic in the claim rule language that defines the custom rule. For more information about how all rules are processed by the claims engine, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
 
 > [!NOTE]
 > To watch a five\-minute video of Stuart Kwan \(Principal Group Program Manager for Federated Identity\) explaining basic concepts of the claim rule language, click [An Introduction to the Claim Rule Language](http://go.microsoft.com/fwlink/?LinkId=163262) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=163262\) to open the video in a new window.
 
 ## Creating custom claim rules using the claim rule language
-[!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] provides administrators with the option to define custom rules that they can use to determine the behavior of identity claims with the claim rule language. You can use the claim rule language syntax examples in this topic to create a custom rule that enumerates, adds, deletes, and modifies claims to meet the needs of your organization. You can build custom rules by typing in the claim rule language syntax in the **Send Claims Using a Custom Claim** rule template.
+AD FS provides administrators with the option to define custom rules that they can use to determine the behavior of identity claims with the claim rule language. You can use the claim rule language syntax examples in this topic to create a custom rule that enumerates, adds, deletes, and modifies claims to meet the needs of your organization. You can build custom rules by typing in the claim rule language syntax in the **Send Claims Using a Custom Claim** rule template.
 
 Rules are separated from each other with semicolons.
 
 For more information about when to use custom rules, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).
 
 ## Using claim rule templates to learn about the claim rule language syntax
-[!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] also provides a set of predefined claim issuance and claim acceptance rule templates that you can use to implement common claim rules. In the **Edit Claim Rules** dialog box for a given trust, you can create a predefined rule—and view the claim rule language syntax that makes up that rule—by clicking the **View Rule Language** tab for that rule. Using the information in this section and the **View Rule Language** technique can provide insight into how to construct your own custom rules.
+AD FS also provides a set of predefined claim issuance and claim acceptance rule templates that you can use to implement common claim rules. In the **Edit Claim Rules** dialog box for a given trust, you can create a predefined rule—and view the claim rule language syntax that makes up that rule—by clicking the **View Rule Language** tab for that rule. Using the information in this section and the **View Rule Language** technique can provide insight into how to construct your own custom rules.
 
 For more detailed information about claim rules and claim rule templates, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md).
 

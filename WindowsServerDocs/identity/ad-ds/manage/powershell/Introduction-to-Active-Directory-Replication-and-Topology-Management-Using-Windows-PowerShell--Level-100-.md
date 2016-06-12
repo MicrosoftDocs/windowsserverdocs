@@ -18,12 +18,12 @@ Windows PowerShell for Active Directory includes the ability to manage replicati
 > [!NOTE]
 > The Windows PowerShell for Active Directory replication and topology cmdlets are available in the following environments:
 > 
-> -   [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller
-> -   [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] with the Remote Server Administration Tools for AD DS and AD LDS installed.
-> -   [!INCLUDE[win8_client_1](includes/win8_client_1_md.md)] with the Remote Server Administration Tools for AD DS and AD LDS installed.
+> -    Windows Server 2012  domain controller
+> -    Windows Server 2012  with the Remote Server Administration Tools for AD DS and AD LDS installed.
+> -   Windows® 8 with the Remote Server Administration Tools for AD DS and AD LDS installed.
 
 ## Installing the Active Directory Module for Windows PowerShell
-The Active Directory Module for Windows PowerShell is installed by default when the AD DS server role is installed on a server that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. No additional steps are required other than adding the server role. You can also install the Active Directory Module on a server that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] by installing the Remote Server Administration Tools, and you can install the Active Directory Module on a computer running [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)] by downloading and installing the [Remote Server Administrative Tools \(RSAT\)](http://www.microsoft.com/download/details.aspx?id=28972). See [Instructions](http://www.microsoft.com/download/details.aspx?id=28972)for installation steps.
+The Active Directory Module for Windows PowerShell is installed by default when the AD DS server role is installed on a server that runs  Windows Server 2012 . No additional steps are required other than adding the server role. You can also install the Active Directory Module on a server that runs  Windows Server 2012  by installing the Remote Server Administration Tools, and you can install the Active Directory Module on a computer running Windows 8 by downloading and installing the [Remote Server Administrative Tools \(RSAT\)](http://www.microsoft.com/download/details.aspx?id=28972). See [Instructions](http://www.microsoft.com/download/details.aspx?id=28972)for installation steps.
 
 ## Scenarios for testing Windows PowerShell for Active Directory replication and topology management cmdlets
 The following scenarios are designed for administrators to familiarize themselves with the new management cmdlets:
@@ -36,7 +36,7 @@ The following scenarios are designed for administrators to familiarize themselve
 
 ## Lab Requirements
 
--   Two [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controllers: **DC1** and **DC2** that are part of the contoso.com domain and reside in the CORPORATE site within that domain.
+-   Two  Windows Server 2012  domain controllers: **DC1** and **DC2** that are part of the contoso.com domain and reside in the CORPORATE site within that domain.
 
 ## View domain controllers and their sites
 In this step, you will use the Active Directory Module for Windows PowerShell to view the existing domain controllers and the replication topology for the domain.

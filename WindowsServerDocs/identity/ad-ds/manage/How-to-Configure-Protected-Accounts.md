@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: f96a0876-3e9f-4e6b-94ca-9524b47aabf2
 ---
 # How to Configure Protected Accounts
-Through Pass\-the\-hash \(PtH\) attacks, an attacker can authenticate to a remote server or service by using the underlying NTLM hash of a user's password \(or other credential derivatives\). Microsoft has previously [published guidance](http://www.microsoft.com/download/details.aspx?id=36036) to mitigate pass\-the\-hash attacks. [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] includes new features to help mitigate such attacks further. For more information about other security features that help protect against credential theft, see [Credentials Protection and Management](http://technet.microsoft.com/library/dn408190.aspx). This topic explains how to configure the following new features:
+Through Pass\-the\-hash \(PtH\) attacks, an attacker can authenticate to a remote server or service by using the underlying NTLM hash of a user's password \(or other credential derivatives\). Microsoft has previously [published guidance](http://www.microsoft.com/download/details.aspx?id=36036) to mitigate pass\-the\-hash attacks.  Windows Server 2012 R2  includes new features to help mitigate such attacks further. For more information about other security features that help protect against credential theft, see [Credentials Protection and Management](http://technet.microsoft.com/library/dn408190.aspx). This topic explains how to configure the following new features:
 
 -   [Protected Users](How-to-Configure-Protected-Accounts.md#BKMK_AddtoProtectedUsers)
 
@@ -28,9 +28,9 @@ There are additional mitigations built in to Windows 8.1 and Windows Server 2012
 -   [LSA Protection](http://technet.microsoft.com/library/dn408187)
 
 ## <a name="BKMK_AddtoProtectedUsers"></a>Protected Users
-Protected Users is a new global security group to which you can add new or existing users. [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] devices and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] hosts have special behavior with members of this group to provide better protection against credential theft. For a member of the group, a [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] device or a [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] host does not cache credentials that are not supported for Protected Users. Members of this group have no additional protection if they are logged on to a device that runs a version of Windows earlier than [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)].
+Protected Users is a new global security group to which you can add new or existing users. Windows 8.1 devices and  Windows Server 2012 R2  hosts have special behavior with members of this group to provide better protection against credential theft. For a member of the group, a Windows 8.1 device or a  Windows Server 2012 R2  host does not cache credentials that are not supported for Protected Users. Members of this group have no additional protection if they are logged on to a device that runs a version of Windows earlier than Windows 8.1.
 
-Members of the Protected Users group who are signed\-on to [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] devices and [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] hosts can *no longer* use:
+Members of the Protected Users group who are signed\-on to Windows 8.1 devices and  Windows Server 2012 R2  hosts can *no longer* use:
 
 -   Default credential delegation \(CredSSP\) \- plaintext credentials are not cached even when the **Allow delegating default credentials** policy is enabled
 
@@ -42,7 +42,7 @@ Members of the Protected Users group who are signed\-on to [!INCLUDE[winblue_cli
 
 -   Sign\-on offline \- the cached logon verifier is not created
 
-If the domain functional level is [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], members of the group can no longer:
+If the domain functional level is  Windows Server 2012 R2 , members of the group can no longer:
 
 -   Authenticate by using NTLM authentication
 
@@ -52,25 +52,25 @@ If the domain functional level is [!INCLUDE[winblue_server_2](includes/winblue_s
 
 -   Renew user tickets \(TGTs\) beyond the initial 4\-hour lifetime
 
-To add users to the group, you can use [UI tools](http://technet.microsoft.com/library/cc753515.aspx) such as Active Directory Administrative Center \(ADAC\) or Active Directory Users and Computers, or a command\-line tool such as [Dsmod group](http://technet.microsoft.com/library/cc732423.aspx), or the [!INCLUDE[wps_2](includes/wps_2_md.md)][Add\-ADGroupMember](http://technet.microsoft.com/library/ee617210.aspx) cmdlet. Accounts for services and computers *should not* be members of the Protected Users group. Membership for those accounts provides no local protections because the password or certificate is always available on the host.
+To add users to the group, you can use [UI tools](http://technet.microsoft.com/library/cc753515.aspx) such as Active Directory Administrative Center \(ADAC\) or Active Directory Users and Computers, or a command\-line tool such as [Dsmod group](http://technet.microsoft.com/library/cc732423.aspx), or the Windows PowerShell[Add\-ADGroupMember](http://technet.microsoft.com/library/ee617210.aspx) cmdlet. Accounts for services and computers *should not* be members of the Protected Users group. Membership for those accounts provides no local protections because the password or certificate is always available on the host.
 
 > [!WARNING]
 > The authentication restrictions have no workaround, which means that members of highly privileged groups such as the Enterprise Admins group or the Domain Admins group are subject to the same restrictions as other members of the Protected Users group. If all members of such groups are added to the Protected Users group, it is possible for all of those accounts to be locked out. You should never add all highly privileged accounts to the Protected Users group until you have thoroughly tested the potential impact.
 
-Members of the Protected Users group must be able to authenticate by using Kerberos with Advanced Encryption Standards \(AES\). This method requires AES keys for the account in Active Directory. The built\-in Administrator does not have an AES key unless the password was changed on a domain controller that runs [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] or later. Additionally, any account, which has a password that was changed at a domain controller that runs an earlier version of Windows Server, is locked out. Therefore, follow these best practices:
+Members of the Protected Users group must be able to authenticate by using Kerberos with Advanced Encryption Standards \(AES\). This method requires AES keys for the account in Active Directory. The built\-in Administrator does not have an AES key unless the password was changed on a domain controller that runs  Windows Server 2008  or later. Additionally, any account, which has a password that was changed at a domain controller that runs an earlier version of Windows Server, is locked out. Therefore, follow these best practices:
 
--   Do not test in domains unless **all domain controllers run [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] or later**.
+-   Do not test in domains unless **all domain controllers run  Windows Server 2008  or later**.
 
 -   **Change password** for all domain accounts that were created *before* the domain was created. Otherwise, these accounts cannot be authenticated.
 
--   **Change password** for each user before adding the account to the Protected Users group or ensure that the password was changed recently on a domain controller that runs [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] or later.
+-   **Change password** for each user before adding the account to the Protected Users group or ensure that the password was changed recently on a domain controller that runs  Windows Server 2008  or later.
 
 ### <a name="BKMK_Prereq"></a>Requirements for using protected accounts
 Protected accounts have the following deployment requirements:
 
--   To provide client\-side restrictions for Protected Users, hosts must run [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)] or [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]. A user only has to sign\-on with an account that is a member of a Protected Users group. In this case, the Protected Users group can be created by [transferring the primary domain controller \(PDC\) emulator role](http://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
+-   To provide client\-side restrictions for Protected Users, hosts must run Windows 8.1 or  Windows Server 2012 R2 . A user only has to sign\-on with an account that is a member of a Protected Users group. In this case, the Protected Users group can be created by [transferring the primary domain controller \(PDC\) emulator role](http://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs  Windows Server 2012 R2 . After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
--   To provide domain controller\-side restrictions for Protected Users, that is to restrict usage of NTLM authentication, and other restrictions, the domain functional level must be [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]. For more information about functional levels, see [Understanding Active Directory Domain Services \(AD DS\) Functional Levels](http://technet.microsoft.com/library/understanding-active-directory-functional-levels(v=WS.10).aspx).
+-   To provide domain controller\-side restrictions for Protected Users, that is to restrict usage of NTLM authentication, and other restrictions, the domain functional level must be  Windows Server 2012 R2 . For more information about functional levels, see [Understanding Active Directory Domain Services \(AD DS\) Functional Levels](http://technet.microsoft.com/library/understanding-active-directory-functional-levels(v=WS.10).aspx).
 
 ### <a name="BKMK_TrubleshootingEvents"></a>Troubleshoot events related to Protected Users
 This section covers new logs to help troubleshoot events that are related to Protected Users and how Protected Users can impact changes to troubleshoot either ticket\-granting tickets \(TGT\) expiration or delegation issues.
@@ -104,7 +104,7 @@ Accounts for services and computers cannot be members of **Protected Users**. Th
 
 -   Reject NTLM authentication: Only configurable via [NTLM block policies](http://technet.microsoft.com/library/jj865674(v=ws.10).aspx)
 
--   Reject Data Encryption Standard \(DES\) in Kerberos pre\-authentication: [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] domain controllers do not accept DES for computer accounts unless they are configured for DES only because every version of Windows released with Kerberos also supports RC4.
+-   Reject Data Encryption Standard \(DES\) in Kerberos pre\-authentication:  Windows Server 2012 R2  domain controllers do not accept DES for computer accounts unless they are configured for DES only because every version of Windows released with Kerberos also supports RC4.
 
 -   Reject RC4 in Kerberos pre\-authentication: not configurable.
 
@@ -120,7 +120,7 @@ Accounts for services and computers cannot be members of **Protected Users**. Th
 ## <a name="BKMK_CreateAuthNPolicies"></a>Authentication policies
 Authentication Policies is a new container in AD DS that contains authentication policy objects. Authentication policies can specify settings that help mitigate exposure to credential theft, such as restricting TGT lifetime for accounts or adding other claims\-related conditions.
 
-In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], Dynamic Access Control introduced an Active Directory forest\-scope object class called Central Access Policy to provide an easy way to configure file servers across an organization. In [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], a new object class called Authentication Policy \(objectClass msDS\-AuthNPolicies\) can be used to apply authentication configuration to account classes in [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] domains. Active Directory account classes are:
+In  Windows Server 2012 , Dynamic Access Control introduced an Active Directory forest\-scope object class called Central Access Policy to provide an easy way to configure file servers across an organization. In  Windows Server 2012 R2 , a new object class called Authentication Policy \(objectClass msDS\-AuthNPolicies\) can be used to apply authentication configuration to account classes in  Windows Server 2012 R2  domains. Active Directory account classes are:
 
 -   User
 
@@ -166,16 +166,16 @@ You can restrict service ticket requests through a ticket\-granting service \(TG
 
 |Policy|Requirements|
 |----------|----------------|
-|Provide custom TGT lifetimes|[!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] domain functional level account domains|
-|Restrict user sign\-on|-   [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] domain functional level account domains with Dynamic Access Control support<br />-   [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)], [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] or [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] devices with Dynamic Access Control support|
-|Restrict service ticket issuance that is based on user account and security groups|[!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] domain functional level resource domains|
-|Restrict service ticket issuance based on user claims or device account, security groups, or claims|[!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] domain functional level resource domains with Dynamic Access Control support|
+|Provide custom TGT lifetimes| Windows Server 2012 R2  domain functional level account domains|
+|Restrict user sign\-on|-    Windows Server 2012 R2  domain functional level account domains with Dynamic Access Control support<br />-   Windows 8, Windows 8.1,  Windows Server 2012  or  Windows Server 2012 R2  devices with Dynamic Access Control support|
+|Restrict service ticket issuance that is based on user account and security groups| Windows Server 2012 R2  domain functional level resource domains|
+|Restrict service ticket issuance based on user claims or device account, security groups, or claims| Windows Server 2012 R2  domain functional level resource domains with Dynamic Access Control support|
 
 ### Restrict a user account to specific devices and hosts
 A high\-value account with administrative privilege should be a member of the **Protected Users** group. By default, no accounts are members of the **Protected Users** group. Before you add accounts to the group, configure domain controller support and create an audit policy to ensure that there are no blocking issues.
 
 #### Configure domain controller support
-The user’s account domain must be at [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] domain functional level \(DFL\). Ensure all the domain controllers are [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], and then use Active Directory Domains and Trusts to [raise the DFL](http://technet.microsoft.com/library/cc753104.aspx) to [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)].
+The user’s account domain must be at  Windows Server 2012 R2  domain functional level \(DFL\). Ensure all the domain controllers are  Windows Server 2012 R2 , and then use Active Directory Domains and Trusts to [raise the DFL](http://technet.microsoft.com/library/cc753104.aspx) to  Windows Server 2012 R2 .
 
 **To configure support for Dynamic Access Control**
 
@@ -186,12 +186,12 @@ The user’s account domain must be at [!INCLUDE[winblue_server_2](includes/winb
 2.  Under **Options**, in the drop\-down list box, select **Always provide claims**.
 
     > [!NOTE]
-    > **Supported** can also be configured, but because the domain is at [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] DFL, having the DCs always provide claims will allow user claims\-based access checks to occur when using non\-claims aware devices and hosts to connect to claims\-aware services.
+    > **Supported** can also be configured, but because the domain is at  Windows Server 2012 R2  DFL, having the DCs always provide claims will allow user claims\-based access checks to occur when using non\-claims aware devices and hosts to connect to claims\-aware services.
 
     ![](media/ADDS_ProtectAcct_AlwaysProvideClaims.png)
 
     > [!WARNING]
-    > Configuring **Fail unarmored authentication requests** will result in authentication failures from any operating system which does not support Kerberos armoring, such as [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] and previous operating systems, or operating systems beginning with [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], which have not been explicitly configured to support it.
+    > Configuring **Fail unarmored authentication requests** will result in authentication failures from any operating system which does not support Kerberos armoring, such as  Windows 7  and previous operating systems, or operating systems beginning with Windows 8, which have not been explicitly configured to support it.
 
 #### Create a user account audit for authentication policy with ADAC
 
@@ -200,7 +200,7 @@ The user’s account domain must be at [!INCLUDE[winblue_server_2](includes/winb
     ![](media/ADDS_ProtectAcct_OpenADAC.gif)
 
     > [!NOTE]
-    > The selected **Authentication** node is visible for domains which are at [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] DFL. If the node does not appear, then try again by using a domain administrator account from a domain that is at [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] DFL.
+    > The selected **Authentication** node is visible for domains which are at  Windows Server 2012 R2  DFL. If the node does not appear, then try again by using a domain administrator account from a domain that is at  Windows Server 2012 R2  DFL.
 
 2.  Click **Authentication Policies**, and then click **New** to create a new policy.
 
@@ -407,7 +407,7 @@ Authentication policies can be applied to all members of an authentication polic
 > [!NOTE]
 > An authentication policy can be applied to members of an authentication policy silo, or it can be applied independently of silos to restrict specific account scope. For example, to protect a single account or a small set of accounts, a policy can be set on those accounts without adding the accounts to a silo.
 
-You can create an authentication policy silo by using Active Directory Administrative Center or [!INCLUDE[wps_2](includes/wps_2_md.md)]. By default, an authentication policy silo only audits silo policies, which is equivalent to specifying the **WhatIf** parameter in [!INCLUDE[wps_2](includes/wps_2_md.md)] cmdlets. In this case, policy silo restrictions do not apply, but audits are generated to indicate whether failures occur if the restrictions are applied.
+You can create an authentication policy silo by using Active Directory Administrative Center or Windows PowerShell. By default, an authentication policy silo only audits silo policies, which is equivalent to specifying the **WhatIf** parameter in Windows PowerShell cmdlets. In this case, policy silo restrictions do not apply, but audits are generated to indicate whether failures occur if the restrictions are applied.
 
 #### To create an authentication policy silo by using Active Directory Administrative Center
 

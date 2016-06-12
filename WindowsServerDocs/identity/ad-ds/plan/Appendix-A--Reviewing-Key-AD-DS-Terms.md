@@ -12,7 +12,7 @@ ms.assetid: dfee30ba-0b6b-4f7b-9c6d-ba016afb47b1
 author: Femila
 ---
 # Appendix A: Reviewing Key AD DS Terms
-The following terms are relevant to the deployment process for [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] Active Directory Domain Services \(AD DS\).  
+The following terms are relevant to the deployment process for  Windows Server 2008  Active Directory Domain Services \(AD DS\).  
   
 ## Active Directory domain  
 An administrative unit in a computer network that, for management convenience, groups several capabilities, including the following:  
@@ -46,7 +46,7 @@ A restructuring process that involves eliminating AD DS domains by merging thei
 The process of upgrading the directory service of a domain to a later version of the directory service. This includes upgrading the operating system on all domain controllers and raising the AD DS functional level where applicable.  
   
 ## In\-place domain upgrade  
-The process of upgrading the operating systems of all domain controllers in a given domain, for example, upgrading Windows Server 2003 to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and raising the functional level of the domain, if applicable, while leaving domain objects, such as users and groups, in place.  
+The process of upgrading the operating systems of all domain controllers in a given domain, for example, upgrading Windows Server 2003 to  Windows Server 2008 , and raising the functional level of the domain, if applicable, while leaving domain objects, such as users and groups, in place.  
   
 ## Forest root domain  
 The first domain that is created in the Active Directory forest. This domain is automatically designated as the forest root domain. It provides the foundation for the Active Directory forest infrastructure.  

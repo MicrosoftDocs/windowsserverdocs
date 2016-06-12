@@ -14,7 +14,7 @@ ms.assetid: 4fff7ac7-b90f-41d0-8c87-9ffe08dc6c01
 author: Femila
 ---
 # Install Active Directory Domain Services (Level 100)
-This topic explains how to install AD DS in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] by using any of the following methods:  
+This topic explains how to install AD DS in  Windows Server 2012  by using any of the following methods:  
   
 -   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds)  
   
@@ -34,17 +34,17 @@ The following credentials are required to run Adprep.exe and install AD DS.
 -   To install an additional domain controller in an existing domain, you must be a member of the Domain Admins group.  
   
     > [!NOTE]  
-    > If you do not run adprep.exe command separately and you are installing the first domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] in an existing domain or forest, you will be prompted to supply credentials to run Adprep commands. The credential requirements are as follows:  
+    > If you do not run adprep.exe command separately and you are installing the first domain controller that runs  Windows Server 2012  in an existing domain or forest, you will be prompted to supply credentials to run Adprep commands. The credential requirements are as follows:  
     >   
-    > -   To introduce the first [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller in the forest, you need to supply credentials for a member of Enterprise Admins group, the Schema Admins group, and the Domain Admins group in the domain that hosts the schema master.  
-    > -   To introduce the first [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller in a domain, you need to supply credentials for a member of the Domain Admins group.  
+    > -   To introduce the first  Windows Server 2012  domain controller in the forest, you need to supply credentials for a member of Enterprise Admins group, the Schema Admins group, and the Domain Admins group in the domain that hosts the schema master.  
+    > -   To introduce the first  Windows Server 2012  domain controller in a domain, you need to supply credentials for a member of the Domain Admins group.  
     > -   To introduce the first read\-only domain controller \(RODC\) in the forest, you need to supply credentials for a member of the Enterprise Admins group.  
     >   
     >     > [!NOTE]  
-    >     > If you have already run adprep \/rodcprep in Windows Server 2008 or Windows Server 2008 R2, you do not need to run it again for [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].  
+    >     > If you have already run adprep \/rodcprep in Windows Server 2008 or Windows Server 2008 R2, you do not need to run it again for  Windows Server 2012 .  
   
 ## <a name="BKMK_PS"></a>Installing AD DS by Using Windows PowerShell  
-Beginning with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], you can install AD DS using Windows PowerShell. Dcpromo.exe is deprecated beginning with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], but you can still run dcpromo.exe by using an answer file \(dcpromo \/unattend:<answerfile> or dcpromo \/answer:<answerfile>\). The ability to continue running dcpromo.exe with an answer file provides organizations that have resources invested in existing automation time to convert the automation from dcpromo.exe to Windows PowerShell. For more information about running dcpromo.exe with an answer file, see [http:\/\/support.microsoft.com\/kb\/947034](http://support.microsoft.com/kb/947034).  
+Beginning with  Windows Server 2012 , you can install AD DS using Windows PowerShell. Dcpromo.exe is deprecated beginning with  Windows Server 2012 , but you can still run dcpromo.exe by using an answer file \(dcpromo \/unattend:<answerfile> or dcpromo \/answer:<answerfile>\). The ability to continue running dcpromo.exe with an answer file provides organizations that have resources invested in existing automation time to convert the automation from dcpromo.exe to Windows PowerShell. For more information about running dcpromo.exe with an answer file, see [http:\/\/support.microsoft.com\/kb\/947034](http://support.microsoft.com/kb/947034).  
   
 For more information about removing AD DS using Windows PowerShell, see [Remove AD DS using Windows PowerShell](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c#BKMK_RemovePS).  
   
@@ -124,7 +124,7 @@ Similarly, because **–installdns** has a default value of $False if you instal
   
 |Argument|Description|  
 |------------|---------------|  
-|**ADPrepCredential <PS Credential>** **Note:** Required if you are installing the first [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller in a domain or forest and the credentials of the current user are insufficient to perform the operation.|Specifies the account with Enterprise Admins and Schema Admins group membership that can prepare the forest, according to the rules of [Get\-Credential](http://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.<br /><br />If no value is specified, the value of the **–credential** argument is used.|  
+|**ADPrepCredential <PS Credential>** **Note:** Required if you are installing the first  Windows Server 2012  domain controller in a domain or forest and the credentials of the current user are insufficient to perform the operation.|Specifies the account with Enterprise Admins and Schema Admins group membership that can prepare the forest, according to the rules of [Get\-Credential](http://technet.microsoft.com/library/dd315327.aspx) and a PSCredential object.<br /><br />If no value is specified, the value of the **–credential** argument is used.|  
 |AllowDomainControllerReinstall|Specifies whether to continue installing this writable domain controller, despite the fact that another writable domain controller account with the same name is detected.<br /><br />Use **$True** only if you are sure that the account is not currently used by another writable domain controller.<br /><br />The default is **$False**.<br /><br />This argument is not valid for an RODC.|  
 |AllowDomainReinstall|Specifies whether an existing domain is recreated.<br /><br />The default is **$False**.|  
 |AllowPasswordReplicationAccountName <string \[\]>|Specifies the names of user accounts, group accounts, and computer accounts whose passwords can be replicated to this RODC. Use an empty string "" if you want to keep the value empty. By default, only the Allowed RODC Password Replication Group is allowed, and it is originally created empty.<br /><br />Supply values as a string array. For example:<br /><br />Code \-AllowPasswordReplicationAccountName "JSmith","JSmithPC","Branch Users"|  
@@ -150,7 +150,7 @@ Similarly, because **–installdns** has a default value of $False if you instal
 |**NewDomainName <string>** **Note:** Required only for Install\-ADDSDomain.|Specifies the single domain name for the new domain.<br /><br />For example, if you want to create a new child domain named **emea.corp.fabrikam.com**, you should specify **emea** as the value of this argument.|  
 |**NewDomainNetbiosName <string>**<br /><br />Required for Install\-ADDSDomain if FQDN prefix name is longer than 15 characters.|Use with Install\-ADDSDomain. Assigns a NetBIOS name to the new domain. The default value is derived from the value of **–NewDomainName**.|  
 |NoDnsOnNetwork|Specifies that DNS service is not available on the network. This parameter is used only when the IP setting of the network adapter for this computer is not configured with the name of a DNS server for name resolution. It indicates that a DNS server will be installed on this computer for name resolution. Otherwise, the IP settings of the network adapter must first be configured with the address of a DNS server.<br /><br />Omitting this parameter \(the default\) indicates that the TCP\/IP client settings of the network adapter on this server computer will be used to contact a DNS server. Therefore, if you are not specifying this parameter, ensure that TCP\/IP client settings are first configured with a preferred DNS server address.|  
-|NoGlobalCatalog|Specifies that you do not want the domain controller to be a global catalog server.<br /><br />Domain controllers that run [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] are installed with the global catalog by default. In other words, this runs automatically without computation, unless you specify:<br /><br />Code \-<br /><br />\-NoGlobalCatalog|  
+|NoGlobalCatalog|Specifies that you do not want the domain controller to be a global catalog server.<br /><br />Domain controllers that run  Windows Server 2012  are installed with the global catalog by default. In other words, this runs automatically without computation, unless you specify:<br /><br />Code \-<br /><br />\-NoGlobalCatalog|  
 |NoRebootOnCompletion|Specifies whether to restart the computer upon completion of the command, regardless of success. By default, the computer will restart. To prevent the server from restarting, specify:<br /><br />Code \-<br /><br />\-NoRebootOnCompletion:$True<br /><br />There is no equivalent for this option in the user interface \(UI\).|  
 |**ParentDomainName <string>** **Note:** Required for Install\-ADDSDomain cmdlet|Specifies the FQDN of an existing parent domain. You use this argument when you install a child domain or new domain tree.<br /><br />For example, if you want to create a new child domain named **emea.corp.fabrikam.com**, you should specify **corp.fabrikam.com** as the value of this argument.|  
 |ReadOnlyReplica|Specifies whether to install a read\-only domain controller \(RODC\).|  
@@ -308,7 +308,7 @@ Install-ADDSDomainController –DomainName corp.contoso.com –SafeModeAdministr
 Press **Y** to confirm or include the **–confirm** argument to prevent the confirmation prompt.  
   
 ## <a name="BKMK_GUI"></a>Installing AD DS by using Server Manager  
-AD DS can be installed in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] by using the Add Roles Wizard in Server Manager, followed by the Active Directory Domain Services Configuration Wizard, which is new beginning in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. The Active Directory Domain Services Installation Wizard \(dcpromo.exe\) is deprecated beginning in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].  
+AD DS can be installed in  Windows Server 2012  by using the Add Roles Wizard in Server Manager, followed by the Active Directory Domain Services Configuration Wizard, which is new beginning in  Windows Server 2012 . The Active Directory Domain Services Installation Wizard \(dcpromo.exe\) is deprecated beginning in  Windows Server 2012 .  
   
 The following sections explain how to create server pools in order to install and manage AD DS on multiple servers, and how to use the wizards to install AD DS.  
   
@@ -407,7 +407,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
     -   If you are adding a domain controller to an existing domain, select the domain controller that you want to replicate the AD DS installation data from \(or allow the wizard to select any domain controller\). If you are installing from media, click **Install from media path** type and verify the path to the installation source files, and then click **Next**.  
   
-        You cannot use install from media \(IFM\) to install the first domain controller in a domain. IFM does not work across different operating system versions. In other words, in order to install an additional domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] by using IFM, you must create the backup media on a [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller. For more information about IFM, see [Installing an Additional Domain Controller by Using IFM](http://technet.microsoft.com/library/cc816722(WS.10).aspx).  
+        You cannot use install from media \(IFM\) to install the first domain controller in a domain. IFM does not work across different operating system versions. In other words, in order to install an additional domain controller that runs  Windows Server 2012  by using IFM, you must create the backup media on a  Windows Server 2012  domain controller. For more information about IFM, see [Installing an Additional Domain Controller by Using IFM](http://technet.microsoft.com/library/cc816722(WS.10).aspx).  
   
 15. On the **Paths** page, type the locations for the Active Directory database, log files, and SYSVOL folder \(or accept default locations\), and click **Next**.  
   
@@ -483,7 +483,7 @@ A staged RODC installation allows you to create an RODC in two stages. In the fi
   
 10. On the **Completing the Active Directory Domain Services Installation Wizard** page, click **Finish**.  
   
-After an RODC account is created, you can attach a server to account to complete the RODC installation. This second stage can be completed in the branch office where the RODC will be located. The server where you perform this procedure must not be joined to the domain. Beginning in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], you use the Add Roles Wizard in Server Manager to attach a server to an RODC account.  
+After an RODC account is created, you can attach a server to account to complete the RODC installation. This second stage can be completed in the branch office where the RODC will be located. The server where you perform this procedure must not be joined to the domain. Beginning in  Windows Server 2012 , you use the Add Roles Wizard in Server Manager to attach a server to an RODC account.  
   
 #### To attach a server to an RODC account using Server Manager  
   

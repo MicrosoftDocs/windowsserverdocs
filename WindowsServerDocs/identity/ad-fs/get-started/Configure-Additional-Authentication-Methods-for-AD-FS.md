@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 8a9a0ad9-4d2c-46c9-8c51-229f1304764f
 ---
 # Configure Additional Authentication Methods for AD FS
-In order to enable multi\-factor authentication \(MFA\), you must select at least one additional authentication method. By default, in Active Directory Federation Services \(AD FS\) in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)], you can select Certificate Authentication \(in other words, smart card\-based authentication\) as an additional authentication method.
+In order to enable multi\-factor authentication \(MFA\), you must select at least one additional authentication method. By default, in Active Directory Federation Services \(AD FS\) in Windows Server® 2012 R2, you can select Certificate Authentication \(in other words, smart card\-based authentication\) as an additional authentication method.
 
 > [!NOTE]
 > If you select Certificate Authentication, ensure that the smart card certificates have been provisioned securely and have pin requirements.
@@ -22,7 +22,7 @@ In order to enable multi\-factor authentication \(MFA\), you must select at leas
 |![](b93f8edc-baa1-46ad-aed5-99c8690273c0)|Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> \- [Learn about Azure Multi\-Factor Authentication.](http://aka.ms/ey6o9r)<br /> \- [Manage identities for single\-forest hybrid environments using cloud authentication.](http://aka.ms/g1jat8)<br /> \- [Manage Risk with Additional Multi\-Factor Authentication for Sensitive Applications.](http://aka.ms/kt1bbm)|
 
 ## Microsoft and third\-party additional authentication methods
-You can also configure and enable Microsoft and third\-party authentication methods in [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]. Once installed and registered with [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], you can enforce MFA as part of the global or per\-relying\-party authentication policy.
+You can also configure and enable Microsoft and third\-party authentication methods in AD FS in Windows Server® 2012 R2. Once installed and registered with AD FS, you can enforce MFA as part of the global or per\-relying\-party authentication policy.
 
 Below is an alphabetical list of Microsoft and third\-party providers with MFA offerings currently available for AD FS in Windows Server 2012 R2.
 

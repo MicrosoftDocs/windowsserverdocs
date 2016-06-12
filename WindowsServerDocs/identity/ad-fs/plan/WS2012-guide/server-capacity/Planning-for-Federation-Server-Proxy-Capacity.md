@@ -23,7 +23,7 @@ Federation server proxies redirect security tokens from a protected federation s
   
 Because every request to a federation server proxy results in a request to a federation server or federation server farm, capacity planning for federation servers and federation server proxies must be performed in parallel.  
   
-Estimating the peak sign\-ins per second for the federation server proxy requires an understanding of the usage patterns of the federated users that will be signing in through the federation server proxy. In many deployments, the federated users who sign in using the federation server proxy are located on the Internet. You can estimate the peak sign\-ins per second by looking at the usage patterns of these federated users on the existing Web applications that will be protected by [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)].  
+Estimating the peak sign\-ins per second for the federation server proxy requires an understanding of the usage patterns of the federated users that will be signing in through the federation server proxy. In many deployments, the federated users who sign in using the federation server proxy are located on the Internet. You can estimate the peak sign\-ins per second by looking at the usage patterns of these federated users on the existing Web applications that will be protected by AD FS.  
   
 > [!NOTE]  
 > For production deployments, we recommend a minimum of two federation server proxies for each federation server farm instance you deploy.  

@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: ce8888a3-ba77-47f1-9e8e-a9bcbfd9a37c
 ---
 # Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)
-Virtualization of Active Directory Domain Services \(AD DS\) environments has been ongoing for a number of years. Beginning with [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)], AD DS provides greater support for virtualizing domain controllers by introducing virtualization\-safe capabilities and enabling rapid deployment of virtual domain controllers through cloning. These new virtualization features provide greater support for public and private clouds, hybrid environments where portions of AD DS exist on\-premises and in the cloud, and AD DS infrastructures that reside completely on\-premises.
+Virtualization of Active Directory Domain Services \(AD DS\) environments has been ongoing for a number of years. Beginning with Windows Server® 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization\-safe capabilities and enabling rapid deployment of virtual domain controllers through cloning. These new virtualization features provide greater support for public and private clouds, hybrid environments where portions of AD DS exist on\-premises and in the cloud, and AD DS infrastructures that reside completely on\-premises.
 
 **In this document**
 
@@ -36,7 +36,7 @@ For example, the following illustration shows the sequence of events that occurs
 
 A virtual machine \(VM\) makes it easy for hypervisor administrators to roll back a domain controller’s USNs \(its logical clock\) by, for example, applying a snapshot outside of the domain controller’s awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](http://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback).
 
-Beginning with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], AD DS virtual domain controllers hosted on hypervisor platforms that expose an identifier called VM\-Generation ID can detect and employ necessary safety measures to protect the AD DS environment if the virtual machine is rolled back in time by the application of a VM snapshot. The VM\-GenerationID design uses a hypervisor\-vendor independent mechanism to expose this identifier in the address space of the guest virtual machine, so the safe virtualization experience is consistently available of any hypervisor that supports VM\-GenerationID. This identifier can be sampled by services and applications running inside the virtual machine to detect if a virtual machine has been rolled back in time.
+Beginning with  Windows Server 2012 , AD DS virtual domain controllers hosted on hypervisor platforms that expose an identifier called VM\-Generation ID can detect and employ necessary safety measures to protect the AD DS environment if the virtual machine is rolled back in time by the application of a VM snapshot. The VM\-GenerationID design uses a hypervisor\-vendor independent mechanism to expose this identifier in the address space of the guest virtual machine, so the safe virtualization experience is consistently available of any hypervisor that supports VM\-GenerationID. This identifier can be sampled by services and applications running inside the virtual machine to detect if a virtual machine has been rolled back in time.
 
 ### <a name="BKMK_HowSafeguardsWork"></a>How do these virtualization safeguards work?
 During domain controller installation, AD DS initially stores the VM GenerationID identifier as part of the msDS\-GenerationID attribute on the domain controller’s computer object in its database \(often referred to as the directory information tree, or DIT\). The VM GenerationID is independently tracked by a Windows driver inside the virtual machine.
@@ -45,15 +45,15 @@ When an administrator restores the virtual machine from a previous snapshot, the
 
 If the two values are different, the invocationID is reset and the RID pool discarded thereby preventing USN re\-use. If the values are the same, the transaction is committed as normal.
 
-AD DS also compares the current value of the VM GenerationID from the virtual machine against the value in the DIT each time the domain controller is rebooted and, if different, it resets the invocationID, discards the RID pool and updates the DIT with the new value. It also non\-authoritatively synchronizes the SYSVOL folder in order to complete safe restoration. This enables the safeguards to extend to the application of snapshots on VMs that were shutdown. These safeguards introduced in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] enable AD DS administrators to benefit from the unique advantages of deploying and managing domain controllers in a virtualized environment.
+AD DS also compares the current value of the VM GenerationID from the virtual machine against the value in the DIT each time the domain controller is rebooted and, if different, it resets the invocationID, discards the RID pool and updates the DIT with the new value. It also non\-authoritatively synchronizes the SYSVOL folder in order to complete safe restoration. This enables the safeguards to extend to the application of snapshots on VMs that were shutdown. These safeguards introduced in  Windows Server 2012  enable AD DS administrators to benefit from the unique advantages of deploying and managing domain controllers in a virtualized environment.
 
-The following illustration shows how virtualization safeguards are applied when the same USN rollback is detected on a virtualized domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] on a hypervisor that supports VM\-GenerationID.
+The following illustration shows how virtualization safeguards are applied when the same USN rollback is detected on a virtualized domain controller that runs  Windows Server 2012  on a hypervisor that supports VM\-GenerationID.
 
 ![](media/ADDS_VDC_Exampleofhowsafeguardswork.gif)
 
 In this case, when the hypervisor detects a change to VM\-GenerationID value, virtualization safeguards are triggered, including the reset of the InvocationID for the virtualized DC \(from A to B in the preceding example\) and updating the VM\-GenerationID value saved on the VM to match the new value \(G2\) stored by the hypervisor. The safeguards ensure that replication converges for both domain controllers.
 
-With [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], AD DS employs safeguards on virtual domain controllers hosted on VM\-GenerationID aware hypervisors and ensures that the accidental application of snapshots or other such hypervisor\-enabled mechanisms that could ‘rollback’ a virtual machine’s state does not disrupt the AD DS environment \(by preventing replication problems such as a USN bubble or lingering objects\). However, restoring a domain controller by applying a virtual machine snapshot is not recommended as an alternative mechanism to backing up a domain controller. It is recommended that you continue to use Windows Server Backup or other VSS\-writer based backup solutions.
+With  Windows Server 2012 , AD DS employs safeguards on virtual domain controllers hosted on VM\-GenerationID aware hypervisors and ensures that the accidental application of snapshots or other such hypervisor\-enabled mechanisms that could ‘rollback’ a virtual machine’s state does not disrupt the AD DS environment \(by preventing replication problems such as a USN bubble or lingering objects\). However, restoring a domain controller by applying a virtual machine snapshot is not recommended as an alternative mechanism to backing up a domain controller. It is recommended that you continue to use Windows Server Backup or other VSS\-writer based backup solutions.
 
 > [!CAUTION]
 > If a domain controller in a production environment is accidentally reverted to a snapshot, it’s advised that you consult the vendors for the applications, and services hosted on that virtual machine, for guidance on verifying the state of these programs after snapshot restore.
@@ -61,7 +61,7 @@ With [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], AD DS employs safe
 For more information, see [Virtualized domain controller safe restore architecture](Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch).
 
 ## <a name="virtualized_dc_cloning"></a>Virtualized domain controller cloning
-Beginning with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], administrators can easily and safely deploy replica domain controllers by copying an existing virtual domain controller. In a virtual environment, administrators no longer have to repeatedly deploy a server image prepared by using sysprep.exe, promote the server to a domain controller and then complete additional configuration requirements for deploying each replica domain controller.
+Beginning with  Windows Server 2012 , administrators can easily and safely deploy replica domain controllers by copying an existing virtual domain controller. In a virtual environment, administrators no longer have to repeatedly deploy a server image prepared by using sysprep.exe, promote the server to a domain controller and then complete additional configuration requirements for deploying each replica domain controller.
 
 > [!NOTE]
 > Administrators need to follow existing processes to deploy the first domain controller in a domain, such as using a sysprep.exe to prepare a server virtual hard disk \(VHD\), promote the server to a domain controller and then complete any additional configuration requirements. In a disaster recovery scenario, use the latest server backup to restore the first domain controller in a domain.
@@ -96,7 +96,7 @@ The clone domain controller uses the following criteria to detect that it is a c
 1.  The value of the VM\-Generation ID supplied by the virtual machine is different than the value of the VM\-Generation ID stored in the DIT.
 
     > [!NOTE]
-    > The hypervisor platform must support VM\-Generation ID \([!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Hyper\-V supports VM\-Generation ID\).
+    > The hypervisor platform must support VM\-Generation ID \( Windows Server 2012  Hyper\-V supports VM\-Generation ID\).
 
 2.  Presence of a file called DCCloneConfig.xml in one of the following locations:
 
@@ -108,7 +108,7 @@ The clone domain controller uses the following criteria to detect that it is a c
 
 Once the criteria are met, it goes through the process of cloning to provision itself as a replica domain controller.
 
-The clone domain controller uses the security context of the source domain controller \(the domain controller whose copy it represents\) to contact the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Primary Domain Controller \(PDC\) emulator operations master role holder \(also known as flexible single master operations, or FSMO\). The PDC emulator must be running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], but it does not have to be running on a hypervisor.
+The clone domain controller uses the security context of the source domain controller \(the domain controller whose copy it represents\) to contact the  Windows Server 2012  Primary Domain Controller \(PDC\) emulator operations master role holder \(also known as flexible single master operations, or FSMO\). The PDC emulator must be running  Windows Server 2012 , but it does not have to be running on a hypervisor.
 
 > [!NOTE]
 > If you have a schema extension with attributes that reference the source domain controller and the attribute is on one of the objects copied \(computer object, NTDS settings object\) to create the clone, that attribute will not be copied or updated to reference the clone domain controller.
@@ -129,13 +129,13 @@ The cloning components include new cmdlets in the Active Directory module for Wi
 
     -   The DC being prepared is authorized for cloning \(is a member of the **Cloneable Domain Controllers** group\)
 
-    -   The PDC emulator runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].
+    -   The PDC emulator runs  Windows Server 2012 .
 
     -   Any programs or services listed from running **Get\-ADDCCloningExcludedApplicationList** are included in CustomDCCloneAllowList.xml \(explained in more detail at the end of this list of cloning components\).
 
 -   **DCCloneConfig.xml** – To successfully clone a virtualized domain controller, this file must be present in the directory where the DIT resides, *%windir%\\NTDS*, or the root of a removable media drive. Besides being used as one of the triggers to detect and initiate cloning, it also provides a means to specify configuration settings for the clone domain controller.
 
-    The schema and a sample file for the DCCloneConfig.xml file are stored on all [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] computers at:
+    The schema and a sample file for the DCCloneConfig.xml file are stored on all  Windows Server 2012  computers at:
 
     -   %windir%\\system32\\DCCloneConfigSchema.xsd
 
@@ -168,7 +168,7 @@ The cloning components include new cmdlets in the Active Directory module for Wi
     |\-Force|Overwrites an existing CustomDCCloneAllowList.XML file.|
     |\-Path|Folder path to create the CustomDCCloneAllowList.XML.|
 
--   **DefaultDCCloneAllowList.xml** – This file is present by default on every [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller in the *%windir%\\system32*. It lists the services and installed programs that can be safely cloned by default. You must not change the location or contents of this file or cloning will fail.
+-   **DefaultDCCloneAllowList.xml** – This file is present by default on every  Windows Server 2012  domain controller in the *%windir%\\system32*. It lists the services and installed programs that can be safely cloned by default. You must not change the location or contents of this file or cloning will fail.
 
 -   **CustomDCCloneAllowList.xml** – If you have services or installed programs that reside on your source domain controller that are outside of those listed in the DefaultDCCloneAllowList.xml file, those services and programs must be included in this file. To find the services or installed programs that are not listed in the in the DefaultDCCloneAllowList.xml file, run the **Get\-ADDCCloningExcludedApplicationList** cmdlet. You should use the **–GenerateXml** argument to generate the XML file.
 
@@ -195,7 +195,7 @@ The following deployment scenarios are supported for virtual domain controller c
 -   Deploy a clone domain controller by copying the virtual machine of a source domain controller using the export\/import semantics exposed by the hypervisor.
 
 > [!NOTE]
-> The steps in the section [Steps for deploying a clone virtualized domain controller](Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#steps_deploy_vdc) demonstrate copying a virtual machine using the export\/import feature of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Hyper\-V.
+> The steps in the section [Steps for deploying a clone virtualized domain controller](Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#steps_deploy_vdc) demonstrate copying a virtual machine using the export\/import feature of  Windows Server 2012  Hyper\-V.
 
 ## <a name="steps_deploy_vdc"></a>Steps for deploying a clone virtualized domain controller
 
@@ -213,11 +213,11 @@ The following deployment scenarios are supported for virtual domain controller c
 
 -   To complete the steps in the following procedures, you must be a member of the Domain Admins group or have the equivalent permissions assigned to it.
 
--   The [!INCLUDE[wps_2](includes/wps_2_md.md)] commands used in this guide must be run from an elevated command prompt. To do this, right click the **[!INCLUDE[wps_2](includes/wps_2_md.md)]** icon, and then click **Run as administrator**.
+-   The Windows PowerShell commands used in this guide must be run from an elevated command prompt. To do this, right click the **Windows PowerShell** icon, and then click **Run as administrator**.
 
--   A [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] server with the Hyper\-V server role installed \(**HyperV1**\).
+-   A  Windows Server 2012  server with the Hyper\-V server role installed \(**HyperV1**\).
 
--   A second [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] server with the Hyper\-V server role installed \(**HyperV2**\).
+-   A second  Windows Server 2012  server with the Hyper\-V server role installed \(**HyperV2**\).
 
     > [!NOTE]
     > -   If you are using another hypervisor, you should contact the vendor of that hypervisor to verify if the hypervisor supports VM\-Generation ID. If the hypervisor does not support VM\-Generation ID and you have provided a DCCloneConfig.xml, the new VM will boot into Directory Services Restore Mode \(DSRM\).
@@ -226,15 +226,15 @@ The following deployment scenarios are supported for virtual domain controller c
     > -   In order to successfully import and export a VHD file using Hyper\-V, the virtual network switches on both Hyper\-V hosts should have the same name. For example, if you have a virtual network switch on **HyperV1** named VNet then there needs to be a virtual network switch on **HyperV2** named VNet.
     > -   If the two Hyper\-V hosts \(**HyperV1** and **HyperV2**\) have different processors, shut down the virtual machine \(**VirtualDC1**\) that you plan to export, right\-click the VM, click **Settings**, click **Processor**, and under **Processor compatibility** select **Migrate to a physical computer with a different processor version** and click **OK**.
 
--   A deployed [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller \(virtualized or physical\) that hosts the PDC emulator role \(**DC1**\). To verify whether the PDC emulator role is hosted on a [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller, run the following Windows PowerShell command:
+-   A deployed  Windows Server 2012  domain controller \(virtualized or physical\) that hosts the PDC emulator role \(**DC1**\). To verify whether the PDC emulator role is hosted on a  Windows Server 2012  domain controller, run the following Windows PowerShell command:
 
     ```
     Get-ADComputer (Get-ADDomainController –Discover –Service "PrimaryDC").name –Property operatingsystemversion | fl
     ```
 
-    The OperatingSystemVersion value should return as a version 6.2. If necessary, you can transfer the PDC emulator role to a domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. For more information, see [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](http://support.microsoft.com/kb/255504).
+    The OperatingSystemVersion value should return as a version 6.2. If necessary, you can transfer the PDC emulator role to a domain controller that runs  Windows Server 2012 . For more information, see [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](http://support.microsoft.com/kb/255504).
 
--   A deployed [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] guest virtualized domain controller \(**VirtualDC1**\) that is in the same domain as the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller hosting the PDC emulator role \(**DC1**\). This will be the source domain controller used for cloning. The guest virtual domain controller will be hosted on a [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Hyper\-V server \(**HyperV1**\).
+-   A deployed  Windows Server 2012  guest virtualized domain controller \(**VirtualDC1**\) that is in the same domain as the  Windows Server 2012  domain controller hosting the PDC emulator role \(**DC1**\). This will be the source domain controller used for cloning. The guest virtual domain controller will be hosted on a  Windows Server 2012  Hyper\-V server \(**HyperV1**\).
 
     > [!NOTE]
     > -   For cloning to succeed, the source domain controller that is used to create the clone cannot be from a DC that has been demoted since the source VHD media was created.
@@ -243,7 +243,7 @@ The following deployment scenarios are supported for virtual domain controller c
 
     Eject any virtual floppy drive \(VFD\) the source DC may have. This can cause a sharing problem when trying to import the new VM.
 
-    Only [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controllers hosted on a VM\-GenerationID hypervisor can be used as a source for cloning. The source [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller used for cloning should be in a healthy state. To determine the state of the source domain controller run [dcdiag](http://technet.microsoft.com/library/cc731968(WS.10).aspx). To gain a better understanding of the output returned by dcdiag, see [What does DCDIAG actually…do?](http://blogs.technet.com/b/askds/archive/2011/03/22/what-does-dcdiag-actually-do.aspx).
+    Only  Windows Server 2012  domain controllers hosted on a VM\-GenerationID hypervisor can be used as a source for cloning. The source  Windows Server 2012  domain controller used for cloning should be in a healthy state. To determine the state of the source domain controller run [dcdiag](http://technet.microsoft.com/library/cc731968(WS.10).aspx). To gain a better understanding of the output returned by dcdiag, see [What does DCDIAG actually…do?](http://blogs.technet.com/b/askds/archive/2011/03/22/what-does-dcdiag-actually-do.aspx).
 
     If the source domain controller is a DNS server, the cloned domain controller will also be a DNS server. You should choose a DNS server that hosts only Active Directory\-integrated zones.
 
@@ -267,12 +267,12 @@ In this procedure, you grant the source domain controller the permission to be c
 
 1.  On any domain controller in the same domain as the domain controller being prepared for cloning \(**VirtualDC1**\), open **Active Directory Administrative Center** \(ADAC\), locate the virtualized domain controller object \(domain controllers are usually located under the **Domain Controllers** container in ADAC\), right click it, choose **Add to group** and under **Enter the object name to select** type **Cloneable Domain Controllers** and then click **OK**.
 
-    The group membership update performed in this step must replicate to PDC emulator before cloning can be performed. If the **Cloneable Domain Controllers** group is not found, the PDC emulator role might not be hosted on a domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].
+    The group membership update performed in this step must replicate to PDC emulator before cloning can be performed. If the **Cloneable Domain Controllers** group is not found, the PDC emulator role might not be hosted on a domain controller that runs  Windows Server 2012 .
 
     > [!NOTE]
-    > To open ADAC on a [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller, open [!INCLUDE[wps_2](includes/wps_2_md.md)] and type **dsac.exe**.
+    > To open ADAC on a  Windows Server 2012  domain controller, open Windows PowerShell and type **dsac.exe**.
 
-![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet performs the same function as the preceding procedure:
 
@@ -415,7 +415,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
 1.  On **HyperV1**, shutdown the source domain controller \(**VirtualDC1**\).
 
-    ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
     Stop-VM –Name VirtualDC1 –ComputerName HyperV1
@@ -426,7 +426,7 @@ If there are snapshots on the source domain controller, they should be deleted b
     > [!NOTE]
     > You should delete all the associated snapshots because each time a snapshot is taken, a new AVHD file is created that acts as differencing disk. This creates a chain affect. If you have taken snapshots and insert the DCCLoneConfig.xml file into the VHD, you may end up creating a clone from an older DIT version or inserting the configuration file into the wrong VHD file. Deleting the snapshot merges all these AVHDs into the base VHD.
 
-    ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
     Get-VMSnapshot VirtualDC1 | Remove-VMSnapshot –IncludeAllChildSnapshots
@@ -439,7 +439,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
     Use the **Copy the virtual machine \(create new unique ID\)** option when importing the virtual machine.
 
-    ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
     $path = Get-ChildItem "C:\CloneDCs\VirtualDC1\VirtualDC1\Virtual Machines"
@@ -452,7 +452,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
     -   UI: in the **Import Virtual Machine** wizard, specify new locations for **Virtual machine configuration folder**, **Snapshot store**, **Smart Paging folder**, and a different **Location** for the virtual hard disks for the virtual machine.
 
-    -   [!INCLUDE[wps_2](includes/wps_2_md.md)]: specify new locations for the virtual machine by using the following parameters for the `Import-VM` cmdlet:
+    -   Windows PowerShell: specify new locations for the virtual machine by using the following parameters for the `Import-VM` cmdlet:
 
         ```
         $path = Get-ChildItem "C:\CloneDCs\VirtualDC1\VirtualDC1\Virtual Machines" 
@@ -464,7 +464,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
 5.  On **HyperV1**, restart the source domain controller \(**\(VirtualDC1**\) to bring it back online.
 
-    ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
     Start-VM –Name VirtualDC1 –ComputerName HyperV1
@@ -472,7 +472,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
 6.  On **HyperV2**, start the virtual machine \(**VirtualDC2**\) to bring it online as a clone domain controller in the domain.
 
-    ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**
+    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
     Start-VM –Name VirtualDC2 –ComputerName HyperV2
@@ -492,7 +492,7 @@ If the clone domain controller \(**VirtualDC2**\) starts in Directory Services R
 
 Correct the cause for cloning failure and verify that the dcpromo.log does not indicate that cloning cannot be re\-tried. If cloning cannot be re\-tried, safely discard the media. If cloning can be re\-tried, you must remove the DS Restore Mode boot flag in order to try cloning again.
 
-1.  Open [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] with an elevated command \(right click [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and choose Run as Administrator\), and then type **msconfig**.
+1.  Open  Windows Server 2012  with an elevated command \(right click  Windows Server 2012  and choose Run as Administrator\), and then type **msconfig**.
 
 2.  On the **Boot** tab, under **Boot Options**, clear **Safe boot** \(it is already selected with the option **Active Directory repair enabled**\).
 

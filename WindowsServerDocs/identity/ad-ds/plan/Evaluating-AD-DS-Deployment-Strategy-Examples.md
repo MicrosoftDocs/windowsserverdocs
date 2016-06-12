@@ -18,9 +18,9 @@ Consider the following example of a fictitious company, Contoso Pharmaceuticals
   
 After reviewing its existing environment and identifying its deployment goals, Contoso established the following AD DS deployment strategy:  
   
--   Upgrade Windows Server 2003 domains to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] domains.  
+-   Upgrade Windows Server 2003 domains to  Windows Server 2008  domains.  
   
--   Enable advanced AD DS features by raising the domain and forest functional levels to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)].  
+-   Enable advanced AD DS features by raising the domain and forest functional levels to  Windows Server 2008 .  
   
 -   Restructure the africa.concorp.contoso.com domain within the forest to consolidate that domain with the emea.concorp.contoso.con domain.  
   

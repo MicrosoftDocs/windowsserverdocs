@@ -35,7 +35,7 @@ author: femila
   
 Also, on older computers that run Windows XP or earlier, the command Net time \/querysntp displays the name of a Network Time Protocol \(NTP\) server with which a computer is configured to synchronize, but that NTP server is used only when the computer’s time client is configured as NTP or AllSync. That command has since been deprecated.  
   
-Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller \(PDC\) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm \/query \/configuration command from an elevated Command Prompt in starting in [!INCLUDE[2nd_WindowsServLonghorn](includes/2nd_WindowsServLonghorn_md.md)], and [!INCLUDE[firstref_vista](includes/firstref_vista_md.md)], and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](http://go.microsoft.com/fwlink/?LinkId=117753) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=117753\). You can run the command **reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters** and read the value of **NtpServer** in the command output.  
+Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller \(PDC\) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm \/query \/configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista®, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](http://go.microsoft.com/fwlink/?LinkId=117753) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=117753\). You can run the command **reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters** and read the value of **NtpServer** in the command output.  
   
 > [!IMPORTANT]  
 > The W32Time service is not a full\-featured NTP solution that meets time\-sensitive application needs and is not supported by Microsoft as such. For more information, see Microsoft Knowledge Base article 939322, [Support boundary to configure the Windows Time service for high\-accuracy environments](http://go.microsoft.com/fwlink/?LinkID=179459) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=179459\).  
@@ -46,11 +46,11 @@ The following tools are associated with the Windows Time service.
 #### W32tm.exe: Windows Time  
 **Category**  
   
-This tool is installed as part of Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)] default installations.  
+This tool is installed as part of Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server® 2008 R2  default installations.  
   
 **Version compatibility**  
   
-This tool works on Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] default installations.  
+This tool works on Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2  default installations.  
   
 W32tm.exe is used to configure Windows Time service settings. It can also be used to diagnose problems with the time service. W32tm.exe is the preferred command line tool for configuring, monitoring, or troubleshooting the Windows Time service.  
   
@@ -71,10 +71,10 @@ The following tables describe the parameters that are used with W32tm.exe.
 |w32tm \/config<br /><br />\[\/computer:<target>\]<br /><br />\[\/update\]<br /><br />\[\/manualpeerlist:<peers>\]<br /><br />\[\/syncfromflags:<source>\]<br /><br />\[\/LocalClockDispersion:<seconds>\]<br /><br />\[\/reliable:\(YES&#124;NO\)\]<br /><br />\[\/largephaseoffset:<milliseconds>\]|computer:<target> – adjusts the configuration of <target>. If not specified, the default is the local computer.<br /><br />update – notifies the time service that the configuration has changed, causing the changes to take effect.<br /><br />manualpeerlist:<peers> – sets the manual peer list to <peers>, which is a space\-delimited list of DNS and\/or IP addresses. When specifying multiple peers, this option must be enclosed in quotes.<br /><br />syncfromflags:<source> – sets what sources the NTP client should synchronize from. <source> should be a comma separated list of these keywords \(not case sensitive\):<br /><br />MANUAL – include peers from the manual peer list.<br /><br />DOMHIER – synchronize from a domain controller \(DC\) in the domain hierarchy.<br /><br />LocalClockDispersion:<seconds> – configures the accuracy of the internal clock that W32Time will assume when it can’t acquire time from its configured sources.<br /><br />reliable:\(YES&#124;NO\) – set whether this computer is a reliable time source.<br /><br />This setting is only meaningful on domain controllers.<br /><br />YES – this computer is a reliable time service.<br /><br />NO – this computer is not a reliable time service.<br /><br />largephaseoffset:<milliseconds> – sets the time difference between local and network time which W32Time will consider a spike.|  
 |w32tm \/tz|Display the current time zone settings.|  
 |w32tm \/dumpreg<br /><br />\[\/subkey:<key>\]<br /><br />\[\/computer:<target>\]|Display the values associated with a given registry key.<br /><br />The default key is HKLM\\System\\CurrentControlSet\\Services\\W32Time<br /><br />\(the root key for the time service\).<br /><br />subkey:<key> – displays the values associated with subkey <key> of the default key.<br /><br />computer:<target> – queries registry settings for computer <target>|  
-|w32tm \/query \[\/computer:<target>\] {\/source &#124; \/configuration &#124; \/peers &#124; \/status} \[\/verbose\]|This parameter was first made available in the Windows Time client versions of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)].<br /><br />Display a computer's Windows Time service information.<br /><br />**computer:<target>** – Query the information of **<target>**. If not specified, the default value is the local computer.<br /><br />**Source** – Display the time source.<br /><br />**Configuration** – Display the configuration of run time and where the setting comes from. In verbose mode, display the undefined or unused setting too.<br /><br />**peers** – Display a list of peers and their status.<br /><br />**status** – Display Windows Time service status.<br /><br />**verbose** – Set the verbose mode to display more information.|  
-|w32tm \/debug {\/disable &#124; {\/enable \/file:<name> \/size:<bytes> \/entries:<value> \[\/truncate\]}}|This parameter was first made available in the Windows Time client versions of [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)].<br /><br />Enable or disable the local computer Windows Time service private log.<br /><br />**disable** – Disable the private log.<br /><br />**enable** – Enable the private log.<br /><br />-   **file:<name>** – Specify the absolute file name.<br />-   **size:<bytes>** – Specify the maximum size for circular logging.<br />-   **entries:<value>** – Contains a list of flags, specified by number and separated by commas, that specify the types of information that should be logged. Valid numbers are 0 to 300. A range of numbers is valid, in addition to single numbers, such as 0\-100,103,106. Value 0\-300 is for logging all information.<br /><br />**truncate** – Truncate the file if it exists.|  
+|w32tm \/query \[\/computer:<target>\] {\/source &#124; \/configuration &#124; \/peers &#124; \/status} \[\/verbose\]|This parameter was first made available in the Windows Time client versions of Windows Vista, and  Windows Server 2008 .<br /><br />Display a computer's Windows Time service information.<br /><br />**computer:<target>** – Query the information of **<target>**. If not specified, the default value is the local computer.<br /><br />**Source** – Display the time source.<br /><br />**Configuration** – Display the configuration of run time and where the setting comes from. In verbose mode, display the undefined or unused setting too.<br /><br />**peers** – Display a list of peers and their status.<br /><br />**status** – Display Windows Time service status.<br /><br />**verbose** – Set the verbose mode to display more information.|  
+|w32tm \/debug {\/disable &#124; {\/enable \/file:<name> \/size:<bytes> \/entries:<value> \[\/truncate\]}}|This parameter was first made available in the Windows Time client versions of Windows Vista, and  Windows Server 2008 .<br /><br />Enable or disable the local computer Windows Time service private log.<br /><br />**disable** – Disable the private log.<br /><br />**enable** – Enable the private log.<br /><br />-   **file:<name>** – Specify the absolute file name.<br />-   **size:<bytes>** – Specify the maximum size for circular logging.<br />-   **entries:<value>** – Contains a list of flags, specified by number and separated by commas, that specify the types of information that should be logged. Valid numbers are 0 to 300. A range of numbers is valid, in addition to single numbers, such as 0\-100,103,106. Value 0\-300 is for logging all information.<br /><br />**truncate** – Truncate the file if it exists.|  
   
-For more information about **W32tm.exe**, see Help and Support Center in Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].  
+For more information about **W32tm.exe**, see Help and Support Center in Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 .  
   
 ## <a name="w2k3tr_times_tools_uhlp"></a>Windows Time Service Registry Entries  
 The following registry entries are associated with the Windows Time service.  
@@ -84,7 +84,7 @@ This information is provided as a reference for use in troubleshooting or verify
 When possible, use Group Policy or other Windows tools, such as Microsoft Management Console \(MMC\), to accomplish tasks rather than editing the registry directly. If you must edit the registry, use extreme caution.  
   
 > [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file \(System.adm\) for the Group Policy object \(GPO\) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=186066) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=186066\). This issue applies to [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], Windows Server 2003 R2, and Windows Server 2003.  
+> Some of the preset values that are configured in the System Administrative template file \(System.adm\) for the Group Policy object \(GPO\) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=186066) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=186066\). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
   
 Many registry entries for the Windows Time service are the same as the Group Policy setting of the same name. The Group Policy settings correspond to the registry entries of the same name located in:  
   
@@ -111,7 +111,7 @@ For example, 5 minutes would become 5\*60\*1000\*10000 \= 3000000000 clock tick
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpServer**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry indicates that non\-standard mode combinations are allowed in synchronization between peers. The default value for domain members is 1. The default value for stand\-alone clients and servers is 1.  
   
@@ -121,7 +121,7 @@ This entry indicates that non\-standard mode combinations are allowed in synchro
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry indicates that non\-standard mode combinations are allowed in synchronization between clients and servers. The default value for domain members is 1. The default value for stand\-alone clients and servers is 1.  
   
@@ -131,7 +131,7 @@ This entry indicates that non\-standard mode combinations are allowed in synchro
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls whether this computer is marked as a reliable time server. A computer is not marked as reliable unless it is also marked as a time server.  
   
@@ -153,7 +153,7 @@ The default value for domain members is 10. The default value for stand\-alone c
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the following compatibility flags and values:  
   
@@ -173,7 +173,7 @@ The default value for domain members is 0x80000000. The default value for stand\
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry determines whether the service chooses synchronization partners outside the domain of the computer. The options and values are:  
   
@@ -191,7 +191,7 @@ This value is ignored if the NT5DS value is not set. The default value for domai
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the location of the DLL for the time provider.  
   
@@ -204,7 +204,7 @@ Registry path
   
 Version  
   
-Windows Server 2003 Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows Server 2003 Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the location of the DLL for the time provider.  
   
@@ -216,7 +216,7 @@ The default location for this DLL on both domain members and stand\-alone client
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry indicates if the NtpClient provider is enabled in the current Time Service.  
   
@@ -232,7 +232,7 @@ The default value on domain members is 1. The default value on stand\-alone clie
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpServer**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry indicates if the NtpServer provider is enabled in the current Time Service.  
   
@@ -248,7 +248,7 @@ The default value on domain members is 1. The default value on stand\-alone clie
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the events that the time service logs.  
   
@@ -264,13 +264,13 @@ The default value on domain members is 2. The default value on stand\-alone clie
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the events logged by the Windows Time service.  
   
 -   0x1 reachability changes  
   
--   0x2 large sample skew \(This is applicable to Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] only\)  
+-   0x2 large sample skew \(This is applicable to Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2  only\)  
   
 The default value on domain members is 0x1. The default value on stand\-alone clients and servers is 0x1.  
   
@@ -280,12 +280,12 @@ The default value on domain members is 0x1. The default value on stand\-alone cl
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the rate at which the clock is corrected. If this value is too small, the clock is unstable and overcorrects. If the value is too large, the clock takes a long time to synchronize. The default value on domain members is 4. The default value on stand\-alone clients and servers is 4.  
   
 > [!NOTE]  
-> 0 is an invalid value for the FrequencyCorrectRate registry entry. On Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]computers, if the value is set to 0 the Windows Time service will automatically change it to 1.  
+> 0 is an invalid value for the FrequencyCorrectRate registry entry. On Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 computers, if the value is set to 0 the Windows Time service will automatically change it to 1.  
   
 #### HoldPeriod  
   
@@ -293,7 +293,7 @@ This entry controls the rate at which the clock is corrected. If this value is t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the period of time for which spike detection is disabled in order to bring the local clock into synchronization quickly. A spike is a time sample indicating that time is off a number of seconds, and is usually received after good time samples have been returned consistently. The default value on domain members is 5. The default value on stand\-alone clients and servers is 5.  
   
@@ -303,7 +303,7 @@ This entry controls the period of time for which spike detection is disabled in 
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry indicates if the NtpClient provider is enabled.  
   
@@ -319,7 +319,7 @@ The default value on domain members is 1. The default value on stand\-alone clie
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpServer**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry indicates if the NtpServer provider is enabled.  
   
@@ -335,7 +335,7 @@ The default value on domain members is 1. The default value on stand\-alone clie
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies that a time offset greater than or equal to this value in 10<sup>-7</sup> seconds is considered a spike. A network disruption such as a large amount of traffic might cause a spike. A spike will be ignored unless it persists for a long period of time. The default value on domain members is 50000000. The default value on stand\-alone clients and servers is 50000000.  
   
@@ -345,7 +345,7 @@ This entry specifies that a time offset greater than or equal to this value in 1
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows Server 2003 and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)]  
+Windows Server 2003 and  Windows Server 2008   
   
 This entry specifies the large sample skew for logging in seconds. To comply with Security and Exchange Commission \(SEC\) specifications, this should be set to three seconds. Events will be logged for this setting only when EventLogFlags is explicitly configured for 0x2 large sample skew. The default value on domain members is 3. The default value on stand\-alone clients and servers is 3.  
   
@@ -355,7 +355,7 @@ This entry specifies the large sample skew for logging in seconds. To comply wit
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is 156250. The default value on stand\-alone clients and servers is 156250.  
   
@@ -365,7 +365,7 @@ This entry is maintained by W32Time. It contains reserved data that is used by t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the dispersion \(in seconds\) that you must assume when the only time source is the built\-in CMOS clock. The default value on domain members is 10. The default value on stand\-alone clients and servers is 10.  
   
@@ -375,7 +375,7 @@ This entry controls the dispersion \(in seconds\) that you must assume when the 
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the maximum offset \(in seconds\) for which W32Time attempts to adjust the computer clock by using the clock rate. When the offset exceeds this rate, W32Time sets the computer clock directly. The default value for domain members is 300. The default value for stand\-alone clients and servers is 1.  
   
@@ -459,7 +459,7 @@ In this case the clock will be set back slowly.
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value for domain members is 155860. The default value for stand\-alone clients and servers is 155860.  
   
@@ -469,7 +469,7 @@ This entry is maintained by W32Time. It contains reserved data that is used by t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the largest negative time correction in seconds that the service makes. If the service determines that a change larger than this is required, it logs an event instead. Special case: 0xFFFFFFFF means always make time correction. The default value for domain members is 0xFFFFFFFF. The default value for stand\-alone clients and servers is 54,000 \(15 hrs\).  
   
@@ -479,7 +479,7 @@ This entry specifies the largest negative time correction in seconds that the se
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the largest interval, in log2 seconds, allowed for the system polling interval. Note that while a system must poll according to the scheduled interval, a provider can refuse to produce samples when requested to do so. The default value for domain controllers is 10. The default value for domain members is 15. The default value for stand\-alone clients and servers is 15.  
   
@@ -489,7 +489,7 @@ This entry specifies the largest interval, in log2 seconds, allowed for the syst
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 .  
   
 This entry specifies the largest positive time correction in seconds that the service makes. If the service determines that a change larger than this is required, it logs an event instead. Special case: 0xFFFFFFFF means always make time correction. The default value for domain members is 0xFFFFFFFF. The default value for stand\-alone clients and servers is 54,000 \(15 hrs\).  
   
@@ -499,7 +499,7 @@ This entry specifies the largest positive time correction in seconds that the se
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value for domain members is 155860. The default value for stand\-alone clients and servers is 155860.  
   
@@ -509,7 +509,7 @@ This entry is maintained by W32Time. It contains reserved data that is used by t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the smallest interval, in log2 seconds, allowed for the system polling interval. Note that while a system does not request samples more frequently than this, a provider can produce samples at times other than the scheduled interval. The default value for domain controllers is 6. The default value for domain members is 10. The default value for stand\-alone clients and servers is 10.  
   
@@ -519,7 +519,7 @@ This entry specifies the smallest interval, in log2 seconds, allowed for the sys
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters**  
   
 ###### Version  
-Windows Server 2003 and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)]  
+Windows Server 2003 and  Windows Server 2008   
   
 This entry specifies a space\-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  
   
@@ -544,14 +544,14 @@ There is no default value for this registry entry on domain members. The default
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the rate at which the phase error is corrected. Specifying a small value corrects the phase error quickly, but might cause the clock to become unstable. If the value is too large, it takes a longer time to correct the phase error.  
   
 The default value on domain members is 1. The default value on stand\-alone clients and servers is 7.  
   
 > [!NOTE]  
-> 0 is an invalid value for the PhaseCorrectRate registry entry. On Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]computers, if the value is set to 0, the Windows Time service automatically changes it to 1.  
+> 0 is an invalid value for the PhaseCorrectRate registry entry. On Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 computers, if the value is set to 0, the Windows Time service automatically changes it to 1.  
   
 #### PollAdjustFactor  
   
@@ -559,7 +559,7 @@ The default value on domain members is 1. The default value on stand\-alone clie
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the decision to increase or decrease the poll interval for the system. The larger the value, the smaller the amount of error that causes the poll interval to be decreased. The default value on domain members is 5. The default value on stand\-alone clients and servers is 5.  
   
@@ -569,7 +569,7 @@ This entry controls the decision to increase or decrease the poll interval for t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the maximum number of times to double the wait interval when repeated attempts to locate a peer to synchronize with fail. A value of zero means that the wait interval is always the minimum. The default value on domain members is 7. The default value on stand\-alone clients and servers is 7.  
   
@@ -579,7 +579,7 @@ This entry specifies the maximum number of times to double the wait interval whe
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the initial interval to wait, in minutes, before attempting to locate a peer to synchronize with. The default value on domain members is 15. The default value on stand\-alone clients and servers is 15.  
   
@@ -589,7 +589,7 @@ This entry specifies the initial interval to wait, in minutes, before attempting
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default location for this DLL on both domain members and stand\-alone clients and servers is %windir%\\System32\\W32Time.dll.  
   
@@ -599,7 +599,7 @@ This entry is maintained by W32Time. It contains reserved data that is used by t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is SvchostEntry\_W32Time. The default value on stand\-alone clients and servers is SvchostEntry\_W32Time.  
   
@@ -609,7 +609,7 @@ This entry is maintained by W32Time. It contains reserved data that is used by t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval determine by the operating system. The default value on domain members is 3,600. The default value on stand\-alone clients and servers is 604,800.  
   
@@ -619,7 +619,7 @@ This entry specifies the special poll interval in seconds for manual peers. When
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient**  
   
 ###### Version  
-Windows Server 2003 and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)]  
+Windows Server 2003 and  Windows Server 2008   
   
 This entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system. It specifies the time in seconds before W32Time will resynchronize after the computer has restarted. Any changes to this setting can cause unpredictable results. The default value on both domain members and on stand\-alone clients and servers is left blank.  
   
@@ -629,7 +629,7 @@ This entry is maintained by W32Time. It contains reserved data that is used by t
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry specifies the amount of time that a suspicious offset must persist before it is accepted as correct \(in seconds\). The default value on domain members is 900. The default value on stand\-alone clients and workstations is 900.  
   
@@ -639,7 +639,7 @@ This entry specifies the amount of time that a suspicious offset must persist be
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry Indicates which peers to accept synchronization from:  
   
@@ -659,17 +659,17 @@ The default value on domain members is **NT5DS.** The default value on stand\-al
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows XP, [!INCLUDE[nextref_vista](includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].  
+Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 .  
   
 This entry specifies the number of clock ticks between phase correction adjustments. The default value for domain controllers is 100. The default value for domain members is 30,000. The default value for stand\-alone clients and servers is 360,000.  
   
 > [!NOTE]  
-> 0 is an invalid value for the UpdateInterval registry entry. On computers running Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], if the value is set to 0 the Windows Time service automatically changes it to 1.  
+> 0 is an invalid value for the UpdateInterval registry entry. On computers running Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 , if the value is set to 0 the Windows Time service automatically changes it to 1.  
   
 The following three registry entries are not a part of the W32Time default configuration but can be added to the registry to obtain increased logging capabilities. The information logged to the System Event log can be modified by changing value for the EventLogFlags setting in the Group Policy Object Editor. By default, the time service creates a log in Event Viewer every time that it switches to a new time source.  
   
 > [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file \(System.adm\) for the Group Policy object \(GPO\) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=186066) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=186066\). This issue applies to [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], Windows Server 2003 R2, and Windows Server 2003.  
+> Some of the preset values that are configured in the System Administrative template file \(System.adm\) for the Group Policy object \(GPO\) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=186066) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=186066\). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
   
 The following registry entries must be added in order to enable W32Time logging:  
   
@@ -679,7 +679,7 @@ The following registry entries must be added in order to enable W32Time logging:
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the amount of entries created in the Windows Time log file. The default value is none, which does not log any Windows Time activity. Valid values are 0 to 300. This value does not affect the event log entries normally created by Windows Time.  
   
@@ -689,7 +689,7 @@ This entry controls the amount of entries created in the Windows Time log file. 
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time.  
   
@@ -699,7 +699,7 @@ This entry controls the location and file name of the Windows Time log. The defa
 **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config**  
   
 ###### Version  
-Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)]  
+Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2   
   
 This entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, this entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Any positive number is valid, and 3000000 is recommended. This value does not affect the event log entries normally created by Windows Time.  
   
@@ -707,7 +707,7 @@ This entry controls the circular logging behavior of Windows Time log files. Whe
 You can configure most W32Time parameters by using the Group Policy Object Editor. This includes configuring a computer to be an NTPServer or NTPClient, configuring the time synchronization mechanism, and configuring a computer to be a reliable time source.  
   
 > [!NOTE]  
-> Group Policy settings for the Windows Time service can be configured on Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] domain controllers and can be applied only to computers running Windows Server 2003, Windows Server 2003 R2, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], and [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)].  
+> Group Policy settings for the Windows Time service can be configured on Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2  domain controllers and can be applied only to computers running Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2 .  
   
 You can find the Group Policy settings used to configure W32Time in the Group Policy Object Editor snap\-in in the following locations:  
   
@@ -724,7 +724,7 @@ You can find the Group Policy settings used to configure W32Time in the Group Po
     Enable **Windows NTP Server** here.  
   
 > [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file \(System.adm\) for the Group Policy object \(GPO\) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=186066) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=186066\). This issue applies to [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)], [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], Windows Server 2003 R2, and Windows Server 2003.  
+> Some of the preset values that are configured in the System Administrative template file \(System.adm\) for the Group Policy object \(GPO\) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=186066) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=186066\). This issue applies to  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003 R2, and Windows Server 2003.  
   
 The following table lists the global Group Policy settings that are associated with the Windows Time service and the pre\-set value associated with each setting. For more information about each setting, see the corresponding registry entries in “[Windows Time Service Registry Entries](#w2k3tr_times_tools_uhlp)” earlier in this subject. The following settings are contained in a single GPO called **Global Configuration Settings**.  
   

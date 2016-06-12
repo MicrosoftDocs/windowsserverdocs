@@ -14,7 +14,7 @@ ms.assetid: a5f06078-afa4-45ac-ae8a-94723b95d2fd
 author: Femila
 ---
 # Changes Made by Adprep.exe
-This topic describes the changes that Adprep.exe makes in [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] and [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].  
+This topic describes the changes that Adprep.exe makes in  Windows Server 2012 R2  and  Windows Server 2012 .  
   
 -   [Forest-Wide Updates](Forest-Wide-Updates.md)  
   

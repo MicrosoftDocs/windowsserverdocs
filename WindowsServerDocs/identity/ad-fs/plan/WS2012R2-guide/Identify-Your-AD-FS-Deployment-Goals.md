@@ -25,7 +25,7 @@ Prior versions of AD FS were most commonly deployed to achieve the following:
   
 -   Providing your employees or customers with a web\-based, SSO experience when accessing resources or services in the cloud.  
   
-In addition to these, AD FS in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] adds functionality that can help you achieve the following:  
+In addition to these, AD FS in Windows Server® 2012 R2 adds functionality that can help you achieve the following:  
   
 -   Device workplace join for SSO and seamless second factor authentication. This enables organizations to allow access from user’s personal devices and manage the risk when providing this access.  
   
@@ -46,7 +46,7 @@ To summarize, AD FS in Windows Server 2012 R2 can be deployed to achieve the fol
 -   Password change to enable users to change their password from any workplace joined device when their password has expired so that they can continue to access resources.  
   
 ### Enhance your access control risk management tools  
-Managing risk is an important aspect of governance and compliance in every IT organization. There are numerous access control risk management enhancements in AD FS in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)], including the following:  
+Managing risk is an important aspect of governance and compliance in every IT organization. There are numerous access control risk management enhancements in AD FS in Windows Server® 2012 R2, including the following:  
   
 -   Flexible controls based on network location to govern how a user authenticates to access an AD FS\-secured application.  
   
@@ -61,7 +61,7 @@ Managing risk is an important aspect of governance and compliance in every IT or
 -   Access revocation for any workplace joined device that is disabled or deleted in Active Directory.  
   
 ### Use AD FS to enhance the sign\-in experience  
-The following are new AD FS capabilities in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] that enable administrator to customize and enhance the sign\-in experience:  
+The following are new AD FS capabilities in Windows Server® 2012 R2 that enable administrator to customize and enhance the sign\-in experience:  
   
 -   Unified customization of the AD FS service, where the changes are made once and then automatically propagated to the rest of the AD FS federation servers in a given farm.  
   

@@ -94,7 +94,7 @@ There are a number of stages and steps to cloning a virtualized domain controlle
   
 -   Step 1: Validate that the hypervisor supports VM\-Generation ID and therefore, cloning  
   
--   Step 2: Verify the PDC emulator role is hosted by a domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and that it is online and reachable by the cloned domain controller during cloning.  
+-   Step 2: Verify the PDC emulator role is hosted by a domain controller that runs  Windows Server 2012  and that it is online and reachable by the cloned domain controller during cloning.  
   
 **Prepare the source domain controller**  
   
@@ -125,7 +125,7 @@ The following diagram illustrates the virtualized domain controller cloning proc
 ### Step 1 \- Validate the Hypervisor  
 Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor\-independent and do not require Hyper\-V.  
   
-If the hypervisor is Microsoft Hyper\-V, ensure it is running on [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. You can validate this using Device Management  
+If the hypervisor is Microsoft Hyper\-V, ensure it is running on  Windows Server 2012 . You can validate this using Device Management  
   
 Open **Devmgmt.msc** and examine **System Devices** for installed Microsoft Hyper\-V devices and drivers. The specific system device required for a virtualized domain controller is the **Microsoft Hyper\-V Generation Counter** \(driver: vmgencounter.sys\).  
   

@@ -26,7 +26,7 @@ Designing a site topology helps you efficiently route client queries and Active�
   
 Before you begin to design your site topology, you must understand your physical network structure. In addition, you must first design your Active Directory logical structure, including the administrative hierarchy, forest plan, and domain plan for each forest. You must also complete your Domain Name System \(DNS\) infrastructure design for AD DS. For more information about designing your Active Directory logical structure and DNS infrastructure, see [Designing the Logical Structure for Windows Server 2008 AD DS](Designing-the-Logical-Structure-for-Windows-Server-2008-AD-DS.md).  
   
-After you complete your site topology design, you must verify that your domain controllers meet the hardware requirements for [!INCLUDE[nextref_longhornstd](includes/nextref_longhornstd_md.md)], [!INCLUDE[nextref_longhornent](includes/nextref_longhornent_md.md)], and [!INCLUDE[nextref_longhorndat](includes/nextref_longhorndat_md.md)].  
+After you complete your site topology design, you must verify that your domain controllers meet the hardware requirements for  Windows Server 2008 Standard ,  Windows Server 2008 Enterprise , and  Windows Server 2008 Datacenter .  
   
 ## In this guide  
   

@@ -72,7 +72,7 @@ For information about Adprep and previous operating system forest preparation, s
   
 Server Manager acts as a hub for server management tasks. Its dashboard\-style appearance periodically refreshes views of installed roles and remote server groups. Server Manager provides centralized management of local and remote servers, without the need for console access.  
   
-Active Directory Domain Services is one of those hub roles; by running Server Manager on a domain controller or the Remote Server Administration Tools on a [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], you see important recent issues on domain controllers in your forest.  
+Active Directory Domain Services is one of those hub roles; by running Server Manager on a domain controller or the Remote Server Administration Tools on a Windows 8, you see important recent issues on domain controllers in your forest.  
   
 These views include:  
   

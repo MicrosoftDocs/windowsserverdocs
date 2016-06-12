@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 7ddde8f4-f71c-4f8f-be9b-247e42bdce29
 ---
 # When to Use a Send Group Membership as a Claim Rule
-You can use this rule in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] when you want to issue a new outgoing claim value for only those users who are members of a specified Activ  Directory security group. When you use this rule, you issue a single claim for only the group that you specify and that matches the rule logic, as described in the following table.
+You can use this rule in Active Directory Federation Services \(AD FS\) when you want to issue a new outgoing claim value for only those users who are members of a specified Activ  Directory security group. When you use this rule, you issue a single claim for only the group that you specify and that matches the rule logic, as described in the following table.
 
 |Rule option|Rule logic|
 |---------------|--------------|
@@ -23,7 +23,7 @@ The following sections provide a basic introduction to claim rules. They also pr
 ## About claim rules
 A claim rule represents an instance of business logic that will take an incoming claim, apply a condition to it \(if x then y\) and produce an outgoing claim based on the condition parameters. The following list outlines important tips that you should know about claim rules before you read further in this topic:
 
--   In the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in, claim rules can only be created using claim rule templates
+-   In the AD FS Management snap\-in, claim rules can only be created using claim rule templates
 
 -   Claim rules process incoming claims either directly from a claims provider \(such as Active Directory or another Federation Service\) or from the output of the acceptance transform rules on a claims provider trust.
 

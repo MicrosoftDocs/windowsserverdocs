@@ -25,7 +25,7 @@ author: femila
 * Windows Time Service Tools and Settings  
   
 > [!NOTE]  
-> In Windows Server® 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory® directory service. In [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], the directory service is named [!INCLUDE[firstref_adds](includes/firstref_adds_md.md)] \(AD DS\). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory Domain Services in Windows Server 2016.  
+> In Windows Server® 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory® directory service. In  Windows Server 2008 R2  and  Windows Server 2008 , the directory service is named Active Directory Domain Services \(AD DS\). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory Domain Services in Windows Server 2016.  
   
 The Windows® Time service, also known as W32Time, synchronizes the date and time for all computers running in an AD DS domain. Time synchronization is critical for the proper operation of many Windows services and line\-of\-business applications. The Windows Time service uses the Network Time Protocol \(NTP\) to synchronize computer clocks on the network so that an accurate clock value, or time stamp, can be assigned to network validation and resource access requests. The service integrates NTP and time providers, making it a reliable and scalable time service for enterprise administrators.  
   

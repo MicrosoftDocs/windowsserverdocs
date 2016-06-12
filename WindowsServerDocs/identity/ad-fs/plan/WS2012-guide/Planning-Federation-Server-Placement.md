@@ -13,7 +13,7 @@ ms.assetid: 3a392fb3-e8a9-4dfd-a3e5-1da67fe93f2f
 author: billmath
 ---
 # Planning Federation Server Placement
-The most critical component of an [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] deployment is the [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]. Therefore, it is important that you plan your [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] placement strategy carefully, including when and where to deploy [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]s. The information in the following topics can help you determine when and where to create a [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] or [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] farm and whether to use that [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] in the account partner role, the resource partner role, or both:  
+The most critical component of an Active Directory Federation Services \(AD FS\) deployment is the federation server. Therefore, it is important that you plan your federation server placement strategy carefully, including when and where to deploy federation servers. The information in the following topics can help you determine when and where to create a federation server or federation server farm and whether to use that federation server in the account partner role, the resource partner role, or both:  
   
 -   [Review the Role of the Federation Server in the Account Partner](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
   
@@ -30,8 +30,8 @@ The most critical component of an [!INCLUDE[firstref_adfs2](includes/firstref_ad
 -   [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md)  
   
 > [!NOTE]  
-> Although this information might help with your placement planning for [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]s, it does not explain how to determine the proper number of [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]s and the hardware requirements for each [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] design.  
+> Although this information might help with your placement planning for federation servers, it does not explain how to determine the proper number of federation servers and the hardware requirements for each AD FS design.  
   
-For examples of how a [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] can be placed in any of the two primary [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] design scenarios, see [Mapping Your Deployment Goals to an AD FS Design](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md).  
+For examples of how a federation server can be placed in any of the two primary AD FS design scenarios, see [Mapping Your Deployment Goals to an AD FS Design](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md).  
   
 

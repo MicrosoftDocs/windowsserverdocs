@@ -13,21 +13,21 @@ ms.assetid: 90e37248-14ff-41ff-85f3-301246e1670c
 author: billmath
 ---
 # Planning for Interoperability with AD FS 1.x
-[!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] federation servers running [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)] can interoperate with both an AD FS 1.0 \(installed with Windows Server 2003 R2\) Federation Service and an AD FS 1.1 \(installed with Windows Server 2008 or Windows Server 2008 R2\) Federation Service. Any of the following interoperability combinations are supported:  
+Active Directory Federation Services \(AD FS\) federation servers running Windows Server® 2012 can interoperate with both an AD FS 1.0 \(installed with Windows Server 2003 R2\) Federation Service and an AD FS 1.1 \(installed with Windows Server 2008 or Windows Server 2008 R2\) Federation Service. Any of the following interoperability combinations are supported:  
   
--   Any AD FS 1.*x* Federation Service can send a claim that can be consumed by an [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Federation Service in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. For more information, see [Checklist: Configuring AD FS  to Consume Claims from AD FS 1.x](Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md).  
+-   Any AD FS 1.*x* Federation Service can send a claim that can be consumed by an AD FS Federation Service in  Windows Server 2012 . For more information, see [Checklist: Configuring AD FS  to Consume Claims from AD FS 1.x](Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md).  
   
--   Any [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Federation Service in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] can send an AD FS 1.*x*\-compatible claim that can be consumed by an AD FS 1.*x* Federation Service. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service](Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md).  
+-   Any AD FS Federation Service in  Windows Server 2012  can send an AD FS 1.*x*\-compatible claim that can be consumed by an AD FS 1.*x* Federation Service. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service](Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md).  
   
--   Any [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Federation Service in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] can send an AD FS 1.*x*\-compatible claim that can be consumed by one or more Web servers running the AD FS 1.*x* claims\-aware Web agent. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent](Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md).  
+-   Any AD FS Federation Service in  Windows Server 2012  can send an AD FS 1.*x*\-compatible claim that can be consumed by one or more Web servers running the AD FS 1.*x* claims\-aware Web agent. For more information, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent](Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md).  
   
 > [!NOTE]  
-> [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] does not support or interoperate with the AD FS 1.*x* Windows NT token–based Web agent.  
+> AD FS does not support or interoperate with the AD FS 1.*x* Windows NT token–based Web agent.  
   
-An AD FS 1.*x*\-compatible claim is a claim that can be sent by an AD FS Federation Service in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and understood by an AD FS 1.*x* Federation Service. So that an AD FS 1.*x* Federation Service can consume the claims that an AD FS Federation Service sends, a Name Identifier \(ID\) claim type must be sent.  
+An AD FS 1.*x*\-compatible claim is a claim that can be sent by an AD FS Federation Service in  Windows Server 2012  and understood by an AD FS 1.*x* Federation Service. So that an AD FS 1.*x* Federation Service can consume the claims that an AD FS Federation Service sends, a Name Identifier \(ID\) claim type must be sent.  
   
 ## Understanding the Name ID claim type  
-The Name ID claim type is the equivalent of the identity claim type that AD FS 1.*x* uses. It must be used whenever you want to interoperate with AD FS 1.*x*. The Name ID claim type enables either an AD FS 1.*x* Federation Service or the AD FS 1.*x* claims\-aware Web agent to consume claims that AD FS in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] sends, as long as these claims are sent in one of the Name ID formats in the following table.  
+The Name ID claim type is the equivalent of the identity claim type that AD FS 1.*x* uses. It must be used whenever you want to interoperate with AD FS 1.*x*. The Name ID claim type enables either an AD FS 1.*x* Federation Service or the AD FS 1.*x* claims\-aware Web agent to consume claims that AD FS in  Windows Server 2012  sends, as long as these claims are sent in one of the Name ID formats in the following table.  
   
 |Name ID format|Corresponding URI|  
 |------------------|---------------------|  

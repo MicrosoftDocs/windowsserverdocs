@@ -30,7 +30,7 @@ The forest owner controls these default containers and OUs.
 The domain container is the root container of the hierarchy of a domain. Changes to the policies or the access control list \(ACL\) on this container can potentially have domain\-wide impact. Do not delegate control of this container; it must be controlled by the service administrators.  
   
 ## Users and computers containers  
-When you perform an in\-place domain upgrade from Windows Server 2003 to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], existing users and computers are automatically placed into the users and the computers containers. If you are creating a new Active Directory domain, the users and computers containers are the default locations for all new user accounts and non\-domain\-controller computer accounts in the domain.  
+When you perform an in\-place domain upgrade from Windows Server 2003 to  Windows Server 2008 , existing users and computers are automatically placed into the users and the computers containers. If you are creating a new Active Directory domain, the users and computers containers are the default locations for all new user accounts and non\-domain\-controller computer accounts in the domain.  
   
 > [!IMPORTANT]  
 > If you need to delegate control over users or computers, do not modify the default settings on the users and computers containers. Instead, create new OUs \(as needed\) and move the user and computer objects from their default containers and into the new OUs. Delegate control over the new OUs, as needed. We recommend that you not modify who controls the default containers.  

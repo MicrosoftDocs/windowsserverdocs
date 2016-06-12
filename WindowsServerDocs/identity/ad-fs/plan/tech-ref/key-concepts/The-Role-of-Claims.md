@@ -18,7 +18,7 @@ In the claims\-based identity model, claims play a pivotal role in the federatio
 In its simplest form, claims are simply *statements* \(for example, name, identity, group\), made about users, that are used primarily for authorizing access to claims\-based applications located anywhere on the Internet. Each statement corresponds to a *value* that is stored in the claim.
 
 ### How claims are sourced
-The Federation Service in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] defines which claims are exchanged between federated partners. However, before it can do this it must first populate or source the claim with either a retrieved value or a calculated value. Each claim value represents a value of a user, group, or entity and is sourced in one of two ways:
+The Federation Service in Active Directory Federation Services \(AD FS\) defines which claims are exchanged between federated partners. However, before it can do this it must first populate or source the claim with either a retrieved value or a calculated value. Each claim value represents a value of a user, group, or entity and is sourced in one of two ways:
 
 1.  When the value that makes up the claim is retrieved from an attribute store, for example, when an attribute value of Sales Department is retrieved from the properties of an Active Directory user account. For more information, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md).
 
@@ -27,7 +27,7 @@ The Federation Service in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.m
 Claims can include values such as an e\-mail address, User Principal Name \(UPN\), group membership, and other account attributes.
 
 ### How claims flow
-Other parties rely on the values of the claims to perform authorization tasks for Web\-based applications that they host. These parties are referred to as *relying parties* in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in. The Federation Service is responsible for brokering trust between many disparate parties. It is designed to process and flow the trusted exchange of claims from an organization that initially sources the claims, also referred to as *claims providers* in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in, to a relying party. A relying party then uses these claims to make authorization decisions.
+Other parties rely on the values of the claims to perform authorization tasks for Web\-based applications that they host. These parties are referred to as *relying parties* in the AD FS Management snap\-in. The Federation Service is responsible for brokering trust between many disparate parties. It is designed to process and flow the trusted exchange of claims from an organization that initially sources the claims, also referred to as *claims providers* in the AD FS Management snap\-in, to a relying party. A relying party then uses these claims to make authorization decisions.
 
 The flow of claims using this process is known as the *claims pipeline*. There are three steps in the flow of claims through the claims pipeline:
 
@@ -43,7 +43,7 @@ For more information, see [The Role of the Claims Pipeline](The-Role-of-the-Clai
 When you write claim rules, the source of the incoming claims for the claim rules varies based on whether you are writing rules on a claims provider trust or a relying party trust. When you write claim rules for a claims provider trust, the incoming claims are the claims sent from the trusted claims provider to the Federation Service. When you write rules for a relying party trust, the incoming claims are the claims that are output by the claim rules of the applicable claims provider trust. For more information about incoming claims and outgoing claims, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md) and [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
 
 ## What are claim types?
-A claim type provides context for the claim value. It is usually expressed as a Uniform Resource Identifier \(URI\). [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] can support any claim type, and it is configured with the claim types in the following table by default.
+A claim type provides context for the claim value. It is usually expressed as a Uniform Resource Identifier \(URI\). AD FS can support any claim type, and it is configured with the claim types in the following table by default.
 
 |Name|Description|URI|
 |--------|---------------|-------|
@@ -69,17 +69,17 @@ A claim type provides context for the claim value. It is usually expressed as a 
 |Windows account name|The domain account name of the user in the form of <domain>\\<user>|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/windowsaccountname|
 
 ## What are claim descriptions?
-Claim descriptions represent a list of claims types that [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] supports and that may be published in federation metadata. The claim types mentioned in the previous table are configured as claims descriptions in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in.
+Claim descriptions represent a list of claims types that AD FS supports and that may be published in federation metadata. The claim types mentioned in the previous table are configured as claims descriptions in the AD FS Management snap\-in.
 
 The collection of claim descriptions that will be published to federation metadata is stored in the AD FS configuration database. These claim descriptions are used by various components of the Federation Service.
 
-Each claim description includes a claim type URI, name, publishing state, and description. You can manage the claim description collection by using the **Claim Descriptions** node in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in. You can modify the publishing state of a claim description using the snap\-in. The following settings are available:
+Each claim description includes a claim type URI, name, publishing state, and description. You can manage the claim description collection by using the **Claim Descriptions** node in the AD FS Management snap\-in. You can modify the publishing state of a claim description using the snap\-in. The following settings are available:
 
 -   **Publish this claim in federation metadata as a claim type that this Federation Service can accept** \(Publish as Accepted\)—Indicates the claim types that will be accepted from other claims providers by this Federation Service.
 
 -   **Publish this claim in federation metadata as a claim type that this Federation Service can send** \(Publish as Sent\)—Indicates the claim types that are offered by this Federation Service. These are the claim types the Federation Service publishes to others as those it is willing to send. The actual claim types sent by the claims provider are often a subset of this list.
 
-For more information about how to set the publishing state of a claim type, see [Add a Claim Description](Add-a-Claim-Description.md) in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Deployment Guide.
+For more information about how to set the publishing state of a claim type, see [Add a Claim Description](Add-a-Claim-Description.md) in the AD FS Deployment Guide.
 
 ### When generating Federation Metadata
 Federation Metadata includes all the claim descriptions that are marked for publishing.

@@ -14,9 +14,9 @@ ms.assetid: a2db7dab-8013-4257-abcf-622e12ee7681
 author: Femila
 ---
 # Schema Updates
-This topic lists the LDF files that include the changes that Adprep.exe makes in [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] and.  
+This topic lists the LDF files that include the changes that Adprep.exe makes in  Windows Server 2012 R2  and.  
   
-These are the LDF files included in [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]:  
+These are the LDF files included in  Windows Server 2012 R2 :  
   
 -   [Sch57.ldf](Schema-Updates.md#BKMK_Sch57)  
   
@@ -44,7 +44,7 @@ These are the LDF files included in [!INCLUDE[winblue_server_2](includes/winblue
   
 -   [Sch69.ldf](Schema-Updates.md#BKMK_Sch69)  
   
-These are the LDF files included in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]:  
+These are the LDF files included in  Windows Server 2012 :  
   
 -   [Sch48.ldf](Schema-Updates.md#BKMK_Sch48)  
   

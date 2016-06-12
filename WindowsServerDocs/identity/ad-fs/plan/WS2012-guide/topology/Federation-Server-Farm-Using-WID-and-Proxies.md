@@ -13,7 +13,7 @@ ms.assetid: a2a3603a-186a-47f5-8ffa-d2ae2feea7b5
 author: billmath
 ---
 # Federation Server Farm Using WID and Proxies
-This deployment topology for [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] is identical to the federation server farm with Windows Internal Database \(WID\) topology, but it adds federation server proxies to the perimeter network to support external users. The federation server proxies redirect client authentication requests that come from outside your corporate network to the federation server farm.  
+This deployment topology for Active Directory Federation Services \(AD FS\) is identical to the federation server farm with Windows Internal Database \(WID\) topology, but it adds federation server proxies to the perimeter network to support external users. The federation server proxies redirect client authentication requests that come from outside your corporate network to the federation server farm.  
   
 ## Deployment considerations  
 This section describes various considerations about the intended audience, benefits, and limitations that are associated with this deployment topology.  

@@ -12,7 +12,7 @@ ms.assetid: 7407f969-f375-4885-9a71-2702a388226a
 author: Femila
 ---
 # Finding Additional Resources for Logical Structure Design
-You can find the following documentation about Active Directory Domain Services \(AD DS\) on the Windows Server 2003 and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] TechCenter Web sites:  
+You can find the following documentation about Active Directory Domain Services \(AD DS\) on the Windows Server 2003 and  Windows Server 2008  TechCenter Web sites:  
   
 -   For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology-for-Windows-Server-2008-AD-DS.md).  
   
@@ -22,7 +22,7 @@ You can find the following documentation about Active Directory Domain Services
   
 -   For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=37928](http://go.microsoft.com/fwlink/?LinkId=37928)\).  
   
--   For more information about upgrading Active Directory domains to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](Upgrading-Active-Directory-Domains-to-Windows-Server-2008-and-Windows-Server-2008-R2-AD-DS-Domains.md).  
+-   For more information about upgrading Active Directory domains to  Windows Server 2008 , see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](Upgrading-Active-Directory-Domains-to-Windows-Server-2008-and-Windows-Server-2008-R2-AD-DS-Domains.md).  
   
 -   For more information about restructuring AD DS domains within and between forests, see Active Directory Migration Tool version 3.1 Migration Guide \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=93678](http://go.microsoft.com/fwlink/?LinkId=93678)\).  
   

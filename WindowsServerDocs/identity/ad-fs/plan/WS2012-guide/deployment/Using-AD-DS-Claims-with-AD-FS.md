@@ -22,12 +22,12 @@ author: billmath
 You can enable richer access control for federated applications by using Active Directory Domain Services \(AD DS\)\-issued user and device claims together with Active Directory Federation Services \(AD FS\).  
   
 ## About Dynamic Access Control  
-In [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)], the Dynamic Access Control feature enables organizations to grant access to files based on user claims \(which are sourced by user account attributes\) and device claims \(which are sourced by computer account attributes\) that are issued by Active Directory Domain Services \(AD DS\). AD DS issued claims are integrated into Windows integrated authentication through the Kerberos authentication protocol.  
+In Windows Server® 2012, the Dynamic Access Control feature enables organizations to grant access to files based on user claims \(which are sourced by user account attributes\) and device claims \(which are sourced by computer account attributes\) that are issued by Active Directory Domain Services \(AD DS\). AD DS issued claims are integrated into Windows integrated authentication through the Kerberos authentication protocol.  
   
 For more information about Dynamic Access Control, see [Dynamic Access Control Content Roadmap](Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
   
 ### What’s New in AD FS?  
-As an extension to the Dynamic Access Control scenario, AD FS in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] can now:  
+As an extension to the Dynamic Access Control scenario, AD FS in  Windows Server 2012  can now:  
   
 -   Access computer account attributes in addition to user account attributes from within AD DS. In previous versions of AD FS, the Federation Service could not access computer account attributes at all from AD DS.  
   

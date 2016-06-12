@@ -14,7 +14,7 @@ ms.assetid: 980b5c19-bf50-4ee1-8398-4376e8619948
 author: Femila
 ---
 # AD DS Deployment
-This guide covers how to install and remove Active Directory Domain Services \(AD DS\) in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], and important issues to be aware of when you add new domain controllers to an existing Active Directory environment.  
+This guide covers how to install and remove Active Directory Domain Services \(AD DS\) in  Windows Server 2012 , and important issues to be aware of when you add new domain controllers to an existing Active Directory environment.  
   
 -   [What's New in Active Directory Domain Services Installation and Removal](What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)  
   

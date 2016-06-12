@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 180897e0-b6e3-405a-b15a-06fba443e32c
 ---
 # When to Use a Pass Through or Filter Claim Rule
-You can use this rule in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] when you need to take a specific incoming claim type and then apply an action that will determine what output should occur based on the values in the incoming claim. When you use this rule, you pass through or filter any claims that match the rule logic in the following table, based on either of the options you configure in the rule.
+You can use this rule in Active Directory Federation Services \(AD FS\) when you need to take a specific incoming claim type and then apply an action that will determine what output should occur based on the values in the incoming claim. When you use this rule, you pass through or filter any claims that match the rule logic in the following table, based on either of the options you configure in the rule.
 
 |Rule option|Rule logic|
 |---------------|--------------|
@@ -26,7 +26,7 @@ The following sections provide a basic introduction to claim rules and provide f
 ## About claim rules
 A claim rule represents an instance of business logic that will take an incoming claim, apply a condition to it \(if x then y\) and produce an outgoing claim based on the condition parameters. The following list outlines important tips that you should know about claim rules before you read further in this topic:
 
--   In the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in, claim rules can only be created using claim rule templates
+-   In the AD FS Management snap\-in, claim rules can only be created using claim rule templates
 
 -   Claim rules process incoming claims either directly from a claims provider \(such as Active Directory or another Federation Service\) or from the output of the acceptance transform rules on a claims provider trust.
 
@@ -40,7 +40,7 @@ For more detailed information about claim rules and claim rule sets, see [The Ro
 When using this action, all incoming claim values for the specified claim type are passed through as outgoing claims. For example, when the incoming claim type is specified as the Role claim type, all incoming claim values are copied individually into new outgoing claims with the outgoing claim type of Role.
 
 ## Filtering a claim
-In [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], the term *claims filtering* means to filter or restrict incoming claim values so that only certain values are passed or sent through as outgoing claims. It is the **Pass Through or Filter an Incoming Claim** rule template that makes this function possible. Within the properties of this rule, you can set conditions to filter incoming values so that only the values that meet your specified criteria are passed through.
+In AD FS, the term *claims filtering* means to filter or restrict incoming claim values so that only certain values are passed or sent through as outgoing claims. It is the **Pass Through or Filter an Incoming Claim** rule template that makes this function possible. Within the properties of this rule, you can set conditions to filter incoming values so that only the values that meet your specified criteria are passed through.
 
 For example, you can use this rule to only pass through claims that match the claim value of Purchaser when the incoming claim type matches the claim type of Role or you might want to issue only claims about the name of the user, but not claims containing the social security number of the user.
 
@@ -57,7 +57,7 @@ When you use a claims provider trust, this rule can be configured to pass throug
 When you use a relying party trust, this rule can be configured to pass through or filter outgoing claims that will be sent to the relying party. Some relying parties might not understand certain claim types, or certain claims might contain sensitive information that should not be sent to certain relying parties. This rule template can help to enforce those policies for a particular relying party trust.
 
 ## How to create this rule
-You create this rule using either the claim rule language or using the Pass Through or Filter an Incoming Claim rule template in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in. This rule template provides the following configuration options:
+You create this rule using either the claim rule language or using the Pass Through or Filter an Incoming Claim rule template in the AD FS Management snap\-in. This rule template provides the following configuration options:
 
 -   Specify a claim rule name
 
@@ -71,7 +71,7 @@ You create this rule using either the claim rule language or using the Pass Thro
 
 -   Pass through only claim values that start with a specific value
 
-For more instructions on how to create this template, see [Create a Rule to Pass Through or Filter an Incoming Claim_1](Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim_1.md) in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Deployment Guide.
+For more instructions on how to create this template, see [Create a Rule to Pass Through or Filter an Incoming Claim_1](Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim_1.md) in the AD FS Deployment Guide.
 
 ## Using the claim rule language
 If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see When to Use a Custom Rule.

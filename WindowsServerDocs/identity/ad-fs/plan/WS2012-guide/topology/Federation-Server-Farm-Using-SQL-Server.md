@@ -13,7 +13,7 @@ ms.assetid: 9a55257b-79de-470f-9ca5-0b8b59af5631
 author: billmath
 ---
 # Federation Server Farm Using SQL Server
-This topology for [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] differs from the federation server farm using Windows Internal Database \(WID\) deployment topology in that it does not replicate the data to each federation server in the farm. Instead, all federation servers in the farm can read and write data into a common database that is stored on a server running Microsoft SQL Server that is located in the corporate network.  
+This topology for Active Directory Federation Services \(AD FS\) differs from the federation server farm using Windows Internal Database \(WID\) deployment topology in that it does not replicate the data to each federation server in the farm. Instead, all federation servers in the farm can read and write data into a common database that is stored on a server running Microsoft SQL Server that is located in the corporate network.  
   
 ## Deployment considerations  
 This section describes various considerations about the intended audience, benefits, and limitations that are associated with this deployment topology.  

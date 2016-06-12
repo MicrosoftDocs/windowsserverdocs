@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: a47b5f5b-e25d-4608-9b28-7152e14fe1e2
 ---
 # The Role of the Claims Engine
-At its highest level, the claims engine in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] is a rule\-based engine that is dedicated to serving and processing claim requests for the Federation Service. The claims engine is the sole entity within the Federation Service that is responsible for running each of the rule sets across all of the federated trust relationships you have configured and handing the output result over to the claims pipeline.
+At its highest level, the claims engine in Active Directory Federation Services \(AD FS\) is a rule\-based engine that is dedicated to serving and processing claim requests for the Federation Service. The claims engine is the sole entity within the Federation Service that is responsible for running each of the rule sets across all of the federated trust relationships you have configured and handing the output result over to the claims pipeline.
 
 While the claims pipeline is more a logical concept of the end\-to\-end process for flowing claims, claim rules are an actual administrative element that you can use to customize the flow of claims during the claim rules execution process. For more information about the pipeline process, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
 
@@ -46,7 +46,7 @@ For example, in the illustration below, the claims engine reads the claims of A 
 All the rules in a claim rule set share the same input claim set. Each rule in that set can add to the shared input claim set, thus affecting all subsequent rules in the set.
 
 ### Step 2 – Execution
-In this step of the claim rules process, claim rules are processed when the claims engine chronologically steps through all of the rules within a particular rule set one at a time. Each rule within a rule set only runs once and is executed in the order in which they appear from top to bottom as displayed in the Edit Claim Rules dialog box in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in. The claim rule that is at the top of the rule set is processed first and then subsequent rules are processed until all of the rules have been run.
+In this step of the claim rules process, claim rules are processed when the claims engine chronologically steps through all of the rules within a particular rule set one at a time. Each rule within a rule set only runs once and is executed in the order in which they appear from top to bottom as displayed in the Edit Claim Rules dialog box in the AD FS Management snap\-in. The claim rule that is at the top of the rule set is processed first and then subsequent rules are processed until all of the rules have been run.
 
 As defined in the claim rule language, a claim rule consists of two parts, condition and issuance statement. The claims engine first processes the condition part by using the data in the input claim set to determine whether the condition specified within the rule holds true for the claims contained in the input claim set \(the claims that match the rule’s condition are referred to as a matching claims\). If any matching claims are found, the claims engine executes the issuance statement of the rule for each set of the matching claims. The issuance statement of the rule can perform either of the following tasks with matching claims:
 

@@ -14,7 +14,7 @@ ms.assetid: 758f8daf-ac19-489c-807c-5e35ae51afc7
 # Walkthrough Guide: Manage Risk with Conditional Access Control
 
 ## About This Guide
-This walkthrough provides instructions for managing risk with one of the factors \(user data\) available through the conditional access control mechanism in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]. For more information about conditional access control and authorization mechanisms in [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)], see [Manage Risk with Conditional Access Control](Manage-Risk-with-Conditional-Access-Control.md).
+This walkthrough provides instructions for managing risk with one of the factors \(user data\) available through the conditional access control mechanism in Active Directory Federation Services \(AD FS\) in Windows Server® 2012 R2. For more information about conditional access control and authorization mechanisms in AD FS in Windows Server® 2012 R2, see [Manage Risk with Conditional Access Control](Manage-Risk-with-Conditional-Access-Control.md).
 
 This walkthrough consists of the following sections:
 
@@ -29,9 +29,9 @@ This walkthrough consists of the following sections:
 ## <a name="BKMK_1"></a>Step 1: Setting up the lab environment
 In order to complete this walkthrough, you need an environment that consists of the following components:
 
--   An Active Directory domain with a test user and group accounts, running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] or an Active Directory domain running on [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]
+-   An Active Directory domain with a test user and group accounts, running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to Windows Server® 2012 R2 or an Active Directory domain running on Windows Server® 2012 R2
 
--   A federation server running on [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]
+-   A federation server running on Windows Server® 2012 R2
 
 -   A web server that hosts your sample application
 

@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 1f2fbe93-f223-4c9e-a30b-a288ace69550
 ---
 # When to Use an Authorization Claim Rule
-You can use this rule in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] when you need to take an incoming claim type and then apply an action that will determine whether a user will be permitted or denied access based on the value that you specify in the rule. When you use this rule, you pass through or transform claims that match the following rule logic, based on either of the options you configure in the rule:
+You can use this rule in Active Directory Federation Services \(AD FS\) when you need to take an incoming claim type and then apply an action that will determine whether a user will be permitted or denied access based on the value that you specify in the rule. When you use this rule, you pass through or transform claims that match the following rule logic, based on either of the options you configure in the rule:
 
 |Rule option|Rule logic|
 |---------------|--------------|
@@ -25,7 +25,7 @@ The following sections provide a basic introduction to claim rules and provide f
 ## About claim rules
 A claim rule represents an instance of business logic that will take an incoming claim, apply a condition to it \(if x then y\) and produce an outgoing claim based on the condition parameters. The following list outlines important tips that you should know about claim rules before you read further in this topic:
 
--   In the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in, claim rules can only be created using claim rule templates
+-   In the AD FS Management snap\-in, claim rules can only be created using claim rule templates
 
 -   Claim rules process incoming claims either directly from a claims provider \(such as Active Directory or another Federation Service\) or from the output of the acceptance transform rules on a claims provider trust.
 
@@ -50,10 +50,10 @@ When you use the Permit or Deny Users Based on an Incoming Claim rule template t
 
 If you want to use the deny condition yet also enable access to the relying party for specific users, you must later explicitly add authorization rules with the permit condition to enable those users access to the relying party.
 
-If a user is denied access when the claims issuance engine processes the rule set, further rules processing shuts down, and [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] returns an “Access denied” error to the user’s request.
+If a user is denied access when the claims issuance engine processes the rule set, further rules processing shuts down, and AD FS returns an “Access denied” error to the user’s request.
 
 ## Authorizing users
-In [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], authorization rules are used to issue a permit or deny claim that will determine whether a user or a group of users \(depending on the claim type used\) will be allowed to access Web\-based resources in a given relying party or not. Authorization rules can only be set on relying party trusts.
+In AD FS, authorization rules are used to issue a permit or deny claim that will determine whether a user or a group of users \(depending on the claim type used\) will be allowed to access Web\-based resources in a given relying party or not. Authorization rules can only be set on relying party trusts.
 
 ### Authorization rule sets
 Different authorization rule sets exist depending on the type of permit or deny operations you need to configure. These rule sets include:
@@ -67,14 +67,14 @@ Different authorization rule sets exist depending on the type of permit or deny 
 For more details about how the authorization rule process fits into the claims issuance pipeline, see The Role of the Claims Issuance Engine.
 
 ### Supported claim types
-[!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)]defines two claim types that are used to determine whether a user is permitted or denied. These claim type Uniform Resource Identifiers \(URIs\) are as follows:
+AD FSdefines two claim types that are used to determine whether a user is permitted or denied. These claim type Uniform Resource Identifiers \(URIs\) are as follows:
 
 1.  **Permit**: http:\/\/schemas.microsoft.com\/authorization\/claims\/permit
 
 2.  **Deny**: http:\/\/schemas.microsoft.com\/authorization\/claims\/deny
 
 ## How to create this rule
-You can create both authorization rules using either the claim rule language or using the **Permit All Users** rule template or the **Permit or Deny Users Based on an Incoming Claim** rule template in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in. The Permit All Users rule template does not provide any configuration options. However, the Permit or Deny Users Based on an Incoming Claim rule template provides the following configuration options:
+You can create both authorization rules using either the claim rule language or using the **Permit All Users** rule template or the **Permit or Deny Users Based on an Incoming Claim** rule template in the AD FS Management snap\-in. The Permit All Users rule template does not provide any configuration options. However, the Permit or Deny Users Based on an Incoming Claim rule template provides the following configuration options:
 
 -   Specify a claim rule name
 

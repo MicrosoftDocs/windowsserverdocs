@@ -12,7 +12,7 @@ ms.assetid: 8758beb3-8c6e-4ff0-9f6e-953512e0fbae
 author: Femila
 ---
 # AD DS Deployment Requirements
-The structure of your existing environment determines your strategy for deploying [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] Active Directory Domain Services \(AD DS\). If you are creating an AD DS environment and you do not have an existing domain structure, complete your AD DS design before you begin creating your AD DS environment. Then, you can deploy a new forest root domain and deploy the rest of your domain structure according to your design.  
+The structure of your existing environment determines your strategy for deploying  Windows Server 2008  Active Directory Domain Services \(AD DS\). If you are creating an AD DS environment and you do not have an existing domain structure, complete your AD DS design before you begin creating your AD DS environment. Then, you can deploy a new forest root domain and deploy the rest of your domain structure according to your design.  
   
 Also, as part of your AD DS deployment, you might decide to upgrade and restructure your environment. For example, if your organization has an existing Windows 2000 domain structure, you might perform an in\-place upgrade of some domains and restructure others. In addition, you might decide to reduce the complexity of your environment by either restructuring domains between forests or restructuring domains within a forest after you deploy AD DS.  
   
@@ -24,19 +24,19 @@ The forest root domain provides the foundation for your AD DS forest infrastruc
 For more information, see [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md).  
   
 ## Deploying Windows Server 2008 regional domains  
-After you complete the deployment of the forest root domain, you are ready to deploy any new [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] regional domains that are specified by your design. To do this, you must deploy domain controllers for each regional domain. The following illustration shows the process of deploying regional domains.  
+After you complete the deployment of the forest root domain, you are ready to deploy any new  Windows Server 2008  regional domains that are specified by your design. To do this, you must deploy domain controllers for each regional domain. The following illustration shows the process of deploying regional domains.  
   
 ![](media/89a878c8-9a94-4180-ad43-ca75316a6318.gif)  
   
 For more information, see [Deploying Windows Server 2008 Regional Domains](Deploying-Windows-Server-2008-Regional-Domains.md).  
   
 ## Upgrading Active Directory domains to Windows Server 2008  
-Upgrading your Windows 2000 or Windows Server 2003 domains to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] domains is an efficient, straightforward way to take advantage of additional [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] features and functionality. You can upgrade domains to maintain your current network and domain configuration while improving the security, scalability, and manageability of your network infrastructure. Upgrading from Windows 2000 or Windows Server 2003 to [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] requires minimal network configuration. Upgrading also has little impact on user operations. For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](Upgrading-Active-Directory-Domains-to-Windows-Server-2008-and-Windows-Server-2008-R2-AD-DS-Domains.md).  
+Upgrading your Windows 2000 or Windows Server 2003 domains to  Windows Server 2008  domains is an efficient, straightforward way to take advantage of additional  Windows Server 2008  features and functionality. You can upgrade domains to maintain your current network and domain configuration while improving the security, scalability, and manageability of your network infrastructure. Upgrading from Windows 2000 or Windows Server 2003 to  Windows Server 2008  requires minimal network configuration. Upgrading also has little impact on user operations. For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](Upgrading-Active-Directory-Domains-to-Windows-Server-2008-and-Windows-Server-2008-R2-AD-DS-Domains.md).  
   
 ## Restructuring AD DS domains  
-When you restructure domains between [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] forests \(interforest restructure\), you can reduce the number of domains in your environment and therefore reduce administrative complexity and overhead. When you migrate objects between forests as part of this restructuring process, both the source domain and target domain environments exist simultaneously. This makes it possible for you to roll back to the source environment during the migration, if necessary.  
+When you restructure domains between  Windows Server 2008  forests \(interforest restructure\), you can reduce the number of domains in your environment and therefore reduce administrative complexity and overhead. When you migrate objects between forests as part of this restructuring process, both the source domain and target domain environments exist simultaneously. This makes it possible for you to roll back to the source environment during the migration, if necessary.  
   
-When you restructure [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] domains within a [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] forest \(intraforest restructure\), you can consolidate your domain structure and therefore reduce administrative complexity and overhead. When you restructure domains within a forest, the migrated accounts no longer exist in the source domain.  
+When you restructure  Windows Server 2008  domains within a  Windows Server 2008  forest \(intraforest restructure\), you can consolidate your domain structure and therefore reduce administrative complexity and overhead. When you restructure domains within a forest, the migrated accounts no longer exist in the source domain.  
   
 For more information about how to use the Active Directory Migration Tool \(ADMT\) version 3.1 \(ADMT v3.1\) to restructure domains, see ADMT v3.1 Migration Guide \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=93678](http://go.microsoft.com/fwlink/?LinkId=93678)\).  
   

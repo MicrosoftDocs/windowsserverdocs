@@ -12,7 +12,7 @@ ms.assetid: 282f1e06-9f13-43b0-abb1-76af2d78d2c5
 author: Femila
 ---
 # Creating a DNS Infrastructure Design
-After you create your Active Directory forest and domain designs, you must design a Domain Name System \(DNS\) infrastructure to support your Active Directory logical structure. DNS enables users to use friendly names that are easy to remember to connect to computers and other resources on IP networks. Active Directory Domain Services \(AD DS\) in [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] requires DNS.  
+After you create your Active Directory forest and domain designs, you must design a Domain Name System \(DNS\) infrastructure to support your Active Directory logical structure. DNS enables users to use friendly names that are easy to remember to connect to computers and other resources on IP networks. Active Directory Domain Services \(AD DS\) in  Windows Server 2008  requires DNS.  
   
 The process for designing DNS to support AD DS varies according to whether your organization already has an existing DNS Server service or you are deploying a new DNS Server service:  
   
@@ -23,7 +23,7 @@ The process for designing DNS to support AD DS varies according to whether your
 If your organization has an existing DNS infrastructure, you must make sure that you understand how your DNS infrastructure will interact with the Active Directory namespace. For a worksheet to assist you in documenting your existing DNS infrastructure design, download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip from Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\) and open "DNS Inventory" \(DSSLOGI\_8.doc\).  
   
 > [!NOTE]  
-> In addition to IP version 4 \(IPv4\) addresses, [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] also supports IP version 6 \(IPv6\) addresses. For a worksheet to assist you in listing the IPv6 addresses while documenting the recursive name resolution method of your current DNS structure, see [Appendix A: DNS Inventory](Appendix-A--DNS-Inventory.md).  
+> In addition to IP version 4 \(IPv4\) addresses,  Windows Server 2008  also supports IP version 6 \(IPv6\) addresses. For a worksheet to assist you in listing the IPv6 addresses while documenting the recursive name resolution method of your current DNS structure, see [Appendix A: DNS Inventory](Appendix-A--DNS-Inventory.md).  
   
 Before you design your DNS infrastructure to support AD DS, it can be helpful to read about the DNS hierarchy, the DNS name resolution process, and how DNS supports AD DS. For more information about the DNS hierarchy and name resolution process, see the DNS Technical Reference \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=48145](http://go.microsoft.com/fwlink/?LinkID=48145)\). For more information about how DNS supports AD DS, see the DNS Support for Active Directory Technical Reference \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=48147](http://go.microsoft.com/fwlink/?LinkID=48147)\).  
   

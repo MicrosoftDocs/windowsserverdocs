@@ -13,7 +13,7 @@ ms.assetid: 9bb32b9c-88aa-4357-9a41-16aee3e198ae
 author: billmath
 ---
 # Federation Server Farm Using WID
-The default topology for [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] is a federation server farm, using the Windows Internal Database \(WID\), that consists of up to five federation servers hosting your organization’s Federation Service. In this topology, [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] uses WID as the store for the AD FS configuration database for all federation servers that are joined to that farm. The farm replicates and maintains the Federation Service data in the configuration database across each server in the farm.  
+The default topology for Active Directory Federation Services \(AD FS\) is a federation server farm, using the Windows Internal Database \(WID\), that consists of up to five federation servers hosting your organization’s Federation Service. In this topology, AD FS uses WID as the store for the AD FS configuration database for all federation servers that are joined to that farm. The farm replicates and maintains the Federation Service data in the configuration database across each server in the farm.  
   
 The act of creating the first federation server in a farm also creates a new Federation Service. When you use WID for the AD FS configuration database, the first federation server that you create in the farm is referred to as the *primary federation server*. This means that this computer is configured with a read\/write copy of the AD FS configuration database.  
   
@@ -65,6 +65,6 @@ The NLB host can use the settings that are defined in this NLB cluster to alloca
 > [!NOTE]  
 > If there is a failure on this single NLB host, users will not be able to access federated applications or services. Add additional NLB hosts if your business requirements do not allow having a single point of failure.  
   
-For more information about how to configure your networking environment for use with federation servers, see [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md) in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Design Guide.  
+For more information about how to configure your networking environment for use with federation servers, see [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md) in the AD FS Design Guide.  
   
 

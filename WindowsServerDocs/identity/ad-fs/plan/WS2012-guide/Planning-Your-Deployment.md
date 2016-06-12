@@ -13,16 +13,16 @@ ms.assetid: 9dcfbf94-1517-4c6d-bca1-cca72f2d1865
 author: billmath
 ---
 # Planning Your Deployment
-When you plan for cross\-organizational \(federation\-based\) collaboration using [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)], first determine if your organization will host a Web resource to be accessed by other organizations across the Internet or if you will provide access to the Web resource for employees in your organization. This determination affects how you deploy [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], and it is fundamental in the planning of your [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] infrastructure.  
+When you plan for cross\-organizational \(federation\-based\) collaboration using Active Directory Federation Services \(AD FS\), first determine if your organization will host a Web resource to be accessed by other organizations across the Internet or if you will provide access to the Web resource for employees in your organization. This determination affects how you deploy AD FS, and it is fundamental in the planning of your AD FS infrastructure.  
   
 > [!NOTE]  
 > Make sure that the role that organization plays in the federation agreement is clearly understood by all parties.  
   
-For the [Federated Web SSO Design](Federated-Web-SSO-Design.md), [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] uses terms such as *account partner* \(also referred to as *identity provider* in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in\) and *resource partner* \(also referred to as *relying party* in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in\) to help differentiate the organization that hosts the accounts \(the account partner\) from the organization that hosts the Web\-based resources \(the resource partner\).  
+For the [Federated Web SSO Design](Federated-Web-SSO-Design.md), AD FS uses terms such as *account partner* \(also referred to as *identity provider* in the AD FS Management snap\-in\) and *resource partner* \(also referred to as *relying party* in the AD FS Management snap\-in\) to help differentiate the organization that hosts the accounts \(the account partner\) from the organization that hosts the Web\-based resources \(the resource partner\).  
   
 In the [Web SSO Design](Web-SSO-Design.md), the organization acts in both the account partner and resource partner roles because it is providing its users with access to its applications.  
   
-The following topics explain some of the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] partner organization concepts. They also contain links to topics in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Deployment Guide that contain information about setting up and configuring account partner organizations and resource partner organizations based on your [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] deployment goals.  
+The following topics explain some of the AD FS partner organization concepts. They also contain links to topics in the AD FS Deployment Guide that contain information about setting up and configuring account partner organizations and resource partner organizations based on your AD FS deployment goals.  
   
 ## In this section  
   

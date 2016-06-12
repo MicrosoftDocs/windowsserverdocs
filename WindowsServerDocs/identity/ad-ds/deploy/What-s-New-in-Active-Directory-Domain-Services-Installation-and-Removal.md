@@ -26,15 +26,15 @@ This topic covers:
   
 -   [Known issues](What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues)  
   
-Active Directory Domain Services \(AD DS\) deployment in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] is simpler and faster than previous versions of Windows Server. The AD DS installation process is now built on Windows PowerShell and is integrated with Server Manager. The number of steps required to introduce domain controllers into an existing Active Directory environment is reduced. This makes the process for creating a new Active Directory environment simpler and more efficient. The new AD DS deployment process minimizes the chances of errors that would have otherwise blocked installation.  
+Active Directory Domain Services \(AD DS\) deployment in  Windows Server 2012  is simpler and faster than previous versions of Windows Server. The AD DS installation process is now built on Windows PowerShell and is integrated with Server Manager. The number of steps required to introduce domain controllers into an existing Active Directory environment is reduced. This makes the process for creating a new Active Directory environment simpler and more efficient. The new AD DS deployment process minimizes the chances of errors that would have otherwise blocked installation.  
   
-In addition, you can install the AD DS server role binaries \(that is the AD DS server role\) on multiple servers at the same time. You can also run the AD DS installation wizard remotely on an individual server. These improvements provide more flexibility for deploying domain controllers that run [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], especially for large\-scale, global deployments where many domain controllers need to be deployed to offices in different regions.  
+In addition, you can install the AD DS server role binaries \(that is the AD DS server role\) on multiple servers at the same time. You can also run the AD DS installation wizard remotely on an individual server. These improvements provide more flexibility for deploying domain controllers that run  Windows Server 2012 , especially for large\-scale, global deployments where many domain controllers need to be deployed to offices in different regions.  
   
 AD DS installation includes the following features:  
   
 -   **Adprep.exe integration into the AD DS installation process.** The cumbersome steps required to prepare an existing Active Directory, such as the need to use a variety of different credentials, copy the Adprep.exe files, or log on to specific domain controllers, are all simplified or occur automatically. This reduces the time required to install AD DS and reduces the chances for errors that might otherwise block domain controller promotion.  
   
-    For environments where it is preferable to run adprep.exe commands in advance of a new domain controller installation, you can still execute adprep.exe commands separately from the AD DS installation. The [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of adprep.exe runs remotely, so you can execute all necessary commands from a server that runs a 64\-bit version of Windows Server 2008 or later.  
+    For environments where it is preferable to run adprep.exe commands in advance of a new domain controller installation, you can still execute adprep.exe commands separately from the AD DS installation. The  Windows Server 2012  version of adprep.exe runs remotely, so you can execute all necessary commands from a server that runs a 64\-bit version of Windows Server 2008 or later.  
   
 -   **The new AD DS installation is built on Windows PowerShell and can be invoked remotely.** The new AD DS installation is integrated with Server Manager, so you can use the same interface to install AD DS that you use when installing other server roles. For Windows PowerShell users, the AD DS deployment cmdlets provide greater functionality and flexibility. There is functional parity between command\-line and GUI installation options.  
   
@@ -47,24 +47,24 @@ AD DS installation includes the following features:
 -   **Only critical replication occurs before reboot.** New switch to allow replication of non\-critical data before reboot. For more information, see [ADDSDeployment cmdlet arguments](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params).  
   
 ### <a name="BKMK_ADConfigurationWizard"></a>The Active Directory Domain Services Configuration Wizard  
-Beginning with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], the Active Directory Domain Services Configuration Wizard replaces the legacy Active Directory Domain Services Installation Wizard as the user interface \(UI\) option to specify settings when you install a domain controller. The Active Directory Domain Services Configuration Wizard begins after Add Roles Wizard is finished.  
+Beginning with  Windows Server 2012 , the Active Directory Domain Services Configuration Wizard replaces the legacy Active Directory Domain Services Installation Wizard as the user interface \(UI\) option to specify settings when you install a domain controller. The Active Directory Domain Services Configuration Wizard begins after Add Roles Wizard is finished.  
   
 > [!WARNING]  
-> The legacy Active Directory Domain Services Installation Wizard \(dcpromo.exe\) is deprecated beginning with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].  
+> The legacy Active Directory Domain Services Installation Wizard \(dcpromo.exe\) is deprecated beginning with  Windows Server 2012 .  
   
 In [Install Active Directory Domain Services &#40;Level 100&#41;](Install-Active-Directory-Domain-Services--Level-100-.md), the UI procedures show how to start the Add Roles Wizard to install the AD DS server role binaries and then run the Active Directory Domain Services Configuration Wizard to complete the domain controller installation. The Windows PowerShell examples show how to complete both steps using an AD DS deployment cmdlet.  
   
 ### <a name="BKMK_NewAdprep"></a>Adprep.exe integration  
-Beginning with [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], there is only one version of Adprep.exe \(there is no 32\-bit version, adprep32.exe\). Adprep commands are run automatically as needed when you install a domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] to an existing Active Directory domain or forest.  
+Beginning with  Windows Server 2012 , there is only one version of Adprep.exe \(there is no 32\-bit version, adprep32.exe\). Adprep commands are run automatically as needed when you install a domain controller that runs  Windows Server 2012  to an existing Active Directory domain or forest.  
   
-Although adprep operations are run automatically, you can run Adprep.exe separately. For example, if the user who installs AD DS is not a member of the Enterprise Admins group, which is required in order to run Adprep \/forestprep, then you might need to run the command separately. But, you only have to run adprep.exe if you are planning to in\-place upgrade your first [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] domain controller \(in other words, you plan to in\-place upgrade the operating system of a domain controller that runs [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]\).  
+Although adprep operations are run automatically, you can run Adprep.exe separately. For example, if the user who installs AD DS is not a member of the Enterprise Admins group, which is required in order to run Adprep \/forestprep, then you might need to run the command separately. But, you only have to run adprep.exe if you are planning to in\-place upgrade your first  Windows Server 2012  domain controller \(in other words, you plan to in\-place upgrade the operating system of a domain controller that runs  Windows Server 2012 \).  
   
-Adprep.exe is located in the \\support\\adprep folder of the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] installation disc. The [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of adprep is capable of executing remotely.  
+Adprep.exe is located in the \\support\\adprep folder of the  Windows Server 2012  installation disc. The  Windows Server 2012  version of adprep is capable of executing remotely.  
   
-The [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of adprep.exe can run on any server that runs a 64\-bit version of [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] or later. The server needs network connectivity to the schema master for the forest and the infrastructure master of the domain where you want to add a domain controller. If either of those roles is hosted on a server that runs Windows Server 2003, then adprep must be run remotely. The server where you run adprep does not need to be a domain controller. It can be domain joined or in a workgroup.  
+The  Windows Server 2012  version of adprep.exe can run on any server that runs a 64\-bit version of  Windows Server 2008  or later. The server needs network connectivity to the schema master for the forest and the infrastructure master of the domain where you want to add a domain controller. If either of those roles is hosted on a server that runs Windows Server 2003, then adprep must be run remotely. The server where you run adprep does not need to be a domain controller. It can be domain joined or in a workgroup.  
   
 > [!NOTE]  
-> If you try to run the [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of adprep.exe on a server that runs Windows Server 2003, the following error appears:  
+> If you try to run the  Windows Server 2012  version of adprep.exe on a server that runs Windows Server 2003, the following error appears:  
 >   
 > Adprep.exe is not a valid Win32 application.  
   
@@ -75,7 +75,7 @@ For information about resolving other errors returned by Adprep.exe, see [Known 
 #### Group membership check against Windows Server 2003 operations master roles  
 For each command \(\/forestprep, \/domainprep, or \/rodcprep\), Adprep performs a group membership check to determine whether the specified credential represents an account in certain groups. To perform this check, Adprep contacts the operations master role owner. If the operations master is running Windows Server 2003, you need to specify the \/user and \/userdomain command line parameters if you run Adprep.exe to ensure the group membership check is performed in all cases.  
   
-The \/user and \/userdomain are new parameters for Adprep.exe in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. These parameters specify the user account name and user domain, respectively, of the user who runs the adprep command. The Adprep.exe command\-line utility blocks specifying one of \/userdomain and \/user but omitting the other.  
+The \/user and \/userdomain are new parameters for Adprep.exe in  Windows Server 2012 . These parameters specify the user account name and user domain, respectively, of the user who runs the adprep command. The Adprep.exe command\-line utility blocks specifying one of \/userdomain and \/user but omitting the other.  
   
 However, Adprep operations can also be run as part of an AD DS installation using Windows PowerShell or Server Manager. Those experiences share the same underlying implementation \(adprep.dll\) as adprep.exe. The Windows PowerShell and Server Manager experiences have their separate credentials input, which does not impose the same requirements as by adprep.exe. Using Windows PowerShell or Server Manager, it is possible to pass a value for \/user but not \/userdomain to adprep.dll. If \/user is specified but \/userdomain is not specified, the local machine’s domain is used to perform the check. If the machine is not domain joined, group membership cannot be checked.  
   
@@ -99,14 +99,14 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 Use \/logdsid in the command in order to generate more detailed logging. The adprep.log is located in %windir%\\System32\\Debug\\Adprep\\Logs.  
   
 #### Running adprep using smartcard  
-The [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] version of adprep.exe works using smartcard as credentials, but there is no easy way to specify the smart card credential through the command line. One way to do it is to obtain the smart card credential through PowerShell cmdlet Get\-Credential. Then use the user name of the returned PSCredential object, which appears as `@@...`. The password is the PIN of the smart card.  
+The  Windows Server 2012  version of adprep.exe works using smartcard as credentials, but there is no easy way to specify the smart card credential through the command line. One way to do it is to obtain the smart card credential through PowerShell cmdlet Get\-Credential. Then use the user name of the returned PSCredential object, which appears as `@@...`. The password is the PIN of the smart card.  
   
 Adprep.exe requires \/userdomain if \/user is specified. For smartcard credentials, the \/userdomain should be the domain of the underlying user account represented by the smartcard.  
   
 #### Adprep \/domainprep \/gpprep command is not run automatically  
 The adprep \/domainprep \/gpprep command is not run as part of AD DS installation. This command sets permissions that are required for Resultant Set of Policy \(RSOP\) planning mode functionality. For more information about this command, see [Microsoft Knowledge Base article 324392](http://support.microsoft.com/kb/324392). If the command needs to be run in your Active Directory domain, you can run it separately from the AD DS installation. If the command has already been run in preparation of deploying domain controllers that run Windows Server 2003 SP1 or later, the command does not need to be run again.  
   
-You can safely add domain controllers that run [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] to an existing domain without running adprep \/domainprep \/gpprep, but RSOP planning mode will not function properly.  
+You can safely add domain controllers that run  Windows Server 2012  to an existing domain without running adprep \/domainprep \/gpprep, but RSOP planning mode will not function properly.  
   
 ### <a name="BKMK_PrereqCheck"></a>AD DS installation prerequisite validation  
 The AD DS installation wizard checks that the following prerequisites are met before the installation begins. This provides you with a chance to correct issues that can potentially block installation.  
@@ -132,12 +132,12 @@ Other prerequisite checks that are carried forward from the legacy Active Direct
 -   Tree domain name verification: Ensures that the specified tree name is valid and that it does not currently exist.  
   
 ## <a name="BKMK_SystemReqs"></a>System requirements  
-System requirements for [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] are unchanged from Windows Server 2008 R2. For more information, see [Windows Server 2008 R2 with SP1 System Requirements](http://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) \(http:\/\/www.microsoft.com\/windowsserver2008\/en\/us\/system\-requirements.aspx\).  
+System requirements for  Windows Server 2012  are unchanged from Windows Server 2008 R2. For more information, see [Windows Server 2008 R2 with SP1 System Requirements](http://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) \(http:\/\/www.microsoft.com\/windowsserver2008\/en\/us\/system\-requirements.aspx\).  
   
-Some features can have additional requirements. For example, the virtual domain controller cloning feature requires that the PDC emulator run [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and a computer running [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] with the Hyper\-V role installed.  
+Some features can have additional requirements. For example, the virtual domain controller cloning feature requires that the PDC emulator run  Windows Server 2012  and a computer running  Windows Server 2012  with the Hyper\-V role installed.  
   
 ## <a name="BKMK_KnownIssues"></a>Known issues  
-This section lists some of the known issues that affect AD DS installation in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. For additional known issues, see [Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md).  
+This section lists some of the known issues that affect AD DS installation in  Windows Server 2012 . For additional known issues, see [Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md).  
   
 -   If WMI access to the schema master is blocked by Windows Firewall when you remotely run adprep \/forestprep, the following error is logged in the adprep log at %systemroot%\\system32\\debug\\adprep:  
   
@@ -180,13 +180,13 @@ This section lists some of the known issues that affect AD DS installation in [!
   
     If you join the target server to the domain and then perform the installation using a smart card, the installation succeeds.  
   
--   **The ADDSDeployment module does not run under 32\-bit processes.** If you are automating deployment and configuration of [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] using a script that includes an ADDSDeployment cmdlet and any other cmdlet that does not support native 64\-bit processes, the script can fail with an error that indicates the ADDSDeployment cmdlet cannot be found.  
+-   **The ADDSDeployment module does not run under 32\-bit processes.** If you are automating deployment and configuration of  Windows Server 2012  using a script that includes an ADDSDeployment cmdlet and any other cmdlet that does not support native 64\-bit processes, the script can fail with an error that indicates the ADDSDeployment cmdlet cannot be found.  
   
     In this case, you need to run the ADDSDeployment cmdlet separately from the cmdlet that does not support native 64\-bit processes.  
   
--   There is a new file system in [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] named Resilient File System. Do not store the Active Directory database, log files, or SYSVOL on a data volume formatted with Resilient File System \(ReFS\). For more information about ReFS, see [Building the next generation file system for Windows: ReFS](http://blogs.msdn.com/b/b8/archive/2012/01/16/building-the-next-generation-file-system-for-windows-refs.aspx).  
+-   There is a new file system in  Windows Server 2012  named Resilient File System. Do not store the Active Directory database, log files, or SYSVOL on a data volume formatted with Resilient File System \(ReFS\). For more information about ReFS, see [Building the next generation file system for Windows: ReFS](http://blogs.msdn.com/b/b8/archive/2012/01/16/building-the-next-generation-file-system-for-windows-refs.aspx).  
   
--   In Server Manager, servers that run AD DS or other server roles on a Server Core installation and have been upgraded to [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], the server role can appear with red status, even though events and status are collected as expected. Servers that run a Server Core installation of a preliminary release [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] can also be impacted.  
+-   In Server Manager, servers that run AD DS or other server roles on a Server Core installation and have been upgraded to  Windows Server 2012 , the server role can appear with red status, even though events and status are collected as expected. Servers that run a Server Core installation of a preliminary release  Windows Server 2012  can also be impacted.  
   
 ### Active Directory Domain Services installation hangs if an error prevents critical replication  
 If the AD DS installation encounters an error during the critical replication phase, the installation can hang indefinitely. For example, if networking errors prevent critical replication from completing, the installation will not proceed.  

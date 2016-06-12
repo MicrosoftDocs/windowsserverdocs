@@ -29,7 +29,7 @@ author: femila
 > This topic explains only how the Windows Time service \(W32Time\) works. For information about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](Windows-Time-Service-Technical-Reference.md#BKMK_Config).  
   
 > [!NOTE]  
-> In Windows Server® 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory® directory service. In [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] and later versions, the directory service is named [!INCLUDE[firstref_adds](includes/firstref_adds_md.md)] \(AD DS\). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  
+> In Windows Server® 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory® directory service. In  Windows Server 2008  and later versions, the directory service is named Active Directory Domain Services \(AD DS\). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  
   
 Although the Windows Time service is not an exact implementation of the Network Time Protocol \(NTP\), it uses the complex suite of algorithms that is defined in the NTP specifications to ensure that clocks on computers throughout a network are as accurate as possible. Ideally, all computer clocks in an AD DS domain are synchronized with the time of an authoritative computer. Many factors can affect time synchronization on a network. The following factors often affect the accuracy of synchronization in AD DS:  
   

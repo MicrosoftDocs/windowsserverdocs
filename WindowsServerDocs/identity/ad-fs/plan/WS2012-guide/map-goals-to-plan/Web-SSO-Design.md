@@ -13,7 +13,7 @@ ms.assetid: 076da5cd-c988-4e5c-bd09-6b60f421ae3f
 author: billmath
 ---
 # Web SSO Design
-In the Web Single\-Sign\-On \(SSO\) design in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)], users must authenticate only once to access multiple AD FS\-secured applications or services. In this design all users are external, and no federation trust exists because there are no partner organizations. Typically, you deploy this design when you want to provide individual consumer or customer access to one or more [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)]–secured services or applications over the Internet, as shown in the following illustration.  
+In the Web Single\-Sign\-On \(SSO\) design in Active Directory Federation Services \(AD FS\), users must authenticate only once to access multiple AD FS\-secured applications or services. In this design all users are external, and no federation trust exists because there are no partner organizations. Typically, you deploy this design when you want to provide individual consumer or customer access to one or more AD FS–secured services or applications over the Internet, as shown in the following illustration.  
   
 ![](media/adfs2_WebSSODesign.gif)  
   

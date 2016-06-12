@@ -18,7 +18,7 @@ Domain Name System \(DNS\) servers running on domain controllers can store their
   
 -   Secure dynamic updates are supported. Secure dynamic updates allow an administrator to control what computers update what names and prevent unauthorized computers from overwriting existing names in DNS.  
   
-Active Directory–integrated DNS in [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] stores zone data in application directory partitions. \(There are no behavioral changes from Windows Server 2003–based DNS integration with Active Directory.\) The following DNS\-specific application directory partitions are created during AD DS installation:  
+Active Directory–integrated DNS in  Windows Server 2008  stores zone data in application directory partitions. \(There are no behavioral changes from Windows Server 2003–based DNS integration with Active Directory.\) The following DNS\-specific application directory partitions are created during AD DS installation:  
   
 -   A forest\-wide application directory partition, called ForestDnsZones  
   

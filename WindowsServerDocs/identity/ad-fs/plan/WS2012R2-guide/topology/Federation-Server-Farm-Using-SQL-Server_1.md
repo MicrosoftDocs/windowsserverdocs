@@ -13,7 +13,7 @@ ms.assetid: 538aed85-6c0f-42a3-8a89-5322461aada6
 author: billmath
 ---
 # Federation Server Farm Using SQL Server_1
-This topology for [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] differs from the federation server farm using Windows Internal Database \(WID\) deployment topology in that it does not replicate the data to each federation server in the farm. Instead, all federation servers in the farm can read and write data into a common database that is stored on a server running Microsoft SQL Server that is located in the corporate network.  
+This topology for Active Directory Federation Services \(AD FS\) differs from the federation server farm using Windows Internal Database \(WID\) deployment topology in that it does not replicate the data to each federation server in the farm. Instead, all federation servers in the farm can read and write data into a common database that is stored on a server running Microsoft SQL Server that is located in the corporate network.  
   
 > [!IMPORTANT]  
 > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012, and SQL Server 2014.  

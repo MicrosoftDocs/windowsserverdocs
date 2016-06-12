@@ -23,7 +23,7 @@ You must assign a name to every domain in your plan. Active Directory Domain Se
 For more information, see Naming conventions in Active Directory for computers, domains, sites, and OUs \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=106629](http://go.microsoft.com/fwlink/?LinkId=106629)\).  
   
 > [!NOTE]  
-> [!INCLUDE[ad_dcpromotext](includes/ad_dcpromotext_md.md)]  
+>  Although Dcpromo.exe in Windows Server 2008 and Windows Server 2003 allows you to create a single\-label DNS domain name, you should not use a single\-label DNS name for a domain for several reasons. In Windows Server 2008 R2, Dcpromo.exe does not allow you to create a single\-label DNS name for a domain. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=92467.](http://go.microsoft.com/fwlink/?LinkId=92467)   
   
 If the current NetBIOS name of the domain is inappropriate to represent the region or fails to satisfy the prefix naming rules, select a new prefix. In this case, the NetBIOS name of the domain is different from the DNS prefix of the domain.  
   

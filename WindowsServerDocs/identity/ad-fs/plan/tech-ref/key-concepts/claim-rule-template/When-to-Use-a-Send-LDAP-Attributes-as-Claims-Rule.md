@@ -25,7 +25,7 @@ The following sections provide a basic introduction to claim rules. They also pr
 ## About claim rules
 A claim rule represents an instance of business logic that will take an incoming claim, apply a condition to it \(if x then y\) and produce an outgoing claim based on the condition parameters. The following list outlines important tips that you should know about claim rules before you read further in this topic:
 
--   In the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in, claim rules can only be created using claim rule templates
+-   In the AD FS Management snap\-in, claim rules can only be created using claim rule templates
 
 -   Claim rules process incoming claims either directly from a claims provider \(such as Active Directory or another Federation Service\) or from the output of the acceptance transform rules on a claims provider trust.
 

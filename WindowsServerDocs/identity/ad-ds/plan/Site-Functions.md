@@ -12,7 +12,7 @@ ms.assetid: 1d202cc2-379b-480b-93aa-58b19a88f50d
 author: Femila
 ---
 # Site Functions
-[!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] uses site information for many purposes, including routing replication, client affinity, system volume \(SYSVOL\) replication, Distributed File System Namespaces \(DFSN\), and service location.  
+ Windows Server 2008  uses site information for many purposes, including routing replication, client affinity, system volume \(SYSVOL\) replication, Distributed File System Namespaces \(DFSN\), and service location.  
   
 ## Routing replication  
 Active Directory Domain Services \(AD DS\) uses a multimaster, store\-and\-forward method of replication. A domain controller communicates directory changes to a second domain controller, which then communicates to a third, and so on, until all domain controllers have received the change. To achieve the best balance between reducing replication latency and reducing traffic, site topology controls Active Directory replication by distinguishing between replication that occurs within a site and replication that occurs between sites.  
@@ -27,7 +27,7 @@ By finding a domain controller in the same site, the client avoids communication
 For more information about the process of locating a domain controller, see Active Directory Collection \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=88626](http://go.microsoft.com/fwlink/?LinkID=88626)\).  
   
 ## SYSVOL replication  
-SYSVOL is a collection of folders in the file system that exists on each domain controller in a domain. The SYSVOL folders provide a default Active Directory location for files that must be replicated throughout a domain, including Group Policy objects \(GPOs\), startup and shutdown scripts, and logon and logoff scripts. [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] can use the File Replication Service \(FRS\) or Distributed File System Replication \(DFSR\) to replicate changes made to the SYSVOL folders from one domain controller to other domain controllers. FRS and DFSR replicate these changes according to the schedule that you create during your site topology design.  
+SYSVOL is a collection of folders in the file system that exists on each domain controller in a domain. The SYSVOL folders provide a default Active Directory location for files that must be replicated throughout a domain, including Group Policy objects \(GPOs\), startup and shutdown scripts, and logon and logoff scripts.  Windows Server 2008  can use the File Replication Service \(FRS\) or Distributed File System Replication \(DFSR\) to replicate changes made to the SYSVOL folders from one domain controller to other domain controllers. FRS and DFSR replicate these changes according to the schedule that you create during your site topology design.  
   
 ## DFSN  
 DFSN uses site information to direct a client to the server that is hosting the requested data within the site. If DFSN does not find a copy of the data within the same site as the client, DFSN uses the site information in AD DS to determine which file server that has DFSN shared data is closest to the client.  

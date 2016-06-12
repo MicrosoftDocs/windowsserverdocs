@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: a086b4b6-35e3-492a-b4f8-22868e75f1a5
 ---
 # The Role of Claim Rules
-The overall function of the Federation Service in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] is to issue a token that contains a set of claims. The decision regarding what claims [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] accepts and then issues is governed by claim rules.
+The overall function of the Federation Service in Active Directory Federation Services \(AD FS\) is to issue a token that contains a set of claims. The decision regarding what claims AD FS accepts and then issues is governed by claim rules.
 
 ## What are claim rules?
 A claim rule represents an instance of business logic that will take one or more incoming claims, apply conditions to them \(if x then y\) and produce one or more outgoing claims based on the condition parameters. For more information about incoming and outgoing claims, see [The Role of Claims](The-Role-of-Claims.md).
@@ -37,16 +37,16 @@ Together, the claims rule engine and the set of claim rules associated with a gi
 For more information about this process, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
 
 ## What are claim rule templates?
-[!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] includes a predefined set of claim rule templates that are designed to help you easily select and create the most appropriate claim rules for your particular business need. Claim rule templates are only used during the claim rule creation process.
+AD FS includes a predefined set of claim rule templates that are designed to help you easily select and create the most appropriate claim rules for your particular business need. Claim rule templates are only used during the claim rule creation process.
 
-In the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Management snap\-in, rules can only be created using claim rule templates. After you use the snap\-in to select a claim rule template, input the necessary data for the rule logic and save it to the configuration database, it will be \(from that point forward\) referred to in the UI as a claim rule.
+In the AD FS Management snap\-in, rules can only be created using claim rule templates. After you use the snap\-in to select a claim rule template, input the necessary data for the rule logic and save it to the configuration database, it will be \(from that point forward\) referred to in the UI as a claim rule.
 
 ### How claim rule templates work
 At first glance, claim rule templates appear to be just input forms provided by the snap\-in to collect data and process specific logic on incoming claims. However, at a much more detailed level, claim rule templates store the necessary claim rule language framework that make up the base logic necessary for you to quickly create a rule without needing to know the language intimately.
 
 Each template that is provided in the user interface \(UI\) represents a prepopulated claim rule language syntax, based on the most commonly required administrative tasks. There is one rule template however, that is the exception. This template is referred to as the custom rule template. With this template, no syntax is prepopulated. Instead you must directly author the claim rule language syntax in the body of the claim rule template form using the claim rule language syntax.
 
-For more information about how to use the claim rule language syntax, see [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md) in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] Deployment Guide.
+For more information about how to use the claim rule language syntax, see [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md) in the AD FS Deployment Guide.
 
 > [!TIP]
 > You can view the claim rule language associated with a rule at any time by clicking the **View Rule Language** button on the properties of a claim rule.
@@ -54,7 +54,7 @@ For more information about how to use the claim rule language syntax, see [The R
 ### How to create a claim rule
 Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a claim rule template, start from scratch by authoring the rule using the claim rule language or use Windows PowerShell to customize a rule.
 
-All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](Configuring-Claim-Rules.md) in the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)]Deployment Guide.
+All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](Configuring-Claim-Rules.md) in the AD FSDeployment Guide.
 
 #### Using claim rule templates
 Claim rule templates are only used during the claim rule creation process. You can use any of the following templates to create a claim rule:
@@ -79,7 +79,7 @@ For more information describing each of these claim rule templates, see [Determi
 For business rules that are beyond the scope of standard claim rule templates, you can use a custom rule template to express a series of complex logic conditions using the claim rule language. For more information about using a custom rule, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).
 
 #### Using Windows PowerShell
-You can also use the ADFSClaimRuleSet cmdlet object with Windows PowerShell to create or administer rules in [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)]. For more information about how you can use Windows PowerShell with this cmdlet, see [AD FS Administration with Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=179634).
+You can also use the ADFSClaimRuleSet cmdlet object with Windows PowerShell to create or administer rules in AD FS. For more information about how you can use Windows PowerShell with this cmdlet, see [AD FS Administration with Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=179634).
 
 ## What is a claim rule set?
 As shown in the following illustration, a claim rule set is a grouping of one or more rules for a given federated trust that will define how claims will be processed by the claims rule engine. When an incoming claim is received by the Federation Service the claim rule engine applies the logic specified by the appropriate claim rule set. It is the final sum of the logic from each rule in the set that will determine how claims will be issued for a given trust in its entirety.

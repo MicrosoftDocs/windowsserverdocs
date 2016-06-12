@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: a8b6dd27-a8c9-4aff-8aa4-2204ad33b2dd
 ---
 # The Role of the Claims Pipeline
-The claims pipeline in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] represents the path that claims must follow through the Federation Service before they can be issued. The Federation Service manages the entire end\-to\-end process of flowing claims through the various stages of the claims pipeline, which also includes the processing of claim rules by the claim rule engine.
+The claims pipeline in Active Directory Federation Services \(AD FS\) represents the path that claims must follow through the Federation Service before they can be issued. The Federation Service manages the entire end\-to\-end process of flowing claims through the various stages of the claims pipeline, which also includes the processing of claim rules by the claim rule engine.
 
 For more information about claim rules, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md). For more information about how the claim rule engine processes rules, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
 

@@ -15,27 +15,27 @@ author: kgremban
 # Publishing Applications with SharePoint, Exchange and RDG
 **This content is relevant for the on\-premises version of Web Application Proxy. To enable secure access to on\-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   
-This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway \(RDP\) through [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)].  
+This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway \(RDP\) through Web Application Proxy.  
   
 ## <a name="BKMK_6.1"></a>Publish SharePoint Server  
-You can publish a SharePoint site through [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] when the SharePoint site is configured for claims\-based authentication or Integrated Windows authentication. If you want to use [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] for pre\-authentication, you must configure a relying party using one of the wizards.  
+You can publish a SharePoint site through Web Application Proxy when the SharePoint site is configured for claims\-based authentication or Integrated Windows authentication. If you want to use Active Directory Federation Services \(AD FS\) for pre\-authentication, you must configure a relying party using one of the wizards.  
   
 -   If the SharePoint site uses claims\-based authentication, you must use the Add Relying Party Trust Wizard to configure the relying party trust for the application.  
   
 -   If the SharePoint site uses Integrated Windows authentication, you must use the Add Non\-Claims\-Based Relying Party Trust Wizard to configure the relying party trust for the application. You can use IWA with a claims\-based web application provided that you configure KDC.  
   
-    To allow users to authenticate using Integrated Windows authentication, the [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] server must be joined to a domain.  
+    To allow users to authenticate using Integrated Windows authentication, the Web Application Proxy server must be joined to a domain.  
   
-    You must configure the application to support Kerberos constrained delegation. You can do this on the domain controller for any application. You can also configure the application directly on the backend server if it is running on [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)]. For more information, see [What's New in Kerberos Authentication](http://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] servers are configured for delegation to the service principal names of the backend servers. For a walkthrough of how to configure [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](assetId:///b0788958-627f-450f-877c-209b1bd0db52).  
+    You must configure the application to support Kerberos constrained delegation. You can do this on the domain controller for any application. You can also configure the application directly on the backend server if it is running on  Windows Server 2012 R2  or  Windows Server 2012 . For more information, see [What's New in Kerberos Authentication](http://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers. For a walkthrough of how to configure Web Application Proxy to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](assetId:///b0788958-627f-450f-877c-209b1bd0db52).  
   
 If your SharePoint site is configured using either alternate access mappings \(AAM\) or host\-named site collections, you can use different external and backend server URLs to publish your application. However, if you do not configure your SharePoint site using AAM or host\-named site collections, you must use the same external and backend server URLs.  
   
 ## <a name="BKMK_6.2"></a>Publish Exchange Server  
-The following table describes the Exchange services that you can publish through [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] and the supported pre\-authentication for these services:  
+The following table describes the Exchange services that you can publish through Web Application Proxy and the supported pre\-authentication for these services:  
   
 |Exchange service|Pre\-authentication|Notes|  
 |--------------------|-----------------------|---------|  
-|Outlook Web App|-   [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] using non\-claims\-based authentication<br />-   Pass\-through<br />-   [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] using claims\-based authentication for on\-premises Exchange 2013 Service Pak 1 \(SP1\)|For more information see: [Using AD FS claims-based authentication with Outlook Web App and EAC](http://go.microsoft.com/fwlink/?LinkId=393723)|  
+|Outlook Web App|-   AD FS using non\-claims\-based authentication<br />-   Pass\-through<br />-   AD FS using claims\-based authentication for on\-premises Exchange 2013 Service Pak 1 \(SP1\)|For more information see: [Using AD FS claims-based authentication with Outlook Web App and EAC](http://go.microsoft.com/fwlink/?LinkId=393723)|  
 |Exchange Control Panel|Pass\-through|—|  
 |Outlook Anywhere|Pass\-through|You must publish three URLs for Outlook Anywhere to work correctly:<br /><br />-   The autodiscover URL.<br />-   The external host name of the Exchange Server; that is, the URL that is configured for clients to connect to.<br />-   The internal FQDN of the Exchange Server.|  
 |Exchange ActiveSync|Pass\-through|—|  
@@ -72,7 +72,7 @@ If you want to restrict access to your Remote Access Gateway and add pre\-authen
   
 #### How to publish an application in RDG using Web Application Proxy with pre\-authentication  
   
-1.  [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] pre\-authentication  with RDG works by passing the pre\-authentication cookie obtained by Internet Explorer being passed into the Remote Desktop Connection client \(mstsc.exe\). This is then used by the Remote Desktop Connection client \(mstsc.exe\). This is then used by Remote Desktop Connection client as proof of authentication.  
+1.  Web Application Proxy pre\-authentication  with RDG works by passing the pre\-authentication cookie obtained by Internet Explorer being passed into the Remote Desktop Connection client \(mstsc.exe\). This is then used by the Remote Desktop Connection client \(mstsc.exe\). This is then used by Remote Desktop Connection client as proof of authentication.  
   
     The following procedure tells the Collection server to include the necessary custom RDP properties in the Remote App RDP files that are sent to clients. These tell the client that pre\-authentication is required and to pass the cookies for the pre\-authentication server address to Remote Desktop Connection client \(mstsc.exe\) . In conjunction with disabling the HttpOnly feature on the Web Application Proxy application, this  allows the  Remote Desktop Connection client \(mstsc.exe\) to utilize the Web Application Proxy cookie obtained through the browser.  
   
@@ -93,9 +93,9 @@ If you want to restrict access to your Remote Access Gateway and add pre\-authen
   
     4.  For the Relying Party Trust identifier, enter the external FQDN you will use for RDG access, for example https:\/\/rdg.contoso.com\/.  
   
-        This is the relying party trust you will use when publishing the app in [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)].  
+        This is the relying party trust you will use when publishing the app in Web Application Proxy.  
   
-4.  Publish the root of the site \(for example, https:\/\/rdg.contoso.com\/ \) in [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)]. Set the pre\-authentication to AD FS and use the relying party trust you created above. This will enable \/rdweb and \/rpc to use the same [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] authentication cookie.  
+4.  Publish the root of the site \(for example, https:\/\/rdg.contoso.com\/ \) in Web Application Proxy. Set the pre\-authentication to AD FS and use the relying party trust you created above. This will enable \/rdweb and \/rpc to use the same Web Application Proxy authentication cookie.  
   
     It is possible to publish \/rdweb and \/rpc as separate applications and even to use different published servers. You just need to ensure that you publish both using the same Relying Party Trust as the Web Application Proxy token is issued for the Relying Party Trust and is therefore valid across applications published with the same Relying Party Trust.  
   
@@ -105,7 +105,7 @@ If you want to restrict access to your Remote Access Gateway and add pre\-authen
     Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true  
     ```  
   
-6.  Disable the HttpOnly cookie property in [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] on the RDG published application. To allow the RDG ActiveX control access to the [!INCLUDE[adfs_webproxy](includes/adfs_webproxy_md.md)] authentication cookie, you have to disable the HttpOnly property on the Web Application Proxy cookie.  
+6.  Disable the HttpOnly cookie property in Web Application Proxy on the RDG published application. To allow the RDG ActiveX control access to the Web Application Proxy authentication cookie, you have to disable the HttpOnly property on the Web Application Proxy cookie.  
   
     This requires the following  to be installed [Web Application Proxy Hotfix](https://support.microsoft.com/en-gb/kb/3000850) or the [https://support.microsoft.com/en-gb/kb/3000850](https://support.microsoft.com/en-gb/kb/3000850).  
   

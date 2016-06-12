@@ -14,9 +14,9 @@ ms.assetid: ccef8246-4c26-4295-9d15-650812c039cd
 # Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
 
 ## About This Guide
-This walkthrough provides instructions for configuring multifactor authentication \(MFA\) in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] based on the user’s group membership data.
+This walkthrough provides instructions for configuring multifactor authentication \(MFA\) in Active Directory Federation Services \(AD FS\) in Windows Server® 2012 R2 based on the user’s group membership data.
 
-For more information about MFA and authentication mechanisms in [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)], see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
+For more information about MFA and authentication mechanisms in AD FS, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
 
 This walkthrough consists of the following sections:
 
@@ -31,9 +31,9 @@ This walkthrough consists of the following sections:
 ## <a name="BKMK_1"></a>Step 1: Setting up the lab environment
 In order to complete this walkthrough, you need an environment that consists of the following components:
 
--   An Active Directory domain with a test user and group accounts, running on [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] or an Active Directory domain running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]
+-   An Active Directory domain with a test user and group accounts, running on Windows Server® 2012 R2 or an Active Directory domain running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to Windows Server® 2012 R2
 
--   A federation server running on [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]
+-   A federation server running on Windows Server® 2012 R2
 
 -   A web server that hosts your sample application
 
@@ -58,7 +58,7 @@ In this step you will verify the default AD FS access control mechanism \(**Form
     You will be granted access to the application.
 
 ## <a name="BKMK_3"></a>Step 3: Configure MFA on your federation server
-There are two parts to configuring MFA in [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)]:
+There are two parts to configuring MFA in AD FS in Windows Server® 2012 R2:
 
 -   [Select an additional authentication method](Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
 
@@ -67,7 +67,7 @@ There are two parts to configuring MFA in [!INCLUDE[nextref_adfs2](includes/next
 ### <a name="BKMK_5"></a>Select an additional authentication method
 In order to set up MFA, you must select an additional authentication method. In this walkthrough, for additional authentication method, you can choose between the following options:
 
--   Select [Certificate authentication](Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] in [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] by default
+-   Select [Certificate authentication](Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in AD FS in Windows Server® 2012 R2 by default
 
 -   Configure and select [Windows Azure Multi\-Factor Authentication](Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8)
 

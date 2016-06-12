@@ -12,7 +12,7 @@ ms.assetid: 3dfcd7e0-7fbc-4c36-964e-04ae62e9a66f
 author: Femila
 ---
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
-You can find the following documentation about Active Directory Domain Services \(AD DS\) on the Windows Server 2003 and [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] TechCenter Web sites:  
+You can find the following documentation about Active Directory Domain Services \(AD DS\) on the Windows Server 2003 and  Windows Server 2008  TechCenter Web sites:  
   
 -   For more information about the process of locating a domain controller, see Active Directory Collection \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=88626](http://go.microsoft.com/fwlink/?LinkID=88626)\).  
   
@@ -24,7 +24,7 @@ You can find the following documentation about Active Directory Domain Services
   
 -   For information about installing Network Monitor, see Monitoring network traffic \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=107058](http://go.microsoft.com/fwlink/?LinkId=107058)\).  
   
--   For worksheets to assist you in documenting your [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] AD DS site topology design, see Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\).  
+-   For worksheets to assist you in documenting your  Windows Server 2008  AD DS site topology design, see Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\).  
   
 -   For more information about shortcut trusts between domains, see Understanding When to Create a Shortcut Trust \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=107061](http://go.microsoft.com/fwlink/?LinkId=107061)\).  
   
