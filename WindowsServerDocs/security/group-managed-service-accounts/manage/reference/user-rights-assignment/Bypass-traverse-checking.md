@@ -83,6 +83,6 @@ Organizations that are extremely concerned about security may want to remove the
 The Windows operating systems and many applications were designed with the expectation that anyone who can legitimately access the computer will have this user right. Therefore, we recommend that you thoroughly test any changes to assignments of the **Bypass traverse checking** user right before you make such changes to production systems. In particular, IIS requires this user right to be assigned to the Network Service, Local Service, IIS\_WPG, IUSR\_*<ComputerName>*, and IWAM\_*<ComputerName>* accounts. \(It must also be assigned to the ASPNET account through its membership in the Users group.\) We recommend that you leave this policy setting at its default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Print
+title: print
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,34 +8,34 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa2325d5-a993-4ed3-b996-255165452db8
 ---
-# Print
+# print
 Sends a text file to a printer.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-Print [/d:<PrinterName>] [<Drive>:][<Path>]<FileName>[ ...]
+print [/d:<printerName>] [<Drive>:][<path>]<FileName>[ ...]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|\/d:<PrinterName>|Specifies the printer that you want to print the job. To print to a locally connected printer, specify the port on your computer where the printer is connected.<br /><br />-   Valid values for parallel ports are LPT1, LPT2, and LPT3.<br />-   Valid values for serial ports are COM1, COM2, COM3, and COM4.<br /><br />You can also specify a network printer by using its queue name \(\\\\*ServerName*\\*PrinterName*\). If you do not specify a printer, the print job is sent to LPT1 by default.|
+|\/d:<printerName>|Specifies the printer that you want to print the job. To print to a locally connected printer, specify the port on your computer where the printer is connected.<br /><br />-   Valid values for parallel ports are LPT1, LPT2, and LPT3.<br />-   Valid values for serial ports are COM1, COM2, COM3, and COM4.<br /><br />You can also specify a network printer by using its queue name \(\\\\*ServerName*\\*printerName*\). if you do not specify a printer, the print job is sent to LPT1 by default.|
 |<Drive>:|Specifies the logical or physical drive where the file you want to print is located. This parameter is not required if the file you want to print is located on the current drive.|
-|<Path>|Specifies the location of the file you want to print. This parameter is not required if the file you want to print is located in the current directory.|
+|<path>|Specifies the location of the file you want to print. This parameter is not required if the file you want to print is located in the current directory.|
 |<FileName>\[ ...\]|Required. Specifies the file you want to print. You can include multiple files in one command.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   A file can print in the background if you send it to a printer connected to a serial or parallel port on the local computer.
 
--   You can perform many configuration tasks from the command prompt by using the **Mode** command.
+-   You can perform many configuration tasks from the command prompt by using the **mode** command.
 
-    See [Mode](Mode.md)for more information about:
+    See [mode](mode.md)for more information about:
 
     -   Configuring a printer connected to a parallel port
 
@@ -52,17 +52,17 @@ To send the file Report.txt in the current directory to a printer connected to L
 print /d:lpt2 report.txt
 ```
 
-To send the file Report.txt in the c:\\Accounting directory to the Printer1 print queue on the \\\\CopyRoom server, type:
+To send the file Report.txt in the c:\\Accounting directory to the printer1 print queue on the \\\\copyRoom server, type:
 
 ```
 print /d:\\copyroom\printer1 c:\accounting\report.txt 
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
-[Print Command Reference](commands-by-server-role/Print-Command-Reference.md)
+[print Command Reference](commands-by-server-role/print-command-reference.md)
 
-[Mode](Mode.md)
+[mode](mode.md)
 
 

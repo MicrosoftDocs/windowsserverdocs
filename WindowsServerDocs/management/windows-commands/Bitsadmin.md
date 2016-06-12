@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin
+title: bitsadmin
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,128 +8,128 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
 ---
-# Bitsadmin
-BITSAdmin is a command\-line tool that you can use to create download or upload jobs and monitor their progress.
+# bitsadmin
+bitsadmin is a command\-line tool that you can use to create download or upload jobs and monitor their progress.
 
 ## Commands
-[Bitsadmin addfile](bitsadmin/Bitsadmin-addfile.md)
+[bitsadmin addfile](bitsadmin/bitsadmin-addfile.md)
 
-[Bitsadmin addfileset](bitsadmin/Bitsadmin-addfileset.md)
+[bitsadmin addfileset](bitsadmin/bitsadmin-addfileset.md)
 
-[Bitsadmin addfilewithranges](bitsadmin/Bitsadmin-addfilewithranges.md)
+[bitsadmin addfilewithranges](bitsadmin/bitsadmin-addfilewithranges.md)
 
-[Bitsadmin cancel](bitsadmin/Bitsadmin-cancel.md)
+[bitsadmin cancel](bitsadmin/bitsadmin-cancel.md)
 
-[Bitsadmin complete](bitsadmin/Bitsadmin-complete.md)
+[bitsadmin complete](bitsadmin/bitsadmin-complete.md)
 
-[Bitsadmin create](bitsadmin/Bitsadmin-create.md)
+[bitsadmin create](bitsadmin/bitsadmin-create.md)
 
-[Bitsadmin getaclflags](bitsadmin/Bitsadmin-getaclflags.md)
+[bitsadmin getaclflags](bitsadmin/bitsadmin-getaclflags.md)
 
-[Bitsadmin getbytestotal](bitsadmin/Bitsadmin-getbytestotal.md)
+[bitsadmin getbytestotal](bitsadmin/bitsadmin-getbytestotal.md)
 
-[Bitsadmin getbytestransferred](bitsadmin/Bitsadmin-getbytestransferred.md)
+[bitsadmin getbytestransferred](bitsadmin/bitsadmin-getbytestransferred.md)
 
-[Bitsadmin getcompletiontime](bitsadmin/Bitsadmin-getcompletiontime.md)
+[bitsadmin getcompletiontime](bitsadmin/bitsadmin-getcompletiontime.md)
 
-[Bitsadmin getcreationtime](bitsadmin/Bitsadmin-getcreationtime.md)
+[bitsadmin getcreationtime](bitsadmin/bitsadmin-getcreationtime.md)
 
-[Bitsadmin getdescription](bitsadmin/Bitsadmin-getdescription.md)
+[bitsadmin getdescription](bitsadmin/bitsadmin-getdescription.md)
 
-[Bitsadmin getdisplayname](bitsadmin/Bitsadmin-getdisplayname.md)
+[bitsadmin getdisplayname](bitsadmin/bitsadmin-getdisplayname.md)
 
-[Bitsadmin geterror](bitsadmin/Bitsadmin-geterror.md)
+[bitsadmin geterror](bitsadmin/bitsadmin-geterror.md)
 
-[Bitsadmin geterrorcount](bitsadmin/Bitsadmin-geterrorcount.md)
+[bitsadmin geterrorcount](bitsadmin/bitsadmin-geterrorcount.md)
 
-[Bitsadmin getfilestotal](bitsadmin/Bitsadmin-getfilestotal.md)
+[bitsadmin getfilestotal](bitsadmin/bitsadmin-getfilestotal.md)
 
-[Bitsadmin getfilestransferred](bitsadmin/Bitsadmin-getfilestransferred.md)
+[bitsadmin getfilestransferred](bitsadmin/bitsadmin-getfilestransferred.md)
 
-[Bitsadmin getminretrydelay](bitsadmin/Bitsadmin-getminretrydelay.md)
+[bitsadmin getminretrydelay](bitsadmin/bitsadmin-getminretrydelay.md)
 
-[Bitsadmin getmodificationtime](bitsadmin/Bitsadmin-getmodificationtime.md)
+[bitsadmin getmodificationtime](bitsadmin/bitsadmin-getmodificationtime.md)
 
-[Bitsadmin getnoprogresstimeout](bitsadmin/Bitsadmin-getnoprogresstimeout.md)
+[bitsadmin getnoprogresstimeout](bitsadmin/bitsadmin-getnoprogresstimeout.md)
 
-[Bitsadmin getnotifycmdline](bitsadmin/Bitsadmin-getnotifycmdline.md)
+[bitsadmin getnotifycmdline](bitsadmin/bitsadmin-getnotifycmdline.md)
 
-[Bitsadmin getnotifyflags](bitsadmin/Bitsadmin-getnotifyflags.md)
+[bitsadmin getnotifyflags](bitsadmin/bitsadmin-getnotifyflags.md)
 
-[Bitsadmin getnotifyinterface](bitsadmin/Bitsadmin-getnotifyinterface.md)
+[bitsadmin getnotifyinterface](bitsadmin/bitsadmin-getnotifyinterface.md)
 
-[Bitsadmin getowner](bitsadmin/Bitsadmin-getowner.md)
+[bitsadmin getowner](bitsadmin/bitsadmin-getowner.md)
 
-[Bitsadmin get priority](bitsadmin/Bitsadmin-get-priority.md)
+[bitsadmin get priority](bitsadmin/bitsadmin-get-priority.md)
 
-[Bitsadmin getproxybypasslist](bitsadmin/Bitsadmin-getproxybypasslist.md)
+[bitsadmin getproxybypasslist](bitsadmin/bitsadmin-getproxybypasslist.md)
 
-[Bitsadmin getproxylist](bitsadmin/Bitsadmin-getproxylist.md)
+[bitsadmin getproxylist](bitsadmin/bitsadmin-getproxylist.md)
 
-[Bitsadmin getproxyusage](bitsadmin/Bitsadmin-getproxyusage.md)
+[bitsadmin getproxyusage](bitsadmin/bitsadmin-getproxyusage.md)
 
-[Bitsadmin getreplydata](bitsadmin/Bitsadmin-getreplydata.md)
+[bitsadmin getreplydata](bitsadmin/bitsadmin-getreplydata.md)
 
-[Bitsadmin getreplyfilename](bitsadmin/Bitsadmin-getreplyfilename.md)
+[bitsadmin getreplyfilename](bitsadmin/bitsadmin-getreplyfilename.md)
 
-[Bitsadmin getreplyprogress](bitsadmin/Bitsadmin-getreplyprogress.md)
+[bitsadmin getreplyprogress](bitsadmin/bitsadmin-getreplyprogress.md)
 
-[Bitsadmin getstate](bitsadmin/Bitsadmin-getstate.md)
+[bitsadmin getstate](bitsadmin/bitsadmin-getstate.md)
 
-[Bitsadmin gettype](bitsadmin/Bitsadmin-gettype.md)
+[bitsadmin gettype](bitsadmin/bitsadmin-gettype.md)
 
-[Bitsadmin help](bitsadmin/Bitsadmin-help.md)
+[bitsadmin help](bitsadmin/bitsadmin-help.md)
 
-[Bitsadmin info](bitsadmin/Bitsadmin-info.md)
+[bitsadmin info](bitsadmin/bitsadmin-info.md)
 
-[Bitsadmin list](bitsadmin/Bitsadmin-list.md)
+[bitsadmin list](bitsadmin/bitsadmin-list.md)
 
-[Bitsadmin listfiles](bitsadmin/Bitsadmin-listfiles.md)
+[bitsadmin listfiles](bitsadmin/bitsadmin-listfiles.md)
 
-[Bitsadmin monitor](bitsadmin/Bitsadmin-monitor.md)
+[bitsadmin monitor](bitsadmin/bitsadmin-monitor.md)
 
-[Bitsadmin nowrap](bitsadmin/Bitsadmin-nowrap.md)
+[bitsadmin nowrap](bitsadmin/bitsadmin-nowrap.md)
 
-[Bitsadmin rawreturn](bitsadmin/Bitsadmin-rawreturn.md)
+[bitsadmin rawreturn](bitsadmin/bitsadmin-rawreturn.md)
 
-[Bitsadmin removecredentials](bitsadmin/Bitsadmin-removecredentials.md)
+[bitsadmin removecredentials](bitsadmin/bitsadmin-removecredentials.md)
 
-[Bitsadmin replaceremoteprefix](bitsadmin/Bitsadmin-replaceremoteprefix.md)
+[bitsadmin replaceremoteprefix](bitsadmin/bitsadmin-replaceremoteprefix.md)
 
-[Bitsadmin reset](bitsadmin/Bitsadmin-reset.md)
+[bitsadmin reset](bitsadmin/bitsadmin-reset.md)
 
-[Bitsadmin resume](bitsadmin/Bitsadmin-resume.md)
+[bitsadmin resume](bitsadmin/bitsadmin-resume.md)
 
-[Bitsadmin setaclflag](bitsadmin/Bitsadmin-setaclflag.md)
+[bitsadmin setaclflag](bitsadmin/bitsadmin-setaclflag.md)
 
-[Bitsadmin setcredentials](bitsadmin/Bitsadmin-setcredentials.md)
+[bitsadmin setcredentials](bitsadmin/bitsadmin-setcredentials.md)
 
-[Bitsadmin setdescription](bitsadmin/Bitsadmin-setdescription.md)
+[bitsadmin setdescription](bitsadmin/bitsadmin-setdescription.md)
 
-[Bitsadmin setdisplayname](bitsadmin/Bitsadmin-setdisplayname.md)
+[bitsadmin setdisplayname](bitsadmin/bitsadmin-setdisplayname.md)
 
-[Bitsadmin setminretrydelay](bitsadmin/Bitsadmin-setminretrydelay.md)
+[bitsadmin setminretrydelay](bitsadmin/bitsadmin-setminretrydelay.md)
 
-[Bitsadmin setnoprogresstimeout](bitsadmin/Bitsadmin-setnoprogresstimeout.md)
+[bitsadmin setnoprogresstimeout](bitsadmin/bitsadmin-setnoprogresstimeout.md)
 
-[Bitsadmin setnotifycmdline](bitsadmin/Bitsadmin-setnotifycmdline.md)
+[bitsadmin setnotifycmdline](bitsadmin/bitsadmin-setnotifycmdline.md)
 
-[Bitsadmin setnotifyflags](bitsadmin/Bitsadmin-setnotifyflags.md)
+[bitsadmin setnotifyflags](bitsadmin/bitsadmin-setnotifyflags.md)
 
-[Bitsadmin setpriority](bitsadmin/Bitsadmin-setpriority.md)
+[bitsadmin setpriority](bitsadmin/bitsadmin-setpriority.md)
 
-[Bitsadmin setproxysettings](bitsadmin/Bitsadmin-setproxysettings.md)
+[bitsadmin setproxysettings](bitsadmin/bitsadmin-setproxysettings.md)
 
-[Bitsadmin setreplyfilename](bitsadmin/Bitsadmin-setreplyfilename.md)
+[bitsadmin setreplyfilename](bitsadmin/bitsadmin-setreplyfilename.md)
 
-[Bitsadmin suspend](bitsadmin/Bitsadmin-suspend.md)
+[bitsadmin suspend](bitsadmin/bitsadmin-suspend.md)
 
-[Bitsadmin takeownership](bitsadmin/Bitsadmin-takeownership.md)
+[bitsadmin takeownership](bitsadmin/bitsadmin-takeownership.md)
 
-[Bitsadmin Transfer](bitsadmin/Bitsadmin-Transfer.md)
+[bitsadmin Transfer](bitsadmin/bitsadmin-transfer.md)
 
-[Bitsadmin util](bitsadmin/Bitsadmin-util.md)
+[bitsadmin util](bitsadmin/bitsadmin-util.md)
 
-[Bitsadmin wrap](bitsadmin/Bitsadmin-wrap.md)
+[bitsadmin wrap](bitsadmin/bitsadmin-wrap.md)
 
 

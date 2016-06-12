@@ -1,5 +1,5 @@
 ---
-title: Running WSUS Replica Mode
+title: Running WSUS Replica mode
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d218cd6b-3b6b-4429-913b-31d412ce3356
 ---
-# Running WSUS Replica Mode
+# Running WSUS Replica mode
 A WSUS server running in replica mode inherits the update approvals and computer groups created on an administration server. In a scenario that uses replica mode, you typically have a single administration server, and one or more subordinate replica WSUS servers spread out throughout the organization, based on site or organizational topography. You approve updates and create computer groups on the administration server, which the replica mode servers will then mirror. Replica mode servers can be set up only during WSUS Setup, and if you implemented this scenario, it is likely because it is important in your organization that update approvals and computer groups are managed centrally.
 
-If your WSUS server is running in replica mode, you will be able to perform only limited administration capabilities on the server, which will primarily consist of:
+if your WSUS server is running in replica mode, you will be able to perform only limited administration capabilities on the server, which will primarily consist of:
 
--   Adding and removing computers from computer groups. Computer group membership is not distributed to replica servers, only the computer groups themselves. Therefore, on a replica mode server, you will inherit the computer groups that you created on the administration server. However, the computer groups will be empty. You must then assign the client computers that connect to the replica server to the computer groups.
+-   adding and removing computers from computer groups. computer group membership is not distributed to replica servers, only the computer groups themselves. Therefore, on a replica mode server, you will inherit the computer groups that you created on the administration server. However, the computer groups will be empty. You must then assign the client computers that connect to the replica server to the computer groups.
 
 -   Setting a synchronization schedule
 
@@ -33,6 +33,6 @@ If your WSUS server is running in replica mode, you will be able to perform only
 
 -   [Windows Server Update Services &#40;WSUS&#41;]()
 
--   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
+-   [Update management with Windows Server Update Services](update-management-with-windows-server-update-services.md)
 
 

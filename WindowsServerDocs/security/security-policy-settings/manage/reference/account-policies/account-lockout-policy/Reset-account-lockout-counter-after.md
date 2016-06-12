@@ -61,6 +61,6 @@ Configure the **Reset account lockout counter after** policy setting to 30.
 If you do not configure this policy setting or if the value is configured to an interval that is too long, an attacker could attempt to log on to each user's account numerous times and lock out their accounts, a denial\-of\-service \(DoS\) attack might succeed, or administrators might have to manually unlock all locked\-out accounts. If you configure this policy setting to a reasonable value, users can perform new attempts to log on after a failed logon within a reasonable time, without making brute force attacks feasible at high speeds. Be sure that you notify users of the values that are used for this policy setting so that they wait for the lockout timer to expire before they call the Help Desk.  
   
 ## See Also  
-[Account Lockout Policy](Account-Lockout-Policy.md)  
+[Account Lockout Policy](account-lockout-policy.md)  
   
 

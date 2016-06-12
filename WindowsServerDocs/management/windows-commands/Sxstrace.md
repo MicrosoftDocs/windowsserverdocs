@@ -1,5 +1,5 @@
 ---
-title: Sxstrace
+title: sxstrace
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: fcd26eeb-fbd9-4a86-b6a9-dfa5e9c6e4fc
 author: jaimeo
 ---
-# Sxstrace
-Diagnoses side\-by\-side problems.  For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+# sxstrace
+Diagnoses side\-by\-side problems.  for examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
   
 ## Syntax  
   
 ```  
-Sxstrace [{[trace /logfile:<FileName> [/nostop]|[parse /logfile:<FileName> /outfile:<ParsedFile>  [/filter:<AppName>]}]  
+sxstrace [{[trace /logfile:<FileName> [/nostop]|[parse /logfile:<FileName> /outfile:<ParsedFile>  [/filter:<AppName>]}]  
 ```  
   
 ### Parameters  
@@ -32,7 +32,7 @@ Sxstrace [{[trace /logfile:<FileName> [/nostop]|[parse /logfile:<FileName> /outf
 |\/filter|Allows the output to be filtered.|  
 |<AppName>|Specifies the name of the application.|  
 |stoptrace|Stop the trace if it is not stopped before.|  
-|\/?|Displays Help at the command prompt.|  
+|\/?|Displays help at the command prompt.|  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Enable tracing and save trace file to **sxstrace.etl**:  
@@ -47,9 +47,9 @@ Translate the raw trace file into a human readable format and save the result to
 sxstrace parse /logfile:sxstrace.etl /outfile:sxstrace.txt  
 ```  
   
-## Additional references  
+## additional references  
   
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)  
+-   [Command-Line Syntax Key](commandline-syntax-key.md)  
   
 -   [Command-Line Reference_1](Command-Line-Reference_1.md)  
   

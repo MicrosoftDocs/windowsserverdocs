@@ -38,6 +38,6 @@ If this policy setting is configured, the following events appear on computers r
 |5453|An IPsec negotiation with a remote computer failed because the IKE and AuthIP IPsec Keying Modules \(IKEEXT\) service is not started.|
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: List
+title: list
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,16 +10,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 57b6c8d0-872e-4dba-9715-1db8ab892e98
 ---
-# List
-Lists writers, shadow copies, or currently registered shadow copy providers that are on the system. If used without parameters, **list** displays help at the command prompt.
+# list
+lists writers, shadow copies, or currently registered shadow copy providers that are on the system. if used without parameters, **list** displays help at the command prompt.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
 list writers [metadata | detailed | status]
-list shadows {all | set <SetID> | id <ShadowID>}
+list shadows {all | set <SetID> | id <shadowID>}
 list providers
 ```
 
@@ -27,9 +27,9 @@ list providers
 
 |Parameter|Description|
 |-------------|---------------|
-|writers|Lists writers. See [List writers](list/List-writers.md) for syntax and parameters.|
-|shadows|Lists persistent and existing non\-persistent shadow copies. See [List shadows](list/List-shadows.md) for syntax and parameters.|
-|providers|Lists currently registered shadow copy providers. See [List providers](list/List-providers.md) for syntax and parameters.|
+|writers|lists writers. See [list writers](list/list-writers.md) for syntax and parameters.|
+|shadows|lists persistent and existing non\-persistent shadow copies. See [list shadows](list/list-shadows.md) for syntax and parameters.|
+|providers|lists currently registered shadow copy providers. See [list providers](list/list-providers.md) for syntax and parameters.|
 
 ## <a name="BKMK_examples"></a>Examples
 To list all shadow copies, type:
@@ -38,7 +38,7 @@ To list all shadow copies, type:
 list shadows all
 ```
 
-#### Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

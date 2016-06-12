@@ -1,5 +1,5 @@
 ---
-title: If
+title: if
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 698b3fb9-532b-4c2b-af7f-179f8dc57131
 ---
-# If
+# if
 Performs conditional processing in batch programs.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -21,10 +21,10 @@ if [not] <String1>==<String2> <Command> [else <Expression>]
 if [not] exist <FileName> <Command> [else <Expression>]
 ```
 
-If command extensions are enabled, use the following syntax:
+if command extensions are enabled, use the following syntax:
 
 ```
-if [/i] <String1> <CompareOp> <String2> <Command> [else <Expression>]
+if [/i] <String1> <compareOp> <String2> <Command> [else <Expression>]
 if cmdextversion <Number> <Command> [else <Expression>]
 if defined <Variable> <Command> [else <Expression>]
 ```
@@ -34,30 +34,30 @@ if defined <Variable> <Command> [else <Expression>]
 |Parameter|Description|
 |-------------|---------------|
 |not|Specifies that the command should be carried out only if the condition is false.|
-|errorlevel <Number>|Specifies a true condition only if the previous program run by Cmd.exe returned an exit code equal to or greater than *Number*.|
+|errorlevel <Number>|Specifies a true condition only if the previous program run by cmd.exe returned an exit code equal to or greater than *Number*.|
 |<Command>|Specifies the command that should be carried out if the preceding condition is met.|
 |<String1>\=\=<String2>|Specifies a true condition only if *String1* and *String2* are the same. These values can be literal strings or batch variables \(for example, %1\). You do not need to enclose literal strings in quotation marks.|
 |exist <FileName>|Specifies a true condition if the specified file name exists.|
-|<CompareOp>|Specifies a three\-letter comparison operator. The following list represents valid values for *CompareOp*:<br /><br />**EQU** Equal to<br /><br />**NEQ** Not equal to<br /><br />**LSS** Less than<br /><br />**LEQ** Less than or equal to<br /><br />**GTR** Greater than<br /><br />**GEQ** Greater than or equal to|
-|\/i|Forces string comparisons to ignore case.  You can use **\/i** on the *String1***\=\=***String2* form of **if**. These comparisons are generic, in that if both *String1* and *String2* are comprised of numeric digits only, the strings are converted to numbers and a numeric comparison is performed.|
-|cmdextversion <Number>|Specifies a true condition only if the internal version number associated with the command extensions feature of Cmd.exe is equal to or greater than the number specified. The first version is 1. It increases by increments of one when significant enhancements are added to the command extensions. The **cmdextversion** conditional is never true when command extensions are disabled \(by default, command extensions are enabled\).|
+|<compareOp>|Specifies a three\-letter comparison operator. The following list represents valid values for *compareOp*:<br /><br />**EQU** Equal to<br /><br />**NEQ** Not equal to<br /><br />**LSS** Less than<br /><br />**LEQ** Less than or equal to<br /><br />**GTR** Greater than<br /><br />**GEQ** Greater than or equal to|
+|\/i|forces string comparisons to ignore case.  You can use **\/i** on the *String1***\=\=***String2* form of **if**. These comparisons are generic, in that if both *String1* and *String2* are comprised of numeric digits only, the strings are converted to numbers and a numeric comparison is performed.|
+|cmdextversion <Number>|Specifies a true condition only if the internal version number associated with the command extensions feature of cmd.exe is equal to or greater than the number specified. The first version is 1. It increases by increments of one when significant enhancements are added to the command extensions. The **cmdextversion** conditional is never true when command extensions are disabled \(by default, command extensions are enabled\).|
 |defined <Variable>|Specifies a true condition if *Variable* is defined.|
 |<Expression>|Specifies a command\-line command and any parameters to be passed to the command in an **else** clause.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
--   If the condition specified in an **if** clause is true, the command that follows the condition is carried out. If the condition is false, the command in the **if** clause is ignored and the command executes any command that is specified in the **else** clause.
+-   if the condition specified in an **if** clause is true, the command that follows the condition is carried out. if the condition is false, the command in the **if** clause is ignored and the command executes any command that is specified in the **else** clause.
 
 -   When a program stops, it returns an exit code. To use exit codes as conditions, use **errorlevel**.
 
--   If you use **defined**, the following three variables are added to the environment: **%errorlevel%**, **%cmdcmdline%**, and **%cmdextversion%**.
+-   if you use **defined**, the following three variables are added to the environment: **%errorlevel%**, **%cmdcmdline%**, and **%cmdextversion%**.
 
     -   **%errorlevel%** expands into a string representation of the current value of the ERRORLEVEL environment variable. This assumes that there is not an existing environment variable with the name ERRORLEVEL—if there is, you will get that ERRORLEVEL value instead.
 
-    -   **%cmdcmdline%** expands into the original command line that was passed to Cmd.exe prior to any processing by Cmd.exe. This assumes that there is not an existing environment variable with the name CMDCMDLINE—if there is, you will get the CMDCMDLINE value instead.
+    -   **%cmdcmdline%** expands into the original command line that was passed to cmd.exe prior to any processing by cmd.exe. This assumes that there is not an existing environment variable with the name cmdcmdLINE—if there is, you will get the cmdcmdLINE value instead.
 
-    -   **%cmdextversion%** expands into the string representation of the current value of **cmdextversion**. This assumes that there is not an existing environment variable with the name CMDEXTVERSION—if there is, you will get the CMDEXTVERSION value instead.
+    -   **%cmdextversion%** expands into the string representation of the current value of **cmdextversion**. This assumes that there is not an existing environment variable with the name cmdEXTverSION—if there is, you will get the cmdEXTverSION value instead.
 
 -   You must use the **else** clause on the same line as the command after the **if**.
 
@@ -83,7 +83,7 @@ echo End of batch program.
 To delete the file Product.dat from the current directory or display a message if Product.dat is not found, type the following lines in a batch file:
 
 ```
-IF EXIST Product.dat (
+if EXIST Product.dat (
 del Product.dat
 ) ELSE (
 echo The Product.dat file is missing.
@@ -94,7 +94,7 @@ echo The Product.dat file is missing.
 > These lines can be combined into a single line as follows:
 
 ```
-IF EXIST Product.dat (del Product.dat) ELSE (echo The Product.dat file is missing.)
+if EXIST Product.dat (del Product.dat) ELSE (echo The Product.dat file is missing.)
 ```
 
 To echo the value of the ERRORLEVEL environment variable after running a batch file, type the following lines in the batch file:
@@ -116,11 +116,11 @@ To go to the "okay" label if the value of the ERRORLEVEL environment variable is
 if %errorlevel% LEQ 1 goto okay
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
-[If](If.md)
+[if](if.md)
 
-[Goto](Goto.md)
+[goto](goto.md)
 
 

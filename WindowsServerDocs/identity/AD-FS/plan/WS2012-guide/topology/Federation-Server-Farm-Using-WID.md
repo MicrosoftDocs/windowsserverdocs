@@ -34,7 +34,7 @@ This section describes various considerations about the intended audience, benef
 -   Smaller organizations that require redundant, scalable services  
   
 > [!NOTE]  
-> Organizations with larger databases should consider using the [Federation Server Farm Using SQL Server](../../../../active-directory-federation-services/plan/WS2012-guide/topology/Federation-Server-Farm-Using-SQL-Server.md) deployment topology, which is described later in this section. Organizations with users who log in from outside the network should consider using either the [Federation Server Farm Using WID and Proxies](Federation-Server-Farm-Using-WID-and-Proxies.md) topology or the [Federation Server Farm Using SQL Server](../../../../active-directory-federation-services/plan/WS2012-guide/topology/Federation-Server-Farm-Using-SQL-Server.md) topology.  
+> Organizations with larger databases should consider using the [Federation Server Farm Using SQL Server](../../../../active-directory-federation-services/plan/WS2012-guide/topology/federation-server-farm-using-sql-server.md) deployment topology, which is described later in this section. Organizations with users who log in from outside the network should consider using either the [Federation Server Farm Using WID and Proxies](federation-server-farm-using-wid-proxies.md) topology or the [Federation Server Farm Using SQL Server](../../../../active-directory-federation-services/plan/WS2012-guide/topology/federation-server-farm-using-sql-server.md) topology.  
   
 ### What are the benefits of using this topology?  
   
@@ -48,7 +48,7 @@ This section describes various considerations about the intended audience, benef
   
 ### What are the limitations of using this topology?  
   
--   A WID farm has a limit of five federation servers. For more information, see [AD FS Deployment Topology Considerations](../../../../active-directory-federation-services/plan/WS2012-guide/topology/AD-FS-Deployment-Topology-Considerations.md).  
+-   A WID farm has a limit of five federation servers. For more information, see [AD FS Deployment Topology Considerations](../../../../active-directory-federation-services/plan/WS2012-guide/topology/ad-fs-deployment-topology-considerations.md).  
   
 -   A WID farm does not support token replay detection or artifact resolution \(part of the Security Assertion Markup Language \(SAML\) protocol\).  
   
@@ -60,11 +60,11 @@ When you are ready to start deploying this topology in your network, you should 
   
 The NLB host can use the settings that are defined in this NLB cluster to allocate client requests to the individual federation servers. The following illustration shows how the fictional Fabrikam, Inc., company sets up the first phase of its deployment using a two\-computer federation server farm \(fs1 and fs2\) with WID and the positioning of a DNS server and a single NLB host that is wired to the corporate network.  
   
-![](../../../../media/Federation-Server-Farm-Using-WID/FarmWID.gif)  
+![](../../../../media/federation-server-farm-using-wid/farmwid.gif)  
   
 > [!NOTE]  
 > If there is a failure on this single NLB host, users will not be able to access federated applications or services. Add additional NLB hosts if your business requirements do not allow having a single point of failure.  
   
-For more information about how to configure your networking environment for use with federation servers, see [Name Resolution Requirements for Federation Servers](../../../../active-directory-federation-services/plan/WS2012-guide/server-placement/Name-Resolution-Requirements-for-Federation-Servers.md) in the AD FS Design Guide.  
+For more information about how to configure your networking environment for use with federation servers, see [Name Resolution Requirements for Federation Servers](../../../../active-directory-federation-services/plan/WS2012-guide/server-placement/name-resolution-requirements-federation-servers.md) in the AD FS Design Guide.  
   
 

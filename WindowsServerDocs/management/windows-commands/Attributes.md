@@ -1,5 +1,5 @@
 ---
-title: Attributes
+title: attributes
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,25 +10,25 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da67c481-b3b1-4aa9-840a-10828ef1b6e5
 ---
-# Attributes
+# attributes
 Displays, sets, or clears the attributes of a disk or volume.
 
 ## Syntax
 
 ```
-Attributes disk
-Attributes volume
+attributes disk
+attributes volume
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|[Attributes disk](attributes/Attributes-disk.md)|Displays, sets, or clears the attributes of a disk.|
-|[Attributes volume](attributes/Attributes-volume.md)|Displays, sets, or clears the attributes of a volume.|
+|[attributes disk](attributes/attributes-disk.md)|Displays, sets, or clears the attributes of a disk.|
+|[attributes volume](attributes/attributes-volume.md)|Displays, sets, or clears the attributes of a volume.|
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 

@@ -1,5 +1,5 @@
 ---
-title: Finger
+title: finger
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,8 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 907ea637-5c6c-4752-84c2-46bbf2a68a33
 ---
-# Finger
-Displays information about a user or users on a specified remote computer \(typically a computer running UNIX\) that is running the Finger service or daemon. The remote computer specifies the format and output of the user information display. Used without parameters, **finger** displays help. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+# finger
+Displays information about a user or users on a specified remote computer \(typically a computer running UNIX\) that is running the finger service or daemon. The remote computer specifies the format and output of the user information display. Used without parameters, **finger** displays help. for examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
 
 ## Syntax
 
@@ -22,11 +22,11 @@ finger [-l] [<User>] [@<Host>] [...]
 |Parameter|Description|
 |-------------|---------------|
 |\-l|Displays user information in long list format.|
-|<User>|Specifies the user about which you want information. If you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
-|@<Host>|Specifies the remote computer running the Finger service where you are looking for user information. You can specify a computer name or IP address.|
-|\/?|Displays Help at the command prompt.|
+|<User>|Specifies the user about which you want information. if you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
+|@<Host>|Specifies the remote computer running the finger service where you are looking for user information. You can specify a computer name or IP address.|
+|\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 Multiple User@Host parameters can be specified.
 
 You must prefix **finger** parameters with a hyphen \(\-\) rather than a slash \(\/\).
@@ -48,8 +48,8 @@ To display information for all users on the computer users.microsoft.com, type:
 finger @users.microsoft.com
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](commandline-syntax-key.md)
 
 

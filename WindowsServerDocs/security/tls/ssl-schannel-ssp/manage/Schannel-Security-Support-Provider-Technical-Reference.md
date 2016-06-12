@@ -22,9 +22,9 @@ This reference explains what TLS, SSL, and DTLS are; how TLS and SSL use the Sec
 
 -   [Schannel Provider Technical Overview](assetId:///7ace2e6d-19e5-49ad-b23f-7acf2fe49aea)
 
-    -   [Transport Layer Security protocol](schannel-security-support-provider-technical-reference/Transport-Layer-Security-protocol.md)
+    -   [Transport Layer Security protocol](schannel-security-support-provider-technical-reference/transport-layer-security-protocol.md)
 
-    -   [Datagram Transport Layer Security protocol](schannel-security-support-provider-technical-reference/Datagram-schannel-security-support-provider-technical-reference/Transport-Layer-Security-protocol.md)
+    -   [Datagram Transport Layer Security protocol](schannel-security-support-provider-technical-reference/Datagram-schannel-security-support-provider-technical-reference/transport-layer-security-protocol.md)
 
 -   [Supported Cipher Suites and Protocols in the Schannel Provider](assetId:///336eba1e-c7f6-445e-b0b5-e10246ea816f)
 

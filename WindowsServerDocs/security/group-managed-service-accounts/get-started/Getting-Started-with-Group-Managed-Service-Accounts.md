@@ -64,7 +64,7 @@ With  Windows Server 2012 , services or service administrators do not need to ma
 
 -   Tasks using Task Scheduler.
 
-For more information about standalone Managed Service Accounts, see [Managed Service Accounts](http://technet.microsoft.com/library/ff641731(v=WS.10).aspx). For more information about group Managed Service Accounts, see [Group Managed Service Accounts Overview](Group-Managed-Service-Accounts-Overview.md).
+For more information about standalone Managed Service Accounts, see [Managed Service Accounts](http://technet.microsoft.com/library/ff641731(v=WS.10).aspx). For more information about group Managed Service Accounts, see [Group Managed Service Accounts Overview](Group-Managed-service-accounts-Overview.md).
 
 ### <a name="BKMK_gMSA_Req"></a>Requirements for group Managed Service Accounts
 The following table lists the operating system requirements for Kerberos authentication to work with services using gMSA. The Active Directory requirements are listed after the table.
@@ -98,7 +98,7 @@ A 64\-bit architecture is required to run the Windows PowerShell commands used t
 
 -   If the first master root key for Active Directory is not deployed in the domain or has not been created, then create it. The result of its creation can be verified in the KdsSvc Operational log, Event ID 4004.
 
-For instructions how to create the key, see [Create the Key Distribution Services KDS Root Key](../deploy/Create-the-Key-Distribution-Services-KDS-Root-Key.md). Microsoft Key Distribution Service \(kdssvc.dll\) the root key for AD.
+For instructions how to create the key, see [Create the Key Distribution Services KDS Root Key](../deploy/create-key-distribution-services-kds-root-key.md). Microsoft Key Distribution Service \(kdssvc.dll\) the root key for AD.
 
 **Lifecycle**
 
@@ -382,7 +382,7 @@ Use the procedures described in [Removing a group Managed Service Account from t
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Group Managed Service Accounts Overview](Group-Managed-Service-Accounts-Overview.md)
+-   [Group Managed Service Accounts Overview](Group-Managed-service-accounts-Overview.md)
 
 -   [Managed Service Accounts](http://technet.microsoft.com/library/ff641731(v=ws.10).aspx)
 

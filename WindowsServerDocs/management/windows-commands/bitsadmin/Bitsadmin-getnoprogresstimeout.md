@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getnoprogresstimeout
+title: bitsadmin getnoprogresstimeout
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9cd9b19b-cbb4-4352-8419-978080f016b6
 ---
-# Bitsadmin getnoprogresstimeout
+# bitsadmin getnoprogresstimeout
 Retrieves the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
 
 ## Syntax
 
 ```
-bitsadmin /GetNoProgressTimeout <Job>
+bitsadmin /GetNoProgresstimeout <Job>
 ```
 
 ## Parameters
@@ -27,10 +27,10 @@ bitsadmin /GetNoProgressTimeout <Job>
 The following example retrieves the progress time out value for the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetNoProgressTimeout myDownloadJob
+C:\>bitsadmin /GetNoProgresstimeout myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

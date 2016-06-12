@@ -1,5 +1,5 @@
 ---
-title: Edit AppLocker Rules
+title: Edit applocker Rules
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,16 +10,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cca03e9e-7e50-4c09-9c00-0aa878fb782b
 ---
-# Edit AppLocker Rules
-This topic describes the steps to edit a publisher rule, path rule, and file hash rule in AppLocker in  Windows Server 2012  and Windows 8.
+# Edit applocker Rules
+This topic describes the steps to edit a publisher rule, path rule, and file hash rule in applocker in  Windows Server 2012  and Windows 8.
 
-For more information about these rule types, see [Understanding AppLocker Rule Condition Types]().
+For more information about these rule types, see [Understanding applocker Rule Condition Types]().
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an applocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an applocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer applocker, see [Using the MMC snap\-ins to administer applocker](#BKMK_Using_Snapins).
 
 ### <a name="BKMK_EditPubRule"></a>To edit a publisher rule
 
-1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **applocker**.
 
 2.  Click the appropriate rule collection.
 
@@ -37,7 +37,7 @@ You can perform this task by using the Group Policy Management Console for an Ap
 
 ### <a name="BKMK_EditHashRule"></a>To edit a file hash rule
 
-1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **applocker**.
 
 2.  Choose the appropriate rule collection.
 
@@ -53,7 +53,7 @@ You can perform this task by using the Group Policy Management Console for an Ap
 
 ### <a name="BKMK_EditPathRule"></a>To edit a path rule
 
-1.  In the console tree in the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree in the snap\-in, double\-click **Application Control Policies**, and then double\-click **applocker**.
 
 2.  Choose the appropriate rule collection.
 

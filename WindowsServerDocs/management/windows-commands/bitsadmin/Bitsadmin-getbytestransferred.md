@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getbytestransferred
+title: bitsadmin getbytestransferred
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47bbf184-e06f-4be0-b2ba-d32b10d82002
 ---
-# Bitsadmin getbytestransferred
+# bitsadmin getbytestransferred
 Retrieves the number of bytes transferred for the specified job.
 
 ## Syntax
@@ -30,7 +30,7 @@ The following example retrieves the number of bytes transferred for the job name
 C:\>bitsadmin /GetBytesTransferred myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

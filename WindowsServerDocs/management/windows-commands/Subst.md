@@ -1,5 +1,5 @@
 ---
-title: Subst
+title: subst
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,15 +8,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
 ---
-# Subst
-Associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
+# subst
+associates a path with a drive letter. if used without parameters, **subst** displays the names of the virtual drives in effect.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-subst [<Drive1>: [<Drive2>:]<Path>] 
+subst [<Drive1>: [<Drive2>:]<path>] 
 subst <Drive1>: /d
 ```
 
@@ -25,11 +25,11 @@ subst <Drive1>: /d
 |Parameter|Description|
 |-------------|---------------|
 |<Drive1>:|Specifies the virtual drive to which you want to assign a path.|
-|\[<Drive2>:\]<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
-|\/d|Deletes a substituted \(virtual\) drive.|
+|\[<Drive2>:\]<path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
+|\/d|deletes a substituted \(virtual\) drive.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   The following commands do not work and should not be used on drives that are specified in the **subst** command:
 
@@ -45,12 +45,12 @@ subst <Drive1>: /d
 
     **recover**
 
--   The *Drive1* parameter must be within the range that is specified by the **lastdrive** command. If not, **subst** displays the following error message:
+-   The *Drive1* parameter must be within the range that is specified by the **lastdrive** command. if not, **subst** displays the following error message:
 
     `Invalid parameter - drive1:`
 
 ## <a name="BKMK_examples"></a>Examples
-To create a virtual drive Z for the path B:\\User\\Betty\\Forms, type:
+To create a virtual drive Z for the path B:\\User\\Betty\\forms, type:
 
 ```
 subst z: b:\user\betty\forms 
@@ -62,7 +62,7 @@ Instead of typing the full path, you can reach this directory by typing the lett
 z: 
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 

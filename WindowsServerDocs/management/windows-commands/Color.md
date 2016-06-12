@@ -1,5 +1,5 @@
 ---
-title: Color
+title: color
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5b67131-d196-45ec-a3f9-b5d9f091fd86
 ---
-# Color
-Changes the foreground and background colors in the Command Prompt window for the current session. If used without parameters, **color** restores the default Command Prompt window foreground and background colors.
+# color
+changes the foreground and background colors in the Command prompt window for the current session. if used without parameters, **color** restores the default Command prompt window foreground and background colors.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -27,11 +27,11 @@ color [[<B>]<F>]
 |<F>|Specifies the foreground color.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   The following table lists valid hexadecimal digits that you can use as the values for *B* and *F*.
 
-    |Value|Color|
+    |Value|color|
     |---------|---------|
     |0|Black|
     |1|Blue|
@@ -52,20 +52,20 @@ color [[<B>]<F>]
 
 -   Do not use space characters between *B* and *F*.
 
--   If you specify only one hexadecimal digit, the corresponding color is used as the foreground color and the background color is set to the default color.
+-   if you specify only one hexadecimal digit, the corresponding color is used as the foreground color and the background color is set to the default color.
 
--   To set the default Command Prompt window color, click the upper\-left corner of the Command Prompt window, click **Defaults**, click the **Colors** tab, and then click the colors that you want to use for the **Screen Text** and **Screen Background**.
+-   To set the default Command prompt window color, click the upper\-left corner of the Command prompt window, click **Defaults**, click the **colors** tab, and then click the colors that you want to use for the **Screen Text** and **Screen Background**.
 
--   If *B* and *F* are the same, the **color** command sets ERRORLEVEL to 1, and no change is made to either the foreground or the background color.
+-   if *B* and *F* are the same, the **color** command sets ERRORLEVEL to 1, and no change is made to either the foreground or the background color.
 
 ## <a name="BKMK_examples"></a>Examples
-To change the Command Prompt window background color to gray and the foreground color to red, type:
+To change the Command prompt window background color to gray and the foreground color to red, type:
 
 ```
 color 84
 ```
 
-To change the Command Prompt window foreground color to light yellow, type:
+To change the Command prompt window foreground color to light yellow, type:
 
 ```
 color e
@@ -74,7 +74,7 @@ color e
 > [!NOTE]
 > In this example, the background is set to the default color because only one hexadecimal digit is specified.
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 

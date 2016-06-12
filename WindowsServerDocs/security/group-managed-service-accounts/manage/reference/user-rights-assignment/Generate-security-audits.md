@@ -87,6 +87,6 @@ Ensure that only the Local Service and Network Service accounts have the **Gener
 None. Restricting the **Generate security audits** user right to the Local Service and Network Service accounts is the default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

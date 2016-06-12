@@ -1,5 +1,5 @@
 ---
-title: Shadow
+title: shadow
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f81d9717-6883-4e14-9508-4b2a87e48ea7
 author: Lizap
 ---
-# Shadow
-Enables you to remotely control an active session of another user on a Remote Desktop Session Host \(RD Session Host\) server.
+# shadow
+Enables you to remotely control an active session of another user on a remote Desktop Session Host \(rd Session Host\) server.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 > [!NOTE]
 
@@ -28,19 +28,19 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 |-------------|---------------|
 |<SessionName>|Specifies the name of the session that you want to remotely control.|
 |<SessionID>|Specifies the ID of the session that you want to remotely control. Use **query user** to display the list of sessions and their session IDs.|
-|\/server:<ServerName>|Specifies the RD Session Host server containing the session that you want to remotely control. By default, the current RD Session Host4 server is used.|
+|\/server:<ServerName>|Specifies the rd Session Host server containing the session that you want to remotely control. By default, the current rd Session Host4 server is used.|
 |\/v|Displays information about the actions being performed.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
--   You can either view or actively control the session. If you choose to actively control a user's session, you will be able to input keyboard and mouse actions to the session.
+-   You can either view or actively control the session. if you choose to actively control a user's session, you will be able to input keyboard and mouse actions to the session.
 
--   You can always remotely control your own sessions \(except the current session\), but you must have Full Control permission or Remote Control special access permission to remotely control another session.
+-   You can always remotely control your own sessions \(except the current session\), but you must have Full Control permission or remote Control special access permission to remotely control another session.
 
--   You can also initiate remote control by using Remote Desktop Services Manager.
+-   You can also initiate remote control by using remote Desktop Services manager.
 
--   Before monitoring begins, the server warns the user that the session is about to be remotely controlled, unless this warning is disabled. Your session might appear to be frozen for a few seconds while it waits for a response from the user. To configure remote control for users and sessions, use the Remote Desktop Services Configuration tool or the Remote Desktop Services extensions to Local Users and Groups and Active Directory Users and Computers.
+-   Before monitoring begins, the server warns the user that the session is about to be remotely controlled, unless this warning is disabled. Your session might appear to be frozen for a few seconds while it waits for a response from the user. To configure remote control for users and sessions, use the remote Desktop Services Configuration tool or the remote Desktop Services extensions to Local Users and Groups and active directory Users and computers.
 
 -   Your session must be capable of supporting the video resolution used at the session that you are remotely controlling or the operation fails.
 
@@ -62,9 +62,9 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
     shadow ACCTG01
     ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](commands-by-server-role/Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](commands-by-server-role/remote-desktop-services-terminal-services-command-reference.md)
 
 

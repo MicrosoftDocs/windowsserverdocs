@@ -143,7 +143,7 @@ System administrators and auditors increasingly want to verify that an auditing 
 Introduced in  Windows Server 2008 R2  and  Windows 7 , security auditing allows administrators to define global object access auditing policies for the entire file system or for the registry on a computer. The specified SACL is then automatically applied to every object of that type. This can be useful for verifying that all critical files, folders, and registry settings on a computer are protected, and for identifying when an issue with a system resource occurs. If a file or folder SACL and a global object access auditing policy \(or a single registry setting SACL and a global object access auditing policy\) are configured on a computer, the effective SACL is derived from combining the file or folder SACL and the global object access auditing policy. This means that an audit event is generated if an activity matches either the file or folder SACL or the global object access auditing policy.
 
 ## <a name="BKMK_7"></a>How do I figure out why someone was able to access a resource?
-Often it is not enough to know simply that an object such as a file or folder was accessed. You may also want to know why the user was able to access this resource. You can obtain this forensic data by configuring the **Audit Handle Manipulation** setting with the **Audit File System** or with the **Audit Registry** audit setting. For more information, see "Step 3: Creating and verifying an audit policy that provides the reason for object access" in the [Advanced Security Auditing Walkthrough](Advanced-Security-Auditing-Walkthrough.md).
+Often it is not enough to know simply that an object such as a file or folder was accessed. You may also want to know why the user was able to access this resource. You can obtain this forensic data by configuring the **Audit Handle Manipulation** setting with the **Audit File System** or with the **Audit Registry** audit setting. For more information, see "Step 3: Creating and verifying an audit policy that provides the reason for object access" in the [Advanced Security Auditing Walkthrough](advanced-security-auditing-walkthrough.md).
 
 ## <a name="BKMK_8"></a>How do I know when changes are made to access control settings, by whom, and what the changes were?
 To track access control changes on computers running  Windows Server 2012 R2 ,  Windows Server 2012  Windows 7 ,  Windows Server 2008 R2 , Windows Vista, or Windows Server 2008, you need to enable the following settings, which track changes to DACLs:
@@ -185,7 +185,7 @@ Changes to security audit policies are critical security events. You can use the
 -   A Special Groups list is changed
 
 ## <a name="BKMK_16"></a>How can I minimize the number of events that are generated?
-Finding the right balance between auditing enough network and computer activity and auditing too little network and computer activity can be challenging. You can achieve this balance by identifying the most important resources, critical activities, and users or groups of users. Then design a security audit policy that targets these resources, activities, and users. Useful guidelines and recommendations for developing an effective security auditing strategy can be found in [Planning and Deploying Advanced Security Audit Policies](../plan/Planning-and-Deploying-Advanced-Security-Audit-Policies.md).
+Finding the right balance between auditing enough network and computer activity and auditing too little network and computer activity can be challenging. You can achieve this balance by identifying the most important resources, critical activities, and users or groups of users. Then design a security audit policy that targets these resources, activities, and users. Useful guidelines and recommendations for developing an effective security auditing strategy can be found in [Planning and Deploying Advanced Security Audit Policies](../plan/planning-deploying-advanced-security-audit-policies.md).
 
 ## <a name="BKMK_17"></a>What are the best tools to model and manage audit policies?
 The integration of advanced audit policy settings with domain Group Policy, introduced in  Windows 7  and  Windows Server 2008 R2 , is designed to simplify the management and implementation of security audit policies in an organization's network. As such, tools used to plan and deploy Group Policy Objects for a domain can also be used to plan and deploy security audit policies.
@@ -205,12 +205,12 @@ Users who examine the security event log for the first time can be a bit overwhe
 
 -   [Security Audit Policy Reference](http://technet.microsoft.com/library/dd772623(v=ws.10).aspx)
 
--   [Advanced Security Audit Policy Settings](../manage/Advanced-Security-Audit-Policy-Settings.md)
+-   [Advanced Security Audit Policy Settings](../manage/advanced-security-audit-policy-settings.md)
 
 ## <a name="BKMK_18"></a>Where can I find more detailed information?
 To learn more about security audit policies, see the following resources:
 
--   [Planning and Deploying Advanced Security Audit Policies](../plan/Planning-and-Deploying-Advanced-Security-Audit-Policies.md)
+-   [Planning and Deploying Advanced Security Audit Policies](../plan/planning-deploying-advanced-security-audit-policies.md)
 
 -   [Security Monitoring and Attack Detection Planning Guide](http://social.technet.microsoft.com/wiki/contents/articles/325.advanced-security-auditing-in-windows-7-and-windows-server-2008-r2.aspx)
 

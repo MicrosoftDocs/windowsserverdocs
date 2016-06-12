@@ -14,6 +14,6 @@ ms.assetid: 53c009a2-6881-4e43-a340-fbdc3b8084ab
 This security policy setting is not used.
 
 ## Related resource
-[Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)
+[Advanced Security Audit Policy Settings](../advanced-security-audit-policy-settings.md)
 
 

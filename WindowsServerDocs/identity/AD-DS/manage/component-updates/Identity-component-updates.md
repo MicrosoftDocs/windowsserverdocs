@@ -23,15 +23,15 @@ After completing this lesson, you will be able to:
   
 -   Describe the following changes:  
   
-    -   [SPN and UPN uniqueness](../../../active-directory-domain-services/manage/component-updates/SPN-and-UPN-uniqueness.md)  
+    -   [SPN and UPN uniqueness](../../../active-directory-domain-services/manage/component-updates/spn-upn-uniqueness.md)  
   
-    -   [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](../../../active-directory-domain-services/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)  
+    -   [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](../../../active-directory-domain-services/manage/component-updates/winlogon-automatic-restart-signon-arso.md)  
   
-    -   [TPM Key Attestation](../../../active-directory-domain-services/manage/component-updates/TPM-Key-Attestation.md)  
+    -   [TPM Key Attestation](../../../active-directory-domain-services/manage/component-updates/tpm-key-attestation.md)  
   
-    -   [CA Backup and Restore Windows PowerShell cmdlets](../../../active-directory-domain-services/manage/component-updates/CA-Backup-and-Restore-Windows-PowerShell-cmdlets.md)  
+    -   [CA Backup and Restore Windows PowerShell cmdlets](../../../active-directory-domain-services/manage/component-updates/ca-backup-restore-windows-powershell-cmdlets.md)  
   
-    -   [Command line process auditing](../../../active-directory-domain-services/manage/component-updates/Command-line-process-auditing.md)  
+    -   [Command line process auditing](../../../active-directory-domain-services/manage/component-updates/command-line-process-auditing.md)  
   
     -   [Credentials Protection and Management](Credentials-Protection-and-Management.md)  
   

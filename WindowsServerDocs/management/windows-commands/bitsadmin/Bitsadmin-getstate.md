@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin getstate
+title: bitsadmin getstate
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1252d6cf-14ca-44df-beb2-930ff011f297
 ---
-# Bitsadmin getstate
+# bitsadmin getstate
 Retrieves the state of the specified job.
 
 ## Syntax
@@ -23,7 +23,7 @@ bitsadmin /GetState <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## Remarks
+## remarks
 The possible states are:
 
 |||
@@ -44,7 +44,7 @@ The following example retrieves the state for the job named *myDownloadJob*.
 C:\>bitsadmin /GetState myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

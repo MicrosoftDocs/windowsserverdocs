@@ -1,5 +1,5 @@
 ---
-title: Query
+title: query
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,11 +8,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 675c5128-f3cf-4e8f-8a3f-b29ab2a8b6de
 ---
-# Query
-Displays information about processes, sessions, and Remote Desktop Session Host \(RD Session Host\) servers.
+# query
+Displays information about processes, sessions, and remote Desktop Session Host \(rd Session Host\) servers.
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed remote Desktop Services. To find out what's new in the latest version, see [What’s New in remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 
 ## Syntax
 
@@ -27,14 +27,14 @@ query user
 
 |Parameter|Description|
 |-------------|---------------|
-|[Query process](query/Query-process.md)|Displays information about processes that are running on an RD Session Host server.|
-|[Query session](query/Query-session.md)|Displays information about sessions on an RD Session Host server.|
-|[Query termserver](query/Query-termserver.md)|Displays a list of all RD Session Host servers on the network.|
-|[Query user](query/Query-user.md)|Displays information about user sessions on an RD Session Host server.|
+|[query process](query/query-process.md)|Displays information about processes that are running on an rd Session Host server.|
+|[query session](query/query-session.md)|Displays information about sessions on an rd Session Host server.|
+|[query termserver](query/query-termserver.md)|Displays a list of all rd Session Host servers on the network.|
+|[query user](query/query-user.md)|Displays information about user sessions on an rd Session Host server.|
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](commands-by-server-role/Remote-Desktop-Services--Terminal-Services--Command-Reference.md)
+[remote Desktop Services &#40;Terminal Services&#41; Command Reference](commands-by-server-role/remote-desktop-services-terminal-services-command-reference.md)
 
 

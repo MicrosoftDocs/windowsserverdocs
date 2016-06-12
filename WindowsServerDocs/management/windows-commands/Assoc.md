@@ -1,5 +1,5 @@
 ---
-title: Assoc
+title: assoc
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,15 +8,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
 ---
-# Assoc
-Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
+# assoc
+Displays or modifies file name extension associations. if used without parameters, **assoc** displays a list of all the current file name extension associations.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+for examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-assoc [<.ext>[=[<FileType>]]]
+assoc [<.ext>[=[<Filetype>]]]
 ```
 
 ## Parameters
@@ -24,10 +24,10 @@ assoc [<.ext>[=[<FileType>]]]
 |Parameter|Description|
 |-------------|---------------|
 |<.ext>|Specifies the file name extension.|
-|<FileType>|Specifies the file type to associate with the specified file name extension.|
+|<Filetype>|Specifies the file type to associate with the specified file name extension.|
 |\/?|Displays help at the command prompt.|
 
-## Remarks
+## remarks
 
 -   To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
 
@@ -63,7 +63,7 @@ To send the output of **assoc** to the file assoc.txt, type:
 assoc>assoc.txt
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](commandline-syntax-key.md)
 
 

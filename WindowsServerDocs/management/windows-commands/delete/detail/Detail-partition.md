@@ -1,5 +1,5 @@
 ---
-title: Detail partition
+title: detail partition
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 672a2c7a-1721-4845-9c23-7af50367170e
 ---
-# Detail partition
+# detail partition
 Displays the properties of the selected partition.
 
 ## Syntax
@@ -19,7 +19,7 @@ Displays the properties of the selected partition.
 detail partition
 ```
 
-## Remarks
+## remarks
 
 -   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
 
@@ -30,8 +30,8 @@ To see the properties of the selected partition, type:
 detail partition
 ```
 
-#### Additional references
-[Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](../../commandline-syntax-key.md)
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 

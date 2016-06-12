@@ -1,5 +1,5 @@
 ---
-title: Understanding AppLocker Rule Condition Types
+title: Understanding applocker Rule Condition Types
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -10,25 +10,25 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c4beae8b-5ee7-4d42-8803-2361d29cf4b4
 ---
-# Understanding AppLocker Rule Condition Types
-This topic for the IT professional describes the three types of AppLocker rule conditions.
+# Understanding applocker Rule Condition Types
+This topic for the IT professional describes the three types of applocker rule conditions.
 
-Rule conditions are criteria that the AppLocker rule is based on. Primary conditions are required to create an AppLocker rule. The three primary rule conditions are publisher, path, and file hash.
+Rule conditions are criteria that the applocker rule is based on. Primary conditions are required to create an applocker rule. The three primary rule conditions are publisher, path, and file hash.
 
 **Publisher**
 
-To use a publisher condition, the files must be digitally signed by the software publisher, or you must do so by using an internal certificate. Rules that are specified to the version level might have to be updated when a new version of the file is released. For more information about this rule condition, see [Understanding the Publisher Rule Condition in AppLocker]().
+To use a publisher condition, the files must be digitally signed by the software publisher, or you must do so by using an internal certificate. Rules that are specified to the version level might have to be updated when a new version of the file is released. For more information about this rule condition, see [Understanding the Publisher Rule Condition in applocker]().
 
 **Path**
 
-Any file can be assigned this rule condition; however, because path rules specify locations within the file system, any subdirectory will also be affected by the rule \(unless explicitly exempted\). For more information about this rule condition, see [Understanding the Path Rule Condition in AppLocker]().
+Any file can be assigned this rule condition; however, because path rules specify locations within the file system, any subdirectory will also be affected by the rule \(unless explicitly exempted\). For more information about this rule condition, see [Understanding the Path Rule Condition in applocker]().
 
 **File hash**
 
-Any file can be assigned this rule condition; however, the rule must be updated each time a new version of the file is released because the hash value is unique to that the version of the file. For more information about this rule condition, see [Understanding the File Hash Rule Condition in AppLocker]().
+Any file can be assigned this rule condition; however, the rule must be updated each time a new version of the file is released because the hash value is unique to that the version of the file. For more information about this rule condition, see [Understanding the File Hash Rule Condition in applocker]().
 
 ### Considerations
-Selecting the appropriate condition for each rule depends on the overall application control policy goals of the organization, the AppLocker rule maintenance goals, and the condition of the existing \(or planned\) application deployment. The following questions can help you decide which rule condition to use.
+Selecting the appropriate condition for each rule depends on the overall application control policy goals of the organization, the applocker rule maintenance goals, and the condition of the existing \(or planned\) application deployment. The following questions can help you decide which rule condition to use.
 
 1.  Is the file digitally signed by a software publisher?
 
@@ -41,16 +41,16 @@ Selecting the appropriate condition for each rule depends on the overall applica
     -   Create a rule by using a path condition.
 
         > [!NOTE]
-        > To determine how many applications on a reference computer are digitally signed, you can use the **Get\-AppLockerFileInformation** Windows PowerShell cmdlet for a directory of files. For example, `Get-AppLockerFileInformation –Directory C:\Windows\ -FileType EXE -recurse` displays the properties for all .exe and .com files within the Windows directory.
+        > To determine how many applications on a reference computer are digitally signed, you can use the **Get\-applockerFileInformation** Windows PowerShell cmdlet for a directory of files. For example, `Get-applockerFileInformation –Directory C:\Windows\ -FileType EXE -recurse` displays the properties for all .exe and .com files within the Windows directory.
 
 2.  What rule condition type does your organization prefer?
 
     If your organization is already using Software Restriction Policies \(SRP\) to restrict what files users can run, rules using file hash or path conditions are probably already in place.
 
     > [!NOTE]
-    > For a list of supported operating system versions and editions to which SRP and AppLocker rules can be applied, see [Requirements to Use AppLocker]().
+    > For a list of supported operating system versions and editions to which SRP and applocker rules can be applied, see [Requirements to Use applocker]().
 
 ## See Also
-[How AppLocker Works]()
+[How applocker Works]()
 
 

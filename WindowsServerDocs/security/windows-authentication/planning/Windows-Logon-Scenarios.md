@@ -19,7 +19,7 @@ The contents of this topic apply to versions of Windows designated in the **Appl
 
 In addition, applications and services can require users to sign in to access those resources that are offered by the application or service. The sign\-in process is similar to the logon process, in that a valid account and correct credentials are required, but logon information is stored in the Security Account Manager \(SAM\) database on the local computer and in Active Directory where applicable. Sign\-in account and credential information is managed by the application or service, and optionally can be stored locally in Credential Locker.
 
-To understand how authentication works, see [Windows Authentication Concepts](Windows-Authentication-Concepts.md).
+To understand how authentication works, see [Windows Authentication Concepts](windows-authentication-concepts.md).
 
 This topic describes the following scenarios:
 
@@ -36,7 +36,7 @@ The logon process begins either when a user enters credentials in the credential
 
 The following diagram shows the interactive logon elements and logon process.
 
-![](../../media/Windows-Logon-Scenarios/AuthN_LSA_Architecture_Client.gif)
+![](../../media/windows-logon-scenarios/authn-lsa-architecture-client.gif)
 
 **Windows Client Authentication Architecture**
 
@@ -90,7 +90,7 @@ To initiate a typical logon session, a user must prove his or her identity by pr
 
 The following diagram shows the elements and processes required for smart card logon.
 
-![](../../media/Windows-Logon-Scenarios/SmartCardCredArchitecture.gif)
+![](../../media/windows-logon-scenarios/smartcardcredarchitecture.gif)
 
 **Smart Card credential provider architecture**
 

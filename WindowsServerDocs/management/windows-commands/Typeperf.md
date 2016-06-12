@@ -1,5 +1,5 @@
 ---
-title: Typeperf
+title: typeperf
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
 author: jaimeo
 ---
-# Typeperf
+# typeperf
 The **typeperf** command writes performance data to the command window or to a log file. To stop **typeperf**, press CTRL\+C.  
   
-For examples of how to use **typeperf**, see [Examples](#BKMK_EXAMPLES).  
+for examples of how to use **typeperf**, see [Examples](#BKMK_EXAMPLES).  
   
 ## Syntax  
   
@@ -30,7 +30,7 @@ typeperf -qx [object] [options]
 |<counter \[counter \[…\]\]>|Specifies performance counters to monitor.|  
   
 > [!NOTE]  
-> **<counter>** is the full name of a performance counter in *\\\\Computer\\Object\(Instance\)\\Counter* format, such as **\\\\Server1\\Processor\(0\)\\% User Time**.  
+> **<counter>** is the full name of a performance counter in *\\\\computer\\Object\(Instance\)\\Counter* format, such as **\\\\Server1\\Processor\(0\)\\% User time**.  
   
 ## Options  
   
@@ -50,10 +50,10 @@ typeperf -qx [object] [options]
   
 ## <a name="BKMK_EXAMPLES"></a>Examples  
   
--   The following example writes the values for the local computer's performance counter **\\\\Processor\(\_Total\)\\% Processor Time** to the command window at a default sample interval of 1 second until CTRL\+C is pressed.  
+-   The following example writes the values for the local computer's performance counter **\\\\Processor\(\_Total\)\\% Processor time** to the command window at a default sample interval of 1 second until CTRL\+C is pressed.  
   
     ```  
-    typeperf "\Processor)_Total)\% Processor Time"  
+    typeperf "\Processor)_Total)\% Processor time"  
     ```  
   
 -   The following example writes the values for the list of counters in the file **counters.txt** to the tab\-delimited file **domain2.tsv** at a sample interval of 5 seconds until 50 samples have been collected.  

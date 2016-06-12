@@ -11,9 +11,9 @@ ms.topic: article
 ms.assetid: ac0d3be7-3e19-4b79-8aa5-daf8d5affd28
 ---
 # Fsutil transaction
-Manages NTFS transactions.
+manages NTFS transactions.
 
-For examples of how to use this command, see [Examples](#BKMK_examples) .
+for examples of how to use this command, see [Examples](#BKMK_examples) .
 
 ## Syntax
 
@@ -35,10 +35,10 @@ fsutil transaction [rollback] <GUID>
 |fileinfo|Displays transaction information for the specified file.|
 |<Filename>|Specifies full path and file name.|
 |list|Displays a list of currently running transactions.|
-|query|Displays information for the specified transaction.<br /><br />-   If **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   If **fsutil transaction query All** is specified, all information for the transaction will be displayed.|
+|query|Displays information for the specified transaction.<br /><br />-   if **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   if **fsutil transaction query All** is specified, all information for the transaction will be displayed.|
 |rollback|Rolls back a specified transaction to the beginning.|
 
-### Remarks
+### remarks
 
 -   Transactional NTFS was introduced in  Windows Server 2008 .
 
@@ -49,8 +49,8 @@ To display transaction information for file c:\\test.txt, type:
 fsutil transaction fileinfo c:\test.txt  
 ```
 
-### Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+### additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 [Fsutil]()
 

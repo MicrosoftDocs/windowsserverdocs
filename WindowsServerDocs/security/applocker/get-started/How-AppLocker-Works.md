@@ -1,5 +1,5 @@
 ---
-title: How AppLocker Works
+title: How applocker Works
 ms.custom: na
 ms.prod: windows-server-2012-r2
 ms.reviewer: na
@@ -10,54 +10,54 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 954a2fe6-2608-4b81-9687-e0deb251a25e
 ---
-# How AppLocker Works
-This topic for the IT professional provides links to topics about AppLocker architecture and components, processes and interactions, rules and policies..
+# How applocker Works
+This topic for the IT professional provides links to topics about applocker architecture and components, processes and interactions, rules and policies..
 
-The following topics explain how AppLocker policies for each of the rule condition types are evaluated:
+The following topics explain how applocker policies for each of the rule condition types are evaluated:
 
--   [AppLocker Architecture and Components](AppLocker-Architecture-and-Components.md)
+-   [applocker Architecture and Components](applocker-architecture-components.md)
 
--   [AppLocker Processes and Interactions](AppLocker-Processes-and-Interactions.md)
+-   [applocker Processes and Interactions](applocker-processes-interactions.md)
 
-The following topics explain how AppLocker rules and policies work:
+The following topics explain how applocker rules and policies work:
 
--   [Understanding AppLocker Rule Behavior]()
+-   [Understanding applocker Rule Behavior]()
 
--   [Understanding AppLocker Rule Exceptions]()
+-   [Understanding applocker Rule Exceptions]()
 
--   [Understanding AppLocker Rule Collections]()
+-   [Understanding applocker Rule Collections]()
 
--   [Understanding AppLocker Allow and Deny Actions on Rules]()
+-   [Understanding applocker Allow and Deny Actions on Rules]()
 
--   [Understanding AppLocker Rule Condition Types]()
+-   [Understanding applocker Rule Condition Types]()
 
-    -   [Understanding the Publisher Rule Condition in AppLocker]()
+    -   [Understanding the Publisher Rule Condition in applocker]()
 
-    -   [Understanding the Path Rule Condition in AppLocker]()
+    -   [Understanding the Path Rule Condition in applocker]()
 
-    -   [Understanding the File Hash Rule Condition in AppLocker]()
+    -   [Understanding the File Hash Rule Condition in applocker]()
 
--   [Understanding AppLocker Default Rules]()
+-   [Understanding applocker Default Rules]()
 
-    -   [Executable Rules in AppLocker]()
+    -   [Executable Rules in applocker]()
 
-    -   [Windows Installer Rules in AppLocker]()
+    -   [Windows Installer Rules in applocker]()
 
-    -   [Script Rules in AppLocker]()
+    -   [Script Rules in applocker]()
 
-    -   [DLL Rules in AppLocker]()
+    -   [DLL Rules in applocker]()
 
-    -   [Packaged Apps and Packaged App Installer Rules in AppLocker](Packaged-Apps-and-Packaged-App-Installer-Rules-in-AppLocker.md)
+    -   [Packaged Apps and Packaged App Installer Rules in applocker](Packaged-Apps-and-Packaged-App-Installer-Rules-in-applocker.md)
 
 ## Additional resources
 
--   [AppLocker Policies Design Guide]()
+-   [applocker Policies Design Guide]()
 
--   [AppLocker Policies Deployment Guide]()
+-   [applocker Policies Deployment Guide]()
 
--   [Administer AppLocker]()
+-   [Administer applocker]()
 
 ## See Also
-[AppLocker Technical Architecture](https://technet.microsoft.com/en-us/library/ee844203(v=ws.10).aspx)
+[applocker Technical Architecture](https://technet.microsoft.com/en-us/library/ee844203(v=ws.10).aspx)
 
 

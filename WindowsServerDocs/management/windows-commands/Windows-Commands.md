@@ -10,7 +10,7 @@ ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 # Windows Commands
 Use this topic to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command\-line tasks by using scripts or scripting tools.
 
-To read introductory information about the command shell and command\-line tools, see [Feature description](Command-Line-Reference_1.md#BKMK_OVER). To see a listing of new and deprecated command\-line tools see [New and deprecated functionality](Command-Line-Reference_1.md#BKMK_NEW).
+To read introductory information about the command shell and command\-line tools, see [Feature description](Command-Line-Reference_1.md#BKMK_Over). To see a listing of new and deprecated command\-line tools see [New and deprecated functionality](Command-Line-Reference_1.md#BKMK_NEW).
 
 To find information about a specific command, in the following A\-Z menu, click the letter that the command starts with, and then click the command name.
 
@@ -37,45 +37,45 @@ The information that is contained in this overview applies to:
 
 -   Windows XP
 
-## <a name="BKMK_OVER"></a>Feature description
+## <a name="BKMK_Over"></a>Feature description
 
 ### <a name="BKMK_NEW"></a>New and deprecated functionality
 
 |Feature\/functionality|New or Deprecated?|Description|
 |--------------------------|----------------------|---------------|
-|[Cluster](assetId:///cb6ab0dd-7bc6-40de-9112-923656851150)|Deprecated|Create a new cluster or configure an existing cluster.|
+|[Cluster](assetId:///cb6ab0dd-7bc6-40de-9112-923656851150)|Deprecated|create a new cluster or configure an existing cluster.|
 |[dfscmd](assetId:///346841cd-98a1-4bda-9eda-5a5c00027e52)|Deprecated|Configure DFS folders and folder targets in a DFS namespace.|
-|[Dirquota](assetId:///e184296d-68b2-4b10-8303-7a7456f2675c)|Deprecated|Creates and manages File Server Resource Manager quotas.|
-|[Filescrn](assetId:///8f11ef55-da52-46fa-807a-33782837a80e)|Deprecated|Create and manage file groups, file screens, file screen exceptions, and file screen templates that are used to configure general administrative options for screening files.|
-|[Fondue](Fondue.md)|New|Enable optional features in Windows by downloading required files from Windows Update or a source that Group Policy specifies.|
-|[PowerShell_Ise](PowerShell_Ise.md)|New|Read, write, run, debug, and test Windows PowerShell scripts and modules in a friendly, graphic\-assisted environment.|
-|[Servermanagercmd](Servermanagercmd.md)|Deprecated|Install or remove roles, role services, and features.|
-|[Shadow](Shadow.md)|Deprecated|Monitor an RD Session Host session.|
-|[Storrept](assetId:///4433454c-daa9-4b7a-befd-9b11d46daffa)|Deprecated|Create and manage storage reports and storage report tasks, and configure general administrative options for File Server Resource Manager.|
+|[dirquota](assetId:///e184296d-68b2-4b10-8303-7a7456f2675c)|Deprecated|creates and manages File Server Resource manager quotas.|
+|[Filescrn](assetId:///8f11ef55-da52-46fa-807a-33782837a80e)|Deprecated|create and manage file groups, file screens, file screen exceptions, and file screen templates that are used to configure general administrative options for screening files.|
+|[fondue](fondue.md)|New|Enable optional features in Windows by downloading required files from Windows Update or a source that Group Policy specifies.|
+|[powershell-ise](powershell-ise.md)|New|Read, write, run, debug, and test Windows powershell scripts and modules in a friendly, graphic\-assisted environment.|
+|[servermanagercmd](servermanagercmd.md)|Deprecated|Install or remove roles, role services, and features.|
+|[shadow](shadow.md)|Deprecated|Monitor an rd Session Host session.|
+|[Storrept](assetId:///4433454c-daa9-4b7a-befd-9b11d46daffa)|Deprecated|create and manage storage reports and storage report tasks, and configure general administrative options for File Server Resource manager.|
 
 ### <a name="BKMK_OVR"></a>Command shell overview
-The command shell is a software program that provides direct communication between the user and the operating system. The non\-graphical, command shell user interface provides the environment in which you run character\-based applications and utilities. The command shell executes programs and displays their output on the screen by using individual characters similar to the MS\-DOS command interpreter, Command.com. The command shell in the Windows Server operating system uses the command interpreter, Cmd.exe. Cmd.exe loads applications, directs the flow of information between applications, and translates user input into a form that the operating system understands.
+The command shell is a software program that provides direct communication between the user and the operating system. The non\-graphical, command shell user interface provides the environment in which you run character\-based applications and utilities. The command shell executes programs and displays their output on the screen by using individual characters similar to the MS\-DOS command interpreter, Command.com. The command shell in the Windows Server operating system uses the command interpreter, cmd.exe. cmd.exe loads applications, directs the flow of information between applications, and translates user input into a form that the operating system understands.
 
-You can use the command shell to create and edit scripts to automate routine tasks. For example, you can create simple scripts in batch \(.bat\) files to automate the management of user accounts or nightly backups. You can also use the command\-line version of Windows Script Host to run more sophisticated scripts in the command shell. For more information, see [Cscript](Cscript.md) or [Wscript](Wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
+You can use the command shell to create and edit scripts to automate routine tasks. for example, you can create simple scripts in batch \(.bat\) files to automate the management of user accounts or nightly backups. You can also use the command\-line version of Windows Script Host to run more sophisticated scripts in the command shell. for more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
 
-### <a name="BKMK_Custom"></a>Customize the Command Prompt window
-You can change the properties for the Command Prompt window.
+### <a name="BKMK_Custom"></a>Customize the Command prompt window
+You can change the properties for the Command prompt window.
 
-##### To configure the Command Prompt window
+##### To configure the Command prompt window
 
-1.  Open a Command Prompt window, click the upper\-left corner of the Command Prompt window, and then click **Properties**. \(Or to open **Command Prompt Properties** from the keyboard, press ALT\+SPACEBAR\+P.\)
+1.  Open a Command prompt window, click the upper\-left corner of the Command prompt window, and then click **Properties**. \(Or to open **Command prompt Properties** from the keyboard, press ALT\+SPACEBAR\+P.\)
 
 2.  Click the **Options** tab.
 
-3.  In **Command History**, type or select **999** in **Buffer Size**, and then type or select **5** in **Number of Buffers**. By increasing the screen buffer size to 999, you enable scrolling through the Command Prompt window. By increasing the number of buffers to five, you increase the number of lines in the Command Prompt window to 5000.
+3.  In **Command History**, type or select **999** in **Buffer Size**, and then type or select **5** in **Number of Buffers**. By increasing the screen buffer size to 999, you enable scrolling through the Command prompt window. By increasing the number of buffers to five, you increase the number of lines in the Command prompt window to 5000.
 
-4.  In **Edit Options**, select the **Quick Edit Mode** and **Insert Mode** check boxes.
+4.  In **edit Options**, select the **Quick edit mode** and **Insert mode** check boxes.
 
 5.  Click the **Layout** tab.
 
 6.  In **Screen Buffer Size**, type or select **2500** in **Height**.
 
-7.  To further customize your Command Prompt window settings, perform any of the following optional tasks:
+7.  To further customize your Command prompt window settings, perform any of the following optional tasks:
 
     -   In **Screen Buffer Size**, increase **Width**.
 
@@ -88,16 +88,16 @@ You can change the properties for the Command Prompt window.
 8.  In the **Apply Properties** dialog box, click **Save properties for future windows with same title**.
 
 > [!NOTE]
-> To enable or disable file and directory name completion on a computer or user logon session, run **Regedit.exe** and set the following **REG\_DWORD value**:
+> To enable or disable file and directory name completion on a computer or user logon session, run **regedit.exe** and set the following **reg\_DWOrd value**:
 > 
-> HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Command Processor\\CompletionChar\\REG\_DWORD
+> HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Command Processor\\completionChar\\reg\_DWOrd
 > 
-> To set the **REG\_DWORD** value, use the hexadecimal value of a control character for a particular function \(for example, **0×9** is Tab and **0×08** is Backspace\). User\-specified settings take precedence over computer settings, and command\-line options take precedence over registry settings.
+> To set the **reg\_DWOrd** value, use the hexadecimal value of a control character for a particular function \(for example, **0×9** is Tab and **0×08** is Backspace\). User\-specified settings take precedence over computer settings, and command\-line options take precedence over registry settings.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
-## <a name="BKMK_CmdRef"></a>Command\-line reference A\-Z
+## <a name="BKMK_cmdRef"></a>Command\-line reference A\-Z
 To find information about a specific command, in the following A\-Z menu, click the letter that the command starts with, and then click the command name.
 
 [A](#bkmk_a) | [B](#BKMK_b) | [C](#BKMK_c) | [D](#BKMK_d) | [E](#BKMK_e) | [F](#BKMK_f) | [G](#BKMK_g) | [H](#BKMK_h) | [I](#BKMK_i) | [J](#BKMK_j) | [K](#BKMK_k) | [L](#BKMK_l) | [M](#BKMK_m) | [N](#BKMK_n) | [O](#BKMK_o) | [P](#BKMK_p) | [Q](#BKMK_q) | [R](#BKMK_r) | [S](#BKMK_s) | [T](#BKMK_t) | [U](#bkmk_u) | [V](#bkmk_v) | [W](#bkmk_w) | [X](#bkmk_x) | [Y](Command-Line-Reference_1.md#BKMK_y) | [Z](Command-Line-Reference_1.md#BKMK_z)
@@ -109,155 +109,155 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Adprep](assetId:///aa923ebf-de47-494b-a60a-9fce083d2f69)
 
--   [Append](Append.md)
+-   [append](append.md)
 
--   [Arp](Arp.md)
+-   [arp](arp.md)
 
--   [Assoc](Assoc.md)
+-   [assoc](assoc.md)
 
--   [At](At.md)
+-   [at](at.md)
 
--   [Atmadm](Atmadm.md)
+-   [atmadm](atmadm.md)
 
--   [Attrib](Attrib.md)
+-   [attrib](attrib.md)
 
--   [Auditpol](Auditpol.md)
+-   [auditpol](auditpol.md)
 
--   [Autochk](Autochk.md)
+-   [autochk](autochk.md)
 
--   [Autoconv](Autoconv.md)
+-   [autoconv](autoconv.md)
 
--   [Autofmt](Autofmt.md)
+-   [autofmt](autofmt.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_b"></a>B
 
--   [Bcdboot](Bcdboot.md)
+-   [bcdboot](bcdboot.md)
 
--   [Bcdedit](Bcdedit.md)
+-   [bcdedit](bcdedit.md)
 
--   [Bdehdcfg](Bdehdcfg.md)
+-   [bdehdcfg](bdehdcfg.md)
 
--   [Bitsadmin](Bitsadmin.md)
+-   [bitsadmin](bitsadmin.md)
 
--   [Bootcfg](Bootcfg.md)
+-   [bootcfg](bootcfg.md)
 
--   [Break_1](Break_1.md)
+-   [break](break.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_c"></a>C
 
--   [Cacls_1](Cacls_1.md)
+-   [cacls](cacls.md)
 
--   [Call](Call.md)
+-   [call](call.md)
 
--   [Cd](Cd.md)
+-   [cd](cd.md)
 
--   [Certreq_OLD](Certreq_OLD.md)
+-   [certreq-old](certreq-old.md)
 
--   [Certutil](Certutil.md)
+-   [certutil](certutil.md)
 
--   [Change](Change.md)
+-   [change](change.md)
 
--   [Chcp](Chcp.md)
+-   [chcp](chcp.md)
 
--   [Chdir_1](Chdir_1.md)
+-   [chdir](chdir.md)
 
--   [Chglogon](Chglogon.md)
+-   [chglogon](chglogon.md)
 
--   [Chgport](Chgport.md)
+-   [chgport](chgport.md)
 
--   [Chgusr]()
+-   [chgusr]()
 
 -   [Chkdsk]()
 
--   [Chkntfs](Chkntfs.md)
+-   [chkntfs](chkntfs.md)
 
--   [Choice](Choice.md)
+-   [choice](choice.md)
 
--   [Cipher](Cipher.md)
+-   [cipher](cipher.md)
 
--   [Clip](Clip.md)
+-   [clip](clip.md)
 
--   [Cls](Cls.md)
+-   [cls](cls.md)
 
 -   [Cluadmin](assetId:///8b0b67ee-3ea8-4f7b-bb35-bec9da5546e3)
 
 -   [Cluster](assetId:///cb6ab0dd-7bc6-40de-9112-923656851150)
 
--   [Cmd](Cmd.md)
+-   [cmd](cmd.md)
 
--   [Cmdkey](Cmdkey.md)
+-   [cmdkey](cmdkey.md)
 
--   [Cmstp](Cmstp.md)
+-   [cmstp](cmstp.md)
 
--   [Color](Color.md)
+-   [color](color.md)
 
--   [Comp](Comp.md)
+-   [comp](comp.md)
 
--   [Compact](Compact.md)
+-   [compact](compact.md)
 
--   [Convert](Convert.md)
+-   [convert](convert.md)
 
--   [Copy](Copy.md)
+-   [copy](copy.md)
 
--   [Cprofile](Cprofile.md)
+-   [cprofile](cprofile.md)
 
--   [Cscript](Cscript.md)
+-   [cscript](cscript.md)
 
 -   [Csvde](assetId:///bd5e4f88-c30a-47a8-b3d2-026e4497275c)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_d"></a>D
 
--   [Date](Date.md)
+-   [date](date.md)
 
 -   [Dcdiag](assetId:///b9dbd69d-f96f-40f8-8ca5-1d96cf16f908)
 
--   [Dcgpofix](Dcgpofix.md)
+-   [dcgpofix](dcgpofix.md)
 
 -   [Dcpromo](assetId:///d660e761-9ee7-4382-822a-06fc2365a1d2)
 
--   [Defrag](Defrag.md)
+-   [defrag](defrag.md)
 
--   [Del](Del.md)
+-   [del](del.md)
 
 -   [dfscmd](assetId:///346841cd-98a1-4bda-9eda-5a5c00027e52)
 
--   [Dfsrmig](Dfsrmig.md)
+-   [dfsrmig](dfsrmig.md)
 
--   [Diantz](Diantz.md)
+-   [diantz](diantz.md)
 
--   [Dir](Dir.md)
+-   [dir](dir.md)
 
--   [Dirquota](assetId:///e184296d-68b2-4b10-8303-7a7456f2675c)
+-   [dirquota](assetId:///e184296d-68b2-4b10-8303-7a7456f2675c)
 
--   [Diskcomp](Diskcomp.md)
+-   [diskcomp](diskcomp.md)
 
--   [Diskcopy](Diskcopy.md)
+-   [diskcopy](diskcopy.md)
 
 -   [Diskedit](assetId:///e96f8ffc-3899-43e4-8f5d-9374c0d514bb)
 
 -   [Diskpart](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 
--   [Diskperf](Diskperf.md)
+-   [diskperf](diskperf.md)
 
--   [DiskRAID](DiskRAID.md)
+-   [diskraid](diskraid.md)
 
 -   [Diskshadow]()
 
--   [Dispdiag](Dispdiag.md)
+-   [dispdiag](dispdiag.md)
 
 -   [Djoin](assetId:///57b936e6-d949-4d79-84c1-f45825d4719e)
 
--   [Dnscmd](Dnscmd.md)
+-   [dnscmd](dnscmd.md)
 
--   [Doskey](Doskey.md)
+-   [doskey](doskey.md)
 
--   [Driverquery](Driverquery.md)
+-   [driverquery](driverquery.md)
 
 -   [Dsacls](assetId:///35307959-7018-46a4-944a-08cec765c88d)
 
@@ -279,199 +279,199 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Dsrm](assetId:///ae1694e1-c091-485e-8f0d-a0cd5b4a2c72)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_e"></a>E
 
--   [Echo](Echo.md)
+-   [echo](echo.md)
 
--   [Edit](Edit.md)
+-   [edit](edit.md)
 
--   [Endlocal](Endlocal.md)
+-   [endlocal](endlocal.md)
 
--   [Erase](Erase.md)
+-   [erase](erase.md)
 
--   [Eventcreate](Eventcreate.md)
+-   [eventcreate](eventcreate.md)
 
--   [Eventquery.vbs](Eventquery.vbs.md)
+-   [eventqueryvbs](eventqueryvbs.md)
 
--   [Eventtriggers](Eventtriggers.md)
+-   [eventtriggers](eventtriggers.md)
 
--   [Evntcmd](Evntcmd.md)
+-   [evntcmd](evntcmd.md)
 
--   [Exit_2](Exit_2.md)
+-   [exit](exit.md)
 
--   [Expand](Expand.md)
+-   [expand](expand.md)
 
--   [Extract](Extract.md)
+-   [extract](extract.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_f"></a>F
 
--   [Fc](Fc.md)
+-   [fc](fc.md)
 
 -   [Filescrn](assetId:///8f11ef55-da52-46fa-807a-33782837a80e)
 
--   [Find](Find.md)
+-   [find](find.md)
 
--   [Findstr](Findstr.md)
+-   [findstr](findstr.md)
 
--   [Finger](Finger.md)
+-   [finger](finger.md)
 
--   [Flattemp](Flattemp.md)
+-   [flattemp](flattemp.md)
 
--   [Fondue](Fondue.md)
+-   [fondue](fondue.md)
 
--   [For](For.md)
+-   [for](for.md)
 
--   [Forfiles](Forfiles.md)
+-   [forfiles](forfiles.md)
 
--   [Format_](Format_.md)
+-   [format](format.md)
 
--   [Freedisk](Freedisk.md)
+-   [freedisk](freedisk.md)
 
 -   [Fsutil]()
 
--   [Ftp](Ftp.md)
+-   [ftp](ftp.md)
 
--   [Ftype](Ftype.md)
+-   [ftype](ftype.md)
 
--   [Fveupdate](Fveupdate.md)
+-   [fveupdate](fveupdate.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_g"></a>G
 
--   [Getmac](Getmac.md)
+-   [getmac](getmac.md)
 
--   [Gettype](Gettype.md)
+-   [gettype](gettype.md)
 
--   [Goto](Goto.md)
+-   [goto](goto.md)
 
--   [Gpfixup](Gpfixup.md)
+-   [gpfixup](gpfixup.md)
 
--   [Gpresult](Gpresult.md)
+-   [gpresult](gpresult.md)
 
--   [Gpupdate]()
+-   [gpupdate]()
 
--   [Graftabl](Graftabl.md)
+-   [graftabl](graftabl.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_h"></a>H
 
 -   [Hashgen](assetId:///c8beaf08-2ce4-493b-b809-727fb7ff9e2c)
 
--   [Help](Help.md)
+-   [help](help.md)
 
--   [Helpctr](Helpctr.md)
+-   [helpctr](helpctr.md)
 
--   [Hostname](Hostname.md)
+-   [hostname](hostname.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_i"></a>I
 
--   [Icacls](Icacls.md)
+-   [icacls](icacls.md)
 
--   [If](If.md)
+-   [if](if.md)
 
--   [Inuse](Inuse.md)
+-   [inuse](inuse.md)
 
--   [Ipconfig](Ipconfig.md)
+-   [ipconfig](ipconfig.md)
 
--   [Ipxroute](Ipxroute.md)
+-   [ipxroute](ipxroute.md)
 
 -   [Irftp]()
 
 -   [Ismserv](assetId:///cb8357b0-9eee-454b-ab62-d2c738bca16c)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_j"></a>J
 
--   [Jetpack](Jetpack.md)
+-   [jetpack](jetpack.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_k"></a>K
 
--   [Klist]()
+-   [klist]()
 
--   [Ksetup](Ksetup.md)
+-   [ksetup](ksetup.md)
 
--   [Ktmutil](Ktmutil.md)
+-   [ktmutil](ktmutil.md)
 
--   [Ktpass](Ktpass.md)
+-   [ktpass](ktpass.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_l"></a>L
 
--   [Label](Label.md)
+-   [label](label.md)
 
 -   [Ldifde](assetId:///8fe5b815-f89d-48c0-8b2c-a9cd1d698652)
 
 -   [Ldp](assetId:///319a46f2-7a37-4274-9e24-c7558ce663e0)
 
--   [Lodctr](Lodctr.md)
+-   [lodctr](lodctr.md)
 
--   [Logman](Logman.md)
+-   [logman](logman.md)
 
--   [Logoff](Logoff.md)
+-   [logoff](logoff.md)
 
--   [Lpq](Lpq.md)
+-   [lpq](lpq.md)
 
--   [Lpr]()
+-   [lpr]()
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_m"></a>M
 
--   [Macfile](Macfile.md)
+-   [macfile](macfile.md)
 
--   [Makecab](Makecab.md)
+-   [makecab](makecab.md)
 
--   [Manage-bde]()
+-   [manage-bde]()
 
 -   [mapadmin](mapadmin.md)
 
--   [Md](Md.md)
+-   [md](md.md)
 
--   [Mkdir](Mkdir.md)
+-   [mkdir](mkdir.md)
 
--   [Mklink](Mklink.md)
+-   [mklink](mklink.md)
 
--   [Mmc](Mmc.md)
+-   [mmc](mmc.md)
 
--   [Mode](Mode.md)
+-   [mode](mode.md)
 
--   [More](More.md)
+-   [more](more.md)
 
--   [Mount](Mount.md)
+-   [mount](mount.md)
 
--   [Mountvol](Mountvol.md)
+-   [mountvol](mountvol.md)
 
--   [Move](Move.md)
+-   [move](move.md)
 
--   [Mqbkup](Mqbkup.md)
+-   [mqbkup](mqbkup.md)
 
--   [Mqsvc](Mqsvc.md)
+-   [mqsvc](mqsvc.md)
 
--   [Mqtgsvc](Mqtgsvc.md)
+-   [mqtgsvc](mqtgsvc.md)
 
 -   [Msdt](Msdt.md)
 
--   [Msg](Msg.md)
+-   [msg](msg.md)
 
--   [Msiexec](Msiexec.md)
+-   [msiexec](msiexec.md)
 
--   [Msinfo32](Msinfo32.md)
+-   [msinfo32](msinfo32.md)
 
--   [Mstsc](Mstsc.md)
+-   [mstsc](mstsc.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_n"></a>N
 
@@ -483,9 +483,9 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Netdom](assetId:///ecaf5d86-3d1d-4db1-a3c4-cf4c458f9423)
 
--   [Netsh](Netsh.md)
+-   [netsh](netsh.md)
 
--   [Netstat](Netstat.md)
+-   [netstat](netstat.md)
 
 -   [Net computer](assetId:///8d9cab7a-bf88-4e0a-a406-33dc7823194c)
 
@@ -493,7 +493,7 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Net localgroup](assetId:///27ed153a-b08a-4a48-8e31-2d63d759fdba)
 
--   [Net print](Net-print.md)
+-   [Net print](net-print.md)
 
 -   [Net session](assetId:///8fc5af08-258a-4d84-8c4f-cbc01c9c4b5b)
 
@@ -507,101 +507,101 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Nfsadmin]()
 
--   [Nfsshare](Nfsshare.md)
+-   [nfsshare](nfsshare.md)
 
--   [Nfsstat](Nfsstat.md)
+-   [nfsstat](nfsstat.md)
 
 -   [Nlb](assetId:///7d4bba93-2bb5-4c71-92c2-570468ac25da)
 
--   [Nlbmgr](Nlbmgr.md)
+-   [nlbmgr](nlbmgr.md)
 
 -   [Nltest](assetId:///aff1e7ff-5d77-4891-94a2-92cb0e5aee53)
 
 -   [Nslookup]()
 
--   [Ntbackup](Ntbackup.md)
+-   [ntbackup](ntbackup.md)
 
--   [Ntcmdprompt](Ntcmdprompt.md)
+-   [ntcmdprompt](ntcmdprompt.md)
 
 -   [Ntdsutil](assetId:///199cebb9-967c-4307-a9d7-1c0bb50dc75b)
 
 -   [Ntfrsutl]()
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_o"></a>O
 
--   [Openfiles](Openfiles.md)
+-   [openfiles](openfiles.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_p"></a>P
 
--   [Pagefileconfig.vbs](Pagefileconfig.vbs.md)
+-   [pagefileconfigvbs](pagefileconfigvbs.md)
 
--   [Path](Path.md)
+-   [path](path.md)
 
--   [Pathping](Pathping.md)
+-   [pathping](pathping.md)
 
--   [Pause](Pause.md)
+-   [pause](pause.md)
 
--   [Pbadmin](Pbadmin.md)
+-   [pbadmin](pbadmin.md)
 
--   [Pentnt](Pentnt.md)
+-   [pentnt](pentnt.md)
 
--   [Perfmon](Perfmon.md)
+-   [perfmon](perfmon.md)
 
--   [Ping](Ping.md)
+-   [ping](ping.md)
 
--   [Pnpunattend](Pnpunattend.md)
+-   [pnpunattend](pnpunattend.md)
 
--   [Pnputil](Pnputil.md)
+-   [pnputil](pnputil.md)
 
--   [Popd](Popd.md)
+-   [popd](popd.md)
 
 -   [Powercfg](assetId:///34bab092-0186-4626-a123-6d0afa9bf696)
 
--   [PowerShell](PowerShell.md)
+-   [powershell](powershell.md)
 
--   [PowerShell_Ise](PowerShell_Ise.md)
+-   [powershell-ise](powershell-ise.md)
 
--   [Print](Print.md)
+-   [print](print.md)
 
--   [Prncnfg.vbs](Prncnfg.vbs.md)
+-   [prncnfgvbs](prncnfgvbs.md)
 
--   [Prndrvr.vbs](Prndrvr.vbs.md)
+-   [prndrvrvbs](prndrvrvbs.md)
 
--   [Prnjobs.vbs](Prnjobs.vbs.md)
+-   [prnjobsvbs](prnjobsvbs.md)
 
--   [Prnmngr.vbs](Prnmngr.vbs.md)
+-   [prnmngrvbs](prnmngrvbs.md)
 
--   [Prnport.vbs](Prnport.vbs.md)
+-   [prnportvbs](prnportvbs.md)
 
--   [Prnqctl.vbs]()
+-   [prnqctlvbs]()
 
--   [Prompt](Prompt.md)
+-   [prompt](prompt.md)
 
--   [Pubprn.vbs](Pubprn.vbs.md)
+-   [pubprnvbs](pubprnvbs.md)
 
--   [Pushd](Pushd.md)
+-   [pushd](pushd.md)
 
--   [Pushprinterconnections](Pushprinterconnections.md)
+-   [pushprinterconnections](pushprinterconnections.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_q"></a>Q
 
--   [Qappsrv](Qappsrv.md)
+-   [qappsrv](qappsrv.md)
 
--   [Qprocess](Qprocess.md)
+-   [qprocess](qprocess.md)
 
--   [Query](Query.md)
+-   [query](query.md)
 
--   [Quser]()
+-   [quser]()
 
--   [Qwinsta](Qwinsta.md)
+-   [qwinsta](qwinsta.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_r"></a>R
 
@@ -609,55 +609,55 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Rcp]()
 
--   [Rd](Rd.md)
+-   [rd](rd.md)
 
--   [Rdpsign](Rdpsign.md)
+-   [rdpsign](rdpsign.md)
 
 -   [Reagentc](assetId:///83b29f78-269e-4ab8-9870-7fc08d34fb43)
 
--   [Recover](Recover.md)
+-   [recover](recover.md)
 
 -   [Redircmp](assetId:///13debf34-0ddf-4b56-9ebf-4ddc97533a65)
 
 -   [Redirusr](assetId:///74559785-04cf-4b73-abfb-f6b89fba200d)
 
--   [Reg](Reg.md)
+-   [reg](reg.md)
 
--   [Regini](Regini.md)
+-   [regini](regini.md)
 
--   [Regsvr32](Regsvr32.md)
+-   [regsvr32](regsvr32.md)
 
--   [Relog](Relog.md)
+-   [relog](relog.md)
 
--   [Rem](Rem.md)
+-   [rem](rem.md)
 
--   [Ren](Ren.md)
+-   [ren](ren.md)
 
--   [Rename](Rename.md)
+-   [rename](rename.md)
 
--   [Rendom](assetId:///b2b67fb7-1f41-468a-a9c3-19b47cc2462b)
+-   [rendom](assetId:///b2b67fb7-1f41-468a-a9c3-19b47cc2462b)
 
 -   [Repadmin](assetId:///24cf60ff-6fae-428e-967a-5c24f5f80d31)
 
--   [Repair-bde](Repair-bde.md)
+-   [repairbde](repairbde.md)
 
--   [Replace](Replace.md)
+-   [replace](replace.md)
 
--   [Reset session]()
+-   [reset session]()
 
--   [Rexec](Rexec.md)
+-   [rexec](rexec.md)
 
--   [Risetup](Risetup.md)
+-   [risetup](risetup.md)
 
--   [Rmdir](Rmdir.md)
+-   [rmdir](rmdir.md)
 
--   [Robocopy](Robocopy.md)
+-   [robocopy](robocopy.md)
 
--   [Route_WS2008](Route_WS2008.md)
+-   [route-ws2008](route-ws2008.md)
 
--   [Rpcinfo](Rpcinfo.md)
+-   [rpcinfo](rpcinfo.md)
 
--   [Rpcping](Rpcping.md)
+-   [rpcping](rpcping.md)
 
 -   [Rsh]()
 
@@ -667,111 +667,111 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Runas](assetId:///7b710f79-d28a-4297-b5fc-0c1868d236fc)
 
--   [Rundll32](Rundll32.md)
+-   [rundll32](rundll32.md)
 
--   [Rwinsta](Rwinsta.md)
+-   [rwinsta](rwinsta.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_s"></a>S
 
 -   [Sc](assetId:///807191da-4a33-4149-addf-c11ded938b5f)
 
--   [Schtasks](Schtasks.md)
+-   [schtasks](schtasks.md)
 
--   [Scwcmd](Scwcmd.md)
+-   [scwcmd](scwcmd.md)
 
--   [Secedit](scwcmd/secedit/Secedit.md)
+-   [secedit](scwcmd/secedit/secedit.md)
 
--   [Serverceipoptin](Serverceipoptin.md)
+-   [serverceipoptin](serverceipoptin.md)
 
--   [Servermanagercmd](Servermanagercmd.md)
+-   [servermanagercmd](servermanagercmd.md)
 
--   [Serverweroptin](Serverweroptin.md)
+-   [serverweroptin](serverweroptin.md)
 
--   [Set_1](Set_1.md)
+-   [set](set.md)
 
--   [Setlocal](Setlocal.md)
+-   [setlocal](setlocal.md)
 
 -   [Setspn](assetId:///9341c753-11ff-4acc-993c-b05d50f32330)
 
--   [Setx](Setx.md)
+-   [setx](setx.md)
 
--   [Sfc](Sfc.md)
+-   [sfc](sfc.md)
 
--   [Shadow](Shadow.md)
+-   [shadow](shadow.md)
 
--   [Shift](Shift.md)
+-   [shift](shift.md)
 
 -   [Showmount]()
 
--   [Shutdown](Shutdown.md)
+-   [shutdown](shutdown.md)
 
--   [Sort](Sort.md)
+-   [sort](sort.md)
 
--   [Start](Start.md)
+-   [start](start.md)
 
 -   [Storrept](assetId:///4433454c-daa9-4b7a-befd-9b11d46daffa)
 
--   [Subst](Subst.md)
+-   [subst](subst.md)
 
--   [Sxstrace](Sxstrace.md)
+-   [sxstrace](sxstrace.md)
 
--   [Sysocmgr](Sysocmgr.md)
+-   [sysocmgr](sysocmgr.md)
 
--   [Systeminfo](Systeminfo.md)
+-   [systeminfo](systeminfo.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_t"></a>T
 
--   [Takeown](Takeown.md)
+-   [takeown](takeown.md)
 
--   [Tapicfg](Tapicfg.md)
+-   [tapicfg](tapicfg.md)
 
--   [Taskkill](Taskkill.md)
+-   [taskkill](taskkill.md)
 
--   [Tasklist](Tasklist.md)
+-   [tasklist](tasklist.md)
 
--   [Tcmsetup](Tcmsetup.md)
+-   [tcmsetup](tcmsetup.md)
 
--   [Telnet](Telnet.md)
+-   [telnet](telnet.md)
 
 -   [Tftp]()
 
--   [Time](Time.md)
+-   [time](time.md)
 
--   [Timeout_1](Timeout_1.md)
+-   [timeout](timeout.md)
 
--   [Title_1](Title_1.md)
+-   [title](title.md)
 
 -   [Tlntadmn]()
 
--   [Tpmvscmgr](Tpmvscmgr.md)
+-   [tpmvscmgr](tpmvscmgr.md)
 
--   [Tracerpt_1](Tracerpt_1.md)
+-   [tracerpt](tracerpt.md)
 
--   [Tracert](Tracert.md)
+-   [tracert](tracert.md)
 
--   [Tree](Tree.md)
+-   [tree](tree.md)
 
--   [Tscon]()
+-   [tscon]()
 
--   [Tsdiscon](Tsdiscon.md)
+-   [tsdiscon](tsdiscon.md)
 
--   [Tsecimp_1](Tsecimp_1.md)
+-   [tsecimp](tsecimp.md)
 
--   [Tskill](Tskill.md)
+-   [tskill](tskill.md)
 
--   [Tsprof](Tsprof.md)
+-   [tsprof](tsprof.md)
 
--   [Type](Type.md)
+-   [type](type.md)
 
--   [Typeperf](Typeperf.md)
+-   [typeperf](typeperf.md)
 
--   [Tzutil](Tzutil.md)
+-   [tzutil](tzutil.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="bkmk_u"></a>U
 
@@ -779,70 +779,70 @@ To find information about a specific command, in the following A\-Z menu, click 
 
 -   [Umount](assetId:///0726324c-c45a-444d-a753-99daf5e1c83a)
 
--   [Unlodctr_1](Unlodctr_1.md)
+-   [unlodctr](unlodctr.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="bkmk_v"></a>V
 
--   [Ver](Ver.md)
+-   [ver](ver.md)
 
--   [Verifier](Verifier.md)
+-   [verifier](verifier.md)
 
--   [Verify_1](Verify_1.md)
+-   [verify](verify.md)
 
--   [Vol](Vol.md)
+-   [vol](vol.md)
 
 -   [Vssadmin](assetId:///df7eb505-43c6-42af-ab42-3095f96ffc27)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="bkmk_w"></a>W
 
 -   [W32tm](assetId:///04cf7d3a-b787-4dfe-ac57-53e9000fbc6b)
 
--   [Waitfor](Waitfor.md)
+-   [waitfor](waitfor.md)
 
--   [Wbadmin](Wbadmin.md)
+-   [wbadmin](wbadmin.md)
 
--   [Wdsutil](Wdsutil.md)
+-   [wdsutil](wdsutil.md)
 
--   [Wecutil](Wecutil.md)
+-   [wecutil](wecutil.md)
 
--   [Wevtutil](Wevtutil.md)
+-   [wevtutil](wevtutil.md)
 
--   [Where_1](Where_1.md)
+-   [where](where.md)
 
--   [Whoami](Whoami.md)
+-   [whoami](whoami.md)
 
--   [Winnt](Winnt.md)
+-   [winnt](winnt.md)
 
--   [Winnt32](Winnt32.md)
+-   [winnt32](winnt32.md)
 
--   [Winpop](Winpop.md)
+-   [winpop](winpop.md)
 
--   [Winrs](Winrs.md)
+-   [winrs](winrs.md)
 
 -   [winsat](assetId:///11b0e51f-fe58-4553-9e7c-a562e5385fbb)
 
--   [Wlbs_1](Wlbs_1.md)
+-   [wlbs](wlbs.md)
 
--   [Wmic](Wmic.md)
+-   [wmic](wmic.md)
 
--   [Wscript](Wscript.md)
+-   [wscript](wscript.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="bkmk_x"></a>X
 
--   [Xcopy](Xcopy.md)
+-   [xcopy](xcopy.md)
 
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_y"></a>Y
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 ### <a name="BKMK_z"></a>Z
-[Command-line reference A-Z](#BKMK_CmdRef)
+[Command-line reference A-Z](#BKMK_cmdRef)
 
 

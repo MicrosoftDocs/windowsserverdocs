@@ -27,11 +27,11 @@ This guide consists of the following sections that contain descriptions of the s
   
 |||  
 |-|-|  
-|[Account Policies](Account-Policies.md)|This section discusses the settings that are applied at the domain level: password policies, account lockout policies, and Kerberos authentication protocol policies.|  
-|[Audit Policy](Audit-Policy.md)|This section provides information about the security audit policy settings under **Security Settings\\Local Policies\\Audit Policy** that provide broad security audit capabilities for client computers and servers that cannot use advanced security audit policy settings.|  
-|[Security Options](Security-Options.md)|This section provides guidance about how to configure the variety of settings specific to security on the local computer:<br /><br />-   Accounts<br />-   Audit<br />-   DCOM<br />-   Devices<br />-   Domain controller<br />-   Domain member<br />-   Interactive logon<br />-   Microsoft network client<br />-   Microsoft network server<br />-   Network access<br />-   Network security<br />-   Recovery console<br />-   Shutdown<br />-   System cryptography<br />-   System objects<br />-   System settings<br />-   User Account Control|  
-|[Advanced Audit Policy Configuration](Advanced-Audit-Policy-Configuration.md)|This section provides information about advanced security audit policy settings, which allow administrators to use audit policies to help monitor and enforce business rules.|  
-|[User Rights Assignment](User-Rights-Assignment.md)|This section provides information about the User Rights Assignment security policy settings that are available in the Windows operating system.|  
+|[Account Policies](account-policies.md)|This section discusses the settings that are applied at the domain level: password policies, account lockout policies, and Kerberos authentication protocol policies.|  
+|[Audit Policy](audit-policy.md)|This section provides information about the security audit policy settings under **Security Settings\\Local Policies\\Audit Policy** that provide broad security audit capabilities for client computers and servers that cannot use advanced security audit policy settings.|  
+|[Security Options](security-options.md)|This section provides guidance about how to configure the variety of settings specific to security on the local computer:<br /><br />-   Accounts<br />-   Audit<br />-   DCOM<br />-   Devices<br />-   Domain controller<br />-   Domain member<br />-   Interactive logon<br />-   Microsoft network client<br />-   Microsoft network server<br />-   Network access<br />-   Network security<br />-   Recovery console<br />-   Shutdown<br />-   System cryptography<br />-   System objects<br />-   System settings<br />-   User Account Control|  
+|[Advanced Audit Policy Configuration](advanced-audit-policy-configuration.md)|This section provides information about advanced security audit policy settings, which allow administrators to use audit policies to help monitor and enforce business rules.|  
+|[User Rights Assignment](user-rights-assignment.md)|This section provides information about the User Rights Assignment security policy settings that are available in the Windows operating system.|  
   
 ## Additional resources  
   

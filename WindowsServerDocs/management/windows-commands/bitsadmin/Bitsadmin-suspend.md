@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin suspend
+title: bitsadmin suspend
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f9d42500-7bea-4aa8-a9f0-c22f6ed3e73b
 ---
-# Bitsadmin suspend
+# bitsadmin suspend
 Suspends the specified job.
 
 ## Syntax
@@ -23,8 +23,8 @@ bitsadmin /Suspend <Job>
 |-------------|---------------|
 |Job|The job's display name or GUID|
 
-## Remarks
-To restart the job, use the [Bitsadmin resume](Bitsadmin-resume.md) command.
+## remarks
+To restart the job, use the [bitsadmin resume](bitsadmin-resume.md) command.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example suspends the job named *myDownloadJob*.
@@ -33,7 +33,7 @@ The following example suspends the job named *myDownloadJob*.
 C:\>bitsadmin /Suspend myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

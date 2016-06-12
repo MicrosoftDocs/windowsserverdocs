@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: f629bbd5-315d-4cbb-9cb0-9d75cf617092
 ---
 # Begin restore
-Starts a restore session and issues a **PreRestore** event to involved writers.
+starts a restore session and issues a **PreRestore** event to involved writers.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ Starts a restore session and issues a **PreRestore** event to involved writers.
 begin restore
 ```
 
-#### Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+#### additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

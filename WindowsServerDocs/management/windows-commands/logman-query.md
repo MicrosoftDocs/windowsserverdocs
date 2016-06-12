@@ -10,9 +10,9 @@ ms.assetid: 1116a0f0-5415-4369-a045-12f79f8f66de
 author: jaimeo
 ---
 # logman query
-Query data collector or data collector set properties.  
+query data collector or data collector set properties.  
   
-For examples of how this command can be used, see [Examples](#BKMK_examples).  
+for examples of how this command can be used, see [Examples](#BKMK_examples).  
   
 ## Syntax  
   
@@ -49,7 +49,7 @@ The following command lists all available providers of data collectors on the ta
 logman query providers  
 ```  
   
-#### Additional references  
-[Logman](Logman.md)  
+#### additional references  
+[logman](logman.md)  
   
 

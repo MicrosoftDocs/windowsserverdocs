@@ -83,6 +83,6 @@ Do not assign the **Create permanent shared objects** user right to any users. P
 None. Not Defined is the default configuration.
 
 ## See Also
-[User Rights Assignment](User-Rights-Assignment.md)
+[User Rights Assignment](user-rights-assignment.md)
 
 

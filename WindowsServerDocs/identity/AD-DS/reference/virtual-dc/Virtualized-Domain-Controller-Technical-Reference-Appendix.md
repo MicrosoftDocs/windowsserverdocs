@@ -16,9 +16,9 @@ author: Femila
 # Virtualized Domain Controller Technical Reference Appendix
 This topic covers:  
   
--   [Terminology](../../../active-directory-domain-services/reference/virtual-dc/../../../active-directory-domain-services/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_Terms)  
+-   [Terminology](../../../active-directory-domain-services/reference/virtual-dc/../../../active-directory-domain-services/reference/virtual-dc/virtualized-domain-controller-technical-reference-appendix.md#BKMK_Terms)  
   
--   [FixVDCPermissions.ps1](../../../active-directory-domain-services/reference/virtual-dc/../../../active-directory-domain-services/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)  
+-   [FixVDCPermissions.ps1](../../../active-directory-domain-services/reference/virtual-dc/../../../active-directory-domain-services/reference/virtual-dc/virtualized-domain-controller-technical-reference-appendix.md#BKMK_FixPDCPerms)  
   
 ## <a name="BKMK_Terms"></a>Terminology  
   

@@ -14,9 +14,9 @@ ms.assetid: 4fd53736-03e7-4bf9-ba90-d1212d93e19a
 This topic describes common problems and their solutions when troubleshooting Software Restriction Policies \(SRP\) beginning with Windows Server 2008 and Windows Vista.
 
 ## Introduction
-Software Restriction Policies \(SRP\) is Group Policy\-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand\-alone computers. For more information about SRP, see the [Software Restriction Policies](../../../Software-Restriction-Policies.md).
+Software Restriction Policies \(SRP\) is Group Policy\-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. You use software restriction policies to create a highly restricted configuration for computers, in which you allow only specifically identified applications to run. These are integrated with Microsoft Active Directory Domain Services and Group Policy but can also be configured on stand\-alone computers. For more information about SRP, see the [Software Restriction Policies](../../../software-restriction-policies.md).
 
-Beginning with  Windows Server® 2008 R2  and  Windows 7® , Windows AppLocker can be used instead of or in concert with SRP for a portion of your application control strategy. For information about AppLocker in  Windows Server 2012  and Windows 8, see the [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7).
+Beginning with  Windows Server® 2008 R2  and  Windows 7® , Windows applocker can be used instead of or in concert with SRP for a portion of your application control strategy. For information about applocker in  Windows Server 2012  and Windows 8, see the [applocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7).
 
 ### Windows cannot open a program
 Users receive a message that says "Windows cannot open this program because it has been prevented by a software restriction policy. For more information, open Event Viewer or contact your system administrator." Or, on the command line, a message says "The system cannot execute the specified program."
@@ -42,7 +42,7 @@ Users receive a message that says "Windows cannot open this program because it h
 
 5.  Software restriction policies that are specified in a domain through Group Policy override any policies that are configured locally. Use Gpresult command\-line tool to determine what the net effect of the policy is. This might imply that there is a policy from the domain that is overriding your local setting.
 
-6.  If SRP and AppLocker policy settings are in the same GPO, AppLocker settings will take precedence on  Windows 7 ,  Windows Server 2008 R2 , and later. It is recommended to put SRP and AppLocker policy settings in different GPOs.
+6.  If SRP and applocker policy settings are in the same GPO, applocker settings will take precedence on  Windows 7 ,  Windows Server 2008 R2 , and later. It is recommended to put SRP and applocker policy settings in different GPOs.
 
 ### After adding a rule through SRP, you cannot log on to your computer
 **Cause:** Your computer accesses many programs and files when it starts. You might have inadvertently set one of these programs or files to **Disallowed**. Because the computer cannot access the program or file, it cannot start properly.

@@ -18,19 +18,19 @@ When you plan for cross\-organizational \(federation\-based\) collaboration usin
 > [!NOTE]  
 > Make sure that the role that organization plays in the federation agreement is clearly understood by all parties.  
   
-For the [Federated Web SSO Design](../../../active-directory-federation-services/plan/WS2012-guide/../../../active-directory-federation-services/plan/WS2012-guide/map-goals-to-plan/Web-SSO-Design.md), AD FS uses terms such as *account partner* \(also referred to as *identity provider* in the AD FS Management snap\-in\) and *resource partner* \(also referred to as *relying party* in the AD FS Management snap\-in\) to help differentiate the organization that hosts the accounts \(the account partner\) from the organization that hosts the Web\-based resources \(the resource partner\).  
+For the [Federated Web SSO Design](../../../active-directory-federation-services/plan/WS2012-guide/../../../active-directory-federation-services/plan/WS2012-guide/map-goals-to-plan/web-sso-design.md), AD FS uses terms such as *account partner* \(also referred to as *identity provider* in the AD FS Management snap\-in\) and *resource partner* \(also referred to as *relying party* in the AD FS Management snap\-in\) to help differentiate the organization that hosts the accounts \(the account partner\) from the organization that hosts the Web\-based resources \(the resource partner\).  
   
-In the [Web SSO Design](../../../active-directory-federation-services/plan/WS2012-guide/map-goals-to-plan/Web-SSO-Design.md), the organization acts in both the account partner and resource partner roles because it is providing its users with access to its applications.  
+In the [Web SSO Design](../../../active-directory-federation-services/plan/WS2012-guide/map-goals-to-plan/web-sso-design.md), the organization acts in both the account partner and resource partner roles because it is providing its users with access to its applications.  
   
 The following topics explain some of the AD FS partner organization concepts. They also contain links to topics in the AD FS Deployment Guide that contain information about setting up and configuring account partner organizations and resource partner organizations based on your AD FS deployment goals.  
   
 ## In this section  
   
--   [Best Practices for Secure Planning and Deployment of AD FS](../../../active-directory-federation-services/plan/WS2012-guide/deployment/Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)  
+-   [Best Practices for Secure Planning and Deployment of AD FS](../../../active-directory-federation-services/plan/WS2012-guide/deployment/best-practices-secure-planning-deployment-ad-fs.md)  
   
--   [Planning for Interoperability with AD FS 1.x](../../../active-directory-federation-services/plan/WS2012-guide/deployment/Planning-for-Interoperability-with-AD-FS-1.x.md)  
+-   [Planning for Interoperability with AD FS 1.x](../../../active-directory-federation-services/plan/WS2012-guide/deployment/planning-interoperability-with-ad-fs-1x.md)  
   
--   [When to Use Identity Delegation](../../../active-directory-federation-services/plan/WS2012-guide/deployment/When-to-Use-Identity-Delegation.md)  
+-   [When to Use Identity Delegation](../../../active-directory-federation-services/plan/WS2012-guide/deployment/when-use-identity-delegation.md)  
   
 -   [Deploying AD FS in the Account Partner Organization](Deploying-AD-FS-in-the-Account-Partner-Organization.md)  
   

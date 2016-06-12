@@ -67,6 +67,6 @@ Configure the **Maximum password age** policy setting to a value that is suitabl
 If the **Maximum password age** policy setting is too low, users are required to change their passwords very often. Such a configuration can reduce security in the organization because users might keep their passwords in an unsecured location or lose them. If the value for this policy setting is too high, the level of security within an organization is reduced because it allows potential attackers more time in which to discover user passwords or to use compromised accounts.  
   
 ## See Also  
-[Password Policy](Password-Policy.md)  
+[Password Policy](password-policy.md)  
   
 

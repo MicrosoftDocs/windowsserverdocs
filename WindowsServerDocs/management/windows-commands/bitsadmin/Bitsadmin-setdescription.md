@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin setdescription
+title: bitsadmin setdescription
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e46a5dd-4637-4a2e-b88f-d3f85b177db8
 ---
-# Bitsadmin setdescription
+# bitsadmin setdescription
 Sets the description of the specified job.
 
 ## Syntax
@@ -31,7 +31,7 @@ The following example retrieves the description for the job named *myDownloadJob
 C:\>bitsadmin /SetDescription myDownloadJob "Music Downloads"
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

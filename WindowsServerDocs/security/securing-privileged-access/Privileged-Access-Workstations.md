@@ -15,7 +15,7 @@ Privileged Access Workstations \(PAWs\) provide a dedicated operating system for
 ## Architecture Overview
 The diagram below depicts a separate “channel” for administration \(a highly sensitive task\) that is created by maintaining separate dedicated administrative accounts and workstations.
 
-![](../media/Privileged-Access-Workstations/PAWFig1.JPG)
+![](../media/privileged-access-workstations/pawfig1.JPG)
 
 This architectural approach builds on the protections found in the Windows 10®[Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx) and [Device Guard](https://technet.microsoft.com/en-us/library/dn986865(v=vs.85).aspx) features and goes beyond those protections for sensitive accounts and tasks.
 
@@ -43,7 +43,7 @@ The current threat environment for organizations is rife with sophisticated phis
 
 This threat environment requires an organizations to adopt an “assume breach” security posture when designing protections for high value assets like administrative accounts and sensitive business assets. These high value assets need to be protected against both direct internet threats as well as attacks mounted from other workstations, servers, and devices in the environment.
 
-![](../media/Privileged-Access-Workstations/PAWFig2.JPG)
+![](../media/privileged-access-workstations/pawfig2.JPG)
 
 This figure depicts risk to managed assets if an attacker gains control of a user workstation where sensitive credentials are used.
 
@@ -83,7 +83,7 @@ The diagram below depicts the ability of attackers to follow the control chain t
 
 The PAW architecture does not allow for hosting an admin VM on a user workstation, but a user VM with a standard corporate image can be hosted on a PAW host to provide personnel with a single PC for all responsibilities.
 
-![](../media/Privileged-Access-Workstations/PAWFig9.JPG)
+![](../media/privileged-access-workstations/pawfig9.JPG)
 
 **Jump Server**
 
@@ -91,13 +91,13 @@ Administrative “Jump Server” architectures set up a small number administrat
 
 This approach is frequently proposed to mitigate risk to administration and does provide some security assurances, but the jump server approach by itself is vulnerable to certain attacks because it violates the [“clean source” principle](http://aka.ms/cleansource). The clean source principle requires all security dependencies to be as trustworthy as the object being secured.
 
-![](../media/Privileged-Access-Workstations/PAWFig3.JPG)
+![](../media/privileged-access-workstations/pawfig3.JPG)
 
 This figure depicts a simple control relationship. Any subject in control of an object is a security dependency of that object. If an adversary can control a security dependency of a target object \(subject\), they can control that object.
 
 The administrative session on the jump server relies on the integrity of the local computer accessing it. If this computer is a user workstation subject to phishing attacks and other internet\-based attack vectors, then the administrative session is also subject to those risks.
 
-![](../media/Privileged-Access-Workstations/PAWFig4.JPG)
+![](../media/privileged-access-workstations/pawfig4.JPG)
 
 The figure above depicts how attackers can follow an established control chain to the target object of interest.
 
@@ -105,13 +105,13 @@ While some advanced security controls like multi\-factor authentication can incr
 
 The default configuration in this PAW guidance installs administrative tools on the PAW, but a jump server architecture can also be added if required.
 
-![](../media/Privileged-Access-Workstations/PAWFig5.JPG)
+![](../media/privileged-access-workstations/pawfig5.JPG)
 
 This figure shows how reversing the control relationship and accessing user apps from an admin workstation gives the attacker no path to the targeted object. The user jump server is still exposed to risk so appropriate protective controls, detective controls, and response processes should still be applied for that internet\-facing computer.
 
 This configuration requires administrators to follow operational practices closely to ensure that they don’t accidentally enter administrator credentials into the user session on their desktop.
 
-![](../media/Privileged-Access-Workstations/PAWFig6.JPG)
+![](../media/privileged-access-workstations/pawfig6.JPG)
 
 This figure shows how accessing an administrative jump server from a PAW adds no path for the attacker into the administrative assets. A jump server with a PAW allows in this case you to consolidate the number of locations for monitoring administrative activity and distributing administrative applications and tools. This adds some design complexity, but can simplify security monitoring and software updates if a large number of accounts and workstations are used in your PAW implementation. The jump server would need to be built and configured to similar security standards as the PAW.
 
@@ -123,15 +123,15 @@ These solutions typically use a flexible workflow to grant access and many have 
 
 Microsoft recommends using a PAW to access privilege management solutions. Access to these solutions should be granted only to PAWs. Microsoft does not recommend using these solutions as a substitute for a PAW because accessing privileges using these solutions from a potentially compromised user desktop violates the [clean source](http://aka.ms/cleansource) principle as depicted in the diagram below:
 
-![](../media/Privileged-Access-Workstations/PAWFig7.JPG)
+![](../media/privileged-access-workstations/pawfig7.JPG)
 
 Providing a PAW to access these solutions enables you to gain the security benefits of both PAW and the privilege management solution, as depicted in this diagram:
 
-![](../media/Privileged-Access-Workstations/PAWFig8.JPG)
+![](../media/privileged-access-workstations/pawfig8.JPG)
 
 > [!NOTE]
 > These systems should be classified at the highest tier of the privilege they manage and be protected at or above that level of security. These are commonly configured to manage Tier 0 solutions and Tier 0 assets and should be classified at Tier 0. 
-> For more information on the tier model, see [http://aka.ms/tiermodel](http://aka.ms/tiermodel) For more information on Tier 0 groups, see Tier 0 equivalency in [Securing Privileged Access Reference Material](Securing-Privileged-Access-Reference-Material.md).
+> For more information on the tier model, see [http://aka.ms/tiermodel](http://aka.ms/tiermodel) For more information on Tier 0 groups, see Tier 0 equivalency in [Securing Privileged Access Reference Material](securing-privileged-access-reference-material.md).
 
 For more information on deploying Microsoft Identity Manager \(MIM\) privileged access management \(PAM\), see [http://aka.ms/mimpamdeploy](http://aka.ms/mimpamdeploy)
 
@@ -140,7 +140,7 @@ Microsoft uses the PAW architectural approach both internally on our systems as 
 
 This guidance is directly based on the Privileged Access Workstation \(PAW\) reference architecture deployed by our cybersecurity professional services teams to protect customers against cybersecurity attacks. The administrative workstations are also a key element of the strongest protection for domain administration tasks, the Enhanced Security Administrative Environment \(ESAE\) administrative forest reference architecture.
 
-For more details on the ESAE administrative forest, see [ESAE Administrative Forest Design Approach](http://aka.ms/ESAE) section in [Securing Privileged Access Reference Material](Securing-Privileged-Access-Reference-Material.md).
+For more details on the ESAE administrative forest, see [ESAE Administrative Forest Design Approach](http://aka.ms/ESAE) section in [Securing Privileged Access Reference Material](securing-privileged-access-reference-material.md).
 
 For more information on engaging Microsoft services to deploy a PAW or ESAE for your environment, contact your Microsoft representative or visit [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
 
@@ -208,7 +208,7 @@ In this scenario, a PAW is used for administration that is completely separate f
 
 In this simultaneous use scenario, a single PC is used for both administration tasks and daily activities like email, document editing, and development work. In this configuration, the user operating system is available while disconnected \(for editing documents and working on locally cached email\), but requires hardware and support processes that can accommodate this disconnected state.
 
-![](../media/Privileged-Access-Workstations/PAWFig10.JPG)
+![](../media/privileged-access-workstations/pawfig10.JPG)
 
 The physical hardware runs two operating systems locally:
 
@@ -228,7 +228,7 @@ Read [Client Hyper-V](https://technet.microsoft.com/en-us/library/hh857623.aspx)
 
 In this simultaneous use scenario, a single PC is used for both administration tasks and daily activities like email, document editing and development work. In this configuration, the user operating systems are deployed and managed centrally \(on the cloud or in your datacenter\), but aren’t available while disconnected.
 
-![](../media/Privileged-Access-Workstations/PAWFig11.JPG)
+![](../media/privileged-access-workstations/pawfig11.JPG)
 
 The physical hardware runs a single PAW operating system locally for administrative tasks and contacts a Microsoft or 3rd party remote desktop service for user applications such as email, document editing, and line of business applications.
 
@@ -375,7 +375,7 @@ Phase 1 includes the following steps:
 3.  **Move Tier 0 accounts to the Admin\\Tier 0\\Accounts OU**. Move each account that is a member of the Domain Admin, Enterprise Admin, or Tier 0 equivalent groups \(including nested membership\) to this OU. If your organization has your own groups that are added to these groups, you should move these to the Admin\\Tier 0\\Groups OU.
 
     > [!NOTE]
-    > For more information on which groups are Tier 0, see “Tier 0 Equivalency” in [Securing Privileged Access Reference Material](Securing-Privileged-Access-Reference-Material.md).
+    > For more information on which groups are Tier 0, see “Tier 0 Equivalency” in [Securing Privileged Access Reference Material](securing-privileged-access-reference-material.md).
 
 4.  Add the appropriate members to the relevant groups
 
@@ -1117,11 +1117,11 @@ Follow the steps below to configure this phase:
 
     -   **Azure multi\-factor authentication**:  Azure multi\-factor authentication \(MFA\) provides the security of a second verification factor as well as enhanced protection through monitoring and machine\-learning\-based analysis.  Azure MFA can secure not only Azure administrators but many other solutions as well, including web applications, Azure Active Directory, and on\-premises solutions like remote access and Remote Desktop.  For more information on Azure multi\-factor authentication, please refer to the article [Multi-Factor Authentication](https://azure.microsoft.com/en-us/services/multi-factor-authentication).
 
-2.  **Whitelist trusted applications using Device Guard and\/or AppLocker**.  By limiting the ability of untrusted or unsigned code to run on a PAW, you further reduce the likelihood of malicious activity and compromise.  Windows includes two primary options for application control:
+2.  **Whitelist trusted applications using Device Guard and\/or applocker**.  By limiting the ability of untrusted or unsigned code to run on a PAW, you further reduce the likelihood of malicious activity and compromise.  Windows includes two primary options for application control:
 
-    -   **AppLocker**:  AppLocker helps administrators control which applications can run on a given system.  AppLocker can be centrally controlled through group policy, and applied to specific users or groups \(for targeted application to users of PAWs\).  For more information on AppLocker, please refer to the TechNet article [AppLocker Overview](https://technet.microsoft.com/library/hh831440.aspx).
+    -   **applocker**:  applocker helps administrators control which applications can run on a given system.  applocker can be centrally controlled through group policy, and applied to specific users or groups \(for targeted application to users of PAWs\).  For more information on applocker, please refer to the TechNet article [applocker Overview](https://technet.microsoft.com/library/hh831440.aspx).
 
-    -   **Device Guard**:  the new Device Guard feature provides enhanced hardware\-based application control which, unlike AppLocker, cannot be overridden on the impacted device.  Like AppLocker, Device Guard can be controlled via group policy and targeted to specific users.  For more information on restricting application usage with Device Guard, please refer to the TechNet article, [Device Guard Deployment Guide](https://technet.microsoft.com/en-us/library/mt463091(v=vs.85).aspx).
+    -   **Device Guard**:  the new Device Guard feature provides enhanced hardware\-based application control which, unlike applocker, cannot be overridden on the impacted device.  Like applocker, Device Guard can be controlled via group policy and targeted to specific users.  For more information on restricting application usage with Device Guard, please refer to the TechNet article, [Device Guard Deployment Guide](https://technet.microsoft.com/en-us/library/mt463091(v=vs.85).aspx).
 
 3.  **Use Protected Users, Authentication Policies, and Authentication Silos to further protect privileged accounts**.  The members of Protected Users are subject to additional security policies which protect the credentials stored in the local security agent \(LSA\) and greatly minimize the risk of credential theft and reuse.  Authentication policies and silos control how privileged users can access resources in the domain.  Collectively, these protections dramatically strengthen the account security of these privileged users.  For additional details on these features, please refer to the web article [How to Configure Protected Accounts](https://technet.microsoft.com/en-us/library/dn518179.aspx).
 

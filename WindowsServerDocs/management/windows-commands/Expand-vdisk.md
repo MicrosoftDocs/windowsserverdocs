@@ -1,5 +1,5 @@
 ---
-title: Expand vdisk
+title: expand vdisk
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -10,8 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3ae547b4-3813-4b86-bacd-bc273c028a2a
 ---
-# Expand vdisk
-Expands a virtual hard disk \(VHD\) to the size that you specify.
+# expand vdisk
+expands a virtual hard disk \(VHD\) to the size that you specify.
 
 > [!NOTE]
 > This command is only applicable to Windows 7 and Windows Server 2008 R2.
@@ -28,7 +28,7 @@ expand vdisk maximum=<n>
 |-------------|---------------|
 |maximum\=<n>|Specifies the new size for the VHD in megabytes \(MB\).|
 
-## Remarks
+## remarks
 
 -   A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a volume and shift the focus to it.
 
@@ -39,24 +39,24 @@ To expand the selected VHD to 20 GB, type:
 expand vdisk maximum=20000
 ```
 
-## Additional references
+## additional references
 
--   [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+-   [Command-Line Syntax Key](commandline-syntax-key.md)
 
--   [Attach vdisk](Attach-vdisk.md)
+-   [attach vdisk](attach-vdisk.md)
 
--   [Compact vdisk](Compact-vdisk.md)
+-   [compact vdisk](compact-vdisk.md)
 
--   [Create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
+-   [create vdisk](assetId:///72df30b1-8902-487b-98f6-bcb693610e29)
 
 -   [Detach vdisk]()
 
--   [Detail vdisk](delete/detail/Detail-vdisk.md)
+-   [detail vdisk](delete/detail/detail-vdisk.md)
 
--   [Merge vdisk](Merge-vdisk.md)
+-   [Merge vdisk](merge-vdisk.md)
 
--   [Select vdisk](select/Select-vdisk.md)
+-   [select vdisk](select/select-vdisk.md)
 
--   [List_1]()
+-   [list_1]()
 
 

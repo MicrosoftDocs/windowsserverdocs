@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin monitor
+title: bitsadmin monitor
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c424d27-e011-49c2-b579-a2c235467c39
 ---
-# Bitsadmin monitor
+# bitsadmin monitor
 Monitors jobs in the transfer queue that the current user owns.
 
 ## Syntax
@@ -24,7 +24,7 @@ bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
 |Allusers|Optional—monitors jobs for all users|
 |Refresh|Optional—refreshes the data at an interval specified by *Seconds*. The default refresh interval is five seconds.|
 
-## Remarks
+## remarks
 
 -   You must have administrator privileges to use the **Allusers** parameter.
 
@@ -37,7 +37,7 @@ The following example monitors the transfer queue for jobs owned by the current 
 C:\>bitsadmin /Monitor /refesh 60
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

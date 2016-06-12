@@ -15,7 +15,7 @@ This reference topic for the IT professional provides information about one coll
 
 The security audit policy settings under **Security Settings\\Local Policies\\Audit Policy** provide broad security audit capabilities for client computers and servers that cannot use advanced security audit policy settings.
 
-For information about setting security policies, see [How to Configure Security Policy Settings](How-to-Configure-Security-Policy-Settings.md).
+For information about setting security policies, see [How to Configure Security Policy Settings](how-configure-security-policy-settings.md).
 
 The basic audit policy settings under **Security Settings\\Local Policies\\Audit Policy** are:
 

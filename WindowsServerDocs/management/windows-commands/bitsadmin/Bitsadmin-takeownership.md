@@ -1,5 +1,5 @@
 ---
-title: Bitsadmin takeownership
+title: bitsadmin takeownership
 ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
@@ -8,13 +8,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ea0ce7cb-440a-498f-a3ef-8368fa43e399
 ---
-# Bitsadmin takeownership
+# bitsadmin takeownership
 Lets a user with administrative privileges take ownership of the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /TakeOwnership <Job>
+bitsadmin /takeownership <Job>
 ```
 
 ## Parameters
@@ -27,10 +27,10 @@ bitsadmin /TakeOwnership <Job>
 The following example takes ownership of the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /TakeOwnership myDownloadJob
+C:\>bitsadmin /takeownership myDownloadJob
 ```
 
-## Additional references
-[Command-Line Syntax Key](../Command-Line-Syntax-Key.md)
+## additional references
+[Command-Line Syntax Key](../commandline-syntax-key.md)
 
 

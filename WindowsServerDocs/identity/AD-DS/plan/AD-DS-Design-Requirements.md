@@ -18,25 +18,25 @@ Before you deploy  Windows Server 2008  Active Directory Domain Services \(AD�
   
 To design the AD DS logical structure, determine the number of forests that your organization requires, and then create designs for domains, Domain Name System \(DNS\) infrastructure, and organizational units \(OUs\). The following illustration shows the process for designing the logical structure.  
   
-![](../../media/AD-DS-Design-Requirements/d5cebae6-a752-4063-a98f-473799c251bd.gif)  
+![](../../media/ad-ds-design-requirements/d5cebae6-a752-4063-a98f-473799c251bd.gif)  
   
-For more information, see [Designing the Logical Structure for Windows Server 2008 AD DS](Designing-the-Logical-Structure-for-Windows-Server-2008-AD-DS.md).  
+For more information, see [Designing the Logical Structure for Windows Server 2008 AD DS](designing-logical-structure-for-Windows-Server-2008-AD-DS.md).  
   
 ## Designing the site topology  
 After you design the logical structure for your AD DS infrastructure, you must design the site topology for your network. The site topology is a logical representation of your physical network. It contains information about the location of AD DS sites, the AD DS domain controllers within each site, and the site links and site link bridges that support AD DS replication between sites. The following illustration shows the site topology design process.  
   
-![](../../media/AD-DS-Design-Requirements/d34d43c0-437f-47cb-9b64-09c0f9ce6479.gif)  
+![](../../media/ad-ds-design-requirements/d34d43c0-437f-47cb-9b64-09c0f9ce6479.gif)  
   
-For more information, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology-for-Windows-Server-2008-AD-DS.md).  
+For more information, see [Designing the Site Topology for Windows Server 2008 AD DS](designing-site-topology-for-Windows-Server-2008-AD-DS.md).  
   
 ## Planning domain controller capacity  
 To ensure efficient AD DS performance, you must determine the appropriate number of domain controllers for each site and verify that they meet the hardware requirements for  Windows Server 2008 . Careful capacity planning for your domain controllers ensures that you do not underestimate hardware requirements, which can cause poor domain controller performance and application response time. The following illustration shows the process of domain controller capacity planning.  
   
-![](../../media/AD-DS-Design-Requirements/fff6ef22-5c7b-4478-ad76-42b296dcf769.gif)  
+![](../../media/ad-ds-design-requirements/fff6ef22-5c7b-4478-ad76-42b296dcf769.gif)  
   
 ## Enabling Windows Server 2008 advanced AD DS features  
 You can use  Windows Server 2008  AD DS to introduce advanced features into your environment by raising the domain or forest functional level. You can raise the functional level to  Windows Server 2008  when all domain controllers in the domain or forest are running  Windows Server 2008 .  
   
-For more information, see [Enabling Advanced Features for AD DS](../../active-directory-domain-services/plan/Enabling-Advanced-Features-for-AD-DS.md).  
+For more information, see [Enabling Advanced Features for AD DS](../../active-directory-domain-services/plan/enabling-advanced-features-ad-ds.md).  
   
 

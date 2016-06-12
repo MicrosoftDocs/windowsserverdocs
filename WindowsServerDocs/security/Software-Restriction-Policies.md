@@ -13,13 +13,13 @@ ms.assetid: 5c0befad-07c3-4262-b418-372d01850305
 # Software Restriction Policies
 This topic for the IT professional describes Software Restriction Policies \(SRP\) in  Windows Server 2012  and Windows 8, and provides links to technical information about SRP beginning with Windows Server 2003.
 
-For procedures and troubleshooting tips, see [Administer Software Restriction Policies](software-restriction-policies/manage/Administer-Software-Restriction-Policies.md) and [Troubleshoot Software Restriction Policies](software-restriction-policies/manage/administer/Troubleshoot-Software-Restriction-Policies.md).
+For procedures and troubleshooting tips, see [Administer Software Restriction Policies](software-restriction-policies/manage/administer-software-restriction-policies.md) and [Troubleshoot Software Restriction Policies](software-restriction-policies/manage/administer/troubleshoot-software-restriction-policies.md).
 
 **Did you mean…**
 
--   Security policies \(see [Security Policy Settings Overview](security-policy-settings/Security-Policy-Settings-Overview.md)\)
+-   Security policies \(see [Security Policy Settings Overview](security-policy-settings/security-policy-settings-overview.md)\)
 
--   AppLocker \(see [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)\)
+-   applocker \(see [applocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)\)
 
 ## <a name="BKMK_OVER"></a>Software Restriction Policies description
 Software Restriction Policies \(SRP\) is Group Policy\-based feature that identifies software programs running on computers in a domain, and controls the ability of those programs to run. Software restriction policies are part of the Microsoft security and management strategy to assist enterprises in increasing the reliability, integrity, and manageability of their computers.
@@ -28,7 +28,7 @@ You can also use software restriction policies to create a highly restricted con
 
 You can define these policies through the Software Restriction Policies extension of the Local Group Policy Editor or the Local Security Policies snap\-in to the Microsoft Management Console \(MMC\).
 
-For in\-depth information about SRP, see the [Software Restriction Policies Technical Overview](software-restriction-policies/get-started/Software-Restriction-Policies-Technical-Overview.md).
+For in\-depth information about SRP, see the [Software Restriction Policies Technical Overview](software-restriction-policies/get-started/software-restriction-policies-technical-overview.md).
 
 ## <a name="BKMK_APP"></a>Practical applications
 Administrators can use software restriction policies for the following tasks:
@@ -83,13 +83,13 @@ The following table provides links to relevant resources in understanding and us
 |Content type|References|
 |----------------|--------------|
 |**Product evaluation**|[Application Lockdown with Software Restriction Policies](http://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
-|**Planning**|[Software Restriction Policies Technical Overview](software-restriction-policies/get-started/Software-Restriction-Policies-Technical-Overview.md) \( Windows Server 2012 \)<br /><br />[Software Restriction Policies Technical Reference](http://technet.microsoft.com/library/cc728085(v=WS.10).aspx) \(Windows Server 2003\)|
+|**Planning**|[Software Restriction Policies Technical Overview](software-restriction-policies/get-started/software-restriction-policies-technical-overview.md) \( Windows Server 2012 \)<br /><br />[Software Restriction Policies Technical Reference](http://technet.microsoft.com/library/cc728085(v=WS.10).aspx) \(Windows Server 2003\)|
 |**Deployment**|No resources available.|
-|**Operations**|[Administer Software Restriction Policies](software-restriction-policies/manage/Administer-Software-Restriction-Policies.md) \( Windows Server 2012 \)<br /><br />[Software Restriction Policies Product Help](http://technet.microsoft.com/library/cc779607(v=WS.10).aspx) \(Windows Server 2003\)|
-|**Troubleshooting**|[Troubleshoot Software Restriction Policies](software-restriction-policies/manage/administer/Troubleshoot-Software-Restriction-Policies.md) \( Windows Server 2012 \)<br /><br />[Software Restriction Policies Troubleshooting](http://technet.microsoft.com/library/cc737011(v=WS.10).aspx) \(Windows Server 2003\)|
+|**Operations**|[Administer Software Restriction Policies](software-restriction-policies/manage/administer-software-restriction-policies.md) \( Windows Server 2012 \)<br /><br />[Software Restriction Policies Product Help](http://technet.microsoft.com/library/cc779607(v=WS.10).aspx) \(Windows Server 2003\)|
+|**Troubleshooting**|[Troubleshoot Software Restriction Policies](software-restriction-policies/manage/administer/troubleshoot-software-restriction-policies.md) \( Windows Server 2012 \)<br /><br />[Software Restriction Policies Troubleshooting](http://technet.microsoft.com/library/cc737011(v=WS.10).aspx) \(Windows Server 2003\)|
 |**Security**|[Threats and Countermeasures for Software Restriction Polices](http://technet.microsoft.com/library/dd349795(v=WS.10).aspx) \(Windows Server 2008\)<br /><br />[Threats and Countermeasures for Software Restriction Polices](http://technet.microsoft.com/library/hh125926(v=WS.10).aspx) \(Windows Server 2008 R2\)|
 |**Tools and settings**|[Software Restriction Policies Tools and Settings](http://technet.microsoft.com/library/cc782454(v=WS.10).aspx) \(Windows Server 2003\)|
 |**Community resources**|[Application Lockdown with Software Restriction Policies](http://technet.microsoft.com/magazine/2008.06.srp.aspx?pr=blog)|
-|**Related technologies**|[AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)|
+|**Related technologies**|[applocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)|
 
 
