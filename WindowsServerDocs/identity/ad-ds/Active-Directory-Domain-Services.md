@@ -19,11 +19,11 @@ author: Femila
 You will find links to Active Directory Domain services content on this page.   
   
   
-* [What's new in Active Directory Domain Services Technical Preview](../whats-new-active-directory-domain-services-technical-preview.md)  
-* [AD DS Getting Started](../ad-ds/ad-ds-getting-started.md)   
+* [What's new in Active Directory Domain Services Technical Preview](../What-s-new-in-Active-Directory-Domain-Services-Technical-Preview.md)  
+* [AD DS Getting Started](../ad-ds/AD-DS-Getting-Started.md)   
 * [AD DS Design and Planning](AD-DS-Design-and--Planning.md)  
-* [AD DS Deployment](../ad-ds/deploy/ad-ds-deployment.md)  
-* [AD DS Operations](../ad-ds/manage/component-updates/ad-ds-operations.md)   
-* [Active Directory Domain Services Virtualization](../ad-ds/get-started/virtual-dc/active-directory-domain-services-virtualization.md)  
-* [AD DS Troubleshooting](ad-ds-troubleshooting.xml)
+* [AD DS Deployment](../ad-ds/deploy/AD-DS-Deployment.md)  
+* [AD DS Operations](../ad-ds/manage/component-updates/AD-DS-Operations.md)   
+* [Active Directory Domain Services Virtualization](../ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Virtualization.md)  
+* [AD DS Troubleshooting](AD-DS-Troubleshooting.xml)
 

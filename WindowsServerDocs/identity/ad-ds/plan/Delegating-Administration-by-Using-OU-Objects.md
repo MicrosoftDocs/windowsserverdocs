@@ -22,8 +22,8 @@ The forest owner determines the level of authority that is delegated to an OU ow
   
 ## In this section  
   
--   [Delegating Administration of Default Containers and OUs](../../ad-ds/plan/delegating-administration-default-containers-ous.md)  
+-   [Delegating Administration of Default Containers and OUs](../../ad-ds/plan/Delegating-Administration-of-Default-Containers-and-OUs.md)  
   
--   [Delegating Administration of Account OUs and Resource OUs](../../ad-ds/plan/delegating-administration-account-ous-resource-ous.md)  
+-   [Delegating Administration of Account OUs and Resource OUs](../../ad-ds/plan/Delegating-Administration-of-Account-OUs-and-Resource-OUs.md)  
   
 
