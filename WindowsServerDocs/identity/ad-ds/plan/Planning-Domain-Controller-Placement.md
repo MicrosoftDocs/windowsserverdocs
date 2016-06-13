@@ -23,12 +23,12 @@ An RODC is designed primarily to be deployed in remote or branch office environm
   
 ## In this section  
   
--   [Planning Forest Root Domain Controller Placement](../../ad-ds/plan/planning-forest-root-domain-controller-placement.md)  
+-   [Planning Forest Root Domain Controller Placement](../../ad-ds/plan/Planning-Forest-Root-Domain-Controller-Placement.md)  
   
--   [Planning Regional Domain Controller Placement](../../ad-ds/plan/planning-regional-domain-controller-placement.md)  
+-   [Planning Regional Domain Controller Placement](../../ad-ds/plan/Planning-Regional-Domain-Controller-Placement.md)  
   
--   [Planning Global Catalog Server Placement](../../ad-ds/plan/planning-global-catalog-server-placement.md)  
+-   [Planning Global Catalog Server Placement](../../ad-ds/plan/Planning-Global-Catalog-Server-Placement.md)  
   
--   [Planning Operations Master Role Placement](../../ad-ds/plan/planning-operations-master-role-placement.md)  
+-   [Planning Operations Master Role Placement](../../ad-ds/plan/Planning-Operations-Master-Role-Placement.md)  
   
 

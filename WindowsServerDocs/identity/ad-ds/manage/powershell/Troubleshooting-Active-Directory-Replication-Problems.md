@@ -79,7 +79,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 8524 The DSA operation is unable to proceed because of a DNS lookup failure</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-8524-dsa-operation-unable-proceed-because-dns-lookup-failure(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-8524-the-dsa-operation-is-unable-to-proceed-because-of-a-dns-lookup-failure(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -95,7 +95,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 8453 Replication access was denied</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-8453-replication-access-denied(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-8453-replication-access-was-denied(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -103,7 +103,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 8452 The naming context is in the process of being removed or is not replicated from the specified server</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-8452-naming-context-process-being-removed-not-replicated-from-specified-server(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-8452-the-naming-context-is-in-the-process-of-being-removed-or-is-not-replicated-from-the-specified-server(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -111,7 +111,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 5 Access is denied</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-5-access-denied(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-5-access-is-denied(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -127,7 +127,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 1753 There are no more endpoints available from the endpoint mapper</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-1753-there-no-more-endpoints-available-from-endpoint-mapper(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -135,7 +135,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 1722 The RPC server is unavailable</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-1722-rpc-server-unavailable(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-1722-the-rpc-server-is-unavailable(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -143,7 +143,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 1396 Logon Failure The target account name is incorrect</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-1396-logon-failure-target-account-name-incorrect(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-1396-logon-failure-the-target-account-name-is-incorrect(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -151,7 +151,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 1256 The remote system is not available</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-1256-remote-system-not-available(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-1256-the-remote-system-is-not-available(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -167,7 +167,7 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 8451 The replication operation encountered a database error</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-8451-replication-operation-encountered-database-error(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-8451-the-replication-operation-encountered-a-database-error(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
@@ -175,14 +175,14 @@ author: Femila
         <para>
           <externalLink>
             <linkText>Replication error 8606 Insufficient attributes were given to create an object</linkText>
-            <linkUri>http://technet.microsoft.com/library/replication-error-8606-insufficient-attributes-were-given-create-object(WS.10).aspx</linkUri>
+            <linkUri>http://technet.microsoft.com/library/replication-error-8606-insufficient-attributes-were-given-to-create-an-object(WS.10).aspx</linkUri>
           </externalLink>
         </para>
       </listItem>
     </list>
-<para><embeddedLabel>In this topic</embeddedLabel></para><list class="nobullet"><listItem><para><link xlink:href="13964079-3aaa-4551-9140-9687b333e752#BKMK_Intro">introduction and resources for troubleshooting Active Directory replication</link></para></listItem><listItem><para><link xlink:href="#BKMK_event_tool">Event and tool solution recommendations</link></para></listItem><listItem><para><link xlink:href="#BKMK_ruling_out">Ruling out intentional disruptions or hardware failures</link></para></listItem><listItem><para><link xlink:href="#BKMK_root_causes">Root causes</link></para></listItem><listItem><para><link xlink:href="#BKMK_general_approach">General approach to fixing problems</link></para></listItem><listItem><para><link xlink:href="#BKMK_using_repadmin">Using Repadmin to retrieve replication status</link></para></listItem><listItem><para><link xlink:href="#BKMK_problems_resolutions">Replication problems and resolutions</link></para></listItem><listItem><para><link xlink:href="#BKMK_event_messages">Event messages that indicate Active Directory replication problems</link></para></listItem></list></introduction>
+<para><embeddedLabel>In this topic</embeddedLabel></para><list class="nobullet"><listItem><para><link xlink:href="13964079-3aaa-4551-9140-9687b333e752#BKMK_Intro">Introduction and resources for troubleshooting Active Directory replication</link></para></listItem><listItem><para><link xlink:href="#BKMK_event_tool">Event and tool solution recommendations</link></para></listItem><listItem><para><link xlink:href="#BKMK_ruling_out">Ruling out intentional disruptions or hardware failures</link></para></listItem><listItem><para><link xlink:href="#BKMK_root_causes">Root causes</link></para></listItem><listItem><para><link xlink:href="#BKMK_general_approach">General approach to fixing problems</link></para></listItem><listItem><para><link xlink:href="#BKMK_using_repadmin">Using Repadmin to retrieve replication status</link></para></listItem><listItem><para><link xlink:href="#BKMK_problems_resolutions">Replication problems and resolutions</link></para></listItem><listItem><para><link xlink:href="#BKMK_event_messages">Event messages that indicate Active Directory replication problems</link></para></listItem></list></introduction>
   <section address="BKMK_Intro">
-    <title>introduction and resources for troubleshooting Active Directory replication</title>
+    <title>Introduction and resources for troubleshooting Active Directory replication</title>
     <content>
       <para>Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem is not immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes. </para>
       <para>For a UI-based tool to help monitor replication and diagnose errors, see <externalLink><linkText>Active Directory Replication Status Tool</linkText><linkUri>http://www.microsoft.com/download/details.aspx?id=30005</linkUri></externalLink>. There is also a <externalLink><linkText>hands-on lab</linkText><linkUri>http://go.microsoft.com/?linkid=9844718</linkUri></externalLink> that demonstrates how to use Active Directory Replication Status and other tools to troubleshoot errors. </para>

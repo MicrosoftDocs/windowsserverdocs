@@ -12,7 +12,7 @@ ms.assetid: a90604bc-ab0c-4f83-b8e5-85332a8f6e7c
 author: Femila
 ---
 # Planning Regional Domain Controller Placement
-To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" \(DSSTOPO\_1.doc\) worksheet used in [Collecting Network Information](../../ad-ds/plan/collecting-network-information.md) to determine whether a location is a hub.  
+To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" \(DSSTOPO\_1.doc\) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.  
   
 Plan to place regional domain controllers for each domain that is represented in each hub location. After you place regional domain controllers in all hub locations, evaluate the need for placing regional domain controllers at satellite locations. Eliminating unnecessary regional domain controllers from satellite locations reduces the support costs required to maintain a remote server infrastructure.  
   
@@ -30,7 +30,7 @@ In locations with inadequate physical security, deploying a read\-only domain co
   
 To authenticate client logons and access to local file servers, most organizations place regional domain controllers for all regional domains that are represented in a given location. However, you must consider many variables when evaluating whether a business location requires its clients to have local authentication or the clients can rely on authentication and query over a wide area network \(WAN\) link. The following illustration shows how to determine whether to place domain controllers at satellite locations.  
   
-![](../../media/planning-regional-domain-controller-placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
+![](../../media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
   
 ## Onsite technical expertise availability  
 Domain controllers need to be managed continuously for various reasons. Place a regional domain controller only in locations that include personnel who can administer the domain controller, or be sure that the domain controller can be managed remotely.  
