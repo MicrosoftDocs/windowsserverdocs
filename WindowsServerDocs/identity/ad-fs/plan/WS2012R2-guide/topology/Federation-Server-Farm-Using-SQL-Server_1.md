@@ -58,9 +58,9 @@ Similar to the federation server farm with WID topology, all of the federation s
   
 The following illustration shows how the fictional Contoso Pharmaceuticals company deployed its federation server farm with SQL Server topology in the corporate network. It also shows how that company configured the perimeter network with access to a DNS server, an additional NLB host that uses the same cluster DNS name \(fs.contoso.com\) that is used on the corporate network NLB cluster, and with two web application proxies \(wap1 and wap2\).  
   
-![](media/SQLFarmADFSBlue.gif)  
+![](../../../../media/Federation-Server-Farm-Using-SQL-Server_1/SQLFarmADFSBlue.gif)  
   
-For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure \[WAP\]](assetId:///8dfd483f-faf5-4a99-a590-0081623cad08).  
+For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](../../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure \[WAP\]](assetId:///8dfd483f-faf5-4a99-a590-0081623cad08).  
   
 ## High Availability Options for SQL Server Farms  
 In Windows Server 2012 R2, AD FS there are two new options to support high availability in AD FS farms using SQL Server.  
@@ -98,7 +98,7 @@ From the perspective of the nodes of an AD FS SQL Server farm, the AlwaysOn Avai
   
 The following diagram shows an AD FS SQL Server Farm with AlwaysOn Availability group.  
   
-![](media/alwaysonavailabilitygroups.jpg)  
+![](../../../../media/Federation-Server-Farm-Using-SQL-Server_1/alwaysonavailabilitygroups.jpg)  
   
 > [!NOTE]  
 > AlwaysOn Availability groups require that the SQL Server instances reside on Windows Server Failover Clustering \(WSFC\) nodes.  
@@ -144,7 +144,7 @@ Also introduced in SQL Server 2012, merge replication allows for AD FS policy da
   
 The following diagram shows a geographically redundant AD FS SQL Server farms with merge replication \(1 publisher, 2 subscribers\):  
   
-![](media/ADFSSQLGeoRedundancy3.png)  
+![](../../../../media/Federation-Server-Farm-Using-SQL-Server_1/ADFSSQLGeoRedundancy3.png)  
   
 **Key Deployment Considerations for using AD FS with SQL Server Merge Replication \(note numbers in the diagram above\)**  
   

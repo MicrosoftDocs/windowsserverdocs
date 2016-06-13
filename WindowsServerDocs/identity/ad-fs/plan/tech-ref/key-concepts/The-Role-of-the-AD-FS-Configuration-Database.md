@@ -17,7 +17,7 @@ The AD FS configuration database stores all the configuration data that represe
 > [!NOTE]
 > The entire contents of the AD FS configuration database can be stored either in an instance of WID or in an instance of the SQL database, but not both. This means that you cannot have some federation servers using WID and others using a SQL Server database for the same instance of the AD FS configuration database.
 
-You can use the following information in this topic along with the content provided in [AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md) to learn about the advantages and disadvantages of choosing either WID or SQL Server to store the AD FS configuration database:
+You can use the following information in this topic along with the content provided in [AD FS Deployment Topology Considerations](../../../../ad-fs/plan/WS2012-guide/topology/../../../../ad-fs/plan/WS2012-guide/topology/AD-FS-Deployment-Topology-Considerations.md) to learn about the advantages and disadvantages of choosing either WID or SQL Server to store the AD FS configuration database:
 
 WID uses a relational data store and does not have its own management user interface \(UI\). Instead, administrators can modify the contents of the AD FS configuration database by using either the AD FS Management snap\-in, Fsconfig.exe, or Windows PowerShell™ cmdlets.
 
@@ -30,14 +30,14 @@ You can create the AD FS configuration database using WID as the store by using
 
 -   Add a federation server to a federation server farm
 
-If you select the stand\-alone option, WID is used to store a single instance of the AD FS configuration database. This instance cannot be shared across multiple federation servers. It is meant for test lab environments only. For more information about the stand\-alone federation server option or how to set one up, see [Stand-Alone Federation Server Using WID](Stand-Alone-Federation-Server-Using-WID.md) or [Create a Stand-Alone Federation Server](Create-a-Stand-Alone-Federation-Server.md).
+If you select the stand\-alone option, WID is used to store a single instance of the AD FS configuration database. This instance cannot be shared across multiple federation servers. It is meant for test lab environments only. For more information about the stand\-alone federation server option or how to set one up, see [Stand-Alone Federation Server Using WID](../../../../ad-fs/plan/WS2012-guide/topology/Stand-Alone-Federation-Server-Using-WID.md) or [Create a Stand-Alone Federation Server](Create-a-Stand-Alone-Federation-Server.md).
 
-If you select the first federation server in a federation server farm option, WID is configured for scalability that will permit additional federation servers to be added to the farm at a later time. For more information about deploying a WID farm or how to set one up, see [Federation Server Farm Using WID](Federation-Server-Farm-Using-WID.md) or [Create the First Federation Server in a Federation Server Farm](Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)
+If you select the first federation server in a federation server farm option, WID is configured for scalability that will permit additional federation servers to be added to the farm at a later time. For more information about deploying a WID farm or how to set one up, see [Federation Server Farm Using WID](../../../../ad-fs/plan/WS2012-guide/topology/../../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID.md) or [Create the First Federation Server in a Federation Server Farm](Create-the-First-Federation-Server-in-a-Federation-Server-Farm.md)
 
-If you select the add a federation server option, WID is configured to replicate configuration database changes to the new federation server at set intervals. For more information about adding a federation server to a WID farm, see [Federation Server Farm Using WID](Federation-Server-Farm-Using-WID.md) or [Add a Federation Server to a Federation Server Farm](Add-a-Federation-Server-to-a-Federation-Server-Farm.md).
+If you select the add a federation server option, WID is configured to replicate configuration database changes to the new federation server at set intervals. For more information about adding a federation server to a WID farm, see [Federation Server Farm Using WID](../../../../ad-fs/plan/WS2012-guide/topology/../../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID.md) or [Add a Federation Server to a Federation Server Farm](Add-a-Federation-Server-to-a-Federation-Server-Farm.md).
 
 > [!NOTE]
-> When you deploy a federation server farm using WID, some features of AD FS may not be available. To have access to the full feature set when you configure your server farm, consider using Microsoft SQL Server to store the AD FS configuration database instead. For more information, see [AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md).
+> When you deploy a federation server farm using WID, some features of AD FS may not be available. To have access to the full feature set when you configure your server farm, consider using Microsoft SQL Server to store the AD FS configuration database instead. For more information, see [AD FS Deployment Topology Considerations](../../../../ad-fs/plan/WS2012-guide/topology/../../../../ad-fs/plan/WS2012-guide/topology/AD-FS-Deployment-Topology-Considerations.md).
 
 ### How a WID federation server farm works
 This section describes important concepts that describe how the WID federation server farm replicates data between a primary federation server and secondary federation servers. .
@@ -56,7 +56,7 @@ Because of the important role that the AD FS configuration database plays, it i
 
 When you add a federation server to the farm, the new computer that will become a secondary federation server connects to the primary federation server to replicate the copy of the AD FS configuration database. From this point forward, the new federation server continues to pull updates from the primary federation server on a regular basis, as shown in the following illustration.
 
-![](media/adfs2_WID.png)
+![](../../../../media/The-Role-of-the-AD-FS-Configuration-Database/adfs2_WID.png)
 
 Each secondary federation server polls the primary federation server every five minutes for changes. You can adjust this default five\-minute value or force an immediate synchronization anytime by using a Windows PowerShell cmdlet. For more information about how to do this, see [AD FS Administration with Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=179634).
 
@@ -76,7 +76,7 @@ You can create the AD FS configuration database using a single SQL Server data
 
 The term “primary federation server” does not apply when the AD FS configuration database is stored in a SQL database instance because all federation servers can equally read and write to the AD FS configuration database that is using the same clustered SQL Server instance, as shown in the following illustration.
 
-![](media/adfs2_SQL.png)
+![](../../../../media/The-Role-of-the-AD-FS-Configuration-Database/adfs2_SQL.png)
 
 You can use SQL Server to configure two or more servers to work together as a server cluster to ensure that AD FS is made highly available to service incoming client requests. High availability provides a scale\-out architecture in which you can increase server capacity by adding additional servers. Single points of failure are mitigated by automatic cluster failover.
 

@@ -17,7 +17,7 @@ When you create a federation serverin Active Directory Federation Services \(AD
   
 -   Engage in Web single\-sign\-on \(SSO\)–based communication with another organization \(that also has at least one federation server\) and, when necessary, with the employees in your own organization \(who need access over the Internet\).  
   
--   Enable front end services to impersonate users to infrastructure services using identity delegation. For more information, see [When to Use Identity Delegation](When-to-Use-Identity-Delegation.md).  
+-   Enable front end services to impersonate users to infrastructure services using identity delegation. For more information, see [When to Use Identity Delegation](../../../../ad-fs/plan/WS2012-guide/deployment/When-to-Use-Identity-Delegation.md).  
   
 The following sections describe some of the key decisions for determining when and where to create one or more federation servers.  
   
@@ -31,9 +31,9 @@ When a federation server is placed in the corporate network of the resource part
 ## Determine which AD FS design to deploy  
 You create federation servers in your organization whenever you want to deploy any of the following AD FS designs:  
   
--   [Web SSO Design](Web-SSO-Design.md)  
+-   [Web SSO Design](../../../../ad-fs/plan/WS2012-guide/map-goals-to-plan/Web-SSO-Design.md)  
   
--   [Federated Web SSO Design](Federated-Web-SSO-Design.md)  
+-   [Federated Web SSO Design](Federated-../../../../ad-fs/plan/WS2012-guide/map-goals-to-plan/Web-SSO-Design.md)  
   
 If necessary, an organization that deploys a Federated Web SSO design can configure a single federation server so that it acts in both the account partner role and in the resource partner role. In this case, the federation server may produce Security Assertion Markup Language \(SAML\) tokens, based on user accounts in its own organization, or reroute token requests to the organization, based on where the users' accounts reside.  
   
@@ -45,9 +45,9 @@ A federation server can serve out Web pages for sign\-in, policy, authentication
   
 The following are the operations that only a federation server can perform:  
   
--   The federation server performs the cryptographic operations that produce the token. Although federation server proxies cannot produce tokens, they can be used to route or redirect the tokens to clients and, when necessary, back to the federation server. For more information about using federation servers, see [When to Create a Federation Server Proxy](When-to-Create-a-Federation-Server-Proxy.md).  
+-   The federation server performs the cryptographic operations that produce the token. Although federation server proxies cannot produce tokens, they can be used to route or redirect the tokens to clients and, when necessary, back to the federation server. For more information about using federation servers, see [When to Create a Federation Server Proxy](../../../../ad-fs/plan/WS2012-guide/proxy-placement/When-to-Create-a-Federation-Server-Proxy.md).  
   
--   Federation servers support the use of Windows Integrated Authentication for clients on the corporate network; federation server proxies do not. For more information about using Windows Integrated Authentication with federation server, see [When to Create a Federation Server Farm](When-to-Create-a-Federation-Server-Farm.md).  
+-   Federation servers support the use of Windows Integrated Authentication for clients on the corporate network; federation server proxies do not. For more information about using Windows Integrated Authentication with federation server, see [When to Create a Federation Server Farm](../../../../ad-fs/plan/WS2012-guide/server-placement/When-to-Create-a-Federation-Server-Farm.md).  
   
 > [!CAUTION]  
 > Communication between federation servers and SQL Server configuration databases, SQL Server attribute stores, domain controllers, and AD LDS instances is not integrity or confidentiality protected by default. To mitigate this, consider protecting the communication channel between these servers using IPSEC or using a physically secure connection between all of these servers. For communication between federation servers and SQL servers, consider using SSL protection in the connection string. For connections between federation servers and domain controllers, consider turning on Kerberos signing and encryption. For LDAP, LDAP\/S is not supported for AD LDS\/AD DS.  
@@ -67,7 +67,7 @@ You can create a federation server using the AD FS Federation Server Configurati
   
     For more information about how to add a federation server to a farm, see [Add a Federation Server to a Federation Server Farm](Add-a-Federation-Server-to-a-Federation-Server-Farm.md).  
   
-For more detailed information about how each of these options work, see [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md).  
+For more detailed information about how each of these options work, see [The Role of the AD FS Configuration Database](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 For more information about how to set up all the prerequisites necessary to deploy a federation server, see [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md).  
   

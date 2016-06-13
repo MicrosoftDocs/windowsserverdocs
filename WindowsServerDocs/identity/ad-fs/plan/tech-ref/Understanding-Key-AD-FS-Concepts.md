@@ -43,22 +43,22 @@ When an application or service is in one network and a user account is in anothe
 
 With AD FS, organizations can bypass requests for secondary credentials by providing trust relationships \(federation trusts\) that these organizations can use to project a user's digital identity and access rights to trusted partners. In this federated environment, each organization continues to manage its own identities, but each organization can also securely project and accept identities from other organizations.
 
--   [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md)
+-   [The Role of Attribute Stores](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Attribute-Stores.md)
 
--   [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md)
+-   [The Role of the AD FS Configuration Database](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md)
 
--   [The Role of Claims](The-Role-of-Claims.md)
+-   [The Role of Claims](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claims.md)
 
--   [The Role of Claim Rules](The-Role-of-Claim-Rules.md)
+-   [The Role of Claim Rules](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md)
 
--   [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md)
+-   [The Role of the Claims Engine](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Engine.md)
 
--   [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md)
+-   [The Role of the Claims Pipeline](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Pipeline.md)
 
--   [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md)
+-   [The Role of the Claim Rule Language](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claim-Rule-Language.md)
 
--   [Determine the Type of Claim Rule Template to Use](Determine-the-Type-of-Claim-Rule-Template-to-Use.md)
+-   [Determine the Type of Claim Rule Template to Use](../../../ad-fs/plan/tech-ref/key-concepts/Determine-the-Type-of-Claim-Rule-Template-to-Use.md)
 
--   [How URIs Are Used in AD FS](How-URIs-Are-Used-in-AD-FS.md)
+-   [How URIs Are Used in AD FS](../../../ad-fs/plan/tech-ref/key-concepts/How-URIs-Are-Used-in-AD-FS.md)
 
 

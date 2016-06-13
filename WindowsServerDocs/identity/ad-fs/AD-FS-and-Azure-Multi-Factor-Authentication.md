@@ -24,7 +24,7 @@ In order for Azure MFA to be used as the primary authentication provider, the au
 
 The following image shows the data flow between AD FS in Windows Server 2016 and Azure MFA.
 
-![](media/ADFS_MFA_1.png)
+![](../media/AD-FS-and-Azure-Multi-Factor-Authentication/ADFS_MFA_1.png)
 
 ## Before you get started
 The following is a list of information that you should be aware of prior to trying to use Azure MFA as the primary authentication provider.
@@ -41,17 +41,17 @@ Because using Azure MFA as your primary authentication provider is a hybrid scen
 ### Setting up Azure MFA with Azure AD Connect \- New Installation of Azure AD Connect and AD FS
 If this is a new installation, simplyIf this is a new installation, simply follow the instructions for setting up Azure AD Connect and AD FS federation that can be found [here](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect-get-started-custom/).   When you get to the Review Options screen, make sure that Configure Azure MFA for AD FS is checked and click Confirm.   Azure MFA as the primary authentication provider will be setup automatically.When you get to the Review Options screen, make sure that **Configure Azure MFA for AD FS** is checked and click **Confirm**.   Azure MFA as the primary authentication provider will be setup automatically.
 
-![](media/ADFS_MFA_2.png)
+![](../media/AD-FS-and-Azure-Multi-Factor-Authentication/ADFS_MFA_2.png)
 
 ### Setting up Azure MFA with Azure AD Connect \- New Installation of Azure AD Connect and Existing AD FS
 If you have already setup AD FS and are now going to install Azure AD Connect, you need to just follow the instructions for setting up Azure AD Connect and AD FS federation that can be found [here](https://azure.microsoft.com/en-us/documentation/articles/active-directory-aadconnect-get-started-custom/) and be sure to select an existing AD FS server farm.   When you get to the Review Options screen, make sure that **Configure Azure MFA for AD FS** is checked and click **Confirm.** Azure MFA as the primary authentication provider will be setup automatically.  .
 
-![](media/ADFS_MFA_3.png)
+![](../media/AD-FS-and-Azure-Multi-Factor-Authentication/ADFS_MFA_3.png)
 
 ### Setting up Azure MFA with Azure AD Connect \- Existing Azure AD Connect and Existing AD FS
 If you have already installed Azure AD Connect and AD FS then you can simply run the Azure AD Connect wizard again and on the Additional Tasks select **Configure Azure MFA for my AD FS farm** and follow then finish running through the wizard.
 
-![](media/ADFS_MFA_4.png)
+![](../media/AD-FS-and-Azure-Multi-Factor-Authentication/ADFS_MFA_4.png)
 
 ## Setting up Azure MFA with Server Manager in Windows Server 2016
 

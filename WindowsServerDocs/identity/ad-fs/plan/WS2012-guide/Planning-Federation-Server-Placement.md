@@ -19,19 +19,19 @@ The most critical component of an Active Directory Federation Services \(AD FS
   
 -   [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md)  
   
--   [When to Create a Federation Server](When-to-Create-a-Federation-Server.md)  
+-   [When to Create a Federation Server](../../../ad-fs/plan/WS2012-guide/server-placement/When-to-Create-a-Federation-Server.md)  
   
--   [Where to Place a Federation Server](Where-to-Place-a-Federation-Server.md)  
+-   [Where to Place a Federation Server](../../../ad-fs/plan/WS2012-guide/server-placement/Where-to-Place-a-Federation-Server.md)  
   
--   [When to Create a Federation Server Farm](When-to-Create-a-Federation-Server-Farm.md)  
+-   [When to Create a Federation Server Farm](../../../ad-fs/plan/WS2012-guide/server-placement/When-to-Create-a-Federation-Server-Farm.md)  
   
--   [Certificate Requirements for Federation Servers](Certificate-Requirements-for-Federation-Servers.md)  
+-   [Certificate Requirements for Federation Servers](../../../ad-fs/plan/WS2012-guide/server-placement/Certificate-Requirements-for-Federation-Servers.md)  
   
--   [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md)  
+-   [Name Resolution Requirements for Federation Servers](../../../ad-fs/plan/WS2012-guide/server-placement/Name-Resolution-Requirements-for-Federation-Servers.md)  
   
 > [!NOTE]  
 > Although this information might help with your placement planning for federation servers, it does not explain how to determine the proper number of federation servers and the hardware requirements for each AD FS design.  
   
-For examples of how a federation server can be placed in any of the two primary AD FS design scenarios, see [Mapping Your Deployment Goals to an AD FS Design](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md).  
+For examples of how a federation server can be placed in any of the two primary AD FS design scenarios, see [Mapping Your Deployment Goals to an AD FS Design](../../../ad-fs/plan/WS2012-guide/Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md).  
   
 

@@ -16,10 +16,10 @@ Your site topology significantly affects the performance of your network and the
   
 ## In this section  
   
--   [Site Functions](Site-Functions.md)  
+-   [Site Functions](../../ad-ds/plan/Site-Functions.md)  
   
--   [Site Topology Owner Role](Site-Topology-Owner-Role.md)  
+-   [Site Topology Owner Role](../../ad-ds/plan/Site-Topology-Owner-Role.md)  
   
--   [Active Directory Replication Concepts](Active-Directory-Replication-Concepts.md)  
+-   [Active Directory Replication Concepts](../../ad-ds/get-started/replication/Active-Directory-Replication-Concepts.md)  
   
 

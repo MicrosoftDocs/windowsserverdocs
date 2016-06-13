@@ -16,14 +16,14 @@ The forest owner is responsible for creating a domain design for the forest. Cre
   
 ## In this section  
   
--   [Reviewing the Domain Models](Reviewing-the-Domain-Models.md)  
+-   [Reviewing the Domain Models](../../ad-ds/plan/Reviewing-the-Domain-Models.md)  
   
--   [Determining the Number of Domains Required](Determining-the-Number-of-Domains-Required.md)  
+-   [Determining the Number of Domains Required](../../ad-ds/plan/Determining-the-Number-of-Domains-Required.md)  
   
--   [Determining Whether to Upgrade Existing Domains or Deploy New Domains](Determining-Whether-to-Upgrade-Existing-Domains-or-Deploy-New-Domains.md)  
+-   [Determining Whether to Upgrade Existing Domains or Deploy New Domains](../../ad-ds/plan/Determining-Whether-to-Upgrade-Existing-Domains-or-Deploy-New-Domains.md)  
   
--   [Assigning Domain Names](Assigning-Domain-Names.md)  
+-   [Assigning Domain Names](../../ad-ds/plan/Assigning-Domain-Names.md)  
   
--   [Selecting the Forest Root Domain](Selecting-the-Forest-Root-Domain.md)  
+-   [Selecting the Forest Root Domain](../../ad-ds/plan/Selecting-the-Forest-Root-Domain.md)  
   
 

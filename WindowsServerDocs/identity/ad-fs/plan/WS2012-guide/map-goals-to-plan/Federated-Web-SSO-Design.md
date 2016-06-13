@@ -19,7 +19,7 @@ Typically, this design is used when two organizations agree to create a federati
   
 In other words, a federation trust relationship is the embodiment of a business\-level agreement or partnership between two organizations. As shown in the following illustration, you can establish a federation trust relationship between two businesses, which results in an end\-to\-end federation scenario.  
   
-![](media/adfs2_FederatedWebSSODesign.gif)  
+![](../../../../media/Federated-Web-SSO-Design/adfs2_FederatedWebSSODesign.gif)  
   
 The one\-way arrow in the illustration signifies the direction of the federation trust, which—like the direction of Windows trusts—always points to the account side of the forest. This means that authentication flows from the account partner organization to the resource partner organization.  
   
@@ -30,13 +30,13 @@ In this Federated Web SSO design, two federation servers \(one in Fabrikam and t
   
 In this example, Fabrikam is the identity, or account, provider. The Fabrikam portion of the Federated Web SSO design uses the following AD FS deployment goal:  
   
--   [Provide Your Active Directory Users Access to the Applications and Services of Other Organizations](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
+-   [Provide Your Active Directory Users Access to the Applications and Services of Other Organizations](../../../../ad-fs/plan/WS2012-guide/goals/Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
   
 Contoso is the resource provider. The Contoso portion of the Federated Web SSO design achieves the following AD FS deployment goals:  
   
--   [Provide Users in Another Organization Access to Your Claims-Aware Applications and Services](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [Provide Users in Another Organization Access to Your Claims-Aware Applications and Services](../../../../ad-fs/plan/WS2012-guide/goals/Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
--   [Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services](../../../../ad-fs/plan/WS2012-guide/goals/Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
 For a list of detailed tasks that you can use to plan and deploy the Federated Web SSO design, see [Checklist: Implementing a Federated Web SSO Design](Checklist--Implementing-a-Federated-Web-SSO-Design.md).  
   

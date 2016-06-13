@@ -15,15 +15,15 @@ author: Femila
 ---
 # Simplified Administration Appendix
   
--   [Server Manager Add Servers Dialog \(Active Directory\)](Simplified-Administration-Appendix.md#BKMK_AddServers)  
+-   [Server Manager Add Servers Dialog \(Active Directory\)](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)  
   
--   [Server Manager Remote Server Status](Simplified-Administration-Appendix.md#BKMK_ServerMgrStatus)  
+-   [Server Manager Remote Server Status](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_ServerMgrStatus)  
   
--   [Windows PowerShell Module Loading](Simplified-Administration-Appendix.md#BKMK_PSLoadModule)  
+-   [Windows PowerShell Module Loading](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_PSLoadModule)  
   
--   [RID Issuance Hotfixes for Previous Operating Systems](Simplified-Administration-Appendix.md#BKMK_Rid)  
+-   [RID Issuance Hotfixes for Previous Operating Systems](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_Rid)  
   
--   [Ntdsutil.exe Install from Media Changes](Simplified-Administration-Appendix.md#BKMK_IFM)  
+-   [Ntdsutil.exe Install from Media Changes](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)  
   
 ## <a name="BKMK_AddServers"></a>Server Manager Add Servers Dialog \(Active Directory\)  
 The **Add Servers** dialog allows searching Active Directory for servers, by operating system, using wildcards, and by location. The dialog also allows using DNS queries by fully qualified domain name or prefix name. These searches use native DNS and LDAP protocols implemented through .NET, not AD Windows PowerShell against the AD Management Gateway through SOAP – meaning that the domain controllers contacted by Server Manager can even run Windows Server 2003. You can also import a file with server names for provisioning purposes.  
@@ -65,7 +65,7 @@ Get-Module
   
 ```  
   
-![](media/ADDS_PSGetModule.gif)  
+![](../../media/Simplified-Administration-Appendix/ADDS_PSGetModule.gif)  
   
 To see all installed modules with their exported functions and cmdlets, use:  
   
@@ -97,8 +97,8 @@ The following table describes the two new menu items:
 |Create Full NoDefrag %s|Create IFM media without defragmenting for a full AD DC or an AD\/LDS instance into folder %s|  
 |Create Sysvol Full NoDefrag %s|Create IFM media with SYSVOL and without defragmenting for a full AD DC into folder %s|  
   
-![](media/ADDS_PSIFM.png)  
+![](../../media/Simplified-Administration-Appendix/ADDS_PSIFM.png)  
   
-![](media/ADDS_PSIFMComplete.gif)  
+![](../../media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)  
   
 

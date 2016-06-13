@@ -38,8 +38,8 @@ The design team must document the isolation and autonomy requirements for servic
   
 ## In this section  
   
--   [Service Administrator Scope of Authority](Service-Administrator-Scope-of-Authority.md)  
+-   [Service Administrator Scope of Authority](../../ad-ds/plan/Service-Administrator-Scope-of-Authority.md)  
   
--   [Autonomy vs. Isolation](Autonomy-vs.-Isolation.md)  
+-   [Autonomy vs. Isolation](../../ad-ds/plan/Autonomy-vs.-Isolation.md)  
   
 

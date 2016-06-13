@@ -154,7 +154,7 @@ client_id|client Id of the native application in the application group
 refresh_token|the refresh token issued by AD FS in response to the initial token request  
   
 **Refresh token request response:**  
-If the refresh token is within <SSO_period>, the request will result in a new access token. The user is not prompted for credentials.  For more information on SSO settings see [AD FS Single Sign On Settings](AD-FS-2016-Single-Sign-On-Settings.md)  
+If the refresh token is within <SSO_period>, the request will result in a new access token. The user is not prompted for credentials.  For more information on SSO settings see [AD FS Single Sign On Settings](../../ad-fs/manage/ops/../../ad-fs/manage/ops/AD-FS-2016-Single-Sign-On-Settings.md)  
   
 If the refresh token has expired, the request results in an HTTP 401 with error “invalid_grant” and “error_description” “MSIS9615: The refresh token received in refresh_token parameter has expired”. In this case, ADAL automatically submits a new authorization request that looks just like #1 above.    
   
@@ -222,7 +222,7 @@ refresh_token|Refresh token issued by AD FS in response to the initial token req
 client_secret|Secret of the web app (server application) in the application group  
   
 **Refresh token request response:**  
-If the refresh token is within <SSO_period>, the request will result in a new access token. The user is not prompted for credentials. For more information on SSO settings see [AD FS Single Sign On Settings](AD-FS-2016-Single-Sign-On-Settings.md)   
+If the refresh token is within <SSO_period>, the request will result in a new access token. The user is not prompted for credentials. For more information on SSO settings see [AD FS Single Sign On Settings](../../ad-fs/manage/ops/../../ad-fs/manage/ops/AD-FS-2016-Single-Sign-On-Settings.md)   
   
 If the refresh token has expired, the request results in an HTTP 401 with error “invalid_grant” and “error_description” “MSIS9615: The refresh token received in refresh_token parameter has expired”. In this case, ADAL automatically submits a new authorization request that looks just like #1 above.    
   

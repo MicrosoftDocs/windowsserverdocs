@@ -17,7 +17,7 @@ A stand\-alone federation server in Active Directory Federation Services \(AD 
   
 If you want to add additional federation servers to your test lab, you must rebuild the Federation Service from scratch by deploying any of the other topologies mentioned later in this section. Therefore, we recommend that you use this topology for a test lab or a proof\-of\-concept environment in your private testing network in which a single federation server is adequate, as shown in the following illustration.  
   
-![](media/FedServerWID.gif)  
+![](../../../../media/Stand-Alone-Federation-Server-Using-WID/FedServerWID.gif)  
   
 ## Test lab considerations  
 This section describes various considerations about the intended audience, benefits, and limitations that are associated with this topology for test lab environments.  

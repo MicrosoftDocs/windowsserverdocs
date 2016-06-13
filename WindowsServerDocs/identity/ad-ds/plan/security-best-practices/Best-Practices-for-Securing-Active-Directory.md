@@ -20,58 +20,58 @@ This document provides a practitioner’s perspective and contains a set of prac
   
 -   [Acknowledgements](Acknowledgements.md)  
   
--   [Executive Summary](Executive-Summary.md)  
+-   [Executive Summary](../../../ad-ds/manage/component-updates/Executive-Summary.md)  
   
--   [Introduction](Introduction.md)  
+-   [Introduction](../../../ad-ds/manage/component-updates/Introduction.md)  
   
--   [Avenues to Compromise](Avenues-to-Compromise.md)  
+-   [Avenues to Compromise](../../../ad-ds/plan/security-best-practices/Avenues-to-Compromise.md)  
   
--   [Attractive Accounts for Credential Theft](Attractive-Accounts-for-Credential-Theft.md)  
+-   [Attractive Accounts for Credential Theft](../../../ad-ds/plan/security-best-practices/Attractive-Accounts-for-Credential-Theft.md)  
   
--   [Reducing the Active Directory Attack Surface](Reducing-the-Active-Directory-Attack-Surface.md)  
+-   [Reducing the Active Directory Attack Surface](../../../ad-ds/plan/security-best-practices/Reducing-the-Active-Directory-Attack-Surface.md)  
   
--   [Implementing Least-Privilege Administrative Models](Implementing-Least-Privilege-Administrative-Models.md)  
+-   [Implementing Least-Privilege Administrative Models](../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md)  
   
--   [Implementing Secure Administrative Hosts](Implementing-Secure-Administrative-Hosts.md)  
+-   [Implementing Secure Administrative Hosts](../../../ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md)  
   
--   [Securing Domain Controllers Against Attack](Securing-Domain-Controllers-Against-Attack.md)  
+-   [Securing Domain Controllers Against Attack](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md)  
   
--   [Monitoring Active Directory for Signs of Compromise](Monitoring-Active-Directory-for-Signs-of-Compromise.md)  
+-   [Monitoring Active Directory for Signs of Compromise](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)  
   
--   [Audit Policy Recommendations](Audit-Policy-Recommendations.md)  
+-   [Audit Policy Recommendations](../../../ad-ds/plan/security-best-practices/Audit-Policy-Recommendations.md)  
   
--   [Planning for Compromise](Planning-for-Compromise.md)  
+-   [Planning for Compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md)  
   
--   [Maintaining a More Secure Environment](Maintaining-a-More-Secure-Environment.md)  
+-   [Maintaining a More Secure Environment](../../../ad-ds/plan/security-best-practices/Maintaining-a-More-Secure-Environment.md)  
   
--   [Summary of Best Practices](Summary-of-Best-Practices.md)  
+-   [Summary of Best Practices](../../../ad-ds/plan/security-best-practices/Summary-of-Best-Practices.md)  
   
--   [Appendices](Appendices.md)  
+-   [Appendices](../../../ad-ds/plan/security-best-practices/Appendices.md)  
   
--   [Appendix A: Patch and Vulnerability Management Software](Appendix-A--Patch-and-Vulnerability-Management-Software.md)  
+-   [Appendix A: Patch and Vulnerability Management Software](../../../ad-ds/plan/security-best-practices/Appendix-A--Patch-and-Vulnerability-Management-Software.md)  
   
--   [Appendix B: Privileged Accounts and Groups in Active Directory](Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md)  
+-   [Appendix B: Privileged Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md)  
   
--   [Appendix C: Protected Accounts and Groups in Active Directory](Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)  
+-   [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)  
   
--   [Appendix D: Securing Built-In Administrator Accounts in Active Directory](Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)  
+-   [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)  
   
--   [Appendix E: Securing Enterprise Admins Groups in Active Directory](Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md)  
+-   [Appendix E: Securing Enterprise Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md)  
   
--   [Appendix F: Securing Domain Admins Groups in Active Directory](Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)  
+-   [Appendix F: Securing Domain Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)  
   
--   [Appendix G: Securing Administrators Groups in Active Directory](Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)  
+-   [Appendix G: Securing Administrators Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)  
   
--   [Appendix H: Securing Local Administrator Accounts and Groups](Appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)  
+-   [Appendix H: Securing Local Administrator Accounts and Groups](../../../ad-ds/plan/security-best-practices/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)  
   
--   [Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)  
+-   [Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)  
   
--   [Appendix J: Third-Party RBAC Vendors](Appendix-J--Third-Party-RBAC-Vendors.md)  
+-   [Appendix J: Third-Party RBAC Vendors](../../../ad-ds/plan/security-best-practices/Appendix-J--Third-Party-RBAC-Vendors.md)  
   
--   [Appendix K: Third-Party PIM Vendors](Appendix-K--Third-Party-PIM-Vendors.md)  
+-   [Appendix K: Third-Party PIM Vendors](../../../ad-ds/plan/security-best-practices/Appendix-K--Third-Party-PIM-Vendors.md)  
   
--   [Appendix L: Events to Monitor](Appendix-L--Events-to-Monitor.md)  
+-   [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)  
   
--   [Appendix M: Document Links and Recommended Reading](Appendix-M--Document-Links-and-Recommended-Reading.md)  
+-   [Appendix M: Document Links and Recommended Reading](../../../ad-ds/manage/Appendix-M--Document-Links-and-Recommended-Reading.md)  
   
 

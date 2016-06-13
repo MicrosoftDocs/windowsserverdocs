@@ -16,7 +16,7 @@ You assign cost values to site links to favor inexpensive connections over expen
   
 We recommend that the cost value be defined on a site\-wide basis. Cost is usually based not only on the total bandwidth of the link but also on the availability, latency, and monetary cost of the link.  
   
-To determine the costs to place on site links, document the connection speed for each site link. Refer to the "Geographic Locations and Communication Links" \(DSSTOPO\_1.doc\) worksheet in [Collecting Network Information](Collecting-Network-Information.md) for information about the connection speed that you identified.  
+To determine the costs to place on site links, document the connection speed for each site link. Refer to the "Geographic Locations and Communication Links" \(DSSTOPO\_1.doc\) worksheet in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) for information about the connection speed that you identified.  
   
 The following table lists the speeds for different types of networks.  
   

@@ -30,18 +30,18 @@ After you complete your site topology design, you must verify that your domain c
   
 ## In this guide  
   
--   [Understanding Active Directory Site Topology](Understanding-Active-Directory-Site-Topology.md)  
+-   [Understanding Active Directory Site Topology](../../ad-ds/plan/Understanding-Active-Directory-Site-Topology.md)  
   
--   [Collecting Network Information](Collecting-Network-Information.md)  
+-   [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md)  
   
--   [Planning Domain Controller Placement](Planning-Domain-Controller-Placement.md)  
+-   [Planning Domain Controller Placement](../../ad-ds/plan/Planning-Domain-Controller-Placement.md)  
   
--   [Creating a Site Design](Creating-a-Site-Design.md)  
+-   [Creating a Site Design](../../ad-ds/plan/Creating-a-Site-Design.md)  
   
--   [Creating a Site Link Design](Creating-a-Site-Link-Design.md)  
+-   [Creating a Site Link Design](../../ad-ds/plan/Creating-a-Site-Link-Design.md)  
   
--   [Creating a Site Link Bridge Design](Creating-a-Site-Link-Bridge-Design.md)  
+-   [Creating a Site Link Bridge Design](../../ad-ds/plan/Creating-a-Site-Link-Bridge-Design.md)  
   
--   [Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design](Finding-Additional-Resources-for-Windows-Server-2008-Active-Directory-Site-Topology-Design.md)  
+-   [Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design](../../ad-ds/plan/Finding-Additional-Resources-for-Windows-Server-2008-Active-Directory-Site-Topology-Design.md)  
   
 

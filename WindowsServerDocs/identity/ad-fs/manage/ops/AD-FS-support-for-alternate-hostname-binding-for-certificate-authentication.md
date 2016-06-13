@@ -22,9 +22,9 @@ In AD FS on Windows Server 2016 this has changed. Now we support two modes, the 
 ## How to configure alternate host name binding for certificate authentication  
 There are two ways that you can add the alternate host name binding for certificate authentication.  The first is when setting up a new AD FS farm with AD FS for Windows Server 2016, if the certificate contains a subject alternative name \(SAN\), then it will automatically be setup to use the second method mentioned above.  That is, it will automatically setup two different hosts \(sts.contoso.com and certauth.sts.contoso.com with the same port.  If the  certificate does not contain a SAN, then you will see a warning telling you that certificate subject alternative names does not support certauth.\*.  See the screenshots below.  The first one shows an installation where the certificate had a SAN and the second one shows a certificate that did not.  
   
-![](media/ADFS_CA_1.png)  
+![](../../../media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_1.png)  
   
-![](media/ADFS_CA_2.png)  
+![](../../../media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_2.png)  
   
 Likewise, once AD FS in Windows Server 2016 has been depoloyed you can use the PowerShell cmdlt:  Set\-AdfsAlternateTlsClientBinding.  
   
@@ -34,6 +34,6 @@ Set-AdfsAlternateTlsClientBinding -Member DC1.contoso.com -Thumbprint c67e1ffba1
   
 When prompted, click Yes to confirm.  And that should  be it.  
   
-![](media/ADFS_CA_3.png)  
+![](../../../media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_3.png)  
   
 

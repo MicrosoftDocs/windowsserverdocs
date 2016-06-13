@@ -34,7 +34,7 @@ This section describes various considerations about the intended audience, benef
 -   Smaller organizations that require redundant, scalable services  
   
 > [!NOTE]  
-> Organizations with larger databases should consider using the [Federation Server Farm Using SQL Server](Federation-Server-Farm-Using-SQL-Server.md) deployment topology. Organizations with users who log in from outside the network should consider using either the [Federation Server Farm Using WID and Proxies](Federation-Server-Farm-Using-WID-and-Proxies.md) topology or the [Federation Server Farm Using SQL Server](Federation-Server-Farm-Using-SQL-Server.md) topology.  
+> Organizations with larger databases should consider using the [Federation Server Farm Using SQL Server](../../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-SQL-Server.md) deployment topology. Organizations with users who log in from outside the network should consider using either the [Federation Server Farm Using WID and Proxies](Federation-Server-Farm-Using-WID-and-Proxies.md) topology or the [Federation Server Farm Using SQL Server](../../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-SQL-Server.md) topology.  
   
 ### What are the benefits of using this topology?  
   
@@ -66,12 +66,12 @@ When you are ready to start deploying this topology in your network, you should 
   
 The NLB host can use the settings that are defined in this NLB cluster to allocate client requests to the individual federation servers. The following illustration shows how the fictional Fabrikam, Inc., company sets up the first phase of its deployment using a two\-computer federation server farm \(fs1 and fs2\) with WID and the positioning of a DNS server and a single NLB host that is wired to the corporate network.  
   
-![](media/FarmWID.gif)  
+![](../../../../media/Federation-Server-Farm-Using-WID_1/FarmWID.gif)  
   
 > [!NOTE]  
 > If there is a failure on this single NLB host, users will not be able to access federated applications or services. Add additional NLB hosts if your business requirements do not allow having a single point of failure.  
   
-For more information about how to configure your networking environment for use with federation servers, see the Name Resolution Requirements section in [AD FS Requirements](AD-FS-Requirements.md).  
+For more information about how to configure your networking environment for use with federation servers, see the Name Resolution Requirements section in [AD FS Requirements](../../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md).  
   
 ## See Also  
 [Plan Your AD FS Deployment Topology](Plan-Your-AD-FS-Deployment-Topology.md)  

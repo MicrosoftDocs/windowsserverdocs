@@ -16,7 +16,7 @@ Thoroughly preparing your Active Directory Domain Services \(AD DS\) design is
   
 The following illustration shows the steps for deploying  Windows Server 2008  AD DS in a network environment that is currently operating without a directory service.  
   
-![](media/daa38971-86f2-4033-9442-0cdff9ecc48f.gif)  
+![](../../media/Deploying-AD-DS-in-a-New-Organization/daa38971-86f2-4033-9442-0cdff9ecc48f.gif)  
   
 For a list of detailed tasks that you can use to plan and deploy AD DS in a new organization, see [Checklist: Deploying AD DS in a New Organization](Checklist--Deploying-AD-DS-in-a-New-Organization.md).  
   

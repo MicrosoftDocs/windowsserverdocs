@@ -34,10 +34,10 @@ Federation servers are designed to accommodate high\-availability server farm co
 ## AD FS configuration database size and growth  
 The size of the AD FS configuration database is generally considered to be small, and database size does not tend to be a major consideration in AD FS deployments.  The precise size of the AD FS configuration database can depend largely on the number of trust relationships and the associated trust\-related metadata—such as claims, claim rules, and monitoring settings configured for each trust. As the number of trust entries in the configuration database grows, so does the need for more disk space.  
   
-For additional deployment information about the AD FS configuration database, see [AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md).  
+For additional deployment information about the AD FS configuration database, see [AD FS Deployment Topology Considerations](../../../../ad-fs/plan/WS2012-guide/topology/AD-FS-Deployment-Topology-Considerations.md).  
   
 ## Memory, CPU and disk space requirements  
-Fortunately, memory, CPU and disk space requirements for federation servers are modest, and they are not likely to be a driving factor in hardware decisions. For more information about hardware requirements, see [Appendix A: Reviewing AD FS Requirements](Appendix-A--Reviewing-AD-FS-Requirements.md).  
+Fortunately, memory, CPU and disk space requirements for federation servers are modest, and they are not likely to be a driving factor in hardware decisions. For more information about hardware requirements, see [Appendix A: Reviewing AD FS Requirements](../../../../ad-fs/plan/WS2012-guide/Appendix-A--Reviewing-AD-FS-Requirements.md).  
   
 > [!NOTE]  
 > In tests that were performed by the AD FS product team using a federation server farm configured with a dedicated SQL Server to store the AD FS configuration database, the overall load on the SQL Server tended to be low. In one test using a four\-federation\-server farm that was configured to use a single SQL Server, CPU utilization did not exceed 10% despite testing that brought the federation servers to target utilization.  
@@ -46,7 +46,7 @@ Fortunately, memory, CPU and disk space requirements for federation servers are 
 In an effort to streamline the hardware planning process for federation servers, the AD FS product team developed the AD FS Capacity Planning Sizing Spreadsheet. This Excel spreadsheet includes calculator\-like functionality that will take expected usage data that you provide about users in your organization and return a recommended optimal number of federation servers for your AD FS production environment.  
   
 > [!NOTE]  
-> The number of federation servers that this spreadsheet will recommend is based on the hardware and network specifications that the AD FS product team used during testing. Therefore, the number of federation servers that the spreadsheet will recommend must be understood within this context.  For more information about the specifications used during testing, see the topic titled [Planning for AD FS Server Capacity](Planning-for-AD-FS-Server-Capacity.md).  
+> The number of federation servers that this spreadsheet will recommend is based on the hardware and network specifications that the AD FS product team used during testing. Therefore, the number of federation servers that the spreadsheet will recommend must be understood within this context.  For more information about the specifications used during testing, see the topic titled [Planning for AD FS Server Capacity](../../../../ad-fs/plan/WS2012-guide/Planning-for-AD-FS-Server-Capacity.md).  
   
 ### Using the AD FS Capacity Planning Sizing Spreadsheet  
 When you use this spreadsheet, you will need to select a value \(either **40%**, **60%**, or **80%**\) that best represents the percentage of total users you expect will send authentication requests to your federation servers during peak usage periods.  

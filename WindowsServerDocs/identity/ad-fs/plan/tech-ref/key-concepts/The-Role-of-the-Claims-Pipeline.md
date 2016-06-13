@@ -14,7 +14,7 @@ ms.assetid: a8b6dd27-a8c9-4aff-8aa4-2204ad33b2dd
 # The Role of the Claims Pipeline
 The claims pipeline in Active Directory Federation Services \(AD FS\) represents the path that claims must follow through the Federation Service before they can be issued. The Federation Service manages the entire end\-to\-end process of flowing claims through the various stages of the claims pipeline, which also includes the processing of claim rules by the claim rule engine.
 
-For more information about claim rules, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md). For more information about how the claim rule engine processes rules, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
+For more information about claim rules, see [The Role of Claim Rules](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md). For more information about how the claim rule engine processes rules, see [The Role of the Claims Engine](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Engine.md).
 
 The following section discusses the process that the Federation Service oversees in greater detail.
 
@@ -35,8 +35,8 @@ Claims rules contain the administrator\-defined logic by which the claims engine
 
 As shown in the following illustration, the claims pipeline is responsible for the entire end\-to\-end process of flowing a claim through the various pipeline stages in order to end up with an issued claim that will be sent over a relying party trust. The outgoing claim in the illustration represents the issued claim.
 
-![](media/adfs2_pipeline.gif)
+![](../../../../media/The-Role-of-the-Claims-Pipeline/adfs2_pipeline.gif)
 
-Although it is not shown in the illustration, it is the claims engine that performs the actual processing of the rules at each stage. For more information, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
+Although it is not shown in the illustration, it is the claims engine that performs the actual processing of the rules at each stage. For more information, see [The Role of the Claims Engine](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Engine.md).
 
 

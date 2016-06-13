@@ -31,7 +31,7 @@ PAM builds on the principle of just\-in\-time administration, which works in com
   
 PAM setup and operation has four steps.  
   
-![](media/MIM_PAM_PAMSetupProcess.png)  
+![](../media/Privileged-Access-Management-for-Active-Directory-Domain-Services--AD-DS-/MIM_PAM_PAMSetupProcess.png)  
   
 1.  **Prepare**: Identify which groups in your existing forest have significant privileges. As part of PAM setup, these groups will have their members removed in the current forest and the groups will be created without members in the bastion forest.  
   
@@ -48,7 +48,7 @@ Active Directory, the MIM Service, and other portions of this solution can also 
   
 The following example shows how PAM works in more detail.  
   
-![](media/MIM_PAM_HowPAMWorksV2.png)  
+![](../media/Privileged-Access-Management-for-Active-Directory-Domain-Services--AD-DS-/MIM_PAM_HowPAMWorksV2.png)  
   
 This administrative access pattern allows the bastion forest to issue time\-limited group memberships, which in turn produce time\-limited TGTs that existing Kerberos\-based applications or services can honor and enforce, including applications and services in other forests that trust the bastion forest.  
   

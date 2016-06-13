@@ -14,17 +14,17 @@ ms.assetid: 758f8daf-ac19-489c-807c-5e35ae51afc7
 # Walkthrough Guide: Manage Risk with Conditional Access Control
 
 ## About This Guide
-This walkthrough provides instructions for managing risk with one of the factors \(user data\) available through the conditional access control mechanism in Active Directory Federation Services \(AD FS\) in Windows Server® 2012 R2. For more information about conditional access control and authorization mechanisms in AD FS in Windows Server® 2012 R2, see [Manage Risk with Conditional Access Control](Manage-Risk-with-Conditional-Access-Control.md).
+This walkthrough provides instructions for managing risk with one of the factors \(user data\) available through the conditional access control mechanism in Active Directory Federation Services \(AD FS\) in Windows Server® 2012 R2. For more information about conditional access control and authorization mechanisms in AD FS in Windows Server® 2012 R2, see [Manage Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md).
 
 This walkthrough consists of the following sections:
 
--   [Step 1: Setting up the lab environment](Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
+-   [Step 1: Setting up the lab environment](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [Step 2: Verify the default AD FS access control mechanism](Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
+-   [Step 2: Verify the default AD FS access control mechanism](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
--   [Step 3: Configure conditional access control policy based on user data](Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
+-   [Step 3: Configure conditional access control policy based on user data](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
 
--   [Step 4: Verify conditional access control mechanism](Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
+-   [Step 4: Verify conditional access control mechanism](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>Step 1: Setting up the lab environment
 In order to complete this walkthrough, you need an environment that consists of the following components:
@@ -42,10 +42,10 @@ In order to complete this walkthrough, you need an environment that consists of 
 
 In this environment, the federation server issues the claims that are required so that users can access the sample application. The Web server hosts a sample application that will trust the users who present the claims that the federation server issues.
 
-For instructions on how to set up this environment, see [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+For instructions on how to set up this environment, see [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 ## <a name="BKMK_2"></a>Step 2: Verify the default AD FS access control mechanism
-In this step you will verify the default AD FS access control mechanism, where the user is redirected to the AD FS sign\-in page, provides valid credentials, and is granted access to the application. You can use the **Robert Hatley** AD account and the **claimapp** sample application that you configured in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+In this step you will verify the default AD FS access control mechanism, where the user is redirected to the AD FS sign\-in page, provides valid credentials, and is granted access to the application. You can use the **Robert Hatley** AD account and the **claimapp** sample application that you configured in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 #### To verify the default AD FS access control mechanism
 
@@ -53,12 +53,12 @@ In this step you will verify the default AD FS access control mechanism, where t
 
     This action automatically redirects the request to the federation server and you are prompted to sign in with a username and password.
 
-2.  Type in the credentials of the **Robert Hatley** AD account that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+2.  Type in the credentials of the **Robert Hatley** AD account that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
     You will be granted access to the application.
 
 ## <a name="BKMK_3"></a>Step 3: Configure conditional access control policy based on user data
-In this step you will set up an access control policy based on the user group membership data. In other words, you will configure an **Issuance Authorization Rule** on your federation server for a relying party trust that represents your sample application \- **claimapp**. By this rule’s logic, **Robert Hatley** AD user will be issued claims that are required to access this application because he belongs to a **Finance** group. You have added the **Robert Hatley** account to the **Finance** group in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+In this step you will set up an access control policy based on the user group membership data. In other words, you will configure an **Issuance Authorization Rule** on your federation server for a relying party trust that represents your sample application \- **claimapp**. By this rule’s logic, **Robert Hatley** AD user will be issued claims that are required to access this application because he belongs to a **Finance** group. You have added the **Robert Hatley** account to the **Finance** group in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 You can complete this task using either AD FS Management Console or via Windows PowerShell.
 
@@ -111,7 +111,7 @@ In this step you will verify the conditional access control policy that you set 
 
     This action automatically redirects the request to the federation server and you are prompted to sign in with a username and password.
 
-2.  Type in the credentials of the **Robert Hatley** AD account that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+2.  Type in the credentials of the **Robert Hatley** AD account that you created in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
     You will be granted access to the application.
 
@@ -120,7 +120,7 @@ In this step you will verify the conditional access control policy that you set 
     At this point, because of the access control policy that you set up in the previous step, an ‘access denied’ message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign\-in experience, see [Customizing the AD FS Sign-in Pages](Customizing-the-AD-FS-Sign-in-Pages.md).
 
 ## See Also
-[Manage Risk with Conditional Access Control](Manage-Risk-with-Conditional-Access-Control.md)
-[Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+[Manage Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
+[Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 

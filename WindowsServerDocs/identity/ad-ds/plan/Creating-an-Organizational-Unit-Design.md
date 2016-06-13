@@ -37,8 +37,8 @@ For a worksheet to assist you in documenting your OU design, download Job\_Aids\
   
 ## In this section  
   
--   [Reviewing OU Design Concepts](Reviewing-OU-Design-Concepts.md)  
+-   [Reviewing OU Design Concepts](../../ad-ds/plan/Reviewing-OU-Design-Concepts.md)  
   
--   [Delegating Administration by Using OU Objects](Delegating-Administration-by-Using-OU-Objects.md)  
+-   [Delegating Administration by Using OU Objects](../../ad-ds/plan/Delegating-Administration-by-Using-OU-Objects.md)  
   
 

@@ -29,21 +29,21 @@ Before you proceed with reading this capacity planning content, we recommend tha
   
 |Recommended task|Description|Reference|  
 |--------------------|---------------|-------------|  
-|Understand the requirements for deploying AD FS federation servers and federation server proxies|Review important hardware and software requirements necessary for deploying federation server and federation server proxies.|[Appendix A: Reviewing AD FS Requirements](Appendix-A--Reviewing-AD-FS-Requirements.md)|  
-|Select the type of AD FS configuration database that you will deploy in your organization|Before you can begin using capacity planning data in this section, you first have to determine which AD FS configuration database type you will deploy, either Windows Internal Database \(WID\) or a Structured Query Language \(SQL\) database.|[The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md);<br /><br />[AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md)|  
-|Determine the type of topology layout to use with your new AD FS configuration database selection|Once you have decided on the type of AD FS configuration database to use in your deployment, you will need to consider which deployment topology most closely matches where you will need to place federation servers and federation server proxies within your production environment.|[Determine Your AD FS Deployment Topology](Determine-Your-AD-FS-Deployment-Topology.md)|  
-|Understand key AD FS–related capacity planning terms|Review the definitions of common capacity planning terms that are used throughout the AD FS capacity planning discussion.|See the section titled [AD FS capacity planning terms](Planning-for-AD-FS-Server-Capacity.md#bk_terms) in this topic|  
+|Understand the requirements for deploying AD FS federation servers and federation server proxies|Review important hardware and software requirements necessary for deploying federation server and federation server proxies.|[Appendix A: Reviewing AD FS Requirements](../../../ad-fs/plan/WS2012-guide/Appendix-A--Reviewing-AD-FS-Requirements.md)|  
+|Select the type of AD FS configuration database that you will deploy in your organization|Before you can begin using capacity planning data in this section, you first have to determine which AD FS configuration database type you will deploy, either Windows Internal Database \(WID\) or a Structured Query Language \(SQL\) database.|[The Role of the AD FS Configuration Database](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md);<br /><br />[AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md)|  
+|Determine the type of topology layout to use with your new AD FS configuration database selection|Once you have decided on the type of AD FS configuration database to use in your deployment, you will need to consider which deployment topology most closely matches where you will need to place federation servers and federation server proxies within your production environment.|[Determine Your AD FS Deployment Topology](../../../ad-fs/plan/WS2012-guide/Determine-Your-AD-FS-Deployment-Topology.md)|  
+|Understand key AD FS–related capacity planning terms|Review the definitions of common capacity planning terms that are used throughout the AD FS capacity planning discussion.|See the section titled [AD FS capacity planning terms](../../../ad-fs/plan/WS2012-guide/Planning-for-AD-FS-Server-Capacity.md#bk_terms) in this topic|  
   
 Once you have reviewed the content in the previous table, you can now complete the prerequisite tasks in the next table.  
   
 |Prerequisite task|Description|Reference|  
 |---------------------|---------------|-------------|  
 |Download the AD FS Capacity Planning Sizing Spreadsheet|The AD FS Capacity Planning Sizing spreadsheet can help you to determine the number of federation servers required for an AD FS federation server farm deployment. Instructions for how to use this spreadsheet are available in the link provided below for the next task.|[AD FS Capacity Planning Spreadsheet](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacityPlanning.xlsx)|  
-|Gather data about the number of users who will require single sign\-on \(SSO\) access to the target claims\-aware application and the expected peak usage periods associated with this access|This user data you collect will be used for the input values required within the context of the AD FS Capacity Planning Sizing Spreadsheet.|[Estimate the number of federation servers for your organization](Planning-for-Federation-Server-Capacity.md#bk_estimatefs)|  
+|Gather data about the number of users who will require single sign\-on \(SSO\) access to the target claims\-aware application and the expected peak usage periods associated with this access|This user data you collect will be used for the input values required within the context of the AD FS Capacity Planning Sizing Spreadsheet.|[Estimate the number of federation servers for your organization](../../../ad-fs/plan/WS2012-guide/server-capacity/../../../ad-fs/plan/WS2012-guide/server-capacity/Planning-for-Federation-Server-Capacity.md#bk_estimatefs)|  
 |AD FS Capacity Planning Spreadsheet for Windows Server 2016|Updated Planning worksheet for Windows Server 2016|[AD FS Windows Server 2016 Capacity Planning](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)  
   
 ## <a name="bk_terms"></a>AD FS capacity planning terms  
-The following table describes important terms that are used often in this capacity planning section of the AD FS Design Guide. For a more complete list of AD FS terms, see [Understanding Key AD FS Concepts](Understanding-Key-AD-FS-Concepts.md).  
+The following table describes important terms that are used often in this capacity planning section of the AD FS Design Guide. For a more complete list of AD FS terms, see [Understanding Key AD FS Concepts](../../../ad-fs/plan/tech-ref/Understanding-Key-AD-FS-Concepts.md).  
   
 |Term|Definition|  
 |--------|--------------|  
@@ -91,8 +91,8 @@ Typically, the hardware components that affect server performance and scalabilit
 ## Continue reading more about AD FS capacity planning  
 After you have completed the prerequisite tasks and have become familiar with related terms and hardware requirements, you can use the following additional capacity planning content to help you determine the recommended number of AD FS servers required for your deployment:  
   
--   [Planning for Federation Server Capacity](Planning-for-Federation-Server-Capacity.md)  
+-   [Planning for Federation Server Capacity](../../../ad-fs/plan/WS2012-guide/server-capacity/../../../ad-fs/plan/WS2012-guide/server-capacity/Planning-for-Federation-Server-Capacity.md)  
   
--   [Planning for Federation Server Proxy Capacity](Planning-for-Federation-Server-Proxy-Capacity.md)  
+-   [Planning for Federation Server Proxy Capacity](../../../ad-fs/plan/WS2012-guide/server-capacity/Planning-for-Federation-Server-Proxy-Capacity.md)  
   
 

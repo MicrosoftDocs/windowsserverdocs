@@ -32,7 +32,7 @@ If not all of the groups in your organization can share a single organizational 
 |[Scenario 7: Use a resource forest, and reconfigure the firewall for service isolation with limited connectivity](#BKMK_7)|Yes|No|N\/A|Yes|N\/A|  
   
 ## <a name="BKMK_1"></a>Scenario 1: Join an existing forest for data autonomy  
-You can meet a requirement for data autonomy simply by hosting the group in organizational units \(OUs\) in an existing organizational forest. Delegate control over the OUs to data administrators from that group to achieve data autonomy. For more information about delegating control by using OUs, see [Creating an Organizational Unit Design](Creating-an-Organizational-Unit-Design.md).  
+You can meet a requirement for data autonomy simply by hosting the group in organizational units \(OUs\) in an existing organizational forest. Delegate control over the OUs to data administrators from that group to achieve data autonomy. For more information about delegating control by using OUs, see [Creating an Organizational Unit Design](../../ad-ds/plan/Creating-an-Organizational-Unit-Design.md).  
   
 ## <a name="BKMK_2"></a>Scenario 2: Use an organizational forest or domain for service autonomy  
 If a group in your organization identifies service autonomy as a requirement, we recommend that you first reconsider this requirement. Achieving service autonomy creates more management overhead and additional costs for the organization. Ensure that the requirement for service autonomy is not simply for convenience and that you can justify the costs involved in meeting this requirement.  
@@ -43,7 +43,7 @@ You can meet a requirement for service autonomy by doing one of the following:
   
 -   Using organizational domains. Place the users, groups, and computers in a separate domain in an existing organizational forest. This model provides for domain\-level service autonomy only and not for full service autonomy, service isolation, or data isolation.  
   
-For more information about using organizational domains, see [Using the Organizational Domain Forest Model](Using-the-Organizational-Domain-Forest-Model.md).  
+For more information about using organizational domains, see [Using the Organizational Domain Forest Model](../../ad-ds/plan/../../ad-ds/plan/Using-the-Organizational-Domain-Forest-Model.md).  
   
 ## <a name="BKMK_3"></a>Scenario 3: Use an organizational forest or resource forest for service isolation  
 You can meet a requirement for service isolation by doing one of the following:  
@@ -113,7 +113,7 @@ If limited connectivity is an issue, and you have a requirement for service auto
   
 -   Use an organizational forest. Place the users, groups, and computers for the group that requires service autonomy into a separate organizational forest. Assign an individual from that group to be the forest owner. The organizational forest provides a separate environment on the other side of the firewall. The forest includes user accounts and resources that are managed within the forest, so that users do not need to go through the firewall to accomplish their daily tasks. Specific users or applications might have special needs that require the capability to pass through the firewall to contact other forests. You can address these needs individually by opening the appropriate interfaces in the firewall, including those necessary for any trusts to function.  
   
--   Place the users, groups, and computers in a separate domain in an existing organizational forest. This model provides for domain\-level service autonomy only and not for full service autonomy, service isolation, or data isolation. Other groups in the forest must trust the service administrators of the new domain to the same degree that they trust the forest owner. For this reason, we do not recommend this approach. For more information about using organizational domains, see [Using the Organizational Domain Forest Model](Using-the-Organizational-Domain-Forest-Model.md).  
+-   Place the users, groups, and computers in a separate domain in an existing organizational forest. This model provides for domain\-level service autonomy only and not for full service autonomy, service isolation, or data isolation. Other groups in the forest must trust the service administrators of the new domain to the same degree that they trust the forest owner. For this reason, we do not recommend this approach. For more information about using organizational domains, see [Using the Organizational Domain Forest Model](../../ad-ds/plan/../../ad-ds/plan/Using-the-Organizational-Domain-Forest-Model.md).  
   
 You also need to open the firewall enough to allow Active Directory traffic to pass through. For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=37928](http://go.microsoft.com/fwlink/?LinkId=37928)\).  
   

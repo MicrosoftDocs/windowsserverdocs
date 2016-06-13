@@ -30,7 +30,7 @@ The following components are required for this deployment goal:
     > [!NOTE]  
     > You can also use Lightweight Directory Access Protocol \(LDAP\) or Structured Query Language \(SQL\) to contain the identities for AD FS token generation.  
   
--   **Corporate DNS:** This implementation of Domain Name System \(DNS\) contains a simple host \(A\) resource record so that intranet clients can locate the account federation server. This implementation of DNS may also host other DNS records that are required in the corporate network. For more information, see [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md).  
+-   **Corporate DNS:** This implementation of Domain Name System \(DNS\) contains a simple host \(A\) resource record so that intranet clients can locate the account federation server. This implementation of DNS may also host other DNS records that are required in the corporate network. For more information, see [Name Resolution Requirements for Federation Servers](../../../../ad-fs/plan/WS2012-guide/server-placement/Name-Resolution-Requirements-for-Federation-Servers.md).  
   
 -   **Account partner federation server:** This federation server is joined to a domain in the account partner forest. It authenticates employee user accounts and generates AD FS tokens. The client computer for the employee performs Windows Integrated Authentication against this federation server to generate an AD FS token. For more information, see [Review the Role of the Federation Server in the Account Partner](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md).  
   
@@ -48,6 +48,6 @@ After reviewing the information in the linked topics, you can begin deploying th
   
 The following illustration shows each of the required components for this AD FS deployment goal.  
   
-![](media/31394ea8-fecb-4372-ac3f-cc3cf566ffc9.gif)  
+![](../../../../media/Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services/31394ea8-fecb-4372-ac3f-cc3cf566ffc9.gif)  
   
 

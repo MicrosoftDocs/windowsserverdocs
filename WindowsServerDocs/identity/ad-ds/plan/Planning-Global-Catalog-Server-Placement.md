@@ -16,7 +16,7 @@ Global catalog placement requires planning except if you have a single\-domain f
   
 In multiple\-domain forests, global catalog servers facilitate user logon requests and forest\-wide searches. The following illustration shows how to determine which locations require global catalog servers.  
   
-![](media/8fc4777c-47b6-4ee7-b8ad-a04e7c5ee67f.gif)  
+![](../../media/Planning-Global-Catalog-Server-Placement/8fc4777c-47b6-4ee7-b8ad-a04e7c5ee67f.gif)  
   
 In most cases, it is recommended that you include the global catalog when you install new domain controllers. The following exceptions apply:  
   

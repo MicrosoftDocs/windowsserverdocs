@@ -23,7 +23,7 @@ The content in this section describes what's new and changed in the Web Applicat
   
     HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients. This new version of Web Application Proxy provides support to publish an app using HTTP basic by enabling the HTTP app to receive a non\-claims relying party trust for the application to the Federation Service.  
   
-    For more information on HTTP basic publishing, see [Publishing Applications using AD FS Preauthentication](Publishing-Applications-using-AD-FS-Preauthentication.md)  
+    For more information on HTTP basic publishing, see [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
 -   Wildcard domain publishing of applications  
   
@@ -39,7 +39,7 @@ The content in this section describes what's new and changed in the Web Applicat
   
 -   Publishing of Remote Desktop Gateway apps  
   
-    For more information on RDG in Web Application Proxy, see [Publishing Applications with SharePoint, Exchange and RDG](Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)  
+    For more information on RDG in Web Application Proxy, see [Publishing Applications with SharePoint, Exchange and RDG](../web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)  
   
 -   New debug log for better troubleshooting and improved service log for complete audit trail and improved error handling  
   
@@ -53,7 +53,7 @@ The content in this section describes what's new and changed in the Web Applicat
   
 -   [What's New in Windows Server 2016 Technical Preview 4](What-s-New-in-Windows-Server-2016-Technical-Preview-4.md)  
   
--   [Publishing Applications using AD FS Preauthentication](Publishing-Applications-using-AD-FS-Preauthentication.md)  
+-   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
 -   [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
   

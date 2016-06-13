@@ -29,7 +29,7 @@ Estimating the peak sign\-ins per second for the federation server proxy require
 > For production deployments, we recommend a minimum of two federation server proxies for each federation server farm instance you deploy.  
   
 ## Estimate the number of federation server proxies required for your organization  
-Before you can estimate the number of AD FS federation server proxy machines required, you will first need to determine the total number of federation servers that you will deploy in your organization. For more information about how to do this, see [Planning for Federation Server Capacity](Planning-for-Federation-Server-Capacity.md).  
+Before you can estimate the number of AD FS federation server proxy machines required, you will first need to determine the total number of federation servers that you will deploy in your organization. For more information about how to do this, see [Planning for Federation Server Capacity](../../../../ad-fs/plan/WS2012-guide/server-capacity/Planning-for-Federation-Server-Capacity.md).  
   
 Once you have decided on the number of federation servers, multiply this number of servers by the percentage of incoming federated authentication requests that you expect will be made from external users \(located outside of the corporate network\). The value of this calculation will provide you with the estimated number of federation server proxies that will handle the incoming authentication requests for your external users.  
   

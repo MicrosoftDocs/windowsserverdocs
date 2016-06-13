@@ -17,7 +17,7 @@ This document describes how AD FS can be configured as a certificate issuing aut
 The LogonCert JSON Web Token bearer extension grant flow is used by a client (requestor) to obtain a certificate that can be used to login a user interactively. In order to request a certificate using this extension grant type, the client/requestor needs the following:
 
 -	An access token issued by AD FS to the requestor after authenticating the end-user (i.e. the end-user is the subject of the token).
--	Client credentials in order for the requestor to authenticate itself with AD FS. The requestor MUST be registered with AD FS as a confidential client and can therefore use one of the available confidential client authentication methods (i.e. either of client_secret_post, private_key_jwt or WIA).  For more an example of a confidential client see [Enabling Oauth Confidential Clients with AD FS 2016.](Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
+-	Client credentials in order for the requestor to authenticate itself with AD FS. The requestor MUST be registered with AD FS as a confidential client and can therefore use one of the available confidential client authentication methods (i.e. either of client_secret_post, private_key_jwt or WIA).  For more an example of a confidential client see [Enabling Oauth Confidential Clients with AD FS 2016.](../ad-fs/manage/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 -	A certificate signing request (CSR) generated in accordance with the stipulations of [RFC 2986](https://tools.ietf.org/html/rfc2986).
 
 The following describes the flow in how a native app obtains authorization to access the Azure RemoteApp service.
