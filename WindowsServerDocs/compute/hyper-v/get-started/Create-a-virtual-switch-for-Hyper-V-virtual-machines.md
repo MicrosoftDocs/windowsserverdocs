@@ -17,7 +17,7 @@ author: cwatsonmsft
   
 A virtual switch allows virtual machines created on Hyper\-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper\-V role on Windows Server Technical Preview. To create additional virtual switches, use Hyper\-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](Hyper-V-Virtual-Switch.md).  
   
-Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md#bkmk_sswitchembedded). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper\-V. To learn more about how you can set up your networking infrastructure, review the [Networking](Networking.md) documentation.   
+Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](../../../networking/technologies/hyper-v-virtual-switch/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md#bkmk_sswitchembedded). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper\-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/Networking.md) documentation.   
   
 ## <a name="BKMK_HyperVMan"></a>Create a virtual switch by using Hyper\-V Manager  
   
@@ -88,7 +88,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
     ```  
   
-For more advanced [!INCLUDE[wps_2](../../../includes/wps_2_md.md)] scripts that cover improved or new virtual switch features in [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)], see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
+For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016 Technical Preview, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;]((../../../networking/technologies/hyper-v-virtual-switch/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
   
 ## Next step  
 [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)  

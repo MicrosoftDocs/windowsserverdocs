@@ -15,7 +15,7 @@ author: KBDAzure
 # Plan for Hyper-V scalability in Windows Server 2016
 **This is preliminary content and subject to change.**  
   
-This article gives you details about the maximum configuration for components you can add and remove on a Hyper\-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine as well as those that apply to the Hyper\-V host. These numbers are similar to those that apply to [!INCLUDE[winblue_server_2_md](../../../includes/winblue_server_2_md.md)].  
+This article gives you details about the maximum configuration for components you can add and remove on a Hyper\-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine as well as those that apply to the Hyper\-V host. These numbers are similar to those that apply to  Windows Server 2012 R2 .  
   
 > [!NOTE]  
 > For information about System Center Virtual Machine Manager \(VMM\), see [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994.aspx). VMM is a Microsoft product for managing a virtualized data center that is sold separately.  
@@ -45,7 +45,7 @@ These maximums apply to each Hyper\-V host.
 |-------------|-----------|---------|  
 |Logical processors|320|Both of these must be enabled in the firmware:<br /><br />-   Hardware\-assisted virtualization<br />-   Hardware\-enforced Data Execution Prevention \(DEP\)|  
 |Memory|4 TB|None.|  
-|Network adapter teams \(NIC Teaming\)|No limits imposed by Hyper\-V.|For details, see [NIC Teaming](../../../NIC-Teaming.md).|  
+|Network adapter teams \(NIC Teaming\)|No limits imposed by Hyper\-V.|For details, see [NIC Teaming](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|  
 |Physical network adapters|No limits imposed by Hyper\-V.|None.|  
 |Running virtual machines per server|1024|None.|  
 |Storage|Limited by what is supported by the management operating system. No limits imposed by Hyper\-V.|**Note:** Microsoft supports network\-attached storage \(NAS\) when using SMB 3.0. NFS\-based storage is not supported.|  

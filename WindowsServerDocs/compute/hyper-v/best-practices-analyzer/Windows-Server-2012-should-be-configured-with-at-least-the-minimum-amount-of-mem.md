@@ -19,7 +19,7 @@ For more information about best practices and scans, see [Run Best Practices Ana
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)]|  
+|**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
@@ -39,7 +39,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ### Increase the memory using Hyper\-V Manager  
   
-1.  Open [!INCLUDE[nextref_virtualname](../../../includes/nextref_virtualname_md.md)] Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
+1.  Open Hyper\-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
   
 2.  In the results pane, under **Virtual Machines**, select the virtual machine that you want to configure. The state of the virtual machine should be listed as **Off**. If it is not, right\-click the virtual machine and then click **Shut Down**.  
   
@@ -51,9 +51,9 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ### Increase the memory using Windows PowerShell  
   
-1.  Open Windows PowerShell. \(From the desktop, click **Start** and start typing **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]**.\)  
+1.  Open Windows PowerShell. \(From the desktop, click **Start** and start typing **Windows PowerShell**.\)  
   
-2.  Right\-click **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]** and click **Run as administrator**.  
+2.  Right\-click **Windows PowerShell** and click **Run as administrator**.  
   
 3.  Run this command after replacing \<MyVM> with the name  of your virtual machine:  
   

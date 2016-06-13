@@ -22,11 +22,11 @@ To set up non-clustered hosts for live migration, you'll need:
   
 -  A user account with permission to perform the various steps. Membership in the local Hyper\-V Administrators group or the Administrators group on both the source and destination computers meets this requirement, unless you're configuring constrained delegation. Membership in the Domain Administrators group is required to configure constrained delegation.  
   
-- The Hyper\-V role in [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)] installed on the source and destination servers. For instructions, see [Install the Hyper\-V role and configure a virtual machine](assetId:///243b5705-96c9-4ec7-9ec5-c68a22b0d42d).  
+- The Hyper\-V role in Windows Server 2016 Technical Preview installed on the source and destination servers. For instructions, see [Install the Hyper\-V role and configure a virtual machine](assetId:///243b5705-96c9-4ec7-9ec5-c68a22b0d42d).  
   
 - Source and destination computers that either belong to the same Active Directory domain, or belong to domains that trust each other.  
   
-- The Hyper\-V management tools installed on a computer running [!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2_md](../../../includes/winthreshold_client_2_md.md)], unless the tools are installed on the source or destination server and you'll run the tools from the server.  
+- The Hyper\-V management tools installed on a computer running Windows Server 2016 Technical Preview or Windows 10, unless the tools are installed on the source or destination server and you'll run the tools from the server.  
   
 ## Consider options for authentication and networking  
   

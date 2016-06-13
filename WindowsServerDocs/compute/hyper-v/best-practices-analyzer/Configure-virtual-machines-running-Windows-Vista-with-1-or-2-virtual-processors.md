@@ -19,7 +19,7 @@ For more information about best practices and scans, see [Run Best Practices Ana
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2_md](../../../includes/winthreshold_server_2_md.md)]|  
+|**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Configuration|  
 |**Category**|Error|  
@@ -42,7 +42,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ### To remove virtual processors  
   
-1.  Open [!INCLUDE[nextref_virtualname](../../../includes/nextref_virtualname_md.md)] Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
+1.  Open Hyper\-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
   
 2.  In the results pane, under **Virtual Machines**, select the virtual machine that you want to configure. The state of the virtual machine should be listed as **Off**. If it is not, right\-click the virtual machine and then click **Shut Down**.  
   

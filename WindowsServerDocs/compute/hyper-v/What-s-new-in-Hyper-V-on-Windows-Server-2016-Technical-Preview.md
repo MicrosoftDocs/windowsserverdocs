@@ -15,7 +15,7 @@ author: KBDAzure
 # What&#39;s new in Hyper-V on Windows Server 2016 Technical Preview
 **This is preliminary content and subject to change.**  
   
-This article explains the new and changed functionality of Hyper\-V on [!INCLUDE[winthreshold_server_1](../../includes/winthreshold_server_1_md.md)] and [!INCLUDE[winthreshold_mshvs_1](../../includes/winthreshold_mshvs_1_md.md)]. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper\-V on [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)], you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
+This article explains the new and changed functionality of Hyper\-V on Windows Server® 2016 Technical Preview and Microsoft Hyper-V Server® Technical Preview. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper\-V on Windows Server 2016 Technical Preview, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
   
 Here's what's included in this article and whether the functionality is new or updated.  
   
@@ -56,13 +56,13 @@ Set-VMProcessor -EnableHostResourceProtection $true
 ## <a name="BKMK_hot"></a>Hot add and remove for network adapters and memory  
 You can now add or remove a network adapter while the virtual machine is running, without incurring downtime. This works for generation 2 virtual machines that run either Windows or Linux operating systems.  
   
-You can also adjust the amount of memory assigned to a virtual machine while it's running, even if you haven’t enabled Dynamic Memory. This works for both generation 1 and generation 2 virtual machines, running [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2](../../includes/winthreshold_client_2_md.md)].  
+You can also adjust the amount of memory assigned to a virtual machine while it's running, even if you haven’t enabled Dynamic Memory. This works for both generation 1 and generation 2 virtual machines, running Windows Server 2016 Technical Preview or Windows 10.  
   
 ## <a name="BKMK_Mgmt"></a>Hyper\-V Manager improvements  
   
--   **Alternate credentials support** – You can now use a different set of credentials in Hyper\-V Manager when you connect to another [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2](../../includes/winthreshold_client_2_md.md)] remote host. You can also save these credentials to make it easier to log on again.  
+-   **Alternate credentials support** – You can now use a different set of credentials in Hyper\-V Manager when you connect to another Windows Server 2016 Technical Preview or Windows 10 remote host. You can also save these credentials to make it easier to log on again.  
   
--   **Manage earlier versions** – With Hyper\-V Manager in [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] and [!INCLUDE[winthreshold_client_2](../../includes/winthreshold_client_2_md.md)], you can manage computers running Hyper\-V on [!INCLUDE[win8_server_2](../../includes/win8_server_2_md.md)], [!INCLUDE[win8_client_2](../../includes/win8_client_2_md.md)], [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)] and [!INCLUDE[winblue_client_2](../../includes/winblue_client_2_md.md)].  
+-   **Manage earlier versions** – With Hyper\-V Manager in Windows Server 2016 Technical Preview and Windows 10, you can manage computers running Hyper\-V on  Windows Server 2012 , Windows 8,  Windows Server 2012 R2  and Windows 8.1.  
   
 -   **Updated management protocol** – Hyper\-V Manager has been updated to communicate with remote Hyper\-V hosts using the WS\-MAN protocol, which permits CredSSP, Kerberos or NTLM authentication. When you use CredSSP to connect to a remote Hyper\-V host, you can do a live migration without enabling constrained delegation in Active Directory. The WS\-MAN\-based infrastructure also makes it easier to enable a host for remote management. WS\-MAN connects over port 80, which is open by default.  
   
@@ -70,10 +70,10 @@ You can also adjust the amount of memory assigned to a virtual machine while it'
 Updates to integration services for Windows guests are distributed through Windows Update. For service providers and private cloud hosters, this puts the control of applying updates into the hands of the tenants who own the virtual machines. Tenants can now update their Windows virtual machines with all updates, including the integration services, using a single method. For details about integration services for Linux guests, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
   
 > [!IMPORTANT]  
-> The vmguest.iso image file is no longer needed, so it isn't included with Hyper\-V on [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)].  
+> The vmguest.iso image file is no longer needed, so it isn't included with Hyper\-V on Windows Server 2016 Technical Preview.  
   
 ## <a name="BKMK_linux"></a>Linux Secure Boot  
-Linux operating systems running on generation 2 virtual machines can now boot with the Secure Boot option enabled. Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later are enabled for Secure Boot on hosts that run [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)]. Before you boot the virtual machine for the first time, you must configure the virtual machine to use the Microsoft UEFI Certificate Authority. You can do this from Hyper\-V Manager, Virtual Machine Manager, or an elevated Windows Powershell session. For Windows PowerShell, run this command:  
+Linux operating systems running on generation 2 virtual machines can now boot with the Secure Boot option enabled. Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later are enabled for Secure Boot on hosts that run Windows Server 2016 Technical Preview. Before you boot the virtual machine for the first time, you must configure the virtual machine to use the Microsoft UEFI Certificate Authority. You can do this from Hyper\-V Manager, Virtual Machine Manager, or an elevated Windows Powershell session. For Windows PowerShell, run this command:  
   
 ```  
 Set-VMFirmware vmname -SecureBootTemplate MicrosoftUEFICertificateAuthority  
@@ -86,7 +86,7 @@ This feature lets you use a virtual machine as a Hyper\-V host and create virtua
   
 -   At least 4 GB RAM available for the virtualized Hyper\-V host.  
   
--   To run at least [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] 4 or [!INCLUDE[winthreshold_client_2](../../includes/winthreshold_client_2_md.md)] build 10565 on both the physical Hyper\-V host and the virtualized host. Running the same build in both the physical and virtualized environments generally improves performance.  
+-   To run at least Windows Server 2016 Technical Preview 4 or Windows 10 build 10565 on both the physical Hyper\-V host and the virtualized host. Running the same build in both the physical and virtualized environments generally improves performance.  
   
 -   A processor with Intel VT\-x \(nested virtualization is available only for Intel processors at this time\).  
   
@@ -95,13 +95,13 @@ For details and instructions, see [Nested Virtualization](https://msdn.microsoft
 ## <a name="BKMK_networking"></a>Networking features  
 New networking features include:  
   
--   **Remote direct memory access \(RDMA\) and switch embedded teaming \(SET\)**. You can set up RDMA on network adapters bound to a Hyper\-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](Software-Defined-Networking--SDN-.md#bkmk_rdma).  
+-   **Remote direct memory access \(RDMA\) and switch embedded teaming \(SET\)**. You can set up RDMA on network adapters bound to a Hyper\-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../networking/sdn/Software-Defined-Networking--SDN-.md#bkmk_rdma).  
   
 -   **Virtual machine multi queues \(VMMQ\)**. Improves on VMQ throughput by allocating multiple hardware queues per virtual machine.  The default queue becomes a set of queues for a virtual machine, and traffic is spread between the queues.  
   
 -   **Quality of service \(QoS\) for software\-defined networks**. Manages the default class of traffic through the virtual switch within the default class bandwidth.  
   
-For more about new networking features, see [What's New in Networking](What-s-New-in-Networking.md).  
+For more about new networking features, see [What's New in Networking](../networking/What-s-New-in-Networking.md).  
   
 ## <a name="BKMK_check"></a>Production checkpoints  
 Production checkpoints are “point-in-time” images of a virtual machine. These give you a way to apply a checkpoint that complies with support policies when a virtual machine runs a production workload. Production checkpoints are based on backup technology inside the guest instead of a saved state. For Windows virtual machines, the Volume Snapshot Service \(VSS\) is used. For Linux virtual machines, the file system buffers are flushed to create a checkpoint that's consistent with the file system. If you'd rather use checkpoints based on saved states, choose standard checkpoints instead. For details, see [Choose between standard or production checkpoints](https://technet.microsoft.com/library/dn872510.aspx).  
@@ -110,22 +110,22 @@ Production checkpoints are “point-in-time” images of a virtual machine. Thes
 > New virtual machines use production checkpoints as the default.  
   
 ## <a name="BKMK_HyperVRollingUpgrades"></a>Rolling Hyper\-V Cluster upgrade  
-You can now add a node running [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] to a Hyper\-V Cluster with nodes running [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)]. This allows you to upgrade the cluster without downtime. The cluster runs at a [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)] feature level until you upgrade all nodes in the cluster and update the cluster functional level with the [!INCLUDE[wps_2](../../includes/wps_2_md.md)] cmdlet, [Update\-ClusterFunctionalLevel](https://technet.microsoft.com/library/mt589702.aspx).  
+You can now add a node running Windows Server 2016 Technical Preview to a Hyper\-V Cluster with nodes running  Windows Server 2012 R2 . This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update\-ClusterFunctionalLevel](https://technet.microsoft.com/library/mt589702.aspx).  
   
 > [!IMPORTANT]  
-> After you update the cluster functional level, you can't return it to [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].  
+> After you update the cluster functional level, you can't return it to  Windows Server 2012 R2 .  
   
-For a Hyper-V cluster with a functional level of [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)] with nodes running [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)] and [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)], note the following:  
+For a Hyper-V cluster with a functional level of  Windows Server 2012 R2  with nodes running  Windows Server 2012 R2  and Windows Server 2016 Technical Preview, note the following:  
   
--   Manage the cluster, Hyper\-V, and virtual machines from a node running [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winthreshold_client_2](../../includes/winthreshold_client_2_md.md)].  
+-   Manage the cluster, Hyper\-V, and virtual machines from a node running Windows Server 2016 Technical Preview or Windows 10.  
   
 -	You can move virtual machines between all of the nodes in the Hyper\-V cluster.  
   
--   To use new Hyper\-V features, all nodes must run [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] and the cluster functional level must be updated.  
+-   To use new Hyper\-V features, all nodes must run Windows Server 2016 Technical Preview and the cluster functional level must be updated.  
   
 -   The virtual machine configuration version for existing virtual machines isn't upgraded. You can upgrade the configuration version only after you upgrade the cluster functional level.  
   
--   Virtual machines that you create are compatible with [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)], virtual machine configuration level 5.  
+-   Virtual machines that you create are compatible with  Windows Server 2012 R2 , virtual machine configuration level 5.  
   
 After you update the cluster functional level:  
   
@@ -133,10 +133,10 @@ After you update the cluster functional level:
   
 -   To make new virtual machine features available, use the Update\-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
   
--   You can't add a node to the Hyper\-V Cluster that runs [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].  
+-   You can't add a node to the Hyper\-V Cluster that runs  Windows Server 2012 R2 .  
   
 > [!NOTE]  
-> Hyper\-V on [!INCLUDE[winthreshold_client_2](../../includes/winthreshold_client_2_md.md)] doesn't support failover clustering.  
+> Hyper\-V on Windows 10 doesn't support failover clustering.  
   
 For details and instructions, see the [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx).  
   
@@ -150,7 +150,7 @@ Shielded virtual machines use several features to  make it harder for Hyper-V ad
 This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as New-ClusterGroupSet, Get-ClusterGroupSet, and Add-ClusterGroupSetDependency.  
   
 ## <a name="BKMK_QoS"></a>Storage quality of service \(QoS\)  
-You can now create storage QoS policies on a Scale\-Out File Server and assign them to one or more virtual disks on Hyper\-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](Storage-Quality-of-Service.md).  
+You can now create storage QoS policies on a Scale\-Out File Server and assign them to one or more virtual disks on Hyper\-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](../storage/software-defined-storage/Storage-Quality-of-Service.md).  
   
 ## <a name="BKMK_Config"></a>Virtual machine configuration file format  
 Virtual machine configuration files use a new format that makes reading and writing configuration data more efficient. The format also makes data corruption less likely if a storage failure occurs. Virtual machine configuration data files use a .vmcx file name extension and runtime state data files use a .vmrs file name extension.  
@@ -159,16 +159,16 @@ Virtual machine configuration files use a new format that makes reading and writ
 > The .vmcx file name extension indicates a binary file. Editing .vmcx or .vmrs files isn't supported.  
   
 ## <a name="BKMK_ConfgVersion"></a>Virtual machine configuration version  
-The version represents the compatibility of the virtual machine’s configuration, saved state, and snapshot files with the version of Hyper\-V. Virtual machines with version 5 are compatible with [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)] and can run on both [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)] and [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)]. Virtual machines with versions introduced in [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] won't run in Hyper\-V on [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].   
+The version represents the compatibility of the virtual machine’s configuration, saved state, and snapshot files with the version of Hyper\-V. Virtual machines with version 5 are compatible with  Windows Server 2012 R2  and can run on both  Windows Server 2012 R2  and Windows Server 2016 Technical Preview. Virtual machines with versions introduced in Windows Server 2016 Technical Preview won't run in Hyper\-V on  Windows Server 2012 R2 .   
   
-If you move or import a virtual machine to a server that runs Hyper\-V on [!INCLUDE[winthreshold_server_2](../../includes/winthreshold_server_2_md.md)] from [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)], the virtual machine’s configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)]. But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
+If you move or import a virtual machine to a server that runs Hyper\-V on Windows Server 2016 Technical Preview from  Windows Server 2012 R2 , the virtual machine’s configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs  Windows Server 2012 R2 . But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   
 For instructions on checking and upgrading the version, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md). This article also lists the version in which some features were introduced.   
   
 > [!IMPORTANT]  
-> -   After you update the  version, you can't move the virtual machine to a server that runs [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].  
+> -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2 .  
 > -   You can't downgrade the configuration to a previous version.  
-> -   The Update\-VMVersion cmdlet  is blocked on a Hyper\-V Cluster when the cluster functional level is [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)].  
+> -   The Update\-VMVersion cmdlet  is blocked on a Hyper\-V Cluster when the cluster functional level is  Windows Server 2012 R2 .  
   
 ## <a name="BKMK_Containers"></a>Windows Containers  
 Windows Containers allow many isolated applications to run on one computer system. They're fast to build and are highly scalable and portable. Two types of container runtime are available, each with a different degree of application isolation. Windows Server Containers use namespace and process isolation. Hyper\-V Containers use a light-weight virtual machine for each container.  

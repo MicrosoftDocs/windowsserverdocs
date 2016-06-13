@@ -19,7 +19,7 @@ For more information about best practices and scans, see [Run Best Practices Ana
   
 |||  
 |-|-|  
-|**Operating System**|[!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] |  
+|**Operating System**|Windows Server 2016 Technical Preview |  
 |**Product\/Feature**|Hyper\-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
@@ -35,6 +35,6 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 \<list of virtual machines>  
   
 ## **Resolution**  
-*Shut down the virtual machine and convert the chain of VHD\-format differencing virtual hard disks to the VHDX format or merge the chain to a fixed virtual hard disk. \(The VHDX format has reliability mechanisms that help protect the disk from corruptions due to power failures.\) However, do not convert the virtual hard disk if it is likely to be attached to an earlier release of Windows at some point. Windows releases earlier than [!INCLUDE[win8_server_2](../../../includes/win8_server_2_md.md)] do not support the VHDX format.*  
+*Shut down the virtual machine and convert the chain of VHD\-format differencing virtual hard disks to the VHDX format or merge the chain to a fixed virtual hard disk. \(The VHDX format has reliability mechanisms that help protect the disk from corruptions due to power failures.\) However, do not convert the virtual hard disk if it is likely to be attached to an earlier release of Windows at some point. Windows releases earlier than  Windows Server 2012  do not support the VHDX format.*  
   
 

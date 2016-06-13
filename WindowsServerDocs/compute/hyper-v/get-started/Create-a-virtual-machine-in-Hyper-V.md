@@ -15,7 +15,7 @@ author: jpjofre
 # Create a virtual machine in Hyper-V
 **This is preliminary content and subject to change.**  
   
-Learn how to create a virtual machine by using Hyper\-V Manager and [!INCLUDE[wps_2](../../../includes/wps_2_md.md)] and what options you have when you create a virtual machine in Hyper\-V Manager.  
+Learn how to create a virtual machine by using Hyper\-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper\-V Manager.  
   
 In this article,  
   
@@ -43,9 +43,9 @@ In this article,
   
 ## <a name="BKMK_PowerShell"></a>Create a virtual machine by using Windows PowerShell  
   
-1.  On the Windows desktop, click the Start button and type any part of the name **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]**.  
+1.  On the Windows desktop, click the Start button and type any part of the name **Windows PowerShell**.  
   
-2.  Right\-click **[!INCLUDE[wps_2](../../../includes/wps_2_md.md)]** and select **Run as administrator**.  
+2.  Right\-click **Windows PowerShell** and select **Run as administrator**.  
   
 3.  Get the name of the virtual switch that you want the virtual machine to use by using [Get-VMSwitch](https://technet.microsoft.com/library/hh848499.aspx).  For example,  
   
@@ -56,7 +56,7 @@ In this article,
 4.  Use the [New-VM](https://technet.microsoft.com/library/hh848537.aspx) cmdlet to create the  virtual machine.  See the following examples.  
   
     > [!NOTE]  
-    > If you may move this virtual machine to a Hyper\-V host that runs Windows Server 2012 R2, use the \-Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] isn't supported by [!INCLUDE[winblue_server_2](../../../includes/winblue_server_2_md.md)] or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions).  
+    > If you may move this virtual machine to a Hyper\-V host that runs Windows Server 2012 R2, use the \-Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 Technical Preview isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions).  
   
     -   **Existing virtual hard disk** \- To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
         **\-Name** is the name that you provide for the virtual machine that you’re creating.  
@@ -108,7 +108,7 @@ In this article,
 ## <a name="BKMK_Options"></a>Options in Hyper\-V Manager New Virtual Machine Wizard  
 The following table lists the options you can pick when you create a virtual machine in Hyper\-V Manager and the defaults for each.  
   
-|Page|Default for [!INCLUDE[winthreshold_server_2](../../../includes/winthreshold_server_2_md.md)] and [!INCLUDE[winthreshold_client_2](../../../includes/winthreshold_client_2_md.md)]|Other options|  
+|Page|Default for Windows Server 2016 Technical Preview and Windows 10|Other options|  
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |**Specify Name and Location**|Name:  New Virtual Machine.<br /><br />Location:  **C:\\ProgramData\\Microsoft\\Windows\\Hyper\-V\\**.|You can also enter your own name and choose another location for the virtual machine.<br /><br />This is where the virtual machine configuration files will be stored.|  
 |**Specify Generation**|Generation 1|You can also choose to create a Generation 2 virtual machine. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md)|  

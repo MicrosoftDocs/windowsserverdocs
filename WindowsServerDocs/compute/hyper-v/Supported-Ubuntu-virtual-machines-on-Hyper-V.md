@@ -160,11 +160,11 @@ The following feature distribution map indicates the features in each version. T
     -   Startup memory and minimal memory should be equal to or greater than the amount of memory that the distribution vendor recommends.  
     -   Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.  
   
-9. If you are using Dynamic Memory on [!INCLUDE[winthreshold_server_2_md](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[win8_server_2](../../includes/win8_server_2_md.md)] operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to Hot\-Add failures, and you might not see any memory increase on a guest operating system.  
+9. If you are using Dynamic Memory on Windows Server 2016 Technical Preview or  Windows Server 2012  operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes \(MB\). Failure to do so can lead to Hot\-Add failures, and you might not see any memory increase on a guest operating system.  
   
-10. In [!INCLUDE[winthreshold_server_2_md](../../includes/winthreshold_server_2_md.md)] or [!INCLUDE[winblue_server_2](../../includes/winblue_server_2_md.md)], the key\/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
+10. In Windows Server 2016 Technical Preview or  Windows Server 2012 R2 , the key\/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.  
   
-11. On [!INCLUDE[winblue_server_2_md](../../includes/winblue_server_2_md.md)] Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper\-V Manager** or you can disable it using Powershell:  
+11. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper\-V Manager** or you can disable it using Powershell:  
    
     ```  
     Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  
