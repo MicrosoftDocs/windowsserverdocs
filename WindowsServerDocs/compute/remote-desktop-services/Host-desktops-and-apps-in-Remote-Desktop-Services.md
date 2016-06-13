@@ -14,7 +14,7 @@ author: lizap
 # Host desktops and apps in Remote Desktop Services
 Remote Desktop Services lets users access computers, apps, and resources remotely.   
   
-You can use Remote Desktop Services plus Azure services to create hosting solutions. Use the following information to get started with desktop hosting in Remote Desktop Services.  
+You can use Remote Desktop Services plus Azure services to create hosting solutions. Use the following information to get started with desktop hosting in Remote Desktop Services in Windows Server.
   
 - [Microsoft Azure Desktop Hosting Reference Architecture](Desktop-Hosting-Reference-Architecture.md)  
 - [Configure your environment for desktop hosting](Configure-your-desktop-hosting-environment.md)  

@@ -26,5 +26,5 @@ Use the following steps to set up your deployment:
 	You can also create a [customized RDSH virtual machine image](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/).  
 3. [Prepare that virtual machine for Remote Desktop.](Prepare-the-RDSH-virtual-machine.md)  
 4. [Add the RDSH server to the collection farm](Add-the-RDSH-server-to-the-collection-farm.md).  
-5. [Validate and secure the deployment](Validate-and-secure-the-RD-collection-farm-deployment.md).  
+5. [Validate and secure the deployment](Validate-and-secure-your-remote-desktop-deployment.md).  
 
