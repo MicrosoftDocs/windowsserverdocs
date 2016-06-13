@@ -17,7 +17,7 @@ Servers that are running in the federation server proxy role in Active Director
   
 Federation server proxies are usually exposed to computers on the Internet that are not included in your enterprise public key infrastructure \(PKI\). Therefore, use a server authentication certificate that is issued by a public \(third\-party\) certification authority \(CA\), for example, VeriSign.  
   
-When you have a federation server proxy farm, all federation server proxy computers must use the same server authentication certificate. For more information, see [When to Create a Federation Server Proxy Farm](When-to-Create-a-Federation-Server-Proxy-Farm.md).  
+When you have a federation server proxy farm, all federation server proxy computers must use the same server authentication certificate. For more information, see [When to Create a Federation Server Proxy Farm](../../../../ad-fs/plan/WS2012-guide/proxy-placement/When-to-Create-a-Federation-Server-Proxy-Farm.md).  
   
 It is important to verify that the subject name in the server authentication certificate matches the Federation Service name value that is specified in the AD FS Management snap\-in. To locate this value, open the snap\-in, right\-click **Service**, click **Edit Federation Service Properties**, and then find the value in **Federation Service name** text box.  
   

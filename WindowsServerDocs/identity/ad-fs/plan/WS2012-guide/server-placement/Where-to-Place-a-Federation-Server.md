@@ -23,13 +23,13 @@ For typical corporate networks, an intranet\-facing firewall is established betw
 > [!NOTE]  
 > Client computers that are connected to the corporate network can communicate directly with the federation server through Windows Integrated Authentication.  
   
-A federation server proxy should be placed in the perimeter network before you configure your firewall servers for use with AD FS. For more information, see [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md).  
+A federation server proxy should be placed in the perimeter network before you configure your firewall servers for use with AD FS. For more information, see [Where to Place a Federation Server Proxy](../../../../ad-fs/plan/WS2012-guide/proxy-placement/../../../../ad-fs/plan/WS2012-guide/proxy-placement/Where-to-Place-a-Federation-Server-Proxy.md).  
   
 ## Configuring your firewall servers for a federation server  
 So that the federation servers can communicate directly with federation server proxies, the intranet firewall server must be configured to allow Secure Hypertext Transfer Protocol \(HTTPS\) traffic from the federation server proxy to the federation server. This is a requirement because the intranet firewall server must publish the federation server using port 443 so that the federation server proxy in the perimeter network can access the federation server.  
   
 In addition, the intranet\-facing firewall server, such as a server running Internet Security and Acceleration \(ISA\) Server, uses a process known as server publishing to distribute Internet client requests to the appropriate corporate federation servers. This means that you must manually create a server publishing rule on the intranet server running ISA Server that publishes the clustered federation server URL, for example, http:\/\/fs.fabrikam.com.  
   
-For more information about how to configure server publishing in a perimeter network, see [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md). For information about how to configure ISA Server to publish a server, see Create a secure Web publishing rule \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75182](http://go.microsoft.com/fwlink/?LinkId=75182)\).  
+For more information about how to configure server publishing in a perimeter network, see [Where to Place a Federation Server Proxy](../../../../ad-fs/plan/WS2012-guide/proxy-placement/../../../../ad-fs/plan/WS2012-guide/proxy-placement/Where-to-Place-a-Federation-Server-Proxy.md). For information about how to configure ISA Server to publish a server, see Create a secure Web publishing rule \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75182](http://go.microsoft.com/fwlink/?LinkId=75182)\).  
   
 

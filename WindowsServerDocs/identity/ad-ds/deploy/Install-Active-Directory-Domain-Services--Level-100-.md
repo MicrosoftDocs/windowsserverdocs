@@ -16,13 +16,13 @@ author: Femila
 # Install Active Directory Domain Services (Level 100)
 This topic explains how to install AD DS in  Windows Server 2012  by using any of the following methods:  
   
--   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds)  
+-   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds)  
   
--   [Installing AD DS by Using Windows PowerShell](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PS)  
+-   [Installing AD DS by Using Windows PowerShell](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PS)  
   
--   [Installing AD DS by using Server Manager](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_GUI)  
+-   [Installing AD DS by using Server Manager](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_GUI)  
   
--   [Performing a Staged RODC Installation using the Graphical User Interface](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_UIStaged)  
+-   [Performing a Staged RODC Installation using the Graphical User Interface](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_UIStaged)  
   
 ## <a name="BKMK_Creds"></a>Credential requirements to run Adprep.exe and install Active Directory Domain Services  
 The following credentials are required to run Adprep.exe and install AD DS.  
@@ -93,17 +93,17 @@ You can run Windows PowerShell cmdlets against remote servers:
   
 The next sections explain how to run ADDSDeployment module cmdlets to install AD DS.  
   
--   [ADDSDeployment cmdlet arguments](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params)  
+-   [ADDSDeployment cmdlet arguments](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params)  
   
--   [Specifying Windows PowerShell Credentials](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSCreds)  
+-   [Specifying Windows PowerShell Credentials](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSCreds)  
   
--   [Using test cmdlets](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_TestCmdlets)  
+-   [Using test cmdlets](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_TestCmdlets)  
   
--   [Installing a new forest root domain using Windows PowerShell](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSForest)  
+-   [Installing a new forest root domain using Windows PowerShell](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSForest)  
   
--   [Installing a new child or tree domain using Windows PowerShell](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSDomain)  
+-   [Installing a new child or tree domain using Windows PowerShell](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSDomain)  
   
--   [Installing an additional (replica) domain controller using Windows PowerShell](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSReplica)  
+-   [Installing an additional (replica) domain controller using Windows PowerShell](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSReplica)  
   
 ### <a name="BKMK_Params"></a>ADDSDeployment cmdlet arguments  
 The following table lists arguments for the ADDSDeployment cmdlets in Windows PowerShell. Arguments in bold are required. Equivalent arguments for dcpromo.exe are listed in parentheses if they are named different in Windows PowerShell.  
@@ -321,17 +321,17 @@ Server Manager can pool other servers on the network as long as they are accessi
 ### <a name="BKMK_installADDSGUI"></a>Installing AD DS  
 **Administrative credentials**  
   
-The credential requirements to install AD DS vary depending on which deployment configuration you choose. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
+The credential requirements to install AD DS vary depending on which deployment configuration you choose. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
   
 Use the following procedures to install AD DS using the GUI method. The steps can be performed locally or remotely. For more detailed explanation of these steps, see the following topics:  
   
--   [Deploying a Forest with Server Manager](Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SMForest)  
+-   [Deploying a Forest with Server Manager](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SMForest)  
   
--   [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)  
+-   [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)  
   
--   [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
+-   [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
   
--   [Install a Windows Server 2012 Active Directory Read-Only Domain Controller &#40;RODC&#41; &#40;Level 200&#41;](Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md)  
+-   [Install a Windows Server 2012 Active Directory Read-Only Domain Controller &#40;RODC&#41; &#40;Level 200&#41;](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md)  
   
 ##### To install AD DS by using Server Manager  
   
@@ -355,12 +355,12 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
 9. On the **Results** page, verify that the installation succeeded, and click **Promote this server to a domain controller** to start the Active Directory Domain Services Configuration Wizard.  
   
-    ![](media/ADDS_SMI_SMPromotes.gif)  
+    ![](../../media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)  
   
     > [!IMPORTANT]  
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by clicking Tasks in Server Manager.  
   
-    ![](media/ADDS_SMI_Tasks.gif)  
+    ![](../../media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
   
 10. On the **Deployment Configuration** page, choose one of the following options:  
   
@@ -369,19 +369,19 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
         > [!NOTE]  
         > The name of the domain and current user credentials are supplied by default only if the machine is domain\-joined and you are performing a local installation. If you are installing AD DS on a remote server, you need to specify the credentials, by design. If current user credentials are not sufficient to perform the installation, click **Change…** in order to specify different credentials.  
   
-        For more information, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).  
+        For more information, see [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).  
   
     -   If you are installing a new child domain, click **Add a new domain to an existing forest**, for **Select domain type**, select **Child Domain**, type or browse to the name of the parent domain DNS name \(for example, corp.contoso.com\), type the relative name of the new child domain \(for example emea\), type credentials to use to create the new domain, and then click **Next**.  
   
-        For more information, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).  
+        For more information, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).  
   
     -   If you are installing a new domain tree, click **Add new domain to an existing forest**, for **Select domain type**, choose **Tree Domain**, type the name of the root domain \(for example, corp.contoso.com\), type the DNS name of the new domain \(for example, fabrikam.com\), type credentials to use to create the new domain, and then click **Next**.  
   
-        For more information, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).  
+        For more information, see [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md).  
   
     -   If you are installing a new forest, click **Add a new forest** and then type the name of the root domain \(for example, corp.contoso.com\).  
   
-        For more information, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).  
+        For more information, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).  
   
 11. On the **Domain Controller Options** page, choose one of the following options:  
   
@@ -389,13 +389,13 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
     -   If you are adding a domain controller to an existing domain, click **Domain Name System \(DNS\) server**, **Global Catalog \(GC\)**, or **Read Only Domain Controller \(RODC\)** as needed, choose the site name, and type the DSRM password and then click **Next**.  
   
-    For more information about which options on this page are available or not available under different conditions, see [Domain Controller Options](AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DCOptionsPage).  
+    For more information about which options on this page are available or not available under different conditions, see [Domain Controller Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DCOptionsPage).  
   
 12. On the **DNS Options** page \(which appears only if you install a DNS server\), click **Update DNS delegation** as needed. If you do, provide credentials that have permission to create DNS delegation records in the parent DNS zone.  
   
     If a DNS server that hosts the parent zone cannot be contacted, the **Update DNS Delegation** option is not available.  
   
-    For more information about whether you need to update the DNS delegation, see [Understanding Zone Delegation](http://technet.microsoft.com/library/cc771640.aspx). If you attempt to update the DNS delegation and encounter an error, see [DNS Options](AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).  
+    For more information about whether you need to update the DNS delegation, see [Understanding Zone Delegation](http://technet.microsoft.com/library/cc771640.aspx). If you attempt to update the DNS delegation and encounter an error, see [DNS Options](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).  
   
 13. On the **RODC Options** page \(which appears only if you install an RODC\), specify the name of a group or user who will manage the RODC, add accounts to or remove accounts from the Allowed or Denied password replication groups, and then click **Next**.  
   
@@ -414,7 +414,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
     > [!IMPORTANT]  
     > Do not store the Active Directory database, log files, or SYSVOL folder on a data volume formatted with Resilient File System \(ReFS\).  
   
-16. On the **Preparation Options** page, type credentials that are sufficient to run adprep. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
+16. On the **Preparation Options** page, type credentials that are sufficient to run adprep. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
   
 17. On the **Review Options** page, confirm your selections, click **View script** if you want to export the settings to a Windows PowerShell script, and then click **Next**.  
   
@@ -510,7 +510,7 @@ After an RODC account is created, you can attach a server to account to complete
     > [!IMPORTANT]  
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by clicking Tasks in Server Manager.  
   
-    ![](media/ADDS_SMI_Tasks.gif)  
+    ![](../../media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
   
 11. On the **Deployment Configuration** page, click **Add a domain controller to an existing domain**, type the name of the domain \(for example, emea.contoso.com\) and credentials \(for example, specify an account that is delegated to manage and install the RODC\), and then click **Next**.  
   
@@ -528,8 +528,8 @@ After an RODC account is created, you can attach a server to account to complete
   
 ## See Also  
 [Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md)  
-[Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)  
-[Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
-[Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)  
+[Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)  
+[Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
+[Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)  
   
 

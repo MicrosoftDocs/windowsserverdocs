@@ -53,12 +53,12 @@ The following core best practices are common to all AD FS installations where yo
     |Farm\-joined federation server|SQL Server|`scwcmd register /kbname:ADFS2Standalone /kbfile:"Windows\ADFS\scw\SQLFarm.xml"`|  
     |Federation server proxy|N\/A|`scwcmd register /kbname:ADFS2Standalone /kbfile:"Windows\ADFS\scw\Proxy.xml"`|  
   
-    For more information about the databases that you can use with AD FS, see [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md).  
+    For more information about the databases that you can use with AD FS, see [The Role of the AD FS Configuration Database](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 -   **Use token replay detection in situations in which security is a very important concern, for example, when kiosks are used.**  
     Token replay detection is a feature of AD FS that ensures that any attempt to replay a token request that is made to the Federation Service is detected and the request is discarded. Token replay detection is enabled by default. It works for both the WS\-Federation passive profile and the Security Assertion Markup Language \(SAML\) WebSSO profile by ensuring that the same token is never used more than once.  
   
-    When the Federation Service starts, it begins to build a cache of any token requests that it fulfills. Over time, as subsequent token requests are added to the cache, the ability to detect any attempts to replay a token request multiple times increases for the Federation Service. If you disable token replay detection and later choose to enable it again, remember that the Federation Service will still accept tokens for a period of time that may have been used previously, until the replay cache has been allowed enough time to rebuild its contents. For more information, see [The Role of the AD FS Configuration Database](The-Role-of-the-AD-FS-Configuration-Database.md).  
+    When the Federation Service starts, it begins to build a cache of any token requests that it fulfills. Over time, as subsequent token requests are added to the cache, the ability to detect any attempts to replay a token request multiple times increases for the Federation Service. If you disable token replay detection and later choose to enable it again, remember that the Federation Service will still accept tokens for a period of time that may have been used previously, until the replay cache has been allowed enough time to rebuild its contents. For more information, see [The Role of the AD FS Configuration Database](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 -   **Use token encryption, especially if you are using supporting SAML artifact resolution.**  
   

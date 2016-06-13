@@ -13,7 +13,7 @@ ms.assetid: 84466432-339f-4715-9e2a-bc6666f23d53
 author: billmath
 ---
 # AD FS On-behalf-of Authentication in Windows Server 2016
-This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5.  o learn more about OBO authentication please read [AD FS Scenarios for Developers](AD-FS-Scenarios-for-Developers.md)  
+This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5.  o learn more about OBO authentication please read [AD FS Scenarios for Developers](../../../ad-fs/get-started/AD-FS-Scenarios-for-Developers.md)  
   
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.  
   

@@ -20,9 +20,9 @@ Beginning in Windows Server 2012, Adprep commands run automatically as needed du
   
 For more information about how to interpret the access control entry \(ACE\) strings, see [ACE strings](http://msdn.microsoft.com/library/aa374928(VS.85).aspx). For more information about how to interpret the security ID \(SID\) strings, see [SID strings](http://msdn.microsoft.com/library/aa379602(VS.85).aspx).  
   
--   [Windows Server 2012 R2: Forest\-wide updates](Forest-Wide-Updates.md#BKMK_WS2012R2ForestUpdates)  
+-   [Windows Server 2012 R2: Forest\-wide updates](../../../ad-ds/deploy/RODC/../../../ad-ds/deploy/RODC/Forest-Wide-Updates.md#BKMK_WS2012R2ForestUpdates)  
   
--   [Windows Server 2012: Forest\-wide updates](Forest-Wide-Updates.md#BKMK_WS2012ForestUpdates)  
+-   [Windows Server 2012: Forest\-wide updates](../../../ad-ds/deploy/RODC/../../../ad-ds/deploy/RODC/Forest-Wide-Updates.md#BKMK_WS2012ForestUpdates)  
   
 ## <a name="BKMK_WS2012R2ForestUpdates"></a>Windows Server 2012 R2: Forest\-wide updates  
 After the operations that are performed by the **forestprep** command in Windows Server 2012 R2 \(operations 131\-135\) are complete, the **revision** attribute for the CN\=ActiveDirectoryUpdate,CN\=ForestUpdates,CN\=Configuration,DC\=ForestRootDomain object is set to **15**.  

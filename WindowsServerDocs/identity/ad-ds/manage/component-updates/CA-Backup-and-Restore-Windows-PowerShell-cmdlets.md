@@ -72,7 +72,7 @@ Backup-CARoleService c:\adcsbackup5 -Password (ConvertTo-SecureString "Pa55w0rd!
 ### Issues  
 A non\-password protected backup is taken if the ConvertTo\-SecureString function fails while using the Backup\-CARoleService with the \-Password parameter.  
   
-![](media/GTR_ADDS_BackupCARole.gif)  
+![](../../../media/CA-Backup-and-Restore-Windows-PowerShell-cmdlets/GTR_ADDS_BackupCARole.gif)  
   
 **Table  SEQ Table \\\* ARABIC 18: Common Errors**  
   

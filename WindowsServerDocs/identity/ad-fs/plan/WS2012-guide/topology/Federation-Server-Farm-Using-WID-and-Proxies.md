@@ -28,19 +28,19 @@ This section describes various considerations about the intended audience, benef
   
 ### What are the benefits of using this topology?  
   
--   The same benefits as listed for the [Federation Server Farm Using WID](Federation-Server-Farm-Using-WID.md) topology, plus the benefit of providing additional access for external users  
+-   The same benefits as listed for the [Federation Server Farm Using WID](../../../../ad-fs/plan/WS2012-guide/topology/../../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID.md) topology, plus the benefit of providing additional access for external users  
   
 ### What are the limitations of using this topology?  
   
--   The same limitations as listed for the [Federation Server Farm Using WID](Federation-Server-Farm-Using-WID.md) topology  
+-   The same limitations as listed for the [Federation Server Farm Using WID](../../../../ad-fs/plan/WS2012-guide/topology/../../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID.md) topology  
   
 ## Server placement and network layout recommendations  
 To deploy this topology, in addition to adding two federation server proxies, you must make sure that your perimeter network can also provide access to a Domain Name System \(DNS\) server and to a second Network Load Balancing \(NLB\) host. The second NLB host must be configured with an NLB cluster that uses an Internet\-accessible cluster IP address, and it must use the same cluster DNS name setting as the previous NLB cluster that you configured on the corporate network \(fs.fabrikam.com\). The federation server proxies should also be configured with Internet\-accessible IP addresses.  
   
 The following illustration shows the existing federation server farm with WID topology that was described previously and how the fictional Fabrikam, Inc., company provides access to a perimeter DNS server, adds a second NLB host with the same cluster DNS name \(fs.fabrikam.com\), and adds two federation server proxies \(fsp1 and fsp2\) to the perimeter network.  
   
-![](media/FarmWIDProxies.gif)  
+![](../../../../media/Federation-Server-Farm-Using-WID-and-Proxies/FarmWIDProxies.gif)  
   
-For more information about how to configure your networking environment for use with federation servers or federation server proxies, see either [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md) or [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
+For more information about how to configure your networking environment for use with federation servers or federation server proxies, see either [Name Resolution Requirements for Federation Servers](../../../../ad-fs/plan/WS2012-guide/server-placement/Name-Resolution-Requirements-for-Federation-Servers.md) or [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   
 

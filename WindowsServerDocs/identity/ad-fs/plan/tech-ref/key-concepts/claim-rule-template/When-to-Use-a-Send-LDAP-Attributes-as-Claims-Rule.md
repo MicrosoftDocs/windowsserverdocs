@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: e1a5b1a4-7530-4aa4-851b-30686d397ea9
 ---
 # When to Use a Send LDAP Attributes as Claims Rule
-You can use this rule in Active Directory Federation Services \(AD FS\) when you want to issue outgoing claims that contain actual Lightweight Directory Access Protocol \(LDAP\) attribute values that exist in an attribute store and then associate a claim type with each of the LDAP attributes. For more information about attribute stores, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md).
+You can use this rule in Active Directory Federation Services \(AD FS\) when you want to issue outgoing claims that contain actual Lightweight Directory Access Protocol \(LDAP\) attribute values that exist in an attribute store and then associate a claim type with each of the LDAP attributes. For more information about attribute stores, see [The Role of Attribute Stores](../../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Attribute-Stores.md).
 
 When you use this rule, you issue a claim for each LDAP attribute that you specify and that matches the rule logic, as described in the following table.
 
@@ -33,14 +33,14 @@ A claim rule represents an instance of business logic that will take an incoming
 
 -   Claim rule templates will always require you to specify an incoming claim type. However, you can process multiple claim values with the same claim type using a single rule.
 
-For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
+For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](../../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
 
 ## Mapping of LDAP attributes to outgoing claim types
 When you use the Send LDAP Attributes as Claims rule template, you can select attributes from an LDAP attribute store, such as Active Directory or Active Directory Domain Services \(AD DS\) to send their values as claims to the relying party. This essentially maps specific LDAP attributes from an attribute store that you define to a set of outgoing claims that can be used for authorization.
 
 By using this template, you can add multiple attributes, which will be sent as multiple claims, from a single rule. For example, you can use this rule template to create a rule that will look up attribute values for authenticated users from the **company** and **department** Active Directory attributes and then send these values as two different outgoing claims.
 
-You can also use this rule to send all the user’s group memberships. If you want to send only individual group memberships, use the Send Group Membership as a Claim rule template. For more information, see [When to Use a Send Group Membership as a Claim Rule](When-to-Use-a-Send-Group-Membership-as-a-Claim-Rule.md).
+You can also use this rule to send all the user’s group memberships. If you want to send only individual group memberships, use the Send Group Membership as a Claim rule template. For more information, see [When to Use a Send Group Membership as a Claim Rule](../../../../../ad-fs/plan/tech-ref/key-concepts/claim-rule-template/When-to-Use-a-Send-Group-Membership-as-a-Claim-Rule.md).
 
 ## How to create this rule
 You can create this rule by using either the claim rule language or by using the Send LDAP Attributes as Claims rule template in the AD FS Management snap\-in. This rule template provides the following configuration options:

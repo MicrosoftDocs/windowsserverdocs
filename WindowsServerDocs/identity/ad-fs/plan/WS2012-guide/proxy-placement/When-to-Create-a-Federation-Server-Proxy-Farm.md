@@ -15,7 +15,7 @@ author: billmath
 # When to Create a Federation Server Proxy Farm
 Consider installing additional federation server proxies when you have a large Active Directory Federation Services \(AD FS\) deployment and you want to provide fault tolerance, load\-balancing, and scalability for your proxy deployment. The act of creating two or more federation server proxies in the same perimeter network and configuring each of them to protect the same AD FS Federation Service creates a federation server proxy farm.  
   
-You can create a federation server proxy farm or install additional federation server proxies to an existing farm by using the AD FS Federation Server Proxy Configuration Wizard. For more information, see [When to Create a Federation Server Proxy](When-to-Create-a-Federation-Server-Proxy.md).  
+You can create a federation server proxy farm or install additional federation server proxies to an existing farm by using the AD FS Federation Server Proxy Configuration Wizard. For more information, see [When to Create a Federation Server Proxy](../../../../ad-fs/plan/WS2012-guide/proxy-placement/When-to-Create-a-Federation-Server-Proxy.md).  
   
 Before all the federation server proxies can function together as a farm, you must first cluster them under one IP address and one Domain Name System \(DNS\) fully qualified domain name \(FQDN\). You can cluster the servers by deploying Microsoft Network Load Balancing \(NLB\) inside the perimeter network. The tasks in the following table require NLB to be configured appropriately to cluster the federation server proxies in the farm.  
   

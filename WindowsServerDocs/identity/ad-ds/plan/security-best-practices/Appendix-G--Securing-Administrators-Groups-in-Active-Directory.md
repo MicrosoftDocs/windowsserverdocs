@@ -16,13 +16,13 @@ author: Femila
 # Appendix G: Securing Administrators Groups in Active Directory
   
 ## Appendix G: Securing Administrators Groups in Active Directory  
-As is the case with the Enterprise Admins \(EA\) and Domain Admins \(DA\) groups, membership in the built\-in Administrators \(BA\) group should be required only in build or disaster recovery scenarios. There should be no day\-to\-day user accounts in the Administrators group with the exception of the Built\-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
+As is the case with the Enterprise Admins \(EA\) and Domain Admins \(DA\) groups, membership in the built\-in Administrators \(BA\) group should be required only in build or disaster recovery scenarios. There should be no day\-to\-day user accounts in the Administrators group with the exception of the Built\-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
 Administrators are, by default, the owners of most of the AD DS objects in their respective domains. Membership in this group may be required in build or disaster recovery scenarios in which ownership or the ability to take ownership of objects is required. Additionally, DAs and EAs inherit a number of their rights and permissions by virtue of their default membership in the Administrators group. Default group nesting for privileged groups in Active Directory should not be modified, and each domain’s Administrators group should be secured as described in the step\-by\-step instructions that follow.  
   
 For the Administrators group in each domain in the forest:  
   
-1.  Remove all members from the Administrators group, with the possible exception of the built\-in Administrator account for the domain, provided it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
+1.  Remove all members from the Administrators group, with the possible exception of the built\-in Administrator account for the domain, provided it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
 2.  In GPOs linked to OUs containing member servers and workstations in each domain, the DA group should be added to the following user rights in **Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Policies\\ User Rights Assignment**:  
   
@@ -50,7 +50,7 @@ For the Administrators group in each domain in the forest:
   
     1.  Double\-click the **Administrators** group and click the **Members** tab.  
   
-        ![](media/SAD_79.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_79.gif)  
   
     2.  Select a member of the group, click **Remove**, click **Yes**, and click **OK**.  
   
@@ -64,17 +64,17 @@ For the Administrators group in each domain in the forest:
   
 3.  In the console tree, right\-click **Group Policy Objects**, and click **New**.  
   
-    ![](media/SAD_80.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_80.gif)  
   
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** \(where *GPO Name* is the name of this GPO\).  
   
-    ![](media/SAD_81.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)  
   
 5.  In the details pane, right\-click **<GPO Name>**, and click **Edit**.  
   
 6.  Navigate to **Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Policies**, and click **User Rights Assignment**.  
   
-    ![](media/SAD_82.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_82.gif)  
   
 7.  Configure the user rights to prevent members of the Administrators group from accessing member servers and workstations over the network by doing the following:  
   
@@ -84,7 +84,7 @@ For the Administrators group in each domain in the forest:
   
     3.  Type **Administrators**, click **Check Names**, and click **OK**.  
   
-        ![](media/SAD_83.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_83.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -96,7 +96,7 @@ For the Administrators group in each domain in the forest:
   
     3.  Type **Administrators**, click **Check Names**, and click **OK**.  
   
-        ![](media/SAD_84.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_84.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -108,7 +108,7 @@ For the Administrators group in each domain in the forest:
   
     3.  Type **Administrators**, click **Check Names**, and click **OK**.  
   
-        ![](media/SAD_85.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_85.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -120,11 +120,11 @@ For the Administrators group in each domain in the forest:
   
     2.  Right\-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
   
-        ![](media/SAD_86.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_86.gif)  
   
     3.  Select the GPO that you just created and click **OK**.  
   
-        ![](media/SAD_87.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_87.gif)  
   
     4.  Create links to all other OUs that contain workstations.  
   
@@ -138,7 +138,7 @@ For the Administrators group in each domain in the forest:
         >   
         > The following screen shot shows configuration settings that block misuse of built\-in local and domain Administrator accounts, in addition to misuse of built\-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computer’s Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.  
   
-        ![](media/SAD_88.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_88.gif)  
   
 #### Step\-by\-Step Instructions to Grant User Rights to the Administrators Group  
   
@@ -148,17 +148,17 @@ For the Administrators group in each domain in the forest:
   
 3.  In the console tree, right\-click **Group Policy Objects**, and click **New**.  
   
-    ![](media/SAD_89.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_89.gif)  
   
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** \(where <GPO Name> is the name of this GPO\).  
   
-    ![](media/SAD_90.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)  
   
 5.  In the details pane, right\-click **<GPO Name>**, and click **Edit**.  
   
 6.  Navigate to **Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Policies**, and click **User Rights Assignment**.  
   
-    ![](media/SAD_91.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_91.gif)  
   
 7.  Configure the user rights to allow members of the Administrators group to access domain controllers over the network by doing the following:  
   
@@ -168,7 +168,7 @@ For the Administrators group in each domain in the forest:
   
     3.  Click **Add User or Group** and click **Browse**.  
   
-        ![](media/SAD_92.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_92.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -180,7 +180,7 @@ For the Administrators group in each domain in the forest:
   
     3.  Type **Administrators**, click Check **Names**, and click **OK**.  
   
-        ![](media/SAD_93.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_93.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -192,7 +192,7 @@ For the Administrators group in each domain in the forest:
   
     3.  Type **Administrators**, click **Check Names**, and click **OK**.  
   
-        ![](media/SAD_94.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_94.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -204,11 +204,11 @@ For the Administrators group in each domain in the forest:
   
     2.  Right\-click the domain controllers OU and click **Link an existing GPO**.  
   
-        ![](media/SAD_95.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_95.gif)  
   
     3.  Select the GPO that you just created and click **OK**.  
   
-        ![](media/SAD_96.gif)  
+        ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_96.gif)  
   
 #### Verification Steps  
   
@@ -223,13 +223,13 @@ From any member server or workstation that is not affected by the GPO changes \(
   
 4.  When prompted to approve the elevation, click **Yes**.  
   
-    ![](media/SAD_97.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_97.gif)  
   
 5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\\c$**, where <Server Name> is the name of the member server or workstation you’re attempting to access over the network.  
   
 6.  The following screen shot shows the error message that should appear.  
   
-    ![](media/SAD_98.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_98.gif)  
   
 ##### Verify “Deny log on as a batch job” GPO Settings  
 From any member server or workstation affected by the GPO changes, log on locally.  
@@ -283,7 +283,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 16. A dialog box similar to the following should appear.  
   
-    ![](media/SAD_99.gif)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_99.gif)  
   
 ##### Verify “Deny log on as a service” GPO Settings  
   
@@ -309,7 +309,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 11. When the service is restarted, a dialog box similar to the following should appear.  
   
-    ![](media/SAD_100.png)  
+    ![](../../../media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_100.png)  
   
 ##### Revert Changes to the Printer Spooler Service  
   

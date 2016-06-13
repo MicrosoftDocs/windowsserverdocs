@@ -33,7 +33,7 @@ A claim rule represents an instance of business logic that will take an incoming
 
 -   Claim rule templates will always require you to specify an incoming claim type. However, you can process multiple claim values with the same claim type using a single rule.
 
-For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
+For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](../../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
 
 ## Permit All Users
 When you use the Permit All Users rule template, all users will have access to the relying party. However, you can use additional authorization rules to further restrict access. If one rule permits a user to access the relying party, and another rule denies the user access to the relying party, the deny result overrides the permit result and the user is denied access.
@@ -89,7 +89,7 @@ You can create both authorization rules using either the claim rule language or 
 For more instructions on how to create this template, see [Create a Rule to Permit All Users_1](Create-a-Rule-to-Permit-All-Users_1.md) or [Create a Rule to Permit or Deny Users Based on an Incoming Claim_1](Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim_1.md) in the AD FS Deployment Guide.
 
 ## Using the claim rule language
-If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).
+If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see [When to Use a Custom Claim Rule](../../../../../ad-fs/plan/tech-ref/key-concepts/claim-rule-template/When-to-Use-a-Custom-Claim-Rule.md).
 
 ### Example of how to create an authorization rule based on multiple claims
 When using the claim rule language syntax to authorize claims, a claim can also be issued based on the presence of multiple claims in the user’s original claims. The following rule issues an authorization claim only if the user is a member of the group Editors and has authenticated using Windows authentication:
@@ -140,6 +140,6 @@ When you want to specify which user or users can create a proxy trust for a give
     c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/proxytrustid", Issuer =~ "^SELF AUTHORITY$" ] => issue(store="_ProxyCredentialStore",types=("http://schemas.microsoft.com/authorization/claims/permit"),query="isProxyTrustProvisioned({0})", param=c.Value );
     ```
 
-For more information about how to use the claim rule language, see [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md).
+For more information about how to use the claim rule language, see [The Role of the Claim Rule Language](../../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claim-Rule-Language.md).
 
 

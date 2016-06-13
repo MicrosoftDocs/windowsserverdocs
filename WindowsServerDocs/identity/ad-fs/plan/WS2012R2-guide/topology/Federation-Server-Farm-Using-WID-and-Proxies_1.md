@@ -38,20 +38,20 @@ This section describes various considerations about the intended audience, benef
   
 ### What are the benefits of using this topology?  
   
--   The same benefits as listed for the [Federation Server Farm Using WID_1](Federation-Server-Farm-Using-WID_1.md) topology, plus the benefit of providing additional access for external users  
+-   The same benefits as listed for the [Federation Server Farm Using WID_1](../../../../ad-fs/plan/WS2012R2-guide/topology/../../../../ad-fs/plan/WS2012R2-guide/topology/Federation-Server-Farm-Using-WID_1.md) topology, plus the benefit of providing additional access for external users  
   
 ### What are the limitations of using this topology?  
   
--   The same limitations as listed for the [Federation Server Farm Using WID_1](Federation-Server-Farm-Using-WID_1.md) topology  
+-   The same limitations as listed for the [Federation Server Farm Using WID_1](../../../../ad-fs/plan/WS2012R2-guide/topology/../../../../ad-fs/plan/WS2012R2-guide/topology/Federation-Server-Farm-Using-WID_1.md) topology  
   
 ## Server placement and network layout recommendations  
 To deploy this topology, in addition to adding two web application proxies, you must make sure that your perimeter network can also provide access to a Domain Name System \(DNS\) server and to a second Network Load Balancing \(NLB\) host. The second NLB host must be configured with an NLB cluster that uses an Internet\-accessible cluster IP address, and it must use the same cluster DNS name setting as the previous NLB cluster that you configured on the corporate network \(fs.fabrikam.com\). The web application proxies should also be configured with Internet\-accessible IP addresses.  
   
 The following illustration shows the existing federation server farm with WID topology that was described previously and how the fictional Fabrikam, Inc., company provides access to a perimeter DNS server, adds a second NLB host with the same cluster DNS name \(fs.fabrikam.com\), and adds two web application proxies \(wap1 and wap2\) to the perimeter network.  
   
-![](media/WIDFarmADFSBlue.gif)  
+![](../../../../media/Federation-Server-Farm-Using-WID-and-Proxies_1/WIDFarmADFSBlue.gif)  
   
-For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure \[WAP\]](assetId:///8dfd483f-faf5-4a99-a590-0081623cad08).  
+For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](../../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure \[WAP\]](assetId:///8dfd483f-faf5-4a99-a590-0081623cad08).  
   
 ## See Also  
 [Plan Your AD FS Deployment Topology](Plan-Your-AD-FS-Deployment-Topology.md)  

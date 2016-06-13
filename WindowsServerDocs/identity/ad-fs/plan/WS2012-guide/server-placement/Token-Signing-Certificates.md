@@ -51,7 +51,7 @@ There are two server farm options that you can consider when you obtain token\-s
   
     As shown in the following illustration, the private key from a single token\-signing certificate can be shared to all the federation servers in a farm. This option—compared to the following "unique token\-signing certificate" option—reduces costs if you plan to obtain a token\-signing certificate from a public CA.  
   
-![](media/adfs2_fedserver_certstory_3.gif)  
+![](../../../../media/Token-Signing-Certificates/adfs2_fedserver_certstory_3.gif)  
   
 -   There is a unique token\-signing certificate for each federation server in a farm.  
   
@@ -59,7 +59,7 @@ There are two server farm options that you can consider when you obtain token\-s
   
     As shown in the following illustration, you can obtain a separate token\-signing certificate for every single federation server in the farm. This option is more expensive if you plan to obtain your token\-signing certificates from a public CA.  
   
-![](media/adfs2_fedserver_certstory_4.gif)  
+![](../../../../media/Token-Signing-Certificates/adfs2_fedserver_certstory_4.gif)  
   
 For information about installing a certificate when you use Microsoft Certificate Services as your enterprise CA, see [IIS 7.0: Create a Domain Server Certificate in IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=108548) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=108548\).  
   

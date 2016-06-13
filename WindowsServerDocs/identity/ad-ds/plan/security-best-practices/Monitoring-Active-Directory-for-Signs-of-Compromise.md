@@ -111,7 +111,7 @@ To get a list of currently configured auditing subcategories on a computer runni
   
 The following screenshot shows an example of auditpol.exe listing the current audit policy.  
   
-![](media/SAD_5.gif)  
+![](../../../media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)  
   
 > [!NOTE]  
 > Group Policy does not always accurately report the status of all enabled auditing policies, whereas auditpol.exe does. See [Getting the Effective Audit Policy in Windows 7 and 2008 R2](http://blogs.technet.com/b/askds/archive/2011/03/11/getting-the-effective-audit-policy-in-windows-7-and-2008-r2.aspx) for more details.  
@@ -331,11 +331,11 @@ Windows audit policy can be set using group policies, auditpol.exe, APIs, or reg
 #### Setting Windows Audit Policy by Using Group Policy  
 To set audit policy using group policies, configure the appropriate audit categories located under **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Audit Policy** \(see the following screenshot for an example from the Local Group Policy Editor \(gpedit.msc\)\). Each audit policy category can be enabled for **Success**, **Failure**, or **Success** and Failure events.  
   
-![](media/SAD_6.gif)  
+![](../../../media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_6.gif)  
   
 Advanced Audit Policy can be set by using Active Directory or local group policies. To set Advanced Audit Policy, configure the appropriate subcategories located under **Computer Configuration\\Windows Settings\\Security Settings\\Advanced Audit Policy** \(see the following screenshot for an example from the Local Group Policy Editor \(gpedit.msc\)\). Each audit policy subcategory can be enabled for **Success**, **Failure**, or **Success** and **Failure** events.  
   
-![](media/SAD_7.gif)  
+![](../../../media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)  
   
 #### Setting Windows Audit Policy Using Auditpol.exe  
 Auditpol.exe \(for setting Windows audit policy\) was introduced in Windows Server 2008 and Windows Vista. Initially, only auditpol.exe could be used to set Advanced Audit Policy, but Group Policy can be used in Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, Windows 8, and Windows 7.  

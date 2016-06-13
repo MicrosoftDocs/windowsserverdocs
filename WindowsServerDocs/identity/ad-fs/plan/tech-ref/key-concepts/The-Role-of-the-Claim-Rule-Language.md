@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: c8785b52-589a-4079-b612-812932851509
 ---
 # The Role of the Claim Rule Language
-The Active Directory Federation Services \(AD FS\) claim rule language acts as the administrative building block for the behavior of incoming and outgoing claims, while the claims engine acts as the processing engine for the logic in the claim rule language that defines the custom rule. For more information about how all rules are processed by the claims engine, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
+The Active Directory Federation Services \(AD FS\) claim rule language acts as the administrative building block for the behavior of incoming and outgoing claims, while the claims engine acts as the processing engine for the logic in the claim rule language that defines the custom rule. For more information about how all rules are processed by the claims engine, see [The Role of the Claims Engine](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Engine.md).
 
 > [!NOTE]
 > To watch a five\-minute video of Stuart Kwan \(Principal Group Program Manager for Federated Identity\) explaining basic concepts of the claim rule language, click [An Introduction to the Claim Rule Language](http://go.microsoft.com/fwlink/?LinkId=163262) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=163262\) to open the video in a new window.
@@ -22,12 +22,12 @@ AD FS provides administrators with the option to define custom rules that they c
 
 Rules are separated from each other with semicolons.
 
-For more information about when to use custom rules, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).
+For more information about when to use custom rules, see [When to Use a Custom Claim Rule](../../../../ad-fs/plan/tech-ref/key-concepts/claim-rule-template/When-to-Use-a-Custom-Claim-Rule.md).
 
 ## Using claim rule templates to learn about the claim rule language syntax
 AD FS also provides a set of predefined claim issuance and claim acceptance rule templates that you can use to implement common claim rules. In the **Edit Claim Rules** dialog box for a given trust, you can create a predefined rule—and view the claim rule language syntax that makes up that rule—by clicking the **View Rule Language** tab for that rule. Using the information in this section and the **View Rule Language** technique can provide insight into how to construct your own custom rules.
 
-For more detailed information about claim rules and claim rule templates, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md).
+For more detailed information about claim rules and claim rule templates, see [The Role of Claim Rules](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md).
 
 ## Understanding the components of the claim rule language
 The claim rule language consists of the following components, separated by the “\=>” operator:
@@ -85,7 +85,7 @@ Custom rules are processed based on the issuance statements \(*issue* or *add*\)
 
 For example, in the following illustration, the incoming claim is added to the input claim set by the claims issuance engine. When the first custom claim rule executes and the criteria of domain\\user is satisfied, the claims issuance engine processes the logic in the rule using the add statement, and the value of **Editor** is added to the input claim set. Because the value of Editor is present in the input claim set, Rule 2 can successfully process the issue statement in its logic and generate a new value of **Hello**, which is added to both the output claim set and to the input claim set for use by the next rule in the rule set. Rule 3 can now use all of the values that are present in the input claim set as input for processing its logic.
 
-![](media/adfs2_customrule.gif)
+![](../../../../media/The-Role-of-the-Claim-Rule-Language/adfs2_customrule.gif)
 
 #### Claim issuance actions
 The rule body represents a claim issuance action. There are two claim issuance actions that the language recognizes:

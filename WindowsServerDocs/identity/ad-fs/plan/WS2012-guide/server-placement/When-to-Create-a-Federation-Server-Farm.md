@@ -15,7 +15,7 @@ author: billmath
 # When to Create a Federation Server Farm
 Consider creating a federation server farm in Active Directory Federation Services \(AD FS\) when you have a larger AD FS deployment and you want to provide fault tolerance, load\-balancing, or scalability to your organization's Federation Service. The act of creating two or more federation servers in the same network, configuring each of them to use the same Federation Service, and adding the public key of each server's token\-signing certificates to the AD FS Management snap\-in creates a federation server farm.  
   
-You can create a federation server farm or install additional federation servers to an existing farm by using the AD FS Federation Server Configuration Wizard. For more information, see [When to Create a Federation Server](When-to-Create-a-Federation-Server.md).  
+You can create a federation server farm or install additional federation servers to an existing farm by using the AD FS Federation Server Configuration Wizard. For more information, see [When to Create a Federation Server](../../../../ad-fs/plan/WS2012-guide/server-placement/When-to-Create-a-Federation-Server.md).  
   
 > [!NOTE]  
 > When you choose the option to create a **New federation server farm** using the AD FS Federation Server Configuration Wizard, the wizard will attempt to create a container object \(for sharing certificates\) in Active Directory. Therefore, it is important that you first log on to the computer, where you are setting up the federation server role, with an account that has sufficient permissions in Active Directory to create this container object.  

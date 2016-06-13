@@ -49,7 +49,7 @@ Federation servers require the certificates in the following table.
 > [!CAUTION]  
 > Certificates that are used for token\-signing and token\-decrypting are critical to the stability of the Federation Service. Because a loss or unplanned removal of any certificates that are configured for this purpose can disrupt service, you should back up any certificates that are configured for this purpose.  
   
-For more information about the certificates that federation servers use, see [Certificate Requirements for Federation Servers](Certificate-Requirements-for-Federation-Servers.md).  
+For more information about the certificates that federation servers use, see [Certificate Requirements for Federation Servers](../../../ad-fs/plan/WS2012-guide/server-placement/Certificate-Requirements-for-Federation-Servers.md).  
   
 ### Federation server proxy certificates  
 Federation server proxies require the certificates in the following table.  
@@ -58,7 +58,7 @@ Federation server proxies require the certificates in the following table.
 |--------------------|---------------|------------------------------------------|  
 |Server authentication certificate|This is a standard Secure Sockets Layer \(SSL\) certificate that is used for securing communications between a federation server proxy and Internet client computers.|This certificate must be bound to the Default Web Site in Internet Information Services \(IIS\) before you can run the AD FS Federation Server Proxy Configuration Wizard successfully.<br /><br />**Recommendation:** Because this certificate must be trusted by clients of AD FS, use a server authentication certificate that is issued by a public \(third\-party\) certification authority \(CA\), for example, VeriSign.<br /><br />**Tip:** The Subject name of this certificate is used to represent the Federation Service name for each instance of AD FS that you deploy. For this reason, you may want to consider choosing a Subject name that best represents the name of your company or organization to partners.|  
   
-For more information about the certificates that federation server proxies use, see [Certificate Requirements for Federation Server Proxies](Certificate-Requirements-for-Federation-Server-Proxies.md).  
+For more information about the certificates that federation server proxies use, see [Certificate Requirements for Federation Server Proxies](../../../ad-fs/plan/WS2012-guide/proxy-placement/Certificate-Requirements-for-Federation-Server-Proxies.md).  
   
 ## Browser requirements  
 Although any current Web browser with JavaScript capability can be made to work as an AD FS client, the Web pages that are provided by default have been tested only against Internet Explorer versions 7.0, 8.0 and 9.0, Mozilla Firefox 3.0, and Safari 3.1 on Windows. JavaScript must be enabled, and cookies must be enabled for browser\-based sign\-in and sign\-out to work correctly.  
@@ -96,14 +96,14 @@ The process of configuring DNS to support AD FS varies, depending on whether:
   
 -   Your organization already has an existing DNS infrastructure. In most scenarios, DNS is already configured throughout your network so that Web browser clients in your corporate network have access to the Internet. Because Internet access and name resolution are requirements of AD FS, this infrastructure is assumed to be in place for your AD FS deployment.  
   
--   You intend to add a federated server to your corporate network. For the purpose of authenticating users in the corporate network, internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal server that is running the Federation Service. For more information, see [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md).  
+-   You intend to add a federated server to your corporate network. For the purpose of authenticating users in the corporate network, internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal server that is running the Federation Service. For more information, see [Name Resolution Requirements for Federation Servers](../../../ad-fs/plan/WS2012-guide/server-placement/Name-Resolution-Requirements-for-Federation-Servers.md).  
   
 -   You intend to add a federated server proxy to your perimeter network. When you want to authenticate user accounts that are located in the corporate network of your identity partner organization, the internal DNS servers in the corporate network forest must be configured to return the CNAME of the internal federation server proxy. For information about how to configure DNS to accommodate the addition of federation server proxies, see [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md).  
   
 -   You are setting up DNS for a test lab environment. If you plan to use AD FS in a test lab environment where no single root DNS server is authoritative, it is probable that you will have to set up DNS forwarders so that queries to names between two or more forests will be forwarded appropriately. For general information about how to set up an AD FS test lab environment, see [AD FS Step\-by\-Step and How To Guides](http://go.microsoft.com/fwlink/?LinkId=180357) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=180357\).  
   
 ## Attribute store requirements  
-AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md) in the AD FS Design Guide.  
+AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Attribute-Stores.md) in the AD FS Design Guide.  
   
 > [!NOTE]  
 > AD FS automatically creates an Active Directory attribute store, by default.  

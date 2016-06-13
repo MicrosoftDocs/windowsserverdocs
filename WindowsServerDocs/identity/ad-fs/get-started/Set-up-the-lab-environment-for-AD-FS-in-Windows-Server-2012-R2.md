@@ -14,28 +14,28 @@ ms.assetid: 80b48521-5bfd-4c87-8a7a-9ec7a6c3351f
 # Set up the lab environment for AD FS in Windows Server 2012 R2
 This topic outlines the steps to configure a test environment that can be used to complete the walkthroughs in the following walkthrough guides:
 
--   [Walkthrough: Workplace Join with an iOS Device](Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+-   [Walkthrough: Workplace Join with an iOS Device](../../ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
--   [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+-   [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 -   [Walkthrough Guide: Connect to Applications and Services from Anywhere with Web Application Proxy](Walkthrough-Guide--Connect-to-Applications-and-Services-from-Anywhere-with-Web-Application-Proxy.md)
 
--   [Walkthrough Guide: Manage Risk with Conditional Access Control](Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+-   [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 
--   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+-   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 > [!NOTE]
 > We do not recommend that you install the web server and the federation server on the same computer.
 
 To set up this test environment, complete the following steps:
 
-1.  [Step 1: Configure the domain controller \(DC1\)](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
+1.  [Step 1: Configure the domain controller \(DC1\)](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
 
-2.  [Step 2: Configure the federation server \(ADFS1\) with Device Registration Service](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
+2.  [Step 2: Configure the federation server \(ADFS1\) with Device Registration Service](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
 
-3.  [Step 3: Configure the web server \(WebServ1\) and a sample claims\-based application](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
+3.  [Step 3: Configure the web server \(WebServ1\) and a sample claims\-based application](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
 
-4.  [Step 4: Configure the client computer \(Client1\)](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
+4.  [Step 4: Configure the client computer \(Client1\)](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
 ## <a name="BKMK_1"></a>Step 1: Configure the domain controller \(DC1\)
 For the purposes of this test environment, you can call your root Active Directory domain **contoso.com** and specify **pass@word1** as the administrator password.
@@ -208,13 +208,13 @@ You must complete the following steps to set up a web server with this sample cl
 > [!NOTE]
 > These steps have been tested on a web server that runs the  Windows Server 2012 R2  operating system.
 
-1.  [Install the Web Server Role and Windows Identity Foundation](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_15)
+1.  [Install the Web Server Role and Windows Identity Foundation](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_15)
 
-2.  [Install Windows Identity Foundation SDK](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_13)
+2.  [Install Windows Identity Foundation SDK](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_13)
 
-3.  [Configure the simple claims app in IIS](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_9)
+3.  [Configure the simple claims app in IIS](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_9)
 
-4.  [Create a relying party trust on your federation server](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_11)
+4.  [Create a relying party trust on your federation server](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_11)
 
 ### <a name="BKMK_15"></a>Install the Web Server role and Windows Identity Foundation
 
@@ -348,7 +348,7 @@ You must now secure your sample application that runs on your web server with AD
 ## <a name="BKMK_10"></a>Step 4: Configure the client computer \(Client1\)
 Set up another virtual machine and install Windows 8.1. This virtual machine must be on the same virtual network as the other machines. This machine should NOT be joined to the Contoso domain.
 
-The client MUST trust the SSL certificate that is used for the federation server \(ADFS1\), which you set up in [Step 2: Configure the federation server \(ADFS1\) with Device Registration Service](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). It must also be able to validate certificate revocation information for the certificate.
+The client MUST trust the SSL certificate that is used for the federation server \(ADFS1\), which you set up in [Step 2: Configure the federation server \(ADFS1\) with Device Registration Service](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). It must also be able to validate certificate revocation information for the certificate.
 
 You also must set up and use a Microsoft account to log on to Client1.
 

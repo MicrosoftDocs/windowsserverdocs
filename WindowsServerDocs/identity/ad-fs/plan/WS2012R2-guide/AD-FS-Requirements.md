@@ -15,33 +15,33 @@ author: billmath
 # AD FS Requirements
 The following are the various requirements that you must conform to when deploying AD FS:  
   
--   [Certificate requirements](AD-FS-Requirements.md#BKMK_1)  
+-   [Certificate requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_1)  
   
--   [Hardware requirements](AD-FS-Requirements.md#BKMK_2)  
+-   [Hardware requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_2)  
   
--   [Software requirements](AD-FS-Requirements.md#BKMK_3)  
+-   [Software requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_3)  
   
--   [AD DS requirements](AD-FS-Requirements.md#BKMK_4)  
+-   [AD DS requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_4)  
   
--   [Configuration database requirements](AD-FS-Requirements.md#BKMK_5)  
+-   [Configuration database requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_5)  
   
--   [Browser requirements](AD-FS-Requirements.md#BKMK_6)  
+-   [Browser requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_6)  
   
--   [Extranet requirements](AD-FS-Requirements.md#BKMK_extranet)  
+-   [Extranet requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_extranet)  
   
--   [Network requirements](AD-FS-Requirements.md#BKMK_7)  
+-   [Network requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_7)  
   
--   [Attribute store requirements](AD-FS-Requirements.md#BKMK_8)  
+-   [Attribute store requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_8)  
   
--   [Application requirements](AD-FS-Requirements.md#BKMK_9)  
+-   [Application requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_9)  
   
--   [Authentication requirements](AD-FS-Requirements.md#BKMK_10)  
+-   [Authentication requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_10)  
   
--   [Workplace join requirements](AD-FS-Requirements.md#BKMK_11)  
+-   [Workplace join requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_11)  
   
--   [Cryptography requirements](AD-FS-Requirements.md#BKMK_12)  
+-   [Cryptography requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_12)  
   
--   [Permissions requirements](AD-FS-Requirements.md#BKMK_13)  
+-   [Permissions requirements](../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/../../../ad-fs/plan/WS2012R2-guide/AD-FS-Requirements.md#BKMK_13)  
   
 ## <a name="BKMK_1"></a>Certificate requirements  
 Certificates play the most critical role in securing communications between federation servers, Web Application Proxies, claims\-aware applications, and Web clients. The requirements for certificates vary, depending on whether you are setting up a federation server or a proxy computer, as described in this section.  
@@ -208,7 +208,7 @@ For information on configuring corporate DNS for Web Application proxies, see th
 For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](http://go.microsoft.com/fwlink/?LinkId=75282).  
   
 ## <a name="BKMK_8"></a>Attribute store requirements  
-AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md).  
+AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Attribute-Stores.md).  
   
 > [!NOTE]  
 > AD FS automatically creates an “Active Directory” attribute store, by default. Attribute store requirements depend on whether your organization is acting as the account partner \(hosting the federated users\) or the resource partner \(hosting the federated application\).  
@@ -303,7 +303,7 @@ AD FS supports additional authentication \(beyond primary authentication support
   
 Every MFA adapter must be built on top of .NET 4.5.  
   
-For more information on MFA, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).  
+For more information on MFA, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).  
   
 **Device Authentication**  
   

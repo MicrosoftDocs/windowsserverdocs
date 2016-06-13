@@ -34,7 +34,7 @@ A claim rule represents an instance of business logic that will take an incoming
 
 -   Claim rule templates will always require you to specify an incoming claim type. However, you can process multiple claim values with the same claim type using a single rule.
 
-For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
+For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](../../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
 
 ## Pass through all claim values
 When using this action, all incoming claim values for the specified claim type are passed through as outgoing claims. For example, when the incoming claim type is specified as the Role claim type, all incoming claim values are copied individually into new outgoing claims with the outgoing claim type of Role.
@@ -48,7 +48,7 @@ When you use a filter condition with this rule, all incoming claims are examined
 
 For example, as shown in the following illustration, when a rule is set with the condition to filter only incoming claims that are keyed to the UPN claim type and also end with @fabrikam.com, all other incoming claims are ignored unless they meet this criteria. This includes the incoming claim with the claim type of E\-Mail Address even though its claim value ends in @fabrikam.com. In this case, only the claim containing the value of Nick@fabrikam.com is sent to the relying party.
 
-![](media/adfs2_filter.gif)
+![](../../../../../media/When-to-Use-a-Pass-Through-or-Filter-Claim-Rule/adfs2_filter.gif)
 
 ## Configuring this rule on a claims provider trust
 When you use a claims provider trust, this rule can be configured to pass through only incoming claims from the claims provider that match certain constraints. For example, you might want to only accept e\-mail claims from the claims provider; therefore, you would use this rule template to accept e\-mail claim types that end in the claims provider’s Domain Name System \(DNS\) name.

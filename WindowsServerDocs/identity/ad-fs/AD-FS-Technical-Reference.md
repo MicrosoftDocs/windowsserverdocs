@@ -13,7 +13,7 @@ ms.assetid: 271ac068-f1f9-4f9a-a19e-bdfc6e539523
 ---
 # AD FS Technical Reference
 
--   [Understanding Key AD FS Concepts](Understanding-Key-AD-FS-Concepts.md)
+-   [Understanding Key AD FS Concepts](../ad-fs/plan/tech-ref/Understanding-Key-AD-FS-Concepts.md)
 
 > [!TIP]
 > You can find additional AD FS 2.0 design content at the [AD FS 2.0 Content Map](http://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS 2.0 Community and is monitored on a regular basis by the AD FS Product Team.

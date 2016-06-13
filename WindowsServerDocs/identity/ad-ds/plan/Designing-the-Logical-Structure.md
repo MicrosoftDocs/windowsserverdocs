@@ -36,18 +36,18 @@ When you design an Active Directory logical structure before you deploy AD DS,
   
 ## In this guide  
   
--   [Understanding the Active Directory Logical Model](Understanding-the-Active-Directory-Logical-Model.md)  
+-   [Understanding the Active Directory Logical Model](../../ad-ds/plan/Understanding-the-Active-Directory-Logical-Model.md)  
   
--   [Identifying the Deployment Project Participants](Identifying-the-Deployment-Project-Participants.md)  
+-   [Identifying the Deployment Project Participants](../../ad-ds/plan/Identifying-the-Deployment-Project-Participants.md)  
   
--   [Creating a Forest Design](Creating-a-Forest-Design.md)  
+-   [Creating a Forest Design](../../ad-ds/plan/Creating-a-Forest-Design.md)  
   
--   [Creating a Domain Design](Creating-a-Domain-Design.md)  
+-   [Creating a Domain Design](../../ad-ds/plan/Creating-a-Domain-Design.md)  
   
--   [Creating a DNS Infrastructure Design](Creating-a-DNS-Infrastructure-Design.md)  
+-   [Creating a DNS Infrastructure Design](../../ad-ds/plan/Creating-a-DNS-Infrastructure-Design.md)  
   
--   [Creating an Organizational Unit Design](Creating-an-Organizational-Unit-Design.md)  
+-   [Creating an Organizational Unit Design](../../ad-ds/plan/Creating-an-Organizational-Unit-Design.md)  
   
--   [Appendix A: DNS Inventory](Appendix-A--DNS-Inventory.md)  
+-   [Appendix A: DNS Inventory](../../ad-ds/plan/Appendix-A--DNS-Inventory.md)  
   
 

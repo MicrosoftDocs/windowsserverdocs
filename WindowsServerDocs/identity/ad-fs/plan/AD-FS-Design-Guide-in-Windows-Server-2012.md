@@ -32,21 +32,21 @@ For each design, you will find guidelines for gathering the required data about 
   
 ## In this guide  
   
--   [Identifying Your AD FS Deployment Goals](Identifying-Your-AD-FS-Deployment-Goals.md)  
+-   [Identifying Your AD FS Deployment Goals](../../ad-fs/plan/WS2012-guide/Identifying-Your-AD-FS-Deployment-Goals.md)  
   
--   [Mapping Your Deployment Goals to an AD FS Design](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)  
+-   [Mapping Your Deployment Goals to an AD FS Design](../../ad-fs/plan/WS2012-guide/Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)  
   
--   [Determine Your AD FS Deployment Topology](Determine-Your-AD-FS-Deployment-Topology.md)  
+-   [Determine Your AD FS Deployment Topology](../../ad-fs/plan/WS2012-guide/Determine-Your-AD-FS-Deployment-Topology.md)  
   
--   [Planning Your Deployment](Planning-Your-Deployment.md)  
+-   [Planning Your Deployment](../../ad-fs/plan/WS2012-guide/Planning-Your-Deployment.md)  
   
--   [Planning Federation Server Placement](Planning-Federation-Server-Placement.md)  
+-   [Planning Federation Server Placement](../../ad-fs/plan/WS2012-guide/Planning-Federation-Server-Placement.md)  
   
--   [Planning Federation Server Proxy Placement](Planning-Federation-Server-Proxy-Placement.md)  
+-   [Planning Federation Server Proxy Placement](../../ad-fs/plan/WS2012-guide/Planning-Federation-Server-Proxy-Placement.md)  
   
--   [Planning for AD FS Server Capacity](Planning-for-AD-FS-Server-Capacity.md)  
+-   [Planning for AD FS Server Capacity](../../ad-fs/plan/WS2012-guide/Planning-for-AD-FS-Server-Capacity.md)  
   
--   [Appendix A: Reviewing AD FS Requirements](Appendix-A--Reviewing-AD-FS-Requirements.md)  
+-   [Appendix A: Reviewing AD FS Requirements](../../ad-fs/plan/WS2012-guide/Appendix-A--Reviewing-AD-FS-Requirements.md)  
   
 ## Acknowledgments  
 Author: Nick Pierson  

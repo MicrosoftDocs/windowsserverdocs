@@ -19,16 +19,16 @@ AD DS enables easy integration of the Active Directory namespace into an exist
 For information about how DNS supports AD DS, see the DNS Support for Active Directory Technical Reference \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=48147](http://go.microsoft.com/fwlink/?LinkID=48147)\).  
   
 > [!NOTE]  
-> If you implement a disjoint namespace in which the AD DS domain name differs from the primary DNS suffix that clients use, AD DS integration with DNS is more complex. For more information, see [Disjoint Namespace](Disjoint-Namespace.md).  
+> If you implement a disjoint namespace in which the AD DS domain name differs from the primary DNS suffix that clients use, AD DS integration with DNS is more complex. For more information, see [Disjoint Namespace](../../ad-ds/plan/../../ad-ds/plan/Disjoint-Namespace.md).  
   
 ## In this section  
   
--   [Domain Controller Location](Domain-Controller-Location.md)  
+-   [Domain Controller Location](../../ad-ds/plan/Domain-Controller-Location.md)  
   
--   [Active Directory-Integrated DNS Zones](Active-Directory-Integrated-DNS-Zones.md)  
+-   [Active Directory-Integrated DNS Zones](../../ad-ds/plan/Active-Directory-Integrated-DNS-Zones.md)  
   
--   [Computer Naming](Computer-Naming.md)  
+-   [Computer Naming](../../ad-ds/plan/Computer-Naming.md)  
   
--   [Disjoint Namespace](Disjoint-Namespace.md)  
+-   [Disjoint Namespace](../../ad-ds/plan/../../ad-ds/plan/Disjoint-Namespace.md)  
   
 

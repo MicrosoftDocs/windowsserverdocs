@@ -20,8 +20,8 @@ For a worksheet to assist you in documenting the proposed forest design, downloa
   
 ## In this section  
   
--   [Identifying Forest Design Requirements](Identifying-Forest-Design-Requirements.md)  
+-   [Identifying Forest Design Requirements](../../ad-ds/plan/Identifying-Forest-Design-Requirements.md)  
   
--   [Determining the Number of Forests Required](Determining-the-Number-of-Forests-Required.md)  
+-   [Determining the Number of Forests Required](../../ad-ds/plan/Determining-the-Number-of-Forests-Required.md)  
   
 

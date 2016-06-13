@@ -20,9 +20,9 @@ In its simplest form, claims are simply *statements* \(for example, name, identi
 ### How claims are sourced
 The Federation Service in Active Directory Federation Services \(AD FS\) defines which claims are exchanged between federated partners. However, before it can do this it must first populate or source the claim with either a retrieved value or a calculated value. Each claim value represents a value of a user, group, or entity and is sourced in one of two ways:
 
-1.  When the value that makes up the claim is retrieved from an attribute store, for example, when an attribute value of Sales Department is retrieved from the properties of an Active Directory user account. For more information, see [The Role of Attribute Stores](The-Role-of-Attribute-Stores.md).
+1.  When the value that makes up the claim is retrieved from an attribute store, for example, when an attribute value of Sales Department is retrieved from the properties of an Active Directory user account. For more information, see [The Role of Attribute Stores](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Attribute-Stores.md).
 
-2.  When the value of an incoming claim is transformed into another value based on the logic expressed in a rule. For example, when an incoming claim with the value of Domain Admins is transformed into a new value of Administrators before it is sent as an outgoing claim. For more information, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md).
+2.  When the value of an incoming claim is transformed into another value based on the logic expressed in a rule. For example, when an incoming claim with the value of Domain Admins is transformed into a new value of Administrators before it is sent as an outgoing claim. For more information, see [The Role of Claim Rules](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md).
 
 Claims can include values such as an e\-mail address, User Principal Name \(UPN\), group membership, and other account attributes.
 
@@ -37,10 +37,10 @@ The flow of claims using this process is known as the *claims pipeline*. There a
 
 3.  The output of the acceptance transform rules is used as input to the issuance transform rules. These rules determine the claims that will be sent to the relying party.
 
-For more information, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md)
+For more information, see [The Role of the Claims Pipeline](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Pipeline.md)
 
 ### How claims are issued
-When you write claim rules, the source of the incoming claims for the claim rules varies based on whether you are writing rules on a claims provider trust or a relying party trust. When you write claim rules for a claims provider trust, the incoming claims are the claims sent from the trusted claims provider to the Federation Service. When you write rules for a relying party trust, the incoming claims are the claims that are output by the claim rules of the applicable claims provider trust. For more information about incoming claims and outgoing claims, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md) and [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
+When you write claim rules, the source of the incoming claims for the claim rules varies based on whether you are writing rules on a claims provider trust or a relying party trust. When you write claim rules for a claims provider trust, the incoming claims are the claims sent from the trusted claims provider to the Federation Service. When you write rules for a relying party trust, the incoming claims are the claims that are output by the claim rules of the applicable claims provider trust. For more information about incoming claims and outgoing claims, see [The Role of the Claims Pipeline](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Pipeline.md) and [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md).
 
 ## What are claim types?
 A claim type provides context for the claim value. It is usually expressed as a Uniform Resource Identifier \(URI\). AD FS can support any claim type, and it is configured with the claim types in the following table by default.
@@ -85,6 +85,6 @@ For more information about how to set the publishing state of a claim type, see 
 Federation Metadata includes all the claim descriptions that are marked for publishing.
 
 ### When claims rules are processed
-When you keep configuration information about claims descriptions, it is easier for you to configure rules about claims. For more information about the claim rules that can be used in the claims provider organization, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md).
+When you keep configuration information about claims descriptions, it is easier for you to configure rules about claims. For more information about the claim rules that can be used in the claims provider organization, see [The Role of Claim Rules](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md).
 
 

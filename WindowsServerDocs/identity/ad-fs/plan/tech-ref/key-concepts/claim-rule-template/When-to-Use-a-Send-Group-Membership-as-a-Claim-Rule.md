@@ -31,7 +31,7 @@ A claim rule represents an instance of business logic that will take an incoming
 
 -   Claim rule templates will always require you to specify an incoming claim type. However, you can process multiple claim values with the same claim type using a single rule.
 
-For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
+For more detailed information about claim rules and claim rule sets, see [The Role of Claim Rules](../../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-Claim-Rules.md). For more information about how rules are processed, see [The Role of the Claims Engine](The-Role-of-the-Claims-Engine.md). For more information how claim rule sets are processed, see [The Role of the Claims Pipeline](The-Role-of-the-Claims-Pipeline.md).
 
 ## Outgoing claim value
 Using the Send Group Membership as a Claim rule template, you can issue a claim that is contingent on whether a user is a member of a group that you specify.
