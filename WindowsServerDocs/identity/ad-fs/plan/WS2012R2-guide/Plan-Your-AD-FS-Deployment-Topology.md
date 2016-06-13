@@ -17,7 +17,7 @@ The first step in planning a deployment of Active Directory Federation Services
   
 Before you read this topic, review how AD FS data is stored and replicated to other federation servers in a federation server farm and make sure you understand the purpose of and the replication methods that can be used for the underlying data that is stored in the AD FS configuration database.  
   
-There are two database types that you can use to store AD FS configuration data: Windows Internal Database \(WID\) and Microsoft SQL Server. For more information, see [The Role of the AD FS Configuration Database](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md). Review the various benefits and limitations that are associated with using either WID or SQL Server as the AD FS configuration database, along with the various application scenarios that they support and then make your selection.  
+There are two database types that you can use to store AD FS configuration data: Windows Internal Database \(WID\) and Microsoft SQL Server. For more information, see [The Role of the AD FS Configuration Database](../../../ad-fs/plan/tech-ref/key-concepts/the-role-ad-fs-configuration-database.md). Review the various benefits and limitations that are associated with using either WID or SQL Server as the AD FS configuration database, along with the various application scenarios that they support and then make your selection.  
   
 > [!IMPORTANT]  
 > To implement basic redundancy, load balancing, and the option to scale the Federation Service \(if required\), we recommend that you deploy at  least two federation servers per federation server farm for all production environments, regardless of the type of database that you will use.  
@@ -64,13 +64,13 @@ A federation server proxy should be placed in the perimeter network before you c
 ## Supported deployment topologies  
 The following topics describe the various deployment topologies that you can use with AD FS. They also describe the benefits and limitations associated with each deployment topology so that you can select the most appropriate topology for your specific business needs.  
   
--   [Federation Server Farm Using WID](../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID.md)  
+-   [Federation Server Farm Using WID](../../../ad-fs/plan/WS2012-guide/topology/federation-server-farm-using-wid.md)  
   
--   [Federation Server Farm Using WID and Proxies](../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID-and-Proxies.md)  
+-   [Federation Server Farm Using WID and Proxies](../../../ad-fs/plan/WS2012-guide/topology/federation-server-farm-using-wid-proxies.md)  
   
--   [Federation Server Farm Using SQL Server](../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-SQL-Server.md)  
+-   [Federation Server Farm Using SQL Server](../../../ad-fs/plan/WS2012-guide/topology/federation-server-farm-using-sql-server.md)  
   
 ## See Also  
-[AD FS Design Guide in Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
+[AD FS Design Guide in Windows Server 2012 R2](ad-fs-design-guide-windows-server-2012-r2.md)  
   
 

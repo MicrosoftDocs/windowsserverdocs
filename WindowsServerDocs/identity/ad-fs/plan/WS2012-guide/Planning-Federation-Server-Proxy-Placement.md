@@ -19,19 +19,19 @@ After you gather all the information that you will use to design your Active Di
   
 -   [Review the Role of the Federation Server Proxy in the Resource Partner](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)  
   
--   [When to Create a Federation Server Proxy](../../../ad-fs/plan/WS2012-guide/proxy-placement/When-to-Create-a-Federation-Server-Proxy.md)  
+-   [When to Create a Federation Server Proxy](../../../ad-fs/plan/WS2012-guide/proxy-placement/when-create-federation-server-proxy.md)  
   
--   [Where to Place a Federation Server Proxy](../../../ad-fs/plan/WS2012-guide/proxy-placement/Where-to-Place-a-Federation-Server-Proxy.md)  
+-   [Where to Place a Federation Server Proxy](../../../ad-fs/plan/WS2012-guide/proxy-placement/where-place-federation-server-proxy.md)  
   
--   [When to Create a Federation Server Proxy Farm](../../../ad-fs/plan/WS2012-guide/proxy-placement/When-to-Create-a-Federation-Server-Proxy-Farm.md)  
+-   [When to Create a Federation Server Proxy Farm](../../../ad-fs/plan/WS2012-guide/proxy-placement/when-create-federation-server-proxy-farm.md)  
   
--   [Certificate Requirements for Federation Server Proxies](../../../ad-fs/plan/WS2012-guide/proxy-placement/Certificate-Requirements-for-Federation-Server-Proxies.md)  
+-   [Certificate Requirements for Federation Server Proxies](../../../ad-fs/plan/WS2012-guide/proxy-placement/certificate-requirements-federation-server-proxies.md)  
   
 -   [Name Resolution Requirements for Federation Server Proxies](Name-Resolution-Requirements-for-Federation-Server-Proxies.md)  
   
 > [!NOTE]  
 > Although this information might help with your placement planning for federation server proxies, it does not explain how to determine the proper number of proxies and the proxy hardware requirements for each AD FS design.  
   
-For examples of how you can place a federation server proxy in either of the two primary AD FS design scenarios, see [Mapping Your Deployment Goals to an AD FS Design](../../../ad-fs/plan/WS2012-guide/Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md).  
+For examples of how you can place a federation server proxy in either of the two primary AD FS design scenarios, see [Mapping Your Deployment Goals to an AD FS Design](../../../ad-fs/plan/WS2012-guide/mapping-your-deployment-goals-ad-fs-design.md).  
   
 
