@@ -19,22 +19,22 @@ Before you read this deployment topology topic, we recommend that you first comp
   
 |Recommended task|Description|Reference|  
 |--------------------|---------------|-------------|  
-|Review how AD FS data is stored and replicated to other federation servers in a federation server farm.|Understand the purpose of and the replication methods that can be used for the underlying data that is stored in the AD FS configuration database. This topic introduces the concepts of the configuration database and describes the two database types: Windows Internal Database \(WID\) and Microsoft SQL Server.|[The Role of the AD FS Configuration Database](../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-AD-FS-Configuration-Database.md)|  
-|Select the type of AD FS configuration database that you will deploy in your organization.|Review the various benefits and limitations that are associated with using either WID or SQL Server as the AD FS configuration database, along with the various application scenarios that they support.|[AD FS Deployment Topology Considerations](../../../ad-fs/plan/WS2012-guide/topology/AD-FS-Deployment-Topology-Considerations.md)|  
+|Review how AD FS data is stored and replicated to other federation servers in a federation server farm.|Understand the purpose of and the replication methods that can be used for the underlying data that is stored in the AD FS configuration database. This topic introduces the concepts of the configuration database and describes the two database types: Windows Internal Database \(WID\) and Microsoft SQL Server.|[The Role of the AD FS Configuration Database](../../../ad-fs/plan/tech-ref/key-concepts/the-role-ad-fs-configuration-database.md)|  
+|Select the type of AD FS configuration database that you will deploy in your organization.|Review the various benefits and limitations that are associated with using either WID or SQL Server as the AD FS configuration database, along with the various application scenarios that they support.|[AD FS Deployment Topology Considerations](../../../ad-fs/plan/WS2012-guide/topology/ad-fs-deployment-topology-considerations.md)|  
   
 > [!NOTE]  
 > To implement basic redundancy, load balancing, and the option to scale the Federation Service \(if required\), we recommend that you deploy at  least two federation servers per federation server farm for all production environments, regardless of the type of database that you will use.  
   
 When you have reviewed the content in the previous table, proceed to the following topics in this section:  
   
--   [Stand-Alone Federation Server Using WID](../../../ad-fs/plan/WS2012-guide/topology/Stand-Alone-Federation-Server-Using-WID.md)  
+-   [Stand-Alone Federation Server Using WID](../../../ad-fs/plan/WS2012-guide/topology/standalone-federation-server-using-wid.md)  
   
--   [Federation Server Farm Using WID](../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID.md)  
+-   [Federation Server Farm Using WID](../../../ad-fs/plan/WS2012-guide/topology/federation-server-farm-using-wid.md)  
   
--   [Federation Server Farm Using WID and Proxies](../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-WID-and-Proxies.md)  
+-   [Federation Server Farm Using WID and Proxies](../../../ad-fs/plan/WS2012-guide/topology/federation-server-farm-using-wid-proxies.md)  
   
--   [Federation Server Farm Using SQL Server](../../../ad-fs/plan/WS2012-guide/topology/Federation-Server-Farm-Using-SQL-Server.md)  
+-   [Federation Server Farm Using SQL Server](../../../ad-fs/plan/WS2012-guide/topology/federation-server-farm-using-sql-server.md)  
   
-After you finish selecting your AD FS deployment topology, we recommend that you review the topic [Planning for AD FS Server Capacity](../../../ad-fs/plan/WS2012-guide/Planning-for-AD-FS-Server-Capacity.md) to determine the recommended number of servers that you will need to deploy to support this topology.  
+After you finish selecting your AD FS deployment topology, we recommend that you review the topic [Planning for AD FS Server Capacity](../../../ad-fs/plan/WS2012-guide/planning-ad-fs-server-capacity.md) to determine the recommended number of servers that you will need to deploy to support this topology.  
   
 

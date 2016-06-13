@@ -16,14 +16,14 @@ author: Femila
 # Virtualized Domain Controller Architecture
 This topic covers the architecture of virtualized domain controller cloning and safe restore. It shows the processes cloning and safe restore with flowcharts and then provides a detailed explanation of each step in the process.  
   
--   [Virtualized domain controller cloning architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneArch)  
+-   [Virtualized domain controller cloning architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/virtualized-domain-controller-architecture.md#BKMK_CloneArch)  
   
--   [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)  
+-   [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/virtualized-domain-controller-architecture.md#BKMK_SafeRestoreArch)  
   
 ## <a name="BKMK_CloneArch"></a>Virtualized domain controller cloning architecture  
   
 ### Overview  
-Virtualized domain controller cloning relies on the hypervisor platform to expose an identifier called **VM\-Generation ID** to detect creation of a virtual machine. AD DS initially stores the value of this identifier in its database \(NTDS.DIT\) during domain controller promotion. When the virtual machine boots up, the current value of the VM\-Generation ID from the virtual machine is compared against the value in the database. If the two values are different, the domain controller resets the Invocation ID and discards the RID pool, thereby preventing USN re\-use or the potential creation of duplicate security\-principals. The domain controller then looks for a DCCloneConfig.xml file in the locations called out in Step 3 in [Cloning Detailed Processing](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneProcessDetails). If it finds a DCCloneConfig.xml file, it concludes that it is being deployed as a clone, so it initiates cloning to provision itself as an additional domain controller by re\-promoting using the existing NTDS.DIT and SYSVOL contents copied from source media.  
+Virtualized domain controller cloning relies on the hypervisor platform to expose an identifier called **VM\-Generation ID** to detect creation of a virtual machine. AD DS initially stores the value of this identifier in its database \(NTDS.DIT\) during domain controller promotion. When the virtual machine boots up, the current value of the VM\-Generation ID from the virtual machine is compared against the value in the database. If the two values are different, the domain controller resets the Invocation ID and discards the RID pool, thereby preventing USN re\-use or the potential creation of duplicate security\-principals. The domain controller then looks for a DCCloneConfig.xml file in the locations called out in Step 3 in [Cloning Detailed Processing](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/virtualized-domain-controller-architecture.md#BKMK_CloneProcessDetails). If it finds a DCCloneConfig.xml file, it concludes that it is being deployed as a clone, so it initiates cloning to provision itself as an additional domain controller by re\-promoting using the existing NTDS.DIT and SYSVOL contents copied from source media.  
   
 In a mixed environment where some hypervisors support VM\-GenerationID and others do not, it is possible for a clone media to be accidentally deployed on a hypervisor that does not support VM\-GenerationID. The presence of DCCloneConfig.xml file indicates administrative intent to clone a DC. Therefore, if a DCCloneConfig.xml file is found during boot but a VM\-GenerationID is not provided from the host, the clone DC is booted into Directory Services Restore Mode \(DSRM\) to prevent any impact to the rest of the environment. The clone media can be subsequently moved to a hypervisor that supports VM\-GenerationID and then cloning can be retried.  
   
@@ -34,11 +34,11 @@ The following diagram shows the architecture for an initial cloning operation an
   
 **Initial Cloning Operation**  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_InitialCloningProcess.png)  
+![](../../../media/virtualized-domain-controller-architecture/adds-vdc-initialcloningprocess.png)  
   
 **Cloning retry operation**  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_CloningRetryProcess.png)  
+![](../../../media/virtualized-domain-controller-architecture/adds-vdc-cloningretryprocess.png)  
   
 The following steps explain the process in more detail:  
   
@@ -54,7 +54,7 @@ The following steps explain the process in more detail:
   
     1.  If the IDs match, this is not a new virtual machine and cloning will not proceed. If a DCCloneConfig.xml file exists, the domain controller renames the file with a time\-date stamp to prevent cloning. The server continues booting normally. This is how every reboot of any virtual domain controller operates in Windows Server 2012.  
   
-    2.  If the two IDs do not match, this is a new virtual machine that contains an NTDS.DIT from a previous domain controller \(or it is a restored snapshot\). If a DCCloneConfig.xml file exists, the domain controller proceeds with cloning operations. If not, it continues with snapshot restoration operations. See [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch).  
+    2.  If the two IDs do not match, this is a new virtual machine that contains an NTDS.DIT from a previous domain controller \(or it is a restored snapshot\). If a DCCloneConfig.xml file exists, the domain controller proceeds with cloning operations. If not, it continues with snapshot restoration operations. See [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/virtualized-domain-controller-architecture.md#BKMK_SafeRestoreArch).  
   
     3.  If the hypervisor does not provide a VM\-Generation ID for comparison but there is a DCCloneConfig.xml file, the guest renames the file and then boots into DSRM to protect the network from a duplicate domain controller. If there is no dccloneconfig.xml file, the guest boots normally \(with the potential for a duplicate domain controller on the network\). For more information about how to reclaim this duplicate domain controller, see Microsoft KB article [2742970](http://support.microsoft.com/kb/2742970).  
   
@@ -152,7 +152,7 @@ The following sections explain safe restore in detail for each scenario.
 ### Safe Restore Detailed Processing  
 The following flowchart shows how safe restore occurs when a virtual domain controller is started after a snapshot has been restored while it was shut down.  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)  
+![](../../../media/virtualized-domain-controller-architecture/adds-vdc-virtualizationsafeguardsduringnormalboot.png)  
   
 1.  When the virtual machine boots up after a snapshot restore, it will have new VM\-Generation ID provided by the hypervisor host because of the snapshot restore.  
   
@@ -169,7 +169,7 @@ The following flowchart shows how safe restore occurs when a virtual domain cont
   
 The following diagram shows how virtualization safeguards prevent divergence induced by USN rollback when a snapshot is restored on a running virtual domain controller.  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)  
+![](../../../media/virtualized-domain-controller-architecture/adds-vdc-virtualizationsafeguardsduringsnapshotrestore.png)  
   
 > [!NOTE]  
 > The preceding illustration is simplified to explain the concepts.  

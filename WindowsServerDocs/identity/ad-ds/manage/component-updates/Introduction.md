@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: introduction
 ms.custom: 
   - AD
 ms.prod: windows-server-threshold
@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 7e52c3b5-5aab-46c0-9bc7-565bc64eb1fc
 author: Femila
 ---
-# Introduction
+# introduction
 Attacks against computing infrastructures, whether simple or complex, have existed as long as computers have. However, within the past decade, increasing numbers of organizations of all sizes, in all parts of the world have been attacked and compromised in ways that have significantly changed the threat landscape. Cyber\-warfare and cybercrime have increased at record rates. “Hacktivism,” in which attacks are motivated by activist positions, has been claimed as the motivation for a number of breaches intended to expose organizations’ secret information, to create denials\-of\-service, or even to destroy infrastructure. Attacks against public and private institutions with the goal of exfiltrating the organizations’ intellectual property \(IP\) have become ubiquitous.  
   
 No organization with an information technology \(IT\) infrastructure is immune from attack, but if appropriate policies, processes, and controls are implemented to protect key segments of an organization’s computing infrastructure, escalation of attacks from penetration to complete compromise might be preventable. Because the number and scale of attacks originating from outside an organization has eclipsed insider threat in recent years, this document often discusses external attackers rather than misuse of the environment by authorized users. Nonetheless, the principles and recommendations provided in this document are intended to help secure your environment against external attackers and misguided or malicious insiders.  
@@ -50,7 +50,7 @@ This document is organized as follows:
 ## Executive Summary  
 The Executive Summary, which can be read as a standalone document or in combination with the full document, provides a high\-level summary of this document. Included in the Executive Summary are the most common attack vectors we have observed used to compromise customer environments, summary recommendations for securing Active Directory installations, and basic objectives for customers who plan to deploy new AD DS forests now or in the future.  
   
-### Introduction  
+### introduction  
 This is the section you are reading now.  
   
 ### Avenues to Compromise  
@@ -72,24 +72,24 @@ This section begins by “stepping back” from technical detail to focus on pri
 ### Summary of Best Practice Recommendations  
 This section provides a table that summarizes the recommendations made in this document and orders them by relative priority, in addition to providing links to where more information about each recommendation can be found in the document and its appendices.  
   
-### Appendices  
-Appendices are included in this document to augment the information contained in the body of the document. The list of appendices and a brief description of each is included the following table.  
+### appendices  
+appendices are included in this document to augment the information contained in the body of the document. The list of appendices and a brief description of each is included the following table.  
   
 |||  
 |-|-|  
 |**Appendix**|**Description**|  
-|[Appendix A: Patch and Vulnerability Management Software](../../../ad-ds/plan/security-best-practices/Appendix-A--Patch-and-Vulnerability-Management-Software.md)|Contains a list of companies that produce patch and vulnerability management software.|  
-|[Appendix B: Privileged Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md)|Provides background information that helps you to identify the users and groups you should focus on securing because they can be leveraged by attackers to compromise and even destroy your Active Directory installation.|  
-|[Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)|Contains information about protected groups in Active Directory. It also contains information for limited customization \(removal\) of groups that are considered protected groups and are affected by AdminSDHolder and SDProp.|  
-|[Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)|Contains guidelines to help secure the Administrator account in each domain in the forest.|  
-|[Appendix E: Securing Enterprise Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md)|Contains guidelines to help secure the Enterprise Admins group in the forest.|  
-|[Appendix F: Securing Domain Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)|Contains guidelines to help secure the Domain Admins group in each domain in the forest.|  
-|[Appendix G: Securing Administrators Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)|Contains guidelines to help secure the Built\-in Administrators group in each domain in the forest.|  
-|[Appendix H: Securing Local Administrator Accounts and Groups](../../../ad-ds/plan/security-best-practices/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)|Contains guidelines to help secure local Administrator accounts and Administrators groups on domain\-joined servers and workstations.|  
-|[Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)|Provides information to create accounts that have limited privileges and can be stringently controlled, but can be used to populate privileged groups in Active Directory when temporary elevation is required.|  
-|[Appendix J: Third-Party RBAC Vendors](../../../ad-ds/plan/security-best-practices/Appendix-J--Third-Party-RBAC-Vendors.md)|Contains a list of third\-party RBAC vendors and the RBAC solutions they offer.|  
-|[Appendix K: Third-Party PIM Vendors](../../../ad-ds/plan/security-best-practices/Appendix-K--Third-Party-PIM-Vendors.md)|Contains a list of third\-party PIM vendors and the PIM solutions they offer.|  
-|[Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)|Lists events for which you should monitor in your environment.|  
-|[Appendix M: Document Links and Recommended Reading](../../../ad-ds/manage/Appendix-M--Document-Links-and-Recommended-Reading.md)|Contains a list of recommended reading. Also contains a list of links to external documents and their URLs so that readers of hard copies of this document can access this information.|  
+|[Appendix A: Patch and Vulnerability Management Software](../../../ad-ds/plan/security-best-practices/appendix-patch-vulnerability-management-software.md)|Contains a list of companies that produce patch and vulnerability management software.|  
+|[Appendix B: Privileged Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/appendix-b-privileged-accounts-groups-active-directory.md)|Provides background information that helps you to identify the users and groups you should focus on securing because they can be leveraged by attackers to compromise and even destroy your Active Directory installation.|  
+|[Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/appendix-c-protected-accounts-groups-active-directory.md)|Contains information about protected groups in Active Directory. It also contains information for limited customization \(removal\) of groups that are considered protected groups and are affected by AdminSDHolder and SDProp.|  
+|[Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/appendix-d-securing-builtin-administrator-accounts-active-directory.md)|Contains guidelines to help secure the Administrator account in each domain in the forest.|  
+|[Appendix E: Securing Enterprise Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/appendix-e-securing-enterprise-admins-groups-active-directory.md)|Contains guidelines to help secure the Enterprise Admins group in the forest.|  
+|[Appendix F: Securing Domain Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/appendix-f-securing-domain-admins-groups-active-directory.md)|Contains guidelines to help secure the Domain Admins group in each domain in the forest.|  
+|[Appendix G: Securing Administrators Groups in Active Directory](../../../ad-ds/plan/security-best-practices/appendix-g-securing-administrators-groups-active-directory.md)|Contains guidelines to help secure the Built\-in Administrators group in each domain in the forest.|  
+|[Appendix H: Securing Local Administrator Accounts and Groups](../../../ad-ds/plan/security-best-practices/appendix-h-securing-local-administrator-accounts-groups.md)|Contains guidelines to help secure local Administrator accounts and Administrators groups on domain\-joined servers and workstations.|  
+|[Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory](../../../ad-ds/manage/component-updates/appendix-creating-management-accounts-protected-accounts-groups-active-directory.md)|Provides information to create accounts that have limited privileges and can be stringently controlled, but can be used to populate privileged groups in Active Directory when temporary elevation is required.|  
+|[Appendix J: Third-Party RBAC Vendors](../../../ad-ds/plan/security-best-practices/appendix-j-thirdparty-rbac-vendors.md)|Contains a list of third\-party RBAC vendors and the RBAC solutions they offer.|  
+|[Appendix K: Third-Party PIM Vendors](../../../ad-ds/plan/security-best-practices/appendix-k-thirdparty-pim-vendors.md)|Contains a list of third\-party PIM vendors and the PIM solutions they offer.|  
+|[Appendix L: Events to Monitor](../../../ad-ds/plan/appendix-l-events-monitor.md)|Lists events for which you should monitor in your environment.|  
+|[Appendix M: Document Links and Recommended Reading](../../../ad-ds/manage/appendix-m-document-links-recommended-reading.md)|Contains a list of recommended reading. Also contains a list of links to external documents and their URLs so that readers of hard copies of this document can access this information.|  
   
 

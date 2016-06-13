@@ -20,11 +20,11 @@ This document contains a list of all of the documentation areas for AD FS for Wi
   
 * [AD FS Overview](AD-FS-Overview.md)  
   
-* [AD FS Design](ad-fs/AD-FS-Design.md)  
+* [AD FS Design](ad-fs/ad-fs-design.md)  
   
 * [AD FS Deployment](AD-FS-Deployment.md)  
   
-* [AD FS Development](ad-fs/AD-FS-Development.md)  
+* [AD FS Development](ad-fs/ad-fs-development.md)  
   
-* [AD FS Operations](ad-fs/AD-FS-2016-Operations.md)
+* [AD FS Operations](ad-fs/ad-fs-2016-operations.md)
 
