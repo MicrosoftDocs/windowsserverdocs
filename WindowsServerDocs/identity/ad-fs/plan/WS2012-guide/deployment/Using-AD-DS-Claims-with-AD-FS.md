@@ -55,12 +55,12 @@ There are two differentiating factors that are important to understand about cla
   
 -   AD DS can only issue claims that are encapsulated in Kerberos tickets, not SAML tokens. For more information about how AD DS issues claims, see [Dynamic Access Control Content Roadmap](Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
   
--   AD FS can only issue claims that are encapsulated in SAML tokens, not Kerberos tickets. For more information about how AD FS issues claims, see [The Role of the Claims Engine](../../../../ad-fs/plan/tech-ref/key-concepts/the-role-claims-engine.md).  
+-   AD FS can only issue claims that are encapsulated in SAML tokens, not Kerberos tickets. For more information about how AD FS issues claims, see [The Role of the Claims Engine](../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Engine.md).  
   
 ## How AD DS Issued Claims Work with AD FS  
 AD DS issued claims can be used with AD FS to access both user and device claims directly from the user’s authentication context, rather than making a separate LDAP call to Active Directory. The following illustration and corresponding steps discusses how this process works in more detail to enable claims\-based access control for the Dynamic Access Control scenario.  
   
-![](../../../../media/using-ad-ds-claims-with-ad-fs/usingaddsclaimswithadfs.gif)  
+![](../../../../media/Using-AD-DS-Claims-with-AD-FS/UsingADDSClaimswithADFS.gif)  
   
 1.  An AD DS administrator uses the Active Directory Administrative Center console or PowerShell cmdlets to enables specific claim type objects in the AD DS schema.  
   

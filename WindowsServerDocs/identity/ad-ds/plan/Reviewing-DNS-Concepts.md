@@ -22,12 +22,12 @@ Domain Name System \(DNS\) is a distributed database that represents a namespace
   
 It is important to understand the core features of DNS, such as delegation, recursive name resolution, and Active Directory–integrated DNS zones, because they have a direct impact on your Active Directory logical structure design.  
   
-For more information about DNS and Active Directory Domain Services \(AD DS\), see [DNS and AD DS](../../ad-ds/plan/dns-ad-ds.md).  
+For more information about DNS and Active Directory Domain Services \(AD DS\), see [DNS and AD DS](../../ad-ds/plan/DNS-and-AD-DS.md).  
   
 ## Delegation  
 For a DNS server to answer queries about any name, it must have a direct or indirect path to every zone in the namespace. These paths are created by means of delegation. A delegation is a record in a parent zone that lists a name server that is authoritative for the zone in the next level of the hierarchy. Delegations make it possible for servers in one zone to refer clients to servers in other zones. The following illustration shows one example of delegation.  
   
-![](../../media/reviewing-dns-concepts/0c24b576-d41a-4e5d-ad3d-6be81e095835.gif)  
+![](../../media/Reviewing-DNS-Concepts/0c24b576-d41a-4e5d-ad3d-6be81e095835.gif)  
   
 The DNS root server hosts the root zone represented as a dot \( . \). The root zone contains a delegation to a zone in the next level of the hierarchy, the com zone. The delegation in the root zone tells the DNS root server that, to find the com zone, it must contact the Com server. Likewise, the delegation in the com zone tells the Com server that, to find the contoso.com zone, it must contact the Contoso server.  
   
@@ -46,7 +46,7 @@ In some configurations, DNS servers include root hints \(that is, a list of name
 ### Resolving names by using root hints  
 Root hints enable any DNS server to locate the DNS root servers. After a DNS server locates the DNS root server, it can resolve any query for that namespace. The following illustration describes how DNS resolves a name by using root hints.  
   
-![](../../media/reviewing-dns-concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)  
+![](../../media/Reviewing-DNS-Concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)  
   
 In this example, the following events occur:  
   
@@ -65,7 +65,7 @@ In this example, the following events occur:
 ### Resolving names by using forwarding  
 Forwarding enables you to route name resolution through specific servers instead of using root hints. The following illustration describes how DNS resolves a name by using forwarding.  
   
-![](../../media/reviewing-dns-concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)  
+![](../../media/Reviewing-DNS-Concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)  
   
 In this example, the following events occur:  
   

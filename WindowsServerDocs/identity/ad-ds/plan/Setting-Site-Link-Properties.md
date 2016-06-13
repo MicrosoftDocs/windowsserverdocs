@@ -24,10 +24,10 @@ Setting site link object properties includes the following steps:
   
 ## In this guide  
   
--   [Determining the Cost](../../ad-ds/plan/determining-cost.md)  
+-   [Determining the Cost](../../ad-ds/plan/Determining-the-Cost.md)  
   
--   [Determining the Schedule](../../ad-ds/plan/determining-schedule.md)  
+-   [Determining the Schedule](../../ad-ds/plan/Determining-the-Schedule.md)  
   
--   [Determining the Interval](../../ad-ds/plan/determining-interval.md)  
+-   [Determining the Interval](../../ad-ds/plan/Determining-the-Interval.md)  
   
 

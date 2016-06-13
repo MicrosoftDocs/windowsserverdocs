@@ -16,12 +16,12 @@ author: Femila
 # Troubleshooting Domain Controller Deployment
 This topic covers detailed methodology on troubleshooting domain controller configuration and deployment.  
   
--   [introduction to Troubleshooting](../../ad-ds/deploy/../../ad-ds/deploy/troubleshooting-domain-controller-deployment.md#BKMK_Intro)  
+-   [Introduction to Troubleshooting](../../ad-ds/deploy/../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md#BKMK_Intro)  
   
--   [Troubleshooting Options](../../ad-ds/deploy/../../ad-ds/deploy/troubleshooting-domain-controller-deployment.md#BKMK_Options)  
+-   [Troubleshooting Options](../../ad-ds/deploy/../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md#BKMK_Options)  
   
-## <a name="BKMK_Intro"></a>introduction to Troubleshooting  
-![](../../media/troubleshooting-domain-controller-deployment/adds-deploy-troubleshooting.png)  
+## <a name="BKMK_Intro"></a>Introduction to Troubleshooting  
+![](../../media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)  
   
 ## <a name="BKMK_Options"></a>Troubleshooting Options  
   
@@ -103,7 +103,7 @@ Domain controller promotion and demotion always returns a code at the end of ope
   
     Errors in prerequisite validation and verification do not continue on to a reboot, so they are visible in all cases. For example:  
   
-    ![](../../media/troubleshooting-domain-controller-deployment/adds-psprereqerror.png)  
+    ![](../../media/Troubleshooting-Domain-Controller-Deployment/ADDS_PSPrereqError.png)  
   
 3.  In any scenario, examine the dcpromo.log and dcpromoui.log.  
   
