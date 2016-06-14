@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fac8c7d6-f2aa-4a55-9319-b28919af71c8
+manager: dongill
+author: coreyp
 ---
 # Dynamic Access Control Overview
 This overview topic for the IT professional describes Dynamic Access Control and its associated elements, which were introduced in  Windows Server 2012  and Windows 8.

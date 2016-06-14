@@ -11,6 +11,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c2a4cb7c-22b3-4dba-8d39-e1c72a51f085
+manager: Femila
 author: Femila
 ---
 # Dynamic Access Control: Scenario Overview

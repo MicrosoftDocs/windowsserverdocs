@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 90050086-fd7a-41c7-801e-9136a898a65a
+manager: dongill
+author: coreyp
 ---
 # Security Principals Technical Overview
 This reference topic for the IT professional describes security principals in regards to Windows accounts and security groups, in addition to security technologies that are related to security principals.

@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac11b502-deb1-4738-9f01-1bee20045c89
+manager: dongill
+author: coreyp
 ---
 # Local Accounts
 This reference topic for the IT professional describes the default local user accounts for servers, including how to manage these built\-in accounts on a member or standalone server. This topic does not describe the default local user accounts for an Active Directory domain controller.
@@ -366,6 +368,6 @@ The following resources provide additional information about technologies that a
 
 -   [Security Identifiers Technical Overview](Security-Identifiers-Technical-Overview.md)
 
--   [Access Control Overview](../Access-Control-Overview.md)
+-   [Access Control Overview](Access-Control-Overview.md)
 
 

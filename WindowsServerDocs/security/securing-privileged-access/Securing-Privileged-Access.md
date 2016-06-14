@@ -7,6 +7,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
+manager:
 author: YuriDio
 ---
 # Securing Privileged Access
