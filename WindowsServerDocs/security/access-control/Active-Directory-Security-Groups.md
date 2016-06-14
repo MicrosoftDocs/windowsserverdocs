@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 473eff45-2b15-4f68-964f-df49f24fa3f6
+manager: dongill
+author: coreyp
 ---
 # Active Directory Security Groups
 This reference topic for the IT professional describes the default Active Directory security groups.
@@ -862,7 +864,7 @@ Depending on the account’s domain functional level, members of the Protected U
 
 The Protected Users group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
 
-This group was introduced in  Windows Server 2012 R2 . For more information about how this group works, see [Protected Users Security Group](../credentials-protection-and-management/manage/Protected-Users-Security-Group.md).
+This group was introduced in  Windows Server 2012 R2 . For more information about how this group works, see [Protected Users Security Group](Protected-Users-Security-Group.md).
 
 The following table specifies the properties of the Protected Users group.
 

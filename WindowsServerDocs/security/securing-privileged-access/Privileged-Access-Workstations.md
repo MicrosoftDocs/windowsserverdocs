@@ -7,6 +7,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 93589778-3907-4410-8ed5-e7b6db406513
+manager:
 author: YuriDio
 ---
 # Privileged Access Workstations

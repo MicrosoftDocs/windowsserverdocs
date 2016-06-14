@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b52fc7c-c8c1-4b9d-adf5-598c8acc0d32
+manager: dongill
+author: coreyp
 ---
 # Access Control Overview
 This topic for the IT professional describes access control in Windows, which is the process of authorizing users, groups, and computers to access objects on the network or computer. Key concepts that make up access control are permissions, ownership of objects, inheritance of permissions, user rights, and object auditing.

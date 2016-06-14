@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c52050e-61c8-4803-b615-f2756ed36e37
+manager: dongill
+author: coreyp
 ---
 # Special Identities
 This reference topic for the IT professional describes the special identity groups \(which are sometimes referred to as security groups\) that are used in Windows access control.

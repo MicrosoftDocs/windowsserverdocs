@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b206bd9-e264-4176-be7b-1494c37e763d
+manager: dongill
+author: coreyp
 ---
 # Microsoft Accounts
 This topic for the IT professional explains how a Microsoft account works to enhance security and privacy for users, and how you can manage this consumer account type in your organization.
