@@ -17,9 +17,9 @@ This reference topic for the IT professional describes the default local user ac
 
 **Did you mean…**
 
--   *[Active Directory Accounts](Active-Directory-Accounts.md)*
+-   *[Active Directory Accounts](../access-control/Active-Directory-Accounts.md)*
 
--   *[Microsoft Accounts](Microsoft-Accounts.md)*
+-   *[Microsoft Accounts](../access-control/Microsoft-Accounts.md)*
 
 ## About local user accounts
 Local user accounts are stored locally on the server. These accounts can be assigned rights and permissions on a particular server, but on that server only. Local user accounts are security principals that are used to secure and manage access to the resources on a standalone or member server for services or users.
@@ -46,7 +46,7 @@ This topic describes the following:
 
     -   [Create unique passwords for local accounts with administrative rights](#SEC_Create_Unique_Passwords)
 
-For information about security principals, see [Security Principals Technical Overview](Security-Principals-Technical-Overview.md).
+For information about security principals, see [Security Principals Technical Overview](../access-control/Security-Principals-Technical-Overview.md).
 
 ## <a name="Sec_Default_Accounts"></a>Default local user accounts
 The default local user accounts are built\-in accounts that are created automatically when you install the Windows Server operating system on a stand\-alone server or member server. The **Applies To** list at the beginning of this article designates the Windows operating systems to which this topic applies.
@@ -364,10 +364,10 @@ Passwords can be randomized by:
 ## <a name="DHCP_References"></a>See also
 The following resources provide additional information about technologies that are related to local accounts.
 
--   [Security Principals Technical Overview](Security-Principals-Technical-Overview.md)
+-   [Security Principals Technical Overview](../access-control/Security-Principals-Technical-Overview.md)
 
--   [Security Identifiers Technical Overview](Security-Identifiers-Technical-Overview.md)
+-   [Security Identifiers Technical Overview](../access-control/Security-Identifiers-Technical-Overview.md)
 
--   [Access Control Overview](Access-Control-Overview.md)
+-   [Access Control Overview](../access-control/Access-Control-Overview.md)
 
 
