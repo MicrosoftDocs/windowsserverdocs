@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e16dbea9-0f0a-41db-b460-14a1a7ad7540
-author: vhorne
+author: jamesmci
 ---
 # Configure BranchCache Client Computers
 You can use the following topics to configure domain member and non\-domain member client computers as BranchCache distributed cache or hosted cache mode clients.  

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
-author: vhorne
+author: jamesmci
 ---
 # Create a User Role for Access Control
 You can use this topic to create a new Access Control user role in the IPAM client console.  

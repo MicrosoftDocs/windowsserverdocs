@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
-author: vhorne
+author: jamesmci
 ---
 # What&#39;s New in DHCP
 This topic describes the Dynamic Host Configuration Protocol \(DHCP\) functionality that is new or changed in Windows Server® 2016 Technical Preview.  

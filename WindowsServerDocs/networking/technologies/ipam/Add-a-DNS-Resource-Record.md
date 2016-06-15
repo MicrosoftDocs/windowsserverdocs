@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244
-author: vhorne
+author: jamesmci
 ---
 # Add a DNS Resource Record
 You can use this topic to add one or more new DNS resource records by using the IPAM client console.  

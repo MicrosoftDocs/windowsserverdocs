@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
-author: vhorne
+author: jamesmci
 ---
 # NIC Teaming
 This topic provides an overview of Network Interface Card \(NIC\) Teaming in Windows Server® 2016 Technical Preview, and contains the following sections.  

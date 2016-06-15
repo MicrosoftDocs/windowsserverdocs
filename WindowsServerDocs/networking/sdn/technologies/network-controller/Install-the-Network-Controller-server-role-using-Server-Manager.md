@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
-author: vhorne
+author: jamesmci
 ---
 # Install the Network Controller server role using Server Manager
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.  

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
-author: vhorne
+author: jamesmci
 ---
 # Border Gateway Protocol (BGP)
 You can use this topic to gain an understanding of Border Gateway Protocol \(BGP\), including BGP supported deployment topologies and BGP features and capabilities.  

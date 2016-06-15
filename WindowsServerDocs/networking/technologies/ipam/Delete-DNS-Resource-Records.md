@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
-author: vhorne
+author: jamesmci
 ---
 # Delete DNS Resource Records
 You can use this topic to delete one or more DNS resource records by using the IPAM client console.  

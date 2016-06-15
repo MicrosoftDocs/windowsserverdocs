@@ -6,7 +6,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
-author: vhorne
+author: jamesmci
 ---
 # Server Certificate Deployment
 Follow these steps to install an enterprise root certification authority \(CA\) and to deploy server certificates for use with PEAP and EAP.  

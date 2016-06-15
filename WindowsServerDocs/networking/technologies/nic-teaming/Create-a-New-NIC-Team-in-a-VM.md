@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dd80eadf-c87c-4aaa-b96a-cbb04b01db72
-author: vhorne
+author: jamesmci
 ---
 # Create a New NIC Team in a VM
 You can use this topic to connect a virtual machine \(VM\) to Hyper\-V Virtual Switches in a manner that is consistent with NIC Teaming requirements within VMs. You can also use this topic to create a new NIC team in a VM.  

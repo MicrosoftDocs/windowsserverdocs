@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
-author: vhorne
+author: jamesmci
 ---
 # Create a DNS Zone
 You can use this topic to create a DNS zone by using the IPAM client console.  

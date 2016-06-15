@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7f899e62-6e5b-4fca-9a59-130d4766ee2f
-author: vhorne
+author: jamesmci
 ---
 # Installation and Preparation Requirements for Deploying Network Controller
 You can use this topic to prepare your datacenter for Network Controller deployment.  

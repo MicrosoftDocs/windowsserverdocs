@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 842ed937-559a-4f30-86dc-c93475433b4e
-author: vhorne
+author: jamesmci
 ---
 # Deploy Software Defined Network Technologies using Windows PowerShell
 You can use the topics in this section to deploy individual SDN technologies using Windows PowerShell.  

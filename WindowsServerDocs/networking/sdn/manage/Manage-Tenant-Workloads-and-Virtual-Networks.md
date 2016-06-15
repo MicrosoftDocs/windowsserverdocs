@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e2b4540-de56-4d5f-bb8e-9f81ca0ea4eb
-author: vhorne
+author: jamesmci
 ---
 # Manage Tenant Workloads and Virtual Networks
 You can use the topics in this section to manage tenant workloads and virtual networks.  

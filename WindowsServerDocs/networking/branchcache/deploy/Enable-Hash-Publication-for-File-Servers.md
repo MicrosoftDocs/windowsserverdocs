@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
-author: vhorne
+author: jamesmci
 ---
 # Enable Hash Publication for File Servers
 You can enable BranchCache hash publication on one file server or on multiple file servers.  
