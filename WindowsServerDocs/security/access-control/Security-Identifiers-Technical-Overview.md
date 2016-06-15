@@ -30,7 +30,7 @@ The content in this topic applies to computers that are running the supported ve
 
 ### In this topic
 
--   [How security identifiers work](Security-Identifiers-Technical-Overview.md#w2k3tr_sids_how)
+-   [How security identifiers work](../access-control/Security-Identifiers-Technical-Overview.md#w2k3tr_sids_how)
 
 -   [Security identifier architecture](#w2k3tr_sids_how_lpsh)
 

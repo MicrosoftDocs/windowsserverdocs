@@ -17,15 +17,15 @@ Windows Server® 2016 Technical Preview now includes Windows Defender. Windows D
 
 This topic includes information important for running Windows Defender on a server platform. Use the following links to get to the information you need in this topic:
 
--   [Using Windows Defender](Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_UsingDef)
+-   [Using Windows Defender](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_UsingDef)
 
--   [Verify Windows Defender is running](Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefRun)
+-   [Verify Windows Defender is running](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefRun)
 
--   [Update antimalware definitions](Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_UpdateDef)
+-   [Update antimalware definitions](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_UpdateDef)
 
--   [Submit Samples](Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefSamples)
+-   [Submit Samples](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefSamples)
 
--   [Automatic exclusions](Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefExclusions)
+-   [Automatic exclusions](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefExclusions)
 
 ## <a name="BKMK_UsingDef"></a>Using Windows Defender
 By default, Windows Defender is installed and functional on Windows Server 2016 Technical Preview. The user interface is installed by default on some SKUs. You can manage Windows Defender by using WMI, Windows PowerShell®, or by using Group Policy.
@@ -43,7 +43,7 @@ To uninstall Windows Defender, start a Windows PowerShell console as an administ
 `Uninstall-WindowsFeature -Name Windows-Server-Antimalware`
 
 > [!TIP]
-> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events](windows-defender-overview-for-windows-server-technical-preview/Windows-Defender-Events.md).
+> Event messages for the antimalware engine included with Windows Defender can be found in [Windows Defender Events](../windows-defender/Windows-Defender-Events.md).
 
 ## <a name="BKMK_DefRun"></a>Verify Windows Defender is running
 To verify that Windows Defender is running on the server, run the following command: `sc query Windefend`. The `sc query` command returns information about the Windows Defender service. If Windows Defender is running, the `STATE` value displays `RUNNING`.
@@ -122,11 +122,11 @@ To remove exclusions, start a Windows PowerShell console as an administrator, an
 > [!TIP]
 > Custom and duplicate exclusions do not conflict with automatic exclusions.
 
-For more information about automatic exclusions, see [Automatic exclusions for Windows Defender](windows-defender-overview-for-windows-server-technical-preview/Automatic-exclusions-for-Windows-Defender.md).
+For more information about automatic exclusions, see [Automatic exclusions for Windows Defender](../windows-defender/Automatic-exclusions-for-Windows-Defender.md).
 
 ## See Also
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
-[Windows Defender Events](windows-defender-overview-for-windows-server-technical-preview/Windows-Defender-Events.md)
-[Automatic exclusions for Windows Defender](windows-defender-overview-for-windows-server-technical-preview/Automatic-exclusions-for-Windows-Defender.md)
+[Windows Defender Events](../windows-defender/Windows-Defender-Events.md)
+[Automatic exclusions for Windows Defender](../windows-defender/Automatic-exclusions-for-Windows-Defender.md)
 
 

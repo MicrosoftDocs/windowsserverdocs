@@ -332,8 +332,8 @@ This section lists the folder exclusions that are delivered automatically when y
 -   *%systemroot%*\\SoftwareDistribution\\Download
 
 ## See Also
-[Windows Defender Overview for Windows Server Technical Preview](../Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md)
-[Windows Defender Events](Windows-Defender-Events.md)
+[Windows Defender Overview for Windows Server Technical Preview](../windows-defender\Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md)
+[Windows Defender Events](../windows-defender\Windows-Defender-Events.md)
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
 
 

@@ -17,7 +17,7 @@ This topic for the IT professional explains how a Microsoft account works to enh
 
 Microsoft sites, services, and properties such as Windows Live, MSN, Xbox LIVE, Zune, Windows Phone, and computers running Windows 8.1,  Windows 8, and Windows RT use a Microsoft account as a mean of identifying users. Microsoft account is the name for what was previously called Windows Live ID. It has user\-defined secrets associated with it, and it consists of a unique email address and a password.
 
-There are some benefits and considerations when using Microsoft accounts in the enterprise. For more information, see [Microsoft account in the enterprise](Microsoft-Accounts.md#BKMK_MSaccountInTheEnterprise) later in this topic.
+There are some benefits and considerations when using Microsoft accounts in the enterprise. For more information, see [Microsoft account in the enterprise](../access-control/Microsoft-Accounts.md#BKMK_MSaccountInTheEnterprise) later in this topic.
 
 When a user signs in with a Microsoft account, their device is connected to cloud services, and many of the settings, preferences, and apps associated with that user account can roam between devices.
 
@@ -107,7 +107,7 @@ Depending on your IT and business models, introducing Microsoft accounts into yo
 -   [Restrict app installation and usage](#BKMK_RestrictAppInstallationAndUsage)
 
 #### <a name="BKMK_RestrictUse"></a>Restrict the use of the Microsoft account
-If employees are allowed to join the domain with their personal devices, they might expect to connect to enterprise resources by using their Microsoft accounts. If you want to prevent any use of Microsoft accounts within your enterprise, you can configure the local security policy setting [Accounts: Block Microsoft accounts](Accounts--Block-Microsoft-accounts.md). However, this setting can prevent the users from signing in to their Windows devices with their Microsoft accounts \(if they had set them up to do so\) when they are joined to the domain.
+If employees are allowed to join the domain with their personal devices, they might expect to connect to enterprise resources by using their Microsoft accounts. If you want to prevent any use of Microsoft accounts within your enterprise, you can configure the local security policy setting [Accounts: Block Microsoft accounts](../access-control/Microsoft-Accounts.md). However, this setting can prevent the users from signing in to their Windows devices with their Microsoft accounts \(if they had set them up to do so\) when they are joined to the domain.
 
 The default for this setting is **Disabled**, which enables users to use their Microsoft accounts on devices that are joined to your domain. Other options in the setting can:
 

@@ -96,6 +96,6 @@ The following table provides links to additional resources that are related to s
 |**Operations**|[Managed Service Accounts in Active Directory](http://technet.microsoft.com/library/dd378925(v=ws.10).aspx)|
 |**Tools and settings**|[Managed Service Accounts in Active Directory Domain Services](http://technet.microsoft.com/library/dd378925(v=WS.10).aspx)|
 |**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](http://blogs.technet.com/b/askds/archive/2009/09/10/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)|
-|**Related technologies**|[Security Principals Technical Overview](Security-Principals-Technical-Overview.md)<br /><br />[Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)|
+|**Related technologies**|[Security Principals Technical Overview](../access-control/Security-Principals-Technical-Overview.md)<br /><br />[Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md)|
 
 
