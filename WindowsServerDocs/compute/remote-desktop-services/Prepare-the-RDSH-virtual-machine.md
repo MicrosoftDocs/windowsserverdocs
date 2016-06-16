@@ -4,7 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -12,8 +12,11 @@ ms.assetid: d720a65e-b33c-4577-84ad-d84f47dee15b
 author: lizap
 ---
 # Prepare the RDSH virtual machine
+Test information;
+
+
 Use the following steps to prepare the virtual machine for the Remote Desktop Session Host server:  
-  
+
 1.	Connect to the virtual machine:  
     1.	In the Azure portal click **Browse > Virtual Machines**.  
     2.	Select the new RDSH virtual machine (for example, Contoso-RDSH1).  
@@ -32,4 +35,3 @@ Use the following steps to prepare the virtual machine for the Remote Desktop Se
     2.	Click **Change > Domain**, and then enter the domain name (for example, Contoso.com).  
     3.	Enter the domain administrator credentials.  
     4.	Restart the virtual machine.
-
