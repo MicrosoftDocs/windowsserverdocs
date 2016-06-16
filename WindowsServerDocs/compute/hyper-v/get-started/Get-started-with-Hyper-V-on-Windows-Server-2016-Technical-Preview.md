@@ -15,7 +15,7 @@ author: jpjofre
 # Get started with Hyper-V on Windows Server 2016 Technical Preview
   
   
-Use the following resources to set up and try out Hyper-V on the Nano Server, Server Core or GUI installation option of Windows Server 2016 Technical Preview. But before you install anything, check the  [System Requirements for Windows Server](../../../System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).    
+Use the following resources to set up and try out Hyper-V on the Nano Server, Server Core or GUI installation option of Windows Server 2016 Technical Preview. But before you install anything, check the  [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).    
 -   [Download and install Windows Server 2016 Technical Preview](http://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview)  
 	  
 **To use Nano Server as a virtual machine host:**  

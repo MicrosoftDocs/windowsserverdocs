@@ -22,5 +22,6 @@ This collection contains detailed information about virtualization products and 
 |[Getting Started with Nano Server](nano-server/Getting-Started-with-Nano-Server.md)|Nano Server is a remotely administered server operating system optimized for hosting in private clouds and datacenters.|  
 |[Get started with Setup and Boot Event Collection](Get-started-with-Setup-and-Boot-Event-Collection.md)|Setup and Boot Event Collection is a new feature in Windows Server Technical Preview that allows you to designate a “collector” computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process.|  
 |[Remote Desktop Services](./remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)|Learn how to create a desktop hosting environment based on Remote Desktop Services and Azure services.  
+
   
 
