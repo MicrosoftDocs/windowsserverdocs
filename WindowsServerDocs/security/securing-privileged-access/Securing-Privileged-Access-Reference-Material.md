@@ -7,6 +7,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 22ee9a77-4872-4c54-82d9-98fc73a378c0
+manager:
 author: YuriDio
 ---
 # Securing Privileged Access Reference Material
@@ -554,7 +555,7 @@ An administrative forest design should include the following considerations:
         > [!NOTE]
         > A dedicated Windows Server Update Services instance can be configured to automatically approve updates. For more information, see the “Automatically Approve Updates for Installation” section in Approving Updates.
 
--   **Workstation Hardening** \- Build the administrative workstations using the [Privileged Access Workstations](Privileged-Access-Workstations.md) \(through Phase 3\), but change the domain membership to the administrative forest instead of the production environment.
+-   **Workstation Hardening** \- Build the administrative workstations using the [Privileged Access Workstations](../securing-privileged-access/Privileged-Access-Workstations.md) \(through Phase 3\), but change the domain membership to the administrative forest instead of the production environment.
 
 -   **Server and DC hardening** – For all domain controllers and servers in the administrative forest:
 

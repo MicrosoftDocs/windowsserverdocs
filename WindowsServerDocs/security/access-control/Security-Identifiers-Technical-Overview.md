@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f48ac289-ebe0-4988-a927-68180b633207
+manager: dongill
+author: coreyp
 ---
 # Security Identifiers Technical Overview
 This topic for the IT professional describes security identifiers and how they work in regards to accounts and groups in the Windows operating system.
@@ -28,7 +30,7 @@ The content in this topic applies to computers that are running the supported ve
 
 ### In this topic
 
--   [How security identifiers work](Security-Identifiers-Technical-Overview.md#w2k3tr_sids_how)
+-   [How security identifiers work](../access-control/Security-Identifiers-Technical-Overview.md#w2k3tr_sids_how)
 
 -   [Security identifier architecture](#w2k3tr_sids_how_lpsh)
 
@@ -300,6 +302,6 @@ The following table describes changes in SID implementation in the Windows opera
 |Restricted SID checks are implemented|Windows Server 2008, Windows Vista|When restricting SIDs are present, Windows performs two access checks. The first is the normal access check, and the second is the same access check against the restricting SIDs in the token. Both access checks must pass to allow the process to access the object.<br /><br />For more information, see [What's New for Access Control in Windows Server 2008](http://technet.microsoft.com/library/cc731677(v=ws.10).aspx).|
 
 ## See also
-[Access Control Overview](../Access-Control-Overview.md)
+[Access Control Overview](Access-Control-Overview.md)
 
 

@@ -16,9 +16,9 @@ author: Femila
 # Managing RID Issuance
 This topic explains the change to the RID master FSMO role, including the new issuance and monitoring functionality in the RID master and how to analyze and troubleshoot RID issuance.  
   
--   [Managing RID Issuance](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/managing-rid-issuance.md#BKMK_Manage)  
+-   [Managing RID Issuance](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_Manage)  
   
--   [Troubleshooting RID Issuance](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/managing-rid-issuance.md#BKMK_Tshoot)  
+-   [Troubleshooting RID Issuance](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_Tshoot)  
   
 More information is available at the [AskDS Blog](http://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx).  
   
@@ -49,7 +49,7 @@ Assuming a default 30\-bit global RID space, the first event logs when allocatin
 > [!IMPORTANT]  
 > This event is not expected; investigate the user, computer, and group creation processes immediately in the domain. Creating more than 100 million AD DS objects is quite out of the ordinary.  
   
-![](../../media/managing-rid-issuance/adds-rid-tr-eventwaypoints2.png)  
+![](../../media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)  
   
 ### RID Pool Invalidation Events  
 There are new event alerts that a local DC RID pool was discarded. These are Informational and could be expected, especially due to the new VDC functionality. See the event list below for details on the event.  
@@ -81,7 +81,7 @@ Dcdiag.exe /TEST:RidManager /v | find /i "Available RID Pool for the Domain"
   
 If you increase the global RID pool, the available pool will change to 2,147,483,647 instead of the default 1,073,741,823. For example:  
   
-![](../../media/managing-rid-issuance/adds-rid-tr-dcdiag.png)  
+![](../../media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)  
   
 > [!WARNING]  
 > This unlock is intended *only* to prevent running out of RIDS and is to be used *only* in conjunction with RID Ceiling Enforcement \(see next section\). Do not "preemptively" set this in environments that have millions of remaining RIDs and low growth, as application compatibility issues potentially exist with SIDs generated from the unlocked RID pool.  
@@ -122,7 +122,7 @@ To unlock the RID pool to the 31<sup>st</sup> bit after receiving the RID ceilin
   
 9. Select the **Synchronous** and **Extended** options, then click **Run**.  
   
-    ![](../../media/managing-rid-issuance/adds-rid-tr-ldpmodify.png)  
+    ![](../../media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)  
   
 10. If successful, the LDP output window shows:  
   
@@ -133,7 +133,7 @@ To unlock the RID pool to the 31<sup>st</sup> bit after receiving the RID ceilin
   
     ```  
   
-    ![](../../media/managing-rid-issuance/adds-rid-tr-ldpmodifySuccess.png)  
+    ![](../../media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)  
   
 11. Confirm the global RID pool increased by examining the System Event Log on that domain controller for Directory\-Services\-SAM Informational event 16655.  
   
@@ -183,7 +183,7 @@ To remove the block once reaching the artificial ceiling, perform the following 
   
 9. Enable the **Synchronous** and **Extended** options, then click **Run**:  
   
-    ![](../../media/managing-rid-issuance/adds-rid-tr-ldpraiseceiling.png)  
+    ![](../../media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)  
   
 10. If successful, the LDP output window shows:  
   
@@ -194,7 +194,7 @@ To remove the block once reaching the artificial ceiling, perform the following 
   
     ```  
   
-    ![](../../media/managing-rid-issuance/adds-rid-tr-ldpraiseceilingSuccess.png)  
+    ![](../../media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)  
   
 ### Other RID Fixes  
 Previous Windows Server operating systems had a RID pool leak when missing rIDSetReferences attribute. To resolve this problem on domain controllers that run Windows Server 2008 R2, install the hotfix from [KB 2618669](http://support.microsoft.com/kb/2618669).  
@@ -207,10 +207,10 @@ All of the fixes and changes above have Windows Server 2008 R2 hotfixes released
   
 ## <a name="BKMK_Tshoot"></a>Troubleshooting RID Issuance  
   
-### introduction to Troubleshooting  
+### Introduction to Troubleshooting  
 RID issuance troubleshooting requires a logical and linear method. Unless you are monitoring your event logs carefully for RID\-triggered warnings and errors, your first indications of a problem are likely to be failed account creations. The key to troubleshooting RID issuance is to understand when the symptom is expected or not; many RID issuance issues may affect only one domain controller and have nothing to do with component improvements. This simple diagram below helps make those decisions more clear:  
   
-![](../../media/managing-rid-issuance/adds-rid-issuance-troubleshooting.png)  
+![](../../media/Managing-RID-Issuance/adds_rid_issuance_troubleshooting.png)  
   
 ### Troubleshooting Options  
   
@@ -252,7 +252,7 @@ The following new messages log in the System event log on Windows Server 2012 do
 |Event ID|16653|  
 |Source|Directory\-Services\-SAM|  
 |Severity|Warning|  
-|Message|A pool size for account\-identifiers \(RIDs\) that was configured by an Administrator is greater than the supported maximum. The maximum value of %1 will be used when the domain controller is the RID master.<br /><br />For more information, see [RID Block Size Limit](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/managing-rid-issuance.md#BKMK_RIDBlockMaxSize).|  
+|Message|A pool size for account\-identifiers \(RIDs\) that was configured by an Administrator is greater than the supported maximum. The maximum value of %1 will be used when the domain controller is the RID master.<br /><br />For more information, see [RID Block Size Limit](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_RIDBlockMaxSize).|  
 |Notes and resolution|The maximum value for the RID Block Size is now 15000 decimal \(3A98 hexadecimal\). A domain controller cannot request more than 15,000 RIDs. This event logs at every boot until the value is set to a value at or below this maximum.|  
   
 |||  
@@ -285,7 +285,7 @@ The following new messages log in the System event log on Windows Server 2012 do
 |Source|Directory\-Services\-SAM|  
 |Severity|Error|  
 |Message|Action required\! This domain has consumed a considerable portion of the total available account\-identifiers \(RIDs\). A protection mechanism has been activated because the total available account\-identifiers remaining is less than: X% \[artificial ceiling argument\].<br /><br />The protection mechanism prevents account creation until you manually re\-enable account\-identifier allocation on the RID master domain controller.<br /><br />It is extremely important that certain diagnostics are performed prior to re\-enabling account creation to ensure this domain is not consuming account\-identifiers at an abnormally high rate. Any issues identified should be resolved prior to re\-enabling account creation.<br /><br />Failure to diagnose and fix any underlying issue causing an abnormally high rate of account\-identifier consumption can lead to account\-identifier exhaustion in the domain after which account creation will be permanently disabled in this domain.<br /><br />See http:\/\/go.microsoft.com\/fwlink\/?LinkId\=228610 for more information.|  
-|Notes and resolution|Contact all domain administrators and inform them that no further security principals can be created in this domain until this protection is overridden. For more information about how to override the protection and possibly increase the overall RID pool, see [Global RID Space Size Unlock](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/managing-rid-issuance.md#BKMK_GlobalRidSpaceUnlock).|  
+|Notes and resolution|Contact all domain administrators and inform them that no further security principals can be created in this domain until this protection is overridden. For more information about how to override the protection and possibly increase the overall RID pool, see [Global RID Space Size Unlock](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_GlobalRidSpaceUnlock).|  
   
 |||  
 |-|-|  

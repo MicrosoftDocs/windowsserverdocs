@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88d00616-2b16-4186-b5f6-7e07287c5952
+manager: dongill
+author: coreyp
 ---
 # Active Directory Accounts
 Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization. This reference topic for the IT professional describes the Windows Server default local accounts that are stored locally on the domain controller and are used in Active Directory.
 
-This reference topic does not describe default local user accounts for a member or standalone server or for a Windows client. For more information, see [Local Accounts](Local-Accounts.md).
+This reference topic does not describe default local user accounts for a member or standalone server or for a Windows client. For more information, see [Local Accounts](../access-control/Local-Accounts.md).
 
 ## About this topic
 This topic describes the following:
@@ -61,9 +63,9 @@ Primarily, default local accounts do the following:
 
 In Active Directory, default local accounts are used by administrators to manage domain and member servers directly and from dedicated administrative workstations. Active Directory accounts provide access to network resources. Active Directory User accounts and Computer accounts can represent a physical entity, such as a computer or person, or act as dedicated service accounts for some applications.
 
-Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](Active-Directory-Security-Groups.md).
+Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](../access-control/Active-Directory-Security-Groups.md).
 
-On an Active Directory domain controller, each default local account is referred to as a security principal. A security principal is a directory object that is used to secure and manage Active Directory services that provide access to domain controller resources. A security principal includes objects such as user accounts, computer accounts, security groups, or the threads or processes that run in the security context of a user or computer account. For more information, see [Security Principals Technical Overview](Security-Principals-Technical-Overview.md).
+On an Active Directory domain controller, each default local account is referred to as a security principal. A security principal is a directory object that is used to secure and manage Active Directory services that provide access to domain controller resources. A security principal includes objects such as user accounts, computer accounts, security groups, or the threads or processes that run in the security context of a user or computer account. For more information, see [Security Principals Technical Overview](../access-control/Security-Principals-Technical-Overview.md).
 
 A security principal is represented by a unique security identifier \(SID\).The SIDs that are related to each of the default local accounts in Active Directory are described in the sections below.
 
@@ -557,6 +559,6 @@ Because domain controllers store credential password hashes of all accounts in t
 In addition, installed applications and management agents on domain controllers might provide a path for escalating rights that malicious users can use to compromise the management service or administrators of that service. The management tools and services, which your organization uses to manage domain controllers and their administrators, are equally important to the security of the domain controllers and the domain administrator accounts. Ensure that these services and administrators are fully secured with equal effort.
 
 ## See also
-[Security Principals Technical Overview](Security-Principals-Technical-Overview.md)
+[Security Principals Technical Overview](../access-control/Security-Principals-Technical-Overview.md)
 
 

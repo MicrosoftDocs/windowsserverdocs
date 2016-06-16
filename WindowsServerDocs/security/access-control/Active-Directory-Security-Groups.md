@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 473eff45-2b15-4f68-964f-df49f24fa3f6
+manager: dongill
+author: coreyp
 ---
 # Active Directory Security Groups
 This reference topic for the IT professional describes the default Active Directory security groups.
@@ -77,7 +79,7 @@ The following table lists the three group scopes and more information about each
 ### Special identity groups
 Special identities are generally referred to as groups. Special identity groups do not have specific memberships that can be modified, but they can represent different users at different times, depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
 
-For information about all the special identity groups, see [Special Identities](Special-Identities.md).
+For information about all the special identity groups, see [Special Identities](../access-control/Special-Identities.md).
 
 ## Default security groups
 Default groups, such as the Domain Admins group, are security groups that are created automatically when you create an Active Directory domain. You can use these predefined groups to help control access to shared resources and to delegate specific domain\-wide administrative roles.
@@ -166,7 +168,7 @@ This security group has not changed since Windows Server 2008.
 ### <a name="BKMK_AccountOperators"></a>Account Operators
 The Account Operators group grants limited account creation privileges to a user. Members of this group can create and modify most types of accounts, including those of users, local groups, and global groups, and members can log in locally to domain controllers.
 
-Members of the Account Operators group cannot manage the Administrator user account, the user accounts of administrators, or the [Administrators](Active-Directory-Security-Groups.md#BKMK_Admins), [Server Operators](Active-Directory-Security-Groups.md#BKMK_ServerOperators), [Account Operators](Active-Directory-Security-Groups.md#BKMK_AccountOperators), [Backup Operators](Active-Directory-Security-Groups.md#BKMK_BackupOperators), or [Print Operators](Active-Directory-Security-Groups.md#BKMK_PrintOperators) groups. Members of this group cannot modify user rights.
+Members of the Account Operators group cannot manage the Administrator user account, the user accounts of administrators, or the [Administrators](../access-control/Active-Directory-Security-Groups.md#BKMK_Admins), [Server Operators](../access-control/Active-Directory-Security-Groups.md#BKMK_ServerOperators), [Account Operators](../access-control/Active-Directory-Security-Groups.md#BKMK_AccountOperators), [Backup Operators](../access-control/Active-Directory-Security-Groups.md#BKMK_BackupOperators), or [Print Operators](../access-control/Active-Directory-Security-Groups.md#BKMK_PrintOperators) groups. Members of this group cannot modify user rights.
 
 The Account Operators group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
 
@@ -216,7 +218,7 @@ This security group includes the following changes since Windows Server 2008:
 |Default User Rights|[Adjust memory quotas for a process](Adjust-memory-quotas-for-a-process.md): SeIncreaseQuotaPrivilege<br /><br />[Access this computer from the network](Access-this-computer-from-the-network.md): SeNetworkLogonRight<br /><br />[Allow log on locally](Allow-log-on-locally.md): SeInteractiveLogonRight<br /><br />[Allow log on through Remote Desktop Services](Allow-log-on-through-Remote-Desktop-Services.md): SeRemoteInteractiveLogonRight<br /><br />[Back up files and directories](Back-up-files-and-directories.md): SeBackupPrivilege<br /><br />[Bypass traverse checking](Bypass-traverse-checking.md): SeChangeNotifyPrivilege<br /><br />[Change the system time](Change-the-system-time.md): SeSystemTimePrivilege<br /><br />[Change the time zone](Change-the-time-zone.md): SeTimeZonePrivilege<br /><br />[Create a pagefile](Create-a-pagefile.md): SeCreatePagefilePrivilege<br /><br />[Create global objects](Create-global-objects.md): SeCreateGlobalPrivilege<br /><br />[Create symbolic links](Create-symbolic-links.md): SeCreateSymbolicLinkPrivilege<br /><br />[Debug programs](Debug-programs.md): SeDebugPrivilege<br /><br />[Enable computer and user accounts to be trusted for delegation](Enable-computer-and-user-accounts-to-be-trusted-for-delegation.md): SeEnableDelegationPrivilege<br /><br />[Force shutdown from a remote system](Force-shutdown-from-a-remote-system.md): SeRemoteShutdownPrivilege<br /><br />[Impersonate a client after authentication](Impersonate-a-client-after-authentication.md): SeImpersonatePrivilege<br /><br />[Increase scheduling priority](Increase-scheduling-priority.md): SeIncreaseBasePriorityPrivilege<br /><br />[Load and unload device drivers](Load-and-unload-device-drivers.md): SeLoadDriverPrivilege<br /><br />[Log on as a batch job](Log-on-as-a-batch-job.md): SeBatchLogonRight<br /><br />[Manage auditing and security log](Manage-auditing-and-security-log.md): SeSecurityPrivilege<br /><br />[Modify firmware environment values](Modify-firmware-environment-values.md): SeSystemEnvironmentPrivilege<br /><br />[Perform volume maintenance tasks](Perform-volume-maintenance-tasks.md): SeManageVolumePrivilege<br /><br />[Profile system performance](Profile-system-performance.md): SeSystemProfilePrivilege<br /><br />[Profile single process](Profile-single-process.md): SeProfileSingleProcessPrivilege<br /><br />[Remove computer from docking station](Remove-computer-from-docking-station.md): SeUndockPrivilege<br /><br />[Restore files and directories](Restore-files-and-directories.md): SeRestorePrivilege<br /><br />[Shut down the system](Shut-down-the-system.md): SeShutdownPrivilege<br /><br />[Take ownership of files or other objects](Take-ownership-of-files-or-other-objects.md): SeTakeOwnershipPrivilege|
 
 ### <a name="BKMK_AllowedRODCPwdRepl"></a>Allowed RODC Password Replication Group
-The purpose of this security group is to manage a RODC password replication policy. This group has no members by default, and it results in the condition that new Read\-only domain controllers do not cache user credentials. The [Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl) group contains a variety of high\-privilege accounts and security groups. The Denied RODC Password Replication group supersedes the Allowed RODC Password Replication group.
+The purpose of this security group is to manage a RODC password replication policy. This group has no members by default, and it results in the condition that new Read\-only domain controllers do not cache user credentials. The [Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl) group contains a variety of high\-privilege accounts and security groups. The Denied RODC Password Replication group supersedes the Allowed RODC Password Replication group.
 
 The Allowed RODC Password Replication group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
 
@@ -285,7 +287,7 @@ This security group has not changed since Windows Server 2008.
 |Type|Domain Local|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|None|
-|Default member of|[Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default member of|[Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 |Protected by ADMINSDHOLDER?|No|
 |Safe to move out of default container?|Cannot be moved|
 |Safe to delegate management of this group to non\-Service admins?|No|
@@ -332,18 +334,18 @@ This security group was introduced in Windows Vista Service Pack 1, and it h
 ### <a name="BKMK_DeniedRODCPwdRepl"></a>Denied RODC Password Replication Group
 Members of the Denied RODC Password Replication group cannot have their passwords replicated to any Read\-only domain controller.
 
-The purpose of this security group is to manage a RODC password replication policy. This group contains a variety of high\-privilege accounts and security groups. The Denied RODC Password Replication Group supersedes the [Allowed RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_AllowedRODCPwdRepl).
+The purpose of this security group is to manage a RODC password replication policy. This group contains a variety of high\-privilege accounts and security groups. The Denied RODC Password Replication Group supersedes the [Allowed RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_AllowedRODCPwdRepl).
 
 This security group includes the following changes since Windows Server 2008:
 
--   Windows Server 2012 changed the default members to include [Cert Publishers](Active-Directory-Security-Groups.md#BKMK_CertPublishers).
+-   Windows Server 2012 changed the default members to include [Cert Publishers](../access-control/Active-Directory-Security-Groups.md#BKMK_CertPublishers).
 
 |Attribute|Value|
 |-------------|---------|
 |Well\-Known SID\/RID|S\-1\-5\-21\-<domain>\-572|
 |Type|Domain local|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
-|Default members|[Cert Publishers](Active-Directory-Security-Groups.md#BKMK_CertPublishers)<br /><br />[Domain Admins](Active-Directory-Security-Groups.md#BKMK_DomainAdmins)<br /><br />[Domain Controllers](Active-Directory-Security-Groups.md#BKMK_DomainControllers)<br /><br />[Enterprise Admins](Active-Directory-Security-Groups.md#BKMK_EntAdmins)<br /><br />Group Policy Creator Owners<br /><br />krbtgt<br /><br />[Read\-only Domain Controllers](Active-Directory-Security-Groups.md#BKMK_RODC)<br /><br />[Schema Admins](Active-Directory-Security-Groups.md#BKMK_SchemaAdmins)|
+|Default members|[Cert Publishers](../access-control/Active-Directory-Security-Groups.md#BKMK_CertPublishers)<br /><br />[Domain Admins](../access-control/Active-Directory-Security-Groups.md#BKMK_DomainAdmins)<br /><br />[Domain Controllers](../access-control/Active-Directory-Security-Groups.md#BKMK_DomainControllers)<br /><br />[Enterprise Admins](../access-control/Active-Directory-Security-Groups.md#BKMK_EntAdmins)<br /><br />Group Policy Creator Owners<br /><br />krbtgt<br /><br />[Read\-only Domain Controllers](../access-control/Active-Directory-Security-Groups.md#BKMK_RODC)<br /><br />[Schema Admins](../access-control/Active-Directory-Security-Groups.md#BKMK_SchemaAdmins)|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
 |Safe to move out of default container?||
@@ -424,11 +426,11 @@ This security group has not changed since Windows Server 2008.
 |Type|Domain Global|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|Administrator|
-|Default member of|[Administrators](Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />[Denied RODC Password ReplicationGroup](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default member of|[Administrators](../access-control/Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />[Denied RODC Password ReplicationGroup](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non\-Service admins?|No|
-|Default User Rights|See [Administrators](Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />See [Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default User Rights|See [Administrators](../access-control/Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />See [Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 
 ### <a name="BKMK_DomainComputers"></a>Domain Computers
 This group can include all computers and servers that have joined the domain, excluding domain controllers. By default, any computer account that is created automatically becomes a member of this group.
@@ -462,7 +464,7 @@ This security group has not changed since Windows Server 2008.
 |Type|Global|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|Computer accounts for all domain controllers of the domain|
-|Default member of|[Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default member of|[Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|No|
 |Safe to delegate management of this group to non\-Service admins?|No|
@@ -481,11 +483,11 @@ This security group has not changed since Windows Server 2008.
 |Type|Global|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|Guest|
-|Default member of|[Guests](Active-Directory-Security-Groups.md#BKMK_Guests)|
+|Default member of|[Guests](../access-control/Active-Directory-Security-Groups.md#BKMK_Guests)|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Can be moved out but it is not recommended|
 |Safe to delegate management of this group to non\-Service admins?|No|
-|Default User Rights|See [Guests](Active-Directory-Security-Groups.md#BKMK_Guests)|
+|Default User Rights|See [Guests](../access-control/Active-Directory-Security-Groups.md#BKMK_Guests)|
 
 ### <a name="BKMK_DomainUsers"></a>Domain Users
 The Domain Users group includes all user accounts in a domain. When you create a user account in a domain, it is automatically added to this group.
@@ -502,11 +504,11 @@ This security group has not changed since Windows Server 2008.
 |Type|Domain Global|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|Administrator<br /><br />krbtgt|
-|Default member of|[Users](Active-Directory-Security-Groups.md#BKMK_Users)|
+|Default member of|[Users](../access-control/Active-Directory-Security-Groups.md#BKMK_Users)|
 |Protected by ADMINSDHOLDER?|No|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non\-Service admins?|No|
-|Default User Rights|See [Users](Active-Directory-Security-Groups.md#BKMK_Users)|
+|Default User Rights|See [Users](../access-control/Active-Directory-Security-Groups.md#BKMK_Users)|
 
 ### <a name="BKMK_EntAdmins"></a>Enterprise Admins
 The Enterprise Admins group exists only in the root domain of an Active Directory forest of domains. It is a Universal group if the domain is in native mode; it is a Global group if the domain is in mixed mode. Members of this group are authorized to make forest\-wide changes in Active Directory, such as adding child domains.
@@ -523,11 +525,11 @@ This security group has not changed since Windows Server 2008.
 |Type|Universal \(if Domain is in Native\-Mode\) else Global|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|Administrator|
-|Default member of|[Administrators](Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />[Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default member of|[Administrators](../access-control/Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />[Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non\-Service admins?|No|
-|Default User Rights|See [Administrators](Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />See [Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default User Rights|See [Administrators](../access-control/Active-Directory-Security-Groups.md#BKMK_Admins)<br /><br />See [Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 
 ### <a name="BKMK_EntRODC"></a>Enterprise Read\-Only Domain Controllers
 Members of this group are Read\-Only Domain Controllers in the enterprise. Except for account passwords, a Read\-only domain controller holds all the Active Directory objects and attributes that a writable domain controller holds. However, changes cannot be made to the database that is stored on the Read\-only domain controller. Changes must be made on a writable domain controller and then replicated to the Read\-only domain controller.
@@ -586,11 +588,11 @@ This security group has not changed since Windows Server 2008.
 |Type|Global|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|Administrator|
-|Default member of|[Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default member of|[Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 |Protected by ADMINSDHOLDER?|No|
 |Safe to move out of default container?|No|
 |Safe to delegate management of this group to non\-Service admins?|No|
-|Default User Rights|See [Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default User Rights|See [Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 
 ### <a name="BKMK_Guests"></a>Guests
 Members of the Guests group have the same access as members of the Users group by default, except that the Guest account has further restrictions. By default, the only member is the Guest account. The Guests group allows occasional or one\-time users to sign in with limited privileges to a computer’s built\-in Guest account.
@@ -614,7 +616,7 @@ This security group has not changed since Windows Server 2008.
 |Type|Builtin Local|
 |Default container|CN\=BuiltIn, DC\=<domain>, DC\=|
 |Default members|Guest|
-|Default member of|[Domain Guests](Active-Directory-Security-Groups.md#BKMK_DomainGuests)<br /><br />Guest|
+|Default member of|[Domain Guests](../access-control/Active-Directory-Security-Groups.md#BKMK_DomainGuests)<br /><br />Guest|
 |Protected by ADMINSDHOLDER?|No|
 |Safe to move out of default container?|Cannot be moved|
 |Safe to delegate management of this group to non\-Service admins?|No|
@@ -862,7 +864,7 @@ Depending on the account’s domain functional level, members of the Protected U
 
 The Protected Users group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#BKMK_GroupsTable).
 
-This group was introduced in  Windows Server 2012 R2 . For more information about how this group works, see [Protected Users Security Group](../credentials-protection-and-management/manage/Protected-Users-Security-Group.md).
+This group was introduced in  Windows Server 2012 R2 . For more information about how this group works, see [Protected Users Security Group](Protected-Users-Security-Group.md).
 
 The following table specifies the properties of the Protected Users group.
 
@@ -996,16 +998,16 @@ This security group was introduced in Windows Server 2008, and it has not chang
 |Type||
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|None|
-|Default member of|[Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default member of|[Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non\-Service admins?||
-|Default User Rights|See [Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default User Rights|See [Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 
 ### <a name="BKMK_RemoteManagementUsers"></a>Remote Management Users
 Members of the Remote Management Users group can access WMI resources over management protocols \(such as WS\-Management via the Windows Remote Management service\). This applies only to WMI namespaces that grant access to the user.
 
-The Remote Management Users group is generally used to allow users to manage servers through the Server Manager console, whereas the [WinRMRemoteWMIUsers\_](Active-Directory-Security-Groups.md#BKMK_WinRMRemoteWMIUsers_) group is allows remotely running Windows PowerShell commands.
+The Remote Management Users group is generally used to allow users to manage servers through the Server Manager console, whereas the [WinRMRemoteWMIUsers\_](../access-control/Active-Directory-Security-Groups.md#BKMK_WinRMRemoteWMIUsers_) group is allows remotely running Windows PowerShell commands.
 
 For more information, see [WS\-Management Protocol \(Windows\)](http://msdn.microsoft.com/library/aa384470(v=vs.85).aspx) and [About WMI \(Windows\)](http://msdn.microsoft.com/library/aa384642(v=vs.85).aspx).
 
@@ -1064,11 +1066,11 @@ This security group has not changed since Windows Server 2008.
 |Type|Universal \(if Domain is in Native\-Mode\) else Global|
 |Default container|CN\=Users, DC\=<domain>, DC\=|
 |Default members|Administrator|
-|Default member of|[Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default member of|[Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non\-Service admins?|No|
-|Default User Rights|See [Denied RODC Password Replication Group](Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
+|Default User Rights|See [Denied RODC Password Replication Group](../access-control/Active-Directory-Security-Groups.md#BKMK_DeniedRODCPwdRepl)|
 
 ### <a name="BKMK_ServerOperators"></a>Server Operators
 Members in the Server Operators group can administer domain servers. This group exists only on domain controllers. By default, the group has no members. Memebers of the Server Operators group can sign in to a server interactively, create and delete network shared resources, start and stop services, back up and restore files, format the hard disk drive of the computer, and shut down the computer. This group cannot be renamed, deleted, or moved.
@@ -1133,7 +1135,7 @@ This security group includes the following changes since Windows Server 2008:
 |Well\-Known SID\/RID|S\-1\-5\-32\-545|
 |Type|Builtin local|
 |Default container|CN\=Builtin, DC\=<domain>, DC\=|
-|Default members|Authenticated Users<br /><br />[Domain Users](Active-Directory-Security-Groups.md#BKMK_DomainUsers)<br /><br />INTERACTIVE|
+|Default members|Authenticated Users<br /><br />[Domain Users](../access-control/Active-Directory-Security-Groups.md#BKMK_DomainUsers)<br /><br />INTERACTIVE|
 |Default member of|Domain Users \(this membership is due to the fact that the Primary Group ID of all user accounts is Domain Users.\)|
 |Protected by ADMINSDHOLDER?|No|
 |Safe to move out of default container?|Cannot be moved|
@@ -1182,7 +1184,7 @@ The WinRMRemoteWMIUsers\_ group applies to versions of the Windows Server operat
 In Windows Server 2012, the Access Denied Assistance functionality adds the Authenticated Users group to the local WinRMRemoteWMIUsers\_\_ group. Therefore, when the Access Denied Assistance functionality is enabled, all authenticated users who have Read permissions to the file share can view the file share permissions.
 
 > [!NOTE]
-> The WinRMRemoteWMIUsers\_ group allows running Windows PowerShell commands remotely whereas the [Remote Management Users](Active-Directory-Security-Groups.md#BKMK_RemoteManagementUsers) group is generally used to allow users to manage servers by using the Server Manager console.
+> The WinRMRemoteWMIUsers\_ group allows running Windows PowerShell commands remotely whereas the [Remote Management Users](../access-control/Active-Directory-Security-Groups.md#BKMK_RemoteManagementUsers) group is generally used to allow users to manage servers by using the Server Manager console.
 
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
@@ -1201,6 +1203,6 @@ This security group was introduced in Windows Server 2012, and it has not chang
 ## See also
 [Security Principals Technical Overview](Security-Principals-Technical-Overview.md)
 
-[Special Identities](Special-Identities.md)
+[Special Identities](../access-control/Special-Identities.md)
 
 

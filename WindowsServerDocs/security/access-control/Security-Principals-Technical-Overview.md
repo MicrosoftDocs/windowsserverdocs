@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 90050086-fd7a-41c7-801e-9136a898a65a
+manager: dongill
+author: coreyp
 ---
 # Security Principals Technical Overview
 This reference topic for the IT professional describes security principals in regards to Windows accounts and security groups, in addition to security technologies that are related to security principals.
@@ -118,8 +120,8 @@ By using security groups to manage access control, you can:
 
 -   Minimize the size of access control lists \(ACLs\) and speed security checking. A security group has its own SID; therefore, the group SID can be used to specify permissions for a resource. In an environment with more than a few thousand users, if the SIDs of individual user accounts are used to specify access to a resource, the ACL of that resource can become unmanageably large, and the time that is needed for the system to check permissions to the resource can become unacceptable.
 
-For descriptions and settings information about the domain security groups that are defined in Active Directory, see [Active Directory Security Groups](Active-Directory-Security-Groups.md).
+For descriptions and settings information about the domain security groups that are defined in Active Directory, see [Active Directory Security Groups](../access-control/Active-Directory-Security-Groups.md).
 
-For descriptions and settings information about the Special Identities group, see [Special Identities](Special-Identities.md).
+For descriptions and settings information about the Special Identities group, see [Special Identities](../access-control/Special-Identities.md).
 
 

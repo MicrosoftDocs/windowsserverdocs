@@ -7,6 +7,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 93589778-3907-4410-8ed5-e7b6db406513
+manager:
 author: YuriDio
 ---
 # Privileged Access Workstations
@@ -131,7 +132,7 @@ Providing a PAW to access these solutions enables you to gain the security benef
 
 > [!NOTE]
 > These systems should be classified at the highest tier of the privilege they manage and be protected at or above that level of security. These are commonly configured to manage Tier 0 solutions and Tier 0 assets and should be classified at Tier 0. 
-> For more information on the tier model, see [http://aka.ms/tiermodel](http://aka.ms/tiermodel) For more information on Tier 0 groups, see Tier 0 equivalency in [Securing Privileged Access Reference Material](Securing-Privileged-Access-Reference-Material.md).
+> For more information on the tier model, see [http://aka.ms/tiermodel](http://aka.ms/tiermodel) For more information on Tier 0 groups, see Tier 0 equivalency in [Securing Privileged Access Reference Material](../securing-privileged-access/Securing-Privileged-Access-Reference-Material.md).
 
 For more information on deploying Microsoft Identity Manager \(MIM\) privileged access management \(PAM\), see [http://aka.ms/mimpamdeploy](http://aka.ms/mimpamdeploy)
 
@@ -140,7 +141,7 @@ Microsoft uses the PAW architectural approach both internally on our systems as 
 
 This guidance is directly based on the Privileged Access Workstation \(PAW\) reference architecture deployed by our cybersecurity professional services teams to protect customers against cybersecurity attacks. The administrative workstations are also a key element of the strongest protection for domain administration tasks, the Enhanced Security Administrative Environment \(ESAE\) administrative forest reference architecture.
 
-For more details on the ESAE administrative forest, see [ESAE Administrative Forest Design Approach](http://aka.ms/ESAE) section in [Securing Privileged Access Reference Material](Securing-Privileged-Access-Reference-Material.md).
+For more details on the ESAE administrative forest, see [ESAE Administrative Forest Design Approach](http://aka.ms/ESAE) section in [Securing Privileged Access Reference Material](../securing-privileged-access/Securing-Privileged-Access-Reference-Material.md).
 
 For more information on engaging Microsoft services to deploy a PAW or ESAE for your environment, contact your Microsoft representative or visit [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
 
@@ -375,7 +376,7 @@ Phase 1 includes the following steps:
 3.  **Move Tier 0 accounts to the Admin\\Tier 0\\Accounts OU**. Move each account that is a member of the Domain Admin, Enterprise Admin, or Tier 0 equivalent groups \(including nested membership\) to this OU. If your organization has your own groups that are added to these groups, you should move these to the Admin\\Tier 0\\Groups OU.
 
     > [!NOTE]
-    > For more information on which groups are Tier 0, see “Tier 0 Equivalency” in [Securing Privileged Access Reference Material](Securing-Privileged-Access-Reference-Material.md).
+    > For more information on which groups are Tier 0, see “Tier 0 Equivalency” in [Securing Privileged Access Reference Material](../securing-privileged-access/Securing-Privileged-Access-Reference-Material.md).
 
 4.  Add the appropriate members to the relevant groups
 

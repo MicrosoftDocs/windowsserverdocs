@@ -9,6 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fac8c7d6-f2aa-4a55-9319-b28919af71c8
+manager: dongill
+author: coreyp
 ---
 # Dynamic Access Control Overview
 This overview topic for the IT professional describes Dynamic Access Control and its associated elements, which were introduced in  Windows Server 2012  and Windows 8.
@@ -119,6 +121,6 @@ If claims are transformed when they leave a forest, all domain controllers in th
 A file server running  Windows Server 2012  or  Windows Server 2012 R2  must have a Group Policy setting that specifies whether it needs to get user claims for user tokens that do not carry claims. This setting is set by default to **Automatic**, which results in this Group Policy setting to be turned **On** if there is a central policy that contains user or device claims for that file server. If the file server contains discretionary ACLs that include user claims, you need to set this Group Policy to **On** so that the server knows to request claims on behalf of users that do not provide claims when they access the server.
 
 ## Additional resource
-For information about implementing solutions based on this technology, see [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md).
+For information about implementing solutions based on this technology, see [Dynamic Access Control: Scenario Overview](../access-control/Dynamic-Access-Control--Scenario-Overview.md).
 
 
