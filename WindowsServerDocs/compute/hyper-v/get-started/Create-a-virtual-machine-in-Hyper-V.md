@@ -128,6 +128,6 @@ The following table lists the options you can pick when you create a virtual mac
   
 -   [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md)  
   
--  [Configure Hyper-V](../manage/Configure-Hyper-V-on-Windows-Server-2016-Technical-Preview.md)  
+
   
 
