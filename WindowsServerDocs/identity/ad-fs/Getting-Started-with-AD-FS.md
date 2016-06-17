@@ -17,11 +17,11 @@ ms.assetid: 4dc7f362-d045-4ed1-9290-4c2f54a54d31
 
 -   [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
-    -   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Walkthrough-Guide--../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+    -   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 -   [Manage Risk with Conditional Access Control](../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
 
-    -   [Walkthrough Guide: Manage Risk with Conditional Access Control](Walkthrough-Guide--../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
+    -   [Walkthrough Guide: Manage Risk with Conditional Access Control](../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 
 -   [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 
