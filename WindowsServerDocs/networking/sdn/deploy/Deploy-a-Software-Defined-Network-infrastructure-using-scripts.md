@@ -92,18 +92,18 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
   
 3.  Share the `C:\SDNExpress` folder as “**SDNExpress**” with permission for **Everyone** to **Read\/Write**.  
   
-4.  Navigate to the `C:\SDNExpress` folder.  
-  
-    You will see the following folders:  
-  
-    |Folder Name|Description|  
-    |---------------|---------------|  
-    |AgentConf|Holds fresh copies of OVSDB schemas used by the SDN Host Agent on each Windows Server 2016 Hyper\-V host to program network policy.|  
-    |Certs|Temporary shared location for the NC certificate file.|  
-    |Images|Empty, place your Windows Server 2016 Technical Preview vhdx image here|  
-    |Tools|Utilities for troubleshooting and debugging.  Copied to the hosts and virtual machines.  We recommend you place Network Monitor or Wireshark here so it is available if needed.|  
-    |Scripts|Deployment scripts.<br /><br />-   **SDNExpress.ps1**<br />    Deploys and configures the fabric, including the Network controller virtual machines, SLB Mux virtual machines, gateway pool\(s\) and the HNV gateway virtual machine\(s\) corresponding to the pool\(s\) .<br />-   **FabricConfig.psd1**<br />    A  configuration file template for the SDNExpress script.  You will customize this for your environment.<br />-   **SDNExpressTenant.ps1**<br />    Deploys a sample tenant workload on a virtual network with a load balanced VIP.<br />    Also provisions one or more network connections \(IPSec S2S VPN, GRE, L3\) on the service provider edge gateways which are connected to the previously created tenant workload. The IPSec and GRE gateways are available for connectivity over the corresponding VIP IP Address, and the L3 forwarding gateway over the corresponding address pool.<br />    This script can be used to delete  the corresponding configuration with an Undo option as well.<br />-   **TenantConfig.psd1**<br />    A template configuration file for tenant workload and S2S gateway configuration.<br />-   **SDNExpressUndo.ps1**<br />    Cleans up the fabric environment and resets it to a starting state.<br />-   **SDNExpressEnterpriseExample.ps1**<br />    Provisions one or more enterprise site environments with one Remote Access Gateway and \(optionally\) one corresponding enterprise virtual machine per site. The IPSec or GRE enterprise gateways connects to the corresponding VIP IP address of the service provider gateway to establish the S2S tunnels. The L3 Forwarding Gateway connects over the corresponding Peer IP Address. <br />            This script can be used to delete the corresponding configuration with an Undo option as well.<br />-   **EnterpriseConfig.psd1**<br />    A template configuration file for the Enterprise site\-to\-site gateway and Client VM configuration.|  
-    |TenantApps|Files used to deploy example tenant workloads.|  
+4.  Navigate to the `C:\SDNExpress` folder.
+
+ You will see the following folders:  
+
+|Folder Name|Description|  
+|---------------|---------------|  
+|AgentConf|Holds fresh copies of OVSDB schemas used by the SDN Host Agent on each Windows Server 2016 Hyper\-V host to program network policy.|  
+|Certs|Temporary shared location for the NC certificate file.|  
+|Images|Empty, place your Windows Server 2016 Technical Preview vhdx image here|  
+|Tools|Utilities for troubleshooting and debugging.  Copied to the hosts and virtual machines.  We recommend you place Network Monitor or Wireshark here so it is available if needed.|  
+|Scripts|Deployment scripts.<br /><br />-   **SDNExpress.ps1**<br />    Deploys and configures the fabric, including the Network controller virtual machines, SLB Mux virtual machines, gateway pool\(s\) and the HNV gateway virtual machine\(s\) corresponding to the pool\(s\) .<br />-   **FabricConfig.psd1**<br />    A  configuration file template for the SDNExpress script.  You will customize this for your environment.<br />-   **SDNExpressTenant.ps1**<br />    Deploys a sample tenant workload on a virtual network with a load balanced VIP.<br />    Also provisions one or more network connections \(IPSec S2S VPN, GRE, L3\) on the service provider edge gateways which are connected to the previously created tenant workload. The IPSec and GRE gateways are available for connectivity over the corresponding VIP IP Address, and the L3 forwarding gateway over the corresponding address pool.<br />    This script can be used to delete  the corresponding configuration with an Undo option as well.<br />-   **TenantConfig.psd1**<br />    A template configuration file for tenant workload and S2S gateway configuration.<br />-   **SDNExpressUndo.ps1**<br />    Cleans up the fabric environment and resets it to a starting state.<br />-   **SDNExpressEnterpriseExample.ps1**<br />    Provisions one or more enterprise site environments with one Remote Access Gateway and \(optionally\) one corresponding enterprise virtual machine per site. The IPSec or GRE enterprise gateways connects to the corresponding VIP IP address of the service provider gateway to establish the S2S tunnels. The L3 Forwarding Gateway connects over the corresponding Peer IP Address. <br />            This script can be used to delete the corresponding configuration with an Undo option as well.<br />-   **EnterpriseConfig.psd1**<br />    A template configuration file for the Enterprise site\-to\-site gateway and Client VM configuration.|  
+|TenantApps|Files used to deploy example tenant workloads.|  
   
 5.  Verify the Windows Server 2016 Technical Preview VHDX file is in the **Images** folder.  
   
@@ -147,8 +147,9 @@ Now that fabric resources have been deployed, you can validate your SDN deployme
 ``SDNExpress\scripts\SDNExpressTenant.ps1 –ConfigurationDataFile TenantConfig.psd1 –Verbose``  
 3.	To undo the configuration, run the same script with the **undo** parameter. For example:  
 ``SDNExpress\scripts\SDNExpressTenant.ps1 –Undo –ConfigurationDataFile TenantConfig.psd1 –Verbose``  
+
 #### Validation  
-To validate that the tenant deployment was successful, do the following:  
+To validate that the tenant deployment was successful, do the following:
 1.	Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
 2.	Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
 	  
@@ -162,7 +163,7 @@ To validate that the tenant deployment was successful, do the following:
 	  
 	``ipconfig /allcompartments /all``   
 	  
-5)	Check PA connectivity between two hosts using ping. Obtain the compartment ID from the output of the previous command (for example: Compartment 3)  
+5.	Check PA connectivity between two hosts using ping. Obtain the compartment ID from the output of the previous command (for example: Compartment 3)  
 	  
 	``ping –c <compartment Id> <Remote Hyper-V Host PA IP Address>``  
   
@@ -200,10 +201,12 @@ To validate that the tenant deployment was successful, do the following:
 4.  To check if the end-to-end connectivity is up, try the following:  
   
     -   From one of the tenant enterprise gateways, ping the other tenant enterprise network.  
-        	 For example: `ping 14.1.20.1 –S 14.1.10.1`  
+        
+        For example: `ping 14.1.20.1 –S 14.1.10.1`  
   
     -   From one of the tenant enterprise gateways, try to establish an RDP connection with the WebTier virtual machine in the virtual network hosted at the service provider.  
-        	 For example: `mstsc -v 192.168.0.10`  
+
+        For example: `mstsc -v 192.168.0.10`  
   
         In this example, 192.168.0.10 is the DIP on one of the VNET VMs.  
   

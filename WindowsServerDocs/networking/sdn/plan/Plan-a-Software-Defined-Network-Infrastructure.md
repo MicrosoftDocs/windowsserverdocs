@@ -79,7 +79,7 @@ Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your 
 |**Transit**|10.10.10.0|24|10|10.10.10.1|10.10.10.1 - router|  
 |**Public VIP**|41.40.40.0|27|NA|41.40.40.1|41.40.40.1 - router<br /> 41.40.40.2 - SLB/MUX VIP<br />41.40.40.3 - IPSec S2S VPN VIP|  
 |**Private VIP**|20.20.20.0|27|NA|20.20.20.1|20.20.20.1 - default GW \(router\)|  
-**GRE VIP**|31.30.30.0|24|NA|31.30.30.1|31.30.30.1 - default GW|  
+|**GRE VIP**|31.30.30.0|24|NA|31.30.30.1|31.30.30.1 - default GW|  
   
 ### Logical networks required for RDMA-based storage  
   
@@ -92,8 +92,8 @@ If you are using RDMA based storage, then you will need to define a VLAN and sub
   
 Network Name  |Subnet  |Mask  |VLAN ID on trunk  |Gateway  |Reservations<br />(examples)    
 ---------|---------|---------|---------|---------|---------  
-Storage1     |    10.60.36.0     | 25        |   8      |  10.60.36.1       |  10.60.36.1 - router<br />10.60.36.x - Compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster       |  
-|Storage2|10.60.36.128|25|9|10.60.36.129|10.60.36.129 - router<br />10.60.36.x - compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster  
+Storage1     |    10.60.36.0     | 25        |   8      |  10.60.36.1       |  10.60.36.1 - router<br />10.60.36.x - Compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster|  
+Storage2|10.60.36.128|25|9|10.60.36.129|10.60.36.129 - router<br />10.60.36.x - compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster  
   
 For more information about configuring switches, see the **Configuration Examples** section.  
   
@@ -184,15 +184,18 @@ Both the infrastructure and tenant virtual machines can be redistributed across 
   
 ### Network controller deployment  
 The setup is highly available with three network controller nodes (virtual machines). Also shown is two tenants with Tenant 2's virtual network broken into two virtual subnets to simulate a web tier and a database tier.  
-![SDN NC Planningmedia/SDN-NC-Planning.png)  
-  
+
+![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-NC-Planning.png)
+
 ### Network controller and software load balancer deployment  
-For high availablity, there are two or more SLB/MUX nodes.   
-![![SDN SLB Deploymentmedia/SDN-SLB-Planning.png)media/SDN%20SLB%20Deployment.png)  
+For high availablity, there are two or more SLB/MUX nodes.
+   
+![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-SLB-Deployment.png)
   
 ### Network controller, software load balancer, and gateway deployment  
-There are three gateway virtual machines; two active, one redundant.  
-![SDN GW Deploymentmedia/SDN-GW-Deployment.png)  
+There are three gateway virtual machines; two active, one redundant.
+
+![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-GW-Deployment.png)  
   
   
   
@@ -227,11 +230,11 @@ The following table shows the minimum hardware and software requirements for the
 |--------|---------------------|-----------------------|---------------------|  
 |Network controller \(three node)|4 vCPUs|4 GB min \(8 GB recommended\)|75 GB for the OS drive|  
 |SLB/MUX (three node)|8 vCPUs|8 GB recommended|75 GB for the OS drive|  
-RAS Gateway<br /><br />(single pool of three node gateways, two active, one passive)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
+|RAS Gateway<br /><br />(single pool of three node gateways, two active, one passive)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
 |RAS Gateway BGP router for SLB/MUX peering<br /><br />\(alternatively use ToR switch as BGP Router\)|2 vCPUs|2 GB|75 GB for the OS drive|  
   
   
-If you use VMM for deployment, additional infrastructure virtual machine resources are required for VMM and other non-SDN infrastructure. For additional information, see [Minimum Hardware Recommendations for System Center Technical Preview](https://technet.microsoft.com/library/dn997303.aspx)  
+If you use VMM for deployment, additional infrastructure virtual machine resources are required for VMM and other non-SDN infrastructure. For additional information, see [Minimum Hardware Recommendations for System Center Technical Preview.](https://technet.microsoft.com/library/dn997303.aspx)  
   
 ## Extending your infrastructure  
 The sizing and resource requirements for your infrastructure are dependent on the tenant workload virtual machines that you plan to host. The CPU, memory, and disk requirements for the infrastructure virtual machines (for example: network controller, SLB, gateway, etc.) are listed in the previous table. You can add more of these infrastructure virtual machines to scale out as needed. However, any tenant virtual machines running on the Hyper-V hosts have their own CPU, memory, and disk requirements that you must consider.   

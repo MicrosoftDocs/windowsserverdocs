@@ -19,7 +19,7 @@ These deployments include all the technologies you need for a fully functional i
   
     
   
--   [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/library/mt695701(v=sc.16).aspx)  
+-   [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/library/mt695701.aspx)  
   
     Use this method if you want to incorporate System Center Virtual Machine Manger (VMM) to manage your SDN infrastructure.  
   
