@@ -47,7 +47,7 @@ The remainder of the is document provides the steps for adding a Windows Server 
   
 2.  Using the AD FS Configuration wizard, join the new Windows Server 2016 server to the existing AD FS farm.  
   
-    ![](../../../media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)  
+    ![](../../..//media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)  
   
 3.  On the Windows Server 2016 federation server, open AD FS management.    Note that nothing is showing up as this federation server is not the primary server.  
   
