@@ -159,7 +159,7 @@ You must be logged on to a server as an administrator to uninstall roles, role s
     > -   **Read\/Write** access on the **File Sharing** dialog box.  
     > -   **Full Control** access on the **Security** tab , file or folder **Properties** dialog box.  
   
-    For information about how to add servers to your server pool, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md). After you have selected the destination server, click **Next**.  
+    For information about how to add servers to your server pool, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md). After you have selected the destination server, click **Next**.  
   
     > [!NOTE]  
     > You can use the Remove Roles and Features Wizard to remove roles and features from servers that are running the same release of Windows Server that supports the version of Server Manager that you are using. You cannot remove roles, role services, or features from servers that are running Windows Server 2016 Technical Preview, if you are running Server Manager on  Windows Server 2012 R2 ,  Windows Server 2012 , or Windows 8. You cannot use the Remove Roles and Features Wizard to remove roles and features from servers that are running  Windows Server 2008  or  Windows Server 2008 R2 .  

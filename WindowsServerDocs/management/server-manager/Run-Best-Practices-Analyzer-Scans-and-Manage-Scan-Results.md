@@ -15,7 +15,7 @@ ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
 
 |||
 |-|-|
-|![](b93f8edc-baa1-46ad-aed5-99c8690273c0)|Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> \- [Deploy Windows Server Active Directory on Azure Virtual Machines.](http://aka.ms/jh4s4r)|
+|!|Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> \- [Deploy Windows Server Active Directory on Azure Virtual Machines.](http://aka.ms/jh4s4r)|
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under typical circumstances, to configure a server as defined by experts. For example, it is considered a best practice for most server applications to keep open only those ports required for the applications to communicate with other networked computers, and block unused ports. Although best practice violations, even crucial ones, are not necessarily problematic, they indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 
@@ -299,7 +299,7 @@ To view and manage scan results by using Windows PowerShell cmdlets, see the fol
 
 ## See Also
 [Best Practices Analyzer resolution content on the Windows Server TechCenter](http://go.microsoft.com/fwlink/p/?LinkId=241597)
-[Filter, Sort, and Query Data in Server Manager Tiles_1](Filter,-Sort,-and-Query-Data-in-Server-Manager-Tiles_1.md)
-[Manage Multiple, Remote Servers with Server Manager](Manage-Multiple,-Remote-Servers-with-Server-Manager.md)
+[Filter, Sort, and Query Data in Server Manager Tiles](Filter-Sort-and-Query-Data-in-Server-Manager-Tiles.md)
+[Manage Multiple, Remote Servers with Server Manager](Manage-Multiple-Remote-Servers-with-Server-Manager.md)
 
 
