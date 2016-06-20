@@ -32,7 +32,7 @@ This collection contains tool and reference information for IT pros who want to 
   
     The content in this section describes how to configure and use Windows PowerShell Web Access, a feature that allows a server that is running Web Server \(IIS\) to act as a Windows PowerShell gateway and provide a web\-based Windows PowerShell console to users in your organization.  
   
--   [Windows Server Update Services &#40;WSUS&#41;](Windows-Server-Update-Services--WSUS-.md)  
+-   [Windows Server Update Services &#40;WSUS&#41;](windows-server-update-services/Windows-Server-Update-Services--WSUS-.md)  
   
     The content in this section describes how to configure and manage WSUS. In this section you will find information about installing the WSUS Server Role, configuring WSUS servers, as well as managing updates, and managing WSUS client computers and WSUS computer groups.  
   
