@@ -16,7 +16,7 @@ author: cwatsonmsft
 You can give a virtual machine access to a computer’s local resources, like a removable USB flash drive, when you use Virtual Connection Manager \(VMConnect\). To make this happen, turn on enhanced session mode on the Hyper\-V host, use VMConnect to connect to the virtual machine, and before you connect, choose the local resource that you want to use.  
   
 ## <a name="BKMK_OVER"></a>Turn on enhanced session mode on Hyper\-V host  
-If your Hyper\-V host runs Windows 8 or Windows 8.1, you might not have to go through the following steps to turn on enhanced session mode. It's turn on by default. But if your host runs Windows Server 2012 or Windows Server 2012 R2, you must turn on enhanced session mode to use it. It is turned off by default for those operating systems.  
+If your Hyper\-V host runs Windows 8 or Windows 8.1, you might not have to go through the following steps to turn on enhanced session mode. It's turn on by default. But if your host runs  Windows Server 2012  or  Windows Server 2012 R2 , you must turn on enhanced session mode to use it. It is turned off by default for those operating systems.  
   
 To turn on enhanced session mode,  
   
@@ -87,9 +87,9 @@ To be able to use a computer’s local resources on a virtual machine:
   
 -   The Hyper\-V host  must have **Enhanced session mode policy** and **Enhanced session mode** settings turned on.  
   
--   The computer that you use to connect to the virtual machine with VMConnect must run Windows 8, Windows 8.1, Windows Server 2012, or Windows Server 2012 R2.  
+-   The computer that you use to connect to the virtual machine with VMConnect must run Windows 8, Windows 8.1,  Windows Server 2012 , or  Windows Server 2012 R2 .  
   
--   The virtual machine must have Remote Desktop Services enabled and run Windows Server 2012 R2 or Windows 8.1 as the guest operating system.  
+-   The virtual machine must have Remote Desktop Services enabled and run  Windows Server 2012 R2  or Windows 8.1 as the guest operating system.  
   
 If your virtual machine fits those criteria, then you can use any of the following local resources available from the computer where you use VMConnect.  
   
