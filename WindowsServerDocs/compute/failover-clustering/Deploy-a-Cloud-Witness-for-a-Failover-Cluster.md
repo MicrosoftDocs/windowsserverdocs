@@ -20,7 +20,7 @@ Cloud Witness is a new type of Failover Cluster quorum witness being introduced 
 ## <a name="BKMK_CloudWitnessOverview"></a>Cloud Witness Overview
 Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016 Technical Preview. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.  
 
-![](media/CloudWitness_1.png)
+![](./media/CloudWitness_1.png)
 
 **Figure 1: Using a File Share Witness as a quorum witness**  
 
@@ -44,7 +44,7 @@ There are significant benefits which this approach:
 5.  Built-in Cloud Witness resource type.  
 
 
-![](media/CloudWitness_2.png)
+![](./media/CloudWitness_2.png)
 
 **Figure 2: Multi-site stretched clusters with Cloud Witness as a quorum witness**  
 
@@ -94,7 +94,7 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 
      >[!NOTE]Failover Cluster uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Hence, it is very important to select **Locally-redundant storage** for **Replication** type.   
 
-      ![](media/CloudWitness_3.png)
+      ![](./media/CloudWitness_3.png)
 
       **Figure 3: Creating an Azure Storage account with locally-redundant storage replication type**
 
@@ -106,7 +106,7 @@ When you create a Microsoft Azure Storage Account, it is associated with two Acc
 
 In the Azure Portal, navigate to your storage account, click **All settings** and then click **Access keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications (see figure 4).
 
-  ![](media/CloudWitness_4.png)  
+  ![](./media/CloudWitness_4.png)  
 
  **Figure 4: Storage access keys**
 
@@ -121,7 +121,7 @@ Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windo
 
 In the Azure Portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).  
 
-![](media/CloudWitness_5.png)  
+![](./media/CloudWitness_5.png)  
 
    **Figure 5: Cloud Witness endpoint URL links**
 
@@ -135,19 +135,19 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
  1. Launch Failover Cluster Manager.
  2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 7).This launches the Configure Cluster Quorum Wizard  
 
-    ![](media/CloudWitness_7.png)  
+    ![](./media/CloudWitness_7.png)  
 
     **Figure 7. Cluster Quorum Settings**
  
 1.  On the  **Select Quorum Configurations** page, select **Select the quorum witness** (see figure 8).  
 
-    ![](media/CloudWitness_8.png)  
+    ![](./media/CloudWitness_8.png)  
 
      **Figure 8. Select the Quorum Configuration**
 
 1. On the **Select Quorum Witness** page, select **Configure a cloud witness** (see figure 9).  
 
-    ![](media/CloudWitness_9.png)
+    ![](./media/CloudWitness_9.png)
 
      **Figure 9. Select the Quorum Witness**  
 
@@ -163,11 +163,11 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 
     3.  (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
 
-    ![](media/CloudWitness_10.png)
+    ![](./media/CloudWitness_10.png)
 
 1.  Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 11).
 
-     ![](media/CloudWitness_11.png) 
+     ![](./media/CloudWitness_11.png)
 
     **Figure 11: Successful configuration of Cloud Witness**
 
@@ -192,4 +192,4 @@ In case you need to use a different endpoint (rare):
 
 *  Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.  
 ## See Also
--   [What's New in Failover Clustering in Windows Server Technical Preview](../failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)
+-   [What's New in Failover Clustering in Windows Server Technical Preview](../What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)
