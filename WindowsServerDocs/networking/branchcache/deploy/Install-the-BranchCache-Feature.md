@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4f31dc61-2dbe-4c7e-b3f9-85ae49a45049
-author: vhorne
+author: jamesmci
 ---
 # Install the BranchCache Feature
 You can use this procedure to install the BranchCache feature and start the BranchCache service on a computer running  Windows Server 2012 .  

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
-author: vhorne
+author: jamesmci
 ---
 # DNS Policy Scenario Guide
 This guide is intended for use by DNS, network, and systems administrators.  

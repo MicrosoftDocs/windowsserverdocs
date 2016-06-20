@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
-author: vhorne
+author: jamesmci
 ---
 # Software Defined Networking Technologies
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server® 2016 Technical Preview.  

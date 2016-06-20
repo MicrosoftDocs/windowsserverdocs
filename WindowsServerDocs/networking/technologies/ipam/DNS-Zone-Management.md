@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de3dc14b-164a-49f1-8a57-b9e788046c23
-author: vhorne
+author: jamesmci
 ---
 # DNS Zone Management
 This topic provides information about managing DNS zones by using the IPAM client console.  

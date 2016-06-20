@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 96d03b42-6cd9-4905-b6a2-dc36130dd24f
-author: vhorne
+author: jamesmci
 ---
 # Deploy Hosted Cache Servers (Optional)
 You can use this procedure to install and configure BranchCache hosted cache servers that are located in branch offices where you want to deploy BranchCache hosted cache mode. With BranchCache in Windows Server 2016 Technical Preview, you can deploy multiple hosted cache servers in one branch office.  

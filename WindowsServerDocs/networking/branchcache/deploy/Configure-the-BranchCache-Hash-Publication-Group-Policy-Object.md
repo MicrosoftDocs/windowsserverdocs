@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: da74fea7-52b2-4d6d-9d21-19184eedbe3c
-author: vhorne
+author: jamesmci
 ---
 # Configure the BranchCache Hash Publication Group Policy Object
 You can use this procedure to configure the BranchCache hash publication Group Policy Object \(GPO\) so that all file servers that you added to your OU have the same hash publication policy setting applied to them.  

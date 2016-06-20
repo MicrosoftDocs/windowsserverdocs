@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
-author: vhorne
+author: jamesmci
 ---
 # Edit a DNS Zone
 You can use this topic to edit a DNS zone in the IPAM client console.  

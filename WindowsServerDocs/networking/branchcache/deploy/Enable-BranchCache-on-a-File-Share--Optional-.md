@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
-author: vhorne
+author: jamesmci
 ---
 # Enable BranchCache on a File Share (Optional)
 You can use this procedure to enable BranchCache on a file share.  

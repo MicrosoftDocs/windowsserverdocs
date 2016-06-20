@@ -6,7 +6,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
-author: vhorne
+author: jamesmci
 ---
 # Configure the Server Certificate Template
 You can use this procedure to configure the certificate template that Active Directory® Certificate Services \(AD CS\) uses as the basis for server certificates that are enrolled to servers on your network.  

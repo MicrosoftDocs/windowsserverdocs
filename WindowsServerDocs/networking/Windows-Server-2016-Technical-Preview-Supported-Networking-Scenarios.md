@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
-author: vhorne
+author: jamesmci
 ---
 # Windows Server 2016 Technical Preview Supported Networking Scenarios
 This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of  Windows Server® 2016 Technical Preview.  

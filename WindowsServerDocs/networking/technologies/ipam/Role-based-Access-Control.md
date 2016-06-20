@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
-author: vhorne
+author: jamesmci
 ---
 # Role-based Access Control
 This topic provides information about using role\-based access control in IPAM.  

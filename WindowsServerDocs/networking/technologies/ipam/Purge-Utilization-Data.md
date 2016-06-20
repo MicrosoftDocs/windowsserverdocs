@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45cada9e-69b9-43df-b6f5-6d3942435809
-author: vhorne
+author: jamesmci
 ---
 # Purge Utilization Data
 You can use this topic to learn how to delete utilization data from the IPAM database.  

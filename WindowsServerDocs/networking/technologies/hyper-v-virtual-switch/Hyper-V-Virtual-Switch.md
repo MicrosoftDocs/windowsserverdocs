@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-author: vhorne
+author: jamesmci
 ---
 # Hyper-V Virtual Switch
 This topic provides an overview of the Hyper\-V Virtual Switch, and contains the following sections.  

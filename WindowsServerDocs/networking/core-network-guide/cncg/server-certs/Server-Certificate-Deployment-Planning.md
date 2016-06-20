@@ -6,7 +6,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7eb746e0-1046-4123-b532-77d5683ded44
-author: vhorne
+author: jamesmci
 ---
 # Server Certificate Deployment Planning
 Before you deploy server certificates, you must plan the following items:  

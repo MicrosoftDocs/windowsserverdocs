@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b66c09d-e401-4f70-9a2a-6047dd629bfa
-author: vhorne
+author: jamesmci
 ---
 # DNS Resource Record Management
 This topic provides information about managing DNS resource records by using IPAM.  

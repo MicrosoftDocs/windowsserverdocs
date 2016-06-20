@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
-author: vhorne
+author: jamesmci
 ---
 # View Roles and Role Permissions
 You can use this topic to view Access Control user roles in the IPAM client console.  

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
-author: vhorne
+author: jamesmci
 ---
 # RAS Gateway
 This topic, which is intended for Information Technology \(IT\) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features.  

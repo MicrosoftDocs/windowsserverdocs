@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
-author: vhorne
+author: jamesmci
 ---
 # What&#39;s New in DNS Server in Windows Server Technical Preview
 This topic describes the Domain Name System \(DNS\) server functionality that is new or changed in Windows Server 2016 Technical Preview 3.  

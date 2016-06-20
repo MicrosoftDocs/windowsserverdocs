@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
-author: vhorne
+author: jamesmci
 ---
 # RAS Gateway High Availability
 You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking \(SDN\).  

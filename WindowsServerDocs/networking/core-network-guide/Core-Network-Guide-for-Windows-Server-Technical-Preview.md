@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
-author: vhorne
+author: jamesmci
 ---
 # Core Network Guide for Windows Server Technical Preview
 This topic provides an overview of the Core Network Guide for Windows Server® 2016 Technical Preview, and contains the following sections.  

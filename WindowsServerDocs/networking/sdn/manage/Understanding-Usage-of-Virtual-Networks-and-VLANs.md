@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
-author: vhorne
+author: jamesmci
 ---
 # Understanding Usage of Virtual Networks and VLANs
 You can use this topic to learn about Hyper-V Network Virtualization Virtual Networks and how they differ from virtual local area networks (VLANs).  

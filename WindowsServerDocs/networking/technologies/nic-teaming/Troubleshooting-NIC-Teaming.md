@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fdee02ec-3a7e-473e-9784-2889dc1b6dbb
-author: vhorne
+author: jamesmci
 ---
 # Troubleshooting NIC Teaming
 This topic provides information about troubleshooting NIC Teaming, and contains the following sections, which describe possible causes of issues with NIC Teaming.  

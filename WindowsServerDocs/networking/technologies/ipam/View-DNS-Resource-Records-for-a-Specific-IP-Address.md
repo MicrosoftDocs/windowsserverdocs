@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
-author: vhorne
+author: jamesmci
 ---
 # View DNS Resource Records for a Specific IP Address
 You can use this topic to view the DNS resource records that are associated with the IP Address that you choose.  

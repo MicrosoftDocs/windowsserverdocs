@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
-author: vhorne
+author: jamesmci
 ---
 # RAS Gateway Deployment Architecture
 You can use this topic to learn about Cloud Service Provider \(CSP\) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.  

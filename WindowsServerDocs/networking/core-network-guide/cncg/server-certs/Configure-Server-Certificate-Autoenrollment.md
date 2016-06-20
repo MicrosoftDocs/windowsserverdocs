@@ -6,7 +6,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
-author: vhorne
+author: jamesmci
 ---
 # Configure Server Certificate Autoenrollment
   

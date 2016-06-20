@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18
-author: vhorne
+author: jamesmci
 ---
 # What&#39;s New in Networking
 Following are the new or enhanced networking technologies in Windows Server® 2016 Technical Preview.  

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
-author: vhorne
+author: jamesmci
 ---
 # Create an Access Policy
 You can use this topic to create an access policy in the IPAM client console.  
