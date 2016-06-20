@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
-author: coreyp
+author: coreyp-at-msft
 ---
 # Filter, Sort, and Query Data in Server Manager Tiles
 In Windows Server 2016 Technical Preview, tiles in Server Manager let you filter and sort data, and create and save custom queries. You can sort, use keyword filters, and run queries on list entries in the Events, Performance, Best Practices Analyzer, Services, and Roles and Features tiles on server role or group pages in Server Manager.  
@@ -74,7 +74,7 @@ You can create custom queries in the Events, Performance, Best Practices Analyze
 12. To delete a saved query, click **Saved Search Queries**, and then click **X** by the name of the saved query that you want to delete.  
   
 ## See Also  
-[Server Manager_1](Server-Manager_1.md)  
-[View and Configure Performance, Event, and Service Data_1](View-and-Configure-Performance,-Event,-and-Service-Data_1.md)  
+[Server Manager](Server-Manager.md)  
+[View and Configure Performance, Event, and Service Data](View-and-Configure-Performance-Event-and-Service-Data.md)  
   
 
