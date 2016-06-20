@@ -57,7 +57,7 @@ The Server Manager console is included with [Remote Server Administration Tools]
 
 ###### To start Server Manager on a client computer
 
-1.  Follow instructions in [Remote Server Administration Tools](Remote-Server-Administration-Tools.md) to install Remote Server Administration Tools for Windows 10.
+1.  Follow instructions in [Remote Server Administration Tools](../Remote-Server-Administration-Tools.md) to install Remote Server Administration Tools for Windows 10.
 
 2.  On the **Start** screen, click **Server Manager**. The **Server Manager** tile is available after you install Remote Server Administration Tools.
 
