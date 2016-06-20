@@ -27,10 +27,10 @@ ms.assetid: 4dc7f362-d045-4ed1-9290-4c2f54a54d31
 
     -   [Walkthrough: Workplace Join with an iOS Device](../ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
-    -   [Walkthrough: Workplace Join with a Windows Device](../ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+    -   [Walkthrough: Workplace Join with a Windows Device](get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 
 ## See Also
-[Active Directory Federation Services Overview](Active-Directory-Federation-Services-Overview.md)
+[Active Directory Federation Services Overview](AD-FS-2016-Overview.md)
 
 
