@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 26d105e0-afc3-44b5-bb5e-0c884a4c5d62
-author: vhorne
+author: jamesmci
 ---
 # NIC Teaming MAC Address Use and Management
 When you configure a NIC Team with switch independent mode and either address hash or dynamic load distribution, the team uses the media access control \(MAC\) address of the primary NIC Team member on outbound traffic. The primary NIC Team member is a network adapter selected by the operating system from the initial set of team members.  

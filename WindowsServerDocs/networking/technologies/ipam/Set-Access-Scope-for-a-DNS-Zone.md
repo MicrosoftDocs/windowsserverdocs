@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a211dde-80eb-4888-b5bb-4e28fe8dc7df
-author: vhorne
+author: jamesmci
 ---
 # Set Access Scope for a DNS Zone
 You can use this topic to set the access scope for a DNS zone by using the IPAM client console.  

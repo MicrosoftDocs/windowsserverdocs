@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
-author: vhorne
+author: jamesmci
 ---
 # Add a Virtual Gateway to a Tenant Virtual Network
 You can use this topic to learn how to configure tenant Virtual Gateways, using Windows PowerShell cmdlets and scripts, to provide your tenants' Virtual Networks with site-to-site connectivity to their organization sites and to the Internet.   

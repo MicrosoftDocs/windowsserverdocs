@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
-author: vhorne
+author: jamesmci
 ---
 # BranchCache Deployment Guide
 You  can use this guide to learn how to deploy BranchCache in Windows Server® 2016 Technical Preview.  

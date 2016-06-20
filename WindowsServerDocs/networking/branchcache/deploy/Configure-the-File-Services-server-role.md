@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 68b0f5a0-1ae8-489e-b8f8-1190267a0e1d
-author: vhorne
+author: jamesmci
 ---
 # Configure the File Services server role
 You can deploy BranchCache file server\-based content servers on computers running Windows Server 2016 Technical Preview and the File Services server role with the **BranchCache for network files** role service installed.  

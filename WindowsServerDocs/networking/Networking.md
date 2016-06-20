@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
-author: vhorne
+author: jamesmci
 ---
 # Networking
 This collection contains detailed information about networking products and features for the IT professional to design, deploy, and maintain Windows Server. Following are the networking technologies and documentation for Windows Server® 2016 Technical Preview.  

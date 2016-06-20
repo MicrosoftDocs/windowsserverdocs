@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
-author: vhorne
+author: jamesmci
 ---
 # What&#39;s New in IPAM
 This topic describes the IP Address Management \(IPAM\) functionality that is new or changed in Windows Server 2016 Technical Preview.  

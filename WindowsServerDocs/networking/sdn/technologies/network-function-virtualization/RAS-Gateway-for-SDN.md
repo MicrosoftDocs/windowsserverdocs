@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a32357a5-ab1a-4a4c-848a-7a4ed65b1921
-author: vhorne
+author: jamesmci
 ---
 # RAS Gateway for SDN
 You can use this topic to learn about RAS Gateway, which is a software\-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016 Technical Preview that is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper\-V Network Virtualization.  

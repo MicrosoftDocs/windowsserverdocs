@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6edaba84-4595-4fd8-95d7-64d4d975a38a
-author: vhorne
+author: jamesmci
 ---
 # What&#39;s New in DNS Client in Windows Server Technical Preview
 This topic describes the Domain Name System \(DNS\) client functionality that is new or changed in Windows 10®.  

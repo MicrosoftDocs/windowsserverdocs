@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6b71d18e-1939-4fc0-bb42-29e0e5ffc8da
-author: vhorne
+author: jamesmci
 ---
 # DirectAccess
 You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, as well as for links to additional DirectAccess documentation for Windows Server® 2016 Technical Preview.  

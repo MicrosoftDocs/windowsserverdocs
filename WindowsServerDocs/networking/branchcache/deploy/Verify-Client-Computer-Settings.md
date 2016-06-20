@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
-author: vhorne
+author: jamesmci
 ---
 # Verify Client Computer Settings
 You can use this procedure to verify that the client computer is correctly configured for BranchCache.  

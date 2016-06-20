@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abc08a10-4b97-47d0-8876-9223c7b79691
-author: vhorne
+author: jamesmci
 ---
 # Create a New NIC Team
 You can use this topic to create a new NIC Team on a host computer or in a Hyper\-V virtual machine \(VM\) that is running Windows Server® 2016 Technical Preview.  

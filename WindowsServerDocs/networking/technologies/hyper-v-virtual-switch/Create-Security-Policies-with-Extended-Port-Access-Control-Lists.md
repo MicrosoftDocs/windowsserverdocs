@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a92e61c3-f7d4-4e42-8575-79d75d05a218
-author: vhorne
+author: jamesmci
 ---
 # Create Security Policies with Extended Port Access Control Lists
 This topic provides information about  extended port Access Control Lists \(ACLs\) in Windows Server® 2016 Technical Preview. You can configure extended ACLs on the Hyper\-V Virtual Switch to allow and block network traffic to and from the virtual machines \(VMs\) that are connected to the switch via virtual network adapters.  

@@ -6,7 +6,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
-author: vhorne
+author: jamesmci
 ---
 # Deploy Server Certificates for 802.1X Wired and Wireless Deployments
   

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
-author: vhorne
+author: jamesmci
 ---
 # Software Defined Networking (SDN)
 You can use this topic to learn about the Software Defined Networking \(SDN\) technologies that are provided in Windows Server, System Center, and Microsoft Azure.  

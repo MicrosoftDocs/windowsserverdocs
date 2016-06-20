@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c68905ef-d54f-4fc8-80ac-1006125db64f
-author: vhorne
+author: jamesmci
 ---
 # Manage IPAM
 This guide provides administration and troubleshooting information for the IP Address Management \(IPAM\) feature in Windows Server® 2016 Technical Preview.  

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1324ba18-4e28-4b9d-bbe7-75707e6d30ab
-author: vhorne
+author: jamesmci
 ---
 # Domain Name System (DNS)
 Domain Name System \(DNS\) is one of the industry\-standard suite of protocols that comprise TCP\/IP, and together the DNS Client and DNS Server provide computer name\-to\-IP address mapping name resolution services to computers and users.  

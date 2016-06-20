@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
-author: vhorne
+author: jamesmci
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 You can use this topic for a brief overview of DHCP in Windows Server® 2016 Technical Preview.  
