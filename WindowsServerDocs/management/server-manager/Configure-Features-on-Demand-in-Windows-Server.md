@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
+author: coreyp-at-msft
 ---
 # Configure Features on Demand in Windows Server
 This topic describes how to remove feature files in a Features on Demand configuration by using the Uninstall\-WindowsFeature cmdlet.
@@ -109,7 +110,7 @@ You can use the Uninstall\-WindowsFeature cmdlet both to uninstall roles, role s
     ```
 
 ## See Also
-[Install or Uninstall Roles, Role Services, or Features_1](Install-or-Uninstall-Roles,-Role-Services,-or-Features_1.md)
+[Install or Uninstall Roles, Role Services, or Features](Install-or-Uninstall-Roles-Role-Services-or-Features.md)
 [Windows Server Installation Options](http://technet.microsoft.com/library/hh831786.aspx)
 [How to Enable or Disable Windows Features](http://technet.microsoft.com/library/hh824822.aspx)
 [Deployment Image Servicing and Management \(DISM\) Overview](http://technet.microsoft.com/library/hh825236.aspx)
