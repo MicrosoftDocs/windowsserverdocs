@@ -19,7 +19,7 @@ Hyper\-V live migration moves running virtual machines from one physical server 
   
 In  Windows Server 2012  live migrations are now able to utilize higher network bandwidths \(up to 10 Gigabit\) to complete migrations faster. You can also perform multiple simultaneous live migrations to enable you to move many virtual machines quickly. These changes allow you to implement high levels of mobility and flexibility in private cloud solutions.  
   
-In  Windows Server 2012 R2  Hyper\-V live migration has been updated to allow the administrator to select the optimal performance options when moving virtual machines to a different server. In larger scale deployments, such as private cloud deployments and hosting providers, this update can reduce the amount of time it takes to move a virtual machine to another server running Hyper\-V. The reduction in time to move a virtual machine can also reduce overhead on the network and CPU usage. For more information about live migration performance options, see [Performance options](Virtual-Machine-Live-Migration-Overview.md#BKMK_Performance).  
+In  Windows Server 2012 R2  Hyper\-V live migration has been updated to allow the administrator to select the optimal performance options when moving virtual machines to a different server. In larger scale deployments, such as private cloud deployments and hosting providers, this update can reduce the amount of time it takes to move a virtual machine to another server running Hyper\-V. The reduction in time to move a virtual machine can also reduce overhead on the network and CPU usage. For more information about live migration performance options, see [Performance options](#BKMK_Performance).  
   
 **Live migration outside of a clustered environment.**  
   
