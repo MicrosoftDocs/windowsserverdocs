@@ -48,11 +48,11 @@ Server Manager offers two interfaces to removing the Active Directory Domain Ser
   
 -   The **Manage** menu on the main dashboard, using **Remove Roles and Features**  
   
-    ![](../../media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Manage.png)  
+ ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Manage.png)  
   
 -   Click **AD DS** or **All Servers** on the navigation pane. Scroll down to the **Roles and Features** section. Right\-click **Active Directory Domain Services** in the **Roles and Features** list and click **Remove Role or Feature**. This interface skips the **Server Selection** page.  
   
-    ![](../../media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection.png)  
+ ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection.png)  
   
 The ServerManager cmdlets **Uninstall\-WindowsFeature** and **Remove\-WindowsFeature** prevent you from removing the AD DS role until you demote the domain controller.  
   
@@ -108,7 +108,7 @@ You configure demotion options on the **Credentials** page. Provide the credenti
     >   
     > If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For steps, review [Clean Up Server Metadata](http://technet.microsoft.com/library/cc816907(WS.10).aspx).  
   
-    ![](../../media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ForceDemote.png)  
+   ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ForceDemote.png)  
   
 -   Demoting the last domain controller in a domain requires Enterprise Admins group membership, as this removes the domain itself \(if the last domain in the forest, this removes the forest\). Server Manager informs you if the current domain controller is the last domain controller in the domain. Select the **Last domain controller in the domain** check box to confirm the domain controller is the last domain controller in the domain.  
   
