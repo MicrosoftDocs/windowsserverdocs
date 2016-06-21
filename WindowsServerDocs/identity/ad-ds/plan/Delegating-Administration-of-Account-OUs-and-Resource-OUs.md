@@ -1,4 +1,4 @@
----
+﻿---
 title: Delegating Administration of Account OUs and Resource OUs
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -19,7 +19,7 @@ Delegate an account OU structure to data administrators if they need to create a
   
 The following illustration shows one example of an account OU structure.  
   
-![](../../media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/66d38fbe-e8eb-42d7-abab-9526243bf6d9.gif)  
+![](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/66d38fbe-e8eb-42d7-abab-9526243bf6d9.gif)  
   
 The following table lists and describes the possible child OUs that you can create in an account OU structure.  
   
@@ -33,7 +33,7 @@ The following table lists and describes the possible child OUs that you can crea
   
 The following illustration shows one example of an administrative group design for an account OU structure.  
   
-![](../../media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/be2cd2d2-6956-429c-a53a-369e6fe40b2b.gif)  
+![](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/be2cd2d2-6956-429c-a53a-369e6fe40b2b.gif)  
   
 Groups that manage the child OUs are granted full control only over the specific class of objects that they are responsible for managing.  
   
@@ -44,7 +44,7 @@ Resource OUs are used to manage access to resources. The resource OU owner creat
   
 The following illustration shows the two possible locations for the resource OU.  
   
-![](../../media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/6667a5ce-34d6-48a9-9974-b823ba70e2af.gif)  
+![](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/6667a5ce-34d6-48a9-9974-b823ba70e2af.gif)  
   
 The resource OU can be located under the domain root or as a child OU of the corresponding account OU in the OU administrative hierarchy. Resource OUs do not have any standard child OUs. Computers and groups are placed directly in the resource OU.  
   
@@ -57,7 +57,7 @@ For each resource OU in the domain, create a global group to represent the data 
   
 The following illustration shows the administrative group design for a resource OU.  
   
-![](../../media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/8a3f7714-a3bf-43f7-b999-6070543248b0.gif)  
+![](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/8a3f7714-a3bf-43f7-b999-6070543248b0.gif)  
   
 Placing the computer accounts into a resource OU gives the OU owner control over the account objects but does not make the OU owner an administrator of the computers. In an Active Directory domain, the Domain Admins group is, by default, placed in the local Administrators group on all computers. That is, service administrators have control over those computers. If resource OU owners require administrative control over the computers in their OUs, the forest owner can apply a Restricted Groups Group Policy to make the resource OU owner a member of the Administrators group on the computers in that OU.  
   

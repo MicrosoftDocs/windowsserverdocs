@@ -1,4 +1,4 @@
----
+﻿---
 title: Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -28,11 +28,11 @@ You can find the following documentation about Active Directory Domain Services
   
 -   For more information about shortcut trusts between domains, see Understanding When to Create a Shortcut Trust \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=107061](http://go.microsoft.com/fwlink/?LinkId=107061)\).  
   
--   For more information about deploying the forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md).  
+-   For more information about deploying the forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx).  
   
 -   For more information about securing domain controllers, see Best Practice Guide for Securing Windows Server Active Directory Installations \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=28521](http://go.microsoft.com/fwlink/?LinkId=28521)\).  
   
--   For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](Deploying-Windows-Server-2008-Regional-Domains.md).  
+-   For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
 -   For more information about how universal group caching works, see How the Global Catalog Works \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=107063](http://go.microsoft.com/fwlink/?LinkId=107063)\).  
   
