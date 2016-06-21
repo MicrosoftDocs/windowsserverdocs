@@ -20,7 +20,7 @@ This topic provides background information about Active Directory Domain Service
   
 -   [What's new in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewEight)  
   
--   [What’s new in AD DS in Windows Server 2012 R2?](../../ad-ds/deploy/../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_NewWS2012R2)  
+-   [What’s new in AD DS in Windows Server 2012 R2?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_NewWS2012R2)  
   
 -   [What’s new in AD DS in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewAD)  
   
@@ -53,7 +53,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
   
 2.  Verify [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).  
   
-3.  Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2012](../../ad-ds/deploy/../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) and [Secure default settings in Windows Server 2008 and Windows Server 2008 R2](http://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
+3.  Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) and [Secure default settings in Windows Server 2008 and Windows Server 2008 R2](http://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
   
 4.  Check connectivity to the target server from the computer where you plan to run the installation.  
   
@@ -280,7 +280,7 @@ Windows 2000 domain controllers must be removed prior to adding Windows Server 2
   
 5.  Remove domain controllers that run earlier versions of Windows Server.  
   
-The new  Windows Server 2012  domain functional level enables one new feature: the **KDC support for claims, compound authentication, and Kerberos armoring** KDC administrative template policy has two settings \(**Always provide claims** and **Fail unarmored authentication requests**\) that require  Windows Server 2012  domain functional level. For more information, see [Support for claims, compound authentication, and Kerberos armoring](What-s-New-in-Kerberos-Authentication.md#BKMK_Sup4ClaimsCAarmoring).  
+The new  Windows Server 2012  domain functional level enables one new feature: the **KDC support for claims, compound authentication, and Kerberos armoring** KDC administrative template policy has two settings \(**Always provide claims** and **Fail unarmored authentication requests**\) that require  Windows Server 2012  domain functional level.  
   
 The  Windows Server 2012  forest functional level does not provide any new features, but it ensures that any new domain created in the forest will automatically operate at the  Windows Server 2012  domain functional level. The  Windows Server 2012  domain functional level does not provide other new features beyond KDC support for claims, compound authentication, and Kerberos armoring. But it ensures that any domain controller in the domain runs  Windows Server 2012 . For more information about other features that are available at different functional levels, see [Understanding Active Directory Domain Services \(AD DS\) Functional Levels](http://technet.microsoft.com/library/understanding-active-directory-functional-levels(v=WS.10).aspx).  
   
