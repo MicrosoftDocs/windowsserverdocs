@@ -17,13 +17,13 @@ Virtualization of Active Directory Domain Services \(AD DS\) environments has be
 
 **In this document**
 
--   [Safe virtualization of domain controllers](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#safe_virt_dc)
+-   [Safe virtualization of domain controllers](../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#safe_virt_dc)
 
--   [Virtualized domain controller cloning](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#virtualized_dc_cloning)
+-   [Virtualized domain controller cloning](../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#virtualized_dc_cloning)
 
--   [Steps for deploying a clone virtualized domain controller](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#steps_deploy_vdc)
+-   [Steps for deploying a clone virtualized domain controller](../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#steps_deploy_vdc)
 
--   [Troubleshooting](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#troubleshooting)
+-   [Troubleshooting](../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#troubleshooting)
 
 ## <a name="safe_virt_dc"></a>Safe virtualization of domain controllers
 Virtual environments present unique challenges to distributed workloads that depend upon a logical clock\-based replication scheme. AD DS replication, for example, uses a monotonically increasing value \(known as a USN or Update Sequence Number\) assigned to transactions on each domain controller. Each domain controller’s database instance is also given an identity, known as an InvocationID. The InvocationID of a domain controller and its USN together serve as a unique identifier associated with every write\-transaction performed on each domain controller and must be unique within the forest.
@@ -58,7 +58,7 @@ With  Windows Server 2012 , AD DS employs safeguards on virtual domain controlle
 > [!CAUTION]
 > If a domain controller in a production environment is accidentally reverted to a snapshot, it’s advised that you consult the vendors for the applications, and services hosted on that virtual machine, for guidance on verifying the state of these programs after snapshot restore.
 
-For more information, see [Virtualized domain controller safe restore architecture](../ad-ds/get-started/virtual-dc/../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch).
+For more information, see [Virtualized domain controller safe restore architecture](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch).
 
 ## <a name="virtualized_dc_cloning"></a>Virtualized domain controller cloning
 Beginning with  Windows Server 2012 , administrators can easily and safely deploy replica domain controllers by copying an existing virtual domain controller. In a virtual environment, administrators no longer have to repeatedly deploy a server image prepared by using sysprep.exe, promote the server to a domain controller and then complete additional configuration requirements for deploying each replica domain controller.
@@ -115,7 +115,7 @@ The clone domain controller uses the security context of the source domain contr
 
 After verifying that the requesting domain controller is authorized for cloning, the PDC emulator will create a new machine identity including new account, SID, name, and password that identifies this machine as a replica domain controller and send this information back to the clone. The clone domain controller will then prepare the AD DS database files to serve as a replica and it will also clean up the machine state.
 
-For more information, see [Virtualized domain controller cloning architecture](../ad-ds/get-started/virtual-dc/../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneArch).
+For more information, see [Virtualized domain controller cloning architecture](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneArch).
 
 ### Cloning components
 The cloning components include new cmdlets in the Active Directory module for Windows PowerShell and associated XML files:
@@ -320,7 +320,7 @@ The computer name is optional. If you do not specify one, a unique name will be 
 -   A unique naming suffix of the format "–CL*nnnn*" is appended to the prefix string where *nnnn* is the next available value from 0001\-9999 that the PDC determines is not currently in use. For example, if 0047 is the next available number in the allowed range, using the preceding example of the computer name prefix SourceCo, the derived name to use for the clone computer will be set as SourceCo\-CL0047.
 
 > [!NOTE]
-> A global catalog server \(GC\) is required for the New\-ADDCCloneConfigFile cmdlet to work successfully. The source domain controller’s membership in the **Cloneable Domain Controllers** group must be reflected on the GC. The GC does not need to be the same domain controller as the PDC emulator, but preferably it should be in the same site. If a GC is not available, the command fails with the error “The server is not operational.” For more information, see [Virtualized Domain Controller Troubleshooting](../ad-ds/manage/virtual-dc/../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md).
+> A global catalog server \(GC\) is required for the New\-ADDCCloneConfigFile cmdlet to work successfully. The source domain controller’s membership in the **Cloneable Domain Controllers** group must be reflected on the GC. The GC does not need to be the same domain controller as the PDC emulator, but preferably it should be in the same site. If a GC is not available, the command fails with the error “The server is not operational.” For more information, see [Virtualized Domain Controller Troubleshooting](../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md).
 
 To create a clone domain controller named Clone1 with static IPv4 settings and specify preferred and alternate WINS servers, type:
 
@@ -498,6 +498,6 @@ Correct the cause for cloning failure and verify that the dcpromo.log does not i
 
 3.  Click **OK** and restart when prompted.
 
-For more troubleshooting information about virtualized domain controllers, see [Virtualized Domain Controller Troubleshooting](../ad-ds/manage/virtual-dc/../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md).
+For more troubleshooting information about virtualized domain controllers, see [Virtualized Domain Controller Troubleshooting](../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md).
 
 
