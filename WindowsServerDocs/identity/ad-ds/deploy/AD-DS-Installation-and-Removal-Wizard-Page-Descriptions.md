@@ -82,7 +82,7 @@ For more information about how to create a domain, see [Install a New Windows Se
   
 The following options appear when you add a new domain controller to an existing domain.  
   
-![](../../media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DeploymentConfiguration_Replica.gif)  
+![](./media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DeploymentConfiguration_Replica.gif)  
   
 -   Click **Select** to browse to the domain, or type a valid domain name.  
   
