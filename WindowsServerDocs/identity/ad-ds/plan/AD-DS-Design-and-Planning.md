@@ -1,4 +1,4 @@
----
+﻿---
 title: AD DS Design and Planning
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -33,9 +33,9 @@ For more information about testing the AD DS deployment process, see Testing an
   
 [Mapping Your Requirements to an AD DS Deployment Strategy](Mapping-Your-Requirements-to-an-AD-DS-Deployment-Strategy.md)  
   
-[Designing the Logical Structure for Windows Server 2008 AD DS](Designing-the-Logical-Structure-for-Windows-Server-2008-AD-DS.md)  
+[Designing the Logical Structure for Windows Server 2008 AD DS](Designing-the-Logical-Structure.md)  
   
-[Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology-for-Windows-Server-2008-AD-DS.md)  
+[Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology.md)  
   
 [Enabling Advanced Features for AD DS](Enabling-Advanced-Features-for-AD-DS.md)  
   

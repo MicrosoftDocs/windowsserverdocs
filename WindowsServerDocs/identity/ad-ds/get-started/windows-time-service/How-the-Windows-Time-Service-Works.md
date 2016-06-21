@@ -254,7 +254,7 @@ The Windows Time service communicates on a network to identify reliable time sou
 |SNTP|123|N\/A|  
   
 ## See Also  
-[Windows Time Service Technical Reference](Windows-Time-Service-Technical-Reference.md#w2k3tr_times_intro)  
+[Windows Time Service Technical Reference](https://technet.microsoft.com/library/cc773061.aspx)  
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)  
 [Microsoft Knowledge Base article 902229](http://go.microsoft.com/fwlink/?LinkId=186066)  
   
