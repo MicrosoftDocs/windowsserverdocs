@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b1ea915-0f9f-4f0e-8913-a1dd460d07ab
+author: coreyp-at-msft
 ---
 # Managing WSUS Client Computers and WSUS Computer Groups
 The Computers node is central access point in the WSUS administrative console for managing WSUS client computers and devices. Under this node you can find the different groups you have set up \(plus the default group, Unassigned Computers\).
