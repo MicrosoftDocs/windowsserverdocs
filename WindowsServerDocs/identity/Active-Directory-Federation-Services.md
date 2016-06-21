@@ -18,7 +18,7 @@ author: billmath
   
 This document contains a list of all of the documentation areas for AD FS for Windows Server 2016.  This includes the following:  
   
-* [AD FS Overview](ad-fs/AD-FS-Overview.md)
+* [AD FS Overview](ad-fs/AD-FS-2016-Overview.md)
 
 * [AD FS Get Started](ad-fs/Getting-Started-with-AD-FS.md)
   
