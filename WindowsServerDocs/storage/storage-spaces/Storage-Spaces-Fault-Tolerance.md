@@ -81,17 +81,17 @@ In this scenario Storage Spaces will not automatically retire physical disks fro
 ### <a name="BKMK_FaultTolerance_Scenario5"></a>Scenario 5: Permanent storage node failure  
 In this scenario, Storage Spaces will require the administrator to retire all the affected physical disks from the storage pool, add additional storage nodes to the storage system if needed, and then start repair. The reason this not an automatic process is that Storage Spaces does not know if it is a temporary or permanent failure. It is not desirable to initiate a repair that could potentially result in significant I\/O and CPU activity.  
 
-For more information on Fault Domains, see [Fault Domains in Windows Server 2016 Technical Preview](../storage-spaces/Fault-Domains-in-Windows-Server-2016-Technical-Preview.md)  
+For more information on Fault Domains, see [Fault Domains in Windows Server 2016 Technical Preview](Fault-Domains-in-Windows-Server-2016-Technical-Preview.md)  
 
 ## Related Topics  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
 
--   [Storage Spaces Direct Hardware Requirements](../storage-spaces/Storage-Spaces-Direct-Hardware-Requirements.md)  
+-   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 
 -   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
 
--   [Storage Spaces Optimize Pool](../storage-spaces/Storage-Spaces-Optimize-Pool.md)  
+-   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 
 ## See Also  
 
@@ -99,7 +99,7 @@ For more information on Fault Domains, see [Fault Domains in Windows Server 2016
 
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) \(blog\)  
 
--   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
+-   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
 
 -   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 
