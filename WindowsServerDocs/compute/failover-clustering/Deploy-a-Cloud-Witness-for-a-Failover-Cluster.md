@@ -192,4 +192,4 @@ In case you need to use a different endpoint (rare):
 
 *  Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.  
 ## See Also
--   [What's New in Failover Clustering in Windows Server Technical Preview](../What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)
+-   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)
