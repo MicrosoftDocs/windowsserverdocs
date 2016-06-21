@@ -15,14 +15,14 @@ author: kumudd
 Windows Server 2016 Technical Preview introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
 Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct (S2D), and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 Technical Preview and includes the following sections:  
-*  [How to use this guide](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D1)  
-* [Hyper-converged Solution with Software Defined Storage Overview](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D2)  
-*  [Hardware requirements](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D3)  
-* [Information gathering](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D4)  
-* [Nano or Full/Core Installation Options](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_InstallOptions)  
-* [Installing and configuring Hyper-Converged solution using Storage Spaces Direct with Windows Server 2016 Nano Server](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D5)  
-* [Definitions](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D6)  
-* [Storage Spaces Optmize Pool](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D7)  
+*  [How to use this guide](#BKMK_S2D1)  
+* [Hyper-converged Solution with Software Defined Storage Overview](#BKMK_S2D2)  
+*  [Hardware requirements](#BKMK_S2D3)  
+* [Information gathering](#BKMK_S2D4)  
+* [Nano or Full/Core Installation Options](#BKMK_InstallOptions)  
+* [Installing and configuring Hyper-Converged solution using Storage Spaces Direct with Windows Server 2016 Nano Server](#BKMK_S2D5)  
+* [Definitions](#BKMK_S2D6)  
+* [Storage Spaces Optmize Pool](#BKMK_S2D7)  
 
 ## <a name="BKMK_S2D1"></a> How to Use this Guide   
 
@@ -90,17 +90,17 @@ This guide focuses on deploying hyper-converged systems using Nano server and th
 However, the steps in the “Configure the Network” and “Configure Storage Spaces Direct” sections are identical whether you are using Nano or Full or Core installations.  
 For full and core installations, instead of following the “Deploy the operating system” in this guide, you can deploy Windows Server 2012 Datacenter like you would any other Failover Cluster deployment.  This includes joining them to an Active Directory domain and installing the Hyper-V role and Failover Cluster feature.   
 Nano server installations require all management to be done remotely, except what can be done through the Nano Recovery Console.  On Full and core installations you can use the remote management steps in this guide, or in some cases you can log into the servers and do the commands and management locally.  
->[!IMPORTANT]The Mellanox driver for Windows Server 2016 Technical Preview Technical Preview 5 has some extra configuration required when installing on a Full or Core install (not on Nano).  See the section [Mellanox Driver Install for Full and Core Installations](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D8).  
+>[!IMPORTANT]The Mellanox driver for Windows Server 2016 Technical Preview Technical Preview 5 has some extra configuration required when installing on a Full or Core install (not on Nano).  See the section [Mellanox Driver Install for Full and Core Installations](#BKMK_S2D8).  
 
 ## <a name="BKMK_S2D5"></a> Nano Server: Installing and configuring Hyper-Converged solution with Storage Spaces Direct  
 
 This section includes instructions to install and configure the components of a Hyper-Converged system using the Windows Server 2016 Technical Preview with a Nano Server configuration of the operating system. The act of deploying a Hyper-Converged system can be divided into three high level phases:  
 
-1.  [Deploy the operating system](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D5a)  
+1.  [Deploy the operating system](#BKMK_S2D5a)  
 
-2.  [Configure the network](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D5b)  
+2.  [Configure the network](#BKMK_S2D5b)  
 
-3.  [Configure Storage Spaces Direct](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md#BKMK_S2D5c)  
+3.  [Configure Storage Spaces Direct](#BKMK_S2D5c)  
 
 Figure 2 illustrates the process for building a hyper-converged solution using Windows Server 2016 Technical Preview.  
 
@@ -221,7 +221,7 @@ There are other methods to deploy Nano, but in the case of this example we’ll 
         -   **Other options**: If you want a richer understanding of the all the input parameters associated with New-NanoServerImage you can learn more from the [“Getting Started with Nano Server”](https://technet.microsoft.com/library/mt126167.aspx) guide.  
 -   	**ServicingPackages Path**:  Servicing packages can be added to the image at the time the image is built, or you can use Windows Update later.  For this TP5 hyper-converged deployment you will need KB3157663 and this path should point to the cab file extracted from KB3157663.  
 
->[!IMPORTANT] If you want install servicing packages, use the -ServicingPackages parameter (you can pass an array of paths to .cab files). Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. For instructions, see [Installation of servicing packages](Getting-Started-with-Nano-Server.md#BKMK_Svcing).  
+>[!IMPORTANT] If you want install servicing packages, use the -ServicingPackages parameter (you can pass an array of paths to .cab files). Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. For instructions, see [Installation of servicing packages](../../compute/nano-server/Getting-Started-with-Nano-Server.md#BKMK_Svcing).  
 
 
 
