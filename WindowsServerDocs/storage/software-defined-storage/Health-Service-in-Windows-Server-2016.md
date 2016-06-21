@@ -17,7 +17,7 @@ The Health Service is a new feature in Windows Server 2016 Technical Preview whi
 
 ## Prerequisites  
 
-The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md).  
+The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md).  
 
 ## Metrics  
 
@@ -76,7 +76,7 @@ The notion of available capacity in Storage Spaces is nuanced. To help you plan 
 
 The following diagram illustrates the relationship between these quantities.  
 
-![HealthServicePoolVolumeCapacity](media/Health-Service-in-Windows-Server-2016/CapacityMetricsBreakdown.png)  
+![](media/Health-Service-in-Windows-Server-2016/CapacityMetricsBreakdown.png)  
 
 
 ## Faults  
@@ -307,6 +307,6 @@ You can verify using the following PowerShell cmdlet:
 
 ## See also  
 
--   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](../../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
 
--  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  

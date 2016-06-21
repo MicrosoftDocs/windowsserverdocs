@@ -99,6 +99,6 @@ This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt
 >[!IMPORTANT]The cluster cannot verify the correctness of your fault domains – they are accepted as-is. If hardware is moved or added later, the XML should be updated and reset accordingly. Stretch Clustering preferential ownership and Health Service alerts will dynamically adjust to these changes. However, once the pool and volumes have been created, Storage Spaces Direct will not retroactively move data in response to changes. For this reason, moving nodes between chassis, racks, or sites after enabling Storage Spaces Direct is not recommended nor supported unless you first evict the node and its drives from the pool.  
 ## See Also  
 
--   [Windows Server 2016 Technical Preview 5](Windows-Server-2016-Technical-Preview-5.md)  
+-   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  

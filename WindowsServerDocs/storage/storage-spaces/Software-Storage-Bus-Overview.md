@@ -42,19 +42,17 @@ Software Bus Cache creates a special partition on each caching device that, by d
 
 ## Related Topics  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
 
 -   [Storage Spaces Direct Overview](Storage-Spaces-Direct-Overview.md)  
 
--   [Storage Spaces Direct Hardware Requirements](../storage-spaces/Storage-Spaces-Direct-Hardware-Requirements.md)  
+-   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
 
--   [Storage Spaces Optimize Pool](../storage-spaces/Storage-Spaces-Optimize-Pool.md)  
+-   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 
--   [Storage Spaces Fault Tolerance](../storage-spaces/Storage-Spaces-Fault-Tolerance.md)  
-
--   [Storage Spaces with Shared JBODs versus Storage Spaces Direct](Storage-Spaces-with-Shared-JBODs-versus-Storage-Spaces-Direct.md)  
+-   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 
 ## See Also  
 
@@ -62,7 +60,7 @@ Software Bus Cache creates a special partition on each caching device that, by d
 
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) \(blog\)  
 
--   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
+-   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
 
 -   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 

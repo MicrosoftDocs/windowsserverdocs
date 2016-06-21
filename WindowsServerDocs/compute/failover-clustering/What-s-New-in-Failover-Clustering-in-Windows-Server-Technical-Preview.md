@@ -66,7 +66,7 @@ The cluster operating systems for the upgrade in phases are as follows for each 
 
 -   Cluster functional level is then changed to Windows Server 2016 Technical Preview using the Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`. At this point, you can take advantage of the Windows Server 2016 Technical Preview features.  
 
-For more information, see [Cluster Operating System Rolling Upgrade](../Cluster-Operating-System-Rolling-Upgrade.md).  
+For more information, see [Cluster Operating System Rolling Upgrade](Cluster-Operating-System-Rolling-Upgrade.md).  
 
 ## <a name="BKMK_SR"></a>Storage Replica  
 Storage Replica \(SR\) is a new feature that enables storage\-agnostic, block\-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash\-consistent volumes to ensure zero data loss at the file\-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
@@ -97,7 +97,7 @@ Storage Replication enables you to do the following:
 
 -   Provide supportability, performance metrics, and diagnostic capabilities.  
 
-For more information, see the [Storage Replica in Windows Server 2016 Technical Preview](../Storage/storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md).  
+For more information, see the [Storage Replica in Windows Server 2016 Technical Preview](../../storage/storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md).  
 
 **What works differently?**  
 
@@ -118,7 +118,7 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Provides a very low on\-going cost to the Storage Account \(very small data written per blob file, blob file updated only once when cluster nodes’ state changes\).  
 
-For more information, see 	[Deploy a Cloud Witness For a Failover Cluster](./Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md).  
+For more information, see 	[Deploy a Cloud Witness For a Failover Cluster](Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md).  
 
 **What works differently?**  
 
@@ -172,5 +172,5 @@ Virtual machine Start Order is a new feature in Failover Clustering that introdu
 Failover Cluster networks are no longer limited to a single NIC per subnet / network. With Simplified SMB Multichannel and Multi-NIC Cluster Networks, network configuration is automatic and every NIC on the subnet can be used for cluster and workload traffic. This enhancement allows customers to maximize network throughput for Hyper-V, SQL Server Failover Cluster Instance, and other SMB workloads.  
 
 ##See Also  
-* [Storage](../storage/Storage.md)  
-* [What's New in File and Storage Services](../storage/What-s-New-in-File-and-Storage-Services-in-Windows-Server-2016-Technical-Preview.md)  
+* [Storage](../../storage/Storage.md)  
+* [What's New in File and Storage Services](../../storage/What-s-New-in-File-and-Storage-Services-in-Windows-Server-2016-Technical-Preview.md)  
