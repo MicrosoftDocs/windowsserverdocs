@@ -1,4 +1,4 @@
----
+﻿---
 title: Appendix F: Securing Domain Admins Groups in Active Directory
 ms.custom: 
   - AD
@@ -16,13 +16,13 @@ author: Femila
 # Appendix F: Securing Domain Admins Groups in Active Directory
   
 ## Appendix F: Securing Domain Admins Groups in Active Directory  
-As is the case with the Enterprise Admins \(EA\) group, membership in the Domain Admins \(DA\) group should be required only in build or disaster recovery scenarios. There should be no day\-to\-day user accounts in the DA group with the exception of the built\-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
+As is the case with the Enterprise Admins \(EA\) group, membership in the Domain Admins \(DA\) group should be required only in build or disaster recovery scenarios. There should be no day\-to\-day user accounts in the DA group with the exception of the built\-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
 Domain Admins are, by default, members of the local Administrators groups on all member servers and workstations in their respective domains. This default nesting should not be modified for supportability and disaster recovery purposes. If Domain Admins have been removed from the local Administrators groups on the member servers, the group should be added to the Administrators group on each member server and workstation in the domain. Each domain’s Domain Admins group should be secured as described in the step\-by\-step instructions that follow.  
   
 For the Domain Admins group in each domain in the forest:  
   
-1.  Remove all members from the group, with the possible exception of the built\-in Administrator account for the domain, provided it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
+1.  Remove all members from the group, with the possible exception of the built\-in Administrator account for the domain, provided it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
 2.  In GPOs linked to OUs containing member servers and workstations in each domain, the DA group should be added to the following user rights in **Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Settings\\User Rights Assignments**:  
   
@@ -46,7 +46,7 @@ For the Domain Admins group in each domain in the forest:
   
     1.  Double\-click the **Domain Admins** group and click the **Members** tab.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_62.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_62.gif)  
   
     2.  Select a member of the group, click **Remove**, click **Yes**, and click **OK**.  
   
@@ -60,17 +60,17 @@ For the Domain Admins group in each domain in the forest:
   
 3.  In the console tree, right\-click **Group Policy Objects**, and click **New**.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_63.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_63.gif)  
   
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** \(where GPO Name is the name of this GPO\).  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_64.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_64.gif)  
   
 5.  In the details pane, right\-click <GPO Name>, and click **Edit**.  
   
 6.  Navigate to **Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Policies**, and click **User Rights Assignment**.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_65.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_65.gif)  
   
 7.  Configure the user rights to prevent members of the Domain Admins group from accessing members servers and workstations over the network by doing the following:  
   
@@ -80,7 +80,7 @@ For the Domain Admins group in each domain in the forest:
   
     3.  Type **Domain Admins**, click **Check Names**, and click **OK**.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_66.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_66.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -92,7 +92,7 @@ For the Domain Admins group in each domain in the forest:
   
     3.  Type **Domain Admins**, click **Check Names**, and click **OK**.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_67.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_67.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -104,7 +104,7 @@ For the Domain Admins group in each domain in the forest:
   
     3.  Type **Domain Admins**, click **Check Names**, and click **OK**.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_68.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_68.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -116,7 +116,7 @@ For the Domain Admins group in each domain in the forest:
   
     3.  Type **Domain Admins**, click **Check Names**, and click **OK**.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_69.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_69.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -128,7 +128,7 @@ For the Domain Admins group in each domain in the forest:
   
     3.  Type **Domain Admins**, click **Check Names**, and click **OK**.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_70.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_70.gif)  
   
     4.  Click **OK**, and **OK** again.  
   
@@ -140,11 +140,11 @@ For the Domain Admins group in each domain in the forest:
   
     2.  Right\-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_71.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_71.gif)  
   
     3.  Select the GPO that you just created and click **OK**.  
   
-        ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_72.gif)  
+        ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_72.gif)  
   
     4.  Create links to all other OUs that contain workstations.  
   
@@ -166,13 +166,13 @@ From any member server or workstation that is not affected by the GPO changes \(
   
 4.  When prompted to approve the elevation, click **Yes**.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_73.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_73.gif)  
   
 5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\\c$**, where <Server Name> is the name of the member server or workstation you’re attempting to access over the network.  
   
 6.  The following screen shot shows the error message that should appear.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)  
   
 ##### Verify “Deny log on as a batch job” GPO Settings  
 From any member server or workstation affected by the GPO changes, log on locally.  
@@ -226,7 +226,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 16. A dialog box similar to the following should appear.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_75.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_75.gif)  
   
 ##### Verify “Deny log on as a service” GPO Settings  
   
@@ -252,7 +252,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 11. When the service is restarted, a dialog box similar to the following should appear.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_76.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_76.gif)  
   
 ##### Revert Changes to the Printer Spooler Service  
   
@@ -272,7 +272,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 1.  From any member server or workstation affected by the GPO changes, attempt to log on locally using an account that is a member of the Domain Admins group. A dialog box similar to the following should appear.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_77.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_77.gif)  
   
 ##### Verify “Deny log on through Remote Desktop Services” GPO Settings  
   
@@ -286,6 +286,6 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 5.  A dialog box similar to the following should appear.  
   
-    ![](../../../media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_78.gif)  
+    ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_78.gif)  
   
 

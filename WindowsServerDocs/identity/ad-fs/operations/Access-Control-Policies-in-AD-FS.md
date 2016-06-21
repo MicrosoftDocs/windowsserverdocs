@@ -1,4 +1,4 @@
----
+﻿---
 title: Access Control Policies in AD FS
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -24,12 +24,12 @@ What access control policy templates do is replace this old model where administ
   
 Access control policy templates use a permit model.  This means by default, no one has access and that access must be explicitly granted.  However, this is not just an all or nothing permit.  Administrators can add exceptions to the permit rule.  For example, an administrator may wish to grant access based on a specific network by selecting this option and specifying the IP address range.  But the administrator may add and exception, for instance, the administrator may add an exception from a specific network and specify that IP address range.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP2.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP2.PNG)  
   
 ## Built\-in access control policy templates vs custom access control policy templates  
 AD FS includes several built\-in access control policy templates.  These target some common scenarios which have the same set of policy requirements, for example client access policy for Office 365.  These templates cannot be modified.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP3.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP3.PNG)  
   
 To provide increased flexibility to address your business needs, administrators can create their own access policy templates.  These can be modified after creation and changes to custom policy template will apply to all the RPs which are controlled by those policy templates.  To add a custom policy template simply click Add Access Control Policy from within AD FS management.  
   
@@ -59,11 +59,11 @@ Access control policies can be
   
 A parameterized policy template is a policy template that has parameters. An Administrator needs to input the value for those parameters when assigning this template to RPs.An administrator cannot make changes to parameterized policy template after it has been created.  An example of a parameterized policy is the built\-in policy, Permit specific group.  Whenever this policy is applied to an RP, this parameter needs to be specified.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP5.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP5.PNG)  
   
 A non\-parameterized policy template is a policy template that does not have parameters. An administrator can assign this template to RPs without any input needed and can make changes to a non\-parameterized policy template after it has been created.  An example of this is the built\-in policy, Permit everyone and require MFA.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP4.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP4.PNG)  
   
 ## How to create a non\-parameterized access control policy  
 To create a non\-parameterized access control policy use the following procedure  
@@ -82,11 +82,11 @@ To create a non\-parameterized access control policy use the following procedure
   
 6.  From the window that pops\-up, select **authenticated** from the drop\-down.  Click **Ok**.  
   
-    ![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP6.PNG)  
+    ![](media/Access-Control-Policies-in-AD-FS/ADFSACP6.PNG)  
   
 7.  Click **Ok**. Click **Ok**.  
   
-    ![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP7.PNG)  
+    ![](media/Access-Control-Policies-in-AD-FS/ADFSACP7.PNG)  
   
 ## How to create a parameterized access control policy  
 To create a parameterized access control policy use the following procedure  
@@ -105,11 +105,11 @@ To create a parameterized access control policy use the following procedure
   
 6.  From the window that pops\-up, select **Parameter specified when the access control policy is assigned**.  Click **Ok**.  
   
-    ![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP8.PNG)  
+    ![](media/Access-Control-Policies-in-AD-FS/ADFSACP8.PNG)  
   
 7.  Click **Ok**. Click **Ok**.  
   
-    ![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP9.PNG)  
+    ![](media/Access-Control-Policies-in-AD-FS/ADFSACP9.PNG)  
   
 ## How to create a custom access control policy with an exception  
 To create a access control policy with an exception use the following procedure.  
@@ -136,7 +136,7 @@ To create a access control policy with an exception use the following procedure.
   
 10. Click **Ok**. Click **Ok**.  
   
-    ![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP10.PNG)  
+    ![](media/Access-Control-Policies-in-AD-FS/ADFSACP10.PNG)  
   
 ## How to create a custom access control policy with multiple permit conditions  
 To create a access control policy with multiple permit conditions use the following procedure  
@@ -161,20 +161,20 @@ To create a access control policy with multiple permit conditions use the follow
   
 9. Click **Ok**. Click **Ok**.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP12.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP12.PNG)  
   
 ## How to assign an access control policy to a new application  
 Assigning an access control policy to a new application is pretty straight forward and has now been integrated into the wizard for adding an RP.  From the Relying Party Trust Wizard you can select the access control policy that you wish to assign.  This is a requirement when creating a new relying party trust.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP13.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP13.PNG)  
   
 ## How to assign an access control policy to an existing application  
 Assigning an access control policy to a existing application simply select the application from Relying Party Trusts and on the right click **Edit Access Control Policy**.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP14.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP14.PNG)  
   
 From here you can select the access control policy and apply it to the application.  
   
-![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP15.PNG)  
+![](media/Access-Control-Policies-in-AD-FS/ADFSACP15.PNG)  
   
 
