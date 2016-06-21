@@ -45,7 +45,7 @@ Link  |Description
   
 Link  |Description   
 ---------|---------  
-[Securing Privileged Access](Securing-Privileged-Access.md) |This set of articles in the TechNet Library explains concepts and processes for securing privileged access.  
+[Securing Privileged Access](Securing-Privileged-Access\Securing-Privileged-Access.md) |This set of articles in the TechNet Library explains concepts and processes for securing privileged access.  
 [Just in Time Administration with Microsoft Identity Manager](https://technet.microsoft.com/library/mt150258.aspx)  |This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time \(JIT\) Privileged Access Management.           
 [Protecting Windows and Microsoft Azure Active Directory with<br />Privileged Access Management](http://channel9.msdn.com/Events/Ignite/2015/BRK3873) |This Ignite presentation covers Microsoft’s strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication and managing access using Just in Time and Just Enough Administration.  
 [Just Enough Administration Article](http://aka.ms/JEA)  | This document shares the vision and technical details of Just Enough Administration (JEA), a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks        
