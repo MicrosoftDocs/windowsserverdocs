@@ -1,4 +1,4 @@
----
+﻿---
 title: Virtualized Domain Controller Architecture
 ms.custom: 
   - AD
@@ -16,9 +16,9 @@ author: Femila
 # Virtualized Domain Controller Architecture
 This topic covers the architecture of virtualized domain controller cloning and safe restore. It shows the processes cloning and safe restore with flowcharts and then provides a detailed explanation of each step in the process.  
   
--   [Virtualized domain controller cloning architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneArch)  
+-   [Virtualized domain controller cloning architecture](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_CloneArch)  
   
--   [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)  
+-   [Virtualized domain controller safe restore architecture](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch)  
   
 ## <a name="BKMK_CloneArch"></a>Virtualized domain controller cloning architecture  
   
@@ -34,11 +34,11 @@ The following diagram shows the architecture for an initial cloning operation an
   
 **Initial Cloning Operation**  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_InitialCloningProcess.png)  
+![](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_InitialCloningProcess.png)  
   
 **Cloning retry operation**  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_CloningRetryProcess.png)  
+![](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_CloningRetryProcess.png)  
   
 The following steps explain the process in more detail:  
   
@@ -152,7 +152,7 @@ The following sections explain safe restore in detail for each scenario.
 ### Safe Restore Detailed Processing  
 The following flowchart shows how safe restore occurs when a virtual domain controller is started after a snapshot has been restored while it was shut down.  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)  
+![](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)  
   
 1.  When the virtual machine boots up after a snapshot restore, it will have new VM\-Generation ID provided by the hypervisor host because of the snapshot restore.  
   
@@ -169,7 +169,7 @@ The following flowchart shows how safe restore occurs when a virtual domain cont
   
 The following diagram shows how virtualization safeguards prevent divergence induced by USN rollback when a snapshot is restored on a running virtual domain controller.  
   
-![](../../../media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)  
+![](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)  
   
 > [!NOTE]  
 > The preceding illustration is simplified to explain the concepts.  

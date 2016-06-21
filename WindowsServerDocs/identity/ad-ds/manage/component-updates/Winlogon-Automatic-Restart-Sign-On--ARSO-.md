@@ -1,4 +1,4 @@
----
+﻿---
 title: Winlogon Automatic Restart Sign-On (ARSO)
 ms.custom: 
   - AD
@@ -29,9 +29,9 @@ On rebooting, the user will automatically be signed in via the Autologon mechani
 > [!NOTE]
 > After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked so the user's lock screen apps can run.
 
-![](../../../media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.gif)
+![](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreenApp.gif)
 
-![](../../../media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreen.gif)
+![](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_LockScreen.gif)
 
 **Quick Overview**
 
@@ -98,7 +98,7 @@ Value: 0 or 1
 
 1 \= Disabled
 
-![](../../../media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_SignInPolicy.gif)
+![](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_SignInPolicy.gif)
 
 ## Troubleshooting
 When WinLogon automatically locks, WinLogon’s state trace will be stored in the WinLogon event log.

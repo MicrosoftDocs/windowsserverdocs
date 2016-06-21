@@ -1,4 +1,4 @@
----
+﻿---
 title: How the Windows Time Service Works
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -67,7 +67,7 @@ The following figure shows the architecture of the Windows Time service.
   
 **Windows Time Service Architecture**  
   
-![](../../../media/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)  
+![](media/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)  
   
 The Service Control Manager is responsible for starting and stopping the Windows Time service. The Windows Time Service Manager is responsible for initiating the action of the NTP time providers included with the operating system. The Windows Time Service Manager controls all functions of the Windows Time service and the coalescing of all time samples. In addition to providing information about the current system state, such as the current time source or the last time the system clock was updated, the Windows Time Service Manager is also responsible for creating events in the event log.  
   
@@ -163,7 +163,7 @@ Synchronization that is based on a domain hierarchy uses the AD DS domain hiera
   
 **Time Synchronization in an AD DS Hierarchy**  
   
-![](../../../media/How-the-Windows-Time-Service-Works/trnt_ntw_adhc.gif)  
+![](media/How-the-Windows-Time-Service-Works/trnt_ntw_adhc.gif)  
   
 #### Reliable Time Source Configuration  
 A computer that is configured to be a reliable time source is identified as the root of the time service. The root of the time service is the authoritative server for the domain and typically is configured to retrieve time from an external NTP server or hardware device. A time server can be configured as a reliable time source to optimize how time is transferred throughout the domain hierarchy. If a domain controller is configured to be a reliable time source, Net Logon service announces that domain controller as a reliable time source when it logs on to the network. When other domain controllers look for a time source to synchronize with, they choose a reliable source first if one is available.  

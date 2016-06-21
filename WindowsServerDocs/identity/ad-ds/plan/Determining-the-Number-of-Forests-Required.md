@@ -1,4 +1,4 @@
----
+﻿---
 title: Determining the Number of Forests Required
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -57,7 +57,7 @@ This support limitation exists because:
   
 ## In this section  
   
--   [Forest Design Models](../../ad-ds/plan/Forest-Design-Models.md)  
+-   [Forest Design Models](https://technet.microsoft.com/library/cc770439.aspx)  
   
 -   [Mapping Design Requirements to Forest Design Models](Mapping-Design-Requirements-to-../../ad-ds/plan/Forest-Design-Models.md)  
   

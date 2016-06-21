@@ -1,4 +1,4 @@
----
+﻿---
 title: Virtualized Domain Controller Troubleshooting
 ms.custom: 
   - AD
@@ -16,9 +16,9 @@ author: Femila
 # Virtualized Domain Controller Troubleshooting
 This topic provides detailed methodology on troubleshooting the virtualized domain controller feature.  
   
--   [Troubleshooting virtualized domain controller cloning](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshootVDCCloning)  
+-   [Troubleshooting virtualized domain controller cloning](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshootVDCCloning)  
   
--   [Troubleshooting virtualized domain controller safe restore](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshootVDCSafeRestore)  
+-   [Troubleshooting virtualized domain controller safe restore](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshootVDCSafeRestore)  
   
 ## <a name="BKMK_Intro"></a>Introduction  
 The most important way to improve your troubleshooting skills is build a test lab and rigorously examine normal, working scenarios. If you encounter errors, they are more obvious and easy to understand, since you then have a solid foundation of how domain controller promotion works. This also allows you to build your analysis and network analysis skills. This goes for all distributed systems technologies, not just virtualized domain controller deployment.  
@@ -36,19 +36,19 @@ The first and second are beyond the scope of this topic, but the third can be ex
 ## <a name="BKMK_TshootVDCCloning"></a>Troubleshooting virtualized domain controller cloning  
 This sections covers:  
   
--   [Tools for Troubleshooting](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_Tools)  
+-   [Tools for Troubleshooting](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_Tools)  
   
--   [Logging Options](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_LoggingOptions)  
+-   [Logging Options](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_LoggingOptions)  
   
--   [General Methodology for Troubleshooting Domain Controller Cloning](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_GeneralMethodology)  
+-   [General Methodology for Troubleshooting Domain Controller Cloning](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_GeneralMethodology)  
   
--   [Server Core and the Event Log](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_ServerCoreEvents)  
+-   [Server Core and the Event Log](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_ServerCoreEvents)  
   
--   [Troubleshooting Specific Problems](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_SpecificProblems)  
+-   [Troubleshooting Specific Problems](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_SpecificProblems)  
   
 The troubleshooting strategy for virtualized domain controller cloning follows this general format:  
   
-![](../../../media/Virtualized-Domain-Controller-Troubleshooting/ADDS_VDC_TroublehsootingFlowchart.png)  
+![](media/Virtualized-Domain-Controller-Troubleshooting/ADDS_VDC_TroublehsootingFlowchart.png)  
   
 ### <a name="BKMK_Tools"></a>Tools for Troubleshooting  
   
@@ -731,7 +731,7 @@ The following are common issues seen during the Windows Server 2012 development 
 |-|-|  
 |**Issue**|**Cloning fails, DSRM**|  
 |**Symptoms**|Clone boots into Directory Services Restore Mode|  
-|**Resolution and Notes**|Validate all steps followed from sections Deploying Virtualized Domain Controller section and [General Methodology for Troubleshooting Domain Controller Cloning](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_GeneralMethodology)<br /><br />Described in KB 2742844.|  
+|**Resolution and Notes**|Validate all steps followed from sections Deploying Virtualized Domain Controller section and [General Methodology for Troubleshooting Domain Controller Cloning](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_GeneralMethodology)<br /><br />Described in KB 2742844.|  
   
 |||  
 |-|-|  
@@ -1627,7 +1627,7 @@ Below are the Windows Server 2012 safe restore\-specific events in the Directory
 There are no direct interactive errors for failed virtualized domain controller safe snapshot restore; all cloning information logs in the Directory Services event logs. Naturally, any critical replication or server advertising errors manifest themselves as symptoms elsewhere.  
   
 #### Known Issues and Support Scenarios  
-The [General Methodology for Troubleshooting Domain Controller Safe Restore](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshhotSafeRestore) section and events listed in [Troubleshooting Specific Problems](../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshootSpecificSafeRestore) are usually adequate to troubleshoot most issues.  
+The [General Methodology for Troubleshooting Domain Controller Safe Restore](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md#BKMK_TshootSpecificSafeRestore) are usually adequate to troubleshoot most issues.  
   
 |||  
 |-|-|  

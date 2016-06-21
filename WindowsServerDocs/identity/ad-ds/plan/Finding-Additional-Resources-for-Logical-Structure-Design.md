@@ -1,4 +1,4 @@
----
+﻿---
 title: Finding Additional Resources for Logical Structure Design
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -22,11 +22,11 @@ You can find the following documentation about Active Directory Domain Services
   
 -   For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=37928](http://go.microsoft.com/fwlink/?LinkId=37928)\).  
   
--   For more information about upgrading Active Directory domains to  Windows Server 2008 , see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](Upgrading-Active-Directory-Domains-to-Windows-Server-2008-and-Windows-Server-2008-R2-AD-DS-Domains.md).  
+-   For more information about upgrading Active Directory domains to  Windows Server 2008 , see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](https://technet.microsoft.com/library/cc731188.aspx).  
   
 -   For more information about restructuring AD DS domains within and between forests, see Active Directory Migration Tool version 3.1 Migration Guide \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=93678](http://go.microsoft.com/fwlink/?LinkId=93678)\).  
   
--   For more information about deploying a forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md).  
+-   For more information about deploying a forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx).  
   
 -   For more information about deploying DNS, see Deploying Domain Name System \(DNS\) \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=93656](http://go.microsoft.com/fwlink/?LinkId=93656)\).  
   

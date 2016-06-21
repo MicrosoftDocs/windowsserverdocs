@@ -1,4 +1,4 @@
----
+﻿---
 title: Identifying the Deployment Project Participants
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -195,7 +195,7 @@ The responsibilities of the design team include the following:
   
 -   Working with the deployment team to test the design in a lab environment to ensure that it functions as planned and modifying the design as needed to address any problems that occur  
   
--   Creating a site topology design that meets the replication requirements of the forest while preventing overload of available bandwidth. For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology-for-Windows-Server-2008-AD-DS.md).  
+-   Creating a site topology design that meets the replication requirements of the forest while preventing overload of available bandwidth. For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](https://technet.microsoft.com/library/cc772013.aspx).  
   
 -   Working with the deployment team to ensure that the design is implemented correctly  
   

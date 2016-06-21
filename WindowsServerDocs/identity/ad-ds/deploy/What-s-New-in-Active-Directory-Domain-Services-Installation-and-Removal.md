@@ -16,15 +16,15 @@ author: Femila
 # What&#39;s New in Active Directory Domain Services Installation and Removal
 This topic covers:  
   
--   [The Active Directory Domain Services Configuration Wizard](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_ADConfigurationWizard)  
+-   [The Active Directory Domain Services Configuration Wizard](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_ADConfigurationWizard)  
   
--   [Adprep.exe integration](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep)  
+-   [Adprep.exe integration](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep)  
   
--   [AD DS installation prerequisite validation](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_PrereqCheck)  
+-   [AD DS installation prerequisite validation](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_PrereqCheck)  
   
--   [System requirements](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_SystemReqs)  
+-   [System requirements](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_SystemReqs)  
   
--   [Known issues](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues)  
+-   [Known issues](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues)  
   
 Active Directory Domain Services \(AD DS\) deployment in  Windows Server 2012  is simpler and faster than previous versions of Windows Server. The AD DS installation process is now built on Windows PowerShell and is integrated with Server Manager. The number of steps required to introduce domain controllers into an existing Active Directory environment is reduced. This makes the process for creating a new Active Directory environment simpler and more efficient. The new AD DS deployment process minimizes the chances of errors that would have otherwise blocked installation.  
   
@@ -44,7 +44,7 @@ AD DS installation includes the following features:
   
 -   **You can export a Windows PowerShell script that contains all the options that were specified during the graphical installation.** At the end of an installation or removal, you can export the settings to a Windows PowerShell script for use with automating the same operation.  
   
--   **Only critical replication occurs before reboot.** New switch to allow replication of non\-critical data before reboot. For more information, see [ADDSDeployment cmdlet arguments](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params).  
+-   **Only critical replication occurs before reboot.** New switch to allow replication of non\-critical data before reboot. For more information, see [ADDSDeployment cmdlet arguments](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params).  
   
 ### <a name="BKMK_ADConfigurationWizard"></a>The Active Directory Domain Services Configuration Wizard  
 Beginning with  Windows Server 2012 , the Active Directory Domain Services Configuration Wizard replaces the legacy Active Directory Domain Services Installation Wizard as the user interface \(UI\) option to specify settings when you install a domain controller. The Active Directory Domain Services Configuration Wizard begins after Add Roles Wizard is finished.  
@@ -52,7 +52,7 @@ Beginning with  Windows Server 2012 , the Active Directory Domain Services Confi
 > [!WARNING]  
 > The legacy Active Directory Domain Services Installation Wizard \(dcpromo.exe\) is deprecated beginning with  Windows Server 2012 .  
   
-In [Install Active Directory Domain Services &#40;Level 100&#41;](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md), the UI procedures show how to start the Add Roles Wizard to install the AD DS server role binaries and then run the Active Directory Domain Services Configuration Wizard to complete the domain controller installation. The Windows PowerShell examples show how to complete both steps using an AD DS deployment cmdlet.  
+In [Install Active Directory Domain Services &#40;Level 100&#41;](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md), the UI procedures show how to start the Add Roles Wizard to install the AD DS server role binaries and then run the Active Directory Domain Services Configuration Wizard to complete the domain controller installation. The Windows PowerShell examples show how to complete both steps using an AD DS deployment cmdlet.  
   
 ### <a name="BKMK_NewAdprep"></a>Adprep.exe integration  
 Beginning with  Windows Server 2012 , there is only one version of Adprep.exe \(there is no 32\-bit version, adprep32.exe\). Adprep commands are run automatically as needed when you install a domain controller that runs  Windows Server 2012  to an existing Active Directory domain or forest.  
@@ -68,9 +68,9 @@ The  Windows Server 2012  version of adprep.exe can run on any server that runs 
 >   
 > Adprep.exe is not a valid Win32 application.  
   
-![](../../media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
+![](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
   
-For information about resolving other errors returned by Adprep.exe, see [Known issues](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues).  
+For information about resolving other errors returned by Adprep.exe, see [Known issues](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues).  
   
 #### Group membership check against Windows Server 2003 operations master roles  
 For each command \(\/forestprep, \/domainprep, or \/rodcprep\), Adprep performs a group membership check to determine whether the specified credential represents an account in certain groups. To perform this check, Adprep contacts the operations master role owner. If the operations master is running Windows Server 2003, you need to specify the \/user and \/userdomain command line parameters if you run Adprep.exe to ensure the group membership check is performed in all cases.  
@@ -87,7 +87,7 @@ Adprep was unable to check the specified user's group membership. This could hap
   
 If you run Adprep.exe without specifying the \/user and \/userdomain parameters and the operations master is running Windows Server 2003, Adprep.exe contacts a domain controller in the domain of the current logon user. If the current logon user is not a domain account, Adprep.exe cannot perform the group membership check. Adprep.exe also cannot perform the group membership check if smartcard credentials are used, even if you do specify both \/user and \/userdomain.  
   
-If Adprep finishes successfully, there is no action required. If Adprep fails during execution with access errors, provide an account with the correct membership. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
+If Adprep finishes successfully, there is no action required. If Adprep fails during execution with access errors, provide an account with the correct membership. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
   
 #### Syntax for Adprep in Windows Server 2012  
 Use the following syntax to run adprep separately from an AD DS installation:  
