@@ -24,9 +24,9 @@ Active Directory–integrated DNS in  Windows Server 2008  stores zone data in
   
 -   Domain\-wide application directory partitions for each domain in the forest, named DomainDnsZones  
   
-For more information about how AD DS stores DNS information in application partitions, see the DNS Technical Reference \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=106636](http://go.microsoft.com/fwlink/?LinkId=106636)\).  
+For more information about how AD DS stores DNS information in application partitions, see the [DNS Technical Reference](http://go.microsoft.com/fwlink/?LinkId=106636).  
   
 > [!NOTE]  
-> We recommend that you install DNS when you run the Active Directory Domain Services Installation Wizard \(Dcpromo.exe\). If you do this, the wizard creates the DNS zone delegation automatically. For more information, see [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md).  
+> We recommend that you install DNS when you run the Active Directory Domain Services Installation Wizard \(Dcpromo.exe\). If you do this, the wizard creates the DNS zone delegation automatically. For more information, see [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx).  
   
 
