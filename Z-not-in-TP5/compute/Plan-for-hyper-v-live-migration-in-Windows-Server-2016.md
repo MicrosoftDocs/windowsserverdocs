@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 21a6f01a-04d2-45c8-b8c3-9edd6d5005d1
-author: cwatsonmsft
+author: KBDAzure
 ---
 # Plan for live migration in Windows Server 2016
 Hyper\-V live migration moves running virtual machines from one physical server to another with no impact on virtual machine availability to users. Hyper\-V in  Windows Server 2012  and  Windows Server 2012 R2  introduce the following live migration improvements:  
