@@ -81,9 +81,9 @@ Hyper\-V also has tools for management and connectivity. You can install these o
 ## Related technologies  
 These are some technologies from Microsoft that are often used with Hyper\-V:  
   
-* [Failover Clustering overview](failover-clustering/Failover-Clustering-Overview.md)  
+* [Failover Clustering overview](../failover-clustering/Failover-Clustering-Overview.md)  
 * [Remote Desktop Services](../remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
-* [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994(v=sc.16).aspx)  
+* [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994(v=sc.16\).aspx)  
   
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct  
   

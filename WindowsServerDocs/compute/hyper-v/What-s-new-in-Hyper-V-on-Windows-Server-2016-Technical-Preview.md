@@ -34,11 +34,11 @@ Here's what's included in this article and whether the functionality is new or u
 |[Rolling Hyper-V Cluster Upgrade](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_HyperVRollingUpgrades)| New|  
 |[Start order priority for clustered virtual machines](#BKMK_StartOrder)| New|  
 |[Storage quality of service (QoS)](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_QoS)| Updated|  
-| [Shielded virtual machines](#BKMK_shielded)| New|  
-| [Virtual machine configuration file format](#BKMK_Config)| Updated|  
-| [Virtual machine configuration version](#BKMK_ConfgVersion)| Updated|  
-| [Windows Containers](#BKMK_Containers)| New|  
-| [Windows PowerShell Direct](#BKMK_PowerShellDirect)| New|  
+|[Shielded virtual machines](#BKMK_shielded)| New|  
+|[Virtual machine configuration file format](#BKMK_Config)| Updated|  
+|[Virtual machine configuration version](#BKMK_ConfgVersion)| Updated|  
+|[Windows Containers](#BKMK_Containers)| New|  
+|[Windows PowerShell Direct](#BKMK_PowerShellDirect)| New|  
   
 ## <a name="BKMK_standby"></a>Compatible with Connected Standby  
 When the Hyper\-V role is installed on a computer that uses the Always On\/Always Connected \(AOAC\) power model, the **Connected Standby** power state is now available.  
