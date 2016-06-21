@@ -15,7 +15,7 @@ Securing privileged access is a critical first step to establishing security ass
 
 Protecting administrative access against determined adversaries require you to take a complete and thoughtful approach to isolate these systems from risks. This figure depicts the three stages of recommendations for separating and protecting administration in this roadmap:
 
-![](../media/Securing-Privileged-Access/Securing-Privileged-Access/PAW_LP_Fig1.JPG)
+![](../media/Securing-Privileged-Access/PAW_LP_Fig1.JPG)
 
 Roadmap Objectives:
 
