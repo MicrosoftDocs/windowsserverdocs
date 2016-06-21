@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d218cd6b-3b6b-4429-913b-31d412ce3356
-author: coreyp-at-mfst
+author: coreyp-at-msft
 ---
 # Running WSUS Replica Mode
 A WSUS server running in replica mode inherits the update approvals and computer groups created on an administration server. In a scenario that uses replica mode, you typically have a single administration server, and one or more subordinate replica WSUS servers spread out throughout the organization, based on site or organizational topography. You approve updates and create computer groups on the administration server, which the replica mode servers will then mirror. Replica mode servers can be set up only during WSUS Setup, and if you implemented this scenario, it is likely because it is important in your organization that update approvals and computer groups are managed centrally.
