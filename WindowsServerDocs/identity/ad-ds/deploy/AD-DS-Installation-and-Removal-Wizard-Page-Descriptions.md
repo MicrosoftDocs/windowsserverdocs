@@ -298,7 +298,7 @@ For more information about removing AD DS, see [Remove Active Directory Domain S
 ## <a name="BKMK_NewAdminPwdPage"></a>New Administrator Password  
 The **New Administrator Password** page requires you to provide a password for the built\-in local computer’s Administrator account, once the demotion completes and the computer becomes a domain member server or workgroup computer.  
   
-![](../../media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_NewAdminPwd.gif)  
+![](../media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_NewAdminPwd.gif)  
   
 For more information about removing AD DS, see [Remove Active Directory Domain Services \(Level 100\)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) and [Demoting Domain Controllers and Domains &#40;Level 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md).  
   
