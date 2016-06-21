@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cf257b3a-9365-42e2-a37c-327cac6028d4
 manager: dongill
-author: coreyp
+author: coreyp-at-msft
 ---
 # Guarded Fabric and Shielded VMs
 ## Overview of the Guarded Fabric
