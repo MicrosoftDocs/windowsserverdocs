@@ -33,7 +33,7 @@ After completing this lesson, you will be able to:
   
     -   [Command line process auditing](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)  
   
-    -   [Credentials Protection and Management](Credentials-Protection-and-Management.md)  
+    -   [Credentials Protection and Management](https://technet.microsoft.com/library/dn408190.aspx)  
   
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   

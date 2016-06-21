@@ -26,7 +26,7 @@ author: femila
 -   [Network Ports Used by Windows Time Service](#w2k3tr_times_how_ydum)  
   
 > [!NOTE]  
-> This topic explains only how the Windows Time service \(W32Time\) works. For information about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](Windows-Time-Service-Technical-Reference.md#BKMK_Config).  
+> This topic explains only how the Windows Time service \(W32Time\) works. For information about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
   
 > [!NOTE]  
 > In Windows Server® 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory® directory service. In  Windows Server 2008  and later versions, the directory service is named Active Directory Domain Services \(AD DS\). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  

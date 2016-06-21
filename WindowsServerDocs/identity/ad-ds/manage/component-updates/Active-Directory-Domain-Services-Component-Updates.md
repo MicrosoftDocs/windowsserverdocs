@@ -41,18 +41,18 @@ After completing this module, you will be able to:
   
     -   [Command line process auditing](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)  
   
-    -   [Credentials Protection and Management](Credentials-Protection-and-Management.md)  
+    -   [Credentials Protection and Management](https://technet.microsoft.com/library/dn408190.aspx)  
   
-    -   [Directory Services component updates](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md)  
+    -   [Directory Services component updates](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md)  
   
-        -   [Domain and Forest Functional Levels](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_FL)  
+        -   [Domain and Forest Functional Levels](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_FL)  
   
-        -   [Deprecation of NTFRS](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_NTFRS)  
+        -   [Deprecation of NTFRS](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_NTFRS)  
   
-        -   [LDAP Query Optimizer changes](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_LDAPQuery)  
+        -   [LDAP Query Optimizer changes](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_LDAPQuery)  
   
-        -   [1644 Event improvements](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_1644)  
+        -   [1644 Event improvements](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_1644)  
   
-        -   [Active Directory Replication throughput improvement](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
+        -   [Active Directory Replication throughput improvement](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
   
 
