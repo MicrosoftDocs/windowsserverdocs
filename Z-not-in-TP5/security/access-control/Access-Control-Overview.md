@@ -30,21 +30,21 @@ Object owners generally grant permissions to security groups rather than to indi
 
 This content set contains:
 
--   [Dynamic Access Control Overview](../access-control/Dynamic-Access-Control-Overview.md)
+-   [Dynamic Access Control Overview](access-control/Dynamic-Access-Control-Overview.md)
 
--   [Security Identifiers Technical Overview](../access-control/Security-Identifiers-Technical-Overview.md)
+-   [Security Identifiers Technical Overview](access-control/Security-Identifiers-Technical-Overview.md)
 
--   [Security Principals Technical Overview](../access-control/Security-Principals-Technical-Overview.md)
+-   [Security Principals Technical Overview](access-control/Security-Principals-Technical-Overview.md)
 
-    -   [Local Accounts](../access-control/Local-Accounts.md)
+    -   [Local Accounts](access-control/Local-Accounts.md)
 
-    -   [Active Directory Accounts](../access-control/Active-Directory-Accounts.md)
+    -   [Active Directory Accounts](access-control/Active-Directory-Accounts.md)
 
-    -   [Microsoft Accounts](../access-control/Microsoft-Accounts.md)
+    -   [Microsoft Accounts](access-control/Microsoft-Accounts.md)
 
-    -   [Service Accounts](../access-control/Service-Accounts.md)
+    -   [Service Accounts](access-control/Service-Accounts.md)
 
-    -   [Active Directory Security Groups](../access-control/Active-Directory-Security-Groups.md)
+    -   [Active Directory Security Groups](/access-control/Active-Directory-Security-Groups.md)
 
 ## <a name="BKMK_APP"></a>Practical applications
 Administrators who use the supported version of Windows can refine the application and management of access control to objects and subjects to provide the following security:
