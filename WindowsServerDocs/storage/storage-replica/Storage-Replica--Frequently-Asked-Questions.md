@@ -182,7 +182,7 @@ For technical assistance with Storage Replica, you can post at the Microsoft Tec
 
 -   [Storage Replica Overview](Storage-Replica-Overview.md)  
 
--   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-../Storage.md)  
+-   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
 
 -   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
 
