@@ -385,7 +385,7 @@
 ##### [Create and Manage Server Groups](management/server-manager/Create-and-Manage-Server-Groups.md)
 ##### [Filter, Sort, and Query Data in Server Manager Tiles](management/server-manager/Filter-Sort-and-Query-Data-in-Server-Manager-Tiles.md)
 ##### [Keyboard Shortcuts for Server Manager](management/server-manager/Keyboard-Shortcuts-for-Server-Manager.md)
-#### [Windows Server Update Services (WSUS)](management/Windows-Server-Update-Services-WSUS.md)
+#### [Windows Server Update Services (WSUS)](management/windows-server-update-services/Windows-Server-Update-Services-WSUS.md)
 ##### [Deploy Windows Server Update Services](management/windows-server-update-services/deploy/Deploy-Windows-Server-Update-Services.md)
 ###### [Step 1: Prepare for Your WSUS Deployment](management/windows-server-update-services/deploy/Step-1--Prepare-for-Your-WSUS-Deployment.md)
 ###### [Step 2: Install the WSUS Server Role](management/windows-server-update-services/deploy/Step-2--Install-the-WSUS-Server-Role.md)
