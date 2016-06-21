@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
+author: coreyp-at-msft
 ---
 # Viewing and Managing Updates
 You can use the WSUS console to view and manage updates.

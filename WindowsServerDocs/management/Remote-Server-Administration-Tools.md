@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
+author: coreyp-at-msft
 ---
 # Remote Server Administration Tools
 This topic supports Remote Server Administration Tools for Windows 10®.

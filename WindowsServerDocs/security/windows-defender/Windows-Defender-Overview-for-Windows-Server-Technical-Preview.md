@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
 manager: dongill
-author: coreyp
+author: coreyp-at-msft
 ---
 # Windows Defender Overview for Windows Server Technical Preview
 Windows Server® 2016 Technical Preview now includes Windows Defender. Windows Defender is malware protection that immediately and actively protects Windows Server 2016 Technical Preview against known malware and can regularly update antimalware definitions through Windows Update.

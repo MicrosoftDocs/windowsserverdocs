@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cbf1e025-73a5-4576-a280-b697bb9aaead
 manager: dongill
-author: coreyp
+author: coreyp-at-msft
 ---
 # Automatic exclusions for Windows Defender
 This topic introduces automatic exclusions for Windows Defender on Windows Server® 2016 Technical Preview.
@@ -332,8 +332,8 @@ This section lists the folder exclusions that are delivered automatically when y
 -   *%systemroot%*\\SoftwareDistribution\\Download
 
 ## See Also
-[Windows Defender Overview for Windows Server Technical Preview](../windows-defender\Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md)
-[Windows Defender Events](../windows-defender\Windows-Defender-Events.md)
+[Windows Defender Overview for Windows Server Technical Preview](Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md)
+[Windows Defender Events](Windows-Defender-Events.md)
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
 
 

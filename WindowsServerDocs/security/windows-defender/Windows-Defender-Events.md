@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69b2f433-7f56-4496-bf3a-49549ce237ef
 manager: dongill
-author: coreyp
+author: coreyp-at-msft
 ---
 # Windows Defender Events
 Windows Defender Events

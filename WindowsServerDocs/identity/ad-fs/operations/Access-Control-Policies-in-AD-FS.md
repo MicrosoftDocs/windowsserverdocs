@@ -161,7 +161,7 @@ To create a access control policy with multiple permit conditions use the follow
   
 9. Click **Ok**. Click **Ok**.  
   
-    ![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP12.PNG)  
+![](../../../media/Access-Control-Policies-in-AD-FS/ADFSACP12.PNG)  
   
 ## How to assign an access control policy to a new application  
 Assigning an access control policy to a new application is pretty straight forward and has now been integrated into the wizard for adding an RP.  From the Relying Party Trust Wizard you can select the access control policy that you wish to assign.  This is a requirement when creating a new relying party trust.  

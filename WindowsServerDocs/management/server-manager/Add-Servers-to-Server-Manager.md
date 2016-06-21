@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
+author: coreyp-at-msft
 ---
 # Add Servers to Server Manager
 In Windows Server® 2016 Technical Preview, you can manage multiple remote servers by using a single Server Manager console. Servers that you want to manage by using Server Manager can be running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008 . Note that you cannot manage a newer release of Windows Server with an older release of Server Manager.
@@ -163,7 +164,7 @@ You can use Server Manager to manage servers that are in failover clusters \(als
 -   You cannot install roles and features on a clustered virtual server.
 
 ## See Also
-[Server Manager_1](Server-Manager_1.md)
+[Server Manager](Server-Manager.md)
 [Create and Manage Server Groups](Create-and-Manage-Server-Groups.md)
 
 
