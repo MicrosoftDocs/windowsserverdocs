@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
+author: coreyp-at-msft
 ---
 # WSUS Messages and Troubleshooting Tips
 This topic provides information about some common WSUS messages.

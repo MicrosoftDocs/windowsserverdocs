@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
-author: coreyp
+author: coreyp-at-msft
 ---
 # Install or Uninstall Roles, Role Services, or Features
 In Windows Server® 2016 Technical Preview, the Server Manager console and Windows PowerShell® cmdlets for Server Manager allow installation of roles and features to local or remote servers, or offline virtual hard disks \(VHDs\). You can install multiple roles and features on a single remote server or offline VHD in a single Add Roles and Features Wizard or Windows PowerShell session.  
@@ -36,7 +36,7 @@ This topic contains the following sections.
 -   [Install .NET Framework 3.5 and other features on-demand](#BKMK_FoD)  
   
 ## <a name="BKMK_installarfw"></a>Install roles, role services, and features by using the Add Roles and Features Wizard  
-In a single session in the Add Roles and Features Wizard, you can install roles, role services, and features on the local server, a remote server that has been added to Server Manager, or an offline VHD. For more information about how to add a server to Server Manager to manage, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md).  
+In a single session in the Add Roles and Features Wizard, you can install roles, role services, and features on the local server, a remote server that has been added to Server Manager, or an offline VHD. For more information about how to add a server to Server Manager to manage, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md).  
   
 > [!NOTE]  
 > If you are running Server Manager on Windows Server 2016 Technical Preview or Windows 10, you can use the Add Roles and Features Wizard to install roles and features only on servers and offline VHDs that are running Windows Server 2016 Technical Preview.  
@@ -55,7 +55,7 @@ In a single session in the Add Roles and Features Wizard, you can install roles,
   
 4.  On the **Select installation type** page, select **Role\-based or feature\-based installation** to install all parts of roles or features on a single server, or **Remote Desktop Services installation** to install either a virtual machine\-based desktop infrastructure or a session\-based desktop infrastructure for Remote Desktop Services. The **Remote Desktop Services installation** option distributes logical parts of the Remote Desktop Services role across different servers as needed by administrators. Click **Next**.  
   
-5.  On the **Select destination server** page, select a server from the server pool, or select an offline VHD. To select an offline VHD as your destination server, first select the server on which to mount the VHD, and then select the VHD file. For information about how to add servers to your server pool, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md). After you have selected the destination server, click **Next**.  
+5.  On the **Select destination server** page, select a server from the server pool, or select an offline VHD. To select an offline VHD as your destination server, first select the server on which to mount the VHD, and then select the VHD file. For information about how to add servers to your server pool, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md). After you have selected the destination server, click **Next**.  
   
     > [!NOTE]  
     > To install roles and features on offline VHDs, target VHDs must meet the following requirements.  
@@ -159,7 +159,7 @@ You must be logged on to a server as an administrator to uninstall roles, role s
     > -   **Read\/Write** access on the **File Sharing** dialog box.  
     > -   **Full Control** access on the **Security** tab , file or folder **Properties** dialog box.  
   
-    For information about how to add servers to your server pool, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md). After you have selected the destination server, click **Next**.  
+    For information about how to add servers to your server pool, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md). After you have selected the destination server, click **Next**.  
   
     > [!NOTE]  
     > You can use the Remove Roles and Features Wizard to remove roles and features from servers that are running the same release of Windows Server that supports the version of Server Manager that you are using. You cannot remove roles, role services, or features from servers that are running Windows Server 2016 Technical Preview, if you are running Server Manager on  Windows Server 2012 R2 ,  Windows Server 2012 , or Windows 8. You cannot use the Remove Roles and Features Wizard to remove roles and features from servers that are running  Windows Server 2008  or  Windows Server 2008 R2 .  

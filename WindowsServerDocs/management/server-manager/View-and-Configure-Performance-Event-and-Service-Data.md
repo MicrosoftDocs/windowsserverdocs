@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1
-author: coreyp
+author: coreyp-at-msft
 ---
 # View and Configure Performance, Event, and Service Data_1
 This topic describes how to view and configure the event log entries, performance counters, and service alerts that are displayed for local and remote servers in Server Manager.  
@@ -203,7 +203,7 @@ You can copy event, service, or performance entry properties in both the **Detai
 The **Events** tile also lets you preview event properties in the bottom half of the tile by selecting an event in the list. To copy the properties shown in the preview, right click the preview pane, and then click **Copy**.  
   
 ## See Also  
-[Server Manager_1](Server-Manager_1.md)  
-[Filter, Sort, and Query Data in Server Manager Tiles](Filter,-Sort,-and-Query-Data-in-Server-Manager-Tiles.md)  
+[Server Manager](Server-Manager.md)  
+[Filter, Sort, and Query Data in Server Manager Tiles](Filter-Sort-and-Query-Data-in-Server-Manager-Tiles.md)  
   
 

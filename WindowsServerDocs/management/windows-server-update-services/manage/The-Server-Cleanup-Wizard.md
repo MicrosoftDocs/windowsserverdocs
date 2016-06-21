@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c351797-2716-4442-a668-60d5b4e77751
+author: coreyp-at-msft
 ---
 # The Server Cleanup Wizard
 The Server Cleanup Wizard is integrated into the user interface and can be used to help you manage your disk space. This wizard can do the following operations:
@@ -41,6 +42,6 @@ If updates are approved using an auto\-approval rule, they might still be in the
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
 
--   [Windows Server Update Services &#40;WSUS&#41;](../Windows-Server-Update-Services--WSUS-.md)
+-   [Windows Server Update Services](../Windows-Server-Update-Services-WSUS.md)
 
 

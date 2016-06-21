@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
+author: coreyp-at-msft
 ---
 # Create and Manage Server Groups
 This topic describes how to create custom, user\-defined groups of servers in Server Manager in Windows Server® 2016 Technical Preview.
@@ -24,7 +25,7 @@ Servers can be a member of more than one group.
 
 2.  In the **Server group name** text box, type a friendly name for your server group, such as **Accounting Servers**.
 
-3.  Add servers to the **Selected** list from the server pool, or add other servers to the group by using the **Active Directory**, **DNS**, or **Import** tabs. For more information about how to use these tabs, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md) in this guide.
+3.  Add servers to the **Selected** list from the server pool, or add other servers to the group by using the **Active Directory**, **DNS**, or **Import** tabs. For more information about how to use these tabs, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md) in this guide.
 
 4.  When you have finished adding servers to the group, click **OK**. The new group is displayed in the Server Manager navigation pane under the **All Servers** group.
 
@@ -59,7 +60,7 @@ Servers can be a member of more than one group.
 3.  When you are finished with changes to the group, click **OK**.
 
 ## See Also
-[Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md)
-[Server Manager_1](Server-Manager_1.md)
+[Add Servers to Server Manager](Add-Servers-to-Server-Manager.md)
+[Server Manager](Server-Manager.md)
 
 

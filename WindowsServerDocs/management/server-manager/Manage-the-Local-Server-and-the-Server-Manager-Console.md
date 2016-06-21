@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
+author: coreyp-at-msft
 ---
 # Manage the Local Server and the Server Manager Console
 In Windows Server® 2016 Technical Preview, Server Manager lets you manage both the local server \(if you are running Server Manager on Windows Server, and not on a Windows\-based client operating system\) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
 
-The **Local Server** page in Server Manager displays server properties, events, service and performance counter data, and Best Practices Analyzer \(BPA\) results for the local server. Event, service, BPA, and performance tiles function as they do on role and server group pages. For more information about configuring the data that is displayed in these tiles, see [View and Configure Performance, Event, and Service Data_1](View-and-Configure-Performance,-Event,-and-Service-Data_1.md) and [Run Best Practices Analyzer Scans and Manage Scan Results](Run-Best-Practices-Analyzer-Scans-and-Manage-Scan-Results.md).
+The **Local Server** page in Server Manager displays server properties, events, service and performance counter data, and Best Practices Analyzer \(BPA\) results for the local server. Event, service, BPA, and performance tiles function as they do on role and server group pages. For more information about configuring the data that is displayed in these tiles, see [View and Configure Performance, Event, and Service Data](View-and-Configure-Performance-Event-and-Service-Data.md) and [Run Best Practices Analyzer Scans and Manage Scan Results](Run-Best-Practices-Analyzer-Scans-and-Manage-Scan-Results.md).
 
 Menu commands and settings in the Server Manager console heading bars apply globally to all servers in your server pool, and let you use Server Manager to manage the entire server pool.
 
@@ -72,7 +73,7 @@ You can view or change the following settings in the **Properties** tile on the 
 Global settings that apply to the entire Server Manager console, and to all remote servers that have been added to the Server Manager server pool, are found in the heading bars at the top of the Server Manager console window.
 
 ### Add servers to Server Manager
-The command that opens the **Add Servers** dialog box, and lets you add remote physical or virtual servers to the Server Manager server pool, is in the **Manage** menu of the Server Manager console. For detailed information about how to add servers, see [Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md).
+The command that opens the **Add Servers** dialog box, and lets you add remote physical or virtual servers to the Server Manager server pool, is in the **Manage** menu of the Server Manager console. For detailed information about how to add servers, see [Add Servers to Server Manager](Add-Servers-to-Server-Manager.md).
 
 ### Refresh data that is displayed in Server Manager
 You can configure the refresh interval for data that is displayed in Server Manager on the **Server Manager Properties** dialog box, which you open from the **Manage** menu.
@@ -91,7 +92,7 @@ When servers that are in a cluster are added to Server Manager, whether they are
 Data that is displayed in role home pages in Server Manager for Remote Desktop Services, IP Address Management, and File and Storage Services does not refresh automatically. Refresh data that is displayed in these pages manually, by pressing **F5** or clicking **Refresh** in the Server Manager console heading while you are on those pages.
 
 ### Add or remove roles or features
-The commands that open the Add Roles and Features Wizard and Remove Roles and Features Wizard, and let you add or remove roles, role services, and features to servers in your server pool, are in the **Manage** menu of the Server Manager console, and the **Tasks** menu of the **Roles and Features** tile on role or group pages. For detailed information about how to add or remove roles or features, see [Install or Uninstall Roles, Role Services, or Features](Install-or-Uninstall-Roles,-Role-Services,-or-Features.md).
+The commands that open the Add Roles and Features Wizard and Remove Roles and Features Wizard, and let you add or remove roles, role services, and features to servers in your server pool, are in the **Manage** menu of the Server Manager console, and the **Tasks** menu of the **Roles and Features** tile on role or group pages. For detailed information about how to add or remove roles or features, see [Install or Uninstall Roles, Role Services, or Features](Install-or-Uninstall-Roles-Role-Services-or-Features.md).
 
 In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.
 
@@ -99,7 +100,7 @@ In Server Manager, role and feature data is displayed in the base language of th
 The command that opens the **Create Server Group** dialog box, and lets you create custom groups of servers, is in the **Manage** menu of the Server Manager console. For detailed information about how to create server groups, see [Create and Manage Server Groups](Create-and-Manage-Server-Groups.md).
 
 ### Prevent Server Manager from opening automatically at logon
-The **Do not start Server Manager automatically at logon** check box in the **Server Manager Properties** dialog box controls whether Server Manager opens automatically at logon for members of the Administrators group on a local server. This setting does not affect Server Manager behavior when it is running on Windows 10 as part of Remote Server Administration Tools. For more information about configuring this setting, see [Server Manager_1](Server-Manager_1.md).
+The **Do not start Server Manager automatically at logon** check box in the **Server Manager Properties** dialog box controls whether Server Manager opens automatically at logon for members of the Administrators group on a local server. This setting does not affect Server Manager behavior when it is running on Windows 10 as part of Remote Server Administration Tools. For more information about configuring this setting, see [Server Manager](Server-Manager.md).
 
 ### Zoom in or out
 To zoom in or out on your view of the Server Manager console, you can either use the **Zoom** commands on the **View** menu, or press **Ctrl\+Plus \(\+\)** to zoom in and **Ctrl\+Minus \(\-\)** to zoom out.
@@ -163,10 +164,10 @@ In Windows Server 2016 Technical Preview, the following roles and feature have m
     For more information about deploying and managing IPAM, see [IP Address Management (IPAM)](http://go.microsoft.com/fwlink/p/?LinkId=241533).
 
 ## See Also
-[Server Manager_1](Server-Manager_1.md)
-[Add Servers to Server Manager_1](Add-Servers-to-Server-Manager_1.md)
+[Server Manager](Server-Manager.md)
+[Add Servers to Server Manager](Add-Servers-to-Server-Manager.md)
 [Create and Manage Server Groups](Create-and-Manage-Server-Groups.md)
-[View and Configure Performance, Event, and Service Data_1](View-and-Configure-Performance,-Event,-and-Service-Data_1.md)
+[View and Configure Performance, Event, and Service Data](View-and-Configure-Performance-Event-and-Service-Data.md)
 [File and Storage Services](http://go.microsoft.com/fwlink/p/?LinkId=241530)
 [Remote Desktop Services (RDS)](http://go.microsoft.com/fwlink/p/?LinkId=241532)
 [IP Address Management (IPAM)](http://go.microsoft.com/fwlink/p/?LinkId=241533)
