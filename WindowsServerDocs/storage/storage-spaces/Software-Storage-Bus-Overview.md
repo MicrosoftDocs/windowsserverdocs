@@ -44,11 +44,9 @@ Software Bus Cache creates a special partition on each caching device that, by d
 
 -   [Storage Spaces Direct in Windows Server 2016 Technical Preview](Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
 
--   [Storage Spaces Direct Overview](Storage-Spaces-Direct-Overview.md)  
-
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
 
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 
