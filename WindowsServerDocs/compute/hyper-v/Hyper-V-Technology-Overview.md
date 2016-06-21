@@ -54,7 +54,7 @@ Hyper\-V offers many features. This is an overview, grouped by what the features
 For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server 2016 Technical Preview](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).  
   
 ## How to get Hyper\-V  
-Hyper\-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server Technical Preview](get-started/Install-the-Hyper-V-role-on-Windows-Server-Technical-Preview.md). On Windows, it's available as [feature](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome) in some 64\-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://technet.microsoft.com/library/hh923062.aspx).  
+Hyper\-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server Technical Preview](get-started/Install-the-Hyper-V-role-on-Windows-Server-Technical-Preview.md). On Windows, it's available as [feature](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome) in some 64\-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://technet.microsoft.com/library/hh923062.aspx).
   
 ## Supported operating systems  
   
@@ -81,9 +81,9 @@ Hyper\-V also has tools for management and connectivity. You can install these o
 ## Related technologies  
 These are some technologies from Microsoft that are often used with Hyper\-V:  
   
-* [Failover Clustering overview](../failover-clustering/Failover-Clustering-Overview.md)  
+* [Failover Clustering](../failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
 * [Remote Desktop Services](../remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
-* [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994(v=sc.16\).aspx)  
+* [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994)  
   
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct  
   
