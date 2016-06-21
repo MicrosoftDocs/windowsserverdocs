@@ -163,6 +163,24 @@ Then, after you switch replication direction, remove replication, or are simply 
 You can also schedule this tool to run periodically using a scheduled task. For more information on using VSS, review [Vssadmin](https://technet.microsoft.com/library/cc754968.aspx). There is no need or value in backing up the log volumes. Attempting to do so will be ignored by VSS.
 Use of Windows Server Backup, Microsoft Azure Backup, Microsoft DPM, or other snapshot, VSS, virtual machine, or file-based technologies are supported by Storage Replica as long as they operate within the volume layer. Storage Replica does not support block-based backup and restore.
 
+## <a name="FAQ14"></a> Can I configure replication to restrict bandwidth usage?
+Yes, via the SMB 3 bandwidth limiter. This is a global setting for all Storage Replica traffic and therefore affects all replication from this server. Typically, this is needed only with Storage Replica initial sync setup, where all the volume data must transfer. If needed after initial sync, your network bandwidth is too low for your IO workload.
+
+This should only be used with asynchronous replication (note: initial sync is always asynchronous even if you have specified synchronous).
+You can also use network QoS policies to shape Storage Replica traffic. Use of highly matched seeded Storage Replica replication will also lower overall initial sync bandwidth usage considerably.
+
+
+To set the bandwidth limit, use:
+
+    Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond x
+
+To see the bandwidth limit, use:
+
+    Get-SmbBandwidthLimit -Category StorageReplication
+
+To remove the bandwidth limit, use:
+
+    Remove-SmbBandwidthLimit -Category StorageReplication
 
 
 
