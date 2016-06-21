@@ -137,7 +137,7 @@ While Deduplication for Virtualized Backup Applications is a supported scenario 
 ### <a name="BKMK_Dedup4"></a>Support for Nano Server  
 **What value does this change add?**  
 
-Nano Server is a new headless deployment option in Windows Server 2016 that has far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/nano-server/Getting-Started-with-Nano-Server.md).  
+Nano Server is a new headless deployment option in Windows Server 2016 that has far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md).  
 ### <a name="BKMK_Dedup5"></a>Support for Cluster Rolling Upgrades  
 **What value does this change add?**  
 
@@ -166,11 +166,5 @@ If SMB signing and mutual authentication are unavailable, a Windows 10 or Window
 For more information on these security improvements – also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
 
 
-
-
-
-
-
-
 ## See also  
-[What's New in Windows Server 2016 Technical Preview 5](../../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
+[What's New in Windows Server 2016 Technical Preview 5](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
