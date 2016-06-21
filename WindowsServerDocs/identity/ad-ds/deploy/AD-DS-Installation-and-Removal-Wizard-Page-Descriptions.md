@@ -65,7 +65,7 @@ For more information about how to create a forest, see [Install a New Windows Se
   
 The following options appear when you create a new domain.  
   
-![](../../media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DeploymentConfiguration_ChildDomain.gif)  
+![](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DeploymentConfiguration_ChildDomain.gif)  
   
 > [!NOTE]  
 > If you create a new tree domain, you need to specify the name of the forest root domain instead of the parent domain, but the remaining wizard pages and options are the same.  
