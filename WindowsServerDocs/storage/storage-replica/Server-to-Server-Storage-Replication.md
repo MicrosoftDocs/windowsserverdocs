@@ -332,20 +332,20 @@ b.	We strongly recommend enabling Volume Shadow Copies and periodically taking s
 
 ### Related Topics  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 
--   [Storage Replica Overview](../storage-replica/Storage-Replica-Overview.md)  
+-   [Storage Replica Overview](Storage-Replica-Overview.md)  
 
--   [Stretch Cluster Replication Using Shared Storage](../storage-replica/Stretch-Cluster-Replication-Using-Shared-Storage.md)  
+-   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
 
--   [Cluster to Cluster Storage Replication](../storage-replica/Cluster-to-Cluster-Storage-Replication.md)  
+-   [Cluster to Cluster Storage Replication](Cluster-to-Cluster-Storage-Replication.md)
 
--   [Storage Replica: Known Issues](../storage-replica/Storage-Replica--Known-Issues.md)  
+-   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
 
--   [Storage Replica: Frequently Asked Questions](../storage-replica/Storage-Replica--Frequently-Asked-Questions.md)  
+-   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
 
 ## See Also  
 
--   [Windows Server 2016 Technical Preview 5](Windows-Server-2016-Technical-Preview-5.md)  
+-   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
 -   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  

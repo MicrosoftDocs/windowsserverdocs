@@ -380,20 +380,20 @@ Now you will manage and operate your cluster\-to\-cluster replication. You can p
 
 ### Related Topics  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 
--   [Storage Replica Overview](../storage-replica/Storage-Replica-Overview.md)  
+-   [Storage Replica Overview](Storage-Replica-Overview.md)  
 
--   [Stretch Cluster Replication Using Shared Storage](../storage-replica/Stretch-Cluster-Replication-Using-Shared-Storage.md)  
+-   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
 
--   [Server to Server Storage Replication](../storage-replica/Server-to-Server-Storage-Replication.md)  
+-   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
 
--   [Storage Replica: Known Issues](../storage-replica/Storage-Replica--Known-Issues.md)  
+-   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
 
--   [Storage Replica: Frequently Asked Questions](../storage-replica/Storage-Replica--Frequently-Asked-Questions.md)  
+-   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
 
 ## See Also  
 
--   [Windows Server 2016 Technical Preview 5](Windows-Server-2016-Technical-Preview-5.md)  
+-   [Windows Server 2016 Technical Preview 5]((../../get-started/Windows-Server-2016-Technical-Preview-5.md)Windows-Server-2016-Technical-Preview-5.md)  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
