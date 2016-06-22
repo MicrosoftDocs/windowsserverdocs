@@ -435,7 +435,7 @@ Add-WebApplicationProxyApplication
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
+-   [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
   
 -   [Publish Applications through Web Application Proxy [WAP]](assetId:///e75be34f-876d-4147-944b-8ab98285804e)  
   

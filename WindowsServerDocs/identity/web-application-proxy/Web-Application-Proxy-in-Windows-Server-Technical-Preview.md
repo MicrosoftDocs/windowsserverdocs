@@ -43,7 +43,7 @@ The content in this section describes what's new and changed in the Web Applicat
   
 -   New debug log for better troubleshooting and improved service log for complete audit trail and improved error handling  
   
-    For more information on troubleshooting, see [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
+    For more information on troubleshooting, see [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
   
 -   Administrator Console UI improvements  
   
@@ -55,6 +55,6 @@ The content in this section describes what's new and changed in the Web Applicat
   
 -   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
--   [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
+-   [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
   
 
