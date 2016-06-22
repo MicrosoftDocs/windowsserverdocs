@@ -1,5 +1,5 @@
 ---
-title: What&#39;s new in Hyper-V on Windows Server 2016 Technical Preview
+title: What's new in Hyper-V on Windows Server 2016 Technical Preview
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
