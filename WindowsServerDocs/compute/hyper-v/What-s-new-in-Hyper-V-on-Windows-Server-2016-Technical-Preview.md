@@ -32,6 +32,7 @@ Here's what's included in this article and whether the functionality is new or u
 |[Networking features](#BKMK_networking)| New|  
 |[Production checkpoints](#BKMK_check)| New|  
 |[Rolling Hyper-V Cluster Upgrade](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_HyperVRollingUpgrades)| New|  
+|[Shared virtual hard disks](#BKMK_shared) | Updated|
 |[Start order priority for clustered virtual machines](#BKMK_StartOrder)| New|  
 |[Storage quality of service (QoS)](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_QoS)| Updated|  
 |[Shielded virtual machines](#BKMK_shielded)| New|  
@@ -41,7 +42,7 @@ Here's what's included in this article and whether the functionality is new or u
 |[Windows PowerShell Direct](#BKMK_PowerShellDirect)| New|  
   
 ## <a name="BKMK_standby"></a>Compatible with Connected Standby  
-When the Hyper\-V role is installed on a computer that uses the Always On\/Always Connected \(AOAC\) power model, the **Connected Standby** power state is now available.  
+When the Hyper\-V role is installed on a computer that uses the Always On/Always Connected \(AOAC\) power model, the **Connected Standby** power state is now available.  
   
 ## <a name="BKMK_device"></a>Discrete device assignment  
 This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper\-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016 Technical Preview](System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
@@ -139,7 +140,10 @@ After you update the cluster functional level:
 > Hyper\-V on Windows 10 doesn't support failover clustering.  
   
 For details and instructions, see the [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx).  
-  
+
+## <a name="BKMK_shared"></a>Shared virtual hard disks
+You can now resize shared virtual hard disks (.vhdx files) used for guest clustering, without downtime. Shared virtual hard disks can be grown or shrunk while the virtual machine is online. Guest clusters can now also protect shared virtual hard disks by using Hyper-V Replica for disaster recovery.
+
 ## <a name="BKMK_shielded"></a>Shielded virtual machines  
 Shielded virtual machines use several features to  make it harder for Hyper-V administrators and malware on the host to inspect, tamper with, or steal data from the state of a shielded virtual machine.  Data and state is encrypted, Hyper\-V administrators can't see the video output and disks,  and the virtual machines can be restricted to run only on known, healthy hosts, as determined by a Host Guardian Server. For details, see [Guarded Fabric and Shielded VMs](http://go.microsoft.com/fwlink/?LinkId=746381).  
   

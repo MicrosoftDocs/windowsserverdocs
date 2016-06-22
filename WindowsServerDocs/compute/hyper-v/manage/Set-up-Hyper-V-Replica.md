@@ -7,12 +7,12 @@ manager: timlt
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
-author: rayne-wiselman
+author: KBDAzure
 ---
 # Set up Hyper-V Replica
 **This is preliminary content and subject to change.**  
   
-Hyper\-V Replica is an integral part of the Hyper\-V role. It contributes to your disaster recovery strategy by   replicating VMs from one Hyper\-V host server to another to keep your workloads available.  Hyper\-V Replica creates a copy of a live VM  to a replica offline VM.  Note the following:  
+Hyper\-V Replica is an integral part of the Hyper\-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper\-V host server to another to keep your workloads available.  Hyper\-V Replica creates a copy of a live VM  to a replica offline VM.  Note the following:  
   
 -   **Hyper\-V hosts**: Primary and secondary host servers can be physically co\-located or in separate geographical locations with replication over a WAN link. Hyper\-V hosts can be  standalone, clustered, or a mixture of both. There's no Active Directory dependency between the servers and they don't need to be domain members.  
   
@@ -43,7 +43,7 @@ Here's what you should verify before you begin:
   
 -   **Plan capacity**: Download the [Capacity Planner for Hyper-V Replica](http://www.microsoft.com/download/details.aspx?id=39057) .  
   
--   **Decide how often you need to synchronize data**:  The data on the Replica server is synchronized updated according to the replication frequency you configure \(30 seconds, 5 minutes, or 15 minutes\). The frequency you choose should consider the following: Are the VMs running critical data with a low RPO? What are you bandwidth considerations?  Your highly\-critical VMs will obviously need more frequent replication.  
+-   **Decide how often you need to synchronize data**:  The data on the Replica server is synchronized updated according to the replication frequency you configure \(30 seconds, 5 minutes, or 15 minutes\). The frequency you choose should consider the following: Are the virtual machines running critical data with a low RPO? What are you bandwidth considerations?  Your highly\-critical virtual machines will obviously need more frequent replication.  
   
 -   **Decide how to recover data**:  By default Hyper\-V Replica only stores a single recovery point that will be the latest replication sent from the primary to the secondary. However if you  want the option to recover data to an earlier point in time you can specify that additional recovery points should be stored \(to a maximum of 24 hourly points\). If you do need additional recovery points you should note that this requires more overhead on processing and storage resources.  
   
@@ -53,10 +53,10 @@ Here's what you should verify before you begin:
   
 ## Deployment steps  
   
-### Step 1: Set up the Hyper\-V server  
-You'll need at least two Hyper\-V servers with one or more virtual machines on each server. [Get started with Hyper-V](../get-started/Get-started-with-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). The host server that you'll replicate VMs to will need to be set up as the replica server.  
+### Step 1: Set up the Hyper\-V hosts  
+You'll need at least two Hyper\-V servers with one or more virtual machines on each server. [Get started with Hyper-V](../get-started/Get-started-with-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). The host server that you'll replicate virtual machines to will need to be set up as the replica server.  
   
-1.  In the Hyper\-V settings for the server you'll replicate VMs to, in **Replication Configuration** select Enable this computer as a Replica server.  
+1.  In the Hyper\-V settings for the server you'll replicate virtual machines to, in **Replication Configuration** select Enable this computer as a Replica server.  
   
 2.  You can replicate over HTTP or encrypted HTTPS. Select **Use Kerberos \(HTTP\)** or **Use certificate\-based Authentication \(HTTPS**\). By default HTTP 80 and HTTP 443 are enabled as firewall exceptions on the replica Hyper\-V server. If you change the default port settings you'll need to manually tweak the firewall exception. If you're replicating over HTTPS you'll need to select a certificate and you should have certificate authentication set up.  
   
@@ -99,7 +99,7 @@ Do the following on each VM you want to replicate:
   
 7.  On the **Configure Additional Recovery Points** page, select whether you want to maintain only the latest recovery point or to create additional points.    If you want to consistently recover applications and workloads that have their own VSS writers we recommend you select **Volume Shadow Copy Service \(VSS\) frequenc**y and specify how often to create app\-consistent snapshots. Note that the Hyper\-V VMM Requestor Service must be running on both the primary and secondary Hyper\-V servers. Then click **Next**.  
   
-8.  On the **Choose Initial Replication** page, select the initial replication method to use.  The default setting to send initial copy over the network will copy the pirmary VM configuration file \(XML\) and the VMD files you selected over your network connection. Verify network bandwidth availability if you're going to use this option. If the primary VM is already configured on the secondary site as a replicate VM it can be useful to select  **Use an existing virtual machine on the replication server as the initial copy**.   You can use Hyper\-V export to export the primary VM and import it as a replica VM on the secondary server. For larger VMs or limited bandwidth you can it choose to have initial replication over the network occur at a later time,  and then configure off\-peak hours, or to send the initial replication information as offline media.  
+8.  On the **Choose Initial Replication** page, select the initial replication method to use.  The default setting to send initial copy over the network will copy the pirmary VM configuration file \(XML\) and the VMD files you selected over your network connection. Verify network bandwidth availability if you're going to use this option. If the primary VM is already configured on the secondary site as a replicate VM it can be useful to select  **Use an existing virtual machine on the replication server as the initial copy**.   You can use Hyper\-V export to export the primary VM and import it as a replica VM on the secondary server. For larger virtual machines or limited bandwidth you can it choose to have initial replication over the network occur at a later time,  and then configure off\-peak hours, or to send the initial replication information as offline media.  
   
     If you do offline replication you'll transport the initial copy to the secondary server using an external storage medium such as a hard disk or USB drive. To do this you'll need to connect the external storage to the primary server \(or owner node in a cluster\) and then when you select Send initial copy using external media you can specify a location locally or on your external media where the initial copy can be stored.  A placeholder VM is created on the replica site. After initial replication completes the external storage can be shipped to the replica site. There you'll connect the external media to the secondary server or to the owner node of the secondary cluster. Then you'll import the initial replica to a specified location and merge it into the placeholder VM.  
   
