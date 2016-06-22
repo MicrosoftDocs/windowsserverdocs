@@ -60,16 +60,16 @@ In this step you will verify the default AD FS access control mechanism \(**Form
 ## <a name="BKMK_3"></a>Step 3: Configure MFA on your federation server
 There are two parts to configuring MFA in AD FS in Windows Server® 2012 R2:
 
--   [Select an additional authentication method](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
+-   [Select an additional authentication method](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
 
--   [Set up MFA policy](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_6)
+-   [Set up MFA policy](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_6)
 
 ### <a name="BKMK_5"></a>Select an additional authentication method
 In order to set up MFA, you must select an additional authentication method. In this walkthrough, for additional authentication method, you can choose between the following options:
 
--   Select [Certificate authentication](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in AD FS in Windows Server® 2012 R2 by default
+-   Select [Certificate authentication](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in AD FS in Windows Server® 2012 R2 by default
 
--   Configure and select [Windows Azure Multi\-Factor Authentication](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8)
+-   Configure and select [Windows Azure Multi\-Factor Authentication](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8)
 
 #### <a name="BKMK_7"></a>Certificate authentication
 Complete either of the following procedures to select Certificate authentication as the additional authentication method:
@@ -95,13 +95,13 @@ Complete either of the following procedures to select Certificate authentication
 #### <a name="BKMK_8"></a>Windows Azure Multi\-Factor Authentication
 Complete the following procedures in order to download and configure and select **Windows Azure Multi\-Factor Authentication** as additional authentication on your federation server:
 
-1.  [Create a Multi\-Factor Authentication Provider via the Windows Azure Portal](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
+1.  [Create a Multi\-Factor Authentication Provider via the Windows Azure Portal](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
 
-2.  [Download the Windows Azure Multi\-Factor Authentication Server](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
+2.  [Download the Windows Azure Multi\-Factor Authentication Server](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
 
-3.  [Install the Windows Azure Multi\-Factor Authentication Server on your Federation Server](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
+3.  [Install the Windows Azure Multi\-Factor Authentication Server on your Federation Server](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
 
-4.  [Configure Windows Azure Multi\-Factor Authentication as an additional authentication method](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
+4.  [Configure Windows Azure Multi\-Factor Authentication as an additional authentication method](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
 
 ##### <a name="BKMK_a"></a>Create a Multi\-Factor Authentication Provider via the Windows Azure Portal
 

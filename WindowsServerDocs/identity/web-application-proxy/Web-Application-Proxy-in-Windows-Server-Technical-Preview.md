@@ -51,9 +51,9 @@ The content in this section describes what's new and changed in the Web Applicat
   
 ## See Also  
   
--   [What's New in Windows Server 2016 Technical Preview 4](What-s-New-in-Windows-Server-2016-Technical-Preview-4.md)  
+-   [What's New in Windows Server 2016 Technical Preview 5](WindowsServerDocs/get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
   
--   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
+-   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
 -   [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
   
