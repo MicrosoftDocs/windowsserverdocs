@@ -233,7 +233,7 @@ In this step you will verify the MFA functionality that you set up in the previo
 
 2.  Type in the credentials of the **Robert Hatley** AD account.
 
-    At this point, because of the MFA policy that you configured, the user will be prompted to undergo additional authentication. The default message text is **For security reasons, we require additional information to verify your account.** However, this text is fully customizable. For more information about how to customize the sign\-in experience, see [Customizing the AD FS Sign-in Pages](Customizing-the-AD-FS-Sign-in-Pages.md).
+    At this point, because of the MFA policy that you configured, the user will be prompted to undergo additional authentication. The default message text is **For security reasons, we require additional information to verify your account.** However, this text is fully customizable. For more information about how to customize the sign\-in experience, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
 
     If you configured Certificate authentication as the additional authentication method, the default message text is **Select a certificate that you want to use for authentication. If you cancel the operation, please close your browser and try again.**
 
