@@ -1,16 +1,16 @@
 ---
 title: Manage Hyper-V on Windows Server 2016 Technical Preview
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
-author: jpjofre
+author: cwatsonmsft
 ---
 # Manage Hyper-V on Windows Server 2016 Technical Preview
 **This is preliminary content and subject to change.**  

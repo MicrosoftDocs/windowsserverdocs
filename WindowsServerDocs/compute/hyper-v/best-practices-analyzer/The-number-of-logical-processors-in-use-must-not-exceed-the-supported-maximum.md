@@ -1,9 +1,9 @@
 ---
 title: The number of logical processors in use must not exceed the supported maximum
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

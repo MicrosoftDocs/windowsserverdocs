@@ -1,9 +1,9 @@
 ---
 title: Replication is paused for one or more virtual machines on this server
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

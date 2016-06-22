@@ -1,9 +1,9 @@
 ---
 title: Use live migration without Failover Clustering to move a virtual machine
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
@@ -19,7 +19,7 @@ To be able to do this, you'll need:
 
  - A user account that's a member of the local Hyper\-V Administrators group or the Administrators group on both the source and destination computers. 
   
-- The Hyper\-V role in Windows Server 2016 Technical Preview installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration.md). 
+- The Hyper\-V role in Windows Server 2016 Technical Preview installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
   
 - The Hyper\-V management tools installed on a computer running Windows Server 2016 Technical Preview or Windows 10, unless the tools are installed on the source or destination server and you'll run them from there.  
    
@@ -53,7 +53,7 @@ If you haven’t set up constrained delegation, you must sign in to source serve
   
 **Failed to establish a connection with host***\<computer name>***: No credentials are available in the security package \0x8009030E\).**
   
- To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. \(Note that this requires domain administrator credentials.\) For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration.md). 
+ To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. \(Note that this requires domain administrator credentials.\) For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
  
  ### Failed because the host hardware isn't compatible
  

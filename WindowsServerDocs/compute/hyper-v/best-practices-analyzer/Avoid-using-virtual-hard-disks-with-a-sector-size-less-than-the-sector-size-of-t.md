@@ -1,9 +1,9 @@
 ---
 title: Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

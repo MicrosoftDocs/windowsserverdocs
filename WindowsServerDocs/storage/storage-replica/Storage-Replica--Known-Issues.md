@@ -105,7 +105,7 @@ When replicating data with Storage Replica and rebooting the participating serve
 
 This is caused by a timing issue in Windows Server 2016 Technical Preview where network conditions prevent access to a Domain Controller during the boot up phase. As a workaround, configure the **Storage Replica** service to have a startup type of **Automatic (Delayed Start)** using Services.msc, SC.exe, or Set-Service. This issue will be fixed in a later release of Windows Server 2016.  
 
-## Running Test-SRTopology fails with error “Invalid value entered for target computer name”  
+## Running Test-SRTopology fails with errors “Invalid value entered for target computer name” or "Invalid value entered for source computer name"  
 
 When attempting to use `Test-SRTopology`, you receive the following error:  
 
@@ -131,6 +131,27 @@ This cmdlet has limited error handing in Windows Server 2016 Technical Preview a
 * The destination computer firewall is blocking access to PowerShell and/or CIM calls.  
 * The destination computer is not running the WMI service.   
 * You did not use CREDSSP when running the `Test-SRTopology` cmdlet remotely from a management computer.  
+
+## Attempting to move a cluster group returns an error
+When using Failover Cluster Manager to move a group like File Server for General Use between asynchronously replicated sites, you receive the following error:
+
+**The operation failed because either the specified cluster node is not the owner of the group, or the node is not a possible owner of the group**.
+
+The same issue occurs with `Move-ClusterGroup`. Furthermore, automatic failover does not occur when using an asynchronously stretched cluster. You do not have this problem when attempting to move synchronously replicated storage between sites, or, when moving the group between servers in the same site, where replication direction does not change. This problem does not occur in server to server or cluster to cluster scenarios.
+
+This is caused by a known issue in Windows Server 2016 Technical Preview. As a workaround, use `Set-SRPartnership` to switch the replication direction and move the role. You may receive an error here. Ignore it, and note that the switch does occur without issue.
+
+## Configuring new Storage Replica partnership returns an error - "Failed to provision partition"
+When attempting to create a new replication partnership with `New-SRPartnership`, you receive the following error:
+
+    New-SRPartnership : Unable to create replication group test01, detailed reason: Failed to provision partition ed0dc93f-107c-4ab4-a785-afd687d3e734.
+    At line: 1 char: 1
+    + New-SRPartnership -SourceComputerName srv1 -SourceRGName test01
+    + Categorylnfo : ObjectNotFound: (MSFT_WvrAdminTasks : root/ Microsoft/. . s) CNew-SRPartnership], CimException
+    + FullyQua1ifiedErrorId : Windows System Error 1168 ,New-SRPartnership
+
+This is caused by selecting a data volume that is on the same partition as the System Drive (i.e. the **C:** drive with its Windows folder). For instance, on a drive that contains both the **C:** and **D:** volumes created from the same partition. This is not supported in Storage Replica; you must pick a different volume to replicate.
+
 
 ### Related Topics  
 

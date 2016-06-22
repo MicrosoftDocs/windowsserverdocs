@@ -1,9 +1,9 @@
 ---
 title: VHD-format dynamic virtual hard disks are not recommended for virtual machines that run server workloads in a production environment
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

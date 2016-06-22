@@ -1,8 +1,8 @@
 ---
 title: Plan for Hyper-V scalability in Windows Server 2016
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
+ms.service: na
 ms.suite: na
 ms.technology: 
   - hyper-v
