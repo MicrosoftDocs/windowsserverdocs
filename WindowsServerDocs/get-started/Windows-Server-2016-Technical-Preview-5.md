@@ -22,17 +22,17 @@ This is the fifth release of Windows Server 2016 Technical Preview. In this docu
   
 -   [What's New in Windows Server Technical Preview 5](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
   
--   [Compute](Compute.md)  
+-   [Compute](../compute/Compute.md)  
   
--   [Identity and Access](Identity-and-Access.md)  
+-   [Identity and Access](../identity/Identity-and-Access.md)  
   
--   [Management and  Automation]()  
+-   [Management and  Automation](../management/Management-and-Automation.md)  
   
--   [Networking]()  
+-   [Networking](../networking/Networking.md)  
   
--   [Storage]()  
+-   [Storage](../storage/Storage.md)  
   
--   [Security and Assurance](Security-and-Assurance.md)  
+-   [Security and Assurance](../security/Security-and-Assurance.md)  
   
 Want to provide feedback or make a suggestion? Is there something that  we could do better? You can use the [Windows Server User Voice site](http://windowsserver.uservoice.com/forums/295047-general-feedback) to give feedback, recommend features, and to see what others are saying.  
   
