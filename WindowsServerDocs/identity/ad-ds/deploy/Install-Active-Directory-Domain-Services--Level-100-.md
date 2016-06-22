@@ -1,4 +1,4 @@
-﻿---
+---
 title: Install Active Directory Domain Services (Level 100)
 ms.custom: 
   - AD
@@ -329,7 +329,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
 -   [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)  
   
--   [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](./../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
+-   [Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
   
 -   [Install a Windows Server 2012 Active Directory Read-Only Domain Controller &#40;RODC&#41; &#40;Level 200&#41;](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md)  
   
@@ -355,12 +355,12 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
   
 9. On the **Results** page, verify that the installation succeeded, and click **Promote this server to a domain controller** to start the Active Directory Domain Services Configuration Wizard.  
   
-    ![](../../media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)  
+    ![](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)  
   
     > [!IMPORTANT]  
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by clicking Tasks in Server Manager.  
   
-    ![](../../media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
+    ![](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
   
 10. On the **Deployment Configuration** page, choose one of the following options:  
   
@@ -510,7 +510,7 @@ After an RODC account is created, you can attach a server to account to complete
     > [!IMPORTANT]  
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by clicking Tasks in Server Manager.  
   
-    ![](../../media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
+    (media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)  
   
 11. On the **Deployment Configuration** page, click **Add a domain controller to an existing domain**, type the name of the domain \(for example, emea.contoso.com\) and credentials \(for example, specify an account that is delegated to manage and install the RODC\), and then click **Next**.  
   
@@ -529,7 +529,7 @@ After an RODC account is created, you can attach a server to account to complete
 ## See Also  
 [Troubleshooting Domain Controller Deployment](Troubleshooting-Domain-Controller-Deployment.md)  
 [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md)  
-[Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
+[Install a New Windows Server 2012 Active Directory Child or Tree Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md)  
 [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain &#40;Level 200&#41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md)  
   
 
