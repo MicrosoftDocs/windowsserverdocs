@@ -1,9 +1,11 @@
 ---
 title: PowerShell on Nano Server
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: DonGill
+ms.technology: 
+  - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
