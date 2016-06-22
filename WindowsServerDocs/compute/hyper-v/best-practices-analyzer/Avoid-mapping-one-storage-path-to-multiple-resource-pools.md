@@ -1,9 +1,9 @@
 ---
 title: Avoid mapping one storage path to multiple resource pools
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

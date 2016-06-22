@@ -1,16 +1,16 @@
 ---
 title: Get started with Hyper-V on Windows Server 2016 Technical Preview
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9a3f8b74-f3c0-433f-a320-850ca8610757
-author: jpjofre
+author: cwatsonmsft
 ---
 # Get started with Hyper-V on Windows Server 2016 Technical Preview
   

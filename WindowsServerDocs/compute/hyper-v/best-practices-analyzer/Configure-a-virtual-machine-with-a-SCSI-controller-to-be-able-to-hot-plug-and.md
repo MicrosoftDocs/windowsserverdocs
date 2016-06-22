@@ -1,9 +1,9 @@
 ---
 title: Configure a virtual machine with a SCSI controller to be able to hot plug and hot unplug storage
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
