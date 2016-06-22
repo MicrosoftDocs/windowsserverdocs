@@ -17,7 +17,7 @@ You can use this procedure to add BranchCache file servers to an organizational 
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.  
   
 > [!NOTE]  
-> You must create a BranchCache file servers OU in the Active Directory Users and Computers console before you add computer accounts to the OU with this procedure. For more information, see [Create the BranchCache File Servers Organizational Unit](Create-the-BranchCache-File-Servers-Organizational-Unit.md).  
+> You must create a BranchCache file servers OU in the Active Directory Users and Computers console before you add computer accounts to the OU with this procedure. For more information, see [Create the BranchCache File Servers Organizational Unit](../../branchcache/deploy/Create-the-BranchCache-File-Servers-Organizational-Unit.md).  
   
 ### To move file servers to the BranchCache file servers organizational unit  
   

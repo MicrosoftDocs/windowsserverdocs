@@ -19,7 +19,7 @@ This topic provides an overview of the Remote Access server role in Windows Serv
 >   
 > -   [Border Gateway Protocol &#40;BGP&#41;](../remote-access/bgp/Border-Gateway-Protocol--BGP-.md)  
 > -   [DirectAccess](../remote-access/directaccess/DirectAccess.md)  
-> -   [RAS Gateway](../remote-access/ras-gateway/../remote-access/ras-gateway/RAS-Gateway.md)  
+> -   [RAS Gateway](../remote-access/ras-gateway/RAS-Gateway.md)  
 > -   [Remote Access Server Role Documentation](../remote-access/ras/Remote-Access-Server-Role-Documentation.md)  
 > -   [RAS Gateway for SDN](../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
   
@@ -45,7 +45,7 @@ When you install the **DirectAccess and \(VPN\)** role service, you are deployin
     > [!IMPORTANT]  
     > The RAS Gateway with multitenant capabilities is also available in  Windows Server 2012 R2 .  
   
-For more information, see [RAS Gateway](../remote-access/ras-gateway/../remote-access/ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol &#40;BGP&#41;](../remote-access/bgp/Border-Gateway-Protocol--BGP-.md).  
+For more information, see [RAS Gateway](../remote-access/ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol &#40;BGP&#41;](../remote-access/bgp/Border-Gateway-Protocol--BGP-.md).  
   
 ## <a name="bkmk_rras"></a>Routing  
 You can use Remote Access to route network traffic between subnets on your Local Area Network. Routing provides support for Network Address Translation \(NAT\) routers, LAN routers running BGP, Routing Information Protocol \(RIP\), and multicast\-capable routers using Internet Group Management Protocol \(IGMP\). As a full\-featured router, you can deploy RAS on either a server computer or as a virtual machine \(VM\) on a computer that is running Hyper\-V.  
@@ -64,13 +64,6 @@ To install Remote Access as a Web Application Proxy, either use the Add Roles an
 ```  
 Install-RemoteAccess –VpnType SstpProxy  
 ```  
-  
-For more information, see the following Web Application Proxy documentation.  
-  
--   [Publishing Applications using AD FS Preauthentication](Publishing-Applications-using-AD-FS-Preauthentication.md)  
-  
--   [Publishing Applications with SharePoint, Exchange and RDG](Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)  
-  
--   [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
+
   
 

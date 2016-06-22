@@ -16,7 +16,7 @@ When you’re using Active Directory Domain Services \(AD DS\), you can use doma
   
 See the following topics to enable hash publication for multiple file servers.  
   
--   [Create the BranchCache File Servers Organizational Unit](Create-the-BranchCache-File-Servers-Organizational-Unit.md)  
+-   [Create the BranchCache File Servers Organizational Unit](../../branchcache/deploy/Create-the-BranchCache-File-Servers-Organizational-Unit.md)  
   
 -   [Move File Servers to the BranchCache File Servers Organizational Unit](../../branchcache/deploy/Move-File-Servers-to-the-BranchCache-File-Servers-Organizational-Unit.md)  
   
