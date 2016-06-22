@@ -42,7 +42,7 @@ Following are the new or improved SDN infrastructure technologies.
   
     -   **RAS Gateway**. You can use RAS Gateway for routing traffic between virtual networks and physical networks, including site\-to\-site VPN connections from your cloud datacenter to your tenants' remote sites. Specifically, you can deploy  Internet Key Exchange version 2 \(IKEv2\) site\-to\-site virtual private networks \(VPNs\), Layer 3 \(L3\) VPN, and Generic Routing Encapsulation \(GRE\) gateways. In addition, gateway pools and M\+N redundancy of gateways are now supported; and Border Gateway Protocol \(BGP\) with Route Reflector capabilities provides dynamic routing between networks for all gateway scenarios \(IKEv2 VPN, GRE VPN, and L3 VPN\).  
   
-        For more information, see  [What's New in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway for SDN](RAS-Gateway-for-SDN.md).  
+        For more information, see  [What's New in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).  
           
        -   **Software Load Balancer \(SLB\) and Network Address Translation \(NAT\)**. The north\-south and east\-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer.  
        For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).  
@@ -51,7 +51,7 @@ Following are the new or improved SDN infrastructure technologies.
   
 -   **Standardized Protocols**. Network Controller uses Representational State Transfer \(REST\) on its northbound interface with JavaScript Object Notation \(JSON\) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol \(OVSDB\).  
   
--   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN \(VxLAN\) and Network Virtualization Generic Routing Encapsulation \(NVGRE\). For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
+-   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN \(VxLAN\) and Network Virtualization Generic Routing Encapsulation \(NVGRE\). For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
   
 For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md).  
   
