@@ -1,16 +1,16 @@
 ---
 title: Install the Hyper-V role on Windows Server Technical Preview
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-author: jpjofre
+author: cwatsonmsft
 ---
 # Install the Hyper-V role on Windows Server Technical Preview
 **This is preliminary content and subject to change.**  

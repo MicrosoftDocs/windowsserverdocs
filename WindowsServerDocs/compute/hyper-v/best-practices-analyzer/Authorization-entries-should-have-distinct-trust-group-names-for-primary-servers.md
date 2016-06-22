@@ -1,9 +1,9 @@
 ---
 title: Authorization entries should have distinct trust group names for primary servers with virtual machines that are not part of the same trust group
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

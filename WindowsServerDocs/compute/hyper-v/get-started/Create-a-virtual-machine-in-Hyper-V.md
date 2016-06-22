@@ -1,16 +1,16 @@
 ---
 title: Create a virtual machine in Hyper-V
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
-author: jpjofre
+author: cwatsonmsft
 ---
 # Create a virtual machine in Hyper-V
 **This is preliminary content and subject to change.**  

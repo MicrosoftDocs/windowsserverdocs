@@ -1,9 +1,9 @@
 ---
 title: One or more network adapters should be configured as the destination for Port Mirroring
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

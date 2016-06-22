@@ -1,9 +1,9 @@
 ---
 title: Integration services must be installed before primary or Replica virtual machines can use an alternate IP address after a failover
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

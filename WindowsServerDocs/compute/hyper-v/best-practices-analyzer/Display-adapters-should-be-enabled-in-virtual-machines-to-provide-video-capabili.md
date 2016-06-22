@@ -1,9 +1,9 @@
 ---
 title: Display adapters should be enabled in virtual machines to provide video capabilities
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

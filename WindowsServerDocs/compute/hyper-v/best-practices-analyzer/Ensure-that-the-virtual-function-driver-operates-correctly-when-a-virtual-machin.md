@@ -1,9 +1,9 @@
 ---
 title: Ensure that the virtual function driver operates correctly when a virtual machine is configured to use SR-IOV
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

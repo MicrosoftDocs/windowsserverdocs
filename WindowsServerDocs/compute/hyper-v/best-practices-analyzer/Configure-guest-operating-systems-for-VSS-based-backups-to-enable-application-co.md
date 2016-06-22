@@ -1,9 +1,9 @@
 ---
 title: Configure guest operating systems for VSS-based backups to enable application-consistent snapshots for Hyper-V Replica
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
