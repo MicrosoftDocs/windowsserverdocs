@@ -1,10 +1,11 @@
 ---
 title: IIS on Nano Server
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: web-sites
-ms.suite: na
+ms.service: na
+manager: DonGill
+ms.technology: 
+  - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c

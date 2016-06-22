@@ -1,15 +1,16 @@
 ---
 title: Compute
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
-  - remote-desktop-services
+  - hyper-v
+  - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8a7b18d8-b1ab-42a5-85d9-366715aa851b
-author: timlt
+author: cwatsonMSFT
 ---
 # Compute
 This collection contains detailed information about virtualization products and features for the IT professional to design, deploy, and maintain Windows Server. Following are the related virtualization technologies and documentation for Windows Server 2016 Technical Preview.  
