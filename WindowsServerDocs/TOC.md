@@ -30,7 +30,6 @@
 ###### [Create a virtual machine](compute/hyper-v/get-started/Create-a-virtual-machine-in-Hyper-V.md)
 ##### Plan
 ###### [Should I create a generation 1 or 2 VM?](compute/hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md)
-###### [Live migration](Plan-for-live-migration-in-Windows-Server-2016.md)
 ###### [Networking](compute/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.md)
 ###### [Scalability](compute/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)
 ##### Deploy
