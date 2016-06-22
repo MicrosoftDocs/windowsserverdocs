@@ -1,4 +1,4 @@
-﻿---
+---
 title: Introduction to Active Directory Administrative Center Enhancements (Level 100)
 ms.custom: 
   - AD
@@ -260,7 +260,7 @@ In the following steps, you will use ADAC to perform the following fine\-grained
 
 -   [Step 4: View a resultant set of policies for a user](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
 
--   [Step 5: Edit a fine\-grained password policy](../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_edit_fgpp)
+-   [Step 5: Edit a fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_edit_fgpp)
 
 -   [Step 6: Delete a fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_delete_fgpp)
 
@@ -322,7 +322,7 @@ Add-ADFineGrainedPasswordPolicySubject TestPswd -Subjects group1
 ```
 
 #### <a name="bkmk_view_resultant_fgpp"></a>Step 4: View a resultant set of policies for a user
-In the following procedure, you will view the resultant password settings for a user that is a member of the group to which you assigned a fine grained password policy in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
+In the following procedure, you will view the resultant password settings for a user that is a member of the group to which you assigned a fine grained password policy in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
 
 ###### To view a resultant set of policies for a user
 

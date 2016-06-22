@@ -30,7 +30,7 @@ In locations with inadequate physical security, deploying a read\-only domain co
   
 To authenticate client logons and access to local file servers, most organizations place regional domain controllers for all regional domains that are represented in a given location. However, you must consider many variables when evaluating whether a business location requires its clients to have local authentication or the clients can rely on authentication and query over a wide area network \(WAN\) link. The following illustration shows how to determine whether to place domain controllers at satellite locations.  
   
-![](../../media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
+![](media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
   
 ## Onsite technical expertise availability  
 Domain controllers need to be managed continuously for various reasons. Place a regional domain controller only in locations that include personnel who can administer the domain controller, or be sure that the domain controller can be managed remotely.  
@@ -69,6 +69,6 @@ If reducing the cost of maintaining domain controllers is more important than ne
   
 For a worksheet to assist you in documenting the placement of regional domain controllers and the number of users for each domain that is represented in each location, see Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\), download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip, and open "Domain Controller Placement" \(DSSTOPO\_4.doc\).  
   
-You will need to refer to the information about locations in which you need to place regional domain controllers when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](Deploying-Windows-Server-2008-Regional-Domains.md).  
+You will need to refer to the information about locations in which you need to place regional domain controllers when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
 

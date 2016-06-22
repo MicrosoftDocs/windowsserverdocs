@@ -18,7 +18,7 @@ The forest root domain contains the Enterprise Admins and Schema Admins groups. 
   
 Selecting the forest root domain involves determining if one of the Active Directory domains in your domain design can function as the forest root domain or if you need to deploy a dedicated forest root domain.  
   
-For information about deploying a forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md).  
+For information about deploying a forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx).  
   
 ## Choosing a regional or dedicated forest root domain  
 If you are applying a single domain model, the single domain functions as the forest root domain. If you are applying a multiple domain model, you can choose to deploy a dedicated forest root domain or select a regional domain to function as the forest root domain.  

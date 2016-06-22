@@ -26,7 +26,7 @@ When integrating AD DS with an existing DNS namespace, we recommend that you do
 -   Configure the zone containing the Active Directory forest\-wide locator records \(that is, the \_msdcs.*forestname* zone\) to replicate to every DNS server in the forest by using the forest\-wide DNS application directory partition.  
   
     > [!NOTE]  
-    > When the DNS Server service is installed with the Active Directory Domain Services Installation Wizard \(we recommend this option\), all the previous tasks are performed automatically. For more information, see [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md).  
+    > When the DNS Server service is installed with the Active Directory Domain Services Installation Wizard \(we recommend this option\), all the previous tasks are performed automatically. For more information, see [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx).  
   
     > [!NOTE]  
     > AD DS uses forest\-wide locator records to enable replication partners to find each other and to enable clients to find global catalog servers. AD DS stores the forest\-wide locator records in the \_msdcs.*forestname* zone. Because the information in the zone must be widely available, this zone is replicated to all DNS servers in the forest by means of the forest\-wide DNS application directory partition.  
