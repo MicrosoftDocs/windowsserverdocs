@@ -19,7 +19,8 @@ Use PowerShell to deploy and manage Storage Spaces Direct.  Do not use Server Ma
 
 To evaluate Storage Spaces Direct in Windows Server 2016 Technical Preview, the simplest deployment is to use at least four generation 2 Hyper\-V virtual machines with at least four data disks per virtual machine. To test Storage Spaces Direct in Windows Server 2016 Technical Preview, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
 
-> [!NOTE] Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.  
+> [!NOTE]
+>  Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.  
 
 ## Configurations using different disk types  
 Storage Spaces Direct in <Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows Server 2016 Technical Preview</Token> supports use of locally connected disks such as SAS HBA and SATA connected HDD, SATA SSD, and NVMe. These devices can be used in different configurations to allow flexibility to choose based on performance and cost.   

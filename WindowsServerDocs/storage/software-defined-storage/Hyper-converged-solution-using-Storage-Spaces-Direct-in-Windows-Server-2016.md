@@ -47,7 +47,8 @@ We are working with our hardware partners to define and validate specific hardwa
 
 If you would like to evaluate Storage Spaces Direct in Windows Server 2016 Technical Preview without investing in hardware, you can use Hyper-V virtual machines, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
 
-  >[!NOTE] Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.  
+  > [!NOTE]
+  > Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.  
 
 ### Example Hardware for this Guide  
 For simplicity, this guide references a specific set of hardware that we were able to test.  This is for example purposes only and most of the steps are not specific to hardware. Where something is specific to hardware, it will be noted. There are many hardware vendors with solutions that are compatible with the hyper-converged system described in this guide and this hardware example does not indicate a preference over other systems or hardware vendors. Due to limited resources and time constraints imposed by TP5, we are in a position to offer detailed guidance only for a specific subset of tested hardware configurations at this time.  
@@ -136,8 +137,8 @@ The provisioning and deployment process for a Windows Server Nano server involve
 
 **Host machines.** In the example below, the expectation is that you start with physical machines that are booted to a Windows Server operating system (full or core). We’ll be copying the VHDs files to the Host machines and then re-booting into Nano operation system that was created in the VHDx files. Booting from a VHDx file is the method of deployment being outlined in this guide. Other methods of deploying Nano Server can also be used.  
 
-[!NOTE]  
- The Image creation machine and the Management machine (defined below) can be the same machine. The critical factor is that **the machine from which you are managing must be of the same version (or higher) as the Nano servers that are being managed.** For Windows Server 2016 Technical Preview 5 evaluation **we recommend that your Management machine be running WS2016 TP5 so you will be able to efficiently manage the Nano Servers (which are also running TP5).**  
+> [!NOTE]
+> The Image creation machine and the Management machine (defined below) can be the same machine. The critical factor is that **the machine from which you are managing must be of the same version (or higher) as the Nano servers that are being managed.** For Windows Server 2016 Technical Preview 5 evaluation **we recommend that your Management machine be running WS2016 TP5 so you will be able to efficiently manage the Nano Servers (which are also running TP5).**  
 
 ### <a name="BKMK_S2D5a"></a> Deploy the operating system  
 
@@ -159,9 +160,8 @@ Deploying the operating system includes the following tasks:
 
 Complete the steps below to create and deploy the Nano Server as the operating system on your Host machines in a Hyper-Converged system.   
 
-[!NOTE]  
-
-The [“Getting Started with Nano Server”](https://technet.microsoft.com/library/mt126167.aspx) guide has many more examples and detailed explanations of how to deploy and manage a Nano server. The instructions below are solely intended to illustrate one of many possible deployments; you need to find an approach that fits your organization’s needs and situation.  
+> [!NOTE]
+> The [“Getting Started with Nano Server”](https://technet.microsoft.com/library/mt126167.aspx) guide has many more examples and detailed explanations of how to deploy and manage a Nano server. The instructions below are solely intended to illustrate one of many possible deployments; you need to find an approach that fits your organization’s needs and situation.  
 
 #### Acquire an ISO image of Windows Server 2016 TP5 Datacenter  
 
@@ -171,13 +171,16 @@ Download a copy Datacenter ISO from [TechNet Evaluation Center](http://go.micros
 
 There are other methods to deploy Nano, but in the case of this example we’ll provide a set of steps below. If you want to learn more about creating and managing different kinds of Nano deployments or images, see the [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx) guide, starting in the section “To quickly deploy Nano Server on a physical server”.  
 
->[!NOTE] If your deployment isn’t using a RoCEv2 RDMA adapter, then you can remove the “-Packages Microsoft-NanoServer-DCB-Package” parameter in the PowerShell commandlet string below. Our example hardware for this guide does use RoCEv2 RDMA adapters and Data Center Bridging, so the DCB package is included in the example.  
+> [!NOTE]
+> If your deployment isn’t using a RoCEv2 RDMA adapter, then you can remove the “-Packages Microsoft-NanoServer-DCB-Package” parameter in the PowerShell commandlet string below. Our example hardware for this guide does use RoCEv2 RDMA adapters and Data Center Bridging, so the DCB package is included in the example.  
 
->[!NOTE] If you are going to manage the servers with System Center, add the following items in the “-Packages” section of the “New-NanoServerImage” command:  
+> [!NOTE]
+> If you are going to manage the servers with System Center, add the following items in the “-Packages” section of the “New-NanoServerImage” command:  
 	    Microsoft-NanoServer-SCVMM-Package  
      	Microsoft-NanoServer-SCVMM-Compute-Package  
 
->[!NOTE] If you have drivers that are recommended by your hardware vendor, it is simplest to inject the network drivers into the image during the “New-NanoServerImage” step below. If you don’t, you may be able to use the in-box drivers using the –OEMDrivers parameter in the “New-NanoServerImage” command, and then update the drivers using Windows Update after deployment. It is important to have the drivers that your hardware vender recommends, so that the networks provide the best reliability and performance possible.  
+> [!NOTE]
+> If you have drivers that are recommended by your hardware vendor, it is simplest to inject the network drivers into the image during the “New-NanoServerImage” step below. If you don’t, you may be able to use the in-box drivers using the –OEMDrivers parameter in the “New-NanoServerImage” command, and then update the drivers using Windows Update after deployment. It is important to have the drivers that your hardware vender recommends, so that the networks provide the best reliability and performance possible.  
 
 1.  On the **Image creation machine**, mount the Windows Server Technical Preview .ISO. To mount the ISO, in File Explorer select and right click on the ISO, then choose **Mount**. Once the mounted drive is opened, navigate to the *\NanoServer\NanoServerImageGenerator* directory and **copy** the contents to a directory to **your desired working folder** on your **Image creation machine** where you want to create and store your new Nano Server Images.  
 
@@ -353,7 +356,9 @@ The following assumes 2 RDMA NIC Ports (1 dual port, or 2 single port). In order
 ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step2HyperconvergedInfratsructureProcess.png)  
 
 **Figure 4: Process for configuring the network in a hyper-converged solution using Windows Server 2016 Technical Preview.**  
-    [!NOTE] Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
+
+    > [!NOTE]
+	> Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
 
 
 #### Configure the Top of Rack (TOR) Switch  
@@ -557,10 +562,11 @@ Use the following PowerShell command to validate a set of servers for use as a S
 
 In this step, you will create a cluster with the four nodes that you have validated for cluster creation in the preceding step using the following PowerShell cmdlet. The **–NoStorage parameter is important** to be added to the cmdlet, otherwise disks may be automatically added to the cluster and you will need to remove them before enabling Storage Spaces Direct otherwise they will not be included in the Storage Spaces Direct storage pool.  
 
-[!NOTE]  
-When creating the cluster, you will get a warning that states - “There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below.” You can safely ignore this warning. It’s due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster. |  
+> [!NOTE]  
+> When creating the cluster, you will get a warning that states - “There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below.” You can safely ignore this warning. It’s due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster. |  
 
->[!NOTE] If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress <X.X.X.X>.  
+> [!NOTE]
+> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress <X.X.X.X>.  
 
 In the following command the ClusterName placeholder should be replaced with a netbios name that is unique and 15 characters or less.  
 
@@ -579,11 +585,14 @@ For more information about configuring a file share witness, see [Configuring a 
 
 The disks intended to be used for Storage Spaces Direct need to be empty and without partitions or other data. If a disk has partitions or other data, it will not be included in the Storage Spaces Direct system. The following PowerShell can be put in a PowerShell script (.PS1) file and executed from the management system in a PowerShell (or PowerShell ISE) console open with Administrator privileges. Running this script will help identify the disks on each node that are detected to be able to be used for Storage Spaces Direct, and removes all data and partitions from those disks.  
 
->[!IMPORTANT] Ensure that there is no data on any of the disks of the cluster before running this set of commands.  
+> [!IMPORTANT]
+> Ensure that there is no data on any of the disks of the cluster before running this set of commands.  
 
->[!NOTE] You may skip this step if the disks have already been cleaned or verified to be without partitions.  
+> [!NOTE]
+> You may skip this step if the disks have already been cleaned or verified to be without partitions.  
 
->[!NOTE] There is one parameter that needs to be replaced in the first and last line of the script below, which is &lt;ClusterName&gt;.  
+> [!NOTE]
+> There is one parameter that needs to be replaced in the first and last line of the script below, which is &lt;ClusterName&gt;.  
 
     icm (Get-Cluster -Name HCNanoUSClu3 | Get-ClusterNode) {  
 
@@ -636,7 +645,8 @@ From the Management system, in a PowerShell command windows opened with Administ
 	Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>  
 
 
-   >[!NOTE] To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.   
+   > [!NOTE]
+   > To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.   
 
 When this command is finished executing, which may take several minutes, the system will be ready for virtual disks to be created.  
 
@@ -646,7 +656,8 @@ When Storage Spaces Direct was enabled, it created a single pool using all the d
 
 The following PowerShell command creates a virtual disk with both mirror and parity resiliency on storage pool:  
 
- >[!NOTE]  Technical Preview 5 introduced “Multi-Resiliency Virtual Disks”, which allows one virtual disk to include two different resiliency types. For instance, the example below sets the virtual disk to have 3-way mirror *and* parity. This allows for optimizing writes to the mirror for performance and in the background converting to parity when needed to optimize physical disk usage. To identify the tiers on the system you can use the **Get-StorageTier** cmdlet in a PSSession to one of the cluster nodes. |  
+ > [!NOTE]
+ > Technical Preview 5 introduced “Multi-Resiliency Virtual Disks”, which allows one virtual disk to include two different resiliency types. For instance, the example below sets the virtual disk to have 3-way mirror *and* parity. This allows for optimizing writes to the mirror for performance and in the background converting to parity when needed to optimize physical disk usage. To identify the tiers on the system you can use the **Get-StorageTier** cmdlet in a PSSession to one of the cluster nodes. |  
 
 Complete the following from a management system without using a PSSession. (You can do the same command from within a PSSession to a cluster node but you would then not use the –CimSession parameter)  
 

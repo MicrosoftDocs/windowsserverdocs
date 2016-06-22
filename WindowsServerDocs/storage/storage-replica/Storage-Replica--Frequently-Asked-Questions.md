@@ -32,12 +32,14 @@ This topic contains answers to the following frequently asked questions about St
 ## <a name="FAQ1"></a> Is Storage Replica supported on Nano Server?  
 Yes.  
 
-> [!NOTE] You must use the **Storage** Nano Server package during setup. For more information about deploying Nano Server, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx).  
+> [!NOTE]
+> You must use the **Storage** Nano Server package during setup. For more information about deploying Nano Server, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx).  
 
 Install Storage Replica on Nano Server using  PowerShell remoting as follows:  
 
 1. Add the Nano server to your client trust list.  
-   >[!NOTE] This step is only necessary if the computer is not a member of an Active Directory Domain Services forest or in an untrusted forest. It adds NTLM support to PSSession remoting, which is disabled by default for security reasons. For more information, see [PowerShell Remoting Security Considerations](https://msdn.microsoft.com/powershell/scriptiwinrmsecurity).  
+   > [!NOTE]
+   > This step is only necessary if the computer is not a member of an Active Directory Domain Services forest or in an untrusted forest. It adds NTLM support to PSSession remoting, which is disabled by default for security reasons. For more information, see [PowerShell Remoting Security Considerations](https://msdn.microsoft.com/powershell/scriptiwinrmsecurity).  
 
    ```  
        Set-Item WSMan:\localhost\Client\TrustedHosts "<computer name of Nano Server>"  
@@ -51,7 +53,8 @@ Install Storage Replica on Nano Server using  PowerShell remoting as follows:
     Using the `Test-SRTopology` cmdlet with Nano Server in Windows Server 2016 Technical Preview requires remote script invocation with CredSSP. Unlike other Storage Replica cmdlets, `Test-SRTopology` requires running locally on the source server.   
 On the Nano server (through a remote PSSession) :  
 
-    >[!NOTE] CREDSSP is needed for Kerberos double-hop support in the `Test-SRTopology` cmdlet, and not needed by other Storage Replica cmdlets. Using CREDSSP is not recommended under typical circumstances.  
+    >[!NOTE]
+    >CREDSSP is needed for Kerberos double-hop support in the `Test-SRTopology` cmdlet, and not needed by other Storage Replica cmdlets. Using CREDSSP is not recommended under typical circumstances.  
 
         Enable-WSManCredSSP -role server       
 

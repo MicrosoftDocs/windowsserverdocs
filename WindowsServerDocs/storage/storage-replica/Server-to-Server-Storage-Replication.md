@@ -50,7 +50,8 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
 2.  Add network information and join them to the domain, then restart them.  
 
-    > [!NOTE] From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.  
+    > [!NOTE]
+    > From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.  
 
 3.  Connect first set of JBOD storage enclosure, iSCSI target, FC SAN, or local fixed disk \(DAS\) storage to the server in site **Redmond**.  
 
@@ -58,7 +59,8 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
 5.  As appropriate, install latest vendor storage and enclosure firmware and drivers, latest vendor HBA drivers, latest vendor BIOS\/UEFI firmware, latest vendor network drivers, and latest motherboard chipset drivers on both nodes. Restart nodes as needed.  
 
-    > [!NOTE] Consult your hardware vendor documentation for configuring shared storage and networking hardware.  
+    > [!NOTE]
+    > Consult your hardware vendor documentation for configuring shared storage and networking hardware.  
 
 6.  Ensure that BIOS\/UEFI settings for servers enable high performance, such as disabling C\-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to high performance. Restart as required.  
 
@@ -193,7 +195,8 @@ Now you will configure server\-to\-server replication using Windows PowerShell. 
                 Elapsed Time (ms): 117  
         ```  
 
-        > [!NOTE] Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
+        > [!NOTE]
+        > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
 
     3.  Alternatively, the destination server group for the replica states the number of byte remaining to copy at all times, and can be queried through PowerShell. For example:  
 
@@ -329,7 +332,8 @@ b.	We strongly recommend enabling Volume Shadow Copies and periodically taking s
 8.	Add the server and its shares as a DFS Namespace folder target.   
 9.	Users can then access their data.  
 
- >[!NOTE] Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be permanently unavailable.  
+ > [!NOTE]
+ > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be permanently unavailable.  
 
 ### Related Topics  
 
