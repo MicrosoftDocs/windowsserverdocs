@@ -33,7 +33,7 @@ Storage Replica also supports asynchronous replication for longer ranges and hig
 ### <a name="BKMK_SRSupportedScenarios"></a>Supported Storage Replica configurations in Windows Server 2016 Technical Preview  
 Using this guide and Windows Server 2016 Technical Preview, you can deploy storage replication in a stretch cluster, between cluster\-to\-cluster, and in server\-to\-server configurations \(see Figures 1\-3\). To reiterate from the Windows Server 2016 Technical Preview EULA, this feature is provided “AS\-IS” and is not supported in production environments.  
 
-**Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize shared Storage Spaces on JBOD, SAN and iSCSI-attached LUNs, and Storage Spaces Direct. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
+**Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize shared Storage Spaces on JBOD, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
 
 ![](./media/Storage-Replica-Overview/Storage_SR_StretchCluster.png)  
 
@@ -106,6 +106,7 @@ Windows Server 2016 Technical Preview implements the following features in Stora
 * At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
 * At least 2GB of RAM and two cores per server.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of ≤5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
+* The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 ##  <a name="BKMK_SR4"> </a> Background  
 This section includes information about high-level industry terms, synchronous and asynchronous replication, changes and improvements between Technical Preview 4 and Technical Preview 5, and Storage Replica terminology.   

@@ -1,9 +1,9 @@
 ---
 title: Windows Server 2012 R2 should be configured with at least the minimum amount of memory
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

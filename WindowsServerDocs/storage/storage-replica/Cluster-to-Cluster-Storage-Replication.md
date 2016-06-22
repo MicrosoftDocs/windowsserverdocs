@@ -43,6 +43,7 @@ This walkthrough uses the following environment as an example:
 * At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of ≤5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
+* The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 

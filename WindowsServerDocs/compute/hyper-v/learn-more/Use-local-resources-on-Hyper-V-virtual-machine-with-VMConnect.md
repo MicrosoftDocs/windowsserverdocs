@@ -1,9 +1,9 @@
 ---
 title: Use local resources on Hyper-V virtual machine with VMConnect
-ms.custom: na
+description: " "
 ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

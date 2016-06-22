@@ -1,9 +1,9 @@
 ---
 title: The Hyper-V Virtual Machine Management service must be running
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

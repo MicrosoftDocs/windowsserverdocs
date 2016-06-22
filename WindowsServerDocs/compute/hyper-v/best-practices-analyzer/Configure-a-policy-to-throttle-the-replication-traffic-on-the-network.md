@@ -1,9 +1,9 @@
 ---
 title: Configure a policy to throttle the replication traffic on the network
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

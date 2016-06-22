@@ -1,8 +1,8 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
+ms.service: na
 ms.suite: na
 ms.technology: 
   - hyper-v
@@ -11,7 +11,6 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 author: cwatsonmsft
-robots: noindex,nofollow
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 **This content is preliminary and subject to change.**  

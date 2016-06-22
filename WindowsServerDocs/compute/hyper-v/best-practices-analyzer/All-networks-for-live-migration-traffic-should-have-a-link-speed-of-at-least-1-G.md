@@ -1,9 +1,9 @@
 ---
 title: All networks for live migration traffic should have a link speed of at least 1 Gbps
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

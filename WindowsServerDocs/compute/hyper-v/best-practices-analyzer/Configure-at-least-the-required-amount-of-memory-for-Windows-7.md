@@ -1,9 +1,9 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows 7 and enabled for Dynamic Memory
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

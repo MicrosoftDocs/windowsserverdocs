@@ -1,9 +1,9 @@
 ---
 title: Test failover should be attempted after initial replication is complete
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

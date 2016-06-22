@@ -1,9 +1,9 @@
 ---
 title: Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
