@@ -24,8 +24,8 @@ With Windows Server 2016 Technical Preview Storage Spaces Direct, you can now bu
 Storage Spaces Direct is an evolution of Storage Spaces, which means that it is an extension of the existing software defined storage stack for Windows Server. Storage Spaces Direct leverages SMB3 for all intra\-node \(aka east\-west\) communication, including SMB Direct and SMB Multichannel, for low latency and high throughput storage.  
 
 This topic provides an overview of Storage Spaces Direct and the scenarios that its supports and includes the following sections:  
-* [Storage Spaces Direct Overview](../storage-spaces/../storage-spaces/../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md#BKMK_S2DOverview)  
-* [Supported Storage Spaces Direct  Deployment Scenarios](../storage-spaces/../storage-spaces/../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md#BKMK_S2DSupportedScenarios)  
+* [Storage Spaces Direct Overview](BKMK_S2DOverview)  
+* [Supported Storage Spaces Direct  Deployment Scenarios](BKMK_S2DSupportedScenarios)  
 
 ## <a name="BKMK_S2DOverview"></a>Storage Spaces Direct Overview  
 Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Scale\-Out File Server, Clustered Shared Volume File System \(CSVFS\), Storage Spaces and Failover Clustering. Figure 3 below illustrates the “Storage Spaces Direct” stack:  
