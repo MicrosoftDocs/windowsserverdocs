@@ -17,7 +17,7 @@ This topic, which is intended for Information Technology \(IT\) professionals, p
 > [!NOTE]  
 > In addition to this topic, the following RAS Gateway content is available.  
 >   
-> -   [RAS Gateway High Availability](../../sdn/technologies/network-function-virtualization/../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  
+> -   [RAS Gateway High Availability](../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  
 > -   [GRE Tunneling in Windows Server Technical Preview](../../remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md)  
   
 This topic contains the following sections.  
@@ -86,7 +86,7 @@ For example, if you have both a physical network and a virtual network at the sa
   
 In another example, if your virtual networks exist in the cloud, your CSP can deploy an RAS Gateway so that you can create a virtual private network \(VPN\) site\-to\-site connection between your VPN server and the CSP’s RAS Gateway; when this link is established you can connect to your virtual resources in the cloud over the VPN connection.  
   
-For more information, see [RAS Gateway High Availability](../../sdn/technologies/network-function-virtualization/../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
+For more information, see [RAS Gateway High Availability](../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
 ## <a name="bkmk_clustering"></a>Clustering RAS Gateway for high availability  
 RAS Gateway is deployed on a dedicated computer that is running Hyper\-V and that is configured with one VM. The VM is then configured as a RAS Gateway.  
