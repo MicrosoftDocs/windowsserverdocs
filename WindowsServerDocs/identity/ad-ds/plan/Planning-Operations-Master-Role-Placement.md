@@ -51,7 +51,7 @@ Place the PDC emulator in a location that contains a large number of users from 
   
 For a worksheet to assist you in documenting the information about where you plan to place PDC emulators and the number of users for each domain that is represented in each location, see Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\), download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip, and open Domain Controller Placement \(DSSTOPO\_4.doc\).  
   
-You need to refer to the information about locations in which you need to place PDC emulators when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](Deploying-Windows-Server-2008-Regional-Domains.md).  
+You need to refer to the information about locations in which you need to place PDC emulators when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
 ## Requirements for infrastructure master placement  
 The infrastructure master updates the names of security principals from other domains that are added to groups in its own domain. For example, if a user from one domain is a member of a group in a second domain and the user’s name is changed in the first domain, the second domain is not notified that the user’s name must be updated in the group’s membership list. Because domain controllers in one domain do not replicate security principals to domain controllers in another domain, the second domain never becomes aware of the change in the absence of the infrastructure master.  
@@ -77,8 +77,8 @@ Although this configuration results in successful replication between all of the
   
 -   Domain controllers in sites C and D cannot make schema changes.  
   
-For a worksheet to assist you in planning operations master role placement, see Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\), download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip, and open Domain Controller Placement \(DSSTOPO\_4.doc\).  
+For a worksheet to assist you in planning operations master role placement, see Job Aids for [Windows Server 2003 Deployment Kit](http://go.microsoft.com/fwlink/?LinkID=102558), download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip, and open Domain Controller Placement \(DSSTOPO\_4.doc\).  
   
-You will need to refer to this information when you create the forest root domain and regional domains. For more information about deploying the forest root domain, see Deploying a [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md). For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](Deploying-Windows-Server-2008-Regional-Domains.md).  
+You will need to refer to this information when you create the forest root domain and regional domains. For more information about deploying the forest root domain, see Deploying a [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx). For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
 

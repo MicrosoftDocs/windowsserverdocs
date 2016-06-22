@@ -1,4 +1,4 @@
-﻿---
+---
 title: Finding Additional Resources for Logical Structure Design
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -14,7 +14,7 @@ author: Femila
 # Finding Additional Resources for Logical Structure Design
 You can find the following documentation about Active Directory Domain Services \(AD DS\) on the Windows Server 2003 and  Windows Server 2008  TechCenter Web sites:  
   
--   For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology-for-Windows-Server-2008-AD-DS.md).  
+-   For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology.md).  
   
 -   For worksheets to assist you in documenting the proposed forest, domain, Domain Name System \(DNS\) infrastructure, and organizational unit \(OU\) design, download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip from Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\).  
   

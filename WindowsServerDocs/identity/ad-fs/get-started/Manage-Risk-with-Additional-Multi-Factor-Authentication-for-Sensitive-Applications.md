@@ -24,7 +24,7 @@ This guide provides the following information:
 
 -   [Authentication mechanisms in AD FS](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_1) – description of the authentication mechanisms available in Active Directory Federation Services \(AD FS\) in Windows Server® 2012 R2
 
--   [Scenario Overview](../../ad-fs/get-started/../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2) – a description of a scenario where you use Active Directory Federation Services \(AD FS\) to enable multifactor authentication \(MFA\) based on user’s group membership.
+-   [Scenario Overview](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2) – a description of a scenario where you use Active Directory Federation Services \(AD FS\) to enable multifactor authentication \(MFA\) based on user’s group membership.
 
     > [!NOTE]
     > In AD FS in Windows Server® 2012 R2 you can enable MFA based on the network location, device identity, and user identity or group membership.

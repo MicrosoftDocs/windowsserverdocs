@@ -1,11 +1,10 @@
 ---
 title: Getting Started with Nano Server
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: DonGill
 ms.technology: 
-  - hyper-v
   - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
