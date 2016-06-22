@@ -26,7 +26,7 @@ This topic addresses the information you need to install Windows Server® 2016 T
 > In this release, you cannot mount ReFS volumes formatted by using Windows Server 2016 Technical Preview 3. These volumes will appear as "raw," though the data is intact.  If you need to recover data from those volumes, mount them using Windows Server 2016 Technical Preview 3. ReFS volumes formatted by using Windows Server 2012, Windows Server 2012 R2, or Windows Server 2016 Technical Preview 4 can be mounted in this release without issues.  
   
 > [!NOTE]  
-> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016 Technical Preview. For more information, see [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)  
+> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016 Technical Preview. For more information, see [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
   
 > [!IMPORTANT]  
 > For this release, use these product keys:  
@@ -81,7 +81,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 **Minimum**: 32 GB  
   
    > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 Technical Preview in Server Core mode, with the Web Services \(IIS\) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Windows Server Installation Options](assetId:///ebbecbda-3d97-48fe-9599-4031ad285384).  
+    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 Technical Preview in Server Core mode, with the Web Services \(IIS\) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
     >   
     > The system partition will need extra space for any of the following circumstances:  
     >   
