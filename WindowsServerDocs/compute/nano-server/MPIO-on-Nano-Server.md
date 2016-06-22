@@ -1,10 +1,11 @@
 ---
 title: MPIO on Nano Server
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: storage
-ms.suite: na
+ms.service: na
+manager: DonGill
+ms.technology: 
+  - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fbef4d91-e18c-4f1b-952f-a9a7ad46cd74
