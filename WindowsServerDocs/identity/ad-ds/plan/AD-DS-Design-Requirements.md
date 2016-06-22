@@ -20,14 +20,14 @@ To design the AD DS logical structure, determine the number of forests that you
   
 ![](media/AD-DS-Design-Requirements/d5cebae6-a752-4063-a98f-473799c251bd.gif)  
   
-For more information, see [Designing the Logical Structure for Windows Server 2008 AD DS](Designing-the-Logical-Structure-for-Windows-Server-2008-AD-DS.md).  
+For more information, see [Designing the Logical Structure for Windows Server 2008 AD DS](Designing-the-Logical-Structure.md).  
   
 ## Designing the site topology  
 After you design the logical structure for your AD DS infrastructure, you must design the site topology for your network. The site topology is a logical representation of your physical network. It contains information about the location of AD DS sites, the AD DS domain controllers within each site, and the site links and site link bridges that support AD DS replication between sites. The following illustration shows the site topology design process.  
   
 ![](media/AD-DS-Design-Requirements/d34d43c0-437f-47cb-9b64-09c0f9ce6479.gif)  
   
-For more information, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology-for-Windows-Server-2008-AD-DS.md).  
+For more information, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology.md).  
   
 ## Planning domain controller capacity  
 To ensure efficient AD DS performance, you must determine the appropriate number of domain controllers for each site and verify that they meet the hardware requirements for  Windows Server 2008 . Careful capacity planning for your domain controllers ensures that you do not underestimate hardware requirements, which can cause poor domain controller performance and application response time. The following illustration shows the process of domain controller capacity planning.  

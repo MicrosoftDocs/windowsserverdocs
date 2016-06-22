@@ -1,4 +1,4 @@
----
+﻿---
 title: Introduction to Active Directory Administrative Center Enhancements (Level 100)
 ms.custom: 
   - AD
@@ -50,13 +50,13 @@ If you plan to enable Active Directory Recycle Bin in  Windows Server 2012 , con
 ### Active Directory Recycle Bin step\-by\-step
 In the following steps, you will use ADAC to perform the following Active Directory Recycle Bin tasks in  Windows Server 2012 :
 
--   [Step 1: Raise the forest functional level](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_ffl)
+-   [Step 1: Raise the forest functional level](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_ffl)
 
--   [Step 2: Enable Recycle Bin](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_enable_recycle_bin)
+-   [Step 2: Enable Recycle Bin](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_enable_recycle_bin)
 
--   [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)
+-   [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)
 
--   [Step 4: Restore deleted objects](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_restore_del_obj)
+-   [Step 4: Restore deleted objects](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_restore_del_obj)
 
 > [!NOTE]
 > Membership in the Enterprise Admins group or equivalent permissions is required to perform the following steps.
@@ -72,7 +72,7 @@ In this step, you will raise the forest functional level. You must first raise t
 
 3.  Click the target domain in the left navigation pane and in the **Tasks** pane, click **Raise the forest functional level**. Select a forest functional level that is at least  Windows Server 2008 R2  or higher and then click **OK**.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -95,7 +95,7 @@ In this step, you will enable the Recycle Bin to restore deleted objects in AD 
 
 4.  Press F5 to refresh ADAC.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -114,7 +114,7 @@ In the following procedures, you will create two test users. You will then creat
 
 3.  In the **Tasks** pane, click **New** and then click **User**.
 
-    ![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewUser.gif)
+    ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewUser.gif)
 
 4.  Enter the following information under **Account** and then click OK:
 
@@ -144,7 +144,7 @@ In the following procedures, you will create two test users. You will then creat
 
 6.  Click **Members**, click **Add**, type **test1;test2**, and then click **OK**.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -164,7 +164,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 
     -   **NameOU1**
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -186,7 +186,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
 
 3.  Select users **test1** and **test2**, click **Delete** in the **Tasks** pane and then click **Yes** to confirm the deletion.
 
-    ![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+    ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -203,7 +203,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 ```
 Get-ADObject –Filter 'Name –Like "*test*"' –IncludeDeletedObjects | Restore-ADObject
@@ -223,7 +223,7 @@ Get-ADObject –Filter 'Name –Like "*test*"' –IncludeDeletedObjects | Restor
 
 6.  To confirm the objects were restored to **OU1**, navigate to the target domain, double click **OU1** and verify the user accounts are listed.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -252,17 +252,17 @@ If you plan to use fine\-grained password policies in  Windows Server 2012 , con
 ### Fine\-Grained Password Policy step\-by\-step
 In the following steps, you will use ADAC to perform the following fine\-grained password policy tasks:
 
--   [Step 1: Raise the domain functional level](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_dfl)
+-   [Step 1: Raise the domain functional level](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_dfl)
 
--   [Step 2: Create test users, group, and organizational unit](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk2_test_fgpp)
+-   [Step 2: Create test users, group, and organizational unit](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk2_test_fgpp)
 
--   [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
+-   [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
 
--   [Step 4: View a resultant set of policies for a user](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
+-   [Step 4: View a resultant set of policies for a user](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
 
--   [Step 5: Edit a fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_edit_fgpp)
+-   [Step 5: Edit a fine\-grained password policy](../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_edit_fgpp)
 
--   [Step 6: Delete a fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_delete_fgpp)
+-   [Step 6: Delete a fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_delete_fgpp)
 
 > [!NOTE]
 > Membership in the Domain Admins group or equivalent permissions is required to perform the following steps.
@@ -278,7 +278,7 @@ In the following procedure, you will raise the domain functional level of the ta
 
 3.  Click the target domain in the left navigation pane and in the **Tasks** pane, click **Raise the domain functional level**. Select a forest functional level that is at least  Windows Server 2008  or higher and then click **OK**.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -287,7 +287,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 ```
 
 #### <a name="bkmk2_test_fgpp"></a>Step 2: Create test users, group, and organizational unit
-To create the test users and group need for this step, follow the procedures located here: [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) \(you do not need to create the OU to demonstrate fine\-grained password policy\).
+To create the test users and group need for this step, follow the procedures located here: [Step 3: Create test users, group and organizational unit](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) \(you do not need to create the OU to demonstrate fine\-grained password policy\).
 
 #### <a name="bkmk_create_fgpp"></a>Step 3: Create a new fine\-grained password policy
 In the following procedure you will create a new fine\-grained password policy using the UI in ADAC.
@@ -304,7 +304,7 @@ In the following procedure you will create a new fine\-grained password policy u
 
     Fill in or edit fields inside the property page to create a new **Password Settings** object. The **Name** and **Precedence** fields are required.
 
-    ![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
+    ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
 
 5.  Under **Directly Applies To**, click **Add**, type **group1**, and then click **OK**.
 
@@ -312,7 +312,7 @@ In the following procedure you will create a new fine\-grained password policy u
 
 6.  Click **OK** to submit the creation.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -322,7 +322,7 @@ Add-ADFineGrainedPasswordPolicySubject TestPswd -Subjects group1
 ```
 
 #### <a name="bkmk_view_resultant_fgpp"></a>Step 4: View a resultant set of policies for a user
-In the following procedure, you will view the resultant password settings for a user that is a member of the group to which you assigned a fine grained password policy in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
+In the following procedure, you will view the resultant password settings for a user that is a member of the group to which you assigned a fine grained password policy in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
 
 ###### To view a resultant set of policies for a user
 
@@ -330,13 +330,13 @@ In the following procedure, you will view the resultant password settings for a 
 
 2.  Click **Manage**, click **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then click **OK**.
 
-3.  Select a user, **test1** that belongs to the group, **group1** that you associated a fine\-grained password policy with in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
+3.  Select a user, **test1** that belongs to the group, **group1** that you associated a fine\-grained password policy with in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp).
 
 4.  Click **View Resultant Password Settings** in the **Tasks** pane.
 
 5.  Examine the password setting policy and then click **Cancel**.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -345,7 +345,7 @@ Get-ADUserResultantPasswordPolicy test1
 ```
 
 #### <a name="bkmk_edit_fgpp"></a>Step 5: Edit a fine\-grained password policy
-In the following procedure, you will edit the fine grained password policy you created in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
+In the following procedure, you will edit the fine grained password policy you created in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
 
 ###### To edit a fine\-grained password policy
 
@@ -355,13 +355,13 @@ In the following procedure, you will edit the fine grained password policy you c
 
 3.  In the ADAC **Navigation Pane**, expand **System** and then click **Password Settings Container**.
 
-4.  Select the fine grained password policy you created in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) and click **Properties** in the **Tasks** pane.
+4.  Select the fine grained password policy you created in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) and click **Properties** in the **Tasks** pane.
 
 5.  Under **Enforce password history**, change the value of **Number of passwords remembered** to **30**.
 
 6.  Click **OK**.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
@@ -379,7 +379,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 3.  In the ADAC Navigation Pane, expand **System** and then click **Password Settings Container**.
 
-4.  Select the fine grained password policy you created in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) and in the **Tasks** pane click **Properties**.
+4.  Select the fine grained password policy you created in [Step 3: Create a new fine\-grained password policy](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) and in the **Tasks** pane click **Properties**.
 
 5.  Clear the **Protect from accidental deletion** checkbox and click **OK**.
 
@@ -387,7 +387,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 7.  Click **OK** in the confirmation dialog.
 
-![](../../../media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
+![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.
 
