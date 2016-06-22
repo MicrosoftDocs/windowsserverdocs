@@ -1,9 +1,11 @@
 ---
 title: Developing PowerShell Cmdlets for Nano Server
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: DonGill
+ms.technology: 
+  - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
