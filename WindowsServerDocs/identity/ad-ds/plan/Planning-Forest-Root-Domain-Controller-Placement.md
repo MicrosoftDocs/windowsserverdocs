@@ -18,6 +18,6 @@ Shortcut trusts help to optimize authentication requests made from users located
   
 For a worksheet to assist you in documenting your forest root domain controller placement, see Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\), download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip, and open "Domain Controller Placement" \(DSSTOPO\_4.doc\).  
   
-You will need to refer to this information when you create the forest root domain. For more information about deploying the forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](Deploying-a-Windows-Server-2008-Forest-Root-Domain.md).  
+You will need to refer to this information when you create the forest root domain. For more information about deploying the forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx).  
   
 
