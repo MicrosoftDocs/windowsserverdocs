@@ -31,6 +31,6 @@ These deployments include all the technologies you need for a fully functional i
 [Deploy Software Defined Network Technologies using Windows PowerShell](Deploy-Software-Defined-Network-Technologies-using-Windows-PowerShell.md).    
   
 For more information about SDN, see:  
-[Software Defined Networking &#40;SDN&#41;](Software-Defined-Networking--SDN-.md)  
+[Software Defined Networking (SDN)](../Software-Defined-Networking--SDN-.md)  
   
 
