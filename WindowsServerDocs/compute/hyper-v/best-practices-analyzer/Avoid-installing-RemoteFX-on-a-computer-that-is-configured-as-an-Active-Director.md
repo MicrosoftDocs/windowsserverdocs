@@ -1,9 +1,9 @@
 ---
 title: Avoid installing RemoteFX on a computer that is configured as an Active Directory domain controller
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

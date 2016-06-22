@@ -1,9 +1,9 @@
 ---
 title: VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute

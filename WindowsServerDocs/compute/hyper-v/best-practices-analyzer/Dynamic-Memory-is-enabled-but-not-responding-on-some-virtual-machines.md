@@ -1,9 +1,9 @@
 ---
 title: Dynamic Memory is enabled but not responding on some virtual machines
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
