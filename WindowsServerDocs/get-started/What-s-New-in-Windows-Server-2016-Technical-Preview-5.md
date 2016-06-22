@@ -24,7 +24,7 @@ The Compute area includes virtualization products and features for the IT profes
 **New for Technical Preview 5**: Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.  
   
 ### Hyper-V  
--   [What's new in Hyper-V on Windows Server 2016 Technical Preview](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). This topic explains the new and changed functionality of the Hyper\-V role in Windows Server 2016 Technical Preview, Client Hyper\-V running on Windows 10, and Microsoft Hyper\-V Server Technical Preview.  
+-   [What's new in Hyper-V on Windows Server 2016 Technical Preview](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). This topic explains the new and changed functionality of the Hyper\-V role in Windows Server 2016 Technical Preview, Client Hyper\-V running on Windows 10, and Microsoft Hyper\-V Server Technical Preview.  
   
 -   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  **new for Technical Preview 5**, Windows Server 2016 Technical Preview container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
   
@@ -33,7 +33,7 @@ What's New in [Nano Server](https://technet.microsoft.com/library/mt126167.aspx)
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair configuration of WinRM.  
   
 ### Remote Desktop Services  
-[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](). With the release of **Technical Preview 5**, deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
+[Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md). With the release of **Technical Preview 5**, deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
   
 ## <a name="BKMK_Identity"></a>Identity and Access  
 New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.  
@@ -45,7 +45,7 @@ What’s New in Active Directory Certificate Services. Active Directory Certific
 Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server Technical Preview](https://technet.microsoft.com/library/mt163897.aspx).   
   
 ### Active Directory Federation Services  
-What’s New in Active Directory Federation Services. Active Directory Federation Services \(AD FS\) in Windows Server 2016 Technical Preview includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol \(LDAP\) directories. For more information, see   [What's New in AD FS for Windows Server 2016]().  
+What’s New in Active Directory Federation Services. Active Directory Federation Services \(AD FS\) in Windows Server 2016 Technical Preview includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol \(LDAP\) directories. For more information, see   [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/What-s-new-in-Active-Directory-Federation-Services-for-Windows-Server-2016-Technical-Preview.md).  
   
 ### Web Application Proxy  
 The latest version of Web Application Proxyfocuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server Technical Preview](https://technet.microsoft.com/library/dn765473.aspx).  
@@ -85,15 +85,15 @@ Just Enough Administration in Windows Server Technical Preview is security techn
 For more details and instructions for working with shielded virtual machines, see [Shielded VMs and Guarded Fabric Validation Guide for Windows Server 2016 (TPM)](http://aka.ms/shieldedvms).  
   
 ### Windows Defender  
-[Windows Defender Overview for Windows Server Technical Preview](). Windows Server Antimalware is installed and enabled by default in Windows Server 2016 Technical Preview, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.  
+[Windows Defender Overview for Windows Server Technical Preview](../security/windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016 Technical Preview, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.  
   
   
 ## <a name="BKMK_Storage"></a>Storage  
 This area covers storage products and features for the IT professional to design, deploy, and maintain Windows Server Technical Preview.  
   
--   [What's New in File and Storage Services in Windows Server 2016 Technical Preview](). **For Technical Preview 5**, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.   
+-   [What's New in File and Storage Services in Windows Server 2016 Technical Preview](../storage/What-s-New-in-File-and-Storage-Services-in-Windows-Server-2016-Technical-Preview.md). **For Technical Preview 5**, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.   
   
--   [What's New in Failover Clustering in Windows Server Technical Preview](). **For Technical Preview 5** new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
+-   [What's New in Failover Clustering in Windows Server Technical Preview](../compute/failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md). **For Technical Preview 5** new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
   
 ## See Also  
   
