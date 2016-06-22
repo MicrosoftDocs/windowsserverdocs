@@ -17,7 +17,7 @@ You can use this topic to gain an understanding of Border Gateway Protocol \(BGP
 > [!NOTE]  
 > In addition to this topic, the following BGP documentation is available.  
 >   
-> -   [BGP Windows PowerShell Command Reference](../../remote-access/bgp/../../remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md)  
+> -   [BGP Windows PowerShell Command Reference](../../remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md)  
   
 This topic contains the following sections.  
   
@@ -173,10 +173,6 @@ Following are the features of the RAS Gateway BGP Router.
 > [!NOTE]  
 > In System Center, the RAS Gateway is named Windows Server Gateway.  
   
-For additional information, see [BGP Windows PowerShell Command Reference](../../remote-access/bgp/../../remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md) and the Networking blog [Border Gateway Protocol (BGP) with Windows Server 2012 R2](http://blogs.technet.com/b/networking/archive/2013/10/11/border-gateway-protocol-bgp-with-windows-server-2012-r2.aspx).  
-  
-## See Also  
-[RAS Gateway](RAS-Gateway.md)  
-[Remote Access](Remote-Access.md)  
+
   
 

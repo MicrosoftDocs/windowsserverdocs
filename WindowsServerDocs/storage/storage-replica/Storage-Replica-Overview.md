@@ -203,7 +203,7 @@ This guide frequently uses the following terms:
 
 -   [Cluster to Cluster Storage Replication](Cluster-to-Cluster-Storage-Replication.md)  
 
--   [Storage Replica: Known Issues](storage-replica/Storage-Replica--Known-Issues.md)  
+-   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
 
 -   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
 

@@ -14,7 +14,7 @@ author: jamesmci
 # Enable Hash Publication for File Servers
 You can enable BranchCache hash publication on one file server or on multiple file servers.  
   
--   To enable hash publication on one file server using local computer Group Policy, see [Enable Hash Publication for Non-Domain Member File Servers](Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
+-   To enable hash publication on one file server using local computer Group Policy, see [Enable Hash Publication for Non-Domain Member File Servers](../../branchcache/deploy/Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
   
 -   To enable hash publication on multiple file servers using domain Group Policy, see [Enable Hash Publication for Domain Member File Servers](../../branchcache/deploy/Enable-Hash-Publication-for-Domain-Member-File-Servers.md).  
   

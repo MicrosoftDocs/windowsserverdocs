@@ -397,6 +397,6 @@ Now you will manage and operate your cluster\-to\-cluster replication. You can p
 
 ## See Also  
 
--   [Windows Server 2016 Technical Preview 5]((../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
 -   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
