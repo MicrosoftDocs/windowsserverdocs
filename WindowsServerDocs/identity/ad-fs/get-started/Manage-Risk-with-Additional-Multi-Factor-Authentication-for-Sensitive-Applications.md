@@ -29,7 +29,7 @@ This guide provides the following information:
     > [!NOTE]
     > In AD FS in Windows Server® 2012 R2 you can enable MFA based on the network location, device identity, and user identity or group membership.
 
-    For detailed step\-by\-step walkthrough instructions for configuring and verifying this scenario, see [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Walkthrough-Guide--../../ad-fs/get-started/../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
+    For detailed step\-by\-step walkthrough instructions for configuring and verifying this scenario, see [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
 
 ## <a name="BKMK_1"></a>Key Concepts \- Authentication mechanisms in AD FS
 
@@ -106,7 +106,7 @@ The following options are available for MFA settings \(conditions under which to
 
     Windows Server® 2012 R2 takes a user\-centric approach to modern devices where device objects represent a relationship between user@device and a company. Device objects are a new class in AD in Windows Server® 2012 R2 that can be used to offer compound\-identity when providing access to applications and services. A new component of AD FS \- the device registration service \(DRS\) \- provisions a device identity in Active Directory and sets a certificate on the consumer device that will be used to represent the device identity. You can then use this device identity to workplace join your device, in other words, to connect your personal device to the Active Directory of your workplace. When you join your personal device to your workplace, it becomes a known device and will provide seamless second\-factor authentication to protected resources and applications. In other words, after a device is workplace joined, the user’s identity is tied to this device and can be used for a seamless compound identity verification before a protected resource is accessed.
 
-    For more information on workplace join and leave, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+    For more information on workplace join and leave, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
 -   You can require MFA when the access request for the protected resources comes from either the extranet or the intranet.
 
