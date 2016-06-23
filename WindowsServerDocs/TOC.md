@@ -267,7 +267,7 @@
 ######## [Event ID 2042: It has been too long since this machine replicated](identity/ad-ds/manage/troubleshoot/Event-ID-2042--It-has-been-too-long-since-this-machine-replicated.md)
 ####### [Fixing Replication Security Problems](identity/ad-ds/manage/troubleshoot/Fixing-Replication-Security-Problems.md)
 ######## [An "Access denied" or other security error has caused replication problems](https://technet.microsoft.com/library/cc949123.aspx)
-####### [Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)](Fixing-Replication-DNS-Lookup-Problems--Event-IDs-1925,-2087,-2088-.md)
+####### [Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)](https://technet.microsoft.com/library/cc949133.aspx)
 ######## [Event ID 1925: Attempt to establish a replication link failed due to DNS lookup problem](identity/ad-ds/manage/troubleshoot/Event-ID-1925--Attempt-to-establish-a-replication-link-failed-due-to-DNS-lookup-problem.md)
 ######## [Event ID 2087: DNS lookup failure caused replication to fail](identity/ad-ds/manage/troubleshoot/Event-ID-2087--DNS-lookup-failure-caused-replication-to-fail.md)
 ######## [Event ID 2088: DNS lookup failure occurred with replication success](identity/ad-ds/manage/component-updates/Event-ID-2088--DNS-lookup-failure-occurred-with-replication-success.md)
