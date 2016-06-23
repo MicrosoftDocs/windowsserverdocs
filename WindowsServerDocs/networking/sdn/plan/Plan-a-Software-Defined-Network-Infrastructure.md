@@ -199,7 +199,7 @@ There are three gateway virtual machines; two active, one redundant.
   
   
   
-For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](Active-Directory-Domain-Services-Overview.md).  
+For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](https://technet.microsoft.com/en-us/library/mt703721.aspx).  
   
 >[!IMPORTANT] If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.  
   
@@ -244,6 +244,6 @@ When the tenant workload virtual machines begin to consume too many resources on
   
 ## See Also  
 [Installation and Preparation Requirements for Deploying Network Controller](../../sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
-[Software Defined Networking &#40;SDN&#41;](Software-Defined-Networking--SDN-.md)  
+[Software Defined Networking &#40;SDN&#41;](../Software-Defined-Networking--SDN-.md)  
   
 
