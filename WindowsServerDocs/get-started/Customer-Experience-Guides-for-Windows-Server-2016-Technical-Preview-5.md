@@ -60,16 +60,16 @@ RemoteFX vGPU is constantly evolving and Windows Server 2016 is no exception.  S
 - [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](../compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md)  
 With the release of Technical Preview 5, deploying a highly available RDS deployment lets you leverage Azure SQL Database for your RD Connection Brokers in high availability mode.  
   
--   [Deploy Software Defined Networks using scripts](../networking/sdn/deploy/Deploy-a-Software-Defined-Network-infrastrcture-using-scripts.md)  
+-   [Deploy Software Defined Networks using scripts](../networking/sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)  
 Software Defined Networking \(SDN\) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. This topic covers how to deploy a Microsoft Software Defined Network infrastructure using scripts. The infrastructure includes a network controller, an SLB\/MUX, virtual networks, and associated ACLs. Additionally, another script deploys a tenant workload for you to experiment with.  
   
--   [Deploy Software Defined Networks using Virtual Machine Manager](../netrowking/sdn/deploy/Deploy-Software-Defined-Networks-using-Virtual-Machine-Manager.md)  
+-   [Deploy Software Defined Networks using Virtual Machine Manager](../networking/sdn/deploy/Deploy-Software-Defined-Networks-using-Virtual-Machine-Manager.md)  
 This topic helps you evaluate the Software Defined Networking \(SDN\) features in Windows Server 2016 and Virtual Machine Manager 2016 Technology Preview 3. In particular, this topic is focused on scenarios that incorporate VMM with the Microsoft Network Controller, a new feature in Windows Server 2016.  
   
--   [Remote Direct Memory Access and Switch Embedded Teaming](../networking/technologies/hyper-v-virtual-switch/Remote-Direct-Memory-Access--and-Switch-Embedded-Teaming--SET-.md)  
+-   [Remote Direct Memory Access and Switch Embedded Teaming](../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
 This topic provides information on configuring Remote Direct Memory Access \(RDMA\) interfaces with Hyper\-V in Windows Server® 2016 Technical Preview, in addition to information about Switch Embedded Teaming \(SET\).  
   
--   [Getting Started with Nano Server](../compute/Getting-Started-with-Nano-Server.md)  
+-   [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
 Windows Server® 2016 Technical Preview offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for hosting in private clouds and datacenters. It is similar to Windows Server in Server Core mode, but markedly smaller. Also, there is no local logon capability, nor does it support Terminal Services. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server.  
   
 -   [Introducing Cloud Witness in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2014/11/14/10572766.aspx)  

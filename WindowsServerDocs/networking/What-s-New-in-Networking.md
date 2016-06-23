@@ -44,16 +44,16 @@ Following are the new or improved SDN infrastructure technologies.
   
         For more information, see  [What's New in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).  
           
-       -   **Software Load Balancer \(SLB\) and Network Address Translation \(NAT\)**. The north\-south and east\-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer.  
+    - **Software Load Balancer \(SLB\) and Network Address Translation \(NAT\)**. The north\-south and east\-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer.  
        For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).  
   
     For more information, see [Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).  
   
 -   **Standardized Protocols**. Network Controller uses Representational State Transfer \(REST\) on its northbound interface with JavaScript Object Notation \(JSON\) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol \(OVSDB\).  
   
--   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN \(VxLAN\) and Network Virtualization Generic Routing Encapsulation \(NVGRE\). For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
+-   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN \(VxLAN\) and Network Virtualization Generic Routing Encapsulation \(NVGRE\). For more information, see [GRE Tunneling in Windows Server Technical Preview](../../remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
   
-For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md).  
+For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](../../sdn/Software-Defined-Networking--SDN-.md).  
   
 ### Cloud Scale Fundamentals  
 The following cloud scale fundamentals are now available in Technical Preview 3.  
@@ -62,7 +62,7 @@ The following cloud scale fundamentals are now available in Technical Preview 3.
   
 -   **Packet Direct**.  Packet Direct provides a high network traffic throughput and low\-latency packet processing infrastructure.  
   
--   **Switch Embedded Teaming \(SET\)**.        SET is a NIC Teaming solution that is integrated in the Hyper\-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016 Technical Preview, you can create SET teams that are restricted to the use of Server Message Block \(SMB\) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper\-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
+-   **Switch Embedded Teaming \(SET\)**.        SET is a NIC Teaming solution that is integrated in the Hyper\-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016 Technical Preview, you can create SET teams that are restricted to the use of Server Message Block \(SMB\) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper\-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
   
 ## <a name="bkmk_existing"></a>New Features for Other Technologies  
 This section contains information about new features for familiar networking technologies.  
@@ -82,7 +82,7 @@ Following are the new or improved DNS client technologies.
   
 -   **DNS Client service binding**. In Windows 10, the DNS Client service offers enhanced support for computers with more than one network interface.  
   
-For more information, see [What's New in DNS Client in Windows Server Technical Preview](dns/What-s-New-in-DNS-Client-in-Windows-Server-Technical-Preview.md)  
+For more information, see [What's New in DNS Client in Windows Server Technical Preview](../../dns/What-s-New-in-DNS-Client.md)  
   
 ### <a name="bkmk_dnss"></a>DNS Server  
 Following are the new or improved DNS server technologies.  
@@ -91,7 +91,7 @@ Following are the new or improved DNS server technologies.
   
 -   **Nano Server support for file based DNS**,   You can deploy DNS server in Windows Server 2016 Technical Preview on a Nano Server image. This deployment option is available to you if you are using file based DNS. By running DNS server on a Nano Server image, you can run your DNS servers with reduced footprint, quick boot up, and minimized patching.  
   
-    > [!NOTE]  
+    > [!NOTE]   
     > Active Directory integrated DNS is not supported on Nano Server.  
   
 -   **Response Rate Limiting \(RRL\)**.  You can enable response rate limiting on your DNS servers. By doing this, you avoid the possibility of malicious systems using your DNS servers to initiate a denial of service attack on a DNS client.  
@@ -107,17 +107,17 @@ Following are the new or improved DNS server technologies.
 -   **Improved Windows PowerShell Support**.   
       New Windows PowerShell cmdlets are available for DNS Server.  
   
-For more information, see [What's New in DNS Server in Windows Server Technical Preview](dns/What-s-New-in-DNS-Server-in-Windows-Server-Technical-Preview.md)  
+For more information, see [What's New in DNS Server in Windows Server Technical Preview](../../dns/What-s-New-in-DNS-Server.md)  
   
 ## <a name="bkmk_GRE"></a>GRE Tunneling  
 RAS Gateway now supports high availability Generic Routing Encapsulation \(GRE\) tunnels for site to site connections and M\+N redundancy of gateways. GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point\-to\-point links over an Internet Protocol internetwork.  
   
-For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
+For more information, see [GRE Tunneling in Windows Server Technical Preview](../../remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
   
 ## <a name="HNV"></a>Hyper\-V Network Virtualization  
 Introduced in Windows Server 2012, Hyper\-V Network Virtualization \(HNV\) enables virtualization of customer networks on top of a shared physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.  
   
-For more information, see [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md)  
+For more information, see [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](../../sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md)  
   
 ## <a name="bkmk_ipam"></a>IPAM  
 IPAM provides highly customizable administrative and monitoring capabilities for the IP address and DNS infrastructure on an organization network. Using IPAM, you can monitor, audit, and manage servers that are running Dynamic Host Configuration Protocol \(DHCP\) and Domain Name System \(DNS\).  
@@ -137,6 +137,6 @@ IPAM provides highly customizable administrative and monitoring capabilities for
 -   **Windows PowerShell support for Role Based Access Control**.  
      You can use Windows PowerShell to set access scopes on IPAM objects.  
   
-For more information, see [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](https://technet.microsoft.com/library/mt210422.aspx).  
+For more information, see [What's New in IPAM](../../technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](../../technologies/ipam/Manage-IPAM.md).  
   
 
