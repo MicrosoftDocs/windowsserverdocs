@@ -58,7 +58,7 @@ These rules can then be combined with other factors such as network access locat
   
 With AD FS 2016, these policies can be configured specifically to require a particular device trust level as well: either **authenticated**, **managed**, or **compliant**.  
   
-For more information on configuring AD FS access control policies, see [Access control policies in AD FS](../../../ad-fs/manage/ops/Access-Control-Policies-in-AD-FS.md).  
+For more information on configuring AD FS access control policies, see [Access control policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md).  
   
 #### Authenticated devices  
 Authenticated devices are registered devices that are not enrolled in MDM (Intune and 3rd party MDMs for Windows 10, Intune only for iOS and Android).   
@@ -96,8 +96,8 @@ To configure this scenario, you must configure the device registration capabilit
 To do this, follow the steps under [Setting up Azure AD Join in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-setup/)  
   
 ### Setup AD FS  
-1. Create the a [new AD FS 2016 farm](Deploying-a-Federation-Server-Farm.md).   
-2.  Or [migrate](../../../ad-fs/get-started/upgrading-to-WS2016/Upgrading-to-AD-FS-in-Windows-Server-2016.md) a farm to AD FS 2016 from AD FS 2012 R2  
+1. Create the a [new AD FS 2016 farm](https://technet.microsoft.com/library/dn486775.aspx).   
+2.  Or [migrate](../../ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md) a farm to AD FS 2016 from AD FS 2012 R2  
 4. Deploy [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnectfed-whatis/) using the Custom path to connect AD FS to Azure AD.  
   
 ### Configure Device Write Back and Device Authentication  

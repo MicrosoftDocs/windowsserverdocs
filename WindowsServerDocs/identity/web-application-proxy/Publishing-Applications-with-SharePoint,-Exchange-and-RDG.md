@@ -149,7 +149,7 @@ If you want to restrict access to your Remote Access Gateway and add pre\-authen
   
 -   [Planning to Publish Applications Using Web Application Proxy](assetId:///a0d4c023-e75b-4140-b0aa-0fdb7f28a59d)  
   
--   [Troubleshooting Web Application Proxy](Troubleshooting-Web-Application-Proxy.md)  
+-   [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
   
 -   [Web Application Proxy Walkthrough Guide](assetId:///ad72afff-bbb0-4c37-b4d8-2f68f790db70)  
   
