@@ -18,7 +18,6 @@ This section contains the following topics.
   
 -   [Deploy Network Controller using Windows PowerShell](../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
   
-## See Also  
-[Software Defined Networking &#40;SDN&#41;](Software-Defined-Networking--SDN-.md)  
+ 
   
 

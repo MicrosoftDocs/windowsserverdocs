@@ -51,9 +51,6 @@ Following are RAS Gateway features in Windows Server 2016 Technical Preview. You
   
 -   **Dynamic routing with Border Gateway Protocol \(BGP\)**. BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site\-to\-site VPN connections. If your organization has multiple sites that are connected by using BGP\-enabled routers such as RAS Gateway, BGP allows the routers to automatically calculate and use valid routes to each other in the event of network disruption or failure. For more information, see [RFC 4271](https://tools.ietf.org/html/rfc4271).  
   
-## See Also  
-[RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)  
-[Deploy a Software Defined Network Infrastructure Using Scripts](Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)  
-[Deploy Software Defined Networks using Virtual Machine Manager](Deploy-Software-Defined-Networks-using-Virtual-Machine-Manager.md)  
+
   
 

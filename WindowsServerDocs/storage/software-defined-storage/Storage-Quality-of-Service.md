@@ -25,17 +25,17 @@ You can use Storage QoS in Windows Server 2016 Technical Preview to accomplish t
 
 This document outlines how your business can benefit from the new Storage QoS functionality. It assumes that you have a previous working knowledge of Windows Server, Windows Server Failover Clustering, Scale\-Out File Server, Hyper\-V, and Windows PowerShell and includes the following sections:  
 
--   [Overview](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Storage-Quality-of-Service.md#BKMK_Overview)  
+-   [Overview](#BKMK_Overview)  
 
--   [How to set up Storage QoS and monitor basic performance](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Storage-Quality-of-Service.md#BKMK_SetUpQoS)  
+-   [How to set up Storage QoS and monitor basic performance](#BKMK_SetUpQoS)  
 
--   [How to create storage QoS policies](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Storage-Quality-of-Service.md#BKMK_CreateQoSPolicies)  
+-   [How to create storage QoS policies](#BKMK_CreateQoSPolicies)  
 
--   [How to identify and address common issues](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Storage-Quality-of-Service.md#BKMK_KnownIssues)  
+-   [How to identify and address common issues](Storage-Quality-of-Service.md#BKMK_KnownIssues)  
 
--   [Monitor Health using Storage QoS](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Storage-Quality-of-Service.md#BKMK_Health)  
+-   [Monitor Health using Storage QoS](#BKMK_Health)  
 
--   [Updates from previous version of Windows Server Technical Preview](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Storage-Quality-of-Service.md#BKMK_Updates)  
+-   [Updates from previous version of Windows Server Technical Preview](Storage-Quality-of-Service.md#BKMK_Updates)  
 
 > [!IMPORTANT]  
 > Windows Server 2016 Technical Preview is an early pre\-release build. Features and scenarios are still in development and the experiences are still evolving. At this stage, Windows Server 2016 Technical Preview and Storage QoS are for evaluations only and should not be used in production environments.  
@@ -549,7 +549,7 @@ WinOltp1      7e2f3e73-1ae4-4710-8219-0769a4aba072        6000        1000      
 ## <a name="BKMK_KnownIssues"></a>How to identify and address common issues  
 This section describes how to find virtual machines with invalid Storage QoS policies, how to recreate a matching policy, how to remove a policy from a virtual machine, and how to identify virtual machines that do not meet the Storage QoS policy requirements.  
 
-### <a name="BKMK_FindingVMsWithInvalidPoilicies"></a>Identify virtual machines with invalid policies  
+### <a name="BKMK_FindingVMsWithInvalidPolicies"></a>Identify virtual machines with invalid policies  
 If a policy is deleted from the file server before it’s removed from a virtual machine, the virtual machine will keep running as if no policy were applied.  
 
 ```  
@@ -757,7 +757,7 @@ The new Health Service simplifies the monitoring of the Storage Cluster, providi
 Clustered Storage Spaces also provide information on the health of the storage cluster in a single location.  This is currently in early preview stages, but some data is available today.  This can help administrators quickly identify current problems in storage deployments and monitor as issues arrive or are dismissed.  
 
 #### VM with invalid policy  
-VMs with invalid policies are also reported through the storage subsystem health monitoring.  Here is an example from the same state as described in [Finding VMs with invalid policies](../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/../software-defined-storage/Storage-Quality-of-Service.md#BKMK_FindingVMsWithInvalidPoilicies) section of this document.  
+VMs with invalid policies are also reported through the storage subsystem health monitoring.  Here is an example from the same state as described in [Finding VMs with invalid policies](#BKMK_FindingVMsWithInvalidPolicies) section of this document.  
 
 ```  
 C:\> Get-StorageSubSystem -FriendlyName Clustered* | Deb  

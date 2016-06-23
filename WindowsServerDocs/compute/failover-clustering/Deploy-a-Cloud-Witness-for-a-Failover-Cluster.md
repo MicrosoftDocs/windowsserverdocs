@@ -88,11 +88,13 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 3. In the Create a storage account page, do the following:
   4. Enter a name for your storage account.
 
-      >[!NOTE] Storage account names must be between 3 and 24 characters in length and may contain numbers and  lowercase letters only.
+      >[!NOTE]
+      > Storage account names must be between 3 and 24 characters in length and may contain numbers and  lowercase letters only.
     Your storage account name must be unique within Azure. The Azure Portal will indicate if the storage account name you select is already in use.
   5. For **Replication**, select **Locally-redundant storage (LRS)** (see figure 3).
 
-     >[!NOTE]Failover Cluster uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Hence, it is very important to select **Locally-redundant storage** for **Replication** type.   
+     >[!NOTE]
+     >Failover Cluster uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Hence, it is very important to select **Locally-redundant storage** for **Replication** type.   
 
       ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_3.png)
 
@@ -116,7 +118,8 @@ When you create a Storage Account, the following URLs are generated using the fo
 
 Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different Endpoint as per your scenario (for example the  Microsoft Azure in China has a different Endpoint).  
 
->[!NOTE] The endpoint URL is generated automatically by Cloud Witness resource and there is no extra step of configuration necessary for the URL.  
+>[!NOTE]
+> The endpoint URL is generated automatically by Cloud Witness resource and there is no extra step of configuration necessary for the URL.  
 #### To view and copy endpoint URL links
 
 In the Azure Portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).  
@@ -131,17 +134,19 @@ In the Azure Portal, navigate to your storage account, click **All settings** an
 
 Cloud Witness configuration is well-integrated within the existing Quorum Configuration Wizard built into the Failover Cluster Manager.  
 
- ### To configure Cloud Witness as a Quorum Witness
- 1. Launch Failover Cluster Manager.
- 2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 6).This launches the Configure Cluster Quorum Wizard  
+### To configure Cloud Witness as a Quorum Witness
 
-  ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)  
+1. Launch Failover Cluster Manager.
+2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 6).This launches the Configure Cluster Quorum Wizard  
 
-    **Figure 6. Cluster Quorum Settings**
+   	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)  
+
+   **Figure 6. Cluster Quorum Settings**
  
+
 1.  On the  **Select Quorum Configurations** page, select **Select the quorum witness** (see figure 7).  
 
-   ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
+   	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
 
      **Figure 7. Select the Quorum Configuration**
 

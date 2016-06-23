@@ -38,22 +38,22 @@ RAS Gateway includes multiple new features that change and improve the way in wh
 ### BGP Route Reflector  
 The Border Gateway Protocol \(BGP\) Route Reflector capability  is now included with RAS Gateway, and provides an alternative to BGP full mesh topology that is normally required for route synchronization between routers. With full mesh synchronization, all BGP routers must connect with all other routers in the routing topology. When you use Route Reflector, however, the Route Reflector is the only router that connects with all of the other routers, called BGP Route Reflector clients, thereby simplifying route synchronization and reducing network traffic. The Route Reflector learns all routes, calculates best routes, and redistributes the best routes to its BGP clients.  
   
-For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md).  
+For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md).  
   
 ### <a name="bkmk_pools"></a>Gateway Pools  
 In Windows Server 2016 Technical Preview, you can create many gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks.  
   
-For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](RAS-Gateway-High-Availability.md).  
+For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
 ### <a name="bkmk_gps"></a>Gateway Pool Scalability  
 You can easily scale a gateway pool up or down by adding or removing gateway VMs in the pool. Removal or addition of gateways does not disrupt the services that are provided by a pool. You can also add and remove entire pools of gateways.  
   
-For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](RAS-Gateway-High-Availability.md).  
+For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
 ### <a name="bkmk_m"></a>M\+N Gateway Pool Redundancy  
 Every gateway pool is M\+N redundant. This means that an ‘M’ number of active gateway VMs are backed up by an ‘N’ number of standby gateway VMs. M\+N redundancy provides you with more flexibility in determining  the level of reliability that you require when you deploy RAS Gateway.  
   
-For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](RAS-Gateway-High-Availability.md).  
+For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
 ## <a name="bkmk_example"></a>Example Deployment  
 The following illustration provides an example with eBGP peering over site\-to\-site VPN connections configured between two tenants, Contoso and Woodgrove, and the Fabrikam CSP datacenter.  
@@ -150,12 +150,6 @@ When your tenant has multiple Enterprise sites, the tenant can configure all sit
   
 To ensure a fast failover response, you can configure the BGP Keepalive parameter time between edge routes and the control router to a short time interval, such as less than or equal to ten seconds. With this short keep alive interval, if a RAS Gateway BGP edge router fails, the failure is quickly detected and Network Controller follows the steps provided in previous sections. This advantage might reduce the need for a separate failure detection protocol, such as Bidirectional Forwarding Detection \(BFD\) protocol.  
   
-## See Also  
-[RAS Gateway Multitenant BGP Router](RAS-Gateway-Multitenant-BGP-Router.md)  
-[RAS Gateway High Availability](RAS-Gateway-High-Availability.md)  
-[What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md)  
-[Software Load Balancing &#40;SLB&#41; for SDN](../../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)  
-[Border Gateway Protocol &#40;BGP&#41;](Border-Gateway-Protocol--BGP-.md)  
-[BGP Windows PowerShell Command Reference](BGP-Windows-PowerShell-Command-Reference.md)  
+ 
   
 

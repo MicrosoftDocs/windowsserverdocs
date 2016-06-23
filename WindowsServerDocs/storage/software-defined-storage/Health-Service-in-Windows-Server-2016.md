@@ -55,7 +55,8 @@ You can also get Metrics for one specific volume or node using the following cmd
 
          Get-StorageNode -Name <NAME> | Get-StorageHealthReport -Count <Count>  
 
-> [!NOTE] The Metrics returned in each case will be the subset applicable to that scope.  
+> [!NOTE]
+> The Metrics returned in each case will be the subset applicable to that scope.  
 
 
 ### Capacity: Putting It All Together  
@@ -108,7 +109,8 @@ For example, here is a typical fault:
      Location: Seattle DC, Rack B07, Node 4, Slot 11                                  |  
 
 
- >[!NOTE] The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016 Technical Preview](../storage-spaces/Fault-Domains-in-Windows-Server-2016-Technical-Preview.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
+ >[!NOTE]
+ > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016 Technical Preview](../storage-spaces/Fault-Domains-in-Windows-Server-2016-Technical-Preview.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
 
 ### Coverage  
 
@@ -168,7 +170,8 @@ In Windows Server 2016 Technical Preview 5, the Health Service provides the foll
 
        <sup>2</sup> Indicates some .vhd(s) on the volume have not met their Minimum IOPS for over 10% (minor), 30% (major), or 50% (critical) of rolling 24-hour window.  
 
->[!NOTE] The health of storage enclosure components such as fans, power supplies, and sensors is derived from SCSI Enclosure Services (SES). If your vendor does not provide this information, the Health Service cannot display it.  
+>[!NOTE]
+> The health of storage enclosure components such as fans, power supplies, and sensors is derived from SCSI Enclosure Services (SES). If your vendor does not provide this information, the Health Service cannot display it.  
 
 ### Usage  
 
@@ -178,7 +181,8 @@ To see any current Faults, run the following cmdlet in PowerShell:
 
 This returns any Faults which affect the overall Storage Spaces Direct cluster. Most often, these Faults relate to hardware or configuration. If there are no Faults, this cmdlet will return nothing.  
 
->[!NOTE] In a non-production environment, and at your own risk, you can experiment with this feature by triggering Faults yourself – for example, by removing one physical disk or shutting down one node. Once the Fault has appeared, re-insert the physical disk or restart the node and the Fault will disappear again.  
+>[!NOTE]
+> In a non-production environment, and at your own risk, you can experiment with this feature by triggering Faults yourself – for example, by removing one physical disk or shutting down one node. Once the Fault has appeared, re-insert the physical disk or restart the node and the Fault will disappear again.  
 
 You can also view Faults that are affecting only specific volumes or file shares with the following cmdlets:  
 
@@ -188,7 +192,8 @@ You can also view Faults that are affecting only specific volumes or file shares
 
 This returns returns any Faults which affect only the specific volume or file share. Most often, these Faults relate to data resiliency or features like Storage QoS or Storage Replica.  
 
->[!NOTE] In Windows Server 2016 Technical Preview, it may take up to 30 minutes for certain Faults to appear. Improvements are forthcoming in subsequent releases.   
+>[!NOTE]
+> In Windows Server 2016 Technical Preview, it may take up to 30 minutes for certain Faults to appear. Improvements are forthcoming in subsequent releases.   
 
 ### Root Cause Analysis  
 
@@ -236,7 +241,8 @@ Physical disks are automatically retired when they can no longer be used, and a 
 
 -   Unresponsive: the physical disk has exhibited latency of over 5.0 seconds three or more times within an hour.  
 
->[!NOTE] If connectivity is lost to many physical disks at once, or to an entire node or storage enclosure, the Health Service will *not* retire these disks since they are unlikely to be the root problem.  
+>[!NOTE]
+> If connectivity is lost to many physical disks at once, or to an entire node or storage enclosure, the Health Service will *not* retire these disks since they are unlikely to be the root problem.  
 
 If the retired disk was serving as the cache for many other physical disks, these will automatically be reassigned to another cache disk if one is available. No special user action is required.  
 
@@ -244,13 +250,15 @@ If the retired disk was serving as the cache for many other physical disks, thes
 
 Once a physical disk has been retired, the Health Service immediately begins copying its data onto the remaining physical disks, to restore full resiliency. Once this has completed, the data is completely safe and fault tolerant anew.  
 
->[!NOTE] This immediate restoration requires sufficient available capacity among the remaining physical disks.  
+>[!NOTE]
+> This immediate restoration requires sufficient available capacity among the remaining physical disks.  
 
 #### Blinking the indicator light  
 
 If possible, the Health Service will begin blinking the indicator light on the retired physical disk or its slot. This will continue indefinitely, until the retired disk is replaced.  
 
->[!NOTE] In some cases, the disk may have failed in a way that precludes even its indicator light from functioning – for example, a total loss of power.  
+>[!NOTE]
+> In some cases, the disk may have failed in a way that precludes even its indicator light from functioning – for example, a total loss of power.  
 
 #### Physical replacement  
 

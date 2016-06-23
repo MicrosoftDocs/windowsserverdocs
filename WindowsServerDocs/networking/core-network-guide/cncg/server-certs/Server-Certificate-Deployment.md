@@ -16,25 +16,25 @@ Follow these steps to install an enterprise root certification authority \(CA\) 
   
 -   [Install the Web Server WEB1](../../../core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md)  
   
--   [Create an alias (CNAME) record in DNS for WEB1](assetId:///bfae23f0-ae12-486b-94fe-50a137e141a5)  
+-   [Create an alias (CNAME) record in DNS for WEB1](../../../core-network-guide/cncg/server-certs/Create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md)  
   
--   [Configure WEB1 to distribute Certificate Revocation Lists (CRLs)](assetId:///fa4a8c41-8c2a-425c-8511-736fe5d196ac)  
+-   [Configure WEB1 to distribute Certificate Revocation Lists (CRLs)](../../../core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-Lists.md)  
   
--   [Prepare the CAPolicy.inf file (CNG)](assetId:///c36201de-7eb6-4e38-87da-cf7dd981a442)  
+-   [Prepare the CAPolicy inf file](../../../core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md)  
   
--   [Install the Certification Authority](assetId:///4acdc3ad-078e-45cc-b54c-e9456e0c90f5)  
+-   [Install the Certification Authority](../../../core-network-guide/cncg/server-certs/Install-the-Certification-Authority.md)  
   
--   [Configure the CDP and AIA extensions on CA1](assetId:///f77a3989-9f92-41ef-92a8-031651dd73a8)  
+-   [Configure the CDP and AIA extensions on CA1](../../../core-network-guide/cncg/server-certs/Configure-the-CDP-and-AIA-Extensions-on-CA1.md)  
   
--   [Copy the CA certificate and CRL to the virtual directory](assetId:///a1b5fa23-9cb1-4c32-916f-2d75f48b42c7)  
+-   [Copy the CA certificate and CRL to the virtual directory](../../../core-network-guide/cncg/server-certs/Copy-the-CA-Certificate-and-CRL-to-the-Virtual-Directory.md)  
   
--   [Configure the server certificate template](assetId:///8ff610e2-43ca-407f-a828-06d9366e02f0)  
+-   [Configure the server certificate template](../../../core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md)  
   
--   [Configure server certificate autoenrollment](assetId:///c81e85cb-ecb8-442a-ad27-442c2f9e40df)  
+-   [Configure server certificate autoenrollment](../../../core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)  
   
--   [Refresh Group Policy [Preliminary3]](assetId:///65b36794-bb09-4c1b-a2e7-8fc780893d97)  
+-   [Refresh Group Policy](../../../core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)  
   
--   [Verify Server Enrollment of a Server Certificate](assetId:///bd80a018-5a30-47c3-89fc-aacb9f5ad298)  
+-   [Verify Server Enrollment of a Server Certificate](../../../core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)  
   
 > [!NOTE]  
 > The procedures in this guide do not include instructions for cases in which the **User Account Control** dialog box opens to request your permission to continue. If this dialog box opens while you are performing the procedures in this guide, and if the dialog box was opened in response to your actions, click **Continue**.  

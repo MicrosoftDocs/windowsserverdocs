@@ -18,9 +18,11 @@ You will configure these computers and storage in a cluster\-to\-cluster configu
 
 There are no graphical tools in Windows Server 2016 Technical Preview that can configure Storage Replica for cluster\-to\-cluster replication.  
 
-> [!IMPORTANT] In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster.  
+> [!IMPORTANT]
+> In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster.  
 >   
 > If you wish to use Storage Spaces Direct, you will need a minimum of four nodes per cluster, for a total of eight. This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md).  
+
 ### Terms  
 This walkthrough uses the following environment as an example:  
 
@@ -395,6 +397,6 @@ Now you will manage and operate your cluster\-to\-cluster replication. You can p
 
 ## See Also  
 
--   [Windows Server 2016 Technical Preview 5]((../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
 -   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  

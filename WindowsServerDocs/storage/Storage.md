@@ -14,7 +14,8 @@ author: kumudd
 # Storage
 This collection contains detailed information about storage products and features for the IT professional to design, deploy, and maintain Windows Server. Following are the storage technologies and documentation for Windows Server 2016 Technical Preview.  
 
-> [!NOTE] To download Windows Server 2016 Technical Preview, see [Windows Server Evaluations](http://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).  
+> [!NOTE]
+> To download Windows Server 2016 Technical Preview, see [Windows Server Evaluations](http://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).  
 
 |Topic Title|Description|  
 |-|-|  
