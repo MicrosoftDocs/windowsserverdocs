@@ -93,7 +93,7 @@ A GRE tunnel is exposed as an additional protocol within a S2S interface. It is 
   
 See the following topic for an example that deploys gateways, including GRE tunnel gateways:  
   
-[Deploy Software Defined Networks using scripts](Deploy-Software-Defined-Networks-using-scripts.md)  
+[Deploy a Software Defined Network infrastructure using scripts](../../sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
   
 ## More information  
 For more information about deploying S2S gateways, see the following topics:  

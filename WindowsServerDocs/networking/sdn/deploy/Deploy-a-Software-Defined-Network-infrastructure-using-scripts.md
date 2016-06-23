@@ -17,7 +17,7 @@ This topic covers how to deploy a Microsoft Software Defined Network \(SDN\) inf
   
 If you want your tenant workloads to communicate outside their virtual networks, you can setup SLB NAT rules, Site-to-Site Gateway tunnels, or Layer-3 Forwarding to route between virtual and physical workloads.  
   
-You can also deploy an SDN infrastructure  using  Virtual Machine Manager. For more information, see [Deploy Software Defined Networks using Virtual Machine Manager](Deploy-Software-Defined-Networks-using-Virtual-Machine-Manager.md).  
+You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). For more information, see [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/en-us/library/mt695701.aspx).  
   
 ## Pre-deployment  
   
@@ -30,32 +30,39 @@ All Hyper\-V hosts must have Windows Server 2016 Technical Preview installed.
 Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switch and  IP address assignment. Any storage type that is compatible with Hyper-V, shared or local may be used.  
 ### Install host networking  
 1. Install the latest network drivers available for your NIC hardware.  
-2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V](Get-started-with-Hyper-V-on-Windows-Server-2016-Technical-Preview.md)).   
+2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016 Technical Preview](https://technet.microsoft.com/en-us/library/mt126159.aspx).   
   
    From an elevated Windows PowerShellcommand prompt:  
    ``Install-WindowsFeature –Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart``  
- 3. Create the Hyper-V virtual switch (use the same switch name for all hosts. For example: **sdnSwitch**). Configure at least one network adapter or, if using Switch Embedded Teaming, configure at least two network adapters. Maximum inbound spreading occurs when using two NICs.  
+    
+    a. Create the Hyper-V virtual switch (use the same switch name for all hosts. For example: **sdnSwitch**). Configure at least one network adapter or, if using Switch Embedded Teaming, configure at least two network adapters. Maximum inbound spreading occurs when using two NICs.  
  ``	New-VMSwitch “<switch name>” –NetAdapterName “<NetAdapter1>” [, “<NetAdapter2>” –EnableEmbeddedTeaming $True] –AllowManagementOS $True``  
- >[!NOTE] You  can skip steps 4 and 5 if you have separate Management NICs.  
- 4. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to obtain the VLAN ID of the Management VLAN. Attach the Management vNIC of the newly created Virtual Switch to the Management VLAN. This step can be omitted if your environment does not use VLAN tags.  
+ 
+ >[!NOTE] You  can skip steps 4 and 5 if you have separate Management NICs.
+
+ b. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to obtain the VLAN ID of the Management VLAN. Attach the Management vNIC of the newly created Virtual Switch to the Management VLAN. This step can be omitted if your environment does not use VLAN tags.  
  ``	Set-VMNetworkAdapterIsolation -ManagementOS -IsolationMode Vlan –DefaultIsolationID <Management VLAN> -AllowUntaggedTraffic $True``  
- 5. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to use either DHCP or static IP assignments to assign an IP address to the Management vNIC of the newly created vSwitch. The following example shows how to create a static IP address and assign it to the Management vNIC of the vSwitch:  
+ 
+ c. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to use either DHCP or static IP assignments to assign an IP address to the Management vNIC of the newly created vSwitch. The following example shows how to create a static IP address and assign it to the Management vNIC of the vSwitch:  
  ``New-NetIPAddress -InterfaceAlias "vEthernet (<switch name>)" -IPAddress <IP> -DefaultGateway <Gateway IP> -AddressFamily IPv4 -PrefixLength <Length of Subnet Mask – for example: 24>``  
       
-6. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx) and a DNS Server.  
-   1. Connect the Active Directory/DNS Server virtual machine to the Management VLAN:  
+3. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx) and a DNS Server.  
+   
+   a. Connect the Active Directory/DNS Server virtual machine to the Management VLAN:  
    ``Set-VMNetworkAdapterIsolation –VMName “<VM Name>” –Access –VlanId <Management VLAN> -AllowUntaggedTraffic $True``  
-   2. Install Active Directory Domain Services and DNS.  
+   
+   b. Install Active Directory Domain Services and DNS.  
       >[!NOTE]The network controller supports both Kerberos and X.509 certificates for authentication. This guide uses both authentication mechanisms for different purposes (although only one is required).  
         
-7. Join all Hyper-V hosts to the domain. Ensure the DNS server entry for the network adapter that has an IP address assigned to the Management network points to a DNS server that can resolve the domain name. For example:  
+4. Join all Hyper-V hosts to the domain. Ensure the DNS server entry for the network adapter that has an IP address assigned to the Management network points to a DNS server that can resolve the domain name. For example:  
 ``Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<switch name>)" -ServerAddresses <DNS Server IP>``  
-   1. Right-click **Start**, click **System**, and then click **Change Settings**.  
-   2. Click **Change**.  
-   3. Click **Domain** and specify the domain name.  
-   4. Click **OK**.  
-   5. Type the user name and password credentials when prompted.  
-   6. Restart the server.  
+   
+   a. Right-click **Start**, click **System**, and then click **Change Settings**.  
+   b. Click **Change**.  
+   c. Click **Domain** and specify the domain name.  
+   d. Click **OK**.  
+   e. Type the user name and password credentials when prompted.  
+   f. Restart the server.  
   
 ### Validation  
 Use the following steps to validate that host networking is setup correctly.  
@@ -77,9 +84,11 @@ Use the following steps to validate that host networking is setup correctly.
 ### Nano installation requirements and notes  
 If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the following are additional requirements:  
 1. All Nano nodes need to have the DSC package installed with the language pack:  
-   1. Microsoft-NanoServer-DSC-Package.cab  
-   2. Microsoft-NanoServer-DSC-Package_en-us.cab  
-   ``dism /online /add-package /packagepath:<Path> /loglevel:4``  
+   
+   * Microsoft-NanoServer-DSC-Package.cab  
+   * Microsoft-NanoServer-DSC-Package_en-us.cab
+   
+        ``dism /online /add-package /packagepath:<Path> /loglevel:4``  
 2. The SDN Express scripts must be run from a non-Nano host  (Windows Server Core or Windows Server w/ GUI). PowerShell Workflows are not supported on Nano.  
 3.	Invoking the Network Controller NorthBound API using PowerShell or NC REST Wrappers (which rely on Invoke-WebRequest and Invoke-RestMethod) must be done from a non-Nano host.  
    
