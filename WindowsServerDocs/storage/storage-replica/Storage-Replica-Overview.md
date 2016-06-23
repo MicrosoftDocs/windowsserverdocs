@@ -51,7 +51,8 @@ Using this guide and Windows Server 2016 Technical Preview, you can deploy stora
 
 **FIGURE 3: Server\-to\-server storage replication using Storage Replica**  
 
-> [!NOTE] You can also configure server-to-self replication, using four separate volumes on one computer. However, this guide does not cover this scenario.  
+> [!NOTE]
+> You can also configure server-to-self replication, using four separate volumes on one computer. However, this guide does not cover this scenario.  
 
 ## <a name="BKMK_SR2"> </a> Storage Replica Features  
 
@@ -178,7 +179,8 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.  
 
-> [!NOTE] This document contains a list of [known issues](Storage-Replica--Known-Issues.md) and expected behaviors as well as [frequently asked questions](Storage-Replica--Frequently-Asked-Questions.md)  
+> [!NOTE]
+> This document contains a list of [known issues](Storage-Replica--Known-Issues.md) and expected behaviors as well as [frequently asked questions](Storage-Replica--Frequently-Asked-Questions.md)  
  section.  
 ### Storage Replica terminology  
 This guide frequently uses the following terms:  
