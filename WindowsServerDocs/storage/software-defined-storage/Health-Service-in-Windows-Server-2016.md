@@ -276,7 +276,8 @@ If allowed, the replacement disk is automatically substituted into its predecess
 The Health Service provides an enforcement mechanism to restrict the components and devices used by a Spaces Direct cluster to those on an Allow List provided by the administrator or solution vendor. This can be used to prevent mistaken use of unsupported hardware by you or others, which may help with warranty or support contract compliance. As of Technical Preview 5, this functionality is limited to physical disk devices, including SSDs, HDDs, and NVMe devices. The Allow List can restrict on model, manufacturer (optional), and firmware version (optional).  
  If an Allow List is specified, unlisted disk devices are prevented from joining pools, which effectively precludes their use in production. If no Allow List is specified, any disk device will be allowed to join pools.   
 
->[!IMPORTANT] This does not apply retroactively to drives already pooled and in use.  
+>[!IMPORTANT]
+> This does not apply retroactively to drives already pooled and in use.  
 
 ### Usage  
 

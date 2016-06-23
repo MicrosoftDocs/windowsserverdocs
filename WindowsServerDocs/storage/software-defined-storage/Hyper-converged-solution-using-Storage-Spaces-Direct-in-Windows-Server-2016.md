@@ -91,7 +91,8 @@ This guide focuses on deploying hyper-converged systems using Nano server and th
 However, the steps in the “Configure the Network” and “Configure Storage Spaces Direct” sections are identical whether you are using Nano or Full or Core installations.  
 For full and core installations, instead of following the “Deploy the operating system” in this guide, you can deploy Windows Server 2012 Datacenter like you would any other Failover Cluster deployment.  This includes joining them to an Active Directory domain and installing the Hyper-V role and Failover Cluster feature.   
 Nano server installations require all management to be done remotely, except what can be done through the Nano Recovery Console.  On Full and core installations you can use the remote management steps in this guide, or in some cases you can log into the servers and do the commands and management locally.  
->[!IMPORTANT]The Mellanox driver for Windows Server 2016 Technical Preview Technical Preview 5 has some extra configuration required when installing on a Full or Core install (not on Nano).  See the section [Mellanox Driver Install for Full and Core Installations](#BKMK_S2D8).  
+>[!IMPORTANT]
+>The Mellanox driver for Windows Server 2016 Technical Preview Technical Preview 5 has some extra configuration required when installing on a Full or Core install (not on Nano).  See the section [Mellanox Driver Install for Full and Core Installations](#BKMK_S2D8).  
 
 ## <a name="BKMK_S2D5"></a> Nano Server: Installing and configuring Hyper-Converged solution with Storage Spaces Direct  
 
@@ -111,7 +112,8 @@ Figure 2 illustrates the process for building a hyper-converged solution using W
 
 You can work on these steps a few at a time or all at once. However, they do need to be completed in the order shown in Figure 2. After describing some prerequisites and terminology, this guide describes each of the three phases in more detail and provides examples.  
 
->[!IMPORTANT] This preview release should not be used in production environments.  
+>[!IMPORTANT]
+> This preview release should not be used in production environments.  
 
 ### Prerequisites and Terminology ###  
 
@@ -224,7 +226,8 @@ There are other methods to deploy Nano, but in the case of this example we’ll 
         -   **Other options**: If you want a richer understanding of the all the input parameters associated with New-NanoServerImage you can learn more from the [“Getting Started with Nano Server”](https://technet.microsoft.com/library/mt126167.aspx) guide.  
 -   	**ServicingPackages Path**:  Servicing packages can be added to the image at the time the image is built, or you can use Windows Update later.  For this TP5 hyper-converged deployment you will need KB3157663 and this path should point to the cab file extracted from KB3157663.  
 
->[!IMPORTANT] If you want install servicing packages, use the -ServicingPackages parameter (you can pass an array of paths to .cab files). Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. For instructions, see [Installation of servicing packages](../../compute/nano-server/Getting-Started-with-Nano-Server.md#BKMK_Svcing).  
+>[!IMPORTANT]
+> If you want install servicing packages, use the -ServicingPackages parameter (you can pass an array of paths to .cab files). Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. For instructions, see [Installation of servicing packages](../../compute/nano-server/Getting-Started-with-Nano-Server.md#BKMK_Svcing).  
 
 
 
@@ -282,7 +285,8 @@ The tasks in this section assume that the servers that will be used for the hype
          > Bcdboot.exe d:\windows  
 
     -   **Unmount the VHD**. If you are using Windows Explorer, the unmount is accomplished by right clicking on the drive letter in the left hand navigation pane, and selecting “**eject**”.   
-        >[!IMPORTANT] **THIS STEP IS IMPORTANT. THE SYSTEM MAY HAVE ISSUES BOOTING IF YOU DON’T UNMOUNT THE VHDX.**  
+        >[!IMPORTANT]
+        > **THIS STEP IS IMPORTANT. THE SYSTEM MAY HAVE ISSUES BOOTING IF YOU DON’T UNMOUNT THE VHDX.**  
 
 #### Reboot into the new Nano Server image  
 

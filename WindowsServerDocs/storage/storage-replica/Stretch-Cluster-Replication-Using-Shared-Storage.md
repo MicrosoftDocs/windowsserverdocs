@@ -46,10 +46,12 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 ## Provision operating system, features, roles, storage, and network  
 
-> [!WARNING] Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
+> [!WARNING]
+> Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
 
 1.  Install Windows Server 2016 Technical Preview Datacenter Edition on all server nodes. Do not choose Standard Edition if it is available, as it does not contain Storage Replica. Use of Windows Server Desktop Experience, Core, and Nano installation modes are all supported.  
-    > [!IMPORTANT] From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.  
+    > [!IMPORTANT]
+    > From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.  
 2.  Add network information and join the nodes to the domain, then restart them.  
     > [!NOTE]
     > As of this point, the guide presumes you have two pairings of servers for use in a stretch cluster. A WAN or LAN network separate the servers and the servers belong to either physical or logical sites. The guide considers **SR-SRV01** and **SR-SRV02** to be in site Redmond and **SR-SRV03** and **SR-SRV04** to be in site **Bellevue**.  
@@ -60,7 +62,8 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 5.  As appropriate, install latest vendor storage and enclosure firmware and drivers, latest vendor HBA drivers, latest vendor BIOS\/UEFI firmware, latest vendor network drivers, and latest motherboard chipset drivers on all four nodes. Restart nodes as needed.  
 
-    > [!NOTE] Consult your hardware vendor documentation for configuring shared storage and networking hardware.  
+    > [!NOTE]
+    > Consult your hardware vendor documentation for configuring shared storage and networking hardware.  
 
 6.  Ensure that BIOS\/UEFI settings for servers enable high performance, such as disabling C\-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to high performance. Restart as required.  
 
@@ -70,7 +73,8 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         Run **ServerManager.exe** and add all server nodes by clicking **Manage** and **Add Servers**.  
 
-        > [!IMPORTANT] Install the **Failover Clustering**, and **Storage Replica** roles and features on each of the nodes and restart them. If planning to use other roles like Hyper-V, File Server, etc. you can install them now too.  
+        > [!IMPORTANT]
+        > Install the **Failover Clustering**, and **Storage Replica** roles and features on each of the nodes and restart them. If planning to use other roles like Hyper-V, File Server, etc. you can install them now too.  
 
     -   **Using Windows PowerShell method**  
 
@@ -138,7 +142,8 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
             Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
 
-      > [!IMPORTANT]   When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for five thirty minutes to the D: volume:   
+      > [!IMPORTANT]
+      > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for five thirty minutes to the D: volume:   
         `Diskspd.exe -c1g –d1800 -W5 -C5 -b4k -t2 -o2 -r –w5 d:\test.dat`  
 
 11. Examine the **TestSrTopologyReport-< date >.html** report to ensure you meet the Storage Replica requirements and note the initial sync time prediction and log recommendations.  
@@ -245,7 +250,8 @@ You will now create a normal failover cluster. After configuration, validation, 
     > [!NOTE]
     > Windows Server 2016 Technical Preview now includes an option for Cloud \(Azure\)\-based Witness. You can choose this quorum option instead of the file share witness.  
 
-    > [!WARNING]or more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide’s Witness Configuration](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
+    > [!WARNING]
+    > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide’s Witness Configuration](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
 
 4.  Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](http://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
 
@@ -298,7 +304,8 @@ You will now create a normal failover cluster. After configuration, validation, 
 1.  Run cluadmin.msc.  
 
 2.  Validate the proposed cluster and analyze the results to ensure you can continue.  
-    >[!NOTE] You should expect storage errors from cluster validation, due to the use of asymmetric storage.   
+    >[!NOTE]
+    >You should expect storage errors from cluster validation, due to the use of asymmetric storage.   
 3. Create the File Server for General Use storage cluster. Ensure that the cluster name is 15 characters or fewer. The example used below is SR-SRVCLUS.  
 
 2.  Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
@@ -471,7 +478,8 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
 
         3.  On the destination server, navigate to **Applications and Services \\ Microsoft \\ Windows \\ StorageReplica \\ Admin** and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.  
 
-            > [!WARNING] Windows Server 2016 Technical Preview, CPU and memory usage are likely to be higher than normal until initial synchronization completes.  
+            > [!WARNING]
+            > Windows Server 2016 Technical Preview, CPU and memory usage are likely to be higher than normal until initial synchronization completes.  
 
 #### Windows PowerShell method  
 

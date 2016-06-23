@@ -16,7 +16,8 @@ You will configure these computers and storage in a server\-to\-server configura
 
 There are no graphical tools in Windows Server 2016 Technical Preview that can configure Storage Replica for standalone replication.  
 
-> [!IMPORTANT] In this test, one node will need to be in a physical or logical site, and the other node in a different physical or logical site. Each server must be able to communicate with the other via a network.  
+> [!IMPORTANT]
+>  In this test, one node will need to be in a physical or logical site, and the other node in a different physical or logical site. Each server must be able to communicate with the other via a network.  
 
 ### Terms  
 This walkthrough uses the following environment as an example:  
@@ -44,7 +45,8 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
 ### Provision operating system, features, roles, storage, and network  
 
-> [!WARNING] Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
+> [!WARNING]
+>  Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
 
 1.  Install Windows Server 2016 Technical Preview on both server nodes with an installation type of Windows Server 2016 Technical Preview 5 \(Desktop Experience\). Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
@@ -153,7 +155,8 @@ Now you will configure server\-to\-server replication using Windows PowerShell. 
 
     ![](media/Server-to-Server-Storage-Replication/Storage_SR_PS_NewSRPartnership.png)  
 
-    > [!IMPORTANT]The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use –LogSizeInBytes with a  higher or lower value.  
+    > [!IMPORTANT]
+    > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use –LogSizeInBytes with a  higher or lower value.  
 
 2.  To get replication source and destination state, use `Get-SRGroup` and `Get-SRPartnership` as follows:  
 
