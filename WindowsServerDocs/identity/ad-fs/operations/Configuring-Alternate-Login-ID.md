@@ -39,18 +39,18 @@ Please refer to the table below for the user experience with Alternate ID using 
 |OneDrive for Business|Supported \- client side registry key recommended|With Alternate ID configured you will see the on\-premises UPN is pre\-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend to use the client side reg key  noted in the link column.<br /><br />See the second image below the table for user experience demo.|[Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/en-us/kb/2913639)|
 |OneDrive for Business Mobile Client|Supported|||
 
-![ADFS_Alt_ID1media/ADFS_Alt_ID1.png)
+![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID1.png)
 
-![ADFS_Alt_ID1media/ADFS_Alt_ID2.png)
+![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID2.png)
 
-![ADFS_Alt_ID1media/ADFS_Alt_ID3.png)
+![](media/Configure-Alternate-Login-ID/ADFS_Alt_ID3.png)
 
 ## To configure alternate login ID
 In order to configure alternate login ID, you must perform the following tasks:
 
 Configure your AD FS claims provider trusts to enable alternate login ID
 
-1.  Install KB2919355 \(you can get it via Windows Update Services or locate it on [https:\/\/support.microsoft.com](https://support.microsoft.com).\) For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkID\=396590](http://go.microsoft.com/fwlink/?LinkID=396590).
+1.  Install [KB2919355](http://go.microsoft.com/fwlink/?LinkID=396590).  You can get it via Windows Update Services or download it directly.
 
 2.  Update the AD FS configuration by running the following PowerShell cmdlet on any of the federation servers in your farm \(if you have a WID farm, you must run this command on the primary AD FS server in your farm\):
 
@@ -93,9 +93,9 @@ Configure your AD FS claims provider trusts to enable alternate login ID
 
 -   If one of the forests that is configured by the administrator is down, AD FS will continue to look up user account with alternate login ID in other forests that are configured. If AD FS server finds a unique user objects across the forests that it has searched, a user will log in successfully.
 
--   You may additionally want to customize the AD FS sign\-in page to give end users some hint about the alternate login ID. You can do it by either adding the customized sign\-in page description \(for more information, see [Customizing the AD FS Sign-in Pages](Customizing-the-AD-FS-Sign-in-Pages.md)\) or customizing “Sign in with organizational account” string above username field \(for more information, see [Advanced Customization of AD FS Sign-in Pages](Advanced-Customization-of-AD-FS-Sign-in-Pages.md)\).
+-   You may additionally want to customize the AD FS sign\-in page to give end users some hint about the alternate login ID. You can do it by either adding the customized sign\-in page description \(for more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx) or customizing “Sign in with organizational account” string above username field \(for more information, see [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).
 
--   The new claim type that contains the alternate login ID value is **http:\/\/schemas.microsoft.com\/ws\/2013\/11\/alternateloginid**
+-   The new claim type that contains the alternate login ID value is **http:schemas.microsoft.com/ws/2013/11/alternateloginid**
 
 ## Events and Performance Counters
 The following performance counters have been added to measure the performance of AD FS servers when alternate login ID is enabled:
@@ -117,6 +117,6 @@ The following are various error cases and corresponding impact on a user’s sig
 |Multiple user objects are found across multiple forests|Login failure|Event ID 364 with exception message MSIS8014: Found multiple user accounts with identity '{0}' in forests: {1}|
 
 ## See Also
-[AD FS Operations](AD-FS-Operations.md)
+[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
 
 
