@@ -51,7 +51,7 @@ The content in this section describes what's new and changed in the Web Applicat
   
 ## See Also  
   
--   [What's New in Windows Server 2016 Technical Preview 5](WindowsServerDocs/get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
+-   [What's New in Windows Server 2016 Technical Preview 5](https://technet.microsoft.com/library/dn765472.aspx)  
   
 -   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   

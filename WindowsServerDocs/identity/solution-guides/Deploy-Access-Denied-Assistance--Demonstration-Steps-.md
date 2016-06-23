@@ -136,7 +136,7 @@ After you configure the access\-denied assistance, you must enable it for all fi
   
 5.  Click **Enabled**, and then click **OK**.  
   
-![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
@@ -175,7 +175,7 @@ You can also specify a separate access\-denied message for each shared folder on
   
 7.  Click **OK**, and then click **Close**.  
   
-![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
