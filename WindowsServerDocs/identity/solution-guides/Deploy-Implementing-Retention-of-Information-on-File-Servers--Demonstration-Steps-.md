@@ -136,7 +136,7 @@ In this step, we use the File Server Resource Manager console to create a file m
   
 11. Click **OK**.  
   
-![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   
