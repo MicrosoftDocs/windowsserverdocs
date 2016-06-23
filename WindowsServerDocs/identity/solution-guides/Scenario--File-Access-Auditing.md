@@ -44,7 +44,7 @@ After administrators have created and applied the audit policies, the next consi
   
 Figure 4 shows an overview of a central audit policy.  
   
-![](media/DynamicAccessControl_RevGuide_4.JPG)  
+![](media/Scenario--File-Access-Auditing/DynamicAccessControl_RevGuide_4.JPG)  
   
 **Figure 4** Central auditing experiences  
   

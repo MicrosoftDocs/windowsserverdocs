@@ -50,7 +50,7 @@ The following table lists the features that are part of this scenario and descri
   
 |Feature|How it supports this scenario|  
 |-----------|---------------------------------|  
-|[File Server Resource Manager Overview_1](File-Server-Resource-Manager-Overview_1.md)|Access\-denied assistance can be configured by using the File Server Resource Manager console on the file server.|  
-|[File and Storage Services Overview](File-and-Storage-Services-Overview.md)|File Server Resource Manager is a File and Storage Services role service, and it is comprised of a set of features that can be used to administer the file servers on your network.|  
+|[File Server Resource Manager Overview](https://technet.microsoft.com/library/hh831701.aspx)|Access\-denied assistance can be configured by using the File Server Resource Manager console on the file server.|  
+|[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)|File Server Resource Manager is a File and Storage Services role service, and it is comprised of a set of features that can be used to administer the file servers on your network.|  
   
 

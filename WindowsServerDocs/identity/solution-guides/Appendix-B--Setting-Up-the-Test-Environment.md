@@ -741,7 +741,7 @@ Create the user Jeff Low with the password **pass@word1**, and assign the compan
   
 7.  Click **OK** three times to finish and return to Active Directory Administrative Center.  
   
-    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+    ![](media/Appendix-B--Setting-Up-the-Test-Environment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   

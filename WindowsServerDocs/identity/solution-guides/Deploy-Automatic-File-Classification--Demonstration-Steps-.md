@@ -50,7 +50,7 @@ The Impact and Personally Identifiable Information resource properties are enabl
   
 5.  Right\-click **Personally Identifiable Information**, and then click **Enable**.  
   
-![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   

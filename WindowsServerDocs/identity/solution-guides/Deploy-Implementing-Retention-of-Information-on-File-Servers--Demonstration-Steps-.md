@@ -51,7 +51,7 @@ In this step, we enable the Retention Period and Discoverability resource proper
   
 5.  Right\-click **Discoverability**, and then click **Enable**.  
   
-![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   

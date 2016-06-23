@@ -79,7 +79,7 @@ In the following procedure, you create two claim types: Country and Department.
   
 9. Repeat the above step. In the **Add a suggest value** dialog box, type **JP** in the **Value** and **Display name** fields, and then click **OK**.  
   
-![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   

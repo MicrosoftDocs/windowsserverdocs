@@ -18,7 +18,7 @@ This walkthrough provides instructions for managing risk with one of the factors
 
 This walkthrough consists of the following sections:
 
--   [Step 1: Setting up the lab environment](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
+-   [Step 1: Setting up the lab environment](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
 -   [Step 2: Verify the default AD FS access control mechanism](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 

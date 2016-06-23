@@ -42,7 +42,7 @@ The following table lists the features that are part of this scenario and descri
   
 |Feature|How it supports this scenario|  
 |-----------|---------------------------------|  
-|[File Server Resource Manager Overview_1](File-Server-Resource-Manager-Overview_1.md)|File Classification Infrastructure is a feature that is included in File Server Resource Manager.|  
-|[File and Storage Services Overview](File-and-Storage-Services-Overview.md)|File Server Resource Manager is a feature that is included with the File Services server role.|  
+|[File Server Resource Manager Overview](https://technet.microsoft.com/library/hh831701.aspx)|File Classification Infrastructure is a feature that is included in File Server Resource Manager.|  
+|[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)|File Server Resource Manager is a feature that is included with the File Services server role.|  
   
 
