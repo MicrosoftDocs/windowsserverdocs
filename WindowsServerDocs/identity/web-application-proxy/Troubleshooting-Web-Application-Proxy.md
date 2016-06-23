@@ -23,7 +23,7 @@ This section provides troubleshooting procedures for Web Application Proxy inclu
   
     Open Event Viewer and look for events related to Web Application Proxy under **Applications and Services Logs** > **Microsoft** > **Windows** > **Web Application Proxy** > **Admin**  
   
-    ![](media/WebApplicationProxyTroubleshooting.png)  
+    ![](media/Troubleshooting-Web-Application-Proxy/WebApplicationProxyTroubleshooting.png)  
   
     If needed, detailed logs are available by turning on analytics and debugging logs and turning on the Web Application Proxy session log, found in the Windows Event Viewer under \\ Microsoft \\ Windows \\ Web Application Proxy \\ Admin.  
   
@@ -87,7 +87,7 @@ The following administrator console events are usually indicative of problems ha
 |13007<br /><br />The HTTP response from the backend server was not received within the expected interval.|The back end server request timed out or is slow or unresponsive.|Check the backend server configuration. If it’s very slow, check the connectivity to the backend server and also consider changing the Web Application Proxy global configuration parameter cmdlet for InactiveTransactionsTimeoutSec.|  
   
 ## See Also  
-[What's New in Web Application Proxy in Windows Server Technical Preview](What-s-New-in-Web-Application-Proxy-in-Windows-Server-Technical-Preview.md)  
+[What's New in Web Application Proxy in Windows Server Technical Preview](Web-Application-Proxy-in-Windows-Server-Technical-Preview.md)  
 [Working with Web Application Proxy](assetId:///b607b717-2172-4271-98d1-fa8162e0bb2e)  
   
 

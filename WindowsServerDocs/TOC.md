@@ -1,4 +1,4 @@
-﻿# WinServer_Threshold
+# WinServer_Threshold
 ## [Windows Server 2016 Technical Preview 5](Windows-Server-2016-Technical-Preview-5.md)
 ### [System Requirements  and Installation](System-Requirements--and-Installation.md)
 ### [Release Notes: Important Issues in Windows Server 2016 Technical Preview](Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)
@@ -99,7 +99,7 @@
 ###### [Scenario: Get Insight into Your Data by Using Classification](identity/solution-guides/Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)
 ####### [Deploy Automatic File Classification (Demonstration Steps)](identity/solution-guides/Deploy-Automatic-File-Classification--Demonstration-Steps-.md)
 ###### [Scenario: Implement Retention of Information on File Servers](identity/solution-guides/Scenario--Implement-Retention-of-Information-on-File-Servers.md)
-####### [Deploy Implementing Retention of Information on File Servers Demonstration Steps]((identity/solution-guides/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)
+####### [Deploy Implementing Retention of Information on File Servers Demonstration Steps](identity/solution-guides/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)
 ###### [Deploy Claims Across Forests](identity/solution-guides/Deploy-Claims-Across-Forests.md)
 ####### [Deploy Claims Across Forests (Demonstration Steps)](identity/solution-guides/Deploy-Claims-Across-Forests--Demonstration-Steps-.md)
 ####### [Claims Transformation Rules Language](identity/solution-guides/Claims-Transformation-Rules-Language.md)
@@ -266,7 +266,7 @@
 ######## [A deleted account remains in the Address Book, e-mail is not received, or a duplicate account exists](https://technet.microsoft.com/library/cc949128.aspx)
 ######## [Event ID 2042: It has been too long since this machine replicated](identity/ad-ds/manage/troubleshoot/Event-ID-2042--It-has-been-too-long-since-this-machine-replicated.md)
 ####### [Fixing Replication Security Problems](identity/ad-ds/manage/troubleshoot/Fixing-Replication-Security-Problems.md)
-######## [An "Access denied" or other security error has caused replication problems](An--Access-denied--or-other-security-error-has-caused-replication-problems.md)
+######## [An "Access denied" or other security error has caused replication problems](https://technet.microsoft.com/library/cc949123.aspx)
 ####### [Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)](Fixing-Replication-DNS-Lookup-Problems--Event-IDs-1925,-2087,-2088-.md)
 ######## [Event ID 1925: Attempt to establish a replication link failed due to DNS lookup problem](identity/ad-ds/manage/troubleshoot/Event-ID-1925--Attempt-to-establish-a-replication-link-failed-due-to-DNS-lookup-problem.md)
 ######## [Event ID 2087: DNS lookup failure caused replication to fail](identity/ad-ds/manage/troubleshoot/Event-ID-2087--DNS-lookup-failure-caused-replication-to-fail.md)
