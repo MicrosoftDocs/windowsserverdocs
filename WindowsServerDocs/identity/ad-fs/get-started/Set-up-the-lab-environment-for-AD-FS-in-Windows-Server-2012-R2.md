@@ -18,7 +18,6 @@ This topic outlines the steps to configure a test environment that can be used t
 
 -   [Walkthrough: Workplace Join with a Windows Device](../../ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
--   [Walkthrough Guide: Connect to Applications and Services from Anywhere with Web Application Proxy](Walkthrough-Guide--Connect-to-Applications-and-Services-from-Anywhere-with-Web-Application-Proxy.md)
 
 -   [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 

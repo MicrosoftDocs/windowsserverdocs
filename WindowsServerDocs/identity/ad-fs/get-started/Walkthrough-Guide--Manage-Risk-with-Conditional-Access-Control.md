@@ -20,11 +20,11 @@ This walkthrough consists of the following sections:
 
 -   [Step 1: Setting up the lab environment](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [Step 2: Verify the default AD FS access control mechanism](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
+-   [Step 2: Verify the default AD FS access control mechanism](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
--   [Step 3: Configure conditional access control policy based on user data](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
+-   [Step 3: Configure conditional access control policy based on user data](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
 
--   [Step 4: Verify conditional access control mechanism](Walkthrough-Guide--../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
+-   [Step 4: Verify conditional access control mechanism](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>Step 1: Setting up the lab environment
 In order to complete this walkthrough, you need an environment that consists of the following components:
@@ -115,7 +115,7 @@ In this step you will verify the conditional access control policy that you set 
 
     You will be granted access to the application.
 
-3.  Type in the credentials of another AD user that does NOT belong to the **Finance** group. \(For more information on how to create user accounts in AD, see [http:\/\/technet.microsoft.com\/library\/cc783323%28v\=ws.10%29.aspx](http://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx)\).
+3.  Type in the credentials of another AD user that does NOT belong to the **Finance** group. \(For more information on how to create user accounts in AD, see [http://technet.microsoft.com/library/cc7833232.aspx](http://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx).
 
     At this point, because of the access control policy that you set up in the previous step, an ‘access denied’ message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign\-in experience, see [Customizing the AD FS Sign-in Pages](Customizing-the-AD-FS-Sign-in-Pages.md).
 
