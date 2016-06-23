@@ -21,7 +21,7 @@ This guide contains DNS policy overview information, as well as specific DNS pol
 This guide contains the following sections.  
   
 - [DNS Policies Overview](../../dns/deploy/DNS-Policies-Overview.md)  
-- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](https://technet.microsoft.com/library/mt705726.aspx)  
-- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](https://technet.microsoft.com/library/mt705725.aspx)  
+- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md)  
+- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md)  
   
 
