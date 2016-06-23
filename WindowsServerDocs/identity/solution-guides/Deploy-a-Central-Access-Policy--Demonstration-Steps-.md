@@ -183,7 +183,7 @@ Access Rules:
   
 11. Click **OK** three times to finish and return to Active Directory Administrative Center.  
   
-    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+    ![](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   
@@ -217,7 +217,7 @@ You should now have a central access rule that allows people to access documents
   
 6.  Click **OK** to finish. You should now have a central access policy named Finance Policy.  
   
-    ![](media/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+    ![](media/Deploy-a-Central-Access-Policy--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
   
