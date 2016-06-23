@@ -120,6 +120,7 @@ Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windo
 
 >[!NOTE]
 > The endpoint URL is generated automatically by Cloud Witness resource and there is no extra step of configuration necessary for the URL.  
+
 #### To view and copy endpoint URL links
 
 In the Azure Portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).  
@@ -170,13 +171,13 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 
     ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)
 		
-	**Figure 10: Configure your Cloud Witness**
+	**Figure 9: Configure your Cloud Witness**
 
-1.  Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 11).
+1.  Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 10).
 
      ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png)
 
-    **Figure 11: Successful configuration of Cloud Witness**
+    **Figure 10: Successful configuration of Cloud Witness**
 
 ### Configuring Cloud Witness using PowerShell  
 
