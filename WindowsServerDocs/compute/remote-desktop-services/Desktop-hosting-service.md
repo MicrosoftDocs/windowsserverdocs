@@ -41,7 +41,7 @@ For tenants with small number of users, the RD Web Access and RD Gateway can be 
   
 Additional information:  
 [Deploying and Configuring RD Gateway](http://social.technet.microsoft.com/wiki/contents/articles/10974.deploying-and-configuring-rd-gateway-in-windows-server-2012.aspx)  
-[What’s New In Windows Server 2012 R2 RD Gateway?](http://blogs.msdn.com/b/rds/archive/2013/03/14/what-s-new-in-windows-server-2012-remote-desktop-gateway.aspx#loadbalancing)  
+[What’s New In Windows Server 2012 R2 RD Gateway?](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#loadbalancing)  
   
 ##	Azure Active Directory Domain Services  
 The tenant’s network includes Azure Active Directory Domain Services (AAD DS) for the tenant’s forest and domain. Using AAD DS allows the tenant to manage groups and users in their AAD tenant, with all changes syncing back to the domain on a recurring basis.   
@@ -89,7 +89,7 @@ Additional information:
 [Deploying Remote Desktop Licensing Step-by-Step Guide](https://technet.microsoft.com/library/dd983943(WS.10).aspx)  
 [Managing RDS Licensing Using PowerShell on Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/13293.managing-rds-licensing-using-powershell-on-windows-server-2012.aspx)  
 [Generate Per User CAL Report](https://gallery.technet.microsoft.com/ScriptCenter/9739eaee-fb8a-4cb8-8456-7f138d175934/)  
-[Microsoft Volume Licensing: Licensing Options for Service Providers](https://www.microsoft.com/licensing/licensing-programs/spla-program.aspx#tab=1)  
+[Microsoft Volume Licensing: Licensing Options for Service Providers](https://www.microsoft.com/en-us/licensing/licensing-programs/spla-program.aspx#tab=1)  
   
 ##	Remote Desktop Session Host  
 The Remote Desktop Session Host (RD Session Host) component provides a tenant’s users with session-based desktops and RemoteApp programs. The desktops and applications can be accessed over the Internet from any device running a capable remote desktop connection client. For more information, see the Client section later in this document.   

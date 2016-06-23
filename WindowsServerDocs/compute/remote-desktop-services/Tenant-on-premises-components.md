@@ -19,7 +19,7 @@ To access the hosted desktops and applications, the users must use Remote Deskto
   
 Additional information:  
 [RemoteFX Enabled Devices](http://social.technet.microsoft.com/wiki/contents/articles/14534.remotefx-enabled-devices.aspx)  
-[What’s new in Windows Server 2012 R2 Remote Desktop Gateway](http://blogs.msdn.com/b/rds/archive/2013/03/14/what-s-new-in-windows-server-2012-remote-desktop-gateway.aspx#transport)  
+[What’s new in Windows Server 2012 R2 Remote Desktop Gateway](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#transport)  
 [Microsoft Remote Desktop Clients](https://technet.microsoft.com/library/dn473009.aspx)  
 [Remote Desktop app for Windows in the Microsoft Store](http://apps.microsoft.com/windows/app/remote-desktop/051f560e-5e9b-4dad-8b2e-fa5e0b05a480)  
 [Microsoft Remote Desktop - Android Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)  
