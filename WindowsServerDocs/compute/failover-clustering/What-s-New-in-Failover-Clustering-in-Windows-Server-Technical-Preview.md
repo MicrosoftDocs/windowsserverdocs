@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New in Failover Clustering in Windows Server Technical Preview
+title: What's New in Failover Clustering in Windows Server Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: get-started-article
 ms.assetid: 52f5ef26-971f-4269-b373-169dd0100688
 author: kumudd
 ---
-# What&#39;s New in Failover Clustering in Windows Server Technical Preview
+# What's New in Failover Clustering in Windows Server Technical Preview
 This topic explains the new and changed functionality in Failover Clustering in Windows Server 2016 Technical Preview.  
 
 -   [Cluster Operating System Rolling Upgrade](#BKMK_RollingUpgrade)  
