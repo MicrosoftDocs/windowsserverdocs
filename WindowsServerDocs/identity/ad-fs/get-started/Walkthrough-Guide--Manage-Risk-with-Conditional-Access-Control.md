@@ -117,7 +117,7 @@ In this step you will verify the conditional access control policy that you set 
 
 3.  Type in the credentials of another AD user that does NOT belong to the **Finance** group. \(For more information on how to create user accounts in AD, see [http://technet.microsoft.com/library/cc7833232.aspx](http://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx).
 
-    At this point, because of the access control policy that you set up in the previous step, an ‘access denied’ message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign\-in experience, see [Customizing the AD FS Sign-in Pages](Customizing-the-AD-FS-Sign-in-Pages.md).
+    At this point, because of the access control policy that you set up in the previous step, an ‘access denied’ message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign\-in experience, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
 
 ## See Also
 [Manage Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)

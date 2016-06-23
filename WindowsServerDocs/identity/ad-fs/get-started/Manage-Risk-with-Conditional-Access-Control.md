@@ -13,7 +13,7 @@ ms.assetid: 627cbc9d-30f2-4ed3-86c4-b8d1d97222c5
 ---
 # Manage Risk with Conditional Access Control
 
--   [Key concepts \- conditional access control in AD FS](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
+-   [Key concepts-conditional access control in AD FS](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
 -   [Managing Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
