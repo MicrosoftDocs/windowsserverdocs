@@ -31,7 +31,7 @@ There are three decisions to make when you are planning your client deployment:
   
 2.  What security groups will contain the DirectAccess client computers?  
   
-    DirectAccess client settings are contained in the DirectAccess client GPO. The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify that security groups be contained in any supported domain. For more information, see section [1.7 Plan Active Directory Domain Services](Step-1--Plan-the-DirectAccess-Infrastructure_1.md#bkmk_1_6_AD).  
+    DirectAccess client settings are contained in the DirectAccess client GPO. The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify that security groups be contained in any supported domain. For more information, see section [1.7 Plan Active Directory Domain Services](Step-1--Plan-the-DirectAccess-Infrastructure.md#bkmk_1_6_AD).  
   
     Before you configure DirectAccess, you should create the security groups. You can add computers to the security group after you complete the DirectAccess deployment, but if you add client computers that reside in a different domain than the security group, the client GPO will not be applied to those clients. For example, if you created SG1 in domain A for DirectAccess clients, and later add clients from domain B to this group, the client GPO will not be applied to clients from domain B. To avoid this issue, create a new client security group for each domain that contains DirectAccess client computers. Alternatively, if you do not want to create a new security group, run the Windows PowerShell cmdlet **Add\-DAClient** with the name of the new GPO for the new domain.  
   
@@ -139,6 +139,6 @@ If the VPN connection lists its default gateway as empty or all zeros \(0.0.0.0\
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
+-   [Step 1: Plan the DirectAccess Infrastructure](Step-1-Plan-the-DirectAccess-Infrastructure.md)  
   
 
