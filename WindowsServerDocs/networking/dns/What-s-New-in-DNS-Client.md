@@ -28,6 +28,6 @@ This topic describes the Domain Name System \(DNS\) client functionality that is
   
 ## See also  
   
--   [What's New in DNS Server in Windows Server Technical Preview](../dns/What-s-New-in-DNS-Server-in-Windows-Server-Technical-Preview.md)  
+-   [What's New in DNS Server in Windows Server Technical Preview](What-s-New-in-DNS-Server.md)  
   
 

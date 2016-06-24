@@ -30,7 +30,8 @@ Following are the new and improved features for IPAM in Windows Server 2016 Tech
   
 ### <a name="EIP"></a>Enhanced IP address management  
 The following features improve the IPAM address management capabilities.  
->[!NOTE] For the IPAM Windows PowerShell command reference, see [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj553807.aspx).  
+>[!NOTE]
+>For the IPAM Windows PowerShell command reference, see [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj553807.aspx).  
   
 #### Support for \/31, \/32, and \/128 subnets  
 IPAM in Windows Server 2016 Technical Preview now supports \/31, \/32, and \/128 subnets. For example, a two address subnet \(\/31 IPv4\) may be required for a point\-to\-point link between switches. Also, some switches may require single loopback addresses \(\/32 for IPv4, \/128 for IPv6\).  
@@ -41,7 +42,8 @@ This command returns subnets that are available for allocation, given an IP bloc
   
 If the number of available subnets is less than the number of requested subnets, the available subnets are returned with a warning indicating that the number available is less than the number requested.  
   
->[!NOTE] This function does not actually allocate the subnets, it only reports their availability. However, the cmdlet output can be piped to the **Add\-IpamSubnet** command to create the subnet.  
+>[!NOTE]
+>This function does not actually allocate the subnets, it only reports their availability. However, the cmdlet output can be piped to the **Add\-IpamSubnet** command to create the subnet.  
   
 For more information, see [Find-IpamFreeSubnet](https://technet.microsoft.com/library/mt712782.aspx).  
   
@@ -51,7 +53,7 @@ This new command returns available IP address ranges given an IP subnet, the num
   
 The command searches for a continuous series of unallocated IP addresses that match the number of requested addresses. The process is repeated until the requested number of ranges is found, or until there are no more available address ranges available.  
   
-> [!NOTE]  
+> [!NOTE]
 > This function does not actually allocate the ranges, it only reports their availability. However, the cmdlet output can be piped to the **Add\-IpamRange** command to create the range.  
   
 For more information, see [Find-IpamFreeRange](https://technet.microsoft.com/library/mt712772.aspx).  

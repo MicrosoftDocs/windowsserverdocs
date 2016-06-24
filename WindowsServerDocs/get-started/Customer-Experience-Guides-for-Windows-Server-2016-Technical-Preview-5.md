@@ -16,7 +16,7 @@ robots: noindex,nofollow
 Customer Experience Guides are available for a number of new features present in Windows Server 2016. These guides introduce the new feature and offer walkthroughs and other information can use to try out the feature in your deployment.  
   
 > [!NOTE]  
-> \[This information is preliminary and subject to change.\]  
+>This information is preliminary and subject to change.  
   
 ## Customer Experience Guides for Windows Server 2016 Technical Preview  
 The following experience guides have been created by the Windows Server 2016 Engineering and Content Development Teams to help get you started with technologies and features being released in Windows Server 2016.  
@@ -49,10 +49,7 @@ This topic introduces Windows Management Framework 5 Preview and provides links 
 Windows Server 2016 includes a new PackageManagement feature \(formerly called OneGet\) that enables ITPros or DevOps to automate software discovery, installation, and inventory \(SDII\), locally or remotely, no matter what the installer technology is and where the software is located. You can explore the feature at [https://github.com/OneGet/oneget/wiki](https://github.com/OneGet/oneget/wiki).  
   
 -   [PowerShell ♥ the Blue Team](http://blogs.msdn.com/b/powershell/archive/2015/06/09/powershell-the-blue-team.aspx)  
-This post discusses some important advances we’ve made in scripting security and protection in the preview versions of Windows PowerShell 5.0 and Windows 10.  
-  
--   [Manage Windows virtual machines with PowerShell Direct](Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
-PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper\-V host or the virtual machine. This makes it easier for Hyper\-V Administrators to automate and script virtual machine management and configuration.  
+This post discusses some important advances we’ve made in scripting security and protection in the preview versions of Windows PowerShell 5.0 and Windows 10.   
   
 -   [Experience guide for Enabling OpenGL Support for vGPU in Server 2016](http://social.technet.microsoft.com/wiki/contents/articles/31771.experience-guide-for-enabling-opengl-support-for-vgpu-in-server-2016.aspx)  
 RemoteFX vGPU is constantly evolving and Windows Server 2016 is no exception.  Since Windows Server 2012 R2 the team has been working hard addressing some of the key features that have been requested.  For this technical preview we invite you to experience some of these improvements.  
@@ -62,9 +59,6 @@ With the release of Technical Preview 5, deploying a highly available RDS deploy
   
 -   [Deploy Software Defined Networks using scripts](../networking/sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)  
 Software Defined Networking \(SDN\) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. This topic covers how to deploy a Microsoft Software Defined Network infrastructure using scripts. The infrastructure includes a network controller, an SLB\/MUX, virtual networks, and associated ACLs. Additionally, another script deploys a tenant workload for you to experiment with.  
-  
--   [Deploy Software Defined Networks using Virtual Machine Manager](../networking/sdn/deploy/Deploy-Software-Defined-Networks-using-Virtual-Machine-Manager.md)  
-This topic helps you evaluate the Software Defined Networking \(SDN\) features in Windows Server 2016 and Virtual Machine Manager 2016 Technology Preview 3. In particular, this topic is focused on scenarios that incorporate VMM with the Microsoft Network Controller, a new feature in Windows Server 2016.  
   
 -   [Remote Direct Memory Access and Switch Embedded Teaming](../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
 This topic provides information on configuring Remote Direct Memory Access \(RDMA\) interfaces with Hyper\-V in Windows Server® 2016 Technical Preview, in addition to information about Switch Embedded Teaming \(SET\).  

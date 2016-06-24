@@ -24,7 +24,7 @@ The previous scenario provided instructions for configuring DNS policy for geo-l
 The secondary servers use the zone transfer protocols Authoritative Transfer \(AXFR\) and Incremental Zone Transfer \(IXFR\) to request and receive zone updates that include new changes to the zones on the primary DNS servers.   
   
 >[!NOTE]
->>For more information about AXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 5936](https://tools.ietf.org/rfc/rfc5936.txt). For more information about IXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 1995](https://tools.ietf.org/html/rfc1995).  
+>For more information about AXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 5936](https://tools.ietf.org/rfc/rfc5936.txt). For more information about IXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 1995](https://tools.ietf.org/html/rfc1995).  
   
 ## <a name="bkmk_example"></a>Primary-Secondary Geo-Location Based Traffic Management Example  
 Following is an example of how you can use DNS policy in a primary-secondary deployment to achieve traffic redirection on the basis of the physical location of the client that performs a DNS query.  
@@ -90,8 +90,8 @@ To configure DNS policy for primary-secondary geo-location based query responses
 The following sections provide detailed configuration instructions.  
   
 >[!IMPORTANT]
-> - The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.  
-> -  Membership in **DnsAdmins**, or equivalent, is required to perform the following procedures.  
+>The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.  
+><br>Membership in **DnsAdmins**, or equivalent, is required to perform the following procedures.  
   
 ### <a name="bkmk_secondary"></a>Create the Secondary Zones  
 You can create the secondary copy of the zone you want to replicate to SecondaryServer1 and SecondaryServer2 (assuming the cmdlets are being executed remotely from a single management client).   
@@ -115,7 +115,8 @@ You must configure the primary zone settings so that:
   
 You can use the following Windows PowerShell commands to configure the zone transfer settings on the primary zone.  
   
->[!NOTE]In the following example command, the parameter **-Notify** specifies that the primary server will send notifications about updates to the select list of secondaries.  
+>[!NOTE]
+>In the following example command, the parameter **-Notify** specifies that the primary server will send notifications about updates to the select list of secondaries.  
   
 ```  
 Set-DnsServerPrimaryZone -Name “woodgrove.com -Notify Notify -SecondaryServers “10.0.0.2,10.0.0.3” –SecureSecondaries TransferToSecureServers –ComputerName PrimaryServer  
@@ -150,7 +151,8 @@ Get-DnsServerZoneScope -ZoneName "woodgrove.com" –ComputerName PrimaryServer|A
 Get-DnsServerZoneScope -ZoneName "woodgrove.com" –ComputerName PrimaryServer|Add-DnsServerZoneScope -ZoneName "woodgrove.com" –ComputerName SecondaryServer2 –ErrorAction Ignore  
   
 ```  
->[!NOTE] In these example commands, the **-ErrorAction Ignore** parameter is included, because a default zone scope exists on every zone. The default zone scope cannot be created or deleted. Pipelining will result in an attempt to create that scope and it will fail. Alternatively, you can create the non-default zone scopes on two secondary zones.  
+>[!NOTE]
+>In these example commands, the **-ErrorAction Ignore** parameter is included, because a default zone scope exists on every zone. The default zone scope cannot be created or deleted. Pipelining will result in an attempt to create that scope and it will fail. Alternatively, you can create the non-default zone scopes on two secondary zones.  
   
 For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx).  
   

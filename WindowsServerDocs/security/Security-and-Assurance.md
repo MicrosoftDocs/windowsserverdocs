@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
-author: cfreemanwa
+author: coreyp-at-msft
 ---
 # Security and Assurance
 This collection contains detailed information about security solutions and features for the IT professional to deploy in your datacenter and cloud environment. The following are security technologies and documentation for Windows Server 2016 Technical Preview.  
@@ -69,8 +69,9 @@ Link  |Description
   
 Link  |Description  
 ---------|---------  
-[Datacenter Firewall Overview](https://technet.microsoft.com/library/dn920240.aspx)  |This overview discusses Datacenter Firewall, a network layer, 5\-tuple \(protocol, source and destination port numbers, source and destination IP addresses\), stateful, multitenant firewall.         
- [What's New in DNS in Windows Server 2016](../networking/dns/What-s-New-in-DNS-Server-in-Windows-Server-Technical-Preview.md)  |This overview topic provides brief descriptions of new capabilities in DNS along with links for more information.   
+[Datacenter Firewall Overview](https://technet.microsoft.com/library/dn920240.aspx)  |This overview discusses Datacenter Firewall, a network layer, 5\-tuple \(protocol, source and destination port numbers, source and destination IP addresses\), stateful, multitenant firewall.   
+      
+[What's New in DNS in Windows Server 2016](../networking/dns/What-s-New-in-DNS-Server.md)  |This overview topic provides brief descriptions of new capabilities in DNS along with links for more information.   
   
   
 
