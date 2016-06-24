@@ -5,12 +5,15 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1f23beab-e55e-47c9-b0ce-85ddb9388f0b
 author: billmath
+ms.date: "06/24/2016"
+appliesto:  Windows Server Technical Preview
+description:
+manager: femila
 ---
 # Active Directory Federation Services
 **\[This information is preliminary and subject to change.\]**  
