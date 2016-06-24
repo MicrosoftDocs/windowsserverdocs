@@ -5,8 +5,7 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e122d0d-66fa-4479-87f9-90eaf75dccc3
@@ -102,4 +101,3 @@ The Windows Server 2003 domain and forest functional levels continue to be suppo
   
 -   [Raise the Forest Functional Level](https://technet.microsoft.com/library/cc730985.aspx)  
   
-

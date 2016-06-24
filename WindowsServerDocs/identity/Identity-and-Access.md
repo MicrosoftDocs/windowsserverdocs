@@ -5,12 +5,15 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e9a324df-8d7d-490c-9069-0611ba25d927
 author: Femila
+ms.date: "06/24/2016"
+appliesto:  windows-server-threshold
+description:
+manager: femila
 ---
 # Identity and Access
 **[This information is preliminary and subject to change.]**  
