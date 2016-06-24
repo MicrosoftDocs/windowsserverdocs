@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2
 ---
 # Dfsdiag TestDFSConfig
-Checks the configuration of a Distributed File System \(DFS\) namespace by performing the following actions:
+Checks the configuration of a Distributed File System (DFS) namespace by performing the following actions:
 
 -   Verifies that the DFS Namespace service is running and that its  Startup Type is set to Automatic on all namespace servers.
 
@@ -37,7 +37,7 @@ DFSDiag /TestDFSConfig /DFSRoot:<namespace>
 
 |Parameter|Description|
 |-------------|---------------|
-|\/DFSRoot:<namespace>|The namespace \(DFS root\) to diagnose.|
+|/DFSRoot:<namespace>|The namespace (DFS root) to diagnose.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To TBD, type:

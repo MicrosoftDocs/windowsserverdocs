@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: c219d405-d04e-4101-90b4-cadbff4a0fdf
 ---
 # Network Security: Restrict NTLM: Audit NTLM authentication in this domain
-This security policy reference topic for the IT professional describes the best practices, location, values, management aspects, and security considerations for this policy setting. This information applies to computers running at least the  Windows Server 2008 R2  or  Windows 7  operating systems.  
+This security policy reference topic for the IT professional describes the best practices, location, values, management aspects, and security considerations for this policy setting. This information applies to computers running at least the  Windows Server 2008 R2  or  Windows 7  operating systems.  
   
 ## Reference  
 The **Network Security: Restrict NTLM: Audit NTLM authentication in this domain** policy setting allows you to audit on the domain controller NTLM authentication in that domain.  
@@ -42,7 +42,7 @@ When you enable this audit policy, it functions in the same way as the **Network
 Depending on your environment and the duration of your testing, monitor the Operational log size regularly.  
   
 ### Location  
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options**  
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**  
   
 ### Default values  
   
@@ -50,13 +50,13 @@ Depending on your environment and the duration of your testing, monitor the Oper
 |----------------------|-----------------|  
 |Default domain policy|Not defined|  
 |Default domain controller policy|Not defined|  
-|Stand\-alone server default settings|Not defined|  
+|Stand-alone server default settings|Not defined|  
 |Domain controller effective default settings|Not defined|  
 |Member server effective default settings|Not defined|  
 |Client computer effective default settings|Not defined|  
   
 ### Operating system version differences  
-This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .  
+This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .  
   
 ## Policy management  
 This section describes different features and tools available to help you manage this policy.  
@@ -68,14 +68,14 @@ None. Changes to this policy become effective without a restart when saved local
 Setting and deploying this policy using Group Policy takes precedence over the setting on the local computer. If the Group Policy is set to **Not Configured**, local settings will apply.  
   
 ### Auditing  
-View the Operational log to see if this policy is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\\Microsoft\\Windows\\NTLM**. Using an audit event collection system can help you collect the events for analysis more efficiently.  
+View the Operational log to see if this policy is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\Microsoft\Windows\NTLM**. Using an audit event collection system can help you collect the events for analysis more efficiently.  
   
 There are no Security Audit Event policies that can be configured to view output from this policy.  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
-NTLM and NTLMv2 authentication is vulnerable to a variety of malicious attacks, including SMB replay, man\-in\-the\-middle attacks, and brute force attacks. Reducing and eliminating NTLM authentication from your environment forces the Windows operating system to use more secure protocols, such as the Kerberos version 5 protocol, or different authentication mechanisms, such as smart cards.  
+NTLM and NTLMv2 authentication is vulnerable to a variety of malicious attacks, including SMB replay, man-in-the-middle attacks, and brute force attacks. Reducing and eliminating NTLM authentication from your environment forces the Windows operating system to use more secure protocols, such as the Kerberos version 5 protocol, or different authentication mechanisms, such as smart cards.  
   
 ### Vulnerability  
 Enabling this policy setting will reveal through logging which computers within your network or domain handle NTLM traffic. The identity of these computers can be used in malicious ways if NTLM authentication traffic is compromised. The policy setting does not prevent or mitigate any vulnerability because it is for audit purposes only.  

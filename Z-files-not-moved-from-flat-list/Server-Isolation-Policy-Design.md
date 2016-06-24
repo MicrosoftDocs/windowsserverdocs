@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 7ed847ca-8795-4ee5-95a7-b44eaa78a9ee
 ---
 # Server Isolation Policy Design
-In the server isolation policy design, you assign servers to a zone that allows access only to users and computers that authenticate as members of an approved network access group \(NAG\).
+In the server isolation policy design, you assign servers to a zone that allows access only to users and computers that authenticate as members of an approved network access group (NAG).
 
 This design typically begins with a network configured as described in the [Domain Isolation Policy Design](Domain-Isolation-Policy-Design.md) section. For this design, you then create zones for servers that have additional security requirements. The zones can limit access to the server to only members of authorized groups, and can optionally require the encryption of all traffic in or out of these servers. This can be done on a per server basis, or for a group of servers that share common security requirements.
 
@@ -23,11 +23,11 @@ The design is shown in the following illustration, with arrows that show the per
 
 Characteristics of this design include the following:
 
--   Isolated domain \(area A\) \- The same isolated domain described in the [Domain Isolation Policy Design](Domain-Isolation-Policy-Design.md) section. If the isolated domain includes a boundary zone, then computers in the boundary zone behave just like other members of the isolated domain in the way that they interact with computers in server isolation zones.
+-   Isolated domain (area A) - The same isolated domain described in the [Domain Isolation Policy Design](Domain-Isolation-Policy-Design.md) section. If the isolated domain includes a boundary zone, then computers in the boundary zone behave just like other members of the isolated domain in the way that they interact with computers in server isolation zones.
 
--   Isolated servers \(area B\) \- Computers in the server isolation zones restrict access to computers, and optionally users, that authenticate as a member of a network access group \(NAG\) authorized to gain access.
+-   Isolated servers (area B) - Computers in the server isolation zones restrict access to computers, and optionally users, that authenticate as a member of a network access group (NAG) authorized to gain access.
 
--   Encryption zone \(area C\) \- If the data being exchanged is sufficiently sensitive, the connection security rules for the zone can also require that the network traffic be encrypted. Encryption zones are most often implemented as rules that are part of a server isolation zone, instead of as a separate zone. The diagram illustrates the concept as a subset for conceptual purposes only.
+-   Encryption zone (area C) - If the data being exchanged is sufficiently sensitive, the connection security rules for the zone can also require that the network traffic be encrypted. Encryption zones are most often implemented as rules that are part of a server isolation zone, instead of as a separate zone. The diagram illustrates the concept as a subset for conceptual purposes only.
 
 To add support for server isolation, you must ensure that the authentication methods are compatible with the requirements of the isolated server. For example, if you want to authorize user accounts that are members of a NAG in addition to authorizing computer accounts, you must enable both user and computer authentication in your connection security rules.
 
@@ -46,7 +46,7 @@ For more information about this design:
 
 -   To help you make the decisions required in this design, see [Planning Server Isolation Zones](Planning-Server-Isolation-Zones.md) and [Planning Group Policy Deployment for Your Isolation Zones](Planning-Group-Policy-Deployment-for-Your-Isolation-Zones.md).
 
--   For a list of tasks that you can use to deploy your server isolation policy design, see "Checklist: Implementing a Standalone Server Isolation Policy Design" in the [Windows Firewall with Advanced Security Deployment Guide](http://go.microsoft.com/fwlink/?linkid=xxxxx) at http:\/\/go.microsoft.com\/fwlink\/?linkid\=xxxx.
+-   For a list of tasks that you can use to deploy your server isolation policy design, see "Checklist: Implementing a Standalone Server Isolation Policy Design" in the [Windows Firewall with Advanced Security Deployment Guide](http://go.microsoft.com/fwlink/?linkid=xxxxx) at http://go.microsoft.com/fwlink/?linkid=xxxx.
 
 **Next:**[Certificate-based Isolation Policy Design](Certificate-based-Isolation-Policy-Design.md)
 

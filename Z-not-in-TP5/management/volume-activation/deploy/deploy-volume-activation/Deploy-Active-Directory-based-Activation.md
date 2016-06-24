@@ -9,40 +9,40 @@ ms.topic: article
 ms.assetid: c51c15d6-3074-4795-82d0-513149ac0149
 ---
 # Deploy Active-Directory-based Activation
-Starting with Windows Server® 2012 and Windows® 8, you can avoid designating and configuring an activation server altogether and use Active Directory for activation instead. Whenever you activate a computer running these or later operating systems that is joined to a domain that is using the Windows 8 \(or later\) schema, an activation object is created and stored in Active Directory, instead of on the local computer. You can accomplish the initial activation of the first computer with Volume Activation Services in Server Manager or Slmgr.vbs Active Directory activation commands \(see [Slmgr.vbs Options for Volume Activation](../../manage/volume-activation-technical-reference/Slmgr.vbs-Options-for-Volume-Activation.md)\).
+Starting with Windows Server® 2012 and Windows® 8, you can avoid designating and configuring an activation server altogether and use Active Directory for activation instead. Whenever you activate a computer running these or later operating systems that is joined to a domain that is using the Windows 8 (or later) schema, an activation object is created and stored in Active Directory, instead of on the local computer. You can accomplish the initial activation of the first computer with Volume Activation Services in Server Manager or Slmgr.vbs Active Directory activation commands (see [Slmgr.vbs Options for Volume Activation](../../manage/volume-activation-technical-reference/Slmgr.vbs-Options-for-Volume-Activation.md)).
 
-When any  Windows Server 2012 , Windows 8 \(or later operating system\) computers that are volume licensed join the domain, they access the activation object present in Active Directory and become activated automatically. They remain activated as long as they remain joined to the domain and in contact with it. At each renewal interval, any Key Management Service \(KMS\) clients, upon connection to the domain, will attempt to use Active Directory activation; if that is not available, they will continue to use KMS activation.
+When any  Windows Server 2012 , Windows 8 (or later operating system) computers that are volume licensed join the domain, they access the activation object present in Active Directory and become activated automatically. They remain activated as long as they remain joined to the domain and in contact with it. At each renewal interval, any Key Management Service (KMS) clients, upon connection to the domain, will attempt to use Active Directory activation; if that is not available, they will continue to use KMS activation.
 
-## Using Active Directory\-based activation
-To use Active Directory\-based activation, access any computer joined to the domain that is running  Windows Server 2012 , Windows 8 \(or later\) operating system and activate the computer with a volume product key \(CSVLK\) by using the UI or other activation methods.
+## Using Active Directory-based activation
+To use Active Directory-based activation, access any computer joined to the domain that is running  Windows Server 2012 , Windows 8 (or later) operating system and activate the computer with a volume product key (CSVLK) by using the UI or other activation methods.
 
 ## Managing the activation object
-You can use a one\-time script \(Appendix A in this topic\) that runs at the Enterprise Administrator level, creates a Security Group, and designates an owner for it. Members that you add to that Security Group are authorized to create activation objects, allowing you to delegate licensing support. You cannot edit the activation objects, but you can use Volume Activation Services to control and view them.
+You can use a one-time script (Appendix A in this topic) that runs at the Enterprise Administrator level, creates a Security Group, and designates an owner for it. Members that you add to that Security Group are authorized to create activation objects, allowing you to delegate licensing support. You cannot edit the activation objects, but you can use Volume Activation Services to control and view them.
 
 #### To prepare Active Directory
 
-1.  If the forest is not already based on the  Windows Server 2012  schema, run the  Windows Server 2012  \(or later\) version of Adprep.exe to update the schema.
+1.  If the forest is not already based on the  Windows Server 2012  schema, run the  Windows Server 2012  (or later) version of Adprep.exe to update the schema.
 
-2.  Optionally, using an account with administrative access to the Domain Root Directory \(such as Enterprise Administrator\), run the script available in Appendix A of this topic. This creates the Licensing Security Group.
+2.  Optionally, using an account with administrative access to the Domain Root Directory (such as Enterprise Administrator), run the script available in Appendix A of this topic. This creates the Licensing Security Group.
 
 3.  Optionally, the Enterprise Administrator can add accounts to the Licensing Security Group to delegate the ability to store activation objects.
 
 #### To activate the Active Directory forest
 
-1.  Obtain a customer\-specific volume license key \(CSVLK\).
+1.  Obtain a customer-specific volume license key (CSVLK).
 
-2.  Log into any computer joined to the domain that is running  Windows Server 2012 , Windows 8 \(or later operating system\) with an account that is in the Licensing Security Group.
+2.  Log into any computer joined to the domain that is running  Windows Server 2012 , Windows 8 (or later operating system) with an account that is in the Licensing Security Group.
 
-3.  In the Volume Activation Tools of the Volume Activation service, start the CSVLK Installation wizard and complete the steps to install the CSVLK, choose **Activate AD**, and \(optionally\) create a friendly name for the activation object.
+3.  In the Volume Activation Tools of the Volume Activation service, start the CSVLK Installation wizard and complete the steps to install the CSVLK, choose **Activate AD**, and (optionally) create a friendly name for the activation object.
 
     > [!NOTE]
     > If online activation is not possible, you can use phone activation to obtain a CID from the CSVLK. Then enter the CID in the CSVLK Installation wizard.
 
-4.  Alternately, instead of using the wizard, you can install the CSVLK with the command **slmgr \/ad\-activation\-online <Product Key> \[Activation Object name\]**. \(See [Slmgr.vbs Options for Volume Activation](../../manage/volume-activation-technical-reference/Slmgr.vbs-Options-for-Volume-Activation.md).\) You can also install the CSVLK with the phone activation option.
+4.  Alternately, instead of using the wizard, you can install the CSVLK with the command **slmgr /ad-activation-online <Product Key> [Activation Object name]**. (See [Slmgr.vbs Options for Volume Activation](../../manage/volume-activation-technical-reference/Slmgr.vbs-Options-for-Volume-Activation.md).) You can also install the CSVLK with the phone activation option.
 
 **To activate Windows on other computers in the domain**
 
-Once the activation object has been created as in the previous procedure, any computer running  Windows Server 2012 , Windows 8 \(or later operating system\) that joins the domain becomes activated automatically.
+Once the activation object has been created as in the previous procedure, any computer running  Windows Server 2012 , Windows 8 (or later operating system) that joins the domain becomes activated automatically.
 
 #### To manage the activation object
 
@@ -60,7 +60,7 @@ Once the activation object has been created as in the previous procedure, any co
 
     -   ACLs applied to the activation object
 
-3.  Alternately, from the command line, you can install, view, or delete activation objects with the Active Directory\-based activation configuration options of Slmgr.vbs. See [Slmgr.vbs Options for Volume Activation](../../manage/volume-activation-technical-reference/Slmgr.vbs-Options-for-Volume-Activation.md).
+3.  Alternately, from the command line, you can install, view, or delete activation objects with the Active Directory-based activation configuration options of Slmgr.vbs. See [Slmgr.vbs Options for Volume Activation](../../manage/volume-activation-technical-reference/Slmgr.vbs-Options-for-Volume-Activation.md).
 
 4.  To delete activation objects, use Volume Activation Services or Slmgr.vbs.
 

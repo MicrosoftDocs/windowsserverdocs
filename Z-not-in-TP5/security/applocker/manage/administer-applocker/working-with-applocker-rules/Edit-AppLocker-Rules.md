@@ -15,15 +15,15 @@ This topic describes the steps to edit a publisher rule, path rule, and file has
 
 For more information about these rule types, see [Understanding AppLocker Rule Condition Types](Understanding-AppLocker-Rule-Condition-Types.md).
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
 
 ### <a name="BKMK_EditPubRule"></a>To edit a publisher rule
 
-1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree of the snap-in, double-click **Application Control Policies**, and then double-click **AppLocker**.
 
 2.  Click the appropriate rule collection.
 
-3.  In the **Action** pane, right\-click the publisher rule, and then click **Properties**.
+3.  In the **Action** pane, right-click the publisher rule, and then click **Properties**.
 
 4.  Click the appropriate tab to edit the rule properties.
 
@@ -37,11 +37,11 @@ You can perform this task by using the Group Policy Management Console for an Ap
 
 ### <a name="BKMK_EditHashRule"></a>To edit a file hash rule
 
-1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree of the snap-in, double-click **Application Control Policies**, and then double-click **AppLocker**.
 
 2.  Choose the appropriate rule collection.
 
-3.  In the **Action** pane, right\-click the file hash rule, and then click **Properties**.
+3.  In the **Action** pane, right-click the file hash rule, and then click **Properties**.
 
 4.  Click the appropriate tab to edit the rule properties.
 
@@ -53,11 +53,11 @@ You can perform this task by using the Group Policy Management Console for an Ap
 
 ### <a name="BKMK_EditPathRule"></a>To edit a path rule
 
-1.  In the console tree in the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree in the snap-in, double-click **Application Control Policies**, and then double-click **AppLocker**.
 
 2.  Choose the appropriate rule collection.
 
-3.  In the **Action** pane, right\-click the path rule, and then click **Properties**.
+3.  In the **Action** pane, right-click the path rule, and then click **Properties**.
 
 4.  Click the appropriate tab to edit the rule properties.
 

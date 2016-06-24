@@ -20,11 +20,11 @@ When AppLocker policy enforcement is set to **Enforce rules**, rules are enforce
 > [!NOTE]
 > There is no audit mode for the DLL rule collection. DLL rules affect specific applications. Therefore, test the impact of these rules first before deploying them to production. To enable the DLL rule collection, see [Enable the DLL Rule Collection](Enable-the-DLL-Rule-Collection.md).
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
 
 #### To audit rule collections
 
-1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, right\-click **AppLocker**, and then click **Properties**.
+1.  In the console tree of the snap-in, double-click **Application Control Policies**, right-click **AppLocker**, and then click **Properties**.
 
 2.  On the **Enforcement** tab, select the **Configured** check box for the rule collection that you want to enforce, and then verify that **Audit only** is selected in the list for that rule collection.
 

@@ -24,8 +24,8 @@ verify [on | off]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\[on &#124; off\]|Switches the **verify** setting on or off.|  
-|\/?|Displays help at the command prompt.|  
+|[on &#124; off]|Switches the **verify** setting on or off.|  
+|/?|Displays help at the command prompt.|  
   
 ## <a name="BKMK_examples"></a>Examples  
 To display the current **verify** setting, type:  

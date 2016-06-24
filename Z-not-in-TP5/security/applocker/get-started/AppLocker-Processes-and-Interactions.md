@@ -16,17 +16,17 @@ This topic for the IT professional describes the process dependencies and intera
 ## How policies are implemented by AppLocker
 AppLocker policies are collections of AppLocker rules that might contain any one of the enforcement settings configured. When applied, each rule is evaluated within the policy and the collection of rules is applied according to the enforcement setting and according to your Group Policy structure.
 
-The AppLocker policy is enforced on a computer through the Application Identity service, which is the engine that evaluates the policies. If the service is not running, policies will not be enforced. The Application Identity service returns the information from the binary—even if product or binary names are empty—to the results pane of the Local Security Policy snap\-in.
+The AppLocker policy is enforced on a computer through the Application Identity service, which is the engine that evaluates the policies. If the service is not running, policies will not be enforced. The Application Identity service returns the information from the binary—even if product or binary names are empty—to the results pane of the Local Security Policy snap-in.
 
-AppLocker policies are stored in a security descriptor format according to Application Identity service requirements. It uses file path, hash, or fully qualified binary name attributes to form allow or deny actions on a rule. Each rule is stored as an access control entry \(ACE\) in the security descriptor and contains the following information:
+AppLocker policies are stored in a security descriptor format according to Application Identity service requirements. It uses file path, hash, or fully qualified binary name attributes to form allow or deny actions on a rule. Each rule is stored as an access control entry (ACE) in the security descriptor and contains the following information:
 
--   Either an allow or a deny ACE \("XA" or "XD" in security descriptor definition language \(SDDL\) form\).
+-   Either an allow or a deny ACE ("XA" or "XD" in security descriptor definition language (SDDL) form).
 
--   The user security identifier \(SID\) that this rule is applicable to. \(The default is the authenticated user SID, or "AU" in SDDL.\)
+-   The user security identifier (SID) that this rule is applicable to. (The default is the authenticated user SID, or "AU" in SDDL.)
 
 -   The rule condition containing the **appid** attributes.
 
-For example, an SDDL for a rule that allows all files in the %windir% directory to run uses the following format: XA;;FX;;;AU;\(APPID:\/\/PATH \=\= "%windir%\\\*"\).
+For example, an SDDL for a rule that allows all files in the %windir% directory to run uses the following format: XA;;FX;;;AU;(APPID://PATH == "%windir%\\*").
 
 An AppLocker policy for DLLs and executable files is read and cached by kernel mode code, which is part of appid.sys. Whenever a new policy is applied, appid.sys is notified by a policy converter task. For other file types, the AppLocker policy is read every time a **SaferIdentifyLevel** call is made.
 
@@ -37,7 +37,7 @@ An AppLocker rule is a control placed on a file to govern whether or not it is a
 
 -   A script rule controls whether a user or group can run scripts with a file name extension of .ps1, .bat, .cmd, .vbs, and .js.
 
--   A Windows Installer rule controls whether a user or group can run files with a file name extension of .msi, mst and .msp \(Windows Installer patch\).
+-   A Windows Installer rule controls whether a user or group can run files with a file name extension of .msi, mst and .msp (Windows Installer patch).
 
 -   A DLL rule controls whether a user or group can run files with a file name extension of .dll and .ocx.
 
@@ -99,7 +99,7 @@ Group Policy can be used to create, modify, and distribute AppLocker policies in
 
 -   [Understand AppLocker Rules and Enforcement Setting Inheritance in Group Policy](Understand-AppLocker-Rules-and-Enforcement-Setting-Inheritance-in-Group-Policy.md)
 
-    When Group Policy is used to distribute AppLocker policies, rule collections that are not configured will be enforced. Group Policy does not overwrite or replace rules that are already present in a linked Group Policy Object \(GPO\) and applies the AppLocker rules in addition to existing rules. AppLocker processes the explicit deny rule configuration before the allow rule configuration, and for rule enforcement, the last write to the GPO is applied.
+    When Group Policy is used to distribute AppLocker policies, rule collections that are not configured will be enforced. Group Policy does not overwrite or replace rules that are already present in a linked Group Policy Object (GPO) and applies the AppLocker rules in addition to existing rules. AppLocker processes the explicit deny rule configuration before the allow rule configuration, and for rule enforcement, the last write to the GPO is applied.
 
 ## See Also
 [AppLocker Technical Reference](AppLocker-Technical-Reference.md)

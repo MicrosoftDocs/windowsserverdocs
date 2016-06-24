@@ -22,10 +22,10 @@ lcd [<Directory>]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\[<Directory>\]|Specifies the directory on the local computer to which to change. If *Directory* is not specified, the current working directory is changed to the default directory.|  
+|[<Directory>]|Specifies the directory on the local computer to which to change. If *Directory* is not specified, the current working directory is changed to the default directory.|  
   
 ## <a name="BKMK_Examples"></a>Examples  
-Change the working directory on the local computer to **C:\\Dir1**  
+Change the working directory on the local computer to **C:\Dir1**  
   
 ```  
 lcd C:\Dir1  

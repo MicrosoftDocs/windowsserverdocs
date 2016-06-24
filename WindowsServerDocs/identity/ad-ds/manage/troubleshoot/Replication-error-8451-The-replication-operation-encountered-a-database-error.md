@@ -250,14 +250,14 @@ Active Directory Domain Services could not replicate the directory partition
             </tbody>
           </table>
           <para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error is shown below:</para>
-          <code>Default-First-Site-Name\CONTOSO-DC1
+          <code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 ==== INBOUND NEIGHBORS ======================================
 DC=contoso,DC=com
-Default-First-Site-Name\CONTOSO-DC2 via RPC
+Default-First-Site-NameCONTOSO-DC2 via RPC
 DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
 Last attempt @ &lt;date&gt; &lt;time&gt; failed, result 8451 (0x2103):
 The replication operation encountered a database error.
@@ -569,7 +569,7 @@ Internal ID:
                   <para>NTDS ISAM</para>
                 </TD>
                 <TD>
-                  <code>The database page read from the file 'E:\NTDS\Data\ntds.dit' at offset 3846455296 (0x00000000e5444000) for 8192 (0x00002000) bytes failed verification due to a page checksum mismatch. The expected checksum was 323677604 (0x134aeda4) and the actual checksum was 2081515684 (0x7c1168a4). The read operation will fail with error -1018 (0xfffffc06). If this condition persists then please restore the database from a previous backup. This problem is likely due to faulty hardware. Please contact your hardware vendor for further assistance diagnosing the problem.
+                  <code>The database page read from the file 'E:NTDSDatantds.dit' at offset 3846455296 (0x00000000e5444000) for 8192 (0x00002000) bytes failed verification due to a page checksum mismatch. The expected checksum was 323677604 (0x134aeda4) and the actual checksum was 2081515684 (0x7c1168a4). The read operation will fail with error -1018 (0xfffffc06). If this condition persists then please restore the database from a previous backup. This problem is likely due to faulty hardware. Please contact your hardware vendor for further assistance diagnosing the problem.
 </code>
                 </TD>
               </tr>
@@ -581,7 +581,7 @@ Internal ID:
                   <para>NTDS ISAM</para>
                 </TD>
                 <TD>
-                  <code>NTDS (396) NTDSA: Data inconsistency detected in table datatable of database C:\WINDOWS\NTDS\ntds.dit (4621,7905).
+                  <code>NTDS (396) NTDSA: Data inconsistency detected in table datatable of database C:WINDOWSNTDSntds.dit (4621,7905).
 </code>
                 </TD>
               </tr>
@@ -733,7 +733,7 @@ JET_errDatabaseCorrupted esent98.h
         <listItem>
           <para>Enable NTDS diagnostic logging for Replication Events and Internal Processing at a level of 5.</para>
           <para>To increase NTDS diagnostic logging, change the following REG_DWORD values in the registry of the destination domain controller under the following registry key:</para>
-          <para>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics</para>
+          <para>HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSDiagnostics</para>
           <para>Set the value of the following subkeys to 5:</para>
           <list class="bullet">
             <listItem>

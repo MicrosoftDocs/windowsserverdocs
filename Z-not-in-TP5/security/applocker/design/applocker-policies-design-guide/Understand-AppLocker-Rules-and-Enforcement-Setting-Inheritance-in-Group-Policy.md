@@ -17,7 +17,7 @@ Rule enforcement is applied only to collections of rules, not individual rules. 
 
 Group Policy merges AppLocker policy in two ways:
 
--   **Rules.** Group Policy does not overwrite or replace rules that are already present in a linked Group Policy Object \(GPO\). For example, if the current GPO has 12 rules and a linked GPO has 50 rules, 62 rules are applied to all computers that receive the AppLocker policy.
+-   **Rules.** Group Policy does not overwrite or replace rules that are already present in a linked Group Policy Object (GPO). For example, if the current GPO has 12 rules and a linked GPO has 50 rules, 62 rules are applied to all computers that receive the AppLocker policy.
 
     > [!IMPORTANT]
     > When determining whether a file is permitted to run, AppLocker processes rules in the following order:
@@ -26,7 +26,7 @@ Group Policy merges AppLocker policy in two ways:
     > 2.  **Explicit allow.** An administrator created a rule to allow a file.
     > 3.  **Implicit deny.** This is also called the default deny because all files that are not affected by an allow rule are automatically blocked.
 
--   **Enforcement settings.** The last write to the policy is applied. For example, if a higher\-level GPO has the enforcement setting configured to **Enforce rules** and the closest GPO has the setting configured to **Audit only**, **Audit only** is enforced. If enforcement is not configured on the closest GPO, the setting from the closest linked GPO will be enforced.
+-   **Enforcement settings.** The last write to the policy is applied. For example, if a higher-level GPO has the enforcement setting configured to **Enforce rules** and the closest GPO has the setting configured to **Audit only**, **Audit only** is enforced. If enforcement is not configured on the closest GPO, the setting from the closest linked GPO will be enforced.
 
 Because a computer's effective policy includes rules from each linked GPO, duplicate rules or conflicting rules could be enforced on a user's computer. Therefore, you should carefully plan your deployment to ensure that only rules that are necessary are present in a GPO.
 
@@ -34,7 +34,7 @@ The following figure demonstrates how AppLocker rule enforcement is applied thro
 
 ![](../../../media/Understand-AppLocker-Rules-and-Enforcement-Setting-Inheritance-in-Group-Policy/AppLocker_Plan_Inheritance.gif)
 
-In the preceding illustration, note that all GPOs linked to Contoso are applied in order as configured. The rules that are not configured are also applied. For example, the result of the Contoso and Human Resources GPOs is 33 rules enforced, as shown in the client HR\-Term1. The Human Resources GPO contains 10 non\-configured rules. When the rule collection is configured for **Audit only**, no rules are enforced.
+In the preceding illustration, note that all GPOs linked to Contoso are applied in order as configured. The rules that are not configured are also applied. For example, the result of the Contoso and Human Resources GPOs is 33 rules enforced, as shown in the client HR-Term1. The Human Resources GPO contains 10 non-configured rules. When the rule collection is configured for **Audit only**, no rules are enforced.
 
 When constructing the Group Policy architecture for applying AppLocker policies, it is important to remember:
 

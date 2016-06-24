@@ -32,11 +32,11 @@ There are three decisions to make when you are planning your client deployment:
   
 2.  What security groups will contain the DirectAccess client computers?  
   
-    DirectAccess settings are contained in the DirectAccess client Group Policy Object \(GPO\). The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify security groups that are contained in any supported domain. For more information, see [Plan Active Directory requirements](#BKMK_ActiveDirectory).  
+    DirectAccess settings are contained in the DirectAccess client Group Policy Object (GPO). The GPO is applied to computers that are part of the security groups that you specify in the DirectAccess Client Setup Wizard. You can specify security groups that are contained in any supported domain. For more information, see [Plan Active Directory requirements](#BKMK_ActiveDirectory).  
   
     Before you configure Remote Access, you need to create the security groups. You can add computers to the security group after you complete the Remote Access deployment. However, if you add client computers that reside in a different domain than the security group, the client GPO will not be applied to those clients. For example, if you created SG1 in domain A for DirectAccess clients, and you later add clients from domain B to this group, the client GPO will not be applied to clients in domain B.  
   
-    To avoid this issue, create a new client security group for each domain that contains client computers. Alternatively, if you do not want to create a new security group, run the **Add\-DAClient** Windows PowerShell cmdlet with the name of the new GPO for the new domain.  
+    To avoid this issue, create a new client security group for each domain that contains client computers. Alternatively, if you do not want to create a new security group, run the **Add-DAClient** Windows PowerShell cmdlet with the name of the new GPO for the new domain.  
   
 3.  What settings will you configure for the DirectAccess Network Connectivity Assistant?  
   
@@ -44,7 +44,7 @@ There are three decisions to make when you are planning your client deployment:
   
     -   **Connectivity verifiers**  
   
-        A default web probe is created that clients use to validate connectivity to the internal network. The default name is http:\/\/directaccess\-WebProbeHost.<domain\_name>. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
+        A default web probe is created that clients use to validate connectivity to the internal network. The default name is http://directaccess-WebProbeHost.<domain_name>. The name should be registered manually in DNS. You can create other connectivity verifiers that use other web addresses over HTTP or PING. For each connectivity verifier, a DNS entry must exist.  
   
     -   **Help Desk email address**  
   
@@ -56,7 +56,7 @@ There are three decisions to make when you are planning your client deployment:
   
     -   **Allow DirectAccess clients to use local name resolution**  
   
-        Clients require a means of resolving names locally. If you allow DirectAccess clients to use local name resolution, end users can use local DNS servers to resolve names. When end users choose to use local DNS servers for name resolution, DirectAccess does not send resolution requests for single label names to the internal corporate DNS server. It uses local name resolution instead \(by using the Link\-Local Multicast Name Resolution \(LLMNR\) and NetBios over TCP\/IP protocols\).  
+        Clients require a means of resolving names locally. If you allow DirectAccess clients to use local name resolution, end users can use local DNS servers to resolve names. When end users choose to use local DNS servers for name resolution, DirectAccess does not send resolution requests for single label names to the internal corporate DNS server. It uses local name resolution instead (by using the Link-Local Multicast Name Resolution (LLMNR) and NetBios over TCP/IP protocols).  
   
 ## <a name="bkmk_2_2_server"></a>Plan a Remote Access server deployment strategy  
 Decisions that you need to make when you are planning to deploy your Remote Access server include:  
@@ -75,9 +75,9 @@ Decisions that you need to make when you are planning to deploy your Remote Acce
   
     The Remote Access Server Setup Wizard automatically detects the network adapters that are configured on the Remote Access server. You must make sure that the correct adapters are selected.  
   
--   **IP\-HTTPS certificate**  
+-   **IP-HTTPS certificate**  
   
-    The Remote Access Server Setup Wizard automatically detects a certificate that is suitable for the IP\-HTTPS connection. The subject name of the certificate that you select must match the ConnectTo address. If you are using self\-signed certificates, you can choose to use a certificate that is created automatically by the Remote Access server.  
+    The Remote Access Server Setup Wizard automatically detects a certificate that is suitable for the IP-HTTPS connection. The subject name of the certificate that you select must match the ConnectTo address. If you are using self-signed certificates, you can choose to use a certificate that is created automatically by the Remote Access server.  
   
 -   **IPv6 prefixes**  
   
@@ -87,18 +87,18 @@ Decisions that you need to make when you are planning to deploy your Remote Acce
   
     You can choose one of the following methods for authenticating DirectAccess clients to the Remote Access server:  
   
-    -   **User authentication**: You can enable users to authenticate with Active Directory credentials or with two\-factor authentication.  
+    -   **User authentication**: You can enable users to authenticate with Active Directory credentials or with two-factor authentication.  
   
     -   **Computer authentication**: You can configure computer authentication to use certificates. Or the Remote Access server can act as a proxy for Kerberos authentication without requiring certificates.. For more information, see [Planning certification authorities and certificates](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_1_2_CAs_and_certs).  
   
-    -   **Windows 7 clients** By default, client computers running  Windows 7  cannot connect to a Remote Access deployment running  Windows Server 2012 . If you have clients running  Windows 7  in your organization that require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the DirectAccess Client Setup Wizard.  
+    -   **Windows 7 clients** By default, client computers running  Windows 7  cannot connect to a Remote Access deployment running  Windows Server 2012 . If you have clients running  Windows 7  in your organization that require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the DirectAccess Client Setup Wizard.  
   
         > [!NOTE]  
-        > Allowing clients running  Windows 7  to connect by using DirectAccess requires you to use computer certificate authentication.  
+        > Allowing clients running  Windows 7  to connect by using DirectAccess requires you to use computer certificate authentication.  
   
 -   **VPN configuration**  
   
-    Before you configure Remote Access, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity \(for example, they are unmanaged or they run an operating system for which DirectAccess is not supported\). The Remote Access Server Setup Wizard allows you to configure how IP addresses are assigned \(by using DHCP or from a static address pool\) and how VPN clients are authenticated \(by using Active Directory or a RADIUS server\).  
+    Before you configure Remote Access, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (for example, they are unmanaged or they run an operating system for which DirectAccess is not supported). The Remote Access Server Setup Wizard allows you to configure how IP addresses are assigned (by using DHCP or from a static address pool) and how VPN clients are authenticated (by using Active Directory or a RADIUS server).  
   
 ## <a name="bkmk_2_3_Inf_servers"></a>Plan the infrastructure servers’ configurations  
 Remote Access requires three types of infrastructure servers:  

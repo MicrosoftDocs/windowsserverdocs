@@ -21,15 +21,15 @@ You can use MPIO on Nano Server, but with these differences:
   
 -   The Load Balancing Policy is chosen dynamically and cannot be modified. The policy has these characteristics:  
   
-    -   Default \-\- RoundRobin \(active\/active\)  
+    -   Default -- RoundRobin (active/active)  
   
-    -   SAS HDD \-\- LeastBlocks  
+    -   SAS HDD -- LeastBlocks  
   
-    -   ALUA \-\- RoundRobin with Subset  
+    -   ALUA -- RoundRobin with Subset  
   
--   Path states \(active\/passive\) for ALUA arrays are picked up from the target array.  
+-   Path states (active/passive) for ALUA arrays are picked up from the target array.  
   
--   Storage devices are claimed by bus type \(for example, FC, iSCSI, or SAS\). When MPIO is installed on Nano Server, disks are still exposed as duplicates \(one available per path\) until MPIO is configured to claim and manage particular disks. The sample script in this topic will claim or unclaim disks for MPIO.  
+-   Storage devices are claimed by bus type (for example, FC, iSCSI, or SAS). When MPIO is installed on Nano Server, disks are still exposed as duplicates (one available per path) until MPIO is configured to claim and manage particular disks. The sample script in this topic will claim or unclaim disks for MPIO.  
   
 Enable MPIO with this Windows PowerShell cmdlet:  
   
@@ -277,7 +277,7 @@ $changed = 'false'
 #  
 foreach($hwid in $hwids)  
 {      
-	$busTypeName = GetBusTypeName $hwid  
+    $busTypeName = GetBusTypeName $hwid  
   
     #  
     # The device is only considered claimed if it's in both the MPIO and MSDSM lists.  
@@ -320,7 +320,7 @@ foreach($hwid in $hwids)
         {              
             RemoveHardwareId $hwid $Server $mpioKeyName $mpioValueName  
             RemoveHardwareId $hwid $Server $msdsmKeyName $msdsmValueName  
-			$changed = 'true'  
+            $changed = 'true'  
             Write-Host "$($busTypeName) devices will not be claimed."  
         }  
         else  
@@ -342,7 +342,7 @@ foreach($hwid in $hwids)
         {  
             AddHardwareId $hwid $Server $mpioKeyName $mpioValueName  
             AddHardwareId $hwid $Server $msdsmKeyName $msdsmValueName  
-			$changed = 'true'  
+            $changed = 'true'  
             Write-Host "$($busTypeName) devices will be claimed."  
         }  
     }  
@@ -353,7 +353,7 @@ foreach($hwid in $hwids)
 #  
 if ($changed -eq 'true')  
 {  
-	Write-Host "The system must be restarted for the changes to take effect."  
+    Write-Host "The system must be restarted for the changes to take effect."  
 }  
 ```  
   

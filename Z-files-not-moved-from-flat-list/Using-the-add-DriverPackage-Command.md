@@ -22,10 +22,10 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 |Parameter|Description|  
 |-------------|---------------|  
 |InfFile:<Inf File path>|Specifies the full path of the .inf file to add.|  
-|\/Server:<Server name>|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|  
-|\/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the driver package.|  
-|\[\/DriverGroup:<Group Name>\]|Specifies the name of the driver group to which the package should be added.|  
-|\[\/Name:<Friendly Name>\]|States the friendly name for the driver package.|  
+|/Server:<Server name>|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|  
+|/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the driver package.|  
+|[/DriverGroup:<Group Name>]|Specifies the name of the driver group to which the package should be added.|  
+|[/Name:<Friendly Name>]|States the friendly name for the driver package.|  
   
 ## <a name="BKMK_examples"></a>Examples  
 To add a driver package, type one of the following:  

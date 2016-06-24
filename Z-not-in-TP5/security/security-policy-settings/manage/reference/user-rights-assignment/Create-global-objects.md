@@ -24,7 +24,7 @@ Constant: SeCreateGlobalPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Default accounts listed below  
   
@@ -33,7 +33,7 @@ Constant: SeCreateGlobalPrivilege
 1.  Do not assign any user accounts this right.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security SettingsLocal Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security SettingsLocal Policies\User Rights Assignment  
   
 ### Default values  
 By default, members of the Administrators group have this right, as do Local Service and Network Service accounts on the supported versions of Windows. Service is included for backwards compatibility with earlier versions of Windows.  
@@ -44,13 +44,13 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not Defined|  
 |Default Domain Controller Policy|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|  
-|Stand\-Alone Server Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|  
+|Stand-Alone Server Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|  
 |Domain Controller Effective Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|  
 |Member Server Effective Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|  
 |Client Computer Effective Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|  
   
 ### Operating system version differences  
-Prior to Windows Server 2008 and Windows Vista, the default values of this security policy setting included Administrators, Service, and Local System. There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
+Prior to Windows Server 2008 and Windows Vista, the default values of this security policy setting included Administrators, Service, and Local System. There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
 ## Policy management  
 A restart of the computer is not required for this policy setting to take effect.  
@@ -58,7 +58,7 @@ A restart of the computer is not required for this policy setting to take effect
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -78,7 +78,7 @@ This section describes how an attacker might exploit a feature or its configurat
 > [!CAUTION]  
 > A user account that is given this user right has complete control over the system, and it can lead to the system being compromised. We highly recommend that you do not assign this right to any user accounts.  
   
-The operating system examines a user's access token to determine the level of the user's privileges. Access tokens are built when users log on to the local computer or connect to a remote computer over a network. When you revoke a privilege, the change is immediately recorded, but the change is not reflected in the user's access token until the next time the user logs on or connects. Users with the ability to create or modify tokens can change the level of access for any currently logged on account. They could escalate their privileges or create a denial\-of\-service \(DoS\) condition.  
+The operating system examines a user's access token to determine the level of the user's privileges. Access tokens are built when users log on to the local computer or connect to a remote computer over a network. When you revoke a privilege, the change is immediately recorded, but the change is not reflected in the user's access token until the next time the user logs on or connects. Users with the ability to create or modify tokens can change the level of access for any currently logged on account. They could escalate their privileges or create a denial-of-service (DoS) condition.  
   
 ### Countermeasure  
 Do not assign the **Create a token object** user right to any users. Processes that require this user right should use the Local System account, which already includes it, instead of a separate user account with this user right assigned.  

@@ -21,28 +21,28 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 
 |Parameter|Description|
 |-------------|---------------|
-|\-a|Specifies to add the identified INF file.|
-|\-d|Specifies to delete the identified INF file.|
-|\-e|Specifies to enumerate all third\-party INF files.|
-|\-f|Specifies to force the deletion of the identified INF file. Cannot be used in conjunction with the **–i** parameter.|
-|\-i|Specifies to install the identified INF file. Cannot be used in conjunction with  the  **\-f** parameter.|
-|\/?|Displays help at the command prompt.|
+|-a|Specifies to add the identified INF file.|
+|-d|Specifies to delete the identified INF file.|
+|-e|Specifies to enumerate all third-party INF files.|
+|-f|Specifies to force the deletion of the identified INF file. Cannot be used in conjunction with the **–i** parameter.|
+|-i|Specifies to install the identified INF file. Cannot be used in conjunction with  the  **-f** parameter.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 ## Examples
 
--   pnputil.exe \-a a:\\usbcam\\USBCAM.INF  Adds the INF file that is specified by USBCAM.INF
+-   pnputil.exe -a a:\usbcam\USBCAM.INF  Adds the INF file that is specified by USBCAM.INF
 
--   pnputil.exe \-a c:\\drivers\\\*.inf  Adds all INF files in c:\\drivers\\
+-   pnputil.exe -a c:\drivers\\*.inf  Adds all INF files in c:\drivers\
 
--   pnputil.exe \-i \-a a:\\usbcam\\USBCAM.INF  Adds and installs the specified driver.
+-   pnputil.exe -i -a a:\usbcam\USBCAM.INF  Adds and installs the specified driver.
 
--   pnputil.exe –e  Enumerates all third\-party drivers.
+-   pnputil.exe –e  Enumerates all third-party drivers.
 
--   pnputil.exe \-d oem0.inf  Deletes the specified.
+-   pnputil.exe -d oem0.inf  Deletes the specified.
 
--   pnputil.exe \-f \-d oem0.inf  Forces the deletion of the specified INF file.
+-   pnputil.exe -f -d oem0.inf  Forces the deletion of the specified INF file.
 
 ## Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

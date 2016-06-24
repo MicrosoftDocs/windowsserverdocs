@@ -15,7 +15,7 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>This problem typically occurs when a replication destination domain controller cannot contact its source replication partner to get Active Directory updates as a result of one or more security errors occurring on the connection between the two domain controllers. You can test and diagnose replication problems that have security causes by using the Dcdiag.exe tool.</para>
+    <para>This problem typically occurs when a replication destination domain controller cannot contact its source replication partner to get Active Directory updates as a result of one or more security errors occurring on the connection between the two domain controllers. You can test and diagnose replication problems that have security causes by using the Dcdiag.exe tool.</para>
     <list class="bullet">
       <listItem>
         <para>
@@ -44,7 +44,7 @@ author: Femila
   <section address="BKMK_Cause">
     <title>Diagnosis</title>
     <content>
-      <para>A replication destination domain controller cannot contact its source replication partner to get Active Directory updates as a result of one or more security errors occurring on the connection between the two domain controllers.</para>
+      <para>A replication destination domain controller cannot contact its source replication partner to get Active Directory updates as a result of one or more security errors occurring on the connection between the two domain controllers.</para>
     </content>
   </section>
   <section address="BKMK_Solution">
@@ -71,13 +71,13 @@ author: Femila
               <para>Operating system: The replication security test that is used in this procedure is available in versions of Dcdiag that are included with the following operating systems:</para>
               <list class="bullet">
                 <listItem>
-                  <para>Windows Server 2003 with Service Pack 1 (SP1)</para>
+                  <para>Windows Server 2003 with Service Pack 1 (SP1)</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 with Service Pack 2 (SP2)</para>
+                  <para>Windows Server 2003 with Service Pack 2 (SP2)</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 R2</para>
+                  <para>Windows Server 2003 R2</para>
                 </listItem>
                 <listItem>
                   <para>
@@ -87,26 +87,26 @@ author: Femila
               </list>
             </listItem>
             <listItem>
-              <para>Although you can run the enhanced version of Dcdiag from computers running Windows XP Professional and Windows Server 2003 with no service pack installed, you cannot run the replication security test (<system>/test:CheckSecurityError</system>) from these computers.</para>
+              <para>Although you can run the enhanced version of Dcdiag from computers running Windows XP Professional and Windows Server 2003 with no service pack installed, you cannot run the replication security test (<system>/test:CheckSecurityError</system>) from these computers.</para>
             </listItem>
             <listItem>
               <para>Target operating systems: </para>
               <para>You can run the Dcdiag replication security tests against domain controllers that are running the following operating systems:</para>
               <list class="bullet">
                 <listItem>
-                  <para>Windows 2000 Server with Service Pack 3 (SP3)</para>
+                  <para>Windows 2000 Server with Service Pack 3 (SP3)</para>
                 </listItem>
                 <listItem>
-                  <para>Windows 2000 Server with Service Pack 4 (SP4)</para>
+                  <para>Windows 2000 Server with Service Pack 4 (SP4)</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003</para>
+                  <para>Windows Server 2003</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 with Service Pack 1 (SP1)</para>
+                  <para>Windows Server 2003 with Service Pack 1 (SP1)</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 R2</para>
+                  <para>Windows Server 2003 R2</para>
                 </listItem>
                 <listItem>
                   <para>
@@ -196,13 +196,13 @@ author: Femila
               <para>Operating system: The replication security test that is used in this procedure is available in versions of Dcdiag that are included with the following operating systems: </para>
               <list class="bullet">
                 <listItem>
-                  <para>Windows Server 2003 with SP1</para>
+                  <para>Windows Server 2003 with SP1</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 with SP2</para>
+                  <para>Windows Server 2003 with SP2</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 R2</para>
+                  <para>Windows Server 2003 R2</para>
                 </listItem>
                 <listItem>
                   <para>
@@ -212,25 +212,25 @@ author: Femila
               </list>
             </listItem>
             <listItem>
-              <para>Although you can run the enhanced version of Dcdiag from computers running Windows XP Professional and Windows Server 2003 with no service pack installed, you cannot run the replication security test (<system>/test:CheckSecurityError</system>) from these computers.</para>
+              <para>Although you can run the enhanced version of Dcdiag from computers running Windows XP Professional and Windows Server 2003 with no service pack installed, you cannot run the replication security test (<system>/test:CheckSecurityError</system>) from these computers.</para>
             </listItem>
             <listItem>
               <para>Target operating systems: You can run the Dcdiag replication security tests against domain controllers that are running the following operating systems: </para>
               <list class="bullet">
                 <listItem>
-                  <para>Windows 2000 Server with SP3</para>
+                  <para>Windows 2000 Server with SP3</para>
                 </listItem>
                 <listItem>
-                  <para>Windows 2000 Server with SP4</para>
+                  <para>Windows 2000 Server with SP4</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003</para>
+                  <para>Windows Server 2003</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 with SP1</para>
+                  <para>Windows Server 2003 with SP1</para>
                 </listItem>
                 <listItem>
-                  <para>Windows Server 2003 R2</para>
+                  <para>Windows Server 2003 R2</para>
                 </listItem>
                 <listItem>
                   <para>

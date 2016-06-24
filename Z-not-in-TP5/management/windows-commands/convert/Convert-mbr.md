@@ -11,12 +11,12 @@ ms.topic: article
 ms.assetid: a635a4c0-af73-4330-b021-51d483424537
 ---
 # Convert mbr
-Converts an empty basic disk with the GUID Partition Table \(GPT\) partition style into a basic disk with the master boot record \(MBR\) partition style.
+Converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
 
 > [!IMPORTANT]
 > The disk must be empty to convert it into an MBR disk. Back up your data, and then delete all partitions or volumes before converting the disk.
 
-For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](http://go.microsoft.com/fwlink/?LinkId=207050) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207050\).
+For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](http://go.microsoft.com/fwlink/?LinkId=207050) (http://go.microsoft.com/fwlink/?LinkId=207050).
 
 ## Syntax
 

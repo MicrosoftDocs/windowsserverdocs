@@ -11,23 +11,23 @@ ms.topic: article
 ms.assetid: da05b596-60be-4a36-94bb-46b04b3830b4
 ---
 # Securing End-to-End IPsec Connections by Using IKEv2 in Windows Server 2012
-In  Windows Server 2012 , Internet Key Exchange version 2 \(IKEv2\) support is broadened from previous Windows versions.
+In  Windows Server 2012 , Internet Key Exchange version 2 (IKEv2) support is broadened from previous Windows versions.
 
 For example, in  Windows Server 2012 , IKEv2 does the following:
 
--   Supports additional scenarios, including IPsec end\-to\-end transport mode connections
+-   Supports additional scenarios, including IPsec end-to-end transport mode connections
 
--   Provides interoperability for Windows with other operating systems that use IKEv2 for end\-to\-end security
+-   Provides interoperability for Windows with other operating systems that use IKEv2 for end-to-end security
 
--   Supports Suite B \(RFC 4869\) requirements
+-   Supports Suite B (RFC 4869) requirements
 
--   Coexists with existing policies that deploy AuthIP\/IKEv1
+-   Coexists with existing policies that deploy AuthIP/IKEv1
 
 -   Uses the Windows PowerShell interface exclusively for configuration. You cannot configure IKEv2 through the user interface.
 
 -   Uses certificates for the authentication mechanism
 
-In  Windows Server 2008 R2 , IKEv2 is available as a virtual private network \(VPN\) tunneling protocol that supports automatic VPN reconnection. IKEv2 allows the security association to remain unchanged despite changes in the underlying connection.
+In  Windows Server 2008 R2 , IKEv2 is available as a virtual private network (VPN) tunneling protocol that supports automatic VPN reconnection. IKEv2 allows the security association to remain unchanged despite changes in the underlying connection.
 
 **In this document**
 
@@ -43,20 +43,20 @@ In  Windows Server 2008 R2 , IKEv2 is available as a virtual private network \
 > This topic includes sample Windows PowerShell cmdlets. For more information, see [How to Run a Windows PowerShell Cmdlet](http://go.microsoft.com/fwlink/p/?linkid=230693).
 
 ## Prerequisites
-These procedures assume that you already have a public key infrastructure \(PKI\) in place for computer authentication.
+These procedures assume that you already have a public key infrastructure (PKI) in place for computer authentication.
 
 ## <a name="BKMK_Step1"></a>Computers joined to a domain
-The following Windows PowerShell script establishes a connection security rule that uses IKEv2 for communication between two computers \(CLIENT1 and SERVER1\) that are joined to the corp.contoso.com domain as shown in Figure 1.
+The following Windows PowerShell script establishes a connection security rule that uses IKEv2 for communication between two computers (CLIENT1 and SERVER1) that are joined to the corp.contoso.com domain as shown in Figure 1.
 
 ![](../../media/Securing-End-to-End-IPsec-Connections-by-Using-IKEv2-in-Windows-Server-2012/Corpnet.gif)
 
-**Figure 1** The Contoso corporate network
+**Figure 1** The Contoso corporate network
 
 This script does the following:
 
 -   Creates a security group called **IPsec client and servers** and adds CLIENT1 and SERVER1 as members.
 
--   Creates a Group Policy Object \(GPO\) called **IPsecRequireInRequestOut** and links it to the corp.contoso.com domain.
+-   Creates a Group Policy Object (GPO) called **IPsecRequireInRequestOut** and links it to the corp.contoso.com domain.
 
 -   Sets the permissions to the GPO so that they apply only to the computers in **IPsec client and servers** and not to **Authenticated Users**.
 
@@ -126,17 +126,17 @@ Make sure that you install the required certificates on the participating comput
 
 > [!NOTE]
 > -   For local computers, you can import the certificates manually if you have administrator access to the computer. For more information, see [Import or export certificates and private keys](http://windows.microsoft.com/windows-vista/Import-or-export-certificates-and-private-keys).
-> -   You need a root certificate and a computer certificate on all computers that participate in the secure connection. Save the computer certificate in the **Personal\/Certificates** folder.
+> -   You need a root certificate and a computer certificate on all computers that participate in the secure connection. Save the computer certificate in the **Personal/Certificates** folder.
 > -   For remote computers, you can create a secure website to facilitate access to the script and certificates.
 
 ## <a name="BKMK_Troubleshooting"></a>Troubleshooting
 Follow these procedures to verify and troubleshoot your IKEv2 IPsec connections:
 
-#### Use the Windows Firewall with Advanced Security snap\-in to verify that a connection security rule is enabled.
+#### Use the Windows Firewall with Advanced Security snap-in to verify that a connection security rule is enabled.
 
 1.  On the **Start** screen, type**wf.msc**, and then press ENTER.
 
-2.  In the left pane of the Windows Firewall with Advanced Security snap\-in, click **Connection Security Rules**, and then verify that there is an enabled connection security rule.
+2.  In the left pane of the Windows Firewall with Advanced Security snap-in, click **Connection Security Rules**, and then verify that there is an enabled connection security rule.
 
 3.  Expand **Monitoring**, and then click **Connection Security Rules** to verify that your IKEv2 rule is active for your currently active profile.
 
@@ -144,9 +144,9 @@ Follow these procedures to verify and troubleshoot your IKEv2 IPsec connections:
 
 1.  Open a Windows PowerShell command prompt.
 
-2.  Type **get\-NetIPsecQuickModeSA** to display the Quick Mode security associations.
+2.  Type **get-NetIPsecQuickModeSA** to display the Quick Mode security associations.
 
-3.  Type **get\-NetIPsecMainModeSA** to display the Main Mode security associations.
+3.  Type **get-NetIPsecMainModeSA** to display the Main Mode security associations.
 
 #### Use netsh to capture IPsec events.
 
@@ -170,7 +170,7 @@ Follow these procedures to verify and troubleshoot your IKEv2 IPsec connections:
     </item>
     ```
 
-    In this example, there are 32 instances of the **ERROR\_IPSEC\_IKE\_NO\_CERT** error. So now you can search for **ERROR\_IPSEC\_IKE\_NO\_CERT** to get more details regarding this error.
+    In this example, there are 32 instances of the **ERROR_IPSEC_IKE_NO_CERT** error. So now you can search for **ERROR_IPSEC_IKE_NO_CERT** to get more details regarding this error.
 
 You might not find the exact answer for the issue, but you can find good hints. For example, you might find that there seems to be an issue with the certificates, so you can look at your certificates and the related cmdlets for possible issues.
 

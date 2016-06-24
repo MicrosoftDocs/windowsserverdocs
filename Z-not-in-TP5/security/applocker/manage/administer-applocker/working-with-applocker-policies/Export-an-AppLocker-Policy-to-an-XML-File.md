@@ -19,7 +19,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 1.  On the **Start** screen, type**secpol.msc**.
 
-2.  In the console tree, expand **Application Control Policies**, right\-click **AppLocker**, and then click **Export Policy**.
+2.  In the console tree, expand **Application Control Policies**, right-click **AppLocker**, and then click **Export Policy**.
 
 3.  Browse to the location where you want to save the XML file.
 

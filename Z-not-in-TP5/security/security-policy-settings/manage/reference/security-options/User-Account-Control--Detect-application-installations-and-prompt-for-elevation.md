@@ -30,12 +30,12 @@ Some software might attempt to install itself after being given permission to ru
   
 ### Best practices  
   
-1.  Installer detection is unnecessary when enterprises run standard user desktops that capitalize on delegated installation technologies like Group Policy Software Install \(GPSI\) or SMS. Therefore you can set this security policy to **Disabled**.  
+1.  Installer detection is unnecessary when enterprises run standard user desktops that capitalize on delegated installation technologies like Group Policy Software Install (GPSI) or SMS. Therefore you can set this security policy to **Disabled**.  
   
 2.  Enable the **User Account Control: Detect application installations and prompt for elevation** setting so standard users must provide administrative credentials before software is installed.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -44,13 +44,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Enabled|  
+|Stand-Alone Server Default Settings|Enabled|  
 |DC Effective Default Settings|Enabled|  
 |Member Server Effective Default Settings|Enabled|  
 |Client Computer Effective Default Settings|Enabled|  
   
 ### Operating system version differences  
-There are no differences in this policy between operating systems beginning with Windows Vista and Windows Server 2008.  
+There are no differences in this policy between operating systems beginning with Windows Vista and Windows Server 2008.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  

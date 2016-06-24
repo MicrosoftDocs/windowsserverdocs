@@ -46,12 +46,12 @@ You can use DNS Query Resolution Policies to specify how incoming resolution que
 |Field|Description|Possible values|  
 |---------|---------------|-------------------|  
 |**Name**|Policy name|-   Up to 256 characters<br />-   Can contain any character valid for a file name|  
-|**State**|Policy state|-   Enable \(default\)<br />-   Disabled|  
+|**State**|Policy state|-   Enable (default)<br />-   Disabled|  
 |**Level**|Policy level|-   Server<br />-   Zone|  
 |**Processing order**|Once a query is classified by level and applies on, the server finds the first policy for which the query matches the criteria and applies it to query|-   Numeric value<br />-   Unique value per policy containing the same level and applies on value|  
-|**Action**|Action to be performed by DNS server|-   Allow \(default for zone level\)<br />-   Deny \(default on server level\)<br />-   Ignore|  
-|**Criteria**|Policy condition \(AND\/OR\) and list of criterion to be met for policy to be applied|-   Condition operator \(AND\/OR\)<br />-   List of criteria \(see the criterion table below\)|  
-|**Scope**|List of zone scopes and weighted values per scope. Weighted values are used for load balancing distribution. For instance, if this list includes datacenter1 with a weight of 3 and datacenter2 with a weight of 5 the server will respond with a record from datacentre1 three times out of eight requests|-   List of zone scopes \(by name\) and weights|  
+|**Action**|Action to be performed by DNS server|-   Allow (default for zone level)<br />-   Deny (default on server level)<br />-   Ignore|  
+|**Criteria**|Policy condition (AND/OR) and list of criterion to be met for policy to be applied|-   Condition operator (AND/OR)<br />-   List of criteria (see the criterion table below)|  
+|**Scope**|List of zone scopes and weighted values per scope. Weighted values are used for load balancing distribution. For instance, if this list includes datacenter1 with a weight of 3 and datacenter2 with a weight of 5 the server will respond with a record from datacentre1 three times out of eight requests|-   List of zone scopes (by name) and weights|  
   
 > [!NOTE]  
 > Server level policies can only have the values **Deny** or **Ignore** as an action.  
@@ -60,24 +60,24 @@ The DNS policy criteria field is composed of two elements:
   
 |Name|Description|Sample values|  
 |--------|---------------|-----------------|  
-|**Client Subnet**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,Spain,France** \- resolves to true if the subnet is identified as either Spain or France<br />-   **NE,Canada,Mexico** – resolves to true if the client subnet is any subnet other than Canada and Mexico|  
+|**Client Subnet**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,Spain,France** - resolves to true if the subnet is identified as either Spain or France<br />-   **NE,Canada,Mexico** – resolves to true if the client subnet is any subnet other than Canada and Mexico|  
 |**Transport Protocol**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,TCP**<br />-   **EQ,UDP**|  
 |**Internet Protocol**|Network protocol used in the query. Possible entries are **IPv4** and **IPv6**|-   **EQ,IPv4**<br />-   **EQ,IPv6**|  
 |**Server Interface IP address**|IP address for the incoming DNS server network interface|-   **EQ,10.0.0.1**<br />-   **EQ,192.168.1.1**|  
 |**FQDN**|FQDN of record in the query, with the possibility of using a wild card|-   **EQ,www.contoso.com** – resolves tot rue only the if the query is trying to resolve the *www.contoso.com* FQDN<br />-   **EQ,\*.contoso.com,\*.woodgrove.com** – resolves to true if the query is for any record ending in *contoso.com***OR***woodgrove.com*|  
-|**Query Type**|Type of record being queried \(A, SVR, TXT\)|-   **EQ,TXT,SRV** – resolves tot rue if the query is requesting a TXT **OR** SRV record<br />-   **EQ,MX** – resolves tot rue if the query is requesting an MX record|  
-|**Time of Day**|Time of day the query is received|-   **EQ,10:00\-12:00,22:00\-23:00** – resolves tot rue if the query is received between 10 AM and noon, **OR** between 10PM and 11PM|  
+|**Query Type**|Type of record being queried (A, SVR, TXT)|-   **EQ,TXT,SRV** – resolves tot rue if the query is requesting a TXT **OR** SRV record<br />-   **EQ,MX** – resolves tot rue if the query is requesting an MX record|  
+|**Time of Day**|Time of day the query is received|-   **EQ,10:00-12:00,22:00-23:00** – resolves tot rue if the query is received between 10 AM and noon, **OR** between 10PM and 11PM|  
   
-Using the table above as a starting point, the table below could be used to define a criterion that is used to match queries for any type of records but SRV records in the contoso.com domain coming from a client in the 10.0.0.0\/24 subnet via TCP between 8 and 10 PM through interface 10.0.0.3:  
+Using the table above as a starting point, the table below could be used to define a criterion that is used to match queries for any type of records but SRV records in the contoso.com domain coming from a client in the 10.0.0.0/24 subnet via TCP between 8 and 10 PM through interface 10.0.0.3:  
   
 |Name|Value|  
 |--------|---------|  
-|Client Subnet|EQ,10.0.0.0\/24|  
+|Client Subnet|EQ,10.0.0.0/24|  
 |Transport Protocol|EQ,TCP|  
 |Server Interface IP address|EQ,10.0.0.3|  
-|FQDN|EQ,\*.contoso.com|  
+|FQDN|EQ,*.contoso.com|  
 |Query Type|NE,SRV|  
-|Time of Day|EQ,20:00\-22:00|  
+|Time of Day|EQ,20:00-22:00|  
   
 You can create multiple query resolution policies of the same level, as long as they have a different value for the processing order. When multiple policies are available, the DNS server processes incoming queries in the following manner:  
   
@@ -86,7 +86,7 @@ You can create multiple query resolution policies of the same level, as long as 
 ### Recursion Policies  
 Recursion policies are a special **type** of server level policies. Recursion policies control how the DNS server performs recursion for a query. Recursion policies apply only when query processing reaches the recursion path. You can choose a value of DENY or IGNORE for recursion for a set of queries. Alternatively, you can choose a set of forwarders for a set of queries.  
   
-You can use recursion policies to implement a Split\-brain DNS configuration. In this configuration, the DNS server performs recursion for a set of clients for a query, while the DNS server does not perform recursion for other clients for that query.  
+You can use recursion policies to implement a Split-brain DNS configuration. In this configuration, the DNS server performs recursion for a set of clients for a query, while the DNS server does not perform recursion for other clients for that query.  
   
 Recursion policies contains the same elements a regular DNS query resolution policy contains, along with the elements in the table below:  
   
@@ -141,7 +141,7 @@ Add-DnsServerQueryResolutionPolicy -Name "BlackholePolicy" -Action IGNORE -FQDN 
 ```  
   
 ### Block queries from a subnet  
-You can also block queries coming from a specific subnet. The script below creates a subnet for 172.0.33.0\/24 and then creates a policy to ignore all queries coming from that subnet:  
+You can also block queries coming from a specific subnet. The script below creates a subnet for 172.0.33.0/24 and then creates a policy to ignore all queries coming from that subnet:  
   
 ```  
 Add-DnsServerClientSubnet -Name "MaliciousSubnet06" -IPv4Subnet 172.0.33.0/24  
@@ -157,7 +157,7 @@ Add-DnsServerRecursionScope -Name "InternalClients" -EnableRecursion $True
 Add-DnsServerQueryResolutionPolicy -Name "SplitBrainPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP  "EQ,10.0.0.34"  
 ```  
   
-The first line in the script changes the default recursion scope, simply named as “.” \(dot\) to disable recursion. The second line creates a recursion scope named *InternalClients* with recursion enabled. And the third line creates a policy to apply the newly create recursion scope to any queries coming in through a server interface that has 10.0.0.34 as an IP address.  
+The first line in the script changes the default recursion scope, simply named as “.” (dot) to disable recursion. The second line creates a recursion scope named *InternalClients* with recursion enabled. And the third line creates a policy to apply the newly create recursion scope to any queries coming in through a server interface that has 10.0.0.34 as an IP address.  
   
 ### Create a server level zone transfer policy  
 You can control zone transfer in a more granular form by using DNS Zone Transfer policies. The sample script below can be used to allow zone transfers for any server on a given subnet:  
@@ -167,7 +167,7 @@ Add-DnsServerClientSubnet -Name "AllowedSubnet" -IPv4Subnet 172.21.33.0/24
 Add-DnsServerZoneTransferPolicy -Name "NorthAmericaPolicy" -Action IGNORE -ClientSubnet "ne,AllowedSubnet"  
 ```  
   
-The first line in the script creates a subnet object named *AllowedSubnet* with the IP block 172.21.33.0\/24. The second line creates a zone transfer policy to allow zone transfers to any DNS server on the subnet previously created.  
+The first line in the script creates a subnet object named *AllowedSubnet* with the IP block 172.21.33.0/24. The second line creates a zone transfer policy to allow zone transfers to any DNS server on the subnet previously created.  
   
 ### Create a zone level zone transfer policy  
 You can also create zone level zone transfer policies. The example below ignores any request for a zone transfer for contoso.com coming in from a server interface that has an IP address of 10.0.0.33:  

@@ -30,27 +30,27 @@ You can evaluate how the AppLocker policy is currently implemented for documenta
 
     For the procedure to do this, see [Configure an AppLocker Policy for Audit Only](Configure-an-AppLocker-Policy-for-Audit-Only.md).
 
--   **Review AppLocker events with Get\-AppLockerFileInformation**
+-   **Review AppLocker events with Get-AppLockerFileInformation**
 
-    For both event subscriptions and local events, you can use the **Get\-AppLockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked \(if you are using the audit\-only enforcement mode\) and how many times the event has occurred for each file.
+    For both event subscriptions and local events, you can use the **Get-AppLockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked (if you are using the audit-only enforcement mode) and how many times the event has occurred for each file.
 
-    For the procedure to do this, see [Review AppLocker Events with Get\-AppLockerFileInformation](#BKMK_AppLkr_Review_Events).
+    For the procedure to do this, see [Review AppLocker Events with Get-AppLockerFileInformation](#BKMK_AppLkr_Review_Events).
 
--   **Review AppLocker events with Test\-AppLockerPolicy**
+-   **Review AppLocker events with Test-AppLockerPolicy**
 
-    You  can use the **Test\-AppLockerPolicy** Windows PowerShell cmdlet to determine determine whether any of the rules in your rule collections will be blocked on your reference computer or the computer on which you maintain policies.
+    You  can use the **Test-AppLockerPolicy** Windows PowerShell cmdlet to determine determine whether any of the rules in your rule collections will be blocked on your reference computer or the computer on which you maintain policies.
 
     For the procedure to do this, see [Test an AppLocker Policy by Using Test-AppLockerPolicy](Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md).
 
-### <a name="BKMK_AppLkr_Review_Events"></a>Review AppLocker events with Get\-AppLockerFileInformation
-For both event subscriptions and local events, you can use the **Get\-AppLockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked \(if the **Audit only** enforcement setting is applied\) and how many times the event has occurred for each file.
+### <a name="BKMK_AppLkr_Review_Events"></a>Review AppLocker events with Get-AppLockerFileInformation
+For both event subscriptions and local events, you can use the **Get-AppLockerFileInformation** Windows PowerShell cmdlet to determine which files have been blocked or would have been blocked (if the **Audit only** enforcement setting is applied) and how many times the event has occurred for each file.
 
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.
 
 > [!NOTE]
 > If the AppLocker logs are not on the local computer, you will need permission to view the logs. If the output is saved to a file, you will need permission to read that file.
 
-##### To review AppLocker events with Get\-AppLockerFileInformation
+##### To review AppLocker events with Get-AppLockerFileInformation
 
 1.  Open a Command Prompt window.
 
@@ -76,9 +76,9 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 1.  Open Event Viewer. To do this, click **Start**, type **eventvwr.msc** in the **Search programs and files** box, and then press ENTER.
 
-2.  In the console tree under **Application and Services Logs\\Microsoft\\Windows**, double\-click **AppLocker**.
+2.  In the console tree under **Application and Services Logs\Microsoft\Windows**, double-click **AppLocker**.
 
-AppLocker events are listed in either the **EXE and DLL** log, the **MSI and Script** log, or the **Packaged app\-Deployment** or **Packaged app\-Execution** log. Event information includes the enforcement setting, file name, date and time, and user name. The logs can be exported to other file formats for further analysis.
+AppLocker events are listed in either the **EXE and DLL** log, the **MSI and Script** log, or the **Packaged app-Deployment** or **Packaged app-Execution** log. Event information includes the enforcement setting, file name, date and time, and user name. The logs can be exported to other file formats for further analysis.
 
 ## See Also
 [AppLocker Overview \[Client\]](assetId:///1637ae87-5059-4d95-8c68-96f35cbc88c7)

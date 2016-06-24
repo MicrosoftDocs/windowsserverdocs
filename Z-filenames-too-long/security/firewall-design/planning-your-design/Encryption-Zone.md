@@ -15,24 +15,24 @@ Some servers in the organization host data that is very sensitive, including med
 
 To support the additional security requirements of these servers, we recommend that you create an encryption zone to contain the computers and that requires that the sensitive inbound and outbound network traffic be encrypted.
 
-You must create a group in Active Directory to contain members of the encryption zone. The settings and rules for the encryption zone are typically similar to those for the isolated domain, and you can save time and effort by copying those GPOs to serve as a starting point. You then modify the security methods list to include only algorithm combinations that include encryption protocols.
+You must create a group in Active Directory to contain members of the encryption zone. The settings and rules for the encryption zone are typically similar to those for the isolated domain, and you can save time and effort by copying those GPOs to serve as a starting point. You then modify the security methods list to include only algorithm combinations that include encryption protocols.
 
 Creation of the group and how to link it to the GPOs that apply the rules to members of the group are discussed in the [Planning Group Policy Deployment for Your Isolation Zones](Planning-Group-Policy-Deployment-for-Your-Isolation-Zones.md) section.
 
-## GPO settings for encryption zone servers running  Windows Server 2012 ,  Windows Server 2008  or  Windows Server 2008 R2 
-The GPO for computers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008  should include the following:
+## GPO settings for encryption zone servers running  Windows Server 2012 ,  Windows Server 2008  or  Windows Server 2008 R2 
+The GPO for computers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008  should include the following:
 
 -   IPsec default settings that specify the following options:
 
     1.  Exempt all ICMP traffic from IPsec.
 
-    2.  Key exchange \(main mode\) security methods and algorithm. We recommend that you use at least DH4, AES and SHA2 in your settings. Use the strongest algorithm combinations that are common to all your supported operating systems.
+    2.  Key exchange (main mode) security methods and algorithm. We recommend that you use at least DH4, AES and SHA2 in your settings. Use the strongest algorithm combinations that are common to all your supported operating systems.
 
-    3.  Data protection \(quick mode\) algorithm combinations. Check **Require encryption for all connection security rules that use these settings**, and then specify one or more integrity and encryption combinations. We recommend that you do not include DES or MD5 in any setting. They are included only for compatibility with previous versions of Windows. Use the strongest algorithm combinations that are common to all your supported operating systems.
+    3.  Data protection (quick mode) algorithm combinations. Check **Require encryption for all connection security rules that use these settings**, and then specify one or more integrity and encryption combinations. We recommend that you do not include DES or MD5 in any setting. They are included only for compatibility with previous versions of Windows. Use the strongest algorithm combinations that are common to all your supported operating systems.
 
         If any NAT devices are present on your networks, use ESP encapsulation..
 
-    4.  Authentication methods. Include at least computer\-based Kerberos V5 authentication. If you want to use user\-based access to isolated servers then you must also include user\-based Kerberos V5 authentication as an optional authentication method. Likewise, if any of your domain isolation members cannot use Kerberos V5 authentication, then you must include certificate\-based authentication as an optional authentication method.
+    4.  Authentication methods. Include at least computer-based Kerberos V5 authentication. If you want to use user-based access to isolated servers then you must also include user-based Kerberos V5 authentication as an optional authentication method. Likewise, if any of your domain isolation members cannot use Kerberos V5 authentication, then you must include certificate-based authentication as an optional authentication method.
 
 -   The following connection security rules:
 
@@ -45,7 +45,7 @@ The GPO for computers that are running  Windows Server 2012 ,  Windows Server 2
 
 -   A registry policy that includes the following values:
 
-    1.  Enable PMTU discovery. Enabling this setting allows TCP\/IP to dynamically determine the largest packet size supported across a connection. The value is found at HKLM\\System\\CurrentControlSet\\Services\\TCPIP\\Parameters\\EnablePMTUDiscovery \(dword\). The sample GPO preferences XML file in [Appendix A: Sample GPO Template Files for Settings Used in this Guide](../Appendix-A--Sample-GPO-Template-Files-for-Settings-Used-in-this-Guide.md) sets the value to **1**.
+    1.  Enable PMTU discovery. Enabling this setting allows TCP/IP to dynamically determine the largest packet size supported across a connection. The value is found at HKLM\System\CurrentControlSet\Services\TCPIP\Parameters\EnablePMTUDiscovery (dword). The sample GPO preferences XML file in [Appendix A: Sample GPO Template Files for Settings Used in this Guide](../Appendix-A--Sample-GPO-Template-Files-for-Settings-Used-in-this-Guide.md) sets the value to **1**.
 
     > [!NOTE]
     > For a sample template for these registry settings, see [Appendix A: Sample GPO Template Files for Settings Used in this Guide](../Appendix-A--Sample-GPO-Template-Files-for-Settings-Used-in-this-Guide.md).

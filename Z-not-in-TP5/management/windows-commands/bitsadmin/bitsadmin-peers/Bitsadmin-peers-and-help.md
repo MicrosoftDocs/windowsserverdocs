@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 49016dcb-e3be-44d9-b00a-1a42eb5984ff
 ---
 # Bitsadmin peers and help
-Displays the command\-line usage for the **Peers** commands.
+Displays the command-line usage for the **Peers** commands.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ Bitsadmin /Peers /Help
 ```
 
 ## <a name="BKMK_examples"></a>Examples
-The following command displays the command\-line help for the **Peers** commands.
+The following command displays the command-line help for the **Peers** commands.
 
 ```
 Bitsadmin /Peers /Help

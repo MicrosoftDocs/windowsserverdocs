@@ -36,11 +36,11 @@ Specifies a DNS resource record type. The default resource record type is A. The
 |MX|Specifies the mail exchanger.|
 |NS|Specifies a DNS name server for the named zone.|
 |PTR|Specifies a computer name if the query is an IP address; otherwise, specifies the pointer to other information.|
-|SOA|Specifies the start\-of\-authority for a DNS zone.|
+|SOA|Specifies the start-of-authority for a DNS zone.|
 |TXT|Specifies the text information.|
 |UID|Specifies the user identifier.|
 |UINFO|Specifies the user information.|
-|WKS|Describes a well\-known service.|
+|WKS|Describes a well-known service.|
 
 {help | ?}
 
@@ -50,7 +50,7 @@ Displays a short summary of **nslookup** subcommands
 
 -   The **set type** command performs the same function as the **set querytype** command.
 
--   For more information about resource record types, see Request For Comment \(RFC\) 1035.
+-   For more information about resource record types, see Request For Comment (RFC) 1035.
 
 ## Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

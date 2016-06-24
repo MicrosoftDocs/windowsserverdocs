@@ -15,13 +15,13 @@ author: cwatsonmsft
 # Create a virtual switch for Hyper-V virtual machines
 **This is preliminary content and subject to change.**  
   
-A virtual switch allows virtual machines created on Hyper\-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper\-V role on Windows Server Technical Preview. To create additional virtual switches, use Hyper\-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../../networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
+A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server Technical Preview. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../../networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
-Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#bkmk_sswitchembedded). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper\-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/Networking.md) documentation.   
+Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#bkmk_sswitchembedded). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/Networking.md) documentation.   
   
-## <a name="BKMK_HyperVMan"></a>Create a virtual switch by using Hyper\-V Manager  
+## <a name="BKMK_HyperVMan"></a>Create a virtual switch by using Hyper-V Manager  
   
-1.  Open Hyper\-V Manager, select the Hyper\-V host computer name.  
+1.  Open Hyper-V Manager, select the Hyper-V host computer name.  
   
 2.  Select **Action** > **Virtual Switch Manager**.  
   
@@ -31,24 +31,24 @@ Virtual machine networking can be a complex subject. And there are several new v
   
     |Connection type|Description|  
     |-------------------|---------------|  
-    |External|Gives virtual machines access to a physical network to communicate with servers and clients on an external network. Allows virtual machines on the same Hyper\-V server to communicate with each other.|  
-    |Internal|Allows communication between virtual machines on the same Hyper\-V server, and between the virtual machines and the management host operating system.|  
-    |Private|Only allows communication between virtual machines on the same Hyper\-V server. A private network is isolated from all external network traffic on the Hyper\-V server. This type of network is useful when you must create an isolated networking environment, like an isolated test domain.|  
+    |External|Gives virtual machines access to a physical network to communicate with servers and clients on an external network. Allows virtual machines on the same Hyper-V server to communicate with each other.|  
+    |Internal|Allows communication between virtual machines on the same Hyper-V server, and between the virtual machines and the management host operating system.|  
+    |Private|Only allows communication between virtual machines on the same Hyper-V server. A private network is isolated from all external network traffic on the Hyper-V server. This type of network is useful when you must create an isolated networking environment, like an isolated test domain.|  
   
 4.  Select **Create Virtual Switch**.  
   
 5.  Add a name for the virtual switch.  
   
-6.  If you select External, choose the network adapter \(NIC\) that you want to use and any other options described in the following table.  
+6.  If you select External, choose the network adapter (NIC) that you want to use and any other options described in the following table.  
   
     ![](../media/Hyper-V-NewVSwitch-ExternalOptions.png)  
   
     |Setting name|Description|  
     |----------------|---------------|  
-    |Allow management operating system to share this network adapter|Select this option if you want to allow the Hyper\-V host to share the use of the virtual switch and NIC or NIC team with the virtual machine. With this enabled, the host can use any of the settings that you configure for the virtual switch like Quality of Service \(QoS\) settings, security settings, or other features of the Hyper\-V virtual switch.|  
-    |Enable single\-root I\/O virtualization \(SR\-IOV\)|Select this option only if  you want to allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. For more information, see [Single-Root I/O Virtualization](https://technet.microsoft.com/library/dn641211.aspx#Sec4) in the Poster Companion Reference: Hyper\-V Networking.|  
+    |Allow management operating system to share this network adapter|Select this option if you want to allow the Hyper-V host to share the use of the virtual switch and NIC or NIC team with the virtual machine. With this enabled, the host can use any of the settings that you configure for the virtual switch like Quality of Service (QoS) settings, security settings, or other features of the Hyper-V virtual switch.|  
+    |Enable single-root I/O virtualization (SR-IOV)|Select this option only if  you want to allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. For more information, see [Single-Root I/O Virtualization](https://technet.microsoft.com/library/dn641211.aspx#Sec4) in the Poster Companion Reference: Hyper-V Networking.|  
   
-7.  If you want to isolates network traffic from the management Hyper\-V host operating system or other virtual machines that share the same virtual switch, select **Enable virtual LAN identification for management operating system**. You can change the VLAN ID to any number or leave the default. This is the virtual LAN identification number that the management operating system will use for all network communication through this virtual switch.  
+7.  If you want to isolates network traffic from the management Hyper-V host operating system or other virtual machines that share the same virtual switch, select **Enable virtual LAN identification for management operating system**. You can change the VLAN ID to any number or leave the default. This is the virtual LAN identification number that the management operating system will use for all network communication through this virtual switch.  
   
     ![](../media/Hyper-V-NewSwitch-VLAN.png)  
   
@@ -62,7 +62,7 @@ Virtual machine networking can be a complex subject. And there are several new v
   
 1.  On the Windows desktop, click the Start button and type any part of the name **Windows PowerShell**.  
   
-2.  Right\-click Windows PowerShell and select **Run as Administrator**.  
+2.  Right-click Windows PowerShell and select **Run as Administrator**.  
   
 3.  Find existing network adapters by running the [Get-NetAdapter](http://technet.microsoft.com/library/jj130867.aspx) cmdlet. Make a note of the network adapter name that you want to use for the virtual switch.  
   

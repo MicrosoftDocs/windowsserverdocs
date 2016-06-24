@@ -38,18 +38,18 @@ The three key areas to determine for AppLocker policy management are:
 
 3.  Policy maintenance
 
-    Detail how rules will be added to the policy, in which Group Policy Object \(GPO\) the rules should be defined, and how to modify rules when applications are retired, updated, or added.
+    Detail how rules will be added to the policy, in which Group Policy Object (GPO) the rules should be defined, and how to modify rules when applications are retired, updated, or added.
 
 The following table contains the added sample data that was collected when determining how to maintain and manage AppLocker policies.
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
 |------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|------------|------------------|
-|Bank Tellers|Teller\-East and Teller\-West|Yes|Teller Software|C:\\Program Files\\Woodgrove\\Teller.exe|File is signed; create a publisher condition|Allow|Tellers\-AppLockerTellerRules|Web help|
-||||Windows files|C:\\Windows|Create a path exception to the default rule to exclude \\Windows\\Temp|Allow||Help desk|
-|Human Resources|HR\-All|Yes|Check Payout|C:\\Program Files\\Woodgrove\\HR\\Checkcut.exe|File is signed; create a publisher condition|Allow|HR\-AppLockerHRRules|Web help|
-||||Time Sheet Organizer|C:\\Program Files\\Woodgrove\\HR\\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
-||||Internet Explorer 7|C:\\Program Files\\Internet Explorer\\|File is signed; create a publisher condition|Deny||Web help|
-||||Windows files|C:\\Windows|Use the default rule for the Windows path|Allow||Help desk|
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|Web help|
+||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||Help desk|
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|Web help|
+||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
+||||Internet Explorer 7|C:\Program Files\Internet Explorer\|File is signed; create a publisher condition|Deny||Web help|
+||||Windows files|C:\Windows|Use the default rule for the Windows path|Allow||Help desk|
 
 The following two tables illustrate examples of documenting considerations to maintain and manage AppLocker policies.
 
@@ -72,8 +72,8 @@ The following table is an example of what to consider and record.
 
 |Business group|Rule update policy|Application decommission policy|Application version policy|Application deployment policy|
 |------------------|----------------------|-----------------------------------|------------------------------|---------------------------------|
-|Bank Tellers|Planned: Monthly through business office triage<br /><br />Emergency: Request through help desk|Through business office triage<br /><br />30\-day notice required|General policy: Keep past versions for 12 months<br /><br />List policies for each application|Coordinated through business office<br /><br />30\-day notice required|
-|Human Resources|Planned: Monthly through HR triage<br /><br />Emergency: Request through help desk|Through HR triage<br /><br />30\-day notice required|General policy: Keep past versions for 60 months<br /><br />List policies for each application|Coordinated through HR<br /><br />30\-day notice required|
+|Bank Tellers|Planned: Monthly through business office triage<br /><br />Emergency: Request through help desk|Through business office triage<br /><br />30-day notice required|General policy: Keep past versions for 12 months<br /><br />List policies for each application|Coordinated through business office<br /><br />30-day notice required|
+|Human Resources|Planned: Monthly through HR triage<br /><br />Emergency: Request through help desk|Through HR triage<br /><br />30-day notice required|General policy: Keep past versions for 60 months<br /><br />List policies for each application|Coordinated through HR<br /><br />30-day notice required|
 
 ## Next steps
 After you have determined your application control management strategy for each of the business group's applications, the following task remains:

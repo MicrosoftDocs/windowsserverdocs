@@ -13,14 +13,14 @@ ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 author: KBDAzure
 ---
 # Avoid pausing a virtual machine
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -38,16 +38,16 @@ Paused virtual machines don't release their allocated memory, which means that m
   
 *If this is intentional, no further action is required. Otherwise, consider resuming these virtual machines or shutting them down.*  
   
-#### Use Hyper\-V Manager to resume the virtual machine  
+#### Use Hyper-V Manager to resume the virtual machine  
   
-1.  Open Hyper\-V Manager. \(From the **Tools** menu of Server Manager, click **Hyper\-V Manager**.\)  
+1.  Open Hyper-V Manager. (From the **Tools** menu of Server Manager, click **Hyper-V Manager**.)  
   
 2.  From the **Virtual Machines** list, find the virtual machines with a state of **Paused**.  
   
     > [!IMPORTANT]  
-    > A state of **Paused\-critical** occurs when there is very little free space remaining on the physical storage for that virtual machine. Before you attempt to resume a virtual machine in this state, free up available space on the physical storage.  
+    > A state of **Paused-critical** occurs when there is very little free space remaining on the physical storage for that virtual machine. Before you attempt to resume a virtual machine in this state, free up available space on the physical storage.  
   
-3.  Right\-click each virtual machine name, then click **Resume**. This returns the virtual machine to a running state. After that, if you want to shut down the virtual machine,  right\-click it again and choose **Shut down**.  
+3.  Right-click each virtual machine name, then click **Resume**. This returns the virtual machine to a running state. After that, if you want to shut down the virtual machine,  right-click it again and choose **Shut down**.  
   
 #### Use Windows PowerShell to resume the virtual machine  
   

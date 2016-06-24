@@ -46,9 +46,9 @@ The Impact and Personally Identifiable Information resource properties are enabl
   
 3.  Expand **Dynamic Access Control**, and then click **Resource Properties**.  
   
-4.  Right\-click **Impact**, and then click **Enable**.  
+4.  Right-click **Impact**, and then click **Enable**.  
   
-5.  Right\-click **Personally Identifiable Information**, and then click **Enable**.  
+5.  Right-click **Personally Identifiable Information**, and then click **Enable**.  
   
 ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**  
   
@@ -68,19 +68,19 @@ A string content classification rule scans a file for a specific string. If the 
   
 1.  Log on to the file server as a member of the Administrators security group.  
   
-2.  From the Windows PowerShell command prompt, type **Update\-FsrmClassificationPropertyDefinition** and then press ENTER. This will synchronize the property definitions created on the domain controller to the file server.  
+2.  From the Windows PowerShell command prompt, type **Update-FsrmClassificationPropertyDefinition** and then press ENTER. This will synchronize the property definitions created on the domain controller to the file server.  
   
 3.  Open File Server Resource Manager. In Server Manager, click **Tools**, and then click **File Server Resource Manager**.  
   
-4.  Expand **Classification Management**, right\-click **Classification Rules**, and then click **Configure Classification Schedule**.  
+4.  Expand **Classification Management**, right-click **Classification Rules**, and then click **Configure Classification Schedule**.  
   
 5.  Select the **Enable fixed schedule** check box, select the **Allow continuous classification for new files** check box, choose a day of the week to run the classification, and then click **OK**.  
   
-6.  Right\-click **Classification Rules**, and then click **Create Classification Rule**.  
+6.  Right-click **Classification Rules**, and then click **Create Classification Rule**.  
   
 7.  On the **General** tab, in the **Rule name** box, type a rule name such as **Contoso Confidential**.  
   
-8.  On the **Scope** tab, click **Add**, and choose the folders that should be included in this rule, such as D:\\Finance Documents.  
+8.  On the **Scope** tab, click **Add**, and choose the folders that should be included in this rule, such as D:\Finance Documents.  
   
     > [!NOTE]  
     > You can also choose a dynamic name space for the scope. For more information about dynamic name spaces for classification rules, see [What's New in File Server Resource Manager in Windows Server 2012 \[redirected\]](assetId:///d53c603e-6217-4b98-8508-e8e492d16083).  
@@ -99,7 +99,7 @@ A string content classification rule scans a file for a specific string. If the 
   
 12. In the **Expression** column, type **Contoso Confidential**, and then click **OK**.  
   
-13. On the **Evaluation Type** tab, select the **Re\-evaluate existing property values** check box, click **Overwrite the existing value**, and then click **OK**.  
+13. On the **Evaluation Type** tab, select the **Re-evaluate existing property values** check box, click **Overwrite the existing value**, and then click **OK**.  
   
 ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**  
   
@@ -113,7 +113,7 @@ New-FSRMClassificationRule -Name “Contoso Confidential” -Property "Impact_MS
 ```  
   
 ## <a name="BKMK_Step3"></a>Step 3: Create a regular expression content classification rule  
-A regular expression classification rule scans a file for a pattern that matches the regular expression. If a string that matches the regular expression is found, the value of a resource property can be configured. In this example, we will scan each file on a network shared folder and look for a string that matches the pattern of a social security number \(XXX\-XX\-XXXX\). If the pattern is found, the associated file is classified as having personally identifiable information.  
+A regular expression classification rule scans a file for a pattern that matches the regular expression. If a string that matches the regular expression is found, the value of a resource property can be configured. In this example, we will scan each file on a network shared folder and look for a string that matches the pattern of a social security number (XXX-XX-XXXX). If the pattern is found, the associated file is classified as having personally identifiable information.  
   
 [Do this step using Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
   
@@ -121,15 +121,15 @@ A regular expression classification rule scans a file for a pattern that matches
   
 1.  Sign in to the file server as a member of the Administrators security group.  
   
-2.  From the Windows PowerShell command prompt, type **Update\-FsrmClassificationPropertyDefinition**, and then press ENTER. This will synchronize the property definitions that are created on the domain controller to the file server.  
+2.  From the Windows PowerShell command prompt, type **Update-FsrmClassificationPropertyDefinition**, and then press ENTER. This will synchronize the property definitions that are created on the domain controller to the file server.  
   
 3.  Open File Server Resource Manager. In Server Manager, click **Tools**, and then click **File Server Resource Manager**.  
   
-4.  Right\-click **Classification Rules**, and then click **Create Classification Rule**.  
+4.  Right-click **Classification Rules**, and then click **Create Classification Rule**.  
   
 5.  On the **General** tab, in the **Rule name** box, type a name for the classification rule, such as PII Rule.  
   
-6.  On the **Scope** tab, click **Add**, and then choose the folders that should be included in this rule, such as D:\\Finance Documents.  
+6.  On the **Scope** tab, click **Add**, and then choose the folders that should be included in this rule, such as D:\Finance Documents.  
   
 7.  On the **Classification** tab, configure the following:  
   
@@ -143,11 +143,11 @@ A regular expression classification rule scans a file for a pattern that matches
   
 9. In the **Expression Type** column, select **Regular expression**.  
   
-10. In the **Expression** column, type **^\(?\!000\)\(\[0\-7\]\\d{2}|7\(\[0\-7\]\\d|7\[012\]\)\)\(\[ \-\]?\)\(?\!00\)\\d\\d\\3\(?\!0000\)\\d{4}$**  
+10. In the **Expression** column, type **^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$**  
   
 11. In the **Minimum Occurrences** column, type **10**, and then click **OK**.  
   
-12. On the **Evaluation Type** tab, select the **Re\-evaluate existing property values** check box, click **Overwrite the existing value**, and then click **OK**.  
+12. On the **Evaluation Type** tab, select the **Re-evaluate existing property values** check box, click **Overwrite the existing value**, and then click **OK**.  
   
 ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**  
   
@@ -164,17 +164,17 @@ You can verify that the files are properly classified by viewing the properties 
   
 1.  On the file server, run the classification rules by using File Server Resource Manager.  
   
-    1.  Click **Classification Management**, right\-click **Classification Rules**, and then click **Run Classification With All Rules Now**.  
+    1.  Click **Classification Management**, right-click **Classification Rules**, and then click **Run Classification With All Rules Now**.  
   
     2.  Click the **Wait for classification to complete** option, and then click **OK**.  
   
     3.  Close the Automatic Classification Report.  
   
-    4.  You can do this by using Windows PowerShell with the following command: **Start\-FSRMClassification –RunDuration 0 \-Confirm:$false**  
+    4.  You can do this by using Windows PowerShell with the following command: **Start-FSRMClassification –RunDuration 0 -Confirm:$false**  
   
-2.  Navigate to the folder that was specified in the classification rules, such as D:\\Finance Documents.  
+2.  Navigate to the folder that was specified in the classification rules, such as D:\Finance Documents.  
   
-3.  Right\-click a file in that folder, and then click **Properties**.  
+3.  Right-click a file in that folder, and then click **Properties**.  
   
 4.  Click the **Classification** tab, and verify that the file is classified correctly.  
   

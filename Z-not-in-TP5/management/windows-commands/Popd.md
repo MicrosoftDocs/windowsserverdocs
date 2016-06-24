@@ -23,7 +23,7 @@ popd
 
 |Parameter|Description|
 |-------------|---------------|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -33,7 +33,7 @@ popd
 
     You can use the **popd** command to change the current directory to the directory most recently stored by the **pushd** command. If you use the **popd** command, the directory on the top of the stack is removed from the stack and the current directory is changed to that directory. If you use the **popd** command again, the next directory on the stack is removed.
 
--   When command extensions are enabled, the **popd** command removes any drive\-letter assignations created by **pushd**.
+-   When command extensions are enabled, the **popd** command removes any drive-letter assignations created by **pushd**.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example shows how you can use the **pushd** command and the **popd** command in a batch program to change the current directory from the one in which the batch program was run and then change it back:

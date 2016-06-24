@@ -14,12 +14,12 @@ ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 Brings disks that are currently offline to an online state.
 
 > [!IMPORTANT]
-> This command is not available in any edition of Windows Vista.
+> This command is not available in any edition of Windows Vista.
 
 > [!IMPORTANT]
-> This command will fail if it is used on a read\-only disk.
+> This command will fail if it is used on a read-only disk.
 
-For instructions regarding how to use this command, see [Reactivate a Missing or Offline Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207046) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207046\).
+For instructions regarding how to use this command, see [Reactivate a Missing or Offline Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207046) (http://go.microsoft.com/fwlink/?LinkId=207046).
 
 ## Syntax
 
@@ -35,7 +35,7 @@ online disk [noerr]
 
 ## Remarks
 
--   When used without parameters in Windows Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non\-foreign dynamic disks.
+-   When used without parameters in Windows Vista, this command operates on a disk group. For basic disks, there is never more than one disk per group. For dynamic disks, the group includes all non-foreign dynamic disks.
 
 -   For basic disks, this command will attempt to bring online the selected disk and all volumes on that disk.
 
@@ -43,7 +43,7 @@ online disk [noerr]
 
 -   If a dynamic disk in a disk group is brought online and it is the only disk in the group, then the original group is recreated and the disk is moved to that group. If there are other disks in the group and they are online, then the disk is simply added back into the group.
 
--   If the group of a selected disk contains mirrored or RAID\-5 volumes, this command also resynchronizes these volumes.
+-   If the group of a selected disk contains mirrored or RAID-5 volumes, this command also resynchronizes these volumes.
 
 -   A disk must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 

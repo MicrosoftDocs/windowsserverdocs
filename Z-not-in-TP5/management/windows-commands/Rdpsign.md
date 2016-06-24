@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 4a6fa8ce-3d32-49a5-b056-bcc1a23391f5
 ---
 # Rdpsign
-Enables you to digitally sign a Remote Desktop Protocol \(.rdp\) file.
+Enables you to digitally sign a Remote Desktop Protocol (.rdp) file.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -26,20 +26,20 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 
 |Parameter|Description|
 |-------------|---------------|
-|\/sha1 <hash>|Specifies the thumbprint, which is the Secure Hash Algorithm 1 \(SHA1\) hash of the signing certificate that is included in the certificate store.|
-|\/q|Quiet mode. No output when the command succeeds and minimal output if the command fails.|
-|\/v|Verbose mode. Displays all warnings, messages, and status.|
-|\/l|Tests the signing and output results without actually replacing any of the input files.|
-|\/?|Displays help at the command prompt.|
+|/sha1 <hash>|Specifies the thumbprint, which is the Secure Hash Algorithm 1 (SHA1) hash of the signing certificate that is included in the certificate store.|
+|/q|Quiet mode. No output when the command succeeds and minimal output if the command fails.|
+|/v|Verbose mode. Displays all warnings, messages, and status.|
+|/l|Tests the signing and output results without actually replacing any of the input files.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   The SHA1 certificate thumbprint should represent a trusted .rdp file publisher. To obtain the certificate thumbprint, open the Certificates snap\-in, double\-click the certificate that you want to use \(either in the local computer's certificates store or in your personal certificates store\), click the **Details** tab, and then in the **Field** list, click **Thumbprint**.
+-   The SHA1 certificate thumbprint should represent a trusted .rdp file publisher. To obtain the certificate thumbprint, open the Certificates snap-in, double-click the certificate that you want to use (either in the local computer's certificates store or in your personal certificates store), click the **Details** tab, and then in the **Field** list, click **Thumbprint**.
 
     > [!NOTE]
     > When you copy the thumbprint for use with the Rdpsign.exe tool, you must remove any spaces.
 
--   You must specify the .rdp file \(or files\) to sign by using the full file name. Wildcard characters are not accepted.
+-   You must specify the .rdp file (or files) to sign by using the full file name. Wildcard characters are not accepted.
 
 -   The signed output files will overwrite the input files.
 

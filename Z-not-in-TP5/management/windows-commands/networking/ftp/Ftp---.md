@@ -22,7 +22,7 @@ Displays the valid ftp commands that are available from the ftp prompt. For exam
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\[<valid ftp subcommand>\]|Displays the description for a valid ftp command.|  
+|[<valid ftp subcommand>]|Displays the description for a valid ftp command.|  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Display the valid ftp commands that are available from the ftp prompt.  

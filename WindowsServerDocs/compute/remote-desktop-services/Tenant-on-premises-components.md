@@ -14,7 +14,7 @@ author: lizap
 # Tenant on-premises components
 The following information describes the on-premises components that make up the desktop hosting deployment.  
   
-##	Clients  
+##  Clients  
 To access the hosted desktops and applications, the users must use Remote Desktop clients that support Remote Desktop Protocol (RDP) 7.1 or higher. In particular, the client must support Remote Desktop Gateway and Remote Desktop Connection Broker. To deliver applications to the local desktop, the client must also support the RemoteApp feature. To achieve highest gateway scale, the client must support the pure HTTP transport connections to RD Gateway.  
   
 Additional information:  
@@ -26,7 +26,7 @@ Additional information:
 [Mac App Store - Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12)  
 [Microsoft Remote Desktop in the App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)  
   
-##	Active Directory Domain Services  
+##  Active Directory Domain Services  
 Some larger and more sophisticated tenants may choose to host an Active Directory Domain Services (AD DS) server on their premises. In this case, the AD DS server in the tenant’s environment will typically be a replica of AD DS server that is on the tenant’s premises. This is supported by creating a virtual network in the tenant’s environment and using the Azure VPN to create a site-to-site connection from the tenant’s on-premises network to the tenant’s virtual network in the Azure data center.  
   
 Additional information:  

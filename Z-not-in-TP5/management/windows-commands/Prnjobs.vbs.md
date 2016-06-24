@@ -24,25 +24,25 @@ Cscript Prnjobs {-z | -m | -x | -l | -?} [-s <ServerName>]
 
 |Parameter|Description|
 |-------------|---------------|
-|\-z|Pauses the print job specified with the **\-j** parameter.|
-|\-m|Resumes the print job specified with the **\-j** parameter.|
-|\-x|Cancels the print job specified with the **\-j** parameter.|
-|\-l|Lists all the print jobs in a print queue.|
-|\-s <ServerName>|Specifies the name of the remote computer that hosts the printer that you want to manage. If you do not specify a computer, the local computer is used.|
-|\-p <PrinterName>|Specifies the name of the printer that you want to manage. Required.|
-|\-j <JobID>|Specifies \(by ID number\) the print job you want to cancel.|
-|\-u <UserName> \-w <Password>|Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. If you do not specify an account, you must be logged on under an account with these permissions for the command to work.|
-|\/?|Displays help at the command prompt.|
+|-z|Pauses the print job specified with the **-j** parameter.|
+|-m|Resumes the print job specified with the **-j** parameter.|
+|-x|Cancels the print job specified with the **-j** parameter.|
+|-l|Lists all the print jobs in a print queue.|
+|-s <ServerName>|Specifies the name of the remote computer that hosts the printer that you want to manage. If you do not specify a computer, the local computer is used.|
+|-p <PrinterName>|Specifies the name of the printer that you want to manage. Required.|
+|-j <JobID>|Specifies (by ID number) the print job you want to cancel.|
+|-u <UserName> -w <Password>|Specifies an account with permissions to connect to the computer that hosts the printer that you want to manage. All members of the target computer's local Administrators group have these permissions, but the permissions can also be granted to other users. If you do not specify an account, you must be logged on under an account with these permissions for the command to work.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   The **Prnjobs.vbs** command is a Visual Basic script located in the %WINDIR%\\System32\\Printing\_Admin\_Scripts\\<language> directory. To use this command, at a command prompt, type **Cscript** followed by the full path to the Prnjobs.vbs file, or change directories to the appropriate folder. For example:
+-   The **Prnjobs.vbs** command is a Visual Basic script located in the %WINDIR%\System32\Printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **Cscript** followed by the full path to the Prnjobs.vbs file, or change directories to the appropriate folder. For example:
 
     ```
     Cscript %WINDIR%\System32\Printing_Admin_Scripts\en-US\Prnjobs.vbs
     ```
 
--   If the information that you supply contains spaces, use quotation marks around the text \(for example, `"Computer Name"`\).
+-   If the information that you supply contains spaces, use quotation marks around the text (for example, `"Computer Name"`).
 
 ## <a name="BKMK_examples"></a>Examples
 To pause a print job with a job ID of 27 sent to the remote computer named HRServer for printing on the printer named ColorPrinter, type:
@@ -51,7 +51,7 @@ To pause a print job with a job ID of 27 sent to the remote computer named HRSer
 Cscript Prnjobs.vbs -z -s HRServer -p ColorPrinter -j 27
 ```
 
-To list all current print jobs in the queue for the local printer named ColorPrinter\_2, type:
+To list all current print jobs in the queue for the local printer named ColorPrinter_2, type:
 
 ```
 Cscript Prnjobs.vbs -l -p ColorPrinter_2

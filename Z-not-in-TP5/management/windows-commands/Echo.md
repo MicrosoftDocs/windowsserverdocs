@@ -24,9 +24,9 @@ echo [on | off]
 
 |Parameter|Description|
 |-------------|---------------|
-|\[on &#124; off\]|Turns on or off the command echoing feature. Command echoing is on by default.|
+|[on &#124; off]|Turns on or off the command echoing feature. Command echoing is on by default.|
 |<Message>|Specifies the text to display on the screen.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -36,9 +36,9 @@ echo [on | off]
 
 -   If used in a batch file, **echo on** and **echo off** do not affect the setting at the command prompt.
 
--   To prevent echoing a particular command in a batch file, insert an at sign \(@\) in front of the command. To prevent echoing all commands in a batch file, include the **echo off** command at the beginning of the file.
+-   To prevent echoing a particular command in a batch file, insert an at sign (@) in front of the command. To prevent echoing all commands in a batch file, include the **echo off** command at the beginning of the file.
 
--   To display a pipe \(**|**\) or redirection character \(**<** or **>**\) when you are using **echo**, use a caret \(^\) immediately before the pipe or redirection character \(for example, **^|**, **^>**, or **^<**\). To display a caret, type two carets in succession \(**^^**\).
+-   To display a pipe (**|**) or redirection character (**<** or **>**) when you are using **echo**, use a caret (^) immediately before the pipe or redirection character (for example, **^|**, **^>**, or **^<**). To display a caret, type two carets in succession (**^^**).
 
 ## <a name="BKMK_examples"></a>Examples
 To display the current **echo** setting, type:
@@ -65,7 +65,7 @@ echo off
 > [!NOTE]
 > When **echo** is turned off, the command prompt does not appear in the Command Prompt window. To display the command prompt again, type **echo on**.
 
-To prevent all commands in a batch file \(including the **echo off** command\) from displaying on the screen, on the first line of the batch file type:
+To prevent all commands in a batch file (including the **echo off** command) from displaying on the screen, on the first line of the batch file type:
 
 ```
 @echo off
@@ -96,7 +96,7 @@ If no .txt files are found when the batch file is run, the following message dis
 This directory contains no text files.
 ```
 
-If .txt files are found when the batch file is run the following output displays \(for this example, assume the files File1.txt, File2.txt, and File3.txt exist\):
+If .txt files are found when the batch file is run the following output displays (for this example, assume the files File1.txt, File2.txt, and File3.txt exist):
 
 ```
 This directory contains the following text files:

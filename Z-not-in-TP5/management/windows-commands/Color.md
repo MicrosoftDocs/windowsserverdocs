@@ -25,7 +25,7 @@ color [[<B>]<F>]
 |-------------|---------------|
 |<B>|Specifies the background color.|
 |<F>|Specifies the foreground color.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -54,7 +54,7 @@ color [[<B>]<F>]
 
 -   If you specify only one hexadecimal digit, the corresponding color is used as the foreground color and the background color is set to the default color.
 
--   To set the default Command Prompt window color, click the upper\-left corner of the Command Prompt window, click **Defaults**, click the **Colors** tab, and then click the colors that you want to use for the **Screen Text** and **Screen Background**.
+-   To set the default Command Prompt window color, click the upper-left corner of the Command Prompt window, click **Defaults**, click the **Colors** tab, and then click the colors that you want to use for the **Screen Text** and **Screen Background**.
 
 -   If *B* and *F* are the same, the **color** command sets ERRORLEVEL to 1, and no change is made to either the foreground or the background color.
 

@@ -23,7 +23,7 @@ set metadata [<Drive>:][<Path>]<MetaData.cab>
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<Path>\]|Specifies the location to create the metadata file.|
+|[<Drive>:][<Path>]|Specifies the location to create the metadata file.|
 |<MetaData.cab>|Specifies the name of the cab file to store shadow creation metadata.|
 
 #### Additional references

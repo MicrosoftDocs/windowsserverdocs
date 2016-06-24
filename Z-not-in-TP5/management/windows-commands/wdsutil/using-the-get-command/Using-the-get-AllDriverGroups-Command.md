@@ -21,8 +21,8 @@ WDSUTIL /Get-AllDriverGroups [/Server:<Server name>] [/Show:{PackageMetaData | F
 
 |Parameter|Description|
 |-------------|---------------|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
-|\[\/Show: {PackageMetaData &#124; Filters &#124; All}\]|Displays the metadata for all the driver packages in the specified group. **PackageMetaData** displays information about all the filters for the driver group. **Filters** displays the metadata for all driver packages and filters for the group.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
+|[/Show: {PackageMetaData &#124; Filters &#124; All}]|Displays the metadata for all the driver packages in the specified group. **PackageMetaData** displays information about all the filters for the driver group. **Filters** displays the metadata for all driver packages and filters for the group.|
 
 ## <a name="BKMK_examples"></a>Examples
 To view information about a driver file, type:

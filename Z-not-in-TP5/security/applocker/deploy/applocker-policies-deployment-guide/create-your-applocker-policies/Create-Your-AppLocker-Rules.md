@@ -14,7 +14,7 @@ ms.assetid: 72cd1356-1e25-499b-93d9-1e3e5b204cbc
 This topic for the IT professional describes what you need to know about AppLocker rules and the methods that you can to create rules.
 
 ## Creating AppLocker rules
-AppLocker rules apply to the targeted application, and they are the components that make up the AppLocker policy. Depending on your IT environment and the business group that requires application control policies, setting these access rules for each application can be time\-consuming and prone to error. With AppLocker, you can generate rules automatically or create rules individually. Creating rules that are derived from your planning document can help you avoid unintended results. For information about this planning document and other planning activities, see [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md).
+AppLocker rules apply to the targeted application, and they are the components that make up the AppLocker policy. Depending on your IT environment and the business group that requires application control policies, setting these access rules for each application can be time-consuming and prone to error. With AppLocker, you can generate rules automatically or create rules individually. Creating rules that are derived from your planning document can help you avoid unintended results. For information about this planning document and other planning activities, see [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md).
 
 ### Automatically generate your rules
 You can use a reference computer to automatically create a set of default rules for each of the installed applications, test and modify each rule as necessary, and deploy the policies. Creating most of the rules for all the installed applications gives you a starting point to build and test your policies. For information about performing this task, see the following topics:
@@ -50,9 +50,9 @@ For information about performing this task, see:
 6.  [Configure an AppLocker Policy for Audit Only](Configure-an-AppLocker-Policy-for-Audit-Only.md)
 
 ## About selecting rules
-AppLocker policies are composed of distinct rules for specific applications. These rules are grouped by collection, and they are implemented through an AppLocker policy definition. AppLocker policies are managed by using Group Policy or by using the Local Security Policy snap\-in for a single computer.
+AppLocker policies are composed of distinct rules for specific applications. These rules are grouped by collection, and they are implemented through an AppLocker policy definition. AppLocker policies are managed by using Group Policy or by using the Local Security Policy snap-in for a single computer.
 
-When you determine what types of rules to create for each of your business groups or organizational units \(OUs\), you should also determine what enforcement setting to use for each group. Certain rule types are more applicable for some applications, depending on how the applications are deployed in a specific business group.
+When you determine what types of rules to create for each of your business groups or organizational units (OUs), you should also determine what enforcement setting to use for each group. Certain rule types are more applicable for some applications, depending on how the applications are deployed in a specific business group.
 
 For information about how to determine and document your AppLocker rules, see [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md).
 

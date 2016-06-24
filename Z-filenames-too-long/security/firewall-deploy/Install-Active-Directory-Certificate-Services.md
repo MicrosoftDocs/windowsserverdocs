@@ -11,10 +11,10 @@ ms.topic: article
 ms.assetid: c3fd61d8-438e-44cc-ae7b-bf266de50975
 ---
 # Install Active Directory Certificate Services
-To use certificates in a server isolation or domain isolation design, you must first set up the infrastructure to deploy the certificates. This is called a public key infrastructure \(PKI\). The services required for a PKI are available in  Windows Server 2012  in the form of the Active Directory Certificate Services \(AD CS\) role.
+To use certificates in a server isolation or domain isolation design, you must first set up the infrastructure to deploy the certificates. This is called a public key infrastructure (PKI). The services required for a PKI are available in  Windows Server 2012  in the form of the Active Directory Certificate Services (AD CS) role.
 
 > [!CAUTION]
-> Creation of a full PKI for an enterprise environment with all of the appropriate security considerations included in the design is beyond the scope of this guide. The following procedure shows you only the basics of installing an issuing certificate server; it is appropriate for a test lab environment only. For more information about deploying AD CS in a production environment, see [Active Directory Certificate Services Overview](assetId:///e37b2335-0796-449f-aaf4-0520e508f47d) in the Windows Server 2012 Technical Library \(http:\/\/technet.microsoft.com\/library\/hh831740.aspx\).
+> Creation of a full PKI for an enterprise environment with all of the appropriate security considerations included in the design is beyond the scope of this guide. The following procedure shows you only the basics of installing an issuing certificate server; it is appropriate for a test lab environment only. For more information about deploying AD CS in a production environment, see [Active Directory Certificate Services Overview](assetId:///e37b2335-0796-449f-aaf4-0520e508f47d) in the Windows Server 2012 Technical Library (http://technet.microsoft.com/library/hh831740.aspx).
 
 To perform this procedure, the computer on which you are installing AD CS must be joined to an Active Directory domain.
 
@@ -30,7 +30,7 @@ To complete this procedure, you must be a member of both the Domain Admins group
 
 3.  On the **Before you begin** page, click **Next**.
 
-4.  On the **Select installation type** page, ensure **Role\-based or feature\-based installation** is selected and click **Next**.
+4.  On the **Select installation type** page, ensure **Role-based or feature-based installation** is selected and click **Next**.
 
 5.  On the **Select destination server** page, ensure your server is selected and click **Next**.
 
@@ -58,13 +58,13 @@ To complete this procedure, you must be a member of both the Domain Admins group
 
 16. On the **Private Key** page, ensure **Create a new private key** is selected, and then click **Next**.
 
-17. On the **Cryptography for CA** page, keep the default settings for CSP \(**RSA\#Microsoft Software Key Storage Provider**\) and hash algorithm \(**sha1**\), and determine the best key character length for your deployment. Large key character lengths provide optimal security, but they can affect server performance. It is recommended that you keep the default setting of 2048 or, if appropriate for your deployment, reduce key character length to 1024. Click **Next**.
+17. On the **Cryptography for CA** page, keep the default settings for CSP (**RSA#Microsoft Software Key Storage Provider**) and hash algorithm (**sha1**), and determine the best key character length for your deployment. Large key character lengths provide optimal security, but they can affect server performance. It is recommended that you keep the default setting of 2048 or, if appropriate for your deployment, reduce key character length to 1024. Click **Next**.
 
 18. On the **CA Name** page, keep the suggested common name for the CA or change the name according to your requirements, and then click **Next**.
 
-19. On the **Validity Period** page, in **Specify the validity period**, type the number and select a time value \(Years, Months, Weeks, or Days\). The default setting of five years is recommended. Click **Next**.
+19. On the **Validity Period** page, in **Specify the validity period**, type the number and select a time value (Years, Months, Weeks, or Days). The default setting of five years is recommended. Click **Next**.
 
-20. On the **CA Database** page, in **Certificate database location** and **Certificate database log location**, specify the folder location for these items. If you specify locations other than the default locations, make sure that the folders are secured with access control lists \(ACLs\) that prevent unauthorized users or computers from accessing the CA database and log files.
+20. On the **CA Database** page, in **Certificate database location** and **Certificate database log location**, specify the folder location for these items. If you specify locations other than the default locations, make sure that the folders are secured with access control lists (ACLs) that prevent unauthorized users or computers from accessing the CA database and log files.
 
 21. Click **Next**, click **Configure**, and then click **Close**.
 

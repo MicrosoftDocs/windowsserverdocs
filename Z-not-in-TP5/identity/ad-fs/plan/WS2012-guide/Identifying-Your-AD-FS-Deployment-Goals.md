@@ -13,7 +13,7 @@ ms.assetid: 52c344e6-152d-432b-82ad-b2252e279b48
 author: billmath
 ---
 # Identifying Your AD FS Deployment Goals
-Correctly identifying your Active Directory Federation Services \(AD FS\) deployment goals is essential for the success of your AD FS design project. Depending on the size of your organization and the level of involvement that you want to provide for the information technology \(IT\) staff in any partner organizations, form a project team that can clearly articulate real\-world deployment issues in a vision statement. Make sure that the members of this team understand the direction in which your deployment project must move in order to reach your AD FS deployment goals.  
+Correctly identifying your Active Directory Federation Services (AD FS) deployment goals is essential for the success of your AD FS design project. Depending on the size of your organization and the level of involvement that you want to provide for the information technology (IT) staff in any partner organizations, form a project team that can clearly articulate real-world deployment issues in a vision statement. Make sure that the members of this team understand the direction in which your deployment project must move in order to reach your AD FS deployment goals.  
   
 When you write your vision statement, identify, clarify, and refine your deployment goals. Prioritize and, possibly, combine your deployment goals so that you can design and deploy AD FS by using an iterative approach. You can take advantage of existing, documented, and predefined AD FS deployment goals that are relevant to the AD FS designs and develop a working solution for your situation.  
   

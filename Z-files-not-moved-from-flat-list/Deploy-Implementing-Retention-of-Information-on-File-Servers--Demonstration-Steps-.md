@@ -47,9 +47,9 @@ In this step, we enable the Retention Period and Discoverability resource proper
   
 3.  Expand **Dynamic Access Control**, and then click **Resource Properties**.  
   
-4.  Right\-click **Retention Period**, and then click **Enable**.  
+4.  Right-click **Retention Period**, and then click **Enable**.  
   
-5.  Right\-click **Discoverability**, and then click **Enable**.  
+5.  Right-click **Discoverability**, and then click **Enable**.  
   
 ![](media/PowerShellLogoSmall.gif)**[!INCLUDE[wps_proc_title](includes/wps_proc_title_md.md)]**  
   
@@ -69,11 +69,11 @@ In this step, we use the File Server Resource Manager console to configure the S
   
 1.  Sign in to the file server as a member of the Administrators security group.  
   
-2.  From the Windows PowerShell command prompt, type **Update\-FsrmClassificationPropertyDefinition**, and then press ENTER. This will synchronize the property definitions that are created on the domain controller to the file server.  
+2.  From the Windows PowerShell command prompt, type **Update-FsrmClassificationPropertyDefinition**, and then press ENTER. This will synchronize the property definitions that are created on the domain controller to the file server.  
   
 3.  Open File Server Resource Manager. In Server Manager, click **Tools**, and then click **File Server Resource Manager**.  
   
-4.  Right\-click **File Server Resource Manager \(local\)**, and then click **Configure Options**.  
+4.  Right-click **File Server Resource Manager (local)**, and then click **Configure Options**.  
   
 5.  On the **Email Notifications** tab, configure the following:  
   
@@ -81,7 +81,7 @@ In this step, we use the File Server Resource Manager console to configure the S
   
     -   In the **Default administrator recipients** box, type the email address of the administrator who should get the notification.  
   
-    -   In the **Default “From” e\-mail address** box, type the email address that should be used to send the notifications.  
+    -   In the **Default “From” e-mail address** box, type the email address that should be used to send the notifications.  
   
 6.  Click **OK**.  
   
@@ -98,7 +98,7 @@ In this step, we use the File Server Resource Manager console to create a file m
   
 -   The file is not classified as being on legal hold.  
   
--   The file is classified as having a long\-term retention period.  
+-   The file is classified as having a long-term retention period.  
   
 -   The file has not been modified in the last 10 years.  
   
@@ -110,17 +110,17 @@ In this step, we use the File Server Resource Manager console to create a file m
   
 2.  Open File Server Resource Manager. In Server Manager, click **Tools**, and then click **File Server Resource Manager**.  
   
-3.  Right\-click **File Management Tasks**, and then click **Create File Management Task**.  
+3.  Right-click **File Management Tasks**, and then click **Create File Management Task**.  
   
 4.  On the **General** tab, in the **Task name** box, type a name for the file management task, such as Retention Task.  
   
-5.  On the **Scope** tab, click **Add**, and choose the folders that should be included in this rule, such as D:\\Finance Documents.  
+5.  On the **Scope** tab, click **Add**, and choose the folders that should be included in this rule, such as D:\Finance Documents.  
   
 6.  On the **Action** tab, in the **Type** box, click **File expiration**. In the **Expiration directory** box, type a path to a folder on the local file server where the expired files will be moved. This folder should have an access control list that grants only file server administrators access.  
   
 7.  On the **Notification** tab, click **Add**.  
   
-    -   Select the **Send e\-mail to the following administrators** check box.  
+    -   Select the **Send e-mail to the following administrators** check box.  
   
     -   Select the **Send an email to users with affected files** check box, and then click **OK**.  
   
@@ -128,7 +128,7 @@ In this step, we use the File Server Resource Manager console to create a file m
   
     -   In the **Property** list, click **Discoverability**. In the **Operator** list, click **Not equal**. In the **Value** list, click **Hold**.  
   
-    -   In the **Property** list, click **Retention Period**. In the **Operator** list, click **Equal**. In the **Value** list, click **Long\-Term**.  
+    -   In the **Property** list, click **Retention Period**. In the **Operator** list, click **Equal**. In the **Value** list, click **Long-Term**.  
   
 9. On the **Condition** tab, select the **Days since file was last modified** check box, and then set the value to **3650**.  
   
@@ -153,7 +153,7 @@ $fmj1=New-FSRMFileManagementJob -Name "Retention Task" -Namespace @('D:\Finance 
 ```  
   
 ## <a name="BKMK_Step4"></a>Step 4: Classify a file manually  
-In this step, we manually classify a file to be on legal hold. The parent folder of this file will be classified with a long\-term retention period.  
+In this step, we manually classify a file to be on legal hold. The parent folder of this file will be classified with a long-term retention period.  
   
 #### To manually classify a file  
   
@@ -161,17 +161,17 @@ In this step, we manually classify a file to be on legal hold. The parent folder
   
 2.  Navigate to the folder that was configured in the scope of the file management task created in Step 3.  
   
-3.  Right\-click the folder, and then click **Properties**.  
+3.  Right-click the folder, and then click **Properties**.  
   
-4.  On the **Classification** tab, click **Retention Period**, click **Long\-Term**, and then click **OK**.  
+4.  On the **Classification** tab, click **Retention Period**, click **Long-Term**, and then click **OK**.  
   
-5.  Right\-click a file within that folder, and then click **Properties**.  
+5.  Right-click a file within that folder, and then click **Properties**.  
   
 6.  On the **Classification** tab, click **Discoverability**, click **Hold**, click **Apply**, and then click **OK**.  
   
 7.  On the file server, run the file management task by using the File Server Resource Manager console. After the file management task completes, check the folder and ensure the file was not moved to the expiration directory.  
   
-8.  Right\-click the same  file within that folder, and then click **Properties**.  
+8.  Right-click the same  file within that folder, and then click **Properties**.  
   
 9. On the **Classification** tab, click **Discoverability**, click **Not Applicable**, click **Apply**, and then click **OK**.  
   

@@ -120,15 +120,15 @@ Click next will display the summary page. Go through the rest of the wizard and 
   
 In order to enable on-behalf-of authentication, we need to ensure that AD FS returns an access token with scope user_impersonation to the client. Modify the claims issuance for ToDoListServiceWebApi to include the following three custom rules:  
   
-	@RuleName = "All claims"  
-	c:[]  
-	=> issue(claim = c);  
-	  
-	@RuleName = "Issue open id scope"  
-	=> issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "openid");  
-	  
-	@RuleName = "Issue user_impersonation scope"  
-	=> issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");  
+    @RuleName = "All claims"  
+    c:[]  
+    => issue(claim = c);  
+      
+    @RuleName = "Issue open id scope"  
+    => issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "openid");  
+      
+    @RuleName = "Issue user_impersonation scope"  
+    => issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");  
   
 ![](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO10.PNG)  
   
@@ -169,15 +169,15 @@ Go to your the ToDoListClient project in WebAPI-OnBehalfOf-DotNet solution. Open
   
 Your **appSettings** in App.Config should look similar to this:  
   
-	<appSettings>  
-	<!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />-->  
-	<add key="ida:ClientId" value="c7f7b85c-497c-4589-877f-b17a0bd13398" />  
-	<add key="ida:RedirectUri" value="https://arbitraryuri.com/" />  
-	<add key="ida:TodoListResourceId" value="https://localhost:44321/" />  
-	<!--<add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->  
-	<add key="ida:TodoListBaseAddress" value="https://localhost:44321" />  
-	<add key="ida:Authority" value="https://fs.anandmsft.com/adfs/"/>  
-	</appSettings>  
+    <appSettings>  
+    <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />-->  
+    <add key="ida:ClientId" value="c7f7b85c-497c-4589-877f-b17a0bd13398" />  
+    <add key="ida:RedirectUri" value="https://arbitraryuri.com/" />  
+    <add key="ida:TodoListResourceId" value="https://localhost:44321/" />  
+    <!--<add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->  
+    <add key="ida:TodoListBaseAddress" value="https://localhost:44321" />  
+    <add key="ida:Authority" value="https://fs.anandmsft.com/adfs/"/>  
+    </appSettings>  
   
 #### Modifying the code  
   
@@ -190,7 +190,7 @@ Comment the line reading the tenant information from the application config
   
 Change the value of string authority to  
   
-	private static string authority = ConfigurationManager.AppSettings["ida:Authority"];  
+    private static string authority = ConfigurationManager.AppSettings["ida:Authority"];  
   
 Change the code to read correct values of ToDoListResourceId and ToDoListBaseAddress  
   
@@ -198,8 +198,8 @@ Change the code to read correct values of ToDoListResourceId and ToDoListBaseAdd
     private static string todoListBaseAddress = ConfigurationManager.AppSettings["ida:TodoListBaseAddress"];  
   
 In the function MainWindow() change the authcontext initialization as:  
-	  
-	authContext = new AuthenticationContext(authority, false);  
+      
+    authContext = new AuthenticationContext(authority, false);  
   
 ### Adding the backend resource  
   
@@ -228,22 +228,22 @@ In order to complete the on-behalf-of flow, you need to create a backend resourc
 * Add the following code in the controller  
   
   
-		using System;  
-		using System.Collections.Generic;  
-		using System.Linq;  
-		using System.Net;  
-		using System.Net.Http;  
-		using System.Web.Http;  
-		namespace WebAPIOBO.Controllers  
-		{  
-		    public class WebAPIOBOController : ApiController  
-		    {  
-		        public IHttpActionResult Get()  
-		        {  
-		            return Ok("WebAPI via OBO");  
-		        }  
-		    }  
-		}  
+        using System;  
+        using System.Collections.Generic;  
+        using System.Linq;  
+        using System.Net;  
+        using System.Net.Http;  
+        using System.Web.Http;  
+        namespace WebAPIOBO.Controllers  
+        {  
+            public class WebAPIOBOController : ApiController  
+            {  
+                public IHttpActionResult Get()  
+                {  
+                    return Ok("WebAPI via OBO");  
+                }  
+            }  
+        }  
   
 This code will simply return the string when anyone puts a Get request for the WebAPI WebAPIOBO  
   

@@ -11,11 +11,11 @@ ms.topic: article
 ms.assetid: 2664da57-a7e6-4c62-a10f-1f7c442beba0
 ---
 # Audit IPsec Extended Mode
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit IPsec Extended Mode**, which determines whether the operating system generates audit events for the results of the Internet Key Exchange \(IKE\) protocol and Authenticated Internet Protocol \(AuthIP\) during Extended Mode negotiations.
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit IPsec Extended Mode**, which determines whether the operating system generates audit events for the results of the Internet Key Exchange (IKE) protocol and Authenticated Internet Protocol (AuthIP) during Extended Mode negotiations.
 
-IKE is an Internet standard, defined in RFC 2409, that defines a mechanism to establish IPsec security associations \(SAs\). An SA is a combination of a mutually agreeable policy and keys that define the security services and mechanisms that help protect communication between IPsec peers.
+IKE is an Internet standard, defined in RFC 2409, that defines a mechanism to establish IPsec security associations (SAs). An SA is a combination of a mutually agreeable policy and keys that define the security services and mechanisms that help protect communication between IPsec peers.
 
-AuthIP is an enhanced version of IKE that offers additional flexibility with support for user\-based authentication, authentication with multiple credentials, improved authentication method negotiation, and asymmetric authentication. Like IKE, AuthIP supports main\-mode and quick\-mode negotiation. AuthIP also supports Extended Mode, a part of IPsec peer negotiation during which a second round of authentication can be performed. Extended Mode, which is optional, can be used for multiple authentications. For example, with extended mode you can perform separate computer\-based and user\-based authentications.
+AuthIP is an enhanced version of IKE that offers additional flexibility with support for user-based authentication, authentication with multiple credentials, improved authentication method negotiation, and asymmetric authentication. Like IKE, AuthIP supports main-mode and quick-mode negotiation. AuthIP also supports Extended Mode, a part of IPsec peer negotiation during which a second round of authentication can be performed. Extended Mode, which is optional, can be used for multiple authentications. For example, with extended mode you can perform separate computer-based and user-based authentications.
 
 Event volume: High
 

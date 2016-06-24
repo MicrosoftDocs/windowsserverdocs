@@ -13,7 +13,7 @@ This topic describes how to manage the Group Policy Administrative Template Poli
 
 For information about how to edit Administrative Template Policy settings using the **Local Group Policy Editor**, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](../../local-group-policy-editor/Working-with-the-Administrative-Template-policy-settings-using-the-Local-Group-Policy-Editor.md).
 
-This topic contains procedures for Administrative Templates \(ADMX\) and Classic Administrative Templates \(ADM\):
+This topic contains procedures for Administrative Templates (ADMX) and Classic Administrative Templates (ADM):
 
 -   How to edit Administrative policy settings
 
@@ -25,24 +25,24 @@ This topic contains procedures for Administrative Templates \(ADMX\) and Classic
 
 -   How to add comments to Administrative Template policy settings
 
--   How to add or remove Classic Administrative Templates \(.adm files\)
+-   How to add or remove Classic Administrative Templates (.adm files)
 
 -   Filtering Classic Administrative Templates
 
-## <a name="BKMK_Edit_ADMX"></a>Administrative Templates \(ADMX\)
-Administrative Templates are registry\-based policy settings that appear under the **Administrative Templates** node of both the **Computer** and **User Configuration** nodes. This hierarchy is created when the Group Policy Management Console reads XML\-based Administrative Template files \(.admx\).
+## <a name="BKMK_Edit_ADMX"></a>Administrative Templates (ADMX)
+Administrative Templates are registry-based policy settings that appear under the **Administrative Templates** node of both the **Computer** and **User Configuration** nodes. This hierarchy is created when the Group Policy Management Console reads XML-based Administrative Template files (.admx).
 
 ### How to edit Administrative policy settings
 
 ##### To edit Administrative Template policy settings
 
-1.  Open the Group Policy Management Console. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the Group Policy Management Console. Right-click the Group Policy object you want to edit and then click **Edit**.
 
 2.  In the console tree, click the folder under **Administrative Templates** that contains the policy settings you want to configure.
 
 3.  In the **Setting** column, click the name for a policy setting to read a description of the policy setting.
 
-4.  To change that policy setting, double\-click the name of the policy setting.
+4.  To change that policy setting, double-click the name of the policy setting.
 
 5.  On the policy setting dialog box, click one of the following:
 
@@ -56,11 +56,11 @@ Administrative Templates are registry\-based policy settings that appear under t
 
 #### Additional considerations
 
--   Settings for **HKEY\_LOCAL\_MACHINE** are under **Computer Configuration**, and settings for **HKEY\_CURRENT\_USER** are under **User Configuration**.
+-   Settings for **HKEY_LOCAL_MACHINE** are under **Computer Configuration**, and settings for **HKEY_CURRENT_USER** are under **User Configuration**.
 
 -   If computer policy conflicts with user policy, computer policy generally takes precedence. However, if application authors disregard this convention, Group Policy cannot enforce it.
 
--   Administrative Template policy settings are also known as registry\-based policy settings.
+-   Administrative Template policy settings are also known as registry-based policy settings.
 
 ### How to filter Administrative Template policy settings
 The Group Policy Management Console provides the option to filter Administrative Template policy settings based on:
@@ -83,9 +83,9 @@ The Managed property filter has three states: **Any**, **Yes**, and **No**. Sett
 #### <a name="BKMK_MANAGED_PROC"></a>
 ###### To set the Administrative Templates Managed property filter
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration\\Policies** or **User Configuration\\Policies**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
 
 3.  In the **Managed** list, click the appropriate filter.
 
@@ -101,9 +101,9 @@ The Configured property filter has three states: **Any**, **Yes**, and **No**. S
 #### <a name="BKMK_CONFIGURED_PROC"></a>
 ###### To set the Administrative Templates Configured property filter
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration\\Policies** or **User Configuration\\Policies**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
 
 3.  In the **Configured** list, click the appropriate filter.
 
@@ -116,9 +116,9 @@ The Commented property filter has three states: **Any**, **Yes**, and **No**. Se
 
 ###### To set the Administrative Templates Commented property filter
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration\\Policies** or **User Configuration\\Policies**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
 
 3.  In the **Commented** list, click the appropriate filter.
 
@@ -131,25 +131,25 @@ The Commented property filter has three states: **Any**, **Yes**, and **No**. Se
 -   Filters do not work with [Classic Administrative Templates](https://technet.microsoft.com/library/cc725586.aspx).
 
 #### How to filter using Keyword filters
-The Group Policy Management Console allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings, including preference settings \(previously referred to as unmanaged policy settings\). However, you can use keyword filters to change how the Group Policy Management Editor displays Administrative Template policy settings.
+The Group Policy Management Console allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings, including preference settings (previously referred to as unmanaged policy settings). However, you can use keyword filters to change how the Group Policy Management Editor displays Administrative Template policy settings.
 
 ###### To set the Administrative Templates Keyword filter
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
 
 3.  Select the **Enable Keyword Filters** check box.
 
-4.  Type one or more keywords in the **Filter for word\(s\)** box.
+4.  Type one or more keywords in the **Filter for word(s)** box.
 
 5.  In the **Search Criteria** list, click the appropriate filter:
 
-    -   **Any**: The filter includes any of the words in the **Filter for word\(s\)** box.
+    -   **Any**: The filter includes any of the words in the **Filter for word(s)** box.
 
-    -   **All**: The filter includes all of the words in the **Filter for word\(s\)** box.
+    -   **All**: The filter includes all of the words in the **Filter for word(s)** box.
 
-    -   **Exact**: The filter includes exact matches of the words in the **Filter for word\(s\)** box.
+    -   **Exact**: The filter includes exact matches of the words in the **Filter for word(s)** box.
 
 6.  Select the appropriate check boxes next to **Within**.
 
@@ -168,19 +168,19 @@ The Group Policy Management Console allows you to change the criteria for displa
 -   Filters do not work with [Classic Administrative Templates](https://technet.microsoft.com/library/cc725586.aspx).
 
 #### How to filter by using Requirement filters
-The Group Policy Management Console allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings, including preference settings \(previously referred to as unmanaged policy settings\). However, you can use requirement filters to change how the Group Policy Management Console displays Administrative Template policy settings.
+The Group Policy Management Console allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings, including preference settings (previously referred to as unmanaged policy settings). However, you can use requirement filters to change how the Group Policy Management Console displays Administrative Template policy settings.
 
 ###### To set the Administrative Templates Requirement filter
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
 
 3.  Select the **Enable Requirements Filters** check box.
 
-4.  Type one or more keywords in the **Filter for word\(s\)** box.
+4.  Type one or more keywords in the **Filter for word(s)** box.
 
-5.  In the **Select the desired platform and application filter\(s\)** list, click the appropriate filter:
+5.  In the **Select the desired platform and application filter(s)** list, click the appropriate filter:
 
     -   **Include settings that match any of the selected platforms**.
 
@@ -202,30 +202,30 @@ You can include comments for each Administrative Template policy setting. You ca
 
 ##### To comment an Administrative Template policy setting
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
 2.  In the console tree, click the folder under **Administrative Templates** that contains the policy settings you want to configure.
 
-3.  In the **Setting** column, double\-click the name for the policy setting.
+3.  In the **Setting** column, double-click the name for the policy setting.
 
 4.  Type your comments in the **Comment** box.
 
 5.  Click **OK**.
 
-## <a name="BKMK_Edit_ADM"></a>Classic Administrative Templates \(ADM\)
-Classic Administrative Template files \(also known as ADM files\) do not use an XML format. Earlier versions of the Group Policy Management tool \(previously titled Group Policy Object Editor\) displayed these settings under the **Administrative Templates** node.
+## <a name="BKMK_Edit_ADM"></a>Classic Administrative Templates (ADM)
+Classic Administrative Template files (also known as ADM files) do not use an XML format. Earlier versions of the Group Policy Management tool (previously titled Group Policy Object Editor) displayed these settings under the **Administrative Templates** node.
 
-The current version of Administrative Template files \(known as ADMX files\) use XML. The Group Policy Management Console displays these settings under the **Administrative Templates** node. However, the Group Policy Management Console still recognizes ADM files and displays these settings under the **Classic Administrative Templates** node, which is a child node of **Administrative Templates**.
+The current version of Administrative Template files (known as ADMX files) use XML. The Group Policy Management Console displays these settings under the **Administrative Templates** node. However, the Group Policy Management Console still recognizes ADM files and displays these settings under the **Classic Administrative Templates** node, which is a child node of **Administrative Templates**.
 
-### How to add or remove Classic Administrative Templates \(.adm files\)
+### How to add or remove Classic Administrative Templates (.adm files)
 
-##### To add or remove Classic Administrative Templates \(.adm files\)
+##### To add or remove Classic Administrative Templates (.adm files)
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
-2.  In the console tree, under either **Computer Configuration** or **User Configuration**, right\-click **Administrative Templates**.
+2.  In the console tree, under either **Computer Configuration** or **User Configuration**, right-click **Administrative Templates**.
 
-3.  Click **Add\/Remove Templates**.
+3.  Click **Add/Remove Templates**.
 
 4.  Do one of the following:
 
@@ -234,6 +234,6 @@ The current version of Administrative Template files \(known as ADMX files\) use
     -   To remove a template, in the **Current Policy Templates** list, click the template, and then click **Remove**.
 
 ### Filtering Classic Administrative Templates
-The Group Policy Management Console displays all Classic Administrative Templates policy settings under the **Classic Administrative Templates** node, which is a subfolder of **Administrative Templates**. This view includes both managed policy settings and preference settings included in any Classic Administrative Templates \(also known as ADM files\).The filtering options included in the Group Policy Management Console apply only to Administrative Templates \(ADMX files\) and do not apply to Classic Administrative Templates.
+The Group Policy Management Console displays all Classic Administrative Templates policy settings under the **Classic Administrative Templates** node, which is a subfolder of **Administrative Templates**. This view includes both managed policy settings and preference settings included in any Classic Administrative Templates (also known as ADM files).The filtering options included in the Group Policy Management Console apply only to Administrative Templates (ADMX files) and do not apply to Classic Administrative Templates.
 
 

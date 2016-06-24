@@ -23,20 +23,20 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>
 
 |Parameter|Description|
 |-------------|---------------|
-|\/p <Path>|Specifies the path from which to start the search. By default, searching starts in the current working directory.|
-|\/m <SearchMask>|Searches files according to the specified search mask. The default search mask is **\*.\***.|
-|\/s|Instructs the **forfiles** command to search into subdirectories recursively.|
-|\/c "<Command>"|Runs the specified command on each file. Command strings should be enclosed in quotation marks. The default command is **"cmd \/c echo @file"**.|
-|\/d \[{\+&#124;\-}\]\[{<Date>&#124;<Days>}\]|Selects files with a last modified date within the specified time frame.<br /><br />-   Selects files with a last modified date later than or equal to \(**\+**\) or earlier than or equal to \(**\-**\) the specified date, where *Date* is in the format MM\/DD\/YYYY.<br />-   Selects files with a last modified date later than or equal to \(**\+**\) the current date plus the number of days specified, or earlier than or equal to \(**\-**\) the current date minus the number of days specified.<br />-   Valid values for *Days* include any number in the range 0–32,768. If no sign is specified, **\+** is used by default.|
-|\/?|Displays help at the command prompt.|
+|/p <Path>|Specifies the path from which to start the search. By default, searching starts in the current working directory.|
+|/m <SearchMask>|Searches files according to the specified search mask. The default search mask is **\*.\***.|
+|/s|Instructs the **forfiles** command to search into subdirectories recursively.|
+|/c "<Command>"|Runs the specified command on each file. Command strings should be enclosed in quotation marks. The default command is **"cmd /c echo @file"**.|
+|/d [{+&#124;-}][{<Date>&#124;<Days>}]|Selects files with a last modified date within the specified time frame.<br /><br />-   Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *Date* is in the format MM/DD/YYYY.<br />-   Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.<br />-   Valid values for *Days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   **Forfiles** is most commonly used in batch files.
 
--   **Forfiles \/s** is similar to **dir \/s.**
+-   **Forfiles /s** is similar to **dir /s.**
 
--   You can use the following variables in the command string as specified by the **\/c** command\-line option.
+-   You can use the following variables in the command string as specified by the **/c** command-line option.
 
     |Variable|Description|
     |------------|---------------|
@@ -50,17 +50,17 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c "<Command>"] [/d [{+|-}][{<Date>
     |@FDATE|Last modified date stamp on the file.|
     |@FTIME|Last modified time stamp on the file.|
 
--   With **forfiles**, you can run a command on or pass arguments to multiple files. For example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file \(\*.bat\) on drive C, with the file name "Myinput.txt" as the first argument.
+-   With **forfiles**, you can run a command on or pass arguments to multiple files. For example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file (*.bat) on drive C, with the file name "Myinput.txt" as the first argument.
 
 -   With **forfiles**, you can do any of the following:
 
-    -   Select files by an absolute date or a relative date by using the **\/d** parameter.
+    -   Select files by an absolute date or a relative date by using the **/d** parameter.
 
     -   Build an archive tree of files by using variables such as @FSIZEand @FDATE.
 
     -   Differentiate files from directories by using the @ISDIRvariable.
 
-    -   Include special characters in the command line by using the hexadecimal code for the character, in 0x*HH* format \(for example, 0x09 for a tab\).
+    -   Include special characters in the command line by using the hexadecimal code for the character, in 0x*HH* format (for example, 0x09 for a tab).
 
 -   **Forfiles** works by implementing the **recurse subdirectories** flag on tools that are designed to process only a single file.
 

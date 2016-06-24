@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
 ---
 # Using the get-ImageFile Command
-Retrieves information about the images contained in a Windows Image \(.wim\) file.
+Retrieves information about the images contained in a Windows Image (.wim) file.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ WDSUTIL [Options] /Get-ImageFilmediaFile:<wim file path> [/Detailed]
 |Parameter|Description|
 |-------------|---------------|
 mediaFile:<WIM file path>|Specifies the full path and file name of the .wim file.|
-|\[\/Detailed\]|Returns all image metadata from each image. If this option is not used, the default behavior is to return only the image name, description, and file name.|
+|[/Detailed]|Returns all image metadata from each image. If this option is not used, the default behavior is to return only the image name, description, and file name.|
 
 ## <a name="BKMK_examples"></a>Examples
 To view information about an image, type:

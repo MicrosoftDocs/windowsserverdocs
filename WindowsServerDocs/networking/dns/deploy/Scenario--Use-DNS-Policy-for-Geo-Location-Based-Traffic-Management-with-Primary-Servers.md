@@ -33,11 +33,11 @@ You can use the following DNS policy parameters to control the DNS server respon
 - **Transport Protocol** -  Transport protocol used in the query. Possible entries are **UDP** and **TCP**.
 - **Internet Protocol** - Network protocol used in the query. Possible entries are **IPv4** and **IPv6**.
 - **Server Interface IP address** - IP address of the network interface of the DNS server which received the DNS request.
-- **FQDN** - The Fully Qualified Domain Name \(FQDN\) of the record in the query, with the possibility of using a wild card.
-- **Query Type** - Type of record being queried \(A, SRV, TXT, etc.\).
+- **FQDN** - The Fully Qualified Domain Name (FQDN) of the record in the query, with the possibility of using a wild card.
+- **Query Type** - Type of record being queried (A, SRV, TXT, etc.).
 - **Time of Day** - Time of day the query is received. 
   
-You can combine the following criteria with a logical operator \(AND/OR\) to formulate policy expressions. When these expressions match, the policies are expected to perform one of the following actions.  
+You can combine the following criteria with a logical operator (AND/OR) to formulate policy expressions. When these expressions match, the policies are expected to perform one of the following actions.  
   
  
 - **Ignore** - The DNS server silently drops the query.          

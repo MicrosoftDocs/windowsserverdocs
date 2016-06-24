@@ -19,7 +19,7 @@ This topic describes how to configure the infrastructure required for enabling D
 |Configure server network settings|Configure the server network settings on the Remote Access server.|  
 |Configure routing in the corporate network|Configure routing in the corporate network to make sure traffic is appropriately routed.|  
 |Configure firewalls|Configure additional firewalls, if required.|  
-|Configure CAs and certificates|The Enable DirectAccess Wizard configures a built in Kerberos proxy that authenticates using user names and passwords. It also configures an IP\-HTTPS certificate on the Remote Access server.|  
+|Configure CAs and certificates|The Enable DirectAccess Wizard configures a built in Kerberos proxy that authenticates using user names and passwords. It also configures an IP-HTTPS certificate on the Remote Access server.|  
 |Configure the DNS server|Configure DNS settings for the Remote Access server.|  
 |Configure Active Directory|Join client computers to the Active Directory domain.|  
 |Configure GPOs|Configure GPOs for the deployment, if required.|  
@@ -31,22 +31,22 @@ The following network interface settings are required for a single server deploy
   
 -   Edge topology  
   
-    -   One Internet\-facing public static IPv4 or IPv6 address.  
+    -   One Internet-facing public static IPv4 or IPv6 address.  
   
     -   A single internal static IPv4 or IPv6 address.  
   
--   Behind NAT device \(two network adapters\)  
+-   Behind NAT device (two network adapters)  
   
-    -   A single internal network\-facing static IPv4 or IPv6 address.  
+    -   A single internal network-facing static IPv4 or IPv6 address.  
   
--   Behind NAT device \(one network adapter\)  
+-   Behind NAT device (one network adapter)  
   
     -   A single static IPv4 or IPv6 address.  
   
 > [!NOTE]  
-> In the event that the Remote Access server has two network adapters \(one classified in the domain profile and the other in a public\/private profile\), but a single NIC topology will be used, then the recommendation is as follows:  
+> In the event that the Remote Access server has two network adapters (one classified in the domain profile and the other in a public/private profile), but a single NIC topology will be used, then the recommendation is as follows:  
 >   
-> 1.  Ensure that the 2nd NIC is also classified in the domain profile \- Recommended.  
+> 1.  Ensure that the 2nd NIC is also classified in the domain profile - Recommended.  
 > 2.  If the 2nd NIC cannot be configured for the domain profile for any reason, then the DirectAccess IPsec policy must be manually scoped to all profiles using the following Windows PowerShell commands:  
 >   
 >     ```  
@@ -60,16 +60,16 @@ Configure routing in the corporate network as follows:
   
 -   When native IPv6 is deployed in the organization, add a route so that the routers on the internal network route IPv6 traffic back through the Remote Access server.  
   
--   Manually configure organization IPv4 and IPv6 routes on the Remote Access servers. Add a published route so that all traffic with an organization \(\/48\) IPv6 prefix is forwarded to the internal network. In addition, for IPv4 traffic, add explicit routes so that IPv4 traffic is forwarded to the internal network.  
+-   Manually configure organization IPv4 and IPv6 routes on the Remote Access servers. Add a published route so that all traffic with an organization (/48) IPv6 prefix is forwarded to the internal network. In addition, for IPv4 traffic, add explicit routes so that IPv4 traffic is forwarded to the internal network.  
   
 ## <a name="ConfigFirewalls"></a>Configure firewalls  
-When using additional firewalls in your deployment, apply the following Internet\-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
+When using additional firewalls in your deployment, apply the following Internet-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
   
 -   6to4 traffic—IP Protocol 41 inbound and outbound.  
   
--   IP\-HTTPS—Transmission Control Protocol \(TCP\) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
+-   IP-HTTPS—Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
   
-When using additional firewalls, apply the following Internet\-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv6 Internet:  
+When using additional firewalls, apply the following Internet-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv6 Internet:  
   
 -   IP Protocol 50  
   
@@ -79,13 +79,13 @@ When using additional firewalls, apply the following internal network firewall e
   
 -   ISATAP—Protocol 41 inbound and outbound  
   
--   TCP\/UDP for all IPv4\/IPv6 traffic  
+-   TCP/UDP for all IPv4/IPv6 traffic  
   
 ## <a name="ConfigCAs"></a>Configure CAs and certificates  
-The Enable DirectAccess Wizard configures a built in Kerberos proxy that authenticates using user names and passwords. It also configures an IP\-HTTPS certificate on the Remote Access server.  
+The Enable DirectAccess Wizard configures a built in Kerberos proxy that authenticates using user names and passwords. It also configures an IP-HTTPS certificate on the Remote Access server.  
   
 ### <a name="ConfigCertTemp"></a>Configure certificate templates  
-When you use an internal CA to issue certificates, you must configure a certificate template for the IP\-HTTPS certificate and the network location server website certificate.  
+When you use an internal CA to issue certificates, you must configure a certificate template for the IP-HTTPS certificate and the network location server website certificate.  
   
 ##### To configure a certificate template  
   
@@ -93,55 +93,55 @@ When you use an internal CA to issue certificates, you must configure a certific
   
 2.  Deploy the certificate template as described in [Deploying Certificate Templates](http://technet.microsoft.com/library/cc770794(WS.10).aspx).  
   
-### Configure the IP\-HTTPS certificate  
-Remote Access requires an IP\-HTTPS certificate to authenticate IP\-HTTPS connections to the Remote Access server. There are three certificate options for the IP\-HTTPS certificate:  
+### Configure the IP-HTTPS certificate  
+Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connections to the Remote Access server. There are three certificate options for the IP-HTTPS certificate:  
   
 -   **Public**—Supplied by a 3rd party.  
   
-    A certificate used for IP\-HTTPS authentication. In the case that the certificate subject name is not a wild card, then it must be the externally resolvable FQDN URL used only for the Remote Access server IP\-HTTPS connections.  
+    A certificate used for IP-HTTPS authentication. In the case that the certificate subject name is not a wild card, then it must be the externally resolvable FQDN URL used only for the Remote Access server IP-HTTPS connections.  
   
 -   **Private**—The following are required, if they do not already exist:  
   
-    -   A website certificate used for IP\-HTTPS authentication. The certificate subject should be an externally resolvable fully qualified domain name \(FQDN\) reachable from the Internet. The certificate is based on the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp).  
+    -   A website certificate used for IP-HTTPS authentication. The certificate subject should be an externally resolvable fully qualified domain name (FQDN) reachable from the Internet. The certificate is based on the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp).  
   
-    -   A certificate revocation list \(CRL\) distribution point that is reachable from a publicly resolvable FQDN.  
+    -   A certificate revocation list (CRL) distribution point that is reachable from a publicly resolvable FQDN.  
   
--   **Self\-signed**—The following are required, if they do not already exist:  
+-   **Self-signed**—The following are required, if they do not already exist:  
   
     > [!NOTE]  
-    > Self\-signed certificates cannot be used in multisite deployments.  
+    > Self-signed certificates cannot be used in multisite deployments.  
   
-    -   A website certificate used for IP\-HTTPS authentication. The certificate subject should be an externally resolvable FQDN reachable from the Internet.  
+    -   A website certificate used for IP-HTTPS authentication. The certificate subject should be an externally resolvable FQDN reachable from the Internet.  
   
-    -   A CRL distribution point that is reachable from a publicly resolvable fully qualified domain name \(FQDN\).  
+    -   A CRL distribution point that is reachable from a publicly resolvable fully qualified domain name (FQDN).  
   
-Make sure that the website certificate used for IP\-HTTPS authentication meets the following requirements:  
+Make sure that the website certificate used for IP-HTTPS authentication meets the following requirements:  
   
--   The common name of the certificate should match the name of the IP\-HTTPS site.  
+-   The common name of the certificate should match the name of the IP-HTTPS site.  
   
--   In the subject field, specify either the IPv4 address of the external\-facing adapter of the Remote Access server, or the FQDN of the IP\-HTTPS URL.  
+-   In the subject field, specify either the IPv4 address of the external-facing adapter of the Remote Access server, or the FQDN of the IP-HTTPS URL.  
   
--   For the Enhanced Key Usage field, use the Server Authentication object identifier \(OID\).  
+-   For the Enhanced Key Usage field, use the Server Authentication object identifier (OID).  
   
 -   For the CRL Distribution Points field, specify a CRL distribution point that is accessible by DirectAccess clients that are connected to the Internet.  
   
--   The IP\-HTTPS certificate must have a private key.  
+-   The IP-HTTPS certificate must have a private key.  
   
--   The IP\-HTTPS certificate must be imported directly into the personal store.  
+-   The IP-HTTPS certificate must be imported directly into the personal store.  
   
--   IP\-HTTPS certificates can have wildcards in the name.  
+-   IP-HTTPS certificates can have wildcards in the name.  
   
-##### To install the IP\-HTTPS certificate from an internal CA  
+##### To install the IP-HTTPS certificate from an internal CA  
   
 1.  On the Remote Access server: On the **Start** screen, type**mmc.exe**, and then press ENTER.  
   
-2.  In the MMC console, on the **File** menu, click **Add\/Remove Snap\-in**.  
+2.  In the MMC console, on the **File** menu, click **Add/Remove Snap-in**.  
   
-3.  On the **Add or Remove Snap\-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Local computer**, click **Finish**, and then click **OK**.  
+3.  On the **Add or Remove Snap-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Local computer**, click **Finish**, and then click **OK**.  
   
-4.  In the console tree of the Certificates snap\-in, open **Certificates \(Local Computer\)\\Personal\\Certificates**.  
+4.  In the console tree of the Certificates snap-in, open **Certificates (Local Computer)\Personal\Certificates**.  
   
-5.  Right\-click **Certificates**, point to **All Tasks**, and then click **Request New Certificate**.  
+5.  Right-click **Certificates**, point to **All Tasks**, and then click **Request New Certificate**.  
   
 6.  Click **Next** twice.  
   
@@ -149,11 +149,11 @@ Make sure that the website certificate used for IP\-HTTPS authentication meets t
   
 8.  On the **Certificate Properties** dialog box, on the **Subject** tab, in the **Subject name** area, in **Type**, select **Common Name**.  
   
-9. In **Value**, specify either the IPv4 address of the external\-facing adapter of the Remote Access server, or the FQDN of the IP\-HTTPS URL, and then click **Add**.  
+9. In **Value**, specify either the IPv4 address of the external-facing adapter of the Remote Access server, or the FQDN of the IP-HTTPS URL, and then click **Add**.  
   
 10. In the **Alternative name** area, in **Type**, select **DNS**.  
   
-11. In **Value**, specify either the IPv4 address of the external\-facing adapter of the Remote Access server, or the FQDN of the IP\-HTTPS URL, and then click **Add**.  
+11. In **Value**, specify either the IPv4 address of the external-facing adapter of the Remote Access server, or the FQDN of the IP-HTTPS URL, and then click **Add**.  
   
 12. On the **General** tab, in **Friendly name**, you can enter a name that will help you identify the certificate.  
   
@@ -161,7 +161,7 @@ Make sure that the website certificate used for IP\-HTTPS authentication meets t
   
 14. Click **OK**, click **Enroll**, and then click **Finish**.  
   
-15. In the details pane of the Certificates snap\-in, verify that new certificate was enrolled with Intended Purposes of Server Authentication.  
+15. In the details pane of the Certificates snap-in, verify that new certificate was enrolled with Intended Purposes of Server Authentication.  
   
 ## <a name="ConfigDNS"></a>Configure the DNS server  
 You must manually configure a DNS entry for the network location server website for the internal network in your deployment.  
@@ -170,17 +170,17 @@ You must manually configure a DNS entry for the network location server website 
   
 1.  On the internal network DNS server: On the **Start** screen, type** dnsmgmt.msc**, and then press ENTER.  
   
-2.  In the left pane of the **DNS Manager** console, expand the forward lookup zone for your domain. Right click the domain and click **New Host \(A or AAAA\)**.  
+2.  In the left pane of the **DNS Manager** console, expand the forward lookup zone for your domain. Right click the domain and click **New Host (A or AAAA)**.  
   
-3.  On the **New Host** dialog box, in the **Name \(uses parent domain name if blank\)** box, enter the DNS name for the network location server website \(this is the name the DirectAccess clients use to connect to the network location server\). In the **IP address** box, enter the IPv4 address of the network location server, and then click **Add Host**. On the **DNS** dialog box, click **OK**.  
+3.  On the **New Host** dialog box, in the **Name (uses parent domain name if blank)** box, enter the DNS name for the network location server website (this is the name the DirectAccess clients use to connect to the network location server). In the **IP address** box, enter the IPv4 address of the network location server, and then click **Add Host**. On the **DNS** dialog box, click **OK**.  
   
-4.  On the **New Host** dialog box, in the **Name \(uses parent domain name if blank\)** box, enter the DNS name for the web probe \(the name for the default web probe is directaccess\-webprobehost\). In the **IP address** box, enter the IPv4 address of the web probe, and then click **Add Host**. Repeat this process for directaccess\-corpconnectivityhost and any manually created connectivity verifiers. On the **DNS** dialog box, click **OK**.  
+4.  On the **New Host** dialog box, in the **Name (uses parent domain name if blank)** box, enter the DNS name for the web probe (the name for the default web probe is directaccess-webprobehost). In the **IP address** box, enter the IPv4 address of the web probe, and then click **Add Host**. Repeat this process for directaccess-corpconnectivityhost and any manually created connectivity verifiers. On the **DNS** dialog box, click **OK**.  
   
 5.  Click **Done**.  
   
 ![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 Add-DnsServerResourceRecordA -Name <network_location_server_name> -ZoneName <DNS_zone_name> -IPv4Address <network_location_server_IPv4_address>  
@@ -189,24 +189,24 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 You must also configure DNS entries for the following:  
   
--   **The IP\-HTTPS server**—DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
+-   **The IP-HTTPS server**—DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
   
--   **CRL revocation checking**—DirectAccess uses certificate revocation checking for the IP\-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS\-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
+-   **CRL revocation checking**—DirectAccess uses certificate revocation checking for the IP-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
   
 ## <a name="ConfigAD"></a>Configure Active Directory  
 The Remote Access server and all DirectAccess client computers must be joined to an Active Directory domain. DirectAccess client computers must be a member of one of the following domain types:  
   
 -   Domains that belong in the same forest as the Remote Access server.  
   
--   Domains that belong to forests with a two\-way trust with the Remote Access server forest.  
+-   Domains that belong to forests with a two-way trust with the Remote Access server forest.  
   
--   Domains that have a two\-way domain trust to the Remote Access server domain.  
+-   Domains that have a two-way domain trust to the Remote Access server domain.  
   
 #### To join client computers to the domain  
   
 1.  On the **Start** screen, type **explorer.exe**, and then press ENTER.  
   
-2.  Right\-click the Computer icon, and then click **Properties**.  
+2.  Right-click the Computer icon, and then click **Properties**.  
   
 3.  On the **System** page, click **Advanced system settings**.  
   
@@ -224,9 +224,9 @@ The Remote Access server and all DirectAccess client computers must be joined to
   
 ![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-Note that you must supply domain credentials after entering the Add\-Computer command below.  
+Note that you must supply domain credentials after entering the Add-Computer command below.  
   
 ```  
 Add-Computer -DomainName <domain_name>  
@@ -254,13 +254,13 @@ The DirectAccess settings contained in the client computer Group Policy Object a
   
 ### <a name="Sec_Group"></a>To create a security group for DirectAccess clients  
   
-1.  On the **Start** screen, type**dsa.msc**, and then press ENTER. In the **Active Directory Users and Computers** console, in the left pane, expand the domain that will contain the security group, right\-click **Users**, point to **New**, and then click **Group**.  
+1.  On the **Start** screen, type**dsa.msc**, and then press ENTER. In the **Active Directory Users and Computers** console, in the left pane, expand the domain that will contain the security group, right-click **Users**, point to **New**, and then click **Group**.  
   
-2.  On the **New Object \- Group** dialog box, under **Group name**, enter the name for the security group.  
+2.  On the **New Object - Group** dialog box, under **Group name**, enter the name for the security group.  
   
 3.  Under **Group scope**, click **Global**, under **Group type**, click **Security**, and then click **OK**.  
   
-4.  Double\-click the DirectAccess client computers security group, and on the properties dialog box, click the **Members** tab.  
+4.  Double-click the DirectAccess client computers security group, and on the properties dialog box, click the **Members** tab.  
   
 5.  On the **Members** tab, click **Add**.  
   
@@ -268,7 +268,7 @@ The DirectAccess settings contained in the client computer Group Policy Object a
   
 ![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure_3/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 New-ADGroup -GroupScope global -Name <DirectAccess_clients_group_name>  
@@ -284,10 +284,10 @@ The network location server should be on a server with high availability, and a 
   
     -   A CRL distribution point that is highly available from the internal network.  
   
--   **Self\-signed**—The following are required, if they do not already exist:  
+-   **Self-signed**—The following are required, if they do not already exist:  
   
     > [!NOTE]  
-    > Self\-signed certificates cannot be used in multisite deployments.  
+    > Self-signed certificates cannot be used in multisite deployments.  
   
     -   A website certificate used for the network location server. The certificate subject should be the URL of the network location server.  
   
@@ -298,13 +298,13 @@ The network location server should be on a server with high availability, and a 
   
 1.  On the server that will host the network location server website: On the **Start** screen, type**mmc.exe**, and then press ENTER.  
   
-2.  In the MMC console, on the **File** menu, click **Add\/Remove Snap\-in**.  
+2.  In the MMC console, on the **File** menu, click **Add/Remove Snap-in**.  
   
-3.  On the **Add or Remove Snap\-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Local computer**, click **Finish**, and then click **OK**.  
+3.  On the **Add or Remove Snap-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Local computer**, click **Finish**, and then click **OK**.  
   
-4.  In the console tree of the Certificates snap\-in, open **Certificates \(Local Computer\)\\Personal\\Certificates**.  
+4.  In the console tree of the Certificates snap-in, open **Certificates (Local Computer)\Personal\Certificates**.  
   
-5.  Right\-click **Certificates**, point to **All Tasks**, and then click **Request New Certificate**.  
+5.  Right-click **Certificates**, point to **All Tasks**, and then click **Request New Certificate**.  
   
 6.  Click **Next** twice.  
   
@@ -322,7 +322,7 @@ The network location server should be on a server with high availability, and a 
   
 13. Click **OK**, click **Enroll**, and then click **Finish**.  
   
-14. In the details pane of the Certificates snap\-in, verify that new certificate was enrolled with Intended Purposes of Server Authentication.  
+14. In the details pane of the Certificates snap-in, verify that new certificate was enrolled with Intended Purposes of Server Authentication.  
   
 ## <a name="BKMK_Links"></a>See also  
   

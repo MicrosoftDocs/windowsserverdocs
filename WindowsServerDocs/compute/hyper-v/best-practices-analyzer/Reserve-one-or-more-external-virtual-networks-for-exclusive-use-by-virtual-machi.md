@@ -13,14 +13,14 @@ ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9
 author: KBDAzure
 ---
 # Reserve one or more external virtual networks for exclusive use by virtual machines
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
   
@@ -40,7 +40,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 #### To stop sharing the external virtual network with the management operating system  
   
-1.  Open Hyper\-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
+1.  Open Hyper-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.  
   
 2.  From the **Actions** menu, click **Virtual Switch Manager**.  
   

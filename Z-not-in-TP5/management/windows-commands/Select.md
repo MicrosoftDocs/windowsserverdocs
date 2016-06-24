@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 9eeb40c0-4258-46e2-8dbc-94f63497e771
 ---
 # Select
-Shifts the focus to a disk, partition, volume, or virtual hard disk \(VHD\).
+Shifts the focus to a disk, partition, volume, or virtual hard disk (VHD).
 
 ## Syntax
 

@@ -27,10 +27,10 @@ This account allows unauthenticated network users to gain access to the system b
 -   Not defined  
   
 ### Best practices  
-Set **Accounts: Guest account status** to Disabled so that the built\-in Guest account is no longer usable. All network users will have to authenticate before they can access shared resources on the system. If the Guest account is disabled and **Network access: Sharing and security model for local accounts** is set to **Guest only**, network logons—such as those performed by the SMB Service—will fail.  
+Set **Accounts: Guest account status** to Disabled so that the built-in Guest account is no longer usable. All network users will have to authenticate before they can access shared resources on the system. If the Guest account is disabled and **Network access: Sharing and security model for local accounts** is set to **Guest only**, network logons—such as those performed by the SMB Service—will fail.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -39,7 +39,7 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Disabled|  
+|Stand-Alone Server Default Settings|Disabled|  
 |DC Effective Default Settings|Disabled|  
 |Member Server Effective Default Settings|Disabled|  
 |Client Computer Effective Default Settings|Disabled|  
@@ -54,9 +54,9 @@ This section describes how an attacker might exploit a feature or its configurat
 The default Guest account allows unauthenticated network users to log on as a Guest with no password. These unauthorized users could access any resources that are accessible to the Guest account over the network. This capability means that any shared folders with permissions that allow access to the Guest account, the Guests group, or the Everyone group are accessible over the network, which could lead to the exposure or corruption of data.  
   
 ### Countermeasure  
-Disable the **Accounts: Guest account status** setting so that the built\-in Guest account cannot be used.  
+Disable the **Accounts: Guest account status** setting so that the built-in Guest account cannot be used.  
   
 ### Potential impact  
-All network users must be authenticated before they can access shared resources. If you disable the Guest account and the **Network Access: Sharing and Security Model** option is set to **Guest Only**, network logons, such as those performed by the Microsoft Network Server \(SMB Service\), fail. This policy setting should have little impact on most organizations because it is the default setting in the  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003,  Windows 7 , Windows Vista, Windows XP, and Microsoft Windows 2000 operating systems.  
+All network users must be authenticated before they can access shared resources. If you disable the Guest account and the **Network Access: Sharing and Security Model** option is set to **Guest Only**, network logons, such as those performed by the Microsoft Network Server (SMB Service), fail. This policy setting should have little impact on most organizations because it is the default setting in the  Windows Server 2008 R2 ,  Windows Server 2008 , Windows Server 2003,  Windows 7 , Windows Vista, Windows XP, and Microsoft Windows 2000 operating systems.  
   
 

@@ -10,7 +10,7 @@ ms.assetid: 5079255a-674b-4c8c-b890-184c8b7b32a4
 author: coreyp
 ---
 # Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor
-This topic describes how to use the Local Group Policy Editor \(gpedit\) to manage four types of event\-driven scripting files.  
+This topic describes how to use the Local Group Policy Editor (gpedit) to manage four types of event-driven scripting files.  
   
 ## Introduction  
 Group Policy allows you to associate one or more scripting files with four triggered events:  
@@ -23,13 +23,13 @@ Group Policy allows you to associate one or more scripting files with four trigg
   
 -   User logoff  
   
-You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host \(WSH\) supported languages are also used, including VBScript and Jscript. For more information about the editor, see [Local Group Policy Editor](assetId:///0408ec90-e65b-4e50-9e0d-dfd2bd2b4dcb).  
+You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages are also used, including VBScript and Jscript. For more information about the editor, see [Local Group Policy Editor](assetId:///0408ec90-e65b-4e50-9e0d-dfd2bd2b4dcb).  
   
 ### Additional considerations  
   
--   For more information about scripting, see the Group Policy Script Center \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=66013](http://go.microsoft.com/fwlink/?LinkID=66013)\).  
+-   For more information about scripting, see the Group Policy Script Center ([http://go.microsoft.com/fwlink/?LinkID=66013](http://go.microsoft.com/fwlink/?LinkID=66013)).  
   
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign computer startup scripts  
   
@@ -37,9 +37,9 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 1.  Open the Local Group Policy Editor.  
   
-2.  In the console tree, click **Scripts \(Startup\/Shutdown\)**. The path is **Computer Configuration\\Windows Settings\\Scripts \(Startup\/Shutdown\)**.  
+2.  In the console tree, click **Scripts (Startup/Shutdown)**. The path is **Computer Configuration\Windows Settings\Scripts (Startup/Shutdown)**.  
   
-3.  In the results pane, double\-click **Startup**.  
+3.  In the results pane, double-click **Startup**.  
   
 4.  In the **Startup Properties** dialog box, click **Add**.  
   
@@ -47,11 +47,11 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
     -   In the **Script Name** box, type the path to the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In the **Script Parameters** box, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In the **Script Parameters** box, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Startup Properties** dialog box, specify the options that you want:  
   
-    -   **Startup Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object \(GPO\). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
+    -   **Startup Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
   
     -   **Add**: Opens the **Add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -63,17 +63,17 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Startup scripts are run under the Local System account, and they have the full rights that are associated with being able to run under the Local System account.  
   
--   Beginning in Windows Vista, startup scripts are run asynchronously, by default. This is a different behavior from earlier operating systems.  
+-   Beginning in Windows Vista, startup scripts are run asynchronously, by default. This is a different behavior from earlier operating systems.  
   
 -   Setting startup scripts to run synchronously may cause the boot process to run slowly.  
   
--   In  Windows 7  and Windows Vista, startup scripts that are run asynchronously will not be visible. Enabling the **Run Startup Scripts Visible** policy setting will have no effect when running startup scripts asynchronously.  
+-   In  Windows 7  and Windows Vista, startup scripts that are run asynchronously will not be visible. Enabling the **Run Startup Scripts Visible** policy setting will have no effect when running startup scripts asynchronously.  
   
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign computer shutdown scripts  
   
@@ -81,9 +81,9 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 1.  Open the Local Group Policy Editor.  
   
-2.  In the console tree, click **Scripts \(Startup\/Shutdown\)**. The path is **Computer Configuration\\Windows Settings\\Scripts \(Startup\/Shutdown\)**.  
+2.  In the console tree, click **Scripts (Startup/Shutdown)**. The path is **Computer Configuration\Windows Settings\Scripts (Startup/Shutdown)**.  
   
-3.  In the results pane, double\-click **Shutdown**.  
+3.  In the results pane, double-click **Shutdown**.  
   
 4.  In the **Shutdown Properties** dialog box, click **Add**.  
   
@@ -91,11 +91,11 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
     -   In **Script Name**, type the path to the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In **Script Parameters**, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Shutdown Properties** dialog box, specify the options that you want:  
   
-    -   **Shutdown Scripts for <Group Policy object>**: Lists all the scripts that are currently assigned to the selected Group Policy object \(GPO\). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
+    -   **Shutdown Scripts for <Group Policy object>**: Lists all the scripts that are currently assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
   
     -   **Add**: Opens the **Add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -107,13 +107,13 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Shutdown scripts are run as Local System, and they have the full rights that are associated with being able to run as Local System.  
   
 -   Setting shutdown scripts to run synchronously may cause the shutdown process to run slowly.  
   
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign user logon scripts  
   
@@ -121,9 +121,9 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 1.  Open the Local Group Policy Editor.  
   
-2.  In the console tree, click **Scripts \(Logon\/Logoff\)**. The path is **User Configuration\\Windows Settings\\Scripts \(Logon\/Logoff\)**.  
+2.  In the console tree, click **Scripts (Logon/Logoff)**. The path is **User Configuration\Windows Settings\Scripts (Logon/Logoff)**.  
   
-3.  In the results pane, double\-click **Logon**.  
+3.  In the results pane, double-click **Logon**.  
   
 4.  In the **Logon Properties** dialog box, click **Add**.  
   
@@ -131,11 +131,11 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
     -   In **Script Name**, type the path to the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In **Script Parameters**, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Logon Properties** dialog box, specify the options that you want:  
   
-    -   **Logon Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object \(GPO\). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
+    -   **Logon Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
   
     -   **Add**: Opens the **Add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -147,13 +147,13 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Setting logon scripts to run synchronously may cause the logon process to run slowly.  
   
 -   Logon scripts are run as User, not Administrator, and their rights are limited accordingly.  
   
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 ## How to assign user logoff scripts  
   
@@ -161,9 +161,9 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 1.  Open the Local Group Policy Editor.  
   
-2.  In the console tree, click **Scripts \(Logon\/Logoff\)**. The path is **User Configuration\\Windows Settings\\Scripts \(Logon\/Logoff\)**.  
+2.  In the console tree, click **Scripts (Logon/Logoff)**. The path is **User Configuration\Windows Settings\Scripts (Logon/Logoff)**.  
   
-3.  In the results pane, double\-click **Logoff**.  
+3.  In the results pane, double-click **Logoff**.  
   
 4.  In the **Logoff Properties** dialog box, click **Add**.  
   
@@ -171,11 +171,11 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
     -   In **Script Name**, type the path to the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In **Script Parameters**, type any parameters that you want, the same way as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Logoff Properties** dialog box, specify the options the you want:  
   
-    -   **Logoff Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object \(GPO\). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
+    -   **Logoff Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it and then click **Up**. To move a script down in the list, click it and then click **Down**.  
   
     -   **Add**: Opens the **Add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -187,12 +187,12 @@ You can use Windows PowerShell scripts, or author scripts in any other language 
   
 ### Additional considerations  
   
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.  
   
 -   Logoff scripts are run as User, not Administrator, and their rights are limited accordingly.  
   
 -   Setting logoff scripts to run synchronously may cause the logoff process to run slowly.  
   
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).  
   
 

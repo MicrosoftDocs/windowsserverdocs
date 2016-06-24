@@ -16,7 +16,7 @@ DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contos
   
 ### Verify User1 has a User Principal Name defined on DC1  
   
-1.  On DC1, open Server Manager, and click **AD DS** in the left pane. Right\-click **DC1** and select **Active Directory Users and Computers**. In the left pane expand **corp.contoso.com\\Users**, and double\-click User1.  
+1.  On DC1, open Server Manager, and click **AD DS** in the left pane. Right-click **DC1** and select **Active Directory Users and Computers**. In the left pane expand **corp.contoso.com\Users**, and double-click User1.  
   
 2.  On the **Account** tab verify that **User logon name** is set to User1. If not, then enter **User1** in the **User logon name** field.  
   

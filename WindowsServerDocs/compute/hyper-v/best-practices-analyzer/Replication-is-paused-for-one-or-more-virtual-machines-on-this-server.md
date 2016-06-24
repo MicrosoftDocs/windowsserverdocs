@@ -13,14 +13,14 @@ ms.assetid: e1119a40-eda3-4058-8648-7df81cbc6c29
 author: KBDAzure
 ---
 # Replication is paused for one or more virtual machines on this server
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview |  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Operations|  
   

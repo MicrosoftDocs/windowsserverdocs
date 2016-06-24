@@ -44,17 +44,17 @@ $ServerGpos | ForEach-Object { $GpoName = $_['GpoName'] ; $DC = $_['DC'] ; Write
 ```  
   
 ## Windows 7 to Windows 8 or 10 client upgrade  
-**Symptom**—After a  Windows 7  client upgrades to Windows 10® or Windows® 8 in a multisite deployment, the DirectAccess connection is not visible in the Networks list.  
+**Symptom**—After a  Windows 7  client upgrades to Windows 10® or Windows® 8 in a multisite deployment, the DirectAccess connection is not visible in the Networks list.  
   
 **Cause**  
   
-The  Windows 7  GPOs in a multisite deployment do not contain the Windows 8 Network Connectivity Assistant configuration.  
+The  Windows 7  GPOs in a multisite deployment do not contain the Windows 8 Network Connectivity Assistant configuration.  
   
- Windows 7  clients should use DirectAccess Connectivity Assistant to monitor their DirectAccess connectivity status which requires a separate manual configuration in the  Windows 7  client GPOs. When  Windows 7  clients are upgraded to Windows 10 or Windows 8, the Network Connectivity Assistant will not function if the  Windows 7  client GPO is still applied.  
+ Windows 7  clients should use DirectAccess Connectivity Assistant to monitor their DirectAccess connectivity status which requires a separate manual configuration in the  Windows 7  client GPOs. When  Windows 7  clients are upgraded to Windows 10 or Windows 8, the Network Connectivity Assistant will not function if the  Windows 7  client GPO is still applied.  
   
 **Solution**  
   
-If DirectAccess Connectivity Assistant settings are configured in the  Windows 7  GPOs, you can resolve this issue before upgrading client computers by modifying the  Windows 7  GPOs using the following PowerShell cmdlets:  
+If DirectAccess Connectivity Assistant settings are configured in the  Windows 7  GPOs, you can resolve this issue before upgrading client computers by modifying the  Windows 7  GPOs using the following PowerShell cmdlets:  
   
 ```  
 Set-GPRegistryValue -Name <Windows7GpoName> -Domain <DomainName> -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkConnectivityAssistant" -ValueName "TemporaryValue" -Type Dword -Value 1  
@@ -67,7 +67,7 @@ If a client has already been upgraded or the DCA is not configured, move the cli
   
 -   **Issue 1**  
   
-    **Error received**—Domain controller <domain\_controller> cannot be reached for <server\_name or entry\_point\_name>.  
+    **Error received**—Domain controller <domain_controller> cannot be reached for <server_name or entry_point_name>.  
   
     **Cause**  
   
@@ -79,7 +79,7 @@ If a client has already been upgraded or the DCA is not configured, move the cli
   
 -   **Issue 2**  
   
-    **Error received**—The primary domain controller in domain <domain\_name> cannot be reached.  
+    **Error received**—The primary domain controller in domain <domain_name> cannot be reached.  
   
     **Cause**  
   

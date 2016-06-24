@@ -25,7 +25,7 @@ load metadata [<Drive>:][<Path>]<MetaData.cab>
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<Path>\]|Specifies the location of the metadata file.|
+|[<Drive>:][<Path>]|Specifies the location of the metadata file.|
 |MetaData.cab|Specifies the metadata .cab file to load.|
 
 ## Remarks

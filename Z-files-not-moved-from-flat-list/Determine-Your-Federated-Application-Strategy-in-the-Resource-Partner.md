@@ -15,13 +15,13 @@ author: billmath
 # Determine Your Federated Application Strategy in the Resource Partner
 An important part of designing a new [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] infrastructure in the resource partner organization is determining your full set of applications and services that will be used to participate in the federation and which account partners will be the recipients of those resources. Before you design a federated application and services strategy, consider the following questions:  
   
--   Will you be enabling and deploying an ASP.NET application or a Windows Communication Foundation \(WCF\) service for federation?  
+-   Will you be enabling and deploying an ASP.NET application or a Windows Communication Foundation (WCF) service for federation?  
   
 -   Will users on your corporate network require access to the federated application or service through Windows Integrated Authentication?  
   
 -   Will the federated application or service be used by users in your perimeter network? If so, will Windows Integrated Authentication be required?  
   
--   Are all of the Web servers that host federated applications running a Windows Server operating system and Internet Information Services \(IIS\)?  
+-   Are all of the Web servers that host federated applications running a Windows Server operating system and Internet Information Services (IIS)?  
   
 -   Who will the federated application or service provide resources for?  
   
@@ -33,6 +33,6 @@ Answering these questions will help you plan a solid [!INCLUDE[nextref_adfs2](in
   
 -   [Provide Users in Another Organization Access to Your Claims-Aware Applications and Services]()  
   
-For more information about how to create a claims\-aware ASP.NET application or WCF service, see [Windows Identity Foundation SDK](http://go.microsoft.com/fwlink/?LinkId=122266).  
+For more information about how to create a claims-aware ASP.NET application or WCF service, see [Windows Identity Foundation SDK](http://go.microsoft.com/fwlink/?LinkId=122266).  
   
 

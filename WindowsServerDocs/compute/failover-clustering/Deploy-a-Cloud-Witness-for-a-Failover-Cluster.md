@@ -68,7 +68,7 @@ Some of the scenarios that are supported use of Cloud Witness as a quorum witnes
 
 -   small branch-office clusters (even 2-node clusters)  
 
-Starting with Windows Server 2012 R2, it is recommended to always configure a witness as the cluster automatically manages the witness vote and the nodes vote with Dynamic Quorum.  
+Starting with Windows Server 2012 R2, it is recommended to always configure a witness as the cluster automatically manages the witness vote and the nodes vote with Dynamic Quorum.  
 
 ## <a name="BKMK_CloudWitnessSetUp"></a> Set up a Cloud Witness for a cluster
 To set up a Cloud Witness as a quorum witness for your cluster, complete the following steps:
@@ -116,7 +116,7 @@ In the Azure Portal, navigate to your storage account, click **All settings** an
 
 When you create a Storage Account, the following URLs are generated using the format: https://&lt;Storage Account Name&gt;.&lt;Storage Type&gt;.&lt;Endpoint&gt;  
 
-Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different Endpoint as per your scenario (for example the  Microsoft Azure in China has a different Endpoint).  
+Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different Endpoint as per your scenario (for example the  Microsoft Azure in China has a different Endpoint).  
 
 >[!NOTE]
 > The endpoint URL is generated automatically by Cloud Witness resource and there is no extra step of configuration necessary for the URL.  
@@ -127,7 +127,7 @@ In the Azure Portal, navigate to your storage account, click **All settings** an
 
 ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)  
 
-   **Figure 5: Cloud Witness endpoint URL links**
+   **Figure 5: Cloud Witness endpoint URL links**
 
  For more information about creating and managing Azure Storage Accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)
 
@@ -140,16 +140,16 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 1. Launch Failover Cluster Manager.
 2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 6).This launches the Configure Cluster Quorum Wizard  
 
-   	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)  
+    ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)  
 
    **Figure 6. Cluster Quorum Settings**
- 
+ 
 
 1.  On the  **Select Quorum Configurations** page, select **Select the quorum witness** (see figure 7).  
 
-   	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
+    ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
 
-     **Figure 7. Select the Quorum Configuration**
+     **Figure 7. Select the Quorum Configuration**
 
 1. On the **Select Quorum Witness** page, select **Configure a cloud witness** (see figure 8).  
 
@@ -170,8 +170,8 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
     3.  (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
 
     ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)
-		
-	**Figure 9: Configure your Cloud Witness**
+        
+    **Figure 9: Configure your Cloud Witness**
 
 1.  Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 10).
 

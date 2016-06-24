@@ -13,12 +13,12 @@ ms.assetid: 9dcfbf94-1517-4c6d-bca1-cca72f2d1865
 author: billmath
 ---
 # Planning Your Deployment
-When you plan for cross\-organizational \(federation\-based\) collaboration using Active Directory Federation Services \(AD FS\), first determine if your organization will host a Web resource to be accessed by other organizations across the Internet or if you will provide access to the Web resource for employees in your organization. This determination affects how you deploy AD FS, and it is fundamental in the planning of your AD FS infrastructure.  
+When you plan for cross-organizational (federation-based) collaboration using Active Directory Federation Services (AD FS), first determine if your organization will host a Web resource to be accessed by other organizations across the Internet or if you will provide access to the Web resource for employees in your organization. This determination affects how you deploy AD FS, and it is fundamental in the planning of your AD FS infrastructure.  
   
 > [!NOTE]  
 > Make sure that the role that organization plays in the federation agreement is clearly understood by all parties.  
   
-For the [Federated Web SSO Design](../../../ad-fs/plan/WS2012-guide/map-goals-to-plan/Federated-../../../ad-fs/plan/WS2012-guide/map-goals-to-plan/Web-SSO-Design.md), AD FS uses terms such as *account partner* \(also referred to as *identity provider* in the AD FS Management snap\-in\) and *resource partner* \(also referred to as *relying party* in the AD FS Management snap\-in\) to help differentiate the organization that hosts the accounts \(the account partner\) from the organization that hosts the Web\-based resources \(the resource partner\).  
+For the [Federated Web SSO Design](../../../ad-fs/plan/WS2012-guide/map-goals-to-plan/Federated-../../../ad-fs/plan/WS2012-guide/map-goals-to-plan/Web-SSO-Design.md), AD FS uses terms such as *account partner* (also referred to as *identity provider* in the AD FS Management snap-in) and *resource partner* (also referred to as *relying party* in the AD FS Management snap-in) to help differentiate the organization that hosts the accounts (the account partner) from the organization that hosts the Web-based resources (the resource partner).  
   
 In the [Web SSO Design](../../../ad-fs/plan/WS2012-guide/map-goals-to-plan/Web-SSO-Design.md), the organization acts in both the account partner and resource partner roles because it is providing its users with access to its applications.  
   

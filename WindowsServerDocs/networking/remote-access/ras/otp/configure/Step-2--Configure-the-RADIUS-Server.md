@@ -23,7 +23,7 @@ Before you configure the Remote Access server to support DirectAccess with OTP s
 |[2.5 Configure the RADIUS authentication agent](assetId:///1bf49ebd-8fc9-4dea-9ca9-02685d4fd461#BKMK_AuthAgent)|Configure the Remote Access server as a RADIUS authentication agent.|  
   
 ## <a name="BKMK_1.1"></a>2.1 Configure the RADIUS software distribution tokens  
-The RADIUS server must be configured with the necessary license and software and\/or hardware distribution tokens to be used by DirectAccess with OTP. This process will be specific to each RADIUS vendor implementation.  
+The RADIUS server must be configured with the necessary license and software and/or hardware distribution tokens to be used by DirectAccess with OTP. This process will be specific to each RADIUS vendor implementation.  
   
 ## <a name="BKMK_1.2"></a>2.2 Configure the RADIUS security information  
 The RADIUS server uses UDP ports for communication purposes, and each RADIUS vendor has its own default UDP ports for incoming and outgoing communication. For the RADIUS server to work with the Remote Access server, make sure that all firewalls in the environment are configured to allow UDP traffic between the DirectAccess and OTP servers over the required ports as needed.  
@@ -40,7 +40,7 @@ The RADIUS server must have user accounts that correspond to the users in Active
   
 1.  Record the user information from Active Directory for all DirectAccess with OTP users.  
   
-2.  Use the vendor specific procedure to create identical user **domain\\username** accounts in the RADIUS server that were recorded.  
+2.  Use the vendor specific procedure to create identical user **domain\username** accounts in the RADIUS server that were recorded.  
   
 ## <a name="BKMK_AuthAgent"></a>2.5 Configure the RADIUS authentication agent  
 The Remote Access server must be configured as a RADIUS authentication agent for the DirectAccess with OTP implementation. Follow the RADIUS vendor instructions to configure the Remote Access server as a RADIUS authentication agent.  

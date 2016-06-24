@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Terminal Services Licensing (TS Licensing)</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Terminal Services Licensing (TS Licensing)</Token>

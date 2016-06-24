@@ -68,7 +68,7 @@ On the Nano server (through a remote PSSession) :
 
        Then copy the results to your management computer or share the path. Because Nano lacks the necessary graphical libraries, you can use Test-SRTopology to process the results and give you a report file with charts. For example:  
 
-        Test-SRTopology -GenerateReport -DataPath \\sr-srv05\c$\temp  
+        Test-SRTopology -GenerateReport -DataPath sr-srv05c$temp  
 
 
 ## <a name="FAQ2"></a> How do I see the progress of replication during initial sync?  
@@ -112,23 +112,23 @@ For configuring network constraints on a stretch cluster:
 
     Set-SRNetworkConstraint -SourceComputerName sr-srv01 -SourceRGName group1 -SourceNWInterfaceIndex "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-srv03 -DestinationRGName group2 -DestinationNWInterfaceIndex "Cluster Network 1","Cluster Network 2"  
 
-## <a name="FAQ4"></a> Can I configure one\-to\-many replication or transitive \(A to B to C\) replication?  
+## <a name="FAQ4"></a> Can I configure one-to-many replication or transitive (A to B to C) replication?  
 Not in Windows Server 2016 Technical Preview. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release.  
 
 ## <a name="FAQ5"></a> Can I expand or shrink replicated volumes replicated by Storage Replica?  
 
 Not in Windows Server 2016 Technical Preview. You must remove replication, resize volumes, and then add replication back to the volumes. This may change in a later release.  
 
-## <a name="FAQ6"></a>Can I bring a destination volume online for read\-only access?  
+## <a name="FAQ6"></a>Can I bring a destination volume online for read-only access?  
 Not in Windows Server 2016 Technical Preview.   Storage Replica dismounts the destination volume and its drive letter or mount point when replication begins. This may change in a later release.  
 
-## <a name="FAQ7"></a> Can I configure Scale\-out File Server \(SOFS\) in a stretch cluster?  
+## <a name="FAQ7"></a> Can I configure Scale-out File Server (SOFS) in a stretch cluster?  
 While technically possible, this is not a recommended configuration  in Windows Server 2016 Technical Preview due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration will probably work without issues.   
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
 
 ## <a name="FAQ8"></a>Can I configure Storage Spaces Direct in a stretch cluster with Storage Replica?  
-This is not a supported configuration in Windows Server 2016 Technical Preview.  This may change in a later release. If configuring cluster\-to\-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper\-V Servers, including the use of Storage Spaces Direct.  
+This is not a supported configuration in Windows Server 2016 Technical Preview.  This may change in a later release. If configuring cluster-to-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper-V Servers, including the use of Storage Spaces Direct.  
 
 ## <a name="FAQ9"></a>How do I configure asynchronous replication?  
 Specify `New-SRPartnership –ReplicationMode` and provide argument **Asynchronous**. By default, all replication in Storage Replica is synchronous. You can also change the mode with `Set-SRPartnership -ReplicationMode`.  
@@ -137,7 +137,7 @@ Specify `New-SRPartnership –ReplicationMode` and provide argument **Asynchrono
 To prevent automatic failover, you can use PowerShell to configure `Get-ClusterNode –Name "NodeName").NodeWeight=0`. This removes the vote on each node in the disaster recovery site. Then you can use `Start-ClusterNode –PreventQuorum` on nodes in the primary site and `Start-ClusterNode –ForceQuorum` on nodes in the disaster site to force failover. There is no graphical option for preventing automatic failover, and preventing automatic failover is not recommended.  
 
 ## <a name="FAQ11"></a>How do I disable virtual machine resiliency?  
-To prevent the new Hyper\-V virtual machine resiliency feature from running and therefore pausing virtual machines instead of failing them over to the disaster recovery site, run `(Get-Cluster).ResiliencyDefaultPeriod=0`  
+To prevent the new Hyper-V virtual machine resiliency feature from running and therefore pausing virtual machines instead of failing them over to the disaster recovery site, run `(Get-Cluster).ResiliencyDefaultPeriod=0`  
 
 ## <a name="FAQ12"></a> How can I reduce time for initial synchronization?  
 
@@ -150,7 +150,7 @@ You can also use seeded data volumes, by ensuring that the destination volume ha
 
 You can use the `Grant-SRDelegation` cmdlet in Windows Server 2016 Technical Preview. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:  
 
-    Grant-SRDelegation -UserName threshold\sradmin  
+    Grant-SRDelegation -UserName thresholdsradmin  
 
 The cmdlet will remind you that the user needs to log off and on of the server they are planning to administer in order for the change to take effect. You can use `Get-SRDelegation` and `Revoke-SRDelegation` to further control this.  
 

@@ -14,7 +14,7 @@ author: Femila
 ---
 # Active Directory Domain Services
   
-**\[This information is preliminary and subject to change.\]**  
+**[This information is preliminary and subject to change.]**  
   
 You will find links to Active Directory Domain services content on this page.   
   

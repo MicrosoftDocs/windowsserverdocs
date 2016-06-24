@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">IIS 7.0</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">IIS 7.0</Token>

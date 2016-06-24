@@ -13,7 +13,7 @@ ms.assetid: b936a9e9-91b2-4cc6-80d4-b1c469ef75ff
 # Audit Filtering Platform Connection
 This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Filtering Platform Connection**, which determines whether the operating system generates audit events when connections are allowed or blocked by the Windows Filtering Platform.
 
-Windows Filtering Platform \(WFP\) was introduced in Windows Server 2008 and Windows Vista to enable independent software vendors \(ISVs\) to filter and modify TCP\/IP packets, monitor or authorize connections, filter Internet Protocol security \(IPsec\)\-protected traffic, and filter remote procedure calls \(RPCs\).
+Windows Filtering Platform (WFP) was introduced in Windows Server 2008 and Windows Vista to enable independent software vendors (ISVs) to filter and modify TCP/IP packets, monitor or authorize connections, filter Internet Protocol security (IPsec)-protected traffic, and filter remote procedure calls (RPCs).
 
 This security policy enables you to audit the following types of actions:
 
@@ -29,7 +29,7 @@ Event volume: High
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the  **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the  **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

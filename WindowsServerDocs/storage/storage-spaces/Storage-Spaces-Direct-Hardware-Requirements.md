@@ -17,7 +17,7 @@ We are working with our hardware partners to define and validate specific hardwa
 
 Use PowerShell to deploy and manage Storage Spaces Direct.  Do not use Server Manager or Failover Cluster Manager to manage Storage Spaces Direct.  
 
-To evaluate Storage Spaces Direct in Windows Server 2016 Technical Preview, the simplest deployment is to use at least four generation 2 Hyper\-V virtual machines with at least four data disks per virtual machine. To test Storage Spaces Direct in Windows Server 2016 Technical Preview, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
+To evaluate Storage Spaces Direct in Windows Server 2016 Technical Preview, the simplest deployment is to use at least four generation 2 Hyper-V virtual machines with at least four data disks per virtual machine. To test Storage Spaces Direct in Windows Server 2016 Technical Preview, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
 
 > [!NOTE]
 >  Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.  
@@ -35,7 +35,7 @@ Storage Spaces Direct in <Token xmlns:xlink="http://www.w3.org/1999/xlink">Windo
 
 ## See Also  
 
--   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) \(video\)  
+-   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 
 -   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
 

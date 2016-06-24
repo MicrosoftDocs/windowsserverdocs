@@ -28,7 +28,7 @@ If the design team that created the Windows Firewall with Advanced Security desi
 
 -   The recommendation that domain controllers are exempted from IPsec authentication requirements. If they are not exempt and authentication fails, then domain clients might not be able to receive Group Policy updates to the IPsec connection security rules from the domain controllers.
 
--   The rationale for configuring all IPsec authentication rules to request, not require, authentication until the successful negotiation of IPsec has been confirmed. If the rules are set to require authentication before confirming that authentication is working correctly, then communications between computers might fail. If the rules are set to request authentication only, then an IPsec authentication failure results in fall\-back\-to\-clear behavior, so communications can continue while the authentication failures are investigated.
+-   The rationale for configuring all IPsec authentication rules to request, not require, authentication until the successful negotiation of IPsec has been confirmed. If the rules are set to require authentication before confirming that authentication is working correctly, then communications between computers might fail. If the rules are set to request authentication only, then an IPsec authentication failure results in fall-back-to-clear behavior, so communications can continue while the authentication failures are investigated.
 
 -   The requirement that all computers that must communicate with each other share a common set of:
 

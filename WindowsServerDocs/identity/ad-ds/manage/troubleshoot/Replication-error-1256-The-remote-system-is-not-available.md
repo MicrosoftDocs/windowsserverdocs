@@ -47,7 +47,7 @@ Naming Context: &lt;directory partition DN path&gt;
 The failure occurred at &lt;date&gt; &lt;time&gt;
 The last success occurred at &lt;date&gt; &lt;time&gt;
 </code></listItem><listItem><para>REPADMIN.EXE reports that a replication attempt has failed with status 1256.</para><para>REPADMIN commands that commonly cite the 1256 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /FAILCACHE</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from LonEMEADC to LonContosoDC failing with "The remote system is not available" error is shown below: </para><code>Repadmin: running command /showrepl against full DC localhost
-London\LONCONTOSODC
+LondonLONCONTOSODC
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: a29bbfda-8425-4cb9-9c66-8e07d505a5c6
@@ -55,7 +55,7 @@ DSA invocationID: d58a6322-6a28-4708-82d3-53b7dcc13c1a
 ==== INBOUND NEIGHBORS ======================================
 &lt;snip&gt;
 DC=ForestDnsZones,DC=Contoso,DC=com
-London\LONEMEADC via RPC
+LondonLONEMEADC via RPC
 DSA object GUID: cd691606-63d1-4cc8-b77a-055674ba569d
 Last attempt @ 2010-06-10 17:35:46 failed, <codeFeaturedElement>result 1256 (0x4e8):</codeFeaturedElement>
 <codeFeaturedElement>The remote system is not available.</codeFeaturedElement> For information about network troubleshooting, see Windows Help.

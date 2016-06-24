@@ -52,7 +52,7 @@ You must install the Remote Access role on a server in your organization that wi
   
 ![](../../../../media/Step-2--Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 Install-WindowsFeature RemoteAccess -IncludeManagementTools  
@@ -79,7 +79,7 @@ There are three options that you can use to deploy Remote Access from the Remote
 3.  In the **Configure Remote Access** dialog box, select DirectAccess and VPN, DirectAccess only, or VPN only.  
   
 ## <a name="BKMK_Clients"></a>Configure DirectAccess clients  
-For a client computer to be provisioned to use DirectAccess, it must belong to the selected security group. After DirectAccess is configured, client computers in the security group are provisioned to receive the DirectAccess Group Policy Objects \(GPOs\) for remote management.  
+For a client computer to be provisioned to use DirectAccess, it must belong to the selected security group. After DirectAccess is configured, client computers in the security group are provisioned to receive the DirectAccess Group Policy Objects (GPOs) for remote management.  
   
 #### To configure DirectAccess clients  
   
@@ -111,9 +111,9 @@ To deploy Remote Access, you need to configure the server that will act as the R
   
 1.  Correct network adapters  
   
-2.  A public URL for the Remote Access server to which client computers can connect \(the ConnectTo address\)  
+2.  A public URL for the Remote Access server to which client computers can connect (the ConnectTo address)  
   
-3.  An IP\-HTTPS certificate with a subject that matches the ConnectTo address  
+3.  An IP-HTTPS certificate with a subject that matches the ConnectTo address  
   
 4.  IPv6 settings  
   
@@ -123,23 +123,23 @@ To deploy Remote Access, you need to configure the server that will act as the R
   
 1.  In the middle pane of the Remote Access Management console, in the **Step 2 Remote Access Server** area, click **Configure**.  
   
-2.  In the Remote Access Server Setup Wizard, on the **Network Topology** page, click the deployment topology that will be used in your organization. In **Type the public name or IPv4 address used by clients to connect to the Remote Access server**, enter the public name for the deployment \(this name matches the subject name of the IP\-HTTPS certificate, for example, edge1.contoso.com\), and then click **Next**.  
+2.  In the Remote Access Server Setup Wizard, on the **Network Topology** page, click the deployment topology that will be used in your organization. In **Type the public name or IPv4 address used by clients to connect to the Remote Access server**, enter the public name for the deployment (this name matches the subject name of the IP-HTTPS certificate, for example, edge1.contoso.com), and then click **Next**.  
   
 3.  On the **Network Adapters** page, the wizard automatically detects:  
   
     -   Network adapters for the networks in your deployment. If the wizard does not detect the correct network adapters, manually select the correct adapters.  
   
-    -   IP\-HTTPS certificate. This is based on the public name for the deployment that you set during the previous step of the wizard. If the wizard does not detect the correct IP\-HTTPS certificate, click **Browse** to manually select the correct certificate.  
+    -   IP-HTTPS certificate. This is based on the public name for the deployment that you set during the previous step of the wizard. If the wizard does not detect the correct IP-HTTPS certificate, click **Browse** to manually select the correct certificate.  
   
 4.  Click **Next**.  
   
-5.  On the **Prefix Configuration** page \(this page is only visible if IPv6 is detected in the internal network\), the wizard automatically detects the IPv6 settings that are used on the internal network. If your deployment requires additional prefixes, configure the IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers.  
+5.  On the **Prefix Configuration** page (this page is only visible if IPv6 is detected in the internal network), the wizard automatically detects the IPv6 settings that are used on the internal network. If your deployment requires additional prefixes, configure the IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers.  
   
 6.  On the **Authentication** page:  
   
-    -   For multisite and two\-factor authentication deployments, you must use computer certificate authentication. Select the **Use computer certificates** check box to use computer certificate authentication and select the IPsec root certificate.  
+    -   For multisite and two-factor authentication deployments, you must use computer certificate authentication. Select the **Use computer certificates** check box to use computer certificate authentication and select the IPsec root certificate.  
   
-    -   To enable client computers running  Windows 7  to connect via DirectAccess, select the **Enable Windows 7 client computers to connect via DirectAccess** check box. You must also use computer certificate authentication in this type of deployment.  
+    -   To enable client computers running  Windows 7  to connect via DirectAccess, select the **Enable Windows 7 client computers to connect via DirectAccess** check box. You must also use computer certificate authentication in this type of deployment.  
   
 7.  Click **Finish**.  
   
@@ -162,7 +162,7 @@ To configure the infrastructure servers in a Remote Access deployment, you must 
   
     -   If the network location server is on the Remote Access server, click **Browse** to locate the relevant certificate, and then click **Next**.  
   
-3.  On the **DNS** page, in the table, enter additional name suffixes that will be applied as Name Resolution Policy Table \(NRPT\) exemptions. Select a local name resolution option, and then click **Next**.  
+3.  On the **DNS** page, in the table, enter additional name suffixes that will be applied as Name Resolution Policy Table (NRPT) exemptions. Select a local name resolution option, and then click **Next**.  
   
 4.  On the **DNS Suffix Search List** page, the Remote Access server automatically detects domain suffixes in the deployment. Use the **Add** and **Remove** buttons to create the list of domain suffixes that you want to use. To add a new domain suffix, in **New Suffix**, enter the suffix, and then click **Add**. Click **Next**.  
   

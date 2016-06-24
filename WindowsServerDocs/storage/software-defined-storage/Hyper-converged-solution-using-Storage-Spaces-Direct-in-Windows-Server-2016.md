@@ -54,14 +54,14 @@ If you would like to evaluate Storage Spaces Direct in Windows Server 2016 Techn
 For simplicity, this guide references a specific set of hardware that we were able to test.  This is for example purposes only and most of the steps are not specific to hardware. Where something is specific to hardware, it will be noted. There are many hardware vendors with solutions that are compatible with the hyper-converged system described in this guide and this hardware example does not indicate a preference over other systems or hardware vendors. Due to limited resources and time constraints imposed by TP5, we are in a position to offer detailed guidance only for a specific subset of tested hardware configurations at this time.  
 
 * Server: Dell 730XD  
-  -	Bios: 1.5.54  
+  - Bios: 1.5.54  
 * HBA: Dell HBA330  
-  -	Firmware: 9.17.20.07 A00  
+  - Firmware: 9.17.20.07 A00  
 * Network Interfaces:  
   *  Mellanox ConnectX-3 Pro (dual port 10Gb, SFP+) for RoCEv2 networks. You can download the Mellanox drivers [here](http://go.microsoft.com/fwlink/?LinkId=786461).  
-  -	Firmware: 2.34.50.60 or newer  
+  - Firmware: 2.34.50.60 or newer  
  * Top of Rack Switch (TOR) Cisco Nexus 3132  
-   -	BIOS version: 1.7.0  
+   -    BIOS version: 1.7.0  
 
 
 ## <a name="BKMK_S2D4"></a>Information Gathering   
@@ -178,8 +178,8 @@ There are other methods to deploy Nano, but in the case of this example we’ll 
 
 > [!NOTE]
 > If you are going to manage the servers with System Center, add the following items in the “-Packages” section of the “New-NanoServerImage” command:  
-	    Microsoft-NanoServer-SCVMM-Package  
-     	Microsoft-NanoServer-SCVMM-Compute-Package  
+        Microsoft-NanoServer-SCVMM-Package  
+        Microsoft-NanoServer-SCVMM-Compute-Package  
 
 > [!NOTE]
 > If you have drivers that are recommended by your hardware vendor, it is simplest to inject the network drivers into the image during the “New-NanoServerImage” step below. If you don’t, you may be able to use the in-box drivers using the –OEMDrivers parameter in the “New-NanoServerImage” command, and then update the drivers using Windows Update after deployment. It is important to have the drivers that your hardware vender recommends, so that the networks provide the best reliability and performance possible.  
@@ -188,25 +188,25 @@ There are other methods to deploy Nano, but in the case of this example we’ll 
 
     In this example, the NanoServerImageGenerator directory will be copied to:  
 
-    	C:\NanoBuild\NanoBuildScripts  
+        C:NanoBuildNanoBuildScripts  
 
 2.  Start Windows PowerShell **as an administrator**, change directory **your desired working folder** where you copied the “NanoServerImageGenerator” contents to, and **run the following command** to import the Nano Server Image Generator PowerShell module. This module will enable you to create the new Nano Server images.  
 
-	 	Import-Module .\NanoServerImageGenerator –Verbose  
+        Import-Module .NanoServerImageGenerator –Verbose  
 
-	You should see something like this:  
+    You should see something like this:  
 
     ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig1a.png)  
 
 1. **Copy network drivers** to a directory and note the path. The example in the next step will use  
 
-    c:\WS2016TP5\_Drivers  
+    c:\WS2016TP5_Drivers  
 
 2.  **Before using the following PowerShell commands to create the new Nano Server images please read the following section to get an overview of the entire task**  
 
-	 In this step, you will **create a unique image for each Host machine**. We need 4 images; one for each physical host in the HyperConverged setup.  
+     In this step, you will **create a unique image for each Host machine**. We need 4 images; one for each physical host in the HyperConverged setup.  
 
- 	**Creating each Nano Server image can take several minutes** depending on the size of the drivers and other packages being included. It is not unusual for a large image to take 30 minutes to complete the creation process.  
+    **Creating each Nano Server image can take several minutes** depending on the size of the drivers and other packages being included. It is not unusual for a large image to take 30 minutes to complete the creation process.  
 
     -   **Create the images one at a time**. Because of possible file collision, we recommend creating the images one at a time.  
 
@@ -224,7 +224,7 @@ There are other methods to deploy Nano, but in the case of this example we’ll 
         -   **DriversPath** – folder location where the expanded drivers that you want to inject to the image are maintained  
 
         -   **Other options**: If you want a richer understanding of the all the input parameters associated with New-NanoServerImage you can learn more from the [“Getting Started with Nano Server”](https://technet.microsoft.com/library/mt126167.aspx) guide.  
--   	**ServicingPackages Path**:  Servicing packages can be added to the image at the time the image is built, or you can use Windows Update later.  For this TP5 hyper-converged deployment you will need KB3157663 and this path should point to the cab file extracted from KB3157663.  
+-      **ServicingPackages Path**:  Servicing packages can be added to the image at the time the image is built, or you can use Windows Update later.  For this TP5 hyper-converged deployment you will need KB3157663 and this path should point to the cab file extracted from KB3157663.  
 
 >[!IMPORTANT]
 > If you want install servicing packages, use the -ServicingPackages parameter (you can pass an array of paths to .cab files). Often, a servicing package or hotfix is downloaded as a KB item which contains a .cab file. For instructions, see [Installation of servicing packages](../../compute/nano-server/Getting-Started-with-Nano-Server.md#BKMK_Svcing).  
@@ -241,13 +241,13 @@ The following is an example of how you can execute the same thing in a script:
     //Example definition of variable names and values  
 
     $myNanoServerName = "myComputer-1"    
-    $myNanoImagePath = ".\Nano\NanoServerPhysical"      
+    $myNanoImagePath = ".NanoNanoServerPhysical"      
     $myNanoServerVHDXname = "myComputer=1.VHDX"      
     $myDomainFQDN = "corp.contoso.com"      
-    $MediaPath = "d:\"      
-    $myDriversPath = "C:\WS2016TP5\_Drivers"  
+    $MediaPath = "d:"      
+    $myDriversPath = "C:WS2016TP5_Drivers"  
 
-    New-NanoServerImage -MediaPath d:\ -TargetPath "$myNanoImagePath\$myNanoServerVHDXname" -ComputerName $myNanoServerName -Compute -Storage -Clustering -DomainName  
+    New-NanoServerImage -MediaPath d: -TargetPath "$myNanoImagePath$myNanoServerVHDXname" -ComputerName $myNanoServerName -Compute -Storage -Clustering -DomainName  
 
     $myDomainFQDN -OEMDrivers -DeploymentType Host -Edition Datacenter -EnableRemoteManagementPort -ReuseDomainNode -DriversPath $myDriversPath -Packages Microsoft-NanoServer-DCB-Package –ServicingPackages <ServicingPackagesPath>  
 
@@ -316,26 +316,26 @@ You will need a Management system machine that has the same build of Windows Ser
 
     Open a PowerShell console with Administrator privilages and execute the following. This will configure the trusted hosts to all hosts.  
 
-         Set-Item WSMan:\localhost\Client\TrustedHosts "*"  
+         Set-Item WSMan:localhostClientTrustedHosts "*"  
 
     After the onetime configuration above, you will not need to repeat Set-Item. However, each time you close and reopen the PowerShell console you should establish a new remote PS Session to the Nano Server by running the commands below:  
 
 1.  Enter the PS session and use either the Nano Server name or the IP address that you acquired from the Recovery Console earlier in this doc. You will be prompted for a password after you execute this command, enter the administrator password you specified when creating the Nano VHDx.  
 
-        Enter-PSSession -ComputerName <myComputerName> -Credential LocalHost\Administrator  
+        Enter-PSSession -ComputerName <myComputerName> -Credential LocalHostAdministrator  
 
     Examples of doing the same thing in a way that is more useful in scripts, in case you need to do this more than once:  
 
     **Example 1:** using an IP address:  
 
         $ip = "10.100.0.1"  
-        $user = "$ip\Administrator"  
+        $user = "$ipAdministrator"  
         Enter-PSSession -ComputerName $ip -Credential $user  
 
     **Example 2:** OR you can do something similar with computer name instead of IP address.  
 
         $myNanoServer1 = "myNanoServer-1"  
-        $user = "$myNanoServer1\Administrator"  
+        $user = "$myNanoServer1Administrator"  
         Enter-PSSession -ComputerName $myNanoServer1 -Credential $user  
 
 #### Adding domain accounts.   
@@ -350,7 +350,7 @@ For each server of the hyper-converged system:
 
 1.  Use a PowerShell console that was opened with Administrator privileges and in a PSSession issue the following command to add your domain account(s) in the Administrators local security group. See the section above for information about how to connect to the Nano systems using PSSession.  
 
-        Net localgroup Administrators <Domain\Account> /add   
+        Net localgroup Administrators <DomainAccount> /add   
 
 ### <a name="BKMK_S2D5b"></a> Configure the Network   
 
@@ -362,7 +362,7 @@ The following assumes 2 RDMA NIC Ports (1 dual port, or 2 single port). In order
 **Figure 4: Process for configuring the network in a hyper-converged solution using Windows Server 2016 Technical Preview.**  
 
     > [!NOTE]
-	> Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
+    > Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
 
 
 #### Configure the Top of Rack (TOR) Switch  
@@ -406,14 +406,14 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
          [MachineName]: PS C:\Users\User\Documents> Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed                                                                                                                                                                              
 
 
-          Name  				InterfaceDescription  									Status     LinkSpeed  
-          ----  		----------------------------------------------------------   ----------	  ----------  
-          NIC3  		QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #46      Disconnected     0 bps  
-          Ethernet 2 	2Mellanox ConnectX-3 Pro Ethernet Adapter #2   			        Up          10 Gbps  
-          SLOT #		Mellanox ConnectX-3 Pro Ethernet Adapter  				        Up          10 Gbps  
-          NIC4  		QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #47	   Disconnected      0 bps  
-          NIC1  		QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #44  Disconnected      0 bps  
-          NIC2  		QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45  Disconnected      0 bps  
+          Name                  InterfaceDescription                                    Status     LinkSpeed  
+          ----          ----------------------------------------------------------   ----------   ----------  
+          NIC3          QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #46      Disconnected     0 bps  
+          Ethernet 2    2Mellanox ConnectX-3 Pro Ethernet Adapter #2                    Up          10 Gbps  
+          SLOT #        Mellanox ConnectX-3 Pro Ethernet Adapter                        Up          10 Gbps  
+          NIC4          QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #47     Disconnected      0 bps  
+          NIC1          QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #44  Disconnected      0 bps  
+          NIC2          QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45  Disconnected      0 bps  
 
 
 
@@ -443,18 +443,18 @@ Do the following steps from a management system using [Enter-PSSession](https://
 
 1. Identify the network adapters (you will use this info in step #2)                                                                                                                                                                            
 
-		Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed  
+        Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed  
 
-		[MachineName]: PS C:\Users\User\Documents> Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed  
+        [MachineName]: PS C:\Users\User\Documents> Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed  
 
-		Name  				InterfaceDescription  									Status     LinkSpeed  
-		----  		--------------------  ------   								  ---------  
-		NIC3  		QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #46      Disconnected     0 bps  
-		Ethernet 	2Mellanox ConnectX-3 Pro Ethernet Adapter #2   			        Up          10 Gbps  
-		SLOT #		Mellanox ConnectX-3 Pro Ethernet Adapter  				        Up          10 Gbps  
-		NIC4  		QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #47	   Disconnected      0 bps  
-		NIC1  		QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #44  Disconnected      0 bps  
-		NIC2  		QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45  Disconnected      0 bps  
+        Name                InterfaceDescription                                    Status     LinkSpeed  
+        ----        --------------------  ------                                  ---------  
+        NIC3        QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #46      Disconnected     0 bps  
+        Ethernet    2Mellanox ConnectX-3 Pro Ethernet Adapter #2                    Up          10 Gbps  
+        SLOT #      Mellanox ConnectX-3 Pro Ethernet Adapter                        Up          10 Gbps  
+        NIC4        QLogic BCM57800 Gigabit Ethernet (NDIS VBD Client) #47     Disconnected      0 bps  
+        NIC1        QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #44  Disconnected      0 bps  
+        NIC2        QLogic BCM57800 10 Gigabit Ethernet (NDIS VBD Client) #45  Disconnected      0 bps  
 
 
 
@@ -462,11 +462,11 @@ Do the following steps from a management system using [Enter-PSSession](https://
 
 1. Create the virtual switch connected to both of the physical network adapters, and enable the Switch Embedded Teaming (SET). You may notice a message that your PSSession lost connection. This is expected and your session will reconnect.    
 
-  		New-VMSwitch –Name SETswitch –NetAdapterName “<adapter1>”,”<adapter2>” –EnableEmbeddedTeaming $true                                                                                                                                  
+        New-VMSwitch –Name SETswitch –NetAdapterName “<adapter1>”,”<adapter2>” –EnableEmbeddedTeaming $true                                                                                                                                  
 
     Using the Get-NetAdapter example above, the command would look like this:                                                                                                                                                                        
 
-  		New-VMSwitch –Name SETswitch –NetAdapterName “Ethernet 2”,”Slot #” –EnableEmbeddedTeaming $true                                                                                                                                                 
+        New-VMSwitch –Name SETswitch –NetAdapterName “Ethernet 2”,”Slot #” –EnableEmbeddedTeaming $true                                                                                                                                                 
 
 
 
@@ -481,49 +481,49 @@ Do the following steps from a management system using [Enter-PSSession](https://
 
 1. Configure the host vNIC to use a Vlan. They can be on the same or different VLans                                                                                                                                                              
 
-		Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_1" -VlanId <vlan number> -Access -ManagementOS  
+        Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_1" -VlanId <vlan number> -Access -ManagementOS  
 
-		Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_2" -VlanId <vlan number>  -Access -ManagementOS                                                                                                                                     
+        Set-VMNetworkAdapterVlan -VMNetworkAdapterName "SMB_2" -VlanId <vlan number>  -Access -ManagementOS                                                                                                                                     
 
 
 
 
 1. Verify that the VLANID is set                                                                                                                                                                                                                  
 
-  		Get-VMNetworkAdapterVlan –ManagementOS                                                                                                                                                                                                           
+        Get-VMNetworkAdapterVlan –ManagementOS                                                                                                                                                                                                           
 
      The output should look like this:                                                                                                                                                                                                                
 
-  		VMName   VMNetworkAdapterName    Mode     VlanList                                                                                                                                                                                                        
+        VMName   VMNetworkAdapterName    Mode     VlanList                                                                                                                                                                                                        
 
- 		 ------   -------------------    ----      --------                                                                                                                                                                                                        
+         ------   -------------------    ----      --------                                                                                                                                                                                                        
 
-  		             SMB_1             Access      13                                                                                                                                                                                                                                 
+                     SMB_1             Access      13                                                                                                                                                                                                                                 
 
-  		             SETswitch         Untagged                                                                                                                                                                                                                               
+                     SETswitch         Untagged                                                                                                                                                                                                                               
 
-  		             SMB_2             Access      13                                                                                                                                                                                                                                 
+                     SMB_2             Access      13                                                                                                                                                                                                                                 
 
 
 
 1. Disable and enable each host vNIC adapter so that the Vlan is active.                                                                                                                                                                          
 
-  		Disable-NetAdapter “vEthernet (SMB_1)”                                                                                                                                                                                                          
+        Disable-NetAdapter “vEthernet (SMB_1)”                                                                                                                                                                                                          
 
-  		Enable-NetAdapter “vEthernet (SMB_1)”                                                                                                                                                                                                           
+        Enable-NetAdapter “vEthernet (SMB_1)”                                                                                                                                                                                                           
 
-  		Disable-NetAdapter “vEthernet (SMB_2)”                                                                                                                                                                                                          
+        Disable-NetAdapter “vEthernet (SMB_2)”                                                                                                                                                                                                          
 
-  		Enable-NetAdapter “vEthernet (SMB_2)”                                                                                                                                                                                                           
+        Enable-NetAdapter “vEthernet (SMB_2)”                                                                                                                                                                                                           
 
 
 
 1. Enable RDMA on the host vNIC adapters                                                                                                                                                                                                          
 
-  		Enable-NetAdapterRDMA “vEthernet (SMB_1)”,”vEthernet (SMB_2)”   
+        Enable-NetAdapterRDMA “vEthernet (SMB_1)”,”vEthernet (SMB_2)”   
 1. Verify RDMA capabilities.                                                                                                                                                                                                                      
 
- 		Get-SmbClientNetworkInterface       
+        Get-SmbClientNetworkInterface       
    Values should show **True** for RDMA Capable for the RDMA enabled interfaces. The following is an example where you show true for the adapters **vEthernet (SMB_1)** and **vEthernet (SMB_2)**.                                                      
 
    ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_PSFig2.png)       
@@ -560,7 +560,7 @@ In this step, you will run the cluster validation tool to ensure that the server
 
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.  
 
-	Test-Cluster –Node <MachineName1,MachineName2,MachineName3,MachineName4> –Include “Storage Spaces Direct”,Inventory,Network,”System Configuration”  
+    Test-Cluster –Node <MachineName1,MachineName2,MachineName3,MachineName4> –Include “Storage Spaces Direct”,Inventory,Network,”System Configuration”  
 
 #### <a name="BKMK_S2D5c2"></a> Step 2. Create a cluster  
 
@@ -574,7 +574,7 @@ In this step, you will create a cluster with the four nodes that you have valida
 
 In the following command the ClusterName placeholder should be replaced with a netbios name that is unique and 15 characters or less.  
 
-	New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage	  
+    New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage    
 
 After the cluster is created, it can take time for DNS entry for the cluster name to be replicated.  The time is dependent on the environment and DNS replication configuration.  If resolving the cluster isn’t successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.  
 #### <a name="BKMK_S2D5c3"></a>Step 3. Configure a Cluster Witness  
@@ -600,33 +600,33 @@ The disks intended to be used for Storage Spaces Direct need to be empty and wit
 
     icm (Get-Cluster -Name HCNanoUSClu3 | Get-ClusterNode) {  
 
-        Update-StorageProviderCache  
+        Update-StorageProviderCache  
 
-        Get-StoragePool |? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue  
+        Get-StoragePool |? IsPrimordial -eq $false | Set-StoragePool -IsReadOnly:$false -ErrorAction SilentlyContinue  
 
-        Get-StoragePool |? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue  
+        Get-StoragePool |? IsPrimordial -eq $false | Get-VirtualDisk | Remove-VirtualDisk -Confirm:$false -ErrorAction SilentlyContinue  
 
-        Get-StoragePool |? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue  
+        Get-StoragePool |? IsPrimordial -eq $false | Remove-StoragePool -Confirm:$false -ErrorAction SilentlyContinue  
 
-        Get-PhysicalDisk | Reset-PhysicalDisk -ErrorAction SilentlyContinue  
+        Get-PhysicalDisk | Reset-PhysicalDisk -ErrorAction SilentlyContinue  
 
-        Get-Disk |? Number -ne $null |? IsBoot -ne $true |? IsSystem -ne $true |? PartitionStyle -ne RAW |% {  
+        Get-Disk |? Number -ne $null |? IsBoot -ne $true |? IsSystem -ne $true |? PartitionStyle -ne RAW |% {  
 
-            $_ | Set-Disk -isoffline:$false  
+            $_ | Set-Disk -isoffline:$false  
 
-            $_ | Set-Disk -isreadonly:$false  
+            $_ | Set-Disk -isreadonly:$false  
 
-            $_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false  
+            $_ | Clear-Disk -RemoveData -RemoveOEM -Confirm:$false  
 
-            $_ | Set-Disk -isreadonly:$true  
+            $_ | Set-Disk -isreadonly:$true  
 
-            $_ | Set-Disk -isoffline:$true  
+            $_ | Set-Disk -isoffline:$true  
 
-        }  
+        }  
 
-        Get-Disk |? Number -ne $null |? IsBoot -ne $true |? IsSystem -ne $true |? PartitionStyle -eq RAW | Group -NoElement -Property FriendlyName  
+        Get-Disk |? Number -ne $null |? IsBoot -ne $true |? IsSystem -ne $true |? PartitionStyle -eq RAW | Group -NoElement -Property FriendlyName  
 
-    } | Sort -Property PsComputerName,Count   
+    } | Sort -Property PsComputerName,Count   
 
 The output from this script will look similar to the following. The **Count** is the number of disks with that name per cluster node (PSComputerName):  
 
@@ -646,7 +646,7 @@ After creating the cluster, use the Enable-ClusterStorageSpacesDirect PowerShell
 
 From the Management system, in a PowerShell command windows opened with Administrator privileges, initiate the following command. The cluster name is the name of the cluster that you created in the previous steps.  
 
-	Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>  
+    Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>  
 
 
    > [!NOTE]
@@ -731,14 +731,14 @@ It will be much easier to do this configuration before configuring the virtual s
 
 For each server do the following for each Mellanox ConnectX-3 Pro adapter:  
 
-1.	Open Device Manager.  
-2.	Navigate to the **Network adapters** item and open it to see the list of network adapters.  
-3.	Right click on a Mellanox adapter and select **Disable**.  
-4.	Select **Properties** to open the properties dialog  
-5.	Select the **Advanced** tab.  
-6.	In the Property list, select the property labeled **Force NDK to work with Global Pause**, then change the value to **Enabled**.  
-7.	Select **OK** to close the properties dialog.  
-8.	Select **Enable**, to enable the adapter.  
+1.  Open Device Manager.  
+2.  Navigate to the **Network adapters** item and open it to see the list of network adapters.  
+3.  Right click on a Mellanox adapter and select **Disable**.  
+4.  Select **Properties** to open the properties dialog  
+5.  Select the **Advanced** tab.  
+6.  In the Property list, select the property labeled **Force NDK to work with Global Pause**, then change the value to **Enabled**.  
+7.  Select **OK** to close the properties dialog.  
+8.  Select **Enable**, to enable the adapter.  
 
 
 To verify, open a PowerShell console as Administrator and run the following command:  

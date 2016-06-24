@@ -27,7 +27,7 @@ You must be a member of **Administrators**, or equivalent to perform this proced
   
 2.  Configure the computer as a hosted cache server by using one of the following commands:  
   
-    -   To configure a non\-domain joined computer as a hosted cache server, type the following command at the Windows PowerShell prompt, and then press ENTER.  
+    -   To configure a non-domain joined computer as a hosted cache server, type the following command at the Windows PowerShell prompt, and then press ENTER.  
   
         `Enable-BCHostedServer`  
   
@@ -40,6 +40,6 @@ You must be a member of **Administrators**, or equivalent to perform this proced
     `Get-BCStatus`  
   
     > [!NOTE]  
-    > After you run this command, in the section **HostedCacheServerConfiguration**, the value for **HostedCacheServerIsEnabled** is **True**. If you configured a domain joined hosted cache server to register a service connection point \(SCP\) in Active Directory, the value for **HostedCacheScpRegistrationEnabled** is **True**.  
+    > After you run this command, in the section **HostedCacheServerConfiguration**, the value for **HostedCacheServerIsEnabled** is **True**. If you configured a domain joined hosted cache server to register a service connection point (SCP) in Active Directory, the value for **HostedCacheScpRegistrationEnabled** is **True**.  
   
 

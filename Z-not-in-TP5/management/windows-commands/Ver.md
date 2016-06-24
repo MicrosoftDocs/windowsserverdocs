@@ -24,7 +24,7 @@ ver
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/?|Displays help at the command prompt.|  
+|/?|Displays help at the command prompt.|  
   
 ## <a name="BKMK_examples"></a>Examples  
 To obtain the version number of the operating system, type:  

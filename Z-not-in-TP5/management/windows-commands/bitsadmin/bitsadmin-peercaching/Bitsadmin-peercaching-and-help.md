@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 2cb0fcc0-5464-47c9-b44d-dd32a4f0d907
 ---
 # Bitsadmin peercaching and help
-Displays the command\-line usage for the **PeerCaching** commands.
+Displays the command-line usage for the **PeerCaching** commands.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ Bitsadmin /PeerCaching /Help
 ```
 
 ## <a name="BKMK_examples"></a>Examples
-The following command displays the command\-line help for the **PeerCaching** commands.
+The following command displays the command-line help for the **PeerCaching** commands.
 
 ```
 Bitsadmin /PeerCaching /Help

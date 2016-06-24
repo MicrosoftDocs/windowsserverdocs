@@ -17,7 +17,7 @@ The following table describes the settings and values used by AppLocker.
 
 |Setting|Value|
 |-----------|---------|
-|Registry path|Policies are stored in **\\HKEY\_LOCAL\_Machine\\Software\\Policies\\Microsoft\\Windows\\SrpV2**|
+|Registry path|Policies are stored in **\HKEY_LOCAL_Machine\Software\Policies\Microsoft\Windows\SrpV2**|
 |Firewall ports|Not applicable|
 |Security policies|Custom created, no default|
 |Group Policy settings|Custom created, no default|

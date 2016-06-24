@@ -15,20 +15,20 @@ This topic for the IT professional describes the Advanced Security Audit policy 
 
 Events can be generated for user account management auditing when:
 
--   The password hash of an account is accessed. This typically happens when the Active Directory Migration Tool \(ADMT\) is moving password data.
+-   The password hash of an account is accessed. This typically happens when the Active Directory Migration Tool (ADMT) is moving password data.
 
--   The Password Policy Checking application programming interface \(API\) is called. Calls to this function could be part of an attack from a malicious application that is testing whether password complexity policy settings are being applied.
+-   The Password Policy Checking application programming interface (API) is called. Calls to this function could be part of an attack from a malicious application that is testing whether password complexity policy settings are being applied.
 
--   Changes are made to domain policy under **Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Password Policy** or **Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Account Lockout Policy**.
+-   Changes are made to domain policy under **Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy** or **Computer Configuration\Windows Settings\Security Settings\Account Policies\Account Lockout Policy**.
 
 > [!NOTE]
-> These events are logged when the domain policy is applied \(on refresh or restart\), not when settings are modified by an administrator.
+> These events are logged when the domain policy is applied (on refresh or restart), not when settings are modified by an administrator.
 
 Event volume: Low
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event Message Summary|
 |------------|-------------------------|

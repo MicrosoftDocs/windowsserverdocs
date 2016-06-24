@@ -10,7 +10,7 @@ ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
 author: YuriDio
 ---
 # Securing Privileged Access
-Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber\-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](http://www.microsoft.com/pth).
+Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization. The security of most or all business assets in an organization depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are targeting these accounts and other elements of privileged access to rapidly gain access to targeted data and systems using credential theft attacks like [Pass-the-Hash and Pass-the-Ticket](http://www.microsoft.com/pth).
 
 Protecting administrative access against determined adversaries require you to take a complete and thoughtful approach to isolate these systems from risks. This figure depicts the three stages of recommendations for separating and protecting administration in this roadmap:
 
@@ -18,19 +18,19 @@ Protecting administrative access against determined adversaries require you to t
 
 Roadmap Objectives:
 
--   **2\-4 week plan**: quickly mitigate the most frequently used attack techniques
+-   **2-4 week plan**: quickly mitigate the most frequently used attack techniques
 
--   **1\-3 month plan**: build visibility and control of admin activity
+-   **1-3 month plan**: build visibility and control of admin activity
 
--   **6\+ month plan**: continue building defenses to a more proactive security posture
+-   **6+ month plan**: continue building defenses to a more proactive security posture
 
 Microsoft recommends you follow this roadmap to secure privileged access against determined adversaries. You may adjust this roadmap to accommodate your existing capabilities and specific requirements in your organizations.
 
 > [!NOTE]
-> Securing privileged access requires a broad range of elements including technical components \(host defenses, account protections, identity management, etc.\) as well as changes to process, and administrative practices and knowledge.
+> Securing privileged access requires a broad range of elements including technical components (host defenses, account protections, identity management, etc.) as well as changes to process, and administrative practices and knowledge.
 
 ## Why is Securing Privileged Access important?
-In most organizations, the security of most or all business assets depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber\-attackers are focusing on privileged access to systems like Active Directory to rapidly gain access to all of an organizations targeted data.
+In most organizations, the security of most or all business assets depends on the integrity of the privileged accounts that administer and manage IT systems. Cyber-attackers are focusing on privileged access to systems like Active Directory to rapidly gain access to all of an organizations targeted data.
 
 Traditional security approaches have focused on using the ingress and egress points of an organizations network as the primary security perimeter, but the effectiveness of network security has been significantly diminished by two trends:
 
@@ -61,19 +61,19 @@ The roadmap is designed to maximize the use of technologies that you may already
 
 The roadmap of Microsoft recommendations is broken into 3 stages:
 
--   2\-4 week plan – Quickly mitigate the most frequently used attack techniques
+-   2-4 week plan – Quickly mitigate the most frequently used attack techniques
 
--   1\-3 month plan – Build visibility and control of admin activity
+-   1-3 month plan – Build visibility and control of admin activity
 
--   6\+ month plan – Continue building defenses to a more proactive security posture
+-   6+ month plan – Continue building defenses to a more proactive security posture
 
-Each stage of the roadmap is designed to raise the cost and difficulty for adversaries to attack privileged access for your on\-premises and cloud assets. The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation.
+Each stage of the roadmap is designed to raise the cost and difficulty for adversaries to attack privileged access for your on-premises and cloud assets. The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation.
 
 > [!NOTE]
 > The timelines for the roadmap are approximate and are based on our experience with customer implementations. The duration will vary in your organization depending on the complexity of your environment and your change management processes.
 
 ### Security Privileged Access Roadmap: Stage 1
-Stage 1 of the roadmap is focused on quickly mitigating the most frequently used attack techniques of credential theft and abuse. Stage 1 is designed to be implemented in approximately 2\-4 weeks and is depicted in this diagram:
+Stage 1 of the roadmap is focused on quickly mitigating the most frequently used attack techniques of credential theft and abuse. Stage 1 is designed to be implemented in approximately 2-4 weeks and is depicted in this diagram:
 
 ![](media/PAW_LP_Fig6.JPG)
 
@@ -81,11 +81,11 @@ Stage 1 of the Security Privileged Access roadmap includes these components:
 
 **1. Separate Admin account for admin tasks**
 
-To help separate internet risks \(phishing attacks, web browsing\) from administrative privileges, create a dedicated account for all personnel with administrative privileges. Additional guidance on this is included in the PAW instructions published [here](http://Aka.ms/CyberPAW).
+To help separate internet risks (phishing attacks, web browsing) from administrative privileges, create a dedicated account for all personnel with administrative privileges. Additional guidance on this is included in the PAW instructions published [here](http://Aka.ms/CyberPAW).
 
-**2. Privileged Access Workstations \(PAWs\) Phase 1: Active Directory admins**
+**2. Privileged Access Workstations (PAWs) Phase 1: Active Directory admins**
 
-To help separate internet risks \(phishing attacks, web browsing\) from domain administrative privileges, create dedicated privileged access workstations \(PAWs\) for personnel with AD administrative privileges. This is the first step of a PAW program and is Phase 1 of the guidance published [here](http://Aka.ms/CyberPAW).
+To help separate internet risks (phishing attacks, web browsing) from domain administrative privileges, create dedicated privileged access workstations (PAWs) for personnel with AD administrative privileges. This is the first step of a PAW program and is Phase 1 of the guidance published [here](http://Aka.ms/CyberPAW).
 
 **3. Unique Local Admin Passwords for Workstations**
 
@@ -96,7 +96,7 @@ To mitigate the risk of an adversary stealing a local administrator account pass
 Additional guidance for operating an environment with LAPS and PAWs can be found [here](http://aka.ms/securitystandards).
 
 ### Security Privileged Access Roadmap: Stage 2
-Stage 2 builds on the mitigations from Stage 1 and is designed to be implemented in approximately 1\-3 months. The steps of this stage are depicted in this diagram:
+Stage 2 builds on the mitigations from Stage 1 and is designed to be implemented in approximately 1-3 months. The steps of this stage are depicted in this diagram:
 
 ![](media/PAW_LP_Fig7.JPG)
 
@@ -104,22 +104,22 @@ Stage 2 builds on the mitigations from Stage 1 and is designed to be implemented
 
 To separate internet risks from all privileged administrative accounts, continue with the PAW you started in stage 1 and implement dedicated workstations for all personnel with privileged access. This maps to Phase 2 and 3 of the guidance published [here](http://Aka.ms/CyberPAW).
 
-**2. Time\-bound privileges \(no permanent administrators\)**
+**2. Time-bound privileges (no permanent administrators)**
 
-To lower the exposure time of privileges and increase visibility into their use, provide privileges just in time \(JIT\) using an appropriate solution such as the ones below:
+To lower the exposure time of privileges and increase visibility into their use, provide privileges just in time (JIT) using an appropriate solution such as the ones below:
 
--   For Active Directory Domain Services \(AD DS\), use Microsoft Identity Manager \(MIM\)’s [Privileged Access Manager (PAM)](https://technet.microsoft.com/en-us/library/mt150258.aspx) capability.
+-   For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)’s [Privileged Access Manager (PAM)](https://technet.microsoft.com/en-us/library/mt150258.aspx) capability.
 
 -   For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](http://aka.ms/AzurePIM) capability.
 
-**3. Multi\-factor for time\-bound elevation**
+**3. Multi-factor for time-bound elevation**
 
-To increase the assurance level of administrator authentication, you should require multi\-factor authentication before granting privileges. 
-This can be accomplished with MIM PAM and Azure AD PIM using Azure Multi\-factor authentication \(MFA\).
+To increase the assurance level of administrator authentication, you should require multi-factor authentication before granting privileges. 
+This can be accomplished with MIM PAM and Azure AD PIM using Azure Multi-factor authentication (MFA).
 
-**4. Just Enough Admin \(JEA\) for DC Maintenance**
+**4. Just Enough Admin (JEA) for DC Maintenance**
 
-To reduce the quantity of accounts with domain administration privileges and associated risk exposure, use the Just Enough Administration \(JEA\) feature in PowerShell to perform common maintenance operations on domain controllers. The JEA technology allows specific users to perform specific administrative tasks on servers \(like Domain Controllers\) without giving them administrator rights. Download this guidance from [TechNet](http://aka.ms/JEA).
+To reduce the quantity of accounts with domain administration privileges and associated risk exposure, use the Just Enough Administration (JEA) feature in PowerShell to perform common maintenance operations on domain controllers. The JEA technology allows specific users to perform specific administrative tasks on servers (like Domain Controllers) without giving them administrator rights. Download this guidance from [TechNet](http://aka.ms/JEA).
 
 **5. Lower attack surface of Domain and DCs**
 
@@ -155,19 +155,19 @@ To reduce security risk, you should redesign all aspects of your roles and deleg
 
 **2. Smartcard or Passport Authentication for all admins**
 
-To increase the assurance level and usability of administrator authentication, you should require strong authentication for all administrative accounts hosted in Azure Active Directory and in your Windows Server Active Directory \(including accounts federated to a cloud service\).
+To increase the assurance level and usability of administrator authentication, you should require strong authentication for all administrative accounts hosted in Azure Active Directory and in your Windows Server Active Directory (including accounts federated to a cloud service).
 
 **3. Admin Forest for Active Directory administrators**
 
 To provide the strongest protection for Active Directory administrators, set up an environment that has no security dependencies on your production Active Directory and is isolated from attacks from all but the most trusted systems in your production environment. For more information on the ESAE architecture visit [this page](http://aka.ms/esae).
 
-**4. Code Integrity Policy for DCs \(Server 2016\)**
+**4. Code Integrity Policy for DCs (Server 2016)**
 
-To limit the risk of unauthorized programs on your domain controllers from adversary attack operations and inadvertent administrative errors, configure Windows Server 2016 Code Integrity for kernel \(drivers\) and user mode \(applications\) to only allow authorized executables to run on the machine.
+To limit the risk of unauthorized programs on your domain controllers from adversary attack operations and inadvertent administrative errors, configure Windows Server 2016 Code Integrity for kernel (drivers) and user mode (applications) to only allow authorized executables to run on the machine.
 
-**5. Shielded VMs for virtual DCs \(Server 2016 Hyper\-V Fabric\)**
+**5. Shielded VMs for virtual DCs (Server 2016 Hyper-V Fabric)**
 
-To protect virtualized domain controllers from attack vectors that exploit a virtual machine’s inherent loss of physical security, use this new Server 2016 Hyper\-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper\-V host administrators attacks.
+To protect virtualized domain controllers from attack vectors that exploit a virtual machine’s inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks.
 
 ## Am I done?
 Completing this roadmap will gain you strong privileged access protections for the attacks that are currently known and available to adversaries today. Unfortunately, security threats will constantly evolve and shift, so we recommend you view security as an ongoing process focused on raising the cost and reducing the success rate of adversaries targeting your environment.

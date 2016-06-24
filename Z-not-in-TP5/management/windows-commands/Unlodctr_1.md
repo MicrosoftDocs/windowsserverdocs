@@ -23,17 +23,17 @@ Unlodctr <DriverName>
 |Parameter|Description|  
 |-------------|---------------|  
 |<DriverName>|Removes the Performance counter name settings and Explain text for driver or service <DriverName> from the Windows Server 2003 registry.|  
-|\/?|Displays Help at the command prompt.|  
+|/?|Displays Help at the command prompt.|  
   
 ## Remarks  
   
 > [!WARNING]  
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.  
   
-If the information that you supply contains spaces, use quotation marks around the text \(for example, "<DriverName>"\).  
+If the information that you supply contains spaces, use quotation marks around the text (for example, "<DriverName>").  
   
 ## <a name="BKMK_Examples"></a>Examples  
-To remove the current Performance registry settings and counter Explain text for the Simple Mail Transfer Protocol \(SMTP\) service:  
+To remove the current Performance registry settings and counter Explain text for the Simple Mail Transfer Protocol (SMTP) service:  
   
 ```  
 unlodctr SMTPSVC  

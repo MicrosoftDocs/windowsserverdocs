@@ -24,7 +24,7 @@ active
 
 ## Remarks
 
--   This informs the basic input\/output system \(BIOS\) or Extensible Firmware Interface \(EFI\) that the partition or volume is a valid system partition or system volume.
+-   This informs the basic input/output system (BIOS) or Extensible Firmware Interface (EFI) that the partition or volume is a valid system partition or system volume.
 
 -   Only partitions can be marked as active.
 

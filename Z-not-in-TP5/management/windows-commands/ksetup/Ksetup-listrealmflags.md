@@ -21,19 +21,19 @@ ksetup /listrealmflags
 None
 
 ## Remarks
-The realm flags specify additional features of a non\-Windows\-based Kerberos realm. Computers that are running Windows Server 2003,  Windows Server 2008 , or  Windows Server 2008 R2  can use a non\-Windows\-based Kerberos server to administer authentication instead of using a domain that is running a Windows Server operating system. These systems participate in a Kerberos realm instead of a Windows domain. This entry establishes the features of the realm. The following table describes each.
+The realm flags specify additional features of a non-Windows-based Kerberos realm. Computers that are running Windows Server 2003,  Windows Server 2008 , or  Windows Server 2008 R2  can use a non-Windows-based Kerberos server to administer authentication instead of using a domain that is running a Windows Server operating system. These systems participate in a Kerberos realm instead of a Windows domain. This entry establishes the features of the realm. The following table describes each.
 
 |Value|Realm flag|Description|
 |---------|--------------|---------------|
 |0xF|All|All realm flags are set.|
 |0x00|None|No realm flags are set, and no additional features are enabled.|
-|0x01|SendAddress|The IP address will be included within the ticket\-granting tickets.|
-|0x02|TcpSupported|The Transmission Control Protocol \(TCP\) and the User Datagram Protocol \(UDP\) are supported in this realm.|
+|0x01|SendAddress|The IP address will be included within the ticket-granting tickets.|
+|0x02|TcpSupported|The Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are supported in this realm.|
 |0x04|Delegate|Everyone in this realm is trusted for delegation.|
 |0x08|NcSupported|This realm supports name canonicalization, which allows for DNS and realm naming standards.|
-|0x80|RC4|This realm supports RC4 encryption to enable cross\-realm trust, which allows for the use of TLS.|
+|0x80|RC4|This realm supports RC4 encryption to enable cross-realm trust, which allows for the use of TLS.|
 
-Realm flags are stored in the registry in **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Kerberos\\Domains\\***Realm\-name*. This entry does not exist in the registry by default. You can use the [Ksetup:addrealmflags](Ksetup-addrealmflags.md) command to populate the registry.
+Realm flags are stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\\***Realm-name*. This entry does not exist in the registry by default. You can use the [Ksetup:addrealmflags](Ksetup-addrealmflags.md) command to populate the registry.
 
 ## <a name="BKMK_Examples"></a>Examples
 List the known realm flags on this computer:

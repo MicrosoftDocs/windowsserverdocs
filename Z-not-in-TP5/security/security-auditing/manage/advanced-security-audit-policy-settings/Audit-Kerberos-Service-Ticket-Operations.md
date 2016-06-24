@@ -17,7 +17,7 @@ Events are generated every time Kerberos is used to authenticate a user who want
 
 Event volume:
 
--   High on a domain controller that is in a Key Distribution Center \(KDC\)
+-   High on a domain controller that is in a Key Distribution Center (KDC)
 
 -   Low on domain members
 

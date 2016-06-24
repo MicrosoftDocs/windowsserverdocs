@@ -20,7 +20,7 @@ When determining the number of forests to deploy for your organization, consider
   
 -   Negotiating the design can be a lengthy process. It can be difficult for groups to come to an agreement about ownership and uses for available resources. Make sure that you allow enough time for the groups in your organization to conduct adequate research to identify their needs. Set firm deadlines for design decisions and get consensus from all parties on the established deadlines.  
   
--   Determining the number of forests to deploy involves balancing costs against benefits. A single\-forest model is the most cost\-effective option and requires the least amount of administrative overhead. Although a group in the organization might prefer autonomous service operations, it might be more cost\-effective for the organization to subscribe to service delivery from a centralized and trusted information technology \(IT\) group. This allows the group to own data management without creating the added costs of service management. Balancing costs against benefits might require input from the executive sponsor.  
+-   Determining the number of forests to deploy involves balancing costs against benefits. A single-forest model is the most cost-effective option and requires the least amount of administrative overhead. Although a group in the organization might prefer autonomous service operations, it might be more cost-effective for the organization to subscribe to service delivery from a centralized and trusted information technology (IT) group. This allows the group to own data management without creating the added costs of service management. Balancing costs against benefits might require input from the executive sponsor.  
   
     A single forest is the easiest configuration to manage. It allows for maximum collaboration within the environment because:  
   
@@ -28,14 +28,14 @@ When determining the number of forests to deploy for your organization, consider
   
     -   Management of a duplicate infrastructure is not required.  
   
--   We do not recommend co\-ownership of a single forest by two separate and autonomous IT organizations. In the future, the goals of the two IT groups might change, so that they can no longer accept shared control.  
+-   We do not recommend co-ownership of a single forest by two separate and autonomous IT organizations. In the future, the goals of the two IT groups might change, so that they can no longer accept shared control.  
   
 -   We do not recommend outsourcing service administration to more than one outside partner. Multinational organizations that have groups in different countries or regions might choose to outsource service administration to a different outside partner for each country or region. Because multiple outside partners cannot be isolated from one another, the actions of one partner can affect the service of the other, which makes it difficult to hold the partners accountable to their service level agreements.  
   
--   Only one instance of an Active Directory domain should exist at any time. Microsoft does not support cloning, splitting, or copying domain controllers from one domain in an attempt to establish a second instance of the same domain. For more information about this limitation, see the following section.  
+-   Only one instance of an Active Directory domain should exist at any time. Microsoft does not support cloning, splitting, or copying domain controllers from one domain in an attempt to establish a second instance of the same domain. For more information about this limitation, see the following section.  
   
 ## Restructuring limitations  
-When a company acquires another company, business unit, or product line, the purchasing company might also want to acquire corresponding IT assets from the seller. Specifically, the buyer might want to acquire some or all of the domain controllers that host the user accounts, computer accounts, and security groups that correspond to the business assets that are to be acquired. The only supported methods for the buyer to acquire the IT assets that are stored in the seller's Active Directory forest are as follows:  
+When a company acquires another company, business unit, or product line, the purchasing company might also want to acquire corresponding IT assets from the seller. Specifically, the buyer might want to acquire some or all of the domain controllers that host the user accounts, computer accounts, and security groups that correspond to the business assets that are to be acquired. The only supported methods for the buyer to acquire the IT assets that are stored in the seller's Active Directory forest are as follows:  
   
 1.  Acquire the only instance of the forest, including all domain controllers and directory data in the seller's entire forest.  
   
@@ -43,7 +43,7 @@ When a company acquires another company, business unit, or product line, the pur
   
 This support limitation exists because:  
   
--   Each domain in an Active Directory forest is assigned a unique identity during the creation of the forest. Copying domain controllers from an original domain to a cloned domain compromises the security of both the domains and the forest. Threats to the original domain and the cloned domain include the following:  
+-   Each domain in an Active Directory forest is assigned a unique identity during the creation of the forest. Copying domain controllers from an original domain to a cloned domain compromises the security of both the domains and the forest. Threats to the original domain and the cloned domain include the following:  
   
     -   Sharing of passwords that can be used to gain access to resources  
   

@@ -23,8 +23,8 @@ reg unload <KeyName>
 
 |Parameter|Description|
 |-------------|---------------|
-|<KeyName>|Specifies the full path of the subkey to be unloaded. For specifying remote computers, include the computer name \(in the format \\\\ComputerName\\\) as part of the *KeyName*. Omitting \\\\ComputerName\\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are HKLM and HKU.|
-|\/?|Displays help for **reg unload** at the command prompt.|
+|<KeyName>|Specifies the full path of the subkey to be unloaded. For specifying remote computers, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are HKLM and HKU.|
+|/?|Displays help for **reg unload** at the command prompt.|
 
 ## Remarks
 The following table lists the return values for the **reg unload** option.
@@ -42,7 +42,7 @@ REG UNLOAD HKLM\TempHive
 ```
 
 > [!CAUTION]
-> Do not edit the registry directly unless you have no alternative. The registry editor bypasses standard safeguards, allowing settings that can degrade performance, damage your system, or even require you to reinstall Windows. You can safely alter most registry settings by using the programs in Control Panel or Microsoft Management Console \(MMC\). If you must edit the registry directly, back it up first.
+> Do not edit the registry directly unless you have no alternative. The registry editor bypasses standard safeguards, allowing settings that can degrade performance, damage your system, or even require you to reinstall Windows. You can safely alter most registry settings by using the programs in Control Panel or Microsoft Management Console (MMC). If you must edit the registry directly, back it up first.
 
 #### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)

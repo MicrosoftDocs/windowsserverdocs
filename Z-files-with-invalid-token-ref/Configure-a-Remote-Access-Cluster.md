@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: e8df3619-f365-4070-8117-888c88db13eb
 ---
 # Configure a Remote Access Cluster
-[!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)] and [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)] combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Remote Access server in a load\-balanced cluster.
+[!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)] and [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)] combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Remote Access server in a load-balanced cluster.
 
 -   [Step 1: Implement a single server Remote Access deployment](assetId:///3ea23db1-cd55-4be0-a9d1-a1e657122c9e).
 

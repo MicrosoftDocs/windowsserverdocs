@@ -1,1 +1,1 @@
-Windows Identity Foundation \(WIF\)
+Windows Identity Foundation (WIF)

@@ -25,15 +25,15 @@ logman stop <[-n] <name>> [options]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\-?|Displays context\-sensitive help.|  
-|\-s <computer name>|Perform the command on the specified remote computer.|  
-|\-config <value>|Specifies the settings file containing command options.|  
-|\[\-n\] <name>|Name of the target object.|  
-|\-ets|Send commands to Event Trace Sessions directly without saving or scheduling.|  
-|\-as|Perform the requested operation asynchronously.|  
+|-?|Displays context-sensitive help.|  
+|-s <computer name>|Perform the command on the specified remote computer.|  
+|-config <value>|Specifies the settings file containing command options.|  
+|[-n] <name>|Name of the target object.|  
+|-ets|Send commands to Event Trace Sessions directly without saving or scheduling.|  
+|-as|Perform the requested operation asynchronously.|  
   
 ## <a name="BKMK_examples"></a>Examples  
-The following command starts the data collector perf\_log on the remote computer server\_1.  
+The following command starts the data collector perf_log on the remote computer server_1.  
   
 ```  
 logman start perf_log -s server_1  

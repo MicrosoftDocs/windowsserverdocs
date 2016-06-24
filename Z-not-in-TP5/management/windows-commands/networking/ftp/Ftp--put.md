@@ -23,7 +23,7 @@ put <LocalFile> [<RemoteFile>]
 |Parameter|Description|  
 |-------------|---------------|  
 |<LocalFile>|Specifies the local file to copy.|  
-|\[<RemoteFile>\]|Specifies the name to use on the remote computer.|  
+|[<RemoteFile>]|Specifies the name to use on the remote computer.|  
   
 ## Remarks  
   

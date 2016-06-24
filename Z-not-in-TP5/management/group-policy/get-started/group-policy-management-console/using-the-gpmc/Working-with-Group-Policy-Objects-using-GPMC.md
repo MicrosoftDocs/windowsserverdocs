@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 9933e6fd-ea3c-493f-9ce7-853b46f08896
 ---
 # Working with Group Policy Objects using GPMC
-This topic describes procedures for configuring, filtering, backing up, restoring and importing Group Policy Objects using the Group Policy Management Console \(GPMC\).
+This topic describes procedures for configuring, filtering, backing up, restoring and importing Group Policy Objects using the Group Policy Management Console (GPMC).
 
 ## Introduction
-The Local Group Policy object \(Local GPO\) is stored on each individual computer, in the hidden **Windows\\System32\\GroupPolicy** directory. Generally, each computer running Windows has exactly one Local GPO, regardless of whether the computers are part of an Active Directory environment. Local GPOs are always processed, but are the least influential GPOs in an Active Directory environment, because Active Directory\-based GPOs have precedence.
+The Local Group Policy object (Local GPO) is stored on each individual computer, in the hidden **Windows\System32\GroupPolicy** directory. Generally, each computer running Windows has exactly one Local GPO, regardless of whether the computers are part of an Active Directory environment. Local GPOs are always processed, but are the least influential GPOs in an Active Directory environment, because Active Directory-based GPOs have precedence.
 
-At the domain level, a GPO is a collection of Group Policy settings stored as a virtual object consisting of a Group Policy container and a Group Policy template. The Group Policy container, which contains information about the properties of a GPO, is stored in Active Directory on each domain controller in the domain. The Group Policy template contains the data in a GPO and is stored in the SYSVOL in the \/Policies subdirectory. GPOs affect users and computers that are contained in sites, domains, and OUs.
+At the domain level, a GPO is a collection of Group Policy settings stored as a virtual object consisting of a Group Policy container and a Group Policy template. The Group Policy container, which contains information about the properties of a GPO, is stored in Active Directory on each domain controller in the domain. The Group Policy template contains the data in a GPO and is stored in the SYSVOL in the /Policies subdirectory. GPOs affect users and computers that are contained in sites, domains, and OUs.
 
 Because GPOs contain policy settings, the GPOs can be configured, backed up, restored, copied, and scoped using the GPMC.
 
@@ -25,9 +25,9 @@ You can include comments for each Group Policy object. You can use this space to
 
 1.  Open the Group Policy Management Console. Expand the **Group Policy Objects** node.
 
-2.  Right\-click the Group Policy object you want to comment and then click **Edit**.
+2.  Right-click the Group Policy object you want to comment and then click **Edit**.
 
-3.  In the console tree, right\-click the name of the Group Policy object and then click **Properties**.
+3.  In the console tree, right-click the name of the Group Policy object and then click **Properties**.
 
 4.  Click the **Comment** tab.
 
@@ -39,9 +39,9 @@ You can include comments for each Group Policy object. You can use this space to
 
 #### To back up a Group Policy object
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, open **Group Policy Objects** in the forest and domain containing the Group Policy object \(GPO\) to back up.
+1.  In the Group Policy Management Console (GPMC) console tree, open **Group Policy Objects** in the forest and domain containing the Group Policy object (GPO) to back up.
 
-2.  To back up a single GPO, right\-click the GPO, and then click **Back Up**. To back up all GPOs in the domain, right\-click **Group Policy objects** and click **Back Up All**.
+2.  To back up a single GPO, right-click the GPO, and then click **Back Up**. To back up all GPOs in the domain, right-click **Group Policy objects** and click **Back Up All**.
 
 3.  In the **Backup Group Policy object** dialog box, in the **Location** box, enter the path for the location in which you want to store the GPO backups, or click **Browse**, locate the folder in which you want to store the GPO backups, and then click **OK**.
 
@@ -50,7 +50,7 @@ You can include comments for each Group Policy object. You can use this space to
 5.  After the operation completes, click **OK**.
 
     > [!IMPORTANT]
-    > To secure backed\-up GPOs, ensure that only authorized administrators have permission to access the folder to which you are exporting the GPOs.
+    > To secure backed-up GPOs, ensure that only authorized administrators have permission to access the folder to which you are exporting the GPOs.
 
 ### Additional considerations
 
@@ -59,15 +59,15 @@ You can include comments for each Group Policy object. You can use this space to
 -   The backup function also serves as the export capability for GPOs.
 
 ## How to block Group Policy Object inheritance
-You can block inheritance for a domain or organizational unit. Blocking inheritance prevents Group Policy objects \(GPOs\) that are linked to higher sites, domains, or organizational units from being automatically inherited by the child\-level.
+You can block inheritance for a domain or organizational unit. Blocking inheritance prevents Group Policy objects (GPOs) that are linked to higher sites, domains, or organizational units from being automatically inherited by the child-level.
 
 #### To block inheritance
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, double\-click the forest containing the domain or organizational unit \(OU\) for which you want to block inheritance for GPO links, and then do one of the following:
+1.  In the Group Policy Management Console (GPMC) console tree, double-click the forest containing the domain or organizational unit (OU) for which you want to block inheritance for GPO links, and then do one of the following:
 
-    -   To block inheritance of the GPO links of an entire domain, double\-click **Domains**, and then right\-click the domain.
+    -   To block inheritance of the GPO links of an entire domain, double-click **Domains**, and then right-click the domain.
 
-    -   To block inheritance for an OU, double\-click **Domains**, double\-click the domain containing the OU, and then right\-click the OU.
+    -   To block inheritance for an OU, double-click **Domains**, double-click the domain containing the OU, and then right-click the OU.
 
 2.  Click **Block Inheritance**.
 
@@ -80,27 +80,27 @@ You can block inheritance for a domain or organizational unit. Blocking inherita
 -   GPO links that are enforced cannot be blocked from the parent container.
 
 ## How to copy a Group Policy Object
-You can copy a Group Policy object \(GPO\) either by using the drag\-and\-drop method or right\-click method. Both methods are described in this topic.
+You can copy a Group Policy object (GPO) either by using the drag-and-drop method or right-click method. Both methods are described in this topic.
 
-#### To copy a Group Policy object \(drag\-and\-drop method\)
+#### To copy a Group Policy object (drag-and-drop method)
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, click the Group Policy object \(GPO\) that you want to copy.
+1.  In the Group Policy Management Console (GPMC) console tree, click the Group Policy object (GPO) that you want to copy.
 
 2.  Do one of the following:
 
     -   To create a copy of the GPO on the same domain as the source GPO, drag and drop the GPO you want to copy to **Group Policy Objects**, select a permissions option under **Specify the permissions for the new GPO**, and then click **OK**.
 
-    -   To create a copy of the GPO in a different domain, double\-click the destination domain, then drag and drop the GPO you want to copy to **Group Policy objects**. Answer all the questions in the cross\-domain copying wizard that appears, and then click **Finish**.
+    -   To create a copy of the GPO in a different domain, double-click the destination domain, then drag and drop the GPO you want to copy to **Group Policy objects**. Answer all the questions in the cross-domain copying wizard that appears, and then click **Finish**.
 
-#### To copy a Group Policy object \(right\-click method\)
+#### To copy a Group Policy object (right-click method)
 
-1.  In the GPMC console tree, right\-click the GPO that you want to copy, and then click **Copy**.
+1.  In the GPMC console tree, right-click the GPO that you want to copy, and then click **Copy**.
 
 2.  Do one of the following:
 
-    -   To create a copy of the GPO in the same domain as the source GPO, right\-click **Group Policy objects**, click **Paste**, specify permissions for the new GPO in the **Copy GPO** box, and then click **OK**.
+    -   To create a copy of the GPO in the same domain as the source GPO, right-click **Group Policy objects**, click **Paste**, specify permissions for the new GPO in the **Copy GPO** box, and then click **OK**.
 
-    -   To create a copy of the GPO in a different domain, double\-click the destination domain, right\-click **Group Policy objects**, and then click **Paste**. Answer all the questions in the cross\-domain copying wizard that appears, and then click **Finish**.
+    -   To create a copy of the GPO in a different domain, double-click the destination domain, right-click **Group Policy objects**, and then click **Paste**. Answer all the questions in the cross-domain copying wizard that appears, and then click **Finish**.
 
 ### Additional considerations
 
@@ -116,7 +116,7 @@ You can copy a Group Policy object \(GPO\) either by using the drag\-and\-drop m
 ### <a name="BKMK_Create"></a>
 ##### To create a Group Policy object
 
-1.  In the GPMC console tree, right\-click **Group Policy Objects** in the forest and domain in which you want to create a GPO.
+1.  In the GPMC console tree, right-click **Group Policy Objects** in the forest and domain in which you want to create a GPO.
 
 2.  Click **New**.
 
@@ -125,9 +125,9 @@ You can copy a Group Policy object \(GPO\) either by using the drag\-and\-drop m
 ### <a name="BKMK_Edit"></a>
 ##### To edit a Group Policy Object
 
-1.  In the GPMC console tree, double\-click **Group Policy Objects** in the forest and domain containing the GPO that you want to edit.
+1.  In the GPMC console tree, double-click **Group Policy Objects** in the forest and domain containing the GPO that you want to edit.
 
-2.  Right\-click the GPO, and then click **Edit**.
+2.  Right-click the GPO, and then click **Edit**.
 
 3.  In the console tree, edit the settings as appropriate.
 
@@ -140,52 +140,52 @@ You can copy a Group Policy object \(GPO\) either by using the drag\-and\-drop m
 
 ### Additional considerations
 
--   When you create a GPO, it will not have an effect until it is linked to a site, domain, or organizational unit \(OU\).
+-   When you create a GPO, it will not have an effect until it is linked to a site, domain, or organizational unit (OU).
 
 -   By default only domain administrators, enterprise administrators, and members of the Group Policy creator owners group can create and edit GPOs.
 
 -   To edit IPSec policy settings from within a GPO, you must be a member of the domain administrators group.
 
--   You can also edit a GPO by right\-clicking the name of the GPO in any container in which it is linked, and then clicking **Edit**.
+-   You can also edit a GPO by right-clicking the name of the GPO in any container in which it is linked, and then clicking **Edit**.
 
 ## How to create and populate a Migration Table
-A migration table is used when you copy or import a Group Policy Object \(GPO\) from one domain or forest to another. The key challenge when migrating Group Policy objects \(GPOs\) from one domain or forest to another is that some information in the GPO is actually specific to the domain or forest where the GPO is defined. When transferring the GPO to a new domain or forest, it may not always be desirable, or even possible, to use the same settings. You can use a migration table to reference users, groups, computers, and UNC paths in the source GPO to new values in the destination GPO.
+A migration table is used when you copy or import a Group Policy Object (GPO) from one domain or forest to another. The key challenge when migrating Group Policy objects (GPOs) from one domain or forest to another is that some information in the GPO is actually specific to the domain or forest where the GPO is defined. When transferring the GPO to a new domain or forest, it may not always be desirable, or even possible, to use the same settings. You can use a migration table to reference users, groups, computers, and UNC paths in the source GPO to new values in the destination GPO.
 
 You can create migration tables using the Migration Table Editor.
 
-You can use the migration table editor to scan one or more Group Policy objects \(GPOs\) or backup GPOs, extract all references to security principals and UNC paths, and automatically enter these items in the migration table as source name entries.
+You can use the migration table editor to scan one or more Group Policy objects (GPOs) or backup GPOs, extract all references to security principals and UNC paths, and automatically enter these items in the migration table as source name entries.
 
 #### To create a migration table
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, double\-click the forest from which you want to create a migration table.
+1.  In the Group Policy Management Console (GPMC) console tree, double-click the forest from which you want to create a migration table.
 
 2.  Do either of the following:
 
-    -   Right\-click **Domains** and then click **Open Migration Table Editor**.
+    -   Right-click **Domains** and then click **Open Migration Table Editor**.
 
-    -   Right\-click **Group Policy objects**, and then click **Open Migration Table Editor**.
+    -   Right-click **Group Policy objects**, and then click **Open Migration Table Editor**.
 
 3.  Specify a source you want to include in the migration table by doing the following:
 
-    1.  Under **Source Name**, type the source name or right\-click the cell and click **Browse** to find and then specify the object type, location, and name.
+    1.  Under **Source Name**, type the source name or right-click the cell and click **Browse** to find and then specify the object type, location, and name.
 
-        If you enter the source name manually, you must type the exact name of the User, Computer, Group, or UNC Path referenced in the source GPO \(for example, TestDomain\\PolicyAdmins or \\\\server1\\publicshare\). The type of the source name must match the source type specified in the migration table.
+        If you enter the source name manually, you must type the exact name of the User, Computer, Group, or UNC Path referenced in the source GPO (for example, TestDomain\PolicyAdmins or \\\server1\publicshare). The type of the source name must match the source type specified in the migration table.
 
         Security principals can be specified using any of the following formats:
 
         **UPN**: For example, *someone@contoso.com*.
 
-        **SAM**: For example, *contoso\\someone*.
+        **SAM**: For example, *contoso\someone*.
 
-        **DNS**: For example, *contoso.com\\someone*.
+        **DNS**: For example, *contoso.com\someone*.
 
         **Free text**: For example, *someone*. You must specify the type as Free Text or SID.
 
-        **SID**: For example, S\-1\-11\-111111111\-111111111\-1111111111\-1112. You must specify the type as Free Text or SID.
+        **SID**: For example, S-1-11-111111111-111111111-1111111111-1112. You must specify the type as Free Text or SID.
 
-    2.  Under **Source Type**, specify the type of source in the cell adjacent to the source name cell by using the drop\-down list and selecting the appropriate type. If you have used **Browse** to find the source name, the source type is entered by default.
+    2.  Under **Source Type**, specify the type of source in the cell adjacent to the source name cell by using the drop-down list and selecting the appropriate type. If you have used **Browse** to find the source name, the source type is entered by default.
 
-    3.  Under **Destination Name**, type the destination name or right\-click the cell adjacent to the source name and source type cells, and then do one of the following:
+    3.  Under **Destination Name**, type the destination name or right-click the cell adjacent to the source name and source type cells, and then do one of the following:
 
         Click **Browse** to find a user, computer, or group.
 
@@ -205,7 +205,7 @@ You can use the migration table editor to check that destination entries can be 
 
 2.  From the **Tools** menu, click **Populate from GPO**.
 
-3.  In the **Look in this domain** drop\-down list, select the domain that contains the GPO.
+3.  In the **Look in this domain** drop-down list, select the domain that contains the GPO.
 
 4.  In the **Group Policy objects** list, click the GPO or GPOs from which you want to populate the migration table, select **Include security principals from the DACL on the GPO** during scan if appropriate, and then click **OK**.
 
@@ -215,9 +215,9 @@ You can use the migration table editor to check that destination entries can be 
 
 2.  From the **Tools** menu, click **Populate from Backup**.
 
-3.  In the **Backup location** drop\-down box, type the path of the folder that contains the backup GPO, or click **Browse** to locate the folder.
+3.  In the **Backup location** drop-down box, type the path of the folder that contains the backup GPO, or click **Browse** to locate the folder.
 
-4.  In the **Backed up GPOs** list, select one or more backed\-up GPOs, select **Show only the latest version of each GPO** or **Include security principals from the DACL on the GPO** if appropriate, and then click **OK**.
+4.  In the **Backed up GPOs** list, select one or more backed-up GPOs, select **Show only the latest version of each GPO** or **Include security principals from the DACL on the GPO** if appropriate, and then click **OK**.
 
 ### Additional considerations
 
@@ -228,9 +228,9 @@ Insert section body here.
 
 #### To delete a GPO
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, double\-click **Group Policy Objects** in the forest and domain containing the Group Policy object \(GPO\) that you want to delete.
+1.  In the Group Policy Management Console (GPMC) console tree, double-click **Group Policy Objects** in the forest and domain containing the Group Policy object (GPO) that you want to delete.
 
-2.  Right\-click the GPO, and then click **Delete**.
+2.  Right-click the GPO, and then click **Delete**.
 
 3.  When prompted to confirm the deletion, click **OK**.
 
@@ -246,9 +246,9 @@ Insert section body here.
 
 #### To disable a Group Policy object link
 
--   In the Group Policy Management Console \(GPMC\) console tree, double\-click to expand the forest containing the domain, site, or organizational unit \(OU\) containing the link you want to disable, and then do one of the following:
+-   In the Group Policy Management Console (GPMC) console tree, double-click to expand the forest containing the domain, site, or organizational unit (OU) containing the link you want to disable, and then do one of the following:
 
-    Right\-click the GPO link. A check mark next to **Link Enabled** indicates that the link is enabled.
+    Right-click the GPO link. A check mark next to **Link Enabled** indicates that the link is enabled.
 
     Click **Link Enabled** to disable the link. No check mark will be displayed when the link is disabled.
 
@@ -262,11 +262,11 @@ Insert section body here.
 
 #### To disable user or computer settings in a Group Policy object
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, double\-click the forest containing the domain or organizational unit \(OU\) that contains the Group Policy object \(GPO\).
+1.  In the Group Policy Management Console (GPMC) console tree, double-click the forest containing the domain or organizational unit (OU) that contains the Group Policy object (GPO).
 
-2.  Double\-click the domain or OU.
+2.  Double-click the domain or OU.
 
-3.  Right\-click the GPO that contains the user or computer settings you want to disable, point to **GPO Status**, and then do one of the following:
+3.  Right-click the GPO that contains the user or computer settings you want to disable, point to **GPO Status**, and then do one of the following:
 
     -   Click **User settings disabled** to disable user settings for the GPO.
 
@@ -284,15 +284,15 @@ Insert section body here.
 
 #### To enforce a Group Policy object link
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, double\-click the forest containing the domain, site, or organizational unit \(OU\) containing the link you want to enforce, and then do one of the following:
+1.  In the Group Policy Management Console (GPMC) console tree, double-click the forest containing the domain, site, or organizational unit (OU) containing the link you want to enforce, and then do one of the following:
 
-    -   To enforce a GPO link at the domain level, double\-click **Domains**, and then double\-click the domain containing the GPO link.
+    -   To enforce a GPO link at the domain level, double-click **Domains**, and then double-click the domain containing the GPO link.
 
-    -   To enforce a GPO link at the OU level, double\-click **Domains**, double\-click the domain containing the OU, and then double\-click the OU containing the GPO link.
+    -   To enforce a GPO link at the OU level, double-click **Domains**, double-click the domain containing the OU, and then double-click the OU containing the GPO link.
 
-    -   To enforce a GPO link at the site level, double\-click **Sites**, and double\-click the site containing the GPO link.
+    -   To enforce a GPO link at the site level, double-click **Sites**, and double-click the site containing the GPO link.
 
-2.  Right\-click the GPO link, and then click **Enforced** to enable or disable enforcing the link. A check mark next to **Enforced** indicates that the link is enforced.
+2.  Right-click the GPO link, and then click **Enforced** to enable or disable enforcing the link. A check mark next to **Enforced** indicates that the link is enforced.
 
 ### Additional considerations
 
@@ -301,13 +301,13 @@ Insert section body here.
 -   To determine whether a GPO link is enforced, you can also click the GPO link and look at the information in the **Links** section of the **Scope** tab.
 
 ## How to filter Group Policy Objects using WMI filters
-Windows Management Instrumentation \(WMI\) filters allow you to dynamically determine the scope of Group Policy objects \(GPOs\), based on attributes of the target computer.
+Windows Management Instrumentation (WMI) filters allow you to dynamically determine the scope of Group Policy objects (GPOs), based on attributes of the target computer.
 
-When a GPO that is linked to a WMI filter is applied on the target computer, the filter is evaluated on the target computer. If the WMI filter evaluates to false, the GPO is not applied \(unless the client computer is running Windows 2000, in which case the filter is ignored and the GPO is always applied\). If the WMI filter evaluates to true, the GPO is applied.
+When a GPO that is linked to a WMI filter is applied on the target computer, the filter is evaluated on the target computer. If the WMI filter evaluates to false, the GPO is not applied (unless the client computer is running Windows 2000, in which case the filter is ignored and the GPO is always applied). If the WMI filter evaluates to true, the GPO is applied.
 
 #### To create a WMI filter
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, right\-click **WMI Filters** in the forest and domain in which you want to create a WMI filter.
+1.  In the Group Policy Management Console (GPMC) console tree, right-click **WMI Filters** in the forest and domain in which you want to create a WMI filter.
 
 2.  Click **New**.
 
@@ -315,7 +315,7 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
 4.  Click **Add**.
 
-5.  In the **WMI Query** dialog box, either leave the default namespace \(root\\CIMv2\) or enter another namespace by doing one of the following:
+5.  In the **WMI Query** dialog box, either leave the default namespace (root\CIMv2) or enter another namespace by doing one of the following:
 
     -   In the **Namespace** box, type the name of the namespace that you want to use for the WMI query.
 
@@ -331,15 +331,15 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
     -   You must have privileges to create WMI filters in the domain in which you want to create the filter. By default, the Domain Administrators, Enterprise Administrators, and Group Policy Creator Owners groups have this permission.
 
-    -   **WMI Filters** is only available if at least one domain controller in the domain is running Microsoft Windows Server™ 2003. The same is true for **WMI Filtering** on the **Scope** tab for **Group Policy Objects**.
+    -   **WMI Filters** is only available if at least one domain controller in the domain is running Microsoft Windows Server™ 2003. The same is true for **WMI Filtering** on the **Scope** tab for **Group Policy Objects**.
 
-    -   To delete a WMI filter, in the console tree, right\-click the WMI filter and then click **Delete**. When asked to confirm whether you want to delete the WMI filter, click **Yes**.
+    -   To delete a WMI filter, in the console tree, right-click the WMI filter and then click **Delete**. When asked to confirm whether you want to delete the WMI filter, click **Yes**.
 
-    -   WMI Filters are not evaluated on Microsoft Windows® 2000. A GPO targeted to a Windows 2000 machine will always apply the GPO regardless of the query associated with the WMI Filter \(the filter is ignored\)
+    -   WMI Filters are not evaluated on Microsoft Windows® 2000. A GPO targeted to a Windows 2000 machine will always apply the GPO regardless of the query associated with the WMI Filter (the filter is ignored)
 
 #### Import a WMI Filter
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, right\-click **WMI Filters** in the forest and domain into which you want to import a WMI filter.
+1.  In the Group Policy Management Console (GPMC) console tree, right-click **WMI Filters** in the forest and domain into which you want to import a WMI filter.
 
 2.  Click **Import**.
 
@@ -355,29 +355,29 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
     -   You must have privileges to create WMI filters in the domain in which you want to create the filter to complete this procedure. By default the Domain Administrators, Enterprise Administrators, and Group Policy Creator Owners groups have this permission.
 
-    -   **WMI Filters** is only available if at least one domain controller in the domain is running Microsoft Windows Server 2003. The same is true for WMI Filtering on the **Scope** tab for **Group Policy objects**.
+    -   **WMI Filters** is only available if at least one domain controller in the domain is running Microsoft Windows Server 2003. The same is true for WMI Filtering on the **Scope** tab for **Group Policy objects**.
 
     -   Importing a WMI filter creates a new filter instead of modifying an existing filter.
 
 #### Export a WMI filter
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, right\-click the WMI filter that you want to export, and then click **Export**.
+1.  In the Group Policy Management Console (GPMC) console tree, right-click the WMI filter that you want to export, and then click **Export**.
 
-2.  In the **Export WMI filter** dialog box, select a secure file system location from the **Save in** drop\-down list box, type a name for the filter that you want to export, and then click **Save**.
+2.  In the **Export WMI filter** dialog box, select a secure file system location from the **Save in** drop-down list box, type a name for the filter that you want to export, and then click **Save**.
 
     **Additional considerations**
 
-    -   You can also export a WMI filter by clicking **WMI Filters** and, in the results pane, clicking the **Contents** tab, right\-clicking the filter name, and then clicking **Export**.
+    -   You can also export a WMI filter by clicking **WMI Filters** and, in the results pane, clicking the **Contents** tab, right-clicking the filter name, and then clicking **Export**.
 
     -   GPMC can import only .mof files that contain a single WMI filter.
 
 #### To copy a WMI Filter
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, click the WMI filter in the forest and domain containing the WMI filter that you want to copy.
+1.  In the Group Policy Management Console (GPMC) console tree, click the WMI filter in the forest and domain containing the WMI filter that you want to copy.
 
-2.  Right\-click the WMI filter you want to copy, and then click **Copy**.
+2.  Right-click the WMI filter you want to copy, and then click **Copy**.
 
-3.  In the destination domain, right\-click **WMI Filters**, and then click **Paste**.
+3.  In the destination domain, right-click **WMI Filters**, and then click **Paste**.
 
     **Additional considerations**
 
@@ -385,11 +385,11 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
 #### To link a WMI filter to a Group Policy object
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, double\-click **Group Policy Objects** in the forest and domain containing the Group Policy object \(GPO\) to which you want to link a WMI filter.
+1.  In the Group Policy Management Console (GPMC) console tree, double-click **Group Policy Objects** in the forest and domain containing the Group Policy object (GPO) to which you want to link a WMI filter.
 
 2.  Click the GPO.
 
-3.  In the results pane, on the **Scope** tab, under **WMI Filtering**, select a WMI filter from the drop\-down list.
+3.  In the results pane, on the **Scope** tab, under **WMI Filtering**, select a WMI filter from the drop-down list.
 
 4.  When prompted to confirm the selection, click **Yes**.
 
@@ -399,13 +399,13 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
     -   Only one WMI filter can be linked to a GPO, and you can only link a WMI filter to a GPO in the same domain.
 
-    -   **WMI Filters** and **WMI Filtering** on the **Scope** tab for GPOs are available only if at least one domain controller in the domain is running Microsoft Windows Server 2003.
+    -   **WMI Filters** and **WMI Filtering** on the **Scope** tab for GPOs are available only if at least one domain controller in the domain is running Microsoft Windows Server 2003.
 
 ## How to filter for Group Policy Objects using security groups
 
 #### To filter using security groups
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, expand **Group Policy Objects** and click the Group Policy object \(GPO\) to which you want to apply security filtering.
+1.  In the Group Policy Management Console (GPMC) console tree, expand **Group Policy Objects** and click the Group Policy object (GPO) to which you want to apply security filtering.
 
 2.  In the results pane, on the **Scope** tab, click **Add**.
 
@@ -423,9 +423,9 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
 #### To import settings from a Group Policy object
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, expand the **Group Policy Objects** node in the forest and domain containing the Group Policy object \(GPO\) to import settings.
+1.  In the Group Policy Management Console (GPMC) console tree, expand the **Group Policy Objects** node in the forest and domain containing the Group Policy object (GPO) to import settings.
 
-2.  Right\-click the GPO and click **Import Settings**.
+2.  Right-click the GPO and click **Import Settings**.
 
 3.  Follow the instructions in the **Import Settings Wizard**.
 
@@ -439,13 +439,13 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
 #### To link a GPO
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, locate the site, domain, or organizational unit \(OU\) to which you want to link a Group Policy object \(GPO\)
+1.  In the Group Policy Management Console (GPMC) console tree, locate the site, domain, or organizational unit (OU) to which you want to link a Group Policy object (GPO)
 
 2.  Do one of the following:
 
-    -   To link an existing GPO, right\-click the domain or OU within the domain, and then click **Link an Existing GPO**. In the **Select GPO** dialog box, click the GPO that you want to link, and then click **OK**.
+    -   To link an existing GPO, right-click the domain or OU within the domain, and then click **Link an Existing GPO**. In the **Select GPO** dialog box, click the GPO that you want to link, and then click **OK**.
 
-    -   To link a new GPO, right\-click the domain or OU within a domain, and then click **Create a GPO in this domain, and link it here**. In the **Name** box, type a name for the new GPO, and then click **OK**.
+    -   To link a new GPO, right-click the domain or OU within a domain, and then click **Create a GPO in this domain, and link it here**. In the **Name** box, type a name for the new GPO, and then click **OK**.
 
 ### Additional considerations
 
@@ -459,9 +459,9 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
 #### To restore a deleted or previous version of an existing Group Policy object
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, in the forest and domain containing the Group Policy object \(GPO\) that you want to restore, locate **Group Policy Objects**.
+1.  In the Group Policy Management Console (GPMC) console tree, in the forest and domain containing the Group Policy object (GPO) that you want to restore, locate **Group Policy Objects**.
 
-2.  Right\-click **Group Policy Objects** and then click **Manage Backups**.
+2.  Right-click **Group Policy Objects** and then click **Manage Backups**.
 
 3.  In the **Manage Backups** dialog box, in the **Backup location** box, type the path for the backup folder. You can also use **Browse** to locate the backup folder.
 
@@ -473,15 +473,15 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
 ### Additional considerations
 
--   You must have privileges to create GPOs in the domain and Read permissions on the file system location of the backed\-up GPO to restore a GPO that has been deleted.
+-   You must have privileges to create GPOs in the domain and Read permissions on the file system location of the backed-up GPO to restore a GPO that has been deleted.
 
--   You can also restore an existing or deleted GPO using the **Manage Backups** function by right\-clicking **Domains**.
+-   You can also restore an existing or deleted GPO using the **Manage Backups** function by right-clicking **Domains**.
 
 ## How to search for a Group Policy Object
 
 #### To search for a Group Policy object
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, double\-click the forest containing the domain where you want to search for a Group Policy object \(GPO\). Double\-click **Domains**, right\-click the domain, and then click **Search**.
+1.  In the Group Policy Management Console (GPMC) console tree, double-click the forest containing the domain where you want to search for a Group Policy object (GPO). Double-click **Domains**, right-click the domain, and then click **Search**.
 
 2.  In the **Search for Group Policy objects** dialog box, in the **Search for GPOs in this domain** box, select a domain or select **All domains shown in this forest**.
 
@@ -489,7 +489,7 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
     If you select **Security Group**, the **Select User, Computer, or Group** dialog box appears. Specify the appropriate object type, location of the object, and object name, and then click **OK**.
 
-    You can choose **GPO\-links** on the **Search item** dropdown menu to find unlinked GPOs and GPOs linked across domains.
+    You can choose **GPO-links** on the **Search item** dropdown menu to find unlinked GPOs and GPOs linked across domains.
 
 4.  In the **Condition** box, select the condition that you want to use in the search.
 
@@ -501,14 +501,14 @@ When a GPO that is linked to a WMI filter is applied on the target computer, the
 
     -   To save the search results, click **Save results** and then, in the **Save GPO Search Results** dialog box, specify the file name for the saved results, and then click **Save**.
 
-    -   To navigate to a GPO found in the search, double\-click the GPO in the search results list.
+    -   To navigate to a GPO found in the search, double-click the GPO in the search results list.
 
     -   To clear the search results, click **Clear**.
 
 ### Additional considerations
 
--   You can also open the search dialog box by right\-clicking a forest and then clicking **Search**. In this case, the search for GPOs in this domain box defaults to **All domains shown in this forest**.
+-   You can also open the search dialog box by right-clicking a forest and then clicking **Search**. In this case, the search for GPOs in this domain box defaults to **All domains shown in this forest**.
 
--   If a policy setting is enabled and then all the policy settings in that extension are removed, there can be false\-positive search results for certain types of settings. This happens because the GPO has the extension listed as active. The extensions with this behavior are Security Settings, Software Installation, Folder Redirection, Internet Explorer Maintenance, and Encrypting File System \(EFS\).
+-   If a policy setting is enabled and then all the policy settings in that extension are removed, there can be false-positive search results for certain types of settings. This happens because the GPO has the extension listed as active. The extensions with this behavior are Security Settings, Software Installation, Folder Redirection, Internet Explorer Maintenance, and Encrypting File System (EFS).
 
 

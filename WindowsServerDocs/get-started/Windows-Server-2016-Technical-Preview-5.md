@@ -12,7 +12,7 @@ ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 author: jaimeo
 ---
 # Windows Server 2016 Technical Preview 5
-**\[This information is preliminary and subject to change.\]**  
+**[This information is preliminary and subject to change.]**  
   
 Welcome to Windows Server® 2016 Technical Preview 5.  
   

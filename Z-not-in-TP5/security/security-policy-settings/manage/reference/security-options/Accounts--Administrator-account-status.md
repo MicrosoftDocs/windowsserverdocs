@@ -40,14 +40,14 @@ If the current Administrator password does not meet the password requirements, y
   
 -   Not defined  
   
-By default, this setting is **Not defined** on domain controllers and **Enabled** on stand\-alone servers.  
+By default, this setting is **Not defined** on domain controllers and **Enabled** on stand-alone servers.  
   
 ### Best practices  
   
 1.  Disabling the Administrator account can become a maintenance issue under certain circumstances. For example, in a domain environment, if the secure channel that constitutes your connection fails for any reason, and there is no other local Administrator account, you must restart the computer in safe mode to fix the problem that broke your connection status.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -56,7 +56,7 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Enabled|  
+|Stand-Alone Server Default Settings|Enabled|  
 |DC Effective Default Settings|Enabled|  
 |Member Server Effective Default Settings|Enabled|  
 |Client Computer Effective Default Settings|Disabled|  
@@ -65,42 +65,42 @@ The following table lists the actual and effective default values for this polic
 There are no differences in this policy setting between operating systems for the versions designated in the **Applies to** list at the beginning of this topic.  
   
 ## Policy management  
-Disabling the Administrator account can become a maintenance issue under certain circumstances. Reasons that an organization might consider disabling the built\-in Administrator account include:  
+Disabling the Administrator account can become a maintenance issue under certain circumstances. Reasons that an organization might consider disabling the built-in Administrator account include:  
   
 -   For some organizations, periodically changing the passwords for local accounts can be a daunting management challenge.  
   
--   By default, the Administrator account cannot be locked—no matter how many failed attempts to sign in a user accrues. This makes it a prime target for brute\-force, password\-guessing attacks.  
+-   By default, the Administrator account cannot be locked—no matter how many failed attempts to sign in a user accrues. This makes it a prime target for brute-force, password-guessing attacks.  
   
--   This account has a well\-known security identifier \(SID\). Some non\-Microsoft tools allow you to authenticate over the network by specifying the SID rather than the account name. This means that even if you rename the Administrator account, a malicious user could start a brute\-force attack by using the SID.  
+-   This account has a well-known security identifier (SID). Some non-Microsoft tools allow you to authenticate over the network by specifying the SID rather than the account name. This means that even if you rename the Administrator account, a malicious user could start a brute-force attack by using the SID.  
   
 ### Restart requirement  
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.  
   
 ### Safe mode considerations  
-When you start a computer in safe mode, the disabled Administrator account is enabled only if the computer is non\-domain joined and there are no other active local Administrator accounts. If the computer is joined to a domain, the disabled Administrator account is not enabled.  
+When you start a computer in safe mode, the disabled Administrator account is enabled only if the computer is non-domain joined and there are no other active local Administrator accounts. If the computer is joined to a domain, the disabled Administrator account is not enabled.  
   
-If the Administrator account is disabled, you can still access the computer by using safe mode with the current administrative credentials. For example, if a failure occurs using a secure channel with a domain\-joined computer, and there is no other local Administrator account, you must restart the computer in safe mode to fix the failure.  
+If the Administrator account is disabled, you can still access the computer by using safe mode with the current administrative credentials. For example, if a failure occurs using a secure channel with a domain-joined computer, and there is no other local Administrator account, you must restart the computer in safe mode to fix the failure.  
   
 ### How to access a disabled Administrator account  
   
 > [!NOTE]  
-> The following conditions and remedies apply to computers running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.  
+> The following conditions and remedies apply to computers running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.  
   
 You can use the following methods to access a disabled Administrator account:  
   
--   When there is only one local Administrator accountthat is disabled, start the computer in safe mode \(locally or over a network\), and sign in by using the credentials for the Administrator account on that computer.  
+-   When there is only one local Administrator accountthat is disabled, start the computer in safe mode (locally or over a network), and sign in by using the credentials for the Administrator account on that computer.  
   
--   When there are local Administrator accounts in addition to the built\-in account, start the computer in safe mode \(locally or over a network\), and sign in by using the credentials for the Administrator account on that computer. An alternate method is to sign in to Windows by using another local Administrator account that was created.  
+-   When there are local Administrator accounts in addition to the built-in account, start the computer in safe mode (locally or over a network), and sign in by using the credentials for the Administrator account on that computer. An alternate method is to sign in to Windows by using another local Administrator account that was created.  
   
--   When multiple domain\-joined servers have a disabled local Administrator account that can be accessed in safe mode, you can remotely run the Sysinternals tool, PsExec, by using the following command: net user administrator \/active: no.  
+-   When multiple domain-joined servers have a disabled local Administrator account that can be accessed in safe mode, you can remotely run the Sysinternals tool, PsExec, by using the following command: net user administrator /active: no.  
   
--   You can update a Group Policy Object \(GPO\) by using the **Group Policy Management Editor** as follows:  
+-   You can update a Group Policy Object (GPO) by using the **Group Policy Management Editor** as follows:  
   
 ##### To access a disabled Administrator account  
   
 1.  Under **Computer Configuration**, click **Preferences**, and then click **Control Panel Settings**.  
   
-2.  Right\-click **Local Users and Groups**, select **New**, and then click **Local User**.  
+2.  Right-click **Local Users and Groups**, select **New**, and then click **Local User**.  
   
 3.  In the **User name** field, type **Administrator**.  
   
@@ -116,12 +116,12 @@ You can use the following methods to access a disabled Administrator account:
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
 ### Vulnerability  
-The built\-in Administrator account cannot be locked out no matter how many failed logons it accrues, which makes it a prime target for brute\-force attacks that attempt to guess passwords. Also, this account has a well\-known security identifier \(SID\), and there are non\-Microsoft tools that allow authentication by using the SID rather than the account name. Therefore, even if you rename the Administrator account, an attacker could launch a brute\-force attack by using the SID to log on. All other accounts that are members of the Administrator's group have the safeguard of locking out the account if the number of failed logons exceeds its configured maximum.  
+The built-in Administrator account cannot be locked out no matter how many failed logons it accrues, which makes it a prime target for brute-force attacks that attempt to guess passwords. Also, this account has a well-known security identifier (SID), and there are non-Microsoft tools that allow authentication by using the SID rather than the account name. Therefore, even if you rename the Administrator account, an attacker could launch a brute-force attack by using the SID to log on. All other accounts that are members of the Administrator's group have the safeguard of locking out the account if the number of failed logons exceeds its configured maximum.  
   
 ### Countermeasure  
-Disable the **Accounts: Administrator account status** setting so that the built\-in Administrator account cannot be used in a normal system startup.  
+Disable the **Accounts: Administrator account status** setting so that the built-in Administrator account cannot be used in a normal system startup.  
   
-If it is very difficult to maintain a regular schedule for periodic password changes for local accounts, you can disable the built\-in Administrator account instead of relying on regular password changes to protect it from attack.  
+If it is very difficult to maintain a regular schedule for periodic password changes for local accounts, you can disable the built-in Administrator account instead of relying on regular password changes to protect it from attack.  
   
 ### Potential impact  
 Maintenance issues can arise under certain circumstances if you disable the Administrator account. For example, if the secure channel between a member computer and the domain controller fails in a domain environment for any reason and there is no other local Administrator account, you must restart in safe mode to fix the problem that caused the secure channel to fail.  

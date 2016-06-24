@@ -33,7 +33,7 @@ Enabling this policy setting means that anyone with physical access to a compute
 It is advisable to disable the **Devices: Allow undock without having to log on** policy setting. Users who have docked their computers will have to log on to the local console before they can undock their systems.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -42,7 +42,7 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Enabled|  
+|Stand-Alone Server Default Settings|Enabled|  
 |DC Effective Default Settings|Enabled|  
 |Member Server Effective Default Settings|Enabled|  
 |Client Computer Effective Default Settings|Enabled|  

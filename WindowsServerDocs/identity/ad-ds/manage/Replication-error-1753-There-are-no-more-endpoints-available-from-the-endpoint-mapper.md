@@ -46,7 +46,7 @@ author: Femila
       <list class="ordered">
         <listItem>
           <para>DCDIAG reports that the Connectivity test, Active Directory Replications test or KnowsOfRoleHolders test has failed with error 1753: “There are no more endpoints available from the endpoint mapper."</para>
-          <code>Testing server: &lt;site&gt;\&lt;DC Name&gt;
+          <code>Testing server: &lt;site&gt;&lt;DC Name&gt;
 Starting test: Connectivity
 * Active Directory LDAP Services Check
 * Active Directory RPC Services Check
@@ -81,14 +81,14 @@ of starting up or shutting down, and is not available.
 Verify machine is not hung during boot.
 </code>
         </listItem>
-<listItem><para>REPADMIN.EXE reports that replication attempt has failed with status 1753.</para><para>REPADMIN commands that commonly cite the 1753 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error is shown below:</para><code>Default-First-Site-Name\CONTOSO-DC1
+<listItem><para>REPADMIN.EXE reports that replication attempt has failed with status 1753.</para><para>REPADMIN commands that commonly cite the 1753 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error is shown below:</para><code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 ==== INBOUND NEIGHBORS ======================================
 DC=contoso,DC=com
-Default-First-Site-Name\CONTOSO-DC2 via RPC
+Default-First-Site-NameCONTOSO-DC2 via RPC
 DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
 Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 1753 (0x6d9):
 There are no more endpoints available from the endpoint mapper.</codeFeaturedElement>
@@ -183,12 +183,12 @@ For Windows Server 2008 or Windows Server 2008 R2: from the console of the sourc
           <para>Stale NTDS Settings objects and bad name-to-IP mappings in DNS, WINS, Host and LMHOST files may cause the RPC client (destination DC) to connect to the wrong RPC Server (Source DC). Furthermore, the bad name-to-IP mapping may cause the RPC client (destination DC) to connect to a computer that does not even have the RPC Server Application of interest (the Active Directory role in this case) installed. (Example: a stale host record for DC2 contains the IP address of DC3 or a member computer). </para>
           <para>Verify that the objectGUID for the source DC that exists in the destination DCs copy of Active Directory matches the source DC objectGUID stored in the source DCs copy of Active Directory. If there is a discrepancy, use repadmin /showobjmeta on the ntds settings object to see which one corresponds to last promotion of the source DC (hint: compare date stamps for the NTDS Settings object create date from /showobjmeta against the last promotion date in the source DCs dcpromo.log file. You may have to use the last modify / create date of the DCPROMO.LOG file itself). If the object GUIDs are not identical, the destination DC likely has a stale NTDS Settings object for the source DC whose CNAME record refers to a host record with a bad name to IP mapping. </para>
           <para>On the destination DC, run IPCONFIG /ALL to determine which DNS Servers the destination DC is using for name resolution:</para>
-          <code>c:\&gt;ipconfig /all</code>
+          <code>c:&gt;ipconfig /all</code>
           <para>On the destination DC, run NSLOOKUP against the source DCs fully qualified DC CNAME record:</para>
-          <code>c:\&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs primary DNS Server IP &gt;
-c:\&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs secondary DNS Server IP&gt;</code>
+          <code>c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs primary DNS Server IP &gt;
+c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs secondary DNS Server IP&gt;</code>
           <para>Verify that the IP address returned by NSLOOKUP "owns" the host name / security identity of the source DC:</para>
-          <code>C:\&gt;NBTSTAT –A &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
+          <code>C:&gt;NBTSTAT –A &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
           <para>or</para>
           <para>Log onto the console of the source DC, run "IPCONFIG" from the CMD prompt and verify that the source DC owns the IP address returned by the NSLOOKUP command above</para>
           <para>Check for stale / duplicate host to IP mappings in DNS</para>
@@ -329,9 +329,9 @@ NSLOOKUP –type=hostname &lt;fully qualified computer name of source DC&gt; &lt
           <code>c:\&gt;portquery -n &lt;source DC&gt; -e 135 &gt;file.txt</code>
           <para>In the portqry output, note the port numbers dynamically registered by the "MS NT Directory DRS Interface" (UUID = 351...) for the <embeddedLabel>ncacn_ip_tcp protocol</embeddedLabel>. The snippet below shows sample portquery output from a Windows Server 2008 R2 DC and the UUID / protocol pair specifically used by Active Directory highlighted in <embeddedLabel>bold</embeddedLabel>: </para>
           <code>UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\\pipe\\lsass] 
+ncacn_np:CONTOSO-DC01[\pipe\lsass] 
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\\PIPE\\protected_storage] 
+ncacn_np:CONTOSO-DC01[\PIPE\protected_storage] 
 <codeFeaturedElement>UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
 ncacn_ip_tcp:CONTOSO-DC01[49156]</codeFeaturedElement> 
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
@@ -422,7 +422,7 @@ ncacn_ip_udp REG_SZ rpcrt4.dll</code>
       <para>
         <embeddedLabel>Example of a bad name to IP mapping causing RPC error 1753 vs. -2146893022: the target principal name is incorrect</embeddedLabel>
       </para>
-      <para>The contoso.com domain consists of \\DC1 and \\DC2 with IP addresses x.x.1.1 and x.x.1.2. The host "A" / "AAAA" records for \\DC2 are correctly registered on all of the DNS Servers configured for \\DC1. In addition, the HOSTS file on \\DC1 contains an entry mapping DC2s fully qualified hostname to IP address x.x.1.2. Later, DC2's IP address changes from X.X.1.2 to X.X.1.3 and a new member computer is joined to the domain with IP address x.x.1.2. AD Replication attempts triggered by the <ui>Replicate now</ui> command in Active Directory Sites and Services snap-in fails with error 1753 as shown in the trace below:</para>
+      <para>The contoso.com domain consists of DC1 and DC2 with IP addresses x.x.1.1 and x.x.1.2. The host "A" / "AAAA" records for DC2 are correctly registered on all of the DNS Servers configured for DC1. In addition, the HOSTS file on DC1 contains an entry mapping DC2s fully qualified hostname to IP address x.x.1.2. Later, DC2's IP address changes from X.X.1.2 to X.X.1.3 and a new member computer is joined to the domain with IP address x.x.1.2. AD Replication attempts triggered by the <ui>Replicate now</ui> command in Active Directory Sites and Services snap-in fails with error 1753 as shown in the trace below:</para>
       <code>F# SRC    DEST    Operation 
 1 x.x.1.1 x.x.1.2 ARP:Request, x.x.1.1 asks for x.x.1.2
 2 x.x.1.2 x.x.1.1 ARP:Response, x.x.1.2 at 00-13-72-28-C8-5E

@@ -32,7 +32,7 @@ ktmutil forget
 ## Remarks  
   
 ## <a name="BKMK_examples"></a>Examples  
-To force an Indoubt transaction with GUID 311a9209\-03f4\-11dc\-918f\-00188b8f707b to commit, type:  
+To force an Indoubt transaction with GUID 311a9209-03f4-11dc-918f-00188b8f707b to commit, type:  
   
 ```  
 ktmutil force commit {311a9209-03f4-11dc-918f-00188b8f707b}  

@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: da0f350c-1ce3-4c3f-988c-15f83402e716
 ---
 # Detail vdisk
-Displays the properties of the selected virtual hard disk \(VHD\).
+Displays the properties of the selected virtual hard disk (VHD).
 
 ## Syntax
 

@@ -11,10 +11,10 @@ ms.topic: article
 ms.assetid: 3ae547b4-3813-4b86-bacd-bc273c028a2a
 ---
 # Expand vdisk
-Expands a virtual hard disk \(VHD\) to the size that you specify.
+Expands a virtual hard disk (VHD) to the size that you specify.
 
 > [!NOTE]
-> This command is only applicable to Windows 7 and Windows Server 2008 R2.
+> This command is only applicable to Windows 7 and Windows Server 2008 R2.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ expand vdisk maximum=<n>
 
 |Parameter|Description|
 |-------------|---------------|
-|maximum\=<n>|Specifies the new size for the VHD in megabytes \(MB\).|
+|maximum=<n>|Specifies the new size for the VHD in megabytes (MB).|
 
 ## Remarks
 

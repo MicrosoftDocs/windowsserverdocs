@@ -16,7 +16,7 @@ description:
 manager: femila
 ---
 # Active Directory Federation Services
-**\[This information is preliminary and subject to change.\]**  
+**[This information is preliminary and subject to change.]**  
   
   
 This document contains a list of all of the documentation areas for AD FS for Windows Server 2016.  This includes the following:  
@@ -32,3 +32,4 @@ This document contains a list of all of the documentation areas for AD FS for Wi
 * [AD FS Operations](ad-fs/AD-FS-2016-Operations.md)
 
 * [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
+

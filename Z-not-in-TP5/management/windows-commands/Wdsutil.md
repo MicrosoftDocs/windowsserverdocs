@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 3a1965a0-8677-40cc-9495-30ae806808d1
 ---
 # Wdsutil
-WDSUTIL is a command\-line utility used for managing your Windows Deployment Services server. To run these commands, click **Start**, right\-click **Command Prompt**, and click **Run as administrator**.  
+WDSUTIL is a command-line utility used for managing your Windows Deployment Services server. To run these commands, click **Start**, right-click **Command Prompt**, and click **Run as administrator**.  
   
 ## Commands  
   
@@ -17,9 +17,9 @@ WDSUTIL is a command\-line utility used for managing your Windows Deployment Ser
 |-----------|---------------|  
 |[Using the Add Command](Using-the-Add-Command.md)|Adds objects or prestages computers.|  
 |[Using the Approve-AutoAddDevices Command](Using-the-Approve-AutoAddDevices-Command.md)|Approves computers that are pending administrator approval.|  
-|[Using the Convert-RiprepImage Command](Using-the-Convert-RiprepImage-Command.md)|Converts an existing Remote Installation Preparation \(RIPrep\) image to a Windows Image \(.wim\) file.|  
+|[Using the Convert-RiprepImage Command](Using-the-Convert-RiprepImage-Command.md)|Converts an existing Remote Installation Preparation (RIPrep) image to a Windows Image (.wim) file.|  
 |[Using the Copy Command](Using-the-Copy-Command.md)|Copies an image or a driver group.|  
-|[Using the delete-AutoAddDevices Command](Using-the-delete-AutoAddDevices-Command.md)|Deletes computers that are in the Auto\-Add database \(which stores information about the computers on the server\).|  
+|[Using the delete-AutoAddDevices Command](Using-the-delete-AutoAddDevices-Command.md)|Deletes computers that are in the Auto-Add database (which stores information about the computers on the server).|  
 |[Using the Disable Command](Using-the-Disable-Command.md)|Disables all services for Windows Deployment Services.|  
 |[Using the Disconnect-Client Command](Using-the-Disconnect-Client-Command.md)|Disconnects a client from a multicast transmission or namespace.|  
 |[Using the Enable Command](Using-the-Enable-Command.md)|Enables all services for Windows Deployment Services.|  

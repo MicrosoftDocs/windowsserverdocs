@@ -23,7 +23,7 @@ endlocal
 
 |Parameter|Description|
 |-------------|---------------|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -31,7 +31,7 @@ endlocal
 
 -   There is an implicit **endlocal** command at the end of a batch file.
 
--   If command extensions are enabled \(command extensions are enabled by default\), the **endlocal** command restores the state of command extensions \(that is, enabled or disabled\) to what it was before the corresponding **setlocal** command was run.
+-   If command extensions are enabled (command extensions are enabled by default), the **endlocal** command restores the state of command extensions (that is, enabled or disabled) to what it was before the corresponding **setlocal** command was run.
 
 > [!NOTE]
 > For more information about enabling and disabling command extensions, see [Cmd](Cmd.md).

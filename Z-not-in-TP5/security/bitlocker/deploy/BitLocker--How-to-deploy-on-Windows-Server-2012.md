@@ -26,9 +26,9 @@ BitLocker requires administrator privileges on the server to install. You can in
 
 2.  Select **Manage** from the **Server Manager Navigation** bar and select **Add Roles and Features** to start the **Add Roles and Features Wizard.**
 
-3.  With the **Add Roles and Features Wizard** open, select **Next** at the **Before you begin** pane \(if shown\).
+3.  With the **Add Roles and Features Wizard** open, select **Next** at the **Before you begin** pane (if shown).
 
-4.  Select **Role\-based or feature\-based installation** on the **Installation type** pane of the **Add Roles and Features Wizard** pane and select **Next** to continue.
+4.  Select **Role-based or feature-based installation** on the **Installation type** pane of the **Add Roles and Features Wizard** pane and select **Next** to continue.
 
 5.  Select the **Select a server from the server pool option** in the **Server Selection** pane and confirm the server for the BitLocker feature install.
 
@@ -58,7 +58,7 @@ Get-WindowsFeature Bit
 
 The results of this command displays a table of all of the feature names beginning with “Bit” as their prefix. This allows you to confirm that the feature name is `BitLocker` for the BitLocker feature.
 
-By default, installation of features in Windows PowerShell does not include optional sub\-features or management tools as part of the install process. This can be seen using the `-WhatIf` option in Windows PowerShell.
+By default, installation of features in Windows PowerShell does not include optional sub-features or management tools as part of the install process. This can be seen using the `-WhatIf` option in Windows PowerShell.
 
 ```
 Install-WindowsFeature BitLocker -WhatIf
@@ -66,13 +66,13 @@ Install-WindowsFeature BitLocker -WhatIf
 
 The results of this command show that only the BitLocker Drive Encryption feature installs using this command.
 
-To see what would be installed with the BitLocker feature including all available management tools and sub\-features, use the following command:
+To see what would be installed with the BitLocker feature including all available management tools and sub-features, use the following command:
 
 ```
 Install-WindowsFeature BitLocker -IncludeAllSubFeature -IncludeManagementTools -WhatIf | fl
 ```
 
-The result of this command displays the following list of all the administration tools for BitLocker that would be installed along with the feature, including tools for use with Active Directory Domain Services \(AD DS\) and Active Directory Lightweight Directory Services \(AD LDS\).
+The result of this command displays the following list of all the administration tools for BitLocker that would be installed along with the feature, including tools for use with Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS).
 
 -   BitLocker Drive Encryption
 
@@ -82,7 +82,7 @@ The result of this command displays the following list of all the administration
 
 -   BitLocker Recovery Password Viewer
 
--   AD DS Snap\-Ins and Command\-Line Tools
+-   AD DS Snap-Ins and Command-Line Tools
 
 -   AD DS Tools
 
@@ -98,13 +98,13 @@ Install-WindowsFeature BitLocker -IncludeAllSubFeature -IncludeManagementTools -
 > Installing the BitLocker feature using Windows PowerShell does not install the Enhanced Storage feature. Administrators wishing to support Encrypted Hard Drives in their environment will need to install the Enhanced Storage feature separately.
 
 #### Using the dism module to install BitLocker
-The `dism` Windows PowerShell module uses the `Enable-WindowsOptionalFeature` cmdlet to install features. The BitLocker feature name for BitLocker is `BitLocker`. The `dism` module does not support wildcards when searching for feature names. To list feature names for the `dism` module, use the `Get-WindowsOptionalFeatures` cmdlet. The following command will list all of the optional features in an online \(running\) operating system.
+The `dism` Windows PowerShell module uses the `Enable-WindowsOptionalFeature` cmdlet to install features. The BitLocker feature name for BitLocker is `BitLocker`. The `dism` module does not support wildcards when searching for feature names. To list feature names for the `dism` module, use the `Get-WindowsOptionalFeatures` cmdlet. The following command will list all of the optional features in an online (running) operating system.
 
 ```
 Get-WindowsOptionalFeature -Online | ft
 ```
 
-From this output, we can see that there are three BitLocker related optional feature names: BitLocker, BitLocker\-Utilities and BitLocker\-NetworkUnlock. To install the BitLocker feature, the BitLocker and BitLocker\-Utilities features are the only required items.
+From this output, we can see that there are three BitLocker related optional feature names: BitLocker, BitLocker-Utilities and BitLocker-NetworkUnlock. To install the BitLocker feature, the BitLocker and BitLocker-Utilities features are the only required items.
 
 To install BitLocker using the `dism` module, use the following command:
 
@@ -112,7 +112,7 @@ To install BitLocker using the `dism` module, use the following command:
 Enable-WindowsOptionalFeature -Online -FeatureName BitLocker -All
 ```
 
-This command will prompt the user for a reboot. The Enable\-WindowsOptionalFeature cmdlet does not offer support for forcing a reboot of the computer. This command does not include installation of the management tools for BitLocker. For a complete installation of BitLocker and all available management tools, use the following command:
+This command will prompt the user for a reboot. The Enable-WindowsOptionalFeature cmdlet does not offer support for forcing a reboot of the computer. This command does not include installation of the management tools for BitLocker. For a complete installation of BitLocker and all available management tools, use the following command:
 
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName BitLocker, BitLocker-Utilities -All

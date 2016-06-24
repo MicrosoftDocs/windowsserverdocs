@@ -19,7 +19,7 @@ This module introduces the components that received minor updates in the Directo
 |About the Author|  
 |--------------------|  
 |**Author:**|Justin Turner|  
-|**Bio:**|Justin is a Senior Support Escalation Engineer with the Directory Services team based in Irving, Texas, USA.  He has created or contributed to many training courses and KB articles for the Microsoft Knowledgebase over the past 12 years. He teaches Microsoft employees and customers new product architecture, is a charter Microsoft Certified Master \(MCM\), Microsoft Certified Trainer \(MCT\) and holds an M.S. degree in Computer Education and Cognitive Systems.|  
+|**Bio:**|Justin is a Senior Support Escalation Engineer with the Directory Services team based in Irving, Texas, USA.  He has created or contributed to many training courses and KB articles for the Microsoft Knowledgebase over the past 12 years. He teaches Microsoft employees and customers new product architecture, is a charter Microsoft Certified Master (MCM), Microsoft Certified Trainer (MCT) and holds an M.S. degree in Computer Education and Cognitive Systems.|  
 |**Contributors**|This training module includes contributions from *Michiko Short*, *Dean Wells*, *Alan Jowett*, *Manu Pushpendran*, *Yashar Bahman*, *Anoosh Saboori*, *Rashmi Jha*, *Justin Hall* and *Herbert Mauerer*|  
 |**Reviewers**|Many thanks to the following individuals that spent their own time reviewing and providing feedback: *Joey Seifert*, *Justin Hall*|  
   

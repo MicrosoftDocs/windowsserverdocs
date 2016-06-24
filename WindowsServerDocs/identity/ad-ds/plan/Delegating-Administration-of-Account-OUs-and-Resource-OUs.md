@@ -1,4 +1,4 @@
-﻿---
+---
 title: Delegating Administration of Account OUs and Resource OUs
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,7 +12,7 @@ ms.assetid: 7a820c22-ca12-4209-96c1-edfc8b3774ab
 author: Femila
 ---
 # Delegating Administration of Account OUs and Resource OUs
-Account organizational units \(OUs\) contain user, group, and computer objects. Resource OUs contain resources and the accounts that are responsible for managing those resources. The forest owner is responsible for creating an OU structure to manage these objects and resources and for delegating control of that structure to the OU owner.  
+Account organizational units (OUs) contain user, group, and computer objects. Resource OUs contain resources and the accounts that are responsible for managing those resources. The forest owner is responsible for creating an OU structure to manage these objects and resources and for delegating control of that structure to the OU owner.  
   
 ## Delegating administration of account OUs  
 Delegate an account OU structure to data administrators if they need to create and modify user, group, and computer objects. The account OU structure is a subtree of OUs for each account type that must be independently controlled. For example, the OU owner can delegate specific control to various data administrators over child OUs in an account OU for users, computers, groups, and service accounts.  
@@ -51,7 +51,7 @@ The resource OU can be located under the domain root or as a child OU of the cor
 The resource OU owner owns the objects within the OU but does not own the OU container itself. Resource OU owners manage only computer and group objects; they cannot create other classes of objects within the OU, and they cannot create child OUs.  
   
 > [!NOTE]  
-> The creator or owner of an object has the ability to set the access control list \(ACL\) on the object regardless of the permissions that are inherited from the parent container. If a resource OU owner can reset the ACL on an OU, that owner can create any class of object in the OU, including users. For this reason, resource OU owners are not permitted to create OUs.  
+> The creator or owner of an object has the ability to set the access control list (ACL) on the object regardless of the permissions that are inherited from the parent container. If a resource OU owner can reset the ACL on an OU, that owner can create any class of object in the OU, including users. For this reason, resource OU owners are not permitted to create OUs.  
   
 For each resource OU in the domain, create a global group to represent the data administrators who are responsible for managing the content of the OU. This group has full control over the group and computer objects in the OU but not over the OU container itself.  
   
@@ -59,6 +59,6 @@ The following illustration shows the administrative group design for a resource 
   
 ![](media/Delegating-Administration-of-Account-OUs-and-Resource-OUs/8a3f7714-a3bf-43f7-b999-6070543248b0.gif)  
   
-Placing the computer accounts into a resource OU gives the OU owner control over the account objects but does not make the OU owner an administrator of the computers. In an Active Directory domain, the Domain Admins group is, by default, placed in the local Administrators group on all computers. That is, service administrators have control over those computers. If resource OU owners require administrative control over the computers in their OUs, the forest owner can apply a Restricted Groups Group Policy to make the resource OU owner a member of the Administrators group on the computers in that OU.  
+Placing the computer accounts into a resource OU gives the OU owner control over the account objects but does not make the OU owner an administrator of the computers. In an Active Directory domain, the Domain Admins group is, by default, placed in the local Administrators group on all computers. That is, service administrators have control over those computers. If resource OU owners require administrative control over the computers in their OUs, the forest owner can apply a Restricted Groups Group Policy to make the resource OU owner a member of the Administrators group on the computers in that OU.  
   
 

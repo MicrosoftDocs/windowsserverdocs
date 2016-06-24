@@ -15,7 +15,7 @@ author: kumudd
 This section discusses known issues with Storage Replica in Windows Server 2016 Technical Preview.  
 
 ## After removing replication, disks are offline and you cannot configure replication again  
-In Windows Server 2016 Technical Preview, you may be unable to provision replication on a volume that was previously replicated or may find un\-mountable volumes. This may occur when some error condition prevents removal of replication or when you reinstall the operating system on a computer that was previously replicating data.  
+In Windows Server 2016 Technical Preview, you may be unable to provision replication on a volume that was previously replicated or may find un-mountable volumes. This may occur when some error condition prevents removal of replication or when you reinstall the operating system on a computer that was previously replicating data.  
 
 To fix, you must clear the hidden Storage Replica partition off the disks and return them to a writeable state. Previously this required complex **DISKPART** steps but Windows Server 2016 Technical Preview introduces a simple cmdlet named `Clear-SRMetadata`.  
 
@@ -46,14 +46,14 @@ To fix, you must clear the hidden Storage Replica partition off the disks and re
 The server may need to restart after cleaning the partition database; you can suppress this temporarily with `–NoRestart` but you should not skip restarting the server if requested by the cmdlet. This cmdlet does not remove data volumes nor data contained within those volumes.  
 
 ## During initial sync, see event log 4004 warnings  
-In Windows Server 2016 Technical Preview, when configuring replication, both the source and destination servers may show multiple **StorageReplica\Admin** event log 4004 warnings each during initial sync, with a status of “insufficient system resources exist to complete the API”. You are likely to see 5014 errors as well. These indicate that the servers do not have enough physical memory \(RAM\) to perform both initial synchronization as well as run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.  
+In Windows Server 2016 Technical Preview, when configuring replication, both the source and destination servers may show multiple **StorageReplica\Admin** event log 4004 warnings each during initial sync, with a status of “insufficient system resources exist to complete the API”. You are likely to see 5014 errors as well. These indicate that the servers do not have enough physical memory (RAM) to perform both initial synchronization as well as run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.  
 
 ## When using guest clusters with Shared VHDX and a host without a CSV, virtual machines stop responding after configuring replication  
-In Windows Server 2016 Technical Preview, when using Hyper\-V guest clusters for Storage Replica testing or demonstration purposes, and using Shared VHDX as the guest cluster storage, the virtual machines stop responding after you configure replication. If you restart the Hyper\-V host, the virtual machines start responding but replication configuration will not be complete and no replication will occur.  
+In Windows Server 2016 Technical Preview, when using Hyper-V guest clusters for Storage Replica testing or demonstration purposes, and using Shared VHDX as the guest cluster storage, the virtual machines stop responding after you configure replication. If you restart the Hyper-V host, the virtual machines start responding but replication configuration will not be complete and no replication will occur.  
 
-This behavior occurs when you are using **fltmc.exe attach svhdxflt** to bypass the requirement for the Hyper\-V host running a CSV. Use of this command is not supported and is intended only for test and demonstration purposes.  
+This behavior occurs when you are using **fltmc.exe attach svhdxflt** to bypass the requirement for the Hyper-V host running a CSV. Use of this command is not supported and is intended only for test and demonstration purposes.  
 
-The cause of the slowdown is a by\-design interoperability issue between the new Storage QoS feature in Windows Server 2016 Technical Preview and the manually attached Shared VHDX filter. To resolve this issue, disable the Storage QoS filter driver and restart the Hyper\-V host:  
+The cause of the slowdown is a by-design interoperability issue between the new Storage QoS feature in Windows Server 2016 Technical Preview and the manually attached Shared VHDX filter. To resolve this issue, disable the Storage QoS filter driver and restart the Hyper-V host:  
 
 ```  
 SC config storqosflt start= disabled  
@@ -69,7 +69,7 @@ When using the `New-Volume` cmdlet along with differing sets of storage on the s
 
     Data partition sizes are different in those two groups  
 
-Use the `New-Partition**` cmdlet to create volumes and format them instead of `New-Volume`, as the latter cmdlet may round the volume size on differing storage arrays. If you have already created an NTFS volume, you can use `Resize-Partition` to grow or shrink one of the volumes to match the other \(this cannot be done with ReFS volumes\). If using **Diskmgmt** or **Server Manager**, no rounding will occur.  
+Use the `New-Partition**` cmdlet to create volumes and format them instead of `New-Volume`, as the latter cmdlet may round the volume size on differing storage arrays. If you have already created an NTFS volume, you can use `Resize-Partition` to grow or shrink one of the volumes to match the other (this cannot be done with ReFS volumes). If using **Diskmgmt** or **Server Manager**, no rounding will occur.  
 
 ## Changing replication direction during initial sync is possible, leading to data loss  
 

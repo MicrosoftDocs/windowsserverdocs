@@ -11,17 +11,17 @@ ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 ---
 # Storage Quality of Service
-Storage Quality of Service \(Storage QoS\) in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] provides a way to centrally monitor and manage storage performance for virtual machines using Hyper\-V and the Scale\-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy basedminimum and maximum performance goals to be configured in units of normalized IOPs.
+Storage Quality of Service (Storage QoS) in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy basedminimum and maximum performance goals to be configured in units of normalized IOPs.
 
 You can use Storage QoS in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] to accomplish the following:
 
 -   **Mitigate noisy neighbor issues.** By default, Storage QoS ensures that a single virtual machine cannot consume all storage resources and starve other virtual machines of storage bandwidth.
 
--   **Monitor end to end storage performance.** As soon as virtual machines stored on a Scale\-Out File Server are started, their performance is monitored. Performance details of all running virtual machines and the configuration of the Scale\-Out File Server cluster can be viewed from a single location
+-   **Monitor end to end storage performance.** As soon as virtual machines stored on a Scale-Out File Server are started, their performance is monitored. Performance details of all running virtual machines and the configuration of the Scale-Out File Server cluster can be viewed from a single location
 
 -   **Manage Storage I/O per workload business needs** Storage QoS policies define performance minimums and maximums for virtual machines and ensures that they are met. This provides consistent performance to virtual machines, even in dense and overprovisioned environments. If policies cannot be met, alerts are available to track when VMs are out of policy or have invalid policies assigned.
 
-This document outlines how your business can benefit from the new Storage QoS functionality. It assumes that you have a previous working knowledge of Windows Server, Windows Server Failover Clustering, Scale\-Out File Server, Hyper\-V, and Windows PowerShell and includes the following sections:
+This document outlines how your business can benefit from the new Storage QoS functionality. It assumes that you have a previous working knowledge of Windows Server, Windows Server Failover Clustering, Scale-Out File Server, Hyper-V, and Windows PowerShell and includes the following sections:
 
 -   [Overview](Storage-Quality-of-Service.md#BKMK_Overview)
 
@@ -36,69 +36,69 @@ This document outlines how your business can benefit from the new Storage QoS fu
 -   [Updates from previous version of Windows Server Technical Preview](Storage-Quality-of-Service.md#BKMK_Updates)
 
 > [!IMPORTANT]
-> [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] is an early pre\-release build. Features and scenarios are still in development and the experiences are still evolving. At this stage, [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] and Storage QoS are for evaluations only and should not be used in production environments.
+> [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] is an early pre-release build. Features and scenarios are still in development and the experiences are still evolving. At this stage, [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] and Storage QoS are for evaluations only and should not be used in production environments.
 
 > [!NOTE]
-> There are two changes [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] (TP5) for Storage Quality of Service \(sQoS\). The policy type names have been changed in the PowerShell scripts. The new type names are **Dedicated** and **Aggregated**. This document includes more information on these features and also contains examples of configuring and managing them.
+> There are two changes [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] (TP5) for Storage Quality of Service (sQoS). The policy type names have been changed in the PowerShell scripts. The new type names are **Dedicated** and **Aggregated**. This document includes more information on these features and also contains examples of configuring and managing them.
 
 ## <a name="BKMK_Overview"></a>Overview
-This section describes the requirements for using Storage QoS, an overview of a software\-defined solution using Storage QoS, and a list of Storage QoS related terminologies.
+This section describes the requirements for using Storage QoS, an overview of a software-defined solution using Storage QoS, and a list of Storage QoS related terminologies.
 
 ### <a name="BKMK_Requirements"></a>Storage QoS Requirements
 Storage QoS supports two deployment scenarios:
 
--   **Hyper\-V using a Scale\-Out File Server** This scenario requires both of the following:
+-   **Hyper-V using a Scale-Out File Server** This scenario requires both of the following:
 
-    -   Storage cluster that is a Scale\-Out File Server cluster
+    -   Storage cluster that is a Scale-Out File Server cluster
 
-    -   Compute cluster that has least one server with the Hyper\-V role enabled
+    -   Compute cluster that has least one server with the Hyper-V role enabled
 
-    For Storage QoS, the Failover Cluster is required on Storage servers, but the compute servers are not required to be in a failover cluster. All servers \(used for both Storage and Compute\) must be running Windows Server Technical Preview.
+    For Storage QoS, the Failover Cluster is required on Storage servers, but the compute servers are not required to be in a failover cluster. All servers (used for both Storage and Compute) must be running Windows Server Technical Preview.
 
-    If you do not have a Scale\-Out File Server cluster deployed for evaluation purposes, for step by step instructions to build one using either existing servers or virtual machines, see [Windows Server 2012 R2 Storage: Step-by-step with Storage Spaces, SMB Scale-Out and Shared VHDX (Physical)](http://blogs.technet.com/b/josebda/archive/2013/07/31/windows-server-2012-r2-storage-step-by-step-with-storage-spaces-smb-scale-out-and-shared-vhdx-physical.aspx).
+    If you do not have a Scale-Out File Server cluster deployed for evaluation purposes, for step by step instructions to build one using either existing servers or virtual machines, see [Windows Server 2012 R2 Storage: Step-by-step with Storage Spaces, SMB Scale-Out and Shared VHDX (Physical)](http://blogs.technet.com/b/josebda/archive/2013/07/31/windows-server-2012-r2-storage-step-by-step-with-storage-spaces-smb-scale-out-and-shared-vhdx-physical.aspx).
 
--   **Hyper\-V using Cluster Shared Volumes.** This scenario requires both of the following:
+-   **Hyper-V using Cluster Shared Volumes.** This scenario requires both of the following:
 
-    -   Compute cluster with the Hyper\-V role enabled
+    -   Compute cluster with the Hyper-V role enabled
 
-    -   Hyper\-V using Cluster Shared Volumes \(CSV\) for storage
+    -   Hyper-V using Cluster Shared Volumes (CSV) for storage
 
 Failover Cluster is required. All servers must be running the same version of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].
 
-### <a name="BKMK_SolutionOverview"></a>Using Storage QoS in a software\-defined storage solution
-Storage Quality of Service is built into the Microsoft software\-defined storage solution provided by Scale\-Out File Server and Hyper\-V. The Scale\-Out File Server exposes file shares to the Hyper\-V servers using the SMB3 protocol. A new Policy Manager has been added to the File Server cluster, which provides the central storage performance monitoring.
+### <a name="BKMK_SolutionOverview"></a>Using Storage QoS in a software-defined storage solution
+Storage Quality of Service is built into the Microsoft software-defined storage solution provided by Scale-Out File Server and Hyper-V. The Scale-Out File Server exposes file shares to the Hyper-V servers using the SMB3 protocol. A new Policy Manager has been added to the File Server cluster, which provides the central storage performance monitoring.
 
 ![](media/Clustering_SOFSStorageQoS.png)
 
-**Figure 1: Using Storage QoS in a software\-defined storage solution in Scale\-Out File Server**
+**Figure 1: Using Storage QoS in a software-defined storage solution in Scale-Out File Server**
 
-As Hyper\-V servers launch virtual machines, they are monitored by the Policy Manager. The Policy Manager communicates the Storage QoS policy and any limits or reservations back to the Hyper\-V server, which controls the performance of the virtual machine as appropriate.
+As Hyper-V servers launch virtual machines, they are monitored by the Policy Manager. The Policy Manager communicates the Storage QoS policy and any limits or reservations back to the Hyper-V server, which controls the performance of the virtual machine as appropriate.
 
-When there are changes to Storage QoS policies or to the performance demands by virtual machines, the Policy Manager notifies the Hyper\-V servers to adjust their behavior. This feedback loop ensures that all virtual machines VHDs perform consistently according to the Storage QoS policies as defined.
+When there are changes to Storage QoS policies or to the performance demands by virtual machines, the Policy Manager notifies the Hyper-V servers to adjust their behavior. This feedback loop ensures that all virtual machines VHDs perform consistently according to the Storage QoS policies as defined.
 
 ### <a name="BKMK_Glossary"></a>Glossary
 
 |Term|Description|
 |--------|---------------|
-|Normalized IOPs|All of the storage usage is measured in "Normalized IOPs."  This is a count of the storage input\/output operations per second.  Any IO that is 8KB or smaller is considered as one normalized IO.  Any IO that is larger than 8KB is treated as multiple normalized IOs. For example, a 256KB request is treated as 32 normalized IOPs.<br /><br />The Technical Preview includes the ability to specify the size used to normalize IOs.  On the storage cluster, the normalized size can be specified and take effect on the normalization calculations cluster wide.  The default remains 8KB.|
-|Flow|Each file handle opened by a Hyper\-V server to a VHD or VHDX file is considered a "flow". If a virtual machine has two virtual hard disks attached, it will have 1 flow to the file server cluster per file. If a VHDX is shared with multiple virtual machines, it will have 1 flow per virtual machine.|
-|InitiatorName|Name of the virtual machine that is reported to the Scale\-Out File Server for each flow.|
+|Normalized IOPs|All of the storage usage is measured in "Normalized IOPs."  This is a count of the storage input/output operations per second.  Any IO that is 8KB or smaller is considered as one normalized IO.  Any IO that is larger than 8KB is treated as multiple normalized IOs. For example, a 256KB request is treated as 32 normalized IOPs.<br /><br />The Technical Preview includes the ability to specify the size used to normalize IOs.  On the storage cluster, the normalized size can be specified and take effect on the normalization calculations cluster wide.  The default remains 8KB.|
+|Flow|Each file handle opened by a Hyper-V server to a VHD or VHDX file is considered a "flow". If a virtual machine has two virtual hard disks attached, it will have 1 flow to the file server cluster per file. If a VHDX is shared with multiple virtual machines, it will have 1 flow per virtual machine.|
+|InitiatorName|Name of the virtual machine that is reported to the Scale-Out File Server for each flow.|
 |InitiatorID|An identifier matching the virtual machine ID.  This can always be used to uniquely identify individual flows virtual machines even if the virtual machines have the same InitiatorName.|
 |Policy|Storage QoS policies are stored in the cluster database, and have the following properties: PolicyId, MinimumIOPS, MaximumIOPS, ParentPolicy, and PolicyType.|
 |PolicyId|Unique identifier for a policy.  It is generated by default, but can be specified if desired.|
 |MinimumIOPS|Minimum normalized IOPS that will be provided by a policy.  Also known as "Reservation".|
 |MaximumIOPS|Maximum normalized IOPS that will be limited by a policy.  Also known as "Limit".|
 |Aggregated |A policy type where the specified MinimumIOPS & MaximumIOPS and Bandwidth are shared among all flows assigned to the policy. All VHD’s assigned the policy on that storage system have a  single allocation of I/O bandwidth for them to all share.|
-|Dedicated|A policy type where the specified Minimum & MaximumIOPs and Bandwidth are managed for individual VHD\/VHDx.|
+|Dedicated|A policy type where the specified Minimum & MaximumIOPs and Bandwidth are managed for individual VHD/VHDx.|
 
 ## <a name="BKMK_SetUpQoS"></a>How to set up Storage QoS and monitor basic performance
 This section describes how to enable the new Storage QoS feature and how to monitor storage performance without applying custom policies.
 
 ### <a name="BKMK_SetupStorageQoSonStorageCluster"></a>Set up Storage QoS on a Storage Cluster
-This section discusses how to enable Storage QoS on either a new or an existing Failover Cluster and Scale\-Out File Server that is running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]
+This section discusses how to enable Storage QoS on either a new or an existing Failover Cluster and Scale-Out File Server that is running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]
 
 #### Set up Storage QoS on a new installation
-If you have configured a new Failover Clusterand configured a Cluster Shared Volume\(CSV\) on [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], then the Storage QoS feature will be set up automatically.
+If you have configured a new Failover Clusterand configured a Cluster Shared Volume(CSV) on [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], then the Storage QoS feature will be set up automatically.
 
 #### Verify Storage QoS installation
 After you have created a Failover Cluster and configured a CSV disk, , **Storage QoS Resource** is displayed as a Cluster Core Resource and visible in both Failover Cluster Manager and Windows PowerShell. The intent is that the failover cluster system will manage this resource and you should not have to do any actions against this resource.  We display  it in both Failover Cluster Manager and PowerShell to be consistent with the other failover cluster system resources like the new Health Service.
@@ -118,21 +118,21 @@ Storage Qos Resource   Online     Cluster Group     Storage QoS Policy Manager
 ```
 
 ### <a name="BKMK_SetupStorageQoSonComputeCluster"></a>Set up Storage QoS on a Compute Cluster
-The Hyper\-V role in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] has built\-in support for Storage QoS and is set up by default.
+The Hyper-V role in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] has built-in support for Storage QoS and is set up by default.
 
 #### Install Remote Administration Tools to manage Storage QoS policies from remote computers
 You can manage Storage QoS policies and monitor flows from compute hosts using the Remote Server Administration Tools.  These are available as optional features on all [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] installations, and can be downloaded separately for [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)] at the [Microsoft Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=44280) website. .
 
-The **RSAT\-Clustering** optional feature includes the Windows PowerShell module for remote management of Failover Clustering, including Storage QoS.
+The **RSAT-Clustering** optional feature includes the Windows PowerShell module for remote management of Failover Clustering, including Storage QoS.
 
--   Windows PowerShell: Add\-WindowsFeature RSAT\-Clustering
+-   Windows PowerShell: Add-WindowsFeature RSAT-Clustering
 
-The **RSAT\-Hyper\-V\-Tools** optional feature includes the Windows PowerShell module for remote management of Hyper\-V.
+The **RSAT-Hyper-V-Tools** optional feature includes the Windows PowerShell module for remote management of Hyper-V.
 
--   Windows PowerShell: Add\-WindowsFeature RSAT\-Hyper\-V\-Tools
+-   Windows PowerShell: Add-WindowsFeature RSAT-Hyper-V-Tools
 
 #### Deploy virtual machines to run workloads for testing
-You will need some virtual machines stored on the Scale\-Out File Server with relevant workloads.  For some tips in how to simulate load and do some stress testing, see the following page for a recommended tool \(DiskSpd\) and some example usage: [DiskSpd, PowerShell and storage performance: measuring IOPs, throughput and latency for both local disks and SMB file shares.](http://blogs.technet.com/b/josebda/archive/2014/10/13/diskspd-powershell-and-storage-performance-measuring-iops-throughput-and-latency-for-both-local-disks-and-smb-file-shares.aspx)
+You will need some virtual machines stored on the Scale-Out File Server with relevant workloads.  For some tips in how to simulate load and do some stress testing, see the following page for a recommended tool (DiskSpd) and some example usage: [DiskSpd, PowerShell and storage performance: measuring IOPs, throughput and latency for both local disks and SMB file shares.](http://blogs.technet.com/b/josebda/archive/2014/10/13/diskspd-powershell-and-storage-performance-measuring-iops-throughput-and-latency-for-both-local-disks-and-smb-file-shares.aspx)
 
 The example scenarios shown in this guide includes five virtual machines. BuildVM1, BuildVM2, BuildVM3 and BuildVM4 are running a desktop workload with low to moderate storage demands. TestVm1 is running an online transaction processing benchmark with high storage demand.
 
@@ -143,10 +143,10 @@ This section includes:
 
 -   How to view performance for a volume using the `Get-StorageQosVolume` cmdlet.
 
-#### Query flows using the Get\-StorageQosFlow cmdlet
-The Get\-StorageQosFlow cmdlet shows all current flows initiated by Hyper\-V servers. All data is collected by the Scale\-Out File Server cluster, hence the cmdlet can be used on any node in the Scale\-Out File Server cluster, or against a remote server using the –CimSession parameter.
+#### Query flows using the Get-StorageQosFlow cmdlet
+The Get-StorageQosFlow cmdlet shows all current flows initiated by Hyper-V servers. All data is collected by the Scale-Out File Server cluster, hence the cmdlet can be used on any node in the Scale-Out File Server cluster, or against a remote server using the –CimSession parameter.
 
-**The following sample command shows how to view all files opened by Hyper\-V on server using Get\-StorageQoSFlow**.
+**The following sample command shows how to view all files opened by Hyper-V on server using Get-StorageQoSFlow**.
 
 ```
 PS C:\> Get-StorageQosFlow
@@ -177,7 +177,7 @@ WinOltp1         plang-c1.plan... plang-fs2.pla... C:\ClusterSt... Ok
                                   plang-fs1.pla... C:\ClusterSt... Ok
 ```
 
-The following sample command is formatted to show virtual machine name, Hyper\-V host name, IOPs, and VHD file name, sorted by IOPS.
+The following sample command is formatted to show virtual machine name, Hyper-V host name, IOPs, and VHD file name, sorted by IOPS.
 
 ```
 PS C:\> Get-StorageQosFlow | Sort-Object StorageNodeIOPs
@@ -241,15 +241,15 @@ MinimumIops        : 500
 
 The data returned by the `Get-StorageQosFlow` cmdlet includes:
 
--   The Hyper\-V hostname \(InitiatorNodeName\).
+-   The Hyper-V hostname (InitiatorNodeName).
 
--   The virtual machine’s name and its Id \(InitiatorName and InitiatorId\)
+-   The virtual machine’s name and its Id (InitiatorName and InitiatorId)
 
--   Recent average performance as observed by the Hyper\-V host for the virtual disk \(InitiatorIOPS, InitiatorLatency\)
+-   Recent average performance as observed by the Hyper-V host for the virtual disk (InitiatorIOPS, InitiatorLatency)
 
--   Recent average performance as observed by the Storage cluster for the virtual disk \(StorageNodeIOPS, StorageNodeLatency\)
+-   Recent average performance as observed by the Storage cluster for the virtual disk (StorageNodeIOPS, StorageNodeLatency)
 
--   Current policy being applied to the file, if any, and the resulting configuration \(PolicyId, Reservation, Limit\)
+-   Current policy being applied to the file, if any, and the resulting configuration (PolicyId, Reservation, Limit)
 
 -   Status of the policy
 
@@ -257,10 +257,10 @@ The data returned by the `Get-StorageQosFlow` cmdlet includes:
 
     -   InsufficientThroughput– A policy is applied, but the Minimum IOPs cannot be delivered.  This can happen if the minimum for a VM, or all VMs together, are more than the storage volume can deliver.
 
-    -   **UnknownPolicyId** – A policy was assigned to the virtual machine on the Hyper\-V host, but is missing from the file server.  This policy should be removed from the virtual machine configuration, or a matching policy should be created on the file server cluster.
+    -   **UnknownPolicyId** – A policy was assigned to the virtual machine on the Hyper-V host, but is missing from the file server.  This policy should be removed from the virtual machine configuration, or a matching policy should be created on the file server cluster.
 
-#### View performance for a volume using Get\-StorageQosVolume
-Storage performance metrics are also collected on a per\-storage volume level, in addition to the per\-flow performance metrics.  This makes it easy to see the average total utilization in normalized IOPs, latency, and aggregate limits and reservations applied to a volume.
+#### View performance for a volume using Get-StorageQosVolume
+Storage performance metrics are also collected on a per-storage volume level, in addition to the per-flow performance metrics.  This makes it easy to see the average total utilization in normalized IOPs, latency, and aggregate limits and reservations applied to a volume.
 
 ```
 PS C:\> Get-StorageQosVolume | Format-List
@@ -306,31 +306,31 @@ MinimumIops    : 781
 This section describes how to create Storage QoS policies, apply these policies to virtual machines, and monitor a storage cluster after policies are applied.
 
 ### Create Storage QoS policies
-Storage QoS policies are defined and managed in the Scale\-Out File Server cluster.  You can create as many policies as needed for flexible deployments \(up to 10,000 per storage cluster\).
+Storage QoS policies are defined and managed in the Scale-Out File Server cluster.  You can create as many policies as needed for flexible deployments (up to 10,000 per storage cluster).
 
-Each VHD\/VHDX file assigned to a virtual machine may be configured with a policy. Different files and virtual machines can use the same policy or they can each be configured with separate policies.  If multiple VHD\/VHDX files or multiple virtual machines are configured with the same policy, they will be aggregated together and will share the MinimumIOPS and MaximumIOPS fairly. If you use separate policies for multiple VHD\/VHDX files or virtual machines, the minimum and maximums are tracked separately for each.
+Each VHD/VHDX file assigned to a virtual machine may be configured with a policy. Different files and virtual machines can use the same policy or they can each be configured with separate policies.  If multiple VHD/VHDX files or multiple virtual machines are configured with the same policy, they will be aggregated together and will share the MinimumIOPS and MaximumIOPS fairly. If you use separate policies for multiple VHD/VHDX files or virtual machines, the minimum and maximums are tracked separately for each.
 
 If you create multiple similar policies for different virtual machines and the virtual machines have equal storage demand, they will receive a similar share of IOPs.  If one VM demands more and the other less, then IOPs will follow that demand.
 
 ### Types of Storage QoS Policies
-There are two types of policies: SingleInstance and MultiInstance. SingleInstance policies apply maximums and minimum for the combined set of VHD\/VHDX files and virtual machines where they apply. In effect, they share a specified set of IOPS and bandwidth. MultiInstance policies apply the minimum and maximum values for each VHD\/VHDx, separately. This makes it easy to create a single policy that applies similar limits to multiple VHD\/VHDx files.
+There are two types of policies: SingleInstance and MultiInstance. SingleInstance policies apply maximums and minimum for the combined set of VHD/VHDX files and virtual machines where they apply. In effect, they share a specified set of IOPS and bandwidth. MultiInstance policies apply the minimum and maximum values for each VHD/VHDx, separately. This makes it easy to create a single policy that applies similar limits to multiple VHD/VHDx files.
 
-For instance, if you create a SingleInstance policy with a minimum of 300 IOPs and a maximum of 500 IOPs. If you apply this policy to 5 different VHD\/VHDx files, you are making sure that the 5 VHD\/VHDx files combined will be guaranteed at least 300 IOPs \(if there is demand and the storage system can provide that performance\) and no more than 500 IOPs. If the VHD\/VHDx files have similar high demand for IOPs and the storage system can keep up, each VHD\/VHDx files will get about 100 IOPs.
+For instance, if you create a SingleInstance policy with a minimum of 300 IOPs and a maximum of 500 IOPs. If you apply this policy to 5 different VHD/VHDx files, you are making sure that the 5 VHD/VHDx files combined will be guaranteed at least 300 IOPs (if there is demand and the storage system can provide that performance) and no more than 500 IOPs. If the VHD/VHDx files have similar high demand for IOPs and the storage system can keep up, each VHD/VHDx files will get about 100 IOPs.
 
-However, if you create a MultiInstance policy with similar limits and apply it to VHD\/VHDx files on 5 different virtual machines, each virtual machine will get at least 300 IOPs and no more than 500 IOPs. If the virtual machines have similar high demand for IOPs and the storage system can keep up, each virtual machine will get about 500 IOPs. .  If one of the virtual machines has multiple VHD\/VHDx files with the same MulitInstance policy configured, they will share the limit so that the total IO from the VM from files with that policy will not exceed the limits.
+However, if you create a MultiInstance policy with similar limits and apply it to VHD/VHDx files on 5 different virtual machines, each virtual machine will get at least 300 IOPs and no more than 500 IOPs. If the virtual machines have similar high demand for IOPs and the storage system can keep up, each virtual machine will get about 500 IOPs. .  If one of the virtual machines has multiple VHD/VHDx files with the same MulitInstance policy configured, they will share the limit so that the total IO from the VM from files with that policy will not exceed the limits.
 
-Hence, if you have a group of VHD\/VHDx files that you want to exhibit the same performance characteristics and you don’t want the trouble of creating multiple, similar policies, you can use a single MultiInstance policy and apply to the files of each virtual machine.
+Hence, if you have a group of VHD/VHDx files that you want to exhibit the same performance characteristics and you don’t want the trouble of creating multiple, similar policies, you can use a single MultiInstance policy and apply to the files of each virtual machine.
 
-### Create and apply a multi\-instance policy
-First, use the `New-StorageQosPolicy` cmdlet to create a policy on the Scale\-Out File Server as shown in the following example:
+### Create and apply a multi-instance policy
+First, use the `New-StorageQosPolicy` cmdlet to create a policy on the Scale-Out File Server as shown in the following example:
 
 ```
 $desktopVmPolicy = New-StorageQosPolicy -Name Desktop -PolicyType MultiInstance -MinimumIops 100 -MaximumIops 200
 ```
 
-Next, apply it to the appropriate virtual machines’ hard disk drives on the Hyper\-V server.  Note the PolicyId from the previous step or store it in a variable in your scripts.
+Next, apply it to the appropriate virtual machines’ hard disk drives on the Hyper-V server.  Note the PolicyId from the previous step or store it in a variable in your scripts.
 
-On the Scale\-Out File Server, using PowerShell, create a Storage QoS policy and get its Policy ID as shown in the following example:
+On the Scale-Out File Server, using PowerShell, create a Storage QoS policy and get its Policy ID as shown in the following example:
 
 ```
 PS C:\> $desktopVmPolicy = New-StorageQosPolicy -Name Desktop -PolicyType MultiInstance -MinimumIops 100 -MaximumIops 200
@@ -342,7 +342,7 @@ Guid
 cd6e6b87-fb13-492b-9103-41c6f631f8e0
 ```
 
-On the Hyper\-V server, using PowerShell, set the Storage QoS Policy using the Policy ID as shown in the following example:
+On the Hyper-V server, using PowerShell, set the Storage QoS Policy using the Policy ID as shown in the following example:
 
 ```
 Get-VM -Name Build* | Get-VMHardDiskDrive | Set-VMHardDiskDrive -QoSPolicyID cd6e6b87-fb13-492b-9103-41c6f631f8e0
@@ -369,7 +369,7 @@ WinOltp1          Ok           0           0            5166     Ok IOMETER.VHDX
 WinOltp1          Ok           0           0               0     Ok BOOT.VHDX
 ```
 
-On the Hyper\-V server, you can also use the provided script **Get\-VMHardDiskDrivePolicy.ps1** to see what policy is applied to a virtual hard disk drive.
+On the Hyper-V server, you can also use the provided script **Get-VMHardDiskDrivePolicy.ps1** to see what policy is applied to a virtual hard disk drive.
 
 ```
 PS C:\> Get-VM -Name BuildVM1 | Get-VMHardDiskDrive | F
@@ -398,7 +398,7 @@ IsDeleted                     : False
 ```
 
 ### Query for Storage QoS Policies
-`Get-StorageQosPolicy` lists all configured policies and their status on a Scale\-Out File Server.
+`Get-StorageQosPolicy` lists all configured policies and their status on a Scale-Out File Server.
 
 ```
 PS C:\> Get-StorageQosPolicy
@@ -436,14 +436,14 @@ BuildVM4              200         100           187             169     Ok C:\C.
 BuildVM3              200         100           194             169     Ok C:\C...
 ```
 
-### Create a Single\-Instance Policy
-Single\-instance policies may be used if you want multiple virtual hard disks to share a single pool of IOPs and bandwidth.  For example, if you apply the same single\-instance policy to hard disks from two virtual machines, the minimum will be split between them according to demand.  Both disks will be guaranteed a combined minimum, and together they will not exceed the specified maximum IOPs or bandwidth.
+### Create a Single-Instance Policy
+Single-instance policies may be used if you want multiple virtual hard disks to share a single pool of IOPs and bandwidth.  For example, if you apply the same single-instance policy to hard disks from two virtual machines, the minimum will be split between them according to demand.  Both disks will be guaranteed a combined minimum, and together they will not exceed the specified maximum IOPs or bandwidth.
 
-The same approach could also be used to provide a single allocation to all VHD\/VHDx files for the virtual machines  comprising a service or belonging to a tenant in a multihosted environment.
+The same approach could also be used to provide a single allocation to all VHD/VHDx files for the virtual machines  comprising a service or belonging to a tenant in a multihosted environment.
 
-There is no difference in the process to create single and multi\-instance policies other than the PolicyType that is specified.
+There is no difference in the process to create single and multi-instance policies other than the PolicyType that is specified.
 
-The following example shows how to create a Single Instance Storage QoS Policy and get its policyID on a Scale\-Out File Server:
+The following example shows how to create a Single Instance Storage QoS Policy and get its policyID on a Scale-Out File Server:
 
 ```
 PS C:\> $highPerf = New-StorageQosPolicy -Name SqlWorkload -MinimumIops 1000 -MaximumIops 5000 -PolicyType SingleInstance
@@ -454,7 +454,7 @@ Guid
 7e2f3e73-1ae4-4710-8219-0769a4aba072
 ```
 
-The following example shows how to apply the Storage QoS Policy on Hyper\-V server using the policyID obtained in the preceding example:
+The following example shows how to apply the Storage QoS Policy on Hyper-V server using the policyID obtained in the preceding example:
 
 ```
 PS C:\> Get-VM -Name WinOltp1 | Get-VMHardDiskDrive | Set-VMHardDiskDrive –QoSPolicyID 7e2f3e73-1ae4-4710-8219-0769a4aba072
@@ -516,7 +516,7 @@ FilePath        : C:\ClusterStorage\Volume3\SHARES\THREE\WINOLTP1\IOMETER.VHDX
 Each virtual hard disk will have the MinimumIOPs and MaximumIOPs and MaximumIobandwidth value adjusted based on its load.  This ensures that the total amount of bandwidth used for the group of disks stays within the range defined by policy.  In the example above, the first two disks are idle, and the third one is allowed to use up to the maximum IOPs.  If the first two disks start issuing IO again, then the maximum IOPs of the third disk will be lowered automatically.
 
 ### Modify an existing policy
-The properties of Name, MinimumIOPs,  MaximumIOPs, and MaximumIoBandwidthcan be changed after a policy is created.  However, the Policy Type \(Single\/MultiInstance\) cannot be changed once the policy is created.
+The properties of Name, MinimumIOPs,  MaximumIOPs, and MaximumIoBandwidthcan be changed after a policy is created.  However, the Policy Type (Single/MultiInstance) cannot be changed once the policy is created.
 
 The following Windows PowerShell cmdlet shows how to change the MaximumIOPs property for an existing policy:
 
@@ -751,7 +751,7 @@ MinimumIops        : 15000
 ## <a name="BKMK_Health"></a>Monitor Health using Storage QoS
 The new Health Service simplifies the monitoring of the Storage Cluster, providing a single place to check for any actionable events in any of the nodes. This section describes how monitor the health of your storage cluster using the `debug-storagesubsystem` cmdlet.
 
-### View Storage Status with Debug\-StorageSubSystem
+### View Storage Status with Debug-StorageSubSystem
 Clustered Storage Spaces also provide information on the health of the storage cluster in a single location.  This is currently in early preview stages, but some data is available today.  This can help administrators quickly identify current problems in storage deployments and monitor as issues arrive or are dismissed.
 
 #### VM with invalid policy
@@ -785,7 +785,7 @@ PSComputerName            :
 ```
 
 #### Lost redundancy for a storage spaces virtual disk
-In this example, a Clustered Storage Space has a virtual disk created as a three\-way mirror.  A failed disk was removed from the system, but a replacement disk was not added.  The storage subsystem is reporting a loss of redundancy with HealthStatus **Warning**, but OperationalStatus “**OK** because the volume is still online.
+In this example, a Clustered Storage Space has a virtual disk created as a three-way mirror.  A failed disk was removed from the system, but a replacement disk was not added.  The storage subsystem is reporting a loss of redundancy with HealthStatus **Warning**, but OperationalStatus “**OK** because the volume is still online.
 
 ```
 PS C:\> Get-StorageSubSystem -FriendlyName Clustered*
@@ -824,20 +824,20 @@ Register-CimIndicationEvent -Namespace root\microsoft\windows\storage -ClassName
 
 while ($true)
 {
-     $e = (Wait-Event)
-     $e.SourceEventArgs.NewEvent
-     Remove-Event $e.SourceIdentifier
+     $e = (Wait-Event)
+     $e.SourceEventArgs.NewEvent
+     Remove-Event $e.SourceIdentifier
 }
 ```
 
 ## <a name="BKMK_Updates"></a>Updates from previous version of Windows Server Technical Preview
 This section lists what’s new from the previous version of Windows Server Technical Preview.
 
--   **PowerShell**– The Hyper\-V PowerShell module now includes the Storage QoS properties.  The scripts used in the Windows Server Technical Preview 1 \(like Get\-VMHardDiskDrivePolicy.ps1\) are no longer required.
+-   **PowerShell**– The Hyper-V PowerShell module now includes the Storage QoS properties.  The scripts used in the Windows Server Technical Preview 1 (like Get-VMHardDiskDrivePolicy.ps1) are no longer required.
 
 -   **Shared VHDX** – You can now apply policies to shared VHDX files
 
--   **Time in milliseconds** \- `Get-StorageQosFlow` and other PowerShell cmdlets now show latencies in milliseconds, instead of 100\-nanosecond increments.
+-   **Time in milliseconds** - `Get-StorageQosFlow` and other PowerShell cmdlets now show latencies in milliseconds, instead of 100-nanosecond increments.
 
 ### New functionality for Technical Preview 4 Release
 There are 2 new features in this release of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]
@@ -845,12 +845,12 @@ There are 2 new features in this release of [!INCLUDE[winthreshold_server_2](inc
 -   **Maximum Bandwidth**
 
     Storage QoS in Technical Preview 4 introduces the ability to specify the maximum bandwidth that the flows assigned to the policy may consume.  The parameter when specifying it in the **StorageQosPolicy** cmdlets is **MaximumIOBandwidth** and the output is expressed in bytes per second.
-    If both **MaximimIops** and **MaximumIOBandwidth** are set in a policy, they will both be in effect and the first one to be reached by the flow\(s\) will limit the I\/O of the flows.
+    If both **MaximimIops** and **MaximumIOBandwidth** are set in a policy, they will both be in effect and the first one to be reached by the flow(s) will limit the I/O of the flows.
 
 -   **IOPS normalization is configurable**
 
-    Storage QoSin  uses normalization of IOPS.  The default is to use a normalization size of 8K.  Storage QoS in Technical Preview 4  introduces the ability to specify a different normalization size for the storage cluster.  This normalization size effects all flows on the storage cluster and takes effect immediately \(within a few seconds\) once it is changed.  The minimum is 1KB and the maximum is 4GB \(recommend not setting more than 4MB since it’s unusual to have more than 4MB IOs\).
-    Something to consider is that the same IO pattern\/throughput shows up with different IOPS numbers in the Storage QoS output when you change the IOPS normalization due to the change in normalization calculation.  If you are comparing IOPS between storage clusters, you may also want to verify what normalization value each is using since that will effect the normalized IOPS reported.
+    Storage QoSin  uses normalization of IOPS.  The default is to use a normalization size of 8K.  Storage QoS in Technical Preview 4  introduces the ability to specify a different normalization size for the storage cluster.  This normalization size effects all flows on the storage cluster and takes effect immediately (within a few seconds) once it is changed.  The minimum is 1KB and the maximum is 4GB (recommend not setting more than 4MB since it’s unusual to have more than 4MB IOs).
+    Something to consider is that the same IO pattern/throughput shows up with different IOPS numbers in the Storage QoS output when you change the IOPS normalization due to the change in normalization calculation.  If you are comparing IOPS between storage clusters, you may also want to verify what normalization value each is using since that will effect the normalized IOPS reported.
 
 ### Examples
 This section includes examples of the Maximum Bandwidth and IOPS normalization features
@@ -882,7 +882,7 @@ InitiatorBandwidth : 37888
 ```
 
 #### Example 2: Get IOPS normalization settings and specify  a new value
-The following example demonstrates how to get the storage clusters IOPS normalization settings \(default of 8KB\), then set it to 32KB, and then show it again.  Note, in this example, specify “32KB”, since PowerShell allows specifying the unit instead of requiring the conversion to bytes.   The output does show the value in bytes per second.
+The following example demonstrates how to get the storage clusters IOPS normalization settings (default of 8KB), then set it to 32KB, and then show it again.  Note, in this example, specify “32KB”, since PowerShell allows specifying the unit instead of requiring the conversion to bytes.   The output does show the value in bytes per second.
 
 ```
 PS C:\Windows\system32> Get-StorageQosPolicyStore
@@ -901,14 +901,14 @@ IOPSNormalizationSize
 
 ## Frequently Asked Questions
 
--   **How do I retain a Storage QoS policy being enforced for my virtual machine if I move its VHD\/VHDx files to another storage cluster?**
+-   **How do I retain a Storage QoS policy being enforced for my virtual machine if I move its VHD/VHDx files to another storage cluster?**
 
-    The setting on the VHD\/VHDx file that specifies the policy is the GUID of a policy ID.  When a policy is created, the GUID can be specified using the **PolicyID** parameter.  If that parameter is not specified, a random GUID is created.  Therefore, you can get the PolicyID on the storage cluster where the VMs currently store their VHD\/VHDx files and create an identical policy on the destination storage cluster and then specify that it be created with the same GUID.  When the VMs files are moved to the new storage clusters, the policy with the same GUID will be in effect.
+    The setting on the VHD/VHDx file that specifies the policy is the GUID of a policy ID.  When a policy is created, the GUID can be specified using the **PolicyID** parameter.  If that parameter is not specified, a random GUID is created.  Therefore, you can get the PolicyID on the storage cluster where the VMs currently store their VHD/VHDx files and create an identical policy on the destination storage cluster and then specify that it be created with the same GUID.  When the VMs files are moved to the new storage clusters, the policy with the same GUID will be in effect.
     System Center Virtual Machine Manager can be used to apply policies across multiple storage clusters, which makes this scenario much easier.
 
--   **If I change the sQoS Policy, why don’t I see it take effect immediately when I run Get\-StorageQoSFlow?**
+-   **If I change the sQoS Policy, why don’t I see it take effect immediately when I run Get-StorageQoSFlow?**
 
-    If you have a flow that is hitting a maximum of a policy and you change the policy to either make it higher or lower, and then you immediately determine the latency\/IOPS\/BandWidth of the flows using the PowerShell cmdlets, it will take up to 5 minutes to see the full effects of the policy change on the flows.  The new limits will be in effect within a few seconds, but the **Get\-StorgeQoSFlow** PowerShell cmdlet uses an average of each counter using a 5 minute sliding window.  Otherwise, if it was showing a current value and you ran the PowerShell cmdlet multiple times in a row, you may see vastly different values because values for IOPS and latencies can fluctuate significantly from one second to another.
+    If you have a flow that is hitting a maximum of a policy and you change the policy to either make it higher or lower, and then you immediately determine the latency/IOPS/BandWidth of the flows using the PowerShell cmdlets, it will take up to 5 minutes to see the full effects of the policy change on the flows.  The new limits will be in effect within a few seconds, but the **Get-StorgeQoSFlow** PowerShell cmdlet uses an average of each counter using a 5 minute sliding window.  Otherwise, if it was showing a current value and you ran the PowerShell cmdlet multiple times in a row, you may see vastly different values because values for IOPS and latencies can fluctuate significantly from one second to another.
 
 ## See Also
 

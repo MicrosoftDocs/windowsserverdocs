@@ -25,7 +25,7 @@ select partition=<n>
 
 |Parameter|Description|
 |-------------|---------------|
-|partition\=<n>|The number of the partition to receive the focus. You can view the numbers for all partitions on the disk currently selected by using the **list partition** command in DiskPart.|
+|partition=<n>|The number of the partition to receive the focus. You can view the numbers for all partitions on the disk currently selected by using the **list partition** command in DiskPart.|
 
 ## Remarks
 

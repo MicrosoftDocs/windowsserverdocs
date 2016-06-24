@@ -11,7 +11,7 @@ ms.assetid: 2911b944-7b95-46aa-8c1e-1d55a2fcc94c
 # Wbadmin get status
 Reports the status of the backup or recovery operation that is currently running.
 
-To use this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. \(To open an elevated command prompt right\-click **Command Prompt**, and then click **Run as administrator**.\)
+To use this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt**, and then click **Run as administrator**.)
 
 ## Syntax
 
@@ -34,6 +34,6 @@ This subcommand has no parameters.
 
 -   [Wbadmin](Wbadmin.md)
 
--   [Get\-WBJob](http://technet.microsoft.com/library/jj902426.aspx) cmdlet
+-   [Get-WBJob](http://technet.microsoft.com/library/jj902426.aspx) cmdlet
 
 

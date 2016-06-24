@@ -12,7 +12,7 @@ ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
 author: jamesmci
 ---
 # Role-based Access Control
-This topic provides information about using role\-based access control in IPAM.  
+This topic provides information about using role-based access control in IPAM.  
   
 > [!NOTE]  
 > In addition to this topic, the following IPAM access control  documentation is available in this section.  
@@ -20,7 +20,7 @@ This topic provides information about using role\-based access control in IPAM.
 > -   [Manage Role Based Access Control with Server Manager](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)  
 > -   [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)  
   
-Role\-based access control allows you to specify access privileges at various levels, including the DNS server, DNS zone, and DNS resource record levels.  
+Role-based access control allows you to specify access privileges at various levels, including the DNS server, DNS zone, and DNS resource record levels.  
 By using role based access control, you can specify who has granular control over operations to create, edit, and delete different types of DNS resource records.  
   
 You can configure access control so that users are restricted to the following permissions.  

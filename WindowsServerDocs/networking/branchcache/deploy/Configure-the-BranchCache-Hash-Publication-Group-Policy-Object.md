@@ -12,7 +12,7 @@ ms.assetid: da74fea7-52b2-4d6d-9d21-19184eedbe3c
 author: jamesmci
 ---
 # Configure the BranchCache Hash Publication Group Policy Object
-You can use this procedure to configure the BranchCache hash publication Group Policy Object \(GPO\) so that all file servers that you added to your OU have the same hash publication policy setting applied to them.  
+You can use this procedure to configure the BranchCache hash publication Group Policy Object (GPO) so that all file servers that you added to your OU have the same hash publication policy setting applied to them.  
   
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.  
   
@@ -21,19 +21,19 @@ Membership in **Domain Admins**, or equivalent is the minimum required to perfor
   
 ### To configure the BranchCache hash publication Group Policy Object  
   
-1.  Run Windows PowerShell as an Administrator, type **mmc**, and then press ENTER. The Microsoft Management Console \(MMC\) opens.  
+1.  Run Windows PowerShell as an Administrator, type **mmc**, and then press ENTER. The Microsoft Management Console (MMC) opens.  
   
-2.  In the MMC, on the **File** menu, click **Add\/Remove Snap\-in**. The **Add or Remove Snap\-ins** dialog box opens.  
+2.  In the MMC, on the **File** menu, click **Add/Remove Snap-in**. The **Add or Remove Snap-ins** dialog box opens.  
   
-3.  In **Add or Remove Snap\-ins**, in **Available snap\-ins**, double\-click **Group Policy Management**, and then click **OK**.  
+3.  In **Add or Remove Snap-ins**, in **Available snap-ins**, double-click **Group Policy Management**, and then click **OK**.  
   
 4.  In the Group Policy Management MMC, expand the path to the BranchCache hash publication GPO that you previously created. For example, if your forest is named example.com, your domain is named example1.com, and your GPO is named **BranchCache Hash Publication**, expand the following path: **Group Policy Management**, **Forest: example.com**, **Domains**, **example1.com**, **Group Policy Objects**, **BranchCache Hash Publication**.  
   
-5.  Right\-click the **BranchCache Hash Publication** GPO and click **Edit**. The Group Policy Management Editor console opens.  
+5.  Right-click the **BranchCache Hash Publication** GPO and click **Edit**. The Group Policy Management Editor console opens.  
   
 6.  In the Group Policy Management Editor console, expand the following path: **Computer Configuration**, **Policies**, **Administrative Templates**, **Network**, **Lanman Server**.  
   
-7.  In the Group Policy Management Editor console, click **Lanman Server**. In the details pane, double\-click **Hash Publication for BranchCache**. The **Hash Publication for BranchCache** dialog box opens.  
+7.  In the Group Policy Management Editor console, click **Lanman Server**. In the details pane, double-click **Hash Publication for BranchCache**. The **Hash Publication for BranchCache** dialog box opens.  
   
 8.  In the **Hash Publication for BranchCache** dialog box, click **Enabled**.  
   

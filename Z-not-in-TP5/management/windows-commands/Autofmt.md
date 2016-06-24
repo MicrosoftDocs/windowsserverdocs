@@ -12,7 +12,7 @@ ms.assetid: 81f9abac-f927-41d8-8667-f056db4cb2af
 Formats a drive or partition when called from the Windows Recovery Console.
 
 ## Remarks
-You cannot run **Autofmt** directly from the command\-line.
+You cannot run **Autofmt** directly from the command-line.
 
 ## Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

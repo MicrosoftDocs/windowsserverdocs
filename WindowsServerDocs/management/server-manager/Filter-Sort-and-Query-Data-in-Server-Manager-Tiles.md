@@ -38,24 +38,24 @@ The **Filter** text box is a quick way of reducing the list of entries that are 
 4.  To clear the filter, delete the string in the filter box, or click **X**.  
   
 ## <a name="BKMK_sort"></a>Sort list entries in tiles  
-Sort list entries in Server Manager tiles by clicking column headings. Clicking a column heading the first time sorts column values in ascending alphanumeric order \(arrow pointing up\); clicking again sorts column values in descending alphanumeric order \(arrow pointing down\).  
+Sort list entries in Server Manager tiles by clicking column headings. Clicking a column heading the first time sorts column values in ascending alphanumeric order (arrow pointing up); clicking again sorts column values in descending alphanumeric order (arrow pointing down).  
   
 ## <a name="BKMK_query"></a>Create and run custom queries on tile data  
-You can create custom queries in the Events, Performance, Best Practices Analyzer, Services, or Roles and Features tiles in Server Manager. By default, the area of the tile toolbar in which you select criteria to build a custom query is hidden; click **Expand** \(chevron button at right edge of tile toolbar\) to display query criteria.  
+You can create custom queries in the Events, Performance, Best Practices Analyzer, Services, or Roles and Features tiles in Server Manager. By default, the area of the tile toolbar in which you select criteria to build a custom query is hidden; click **Expand** (chevron button at right edge of tile toolbar) to display query criteria.  
   
 #### To create a custom query for tile data  
   
 1.  Open a role or server group page in Server Manager.  
   
-2.  In an Events, Performance, Best Practices Analyzer, Services, or Roles and Features tile, expand the query\-building area by clicking **Expand**.  
+2.  In an Events, Performance, Best Practices Analyzer, Services, or Roles and Features tile, expand the query-building area by clicking **Expand**.  
   
-3.  Click **Add criteria** to open a list of attributes \(or fields\) that apply to the entries in the tile.  
+3.  Click **Add criteria** to open a list of attributes (or fields) that apply to the entries in the tile.  
   
-4.  Select criteria to add. When you are finished, click **Add**. Criteria that you selected are added to the query\-building area.  
+4.  Select criteria to add. When you are finished, click **Add**. Criteria that you selected are added to the query-building area.  
   
 5.  Click the hypertext operator to select an operator. For numerical or date and time criteria, for example, the default is **less than or equal to**.  
   
-6.  Specify acceptable values for the criteria. For example, if you selected **Date and Time**, provide a date in the format *m\/d\/yyyy*.  
+6.  Specify acceptable values for the criteria. For example, if you selected **Date and Time**, provide a date in the format *m/d/yyyy*.  
   
 7.  Repeat these steps from step 3 forward to add more criteria to your query.  
   

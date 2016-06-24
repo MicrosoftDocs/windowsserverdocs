@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">This Netsh command is new in Windows Server 2008 R2 and cannot be run on computers running Windows Server 2008.</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">This Netsh command is new in Windows Server 2008 R2 and cannot be run on computers running Windows Server 2008.</Token>

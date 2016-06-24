@@ -23,7 +23,7 @@ Event volume: Low
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|
@@ -31,8 +31,8 @@ If this policy setting is configured, the following events appear on computers r
 |4784|A basic application group was changed.|
 |4785|A member was added to a basic application group.|
 |4786|A member was removed from a basic application group.|
-|4787|A non\-member was added to a basic application group.|
-|4788|A non\-member was removed from a basic application group.|
+|4787|A non-member was added to a basic application group.|
+|4788|A non-member was removed from a basic application group.|
 |4789|A basic application group was deleted.|
 |4790|An LDAP query group was created.|
 

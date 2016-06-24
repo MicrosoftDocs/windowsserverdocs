@@ -23,11 +23,11 @@ Print [/d:<PrinterName>] [<Drive>:][<Path>]<FileName>[ ...]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/d:<PrinterName>|Specifies the printer that you want to print the job. To print to a locally connected printer, specify the port on your computer where the printer is connected.<br /><br />-   Valid values for parallel ports are LPT1, LPT2, and LPT3.<br />-   Valid values for serial ports are COM1, COM2, COM3, and COM4.<br /><br />You can also specify a network printer by using its queue name \(\\\\*ServerName*\\*PrinterName*\). If you do not specify a printer, the print job is sent to LPT1 by default.|
+|/d:<PrinterName>|Specifies the printer that you want to print the job. To print to a locally connected printer, specify the port on your computer where the printer is connected.<br /><br />-   Valid values for parallel ports are LPT1, LPT2, and LPT3.<br />-   Valid values for serial ports are COM1, COM2, COM3, and COM4.<br /><br />You can also specify a network printer by using its queue name (\\\\*ServerName*\\*PrinterName*). If you do not specify a printer, the print job is sent to LPT1 by default.|
 |<Drive>:|Specifies the logical or physical drive where the file you want to print is located. This parameter is not required if the file you want to print is located on the current drive.|
 |<Path>|Specifies the location of the file you want to print. This parameter is not required if the file you want to print is located in the current directory.|
-|<FileName>\[ ...\]|Required. Specifies the file you want to print. You can include multiple files in one command.|
-|\/?|Displays help at the command prompt.|
+|<FileName>[ ...]|Required. Specifies the file you want to print. You can include multiple files in one command.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -52,7 +52,7 @@ To send the file Report.txt in the current directory to a printer connected to L
 print /d:lpt2 report.txt
 ```
 
-To send the file Report.txt in the c:\\Accounting directory to the Printer1 print queue on the \\\\CopyRoom server, type:
+To send the file Report.txt in the c:\Accounting directory to the Printer1 print queue on the \\\CopyRoom server, type:
 
 ```
 print /d:\\copyroom\printer1 c:\accounting\report.txt 

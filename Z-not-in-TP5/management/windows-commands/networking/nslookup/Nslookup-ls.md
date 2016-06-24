@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: f15f06fe-67e7-41a9-93b5-192ab14ab380
 ---
 # Nslookup ls
-Lists information for a Domain Name System \(DNS\) domain.
+Lists information for a Domain Name System (DNS) domain.
 
 ## Syntax
 
@@ -21,9 +21,9 @@ ls [<Option>] <DNSDomain> [{[>] <FileName>|[>>] <FileName>}]
 
 |Parameter|Description|
 |-------------|---------------|
-|<Option>|The following table lists valid options.<br /><br />-   \-t: Lists all records of the specified type. For a description of <QueryType>, see  **setquerytype** in Additional references.<br />-   \-a: Lists aliases of computers in the DNS domain. This parameter is a synonym for **\-t CNAME**<br />-   \-d: Lists all records for the DNS domain. This parameter is a synonym for **\-t ANY**<br />-   \-h: Lists CPU and operating system information for the DNS domain. This parameter is a synonym for **\-t HINFO**<br />-   \-s: Lists well\-known services of computers in the DNS domain. This parameter is a synonym for **\-t WKS**.|
+|<Option>|The following table lists valid options.<br /><br />-   -t: Lists all records of the specified type. For a description of <QueryType>, see  **setquerytype** in Additional references.<br />-   -a: Lists aliases of computers in the DNS domain. This parameter is a synonym for **-t CNAME**<br />-   -d: Lists all records for the DNS domain. This parameter is a synonym for **-t ANY**<br />-   -h: Lists CPU and operating system information for the DNS domain. This parameter is a synonym for **-t HINFO**<br />-   -s: Lists well-known services of computers in the DNS domain. This parameter is a synonym for **-t WKS**.|
 |<DNSDomain>|Specifies the DNS domain for which you want information.|
-|<FileName>|Specifies a file name in which to save the output. You can use the greater than \(>\) and double greater than \(>>\) characters to redirect the output in the usual manner.|
+|<FileName>|Specifies a file name in which to save the output. You can use the greater than (>) and double greater than (>>) characters to redirect the output in the usual manner.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
 
 ## Remarks

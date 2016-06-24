@@ -13,14 +13,14 @@ ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
 author: KBDAzure
 ---
 # Use RAM that provides error correction
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
   
@@ -28,7 +28,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ## Issue  
   
-*The RAM in use on this computer is not error\-correcting \(ECC\) RAM.*  
+*The RAM in use on this computer is not error-correcting (ECC) RAM.*  
   
 ## Impact  
   
@@ -36,7 +36,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ## Resolution  
   
-*Verify the server is listed in the Windows Server catalog and qualified for Hyper\-V.*  
+*Verify the server is listed in the Windows Server catalog and qualified for Hyper-V.*  
   
 To check whether the server is listed,  see the [Windows Server catalog](https://www.windowsservercatalog.com/).  
   

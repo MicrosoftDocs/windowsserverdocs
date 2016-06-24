@@ -12,7 +12,7 @@ ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
 author: coreyp
 ---
 # Generate a usage report for remote clients using historical data
-**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service \(RRAS\) into a single Remote Access role.  
+**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 The management console on the Remote Access server can be used to generate a usage report for the remote clients that are accessing the server. To generate a usage report for remote clients, you first enable accounting on the Remote Access server. After you generate the report, you can use the monitoring dashboard that is available in the management console on the Remote Access server to view the load statistics on the server.  
   
@@ -46,11 +46,11 @@ The management console on the Remote Access server can be used to generate a usa
 > [!NOTE]  
 > **Understanding sessions**  
 >   
-> Remote Access accounting is based on the concept of **sessions**. In contrast to a **connection**, a **session** is uniquely identified by a combination of remote client IP address and user name. For example, if a machine tunnel is formed from the remote client, named Client1, a session will be created and stored in the accounting database. When a user named User1 connects from that client after some time passes \(but the machine tunnel is still active\), the session is recorded as a separate session. The distinction of sessions is to retain the distinction between machine tunnel and user tunnel.  
+> Remote Access accounting is based on the concept of **sessions**. In contrast to a **connection**, a **session** is uniquely identified by a combination of remote client IP address and user name. For example, if a machine tunnel is formed from the remote client, named Client1, a session will be created and stored in the accounting database. When a user named User1 connects from that client after some time passes (but the machine tunnel is still active), the session is recorded as a separate session. The distinction of sessions is to retain the distinction between machine tunnel and user tunnel.  
   
 ![](../../../media/Generate-a-usage-report-for-remote-clients-using-historical-data/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 In the following script, change the date range for which you want a report in the **–StartDateTime** and **–EndDateTime** parameters.  
   

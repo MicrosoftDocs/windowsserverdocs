@@ -30,13 +30,13 @@ expand <source>.cab /f:<files> <destination>
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/r|Renames expanded files.|  
-|source|Specifies the files to expand. *Source* can consist of a drive letter and colon, a directory name, a file name, or a combination of these. You can use wildcards \(**\*** or **?**\).|  
-|destination|Specifies where files are to be expanded.<br /><br />If *source* consists of multiple files and you do not specify **\/r**, *destination* must be a directory.<br /><br />*Destination* can consist of a drive letter and colon, a directory name, a file name, or a combination of these.<br /><br />Destination file &#124; path specification.|  
-|\/i|Renames expanded files but ignores the directory structure.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
-|\/d|Displays a list of files in the source location. Does not expand or extract the files.|  
-|\/f:|Specifies the files in a cabinet \(.cab\) file that you want to expand. You can use wildcards \(**\*** or **?**\).|  
-|\/?|Displays Help at the command prompt.|  
+|/r|Renames expanded files.|  
+|source|Specifies the files to expand. *Source* can consist of a drive letter and colon, a directory name, a file name, or a combination of these. You can use wildcards (**\*** or **?**).|  
+|destination|Specifies where files are to be expanded.<br /><br />If *source* consists of multiple files and you do not specify **/r**, *destination* must be a directory.<br /><br />*Destination* can consist of a drive letter and colon, a directory name, a file name, or a combination of these.<br /><br />Destination file &#124; path specification.|  
+|/i|Renames expanded files but ignores the directory structure.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|  
+|/d|Displays a list of files in the source location. Does not expand or extract the files.|  
+|/f:|Specifies the files in a cabinet (.cab) file that you want to expand. You can use wildcards (**\*** or **?**).|  
+|/?|Displays Help at the command prompt.|  
   
 ## Remarks  
   

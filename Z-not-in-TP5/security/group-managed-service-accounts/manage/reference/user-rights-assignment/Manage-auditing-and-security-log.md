@@ -14,7 +14,7 @@ ms.assetid: 2238b05b-e89d-4b53-b8f3-90e46eb7fbce
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.
 
 ## Reference
-This policy setting determines which users can specify object access audit options for individual resources such as files, Active Directory objects, and registry keys. These objects specify their system access control lists \(SACL\). A user who is assigned this user right can also view and clear the Security log in Event Viewer. For more information about the Object Access audit policy, see [Object Access \[Auditing\_Events\]](assetId:///1c0a3079-97ed-421d-a977-6e68876f0c64).
+This policy setting determines which users can specify object access audit options for individual resources such as files, Active Directory objects, and registry keys. These objects specify their system access control lists (SACL). A user who is assigned this user right can also view and clear the Security log in Event Viewer. For more information about the Object Access audit policy, see [Object Access \[Auditing_Events\]](assetId:///1c0a3079-97ed-421d-a977-6e68876f0c64).
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -22,7 +22,7 @@ Constant: SeSecurityPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Administrators
 
@@ -35,10 +35,10 @@ Constant: SeSecurityPrivilege
 2.  Generally, assigning this user right to groups other than Administrators is not necessary.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
-By default this setting is Administrators on domain controllers and on stand\-alone servers.
+By default this setting is Administrators on domain controllers and on stand-alone servers.
 
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
 
@@ -46,7 +46,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Administrators|
-|Stand\-Alone Server Default Settings|Administrators|
+|Stand-Alone Server Default Settings|Administrators|
 |Domain Controller Effective Default Settings|Administrators|
 |Member Server Effective Default Settings|Administrators|
 |Client Computer Effective Default Settings|Administrators|
@@ -63,12 +63,12 @@ A restart of the computer is not required for this policy setting to be effectiv
 
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
-Audits for object access are not performed unless you enable them by using the Local Group Policy Editor, the Group Policy Management Console \(GPMC\), or the Auditpol command\-line tool.
+Audits for object access are not performed unless you enable them by using the Local Group Policy Editor, the Group Policy Management Console (GPMC), or the Auditpol command-line tool.
 
-For more information about the Object Access audit policy, see [Object Access \[Auditing\_Events\]](assetId:///1c0a3079-97ed-421d-a977-6e68876f0c64). For information about Auditpol, see the Command\-Line Reference topic [Auditpol \[Vista\]](Auditpol.md).
+For more information about the Object Access audit policy, see [Object Access \[Auditing_Events\]](assetId:///1c0a3079-97ed-421d-a977-6e68876f0c64). For information about Auditpol, see the Command-Line Reference topic [Auditpol \[Vista\]](Auditpol.md).
 
 ### Group Policy
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 

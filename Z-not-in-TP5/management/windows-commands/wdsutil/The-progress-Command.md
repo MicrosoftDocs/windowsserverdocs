@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 8ce5e77b-e13f-4ac3-948d-31770a6c7e25
 ---
 # The progress Command
-Displays progress while a command is being executed. You can use **\/progress** with any other WDSUTIL commands that you run. Note that you must specify **\/verbose** and **\/progress** directly after **WDSUTIL**.
+Displays progress while a command is being executed. You can use **/progress** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
 
 ## Syntax
 

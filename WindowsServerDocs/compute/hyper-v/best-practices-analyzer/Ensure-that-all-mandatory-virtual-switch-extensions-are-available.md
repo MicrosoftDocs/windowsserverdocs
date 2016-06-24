@@ -13,14 +13,14 @@ ms.assetid: 2f2f2698-f5ec-4cad-aa64-d6987e8142a1
 author: KBDAzure
 ---
 # Ensure that all mandatory virtual switch extensions are available
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -35,6 +35,6 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 \<list of virtual machines>  
   
 ## Resolution  
-*First, make sure that the mandatory extension has been installed on the host and install the extension if necessary. Then, if the mandatory extension is disabled, use Virtual Switch Manager or the Windows PowerShell cmdlet Enable\-VMSwitchExtension to enable the extension.*  
+*First, make sure that the mandatory extension has been installed on the host and install the extension if necessary. Then, if the mandatory extension is disabled, use Virtual Switch Manager or the Windows PowerShell cmdlet Enable-VMSwitchExtension to enable the extension.*  
   
 

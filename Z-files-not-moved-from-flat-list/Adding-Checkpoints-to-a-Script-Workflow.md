@@ -14,14 +14,14 @@ author: jpjofre
 # Adding Checkpoints to a Script Workflow
 This topic explains how to add commands to a [!INCLUDE[wps_2](includes/wps_2_md.md)] workflow that "take a checkpoint," that is, they save workflow state and data to disk while the workflow runs. If the workflow is interrupted, it does not have be restarted; only resumed from the last checkpoint. This saving process is also known as *persistence* or *checkpointing*.  
   
-[!INCLUDE[wps_2](includes/wps_2_md.md)] Workflow is designed for the real world, where network interruptions, reboots, delays, and power outages are part of the job. Any long\-running task that affects multiple, heterogeneous machines in a distributed architecture must anticipate, respond, recover, continue, and complete after intentional and unintentional interruptions. Checkpointing is a critical part of this strategy.  
+[!INCLUDE[wps_2](includes/wps_2_md.md)] Workflow is designed for the real world, where network interruptions, reboots, delays, and power outages are part of the job. Any long-running task that affects multiple, heterogeneous machines in a distributed architecture must anticipate, respond, recover, continue, and complete after intentional and unintentional interruptions. Checkpointing is a critical part of this strategy.  
   
 For more information about support for robust and recoverable workflows, see [Getting Started with Windows PowerShell Workflow_1](Getting-Started-with-Windows-PowerShell-Workflow_1.md).  
   
 ## What is a checkpoint?  
 A *checkpoint* is a snapshot of the current state of the workflow, including the current values of variables, and any output generated up to that point, and it saves it to disk. You can add multiple checkpoints to a workflow by using different checkpoint techniques. [!INCLUDE[wps_2](includes/wps_2_md.md)] automatically uses the data in newest checkpoint for the workflow to recover and resume the workflow if the workflow is interrupted, intentionally or unintentionally.  
   
-The checkpoint data \(or *persisted data*\) for a workflow is saved in the user profile on the hard drive of the computer that is hosting the workflow session.  
+The checkpoint data (or *persisted data*) for a workflow is saved in the user profile on the hard drive of the computer that is hosting the workflow session.  
   
 When you run the workflow as a job, such as by using the **AsJob** workflow common parameter, the workflow checkpoints are retained until you delete the job, such as by using the [Remove-Job](http://go.microsoft.com/fwlink/?LinkID=113377) cmdlet. Otherwise, the workflow checkpoints are deleted when the workflow completes.  
   
@@ -34,10 +34,10 @@ When you are planning checkpoints, consider the process of resuming a workflow. 
   
 Add a checkpoint after each significant part of the workflow completes; a part that you do not want to repeat if the workflow is interrupted. This could be a part of the workflow that takes a long time to complete, such as gathering input for a complex calculation or a complex element of output. It could be a section that requires resources that are not always available, or requires the coordination of multiple computers, connections, and resources.  
   
-When the workflow definitions is complete, use the testing process to  refine your checkpoints. Add and remove \(comment out\) checkpoints to achieve both a reasonable running time and a reasonable recovery time.  
+When the workflow definitions is complete, use the testing process to  refine your checkpoints. Add and remove (comment out) checkpoints to achieve both a reasonable running time and a reasonable recovery time.  
   
 ## How to add a checkpoint  
-The following techniques checkpoint \(save state and data to disk\) a workflow so that it can recover and resume without being restarted. All of the techniques described below save state and data to the same place on disk and enable the same resuming options.  
+The following techniques checkpoint (save state and data to disk) a workflow so that it can recover and resume without being restarted. All of the techniques described below save state and data to the same place on disk and enable the same resuming options.  
   
 ### PSPersist workflow common parameter  
 This **PSPersist** workflow common parameter adds checkpoints to the workflow. It is used when running the workflow command. **PSPersist** cannot cancel, ignore, or suppress explicit checkpoints in the workflow. It is valid on all workflows.  
@@ -50,7 +50,7 @@ Adds a checkpoint at the beginning and end of the workflow and after each activi
 $False  
 No checkpoints at the beginning or end of the workflow. Takes a checkpoint only when a checkpoint is specified in the workflow.  
   
-The following examples run the Test\-Workflow workflow with the PSPersist workflow common parameter.  
+The following examples run the Test-Workflow workflow with the PSPersist workflow common parameter.  
   
 ```  
 PS C:\>Test-Workflow -PSPersist $True  
@@ -77,8 +77,8 @@ Workflow Test-Workflow
 }  
 ```  
   
-### Checkpoint\-Workflow Activity  
-The **Checkpoint\-Workflow** activity takes a checkpoint immediately. You can use a **Checkpoint\-Workflow** activity multiple times in a workflow and place it in after any command or expression in a workflow, except that it cannot appear in an **InlineScript** script block. The Checkpoint\-Workflow activity does not take any parameters, including common parameters and workflow common parameters.  
+### Checkpoint-Workflow Activity  
+The **Checkpoint-Workflow** activity takes a checkpoint immediately. You can use a **Checkpoint-Workflow** activity multiple times in a workflow and place it in after any command or expression in a workflow, except that it cannot appear in an **InlineScript** script block. The Checkpoint-Workflow activity does not take any parameters, including common parameters and workflow common parameters.  
   
 ```  
 Workflow Test-Workflow  

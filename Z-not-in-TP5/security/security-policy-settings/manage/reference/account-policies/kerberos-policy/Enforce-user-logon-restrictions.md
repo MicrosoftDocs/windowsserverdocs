@@ -14,7 +14,7 @@ ms.assetid: 12baca36-dd16-4483-b5d2-7c081d36a585
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-The **Enforce user logon restrictions** policy setting determines whether the Kerberos V5 Key Distribution Center \(KDC\) validates every request for a session ticket against the user rights policy of the user account. Validating each request for a session ticket is optional because the extra step takes time, and that can slow network access to services.  
+The **Enforce user logon restrictions** policy setting determines whether the Kerberos V5 Key Distribution Center (KDC) validates every request for a session ticket against the user rights policy of the user account. Validating each request for a session ticket is optional because the extra step takes time, and that can slow network access to services.  
   
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
@@ -33,7 +33,7 @@ The possible values for this Group Policy setting are:
     It is advisable to set **Enforce user logon restrictions** to Enabled.  
   
 #### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Kerberos Policy\\  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy\  
   
 #### Default Values  
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Enabled|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not applicable|  
+|Stand-Alone Server Default Settings|Not applicable|  
 |DC Effective Default Settings|Enabled|  
 |Member Server Effective Default Settings|Not applicable|  
 |Client Computer Effective Default Settings|Not applicable|  
@@ -56,9 +56,9 @@ This section describes features, tools, and guidance to help you manage this pol
 A restart of the computer is not required for this policy setting to be effective.  
   
 ### Group Policy  
-Client computers will get the new setting during the next scheduled and successful Group Policy refresh. But for domain controllers to assign these new settings immediately, a Gpupdate \/force is required. On the local computer, the Security Configuration Engine will refresh this setting in about five minutes.  
+Client computers will get the new setting during the next scheduled and successful Group Policy refresh. But for domain controllers to assign these new settings immediately, a Gpupdate /force is required. On the local computer, the Security Configuration Engine will refresh this setting in about five minutes.  
   
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   

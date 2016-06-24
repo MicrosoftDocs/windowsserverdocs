@@ -1,1 +1,1 @@
-Hyper\-V Server 2012 R2
+Hyper-V Server 2012 R2

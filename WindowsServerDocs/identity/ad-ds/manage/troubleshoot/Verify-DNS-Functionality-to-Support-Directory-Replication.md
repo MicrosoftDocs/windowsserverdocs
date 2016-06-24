@@ -15,8 +15,8 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>To check Domain Name System (DNS) settings that might interfere with Active Directory replication, you can begin by running the basic test that ensures that DNS is operating properly for your domain. After you run the basic test, you can test other aspects of DNS functionality, including resource record registration and dynamic update.</para>
-    <para>Although you can run this test of basic DNS functionality on any domain controller, typically you run this test on domain controllers that you think may be experiencing replication issues, for example, domain controllers that report Event IDs 1844, 1925, 2087, or 2088 in the Event Viewer Directory Service DNS log.</para>
+    <para>To check Domain Name System (DNS) settings that might interfere with Active Directory replication, you can begin by running the basic test that ensures that DNS is operating properly for your domain. After you run the basic test, you can test other aspects of DNS functionality, including resource record registration and dynamic update.</para>
+    <para>Although you can run this test of basic DNS functionality on any domain controller, typically you run this test on domain controllers that you think may be experiencing replication issues, for example, domain controllers that report Event IDs 1844, 1925, 2087, or 2088 in the Event Viewer Directory Service DNS log.</para>
   </introduction>
   <section>
     <title>Running the domain controller basic DNS test</title>
@@ -29,7 +29,7 @@ author: Femila
         </listItem>
         <listItem>
           <para>
-            <embeddedLabel>Essential services:</embeddedLabel> The test confirms that the following services are running and available on the tested domain controller: DNS Client service, Net Logon service, Key Distribution Center (KDC) service, and DNS Server service (if DNS is installed on the domain controller).</para>
+            <embeddedLabel>Essential services:</embeddedLabel> The test confirms that the following services are running and available on the tested domain controller: DNS Client service, Net Logon service, Key Distribution Center (KDC) service, and DNS Server service (if DNS is installed on the domain controller).</para>
         </listItem>
         <listItem>
           <para>
@@ -41,7 +41,7 @@ author: Femila
         </listItem>
         <listItem>
           <para>
-            <embeddedLabel>Zone and start of authority (SOA):</embeddedLabel> If the domain controller is running the DNS Server service, the test confirms that the Active Directory domain zone and start of authority (SOA) resource record for the Active Directory domain zone are present.</para>
+            <embeddedLabel>Zone and start of authority (SOA):</embeddedLabel> If the domain controller is running the DNS Server service, the test confirms that the Active Directory domain zone and start of authority (SOA) resource record for the Active Directory domain zone are present.</para>
         </listItem>
         <listItem>
           <para>
@@ -55,7 +55,7 @@ author: Femila
         <steps class="ordered">
           <step>
             <content>
-              <para>On the domain controller that you want to test or on a domain member computer that has Active Directory Domain Services (AD DS) Tools installed, open a command prompt as an administrator. To open a command prompt as an administrator, click <ui>Start</ui>. In <ui>Start Search</ui>, type <userInput>Command Prompt</userInput>. At the top of the <ui>Start</ui> menu, right-click <ui>Command Prompt</ui>, and then click <ui>Run as administrator</ui>. If the <ui>User Account Control</ui> dialog box appears, confirm that the action it displays is what you want, and then click <ui>Continue</ui>.</para>
+              <para>On the domain controller that you want to test or on a domain member computer that has Active Directory Domain Services (AD DS) Tools installed, open a command prompt as an administrator. To open a command prompt as an administrator, click <ui>Start</ui>. In <ui>Start Search</ui>, type <userInput>Command Prompt</userInput>. At the top of the <ui>Start</ui> menu, right-click <ui>Command Prompt</ui>, and then click <ui>Run as administrator</ui>. If the <ui>User Account Control</ui> dialog box appears, confirm that the action it displays is what you want, and then click <ui>Continue</ui>.</para>
             </content>
           </step>
           <step>
@@ -63,12 +63,12 @@ author: Femila
               <para>At the command prompt, type the following command, and then press ENTER: </para>
               <code>dcdiag /test:dns /v /s: &lt;DCName&gt; /DnsBasic f:/dcdiagreport.txt</code>
               <para>Substitute the actual distinguished name, NetBIOS name, or DNS name of the domain controller for <codeInline>&lt;DCName&gt;</codeInline>. As an alternative, you can test all the domain controllers in the forest by typing <codeInline>/e:</codeInline> instead of <codeInline>/s:</codeInline>. </para>
-              <para>The <codeInline>/f</codeInline> switch specifies a file name, which in the previous command is dcdiagreport.txt. If you want to place the file in a location other than the current working directory, you can specify a file path, such as <codeInline>/f:c:\reports\dcdiagreport.txt</codeInline>.</para>
+              <para>The <codeInline>/f</codeInline> switch specifies a file name, which in the previous command is dcdiagreport.txt. If you want to place the file in a location other than the current working directory, you can specify a file path, such as <codeInline>/f:c:reportsdcdiagreport.txt</codeInline>.</para>
             </content>
           </step>
           <step>
             <content>
-              <para>Open the dcdiagreport.txt file in Notepad or a similar text editor. To open the file in Notepad, at the command prompt, type <codeInline>notepad dcdiagreport.txt</codeInline>, and then press ENTER. If you placed the file in a different working directory, include the path to the file. For example, if you placed the file in c:\reports, type <codeInline>notepad c:\reports\dcdiagreport.txt</codeInline>, and then press ENTER.</para>
+              <para>Open the dcdiagreport.txt file in Notepad or a similar text editor. To open the file in Notepad, at the command prompt, type <codeInline>notepad dcdiagreport.txt</codeInline>, and then press ENTER. If you placed the file in a different working directory, include the path to the file. For example, if you placed the file in c:reports, type <codeInline>notepad c:reportsdcdiagreport.txt</codeInline>, and then press ENTER.</para>
             </content>
           </step>
           <step>
@@ -93,7 +93,7 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>To validate the configuration changes, rerun the <codeInline>Dcdiag /test:DNS /v</codeInline> command with the <codeInline>/e:</codeInline> or <codeInline>/s:</codeInline> switch, as appropriate. If you do not have IP version 6 (IPv6) enabled on the domain controller, you should expect the host (AAAA) validation portion of the test to fail, but if you are not using IPv6 on your network, these records are not necessary.</para>
+              <para>To validate the configuration changes, rerun the <codeInline>Dcdiag /test:DNS /v</codeInline> command with the <codeInline>/e:</codeInline> or <codeInline>/s:</codeInline> switch, as appropriate. If you do not have IP version 6 (IPv6) enabled on the domain controller, you should expect the host (AAAA) validation portion of the test to fail, but if you are not using IPv6 on your network, these records are not necessary.</para>
             </content>
           </step>
         </steps>
@@ -103,7 +103,7 @@ author: Femila
   <section>
     <title>Verifying resource record registration</title>
     <content>
-      <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)—or, if that fails, NetBIOS names—the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning. </para>
+      <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)—or, if that fails, NetBIOS names—the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning. </para>
       <para>You can use the following procedure to verify resource record registration, including alias (CNAME) resource record registration.</para>
       <procedure>
         <title>To verify resource record registration</title>
@@ -154,7 +154,7 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>Use the DNS snap-in to locate any domain controller that is running the DNS Server service, where the server hosts the DNS zone with the same name as the Active Directory domain of the domain controller.</para>
+              <para>Use the DNS snap-in to locate any domain controller that is running the DNS Server service, where the server hosts the DNS zone with the same name as the Active Directory domain of the domain controller.</para>
             </content>
           </step>
           <step>
@@ -175,7 +175,7 @@ author: Femila
   <section>
     <title>Verifying dynamic update</title>
     <content>
-      <para>If the basic DNS test shows that resource records do not exist in DNS, use the dynamic update test to determine why the Net Logon service did not register the resource records automatically. To verify that the Active Directory domain zone is configured to accept secure dynamic updates and to perform registration of a test record (_dcdiag_test_record), use the following procedure. The test record is deleted automatically after the test.</para>
+      <para>If the basic DNS test shows that resource records do not exist in DNS, use the dynamic update test to determine why the Net Logon service did not register the resource records automatically. To verify that the Active Directory domain zone is configured to accept secure dynamic updates and to perform registration of a test record (_dcdiag_test_record), use the following procedure. The test record is deleted automatically after the test.</para>
       <procedure>
         <title>To verify dynamic update</title>
         <steps class="ordered">
@@ -209,7 +209,7 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>On the <ui>General</ui> tab, verify that the zone type is <ui>Active Directory–integrated</ui>.</para>
+              <para>On the <ui>General</ui> tab, verify that the zone type is <ui>Active Directory–integrated</ui>.</para>
             </content>
           </step>
           <step>
@@ -224,7 +224,7 @@ author: Femila
   <section>
     <title>Registering DNS resource records</title>
     <content>
-      <para>If DNS resource records do not appear in DNS for the source domain controller, you have verified dynamic updates, and you want to register DNS resource records immediately, you can force registration manually by using the following procedure. The Net Logon service on a domain controller registers the DNS resource records that are required for the domain controller to be located on the network. The DNS Client service registers the host (A) resource record that the alias (CNAME) record points to.</para>
+      <para>If DNS resource records do not appear in DNS for the source domain controller, you have verified dynamic updates, and you want to register DNS resource records immediately, you can force registration manually by using the following procedure. The Net Logon service on a domain controller registers the DNS resource records that are required for the domain controller to be located on the network. The DNS Client service registers the host (A) resource record that the alias (CNAME) record points to.</para>
       <procedure>
         <title>To register DNS resource records manually</title>
         <steps class="ordered">

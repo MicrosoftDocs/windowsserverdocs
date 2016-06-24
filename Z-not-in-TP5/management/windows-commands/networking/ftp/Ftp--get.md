@@ -23,7 +23,7 @@ get <RemoteFile> [<LocalFile>]
 |Parameter|Description|  
 |-------------|---------------|  
 |<RemoteFile>|Specifies the remote file to copy.|  
-|\[<LocalFile>\]|Specifies the name of the file to use on the local computer. If *LocalFile* is not specified, the file is given the *RemoteFile* name.|  
+|[<LocalFile>]|Specifies the name of the file to use on the local computer. If *LocalFile* is not specified, the file is given the *RemoteFile* name.|  
   
 ## Remarks  
 The **get** command is identical to the **recv** command.  

@@ -23,12 +23,12 @@ Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 
 |Parameter|Description|
 |-------------|---------------|
-|<KeyName>|Specifies the full path of the subkey or entry to be deleted. To specify a remote computer, include the computer name \(in the format \\\\ComputerName\\\) as part of the *KeyName*. Omitting \\\\ComputerName\\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
-|\/v <ValueName>|Deletes a specific entry under the subkey. If no entry is specified, then all entries and subkeys under the subkey will be deleted.|
-|\/ve|Specifies that only entries that have no value will be deleted.|
-|\/va|Deletes all entries under the specified subkey. Subkeys under the specified subkey are not deleted.|
-|\/f|Deletes the existing registry subkey or entry without asking for confirmation.|
-|\/?|Displays help for **reg delete** at the command prompt.|
+|<KeyName>|Specifies the full path of the subkey or entry to be deleted. To specify a remote computer, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
+|/v <ValueName>|Deletes a specific entry under the subkey. If no entry is specified, then all entries and subkeys under the subkey will be deleted.|
+|/ve|Specifies that only entries that have no value will be deleted.|
+|/va|Deletes all entries under the specified subkey. Subkeys under the specified subkey are not deleted.|
+|/f|Deletes the existing registry subkey or entry without asking for confirmation.|
+|/?|Displays help for **reg delete** at the command prompt.|
 
 ## Remarks
 The following table lists the return values for the **reg delete** operation.
@@ -45,7 +45,7 @@ To delete the registry key Timeout and its all subkeys and values, type:
 REG DELETE HKLM\Software\MyCo\MyApp\Timeout
 ```
 
-To delete the registry value MTU under HKLM\\Software\\MyCo on the computer named ZODIAC, type:
+To delete the registry value MTU under HKLM\Software\MyCo on the computer named ZODIAC, type:
 
 ```
 REG DELETE \\ZODIAC\HKLM\Software\MyCo /v MTU

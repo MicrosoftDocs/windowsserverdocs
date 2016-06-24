@@ -12,7 +12,7 @@ ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 author: jamesmci
 ---
 # Deploy Network Controller using Windows PowerShell
-This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines \(VMs\) that are running Windows Server® 2016 Technical Preview.  
+This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server® 2016 Technical Preview.  
   
 This topic contains the following sections.  
   
@@ -61,15 +61,15 @@ To create a node object,  type the following command at the Windows PowerShell c
 New-NetworkControllerNodeObject –Name <string> -Server <String> -FaultDomain <string>-RestInterface <string> [-NodeCertificate <X509Certificate2>]  
 ```  
   
-The following table provides descriptions for each parameter of the **New\-NetworkControllerNodeObject** command.  
+The following table provides descriptions for each parameter of the **New-NetworkControllerNodeObject** command.  
   
 |Parameter|Description|  
 |-------------|---------------|  
 |Name|The **Name** parameter specifies the friendly name of the server that you want to add to the cluster|  
-|Server|The **Server** parameter specifies the host name, Fully Qualified Domain Name \(FQDN\), or IP address of the server that you want to add to the cluster. For domain\-joined computers, FQDN is required.|  
-|FaultDomain|The **FaultDomain** parameter specifies the failure domain for the server that you are adding to the cluster. This parameter defines the servers that might experience failure at the same time as the server that you are adding to the cluster. This failure might be due to shared physical dependencies such as power and networking sources. Fault domains typically represent hierarchies that are related to these shared dependencies, with more servers likely to fail together from a higher point in the fault domain tree. During runtime, Network Controller considers the fault domains in the cluster and attempts to spread out the Network Controller services so that they are in separate fault domains. This process helps ensure, in case of failure of any one fault domain, that the availability of that service and its state is not compromised. Fault domains are specified in a hierarchical format. For example: “Fd:\/DC1\/Rack1\/Host1”, where DC1 is the datacenter name, Rack1 is the rack name and Host1 is the name of the host where the node is placed.|  
-|RestInterface|The **RestInterface** parameter specifies the name of the interface on the node where the  Representational State Transfer \(REST\) communication is terminated. This Network Controller interface receives Northbound API requests from the network's management layer.|  
-|NodeCertificate|The **NodeCertificate** parameter specifies the certificate that Network Controller uses for computer authentication. The certificate is required if you use certificate\-based authentication for communication within the cluster; the certificate is also used for encryption of traffic between Network Controller services. The certificate subject name must be same as the DNS name of the node.|  
+|Server|The **Server** parameter specifies the host name, Fully Qualified Domain Name (FQDN), or IP address of the server that you want to add to the cluster. For domain-joined computers, FQDN is required.|  
+|FaultDomain|The **FaultDomain** parameter specifies the failure domain for the server that you are adding to the cluster. This parameter defines the servers that might experience failure at the same time as the server that you are adding to the cluster. This failure might be due to shared physical dependencies such as power and networking sources. Fault domains typically represent hierarchies that are related to these shared dependencies, with more servers likely to fail together from a higher point in the fault domain tree. During runtime, Network Controller considers the fault domains in the cluster and attempts to spread out the Network Controller services so that they are in separate fault domains. This process helps ensure, in case of failure of any one fault domain, that the availability of that service and its state is not compromised. Fault domains are specified in a hierarchical format. For example: “Fd:/DC1/Rack1/Host1”, where DC1 is the datacenter name, Rack1 is the rack name and Host1 is the name of the host where the node is placed.|  
+|RestInterface|The **RestInterface** parameter specifies the name of the interface on the node where the  Representational State Transfer (REST) communication is terminated. This Network Controller interface receives Northbound API requests from the network's management layer.|  
+|NodeCertificate|The **NodeCertificate** parameter specifies the certificate that Network Controller uses for computer authentication. The certificate is required if you use certificate-based authentication for communication within the cluster; the certificate is also used for encryption of traffic between Network Controller services. The certificate subject name must be same as the DNS name of the node.|  
   
 ### Configure the cluster  
 To configure the cluster,  type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.  
@@ -78,19 +78,19 @@ To configure the cluster,  type the following command at the Windows PowerShell 
 Install-NetworkControllerCluster –Node <NetworkControllerNode[]> –ClusterAuthentication <ClusterAuthentication> [-ManagementSecurityGroup <string>][-DiagnosticLogLocation <string>][-LogLocationCredential <PSCredential>] [-CredentialEncryptionCertificate <X509Certificate2>][-Credential <PSCredential>][-CertificateThumbprint <String> ] [-UseSSL][-ComputerName <string>]  
 ```  
   
-The following table provides descriptions for each parameter of the **Install\-NetworkControllerCluster**  command.  
+The following table provides descriptions for each parameter of the **Install-NetworkControllerCluster**  command.  
   
 |Parameter|Description|  
 |-------------|---------------|  
-|ClusterAuthentication|The **ClusterAuthentication** parameter specifies the authentication type that is used for securing the communication between nodes and is also used for encryption of traffic between Network Controller services. The supported values are **Kerberos**, **X509** and **None**. Kerberos authentication uses domain accounts and can only be used if the Network Controller nodes are domain joined. If you specify X509\-based authentication, you must provide a certificate in the NetworkControllerNode object. In addition, you must manually provision the certificate before you run this command.|  
+|ClusterAuthentication|The **ClusterAuthentication** parameter specifies the authentication type that is used for securing the communication between nodes and is also used for encryption of traffic between Network Controller services. The supported values are **Kerberos**, **X509** and **None**. Kerberos authentication uses domain accounts and can only be used if the Network Controller nodes are domain joined. If you specify X509-based authentication, you must provide a certificate in the NetworkControllerNode object. In addition, you must manually provision the certificate before you run this command.|  
 |ManagementSecurityGroup|The **ManagementSecurityGroup** parameter specifies the name of the security group that contains users that are allowed to run the management cmdlets from a remote computer. This is only applicable if ClusterAuthentication is Kerberos. You must specify a domain security group and not a security group on the local computer.|  
-|Node|The **Node** parameter specifies the list of Network Controller nodes that you  created by using the **New\-NetworkControllerNodeObject** command.|  
+|Node|The **Node** parameter specifies the list of Network Controller nodes that you  created by using the **New-NetworkControllerNodeObject** command.|  
 |DiagnosticLogLocation|The **DiagnosticLogLocation** parameter specifies the share location where the diagnostic logs are periodically uploaded. If you do not specify a value for this parameter, the logs are stored locally on each node.|  
 |LogLocationCredential|The **LogLocationCredential** parameter specifies the credentials that are required for accessing the share location where the logs are stored.|  
 |CredentialEncryptionCertificate|The **CredentialEncryptionCertificate** parameter specifies the certificate that Network Controller uses to encrypt the credentials that are used to access Network Controller binaries and the **LogLocationCredential**, if specified. The certificate must be provisioned on all of the Network Controller nodes before you run this command, and the same certificate must be enrolled on all of the cluster nodes. Using this parameter to protect Network Controller binaries and logs is recommended in production environments. Without this parameter, the credentials are stored in clear text and can be misused by any unauthorized user.|  
 |Credential|This parameter is required only if you are running this command from a remote computer. The **Credential** parameter specifies a user account that has permission to run this command on the target computer.|  
-|CertificateThumbprint|This parameter is required only if you are running this command from a remote computer. The **CertificateThumbprint** parameter specifies the digital public key certificate \(X509\) of a user account that has permission to run this command on the target computer.|  
-|UseSSL|This parameter is required only if you are running this command from a remote computer. The **UseSSL** parameter specifies the Secure Sockets Layer \(SSL\) protocol that is used to establish a connection to the remote computer. By default, SSL is not used.|  
+|CertificateThumbprint|This parameter is required only if you are running this command from a remote computer. The **CertificateThumbprint** parameter specifies the digital public key certificate (X509) of a user account that has permission to run this command on the target computer.|  
+|UseSSL|This parameter is required only if you are running this command from a remote computer. The **UseSSL** parameter specifies the Secure Sockets Layer (SSL) protocol that is used to establish a connection to the remote computer. By default, SSL is not used.|  
 |ComputerName|The **ComputerName** parameter specifies the Network Controller node on which this command is run. If you do not specify a value for this parameter, the local computer is used by default.|  
   
 ## <a name="bkmk_app"></a>Configure the Network Controller application  
@@ -100,20 +100,20 @@ To configure the Network Controller application, type the following command at t
 Install-NetworkController –Node <NetworkControllerNode[]> –ClientAuthentication <ClientAuthentication>  [-ClientCertificateThumbprint <string[]>]  [-ClientSecurityGroup <string>] -ServerCertificate <X509Certificate2> [-RESTIPAddress <String>] [-RESTName <String>] [-Credential <PSCredential>][-CertificateThumbprint <String> ] [-UseSSL]  
 ```  
   
-The following table provides descriptions for each parameter of the **Install\-NetworkController** command.  
+The following table provides descriptions for each parameter of the **Install-NetworkController** command.  
   
 |Parameter|Description|  
 |-------------|---------------|  
-|ClientAuthentication|The **ClientAuthentication** parameter specifies the authentication type that is used for securing the communication between REST and Network Controller. The supported values are **Kerberos**, **X509** and **None**. Kerberos authentication uses domain accounts and can only be used if the Network Controller nodes are domain joined. If you specify X509\-based authentication, you must provide a certificate in the NetworkControllerNode object. In addition, you must manually provision the certificate before you run this command.|  
-|Node|The **Node** parameter specifies the list of Network Controller nodes that you  created by using the **New\-NetworkControllerNodeObject** command.|  
-|ClientCertificateThumbprint|This parameter is required only when you are using certificate\-based authentication for Network Controller clients. The **ClientCertificateThumbprint** parameter specifies the thumbprint of the certificate that is enrolled to clients on the Northbound layer.|  
+|ClientAuthentication|The **ClientAuthentication** parameter specifies the authentication type that is used for securing the communication between REST and Network Controller. The supported values are **Kerberos**, **X509** and **None**. Kerberos authentication uses domain accounts and can only be used if the Network Controller nodes are domain joined. If you specify X509-based authentication, you must provide a certificate in the NetworkControllerNode object. In addition, you must manually provision the certificate before you run this command.|  
+|Node|The **Node** parameter specifies the list of Network Controller nodes that you  created by using the **New-NetworkControllerNodeObject** command.|  
+|ClientCertificateThumbprint|This parameter is required only when you are using certificate-based authentication for Network Controller clients. The **ClientCertificateThumbprint** parameter specifies the thumbprint of the certificate that is enrolled to clients on the Northbound layer.|  
 |ServerCertificate|The **ServerCertificate** parameter specifies the certificate that Network Controller uses to prove its identity to clients. The server certificate must include the Server Authentication purpose in Enhanced Key Usage extensions, and must be issued to Network Controller by a CA that is trusted by clients.|  
-|RESTIPAddress|You do not need to specify a value for **RESTIPAddress** with a single node deployment of Network Controller. For multiple\-node deployments, the **RESTIPAddress** parameter specifies the IP address of the REST endpoint in CIDR notation. For example, 192.168.1.10\/24. The Subject Name value of **ServerCertificate** must resolve to the value of the **RESTIPAddress** parameter. This parameter must be specified for all multiple\-node Network Controller deployments when all of the nodes are on the same subnet. If nodes are on different subnets, you must use the **RestName** parameter instead of using **RESTIPAddress**.|  
-|RestName|You do not need to specify a value for **RestName** with a single node deployment of Network Controller. The only time you must specify a value for **RestName** is when multiple\-node deployments have nodes that are on different subnets. For multiple\-node deployments, the **RestName** parameter specifies the FQDN for the Network Controller cluster.|  
+|RESTIPAddress|You do not need to specify a value for **RESTIPAddress** with a single node deployment of Network Controller. For multiple-node deployments, the **RESTIPAddress** parameter specifies the IP address of the REST endpoint in CIDR notation. For example, 192.168.1.10/24. The Subject Name value of **ServerCertificate** must resolve to the value of the **RESTIPAddress** parameter. This parameter must be specified for all multiple-node Network Controller deployments when all of the nodes are on the same subnet. If nodes are on different subnets, you must use the **RestName** parameter instead of using **RESTIPAddress**.|  
+|RestName|You do not need to specify a value for **RestName** with a single node deployment of Network Controller. The only time you must specify a value for **RestName** is when multiple-node deployments have nodes that are on different subnets. For multiple-node deployments, the **RestName** parameter specifies the FQDN for the Network Controller cluster.|  
 |ClientSecurityGroup|The **ClientSecurityGroup** parameter specifies the name of the Active Directory security group whose members are Network Controller clients. This parameter is required only if you use Kerberos authentication for **ClientAuthentication**. The security group must contain the accounts from which the REST APIs are accessed, and you must  create the security group and add members before running this command.|  
 |Credential|This parameter is required only if you are running this command from a remote computer. The **Credential** parameter specifies a user account that has permission to run this command on the target computer.|  
-|CertificateThumbprint|This parameter is required only if you are running this command from a remote computer. The **CertificateThumbprint** parameter specifies the digital public key certificate \(X509\) of a user account that has permission to run this command on the target computer.|  
-|UseSSL|This parameter is required only if you are running this command from a remote computer. The **UseSSL** parameter specifies the Secure Sockets Layer \(SSL\) protocol that is used to establish a connection to the remote computer. By default, SSL is not used.|  
+|CertificateThumbprint|This parameter is required only if you are running this command from a remote computer. The **CertificateThumbprint** parameter specifies the digital public key certificate (X509) of a user account that has permission to run this command on the target computer.|  
+|UseSSL|This parameter is required only if you are running this command from a remote computer. The **UseSSL** parameter specifies the Secure Sockets Layer (SSL) protocol that is used to establish a connection to the remote computer. By default, SSL is not used.|  
   
 After you complete the configuration of the Network Controller application, your deployment of Network Controller is complete.  
   
@@ -157,7 +157,7 @@ If you are using Kerberos as the ClientAuthentication mechanism, membership in t
     ```  
   
     > [!NOTE]  
-    > When you run the **Get\-NetworkControllerCredential** command, you can assign the output of the command to a variable by using the dot operator to list the properties of the credentials. For example, $cred.Properties.  
+    > When you run the **Get-NetworkControllerCredential** command, you can assign the output of the command to a variable by using the dot operator to list the properties of the credentials. For example, $cred.Properties.  
   
 ## <a name="bkmk_ps"></a>Additional Windows PowerShell commands for Network Controller  
 After you deploy Network Controller, you can use Windows PowerShell commands to manage and modify your deployment. Following are some of the changes that you can make to your deployment.  
@@ -187,7 +187,7 @@ The following table provides the syntax for Windows PowerShell commands that you
 > Windows PowerShell commands for Network Controller are in the TechNet Library at [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx).  
   
 ## <a name="bkmk_script"></a>Sample Network Controller configuration script  
-The following sample configuration script shows how to create a multi\-node Network Controller cluster and install the Network Controller application. In addition, the $cert variable selects a certificate from the local computer certificates store that matches the subject name string “networkController.contoso.com” .  
+The following sample configuration script shows how to create a multi-node Network Controller cluster and install the Network Controller application. In addition, the $cert variable selects a certificate from the local computer certificates store that matches the subject name string “networkController.contoso.com” .  
   
 ```  
 $a = New-NetworkControllerNodeObject –Name Node1 -Server NCNode1.contoso.com -FaultDomain fd:/rack1/host1 -RestInterface Internal  

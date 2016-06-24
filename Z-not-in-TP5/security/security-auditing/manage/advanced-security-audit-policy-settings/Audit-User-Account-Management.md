@@ -19,7 +19,7 @@ Tasks that are audited for user account management include:
 
 -   A user account password is set or changed.
 
--   Security identifier \(SID\) history is added to a user account.
+-   Security identifier (SID) history is added to a user account.
 
 -   The Directory Services Restore Mode password is set.
 
@@ -33,7 +33,7 @@ Event volume: Low
 
 Default: Success
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

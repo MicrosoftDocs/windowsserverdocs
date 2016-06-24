@@ -29,7 +29,7 @@ The **Audit: Audit the use of Backup and Restore privilege** policy setting dete
 1.  Set **Audit: Audit the use of Backup and Restore privilege** to Disabled. Enabling this policy setting can generate a large number of security events, which might cause servers to respond slowly and force the security log to record numerous events of little significance.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -38,13 +38,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Disabled|
+|Stand-Alone Server Default Settings|Disabled|
 |DC Effective Default Settings|Disabled|
 |Member Server Effective Default Settings|Disabled|
 |Client Computer Effective Default Settings|Disabled|
 
 ### Operating system version differences
-There are no differences in this policy between operation systems beginning with Windows Server 2003.
+There are no differences in this policy between operation systems beginning with Windows Server 2003.
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.

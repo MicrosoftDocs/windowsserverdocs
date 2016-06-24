@@ -22,15 +22,15 @@ select disk={ <n> | <disk path> | system | next }
 ```
 
 > [!NOTE]
-> The **<disk path>**, **system**, and **next** parameters are only available in Windows 7 and Windows Server 2008 R2.
+> The **<disk path>**, **system**, and **next** parameters are only available in Windows 7 and Windows Server 2008 R2.
 
 ## Parameters
 
 |Parameter|Description|
 |-------------|---------------|
-|<n>|Specifies the number of the disk to receive focus. You can view the numbers for all the disks on the computer by using the **list disk** command in DiskPart. **Note:** When configuring systems with multiple disks, do not use **select disk\=0** to specify the system disk. The computer may reassign disk numbers when you reboot, and different computers with the same disk configuration can have different disk numbers.|
-|<disk path>|Specifies the location of the disk to receive focus, for example, **PCIROOT\(0\)\#PCI\(0F02\)\#ATA\(C00T00L00\)**. To view the location path of a disk, select it and then type **detail disk**.|
-|system|On BIOS computers, specifies that disk 0 receives focus. On EFI computers, the disk containing the EFI system partition \(ESP\) that is used for the current boot  receives focus. On EFI computers, the command will fail if there is no ESP, if there is more than one ESP, or the computer is booted from Windows Preinstallation Environment \(Windows PE\).|
+|<n>|Specifies the number of the disk to receive focus. You can view the numbers for all the disks on the computer by using the **list disk** command in DiskPart. **Note:** When configuring systems with multiple disks, do not use **select disk=0** to specify the system disk. The computer may reassign disk numbers when you reboot, and different computers with the same disk configuration can have different disk numbers.|
+|<disk path>|Specifies the location of the disk to receive focus, for example, **PCIROOT(0)#PCI(0F02)#ATA(C00T00L00)**. To view the location path of a disk, select it and then type **detail disk**.|
+|system|On BIOS computers, specifies that disk 0 receives focus. On EFI computers, the disk containing the EFI system partition (ESP) that is used for the current boot  receives focus. On EFI computers, the command will fail if there is no ESP, if there is more than one ESP, or the computer is booted from Windows Preinstallation Environment (Windows PE).|
 |next|Once a disk is selected, this command iterates over all disks in the disk list. When you run this command, the next disk in the list will receive focus.|
 
 ## <a name="BKMK_examples"></a>Examples

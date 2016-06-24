@@ -21,10 +21,10 @@ serverweroptin [/query] [/detailed] [/summary]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/query|Verifies the current setting.|
-|\/detailed|Sends detailed reports automatically.|
-|\/summary|Sends summary reports automatically.|
-|\/?|Displays Help at the command prompt.|
+|/query|Verifies the current setting.|
+|/detailed|Sends detailed reports automatically.|
+|/summary|Sends summary reports automatically.|
+|/?|Displays Help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To verify the current setting, type:

@@ -23,7 +23,7 @@ recv <RemoteFile> [<LocalFile>]
 |Parameter|Description|  
 |-------------|---------------|  
 |<RemoteFile>|Specifies the remote file to copy.|  
-|\[<LocalFile>\]|Specifies the name to use on the local computer.|  
+|[<LocalFile>]|Specifies the name to use on the local computer.|  
   
 ## Remarks  
   

@@ -31,8 +31,8 @@ This topic addresses the information you need to install Windows Server® 2016 T
 > [!IMPORTANT]  
 > For this release, use these product keys:  
 >   
-> -   Windows Server Edition Family \(Datacenter\): 6XBNX\-4JQGW\-QX6QG\-74P76\-72V67  
->-   Windows Server Edition Family \(Standard\): MFY9F\-XBN2F\-TYFMP\-CCV49\-RMYVH  
+> -   Windows Server Edition Family (Datacenter): 6XBNX-4JQGW-QX6QG-74P76-72V67  
+>-   Windows Server Edition Family (Standard): MFY9F-XBN2F-TYFMP-CCV49-RMYVH  
 > -   Windows Server Essentials: NYK9H-Y2FDB-2XKGC-F2XHK-WTT88  
   
 [comment]: # (ID: 362; Submitter: milanp; state: signed off)  
@@ -51,7 +51,7 @@ The following are estimated system requirements for the Windows Server 2016 Tech
 Processor performance depends not only on the clock frequency of the processor, but also on the number of processor cores and the size of the processor cache. The following are the processor requirements for this product:  
   
 **Minimum**:  
-- 1.4 GHz 64\-bit processor  
+- 1.4 GHz 64-bit processor  
 - Compatible with x64 instruction set  
 - Supports NX and DEP  
 - Supports CMPXCHG16b, LAHF/SAHF, and PrefetchW  
@@ -66,12 +66,12 @@ The following are the estimated RAM requirements for this product:
 - ECC (Error Correcting Code) type or similar technology  
   
 > [!IMPORTANT]  
-> If you create a virtual machine with the minimum supported hardware parameters \(1 processor core and 512 MB RAM\) and then attempt to install this release on the virtual machine, Setup will fail.  
+> If you create a virtual machine with the minimum supported hardware parameters (1 processor core and 512 MB RAM) and then attempt to install this release on the virtual machine, Setup will fail.  
 >   
 > To avoid this, do one of the following:  
 >   
 > -   Allocate more than 800 MB RAM to the virtual machine you intend to install this release on. Once Setup has completed, you can change the allocation to as little as 512 MB RAM, depending on the actual server configuration.  
-> -   Interrupt the boot process of this release on the virtual machine with SHIFT\+F10. In the command prompt that opens, use Diskpart.exe to create and format an installation partition. Run **Wpeutil createpagefile \/path\=C:\\pf.sys** \(assuming the installation partition you created was C:\). Close the command prompt and proceed with Setup.  
+> -   Interrupt the boot process of this release on the virtual machine with SHIFT+F10. In the command prompt that opens, use Diskpart.exe to create and format an installation partition. Run **Wpeutil createpagefile /path=C:\pf.sys** (assuming the installation partition you created was C:). Close the command prompt and proceed with Setup.  
   
 ## Storage controller and disk space requirements  
 Computers that run Windows Server 2016 Technical Preview must include a storage adapter that is compliant with the PCI Express architecture specification. Persistent storage devices on servers classified as hard disk drives must not be PATA. Windows Server 2016 Technical Preview does not allow ATA/PATA/IDE/EIDE for boot, page, or data drives.  
@@ -81,7 +81,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 **Minimum**: 32 GB  
   
    > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 Technical Preview in Server Core mode, with the Web Services \(IIS\) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
+    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 Technical Preview in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
     >   
     > The system partition will need extra space for any of the following circumstances:  
     >   
@@ -105,18 +105,18 @@ A network adapter that supports network debugging (KDNet) is useful, but not a m
 Computers running this release also must have the following:  
   
   
--   DVD drive \(if you intend to install the operating system from DVD media\)  
+-   DVD drive (if you intend to install the operating system from DVD media)  
   
 The following items are not strictly required, but are necessary for certain features:  
   
 - UEFI 2.3.1c-based system and firmware that supports secure boot  
 - Trusted Platform Module  
   
--   Graphics device and monitor capable of Super VGA \(1024 x 768\) or higher\-resolution  
+-   Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution  
   
--   Keyboard and Microsoft® mouse \(or other compatible pointing device\)  
+-   Keyboard and Microsoft® mouse (or other compatible pointing device)  
   
--   Internet access \(fees may apply\)  
+-   Internet access (fees may apply)  
   
 >[!NOTE]  
 > A Trusted Platform Module (TPM) chip is not strictly required to install this release, though it is necessary in order to use certain features such as BitLocker Drive Encryption. If your computer uses TPM, it must meet these requirements:  

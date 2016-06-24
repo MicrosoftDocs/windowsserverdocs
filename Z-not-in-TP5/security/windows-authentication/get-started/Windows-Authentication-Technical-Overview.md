@@ -15,7 +15,7 @@ This topic for the IT professional provides links to topics for the Windows Auth
 
 This collection of topics describes Windows authentication architecture and its components.
 
-To digitally save or print pages from this library, click **Export** \(in the upper\-right corner of the page\), and then follow the instructions.
+To digitally save or print pages from this library, click **Export** (in the upper-right corner of the page), and then follow the instructions.
 
 -   [Differences in Windows Authentication Between Windows Operating Systems](https://technet.microsoft.com/library/dn169017.aspx)
 

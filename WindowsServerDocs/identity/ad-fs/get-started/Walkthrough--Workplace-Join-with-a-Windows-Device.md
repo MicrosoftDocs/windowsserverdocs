@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: 8097655c-c72f-4803-b0a2-1c65819271b3
 ---
 # Walkthrough: Workplace Join with a Windows Device
-This topic demonstrates how to use Workplace Join to connect your Windows device with your workplace and how to access a web application by using Single Sign\-On. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough.
+This topic demonstrates how to use Workplace Join to connect your Windows device with your workplace and how to access a web application by using Single Sign-On. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough.
 
 ## Access the web application before device registration
-In this walkthrough, you access a company web application before you join your device to the workplace. The webpage displays the claims that were included in your security token. Notice that the list of claims does not include any information about your device. You might also observe that you do not have Single Sign\-On.
+In this walkthrough, you access a company web application before you join your device to the workplace. The webpage displays the claims that were included in your security token. Notice that the list of claims does not include any information about your device. You might also observe that you do not have Single Sign-On.
 
 #### To access the web application before you use Workplace Join on your device
 
 1.  Log on to Client1 with your Microsoft account.
 
-2.  Open Internet Explorer and browse to your generic claims app, **https:\/\/webserv1.contoso.com\/claimapp**.
+2.  Open Internet Explorer and browse to your generic claims app, **https://webserv1.contoso.com/claimapp**.
 
 3.  Log on to the webpage by using a company domain account: **roberth@contoso.com**, password: **P@ssword**.
 
@@ -29,14 +29,14 @@ In this walkthrough, you access a company web application before you join your d
 
 5.  Close Internet Explorer.
 
-6.  Open Internet Explorer and navigate to the same claims app, **https:\/\/webserv1.contoso.com\/claimapp**.
+6.  Open Internet Explorer and navigate to the same claims app, **https://webserv1.contoso.com/claimapp**.
 
-7.  Notice that you are prompted to enter your credentials again. You are not connected to the workplace from a device with Workplace Join and therefore do not have Single Sign\-On.
+7.  Notice that you are prompted to enter your credentials again. You are not connected to the workplace from a device with Workplace Join and therefore do not have Single Sign-On.
 
 ## Join your device with Workplace Join
 
 > [!IMPORTANT]
-> For Workplace Join to succeed, the client computer \(Client1\) must trust the SSL certificate that was used to configure Active Directory Federation Services \(AD FS\) in [Step 2: Configure the Federation Server with Device Registration Service \(ADFS1\)](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). It must also be able to validate revocation information for the certificate. If you have any issues with Workplace Join, you can view the event log on Client1.
+> For Workplace Join to succeed, the client computer (Client1) must trust the SSL certificate that was used to configure Active Directory Federation Services (AD FS) in [Step 2: Configure the Federation Server with Device Registration Service (ADFS1)](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). It must also be able to validate revocation information for the certificate. If you have any issues with Workplace Join, you can view the event log on Client1.
 > 
 > To see the event log, open Event Viewer, expand **Applications and Services Logs**, expand **Microsoft**, expand **Windows**, and then click **Workplace Join**.
 
@@ -55,13 +55,13 @@ In this walkthrough, you access a company web application before you join your d
 6.  You should now see the message: "This device has joined your workplace network."
 
 ### Access the web application after joining the workplace
-In this part of the demonstration, you access a company web application from your device that is connected with Workplace Join. The webpage displays the claims that were included in your security token. Notice that the list of claims includes both device and user information. You might also observe that you now have Single Sign\-On.
+In this part of the demonstration, you access a company web application from your device that is connected with Workplace Join. The webpage displays the claims that were included in your security token. Notice that the list of claims includes both device and user information. You might also observe that you now have Single Sign-On.
 
 ##### To access the web application after joining the workplace
 
 1.  Log on to **Client1** with your Microsoft account.
 
-2.  Open Internet Explorer and browse to your generic claims app, **https:\/\/webserv1.contoso.com\/claimapp**.
+2.  Open Internet Explorer and browse to your generic claims app, **https://webserv1.contoso.com/claimapp**.
 
 3.  Log on to the webpage by using a company domain account: **roberth@contoso.com**, password: **P@ssword**.
 
@@ -69,9 +69,9 @@ In this part of the demonstration, you access a company web application from you
 
 5.  Close Internet Explorer.
 
-6.  Open Internet Explorer and navigate to the same claims app, **https:\/\/webserv1.contoso.com\/claimapp**.
+6.  Open Internet Explorer and navigate to the same claims app, **https://webserv1.contoso.com/claimapp**.
 
-7.  Notice that you are **not** prompted to enter your credentials again. You are connected from a device with Workplace Join and therefore have Single Sign\-On.
+7.  Notice that you are **not** prompted to enter your credentials again. You are connected from a device with Workplace Join and therefore have Single Sign-On.
 
 ## See Also
 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)

@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: a47b5f5b-e25d-4608-9b28-7152e14fe1e2
 ---
 # The Role of the Claims Engine
-At its highest level, the claims engine in Active Directory Federation Services \(AD FS\) is a rule\-based engine that is dedicated to serving and processing claim requests for the Federation Service. The claims engine is the sole entity within the Federation Service that is responsible for running each of the rule sets across all of the federated trust relationships you have configured and handing the output result over to the claims pipeline.
+At its highest level, the claims engine in Active Directory Federation Services (AD FS) is a rule-based engine that is dedicated to serving and processing claim requests for the Federation Service. The claims engine is the sole entity within the Federation Service that is responsible for running each of the rule sets across all of the federated trust relationships you have configured and handing the output result over to the claims pipeline.
 
-While the claims pipeline is more a logical concept of the end\-to\-end process for flowing claims, claim rules are an actual administrative element that you can use to customize the flow of claims during the claim rules execution process. For more information about the pipeline process, see [The Role of the Claims Pipeline](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Pipeline.md).
+While the claims pipeline is more a logical concept of the end-to-end process for flowing claims, claim rules are an actual administrative element that you can use to customize the flow of claims during the claim rules execution process. For more information about the pipeline process, see [The Role of the Claims Pipeline](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Pipeline.md).
 
-As shown in the following illustration, the act of accepting incoming claims \(acceptance rules\), authorizing claims requesters \(authorization rules\) and issuing outgoing claims \(issuance rules\) through claim rules across all of the federated trust relationships in your organization is performed by the claims engine.
+As shown in the following illustration, the act of accepting incoming claims (acceptance rules), authorizing claims requesters (authorization rules) and issuing outgoing claims (issuance rules) through claim rules across all of the federated trust relationships in your organization is performed by the claims engine.
 
 ![](../../../../media/The-Role-of-the-Claims-Engine/adfs2_enginepipeline.gif)
 
 ## Claim rules execution process
-When you configure a claims provider trust or relying party trust in your organization with claim rules, the claim rule set\(s\) for that trust act as a gatekeeper for incoming claims by invoking the claims engine to apply the necessary logic in the claim rules to determine whether to issue any claims and which claims to issue.
+When you configure a claims provider trust or relying party trust in your organization with claim rules, the claim rule set(s) for that trust act as a gatekeeper for incoming claims by invoking the claims engine to apply the necessary logic in the claim rules to determine whether to issue any claims and which claims to issue.
 
 The following section outlines each of the steps that occur by the engine during the flow of claims through the claim rules execution process. Each of the steps as outlined below occurs for each stage described in the claims pipeline process. These steps include:
 
@@ -46,15 +46,15 @@ For example, in the illustration below, the claims engine reads the claims of A 
 All the rules in a claim rule set share the same input claim set. Each rule in that set can add to the shared input claim set, thus affecting all subsequent rules in the set.
 
 ### Step 2 – Execution
-In this step of the claim rules process, claim rules are processed when the claims engine chronologically steps through all of the rules within a particular rule set one at a time. Each rule within a rule set only runs once and is executed in the order in which they appear from top to bottom as displayed in the Edit Claim Rules dialog box in the AD FS Management snap\-in. The claim rule that is at the top of the rule set is processed first and then subsequent rules are processed until all of the rules have been run.
+In this step of the claim rules process, claim rules are processed when the claims engine chronologically steps through all of the rules within a particular rule set one at a time. Each rule within a rule set only runs once and is executed in the order in which they appear from top to bottom as displayed in the Edit Claim Rules dialog box in the AD FS Management snap-in. The claim rule that is at the top of the rule set is processed first and then subsequent rules are processed until all of the rules have been run.
 
-As defined in the claim rule language, a claim rule consists of two parts, condition and issuance statement. The claims engine first processes the condition part by using the data in the input claim set to determine whether the condition specified within the rule holds true for the claims contained in the input claim set \(the claims that match the rule’s condition are referred to as a matching claims\). If any matching claims are found, the claims engine executes the issuance statement of the rule for each set of the matching claims. The issuance statement of the rule can perform either of the following tasks with matching claims:
+As defined in the claim rule language, a claim rule consists of two parts, condition and issuance statement. The claims engine first processes the condition part by using the data in the input claim set to determine whether the condition specified within the rule holds true for the claims contained in the input claim set (the claims that match the rule’s condition are referred to as a matching claims). If any matching claims are found, the claims engine executes the issuance statement of the rule for each set of the matching claims. The issuance statement of the rule can perform either of the following tasks with matching claims:
 
 1.  Copy a matching claim into the output claim set
 
 2.  Transform the claim fields and create a new claim in either just the input claim set or in both evaluation and output claim sets.
 
-3.  Use the matching claim\(s\) as a key to lookup more information from an attribute store to create new claim\(s\) in either just the input claim set or in both input and output claim sets.
+3.  Use the matching claim(s) as a key to lookup more information from an attribute store to create new claim(s) in either just the input claim set or in both input and output claim sets.
 
 #### Adding a claim to the output claim set for a rule set
 The *output claim set* is a location in memory that is initially empty and is important because the claims engine will only return claims that reside in the output claim set after the execution process completes. This means that any claims that reside only in the input claim set and not in the output claim set will be ignored when it comes time to calculate the final set of outgoing claims.
@@ -72,9 +72,9 @@ If the condition part of a rule within a rule set does not match any claims in t
 
 2.  When the first rule executes, it sees the A and B claims, which are at that moment in time the only claims in the input claim set, and processes the conditional part of the rule logic in rule 1.
 
-3.  Since the A claim is present in the input claim set, the condition of the rule is determined to be true \(matching the claim A\) and a new C claim is added to both the input claim set and the output claim set.
+3.  Since the A claim is present in the input claim set, the condition of the rule is determined to be true (matching the claim A) and a new C claim is added to both the input claim set and the output claim set.
 
-4.  Rule 2 can now use the A, B and C claims \(all claims in the input claim set\) as input for processing its logic.
+4.  Rule 2 can now use the A, B and C claims (all claims in the input claim set) as input for processing its logic.
 
 For more information about claims transformation, see [When to Use a Transform Claim Rule](When-to-Use-a-Transform-Claim-Rule.md).
 
@@ -84,21 +84,21 @@ The final stage of the claim rule set execution begins once all rules have been 
 ## Sending the execution output to the claims pipeline
 When the claims engine processes a rule set, that rule set has its own dedicated locations in memory for its input and output claim sets. This means that the input and output claim sets used by one rule set are separate from the input and output claim sets used in another rule set.
 
-After the entire process has run for a give rule set \(steps 1, 2, and 3\), the newly issued outgoing claims \(content of the output claim set\) will be used as input to the next rule set in the claims pipeline. This allows for claims to flow from the output of one rule set to the input for another rule set, as shown in the following illustration.
+After the entire process has run for a give rule set (steps 1, 2, and 3), the newly issued outgoing claims (content of the output claim set) will be used as input to the next rule set in the claims pipeline. This allows for claims to flow from the output of one rule set to the input for another rule set, as shown in the following illustration.
 
 ![](../../../../media/The-Role-of-the-Claims-Engine/adfs2_enginecontexts.gif)
 
 > [!NOTE]
 > Although the issuance rule set is also a critical stage in the pipeline, the illustration above does not show it only for purposes of simplifying the illustration. For an illustration that shows the issuance rule set and how it fits into the claims pipeline, see [The Role of the Claims Pipeline](../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/../../../../ad-fs/plan/tech-ref/key-concepts/The-Role-of-the-Claims-Pipeline.md).
 
-In this case, the output of the acceptance rules is used by the pipeline to flow the final set of claims produced by the acceptance rules to the second stage in the pipeline, which is the processing of authorization rules. At this point, the entire claim rules execution process \(steps 1, 2, and 3 above\) would run again for the authorization rule set. This cycle continues until the issuance rule set \(the final stage in the pipeline\) has been completed.
+In this case, the output of the acceptance rules is used by the pipeline to flow the final set of claims produced by the acceptance rules to the second stage in the pipeline, which is the processing of authorization rules. At this point, the entire claim rules execution process (steps 1, 2, and 3 above) would run again for the authorization rule set. This cycle continues until the issuance rule set (the final stage in the pipeline) has been completed.
 
 Once the finalized outgoing claims have been returned from the engine for the issuance rule set, they will be packaged into a SAML token and the Federation Service will send the token back to the client.
 
 ## Processing authorization rules
-If the claim rule set that is being executed during step 2 of the claim rules execution process consists of Authorization rules \(which have a different input and output claim sets than either acceptance or issuance rules\), then those authorization rules will run to determine whether a token requester is authorized to obtain a security token for a given relying party from the Federation Service based on the requester’s claims.
+If the claim rule set that is being executed during step 2 of the claim rules execution process consists of Authorization rules (which have a different input and output claim sets than either acceptance or issuance rules), then those authorization rules will run to determine whether a token requester is authorized to obtain a security token for a given relying party from the Federation Service based on the requester’s claims.
 
-The goal of authorization rules is to issue a permit or deny claim based on whether the user is to be allowed to obtain a token for the given relying party or not. As shown in the following illustration, the output of the authorization execution is used by the pipeline to determine whether the issuance rule set is executed or not—based on presence or absence of the permit and\/or deny claim—but the authorization execution output itself is not used as an input to the claim rule set.
+The goal of authorization rules is to issue a permit or deny claim based on whether the user is to be allowed to obtain a token for the given relying party or not. As shown in the following illustration, the output of the authorization execution is used by the pipeline to determine whether the issuance rule set is executed or not—based on presence or absence of the permit and/or deny claim—but the authorization execution output itself is not used as an input to the claim rule set.
 
 ![](../../../../media/The-Role-of-the-Claims-Engine/adfs2_authorization.gif)
 

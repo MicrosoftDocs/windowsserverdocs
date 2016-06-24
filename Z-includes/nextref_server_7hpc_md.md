@@ -1,1 +1,1 @@
-Windows Server 2008 R2 HPC Edition
+Windows Server 2008 R2 HPC Edition

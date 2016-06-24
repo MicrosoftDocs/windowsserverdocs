@@ -35,7 +35,7 @@ By default, the token that is created for anonymous connections does not include
 1.  Set this policy to **Disabled**.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Polices\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Polices\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -44,13 +44,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Disabled|  
+|Stand-Alone Server Default Settings|Disabled|  
 |DC Effective Default Settings|Disabled|  
 |Member Server Effective Default Settings|Disabled|  
 |Client Computer Effective Default Settings|Disabled|  
   
 ### Operating system version differences  
-There are no differences in this policy between operating systems beginning with Windows Server 2003.  
+There are no differences in this policy between operating systems beginning with Windows Server 2003.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  

@@ -28,11 +28,11 @@ WDSUTIL /Get-AllNamespaces [/Server:<Server name>] [/ContentProvider:<name>] [/D
 
 |Parameter|Windows Server 2008|Windows Server 2008 R2|
 |-------------|-----------------------|--------------------------|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name \(FQDN\). If no server name is specified, the local server will be used.||
-|\[\/ContentProvider:<name>\]|Displays the namespaces for the specified content provider only.||
-|\[\/Show:Clients\]|Only supported for Windows Server 2008. Displays information about client computers that are connected to the namespace.||
-|\[\/Details:Clients\]|Only supported for Windows Server 2008 R2. Displays information about client computers that are connected to the namespace.||
-|\[\/ExcludeDeletePending\]|Excludes any deactivated transmissions from the list.||
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.||
+|[/ContentProvider:<name>]|Displays the namespaces for the specified content provider only.||
+|[/Show:Clients]|Only supported for Windows Server 2008. Displays information about client computers that are connected to the namespace.||
+|[/Details:Clients]|Only supported for Windows Server 2008 R2. Displays information about client computers that are connected to the namespace.||
+|[/ExcludeDeletePending]|Excludes any deactivated transmissions from the list.||
 
 ## <a name="BKMK_examples"></a>Examples
 To view all namespaces, type:

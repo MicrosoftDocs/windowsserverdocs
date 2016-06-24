@@ -13,7 +13,7 @@ ms.assetid: 1b0f8a71-b142-42c9-9039-a87706c41405
 author: Femila
 ---
 # Solutions and Scenario Guides
-**\[This information is preliminary and subject to change.\]**  
+**[This information is preliminary and subject to change.]**  
   
 With Microsoft’s access and information protection solutions, you can deploy and configure access to corporate resources across your on-premises environment and cloud applications. And you can do it while protecting corporate information.  
   

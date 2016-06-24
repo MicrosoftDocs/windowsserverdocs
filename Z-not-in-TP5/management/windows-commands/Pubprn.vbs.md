@@ -25,28 +25,28 @@ Cscript Pubprn.vbs {<ServerName> | <UNCPrinterPath>}
 |Parameter|Description|
 |-------------|---------------|
 |<ServerName>|Specifies the name of the Windows server that hosts the printer that you want to publish. If you do not specify a computer, the local computer is used.|
-|<UNCPrinterPath>|The Universal Naming Convention \(UNC\) path to the shared printer that you want to publish.|
-|"LDAP:\/\/CN\=<Container>,DC\=<Container>"|Specifies the path to the container in Active Directory Domain Services where you want to publish the printer.|
-|\/?|Displays help at the command prompt.|
+|<UNCPrinterPath>|The Universal Naming Convention (UNC) path to the shared printer that you want to publish.|
+|"LDAP://CN=<Container>,DC=<Container>"|Specifies the path to the container in Active Directory Domain Services where you want to publish the printer.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   The **Pubprn.vbs** command is a Visual Basic script located in the %WINDIR%\\System32\\Printing\_Admin\_Scripts\\<language> directory. To use this command, at a command prompt, type **Cscript** followed by the full path to the Pubprn.vbs file, or change directories to the appropriate folder. For example:
+-   The **Pubprn.vbs** command is a Visual Basic script located in the %WINDIR%\System32\Printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **Cscript** followed by the full path to the Pubprn.vbs file, or change directories to the appropriate folder. For example:
 
     ```
     Cscript %WINDIR%\System32\Printing_Admin_Scripts\en-US\Pubprn.vbs
     ```
 
--   If the information that you supply contains spaces, use quotation marks around the text \(for example, `"Computer Name"`\).
+-   If the information that you supply contains spaces, use quotation marks around the text (for example, `"Computer Name"`).
 
 ## <a name="BKMK_examples"></a>Examples
-To publish all printers on the \\\\Server1 computer to the MyContainer container in the MyDomain.Company.Com domain, type:
+To publish all printers on the \\\Server1 computer to the MyContainer container in the MyDomain.Company.Com domain, type:
 
 ```
 Cscript Ppubprn.vbs Server1 "LDAP://CN=MyContainer,DC=MyDomain,DC=Company,DC=Com"
 ```
 
-To publish the LaserPrinter1 printer on the \\\\Server1 server to the MyContainer container in the MyDomain.Company.Com domain, type:
+To publish the LaserPrinter1 printer on the \\\Server1 server to the MyContainer container in the MyDomain.Company.Com domain, type:
 
 ```
 Cscript Ppubprn.vbs \\Server1\LaserPrinter1 "LDAP://CN=MyContainer,DC=MyDomain,DC=Company,DC=Com"

@@ -22,9 +22,9 @@ To verify that a server certificate is correctly configured and is enrolled to t
   
 ### To verify NPS server enrollment of a server certificate  
   
-1.  In Server Manager, click **Tools**, and then click **Network Policy Server**. The Network Policy Server Microsoft Management Console \(MMC\) opens.  
+1.  In Server Manager, click **Tools**, and then click **Network Policy Server**. The Network Policy Server Microsoft Management Console (MMC) opens.  
   
-2.  Double\-click **Policies**, right\-click **Network Policies**, and click **New**. The New Network Policy wizard opens.  
+2.  Double-click **Policies**, right-click **Network Policies**, and click **New**. The New Network Policy wizard opens.  
   
 3.  In **Specify Network Policy Name and Connection Type**, in **Policy name**, type **Test policy**. Ensure that **Type of network access server** has the value **Unspecified**, and then click **Next**.  
   
@@ -34,9 +34,9 @@ To verify that a server certificate is correctly configured and is enrolled to t
   
 6.  In **Specify Access Permission**, ensure that **Access granted** is selected, and then click **Next**.  
   
-7.  In **Configure Authentication Methods**, click **Add**. In **Add EAP**, click **Microsoft: Protected EAP \(PEAP\)**, and then click **OK**. In **EAP Types**, select **Microsoft: Protected EAP \(PEAP\)**, and then click **Edit**. The **Edit Protected EAP Properties** dialog box opens.  
+7.  In **Configure Authentication Methods**, click **Add**. In **Add EAP**, click **Microsoft: Protected EAP (PEAP)**, and then click **OK**. In **EAP Types**, select **Microsoft: Protected EAP (PEAP)**, and then click **Edit**. The **Edit Protected EAP Properties** dialog box opens.  
   
-8.  In the **Edit Protected EAP Properties** dialog box, in **Certificate issued to**, NPS displays the name of your server certificate in the format *ComputerName*.*Domain*. For example, if your NPS server is named NPS\-01 and your domain is example.com, NPS displays the certificate **NPS\-01.example.com**. In addition, in **Issuer**, the name of your certification authority is displayed, and in **Expiration date**, the date of expiration of the server certificate is shown. This demonstrates that your NPS server has enrolled a valid server certificate that it can use to prove its identity to client computers that are trying to access the network through your network access servers, such as virtual private network \(VPN\) servers, 802.1X\-capable wireless access points, Remote Desktop Gateway servers, and 802.1X\-capable Ethernet switches.  
+8.  In the **Edit Protected EAP Properties** dialog box, in **Certificate issued to**, NPS displays the name of your server certificate in the format *ComputerName*.*Domain*. For example, if your NPS server is named NPS-01 and your domain is example.com, NPS displays the certificate **NPS-01.example.com**. In addition, in **Issuer**, the name of your certification authority is displayed, and in **Expiration date**, the date of expiration of the server certificate is shown. This demonstrates that your NPS server has enrolled a valid server certificate that it can use to prove its identity to client computers that are trying to access the network through your network access servers, such as virtual private network (VPN) servers, 802.1X-capable wireless access points, Remote Desktop Gateway servers, and 802.1X-capable Ethernet switches.  
   
     > [!IMPORTANT]  
     > If NPS does not display a valid server certificate and if it provides the message that such a certificate cannot be found on the local computer, there are two possible reasons for this problem. It is possible that Group Policy did not refresh properly, and the NPS server has not enrolled a certificate from the CA. In this circumstance, restart the NPS server. When the computer restarts, Group Policy is refreshed, and you can perform this procedure again to verify that the server certificate is enrolled. If refreshing Group Policy does not resolve this issue, either the certificate template, certificate autoenrollment, or both are not configured correctly. To resolve these issues, start at the beginning of this guide and perform all steps again to ensure that the settings that you have provided are accurate.  

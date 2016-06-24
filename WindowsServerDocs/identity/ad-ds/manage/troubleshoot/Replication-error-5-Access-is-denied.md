@@ -41,7 +41,7 @@ author: Femila
       <list class="ordered">
         <listItem>
           <para>DCDIAG reports that Active Directory Replications test has failed with error status code (5): "access is denied:"</para>
-          <code>Testing server: &lt;site name&gt;\&lt;destination dc name&gt;
+          <code>Testing server: &lt;site name&gt;&lt;destination dc name&gt;
 Starting test: Replications
 * Replications Check
 [Replications Check,&lt;destination DC name] A recent replication attempt failed:
@@ -53,14 +53,14 @@ The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
 3 failures have occurred since the last success.</code>
         </listItem>
-<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 5.</para><para>REPADMIN commands that commonly cite the 5 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /KCC</para></listItem><listItem><para>REPADMIN /REPLICATE</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPL</para></listItem><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error:</para><code>Default-First-Site-Name\CONTOSO-DC1
+<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 5.</para><para>REPADMIN commands that commonly cite the 5 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /KCC</para></listItem><listItem><para>REPADMIN /REPLICATE</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPL</para></listItem><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error:</para><code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 ==== INBOUND NEIGHBORS ======================================
 DC=contoso,DC=com
-Default-First-Site-Name\CONTOSO-DC2 via RPC
+Default-First-Site-NameCONTOSO-DC2 via RPC
 DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
 Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 5(0x5):
 Access is denied.</codeFeaturedElement>
@@ -104,7 +104,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
           <para>Trust relationships in the trust chain are broken or invalid.</para>
         </listItem>
         <listItem>
-          <para>The KDCNames setting in the HKLM\System\CurrentControlSet\Control\LSA\Kerberos\Domains section of the registry incorrectly contains the local Active Directory domain name</para>
+          <para>The KDCNames setting in the HKLMSystemCurrentControlSetControlLSAKerberosDomains section of the registry incorrectly contains the local Active Directory domain name</para>
         </listItem>
         <listItem>
           <para>Some network adapters have a "Large Send Offload" feature that has been known to cause this issue.</para>
@@ -199,13 +199,13 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
 </listItem>
         <listItem>
           <para>CrashOnAuditFail=2</para>
-          <para>Active Directory replication fails when HKLM\System\CurrentControlSet\Control\LSA\CrashOnAuditFail has a value of "2".</para>
+          <para>Active Directory replication fails when HKLMSystemCurrentControlSetControlLSACrashOnAuditFail has a value of "2".</para>
           <para>A CrashOnAduitFail value of 2 is triggered when the "Audit: Shut down system immediately if unable to log security audits" setting in Group Policy has been enabled AND the local Security log in Event Viewer becomes full.</para>
           <para>Active Directory domain controllers are especially prone to maximum capacity Security logs when auditing has been enabled AND the size of the Security event log has been constrained by the "Do not overwrite events (clear log manually) or "Overwrite as needed" options in Event Viewer or Group Policy equivalents.</para>
           <para>
             <embeddedLabel>User Action</embeddedLabel>
           </para>
-          <para>If HKLM\System\CCS\Control\LSA\CrashOnAuditFail has a value of "2": </para>
+          <para>If HKLMSystemCCSControlLSACrashOnAuditFail has a value of "2": </para>
           <list class="ordered">
             <listItem>
               <para>Clear the security event log (save to alternate location as required).</para>
@@ -239,9 +239,9 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
           <para>Kerberos Group Policy settings in the Default Domain Policy allow for a 5 minute difference (default value) in system time between Key Distribution Center (KDC) domain controllers and a Kerberos target servers in order to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within 5 minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, whether system time on the relevant DCs matches current time is not significant to Kerberos, only that <placeholder>relative</placeholder> time difference between the KDC and target DC is inside the (default 5 minutes or less) maximum time skew allowed by Kerberos policy.</para>
           <para>In the context of Active Directory operations, the target server is the source DC being contacted by the destination DC. Every domain controller in an Active Directory forest (currently running the KDC service) is a potential KDC so you need to consider time accuracy on all other DCs against the source DC including time on the destination DC itself.</para>
           <para>Two methods to check time accuracy include:</para>
-          <code>C:\&gt;DCDIAG /TEST:CheckSecurityError</code>
+          <code>C:&gt;DCDIAG /TEST:CheckSecurityError</code>
           <para>And</para>
-          <code>C:\&gt;W32TM /MONITOR</code>
+          <code>C:&gt;W32TM /MONITOR</code>
           <para>Sample output from DCDIAG /TEST:CheckSecurityError depicting excessive time skew on Windows Server 2003 and Windows Server 2008 R2 domain controllers can be found in the <link xlink:href="87acf6ce-5166-4ab4-b8d7-42b03bab226a#BKMK_MoreInfo">More Information</link> section of this article.</para>
           <para>Look for LSASRV 40960 events on the destination DC at the time of the failing replication request that cite a GUID in the CNAME record of the source DC with extended error 0xc000133: "the time at the Primary Domain Controller is different than the time at the Backup Domain Controller or member server by too large an amount."</para>
           <para>Network traces capturing the destination computer connecting to a shared folder on the source DC (as well as other operations) may show the on-screen error "an extended error has occurred." while a network trace shows:</para>
@@ -280,7 +280,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
                   <para>Microsoft network client: Digitally sign communications (if server agrees)</para>
                 </TD>
                 <TD>
-                  <para>HKLM\SYSTEM\CCS\Services\Lanmanworkstation\Parameters\Enablesecuritysignature</para>
+                  <para>HKLMSYSTEMCCSServicesLanmanworkstationParametersEnablesecuritysignature</para>
                 </TD>
               </tr>
               <tr>
@@ -288,7 +288,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
                   <para>Microsoft network client: Digitally sign communications (always)</para>
                 </TD>
                 <TD>
-                  <para>HKLM\SYSTEM\CCS\Services\Lanmanworkstation\Parameters\Requiresecuritysignature</para>
+                  <para>HKLMSYSTEMCCSServicesLanmanworkstationParametersRequiresecuritysignature</para>
                 </TD>
               </tr>
               <tr>
@@ -296,7 +296,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
                   <para>Microsoft network server: Digitally sign communications (if server agrees)</para>
                 </TD>
                 <TD>
-                  <para>HKLM\SYSTEM\CCS\Services\Lanmanserver\Parameters\Enablesecuritysignature</para>
+                  <para>HKLMSYSTEMCCSServicesLanmanserverParametersEnablesecuritysignature</para>
                 </TD>
               </tr>
               <tr>
@@ -304,7 +304,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
                   <para>Microsoft network server: Digitally sign communications (always)</para>
                 </TD>
                 <TD>
-                  <para>HKLM\SYSTEM\CCS\Services\Lanmanserver\Parameters\Requiresecuritysignature</para>
+                  <para>HKLMSYSTEMCCSServicesLanmanserverParametersRequiresecuritysignature</para>
                 </TD>
               </tr>
             </tbody>
@@ -321,7 +321,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
           <list class="bullet">
             <listItem>
               <para>From the console of the destination DC, ping the source DC by its fully qualified computer name to identify the largest packet supported by the network route.</para>
-              <code>c:\&gt;Ping &lt;source DC hostname&gt;.&lt;fully qualified computer name&gt; -f -l 1472</code>
+              <code>c:&gt;Ping &lt;source DC hostname&gt;.&lt;fully qualified computer name&gt; -f -l 1472</code>
             </listItem>
             <listItem>
               <para>If the largest non-fragmented packet is less than 1472 bytes, either (in order of preference):</para>
@@ -361,7 +361,7 @@ On condition, reset the destination DCs password with NETDOM /RESETPWD as descri
             </listItem>
             <listItem>
               <para>From the console of the destination DC, run NETDOM RESETPWD to reset the password for the destination DC.</para>
-              <code>:\&gt;netdom resetpwd /server: server_name /userd: domain_name \administrator /passwordd: administrator_password</code>
+              <code>:&gt;netdom resetpwd /server: server_name /userd: domain_name administrator /passwordd: administrator_password</code>
             </listItem>
             <listItem>
               <para>Ensure that likely KDCs AND the source DC (if in the same domain) inbound replicate knowledge of the destination DCs new password.</para>
@@ -410,7 +410,7 @@ On condition, reset the destination DCs password with NETDOM /RESETPWD as descri
               <para>On the Security menu, click Permissions to grant the Administrators local group Full Control of the SECURITY hive and its child containers and objects.</para>
             </listItem>
             <listItem>
-              <para>Locate the HKEY_LOCAL_MACHINE\SECURITY\Policy\PolPrDmN key.</para>
+              <para>Locate the HKEY_LOCAL_MACHINESECURITYPolicyPolPrDmN key.</para>
             </listItem>
             <listItem>
               <para>In the right pane of Registry Editor, click the &lt;No Name&gt;: REG_NONE entry one time.</para>
@@ -422,7 +422,7 @@ On condition, reset the destination DCs password with NETDOM /RESETPWD as descri
               <para>The domain name appears as a string in the right side of the Binary Data dialog box. The domain name is the same as the Kerberos realm.</para>
             </listItem>
             <listItem>
-              <para>Locate the HKEY_LOCAL_MACHINE\SECURITY\Policy\PolACDmN registry key.</para>
+              <para>Locate the HKEY_LOCAL_MACHINESECURITYPolicyPolACDmN registry key.</para>
             </listItem>
             <listItem>
               <para>In the right pane of Registry Editor, double-click the &lt;No Name&gt;: REG_NONE entry.</para>
@@ -445,10 +445,10 @@ On condition, reset the destination DCs password with NETDOM /RESETPWD as descri
               <para>On the console of the destination DC, run "REGEDIT".</para>
             </listItem>
             <listItem>
-              <para>Locate the following path in the registry: HKLM\system\ccs\control\lsa\kerberos\domains</para>
+              <para>Locate the following path in the registry: HKLMsystemccscontrollsakerberosdomains</para>
             </listItem>
             <listItem>
-              <para>For each &lt;fully qualified domain&gt; under HKLM\system\ccs\control\lsa\kerberos\domains, verify that the value for "KdcNames" refers to a valid <placeholder>external</placeholder> Kerberos realm and NOT the local domain or another domain in the same Active Directory forest.</para>
+              <para>For each &lt;fully qualified domain&gt; under HKLMsystemccscontrollsakerberosdomains, verify that the value for "KdcNames" refers to a valid <placeholder>external</placeholder> Kerberos realm and NOT the local domain or another domain in the same Active Directory forest.</para>
             </listItem>
           </list>
         </listItem>
@@ -483,7 +483,7 @@ On condition, reset the destination DCs password with NETDOM /RESETPWD as descri
     <content>
       <para>Sample DCDIAG /test:CHECKSECURITYERROR output from a Windows Server 2008 R2 DC caused by excessive time skew:</para>
       <code>Doing primary tests
-Testing server: Default-First-Site-Name\CONTOSO-DC1
+Testing server: Default-First-Site-NameCONTOSO-DC1
 Starting test: CheckSecurityError
 Source DC CONTOSO-DC2 has possible security error (1398).
 Diagnosing...
@@ -499,7 +499,7 @@ cannot connect!
 </code>
       <para>Sample DCDIAG /CHECKSECURITYERROR output from a Windows Server 2003 DC caused by excessive time skew:</para>
       <code>Doing primary tests
-Testing server: Default-First-Site-Name\CONTOSO-DC3
+Testing server: Default-First-Site-NameCONTOSO-DC3
 Starting test: CheckSecurityError
 Source DC CONTOSO-DC1 has possible security error (5). Diagnosing...
 Time skew error between client and 1 DCs! ERROR_ACCESS_DENIED or down machine recieved by:
@@ -515,7 +515,7 @@ Ignoring DC CONTOSO-DC1 in the convergence test of object CN=CONTOSO-DC3,OU=Doma
 </code>
       <para>Sample DCDIAG /CHECKSECURITYERROR output showing missing SPN names (the output of which could vary from environment to environment). Sample output is shown below:</para>
       <code>Doing primary tests
-Testing server: &lt;site name&gt;\&lt;dc name&gt;
+Testing server: &lt;site name&gt;&lt;dc name&gt;
 Test omitted by user request: Advertising
 Starting test: CheckSecurityError
 * Dr Auth: Beginning security errors check’
@@ -535,7 +535,7 @@ Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 Unable to verify the machine account (&lt;DN path for Dc machine account&gt;) for &lt;DC Name&gt; on &lt;DC name&gt;.
 </code>
       <para>Sample DCDIAG /CHECKSECURITYERROR output from a Windows Server 2003 DC caused by excessive time skew:</para>
-      <code>Testing server: &lt;site name&gt;\&lt;dc name&gt;
+      <code>Testing server: &lt;site name&gt;&lt;dc name&gt;
 Test omitted by user request: Advertising
 Starting test: CheckSecurityError
 * Dr Auth: Beginning security errors check’

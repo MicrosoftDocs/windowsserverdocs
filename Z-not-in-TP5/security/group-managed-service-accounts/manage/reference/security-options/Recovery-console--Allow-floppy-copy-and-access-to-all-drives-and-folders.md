@@ -36,10 +36,10 @@ An authorized administrator might forget to remove removable media, such as CD o
 
 ### Best practices
 
-1.  Set **Recovery Console: Allow floppy copy and access to drives and folders** to **Disabled**. Users who have started a server by using the Recovery Console and logged in with the built\-in Administrator account will not be able to copy files and folders to a floppy disk.
+1.  Set **Recovery Console: Allow floppy copy and access to drives and folders** to **Disabled**. Users who have started a server by using the Recovery Console and logged in with the built-in Administrator account will not be able to copy files and folders to a floppy disk.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -48,13 +48,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Disabled|
+|Stand-Alone Server Default Settings|Disabled|
 |DC Effective Default Settings|Disabled|
 |Member Server Effective Default Settings|Disabled|
 |Client Computer Effective Default Settings|Disabled|
 
 ### Operating system version differences
-There are no differences in this policy between operating systems beginning with Windows Server 2003.
+There are no differences in this policy between operating systems beginning with Windows Server 2003.
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.
@@ -68,10 +68,10 @@ Setting and deploying this policy using Group Policy takes precedence over the s
 ### Policy conflicts
 None.
 
-### Command\-line tools
+### Command-line tools
 Enabling this security option makes the Recovery Console SET command available, which allows you to set the following Recovery Console environment variables:
 
--   AllowWildCards: Enable wildcard support for some commands \(such as the DEL command\).
+-   AllowWildCards: Enable wildcard support for some commands (such as the DEL command).
 
 -   AllowAllPaths: Allow access to all files and folders on the computer.
 
@@ -91,6 +91,6 @@ An attacker who can cause the system to restart into the Recovery Console could 
 Disable the **Recovery console: Allow floppy copy and access to drives and folders** setting.
 
 ### Potential impact
-Users who have started a server through the Recovery Console and logged in with the built\-in Administrator account cannot copy files and folders to a floppy disk.
+Users who have started a server through the Recovery Console and logged in with the built-in Administrator account cannot copy files and folders to a floppy disk.
 
 

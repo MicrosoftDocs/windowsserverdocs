@@ -12,10 +12,10 @@ ms.assetid: 762bc463-eead-46ac-8b90-32355743c27c
 author: coreyp
 ---
 # Plan Remote Access with OTP Authentication
-Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access multisite deployment.  
+Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access multisite deployment.  
   
   
--   [Step 1: Plan an advanced single server deployment](assetId:///2e91e90f-1ca3-402e-8f48-a2b82762cc9b). This step includes planning for the infrastructure required to deploy a single server. It includes planning for network and server settings, certificate requirements, DNS settings, network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy objects \(GPOs\).  
+-   [Step 1: Plan an advanced single server deployment](assetId:///2e91e90f-1ca3-402e-8f48-a2b82762cc9b). This step includes planning for the infrastructure required to deploy a single server. It includes planning for network and server settings, certificate requirements, DNS settings, network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy objects (GPOs).  
   
 -   [Step 2: Plan the RADIUS server deployment](assetId:///913954de-8be6-4fb8-82f5-fa9c0944a959).  
   

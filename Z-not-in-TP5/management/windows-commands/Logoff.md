@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 939f09cc-de8c-436c-a05d-aca5f2a06371
 ---
 # Logoff
-Logs off a user from a session on a Remote Desktop Session Host \(RD Session Host\) server and deletes the session from the server.
+Logs off a user from a session on a Remote Desktop Session Host (RD Session Host) server and deletes the session from the server.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -28,9 +28,9 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 |-------------|---------------|
 |<SessionName>|Specifies the name of the session.|
 |<SessionID>|Specifies the numeric ID which identifies the session to the server.|
-|\/server:<ServerName>|Specifies the RD Session Host server that contains the session whose user you want to log off. If unspecified, the server on which you are currently active is used.|
-|\/v|Displays information about the actions being performed.|
-|\/?|Displays help at the command prompt.|
+|/server:<ServerName>|Specifies the RD Session Host server that contains the session whose user you want to log off. If unspecified, the server on which you are currently active is used.|
+|/v|Displays information about the actions being performed.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 

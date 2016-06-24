@@ -24,7 +24,7 @@ ksetup /removerealm <RealmName>
 |<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run.|
 
 ## Remarks
-The realm name is stored in two places in the registry: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\ControlSet001** and **\\CurrentControlSet\\Control\\Lsa\\Kerberos**.
+The realm name is stored in two places in the registry: **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** and **\CurrentControlSet\Control\Lsa\Kerberos**.
 
 You cannot remove the default realm name from the domain controller because this will reset its DNS information, and removing it might make the domain controller unusable.
 

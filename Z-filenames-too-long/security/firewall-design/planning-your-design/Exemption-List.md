@@ -23,21 +23,21 @@ Generally, the following conditions are reasons to consider adding a computer to
 
 -   If the computer must be accessed by trusted computers from different isolated domains that do not have an Active Directory trust relationship established with each other.
 
--   If the computer is a domain controller running version of Windows earlier than  Windows Server 2008 , or if any of its clients are running a version of Windows earlier than Windows Vista.
+-   If the computer is a domain controller running version of Windows earlier than  Windows Server 2008 , or if any of its clients are running a version of Windows earlier than Windows Vista.
 
 -   If the computer must support trusted and untrusted computers, but cannot use IPsec to help secure communications to trusted computers.
 
-For large organizations, the list of exemptions might grow very large if all the exemptions are implemented by one connection security rule for the whole domain or for all trusted forests. If you can require all computers in your isolated domain to run at least Windows Vista or  Windows Server 2008 , you can greatly reduce the size of this list. A large exemption list has several unwanted effects on every computer that receives the GPO, including the following:
+For large organizations, the list of exemptions might grow very large if all the exemptions are implemented by one connection security rule for the whole domain or for all trusted forests. If you can require all computers in your isolated domain to run at least Windows Vista or  Windows Server 2008 , you can greatly reduce the size of this list. A large exemption list has several unwanted effects on every computer that receives the GPO, including the following:
 
 -   Reduces the overall effectiveness of isolation.
 
--   Creates a larger management burden \(because of frequent updates\).
+-   Creates a larger management burden (because of frequent updates).
 
 -   Increases the size of the IPsec policy, which means that it consumes more memory and CPU resources, slows down network throughput, and increases the time required to download and apply the GPO containing the IPsec policy.
 
 To keep the number of exemptions as small as possible, you have several options:
 
--   Carefully consider the communications requirements of each isolation zone, especially server\-only zones. They might not be required to communicate with every exemption in the domain\-level policy for clients.
+-   Carefully consider the communications requirements of each isolation zone, especially server-only zones. They might not be required to communicate with every exemption in the domain-level policy for clients.
 
 -   Consolidate server functions. If several exempt services can be hosted at one IP address, the number of exemptions is reduced.
 

@@ -23,14 +23,14 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 
 |Parameter|Description|
 |-------------|---------------|
-|<KeyName*>*|Specifies the full path of the subkey or entry to be added. To specify a remote computer, include the computer name \(in the format \\\\<ComputerName>\\\) as part of the *KeyName*. Omitting \\\\ComputerName\\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
-|\/v <ValueName>|Specifies the name of the registry entry to be added under the specified subkey.|
-|\/ve|Specifies that the registry entry that is added to the registry has a null value.|
-|\/t <Type>|Specifies the type for the registry entry. *Type* must be one of the following:<br /><br />REG\_SZ<br /><br />REG\_MULTI\_SZ<br /><br />REG\_DWORD\_BIG\_ENDIAN<br /><br />REG\_DWORD<br /><br />REG\_BINARY<br /><br />REG\_DWORD\_LITTLE\_ENDIAN<br /><br />REG\_LINK<br /><br />REG\_FULL\_RESOURCE\_DESCRIPTOR<br /><br />REG\_EXPAND\_SZ|
-|\/s <Separator>|Specifies the character to be used to separate multiple instances of data when the REG\_MULTI\_SZ data type is specified and more than one entry needs to be listed. If not specified, the default separator is **\\0**.|
-|\/d <Data>|Specifies the data for the new registry entry.|
-|\/f|Adds the registry entry without prompting for confirmation.|
-|\/?|Displays help for **reg add** at the command prompt.|
+|<KeyName*>*|Specifies the full path of the subkey or entry to be added. To specify a remote computer, include the computer name (in the format \\\\<ComputerName>\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
+|/v <ValueName>|Specifies the name of the registry entry to be added under the specified subkey.|
+|/ve|Specifies that the registry entry that is added to the registry has a null value.|
+|/t <Type>|Specifies the type for the registry entry. *Type* must be one of the following:<br /><br />REG_SZ<br /><br />REG_MULTI_SZ<br /><br />REG_DWORD_BIG_ENDIAN<br /><br />REG_DWORD<br /><br />REG_BINARY<br /><br />REG_DWORD_LITTLE_ENDIAN<br /><br />REG_LINK<br /><br />REG_FULL_RESOURCE_DESCRIPTOR<br /><br />REG_EXPAND_SZ|
+|/s <Separator>|Specifies the character to be used to separate multiple instances of data when the REG_MULTI_SZ data type is specified and more than one entry needs to be listed. If not specified, the default separator is **\0**.|
+|/d <Data>|Specifies the data for the new registry entry.|
+|/f|Adds the registry entry without prompting for confirmation.|
+|/?|Displays help for **reg add** at the command prompt.|
 
 ## Remarks
 
@@ -43,30 +43,30 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 |0|Success|
 |1|Failure|
 
--   For the REG\_EXPAND\_SZ key type, use the caret symbol \( **^** \) with **%**" inside the \/d parameter
+-   For the REG_EXPAND_SZ key type, use the caret symbol ( **^** ) with **%**" inside the /d parameter
 
 -
 
 ## <a name="BKMK_examples"></a>Examples
-To add the key HKLM\\Software\\MyCo on remote computer ABC, type:
+To add the key HKLM\Software\MyCo on remote computer ABC, type:
 
 ```
 REG ADD \\ABC\HKLM\Software\MyCo
 ```
 
-To add a registry entry to HKLM\\Software\\MyCo with a value named **Data** of type REG\_BINARY and data of **fe340ead**, type:
+To add a registry entry to HKLM\Software\MyCo with a value named **Data** of type REG_BINARY and data of **fe340ead**, type:
 
 ```
 REG ADD HKLM\Software\MyCo /v Data /t REG_BINARY /d fe340ead
 ```
 
-To add a multivalued registry entry to  HKLM\\Software\\MyCo with a value name of **MRU** of type REG\_MULTI\_SZ and data of **fax\\0mail\\0\\0**, type:
+To add a multivalued registry entry to  HKLM\Software\MyCo with a value name of **MRU** of type REG_MULTI_SZ and data of **fax\0mail\0\0**, type:
 
 ```
 REG ADD HKLM\Software\MyCo /v MRU /t REG_MULTI_SZ /d fax\0mail\0\0
 ```
 
-To add an expanded registry entry to HKLM\\Software\\MyCo with a value name of **Path** of type REG\_EXPAND\_SZ and data of **%systemroot%**, type:
+To add an expanded registry entry to HKLM\Software\MyCo with a value name of **Path** of type REG_EXPAND_SZ and data of **%systemroot%**, type:
 
 ```
 REG ADD HKLM\Software\MyCo /v Path /t REG_EXPAND_SZ /d ^%systemroot^%

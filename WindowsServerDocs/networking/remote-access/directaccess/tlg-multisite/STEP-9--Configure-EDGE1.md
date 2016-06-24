@@ -16,19 +16,19 @@ The following procedures are performed on the EDGE1 server:
   
 1.  [Configure the DNS servers on EDGE1](assetId:///562744dc-30f6-42fa-bd5f-60a013b2179e#IPv6)—It is necessary to configure the DNS server from the corp2.corp.contoso.com domain on EDGE1.  
   
-2.  [Configure routing between subnets](assetId:///562744dc-30f6-42fa-bd5f-60a013b2179e#ConfigRouting)—Configure routing on EDGE1 to enable communication between the Corpnet and 2\-Corpnet subnets.  
+2.  [Configure routing between subnets](assetId:///562744dc-30f6-42fa-bd5f-60a013b2179e#ConfigRouting)—Configure routing on EDGE1 to enable communication between the Corpnet and 2-Corpnet subnets.  
   
 ## <a name="IPv6"></a>Configure the DNS servers on EDGE1  
   
 1.  In the Server Manager console, click **Local Server**, and then in the **Properties** area, next to **Corpnet**, click the link.  
   
-2.  In the Network Connections window, right\-click **Corpnet**, and then click **Properties**.  
+2.  In the Network Connections window, right-click **Corpnet**, and then click **Properties**.  
   
-3.  Click **Internet Protocol Version 4 \(TCP\/IPv4\)**, and then click **Properties**.  
+3.  Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.  
   
 4.  In **Alternate DNS server**, type **10.2.0.1**. and then click **OK**.  
   
-5.  Click **Internet Protocol Version 6 \(TCP\/IPv6\)**, and then click **Properties**.  
+5.  Click **Internet Protocol Version 6 (TCP/IPv6)**, and then click **Properties**.  
   
 6.  In **Alternate DNS server**, type **2001:db8:2::1** and then click **OK**.  
   
@@ -38,7 +38,7 @@ The following procedures are performed on the EDGE1 server:
   
 ## <a name="ConfigRouting"></a>Configure routing between subnets  
   
-1.  On the **Start** screen, type**cmd.exe**, right\-click **cmd**, click **Advanced**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
+1.  On the **Start** screen, type**cmd.exe**, right-click **cmd**, click **Advanced**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
   
 2.  In the Command Prompt window, enter the following commands. After entering each command, press ENTER.  
   

@@ -22,7 +22,7 @@ Constant: SeDenyNetworkLogonRight
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Guest  
   
@@ -31,10 +31,10 @@ Constant: SeDenyNetworkLogonRight
 1.  Because all Active Directory Domain Services programs use a network logon for access, use caution when you assign this user right on domain controllers.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default, this setting is Guest on domain controllers and on stand\-alone servers.  
+By default, this setting is Guest on domain controllers and on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Guest|  
-|Stand\-Alone Server Default Settings|Guest|  
+|Stand-Alone Server Default Settings|Guest|  
 |Domain Controller Effective Default Settings|Guest|  
 |Member Server Effective Default Settings|Guest|  
 |Client Computer Effective Default Settings|Guest|  
@@ -60,7 +60,7 @@ This policy setting supersedes the **Access this computer from the network** pol
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -83,7 +83,7 @@ Assign the **Deny access to this computer from the network** user right to the f
   
 -   Anonymous logon  
   
--   Built\-in local Administrator account  
+-   Built-in local Administrator account  
   
 -   Local Guest account  
   
