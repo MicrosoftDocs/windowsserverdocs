@@ -385,7 +385,7 @@ The next step is to create a staging policy rule. Staging policies can be used t
   
 8.  Click **Add a condition** again, and add the following condition.  
     [And]   
-     [**User**] [**Group**] [**Member of any**] [**Value**](**FinanceException**\)  
+     [**User**] [**Group**] [**Member of any**] [**Value**]\(**FinanceException**)  
   
 9. To set the FinanceException, group, click **Add items** and in the **Select User, Computer, Service Account, or Group** window, type **FinanceException**.  
   
