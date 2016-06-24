@@ -136,7 +136,7 @@ For Hyper-V hosts and storage nodes, use the Management network as the default g
   	   
   Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016 Technical Preview. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.  
          
-  For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
+  For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
   
   To account for the overhead in tenant virtual network traffic caused by VXLAN or NVGRE encapsulation headers, the MTU of the Layer-2 fabric network (switches and hosts) must be set to greater than or equal to 1674 Bytes (including Layer-2 Ethernet headers). NICs  that support the new *EncapOverhead* advanced adapter keyword will set the MTU  automatically through the network controller Host Agent. NICs  that do not support the new *EncapOverhead* keyword need to set the MTU size manually on each physical host using the *JumboPacket* (or equivalent) keyword.  
   
