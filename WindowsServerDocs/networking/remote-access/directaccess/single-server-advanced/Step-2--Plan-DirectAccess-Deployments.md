@@ -94,7 +94,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two\-factor authentication. For more information about authenticating with two\-factor authentication, see [Deploy DirectAccess with OTP authentication](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001).  
   
-    -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](Step-1--Plan-the-DirectAccess-Infrastructure_1.md#bkmk_1_2_CAs_and_certs).  
+    -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](Step-1--Plan-the-DirectAccess-Infrastructure.md#bkmk_1_2_CAs_and_certs).  
   
     -   **Windows 7 clients**. By default, client computers that are running  Windows 7  cannot connect to a  Windows Server 2012 R2  or  Windows Server 2012  DirectAccess deployment. If you have clients in your organization that are running  Windows 7 , and they require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the DirectAccess Client Setup Wizard.  
   

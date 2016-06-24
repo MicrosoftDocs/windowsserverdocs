@@ -19,7 +19,7 @@ In addition to this topic, the following SDN planning content is available.
 
  - [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
   
-For information about Hyper-V Network Virtualization (HNV), which is used to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../../technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
+For information about Hyper-V Network Virtualization (HNV), which is used to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
   
 ## Prerequisites  
 This topic describes a number of hardware and software prerequisites, including:  
@@ -87,8 +87,6 @@ If you are using RDMA based storage, then you will need to define a VLAN and sub
   
 > [!IMPORTANT]  
 > Most physical switches require RDMA traffic to be sent on a tagged VLAN in order for quality of service settings to be applied correctly.  Do not place RDMA traffic onto an untagged VLAN or on a physical access-mode port.  
-  
-  
   
 Network Name  |Subnet  |Mask  |VLAN ID on trunk  |Gateway  |Reservations<br />(examples)    
 ---------|---------|---------|---------|---------|---------  
@@ -203,7 +201,8 @@ There are three gateway virtual machines; two active, one redundant.
   
 For TP5-based deployment automation, Active Directory must be available and reachable from these subnets. For more information about Active Directory, see [Active Directory Domain Services Overview](https://technet.microsoft.com/en-us/library/mt703721.aspx).  
   
->[!IMPORTANT] If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.  
+>[!IMPORTANT] 
+>If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.  
   
 ## Switch configuration examples  
   
