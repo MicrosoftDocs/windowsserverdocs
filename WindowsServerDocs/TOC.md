@@ -38,7 +38,7 @@
 ###### [Networking](compute/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.md)
 ###### [Scalability](compute/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)
 ##### Deploy
-###### [Set up hosts for live migration](Set-up-hosts-for-live-migration.md)
+###### [Set up hosts for live migration](compute/hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md)
 ###### [Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016](compute/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md)
 ##### Manage
 ###### [Choose between standard or production checkpoints](compute/hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
