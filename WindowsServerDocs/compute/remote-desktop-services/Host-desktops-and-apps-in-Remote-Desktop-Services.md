@@ -1,5 +1,5 @@
 ---
-title: Host desktops and apps in Remote Desktop Services
+title: Host desktops and apps in Remote Desktop Services on Azure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: a0bbef1b-6333-4f86-81bf-fd739387f551
 author: lizap
 ---
-# Host desktops and apps in Remote Desktop Services
+# Host desktops and apps in Remote Desktop Services on Azure
 Remote Desktop Services in Windows Server 2016 lets users access computers, apps, and resources remotely.   
   
 You can use Remote Desktop Services plus Azure services to create hosting solutions. Use the following information to get started with desktop hosting in Remote Desktop Services in Windows Server.
