@@ -331,10 +331,10 @@ Get-SbecForwarding
 If it returns that there is a connection from this target then the problem might be in the autologger settings. If it returns nothing, the problem is with the KDNET connection to start with. To diagnose KDNET connection problems, try checking the connection from both ends (that is, from the collector and from the target).  
   
 2. To see extended diagnostics from the Collector, add this to the \<collector> element of the configuration file:  
-<collector ... minlog="verbose">  
+\<collector ... minlog="verbose">  
 This will enable messages about every received packet.  
 3. Check whether any packets are received at all. Optionally, you might want to write the log in verbose mode directly to a file rather than through ETW. To do this, add this to the \<collector> element of the configuration file:  
-<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txtl">  
+\<collector ... minlog="verbose" log="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txtl">  
       
 4. Check the event logs for any messages about the received packets. Check whether any packets are received at all. If the packets are received but incorrect, check event messages for details.  
 5. From the target side, KDNET writes some diagnostic information into the registry. Look in   
