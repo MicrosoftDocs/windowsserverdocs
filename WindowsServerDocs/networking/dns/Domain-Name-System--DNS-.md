@@ -17,8 +17,8 @@ Domain Name System \(DNS\) is one of the industry\-standard suite of protocols t
 > [!NOTE]  
 > In addition to this topic, the following DNS content is available.  
 >   
-> -   [What's New in DNS Client in Windows Server Technical Preview](What-s-New-in-DNS-Client-in-Windows-Server-Technical-Preview.md)  
-> -   [What's New in DNS Server in Windows Server Technical Preview](What-s-New-in-DNS-Server-in-Windows-Server-Technical-Preview.md)  
+> -   [What's New in DNS Client in Windows Server Technical Preview](What-s-New-in-DNS-Client.md)  
+> -   [What's New in DNS Server](What-s-New-in-DNS-Server-in-Windows-Server-Technical-Preview.md)  
 > -   [DNS Policy Scenario Guide](deploy/DNS-Policy-Scenario-Guide.md)  
 > -   Video: [Windows Server 2016: DNS management in IPAM](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)  
   

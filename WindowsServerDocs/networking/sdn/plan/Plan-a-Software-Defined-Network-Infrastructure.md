@@ -15,12 +15,11 @@ author: vhorne
 # Plan a Software Defined Network Infrastructure
 Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment.  After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.  
   
->[!NOTE]
->In addition to this topic, the following SDN planning content is available.  
->   
-> -   [Installation and Preparation Requirements for Deploying Network Controller](plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
->  
->For information about Hyper-V Network Virtualization (HNV), which is used to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
+In addition to this topic, the following SDN planning content is available.  
+
+ - [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
+  
+For information about Hyper-V Network Virtualization (HNV), which is used to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../../technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
   
 ## Prerequisites  
 This topic describes a number of hardware and software prerequisites, including:  
@@ -66,7 +65,8 @@ The Public VIP logical network is required to have IP subnet prefixes that are r
 #### Private VIP logical network  
   
 The Private VIP logical network is not required to be routable outside of the cloud as it is used for VIPs that are only accessed from internal cloud clients, such as GRE gateways or private services.  
->[!NOTE] At this time the the script deployment method does not use the Private VIP logical network.   
+>[!NOTE]
+>At this time the the script deployment method does not use the Private VIP logical network.   
   
 #### GRE VIP logical network  
   The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.   
@@ -108,8 +108,10 @@ You need to create a BGP peer on the router that is used by your SDN infrastruct
 BGP peering is typically configured in a managed switch or router as part of the network infrastructure. The BGP peer could also be configured on a Windows Server with the Routing and Remote Access Server (RRAS) role installed in a Routing Only mode. This BGP router peer in the network infrastructure must be configured to have its own ASN and allow peering from an ASN that is assigned to the SDN components (SLB/MUX and HNV Gateways). You must obtain the following information from your physical router, or from the network administrator in control of that router:  
 * Router ASN  
 * Router IP address  
-* ASN for use by SDN components (can be any AS number from the private ASN range)  
-   >[!NOTE] Four byte ASNs are not supported by the SLB/MUX. You must allocate two byte ASNs to the SLB/MUX and the router that it connects to. You can use 4 byte ASNs elsewhere in your environment.  
+* ASN for use by SDN components (can be any AS number from the private ASN range)
+
+   >[!NOTE]
+   >Four byte ASNs are not supported by the SLB/MUX. You must allocate two byte ASNs to the SLB/MUX and the router that it connects to. You can use 4 byte ASNs elsewhere in your environment.  
   
 You or your network administrator must configure the BGP router peer to accept connections from the ASN and IP address or subnet address of the Transit logical network that your HNV gateway and SLB/MUXes are using.  
   

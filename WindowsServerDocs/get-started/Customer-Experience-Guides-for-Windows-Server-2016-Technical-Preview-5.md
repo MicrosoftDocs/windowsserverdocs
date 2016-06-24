@@ -60,9 +60,6 @@ With the release of Technical Preview 5, deploying a highly available RDS deploy
 -   [Deploy Software Defined Networks using scripts](../networking/sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)  
 Software Defined Networking \(SDN\) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. This topic covers how to deploy a Microsoft Software Defined Network infrastructure using scripts. The infrastructure includes a network controller, an SLB\/MUX, virtual networks, and associated ACLs. Additionally, another script deploys a tenant workload for you to experiment with.  
   
--   [Deploy Software Defined Networks using Virtual Machine Manager](../networking/sdn/deploy/Deploy-Software-Defined-Networks-using-Virtual-Machine-Manager.md)  
-This topic helps you evaluate the Software Defined Networking \(SDN\) features in Windows Server 2016 and Virtual Machine Manager 2016 Technology Preview 3. In particular, this topic is focused on scenarios that incorporate VMM with the Microsoft Network Controller, a new feature in Windows Server 2016.  
-  
 -   [Remote Direct Memory Access and Switch Embedded Teaming](../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)  
 This topic provides information on configuring Remote Direct Memory Access \(RDMA\) interfaces with Hyper\-V in Windows Server® 2016 Technical Preview, in addition to information about Switch Embedded Teaming \(SET\).  
   
