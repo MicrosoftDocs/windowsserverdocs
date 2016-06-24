@@ -23,8 +23,8 @@ The previous scenario provided instructions for configuring DNS policy for geo-l
   
 The secondary servers use the zone transfer protocols Authoritative Transfer \(AXFR\) and Incremental Zone Transfer \(IXFR\) to request and receive zone updates that include new changes to the zones on the primary DNS servers.   
   
->[!NOTE]  
->For more information about AXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 5936](https://tools.ietf.org/rfc/rfc5936.txt). For more information about IXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 1995](https://tools.ietf.org/html/rfc1995).  
+>[!NOTE]
+>>For more information about AXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 5936](https://tools.ietf.org/rfc/rfc5936.txt). For more information about IXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 1995](https://tools.ietf.org/html/rfc1995).  
   
 ## <a name="bkmk_example"></a>Primary-Secondary Geo-Location Based Traffic Management Example  
 Following is an example of how you can use DNS policy in a primary-secondary deployment to achieve traffic redirection on the basis of the physical location of the client that performs a DNS query.  
@@ -76,7 +76,8 @@ For any further update in a zone scope, an IXFR notification is sent to the seco
 ## <a name="bkmk_config"></a>How to configure DNS Policy for Primary-Secondary Geo-Location Based Traffic Management  
 Before you begin, ensure that you have completed all of the steps in the topic [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](Scenario:%20Use%20DNS%20Policy%20for%20Geo-Location%20Based%20Traffic%20Management%20with%20Primary%20Servers.md), and your primary DNS server is configured with zones, zone scopes, DNS Client Subnets, and DNS policy.  
   
->[!NOTE] The instructions in this topic to copy DNS Client Subnets, zone scopes, and DNS policies from DNS primary servers to DNS secondary servers are for your initial DNS setup and validation. In the future you might want to change the DNS Client Subnets, zone scopes, and policies settings on the primary server. In this circumstance, you can create automation scripts to keep the secondary servers synchronized with the primary server.  
+>[!NOTE]
+> The instructions in this topic to copy DNS Client Subnets, zone scopes, and DNS policies from DNS primary servers to DNS secondary servers are for your initial DNS setup and validation. In the future you might want to change the DNS Client Subnets, zone scopes, and policies settings on the primary server. In this circumstance, you can create automation scripts to keep the secondary servers synchronized with the primary server.  
   
 To configure DNS policy for primary-secondary geo-location based query responses, you must perform the following steps.  
   
@@ -88,7 +89,7 @@ To configure DNS policy for primary-secondary geo-location based query responses
   
 The following sections provide detailed configuration instructions.  
   
->[!IMPORTANT]  
+>[!IMPORTANT]
 > - The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.  
 > -  Membership in **DnsAdmins**, or equivalent, is required to perform the following procedures.  
   
