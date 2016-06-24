@@ -70,7 +70,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     -   **One network adapter**. In this configuration, the DirectAccess server is installed behind an edge device such as a firewall or a router. The network adapter is connected to the internal network.  
   
-    For more information about selecting the topology for your deployment, see [1.1 Plan network topology and settings](Step-1--Plan-the-DirectAccess-Infrastructure_1.md#bkmk_1_1_Network_svr_top_settings).  
+    For more information about selecting the topology for your deployment, see [1.1 Plan network topology and settings](Step-1--Plan-the-DirectAccess-Infrastructure.md#bkmk_1_1_Network_svr_top_settings).  
   
 -   **ConnectTo address**  
   
@@ -86,7 +86,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
 -   **IPv6 prefixes**  
   
-    If the Remote Access Server Setup Wizard detects that IPv6 has been deployed on the network adapters, it automatically populates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 infrastructure, you must manually change them. For more information, see [1.1 Plan network topology and settings](Step-1--Plan-the-DirectAccess-Infrastructure_1.md#bkmk_1_1_Network_svr_top_settings).  
+    If the Remote Access Server Setup Wizard detects that IPv6 has been deployed on the network adapters, it automatically populates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 infrastructure, you must manually change them. For more information, see [1.1 Plan network topology and settings](Step-1--Plan-the-DirectAccess-Infrastructure.md#bkmk_1_1_Network_svr_top_settings).  
   
 -   **Authentication**  
   
