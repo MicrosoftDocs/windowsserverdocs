@@ -15,7 +15,7 @@ Enables all services for Windows Deployment Services.
 
 |Subommand|Description|
 |-------------|---------------|
-|[Using the enable-Server Command](using-the-enable-command/Using-the-enable-Server-Command.md)|Enables all services on a specified Windows Deployment Services server \(Deployment Server\).|
+|[Using the enable-Server Command](using-the-enable-command/Using-the-enable-Server-Command.md)|Enables all services on a specified Windows Deployment Services server (Deployment Server).|
 |[Using the enable-TransportServer Command](using-the-enable-command/Using-the-enable-TransportServer-Command.md)|Enables all services on a specified Transport Server.|
 
 

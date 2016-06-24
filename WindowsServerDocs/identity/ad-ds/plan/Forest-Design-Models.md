@@ -1,4 +1,4 @@
-﻿---
+---
 title: Forest Design Models
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -12,7 +12,7 @@ ms.assetid: 066d1fe4-cd49-4efb-9e24-3ab0612620fc
 author: Femila
 ---
 # Forest Design Models
-You can apply one of the following three forest design models in your Active Directory environment:  
+You can apply one of the following three forest design models in your Active Directory environment:  
   
 -   Organizational forest model  
   
@@ -25,11 +25,11 @@ It is likely that you will need to use a combination of these models to meet the
 ## Organizational forest model  
 In the organizational forest model, user accounts and resources are contained in the forest and managed independently. The organizational forest can be used to provide service autonomy, service isolation, or data isolation, if the forest is configured to prevent access to anyone outside the forest.  
   
-If users in an organizational forest need to access resources in other forests \(or the reverse\), trust relationships can be established between one organizational forest and the other forests. This makes it possible for administrators to grant access to resources in the other forest. The following illustration shows the organizational forest model.  
+If users in an organizational forest need to access resources in other forests (or the reverse), trust relationships can be established between one organizational forest and the other forests. This makes it possible for administrators to grant access to resources in the other forest. The following illustration shows the organizational forest model.  
   
 ![](media/Forest-Design-Models/b1ddb47e-78a5-49c7-bb21-d7421b7b84b8.gif)  
   
-Every Active Directory design includes at least one organizational forest.  
+Every Active Directory design includes at least one organizational forest.  
   
 ## Resource forest model  
 In the resource forest model, a separate forest is used to manage resources. Resource forests do not contain user accounts other than those required for service administration and those required to provide alternate access to the resources in that forest, if the user accounts in the organizational forest become unavailable. Forest trusts are established so that users from other forests can access the resources contained in the resource forest. The following illustration shows the resource forest model.  

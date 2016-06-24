@@ -21,9 +21,9 @@ Fondue.exe /enable-feature:<feature_name> [/caller-name:<program_name>] [/hide-u
 
 |Parameter|Description|
 |-------------|---------------|
-|\/enable\-feature:<*feature\_name*>|Specifies the name of the Windows optional feature you want to enable. You can only enable one feature per command line. To enable multiple features, use Fondue.exe for each feature.|
-|\/caller\-name:<*program\_name*>|Specifies the program or process name when you call Fondue.exe from a script or batch file. You can use this option to add the program name to the SQM report if there is an error.|
-|\/hide\-ux:{all &#124; rebootRequest}|Use **all** to hide all messages to the user including progress and permission requests to access Windows Update. If permission is required, the operation will fail.<br /><br />Use **rebootRequest** to only hide user messages asking for permission to reboot the computer. Use this option if you have a script that controls reboot requests.|
+|/enable-feature:<*feature_name*>|Specifies the name of the Windows optional feature you want to enable. You can only enable one feature per command line. To enable multiple features, use Fondue.exe for each feature.|
+|/caller-name:<*program_name*>|Specifies the program or process name when you call Fondue.exe from a script or batch file. You can use this option to add the program name to the SQM report if there is an error.|
+|/hide-ux:{all &#124; rebootRequest}|Use **all** to hide all messages to the user including progress and permission requests to access Windows Update. If permission is required, the operation will fail.<br /><br />Use **rebootRequest** to only hide user messages asking for permission to reboot the computer. Use this option if you have a script that controls reboot requests.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To enable Microsoft .NET Framework 3.5, type:

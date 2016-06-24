@@ -24,9 +24,9 @@ rename [<Drive>:][<Path>]<FileName1> <FileName2>
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<Path>\]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters \(**\*** and **?**\).|
+|[<Drive>:][<Path>]<FileName1>|Specifies the location and name of the file or set of files you want to rename. *FileName1* can include wildcard characters (**\*** and **?**).|
 |<FileName2>|Specifies the new name for the file. You can use wildcard characters to specify new names for multiple files.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -34,7 +34,7 @@ rename [<Drive>:][<Path>]<FileName1> <FileName2>
 
 -   You cannot use the **ren** command to rename files across drives or to move files to a different directory.
 
--   You can use wildcard characters \(**\*** and **?**\) in either *FileName* parameter. Characters that are represented by wildcard characters in *FileName2* will be identical to the corresponding characters in *FileName1*.
+-   You can use wildcard characters (**\*** and **?**) in either *FileName* parameter. Characters that are represented by wildcard characters in *FileName2* will be identical to the corresponding characters in *FileName1*.
 
 -   *FileName2* must be a unique file name. If *FileName2* matches an existing file name, **ren** displays the following message:
 

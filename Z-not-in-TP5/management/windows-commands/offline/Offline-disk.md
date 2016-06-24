@@ -14,7 +14,7 @@ ms.assetid: 8fb9b3c3-0b2c-4192-a2e7-f706292653e3
 Takes the online disk with focus to the offline state.
 
 > [!IMPORTANT]
-> This DiskPart command is not available in any edition of Windows Vista.
+> This DiskPart command is not available in any edition of Windows Vista.
 
 ## Syntax
 

@@ -22,7 +22,7 @@ Constant: SeRemoteInteractiveLogonRight
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not Defined  
   
@@ -31,7 +31,7 @@ Constant: SeRemoteInteractiveLogonRight
 1.  To control who can open a Remote Desktop Services connection and log on to the computer, add users to or remove users from the Remote Desktop Users group.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
 By default, members of the Administrators group have this right on domain controllers, workstations, and servers. The Remote Desktops Users group also has this right on workstations and servers.  
@@ -42,13 +42,13 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not Defined|  
 |Default Domain Controller Policy|Administrators|  
-|Stand\-Alone Server Default Settings|Administrators<br /><br />Remote Desktop Users|  
+|Stand-Alone Server Default Settings|Administrators<br /><br />Remote Desktop Users|  
 |Domain Controller Effective Default Settings|Administrators|  
 |Member Server Effective Default Settings|Administrators<br /><br />Remote Desktop Users|  
 |Client Computer Effective Default Settings|Administrators<br /><br />Remote Desktop Users|  
   
 ### Operating system version differences  
-There have been no changes to the settings and effects of this user right policy setting since it was introduced in Windows Server 2003 and Windows XP. However, the policy setting name was changed in  Windows Server 2008 R2  and  Windows 7  from **Allow log on through Terminal Services**.  
+There have been no changes to the settings and effects of this user right policy setting since it was introduced in Windows Server 2003 and Windows XP. However, the policy setting name was changed in  Windows Server 2008 R2  and  Windows 7  from **Allow log on through Terminal Services**.  
   
 ## Policy management  
 This section describes different features and tools available to help you manage this policy.  
@@ -81,15 +81,15 @@ This section describes how an attacker might exploit a feature or its configurat
 Any account with the **Allow log on through Remote Desktop Services** user right can log on to the remote console of the computer. If you do not restrict this user right to legitimate users who must log on to the console of the computer, unauthorized users could download and run malicious software to elevate their privileges.  
   
 ### Countermeasure  
-For domain controllers, assign the **Allow log on through Remote Desktop Services** user right only to the Administrators group. For other server roles and end\-user computers, add the Remote Desktop Users group. For servers that have the Remote Desktop \(RD\) Session Host role service enabled and do not run in Application Server mode, ensure that only authorized IT personnel who must manage the computers remotely belong to these groups.  
+For domain controllers, assign the **Allow log on through Remote Desktop Services** user right only to the Administrators group. For other server roles and end-user computers, add the Remote Desktop Users group. For servers that have the Remote Desktop (RD) Session Host role service enabled and do not run in Application Server mode, ensure that only authorized IT personnel who must manage the computers remotely belong to these groups.  
   
 > [!CAUTION]  
-> For RD Session Host servers that run in Application Server mode, ensure that only users who require access to the server have accounts that belong to the Remote Desktop Users group because this built\-in group has this logon right by default.  
+> For RD Session Host servers that run in Application Server mode, ensure that only users who require access to the server have accounts that belong to the Remote Desktop Users group because this built-in group has this logon right by default.  
   
 Alternatively, you can assign the **Deny log on through Remote Desktop Services** user right to groups such as Account Operators, Server Operators, and Guests. However, be careful when you use this method because you could block access to legitimate administrators who also belong to a group that has the **Deny log on through Remote Desktop Services** user right.  
   
 ### Potential impact  
-Removal of the **Allow log on through Remote Desktop Services** user right from other groups \(or membership changes in these default groups\) could limit the abilities of users who perform specific administrative roles in your environment. You should confirm that delegated activities are not adversely affected.  
+Removal of the **Allow log on through Remote Desktop Services** user right from other groups (or membership changes in these default groups) could limit the abilities of users who perform specific administrative roles in your environment. You should confirm that delegated activities are not adversely affected.  
   
 ## See Also  
 [User Rights Assignment](User-Rights-Assignment.md)  

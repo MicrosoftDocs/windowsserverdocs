@@ -17,7 +17,7 @@ You will perform the following steps to configure the RSA deployment:
 
 1.  [Install the operating system on the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#InstallOS)—Install [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)], [!INCLUDE[winblue_server_1](includes/winblue_server_1_md.md)] or [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)] on the RSA server.
 
-2.  [Configure TCP/IP on RSA](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#TCP)—Configure TCP\/IP settings on the RSA server.
+2.  [Configure TCP/IP on RSA](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#TCP)—Configure TCP/IP settings on the RSA server.
 
 3.  [Copy Authentication Manager installation files to the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#copyinstfiles)—After installing the operating system on RSA, copy the Authentication Manager files to the RSA computer.
 
@@ -41,19 +41,19 @@ You will perform the following steps to configure the RSA deployment:
 
 1.  On RSA, start the installation of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] .
 
-2.  Follow the instructions to complete the installation, specifying [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] \(Full Installation\) and a strong password for the local Administrator account. Log on using the local Administrator account.
+2.  Follow the instructions to complete the installation, specifying [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] (Full Installation) and a strong password for the local Administrator account. Log on using the local Administrator account.
 
 3.  Connect RSA to a network that has Internet access and run Windows Update to install the latest updates for [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] , and then disconnect from the Internet.
 
 4.  Connect RSA to the Corpnet subnet.
 
-## <a name="TCP"></a>Configure TCP\/IP on RSA
+## <a name="TCP"></a>Configure TCP/IP on RSA
 
 1.  In Initial Configuration Tasks, click **Configure networking**.
 
-2.  In **Network Connections**, right\-click **Local Area Connection**, and then click **Properties**.
+2.  In **Network Connections**, right-click **Local Area Connection**, and then click **Properties**.
 
-3.  Click **Internet Protocol Version 4 \(TCP\/IPv4\)**, and then click **Properties**.
+3.  Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.
 
 4.  Click **Use the following IP address**. In **IP address**, type **10.0.0.5**. In **Subnet mask**, type **255.255.255.0**. In **Default Gateway**, type **10.0.0.2**. Click **Use the following DNS server addresses**, in **Preferred DNS server**, type **10.0.0.1**.
 
@@ -67,17 +67,17 @@ You will perform the following steps to configure the RSA deployment:
 
 ## <a name="copyinstfiles"></a>Copy Authentication Manager installation files to the RSA server
 
-1.  On the RSA server create the folder C:\\RSA Installation.
+1.  On the RSA server create the folder C:\RSA Installation.
 
-2.  Copy the contents of the RSA Authentication Manager 7.1 SP4 media to the C:\\RSA Installation folder.
+2.  Copy the contents of the RSA Authentication Manager 7.1 SP4 media to the C:\RSA Installation folder.
 
-3.  Create the subfolder C:\\RSA Installation\\License and Token.
+3.  Create the subfolder C:\RSA Installation\License and Token.
 
-4.  Copy the RSA license files to C:\\RSA Installation\\License and Token.
+4.  Copy the RSA license files to C:\RSA Installation\License and Token.
 
 ## <a name="JoinDomain"></a>Join the RSA server to the CORP domain
 
-1.  Right\-click **My Computer**, and click **Properties**.
+1.  Right-click **My Computer**, and click **Properties**.
 
 2.  In the **System Properties** dialog box, on the **Computer Name** tab, click **Change**.
 
@@ -109,7 +109,7 @@ You will perform the following steps to configure the RSA deployment:
 
 1.  If the Security Warning message appears at any time during this process, click **Run** to continue.
 
-2.  Open the C:\\RSA Installation folder and double\-click **autorun.exe**.
+2.  Open the C:\RSA Installation folder and double-click **autorun.exe**.
 
 3.  Click **Install Now**, click **Next**, select the top option for the Americas, and click **Next**.
 
@@ -117,11 +117,11 @@ You will perform the following steps to configure the RSA deployment:
 
 5.  Select **Primary Instance**, and click **Next**.
 
-6.  In the **Directory Name:** field type **C:\\RSA**, and click **Next**.
+6.  In the **Directory Name:** field type **C:\RSA**, and click **Next**.
 
-7.  Verify that the server name \(RSA.corp.contoso.com\) and IP address are correct, and click **Next**.
+7.  Verify that the server name (RSA.corp.contoso.com) and IP address are correct, and click **Next**.
 
-8.  Browse to C:\\RSA Installation\\License and Token, and click **Next**.
+8.  Browse to C:\RSA Installation\License and Token, and click **Next**.
 
 9. On the **Verify license file** page, click **Next**.
 
@@ -135,9 +135,9 @@ You will perform the following steps to configure the RSA deployment:
 
 ## <a name="confiauthmgr"></a>Configure RSA Authentication Manager
 
-1.  If the RSA Security Console does not open automatically, then on the RSA computer desktop double\-click “RSA Security Console”.
+1.  If the RSA Security Console does not open automatically, then on the RSA computer desktop double-click “RSA Security Console”.
 
-2.  If the security certificate warning \/ security alert appears, click **Continue to this website** or click **Yes** to proceed, and add this site to trusted sites, if requested.
+2.  If the security certificate warning / security alert appears, click **Continue to this website** or click **Yes** to proceed, and add this site to trusted sites, if requested.
 
 3.  In the **User ID** field type **Administrator** and click **OK**.
 
@@ -149,7 +149,7 @@ You will perform the following steps to configure the RSA deployment:
 
     2.  Click **Import Tokens Job**, and then click **Add New**.
 
-    3.  In the **Import Options** section click **Browse**. Browse to and select the tokens XML file in the C:\\ RSA Installation\\License and Token folder and click **Open**.
+    3.  In the **Import Options** section click **Browse**. Browse to and select the tokens XML file in the C:\ RSA Installation\License and Token folder and click **Open**.
 
     4.  Click **Submit Job** on the bottom of the page.
 
@@ -157,7 +157,7 @@ You will perform the following steps to configure the RSA deployment:
 
     1.  In the **RSA Security Console** click the **Identity** tab, click **Users**, and click **Add New**.
 
-    2.  In the **Last Name:** section type **User**, and in the **User ID:** section type **User1** \(UserID must be the same as the AD username used for this lab\).  In the **Password:** and **Confirm Password:** sections type a strong password. Clear the **‘Require user to change password at next logon’** check box and click **Save**.
+    2.  In the **Last Name:** section type **User**, and in the **User ID:** section type **User1** (UserID must be the same as the AD username used for this lab).  In the **Password:** and **Confirm Password:** sections type a strong password. Clear the **‘Require user to change password at next logon’** check box and click **Save**.
 
 7.  Assign User1 to one of the imported tokens.
 
@@ -167,23 +167,23 @@ You will perform the following steps to configure the RSA deployment:
 
     3.  Under the **Serial Number** heading click the first number listed, and click **Assign**.
 
-    4.  Click the assigned token, and click **Edit**. In the **SecurID PIN Management** section for **User Authentication Requirement**, select **Do not require PIN \(only tokencode\)**.
+    4.  Click the assigned token, and click **Edit**. In the **SecurID PIN Management** section for **User Authentication Requirement**, select **Do not require PIN (only tokencode)**.
 
     5.  Click **Save and Distribute Token**.
 
-    6.  On the **Distribute Software Token** page in the **Basics** section, click **Issue Token File \(SDTID\)**.
+    6.  On the **Distribute Software Token** page in the **Basics** section, click **Issue Token File (SDTID)**.
 
     7.  On the **Distribute Software Token** page in the **Token File Options** section, clear the **Enable copy protection** check box. Click **No Password** and **Next**.
 
-    8.  On the **Distribute Software Token** page in the **Download File** section, click **Download Now**. Click **Save**. Browse to C:\\RSA Installation and click **Save** and **Close**.
+    8.  On the **Distribute Software Token** page in the **Download File** section, click **Download Now**. Click **Save**. Browse to C:\RSA Installation and click **Save** and **Close**.
 
     9. Minimize the **RSA Security Console** for use later.
 
 8.  Configure Authentication Manager as RADIUS server.
 
-    1.  On the RSA computer desktop double\-click **“RSA Security Operations Console”**.
+    1.  On the RSA computer desktop double-click **“RSA Security Operations Console”**.
 
-    2.  If the security certificate warning \/ security alert appears, click **Continue to this website** or click **Yes** to proceed, and add this site to trusted sites if requested.
+    2.  If the security certificate warning / security alert appears, click **Continue to this website** or click **Yes** to proceed, and add this site to trusted sites if requested.
 
     3.  Enter the User ID and Password and click **Log On**.
 
@@ -207,7 +207,7 @@ You will perform the following steps to configure the RSA deployment:
 
     3.  Type a strong password of your choice in the **Shared Secret** field. You will use this same password later when configuring EDGE1 for OTP.
 
-    4.  Leave the **IP Address** field blank, and the **Make \/ Model** entry as **Standard RADIUS**.
+    4.  Leave the **IP Address** field blank, and the **Make / Model** entry as **Standard RADIUS**.
 
     5.  Click **Save without RSA Agent**.
 
@@ -219,17 +219,17 @@ You will perform the following steps to configure the RSA deployment:
 
     3.  Notice that the IP address for EDGE1 is now displayed in the **IP Address** field. Click **Save**.
 
-11. Generate a configuration file for the EDGE1 server \(AM\_Config.zip\).
+11. Generate a configuration file for the EDGE1 server (AM_Config.zip).
 
     1.  On the **Access** tab, highlight **Authentication Agents**, and click **Generate Configuration File**.
 
     2.  On the **Generate Configuration File** page click **Generate Config File**, and then click **Download Now**.
 
-    3.  Click **Save**, browse to C:\\ RSA Installation, and click **Save**.
+    3.  Click **Save**, browse to C:\ RSA Installation, and click **Save**.
 
     4.  Click **Close** on the **Download Complete** dialog.
 
-12. Generate a node secret file for the EDGE1 server \(EDGE1\_NodeSecret.zip\).
+12. Generate a node secret file for the EDGE1 server (EDGE1_NodeSecret.zip).
 
     1.  On the **Access** tab, highlight **Authentication Agents**, and click **Manage Existing**.
 
@@ -241,9 +241,9 @@ You will perform the following steps to configure the RSA deployment:
 
     5.  On the **Node Secret File Generated** page click **Download Now**.
 
-    6.  On the **File Download** dialog click **Save**, browse to C:\\RSA Installation, and click **Save**. Click **Close** on the **Download Complete** dialog.
+    6.  On the **File Download** dialog click **Save**, browse to C:\RSA Installation, and click **Save**. Click **Close** on the **Download Complete** dialog.
 
-    7.  From the RSA Authentication Manager media copy \\auth\_mgr\\windows\-x86\_64\\am\\rsa\-ace\_nsload\\win32\-5.0\-x86\\agent\_nsload.exe to C:\\RSA Installation.
+    7.  From the RSA Authentication Manager media copy \auth_mgr\windows-x86_64\am\rsa-ace_nsload\win32-5.0-x86\agent_nsload.exe to C:\RSA Installation.
 
 ## <a name="BKMK_DAProbeUser"></a>Create DAProbeUser
 
@@ -256,9 +256,9 @@ Use this procedure to install SecurID software token on CLIENT1.
 
 #### Install SecurID software token
 
-1.  On the CLIENT1 computer, create the folder C:\\RSA Files. Copy the file Software\_Tokens.zip from C:\\RSA Installation on the RSA computer to C:\\RSA Files. Extract the file User1\_000031701832.SDTID to C:\\RSA Files on CLIENT1.
+1.  On the CLIENT1 computer, create the folder C:\RSA Files. Copy the file Software_Tokens.zip from C:\RSA Installation on the RSA computer to C:\RSA Files. Extract the file User1_000031701832.SDTID to C:\RSA Files on CLIENT1.
 
-2.  Access the RSA SecurID software token media source, and double\-click RSASECURIDTOKEN410 in the **SecurID SoftwareToken client app** folder to start the RSA SecurID installation. If the **Open File – Security Warning** message appears, then click **Run**.
+2.  Access the RSA SecurID software token media source, and double-click RSASECURIDTOKEN410 in the **SecurID SoftwareToken client app** folder to start the RSA SecurID installation. If the **Open File – Security Warning** message appears, then click **Run**.
 
 3.  On the **RSA SecurID Software Token – InstallShield Wizard** dialog click **Next** twice.
 
@@ -272,7 +272,7 @@ Use this procedure to install SecurID software token on CLIENT1.
 
 8.  Click **Import from File**.
 
-9. Click **Browse**, select C:\\RSA Files\\User1\_000031701832.SDTID, and click **Open**.
+9. Click **Browse**, select C:\RSA Files\User1_000031701832.SDTID, and click **Open**.
 
 10. Click **OK** twice.
 
@@ -281,23 +281,23 @@ Use this procedure to configure EDGE1 to perform RSA authentication.
 
 #### Configure the RSA Authentication Agent
 
-1.  On EDGE1 open Windows Explorer and create the folder C:\\RSA Files. Browse to the RSA ACE Installation media.
+1.  On EDGE1 open Windows Explorer and create the folder C:\RSA Files. Browse to the RSA ACE Installation media.
 
-2.  Copy the files agent\_nsload.exe, AM\_Config.zip and EDGE1\_NodeSecret.zip from the RSA media to C:\\RSA Files.
+2.  Copy the files agent_nsload.exe, AM_Config.zip and EDGE1_NodeSecret.zip from the RSA media to C:\RSA Files.
 
 3.  Extract the contents of both zip files to the following locations:
 
-    1.  C:\\Windows\\system32\\
+    1.  C:\Windows\system32\
 
-    2.  C:\\Windows\\SysWOW64\\
+    2.  C:\Windows\SysWOW64\
 
-4.  Copy agent\_nsload.exe to C:\\Windows\\SysWOW64\\.
+4.  Copy agent_nsload.exe to C:\Windows\SysWOW64\\.
 
-5.  Open an elevated command prompt and navigate to C:\\Windows\\SysWOW64.
+5.  Open an elevated command prompt and navigate to C:\Windows\SysWOW64.
 
-6.  Type **agent\_nsload.exe –f nodesecret.rec –p <password>** where <password> is the strong password that you created during the initial RSA configuration. Press Enter.
+6.  Type **agent_nsload.exe –f nodesecret.rec –p <password>** where <password> is the strong password that you created during the initial RSA configuration. Press Enter.
 
-7.  Copy C:\\Windows\\SysWOW64\\securid to C:\\Windows\\System32.
+7.  Copy C:\Windows\SysWOW64\securid to C:\Windows\System32.
 
 ## <a name="configOTP"></a>Configure EDGE1 to support OTP authentication
 Use this procedure to configure OTP for DirectAccess, and verify the configuration.
@@ -306,15 +306,15 @@ Use this procedure to configure OTP for DirectAccess, and verify the configurati
 
 1.  On EDGE1, open Server Manager, and click **REMOTE ACCESS** in the left pane.
 
-2.  Right\-click **EDGE1** in the SERVERS pane, and select **Remote Access Management**.
+2.  Right-click **EDGE1** in the SERVERS pane, and select **Remote Access Management**.
 
 3.  Click **Configuration**.
 
 4.  In the **DirectAccess Setup** window, under **Step 2 – Remote Access Server**, click **Edit**.
 
-5.  Click **Next** three times, and in the **Authentication** section select **Two factor authentication** and **Use OTP**, and ensure that **Use computer certificates** is checked. Verify that the root CA is set to **CN\=corp\-APP1\-CA**. Click **Next**.
+5.  Click **Next** three times, and in the **Authentication** section select **Two factor authentication** and **Use OTP**, and ensure that **Use computer certificates** is checked. Verify that the root CA is set to **CN=corp-APP1-CA**. Click **Next**.
 
-6.  In the **OTP RADIUS Server** section, double\-click the blank **Server Name** field.
+6.  In the **OTP RADIUS Server** section, double-click the blank **Server Name** field.
 
 7.  In the **Add a RADIUS Server** dialog, type **RSA** in the **Server name** field. Click **Change** next to the **Shared secret** field, and type the same password that you used when configuring the RADIUS clients on the RSA server in the **New secret** and **Confirm new secret** fields. Click **OK** twice, and click **Next**.
 
@@ -329,9 +329,9 @@ Use this procedure to configure OTP for DirectAccess, and verify the configurati
 
 11. On the **Remote Access Review** dialog box click **Apply**, wait for the DirectAccess policy to be updated, and click **Close**.
 
-12. [!INCLUDE[clickstart](includes/clickstart_md.md)]**powershell.exe**, right\-click **powershell**, click **Advanced**, and click **Run as administrator**. [!INCLUDE[uac_confirm_action](includes/uac_confirm_action_md.md)]
+12. [!INCLUDE[clickstart](includes/clickstart_md.md)]**powershell.exe**, right-click **powershell**, click **Advanced**, and click **Run as administrator**. [!INCLUDE[uac_confirm_action](includes/uac_confirm_action_md.md)]
 
-13. In the [!INCLUDE[wps_2](includes/wps_2_md.md)] window, type **gpupdate \/force** and press ENTER.
+13. In the [!INCLUDE[wps_2](includes/wps_2_md.md)] window, type **gpupdate /force** and press ENTER.
 
 14. Close and reopen the Remote Access Management Console and verify that all OTP settings are correct.
 

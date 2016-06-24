@@ -27,7 +27,7 @@ ksetup /domain <DomainName>
 None.
 
 ## <a name="BKMK_Examples"></a>Examples
-Establish a connection to a valid domain, such as Microsoft by using the \/mapuser subcommand:
+Establish a connection to a valid domain, such as Microsoft by using the /mapuser subcommand:
 
 ```
 ksetup /mapuser principal@realm domain-user /domain domain-name

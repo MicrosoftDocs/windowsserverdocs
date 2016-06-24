@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1
 ---
 # List shadows
-Lists persistent and existing non\-persistent shadow copies that are on the system.
+Lists persistent and existing non-persistent shadow copies that are on the system.
 
 ## Syntax
 

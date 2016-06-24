@@ -18,7 +18,7 @@ This policy setting determines which shared folders can be accessed by anonymous
   
 ### Possible values  
   
--   User\-defined list of shared folders  
+-   User-defined list of shared folders  
   
 -   Not Defined  
   
@@ -27,7 +27,7 @@ This policy setting determines which shared folders can be accessed by anonymous
 1.  Set this policy to a null value. There should be little impact because this is the default value. All users will have to be authenticated before they can access shared resources on the server.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -36,13 +36,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not defined|  
+|Stand-Alone Server Default Settings|Not defined|  
 |DC Effective Default Settings|Not defined|  
 |Member Server Effective Default Settings|Not defined|  
 |Client Computer Effective Default Settings|Not defined|  
   
 ### Operating system version differences  
-In Windows Server 2003, the default setting for stand\-alone servers, member servers, and client computers was COMCFG, DFS$. In later versions of the Windows operating system, the default setting for these server types of GPOs is not defined \(null\).  
+In Windows Server 2003, the default setting for stand-alone servers, member servers, and client computers was COMCFG, DFS$. In later versions of the Windows operating system, the default setting for these server types of GPOs is not defined (null).  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  

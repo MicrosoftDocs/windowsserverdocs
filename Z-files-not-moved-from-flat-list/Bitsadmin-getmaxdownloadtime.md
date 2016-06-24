@@ -26,7 +26,7 @@ bitsadmin /GetMaxDownloadTime <Job>
   
 ## Remarks  
   
--   N\/A  
+-   N/A  
   
 ## <a name="BKMK_examples"></a>Examples  
 The following example gets maximum download time for the job named *myDownloadJob* in seconds.  

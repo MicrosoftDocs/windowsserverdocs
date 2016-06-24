@@ -35,7 +35,7 @@ This section includes information about the supported networking scenarios for [
 
 -   [NIC Teaming scenarios](#bkmk_nicteam)
 
-### <a name="bkmk_sdn"></a>Software Defined Networking \(SDN\) scenarios
+### <a name="bkmk_sdn"></a>Software Defined Networking (SDN) scenarios
 You can use the following documentation to deploy SDN scenarios with [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].
 
 -   [Deploy a Software Defined Network infrastructure using VMM](Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
@@ -47,32 +47,32 @@ For more information, see [Software Defined Networking &#40;SDN&#41;](Software-D
 #### <a name="bkmk_netc"></a>Network Controller scenarios
 The Network Controller scenarios allow you to:
 
--   Deploy and manage a multiple\-node instance of Network Controller. For more information, see [Deploy Network Controller using Windows PowerShell](Deploy-Network-Controller-using-Windows-PowerShell.md).
+-   Deploy and manage a multiple-node instance of Network Controller. For more information, see [Deploy Network Controller using Windows PowerShell](Deploy-Network-Controller-using-Windows-PowerShell.md).
 
 -   Use Network Controller to programmatically define network policy by using the REST Northbound API.
 
--   Use Network Controller to create and manage virtual networks with Hyper\-V Network Virtualization – using NVGRE or VXLAN encapsulation.
+-   Use Network Controller to create and manage virtual networks with Hyper-V Network Virtualization – using NVGRE or VXLAN encapsulation.
 
 For more information, see [Network Controller](Network-Controller.md).
 
-#### <a name="bkmk_netf"></a>Network Function Virtualization \(NFV\) scenarios
+#### <a name="bkmk_netf"></a>Network Function Virtualization (NFV) scenarios
 The NFV scenarios allow you to:
 
 -   Deploy and use a software load balancer to distribute both northbound and southbound traffic.
 
--   Deploy and use a software load balancer to distribute eastbound and westbound traffic for virtual networks created with Hyper\-V Network Virtualization.
+-   Deploy and use a software load balancer to distribute eastbound and westbound traffic for virtual networks created with Hyper-V Network Virtualization.
 
--   Deploy and use a NAT software load balancer for virtual networks created with Hyper\-V Network Virtualization.
+-   Deploy and use a NAT software load balancer for virtual networks created with Hyper-V Network Virtualization.
 
 -   Deploy and use a Layer 3 forwarding gateway
 
--   Deploy and use a virtual private network \(VPN\) gateway for site\-to\-site IPsec \(IKEv2\) tunnels
+-   Deploy and use a virtual private network (VPN) gateway for site-to-site IPsec (IKEv2) tunnels
 
--   Deploy and use a Generic Routing Encapsulation \(GRE\) gateway.
+-   Deploy and use a Generic Routing Encapsulation (GRE) gateway.
 
--   Deploy and configure dynamic routing and transit routing between sites using Border Gateway Protocol \(BGP\).
+-   Deploy and configure dynamic routing and transit routing between sites using Border Gateway Protocol (BGP).
 
--   Configure M\+N redundancy for Layer 3 and site\-to\-site gateways, and for BGP routing.
+-   Configure M+N redundancy for Layer 3 and site-to-site gateways, and for BGP routing.
 
 -   Use Network Controller to specify ACLs on virtual networks and network interfaces.
 
@@ -85,20 +85,20 @@ The network platform scenarios allow you to:
 
 -   Use a converged NIC to combine both RDMA and Ethernet traffic using a single network adapter.
 
--   Create a low\-latency data path by using Packet Direct, enabled in the Hyper\-V Virtual Switch, and a single network adapter.
+-   Create a low-latency data path by using Packet Direct, enabled in the Hyper-V Virtual Switch, and a single network adapter.
 
 -   Configure SET to spread SMB Direct and RDMA traffic flows between up to two network adapters.
 
 For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).
 
-#### <a name="bkmk_switch"></a>Hyper\-V Virtual Switch Scenarios
-The Hyper\-V Virtual Switch scenarios allow you to:
+#### <a name="bkmk_switch"></a>Hyper-V Virtual Switch Scenarios
+The Hyper-V Virtual Switch scenarios allow you to:
 
--   Create a Hyper\-V Virtual Switch with a Remote Direct Memory Access \(RDMA\) vNIC
+-   Create a Hyper-V Virtual Switch with a Remote Direct Memory Access (RDMA) vNIC
 
--   Create a Hyper\-V Virtual Switch with Switch Embedded Teaming \(SET\) and RDMA vNICs
+-   Create a Hyper-V Virtual Switch with Switch Embedded Teaming (SET) and RDMA vNICs
 
--   Create a SET team in Hyper\-V Virtual Switch
+-   Create a SET team in Hyper-V Virtual Switch
 
 -   Manage a SET team by using Windows PowerShell commands
 
@@ -107,9 +107,9 @@ For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch
 ### <a name="bkmk_dns"></a>DNS Server scenarios
 DNS Server scenarios allow you to:
 
--   Specify Geo\-Location based traffic management using DNS Policies
+-   Specify Geo-Location based traffic management using DNS Policies
 
--   Configure split\-brain DNS using DNS Policies
+-   Configure split-brain DNS using DNS Policies
 
 -   Apply filters on DNS queries  using DNS Policies
 
@@ -119,11 +119,11 @@ DNS Server scenarios allow you to:
 
 -   Configure DNS Zone transfer policies
 
--   Configure DNS server policies on Active Directory Domain Services \(AD DS\) integrated zones
+-   Configure DNS server policies on Active Directory Domain Services (AD DS) integrated zones
 
 -   Configure Response Rate Limiting
 
--   Specify DNS\-based Authentication of Named Entities \(DANE\)
+-   Specify DNS-based Authentication of Named Entities (DANE)
 
 -   Configure support for Unknown Records in DNS
 
@@ -136,7 +136,7 @@ The IPAM scenarios allow you to:
 
 -   Use IPAM for centralized management of DNS properties, including zones and resource records.
 
--   Define granular role\-based access control policies and delegate IPAM users or user groups to manage the set of DNS properties that you specify.
+-   Define granular role-based access control policies and delegate IPAM users or user groups to manage the set of DNS properties that you specify.
 
 -   Use the Windows PowerShell commands for IPAM to automate access control configuration for DHCP and DNS.
 
@@ -154,7 +154,7 @@ The NIC Teaming scenarios allow you to:
 -   Remove network adapters from the NIC team
 
 > [!NOTE]
-> In [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] 4, you can use NIC Teaming in Hyper\-V, however in some cases Virtual Machine Queues \(VMQ\) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq –Name <NetworkAdapterName> -Enable`
+> In [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] 4, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq –Name <NetworkAdapterName> -Enable`
 
 The following NIC Teaming scenarios are not supported in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] 4.
 
@@ -164,7 +164,7 @@ The following NIC Teaming scenarios are not supported in [!INCLUDE[winthreshold_
 
 -   Unsupported configuration detection, including the detection of vNICs, kdNICs, tNICs, or bridges in a NIC team. Because unsupported configurations are not detected, they are not blocked by NIC Teaming and might cause unstable systems or complete system failures.
 
--   Using NIC Teaming in the Cisco N1K extension does not work.  \(The Windows PowerShell NetSwitchTeam cmdlets do not function correctly, and the extension relies on these commands.\)
+-   Using NIC Teaming in the Cisco N1K extension does not work.  (The Windows PowerShell NetSwitchTeam cmdlets do not function correctly, and the extension relies on these commands.)
 
 -   Windows PowerShell error messages for NIC Teaming might be unintelligible. In addition, the `-WhatIf` and `-PassThrough` options for Windows PowerShell NIC Teaming commands do not function correctly.
 
@@ -173,7 +173,7 @@ For more information, see [NIC Teaming](NIC-Teaming.md).
 ## <a name="bkmk_unsupp"></a>Unsupported Networking Scenarios
 The following networking scenarios are not supported in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] 3.
 
--   VLAN\-based tenant virtual networks.
+-   VLAN-based tenant virtual networks.
 
 -   IPv6 is not supported in either the underlay or overlay.
 

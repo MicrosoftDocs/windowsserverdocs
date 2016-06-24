@@ -12,10 +12,10 @@ ms.topic: article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
 ---
 # Windows Server Update Services (WSUS)
-Windows Server Update Services \(WSUS\) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to  fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
+Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to  fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
 
 ## WSUS Server role description
-A WSUS server provides features that you can use  to manage and distribute updates through a management console. A WSUS server can also be the update source for other WSUS servers within the organization. The WSUS server that acts as an update source is called an upstream server. In a WSUS implementation, at least one WSUS server on your network must be able to connect to Microsoft Update to get available update information. As an administrator, you can determine \- based on network security and configuration \- how many other WSUS servers connect directly to Microsoft Update.
+A WSUS server provides features that you can use  to manage and distribute updates through a management console. A WSUS server can also be the update source for other WSUS servers within the organization. The WSUS server that acts as an update source is called an upstream server. In a WSUS implementation, at least one WSUS server on your network must be able to connect to Microsoft Update to get available update information. As an administrator, you can determine - based on network security and configuration - how many other WSUS servers connect directly to Microsoft Update.
 
 ### Practical applications
 Update management is the process of controlling the deployment and maintenance of interim software releases into production environments. It helps you maintain operational efficiency, overcome security vulnerabilities, and maintain the stability of your production environment. If your organization cannot determine and maintain a known level of trust within its operating systems and application software, it might have a number of security vulnerabilities that, if exploited, could lead to a loss of revenue and intellectual property. Minimizing this threat requires you to have properly configured systems, use the latest software, and install the recommended software updates.
@@ -35,7 +35,7 @@ The core scenarios where WSUS adds value to your business are:
 > 
 > However, because of changes in this release of Windows Server and Windows Server 2012 R2, when upgrading from any version of Windows Server and WSUS 3.2, the installation is not blocked. Failure to uninstall WSUS 3.2 prior to performing a Windows Server 2012 R2 upgrade will cause the post installation tasks for WSUS in Windows Server 2012 R2 to fail. In this case, the only known corrective measure is to format the hard drive and reinstall Windows Server.
 
-Windows Server Update Services is a built\-in server role that includes the following enhancements:
+Windows Server Update Services is a built-in server role that includes the following enhancements:
 
 -   Can be added and removed by using the Server Manager
 
@@ -43,10 +43,10 @@ Windows Server Update Services is a built\-in server role that includes the foll
 
 -   Adds SHA256 hash capability for additional security
 
--   Provides client and server separation: Versions of the Windows Update Agent \(WUA\) can ship independently of WSUS
+-   Provides client and server separation: Versions of the Windows Update Agent (WUA) can ship independently of WSUS
 
 ### Using Windows PowerShell to manage WSUS
-For system administrators to automate their operations, they need coverage through command\-line automation. The main goal is to facilitate WSUS administration by allowing system administrators to automate their day\-to\-day operations.
+For system administrators to automate their operations, they need coverage through command-line automation. The main goal is to facilitate WSUS administration by allowing system administrators to automate their day-to-day operations.
 
 **What value does this change add?**
 

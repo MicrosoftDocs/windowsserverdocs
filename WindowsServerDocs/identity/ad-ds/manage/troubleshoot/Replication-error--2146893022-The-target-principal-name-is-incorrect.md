@@ -55,15 +55,15 @@ The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
 &lt;X&gt; failures have occurred since the last success.</code>
         </listItem>
-<listItem><para>REPADMIN.EXE reports that replication attempt has failed with status -2146893022 (0x80090322).</para><para>REPADMIN commands that commonly cite the -2146893022 (0x80090322 status) include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting the "target principal name is incorrect" error are shown below:</para><code>c:\&gt;repadmin /showreps
-&lt;site name&gt;\&lt;destination DC&gt;
+<listItem><para>REPADMIN.EXE reports that replication attempt has failed with status -2146893022 (0x80090322).</para><para>REPADMIN commands that commonly cite the -2146893022 (0x80090322 status) include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting the "target principal name is incorrect" error are shown below:</para><code>c:&gt;repadmin /showreps
+&lt;site name&gt;&lt;destination DC&gt;
 DC Options: IS_GC 
 Site Options: (none)
 DC object GUID: &lt;NTDS settings object object GUID&gt;
 DChttp://bemis/13/Pages/2090913_en-US.aspx invocationID: &lt;invocation ID string&gt;
 ==== INBOUND NEIGHBORS ======================================
 DC=&lt;DN path for directory partition&gt;
-&lt;site name&gt;\&lt;source DC via RPC
+&lt;site name&gt;&lt;source DC via RPC
 DC object GUID: &lt;source DCs ntds settings object object guid&gt;
 Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result -2146893022 (0x80090322):
 The target principal name is incorrect.</codeFeaturedElement>
@@ -84,8 +84,8 @@ A full synchronization of the security accounts manager (SAM) database to domain
   <section address="BKMK_Causes">
     <title>Causes</title>
     <content>
-      <para>The -2146893022 \ 0x80090322 \ SEC_E_WRONG_PRINCIPAL error code is not an error returned by Active Directory but may be returned by lower layer components, including RPC, Kerberos, SSL, LSA and NTLM, for different root causes. </para>
-      <para>Kerberos errors that are mapped by Windows code to -2146893022 \ 0x80090322 \ SEC_E_WRONG_PRINCIPAL include:</para>
+      <para>The -2146893022  0x80090322  SEC_E_WRONG_PRINCIPAL error code is not an error returned by Active Directory but may be returned by lower layer components, including RPC, Kerberos, SSL, LSA and NTLM, for different root causes. </para>
+      <para>Kerberos errors that are mapped by Windows code to -2146893022  0x80090322  SEC_E_WRONG_PRINCIPAL include:</para>
       <list class="bullet">
         <listItem>
           <para>KRB_AP_ERR_MODIFIED (0x29 / 41 decimal / KRB_APP_ERR_MODIFIED) </para>
@@ -97,7 +97,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
           <para>KRB_AP_ERR_NOT_US (0x23h / 35 decimal / The ticket is not for us)</para>
         </listItem>
       </list>
-      <para>Some specific root causes for Active Directory logging -2146893022 \ 0x80090322 \ SEC_E_WRONG_PRINCIPAL include: </para>
+      <para>Some specific root causes for Active Directory logging -2146893022  0x80090322  SEC_E_WRONG_PRINCIPAL include: </para>
       <list class="bullet">
         <listItem>
           <para>A bad name-to-IP mapping in DNS, WINS, HOST or LMHOST file caused the destination DC to connect to the wrong source DC in the same Kerberos realm.</para>
@@ -268,7 +268,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
                   <para>KDC</para>
                 </TD>
                 <TD>
-                  <para>Kerberos v5</para>
+                  <para>Kerberos v5</para>
                 </TD>
                 <TD>
                   <para>KerberosV5:TGS Request Realm: CONTOSO.COM Sname: E3514235-4B06-11D1-AB04-00C04FC2DCD2/6f3f96d3-dfbf-4daf-9236-4d6da6909dd2/contoso.com</para>
@@ -288,7 +288,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
                   <para>DC1</para>
                 </TD>
                 <TD>
-                  <para>Kerberos v5</para>
+                  <para>Kerberos v5</para>
                 </TD>
                 <TD>
                   <para>KerberosV5:TGS Response Cname: CONTOSO-DC1$</para>
@@ -556,16 +556,16 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
         <content>
           <list class="ordered">
             <listItem>
-              <para>Promote \\dc1 + \\DC2 + \\DC3 in contoso.com domain. End-to-end replication occurs without error.</para>
+              <para>Promote dc1 + DC2 + DC3 in contoso.com domain. End-to-end replication occurs without error.</para>
             </listItem>
             <listItem>
-              <para>Stop the KDC on \\DC1 and \\DC2 to force off-box Kerberos traffic that can be observed in network trace. End-to-end replication occurs without error.</para>
+              <para>Stop the KDC on DC1 and DC2 to force off-box Kerberos traffic that can be observed in network trace. End-to-end replication occurs without error.</para>
             </listItem>
             <listItem>
-              <para>Create Host file entry for \\DC2 pointing to IP address of a DC in a remote forest simulating a bad host to IP mapping in a host "A" / "AAAA" record or perhaps a stale NTDS Settings object in the destination DC’s copy of Active Directory.</para>
+              <para>Create Host file entry for DC2 pointing to IP address of a DC in a remote forest simulating a bad host to IP mapping in a host "A" / "AAAA" record or perhaps a stale NTDS Settings object in the destination DC’s copy of Active Directory.</para>
             </listItem>
             <listItem>
-              <para>Start Active Directory Sites and Services on the console of \\DC1. Right-click \\DC1's inbound connection object from \\DC2 and note replication error "the target account name is incorrect.”</para>
+              <para>Start Active Directory Sites and Services on the console of DC1. Right-click DC1's inbound connection object from DC2 and note replication error "the target account name is incorrect.”</para>
             </listItem>
           </list>
         </content>
@@ -575,19 +575,19 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
         <content>
           <list class="ordered">
             <listItem>
-              <para>Promote \\dc1 + \\DC2 + \\DC3 in contoso.com domain. End-to-end replication occurs without error.</para>
+              <para>Promote dc1 + DC2 + DC3 in contoso.com domain. End-to-end replication occurs without error.</para>
             </listItem>
             <listItem>
-              <para>Stop the KDC on \\DC1 and \\DC2 to force off-box Kerberos traffic that can be observed in network trace. End-to-end replication occurs without error.</para>
+              <para>Stop the KDC on DC1 and DC2 to force off-box Kerberos traffic that can be observed in network trace. End-to-end replication occurs without error.</para>
             </listItem>
             <listItem>
-              <para>Disabling inbound replication on KDC \\DC3 simulating a replication failure on the KDC.</para>
+              <para>Disabling inbound replication on KDC DC3 simulating a replication failure on the KDC.</para>
             </listItem>
             <listItem>
-              <para>Reset the computer account password on \\DC2 three or more times such that \\DC1 and \\DC2 have DC2 current password.</para>
+              <para>Reset the computer account password on DC2 three or more times such that DC1 and DC2 have DC2 current password.</para>
             </listItem>
             <listItem>
-              <para>Start Active Directory Sites and Services on the console of \\DC1. Right click \\DC1's inbound connection object from \\DC2 and note replication error "the target account name is incorrect."</para>
+              <para>Start Active Directory Sites and Services on the console of DC1. Right click DC1's inbound connection object from DC2 and note replication error "the target account name is incorrect."</para>
             </listItem>
           </list>
         </content>
@@ -595,7 +595,7 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
       <section>
         <title>DS RPC client logging</title>
         <content>
-          <para>Set NTDS\Diagnostics Loggings\DS RPC Client = 3. Trigger replication. Look for Task Category Event 1962 + 1963. Note the fully qualified cname cited in the "directory service" field. Destination DC should be able to ping this record and have the returned address map to the current IP address of the source DC. </para>
+          <para>Set NTDSDiagnostics LoggingsDS RPC Client = 3. Trigger replication. Look for Task Category Event 1962 + 1963. Note the fully qualified cname cited in the "directory service" field. Destination DC should be able to ping this record and have the returned address map to the current IP address of the source DC. </para>
         </content>
       </section>
       <section>

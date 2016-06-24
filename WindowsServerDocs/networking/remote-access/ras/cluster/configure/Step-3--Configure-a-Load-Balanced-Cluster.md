@@ -12,14 +12,14 @@ ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
 author: coreyp
 ---
 # Step 3: Configure a Load-Balanced Cluster
-After preparing servers for the cluster, configure load\-balancing on the single server, configure the required certificates, and deploy the cluster.  
+After preparing servers for the cluster, configure load-balancing on the single server, configure the required certificates, and deploy the cluster.  
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1 Configure the IPv6 prefix](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_Prefix)|If the corporate environment is IPv4\+IPv6, or IPv6\-only, then on the single Remote Access server, ensure that the IPv6 prefix assigned to DirectAccess client computers is large enough to cover all of the servers in your cluster.|  
+|[3.1 Configure the IPv6 prefix](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_Prefix)|If the corporate environment is IPv4+IPv6, or IPv6-only, then on the single Remote Access server, ensure that the IPv6 prefix assigned to DirectAccess client computers is large enough to cover all of the servers in your cluster.|  
 |[3.2 Enable load balancing](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_NLB)|Enable load balancing on the single Remote Access server.|  
-|[3.3 Install the IP-HTTPS certificate](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_InstallIPHTTP)|Each server in the cluster requires a server certificate to authenticate IP\-HTTPS connection.  Export the IP\-HTTPS certificate from the single Remote Access server and deploy it on each server you will add to the cluster. This is required only if using non\-self\-signed certificates.|  
-|[3.4 Install the network location server certificate](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_NLS)|If the single server has the network location server deployed locally, then you will need to deploy the network location server certificate on each server in the cluster. If the network location server is hosted on an external server, a certificate on each server is not required. This is required only if using non\-self\-signed certificates.|  
+|[3.3 Install the IP-HTTPS certificate](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_InstallIPHTTP)|Each server in the cluster requires a server certificate to authenticate IP-HTTPS connection.  Export the IP-HTTPS certificate from the single Remote Access server and deploy it on each server you will add to the cluster. This is required only if using non-self-signed certificates.|  
+|[3.4 Install the network location server certificate](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_NLS)|If the single server has the network location server deployed locally, then you will need to deploy the network location server certificate on each server in the cluster. If the network location server is hosted on an external server, a certificate on each server is not required. This is required only if using non-self-signed certificates.|  
 |[3.5 Add servers to the cluster](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_Add)|Add all servers to the cluster. Remote Access must not be configured on the servers to be added.|  
 |[3.6 Remove a server from the cluster](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKMK_remove)|Instructions for removing a server from the cluster.|  
 |[3.7 Disable load balancing](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9#BKBK_disable)|Instructions for disabling load balancing.|  
@@ -40,7 +40,7 @@ After preparing servers for the cluster, configure load\-balancing on the single
   
 3.  In the middle pane of the console, in the **Step 2 DirectAccess Server** area, click **Edit**.  
   
-4.  Click **Prefix Configuration**. On the **Prefix Configuration** page, in **IPv6 prefix assigned to DirectAccess client computers**, enter the IPv6 prefix used for DirectAccess client computers with a subnet length of 59, for example, **2001:db8:1:1000::\/59**. If VPN were also enabled with IPv6, then an IPv6 prefix would be displayed, and the subnet length would need to be changed to 59. Click **Next**.  
+4.  Click **Prefix Configuration**. On the **Prefix Configuration** page, in **IPv6 prefix assigned to DirectAccess client computers**, enter the IPv6 prefix used for DirectAccess client computers with a subnet length of 59, for example, **2001:db8:1:1000::/59**. If VPN were also enabled with IPv6, then an IPv6 prefix would be displayed, and the subnet length would need to be changed to 59. Click **Next**.  
   
 5.  In the middle pane of the console, click **Finish**.  
   
@@ -59,21 +59,21 @@ After preparing servers for the cluster, configure load\-balancing on the single
   
 4.  Depending on what you chose in planning steps:  
   
-    1.  Windows NLB: On the **Load Balancing Method** page, click **Use Windows Network Load Balancing \(NLB\)**, and then click **Next**.  
+    1.  Windows NLB: On the **Load Balancing Method** page, click **Use Windows Network Load Balancing (NLB)**, and then click **Next**.  
   
     2.  External load balancer: On the **Load Balancing Method** page, click **Use an external load balancer**, and then click **Next**.  
   
 5.  In a single network adapter deployment, on the **Dedicated IP Addresses** page, do the following, and then click **Next**:  
   
-    1.  In the **IPv4 address** box, enter the new IPv4 address for this Remote Access server; the current IPv4 address will be the virtual IP address \(VIP\) of the load\-balanced cluster. In the **Subnet mask** box, enter the subnet mask.  
+    1.  In the **IPv4 address** box, enter the new IPv4 address for this Remote Access server; the current IPv4 address will be the virtual IP address (VIP) of the load-balanced cluster. In the **Subnet mask** box, enter the subnet mask.  
   
-    2.  If the corporate environment is native IPv6, then in the **IPv6 address** box, enter the new IPv6 address for this Remote Access server; the current IPv6 address will be the VIP of the load\-balanced cluster. In the **Subnet prefix length** box, enter the subnet prefix length.  
+    2.  If the corporate environment is native IPv6, then in the **IPv6 address** box, enter the new IPv6 address for this Remote Access server; the current IPv6 address will be the VIP of the load-balanced cluster. In the **Subnet prefix length** box, enter the subnet prefix length.  
   
 6.  In a two network adapter deployment, on the **External Dedicated IP Addresses** page, do the following, and then click **Next**:  
   
-    1.  In the **IPv4 address** box, enter the new external IPv4 address for this Remote Access server; the current IPv4 address will be the virtual IP address \(VIP\) of the load balancing cluster. In the **Subnet mask** box, enter the subnet mask.  
+    1.  In the **IPv4 address** box, enter the new external IPv4 address for this Remote Access server; the current IPv4 address will be the virtual IP address (VIP) of the load balancing cluster. In the **Subnet mask** box, enter the subnet mask.  
   
-    2.  If there are currently native IPv6 addresses configured on the internet\-facing network adapter of the Remote Access server, in the **IPv6 address** box, enter the new external IPv6 address for this Remote Access server; the current IPv6 address will be the VIP of the load balancing cluster. In the **Subnet prefix length** box, enter the subnet prefix length.  
+    2.  If there are currently native IPv6 addresses configured on the internet-facing network adapter of the Remote Access server, in the **IPv6 address** box, enter the new external IPv6 address for this Remote Access server; the current IPv6 address will be the VIP of the load balancing cluster. In the **Subnet prefix length** box, enter the subnet prefix length.  
   
 7.  In a two network adapter deployment, on the **Internal Dedicated IP Addresses** page, do the following, and then click **Next**:  
   
@@ -92,7 +92,7 @@ After preparing servers for the cluster, configure load\-balancing on the single
   
 ![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 If you chose to use Windows NLB in the planning steps, then execute the following:  
   
@@ -107,26 +107,26 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
 ```  
   
 > [!NOTE]  
-> It is recommended to not include changes to load\-balancer settings with changes to any other settings, if you are using staging GPOs, see [1.8.4 Managing Remote Access GPOs with limited permissions](assetId:///0064848b-b82e-4397-8fde-0c660c596076). Any changes to load\-balancer settings must be applied first and then other configuration changes should be made. Also, after configuring load\-balancer on a new DirectAccess server, please allow some time for the IP changes to be applied and replicated across the DNS servers in the enterprise, before you change other DirectAccess settings related to the new cluster.  
+> It is recommended to not include changes to load-balancer settings with changes to any other settings, if you are using staging GPOs, see [1.8.4 Managing Remote Access GPOs with limited permissions](assetId:///0064848b-b82e-4397-8fde-0c660c596076). Any changes to load-balancer settings must be applied first and then other configuration changes should be made. Also, after configuring load-balancer on a new DirectAccess server, please allow some time for the IP changes to be applied and replicated across the DNS servers in the enterprise, before you change other DirectAccess settings related to the new cluster.  
   
-## <a name="BKMK_InstallIPHTTP"></a>3.3 Install the IP\-HTTPS certificate  
+## <a name="BKMK_InstallIPHTTP"></a>3.3 Install the IP-HTTPS certificate  
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.  
   
-### <a name="IPHTTPSCert"></a>To install the IP\-HTTPS certificate  
+### <a name="IPHTTPSCert"></a>To install the IP-HTTPS certificate  
   
 1.  On the configured Remote Access server, click **Start**, type **mmc** and press ENTER. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
   
-2.  In the MMC console, on the **File** menu, click **Add\/Remove Snap\-in**.  
+2.  In the MMC console, on the **File** menu, click **Add/Remove Snap-in**.  
   
-3.  On the **Add or Remove Snap\-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Finish**, and then click **OK**.  
+3.  On the **Add or Remove Snap-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Finish**, and then click **OK**.  
   
-4.  In the left pane of the console, navigate to **Certificates \(Local Computer\)\\Personal\\Certificates**. Right\-click the IP\-HTTPS certificate, point to **All Tasks** and click **Export**.  
+4.  In the left pane of the console, navigate to **Certificates (Local Computer)\Personal\Certificates**. Right-click the IP-HTTPS certificate, point to **All Tasks** and click **Export**.  
   
 5.  On the **Welcome to the Certificate Export Wizard** page, click **Next**.  
   
 6.  On the **Export Private Key** page, click **Yes, export the private key**, and then click **Next**.  
   
-7.  On the **Export File Format** page, click **Personal Information Exchange – PKCS \#12 \(.PFX\)**, and then click **Next**.  
+7.  On the **Export File Format** page, click **Personal Information Exchange – PKCS #12 (.PFX)**, and then click **Next**.  
   
 8.  On the **Security** page, select the **Password** check box, enter a password in the **Password** box and confirm the password, and then click **Next**.  
   
@@ -140,11 +140,11 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 13. On the new DirectAccess server, click **Start**, type **mmc** and press ENTER. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
   
-14. In the MMC console, on the **File** menu, click **Add\/Remove Snap\-in**.  
+14. In the MMC console, on the **File** menu, click **Add/Remove Snap-in**.  
   
-15. On the **Add or Remove Snap\-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Finish**, and then click **OK**.  
+15. On the **Add or Remove Snap-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Finish**, and then click **OK**.  
   
-16. In the left pane of the console, navigate to **Certificates \(Local Computer\)\\Personal\\Certificates**. Right click the **Certificates** node, point to **All Tasks**, and then click **Import**.  
+16. In the left pane of the console, navigate to **Certificates (Local Computer)\Personal\Certificates**. Right click the **Certificates** node, point to **All Tasks**, and then click **Import**.  
   
 17. On the **Welcome to the Certificate Import Wizard** page, click **Next**.  
   
@@ -158,7 +158,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 22. On the **Certificate Import Wizard** dialog box, click **OK**.  
   
-23. Repeat steps 13\-22 on all servers that you want to be cluster members.  
+23. Repeat steps 13-22 on all servers that you want to be cluster members.  
   
 ## <a name="BKMK_NLS"></a>3.4 Install the network location server certificate  
 Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.  
@@ -167,13 +167,13 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 1.  On the Remote Access server, click **Start**, type **mmc**, and then press ENTER. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.  
   
-2.  Click **File**, and then click **Add\/Remove Snap\-ins**.  
+2.  Click **File**, and then click **Add/Remove Snap-ins**.  
   
 3.  Click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Local computer**, click **Finish**, and then click **OK**.  
   
-4.  In the console tree of the Certificates snap\-in, open **Certificates \(Local Computer\)\\Personal\\Certificates**.  
+4.  In the console tree of the Certificates snap-in, open **Certificates (Local Computer)\Personal\Certificates**.  
   
-5.  Right\-click **Certificates**, point to **All Tasks**, and then click **Request New Certificate**.  
+5.  Right-click **Certificates**, point to **All Tasks**, and then click **Request New Certificate**.  
   
 6.  Click **Next** twice.  
   
@@ -183,13 +183,13 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 8.  On the **Subject** tab of the **Certificate Properties** dialog box, in **Subject name**, for **Type**, select **Common name**.  
   
-9. In **Value**, type the fully qualified domain name \(FQDN\) for the intranet name of the network location server website \(for example, nls.corp.contoso.com\), and then click **Add**.  
+9. In **Value**, type the fully qualified domain name (FQDN) for the intranet name of the network location server website (for example, nls.corp.contoso.com), and then click **Add**.  
   
 10. Click **OK**, click **Enroll**, and then click **Finish**.  
   
-11. In the details pane of the Certificates snap\-in, verify that a new certificate with the FQDN was enrolled with **Intended Purposes** of **Server Authentication**.  
+11. In the details pane of the Certificates snap-in, verify that a new certificate with the FQDN was enrolled with **Intended Purposes** of **Server Authentication**.  
   
-12. Right\-click the certificate, and then click **Properties**.  
+12. Right-click the certificate, and then click **Properties**.  
   
 13. In **Friendly Name**, type **Network Location Certificate**, and then click **OK**.  
   
@@ -217,7 +217,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
     -   If you are deploying a topology with one network adapter, in **Network adapter**, select the adapter that is connected to the internal network.  
   
-6.  On the **Network Adapters** page, in **Select the certificate used to authenticate IP\-HTTPS connections**, click **Browse** to locate and select the IP\-HTTPS certificate, and then click **Next**.  
+6.  On the **Network Adapters** page, in **Select the certificate used to authenticate IP-HTTPS connections**, click **Browse** to locate and select the IP-HTTPS certificate, and then click **Next**.  
   
 7.  On the **Network Location Server** page, click **Browse** to select the certificate for the network location server website running on the Remote Access server, and then click **Next**.  
   
@@ -239,7 +239,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 ![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>  
@@ -269,7 +269,7 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 ![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>  
@@ -290,19 +290,19 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 ![](../../../../media/Step-3--Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 set-RemoteAccessLoadBalancer -disable  
 ```  
   
-Disabling load balancing will remove Remote Access settings and NLB settings \(if configured\) from all servers except the server from which it is being executed. On this Remote Access server, NLB settings will be removed \(if it was configured\) but Remote Access settings will remain.  
+Disabling load balancing will remove Remote Access settings and NLB settings (if configured) from all servers except the server from which it is being executed. On this Remote Access server, NLB settings will be removed (if it was configured) but Remote Access settings will remain.  
   
-Clicking **Remove configuration settings** will remove Remote Access and NLB \(if configured\) from all servers in the deployment.  
+Clicking **Remove configuration settings** will remove Remote Access and NLB (if configured) from all servers in the deployment.  
   
 > [!NOTE]  
 > -   If Remote Access is uninstalled when load balancing is deployed, all the servers are left with DIPs. The VIPs are removed. This causes all routes in the corporate network that are targeted to the VIPs addresses to fail. This also affects DNS entries which were resolved to the VIPs, such as the network location server certificate subject name. To avoid this issue, disable load balancing, which leaves the VIPs on the last Remote Access server, and then uninstall Remote Access.  
-> -   After using the **Set\-RemoteAccessLoadBalancer** cmdlet to disable load balancing, wait for 2 minutes before running any other cmdlet. This should also be done in any scripts that run another cmdlet after the **Set\-RemoteAccessLoadBalancer \-disable** cmdlet.  
+> -   After using the **Set-RemoteAccessLoadBalancer** cmdlet to disable load balancing, wait for 2 minutes before running any other cmdlet. This should also be done in any scripts that run another cmdlet after the **Set-RemoteAccessLoadBalancer -disable** cmdlet.  
 > -   Disabling load balancing changes the virtual IP address of the cluster into a dedicated IP address. As a result, any operation that queries for the name of the server will fail until the cached DNS entry on the server expires. Make sure that you do not run any Remote Access PowerShell cmdlets after disabling load balancing until the cache on the server has expired. This problem is more common if you try to disable load balancing on a machine from another machine that is in another domain. This also occurs if you disable load balancing from the Remote Access Management console and may prevent the configuration from loading. The configuration will load after the cache has expired or has been flushed.  
   
 ## <a name="BKMK_Links"></a>See also  

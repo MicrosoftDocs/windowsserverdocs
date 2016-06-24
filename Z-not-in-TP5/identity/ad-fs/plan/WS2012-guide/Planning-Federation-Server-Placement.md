@@ -13,7 +13,7 @@ ms.assetid: 3a392fb3-e8a9-4dfd-a3e5-1da67fe93f2f
 author: billmath
 ---
 # Planning Federation Server Placement
-The most critical component of an Active Directory Federation Services \(AD FS\) deployment is the federation server. Therefore, it is important that you plan your federation server placement strategy carefully, including when and where to deploy federation servers. The information in the following topics can help you determine when and where to create a federation server or federation server farm and whether to use that federation server in the account partner role, the resource partner role, or both:  
+The most critical component of an Active Directory Federation Services (AD FS) deployment is the federation server. Therefore, it is important that you plan your federation server placement strategy carefully, including when and where to deploy federation servers. The information in the following topics can help you determine when and where to create a federation server or federation server farm and whether to use that federation server in the account partner role, the resource partner role, or both:  
   
 -   [Review the Role of the Federation Server in the Account Partner](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
   

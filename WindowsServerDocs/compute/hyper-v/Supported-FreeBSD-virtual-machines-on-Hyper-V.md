@@ -19,9 +19,9 @@ The following feature distribution map indicates the features in each version. T
   
 -   **Built in** – BIS are included as part of this FreeBSD release.  
   
--   **√** \- Feature available  
+-   **√** - Feature available  
   
--   \(*blank*\) \- Feature not available  
+-   (*blank*) - Feature not available  
   
   
 |**Feature**|**Windows Server operating system version**|**10.2**|**10 – 10.1**|**9.1 – 9.3**|**8.4**|  
@@ -47,10 +47,10 @@ The following feature distribution map indicates the features in each version. T
 |Dynamic Memory – Ballooning|2016, 2012 R2, 2012|||||  
 |Manual Memory Hot Add|2016|||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||  
-|Hyper\-V specific video device|2016, 2012 R2, 2012, 2008 R2|||||  
+|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|||||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|||  
-|Key\/value pair|2016, 2012 R2, 2012, 2008 R2|**√** Note 7|**√** Note 6, 7|**√** Note 7|**√** Note 7|  
-|Non\-Maskable Interrupt|2016, 2012 R2|**√**|**√**|**√**|**√**|  
+|Key/value pair|2016, 2012 R2, 2012, 2008 R2|**√** Note 7|**√** Note 6, 7|**√** Note 7|**√** Note 7|  
+|Non-Maskable Interrupt|2016, 2012 R2|**√**|**√**|**√**|**√**|  
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|||||  
 |File copy from host to guest|2016, 2012 R2|||||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||  

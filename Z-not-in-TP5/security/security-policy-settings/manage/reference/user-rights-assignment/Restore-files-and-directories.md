@@ -18,7 +18,7 @@ This security setting determines which users can bypass file, directory, registr
   
 Granting this user right to an account is similar to granting the account the following permissions to all files and folders on the system:  
   
--   **Traverse folder \/ execute file**  
+-   **Traverse folder / execute file**  
   
 -   **Write**  
   
@@ -28,7 +28,7 @@ Constant: SeRestorePrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Defaults  
   
@@ -39,10 +39,10 @@ Constant: SeRestorePrivilege
 1.  Users with this user right can overwrite registry settings, hide data, and gain ownership of system objects, so only assign this user right to trusted users.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default, this right is granted to the Administrators, Backup Operators, and Server Operators groups on domain controllers, and to the Administrators and Backup Operators groups on stand\-alone servers.  
+By default, this right is granted to the Administrators, Backup Operators, and Server Operators groups on domain controllers, and to the Administrators and Backup Operators groups on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -50,7 +50,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy||  
 |Default Domain Controller Policy|Administrators<br /><br />Backup Operators<br /><br />Server Operators|  
-|Stand\-Alone Server Default Settings|Administrators<br /><br />Backup Operators|  
+|Stand-Alone Server Default Settings|Administrators<br /><br />Backup Operators|  
 |Domain Controller Effective Default Settings|Administrators<br /><br />Backup Operators<br /><br />Server Operators|  
 |Member Server Effective Default Settings|Administrators<br /><br />Backup Operators|  
 |Client Computer Effective Default Settings|Administrators<br /><br />Backup Operators|  
@@ -66,7 +66,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -82,7 +82,7 @@ When a local setting is greyed out, it indicates that a GPO currently controls t
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
 ### Vulnerability  
-An attacker with the **Restore files and directories** user right could restore sensitive data to a computer and overwrite data that is more recent, which could lead to loss of important data, data corruption, or a denial\-of\-service condition. Attackers could overwrite executable files that are used by legitimate administrators or system services with versions that include malicious software to grant themselves elevated privileges, compromise data, or install programs that provide continued access to the computer.  
+An attacker with the **Restore files and directories** user right could restore sensitive data to a computer and overwrite data that is more recent, which could lead to loss of important data, data corruption, or a denial-of-service condition. Attackers could overwrite executable files that are used by legitimate administrators or system services with versions that include malicious software to grant themselves elevated privileges, compromise data, or install programs that provide continued access to the computer.  
   
 > [!NOTE]  
 > Even if the following countermeasure is configured, an attacker could restore data to a computer in a domain that is controlled by the attacker. Therefore, it is critical that organizations carefully protect the media that are used to back up data.  

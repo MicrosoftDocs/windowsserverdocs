@@ -25,7 +25,7 @@ set all
 
 ## Remarks
 
--   **Set all** also prints information about the default server and computer \(that is, the host\).
+-   **Set all** also prints information about the default server and computer (that is, the host).
 
 ## Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

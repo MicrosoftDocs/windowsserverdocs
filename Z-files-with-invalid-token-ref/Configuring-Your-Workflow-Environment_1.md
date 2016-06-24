@@ -24,7 +24,7 @@ This topic contains the following sections.
 ## <a name="BKMK_os"></a>Supported operating systems and architectures
 [!INCLUDE[wps_2](includes/wps_2_md.md)] Workflow runs on any system on which [!INCLUDE[wps_2](includes/wps_2_md.md)] 3.0 or newer releases of [!INCLUDE[wps_2](includes/wps_2_md.md)] are available. For a complete list of [!INCLUDE[wps_2](includes/wps_2_md.md)] requirements, see [Windows PowerShell System Requirements](http://go.microsoft.com/fwlink/?LinkId=253659).
 
-Download and install [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=229019), [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881), or [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=395058) on managed nodes if your workflows contain Common Information model \(CIM\) activities. CIM is an extensible, object\-oriented data model that contains information about different parts of an enterprise. For more information about CIM, see [Common Information Model](http://go.microsoft.com/fwlink/?LinkId=253631) on MSDN. You can also install Windows Management Framework \(WMF\) on managed nodes that are running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] with Service Pack 1, [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] with Service Pack 1, or Windows Management Framework 3.0 on [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] with Service Pack 2 to run workflows on those computers, but this is not required unless your workflows contain CIM activities.
+Download and install [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=229019), [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881), or [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=395058) on managed nodes if your workflows contain Common Information model (CIM) activities. CIM is an extensible, object-oriented data model that contains information about different parts of an enterprise. For more information about CIM, see [Common Information Model](http://go.microsoft.com/fwlink/?LinkId=253631) on MSDN. You can also install Windows Management Framework (WMF) on managed nodes that are running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] with Service Pack 1, [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] with Service Pack 1, or Windows Management Framework 3.0 on [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)] with Service Pack 2 to run workflows on those computers, but this is not required unless your workflows contain CIM activities.
 
 ## <a name="BKMK_configs"></a>Workflow configurations
 Workflow operations involve the following three nodes. The nodes can all be located on the same computer, or distributed across multiple computers.
@@ -55,7 +55,7 @@ Procedures for setting up your computers to run workflows are available in this 
 
 1.  On the computer from which you are running and managing the workflow, start [!INCLUDE[wps_2](includes/wps_2_md.md)] with the **Run as administrator** option as described in [Starting Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=253646). Alternatively, you can run a new [!INCLUDE[wps_2](includes/wps_2_md.md)] session as administrator by running the following command in a session that is already open.
 
-    **Start\-Process PowerShell \-Verb RunAs**
+    **Start-Process PowerShell -Verb RunAs**
 
 2.  Do one of the following to enable [!INCLUDE[wps_2](includes/wps_2_md.md)] remote management on participating computers, such as the workflow server and managed nodes.
 
@@ -64,22 +64,22 @@ Procedures for setting up your computers to run workflows are available in this 
 
     -   On a workflow server that is running [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)], or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], [!INCLUDE[wps_2](includes/wps_2_md.md)] remote management is enabled by default. Go on to the next step.
 
-    -   On a workflow server that is running [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)], [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)], or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], right\-click the **Windows PowerShell** tile, and then click **Run as administrator**. Type **Enable\-PSRemoting**, and then press **Enter**. Press **Y** to confirm that you want to enable remote management.
+    -   On a workflow server that is running [!INCLUDE[winthreshold_client_2](includes/winthreshold_client_2_md.md)], [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)], or [!INCLUDE[win8_client_2](includes/win8_client_2_md.md)], right-click the **Windows PowerShell** tile, and then click **Run as administrator**. Type **Enable-PSRemoting**, and then press **Enter**. Press **Y** to confirm that you want to enable remote management.
 
-    -   On a workflow server that is running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] or [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) or [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=229019) must be installed first. After WMF is installed, click **Start**, point to **All Programs**, click **Accessories**, click **Windows PowerShell**, right\-click the **Windows PowerShell** shortcut, and then click **Run as Administrator**. Type **Enable\-PSRemoting**, and then press **Enter**. Press **Y** to confirm that you want to enable remote management.
+    -   On a workflow server that is running [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] or [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)], [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) or [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=229019) must be installed first. After WMF is installed, click **Start**, point to **All Programs**, click **Accessories**, click **Windows PowerShell**, right-click the **Windows PowerShell** shortcut, and then click **Run as Administrator**. Type **Enable-PSRemoting**, and then press **Enter**. Press **Y** to confirm that you want to enable remote management.
 
-    -   On a workflow server that is running [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=229019) must be installed first. After WMF 3.0 is installed, open a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights. To do this, click **Start**, click **All Programs**, open the **Windows PowerShell** folder, right\-click the **Windows PowerShell** shortcut, and then click **Run as administrator**. Type **Enable\-PSRemoting**, and then press **Enter**. Press **Y** to confirm that you want to enable remote management.
+    -   On a workflow server that is running [!INCLUDE[nextref_longhorn](includes/nextref_longhorn_md.md)], [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=229019) must be installed first. After WMF 3.0 is installed, open a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights. To do this, click **Start**, click **All Programs**, open the **Windows PowerShell** folder, right-click the **Windows PowerShell** shortcut, and then click **Run as administrator**. Type **Enable-PSRemoting**, and then press **Enter**. Press **Y** to confirm that you want to enable remote management.
 
 ### Workflow session configurations
 A session configuration is a group of settings on the local computer that define the access rights and commands that are available for the [!INCLUDE[wps_2](includes/wps_2_md.md)] sessions that are created when remote or local users connect to [!INCLUDE[wps_2](includes/wps_2_md.md)] on a computer.
 
-The **Enable\-PSRemoting** command that you run on the workflow server in the preceding section creates default session configurations, including the recommended and default session configuration for workflows. We recommend using the default session configuration because it provides the following benefits to your workflows automatically.
+The **Enable-PSRemoting** command that you run on the workflow server in the preceding section creates default session configurations, including the recommended and default session configuration for workflows. We recommend using the default session configuration because it provides the following benefits to your workflows automatically.
 
--   **Performance optimization.** Default settings of the [New-PSWorkflowExecutionOption](http://technet.microsoft.com/library/hh849862.aspx) cmdlet, such as activity time\-out periods and maximum allowed processes per activity, are designed to help constrain resource usage and improve workflow performance.
+-   **Performance optimization.** Default settings of the [New-PSWorkflowExecutionOption](http://technet.microsoft.com/library/hh849862.aspx) cmdlet, such as activity time-out periods and maximum allowed processes per activity, are designed to help constrain resource usage and improve workflow performance.
 
 -   **SharedHost mode.** SharedHost mode allows users to start a workflow on one computer, log off, log on to another computer, and reconnect to the workflow. The workflow session configuration uses the same process for a user across different computers, as long as the user is connecting to the same session configuration, and is logged on to the new computer with the same access rights as the user had on the first computer.
 
--   **Automatic multi\-device support.** The workflow session configuration is optimized for running workflows on multiple devices, offering the following benefits.
+-   **Automatic multi-device support.** The workflow session configuration is optimized for running workflows on multiple devices, offering the following benefits.
 
     -   Workflow jobs are automatically created for each target device.
 
@@ -95,16 +95,16 @@ The following procedure shows how to create a custom session configuration named
 
 ##### To create custom session configurations
 
-1.  Start a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights \(Run as Administrator\). The procedure [To prepare for remote management](#BKMK_prep) in this topic describes how to do this.
+1.  Start a [!INCLUDE[wps_2](includes/wps_2_md.md)] session with elevated user rights (Run as Administrator). The procedure [To prepare for remote management](#BKMK_prep) in this topic describes how to do this.
 
-2.  We recommend increasing the default Windows Remote Management \(WinRM\) memory quota to 1 GB in sessions that are using the session configuration for workflows. To do this, run the following command to create a session configuration option object, and then save the object in the **$MoreMemory** variable. The variable is used in the next step.
+2.  We recommend increasing the default Windows Remote Management (WinRM) memory quota to 1 GB in sessions that are using the session configuration for workflows. To do this, run the following command to create a session configuration option object, and then save the object in the **$MoreMemory** variable. The variable is used in the next step.
 
-    **$MoreMemory \= New\-PSSessionConfigurationOption \-MaxMemoryPerShellMB 1000**
+    **$MoreMemory = New-PSSessionConfigurationOption -MaxMemoryPerShellMB 1000**
 
     > [!NOTE]
     > The value shown in the preceding command is an example. You can use lower values; the minimum requirement is 400 MB.
 
-3.  To add the new session configuration, run the **Register\-PSSessionConfiguration** cmdlet as shown in the following script sample.
+3.  To add the new session configuration, run the **Register-PSSessionConfiguration** cmdlet as shown in the following script sample.
 
     1.  Set the value of the **SessionConfigurationType** parameter to **Workflow**.
 

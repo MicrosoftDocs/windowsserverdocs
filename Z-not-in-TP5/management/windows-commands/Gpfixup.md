@@ -25,22 +25,22 @@ Gpfixup [/v]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/v|Displays detailed status messages.<br /><br />If this parameter is not used, only error messages or a summary status message of **SUCCESS** or **FAILURE** appears.|
-|\/olddns:<OLDDNSNAME>|Specifies the old DNS name of the renamed domain as *<OLDDNSNAME>* when the domain rename operation changes the DNS name of a domain. You can use this parameter only if you also use the **\/newdns** parameter to specify a new domain DNS name.|
-|\/newdns:<NEWDNSNAME>|Specifies the new DNS name of the renamed domain as *<NEWDNSNAME>* when the domain rename operation changes the DNS name of a domain. You can use this parameter only if you also use the **\/olddns** parameter to specify the old domain DNS name.|
-|\/oldnb:<OLDFLATNAME>|Specifies the old NetBIOS name of the renamed domain as *<OLDFLATNAME>* when the domain rename operation changes the NetBIOS name of a domain. You can use this parameter only if you use the **\/newnb** parameter to specify a new domain NetBIOS name.|
-|\/newnb:<NEWFLATNAME>|Specifies the new NetBIOS name of the renamed domain as *<NEWFLATNAME>* when the domain rename operation changes the NetBIOS name of a domain. You can use this parameter only if you use the **\/oldnb** parameter to specify the old domain NetBIOS name.|
-|\/dc:<DCNAME>|Connect to the domain controller named *<DCNAME>* \(a DNS name or a NetBIOS name\). *<DCNAME>* must host a writable replica of the domain directory partition as indicated by one of the following:<br /><br />-   The DNS name *<NEWDNSNAME>* by using **\/newdns**<br />-   The NetBIOS name *<NEWFLATNAME>* by using **\/newnb**<br /><br />If this parameter is not used, connect to any domain controller in the renamed domain indicated by *<NEWDNSNAME>* or *<NEWFLATNAME>*.|
-|\/sionly|Performs only the Group Policy fix that relates to managed software installation \(the Software Installation extension for Group Policy\). Skip the actions that fix Group Policy links and the SYSVOL paths in GPOs.|
-|\/user:<USERNAME>|Runs this command in the security context of the user *<USERNAME>*, where *<USERNAME>* is in the format domain\\user.<br /><br />If this parameter is not used, runs this command as the logged in user.|
-|\/pwd:{<PASSWORD>&#124;\*}|Specifies the password for the other security context indicated by using **\/user**. If **\*** is specified instead of a password, you are prompted for a password.|
-|\/?|Displays Help at the command prompt.|
+|/v|Displays detailed status messages.<br /><br />If this parameter is not used, only error messages or a summary status message of **SUCCESS** or **FAILURE** appears.|
+|/olddns:<OLDDNSNAME>|Specifies the old DNS name of the renamed domain as *<OLDDNSNAME>* when the domain rename operation changes the DNS name of a domain. You can use this parameter only if you also use the **/newdns** parameter to specify a new domain DNS name.|
+|/newdns:<NEWDNSNAME>|Specifies the new DNS name of the renamed domain as *<NEWDNSNAME>* when the domain rename operation changes the DNS name of a domain. You can use this parameter only if you also use the **/olddns** parameter to specify the old domain DNS name.|
+|/oldnb:<OLDFLATNAME>|Specifies the old NetBIOS name of the renamed domain as *<OLDFLATNAME>* when the domain rename operation changes the NetBIOS name of a domain. You can use this parameter only if you use the **/newnb** parameter to specify a new domain NetBIOS name.|
+|/newnb:<NEWFLATNAME>|Specifies the new NetBIOS name of the renamed domain as *<NEWFLATNAME>* when the domain rename operation changes the NetBIOS name of a domain. You can use this parameter only if you use the **/oldnb** parameter to specify the old domain NetBIOS name.|
+|/dc:<DCNAME>|Connect to the domain controller named *<DCNAME>* (a DNS name or a NetBIOS name). *<DCNAME>* must host a writable replica of the domain directory partition as indicated by one of the following:<br /><br />-   The DNS name *<NEWDNSNAME>* by using **/newdns**<br />-   The NetBIOS name *<NEWFLATNAME>* by using **/newnb**<br /><br />If this parameter is not used, connect to any domain controller in the renamed domain indicated by *<NEWDNSNAME>* or *<NEWFLATNAME>*.|
+|/sionly|Performs only the Group Policy fix that relates to managed software installation (the Software Installation extension for Group Policy). Skip the actions that fix Group Policy links and the SYSVOL paths in GPOs.|
+|/user:<USERNAME>|Runs this command in the security context of the user *<USERNAME>*, where *<USERNAME>* is in the format domain\user.<br /><br />If this parameter is not used, runs this command as the logged in user.|
+|/pwd:{<PASSWORD>&#124;*}|Specifies the password for the other security context indicated by using **/user**. If **\*** is specified instead of a password, you are prompted for a password.|
+|/?|Displays Help at the command prompt.|
 
 ## Remarks
 
--   The **gpfixup** command is available in  Windows Server 2008 R2  and  Windows Server 2008 , except on Server Core installations.
+-   The **gpfixup** command is available in  Windows Server 2008 R2  and  Windows Server 2008 , except on Server Core installations.
 
--   Although the Group Policy Management Console \(GPMC\) is distributed with  Windows Server 2008 R2  and  Windows Server 2008 , you must install Group Policy Management as a feature through Server Manager.
+-   Although the Group Policy Management Console (GPMC) is distributed with  Windows Server 2008 R2  and  Windows Server 2008 , you must install Group Policy Management as a feature through Server Manager.
 
 ## <a name="BKMK_Examples"></a>Examples
 This example assumes that you have already performed a domain rename operation in which you changed the DNS name from **MyOldDnsName** to **MyNewDnsName**, and the NetBIOS name from **MyOldNetBIOSName** to **MyNewNetBIOSName**. In this example, you use the **gpfixup** command to connect to the domain controller named **MyDcDnsName** and repair GPOs and Group Policy links by updating the old domain name embedded in the GPOs and links. Status and error output is saved to a file that is named **gpfixup.log**.

@@ -23,7 +23,7 @@ detail disk
 
 -   A disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
--   If the selected disk is a virtual hard disk \(VHD\), **detail disk** reports the disk's bus type as Virtual.
+-   If the selected disk is a virtual hard disk (VHD), **detail disk** reports the disk's bus type as Virtual.
 
 ## <a name="BKMK_examples"></a>Examples
 To see the properties of the selected disk, and information about the volumes in the disk, type:

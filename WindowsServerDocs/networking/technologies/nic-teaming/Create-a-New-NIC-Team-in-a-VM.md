@@ -12,7 +12,7 @@ ms.assetid: dd80eadf-c87c-4aaa-b96a-cbb04b01db72
 author: jamesmci
 ---
 # Create a New NIC Team in a VM
-You can use this topic to connect a virtual machine \(VM\) to Hyper\-V Virtual Switches in a manner that is consistent with NIC Teaming requirements within VMs. You can also use this topic to create a new NIC team in a VM.  
+You can use this topic to connect a virtual machine (VM) to Hyper-V Virtual Switches in a manner that is consistent with NIC Teaming requirements within VMs. You can also use this topic to create a new NIC team in a VM.  
   
 This topic contains the following sections.  
   
@@ -23,13 +23,13 @@ This topic contains the following sections.
 -   [Create a NIC Team](#bkmk_new)  
   
 ## <a name="bkmk_network"></a>Network configuration requirements  
-The physical switch, Hyper\-V Virtual Switch, local area network \(LAN\), and NIC Teaming requirements for creating a NIC Team in a VM are:  
+The physical switch, Hyper-V Virtual Switch, local area network (LAN), and NIC Teaming requirements for creating a NIC Team in a VM are:  
   
--   The computer that is running Hyper\-V must have two or more network adapters.  
+-   The computer that is running Hyper-V must have two or more network adapters.  
   
 -   If the network adapters are connected to multiple physical switches, the physical switches must be on the same Layer 2 subnet.  
   
--   You must use Hyper\-V Manager or Windows PowerShell commands to create two external Hyper\-V Virtual Switches, each of which is connected to a different physical network adapter.  
+-   You must use Hyper-V Manager or Windows PowerShell commands to create two external Hyper-V Virtual Switches, each of which is connected to a different physical network adapter.  
   
 -   The VM in which you want to configure NIC Teaming must be connected to both external virtual switches that you create.  
   
@@ -38,9 +38,9 @@ The physical switch, Hyper\-V Virtual Switch, local area network \(LAN\), and NI
 -   NIC Teams within a VM must have their Teaming mode configured as Switch Independent. In addition, Load Balancing mode for the NIC Team in a VM must be configured with the Address Hash distribution mode.  
   
 ## <a name="bkmk_configure"></a>Configure the physical and virtual network  
-Before you perform this procedure, you must deploy a Hyper\-V host with two network adapters that are connected to different physical switches, and you must configure the network adapters with IP addresses that are from the same IP address range.  
+Before you perform this procedure, you must deploy a Hyper-V host with two network adapters that are connected to different physical switches, and you must configure the network adapters with IP addresses that are from the same IP address range.  
   
-By using the following procedure, you can create two external Hyper\-V Virtual Switches, connect a VM to the switches, and then configure the VM connections to the switches.  
+By using the following procedure, you can create two external Hyper-V Virtual Switches, connect a VM to the switches, and then configure the VM connections to the switches.  
   
 > [!IMPORTANT]  
 > This procedure does not include instructions on how to create a VM.  
@@ -49,7 +49,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 #### To create a virtual switch and connect a VM  
   
-1.  On the Hyper\-V host, open Hyper\-V Manager, and then click **Virtual Switch Manager**.  
+1.  On the Hyper-V host, open Hyper-V Manager, and then click **Virtual Switch Manager**.  
   
     ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)  
   
@@ -65,7 +65,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 6.  Create a second external virtual switch by repeating the previous steps. Connect the second external switch to a different network adapter.  
   
-7.  Open Hyper\-V Manager. In **Virtual Machines**, right\-click the VM that you want to configure, and then click **Settings**. The VM **Settings** dialog box opens.  
+7.  Open Hyper-V Manager. In **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**. The VM **Settings** dialog box opens.  
   
     > [!IMPORTANT]  
     > Ensure that the VM is not started. If it is started, perform shutdown before configuring the VM.  
@@ -78,7 +78,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_02.jpg)  
   
-10. In **Hardware**, click to expand the plus sign \(\+\) next to **Network Adapter**. Click **Advanced Features**.  
+10. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**. Click **Advanced Features**.  
   
     > [!NOTE]  
     > Steps 10 through 12 demonstrate how to enable NIC Teaming by using the graphical user interface. You can also enable NIC Teaming by running the following Windows PowerShell command: `Set-VMNetworkAdapter -VMName <VMname> -AllowTeaming On`  
@@ -93,7 +93,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_05.jpg)  
   
-13. To add a second network adapter, in Hyper\-V Manager, in **Virtual Machines**, right\-click the same VM, and then click **Settings**. The VM **Settings** dialog box opens.  
+13. To add a second network adapter, in Hyper-V Manager, in **Virtual Machines**, right-click the same VM, and then click **Settings**. The VM **Settings** dialog box opens.  
   
 14. In **Add Hardware**, click **Network Adapter**, and then click **Add**.  
   
@@ -103,7 +103,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)  
   
-16. In **Hardware**, click to expand the plus sign \(\+\) next to **Network Adapter**. Click **Advanced Features**.  
+16. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**. Click **Advanced Features**.  
   
 17. In **Advanced Features**, scroll down to **NIC Teaming**.  
   

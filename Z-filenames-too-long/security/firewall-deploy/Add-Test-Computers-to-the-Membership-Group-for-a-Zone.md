@@ -30,11 +30,11 @@ In this topic:
 ## <a name="bkmk_ToaddDomainComputerstotheGPOmembershipgroup"></a>
 #### To add test computers to the GPO membership groups
 
-1.  On a computer that has the Active Directory management tools installed, click the **Start** charm, then click the **Active Directory Users and Computers** tile.
+1.  On a computer that has the Active Directory management tools installed, click the **Start** charm, then click the **Active Directory Users and Computers** tile.
 
 2.  In the navigation pane, expand **Active Directory Users and Computers**, expand *YourDomainName*, and then expand the container that holds your membership group account.
 
-3.  In the details pane, double\-click the GPO membership group to which you want to add computers.
+3.  In the details pane, double-click the GPO membership group to which you want to add computers.
 
 4.  Select the **Members** tab, and then click **Add**.
 
@@ -49,10 +49,10 @@ After a computer is a member of the group, you can force a Group Policy refresh 
 ## <a name="bkmk_TorefreshGroupPolicyonacomputer"></a>
 #### To refresh Group Policy on a computer
 
--   For a computer that is running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , [Start a Command Prompt as an Administrator](Start-a-Command-Prompt-as-an-Administrator.md), and then type the following command:
+-   For a computer that is running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , [Start a Command Prompt as an Administrator](Start-a-Command-Prompt-as-an-Administrator.md), and then type the following command:
 
     ```
-    gpupdate /target:computer /force
+    gpupdate /target:computer /force
     ```
 
 After Group Policy is refreshed, you can see which GPOs are currently applied to the computer.
@@ -60,7 +60,7 @@ After Group Policy is refreshed, you can see which GPOs are currently applied to
 ## <a name="bkmk_ToseewhatGPOsareappliedtoacomputer"></a>
 #### To see which GPOs are applied to a computer
 
--   For a computer that is running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , [Start a Command Prompt as an Administrator](Start-a-Command-Prompt-as-an-Administrator.md), and then type the following command:
+-   For a computer that is running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , [Start a Command Prompt as an Administrator](Start-a-Command-Prompt-as-an-Administrator.md), and then type the following command:
 
     ```
     gpresult /r /scope:computer

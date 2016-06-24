@@ -15,9 +15,9 @@ The following checklists include tasks for configuring connection security rules
 
 Rules for the boundary zone are typically the same as those for the isolated domain, with the exception that the final rule is left to only request, not require, authentication.
 
-## <a name="bkmk_section1"></a>![](../../../media/Checklist--Configuring-Rules-for-the-Boundary-Zone/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**Checklist: Configuring boundary zone rules for computers running Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2**
+## <a name="bkmk_section1"></a>![](../../../media/Checklist--Configuring-Rules-for-the-Boundary-Zone/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**Checklist: Configuring boundary zone rules for computers running Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2**
 
-A GPO for Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2  can simply be copied and then customized. This checklist assumes that you have already created the GPO for the isolated domain as described in [Checklist: Implementing a Domain Isolation Policy Design](Checklist--Implementing-a-Domain-Isolation-Policy-Design.md). After you create a copy for the boundary zone, make sure that you do not change the rule from request authentication to require authentication when you create the other GPOs.
+A GPO for Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2  can simply be copied and then customized. This checklist assumes that you have already created the GPO for the isolated domain as described in [Checklist: Implementing a Domain Isolation Policy Design](Checklist--Implementing-a-Domain-Isolation-Policy-Design.md). After you create a copy for the boundary zone, make sure that you do not change the rule from request authentication to require authentication when you create the other GPOs.
 
 ||Task|Reference|
 |-|--------|-------------|

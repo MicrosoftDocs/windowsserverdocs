@@ -13,7 +13,7 @@ ms.assetid: 5d3c88ef-9d0c-4e52-9a06-78d5e7de022f
 # Understanding AppLocker Rule Behavior
 This topic describes how AppLocker rules are enforced by using the allow and deny options in AppLocker.
 
-If no AppLocker rules for a specific rule collection exist, all files with that file format are allowed to run. However, when an AppLocker rule for a specific rule collection is created, only the files explicitly allowed in a rule are permitted to run. For example, if you create an executable rule that allows .exe files in *%SystemDrive%\\FilePath* to run, only executable files located in that path are allowed to run.
+If no AppLocker rules for a specific rule collection exist, all files with that file format are allowed to run. However, when an AppLocker rule for a specific rule collection is created, only the files explicitly allowed in a rule are permitted to run. For example, if you create an executable rule that allows .exe files in *%SystemDrive%\FilePath* to run, only executable files located in that path are allowed to run.
 
 A rule can be configured to use either an allow or deny action:
 

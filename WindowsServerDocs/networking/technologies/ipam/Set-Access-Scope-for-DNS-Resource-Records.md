@@ -26,7 +26,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_02.jpg)  
   
-4.  Right\-click the selected DNS resource records, and then click **Set Access Scope**.  
+4.  Right-click the selected DNS resource records, and then click **Set Access Scope**.  
   
     ![](../../media/Set-Access-Scope-for-DNS-Resource-Records/ipam_RestrictUserToRRControl_03.jpg)  
   

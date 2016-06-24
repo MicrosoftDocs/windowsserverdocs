@@ -14,7 +14,7 @@ ms.assetid: ff8bab90-4ca6-4f20-a593-40cdfc7c2165
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-This policy setting determines which users and groups have authority to synchronize all directory service data, regardless of the protection for objects and properties. This privilege is required to use LDAP directory synchronization \(dirsync\) services. Domain controllers have this user right inherently because the synchronization process runs in the context of the **System** account on domain controllers.  
+This policy setting determines which users and groups have authority to synchronize all directory service data, regardless of the protection for objects and properties. This privilege is required to use LDAP directory synchronization (dirsync) services. Domain controllers have this user right inherently because the synchronization process runs in the context of the **System** account on domain controllers.  
   
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
@@ -22,7 +22,7 @@ Constant: SeSyncAgentPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not defined  
   
@@ -31,10 +31,10 @@ Constant: SeSyncAgentPrivilege
 1.  Ensure that no accounts are assigned the **Synchronize directory service data** user right. Only domain controllers need this privilege, which they inherently have.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default this setting is not defined on domain controllers and on stand\-alone servers.  
+By default this setting is not defined on domain controllers and on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not defined|  
+|Stand-Alone Server Default Settings|Not defined|  
 |Domain Controller Effective Default Settings|Enabled|  
 |Member Server Effective Default Settings|Disabled|  
 |Client Computer Effective Default Settings|Disabled|  
@@ -58,7 +58,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -74,7 +74,7 @@ When a local setting is greyed out, it indicates that a GPO currently controls t
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
 ### Vulnerability  
-The **Synchronize directory service data** user right affects domain controllers \(only domain controllers should be able to synchronize directory service data\). Domain controllers have this user right inherently because the synchronization process runs in the context of the **System** account on domain controllers. Attackers who have this user right can view all information that is stored within the directory. They could then use some of that information to facilitate additional attacks or expose sensitive data, such as direct telephone numbers or physical addresses.  
+The **Synchronize directory service data** user right affects domain controllers (only domain controllers should be able to synchronize directory service data). Domain controllers have this user right inherently because the synchronization process runs in the context of the **System** account on domain controllers. Attackers who have this user right can view all information that is stored within the directory. They could then use some of that information to facilitate additional attacks or expose sensitive data, such as direct telephone numbers or physical addresses.  
   
 ### Countermeasure  
 Ensure that no accounts are assigned the **Synchronize directory service data** user right.  

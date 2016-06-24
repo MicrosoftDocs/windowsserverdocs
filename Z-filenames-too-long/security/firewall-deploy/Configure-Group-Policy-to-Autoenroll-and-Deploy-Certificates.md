@@ -21,11 +21,11 @@ To complete these procedures, you must be a member of both the Domain Admins gro
 
 1.  On a computer that has the Group Policy Management feature installed, click **Start**, click **Administrative Tools**, and then click **Group Policy Management**.
 
-2.  In the navigation pane, expand **Forest:** *YourForestName*, expand **Domains**, expand *YourDomainName*, expand **Group Policy Objects**, right\-click the GPO you want to modify, and then click **Edit**.
+2.  In the navigation pane, expand **Forest:** *YourForestName*, expand **Domains**, expand *YourDomainName*, expand **Group Policy Objects**, right-click the GPO you want to modify, and then click **Edit**.
 
 3.  In the navigation pane, expand the following path: **Computer Configuration**, **Policies**, **Windows Settings**, **Security Settings**, **Public Key Policies**.
 
-4.  Double\-click **Certificate Services Client \- Auto\-Enrollment**.
+4.  Double-click **Certificate Services Client - Auto-Enrollment**.
 
 5.  In the **Properties** dialog box, change **Configuration Model** to **Enabled**.
 

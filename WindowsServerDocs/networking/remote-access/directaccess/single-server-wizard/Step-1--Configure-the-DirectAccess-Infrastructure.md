@@ -32,25 +32,25 @@ The following network interface settings are required for a single server deploy
   
 -   Edge topology  
   
-    -   One Internet\-facing public static IPv4 or IPv6 addresses.  
+    -   One Internet-facing public static IPv4 or IPv6 addresses.  
   
         > [!NOTE]  
         > Two consecutive public IPv4 addresses are required for Teredo. If you are not using Teredo, you can configure a single public static IPv4 address.  
   
     -   A single internal static IPv4 or IPv6 address.  
   
--   Behind NAT device \(two network adapters\)  
+-   Behind NAT device (two network adapters)  
   
-    -   A single internal network\-facing static IPv4 or IPv6 address.  
+    -   A single internal network-facing static IPv4 or IPv6 address.  
   
-    -   A single perimeter network\-facing static IPv4 or IPv6 address.  
+    -   A single perimeter network-facing static IPv4 or IPv6 address.  
   
--   Behind NAT device \(one network adapter\)  
+-   Behind NAT device (one network adapter)  
   
     -   A single static IPv4 or IPv6 address.  
   
 > [!NOTE]  
-> If the DirectAccess server has two or more network adapters \(one classified in the domain profile and the other in a public\/private profile\), but you want to use a single NIC topology, then the recommendations are:  
+> If the DirectAccess server has two or more network adapters (one classified in the domain profile and the other in a public/private profile), but you want to use a single NIC topology, then the recommendations are:  
 >   
 > 1.  Ensure that the second NIC, and any additional NICs, are also classified in the domain profile.  
 > 2.  If the second NIC cannot be configured for the domain profile for any reason, then the DirectAccess IPsec policy must be manually scoped to all profiles using the following Windows PowerShell commands:  
@@ -61,29 +61,29 @@ The following network interface settings are required for a single server deploy
 >     Save-NetGPO –GPOSession $gposession  
 >     ```  
 >   
->     The names of the IPsec policies are DirectAccess\-DaServerToInfra and DirectAccess\-DaServerToCorp.  
+>     The names of the IPsec policies are DirectAccess-DaServerToInfra and DirectAccess-DaServerToCorp.  
   
 ## <a name="ConfigRouting"></a>Configure routing in the corporate network  
 Configure routing in the corporate network as follows:  
   
 -   When native IPv6 is deployed in the organization, add a route so that the routers on the internal network route IPv6 traffic back through the Remote Access server.  
   
--   Manually configure organization IPv4 and IPv6 routes on the Remote Access servers. Add a published route so that all traffic with an organization \(\/48\) IPv6 prefix is forwarded to the internal network. In addition, for IPv4 traffic, add explicit routes so that IPv4 traffic is forwarded to the internal network.  
+-   Manually configure organization IPv4 and IPv6 routes on the Remote Access servers. Add a published route so that all traffic with an organization (/48) IPv6 prefix is forwarded to the internal network. In addition, for IPv4 traffic, add explicit routes so that IPv4 traffic is forwarded to the internal network.  
   
 ## <a name="ConfigFirewalls"></a>Configure firewalls  
-When using additional firewalls in your deployment, apply the following Internet\-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
+When using additional firewalls in your deployment, apply the following Internet-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
   
 -   6to4 traffic—IP Protocol 41 inbound and outbound.  
   
--   IP\-HTTPS—Transmission Control Protocol \(TCP\) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
+-   IP-HTTPS—Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
   
     > [!NOTE]  
     > This exemption has to be configured on the remote access server. All the other exemptions have to be configured on the edge firewall.  
   
 > [!NOTE]  
-> For Teredo and 6to4 traffic, these exceptions should be applied for both of the Internet\-facing consecutive public IPv4 addresses on the Remote Access server. For IP\-HTTPS the exceptions need only be applied for the address to which the external name of the server resolves.  
+> For Teredo and 6to4 traffic, these exceptions should be applied for both of the Internet-facing consecutive public IPv4 addresses on the Remote Access server. For IP-HTTPS the exceptions need only be applied for the address to which the external name of the server resolves.  
   
-When using additional firewalls, apply the following Internet\-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv6 Internet:  
+When using additional firewalls, apply the following Internet-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv6 Internet:  
   
 -   IP Protocol 50  
   
@@ -93,7 +93,7 @@ When using additional firewalls, apply the following internal network firewall e
   
 -   ISATAP—Protocol 41 inbound and outbound  
   
--   TCP\/UDP for all IPv4\/IPv6 traffic  
+-   TCP/UDP for all IPv4/IPv6 traffic  
   
 ## <a name="ConfigDNS"></a>Configure the DNS server  
 You must manually configure a DNS entry for the network location server website for the internal network in your deployment.  
@@ -102,17 +102,17 @@ You must manually configure a DNS entry for the network location server website 
   
 1.  On the internal network DNS server, run **dnsmgmt.msc** and then press ENTER.  
   
-2.  In the left pane of the **DNS Manager** console, expand the forward lookup zone for your domain. Right click the domain and click **New Host \(A or AAAA\)**.  
+2.  In the left pane of the **DNS Manager** console, expand the forward lookup zone for your domain. Right click the domain and click **New Host (A or AAAA)**.  
   
-3.  On the **New Host** dialog box, in the **Name \(uses parent domain name if blank\)** box, enter the DNS name for the network location server website \(this is the name the DirectAccess clients use to connect to the network location server\). In the **IP address** box, enter the IPv4 address of the network location server, and then click **Add Host**. On the **DNS** dialog box, click **OK**.  
+3.  On the **New Host** dialog box, in the **Name (uses parent domain name if blank)** box, enter the DNS name for the network location server website (this is the name the DirectAccess clients use to connect to the network location server). In the **IP address** box, enter the IPv4 address of the network location server, and then click **Add Host**. On the **DNS** dialog box, click **OK**.  
   
-4.  On the **New Host** dialog box, in the **Name \(uses parent domain name if blank\)** box, enter the DNS name for the web probe \(the name for the default web probe is directaccess\-webprobehost\). In the **IP address** box, enter the IPv4 address of the web probe, and then click **Add Host**. Repeat this process for directaccess\-corpconnectivityhost and any manually created connectivity verifiers. On the **DNS** dialog box, click **OK**.  
+4.  On the **New Host** dialog box, in the **Name (uses parent domain name if blank)** box, enter the DNS name for the web probe (the name for the default web probe is directaccess-webprobehost). In the **IP address** box, enter the IPv4 address of the web probe, and then click **Add Host**. Repeat this process for directaccess-corpconnectivityhost and any manually created connectivity verifiers. On the **DNS** dialog box, click **OK**.  
   
 5.  Click **Done**.  
   
 ![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 Add-DnsServerResourceRecordA -Name <network_location_server_name> -ZoneName <DNS_zone_name> -IPv4Address <network_location_server_IPv4_address>  
@@ -121,18 +121,18 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 You must also configure DNS entries for the following:  
   
--   **The IP\-HTTPS server**—DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
+-   **The IP-HTTPS server**—DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
   
--   **CRL revocation checking**—DirectAccess uses certificate revocation checking for the IP\-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS\-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
+-   **CRL revocation checking**—DirectAccess uses certificate revocation checking for the IP-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
   
 ## <a name="ConfigAD"></a>Configure Active Directory  
 The Remote Access server and all DirectAccess client computers must be joined to an Active Directory domain. DirectAccess client computers must be a member of one of the following domain types:  
   
 -   Domains that belong to the same forest as the Remote Access server.  
   
--   Domains that belong to forests with a two\-way trust with the Remote Access server forest.  
+-   Domains that belong to forests with a two-way trust with the Remote Access server forest.  
   
--   Domains that have a two\-way domain trust to the Remote Access server domain.  
+-   Domains that have a two-way domain trust to the Remote Access server domain.  
   
 #### To join the Remote Access server to a domain  
   
@@ -156,7 +156,7 @@ The Remote Access server and all DirectAccess client computers must be joined to
   
 1.  Run **explorer.exe**.  
   
-2.  Right\-click the Computer icon, and then click **Properties**.  
+2.  Right-click the Computer icon, and then click **Properties**.  
   
 3.  On the **System** page, click **Advanced system settings**.  
   
@@ -174,9 +174,9 @@ The Remote Access server and all DirectAccess client computers must be joined to
   
 ![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-Note that you must supply domain credentials after entering the Add\-Computer command below.  
+Note that you must supply domain credentials after entering the Add-Computer command below.  
   
 ```  
 Add-Computer -DomainName <domain_name>  
@@ -204,13 +204,13 @@ The DirectAccess settings contained in the client computer Group policy objects 
   
 ### <a name="Sec_Group"></a>To create a security group for DirectAccess clients  
   
-1.  Run **dsa.msc**. In the **Active Directory Users and Computers** console, in the left pane, expand the domain that will contain the security group, right\-click **Users**, point to **New**, and then click **Group**.  
+1.  Run **dsa.msc**. In the **Active Directory Users and Computers** console, in the left pane, expand the domain that will contain the security group, right-click **Users**, point to **New**, and then click **Group**.  
   
-2.  On the **New Object \- Group** dialog box, under **Group name**, enter the name for the security group.  
+2.  On the **New Object - Group** dialog box, under **Group name**, enter the name for the security group.  
   
 3.  Under **Group scope**, click **Global**, under **Group type**, click **Security**, and then click **OK**.  
   
-4.  Double\-click the DirectAccess client computers security group, and on the properties dialog box, click the **Members** tab.  
+4.  Double-click the DirectAccess client computers security group, and on the properties dialog box, click the **Members** tab.  
   
 5.  On the **Members** tab, click **Add**.  
   
@@ -218,7 +218,7 @@ The DirectAccess settings contained in the client computer Group policy objects 
   
 ![](../../../media/Step-1--Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 New-ADGroup -GroupScope global -Name <DirectAccess_clients_group_name>  

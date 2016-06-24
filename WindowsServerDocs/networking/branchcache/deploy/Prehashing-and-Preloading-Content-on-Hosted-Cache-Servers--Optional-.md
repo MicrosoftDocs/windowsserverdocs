@@ -12,7 +12,7 @@ ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
 author: jamesmci
 ---
 # Prehashing and Preloading Content on Hosted Cache Servers (Optional)
-You can use this procedure to force the creation of content information – also called hashes \- on BranchCache\-enabled Web and file servers. You can also gather the data on file and web servers into packages that can be transferred to remote hosted cache servers.  This provides you with the ability to preload content on remote hosted cache servers so that data is available for the first client access.  
+You can use this procedure to force the creation of content information – also called hashes - on BranchCache-enabled Web and file servers. You can also gather the data on file and web servers into packages that can be transferred to remote hosted cache servers.  This provides you with the ability to preload content on remote hosted cache servers so that data is available for the first client access.  
   
 You must be a member of **Administrators**, or equivalent to perform this procedure.  
   

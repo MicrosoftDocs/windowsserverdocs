@@ -15,7 +15,7 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>This problem typically occurs when a Domain Name System (DNS) lookup failure causes replication to fail. When a destination domain controller receives Event ID 2087 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record, the fully qualified domain name (FQDN), and the NetBIOS name to the IP address of the source domain controller have all failed. Failure to locate the source replication partner prevents replication with that source until the problem is fixed.</para>
+    <para>This problem typically occurs when a Domain Name System (DNS) lookup failure causes replication to fail. When a destination domain controller receives Event ID 2087 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record, the fully qualified domain name (FQDN), and the NetBIOS name to the IP address of the source domain controller have all failed. Failure to locate the source replication partner prevents replication with that source until the problem is fixed.</para>
     <para>The following is an example of the event text: </para>
     <code>Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService
@@ -91,7 +91,7 @@ type was found.
       <para>Failure to resolve the current alias (CNAME) resource record of the source domain controller to an IP address can have the following causes:</para>
       <list class="bullet">
         <listItem>
-          <para>The source domain controller is powered off, is offline, or resides on an isolated network, and Active Directory and DNS data for the offline domain controller has not been deleted to indicate that the domain controller is inaccessible.</para>
+          <para>The source domain controller is powered off, is offline, or resides on an isolated network, and Active Directory and DNS data for the offline domain controller has not been deleted to indicate that the domain controller is inaccessible.</para>
         </listItem>
         <listItem>
           <para>One of the following conditions exists:</para>
@@ -114,10 +114,10 @@ type was found.
           </list>
         </listItem>
         <listItem>
-          <para>Active Directory Domain Services (AD DS) has been removed on the source domain controller and then reinstalled with the same IP address, but knowledge of the new NTDS Settings GUID has not reached the destination domain controller.</para>
+          <para>Active Directory Domain Services (AD DS) has been removed on the source domain controller and then reinstalled with the same IP address, but knowledge of the new NTDS Settings GUID has not reached the destination domain controller.</para>
         </listItem>
         <listItem>
-          <para>AD DS has been removed on the source domain controller and then reinstalled with a different IP address, but the current host address (A) resource record for the IP address of the source domain controller is either not registered or does not exist on the DNS servers that the destination domain controller queries as a result of replication latency or replication error.</para>
+          <para>AD DS has been removed on the source domain controller and then reinstalled with a different IP address, but the current host address (A) resource record for the IP address of the source domain controller is either not registered or does not exist on the DNS servers that the destination domain controller queries as a result of replication latency or replication error.</para>
         </listItem>
         <listItem>
           <para>The operating system of the source domain controller has been reinstalled with a different computer name, but its metadata either has not been removed or has been removed and not yet inbound-replicated by the destination domain controller.</para>
@@ -128,7 +128,7 @@ type was found.
   <section>
     <title>Resolution</title>
     <content>
-      <para>First, determine whether the source domain controller is functioning. If the source domain controller is not functioning, remove its remaining metadata from AD DS.</para>
+      <para>First, determine whether the source domain controller is functioning. If the source domain controller is not functioning, remove its remaining metadata from AD DS.</para>
       <para>If the source domain controller is functioning, continue with procedures to diagnose and solve the DNS problem, as necessary: </para>
       <list class="bullet">
         <listItem>
@@ -166,24 +166,24 @@ type was found.
             <steps class="bullet">
               <step>
                 <content>
-                  <para>To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press ENTER:</para>
+                  <para>To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press ENTER:</para>
                   <para>
-                    <codeInline>net view \\&lt;SourceDomainControllerName&gt;</codeInline>
+                    <codeInline>net view &lt;SourceDomainControllerName&gt;</codeInline>
                   </para>
                   <para>where <codeInline>&lt;SourceDomainControllerName&gt;</codeInline> is the NetBIOS name of the domain controller.</para>
                 </content>
               </step>
             </steps>
           </procedure>
-          <para>This command displays the Netlogon and SYSVOL shares, indicating that the server is functioning as a domain controller. If this test shows that the domain controller is not functioning on the network, determine the nature of the disconnection and whether the domain controller can be recovered or whether its metadata must be removed from AD DS manually. If the domain controller is not functioning and cannot be restored, use the procedure in the following section, "Clean up domain controller metadata," to delete the data that is associated with that server from AD DS.</para>
+          <para>This command displays the Netlogon and SYSVOL shares, indicating that the server is functioning as a domain controller. If this test shows that the domain controller is not functioning on the network, determine the nature of the disconnection and whether the domain controller can be recovered or whether its metadata must be removed from AD DS manually. If the domain controller is not functioning and cannot be restored, use the procedure in the following section, "Clean up domain controller metadata," to delete the data that is associated with that server from AD DS.</para>
         </content>
       </section>
       <section>
         <title>Clean up domain controller metadata</title>
         <content>
-          <para>If tests show that the domain controller is no longer functioning but you still see objects representing the domain controller in the Active Directory Sites and Services snap-in, replication will continue to be attempted, and you must remove these objects from AD DS manually. You must use the Ntdsutil tool to clean up (delete) the metadata for the defunct domain controller.</para>
+          <para>If tests show that the domain controller is no longer functioning but you still see objects representing the domain controller in the Active Directory Sites and Services snap-in, replication will continue to be attempted, and you must remove these objects from AD DS manually. You must use the Ntdsutil tool to clean up (delete) the metadata for the defunct domain controller.</para>
           <para>If the defunct domain controller is the last domain controller in the domain, you should also remove the metadata for the domain. Allow sufficient time for all global catalog servers in the forest to inbound-replicate the domain deletion before you promote a new domain with the same name.</para>
-          <para>The process for cleaning up metadata is improved in the version of Ntdsutil that is included with Windows Server 2003 Service Pack 1 (SP1). Instructions for cleaning up metadata with the Windows Server 2003 version of Ntdsutil and the Windows Server 2003 SP1 version of Ntdsutil are provided in the following procedure.</para>
+          <para>The process for cleaning up metadata is improved in the version of Ntdsutil that is included with Windows Server 2003 Service Pack 1 (SP1). Instructions for cleaning up metadata with the Windows Server 2003 version of Ntdsutil and the Windows Server 2003 SP1 version of Ntdsutil are provided in the following procedure.</para>
           <para>
             <embeddedLabel>Requirements</embeddedLabel>
           </para>
@@ -223,11 +223,11 @@ type was found.
                 <content>
                   <para>Perform metadata cleanup as follows:</para>
                   <alert class="note">
-                    <para>If you are removing domain metadata as well as server metadata, skip the following procedure and use the procedure that begins at step a.</para>
+                    <para>If you are removing domain metadata as well as server metadata, skip the following procedure and use the procedure that begins at step a.</para>
                   </alert>
                   <list class="bullet">
                     <listItem>
-                      <para>If you are performing server metadata cleanup only and you are using the version of Ntdsutil.exe that is included with Windows Server 2003 SP1, at the <codeInline>metadata cleanup:</codeInline> command prompt, type the following command, and then press ENTER:</para>
+                      <para>If you are performing server metadata cleanup only and you are using the version of Ntdsutil.exe that is included with Windows Server 2003 SP1, at the <codeInline>metadata cleanup:</codeInline> command prompt, type the following command, and then press ENTER:</para>
                       <para>
                         <codeInline>remove selected server &lt;ServerName&gt;</codeInline>
                       </para>
@@ -267,7 +267,7 @@ type was found.
                       </table>
                     </listItem>
                     <listItem>
-                      <para>If you are performing metadata cleanup by using the version of Ntdsutil.exe that is included with Windows Server 2003 with no service pack, or if you are performing both domain metadata cleanup and server metadata cleanup, perform metadata cleanup as follows: </para>
+                      <para>If you are performing metadata cleanup by using the version of Ntdsutil.exe that is included with Windows Server 2003 with no service pack, or if you are performing both domain metadata cleanup and server metadata cleanup, perform metadata cleanup as follows: </para>
                     </listItem>
                   </list>
                   <list class="ordered">
@@ -348,7 +348,7 @@ type was found.
                       <para>
                         <codeInline>remove selected domain</codeInline>
                       </para>
-                      <para>Metadata for the domain that you selected in step h is removed.</para>
+                      <para>Metadata for the domain that you selected in step h is removed.</para>
                     </listItem>
                     <listItem>
                       <para>At the <codeInline>metadata cleanup:</codeInline> and <codeInline>ntdsutil:</codeInline> prompts, type <codeInline>quit</codeInline>, and then press ENTER.</para>
@@ -410,7 +410,7 @@ type was found.
       <section>
         <title>Use Dcdiag to diagnose DNS problems</title>
         <content>
-          <para>If the domain controller is functioning online, continue by using the Dcdiag tool to diagnose and fix DNS problems that might be interfering with Active Directory replication.</para>
+          <para>If the domain controller is functioning online, continue by using the Dcdiag tool to diagnose and fix DNS problems that might be interfering with Active Directory replication.</para>
           <para>Use the following procedures to complete this process:</para>
           <list class="bullet">
             <listItem>
@@ -423,7 +423,7 @@ type was found.
               <para>Verify and enable secure dynamic updates.</para>
             </listItem>
           </list>
-          <para>Before you begin these procedures, gather the following information, which is contained in the Event ID 2087 message text:</para>
+          <para>Before you begin these procedures, gather the following information, which is contained in the Event ID 2087 message text:</para>
           <list class="bullet">
             <listItem>
               <para>The FQDN of the source domain controller and destination domain controller</para>
@@ -432,7 +432,7 @@ type was found.
               <para>The IP address of the source domain controller</para>
             </listItem>
           </list>
-          <para>The updated version of Dcdiag that is included in Windows Support Tools in Windows Server 2003 SP1 contains tests that provide consolidated and improved testing of basic and advanced DNS features. You can use this tool to diagnose basic DNS functionality and dynamic updates.</para>
+          <para>The updated version of Dcdiag that is included in Windows Support Tools in Windows Server 2003 SP1 contains tests that provide consolidated and improved testing of basic and advanced DNS features. You can use this tool to diagnose basic DNS functionality and dynamic updates.</para>
           <para>When you use the enhanced SP1 version of Dcdiag for DNS testing, there are specific requirements that do not apply to all Dcdiag tests.</para>
           <para>
             <embeddedLabel>Requirements</embeddedLabel>
@@ -449,29 +449,29 @@ type was found.
               <list class="bullet">
                 <listItem>
                   <para>You can run the enhanced version of Dcdiag on computers running the following operating systems:</para>
-                  <para>Windows XP Professional</para>
-                  <para>Windows Server 2003</para>
-                  <para>Windows Server 2003 with SP1</para>
+                  <para>Windows XP Professional</para>
+                  <para>Windows Server 2003</para>
+                  <para>Windows Server 2003 with SP1</para>
                 </listItem>
                 <listItem>
                   <para>You can run the new Dcdiag DNS tests against Microsoft DNS servers that are installed on domain controllers running the following operating systems:</para>
-                  <para>Windows 2000 Server with Service Pack 3 (SP3)</para>
-                  <para>Windows 2000 Server with Service Pack 4 (SP4)</para>
-                  <para>Windows Server 2003</para>
-                  <para>Windows Server 2003 with SP1</para>
+                  <para>Windows 2000 Server with Service Pack 3 (SP3)</para>
+                  <para>Windows 2000 Server with Service Pack 4 (SP4)</para>
+                  <para>Windows Server 2003</para>
+                  <para>Windows Server 2003 with SP1</para>
                 </listItem>
               </list>
             </listItem>
           </list>
           <alert class="note">
-            <para>You can use the <system>/f:</system> switch in Dcdiag commands to save the output to a text file. Use <system>/f:</system><placeholder>FileName</placeholder> to generate the file in the location that is indicated in <placeholder>FileName</placeholder>, for example, <system>/f:c:\Test\DnsTest.txt</system>.</para>
+            <para>You can use the <system>/f:</system> switch in Dcdiag commands to save the output to a text file. Use <system>/f:</system><placeholder>FileName</placeholder> to generate the file in the location that is indicated in <placeholder>FileName</placeholder>, for example, <system>/f:c:TestDnsTest.txt</system>.</para>
           </alert>
         </content>
         <sections>
           <section>
             <title>Verify basic DNS functionality</title>
             <content>
-              <para>To verify the settings that might interfere with Active Directory replication, you can begin by running the basic DNS test that ensures that DNS is operating properly on the domain controller.</para>
+              <para>To verify the settings that might interfere with Active Directory replication, you can begin by running the basic DNS test that ensures that DNS is operating properly on the domain controller.</para>
               <para>The basic DNS test checks the following:</para>
               <list class="bullet">
                 <listItem>
@@ -501,7 +501,7 @@ type was found.
                   <para>Resource record registrations: The test confirms that the host (A) resource record of each domain controller is registered on at least one of the DNS servers that is configured on the client.</para>
                 </listItem>
                 <listItem>
-                  <para>Zone and start of authority (SOA): If the domain controller is running the DNS Server service, the test confirms that the Active Directory domain zone and start of authority (SOA) resource record for the Active Directory domain zone are present.</para>
+                  <para>Zone and start of authority (SOA): If the domain controller is running the DNS Server service, the test confirms that the Active Directory domain zone and start of authority (SOA) resource record for the Active Directory domain zone are present.</para>
                 </listItem>
                 <listItem>
                   <para>Root zone: Checks whether the root (.) zone is present.</para>
@@ -558,7 +558,7 @@ type was found.
           <section>
             <title>Verify resource record registration</title>
             <content>
-              <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server 2003 with SP1 can locate source replication partners by using FQDNs—or, if that fails, NetBIOS names—the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.</para>
+              <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server 2003 with SP1 can locate source replication partners by using FQDNs—or, if that fails, NetBIOS names—the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.</para>
               <para>You can use Dcdiag to verify registration of all resource records that are essential for domain controller location by using the <system>dcdiag /test:dns /DnsRecordRegistration</system> test. This test verifies registration of the following resource records in DNS:</para>
               <list class="bullet">
                 <listItem>
@@ -583,14 +583,14 @@ type was found.
                 <steps class="ordered">
                   <step>
                     <content>
-                      <para>In the DNS snap-in, locate any domain controller that is running the DNS Server service, where the server hosts the DNS zone with the same name as the Active Directory domain of the domain controller.</para>
+                      <para>In the DNS snap-in, locate any domain controller that is running the DNS Server service, where the server hosts the DNS zone with the same name as the Active Directory domain of the domain controller.</para>
                     </content>
                   </step>
                   <step>
                     <content>
                       <para>In the console tree, click the zone that is named _msdcs.<placeholder>Dns_Domain_Name</placeholder>.</para>
                       <alert class="note">
-                        <para>In Windows 2000 Server DNS, _msdcs.<placeholder>Dns_Domain_Name</placeholder> is a subdomain of the DNS zone for the Active Directory domain name. In Windows Server 2003 DNS, _msdcs.<placeholder>Dns_Domain_Name</placeholder> is a separate zone.</para>
+                        <para>In Windows 2000 Server DNS, _msdcs.<placeholder>Dns_Domain_Name</placeholder> is a subdomain of the DNS zone for the Active Directory domain name. In Windows Server 2003 DNS, _msdcs.<placeholder>Dns_Domain_Name</placeholder> is a separate zone.</para>
                       </alert>
                     </content>
                   </step>
@@ -615,7 +615,7 @@ type was found.
           <section>
             <title>Verify dynamic updates</title>
             <content>
-              <para>If the basic DNS test shows that resource records do not exist in DNS, use the dynamic update test to diagnose why the Net Logon service did not register the resource records automatically. To verify that the Active Directory domain zone is configured to accept secure dynamic updates and to perform registration of a test record (_dcdiag_test_record), use the following procedure. The test record is deleted automatically after the test.</para>
+              <para>If the basic DNS test shows that resource records do not exist in DNS, use the dynamic update test to diagnose why the Net Logon service did not register the resource records automatically. To verify that the Active Directory domain zone is configured to accept secure dynamic updates and to perform registration of a test record (_dcdiag_test_record), use the following procedure. The test record is deleted automatically after the test.</para>
               <procedure>
                 <title>To verify dynamic updates</title>
                 <steps class="bullet">
@@ -647,7 +647,7 @@ type was found.
                   </step>
                   <step>
                     <content>
-                      <para>On the <ui>General</ui> tab, verify that the zone type is Active Directory–integrated. </para>
+                      <para>On the <ui>General</ui> tab, verify that the zone type is Active Directory–integrated. </para>
                     </content>
                   </step>
                   <step>
@@ -717,7 +717,7 @@ type was found.
               <para> Membership in the <embeddedLabel>Domain Admins</embeddedLabel> group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure. <token>review_detailincludes></para>
             </listItem>
             <listItem>
-              <para>Tool: Active Directory Sites and Services</para>
+              <para>Tool: Active Directory Sites and Services</para>
             </listItem>
           </list>
           <procedure>
@@ -725,7 +725,7 @@ type was found.
             <steps class="ordered">
               <step>
                 <content>
-                  <para>Open Active Directory Sites and Services. </para>
+                  <para>Open Active Directory Sites and Services. </para>
                 </content>
               </step>
               <step>
@@ -837,7 +837,7 @@ type was found.
               </step>
               <step>
                 <content>
-                  <para>Repeat steps 2 through 11, but in step 3, type the name of the source domain controller, for example, DC03.</para>
+                  <para>Repeat steps 2 through 11, but in step 3, type the name of the source domain controller, for example, DC03.</para>
                 </content>
               </step>
               <step>
@@ -861,10 +861,10 @@ type was found.
                       <para>From the servers that are listed, identify the authoritative name server or servers for this domain zone by looking at the server names that are listed for the name server (NS) resource records at the root of the zone. (In the DNS snap-in, select the forward lookup zone for the root domain, and then view the name server (NS) records in the details pane.) </para>
                     </listItem>
                     <listItem>
-                      <para>On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.</para>
+                      <para>On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.</para>
                     </listItem>
                     <listItem>
-                      <para>If there are no records present or the records are incorrect, see article 241505 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=69994</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=69994</linkUri></externalLink>).</para>
+                      <para>If there are no records present or the records are incorrect, see article 241505 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=69994</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=69994</linkUri></externalLink>).</para>
                     </listItem>
                   </list>
                 </content>

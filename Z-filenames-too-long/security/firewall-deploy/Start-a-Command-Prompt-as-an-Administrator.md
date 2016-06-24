@@ -19,12 +19,12 @@ To complete these procedures, you must be a member of the Administrators group.
 
 ### To start a command prompt as an administrator
 
--   Right\-click the **Start** charm, and then click **Command Prompt \(Admin\)**.
+-   Right-click the **Start** charm, and then click **Command Prompt (Admin)**.
 
-### To start a command prompt as an administrator \(alternative method\)
+### To start a command prompt as an administrator (alternative method)
 
 1.  Click the **Start** charm.
 
-2.  Type **cmd**, right\-click the **Command Prompt** tile, and then click **Run as administrator**.
+2.  Type **cmd**, right-click the **Command Prompt** tile, and then click **Run as administrator**.
 
 

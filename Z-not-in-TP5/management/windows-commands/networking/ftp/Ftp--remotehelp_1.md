@@ -22,7 +22,7 @@ remotehelp [<Command>]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\[<Command>\]|Specifies the name of the command about which you want help. If *Command* is not specified, **ftp** displays a list of all remote commands.|  
+|[<Command>]|Specifies the name of the command about which you want help. If *Command* is not specified, **ftp** displays a list of all remote commands.|  
   
 ## Remarks  
 You can run remote commands using **quote** or **literal**.  

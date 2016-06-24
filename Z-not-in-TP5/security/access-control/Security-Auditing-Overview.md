@@ -33,7 +33,7 @@ You can use Windows security and system logs to create a security events trackin
 
 -   Changes to system files.
 
-In Windows Server 2008 R2 and Windows 7, the number of security audit policy settings was increased from nine to 53, and all auditing capabilities were integrated with Group Policy. This allows administrators to configure, deploy, and manage a wide range of settings in the Group Policy Management Console \(GPMC\) or the Local Security Policy snap\-in for a domain, site, or organizational unit \(OU\). This makes it easier for IT professionals to track when precisely defined, significant activities take place on the network. For more information, see [Advanced Security Audit Policy Settings](Advanced-Security-Audit-Policy-Settings.md).
+In Windows Server 2008 R2 and Windows 7, the number of security audit policy settings was increased from nine to 53, and all auditing capabilities were integrated with Group Policy. This allows administrators to configure, deploy, and manage a wide range of settings in the Group Policy Management Console (GPMC) or the Local Security Policy snap-in for a domain, site, or organizational unit (OU). This makes it easier for IT professionals to track when precisely defined, significant activities take place on the network. For more information, see [Advanced Security Audit Policy Settings](Advanced-Security-Audit-Policy-Settings.md).
 
 ## New and changed functionality
 There are no new changes in functionality to security auditing in [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)].
@@ -48,7 +48,7 @@ In [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], changes to security 
 
 -   **Enable security auditing of removable storage devices.** The growing popularity of removable storage devices makes their attempted use a significant security concern that needs to be monitored.
 
-Dynamic claim\-based auditing leads to more precise and easier\-to\-manage audit policies. It enables scenarios that have been impossible or too difficult to configure. In addition to these improvements, new audit events and categories for tracking changes to Dynamic Access Control \(DAC\) policy elements include:
+Dynamic claim-based auditing leads to more precise and easier-to-manage audit policies. It enables scenarios that have been impossible or too difficult to configure. In addition to these improvements, new audit events and categories for tracking changes to Dynamic Access Control (DAC) policy elements include:
 
 -   Resource attributes on files
 
@@ -62,16 +62,16 @@ Dynamic claim\-based auditing leads to more precise and easier\-to\-manage audit
 
 The following are examples of audit policies that administrators can author:
 
--   Anyone without a “High” security clearance who attempts to access documents classified as High Business Impact \(HBI\)—for example, Audit | Everyone | All\-Access | Resource.BusinessImpact\=HBI AND User.SecurityClearance\!\=High.
+-   Anyone without a “High” security clearance who attempts to access documents classified as High Business Impact (HBI)—for example, Audit | Everyone | All-Access | Resource.BusinessImpact=HBI AND User.SecurityClearance!=High.
 
--   Audit all vendors when they access documents related to projects that they are not working on—for example, Audit | Everyone | All\-Access | User.EmploymentStatus\=Vendor AND User.Project Not\_AnyOf Resource.Project.
+-   Audit all vendors when they access documents related to projects that they are not working on—for example, Audit | Everyone | All-Access | User.EmploymentStatus=Vendor AND User.Project Not_AnyOf Resource.Project.
 
 These policies help regulate the volume of audit events and limit them to only the most relevant data or users.
 
 To provide a full view of events across the organization, Microsoft is working with partners to provide event collection and analysis tools, such as Microsoft System Center.
 
 ## Managing security auditing
-To use security auditing, you need to configure the system access control list \(SACL\) for an object, and apply the appropriate security audit policy to the user or computer. For more information, see [Managing Security Auditing](http://technet.microsoft.com/library/cc771475.aspx).
+To use security auditing, you need to configure the system access control list (SACL) for an object, and apply the appropriate security audit policy to the user or computer. For more information, see [Managing Security Auditing](http://technet.microsoft.com/library/cc771475.aspx).
 
 For information about managing Advanced Security Auditing, see [Advanced Security Auditing Walkthrough](Advanced-Security-Auditing-Walkthrough.md).
 
@@ -81,7 +81,7 @@ For information about auditing Dynamic Access Control, see [Using Advanced Secur
 
 |Content type|Resources|
 |----------------|-------------|
-|**Product evaluation**|[Advanced Security Auditing FAQ](Advanced-Security-Auditing-FAQ.md)<br /><br />[Advanced Security Auditing Walkthrough](Advanced-Security-Auditing-Walkthrough.md)<br /><br />[What’s New in Security Auditing for Windows Server 2012](http://technet.microsoft.com/library/hh849638.aspx)|
+|**Product evaluation**|[Advanced Security Auditing FAQ](Advanced-Security-Auditing-FAQ.md)<br /><br />[Advanced Security Auditing Walkthrough](Advanced-Security-Auditing-Walkthrough.md)<br /><br />[What’s New in Security Auditing for Windows Server 2012](http://technet.microsoft.com/library/hh849638.aspx)|
 |**Planning and Deployment**|[Planning and Deploying Advanced Security Audit Policies](Planning-and-Deploying-Advanced-Security-Audit-Policies.md)|
 |**Operations**|[Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)|
 |**Troubleshooting**|Not yet available|

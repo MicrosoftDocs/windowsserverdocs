@@ -24,7 +24,7 @@ Group Policy allows you to associate one or more scripting files to four trigger
   
 -   User logoff  
   
--   You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host \(WSH\) supported languages and command files are also used, including VBScript and Jscript.  
+-   You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages and command files are also used, including VBScript and Jscript.  
   
 ## How to set up scripts on the domain controller  
   
@@ -40,11 +40,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
 #### To assign computer startup scripts  
   
-1.  Open the Group Policy Management Console \(GPMC\). Right\-click the Group Policy Object you want to edit, and then click **Edit**.  
+1.  Open the Group Policy Management Console (GPMC). Right-click the Group Policy Object you want to edit, and then click **Edit**.  
   
-2.  In the console tree, click **Scripts \(Startup\/Shutdown\)**. The path is **Computer Configuration\\Policies\\Windows Settings\\Scripts \(Startup\/Shutdown\)**.  
+2.  In the console tree, click **Scripts (Startup/Shutdown)**. The path is **Computer Configuration\Policies\Windows Settings\Scripts (Startup/Shutdown)**.  
   
-3.  In the results pane, double\-click **Startup**.  
+3.  In the results pane, double-click **Startup**.  
   
 4.  In the **Startup Properties** dialog box, click **Add**.  
   
@@ -52,7 +52,7 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Startup Properties** dialog box, specify the options that you want:  
   
@@ -80,9 +80,9 @@ You must be a member of the Domain Administrators security group to configure sc
   
 #### To assign computer shutdown scripts  
   
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit, and then click **Edit**.  
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit, and then click **Edit**.  
   
-2.  In the console tree, click **Scripts \(Startup\/Shutdown\)**. The path is **Computer Configuration\\Policies\\Windows Settings\\Scripts \(Startup\/Shutdown\)**.  
+2.  In the console tree, click **Scripts (Startup/Shutdown)**. The path is **Computer Configuration\Policies\Windows Settings\Scripts (Startup/Shutdown)**.  
   
 3.  In the results pane, expand **Shutdown**.  
   
@@ -92,11 +92,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Shutdown Properties** dialog box, specify the options that you want:  
   
-    -   **Shutdown Scripts for <Group Policy object>**: Lists all the scripts that are currently assigned to the selected Group Policy object \(GPO\). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
+    -   **Shutdown Scripts for <Group Policy object>**: Lists all the scripts that are currently assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
   
     -   **Add**: Opens the **Add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -116,9 +116,9 @@ You must be a member of the Domain Administrators security group to configure sc
   
 #### To assign user logon scripts  
   
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit, and then click **Edit**.  
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit, and then click **Edit**.  
   
-2.  In the console tree, click **Scripts \(Logon\/Logoff\)**. The path is **User Configuration\\Policies\\Windows Settings\\Scripts \(Logon\/Logoff\)**.  
+2.  In the console tree, click **Scripts (Logon/Logoff)**. The path is **User Configuration\Policies\Windows Settings\Scripts (Logon/Logoff)**.  
   
 3.  In the results pane, expand **Logon**.  
   
@@ -128,11 +128,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Logon Properties** dialog box, specify the options that you want:  
   
-    -   **Logon Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object \(GPO\). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
+    -   **Logon Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
   
     -   **Add**: Opens the **Add a Script** dialog box, where you can specify any additional scripts to use.  
   
@@ -152,9 +152,9 @@ You must be a member of the Domain Administrators security group to configure sc
   
 #### To assign user logoff scripts  
   
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit, and then click **Edit**.  
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit, and then click **Edit**.  
   
-2.  In the console tree, click **Scripts \(Logon\/Logoff\)**. The path is **User Configuration\\Policies\\Windows Settings\\Scripts \(Logon\/Logoff\)**.  
+2.  In the console tree, click **Scripts (Logon/Logoff)**. The path is **User Configuration\Policies\Windows Settings\Scripts (Logon/Logoff)**.  
   
 3.  In the results pane, expand **Logoff**.  
   
@@ -164,11 +164,11 @@ You must be a member of the Domain Administrators security group to configure sc
   
     -   In **Script Name**, type the path of the script, or click **Browse** to search for the script file in the Netlogon shared folder on the domain controller.  
   
-    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called \/\/logo \(display banner\) and \/\/I \(interactive mode\), type **\/\/logo \/\/I**.  
+    -   In **Script Parameters**, type any parameters that you want, exactly as you would type them on the command line. For example, if your script includes parameters called //logo (display banner) and //I (interactive mode), type **//logo //I**.  
   
 6.  In the **Logoff Properties** dialog box, specify the options the you want:  
   
-    -   **Logoff Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object \(GPO\). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
+    -   **Logoff Scripts for <Group Policy object>**: Lists all the scripts that currently are assigned to the selected Group Policy object (GPO). If you assign multiple scripts, the scripts are processed in the order that you specify. To move a script up in the list, click it, and then click **Up**. To move a script down in the list, click it, and then click **Down**.  
   
     -   **Add**: Opens the **Add a Script** dialog box, where you can specify any additional scripts to use.  
   

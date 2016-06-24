@@ -26,7 +26,7 @@ ksetup /server <ServerName>
 ## Remarks
 There is no way to remove the targeted server name; you can only change it back to the local computer name, which is the default.
 
-The target server name is stored in the registry in **HKEY\_LOCAL\_MACHINE\\SYSTEM\\ControlSet001\\Control\\LSA\\Kerberos**. It is not reported by using **ksetup**.
+The target server name is stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\LSA\Kerberos**. It is not reported by using **ksetup**.
 
 ## <a name="BKMK_Examples"></a>Examples
 Make your **ksetup** configurations effective on the IPops897 computer that is connected on the Contoso domain:

@@ -11,15 +11,15 @@ ms.topic: article
 ms.assetid: 6c0708b5-a670-4175-831d-68555d2b0427
 ---
 # Audit DPAPI Activity
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit DPAPI Activity**, which determines whether the operating system generates audit events when encryption or decryption calls are made into the data protection application interface \(DPAPI\).
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit DPAPI Activity**, which determines whether the operating system generates audit events when encryption or decryption calls are made into the data protection application interface (DPAPI).
 
-DPAPI is used to protect secret information such as stored passwords and key information. For more information about DPAPI, see [Windows Data Protection](http://go.microsoft.com/fwlink/?LinkID=121720) \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=121720\).
+DPAPI is used to protect secret information such as stored passwords and key information. For more information about DPAPI, see [Windows Data Protection](http://go.microsoft.com/fwlink/?LinkID=121720) (http://go.microsoft.com/fwlink/?LinkID=121720).
 
 Event volume: Low
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

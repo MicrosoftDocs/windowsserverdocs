@@ -14,7 +14,7 @@ ms.assetid: 20826f77-ffd5-44c4-afc5-b6d38c7583b3
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.
 
 ## Reference
-This security setting determines which users are allowed to shut down a computer from a remote location on the network. This allows members of the Administrators group or specific users to manage computers \(for tasks such as a restart\) from a remote location.
+This security setting determines which users are allowed to shut down a computer from a remote location on the network. This allows members of the Administrators group or specific users to manage computers (for tasks such as a restart) from a remote location.
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -22,7 +22,7 @@ Constant: SeRemoteShutdownPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Administrators
 
@@ -31,10 +31,10 @@ Constant: SeRemoteShutdownPrivilege
 1.  Explicitly restrict this user right to members of the Administrators group or other specifically assigned roles that require this capability, such as nonadministrative operations staff.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
-By default this setting is Administrators and Server Operators on domain controllers and Administrators on stand\-alone servers.
+By default this setting is Administrators and Server Operators on domain controllers and Administrators on stand-alone servers.
 
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
 
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Administrators<br /><br />Server Operators|
-|Stand\-Alone Server Default Settings|Administrators|
+|Stand-Alone Server Default Settings|Administrators|
 |Domain Controller Effective Default Settings|Administrators<br /><br />Server Operators|
 |Member Server Effective Default Settings|Administrators|
 |Client Computer Effective Default Settings|Administrators|
@@ -60,9 +60,9 @@ Any change to the user rights assignment for an account becomes effective the ne
 This policy setting must be applied on the computer that is being accessed remotely.
 
 ### Group Policy
-This user right is defined in the Default Domain Controller Group Policy Object \(GPO\) and in the local security policy of workstations and servers.
+This user right is defined in the Default Domain Controller Group Policy Object (GPO) and in the local security policy of workstations and servers.
 
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 
@@ -78,7 +78,7 @@ When a local setting is greyed out, it indicates that a GPO currently controls t
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
 
 ### Vulnerability
-Any user who can shut down a computer could cause a denial\-of\-service condition to occur. Therefore, this user right should be tightly restricted.
+Any user who can shut down a computer could cause a denial-of-service condition to occur. Therefore, this user right should be tightly restricted.
 
 ### Countermeasure
 Restrict the **Force shutdown from a remote system** user right to members of the Administrators group or other specifically assigned roles that require this capability, such as nonadministrative operations staff.

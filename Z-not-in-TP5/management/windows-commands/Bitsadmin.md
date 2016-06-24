@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
 ---
 # Bitsadmin
-BITSAdmin is a command\-line tool that you can use to create download or upload jobs and monitor their progress.
+BITSAdmin is a command-line tool that you can use to create download or upload jobs and monitor their progress.
 
 ## Commands
 [Bitsadmin addfile](bitsadmin/Bitsadmin-addfile.md)

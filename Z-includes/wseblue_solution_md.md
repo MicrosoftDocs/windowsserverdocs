@@ -1,1 +1,1 @@
-To learn how to centralize data storage, restrict data access permissions, and back up your data both on\-premises and in the cloud, see [Provide data protection in small and midsize businesses](http://technet.microsoft.com/library/dn582043.aspx).
+To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](http://technet.microsoft.com/library/dn582043.aspx).

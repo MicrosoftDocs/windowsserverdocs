@@ -12,7 +12,7 @@ ms.assetid: a90604bc-ab0c-4f83-b8e5-85332a8f6e7c
 author: Femila
 ---
 # Planning Regional Domain Controller Placement
-To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" \(DSSTOPO\_1.doc\) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.  
+To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" (DSSTOPO_1.doc) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.  
   
 Plan to place regional domain controllers for each domain that is represented in each hub location. After you place regional domain controllers in all hub locations, evaluate the need for placing regional domain controllers at satellite locations. Eliminating unnecessary regional domain controllers from satellite locations reduces the support costs required to maintain a remote server infrastructure.  
   
@@ -20,15 +20,15 @@ In addition, ensure the physical security of domain controllers in hub and satel
   
 -   Accessing physical disks by starting an alternate operating system on a domain controller.  
   
--   Removing \(and possibly replacing\) physical disks on a domain controller.  
+-   Removing (and possibly replacing) physical disks on a domain controller.  
   
 -   Obtaining and manipulating a copy of a domain controller system state backup.  
   
 Add writable regional domain controllers only to locations in which you can guarantee their physical security.  
   
-In locations with inadequate physical security, deploying a read\-only domain controller \(RODC\) is the recommended solution. Except for account passwords, an RODC holds all the Active Directory objects and attributes that a writable domain controller holds. However, changes cannot be made to the database that is stored on the RODC. Changes must be made on a writable domain controller and then replicated back to the RODC.  
+In locations with inadequate physical security, deploying a read-only domain controller (RODC) is the recommended solution. Except for account passwords, an RODC holds all the Active Directory objects and attributes that a writable domain controller holds. However, changes cannot be made to the database that is stored on the RODC. Changes must be made on a writable domain controller and then replicated back to the RODC.  
   
-To authenticate client logons and access to local file servers, most organizations place regional domain controllers for all regional domains that are represented in a given location. However, you must consider many variables when evaluating whether a business location requires its clients to have local authentication or the clients can rely on authentication and query over a wide area network \(WAN\) link. The following illustration shows how to determine whether to place domain controllers at satellite locations.  
+To authenticate client logons and access to local file servers, most organizations place regional domain controllers for all regional domains that are represented in a given location. However, you must consider many variables when evaluating whether a business location requires its clients to have local authentication or the clients can rely on authentication and query over a wide area network (WAN) link. The following illustration shows how to determine whether to place domain controllers at satellite locations.  
   
 ![](media/Planning-Regional-Domain-Controller-Placement/49892c8c-2c99-4aab-92ba-808dbc8048e2.gif)  
   
@@ -38,10 +38,10 @@ Domain controllers need to be managed continuously for various reasons. Place a 
 In branch office environments with typically poor physical security and personnel with little information technology knowledge, deploying an RODC is often the recommended solution. Local administrative permissions for an RODC can be delegated to any domain user without granting that user any user rights for the domain or other domain controllers. This permits a local branch user to log on to an RODC and perform maintenance work on the server, such as upgrading a driver. However, the branch user cannot log on to any other domain controller or perform any other administrative task in the domain. In this way, the branch user can be delegated the ability to effectively manage the RODC in the branch office without compromising the security of the rest of the domain or the forest.  
   
 ## WAN link availability  
-WAN links that experience frequent outages can cause significant productivity loss to users if the location does not include a domain controller that can authenticate the users. If your WAN link availability is not 100 percent and your remote sites cannot tolerate a service outage, place a regional domain controller in locations where the users require the ability to log on or exchange server access when the WAN link is down.  
+WAN links that experience frequent outages can cause significant productivity loss to users if the location does not include a domain controller that can authenticate the users. If your WAN link availability is not 100 percent and your remote sites cannot tolerate a service outage, place a regional domain controller in locations where the users require the ability to log on or exchange server access when the WAN link is down.  
   
 ## Authentication availability  
-Certain organizations, such as banks, require that users be authenticated at all times. Place a regional domain controller in a location where the WAN link availability is not 100 percent but users require authentication at all times.  
+Certain organizations, such as banks, require that users be authenticated at all times. Place a regional domain controller in a location where the WAN link availability is not 100 percent but users require authentication at all times.  
   
 ## Logon performance over WAN links  
 If your WAN link availability is highly reliable, placing a domain controller at the location depends on the logon performance requirements over the WAN link. Factors that influence logon performance over the WAN include link speed and available bandwidth, number of users and usage profiles, and the amount of logon network traffic versus replication traffic.  
@@ -57,7 +57,7 @@ The number of users and their usage profiles at a given location can help determ
 The usage profiles indicate how the users use the network resources. You do not need to place a domain controller in a location that contains only a few users who do not frequently access network resources.  
   
 ### Logon network traffic vs. replication traffic  
-If a domain controller is not available within the same location as the Active Directory client, the client creates logon traffic on the network. The amount of logon network traffic that is created on the physical network is influenced by several factors, including group memberships; number and size of Group Policy objects \(GPOs\); logon scripts; and features such as offline folders, folder redirection, and roaming profiles.  
+If a domain controller is not available within the same location as the Active Directory client, the client creates logon traffic on the network. The amount of logon network traffic that is created on the physical network is influenced by several factors, including group memberships; number and size of Group Policy objects (GPOs); logon scripts; and features such as offline folders, folder redirection, and roaming profiles.  
   
 On the other hand, a domain controller that is placed at a given location generates replication traffic on the network. The frequency and amount of updates made on the partitions hosted on the domain controllers influence the amount of replication traffic that is created on the network. The different types of updates that can be made on the partitions hosted on the domain controllers include adding or changing users and user attributes, changing passwords, and adding or changing global groups, printers, or volumes.  
   
@@ -67,7 +67,7 @@ For example, consider a network that has branch offices that are connected throu
   
 If reducing the cost of maintaining domain controllers is more important than network traffic, either centralize the domain controllers for that domain and do not place any regional domain controllers at the location or consider placing RODCs at the location.  
   
-For a worksheet to assist you in documenting the placement of regional domain controllers and the number of users for each domain that is represented in each location, see Job Aids for Windows Server 2003 Deployment Kit \([http:\/\/go.microsoft.com\/fwlink\/?LinkID\=102558](http://go.microsoft.com/fwlink/?LinkID=102558)\), download Job\_Aids\_Designing\_and\_Deploying\_Directory\_and\_Security\_Services.zip, and open "Domain Controller Placement" \(DSSTOPO\_4.doc\).  
+For a worksheet to assist you in documenting the placement of regional domain controllers and the number of users for each domain that is represented in each location, see Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Domain Controller Placement" (DSSTOPO_4.doc).  
   
 You will need to refer to the information about locations in which you need to place regional domain controllers when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   

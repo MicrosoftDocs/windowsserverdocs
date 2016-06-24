@@ -23,7 +23,7 @@ o[pen] <HostName> [<Port>]
 |Parameter|Description|  
 |-------------|---------------|  
 |<HostName>|Specifies the computer name or IP address.|  
-|\[<Port>\]|Specifies the TCP port that the Telnet server is listening on. The default is TCP port 23.|  
+|[<Port>]|Specifies the TCP port that the Telnet server is listening on. The default is TCP port 23.|  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Connect to a Telnet server at telnet.microsoft.com.  

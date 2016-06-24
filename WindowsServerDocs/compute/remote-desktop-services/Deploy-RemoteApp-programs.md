@@ -18,8 +18,8 @@ There are multiple ways to deploy a desktop hosting solution. Throughout the doc
   
 Before you get started, make sure you have:  
   
-1.	Create a [basic desktop hosting service deployment](Deploy-a-basic-desktop-hosting-environment-using-Azure-IaaS.md).   
-2.	Create a [virtual machine image](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/) that contains the apps and programs you want to share. You can either create the VM based on a Gallery image or use a [customized virtual machine image](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/).  
+1.  Create a [basic desktop hosting service deployment](Deploy-a-basic-desktop-hosting-environment-using-Azure-IaaS.md).   
+2.  Create a [virtual machine image](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/) that contains the apps and programs you want to share. You can either create the VM based on a Gallery image or use a [customized virtual machine image](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/).  
   
     For our example, we named this RemoteApp server, "Contoso-SHR," and put it in a new availability set called, "SHRAVSet."  
 3. [Prepare that virtual machine for Remote Desktop.](Prepare-the-RDSH-virtual-machine.md)  

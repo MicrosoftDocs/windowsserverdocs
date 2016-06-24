@@ -15,13 +15,13 @@ This topic describes steps to run the wizard to create AppLocker rules on a refe
 
 AppLocker allows you to automatically generate rules for all files within a folder. It will scan the specified folder and create the condition types that you choose for each file in that folder.
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
 
 ### <a name="BKMK_RunAGRwizardGPO"></a>To automatically generate rules
 
-1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree of the snap-in, double-click **Application Control Policies**, and then double-click **AppLocker**.
 
-2.  Right\-click the appropriate rule type for which you want to automatically generate rules. You can automatically generate rules for executable, Windows Installer, script and Packaged app rules.
+2.  Right-click the appropriate rule type for which you want to automatically generate rules. You can automatically generate rules for executable, Windows Installer, script and Packaged app rules.
 
 3.  Click **Automatically Generate Rules**.
 
@@ -37,7 +37,7 @@ You can perform this task by using the Group Policy Management Console for an Ap
     > The **Reduce the number of rules created by grouping similar files** check box is selected by default. This helps you organize AppLocker rules and reduce the number of rules that you create by performing the following operations for the rule condition that you select:
     > 
     > -   One publisher condition is created for all files that have the same publisher and product name.
-    > -   One path condition is created for the folder that you select. For example, if you select *C:\\Program Files\\ProgramName\\* and the files in that folder are not signed, the wizard creates a rule for *%programfiles%\\ProgramName\\\**.
+    > -   One path condition is created for the folder that you select. For example, if you select *C:\Program Files\ProgramName\\* and the files in that folder are not signed, the wizard creates a rule for *%programfiles%\ProgramName\\\**.
     > -   One file hash condition is created that contains all of the file hashes. When rule grouping is disabled, the wizard creates a file hash rule for each file.
 
 8.  Review the files that were analyzed and the rules that will be automatically created. To make changes, click **Previous** to return to the page where you can change your selections. After reviewing the rules, click **Create**.

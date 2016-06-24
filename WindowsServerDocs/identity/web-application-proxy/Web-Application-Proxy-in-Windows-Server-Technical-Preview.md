@@ -13,7 +13,7 @@ ms.assetid: 31e5931b-6a4c-4c28-b4ab-438915cef6dc
 author: kgremban
 ---
 # Web Application Proxy in Windows Server Technical Preview
-**This content is relevant for the on\-premises version of Web Application Proxy. To enable secure access to on\-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   
 The content in this section describes what's new and changed in the Web Application Proxy for Windows Server® 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.  
   
@@ -21,13 +21,13 @@ The content in this section describes what's new and changed in the Web Applicat
   
 -   Preauthentication for HTTP Basic application publishing  
   
-    HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients. This new version of Web Application Proxy provides support to publish an app using HTTP basic by enabling the HTTP app to receive a non\-claims relying party trust for the application to the Federation Service.  
+    HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients. This new version of Web Application Proxy provides support to publish an app using HTTP basic by enabling the HTTP app to receive a non-claims relying party trust for the application to the Federation Service.  
   
     For more information on HTTP basic publishing, see [Publishing Applications using AD FS Preauthentication](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
 -   Wildcard domain publishing of applications  
   
-    To support scenarios such as SharePoint 2013, the external URL for the application can now include a wildcard to enable you to publish multiple applications from within a specific domain, for example, https:\/\/\*.sp\-apps.contoso.com. This will simplify publishing of SharePoint apps.  
+    To support scenarios such as SharePoint 2013, the external URL for the application can now include a wildcard to enable you to publish multiple applications from within a specific domain, for example, https://*.sp-apps.contoso.com. This will simplify publishing of SharePoint apps.  
   
 -   HTTP to HTTPS redirection  
   
@@ -35,7 +35,7 @@ The content in this section describes what's new and changed in the Web Applicat
   
 -   HTTP Publishing  
   
-    It is now possible to publish HTTP applications using pass\-through preauthentication  
+    It is now possible to publish HTTP applications using pass-through preauthentication  
   
 -   Publishing of Remote Desktop Gateway apps  
   

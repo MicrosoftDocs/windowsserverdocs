@@ -13,14 +13,14 @@ ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
 author: KBDAzure
 ---
 # Offer all available integration services to virtual machines
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -44,7 +44,7 @@ The availability of some integration services can be managed through the virtual
   
 #### To manage the availability of integration services to a virtual machine  
   
-1.  Open Hyper\-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
+1.  Open Hyper-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.  
   
 2.  In the results pane, under **Virtual Machines**, select the virtual machine that you want to configure.  
   

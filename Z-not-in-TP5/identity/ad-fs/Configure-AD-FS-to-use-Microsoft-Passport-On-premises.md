@@ -41,9 +41,9 @@ Enable device registration by doing the following:
 
 ## Step 2:  Configure Group Policy for Automatic registration of domain joined devices.
  Follow the instructions below to create and link a Group Policy to computers in your domains:
-1.	Open **Server Manager** and navigate to **Tools** > **Group Policy Management**. 
-2.	From **Group Policy Management**, navigate to your domain node and expand it.
-3.	Right-click **Group Policy Objects** and select **New**. 
+1.  Open **Server Manager** and navigate to **Tools** > **Group Policy Management**. 
+2.  From **Group Policy Management**, navigate to your domain node and expand it.
+3.  Right-click **Group Policy Objects** and select **New**. 
 
 ![ADFS_PASS_8media/ADFS_PASS_4.png)
 
@@ -51,36 +51,36 @@ Enable device registration by doing the following:
 
 ![ADFS_PASS_8media/ADFS_PASS_5.png)
 
-5.	Right-click on your new **Group Policy object** and then select **Edit**. 
+5.  Right-click on your new **Group Policy object** and then select **Edit**. 
 
 ![ADFS_PASS_8media/ADFS_PASS_6.png)
 
-6.	Navigate to **Computer Configuration/Policies/Administrative Templates/Windows Components/Device Registration.** 
+6.  Navigate to **Computer Configuration/Policies/Administrative Templates/Windows Components/Device Registration.** 
 
 ![ADFS_PASS_8media/ADFS_PASS_7.png)
 
-6.	Right-click **Register domain joined computers as devices** and select **Edit**.
+6.  Right-click **Register domain joined computers as devices** and select **Edit**.
 
 ![ADFS_PASS_8media/ADFS_PASS_8.png)
 
-7.	Select the **Enabled** radio button and then click **Apply**. Click **OK**.
+7.  Select the **Enabled** radio button and then click **Apply**. Click **OK**.
 
 ![ADFS_PASS_8media/ADFS_PASS_9.png)
 
-8.	Navigate to Computer **Configuration/Policies/Administrative Templates/Windows Components/Microsoft Passport for Work**.
+8.  Navigate to Computer **Configuration/Policies/Administrative Templates/Windows Components/Microsoft Passport for Work**.
 
 ![ADFS_PASS_8media/ADFS_PASS_10.png)
 
-9.	Right-click **Use Microsoft Passport for Work** and select **Edit**.
+9.  Right-click **Use Microsoft Passport for Work** and select **Edit**.
 
 ![ADFS_PASS_8media/ADFS_PASS_11.png)
 
-10.	Select the **Enabled** radio button and then click **Apply**. Click **OK**.
+10. Select the **Enabled** radio button and then click **Apply**. Click **OK**.
 
 ![ADFS_PASS_8media/ADFS_PASS_12.png)
 
 
-11.	You may now link the Group Policy object to a location of your choice. To enable this policy for all of the domain joined devices at your organization, link the Group Policy to the domain. 
+11. You may now link the Group Policy object to a location of your choice. To enable this policy for all of the domain joined devices at your organization, link the Group Policy to the domain. 
 
 
 ## Step 3:  Configure Kerberos with a root KDC 

@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 58027e55-0753-4668-bf94-3922eac204d0
 ---
 # Audit Application Generated
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Application Generated**, which determines whether the operating system generates audit events when applications attempt to use the Windows Auditing application programming interfaces \(APIs\).
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Application Generated**, which determines whether the operating system generates audit events when applications attempt to use the Windows Auditing application programming interfaces (APIs).
 
 The following events can generate audit activity:
 
@@ -25,7 +25,7 @@ Event volume: Depends on the installed application's use of Windows Auditing
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the  **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the  **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

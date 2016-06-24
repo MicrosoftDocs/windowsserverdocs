@@ -20,7 +20,7 @@ This topic contains the following sections.
 
 The previous scenario provided instructions for configuring DNS policy for geo-location based traffic management on a primary DNS server. In the Internet infrastructure, however, the DNS servers are widely deployed in a primary-secondary model, where the writable copy of a zone is stored on select and secure primary servers, and read-only copies of the zone are kept on multiple secondary servers. 
 
-The secondary servers use the zone transfer protocols Authoritative Transfer \(AXFR\) and Incremental Zone Transfer \(IXFR\) to request and receive zone updates that include new changes to the zones on the primary DNS servers. 
+The secondary servers use the zone transfer protocols Authoritative Transfer (AXFR) and Incremental Zone Transfer (IXFR) to request and receive zone updates that include new changes to the zones on the primary DNS servers. 
 
 >[!NOTE]
 >For more information about AXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 5936](https://tools.ietf.org/rfc/rfc5936.txt). For more information about IXFR, see the Internet Engineering Task Force (IETF) [Request for Comments 1995](https://tools.ietf.org/html/rfc1995).
@@ -36,7 +36,7 @@ Contoso Cloud Services has two datacenters, one in the U.S. and another in Europ
 
 The Contoso DNS deployment includes two secondary servers: **SecondaryServer1**, with the IP address 10.0.0.2; and **SecondaryServer2**, with the IP address 10.0.0.3. These secondary servers are acting as name servers in the two different regions, with SecondaryServer1 located in Europe and SecondaryServer2 located in the U.S. 
 
-There is a primary writable zone copy on **PrimaryServer** \(IP address 10.0.0.1\), where the zone changes are made. With regular zone transfers to the secondary servers, the secondary servers are always up to date with any new changes to the zone on the PrimaryServer. 
+There is a primary writable zone copy on **PrimaryServer** (IP address 10.0.0.1), where the zone changes are made. With regular zone transfers to the secondary servers, the secondary servers are always up to date with any new changes to the zone on the PrimaryServer. 
 
 The following illustration depicts this scenario.
 
@@ -62,11 +62,11 @@ The traffic management scenario requires additional steps to partition the zones
 
 After you configure your DNS infrastructure with primary and secondary servers, zone scope level transfers are performed automatically by DNS, using the following processes.
 
-To ensure the Zone scope level transfer, DNS servers use the Extension Mechanisms for DNS \(EDNS0\) OPT RR. All zone transfer \(AXFR or IXFR\) requests from the zones with scopes originate with an EDNS0 OPT RR, whose option ID is set to “65433” by default. For more information about EDNSO, see the IETF [Request for Comments 6891](https://tools.ietf.org/html/rfc6891).
+To ensure the Zone scope level transfer, DNS servers use the Extension Mechanisms for DNS (EDNS0) OPT RR. All zone transfer (AXFR or IXFR) requests from the zones with scopes originate with an EDNS0 OPT RR, whose option ID is set to “65433” by default. For more information about EDNSO, see the IETF [Request for Comments 6891](https://tools.ietf.org/html/rfc6891).
 
 The value of the OPT RR is the zone scope name for which the request is being sent. When a primary DNS server receives this packet from a trusted secondary server, it interprets the request as coming for that zone scope. 
 
-If the primary server has that zone scope it responds with the transfer \(XFR\) data from that scope. The response contains an OPT RR with the same option ID “65433” and value set to the same zone scope. The secondary servers receive this response, retrieve the scope information from the response, and update that particular scope of the zone.
+If the primary server has that zone scope it responds with the transfer (XFR) data from that scope. The response contains an OPT RR with the same option ID “65433” and value set to the same zone scope. The secondary servers receive this response, retrieve the scope information from the response, and update that particular scope of the zone.
 
 After this process, the primary server maintains a list of trusted secondaries which have sent such a zone scope request for notifications. 
 

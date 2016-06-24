@@ -17,13 +17,13 @@ These procedures can be deployed with the advanced security auditing capabilitie
 
 -   [Advanced Security Auditing Walkthrough](../get-started/Advanced-Security-Auditing-Walkthrough.md)
 
--   [Deploy Security Auditing with Central Audit Policies \(Demonstration Steps\)](http://technet.microsoft.com/library/hh831542.aspx)
+-   [Deploy Security Auditing with Central Audit Policies (Demonstration Steps)](http://technet.microsoft.com/library/hh831542.aspx)
 
 > [!NOTE]
 > These auditing policies use the settings and events that were introduced in Windows 8 and  Windows Server 2012 . The contents of this guide apply to the list of supported Windows operating systems designated in the **Applies To** list at the beginning of this topic.
 
 ## In this guide
-Domain administrators can create and deploy expression\-based security audit policies by using file classification information \(resource attributes\), user claims, and device claims to target specific users and resources to monitor potentially significant activities on one or more computers. These policies can be deployed centrally by using Group Policy, or directly on a computer, in a folder, or in individual files.
+Domain administrators can create and deploy expression-based security audit policies by using file classification information (resource attributes), user claims, and device claims to target specific users and resources to monitor potentially significant activities on one or more computers. These policies can be deployed centrally by using Group Policy, or directly on a computer, in a folder, or in individual files.
 
 The procedures in this document describe how to:
 

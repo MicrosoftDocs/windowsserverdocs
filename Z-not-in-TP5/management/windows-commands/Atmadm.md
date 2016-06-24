@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 37156c2e-c4d4-4fd8-a03d-245fb60bf996
 ---
 # Atmadm
-Monitors connections and addresses that are registered by the ATM Call Manager on an asynchronous transfer mode \(ATM\) network. You can use **atmadm** to display statistics for incoming and outgoing calls on ATM adapters. Used without parameters, **atmadm** displays statistics for monitoring the status of active ATM connections. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+Monitors connections and addresses that are registered by the ATM Call Manager on an asynchronous transfer mode (ATM) network. You can use **atmadm** to display statistics for incoming and outgoing calls on ATM adapters. Used without parameters, **atmadm** displays statistics for monitoring the status of active ATM connections. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
 
 ## Syntax
 
@@ -21,14 +21,14 @@ atmadm [/c][/a][/s]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/c|Displays call information for all current connections to the ATM network adapter installed on this computer.|
-|\/a|Displays the registered ATM network service access point \(NSAP\) address for each adapter installed in this computer.|
-|\/s|Displays statistics for monitoring the status of active ATM connections.|
-|\/?|Displays Help at the command prompt.|
+|/c|Displays call information for all current connections to the ATM network adapter installed on this computer.|
+|/a|Displays the registered ATM network service access point (NSAP) address for each adapter installed in this computer.|
+|/s|Displays statistics for monitoring the status of active ATM connections.|
+|/?|Displays Help at the command prompt.|
 
 ## Remarks
 
--   The **atmadm \/c** command produces output similar to the following:
+-   The **atmadm /c** command produces output similar to the following:
 
     ```
 
@@ -65,21 +65,21 @@ atmadm [/c][/a][/s]
 
     ```
 
-    The following table contains descriptions of each element in the **atmadm \/c** sample output.
+    The following table contains descriptions of each element in the **atmadm /c** sample output.
 
     |Type of Data|Screen Display|Description|
     |----------------|------------------|---------------|
-    |Connection Information|In\/Out|Direction of the call.  **In** is to the ATM network adapter from another device.  **Out** is from the ATM network adapter to another device.|
-    ||PMP|Point\-to\-multipoint call.|
-    ||P\-P|Point\-to\-point call.|
+    |Connection Information|In/Out|Direction of the call.  **In** is to the ATM network adapter from another device.  **Out** is from the ATM network adapter to another device.|
+    ||PMP|Point-to-multipoint call.|
+    ||P-P|Point-to-point call.|
     ||SVC|Connection is on a switched virtual circuit.|
     ||PVC|Connection is on a permanent virtual circuit.|
-    |VPI\/VCI Information|VPI\/VCI|Virtual path and virtual channel of the incoming or outgoing call.|
-    |Remote Address\/Media Parameters|47000580FFE1000000F21A2E180000C110081500|NSAP address of the calling **\(In\)** or called **\(Out\)** ATM device.|
-    ||**Tx**|The **Tx** parameter includes the following three elements:<br /><br />-   Default or specified bit\-rate type \(UBR, CBR, VBR, or ABR\)<br />-   Default or specified line speed<br />-   Specified service data unit \(SDU\) size|
-    ||**Rx**|The **Rx** parameter includes the following three elements:<br /><br />-   Default or specified bit\-rate type \(UBR, CBR, VBR, or ABR\)<br />-   Default or specified line speed<br />-   Specified SDU size|
+    |VPI/VCI Information|VPI/VCI|Virtual path and virtual channel of the incoming or outgoing call.|
+    |Remote Address/Media Parameters|47000580FFE1000000F21A2E180000C110081500|NSAP address of the calling **(In)** or called **(Out)** ATM device.|
+    ||**Tx**|The **Tx** parameter includes the following three elements:<br /><br />-   Default or specified bit-rate type (UBR, CBR, VBR, or ABR)<br />-   Default or specified line speed<br />-   Specified service data unit (SDU) size|
+    ||**Rx**|The **Rx** parameter includes the following three elements:<br /><br />-   Default or specified bit-rate type (UBR, CBR, VBR, or ABR)<br />-   Default or specified line speed<br />-   Specified SDU size|
 
--   The **atmadm \/a** command produces output similar to the following:
+-   The **atmadm /a** command produces output similar to the following:
 
     ```
 
@@ -91,7 +91,7 @@ atmadm [/c][/a][/s]
 
     ```
 
--   The **atmadm \/s** command produces output similar to the following:
+-   The **atmadm /s** command produces output similar to the following:
 
     ```
 
@@ -111,7 +111,7 @@ atmadm [/c][/a][/s]
 
     ```
 
-    The following table contains descriptions of each element in the **atmadm \/s** sample output.
+    The following table contains descriptions of each element in the **atmadm /s** sample output.
 
     |Call Manager Statistic|Description|
     |--------------------------|---------------|
@@ -122,7 +122,7 @@ atmadm [/c][/a][/s]
     |Unsuccessful Outgoing calls|Outgoing calls that failed to connect to another device on the network.|
     |Calls Closed by Remote|Calls closed by a remote device on the network.|
     |Calls Closed Locally|Calls closed by this computer.|
-    |Signaling and ILMI Packets Sent|Number of integrated local management interface \(ILMI\) packets sent to the switch to which this computer is attempting to connect.|
+    |Signaling and ILMI Packets Sent|Number of integrated local management interface (ILMI) packets sent to the switch to which this computer is attempting to connect.|
     |Signaling and ILMI Packets Received|Number of ILMI packets received from the ATM switch.|
 
 ## <a name="BKMK_Examples"></a>Examples
@@ -132,7 +132,7 @@ To display call information for all current connections to the ATM network adapt
 atmadm /c
 ```
 
-To display the registered ATM network service access point \(NSAP\) address for each adapter installed in this computer, type:
+To display the registered ATM network service access point (NSAP) address for each adapter installed in this computer, type:
 
 ```
 atmadm /a

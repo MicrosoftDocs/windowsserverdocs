@@ -22,7 +22,7 @@ In these procedures, you confirm that the rules you deployed are working correct
 -   **Encryption zone.** Similar to the main isolation zone, after you confirm that the network traffic to zone members is properly authenticated and encrypted, you must convert your zone rules from request mode to require mode.
 
 > [!NOTE]
-> In addition to the steps shown in this procedure, you can also use network traffic capture tools such as Microsoft Network Monitor, which can be downloaded from [http:\/\/go.microsoft.com\/fwlink\/?linkid\=94770](http://go.microsoft.com/fwlink/?linkid=94770). Network Monitor and similar tools allow you to capture, parse, and display the network packets received by the network adapter on your computer. Current versions of these tools include full support for IPsec. They can identify encrypted network packets, but they cannot decrypt them.
+> In addition to the steps shown in this procedure, you can also use network traffic capture tools such as Microsoft Network Monitor, which can be downloaded from [http://go.microsoft.com/fwlink/?linkid=94770](http://go.microsoft.com/fwlink/?linkid=94770). Network Monitor and similar tools allow you to capture, parse, and display the network packets received by the network adapter on your computer. Current versions of these tools include full support for IPsec. They can identify encrypted network packets, but they cannot decrypt them.
 
 **Administrative credentials**
 
@@ -30,7 +30,7 @@ To complete these procedures, you must be a member of the Domain Administrators 
 
 ## <a name="bkmk_ProceduresforcomputersthatarerunningWindowsVistaorWindowsServer2008"></a>For computers running Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2
 
-#### To verify that network connections are authenticated by using the Windows Firewall with Advanced Security MMC snap\-in
+#### To verify that network connections are authenticated by using the Windows Firewall with Advanced Security MMC snap-in
 
 1.  Click the **Start** charm, type **wf.msc**, and then press ENTER.
 
@@ -42,7 +42,7 @@ To complete these procedures, you must be a member of the Domain Administrators 
 
 3.  ###### To display the Rule Source column
 
-    1.  In the **Actions** pane, click **View**, and then click **Add\/Remove Columns**.
+    1.  In the **Actions** pane, click **View**, and then click **Add/Remove Columns**.
 
     2.  In the **Available columns** list, select **Rule Source**, and then click **Add**.
 
@@ -59,7 +59,7 @@ To complete these procedures, you must be a member of the Domain Administrators 
 
     The current list of main mode associations that have been negotiated with other computers appears in the details column.
 
-6.  Examine the list of main mode security associations for sessions between the local computer and the remote computer. Make sure that the **1st Authentication Method** and **2nd Authentication Method** columns contain expected values. If your rules specify only a first authentication method, then the **2nd Authentication Method** column displays **No authentication**. If you double\-click the row, then the **Properties** dialog box appears with additional details about the security association.
+6.  Examine the list of main mode security associations for sessions between the local computer and the remote computer. Make sure that the **1st Authentication Method** and **2nd Authentication Method** columns contain expected values. If your rules specify only a first authentication method, then the **2nd Authentication Method** column displays **No authentication**. If you double-click the row, then the **Properties** dialog box appears with additional details about the security association.
 
 7.  In the navigation pane, click **Quick mode**.
 

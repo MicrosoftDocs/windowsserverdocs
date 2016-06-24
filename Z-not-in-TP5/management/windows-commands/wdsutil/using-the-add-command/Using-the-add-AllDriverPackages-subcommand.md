@@ -21,10 +21,10 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/FolderPath:<Folder Path>|Specifies the full path to the folder that contains the .inf files for the driver packages.|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
-|\[\/Architecture:{x86 &#124; ia64 &#124; x64}\]|Specifies the architecture of the driver packages to add. Driver packages for other architectures are ignored.|
-|\[\/DriverGroup:<Group Name>\]|Specifies the name of the driver group to which the packages should be added.|
+|/FolderPath:<Folder Path>|Specifies the full path to the folder that contains the .inf files for the driver packages.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used.|
+|[/Architecture:{x86 &#124; ia64 &#124; x64}]|Specifies the architecture of the driver packages to add. Driver packages for other architectures are ignored.|
+|[/DriverGroup:<Group Name>]|Specifies the name of the driver group to which the packages should be added.|
 
 ## <a name="BKMK_examples"></a>Examples
 To add driver packages, type one of the following:
@@ -40,6 +40,6 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:"C:\Temp\Drivers\Printers" /DriverGro
 #### Additional references
 [Command-Line Syntax Key](../../Command-Line-Syntax-Key.md)
 
-[Add\-WdsDriverPackage](http://technet.microsoft.com/library/dn283440.aspx)
+[Add-WdsDriverPackage](http://technet.microsoft.com/library/dn283440.aspx)
 
 

@@ -1,1 +1,1 @@
-Microsoft Hyper\-V Server Technical Preview
+Microsoft Hyper-V Server Technical Preview

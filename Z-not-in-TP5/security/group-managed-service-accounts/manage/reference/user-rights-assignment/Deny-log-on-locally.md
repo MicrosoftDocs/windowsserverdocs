@@ -22,7 +22,7 @@ Constant: SeDenyInteractiveLogonRight
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Not defined
 
@@ -33,7 +33,7 @@ Constant: SeDenyInteractiveLogonRight
 2.  Test your modifications to this policy setting in conjunction with the **Allow log on locally** policy setting to determine if the user account is subject to both policies.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Not defined|
+|Stand-Alone Server Default Settings|Not defined|
 |Domain Controller Effective Default Settings|Not defined|
 |Member Server Effective Default Settings|Not defined|
 |Client Computer Effective Default Settings|Not defined|
@@ -51,7 +51,7 @@ The following table lists the actual and effective default policy values for the
 There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
 > [!NOTE]
-> This setting is not compatible with computers running Windows 2000 Server with Service Pack 1 or earlier.
+> This setting is not compatible with computers running Windows 2000 Server with Service Pack 1 or earlier.
 
 ## Policy management
 This section describes features, tools, and guidance to help you manage this policy.
@@ -65,7 +65,7 @@ If you apply this policy setting to the Everyone group, no one will be able to l
 ### Group Policy
 This policy setting supersedes the **Allow log on locally** policy setting if a user account is subject to both policies.
 
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 

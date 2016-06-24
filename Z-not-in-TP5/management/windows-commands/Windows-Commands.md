@@ -8,11 +8,11 @@ ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 ---
 # Windows Commands
-Use this topic to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command\-line tasks by using scripts or scripting tools.
+Use this topic to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
 
-To read introductory information about the command shell and command\-line tools, see [Feature description](Command-Line-Reference_1.md#BKMK_OVER). To see a listing of new and deprecated command\-line tools see [New and deprecated functionality](Command-Line-Reference_1.md#BKMK_NEW).
+To read introductory information about the command shell and command-line tools, see [Feature description](Command-Line-Reference_1.md#BKMK_OVER). To see a listing of new and deprecated command-line tools see [New and deprecated functionality](Command-Line-Reference_1.md#BKMK_NEW).
 
-To find information about a specific command, in the following A\-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
 [A](#bkmk_a) | [B](#BKMK_b) | [C](#BKMK_c) | [D](#BKMK_d) | [E](#BKMK_e) | [F](#BKMK_f) | [G](#BKMK_g) | [H](#BKMK_h) | [I](#BKMK_i) | [J](Command-Line-Reference_1.md#BKMK_j)| [K](Command-Line-Reference_1.md#BKMK_k) | [L](#BKMK_l) | [M](#BKMK_m) | [N](#BKMK_n) | [O](#BKMK_o) | [P](#BKMK_p) | [Q](#BKMK_q) | [R](#BKMK_r) | [S](#BKMK_s) | [T](#BKMK_t) | [U](#bkmk_u) | [V](#bkmk_v) | [W](#bkmk_w) | [X](#bkmk_x) | [Y](Command-Line-Reference_1.md#BKMK_y) | [Z](Command-Line-Reference_1.md#BKMK_z)
 
@@ -21,49 +21,49 @@ The information that is contained in this overview applies to:
 
 -    Windows Server 2012 
 
--   Windows Server 2008 R2
+-   Windows Server 2008 R2
 
--   Windows Server 2008
+-   Windows Server 2008
 
--   Windows Server 2003 R2
+-   Windows Server 2003 R2
 
--   Windows Server 2003
+-   Windows Server 2003
 
 -   Windows 8
 
--    Windows 7 
+-    Windows 7 
 
--   Windows Vista
+-   Windows Vista
 
--   Windows XP
+-   Windows XP
 
 ## <a name="BKMK_OVER"></a>Feature description
 
 ### <a name="BKMK_NEW"></a>New and deprecated functionality
 
-|Feature\/functionality|New or Deprecated?|Description|
+|Feature/functionality|New or Deprecated?|Description|
 |--------------------------|----------------------|---------------|
 |[Cluster](assetId:///cb6ab0dd-7bc6-40de-9112-923656851150)|Deprecated|Create a new cluster or configure an existing cluster.|
 |[dfscmd](assetId:///346841cd-98a1-4bda-9eda-5a5c00027e52)|Deprecated|Configure DFS folders and folder targets in a DFS namespace.|
 |[Dirquota](assetId:///e184296d-68b2-4b10-8303-7a7456f2675c)|Deprecated|Creates and manages File Server Resource Manager quotas.|
 |[Filescrn](assetId:///8f11ef55-da52-46fa-807a-33782837a80e)|Deprecated|Create and manage file groups, file screens, file screen exceptions, and file screen templates that are used to configure general administrative options for screening files.|
-|[Fondue](Fondue.md)|New|Enable optional features in Windows by downloading required files from Windows Update or a source that Group Policy specifies.|
-|[PowerShell_Ise](PowerShell_Ise.md)|New|Read, write, run, debug, and test Windows PowerShell scripts and modules in a friendly, graphic\-assisted environment.|
+|[Fondue](Fondue.md)|New|Enable optional features in Windows by downloading required files from Windows Update or a source that Group Policy specifies.|
+|[PowerShell_Ise](PowerShell_Ise.md)|New|Read, write, run, debug, and test Windows PowerShell scripts and modules in a friendly, graphic-assisted environment.|
 |[Servermanagercmd](Servermanagercmd.md)|Deprecated|Install or remove roles, role services, and features.|
 |[Shadow](Shadow.md)|Deprecated|Monitor an RD Session Host session.|
 |[Storrept](assetId:///4433454c-daa9-4b7a-befd-9b11d46daffa)|Deprecated|Create and manage storage reports and storage report tasks, and configure general administrative options for File Server Resource Manager.|
 
 ### <a name="BKMK_OVR"></a>Command shell overview
-The command shell is a software program that provides direct communication between the user and the operating system. The non\-graphical, command shell user interface provides the environment in which you run character\-based applications and utilities. The command shell executes programs and displays their output on the screen by using individual characters similar to the MS\-DOS command interpreter, Command.com. The command shell in the Windows Server operating system uses the command interpreter, Cmd.exe. Cmd.exe loads applications, directs the flow of information between applications, and translates user input into a form that the operating system understands.
+The command shell is a software program that provides direct communication between the user and the operating system. The non-graphical, command shell user interface provides the environment in which you run character-based applications and utilities. The command shell executes programs and displays their output on the screen by using individual characters similar to the MS-DOS command interpreter, Command.com. The command shell in the Windows Server operating system uses the command interpreter, Cmd.exe. Cmd.exe loads applications, directs the flow of information between applications, and translates user input into a form that the operating system understands.
 
-You can use the command shell to create and edit scripts to automate routine tasks. For example, you can create simple scripts in batch \(.bat\) files to automate the management of user accounts or nightly backups. You can also use the command\-line version of Windows Script Host to run more sophisticated scripts in the command shell. For more information, see [Cscript](Cscript.md) or [Wscript](Wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
+You can use the command shell to create and edit scripts to automate routine tasks. For example, you can create simple scripts in batch (.bat) files to automate the management of user accounts or nightly backups. You can also use the command-line version of Windows Script Host to run more sophisticated scripts in the command shell. For more information, see [Cscript](Cscript.md) or [Wscript](Wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
 
 ### <a name="BKMK_Custom"></a>Customize the Command Prompt window
 You can change the properties for the Command Prompt window.
 
 ##### To configure the Command Prompt window
 
-1.  Open a Command Prompt window, click the upper\-left corner of the Command Prompt window, and then click **Properties**. \(Or to open **Command Prompt Properties** from the keyboard, press ALT\+SPACEBAR\+P.\)
+1.  Open a Command Prompt window, click the upper-left corner of the Command Prompt window, and then click **Properties**. (Or to open **Command Prompt Properties** from the keyboard, press ALT+SPACEBAR+P.)
 
 2.  Click the **Options** tab.
 
@@ -88,22 +88,22 @@ You can change the properties for the Command Prompt window.
 8.  In the **Apply Properties** dialog box, click **Save properties for future windows with same title**.
 
 > [!NOTE]
-> To enable or disable file and directory name completion on a computer or user logon session, run **Regedit.exe** and set the following **REG\_DWORD value**:
+> To enable or disable file and directory name completion on a computer or user logon session, run **Regedit.exe** and set the following **REG_DWORD value**:
 > 
-> HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Command Processor\\CompletionChar\\REG\_DWORD
+> HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD
 > 
-> To set the **REG\_DWORD** value, use the hexadecimal value of a control character for a particular function \(for example, **0×9** is Tab and **0×08** is Backspace\). User\-specified settings take precedence over computer settings, and command\-line options take precedence over registry settings.
+> To set the **REG_DWORD** value, use the hexadecimal value of a control character for a particular function (for example, **0×9** is Tab and **0×08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
-## <a name="BKMK_CmdRef"></a>Command\-line reference A\-Z
-To find information about a specific command, in the following A\-Z menu, click the letter that the command starts with, and then click the command name.
+## <a name="BKMK_CmdRef"></a>Command-line reference A-Z
+To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
 [A](#bkmk_a) | [B](#BKMK_b) | [C](#BKMK_c) | [D](#BKMK_d) | [E](#BKMK_e) | [F](#BKMK_f) | [G](#BKMK_g) | [H](#BKMK_h) | [I](#BKMK_i) | [J](#BKMK_j) | [K](#BKMK_k) | [L](#BKMK_l) | [M](#BKMK_m) | [N](#BKMK_n) | [O](#BKMK_o) | [P](#BKMK_p) | [Q](#BKMK_q) | [R](#BKMK_r) | [S](#BKMK_s) | [T](#BKMK_t) | [U](#bkmk_u) | [V](#bkmk_v) | [W](#bkmk_w) | [X](#bkmk_x) | [Y](Command-Line-Reference_1.md#BKMK_y) | [Z](Command-Line-Reference_1.md#BKMK_z)
 
 > [!NOTE]
-> Each command\-line tool topic displays the version of Windows that is supported by the command\-line tool.
+> Each command-line tool topic displays the version of Windows that is supported by the command-line tool.
 
 ### <a name="bkmk_a"></a>A
 

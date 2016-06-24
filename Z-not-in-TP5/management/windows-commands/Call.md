@@ -26,22 +26,22 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<Path>\]<FileName>|Specifies the location and name of the batch program that you want to call. The *FileName* parameter is required, and it must have a .bat or .cmd extension.|
-|<BatchParameters>|Specifies any command\-line information required by the batch program.|
+|[<Drive>:][<Path>]<FileName>|Specifies the location and name of the batch program that you want to call. The *FileName* parameter is required, and it must have a .bat or .cmd extension.|
+|<BatchParameters>|Specifies any command-line information required by the batch program.|
 |:<Label>|Specifies the label that you want a batch program control to jump to.|
-|<Arguments>|Specifies the command\-line information to be passed to the new instance of the batch program, beginning at *:Label.*|
-|\/?|Displays help at the command prompt.|
+|<Arguments>|Specifies the command-line information to be passed to the new instance of the batch program, beginning at *:Label.*|
+|/?|Displays help at the command prompt.|
 
 ## Batch parameters
-The batch script argument references \(**%0**, **%1**, ...\) are listed in the following tables.
+The batch script argument references (**%0**, **%1**, ...) are listed in the following tables.
 
-**%\*** in a batch script refers to all the arguments \(for example, **%1**, **%2**, **%3**...\)
+**%\*** in a batch script refers to all the arguments (for example, **%1**, **%2**, **%3**...)
 
-You can use the following optional syntaxes as substitutions for batch parameters \(**%n**\):
+You can use the following optional syntaxes as substitutions for batch parameters (**%n**):
 
 |Batch Parameter|Description|
 |-------------------|---------------|
-|%~1|Expands **%1** and removes surrounding quotation marks \(" "\).|
+|%~1|Expands **%1** and removes surrounding quotation marks (" ").|
 |%~f1|Expands **%1** to a fully qualified path.|
 |%~d1|Expands **%1** to a drive letter only.|
 |%~p1|Expands **%1** to a path only.|
@@ -68,15 +68,15 @@ In the above examples, **%1** and PATH can be replaced by other valid values. Th
 
 -   Using batch parameters
 
-    Batch parameters can contain any information that you can pass to a batch program, including command\-line options, file names, the batch parameters **%0** through **%9**, and variables \(for example, **%baud%**\).
+    Batch parameters can contain any information that you can pass to a batch program, including command-line options, file names, the batch parameters **%0** through **%9**, and variables (for example, **%baud%**).
 
 -   Using the *Label* parameter
 
-    By using **call** with the *Label* parameter, you create a new batch file context and pass control to the statement after the specified label. The first time the end of the batch file is encountered \(that is, after jumping to the label\), control returns to the statement after the **call** statement. The second time the end of the batch file is encountered, the batch script is exited.
+    By using **call** with the *Label* parameter, you create a new batch file context and pass control to the statement after the specified label. The first time the end of the batch file is encountered (that is, after jumping to the label), control returns to the statement after the **call** statement. The second time the end of the batch file is encountered, the batch script is exited.
 
 -   Using pipes and redirection symbols
 
-    Do not use pipes \(**|**\) and redirection symbols \(**<** or **>**\) with **call**.
+    Do not use pipes (**|**) and redirection symbols (**<** or **>**) with **call**.
 
 -   Making a recursive call
 

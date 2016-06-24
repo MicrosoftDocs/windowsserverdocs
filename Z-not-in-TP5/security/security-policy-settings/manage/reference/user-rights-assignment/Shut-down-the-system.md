@@ -16,7 +16,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference  
 This security setting determines if a user who is logged on locally to a computer can shut down the operating system by using the Shut Down command.  
   
-Shutting down domain controllers makes them unavailable to perform functions such as processing logon requests, processing Group Policy settings, and answering Lightweight Directory Access Protocol \(LDAP\) queries. Shutting down domain controllers that have been assigned operations master roles \(also known as flexible single master operations or FSMO roles\) can disable key domain functionality; for example, processing logon requests for new passwords, which is performed by the primary domain controller \(PDC\) emulator master.  
+Shutting down domain controllers makes them unavailable to perform functions such as processing logon requests, processing Group Policy settings, and answering Lightweight Directory Access Protocol (LDAP) queries. Shutting down domain controllers that have been assigned operations master roles (also known as flexible single master operations or FSMO roles) can disable key domain functionality; for example, processing logon requests for new passwords, which is performed by the primary domain controller (PDC) emulator master.  
   
 The **Shut down the system** user right is required to enable hibernation support, to set the power management settings, and to cancela shutdown.  
   
@@ -26,7 +26,7 @@ Constant: SeShutdownPrivilege
   
 ### Possible values  
   
--   A user\-defined list of accounts  
+-   A user-defined list of accounts  
   
 -   Defaults  
   
@@ -39,10 +39,10 @@ Constant: SeShutdownPrivilege
 2.  The ability to shut down domain controllers should be limited to a very small number of trusted administrators. Even though a system shutdown requires the ability to log on to the server, you should be very careful about the accounts and groups that you allow to shut down a domain controller.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default this setting is Administrators, Backup Operators, Server Operators, and Print Operators on domain controllers, and Administrators and Backup Operators on stand\-alone servers.  
+By default this setting is Administrators, Backup Operators, Server Operators, and Print Operators on domain controllers, and Administrators and Backup Operators on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -50,13 +50,13 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Administrators<br /><br />Backup Operators<br /><br />Server Operators<br /><br />Print Operators|  
-|Stand\-Alone Server Default Settings|Administrators<br /><br />Backup Operators|  
+|Stand-Alone Server Default Settings|Administrators<br /><br />Backup Operators|  
 |Domain Controller Effective Default Settings|Administrators<br /><br />Backup Operators<br /><br />Server Operators<br /><br />Print Operators|  
 |Member Server Effective Default Settings|Administrators<br /><br />Backup Operators|  
 |Client Computer Effective Default Settings|Administrators<br /><br />Backup Operators<br /><br />Users|  
   
 ### Operating system version differences  
-There are no differences in the way this policy setting works between the  supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic. However, the setting is not compatible with computers running Microsoft Windows 2000 Server with Service Pack 1 or earlier.  
+There are no differences in the way this policy setting works between the  supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic. However, the setting is not compatible with computers running Microsoft Windows 2000 Server with Service Pack 1 or earlier.  
   
 ## Policy management  
 This section describes features, tools, and guidance to help you manage this policy.  
@@ -66,11 +66,11 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Do not apply this setting to computers running Microsoft Windows 2000 Server with Service Pack 1 or earlier.  
+Do not apply this setting to computers running Microsoft Windows 2000 Server with Service Pack 1 or earlier.  
   
 This user right does not have the same effect as **Force shutdown from a remote system**. For more information, see [Force shutdown from a remote system](Force-shutdown-from-a-remote-system.md).  
   
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -88,9 +88,9 @@ This section describes how an attacker might exploit a feature or its configurat
 ### Vulnerability  
 The ability to shut down domain controllers should be limited to a very small number of trusted administrators. Although the **Shut down the system** user right requires the ability to log on to the server, you should be very careful about which accounts and groups you allow to shut down a domain controller.  
   
-When a domain controller is shut down, it is no longer available to process logon requests, process Group Policy settings, and answer Lightweight Directory Access Protocol \(LDAP\) queries. If you shut down domain controllers that possess operations master roles, you can disable key domain functionality, such as processing logon requests for new passwords, which is performed by the PDC master.  
+When a domain controller is shut down, it is no longer available to process logon requests, process Group Policy settings, and answer Lightweight Directory Access Protocol (LDAP) queries. If you shut down domain controllers that possess operations master roles, you can disable key domain functionality, such as processing logon requests for new passwords, which is performed by the PDC master.  
   
-For other server roles, especially those where non\-administrators have rights to log on to the server \(such as RD Session Host servers\), it is critical that this user right be removed from users that do not have a legitimate reason to restart the servers.  
+For other server roles, especially those where non-administrators have rights to log on to the server (such as RD Session Host servers), it is critical that this user right be removed from users that do not have a legitimate reason to restart the servers.  
   
 ### Countermeasure  
 Ensure that only the Administrators and Backup Operators groups are assigned the **Shut down the system** user right on member servers, and ensure that only the Administrators group is assigned the user right on domain controllers.  

@@ -14,13 +14,13 @@ author: coreyp
 # STEP 3: Install and Configure CLIENT2
 CLIENT2 is a  Windows 7®  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server® 2012 servers.  
   
-1.  [To install the operating system on CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#installOS)—Install Windows® 7 Enterprise or Windows® 7 Ultimate on CLIENT2.  
+1.  [To install the operating system on CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#installOS)—Install Windows® 7 Enterprise or Windows® 7 Ultimate on CLIENT2.  
   
 2.  [To join CLIENT2 to the CORP domain](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#Join)—Join CLIENT2 to the corp.contoso.com domain.  
   
 ## <a name="installOS"></a>To install the operating system on CLIENT2  
   
-1.  Start the installation of  Windows 7 .  
+1.  Start the installation of  Windows 7 .  
   
 2.  When you are prompted for a user name, type **User1**. When you are prompted for a computer name, type **CLIENT2**.  
   
@@ -30,22 +30,22 @@ CLIENT2 is a  Windows 7®  computer that is used to demonstrate the backwards co
   
 5.  When you are prompted for your computer's current location, click **Work network**.  
   
-6.  Connect CLIENT2 to a network that has Internet access and run Windows Update to install the latest updates for  Windows 7 , and then disconnect from the Internet.  
+6.  Connect CLIENT2 to a network that has Internet access and run Windows Update to install the latest updates for  Windows 7 , and then disconnect from the Internet.  
   
 7.  Connect CLIENT2 to the Corpnet subnet.  
   
 ## User account control  
-When you configure the  Windows 7  operating system, you are required to click **Continue** on the **User Account Control** \(UAC\) dialog box for some tasks. Several of the configuration tasks require UAC approval. When you are prompted, always click **Continue** to authorize these changes.  
+When you configure the  Windows 7  operating system, you are required to click **Continue** on the **User Account Control** (UAC) dialog box for some tasks. Several of the configuration tasks require UAC approval. When you are prompted, always click **Continue** to authorize these changes.  
   
 ## <a name="Join"></a>To join CLIENT2 to the CORP domain  
   
-1.  Click **Start**, right\-click **Computer**, and then click **Properties**.  
+1.  Click **Start**, right-click **Computer**, and then click **Properties**.  
   
 2.  On the **System** page, in the **Computer name, domain, and workgroup settings** area, click **Change settings**.  
   
 3.  On the **System Properties** dialog box, on the **Computer Name** tab, click **Change**.  
   
-4.  On the **Computer Name\/Domain Changes** dialog box, click **Domain**, type **corp.contoso.com**, and then click **OK**.  
+4.  On the **Computer Name/Domain Changes** dialog box, click **Domain**, type **corp.contoso.com**, and then click **OK**.  
   
 5.  When you are prompted for a user name and password, type the user name and password for the User1 domain account, and then click **OK**.  
   
@@ -55,6 +55,6 @@ When you configure the  Windows 7  operating system, you are required to click 
   
 8.  On the **System Properties** dialog box, click **Close**, and when you see a dialog that prompts you to restart the computer, click **Restart Now**.  
   
-9. After the computer restarts, log on as CORP\\User1.  
+9. After the computer restarts, log on as CORP\User1.  
   
 

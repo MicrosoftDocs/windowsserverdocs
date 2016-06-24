@@ -22,8 +22,8 @@ dir [<RemoteDirectory>] [<LocalFile>]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\[<RemoteDirectory>\]|Specifies the directory for which you want to see a listing. If no directory is specified, the current working directory on the remote computer is used.|  
-|\[<LocalFile>\]|Specifies a local file in which to store the directory listing. If a local file is not specified, results are displayed on the screen.|  
+|[<RemoteDirectory>]|Specifies the directory for which you want to see a listing. If no directory is specified, the current working directory on the remote computer is used.|  
+|[<LocalFile>]|Specifies a local file in which to store the directory listing. If a local file is not specified, results are displayed on the screen.|  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Display a directory listing for **Dir1** on the remote computer.  

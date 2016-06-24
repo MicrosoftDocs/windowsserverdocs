@@ -27,7 +27,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Create-a-User-Role-for-Access-Control/ipam_CreateUserRole_01.jpg)  
   
-3.  Right\-click **Roles**, and then click **Add User Role**.  
+3.  Right-click **Roles**, and then click **Add User Role**.  
   
     ![](../../media/Create-a-User-Role-for-Access-Control/ipam_CreateUserRole_02.jpg)  
   

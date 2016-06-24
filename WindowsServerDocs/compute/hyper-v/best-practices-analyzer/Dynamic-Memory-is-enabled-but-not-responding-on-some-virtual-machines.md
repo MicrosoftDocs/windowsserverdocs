@@ -13,14 +13,14 @@ ms.assetid: 91b7f50f-a071-4ab6-beb1-1b29f92f52b6
 author: KBDAzure
 ---
 # Dynamic Memory is enabled but not responding on some virtual machines
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -30,7 +30,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *One or more virtual machines are experiencing problems with the driver required for Dynamic Memory in the guest operating system.*  
   
 ## Impact  
-*The guest operating system in the following virtual machines might not run or might run unreliably because Hyper\-V cannot adjust the memory dynamically to respond to changes in memory demand. This impacts the following virtual machines:*  
+*The guest operating system in the following virtual machines might not run or might run unreliably because Hyper-V cannot adjust the memory dynamically to respond to changes in memory demand. This impacts the following virtual machines:*  
   
 \<list of virtual machines>  
   

@@ -34,8 +34,8 @@ To ensure that you do not encounter these issues, you must use the same method t
 
 To configure and view VLAN switch port settings, you must do the following:
 
-- If you are using VMM or Network Controller to set up and manage your network, and you have deployed Software Defined Networking \(SDN\), you must use the **VMNetworkAdapterIsolation** cmdlets. 
-- If you are using [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] Hyper-V Manager or Windows PowerShell cmdlets, and you have not deployed Software Defined Networking \(SDN\), you must use the **VMNetworkAdapterVlan** cmdlets.
+- If you are using VMM or Network Controller to set up and manage your network, and you have deployed Software Defined Networking (SDN), you must use the **VMNetworkAdapterIsolation** cmdlets. 
+- If you are using [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] Hyper-V Manager or Windows PowerShell cmdlets, and you have not deployed Software Defined Networking (SDN), you must use the **VMNetworkAdapterVlan** cmdlets.
 
 ### Possible issues
 

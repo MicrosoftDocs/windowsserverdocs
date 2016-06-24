@@ -23,7 +23,7 @@ Starting with Windows Server 2016 Technical Preview and Windows 10, you can choo
  
  ## Change checkpoints to production or standard checkpoints  
   
-1.  In **Hyper\-V Manager**, right\-click the virtual machine and click **Settings**.  
+1.  In **Hyper-V Manager**, right-click the virtual machine and click **Settings**.  
   
 2.  Under the **Management** section, select **Checkpoints**.  
   

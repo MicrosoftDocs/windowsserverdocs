@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 4c92cd74-188e-4fec-b7c4-fe4e8903e032
 ---
 # Bdehdcfg
-Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption. Most installations of  Windows 7  will not need to use this tool because BitLocker setup includes the ability to prepare and repartition drives as required.
+Prepares a hard drive with the partitions necessary for BitLocker Drive Encryption. Most installations of  Windows 7  will not need to use this tool because BitLocker setup includes the ability to prepare and repartition drives as required.
 
 > [!WARNING]
-> There is a known conflict with the **Deny write access to fixed drives not protected by BitLocker** Group Policy setting located in **Computer Configuration\\Administrative Templates\\Windows Components\\BitLocker Drive Encryption\\Fixed Data Drives**.
+> There is a known conflict with the **Deny write access to fixed drives not protected by BitLocker** Group Policy setting located in **Computer Configuration\Administrative Templates\Windows Components\BitLocker Drive Encryption\Fixed Data Drives**.
 > 
 > If Bdehdcfg is run on a computer when this policy setting is enabled, you may encounter the following issues:
 > 
@@ -38,9 +38,9 @@ bdehdcfg [–driveinfo <DriveLetter>] [-target {default|unallocated|<DriveLetter
 |[Bdehdcfg: target](bdehdcfg/Bdehdcfg--target.md)|Defines which portion of a drive to use as the system drive and makes the portion active.|
 |[Bdehdcfg: newdriveletter](bdehdcfg/Bdehdcfg--newdriveletter.md)|Assigns a new drive letter to the portion of a drive used as the system drive.|
 |[Bdehdcfg: size](bdehdcfg/Bdehdcfg--size.md)|Determines the size of the system partition when a new system drive is being created.|
-|[Bdehdcfg: quiet](bdehdcfg/Bdehdcfg--quiet.md)|Prevents the display of all actions and errors in the command\-line interface and directs Bdehdcfg to use the "Yes" answer to any Yes\/No prompts that may occur during subsequent drive preparation.|
+|[Bdehdcfg: quiet](bdehdcfg/Bdehdcfg--quiet.md)|Prevents the display of all actions and errors in the command-line interface and directs Bdehdcfg to use the "Yes" answer to any Yes/No prompts that may occur during subsequent drive preparation.|
 |[Bdehdcfg: restart](bdehdcfg/Bdehdcfg--restart.md)|Directs the computer to restart after the drive preparation has finished.|
-|\/?|Displays Help at the command prompt.|
+|/?|Displays Help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
 The following example depicts Bdehdcfg being used with the default drive to create a system partition of 500 MB. Because no drive letter is specified, the new system partition will not have a drive letter.
@@ -49,7 +49,7 @@ The following example depicts Bdehdcfg being used with the default drive to crea
 bdehdcfg -target default -size 500
 ```
 
-The following example depicts Bdehdcfg being used with the default drive to create a system partition \(P:\) of the default size of 300 MB out of unallocated space on the drive. The tool will not prompt the user for any further input nor will any errors be displayed. After the system drive has been created, the computer will automatically restart.
+The following example depicts Bdehdcfg being used with the default drive to create a system partition (P:) of the default size of 300 MB out of unallocated space on the drive. The tool will not prompt the user for any further input nor will any errors be displayed. After the system drive has been created, the computer will automatically restart.
 
 ```
 bdehdcfg -target unallocated –newdriveletter P: -quiet -restart

@@ -11,21 +11,21 @@ ms.topic: article
 ms.assetid: 217d0ec4-3865-4e19-a6b6-2a9a24cf216b
 ---
 # Audit Certification Services
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Certification Services**, which determines whether the operating system generates events when Active Directory Certificate Services \(AD CS\) operations are performed.
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Certification Services**, which determines whether the operating system generates events when Active Directory Certificate Services (AD CS) operations are performed.
 
-Examples of AD CS operations include:
+Examples of AD CS operations include:
 
--   AD CS starts, shuts down, is backed up, or is restored.
+-   AD CS starts, shuts down, is backed up, or is restored.
 
--   Certificate revocation list \(CRL\)\-related tasks are performed.
+-   Certificate revocation list (CRL)-related tasks are performed.
 
 -   Certificates are requested, issued, or revoked.
 
--   Certificate manager settings for AD CS are changed.
+-   Certificate manager settings for AD CS are changed.
 
--   The configuration and properties of the certification authority \(CA\) are changed.
+-   The configuration and properties of the certification authority (CA) are changed.
 
--   AD CS templates are modified.
+-   AD CS templates are modified.
 
 -   Certificates are imported.
 
@@ -43,15 +43,15 @@ Event volume: Low to medium on servers that host AD CS role services
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|
 |4868|The certificate manager denied a pending certificate request.|
 |4869|Certificate Services received a resubmitted certificate request.|
 |4870|Certificate Services revoked a certificate.|
-|4871|Certificate Services received a request to publish the certificate revocation list \(CRL\).|
-|4872|Certificate Services published the certificate revocation list \(CRL\).|
+|4871|Certificate Services received a request to publish the certificate revocation list (CRL).|
+|4872|Certificate Services published the certificate revocation list (CRL).|
 |4873|A certificate request extension changed.|
 |4874|One or more certificate request attributes changed.|
 |4875|Certificate Services received a request to shut down.|

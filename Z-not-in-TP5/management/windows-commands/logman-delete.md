@@ -24,15 +24,15 @@ logman delete <[-n] <name>> [options]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/?|Displays context\-sensitive help.|  
-|\-s <computer name>|Perform the command on the specified remote computer.|  
-|\-config <value>|Specifies the settings file containing command options.|  
-|\[\-n\] <name>|Name of the target data collector.|  
-|\-ets|Send commands to Event Trace Sessions directly without saving or scheduling.|  
-|\-\[\-\]u <user \[password\]>|Specifies the user to Run As. Entering a \* for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt.|  
+|/?|Displays context-sensitive help.|  
+|-s <computer name>|Perform the command on the specified remote computer.|  
+|-config <value>|Specifies the settings file containing command options.|  
+|[-n] <name>|Name of the target data collector.|  
+|-ets|Send commands to Event Trace Sessions directly without saving or scheduling.|  
+|-[-]u <user [password]>|Specifies the user to Run As. Entering a * for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt.|  
   
 ## <a name="BKMK_examples"></a>Examples  
-The following command deletes the data collector perf\_log.  
+The following command deletes the data collector perf_log.  
   
 ```  
 logman delete perf_log  

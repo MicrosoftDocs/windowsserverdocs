@@ -32,20 +32,20 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 
 |Parameter|Description|
 |-------------|---------------|
-|\/update|Updates profile path information for <*UserName*> in domain <*DomainName*> to <*ProfilePath*>.|
-|\/domain:<DomainName>|Specifies the name of the domain in which the operation is applied.|
-|\/local|Applies the operation only to local user accounts.|
-|\/profile:<Path>|Specifies the profile path as displayed in the Remote Desktop Services extensions in Local Users and Groups and Active Directory Users and Computers.|
+|/update|Updates profile path information for <*UserName*> in domain <*DomainName*> to <*ProfilePath*>.|
+|/domain:<DomainName>|Specifies the name of the domain in which the operation is applied.|
+|/local|Applies the operation only to local user accounts.|
+|/profile:<Path>|Specifies the profile path as displayed in the Remote Desktop Services extensions in Local Users and Groups and Active Directory Users and Computers.|
 |<UserName>|Specifies the name of the user for whom you want to update or query the server profile path.|
-|\/copy|Copies user configuration information from <*SourceUser*> to <*DestinationUser*> and updates the profile path information for <*DestinationUser*> to <*ProfilePath*>. Both <*SourceUser*> and <*DestinationUser*> must either be local or must be in domain <*DomainName*>.|
-|<Src\_usr>|Specifies the name of the user from whom you want to copy the user configuration information.|
-|<Dest\_usr>|Specifies the name of the user to whom you want to copy the user configuration information.|
-|\/q|Displays the current profile path of the user for whom you want to query the server profile path.|
-|\/?|Displays help at the command prompt.|
+|/copy|Copies user configuration information from <*SourceUser*> to <*DestinationUser*> and updates the profile path information for <*DestinationUser*> to <*ProfilePath*>. Both <*SourceUser*> and <*DestinationUser*> must either be local or must be in domain <*DomainName*>.|
+|<Src_usr>|Specifies the name of the user from whom you want to copy the user configuration information.|
+|<Dest_usr>|Specifies the name of the user to whom you want to copy the user configuration information.|
+|/q|Displays the current profile path of the user for whom you want to query the server profile path.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   The **tsprof** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server® 2008  or RD Session Host role service on a computer running Windows Server 2008 R2.
+-   The **tsprof** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server® 2008  or RD Session Host role service on a computer running Windows Server 2008 R2.
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -55,7 +55,7 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
     tsprof /copy /local LocalUser1 LocalUser2
     ```
 
--   To set the Remote Desktop Services profile path for LocalUser1 to a directory called "c:\\profiles," type:
+-   To set the Remote Desktop Services profile path for LocalUser1 to a directory called "c:\profiles," type:
 
     ```
     tsprof /update /local /profile:c:\profiles LocalUser1

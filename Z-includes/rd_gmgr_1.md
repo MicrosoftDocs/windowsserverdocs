@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Remote Desktop Gateway Manager (RD Gateway Manager)</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Remote Desktop Gateway Manager (RD Gateway Manager)</Token>

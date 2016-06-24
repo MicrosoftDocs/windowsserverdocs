@@ -26,9 +26,9 @@ tree [<Drive>:][<Path>] [/f] [/a]
 |-------------|---------------|  
 |<Drive>:|Specifies the drive that contains the disk for which you want to display the directory structure.|  
 |<Path>|Specifies the directory for which you want to display the directory structure.|  
-|\/f|Displays the names of the files in each directory.|  
-|\/a|Specifies that **tree**is to use text characters instead of graphic characters to show the lines that link subdirectories.|  
-|\/?|Displays help at the command prompt.|  
+|/f|Displays the names of the files in each directory.|  
+|/a|Specifies that **tree**is to use text characters instead of graphic characters to show the lines that link subdirectories.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
 The structure displayed by **tree** depends upon the parameters that you specify at the command prompt. If you do not specify a drive or path, **tree** displays the tree structure beginning with the current directory of the current drive.  

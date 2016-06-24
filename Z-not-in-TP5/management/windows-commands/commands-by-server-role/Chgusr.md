@@ -10,7 +10,7 @@ ms.assetid: f119d9d3-ed8b-42da-81f7-77591d908c83
 author: jaimeo
 ---
 # Chgusr
-Changes the install mode for the Remote Desktop Session Host \(RD Session Host\) server.  
+Changes the install mode for the Remote Desktop Session Host (RD Session Host) server.  
   
 > [!NOTE]  
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  

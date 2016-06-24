@@ -40,10 +40,10 @@ fsutil transaction [rollback] <GUID>
 
 ### Remarks
 
--   Transactional NTFS was introduced in  Windows Server 2008 .
+-   Transactional NTFS was introduced in  Windows Server 2008 .
 
 ### <a name="BKMK_examples"></a>Examples
-To display transaction information for file c:\\test.txt, type:
+To display transaction information for file c:\test.txt, type:
 
 ```
 fsutil transaction fileinfo c:\test.txt  

@@ -13,12 +13,12 @@ ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe
 author: KBDAzure
 ---
 # Configure the server with a sufficient amount of dynamic MAC addresses
-*This topic is intended to address a specific issue identified by a Best Practices Analyzer scan. You should apply the information in this topic only to computers that have had the Hyper\-V Best Practices Analyzer run against them and are experiencing the issue addressed by this topic. For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+*This topic is intended to address a specific issue identified by a Best Practices Analyzer scan. You should apply the information in this topic only to computers that have had the Hyper-V Best Practices Analyzer run against them and are experiencing the issue addressed by this topic. For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|[Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   

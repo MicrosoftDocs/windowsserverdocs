@@ -13,9 +13,9 @@ ms.assetid: 6ebd0b61-a270-473b-ba1e-062c88a31bc2
 author: billmath
 ---
 # Stand-Alone Federation Server Using WID
-A stand\-alone federation server in Active Directory Federation Services \(AD FS\) consists of a single server that hosts a Federation Service configured to use the Windows Internal Database \(WID\). This AD FS topology is for test labs. We do not recommend it for production environments because it has a limit of only one federation server, and it cannot be used to scale up to more servers.  
+A stand-alone federation server in Active Directory Federation Services (AD FS) consists of a single server that hosts a Federation Service configured to use the Windows Internal Database (WID). This AD FS topology is for test labs. We do not recommend it for production environments because it has a limit of only one federation server, and it cannot be used to scale up to more servers.  
   
-If you want to add additional federation servers to your test lab, you must rebuild the Federation Service from scratch by deploying any of the other topologies mentioned later in this section. Therefore, we recommend that you use this topology for a test lab or a proof\-of\-concept environment in your private testing network in which a single federation server is adequate, as shown in the following illustration.  
+If you want to add additional federation servers to your test lab, you must rebuild the Federation Service from scratch by deploying any of the other topologies mentioned later in this section. Therefore, we recommend that you use this topology for a test lab or a proof-of-concept environment in your private testing network in which a single federation server is adequate, as shown in the following illustration.  
   
 ![](../../../../media/Stand-Alone-Federation-Server-Using-WID/FedServerWID.gif)  
   
@@ -24,7 +24,7 @@ This section describes various considerations about the intended audience, benef
   
 ### Who should use this topology?  
   
--   Information technology \(IT\) professionals or IT architects who want to evaluate or develop a proof of concept for this technology  
+-   Information technology (IT) professionals or IT architects who want to evaluate or develop a proof of concept for this technology  
   
 ### What are the benefits of using this topology?  
   
@@ -32,8 +32,8 @@ This section describes various considerations about the intended audience, benef
   
 ### What are the limitations of using this topology?  
   
--   Only one federation server per Federation Service \(no capability to scale up to a farm\)  
+-   Only one federation server per Federation Service (no capability to scale up to a farm)  
   
--   Not redundant \(only a single instance of the AD FS configuration database exists\)  
+-   Not redundant (only a single instance of the AD FS configuration database exists)  
   
 

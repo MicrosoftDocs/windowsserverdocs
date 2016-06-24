@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Active Directory Rights Management Services (AD RMS)</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Active Directory Rights Management Services (AD RMS)</Token>

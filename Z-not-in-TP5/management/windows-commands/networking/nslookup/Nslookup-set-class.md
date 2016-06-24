@@ -21,7 +21,7 @@ set class=<Class>
 
 |Parameter|Description|
 |-------------|---------------|
-|<Class>|The default class is IN. The following table lists the valid values for this command.<br /><br />-   IN \- Specifies the Internet class<br />-   CHAOS \- Specifies the Chaos class<br />-   HESIOD \- Specifies the MIT Athena Hesiod class<br />-   ANY \- Specifies any of the previously listed wildcards|
+|<Class>|The default class is IN. The following table lists the valid values for this command.<br /><br />-   IN - Specifies the Internet class<br />-   CHAOS - Specifies the Chaos class<br />-   HESIOD - Specifies the MIT Athena Hesiod class<br />-   ANY - Specifies any of the previously listed wildcards|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
 
 ## Additional references

@@ -44,7 +44,7 @@ AppLocker helps reduce administrative overhead and helps reduce the organization
 
 -   Application inventory
 
-    AppLocker has the ability to enforce its policy in an audit\-only mode where all application access activity is registered in event logs. These events can be collected for further analysis. Windows PowerShell cmdlets also help you analyze this data programmatically.
+    AppLocker has the ability to enforce its policy in an audit-only mode where all application access activity is registered in event logs. These events can be collected for further analysis. Windows PowerShell cmdlets also help you analyze this data programmatically.
 
 -   Protection against unwanted software
 
@@ -60,7 +60,7 @@ AppLocker helps reduce administrative overhead and helps reduce the organization
 
 -   Manageability improvement
 
-    AppLocker includes a number of improvements in manageability as compared to its predecessor Software Restriction Policies \(SRP\). Importing and exporting policies, automatic generation of rules from multiple files, audit\-only mode deployment and PowerShell cmdlets are a few of the improvements over SRP.
+    AppLocker includes a number of improvements in manageability as compared to its predecessor Software Restriction Policies (SRP). Importing and exporting policies, automatic generation of rules from multiple files, audit-only mode deployment and PowerShell cmdlets are a few of the improvements over SRP.
 
 For more information about how AppLocker policies work, see the [AppLocker Technical Overview](assetId:///358610e4-88b2-40d0-b34d-dfd7ddee0ed9).
 

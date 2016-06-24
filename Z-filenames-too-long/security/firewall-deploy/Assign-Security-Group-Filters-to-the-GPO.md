@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 6f364586-8839-4ac9-b90a-1e25255ce12c
 ---
 # Assign Security Group Filters to the GPO
-To make sure that your GPO is applied to the correct computers, use the Group Policy Management MMC snap\-in to assign security group filters to the GPO.
+To make sure that your GPO is applied to the correct computers, use the Group Policy Management MMC snap-in to assign security group filters to the GPO.
 
 > [!IMPORTANT]
 > This deployment guide uses the method of adding the Domain Computers group to the membership group for the main isolated domain after testing is complete and you are ready to go live in production. To make this method work, you must prevent any computer that is a member of either the boundary or encryption zone from applying the GPO for the main isolated domain. For example, on the GPOs for the main isolated domain, deny Read and Apply Group Policy permissions to the membership groups for the boundary and encryption zones.

@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 71382e29-9b39-41c8-9c23-cf0ff829440a
 ---
 # Bootcfg delete
-Deletes an operating system entry in the \[operating systems\] section of the Boot.ini file.
+Deletes an operating system entry in the [operating systems] section of the Boot.ini file.
 
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 
@@ -23,14 +23,14 @@ bootcfg /delete [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntry
 
 |Term|Definition|
 |--------|--------------|
-|\/s <Computer>|Specifies the name or IP address of a remote computer \(do not use backslashes\). The default is the local computer.|
-|\/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User>or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
-|\/p <Password>|Specifies the password of the user account that is specified in the **\/u** parameter.|
-|\/id <OSEntryLineNum>|Specifies the operating system entry line number in the \[operating systems\] section of the Boot.ini file to delete. The first line after the \[operating systems\] section header is 1.|
-|\/?|Displays help at the command prompt.|
+|/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
+|/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User>or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
+|/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
+|/id <OSEntryLineNum>|Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to delete. The first line after the [operating systems] section header is 1.|
+|/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_examples"></a>Examples
-The following examples show how you can use the **bootcfg \/delete**command:
+The following examples show how you can use the **bootcfg /delete**command:
 
 ```
 bootcfg /delete /id 1

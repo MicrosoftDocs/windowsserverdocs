@@ -21,19 +21,19 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\-lh|Denotes the high part of the user’s locally unique identifier \(LUID\), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
-|\-li|Denotes the low part of the user’s locally unique identifier \(LUID\), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
-|tickets|Lists the currently cached ticket\-granting\-tickets \(TGTs\), and service tickets of the specified logon session. This is the default option.|  
+|-lh|Denotes the high part of the user’s locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|-li|Denotes the low part of the user’s locally unique identifier (LUID), expressed in hexadecimal. If neither –lh or –li are present, the command defaults to the LUID of the user who is currently signed in.|  
+|tickets|Lists the currently cached ticket-granting-tickets (TGTs), and service tickets of the specified logon session. This is the default option.|  
 |tgt|Displays the initial Kerberos TGT.|  
 |purge|Allows you to delete all the tickets of the specified logon session.|  
 |sessions|Displays a list of logon sessions on this computer.|  
-|kcd\_cache|Displays the Kerberos constrained delegation cache information.|  
-|get|Allows you to request a ticket to the target computer specified by the service principal name \(SPN\).|  
-|add\_bind|Allows you to specify a preferred domain controller for Kerberos authentication.|  
-|query\_bind|Displays a list of cached preferred domain controllers for each domain that Kerberos has contacted.|  
-|purge\_bind|Removes the cached preferred domain controllers for the domains specified.|  
-|kdcoptions|Displays the Key Distribution Center \(KDC\) options specified in RFC 4120.|  
-|\/?|Displays Help for this command.|  
+|kcd_cache|Displays the Kerberos constrained delegation cache information.|  
+|get|Allows you to request a ticket to the target computer specified by the service principal name (SPN).|  
+|add_bind|Allows you to specify a preferred domain controller for Kerberos authentication.|  
+|query_bind|Displays a list of cached preferred domain controllers for each domain that Kerberos has contacted.|  
+|purge_bind|Removes the cached preferred domain controllers for the domains specified.|  
+|kdcoptions|Displays the Key Distribution Center (KDC) options specified in RFC 4120.|  
+|/?|Displays Help for this command.|  
   
 ## Remarks  
 Membership in **Domain Admins**, or equivalent, is the minimum required to run all the parameters of this command.  
@@ -90,7 +90,7 @@ The parameters display the following information:
   
     -   RenewUntil: Deadline for ticket renewal  
   
-    -   TimeSkew: Time difference with the Key Distribution Center \(KDC\)  
+    -   TimeSkew: Time difference with the Key Distribution Center (KDC)  
   
     -   EncodedTicket: Encoded ticket  
   
@@ -106,7 +106,7 @@ The parameters display the following information:
   
     -   LogonID: If specified, displays the logon session only by the given value. If not specified, displays all the logon sessions on this computer.  
   
--   **kcd\_cache**  
+-   **kcd_cache**  
   
     Allows you to display the Kerberos constrained delegation cache information.  
   
@@ -120,15 +120,15 @@ The parameters display the following information:
   
     -   kdcoptions: Requests a ticket with the given KDC options  
   
--   **add\_bind**  
+-   **add_bind**  
   
     Allows you to specify a preferred domain controller for Kerberos authentication.  
   
--   **query\_bind**  
+-   **query_bind**  
   
     Allows you to display cached, preferred domain controllers for the domains.  
   
--   **purge\_bind**  
+-   **purge_bind**  
   
     Allows you to remove cached, preferred domain controllers for the domains.  
   
@@ -142,7 +142,7 @@ The parameters display the following information:
   
 ## <a name="BKMK_Examples"></a>Examples  
   
-1.  When you are diagnosing an Event ID 27 while processing a ticket\-granting service \(TGS\) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
+1.  When you are diagnosing an Event ID 27 while processing a ticket-granting service (TGS) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
   
     ```  
     klist   
@@ -152,7 +152,7 @@ The parameters display the following information:
     klist –li 0x3e7  
     ```  
   
-2.  When you diagnose errors and you want to know the specifics of each ticket\-granting\-ticket that is cached on the computer for a logon session, you can use Klist to display the TGT information.  
+2.  When you diagnose errors and you want to know the specifics of each ticket-granting-ticket that is cached on the computer for a logon session, you can use Klist to display the TGT information.  
   
     ```  
     klist tgt  
@@ -203,7 +203,7 @@ The parameters display the following information:
     klist query_bind  
     ```  
   
-9. When you want Kerberos to rediscover domain controllers, you can use the following command. This command can also be used to flush the cache before creating new domain controller bindings with klist add\_bind.  
+9. When you want Kerberos to rediscover domain controllers, you can use the following command. This command can also be used to flush the cache before creating new domain controller bindings with klist add_bind.  
   
     ```  
     klist purge_bind  

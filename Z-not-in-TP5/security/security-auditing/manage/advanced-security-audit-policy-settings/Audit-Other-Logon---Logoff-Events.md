@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: bde9321e-1818-4ed0-b489-3c2921ee078a
 ---
 # Audit Other Logon - Logoff Events
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Other Logon\/Logoff Events**, which determines whether Windows generates audit events for other logon or logoff events.
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Other Logon/Logoff Events**, which determines whether Windows generates audit events for other logon or logoff events.
 
 These other logon or logoff events include:
 
@@ -33,7 +33,7 @@ Event volume: Low
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of Windows as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of Windows as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

@@ -13,14 +13,14 @@ ms.assetid: 7dbd3dfc-c873-4a77-89f7-3166e18d9531
 author: KBDAzure
 ---
 # Virtual machines should be backed up at least once every week
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
   

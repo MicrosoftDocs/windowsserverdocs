@@ -10,7 +10,7 @@ ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef
 author: vhorne
 ---
 # Tftp
-Transfers files to and from a remote computer, typically a computer running UNIX, that is running the Trivial File Transfer Protocol \(TFTP\) service or daemon. TFTP is typically used by embedded devices or systems that retrieve firmware, configuration information, or a system image during the boot process from a TFTP server. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
+Transfers files to and from a remote computer, typically a computer running UNIX, that is running the Trivial File Transfer Protocol (TFTP) service or daemon. TFTP is typically used by embedded devices or systems that retrieve firmware, configuration information, or a system image during the boot process from a TFTP server. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).  
   
 ## Syntax  
   
@@ -22,7 +22,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\-i|Specifies binary image transfer mode \(also called octet mode\). In binary image mode, the file is transferred in one\-byte units. Use this mode when transferring binary files. If **\-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end\-of\-line \(EOL\) characters to an appropriate format for the specified computer. Use this mode when transferring text files. If a file transfer is successful, the data transfer rate is displayed.|  
+|-i|Specifies binary image transfer mode (also called octet mode). In binary image mode, the file is transferred in one-byte units. Use this mode when transferring binary files. If **-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end-of-line (EOL) characters to an appropriate format for the specified computer. Use this mode when transferring text files. If a file transfer is successful, the data transfer rate is displayed.|  
 |<Host>|Specifies the local or remote computer.|  
 |put|Transfers the file *Source* on the local computer to the file *Destination* on the remote computer. Because the TFTP protocol does not support user authentication, the user must be logged onto the remote computer, and the files must be writable on the remote computer.|  
 |get|Transfers the file *Destination* on the remote computer to the file *Source* on the local computer.|  

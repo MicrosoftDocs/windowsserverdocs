@@ -24,17 +24,17 @@ WDSUTIL /Add-Device /Device:<Device name> /ID:<UUID | MAC Address> [/ReferralSer
 
 |Parameter|Description|
 |-------------|---------------|
-|\/Device:<computer name>|Specifies the name of the computer to be added.|
-|\/ID:<UUID &#124; MAC Address>|Specifies either the GUID\/UUID or the MAC address of the computer. A GUID\/UUID must be in one of two formats—binary string or GUID string. For example:<br /><br />Binary string: **\/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br /><br />GUID string: **\/ID:E8A3EFAC\-201F\-4E69\-953E\-B2DAA1E8B1B6**<br /><br />A MAC address must be in the following format: **00B056882FDC** \(no dashes\) or **00\-B0\-56\-88\-2F\-DC** \(with dashes\)|
-|\[\/ReferralServer:<Server name>\]|Specifies the name of the server to be contacted to download the network boot program and the boot image by using Trivial File Transfer Protocol \(TFTP\).|
-|\[\/BootProgram:<Relative path>\]|Specifies the relative path from the RemoteInstall folder to the network boot program that this computer should receive. For example: "boot\\x86\\pxeboot.com"|
-|\[\/WdsClientUnattend:<Relative path>\]|Specifies the relative path from the RemoteInstall folder to the unattended installation file that automates the installation screens of the Windows Deployment Services client.|
-|\[\/User:<Domain\\User &#124; User@Domain>\]|Sets permissions on the computer account object to give the specified user the necessary rights to join the computer to the domain.|
-|\[\/JoinRights:{JoinOnly &#124; Full}\]|Specifies the type of rights to be assigned to the user.<br /><br />-   **JoinOnly** requires the administrator to reset the computer account before the user can join the computer to the domain.<br />-   **Full** gives full access to the user, which includes the right to join the computer to the domain.|
-|\[\/JoinDomain:{Yes &#124; No}\]|Specifies whether or not the computer should be joined to the domain as this computer account during operating system installation. The default value is **Yes**.|
-|\[\/BootImagePath:<Relative path>\]|Specifies the relative path from the RemoteInstall folder to the boot image that this computer should use.|
-|\[\/OU:<DN of OU>\]|The distinguished name of the organizational unit where the computer account object should be created. For example: **OU\=MyOU,CN\=Test, DC\=Domain,DC\=com**. The default location is the default computer's container.|
-|\[\/Domain:<Domain>\]|The domain where the computer account object should be created. The default location is the local domain.|
+|/Device:<computer name>|Specifies the name of the computer to be added.|
+|/ID:<UUID &#124; MAC Address>|Specifies either the GUID/UUID or the MAC address of the computer. A GUID/UUID must be in one of two formats—binary string or GUID string. For example:<br /><br />Binary string: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br /><br />GUID string: **/ID:E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br /><br />A MAC address must be in the following format: **00B056882FDC** (no dashes) or **00-B0-56-88-2F-DC** (with dashes)|
+|[/ReferralServer:<Server name>]|Specifies the name of the server to be contacted to download the network boot program and the boot image by using Trivial File Transfer Protocol (TFTP).|
+|[/BootProgram:<Relative path>]|Specifies the relative path from the RemoteInstall folder to the network boot program that this computer should receive. For example: "boot\x86\pxeboot.com"|
+|[/WdsClientUnattend:<Relative path>]|Specifies the relative path from the RemoteInstall folder to the unattended installation file that automates the installation screens of the Windows Deployment Services client.|
+|[/User:<Domain\User &#124; User@Domain>]|Sets permissions on the computer account object to give the specified user the necessary rights to join the computer to the domain.|
+|[/JoinRights:{JoinOnly &#124; Full}]|Specifies the type of rights to be assigned to the user.<br /><br />-   **JoinOnly** requires the administrator to reset the computer account before the user can join the computer to the domain.<br />-   **Full** gives full access to the user, which includes the right to join the computer to the domain.|
+|[/JoinDomain:{Yes &#124; No}]|Specifies whether or not the computer should be joined to the domain as this computer account during operating system installation. The default value is **Yes**.|
+|[/BootImagePath:<Relative path>]|Specifies the relative path from the RemoteInstall folder to the boot image that this computer should use.|
+|[/OU:<DN of OU>]|The distinguished name of the organizational unit where the computer account object should be created. For example: **OU=MyOU,CN=Test, DC=Domain,DC=com**. The default location is the default computer's container.|
+|[/Domain:<Domain>]|The domain where the computer account object should be created. The default location is the local domain.|
 
 ## <a name="BKMK_examples"></a>Examples
 To add a computer by using a MAC address, type:
@@ -59,6 +59,6 @@ WDSUTIL /Add-Device /Device:Computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6}
 
 [Subcommand: set-Device](../the-set-command/Subcommand--set-Device.md)
 
-[New\-WdsClient](http://technet.microsoft.com/library/dn283430.aspx)
+[New-WdsClient](http://technet.microsoft.com/library/dn283430.aspx)
 
 

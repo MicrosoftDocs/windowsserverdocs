@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: a670fb78-c055-464a-b61d-3a85632c52c5
 ---
 # Query user
-Displays information about user sessions on a Remote Desktop Session Host \(RD Session Host\) server.
+Displays information about user sessions on a Remote Desktop Session Host (RD Session Host) server.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -29,8 +29,8 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 |<UserName>|Specifies the logon name of the user that you want to query.|
 |<SessionName>|Specifies the name of the session that you want to query.|
 |<SessionID>|Specifies the ID of the session that you want to query.|
-|\/server:<ServerName>|Specifies the RD Session Host server that you want to query. Otherwise, the current RD Session Host server is used.|
-|\/?|Displays help at the command prompt.|
+|/server:<ServerName>|Specifies the RD Session Host server that you want to query. Otherwise, the current RD Session Host server is used.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -42,9 +42,9 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 
     -   The session ID
 
-    -   The state of the session \(active or disconnected\)
+    -   The state of the session (active or disconnected)
 
-    -   The idle time \(the number of minutes since the last keystroke or mouse movement at the session\)
+    -   The idle time (the number of minutes since the last keystroke or mouse movement at the session)
 
     -   The date and time the user logged on
 
@@ -52,9 +52,9 @@ query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 
 -   If you use **query user** without specifying <*UserName*>, <*SessionName*>, or <*SessionID*>, a list of all users who are logged on to the server is returned. Alternatively, you can also use **query session** to display a list of all sessions on a server.
 
--   When **query user** returns information, a greater than \(>\) symbol is displayed before the current session.
+-   When **query user** returns information, a greater than (>) symbol is displayed before the current session.
 
--   The **\/server** parameter is required only if you use **query user** from a remote server.
+-   The **/server** parameter is required only if you use **query user** from a remote server.
 
 ## <a name="BKMK_examples"></a>Examples
 

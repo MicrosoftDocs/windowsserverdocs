@@ -20,7 +20,7 @@ For more information about best practices and scans, see [Run Best Practices Ana
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   

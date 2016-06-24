@@ -13,13 +13,13 @@ Enables an administrator to query, display, or disconnect files and directories 
 
 This topic includes information about the following commands:
 
--   [openfiles \/disconnect](#BKMK_disconnect)
+-   [openfiles /disconnect](#BKMK_disconnect)
 
--   [openfiles \/query](#BKMK_query)
+-   [openfiles /query](#BKMK_query)
 
--   [openfiles \/local](#BKMK_local)
+-   [openfiles /local](#BKMK_local)
 
-## <a name="BKMK_disconnect"></a>openfiles \/disconnect
+## <a name="BKMK_disconnect"></a>openfiles /disconnect
 Enables an administrator to disconnect files and folders that have been opened remotely through a shared folder.
 
 ##### Syntax
@@ -32,14 +32,14 @@ openfiles /disconnect [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/s <System>|Specifies the remote system to connect to \(by name or IP address\). Do not use backslashes. If you do not use the **\/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
-|\/u \[<Domain>\\\]<UserName>|Executes the command by using the permissions of the specified user account. If you do not use the **\/u** option, system permissions are used by default.|
-|\/p \[<Password>\]|Specifies the password of the user account that is specified in the **\/u** option. If you do not use the **\/p** option, a password prompt appears when the command is executed.|
-|\/id <OpenFileID>|Disconnects open files by the specified file ID. The wildcard character \(**\***\) can be used with this parameter. **Note:** You can use the **openfiles \/query** command to find the file ID.|
-|\/a <AccessedBy>|Disconnects all open files associated with the user name that is specified in the *AccessedBy* parameter. The wildcard character \(**\***\) can be used with this parameter.|
-|\/o {read &#124; write &#124; read\/write}|Disconnects all open files with the specified open modevalue. Valid values are Read, Write, or Read\/Write. The wildcard character \(**\***\) can be used with this parameter.|
-|\/op <OpenFile>|Disconnects all open file connections that are created by a specific open file name. The wildcard character \(**\***\) can be used with this parameter.|
-|\/?|Displays help at the command prompt.|
+|/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. If you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
+|/u [<Domain>\\]<UserName>|Executes the command by using the permissions of the specified user account. If you do not use the **/u** option, system permissions are used by default.|
+|/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
+|/id <OpenFileID>|Disconnects open files by the specified file ID. The wildcard character (**\***) can be used with this parameter. **Note:** You can use the **openfiles /query** command to find the file ID.|
+|/a <AccessedBy>|Disconnects all open files associated with the user name that is specified in the *AccessedBy* parameter. The wildcard character (**\***) can be used with this parameter.|
+|/o {read &#124; write &#124; read/write}|Disconnects all open files with the specified open modevalue. Valid values are Read, Write, or Read/Write. The wildcard character (**\***) can be used with this parameter.|
+|/op <OpenFile>|Disconnects all open file connections that are created by a specific open file name. The wildcard character (**\***) can be used with this parameter.|
+|/?|Displays help at the command prompt.|
 
 ##### Examples
 To disconnect all open files with the file ID 26843578, type:
@@ -54,13 +54,13 @@ To disconnect all open files and directories accessed by the user "hiropln," typ
 openfiles /disconnect /a hiropln
 ```
 
-To disconnect all open files and directories with read\/write mode, type:
+To disconnect all open files and directories with read/write mode, type:
 
 ```
 openfiles /disconnect /o read/write
 ```
 
-To disconnect the directory with the Open File name "C:\\TestShare\\", regardless of who is accessing it, type:
+To disconnect the directory with the Open File name "C:\TestShare\\", regardless of who is accessing it, type:
 
 ```
 openfiles /disconnect /a * /op "c:\testshare\"
@@ -72,7 +72,7 @@ To disconnect all open files on the remote computer "srvmain" that are being acc
 openfiles /disconnect /s srvmain /u maindom\hiropln /id *
 ```
 
-## <a name="BKMK_query"></a>openfiles \/query
+## <a name="BKMK_query"></a>openfiles /query
 Queries and displays all open files.
 
 ##### Syntax
@@ -85,13 +85,13 @@ openfiles /query [/s <System> [/u [<Domain>\]<UserName> [/p [<Password>]]]] [/fo
 
 |Parameter|Description|
 |-------------|---------------|
-|\/s <System>|Specifies the remote system to connect to \(by name or IP address\). Do not use backslashes. If you do not use the **\/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
-|\/u \[<Domain>\\\]<UserName>|Executes the command by using the permissions of the specified user account. If you do not use the **\/u** option, system permissions are used by default.|
-|\/p \[<Password>\]|Specifies the password of the user account that is specified in the **\/u** option. If you do not use the **\/p** option, a password prompt appears when the command is executed.|
-|\[\/fo {TABLE &#124; LIST &#124; CSV}\]|Displays the output in the specified format. Valid values for *Format* are:<br /><br />TABLE:  Displays output in a table.<br /><br />LIST: Displays output in a list.<br /><br />CSV: Displays output in Comma Separated Values format.|
-|\/nh|Suppresses column header in the output. Valid only when the **\/fo** parameter is set to **TABLE** or **CSV**.|
-|\/v|Specifies that detailed information be displayed in the output.|
-|\/?|Displays help at the command prompt.|
+|/s <System>|Specifies the remote system to connect to (by name or IP address). Do not use backslashes. If you do not use the **/s** option, the command is executed on the local computer by default. This parameter applies to all files and folders that are specified in the command.|
+|/u [<Domain>\\]<UserName>|Executes the command by using the permissions of the specified user account. If you do not use the **/u** option, system permissions are used by default.|
+|/p [<Password>]|Specifies the password of the user account that is specified in the **/u** option. If you do not use the **/p** option, a password prompt appears when the command is executed.|
+|[/fo {TABLE &#124; LIST &#124; CSV}]|Displays the output in the specified format. Valid values for *Format* are:<br /><br />TABLE:  Displays output in a table.<br /><br />LIST: Displays output in a list.<br /><br />CSV: Displays output in Comma Separated Values format.|
+|/nh|Suppresses column header in the output. Valid only when the **/fo** parameter is set to **TABLE** or **CSV**.|
+|/v|Specifies that detailed information be displayed in the output.|
+|/?|Displays help at the command prompt.|
 
 ##### Examples
 To query and display all open files, type:
@@ -119,10 +119,10 @@ openfiles /query /s srvmain /u maindom\hiropln /p p@ssW23
 ```
 
 > [!NOTE]
-> In this example, the password is supplied on the command line. To prevent displaying the password, leave out the **\/p** option. You will be prompted for the password, which will not be echoed to the screen.
+> In this example, the password is supplied on the command line. To prevent displaying the password, leave out the **/p** option. You will be prompted for the password, which will not be echoed to the screen.
 
-## <a name="BKMK_local"></a>openfiles \/local
-Enables or disables the system Maintain Objects List global flag. If used without parameters, **openfiles \/local** displays the current status of the Maintain Objects List global flag.
+## <a name="BKMK_local"></a>openfiles /local
+Enables or disables the system Maintain Objects List global flag. If used without parameters, **openfiles /local** displays the current status of the Maintain Objects List global flag.
 
 ##### Syntax
 
@@ -134,8 +134,8 @@ openfiles /local [on | off]
 
 |Parameter|Description|
 |-------------|---------------|
-|\[on &#124; off\]|Enables or disables the system Maintain Objects List global flag, which tracks local file handles.|
-|\/?|Displays help at the command prompt.|
+|[on &#124; off]|Enables or disables the system Maintain Objects List global flag, which tracks local file handles.|
+|/?|Displays help at the command prompt.|
 
 ##### Remarks
 

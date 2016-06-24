@@ -1,1 +1,1 @@
-Windows Server® 2008 R2 Enterprise
+Windows Server® 2008 R2 Enterprise

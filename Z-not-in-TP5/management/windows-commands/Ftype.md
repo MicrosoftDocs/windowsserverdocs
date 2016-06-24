@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
 ---
 # Ftype
-Displays or modifies file types that are used in file name extension associations. If used without an assignment operator \(**\=**\), **ftype** displays the current open command string for the specified file type. If used without parameters, **ftype** displays the file types that have open command strings defined.
+Displays or modifies file types that are used in file name extension associations. If used without an assignment operator (**=**), **ftype** displays the current open command string for the specified file type. If used without parameters, **ftype** displays the file types that have open command strings defined.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -25,7 +25,7 @@ ftype [<FileType>[=[<OpenCommandString>]]]
 |-------------|---------------|
 |<FileType>|Specifies the file type to display or change.|
 |<OpenCommandString>|Specifies the open command string to use when opening files of the specified file type.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 The following table describes how **ftype** substitutes variables within an open command string:
@@ -33,8 +33,8 @@ The following table describes how **ftype** substitutes variables within an open
 |Variable|Replacement value|
 |------------|---------------------|
 |%0 or %1|Gets substituted with the file name being launched through the association.|
-|%\*|Gets all of the parameters.|
-|%2, %3, ...|Gets the first parameter \(%2\), the second parameter \(%3\), and so on.|
+|%*|Gets all of the parameters.|
+|%2, %3, ...|Gets the first parameter (%2), the second parameter (%3), and so on.|
 |%~<N>|Gets all of the remaining parameters starting with the *N*th parameter, where *N* can be any number from 2 to 9.|
 
 ## <a name="BKMK_examples"></a>Examples

@@ -11,9 +11,9 @@ ms.topic: article
 ms.assetid: bf26a458-5897-4408-9e25-d2a32eab8d6e
 ---
 # Audit Non-Sensitive Privilege Use
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Non\-Sensitive Privilege Use**, which determines whether the operating system generates audit events when non\-sensitive privileges \(user rights\) are used.
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Non-Sensitive Privilege Use**, which determines whether the operating system generates audit events when non-sensitive privileges (user rights) are used.
 
-The following privileges are non\-sensitive:
+The following privileges are non-sensitive:
 
 -   **Access Credential Manager as a trusted caller**
 
@@ -75,13 +75,13 @@ The following privileges are non\-sensitive:
 
 -   **Synchronize directory service data**
 
-If you configure this policy setting, an audit event is generated when a non\-sensitive privilege is called. Success audits record successful attempts, and failure audits record unsuccessful attempts.
+If you configure this policy setting, an audit event is generated when a non-sensitive privilege is called. Success audits record successful attempts, and failure audits record unsuccessful attempts.
 
 Event volume: Very high
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

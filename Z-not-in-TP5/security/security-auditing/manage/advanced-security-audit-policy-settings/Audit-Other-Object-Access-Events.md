@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: a162c175-3475-49bf-8b6a-697749b83e27
 ---
 # Audit Other Object Access Events
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Other Object Access Events**, which determines whether the operating system generates audit events for the management of Task Scheduler jobs or COM\+ objects.
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Other Object Access Events**, which determines whether the operating system generates audit events for the management of Task Scheduler jobs or COM+ objects.
 
 For scheduler jobs, the following actions are audited:
 
@@ -25,7 +25,7 @@ For scheduler jobs, the following actions are audited:
 
 -   Job updated.
 
-For COM\+ objects, the following actions are audited:
+For COM+ objects, the following actions are audited:
 
 -   Catalog object added.
 
@@ -37,7 +37,7 @@ Event volume: Low
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|
@@ -50,9 +50,9 @@ If this policy setting is configured, the following events appear on computers r
 |4702|A scheduled task was updated.|
 |5148|The Windows Filtering Platform has detected a DoS attack and entered a defensive mode; packets associated with this attack will be discarded. **Note:** This event is logged only on computers running the supported versions of the Windows operating system.|
 |5149|The DoS attack has subsided and normal processing is being resumed. **Note:** This event is logged only on computers running the supported versions of the Windows operating system.|
-|5888|An object in the COM\+ Catalog was modified.|
-|5889|An object was deleted from the COM\+ Catalog.|
-|5890|An object was added to the COM\+ Catalog.|
+|5888|An object in the COM+ Catalog was modified.|
+|5889|An object was deleted from the COM+ Catalog.|
+|5890|An object was added to the COM+ Catalog.|
 
 ## Related resource
 [Advanced Security Audit Policy Settings](../Advanced-Security-Audit-Policy-Settings.md)

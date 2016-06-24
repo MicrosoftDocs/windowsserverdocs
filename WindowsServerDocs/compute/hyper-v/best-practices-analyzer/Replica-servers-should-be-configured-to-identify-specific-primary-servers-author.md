@@ -13,14 +13,14 @@ ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
 author: KBDAzure
 ---
 # Replica servers should be configured to identify specific primary servers authorized to send replication traffic
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -33,13 +33,13 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *All replication from all primary servers is stored in one location, which might introduce privacy or security problems.*  
   
 ## Resolution  
-*Use Hyper\-V Manager to create new authorization entries for the specific primary servers and specify separate storage locations for each of them. You can use wildcard characters to group primary servers into sets for each authorization entry.*  
+*Use Hyper-V Manager to create new authorization entries for the specific primary servers and specify separate storage locations for each of them. You can use wildcard characters to group primary servers into sets for each authorization entry.*  
   
-#### Create authorization entries using Hyper\-V Manager  
+#### Create authorization entries using Hyper-V Manager  
   
-1.  Open Hyper\-V Manager. \(From Server Manager, click **Tools** > **Hyper\-V Manager**.\)  
+1.  Open Hyper-V Manager. (From Server Manager, click **Tools** > **Hyper-V Manager**.)  
   
-2.  From the list of hosts, right\-click the one you want, then click **Hyper\-V Settings**.  
+2.  From the list of hosts, right-click the one you want, then click **Hyper-V Settings**.  
   
 3.  In the navigation pane, click **Replication Configuration**.  
   
@@ -61,15 +61,15 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ### Create authorization entries using Windows PowerShell  
   
-1.  Open Windows PowerShell. \(From the desktop, click Start and start typing **Windows PowerShell**.\)  
+1.  Open Windows PowerShell. (From the desktop, click Start and start typing **Windows PowerShell**.)  
   
-2.  Right\-click **Windows PowerShell** and click **Run as administrator**.  
+2.  Right-click **Windows PowerShell** and click **Run as administrator**.  
   
 3.  Run a command similar to the following, replacing:  
   
     -   The primary server name of server01.domain01.contoso.com with the fully qualified domain name of your server.  
   
-    -   The location of D:\\ReplicaVMStorage with your location.  
+    -   The location of D:\ReplicaVMStorage with your location.  
   
     -   The trust group named DEFAULT with name of your group, if you've created one. If not, use DEFAULT.  
   

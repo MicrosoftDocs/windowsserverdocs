@@ -1,4 +1,4 @@
-﻿---
+---
 title: Upgrading to AD FS in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -24,7 +24,7 @@ author: billmath
 The following document will describe how to upgrade your AD FS Windows Server 2012 R2 farm to AD FS in Windows Server 2016.  
   
 ### Upgrading AD FS to Windows Server 2016 FBL  
-New in AD FS for Windows Server 2016 is the farm behavior level feature \(FBL\).   This features is farm wide and determines the features that the AD FS farm can use.   By default, the FBL in a Windows Server 2012 R2 AD FS farm is at the Windows Server 2012 R2 FBL.  
+New in AD FS for Windows Server 2016 is the farm behavior level feature (FBL).   This features is farm wide and determines the features that the AD FS farm can use.   By default, the FBL in a Windows Server 2012 R2 AD FS farm is at the Windows Server 2012 R2 FBL.  
   
 A Windows Server 2016 AD FS server can be added to a Windows Server 2012 R2 farm and it will operate at the same FBL as a Windows Server 2012 R2.  When you have a Windows Server 2016 AD FS server operating in this fashion, your farm is said to be "mixed".  However, you will not be able to take advantage of the new Windows Server 2016 features until the FBL is raised to Windows Server 2016.  With a mixed farm:  
   
@@ -53,29 +53,29 @@ The remainder of the is document provides the steps for adding a Windows Server 
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)  
   
-4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt:  Set\-AdfsSyncProperties –Role PrimaryComputer  
+4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties –Role PrimaryComputer  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)  
   
-5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt:  Set\-AdfsSyncProperties –Role SecondaryComputer –PrimaryComputerName {FQDN}  
+5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties –Role SecondaryComputer –PrimaryComputerName {FQDN}  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
   
-6.  On your Web Application Proxy open PowerShell and run the followoing cmdlt:  Install\-WebApplicationProxy –CertificateThumbprint {SSLCert} –fsname fsname –TrustCred $trustcred  
+6.  On your Web Application Proxy open PowerShell and run the followoing cmdlt:  Install-WebApplicationProxy –CertificateThumbprint {SSLCert} –fsname fsname –TrustCred $trustcred  
   
 7.  Now on the Windows Server 2016 federation server open AD FS Management.  Note that now all of the nodes appear because the primary role has been transferred to this server.  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)  
   
-8.  With the Windows Server 2016 installation media, open a command prompt and navigate to support\\adprep directory.  Run the following:  adprep \/forestprep.  
+8.  With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory.  Run the following:  adprep /forestprep.  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
   
-9. Once that completes run adprep\/domainprep  
+9. Once that completes run adprep/domainprep  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
   
-10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: Invoke\-AdfsFarmBehaviorLevelRaise  
+10. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlt: Invoke-AdfsFarmBehaviorLevelRaise  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
   
@@ -87,7 +87,7 @@ The remainder of the is document provides the steps for adding a Windows Server 
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)  
   
-13. Likewise, you can use the PowerShell cmdlt:  Get\-AdfsFarmInformation to show you the current FBL.  
+13. Likewise, you can use the PowerShell cmdlt:  Get-AdfsFarmInformation to show you the current FBL.  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)  
   

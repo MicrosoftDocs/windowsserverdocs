@@ -21,9 +21,9 @@ Use the following table to determine which Windows Firewall with Advanced Securi
 |Deployment Goals|[Basic Firewall Policy Design](Basic-Firewall-Policy-Design.md)|[Domain Isolation Policy Design](Domain-Isolation-Policy-Design.md)|[Server Isolation Policy Design](Server-Isolation-Policy-Design.md)|[Certificate-based Isolation Policy Design](Certificate-based-Isolation-Policy-Design.md)|
 |--------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |[Protect Computers from Unwanted Network Traffic](Protect-Computers-from-Unwanted-Network-Traffic.md)|Yes|Yes|Yes|Yes|
-|[Restrict Access to Only Trusted Computers](Restrict-Access-to-Only-Trusted-Computers.md)|\-|Yes|Yes|Yes|
-|[Restrict Access to Only Specified Users or Computers](Restrict-Access-to-Only-Specified-Users-or-Computers.md)|\-|\-|Yes|Yes|
-|[Require Encryption When Accessing Sensitive Network Resources](Require-Encryption-When-Accessing-Sensitive-Network-Resources.md)|\-|Optional|Optional|Optional|
+|[Restrict Access to Only Trusted Computers](Restrict-Access-to-Only-Trusted-Computers.md)|-|Yes|Yes|Yes|
+|[Restrict Access to Only Specified Users or Computers](Restrict-Access-to-Only-Specified-Users-or-Computers.md)|-|-|Yes|Yes|
+|[Require Encryption When Accessing Sensitive Network Resources](Require-Encryption-When-Accessing-Sensitive-Network-Resources.md)|-|Optional|Optional|Optional|
 
 To examine details for a specific design, click the design title at the top of the column in the preceding table.
 

@@ -27,7 +27,7 @@ bitsadmin /SetMaxDownloadTime <Job> <Timeout>
   
 ## Remarks  
   
--   N\/A  
+-   N/A  
   
 ## <a name="BKMK_examples"></a>Examples  
 The following example sets the timeout for the job named *myDownloadJob* to 10 seconds.  

@@ -1,1 +1,1 @@
-Microsoft Virtual Desktop Infrastructure \(VDI\) deployment
+Microsoft Virtual Desktop Infrastructure (VDI) deployment

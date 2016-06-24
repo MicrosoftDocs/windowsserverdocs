@@ -22,7 +22,7 @@ Constant: SeIncreaseWorkingSetPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not Defined  
   
@@ -31,7 +31,7 @@ Constant: SeIncreaseWorkingSetPrivilege
 1.  You should make users aware that adverse performance issues may occur if they modify this security setting.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
 By default, standard users have this right.  
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not Defined|  
 |Default Domain Controller Policy|Users|  
-|Stand\-Alone Server Default Settings|Users|  
+|Stand-Alone Server Default Settings|Users|  
 |Domain Controller Effective Default Settings|Users|  
 |Member Server Effective Default Settings|Users|  
 |Client Computer Effective Default Settings|Users|  
@@ -58,7 +58,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   

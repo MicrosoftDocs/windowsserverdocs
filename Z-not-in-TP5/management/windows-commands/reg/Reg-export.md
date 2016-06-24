@@ -25,8 +25,8 @@ Reg export KeyName FileName [/y]
 |-------------|---------------|
 |<KeyName>|Specifies the full path of the subkey. The export operation works only with the local computer. The KeyName must include a valid root key. Valid root keys are: HKLM, HKCU, HKCR, HKU, and HKCC.|
 |<FileName>|Specifies the name and path of the file to be created during the operation. The file must have a .reg extension.|
-|\/y|Overwrites any existing file with the name *FileName* without prompting for confirmation.|
-|\/?|Displays help for **reg export** at the command prompt.|
+|/y|Overwrites any existing file with the name *FileName* without prompting for confirmation.|
+|/?|Displays help for **reg export** at the command prompt.|
 
 ## Remarks
 The following table lists the return values for the **reg export** operation.

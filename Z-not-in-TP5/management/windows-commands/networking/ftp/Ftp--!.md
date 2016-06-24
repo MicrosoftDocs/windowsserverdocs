@@ -22,7 +22,7 @@ Exits the ftp subsystem to a command prompt temporarily so that the operating sy
 none  
   
 ## Remarks  
-Use **\!** to run operating system commands without quitting ftp.  
+Use **!** to run operating system commands without quitting ftp.  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Open an operating system command prompt without exiting ftp.  

@@ -32,7 +32,7 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
   
 1.  In Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features wizard opens. Click **Next**.  
   
-2.  In **Select installation type**, ensure that **Role\-based or feature\-based installation** is selected, and then click **Next**.  
+2.  In **Select installation type**, ensure that **Role-based or feature-based installation** is selected, and then click **Next**.  
   
 3.  In **Select destination server**, ensure that the correct server is selected, and then click **Next**.  
   

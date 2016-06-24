@@ -111,10 +111,10 @@ With regard to authenticating on-premises remember the following:
 * As an alternative to deploying new DCs, logon certificates using the Microsoft Passport for Work key can be deployed.
 * To support logon certificates using the Microsoft Passport for Work key, it is required to have System Center Configuration Manager Technical Preview (domain joined devices) or Intune (Azure AD joined devices) (additional 3rd party MDMs may have this support as well).
 
-## Pre\-requisites for this scenario
-The following are a list of pre\-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.
+## Pre-requisites for this scenario
+The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.
 
--   Intune subscription \(for MDM integration and device compliance scenarios\)
+-   Intune subscription (for MDM integration and device compliance scenarios)
 
 
 -   Windows Server 2016 TP5  or newer for AD FS
@@ -138,38 +138,38 @@ To setup Active Directory and AD FS use the following procedure:
 * Mixed farm migration of an AD FS farm using Windows Server 2012 R2 to 2016
 
 > [!NOTE]
-        > You will need to set\-adfsproperties –enableidpinitiatedsignonpage $true to enable the sign on page.   This is disabled by default.
+        > You will need to set-adfsproperties –enableidpinitiatedsignonpage $true to enable the sign on page.   This is disabled by default.
 
 
 
 2.  Prepare AD
 
-* On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin \(EA\) privileges and open an elevated powershell prompt
+* On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated powershell prompt
 * The below commands require Active Directory administration tools, so if your AD FS server is not also a domain controller, first install the tools using the following steps:
-* Run the Add Roles & Features wizard and select feature Remote Server Administration tools \-> Role Administration Tools \-> AD DS and AD LDS Tools \-> Choose both the Active Directory module for Windows PowerShell and the AD DS Tools.
-* From the same elevated PowerShell command prompt, run Import\-module activedirectory
+* Run the Add Roles & Features wizard and select feature Remote Server Administration tools -> Role Administration Tools -> AD DS and AD LDS Tools -> Choose both the Active Directory module for Windows PowerShell and the AD DS Tools.
+* From the same elevated PowerShell command prompt, run Import-module activedirectory
 * Execute the following AD FS PowerShell commands:
 
         ```
-        PS C:\>Initialize-ADDeviceRegistration –ServiceAccountName “<AD FS service account name>”
+        PS C:>Initialize-ADDeviceRegistration –ServiceAccountName “<AD FS service account name>”
         ```
 > [!NOTE]
-        > If your AD FS service is configured to use a GMSA account, enter the account name in the format “domain\\accountname$”
+        > If your AD FS service is configured to use a GMSA account, enter the account name in the format “domain\accountname$”
 
         ```
-        PS C:\>Enable-AdfsDeviceRegistration
+        PS C:>Enable-AdfsDeviceRegistration
 
-        PS C:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
+        PS C:>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
         ```
 
 
 * The above commands achieve the following in AD DS:
 
-*   Create a new object of type serviceConnectionpoint at CN\=&lt;guid&gt;, CN\=Device Registration Configuration,CN\=Services,CN\=Configuration,DC\=&lt;domain&gt;   
-* Allow read\/write access to the specified AD connector account name on the new object
+*   Create a new object of type serviceConnectionpoint at CN=&lt;guid&gt;, CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;   
+* Allow read/write access to the specified AD connector account name on the new object
 
  ## Configure Group Policy for device registration
-Configure Automatic Device Registration via Group Policy in Active Directory: You can use an Active Directory Group Policy to configure your Windows 10 domain joined devices to automatically register with Azure AD. To do this please see the following step\-by\-step instructions:
+Configure Automatic Device Registration via Group Policy in Active Directory: You can use an Active Directory Group Policy to configure your Windows 10 domain joined devices to automatically register with Azure AD. To do this please see the following step-by-step instructions:
 
 #### To configure group policy for device registration
 
@@ -177,9 +177,9 @@ Configure Automatic Device Registration via Group Policy in Active Directory: Yo
 
 2.  From **Group Policy Management**, navigate to the domain node that corresponds to the domain in which you would like to enable Automatic Workplace Join.
 
-3.  Right\-click **Group Policy Objects** and select New. Give your Group Policy object a name, for example, Automatic Device Registration. Click OK.
+3.  Right-click **Group Policy Objects** and select New. Give your Group Policy object a name, for example, Automatic Device Registration. Click OK.
 
-4.  Right\-click on your new Group Policy object and then select **Edit.**
+4.  Right-click on your new Group Policy object and then select **Edit.**
 
 5.  Navigate to **Computer Configuration > Policies > Administrative Templates > Windows Components > Workplace Join.**
 
@@ -190,17 +190,17 @@ Configure Automatic Device Registration via Group Policy in Active Directory: Yo
     > **Register domain joined computers as devices**
     > 
     > The policy will be located under the following location:
-    > **Computer Configuration\/Policies\/Administrative Templates\/Windows Components\/Device  Registration**.
+    > **Computer Configuration/Policies/Administrative Templates/Windows Components/Device  Registration**.
 
-6.  Right\-click Automatically workplace join client computers and then select Edit.
+6.  Right-click Automatically workplace join client computers and then select Edit.
 
 7.  Select the Enabled radio button and then click Apply. Click OK.
 
 8.  You may now link the Group Policy object to a location of your choice. For example:
 
-    -   A specific Organizational Unit \(OU\) in AD where Windows 10 domain\-joined computers will be located.
+    -   A specific Organizational Unit (OU) in AD where Windows 10 domain-joined computers will be located.
 
-    -   A specific security group containing Windows 10 domain\-joined computers that will be auto\-registered with Azure AD.
+    -   A specific security group containing Windows 10 domain-joined computers that will be auto-registered with Azure AD.
     
  ## Configure Microsoft Passport
 For information on configuring Microsoft Passport see  [Enable Microsoft Passport for work in the organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/) and the [Microsoft Passport guide](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-passport-guide).  

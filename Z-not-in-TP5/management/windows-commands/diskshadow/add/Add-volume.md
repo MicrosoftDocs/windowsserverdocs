@@ -24,7 +24,7 @@ add volume <Volume> [provider <ProviderID>]
 |Parameter|Description|
 |-------------|---------------|
 |<Volume>|Specifies a volume to add to the Shadow Copy Set. At least one volume is required for shadow copy creation.|
-|\[provider <ProviderID>\]|Specifies the Provider ID of a registered provider to use to create the shadow copy. If **provider** is not specified, the default provider is used.|
+|[provider <ProviderID>]|Specifies the Provider ID of a registered provider to use to create the shadow copy. If **provider** is not specified, the default provider is used.|
 
 ## Remarks
 

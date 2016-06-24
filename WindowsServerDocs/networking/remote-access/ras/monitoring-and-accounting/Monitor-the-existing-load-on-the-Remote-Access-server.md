@@ -12,7 +12,7 @@ ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
 author: coreyp
 ---
 # Monitor the existing load on the Remote Access server
-**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service \(RRAS\) into a single Remote Access role.  
+**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 The term **Load** refers to the statistics that relate to the number of connections on the Remote Access server. Following are the steps required to track the load on the Remote Access server.  
   
@@ -33,11 +33,11 @@ You can use the monitoring dashboard that is available in the management console
   
 #### To use the Performance Monitor tool to monitor performance counters on the Remote Access server  
   
-1.  Click **Start**, click **Administrative Tools**, and then double\-click **Performance Monitor**.  
+1.  Click **Start**, click **Administrative Tools**, and then double-click **Performance Monitor**.  
   
 2.  Under **Performance**, click **Performance Monitor**.  
   
-3.  Click the **Add** button \(denoted by a green cross icon\) in the **Performance Monitor** toolbar.  
+3.  Click the **Add** button (denoted by a green cross icon) in the **Performance Monitor** toolbar.  
   
 4.  From the list of **Available Counters**, select all the counters in the **RAS** and **RAmgmtsvc** categories, and then click **Add>>**.  
   
@@ -49,7 +49,7 @@ You can use the monitoring dashboard that is available in the management console
   
 ![](../../../media/Monitor-the-existing-load-on-the-Remote-Access-server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 PS> Get-RemoteAccessConnectionStatisticsSummary  

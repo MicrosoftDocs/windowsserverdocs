@@ -22,7 +22,7 @@ Bitsadmin /PeerCaching /GetConfigurationFlags
 
 |Parameter|Description|
 |-------------|---------------|
-|[Bitsadmin peercaching and help](bitsadmin-peercaching/Bitsadmin-peercaching-and-help.md)|Displays the command\-line usage for the \/PeerCaching commands.|
+|[Bitsadmin peercaching and help](bitsadmin-peercaching/Bitsadmin-peercaching-and-help.md)|Displays the command-line usage for the /PeerCaching commands.|
 |[Bitsadmin peercaching and setconfigurationflags](bitsadmin-peercaching/Bitsadmin-peercaching-and-setconfigurationflags.md)|Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers.|
 |[Bitsadmin peercaching and getconfigurationflags](bitsadmin-peercaching/Bitsadmin-peercaching-and-getconfigurationflags.md)|Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.|
 

@@ -12,7 +12,7 @@ ms.assetid: 8cbdeb1d-5f7c-4360-bcc1-ab40d3cd8040
 author: coreyp
 ---
 # STEP 11: Configure the Multisite Deployment
-To configure a multisite deployment, make changes to the current Remote Access configuration wizard on EDGE1, enable the multisite feature, and then add 2\-EDGE1 as a second entry point.  
+To configure a multisite deployment, make changes to the current Remote Access configuration wizard on EDGE1, enable the multisite feature, and then add 2-EDGE1 as a second entry point.  
   
 -   [Configure Remote Access on EDGE1](assetId:///537e4b68-043f-49c9-94d8-15ce8c4b18e2#configDA)  
   
@@ -28,7 +28,7 @@ To configure a multisite deployment, make changes to the current Remote Access c
   
 3.  In the middle pane of the console, in the **Step 2 Remote Access Server** area, click **Edit**.  
   
-4.  Click **Prefix Configuration**. On the **Prefix Configuration** page, in **Internal network IPv6 prefixes**, enter **2001:db8:1::\/64; 2001:db8:2::\/64**. In **IPv6 prefix assigned to DirectAccess client computers**, enter **2001:db8:1:1000::\/64**, click **Next**, and then click **Finish**.  
+4.  Click **Prefix Configuration**. On the **Prefix Configuration** page, in **Internal network IPv6 prefixes**, enter **2001:db8:1::/64; 2001:db8:2::/64**. In **IPv6 prefix assigned to DirectAccess client computers**, enter **2001:db8:1:1000::/64**, click **Next**, and then click **Finish**.  
   
 5.  In the middle pane of the console, in the **Step 3 Infrastructure Servers** area, click **Edit**.  
   
@@ -46,7 +46,7 @@ To configure a multisite deployment, make changes to the current Remote Access c
   
 2.  In the Enable Multisite Deployment wizard, on the **Before You Begin** page, click **Next**.  
   
-3.  On the **Deployment Name** page, in **Multisite deployment name**, type **Contoso**, in **First entry point name**, type **Edge1\-Site**, and then click **Next**.  
+3.  On the **Deployment Name** page, in **Multisite deployment name**, type **Contoso**, in **First entry point name**, type **Edge1-Site**, and then click **Next**.  
   
 4.  On the **Entry Point Selection** page, click **Assign entry points automatically, and allow clients to select manually**, and then click **Next**.  
   
@@ -54,7 +54,7 @@ To configure a multisite deployment, make changes to the current Remote Access c
   
 6.  On the **Client Support** page, click **Allow client computers running Windows 7 to access this entry point**, and click **Add**.  
   
-7.  On the **Select Groups** dialog box, in **Enter the object names to select**, type **Win7\_Clients\_Site1**, click **OK**, and then click **Next**.  
+7.  On the **Select Groups** dialog box, in **Enter the object names to select**, type **Win7_Clients_Site1**, click **OK**, and then click **Next**.  
   
 8.  On the **Client GPO Settings** page, click **Next**.  
   
@@ -62,23 +62,23 @@ To configure a multisite deployment, make changes to the current Remote Access c
   
 10. On the **Enabling Multisite Deployment** dialog box, click **Close** and then on the Enable Multisite Deployment wizard, click **Close**.  
   
-## <a name="AddEP"></a>Add 2\-EDGE1 as a second entry\-point  
+## <a name="AddEP"></a>Add 2-EDGE1 as a second entry-point  
   
 1.  In the Remote Access Management Console, in the **Tasks** pane, click **Add an Entry Point**.  
   
-2.  In the Add an Entry Point Wizard, on the **Entry Point Details** page, in **Remote Access server**, type **2\-edge1.corp2.corp.contoso.com**, in **Entry point name**, type **2\-Edge1\-Site**, and then click **Next**.  
+2.  In the Add an Entry Point Wizard, on the **Entry Point Details** page, in **Remote Access server**, type **2-edge1.corp2.corp.contoso.com**, in **Entry point name**, type **2-Edge1-Site**, and then click **Next**.  
   
 3.  On the **Network Topology** page, click **Edge**, and then click **Next**.  
   
-4.  On the **Network Name or IP Address** page, in **Type in the public name or IP address used by clients to connect to the Remote Access server**, type **2\-edge1.contoso.com**, and then click **Next**.  
+4.  On the **Network Name or IP Address** page, in **Type in the public name or IP address used by clients to connect to the Remote Access server**, type **2-edge1.contoso.com**, and then click **Next**.  
   
-5.  On the **Network Adapters** page, make sure that the **External adapter** is **Internet**, the **Internal adapter** is **2\-Corpnet**, the certificate is **CN\=2\-edge1.contoso.com**, and then click **Next**.  
+5.  On the **Network Adapters** page, make sure that the **External adapter** is **Internet**, the **Internal adapter** is **2-Corpnet**, the certificate is **CN=2-edge1.contoso.com**, and then click **Next**.  
   
-6.  On the **Prefix Configuration** page, in **IPv6 prefix assigned to DirectAccess client computers**, type **2001:db8:2:2000::\/64**, and then click **Next**.  
+6.  On the **Prefix Configuration** page, in **IPv6 prefix assigned to DirectAccess client computers**, type **2001:db8:2:2000::/64**, and then click **Next**.  
   
 7.  On the **Client Support** page, click **Allow client computers running Windows 7 to access this entry point**, and click **Add**.  
   
-8.  On the **Select Groups** dialog box, in **Enter the object names to select**, type **Win7\_Clients\_Site2**, click **OK**, and then click **Next**.  
+8.  On the **Select Groups** dialog box, in **Enter the object names to select**, type **Win7_Clients_Site2**, click **OK**, and then click **Next**.  
   
 9. On the **Client GPO Settings** page, click **Next**.  
   

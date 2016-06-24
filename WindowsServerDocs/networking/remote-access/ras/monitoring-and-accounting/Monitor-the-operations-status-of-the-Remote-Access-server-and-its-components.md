@@ -12,7 +12,7 @@ ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 author: coreyp
 ---
 # Monitor the operations status of the Remote Access server and its components
-**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service \(RRAS\) into a single Remote Access role.  
+**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 The management console in the Remote Access server can be used to monitor its operations status.  
   
@@ -31,7 +31,7 @@ The management console in the Remote Access server can be used to monitor its op
   
 ![](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 > [!NOTE]  
 > The command for operations status of a cluster is included for reference.  

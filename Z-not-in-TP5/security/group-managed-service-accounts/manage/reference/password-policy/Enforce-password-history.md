@@ -24,7 +24,7 @@ This policy setting is supported on versions of Windows that are designated in t
 
 ### Possible values
 
--   User\-specified number from 0 through 24
+-   User-specified number from 0 through 24
 
 -   Not defined
 
@@ -37,7 +37,7 @@ This policy setting is supported on versions of Windows that are designated in t
 -   Configure **Minimum password age** so that you do not allow passwords to be changed immediately.
 
 ### Location
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Password Policy**
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy**
 
 ### Default values
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
@@ -46,7 +46,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default domain policy|24 passwords remembered|
 |Default domain controller policy|Not defined|
-|Stand\-alone server default settings|0 passwords remembered|
+|Stand-alone server default settings|0 passwords remembered|
 |Domain controller effective default settings|24 passwords remembered|
 |Member server effective default settings|24 passwords remembered|
 |Effective GPO default settings on client computers|24 passwords remembered|
@@ -72,12 +72,12 @@ If you specify a low number for this policy setting, users can use the same smal
 > After an account has been compromised, a simple password reset might not be enough to restrict a malicious user because the malicious user might have modified the user's environment so that the password is changed back to a known value automatically at a certain time. If an account has been compromised, it is best to delete the account and assign the user a new account after all affected systems have been restored to normal operations and verified that they are no longer compromised.
 
 ### Countermeasure
-Configure the **Enforce password history** policy setting to 24 \(the maximum setting\) to help minimize the number of vulnerabilities that are caused by password reuse.
+Configure the **Enforce password history** policy setting to 24 (the maximum setting) to help minimize the number of vulnerabilities that are caused by password reuse.
 
 For this policy setting to be effective, you should also configure effective values for the **Minimum password age** and **Maximum password age** policy settings.
 
 ### Potential impact
-The major impact of configuring the **Enforce password history** setting to 24 is that users must create a new password every time they are required to change their old one. If users are required to change their passwords to new unique values, there is an increased risk of users who write their passwords somewhere so that they do not forget them. Another risk is that users may create passwords that change incrementally \(for example, password01, password02, and so on\) to facilitate memorization, but this makes them easier for an attacker to guess. Also, an excessively low value for the **Maximum password age**  policy setting is likely to increase administrative overhead because users who forget their passwords might ask the Help Desk to reset them frequently.
+The major impact of configuring the **Enforce password history** setting to 24 is that users must create a new password every time they are required to change their old one. If users are required to change their passwords to new unique values, there is an increased risk of users who write their passwords somewhere so that they do not forget them. Another risk is that users may create passwords that change incrementally (for example, password01, password02, and so on) to facilitate memorization, but this makes them easier for an attacker to guess. Also, an excessively low value for the **Maximum password age**  policy setting is likely to increase administrative overhead because users who forget their passwords might ask the Help Desk to reset them frequently.
 
 ## See Also
 [Password Policy](Password-Policy.md)

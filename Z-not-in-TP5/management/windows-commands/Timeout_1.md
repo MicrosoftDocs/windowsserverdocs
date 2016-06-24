@@ -24,9 +24,9 @@ timeout/t <TimeoutInSeconds> [/nobreak]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/t <TimeoutInSeconds>|Specifies the decimal number of seconds \(between \-1 and 99999\) to wait before the command processor continues processing. The value \-1 causes the computer to wait indefinitely for a keystroke.|  
-|\/nobreak|Specifies to ignore user key strokes.|  
-|\/?|Displays help at the command prompt.|  
+|/t <TimeoutInSeconds>|Specifies the decimal number of seconds (between -1 and 99999) to wait before the command processor continues processing. The value -1 causes the computer to wait indefinitely for a keystroke.|  
+|/nobreak|Specifies to ignore user key strokes.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   

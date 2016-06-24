@@ -14,7 +14,7 @@ ms.assetid: 87376719-8cd6-4ab6-9036-581e82eccdfd
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management and security considerations for this policy setting.
 
 ## Reference
-This policy setting determines the behavior of all User Account Control \(UAC\) policies for the entire system. This is the setting that turns UAC on or off.
+This policy setting determines the behavior of all User Account Control (UAC) policies for the entire system. This is the setting that turns UAC on or off.
 
 ### Possible values
 
@@ -34,7 +34,7 @@ This policy setting determines the behavior of all User Account Control \(UAC\) 
 1.  Enable this policy to allow all other UAC features and policies to function.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -43,13 +43,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Enabled|
+|Stand-Alone Server Default Settings|Enabled|
 |DC Effective Default Settings|Enabled|
 |Member Server Effective Default Settings|Enabled|
 |Client Computer Effective Default Settings|Enabled|
 
 ### Operating system version differences
-There are no differences in this security policy between operating systems beginning with Windows Vista.
+There are no differences in this security policy between operating systems beginning with Windows Vista.
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.
@@ -58,7 +58,7 @@ This section describes features and tools that are available to help you manage 
 A restart of the computer is required before this policy will be effective when changes to this policy are saved locally or distributed through Group Policy.
 
 ### Group Policy
-This policy has no impact in Windows operating systems earlier than Windows Vista.
+This policy has no impact in Windows operating systems earlier than Windows Vista.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.

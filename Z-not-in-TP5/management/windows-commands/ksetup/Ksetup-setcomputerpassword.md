@@ -31,7 +31,7 @@ You must restart the computer for the password change to take effect.
 The computer account password is not displayed in the registry or as output from the **ksetup** command.
 
 ## <a name="BKMK_Examples"></a>Examples
-Change the computer account password on the local computer from IPops897 to IPop$897\!.
+Change the computer account password on the local computer from IPops897 to IPop$897!.
 
 ```
 ksetup /setcomputerpassword IPop$897!

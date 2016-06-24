@@ -47,7 +47,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 ![](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 Install-WindowsFeature RemoteAccess -IncludeManagementTools  
@@ -62,7 +62,7 @@ Remote Access can be deployed by using the Remote Access Management console in t
   
 -   VPN only  
   
-This guide uses a DirectAccess\-only deployment in the example procedures.  
+This guide uses a DirectAccess-only deployment in the example procedures.  
   
 #### To configure the deployment type  
   
@@ -73,13 +73,13 @@ This guide uses a DirectAccess\-only deployment in the example procedures.
 3.  In the **Configure Remote Access** dialog box, click the whether to deploy DirectAccess and VPN, DirectAccess only, or VPN only.  
   
 ## <a name="BKMK_Clients"></a>2.3. Configure DirectAccess clients  
-For a client computer to be provisioned to use DirectAccess, it must belong to the selected security group. After DirectAccess is configured, client computers in the security group are provisioned to receive the DirectAccess Group Policy Object \(GPO\). You can also configure the deployment scenario, which allows you to configure DirectAccess for client access and remote management, or for remote management only.  
+For a client computer to be provisioned to use DirectAccess, it must belong to the selected security group. After DirectAccess is configured, client computers in the security group are provisioned to receive the DirectAccess Group Policy Object (GPO). You can also configure the deployment scenario, which allows you to configure DirectAccess for client access and remote management, or for remote management only.  
   
 #### To configure DirectAccess clients  
   
 1.  In the middle pane of the Remote Access Management console, in the **Step 1 Remote Clients** area, click **Configure**.  
   
-2.  In the DirectAccess Client Setup Wizard, on the **Deployment Scenario** page, click the deployment scenario that you want to use in your organization \(**Full DirectAccess** or **Remote management only**\) , and then click **Next**.  
+2.  In the DirectAccess Client Setup Wizard, on the **Deployment Scenario** page, click the deployment scenario that you want to use in your organization (**Full DirectAccess** or **Remote management only**) , and then click **Next**.  
   
 3.  On the **Select Groups** page, click **Add**.  
   
@@ -90,7 +90,7 @@ For a client computer to be provisioned to use DirectAccess, it must belong to t
   
 5.  Select the **Enable DirectAccess for mobile computers only** check box to allow only mobile computers to access the internal network, if required.  
   
-6.  Select the **Use force tunneling** check box to route all client traffic \(to the internal network and to the Internet\) through the Remote Access server, if required.  
+6.  Select the **Use force tunneling** check box to route all client traffic (to the internal network and to the Internet) through the Remote Access server, if required.  
   
 7.  Click **Next**.  
   
@@ -99,7 +99,7 @@ For a client computer to be provisioned to use DirectAccess, it must belong to t
     -   In the table, add resources that will be used to determine connectivity to the internal network. A default web probe is created automatically if no other resources are configured.  
   
         > [!CAUTION]  
-        > When you configure the web probe locations for determining connectivity to the Enterprise network, ensure that you have at least one HTTP\-based probe configured. Configuring a **ping** probe only is not sufficient, and this could lead to inaccurate determination of connectivity status. This is because **ping** is exempt from IPsec, and as a result, it does not ensure that the IPsec tunnels are properly established.  
+        > When you configure the web probe locations for determining connectivity to the Enterprise network, ensure that you have at least one HTTP-based probe configured. Configuring a **ping** probe only is not sufficient, and this could lead to inaccurate determination of connectivity status. This is because **ping** is exempt from IPsec, and as a result, it does not ensure that the IPsec tunnels are properly established.  
   
     -   Add a Help Desk email address to allow users to send information if they experience connectivity issues.  
   
@@ -113,28 +113,28 @@ For a client computer to be provisioned to use DirectAccess, it must belong to t
 9. Click **Finish**.  
   
 ## <a name="BKMK_Server"></a>2.4. Configure the Remote Access server  
-To deploy Remote Access, you need to configure the Remote Access server with the correct network adapters, a public URL for the Remote Access server to which client computers can connect \(the ConnectTo address\), an IP\-HTTPS certificate with a subject that matches the ConnectTo address, IPv6 settings, and client computer authentication.  
+To deploy Remote Access, you need to configure the Remote Access server with the correct network adapters, a public URL for the Remote Access server to which client computers can connect (the ConnectTo address), an IP-HTTPS certificate with a subject that matches the ConnectTo address, IPv6 settings, and client computer authentication.  
   
 #### To configure the Remote Access server  
   
 1.  In the middle pane of the Remote Access Management console, in the **Step 2 Remote Access Server** area, click **Configure**.  
   
-2.  In the Remote Access Server Setup Wizard, on the **Network Topology** page, click the deployment topology that will be used in your organization. In **Type the public name or IPv4 address used by clients to connect to the Remote Access server**, enter the public name for the deployment \(this name matches the subject name of the IP\-HTTPS certificate, for example, edge1.contoso.com\), and then click **Next**.  
+2.  In the Remote Access Server Setup Wizard, on the **Network Topology** page, click the deployment topology that will be used in your organization. In **Type the public name or IPv4 address used by clients to connect to the Remote Access server**, enter the public name for the deployment (this name matches the subject name of the IP-HTTPS certificate, for example, edge1.contoso.com), and then click **Next**.  
   
-3.  On the **Network Adapters** page, the wizard automatically detects the network adapters for the networks in your deployment. If the wizard does not detect the correct network adapters, manually select the correct adapters. The wizard also automatically detects the IP\-HTTPS certificate, based on the public name for the deployment set in the previous step of the wizard. If the wizard does not detect the correct IP\-HTTPS certificate, click **Browse** to manually select the correct certificate, and then click **Next**.  
+3.  On the **Network Adapters** page, the wizard automatically detects the network adapters for the networks in your deployment. If the wizard does not detect the correct network adapters, manually select the correct adapters. The wizard also automatically detects the IP-HTTPS certificate, based on the public name for the deployment set in the previous step of the wizard. If the wizard does not detect the correct IP-HTTPS certificate, click **Browse** to manually select the correct certificate, and then click **Next**.  
   
-4.  On the **Prefix Configuration** page \(this appears only if IPv6 is deployed in the internal network\), the wizard automatically detects the IPv6 settings that are used in the internal network. If your deployment requires additional prefixes, configure the IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers.  
+4.  On the **Prefix Configuration** page (this appears only if IPv6 is deployed in the internal network), the wizard automatically detects the IPv6 settings that are used in the internal network. If your deployment requires additional prefixes, configure the IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers.  
   
     > [!NOTE]  
-    > You can specify multiple internal IPv6 prefixes by using a semicolon delimited list, for example, 2001:db8:1::\/48;2001:db8:2::\/48.  
+    > You can specify multiple internal IPv6 prefixes by using a semicolon delimited list, for example, 2001:db8:1::/48;2001:db8:2::/48.  
   
 5.  On the **Authentication** page:  
   
-    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two\-factor authentication, click **Two\-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001).  
+    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two-factor authentication, click **Two-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001).  
   
-    -   For multisite and two\-factor authentication deployments, you must use computer certificate authentication. Select the **Use computer certificates** check box to use computer certificate authentication, and select the IPsec root certificate.  
+    -   For multisite and two-factor authentication deployments, you must use computer certificate authentication. Select the **Use computer certificates** check box to use computer certificate authentication, and select the IPsec root certificate.  
   
-    -   To enable  Windows 7  client computers to connect through DirectAccess, select the **Enable Windows 7 client computers to connect via DirectAccess** check box.  
+    -   To enable  Windows 7  client computers to connect through DirectAccess, select the **Enable Windows 7 client computers to connect via DirectAccess** check box.  
   
         > [!NOTE]  
         > You must also use computer certificate authentication in this type of deployment.  
@@ -142,7 +142,7 @@ To deploy Remote Access, you need to configure the Remote Access server with the
 6.  Click **Finish**.  
   
 ## <a name="BKMK_Infra"></a>2.5. Configure the infrastructure servers  
-To configure the infrastructure servers in a Remote Access deployment, you must configure the network location server, DNS settings \(including the DNS suffix search list\), and management servers that are not automatically detected by Remote Access.  
+To configure the infrastructure servers in a Remote Access deployment, you must configure the network location server, DNS settings (including the DNS suffix search list), and management servers that are not automatically detected by Remote Access.  
   
 #### To configure the infrastructure servers  
   
@@ -150,7 +150,7 @@ To configure the infrastructure servers in a Remote Access deployment, you must 
   
 2.  In the Infrastructure Server Setup Wizard, on the **Network Location Server** page, click the option that corresponds to the location of the network location server in your deployment. If the network location server is on a remote web server, enter the URL and click **Validate** before you continue. If the network location server is on the Remote Access server, click **Browse** to locate the relevant certificate, and then click **Next**.  
   
-3.  On the **DNS** page, in the table, enter any additional name suffixes that will be applied as Name Resolution Policy Table \(NRPT\) exemptions. Select a local name resolution option, and then click **Next**.  
+3.  On the **DNS** page, in the table, enter any additional name suffixes that will be applied as Name Resolution Policy Table (NRPT) exemptions. Select a local name resolution option, and then click **Next**.  
   
 4.  On the **DNS Suffix Search List** page, the Remote Access server automatically detects any domain suffixes in the deployment. Use the **Add** and **Remove** buttons to add and remove domain suffixes from the list of domain suffixes to use. To add a new domain suffix, in **New Suffix**, enter the suffix, and then click **Add**. Click **Next**.  
   
@@ -165,7 +165,7 @@ To configure the infrastructure servers in a Remote Access deployment, you must 
 In a Remote Access deployment, configuring application servers is an optional task. Remote Access enables you to require authentication for selected application servers, which is determined by their inclusion in an application servers security group. By default, traffic to application servers that require authentication is also encrypted; however, you can choose to not encrypt traffic to application servers and use authentication only.  
   
 > [!NOTE]  
-> Authentication without encryption is supported only on application servers running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2 .  
+> Authentication without encryption is supported only on application servers running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2 .  
   
 #### To configure application servers  
   
@@ -186,16 +186,16 @@ When the Remote Access configuration is complete, the **Remote Access Review** i
   
 2.  **Remote Clients**: The DirectAccess client configuration is displayed, including the security group, force tunneling status, connectivity verifiers, and DirectAccess connection name.  
   
-3.  **Remote Access Server**: The DirectAccess configuration is displayed including the public name\/address, network adapter configuration, certificate information, and OTP information if configured.  
+3.  **Remote Access Server**: The DirectAccess configuration is displayed including the public name/address, network adapter configuration, certificate information, and OTP information if configured.  
   
 4.  **Infrastructure Servers**: This list includes the network location server URL, DNS suffixes that are used by DirectAccess clients, and management server information.  
   
-5.  **Application Servers**: The DirectAccess remote management status is displayed, in addition to the status of the end\-to\-end authentication to specific application servers.  
+5.  **Application Servers**: The DirectAccess remote management status is displayed, in addition to the status of the end-to-end authentication to specific application servers.  
   
 ## <a name="BKMK_PS"></a>2.8. How to configure the Remote Access server by using Windows PowerShell  
 ![](../../../media/Step-2--Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)**Windows PowerShell equivalent commands**  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 To perform a full installation in an edge topology of Remote Access for DirectAccess only in a domain with the root **corp.contoso.com** and using the following parameters: server GPO: **DirectAccess Server Settings**, client GPO: DirectAccess Client Settings, internal network adapter: **Corpnet**, external network adapter: **Internet**, ConnectTto address: **edge1.contoso.com**, and network location server: **nls.corp.contoso.com**:  
   
@@ -203,7 +203,7 @@ To perform a full installation in an edge topology of Remote Access for DirectAc
 Install-RemoteAccess -Force -PassThru -ServerGpoName 'corp.contoso.com\DirectAccess Server Settings' -ClientGpoName 'corp.contoso.com\DirectAccess Client Settings' -DAInstallType 'FullInstall' -InternetInterface 'Internet' -InternalInterface 'Corpnet' -ConnectToAddress 'edge1.contoso.com' -NlsUrl 'https://nls.corp.contoso.com/'  
 ```  
   
-To configure the Remote Access server to use computer certificate authentication, with an IPsec root certificate that is issued by the certification authority named CORP\-APP1\-CA:  
+To configure the Remote Access server to use computer certificate authentication, with an IPsec root certificate that is issued by the certification authority named CORP-APP1-CA:  
   
 ```  
 $certs = Get-ChildItem Cert:\LocalMachine\Root  
@@ -218,7 +218,7 @@ Add-DAClient -SecurityGroupNameList @('corp.contoso.com\DirectAccessClients')
 Remove-DAClient -SecurityGroupNameList @('corp.contoso.com\Domain Computers')  
 ```  
   
-To enable Remote Access for all computers \(not only notebooks and laptops\), and to enable Remote Access for  Windows 7  clients:  
+To enable Remote Access for all computers (not only notebooks and laptops), and to enable Remote Access for  Windows 7  clients:  
   
 ```  
 Set-DAClient -OnlyRemoteComputers 'Disabled' -Downlevel 'Enabled'  

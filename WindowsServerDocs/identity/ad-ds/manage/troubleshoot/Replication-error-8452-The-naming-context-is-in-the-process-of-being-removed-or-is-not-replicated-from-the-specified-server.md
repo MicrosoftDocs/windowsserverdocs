@@ -40,7 +40,7 @@ author: Femila
       <list class="ordered">
         <listItem>
           <para>DCDIAG reports that Active Directory Replications test has failed with error status code (8452): "The naming context is in the process of being removed or is not replicated from the specified server."</para>
-          <code>Testing server: &lt;site name&gt;\&lt;destination dc name&gt;
+          <code>Testing server: &lt;site name&gt;&lt;destination dc name&gt;
 Starting test: Replications
 * Replications Check
 [Replications Check,&lt;destination DC name] A recent replication attempt failed:
@@ -52,14 +52,14 @@ server.</codeFeaturedElement> The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
 3 failures have occurred since the last success.</code>
         </listItem>
-<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 8452.</para><para>REPADMIN commands that commonly cite the 8452 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "The naming context is in the process of being removed or is not replicated from the specified server" error:</para><code>Default-First-Site-Name\CONTOSO-DC1
+<listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 8452.</para><para>REPADMIN commands that commonly cite the 8452 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>The following sample output from "REPADMIN /SHOWREPS" shows inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "The naming context is in the process of being removed or is not replicated from the specified server" error:</para><code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 ==== INBOUND NEIGHBORS ======================================
 DC=contoso,DC=com
-Default-First-Site-Name\CONTOSO-DC2 via RPC
+Default-First-Site-NameCONTOSO-DC2 via RPC
 DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
 Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 8452 (0x2104):
 The naming context is in the process of being removed or is not replicated from the specified server.</codeFeaturedElement>
@@ -127,7 +127,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
         </listItem>
         <listItem>
           <para>Go Direct</para>
-          <para>If you want to run the <ui>Replicate now</ui> command from \\DC3 to \\DC2 from Active Directory Sites and Services on \\DC1, focus the operation on \\DC3 to \\DC2.</para>
+          <para>If you want to run the <ui>Replicate now</ui> command from DC3 to DC2 from Active Directory Sites and Services on DC1, focus the operation on DC3 to DC2.</para>
           <para>If the error is caused by root cause #3, then after the user gives the correct input, the error will not happen. For example, in case #1 of scenario #3, if the user input a correct &lt;src DC&gt; such that on &lt;dest DC&gt; there is a replica link from &lt;src DC&gt; for &lt;the NC&gt;, the repadmin /replicate command will be executed successfully.</para>
         </listItem>
         <listItem>
@@ -214,7 +214,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
       <section>
         <title>NTDS Replication Event 1586</title>
         <content>
-          <para>NTDS replication event 1586 is generated in a mixed domain environment which contains both Windows NT 4.0 and Active Directory domain controllers. In this mixed domain environment, Active Directory domain controllers replicate amongst themselves using the DS replication protocol, while the Active Directory PDC emulator replicates to Windows NT 4 BDCs using the legacy netlogon replication protocol. In this case the Active Directory PDC FSMO role holder is the single point for replication to NT4 BDCs in a common domain. The PDC maintains a checkpoint for each BDC representing the most recent replicated change. If the PDC emulator role is transferred to another Active Directory domain controller in the domain, the information about each individual BDC’s checkpoint must be replicated to the new PDC emulator. Hence the new PDC emulator must have a direct replication relationship with the old PDC emulator. If the new PDC emulator does not replicate directly with the old PDC emulator (that is on the new PDC emulator there is no replica link from old PDC emulator), then error 8452 appears in event 1586.</para>
+          <para>NTDS replication event 1586 is generated in a mixed domain environment which contains both Windows NT 4.0 and Active Directory domain controllers. In this mixed domain environment, Active Directory domain controllers replicate amongst themselves using the DS replication protocol, while the Active Directory PDC emulator replicates to Windows NT 4 BDCs using the legacy netlogon replication protocol. In this case the Active Directory PDC FSMO role holder is the single point for replication to NT4 BDCs in a common domain. The PDC maintains a checkpoint for each BDC representing the most recent replicated change. If the PDC emulator role is transferred to another Active Directory domain controller in the domain, the information about each individual BDC’s checkpoint must be replicated to the new PDC emulator. Hence the new PDC emulator must have a direct replication relationship with the old PDC emulator. If the new PDC emulator does not replicate directly with the old PDC emulator (that is on the new PDC emulator there is no replica link from old PDC emulator), then error 8452 appears in event 1586.</para>
         </content>
       </section>
       <section>

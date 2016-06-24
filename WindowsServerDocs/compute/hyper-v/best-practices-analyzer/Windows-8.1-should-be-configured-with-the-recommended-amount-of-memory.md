@@ -13,14 +13,14 @@ ms.assetid: 4972101a-c266-4045-bdd6-4e75a9cd750e
 author: KBDAzure
 ---
 # Windows 8.1 should be configured with the recommended amount of memory
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -35,13 +35,13 @@ The following sections provide details about the specific issue. Italics indicat
 <list of virtual machines>  
 ```  
 ## **Resolution**  
-*Use Hyper\-V Manager to increase the memory allocated to this virtual machine to at least 1 GB.*  
+*Use Hyper-V Manager to increase the memory allocated to this virtual machine to at least 1 GB.*  
   
-#### Increase the memory using Hyper\-V Manager  
+#### Increase the memory using Hyper-V Manager  
   
-1.  Open Hyper\-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper\-V Manager**.  
+1.  Open Hyper-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.  
   
-2.  In the results pane, under **Virtual Machines**, select the virtual machine that you want to configure. The state of the virtual machine should be listed as **Off**. If it is not, right\-click the virtual machine and then click **Shut Down**.  
+2.  In the results pane, under **Virtual Machines**, select the virtual machine that you want to configure. The state of the virtual machine should be listed as **Off**. If it is not, right-click the virtual machine and then click **Shut Down**.  
   
 3.  In the **Action** pane, under the virtual machine name, click **Settings**.  
   
@@ -51,9 +51,9 @@ The following sections provide details about the specific issue. Italics indicat
   
 ### Increase the memory using Windows PowerShell  
   
-1.  Open Windows PowerShell. \(From the desktop, click **Start** and start typing **Windows PowerShell**.\)  
+1.  Open Windows PowerShell. (From the desktop, click **Start** and start typing **Windows PowerShell**.)  
   
-2.  Right\-click **Windows PowerShell** and click **Run as administrator**.  
+2.  Right-click **Windows PowerShell** and click **Run as administrator**.  
   
 3.  Run this command after replacing \<MyVM> with the name  of your virtual machine:  
   

@@ -34,12 +34,12 @@ This topic explains how to remove AD DS, using Server Manager or Windows PowerSh
   
 |||  
 |-|-|  
-|**ADDSDeployment and ServerManager Cmdlets**|Arguments \(**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.\)|  
-|Uninstall\-AddsDomainController|\-SkipPreChecks<br /><br />*\-LocalAdministratorPassword*<br /><br />\-Confirm<br /><br />***\-Credential***<br /><br />\-DemoteOperationMasterRole<br /><br />*\-DNSDelegationRemovalCredential*<br /><br />\-Force<br /><br />*\-ForceRemoval*<br /><br />*\-IgnoreLastDCInDomainMismatch*<br /><br />*\-IgnoreLastDNSServerForZone*<br /><br />*\-LastDomainControllerInDomain*<br /><br />\-Norebootoncompletion<br /><br />*\-RemoveApplicationPartitions*<br /><br />*\-RemoveDNSDelegation*<br /><br />\-RetainDCMetadata|  
-|Uninstall\-WindowsFeature\/Remove\-WindowsFeature|***\-Name***<br /><br />***\-IncludeManagementTools***<br /><br />*\-Restart*<br /><br />\-Remove<br /><br />\-Force<br /><br />\-ComputerName<br /><br />\-Credential<br /><br />\-LogPath<br /><br />\-Vhd|  
+|**ADDSDeployment and ServerManager Cmdlets**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
+|Uninstall-AddsDomainController|-SkipPreChecks<br /><br />*-LocalAdministratorPassword*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-DNSDelegationRemovalCredential*<br /><br />-Force<br /><br />*-ForceRemoval*<br /><br />*-IgnoreLastDCInDomainMismatch*<br /><br />*-IgnoreLastDNSServerForZone*<br /><br />*-LastDomainControllerInDomain*<br /><br />-Norebootoncompletion<br /><br />*-RemoveApplicationPartitions*<br /><br />*-RemoveDNSDelegation*<br /><br />-RetainDCMetadata|  
+|Uninstall-WindowsFeature/Remove-WindowsFeature|***-Name***<br /><br />***-IncludeManagementTools***<br /><br />*-Restart*<br /><br />-Remove<br /><br />-Force<br /><br />-ComputerName<br /><br />-Credential<br /><br />-LogPath<br /><br />-Vhd|  
   
 > [!NOTE]  
-> The **\-credential** argument is only required if you are not already logged on as a member of the Enterprise Admins group \(demoting last DC in a domain\) or the Domain Admins group \(demoting a replica DC\).The **\-includemanagementtools** argument is only required if you want to remove all of the AD DS management utilities.  
+> The **-credential** argument is only required if you are not already logged on as a member of the Enterprise Admins group (demoting last DC in a domain) or the Domain Admins group (demoting a replica DC).The **-includemanagementtools** argument is only required if you want to remove all of the AD DS management utilities.  
   
 ## <a name="BKMK_Demote"></a>Demote  
   
@@ -50,11 +50,11 @@ Server Manager offers two interfaces to removing the Active Directory Domain Ser
   
  ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Manage.png)  
   
--   Click **AD DS** or **All Servers** on the navigation pane. Scroll down to the **Roles and Features** section. Right\-click **Active Directory Domain Services** in the **Roles and Features** list and click **Remove Role or Feature**. This interface skips the **Server Selection** page.  
+-   Click **AD DS** or **All Servers** on the navigation pane. Scroll down to the **Roles and Features** section. Right-click **Active Directory Domain Services** in the **Roles and Features** list and click **Remove Role or Feature**. This interface skips the **Server Selection** page.  
   
  ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection.png)  
   
-The ServerManager cmdlets **Uninstall\-WindowsFeature** and **Remove\-WindowsFeature** prevent you from removing the AD DS role until you demote the domain controller.  
+The ServerManager cmdlets **Uninstall-WindowsFeature** and **Remove-WindowsFeature** prevent you from removing the AD DS role until you demote the domain controller.  
   
 ### Server Selection  
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection2.png)  
@@ -66,11 +66,11 @@ The **Server Selection** dialog enables you to choose from one of the servers pr
   
 Clear the **Active Directory Domain Services** check box to demote a domain controller; if the server is currently a domain controller, this does not remove the AD DS role and instead switches to a **Validation Results** dialog with the offer to demote. Otherwise, it simply removes the binaries like any other role feature.  
   
--   Do not remove any other AD DS\-related roles or features \- such as DNS, GPMC, or the RSAT tools \- if you intend to promote the domain controller again immediately. Removing additional roles and feature increases the time to re\-promote, as Server Manager reinstalls these features when you reinstall the role.  
+-   Do not remove any other AD DS-related roles or features - such as DNS, GPMC, or the RSAT tools - if you intend to promote the domain controller again immediately. Removing additional roles and feature increases the time to re-promote, as Server Manager reinstalls these features when you reinstall the role.  
   
 -   Remove unneeded AD DS roles and features at your own discretion if you intend to demote the domain controller permanently. This requires clearing the check boxes for those roles and features.  
   
-    The full list of AD DS\-related roles and features include:  
+    The full list of AD DS-related roles and features include:  
   
     -   Active Directory Module for Windows PowerShell feature  
   
@@ -78,7 +78,7 @@ Clear the **Active Directory Domain Services** check box to demote a domain cont
   
     -   Active Directory Administrative Center feature  
   
-    -   AD DS Snap\-ins and Command\-line Tools feature  
+    -   AD DS Snap-ins and Command-line Tools feature  
   
     -   DNS Server  
   
@@ -104,13 +104,13 @@ You configure demotion options on the **Credentials** page. Provide the credenti
 -   Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller object’s metadata from Active Directory.  
   
     > [!WARNING]  
-    > Do not select this option unless the domain controller cannot contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all un\-replicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software.  
+    > Do not select this option unless the domain controller cannot contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all un-replicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software.  
     >   
     > If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For steps, review [Clean Up Server Metadata](http://technet.microsoft.com/library/cc816907(WS.10).aspx).  
   
    ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ForceDemote.png)  
   
--   Demoting the last domain controller in a domain requires Enterprise Admins group membership, as this removes the domain itself \(if the last domain in the forest, this removes the forest\). Server Manager informs you if the current domain controller is the last domain controller in the domain. Select the **Last domain controller in the domain** check box to confirm the domain controller is the last domain controller in the domain.  
+-   Demoting the last domain controller in a domain requires Enterprise Admins group membership, as this removes the domain itself (if the last domain in the forest, this removes the forest). Server Manager informs you if the current domain controller is the last domain controller in the domain. Select the **Last domain controller in the domain** check box to confirm the domain controller is the last domain controller in the domain.  
   
 The equivalent ADDSDeployment Windows PowerShell arguments are:  
   
@@ -138,7 +138,7 @@ The **Removal Options** page appears depending on previously selecting **Last do
   
 The options only appear if applicable to this domain controller. For instance, if there is no DNS delegation for this server then that checkbox will not display.  
   
-Click **Change** to specify alternate DNS administrative credentials. Click **View Partitions** to view additional partitions the wizard removes during the demotion. By default, the only additional partitions are Domain DNS and Forest DNS Zones. All other partitions are non\-Windows partitions.  
+Click **Change** to specify alternate DNS administrative credentials. Click **View Partitions** to view additional partitions the wizard removes during the demotion. By default, the only additional partitions are Domain DNS and Forest DNS Zones. All other partitions are non-Windows partitions.  
   
 The equivalent ADDSDeployment cmdlet arguments are:  
   
@@ -152,9 +152,9 @@ The equivalent ADDSDeployment cmdlet arguments are:
 ### New Administrator Password  
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_NewAdminPwd.png)  
   
-The **New Administrator Password** page requires you to provide a password for the built\-in local computer’s Administrator account, once the demotion completes and the computer becomes a domain member server or workgroup computer.  
+The **New Administrator Password** page requires you to provide a password for the built-in local computer’s Administrator account, once the demotion completes and the computer becomes a domain member server or workgroup computer.  
   
-The **Uninstall\-ADDSDomainController** cmdlet and arguments follow the same defaults as Server Manager if not specified.  
+The **Uninstall-ADDSDomainController** cmdlet and arguments follow the same defaults as Server Manager if not specified.  
   
 The **LocalAdministratorPassword** argument is special:  
   
@@ -162,7 +162,7 @@ The **LocalAdministratorPassword** argument is special:
   
 -   If specified *with a value*, then the value must be a secure string. This is not the preferred usage when running the cmdlet interactively  
   
-For example, you can manually prompt for a password by using the **Read\-Host** cmdlet to prompt the user for a secure string  
+For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string  
   
 ```  
 -localadministratorpassword (read-host -prompt "Password:" -assecurestring)  
@@ -172,7 +172,7 @@ For example, you can manually prompt for a password by using the **Read\-Host** 
 > [!WARNING]  
 > As the previous two options do not confirm the password, use extreme caution: the password is not visible  
   
-You can also provide a secure string as a converted clear\-text variable, although this is highly discouraged. For example:  
+You can also provide a secure string as a converted clear-text variable, although this is highly discouraged. For example:  
   
 ```  
 -localadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
@@ -194,41 +194,41 @@ Uninstall-DomainController
   
 ```  
   
-Use the optional **Whatif** argument with the **Uninstall\-ADDSDomainController** and cmdlet to review configuration information. This enables you to see the explicit and implicit values of a cmdlet's arguments.  
+Use the optional **Whatif** argument with the **Uninstall-ADDSDomainController** and cmdlet to review configuration information. This enables you to see the explicit and implicit values of a cmdlet's arguments.  
   
 For example:  
   
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)  
   
-The prompt to restart is your last opportunity to cancel this operation when using ADDSDeployment Windows PowerShell. To override that prompt, use the **\-force** or **confirm:$false** arguments.  
+The prompt to restart is your last opportunity to cancel this operation when using ADDSDeployment Windows PowerShell. To override that prompt, use the **-force** or **confirm:$false** arguments.  
   
 ### Demotion  
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Demotion.png)  
   
 When the **Demotion** page displays, the domain controller configuration begins and cannot be halted or canceled. Detailed operations display on this page and write to logs:  
   
--   %systemroot%\\debug\\dcpromo.log  
+-   %systemroot%\debug\dcpromo.log  
   
--   %systemroot%\\debug\\dcpromoui.log  
+-   %systemroot%\debug\dcpromoui.log  
   
-Since **Uninstall\-AddsDomainController** and **Uninstall\-WindowsFeature** only have one action apiece, they are shown here in the Confirmation phase with the minimum required arguments. Pressing ENTER starts the irrevocable demotion process and restarts the computer.  
+Since **Uninstall-AddsDomainController** and **Uninstall-WindowsFeature** only have one action apiece, they are shown here in the Confirmation phase with the minimum required arguments. Pressing ENTER starts the irrevocable demotion process and restarts the computer.  
   
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)  
   
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallWindowsFeature.png)  
   
-To accept the reboot prompt automatically, use the **\-force** or **\-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **\-norebootoncompletion:$false** argument.  
+To accept the reboot prompt automatically, use the **-force** or **-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **-norebootoncompletion:$false** argument.  
   
 > [!WARNING]  
 > Overriding the reboot is discouraged. The member server must reboot to function correctly.  
   
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallFinished.png)  
   
-Here is an example of forcibly demoting with its minimal required arguments of **\-forceremoval** and **\-demoteoperationmasterrole**. The **\-credential** argument is not required because the user logged on as a member of the Enterprise Admins group:  
+Here is an example of forcibly demoting with its minimal required arguments of **-forceremoval** and **-demoteoperationmasterrole**. The **-credential** argument is not required because the user logged on as a member of the Enterprise Admins group:  
   
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)  
   
-Here is an example of removing the last domain controller in the domain with its minimal required arguments of **\-lastdomaincontrollerindomain** and **\-removeapplicationpartitions**:  
+Here is an example of removing the last domain controller in the domain with its minimal required arguments of **-lastdomaincontrollerindomain** and **-removeapplicationpartitions**:  
   
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleLastDC.png)  
   
@@ -241,7 +241,7 @@ Uninstall-WindowsFeature : An uninstallation prerequisite step failed duringthe 
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallError.png)  
   
 > [!IMPORTANT]  
-> You must restart the computer after demoting the server before you can remove the AD\-Domain\-Services role binaries.  
+> You must restart the computer after demoting the server before you can remove the AD-Domain-Services role binaries.  
   
 ### Results  
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_DemoteSignoff.png)  

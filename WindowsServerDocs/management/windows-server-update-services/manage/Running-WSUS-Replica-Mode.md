@@ -20,7 +20,7 @@ If your WSUS server is running in replica mode, you will be able to perform only
 
 -   Setting a synchronization schedule
 
--   Specifying proxy\-server settings
+-   Specifying proxy-server settings
 
 -   Specifying the update source. This can be a server other than the administration server
 

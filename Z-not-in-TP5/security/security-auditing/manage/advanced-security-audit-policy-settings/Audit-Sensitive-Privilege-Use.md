@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 9060bf88-6635-4f87-be8b-804f300be9e9
 ---
 # Audit Sensitive Privilege Use
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Sensitive Privilege Use**, which determines whether the operating system generates audit events when sensitive privileges \(user rights\) are used.
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Sensitive Privilege Use**, which determines whether the operating system generates audit events when sensitive privileges (user rights) are used.
 
 Actions that can be audited include:
 
@@ -39,7 +39,7 @@ Actions that can be audited include:
 
     -   **Modify firmware environment values**
 
-    -   **Replace a process\-level token**
+    -   **Replace a process-level token**
 
     -   **Restore files and directories**
 
@@ -51,7 +51,7 @@ Event volume: High
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

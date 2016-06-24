@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 806e377a-3022-4764-b451-0aa4f754f195
 ---
 # Bitsadmin util and help
-Displays the command\-line usage for the **Util** commands.
+Displays the command-line usage for the **Util** commands.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ Bitsadmin /Util /Help
 ```
 
 ## <a name="BKMK_examples"></a>Examples
-The following command displays the command\-line help for the **Util** commands.
+The following command displays the command-line help for the **Util** commands.
 
 ```
 Bitsadmin /Util /Help

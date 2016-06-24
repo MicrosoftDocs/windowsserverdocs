@@ -10,8 +10,8 @@ ms.assetid: 0bc23d72-34e0-414e-aa55-5461658ce8ea
 ---
 # Group Policy Management Console
 
-## Install Group Policy Management Console \(GPMC\)
-Group Policy Management Console \(GPMC\) is a comprehensive administrative tool for Group Policy management. Administrators use GPMC to perform all Group Policy management tasks, with the exception of configuring individual policy settings in Group Policy Objects themselves, which is done with the Local Group Policy Object Editor. You can install GPMC through Server Manager on the server as follows.
+## Install Group Policy Management Console (GPMC)
+Group Policy Management Console (GPMC) is a comprehensive administrative tool for Group Policy management. Administrators use GPMC to perform all Group Policy management tasks, with the exception of configuring individual policy settings in Group Policy Objects themselves, which is done with the Local Group Policy Object Editor. You can install GPMC through Server Manager on the server as follows.
 
 1.  On the **Start** screen, click the **Apps** arrow. On the **Apps** screen, type Server Manager. Click **Server Manager**.
 

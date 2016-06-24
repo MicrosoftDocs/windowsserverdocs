@@ -22,9 +22,9 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 #### To import an AppLocker policy
 
-1.  On the computer where you want to edit or apply the policy, on the **Start** screen, type**secpol.msc** to open the Local Security Policy snap\-in.
+1.  On the computer where you want to edit or apply the policy, on the **Start** screen, type**secpol.msc** to open the Local Security Policy snap-in.
 
-2.  In the console tree, expand **Application Control Policies**, right\-click **AppLocker**, and then click **Import Policy**.
+2.  In the console tree, expand **Application Control Policies**, right-click **AppLocker**, and then click **Import Policy**.
 
 3.  In the **Import Policy** dialog box, locate the file that you exported, and then click **Open**.
 

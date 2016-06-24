@@ -20,13 +20,13 @@ This article shows you how to set up hosts that aren't clustered so you can do l
   
 To set up non-clustered hosts for live migration, you'll need:   
   
--  A user account with permission to perform the various steps. Membership in the local Hyper\-V Administrators group or the Administrators group on both the source and destination computers meets this requirement, unless you're configuring constrained delegation. Membership in the Domain Administrators group is required to configure constrained delegation.  
+-  A user account with permission to perform the various steps. Membership in the local Hyper-V Administrators group or the Administrators group on both the source and destination computers meets this requirement, unless you're configuring constrained delegation. Membership in the Domain Administrators group is required to configure constrained delegation.  
   
-- The Hyper\-V role in Windows Server 2016 Technical Preview installed on the source and destination servers. For instructions, see [Install the Hyper\-V role on Windows Server Technical Preview](../get-started/Install-the-Hyper-V-role-on-Windows-Server-Technical-Preview.md).  
+- The Hyper-V role in Windows Server 2016 Technical Preview installed on the source and destination servers. For instructions, see [Install the Hyper-V role on Windows Server Technical Preview](../get-started/Install-the-Hyper-V-role-on-Windows-Server-Technical-Preview.md).  
   
 - Source and destination computers that either belong to the same Active Directory domain, or belong to domains that trust each other.  
   
-- The Hyper\-V management tools installed on a computer running Windows Server 2016 Technical Preview or Windows 10, unless the tools are installed on the source or destination server and you'll run the tools from the server.  
+- The Hyper-V management tools installed on a computer running Windows Server 2016 Technical Preview or Windows 10, unless the tools are installed on the source or destination server and you'll run the tools from the server.  
   
 ## Consider options for authentication and networking  
   
@@ -41,22 +41,22 @@ Consider how you want to set up the following:
     >   
     > **Virtual machine migration operation failed at migration Source.**  
     >   
-    > **Failed to establish a connection with host***\<computer name>***: No credentials are available in the security package \0x8009030E\).**  
+    > **Failed to establish a connection with host***\<computer name>***: No credentials are available in the security package \0x8009030E).**  
   
 -   **Performance**: Does it makes sense to configure performance options? These options can reduce network and CPU usage, as well as make live migrations go faster. Consider your requirements and your infrastructure, and test different configurations to help you decide. The options are described at the end of step 2.  
   
 -  **Network preference**: Will you allow live migration traffic through any available network, or isolate the traffic to specific networks? As a security best practice, we recommend that you isolate the traffic onto trusted, private networks because live migration traffic is not encrypted when it is sent over the network. Network isolation can be achieved through a physically isolated network or through another trusted networking technology such as VLANs.  
   
-## <a name="BKMK_Step1"></a>Step 1: Configure constrained delegation \(optional)  
+## <a name="BKMK_Step1"></a>Step 1: Configure constrained delegation (optional)  
 If you have decided to use Kerberos to authenticate live migration traffic, configure constrained delegation using an account that is a member of the Domain Administrators group.  
   
 ### Use the Users and Computers snap-in to configure constrained delegation  
   
-1.  Open the Active Directory Users and Computers snap\-in. \(From Server Manager, select the server if it's not selected, click **Tools** \>> **Active Directory Users and Computers**\).  
+1.  Open the Active Directory Users and Computers snap-in. (From Server Manager, select the server if it's not selected, click **Tools** >> **Active Directory Users and Computers**).  
   
-2.  From the navigation pane in **Active Directory Users and Computers**, select the domain and double\-click the **Computers** folder.  
+2.  From the navigation pane in **Active Directory Users and Computers**, select the domain and double-click the **Computers** folder.  
   
-3.  From the **Computers** folder, right\-click the computer account of the source server and then click **Properties**.  
+3.  From the **Computers** folder, right-click the computer account of the source server and then click **Properties**.  
   
 4.  From **Properties**, click the **Delegation** tab.  
   
@@ -70,7 +70,7 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
   
 9. From **Add Services**, in the list of available services, do the following and then click **OK**:  
   
-    -   To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, as well as if you want to move only a virtual machine’s storage. If the server is configured to use SMB storage for Hyper\-V, this should already be selected.  
+    -   To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, as well as if you want to move only a virtual machine’s storage. If the server is configured to use SMB storage for Hyper-V, this should already be selected.  
   
     -   To move virtual machines, select **Microsoft Virtual System Migration Service**.  
   
@@ -80,7 +80,7 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
   
 The configuration changes take effect after both of the following happen:  
   
-  -  The changes are replicated to the domain controllers that the servers running Hyper\-V are logged into.  
+  -  The changes are replicated to the domain controllers that the servers running Hyper-V are logged into.  
   -  The domain controller issues a new kerboros ticket.  
   
 ## <a name="BKMK_Step2"></a>Step 2: Set up the source and destination computers for live migration  
@@ -88,11 +88,11 @@ This step includes choosing options for authentication and networking. As a secu
   
 ### Use Hyper-V Manager to set up the source and destination computers for live migration  
   
-1.  Open Hyper\-V Manager. \(From Server Manager, click **Tools** \>>**Hyper\-V Manager**.\)  
+1.  Open Hyper-V Manager. (From Server Manager, click **Tools** >>**Hyper-V Manager**.)  
   
-2.  In the navigation pane, select one of the servers. \(If it isn't listed, right-click **Hyper\-V Manager**, click **Connect to Server**, type the server name, and click **OK**. Repeat to add more servers.\)  
+2.  In the navigation pane, select one of the servers. (If it isn't listed, right-click **Hyper-V Manager**, click **Connect to Server**, type the server name, and click **OK**. Repeat to add more servers.)  
   
-3.  In the **Action** pane, click **Hyper\-V Settings** \>>**Live Migrations**.  
+3.  In the **Action** pane, click **Hyper-V Settings** >>**Live Migrations**.  
   
 4.  In the **Live Migrations** pane, check **Enable incoming and outgoing live migrations**.  
   
@@ -107,11 +107,11 @@ This step includes choosing options for authentication and networking. As a secu
   
 8. Click **OK**.  
   
-9. Select the other server in Hyper\-V Manager and repeat the steps.  
+9. Select the other server in Hyper-V Manager and repeat the steps.  
   
 ### Use Windows PowerShell to set up the source and destination computers for live migration  
   
-Three cmdlets are available for configuring live migration on non-clustered hosts: [Enable\-VMMigration](https://technet.microsoft.com/library/hh848544.aspx), [Set\-VMMigrationNetwork](https://technet.microsoft.com/library/hh848467.aspx), and [Set\-VMHost](https://technet.microsoft.com/library/hh848524.aspx). This example uses all three and does the following:   
+Three cmdlets are available for configuring live migration on non-clustered hosts: [Enable-VMMigration](https://technet.microsoft.com/library/hh848544.aspx), [Set-VMMigrationNetwork](https://technet.microsoft.com/library/hh848467.aspx), and [Set-VMHost](https://technet.microsoft.com/library/hh848524.aspx). This example uses all three and does the following:   
   - Configures live migration on the local host  
   - Allows incoming migration traffic only on a specific network  
   - Chooses Kerberos as the authentication protocol   
@@ -126,7 +126,7 @@ PS C:\> Set-VMMigrationNetwork 192.168.10.1
 PS C:\> Set-VMHost –VirtualMachineMigrationAuthenticationType Kerberos  
   
 ```  
-Set-VMHost also lets you choose a performance option \(and many other host settings\). For example, to choose SMB but leave the authentication protocol set to the default of CredSSP, type:  
+Set-VMHost also lets you choose a performance option (and many other host settings). For example, to choose SMB but leave the authentication protocol set to the default of CredSSP, type:  
   
 ```  
 PS C:\> Set-VMHost -VirtualMachineMigrationPerformanceOption SMBTransport  
@@ -137,9 +137,9 @@ This table describes how the performance options work.
   
 |Option|Description|  
 |----------|---------------|  
-    |TCP\/IP|Copies the memory of the virtual machine to the destination server over a TCP\/IP connection.|  
-    |Compression|Compresses the memory content of the virtual machine before copying it to the destination server over a TCP\/IP connection. **Note:** This is the **default** setting.|  
-    |SMB|Copies the memory of the virtual machine to the destination server over a SMB 3.0 connection.<br /><br />- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access \(RDMA\) capabilities enabled.<br />- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<br /><br />For more information, see [Improve Performance of a File Server with SMB Direct](https://technet.microsoft.com/library/jj134210(WS.11).aspx).|  
+    |TCP/IP|Copies the memory of the virtual machine to the destination server over a TCP/IP connection.|  
+    |Compression|Compresses the memory content of the virtual machine before copying it to the destination server over a TCP/IP connection. **Note:** This is the **default** setting.|  
+    |SMB|Copies the memory of the virtual machine to the destination server over a SMB 3.0 connection.<br /><br />- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) capabilities enabled.<br />- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<br /><br />For more information, see [Improve Performance of a File Server with SMB Direct](https://technet.microsoft.com/library/jj134210(WS.11).aspx).|  
       
  ## Next steps
  

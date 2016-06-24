@@ -21,7 +21,7 @@ You will perform the following steps to configure EDGE2:
 
 3.  [Rename EDGE2 and join it to the domain](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#rename)—Rename the computer to EDGE2 and join it to the CORP domain.
 
-4.  [Install the IP-HTTPS certificate](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#IPHTTPSCert)—To accept incoming IP\-HTTPS requests, the EDGE2 Remote Access cluster member must have an IP\-HTTPS website certificate installed in its machine certificate store. The certificate must have the same name as the IP\-HTTPS certificate on EDGE1.
+4.  [Install the IP-HTTPS certificate](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#IPHTTPSCert)—To accept incoming IP-HTTPS requests, the EDGE2 Remote Access cluster member must have an IP-HTTPS website certificate installed in its machine certificate store. The certificate must have the same name as the IP-HTTPS certificate on EDGE1.
 
 5.  [Install the Remote Access role on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#InstallDA)—Before you can join EDGE2 to the Remote Access cluster, you must install the Remote Access server role on EDGE2.
 
@@ -29,23 +29,23 @@ You will perform the following steps to configure EDGE2:
 
 1.  On EDGE2, start the installation of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)].
 
-2.  Follow the instructions to complete the installation, specifying [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] \(full installation\) and a strong password for the local Administrator account. Log on using the local Administrator account.
+2.  Follow the instructions to complete the installation, specifying [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] (full installation) and a strong password for the local Administrator account. Log on using the local Administrator account.
 
 3.  Connect EDGE2 to a network that has Internet access and run Windows Update to install the latest updates for [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)], [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)], and then disconnect from the Internet.
 
 4.  Connect one network adapter to the Corpnet subnet or the virtual switch representing the corpnet subnet and the other to the Internet subnet or virtual switch representing the Internet subnet.
 
-## <a name="TCP"></a>Configure TCP\/IP properties
+## <a name="TCP"></a>Configure TCP/IP properties
 
 1.  In the [!INCLUDE[sm](includes/sm_md.md)] console, click **Local Server**, and then in the **Properties** area, next to **Wired Ethernet Connection**, click the link.
 
-2.  In the **Network Connections** window, right\-click the network connection that is connected to the Corpnet subnet or virtual switch, and then click **Rename**.
+2.  In the **Network Connections** window, right-click the network connection that is connected to the Corpnet subnet or virtual switch, and then click **Rename**.
 
 3.  Type **Corpnet**, and then press ENTER.
 
-4.  Right\-click **Corpnet**, and then click **Properties**.
+4.  Right-click **Corpnet**, and then click **Properties**.
 
-5.  Click **Internet Protocol Version 4 \(TCP\/IPv4\)**, and then click **Properties**.
+5.  Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.
 
 6.  Click **Use the following IP address**. In **IP address**, type **10.0.0.8**. In **Subnet mask**, type **255.255.255.0**.
 
@@ -55,7 +55,7 @@ You will perform the following steps to configure EDGE2:
 
 9. In **DNS suffix for this connection**, type **corp.contoso.com**, click **OK** twice.
 
-10. Click **Internet Protocol Version 6 \(TCP\/IPv6\)**, and then click **Properties**.
+10. Click **Internet Protocol Version 6 (TCP/IPv6)**, and then click **Properties**.
 
 11. Click **Use the following IPv6 address**. In **IPv6 address**, type **2001:db8:1::8**. In **Subnet prefix length**, type **64**.
 
@@ -65,13 +65,13 @@ You will perform the following steps to configure EDGE2:
 
 14. In **DNS suffix for this connection**, type **corp.contoso.com**, click **OK** twice, and then click **Close**.
 
-15. In the **Network Connections** window, right\-click the network connection that is connected to the Internet subnet, and then click **Rename**.
+15. In the **Network Connections** window, right-click the network connection that is connected to the Internet subnet, and then click **Rename**.
 
 16. Type **Internet**, and then press ENTER.
 
-17. Right\-click **Internet**, and then click **Properties**.
+17. Right-click **Internet**, and then click **Properties**.
 
-18. Click **Internet Protocol Version 4 \(TCP\/IPv4\)**, and then click **Properties**.
+18. Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.
 
 19. Click **Use the following IP address**. In **IP address**, enter **131.107.0.8**. In **Subnet mask**, enter **255.255.255.0**.
 
@@ -93,7 +93,7 @@ You will perform the following steps to configure EDGE2:
 
 2.  On the **System Properties** dialog box, on the **Computer Name** tab, click **Change**.
 
-3.  On the **Computer Name\/Domain Changes** dialog box, in the **Computer name** box, type **EDGE2**. In the **Member of** area, click **Domain**, and in the text box, enter **corp.contoso.com**, and then click **OK**.
+3.  On the **Computer Name/Domain Changes** dialog box, in the **Computer name** box, type **EDGE2**. In the **Member of** area, click **Domain**, and in the text box, enter **corp.contoso.com**, and then click **OK**.
 
 4.  When you are prompted for a user name and password, type **User1** and its password, and then click **OK**.
 
@@ -105,17 +105,17 @@ You will perform the following steps to configure EDGE2:
 
 8.  When you are prompted to restart the computer, click **Restart Now**.
 
-9. After restarting, login as CORP\\User1.
+9. After restarting, login as CORP\User1.
 
-## <a name="IPHTTPSCert"></a>Install the IP\-HTTPS certificate
+## <a name="IPHTTPSCert"></a>Install the IP-HTTPS certificate
 
 1.  [!INCLUDE[clickstart](includes/clickstart_md.md)]**mmc.exe**, and then press ENTER. [!INCLUDE[uac_confirm_action](includes/uac_confirm_action_md.md)]
 
-2.  In the MMC console, on the **File** menu, click **Add\/Remove Snap\-in**.
+2.  In the MMC console, on the **File** menu, click **Add/Remove Snap-in**.
 
-3.  On the **Add or Remove Snap\-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Finish**, and then click **OK**.
+3.  On the **Add or Remove Snap-ins** dialog box, click **Certificates**, click **Add**, click **Computer account**, click **Next**, click **Finish**, and then click **OK**.
 
-4.  In the left pane of the console, navigate to **Certificates \(Local Computer\)\\Personal\\Certificates**. Right click the **Certificates** node, point to **All Tasks**, and then click **Request New Certificate**.
+4.  In the left pane of the console, navigate to **Certificates (Local Computer)\Personal\Certificates**. Right click the **Certificates** node, point to **All Tasks**, and then click **Request New Certificate**.
 
 5.  On the Certificate Enrollment wizard, click **Next** twice.
 
@@ -129,11 +129,11 @@ You will perform the following steps to configure EDGE2:
 
 10. In **Value**, type **edge1.contoso.com**, and then click **Add**.
 
-11. On the **General** tab, in **Friendly name**, type **IP\-HTTPS Certificate**.
+11. On the **General** tab, in **Friendly name**, type **IP-HTTPS Certificate**.
 
 12. Click **OK**, click **Enroll**, and then click **Finish**.
 
-13. In the details pane of the Certificates snap\-in, verify that a new certificate with the name edge1.contoso.com was enrolled with Intended Purposes of Server Authentication.
+13. In the details pane of the Certificates snap-in, verify that a new certificate with the name edge1.contoso.com was enrolled with Intended Purposes of Server Authentication.
 
 14. Close the console window. If you are prompted to save settings, click **No**.
 

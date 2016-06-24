@@ -12,13 +12,13 @@ ms.topic: article
 ms.assetid: a69e376b-94b0-49a8-bd60-fca08f1982ce
 ---
 # Device Registration Technical Reference
-The Device Registration Service \(DRS\) is a new Windows service that is included with the Active Directory Federation Service Role on Windows Server 2012 R2.  The DRS must be installed and configured on all of the federation servers in your AD FS farm.  For information on deploying DRS, see [Configure a federation server with Device Registration Service](http://technet.microsoft.com/library/dn486831.aspx).
+The Device Registration Service (DRS) is a new Windows service that is included with the Active Directory Federation Service Role on Windows Server 2012 R2.  The DRS must be installed and configured on all of the federation servers in your AD FS farm.  For information on deploying DRS, see [Configure a federation server with Device Registration Service](http://technet.microsoft.com/library/dn486831.aspx).
 
 ## Active Directory objects created when a device is registered
 The following Active Directory objects are created as part of Device Registration Service.
 
 ### Device Registration Configuration
-The Device Registration Configuration is stored in the Configuration naming context of the Active Directory forest. \(For example, **CN\=Device Registration Configuration,CN\=Services,<configuration\-naming\-context>**\). This object is created when the Active Directory forest is initialed for Device Registration.
+The Device Registration Configuration is stored in the Configuration naming context of the Active Directory forest. (For example, **CN=Device Registration Configuration,CN=Services,<configuration-naming-context>**). This object is created when the Active Directory forest is initialed for Device Registration.
 
 The Device Registration Configuration includes the following elements:
 
@@ -33,7 +33,7 @@ The Device Registration Configuration includes the following elements:
 ### Registered devices container
 The device object container is created under one of the domains in the Active Directory forest.  This object container will contain all of the device objects for the Active Directory forest.
 
-By default, the container is created in the same domain as AD FS.  \(For example, **CN\=RegisteredDevices,DC\=<default\-naming\-context>**\).This object is created when the Active Directory forest is initialed for Device Registration.
+By default, the container is created in the same domain as AD FS.  (For example, **CN=RegisteredDevices,DC=<default-naming-context>**).This object is created when the Active Directory forest is initialed for Device Registration.
 
 ### Registered devices
 Device objects are new, light weight objects in Active Directory.  They are used to represent the relationship between: a user, a device, and the company.  Device objects use a certificate signed by AD FS to anchor the physical device to the logical device object in Active Directory.
@@ -70,12 +70,12 @@ Registered devices includes the following elements:
 
 -   **Registered Owner**
 
-    The Security Identity \(SID\) of the user that joined this device to the workplace.
+    The Security Identity (SID) of the user that joined this device to the workplace.
 
-## AD FS\/DRS Server SSL certificate revocation checking
-The Workplace Join client checks the validity of the AD FS Server SSL certificate.  If the AD FS Server SSL certificate includes a Certificate Revocation List \(CRL\) endpoint, the client must be able to reach the endpoint specified to validate the certificate.
+## AD FS/DRS Server SSL certificate revocation checking
+The Workplace Join client checks the validity of the AD FS Server SSL certificate.  If the AD FS Server SSL certificate includes a Certificate Revocation List (CRL) endpoint, the client must be able to reach the endpoint specified to validate the certificate.
 
-If you are using a test environment and a test certificate authority \(CA\) to issue your server SSL certificates then you can choose to not include the CRL endpoint in the server certificates issued by your CA.  Doing so will allow the Workplace Join client to bypass the CRL check.
+If you are using a test environment and a test certificate authority (CA) to issue your server SSL certificates then you can choose to not include the CRL endpoint in the server certificates issued by your CA.  Doing so will allow the Workplace Join client to bypass the CRL check.
 
 > [!CAUTION]
 > This is never recommended for production systems

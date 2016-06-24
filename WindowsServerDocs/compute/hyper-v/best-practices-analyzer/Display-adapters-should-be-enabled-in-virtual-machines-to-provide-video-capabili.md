@@ -13,14 +13,14 @@ ms.assetid: ac5992e6-3c0b-46c2-a48e-6ef37b679228
 author: KBDAzure
 ---
 # Display adapters should be enabled in virtual machines to provide video capabilities
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -30,7 +30,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 *The Microsoft Virtual Machine Bus Video Device may be disabled in a virtual machine.*  
   
-Microsoft Virtual Machine Bus Video Device is a virtual video adapter optimized for use with Hyper\-V virtual machines. When a virtual machine isn't configured to use the Microsoft Virtual Machine Bus Video Device, a legacy video adapter is used. Microsoft Virtual Machine Bus Video Device performs better than a legacy video adapter.  
+Microsoft Virtual Machine Bus Video Device is a virtual video adapter optimized for use with Hyper-V virtual machines. When a virtual machine isn't configured to use the Microsoft Virtual Machine Bus Video Device, a legacy video adapter is used. Microsoft Virtual Machine Bus Video Device performs better than a legacy video adapter.  
   
 ## Impact  
   

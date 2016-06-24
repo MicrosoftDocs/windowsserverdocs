@@ -15,7 +15,7 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>This problem typically occurs when an attempt to establish a replication link fails as a result of a Domain Name System (DNS) lookup problem. If you receive Event ID 1925 with the error message that DNS lookup failed, inbound replication of a directory partition has failed on the destination domain controller, and you must fix the DNS problem. </para>
+    <para>This problem typically occurs when an attempt to establish a replication link fails as a result of a Domain Name System (DNS) lookup problem. If you receive Event ID 1925 with the error message that DNS lookup failed, inbound replication of a directory partition has failed on the destination domain controller, and you must fix the DNS problem. </para>
     <para>The following is an example of the event text: </para>
     <code>Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService

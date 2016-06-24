@@ -16,7 +16,7 @@ This topic lists the planning steps that are required to deploy a single DirectA
   
 -   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
   
-    In this phase, you plan your network and server topology, firewall settings, certificate requirements, the Domain Name System \(DNS\), Active Directory, DirectAccess management servers, and the DirectAccess network location server.  
+    In this phase, you plan your network and server topology, firewall settings, certificate requirements, the Domain Name System (DNS), Active Directory, DirectAccess management servers, and the DirectAccess network location server.  
   
 -   [Step 2: Plan DirectAccess Deployments](Step-2--Plan-DirectAccess-Deployments.md)  
   

@@ -19,6 +19,6 @@ The following Windows Firewall with Advanced Security design examples illustrate
 
 -   [Server Isolation Policy Design Example](https://technet.microsoft.com/library/cc732413(v=ws.10).aspx)
 
--   [Certificate\-based Isolation Policy Design Example](https://technet.microsoft.com/library/cc771822(v=ws.10).aspx)
+-   [Certificate-based Isolation Policy Design Example](https://technet.microsoft.com/library/cc771822(v=ws.10).aspx)
 
 

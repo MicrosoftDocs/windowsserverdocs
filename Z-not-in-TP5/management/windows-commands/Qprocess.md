@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 9825cb01-11e0-4cd1-8142-57910e2f4056
 ---
 # Qprocess
-Displays information about processes that are running on a Remote Desktop Session Host \(RD Session Host\) server.
+Displays information about processes that are running on a Remote Desktop Session Host (RD Session Host) server.
 
 > [!NOTE]
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What’s New in Remote Desktop Services in Windows Server 2012](http://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.

@@ -15,19 +15,19 @@ author: cwatsonmsft
 # Manage Windows virtual machines with PowerShell Direct
 **This is preliminary content and subject to change.**  
   
-You can use PowerShell Direct to remotely manage a Windows 10 or Windows Server 2016 Technical Preview virtual machine from a  Windows 10 or Windows Server 2016 Technical Preview Hyper\-V host. PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper\-V host or the virtual machine. This makes it easier for Hyper\-V Administrators to automate and script virtual machine management and configuration.  
+You can use PowerShell Direct to remotely manage a Windows 10 or Windows Server 2016 Technical Preview virtual machine from a  Windows 10 or Windows Server 2016 Technical Preview Hyper-V host. PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper-V host or the virtual machine. This makes it easier for Hyper-V Administrators to automate and script virtual machine management and configuration.  
   
 There are two ways to run PowerShell Direct:  
   
 -   Create and exit a PowerShell Direct session using PSSession cmdlets  
   
--   Run script or command with the Invoke\-Command cmdlet  
+-   Run script or command with the Invoke-Command cmdlet  
   
-If you're managing older virtual machines, use Virtual Machine Connection \(VMConnect\) or [configure a virtual network for the virtual machine](http://technet.microsoft.com/library/cc816585.aspx).  
+If you're managing older virtual machines, use Virtual Machine Connection (VMConnect) or [configure a virtual network for the virtual machine](http://technet.microsoft.com/library/cc816585.aspx).  
   
 ## Create and exit a PowerShell Direct session using PSSession cmdlets  
   
-1.  On the Hyper\-V host, open Windows PowerShell as Administrator.  
+1.  On the Hyper-V host, open Windows PowerShell as Administrator.  
   
 2.  Use the [Enter-PSSession](https://technet.microsoft.com/library/hh849707.aspx) cmdlet to connect to the virtual machine. Run one of the following commands to create a session by using the virtual machine name or GUID:  
   
@@ -48,14 +48,14 @@ If you're managing older virtual machines, use Virtual Machine Connection \(VMCo
     Exit-PSSession  
     ```  
   
-## Run script or command with Invoke\-Command cmdlet  
-You can use the [Invoke-Command](http://technet.microsoft.com/library/hh849719.aspx) cmdlet to run a pre\-determined set of commands on the virtual machine. Here is an example of how you can use the Invoke\-Command cmdlet where PSTest is the virtual machine name and the script to run \(foo.ps1\) is in the script folder on the C:\/ drive:  
+## Run script or command with Invoke-Command cmdlet  
+You can use the [Invoke-Command](http://technet.microsoft.com/library/hh849719.aspx) cmdlet to run a pre-determined set of commands on the virtual machine. Here is an example of how you can use the Invoke-Command cmdlet where PSTest is the virtual machine name and the script to run (foo.ps1) is in the script folder on the C:/ drive:  
   
 ```  
 Invoke-Command -VMName PSTest  -FilePath C:\script\foo.ps1  
 ```  
   
-To run a single command, use the **\-ScriptBlock** parameter:  
+To run a single command, use the **-ScriptBlock** parameter:  
   
 ```  
 Invoke-Command -VMName PSTest  -ScriptBlock { cmdlet }  
@@ -66,7 +66,7 @@ To create a PowerShell Direct session on a virtual machine,
   
 -   The virtual machine must be running locally on the host and booted.  
   
--   You must be logged into the host computer as a Hyper\-V administrator.  
+-   You must be logged into the host computer as a Hyper-V administrator.  
   
 -   You must supply valid user credentials for the virtual machine.  
   
@@ -74,7 +74,7 @@ To create a PowerShell Direct session on a virtual machine,
   
 -   The virtual machine must run Windows 10, Windows Server 2016 Technical Preview, or higher version.  
   
-You can use the [Get-VM](http://technet.microsoft.com/library/hh848479.aspx) cmdlet to check that the credentials you're using have the Hyper\-V administrator role and to see which VMs are running locally on the host and booted.  
+You can use the [Get-VM](http://technet.microsoft.com/library/hh848479.aspx) cmdlet to check that the credentials you're using have the Hyper-V administrator role and to see which VMs are running locally on the host and booted.  
   
 ## See Also  
 [Enter-PSSession](http://technet.microsoft.com/library/hh849707.aspx)  

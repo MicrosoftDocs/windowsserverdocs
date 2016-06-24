@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 9bf1ed44-8ff4-48a0-ac9e-2ace722376a3
 ---
 # Create a Group Policy Object
-To create a new GPO, use the Active Directory Users and Computers MMC snap\-in.
+To create a new GPO, use the Active Directory Users and Computers MMC snap-in.
 
 **Administrative credentials**
 
@@ -30,7 +30,7 @@ To complete this procedure, you must be a member of the Domain Administrators gr
     > [!NOTE]
     > Be sure to use a name that clearly indicates the purpose of the GPO. Check to see if your organization has a naming convention for GPOs.
 
-5.  Leave **Source Starter GPO** set to **\(none\)**, and then click **OK**.
+5.  Leave **Source Starter GPO** set to **(none)**, and then click **OK**.
 
 6.  If your GPO will not contain any user settings, then you can improve performance by disabling the **User Configuration** section of the GPO. To do this, perform these steps:
 

@@ -11,9 +11,9 @@ ms.topic: article
 ms.assetid: 7da694d8-966b-41d7-9f6a-1afeaacc0744
 ---
 # GPO_DOMISO_Boundary_WS2008
-This GPO is authored by using the Windows Firewall with Advanced Security interface in the Group Policy editing tools. Woodgrove Bank began by copying and pasting the GPO for the  Windows Server 2008  version of the isolated domain GPO, and then renamed the copy to reflect its new purpose.
+This GPO is authored by using the Windows Firewall with Advanced Security interface in the Group Policy editing tools. Woodgrove Bank began by copying and pasting the GPO for the  Windows Server 2008  version of the isolated domain GPO, and then renamed the copy to reflect its new purpose.
 
-This GPO supports the ability for computers that are not part of the isolated domain to access specific servers that must be available to those untrusted computers. It is intended to only apply to server computers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008 .
+This GPO supports the ability for computers that are not part of the isolated domain to access specific servers that must be available to those untrusted computers. It is intended to only apply to server computers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008 .
 
 ## IPsec settings
 The copied GPO includes and continues to use the IPsec settings that configure key exchange, main mode, and quick mode algorithms for the isolated domain when authentication can be used.

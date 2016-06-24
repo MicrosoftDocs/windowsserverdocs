@@ -23,7 +23,7 @@ Append <LocalFile> [RemoteFile]
 |Parameter|Description|  
 |-------------|---------------|  
 |<LocalFile>|Specifies the local file to add.|  
-|\[RemoteFile\]|Specifies the file on the remote computer to which <LocalFile> is added.|  
+|[RemoteFile]|Specifies the file on the remote computer to which <LocalFile> is added.|  
   
 ## Remarks  
 If *RemoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.  

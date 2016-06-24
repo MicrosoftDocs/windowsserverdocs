@@ -9,7 +9,7 @@ ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
 author: jamesmci
 ---
 # Configure the CDP and AIA Extensions on CA1
-You can use this procedure to configure the Certificate Revocation List \(CRL\) Distribution Point \(CDP\) and the Authority Information Access \(AIA\) settings on CA1.  
+You can use this procedure to configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1.  
   
 To perform this procedure, you must be a member of Domain Admins.  
   
@@ -17,12 +17,12 @@ To perform this procedure, you must be a member of Domain Admins.
   
 1.  In Server Manager, click **Tools** and then click **Certification Authority**.  
   
-2.  In the Certification Authority console tree, right\-click **corp\-CA1\-CA**, and then click **Properties**.  
+2.  In the Certification Authority console tree, right-click **corp-CA1-CA**, and then click **Properties**.  
   
     > [!NOTE]  
-    > The name of your CA is different if you did not name the computer CA1 and your domain name is different than the one in this example. The CA name is in the format *domain*\-*CAComputerName*\-CA.  
+    > The name of your CA is different if you did not name the computer CA1 and your domain name is different than the one in this example. The CA name is in the format *domain*-*CAComputerName*-CA.  
   
-3.  Click the **Extensions** tab. Ensure that **Select extension** is set to **CRL Distribution Point \(CDP\)**, and in the **Specify locations from which users can obtain a certificate revocation list \(CRL\)**, do the following:  
+3.  Click the **Extensions** tab. Ensure that **Select extension** is set to **CRL Distribution Point (CDP)**, and in the **Specify locations from which users can obtain a certificate revocation list (CRL)**, do the following:  
   
     1.  Select the entry `file:\/\/\\\\<ServerDNSName>\/CertEnroll\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
@@ -30,7 +30,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
     3.  Select the entry that starts with the path `ldap:\/\/CN\=<CATruncatedName><CRLNameSuffix>,CN\=<ServerShortName>`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-4.  In **Specify locations from which users can obtain a certificate revocation list \(CRL\)**, click **Add**. The **Add Location** dialog box opens.  
+4.  In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
   
 5.  In **Add Location**, in **Location**, type `http:\/\/pki.corp.contoso.com\/pki\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **OK**. This returns you to the CA properties dialog box.  
   
@@ -40,7 +40,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
     -   **Include in the CDP extension of issued certificates**  
   
-7.  In **Specify locations from which users can obtain a certificate revocation list \(CRL\)**, click **Add**. The **Add Location** dialog box opens.  
+7.  In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
   
 8.  In **Add Location**, in **Location**, type `file:\/\/\\\\pki.corp.contoso.com\/pki\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **OK**. This returns you to the CA properties dialog box.  
   
@@ -50,7 +50,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
     -   **Publish Delta CRLs to this location**  
   
-10. Change **Select extension** to **Authority Information Access \(AIA\)**, and in the **Specify locations from which users can obtain a certificate revocation list \(CRL\)**, do the following:  
+10. Change **Select extension** to **Authority Information Access (AIA)**, and in the **Specify locations from which users can obtain a certificate revocation list (CRL)**, do the following:  
   
     1.  Select the entry that starts with the path `ldap:\/\/CN\=<CATruncatedName>,CN\=AIA,CN\=Public Key Services`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
@@ -58,7 +58,7 @@ To perform this procedure, you must be a member of Domain Admins.
   
     3.  Select the entry `file:\/\/\\\\<ServerDNSName>\/CertEnroll\/<ServerDNSName>\_<CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-11. In **Specify locations from which users can obtain a certificate revocation list \(CRL\)**, click **Add**. The **Add Location** dialog box opens.  
+11. In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
   
 12. In **Add Location**, in **Location**, type `http:\/\/pki.corp.contoso.com\/pki\/<ServerDNSName>\_<CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
   

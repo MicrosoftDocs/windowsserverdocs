@@ -29,7 +29,7 @@ The DNS domain name parameter should be entered in uppercase letters. Otherwise,
 Setting the Kerberos realm on a domain controller is not supported. Attempting to do so will cause a warning and a command failure.
 
 ## <a name="BKMK_Examples"></a>Examples
-Set the realm for this computer to a specific domain name to restrict access by a non\-domain controller just to the CONTOSO Kerberos realm:
+Set the realm for this computer to a specific domain name to restrict access by a non-domain controller just to the CONTOSO Kerberos realm:
 
 ```
 ksetup /setrealm CONTOSO

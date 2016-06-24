@@ -20,8 +20,8 @@ You can use the information in this topic to configure third party firewall prod
   
 Membership in **Administrators**, or equivalent is the minimum required to make these configuration changes.  
   
-## \[MS\-PCCRD\]: Peer Content Caching and Retrieval Discovery Protocol  
-Distributed cache clients must allow inbound and outbound MS\-PCCRD traffic, which is carried in the Web Services Dynamic Discovery \(WS\-Discovery\) protocol.  
+## [MS-PCCRD]: Peer Content Caching and Retrieval Discovery Protocol  
+Distributed cache clients must allow inbound and outbound MS-PCCRD traffic, which is carried in the Web Services Dynamic Discovery (WS-Discovery) protocol.  
   
 Firewall settings must allow multicast traffic in addition to inbound and outbound traffic. You can use the following settings to configure firewall exceptions for distributed cache mode.  
   
@@ -33,10 +33,10 @@ Inbound traffic: Local port: 3702, Remote port: ephemeral
   
 Outbound traffic: Local port: ephemeral, Remote port: 3702  
   
-Program: %systemroot%\\system32\\svchost.exe \(BranchCache Service \[PeerDistSvc\]\)  
+Program: %systemroot%\system32\svchost.exe (BranchCache Service [PeerDistSvc])  
   
-## \[MS\-PCCRR\]: Peer Content Caching and Retrieval: Retrieval Protocol  
-Distributed cache clients must allow inbound and outbound MS\-PCCRR traffic, which is carried in the HTTP 1.1 protocol as documented in request for comments \(RFC\) 2616.  
+## [MS-PCCRR]: Peer Content Caching and Retrieval: Retrieval Protocol  
+Distributed cache clients must allow inbound and outbound MS-PCCRR traffic, which is carried in the HTTP 1.1 protocol as documented in request for comments (RFC) 2616.  
   
 Firewall settings must allow inbound and outbound traffic. You can use the following settings to configure firewall exceptions for distributed cache mode.  
   

@@ -53,7 +53,7 @@ fsutil resource [stop] <RmRootPathname>
 |<containers>|Specifies the data objects that are used by the Transactional Resource Manager.|
 |maxextent|Specifies the maximum number of containers for the specified Transactional Resource Manager.|
 |minextent|Specifies the minimum number of containers for the specified Transactional Resource Manager.|
-|mode {full&#124;undo}|Specifies whether all transactions are logged \( **full**\) or only rolled back events are logged \(**undo**\).|
+|mode {full&#124;undo}|Specifies whether all transactions are logged ( **full**) or only rolled back events are logged (**undo**).|
 |rename|Changes the GUID for the Transactional Resource Manager.|
 |shrink|Specifies percentage by which the Transactional Resource Manager log can automatically decrease.|
 |size|Specifies the size of the Transactional Resource Manager as a specified number of *Containers*.|
@@ -61,13 +61,13 @@ fsutil resource [stop] <RmRootPathname>
 |stop|Stops the specified Transactional Resource Manager.|
 
 ### <a name="BKMK_examples"></a>Examples
-To set the log for the Transactional Resource Manager that is specified by c:\\test, to have an automatic growth of five containers, type:
+To set the log for the Transactional Resource Manager that is specified by c:\test, to have an automatic growth of five containers, type:
 
 ```
 fsutil resource setlog growth 5 containers c:test
 ```
 
-To set the log for the Transactional Resource Manager that is specified by c:\\test, to have an automatic growth of two percent, type:
+To set the log for the Transactional Resource Manager that is specified by c:\test, to have an automatic growth of two percent, type:
 
 ```
 fsutil resource setlog growth 2 percent c:test

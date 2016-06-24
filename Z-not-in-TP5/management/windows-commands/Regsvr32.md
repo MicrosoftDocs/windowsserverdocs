@@ -23,12 +23,12 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 
 |Parameter|Description|
 |-------------|---------------|
-|\/u|Unregisters server.|
-|\/s|Runs **Regsvr32** without displaying messages.|
-|\/n|Runs **Regsvr32** without calling **DllRegisterServer**. \(Requires the **\/i** parameter.\)|
-|\/i:<cmdline>|Passes an optional command\-line string \(*cmdline*\) to **DllInstall**. If you use this parameter in conjunction with the **\/u** parameter, it calls **DllUninstall**.|
+|/u|Unregisters server.|
+|/s|Runs **Regsvr32** without displaying messages.|
+|/n|Runs **Regsvr32** without calling **DllRegisterServer**. (Requires the **/i** parameter.)|
+|/i:<cmdline>|Passes an optional command-line string (*cmdline*) to **DllInstall**. If you use this parameter in conjunction with the **/u** parameter, it calls **DllUninstall**.|
 |<DllName>|The name of the .dll file that will be registered.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_examples"></a>Examples
 To register the .dll for the Active Directory Schema, type:

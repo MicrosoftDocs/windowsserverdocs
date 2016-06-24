@@ -11,13 +11,13 @@ ms.topic: article
 ms.assetid: a6caf449-b0a9-4df7-85e9-b1693b6e817d
 ---
 # Appendix A: Sample GPO Template Files for Settings Used in this Guide
-You can import an XML file containing customized registry preferences into a Group Policy Object \(GPO\) by using the Preferences feature of the Group Policy Management Console \(GPMC\). Creating registry setting preferences as described here was first implemented in  Windows Server 2008  and Windows Vista with Service Pack 1 \(SP1\).
+You can import an XML file containing customized registry preferences into a Group Policy Object (GPO) by using the Preferences feature of the Group Policy Management Console (GPMC). Creating registry setting preferences as described here was first implemented in  Windows Server 2008  and Windows Vista with Service Pack 1 (SP1).
 
 To manually create the file, build the settings under **Computer Configuration**, **Preferences**, **Windows Settings**, **Registry**. After you have created the settings, drag the container to the desktop. An .xml file is created there.
 
 To import an .xml file to GPMC, drag it and drop it on the **Registry** node under **Computer Configuration**, **Preferences**, **Windows Settings**. If you copy the following sample XML code to a file, and then drag and drop it on the **Registry** node, it creates a **Server and Domain Isolation** collection with the six registry keys discussed in this guide.
 
-The following sample file uses item\-level targeting to ensure that the registry keys are applied only on the versions of Windows to which they apply.
+The following sample file uses item-level targeting to ensure that the registry keys are applied only on the versions of Windows to which they apply.
 
 > [!NOTE]
 > The file shown here is for sample use only. It should be customized to meet the requirements of your organization’s deployment. To customize this file, import it into a test GPO, modify the settings, and then drag the Server and Domain Isolation Settings node to your desktop. The new file will contain all of your customization.

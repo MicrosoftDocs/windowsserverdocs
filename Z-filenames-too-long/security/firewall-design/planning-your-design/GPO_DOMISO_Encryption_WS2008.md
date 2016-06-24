@@ -11,14 +11,14 @@ ms.topic: article
 ms.assetid: de62cc4a-210d-46b0-942e-f768ca3f0f82
 ---
 # GPO_DOMISO_Encryption_WS2008
-This GPO is authored by using the Windows Firewall with Advanced Security interface in the Group Policy editing tools. Woodgrove Bank began by copying and pasting the GPO for the  Windows Server 2008  version of the isolated domain GPO, and then renamed the copy to reflect its new purpose.
+This GPO is authored by using the Windows Firewall with Advanced Security interface in the Group Policy editing tools. Woodgrove Bank began by copying and pasting the GPO for the  Windows Server 2008  version of the isolated domain GPO, and then renamed the copy to reflect its new purpose.
 
-This GPO supports the ability for servers that contain sensitive data to require encryption for all connection requests. It is intended to only apply to server computers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008 .
+This GPO supports the ability for servers that contain sensitive data to require encryption for all connection requests. It is intended to only apply to server computers that are running  Windows Server 2012 ,  Windows Server 2008 R2  or  Windows Server 2008 .
 
 ## IPsec settings
 The copied GPO includes and continues to use the IPsec settings that configure key exchange, main mode, and quick mode algorithms for the isolated domain The following changes are made to encryption zone copy of the GPO:
 
-The encryption zone servers require all connections to be encrypted. To do this, change the IPsec default settings for the GPO to enable the setting **Require encryption for all connection security rules that use these settings**. This disables all integrity\-only algorithm combinations.
+The encryption zone servers require all connections to be encrypted. To do this, change the IPsec default settings for the GPO to enable the setting **Require encryption for all connection security rules that use these settings**. This disables all integrity-only algorithm combinations.
 
 ## Connection security rules
 Rename the **Isolated Domain Rule** to **Encryption Zone Rule**. Leave the authentication mode setting on **Require inbound and request outbound**. In this mode, the computer forces authentication for all inbound network traffic, and uses it when it can on outbound traffic.

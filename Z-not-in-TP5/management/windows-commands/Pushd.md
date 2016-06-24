@@ -24,7 +24,7 @@ pushd [<Path>]
 |Parameter|Description|
 |-------------|---------------|
 |<Path>|Specifies the directory to make the current directory. This command supports relative paths.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -36,7 +36,7 @@ pushd [<Path>]
 
 -   If command extensions are enabled, the **pushd** command accepts either a network path or a local drive letter and path.
 
--   If you specify a network path, the **pushd** command temporarily assigns the highest unused drive letter \(starting with Z:\) to the specified network resource. The command then changes the current drive and directory to the specified directory on the newly assigned drive. If you use the **popd** command with command extensions enabled, the **popd** command removes the drive\-letter assignation created by **pushd**.
+-   If you specify a network path, the **pushd** command temporarily assigns the highest unused drive letter (starting with Z:) to the specified network resource. The command then changes the current drive and directory to the specified directory on the newly assigned drive. If you use the **popd** command with command extensions enabled, the **popd** command removes the drive-letter assignation created by **pushd**.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example shows how you can use the **pushd** command and the **popd** command in a batch program to change the current directory from the one in which the batch program was run and then change it back:

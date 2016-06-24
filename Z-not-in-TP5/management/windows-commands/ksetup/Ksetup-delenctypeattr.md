@@ -24,11 +24,11 @@ ksetup /delenctypeattr <DomainName>
 |<DomainName>|Name of the domain to which you want to establish a connection. Use the fully qualified domain name or a simple form of the name, such as corp.contoso.com or contoso.|
 
 ## Remarks
-To view the encryption type for the Kerberos ticket\-granting ticket \(TGT\) and the session key, run the **klist** command and view the output.
+To view the encryption type for the Kerberos ticket-granting ticket (TGT) and the session key, run the **klist** command and view the output.
 
 A status message is displayed upon successful or failed completion.
 
-To set the domain that you want to connect to and use, run the **ksetup \/domain <DomainName>** command.
+To set the domain that you want to connect to and use, run the **ksetup /domain <DomainName>** command.
 
 ## <a name="BKMK_Examples"></a>Examples
 Determine the current encryption types that are set on this computer:

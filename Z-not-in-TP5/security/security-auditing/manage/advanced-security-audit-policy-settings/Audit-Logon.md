@@ -21,7 +21,7 @@ The following events are recorded:
 
 -   Logon attempts by using explicit credentials. This event is generated when a process attempts to log on an account by explicitly specifying that account's credentials. This most commonly occurs in batch configurations such as scheduled tasks, or when using the Runas command.
 
--   Security identifiers \(SIDs\) are filtered.
+-   Security identifiers (SIDs) are filtered.
 
 Logon events are essential to tracking user activity and detecting potential attacks.
 
@@ -29,7 +29,7 @@ Event volume: Low on a client computer; medium on a domain controller or network
 
 Default: Success for client computers; success and failure for servers
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

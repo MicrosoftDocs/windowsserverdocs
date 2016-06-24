@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 8b9d6673-be68-459b-ba37-fcf07cae5573
 ---
 # Link the GPO to the Domain
-After you create the GPO and configure it with security group filters and WMI filters, you must link the GPO to the container in Active Directory that contains all of the target computers.
+After you create the GPO and configure it with security group filters and WMI filters, you must link the GPO to the container in Active Directory that contains all of the target computers.
 
 If the filters comprehensively control the application of the GPO to only the correct computers, then you can link the GPO to the domain container. Alternatively, you can link the GPO to a site container or organizational unit if you want to limit application of the GPO to that subset of computers.
 
@@ -19,13 +19,13 @@ If the filters comprehensively control the application of the GPO to only the co
 
 To complete this procedure, you must be a member of the Domain Admins group, or otherwise be delegated permissions to modify the GPOs.
 
-### To link the GPO to the domain container in Active Directory
+### To link the GPO to the domain container in Active Directory
 
 1.  On a computer that has the Group Policy Management feature installed, click the **Start** charm, and then click the **Group Policy Management** tile.
 
 2.  In the navigation pane, expand **Forest:** *YourForestName*, expand **Domains**, and then expand *YourDomainName*.
 
-3.  Right\-click *YourDomainName*, and then click **Link an Existing GPO**.
+3.  Right-click *YourDomainName*, and then click **Link an Existing GPO**.
 
 4.  In the **Select GPO** dialog box, select the GPO that you want to deploy, and then click **OK**.
 

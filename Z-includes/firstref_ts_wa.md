@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Terminal Services Web Access (TS Web Access)</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Terminal Services Web Access (TS Web Access)</Token>

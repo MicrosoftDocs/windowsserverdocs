@@ -29,12 +29,12 @@ In order to import hotfixes into WSUS, you must access the Microsoft Update cata
 
 Approved updates imported from the Microsoft Update Catalog site are downloaded the next time the WSUS server synchronizes. They are not downloaded at the time of import from the Microsoft Update Catalog site.
 
-Note that you must access the Microsoft Update Catalog site though the WSUS console to ensure that the updates are imported in a WSUS\-compatible format. If you access the Microsoft Update Catalog website manually, any updates that you download are not imported into the WSUS server, but instead are downloaded as individual \*.MSU files. WSUS does not currently have a supported mechanism for importing files in the \*.MSU format.
+Note that you must access the Microsoft Update Catalog site though the WSUS console to ensure that the updates are imported in a WSUS-compatible format. If you access the Microsoft Update Catalog website manually, any updates that you download are not imported into the WSUS server, but instead are downloaded as individual *.MSU files. WSUS does not currently have a supported mechanism for importing files in the \*.MSU format.
 
-If you run The Server Cleanup Wizard, updates imported from the Microsoft Update Catalog that are set as Not Approved or as Declined may be removed from the WSUS server. If they are removed, they can be re\-imported from the Microsoft Update Catalog.
+If you run The Server Cleanup Wizard, updates imported from the Microsoft Update Catalog that are set as Not Approved or as Declined may be removed from the WSUS server. If they are removed, they can be re-imported from the Microsoft Update Catalog.
 
 > [!NOTE]
-> You can remove updates that are imported from the Microsoft Update Catalog that are set as either Not Approved or Declined, by running the WSUS Server Cleanup Wizard. You can re\-imported updates that have been previously removed from your WSUS systems through the Microsoft Update Catalog.
+> You can remove updates that are imported from the Microsoft Update Catalog that are set as either Not Approved or Declined, by running the WSUS Server Cleanup Wizard. You can re-imported updates that have been previously removed from your WSUS systems through the Microsoft Update Catalog.
 
 ## Restricting access to hotfixes
 WSUS administrators might consider restricting access to the hotfixes they have downloaded from the Microsoft Update catalog site. In order to make this restriction follow the steps below:

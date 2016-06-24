@@ -24,7 +24,7 @@ bitsadmin /Info <Job> [/verbose]
 |Job|The job's display name or GUID|
 
 ## Remarks
-Use the \/verbose parameter to provide detailed information about the job.
+Use the /verbose parameter to provide detailed information about the job.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves information about the job named *myDownloadJob*.

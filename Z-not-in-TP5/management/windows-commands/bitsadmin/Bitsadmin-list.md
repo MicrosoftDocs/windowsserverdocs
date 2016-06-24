@@ -21,11 +21,11 @@ bitsadmin /List [/allusers][/verbose]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/Allusers|Optional—lists jobs for all users|
-|\/Verbose|Optional—provides detail information for each job.|
+|/Allusers|Optional—lists jobs for all users|
+|/Verbose|Optional—provides detail information for each job.|
 
 ## Remarks
-You must have administrator privileges to use the \/allusers parameter
+You must have administrator privileges to use the /allusers parameter
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves information about jobs owned by the current user.

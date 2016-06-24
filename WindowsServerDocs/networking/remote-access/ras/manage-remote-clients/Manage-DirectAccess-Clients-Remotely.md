@@ -12,9 +12,9 @@ ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
 author: coreyp
 ---
 # Manage DirectAccess Clients Remotely
-Remote Access monitoring reports remote user activity and status for DirectAccess and VPN connections. It tracks the number and duration of client connections \(among other statistics\), and monitors the operations status of the server. An easy\-to\-use monitoring console provides a view of your entire Remote Access infrastructure. Monitoring views are available for single server, cluster, and multisite configurations.  
+Remote Access monitoring reports remote user activity and status for DirectAccess and VPN connections. It tracks the number and duration of client connections (among other statistics), and monitors the operations status of the server. An easy-to-use monitoring console provides a view of your entire Remote Access infrastructure. Monitoring views are available for single server, cluster, and multisite configurations.  
   
-**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service \(RRAS\) into a single Remote Access role.  
+**Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 > [!NOTE]  
 > In addition to this topic, the following topics on monitoring Remote Access are available.  
@@ -49,13 +49,13 @@ Before you begin monitoring and accounting tasks for remote clients, you need to
   
 -   **Monitoring** shows actively connected users at a given point in time.  
   
--   **Accounting** keeps a history of users who have connected to the corporate network, and their usage details \(for compliance and auditing purposes\).  
+-   **Accounting** keeps a history of users who have connected to the corporate network, and their usage details (for compliance and auditing purposes).  
   
 Remote client monitoring is based on connections. There are two types of tunnel connections that are established by DirectAccess clients:  
   
 -   **Machine tunnel traffic connections**: This tunnel is established by the computer, in system context, to access servers that are required for name resolution, authentication, remediation updating, and so on.  
   
--   **User tunnel traffic connections**: This tunnel is established by the user account on the computer, in a user context, when the user tries to access a resource on the corporate network. Depending on the deployment requirements, a user might have to provide strong credentials \(for example, by using a smart card or providing a one\-time password\) to access the corporate network resources.  
+-   **User tunnel traffic connections**: This tunnel is established by the user account on the computer, in a user context, when the user tries to access a resource on the corporate network. Depending on the deployment requirements, a user might have to provide strong credentials (for example, by using a smart card or providing a one-time password) to access the corporate network resources.  
   
 For DirectAccess, a connection is uniquely identified by the IP address of the remote client. For example, if a machine tunnel is open for a client computer, and a user is connected from that computer, these would be using the same connection. In a situation where the user disconnects and connects again while the machine tunnel is still active, it is a single connection.  
   

@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 9c29edc3-ec49-43f2-bc49-86bf0612d816
 ---
 # Nslookup root
-Changes the default server to the server for the root of the Domain Name System \(DNS\) domain name space.
+Changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
 
 ## Syntax
 

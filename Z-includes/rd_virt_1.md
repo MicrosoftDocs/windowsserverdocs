@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Remote Desktop Virtualization Host (RD Virtualization Host)</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Remote Desktop Virtualization Host (RD Virtualization Host)</Token>

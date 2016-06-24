@@ -34,9 +34,9 @@ The Server Cleanup Wizard is integrated into the user interface and can be used 
 
     -   The superseding update must be approved for install to a computer group
 
-It is important to mention that if you choose to remove unneeded content with the Server Cleanup Wizard, all the private update files that you have downloaded from the Catalog Site will be removed as well. You will need to re\-import these files after running the Server Cleanup Wizard.
+It is important to mention that if you choose to remove unneeded content with the Server Cleanup Wizard, all the private update files that you have downloaded from the Catalog Site will be removed as well. You will need to re-import these files after running the Server Cleanup Wizard.
 
-If updates are approved using an auto\-approval rule, they might still be in the “Approved” state, and will not be removed by The Server Cleanup Wizard. To remove auto\-approved updates that are in an “approved” state , the WSUS Admin must – at minimum \- manually set the approval status of superseded updates to “Not Approved” so they will be eligible for declination by the Server Cleanup Wizard. The Server Cleanup Wizard will ensure a newer update is approved and that no client system is still reporting that update as needed before marking the update as “Declined.”
+If updates are approved using an auto-approval rule, they might still be in the “Approved” state, and will not be removed by The Server Cleanup Wizard. To remove auto-approved updates that are in an “approved” state , the WSUS Admin must – at minimum - manually set the approval status of superseded updates to “Not Approved” so they will be eligible for declination by the Server Cleanup Wizard. The Server Cleanup Wizard will ensure a newer update is approved and that no client system is still reporting that update as needed before marking the update as “Declined.”
 
 ## See also
 

@@ -10,7 +10,7 @@ ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
 author: jaimeo
 ---
 # Reset session
-Enables you to reset \(delete\) a session on a Remote Desktop Session Host \(RD Session Host\) server.  
+Enables you to reset (delete) a session on a Remote Desktop Session Host (RD Session Host) server.  
   
 For examples of how to use this command, see [Examples](#BKMK_examples).  
   
@@ -29,9 +29,9 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 |-------------|---------------|  
 |<SessionName>|Specifies the name of the session that you want to reset. To determine the name of the session, use the **query session** command.|  
 |<SessionID>|Specifies the ID of the session to reset.|  
-|\/server:<ServerName>|Specifies the terminal server containing the session that you want to reset. Otherwise, the current RD Session Host server is used.|  
-|\/v|Displays information about the actions being performed.|  
-|\/?|Displays help at the command prompt.|  
+|/server:<ServerName>|Specifies the terminal server containing the session that you want to reset. Otherwise, the current RD Session Host server is used.|  
+|/v|Displays information about the actions being performed.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   
@@ -41,11 +41,11 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
   
 -   You should reset a session only when it malfunctions or appears to have stopped responding.  
   
--   The **\/server** parameter is required only if you use **reset session** from a remote server.  
+-   The **/server** parameter is required only if you use **reset session** from a remote server.  
   
 ## <a name="BKMK_examples"></a>Examples  
   
--   To reset the session designated rdp\-tcp\#6, type:  
+-   To reset the session designated rdp-tcp#6, type:  
   
     ```  
     reset session rdp-tcp#6  

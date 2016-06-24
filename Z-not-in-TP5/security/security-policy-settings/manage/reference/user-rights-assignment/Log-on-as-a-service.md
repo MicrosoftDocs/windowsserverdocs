@@ -22,7 +22,7 @@ Constant: SeServiceLogonRight
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not Defined  
   
@@ -31,10 +31,10 @@ Constant: SeServiceLogonRight
 1.  Minimize the number of accounts that are granted this user right.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default this setting is Network Service on domain controllers and Network Service on stand\-alone servers.  
+By default this setting is Network Service on domain controllers and Network Service on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not defined|  
+|Stand-Alone Server Default Settings|Not defined|  
 |Domain Controller Effective Default Settings|Network Service|  
 |Member Server Effective Default Settings|Network Service|  
 |Client Computer Effective Default Settings|Network Service|  
@@ -50,7 +50,7 @@ The following table lists the actual and effective default policy values for the
 ### Operating system version differences  
 There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
-The default changed in  Windows Server 2008 R2  and  Windows 7  from Not defined in that only the Network Service account has this right by default. Any service that runs under a separate user account must be assigned this user right.  
+The default changed in  Windows Server 2008 R2  and  Windows 7  from Not defined in that only the Network Service account has this right by default. Any service that runs under a separate user account must be assigned this user right.  
   
 ## Policy management  
 This section describes features, tools, and guidance to help you manage this policy.  
@@ -82,7 +82,7 @@ The **Log on as a service** user right allows accounts to start network services
 By definition, the Network Service account has the **Log on as a service** user right. This right is not granted through the Group Policy setting. You should minimize the number of other accounts that are granted this user right.  
   
 ### Potential impact  
-On most computers, restricting the **Log on as a service** user right to the Local System, Local Service, and Network Service built\-in accounts is the default configuration, and there is no negative impact. However, if you have installed optional components such as ASP.NET or IIS, you may need to assign the **Log on as a service** user right to additional accounts that are required by those components. IIS requires that this user right be explicitly granted to the ASPNET user account.  
+On most computers, restricting the **Log on as a service** user right to the Local System, Local Service, and Network Service built-in accounts is the default configuration, and there is no negative impact. However, if you have installed optional components such as ASP.NET or IIS, you may need to assign the **Log on as a service** user right to additional accounts that are required by those components. IIS requires that this user right be explicitly granted to the ASPNET user account.  
   
 ## See Also  
 [User Rights Assignment](User-Rights-Assignment.md)  

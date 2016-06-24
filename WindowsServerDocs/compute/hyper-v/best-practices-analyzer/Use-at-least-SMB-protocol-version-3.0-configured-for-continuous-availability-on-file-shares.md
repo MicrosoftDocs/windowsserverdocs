@@ -13,14 +13,14 @@ ms.assetid: a1fa5cf9-8a48-4f63-bb57-d81e63e77b30
 author: KBDAzure
 ---
 # Use at least SMB protocol version 3.0 configured for continuous availability on file shares that store files for virtual machines
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   

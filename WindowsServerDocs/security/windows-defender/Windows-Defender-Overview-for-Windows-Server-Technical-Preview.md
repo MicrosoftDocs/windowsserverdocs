@@ -30,13 +30,13 @@ This topic includes information important for running Windows Defender on a serv
 ## <a name="BKMK_UsingDef"></a>Using Windows Defender
 By default, Windows Defender is installed and functional on Windows Server 2016 Technical Preview. The user interface is installed by default on some SKUs. You can manage Windows Defender by using WMI, Windows PowerShell®, or by using Group Policy.
 
-If the user interface is not installed,  use **Add Roles and Features Wizard**, or the **Install\-WindowsFeature** cmdlet.
+If the user interface is not installed,  use **Add Roles and Features Wizard**, or the **Install-WindowsFeature** cmdlet.
 
 To install Windows Defender, start a Windows PowerShell console as an administrator, and run the following command:
 
 `Install-WindowsFeature -Name Windows-Defender-GUI`
 
-To disable Windows Defender, you must uninstall it by using the **Remove Roles and Features Wizard** or by using the **Uninstall\-WindowsFeature** cmdlet.
+To disable Windows Defender, you must uninstall it by using the **Remove Roles and Features Wizard** or by using the **Uninstall-WindowsFeature** cmdlet.
 
 To uninstall Windows Defender, start a Windows PowerShell console as an administrator, and run the following command:
 
@@ -49,7 +49,7 @@ To uninstall Windows Defender, start a Windows PowerShell console as an administ
 To verify that Windows Defender is running on the server, run the following command: `sc query Windefend`. The `sc query` command returns information about the Windows Defender service. If Windows Defender is running, the `STATE` value displays `RUNNING`.
 
 ## <a name="BKMK_UpdateDef"></a>Update antimalware definitions
-In order to get updated antimalware definitions, you must have the Windows Update service running. If you use an update management service, like Windows Server Update Services \(WSUS\), make sure that updates for Windows Defender definitions are approved for the computers you manage.
+In order to get updated antimalware definitions, you must have the Windows Update service running. If you use an update management service, like Windows Server Update Services (WSUS), make sure that updates for Windows Defender definitions are approved for the computers you manage.
 
 By default, Windows Update does not download and install updates automatically on Windows Server 2016 Technical Preview. You can change this configuration by using one of the following methods:
 
@@ -59,7 +59,7 @@ By default, Windows Update does not download and install updates automatically o
 
     -   **Download updates but let me choose whether to install them** allows Windows Defender to download and install definition updates automatically, but other updates are not automatically installed.
 
--   **Group Policy**. You can set up and manage Windows Update by using the settings available in Group Policy, in the following path: **Administrative Templates\\Windows Components\\Windows Update\\Configure Automatic Updates**
+-   **Group Policy**. You can set up and manage Windows Update by using the settings available in Group Policy, in the following path: **Administrative Templates\Windows Components\Windows Update\Configure Automatic Updates**
 
 -   The **AUOptions** registry key. The following two values allow Windows Update to automatically download and install definition updates.
 
@@ -79,11 +79,11 @@ The following table lists the services for Windows Defender and the dependent se
 
 |Service Name|File Location|Description|
 |----------------|-----------------|---------------|
-|Windows Defender Service \(Windefend\)|C:\\Program Files\\Windows Defender\\MsMpEng.exe|This is the main Windows Defender service that needs to be running at all times.|
-|Windows Defender Network Inspection Service \(Wdnissvc\)|C:\\Program Files\\Windows Defender\\NisSrv.exe|This service is invoked when Windows Defender encounters a trigger to load it.|
-|Windows Error Reporting Service \(Wersvc\)|C:\\WINDOWS\\System32\\svchost.exe \-k WerSvcGroup|This service sends   error reports back to Microsoft.|
-|Windows Firewall \(MpsSvc\)|C:\\WINDOWS\\system32\\svchost.exe \-k LocalServiceNoNetwork|We recommend leaving the Windows Firewall service enabled.|
-|Windows Update \(Wuauserv\)|C:\\WINDOWS\\system32\\svchost.exe \-k netsvcs|Windows Update is needed to get definition updates and antimalware engine updates|
+|Windows Defender Service (Windefend)|C:\Program Files\Windows Defender\MsMpEng.exe|This is the main Windows Defender service that needs to be running at all times.|
+|Windows Defender Network Inspection Service (Wdnissvc)|C:\Program Files\Windows Defender\NisSrv.exe|This service is invoked when Windows Defender encounters a trigger to load it.|
+|Windows Error Reporting Service (Wersvc)|C:\WINDOWS\System32\svchost.exe -k WerSvcGroup|This service sends   error reports back to Microsoft.|
+|Windows Firewall (MpsSvc)|C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork|We recommend leaving the Windows Firewall service enabled.|
+|Windows Update (Wuauserv)|C:\WINDOWS\system32\svchost.exe -k netsvcs|Windows Update is needed to get definition updates and antimalware engine updates|
 
 For more information about managing Windows Defender by using Windows PowerShell, see [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx).
 
@@ -92,7 +92,7 @@ As an example of managing Windows Defender by using Windows PowerShell cmdlets, 
 `Set-MpPreference –ScanScheduleTime 120`
 
 ## <a name="BKMK_DefSamples"></a>Submit Samples
-Sample submission allows Microsoft to collect samples of potentially malicious software.  To help provide continued and up\-to\-date protection, Microsoft researchers use these samples to analyze suspicious activities and produce updated antimalware definitions.
+Sample submission allows Microsoft to collect samples of potentially malicious software.  To help provide continued and up-to-date protection, Microsoft researchers use these samples to analyze suspicious activities and produce updated antimalware definitions.
 
 We collect program executable files, such as EXE files and DLL files. We do not collect files that contain personal data, like Microsoft Word documents and PDF files.
 

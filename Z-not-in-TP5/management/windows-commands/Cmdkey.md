@@ -23,18 +23,18 @@ cmdkey [{/add:<TargetName>|/generic:<TargetName>}] {/smartcard|/user:<UserName> 
 
 |Parameters|Description|
 |--------------|---------------|
-|\/add:<TargetName>|Adds a user name and password to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
-|\/generic:<TargetName>|Adds generic credentials to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
-|\/smartcard|Retrieves the credential from a smart card.|
-|\/user:<UserName>|Specifies the user or account name to store with this entry. If *UserName* is not supplied, it will be requested.|
-|\/pass:<Password>|Specifies the password to store with this entry. If *Password* is not supplied, it will be requested.|
-|\/delete{:<TargetName> &#124; \/ras}|Deletes a user name and password from the list. If *TargetName* is specified, that entry will be deleted. If \/ras is specified, the stored remote access entry will be deleted.|
-|\/list:<TargetName>|Displays the list of stored user names and credentials. If *TargetName* is not specified, all stored user names and credentials will be listed.|
-|\/?|Displays help at the command prompt.|
+|/add:<TargetName>|Adds a user name and password to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
+|/generic:<TargetName>|Adds generic credentials to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.|
+|/smartcard|Retrieves the credential from a smart card.|
+|/user:<UserName>|Specifies the user or account name to store with this entry. If *UserName* is not supplied, it will be requested.|
+|/pass:<Password>|Specifies the password to store with this entry. If *Password* is not supplied, it will be requested.|
+|/delete{:<TargetName> &#124; /ras}|Deletes a user name and password from the list. If *TargetName* is specified, that entry will be deleted. If /ras is specified, the stored remote access entry will be deleted.|
+|/list:<TargetName>|Displays the list of stored user names and credentials. If *TargetName* is not specified, all stored user names and credentials will be listed.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   If more than one smart card is found on the system when the \/smartcard command\-line option is used, **cmdkey** will display information about all available smart cards and then prompt the user to specify which one to use.
+-   If more than one smart card is found on the system when the /smartcard command-line option is used, **cmdkey** will display information about all available smart cards and then prompt the user to specify which one to use.
 
 -   Passwords will not be displayed once they are stored.
 

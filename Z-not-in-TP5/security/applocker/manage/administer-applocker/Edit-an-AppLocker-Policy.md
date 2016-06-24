@@ -13,13 +13,13 @@ ms.assetid: df5a618f-141a-4435-b496-13274b7bd7e5
 # Edit an AppLocker Policy
 This topic describes the steps you need to perform to modify an AppLocker policy in  Windows Server 2012  and Windows 8.
 
-You can edit an AppLocker policy by adding, changing, or removing rules. However, you cannot create a new version of the policy by importing additional rules. To modify an AppLocker policy that is in production, you should use Group Policy management software that allows you to version Group Policy Objects \(GPOs\). If you have created multiple AppLocker policies and need to merge them to create one AppLocker policy, you can either manually merge the policies or use the Windows PowerShell cmdlets for AppLocker. You cannot automatically merge policies by using the AppLocker snap\-in. You must create one rule collection from two or more policies. The AppLocker policy is saved in XML format, and the exported policy can be edited with any text or XML editor. For information about merging policies, see [Merge AppLocker Policies Manually](Merge-AppLocker-Policies-Manually.md) or [Merge AppLocker Policies by Using Set-ApplockerPolicy](Merge-AppLocker-Policies-by-Using-Set-ApplockerPolicy.md).
+You can edit an AppLocker policy by adding, changing, or removing rules. However, you cannot create a new version of the policy by importing additional rules. To modify an AppLocker policy that is in production, you should use Group Policy management software that allows you to version Group Policy Objects (GPOs). If you have created multiple AppLocker policies and need to merge them to create one AppLocker policy, you can either manually merge the policies or use the Windows PowerShell cmdlets for AppLocker. You cannot automatically merge policies by using the AppLocker snap-in. You must create one rule collection from two or more policies. The AppLocker policy is saved in XML format, and the exported policy can be edited with any text or XML editor. For information about merging policies, see [Merge AppLocker Policies Manually](Merge-AppLocker-Policies-Manually.md) or [Merge AppLocker Policies by Using Set-ApplockerPolicy](Merge-AppLocker-Policies-by-Using-Set-ApplockerPolicy.md).
 
 There are two methods you can use to edit an AppLocker policy:
 
 -   [Editing an AppLocker policy by using Group Policy](#BKMK_EditAppPolinGPO)
 
--   [Editing an AppLocker policy by using the Local Security Policy snap\-in](#BKMK_EditAppLolNotinGPO)
+-   [Editing an AppLocker policy by using the Local Security Policy snap-in](#BKMK_EditAppLolNotinGPO)
 
 ## <a name="BKMK_EditAppPolinGPO"></a>Editing an AppLocker policy by using Group Policy
 The steps to edit an AppLocker policy distributed by Group Policy include the following:
@@ -61,13 +61,13 @@ For procedures to export the updated policy from the reference computer back int
 > You should never edit an AppLocker rule collection while it is being enforced in Group Policy. Because AppLocker controls what files are allowed run, making changes to a live policy can create unexpected behavior. For information about testing policies, see [Test and Update an AppLocker Policy](Test-and-Update-an-AppLocker-Policy.md).
 
 > [!NOTE]
-> If you are performing these steps by using Microsoft Advanced Group Policy Management \(AGPM\), check out the GPO before exporting the policy.
+> If you are performing these steps by using Microsoft Advanced Group Policy Management (AGPM), check out the GPO before exporting the policy.
 
-## <a name="BKMK_EditAppLolNotinGPO"></a>Editing an AppLocker policy by using the Local Security Policy snap\-in
-The steps to edit an AppLocker policy distributed by using the Local Security Policy snap\-in include the following tasks.
+## <a name="BKMK_EditAppLolNotinGPO"></a>Editing an AppLocker policy by using the Local Security Policy snap-in
+The steps to edit an AppLocker policy distributed by using the Local Security Policy snap-in include the following tasks.
 
 ### Step 1: Import the AppLocker policy
-On the computer where you maintain policies, open the AppLocker snap\-in from the Local Security Policy snap\-in. If you exported the AppLocker policy from another computer, use AppLocker to import it onto the computer.
+On the computer where you maintain policies, open the AppLocker snap-in from the Local Security Policy snap-in. If you exported the AppLocker policy from another computer, use AppLocker to import it onto the computer.
 
 After exporting the AppLocker policy to an XML file, you should import the XML file onto a reference computer so that you can edit the policy. For the procedure to import an AppLocker policy, see [Import an AppLocker Policy from Another Computer](Import-an-AppLocker-Policy-from-Another-Computer.md).
 

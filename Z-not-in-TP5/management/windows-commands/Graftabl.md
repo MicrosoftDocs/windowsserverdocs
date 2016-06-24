@@ -24,9 +24,9 @@ graftabl /status
 
 |Parameter|Description|
 |-------------|---------------|
-|<CodePage>|Specifies a code page to define the appearance of extended characters in graphics mode.<br /><br />Valid code page identification numbers are:<br /><br />437: United States<br /><br />850: Multilingual \(Latin I\)<br /><br />852: Slavic \(Latin II\)<br /><br />855: Cyrillic \(Russian\)<br /><br />857: Turkish<br /><br />860: Portuguese<br /><br />861: Icelandic<br /><br />863: Canadian\-French<br /><br />865: Nordic<br /><br />866: Russian<br /><br />869: Modern Greek|
-|\/status|Displays the current code page that **graftabl** is using.|
-|\/?|Displays help at the command prompt.|
+|<CodePage>|Specifies a code page to define the appearance of extended characters in graphics mode.<br /><br />Valid code page identification numbers are:<br /><br />437: United States<br /><br />850: Multilingual (Latin I)<br /><br />852: Slavic (Latin II)<br /><br />855: Cyrillic (Russian)<br /><br />857: Turkish<br /><br />860: Portuguese<br /><br />861: Icelandic<br /><br />863: Canadian-French<br /><br />865: Nordic<br /><br />866: Russian<br /><br />869: Modern Greek|
+|/status|Displays the current code page that **graftabl** is using.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -49,13 +49,13 @@ To view the current code page used by **graftabl**, type:
 graftabl /status
 ```
 
-To load the graphics character set for code page 437 \(United States\) into memory, type:
+To load the graphics character set for code page 437 (United States) into memory, type:
 
 ```
 graftabl 437
 ```
 
-To load the graphics character set for code page 850 \(multilingual\) into memory, type:
+To load the graphics character set for code page 850 (multilingual) into memory, type:
 
 ```
 graftabl 850

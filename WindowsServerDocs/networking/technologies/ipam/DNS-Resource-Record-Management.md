@@ -29,10 +29,10 @@ The yellow status bar in the following illustration shows the user interface loc
   
 ![](../../media/DNS-Resource-Record-Management/ipam_DataCollection_01.jpg)  
   
-The DNS data that is collected includes DNS zone and resource record information. You can configure IPAM to collect zone information from your preferred DNS server.  IPAM collects both file\-based and Active Directory zones.  
+The DNS data that is collected includes DNS zone and resource record information. You can configure IPAM to collect zone information from your preferred DNS server.  IPAM collects both file-based and Active Directory zones.  
   
 > [!NOTE]  
-> IPAM collects data solely from domain\-joined Microsoft DNS servers. Third party DNS servers and non\-domain joined servers are not supported by IPAM.  
+> IPAM collects data solely from domain-joined Microsoft DNS servers. Third party DNS servers and non-domain joined servers are not supported by IPAM.  
   
 Following is a list of DNS resource record types that are collected by IPAM.  
   
@@ -56,7 +56,7 @@ Following is a list of DNS resource record types that are collected by IPAM.
   
 -   Name Servers  
   
--   Pointer \(PTR\)  
+-   Pointer (PTR)  
   
 -   Responsible person  
   
@@ -74,7 +74,7 @@ Following is a list of DNS resource record types that are collected by IPAM.
   
 -   WINS  
   
--   WINS\-R  
+-   WINS-R  
   
 -   X.25  
   
@@ -86,9 +86,9 @@ In Windows Server 2016 Technical Preview, IPAM provides integration between IP a
   
 -   You can view DNS resource records for a specific DNS zone, and filter the records based on type, IP address, resource record data, and other filtering options.  
   
--   IPAM automatically creates a mapping between IP address ranges and DNS Reverse Look\-up Zones.  
+-   IPAM automatically creates a mapping between IP address ranges and DNS Reverse Look-up Zones.  
   
--   IPAM creates IP addresses for the PTR records that are present in the reverse look\-up zone and which are included in that IP address range. You can also manually modify this mapping if needed.  
+-   IPAM creates IP addresses for the PTR records that are present in the reverse look-up zone and which are included in that IP address range. You can also manually modify this mapping if needed.  
   
 IPAM allows you to perform the following operations on resource records from the IPAM console.  
   

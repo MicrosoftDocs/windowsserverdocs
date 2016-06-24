@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">In the Windows Server 2003 family, only Windows Server 2003, Standard Edition, supports infrared networking.</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">In the Windows Server 2003 family, only Windows Server 2003, Standard Edition, supports infrared networking.</Token>

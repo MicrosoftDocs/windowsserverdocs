@@ -22,11 +22,11 @@ evntcmd [/s <ComputerName>] [/v <VerbosityLevel>] [/n] <FileName>
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/s <ComputerName>|Specifies, by name, the computer on which you want to configure the translation of events to traps, trap destinations, or both. If you do not specify a computer, the configuration occurs on the local computer.|  
-|\/v <VerbosityLevel>|Specifies which types of status messages appear as traps and trap destinations are configured. This parameter must be an integer between 0 and 10. If you specify 10, all types of messages appear, including tracing messages and warnings about whether trap configuration was successful. If you specify 0, no messages appear.|  
-|\/n|Specifies that the SNMP service should not be restarted if this computer receives trap configuration changes.|  
+|/s <ComputerName>|Specifies, by name, the computer on which you want to configure the translation of events to traps, trap destinations, or both. If you do not specify a computer, the configuration occurs on the local computer.|  
+|/v <VerbosityLevel>|Specifies which types of status messages appear as traps and trap destinations are configured. This parameter must be an integer between 0 and 10. If you specify 10, all types of messages appear, including tracing messages and warnings about whether trap configuration was successful. If you specify 0, no messages appear.|  
+|/n|Specifies that the SNMP service should not be restarted if this computer receives trap configuration changes.|  
 |<FileName>|Specifies, by name, the configuration file that contains information about the translation of events to traps and trap destinations you want to configure.|  
-|\/?|Displays Help at the command prompt.|  
+|/?|Displays Help at the command prompt.|  
   
 ## Remarks  
   
@@ -34,9 +34,9 @@ evntcmd [/s <ComputerName>] [/v <VerbosityLevel>] [/n] <FileName>
   
 -   The syntax for configuring a trap is as follows:  
   
-    **\#pragma ADD***<EventLogFile> <EventSource> <EventID> \[<Count> \[<Period>\]\]*  
+    **#pragma ADD***<EventLogFile> <EventSource> <EventID> [<Count> [<Period>]]*  
   
-    -   The text **\#pragma** must appear at the beginning of every entry in the file.  
+    -   The text **#pragma** must appear at the beginning of every entry in the file.  
   
     -   The parameter **ADD** specifies that you want to add an event to trap configuration.  
   
@@ -44,13 +44,13 @@ evntcmd [/s <ComputerName>] [/v <VerbosityLevel>] [/n] <FileName>
   
     -   The *Count* parameter is optional, and it specifies how many times the event must occur before a trap message is sent. If you do not use the *Count* parameter, the trap message is sent after the event occurs once.  
   
-    -   The *Period* parameter is optional, but it requires you to use the *Count* parameter. The *Period* parameter specifies a length of time \(in seconds\) during which the event must occur the number of times specified with the Count parameter before a trap message is sent. If you do not use the *Period* parameter, a trap message is sent after the event occurs the number of times specified with the *Count* parameter, no matter how much time elapses between occurrences.  
+    -   The *Period* parameter is optional, but it requires you to use the *Count* parameter. The *Period* parameter specifies a length of time (in seconds) during which the event must occur the number of times specified with the Count parameter before a trap message is sent. If you do not use the *Period* parameter, a trap message is sent after the event occurs the number of times specified with the *Count* parameter, no matter how much time elapses between occurrences.  
   
 -   The syntax for removing a trap is as follows:  
   
-    **\#pragma DELETE***<EventLogFile> <EventSource> <EventID>*  
+    **#pragma DELETE***<EventLogFile> <EventSource> <EventID>*  
   
-    -   The text **\#pragma** must appear at the beginning of every entry in the file.  
+    -   The text **#pragma** must appear at the beginning of every entry in the file.  
   
     -   The parameter *DELETE* specifies that you want to remove an event to trap configuration.  
   
@@ -58,11 +58,11 @@ evntcmd [/s <ComputerName>] [/v <VerbosityLevel>] [/n] <FileName>
   
 -   The syntax for configuring a trap destination is as follows:  
   
-    **\#pragma ADD\_TRAP\_DEST***<CommunityName> <HostID>*  
+    **#pragma ADD_TRAP_DEST***<CommunityName> <HostID>*  
   
-    -   The text **\#pragma** must appear at the beginning of every entry in the file.  
+    -   The text **#pragma** must appear at the beginning of every entry in the file.  
   
-    -   The parameter **ADD\_TRAP\_DEST** specifies that you want trap messages to be sent to a specified host within a community.  
+    -   The parameter **ADD_TRAP_DEST** specifies that you want trap messages to be sent to a specified host within a community.  
   
     -   The parameter *CommunityName* specifies, by name, the community in which trap messages are sent.  
   
@@ -70,11 +70,11 @@ evntcmd [/s <ComputerName>] [/v <VerbosityLevel>] [/n] <FileName>
   
 -   The syntax for removing a trap destination is as follows:  
   
-    **\#pragma DELETE\_TRAP\_DEST***<CommunityName> <HostID>*  
+    **#pragma DELETE_TRAP_DEST***<CommunityName> <HostID>*  
   
-    -   The text **\#pragma** must appear at the beginning of every entry in the file.  
+    -   The text **#pragma** must appear at the beginning of every entry in the file.  
   
-    -   The parameter *DELETE\_TRAP\_DEST* specifies that you do not want trap messages to be sent to a specified host within a community.  
+    -   The parameter *DELETE_TRAP_DEST* specifies that you do not want trap messages to be sent to a specified host within a community.  
   
     -   The parameter *CommunityName* specifies, by name, the community in which trap messages are sent.  
   

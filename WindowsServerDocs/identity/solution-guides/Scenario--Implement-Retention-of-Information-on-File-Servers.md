@@ -14,7 +14,7 @@ ms.assetid: ecdcc211-6983-4a8c-9f9d-84e45b5cb0b6
 author: Femila
 ---
 # Scenario: Implement Retention of Information on File Servers
-A retention period is the amount of time that a document should be kept before it is expired. Depending on the organization, the retention period can be different. You can classify files in a folder as having a short, medium, or long\-term retention period, and then assign a timeframe for each period. You may want to keep a file indefinitely by putting it on legal hold.  
+A retention period is the amount of time that a document should be kept before it is expired. Depending on the organization, the retention period can be different. You can classify files in a folder as having a short, medium, or long-term retention period, and then assign a timeframe for each period. You may want to keep a file indefinitely by putting it on legal hold.  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 File Classification Infrastructure and File Server Resource Manager uses file management tasks and file classification to apply retention periods for a set of files. You can assign a retention period on a folder and then use a file management task to configure how long an assigned retention period is to last. When the files in the folder are about to expire, the owner of the file receives a notification email. You can also classify a file as being on legal hold so that the file management task will not expire the file.  

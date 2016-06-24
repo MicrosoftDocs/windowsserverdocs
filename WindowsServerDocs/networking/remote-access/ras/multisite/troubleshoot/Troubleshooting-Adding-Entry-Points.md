@@ -31,7 +31,7 @@ When adding a new entry point to a multisite deployment, you must specify the pa
 Run the command and make sure to specify the *RemoteAccessServer* parameter with the name of the server to be added as an entry point.  
   
 ## Remote Access is not configured  
-**Error received**—Remote Access is not configured on <server\_name>. Specify the name of a server that belongs to a multisite deployment.  
+**Error received**—Remote Access is not configured on <server_name>. Specify the name of a server that belongs to a multisite deployment.  
   
 **Cause**  
   
@@ -62,13 +62,13 @@ Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, se
   
     **Cause**  
   
-    IPv6 is deployed on the corporate network, and an IP\-HTTPS prefix is required. However, a prefix was not specified in the *ClientIPv6Prefix* parameter for the new entry point.  
+    IPv6 is deployed on the corporate network, and an IP-HTTPS prefix is required. However, a prefix was not specified in the *ClientIPv6Prefix* parameter for the new entry point.  
   
     **Solution**  
   
-    1.  Assign a unique IP\-HTTPS prefix to the new entry point and ensure that packets targeted to an IP address under this prefix will be routed to the server you are adding.  
+    1.  Assign a unique IP-HTTPS prefix to the new entry point and ensure that packets targeted to an IP address under this prefix will be routed to the server you are adding.  
   
-    2.  Run the `Add-DAEntryPoint` cmdlet and specify the IP\-HTTPS prefix in the *ClientIPv6Prefix* parameter.  
+    2.  Run the `Add-DAEntryPoint` cmdlet and specify the IP-HTTPS prefix in the *ClientIPv6Prefix* parameter.  
   
 -   **Issue 2**  
   
@@ -76,16 +76,16 @@ Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, se
   
     **Cause**  
   
-    The IP\-HTTPS prefix specified in the *ClientIPv6Prefix* parameter is already used by a different entry point  
+    The IP-HTTPS prefix specified in the *ClientIPv6Prefix* parameter is already used by a different entry point  
   
     **Solution**  
   
-    1.  Assign a unique IP\-HTTPS prefix to the new entry point and ensure that packets targeted to an IP address under this prefix will be routed to the server you are adding.  
+    1.  Assign a unique IP-HTTPS prefix to the new entry point and ensure that packets targeted to an IP address under this prefix will be routed to the server you are adding.  
   
-    2.  Run the `Add-DAEntryPoint` cmdlet and specify the IP\-HTTPS prefix in the *ClientIPv6Prefix* parameter.  
+    2.  Run the `Add-DAEntryPoint` cmdlet and specify the IP-HTTPS prefix in the *ClientIPv6Prefix* parameter.  
   
 ## ConnectTo address  
-**Error received**—The address \(<connect\_to\_address>\) to which DirectAccess clients connect on the RemoteAccess server is the same as the network location server address. Specify an alternate value.  
+**Error received**—The address (<connect_to_address>) to which DirectAccess clients connect on the RemoteAccess server is the same as the network location server address. Specify an alternate value.  
   
 **Cause**  
   
@@ -93,14 +93,14 @@ The ConnectTo address and the network location server address are the same.
   
 **Solution**  
   
-The ConnectTo address should be resolvable over the Internet to allow client machines to connect over IP\-HTTPS. The network location server address should be resolvable over the corporate network but should not be resolvable over the Internet. Make sure that the network location server and the ConnectTo addresses are not the same. Select different addresses and try again.  
+The ConnectTo address should be resolvable over the Internet to allow client machines to connect over IP-HTTPS. The network location server address should be resolvable over the corporate network but should not be resolvable over the Internet. Make sure that the network location server and the ConnectTo addresses are not the same. Select different addresses and try again.  
   
 ## DirectAccess or VPN already installed  
-**Error received**—A VPN installation was detected on the server <server\_name>. Specify an alternate server that does not have Remote Access installed, or remove the VPN configuration from the server.  
+**Error received**—A VPN installation was detected on the server <server_name>. Specify an alternate server that does not have Remote Access installed, or remove the VPN configuration from the server.  
   
 Or  
   
-Remote Access is already installed on server <server\_name>. Specify an alternate server not running DirectAccess, or remove the existing DirectAccess configuration from the server.  
+Remote Access is already installed on server <server_name>. Specify an alternate server not running DirectAccess, or remove the existing DirectAccess configuration from the server.  
   
 **Cause**  
   
@@ -113,11 +113,11 @@ To add a server to a multisite deployment, you must install the Remote Access ro
 Run the command and make sure that the server you specify in the *RemoteAccessServer* parameter does not have DirectAccess or VPN configured.  
   
 ## IPsec root certificate  
-**Error received**—The configured IPsec root certificate cannot be located on server <server\_name>.  
+**Error received**—The configured IPsec root certificate cannot be located on server <server_name>.  
   
 **Cause**  
   
-The certificate of the root or intermediate certification authority \(CA\) that issues computer certificates could not be found on the server you are trying to add to the deployment.  
+The certificate of the root or intermediate certification authority (CA) that issues computer certificates could not be found on the server you are trying to add to the deployment.  
   
 **Solution**  
   
@@ -129,7 +129,7 @@ In the Remote Access Management console, in **Step 2 Remote Access Server**, cli
 If the certificate is not valid, select a valid certificate which is configured as the trusted root CA on all the Remote Access servers.  
   
 ## Mixing IPv6 and IPv4 entry points  
-When DirectAccess is installed for the first time, the internal network adapter is inspected to determine if the network contains IPv4 addresses only \(IPv4\-only network\), IPv6 and IPv4 addresses, or IPv6 addresses only \(IPv6\-only network\). The information is used to determine the deployment type \(IPv4 only, IPv6\+IPv4, or IPv6 only\).  
+When DirectAccess is installed for the first time, the internal network adapter is inspected to determine if the network contains IPv4 addresses only (IPv4-only network), IPv6 and IPv4 addresses, or IPv6 addresses only (IPv6-only network). The information is used to determine the deployment type (IPv4 only, IPv6+IPv4, or IPv6 only).  
   
 -   **Issue 1**  
   
@@ -137,11 +137,11 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     **Cause**  
   
-    When this deployment was first installed, the internal network was detected as an IPv4 only network. In a multisite deployment, different entry points are assumed to be located in different subnets with different characteristics. Therefore, although the deployment is configured as an IPv4 only deployment, it can contain an entry point located in an IPv6\+IPv4 subnet. However, although the entry point will be added to the deployment, DirectAccess will ignore the IPv6 addresses configured on the new entry point’s internal interface.  
+    When this deployment was first installed, the internal network was detected as an IPv4 only network. In a multisite deployment, different entry points are assumed to be located in different subnets with different characteristics. Therefore, although the deployment is configured as an IPv4 only deployment, it can contain an entry point located in an IPv6+IPv4 subnet. However, although the entry point will be added to the deployment, DirectAccess will ignore the IPv6 addresses configured on the new entry point’s internal interface.  
   
     **Solution**  
   
-    If the entire internal network is configured with IPv6 and IPv4 addresses, consider moving to an IPv6\+IPv4 deployment to benefit from IPv6 technologies. See “Transitioning from a pure IPv4 to an IPv6\+IPv4 corporate network” in [Step 3: Plan the multisite deployment](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d).  
+    If the entire internal network is configured with IPv6 and IPv4 addresses, consider moving to an IPv6+IPv4 deployment to benefit from IPv6 technologies. See “Transitioning from a pure IPv4 to an IPv6+IPv4 corporate network” in [Step 3: Plan the multisite deployment](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d).  
   
 -   **Issue 2**  
   
@@ -153,7 +153,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     **Solution**  
   
-    If the entire network is already configured with IPv6 addresses, you should move to an IPv6\+IPv4 or IPv6\-only deployment. See “Plan the transition to IPv6 when multisite Remote Access is deployed”.  
+    If the entire network is already configured with IPv6 addresses, you should move to an IPv6+IPv4 or IPv6-only deployment. See “Plan the transition to IPv6 when multisite Remote Access is deployed”.  
   
 -   **Issue 3**  
   
@@ -161,7 +161,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     **Cause**  
   
-    When this deployment was first installed, it was detected that the internal network is IPv6\+IPv4 or IPv6\-only. It was detected that only IPv4 addresses are configured on the internal network on the new entry point you are trying to add. This is not allowed in IPv6\+IPv4, or IPv6\-only deployments.  
+    When this deployment was first installed, it was detected that the internal network is IPv6+IPv4 or IPv6-only. It was detected that only IPv4 addresses are configured on the internal network on the new entry point you are trying to add. This is not allowed in IPv6+IPv4, or IPv6-only deployments.  
   
     **Solution**  
   
@@ -173,9 +173,9 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     **Cause**  
   
-    When this deployment was first installed, it was detected that the internal network is IPv6\+IPv4. In this deployment mode, DNS64 and NAT64 are enabled to allow client computers to access machines on the internal network that are configured with only IPv4 addresses.  
+    When this deployment was first installed, it was detected that the internal network is IPv6+IPv4. In this deployment mode, DNS64 and NAT64 are enabled to allow client computers to access machines on the internal network that are configured with only IPv4 addresses.  
   
-    When adding the new entry point, Remote Access detected that the internal interface on the new computer has only IPv6 addresses. To configure DNS64 and NAT64, an IPv4 address is required in order to route packets from the Remote Access server to the IPv4 only computer. Since no such IP exists on the new computer, NAT64 and DNS64 won't be configured on the Remote Access server. Therefore, client machines accessing the corporate network over DirectAccess using this entry point won't be able to access IPv4 only servers on the internal network. For information on how to transition to an IPv6\+IPv4 network, or an IPv6\-only network, see “Plan the transition to IPv6 when multisite Remote Access is deployed”.  
+    When adding the new entry point, Remote Access detected that the internal interface on the new computer has only IPv6 addresses. To configure DNS64 and NAT64, an IPv4 address is required in order to route packets from the Remote Access server to the IPv4 only computer. Since no such IP exists on the new computer, NAT64 and DNS64 won't be configured on the Remote Access server. Therefore, client machines accessing the corporate network over DirectAccess using this entry point won't be able to access IPv4 only servers on the internal network. For information on how to transition to an IPv6+IPv4 network, or an IPv6-only network, see “Plan the transition to IPv6 when multisite Remote Access is deployed”.  
   
     **Solution**  
   
@@ -185,7 +185,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
 -   **Issue 1**  
   
-    **Error received**—The domain specified in the ServerGpoName parameter <server\_GPO> does not exist. Specify the domain <domain\_name> instead.  
+    **Error received**—The domain specified in the ServerGpoName parameter <server_GPO> does not exist. Specify the domain <domain_name> instead.  
   
     **Cause**  
   
@@ -193,11 +193,11 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     **Solution**  
   
-    Make sure that you typed the domain name correctly. If the domain name is spelled correctly, try again using the fully qualified domain name \(FQDN\).  
+    Make sure that you typed the domain name correctly. If the domain name is spelled correctly, try again using the fully qualified domain name (FQDN).  
   
 -   **Issue 2**  
   
-    **Error received**—The server GPO must be located in the Remote Access server domain. Specify the domain <domain\_name> in the ServerGpoName parameter.  
+    **Error received**—The server GPO must be located in the Remote Access server domain. Specify the domain <domain_name> in the ServerGpoName parameter.  
   
     **Cause**  
   
@@ -207,12 +207,12 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     The server GPO should be located in the same domain as the Remote Access server. Use the server's domain name for the server GPO and try again.  
   
-## Split\-brain DNS  
-**Warning received**—The NRPT entry for the DNS suffix <DNS\_suffix> contains the public name used by client computers to connect to the Remote Access server. Add the name <connect\_to\_address> as an exemption in the NRPT.  
+## Split-brain DNS  
+**Warning received**—The NRPT entry for the DNS suffix <DNS_suffix> contains the public name used by client computers to connect to the Remote Access server. Add the name <connect_to_address> as an exemption in the NRPT.  
   
 **Cause**  
   
-You are using split brain DNS. To allow clients to connect using IP\-HTTPS, you should make sure that the ConnectTo address selected is exempt in the NRPT rules.  
+You are using split brain DNS. To allow clients to connect using IP-HTTPS, you should make sure that the ConnectTo address selected is exempt in the NRPT rules.  
   
 **Solution**  
   
@@ -222,19 +222,19 @@ To exempt an address in the NRPT rules:
   
 1.  In the Remote Access Management console, under **Step 3 Infrastructure Servers**, click **Edit**.  
   
-2.  In the **Infrastructure Server Setup** wizard, on the **DNS** page, double\-click the table to enter a new name suffix.  
+2.  In the **Infrastructure Server Setup** wizard, on the **DNS** page, double-click the table to enter a new name suffix.  
   
 3.  On the **DNS Server Addresses** dialog box, in DNS suffix, enter the ConnectTo address of the entry point, and then click **Apply**.  
   
 When you add name suffixes without specifying a server address, the suffix is treated as an NRPT exemption.  
   
 ## Saving server GPO settings  
-**Error received**—An error occurred while saving Remote Access settings to GPO <GPO\_name>.  
+**Error received**—An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
 To troubleshoot this error, see [Saving server GPO settings](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#SaveGPOSettings).  
   
 ## GPO updates cannot be applied  
-**Warning received**—GPO updates cannot be applied on <server\_name>. Changes will not take effect until the next policy refresh.  
+**Warning received**—GPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  
   
 **Cause**  
   

@@ -35,7 +35,7 @@ This policy setting enables or disables blocking a domain controller from accept
 1.  Enabling this policy setting on all domain controllers in a domain prevents domain members from changing their computer account passwords. This, in turn, leaves those passwords susceptible to attack. Make sure that this conforms to your overall security policy for the domain.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -44,7 +44,7 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Not defined|
+|Stand-Alone Server Default Settings|Not defined|
 |DC Effective Default Settings|Disabled|
 |Member Server Effective Default Settings|Disabled|
 |Client Computer Effective Default Settings|Not applicable|

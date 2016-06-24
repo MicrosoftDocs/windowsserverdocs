@@ -13,10 +13,10 @@ ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
 author: cwatsonmsft
 ---
 # Best practices for running FreeBSD on Hyper-V
-This topic contains a list of recommendations for running FreeBSD virtual machine on Hyper\-V.  
+This topic contains a list of recommendations for running FreeBSD virtual machine on Hyper-V.  
   
-## Enable CARP in FreeBSD 10.2 on Hyper\-V  
-The Common Address Redundancy Protocol \(CARP\) allows multiple hosts to share the same IP address and Virtual Host ID \(VHID\) to help provide high availability for one or more services. If one or more hosts fail, the other hosts transparently take over so users won't notice a service failure.  To use CARP in FreeBSD 10.2, follow the instructions in the [FreeBSD handbook](https://www.freebsd.org/doc/en/books/handbook/carp.html) and do the following in Hyper\-V Manager.  
+## Enable CARP in FreeBSD 10.2 on Hyper-V  
+The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the same IP address and Virtual Host ID (VHID) to help provide high availability for one or more services. If one or more hosts fail, the other hosts transparently take over so users won't notice a service failure.  To use CARP in FreeBSD 10.2, follow the instructions in the [FreeBSD handbook](https://www.freebsd.org/doc/en/books/handbook/carp.html) and do the following in Hyper-V Manager.  
   
 -   Verify the virtual machine has a Network Adapter and it's assigned a virtual switch. Select the virtual machine and select **Actions** > **Settings**.  
   
@@ -31,7 +31,7 @@ The Common Address Redundancy Protocol \(CARP\) allows multiple hosts to share t
     3.  Select **Enable MAC Address spoofing**.  
   
 ## <a name="BKMK_UUID"></a>Add UUIDs for all devices listed in fstab  
-When the Hyper\-V storage integration service is installed, some device names may change and their corresponding entries in fstab will no longer be valid. To avoid issues with fstab you can replace the device names with UUIDs.  
+When the Hyper-V storage integration service is installed, some device names may change and their corresponding entries in fstab will no longer be valid. To avoid issues with fstab you can replace the device names with UUIDs.  
   
 > [!IMPORTANT]  
 > Make a backup copy of your fstab before making any changes.  
@@ -45,7 +45,7 @@ When the Hyper\-V storage integration service is installed, some device names ma
     /dev/ada0p3     none            swap    sw      0       0  
     ```  
   
-2.  Identify the UUIDs for freebsd\-ufs and freebsd\-swap using the **gpart list** command.  
+2.  Identify the UUIDs for freebsd-ufs and freebsd-swap using the **gpart list** command.  
   
     ```  
     # gpart list | grep -A 11 'ada0p2\|ada0p3' | grep 'rawuuid\|type\|Name'  
@@ -60,7 +60,7 @@ When the Hyper\-V storage integration service is installed, some device names ma
        type: freebsd-swap  
     ```  
   
-    The UUID \(rawuuid\) for ada0p2 is d1241bc9\-1b9e\-11e3\-8dae\-00155ddc3f35 and the UUID for ada0p3 is d126e943\-1b9e\-11e3\-8dae\-00155ddc3f35.  
+    The UUID (rawuuid) for ada0p2 is d1241bc9-1b9e-11e3-8dae-00155ddc3f35 and the UUID for ada0p3 is d126e943-1b9e-11e3-8dae-00155ddc3f35.  
   
 3.  Replace device names in fstab with the UUIDs.  
   
@@ -74,7 +74,7 @@ When the Hyper\-V storage integration service is installed, some device names ma
     Reboot your system to ensure that the UUIDs are functional. If you need to undo any changes, you can restore your fstab by mounting the partition under a different FreeBSD system.  
   
 ## <a name="BKMK_IDE"></a>Disable the Fast IDE Driver  
-The Fast IDE driver conflicts with the Hyper\-V IDE driver which results in the CDROM being disabled. Disable the Fast IDE driver in order to enable the CD\-ROM.  
+The Fast IDE driver conflicts with the Hyper-V IDE driver which results in the CDROM being disabled. Disable the Fast IDE driver in order to enable the CD-ROM.  
   
 1.  Boot the virtual machine.  
   
@@ -93,9 +93,9 @@ The Fast IDE driver conflicts with the Hyper\-V IDE driver which results in the 
 ## <a name="BKMK_GEOM"></a>Create GEOM labels on FreeBSD 8.x  
 During startup, device nodes are created as new devices are discovered. This can mean that device names can change when new devices are added. If you get a ROOT MOUNT ERROR during startup, you should create permanent GEOM labels for each IDE partition to avoid conflicts and changes.  
   
-1.  Reboot the system into single user mode. This can be accomplished by selecting boot menu option 4, or performing a ‘boot \-s’ from the boot prompt. Alternatively, you can boot a specific kernel by specifying “boot \-s”. Note the ordering of the last command.  
+1.  Reboot the system into single user mode. This can be accomplished by selecting boot menu option 4, or performing a ‘boot -s’ from the boot prompt. Alternatively, you can boot a specific kernel by specifying “boot -s”. Note the ordering of the last command.  
   
-2.  In Single user mode, create GEOM labels for each of the IDE disk partitions listed in your fstab \(both root and swap\). For example:  
+2.  In Single user mode, create GEOM labels for each of the IDE disk partitions listed in your fstab (both root and swap). For example:  
   
     ```  
     # cat /etc/fstab  
@@ -113,7 +113,7 @@ During startup, device nodes are created as new devices are discovered. This can
   
     Additional information on GEOM labels can be found at: [19.7. Labeling Disk Devices](http://www.freebsd.org/doc/handbook/geom-glabel.html).  
   
-3.  Reboot into multiuser mode \(default\). Edit your \/etc\/fstab to include the labels. For example:  
+3.  Reboot into multiuser mode (default). Edit your /etc/fstab to include the labels. For example:  
   
     ```  
     # Device           Mountpoint  FStype   Options     Dump  Pass#  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: TPM Key Attestation
 ms.custom: 
   - AD
@@ -20,40 +20,40 @@ author: Femila
 > This content is written by a Microsoft customer support engineer, and is intended for experienced administrators and systems architects who are looking for deeper technical explanations of features and solutions in Windows Server 2012 R2 than topics on TechNet usually provide. However, it has not undergone the same editing passes, so some of the language may seem less polished than what is typically found on TechNet.  
   
 ## Overview  
-While support for TPM\-protected keys has existed since Windows 8, there were no mechanisms for CAs to cryptographically attest that the certificate requester private key is actually protected by a Trusted Platform Module \(TPM\). This update enables a CA to perform that attestation and to reflect that attestation in the issued certificate.  
+While support for TPM-protected keys has existed since Windows 8, there were no mechanisms for CAs to cryptographically attest that the certificate requester private key is actually protected by a Trusted Platform Module (TPM). This update enables a CA to perform that attestation and to reflect that attestation in the issued certificate.  
   
 > [!NOTE]  
-> This article assumes that the reader is familiar with certificate template concept \(for reference, see [Certificate Templates](http://technet.microsoft.com/library/cc730705.aspx)\). It also assumes that the reader is familiar with how to configure enterprise CAs to issue certificates based on certificate templates \(for reference, see [Checklist: Configure CAs to Issue and Manage Certificates](http://technet.microsoft.com/library/cc771533.aspx)\).  
+> This article assumes that the reader is familiar with certificate template concept (for reference, see [Certificate Templates](http://technet.microsoft.com/library/cc730705.aspx)). It also assumes that the reader is familiar with how to configure enterprise CAs to issue certificates based on certificate templates (for reference, see [Checklist: Configure CAs to Issue and Manage Certificates](http://technet.microsoft.com/library/cc771533.aspx)).  
   
 ### Terminology  
   
 |Term|Definition|  
 |--------|--------------|  
-|EK|Endorsement Key. This is an asymmetric key contained inside the TPM \(injected at manufacturing time\). The EK is unique for every TPM and can identify it. The EK cannot be changed or removed.|  
+|EK|Endorsement Key. This is an asymmetric key contained inside the TPM (injected at manufacturing time). The EK is unique for every TPM and can identify it. The EK cannot be changed or removed.|  
 |EKpub|Refers to public key of the EK.|  
 |EKPriv|Refers to private key of the EK.|  
 |EKCert|EK Certificate. A TPM manufacturer issued certificate for EKPub. Not all TPMs have EKCert.|  
-|TPM|Trusted Platform Module. It is designed to provide hardware\-based, security\-related functions. A TPM chip is a secure crypto\-processor that is designed to carry out cryptographic operations. The chip includes multiple physical security mechanisms to make it tamper resistant, and malicious software is unable to tamper with the security functions of the TPM.|  
+|TPM|Trusted Platform Module. It is designed to provide hardware-based, security-related functions. A TPM chip is a secure crypto-processor that is designed to carry out cryptographic operations. The chip includes multiple physical security mechanisms to make it tamper resistant, and malicious software is unable to tamper with the security functions of the TPM.|  
   
 ### Background  
-Beginning with Windows 8, a Trusted Platform Module \(TPM\) can be used to secure a certificate's private key. The Microsoft Platform Crypto Provider Key Storage Provider \(KSP\) enables this feature. There were two concerns with the implementation:  
+Beginning with Windows 8, a Trusted Platform Module (TPM) can be used to secure a certificate's private key. The Microsoft Platform Crypto Provider Key Storage Provider (KSP) enables this feature. There were two concerns with the implementation:  
   
--   There was no guarantee that the key is actually protected by a TPM \(someone can easily spoof a software KSP as a TPM KSP with local administrator credentials\).  
+-   There was no guarantee that the key is actually protected by a TPM (someone can easily spoof a software KSP as a TPM KSP with local administrator credentials).  
   
--   It was not possible to limit the list of TPMs that are allowed to protect enterprise issued certificates \(in the event that the PKI Administrator wants to control the types of devices that can be used to obtain certificates in the environment\).  
+-   It was not possible to limit the list of TPMs that are allowed to protect enterprise issued certificates (in the event that the PKI Administrator wants to control the types of devices that can be used to obtain certificates in the environment).  
   
 ### TPM key attestation  
 TPM key attestation is the ability of the user who is requesting a certificate to cryptographically prove to a CA that the RSA key in the certificate request is protected by either “a” or “the” TPM that the CA trusts. The TPM trust model is discussed more in the [Deployment overview](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_DeploymentOverview) section in this topic.  
   
 ### Why is TPM key attestation important?  
-A user certificate with a TPM\-attested key provides higher security assurance backed up by non\-exportability, anti\-hammering, and isolation of keys provided by the TPM.  
+A user certificate with a TPM-attested key provides higher security assurance backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.  
   
-With TPM key attestation, a new management paradigm is now possible: An administrator can define the set of devices that users can use to access their corporate resources \(for example, VPN or wireless access point\) and have **strong** guarantees that no other devices can be used to access them. This new access control paradigm is **strong** because it is tied to a hardware\-bound user identity, which is much stronger than previous software\-based user identities.  
+With TPM key attestation, a new management paradigm is now possible: An administrator can define the set of devices that users can use to access their corporate resources (for example, VPN or wireless access point) and have **strong** guarantees that no other devices can be used to access them. This new access control paradigm is **strong** because it is tied to a hardware-bound user identity, which is much stronger than previous software-based user identities.  
   
 ### How does TPM key attestation work?  
 In general, TPM key attestation is based on following pillars:  
   
-1.  Every TPM ships with a unique asymmetric key, called the Endorsement Key \(EK\), burned by the manufacturer. We refer to the public portion of this key as EKPub. Some TPM chips also have an EK certificate that is issued by the manufacturer for the EKPub. We refer to this cert as EKCert.  
+1.  Every TPM ships with a unique asymmetric key, called the Endorsement Key (EK), burned by the manufacturer. We refer to the public portion of this key as EKPub. Some TPM chips also have an EK certificate that is issued by the manufacturer for the EKPub. We refer to this cert as EKCert.  
   
 2.  A CA establishes trusts in the TPM either via EKPub or EKCert.  
   
@@ -62,15 +62,15 @@ In general, TPM key attestation is based on following pillars:
 4.  The CA issues a certificate with a special issuance policy OID to denote that the key is now attested to be protected by a TPM.  
   
 ## <a name="BKMK_DeploymentOverview"></a>Deployment overview  
-In this deployment, it is assumed that a Windows Server 2012 R2 enterprise CA is set up. Also, clients \(Windows 8.1\) are configured to enroll against that enterprise CA by using certificate templates. There are three steps to deploying TPM key attestation:  
+In this deployment, it is assumed that a Windows Server 2012 R2 enterprise CA is set up. Also, clients (Windows 8.1) are configured to enroll against that enterprise CA by using certificate templates. There are three steps to deploying TPM key attestation:  
   
 1.  **Plan the TPM trust model:** The first step is to decide which TPM trust model to use. There are 3 supported ways for doing this:  
   
-    -   **Trust based on user credential:** The enterprise CA trusts the user\-provided EKPub as part of the certificate request and no validation is performed other than the user's domain credentials.  
+    -   **Trust based on user credential:** The enterprise CA trusts the user-provided EKPub as part of the certificate request and no validation is performed other than the user's domain credentials.  
   
-    -   **Trust based on EKCert:** The enterprise CA validates the EKCert chain that is provided as part of the certificate request against an administrator\-managed list of *acceptable EK cert chains*. These acceptable chains are defined per manufacturer and are expressed via two custom certificate stores \(one for intermediate and one for root CA certificate\) on the issuing CA. This trust mode means that **all** TPMs from a given manufacturer are trusted. Note that in this mode, TPMs in use in the environment must contain EKCerts.  
+    -   **Trust based on EKCert:** The enterprise CA validates the EKCert chain that is provided as part of the certificate request against an administrator-managed list of *acceptable EK cert chains*. These acceptable chains are defined per manufacturer and are expressed via two custom certificate stores (one for intermediate and one for root CA certificate) on the issuing CA. This trust mode means that **all** TPMs from a given manufacturer are trusted. Note that in this mode, TPMs in use in the environment must contain EKCerts.  
   
-    -   **Trust based on EKPub:** The enterprise CA validates that the EKPub provided as part of the certificate request appears in an administrator\-managed list of allowed EKPubs. This list is expressed as a directory of files where the name of each file in this directory is the SHA\-2 hash of the allowed EKPub. This option offers the highest assurance level but requires more administrative effort. In this trust model, only the devices that have had their TPMs EKPub added to the allowed list of EKPubs are permitted to enroll for a TPM\-attested certificate.  
+    -   **Trust based on EKPub:** The enterprise CA validates that the EKPub provided as part of the certificate request appears in an administrator-managed list of allowed EKPubs. This list is expressed as a directory of files where the name of each file in this directory is the SHA-2 hash of the allowed EKPub. This option offers the highest assurance level but requires more administrative effort. In this trust model, only the devices that have had their TPMs EKPub added to the allowed list of EKPubs are permitted to enroll for a TPM-attested certificate.  
   
     Based on which method is used, the CA will use a different issuance policy OID in the issued certificate. For more details about issuance policy OIDs, see the Issuance Policy OIDs table in the [Configure a certificate template](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_ConfigCertTemplate) section in this topic.  
   
@@ -84,14 +84,14 @@ In this deployment, it is assumed that a Windows Server 2012 R2 enterprise CA is
   
     2.  **Trust based on EKCert:** The administrator must obtain the EKCert chain certificates from TPM manufacturers and import them to two new certificate stores on the CA that perform TPM key attestation. For more information, see the [CA configuration](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) section in this topic.  
   
-    3.  **Trust based on EKPub:** The administrator must obtain the EKPub for each device that will need TPM\-attested certificates and add them to the list of allowed EKPubs. For more information, see the [CA configuration](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) section in this topic.  
+    3.  **Trust based on EKPub:** The administrator must obtain the EKPub for each device that will need TPM-attested certificates and add them to the list of allowed EKPubs. For more information, see the [CA configuration](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) section in this topic.  
   
     > [!NOTE]  
-    > -   This feature requires Windows 8.1\/Windows Server 2012 R2.  
-    > -   TPM key attestation for third\-party smart card KSPs is not supported. Microsoft Platform Crypto Provider KSP must be used.  
+    > -   This feature requires Windows 8.1/Windows Server 2012 R2.  
+    > -   TPM key attestation for third-party smart card KSPs is not supported. Microsoft Platform Crypto Provider KSP must be used.  
     > -   TPM key attestation only works for RSA keys.  
     > -   TPM key attestation is not supported for a standalone CA.  
-    > -   TPM key attestation does not support [non\-persistent certificate processing](https://technet.microsoft.com/library/ff934598).  
+    > -   TPM key attestation does not support [non-persistent certificate processing](https://technet.microsoft.com/library/ff934598).  
   
 ## <a name="BKMK_DeploymentDetails"></a>Deployment details  
   
@@ -104,7 +104,7 @@ To configure the certificate template for TPM key attestation, do the following 
   
     -   Ensure **Windows Server 2012 R2** is selected for the **Certification Authority**.  
   
-    -   Ensure **Windows 8.1 \/ Windows Server 2012 R2** is selected for the **Certificate recipient**.  
+    -   Ensure **Windows 8.1 / Windows Server 2012 R2** is selected for the **Certificate recipient**.  
   
     ![](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)  
   
@@ -126,7 +126,7 @@ To configure the certificate template for TPM key attestation, do the following 
   
     -   **None:** Implies that key attestation must not be used  
   
-    -   **Required, if client is capable:** Allows users on a device that does not support TPM key attestation \(because either the TPM is an old TPM that does not support key attestation or there is no TPM on that device\) to continue enrolling for that certificate. Users who can perform attestation will be distinguished with a special issuance policy OID.  
+    -   **Required, if client is capable:** Allows users on a device that does not support TPM key attestation (because either the TPM is an old TPM that does not support key attestation or there is no TPM on that device) to continue enrolling for that certificate. Users who can perform attestation will be distinguished with a special issuance policy OID.  
   
     -   **Required:** Client must perform TPM key attestation, otherwise the certificate request will fail.  
   
@@ -136,21 +136,21 @@ To configure the certificate template for TPM key attestation, do the following 
   
     -   **User credentials:** Allow an authenticating user to vouch for a valid TPM by specifying their domain credentials.  
   
-    -   **Endorsement certificate:** The EKCert of the device must validate through administrator\-managed TPM intermediate CA certificates to an administrator\-managed root CA certificate. If you choose this option, you must set up EKCA and EKRoot certificate stores on the issuing CA as described in the  [CA configuration](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) section in this topic.  
+    -   **Endorsement certificate:** The EKCert of the device must validate through administrator-managed TPM intermediate CA certificates to an administrator-managed root CA certificate. If you choose this option, you must set up EKCA and EKRoot certificate stores on the issuing CA as described in the  [CA configuration](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) section in this topic.  
   
-    -   **Endorsement Key:** The EKPub of the user device must appear in a PKI administrator\-managed list. This option offers the highest assurance level but requires more administrative effort. If you choose this option, you must set up an EKPub list on the issuing CA as described in the [CA configuration](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) section in this topic.  
+    -   **Endorsement Key:** The EKPub of the user device must appear in a PKI administrator-managed list. This option offers the highest assurance level but requires more administrative effort. If you choose this option, you must set up an EKPub list on the issuing CA as described in the [CA configuration](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_CAConfig) section in this topic.  
   
-    Finally, decide which issuance policy to show in the issued certificate. By default, each enforcement type has an associated object identifier \(also known as OID\) that will be inserted into the certificate if it passes that enforcement type as described in the following table. Note that it is possible to choose a combination of enforcement methods. In this case, the CA will accept any of the attestation methods; however, the issuance policy OID will reflect all attestation methods that succeeded.  
+    Finally, decide which issuance policy to show in the issued certificate. By default, each enforcement type has an associated object identifier (also known as OID) that will be inserted into the certificate if it passes that enforcement type as described in the following table. Note that it is possible to choose a combination of enforcement methods. In this case, the CA will accept any of the attestation methods; however, the issuance policy OID will reflect all attestation methods that succeeded.  
   
     **Issuance Policy OIDs**  
   
     |OID|Key attestation type|Description|Assurance level|  
     |-------|------------------------|---------------|-------------------|  
-    |1.3.6.1.4.1.311.21.30|EK|“EK Verified”:   For administrator\-managed list of EK|High|  
+    |1.3.6.1.4.1.311.21.30|EK|“EK Verified”:   For administrator-managed list of EK|High|  
     |1.3.6.1.4.1.311.21.31|Endorsement certificate|“EK Certificate Verified”: When EK certificate chain is validated|Medium|  
-    |1.3.6.1.4.1.311.21.32|User credentials|“EK Trusted on Use”: For user\-attested EK|Low|  
+    |1.3.6.1.4.1.311.21.32|User credentials|“EK Trusted on Use”: For user-attested EK|Low|  
   
-    The OIDs will be inserted into the issued certificate if **Include Issuance Policies** is selected \(the default configuration\).  
+    The OIDs will be inserted into the issued certificate if **Include Issuance Policies** is selected (the default configuration).  
   
     ![](media/TPM-Key-Attestation/GTR_ADDS_IssuancePolicies.gif)  
   
@@ -163,9 +163,9 @@ To configure the certificate template for TPM key attestation, do the following 
   
     If you chose **Endorsement Certificate** for the template settings, do the following configuration steps:  
   
-    1.  Use Windows PowerShell to create two new certificate stores on the certification authority \(CA\) server that will perform TPM key attestation.  
+    1.  Use Windows PowerShell to create two new certificate stores on the certification authority (CA) server that will perform TPM key attestation.  
   
-    2.  Obtain the intermediate and root CA certificates\(s\) from manufacturer\(s\) that you want to allow in your enterprise environment. Those certificates must be imported into previously created certificate stores \(EKCA and EKROOT\) as appropriate.  
+    2.  Obtain the intermediate and root CA certificates(s) from manufacturer(s) that you want to allow in your enterprise environment. Those certificates must be imported into previously created certificate stores (EKCA and EKROOT) as appropriate.  
   
     The following Windows PowerShell script performs both of these steps. In the following example, the TPM manufacturer Fabrikam has provided a root certificate *FabrikamRoot.cer* and an issuing CA certificate *Fabrikamca.cer*.  
   
@@ -180,24 +180,24 @@ To configure the certificate template for TPM key attestation, do the following 
   
 2.  **Setup EKPUB List if EK attestation type**  
   
-    If you chose **Endorsement Key** for the template settings, the next configuration steps are to create and configure a folder on the issuing CA where each file is 0 KB with the SHA\-2 hash of the EK as the filename. This folder serves as an "allow list" of devices that are permitted to obtain TPM key attested certificates. Because you must manually add the EKPUB for each and every device that requires an attested certificate, it provides the enterprise with a guarantee of the devices that are authorized to obtain TPM key attested certificates. Configuring a CA for this mode requires two steps:  
+    If you chose **Endorsement Key** for the template settings, the next configuration steps are to create and configure a folder on the issuing CA where each file is 0 KB with the SHA-2 hash of the EK as the filename. This folder serves as an "allow list" of devices that are permitted to obtain TPM key attested certificates. Because you must manually add the EKPUB for each and every device that requires an attested certificate, it provides the enterprise with a guarantee of the devices that are authorized to obtain TPM key attested certificates. Configuring a CA for this mode requires two steps:  
   
-    1.  **Create the EndorsementKeyListDirectories registry entry:** Use the Certutil command\-line tool to configure the Windows folder locations where trusted EKpubs are defined as described in the following table.  
+    1.  **Create the EndorsementKeyListDirectories registry entry:** Use the Certutil command-line tool to configure the Windows folder locations where trusted EKpubs are defined as described in the following table.  
   
         |Operation|Command syntax|  
         |-------------|------------------|  
-        |Add folder locations|certutil.exe \-setreg CA\\EndorsementKeyListDirectories \+"<folder>"|  
-        |Remove folder locations|certutil.exe \-setreg CA\\EndorsementKeyListDirectories \-"<folder>"|  
+        |Add folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories +"<folder>"|  
+        |Remove folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories -"<folder>"|  
   
         The EndoresementKeyListDirectories in certutil command is a registry setting as described in the following table.  
   
         |Value name|Type|Data|  
         |--------------|--------|--------|  
-        |EndorsementKeyListDirectories|REG\_MULTI\_SZ|<LOCAL or UNC path to EKPUB allow list\(s\)><br /><br />Example:<br /><br />*\\\\blueCA.contoso.com\\ekpub*<br /><br />*\\\\bluecluster1.contoso.com\\ekpub*<br /><br />D:\\ekpub|  
+        |EndorsementKeyListDirectories|REG_MULTI_SZ|<LOCAL or UNC path to EKPUB allow list(s)><br /><br />Example:<br /><br />*\\\blueCA.contoso.com\ekpub*<br /><br />*\\\bluecluster1.contoso.com\ekpub*<br /><br />D:\ekpub|  
   
-        HKLM\\SYSTEM\\CurrentControlSet\\Services\\CertSvc\\Configuration\\<CA Sanitized Name>  
+        HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\\<CA Sanitized Name>  
   
-        EndorsementKeyListDirectories will contain a list of UNC or local file paths, each pointing to a Windows folder that the CA has Read access to. Each folder may contain zero or more allow list entries, where each entry is a file with a name that is the SHA\-2 hash of a trusted EKpub \(with no file extension\). Creating or editing this registry key configuration will require a restart of the CA, just like existing CA registry configuration settings. However, edits to the configuration setting will take effect immediately and will not require the CA to be restarted.  
+        EndorsementKeyListDirectories will contain a list of UNC or local file paths, each pointing to a Windows folder that the CA has Read access to. Each folder may contain zero or more allow list entries, where each entry is a file with a name that is the SHA-2 hash of a trusted EKpub (with no file extension). Creating or editing this registry key configuration will require a restart of the CA, just like existing CA registry configuration settings. However, edits to the configuration setting will take effect immediately and will not require the CA to be restarted.  
   
         > [!IMPORTANT]  
         > Secure the folders in the list from tampering and unauthorized access by configuring permissions so that only authorized administrators have Read and Write access. The computer account of the CA server requires Read access only.  
@@ -220,7 +220,7 @@ The Key Attestation fields are not available if the template settings do not mee
   
     1.  **Certification Authority**: **Windows Server 2012 R2**  
   
-    2.  **Certificate Recipient**: **Windows 8.1\/Windows Server 2012 R2**  
+    2.  **Certificate Recipient**: **Windows 8.1/Windows Server 2012 R2**  
   
 2.  The cryptography settings are not configured correctly. Make sure that they are configured as follows:  
   
@@ -237,17 +237,17 @@ The Key Attestation fields are not available if the template settings do not mee
     2.  The **Archive subject's encryption private key** option must not be selected.  
   
 ### Verification of TPM device for attestation  
-Use the Windows PowerShell cmdlet, **Confirm\-CAEndorsementKeyInfo**, to verify that a specific TPM device is trusted for attestation by CAs. There are two options: one for verifying the EKCert, and the other for verifying an EKPub. The cmdlet is either run locally on a CA, or on remote CAs by using Windows PowerShell remoting.  
+Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify that a specific TPM device is trusted for attestation by CAs. There are two options: one for verifying the EKCert, and the other for verifying an EKPub. The cmdlet is either run locally on a CA, or on remote CAs by using Windows PowerShell remoting.  
   
 1.  For verifying trust on an EKPub, do the following two steps:  
   
-    1.  **Extract the EKPub from the client computer:** The EKPub can be extracted from a client computer via **Get\-TpmEndorsementKeyInfo**. From an elevated command prompt, run the following:  
+    1.  **Extract the EKPub from the client computer:** The EKPub can be extracted from a client computer via **Get-TpmEndorsementKeyInfo**. From an elevated command prompt, run the following:  
   
         ```  
         PS C:>\$a=Get-TpmEndorsementKeyInfo –hashalgorithm sha256  
         ```  
   
-    2.  **Verify trust on an EKCert on a CA computer:** Copy the extracted string \(the SHA\-2 hash of the EKPub\) to the server \(for example, via email\) and pass it to the Confirm\-CAEndorsementKeyInfo cmdlet. Note that this parameter must be 64 characters.  
+    2.  **Verify trust on an EKCert on a CA computer:** Copy the extracted string (the SHA-2 hash of the EKPub) to the server (for example, via email) and pass it to the Confirm-CAEndorsementKeyInfo cmdlet. Note that this parameter must be 64 characters.  
   
         ```  
         Confirm-CAEndorsementKeyInfo [-PublicKeyHash] <string>  
@@ -255,14 +255,14 @@ Use the Windows PowerShell cmdlet, **Confirm\-CAEndorsementKeyInfo**, to verify 
   
 2.  For verifying trust on an EKCert, do the following two steps:  
   
-    1.  **Extract the EKCert from the client computer:** The EKCert can be extracted from a client computer via **Get\-TpmEndorsementKeyInfo**. From an elevated command prompt, run the following:  
+    1.  **Extract the EKCert from the client computer:** The EKCert can be extracted from a client computer via **Get-TpmEndorsementKeyInfo**. From an elevated command prompt, run the following:  
   
         ```  
         PS C:>\$a= Get- TpmEndorsementKeyInfo  
         PS C:>\$a.manufacturerCertificates|Export-Certificate c:\myEkcert.cer  
         ```  
   
-    2.  **Verify trust on an KCert on a CA computer:** Copy the extracted EKCert \(EkCert.cer\) to the CA \(for example, via email or xcopy\). As an example, if you copy the certificate file the “c:\\diagnose” folder on the CA server, run the following to finish verification:  
+    2.  **Verify trust on an KCert on a CA computer:** Copy the extracted EKCert (EkCert.cer) to the CA (for example, via email or xcopy). As an example, if you copy the certificate file the “c:\diagnose” folder on the CA server, run the following to finish verification:  
   
         ```  
         PS C:>new-object System.Security.Cryptography.X509Certificates.X509Certificate2 “c:\diagnose\myEKcert.cer” | Confirm-CAEndorsementKeyInfo  

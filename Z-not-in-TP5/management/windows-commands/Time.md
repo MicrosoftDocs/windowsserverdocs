@@ -23,15 +23,15 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 
 |Parameter|Description|
 |-------------|---------------|
-|<HH>\[:<MM>\[:<SS>\[.<NN>\]\]\] \[am&#124;pm\]|Sets the system time to the new time specified, where *HH* is in hours \(required\), *MM* is in minutes, and *SS* is in seconds. *NN* can be used to specify hundredths of a second. If **am** or **pm** is not specified, **time** uses the 24\-hour format by default.|
-|\/t|Displays the current time without prompting you for a new time.|
-|\/?|Displays help at the command prompt.|
+|<HH>[:<MM>[:<SS>[.<NN>]]] [am&#124;pm]|Sets the system time to the new time specified, where *HH* is in hours (required), *MM* is in minutes, and *SS* is in seconds. *NN* can be used to specify hundredths of a second. If **am** or **pm** is not specified, **time** uses the 24-hour format by default.|
+|/t|Displays the current time without prompting you for a new time.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   To change the current time, you must have administrative credentials.
 
--   You must separate values for *HH*, *MM*, and *SS* with colons \(:\). *SS* and *NN* must be separated with a period \(.\).
+-   You must separate values for *HH*, *MM*, and *SS* with colons (:). *SS* and *NN* must be separated with a period (.).
 
 -   Valid *HH* values are 0 through 24.
 

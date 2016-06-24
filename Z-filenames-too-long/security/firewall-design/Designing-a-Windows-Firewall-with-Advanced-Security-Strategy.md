@@ -25,9 +25,9 @@ The information that you gather will help you answer the following questions. Th
 
 -   What traffic on the network cannot be protected by IPsec because the computers or devices sending or receiving the traffic do not support IPsec?
 
--   For each type of network traffic, does the default configuration of the firewall \(block all unsolicited inbound network traffic, allow all outbound traffic\) allow or block the traffic as required?
+-   For each type of network traffic, does the default configuration of the firewall (block all unsolicited inbound network traffic, allow all outbound traffic) allow or block the traffic as required?
 
--   Do you have an Active Directory domain \(or forest of trusted domains\) to which all your computers are joined? If you do not, then you cannot use Group Policy for easy mass deployment of your firewall and connection security rules. You also cannot easily take advantage of Kerberos V5 authentication that all domain clients can use.
+-   Do you have an Active Directory domain (or forest of trusted domains) to which all your computers are joined? If you do not, then you cannot use Group Policy for easy mass deployment of your firewall and connection security rules. You also cannot easily take advantage of Kerberos V5 authentication that all domain clients can use.
 
 -   Which computers must be able to accept unsolicited inbound connections from computers that are not part of the domain?
 
@@ -35,17 +35,17 @@ The information that you gather will help you answer the following questions. Th
 
 -   Which computers contain sensitive data to which access must be restricted to specifically authorized users and computers?
 
--   Does your organization have specific network troubleshooting devices or computers \(such as protocol analyzers\) that must be granted unlimited access to the computers on the network, essentially bypassing the firewall?
+-   Does your organization have specific network troubleshooting devices or computers (such as protocol analyzers) that must be granted unlimited access to the computers on the network, essentially bypassing the firewall?
 
 ## If you already have firewall or IPsec rules deployed
-Windows Firewall with Advanced Security in Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , and  Windows Server 2008 R2  has many new capabilities that are not available in earlier versions of Windows.
+Windows Firewall with Advanced Security in Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , and  Windows Server 2008 R2  has many new capabilities that are not available in earlier versions of Windows.
 
-If you already have a domain and\/or server isolation deployment in your organization then you can continue to use your existing GPOs and apply them to computers running Windows 8 and  Windows Server 2012 .
+If you already have a domain and/or server isolation deployment in your organization then you can continue to use your existing GPOs and apply them to computers running Windows 8 and  Windows Server 2012 .
 
 > [!NOTE]
-> Computers running Windows XP and Windows Server 2003 will not be able to participate in this domain and\/or server isolation deployment plan.
+> Computers running Windows XP and Windows Server 2003 will not be able to participate in this domain and/or server isolation deployment plan.
 
-This guide describes how to plan your groups and GPOs for an environment with a mix of operating systems, starting with Windows Vista and  Windows Server 2008 . Windows XP and Windows Server 2003 are not discussed in this guide. Details can be found in the section [Planning Group Policy Deployment for Your Isolation Zones](Planning-Group-Policy-Deployment-for-Your-Isolation-Zones.md) later in this guide.
+This guide describes how to plan your groups and GPOs for an environment with a mix of operating systems, starting with Windows Vista and  Windows Server 2008 . Windows XP and Windows Server 2003 are not discussed in this guide. Details can be found in the section [Planning Group Policy Deployment for Your Isolation Zones](Planning-Group-Policy-Deployment-for-Your-Isolation-Zones.md) later in this guide.
 
 **Next:**[Gathering the Information You Need](Gathering-the-Information-You-Need.md)
 

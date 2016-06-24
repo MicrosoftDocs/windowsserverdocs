@@ -27,7 +27,7 @@ pause
 
 |Parameter|Description|
 |-------------|---------------|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -37,15 +37,15 @@ pause
     Press any key to continue . . .
     ```
 
--   If you press CTRL\+C to stop a batch program, the following message appears:
+-   If you press CTRL+C to stop a batch program, the following message appears:
 
     ```
     Terminate batch job (Y/N)?
     ```
 
-    If you press Y \(for yes\) in response to this message, the batch program ends and control returns to the operating system.
+    If you press Y (for yes) in response to this message, the batch program ends and control returns to the operating system.
 
--   You can insert the **pause** command before a section of the batch file that you might not want to process. When **pause** suspends processing of the batch program, you can press CTRL\+C and then press Y to stop the batch program.
+-   You can insert the **pause** command before a section of the batch file that you might not want to process. When **pause** suspends processing of the batch program, you can press CTRL+C and then press Y to stop the batch program.
 
 ## <a name="BKMK_examples"></a>Examples
 To create a batch program that prompts the user to change disks in one of the drives, type:
@@ -59,7 +59,7 @@ pause
 goto begin
 ```
 
-In this example, all the files on the disk in drive A are copied to the current directory. After the message prompts you to put a new disk in drive A, the **pause** command suspends processing so that you can change disks and then press any key to resume processing. This batch program runs in an endless loop—the **goto begin** command sends the command interpreter to the Begin label of the batch file. To stop this batch program, press CTRL\+C and then press Y.
+In this example, all the files on the disk in drive A are copied to the current directory. After the message prompts you to put a new disk in drive A, the **pause** command suspends processing so that you can change disks and then press any key to resume processing. This batch program runs in an endless loop—the **goto begin** command sends the command interpreter to the Begin label of the batch file. To stop this batch program, press CTRL+C and then press Y.
 
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

@@ -23,14 +23,14 @@ type [<Drive>:][<Path>]<FileName>
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<Path>\]<FileName>|Specifies the location and name of the file or files that you want to view. Separate multiple file names with spaces.|
-|\/?|Displays help at the command prompt.|
+|[<Drive>:][<Path>]<FileName>|Specifies the location and name of the file or files that you want to view. Separate multiple file names with spaces.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   If *FileName* contains spaces, enclose it in quotation marks \(for example, "File Name Containing Spaces.txt"\).
+-   If *FileName* contains spaces, enclose it in quotation marks (for example, "File Name Containing Spaces.txt").
 
--   If you display a binary file or a file that is created by a program, you may see strange characters on the screen, including formfeed characters and escape\-sequence symbols. These characters represent control codes that are used in the binary file. In general, avoid using the **type** command to display binary files.
+-   If you display a binary file or a file that is created by a program, you may see strange characters on the screen, including formfeed characters and escape-sequence symbols. These characters represent control codes that are used in the binary file. In general, avoid using the **type** command to display binary files.
 
 ## <a name="BKMK_examples"></a>Examples
 To display the contents of a file named Holiday.mar, type:

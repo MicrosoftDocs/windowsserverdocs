@@ -16,7 +16,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference
 This security setting determines whether a user can undock a portable computer from its docking station without logging on. This policy setting only affects scenarios that involve a portable computer and its docking station.
 
-If this user right is assigned to the user’s account \(or if the user is a member of the assigned group\), the user must log on before removing the portable computer from its docking station. Otherwise, as a security measure, the user will not be able to log on after the computer is removed from the docking station. If this policy is not assigned, the user may remove the portable computer from its docking station without logging on, and then have the ability to start and log on to the computer afterwards in its undocked state.
+If this user right is assigned to the user’s account (or if the user is a member of the assigned group), the user must log on before removing the portable computer from its docking station. Otherwise, as a security measure, the user will not be able to log on after the computer is removed from the docking station. If this policy is not assigned, the user may remove the portable computer from its docking station without logging on, and then have the ability to start and log on to the computer afterwards in its undocked state.
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -24,7 +24,7 @@ Constant: SeUndockPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Not Defined
 
@@ -33,10 +33,10 @@ Constant: SeUndockPrivilege
 1.  Assign this user right to only those accounts that are permitted to use the portable computer.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
-Although this portable computer scenario does not normally apply to servers, by default this setting is Administrators on domain controllers and on stand\-alone servers.
+Although this portable computer scenario does not normally apply to servers, by default this setting is Administrators on domain controllers and on stand-alone servers.
 
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
 
@@ -44,13 +44,13 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Administrators|
-|Stand\-Alone Server Default Settings|Administrators|
+|Stand-Alone Server Default Settings|Administrators|
 |Domain Controller Effective Default Settings|Administrators|
 |Member Server Effective Default Settings|Administrators|
 |Client Computer Effective Default Settings|Administrators|
 
 ### Operating system version differences
-There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic. However, the groups Users and Power Users were added as defaults for backwards compatibility to Windows Vista.
+There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic. However, the groups Users and Power Users were added as defaults for backwards compatibility to Windows Vista.
 
 ## Policy management
 This section describes features, tools, and guidance to help you manage this policy.
@@ -60,7 +60,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
 ### Group Policy
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 

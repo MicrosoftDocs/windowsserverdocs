@@ -22,7 +22,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 2.  In the navigation pane, in **MONITOR AND MANAGE**, click **DNS and DHCP Servers**. In the display pane, click **Server Type**, and then click **DNS**. All DNS servers that are managed by IPAM are listed in the search results.  
   
-3.  Locate the server where you want to add a zone, and right\-click the server.  Click **Create DNS zone**.  
+3.  Locate the server where you want to add a zone, and right-click the server.  Click **Create DNS zone**.  
   
     ![](../../media/Create-a-DNS-Zone/ipam_CreateDNSZone_01a.jpg)  
   

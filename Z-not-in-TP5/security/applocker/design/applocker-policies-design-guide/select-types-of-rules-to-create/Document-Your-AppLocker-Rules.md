@@ -24,7 +24,7 @@ To complete this AppLocker planning document, you should first complete the foll
 
 Document the following items for each business group or organizational unit:
 
--   Whether your organization will use the built\-in default AppLocker rules to allow system files to run.
+-   Whether your organization will use the built-in default AppLocker rules to allow system files to run.
 
 -   The types of rule conditions that you will use to create rules, stated in order of preference.
 
@@ -32,12 +32,12 @@ The following table details sample data for documenting rule type and rule condi
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|
 |------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|
-|Bank Tellers|Teller\-East and Teller\-West|Yes|Teller Software|C:\\Program Files\\Woodgrove\\Teller.exe|File is signed; create a publisher condition||
-||||Windows files|C:\\Windows|Create a path exception to the default rule to exclude \\Windows\\Temp||
-|Human Resources|HR\-All|Yes|Check Payout|C:\\Program Files\\Woodgrove\\HR\\Checkcut.exe|File is signed; create a publisher condition||
-||||Time Sheet Organizer|C:\\Program Files\\Woodgrove\\HR\\Timesheet.exe|File is not signed; create a file hash condition||
-||||Internet Explorer 7|C:\\Program Files\\Internet Explorer\\|File is signed; create a publisher condition||
-||||Windows files|C:\\Windows|Use the default rule for the Windows path||
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition||
+||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp||
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition||
+||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition||
+||||Internet Explorer 7|C:\Program Files\Internet Explorer\|File is signed; create a publisher condition||
+||||Windows files|C:\Windows|Use the default rule for the Windows path||
 
 ## Next steps
 For each rule, determine whether to use the allow or deny option. Then, three tasks remain:

@@ -22,6 +22,6 @@ There is no audit mode for the DLL rule collection. DLL rules affect specific ap
 To enforce AppLocker rules by configuring an AppLocker policy to **Enforce rules**, see [Configure an AppLocker Policy for Enforce Rules](Configure-an-AppLocker-Policy-for-Enforce-Rules.md).
 
 > [!CAUTION]
-> AppLocker rules will be enforced immediately on the local computer or when the Group Policy object \(GPO\) is updated by performing this procedure. If you want to see the effect of applying an AppLocker policy before setting the enforcement setting to **Enforce rules**, configure the policy to **Audit only**. For information about how to do this, see [Configure an AppLocker Policy for Audit Only](Configure-an-AppLocker-Policy-for-Audit-Only.md)or [Test an AppLocker Policy by Using Test-AppLockerPolicy](Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md).
+> AppLocker rules will be enforced immediately on the local computer or when the Group Policy object (GPO) is updated by performing this procedure. If you want to see the effect of applying an AppLocker policy before setting the enforcement setting to **Enforce rules**, configure the policy to **Audit only**. For information about how to do this, see [Configure an AppLocker Policy for Audit Only](Configure-an-AppLocker-Policy-for-Audit-Only.md)or [Test an AppLocker Policy by Using Test-AppLockerPolicy](Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md).
 
 

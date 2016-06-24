@@ -99,7 +99,7 @@ Insufficient attributes were given to create an object. This object may not exis
           <para>Event Source: NTDS Replication</para>
           <para>Event Category: Replication</para>
           <para>Event ID: 1988</para>
-          <para>User: NT AUTHORITY\ANONYMOUS LOGON</para>
+          <para>User: NT AUTHORITYANONYMOUS LOGON</para>
           <para>Computer: &lt;name of DC that logged event, that is the "destination" DC in the replication attempt&gt;</para>
           <para>Description:</para>
           <para>The local domain controller has attempted to replicate the following object from the following source domain controller. This object is not present on the local domain controller because it may have been deleted and already garbage collected. </para>
@@ -176,7 +176,7 @@ Remember the following when you troubleshoot 8606 errors: </para>
       <list class="ordered">
         <listItem>
           <para>Identify the current value for the forest-wide <embeddedLabel>TombStoneLifeTime</embeddedLabel> attribute setting:</para>
-          <code>c:\&gt;repadmin /showattr . "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD&gt; /atts:tombstonelifetime</code>
+          <code>c:&gt;repadmin /showattr . "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD&gt; /atts:tombstonelifetime</code>
           <para>See the "Tombstone lifetime and replication of deletions" section in Knowledge Base article <externalLink><linkText>910205</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;910205</linkUri></externalLink>.</para>
         </listItem>
         <listItem>
@@ -239,7 +239,7 @@ Remember the following when you troubleshoot 8606 errors: </para>
           </table>
           <para>Columns 1 through 5 of this table can be populated by reading values directly from fields in the NTDS Replication 1988 events that are logged in the Directory Service event logs of the destination domain controllers that are logging either the 1988 event or the 8606 replication status. </para>
           <para>The date stamps for <embeddedLabel>LastKnownParent</embeddedLabel> and <embeddedLabel>IsDeleted</embeddedLabel> columns can be determined by running "repadmin /showobjmeta" and referencing the objectguid of the object that is cited in the NTDS replication 1988 event. To do this, use the following syntax: </para>
-          <code>c:\&gt;repadmin /showobjmeta &lt;fqdn of source DC from 1988 event&gt; "&lt;GUID=GUID of object cited in the 1988 event&gt;" </code>
+          <code>c:&gt;repadmin /showobjmeta &lt;fqdn of source DC from 1988 event&gt; "&lt;GUID=GUID of object cited in the 1988 event&gt;" </code>
           <para>The date stamp for <embeddedLabel>LastKnownParent</embeddedLabel> identifies the date on which the object was deleted. The date stamp for <embeddedLabel>IsDeleted</embeddedLabel> tells you when the object was last deleted or reanimated. The version number tells you whether the last modification deleted or reanimated the object. An <embeddedLabel>IsDeleted</embeddedLabel> value of 1 represents an initial delete. Odd-numbered values greater than 1 indicate a reanimation following at least one deletion. For example, an <embeddedLabel>IsDeleted</embeddedLabel> value of 2 represents an object that was deleted (version 1) and then later undeleted or reanimated (version 2). Later even-numbered values for <embeddedLabel>IsDeleted</embeddedLabel> represent later reanimations or undeletes of the object.</para>
         </listItem>
         <listItem>
@@ -268,13 +268,13 @@ Remember the following when you troubleshoot 8606 errors: </para>
             </listItem>
           </list>
           <para>REPADMIN /REMOVELINGERINGOBJCTS can be used to remove lingering objects from writable and read-only directory partitions on Windows Server 2003 source domain controllers. The syntax is as follows:</para>
-          <code>c:\&gt;repadmin /removelingeringobjects &lt;Dest_DSA_LIST&gt; &lt;Source DSA GUID&gt; &lt;NC&gt; [/ADVISORY_MODE]</code>
+          <code>c:&gt;repadmin /removelingeringobjects &lt;Dest_DSA_LIST&gt; &lt;Source DSA GUID&gt; &lt;NC&gt; [/ADVISORY_MODE]</code>
           <para>Where: </para>
           <para>&lt;Dest_DSA_LIST&gt; is the name of a domain controller that is running Windows Server 2003 or a later version and that contains lingering objects (such as the source domain controller that is cited in the NTDS Replication 1988 event). </para>
           <para>&lt;Source DSA GUID&gt; is the name of a domain controller that is running Windows Server 2003 or a later version and that hosts a writable copy of the directory partition that contains lingering objects to which the domain controller in &lt;Dest_DSA_LIST&gt; has network connectivity. </para>
           <para>&lt;NC&gt; is the DN path of the directory partition that is suspected of containing lingering objects, such as the partition that is specified in a 1988 event. </para>
           <para>REPADMIN /REHOST can be used to remove lingering-objects domain controllers that host a <placeholder>read-only</placeholder> copy of a domain directory partition from domain controllers that are running Windows 2000 SP4 or a later version. The syntax is as follows:</para>
-          <code>c:\&gt;repadmin /rehost DSA &lt;Naming Context&gt; &lt;Good Source DSA Address&gt;</code>
+          <code>c:&gt;repadmin /rehost DSA &lt;Naming Context&gt; &lt;Good Source DSA Address&gt;</code>
           <para>Where:</para>
           <para>DSA is the name of a domain controller that is running Windows 2000 SP4 or a later version and that hosts a read-only domain directory partition for a nonlocal domain. For example, a GC in root.contoso.com can rehost its read-only copy of child.contoso.com but cannot rehost root.contoso.com.</para>
           <para>&lt;Naming Context&gt; is the DN path of a read-only domain directory partition that is residing in a global catalog.</para>
