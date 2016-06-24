@@ -1,19 +1,19 @@
 ---
 title: What&#39;s new in Active Directory Domain Services Technical Preview
-ms.custom: na
+description: " "
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: active-directory
+manager: femila
 ms.suite: na
-ms.technology: active-directory-domain-services
+ms.technology: 
+	- active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e122d0d-66fa-4479-87f9-90eaf75dccc3
-author: Femila
+appliesto:  "Windows Server Technical Preview"
 ms.date: "06/24/2016"
-appliesto:  Windows Server Technical Preview
-description:
-manager: femila
+author: femila
 ---
 # What&#39;s new in Active Directory Domain Services Technical Preview
 The following new features in Active Directory Domain Services \(AD DS\) improve the ability for organizations to secure Active Directory environments and help them migrate to cloud\-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements include:  
