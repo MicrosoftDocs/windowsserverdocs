@@ -165,7 +165,7 @@ To validate that the tenant deployment was successful, do the following:
 1.	Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
 2.	Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
 	  
-	``Get-NetworkControllerConfigurationState –NCIP <FQDN of Network Controller REST Name>``  
+	``Debug-NetworkControllerConfigurationState –NCIP <FQDN of Network Controller REST Name>``  
 	  
 3.	Validate policy has been received and persisted in the Network Controller Host Agent  
 	  
