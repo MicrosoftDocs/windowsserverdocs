@@ -138,16 +138,16 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 ### To configure Cloud Witness as a Quorum Witness
 
 1. Launch Failover Cluster Manager.
-2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 6).This launches the Configure Cluster Quorum Wizard  
+1. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 6). This launches the Configure Cluster Quorum Wizard.
 
-   	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)  
+	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)  
 
-   **Figure 6. Cluster Quorum Settings**
+	**Figure 6. Cluster Quorum Settings**
  
 
 1.  On the  **Select Quorum Configurations** page, select **Select the quorum witness** (see figure 7).  
 
-   	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
+	![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
 
      **Figure 7. Select the Quorum Configuration**
 
