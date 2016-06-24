@@ -1,17 +1,19 @@
 ---
 title: Dynamic Access Control: Scenario Overview
-ms.custom: 
-  - AD
+ms.custom: AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.service: active-directory
 ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
+ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c2a4cb7c-22b3-4dba-8d39-e1c72a51f085
 author: Femila
+ms.date: "06/24/2016"
+appliesto:  Windows Server Technical Preview
+description:
+manager: femila
 ---
 # Dynamic Access Control: Scenario Overview
 In  Windows Server 2012 , you can apply data governance across your file servers to control who can access information and to audit who has accessed information. Dynamic Access Control lets you:  
