@@ -13,14 +13,14 @@ ms.assetid: 8827a3a7-9f3c-4f51-826a-8e2ec43e01df
 author: KBDAzure
 ---
 # Authorization entries should have distinct trust group names for primary servers with virtual machines that are not part of the same trust group
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -33,6 +33,6 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *There might be privacy and security concerns with a virtual machine accepting replication from primary servers belonging to different authorization entries. This impacts the following authorization entries: \<list of authorization entries>*  
   
 ## **Resolution**  
-*Use different tags in the authorization entries for primary servers with virtual machines that are not part of the same security group. Modify the Hyper\-V settings to configure the replication tags.*  
+*Use different tags in the authorization entries for primary servers with virtual machines that are not part of the same security group. Modify the Hyper-V settings to configure the replication tags.*  
   
 

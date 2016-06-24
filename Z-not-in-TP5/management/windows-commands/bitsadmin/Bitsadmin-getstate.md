@@ -32,8 +32,8 @@ The possible states are:
 |CONNECTING|BITS is contacting the server.|
 |TRANSFERRING|BITS is transferring data.|
 |SUSPENDED|The job is paused.|
-|ERROR|A non\-recoverable error occurred; the transfer will not be retried.|
-|TRANSIENT\_ERROR|A recoverable error occurred; the transfer retries when the minimum retry delay expires.|
+|ERROR|A non-recoverable error occurred; the transfer will not be retried.|
+|TRANSIENT_ERROR|A recoverable error occurred; the transfer retries when the minimum retry delay expires.|
 |ACKNOWLEDGED|The job was completed.|
 |CANCELED|The job was canceled.|
 

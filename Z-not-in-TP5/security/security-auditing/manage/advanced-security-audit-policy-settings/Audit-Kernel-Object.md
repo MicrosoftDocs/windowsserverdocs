@@ -13,7 +13,7 @@ ms.assetid: 13ffa070-cb57-4de9-a97e-5900d9a35099
 # Audit Kernel Object
 This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Kernel Object**, which determines whether the operating system generates audit events when users attempt to access the system kernel, which includes mutexes and semaphores.
 
-Only kernel objects with a matching system access control list \(SACL\) generate security audit events. The audits generated are usually useful only to developers.
+Only kernel objects with a matching system access control list (SACL) generate security audit events. The audits generated are usually useful only to developers.
 
 Typically, kernel objects are given SACLs only if the **AuditBaseObjects** or **AuditBaseDirectories** auditing options are enabled.
 
@@ -24,7 +24,7 @@ Event volume: High if you have enabled one of the Global Object Access Auditing 
 
 Default setting: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

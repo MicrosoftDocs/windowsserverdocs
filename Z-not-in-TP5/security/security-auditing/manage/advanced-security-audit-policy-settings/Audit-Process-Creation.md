@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 570cccb6-e2fa-41a2-84cc-ba3334901fd5
 ---
 # Audit Process Creation
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Process Creation**, which determines whether the operating system generates audit events when a process is created \(starts\).
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Process Creation**, which determines whether the operating system generates audit events when a process is created (starts).
 
 These audit events can help you track user activity and understand how a computer is being used. Information includes the name of the program or the user that created the process.
 
@@ -19,7 +19,7 @@ Event volume: Low to medium, depending on system usage
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

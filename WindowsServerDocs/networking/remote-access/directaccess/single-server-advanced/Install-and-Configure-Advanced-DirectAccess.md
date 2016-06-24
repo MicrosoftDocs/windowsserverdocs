@@ -16,7 +16,7 @@ This overview lists the configuration steps required to deploy a single DirectAc
   
 -   [Step 1: Configuring DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-advanced/Step-1--Configuring-DirectAccess-Infrastructure.md).  
   
-    In this phase, you configure network and server settings, certificate requirements, Domain Name System \(DNS\) settings, the network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy Objects \(GPOs\).  
+    In this phase, you configure network and server settings, certificate requirements, Domain Name System (DNS) settings, the network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy Objects (GPOs).  
   
 -   [Step 2: Configuring DirectAccess Servers](../../../remote-access/directaccess/single-server-advanced/Step-2--Configuring-DirectAccess-Servers.md).  
   

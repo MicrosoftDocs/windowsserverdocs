@@ -13,12 +13,12 @@ ms.assetid: 8e8b115a-9dba-489c-b2ff-a23ad319cd44
 author: billmath
 ---
 # Enabling OpenId Connect with AD FS 2016
-Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 2016 introduces support for using the OpenId  Connect sign\-on.  
+Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 2016 introduces support for using the OpenId  Connect sign-on.  
   
-## Pre\-requisites  
-The following are a list of pre\-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
+## Pre-requisites  
+The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
   
--   An Azure AD subscription \(a free trial is fine\)  
+-   An Azure AD subscription (a free trial is fine)  
   
 -   GitHub client tools  
   
@@ -31,7 +31,7 @@ The following section describes how to configure the application group in AD FS 
   
 #### Create Application Group  
   
-1.  In AD FS Management, right\-click on Application Groups and select **Add Application Group**.  
+1.  In AD FS Management, right-click on Application Groups and select **Add Application Group**.  
   
 2.  On the Application Group Wizard, for the name enter **ADFSSSO** and under **Standalone applications**select the **Server application or Website** template.  Click **Next**.  
   
@@ -39,7 +39,7 @@ The following section describes how to configure the application group in AD FS 
   
 3.  Copy the **Client Identifier** value.  It will be used later as the value for ida:ClientId  in the applications web.config file.  
   
-4.  Enter the following for **Redirect URI:** \- **https:\/\/localhost:44320\/**.  Click **Add**. Click **Next**.  
+4.  Enter the following for **Redirect URI:** - **https://localhost:44320/**.  Click **Add**. Click **Next**.  
   
     ![](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_2.PNG)  
   
@@ -51,7 +51,7 @@ The following section describes how to configure the application group in AD FS 
   
 7.  On the **Complete** screen,  click **Close**.  
   
-8.  Now, on the right\-click the new Application Group and select **Properties**.  
+8.  Now, on the right-click the new Application Group and select **Properties**.  
   
 9. On the **ADFSSSO Properties** click **Add application**.  
   
@@ -59,7 +59,7 @@ The following section describes how to configure the application group in AD FS 
   
     ![](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_4.PNG)  
   
-11. On the **Configure Web API** screen, enter the following for **Identifier** \- **https:\/\/contoso.com\/WebApp**.  Click **Add**. Click **Next**.  
+11. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  
   
     ![](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_7.PNG)  
   
@@ -147,14 +147,14 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
   
         -   nstead of using the Authority for communicating data about the trusted issuer, we specify the discovery doc location directly via MetadataAddress  
   
-        -   Azure AD does not enforce the presence of a redirect\_uri in the request, but ADFS does. So, we need to add it here  
+        -   Azure AD does not enforce the presence of a redirect_uri in the request, but ADFS does. So, we need to add it here  
   
 ## Verify the app is working  
 Once the above changes have been made, hit F5.  This will bring up the sample page.  Click on sign in.  
   
 ![](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_12.PNG)  
   
-You will be re\-directed to the AD FS sign\-in page.  Go ahead and sign in.  
+You will be re-directed to the AD FS sign-in page.  Go ahead and sign in.  
   
 ![](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_13.PNG)  
   

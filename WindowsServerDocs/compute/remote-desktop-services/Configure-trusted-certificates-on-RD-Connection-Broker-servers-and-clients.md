@@ -16,11 +16,11 @@ Use the following steps to configure trusted certificates.
   
 1. Connect to the RDMS server:   
   
-    1.	In the Azure portal click **Browse > Virtual Machines**.  
-    2.	Select the new RDSH virtual machine (for example, Contoso-CB1).  
-    3.	Click **Connect > Open** to open the Remote Desktop client.  
-    4.	In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for the local administrator account.  
-    5.	Click **Yes** when warned about the certificate.  
+    1.  In the Azure portal click **Browse > Virtual Machines**.  
+    2.  Select the new RDSH virtual machine (for example, Contoso-CB1).  
+    3.  Click **Connect > Open** to open the Remote Desktop client.  
+    4.  In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for the local administrator account.  
+    5.  Click **Yes** when warned about the certificate.  
   
 2. Create and install self-signed certificates for the RD Connection Broker servers. (This procedure will differ if you're using certificates from a trusted certificate authority.)  
   
@@ -32,7 +32,7 @@ Use the following steps to configure trusted certificates.
   
     4. Enter the certificate name, using the internal FQDN of the Connection Broker load balancer (for example,  CBLB.contoso.com), and a password.   
   
-    5. Select **Store this certificate**, and then browse to the shared folder that you created (for example,  \\Contoso-CB1\Certificates).  
+    5. Select **Store this certificate**, and then browse to the shared folder that you created (for example,  \Contoso-CB1\Certificates).  
   
     6. Enter a file name for the certificate (for example, ContosoCBLBCert), and then click **Save**.   
   
@@ -52,7 +52,7 @@ Use the following steps to configure trusted certificates.
   
     1. Connect to the other RD Connection Broker Server, following the details in Step 1.   
   
-    2. Open the File Explorer, and navigate to the Certificates share (for example, \\Contoso-CB1\Certificates).   
+    2. Open the File Explorer, and navigate to the Certificates share (for example, \Contoso-CB1\Certificates).   
   
     3. Right-click the certificate you created in the previous step (for example, ContosoCBLBCert), and click **Install PFX**.   
   
@@ -74,7 +74,7 @@ Use the following steps to configure trusted certificates.
   
     5. Accept the defaults in the Certificate Export Wizard until you get to the **File to Export** page.   
   
-    6. Browse to the shared folder for certificates (for example, \\Contoso-CB1\Certificates).    
+    6. Browse to the shared folder for certificates (for example, \Contoso-CB1\Certificates).    
   
     8. Enter a file name (for example, ContosoCBLBClientCert), and click **Save**.   
   

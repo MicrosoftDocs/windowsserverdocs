@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 96e01baf-1900-4391-a2df-7285942aab75
 ---
 # Gathering the Information You Need
-Before starting the planning process for a Windows Firewall with Advanced Security deployment, you must collect and analyze up\-to\-date information about the network, the directory services, and the computers that are already deployed in the organization. This information enables you to create a design that accounts for all possible elements of the existing infrastructure. If the gathered information is not accurate, problems can occur when devices and computers that were not considered during the planning phase are encountered during implementation.
+Before starting the planning process for a Windows Firewall with Advanced Security deployment, you must collect and analyze up-to-date information about the network, the directory services, and the computers that are already deployed in the organization. This information enables you to create a design that accounts for all possible elements of the existing infrastructure. If the gathered information is not accurate, problems can occur when devices and computers that were not considered during the planning phase are encountered during implementation.
 
 Review each of the following topics for guidance about the kinds of information that you must gather:
 

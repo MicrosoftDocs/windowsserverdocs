@@ -27,7 +27,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 |-------------|---------------|
 |set|Sets the specified attribute of the volume with focus.|
 |clear|Clears the specified attribute of the volume with focus.|
-|readonly|Specifies that the volume is read\-only.|
+|readonly|Specifies that the volume is read-only.|
 |hidden|Specifies that the volume is hidden.|
 |nodefaultdriveletter|Specifies that the volume does not receive a drive letter by default.|
 |shadowcopy|Specifies that the volume is a shadow copy volume.|
@@ -35,9 +35,9 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 
 ## Remarks
 
--   On basic master boot record \(MBR\) disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply to all volumes on the disk.
+-   On basic master boot record (MBR) disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply to all volumes on the disk.
 
--   On basic GUID partition table \(GPT\) disks, and on dynamic MBR and GPT disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply only to the selected volume.
+-   On basic GUID partition table (GPT) disks, and on dynamic MBR and GPT disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply only to the selected volume.
 
 -   A volume must be selected for the **attributes volume** command to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 
@@ -48,13 +48,13 @@ To display the current attributes on the selected volume, type:
 attributes volume
 ```
 
-To set the selected volume as hidden and read\-only, type:
+To set the selected volume as hidden and read-only, type:
 
 ```
 attributes volume set hidden readonly
 ```
 
-To remove the hidden and read\-only attributes on the selected volume, type:
+To remove the hidden and read-only attributes on the selected volume, type:
 
 ```
 attributes volume clear hidden readonly

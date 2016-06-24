@@ -22,17 +22,17 @@ What this article covers:
 * Deployment guidance for a basic desktop hosting service based on Remote Desktop Services (RDS).    
 * Session-based desktops that use Windows Server Remote Desktop Session Host (RDSH).  
    
-	Windows client-based virtual desktop infrastructures are not covered because there is no Service Provider License Agreement (SPLA) for Windows client operating systems. Windows Server-based virtual desktop infrastructures are allowed under the SPLA, and Windows client-based virtual desktop infrastructures are allowed on dedicated hardware with end-customer licenses in certain scenarios. However, client-based virtual desktop infrastructures are out-of-scope for this article.  
+    Windows client-based virtual desktop infrastructures are not covered because there is no Service Provider License Agreement (SPLA) for Windows client operating systems. Windows Server-based virtual desktop infrastructures are allowed under the SPLA, and Windows client-based virtual desktop infrastructures are allowed on dedicated hardware with end-customer licenses in certain scenarios. However, client-based virtual desktop infrastructures are out-of-scope for this article.  
 * Basic availability provided by Microsoft Azure Infrastructure Services.  
   
-	You can provide additional levels of high availability by guest clustering, but a general high availability solution is out-of-scope for this article.  
+    You can provide additional levels of high availability by guest clustering, but a general high availability solution is out-of-scope for this article.  
 * Desktop hosting services for tenants ranging in size from 5 to 5000 users.    
   
-	If you have more users, this architecture may need to be modified to provide adequate performance, and you'll want to use Windows PowerShell for managing any RDS deployment between 500 and 5000 users.   
+    If you have more users, this architecture may need to be modified to provide adequate performance, and you'll want to use Windows PowerShell for managing any RDS deployment between 500 and 5000 users.   
 * A Standalone desktop hosting cloud service that does not have virtual private network (VPN) links to an on-premises network. You can add those links but we don't in this article.  
 * Self-signed certificates.  
    
-	For a production deployment, get your certificates from a trusted root certificate authority and alternative deployment procedures used to install these certificates on the servers and client devices.  
+    For a production deployment, get your certificates from a trusted root certificate authority and alternative deployment procedures used to install these certificates on the servers and client devices.  
   
 There are multiple ways to deploy a desktop hosting solution. Throughout the article, you'll see specific examples you can use as a starting point for a basic deployment. These examples are identified with the ( ) notation.  
   

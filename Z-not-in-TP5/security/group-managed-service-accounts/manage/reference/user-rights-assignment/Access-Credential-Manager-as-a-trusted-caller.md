@@ -22,7 +22,7 @@ Constant: SeTrustedCredManAccessPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Not defined
 
@@ -31,7 +31,7 @@ Constant: SeTrustedCredManAccessPrivilege
 -   Do not modify this policy setting from the default.
 
 ### Location
-**\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**
+**\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**
 
 ### Default values
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
@@ -40,7 +40,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default domain policy|Not defined|
 |Default domain controller policy|Not defined|
-|Stand\-alone server default settings|Not defined|
+|Stand-alone server default settings|Not defined|
 |Domain controller effective default settings|Not defined|
 |Member server effective default settings|Not defined|
 |Client computer effective default settings|Not defined|
@@ -56,7 +56,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
 ### Group Policy
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 

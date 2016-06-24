@@ -20,7 +20,7 @@ The **Network Security: Restrict NTLM: NTLM authentication in this domain** poli
 
 -   **Disable**
 
-    The domain controller will allow all NTLM pass\-through authentication requests within the domain.
+    The domain controller will allow all NTLM pass-through authentication requests within the domain.
 
 -   **Deny for domain accounts to domain servers**
 
@@ -38,7 +38,7 @@ The **Network Security: Restrict NTLM: NTLM authentication in this domain** poli
 
 -   **Deny all**
 
-    The domain controller will deny all NTLM pass\-through authentication requests from its servers and for its accounts and return an NTLM blocked error unless the server name is on the exception list in the **Network security: Restrict NTLM: Add server exceptions in this domain** policy setting.
+    The domain controller will deny all NTLM pass-through authentication requests from its servers and for its accounts and return an NTLM blocked error unless the server name is on the exception list in the **Network security: Restrict NTLM: Add server exceptions in this domain** policy setting.
 
 -   Not defined
 
@@ -48,7 +48,7 @@ The **Network Security: Restrict NTLM: NTLM authentication in this domain** poli
 If you select any of the deny options, incoming NTLM traffic to the domain will be restricted. First, set the **Network Security: Restrict NTLM: Audit NTLM authentication in this domain** policy setting, and then review the Operational log to understand what authentication attempts are made to the member servers. You can then add those member server names to a server exception list by using the **Network security: Restrict NTLM: Add server exceptions in this domain** policy setting.
 
 ### Location
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options**
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**
 
 ### Default values
 
@@ -56,13 +56,13 @@ If you select any of the deny options, incoming NTLM traffic to the domain will 
 |----------------------|-----------------|
 |Default domain policy|Not configured|
 |Default domain controller policy|Not configured|
-|Stand\-alone server default settings|Not configured|
+|Stand-alone server default settings|Not configured|
 |Domain controller effective default settings|Not configured|
 |Member server effective default settings|Not configured|
 |Client computer effective default settings|Not configured|
 
 ### Operating system version differences
-This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .
+This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .
 
 ## Policy management
 This section describes different features and tools available to help you manage this policy.
@@ -74,14 +74,14 @@ None. Changes to this policy become effective without a restart when saved local
 Setting and deploying this policy using Group Policy takes precedence over the setting on the local computer. If the Group Policy is set to **Not Configured**, local settings will apply.
 
 ### Auditing
-View the Operational log to see if this policy is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\\Microsoft\\Windows\\NTLM**.
+View the Operational log to see if this policy is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\Microsoft\Windows\NTLM**.
 
 There are no Security Audit Event policies that can be configured to view output from this policy.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
 
-NTLM and NTLMv2 authentication is vulnerable to a variety of malicious attacks, including SMB replay, man\-in\-the\-middle attacks, and brute force attacks. Reducing and eliminating NTLM authentication from your environment forces the Windows operating system to use more secure protocols, such as the Kerberos version 5 protocol, or different authentication mechanisms, such as smart cards.
+NTLM and NTLMv2 authentication is vulnerable to a variety of malicious attacks, including SMB replay, man-in-the-middle attacks, and brute force attacks. Reducing and eliminating NTLM authentication from your environment forces the Windows operating system to use more secure protocols, such as the Kerberos version 5 protocol, or different authentication mechanisms, such as smart cards.
 
 ### Vulnerability
 Malicious attacks on NTLM authentication traffic resulting in a compromised server or domain controller can occur only if the server or domain controller handles NTLM requests. If those requests are denied, this attack vector is eliminated.

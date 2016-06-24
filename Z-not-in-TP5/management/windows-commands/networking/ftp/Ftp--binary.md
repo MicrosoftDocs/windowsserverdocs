@@ -22,7 +22,7 @@ binary
 none  
   
 ## Remarks <optional section>  
-**Ftp** supports both ASCII and binary image file transfer types. Use binary when transferring executable files. In binary mode, files are transferred in one\-byte units. For more information about ASCII file transfer, see  **Ftp: ascii** in Additional references.  
+**Ftp** supports both ASCII and binary image file transfer types. Use binary when transferring executable files. In binary mode, files are transferred in one-byte units. For more information about ASCII file transfer, see  **Ftp: ascii** in Additional references.  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Set the file transfer type to binary.  

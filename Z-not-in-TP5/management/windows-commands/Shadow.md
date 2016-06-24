@@ -10,7 +10,7 @@ ms.assetid: f81d9717-6883-4e14-9508-4b2a87e48ea7
 author: Lizap
 ---
 # Shadow
-Enables you to remotely control an active session of another user on a Remote Desktop Session Host \(RD Session Host\) server.
+Enables you to remotely control an active session of another user on a Remote Desktop Session Host (RD Session Host) server.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -28,15 +28,15 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 |-------------|---------------|
 |<SessionName>|Specifies the name of the session that you want to remotely control.|
 |<SessionID>|Specifies the ID of the session that you want to remotely control. Use **query user** to display the list of sessions and their session IDs.|
-|\/server:<ServerName>|Specifies the RD Session Host server containing the session that you want to remotely control. By default, the current RD Session Host4 server is used.|
-|\/v|Displays information about the actions being performed.|
-|\/?|Displays help at the command prompt.|
+|/server:<ServerName>|Specifies the RD Session Host server containing the session that you want to remotely control. By default, the current RD Session Host4 server is used.|
+|/v|Displays information about the actions being performed.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   You can either view or actively control the session. If you choose to actively control a user's session, you will be able to input keyboard and mouse actions to the session.
 
--   You can always remotely control your own sessions \(except the current session\), but you must have Full Control permission or Remote Control special access permission to remotely control another session.
+-   You can always remotely control your own sessions (except the current session), but you must have Full Control permission or Remote Control special access permission to remotely control another session.
 
 -   You can also initiate remote control by using Remote Desktop Services Manager.
 
@@ -46,7 +46,7 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 
 -   The console session can neither remotely control another session nor can it be remotely controlled by another session.
 
--   When you want to end remote control \(shadowing\), press CTRL\+\* \(by using \* from the numeric keypad only\).
+-   When you want to end remote control (shadowing), press CTRL+* (by using \* from the numeric keypad only).
 
 ## <a name="BKMK_examples"></a>Examples
 

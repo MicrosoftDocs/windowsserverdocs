@@ -15,7 +15,7 @@ Stops services for Windows Deployment Services.
 
 |Subcommand|Description|
 |--------------|---------------|
-|[Subcommand: stop-Server](the-stop-server-command/Subcommand--stop-Server.md)|Stops all services on a Windows Deployment Services server \(Deployment Server\).|
+|[Subcommand: stop-Server](the-stop-server-command/Subcommand--stop-Server.md)|Stops all services on a Windows Deployment Services server (Deployment Server).|
 |[Subcommand: stop-TransportServer](the-stop-server-command/Subcommand--stop-TransportServer.md)|Stops all services on a Transport Server.|
 
 

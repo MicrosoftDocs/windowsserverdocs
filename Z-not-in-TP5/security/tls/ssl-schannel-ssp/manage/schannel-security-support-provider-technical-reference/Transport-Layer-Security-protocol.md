@@ -11,11 +11,11 @@ ms.topic: article
 ms.assetid: de510bb0-a9f6-4bbe-8f8a-8dd7473bbae8
 ---
 # Transport Layer Security protocol
-This topic for the IT professional describes how the Transport Layer Security \(TLS\) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
+This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
 
-## <a name="SchannelTA_TLS-SSLarch"></a>The TLS \(and SSL\) protocols are located between the application protocol layer and the TCP\/IP layer, where they can secure and send application data to the transport layer. Because the protocols work between the application layer and the transport layer, TLS and SSL can support multiple application layer protocols.
+## <a name="SchannelTA_TLS-SSLarch"></a>The TLS (and SSL) protocols are located between the application protocol layer and the TCP/IP layer, where they can secure and send application data to the transport layer. Because the protocols work between the application layer and the transport layer, TLS and SSL can support multiple application layer protocols.
 
-TLS and SSL assume that a connection\-oriented transport, typically TCP, is in use. The protocol allows client and server applications to detect the following security risks:
+TLS and SSL assume that a connection-oriented transport, typically TCP, is in use. The protocol allows client and server applications to detect the following security risks:
 
 -   Message tampering
 
@@ -43,16 +43,16 @@ The Schannel SSP implements the TLS and SSL protocols without modification. The 
 
 -   Application Data Protocol
 
-[RFC 5246 \- The Transport Layer Security \(TLS\) Protocol Version 1.2](http://tools.ietf.org/html/rfc5246)
+[RFC 5246 - The Transport Layer Security (TLS) Protocol Version 1.2](http://tools.ietf.org/html/rfc5246)
 
-[RFC 4346 \- The Transport Layer Security \(TLS\) Protocol Version 1.1](http://tools.ietf.org/html/rfc4346)
+[RFC 4346 - The Transport Layer Security (TLS) Protocol Version 1.1](http://tools.ietf.org/html/rfc4346)
 
-[RFC 2246 \- The TLS Protocol Version 1.0](http://tools.ietf.org/html/rfc2246)
+[RFC 2246 - The TLS Protocol Version 1.0](http://tools.ietf.org/html/rfc2246)
 
 ## <a name="BKMK_SessionResumption"></a>TLS session resumption
-Introduced in  Windows Server 2012 R2 , the Schannel SSP implemented the server\-side portion of TLS session resumption. The client\-side implementation of RFC 5077 was added in Windows 8.
+Introduced in  Windows Server 2012 R2 , the Schannel SSP implemented the server-side portion of TLS session resumption. The client-side implementation of RFC 5077 was added in Windows 8.
 
-Devices that connect TLS to servers frequently need to reconnect. TLS session resumption reduces the cost of establishing TLS connections because resumption involves an abbreviated TLS handshake. This facilitates more resumption attempts by allowing a group of TLS servers to resume each other’s TLS sessions. This modification provides the following savings for any TLS client that supports RFC 5077, including Windows Phone and Windows RT devices:
+Devices that connect TLS to servers frequently need to reconnect. TLS session resumption reduces the cost of establishing TLS connections because resumption involves an abbreviated TLS handshake. This facilitates more resumption attempts by allowing a group of TLS servers to resume each other’s TLS sessions. This modification provides the following savings for any TLS client that supports RFC 5077, including Windows Phone and Windows RT devices:
 
 -   Reduced resource usage on the server
 
@@ -63,12 +63,12 @@ Devices that connect TLS to servers frequently need to reconnect. TLS session re
 For information about stateless TLS session resumption, see the IETF document [RFC 5077.](http://www.ietf.org/rfc/rfc5077)
 
 ## <a name="BKMK_AppProtocolNego"></a>Application protocol negotiation
- Windows Server 2012 R2  and Windows 8.1 introduced support that allows client\-side TLS application protocol negotiation. Applications can leverage protocols as part of the HTTP 2.0 standard development, and users can access online services such as Google and Twitter by using apps running the SPDY protocol.
+ Windows Server 2012 R2  and Windows 8.1 introduced support that allows client-side TLS application protocol negotiation. Applications can leverage protocols as part of the HTTP 2.0 standard development, and users can access online services such as Google and Twitter by using apps running the SPDY protocol.
 
-For information about how application protocol negotiation works, see [Transport Layer Security \(TLS\) Application Layer Protocol Negotiation Extension](http://tools.ietf.org/search/draft-ietf-tls-applayerprotoneg-05).
+For information about how application protocol negotiation works, see [Transport Layer Security (TLS) Application Layer Protocol Negotiation Extension](http://tools.ietf.org/search/draft-ietf-tls-applayerprotoneg-05).
 
 ## <a name="BKMK_SNI"></a>TLS support for Server Name Indication extensions
-The Server Name Indication \(SNI\) feature extends the SSL and TLS protocols to allow proper identification of the server when numerous virtual images are running on a single server. In a virtual hosting scenario, several domains \(each with its own potentially distinct certificate\) are hosted on one server. In this case, the server has no way of knowing beforehand which certificate to send to the client. SNI allows the client to inform the target domain earlier in the protocol, and this allows the server to correctly select the proper certificate.
+The Server Name Indication (SNI) feature extends the SSL and TLS protocols to allow proper identification of the server when numerous virtual images are running on a single server. In a virtual hosting scenario, several domains (each with its own potentially distinct certificate) are hosted on one server. In this case, the server has no way of knowing beforehand which certificate to send to the client. SNI allows the client to inform the target domain earlier in the protocol, and this allows the server to correctly select the proper certificate.
 
 This additional functionality:
 

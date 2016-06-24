@@ -31,7 +31,7 @@ Additional information:
 [Publishing RemoteApps in Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/10817.publishing-remoteapps-in-windows-server-2012.aspx)  
 [Distribution of Remote Apps and Desktops in Windows Server 2012 R2](http://social.technet.microsoft.com/wiki/contents/articles/14488.distribution-of-remote-apps-and-desktops-in-windows-server-2012.aspx)  
   
-##	Remote Desktop Gateway  
+##  Remote Desktop Gateway  
   
 The Remote Desktop Gateway (RD Gateway) component enables tenant employees who are using client devices on the public Internet to securely access Windows desktops and applications that are hosted in a Cloud Service in Microsoft Azure.  
   
@@ -43,14 +43,14 @@ Additional information:
 [Deploying and Configuring RD Gateway](http://social.technet.microsoft.com/wiki/contents/articles/10974.deploying-and-configuring-rd-gateway-in-windows-server-2012.aspx)  
 [What’s New In Windows Server 2012 R2 RD Gateway?](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#loadbalancing)  
   
-##	Azure Active Directory Domain Services  
+##  Azure Active Directory Domain Services  
 The tenant’s network includes Azure Active Directory Domain Services (AAD DS) for the tenant’s forest and domain. Using AAD DS allows the tenant to manage groups and users in their AAD tenant, with all changes syncing back to the domain on a recurring basis.   
   
 The tenant’s forest does not require any trust relationship with the provider’s management forest. A domain administrator account may be set up in the tenant’s domain to allow the provider’s technical personnel to perform administrative tasks in the tenant’s environment (such as monitoring system status and applying software updates) and to assist with troubleshooting and configuration.  
   
 Some alternatives to deploying AAD DS are:  
-1.	Standing up a stand-alone AD DS server by the hosting provider and located in the tenant’s virtual networking environment in Azure.  
-2.	Connecting to an AD DS server located on the tenant’s premises by creating a site-to-site VPN connection.  
+1.  Standing up a stand-alone AD DS server by the hosting provider and located in the tenant’s virtual networking environment in Azure.  
+2.  Connecting to an AD DS server located on the tenant’s premises by creating a site-to-site VPN connection.  
   
 Additional information:  
 [Azure Active Directory Domain Services Documentation](https://azure.microsoft.com/documentation/services/active-directory-ds/)  
@@ -69,7 +69,7 @@ Azure Active Directory Application Proxy is a service provided in paid-SKUs of A
 Additional information:  
 [Enabling Azure AD Application Proxy](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-enable/)  
   
-##	Remote Desktop Connection Broker  
+##  Remote Desktop Connection Broker  
 Remote Desktop Connection Broker (RD Connection Broker) manages incoming remote desktop connections to the servers in Remote Desktop Session Host (RD Session Host) server farms, known as collections. RD Connection Broker handles connections to collections of full desktops and to collections of RemoteApps. For new connections, RD Connection Broker can balance the load across the servers in the collection. For a session that was disconnected, RD Connection Broker reconnects the user to the correct RD Session Host server and the disconnected session, which already exists in the RD Session Host farm.   
   
 To support single sign-on and application publishing, matching digital certificates must be installed on the RD Connection broker server and the client. For development and testing purposes, this can be a self-generated and self-signed certificate. For a released service, the digital certificate must be obtained from a trusted certification authority. The name of the certificate must be the internal Fully Qualified Domain Name (FQDN) of the RD Connection Broker virtual machine.  
@@ -78,7 +78,7 @@ The Windows Server 2016 RD Connection Broker can be installed on the same virtua
   
 Additional information:  
 [Use an Azure SQL database to enable high availability for your Connection Broker](Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md)  
-##	Remote Desktop Licensing  
+##  Remote Desktop Licensing  
 Each tenant’s environment includes an activated Remote Desktop Licensing server to allow users to connect to the Remote Desktop Session Host (RD Session Host) servers that host the tenant’s desktops and applications. For hosted environments, the licensing server is configured in “per user” mode.   
   
 The service provider must acquire the proper number of RDS Subscriber Access Licenses (SALs) based on the number of unique (not concurrent) users authorized to log on to the service each month. Service providers who offer hosted desktops must purchase Microsoft Azure Infrastructure Services directly and the SALs through the Microsoft Service Provider Licensing Agreement (SPLA) program.  End customers who purchase a hosted desktop solution from a service provider must purchase the complete hosted solution (Azure and RDS) from the service provider.  
@@ -91,7 +91,7 @@ Additional information:
 [Generate Per User CAL Report](https://gallery.technet.microsoft.com/ScriptCenter/9739eaee-fb8a-4cb8-8456-7f138d175934/)  
 [Microsoft Volume Licensing: Licensing Options for Service Providers](https://www.microsoft.com/en-us/licensing/licensing-programs/spla-program.aspx#tab=1)  
   
-##	Remote Desktop Session Host  
+##  Remote Desktop Session Host  
 The Remote Desktop Session Host (RD Session Host) component provides a tenant’s users with session-based desktops and RemoteApp programs. The desktops and applications can be accessed over the Internet from any device running a capable remote desktop connection client. For more information, see the Client section later in this document.   
   
 The remote desktops and applications can be organized into collections of one or more RD Session Host servers. The collections can be customized for specific groups of users within each tenant. For example, a collection could be created so that a tenant’s accounting group can access accounting applications but the engineering group cannot access them.   
@@ -121,7 +121,7 @@ Additional information
 [File and Storage Services Overview](http://technet.microsoft.com/library/hh831487.aspx)  
 [How to Attach a Data Disk to a Virtual Machine](http://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)  
   
-###	User Profile Disks  
+### User Profile Disks  
 User profile disks allow users to save personal settings and files when they are signed in to a session on an RD Session Host server in a collection, and then have access to the same settings and files when signing in to a different RD Session Host server in the collection. When the user first signs in, a user profile disk is created on the tenant’s file server, and that disk is mounted to the RD Session Host server to which the user is connected. For each subsequent sign-in, the user profile disk is mounted to the appropriate RD Session host server, and with each sign-out, it is un-mounted. The contents of the profile disk can only be accessed by that user.  
   
 

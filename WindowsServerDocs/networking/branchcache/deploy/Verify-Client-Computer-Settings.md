@@ -35,7 +35,7 @@ You must be a member of **Administrators**, or equivalent to perform this proced
   
     `Get-BCStatus`  
   
-4.  In Windows PowerShell, review the output of the **Get\-BCStatus** command.  
+4.  In Windows PowerShell, review the output of the **Get-BCStatus** command.  
   
     The value for **BranchCacheIsEnabled** should be **True**.  
   

@@ -13,7 +13,7 @@ ms.assetid: 61329896-3b56-4959-8d58-45cbe18ba860
 # Convert basic
 Converts an empty dynamic disk to a basic disk.
 
-For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](http://go.microsoft.com/fwlink/?LinkId=207048) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207048\).
+For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](http://go.microsoft.com/fwlink/?LinkId=207048) (http://go.microsoft.com/fwlink/?LinkId=207048).
 
 ## Syntax
 

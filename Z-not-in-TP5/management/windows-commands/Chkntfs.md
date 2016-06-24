@@ -31,12 +31,12 @@ chkntfs [/c <Volume> [...]]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|<Volume> \[...\]|Specifies one or more volumes to check when the computer starts. Valid volumes include drive letters \(followed by a colon\), mount points, or volume names.|  
-|\/d|Restores all **chkntfs** default settings, except the countdown time for automatic file checking. By default, all volumes are checked when the computer is started, and **chkdsk** runs on those that are dirty.|  
-|\/t \[:<Time>\]|Changes the Autochk.exe initiation countdown time to the amount of time specified in seconds. If you do not enter a time, **\/t** displays the current countdown time.|  
-|\/x <Volume> \[...\]|Specifies one or more volumes to exclude from checking when the computer is started, even if the volume is marked as requiring **chkdsk**.|  
-|\/c <Volume> \[...\]|Schedules one or more volumes to be checked when the computer is started, and runs **chkdsk** on those that are dirty.|  
-|\/?|Displays help at the command prompt.|  
+|<Volume> [...]|Specifies one or more volumes to check when the computer starts. Valid volumes include drive letters (followed by a colon), mount points, or volume names.|  
+|/d|Restores all **chkntfs** default settings, except the countdown time for automatic file checking. By default, all volumes are checked when the computer is started, and **chkdsk** runs on those that are dirty.|  
+|/t [:<Time>]|Changes the Autochk.exe initiation countdown time to the amount of time specified in seconds. If you do not enter a time, **/t** displays the current countdown time.|  
+|/x <Volume> [...]|Specifies one or more volumes to exclude from checking when the computer is started, even if the volume is marked as requiring **chkdsk**.|  
+|/c <Volume> [...]|Schedules one or more volumes to be checked when the computer is started, and runs **chkdsk** on those that are dirty.|  
+|/?|Displays help at the command prompt.|  
   
 ## <a name="BKMK_examples"></a>Examples  
 To display the type of file system for drive C, type:  
@@ -73,15 +73,15 @@ chkntfs /t:30
 ```  
   
 > [!NOTE]  
-> Although you can set the Autochk.exe initiation countdown time to zero, doing so will prevent you from canceling a potentially time\-consuming automatic file check.  
+> Although you can set the Autochk.exe initiation countdown time to zero, doing so will prevent you from canceling a potentially time-consuming automatic file check.  
   
-The **\/x** command\-line option is not accumulative. If you type it more than once, the most recent entry overrides the previous entry. To exclude multiple volumes from being checked, you must list each of them in a single command. For example, to exclude both the D and E volumes, type:  
+The **/x** command-line option is not accumulative. If you type it more than once, the most recent entry overrides the previous entry. To exclude multiple volumes from being checked, you must list each of them in a single command. For example, to exclude both the D and E volumes, type:  
   
 ```  
 chkntfs /x d: e:  
 ```  
   
-The **\/c** command\-line option is accumulative. If you type **\/c** more than once, each entry remains. To ensure that only a particular volume is checked, reset the defaults to clear all previous commands, exclude all volumes from being checked, and then schedule automatic file checking on the desired volume.  
+The **/c** command-line option is accumulative. If you type **/c** more than once, each entry remains. To ensure that only a particular volume is checked, reset the defaults to clear all previous commands, exclude all volumes from being checked, and then schedule automatic file checking on the desired volume.  
   
 For example, to schedule automatic file checking on the D volume but not the C or E volumes, type the following commands in order:  
   

@@ -29,9 +29,9 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |-------------|---------------|
 |diskfree|Queries the hard disk drive to determine the amount of free space on it.|
 |dismount|Dismounts a volume.|
-|<VolumePath>|Specifies the drive letter \(followed by a colon\).|
-|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
-|<cluster>|Specifies the logical cluster number \(LCN\).|
+|<VolumePath>|Specifies the drive letter (followed by a colon).|
+|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|<cluster>|Specifies the logical cluster number (LCN).|
 
 ## <a name="BKMK_examples"></a>Examples
 To dismount a volume on drive C, type:
@@ -46,7 +46,7 @@ To query the amount of free space of a volume on drive C, type:
 fsutil volume diskfree c:
 ```
 
-To find the file\(s\) that are using the clusters, specified by the logical cluster numbers 50 and 0x2000, on drive C, type:
+To find the file(s) that are using the clusters, specified by the logical cluster numbers 50 and 0x2000, on drive C, type:
 
 ```
 fsutil volume querycluster C: 50 0x2000

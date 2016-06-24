@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft® Identity Lifecycle Manager 2007 (ILM 2007)</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft® Identity Lifecycle Manager 2007 (ILM 2007)</Token>

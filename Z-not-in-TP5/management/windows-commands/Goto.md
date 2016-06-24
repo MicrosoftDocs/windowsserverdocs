@@ -24,13 +24,13 @@ goto <Label>
 |Parameter|Description|
 |-------------|---------------|
 |<Label>|Specifies a text string that is used as a label in the batch program.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   Working with command extensions
 
-    If command extensions are enabled \(the default\), and you use the **goto** command with a target label of **:EOF**, you transfer control to the end of the current batch script file and exit the batch script file without defining a label. When you use **goto** with the **:EOF** label, you must insert a colon before the label. For example:
+    If command extensions are enabled (the default), and you use the **goto** command with a target label of **:EOF**, you transfer control to the end of the current batch script file and exit the batch script file without defining a label. When you use **goto** with the **:EOF** label, you must insert a colon before the label. For example:
 
     ```
     goto:EOF
@@ -38,11 +38,11 @@ goto <Label>
 
 -   Using valid *Label* values
 
-    You can use spaces in the *Label* parameter, but you cannot include other separators \(for example, semicolons or equal signs\).
+    You can use spaces in the *Label* parameter, but you cannot include other separators (for example, semicolons or equal signs).
 
 -   Matching *Label* with the label in the batch program
 
-    The *Label* value that you specify must match a label in the batch program. The label within the batch program must begin with a colon \(:\). If a line begins with a colon, it is treated as a label and any commands on that line are ignored. If your batch program does not contain the label that you specify in *Label*, the batch program stops and displays the following message:
+    The *Label* value that you specify must match a label in the batch program. The label within the batch program must begin with a colon (:). If a line begins with a colon, it is treated as a label and any commands on that line are ignored. If your batch program does not contain the label that you specify in *Label*, the batch program stops and displays the following message:
 
     ```
     Label not found

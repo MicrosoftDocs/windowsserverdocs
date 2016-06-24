@@ -25,11 +25,11 @@ This topic describes how to verify that you have correctly configured your Direc
 4.  Verify that the status of OTP displays the green icon and is Working.  
   
     > [!NOTE]  
-    > The health status update interval will be a maximum of the sum of the values from the registry key HKLM\\SYSTEM\\CCS\\Services\\Ramgmtsvc\\parameters\\HealthRefreshTimeout and the **Time interval for server activity** that was set in the Remote Access configuration.  
+    > The health status update interval will be a maximum of the sum of the values from the registry key HKLM\SYSTEM\CCS\Services\Ramgmtsvc\parameters\HealthRefreshTimeout and the **Time interval for server activity** that was set in the Remote Access configuration.  
   
 ### To verify access to internal resources using OTP authentication  
   
-1.  Connect a DirectAccess client computer to the corporate network and run **gpupdate \/force** from the command prompt to obtain the group policy.  
+1.  Connect a DirectAccess client computer to the corporate network and run **gpupdate /force** from the command prompt to obtain the group policy.  
   
 2.  Disconnect the client computer from the corporate network, connect to the external network, and attempt to access internal resources. You should not have access to the internal resources.  
   

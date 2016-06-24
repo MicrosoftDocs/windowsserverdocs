@@ -23,13 +23,13 @@ tcmsetup  [/q] /c /d
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/q|Prevents the display of message boxes.|  
-|\/x|Specifies that connection\-oriented callbacks will be used for heavy traffic networks where packet loss is high. When this parameter is omitted, connectionless callbacks will be used.|  
-|\/c|Required. Specifies client setup.|  
-|<Server1>|Required. Specifies the name of the remote server that has the TAPI service providers that the client will use. The client will use the service providers' lines and phones. The client must be in the same domain as the server or in a domain that has a two\-way trust relationship with the domain that contains the server.|  
+|/q|Prevents the display of message boxes.|  
+|/x|Specifies that connection-oriented callbacks will be used for heavy traffic networks where packet loss is high. When this parameter is omitted, connectionless callbacks will be used.|  
+|/c|Required. Specifies client setup.|  
+|<Server1>|Required. Specifies the name of the remote server that has the TAPI service providers that the client will use. The client will use the service providers' lines and phones. The client must be in the same domain as the server or in a domain that has a two-way trust relationship with the domain that contains the server.|  
 |<Server2>…|Specifies any additional server or servers that will be available to this client. If you specify a list of servers is, use a space to separate the server names.|  
-|\/d|Clears the list of remote servers. Disables the TAPI client by preventing it from using the TAPI service providers that are on the remote servers.|  
-|\/?|Displays help at the command prompt.|  
+|/d|Clears the list of remote servers. Disables the TAPI client by preventing it from using the TAPI service providers that are on the remote servers.|  
+|/?|Displays help at the command prompt.|  
   
 ### Remarks  
   

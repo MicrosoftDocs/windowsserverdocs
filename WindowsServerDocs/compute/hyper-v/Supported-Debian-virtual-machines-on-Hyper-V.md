@@ -17,13 +17,13 @@ The following feature distribution map indicates the features that are present i
   
 **Table legend**  
   
--   **Built in** – LIS are included as part of this Linux distribution. The Microsoft\-provided LIS download package doesn't work for this distribution so do not install it. The kernel module version numbers for the built in LIS \(as shown by **lsmod**, for example\) are different from the version number on the Microsoft\-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
+-   **Built in** – LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution so do not install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
   
--   **√** \- Feature available  
+-   **√** - Feature available  
   
--   \(*blank*\) \- Feature not available  
+-   (*blank*) - Feature not available  
   
-|**Feature**|**Windows Server operating system version**|**8.0\-8.4 (jessie)**|**7.0\-7.10 (wheezy)**|  
+|**Feature**|**Windows Server operating system version**|**8.0-8.4 (jessie)**|**7.0-7.10 (wheezy)**|  
 |-|-|-|-|  
 |**Availability**||Built in|Built in (Note 6)|  
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|√|√|  
@@ -46,10 +46,10 @@ The following feature distribution map indicates the features that are present i
 |Dynamic Memory – Ballooning|2016, 2012 R2, 2012|||  
 |Manual Memory Hot Add|2016|||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
-|Hyper\-V\-specific  video device|2016, 2012 R2, 2012, 2008 R2|√||  
+|Hyper-V-specific  video device|2016, 2012 R2, 2012, 2008 R2|√||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|  
-|Key\-Value Pair|2016, 2012 R2, 2012, 2008 R2|√ Note 4||  
-|Non\-Maskable Interrupt|2016, 2012 R2|√|√|  
+|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|√ Note 4||  
+|Non-Maskable Interrupt|2016, 2012 R2|√|√|  
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|√|√|  
 |File copy from host to guest|2016, 2012 R2|√ Note 4||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||  
@@ -62,7 +62,7 @@ The following feature distribution map indicates the features that are present i
   
 1.  Creating file systems on VHDs larger than 2TB is not supported.  
   
-2.  On Windows Server 2008 R2, SCSI disks create 8 different entries in \/dev\/sd\*.  
+2.  On Windows Server 2008 R2, SCSI disks create 8 different entries in /dev/sd*.  
   
 3.   Windows Server 2012 R2 , a VM with 8 cores or more will have all interrupts routed to a single vCPU.  
   

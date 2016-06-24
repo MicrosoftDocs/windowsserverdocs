@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 5fcc3eb5-1505-4f5b-b9fe-d00c806491e3
 ---
 # Smart Card and Remote Desktop Services
-This topic for the IT professional describes the behavior of Remote Desktop Services when you implement smart card sign\-in.
+This topic for the IT professional describes the behavior of Remote Desktop Services when you implement smart card sign-in.
 
 The content in this topic applies to the versions of Windows that are designated in the **Applies To** list at the beginning of this topic. In these versions, smart card redirection logic and **WinSCard** API are combined to support multiple redirected sessions into a single process.
 
@@ -19,62 +19,62 @@ Smart card support is required to enable many Remote Desktop Services scenarios.
 
 -   Using Fast User Switching or Remote Desktop Services. A user is not able to establish a redirected smart card–based remote desktop connection. That is, the connect attempt is not successful in Fast User Switching or from a Remote Desktop Services session.
 
--   Enabling Encrypting File System \(EFS\) to locate the user's smart card reader from the Local Security Authority \(LSA\) process in Fast User Switching or in a Remote Desktop Services session. If EFS is not able to locate the smart card reader or certificate, EFS cannot decrypt user files.
+-   Enabling Encrypting File System (EFS) to locate the user's smart card reader from the Local Security Authority (LSA) process in Fast User Switching or in a Remote Desktop Services session. If EFS is not able to locate the smart card reader or certificate, EFS cannot decrypt user files.
 
 ## Remote Desktop Services redirection
-In a Remote Desktop scenario, a user is using a remote server for running services, and the smart card is local to the computer that the user is using. In a smart card sign\-in scenario, the smart card service on the remote server redirects to the smart card reader that is connected to the local computer where the user is trying to sign in.
+In a Remote Desktop scenario, a user is using a remote server for running services, and the smart card is local to the computer that the user is using. In a smart card sign-in scenario, the smart card service on the remote server redirects to the smart card reader that is connected to the local computer where the user is trying to sign in.
 
 ![](../../media/Smart-Card-and-Remote-Desktop-Services/WindowsSmartCardTechnicalReference_14.PNG)
 
 Notes about the redirection model:
 
-1.  This scenario is a remote sign\-in session on a computer with Remote Desktop Services. In the remote session \(labeled as "Client session"\), the user runs **net use \/smartcard**.
+1.  This scenario is a remote sign-in session on a computer with Remote Desktop Services. In the remote session (labeled as "Client session"), the user runs **net use /smartcard**.
 
-2.  Arrows represent the flow of the PIN after the user types the PIN at the command prompt until it reaches the user's smart card in a smart card reader that is connected to the Remote Desktop Connection \(RDC\) client computer.
+2.  Arrows represent the flow of the PIN after the user types the PIN at the command prompt until it reaches the user's smart card in a smart card reader that is connected to the Remote Desktop Connection (RDC) client computer.
 
 3.  The authentication is performed by the LSA in session 0.
 
-4.  The CryptoAPI processing is performed in the LSA \(Lsass.exe\). This is possible because RDP redirector \(rdpdr.sys\) allows per\-session, rather than per\-process, context.
+4.  The CryptoAPI processing is performed in the LSA (Lsass.exe). This is possible because RDP redirector (rdpdr.sys) allows per-session, rather than per-process, context.
 
-5.  The **WinScard** and **SCRedir** components, which were separate modules in operating systems earlier than Windows Vista, are now included in one module. The **ScHelper** library is a CryptoAPI wrapper that is specific to the Kerberos protocol.
+5.  The **WinScard** and **SCRedir** components, which were separate modules in operating systems earlier than Windows Vista, are now included in one module. The **ScHelper** library is a CryptoAPI wrapper that is specific to the Kerberos protocol.
 
 6.  The redirection decision is made on a per smart card context basis, based on the session of the thread that performs the **SCardEstablishContext** call.
 
-7.  Changes to WinSCard.dll implementation were made in Windows Vista to improve smart card redirection.
+7.  Changes to WinSCard.dll implementation were made in Windows Vista to improve smart card redirection.
 
-## RD Session Host server single sign\-in experience
+## RD Session Host server single sign-in experience
 As a part of the Common Criteria compliance, the RDC client must be configurable to use Credential Manager to acquire and save the user's password or smart card PIN. Common Criteria compliance requires that applications not have direct access to the user's password or PIN.
 
 Common Criteria compliance requires specifically that the password or PIN never leave the LSA unencrypted. A distributed scenario should allow the password or PIN to travel between one trusted LSA and another, and it cannot be unencrypted during transit.
 
-When smart card\-enabled single sign\-in \(SSO\) is used for Remote Desktop Services sessions, users still need to sign in for every new Remote Desktop Services session. However, the user is not prompted for a PIN more than once to establish a Remote Desktop Services session. For example, after the user double\-clicks a Microsoft Word document icon that resides on a remote computer, the user is prompted to enter a PIN. This PIN is sent by using a secure channel that the credential SSP has established. The PIN is routed back to the RDC client over the secure channel and sent to Winlogon. The user does not receive any additional prompts for the PIN, unless the PIN is incorrect or there are smart card\-related failures.
+When smart card-enabled single sign-in (SSO) is used for Remote Desktop Services sessions, users still need to sign in for every new Remote Desktop Services session. However, the user is not prompted for a PIN more than once to establish a Remote Desktop Services session. For example, after the user double-clicks a Microsoft Word document icon that resides on a remote computer, the user is prompted to enter a PIN. This PIN is sent by using a secure channel that the credential SSP has established. The PIN is routed back to the RDC client over the secure channel and sent to Winlogon. The user does not receive any additional prompts for the PIN, unless the PIN is incorrect or there are smart card-related failures.
 
-### <a name="BKMK_TermServeLogon"></a>Remote Desktop Services and smart card sign\-in
+### <a name="BKMK_TermServeLogon"></a>Remote Desktop Services and smart card sign-in
 Remote Desktop Services enable users to sign in with a smart card by entering a PIN on the RDC client computer and sending it to the RD Session Host server in a manner similar to authentication that is based on user name and password.
 
 > [!NOTE]
-> If an RDC client computer running those client versions designated in the **Applies to** list, is used and a server is running Windows Server 2003, only the single certificate in the smart card default container is supported. To support multiple certificates and domain hints features, use computers running the supported versions of the operating system that are designated in the **Applies To** list at the beginning of this topic.
+> If an RDC client computer running those client versions designated in the **Applies to** list, is used and a server is running Windows Server 2003, only the single certificate in the smart card default container is supported. To support multiple certificates and domain hints features, use computers running the supported versions of the operating system that are designated in the **Applies To** list at the beginning of this topic.
 
-In addition, Group Policy settings that are specific to Remote Desktop Services need to be enabled for smart card–based sign\-in.
+In addition, Group Policy settings that are specific to Remote Desktop Services need to be enabled for smart card–based sign-in.
 
-To enable smart card sign\-in to a Remote Desktop Session Host \(RD Session Host\) server, the Key Distribution Center \(KDC\) certificate must be present on the RDC client computer. If the computer is not in the same domain or workgroup, the following command can be used to deploy the certificate:
+To enable smart card sign-in to a Remote Desktop Session Host (RD Session Host) server, the Key Distribution Center (KDC) certificate must be present on the RDC client computer. If the computer is not in the same domain or workgroup, the following command can be used to deploy the certificate:
 
 **certutil –dspublish NTAuthCA** "*DSCDPContainer*"
 
-The *DSCDPContainer* Common Name \(CN\) is usually the name of the certification authority.
+The *DSCDPContainer* Common Name (CN) is usually the name of the certification authority.
 
 **Example**:
 
-**certutil –dspublish NTAuthCA***<CertFile>***"CN\=NTAuthCertificates,CN\=Public Key Services,CN\=Services,CN\=Configuration,DC\=engineering,DC\=contoso,DC\=com"**
+**certutil –dspublish NTAuthCA***<CertFile>***"CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=engineering,DC=contoso,DC=com"**
 
-For information about this option for the command\-line tool, see [\-dsPublish](../../../management/windows-commands/Certutil.md#BKMK_dsPublish).
+For information about this option for the command-line tool, see [-dsPublish](../../../management/windows-commands/Certutil.md#BKMK_dsPublish).
 
-### Remote Desktop Services and smart card sign\-in across domains
+### Remote Desktop Services and smart card sign-in across domains
 To enable remote access to resources in an enterprise, the root certificate for the domain must be provisioned on the smart card. From a computer that is joined to a domain, run the following command at the command line:
 
 **certutil –scroots update**
 
-For information about this option for the command\-line tool, see [\-SCRoots](../../../management/windows-commands/Certutil.md#BKMK_SCRoots).
+For information about this option for the command-line tool, see [-SCRoots](../../../management/windows-commands/Certutil.md#BKMK_SCRoots).
 
 For Remote Desktop Services across domains, the KDC certificate of the RD Session Host server must also be present in the client computer's NTAUTH store. To add the store, run the following command at the command line:
 
@@ -82,16 +82,16 @@ For Remote Desktop Services across domains, the KDC certificate of the RD Sessio
 
 Where *<CertFile>* is the root certificate of the KDC certificate issuer.
 
-For information about this option for the command\-line tool, see [\-addstore](../../../management/windows-commands/Certutil.md#BKMK_addstore).
+For information about this option for the command-line tool, see [-addstore](../../../management/windows-commands/Certutil.md#BKMK_addstore).
 
 > [!NOTE]
-> If you use the credential SSP on computers running the supported versions of the operating system that are designated in the **Applies To** list at the beginning of this topic: To sign in with a smart card from a computer that is not joined to a domain, the smart card must contain the root certification of the domain controller. A public key infrastructure \(PKI\) secure channel cannot be established without the root certification of the domain controller.
+> If you use the credential SSP on computers running the supported versions of the operating system that are designated in the **Applies To** list at the beginning of this topic: To sign in with a smart card from a computer that is not joined to a domain, the smart card must contain the root certification of the domain controller. A public key infrastructure (PKI) secure channel cannot be established without the root certification of the domain controller.
 
-Sign\-in to Remote Desktop Services across a domain works only if the UPN in the certificate uses the following form: *<ClientName>@<DomainDNSName>*
+Sign-in to Remote Desktop Services across a domain works only if the UPN in the certificate uses the following form: *<ClientName>@<DomainDNSName>*
 
 The UPN in the certificate must include a domain that can be resolved. Otherwise, the Kerberos protocol cannot determine which domain to contact. You can resolve this issue by enabling GPO X509 domain hints. For more information about this setting, see [Smart Card Group Policy and Registry Settings](smart-card-tools-and-settings/Smart-Card-Group-Policy-and-Registry-Settings.md).
 
 ## See also
-[How Smart Card Sign\-in Works in Windows](assetId:///36330874-3984-4551-ac31-cccd52fd3c92)
+[How Smart Card Sign-in Works in Windows](assetId:///36330874-3984-4551-ac31-cccd52fd3c92)
 
 

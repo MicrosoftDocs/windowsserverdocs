@@ -22,7 +22,7 @@ vol [<Drive>:]
 |Parameter|Description|
 |-------------|---------------|
 |<Drive>:|Specifies the drive that contains the disk for which you want to display the volume label and serial number.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

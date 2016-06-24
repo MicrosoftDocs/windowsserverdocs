@@ -31,11 +31,11 @@ mdir <RemoteFile>[…] <LocalFile>
   
 -   Specifying *RemoteFile*  
   
-    Type a hyphen \(**\-**\) to use the current working directory on the remote computer.  
+    Type a hyphen (**-**) to use the current working directory on the remote computer.  
   
 -   Specifying a *LocalFile*  
   
-    Type a hyphen \(**\-**\) to display the listing on the screen.  
+    Type a hyphen (**-**) to display the listing on the screen.  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Display a directory listing of **Dir1** and **Dir2** on the screen  

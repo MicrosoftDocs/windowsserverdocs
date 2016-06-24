@@ -10,7 +10,7 @@ ms.assetid: d7488ec6-0eff-45ff-89ee-9cbe752416bf
 author: jaimeo
 ---
 # Tsecimp_1
-Imports assignment information from an Extensible Markup Language \(XML\) file into the TAPI server security file \(Tsec.ini\). You can also use this command to display the list of TAPI providers and the lines devices associated with each of them, validate the structure of the XML file without importing the contents, and check domain membership.  
+Imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini). You can also use this command to display the list of TAPI providers and the lines devices associated with each of them, validate the structure of the XML file without importing the contents, and check domain membership.  
   
 ## Syntax  
   
@@ -23,11 +23,11 @@ tsecimp /d
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/f <Filename>|Required. Specifies the name of the XML file that contains the assignment information that you want to import.|  
-|\/v|Validates the structure of the XML file without importing the information into the Tsec.ini file.|  
-|\/u|Checks whether each user is a member of the domain specified in the XML file. The computer on which you use this parameter must be connected to the network. This parameter might significantly slow performance if you are processing a large amount of user assignment information.|  
-|\/d|Displays a list of installed telephony providers. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.|  
-|\/?|Displays help at the command prompt.|  
+|/f <Filename>|Required. Specifies the name of the XML file that contains the assignment information that you want to import.|  
+|/v|Validates the structure of the XML file without importing the information into the Tsec.ini file.|  
+|/u|Checks whether each user is a member of the domain specified in the XML file. The computer on which you use this parameter must be connected to the network. This parameter might significantly slow performance if you are processing a large amount of user assignment information.|  
+|/d|Displays a list of installed telephony providers. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.|  
+|/?|Displays help at the command prompt.|  
   
 ### Remarks  
   
@@ -148,7 +148,7 @@ tsecimp /d
   
         ```  
   
--   The following sample output appears after the **\/d** command\-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
+-   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
   
     ```  
   

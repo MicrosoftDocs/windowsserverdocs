@@ -22,13 +22,13 @@ manage-bde -upgrade [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 |Parameter|Description|
 |-------------|---------------|
 |<Drive>|Represents a drive letter followed by a colon.|
-|\-computername|Specifies that Manage\-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **\-cn** as an abbreviated version of this command.|
+|-computername|Specifies that Manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
 |<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
-|\-? or \/?|Displays brief Help at the command prompt.|
-|\-help or \-h|Displays complete Help at the command prompt.|
+|-? or /?|Displays brief Help at the command prompt.|
+|-help or -h|Displays complete Help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
-The following example illustrates using the **\-upgrade** command to upgrade BitLocker encryption on drive C.
+The following example illustrates using the **-upgrade** command to upgrade BitLocker encryption on drive C.
 
 ```
 manage-bde –upgrade C:
@@ -40,6 +40,6 @@ manage-bde –upgrade C:
 
 -   [Manage-bde](Manage-bde.md)
 
--   [Upgrading a BitLocker\-Protected Computer from Windows Vista to Windows 7](https://technet.microsoft.com/library/ee424325(v=ws.10).aspx)
+-   [Upgrading a BitLocker-Protected Computer from Windows Vista to Windows 7](https://technet.microsoft.com/library/ee424325(v=ws.10).aspx)
 
 

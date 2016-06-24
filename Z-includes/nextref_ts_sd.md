@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">TS Session Broker</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">TS Session Broker</Token>

@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: c65b5ac3-711a-4368-95b8-ba82e2d00713
 ---
 # Help
-Provides online information about system commands \(that is, non\-network commands\). If used without parameters, **help** lists and briefly describes every system command.
+Provides online information about system commands (that is, non-network commands). If used without parameters, **help** lists and briefly describes every system command.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 

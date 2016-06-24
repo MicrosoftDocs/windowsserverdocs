@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 9d4d28e8-6e88-42cc-801f-94e9d8e051f4
 ---
 # Nslookup set domain
-Changes the default Domain Name System \(DNS\) domain name to the name specified.
+Changes the default Domain Name System (DNS) domain name to the name specified.
 
 ## Syntax
 

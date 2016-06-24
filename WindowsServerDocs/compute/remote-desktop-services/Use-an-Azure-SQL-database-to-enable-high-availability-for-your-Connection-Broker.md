@@ -42,10 +42,10 @@ With an Azure SQL Database deployed and load-balancing configured for the RD Con
 - DNS name for the RD Connection Broker cluster: The DNS name that routes to the Azure load balancer or the DNS name used in DNS round-robin.  
 - Connection string: The connection string for the database. See step 2 in [Create an Azure SQL database](Create-an-Azure-SQL-database-for-the-RD-Connection-Broker.md) for more information.   
 ![Configure RD Connection Broker - cluster settings](media/Configure-RD-Connection-Broker---cluster-settings.png)  
-	> [!NOTE]
-	> Replace *your_password_here* with the administrative password.    
-	    
-	  
+    > [!NOTE]
+    > Replace *your_password_here* with the administrative password.    
+        
+      
 3. You may see a warning regarding the DNS name when using an Azure Load Balancer. Double-check that the name of the record for the RD Connection Broker cluster corresponds to the IP address of the Azure Load Balancer. After doing so, you can safely ignore the warning. Click **Configure**.  
 ![Configure RD Connection Broker for High Availability - confirmation](media/Configure-RD-Connection-Broker-for-High-Availability---confirmation.png)   
   

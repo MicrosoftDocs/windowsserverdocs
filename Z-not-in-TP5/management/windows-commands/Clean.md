@@ -27,9 +27,9 @@ clean [all]
 
 ## Remarks
 
--   On master boot record \(MBR\) disks, only the MBR partitioning information and hidden sector information are overwritten.
+-   On master boot record (MBR) disks, only the MBR partitioning information and hidden sector information are overwritten.
 
--   On GUID Partition Table \(GPT\) disks, the GPT partitioning information, including the Protective MBR, is overwritten. There is no hidden sector information.
+-   On GUID Partition Table (GPT) disks, the GPT partitioning information, including the Protective MBR, is overwritten. There is no hidden sector information.
 
 -   A disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
@@ -45,6 +45,6 @@ clean
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 
-[Clear\-Disk](http://technet.microsoft.com/library/hh848661.aspx)
+[Clear-Disk](http://technet.microsoft.com/library/hh848661.aspx)
 
 

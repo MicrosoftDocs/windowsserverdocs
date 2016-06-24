@@ -24,7 +24,7 @@ Misuse of this policy setting is a common error that can cause data loss or prob
 
 -   Enabled
 
-    It will be impossible to establish trusts with Windows NT 4.0–based domains. This value will also cause problems with earlier\-version client computers \(such as those running Windows NT 3.51 and Windows 95\) that are trying to use resources on the server.
+    It will be impossible to establish trusts with Windows NT 4.0–based domains. This value will also cause problems with earlier-version client computers (such as those running Windows NT 3.51 and Windows 95) that are trying to use resources on the server.
 
 -   Disabled
 
@@ -37,7 +37,7 @@ Misuse of this policy setting is a common error that can cause data loss or prob
 1.  Best practices are dependent on your security goals and policies.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -46,13 +46,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Enabled|
+|Stand-Alone Server Default Settings|Enabled|
 |DC Effective Default Settings|Enabled|
 |Member Server Effective Default Settings|Enabled|
 |Client Computer Effective Default Settings|Enabled|
 
 ### Operating system version differences
-Windows 2000 Server has a similar policy setting named **Additional Restrictions for Anonymous Connections** managed a registry entry **RestrictAnonymous**, located in the HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\LSA key. In Windows Server 2003, the policy settings **Network access: Do not allow anonymous enumeration of SAM accounts** and **Network access: Do not allow anonymous enumeration of SAM accounts and shares** replace the Windows 2000 policy setting. They manage the registry entries **RestrictAnonymousSAM** and **RestrictAnonymous**, respectively, both located in the HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Control\\Lsa\\ key.
+Windows 2000 Server has a similar policy setting named **Additional Restrictions for Anonymous Connections** managed a registry entry **RestrictAnonymous**, located in the HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA key. In Windows Server 2003, the policy settings **Network access: Do not allow anonymous enumeration of SAM accounts** and **Network access: Do not allow anonymous enumeration of SAM accounts and shares** replace the Windows 2000 policy setting. They manage the registry entries **RestrictAnonymousSAM** and **RestrictAnonymous**, respectively, both located in the HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\ key.
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.
@@ -61,7 +61,7 @@ This section describes features and tools that are available to help you manage 
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.
 
 ### Policy conflicts
-Even with this policy setting enabled, anonymous users will have access to resources with permissions that explicitly include the built\-in group, ANONYMOUS LOGON \(on systems earlier than Windows Server 2008 and Windows Vista\).
+Even with this policy setting enabled, anonymous users will have access to resources with permissions that explicitly include the built-in group, ANONYMOUS LOGON (on systems earlier than Windows Server 2008 and Windows Vista).
 
 ### Group Policy
 This policy has no impact on domain controllers.
@@ -76,6 +76,6 @@ An unauthorized user could anonymously list account names and use the informatio
 Enable the **Network access: Do not allow anonymous enumeration of SAM accounts** setting.
 
 ### Potential impact
-It is impossible to establish trusts with Windows NT 4.0–based domains. Also, client computers that run earlier versions of the Windows operating system, such as Windows NT 3.51 and Windows 95, experience problems when they try to use resources on the server.
+It is impossible to establish trusts with Windows NT 4.0–based domains. Also, client computers that run earlier versions of the Windows operating system, such as Windows NT 3.51 and Windows 95, experience problems when they try to use resources on the server.
 
 

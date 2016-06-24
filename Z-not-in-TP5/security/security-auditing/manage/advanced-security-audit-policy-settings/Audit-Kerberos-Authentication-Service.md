@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 8f93d32f-88da-4d6c-bd1f-e6060f0e5ca9
 ---
 # Audit Kerberos Authentication Service
-This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Kerberos Authentication Service**, which determines whether to generate audit events for Kerberos authentication ticket\-granting ticket \(TGT\) requests.
+This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Kerberos Authentication Service**, which determines whether to generate audit events for Kerberos authentication ticket-granting ticket (TGT) requests.
 
 If you configure this policy setting, an audit event is generated after a Kerberos authentication TGT request. Success audits record successful attempts and Failure audits record unsuccessful attempts.
 
@@ -23,7 +23,7 @@ If this policy setting is configured, the following events appear on computers r
 
 |Event ID|Event message|
 |------------|-----------------|
-|4768|A Kerberos authentication ticket \(TGT\) was requested.|
+|4768|A Kerberos authentication ticket (TGT) was requested.|
 |4771|Kerberos preauthentication failed.|
 |4772|A Kerberos authentication ticket request failed.|
 

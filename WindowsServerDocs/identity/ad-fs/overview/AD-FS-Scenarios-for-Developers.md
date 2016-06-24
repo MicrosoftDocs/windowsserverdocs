@@ -21,18 +21,18 @@ AD FS 2016 also supports the WS-Federation, WS-Trust, and SAML protocols and pro
 While you can continue using AD FS for sign on with WS-Federation, WS-Trust, and SAML protocols just as you have before, with the newer protocols, you get the following benefits:  
   
 * **Simplicity and consistency**  
-	* Use the same set of APIs and patterns to enable sign on for:   
-		* 	multiple types of applications (server, desktop, mobile, browser)  
-		* 	multiple platforms (android, iOS, Windows)  
-		*   applications inside the corporate network or hosted in the cloud  
-	* Use the same set of libraries you can already use to authenticate users against Azure AD  
+    * Use the same set of APIs and patterns to enable sign on for:   
+        *   multiple types of applications (server, desktop, mobile, browser)  
+        *   multiple platforms (android, iOS, Windows)  
+        *   applications inside the corporate network or hosted in the cloud  
+    * Use the same set of libraries you can already use to authenticate users against Azure AD  
 * **Flexibility**  
-	* In addition to standard user authorization, enable more complex scenarios such as:	  
-		* 	3-legged sign on flows in which a user authorizes one web application or service to access resources that reside with another web app or service.    
-		* 	Server-to-server flows in which a mid-tier service accesses a back end API  
-		* 	JavaScript based single-page applications (SPA)  
+    * In addition to standard user authorization, enable more complex scenarios such as:      
+        *  3-legged sign on flows in which a user authorizes one web application or service to access resources that reside with another web app or service.    
+        *  Server-to-server flows in which a mid-tier service accesses a back end API  
+        *  JavaScript based single-page applications (SPA)  
 * **Industry support**  
-	* OAuth 2.0 and OpenID Connect enjoy wide utilization across the industry, so knowledge of these patterns will help you enable authentication and authorization outside of an Active Directory environment as well  
+    * OAuth 2.0 and OpenID Connect enjoy wide utilization across the industry, so knowledge of these patterns will help you enable authentication and authorization outside of an Active Directory environment as well  
   
 ## How it works: The Basics  
 You can add AD FS modern authentication to your application using the same set of tools and libraries you can already use to authenticate users against Azure AD.   
@@ -106,7 +106,7 @@ This scenario enables the user of a native client application to call an AD FS 2
   
 ![Description of protocol flowmedia/ADFS_DEV_3.png)  
   
-1.	The native client application initiates the flow with a call to the ADAL library.  This triggers a browser based HTTP GET to the AD FS authorize endpoint:  
+1.  The native client application initiates the flow with a call to the ADAL library.  This triggers a browser based HTTP GET to the AD FS authorize endpoint:  
   
 **Authorization request:**  
 GET https://fs.contoso.com/adfs/oauth2/authorize?  
@@ -122,7 +122,7 @@ redirect_uri|Redirect URI of native application in application group
 If the user has not signed in before, the user is prompted for credentials.    
 AD FS responds by returning an authorization code as the “code” parameter in the query component of the redirect_uri.  For example: HTTP/1.1 302 Found Location: **http://redirect_uri:80/?code=&lt;code&gt;.**  
   
-2.	The native client then sends the code, along with the following parameters, to the AD FS token endpoint:  
+2.  The native client then sends the code, along with the following parameters, to the AD FS token endpoint:  
   
 **Token Request:**  
 POST https://fs.contoso.com/adfs/oautincludes   
@@ -138,7 +138,7 @@ redirect_uri|Redirect URI of native application in application group
 **Token request response:**  
 AD FS responds with an HTTP 200 with the access_token, refresh_token, and id_token in the body.  
   
-3.	The native application then sends the access_token part of the above response as the Authorization header in the HTTP request to the web API.  
+3.  The native application then sends the access_token part of the above response as the Authorization header in the HTTP request to the web API.  
   
 ### Single sign on behavior  
 Subsequent client requests within 1 hour (by default) the access_token will still be valid in the cache, and a new request will not trigger any traffic to AD FS.  The access_token will automatically be fetched from the cache by ADAL.  
@@ -167,7 +167,7 @@ This scenario is similar to the above in that there is an authorization request,
   
 ![Description of protocol flowmedia/ADFS_DEV_4.png)  
   
-1.	The Web App initiates an authorization request via the browser, which sends an HTTP GET to the AD FS authorize endpoint  
+1.  The Web App initiates an authorization request via the browser, which sends an HTTP GET to the AD FS authorize endpoint  
 **Authorization request**:  
 GET https://fs.contoso.com/adfs/oauth2/authorize?  
   
@@ -182,9 +182,9 @@ Authorization request response:
 If the user has not signed in before, the user is prompted for credentials.  
 AD FS responds by returning an authorization code as the “code” parameter in the query component of the redirect_uri, for example: HTTP/1.1 302 Found Location: https://webapp.contoso.com/?code=&lt;code&gt;.  
   
-2.	As a result of the above 302, the browser initiates an HTTP GET to the web app, for example: GET http://redirect_uri:80/?code=&lt;code&gt;.   
+2.  As a result of the above 302, the browser initiates an HTTP GET to the web app, for example: GET http://redirect_uri:80/?code=&lt;code&gt;.   
   
-3.	At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
+3.  At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
 **Token request:**  
 POST https://fs.contoso.com/adfs/oautincludes  
   
@@ -200,7 +200,7 @@ client_secret|Secret of the web app (server application) in the application grou
 **Token request response:**  
 AD FS responds with an HTTP 200 with the access_token, refresh_token, and id_token in the body.  
 claims  
-4.	The web application then either consumes the access_token part of the above response (in the case in which the web app itself hosts the resource), or otherwise sends it as the Authorization header in the HTTP request to the web API.  
+4.  The web application then either consumes the access_token part of the above response (in the case in which the web app itself hosts the resource), or otherwise sends it as the Authorization header in the HTTP request to the web API.  
   
 #### Single sign on behavior  
 While the access token will still be valid for 1 hour (by default) in the client’s cache, you may think that the second request will work as in the native client scenario above – that a new request will not trigger any traffic to AD FS as the access token will automatically be fetched from the cache by ADAL.  However, it is possible that the web app can sends distinct authorization and token requests, the former via distinct URL link, as in our sample.  
@@ -231,7 +231,7 @@ This scenario is similar to the above in that there is an authorization request 
   
 ![Description of protocol flowmedia/ADFS_DEV_5.png)  
   
-1.	The Web App initiates an authorization request via the browser, which sends an HTTP GET to the AD FS authorize endpoint  
+1.  The Web App initiates an authorization request via the browser, which sends an HTTP GET to the AD FS authorize endpoint  
   
 **Authorization request:**  
 GET https://fs.contoso.com/adfs/oauth2/authorize?  
@@ -249,9 +249,9 @@ If the user has not signed in before, the user is prompted for credentials.
 AD FS responds with an HTTP 200 and form containing the below as hidden elements:  
 * code: the authorization code  
 * id_token: a JWT token containing claims describing the user authentication  
-2.	The form automatically posts to the redirect_uri of the web app, sending the code and the id_token to the web app.  
+2.  The form automatically posts to the redirect_uri of the web app, sending the code and the id_token to the web app.  
   
-3.	At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
+3.  At this point the web app, having received the code, initiates a request to the AD FS token endpoint, sending the following  
   
 **Token request:**  
 POST https://fs.contoso.com/adfs/oautincludes  
@@ -270,7 +270,7 @@ client_secret|Secret of the web app (server application) in the application grou
 **Token request response:**  
 AD FS responds with an HTTP 200 with the access_token, refresh_token, and id_token in the body.  
   
-4.	The web application then either consumes the access_token part of the above response (in the case in which the web app itself hosts the resource), or otherwise sends it as the Authorization header in the HTTP request to the web API.  
+4.  The web application then either consumes the access_token part of the above response (in the case in which the web app itself hosts the resource), or otherwise sends it as the Authorization header in the HTTP request to the web API.  
   
 #### Single Sign on behavior  
 The single sign on behavior is the same as for the Oauth 2.0 confidential client flow above.  

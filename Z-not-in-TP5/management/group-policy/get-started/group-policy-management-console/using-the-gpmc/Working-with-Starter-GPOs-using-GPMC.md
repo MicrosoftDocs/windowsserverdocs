@@ -14,7 +14,7 @@ This topic contains procedures for managing Starter Group Policy Objects as a Gr
 ## About Starter Group Policy Objects
 Starter Group Policy Objects are derived from a Group Policy Object, and provide the ability to store a collection of Administrative Template policy settings in a single object. You can import and export Starter GPOs, which makes them easy to distribute to other environments. When you create a new GPO from a Starter GPO, the new GPO has all of the Administrative Template policy settings and their values that were defined in the Starter GPO.
 
-System Starter Group Policy Objects \(GPOs\) are read\-only Starter GPOs that provide a baseline of settings for a specific scenario. Like Starter GPOs, they derive from a GPO, provide the ability to store a collection of Administrative Template policy settings in a single object, and can be imported. You can determine whether a Starter GPO is a System Starter GPO by viewing the **Starter GPO type** on the **Details** tab of the Starter GPO.
+System Starter Group Policy Objects (GPOs) are read-only Starter GPOs that provide a baseline of settings for a specific scenario. Like Starter GPOs, they derive from a GPO, provide the ability to store a collection of Administrative Template policy settings in a single object, and can be imported. You can determine whether a Starter GPO is a System Starter GPO by viewing the **Starter GPO type** on the **Details** tab of the Starter GPO.
 
 A variety of System Starter GPOs are included with Windows Server. For information about the recommended use of each System Starter GPO, see the **Comment** on the **Details** tab for that Starter GPO.
 
@@ -24,7 +24,7 @@ A variety of System Starter GPOs are included with Windows Server. For informati
 
 1.  Open the **Group Policy Management Console**.
 
-2.  Right\-click **Starter GPOs** and then click **New**.
+2.  Right-click **Starter GPOs** and then click **New**.
 
 3.  In the **New Starter GPO** dialog box, type the name of the Starter GPO in the **Name** box. Optionally, you can type comments in the **Comments** box.
 
@@ -36,13 +36,13 @@ A variety of System Starter GPOs are included with Windows Server. For informati
 
 1.  Open the **Group Policy Management Console**. Expand the **Starter GPOs** node.
 
-2.  Right\-click the Starter GPO you want to edit and then click **Edit**.
+2.  Right-click the Starter GPO you want to edit and then click **Edit**.
 
 3.  In the console tree, click the folder under **Administrative Templates** that contains the policy settings you want to configure.
 
 4.  In the **Setting** column, click the name for a policy setting to read a description of the policy setting.
 
-5.  To change a policy setting, double\-click the name of the policy setting.
+5.  To change a policy setting, double-click the name of the policy setting.
 
 6.  In the policy setting dialog box, click one of the following:
 
@@ -60,9 +60,9 @@ A variety of System Starter GPOs are included with Windows Server. For informati
 
 1.  Open the Group Policy Management Console. Expand the **Starter GPOs** node.
 
-2.  Right\-click the Starter GPO you want to copy and then click **Copy**.
+2.  Right-click the Starter GPO you want to copy and then click **Copy**.
 
-3.  Right\-click the **Starter GPO** node and then click **Paste**.
+3.  Right-click the **Starter GPO** node and then click **Paste**.
 
 4.  Click **OK**.
 
@@ -72,7 +72,7 @@ A variety of System Starter GPOs are included with Windows Server. For informati
 
 1.  Open the Group Policy Management Console. Expand the **Starter GPOs** node.
 
-2.  Right\-click the Starter GPO you want to delete and then click **Delete**.
+2.  Right-click the Starter GPO you want to delete and then click **Delete**.
 
 3.  Click **OK** to confirm the deletion.
 
@@ -85,7 +85,7 @@ There are two ways to create a new Group Policy object from a Starter GPO. You c
 
 1.  Open the Group Policy Management Console. Expand the **Starter GPOs** node.
 
-2.  Right\-click the Starter GPO you want to use to create a new Group Policy object and then click **New GPO from Starter GPO**.
+2.  Right-click the Starter GPO you want to use to create a new Group Policy object and then click **New GPO from Starter GPO**.
 
 3.  In the **New GPO** dialog box, type the name of the new Group Policy object in the **Name** box.
 
@@ -95,7 +95,7 @@ There are two ways to create a new Group Policy object from a Starter GPO. You c
 
 ##### Create a new GPO from a Starter GPO at the Group Policy Objects node
 
-1.  Open the Group Policy Management Console. Right\-click the **Group Policy Objects** node.
+1.  Open the Group Policy Management Console. Right-click the **Group Policy Objects** node.
 
 2.  In the **New GPO** dialog box, type the name of the new Group Policy object in the **Name** box.
 
@@ -109,7 +109,7 @@ There are two ways to create a new Group Policy object from a Starter GPO. You c
 
 1.  Open the Group Policy Management Console. Expand the **Starter GPOs** node.
 
-2.  To back up a single Starter GPO, right\-click the Starter GPO, and then click **Back Up**. To back up all Starter GPOs in the domain, right\-click **Starter GPOs** and click **Back Up All**.
+2.  To back up a single Starter GPO, right-click the Starter GPO, and then click **Back Up**. To back up all Starter GPOs in the domain, right-click **Starter GPOs** and click **Back Up All**.
 
 3.  In the **Backup Starter GPO** dialog box, in the **Location** box, enter the path for the location where you want to store the Starter GPO backups. Or click **Browse**, locate the folder in which you want to store the Starter GPO backups, and then click **OK**.
 
@@ -118,7 +118,7 @@ There are two ways to create a new Group Policy object from a Starter GPO. You c
 5.  After the operation completes, click **OK**.
 
     > [!IMPORTANT]
-    > To secure backed\-up Starter GPOs, ensure that only authorized administrators have permission to access the folder to which you are backing up the Starter GPOs.
+    > To secure backed-up Starter GPOs, ensure that only authorized administrators have permission to access the folder to which you are backing up the Starter GPOs.
 
 ## How to restore a Starter GPO
 
@@ -126,7 +126,7 @@ There are two ways to create a new Group Policy object from a Starter GPO. You c
 
 1.  Open the Group Policy Management Console. Expand the **Starter GPOs** node.
 
-2.  Right\-click **Starter GPOs** and then click **Manage Backups**.
+2.  Right-click **Starter GPOs** and then click **Manage Backups**.
 
 3.  In the **Manage Backups** dialog box, in the **Backup location** box, type the path for the backup folder. You can also use **Browse** to locate the backup folder.
 
@@ -146,7 +146,7 @@ There are two ways to create a new Group Policy object from a Starter GPO. You c
 
 3.  Click the **Settings** tab to view reports in GPMC.
 
-4.  If you want to print or save the report, right\-click the settings report in the results pane and do one of the following:
+4.  If you want to print or save the report, right-click the settings report in the results pane and do one of the following:
 
     -   Select **Print** to print the report.
 
@@ -186,9 +186,9 @@ You can include comments for each Starter GPO. You can use this text box to furt
 
 1.  Open the Group Policy Management Console. Expand the **Starter GPOs** node.
 
-2.  Right\-click the Starter GPO you want to comment and then click **Edit**.
+2.  Right-click the Starter GPO you want to comment and then click **Edit**.
 
-3.  In the console tree, right\-click the name of the Starter GPO and then click **Properties**.
+3.  In the console tree, right-click the name of the Starter GPO and then click **Properties**.
 
 4.  Click the **Comment** tab.
 

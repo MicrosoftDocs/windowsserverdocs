@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 608267f8-f7b4-412a-8dcd-e08b5ffc2085
 ---
 # Nslookup server
-Changes the default server to the specified Domain Name System \(DNS\) domain.
+Changes the default server to the specified Domain Name System (DNS) domain.
 
 ## Syntax
 

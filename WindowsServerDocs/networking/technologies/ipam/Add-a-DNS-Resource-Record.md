@@ -22,7 +22,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 2.  In the navigation pane, in **MONITOR AND MANAGE**, click **DNS Zones**.  The navigation pane divides into an upper navigation pane and a lower navigation pane.  
   
-3.  In the lower navigation pane, click **Forward Lookup**. All IPAM\-managed DNS Forward Lookup zones are displayed in the display pane search results. Right\-click the zone where you want to add a resource record, and then click **Add DNS resource record**.  
+3.  In the lower navigation pane, click **Forward Lookup**. All IPAM-managed DNS Forward Lookup zones are displayed in the display pane search results. Right-click the zone where you want to add a resource record, and then click **Add DNS resource record**.  
   
     ![](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_01.jpg)  
   

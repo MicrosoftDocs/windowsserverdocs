@@ -25,21 +25,21 @@ recover [<Drive>:][<Path>]<FileName>
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<Path>\]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
-|\/?|Displays help at the command prompt.|
+|[<Drive>:][<Path>]<FileName>|Specifies the location and name of the file that you want to recover. *FileName* is required.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   The **recover** command reads a file, sector\-by\-sector, and recovers data from the good sectors. Data in bad sectors is lost.
+-   The **recover** command reads a file, sector-by-sector, and recovers data from the good sectors. Data in bad sectors is lost.
 
 -   Bad sectors reported by **chkdsk** were marked as "bad" when your disk was prepared for operation. They pose no danger, and **recover** does not affect them.
 
 -   Because all data in bad sectors is lost when you recover a file, you should recover only one file at a time.
 
--   You cannot use wildcard characters \(**\*** and **?**\) with the **recover** command. You must specify a file \(and the location of the file if it is not in the current directory\).
+-   You cannot use wildcard characters (**\*** and **?**) with the **recover** command. You must specify a file (and the location of the file if it is not in the current directory).
 
 ## <a name="BKMK_examples"></a>Examples
-To recover the file Story.txt in the \\Fiction directory on drive D, type:
+To recover the file Story.txt in the \Fiction directory on drive D, type:
 
 ```
 recover d:\fiction\story.txt 

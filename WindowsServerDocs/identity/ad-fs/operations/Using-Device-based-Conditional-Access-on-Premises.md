@@ -83,13 +83,13 @@ For complete list of AD FS 2016 device and conditional access claims, see Refere
 ### Infrastructure pre-requisites  
   
 1. An Azure AD subscription with Azure AD Premium (to enable device write back for on premises conditional access - a free trial is fine)  
-2.	Intune subscription (only required for MDM integration for device compliance scenarios – a free trial is fine)  
-3.	Azure AD Connect (November 2015 QFE or later)  
-4.	Windows Server 2016 build 10586 or newer for AD FS  
-5.	Windows Server 2016 Active Directory schema (schema level 85 or higher) (required for msDS-IsCompliant attribute for device compliance scenarios)  
-6.	Windows Server 2016 domain controller (only required for Microsoft Passport for Work)  
-7.	Windows 10 client build 10586 or newer, joined to the above domain (required for Windows 10 Domain Join and Microsoft Passport for Work scenarios only)  
-8.	Azure AD user account with Azure AD Premium license assigned (for registering the device)  
+2.  Intune subscription (only required for MDM integration for device compliance scenarios – a free trial is fine)  
+3.  Azure AD Connect (November 2015 QFE or later)  
+4.  Windows Server 2016 build 10586 or newer for AD FS  
+5.  Windows Server 2016 Active Directory schema (schema level 85 or higher) (required for msDS-IsCompliant attribute for device compliance scenarios)  
+6.  Windows Server 2016 domain controller (only required for Microsoft Passport for Work)  
+7.  Windows 10 client build 10586 or newer, joined to the above domain (required for Windows 10 Domain Join and Microsoft Passport for Work scenarios only)  
+8.  Azure AD user account with Azure AD Premium license assigned (for registering the device)  
   
 ### Enable Azure AD Device Registration  
 To configure this scenario, you must configure the device registration capability in Azure AD.  
@@ -108,52 +108,52 @@ If your AD FS farm is not already configured for Device Authentication (you can 
   
 Note: The below commands require Active Directory administration tools, so if your federation server is not also a domain controller, first install the tools using step 1 below.  Otherwise you can skip step 1.  
   
-1.	Run the Add Roles & Features wizard and select feature Remote Server Administration tools -> Role Administration Tools -> AD DS and AD LDS Tools -> Choose both the Active Directory module for Windows PowerShell and the AD DS Tools.  
-2.	On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated powershell prompt.  Then, execute the following PowerShell commands:  
-	1. Import-module activedirectory  
-	2. PS C:\ &gt; Initialize-ADDeviceRegistration –ServiceAccountName “&lt;AD FS service account name&gt;”  
-	3. Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format “domain\accountname$”  
-	4. The above PSH creates the following objects  
-		1. RegisteredDevices container under the AD domain partition  
-		2. Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration  
-		3. Device Registration Service DKM container and object under Configuration --> Services --> Device Registration Configuration  
-		  
-####		Create Service Connection Point (SCP) in AD  
+1.  Run the Add Roles & Features wizard and select feature Remote Server Administration tools -> Role Administration Tools -> AD DS and AD LDS Tools -> Choose both the Active Directory module for Windows PowerShell and the AD DS Tools.  
+2.  On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated powershell prompt.  Then, execute the following PowerShell commands:  
+    1. Import-module activedirectory  
+    2. PS C:\ &gt; Initialize-ADDeviceRegistration –ServiceAccountName “&lt;AD FS service account name&gt;”  
+    3. Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format “domain\accountname$”  
+    4. The above PSH creates the following objects  
+        1. RegisteredDevices container under the AD domain partition  
+        2. Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration  
+        3. Device Registration Service DKM container and object under Configuration --> Services --> Device Registration Configuration  
+          
+####        Create Service Connection Point (SCP) in AD  
 If you plan to use Windows 10 domain join (with automatic registration to Azure AD) as described here, execute the following commands to create a service connection point in AD DS  
-1.	PS C:\>Import-Module -Name "C:\Program Files\Microsoft Azure Active Directory Connect\AdPrep\AdSyncPrep.psm1"  
+1.  PS C:>Import-Module -Name "C:\Program Files\Microsoft Azure Active Directory Connect\AdPrep\AdSyncPrep.psm1"  
 {if necessary, copy the AdSyncPrep.psm1 file from your Azure AD Connect server}  
-2.	PS C:\>$aadAdminCred = Get-Credential  
+2.  PS C:>$aadAdminCred = Get-Credential  
 {provide your Azure AD global administrator credentials, such as adminuser@contoso.onmicrosoft.com}  
-3.	PS C:\>Initialize-ADSyncDomainJoinedComputerSync –AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred  
-a.	Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory  
-4.	The above commands enable Windows 10 clients to find the correct Azure AD domain to join by creating the serviceConnectionpoint object in AD DS.  
+3.  PS C:>Initialize-ADSyncDomainJoinedComputerSync –AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred  
+a.  Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory  
+4.  The above commands enable Windows 10 clients to find the correct Azure AD domain to join by creating the serviceConnectionpoint object in AD DS.  
   
 #### Prepare AD for Device Write Back   
 To ensure AD DS objects and containers are in the correct state for write back of devices from Azure AD, do the following.  
-1.	PS C:\&gt;Initialize-ADSyncDeviceWriteBack –DomainName &lt;AD DS domain name&gt; –AdConnectorAccount [AD connector account name]  
-	1. Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory in domain\accountname format  
-	2. The above command creates the following objects for device write back to AD DS, if they do not exist already, and allows access to the specified AD connector account name  
-		1. RegisteredDevices container in the AD domain partition  
-		2. Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration  
+1.  PS C:\&gt;Initialize-ADSyncDeviceWriteBack –DomainName &lt;AD DS domain name&gt; –AdConnectorAccount [AD connector account name]  
+    1. Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory in domain\accountname format  
+    2. The above command creates the following objects for device write back to AD DS, if they do not exist already, and allows access to the specified AD connector account name  
+        1. RegisteredDevices container in the AD domain partition  
+        2. Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration  
   
 #### Enable Device Write Back in Azure AD Connect  
 If you have not done so before, enable device write back in Azure AD Connect by running the wizard a second time and selecting “Customize Synchronization Options”, then checking the box for device write back and selecting the forest in which you have run the above cmdlets  
   
 #### Configure Device Authentication in AD FS  
 Using an elevated PowerShell command window, configure AD FS policy by executing the following command  
-PS C:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true  
+PS C:>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true  
   
 #### Check your configuration  
 For your reference, below is a comprehensive list of the AD DS devices, containers and permissions required for device write-back and authentication to work  
-1.	object of type ms-DS-DeviceContainer at CN=RegisteredDevices,DC=&lt;domain&gt;  
-a.	read access to the AD FS service account   
-b.	read/write access to the Azure AD Connect sync AD connector account   
-2.	Container CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;  
-3.	Container Device Registration Service DKM under the above container  
-4.	object of type serviceConnectionpoint at CN=&lt;guid&gt;, CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;  
-a.	read/write access to the specified AD connector account name on the new object  
-5.	object of type msDS-DeviceRegistrationServiceContainer at CN=Device Registration Services,CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&ltdomain>  
-6.	object of type msDS-DeviceRegistrationService in the above container  
+1.  object of type ms-DS-DeviceContainer at CN=RegisteredDevices,DC=&lt;domain&gt;  
+a.  read access to the AD FS service account   
+b.  read/write access to the Azure AD Connect sync AD connector account   
+2.  Container CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;  
+3.  Container Device Registration Service DKM under the above container  
+4.  object of type serviceConnectionpoint at CN=&lt;guid&gt;, CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;  
+a.  read/write access to the specified AD connector account name on the new object  
+5.  object of type msDS-DeviceRegistrationServiceContainer at CN=Device Registration Services,CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&ltdomain>  
+6.  object of type msDS-DeviceRegistrationService in the above container  
   
 #### See it work  
 To evaluate the new claims and policies, first register a device.  For example, you can Azure AD Join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps here.  For information on joining Windows 10 mobile devices, see the document here.  For more ways to register Windows and non-Windows devices, see the document here.  
@@ -179,15 +179,15 @@ For information on enabling Windows 10 with Microsoft Passport for Work, see [En
 To enable automatic MDM enrollment of registered devices so that you can use the isCompliant claim in your access control policy, follow the steps [here.](https://blogs.technet.microsoft.com/ad/2015/08/14/windows-10-azure-ad-and-microsoft-intune-automatic-mdm-enrollment-powered-by-the-cloud/)  
   
 ### Troubleshooting  
-1.	if you get an error on Initialize-ADDeviceRegistration that complains about an object already existing in the wrong state, such as “The drs service object has been found without all the required attributes”, you may have executed Azure AD Connect powershell commands previously and have a partial configuration in AD DS.  Try deleting manually the objects under CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt; and trying again.  
-2.	For Windows 10 domain joined clients  
-	1. To verify that device authentication is working, sign on to the domain joined client as a test user account. To trigger provisioning quickly, lock and unlock the desktop at least one time.   
-	2. Instructions to check for stk key credential link on AD DS object (does sync still have to run twice?)  
-3.	If you get an error upon trying to register a Windows computer that the device was already enrolled, but you are unable or have already unenrolled the device, you may have a fragment of device enrollment configuration in the registry.  To investigate and remove this, use the following steps:  
-	1. On the Windows computer, open Regedit and navigate to HKLM\Software\Microsoft\Enrollments   
-	2. Under this key, there will be many subkeys in the GUID form.  Navigate to the subkey which has ~17 values in it and has "EnrollmentType" of  “6” [MDM joined] or “13” (Azure AD joined)  
-	3. Modify EnrollmentType to 0  
-	4. Try the device enrollment or registration again  
+1.  if you get an error on Initialize-ADDeviceRegistration that complains about an object already existing in the wrong state, such as “The drs service object has been found without all the required attributes”, you may have executed Azure AD Connect powershell commands previously and have a partial configuration in AD DS.  Try deleting manually the objects under CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt; and trying again.  
+2.  For Windows 10 domain joined clients  
+    1. To verify that device authentication is working, sign on to the domain joined client as a test user account. To trigger provisioning quickly, lock and unlock the desktop at least one time.   
+    2. Instructions to check for stk key credential link on AD DS object (does sync still have to run twice?)  
+3.  If you get an error upon trying to register a Windows computer that the device was already enrolled, but you are unable or have already unenrolled the device, you may have a fragment of device enrollment configuration in the registry.  To investigate and remove this, use the following steps:  
+    1. On the Windows computer, open Regedit and navigate to HKLM\Software\Microsoft\Enrollments   
+    2. Under this key, there will be many subkeys in the GUID form.  Navigate to the subkey which has ~17 values in it and has "EnrollmentType" of  “6” [MDM joined] or “13” (Azure AD joined)  
+    3. Modify EnrollmentType to 0  
+    4. Try the device enrollment or registration again  
   
 ### Related Articles  
 * [Securing access to Office 365 and other apps connected to Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access/)  

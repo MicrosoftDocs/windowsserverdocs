@@ -23,7 +23,7 @@ cls
 
 |Parameter|Description|
 |-------------|---------------|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_examples"></a>Examples
 To clear all information that appears in the Command Prompt window and return to a blank window, type:

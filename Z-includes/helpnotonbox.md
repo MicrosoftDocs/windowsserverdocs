@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Please see the following page in the Windows Server TechNet Library: </Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Please see the following page in the Windows Server TechNet Library: </Token>

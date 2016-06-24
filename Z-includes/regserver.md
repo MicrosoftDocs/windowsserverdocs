@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft® Windows Server™ 2003, Standard Edition</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Microsoft® Windows Server™ 2003, Standard Edition</Token>

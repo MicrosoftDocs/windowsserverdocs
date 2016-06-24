@@ -39,7 +39,7 @@ For more information, see the [Storage Spaces Direct in Windows Server 2016 Tech
 This capability is new in Windows Server 2016 Technical Preview.  
 
 ## <a name="BKMK_SR"></a>Storage Replica  
-Storage Replica \(SR\) is a new feature that enables storage\-agnostic, block\-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash\-consistent volumes to ensure zero data loss at the file\-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
+Storage Replica (SR) is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 **What value does this change add?**  
 
@@ -51,7 +51,7 @@ Storage Replication enables you to do the following:
 
 -   Stretch Windows failover clusters to metropolitan distances.  
 
--   Use Microsoft software end to end for storage and clustering, such as Hyper\-V, Storage Replica, Storage Spaces, Cluster, Scale\-Out File Server, SMB3, Deduplication, and ReFS\/NTFS.  
+-   Use Microsoft software end to end for storage and clustering, such as Hyper-V, Storage Replica, Storage Spaces, Cluster, Scale-Out File Server, SMB3, Deduplication, and ReFS/NTFS.  
 
 -   Help reduce cost and complexity as follows:  
 
@@ -61,7 +61,7 @@ Storage Replication enables you to do the following:
 
     -   Features ease of graphical management for individual nodes and clusters through Failover Cluster Manager.  
 
-    -   Includes comprehensive, large\-scale scripting options through Windows PowerShell.  
+    -   Includes comprehensive, large-scale scripting options through Windows PowerShell.  
 
 -   Help reduce downtime, and increase reliability and productivity intrinsic to Windows.  
 
@@ -74,21 +74,21 @@ For more information, see the [Storage Replica in Windows Server 2016 Technical 
 This capability is new in Windows Server 2016 Technical Preview.  
 
 ## <a name="BKMK_QoS"></a>Storage Quality of Service  
-You can now use storage quality of service \(QoS\) to centrally monitor end\-to\-end storage performance and create policies using Hyper\-V and Scale\-Out File Servers in Windows Server 2016 Technical Preview.  
+You can now use storage quality of service (QoS) to centrally monitor end-to-end storage performance and create policies using Hyper-V and Scale-Out File Servers in Windows Server 2016 Technical Preview.  
 
 **What value does this change add?**  
 
-You can now create storage QoS policies on a Scale\-Out File Server and assign them to one or more virtual disks on Hyper\-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates.  
+You can now create storage QoS policies on a Scale-Out File Server and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates.  
 
--   Each policy specifies a reserve \(minimum\) and a limit \(maximum\) to be applied to a collection of data flows, such as a virtual hard disk, a single virtual machine or a group of virtual machines, a service, or a tenant.  
+-   Each policy specifies a reserve (minimum) and a limit (maximum) to be applied to a collection of data flows, such as a virtual hard disk, a single virtual machine or a group of virtual machines, a service, or a tenant.  
 
 -   Using Windows PowerShell or WMI, you can perform the following tasks:  
 
-    -   Create policies on a Scale\-Out File Server.  
+    -   Create policies on a Scale-Out File Server.  
 
-    -   Enumerate policies available on a Scale\-Out File Server.  
+    -   Enumerate policies available on a Scale-Out File Server.  
 
-    -   Assign a policy to a virtual hard disk on a server running Hyper\-V.  
+    -   Assign a policy to a virtual hard disk on a server running Hyper-V.  
 
     -   Monitor the performance of each flow and status within the policy.  
 
@@ -145,7 +145,7 @@ Windows Failover Clusters running deduplication can have a mix of nodes running 
 
 **What works differently?**  
 
-With previous versions of Windows Server, a Windows Failover Cluster required all nodes in the cluster to be at the exact same Windows Server version.  Starting with the Windows Server 2016 Technical Preview, the cluster rolling upgrade functionality allows a cluster to run in a mixed\-mode. Deduplication supports this new mixed\-mode cluster configuration to enable full data access during a cluster rolling upgrade.  
+With previous versions of Windows Server, a Windows Failover Cluster required all nodes in the cluster to be at the exact same Windows Server version.  Starting with the Windows Server 2016 Technical Preview, the cluster rolling upgrade functionality allows a cluster to run in a mixed-mode. Deduplication supports this new mixed-mode cluster configuration to enable full data access during a cluster rolling upgrade.  
 
 > [!NOTE]  
 > Although both Windows versions of deduplication can access the optimized data, the optimization jobs will only run on the  Windows Server 2012 R2  nodes and be blocked from running on the Windows Server 2016 Technical Preview nodes until the cluster rolling upgrade is complete.  

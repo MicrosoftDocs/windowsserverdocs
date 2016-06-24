@@ -23,13 +23,13 @@ diskperf [-Y[D|V] | -N[D|V]] [\\computername]
 
 |Option|Description|
 |----------|---------------|
-|\-?|Displays context sensitive help.|
-|\-Y|Start all disk performance counters when the computer restarts.|
-|\-YD|Enable disk performance counters for physical drives when the computer restarts.|
-|\-YV|Enable disk performance counters for logical drives or storage volumes when the computer restarts.|
-|\-N|Disable all disk performance counters when the computer restarts.|
-|\-ND|Disable disk performance counters for physical drives when the computer restarts.|
-|\-NV|Disable disk performance counters for logical drives or storage volumes when the computer restarts.|
+|-?|Displays context sensitive help.|
+|-Y|Start all disk performance counters when the computer restarts.|
+|-YD|Enable disk performance counters for physical drives when the computer restarts.|
+|-YV|Enable disk performance counters for logical drives or storage volumes when the computer restarts.|
+|-N|Disable all disk performance counters when the computer restarts.|
+|-ND|Disable disk performance counters for physical drives when the computer restarts.|
+|-NV|Disable disk performance counters for logical drives or storage volumes when the computer restarts.|
 |\\\\*<computername>*|Specify the name of the computer where you want to enable or disable disk performance counters.|
 
 

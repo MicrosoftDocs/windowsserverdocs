@@ -25,17 +25,17 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 |Parameter|Description|  
 |-------------|---------------|  
 |"<Title>"|Specifies the title to display in the Command Prompt window title bar.|  
-|\/d <Path>|Specifies the startup directory.|  
-|\/i|Passes the Cmd.exe startup environment to the new Command Prompt window. If **\/i** is not specified, the current environment is used.|  
-|{\/min &#124; \/max}|Specifies to minimize \(**\/min**\) or maximize \(**\/max**\) the new Command Prompt window.|  
-|{\/separate &#124; \/shared}|Starts 16\-bit programs in a separate memory space \(**\/separate**\) or shared memory space \(**\/shared**\). These options are not supported on 64\-bit platforms.|  
-|{\/low &#124; \/normal &#124; \/high &#124; \/realtime &#124; \/abovenormal &#124; \/belownormal}|Starts an application in the specified priority class. Valid priority class values are **\/low**, **\/normal**, **\/high**, **\/realtime**, **\/abovenormal**, and **\/belownormal**.|  
-|\/affinity <HexAffinity>|Applies the specified processor affinity mask \(expressed as a hexadecimal number\) to the new application.|  
-|\/wait|Starts an application and waits for it to end.|  
-|\/b|Starts an application without opening a new Command Prompt window. CTRL\+C handling is ignored unless the application enables CTRL\+C processing. Use CTRL\+BREAK to interrupt the application.|  
-|\/b {<Command> &#124; <Program>}|Specifies the command or program to start.|  
+|/d <Path>|Specifies the startup directory.|  
+|/i|Passes the Cmd.exe startup environment to the new Command Prompt window. If **/i** is not specified, the current environment is used.|  
+|{/min &#124; /max}|Specifies to minimize (**/min**) or maximize (**/max**) the new Command Prompt window.|  
+|{/separate &#124; /shared}|Starts 16-bit programs in a separate memory space (**/separate**) or shared memory space (**/shared**). These options are not supported on 64-bit platforms.|  
+|{/low &#124; /normal &#124; /high &#124; /realtime &#124; /abovenormal &#124; /belownormal}|Starts an application in the specified priority class. Valid priority class values are **/low**, **/normal**, **/high**, **/realtime**, **/abovenormal**, and **/belownormal**.|  
+|/affinity <HexAffinity>|Applies the specified processor affinity mask (expressed as a hexadecimal number) to the new application.|  
+|/wait|Starts an application and waits for it to end.|  
+|/b|Starts an application without opening a new Command Prompt window. CTRL+C handling is ignored unless the application enables CTRL+C processing. Use CTRL+BREAK to interrupt the application.|  
+|/b {<Command> &#124; <Program>}|Specifies the command or program to start.|  
 |<Parameters>|Specifies parameters to pass to the command or program.|  
-|\/?|Displays help at the command prompt.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   
@@ -43,7 +43,7 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
   
 -   When you run a command that contains the string "CMD" as the first token without an extension or path qualifier, "CMD" is replaced with the value of the COMSPEC variable. This prevents users from picking up **cmd** from the current directory.  
   
--   When you run a 32\-bit graphical user interface \(GUI\) application, **cmd** does not wait for the application to quit before returning to the command prompt. This behavior does not occur if you run the application from a command script.  
+-   When you run a 32-bit graphical user interface (GUI) application, **cmd** does not wait for the application to quit before returning to the command prompt. This behavior does not occur if you run the application from a command script.  
   
 -   When you run a command that uses a first token that does not contain an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:  
   
@@ -62,7 +62,7 @@ To start the Myapp program at the command prompt and retain use of the current C
 start myapp   
 ```  
   
-To view the **start** command\-line help topic in a separate maximized Command Prompt window, type:  
+To view the **start** command-line help topic in a separate maximized Command Prompt window, type:  
   
 ```  
 start /max start /?  

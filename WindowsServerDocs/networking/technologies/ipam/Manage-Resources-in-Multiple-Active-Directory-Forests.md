@@ -24,7 +24,7 @@ In the **Configure Server Discovery** dialog box, click **Select the forest**, a
   
 In **Select the server roles to discover**, for each domain that you want to manage, specify the type of servers to discover. The options are **Domain controller**, **DHCP server**, and **DNS server**.  
   
-By default, domain controllers, DHCP servers, and DNS servers are discovered \- so if you do not want to discover one of these types of servers, ensure that you deselect the checkbox for that option.  
+By default, domain controllers, DHCP servers, and DNS servers are discovered - so if you do not want to discover one of these types of servers, ensure that you deselect the checkbox for that option.  
   
 In the example illustration above, the IPAM server is installed in the contoso.com forest, and the root domain of the fabrikam.com forest is added for IPAM management. The selected server roles allow IPAM to discover and manage domain controllers, DHCP servers, and DNS servers in the fabrikam.com root domain and the contoso.com root domain.  
   

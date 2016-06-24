@@ -19,7 +19,7 @@ This section contains information about the following WSUS messages:
 
 -   **Computer has not reported status:**
 
--   **Message ID 6703 \- WSUS Synchronization Failed**
+-   **Message ID 6703 - WSUS Synchronization Failed**
 
 -   **Error 0x80070643: Fatal error during installation**
 
@@ -48,7 +48,7 @@ The most common reasons are:
 
 -   The computer has been physically removed from the network
 
-### Message ID 6703 \- WSUS Synchronization Failed
+### Message ID 6703 - WSUS Synchronization Failed
 **Message: The request failed with HTTP status 503: Service Unavailable**.
 
 **Source: Microsoft.UpdateServices.Administration.AdminProxy.CreateUpdateServer.**
@@ -59,17 +59,17 @@ When you attempt to open Update Services on the WSUS server you receive the foll
 
 **An error occurred trying to connect to the WSUS server. This error can happen for a number of reasons. Please contact your network administrator if the problem persists. Click the Reset Server Node to connect to the server again.**
 
-In addition to the above, attempts to access the URL for the WSUS Administration website \(i.e., http:\/\/CM12CAS:8530\) fails with the error:
+In addition to the above, attempts to access the URL for the WSUS Administration website (i.e., http://CM12CAS:8530) fails with the error:
 
 **HTTP Error 503. The service is unavailable**
 
 In this situation, the most likely cause is that the WsusPool Application Pool in IIS is in a stopped state.
 
-Also, the Private Memory Limit \(KB\) for the Application Pool is probably set to the default value of 1843200 KB.
+Also, the Private Memory Limit (KB) for the Application Pool is probably set to the default value of 1843200 KB.
 
-If you encounter this problem, increase the Private Memory Limit to 4GB \(4000000 KB\) and restart the Application Pool. To increase the Private Memory Limit, select the WsusPool Application Pool and click Advanced Settings under Edit Application Pool. Then set the Private Memory Limit to 4GB \(4000000 KB\).
+If you encounter this problem, increase the Private Memory Limit to 4GB (4000000 KB) and restart the Application Pool. To increase the Private Memory Limit, select the WsusPool Application Pool and click Advanced Settings under Edit Application Pool. Then set the Private Memory Limit to 4GB (4000000 KB).
 
-After the Application Pool has been restarted, monitor the SMS\_WSUS\_SYNC\_MANAGER component status, wcm.log and wsyncmgr.log for failures. Please note that it may be necessary to increase the Private Memory Limit to 8GB \(8000000 KB\) or higher depending on the environment.
+After the Application Pool has been restarted, monitor the SMS_WSUS_SYNC_MANAGER component status, wcm.log and wsyncmgr.log for failures. Please note that it may be necessary to increase the Private Memory Limit to 8GB (8000000 KB) or higher depending on the environment.
 
 For additional details, see: [WSUS sync in ConfigMgr 2012 fails with HTTP 503 errors](http://blogs.technet.com/b/sus/archive/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors.aspx)
 
@@ -89,15 +89,15 @@ For additional details, see: [WSUS sync in ConfigMgr 2012 fails with HTTP 503 er
 
 -   You can also check the SoftwareDistribution.log to see if there are events that might indicate a problem.
 
-**Web servicesSQL Service** Web services are hosted in IIS. If they are not running, ensure that IIS is running \(or started\). You can also try resetting the Web service by typing **iisreset** at a command prompt.
+**Web servicesSQL Service** Web services are hosted in IIS. If they are not running, ensure that IIS is running (or started). You can also try resetting the Web service by typing **iisreset** at a command prompt.
 
 **SQL Service** Every service except for the selfupdate service requires that the SQL service is running. If any of the log files indicate SQL connection problems, check the SQL service first. To access the SQL service, click **Start**, point to **Administrative Tools**, click **Services**, and then look for one of the following:
 
--   **MSSQLSERVER** \(if you are using WMSDE or MSDE, or if you are using SQL Server and are using the default instance name for the instance name\)
+-   **MSSQLSERVER** (if you are using WMSDE or MSDE, or if you are using SQL Server and are using the default instance name for the instance name)
 
--   **MSSQL$WSUS** \(if you are using a SQL Server database and have named your database instance "WSUS"\)
+-   **MSSQL$WSUS** (if you are using a SQL Server database and have named your database instance "WSUS")
 
-    Right\-click the service, and then click **Start** if the service is not running, or **Restart** to refresh the service if it is running.
+    Right-click the service, and then click **Start** if the service is not running, or **Restart** to refresh the service if it is running.
 
 ### See also
 WSUS resources on the [Windows Server Update Services](https://technet.microsoft.com/en-us/windowsserver/bb332157.aspx) Windows Server Update Services  TechCenter page

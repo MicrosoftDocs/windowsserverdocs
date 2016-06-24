@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows XP Professional</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows XP Professional</Token>

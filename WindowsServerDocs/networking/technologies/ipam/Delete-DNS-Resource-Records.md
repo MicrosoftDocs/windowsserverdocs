@@ -28,7 +28,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_01.jpg)  
   
-5.  Right\-click the selected records, and then click **Delete DNS resource record**.  
+5.  Right-click the selected records, and then click **Delete DNS resource record**.  
   
     ![](../../media/Delete-DNS-Resource-Records/ipam_DeleteRR_02.jpg)  
   

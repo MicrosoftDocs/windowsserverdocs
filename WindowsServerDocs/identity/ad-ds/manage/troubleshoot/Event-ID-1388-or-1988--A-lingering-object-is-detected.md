@@ -15,13 +15,13 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>If a destination domain controller logs Event ID 1388 or Event ID 1988, a lingering object has been detected and one of two conditions exists on the destination domain controller: </para>
+    <para>If a destination domain controller logs Event ID 1388 or Event ID 1988, a lingering object has been detected and one of two conditions exists on the destination domain controller: </para>
     <list class="bullet">
       <listItem>
-        <para>Event ID 1388: Inbound replication of the lingering object has occurred on the destination domain controller. </para>
+        <para>Event ID 1388: Inbound replication of the lingering object has occurred on the destination domain controller. </para>
       </listItem>
       <listItem>
-        <para>Event ID 1988: Inbound replication of the directory partition of the lingering object has been blocked on the destination domain controller. </para>
+        <para>Event ID 1988: Inbound replication of the directory partition of the lingering object has been blocked on the destination domain controller. </para>
       </listItem>
     </list>
     <para>
@@ -30,12 +30,12 @@ author: Femila
     <list class="bullet">
       <listItem>
         <para>
-          <link xlink:href="#BKMK_1388">Event ID 1388</link>
+          <link xlink:href="#BKMK_1388">Event ID 1388</link>
         </para>
       </listItem>
       <listItem>
         <para>
-          <link xlink:href="#BKMK_1988">Event ID 1988</link>
+          <link xlink:href="#BKMK_1988">Event ID 1988</link>
         </para>
       </listItem>
       <listItem>
@@ -85,11 +85,11 @@ author: Femila
     </list>
   </introduction>
   <section address="BKMK_1388">
-    <title>Event ID 1388</title>
+    <title>Event ID 1388</title>
     <content>
-      <para>This event indicates that a destination domain controller that does not have strict replication consistency enabled received a request to update an object that does not reside in the local copy of the Active Directory database. In response, the destination domain controller requested the full object from the source replication partner. In this way, a lingering object was replicated to the destination domain controller. Therefore, the lingering object was reintroduced into the directory. </para>
+      <para>This event indicates that a destination domain controller that does not have strict replication consistency enabled received a request to update an object that does not reside in the local copy of the Active Directory database. In response, the destination domain controller requested the full object from the source replication partner. In this way, a lingering object was replicated to the destination domain controller. Therefore, the lingering object was reintroduced into the directory. </para>
       <alert class="important">
-        <para>When Event ID 1388 occurs, if either the source domain controller (the replication partner that is outbound-replicating the lingering object) or the destination domain controller (the inbound replication partner that reports Event ID 1388) is running Windows 2000 Server, you cannot use the Repadmin tool to remove lingering objects. For information about how to remove lingering objects in this case, see article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>). The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers. </para>
+        <para>When Event ID 1388 occurs, if either the source domain controller (the replication partner that is outbound-replicating the lingering object) or the destination domain controller (the inbound replication partner that reports Event ID 1388) is running Windows 2000 Server, you cannot use the Repadmin tool to remove lingering objects. For information about how to remove lingering objects in this case, see article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>). The procedures and information in this article apply to the removal of lingering objects from global catalog servers as well as from domain controllers that are not global catalog servers. </para>
       </alert>
       <para>The event text identifies the source domain controller and the outdated (lingering) object. The following is an example of the event text:</para>
       <code>
@@ -131,9 +131,9 @@ HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Strict Replication Consis
     </content>
   </section>
   <section address="BKMK_1988">
-    <title>Event ID 1988</title>
+    <title>Event ID 1988</title>
     <content>
-      <para>This event indicates that a destination domain controller that has strict replication consistency enabled has received a request to update an object that does not exist in its local copy of the Active Directory database. In response, the destination domain controller blocked replication of the directory partition containing that object from that source domain controller. The event text identifies the source domain controller and the outdated (lingering) object. The following is an example of the event text:</para>
+      <para>This event indicates that a destination domain controller that has strict replication consistency enabled has received a request to update an object that does not exist in its local copy of the Active Directory database. In response, the destination domain controller blocked replication of the directory partition containing that object from that source domain controller. The event text identifies the source domain controller and the outdated (lingering) object. The following is an example of the event text:</para>
       <code>Log Name: Directory Service
 Source: Microsoft-Windows-ActiveDirectory_DomainService
 Date: 2/7/2008  8:20:11 AM
@@ -172,13 +172,13 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
   <section address="BKMK_Cause">
     <title>Diagnosis</title>
     <content>
-      <para>An object that has been permanently deleted from AD DS (that is, its tombstone has been garbage-collected on all connected domain controllers) remains on a disconnected domain controller. The domain controller failed to receive direct or transitive replication of the object deletion because it was disconnected (it is offline or experiencing an inbound replication failure) from the replication topology for a period that exceeded a tombstone lifetime. The domain controller is now reconnected to the topology and that object has been updated on the domain controller, causing a replication notification to the replication partner that an update is ready for replication. The replication partner responded according to its replication consistency setting. This notification applies to attempted replication of a writable object. A copy of the writable lingering object might also exist on a global catalog server.</para>
+      <para>An object that has been permanently deleted from AD DS (that is, its tombstone has been garbage-collected on all connected domain controllers) remains on a disconnected domain controller. The domain controller failed to receive direct or transitive replication of the object deletion because it was disconnected (it is offline or experiencing an inbound replication failure) from the replication topology for a period that exceeded a tombstone lifetime. The domain controller is now reconnected to the topology and that object has been updated on the domain controller, causing a replication notification to the replication partner that an update is ready for replication. The replication partner responded according to its replication consistency setting. This notification applies to attempted replication of a writable object. A copy of the writable lingering object might also exist on a global catalog server.</para>
     </content>
   </section>
   <section address="BKMK_Solution">
     <title>Resolution</title>
     <content>
-      <para>If replication of a lingering object is detected, you can remove the object from AD DS, along with any read-only replicas of the object, by identifying the domain controllers that might store this object (including global catalog servers) and running a <system>repadmin</system> command to remove lingering objects on these servers (<system>repadmin /removelingeringobjects</system>). This command is available on domain controllers that are running <token>nextref_longhorincludes>. It is also available on domain controllers that are not running <token>nextref_longhorincludes> but are running the version of Repadmin.exe that is included with Windows Support Tools in Windows Server 2003.</para>
+      <para>If replication of a lingering object is detected, you can remove the object from AD DS, along with any read-only replicas of the object, by identifying the domain controllers that might store this object (including global catalog servers) and running a <system>repadmin</system> command to remove lingering objects on these servers (<system>repadmin /removelingeringobjects</system>). This command is available on domain controllers that are running <token>nextref_longhorincludes>. It is also available on domain controllers that are not running <token>nextref_longhorincludes> but are running the version of Repadmin.exe that is included with Windows Support Tools in Windows Server 2003.</para>
       <para>To remove lingering objects, do the following:</para>
       <list class="ordered">
         <listItem>
@@ -208,7 +208,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
         </listItem>
         <listItem>
           <para>
-            <link xlink:href="#BKMK_Ensure_Strict">Ensure strict replication consistency on new domain controllers when upgrading a Windows Server 2000 Forest</link>, if necessary</para>
+            <link xlink:href="#BKMK_Ensure_Strict">Ensure strict replication consistency on new domain controllers when upgrading a Windows Server 2000 Forest</link>, if necessary</para>
         </listItem>
       </list>
     </content>
@@ -255,7 +255,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                           <para>/showrepl</para>
                         </TD>
                         <TD>
-                          <para>Displays the replication status, including when the domain controller that is specified by &lt;ServerName&gt; last attempted inbound replication of Active Directory partitions. Also displays the GUID of the specified domain controller.</para>
+                          <para>Displays the replication status, including when the domain controller that is specified by &lt;ServerName&gt; last attempted inbound replication of Active Directory partitions. Also displays the GUID of the specified domain controller.</para>
                         </TD>
                       </tr>
                       <tr>
@@ -282,7 +282,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
       <section address="BKMK_RemoveLingeringObjects">
         <title>Use Repadmin to remove lingering objects</title>
         <content>
-          <para>If the destination domain controller and source domain controller are running either Windows Server 2003 or <token>nextref_longhorincludes>, you can use this procedure to remove lingering objects with Repadmin. If either domain controller is running Windows 2000 Server, follow the instructions in article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>).</para>
+          <para>If the destination domain controller and source domain controller are running either Windows Server 2003 or <token>nextref_longhorincludes>, you can use this procedure to remove lingering objects with Repadmin. If either domain controller is running Windows 2000 Server, follow the instructions in article 314282 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41410</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41410</linkUri></externalLink>).</para>
           <para>
             <embeddedLabel>Requirements</embeddedLabel>
           </para>
@@ -291,7 +291,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
               <para>Membership in <embeddedLabel>Domain Admins</embeddedLabel> in the domain of the domain controller that has lingering objects, or <embeddedLabel>Enterprise Admins</embeddedLabel> if the directory partition that has lingering objects is the configuration or schema directory partition, is the minimum required to complete this procedure. <token>review_detailincludes></para>
             </listItem>
             <listItem>
-              <para>Operating system: Windows Server 2003 or <token>nextref_longhorincludes> for &lt;ServerName&gt; and &lt;ServerGUID&gt;</para>
+              <para>Operating system: Windows Server 2003 or <token>nextref_longhorincludes> for &lt;ServerName&gt; and &lt;ServerGUID&gt;</para>
             </listItem>
             <listItem>
               <para>Tool: Repadmin.exe</para>
@@ -336,7 +336,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                           <para>&lt;ServerName&gt;</para>
                         </TD>
                         <TD colspan="1">
-                          <para>The name of the domain controller that has lingering objects, as identified in the event message (Event ID 1388 or Event ID 1988). You can use the Domain Name System (DNS) name or the distinguished name, for example, the distinguished name CN=DC5,OU=Domain Controllers,DC=contoso,DC=com or the DNS name DC5.contoso.com.</para>
+                          <para>The name of the domain controller that has lingering objects, as identified in the event message (Event ID 1388 or Event ID 1988). You can use the Domain Name System (DNS) name or the distinguished name, for example, the distinguished name CN=DC5,OU=Domain Controllers,DC=contoso,DC=com or the DNS name DC5.contoso.com.</para>
                         </TD>
                       </tr>
                       <tr>
@@ -380,7 +380,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
               </step>
               <step>
                 <content>
-                  <para>Repeat step 2 without <codeInline>/advisory_mode</codeInline> to delete the identified lingering objects from the directory partition.</para>
+                  <para>Repeat step 2 without <codeInline>/advisory_mode</codeInline> to delete the identified lingering objects from the directory partition.</para>
                 </content>
               </step>
               <step>
@@ -391,21 +391,21 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
             </steps>
           </procedure>
           <alert class="note">
-            <para>The &lt;ServerName&gt; parameter uses the <codeInline>DC_LIST</codeInline> syntax for <codeInline>repadmin</codeInline>, which allows the use of <codeInline>*</codeInline> for all domain controllers in the forest and <codeInline>gc:</codeInline> for all global catalog servers in the forest. To see the <codeInline>DC_LIST</codeInline> syntax, type <codeInline>repadmin /listhelp</codeInline>. For information about the syntax of the <codeInline>/regkey</codeInline> and <codeInline>/removelingeringobjects</codeInline> parameters, type <codeInline>repadmin /experthelp</codeInline>.</para>
+            <para>The &lt;ServerName&gt; parameter uses the <codeInline>DC_LIST</codeInline> syntax for <codeInline>repadmin</codeInline>, which allows the use of <codeInline>*</codeInline> for all domain controllers in the forest and <codeInline>gc:</codeInline> for all global catalog servers in the forest. To see the <codeInline>DC_LIST</codeInline> syntax, type <codeInline>repadmin /listhelp</codeInline>. For information about the syntax of the <codeInline>/regkey</codeInline> and <codeInline>/removelingeringobjects</codeInline> parameters, type <codeInline>repadmin /experthelp</codeInline>.</para>
           </alert>
         </content>
       </section>
       <section address="BKMK_Enable_Strict">
         <title>Enable strict replication consistency</title>
         <content>
-          <para>To ensure that lingering objects cannot be replicated if they occur, enable strict replication consistency on all domain controllers. The setting for replication consistency is stored in the registry on each domain controller. However, on domain controllers that are running Windows Server 2003 with Service Pack 1 (SP1), Windows Server 2003 with Service Pack 2 (SP2), Windows Server 2003 R2, or <token>nextref_longhorincludes>, you can use Repadmin to enable strict replication consistency on one or all domain controllers.</para>
-          <para>On domain controllers running Windows Server 2003 without SP1 or running any version of Windows 2000 Server, you must edit the registry to enable the setting.</para>
+          <para>To ensure that lingering objects cannot be replicated if they occur, enable strict replication consistency on all domain controllers. The setting for replication consistency is stored in the registry on each domain controller. However, on domain controllers that are running Windows Server 2003 with Service Pack 1 (SP1), Windows Server 2003 with Service Pack 2 (SP2), Windows Server 2003 R2, or <token>nextref_longhorincludes>, you can use Repadmin to enable strict replication consistency on one or all domain controllers.</para>
+          <para>On domain controllers running Windows Server 2003 without SP1 or running any version of Windows 2000 Server, you must edit the registry to enable the setting.</para>
         </content>
         <sections>
           <section address="BKMK_Use_Repadmin">
             <title>Use Repadmin to enable strict replication consistency</title>
             <content>
-              <para>Use this procedure to remove lingering objects on a domain controller that is running Windows Server 2003 with SP1, Windows Server 2003 with SP2, Windows Server 2003 R2, or <token>nextref_longhorincludes>.</para>
+              <para>Use this procedure to remove lingering objects on a domain controller that is running Windows Server 2003 with SP1, Windows Server 2003 with SP2, Windows Server 2003 R2, or <token>nextref_longhorincludes>.</para>
               <para>Membership in <embeddedLabel>Domain Admins</embeddedLabel>, or equivalent, is the minimum required to complete this procedure on a single domain controller. Membership in <embeddedLabel>Enterprise Admins</embeddedLabel>, or equivalent, is the minimum required to complete this procedure on all domain controllers in the forest. <token>review_detailincludes></para>
               <procedure>
                 <title>To use Repadmin to enable strict replication consistency</title>
@@ -438,7 +438,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                               <para>/regkey</para>
                             </TD>
                             <TD>
-                              <para>Enables (<codeInline>+</codeInline>) and disables (<codeInline>-</codeInline>) the value for the <embeddedLabel>Strict Replication Consistency</embeddedLabel> registry entry in <embeddedLabel>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters</embeddedLabel></para>
+                              <para>Enables (<codeInline>+</codeInline>) and disables (<codeInline>-</codeInline>) the value for the <embeddedLabel>Strict Replication Consistency</embeddedLabel> registry entry in <embeddedLabel>HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSParameters</embeddedLabel></para>
                             </TD>
                           </tr>
                           <tr>
@@ -463,27 +463,27 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                   </step>
                   <step>
                     <content>
-                      <para>If you do not use <codeInline>*</codeInline> to apply the change to all domain controllers, repeat step 2 for every domain controller on which you want to enable strict replication consistency.</para>
+                      <para>If you do not use <codeInline>*</codeInline> to apply the change to all domain controllers, repeat step 2 for every domain controller on which you want to enable strict replication consistency.</para>
                     </content>
                   </step>
                 </steps>
               </procedure>
               <alert class="note">
-                <para>For more naming options and information about the syntax of the &lt;DC_LIST&gt; parameter, at the command prompt type <codeInline>repadmin /listhelp</codeInline>. For information about the syntax of the <codeInline>/regkey</codeInline> and <codeInline>/removelingeringobjects</codeInline> parameters, type <codeInline>repadmin /experthelp</codeInline>.</para>
+                <para>For more naming options and information about the syntax of the &lt;DC_LIST&gt; parameter, at the command prompt type <codeInline>repadmin /listhelp</codeInline>. For information about the syntax of the <codeInline>/regkey</codeInline> and <codeInline>/removelingeringobjects</codeInline> parameters, type <codeInline>repadmin /experthelp</codeInline>.</para>
               </alert>
             </content>
           </section>
           <section address="BKMK_Edit_Registry">
             <title>Use Regedit to enable strict replication consistency</title>
             <content>
-              <para>As an alternative to using Repadmin, you can enable strict replication consistency by editing the registry directly. The registry method is required for a domain controller that is running a version of Windows Server that is earlier than Windows Server 2003 with SP1. The setting for replication consistency is stored in the <embeddedLabel>Strict Replication Consistency</embeddedLabel> entry in <embeddedLabel>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters</embeddedLabel>.</para>
+              <para>As an alternative to using Repadmin, you can enable strict replication consistency by editing the registry directly. The registry method is required for a domain controller that is running a version of Windows Server that is earlier than Windows Server 2003 with SP1. The setting for replication consistency is stored in the <embeddedLabel>Strict Replication Consistency</embeddedLabel> entry in <embeddedLabel>HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSParameters</embeddedLabel>.</para>
               <para>The values for the <embeddedLabel>Strict Replication Consistency</embeddedLabel> registry entry are as follows:</para>
               <list class="bullet">
                 <listItem>
                   <para>Value: <system>1</system> (<system>0</system> to disable)</para>
                 </listItem>
                 <listItem>
-                  <para>Default: <system>1</system> (enabled) in a new Windows Server 2003 or <token>nextref_longhorincludes> forest; otherwise <system>0</system>.</para>
+                  <para>Default: <system>1</system> (enabled) in a new Windows Server 2003 or <token>nextref_longhorincludes> forest; otherwise <system>0</system>.</para>
                 </listItem>
                 <listItem>
                   <para>Data type: <system>REG_DWORD</system></para>
@@ -513,7 +513,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
                   </step>
                   <step>
                     <content>
-                      <para>Navigate to the <system>Strict Replication Consistency</system> entry in <system>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters</system>.</para>
+                      <para>Navigate to the <system>Strict Replication Consistency</system> entry in <system>HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSParameters</system>.</para>
                     </content>
                   </step>
                   <step>
@@ -532,7 +532,7 @@ a21aa6d9-7e8a-4a8f-bebf-c3e38d0b733a </code>
   <section address="BKMK_Ensure_Strict">
     <title>Ensure that strict replication consistency is enabled for newly promoted domain controllers</title>
     <content>
-      <para>If you are upgrading a forest that was originally created using a computer running Windows 2000 Server, you should ensure that the forest is configured to enable strict replication consistency on newly promoted domain controllers to help avoid lingering objects. After you update the forest as described in Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=89032</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=89032</linkUri></externalLink>), all new domain controllers that you subsequently add to the forest are created with strict replication consistency disabled. However, you can implement a forest configuration change that causes new domain controllers to have strict replication consistency enabled. To ensure that new domain controllers that you add to the forest have strict replication consistency enabled, you can use the Ldifde.exe tool to create an object in the configuration directory partition of the forest. This object is responsible for enabling strict replication consistency on any Windows Server 2003 or <token>nextref_longhorincludes> domain controller that is promoted into the forest.</para>
+      <para>If you are upgrading a forest that was originally created using a computer running Windows 2000 Server, you should ensure that the forest is configured to enable strict replication consistency on newly promoted domain controllers to help avoid lingering objects. After you update the forest as described in Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=89032</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=89032</linkUri></externalLink>), all new domain controllers that you subsequently add to the forest are created with strict replication consistency disabled. However, you can implement a forest configuration change that causes new domain controllers to have strict replication consistency enabled. To ensure that new domain controllers that you add to the forest have strict replication consistency enabled, you can use the Ldifde.exe tool to create an object in the configuration directory partition of the forest. This object is responsible for enabling strict replication consistency on any Windows Server 2003 or <token>nextref_longhorincludes> domain controller that is promoted into the forest.</para>
       <para>The object that you create is an operational GUID with the following name:</para>
       <para>CN=94fdebc6-8eeb-4640-80de-ec52b9ca17fa,CN=Operations,CN=ForestUpdates,CN=Configuration,DC=&lt;ForestRootDomain&gt;</para>
       <para>You can use the following procedure on any domain controller in the forest to add this object to the configuration directory partition.</para>
@@ -562,7 +562,7 @@ objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=&lt;ForestRootDomain&
             <content>
               <para>At the command prompt, type the following command, and then press ENTER: </para>
               <para>
-                <codeInline>ldifde -i –f &lt;Path&gt;\&lt;FileName&gt;</codeInline>
+                <codeInline>ldifde -i –f &lt;Path&gt;&lt;FileName&gt;</codeInline>
               </para>
               <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
                 <thead>
@@ -594,10 +594,10 @@ objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=&lt;ForestRootDomain&
                   </tr>
                   <tr>
                     <TD>
-                      <para>&lt;Path&gt;\&lt;FileName&gt;</para>
+                      <para>&lt;Path&gt;&lt;FileName&gt;</para>
                     </TD>
                     <TD>
-                      <para>The path and name of the import file that you created in step 1, for example, C:\ldifde.txt.</para>
+                      <para>The path and name of the import file that you created in step 1, for example, C:ldifde.txt.</para>
                     </TD>
                   </tr>
                 </tbody>

@@ -28,7 +28,7 @@ bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
 
 -   You must have administrator privileges to use the **Allusers** parameter.
 
--   Use CTRL\+C to stop the refresh.
+-   Use CTRL+C to stop the refresh.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example monitors the transfer queue for jobs owned by the current user and refreshes the information every 60 seconds.

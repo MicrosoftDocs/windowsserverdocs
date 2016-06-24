@@ -20,7 +20,7 @@ Restricting access over named pipes such as COMNAP and LOCATOR helps prevent una
   
 ### Possible values  
   
--   User\-defined list of shared folders  
+-   User-defined list of shared folders  
   
 -   Not defined  
   
@@ -29,7 +29,7 @@ Restricting access over named pipes such as COMNAP and LOCATOR helps prevent una
 1.  Set this policy to a null value; that is, enable the policy setting, but do not enter named pipes in the text box. This will disable null session access over named pipes, and applications that rely on this feature or on unauthenticated access to named pipes will no longer function. For example, with Microsoft Commercial Internet System 1.0, the Internet Mail Service runs under Inetinfo.exe. Inetinfo.exe starts in the context of the System account. When Internet Mail Service needs to query the Microsoft SQL Server database, it uses the System account, which uses null credentials to access an SQL pipe on the computer running SQL Server.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -38,13 +38,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Netlogon, samr, lsarpc|  
-|Stand\-Alone Server Default Settings|Null|  
+|Stand-Alone Server Default Settings|Null|  
 |DC Effective Default Settings|Netlogon, samr, lsarpc|  
 |Member Server Effective Default Settings|Not defined|  
 |Client Computer Effective Default Settings|Not defined|  
   
 ### Operating system version differences  
-The default settings for this policy changed from Windows Server 2003.  
+The default settings for this policy changed from Windows Server 2003.  
   
 ## Policy management  
 This section describes different features and tools available to help you manage this policy.  
@@ -63,9 +63,9 @@ You can restrict access over named pipes such as COMNAP and LOCATOR to help prev
   
 |Named pipe|Purpose|  
 |--------------|-----------|  
-|COMNAP|SNABase named pipe. Systems network Architecture \(SNA\) is a collection of network protocols that were originally developed for IBM mainframe computers.|  
+|COMNAP|SNABase named pipe. Systems network Architecture (SNA) is a collection of network protocols that were originally developed for IBM mainframe computers.|  
 |COMNODE|SNA Server named pipe.|  
-|SQL\\QUERY|Default named pipe for SQL Server.|  
+|SQL\QUERY|Default named pipe for SQL Server.|  
 |SPOOLSS|Named pipe for the Print Spooler service.|  
 |EPMAPPER|End Point Mapper named pipe.|  
 |LOCATOR|Remote Procedure Call Locator service named pipe.|  
@@ -73,9 +73,9 @@ You can restrict access over named pipes such as COMNAP and LOCATOR to help prev
 |TrkSvr|Distributed Link Tracking Server named pipe.|  
   
 ### Countermeasure  
-Configure the **Network access: Named Pipes that can be accessed anonymously** setting to a null value \(enable the setting but do not specify named pipes in the text box\).  
+Configure the **Network access: Named Pipes that can be accessed anonymously** setting to a null value (enable the setting but do not specify named pipes in the text box).  
   
 ### Potential impact  
-This configuration disables null\-session access over named pipes, and applications that rely on this feature or on unauthenticated access to named pipes no longer function. This may break trust between Windows Server 2003 domains in a mixed mode environment.  
+This configuration disables null-session access over named pipes, and applications that rely on this feature or on unauthenticated access to named pipes no longer function. This may break trust between Windows Server 2003 domains in a mixed mode environment.  
   
 

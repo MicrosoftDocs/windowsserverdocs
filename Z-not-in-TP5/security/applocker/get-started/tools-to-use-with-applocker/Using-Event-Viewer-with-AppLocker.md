@@ -21,13 +21,13 @@ The AppLocker log contains information about applications that are affected by A
 
 -   Whether the file or Packaged app is allowed or blocked
 
--   The rule type \(path, file hash, or publisher\)
+-   The rule type (path, file hash, or publisher)
 
 -   The rule name
 
--   The security identifier \(SID\) for the user or group identified in the rule
+-   The security identifier (SID) for the user or group identified in the rule
 
-Review the entries in the Event Viewer to determine if any applications are not included in the rules that you automatically generated. For instance, some line\-of\-business applications are installed to non\-standard locations, such as the root of the active drive \(for example: %SystemDrive%\).
+Review the entries in the Event Viewer to determine if any applications are not included in the rules that you automatically generated. For instance, some line-of-business applications are installed to non-standard locations, such as the root of the active drive (for example: %SystemDrive%).
 
 For information about what to look for in the AppLocker Event logs for  Windows Server 2012  and Windows 8, see [Monitor Application Usage with AppLocker](http://technet.microsoft.com/library/hh994604.aspx).
 
@@ -35,7 +35,7 @@ For information about what to look for in the AppLocker Event logs for  Windows 
 
 1.  Open Event Viewer. To do this, click **Start**, type **eventvwr.msc** in the **Search programs and files** box, and then press ENTER. On  Windows Server 2012  and Windows 8, on the **Start** screen, type**eventvwr.msc**.
 
-2.  In the console tree under **Application and Services Logs\\Microsoft\\Windows**, click **AppLocker**.
+2.  In the console tree under **Application and Services Logs\Microsoft\Windows**, click **AppLocker**.
 
 The following table contains information about the events that you can use to determine which applications are affected by AppLocker rules.
 

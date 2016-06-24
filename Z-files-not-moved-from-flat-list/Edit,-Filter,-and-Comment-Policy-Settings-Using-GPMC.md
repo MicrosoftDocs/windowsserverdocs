@@ -10,11 +10,11 @@ ms.assetid: 04756cea-9b34-459f-ae44-74f833aafb76
 author: coreyp
 ---
 # Edit, Filter, and Comment Policy Settings Using GPMC
-This topic provides links to tasks associated with configuring policy settings using the Group Policy Management Console \(GPMC\).  
+This topic provides links to tasks associated with configuring policy settings using the Group Policy Management Console (GPMC).  
   
 The Group Policy Management Console or the Group Policy Management Editor, can help you manage policy settings through the following tasks.  
   
--   [Administrative Templates \(ADMX\)](#BKMK_Edit_ADMX)  
+-   [Administrative Templates (ADMX)](#BKMK_Edit_ADMX)  
   
     -   Edit settings  
   
@@ -22,7 +22,7 @@ The Group Policy Management Console or the Group Policy Management Editor, can h
   
     -   Add comments to settings  
   
--   [Classic Administrative Templates \(ADM\)](#BKMK_Edit_ADM)  
+-   [Classic Administrative Templates (ADM)](#BKMK_Edit_ADM)  
   
     -   Add templates  
   

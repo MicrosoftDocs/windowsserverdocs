@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 96e437c0-1aa3-46ab-9078-a7b8cdaf3792
 ---
 # Convert
-Converts file allocation table \(FAT\) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact. Volumes converted to the NTFS file system cannot be converted back to FAT or FAT32.
+Converts file allocation table (FAT) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact. Volumes converted to the NTFS file system cannot be converted back to FAT or FAT32.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -23,17 +23,17 @@ convert [<Volume>] /fs:ntfs [/v] [/cvtarea:<FileName>] [/nosecurity] [/x]
 
 |Parameter|Description|
 |-------------|---------------|
-|<Volume>|Specifies the drive letter \(followed by a colon\), mount point, or volume name to convert to NTFS.|
-|\/fs:ntfs|Required. Converts the volume to NTFS.|
-|\/v|Runs **convert** in verbose mode, which displays all messages during the conversion process.|
-|\/cvtarea:<FileName>|Specifies that the Master File Table \(MFT\) and other NTFS metadata files are written to an existing, contiguous placeholder file. This file must be in the root directory of the file system to be converted. Use of the **\/cvtarea** parameter can result in a less fragmented file system after conversion. For best results, the size of this file should be 1 KB multiplied by the number of files and directories in the file system, although the **convert** utility accepts files of any size. **Important:** You must create the placeholder file by using the **fsutil file createnew** command prior to running **convert**. **Convert** does not create this file for you. **Convert** overwrites this file with NTFS metadata. After conversion, any unused space in this file is freed.|
-|\/nosecurity|Specifies that the security settings on the converted files and directories allow access by all users.|
-|\/x|Dismounts the volume, if necessary, before it is converted. Any open handles to the volume will no longer be valid.|
-|\/?|Displays help at the command prompt.|
+|<Volume>|Specifies the drive letter (followed by a colon), mount point, or volume name to convert to NTFS.|
+|/fs:ntfs|Required. Converts the volume to NTFS.|
+|/v|Runs **convert** in verbose mode, which displays all messages during the conversion process.|
+|/cvtarea:<FileName>|Specifies that the Master File Table (MFT) and other NTFS metadata files are written to an existing, contiguous placeholder file. This file must be in the root directory of the file system to be converted. Use of the **/cvtarea** parameter can result in a less fragmented file system after conversion. For best results, the size of this file should be 1 KB multiplied by the number of files and directories in the file system, although the **convert** utility accepts files of any size. **Important:** You must create the placeholder file by using the **fsutil file createnew** command prior to running **convert**. **Convert** does not create this file for you. **Convert** overwrites this file with NTFS metadata. After conversion, any unused space in this file is freed.|
+|/nosecurity|Specifies that the security settings on the converted files and directories allow access by all users.|
+|/x|Dismounts the volume, if necessary, before it is converted. Any open handles to the volume will no longer be valid.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   If **convert** cannot lock the drive \(for example, the drive is the system volume or the current drive\), you are given the option to convert the drive the next time you restart the computer. If you cannot restart the computer immediately to complete the conversion, plan a time to restart the computer and allow extra time for the conversion process to complete.
+-   If **convert** cannot lock the drive (for example, the drive is the system volume or the current drive), you are given the option to convert the drive the next time you restart the computer. If you cannot restart the computer immediately to complete the conversion, plan a time to restart the computer and allow extra time for the conversion process to complete.
 
 -   For volumes converted from FAT or FAT32 to NTFS:
 

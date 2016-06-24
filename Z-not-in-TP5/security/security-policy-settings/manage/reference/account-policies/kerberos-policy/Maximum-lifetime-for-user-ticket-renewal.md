@@ -14,11 +14,11 @@ ms.assetid: 3ceeed17-69d0-4c5a-b16f-c142802b8b5e
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-The **Maximum lifetime for user ticket renewal** policy setting determines the period of time \(in days\) during which a user’s ticket\-granting ticket can be renewed.  
+The **Maximum lifetime for user ticket renewal** policy setting determines the period of time (in days) during which a user’s ticket-granting ticket can be renewed.  
   
 The possible values for this Group Policy setting are:  
   
--   A user\-defined number of days from 0 through 99,999  
+-   A user-defined number of days from 0 through 99,999  
   
 -   Not defined  
   
@@ -26,12 +26,12 @@ This policy setting is supported on versions of Windows that are designated in t
   
 #### Best practices  
   
-1.  If the value for this policy setting is too high, users may be able to renew very old user ticket\-granting tickets. If the value is 0, ticket\-granting tickets never expire.  
+1.  If the value for this policy setting is too high, users may be able to renew very old user ticket-granting tickets. If the value is 0, ticket-granting tickets never expire.  
   
     It is advisable to set **Maximum lifetime for user ticket renewal** to **7** days.  
   
 #### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Kerberos Policy\\  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy\  
   
 #### Default values  
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
@@ -40,7 +40,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|7 days|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not applicable|  
+|Stand-Alone Server Default Settings|Not applicable|  
 |Domain Controller Effective Default Settings|7 days|  
 |Member Server Effective Default Settings|Not applicable|  
 |Client Computer Effective Default Settings|Not applicable|  
@@ -56,9 +56,9 @@ A restart of the computer is not required for this policy setting to be effectiv
 This policy setting is configured on the domain controller.  
   
 #### Group Policy  
-Client computers will get the new setting during the next scheduled and successful Group Policy refresh. But for domain controllers to assign these new settings immediately, a Gpupdate \/force is required. On the local computer, the Security Configuration Engine will refresh this setting in about five minutes.  
+Client computers will get the new setting during the next scheduled and successful Group Policy refresh. But for domain controllers to assign these new settings immediately, a Gpupdate /force is required. On the local computer, the Security Configuration Engine will refresh this setting in about five minutes.  
   
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   

@@ -35,9 +35,9 @@ Your planning document should contain:
 
 -   Application control policy project target dates, both for planning and deployment.
 
--   A complete list of applications used by each business group \(or organizational unit\), including version information and installation paths.
+-   A complete list of applications used by each business group (or organizational unit), including version information and installation paths.
 
--   What condition to apply to rules governing each application \(or whether to use the default set provided by AppLocker\).
+-   What condition to apply to rules governing each application (or whether to use the default set provided by AppLocker).
 
 -   A strategy for using Group Policy to deploy the AppLocker policies.
 
@@ -50,13 +50,13 @@ You can use the following form to construct your own AppLocker planning document
 
 **Business group**:
 
-**Operating system environment**: \(Windows and non\-Windows\)
+**Operating system environment**: (Windows and non-Windows)
 
 ||||
 |-|-|-|
 |**Contacts**|Business contact:|Technical contact:|
 |**Other departments**|In this business group:|Affected by this project:|
-|**Security policies**|Internal:|Regulatory\/compliance:|
+|**Security policies**|Internal:|Regulatory/compliance:|
 |**Business goals**|Primary:|Secondary:|
 |**Project target dates**|Design signoff date:|Policy deployment date:|
 
@@ -83,12 +83,12 @@ You can use the following form to construct your own AppLocker planning document
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|Use default rule or define new rule condition|Allow or deny|GPO name|Support policy|
 |------------------|-----------------------|------------------------|----------------|---------------------|-------------------------------------------------|-----------------|------------|------------------|
-|Bank Tellers|Teller\-East and Teller\-West|Yes|Teller Software|C:\\Program Files\\Woodgrove\\Teller.exe|File is signed; create a publisher condition|Allow|Tellers\-AppLockerTellerRules|Web help|
-||||Windows files|C:\\Windows|Create a path exception to the default rule to exclude \\Windows\\Temp|Allow||Help desk|
-|Human Resources|HR\-All|Yes|Check Payout|C:\\Program Files\\Woodgrove\\HR\\Checkcut.exe|File is signed; create a publisher condition|Allow|HR\-AppLockerHRRules|Web help|
-||||Time Sheet Organizer|C:\\Program Files\\Woodgrove\\HR\\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
-||||Internet Explorer 7|C:\\Program Files\\Internet Explorer\\|File is signed; create a publisher condition|Deny||Web help|
-||||Windows files|C:\\Windows|Use the default rule for the Windows path|Allow||Help desk|
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|File is signed; create a publisher condition|Allow|Tellers-AppLockerTellerRules|Web help|
+||||Windows files|C:\Windows|Create a path exception to the default rule to exclude \Windows\Temp|Allow||Help desk|
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|File is signed; create a publisher condition|Allow|HR-AppLockerHRRules|Web help|
+||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|File is not signed; create a file hash condition|Allow||Web help|
+||||Internet Explorer 7|C:\Program Files\Internet Explorer\|File is signed; create a publisher condition|Deny||Web help|
+||||Windows files|C:\Windows|Use the default rule for the Windows path|Allow||Help desk|
 
 **Event processing**
 
@@ -101,8 +101,8 @@ You can use the following form to construct your own AppLocker planning document
 
 |Business group|Rule update policy|Application decommission policy|Application version policy|Application deployment policy|
 |------------------|----------------------|-----------------------------------|------------------------------|---------------------------------|
-|Bank Tellers|Planned: Monthly through business office triage<br /><br />Emergency: Request through help desk|Through business office triage<br /><br />30\-day notice required|General policy: Keep past versions for 12 months<br /><br />List policies for each application|Coordinated through business office<br /><br />30\-day notice required|
-|Human Resources|Planned: Monthly through HR triage<br /><br />Emergency: Request through help desk|Through HR triage<br /><br />30\-day notice required|General policy: Keep past versions for 60 months<br /><br />List policies for each application|Coordinated through HR<br /><br />30\-day notice required|
+|Bank Tellers|Planned: Monthly through business office triage<br /><br />Emergency: Request through help desk|Through business office triage<br /><br />30-day notice required|General policy: Keep past versions for 12 months<br /><br />List policies for each application|Coordinated through business office<br /><br />30-day notice required|
+|Human Resources|Planned: Monthly through HR triage<br /><br />Emergency: Request through help desk|Through HR triage<br /><br />30-day notice required|General policy: Keep past versions for 60 months<br /><br />List policies for each application|Coordinated through HR<br /><br />30-day notice required|
 
 ### Additional resources
 

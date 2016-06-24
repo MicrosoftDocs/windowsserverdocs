@@ -10,7 +10,7 @@ ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
 author: jaimeo
 ---
 # Tscon
-Connects to another session on a Remote Desktop Session Host \(RD Session Host\) server.  
+Connects to another session on a Remote Desktop Session Host (RD Session Host) server.  
   
 For examples of how to use this command, see [Examples](#BKMK_examples).  
   
@@ -27,19 +27,19 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
   
 |Parameter|Description|  
 |-------------|---------------|  
-|<SessionID>|Specifies the ID of the session to which you want to connect. If you use the optional **\/dest:**<*SessionName*> parameter, this is the ID of the session to which you want to connect.|  
+|<SessionID>|Specifies the ID of the session to which you want to connect. If you use the optional **/dest:**<*SessionName*> parameter, this is the ID of the session to which you want to connect.|  
 |<SessionName>|Specifies the name of the session to which you want to connect.|  
-|\/dest:<SessionName>|Specifies the name of the current session. This session will disconnect when you connect to the new session.|  
-|\/password:<pw>|Specifies the password of the user who owns the session to which you want to connect. This password is required when the connecting user does not own the session.|  
-|\/password:\*|Prompts for the password of the user who owns the session to which you want to connect.|  
-|\/v|Displays information about the actions being performed.|  
-|\/?|Displays help at the command prompt.|  
+|/dest:<SessionName>|Specifies the name of the current session. This session will disconnect when you connect to the new session.|  
+|/password:<pw>|Specifies the password of the user who owns the session to which you want to connect. This password is required when the connecting user does not own the session.|  
+|/password:*|Prompts for the password of the user who owns the session to which you want to connect.|  
+|/v|Displays information about the actions being performed.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   
 -   You must have Full Control access permission or Connect special access permission to connect to another session.  
   
--   The **\/dest:**<*SessionName*> parameter allows you to connect the session of another user to a different session.  
+-   The **/dest:**<*SessionName*> parameter allows you to connect the session of another user to a different session.  
   
 -   If you do not specify a password in the <*Password*> parameter, and the target session belongs to a user other than the current one, **tscon** fails.  
   

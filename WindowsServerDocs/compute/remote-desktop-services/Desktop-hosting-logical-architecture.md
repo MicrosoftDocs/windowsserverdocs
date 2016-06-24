@@ -22,8 +22,8 @@ The logical architecture diagram shows a two-layer architecture with the followi
 - **Azure Services**: Consists of the Azure portal, Load Balancer, VPN gateway, Windows Server operating system instances running the Hyper-V role used to virtualize the physical servers, storage units, networks switches, routers, and so on that make up the Azure Infrastructure Services. Azure Services allow the VMs, networks, storage, and applications to be created independently from underlying hardware.   
   
 The basic desktop hosting service can be extended in two ways:  
-1.	By adding both desktop and RemoteApp collections  
-2.	By duplicating the components, allowing for higher availability and allowing the service to scale out to larger numbers of users  
+1.  By adding both desktop and RemoteApp collections  
+2.  By duplicating the components, allowing for higher availability and allowing the service to scale out to larger numbers of users  
   
 A logical architecture diagram of the software components for an extended desktop hosting service in Microsoft Azure is shown in Diagram 2.  
   

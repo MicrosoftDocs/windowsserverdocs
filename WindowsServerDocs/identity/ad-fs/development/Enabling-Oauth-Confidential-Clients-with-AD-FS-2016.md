@@ -16,10 +16,10 @@ author: billmath
 Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 2016 introduces support for clients capable of maintaining their own secret, such as an app or service running on a web server.  These clients are known as confidential clients.    
 Below is a schematic of a web application running on a web server and serving as a confidential client to AD FS:  
   
-## Pre\-requisites  
-The following are a list of pre\-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
+## Pre-requisites  
+The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed and an AD FS farm has been created.  
   
--   An Azure AD subscription \(a free trial is fine\)  
+-   An Azure AD subscription (a free trial is fine)  
   
 -   GitHub client tools  
   
@@ -32,7 +32,7 @@ The following section describes how to configure the application group in AD FS 
   
 #### Create the Application Group  
   
-1.  In AD FS Management, right\-click on Application Groups and select **Add Application Group**.  
+1.  In AD FS Management, right-click on Application Groups and select **Add Application Group**.  
   
 2.  On the Application Group Wizard, for the name enter **ADFSOAUTHCC** and under **Standalone applications** select the **Server application or Website** template.  Click **Next**.  
   
@@ -42,7 +42,7 @@ The following section describes how to configure the application group in AD FS 
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG)  
   
-4.  Enter the following for **Redirect URI:** \- **https:\/\/localhost:44323**.  Click **Add**. Click **Next**.  
+4.  Enter the following for **Redirect URI:** - **https://localhost:44323**.  Click **Add**. Click **Next**.  
   
 5.  On the **Configure Application Credentials** screen, place a check in **Generate a shared secret**and copy the secret.  This will be used later as the value for **ida:AppKey** in the applications web.config file.  Click **Next**.  
   
@@ -52,7 +52,7 @@ The following section describes how to configure the application group in AD FS 
   
 7.  On the **Complete** screen,  click **Close**.  
   
-8.  Now, on the right\-click the new Application Group and select **Properties**.  
+8.  Now, on the right-click the new Application Group and select **Properties**.  
   
 9. On **ADFSOAUTHCC Properties** click **Add application**.  
   
@@ -60,7 +60,7 @@ The following section describes how to configure the application group in AD FS 
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_6.PNG)  
   
-11. On the **Configure Web API** screen, enter the following for **Identifier** \- **https:\/\/contoso.com\/WebApp**.  Click **Add**. Click **Next**.  This value will be used later for **ida:GraphResourceId** in the applications web.config file.  
+11. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  This value will be used later for **ida:GraphResourceId** in the applications web.config file.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG)  
   
@@ -68,7 +68,7 @@ The following section describes how to configure the application group in AD FS 
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
   
-13. On the **Configure Application Permissions** screen,  make sure**user\_impersonation** is selected and click **Next**.  
+13. On the **Configure Application Permissions** screen,  make sure**user_impersonation** is selected and click **Next**.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_8.PNG)  
   
@@ -93,15 +93,15 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
   
 #### To upgrade the database file  
   
-1.  Open the project in Visual Studio, there will be a pop\-up telling you that the app requires SQL Server 2102 Express or you will need to upgrade the database.  Click Ok.  
+1.  Open the project in Visual Studio, there will be a pop-up telling you that the app requires SQL Server 2102 Express or you will need to upgrade the database.  Click Ok.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
   
-2.  Next compile the application by selecting Build \-> Build Solution at the top.  This will restore all of the NuGet packages.  
+2.  Next compile the application by selecting Build -> Build Solution at the top.  This will restore all of the NuGet packages.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_13.PNG)  
   
-3.  Now at the top, select **View** \-> **Server Explorer**.  Once that opens, under **Data Connections**, right\-click **DefaultConnection** and select **Modify Connection**.  
+3.  Now at the top, select **View** -> **Server Explorer**.  Once that opens, under **Data Connections**, right-click **DefaultConnection** and select **Modify Connection**.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_14.PNG)  
   
@@ -109,7 +109,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_15.PNG)  
   
-5.  On the Advanced Properties, locate Data Source and use the drop\-down to change it from **\(LocalDb\\v11.0\)** to **\(LoaclDB\)MSSQLLocalDB**.  
+5.  On the Advanced Properties, locate Data Source and use the drop-down to change it from **(LocalDb\v11.0)** to **(LoaclDB)MSSQLLocalDB**.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_16.PNG)  
   
@@ -124,18 +124,18 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 8.  Now, open the Web.config file and replace the value that is in connectionString with the value you copied above.  Save the Web.config file.  
   
     > [!NOTE]  
-    > The steps above are necessary so that we can get the new connectionString.  Otherwise, when we run Update\-Database below it will error out.  
+    > The steps above are necessary so that we can get the new connectionString.  Otherwise, when we run Update-Database below it will error out.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_19.PNG)  
   
-9. At the top of Visual Studio, select **View** \-> **Other Windows** \-> **Package Manager Console**.  
+9. At the top of Visual Studio, select **View** -> **Other Windows** -> **Package Manager Console**.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_20.PNG)  
   
 10. At the bottom, in the Package Manager Console enter:  `Enable-Migrations` and hit enter.  
   
     > [!NOTE]  
-    > If you get an error that says Enable\-Migrations is not recognized as a cmdlet, enter Install\-Package EntityFramework to update the EntityFramework.  
+    > If you get an error that says Enable-Migrations is not recognized as a cmdlet, enter Install-Package EntityFramework to update the EntityFramework.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_21.PNG)  
   
@@ -155,15 +155,15 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
   
 2.  Open the web.config file.  Modify the following values:  
   
-    -   ida:ClientId \- enter the value from \#3 above.  
+    -   ida:ClientId - enter the value from #3 above.  
   
-    -   ida:AppKey \- enter the value from \#5 above.  
+    -   ida:AppKey - enter the value from #5 above.  
   
-    -   ida:GraphResourceId \- enter the value from \#11 above.  
+    -   ida:GraphResourceId - enter the value from #11 above.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_24.PNG)  
   
-3.  Open the Startup.Auth.cs file under App\_Start and make the following changes:  
+3.  Open the Startup.Auth.cs file under App_Start and make the following changes:  
   
     -   Comment out the following lines:  
   
@@ -181,7 +181,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
         public static readonly string Authority = "https://<your_fsname>/adfs";  
         ```  
   
-        where <your\_fsname> is replaced with the DNS portion of your federation service url, for example adfs.contoso.com  
+        where <your_fsname> is replaced with the DNS portion of your federation service url, for example adfs.contoso.com  
   
         ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_26.PNG)  
   
@@ -246,15 +246,15 @@ In this section we will test the confidential client solution.  Use the followin
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
   
-4.  Notice now, the ASP.NET site says Hello bsimon\!.  Click **Profile**.  
+4.  Notice now, the ASP.NET site says Hello bsimon!.  Click **Profile**.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
   
-5.  This brings up a page without any information and says that we must click here to sign\-in.  Click **here**.  
+5.  This brings up a page without any information and says that we must click here to sign-in.  Click **here**.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
   
-6.  You will now be prompted to sign\-in to AD FS.  
+6.  You will now be prompted to sign-in to AD FS.  
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
   

@@ -19,15 +19,15 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 command </parameter>
 ```
 
-## Sub\-commands
-The following sub\-commands are available at all times:
+## Sub-commands
+The following sub-commands are available at all times:
 
-|Sub\-command|Description|
+|Sub-command|Description|
 |----------------|---------------|
 |class|Escapes from the default alias mode of WMIC to access classes in the WMI schema directly.|
 |path|Escapes from the default alias mode of WMIC to access instances in the WMI schema directly.|
 |context|Displays the current values of all global switches.|
-|\[quit &#124; exit\]|Exits the WMIC command shell.|
+|[quit &#124; exit]|Exits the WMIC command shell.|
 
 ## Parameters
 
@@ -68,7 +68,7 @@ USER         : N/A
 AGGREGATE    : ON
 ```
 
-To change the language ID used by the command line to English \(locale ID 409\), type:
+To change the language ID used by the command line to English (locale ID 409), type:
 
 ```
 wmic /locale:ms_409

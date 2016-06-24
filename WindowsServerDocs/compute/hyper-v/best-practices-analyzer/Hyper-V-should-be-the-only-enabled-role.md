@@ -13,14 +13,14 @@ ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
 author: KBDAzure
 ---
 # Hyper-V should be the only enabled role
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -28,19 +28,19 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ## Issue  
   
-*Roles other than Hyper\-V are enabled on this server.*  
+*Roles other than Hyper-V are enabled on this server.*  
   
-In most cases, it's not a good idea to install other roles on a server running the Hyper\-V role. Remote Desktop Virtualization Host role service is an exception, because it's part of the Remote Desktop Services role and requires Hyper\-V to be installed on the same server.  
+In most cases, it's not a good idea to install other roles on a server running the Hyper-V role. Remote Desktop Virtualization Host role service is an exception, because it's part of the Remote Desktop Services role and requires Hyper-V to be installed on the same server.  
   
 ## Impact  
   
-*The Hyper\-V role should be the only role enabled on a server.*  
+*The Hyper-V role should be the only role enabled on a server.*  
   
-This best practice helps keep the host operating system free of roles, features, and applications that aren't required to run Hyper\-V. Following this best practice and running Hyper\-V on Nano Server helps reduce the number of updates you'll need because only Nano Server, the Hyper\-V service components, and the Windows hypervisor would be subject to software updates.  
+This best practice helps keep the host operating system free of roles, features, and applications that aren't required to run Hyper-V. Following this best practice and running Hyper-V on Nano Server helps reduce the number of updates you'll need because only Nano Server, the Hyper-V service components, and the Windows hypervisor would be subject to software updates.  
   
 ## Resolution  
   
-*Use Server Manager to remove all roles except Hyper\-V.*  
+*Use Server Manager to remove all roles except Hyper-V.*  
   
 Server Manager includes the Remove Roles Wizard. This wizard lets you remove more than one role at once. Before removing roles, the Remove Roles Wizard checks for dependencies to reduce the risk of removing software that other roles rely on. If dependencies are found, the wizard prompts you to approve the removal of other roles, role services, or software required by installed roles.   
   

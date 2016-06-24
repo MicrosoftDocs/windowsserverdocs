@@ -13,14 +13,14 @@ ms.assetid: 511e1172-aeef-463d-b5dd-2bffae411ff1
 author: KBDAzure
 ---
 # Configure a virtual machine with a SCSI controller to be able to hot plug and hot unplug storage
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   

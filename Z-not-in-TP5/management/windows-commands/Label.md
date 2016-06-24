@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: bbae8bdd-97d4-4566-9118-7c95aa07645f
 ---
 # Label
-Creates, changes, or deletes the volume label \(that is, the name\) of a disk. If used without parameters, the **label** command changes the current volume label or deletes the existing label.
+Creates, changes, or deletes the volume label (that is, the name) of a disk. If used without parameters, the **label** command changes the current volume label or deletes the existing label.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -23,14 +23,14 @@ label [/mp] [<Volume>] [<Label>]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/mp|Specifies that the volume should be treated as a mount point or volume name.|
-|<Volume>|Specifies a drive letter \(followed by a colon\), mount point, or volume name. If a volume name is specified, the **\/mp** parameter is unnecessary.|
+|/mp|Specifies that the volume should be treated as a mount point or volume name.|
+|<Volume>|Specifies a drive letter (followed by a colon), mount point, or volume name. If a volume name is specified, the **/mp** parameter is unnecessary.|
 |<Label>|Specifies the label for the volume.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
--   Windows displays the volume label and serial number \(if it has one\) as part of the directory listing.
+-   Windows displays the volume label and serial number (if it has one) as part of the directory listing.
 
 -   An NTFS volume label can be up to 32 characters in length, including spaces. NTFS volume labels retain and display the case that was used when the label was created.
 

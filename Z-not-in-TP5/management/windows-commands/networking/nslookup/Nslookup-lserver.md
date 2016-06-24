@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
 ---
 # Nslookup lserver
-Changes the default server to the specified Domain Name System \(DNS\) domain.
+Changes the default server to the specified Domain Name System (DNS) domain.
 
 ## Syntax
 

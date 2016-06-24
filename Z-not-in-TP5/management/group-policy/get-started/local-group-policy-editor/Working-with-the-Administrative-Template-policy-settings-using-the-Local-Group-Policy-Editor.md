@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 18a19f90-c524-438a-b84c-376014a5bec9
 ---
 # Working with the Administrative Template policy settings using the Local Group Policy Editor
-This topic describes how to use the Local Group Policy Editor \(gpedit\) to manage Administrative Template policy settings.
+This topic describes how to use the Local Group Policy Editor (gpedit) to manage Administrative Template policy settings.
 
 ## Introduction and common procedures
-Administrative Templates are registry\-based policy settings that appear in the Local Group Policy Editor under the Administrative Templates node of both the Computer and User Configuration nodes. This hierarchy is created when the Local Group Policy Editor reads XML\-based Administrative Template files \(.admx\).
+Administrative Templates are registry-based policy settings that appear in the Local Group Policy Editor under the Administrative Templates node of both the Computer and User Configuration nodes. This hierarchy is created when the Local Group Policy Editor reads XML-based Administrative Template files (.admx).
 
 #### To edit Administrative Templates policy settings
 
@@ -22,7 +22,7 @@ Administrative Templates are registry\-based policy settings that appear in the 
 
 3.  In the **Setting** column, click the name for a policy setting to read a description of the policy setting.
 
-4.  To change that policy setting from its current state, double\-click the name of the policy setting.
+4.  To change that policy setting from its current state, double-click the name of the policy setting.
 
 5.  In the policy setting dialog box, click one of the following:
 
@@ -36,15 +36,15 @@ Administrative Templates are registry\-based policy settings that appear in the 
 
 ### Additional considerations
 
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
 
--   In the Local Group Policy Editor, there are two Administrative Templates branches. Settings for **HKEY\_LOCAL\_MACHINE** are under **Computer Configuration**, and settings for **HKEY\_CURRENT\_USER** are under **User Configuration**.
+-   In the Local Group Policy Editor, there are two Administrative Templates branches. Settings for **HKEY_LOCAL_MACHINE** are under **Computer Configuration**, and settings for **HKEY_CURRENT_USER** are under **User Configuration**.
 
 -   If computer policy conflicts with user policy, computer policy generally takes precedence. However, if application authors disregard this convention, Group Policy cannot enforce it.
 
--   Administrative Template policy settings are also known as registry\-based policy settings.
+-   Administrative Template policy settings are also known as registry-based policy settings.
 
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to filter Administrative Template policy settings
 The Local Group Policy Editor provides the option to filter Administrative Template policy settings based on:
@@ -79,7 +79,7 @@ The Managed property filter has three states: **Any**, **Yes**, and **No**. Sett
 
 1.  Open the **Local Group Policy Editor**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration\\Policies** or **User Configuration\\Policies**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
 
 3.  In the **Managed** list, click the appropriate filter.
 
@@ -96,7 +96,7 @@ The Configured property filter has three states: **Any**, **Yes**, and **No**. S
 
 1.  Open the **Local Group Policy Editor**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration\\Policies** or **User Configuration\\Policies**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
 
 3.  In the **Configured** list, click the appropriate filter.
 
@@ -111,7 +111,7 @@ The Commented property filter has three states: **Any**, **Yes**, and **No**. Se
 
 1.  Open the **Local Group Policy Editor**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration\\Policies** or **User Configuration\\Policies**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration\Policies** or **User Configuration\Policies**. Click **Filter Options**.
 
 3.  In the **Commented** list, click the appropriate filter.
 
@@ -119,13 +119,13 @@ The Commented property filter has three states: **Any**, **Yes**, and **No**. Se
 
 ### Additional considerations
 
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
 
 -   Filters are inclusive, so select items you want to display rather than items you want to be removed.
 
 -   Filters do not work with Classic Administrative Templates.
 
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to filter with Keyword filters
 The Local Group Policy Editor allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings. However, you can use keyword filters to change how the Local Group Policy Editor displays Administrative Template policy settings.
@@ -134,17 +134,17 @@ The Local Group Policy Editor allows you to change the criteria for displaying A
 
 1.  Open the **Local Group Policy Editor**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
 
 3.  Select the **Enable Keyword Filters** check box.
 
-4.  Type one or more keywords in the **Filter for word\(s\)** box, and click the appropriate filter:
+4.  Type one or more keywords in the **Filter for word(s)** box, and click the appropriate filter:
 
-    -   **Any**: The filter includes any of the words in the **Filter for word\(s\)** box.
+    -   **Any**: The filter includes any of the words in the **Filter for word(s)** box.
 
-    -   **All**: The filter includes all of the words in the **Filter for word\(s\)** box.
+    -   **All**: The filter includes all of the words in the **Filter for word(s)** box.
 
-    -   **Exact**: The filter includes exact matches of the words in the **Filter for word\(s\)** box.
+    -   **Exact**: The filter includes exact matches of the words in the **Filter for word(s)** box.
 
 5.  Select the appropriate check boxes next to **Within**.
 
@@ -158,13 +158,13 @@ The Local Group Policy Editor allows you to change the criteria for displaying A
 
 ### Additional considerations
 
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
 
 -   Filters are inclusive, so select items you want to display rather than items you want to be removed.
 
 -   Filters do not work with Classic Administrative Templates.
 
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to filter with Requirement Filters
 The Local Group Policy Editor allows you to change the criteria for displaying Administrative Template policy settings. By default, the editor displays all policy settings. However, you can use requirement filters to change how the Local Group Policy Editor displays Administrative Template policy settings.
@@ -173,13 +173,13 @@ The Local Group Policy Editor allows you to change the criteria for displaying A
 
 1.  Open the **Local Group Policy Editor**.
 
-2.  Right\-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
+2.  Right-click **Administrative Templates** located under **Computer Configuration** or **User Configuration**. Click **Filter Options**.
 
 3.  Select the **Enable Requirements Filters** check box.
 
-4.  Type one or more keywords in the **Filter for word\(s\)** box.
+4.  Type one or more keywords in the **Filter for word(s)** box.
 
-5.  In the **Select the desired platform and application filter\(s\)** list, click the appropriate filter:
+5.  In the **Select the desired platform and application filter(s)** list, click the appropriate filter:
 
     -   **Include settings that match any of the selected platforms**.
 
@@ -192,13 +192,13 @@ The Local Group Policy Editor allows you to change the criteria for displaying A
 
 ### Additional considerations
 
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
 
 -   Filters are inclusive, so select items you want to display rather than items you want to be removed.
 
 -   Filters do not work with Classic Administrative Templates.
 
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to comment an Administrative Templates policy setting
 You can include comments on each Administrative Template policy setting. You can use this space to further document the policy setting and why its implementation is important to your environment. Commenting policy settings allows you to use keyword filters to help you quickly find policy settings with matching keywords.
@@ -209,7 +209,7 @@ You can include comments on each Administrative Template policy setting. You can
 
 2.  In the console tree, click the folder under **Administrative Templates** that contains the policy setting you want to configure.
 
-3.  In the **Setting** column, double\-click the name for the policy setting.
+3.  In the **Setting** column, double-click the name for the policy setting.
 
 4.  Type your comments in the **Comment** box.
 
@@ -217,22 +217,22 @@ You can include comments on each Administrative Template policy setting. You can
 
 ### Additional considerations
 
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
 
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 ## How to add or remove classic Administrative Templates
-Classic Administrative Template files \(also known as ADM files\) are not authored using XML. Earlier versions of the Local Group Policy Editor displayed these settings under the **Administrative Templates** node.
+Classic Administrative Template files (also known as ADM files) are not authored using XML. Earlier versions of the Local Group Policy Editor displayed these settings under the **Administrative Templates** node.
 
-The current version of Administrative Template files are authored using XML \(known as ADMX files\). The Local Group Policy Editor displays these settings under the **Administrative Templates** node. However, the Local Group Policy Editor still recognizes ADM files and displays these settings under the **Classic Administrative Templates** node, which is a child node to **Administrative Templates**.
+The current version of Administrative Template files are authored using XML (known as ADMX files). The Local Group Policy Editor displays these settings under the **Administrative Templates** node. However, the Local Group Policy Editor still recognizes ADM files and displays these settings under the **Classic Administrative Templates** node, which is a child node to **Administrative Templates**.
 
-#### To add or remove a classic Administrative Template file \(.adm file\)
+#### To add or remove a classic Administrative Template file (.adm file)
 
 1.  Using the Local Group Policy Editor, open the Local Group Policy object you want to edit.
 
-2.  In the console tree, under either **Computer Configuration** or **User Configuration**, right\-click **Administrative Templates**.
+2.  In the console tree, under either **Computer Configuration** or **User Configuration**, right-click **Administrative Templates**.
 
-3.  Click **Add\/Remove Templates**.
+3.  Click **Add/Remove Templates**.
 
 4.  Do one of the following:
 
@@ -242,8 +242,8 @@ The current version of Administrative Template files are authored using XML \(kn
 
 ### Additional considerations
 
--   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
+-   To complete this procedure, you must have Edit setting permission to edit a GPO. By default, members of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group have Edit setting permission to edit a GPO.
 
--   Local Group Policy Editor and the Resultant Set of Policy snap\-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
+-   Local Group Policy Editor and the Resultant Set of Policy snap-in are available in Windows Server 2008 R2 and Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise. For more information, see [http://go.microsoft.com/fwlink/?LinkId=139815](http://go.microsoft.com/fwlink/?LinkId=139815).
 
 

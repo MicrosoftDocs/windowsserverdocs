@@ -13,7 +13,7 @@ ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
 # Convert dynamic
 Converts a basic disk into a dynamic disk.
 
-For instructions regarding how to use this command, see [Change a Basic Disk into a Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207047) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207047\).
+For instructions regarding how to use this command, see [Change a Basic Disk into a Dynamic Disk](http://go.microsoft.com/fwlink/?LinkId=207047) (http://go.microsoft.com/fwlink/?LinkId=207047).
 
 ## Syntax
 

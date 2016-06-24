@@ -21,10 +21,10 @@ hostname
 
 |Parameter|Description|
 |-------------|---------------|
-|\/?|Displays Help at the command prompt.|
+|/?|Displays Help at the command prompt.|
 
 ## Remarks
-This command is available only if the Internet Protocol \(TCP\/IP\) protocol is installed as a component in the properties of a network adapter in Network.
+This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network.
 
 ## <a name="BKMK_Examples"></a>Examples
 To display the name of the computer, type:

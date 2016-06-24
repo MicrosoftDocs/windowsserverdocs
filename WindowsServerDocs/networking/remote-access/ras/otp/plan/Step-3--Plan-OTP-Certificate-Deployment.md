@@ -12,11 +12,11 @@ ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 author: coreyp
 ---
 # Step 3: Plan OTP Certificate Deployment
-After planning the RADIUS server, you must plan for certification authority \(CA\) requirements, including the CA that will issue one\-time password \(OTP\) certificates, the OTP certificate template, and the registration authority certificate used by the Remote Access server to sign all DirectAccess client OTP certificate requests. These certificates are used as follows:  
+After planning the RADIUS server, you must plan for certification authority (CA) requirements, including the CA that will issue one-time password (OTP) certificates, the OTP certificate template, and the registration authority certificate used by the Remote Access server to sign all DirectAccess client OTP certificate requests. These certificates are used as follows:  
   
 1.  The DirectAccess client requests an OTP certificate, and the Remote Access server receives the request.  
   
-2.  The Remote access server verifies the OTP credentials and if they are valid, the server acts as a registration authority, and signs the OTP certificate enrollment request using a short\-lived signing certificate.  
+2.  The Remote access server verifies the OTP credentials and if they are valid, the server acts as a registration authority, and signs the OTP certificate enrollment request using a short-lived signing certificate.  
   
 3.  The Remote Access server sends the signed certificate enrollment request back to the DirectAccess client  
   
@@ -26,12 +26,12 @@ After planning the RADIUS server, you must plan for certification authority \(CA
   
 |Task|Description|  
 |--------|---------------|  
-|[3.1 Plan the OTP CA](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_1_CA)|Plan the certification authority \(CA\) to use to issue certificates to DirectAccess clients for OTP authentication.|  
+|[3.1 Plan the OTP CA](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_1_CA)|Plan the certification authority (CA) to use to issue certificates to DirectAccess clients for OTP authentication.|  
 |[3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert)|Plan the OTP certificate template.|  
 |[3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert)|Plan the registration authority certificate to sign all OTP authentication certificate requests.|  
   
 ## <a name="bkmk_3_1_CA"></a>3.1 Plan the OTP CA  
-To deploy DirectAccess using one\-time password authentication \(OTP\), you require an internal CA to issue the OTP authentication certificates to DirectAccess client computers. For this purpose, you can use the same internal CA that you use to issue the certificates that are used for regular IPsec computer authentication.  
+To deploy DirectAccess using one-time password authentication (OTP), you require an internal CA to issue the OTP authentication certificates to DirectAccess client computers. For this purpose, you can use the same internal CA that you use to issue the certificates that are used for regular IPsec computer authentication.  
   
 ## <a name="bkmk_3_2_OTP_Cert"></a>3.2 Plan the OTP certificate template  
 Each DirectAccess client requires an OTP authentication certificate in order to gain access to the internal network. You must configure a template on your internal CA for the OTP certificate. Note the following when configuring the OTP certificate template:  
@@ -47,11 +47,11 @@ Each DirectAccess client requires an OTP authentication certificate in order to 
 -   The validity period should be set to one hour.  
   
     > [!NOTE]  
-    > In situations where the CA server is a Windows Server 2003 computer, then the template must be configured on a different computer. This is due to the fact that setting the **Validity period** in hours is not possible when running Windows versions prior to 2008\/Vista. If the computer that you use to configure the template does not have the Certification Service role installed, or it is a client computer, then you may need to install the Certificate Templates snap\-in. For more information on this subject click [here](http://technet.microsoft.com/library/cc732445.aspx).  
+    > In situations where the CA server is a Windows Server 2003 computer, then the template must be configured on a different computer. This is due to the fact that setting the **Validity period** in hours is not possible when running Windows versions prior to 2008/Vista. If the computer that you use to configure the template does not have the Certification Service role installed, or it is a client computer, then you may need to install the Certificate Templates snap-in. For more information on this subject click [here](http://technet.microsoft.com/library/cc732445.aspx).  
   
 -   The renewal period should be set to 0.  
   
--   \(Optional\) Certificates and requests should not be stored in the CA database.  
+-   (Optional) Certificates and requests should not be stored in the CA database.  
   
 -   The certificate Enhanced Key Usage parameter must be set correctly, as follows:  
   
@@ -60,7 +60,7 @@ Each DirectAccess client requires an OTP authentication certificate in order to 
     -   For the OTP authentication certificate template use the key 1.3.6.1.4.1.311.20.2.2 key.  
   
 ## <a name="bkmk_3_3_RA_Cert"></a>3.3 Plan the registration authority certificate  
-When DirectAccess clients request an OTP certificate, the Remote Access server receives the request from the client. The Remote Access server signs all OTP certificate requests from clients using the registration authority certificate. The CA issues certificates only if the request is signed by the registration authority certificate on the Remote Access server. The certificate must be issued by an internal CA, the certificate cannot be self\-signed. It does not have to be issued by the CA that issued the OTP certificates but the CA that issues the OTP certificates must trust the CA that issues the registration authority signing certificate.  
+When DirectAccess clients request an OTP certificate, the Remote Access server receives the request from the client. The Remote Access server signs all OTP certificate requests from clients using the registration authority certificate. The CA issues certificates only if the request is signed by the registration authority certificate on the Remote Access server. The certificate must be issued by an internal CA, the certificate cannot be self-signed. It does not have to be issued by the CA that issued the OTP certificates but the CA that issues the OTP certificates must trust the CA that issues the registration authority signing certificate.  
   
 ## <a name="BKMK_Links"></a>See also  
   

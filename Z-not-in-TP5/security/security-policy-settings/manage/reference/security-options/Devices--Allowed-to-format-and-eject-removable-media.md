@@ -24,16 +24,16 @@ Users can move removable disks to a different computer where they have administr
   
 -   Administrators and Power Users  
   
--   Administrators and Interactive Users \(not applicable to  Windows Server 2008 R2  or  Windows 7 \)  
+-   Administrators and Interactive Users (not applicable to  Windows Server 2008 R2  or  Windows 7 )  
   
 -   Not defined  
   
 ### Best practices  
   
-1.  It is advisable to set **Allowed to format and eject removable media** to **Administrators**. Only administrators will be able to eject NTFS\-formatted removable media.  
+1.  It is advisable to set **Allowed to format and eject removable media** to **Administrators**. Only administrators will be able to eject NTFS-formatted removable media.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -42,13 +42,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Administrators|  
+|Stand-Alone Server Default Settings|Administrators|  
 |DC Effective Default Settings|Administrators|  
 |Member Server Effective Default Settings|Administrators|  
 |Client Computer Effective Default Settings|Not defined|  
   
 ### Operating system version differences  
-The option Administrators and Interactive Users is not applicable to  Windows Server 2008 R2  or  Windows 7 , but it can be used for backward compatibility.  
+The option Administrators and Interactive Users is not applicable to  Windows Server 2008 R2  or  Windows 7 , but it can be used for backward compatibility.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  

@@ -17,13 +17,13 @@ You can use this topic to create an access policy in the IPAM client console.
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
   
 > [!NOTE]  
-> You can create an access policy for a specific user or for a user group in Active Directory. When you create an access policy, you must select either a built\-in IPAM role or a custom role that you have created. For more information on custom roles, see [Create a User Role for Access Control](../../technologies/ipam/Create-a-User-Role-for-Access-Control.md).  
+> You can create an access policy for a specific user or for a user group in Active Directory. When you create an access policy, you must select either a built-in IPAM role or a custom role that you have created. For more information on custom roles, see [Create a User Role for Access Control](../../technologies/ipam/Create-a-User-Role-for-Access-Control.md).  
   
 ### To create an access policy  
   
 1.  In Server Manager, click  **IPAM**. The IPAM client console appears.  
   
-2.  In the navigation pane, click **ACCESS CONTROL**. In the lower navigation pane, right\-click **Access Policies**, and then click **Add Access Policy**.  
+2.  In the navigation pane, click **ACCESS CONTROL**. In the lower navigation pane, right-click **Access Policies**, and then click **Add Access Policy**.  
   
     ![](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)  
   
@@ -49,7 +49,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Create-an-Access-Policy/ipam_CreateAP_06.jpg)  
   
-9. Click **Select role** to expand the list of roles. Select one of the built\-in roles or, if you have created new roles, select one of the roles that you created. For example, if you created the IPAMSrv role to apply to the user, click **IPAMSrv**.  
+9. Click **Select role** to expand the list of roles. Select one of the built-in roles or, if you have created new roles, select one of the roles that you created. For example, if you created the IPAMSrv role to apply to the user, click **IPAMSrv**.  
   
     ![](../../media/Create-an-Access-Policy/ipam_CreateAP_07.jpg)  
   

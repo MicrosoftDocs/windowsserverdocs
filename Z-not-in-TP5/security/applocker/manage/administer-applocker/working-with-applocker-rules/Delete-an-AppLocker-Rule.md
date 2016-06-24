@@ -17,15 +17,15 @@ As older applications are retired and new applications are deployed in your orga
 
 For information about testing an AppLocker policy to see what rules affect which files or applications, see [Test an AppLocker Policy by Using Test-AppLockerPolicy](Test-an-AppLocker-Policy-by-Using-Test-AppLockerPolicy.md).
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
 
 ### <a name="BKMK_DeleteAppLockerRuleGPO"></a>To delete a rule in an AppLocker policy
 
-1.  In the console tree of the snap\-in, double\-click **Application Control Policies**, and then double\-click **AppLocker**.
+1.  In the console tree of the snap-in, double-click **Application Control Policies**, and then double-click **AppLocker**.
 
 2.  Click the appropriate rule collection for which you want to delete the rule.
 
-3.  In the details pane, right\-click the rule to delete, click **Delete**, and then click **Yes**.
+3.  In the details pane, right-click the rule to delete, click **Delete**, and then click **Yes**.
 
 > [!NOTE]
 > When using Group Policy, for the rule deletion to take effect on computers within the domain, the GPO must be distributed or refreshed.

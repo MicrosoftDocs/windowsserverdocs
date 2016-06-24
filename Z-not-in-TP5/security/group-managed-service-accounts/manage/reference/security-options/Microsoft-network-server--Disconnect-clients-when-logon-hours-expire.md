@@ -33,7 +33,7 @@ This policy setting enables or disables the forced disconnection of users who ar
 1.  If you enable this policy setting, you should also enable **Network security: Force logoff when logon hours expire**.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -42,13 +42,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Enabled|
+|Stand-Alone Server Default Settings|Enabled|
 |DC Effective Default Settings|Enabled|
 |Member Server Effective Default Settings|Enabled|
 |Client Computer Effective Default Settings|Enabled|
 
 ### Operating system version differences
-The default setting of this policy in operating systems previous to Windows Server 2008 and Windows Vista is Disabled for stand\-alone servers and client computers.
+The default setting of this policy in operating systems previous to Windows Server 2008 and Windows Vista is Disabled for stand-alone servers and client computers.
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.

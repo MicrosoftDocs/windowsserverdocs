@@ -16,13 +16,13 @@ This topic for the IT professional describes the Advanced Security Audit policy 
 The Detailed File Share setting logs an event every time a file or folder is accessed, whereas the File Share setting only records one event for any connection established between a client computer and file share. Detailed File Share audit events include detailed information about the permissions or other criteria used to grant or deny access.
 
 > [!NOTE]
-> There are no system access control lists \(SACLs\) for shared folders. If this policy setting is enabled, access to all shared files and folders on the system is audited.
+> There are no system access control lists (SACLs) for shared folders. If this policy setting is enabled, access to all shared files and folders on the system is audited.
 
 Event volume: High on a file server or domain controller because of SYSVOL network access required by Group Policy
 
 Default: Not configured
 
-If this policy setting is configured, the following event appears on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following event appears on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

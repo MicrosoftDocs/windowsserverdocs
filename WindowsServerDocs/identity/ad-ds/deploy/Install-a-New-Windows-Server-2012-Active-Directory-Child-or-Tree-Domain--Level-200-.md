@@ -31,11 +31,11 @@ The following diagram illustrates the Active Directory Domain Services configura
   
 |||  
 |-|-|  
-|**ADDSDeployment Cmdlet**|Arguments \(**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.\)|  
-|**Install\-AddsDomain**|\-SkipPreChecks<br /><br />***\-NewDomainName***<br /><br />***\-ParentDomainName***<br /><br />***\-SafeModeAdministratorPassword***<br /><br />*\-ADPrepCredential*<br /><br />\-AllowDomainReinstall<br /><br />\-Confirm<br /><br />*\-CreateDNSDelegation*<br /><br />***\-Credential***<br /><br />*\-DatabasePath*<br /><br />*\-DNSDelegationCredential*<br /><br />\-NoDNSOnNetwork<br /><br />*\-DomainMode*<br /><br />***\-DomainType***<br /><br />\-Force<br /><br />*\-InstallDNS*<br /><br />*\-LogPath*<br /><br />*\-NewDomainNetBIOSName*<br /><br />*\-NoGlobalCatalog*<br /><br />\-NoNorebootoncompletion<br /><br />*\-ReplicationSourceDC*<br /><br />*\-SiteName*<br /><br />\-SkipAutoConfigureDNS<br /><br />*\-SYSVOLPath*<br /><br />*\-Whatif*|  
+|**ADDSDeployment Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
+|**Install-AddsDomain**|-SkipPreChecks<br /><br />***-NewDomainName***<br /><br />***-ParentDomainName***<br /><br />***-SafeModeAdministratorPassword***<br /><br />*-ADPrepCredential*<br /><br />-AllowDomainReinstall<br /><br />-Confirm<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-NoDNSOnNetwork<br /><br />*-DomainMode*<br /><br />***-DomainType***<br /><br />-Force<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />*-NewDomainNetBIOSName*<br /><br />*-NoGlobalCatalog*<br /><br />-NoNorebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />*-SiteName*<br /><br />-SkipAutoConfigureDNS<br /><br />*-SYSVOLPath*<br /><br />*-Whatif*|  
   
 > [!NOTE]  
-> The **\-credential** argument is only required when you are not currently logged on as a member of the Enterprise Admins group.The **\-NewDomainNetBIOSName** argument is required if you want to change the automatically generated 15\-character name based on the DNS domain name prefix or if the name exceeds 15 characters.  
+> The **-credential** argument is only required when you are not currently logged on as a member of the Enterprise Admins group.The **-NewDomainNetBIOSName** argument is required if you want to change the automatically generated 15-character name based on the DNS domain name prefix or if the name exceeds 15 characters.  
   
 ## <a name="BKMK_Deployment"></a>Deployment  
   
@@ -52,9 +52,9 @@ Server Manager begins every domain controller promotion with the **Deployment Co
   
 This topic combines two discrete operations: child domain promotion and tree domain promotion. The only difference between the two operations is the domain type that you choose to create. All of the other steps are identical between the two operations.  
   
--   To create a new child domain, click **Add a domain to an existing Forest** and choose **Child Domain**. For **Parent domain name**, type or select the name of the parent domain. Then type the name of the new domain in the **New domain name** box. Provide a valid, single\-label child domain name; the name must use DNS domain name requirements.  
+-   To create a new child domain, click **Add a domain to an existing Forest** and choose **Child Domain**. For **Parent domain name**, type or select the name of the parent domain. Then type the name of the new domain in the **New domain name** box. Provide a valid, single-label child domain name; the name must use DNS domain name requirements.  
   
--   To create a tree domain within an existing forest, click **Add a domain to an existing Forest** and choose **Tree Domain**. Type the name of the forest root domain, and then type the name of the new domain. Provide a valid, fully qualified root domain name; the name cannot be single\-labeled and must use DNS domain name requirements.  
+-   To create a tree domain within an existing forest, click **Add a domain to an existing Forest** and choose **Tree Domain**. Type the name of the forest root domain, and then type the name of the new domain. Provide a valid, fully qualified root domain name; the name cannot be single-labeled and must use DNS domain name requirements.  
   
 For more information about DNS names, see [Naming conventions in Active Directory for computers, domains, sites, and OUs](http://support.microsoft.com/kb/909264).  
   
@@ -73,9 +73,9 @@ Install-AddsDomain
 ### Domain Controller Options  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_DCOptions_Child.gif)  
   
-The **Domain Controller Options** page specifies the domain controller options for the new domain controller. The configurable domain controller options include **DNS server** and **Global Catalog**; you cannot configure read\-only domain controller as the first domain controller in a new domain.  
+The **Domain Controller Options** page specifies the domain controller options for the new domain controller. The configurable domain controller options include **DNS server** and **Global Catalog**; you cannot configure read-only domain controller as the first domain controller in a new domain.  
   
-Microsoft recommends that all domain controllers provide DNS and GC services for high availability in distributed environments. GC is always selected by default and DNS is selected by default if the current domain hosts DNS already on its DCs, based on a Start\-of\-Authority query. You must also specify a **Domain functional level**. The default functional level is Windows Server 2012, and you can choose any other value that is equal to or greater than the current forest functional level.  
+Microsoft recommends that all domain controllers provide DNS and GC services for high availability in distributed environments. GC is always selected by default and DNS is selected by default if the current domain hosts DNS already on its DCs, based on a Start-of-Authority query. You must also specify a **Domain functional level**. The default functional level is Windows Server 2012, and you can choose any other value that is equal to or greater than the current forest functional level.  
   
 The **Domain Controller Options** page also enables you to choose the appropriate Active Directory logical **site name** from the forest configuration. By default, the site with the most correct subnet is selected. If there is only one site, it is selected automatically.  
   
@@ -96,9 +96,9 @@ The **Domain Controller Options** ADDSDeployment cmdlet arguments are:
 ```  
   
 > [!IMPORTANT]  
-> The site name must already exist when provided as a value to the **sitename** argument. The **install\-AddsDomainController** cmdlet does not create site names. You can use the **new\-adreplicationsite** cmdlet to create new sites.  
+> The site name must already exist when provided as a value to the **sitename** argument. The **install-AddsDomainController** cmdlet does not create site names. You can use the **new-adreplicationsite** cmdlet to create new sites.  
   
-The **Install\-ADDSDomainController** cmdlet arguments follow the same defaults as Server Manager if not specified.  
+The **Install-ADDSDomainController** cmdlet arguments follow the same defaults as Server Manager if not specified.  
   
 The **SafeModeAdministratorPassword** argument's operation is special:  
   
@@ -112,7 +112,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  
   
-For example, you can manually prompt for a password by using the **Read\-Host** cmdlet to prompt the user for a secure string:  
+For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string:  
   
 ```  
 -safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
@@ -122,7 +122,7 @@ For example, you can manually prompt for a password by using the **Read\-Host** 
 > [!WARNING]  
 > As the previous option does not confirm the password, use extreme caution: the password is not visible.  
   
-You can also provide a secure string as a converted clear\-text variable, although this is highly discouraged.  
+You can also provide a secure string as a converted clear-text variable, although this is highly discouraged.  
   
 ```  
 -safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
@@ -155,7 +155,7 @@ The ADDSDeployment module offers an additional option to skip automatic configur
   
 The **DNS Options** page enables you to provide alternate DNS Admin credentials for delegation.  
   
-When installing a new domain in an existing forest \- where you selected DNS installation on the **Domain Controller Options** page \- you cannot configure any options; the delegation happens automatically and irrevocably. You have the option to provide alternate DNS administrative credentials with rights to update that structure.  
+When installing a new domain in an existing forest - where you selected DNS installation on the **Domain Controller Options** page - you cannot configure any options; the delegation happens automatically and irrevocably. You have the option to provide alternate DNS administrative credentials with rights to update that structure.  
   
 The **DNS Options** ADDSDeployment Windows PowerShell arguments are:  
   
@@ -169,17 +169,17 @@ For more information about DNS delegation, see [Understanding Zone Delegation](h
 ### Additional Options  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildAdditionalOptions.png)  
   
-The **Additional Options** page shows the NetBIOS name of the domain and enables you to override it. By default, the NetBIOS domain name matches the left\-most label of the fully qualified domain name provided on the **Deployment Configuration** page. For example, if you provided the fully qualified domain name of corp.contoso.com, the default NetBIOS domain name is CORP.  
+The **Additional Options** page shows the NetBIOS name of the domain and enables you to override it. By default, the NetBIOS domain name matches the left-most label of the fully qualified domain name provided on the **Deployment Configuration** page. For example, if you provided the fully qualified domain name of corp.contoso.com, the default NetBIOS domain name is CORP.  
   
 If the name is 15 characters or less and does not conflict with another NetBIOS name, it is unaltered. If it does conflict with another NetBIOS name, a number is appended to the name. If the name is more than 15 characters, the wizard provides a unique, truncated suggestion. In either case, the wizard first validates the name is not already in use via a WINS lookup and NetBIOS broadcast.  
   
 For more information about DNS names, see [Naming conventions in Active Directory for computers, domains, sites, and OUs](http://support.microsoft.com/kb/909264).  
   
-The **Install\-AddsDomain** arguments follow the same defaults as Server Manager if not specified. The **DomainNetBIOSName** operation is special:  
+The **Install-AddsDomain** arguments follow the same defaults as Server Manager if not specified. The **DomainNetBIOSName** operation is special:  
   
-1.  If the **NewDomainNetBIOSName** argument is not specified with a NetBIOS domain name and the single\-label prefix domain name in the **DomainName** argument is 15 characters or fewer, then promotion continues with an automatically generated name.  
+1.  If the **NewDomainNetBIOSName** argument is not specified with a NetBIOS domain name and the single-label prefix domain name in the **DomainName** argument is 15 characters or fewer, then promotion continues with an automatically generated name.  
   
-2.  If the **NewDomainNetBIOSName** argument is not specified with a NetBIOS domain name and the single\-label prefix domain name in the **DomainName** argument is 16 characters or more, then promotion fails.  
+2.  If the **NewDomainNetBIOSName** argument is not specified with a NetBIOS domain name and the single-label prefix domain name in the **DomainName** argument is 16 characters or more, then promotion fails.  
   
 3.  If the **NewDomainNetBIOSName** argument is specified with a NetBIOS domain name of 15 characters or fewer, then promotion continues with that specified name.  
   
@@ -237,9 +237,9 @@ Install-ADDSDomain `
 ```  
   
 > [!NOTE]  
-> Server Manager generally fills in all arguments with values when promoting and does not rely on defaults \(as they may change between future versions of Windows or service packs\). The one exception to this is the **\-safemodeadministratorpassword** argument \(which is deliberately omitted from the script\). To force a confirmation prompt, omit the value when running cmdlet interactively.  
+> Server Manager generally fills in all arguments with values when promoting and does not rely on defaults (as they may change between future versions of Windows or service packs). The one exception to this is the **-safemodeadministratorpassword** argument (which is deliberately omitted from the script). To force a confirmation prompt, omit the value when running cmdlet interactively.  
   
-Use the optional **Whatif** argument with the **Install\-ADDSForest** cmdlet to review configuration information. This enables you to see the explicit and implicit values of the arguments for a cmdlet.  
+Use the optional **Whatif** argument with the **Install-ADDSForest** cmdlet to review configuration information. This enables you to see the explicit and implicit values of the arguments for a cmdlet.  
   
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildWhatIf.png)  
   
@@ -270,9 +270,9 @@ Click **Install** to begin the domain controller promotion process. This is last
   
 When the **Installation** page displays, the domain controller configuration begins and cannot be halted or canceled. Detailed operations display on this page and are written to logs:  
   
--   %systemroot%\\debug\\dcpromo.log  
+-   %systemroot%\debug\dcpromo.log  
   
--   %systemroot%\\debug\\dcpromoui.log  
+-   %systemroot%\debug\dcpromoui.log  
   
 To install a new Active Directory domain using the ADDSDeployment module, use the following cmdlet:  
   
@@ -280,13 +280,13 @@ To install a new Active Directory domain using the ADDSDeployment module, use th
 Install-addsdomain  
 ```  
   
-See [Child and Tree Domain Windows PowerShell](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md#BKMK_PS) for required and optional arguments.The **Install\-addsdomain** cmdlet only has two phases \(prerequisite checking and installation\). The two figures below show the installation phase with the minimum required arguments of **\-domaintype**, **\-newdomainname**, **\-parentdomainname**, and **\-credential**. Note how, just like Server Manager, **Install\-ADDSDomain** reminds you that promotion will reboot the server automatically.  
+See [Child and Tree Domain Windows PowerShell](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md#BKMK_PS) for required and optional arguments.The **Install-addsdomain** cmdlet only has two phases (prerequisite checking and installation). The two figures below show the installation phase with the minimum required arguments of **-domaintype**, **-newdomainname**, **-parentdomainname**, and **-credential**. Note how, just like Server Manager, **Install-ADDSDomain** reminds you that promotion will reboot the server automatically.  
   
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_PSInstallADDSDomain.png)  
   
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_PSInstallADDSDomainProgress.png)  
   
-To accept the reboot prompt automatically, use the **\-force** or **\-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **\-norebootoncompletion** argument.  
+To accept the reboot prompt automatically, use the **-force** or **-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **-norebootoncompletion** argument.  
   
 > [!WARNING]  
 > Overriding the reboot is not recommended. The domain controller must reboot to function correctly  

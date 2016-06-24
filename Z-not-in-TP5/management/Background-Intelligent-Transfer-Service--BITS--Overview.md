@@ -20,7 +20,7 @@ This topic provides overview information about BITS, as well as links to other r
 -   [Managed Reference for BITS PowerShell Commands](http://msdn.microsoft.com/library/windows/desktop/dd904466(v=vs.85).aspx) in the Microsoft Dev Center.
 
 ## <a name="BKMK_OVER"></a>BITS description
-Background Intelligent Transfer Service \(BITS\) asynchronously transfers files in the foreground or background, controls the flow of the transfers to preserve the responsiveness of other network applications, and automatically resumes file transfers if a transfer session is interrupted, such as from disconnecting from the network or restarting the computer.
+Background Intelligent Transfer Service (BITS) asynchronously transfers files in the foreground or background, controls the flow of the transfers to preserve the responsiveness of other network applications, and automatically resumes file transfers if a transfer session is interrupted, such as from disconnecting from the network or restarting the computer.
 
 Background transfers are optimal in that BITS uses idle network bandwidth to transfer the files and will increase or decrease the rate at which files are transferred based on the amount of idle network bandwidth available. If a network application begins to consume more bandwidth, BITS decreases its transfer rate to preserve the user's interactive experience.
 
@@ -39,7 +39,7 @@ Use BITS for applications that need to transfer files asynchronously between a c
 
 2.  **Upload job** uploads a file to the server
 
-3.  **Upload\-reply** job uploads a file to the server and receives a reply file from the server application
+3.  **Upload-reply** job uploads a file to the server and receives a reply file from the server application
 
 ## <a name="BKMK_INSTALL"></a>Server Manager information
 When you install BITS using the Add Roles and Features Wizard, you have the option to install the BITS server Extensions Tools. The tools are required to manage BITS. However the tools to not need to be installed on the same server on which you are installing BITS.
@@ -49,7 +49,7 @@ The following table provides links to information that is relevant to BITS.
 
 |Content type|References|
 |----------------|--------------|
-|**Operations**|[Managed Reference for BITS PowerShell Commands](http://msdn.microsoft.com/library/windows/desktop/dd904466(v=vs.85).aspx)<br /><br />[Using Windows PowerShell to Create BITS Transfer Jobs](http://msdn.microsoft.com/library/windows/desktop/ee663885(v=vs.85).aspx)<br /><br />[Manage BITS \(Background Intelligent Transfer Service\) with Windows PowerShell](http://technet.microsoft.com/magazine/ff382721.aspx)<br /><br />[Transferring \(Large\) Files Using BITs](http://blogs.msdn.com/b/powershell/archive/2009/01/11/transferring-large-files-using-bits.aspx)|
+|**Operations**|[Managed Reference for BITS PowerShell Commands](http://msdn.microsoft.com/library/windows/desktop/dd904466(v=vs.85).aspx)<br /><br />[Using Windows PowerShell to Create BITS Transfer Jobs](http://msdn.microsoft.com/library/windows/desktop/ee663885(v=vs.85).aspx)<br /><br />[Manage BITS (Background Intelligent Transfer Service) with Windows PowerShell](http://technet.microsoft.com/magazine/ff382721.aspx)<br /><br />[Transferring (Large) Files Using BITs](http://blogs.msdn.com/b/powershell/archive/2009/01/11/transferring-large-files-using-bits.aspx)|
 |**Troubleshooting**|Content not available|
 |**Getting started**|[About BITS](http://msdn.microsoft.com/library/windows/desktop/aa362708(v=vs.85).aspx)|
 |**Tools and settings**|Content not available|

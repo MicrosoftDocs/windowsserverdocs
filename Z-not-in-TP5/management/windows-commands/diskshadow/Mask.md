@@ -32,7 +32,7 @@ mask <ShadowSetID>
 -   You can use an existing alias or an environment variable in place of *ShadowSetID*. Use **add** without parameters to see existing aliases.
 
 ## <a name="BKMK_examples"></a>Examples
-To remove the imported shadow copy %Import\_1%, type:
+To remove the imported shadow copy %Import_1%, type:
 
 ```
 mask %Import_1%

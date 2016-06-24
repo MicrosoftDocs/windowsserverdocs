@@ -20,7 +20,7 @@ If you click the **Users can’t add Microsoft accounts** setting option, users 
 
 If you click the **Users can’t add or log on with Microsoft accounts** setting option, existing Microsoft account users will not be able to log on to Windows. Selecting this option might make it impossible for an existing administrator to log on to a computer and manage the system.
 
-If you disable or do not configure this policy \(recommended\), users will be able to use Microsoft accounts with Windows.
+If you disable or do not configure this policy (recommended), users will be able to use Microsoft accounts with Windows.
 
 ### Possible values
 
@@ -30,16 +30,16 @@ If you disable or do not configure this policy \(recommended\), users will be ab
 
 -   Users can’t add or log on with Microsoft accounts
 
-By default, this setting is not defined on domain controllers and disabled on stand\-alone servers.
+By default, this setting is not defined on domain controllers and disabled on stand-alone servers.
 
 ### Best practices
 
--   By disabling or not configuring this policy setting on the client computer, users will be able to use their Microsoft account, local account, or domain account for their sign\-in session to Windows. It also enables the user to connect a local or domain account to a Microsoft account. This provides a convenient option for your users.
+-   By disabling or not configuring this policy setting on the client computer, users will be able to use their Microsoft account, local account, or domain account for their sign-in session to Windows. It also enables the user to connect a local or domain account to a Microsoft account. This provides a convenient option for your users.
 
 -   If you need to limit the use of Microsoft accounts in your organization, click the **Users can’t add Microsoft accounts** setting option so that users will not be able to create new Microsoft accounts on a computer, switch a local account to a Microsoft account, or connect a domain account to a Microsoft account.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -48,7 +48,7 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Disabled|
+|Stand-Alone Server Default Settings|Disabled|
 |DC Effective Default Settings|Disabled|
 |Member Server Effective Default Settings|Disabled|
 |Client Computer Effective Default Settings|Disabled|
@@ -63,13 +63,13 @@ This section describes features and tools that are available to help you manage 
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.
 
 ### Group Policy
-Because this policy setting was introduced to control sign\-in options for  Windows Server 2012  and Windows 8, it has no affect on earlier Windows operating systems.
+Because this policy setting was introduced to control sign-in options for  Windows Server 2012  and Windows 8, it has no affect on earlier Windows operating systems.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of the countermeasure implementation.
 
 ### Vulnerability
-Although Microsoft accounts are password\-protected, they also have the potential of greater exposure outside of the enterprise. Additionally, if the owner of a Microsoft account is not easily distinguishable, auditing and forensics become more difficult on computers running  Windows Server 2012  and Windows 8.
+Although Microsoft accounts are password-protected, they also have the potential of greater exposure outside of the enterprise. Additionally, if the owner of a Microsoft account is not easily distinguishable, auditing and forensics become more difficult on computers running  Windows Server 2012  and Windows 8.
 
 ### Countermeasure
 Require only domain accounts in your enterprise by limiting the use of Microsoft accounts. Click the **Users can’t add Microsoft accounts** setting option so that users will not be able to create new Microsoft accounts on a computer, switch a local account to a Microsoft account, or connect a domain account to a Microsoft account.

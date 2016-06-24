@@ -24,7 +24,7 @@ The **Verbose** command performs the following:
 
 -   Verifies the BITS Service can be started
 
--   Displays BITS Group Policy values \(Windows Vista only\)
+-   Displays BITS Group Policy values (Windows Vista only)
 
 ## <a name="BKMK_examples"></a>Examples
 The following example the version of the BITS Service.

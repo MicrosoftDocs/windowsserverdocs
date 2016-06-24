@@ -22,7 +22,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 2.  In the navigation pane, in **MONITOR AND MANAGE**, click **DNS Zones**.  The navigation pane divides into an upper navigation pane and a lower navigation pane.  
   
-3.  In the lower navigation pane, click **Forward Lookup**. All IPAM\-managed DNS Forward Lookup zones are displayed in the display pane search results.  
+3.  In the lower navigation pane, click **Forward Lookup**. All IPAM-managed DNS Forward Lookup zones are displayed in the display pane search results.  
   
 4.  Click on the zone whose records you want to view and filter.  
   
@@ -32,7 +32,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_01.jpg)  
   
-7.  Select a criteria from the drop\-down list. For example, if you want to view a specific record type, click **Record Type**.  
+7.  Select a criteria from the drop-down list. For example, if you want to view a specific record type, click **Record Type**.  
   
     ![](../../media/Filter-the-View-of-DNS-Resource-Records/ipam_FilterRR_02.jpg)  
   

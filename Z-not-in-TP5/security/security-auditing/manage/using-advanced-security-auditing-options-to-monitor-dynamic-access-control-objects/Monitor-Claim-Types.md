@@ -18,7 +18,7 @@ Claim types are one of the basic building blocks of Dynamic Access Control. Clai
 > [!NOTE]
 > The contents of this topic apply to the list of supported Windows operating systems designated in the **Applies To** list at the beginning of this topic.
 
-Use the following procedures to configure settings to monitor changes to claim types in AD DS. These procedures assume that you have configured and deployed Dynamic Access Control, including central access policies, claims, and other components, in your network. If you have not yet deployed Dynamic Access Control in your network, see [Deploy a Central Access Policy \(Demonstration Steps\)](http://technet.microsoft.com/library/hh846167.aspx).
+Use the following procedures to configure settings to monitor changes to claim types in AD DS. These procedures assume that you have configured and deployed Dynamic Access Control, including central access policies, claims, and other components, in your network. If you have not yet deployed Dynamic Access Control in your network, see [Deploy a Central Access Policy (Demonstration Steps)](http://technet.microsoft.com/library/hh846167.aspx).
 
 > [!NOTE]
 > Your server might function differently based on the version and edition of the operating system that is installed, your account permissions, and your menu settings.
@@ -29,13 +29,13 @@ Use the following procedures to configure settings to monitor changes to claim t
 
 2.  In Server Manager, point to **Tools**, and then click **Group Policy Management**.
 
-3.  In the console tree, right\-click the default domain controller Group Policy Object, and then click **Edit**.
+3.  In the console tree, right-click the default domain controller Group Policy Object, and then click **Edit**.
 
-4.  Double\-click **Computer Configuration**, click **Security Settings**, expand **Advanced Audit Policy Configuration**, expand **System Audit Policies**, click **DS Access**, and then double\-click **Audit directory service changes**.
+4.  Double-click **Computer Configuration**, click **Security Settings**, expand **Advanced Audit Policy Configuration**, expand **System Audit Policies**, click **DS Access**, and then double-click **Audit directory service changes**.
 
-5.  Select the **Configure the following audit events** check box, select the **Success** check box \(andthe **Failure** check box, if desired\), and then click **OK**.
+5.  Select the **Configure the following audit events** check box, select the **Success** check box (andthe **Failure** check box, if desired), and then click **OK**.
 
-After you configure settings to monitor changes to claim types in AD DS, verify that the changes are being monitored.
+After you configure settings to monitor changes to claim types in AD DS, verify that the changes are being monitored.
 
 ##### To verify that changes to claim types are monitored
 
@@ -43,7 +43,7 @@ After you configure settings to monitor changes to claim types in AD DS, verify
 
 2.  Open the Active Directory Administrative Center.
 
-3.  Under **Dynamic Access Control**, right\-click **Claim Types**, and then click **Properties**.
+3.  Under **Dynamic Access Control**, right-click **Claim Types**, and then click **Properties**.
 
 4.  Click the **Security** tab, click **Advanced** to open the **Advanced Security Settings** dialog box, and then click the **Auditing** tab.
 

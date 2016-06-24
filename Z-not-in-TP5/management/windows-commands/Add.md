@@ -14,7 +14,7 @@ ms.assetid: 6ac1f002-9702-4b55-8e4e-2098f3bb4fa9
 Mirrors the simple volume with focus to the specified disk.
 
 > [!IMPORTANT]
-> This DiskPart command is not available in any edition of Windows Vista.
+> This DiskPart command is not available in any edition of Windows Vista.
 
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 
@@ -28,8 +28,8 @@ add disk=<n> [align=<n>] [wait] [noerr]
 
 |Parameter|Description|
 |-------------|---------------|
-|disk\=<n>|Specifies a disk, other than the one containing the existing simple volume, to contain the mirror. You can mirror only simple volumes. The specified disk must have unallocated space at least as large as the size of the simple volume you want to mirror.|
-|align\=<n>|Typically used with hardware RAID Logical Unit Number \(LUN\) arrays to improve performance. Aligns all volume or partition extents to the closest alignment boundary. *n* is the number of kilobytes \(KB\) from the beginning of the disk to the closest alignment boundary.|
+|disk=<n>|Specifies a disk, other than the one containing the existing simple volume, to contain the mirror. You can mirror only simple volumes. The specified disk must have unallocated space at least as large as the size of the simple volume you want to mirror.|
+|align=<n>|Typically used with hardware RAID Logical Unit Number (LUN) arrays to improve performance. Aligns all volume or partition extents to the closest alignment boundary. *n* is the number of kilobytes (KB) from the beginning of the disk to the closest alignment boundary.|
 |wait|Waits for the volume to finish synchronizing with the added disk before returning.  Without this parameter, DiskPart returns after the mirrored volume is created and does not wait for the synchronization to complete.|
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
 

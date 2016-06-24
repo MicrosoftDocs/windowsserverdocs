@@ -40,7 +40,7 @@ author: Femila
       <list class="ordered">
         <listItem>
           <para>DCDIAG reports that Active Directory Replications test has failed with status 8524:</para>
-          <code>Testing server: &lt;sitename&gt;\&lt;destination DC&gt;
+          <code>Testing server: &lt;sitename&gt;&lt;destination DC&gt;
 Starting test: Replications
 [Replications Check,&lt;destination DC&gt;] A recent replication attempt failed:
 From &lt;source DC&gt; to &lt;destination dc&gt;
@@ -65,7 +65,7 @@ CN=&lt;DN path for failing directory partition&gt;,DC=Contoso,DC=Com
             </listItem>
           </list>
           <para>Sample 8524 failures from REPADMIN /SHOWREPS is shown below:</para>
-          <code>Default-First-Site-Name\CONTOSO-DC1
+          <code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: e15fc9a1-82f8-4a99-97f2-8e715f06e747

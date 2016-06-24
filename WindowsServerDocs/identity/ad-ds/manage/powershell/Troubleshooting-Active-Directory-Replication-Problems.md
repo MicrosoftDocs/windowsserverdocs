@@ -15,7 +15,7 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>Active Directory replication problems can have several different sources. For example, Domain Name System (DNS) problems, networking issues, or security problems can all cause Active Directory replication to fail. </para>
+    <para>Active Directory replication problems can have several different sources. For example, Domain Name System (DNS) problems, networking issues, or security problems can all cause Active Directory replication to fail. </para>
     <para>The rest of this topic explains tools and a general methodology to fix Active Directory replication errors. For a hands-on lab that demonstrates how to troubleshoot Active Directory replication problems, see <externalLink><linkText>TechNet Virtual Lab: Troubleshooting Active Directory Replication Errors</linkText><linkUri>http://go.microsoft.com/?linkid=9844718</linkUri></externalLink>. </para>
     <para>The following subtopics cover symptoms, causes, and how to resolve specific replication errors:</para>
     <list class="bullet">
@@ -184,10 +184,10 @@ author: Femila
   <section address="BKMK_Intro">
     <title>Introduction and resources for troubleshooting Active Directory replication</title>
     <content>
-      <para>Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem is not immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes. </para>
+      <para>Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem is not immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes. </para>
       <para>For a UI-based tool to help monitor replication and diagnose errors, see <externalLink><linkText>Active Directory Replication Status Tool</linkText><linkUri>http://www.microsoft.com/download/details.aspx?id=30005</linkUri></externalLink>. There is also a <externalLink><linkText>hands-on lab</linkText><linkUri>http://go.microsoft.com/?linkid=9844718</linkUri></externalLink> that demonstrates how to use Active Directory Replication Status and other tools to troubleshoot errors. </para>
-      <para>For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see Monitoring and Troubleshooting Active Directory Replication Using Repadmin (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=122830</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=122830</linkUri></externalLink>).</para>
-      <para>For information about how Active Directory replication works, see the following technical references:</para>
+      <para>For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see Monitoring and Troubleshooting Active Directory Replication Using Repadmin (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=122830</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=122830</linkUri></externalLink>).</para>
+      <para>For information about how Active Directory replication works, see the following technical references:</para>
       <list class="bullet">
         <listItem>
           <para>Active Directory Replication Model Technical Reference (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=65958</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=65958</linkUri></externalLink>)</para>
@@ -208,13 +208,13 @@ author: Femila
   <section address="BKMK_ruling_out">
     <title>Ruling out intentional disruptions or hardware failures</title>
     <content>
-      <para>Sometimes replication errors occur because of intentional disruptions. For example, when you troubleshoot Active Directory replication problems, rule out intentional disconnections and hardware failures or upgrades first.</para>
+      <para>Sometimes replication errors occur because of intentional disruptions. For example, when you troubleshoot Active Directory replication problems, rule out intentional disconnections and hardware failures or upgrades first.</para>
     </content>
     <sections>
       <section>
         <title>Intentional disconnections</title>
         <content>
-          <para>If replication errors are reported by a domain controller that is attempting replication with a domain controller that has been built in a staging site and is currently offline awaiting its deployment in the final production site (a remote site, such as a branch office), you can account for those replication errors. To avoid separating a domain controller from the replication topology for extended periods, which causes continuous errors until the domain controller is reconnected, consider adding such computers initially as member servers and using the install from media (IFM) method to install Active Directory Domain Services (AD DS). You can use the Ntdsutil command-line tool to create installation media that you can store on removable media (CD, DVD, or other media) and ship to the destination site. Then, you can use the installation media to install AD DS on the domain controllers at the site, without the use of replication. For more information about IFM, see <link xlink:href="3dc846c2-ec2b-4413-9a96-2b134bb18f93">Installing an Additional Domain Controller by Using IFM</link>.</para>
+          <para>If replication errors are reported by a domain controller that is attempting replication with a domain controller that has been built in a staging site and is currently offline awaiting its deployment in the final production site (a remote site, such as a branch office), you can account for those replication errors. To avoid separating a domain controller from the replication topology for extended periods, which causes continuous errors until the domain controller is reconnected, consider adding such computers initially as member servers and using the install from media (IFM) method to install Active Directory Domain Services (AD DS). You can use the Ntdsutil command-line tool to create installation media that you can store on removable media (CD, DVD, or other media) and ship to the destination site. Then, you can use the installation media to install AD DS on the domain controllers at the site, without the use of replication. For more information about IFM, see <link xlink:href="3dc846c2-ec2b-4413-9a96-2b134bb18f93">Installing an Additional Domain Controller by Using IFM</link>.</para>
         </content>
       </section>
       <section>
@@ -227,35 +227,35 @@ author: Femila
       <section>
         <title>Firewall configuration</title>
         <content>
-          <para>By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see article 224196 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=22578</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=22578</linkUri></externalLink>). For information about the ports that Active Directory replication uses, see Active Directory Replication Tools and Settings (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=123774</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=123774</linkUri></externalLink>). For information about managing Active Directory replication over firewalls, see Active Directory Replication over Firewalls (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=123775</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=123775</linkUri></externalLink>).</para>
+          <para>By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see article 224196 in the Microsoft Knowledge Base (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=22578</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=22578</linkUri></externalLink>). For information about the ports that Active Directory replication uses, see Active Directory Replication Tools and Settings (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=123774</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=123774</linkUri></externalLink>). For information about managing Active Directory replication over firewalls, see Active Directory Replication over Firewalls (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=123775</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=123775</linkUri></externalLink>).</para>
         </content>
       </section>
     </sections>
   </section>
   <section>
-    <title>Responding to failure of an outdated server running Windows 2000 Server</title>
+    <title>Responding to failure of an outdated server running Windows 2000 Server</title>
     <content>
-      <para>If a domain controller running Windows 2000 Server has failed for longer than the number of days in the tombstone lifetime, the solution is always the same: </para>
+      <para>If a domain controller running Windows 2000 Server has failed for longer than the number of days in the tombstone lifetime, the solution is always the same: </para>
       <list class="ordered">
         <listItem>
           <para>Move the server from the corporate network to a private network.</para>
         </listItem>
         <listItem>
-          <para>Either forcefully remove Active Directory or reinstall the operating system.</para>
+          <para>Either forcefully remove Active Directory or reinstall the operating system.</para>
         </listItem>
         <listItem>
-          <para>Remove the server metadata from Active Directory so that the server object cannot be revived. </para>
+          <para>Remove the server metadata from Active Directory so that the server object cannot be revived. </para>
         </listItem>
       </list>
       <alert class="note">
-        <para>You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see Remove Active Directory Domain Controller Metadata (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkID=123599</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkID=123599</linkUri></externalLink>). By default, NTDS Settings objects that are deleted are revived automatically for a period of 14 days. Therefore, if you do not remove server metadata (use Ntdsutil or the script mentioned previously to perform metadata cleanup), the server metadata is reinstated in the directory, which prompts replication attempts to occur. In this case, errors will be logged persistently as a result of the inability to replicate with the missing domain controller.</para>
+        <para>You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see Remove Active Directory Domain Controller Metadata (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkID=123599</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkID=123599</linkUri></externalLink>). By default, NTDS Settings objects that are deleted are revived automatically for a period of 14 days. Therefore, if you do not remove server metadata (use Ntdsutil or the script mentioned previously to perform metadata cleanup), the server metadata is reinstated in the directory, which prompts replication attempts to occur. In this case, errors will be logged persistently as a result of the inability to replicate with the missing domain controller.</para>
       </alert>
     </content>
   </section>
   <section address="BKMK_root_causes">
     <title>Root causes</title>
     <content>
-      <para>If you rule out intentional disconnections, hardware failures, and outdated Windows 2000 domain controllers, the remainder of replication problems almost always have one of the following root causes: </para>
+      <para>If you rule out intentional disconnections, hardware failures, and outdated Windows 2000 domain controllers, the remainder of replication problems almost always have one of the following root causes: </para>
       <list class="bullet">
         <listItem>
           <para>Network connectivity: The network connection might be unavailable, or network settings are not configured properly.</para>
@@ -273,7 +273,7 @@ author: Femila
           <para>Replication engine: If intersite replication schedules are too short, replication queues might be too large to process in the time that is required by the outbound replication schedule. In this case, replication of some changes can be stalled indefinitely—potentially, long enough to exceed the tombstone lifetime.</para>
         </listItem>
         <listItem>
-          <para>Replication topology: Domain controllers must have intersite links in AD DS that map to real wide area network (WAN) or virtual private network (VPN) connections. If you create objects in AD DS for the replication topology that are not supported by the actual site topology of your network, replication that requires the misconfigured topology fails.</para>
+          <para>Replication topology: Domain controllers must have intersite links in AD DS that map to real wide area network (WAN) or virtual private network (VPN) connections. If you create objects in AD DS for the replication topology that are not supported by the actual site topology of your network, replication that requires the misconfigured topology fails.</para>
         </listItem>
       </list>
     </content>
@@ -290,19 +290,19 @@ author: Femila
           <para>Attempt to resolve any reported failure in a timely manner by using the methods that are described in event messages and this guide. If software might be causing the problem, uninstall the software before you continue with other solutions.</para>
         </listItem>
         <listItem>
-          <para>If the problem that is causing replication to fail cannot be resolved by any known methods, remove AD DS from the server and then reinstall AD DS. For more information about reinstalling AD DS, see Decommissioning a Domain Controller (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=128290</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=128290</linkUri></externalLink>).</para>
+          <para>If the problem that is causing replication to fail cannot be resolved by any known methods, remove AD DS from the server and then reinstall AD DS. For more information about reinstalling AD DS, see Decommissioning a Domain Controller (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=128290</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=128290</linkUri></externalLink>).</para>
         </listItem>
         <listItem>
-          <para>If AD DS cannot be removed normally while the server is connected to the network, use one of the following methods to resolve the problem:</para>
+          <para>If AD DS cannot be removed normally while the server is connected to the network, use one of the following methods to resolve the problem:</para>
           <list class="bullet">
             <listItem>
-              <para>Force AD DS removal in Directory Services Restore Mode (DSRM), clean up server metadata, and then reinstall AD DS.</para>
+              <para>Force AD DS removal in Directory Services Restore Mode (DSRM), clean up server metadata, and then reinstall AD DS.</para>
             </listItem>
             <listItem>
               <para>Reinstall the operating system, and rebuild the domain controller.</para>
             </listItem>
           </list>
-          <para>For more information about forcing removal of AD DS, see Forcing the Removal of a Domain Controller (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=128291</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=128291</linkUri></externalLink>).</para>
+          <para>For more information about forcing removal of AD DS, see Forcing the Removal of a Domain Controller (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=128291</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=128291</linkUri></externalLink>).</para>
         </listItem>
       </list>
     </content>
@@ -371,7 +371,7 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>Hide or delete column <ui>A</ui> as well as the <ui>Transport Type</ui> column, as follows:</para>
+              <para>Hide or delete column <ui>A</ui> as well as the <ui>Transport Type</ui> column, as follows:</para>
             </content>
           </step>
           <step>
@@ -390,7 +390,7 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>Select row 1 beneath the column heading row. On the <ui>View</ui> tab, click <ui>Freeze Panes</ui>, and then click <ui>Freeze Top Row</ui>.</para>
+              <para>Select row 1 beneath the column heading row. On the <ui>View</ui> tab, click <ui>Freeze Panes</ui>, and then click <ui>Freeze Top Row</ui>.</para>
             </content>
           </step>
           <step>
@@ -415,7 +415,7 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>Repeat step 11 for the <ui>Last Failure Time</ui> column, but use the value <ui>does not equal</ui>, and then type the value <userInput>0</userInput>.</para>
+              <para>Repeat step 11 for the <ui>Last Failure Time</ui> column, but use the value <ui>does not equal</ui>, and then type the value <userInput>0</userInput>.</para>
             </content>
           </step>
           <step>
@@ -438,7 +438,7 @@ author: Femila
       <section>
         <title>repadmin /showrepl error messages that indicate replication problems</title>
         <content>
-          <para>To identify Active Directory replication problems, use the <system>repadmin /showrepl</system> command, as described in the previous section. The following table shows error messages that this command generates, along with the root causes of the errors and links to topics that provide solutions for the errors.</para>
+          <para>To identify Active Directory replication problems, use the <system>repadmin /showrepl</system> command, as described in the previous section. The following table shows error messages that this command generates, along with the root causes of the errors and links to topics that provide solutions for the errors.</para>
           <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
@@ -459,7 +459,7 @@ author: Femila
                   <para>The time since last replication with this server has exceeded the tombstone lifetime.</para>
                 </TD>
                 <TD colspan="1">
-                  <para>A domain controller has failed inbound replication with the named source domain controller long enough for a deletion to have been tombstoned, replicated, and garbage-collected from AD DS.</para>
+                  <para>A domain controller has failed inbound replication with the named source domain controller long enough for a deletion to have been tombstoned, replicated, and garbage-collected from AD DS.</para>
                 </TD>
                 <TD colspan="1">
                   <para>
@@ -531,7 +531,7 @@ author: Femila
                   <para>Cannot open LDAP connection to local host</para>
                 </TD>
                 <TD colspan="1">
-                  <para>The administration tool could not contact AD DS.</para>
+                  <para>The administration tool could not contact AD DS.</para>
                 </TD>
                 <TD colspan="1">
                   <para>
@@ -541,7 +541,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>Active Directory replication has been preempted.</para>
+                  <para>Active Directory replication has been preempted.</para>
                 </TD>
                 <TD colspan="1">
                   <para>The progress of inbound replication was interrupted by a higher-priority replication request, such as a request that was generated manually with the <system>repadmin /sync</system> command.</para>
@@ -566,9 +566,9 @@ author: Femila
         </content>
       </section>
       <section address="BKMK_event_messages">
-        <title>Event messages that indicate Active Directory replication problems</title>
+        <title>Event messages that indicate Active Directory replication problems</title>
         <content>
-          <para>The following table lists common events that might indicate problems with Active Directory replication, along with root causes of the problems and links to topics that provide solutions for the problems.</para>
+          <para>The following table lists common events that might indicate problems with Active Directory replication, along with root causes of the problems and links to topics that provide solutions for the problems.</para>
           <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
@@ -589,7 +589,7 @@ author: Femila
                   <para>1311 — NTDS KCC</para>
                 </TD>
                 <TD colspan="1">
-                  <para>The replication configuration information in AD DS does not accurately reflect the physical topology of the network.</para>
+                  <para>The replication configuration information in AD DS does not accurately reflect the physical topology of the network.</para>
                 </TD>
                 <TD colspan="1">
                   <para>
@@ -657,7 +657,7 @@ author: Femila
                   <para>2087 — NTDS Replication</para>
                 </TD>
                 <TD colspan="1">
-                  <para>AD DS could not resolve the DNS host name of the source domain controller to an IP address, and replication failed.</para>
+                  <para>AD DS could not resolve the DNS host name of the source domain controller to an IP address, and replication failed.</para>
                 </TD>
                 <TD colspan="1">
                   <para>
@@ -670,7 +670,7 @@ author: Femila
                   <para>2088 — NTDS Replication</para>
                 </TD>
                 <TD colspan="1">
-                  <para>AD DS could not resolve the DNS host name of the source domain controller to an IP address, but replication succeeded.</para>
+                  <para>AD DS could not resolve the DNS host name of the source domain controller to an IP address, but replication succeeded.</para>
                 </TD>
                 <TD colspan="1">
                   <para>
@@ -693,11 +693,11 @@ author: Femila
               </tr>
             </tbody>
           </table>
-          <para>For more information about replication concepts, see “Active Directory Replication Technologies” in the Windows Server 2003 Technical Reference (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41950</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41950</linkUri></externalLink>).</para>
+          <para>For more information about replication concepts, see “Active Directory Replication Technologies” in the Windows Server 2003 Technical Reference (<externalLink><linkText>http://go.microsoft.com/fwlink/?LinkId=41950</linkText><linkUri>http://go.microsoft.com/fwlink/?LinkId=41950</linkUri></externalLink>).</para>
           <para address="BKMK_InThisSection">
             <embeddedLabel>In this section</embeddedLabel>
           </para>
-          <para>See the following topics for detailed information about troubleshooting Active Directory replication problems:</para>
+          <para>See the following topics for detailed information about troubleshooting Active Directory replication problems:</para>
           <para>
             <link xlink:href="53ea71ae-4ecb-475a-935b-cd6a9afff02e">Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)</link>
           </para>

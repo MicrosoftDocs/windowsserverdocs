@@ -21,9 +21,9 @@ WDSUTIL /Initialize-Server [/Server:<Server name>] /RemInst:<Full path> [/Author
 
 |Parameter|Description|
 |-------------|---------------|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name \(FQDN\). If no server name is specified, the local server will be used.|
-|\/RemInst:"<Full path>"|Specifies the full path and name of the RemoteInstall folder. If the specified folder does not already exist, this option will create it when the command is run. You should always enter a local path, even in the case of a remote computer. For example: **D:\\RemoteInstall**.|
-|\[\/Authorize\]|Authorizes the server in Dynamic Host Control Protocol \(DHCP\). This option is necessary only if DHCP rogue detection is enabled, meaning that the Windows Deployment Services PXE server must be authorized in DHCP before client computers can be serviced. Note that DHCP rogue detection is disabled by default.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|/RemInst:"<Full path>"|Specifies the full path and name of the RemoteInstall folder. If the specified folder does not already exist, this option will create it when the command is run. You should always enter a local path, even in the case of a remote computer. For example: **D:\RemoteInstall**.|
+|[/Authorize]|Authorizes the server in Dynamic Host Control Protocol (DHCP). This option is necessary only if DHCP rogue detection is enabled, meaning that the Windows Deployment Services PXE server must be authorized in DHCP before client computers can be serviced. Note that DHCP rogue detection is disabled by default.|
 
 ## <a name="BKMK_examples"></a>Examples
 To initialize the server and set the RemoteInstall shared folder to the F: drive, type.

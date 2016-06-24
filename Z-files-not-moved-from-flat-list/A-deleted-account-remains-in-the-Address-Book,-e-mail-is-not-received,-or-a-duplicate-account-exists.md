@@ -15,7 +15,7 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>Deleted accounts remaining in the global address list (GAL), e-mail messages for existing accounts not being received, or duplicate objects existing in Active Directory Domain Services (AD DS) are all symptoms that can indicate a lingering object problem. If you have no error or event that identifies the lingering object and its directory partition (for example, Event ID 1388 or Event ID 1988), you must search the global catalog for an object that you believe might be causing the problem. When you identify the lingering object and the directory partition of the object, you can perform the procedures to remove it.</para>
+    <para>Deleted accounts remaining in the global address list (GAL), e-mail messages for existing accounts not being received, or duplicate objects existing in Active Directory Domain Services (AD DS) are all symptoms that can indicate a lingering object problem. If you have no error or event that identifies the lingering object and its directory partition (for example, Event ID 1388 or Event ID 1988), you must search the global catalog for an object that you believe might be causing the problem. When you identify the lingering object and the directory partition of the object, you can perform the procedures to remove it.</para>
     <para>
       <embeddedLabel>In this topic</embeddedLabel>
     </para>
@@ -134,7 +134,7 @@ author: Femila
                 <content>
                   <para>In the <ui>Search</ui> dialog box, in <ui>Filter</ui>, replace the default filter (objectClass=*) to create a filter of the following form:</para>
                   <para>(<placeholder>attribute</placeholder>=<placeholder>value</placeholder>)</para>
-                  <para>where <placeholder>attribute</placeholder> is the Lightweight Directory Access Protocol (LDAP) name of an attribute and <placeholder>value</placeholder> is the value that you know or suspect to be associated with the object that you are searching for. For example, use (userPrincipalName=JanD@contoso.com), (sAMAccountName=JanD), or (sn=Dryml) to locate the duplicate user object Jan Dryml. You can use the asterisk (*) in the <placeholder>value</placeholder> field if you want to search all objects.</para>
+                  <para>where <placeholder>attribute</placeholder> is the Lightweight Directory Access Protocol (LDAP) name of an attribute and <placeholder>value</placeholder> is the value that you know or suspect to be associated with the object that you are searching for. For example, use (userPrincipalName=JanD@contoso.com), (sAMAccountName=JanD), or (sn=Dryml) to locate the duplicate user object Jan Dryml. You can use the asterisk (*) in the <placeholder>value</placeholder> field if you want to search all objects.</para>
                 </content>
               </step>
               <step>
@@ -144,7 +144,7 @@ author: Femila
               </step>
               <step>
                 <content>
-                  <para>Click <ui>Close</ui>, and then view the results. You must identify which of the displayed objects should be removed from AD DS. An indication that you have found a lingering object that exists only on a global catalog server is that the object does not exist in a writable replica of the directory partition. </para>
+                  <para>Click <ui>Close</ui>, and then view the results. You must identify which of the displayed objects should be removed from AD DS. An indication that you have found a lingering object that exists only on a global catalog server is that the object does not exist in a writable replica of the directory partition. </para>
                 </content>
               </step>
               <step>
@@ -159,7 +159,7 @@ author: Femila
       <section address="BKMK_Identify_Partition">
         <title>Identify the directory partition of the object</title>
         <content>
-          <para>After you identify the distinguished name of the object that is causing problems, if it is a domain object, identify the domain in which it is located by looking at the DC= part of the distinguished name. For example, if the object that you find has the distinguished name CN=Jan Dryml,CN=Users,DC=Region1,DC=Contoso,DC=com, the directory partition name for the user account is DC=Region1,DC=Contoso,DC=com.</para>
+          <para>After you identify the distinguished name of the object that is causing problems, if it is a domain object, identify the domain in which it is located by looking at the DC= part of the distinguished name. For example, if the object that you find has the distinguished name CN=Jan Dryml,CN=Users,DC=Region1,DC=Contoso,DC=com, the directory partition name for the user account is DC=Region1,DC=Contoso,DC=com.</para>
         </content>
       </section>
       <section address="BKMK_Remove_Object">

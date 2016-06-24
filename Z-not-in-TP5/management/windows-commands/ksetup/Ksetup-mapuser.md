@@ -25,7 +25,7 @@ ksetup /mapuser <Principal> <Account>
 |<Account>|Any account or security group name that exists on this computer, such as Guest, Domain Users, or Administrator.|
 
 ## Remarks
-An account can be specifically identified, such as domain guests. Or you can use the wildcard character \(\*\) to include all accounts.
+An account can be specifically identified, such as domain guests. Or you can use the wildcard character (*) to include all accounts.
 
 If an account name is omitted, mapping is deleted for the specified principal.
 
@@ -33,10 +33,10 @@ The computer will only authenticate the principals of the given realm if they pr
 
 Use **ksetup** without any parameters or arguments to see the current mapped settings and the default realm.
 
-Whenever changes are made to the external Key Distribution Center \(KDC\) and the realm configuration, a restart of the computer where the setting was changed is required.
+Whenever changes are made to the external Key Distribution Center (KDC) and the realm configuration, a restart of the computer where the setting was changed is required.
 
 ## <a name="BKMK_Examples"></a>Examples
-Map Mike Danseglio's account within the Kerberos realm CONTOSO to the guest account on this computer, granting him all the privileges of a member of the built\-in Guest account without having to authenticate to this computer:
+Map Mike Danseglio's account within the Kerberos realm CONTOSO to the guest account on this computer, granting him all the privileges of a member of the built-in Guest account without having to authenticate to this computer:
 
 ```
 ksetup /mapuser mike@corp.CONTOSO.COM guest
@@ -48,7 +48,7 @@ Remove the mapping of Mike Danseglio's account to the guest account on this comp
 ksetup /mapuser mike@corp.CONTOSO.COM 
 ```
 
-Map Mike Danseglio's account within the CONTOSO Kerberos realm to any existing account on this computer. \(if only the standard user and guest accounts are active on this computer, Mike's privileges will be set to those\):
+Map Mike Danseglio's account within the CONTOSO Kerberos realm to any existing account on this computer. (if only the standard user and guest accounts are active on this computer, Mike's privileges will be set to those):
 
 ```
 ksetup /mapuser mike@corp.CONTOSO.COM *

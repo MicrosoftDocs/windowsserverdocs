@@ -25,9 +25,9 @@ subst <Drive1>: /d
 |Parameter|Description|
 |-------------|---------------|
 |<Drive1>:|Specifies the virtual drive to which you want to assign a path.|
-|\[<Drive2>:\]<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
-|\/d|Deletes a substituted \(virtual\) drive.|
-|\/?|Displays help at the command prompt.|
+|[<Drive2>:]<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
+|/d|Deletes a substituted (virtual) drive.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -50,7 +50,7 @@ subst <Drive1>: /d
     `Invalid parameter - drive1:`
 
 ## <a name="BKMK_examples"></a>Examples
-To create a virtual drive Z for the path B:\\User\\Betty\\Forms, type:
+To create a virtual drive Z for the path B:\User\Betty\Forms, type:
 
 ```
 subst z: b:\user\betty\forms 

@@ -27,18 +27,18 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 |Parameter|Description|  
 |-------------|---------------|  
 |<Command>|Specifies a command for which you want to display the output.|  
-|\/c|Clears the screen before displaying a page.|  
-|\/p|Expands form\-feed characters.|  
-|\/s|Displays multiple blank lines as a single blank line.|  
-|\/t<N>|Displays tabs as the number of spaces specified by *N*.|  
-|\+<N>|Displays the first file beginning at the line specified by *N*.|  
-|\[<Drive>:\] \[<Path>\]<FileName>|Specifies the location and name of a file to display.|  
+|/c|Clears the screen before displaying a page.|  
+|/p|Expands form-feed characters.|  
+|/s|Displays multiple blank lines as a single blank line.|  
+|/t<N>|Displays tabs as the number of spaces specified by *N*.|  
+|+<N>|Displays the first file beginning at the line specified by *N*.|  
+|[<Drive>:] [<Path>]<FileName>|Specifies the location and name of a file to display.|  
 |<Files>|Specifies a list of files to display. Separate file names with a space.|  
-|\/?|Displays help at the command prompt.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   
--   The following subcommands are accepted at the **more** prompt \(`-- More --`\).  
+-   The following subcommands are accepted at the **more** prompt (`-- More --`).  
   
     |Key|Action|  
     |-------|----------|  
@@ -46,12 +46,12 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
     |ENTER|Displays the next line.|  
     |f|Displays the next file.|  
     |q|Quits the **more** command.|  
-    |\=|Shows the line number.|  
+    |=|Shows the line number.|  
     |p <N>|Displays the next *N* lines.|  
     |s <N>|Skips the next *N* lines.|  
     |?|Shows the commands that are available at the **more** prompt.|  
   
--   When using the redirection character \(**<**\), you must specify a file name as the source. When using the pipe \(**|**\), you can use such commands as **dir**, **sort**, and **type**.  
+-   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**|**), you can use such commands as **dir**, **sort**, and **type**.  
   
 -   The **more** command, with different parameters, is available from the Recovery Console.  
   
@@ -85,7 +85,7 @@ The **more** command displays the first screen of information from Clients.new, 
 ```  
   
 #### Using more subcommands  
-The following examples can be used at the **more** prompt \(`-- More --`\).  
+The following examples can be used at the **more** prompt (`-- More --`).  
   
 -   To display the file one line at a time, press ENTER at the **more** prompt.  
   
@@ -97,7 +97,7 @@ The following examples can be used at the **more** prompt \(`-- More --`\).
   
 -   To quit **more**, type **q** at the **more** prompt.  
   
--   To display the current line number, type **\=** at the **more** prompt. The current line number is added to the **more** prompt as follows:  
+-   To display the current line number, type **=** at the **more** prompt. The current line number is added to the **more** prompt as follows:  
   
     ```  
     -- More [Line: 24] --  

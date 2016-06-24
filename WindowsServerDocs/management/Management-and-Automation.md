@@ -18,11 +18,11 @@ This collection contains tool and reference information for IT pros who want to 
   
 -   [Server Manager](http://technet.microsoft.com/library/mt126175.aspx)  
   
-    The content in this section describes how to use Server Manager in Windows Server 2016 Technical Preview to manage both local and remote Windows\-based servers from desktop computers.  
+    The content in this section describes how to use Server Manager in Windows Server 2016 Technical Preview to manage both local and remote Windows-based servers from desktop computers.  
   
 -   [Remote Server Administration Tools](http://technet.microsoft.com/library/mt126174.aspx)  
   
-    To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10®. Remote Server Administration Tools for Windows 10® includes Server Manager, Microsoft Management Console \(MMC\) snap\-ins, consoles, Windows PowerShell cmdlets and providers, and some command\-line tools for managing roles and features that run on Windows Server 2016 Technical Preview.  
+    To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10®. Remote Server Administration Tools for Windows 10® includes Server Manager, Microsoft Management Console (MMC) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server 2016 Technical Preview.  
  
   
 -   [Windows Server Update Services &#40;WSUS&#41;](windows-server-update-services/Windows-Server-Update-Services-WSUS.md)  

@@ -13,7 +13,7 @@ ms.assetid: 470e2f66-75d6-4276-ba3a-51d25a7512b7
 # Audit Filtering Platform Policy Change
 This topic for the IT professional describes the Advanced Security Audit policy setting, **Audit Filtering Platform Policy Change**, which determines whether the operating system generates audit events for certain IPsec and Windows Filtering Platform actions.
 
-Windows Filtering Platform \(WFP\) enables independent software vendors \(ISVs\) to filter and modify TCP\/IP packets, monitor or authorize connections, filter Internet Protocol security \(IPsec\)\-protected traffic, and filter remote procedure calls \(RPCs\).
+Windows Filtering Platform (WFP) enables independent software vendors (ISVs) to filter and modify TCP/IP packets, monitor or authorize connections, filter Internet Protocol security (IPsec)-protected traffic, and filter remote procedure calls (RPCs).
 
 This security policy setting determines whether the operating system generates audit events for:
 
@@ -29,7 +29,7 @@ Event volume: Low
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|
@@ -50,18 +50,18 @@ If this policy setting is configured, the following events appear on computers r
 |5441|The following filter was present when the Windows Filtering Platform Base Filtering Engine started.|
 |5442|The following provider was present when the Windows Filtering Platform Base Filtering Engine started.|
 |5443|The following provider context was present when the Windows Filtering Platform Base Filtering Engine started.|
-|5444|The following sub\-layer was present when the Windows Filtering Platform Base Filtering Engine started.|
+|5444|The following sub-layer was present when the Windows Filtering Platform Base Filtering Engine started.|
 |5446|A Windows Filtering Platform callout has been changed.|
 |5448|A Windows Filtering Platform provider has been changed.|
 |5449|A Windows Filtering Platform provider context has been changed.|
-|5450|A Windows Filtering Platform sub\-layer has been changed.|
+|5450|A Windows Filtering Platform sub-layer has been changed.|
 |5456|PAStore Engine applied Active Directory storage IPsec policy on the computer.|
 |5457|PAStore Engine failed to apply Active Directory storage IPsec policy on the computer.|
 |5458|PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer.|
 |5459|PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer.|
 |5460|PAStore Engine applied local registry storage IPsec policy on the computer.|
 |5461|PAStore Engine failed to apply local registry storage IPsec policy on the computer.|
-|5462|PAStore Engine failed to apply some rules of the active IPsec policy on the computer. Use the IP Security Monitor snap\-in to diagnose the problem.|
+|5462|PAStore Engine failed to apply some rules of the active IPsec policy on the computer. Use the IP Security Monitor snap-in to diagnose the problem.|
 |5463|PAStore Engine polled for changes to the active IPsec policy and detected no changes.|
 |5464|PAStore Engine polled for changes to the active IPsec policy, detected changes, and applied them to IPsec Services.|
 |5465|PAStore Engine received a control for forced reloading of IPsec policy and processed the control successfully.|

@@ -21,8 +21,8 @@ WDSUTIL [Options] /Get-AllImageGroups [/Server:<Server name>] [/Detailed]
 
 |Parameter|Description|
 |-------------|---------------|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name \(FQDN\). If no server name is specified, the local server will be used.|
-|\[\/Detailed\]|Returns the image metadata from each image. If this parameter is not used, the default behavior is to return only the image name, description, and file name for each image.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|[/Detailed]|Returns the image metadata from each image. If this parameter is not used, the default behavior is to return only the image name, description, and file name for each image.|
 
 ## <a name="BKMK_examples"></a>Examples
 To view information about the image groups, type one of the following:

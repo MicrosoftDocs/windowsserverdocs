@@ -1,1 +1,1 @@
-Microsoft Azure Active Directory \(Azure AD\)
+Microsoft Azure Active Directory (Azure AD)

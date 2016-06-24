@@ -13,14 +13,14 @@ ms.assetid: dd4a3d78-a77f-451e-a383-d5cf45ea17cf
 author: KBDAzure
 ---
 # Avoid configuring virtual machines to allow unfiltered SCSI commands
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Operations|  
   

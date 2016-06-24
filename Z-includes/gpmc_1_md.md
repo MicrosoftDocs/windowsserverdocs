@@ -1,1 +1,1 @@
-Group Policy Management Console \(GPMC\)
+Group Policy Management Console (GPMC)

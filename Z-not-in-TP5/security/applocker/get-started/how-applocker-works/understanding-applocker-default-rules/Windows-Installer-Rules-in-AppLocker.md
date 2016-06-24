@@ -21,13 +21,13 @@ AppLocker defines Windows Installer rules to include only the following file for
 
 -   .mst
 
-The purpose of this collection is to allow you to control the installation of files on client computers and servers through Group Policy or the Local Security Policy snap\-in. The following table lists the default rules that are available for the Windows Installer rule collection.
+The purpose of this collection is to allow you to control the installation of files on client computers and servers through Group Policy or the Local Security Policy snap-in. The following table lists the default rules that are available for the Windows Installer rule collection.
 
 |Purpose|Name|User|Rule condition type|
 |-----------|--------|--------|-----------------------|
-|Allow members of the local Administrators group to run all Windows Installer files|\(Default Rule\) All Windows Installer files|BUILTIN\\Administrators|Path: \*|
-|Allow all users to run Windows Installer files that are digitally signed|\(Default Rule\) All digitally signed Windows Installer files|Everyone|Publisher: \* \(all signed files\)|
-|Allow all users to run Windows Installer files that are located in the Windows Installer folder|\(Default Rule\) All Windows Installer files in %systemdrive%\\Windows\\Installer|Everyone|Path:  %windir%\\Installer\\\*|
+|Allow members of the local Administrators group to run all Windows Installer files|(Default Rule) All Windows Installer files|BUILTIN\Administrators|Path: *|
+|Allow all users to run Windows Installer files that are digitally signed|(Default Rule) All digitally signed Windows Installer files|Everyone|Publisher: * (all signed files)|
+|Allow all users to run Windows Installer files that are located in the Windows Installer folder|(Default Rule) All Windows Installer files in %systemdrive%\Windows\Installer|Everyone|Path:  %windir%\Installer\\*|
 
 ## See Also
 [Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)

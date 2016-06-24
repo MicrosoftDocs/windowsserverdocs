@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: da5e5bab-1abf-4a96-b10d-eacec6f3fe77
 ---
 # Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
-Windows PowerShell for Active Directory includes the ability to manage replication, sites, domains and forests, domain controllers, and partitions. Users of prior management tools such as the Active Directory Sites and Services snap\-in and repadmin.exe will notice that similar functionality is now available from within the Windows PowerShell for Active Directory context. In addition, the cmdlets are compatible with the existing Windows PowerShell for Active Directory cmdlets, thus creating a streamlined experience and allowing customers to easily create automation scripts.
+Windows PowerShell for Active Directory includes the ability to manage replication, sites, domains and forests, domain controllers, and partitions. Users of prior management tools such as the Active Directory Sites and Services snap-in and repadmin.exe will notice that similar functionality is now available from within the Windows PowerShell for Active Directory context. In addition, the cmdlets are compatible with the existing Windows PowerShell for Active Directory cmdlets, thus creating a streamlined experience and allowing customers to easily create automation scripts.
 
 > [!NOTE]
 > The Windows PowerShell for Active Directory replication and topology cmdlets are available in the following environments:
@@ -23,7 +23,7 @@ Windows PowerShell for Active Directory includes the ability to manage replicati
 > -   Windows® 8 with the Remote Server Administration Tools for AD DS and AD LDS installed.
 
 ## Installing the Active Directory Module for Windows PowerShell
-The Active Directory Module for Windows PowerShell is installed by default when the AD DS server role is installed on a server that runs  Windows Server 2012 . No additional steps are required other than adding the server role. You can also install the Active Directory Module on a server that runs  Windows Server 2012  by installing the Remote Server Administration Tools, and you can install the Active Directory Module on a computer running Windows 8 by downloading and installing the [Remote Server Administrative Tools \(RSAT\)](http://www.microsoft.com/download/details.aspx?id=28972). See [Instructions](http://www.microsoft.com/download/details.aspx?id=28972)for installation steps.
+The Active Directory Module for Windows PowerShell is installed by default when the AD DS server role is installed on a server that runs  Windows Server 2012 . No additional steps are required other than adding the server role. You can also install the Active Directory Module on a server that runs  Windows Server 2012  by installing the Remote Server Administration Tools, and you can install the Active Directory Module on a computer running Windows 8 by downloading and installing the [Remote Server Administrative Tools (RSAT)](http://www.microsoft.com/download/details.aspx?id=28972). See [Instructions](http://www.microsoft.com/download/details.aspx?id=28972)for installation steps.
 
 ## Scenarios for testing Windows PowerShell for Active Directory replication and topology management cmdlets
 The following scenarios are designed for administrators to familiarize themselves with the new management cmdlets:
@@ -51,14 +51,14 @@ To complete the steps in the following procedures, you must be a member of the D
 
     `Get-ADReplicationSite -Filter *`
 
-    This returns detailed information about each site. The `Filter` parameter is used throughout Active Directory PowerShell cmdlets to limit the list of objects returned. In this case, the asterisk \(\*\) indicates all site objects.
+    This returns detailed information about each site. The `Filter` parameter is used throughout Active Directory PowerShell cmdlets to limit the list of objects returned. In this case, the asterisk (*) indicates all site objects.
 
     > [!TIP]
-    > You can use the Tab key to auto\-complete commands in Windows PowerShell.
+    > You can use the Tab key to auto-complete commands in Windows PowerShell.
     > 
-    > Example: Type `Get-ADRep` and press Tab multiple times to skip through the matching commands until you reach `Get-ADReplicationSite`. Auto\-complete also works for parameter names such as `Filter`.
+    > Example: Type `Get-ADRep` and press Tab multiple times to skip through the matching commands until you reach `Get-ADReplicationSite`. Auto-complete also works for parameter names such as `Filter`.
 
-    To format the output from the `Get-ADReplicationSite` command as a table and limit the display to specific fields, you can pipe the output to the `Format-Table` command \(or “`ft`” for short\):
+    To format the output from the `Get-ADReplicationSite` command as a table and limit the display to specific fields, you can pipe the output to the `Format-Table` command (or “`ft`” for short):
 
     `Get-ADReplicationSite -Filter * | ft Name`
 
@@ -94,7 +94,7 @@ To complete the steps in the following procedures, you must be a member of the D
     This command created the site link to **BRANCH1** and turned on the change notification process.
 
     > [!TIP]
-    > Use Tab to auto\-complete parameter names such as `-SitesIncluded` and `-OtherAttributes` rather than typing them out manually.
+    > Use Tab to auto-complete parameter names such as `-SitesIncluded` and `-OtherAttributes` rather than typing them out manually.
 
 #### To set the site link cost and replication frequency
 
@@ -120,30 +120,30 @@ To complete the steps in the following procedures, you must be a member of the D
 
     Verify that the **BRANCH1** site contains all of the correct values from the Windows PowerShell commands.
 
-    Verify the **CORPORATE\-BRANCH1** site link is created and connects the **BRANCH1** and **CORPORATE** sites.
+    Verify the **CORPORATE-BRANCH1** site link is created and connects the **BRANCH1** and **CORPORATE** sites.
 
     Verify **DC2** is now in the **BRANCH1** site. Alternatively, you can open the **Active Directory Module for Windows PowerShell** and type the following command to verify **DC2** is now in the **BRANCH1** site: `Get-ADDomainController -Filter * | ft Hostname,Site`.
 
 ## View replication status information
-In the following procedures, you will use one of the Windows PowerShell for Active Directory replication and management cmdlets, `Get-ADReplicationUpToDatenessVectorTable DC1`, to produce a simple replication report using the up\-to\-dateness vector table maintained by each domain controller. This up\-to\-dateness vector table keeps track of the highest originating write USN seen from each domain controller in the forest.
+In the following procedures, you will use one of the Windows PowerShell for Active Directory replication and management cmdlets, `Get-ADReplicationUpToDatenessVectorTable DC1`, to produce a simple replication report using the up-to-dateness vector table maintained by each domain controller. This up-to-dateness vector table keeps track of the highest originating write USN seen from each domain controller in the forest.
 
 To complete the steps in the following procedures, you must be a member of the Domain Admins group or have equivalent permissions.
 
-#### To view the up\-to\-dateness vector table for a single domain controller
+#### To view the up-to-dateness vector table for a single domain controller
 
 1.  Type the following command at the **Active Directory module for Windows PowerShell** prompt:
 
     `Get-ADReplicationUpToDatenessVectorTable DC1`
 
-    This shows a list of the highest USNs seen by **DC1** for every domain controller in the forest. The **Server** value refers to the server maintaining the table, in this case **DC1**. The **Partner** value refers to the replication partner \(direct or indirect\) on which changes were made. The UsnFilter value is the highest USN seen by **DC1** from Partner. If a new domain controller is added to the forest, it will not appear in **DC1**’s table until **DC1** receives a change that originated from the new domain.
+    This shows a list of the highest USNs seen by **DC1** for every domain controller in the forest. The **Server** value refers to the server maintaining the table, in this case **DC1**. The **Partner** value refers to the replication partner (direct or indirect) on which changes were made. The UsnFilter value is the highest USN seen by **DC1** from Partner. If a new domain controller is added to the forest, it will not appear in **DC1**’s table until **DC1** receives a change that originated from the new domain.
 
-#### To view the up\-to\-dateness vector table for all domain controllers in a domain
+#### To view the up-to-dateness vector table for all domain controllers in a domain
 
 1.  Type the following command at the Active Directory module for Windows PowerShell prompt:
 
     `Get-ADReplicationUpToDatenessVectorTable * | sort Partner,Server | ft Partner,Server,UsnFilter`
 
-    This command replaces **DC1** with `*`, thus collecting the up\-to\-dateness vector table data from all domain controllers. The data is sorted by **Partner** and **Server** and then displayed in a table.
+    This command replaces **DC1** with `*`, thus collecting the up-to-dateness vector table data from all domain controllers. The data is sorted by **Partner** and **Server** and then displayed in a table.
 
     The sorting allows you to easily compare the last USN seen by each domain controller for a given replication partner. This is a quick way to check that replication is occurring across your environment. If replication is working correctly, the UsnFilter values reported for a given replication partner should be fairly similar across all domain controllers.
 

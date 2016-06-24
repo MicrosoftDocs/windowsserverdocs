@@ -21,7 +21,7 @@ Bitsadmin /Peers /List
 
 |Parameter|Description|
 |-------------|---------------|
-|[Bitsadmin peers and help](bitsadmin-peers/Bitsadmin-peers-and-help.md)|Displays the command\-line usage for the \/Peers commands.|
+|[Bitsadmin peers and help](bitsadmin-peers/Bitsadmin-peers-and-help.md)|Displays the command-line usage for the /Peers commands.|
 |[Bitsadmin peers and discover](bitsadmin-peers/Bitsadmin-peers-and-discover.md)|Discovers peers again.|
 |[Bitsadmin peers and clear](bitsadmin-peers/Bitsadmin-peers-and-clear.md)|Clears the peers list.|
 |[Bitsadmin peers and list](bitsadmin-peers/Bitsadmin-peers-and-list.md)|List all peers.|

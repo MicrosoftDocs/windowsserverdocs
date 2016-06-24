@@ -16,11 +16,11 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference
 This policy setting determines which users can set the **Trusted for Delegation** setting on a user or computer object.
 
-Security account delegation provides the ability to connect to multiple servers, and each server change retains the authentication credentials of the original client. Delegation of authentication is a capability that client and server applications use when they have multiple tiers. It allows a public\-facing service to use client credentials to authenticate to an application or database service. For this configuration to be possible, the client and the server must run under accounts that are trusted for delegation.
+Security account delegation provides the ability to connect to multiple servers, and each server change retains the authentication credentials of the original client. Delegation of authentication is a capability that client and server applications use when they have multiple tiers. It allows a public-facing service to use client credentials to authenticate to an application or database service. For this configuration to be possible, the client and the server must run under accounts that are trusted for delegation.
 
 Only administrators who have the **Enable computer and user accounts to be trusted for delegation** credential can set up delegation. Domain admins and Enterprise admins have this credential. The procedure to allow a user to be trusted for delegation depends on the functionality level of the domain.
 
-The user or computer object that is granted this right must have write access to the account control flags. A server process running on a computer \(or under a user context\) that is trusted for delegation can access resources on another computer by using the delegated credentials of a client. However, the client account must have Write access to the account control flags on the object.
+The user or computer object that is granted this right must have write access to the account control flags. A server process running on a computer (or under a user context) that is trusted for delegation can access resources on another computer by using the delegated credentials of a client. However, the client account must have Write access to the account control flags on the object.
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -28,16 +28,16 @@ Constant: SeEnableDelegationPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Not defined
 
 ### Best practices
 
-1.  There is no reason to assign this user right to anyone on member servers and workstations that belong to a domain because it has no meaning in those contexts. It is only relevant on domain controllers and stand\-alone computers.
+1.  There is no reason to assign this user right to anyone on member servers and workstations that belong to a domain because it has no meaning in those contexts. It is only relevant on domain controllers and stand-alone computers.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
@@ -46,7 +46,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Not defined|
+|Stand-Alone Server Default Settings|Not defined|
 |Domain Controller Effective Default Settings|Administrators|
 |Member Server Effective Default Settings|Administrators|
 |Client Computer Effective Default Settings|Administrators|
@@ -64,9 +64,9 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
 ### Group Policy
-This user right is defined in the Default Domain Controller Group Policy Object \(GPO\) and in the local security policy of workstations and servers.
+This user right is defined in the Default Domain Controller Group Policy Object (GPO) and in the local security policy of workstations and servers.
 
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 
@@ -88,7 +88,7 @@ Misuse of the **Enable computer and user accounts to be trusted for delegation**
 The **Enable computer and user accounts to be trusted for delegation** user right should be assigned only if there is a clear need for its functionality. When you assign this right, you should investigate the use of constrained delegation to control what the delegated accounts can do. On domain controllers, this right is assigned to the Administrators group by default.
 
 > [!NOTE]
-> There is no reason to assign this user right to anyone on member servers and workstations that belong to a domain because it has no meaning in those contexts. It is only relevant on domain controllers and stand\-alone computers.
+> There is no reason to assign this user right to anyone on member servers and workstations that belong to a domain because it has no meaning in those contexts. It is only relevant on domain controllers and stand-alone computers.
 
 ### Potential impact
 None. Not defined is the default configuration.

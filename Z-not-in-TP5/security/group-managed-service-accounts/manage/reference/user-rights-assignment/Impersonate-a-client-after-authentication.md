@@ -14,13 +14,13 @@ ms.assetid: 68995ef5-f077-45bf-a408-84fcf1cce68a
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.
 
 ## Reference
-This policy setting determines which programs are allowed to impersonate a user or another specified account and act on behalf of the user. If this user right is required for this type of impersonation, an unauthorized user cannot cause a client to connect \(for example, by remote procedure call \(RPC\) or named pipes\) to a service that they have created to impersonate that client. \(Such an action could elevate the unauthorized user's permissions to administrative or system levels.\)
+This policy setting determines which programs are allowed to impersonate a user or another specified account and act on behalf of the user. If this user right is required for this type of impersonation, an unauthorized user cannot cause a client to connect (for example, by remote procedure call (RPC) or named pipes) to a service that they have created to impersonate that client. (Such an action could elevate the unauthorized user's permissions to administrative or system levels.)
 
-Impersonation is the ability of a thread to run in a security context that is different from the context of the process that owns the thread. Impersonation is designed to meet the security requirements of client\/server applications. When running in a client's security context, a service "is" the client, to some degree. One of the service's threads uses an access token representing the client's credentials to obtain access to the objects to which the client has access.
+Impersonation is the ability of a thread to run in a security context that is different from the context of the process that owns the thread. Impersonation is designed to meet the security requirements of client/server applications. When running in a client's security context, a service "is" the client, to some degree. One of the service's threads uses an access token representing the client's credentials to obtain access to the objects to which the client has access.
 
 The primary reason for impersonation is to cause access checks to be performed against the client's identity. Using the client's identity for access checks can cause access to be either restricted or expanded, depending on what the client has permission to do.
 
-Services that are started by the Service Control Manager have the built\-in Service group added by default to their access tokens. COM servers that are started by the COM infrastructure and configured to run under a specific account also have the Service group added to their access tokens. As a result, these processes are assigned this user right when they are started.
+Services that are started by the Service Control Manager have the built-in Service group added by default to their access tokens. COM servers that are started by the COM infrastructure and configured to run under a specific account also have the Service group added to their access tokens. As a result, these processes are assigned this user right when they are started.
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -28,7 +28,7 @@ Constant: SeImpersonatePrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Default values
 
@@ -47,10 +47,10 @@ Constant: SeImpersonatePrivilege
     Because of these factors, users do not usually need to have this user right assigned.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
-By default, this setting is Administrators, Local Service, Network Service, and Service on domain controllers and stand\-alone servers.
+By default, this setting is Administrators, Local Service, Network Service, and Service on domain controllers and stand-alone servers.
 
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
 
@@ -58,7 +58,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not eefined|
 |Default Domain Controller Policy|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|
-|Stand\-Alone Server Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|
+|Stand-Alone Server Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|
 |Domain Controller Effective Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|
 |Member Server Effective Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|
 |Client Computer Effective Default Settings|Administrators<br /><br />Local Service<br /><br />Network Service<br /><br />Service|
@@ -74,7 +74,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
 ### Group Policy
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 
@@ -93,10 +93,10 @@ This section describes how an attacker might exploit a feature or its configurat
 An attacker with the **Impersonate a client after authentication** user right could create a service, mislead a client into connecting to the service, and then impersonate that computer to elevate the attacker's level of access to that of the computer.
 
 ### Countermeasure
-On member servers, ensure that only the Administrators and Service groups \(Local Service, Network Service, and Service\) have the **Impersonate a client after authentication** user right assigned to them.
+On member servers, ensure that only the Administrators and Service groups (Local Service, Network Service, and Service) have the **Impersonate a client after authentication** user right assigned to them.
 
 ### Potential impact
-In most cases, this configuration has no impact. If you have installed optional components such as ASP.NET or IIS, you may need to assign the **Impersonate a client after authentication** user right to additional accounts that are required by those components, such as IUSR\_*<ComputerName>*, IIS\_WPG, ASP.NET, or IWAM\_*<ComputerName>*.
+In most cases, this configuration has no impact. If you have installed optional components such as ASP.NET or IIS, you may need to assign the **Impersonate a client after authentication** user right to additional accounts that are required by those components, such as IUSR_*<ComputerName>*, IIS_WPG, ASP.NET, or IWAM_*<ComputerName>*.
 
 ## See Also
 [User Rights Assignment](User-Rights-Assignment.md)

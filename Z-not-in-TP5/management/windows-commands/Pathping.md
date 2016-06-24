@@ -21,31 +21,31 @@ pathping [/n] [/h] [/g <HostList>] [/p <Period>] [/q <NumQueries> [/w <Timeout>]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/n|Prevents **pathping** from attempting to resolve the IP addresses of intermediate routers to their names. This might expedite the display of **pathping** results.|
-|\/h <MaximumHops>|Specifies the maximum number of hops in the path to search for the target \(destination\). The default is 30 hops.|
-|\/g <HostList>|Specifies that the Echo Request messages use the Loose Source Route option in the IP header with the set of intermediate destinations specified in *HostList*. With loose source routing, successive intermediate destinations can be separated by one or multiple routers. The maximum number of addresses or names in the host list is 9. The *HostList* is a series of IP addresses \(in dotted decimal notation\) separated by spaces.|
-|\/p <Period>|Specifies the number of milliseconds to wait between consecutive pings. The default is 250 milliseconds \(1\/4 second\).|
-|\/q <NumQueries>|Specifies the number of Echo Request messages sent to each router in the path. The default is 100 queries.|
-|\/w <Timeout>|Specifies the number of milliseconds to wait for each reply. The default is 3000 milliseconds \(3 seconds\).|
-|\/i <IPAddress>|Specifies the source address.|
-|\/4 <IPv4>|Specifies that pathping uses IPv4 only.|
-|\/6 <IPv6>|Specifies that pathping uses IPv6 only.|
+|/n|Prevents **pathping** from attempting to resolve the IP addresses of intermediate routers to their names. This might expedite the display of **pathping** results.|
+|/h <MaximumHops>|Specifies the maximum number of hops in the path to search for the target (destination). The default is 30 hops.|
+|/g <HostList>|Specifies that the Echo Request messages use the Loose Source Route option in the IP header with the set of intermediate destinations specified in *HostList*. With loose source routing, successive intermediate destinations can be separated by one or multiple routers. The maximum number of addresses or names in the host list is 9. The *HostList* is a series of IP addresses (in dotted decimal notation) separated by spaces.|
+|/p <Period>|Specifies the number of milliseconds to wait between consecutive pings. The default is 250 milliseconds (1/4 second).|
+|/q <NumQueries>|Specifies the number of Echo Request messages sent to each router in the path. The default is 100 queries.|
+|/w <Timeout>|Specifies the number of milliseconds to wait for each reply. The default is 3000 milliseconds (3 seconds).|
+|/i <IPAddress>|Specifies the source address.|
+|/4 <IPv4>|Specifies that pathping uses IPv4 only.|
+|/6 <IPv6>|Specifies that pathping uses IPv6 only.|
 |<TargetName>|Specifies the destination, which is identified either by IP address or host name.|
-|\/?|Displays Help at the command prompt.|
+|/?|Displays Help at the command prompt.|
 
 ## Remarks
 
--   **Pathping** parameters are case\-sensitive.
+-   **Pathping** parameters are case-sensitive.
 
 -   To avoid network congestion, pings should be sent at a sufficiently slow pace.
 
 -   To minimize the effects of burst losses, do not send pings too frequently.
 
--   When using the **\/p** parameter, pings are sent individually to each intermediate hop. Because of this, the interval between two pings sent to the same hop is *period* multiplied by the number of hops.
+-   When using the **/p** parameter, pings are sent individually to each intermediate hop. Because of this, the interval between two pings sent to the same hop is *period* multiplied by the number of hops.
 
--   When using the **\/w** parameter, multiple pings can be sent in parallel. Because of this, the amount of time specified in the *Timeout* parameter is not bounded by the amount of time specified in the *Period* parameter for waiting between pings.
+-   When using the **/w** parameter, multiple pings can be sent in parallel. Because of this, the amount of time specified in the *Timeout* parameter is not bounded by the amount of time specified in the *Period* parameter for waiting between pings.
 
--   This command is available only if the Internet Protocol \(TCP\/IP\) protocol is installed as a component in the properties of a network adapter in Network Connections.
+-   This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 
 ## <a name="BKMK_Examples"></a>Examples
 The following example shows **pathping** command output:
@@ -81,11 +81,11 @@ Hop  RTT    Lost/Sent = Pct  Lost/Sent = Pct  Address
 Trace complete.
 ```
 
-When **pathping** is run, the first results list the path. This is the same path that is shown using the **tracert** command. Next, a busy message is displayed for approximately 90 seconds \(the time varies by hop count\). During this time, information is gathered from all routers previously listed and from the links between them. At the end of this period, the test results are displayed.
+When **pathping** is run, the first results list the path. This is the same path that is shown using the **tracert** command. Next, a busy message is displayed for approximately 90 seconds (the time varies by hop count). During this time, information is gathered from all routers previously listed and from the links between them. At the end of this period, the test results are displayed.
 
-In the sample report above, the **This Node\/Link**, **Lost\/Sent \= Pct** and **Address** columns show that the link between 172.16.87.218 and 192.168.52.1 is dropping 13 percent of the packets. The routers at hops 2 and 4 also are dropping packets addressed to them, but this loss does not affect their ability to forward traffic that is not addressed to them.
+In the sample report above, the **This Node/Link**, **Lost/Sent = Pct** and **Address** columns show that the link between 172.16.87.218 and 192.168.52.1 is dropping 13 percent of the packets. The routers at hops 2 and 4 also are dropping packets addressed to them, but this loss does not affect their ability to forward traffic that is not addressed to them.
 
-The loss rates displayed for the links, identified as a vertical bar \(**|**\) in the **Address** column, indicate link congestion that is causing the loss of packets that are being forwarded on the path. The loss rates displayed for routers \(identified by their IP addresses\) indicate that these routers might be overloaded.
+The loss rates displayed for the links, identified as a vertical bar (**|**) in the **Address** column, indicate link congestion that is causing the loss of packets that are being forwarded on the path. The loss rates displayed for routers (identified by their IP addresses) indicate that these routers might be overloaded.
 
 ## Additional references
 

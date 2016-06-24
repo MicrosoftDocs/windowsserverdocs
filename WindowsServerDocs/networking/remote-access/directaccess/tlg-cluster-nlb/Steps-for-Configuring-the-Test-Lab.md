@@ -14,7 +14,7 @@ author: coreyp
 # Steps for Configuring the Test Lab
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access servers and clients, and test DirectAccess connectivity from the Internet and Homenet subnets.  
   
-In this test lab guide you will build a Network Load Balancing \(NLB\) enabled Remote Access cluster by performing the following steps:  
+In this test lab guide you will build a Network Load Balancing (NLB) enabled Remote Access cluster by performing the following steps:  
   
 -   [STEP 1: Complete the DirectAccess test lab](assetId:///e14df5d0-f813-4079-8327-3e444ff5f101)—Complete all the steps in the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](http://go.microsoft.com/fwlink/p/?LinkId=237004).  
   

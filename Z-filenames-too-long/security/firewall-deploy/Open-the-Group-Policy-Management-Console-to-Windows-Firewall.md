@@ -16,7 +16,7 @@ ms.assetid: 8ea2d1d1-6a58-465c-9bf2-4fb6342b6774
 
 1.  Open **Active Directory Users and Computers**.
 
-2.  In the navigation pane, expand *YourDomainName*, right\-click the container that your GPO is linked to, and then click **Properties**.
+2.  In the navigation pane, expand *YourDomainName*, right-click the container that your GPO is linked to, and then click **Properties**.
 
 3.  Click the **Group Policy** tab, select your GPO, and then click **Edit**.
 

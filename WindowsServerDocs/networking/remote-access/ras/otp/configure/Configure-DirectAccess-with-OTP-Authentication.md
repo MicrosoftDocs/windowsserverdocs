@@ -12,7 +12,7 @@ ms.assetid: 82505b18-dd77-4dd1-aa27-b2962b8241ca
 author: coreyp
 ---
 # Configure DirectAccess with OTP Authentication
-Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access multisite deployment.  
+Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access multisite deployment.  
   
   
 -   [Step 1: Implement a single server Remote Access deployment](assetId:///825bbfc7-c96d-48ad-a909-c2f4bfc392a1). Install and configure a single Remote Access server. For instructions, see [Deploy a single Remote Access server with advanced settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  

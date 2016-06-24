@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">A limited set of server roles is available for the Server Core installation option of Windows Server 2008 and for Windows Server 2008 for Itanium-Based Systems.</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">A limited set of server roles is available for the Server Core installation option of Windows Server 2008 and for Windows Server 2008 for Itanium-Based Systems.</Token>

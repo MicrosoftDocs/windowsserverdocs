@@ -13,14 +13,14 @@ ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
 author: KBDAzure
 ---
 # The number of logical processors in use must not exceed the supported maximum
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Policy|  
   
@@ -32,7 +32,7 @@ In the following sections, italics indicates text that appears in the Best Pract
   
 ## Impact  
   
-*Microsoft does not support running Hyper\-V on this computer.*  
+*Microsoft does not support running Hyper-V on this computer.*  
   
 ## Resolution  
   
@@ -42,7 +42,7 @@ See the following instructions to use Msconfig. For details about removing proce
   
 ### To limit the number of available processors  
   
-1.  Open the System Configuration app \(Msconfig.exe\). To do this, click **Start**, type **msconfig**, right-click the **System Configuration** desktop app and click **Run as administrator**.  
+1.  Open the System Configuration app (Msconfig.exe). To do this, click **Start**, type **msconfig**, right-click the **System Configuration** desktop app and click **Run as administrator**.  
   
 2.  From the **Boot** tab, click **Advanced options**.  
   

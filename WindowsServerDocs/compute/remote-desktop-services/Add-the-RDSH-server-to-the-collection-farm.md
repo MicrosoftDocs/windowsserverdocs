@@ -25,11 +25,11 @@ Now that your environment is ready, use the following steps to add the Remote De
     4. For **Public IP address**, select **Enabled**, and then click **IP address**.   
     5. If you have an existing public IP address you want to use, select it from the list. Otherwise, click **Create new**, enter a name, and then click **OK** and then **Save**.   
 2. Connect to the RDMS virtual machine:   
-    1.	In the Azure portal click **Browse > Virtual Machines**.  
-    2.	Select the new RDMS virtual machine (for example, Contoso-CB1).  
-    3.	Click **Connect > Open** to open the Remote Desktop client.  
-    4.	In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a user in the Azure AD DC Administrators group.  
-    5.	Click **Yes** when warned about the certificate.  
+    1.  In the Azure portal click **Browse > Virtual Machines**.  
+    2.  Select the new RDMS virtual machine (for example, Contoso-CB1).  
+    3.  Click **Connect > Open** to open the Remote Desktop client.  
+    4.  In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a user in the Azure AD DC Administrators group.  
+    5.  Click **Yes** when warned about the certificate.  
 3. Add the new RDSH server to Server Manager:   
     1. Launch Server Manager, click **Manage > Add Servers**.   
     2. In the Add Servers dialog, click **DNS**.   

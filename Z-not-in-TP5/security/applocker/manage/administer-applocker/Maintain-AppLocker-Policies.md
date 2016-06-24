@@ -33,9 +33,9 @@ There are two methods you can use to maintain AppLocker policies:
 
 -   [Maintaining AppLocker policies on the local computer](#BKMK_AppLkr_Use_LocSnapin)
 
-As new applications are deployed or existing applications are removed by your organization or updated by the software publisher, you might need to make revisions to your rules and update the Group Policy Object \(GPO\) to ensure that your policy is current.
+As new applications are deployed or existing applications are removed by your organization or updated by the software publisher, you might need to make revisions to your rules and update the Group Policy Object (GPO) to ensure that your policy is current.
 
-You can edit an AppLocker policy by adding, changing, or removing rules. However, you cannot specify a version for the AppLocker policy by importing additional rules. To ensure version control when modifying an AppLocker policy, use Group Policy management software that allows you to create versions of GPOs, such as Microsoft Advanced Group Policy Management \(AGPM\). For more information about AGPM, see [Advanced Group Policy Management Overview](http://go.microsoft.com/fwlink/?LinkId=145013) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=145013\).
+You can edit an AppLocker policy by adding, changing, or removing rules. However, you cannot specify a version for the AppLocker policy by importing additional rules. To ensure version control when modifying an AppLocker policy, use Group Policy management software that allows you to create versions of GPOs, such as Microsoft Advanced Group Policy Management (AGPM). For more information about AGPM, see [Advanced Group Policy Management Overview](http://go.microsoft.com/fwlink/?LinkId=145013) (http://go.microsoft.com/fwlink/?LinkId=145013).
 
 > [!CAUTION]
 > You should not edit an AppLocker rule collection while it is being enforced in Group Policy. Because AppLocker controls what files are allowed to run, making changes to a live policy can create unexpected behavior.
@@ -44,10 +44,10 @@ You can edit an AppLocker policy by adding, changing, or removing rules. However
 For every scenario, the steps to maintain an AppLocker policy distributed by Group Policy include the following tasks.
 
 ### Step 1: Understand the current behavior of the policy
-Before modifying a policy, evaluate how the policy is currently implemented. For example, if a new version of the application is deployed, you can use **Test\-AppLockerPolicy** to verify the effectiveness of your current policy for that application. To read the procedures necessary to understand the current behavior of the policy, see [Discovering the Effect of an AppLocker Policy](http://technet.microsoft.com/library/ee791823(WS.10).aspx). Updating your AppLocker planning document will help you track your findings. For information about creating this document, see [Creating Your AppLocker Planning Document](http://technet.microsoft.com/library/ee449479(WS.10).aspx). For information about **Test\-AppLockerPolicy** and examples of how to use it, see [Test\-AppLockerPolicy](http://go.microsoft.com/fwlink/?LinkId=169000) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=169000\).
+Before modifying a policy, evaluate how the policy is currently implemented. For example, if a new version of the application is deployed, you can use **Test-AppLockerPolicy** to verify the effectiveness of your current policy for that application. To read the procedures necessary to understand the current behavior of the policy, see [Discovering the Effect of an AppLocker Policy](http://technet.microsoft.com/library/ee791823(WS.10).aspx). Updating your AppLocker planning document will help you track your findings. For information about creating this document, see [Creating Your AppLocker Planning Document](http://technet.microsoft.com/library/ee449479(WS.10).aspx). For information about **Test-AppLockerPolicy** and examples of how to use it, see [Test-AppLockerPolicy](http://go.microsoft.com/fwlink/?LinkId=169000) (http://go.microsoft.com/fwlink/?LinkId=169000).
 
 > [!NOTE]
-> These documents apply to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8, and  Windows 7  operating systems.
+> These documents apply to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8, and  Windows 7  operating systems.
 
 ### Step 2: Export the AppLocker policy from the GPO
 Updating an AppLocker policy that is currently enforced in your production environment can have unintended results. Therefore, export the policy from the GPO and update the rule or rules by using AppLocker on your AppLocker reference or test computer. To prepare an AppLocker policy for modification, see [Export an AppLocker Policy from a GPO](Export-an-AppLocker-Policy-from-a-GPO.md)
@@ -66,7 +66,7 @@ To modify AppLocker rules, see the following:
 -   [Enforce AppLocker Rules](Enforce-AppLocker-Rules.md)
 
 ### Step 4: Test the AppLocker policy
-You should test each collection of rules to ensure that the rules perform as intended. \(Because AppLocker rules are inherited from linked GPOs, you should deploy all rules for simultaneous testing in all test GPOs.\) For steps to perform this testing, see [Test and Update an AppLocker Policy](Test-and-Update-an-AppLocker-Policy.md).
+You should test each collection of rules to ensure that the rules perform as intended. (Because AppLocker rules are inherited from linked GPOs, you should deploy all rules for simultaneous testing in all test GPOs.) For steps to perform this testing, see [Test and Update an AppLocker Policy](Test-and-Update-an-AppLocker-Policy.md).
 
 ### Step 5: Import the AppLocker policy into the GPO
 After testing, import the AppLocker policy back into the GPO for implementation. To update the GPO with a modified AppLocker policy, see [Import an AppLocker Policy into a GPO](Import-an-AppLocker-Policy-into-a-GPO.md).
@@ -74,14 +74,14 @@ After testing, import the AppLocker policy back into the GPO for implementation.
 ### Step 6: Monitor the resulting policy behavior
 After deploying a policy, evaluate the policy's effectiveness.  For steps to understand the new behavior of the policy, see [Discovering the Effect of an AppLocker Policy](http://technet.microsoft.com/library/ee791823(WS.10).aspx).
 
-## <a name="BKMK_AppLkr_Use_LocSnapin"></a>Maintaining AppLocker policies by using the Local Security Policy snap\-in
-For every scenario, the steps to maintain an AppLocker policy by using the Local Group Policy Editor or the Local Security Policy snap\-in include the following tasks.
+## <a name="BKMK_AppLkr_Use_LocSnapin"></a>Maintaining AppLocker policies by using the Local Security Policy snap-in
+For every scenario, the steps to maintain an AppLocker policy by using the Local Group Policy Editor or the Local Security Policy snap-in include the following tasks.
 
 ### Step 1: Understand the current behavior of the policy
 Before modifying a policy, evaluate how the policy is currently implemented. To read the procedures necessary to understand the current behavior of the policy, see [Monitor Application Usage with AppLocker](Monitor-Application-Usage-with-AppLocker.md). Updating your AppLocker planning document will help you track your findings. For information about creating this document, see [Creating Your AppLocker Planning Document](http://technet.microsoft.com/library/ee449479(WS.10).aspx).
 
 > [!NOTE]
-> The AppLocker Planning Guide applies to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8 and  Windows 7 .
+> The AppLocker Planning Guide applies to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8 and  Windows 7 .
 
 ### Step 2: Update the AppLocker policy by modifying the appropriate AppLocker rule
 Rules are grouped into a collection, which can have the policy enforcement setting applied to it. By default, AppLocker rules do not allow users to open or run any files that are not specifically allowed.
@@ -98,7 +98,7 @@ You can export and then import AppLocker policies to deploy the policy to other 
 After deploying a policy, evaluate the policy's effectiveness.  For steps to understand the new behavior of the policy, see Discovering the Effect of an AppLocker Policy in [Discovering the Effect of an AppLocker Policy](http://technet.microsoft.com/library/ee791823(WS.10).aspx).
 
 > [!NOTE]
-> This topic applies to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8 and  Windows 7 .
+> This topic applies to  Windows Server 2012 ,  Windows Server 2008 R2 , Windows 8 and  Windows 7 .
 
 ## Additional resources
 

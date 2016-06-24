@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 3d592a3f-eda7-4b11-a12b-0b888a75d163
 ---
 # Create a Group Account in Active Directory
-To create a security group to contain the computer accounts for the computers that are to receive a set of Group Policy settings, use the Active Directory Users and Computers MMC snap\-in.
+To create a security group to contain the computer accounts for the computers that are to receive a set of Group Policy settings, use the Active Directory Users and Computers MMC snap-in.
 
 **Administrative credentials**
 

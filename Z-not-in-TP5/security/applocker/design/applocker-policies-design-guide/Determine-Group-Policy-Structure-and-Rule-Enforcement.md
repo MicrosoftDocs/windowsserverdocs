@@ -23,18 +23,18 @@ You should review the following topics to learn how to structure AppLocker rules
 
     This topic describes what you need to investigate, determine, and record in your application control policies plan.
 
-When you are determining how many Group Policy Objects \(GPOs\) to create when you apply an AppLocker policy in your organization, you should consider the following:
+When you are determining how many Group Policy Objects (GPOs) to create when you apply an AppLocker policy in your organization, you should consider the following:
 
 -   Whether you are creating new GPOs or using existing GPOs
 
--   Whether you are implementing Software Restriction Policies \(SRP\) policies and AppLocker policies in the same GPO
+-   Whether you are implementing Software Restriction Policies (SRP) policies and AppLocker policies in the same GPO
 
 -   GPO naming conventions
 
 -   GPO size limits
 
 > [!NOTE]
-> There is no default limit on the number of AppLocker rules that you can create. However, in  Windows Server 2008 R2 , GPOs have a 2 MB size limit for performance. In subsequent versions, that limit is raised to 100 MB.
+> There is no default limit on the number of AppLocker rules that you can create. However, in  Windows Server 2008 R2 , GPOs have a 2 MB size limit for performance. In subsequent versions, that limit is raised to 100 MB.
 
 After you have determined your Group Policy structure and rule enforcement, record your findings as explained in [Document Group Policy Structure and AppLocker Rule Enforcement](Document-Group-Policy-Structure-and-AppLocker-Rule-Enforcement.md).
 

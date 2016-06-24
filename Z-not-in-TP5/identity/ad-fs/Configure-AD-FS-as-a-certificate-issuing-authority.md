@@ -16,9 +16,9 @@ This document describes how AD FS can be configured as a certificate issuing aut
 ### How it works
 The LogonCert JSON Web Token bearer extension grant flow is used by a client (requestor) to obtain a certificate that can be used to login a user interactively. In order to request a certificate using this extension grant type, the client/requestor needs the following:
 
--	An access token issued by AD FS to the requestor after authenticating the end-user (i.e. the end-user is the subject of the token).
--	Client credentials in order for the requestor to authenticate itself with AD FS. The requestor MUST be registered with AD FS as a confidential client and can therefore use one of the available confidential client authentication methods (i.e. either of client_secret_post, private_key_jwt or WIA).  For more an example of a confidential client see [Enabling Oauth Confidential Clients with AD FS 2016.](../ad-fs/manage/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
--	A certificate signing request (CSR) generated in accordance with the stipulations of [RFC 2986](https://tools.ietf.org/html/rfc2986).
+-   An access token issued by AD FS to the requestor after authenticating the end-user (i.e. the end-user is the subject of the token).
+-   Client credentials in order for the requestor to authenticate itself with AD FS. The requestor MUST be registered with AD FS as a confidential client and can therefore use one of the available confidential client authentication methods (i.e. either of client_secret_post, private_key_jwt or WIA).  For more an example of a confidential client see [Enabling Oauth Confidential Clients with AD FS 2016.](../ad-fs/manage/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
+-   A certificate signing request (CSR) generated in accordance with the stipulations of [RFC 2986](https://tools.ietf.org/html/rfc2986).
 
 The following describes the flow in how a native app obtains authorization to access the Azure RemoteApp service.
 
@@ -31,27 +31,27 @@ The following describes the flow in how a native app obtains authorization to ac
 7.  AD AL caches this access token and refresh token pair for the native app and it is then used for subsequent interactions with the Azure RemoteApp service in order to provide authorization.
 
 As illustrated above, the native app was able to obtain and access token and refresh token issued by Azure that authorizes it to access the Azure RemoteApp service.
--	After obtaining authorization to access the Azure RemoteApp service, the native app is able to retrieve a list of remote applications that have been published for the consumption of the authenticated user.
--	This list of applications is displayed to the user within the native app.
--	When the user selects one of the remote applications available for their use from within the native app, the App then tries to connect the user to the remote application.
--	Note that the user will need to be connected to one of the domain-joined virtual machine instances within the Contoso virtual network that are managed by the Azure RemoteApp servcie.
--	The Remote Desktop Shell component on the virtual machine is responsible for logging in the user interactively to the VM so they can interact with the remote application.
+-   After obtaining authorization to access the Azure RemoteApp service, the native app is able to retrieve a list of remote applications that have been published for the consumption of the authenticated user.
+-   This list of applications is displayed to the user within the native app.
+-   When the user selects one of the remote applications available for their use from within the native app, the App then tries to connect the user to the remote application.
+-   Note that the user will need to be connected to one of the domain-joined virtual machine instances within the Contoso virtual network that are managed by the Azure RemoteApp servcie.
+-   The Remote Desktop Shell component on the virtual machine is responsible for logging in the user interactively to the VM so they can interact with the remote application.
 
 In order for the native app to connect to the Remote Desktop Shell (RDSH) component on the target virtual machine and request an interactive logon for the user, the native app must first obtain an access token for the RDSH that was issued by AD FS. Note that the RDSH component is on a domain joined machine and will trust access tokens issued by the on-premises AD FS instance of which it is a relying party. The following steps are involved in this token acquisition flow:
 
--	The native app uses ADAL to obtain an access token and refresh token from the AD FS instance using the OpenID Connect authorization code grant type. Note that the native app will request the new ‘logon_cert’ scope that is required in order to exchange a token issued by AD FS for an interactive logon certificate.
--	In this flow, it is important to note that AD FS will consume the persistent single sign-on (PSSO) cookie that was previously issued by AD FS as part of the federated login flow involved in the native app getting a token for the Azure RemoteApp service.
--	The native app will try to use the non-interactive flow to try and acquire a token without having to display anything to the end user.
--	AD FS checks to see whether the corresponding application permission entry exists for the native app (client) to request a token for the RDSH (relying party) with the ‘logon_cert’ scope on behalf of the authenticated user.
--	Once all required authorization checks are complete, AD FS issues an access token and refresh token to the native app. Note that the access token will include the ‘logon_cert’ value for the ‘scp’ claim, indicating that the access token may be used to obtain a logon certificate on behalf of the authenticated user.
--	Note that since AD FS has an admin consent model, the end user will not see a consent page that informs them that the ‘logon_cert’ scope is being requested by the native app.
+-   The native app uses ADAL to obtain an access token and refresh token from the AD FS instance using the OpenID Connect authorization code grant type. Note that the native app will request the new ‘logon_cert’ scope that is required in order to exchange a token issued by AD FS for an interactive logon certificate.
+-   In this flow, it is important to note that AD FS will consume the persistent single sign-on (PSSO) cookie that was previously issued by AD FS as part of the federated login flow involved in the native app getting a token for the Azure RemoteApp service.
+-   The native app will try to use the non-interactive flow to try and acquire a token without having to display anything to the end user.
+-   AD FS checks to see whether the corresponding application permission entry exists for the native app (client) to request a token for the RDSH (relying party) with the ‘logon_cert’ scope on behalf of the authenticated user.
+-   Once all required authorization checks are complete, AD FS issues an access token and refresh token to the native app. Note that the access token will include the ‘logon_cert’ value for the ‘scp’ claim, indicating that the access token may be used to obtain a logon certificate on behalf of the authenticated user.
+-   Note that since AD FS has an admin consent model, the end user will not see a consent page that informs them that the ‘logon_cert’ scope is being requested by the native app.
 
 The above illustrated how the native app obtains an access token issued by AD FS in order to access the RDSH relying party. Now, in order to logon the user interactively into the VM, RDSH needs a logon certificate. 
 
 Note that per this functional specification document, ADFS will support two deployment modes in regard to how the certificate used to logon the user interactively is issued. These are:
--	**Self-signed certificates issued by AD FS** – this mode is suitable for smaller customers who do not have an enterprise PKI infrastructure. For such customers, AD FS will offer a simpler deployment model where certificates used to logon users are issued by AD FS. However, in order for these certificates to be used for interactive logon, administrators will need to configure their KDC to trust AD FS as an issuer CA.
+-   **Self-signed certificates issued by AD FS** – this mode is suitable for smaller customers who do not have an enterprise PKI infrastructure. For such customers, AD FS will offer a simpler deployment model where certificates used to logon users are issued by AD FS. However, in order for these certificates to be used for interactive logon, administrators will need to configure their KDC to trust AD FS as an issuer CA.
 
--	**Certificates issued by enterprise CA** – this mode is suitable for customers who have an enterprise PKI deployed and will prefer that their CA issue certificates used to logon users interactively.
+-   **Certificates issued by enterprise CA** – this mode is suitable for customers who have an enterprise PKI deployed and will prefer that their CA issue certificates used to logon users interactively.
 
 
 ### Self-signed certificates issued by AD FS
@@ -69,7 +69,7 @@ Add-AdfsClient –Name “Azure RemoteApp” –ClientId <CLIENT_ID_OF_MOHORRO_A
 ```
 **NOTE:** The corresponding values of the client ID and redirect URI will need to be replace in the above command. Also note that if there are separate client IDs for the native app on different platforms (iOS, Windows, Android, Mac OS etc.), each of these instances of the native app will need to be registered with AD FS as a public client.
 
-3. 	Register RDSH as a confidential client with the AD FS server
+3.  Register RDSH as a confidential client with the AD FS server
 This step enables the RDSH component within the VM to authenticate itself with ADFS and request a logon certificate for the authenticated end-user.  In order to register RDSH as a confidential client with the ADFS server, the administrator needs to execute the following command:
 
 ```
@@ -88,9 +88,9 @@ Add-AdfsRelyingPartyTrust –Name “RDSH” –Identifier <RELYING_PARTY_ID_OF_
 Once the native app and RDSH have been registered as clients with AD FS and RDSH has also additionally been registered as an RP with AD FS, the next step is to configure application permissions.
 
 The following permissions will be granted:
--	Grant ‘logon_cert’ scope to the natvie App (client role)
--	Grant ‘logon_cert’ scope to the RDSH (client role)
--	Specify which users/groups/principals can be impersonated as part of the permission entry.
+-   Grant ‘logon_cert’ scope to the natvie App (client role)
+-   Grant ‘logon_cert’ scope to the RDSH (client role)
+-   Specify which users/groups/principals can be impersonated as part of the permission entry.
 
 The following PowerShell cmdlets can be used in order to configure the requisite permissions:
 
@@ -148,7 +148,7 @@ In the ‘Subject Name’ tab of the property page, you configure the smartcard 
 
 In the Security tab of the certificate template property page, the administrator grants permissions to the service account used by AD FS and grants the service account Enroll and AutoEnroll permissions.
 
-3.  	Enable AD FS enrollment agent and logon certificate templates on the Certificate Authority
+3.     Enable AD FS enrollment agent and logon certificate templates on the Certificate Authority
 
 After creating the enrollment agent certificate template and the logon certificate template in the certificate templates console (as shown above), the administrator needs to enable these certificate templates on the CA.  This can be done from the Certificate Authority MMC. Select the certificate templates node, right-click, and select new, certificate template to issue. 
 ![ADFS_CA1media/ADFS_CA4.png)
@@ -175,7 +175,7 @@ This step enables the native app to request access tokens from the AD FS server 
 ```
 Add-AdfsClient –Name “Azure RemoteApp” –ClientId <CLIENT_ID_OF_MOHORRO_APP> -RedirectUri <REDIRECT_URI_OF_MOHORRO_APP> -Description “Azure RemoteApp”
 ```
-6. 	Register RDSH as a confidential client with the AD FS server
+6.  Register RDSH as a confidential client with the AD FS server
 
 This step enables the RDSH component within the VM to authenticate itself with ADFS and request a logon certificate for the authenticated end-user.  In order to register RDSH as a confidential client with the ADFS server, the administrator needs to execute the following command:
 
@@ -195,9 +195,9 @@ Add-AdfsRelyingPartyTrust –Name “RDSH” –Identifier <RELYING_PARTY_ID_OF_
 Once the native app and RDSH have been registered as clients with AD FS and RDSH has also additionally been registered as an RP with AD FS, the next step is to configure application permissions.
 
 The following permissions will be granted:
--	Grant ‘logon_cert’ scope for the native app to access RDSH (server role/RP)
--	Grant required scopes (optional) to the RDSH (client role) to access RDSH (server role/RP)
--	Specify which users/groups/principals can be impersonated as part of the permission entry.
+-   Grant ‘logon_cert’ scope for the native app to access RDSH (server role/RP)
+-   Grant required scopes (optional) to the RDSH (client role) to access RDSH (server role/RP)
+-   Specify which users/groups/principals can be impersonated as part of the permission entry.
 
 
 The following PowerShell cmdlets can be used in order to configure the requisite permissions:

@@ -22,25 +22,25 @@ This section illustrates a few common volume activation scenarios in heterogeneo
 
 |Task|Description|
 |--------|---------------|
-|2.1. Identify scenario requirements for the central network|Evaluate and address activation planning issues associated with well\-connected computers.|
+|2.1. Identify scenario requirements for the central network|Evaluate and address activation planning issues associated with well-connected computers.|
 |2.2. Identify scenario requirements for the branch office network|Evaluate and address activation planning issues associated with computers that are on branch office networks.|
-|2.3. Identify high\-security zone scenario requirements|Evaluate and address activation planning issues associated with computers located in high\-security zones.|
+|2.3. Identify high-security zone scenario requirements|Evaluate and address activation planning issues associated with computers located in high-security zones.|
 |2.4. Identify disconnected computer scenario requirements|Evaluate and address activation planning issues associated with computers that are disconnected from any of the organization’s networks.|
 |2.5 Identify test and development lab requirements|Evaluate and address activation planning issues associated with computers in test or development labs.|
 
 ### 2.1. Identify scenario requirements for the central network
-The central network is characterized by well\-connected computers on multiple network segments that also have a connection to the Internet. For these environments, a combination of Active Directory\-based Activation and a centralized KMS solution are the recommended activation methods for computers on the central network.
+The central network is characterized by well-connected computers on multiple network segments that also have a connection to the Internet. For these environments, a combination of Active Directory-based Activation and a centralized KMS solution are the recommended activation methods for computers on the central network.
 
 In Figure 1, the central network has a domain controller and KMS host, which are activated directly over the Internet.
 
 ![](../../../media/Step-2--Evaluate-Client-Connectivity/VA_CoreNetwork.gif)
 
-If physical computers are running  Windows Server 2012  or Windows 8 or newer, use Active\-Directory\-based Activation. If you have more than 25 client computers running earlier versions of Windows, use KMS host activation.
+If physical computers are running  Windows Server 2012  or Windows 8 or newer, use Active-Directory-based Activation. If you have more than 25 client computers running earlier versions of Windows, use KMS host activation.
 
 > [!NOTE]
 > Clients running  Windows Server 2012  or Windows 8 or newer can activate from the domain controller or from the KMS host.
 
-If you have fewer than 25 client computers running earlier versions of Windows, use MAK activation \(by telephone, Internet, or MAK Proxy\).
+If you have fewer than 25 client computers running earlier versions of Windows, use MAK activation (by telephone, Internet, or MAK Proxy).
 
 > [!NOTE]
 > You can install a KMS host on a virtual computer. You should select a virtual computer that is unlikely to be moved to a different physical computer. If the KMS host on the virtual computer is moved to a different physical computer, the operating system detects the change in the underlying hardware, and the KMS host must be reactivated with Microsoft.
@@ -48,7 +48,7 @@ If you have fewer than 25 client computers running earlier versions of Windows, 
 If you plan to use KMS activation and you have more than 50 clients, consider setting up at least two KMS hosts for failover if one host is unavailable.
 
 ### 2.2. Identify scenario requirements for the branch office network
-Some networks are in a different physical location from the central network. You may need to use a combination of Active Directory\-based Activation, KMS hosts, and MAK activation to meet the requirements of the branch office network scenario.
+Some networks are in a different physical location from the central network. You may need to use a combination of Active Directory-based Activation, KMS hosts, and MAK activation to meet the requirements of the branch office network scenario.
 
 How your network’s firewalls are configured is a significant factor in determining your branch office strategy.
 
@@ -58,34 +58,34 @@ Figure 2 shows an enterprise network that supports client computers in three bra
 
 ![](../../../media/Step-2--Evaluate-Client-Connectivity/VA_BranchOfficeScenario.gif)
 
-If you have more than 25 client computers and a site that has a secure TCP\/IP connection to the central network, use a local KMS host for activation. Site A in the diagram is an example of this solution.
+If you have more than 25 client computers and a site that has a secure TCP/IP connection to the central network, use a local KMS host for activation. Site A in the diagram is an example of this solution.
 
 If you have remote sites with infrequent contact to the central network, use MAK activation. Site B is an example of the MAK solution.
 
-If you have a site with a secure connection to the central network, you can use the Active Directory\-based Activation for clients running  Windows Server 2012  or Windows 8 or newer operating systems, and use KMS hosts from the central network to activate all other clients. Site C is an example of this solution.
+If you have a site with a secure connection to the central network, you can use the Active Directory-based Activation for clients running  Windows Server 2012  or Windows 8 or newer operating systems, and use KMS hosts from the central network to activate all other clients. Site C is an example of this solution.
 
 > [!NOTE]
 > The firewall configuration on the host for RPC over TCP should allow inbound traffic on TCP port 1688.
 
-### 2.3. Identify high\-security zone scenario requirements
-Many organizations have networks that are separated into multiple security zones, including a high\-security zone that is isolated to protect sensitive information.
+### 2.3. Identify high-security zone scenario requirements
+Many organizations have networks that are separated into multiple security zones, including a high-security zone that is isolated to protect sensitive information.
 
-Figure 3 shows a high\-security network environment that does not allow any traffic between computers in the high\-security zone and the central network.
+Figure 3 shows a high-security network environment that does not allow any traffic between computers in the high-security zone and the central network.
 
 ![](../../../media/Step-2--Evaluate-Client-Connectivity/VA_HighSecurity.gif)
 
-High\-security zones are frequently separated by a firewall that limits communication to and from other networks.
+High-security zones are frequently separated by a firewall that limits communication to and from other networks.
 
-If the high\-security zone has only limited communication with the central network, but it has enough computers to meet the KMS activation threshold, the high\-security zone has a local KMS host. This KMS host is activated by telephone.
+If the high-security zone has only limited communication with the central network, but it has enough computers to meet the KMS activation threshold, the high-security zone has a local KMS host. This KMS host is activated by telephone.
 
-If the high\-security zone has only limited communication with the central network, but it does not have enough computers to meet the KMS activation threshold, use MAK activation. Each computer can be activated independently with Microsoft by telephone.
+If the high-security zone has only limited communication with the central network, but it does not have enough computers to meet the KMS activation threshold, use MAK activation. Each computer can be activated independently with Microsoft by telephone.
 
-If the computers in a high\-security zone are allowed access to the central network, you can activate the high\-security zone computers by using Active Directory\-based Activation or KMS hosts that are located on the central network.
+If the computers in a high-security zone are allowed access to the central network, you can activate the high-security zone computers by using Active Directory-based Activation or KMS hosts that are located on the central network.
 
 > [!NOTE]
 > Firewalls between networks need to allow TCP 1688 RPC traffic to the KMS host from the client, and they must allow a stateful response from the KMS host to the client.
 
-MAK Proxy activation enabled with VAMT is also possible in the high\-security zone scenario. Because the computers in the high\-security zone do not have Internet access, VAMT can discover them by using Active Directory, the computer name, an IP address, or membership in a workgroup. VAMT uses WMI to install MAK product keys and CIDs and to retrieve status on MAK clients. Because this traffic is not allowed through the firewall, you must have a local VAMT host in the high\-security zone. For more information, see [Volume Activation Management Tool \(VAMT\) Overview](http://go.microsoft.com/fwlink/?LinkId=214550).
+MAK Proxy activation enabled with VAMT is also possible in the high-security zone scenario. Because the computers in the high-security zone do not have Internet access, VAMT can discover them by using Active Directory, the computer name, an IP address, or membership in a workgroup. VAMT uses WMI to install MAK product keys and CIDs and to retrieve status on MAK clients. Because this traffic is not allowed through the firewall, you must have a local VAMT host in the high-security zone. For more information, see [Volume Activation Management Tool (VAMT) Overview](http://go.microsoft.com/fwlink/?LinkId=214550).
 
 ### 2.4. Identify disconnected computer scenario requirements
 Some users in an organization may be in remote locations or may travel to many locations. This scenario is common for roaming clients, such as the computers of sales people or other users who work offsite, but not at branch locations. This scenario can also apply to remote branch office locations that have no connection or an intermittent connection to the central network.
@@ -94,18 +94,18 @@ Figure 4 illustrates the activation options that are available for disconnected 
 
 ![](../../../media/Step-2--Evaluate-Client-Connectivity/VA_DisconnectedComputers.gif)
 
-Disconnected computers can use Active Directory\-based Activation, KMS activation, or MAK activation processes that connect to the central network \(directly or through a VPN or secure channel\) at least once every 180 days.
+Disconnected computers can use Active Directory-based Activation, KMS activation, or MAK activation processes that connect to the central network (directly or through a VPN or secure channel) at least once every 180 days.
 
 Use MAK Independent activation, by telephone or the Internet, for computers that rarely or never connect to the central network.
 
 ### 2.5 Identify test and development lab requirements
 In a lab environment, computers are reconfigured often, and there are usually a large number of virtual computers. You should first determine whether the computers in test and development labs need activation.
 
-If you do need activation, labs can use Active Directory\-based Activation, KMS activation, or MAK activation, depending on the planning considerations described previously.
+If you do need activation, labs can use Active Directory-based Activation, KMS activation, or MAK activation, depending on the planning considerations described previously.
 
-Use Active Directory\-based Activation or KMS activation if the computers have connectivity to a central network where these activation options are available.
+Use Active Directory-based Activation or KMS activation if the computers have connectivity to a central network where these activation options are available.
 
-If the lab does not have connectivity to the central network and the number of physical computers in the lab meets the KMS activation threshold, you can also deploy a local KMS host in the lab. However, if your lab has a high turnover of computers and a small number of physical KMS clients, you need to monitor the KMS activation count to maintain a sufficient number of cached client machine identifications \(CMIDs\) on the KMS host. A KMS host caches activation requests from physical computers for 30 days.
+If the lab does not have connectivity to the central network and the number of physical computers in the lab meets the KMS activation threshold, you can also deploy a local KMS host in the lab. However, if your lab has a high turnover of computers and a small number of physical KMS clients, you need to monitor the KMS activation count to maintain a sufficient number of cached client machine identifications (CMIDs) on the KMS host. A KMS host caches activation requests from physical computers for 30 days.
 
 If computers in your lab environment need activation, but they are not connected to the central network and do not meet the conditions for KMS activation, you can use MAK Independent activation, by telephone or Internet, if available.
 

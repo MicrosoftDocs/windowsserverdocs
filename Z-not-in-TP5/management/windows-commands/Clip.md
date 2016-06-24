@@ -26,7 +26,7 @@ clip < <FileName>
 |-------------|---------------|
 |<Command>|Specifies a command whose output you want to send to the Windows Clipboard.|
 |<FileName>|Specifies a file whose contents you want to send to the Windows Clipboard.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 You can use the **clip** command to copy data directly into any application that can receive text from the Clipboard.

@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 82a2b7ef-0db5-4575-a028-8acb0bf6c7ba
 ---
 # Jetpack
-Compacts a Windows Internet Name Service \(WINS\) or Dynamic Host Configuration Protocol \(DHCP\) database. Microsoft recommends that you compact the WINS database whenever it approaches 30 MB. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+Compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Protocol (DHCP) database. Microsoft recommends that you compact the WINS database whenever it approaches 30 MB. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
 
 ## Syntax
 
@@ -23,7 +23,7 @@ JETPACK.EXE <database name> <temp database name>
 |-------------|---------------|
 |<database name>|Specifies the original database file.|
 |<temp database name>|Specifies the temporary database file.|
-|\/?|Displays Help at the command prompt.|
+|/?|Displays Help at the command prompt.|
 
 ## <a name="BKMK_Examples"></a>Examples
 To compact the WINS database:

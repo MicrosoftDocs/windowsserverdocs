@@ -30,15 +30,15 @@ For more information about upstream and downstream servers, see the [Design the 
 
         3.  In the **Port number** text box, type the port number that this WSUS server will use to communicate with the upstream WSUS server. The default port number is 80.
 
-            For more information about port configuration options, see the [Configure Internet Information Services \(IIS\)](Prepare-the-Network-and-Server-for-WSUS-3.0-SP2.md#iis) section in this deployment guide.
+            For more information about port configuration options, see the [Configure Internet Information Services (IIS)](Prepare-the-Network-and-Server-for-WSUS-3.0-SP2.md#iis) section in this deployment guide.
 
-        4.  To use Secure Sockets Layer \(SSL\) to help secure WSUS communications, check the **Use SSL when synchronizing update information** check box. This option works only if this WSUS server and the local upstream WSUS server support SSL.
+        4.  To use Secure Sockets Layer (SSL) to help secure WSUS communications, check the **Use SSL when synchronizing update information** check box. This option works only if this WSUS server and the local upstream WSUS server support SSL.
 
             For more information about how to use SSL with WSUS, see the [Secure WSUS with the Secure Sockets Layer Protocol](Secure-the-WSUS-3.0-SP2-Deployment.md#ssl) section in this deployment guide.
 
         5.  If this WSUS server is a replica server, select the **This is a replica of the upstream server** check box.
 
-            For more information about WSUS replica servers, see the [Replica mode \(centralized administration\)](Design-the-WSUS-Server-Layout.md#replica) section in this deployment guide.
+            For more information about WSUS replica servers, see the [Replica mode (centralized administration)](Design-the-WSUS-Server-Layout.md#replica) section in this deployment guide.
 
         6.  Click **Next**.
 

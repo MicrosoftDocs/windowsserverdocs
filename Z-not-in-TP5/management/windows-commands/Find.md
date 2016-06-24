@@ -23,42 +23,42 @@ find [/v] [/c] [/n] [/i] [/off[line]] "<String>" [[<Drive>:][<Path>]<FileName>[.
 
 |Parameter|Description|
 |-------------|---------------|
-|\/v|Displays all lines that do not contain the specified <String>.|
-|\/c|Counts the lines that contain the specified <String>and displays the total.|
-|\/n|Precedes each line with the file's line number.|
-|\/i|Specifies that the search is not case\-sensitive.|
-|\[\/off\[line\]\]|Does not skip files that have the offline attribute set.|
-|"<String>"|Required. Specifies the group of characters \(enclosed in quotation marks\) that you want to search for.|
-|\[<Drive>:\]\[<Path>\]<FileName>|Specifies the location and name of the file in which to search for the specified string.|
-|\/?|Displays help at the command prompt.|
+|/v|Displays all lines that do not contain the specified <String>.|
+|/c|Counts the lines that contain the specified <String>and displays the total.|
+|/n|Precedes each line with the file's line number.|
+|/i|Specifies that the search is not case-sensitive.|
+|[/off[line]]|Does not skip files that have the offline attribute set.|
+|"<String>"|Required. Specifies the group of characters (enclosed in quotation marks) that you want to search for.|
+|[<Drive>:][<Path>]<FileName>|Specifies the location and name of the file in which to search for the specified string.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   Specifying a string
 
-    If you do not use **\/i**, **find** searches for exactly what you specify for *String*. For example, the **find** command treats the characters "a" and "A" differently. If you use **\/i**, however, **find** is not case sensitive, and it treats "a" and "A" as the same character.
+    If you do not use **/i**, **find** searches for exactly what you specify for *String*. For example, the **find** command treats the characters "a" and "A" differently. If you use **/i**, however, **find** is not case sensitive, and it treats "a" and "A" as the same character.
 
-    If the string you want to search for contains quotation marks, you must use double quotation marks for each quotation mark contained within the string \(for example, "This ""string"" contains quotation marks"\).
+    If the string you want to search for contains quotation marks, you must use double quotation marks for each quotation mark contained within the string (for example, "This ""string"" contains quotation marks").
 
 -   Using **find** as a filter
 
-    If you omit a file name, **find** acts as a filter, taking input from the standard input source \(usually the keyboard, a pipe \(|\), or a redirected file\) and then displaying any lines that contain *String*.
+    If you omit a file name, **find** acts as a filter, taking input from the standard input source (usually the keyboard, a pipe (|), or a redirected file) and then displaying any lines that contain *String*.
 
 -   Ordering command syntax
 
-    You can type parameters and command\-line options for the **find** command in any order.
+    You can type parameters and command-line options for the **find** command in any order.
 
 -   Using wildcards
 
-    You cannot use wildcards \(**\*** and **?**\) in file names or extensions that you specify with the **find** command. To search for a string in a set of files that you specify with wildcards, you can use the **find** command within a **for** command.
+    You cannot use wildcards (**\*** and **?**) in file names or extensions that you specify with the **find** command. To search for a string in a set of files that you specify with wildcards, you can use the **find** command within a **for** command.
 
--   Using **\/v** or **\/n** with **\/c**
+-   Using **/v** or **/n** with **/c**
 
-    If you use **\/c** and **\/v**in the same command line, **find** displays a count of the lines that do not contain the specified string. If you specify **\/c** and **\/n** in the same command line, **find** ignores **\/n**.
+    If you use **/c** and **/v**in the same command line, **find** displays a count of the lines that do not contain the specified string. If you specify **/c** and **/n** in the same command line, **find** ignores **/n**.
 
 -   Using **find** with carriage returns
 
-    The **find** command does not recognize carriage returns. When you use **find** to search for text in a file that includes carriage returns, you must limit the search string to text that can be found between carriage returns \(that is, a string that is not likely to be interrupted by a carriage return\). For example, **find** does not report a match for the string "tax file" if a carriage return occurs between the words "tax" and "file."
+    The **find** command does not recognize carriage returns. When you use **find** to search for text in a file that includes carriage returns, you must limit the search string to text that can be found between carriage returns (that is, a string that is not likely to be interrupted by a carriage return). For example, **find** does not report a match for the string "tax file" if a carriage return occurs between the words "tax" and "file."
 
 ## <a name="BKMK_examples"></a>Examples
 To display all lines from Pencil.ad that contain the string "Pencil Sharpener", type:
@@ -79,13 +79,13 @@ If you want to search for a set of files, you can use the **find** command withi
 for %f in (*.bat) do find "PROMPT" %f 
 ```
 
-To search your hard disk to find and display the file names on drive C that contain the string "CPU", use the pipe \(|\) to direct the output of the **dir** command to the **find** command as follows:
+To search your hard disk to find and display the file names on drive C that contain the string "CPU", use the pipe (|) to direct the output of the **dir** command to the **find** command as follows:
 
 ```
 dir c:\ /s /b | find "CPU" 
 ```
 
-Because **find** searches are case\-sensitive and **dir** produces uppercase output, you must either type the string "CPU" in uppercase letters or use the **\/i** command\-line option with **find**.
+Because **find** searches are case-sensitive and **dir** produces uppercase output, you must either type the string "CPU" in uppercase letters or use the **/i** command-line option with **find**.
 
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

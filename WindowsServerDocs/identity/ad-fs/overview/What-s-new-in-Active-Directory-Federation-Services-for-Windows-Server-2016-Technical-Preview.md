@@ -63,7 +63,7 @@ By integrating with Windows 10 and Microsoft Passport, AD FS can use the Microso
   
   
   
-###	Greater intergration with LDAP directories to secure non-AD directories  
+### Greater intergration with LDAP directories to secure non-AD directories  
 In many organizations, identity management solutions consist of a combination of Active Directory, AD LDS, or third-party LDAP directories. With the addition of AD FS support for authenticating users stored in LDAP v3-compliant directories, you can benefit from the entire enterprise-grade AD FS feature set regardless of where your user identities are stored. AD FS supports any LDAP v3-compliant directory.   
   
 For more information see [Configure AD FS to authenticate users stored in LDAP directories.](../../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)  

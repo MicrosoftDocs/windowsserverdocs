@@ -24,7 +24,7 @@ bitsadmin /GetType <Job>
 |Job|The job's display name or GUID|
 
 ## Remarks
-The type can be DOWNLOAD, UPLOAD, UPLOAD\-REPLY, or UNKNOWN.
+The type can be DOWNLOAD, UPLOAD, UPLOAD-REPLY, or UNKNOWN.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the job type for the job named *myDownloadJob*.

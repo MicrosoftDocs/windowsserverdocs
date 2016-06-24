@@ -31,7 +31,7 @@ Following are the installation requirements for Network Controller.
 ### Software requirements
 Network Controller deployment requires one or more computers or VMs that will serve as the Network Controller, and one computer or VM to serve as a management client for Network Controller. These computers or VMs must run the following operating systems.
 
--   Any computer or virtual machine \(VM\) upon which you install Network Controller must be running the Datacenter edition of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].
+-   Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].
 
 -   The management client computer or VM for Network Controller must be running [!INCLUDE[win8_client_1](includes/win8_client_1_md.md)], [!INCLUDE[winblue_client_1](includes/winblue_client_1_md.md)], or [!INCLUDE[winthreshold_client_1](includes/winthreshold_client_1_md.md)].
 
@@ -40,18 +40,18 @@ Following are additional steps you must take before deploying Network Controller
 
 **Configure security groups**
 
-If the computers or VMs for Network Controller and the management client are domain\-joined, configure the following security groups for Kerberos authentication.
+If the computers or VMs for Network Controller and the management client are domain-joined, configure the following security groups for Kerberos authentication.
 
 -   Create a security group and add all of the users who have permission to configure Network Controller. For example, create a group named **Network Controller Admins**. All of the users that you add to this group must also be members of the **Domain Users** group in Active Directory Users and Computers.
 
     > [!NOTE]
     > For more information on creating a group in Active Directory Users and Computers, see [Create a new group](https://technet.microsoft.com/en-us/library/cc783256(v=ws.10).aspx).
 
--   Create a security group and add all of the users who have permission to configure and manage the network by using Network Controller.  For example, create a new group named **Network Controller Users**. All of the users that you add to the new group must also be members of the **Domain Users** group in Active Directory Users and Computers. All Network Controller configuration and management is performed using Representational State Transfer \(REST\).
+-   Create a security group and add all of the users who have permission to configure and manage the network by using Network Controller.  For example, create a new group named **Network Controller Users**. All of the users that you add to the new group must also be members of the **Domain Users** group in Active Directory Users and Computers. All Network Controller configuration and management is performed using Representational State Transfer (REST).
 
-**Configure certificates for non\-Kerberos deployments**
+**Configure certificates for non-Kerberos deployments**
 
-If the computers or VMs for Network Controller and the management client are not domain\-joined, you must configure certificate\-based authentication by completing the following steps.
+If the computers or VMs for Network Controller and the management client are not domain-joined, you must configure certificate-based authentication by completing the following steps.
 
 -   Create a certificate on the Network Controller for Computer authentication. The certificate subject name must be same as the DNS name of the Network Controller computer or VM.
 
@@ -59,7 +59,7 @@ If the computers or VMs for Network Controller and the management client are not
 
 -   Enroll a certificate on the Network Controller computer or VM. The certificate must meet the following requirements.
 
-    -   The Server Authentication purpose is present in Enhanced Key Usage \(EKU\) extensions.
+    -   The Server Authentication purpose is present in Enhanced Key Usage (EKU) extensions.
 
     -   The certificate subject name should resolve to:
 
@@ -67,11 +67,11 @@ If the computers or VMs for Network Controller and the management client are not
 
         -   The REST IP address, if Network Controller is deployed on multiple computers, multiple VMs, or both.
 
-    -   This certificate must be trusted by all the REST clients. The certificate must also be trusted by the Software Load Balancing \(SLB\) Multiplexer \(MUX\) and the southbound host computers that are managed by Network Controller.
+    -   This certificate must be trusted by all the REST clients. The certificate must also be trusted by the Software Load Balancing (SLB) Multiplexer (MUX) and the southbound host computers that are managed by Network Controller.
 
-    -   The certificate can be enrolled by a Certification Authority \(CA\) or can be a self\-signed certificate. Self\-signed certificates are not recommended for production deployments, but are acceptable for test lab environments.
+    -   The certificate can be enrolled by a Certification Authority (CA) or can be a self-signed certificate. Self-signed certificates are not recommended for production deployments, but are acceptable for test lab environments.
 
-    -   The same certificate must be provisioned on all the Network Controller nodes. After creating the certificate on one node, you can export the certificate \(with private key\) and import it on the other nodes.
+    -   The same certificate must be provisioned on all the Network Controller nodes. After creating the certificate on one node, you can export the certificate (with private key) and import it on the other nodes.
 
 **Configure log file locations if needed**
 
@@ -96,9 +96,9 @@ You can use the following procedures to configure DNS dynamic updates and to res
 
 1.  Open DNS Manager.
 
-2.  In the console tree, right\-click the applicable zone, and then click **Properties**. The zone's **Properties** dialog box opens.
+2.  In the console tree, right-click the applicable zone, and then click **Properties**. The zone's **Properties** dialog box opens.
 
-3.  On the **General** tab, verify that the zone type is either **Primary** or **Active Directory\-integrated**.
+3.  On the **General** tab, verify that the zone type is either **Primary** or **Active Directory-integrated**.
 
 4.  In **Dynamic updates**, verify that **Secure only** is selected. If it is not selected, change the value of **Dynamic updates** to **Secure only**, and then click **OK**.
 
@@ -106,7 +106,7 @@ You can use the following procedures to configure DNS dynamic updates and to res
 
 1.  Open DNS Manager.
 
-2.  In the console tree, right\-click the applicable zone, and then click **Properties**. The zone's **Properties** dialog box opens.
+2.  In the console tree, right-click the applicable zone, and then click **Properties**. The zone's **Properties** dialog box opens.
 
 3.  Click the **Security** tab, and then click **Advanced**. The **Advanced Security Settings** dialog box opens.
 

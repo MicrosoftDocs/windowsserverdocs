@@ -17,7 +17,7 @@ Changes made to authentication policy include:
 
 -   Creation, modification, and removal of forest and domain trusts.
 
--   Changes to Kerberos policy under **Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Kerberos Policy**.
+-   Changes to Kerberos policy under **Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy**.
 
     > [!NOTE]
     > The audit event is logged when the policy is applied, not when settings are modified by the administrator.
@@ -36,13 +36,13 @@ Changes made to authentication policy include:
 
 -   Namespace collision, such as when an added trust collides with an existing namespace name.
 
-This setting is useful for tracking changes in domain\-level and forest\-level trust and privileges that are granted to user accounts or groups.
+This setting is useful for tracking changes in domain-level and forest-level trust and privileges that are granted to user accounts or groups.
 
 Event volume: Low
 
 Default: Success
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

@@ -13,12 +13,12 @@ ms.assetid: 5714df3f-f810-4618-8c93-e24881651100
 author: KBDAzure
 ---
 # At least one network for live migration traffic should have a link speed of at least 1 Gbps
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
   

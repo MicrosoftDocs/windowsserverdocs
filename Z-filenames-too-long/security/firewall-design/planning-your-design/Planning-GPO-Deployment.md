@@ -17,7 +17,7 @@ You can control which GPOs are applied to computers in Active Directory in a com
 
     Controlling GPO application through linking to OUs is typically used when you can organize the OU hierarchy according to your domain isolation zone requirements. GPOs can apply settings to computers based on their location within Active Directory. If a computer is moved from one OU to another, the policy linked to the second OU will eventually take effect when Group Policy detects the change during polling.
 
--   **Security group filtering**. This involves linking the GPOs to the domain level \(or other parent OU\) in the OU hierarchy, and then selecting which computers receive the GPO by using permissions that only allow correct group members to apply the GPO.
+-   **Security group filtering**. This involves linking the GPOs to the domain level (or other parent OU) in the OU hierarchy, and then selecting which computers receive the GPO by using permissions that only allow correct group members to apply the GPO.
 
     The security group filters are attached to the GPOs themselves. A group is added to the security group filter of the GPO in Active Directory, and then assigned Read and Apply Group Policy permissions. Other groups can be explicitly denied Read and Apply Group Policy permissions. Only those computers whose group membership are granted Read and Apply Group Policy permissions without any explicit deny permissions can apply the GPO.
 
@@ -36,18 +36,18 @@ After you have deployed your GPOs and added some test computers to the groups, c
 
 -   Examine the GPOs that are both assigned to and filtered from the computer. Run the **gpresult** tool at a command prompt.
 
--   Examine the rules deployed to the computer. Open the Windows Firewall with Advanced Security MMC snap\-in, expand the **Monitoring** node, and then expand the **Firewall** and **Connection Security** nodes.
+-   Examine the rules deployed to the computer. Open the Windows Firewall with Advanced Security MMC snap-in, expand the **Monitoring** node, and then expand the **Firewall** and **Connection Security** nodes.
 
--   Verify that communications are authenticated. Open the Windows Firewall with Advanced Security MMC snap\-in, expand the **Monitoring** node, expand the **Security Associations** node, and then click **Main Mode**.
+-   Verify that communications are authenticated. Open the Windows Firewall with Advanced Security MMC snap-in, expand the **Monitoring** node, expand the **Security Associations** node, and then click **Main Mode**.
 
--   Verify that communications are encrypted when the computers require it. Open the Windows Firewall with Advanced Security MMC snap\-in, expand the **Monitoring** node, expand the **Security Associations** node, and then select **Quick Mode**. Encrypted connections display a value other than **None** in the **ESP Confidentiality** column.
+-   Verify that communications are encrypted when the computers require it. Open the Windows Firewall with Advanced Security MMC snap-in, expand the **Monitoring** node, expand the **Security Associations** node, and then select **Quick Mode**. Encrypted connections display a value other than **None** in the **ESP Confidentiality** column.
 
 -   Verify that your programs are unaffected. Run them and confirm that they still work as expected.
 
 After you have confirmed that the GPOs have been correctly applied, and that the computers are now communicating by using IPsec network traffic in request mode, you can begin to add more computers to the group accounts, in manageable numbers at a time. Continue to monitor and confirm the correct application of the GPOs to the computers.
 
 ## Do not enable require mode until deployment is complete
-If you deploy a GPO that requires authentication to a computer before the other computers have a GPO deployed, communication between them might not be possible. Wait until you have all the zones and their GPOs deployed in request mode and confirm \(as described in the previous section\) that the computers are successfully communicating by using IPsec.
+If you deploy a GPO that requires authentication to a computer before the other computers have a GPO deployed, communication between them might not be possible. Wait until you have all the zones and their GPOs deployed in request mode and confirm (as described in the previous section) that the computers are successfully communicating by using IPsec.
 
 If there are problems with GPO deployment, or errors in configuration of one or more of the IPsec GPOs, computers can continue to operate, because request mode enables any computer to fall back to clear communications.
 
@@ -60,56 +60,56 @@ If you create other zones that require either inbound or outbound require mode, 
 ## Example Woodgrove Bank deployment plans
 Woodgrove Bank links all its GPOs to the domain level container in the Active Directory OU hierarchy. It then uses the following WMI filters and security group filters to control the application of the GPOs to the correct subset of computers. All of the GPOs have the User Configuration section disabled to improve performance.
 
-### GPO\_DOMISO\_Firewall\_2008\_Win7\-Vista
+### GPO_DOMISO_Firewall_2008_Win7-Vista
 
 -   **WMI filter**. The WMI filter allows this GPO to apply only to computers that match the following WMI query:
 
     `select * from Win32_OperatingSystem where Version like "6.%" and ProductType <> "2"`
 
     > [!NOTE]
-    > This excludes domain controllers \(which report a ProductType value of 2\). Do not include domain controllers in the isolated domain if there are computers running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
+    > This excludes domain controllers (which report a ProductType value of 2). Do not include domain controllers in the isolated domain if there are computers running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
 
--   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG\_DOMISO\_IsolatedDomain. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the CG\_DOMISO\_NO\_IPSEC.
+-   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG_DOMISO_IsolatedDomain. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the CG_DOMISO_NO_IPSEC.
 
-### GPO\_DOMISO\_IsolatedDomain\_Clients\_Win7Vista
+### GPO_DOMISO_IsolatedDomain_Clients_Win7Vista
 
 -   **WMI filter**. The WMI filter allows this GPO to apply only to computers that match the following WMI query:
 
     `select * from Win32_OperatingSystem where Version like "6.%" and ProductType = "1"`
 
--   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG\_DOMISO\_IsolatedDomain. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the group CG\_DOMISO\_NO\_IPSEC.
+-   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG_DOMISO_IsolatedDomain. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the group CG_DOMISO_NO_IPSEC.
 
-### GPO\_DOMISO\_IsolatedDomain\_Servers\_WS2008
-
--   **WMI filter**. The WMI filter allows this GPO to apply only to computers that match the following WMI query:
-
-    `select * from Win32_OperatingSystem where Version like "6.%" and ProductType = "3"`
-
-    > [!NOTE]
-    > This excludes domain controllers \(which report a ProductType value of 2\). Do not include domain controllers in the isolated domain if there are computers that are running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
-
--   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG\_DOMISO\_IsolatedDomain. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the group CG\_DOMISO\_NO\_IPSEC.
-
-### GPO\_DOMISO\_Boundary\_WS2008
+### GPO_DOMISO_IsolatedDomain_Servers_WS2008
 
 -   **WMI filter**. The WMI filter allows this GPO to apply only to computers that match the following WMI query:
 
     `select * from Win32_OperatingSystem where Version like "6.%" and ProductType = "3"`
 
     > [!NOTE]
-    > This excludes domain controllers \(which report a ProductType value of 2\). Do not include domain controllers in the isolated domain if there are computers that are running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
+    > This excludes domain controllers (which report a ProductType value of 2). Do not include domain controllers in the isolated domain if there are computers that are running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
 
--   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG\_DOMISO\_Boundary. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the group CG\_DOMISO\_NO\_IPSEC.
+-   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG_DOMISO_IsolatedDomain. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the group CG_DOMISO_NO_IPSEC.
 
-### GPO\_DOMISO\_Encryption\_WS2008
+### GPO_DOMISO_Boundary_WS2008
 
 -   **WMI filter**. The WMI filter allows this GPO to apply only to computers that match the following WMI query:
 
     `select * from Win32_OperatingSystem where Version like "6.%" and ProductType = "3"`
 
     > [!NOTE]
-    > This excludes domain controllers \(which report a ProductType value of 2\). Do not include domain controllers in the isolated domain if there are computers that are running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
+    > This excludes domain controllers (which report a ProductType value of 2). Do not include domain controllers in the isolated domain if there are computers that are running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
 
--   **Security filter**. This GPO grants Read and Apply permissions in Group Policy only to computers that are members of the group CG\_DOMISO\_Encryption. The GPO also explicitly denies Read and Apply permissions in Group Policy to members of the group CG\_DOMISO\_NO\_IPSEC.
+-   **Security filter**. This GPO grants Read and Apply Group Policy permissions only to computers that are members of the group CG_DOMISO_Boundary. The GPO also explicitly denies Read and Apply Group Policy permissions to members of the group CG_DOMISO_NO_IPSEC.
+
+### GPO_DOMISO_Encryption_WS2008
+
+-   **WMI filter**. The WMI filter allows this GPO to apply only to computers that match the following WMI query:
+
+    `select * from Win32_OperatingSystem where Version like "6.%" and ProductType = "3"`
+
+    > [!NOTE]
+    > This excludes domain controllers (which report a ProductType value of 2). Do not include domain controllers in the isolated domain if there are computers that are running versions of Windows earlier than Windows Vista and  Windows Server 2008 .
+
+-   **Security filter**. This GPO grants Read and Apply permissions in Group Policy only to computers that are members of the group CG_DOMISO_Encryption. The GPO also explicitly denies Read and Apply permissions in Group Policy to members of the group CG_DOMISO_NO_IPSEC.
 
 

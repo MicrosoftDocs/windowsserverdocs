@@ -24,12 +24,12 @@ where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/r <Dir>|Indicates a recursive search, starting with the specified directory.|  
-|\/q|Returns an exit code \(**0** for success, **1** for failure\) without displaying the list of matched files.|  
-|\/f|Displays the results of the **where** command in quotation marks.|  
-|\/t|Displays the file size and the last modified date and time of each matched file.|  
-|\[$<ENV>:&#124;<Path>:\]<Pattern>\[ ...\]|Specifies the search pattern for the files to match. At least one pattern is required, and the pattern can include wildcard characters \(**\*** and **?**\). By default, **where** searches the current directory and the paths that are specified in the PATH environment variable. You can specify a different path to search by using the format $*ENV*:*Pattern* \(where *ENV* is an existing environment variable containing one or more paths\) or by using the format *Path*:*Pattern* \(where *Path* is the directory path you want to search\). These optional formats should not be used with the **\/r** command\-line option.|  
-|\/?|Displays help at the command prompt.|  
+|/r <Dir>|Indicates a recursive search, starting with the specified directory.|  
+|/q|Returns an exit code (**0** for success, **1** for failure) without displaying the list of matched files.|  
+|/f|Displays the results of the **where** command in quotation marks.|  
+|/t|Displays the file size and the last modified date and time of each matched file.|  
+|[$<ENV>:&#124;<Path>:]<Pattern>[ ...]|Specifies the search pattern for the files to match. At least one pattern is required, and the pattern can include wildcard characters (**\*** and **?**). By default, **where** searches the current directory and the paths that are specified in the PATH environment variable. You can specify a different path to search by using the format $*ENV*:*Pattern* (where *ENV* is an existing environment variable containing one or more paths) or by using the format *Path*:*Pattern* (where *Path* is the directory path you want to search). These optional formats should not be used with the **/r** command-line option.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   

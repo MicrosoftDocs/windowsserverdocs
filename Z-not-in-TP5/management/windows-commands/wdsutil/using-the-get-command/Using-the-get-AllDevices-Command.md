@@ -21,8 +21,8 @@ WDSUTIL [Options] /Get-AllDevices [/Forest:{Yes | No}] [/ReferralServer:<Server 
 
 |Parameter|Description|
 |-------------|---------------|
-|\[\/Forest:{Yes &#124; No}\]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|
-|\[\/ReferralServer:<Server name>\]|Returns only those computers that are prestaged for the specified server.|
+|[/Forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|
+|[/ReferralServer:<Server name>]|Returns only those computers that are prestaged for the specified server.|
 
 ## <a name="BKMK_examples"></a>Examples
 To view all computers, type one of the following:

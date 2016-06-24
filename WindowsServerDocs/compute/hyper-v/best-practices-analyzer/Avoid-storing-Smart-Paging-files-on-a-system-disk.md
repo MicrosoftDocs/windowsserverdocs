@@ -20,21 +20,21 @@ For more information about best practices and scans, see [Run Best Practices Ana
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Operations|  
   
 In the following sections, italics indicates text that appears in the Best Practices Analyzer tool for this issue.  
   
 ## Issue  
-*The memory configuration for one or more virtual machines might require the use of Smart Paging if the virtual machine is rebooted, and the specified location for the Smart Paging file is the system disk of the server running Hyper\-V.*  
+*The memory configuration for one or more virtual machines might require the use of Smart Paging if the virtual machine is rebooted, and the specified location for the Smart Paging file is the system disk of the server running Hyper-V.*  
   
 ## Impact  
-*Use of the system disk for Smart Paging might cause the server running Hyper\-V to experience problems. This affects the following virtual machines:*  
+*Use of the system disk for Smart Paging might cause the server running Hyper-V to experience problems. This affects the following virtual machines:*  
   
 \<list of virtual machines>  
   
 ## Resolution  
-*Reconfigure the virtual machines to store the Smart Paging files on a non\-system disk.*  
+*Reconfigure the virtual machines to store the Smart Paging files on a non-system disk.*  
   
 

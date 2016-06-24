@@ -12,7 +12,7 @@ ms.assetid: abc08a10-4b97-47d0-8876-9223c7b79691
 author: jamesmci
 ---
 # Create a New NIC Team
-You can use this topic to create a new NIC Team on a host computer or in a Hyper\-V virtual machine \(VM\) that is running Windows Server® 2016 Technical Preview.  
+You can use this topic to create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) that is running Windows Server® 2016 Technical Preview.  
   
 > [!IMPORTANT]  
 > If you are creating a new NIC Team in a VM, review the topic [Create a New NIC Team in a VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md) before you perform this procedure.  
@@ -42,7 +42,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 6.  In **Additional properties**, select values for **Teaming mode**, **Load balancing mode**, and **Standby adapter**. In most cases, the highest performing load balancing mode is **Dynamic**. For more detailed explanations of these modes, see the topic [Create a New NIC Team on a Host Computer or VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md).  
   
     > [!IMPORTANT]  
-    > If you are configuring a NIC Team in a virtual machine \(VM\), you must select a **Teaming mode** of **Switch Independent** and a **Load balancing mode** of **Address Hash**.  
+    > If you are configuring a NIC Team in a virtual machine (VM), you must select a **Teaming mode** of **Switch Independent** and a **Load balancing mode** of **Address Hash**.  
   
     ![](../../media/Create-a-New-NIC-Team/nict_06_properties.jpg)  
   

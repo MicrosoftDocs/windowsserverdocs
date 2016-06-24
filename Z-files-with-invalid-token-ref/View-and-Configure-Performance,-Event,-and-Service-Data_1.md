@@ -15,7 +15,7 @@ This topic describes how to view and configure the event log entries, performanc
 
 Event, service, and performance log data is displayed in two places in the [!INCLUDE[sm](includes/sm_md.md)] console in [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)].
 
--   On the dashboard, you can click the **Events**, **Performance**, and **Services** rows of thumbnails to configure event, performance, and service log data that you want to see for roles, the entire [!INCLUDE[sm](includes/sm_md.md)] server pool, user\-created groups of servers, and the local server. Clicking the hypertext rows opens **Detail View** dialog boxes that let you specify the data about which you want to be alerted in the dashboard. After you configure event, service, and performance log data that you want to be highlighted in the dashboard thumbnails, log entries that match the criteria you have specified are listed at the bottom of the **Detail View** dialog boxes.
+-   On the dashboard, you can click the **Events**, **Performance**, and **Services** rows of thumbnails to configure event, performance, and service log data that you want to see for roles, the entire [!INCLUDE[sm](includes/sm_md.md)] server pool, user-created groups of servers, and the local server. Clicking the hypertext rows opens **Detail View** dialog boxes that let you specify the data about which you want to be alerted in the dashboard. After you configure event, service, and performance log data that you want to be highlighted in the dashboard thumbnails, log entries that match the criteria you have specified are listed at the bottom of the **Detail View** dialog boxes.
 
 -   **Events**, **Services**, and **Performance** tiles are part of role and group home pages. Commands on the **Tasks** menu of these tiles let you specify the data that you want collected from managed servers. The tiles include filters and queries to further limit the log entries that are displayed in the tile, if desired.
 
@@ -32,7 +32,7 @@ This topic contains the following sections.
 -   [View and copy event or performance entries](#BKMK_copy)
 
 ## <a name="BKMK_thumb"></a>What are thumbnails?
-*Thumbnails* are displayed on the [!INCLUDE[sm](includes/sm_md.md)] dashboard for each role \(a role’s thumbnail reflects data collected about all of the servers in the [!INCLUDE[sm](includes/sm_md.md)] pool that are running the role\), for each server group, for the **All Servers** group \(all of the servers in the [!INCLUDE[sm](includes/sm_md.md)] pool\), and for the local server. After [!INCLUDE[sm](includes/sm_md.md)] gets data from managed servers, thumbnails are automatically created for roles that are running on servers in the server pool.
+*Thumbnails* are displayed on the [!INCLUDE[sm](includes/sm_md.md)] dashboard for each role (a role’s thumbnail reflects data collected about all of the servers in the [!INCLUDE[sm](includes/sm_md.md)] pool that are running the role), for each server group, for the **All Servers** group (all of the servers in the [!INCLUDE[sm](includes/sm_md.md)] pool), and for the local server. After [!INCLUDE[sm](includes/sm_md.md)] gets data from managed servers, thumbnails are automatically created for roles that are running on servers in the server pool.
 
 If the [!INCLUDE[sm](includes/sm_md.md)] console is running on a client computer as part of Remote Server Administration Tools, there is no **Local Server** thumbnail.
 
@@ -40,10 +40,10 @@ The thumbnail displays a quick view of the status and manageability of roles, se
 
 |Thumbnail Row|Description|
 |-----------------|---------------|
-|Manageability|The manageability of a server includes several measures: whether the server is online or offline, whether it is accessible and reporting data to [!INCLUDE[sm](includes/sm_md.md)], whether the user who is logged on to the local computer has adequate user rights to access or manage the remote server, whether the remote server is running all of the software that is required to manage it remotely, or whether the server is configured in a way that allows it to be queried and managed by using [!INCLUDE[sm](includes/sm_md.md)]. The only manageability data that [!INCLUDE[sm](includes/sm_md.md)] can collect from a server that is running Windows Server 2003 is whether the server is online or offline. For detailed information about manageability status errors and how to resolve them, see the [Server Manager Troubleshooting Guide](http://social.technet.microsoft.com/wiki/contents/articles/13443.windows-server-2012-server-manager-troubleshooting-guide-part-i-overview.aspx).|
+|Manageability|The manageability of a server includes several measures: whether the server is online or offline, whether it is accessible and reporting data to [!INCLUDE[sm](includes/sm_md.md)], whether the user who is logged on to the local computer has adequate user rights to access or manage the remote server, whether the remote server is running all of the software that is required to manage it remotely, or whether the server is configured in a way that allows it to be queried and managed by using [!INCLUDE[sm](includes/sm_md.md)]. The only manageability data that [!INCLUDE[sm](includes/sm_md.md)] can collect from a server that is running Windows Server 2003 is whether the server is online or offline. For detailed information about manageability status errors and how to resolve them, see the [Server Manager Troubleshooting Guide](http://social.technet.microsoft.com/wiki/contents/articles/13443.windows-server-2012-server-manager-troubleshooting-guide-part-i-overview.aspx).|
 |Events|You can configure the **Events** row of a thumbnail to display alerts when events are logged that match severity levels, sources, time periods, servers, or event IDs that you specify. View details about events, and change the alerts you want to see by clicking the **Events** row, and opening the **Events Detail View** dialog box for the role or server group.|
-|Services|You can configure the **Services** row to display alerts when services are found in a role or server group that match startup types, service status, service names, and servers that you specify in the **Services Detail View** dialog box.<br /><br />After a server has been added to the [!INCLUDE[sm](includes/sm_md.md)] server pool, service alerts about the Shell Hardware Detection service can be displayed if there are no users logged on to the managed server. This occurs because the Shell Hardware Detection service runs only when users are logged on to the managed server, or connected to a Remote Desktop session on the managed server. To avoid seeing Shell Hardware Detection service alerts for this case, click **Services** in the thumbnails for server groups, including the **All Servers** group. In the **Services Detail View** dialog box, on the **Services** drop\-down list, clear the check box for **Shell Hardware Detection**, and then click **OK**.|
-|Performance|You can configure the **Performance** row to display alerts for a role or server group when performance alerts occur that match resource types, servers, or time periods that you specify in the **Performance Detail View** dialog box.<br /><br />By default, performance counters are turned off. Managed servers that are running operating systems newer than Windows Server 2003, and for which performance counters have not been started, typically show manageability status errors of **Online – Performance counters not started** in the **Servers** tile of role or group pages. To turn performance counters on for managed servers, on the **All Servers** page, right\-click entries in the **Performance** tile that show a **Counter Status** value of **Off**, and then click **Start Performance Counters**. You can also start performance counters by right\-clicking entries for servers in the **Servers** tile of role or group pages, and then clicking **Start Performance Counters**.|
+|Services|You can configure the **Services** row to display alerts when services are found in a role or server group that match startup types, service status, service names, and servers that you specify in the **Services Detail View** dialog box.<br /><br />After a server has been added to the [!INCLUDE[sm](includes/sm_md.md)] server pool, service alerts about the Shell Hardware Detection service can be displayed if there are no users logged on to the managed server. This occurs because the Shell Hardware Detection service runs only when users are logged on to the managed server, or connected to a Remote Desktop session on the managed server. To avoid seeing Shell Hardware Detection service alerts for this case, click **Services** in the thumbnails for server groups, including the **All Servers** group. In the **Services Detail View** dialog box, on the **Services** drop-down list, clear the check box for **Shell Hardware Detection**, and then click **OK**.|
+|Performance|You can configure the **Performance** row to display alerts for a role or server group when performance alerts occur that match resource types, servers, or time periods that you specify in the **Performance Detail View** dialog box.<br /><br />By default, performance counters are turned off. Managed servers that are running operating systems newer than Windows Server 2003, and for which performance counters have not been started, typically show manageability status errors of **Online – Performance counters not started** in the **Servers** tile of role or group pages. To turn performance counters on for managed servers, on the **All Servers** page, right-click entries in the **Performance** tile that show a **Counter Status** value of **Off**, and then click **Start Performance Counters**. You can also start performance counters by right-clicking entries for servers in the **Servers** tile of role or group pages, and then clicking **Start Performance Counters**.|
 |BPA results|You can configure the **BPA results** row to display alerts for a role or server group when BPA scan results are found that match severity levels, servers, or BPA categories that you specify in the **BPA Results Detail View** dialog box.|
 
 ## <a name="BKMK_events"></a>View and configure events
@@ -80,11 +80,11 @@ In this section, learn how to configure what event log data is collected from se
 
 4.  In the **Event sources** field, select the event sources about which you want to be alerted. The default is **All**.
 
-5.  If this thumbnail is for a role that is installed on multiple servers, or a group of multiple servers, you can select the servers for which you want event alerts in the **Servers** drop\-down list.
+5.  If this thumbnail is for a role that is installed on multiple servers, or a group of multiple servers, you can select the servers for which you want event alerts in the **Servers** drop-down list.
 
 6.  In the **Time period** field, specify a time period up to 1440 minutes, 24 hours, or 1 day.
 
-7.  In the **Event IDs** field, type the event ID numbers of specific events about which you want to be alerted. You can type a range of event IDs separated by a dash \(**\-**\), and exclude event IDs from the range by typing the dash before the event ID or range of event IDs that you want to exclude. For example, the value **1,3,5\-99,\-76** means that alerts are raised for event IDs 1 and 3, and all events with IDs between 5 and 99 except for event ID 76.
+7.  In the **Event IDs** field, type the event ID numbers of specific events about which you want to be alerted. You can type a range of event IDs separated by a dash (**-**), and exclude event IDs from the range by typing the dash before the event ID or range of event IDs that you want to exclude. For example, the value **1,3,5-99,-76** means that alerts are raised for event IDs 1 and 3, and all events with IDs between 5 and 99 except for event ID 76.
 
 8.  As you change the criteria for which alerts are displayed, the number of event alerts that are displayed in the results pane at the bottom of the dialog box might change. Select entries in the list and click **Hide Alerts** to prevent them from affecting the alert count that is displayed in the source thumbnail. Press and hold **Ctrl** as you select alerts to select multiple alerts at one time. You can do this for alerts that match your event alerting criteria, but that you do not need to see.
 
@@ -95,7 +95,7 @@ In this section, learn how to configure what event log data is collected from se
 ## <a name="BKMK_perf"></a>View and configure performance log data
 In this section, learn how to configure what performance log data is collected from servers in the [!INCLUDE[sm](includes/sm_md.md)] server pool, and which performance counter alerts you want highlighted in thumbnails.
 
-By default, performance counters are turned off. Managed servers that are running operating systems newer than Windows Server 2003, and for which performance counters have not been started, typically show manageability status errors of **Online – Performance counters not started** in the **Servers** tile of role or group pages. To turn performance counters on for managed servers, on the **All Servers** page, right\-click entries in the **Performance** tile that show a **Counter Status** value of **Off**, and then click **Start Performance Counters**. You can also start performance counters by right\-clicking entries for servers in the **Servers** tile of role or group pages, and then clicking **Start Performance Counters**.
+By default, performance counters are turned off. Managed servers that are running operating systems newer than Windows Server 2003, and for which performance counters have not been started, typically show manageability status errors of **Online – Performance counters not started** in the **Servers** tile of role or group pages. To turn performance counters on for managed servers, on the **All Servers** page, right-click entries in the **Performance** tile that show a **Counter Status** value of **Off**, and then click **Start Performance Counters**. You can also start performance counters by right-clicking entries for servers in the **Servers** tile of role or group pages, and then clicking **Start Performance Counters**.
 
 > [!NOTE]
 > The performance alerts you view in thumbnails are a subset of the total performance counter data that you instruct [!INCLUDE[sm](includes/sm_md.md)] to collect from managed servers. Although changing performance alert criteria in the **Configure Performance Alerts** dialog box in **Performance** tiles can change the numbers of alerts you see on the [!INCLUDE[sm](includes/sm_md.md)] dashboard, changing the performance alert criteria in thumbnails has no effect on the performance log data that is collected from managed servers.
@@ -106,7 +106,7 @@ By default, performance counters are turned off. Managed servers that are runnin
 
 1.  In the [!INCLUDE[sm](includes/sm_md.md)] console, open any page except the dashboard. You can configure the performance data that you want collected from managed servers in the **Performance** tile on role, server group, or local server pages.
 
-2.  To collect performance log data from managed servers, performance counters must be turned on. If performance counters are turned off, right\-click an entry in the **Performance** tile list, and then click **Start Performance Counters**. Performance counter data collection can require some time, depending on the number of servers from which data is collected, and available network bandwidth. View the status in the **Counter Status** column.
+2.  To collect performance log data from managed servers, performance counters must be turned on. If performance counters are turned off, right-click an entry in the **Performance** tile list, and then click **Start Performance Counters**. Performance counter data collection can require some time, depending on the number of servers from which data is collected, and available network bandwidth. View the status in the **Counter Status** column.
 
 3.  On the **Tasks** menu of the **Performance** tile, click **Configure Performance Alerts**.
 
@@ -129,7 +129,7 @@ By default, performance counters are turned off. Managed servers that are runnin
 
 2.  In the **Performance Detail View** dialog box, select or clear check boxes for resource performance thresholds about which you want to be alerted in the **Resource type** field. Note that the number of performance alerts displayed in the **Detail View** dialog box can increase when you add a resource performance threshold about which you want to be alerted.
 
-3.  If this thumbnail is for a role that is installed on multiple servers, or a group of multiple servers, you can select the servers for which you want performance alerts in the **Servers** drop\-down list.
+3.  If this thumbnail is for a role that is installed on multiple servers, or a group of multiple servers, you can select the servers for which you want performance alerts in the **Servers** drop-down list.
 
 4.  In the **Time period** field, specify a time period up to 1440 minutes, 24 hours, or 1 day.
 
@@ -147,7 +147,7 @@ By default, performance counters are turned off. Managed servers that are runnin
 
     -   Open a role or group home page, and locate the **Performance** tile for the role or group.
 
-2.  Double\-click a performance alert in the list to view its properties. Alternatively, you can right\-click a performance alert, and then click **View Properties**.
+2.  Double-click a performance alert in the list to view its properties. Alternatively, you can right-click a performance alert, and then click **View Properties**.
 
 3.  In the **Performance Alert Properties** dialog box, select log entries to view information about the processes that are associated with the entry in the **Processes** area.
 
@@ -160,19 +160,19 @@ For more information about analyzing performance counter data that you view in [
 
 -   [Solving performance problems](http://go.microsoft.com/fwlink/?LinkId=239831)
 
-For more information about advanced performance monitoring and analysis tools that are available for [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and later releases of Windows Server, including Server Performance Advisor 3.0, see [Performance](http://msdn.microsoft.com/windows/hardware/gg463374.aspx) on MSDN.
+For more information about advanced performance monitoring and analysis tools that are available for [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] and later releases of Windows Server, including Server Performance Advisor 3.0, see [Performance](http://msdn.microsoft.com/windows/hardware/gg463374.aspx) on MSDN.
 
 ## <a name="BKMK_services"></a>Manage services and configure service alerts
 In this section, learn how to start, stop, restart, pause, or resume services that are displayed in the **Services** tile on role and server group pages in [!INCLUDE[sm](includes/sm_md.md)]. You can also configure the services about which you are alerted in thumbnails on the [!INCLUDE[sm](includes/sm_md.md)] dashboard.
 
 > [!NOTE]
-> You cannot change the start type for services, service dependencies, recovery options, or other service properties in the Services tile in [!INCLUDE[sm](includes/sm_md.md)]. To change service properties other than the service status, open the **Services** snap\-in. A shortcut to open the **Services** snap\-in is available on the **Tools** menu in [!INCLUDE[sm](includes/sm_md.md)].
+> You cannot change the start type for services, service dependencies, recovery options, or other service properties in the Services tile in [!INCLUDE[sm](includes/sm_md.md)]. To change service properties other than the service status, open the **Services** snap-in. A shortcut to open the **Services** snap-in is available on the **Tools** menu in [!INCLUDE[sm](includes/sm_md.md)].
 
 #### To start, stop, restart, pause, or resume a service
 
-1.  In the [!INCLUDE[sm](includes/sm_md.md)] console, open any page except the dashboard \(in other words, any role or group home page\).
+1.  In the [!INCLUDE[sm](includes/sm_md.md)] console, open any page except the dashboard (in other words, any role or group home page).
 
-2.  In the **Services** tile for the role or group, right\-click a service.
+2.  In the **Services** tile for the role or group, right-click a service.
 
 3.  In the context menu, click the action that you want to perform on the service. If the service is stopped, the only action you can perform is to start the service. Similarly, if the service is paused, the only action you can perform is to resume the service.
 
@@ -182,7 +182,7 @@ In this section, learn how to start, stop, restart, pause, or resume services th
 
 1.  On the dashboard page, in a thumbnail in the **Roles and Server Groups** tile, click the **Services** row.
 
-2.  In the **Services Detail View** dialog box, select the startup types for services about which you want to be alerted. By default, **Automatic \(Delayed Start\)** and **Automatic** are selected.
+2.  In the **Services Detail View** dialog box, select the startup types for services about which you want to be alerted. By default, **Automatic (Delayed Start)** and **Automatic** are selected.
 
 3.  Select the service statuses about which you want to be alerted. By default, **All** is selected.
 
@@ -197,7 +197,7 @@ In this section, learn how to start, stop, restart, pause, or resume services th
 8.  Click **OK** to save your changes, close the **Detail View** dialog box, and view the service alert changes in the source thumbnail.
 
 ## <a name="BKMK_copy"></a>View and copy event, service, or performance entries
-You can copy event, service, or performance entry properties in both the **Detail View** dialog boxes and the **Events** and **Performance** tiles for a role or group. Right\-click an event or performance entry, and then click **Copy**.
+You can copy event, service, or performance entry properties in both the **Detail View** dialog boxes and the **Events** and **Performance** tiles for a role or group. Right-click an event or performance entry, and then click **Copy**.
 
 The **Events** tile also lets you preview event properties in the bottom half of the tile by selecting an event in the list. To copy the properties shown in the preview, right click the preview pane, and then click **Copy**.
 

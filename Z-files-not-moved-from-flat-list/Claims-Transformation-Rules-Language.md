@@ -14,18 +14,18 @@ ms.assetid: a86d6f34-d183-4925-b820-f786983ac4c1
 author: Femila
 ---
 # Claims Transformation Rules Language
-The across\-forest claims transformation feature enables you to bridge claims for Dynamic Access Control across forest boundaries by setting claims transformation policies on across\-forest trusts. The primary component of all policies is rules that are written in claims transformation rules language. This topic provides details about this language and provides guidance about authoring claims transformation rules.  
+The across-forest claims transformation feature enables you to bridge claims for Dynamic Access Control across forest boundaries by setting claims transformation policies on across-forest trusts. The primary component of all policies is rules that are written in claims transformation rules language. This topic provides details about this language and provides guidance about authoring claims transformation rules.  
   
-The Windows PowerShell cmdlets for transformation policies on across\-forest trusts have options to set simple policies that are required in common scenarios. These cmdlets translate the user input into policies and rules in the claims transformation rules language, and then store them in Active Directory in the prescribed format. For more information about cmdlets for claims transformation, see the [AD DS Cmdlets for Dynamic Access Control](http://go.microsoft.com/fwlink/?LinkId=243150).  
+The Windows PowerShell cmdlets for transformation policies on across-forest trusts have options to set simple policies that are required in common scenarios. These cmdlets translate the user input into policies and rules in the claims transformation rules language, and then store them in Active Directory in the prescribed format. For more information about cmdlets for claims transformation, see the [AD DS Cmdlets for Dynamic Access Control](http://go.microsoft.com/fwlink/?LinkId=243150).  
   
-Depending on the claims configuration and the requirements placed on the across\-forest trust in your Active Directory forests, your claims transformation policies may have to be more complex than the policies supported by the Windows PowerShell cmdlets for Active Directory. To effectively author such policies, it is essential to understand the claims transformation rules language syntax and semantics. This claims transformation rules language \(“the language”\) in Active Directory is a subset of the language that is used by [Active Directory Federation Services](http://go.microsoft.com/fwlink/?LinkId=243982) for similar purposes, and it has a very similar syntax and semantics. However, there are fewer operations allowed, and additional syntax restrictions are placed in the Active Directory version of the language.  
+Depending on the claims configuration and the requirements placed on the across-forest trust in your Active Directory forests, your claims transformation policies may have to be more complex than the policies supported by the Windows PowerShell cmdlets for Active Directory. To effectively author such policies, it is essential to understand the claims transformation rules language syntax and semantics. This claims transformation rules language (“the language”) in Active Directory is a subset of the language that is used by [Active Directory Federation Services](http://go.microsoft.com/fwlink/?LinkId=243982) for similar purposes, and it has a very similar syntax and semantics. However, there are fewer operations allowed, and additional syntax restrictions are placed in the Active Directory version of the language.  
   
 This topic briefly explains the syntax and semantics of the claims transformation rules language in Active Directory and considerations to be made when authoring policies. It provides several sets of example rules to get you started, and examples of incorrect syntax and the messages they generate, to help you decipher error messages when you author the rules.  
   
 ## Tools for authoring claims transformation policies  
 **Windows PowerShell cmdlets for Active Directory**: This is the preferred and recommended way to author and set claims transformation policies. These cmdlets provide switches for simple policies and verify rules that are set for more complex policies.  
   
-**LDAP**: Claims transformation policies can be edited in Active Directory through Lightweight Directory Access Protocol \(LDAP\). However, this is not recommended because the policies have several complex components, and the tools you use may not validate the policy before writing it to Active Directory. This may subsequently require a considerable amount of time to diagnose problems.  
+**LDAP**: Claims transformation policies can be edited in Active Directory through Lightweight Directory Access Protocol (LDAP). However, this is not recommended because the policies have several complex components, and the tools you use may not validate the policy before writing it to Active Directory. This may subsequently require a considerable amount of time to diagnose problems.  
   
 ## Active Directory claims transformation rules language  
   
@@ -44,7 +44,7 @@ Here is a brief overview of the syntax and semantics of the language:
   
     -   **ValueType** matching conditions must use specific **ValueType** literals only.  
   
--   A **Rule Action** can copy one claim that is tagged with an **Identifier** or issue one claim based on a claim that is tagged with an Identifier and\/or given String Literals.  
+-   A **Rule Action** can copy one claim that is tagged with an **Identifier** or issue one claim based on a claim that is tagged with an Identifier and/or given String Literals.  
   
 **Example rule**  
   
@@ -125,9 +125,9 @@ Final Output:
 ### Special rules semantics  
 The following are special syntax for rules:  
   
-1.  Empty Rule Set \=\= No Output Claims  
+1.  Empty Rule Set == No Output Claims  
   
-2.  Empty Select Condition List \=\= Every Claim matches the Select Condition List  
+2.  Empty Select Condition List == Every Claim matches the Select Condition List  
   
     **Example: Empty Select Condition List**  
   
@@ -137,11 +137,11 @@ The following are special syntax for rules:
     => Issue (Type = “UserType”, Value = “External”, ValueType = “string”)  
     ```  
   
-3.  Empty Select Matching List \=\= Every claim matches the Select Condition List  
+3.  Empty Select Matching List == Every claim matches the Select Condition List  
   
     **Example: Empty Matching Conditions**  
   
-    The following rule matches every claim in the working set. This is the basic “Allow\-all” rule if it is used alone.  
+    The following rule matches every claim in the working set. This is the basic “Allow-all” rule if it is used alone.  
   
     ```  
     C1:[] => Issule (claim = C1);  
@@ -160,17 +160,17 @@ Active Directory has the following features to prevent misconfiguration of claim
   
 **Claims that leave a forest**  
   
-Claims that leave a forest present a lesser security concern for the forest than the claims that enter the forest. Claims are allowed to leave the forest as\-is even when there is no corresponding claims transformation policy in place. It is also possible to issue claims that are not defined in the forest as part of transforming claims that leave the forest. This is to easily set up across\-forest trusts with claims. An administrator can determine if claims that enter the forest need to be transformed, and set up the appropriate policy. For example, an administrator could set a policy if there is a need to hide a claim to prevent information disclosure.  
+Claims that leave a forest present a lesser security concern for the forest than the claims that enter the forest. Claims are allowed to leave the forest as-is even when there is no corresponding claims transformation policy in place. It is also possible to issue claims that are not defined in the forest as part of transforming claims that leave the forest. This is to easily set up across-forest trusts with claims. An administrator can determine if claims that enter the forest need to be transformed, and set up the appropriate policy. For example, an administrator could set a policy if there is a need to hide a claim to prevent information disclosure.  
   
 **Syntax errors in claims transformation rules**  
   
 If a given claims transformation policy has a rules set that is syntactically incorrect or if there are other syntax or storage issues, the policy is considered invalid. This is treated differently than the default conditions mentioned earlier.  
   
-Active Directory is unable to determine the intent in this case and goes into a fail\-safe mode, where no output claims are generated on that trust\+direction of traversal. Administrator intervention is required to correct the issue. This could happen if LDAP is used to edit the claims transformation policy. Windows PowerShell cmdlets for Active Directory have validation in place to prevent writing a policy with syntax issues.  
+Active Directory is unable to determine the intent in this case and goes into a fail-safe mode, where no output claims are generated on that trust+direction of traversal. Administrator intervention is required to correct the issue. This could happen if LDAP is used to edit the claims transformation policy. Windows PowerShell cmdlets for Active Directory have validation in place to prevent writing a policy with syntax issues.  
   
 ## Other language considerations  
   
-1.  There are several key words or characters that are special in this language \(referred to as terminals\). These are presented in the [Language terminals](Claims-Transformation-Rules-Language.md#BKMK_LT) table later in this topic. The error messages use the tags for these terminals for disambiguation.  
+1.  There are several key words or characters that are special in this language (referred to as terminals). These are presented in the [Language terminals](Claims-Transformation-Rules-Language.md#BKMK_LT) table later in this topic. The error messages use the tags for these terminals for disambiguation.  
   
 2.  Terminals can sometimes be used as string literals. However, such usage may conflict with the language definition or have unintended consequences. This kind of usage is not recommended.  
   
@@ -215,7 +215,7 @@ Active Directory is unable to determine the intent in this case and goes into a 
     ```  
   
 ## Examples of rules parser errors  
-Claims transformation rules are parsed by a custom parser to check for syntax errors. This parser is run by related Windows PowerShell cmdlets before storing rules in Active Directory. Any errors in parsing the rules, including syntax errors, are printed on the console. Domain controllers also run the parser before using the rules for transforming claims, and they log errors in the event log \(add event log numbers\).  
+Claims transformation rules are parsed by a custom parser to check for syntax errors. This parser is run by related Windows PowerShell cmdlets before storing rules in Active Directory. Any errors in parsing the rules, including syntax errors, are printed on the console. Domain controllers also run the parser before using the rules for transforming claims, and they log errors in the event log (add event log numbers).  
   
 This section illustrates some examples of rules that are written with incorrect syntax and the corresponding syntax errors that are generated by the parser.  
   
@@ -228,7 +228,7 @@ This section illustrates some examples of rules that are written with incorrect 
     This example has an incorrectly used semicolon in place of a colon.   
     **Error message:**  
     *POLICY0002: Could not parse policy data.*  
-    *Line number: 1, Column number: 2, Error token: ;. Line: 'c1;\[\]\=>Issue\(claim\=c1\);'.*  
+    *Line number: 1, Column number: 2, Error token: ;. Line: 'c1;[]=>Issue(claim=c1);'.*  
     *Parser error: 'POLICY0030: Syntax error, unexpected ';', expecting one of the following: ':' .'*  
   
 2.  Example:  
@@ -250,8 +250,8 @@ This section illustrates some examples of rules that are written with incorrect 
     “bool” is not a Terminal in the language, and it is not a valid ValueType. Valid terminals are listed in the following error message.   
     **Error message:**  
     *POLICY0002: Could not parse policy data.*  
-    Line number: 1, Column number: 39, Error token: "bool". Line: 'c1:\[type\=\="x1", value\=\="1",valuetype\=\="bool"\]\=>Issue\(claim\=c1\);'.   
-    *Parser error: 'POLICY0030: Syntax error, unexpected 'STRING', expecting one of the following: 'INT64\_TYPE' 'UINT64\_TYPE' 'STRING\_TYPE' 'BOOLEAN\_TYPE' 'IDENTIFIER'*  
+    Line number: 1, Column number: 39, Error token: "bool". Line: 'c1:[type=="x1", value=="1",valuetype=="bool"]=>Issue(claim=c1);'.   
+    *Parser error: 'POLICY0030: Syntax error, unexpected 'STRING', expecting one of the following: 'INT64_TYPE' 'UINT64_TYPE' 'STRING_TYPE' 'BOOLEAN_TYPE' 'IDENTIFIER'*  
   
 4.  Example:  
   
@@ -262,7 +262,7 @@ This section illustrates some examples of rules that are written with incorrect 
     The numeral **1** in this example is not a valid token in the language, and such usage is not allowed in a matching condition. It has to be enclosed in double quotes to make it a string.   
     **Error message:**  
     *POLICY0002: Could not parse policy data.*  
-    *Line number: 1, Column number: 23, Error token: 1. Line: 'c1:\[type\=\="x1", value\=\=1, valuetype\=\="bool"\]\=>Issue\(claim\=c1\);'.**Parser error: 'POLICY0029: Unexpected input.*  
+    *Line number: 1, Column number: 23, Error token: 1. Line: 'c1:[type=="x1", value==1, valuetype=="bool"]=>Issue(claim=c1);'.**Parser error: 'POLICY0029: Unexpected input.*  
   
 5.  Example:  
   
@@ -272,12 +272,12 @@ This section illustrates some examples of rules that are written with incorrect 
          Issue(type = c1.type, value="0", valuetype == "boolean");  
     ```  
   
-    This example used a double equal sign \(\=\=\) instead of a single equal sign \(\=\).   
+    This example used a double equal sign (==) instead of a single equal sign (=).   
     **Error message:**  
     *POLICY0002: Could not parse policy data.*  
-    *Line number: 1, Column number: 91, Error token: \=\=. Line: 'c1:\[type\=\="x1", value\=\="1",*  
-    *valuetype\=\="boolean"\]\=>Issue\(type\=c1.type, value\="0", valuetype\=\="boolean"\);'.*  
-    *Parser error: 'POLICY0030: Syntax error, unexpected '\=\=', expecting one of the following: '\='*  
+    *Line number: 1, Column number: 91, Error token: ==. Line: 'c1:[type=="x1", value=="1",*  
+    *valuetype=="boolean"]=>Issue(type=c1.type, value="0", valuetype=="boolean");'.*  
+    *Parser error: 'POLICY0030: Syntax error, unexpected '==', expecting one of the following: '='*  
   
 6.  Example:  
   
@@ -290,39 +290,39 @@ This section illustrates some examples of rules that are written with incorrect 
     This example is syntactically and semantically correct. However, using “boolean” as a string value is bound to cause confusion, and it should be avoided. As previously mentioned, using language terminals as claims values should be avoided where possible.  
   
 ## <a name="BKMK_LT"></a>Language terminals  
-The following table lists the complete set of terminal strings and the associated language terminals that are used in the claims transformation rules language. These definitions use case\-insensitive UTF\-16 strings.  
+The following table lists the complete set of terminal strings and the associated language terminals that are used in the claims transformation rules language. These definitions use case-insensitive UTF-16 strings.  
   
 |String|Terminal|  
 |----------|------------|  
-|"\=>"|IMPLY|  
+|"=>"|IMPLY|  
 |";"|SEMICOLON|  
 |":"|COLON|  
 |","|COMMA|  
 |"."|DOT|  
-|"\["|O\_SQ\_BRACKET|  
-|"\]"|C\_SQ\_BRACKET|  
-|"\("|O\_BRACKET|  
-|"\)"|C\_BRACKET|  
-|"\=\="|EQ|  
-|"\!\="|NEQ|  
-|"\=~"|REGEXP\_MATCH|  
-|"\!~"|REGEXP\_NOT\_MATCH|  
-|"\="|ASSIGN|  
+|"["|O_SQ_BRACKET|  
+|"]"|C_SQ_BRACKET|  
+|"("|O_BRACKET|  
+|")"|C_BRACKET|  
+|"=="|EQ|  
+|"!="|NEQ|  
+|"=~"|REGEXP_MATCH|  
+|"!~"|REGEXP_NOT_MATCH|  
+|"="|ASSIGN|  
 |"&&"|AND|  
 |"issue"|ISSUE|  
 |"type"|TYPE|  
 |"value"|VALUE|  
-|"valuetype"|VALUE\_TYPE|  
+|"valuetype"|VALUE_TYPE|  
 |"claim"|CLAIM|  
-|"\[\_A\-Za\-z\]\[\_A\-Za\-z0\-9\]\*"|IDENTIFIER|  
-|"\\"\[^\\"\\n\]\*\\""|STRING|  
-|"uint64"|UINT64\_TYPE|  
-|"int64"|INT64\_TYPE|  
-|"string"|STRING\_TYPE|  
-|"boolean"|BOOLEAN\_TYPE|  
+|"[_A-Za-z][_A-Za-z0-9]*"|IDENTIFIER|  
+|"\\"[^\\"\n]*\\""|STRING|  
+|"uint64"|UINT64_TYPE|  
+|"int64"|INT64_TYPE|  
+|"string"|STRING_TYPE|  
+|"boolean"|BOOLEAN_TYPE|  
   
 ## Language syntax  
-The following claims transformation rules language is specified in ABNF form. This definition uses the terminals that are specified in the previous table in addition to the ABNF productions defined here. The rules must be encoded in UTF\-16, and the string comparisons must be treated as case insensitive.  
+The following claims transformation rules language is specified in ABNF form. This definition uses the terminals that are specified in the previous table in addition to the ABNF productions defined here. The rules must be encoded in UTF-16, and the string comparisons must be treated as case insensitive.  
   
 ```  
 Rule_set        = ;/*Empty*/  

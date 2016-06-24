@@ -21,7 +21,7 @@ set <KeyWord>[=<Value>]
 
 |Parameter|Description|
 |-------------|---------------|
-|<KeyWord>|Identifies subcommands that are derived from the **set** subcommand. For example, the subcommand **set d2** has a keyword of \[**no**\]**d2**. For the list of subcommands that are derived from the **set** subcommand, see Additional references.|
+|<KeyWord>|Identifies subcommands that are derived from the **set** subcommand. For example, the subcommand **set d2** has a keyword of [**no**]**d2**. For the list of subcommands that are derived from the **set** subcommand, see Additional references.|
 |<Value>|Specifies the nslookup configuration setting value for each subcommand.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
 

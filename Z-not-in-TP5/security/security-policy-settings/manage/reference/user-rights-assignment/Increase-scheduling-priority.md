@@ -24,7 +24,7 @@ Constant: SeIncreaseBasePriorityPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not defined  
   
@@ -35,10 +35,10 @@ Constant: SeIncreaseBasePriorityPrivilege
 1.  Allow the default value, Administrators, as the only account responsible for controlling process scheduling priorities.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default this setting is Administrators on domain controllers and on stand\-alone servers.  
+By default this setting is Administrators on domain controllers and on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -46,7 +46,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Administrators|  
-|Stand\-Alone Server Default Settings|Administrators|  
+|Stand-Alone Server Default Settings|Administrators|  
 |Domain Controller Effective Default Settings|Administrators|  
 |Member Server Effective Default Settings|Administrators|  
 |Client Computer Effective Default Settings|Administrators|  
@@ -62,7 +62,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -78,7 +78,7 @@ When a local setting is greyed out, it indicates that a GPO currently controls t
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
 ### Vulnerability  
-A user who is assigned this user right could increase the scheduling priority of a process to Real\-Time, which would leave little processing time for all other processes and could lead to a denial\-of\-service condition.  
+A user who is assigned this user right could increase the scheduling priority of a process to Real-Time, which would leave little processing time for all other processes and could lead to a denial-of-service condition.  
   
 ### Countermeasure  
 Verify that only Administrators have the **Increase scheduling priority** user right assigned to them.  

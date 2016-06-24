@@ -24,7 +24,7 @@ bitsadmin /GetReplyFileName <Job>
 |Job|The job's display name or GUID|
 
 ## Remarks
-Valid only for upload\-reply jobs.
+Valid only for upload-reply jobs.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example retrieves the reply filename for the job named *myDownloadJob*.

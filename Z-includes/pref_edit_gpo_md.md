@@ -1,1 +1,1 @@
-Open the **Group Policy Management Console**. Right\-click the Group Policy Object \(GPO\) that should contain the new preference item, and then click **Edit**.
+Open the **Group Policy Management Console**. Right-click the Group Policy Object (GPO) that should contain the new preference item, and then click **Edit**.

@@ -25,7 +25,7 @@ Reg restore <KeyName> <FileName>
 |-------------|---------------|
 |<KeyName>|Specifies the full path of the subkey to be restored. The restore operation works only with the local computer. The KeyName must include a valid root key. Valid root keys are: HKLM, HKCU, HKCR, HKU, and HKCC.|
 |<FileName>|Specifies the name and path of the file with content to be written into the registry. This file must be created in advance with the **reg save** operation using a .hiv extension.|
-|\/?|Displays help for **reg restore** at the command prompt.|
+|/?|Displays help for **reg restore** at the command prompt.|
 
 ## Remarks
 
@@ -39,7 +39,7 @@ Reg restore <KeyName> <FileName>
 |1|Failure|
 
 ## <a name="BKMK_examples"></a>Examples
-To restore the file named NTRKBkUp.hiv into the key HKLM\\Software\\Microsoft\\ResKit, and overwrite the existing contents of the key, type:
+To restore the file named NTRKBkUp.hiv into the key HKLM\Software\Microsoft\ResKit, and overwrite the existing contents of the key, type:
 
 ```
 REG RESTORE HKLM\Software\Microsoft\ResKit NTRKBkUp.hiv

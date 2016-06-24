@@ -14,13 +14,13 @@ ms.assetid: 5dc883c0-a83e-4a42-a750-8767f4f79f78
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management and security considerations for this policy setting.  
   
 ## Reference  
-This policy setting enforces public key infrastructure \(PKI\) signature checks on any interactive application that requests elevation of privilege. Enterprise administrators can control the applications that are allowed to run through the population of certificates in the local computer's Trusted Publishers store.  
+This policy setting enforces public key infrastructure (PKI) signature checks on any interactive application that requests elevation of privilege. Enterprise administrators can control the applications that are allowed to run through the population of certificates in the local computer's Trusted Publishers store.  
   
 A trusted publisher is a certificate issuer that the computer’s user has chosen to trust and that has certificate details that have been added to the store of trusted publishers.  
   
-The Windows operating system maintains certificates in certificate stores. These stores can be represented by containers in the file system or the registry, or they can be implemented as physical stores such as smart cards. Certificate stores are associated with the computer object or they are owned by a distinct user who has a security context and profile on that computer. In addition, services can have certificate stores. A certificate store will often contain numerous certificates, possibly issued from a number of different certification authorities \(CAs\).  
+The Windows operating system maintains certificates in certificate stores. These stores can be represented by containers in the file system or the registry, or they can be implemented as physical stores such as smart cards. Certificate stores are associated with the computer object or they are owned by a distinct user who has a security context and profile on that computer. In addition, services can have certificate stores. A certificate store will often contain numerous certificates, possibly issued from a number of different certification authorities (CAs).  
   
-When certificate path discovery is initiated, the Windows operating system attempts to locate the issuing CA for the certificates, and it builds a certificate path to the trusted root certificate. Intermediate certificates are included as part of the application protocol or are picked up from Group Policy or through URLs that are specified in the Authority Information Access \(AIA\) extension. When the path is built, each certificate in the path is verified for validity with respect to various parameters, such as name, time, signature, revocation status, and other constraints.  
+When certificate path discovery is initiated, the Windows operating system attempts to locate the issuing CA for the certificates, and it builds a certificate path to the trusted root certificate. Intermediate certificates are included as part of the application protocol or are picked up from Group Policy or through URLs that are specified in the Authority Information Access (AIA) extension. When the path is built, each certificate in the path is verified for validity with respect to various parameters, such as name, time, signature, revocation status, and other constraints.  
   
 ### Possible values  
   
@@ -37,7 +37,7 @@ When certificate path discovery is initiated, the Windows operating system attem
 1.  Best practices are dependent on your security and performance goals.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -46,13 +46,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Disabled|  
+|Stand-Alone Server Default Settings|Disabled|  
 |DC Effective Default Settings|Disabled|  
 |Member Server Effective Default Settings|Disabled|  
 |Client Computer Effective Default Settings|Disabled|  
   
 ### Operating system version differences  
-There are no differences in this policy between operating systems beginning with Windows Vista and Windows Server 2008.  
+There are no differences in this policy between operating systems beginning with Windows Vista and Windows Server 2008.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  
@@ -61,7 +61,7 @@ This section describes features and tools that are available to help you manage 
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.  
   
 ### Group Policy  
-Distributing this policy through Group Policy to operating systems earlier than Windows Vista and Windows Server 2008 will have no impact \(because UAC was first introduced in Windows Vista\).  
+Distributing this policy through Group Policy to operating systems earlier than Windows Vista and Windows Server 2008 will have no impact (because UAC was first introduced in Windows Vista).  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  

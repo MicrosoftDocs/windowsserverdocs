@@ -25,7 +25,7 @@ add alias <AliasName> <AliasValue>
 |-------------|---------------|
 |<AliasName>|Specifies the name of the alias.|
 |<AliasValue>|Specifies the value of the alias.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -38,7 +38,7 @@ To list all shadows, including their aliases, type:
 list shadows all
 ```
 
-The following excerpt shows a shadow copy to which the default alias, VSS\_SHADOW\_x, has been assigned:
+The following excerpt shows a shadow copy to which the default alias, VSS_SHADOW_x, has been assigned:
 
 ```
 * Shadow Copy ID = {ff47165a-1946-4a0c-b7f4-80f46a309278}

@@ -13,14 +13,14 @@ ms.assetid: d21e4b93-29bf-423a-a635-71c6d48dc49e
 author: KBDAzure
 ---
 # Ensure that the virtual function driver operates correctly when a virtual machine is configured to use SR-IOV
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   

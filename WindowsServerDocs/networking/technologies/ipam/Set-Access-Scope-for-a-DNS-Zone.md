@@ -20,7 +20,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 1.  In Server Manager, click  **IPAM**. The IPAM client console appears.  
   
-2.  In the navigation pane, click **DNS Zones**. In the display pane, right\-click the DNS zone for which you want to change the access scope., and then click **Set Access Scope**.  
+2.  In the navigation pane, click **DNS Zones**. In the display pane, right-click the DNS zone for which you want to change the access scope., and then click **Set Access Scope**.  
   
     ![](../../media/Set-Access-Scope-for-a-DNS-Zone/ipam_SetAccessScopeOfZone_02.jpg)  
   

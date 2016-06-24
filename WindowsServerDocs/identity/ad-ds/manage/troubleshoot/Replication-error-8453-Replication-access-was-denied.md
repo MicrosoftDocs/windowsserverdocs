@@ -62,18 +62,18 @@ The tool repadmin/syncall can be used for this purpose.
         <listItem>
           <para>The DCDIAG NCSecDesc test (DCDIAG /TEST:NCSecDes) reports that the DC tested by DCDIAG "failed test NCSecDec" and that one or more permissions are missing on the NC head of one or more directory partitions on the tested DC tested by DCDIAG:</para>
           <code>Starting test: NCSecDesc
-Error NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS doesn't have
+Error NT AUTHORITYENTERPRISE DOMAIN CONTROLLERS doesn't have
 Replicating Directory Changes 
 Replication Synchronization 
 Manage Replication Topology 
 Replicating Directory Changes In Filtered Set 
 access rights for the naming context: 
 DC=contoso,DC=com 
-Error CONTOSO\Domain Controllers doesn't have
+Error CONTOSODomain Controllers doesn't have
 Replicating Directory Changes All
 access rights for the naming context:
 DC=contoso,DC=com
-Error CONTOSO\Enterprise Read-only Domain Controllers doesn't have
+Error CONTOSOEnterprise Read-only Domain Controllers doesn't have
 Replicating Directory Changes
 access rights for the naming context:
 DC=contoso,DC=com
@@ -156,14 +156,14 @@ Directory Changes" on the directory partition in question.
             </tbody>
           </table>
           <para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error is shown below:</para>
-          <code>Default-First-Site-Name\CONTOSO-DC1
+          <code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 ==== INBOUND NEIGHBORS ======================================
 DC=contoso,DC=com
-Default-First-Site-Name\CONTOSO-DC2 via RPC
+Default-First-Site-NameCONTOSO-DC2 via RPC
 DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
 Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 8453 (0x2105):
 Replication access was denied.</codeFeaturedElement>
@@ -718,7 +718,7 @@ Buttons in Dialog: OK</para>
               <para>The DSACLS command can be used to dump the permissions on a given directory partition using the syntax "DSACLS &lt;DN path of directory partition&gt;”.</para>
               <code>C:\&gt;dsacls dc=contoso,dc=com</code>
               <para>The command can be targeted to a remote domain controller using the syntax:</para>
-              <code>c:\&gt;dsacls \\contoso-dc2\dc=contoso,dc=com</code>
+              <code>c:\&gt;dsacls \contoso-dc2\dc=contoso,dc=com</code>
               <para>Be wary of "DENY" permission on NC heads removing the permissions for groups that the failing user is a direct or nested member of.</para>
             </listItem>
             <listItem>

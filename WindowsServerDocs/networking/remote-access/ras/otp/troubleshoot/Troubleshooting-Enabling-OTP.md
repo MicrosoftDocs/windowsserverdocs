@@ -15,7 +15,7 @@ author: coreyp
 This topic contains troubleshooting information for issues related to enabling DirectAccess OTP authentication using either the `Enable-DAOtpAuthentication` PowerShell cmdlet or the Remote Access Management console.  
   
 ## Failed to enroll the OTP signing certificate  
-**Error received** \(server event log\)—An OTP signing certificate cannot be enrolled using certificate template <OTP\_signing\_template\_name>  
+**Error received** (server event log)—An OTP signing certificate cannot be enrolled using certificate template <OTP_signing_template_name>  
   
 **Cause**  
   
@@ -25,7 +25,7 @@ There are three possible causes for this error:
   
 -   The permissions set on the template do not allow the DirectAccess server to enroll.  
   
--   There is no network connectivity to the issuing certification authority \(CA\).  
+-   There is no network connectivity to the issuing certification authority (CA).  
   
 **Solution**  
   
@@ -40,7 +40,7 @@ There are three possible causes for this error:
 ## Failed to enable DirectAccess OTP when WebDAV is installed  
 **Scenario**—While attempting to apply the DirectAccess OTP configuration in the Remote Access Management console or by using the `Enable-DAOtpAuthentication` PowerShell cmdlet, the operation fails.  
   
-**Error received** \(server event log\)—DirectAccess OTP settings cannot be applied because the WebDAV IIS extension is running on the server. Remove WebDAV and apply the settings again.  
+**Error received** (server event log)—DirectAccess OTP settings cannot be applied because the WebDAV IIS extension is running on the server. Remove WebDAV and apply the settings again.  
   
 **Cause**  
   
@@ -50,15 +50,15 @@ The DirectAccess OTP service is incompatible with the WebDAV Publishing feature 
   
 Uninstall the WebDAV role:  
   
-1.  In the Server Manager console, in the left\-pane, click **IIS**.  
+1.  In the Server Manager console, in the left-pane, click **IIS**.  
   
 2.  In the main pane, scroll to **ROLES AND FEATURES**.  
   
-3.  Right\-click **WebDAV Publishing**, and then click **Remove Role or Feature**.  
+3.  Right-click **WebDAV Publishing**, and then click **Remove Role or Feature**.  
   
 4.  Complete the Remove Roles and Features Wizard.  
   
-5.  Re\-apply the DirectAccess OTP configuration.  
+5.  Re-apply the DirectAccess OTP configuration.  
   
 ## No templates available in the Remote Access Management console  
 **Scenario**—While configuring OTP or registration authority certificate templates using the Remote Access Management console, some, or all of the templates are missing from the selection windows.  
@@ -81,17 +81,17 @@ There are two possible causes for this error:
   
     2.  In the left pane, expand the chosen CA server.  
   
-    3.  Click **Certificate Templates** and make sure the required templates are enabled. If not, right\-click **Certificate Templates**, click **New**, click **Certificate Template to issue**, and then select the templates you want to enable.  
+    3.  Click **Certificate Templates** and make sure the required templates are enabled. If not, right-click **Certificate Templates**, click **New**, click **Certificate Template to issue**, and then select the templates you want to enable.  
   
 ## Cannot set renewal period of OTP template to 1 hour  
 **Scenario**—When configuring the DirectAccess OTP logon template using Windows 2003 CA, it is not possible to set the renewal period of the template to 1 hour.  
   
 **Cause**  
   
-The Certificate Templates MMC snap\-in in Windows Server 2003 doesn’t allow you to set the renewal period of a template to 1 hour.  
+The Certificate Templates MMC snap-in in Windows Server 2003 doesn’t allow you to set the renewal period of a template to 1 hour.  
   
 **Solution**  
   
-Install Certificate Templates snap\-in on a post\-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](http://technet.microsoft.com/library/cc732445.aspx).  
+Install Certificate Templates snap-in on a post-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](http://technet.microsoft.com/library/cc732445.aspx).  
   
 

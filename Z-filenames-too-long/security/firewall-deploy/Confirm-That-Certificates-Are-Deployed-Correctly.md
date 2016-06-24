@@ -28,10 +28,10 @@ In this topic:
 ## <a name="bkmk_TorefreshGroupPolicyonacomputer"></a>
 #### To refresh Group Policy on a computer
 
-1.  On a computer running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , [Start a Command Prompt as an Administrator](Start-a-Command-Prompt-as-an-Administrator.md), and then type the following command:
+1.  On a computer running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , [Start a Command Prompt as an Administrator](Start-a-Command-Prompt-as-an-Administrator.md), and then type the following command:
 
     ```
-    gpupdate /target:computer /force
+    gpupdate /target:computer /force
     ```
 
 After Group Policy is refreshed, you can see which GPOs are currently applied to the computer.
