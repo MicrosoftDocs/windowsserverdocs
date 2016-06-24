@@ -13,14 +13,14 @@ ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
 author: vhorne
 ---
 # Plan a Software Defined Network Infrastructure
-Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment.  After you review this information, see [Deploy a Software Defined Network infrastructure](../../sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.  
+Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment.  After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.  
   
-> [!NOTE]  
-> In addition to this topic, the following SDN planning content is available.  
+>[!NOTE]
+>In addition to this topic, the following SDN planning content is available.  
 >   
-> -   [Installation and Preparation Requirements for Deploying Network Controller](../../sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
+> -   [Installation and Preparation Requirements for Deploying Network Controller](plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
 >  
->For information about Hyper-V Network Virtualization (HNV), which is used to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](../../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
+>For information about Hyper-V Network Virtualization (HNV), which is used to virtualize networks in a Microsoft SDN deployment, see [Hyper-V Network Virtualization](technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md).  
   
 ## Prerequisites  
 This topic describes a number of hardware and software prerequisites, including:  
@@ -243,7 +243,7 @@ When the tenant workload virtual machines begin to consume too many resources on
   
   
 ## See Also  
-[Installation and Preparation Requirements for Deploying Network Controller](../../sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
+[Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
 [Software Defined Networking &#40;SDN&#41;](../Software-Defined-Networking--SDN-.md)  
   
 

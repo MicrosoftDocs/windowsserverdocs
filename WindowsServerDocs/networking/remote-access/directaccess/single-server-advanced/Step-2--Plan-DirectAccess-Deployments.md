@@ -139,6 +139,6 @@ If the VPN connection lists its default gateway as empty or all zeros \(0.0.0.0\
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 1: Plan the DirectAccess Infrastructure_1](Step-1--Plan-the-DirectAccess-Infrastructure_1.md)  
+-   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
   
 

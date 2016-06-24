@@ -135,7 +135,7 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
   
 ## See also  
   
--   [What's New in DNS Client in Windows Server Technical Preview](../dns/What-s-New-in-DNS-Client-in-Windows-Server-Technical-Preview.md)  
+-   [What's New in DNS Client in Windows Server Technical Preview](What-s-New-in-DNS-Client-in-Windows-Server.md)  
   
 -   [Windows DNS Server team blogs](http://blogs.technet.com/b/networking/archive/tags/dns/)  
   

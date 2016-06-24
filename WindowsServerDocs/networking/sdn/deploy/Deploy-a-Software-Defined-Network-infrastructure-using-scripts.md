@@ -38,7 +38,8 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
     a. Create the Hyper-V virtual switch (use the same switch name for all hosts. For example: **sdnSwitch**). Configure at least one network adapter or, if using Switch Embedded Teaming, configure at least two network adapters. Maximum inbound spreading occurs when using two NICs.  
  ``	New-VMSwitch “<switch name>” –NetAdapterName “<NetAdapter1>” [, “<NetAdapter2>” –EnableEmbeddedTeaming $True] –AllowManagementOS $True``  
  
- >[!NOTE] You  can skip steps 4 and 5 if you have separate Management NICs.
+ >[!NOTE] 
+ >You  can skip steps 4 and 5 if you have separate Management NICs.
 
  b. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to obtain the VLAN ID of the Management VLAN. Attach the Management vNIC of the newly created Virtual Switch to the Management VLAN. This step can be omitted if your environment does not use VLAN tags.  
  ``	Set-VMNetworkAdapterIsolation -ManagementOS -IsolationMode Vlan –DefaultIsolationID <Management VLAN> -AllowUntaggedTraffic $True``  
@@ -52,7 +53,8 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
    ``Set-VMNetworkAdapterIsolation –VMName “<VM Name>” –Access –VlanId <Management VLAN> -AllowUntaggedTraffic $True``  
    
    b. Install Active Directory Domain Services and DNS.  
-      >[!NOTE]The network controller supports both Kerberos and X.509 certificates for authentication. This guide uses both authentication mechanisms for different purposes (although only one is required).  
+      >[!NOTE]
+      >The network controller supports both Kerberos and X.509 certificates for authentication. This guide uses both authentication mechanisms for different purposes (although only one is required).  
         
 4. Join all Hyper-V hosts to the domain. Ensure the DNS server entry for the network adapter that has an IP address assigned to the Management network points to a DNS server that can resolve the domain name. For example:  
 ``Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<switch name>)" -ServerAddresses <DNS Server IP>``  
@@ -70,7 +72,8 @@ Use the following steps to validate that host networking is setup correctly.
 	  
 	``Get-VMSwitch “<switch name>”``  
 2. Verify that the Management vNIC on the VM Switch is connected to the Management VLAN:  
-	>[!NOTE] Relevant only if Management and Tenant traffic share the same NIC.    
+	>[!NOTE]
+	>Relevant only if Management and Tenant traffic share the same NIC.    
 	  
     ``Get-VMNetworkAdapterIsolation -ManagementOS``  
 3. Validate that all Hyper-V hosts (and external management resources, for example: DNS servers) are accessible via ping using their Management IP address and/or fully qualified domain name (FQDN).   

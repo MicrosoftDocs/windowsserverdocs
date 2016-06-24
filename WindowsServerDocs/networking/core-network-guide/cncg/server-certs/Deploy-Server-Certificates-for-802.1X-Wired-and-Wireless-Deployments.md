@@ -58,13 +58,15 @@ Automatic enrollment of server certificates, also called autoenrollment, provide
 This guide provides instructions on how to deploy server certificates by using AD CS and the Web Server (IIS) server role in Windows Server 2016 Technical Preview. Following are the prerequisites for performing the procedures in this guide.  
   
 - You must deploy a core network using the Windows Server 2016 Technical Preview Core Network Guide, or you must already have the technologies provided in the Core Network Guide installed and functioning correctly on your network. These technologies include TCP/IP v4, DHCP, Active Directory Domain Services (AD DS), DNS, and NPS.  
->[!NOTE] The Windows Server 2016 Core Network Guide is available in the Windows Server 2016 Technical Library. For more information, see [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
+>[!NOTE] 
+>The Windows Server 2016 Core Network Guide is available in the Windows Server 2016 Technical Library. For more information, see [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).
+ 
 - You must read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.  
 - You must perform the steps in this guide in the order in which they are presented. Do not jump ahead and deploy your CA without performing the steps that lead up to deploying the server, or your deployment will fail.  
 - You must be prepared to deploy two new servers on your network - one server upon which you will install AD CS as an Enterprise Root CA, and one server upon which you will install Web Server (IIS) so that your CA can publish the certificate revocation list (CRL) to the Web server.   
   
 >[!NOTE]  
-- You are prepared to assign a static IP address to the Web and AD CS servers that you deploy with this guide, as well as to name the computers according to your organization naming conventions. In addition, you must join the computers to your domain.  
+>You are prepared to assign a static IP address to the Web and AD CS servers that you deploy with this guide, as well as to name the computers according to your organization naming conventions. In addition, you must join the computers to your domain.  
   
 ## <a name="bkmk_not"></a>What this guide does not provide  
 This guide does not provide comprehensive instructions for designing and deploying a public key infrastructure \(PKI\) by using AD CS. It is recommended that you review AD CS documentation and PKI design documentation before deploying the technologies in this guide.   

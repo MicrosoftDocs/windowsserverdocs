@@ -54,7 +54,7 @@ There are many technologies that work together to create Microsoft's Software De
   
     RAS Gateway  is a software\-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016 Technical Preview that is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper\-V Network Virtualization.  
       
-- **[Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md)**  
+- **[Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)**  
   
     You can use a converged NIC to combine both RDMA and Ethernet traffic using a single network adapter. The converged NIC allows you to use a single network adapter for management, Remote Direct Memory Access \(RDMA\)\-enabled storage, and tenant traffic. This reduces the capital expenditures that are associated with each server in your datacenter, because you need fewer network adapters to manage different types of traffic per server.  
   

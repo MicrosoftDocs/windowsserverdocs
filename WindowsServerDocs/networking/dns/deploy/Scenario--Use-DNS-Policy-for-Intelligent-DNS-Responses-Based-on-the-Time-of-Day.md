@@ -60,11 +60,13 @@ To configure DNS policy for time of day application load balancing based query r
 - [Add Records to the Zone Scopes](#bkmk_records)  
 - [Create the DNS Policies](#bkmk_policies)  
   
->[!NOTE]You must perform these steps on the DNS server that is authoritative for the zone you want to configure. Membership in **DnsAdmins**, or equivalent, is required to perform the following procedures.  
+>[!NOTE]
+>You must perform these steps on the DNS server that is authoritative for the zone you want to configure. Membership in **DnsAdmins**, or equivalent, is required to perform the following procedures.  
   
 The following sections provide detailed configuration instructions.  
   
->[!IMPORTANT]The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.  
+>[!IMPORTANT]
+>The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.  
   
 #### <a name="bkmk_subnets"></a>Create the DNS Client Subnets  
 The first step is to identify the subnets or IP address space of the regions for which you want to redirect traffic. For example, if you want to redirect traffic for the U.S. and Europe, you need to identify the subnets or IP address spaces of these regions.  
@@ -88,7 +90,8 @@ For example, if you want to redirect traffic for the DNS name www.contosogiftser
   
 A zone scope is a unique instance of the zone. A DNS zone can have multiple zone scopes, with each zone scope containing its own set of DNS records. The same record can be present in multiple scopes, with different IP addresses or the same IP addresses.  
   
->[!NOTE]By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope.  
+>[!NOTE]
+>By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope.  
   
 You can use the following Windows PowerShell commands to create zone scopes.  
   
@@ -131,7 +134,8 @@ After you configure these DNS policies, the DNS server behavior is as follows:
   
 You can use the following Windows PowerShell commands to create a DNS policy that links the DNS Client Subnets and the zone scopes.  
   
->[!NOTE] In this example, the DNS server is in the GMT time zone, so the peak hour time periods must be expressed in the equivalent GMT time.  
+>[!NOTE]
+>In this example, the DNS server is in the GMT time zone, so the peak hour time periods must be expressed in the equivalent GMT time.  
   
 ```  
 Add-DnsServerQueryResolutionPolicy -Name "America6To9Policy" -Action ALLOW –ClientSubnet “eq,AmericaSubnet” -ZoneScope "SeattleZoneScope,4;DublinZoneScope,1" –TimeOfDay “EQ,01:00-04:00” -ZoneName "contosogiftservices.com" –ProcessingOrder 1  
