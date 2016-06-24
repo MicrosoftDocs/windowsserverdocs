@@ -15,7 +15,7 @@ For more information about the technologies discussed in this guide, see topics 
 
 ## Windows Firewall with Advanced Security
 
--   [Windows Firewall with Advanced Security Overview](http://technet.microsoft.com/library/hh831365.aspx) \(http:\/\/technet.microsoft.com\/library\/hh831365.aspx\)
+-   [Windows Firewall with Advanced Security Overview](http://technet.microsoft.com/library/hh831365.aspx) (http://technet.microsoft.com/library/hh831365.aspx)
 
     This TechNet page contains links to a variety of documents available for Windows Firewall with Advanced Security in  Windows Server 2012 .
 
@@ -25,30 +25,30 @@ For more information about the technologies discussed in this guide, see topics 
 
 ## IPsec
 
--   [IPsec](http://www.microsoft.com/ipsec) \(http:\/\/www.microsoft.com\/ipsec\)
+-   [IPsec](http://www.microsoft.com/ipsec) (http://www.microsoft.com/ipsec)
 
-    This TechNet page contains links to a variety of documents currently available for Internet Protocol security \(IPsec\) in Windows.
+    This TechNet page contains links to a variety of documents currently available for Internet Protocol security (IPsec) in Windows.
 
 ## Group Policy
 Group Policy is a key method for implementing firewall and server and domain isolation designs.
 
 For more information about Group Policy and related technologies, see:
 
--   [Group Policy Overview](http://technet.microsoft.com/library/hh831791.aspx) \(http:\/\/technet.microsoft.com\/library\/hh831791.aspx\)
+-   [Group Policy Overview](http://technet.microsoft.com/library/hh831791.aspx) (http://technet.microsoft.com/library/hh831791.aspx)
 
     This page contains links to the documents currently available for Group Policy.
 
--   [WMI Filtering Using GPMC](http://go.microsoft.com/fwlink/?linkid=93188) \(http:\/\/go.microsoft.com\/fwlink\/?linkid\=93188\)
+-   [WMI Filtering Using GPMC](http://go.microsoft.com/fwlink/?linkid=93188) (http://go.microsoft.com/fwlink/?linkid=93188)
 
--   [HOWTO: Leverage Group Policies with WMI Filters](http://go.microsoft.com/fwlink/?linkid=93760) \(http:\/\/go.microsoft.com\/fwlink\/?linkid\=93760\)
+-   [HOWTO: Leverage Group Policies with WMI Filters](http://go.microsoft.com/fwlink/?linkid=93760) (http://go.microsoft.com/fwlink/?linkid=93760)
 
     This article describes how to create a WMI filter to set the scope of a GPO based on computer attributes, such as operating system.
 
 ## Active Directory Domain Services
-In Windows 8 and  Windows Server 2012 , organizations can use AD DS to manage users and resources, such as computers, printers, or applications, on a network. Server isolation and domain isolation also require AD DS to use the Kerberos V5 protocol for IPsec authentication.
+In Windows 8 and  Windows Server 2012 , organizations can use AD DS to manage users and resources, such as computers, printers, or applications, on a network. Server isolation and domain isolation also require AD DS to use the Kerberos V5 protocol for IPsec authentication.
 
-For more information about AD DS and related technologies, see:
+For more information about AD DS and related technologies, see:
 
--   [Active Directory Domain Services Overview](http://technet.microsoft.com/library/hh831484.aspx) \(http:\/\/technet.microsoft.com\/library\/hh831484.aspx\)
+-   [Active Directory Domain Services Overview](http://technet.microsoft.com/library/hh831484.aspx) (http://technet.microsoft.com/library/hh831484.aspx)
 
 

@@ -13,12 +13,12 @@ ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48
 author: KBDAzure
 ---
 # All virtual network adapters should be enabled
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -32,7 +32,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 *The configuration of this server is not optimal.*  
   
-The management operating system can't connect to a physical \(external\) network using one of the physical network adapters on this computer because it's associated with a disabled virtual network adapter.  
+The management operating system can't connect to a physical (external) network using one of the physical network adapters on this computer because it's associated with a disabled virtual network adapter.  
   
 ## Resolution  
   

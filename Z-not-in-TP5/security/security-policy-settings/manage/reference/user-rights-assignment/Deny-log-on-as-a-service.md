@@ -24,7 +24,7 @@ Constant: SeDenyServiceLogonRight
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not defined  
   
@@ -32,10 +32,10 @@ Constant: SeDenyServiceLogonRight
   
 1.  When you assign this user right, thoroughly test that the effect is what you intended.  
   
-2.  Within a domain, modify this setting on the applicable Group Policy Object \(GPO\).  
+2.  Within a domain, modify this setting on the applicable Group Policy Object (GPO).  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
@@ -44,7 +44,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not defined|  
+|Stand-Alone Server Default Settings|Not defined|  
 |Domain Controller Effective Default Settings|Not defined|  
 |Member Server Effective Default Settings|Not defined|  
 |Client Computer Effective Default Settings|Not defined|  
@@ -62,11 +62,11 @@ Any change to the user rights assignment for an account becomes effective the ne
 For information about configuring a service, see [Configure How a Service Is Started](http://technet.microsoft.com/library/cc755249.aspx).  
   
 ### Group Policy  
-On a domain\-joined computer, including the domain controller, this policy can be overwritten by a domain policy, which will prevent you from modifying the local policy setting.  
+On a domain-joined computer, including the domain controller, this policy can be overwritten by a domain policy, which will prevent you from modifying the local policy setting.  
   
 This policy setting might conflict with and negate the **Log on as a service** setting.  
   
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -88,7 +88,7 @@ Accounts that can log on to a service application could be used to configure and
 We recommend that you not assign the **Deny log on as a service** user right to any accounts. This is the default configuration. Organizations that are extremely concerned about security might assign this user right to groups and accounts when they are certain that they will never need to log on to a service application.  
   
 ### Potential impact  
-If you assign the **Deny log on as a service** user right to specific accounts, services may not start and a denial\-of\-service condition could result.  
+If you assign the **Deny log on as a service** user right to specific accounts, services may not start and a denial-of-service condition could result.  
   
 ## See Also  
 [User Rights Assignment](User-Rights-Assignment.md)  

@@ -57,21 +57,21 @@ The last success occurred at &lt;date&gt; &lt;time&gt;.
 [&lt;dc name&gt;] DsBindWithSpnEx()<codeFeaturedElement>failed with error 1722,
 The RPC server is unavailable.</codeFeaturedElement>.
 Printing RPC Extended Error Info: 
-&lt;snip&gt;</code></listItem><listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 1722 (0x6ba).</para><para>REPADMIN commands that commonly cite the 1722 (0x6ba) status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting "The RPC server is unavailable" error is shown below:</para><code>c:\&gt; <codeFeaturedElement>repadmin /showreps</codeFeaturedElement>
-&lt;site name&gt;\&lt;destination DC&gt;
+&lt;snip&gt;</code></listItem><listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 1722 (0x6ba).</para><para>REPADMIN commands that commonly cite the 1722 (0x6ba) status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from "REPADMIN /SHOWREPS" and REPADMIN /SYNCALL depicting "The RPC server is unavailable" error is shown below:</para><code>c:&gt; <codeFeaturedElement>repadmin /showreps</codeFeaturedElement>
+&lt;site name&gt;&lt;destination DC&gt;
 DC Options: &lt;list of flags&gt;
 Site Options: (none)
 DC object GUID: &lt;NTDS settings object object GUID&gt;
 DC invocationID: &lt;invocation ID string&gt;
 ==== INBOUND NEIGHBORS ======================================
 DC=&lt;DN path for directory partition&gt;
-&lt;site name&gt;\&lt;source DC via RPC
+&lt;site name&gt;&lt;source DC via RPC
 DC object GUID: &lt;source DCs ntds settings object object guid&gt;
 Last attempt @ &lt;date&gt; &lt;time&gt; failed, result <codeFeaturedElement>1722 (0x6ba):</codeFeaturedElement>
 <codeFeaturedElement>The RPC server is unavailable.</codeFeaturedElement>
 &lt;X #&gt; consecutive failure(s).
 Last success @ &lt;date&gt; &lt;time&gt;
-</code><para>Sample output of "REPADMIN /SYNCALL" depicting "The RPC server is unavailable" error is shown below:</para><code>C:\&gt;repadmin /syncall
+</code><para>Sample output of "REPADMIN /SYNCALL" depicting "The RPC server is unavailable" error is shown below:</para><code>C:&gt;repadmin /syncall
 CALLBACK MESSAGE: Error contacting server &lt;object guid of NTDS
 Settings object&gt;._msdcs.&lt;forest root domain&gt;.&lt;top level domain&gt;
 (network error): 1722 (0x6ba):
@@ -208,7 +208,7 @@ The RPC server is unavailable.
           <para>If you make any changes to match the settings above, reboot the machine and verify both the startup value and service status match the values documented in the previous table.</para>
         </listItem>
         <listItem>
-          <para>Verify the <embeddedLabel>ClientProtocols</embeddedLabel> key exists under <embeddedLabel>HKLM\Software\Microsoft\Rpc</embeddedLabel>, and that it contains the correct default protocols.</para>
+          <para>Verify the <embeddedLabel>ClientProtocols</embeddedLabel> key exists under <embeddedLabel>HKLMSoftwareMicrosoftRpc</embeddedLabel>, and that it contains the correct default protocols.</para>
           <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
             <thead>
               <tr>
@@ -352,7 +352,7 @@ Explanation and additional options for this test can be found at <externalLink><
               </para>
               <para>Nltest /dsgetdc: is used to exercise the dc locator process. Thus /dsgetdc:&lt; domain name &gt; tries to find the domain controller for the domain. Using the force flag forces domain controller location rather than using the cache. You can also specify options such as <embeddedLabel>/gc</embeddedLabel> or <embeddedLabel>/pdc</embeddedLabel> to locate a Global Catalog or a Primary Domain Controller emulator. For finding the Global Catalog, you must specify a "tree name," which is the DNS domain name of the root domain.</para>
               <para>Sample Output:</para>
-              <code>DC: \\DC.Domain.com
+              <code>DC: \DC.Domain.com
 Address: \\&lt;IP Address&gt;
 Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b
 Dom Name: Domain.com

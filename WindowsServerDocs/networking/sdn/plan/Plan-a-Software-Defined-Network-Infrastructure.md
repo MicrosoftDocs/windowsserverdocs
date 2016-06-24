@@ -48,7 +48,7 @@ The fabric administrator statically assigns the HNV Provider IP addresses used b
 #### Sample network topology  
 Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator’s guidance.  
   
-|Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations \(examples\)|  
+|Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations (examples)|  
 |----------------|----------|--------|--------------------|-----------|-----------------------------|  
 |**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br />…<br />10.184.108.X - Compute host X|  
 |**HNV Provider**|10.10.56.0|23|11|10.10.56.1|10.10.56.1 - Router<br /><br />10.10.56.2 - SLB/MUX1|  
@@ -74,11 +74,11 @@ The Private VIP logical network is not required to be routable outside of the cl
 ### Sample network topology  
 Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator’s guidance.  
   
-|Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations \(examples\)|  
+|Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations (examples)|  
 |----------------|----------|--------|--------------------|-----------|-----------------------------|  
 |**Transit**|10.10.10.0|24|10|10.10.10.1|10.10.10.1 - router|  
 |**Public VIP**|41.40.40.0|27|NA|41.40.40.1|41.40.40.1 - router<br /> 41.40.40.2 - SLB/MUX VIP<br />41.40.40.3 - IPSec S2S VPN VIP|  
-|**Private VIP**|20.20.20.0|27|NA|20.20.20.1|20.20.20.1 - default GW \(router\)|  
+|**Private VIP**|20.20.20.0|27|NA|20.20.20.1|20.20.20.1 - default GW (router)|  
 |**GRE VIP**|31.30.30.0|24|NA|31.30.30.1|31.30.30.1 - default GW|  
   
 ### Logical networks required for RDMA-based storage  
@@ -121,8 +121,8 @@ Machines that are configured to connect to multiple networks, such as the physic
 For virtual machines, use the following rules to decide which network to use as the default gateway:  
 1. Use the Transit network as the default gateway if a virtual machine is connected to the Transit network, or if it is multi-homed to the Transit and any other network.  
 2. Use the Management network as the default gateway if a virtual machine is only connected to the Management network.  
-3.	The HNV Provider network must never be used as a default gateway.  The only virtual machines connected to this network will be the SLB/MUXes and Gateways.  
-4.	Virtual Machines will never be connected directly to the Storage1, Storage2, Public VIP or Private VIP networks.  
+3.  The HNV Provider network must never be used as a default gateway.  The only virtual machines connected to this network will be the SLB/MUXes and Gateways.  
+4.  Virtual Machines will never be connected directly to the Storage1, Storage2, Public VIP or Private VIP networks.  
   
 For Hyper-V hosts and storage nodes, use the Management network as the default gateway.  The storage networks must never have a default gateway assigned.    
   
@@ -131,9 +131,9 @@ For Hyper-V hosts and storage nodes, use the Management network as the default g
 * **Network Interface Cards (NICs)**  
    
   To achieve best performance, specific capabilities are required in the network interface cards you use in your Hyper-V hosts and storage hosts.  
-  	   
+       
   Remote Direct Memory Access (RDMA) is a kernel bypass technique that makes it possible to transfer large amounts of data without involving the host CPU. Because the DMA engine on the network adapter performs the transfer, the CPU is not used for the memory movement.  This frees the CPU to perform other work.  
-  	   
+       
   Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016 Technical Preview. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.  
          
   For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/Remote-Direct-Memory-Access--RDMA--and-Switch-Embedded-Teaming--SET-.md).  
@@ -222,17 +222,17 @@ The following table shows the minimum hardware and software requirements for the
   
 |Host|Hardware Requirements|Software Requirements|  
 |--------|-------------------------|-------------------------|  
-|Physical Hyper-v host|4\-Core 2.66 GHz CPU<br /><br />32 GB of RAM<br /><br />300 GB Disk Space<br /><br />1 Gb/s (or faster) physical network adapter|OS: Windows Server 2016 Technical Preview 5<br /><br />Hyper\-V Role installed|  
+|Physical Hyper-v host|4-Core 2.66 GHz CPU<br /><br />32 GB of RAM<br /><br />300 GB Disk Space<br /><br />1 Gb/s (or faster) physical network adapter|OS: Windows Server 2016 Technical Preview 5<br /><br />Hyper-V Role installed|  
   
   
 **SDN infrastructure virtual machine role requirements**  
   
 |Role|vCPU requirements|Memory requirements|Disk requirements|  
 |--------|---------------------|-----------------------|---------------------|  
-|Network controller \(three node)|4 vCPUs|4 GB min \(8 GB recommended\)|75 GB for the OS drive|  
+|Network controller (three node)|4 vCPUs|4 GB min (8 GB recommended)|75 GB for the OS drive|  
 |SLB/MUX (three node)|8 vCPUs|8 GB recommended|75 GB for the OS drive|  
 |RAS Gateway<br /><br />(single pool of three node gateways, two active, one passive)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
-|RAS Gateway BGP router for SLB/MUX peering<br /><br />\(alternatively use ToR switch as BGP Router\)|2 vCPUs|2 GB|75 GB for the OS drive|  
+|RAS Gateway BGP router for SLB/MUX peering<br /><br />(alternatively use ToR switch as BGP Router)|2 vCPUs|2 GB|75 GB for the OS drive|  
   
   
 If you use VMM for deployment, additional infrastructure virtual machine resources are required for VMM and other non-SDN infrastructure. For additional information, see [Minimum Hardware Recommendations for System Center Technical Preview.](https://technet.microsoft.com/library/dn997303.aspx)  

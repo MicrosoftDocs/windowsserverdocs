@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
 ---
 # Using the Export-Image Command
-Exports an existing image from the image store to another Windows Image \(.wim\) file.
+Exports an existing image from the image store to another Windows Image (.wim) file.
 
 ## Syntax
 For boot images:
@@ -42,13 +42,13 @@ WDSUTIL [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
 |Parameter|Description|
 |-------------|---------------|
 media:<Image name>|Specifies the name of the image to be exported.|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name \(FQDN\). If no server name is specified, the local server will be used.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 mediaType:{Boot &#124; Install}|Specifies the type of image to be exported.|
-|\mediaGroup:<Image group name>\]|Specifies the image group containing the image to be exported. If no image group name is specified and only one image group exists on the server, that image group will be used by default. If more than one image group exists on the server, the image group must be specified.|
-|\/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image to be exported. Because it is possible to have the same image name for boot images in different architectures, specifying the architecture value ensures that the correct image will be returned.|
-|\[\/Filename:<Filename>\]|If the image cannot be uniquely identified by name, the file name must be specified.|
-|\/DestinationImage|Specifies the settings for the destination image. You can specify these settings using the following options:<br /><br />-   \/FilePath:<File path and name> \- Specifies the full file path for the new image.<br />-   \[\/Name:<Name>\] \- Sets the display name of the image. If no name is specified, the display name of the source image will be used.<br />-   \[\/Description: <Description>\] \- Sets the description of the image.|
-|\[\/Overwrite:{Yes &#124; No &#124; Append}\]|Determines whether the file specified in the **\/DestinationImage** option will be overwritten if an existing file with that name already exists at the \/FilePath.<br /><br />-   **Yes** causes the existing file to be overwritten.<br />-   **No** \(the default option\) causes an error to occur if a file with the same name already exists.<br />-   **Append** causes the generated image to be appended as a new image within the existing .wim file.|
+|\mediaGroup:<Image group name>]|Specifies the image group containing the image to be exported. If no image group name is specified and only one image group exists on the server, that image group will be used by default. If more than one image group exists on the server, the image group must be specified.|
+|/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image to be exported. Because it is possible to have the same image name for boot images in different architectures, specifying the architecture value ensures that the correct image will be returned.|
+|[/Filename:<Filename>]|If the image cannot be uniquely identified by name, the file name must be specified.|
+|/DestinationImage|Specifies the settings for the destination image. You can specify these settings using the following options:<br /><br />-   /FilePath:<File path and name> - Specifies the full file path for the new image.<br />-   [/Name:<Name>] - Sets the display name of the image. If no name is specified, the display name of the source image will be used.<br />-   [/Description: <Description>] - Sets the description of the image.|
+|[/Overwrite:{Yes &#124; No &#124; Append}]|Determines whether the file specified in the **/DestinationImage** option will be overwritten if an existing file with that name already exists at the /FilePath.<br /><br />-   **Yes** causes the existing file to be overwritten.<br />-   **No** (the default option) causes an error to occur if a file with the same name already exists.<br />-   **Append** causes the generated image to be appended as a new image within the existing .wim file.|
 
 ## <a name="BKMK_examples"></a>Examples
 To export a boot image, type one of the following:

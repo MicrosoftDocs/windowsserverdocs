@@ -12,7 +12,7 @@ ms.assetid: a7041853-df43-4ced-96da-b638ba7c0603
 author: kumudd
 ---
 # Storage Replica in Windows Server 2016 Technical Preview
-Storage Replica is a new feature in Windows Server 2016 Technical Preview that enables storage\-agnostic, block\-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash\-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.  
+Storage Replica is a new feature in Windows Server 2016 Technical Preview that enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes, ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges.  
 
 > [!IMPORTANT]  
 > This preview release should not be used in production environments.  

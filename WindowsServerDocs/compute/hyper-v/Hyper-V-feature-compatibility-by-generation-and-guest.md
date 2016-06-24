@@ -56,7 +56,7 @@ Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------  
 Hot add/removal of virtual network adapter | 2 | Any supported guest  
 Legacy virtual network adapter | 1 | Any supported guest  
-Single root input/output virtualization \(SR-IOV) | 1 and 2 | 64-bit Windows guests, starting with  Windows Server 2012  and Windows 8.  
+Single root input/output virtualization (SR-IOV) | 1 and 2 | 64-bit Windows guests, starting with  Windows Server 2012  and Windows 8.  
 Virtual machine multi queue (VMMQ) | 1 and 2  | Any supported guest  
   
 ## Remote connection experience  

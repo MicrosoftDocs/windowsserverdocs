@@ -23,10 +23,10 @@ reg save <KeyName> <FileName> [/y]
 
 |Parameter|Description|
 |-------------|---------------|
-|<KeyName>|Specifies the full path of the subkey. For specifying remote computers, include the computer name \(in the format \\\\ComputerName\\\) as part of the *KeyName*. Omitting \\\\ComputerName\\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
+|<KeyName>|Specifies the full path of the subkey. For specifying remote computers, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |<FileName>|Specifies the name and path of the file that is created. If no path is specified, the current path is used.|
-|\/y|Overwrites an existing file with the name *FileName* without prompting for confirmation.|
-|\/?|Displays help for **reg save** at the command prompt.|
+|/y|Overwrites an existing file with the name *FileName* without prompting for confirmation.|
+|/?|Displays help for **reg save** at the command prompt.|
 
 ## Remarks <optional section>
 

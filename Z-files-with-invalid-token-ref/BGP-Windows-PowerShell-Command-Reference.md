@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 4b0240a3-b927-4a1e-b241-5f8f29a9552f
 ---
 # BGP Windows PowerShell Command Reference
-You can use this topic as a reference, when writing Windows PowerShell scripts, to add, configure, and remove BGP capabilities from RAS Gateway and Remote Access Local Area Network \(LAN\) routers.
+You can use this topic as a reference, when writing Windows PowerShell scripts, to add, configure, and remove BGP capabilities from RAS Gateway and Remote Access Local Area Network (LAN) routers.
 
 These BGP commands are part of the Remote Access Windows PowerShell command set for [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)]. This topic helps you quickly locate the BGP commands that you want to use in scripts.
 
@@ -182,7 +182,7 @@ Get-BgpRoutingPolicy [[-Name] <String[]> ] [-CimSession <CimSession[]> ] [-Infor
 
 [Get-BgpStatistics](https://technet.microsoft.com/en-us/library/dn262685.aspx)
 
-Retrieves BGP peering\-related message and route advertisement statistics.
+Retrieves BGP peering-related message and route advertisement statistics.
 
 ```
 Get-BgpStatistics [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]
@@ -193,7 +193,7 @@ Following are the Install commands for RAS Gateway and BGP.
 
 [Install-RemoteAccess](https://technet.microsoft.com/en-us/library/hh918408.aspx)
 
-Performs prerequisite checks for DirectAccess \(DA\) to ensure that it can be installed, installs DA for remote access \(RA\) \(includes management of remote clients\) or for management of remote clients only, installs VPN \(both Remote Access VPN and site\-to\-site VPN\), and installs BGP Routing.
+Performs prerequisite checks for DirectAccess (DA) to ensure that it can be installed, installs DA for remote access (RA) (includes management of remote clients) or for management of remote clients only, installs VPN (both Remote Access VPN and site-to-site VPN), and installs BGP Routing.
 
 ```
 Parameter Set: MultiTenant
@@ -204,7 +204,7 @@ Install-RemoteAccess [-VpnType] <String> {Vpn | VpnS2S | SstpProxy | RoutingOnly
 ```
 
 > [!IMPORTANT]
-> When you install RAS Gateway in Multitenant mode, you must specify whether BGP is enabled for each tenant by using the **Enable\-RemoteAccessRoutingDomain** Windows PowerShell command with the **–Type** parameter value of **All**. The following example code illustrates how to install RAS in Multitenancy mode with all RAS features \(point\-to\-site VPN, site\-to\-site VPN, and BGP routing\) enabled for two tenants, Contoso and Fabrikam.
+> When you install RAS Gateway in Multitenant mode, you must specify whether BGP is enabled for each tenant by using the **Enable-RemoteAccessRoutingDomain** Windows PowerShell command with the **–Type** parameter value of **All**. The following example code illustrates how to install RAS in Multitenancy mode with all RAS features (point-to-site VPN, site-to-site VPN, and BGP routing) enabled for two tenants, Contoso and Fabrikam.
 
 ```
 $Contoso_RoutingDomain = "ContosoTenant"
@@ -349,7 +349,7 @@ Following are the Uninstall  commands for RAS Gateway and BGP.
 
 [Uninstall-RemoteAccess](https://technet.microsoft.com/en-us/library/hh918390.aspx)
 
-Uninstalls Remote Access from the computer, including all Remote Access features and functionality \(RAS Gateway, BGP, etc\).
+Uninstalls Remote Access from the computer, including all Remote Access features and functionality (RAS Gateway, BGP, etc).
 
 ```
 Uninstall-RemoteAccess [-CimSession <CimSession[]> ] [-ComputerName <String> ] [-EntrypointName <String> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-ThrottleLimit <Int32> ] [-VpnType <String> {Vpn | VpnS2S} ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]

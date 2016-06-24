@@ -13,7 +13,7 @@ This topic describes the controls on the AppLocker user interface to help you cr
 ## About AppLocker
 You can use AppLocker as part of your overall security strategy for the following scenarios:
 
--   Help prevent malicious software \(malware\) and unsupported applications from affecting computers in your environment.
+-   Help prevent malicious software (malware) and unsupported applications from affecting computers in your environment.
 
 -   Prevent users from installing and using unauthorized applications.
 
@@ -43,27 +43,27 @@ For more information, see [AppLocker Overview \[Server\]](assetId:///358610e4-88
 [Additional resources](#BKMK_AddResources)
 
 ## <a name="BKMK_Enforcement"></a>Enforcement modes
-The three AppLocker enforcement modes are described in the following table. The enforcement mode settings that are defined here can be overwritten by a setting that is derived from a linked Group Policy Object \(GPO\) with a higher precedence.
+The three AppLocker enforcement modes are described in the following table. The enforcement mode settings that are defined here can be overwritten by a setting that is derived from a linked Group Policy Object (GPO) with a higher precedence.
 
 |Enforcement mode|Description|
 |--------------------|---------------|
 |**Not configured**|This is the default setting, which means that the rules defined here will be enforced unless a linked GPO with a higher precedence has a different value for this setting.|
 |**Enforce rules**|Rules are enforced.|
-|**Audit only**|Rules are audited but not enforced. When a user runs an application that is affected by an AppLocker rule, the application is allowed to run, and the information about the application is added to the AppLocker event log. The Audit\-only enforcement mode helps you determine which applications will be affected by the policy before the policy is enforced. When the AppLocker policy for a rule collection is set to **Audit only**, rules for that rule collection are not enforced.|
+|**Audit only**|Rules are audited but not enforced. When a user runs an application that is affected by an AppLocker rule, the application is allowed to run, and the information about the application is added to the AppLocker event log. The Audit-only enforcement mode helps you determine which applications will be affected by the policy before the policy is enforced. When the AppLocker policy for a rule collection is set to **Audit only**, rules for that rule collection are not enforced.|
 
 When AppLocker policies from various GPOs are merged, the rules from all the GPOs are merged and the enforcement mode setting of the winning GPO is applied.
 
 For information about GPOs and Group Policy inheritance, see the [Group Policy Planning and Deployment Guide](http://go.microsoft.com/fwlink/p/?linkid=143138).
 
 ## <a name="BKMK_RuleCollections"></a>Rule collections
-The AppLocker user interface is accessed through the Microsoft Management Console \(MMC\), and it is organized into rule collections, which are Executable files, Scripts, Windows Installer files, Packaged apps, Packaged app installers and DLL files. These collections give the administrator an easy way to differentiate the rules for different types of applications. The following table lists the file formats that are included in each rule collection.
+The AppLocker user interface is accessed through the Microsoft Management Console (MMC), and it is organized into rule collections, which are Executable files, Scripts, Windows Installer files, Packaged apps, Packaged app installers and DLL files. These collections give the administrator an easy way to differentiate the rules for different types of applications. The following table lists the file formats that are included in each rule collection.
 
 |Rule collection|Associated file formats|
 |-------------------|---------------------------|
 |Executable files|.exe<br /><br />.com|
 |Scripts|.ps1<br /><br />.bat<br /><br />.cmd<br /><br />.vbs<br /><br />.js|
 |Windows Installer files|.msi<br /><br />.msp<br /><br />.mst|
-|Appx \(Packaged apps and Packaged app installers\)|.appx|
+|Appx (Packaged apps and Packaged app installers)|.appx|
 |DLL files|.dll<br /><br />.ocx|
 
 > [!IMPORTANT]
@@ -80,10 +80,10 @@ Rule conditions are criteria that help AppLocker identify the applications to wh
 
 -   [Path](#BKMK_Path): Identifies an application by its location in the file system of the computer or on the network
 
--   [File hash](#BKMK_FileHash): Represents the system\-computed cryptographic hash of the identified file
+-   [File hash](#BKMK_FileHash): Represents the system-computed cryptographic hash of the identified file
 
 ### <a name="BKMK_Publisher"></a>Publisher
-This condition identifies an application based on its digital signature and extended attributes when available. The digital signature contains information about the company that created the application \(the publisher\). Executable files, DLLs, Windows installers, Packaged apps, and Packaged app installers also have extended attributes, which are obtained from the binary resource. Attributes for executable files, DLLs, and Windows installers contain the name of the product that the file is a part of, the original name of the file as supplied by the publisher, and the version number of the file. In Packaged apps and Packaged app installers, these extended attributes contain the name and the version of the application package.
+This condition identifies an application based on its digital signature and extended attributes when available. The digital signature contains information about the company that created the application (the publisher). Executable files, DLLs, Windows installers, Packaged apps, and Packaged app installers also have extended attributes, which are obtained from the binary resource. Attributes for executable files, DLLs, and Windows installers contain the name of the product that the file is a part of, the original name of the file as supplied by the publisher, and the version number of the file. In Packaged apps and Packaged app installers, these extended attributes contain the name and the version of the application package.
 
 > [!NOTE]
 > Rules that are created in the Packaged app and Packaged app installer rule collection can only have the Publisher condition because Windows does not support unsigned Packaged apps or Packaged app installers.
@@ -91,7 +91,7 @@ This condition identifies an application based on its digital signature and exte
 > [!NOTE]
 > Use a Publisher rule condition when possible because they can survive application updates in addition to a change in the location of files.
 
-When you select a reference file for a Publisher condition, the wizard creates a rule that specifies the publisher, product, file name, and version number. You can make the rule more generic by moving the slider up or by using a wildcard character \(\*\) in the product, file name, or version number fields.
+When you select a reference file for a Publisher condition, the wizard creates a rule that specifies the publisher, product, file name, and version number. You can make the rule more generic by moving the slider up or by using a wildcard character (*) in the product, file name, or version number fields.
 
 > [!NOTE]
 > To enter custom values for any of the fields of a Publisher rule condition in the Create Rules Wizard, you must select the **Use custom values** check box. When this check box is selected, you cannot use the slider.
@@ -120,7 +120,7 @@ The following table describes how a Publisher condition is applied.
 ### <a name="BKMK_Path"></a>Path
 This rule condition identifies an application by its location in the file system of the computer or on the network.
 
-AppLocker uses custom path variables for well\-known paths, such as **Program Files** and **Windows**.
+AppLocker uses custom path variables for well-known paths, such as **Program Files** and **Windows**.
 
 The following table details these path variables.
 
@@ -129,15 +129,15 @@ The following table details these path variables.
 |Windows|%WINDIR%|%SystemRoot%|
 |System32|%SYSTEM32%|%SystemDirectory%|
 |Windows installation directory|%OSDRIVE%|%SystemDrive%|
-|Program Files|%PROGRAMFILES%|%ProgramFiles% and<br /><br />%ProgramFiles\(x86\)%|
-|Removable media \(for example, a CD or DVD\)|%REMOVABLE%||
-|Removable storage device \(for example, a USB flash drive\)|%HOT%||
+|Program Files|%PROGRAMFILES%|%ProgramFiles% and<br /><br />%ProgramFiles(x86)%|
+|Removable media (for example, a CD or DVD)|%REMOVABLE%||
+|Removable storage device (for example, a USB flash drive)|%HOT%||
 
 > [!IMPORTANT]
-> Because a Path rule condition can be configured to include a large number of folders and files, Path conditions should be carefully planned. For example, if an Allow rule with a Path condition includes a folder location where non\-administrators are allowed to write data, a user can copy unapproved files into that location and run the files. For this reason, it is a best practice to not create path conditions for standard user writable locations, such as a user profile.
+> Because a Path rule condition can be configured to include a large number of folders and files, Path conditions should be carefully planned. For example, if an Allow rule with a Path condition includes a folder location where non-administrators are allowed to write data, a user can copy unapproved files into that location and run the files. For this reason, it is a best practice to not create path conditions for standard user writable locations, such as a user profile.
 
 ### <a name="BKMK_FileHash"></a>File hash
-When you choose the File hash rule condition, the system computes a cryptographic hash of the identified file. The advantage of this rule condition is that because each file has a unique hash, a File hash rule condition applies to only one file. The disadvantage is that each time the file is updated \(such as a security update or upgrade\) the file's hash will change. As a result, you must manually update File hash rules.
+When you choose the File hash rule condition, the system computes a cryptographic hash of the identified file. The advantage of this rule condition is that because each file has a unique hash, a File hash rule condition applies to only one file. The disadvantage is that each time the file is updated (such as a security update or upgrade) the file's hash will change. As a result, you must manually update File hash rules.
 
 ## <a name="BKMK_DefaultRules"></a>Default rules
 AppLocker allows you to generate default rules for each rule collection.
@@ -164,7 +164,7 @@ Windows Installer default rule types include:
 
 -   Allow members of the **Everyone** group to run all digitally signed Windows Installer files.
 
--   Allow members of the **Everyone** group to run all Windows Installer files that are located in the Windows\\Installer folder.
+-   Allow members of the **Everyone** group to run all Windows Installer files that are located in the Windows\Installer folder.
 
 DLL default rule types:
 
@@ -179,7 +179,7 @@ The Packaged app default rule types:
 -   Allow members of the **Everyone** group to install and run all signed Packaged apps and Packaged app installers.
 
 ## <a name="BKMK_Behavior"></a>AppLocker rule behavior
-If no AppLocker rules for a specific rule collection exist, all files with that file format are allowed to run. However, when an AppLocker rule for a specific rule collection is created, only the files explicitly allowed in a rule are permitted to run. For example, if you create an executable rule that allows .exe files in *%SystemDrive%\\FilePath* to run, only executable files located in that path are allowed to run.
+If no AppLocker rules for a specific rule collection exist, all files with that file format are allowed to run. However, when an AppLocker rule for a specific rule collection is created, only the files explicitly allowed in a rule are permitted to run. For example, if you create an executable rule that allows .exe files in *%SystemDrive%\FilePath* to run, only executable files located in that path are allowed to run.
 
 A rule can be configured to use allow or deny actions:
 
@@ -191,7 +191,7 @@ A rule can be configured to use allow or deny actions:
 > For a best practice, use Allow actions with exceptions. You can use a combination of Allow and Deny actions, but Deny actions override Allow actions in all cases, and combined actions can be circumvented.
 
 > [!IMPORTANT]
-> If you want to allow any Packaged apps in your environment while continuing to control executables, you should create default rules for Packaged apps and set the enforcement mode to Audit\-only for the Packaged app rule collection.
+> If you want to allow any Packaged apps in your environment while continuing to control executables, you should create default rules for Packaged apps and set the enforcement mode to Audit-only for the Packaged app rule collection.
 
 ## <a name="BKMK_RuleExceptions"></a>Rule exceptions
 You can apply AppLocker rules to individual users or to a group of users. If you apply a rule to a group of users, all users in that group are affected by that rule. If you need to allow a subset of a user group to use an application, you can create a special rule for that subset. For example, the rule "Allow Everyone to run Windows except Registry Editor" allows everyone in the organization to run the Windows operating system, but it does not allow anyone to run Registry Editor.
@@ -209,7 +209,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 2.  If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.
 
-3.  In the console tree, double\-click **Application Control Policies**, right\-click **AppLocker**, and then click **Properties**.
+3.  In the console tree, double-click **Application Control Policies**, right-click **AppLocker**, and then click **Properties**.
 
 4.  Click the **Advanced** tab, select the **Enable the DLL rule collection** check box, and then click **OK**.
 
@@ -225,7 +225,7 @@ You can create rules by using two AppLocker wizards:
 
 ## <a name="BKMK_AddConsiderations"></a>Additional considerations
 
--   By default, AppLocker rules do not allow users to open or run any files that are not specifically allowed. Administrators should maintain an up\-to\-date list of allowed applications.
+-   By default, AppLocker rules do not allow users to open or run any files that are not specifically allowed. Administrators should maintain an up-to-date list of allowed applications.
 
 -   There are two types of AppLocker conditions that do not persist following an update of an application:
 
@@ -235,9 +235,9 @@ You can create rules by using two AppLocker wizards:
 
 -   If an application is not digitally signed, you cannot use a Publisher rule condition for that application.
 
--   AppLocker rules cannot be used to manage computers running a Windows operating system earlier than  Windows Server 2008 R2  or  Windows 7 . Software Restriction Policies must be used instead. If AppLocker rules are defined in a Group Policy Object \(GPO\), only those rules are applied. To ensure interoperability between Software Restriction Policies rules and AppLocker rules, define Software Restriction Policies rules and AppLocker rules in different GPOs.
+-   AppLocker rules cannot be used to manage computers running a Windows operating system earlier than  Windows Server 2008 R2  or  Windows 7 . Software Restriction Policies must be used instead. If AppLocker rules are defined in a Group Policy Object (GPO), only those rules are applied. To ensure interoperability between Software Restriction Policies rules and AppLocker rules, define Software Restriction Policies rules and AppLocker rules in different GPOs.
 
--   The Packaged app and Packaged app installer rule collection is not available in  Windows Server 2008 R2  or  Windows 7 .
+-   The Packaged app and Packaged app installer rule collection is not available in  Windows Server 2008 R2  or  Windows 7 .
 
 -   When the rules for the executable rule  collection are enforced and the Packaged app and Packaged app installer rule collection does not contain any rules, no Packaged apps or Packaged app installers are allowed to run. To allow Packaged apps or Packaged app installers, you must create rules for the Packaged app and Packaged app installer rule collection.
 
@@ -253,7 +253,7 @@ The following table lists and describes resources for you to manage security pol
 
 |Resource|Windows Server 2008 R2 and Windows 7| Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1 and Windows 8|
 |------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Product evaluation|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step\-by\-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step\-by\-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|
+|Product evaluation|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step-by-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|[Frequently Asked Questions](http://technet.microsoft.com/library/ee619725(WS.10).aspx)<br /><br />[AppLocker Step-by-Step Guide](http://technet.microsoft.com/library/dd723686(WS.10).aspx)|
 |Procedures|[AppLocker Operations Guide](http://technet.microsoft.com/library/ee791916(WS.10).aspx)|[Administer AppLocker](applocker/Administer-AppLocker.md)<br /><br />[Manage Packaged Apps with AppLocker](applocker/manage/administer-applocker/Manage-Packaged-Apps-with-AppLocker.md)|
 |Scripting|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|[Using the AppLocker Windows PowerShell Cmdlets](http://technet.microsoft.com/library/ee791828(WS.10).aspx)|
 |Technical content|[AppLocker Technical Reference](http://technet.microsoft.com/library/ee844115(v=WS.10).aspx)|[AppLocker Technical Reference](http://technet.microsoft.com/library/ee844115(v=WS.10).aspx)|

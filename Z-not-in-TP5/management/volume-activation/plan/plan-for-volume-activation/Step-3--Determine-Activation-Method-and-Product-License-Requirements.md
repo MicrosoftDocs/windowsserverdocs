@@ -15,10 +15,10 @@ You can use the following planning table to ensure that all computers are associ
 
 |Criteria|Activation Method|Number of Computers|
 |------------|---------------------|-----------------------|
-|Number of computers running  Windows Server 2012  or Windows 8 or newer that will connect to the network at least once every 180 days \(directly or through a VPN\)|Active Directory\-based Activation||
-|Number of computers not running  Windows Server 2012  or Windows 8 or newer that will connect to the network at least once every 180 days \(directly or through a VPN\), and where the KMS activation threshold is met|KMS||
+|Number of computers running  Windows Server 2012  or Windows 8 or newer that will connect to the network at least once every 180 days (directly or through a VPN)|Active Directory-based Activation||
+|Number of computers not running  Windows Server 2012  or Windows 8 or newer that will connect to the network at least once every 180 days (directly or through a VPN), and where the KMS activation threshold is met|KMS||
 |Number of computers that do not connect to network at least once every 180 days|MAK||
-|Number of computers running  Windows Server 2012  or Windows 8 or newer in isolated networks that connect at least once every 180 days to the core network|Active Directory\-based Activation or KMS||
+|Number of computers running  Windows Server 2012  or Windows 8 or newer in isolated networks that connect at least once every 180 days to the core network|Active Directory-based Activation or KMS||
 |Number of computers not running  Windows Server 2012  or Windows 8 or newer in isolated networks that can contact a KMS host|KMS||
 |Number of computers in isolated networks where the KMS activation threshold is not met|MAK||
 |Number of computers in test and development labs that will not be activated|None||

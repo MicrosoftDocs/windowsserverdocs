@@ -19,7 +19,7 @@ This section of the Smart Card Technical Reference contains information about th
     Learn about tools and services in supported versions of Windows to help identify certificate issues.
 
 -   [Smart Card Group Policy and Registry Settings](https://technet.microsoft.com/library/ff404287(v=ws.10).aspx)
-    Learn about smart card\-related Group Policy settings and registry keys that can be set on a per\-computer basis, including how to edit and apply Group Policy settings to local or domain computers.
+    Learn about smart card-related Group Policy settings and registry keys that can be set on a per-computer basis, including how to edit and apply Group Policy settings to local or domain computers.
 
 -   [Smart Card Events](https://technet.microsoft.com/library/ff404292(v=ws.10).aspx)
     Learn about events that can be used to manage smart cards in an organization, including how to monitor installation, use, and errors.

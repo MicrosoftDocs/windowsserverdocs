@@ -28,7 +28,7 @@ delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <Shad
 |oldest <Volume>|Deletes the oldest shadow copy of the given volume.|
 |set <SetID>|Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|
 |id <ShadowID>|Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.|
-|exposed {<Drive> &#124; <MountPoint>}|Deletes the shadow copy exposed at the specified drive letter or mount point. Specify mount points as c:\\mountPoint or by the drive letter such as p:.|
+|exposed {<Drive> &#124; <MountPoint>}|Deletes the shadow copy exposed at the specified drive letter or mount point. Specify mount points as c:\mountPoint or by the drive letter such as p:.|
 
 #### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)

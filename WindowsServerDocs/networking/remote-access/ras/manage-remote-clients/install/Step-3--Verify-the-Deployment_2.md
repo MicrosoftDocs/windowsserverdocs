@@ -24,6 +24,6 @@ This topic describes how to verify that you have correctly configured your deplo
   
 4.  Remove the computer from the corporate network and connect it to a public network.  
   
-5.  At a command prompt, type **nltest \/dsgetdc: \[fully qualified domain name\]**. This command will verify that the corporate network is accessible to the client. If the domain controller is not accessible, the following error message will display reporting that the domain does not exist: ERROR\_NO\_SUCH\_DOMAIN.  
+5.  At a command prompt, type **nltest /dsgetdc: [fully qualified domain name]**. This command will verify that the corporate network is accessible to the client. If the domain controller is not accessible, the following error message will display reporting that the domain does not exist: ERROR_NO_SUCH_DOMAIN.  
   
 

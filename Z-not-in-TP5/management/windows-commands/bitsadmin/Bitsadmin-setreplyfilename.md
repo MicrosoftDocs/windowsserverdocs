@@ -25,7 +25,7 @@ bitsadmin /SetReplyFileName <Job> <Path>
 |Path|Location to place the server reply|
 
 ## Remarks
-Valid only for upload\-reply jobs.
+Valid only for upload-reply jobs.
 
 ## <a name="BKMK_examples"></a>Examples
 The following example sets the reply filename pathfor the job named *myDownloadJob*.

@@ -46,23 +46,23 @@ The first thing you need to do is generate a certificate for Azure MFA to use.  
   
 Note that TenantID is the name of your directory in Azure AD.  Use the following PowerShell cmdlet to generate the new certificate.  
     `$certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>`  
-	  
+      
 ![ADFS_AzureMFA1media/ADFS_AzureMFA1.PNG)  
   
 ### Step 2: Add the new credentials to Azure Multi-Factor Auth Client SPN   
 In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the SPN for the Azure Multi-Factor Auth Client. The certificates generated using the `New-AdfsAzureMFaTenantCertificate` cmdlet will serve as these credentials. Do the following using PowerShell to add the new credentials to the Azure Multi-Factor Auth Client SPN.  
 >[!NOTE]   
 >In order to complete this step you need to connect to your instance of Azure AD with PowerShell using Connect-MsolService.  These steps assume you have already connected via PowerShell.  For information see [Connect-MsolService.](https://msdn.microsoft.com/library/dn194123.aspx)  
-	  
+      
 1. **Get the X.509 interpretation of the certificate and convert it to X509**   
-		  
-	`$certX509 = New-Object.System.Security.Cryptography.X509Certificates.X509Certificate`  
-	`$certX509.Import([System.Convert]::FromBase64String($certBase64))`  
-	  
+          
+    `$certX509 = New-Object.System.Security.Cryptography.X509Certificates.X509Certificate`  
+    `$certX509.Import([System.Convert]::FromBase64String($certBase64))`  
+      
 ![ADFS_AzureMFA2media/ADFS_AzureMFA2.PNG)  
   
 2. **Set the certificate as the new credential against the Azure Multi-Factor Auth Client**  
-	`New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64 -StartDate $certX509.GetEffectiveDateString() -EndDate $certX509.GetExpirationDateString()`  
+    `New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64 -StartDate $certX509.GetEffectiveDateString() -EndDate $certX509.GetExpirationDateString()`  
   
 >[!NOTE]  
 > 981f26a1-7f43-403b-a875-f8b09b8cd720 is the guid for Azure Multi-Factor Auth Client.  
@@ -77,7 +77,7 @@ This cmdlet needs to be executed only once for an AD FS farm.  Use PowerShell to
 >You will need to restart the AD FS service on each server in the farm before these changes take affect.  
   
     Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720  
-	  
+      
 ![ADFS_AzureMFA5media/ADFS_AzureMFA5.png)  
   
 After this, you will see that Azure MFA is available as a primary authentication method for intranet and extranet use.    

@@ -23,9 +23,9 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 |Parameter|Description|  
 |-------------|---------------|  
 |bsasdel|Sends **Backspace** as a **Delete**.|  
-|crlf|Sends CR & LF \(0x0D, 0x 0A\) when the **Enter** key is pressed. Known as “New line mode”.|  
+|crlf|Sends CR & LF (0x0D, 0x 0A) when the **Enter** key is pressed. Known as “New line mode”.|  
 |delasbs|Sends **Delete** as a **Backspace**.|  
-|escape <Character>|Sets the escape character used to enter the Telnet client prompt. The escape character can be a single character, or it can be a combination of the **CTRL** key plus a character. To set a control\-key combination, hold down the **CTRL** key while you type the character that you want to assign.|  
+|escape <Character>|Sets the escape character used to enter the Telnet client prompt. The escape character can be a single character, or it can be a combination of the **CTRL** key plus a character. To set a control-key combination, hold down the **CTRL** key while you type the character that you want to assign.|  
 |localecho|Turns on local echo.|  
 |logfile <FileName>|Logs the current Telnet session to the local file. Logging begins automatically when you set this option.|  
 |logging|Turns on logging. If no log file is set, an error message appears.|  
@@ -38,7 +38,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
   
 1.  You can use the **unset** command to turn off an option that was previously set.  
   
-2.  On non\-English versions of Telnet, the **codeset** <option> is available. **Codeset** <option> sets the current code set to an option, which can be any one of the following: **Shift JIS**, **Japanese EUC**, **JIS Kanji**, **JIS Kanji \(78\)**, **DEC Kanji**, **NEC Kanji**. You should set the same code set on the remote computer.  
+2.  On non-English versions of Telnet, the **codeset** <option> is available. **Codeset** <option> sets the current code set to an option, which can be any one of the following: **Shift JIS**, **Japanese EUC**, **JIS Kanji**, **JIS Kanji (78)**, **DEC Kanji**, **NEC Kanji**. You should set the same code set on the remote computer.  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Set the log file and begin logging to the local file tnlog.txt  

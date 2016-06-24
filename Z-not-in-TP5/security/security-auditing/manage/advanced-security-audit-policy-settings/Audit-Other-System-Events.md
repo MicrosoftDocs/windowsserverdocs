@@ -28,7 +28,7 @@ Event volume: Low
 
 Default: Success and failure
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista, unless otherwise noted.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista, unless otherwise noted.
 
 |Event ID|Event message|
 |------------|-----------------|
@@ -50,7 +50,7 @@ If this policy setting is configured, the following events appear on computers r
 |6402|BranchCache: The message to the hosted cache offering it data is incorrectly formatted. **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
 |6403|BranchCache: The hosted cache sent an incorrectly formatted response to the client. **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
 |6404|BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate. **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
-|6405|BranchCache: %2 instance\(s\) of event id %1 occurred. **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
+|6405|BranchCache: %2 instance(s) of event id %1 occurred. **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
 |6406|%1 registered to Windows Firewall to control filtering for the following: %2 **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
 |6407|1% **Note:** This event is logged only on computers running supported versions of the Windows operating system.|
 |6408|Registered product %1 failed and Windows Firewall is now controlling the filtering for %2 **Note:** This event is logged only on computers running supported versions of the Windows operating system.|

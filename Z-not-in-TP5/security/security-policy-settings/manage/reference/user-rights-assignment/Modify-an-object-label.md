@@ -16,7 +16,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference  
 This privilege determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users. Processes running under a user account can modify the label of an object owned by that user to a lower level without this privilege.  
   
-The integrity label is used by the Windows Integrity Controls \(WIC\) feature, which was introduced in Windows Server 2008 and Windows Vista. WIC keeps lower integrity processes from modifying higher integrity processes by assigning one of six possible labels to objects on the system. Although similar to NTFS file and folder permissions, which are discretionary controls on objects, the WIC integrity levels are mandatory controls that are put in place and enforced by the operating system. The following list describes the integrity levels from lowest to highest:  
+The integrity label is used by the Windows Integrity Controls (WIC) feature, which was introduced in Windows Server 2008 and Windows Vista. WIC keeps lower integrity processes from modifying higher integrity processes by assigning one of six possible labels to objects on the system. Although similar to NTFS file and folder permissions, which are discretionary controls on objects, the WIC integrity levels are mandatory controls that are put in place and enforced by the operating system. The following list describes the integrity levels from lowest to highest:  
   
 -   **Untrusted** Default assignment for processes that are logged on anonymously.  
   
@@ -36,7 +36,7 @@ Constant: SeRelabelPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not Defined  
   
@@ -45,10 +45,10 @@ Constant: SeRelabelPrivilege
 1.  Do not give any group this user right.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default this setting is Not defined on domain controllers and on stand\-alone servers.  
+By default this setting is Not defined on domain controllers and on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -56,13 +56,13 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not defined|  
+|Stand-Alone Server Default Settings|Not defined|  
 |Domain Controller Effective Default Settings|Not defined|  
 |Member Server Effective Default Settings|Not defined|  
 |Client Computer Effective Default Settings|Not defined|  
   
 ### Operating system version differences  
-This policy setting was introduced in Windows Server 2008 and Windows Vista and has no effect on earlier versions. There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
+This policy setting was introduced in Windows Server 2008 and Windows Vista and has no effect on earlier versions. There are no differences in the way this policy setting works between the supported versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
 ## Policy management  
 This section describes features, tools, and guidance to help you manage this policy.  
@@ -72,7 +72,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   

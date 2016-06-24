@@ -26,7 +26,7 @@ Constant: SeLoadDriverPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Default values  
   
@@ -37,10 +37,10 @@ Constant: SeLoadDriverPrivilege
 1.  Because of the potential security risk, do not assign this user right to any user, group, or process that you do not want to take over the system.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default this setting is Administrators and Print Operators on domain controllers and Administrators on stand\-alone servers.  
+By default this setting is Administrators and Print Operators on domain controllers and Administrators on stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -48,7 +48,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Administrators<br /><br />Print Operators|  
-|Stand\-Alone Server Default Settings|Administrators|  
+|Stand-Alone Server Default Settings|Administrators|  
 |Domain Controller Effective Default Settings|Administrators<br /><br />Print Operators|  
 |Member Server Effective Default Settings|Administrators|  
 |Client Computer Effective Default Settings|Administrators|  
@@ -64,7 +64,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   

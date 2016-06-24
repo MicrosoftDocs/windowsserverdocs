@@ -13,7 +13,7 @@ ms.assetid: 51df133f-d981-4f1f-a451-581ec8fde6c8
 # AppLocker Architecture and Components
 This topic for IT professional describes AppLocker’s basic architecture and its major components.
 
-AppLocker relies on the Application Identity service to provide attributes for a file and to evaluate the AppLocker policy for the file. AppLocker policies are conditional access control entries \(ACEs\), and policies are evaluated by using the attribute\-based access control **SeAccessCheckWithSecurityAttributes** or **AuthzAccessCheck** functions.
+AppLocker relies on the Application Identity service to provide attributes for a file and to evaluate the AppLocker policy for the file. AppLocker policies are conditional access control entries (ACEs), and policies are evaluated by using the attribute-based access control **SeAccessCheckWithSecurityAttributes** or **AuthzAccessCheck** functions.
 
 AppLocker provides three ways to intercept and validate if a file is allowed to execute according to an AppLocker policy.
 
@@ -27,7 +27,7 @@ When a new DLL loads, a notification is sent to AppLocker to verify that the DLL
 
 **A script is run**
 
-Before a script file is run, the script host \(for example. for .ps1 files the script host is PowerShell\) invokes AppLocker to verify the script. AppLocker invokes the Application Identity component in user\-mode with the file name or file handle to calculate the file properties. The script file then is evaluated against the AppLocker policy to verify that it is allowed to run. In each case, the actions taken by AppLocker are written to the event log.
+Before a script file is run, the script host (for example. for .ps1 files the script host is PowerShell) invokes AppLocker to verify the script. AppLocker invokes the Application Identity component in user-mode with the file name or file handle to calculate the file properties. The script file then is evaluated against the AppLocker policy to verify that it is allowed to run. In each case, the actions taken by AppLocker are written to the event log.
 
 ## See Also
 [AppLocker Technical Reference](AppLocker-Technical-Reference.md)

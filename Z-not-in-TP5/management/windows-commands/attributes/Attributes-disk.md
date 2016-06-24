@@ -14,7 +14,7 @@ ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92
 Displays, sets, or clears the attributes of a disk.
 
 > [!IMPORTANT]
-> This parameter is not available in any edition of Windows Vista.
+> This parameter is not available in any edition of Windows Vista.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ attributes disk [{set | clear}] [readonly] [noerr]
 |-------------|---------------|
 |set|Sets the specified attribute of the disk with focus.|
 |clear|Clears the specified attribute of the disk with focus.|
-|readonly|Specifies that the disk is read\-only.|
+|readonly|Specifies that the disk is read-only.|
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
 
 ## Remarks
@@ -44,7 +44,7 @@ To view the attributes of the selected disk, type:
 attributes disk
 ```
 
-To set the selected disk as read\-only, type:
+To set the selected disk as read-only, type:
 
 ```
 attributes disk set readonly

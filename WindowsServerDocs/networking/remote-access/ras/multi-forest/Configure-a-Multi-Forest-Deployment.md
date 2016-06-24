@@ -12,7 +12,7 @@ ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 author: coreyp
 ---
 # Configure a Multi-Forest Deployment
-This topic describes how to configure a Remote Access multi\-forest deployment in several possible scenarios. All of the scenarios assume that DirectAccess is currently deployed on a single forest called Forest1, and that you are configuring DirectAccess to work with a new forest called Forest2.  
+This topic describes how to configure a Remote Access multi-forest deployment in several possible scenarios. All of the scenarios assume that DirectAccess is currently deployed on a single forest called Forest1, and that you are configuring DirectAccess to work with a new forest called Forest2.  
   
 -   [Accessing resources from Forest2](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#AccessForest2)  
   
@@ -59,14 +59,14 @@ In this scenario, DirectAccess is deployed in a multisite configuration on Fores
   
 5.  Refresh the management servers list. See [Refresh the management servers list](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#RefreshMgmtServers).  
   
-## <a name="OTPMultiForest"></a>Configure OTP in a multi\-forest deployment  
-Note the following terms when configuring OTP in a multi\-forest deployment:  
+## <a name="OTPMultiForest"></a>Configure OTP in a multi-forest deployment  
+Note the following terms when configuring OTP in a multi-forest deployment:  
   
--   Root CA—The forest\(s\) main PKI tree CA.  
+-   Root CA—The forest(s) main PKI tree CA.  
   
 -   Enterprise CA—All other CAs.  
   
--   Resource Forest—The forest that contains the Root CA, and is considered to be the ‘Managing forest\\domain’.  
+-   Resource Forest—The forest that contains the Root CA, and is considered to be the ‘Managing forest\domain’.  
   
 -   Account Forest—All other forests in the topology.  
   
@@ -97,7 +97,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
     certutil -config <Computer-Name>\<Root-CA-Name> -ca.cert <root-ca-cert-filename.cer>  
     ```  
   
-    \(If you run the command on the root CA you can omit the connection information, \-config <Computer\-Name>\\<Root\-CA\-Name>\)  
+    (If you run the command on the root CA you can omit the connection information, -config <Computer-Name>\\<Root-CA-Name>)  
   
     1.  Import the Root CA certificate from the previous step on the Account Forest CA by running the following command from an elevated command prompt:  
   
@@ -105,7 +105,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
         certutil -dspublish -f <root-ca-cert-filename.cer> RootCA  
         ```  
   
-    2.  Grant Resource Forest certificate templates Read\/Write permissions to the <Account Forest>\\<Administrator account>.  
+    2.  Grant Resource Forest certificate templates Read/Write permissions to the <Account Forest>\\<Administrator account>.  
   
     3.  Extract all resource forest enterprise CA certificates by running the following command from an elevated command prompt:  
   
@@ -113,7 +113,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
         certutil -config <Computer-Name>\<Enterprise-CA-Name> -ca.cert <enterprise-ca-cert-filename.cer>  
         ```  
   
-        \(If you run the command on the root CA you can omit the connection information, \-config <Computer\-Name>\\<Root\-CA\-Name>\)  
+        (If you run the command on the root CA you can omit the connection information, -config <Computer-Name>\\<Root-CA-Name>)  
   
     4.  Import the Enterprise CA certificates from the previous step on the Account Forest CA by running the following commands from an elevated command prompt:  
   
@@ -164,7 +164,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
 The following sections contain the configuration procedures for the above scenario deployments. After completing a procedure, return to the scenario to continue.  
   
 ### <a name="NRPT_DNSSearchSuffix"></a>Add NRPT rules and DNS suffixes  
-Clients that connect via DirectAccess to the corporate network use the Name Resolution Policy Table \(NRPT\) to determine which DNS server should be used to resolve the address of different resources. This allows the client to resolve corporate resource addresses and helps the client maintain a proper inside\-corporate\/outside\-corporate classification, which is required to keep DirectAccess working. The DirectAccess configuration tools automatically detect the root DNS suffix of Forest1 and add it to the NRPT table. However, the FQDN suffixes of Forest2 are not added automatically to the NRPT table, and the Remote Access administrator must add them manually.  
+Clients that connect via DirectAccess to the corporate network use the Name Resolution Policy Table (NRPT) to determine which DNS server should be used to resolve the address of different resources. This allows the client to resolve corporate resource addresses and helps the client maintain a proper inside-corporate/outside-corporate classification, which is required to keep DirectAccess working. The DirectAccess configuration tools automatically detect the root DNS suffix of Forest1 and add it to the NRPT table. However, the FQDN suffixes of Forest2 are not added automatically to the NRPT table, and the Remote Access administrator must add them manually.  
   
 The DNS suffix search list allows the clients to use short label names instead of FQDNs. The Remote Access configuration tools automatically add all the domains in Forest1 to the DNS suffix search list. If you want to enable clients to use short label names for resources in Forest2, you need to add them manually.  
   
@@ -199,7 +199,7 @@ Remote Access manages a list of IPv6 prefixes for corporate resources. Only reso
   
 2.  In the Remote Access Server Setup wizard, click **Prefix Configuration**.  
   
-3.  On the **Prefix Configuration** page, in **Internal network IPv6 prefixes**, add any additional IPv6 prefixes separated by semicolons, for example, 2001:db8:1::\/64;2001:db8:2::\/64. Then click **Next**.  
+3.  On the **Prefix Configuration** page, in **Internal network IPv6 prefixes**, add any additional IPv6 prefixes separated by semicolons, for example, 2001:db8:1::/64;2001:db8:2::/64. Then click **Next**.  
   
 4.  On the **Authentication** page, click **Finish**.  
   
@@ -228,7 +228,7 @@ To enable Windows 8 client computers from Forest2 to access resources through Di
   
 7.  On the **Applying Remote Access Setup Wizard Settings** dialog box, click **Close**.  
   
-To enable  Windows 7  client computers from Forest2 to access resources through DirectAccess when multisite is enabled, you must add the security group from Forest2 to the Remote Access deployment for each entry point. For information about adding  Windows 7  security groups, see the description of the **Client Support** page in [3.6. Enable the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_Enable).  
+To enable  Windows 7  client computers from Forest2 to access resources through DirectAccess when multisite is enabled, you must add the security group from Forest2 to the Remote Access deployment for each entry point. For information about adding  Windows 7  security groups, see the description of the **Client Support** page in [3.6. Enable the multisite deployment](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_Enable).  
   
 ### <a name="RefreshMgmtServers"></a>Refresh the management servers list  
 Remote Access automatically discovers the infrastructure servers in all the forests that contain DirectAccess configuration GPOs. If DirectAccess was deployed on a server from Forest1, the server GPO will be written to its domain in Forest1. If you enabled access to DirectAccess for clients from Forest2, the client GPO will be written to a domain in Forest2.  

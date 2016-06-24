@@ -30,7 +30,7 @@ Bitsadmin /Cache /SetExpirationTime
   
 |Parameter|Description|  
 |-------------|---------------|  
-|[Bitsadmin cache and help]()|Displays the command\-line usage for the \/Cache commands.|  
+|[Bitsadmin cache and help]()|Displays the command-line usage for the /Cache commands.|  
 |[Bitsadmin cache clear]()|Purges the local cache.|  
 |[Bitsadmin cache and delete]()|Deletes a cache entry.|  
 |[Bitsadmin cache and deleteurl]()|Deletes all cache entries for the given URL.|  

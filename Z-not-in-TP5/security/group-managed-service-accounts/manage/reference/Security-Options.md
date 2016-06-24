@@ -15,11 +15,11 @@ This reference topic for the IT professional provides an introduction to the set
 
 The **Security Options** contain the following groupings of security policy settings that allow you to configure the behavior of the local computer. Some of these policies can be included in a Group Policy Object and distributed over your enterprise.
 
-If you edit policy settings locally on a computer, you will affect the settings on only that one computer. If you configure the settings in a Group Policy Object \(GPO\) hosted in an Active Directory domain, the settings apply to all computers that are subject to that GPO. For more information about Group Policy in an Active Directory domain, see [Group Policy](http://go.microsoft.com/fwlink/?LinkId=55625)\(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=55625\).
+If you edit policy settings locally on a computer, you will affect the settings on only that one computer. If you configure the settings in a Group Policy Object (GPO) hosted in an Active Directory domain, the settings apply to all computers that are subject to that GPO. For more information about Group Policy in an Active Directory domain, see [Group Policy](http://go.microsoft.com/fwlink/?LinkId=55625)(http://go.microsoft.com/fwlink/?LinkId=55625).
 
-For information about how the security policy snap\-in and related technologies work, see [Security Policy Settings Technical Overview](Security-Policy-Settings-Technical-Overview.md).
+For information about how the security policy snap-in and related technologies work, see [Security Policy Settings Technical Overview](Security-Policy-Settings-Technical-Overview.md).
 
-Open the Local Security Policy snap\-in \(secpol.msc\) and navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options**.
+Open the Local Security Policy snap-in (secpol.msc) and navigate to **Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**.
 
 Local computer permissions: Membership in the local Administrators group, or equivalent, is the minimum required to modify these policy settings.
 

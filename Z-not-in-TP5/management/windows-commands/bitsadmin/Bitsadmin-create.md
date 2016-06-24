@@ -21,7 +21,7 @@ bitsadmin /create [Type] DisplayName
 
 |Parameter|Description|
 |-------------|---------------|
-|Type|-   **\/Download**—transfers data from a server to a local file.<br />-   **\/Upload**—transfers data from a local file to a server.<br />-   **\/Upload\-Reply**—transfers data from a local file to a server and receives a reply file from the server.<br />-   This parameter defaults to **\/Download** when not specified on the command line.|
+|Type|-   **/Download**—transfers data from a server to a local file.<br />-   **/Upload**—transfers data from a local file to a server.<br />-   **/Upload-Reply**—transfers data from a local file to a server and receives a reply file from the server.<br />-   This parameter defaults to **/Download** when not specified on the command line.|
 |DisplayName|The display name assigned to the newly created job.|
 
 Use the [Bitsadmin resume](Bitsadmin-resume.md) switch to activate the job in the transfer queue.

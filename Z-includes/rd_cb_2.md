@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">RD Connection Broker</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">RD Connection Broker</Token>

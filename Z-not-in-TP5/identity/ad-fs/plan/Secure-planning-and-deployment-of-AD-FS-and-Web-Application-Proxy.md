@@ -76,11 +76,11 @@ The property is ExtendedProtectionTokenCheck.  The default setting is Allow, so 
 The federation service proxy (part of the WAP) provides congestion control to protect the AD FS service from a flood of requests.  The Web Application Proxy will reject external client authentication requests if the federation server is overloaded as detected by the latency between the Web Application Proxy and the federation server.  This feature is configured by default with a recommended latency threshold level.  
   
 ### To verify the settings, you can do the following:  
-1.	On your Web Application Proxy computer, start an elevated command window.  
-2.	Navigate to the ADFS directory, at %WINDIR%\adfs\config.  
-3.	Change the congestion control settings from its default values to ‘&lt;congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" /&gt;’.  
-4.	Save and close the file.  
-5.	Restart the AD FS service by running ‘net stop adfssrv’ and then ‘net start adfssrv’.  
+1.  On your Web Application Proxy computer, start an elevated command window.  
+2.  Navigate to the ADFS directory, at %WINDIR%\adfs\config.  
+3.  Change the congestion control settings from its default values to ‘&lt;congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" /&gt;’.  
+4.  Save and close the file.  
+5.  Restart the AD FS service by running ‘net stop adfssrv’ and then ‘net start adfssrv’.  
 For your reference, guidance on this capability can be found [here.](https://msdn.microsoft.com/library/azure/dn528859.aspx)   
   
 ## Standard HTTP request checks at the proxy  

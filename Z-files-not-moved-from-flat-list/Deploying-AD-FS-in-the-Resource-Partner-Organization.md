@@ -13,7 +13,7 @@ ms.assetid: 04a57d0c-ec14-4de9-ba92-3f45c45971a0
 author: billmath
 ---
 # Deploying AD FS in the Resource Partner Organization
-The resource partner organization in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] represents the organization whose Web servers may be protected by a resource\-side [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]. The [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] at the resource partner uses the security tokens that are produced by the account partner to provide claims to the Web servers that are located in the resource partner.  
+The resource partner organization in [!INCLUDE[firstref_adfs2](includes/firstref_adfs2_md.md)] represents the organization whose Web servers may be protected by a resource-side [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)]. The [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] at the resource partner uses the security tokens that are produced by the account partner to provide claims to the Web servers that are located in the resource partner.  
   
 In scenarios in which you need to provide access to federated services or applications to many different users—when some users reside in different organizations—you can configure the resource [!INCLUDE[adfs2_fs](includes/adfs2_fs_md.md)] so that you can deploy multiple account partners.  
   

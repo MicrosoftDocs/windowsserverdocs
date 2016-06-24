@@ -21,13 +21,13 @@ The new Windows PowerShell IPAM commands provide you with the ability to retriev
   
 |IPAM Object|Command|Description|  
 |---------------|-----------|---------------|  
-|DNS Server|Get\-IpamDnsServer|This cmdlet returns the DNS server object in IPAM|  
-|DNS Zone|Get\-IpamDnsZone|This cmdlet returns the DNS zone object in IPAM|  
-|DNS Resource Record|Get\-IpamResourceRecord|This cmdlet returns the DNS resource record object in IPAM|  
-|DNS Conditional Forwarder|Get\-IpamDnsConditionalForwarder|This cmdlet returns the DNS conditional forwarder object in IPAM|  
-|DHCP Server|Get\-IpamDhcpServer|This cmdlet returns the DHCP server object in IPAM|  
-|DHCP Superscope|Get\-IpamDhcpSuperscope|This cmdlet returns the DHCP superscope object in IPAM|  
-|DHCP Scope|Get\-IpamDhcpScope|This cmdlet returns the DHCP scope object in IPAM|  
+|DNS Server|Get-IpamDnsServer|This cmdlet returns the DNS server object in IPAM|  
+|DNS Zone|Get-IpamDnsZone|This cmdlet returns the DNS zone object in IPAM|  
+|DNS Resource Record|Get-IpamResourceRecord|This cmdlet returns the DNS resource record object in IPAM|  
+|DNS Conditional Forwarder|Get-IpamDnsConditionalForwarder|This cmdlet returns the DNS conditional forwarder object in IPAM|  
+|DHCP Server|Get-IpamDhcpServer|This cmdlet returns the DHCP server object in IPAM|  
+|DHCP Superscope|Get-IpamDhcpSuperscope|This cmdlet returns the DHCP superscope object in IPAM|  
+|DHCP Scope|Get-IpamDhcpScope|This cmdlet returns the DHCP scope object in IPAM|  
   
 In the following example of command output, the `Get-IpamDnsZone` cmdlet retrieves the **dublin.contoso.com** DNS zone.  
   

@@ -26,7 +26,7 @@ Constant: SeTakeOwnershipPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Not defined
 
@@ -35,10 +35,10 @@ Constant: SeTakeOwnershipPrivilege
 1.  Assigning this user right can be a security risk. Because owners of objects have full control of them, only assign this user right to trusted users.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
-By default this setting is Administrators on domain controllers and on stand\-alone servers.
+By default this setting is Administrators on domain controllers and on stand-alone servers.
 
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
 
@@ -46,7 +46,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Administrators|
-|Stand\-Alone Server Default Settings|Administrators|
+|Stand-Alone Server Default Settings|Administrators|
 |Domain Controller Effective Default Settings|Administrators|
 |Member Server Effective Default Settings|Administrators|
 |Client Computer Effective Default Settings|Administrators|
@@ -75,10 +75,10 @@ Ownership can be transferred in the following ways:
 
 -   An administrator can take ownership.
 
--   A user who has the **Restore files and directories** user right can double\-click **Other users and groups** and choose any user or group to assign ownership to.
+-   A user who has the **Restore files and directories** user right can double-click **Other users and groups** and choose any user or group to assign ownership to.
 
 ### Group Policy
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 
@@ -94,7 +94,7 @@ When a local setting is greyed out, it indicates that a GPO currently controls t
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
 
 ### Vulnerability
-Any users with the **Take ownership of files or other objects user right** can take control of any object, regardless of the permissions on that object, and then make any changes that they want to make to that object. Such changes could result in exposure of data, corruption of data, or a denial\-of\-service condition.
+Any users with the **Take ownership of files or other objects user right** can take control of any object, regardless of the permissions on that object, and then make any changes that they want to make to that object. Such changes could result in exposure of data, corruption of data, or a denial-of-service condition.
 
 ### Countermeasure
 Ensure that only the local Administrators group has the **Take ownership of files or other objects** user right.

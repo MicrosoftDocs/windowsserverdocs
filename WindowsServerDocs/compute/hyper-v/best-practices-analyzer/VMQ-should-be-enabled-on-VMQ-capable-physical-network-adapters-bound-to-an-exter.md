@@ -13,21 +13,21 @@ ms.assetid: 93d1b155-bf44-46b0-bb69-d34d5b30e574
 author: KBDAzure
 ---
 # VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
 In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.  
   
 ## **Issue**  
-*The following network adapters are capable of virtual machine queue \(VMQ\) but the capability is disabled.*  
+*The following network adapters are capable of virtual machine queue (VMQ) but the capability is disabled.*  
   
 ## **Impact**  
 *Windows is unable to take full advantage of available hardware offloads on the following network adapters:*  
@@ -35,6 +35,6 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 \<list of network adapters>  
   
 ## **Resolution**  
-*Enable VMQ using the Enable\-NetAdapterVmq Windows PowerShell cmdlet or using the Advanced Properties user interface for the network adapter.*  
+*Enable VMQ using the Enable-NetAdapterVmq Windows PowerShell cmdlet or using the Advanced Properties user interface for the network adapter.*  
   
 

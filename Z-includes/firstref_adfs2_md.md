@@ -1,1 +1,1 @@
-Active Directory Federation Services \(AD FS\)
+Active Directory Federation Services (AD FS)

@@ -22,7 +22,7 @@ Constant: SeAuditPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Local Service  
   
@@ -33,10 +33,10 @@ Constant: SeAuditPrivilege
 1.  Because the audit log can potentially be an attack vector if an account is compromised, ensure that only the Local Service and Network Service accounts have the **Generate security audits** user right assigned to them.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
-By default, this setting is Local Service and Network Service on domain controllers and stand\-alone servers.  
+By default, this setting is Local Service and Network Service on domain controllers and stand-alone servers.  
   
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
@@ -44,7 +44,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Local Service<br /><br />Network Service|  
-|Stand\-Alone Server Default Settings|Local Service<br /><br />Network Service|  
+|Stand-Alone Server Default Settings|Local Service<br /><br />Network Service|  
 |Domain Controller Effective Default Settings|Local Service<br /><br />Network Service|  
 |Member Server Effective Default Settings|Local Service<br /><br />Network Service|  
 |Client Computer Effective Default Settings|Local Service<br /><br />Network Service|  
@@ -59,10 +59,10 @@ A restart of the computer is not required for this policy setting to be effectiv
   
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
-Misuse of this user right can result in the generation of many auditing events, potentially hiding evidence of an attack or causing a denial\-of\-service \(DoS\) if the **Audit: Shut down system immediately if unable to log security audits** security policy setting is enabled. For more information see [Audit: Shut down system immediately if unable to log security audits](https://technet.microsoft.com/library/dd772720.aspx).  
+Misuse of this user right can result in the generation of many auditing events, potentially hiding evidence of an attack or causing a denial-of-service (DoS) if the **Audit: Shut down system immediately if unable to log security audits** security policy setting is enabled. For more information see [Audit: Shut down system immediately if unable to log security audits](https://technet.microsoft.com/library/dd772720.aspx).  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   

@@ -11,10 +11,10 @@ ms.topic: article
 ms.assetid: 5865bb08-89a3-406c-8328-0ef8868d03e8
 ---
 # Merge vdisk
-Merges a differencing virtual hard disk \(VHD\) with its corresponding parent VHD. The parent VHD will be modified to include the modifications from the differencing VHD.
+Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD. The parent VHD will be modified to include the modifications from the differencing VHD.
 
 > [!NOTE]
-> This command is only applicable to Windows 7 and Windows Server 2008 R2.
+> This command is only applicable to Windows 7 and Windows Server 2008 R2.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ merge vdisk depth=<n>
 
 |Parameter|Description|
 |-------------|---------------|
-|depth\=<n>|Indicates the number of parent VHD files to merge together. For example, **depth\=1** indicates that the differencing VHD will be merged with one level of the differencing chain.|
+|depth=<n>|Indicates the number of parent VHD files to merge together. For example, **depth=1** indicates that the differencing VHD will be merged with one level of the differencing chain.|
 
 ## Remarks
 

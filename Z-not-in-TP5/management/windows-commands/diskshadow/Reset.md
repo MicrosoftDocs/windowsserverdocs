@@ -21,7 +21,7 @@ reset
 
 ## Remarks
 
--   When you use the **reset** command, you lose state from commands such as **add**, **set**, **load**, or **writer**. **Reset** also releases IVssBackupComponent interfaces and loses non\-persistent shadow copies.
+-   When you use the **reset** command, you lose state from commands such as **add**, **set**, **load**, or **writer**. **Reset** also releases IVssBackupComponent interfaces and loses non-persistent shadow copies.
 
 #### Additional references
 [Command-Line Syntax Key](../Command-Line-Syntax-Key.md)

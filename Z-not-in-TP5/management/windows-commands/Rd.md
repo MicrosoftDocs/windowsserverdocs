@@ -24,10 +24,10 @@ rmdir [<Drive>:]<Path> [/s [/q]]
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]<Path>|Specifies the location and the name of the directory that you want to delete. *Path* is required.|
-|\/s|Deletes a directory tree \(the specified directory and all its subdirectories, including all files\).|
-|\/q|Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. \(Note that **\/q** works only if **\/s** is specified.\)|
-|\/?|Displays help at the command prompt.|
+|[<Drive>:]<Path>|Specifies the location and the name of the directory that you want to delete. *Path* is required.|
+|/s|Deletes a directory tree (the specified directory and all its subdirectories, including all files).|
+|/q|Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. (Note that **/q** works only if **/s** is specified.)|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -35,15 +35,15 @@ rmdir [<Drive>:]<Path> [/s [/q]]
 
     `The directory is not empty`
 
-    Use the **dir \/a** command to list all files \(including hidden and system files\). Then use the **attrib** command with **\-h** to remove hidden file attributes, **\-s** to remove system file attributes, or **\-h \-s** to remove both hidden and system file attributes. After the hidden and file attributes have been removed, you can delete the files.
+    Use the **dir /a** command to list all files (including hidden and system files). Then use the **attrib** command with **-h** to remove hidden file attributes, **-s** to remove system file attributes, or **-h -s** to remove both hidden and system file attributes. After the hidden and file attributes have been removed, you can delete the files.
 
--   If you insert a backslash \(\\\) at the beginning of *Path*, *Path* will start at the root directory \(regardless of the current directory\).
+-   If you insert a backslash (\\) at the beginning of *Path*, *Path* will start at the root directory (regardless of the current directory).
 
 -   You cannot use **rd** to delete the current directory. If you attempt to delete the current directory, the following error message appears:
 
     `The process cannot access the file because it is being used by another process.`
 
-    If you receive this error message, you must change to a different directory \(not a subdirectory of the current directory\), and then use **rd** \(specify *Path* if necessary\).
+    If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then use **rd** (specify *Path* if necessary).
 
 -   The **rd** command, with different parameters, is available from the Recovery Console.
 
@@ -56,7 +56,7 @@ cd ..
 
 You can now safely remove the desired directory.
 
-Use the **\/s** option to remove a directory tree. For example, to remove a directory named Test \(and all its subdirectories and files\) from the current directory, type:
+Use the **/s** option to remove a directory tree. For example, to remove a directory named Test (and all its subdirectories and files) from the current directory, type:
 
 ```
 rd /s test
@@ -69,7 +69,7 @@ rd /s /q test
 ```
 
 > [!CAUTION]
-> When you run **rd \/s** in quiet mode, the entire directory tree is deleted without confirmation. Ensure that important files are moved or backed up before using the **\/q** command\-line option.
+> When you run **rd /s** in quiet mode, the entire directory tree is deleted without confirmation. Ensure that important files are moved or backed up before using the **/q** command-line option.
 
 #### Additional references
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)

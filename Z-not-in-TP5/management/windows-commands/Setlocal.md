@@ -28,7 +28,7 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
 |disableextensions|Disables the command extensions until the matching **endlocal** command is encountered, regardless of the setting before the **setlocal** command was run.|  
 |enabledelayedexpansion|Enables the delayed environment variable expansion until the matching **endlocal** command is encountered, regardless of the setting before the **setlocal** command was run.|  
 |disabledelayedexpansion|Disables the delayed environment variable expansion until the matching **endlocal** command is encountered, regardless of the setting before the **setlocal** command was run.|  
-|\/?|Displays help at the command prompt.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   
@@ -42,11 +42,11 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
   
 -   Nesting commands  
   
-    You can have more than one **setlocal** or **endlocal** command in a batch program \(that is, nested commands\).  
+    You can have more than one **setlocal** or **endlocal** command in a batch program (that is, nested commands).  
   
 -   Testing for command extensions in batch files  
   
-    The **setlocal** command sets the ERRORLEVEL variable. If you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** \(zero\). Otherwise, it is set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:  
+    The **setlocal** command sets the ERRORLEVEL variable. If you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** (zero). Otherwise, it is set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:  
   
     ```  
     setlocal enableextensions  

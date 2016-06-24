@@ -13,7 +13,7 @@ ms.assetid: 26fd78e0-393d-4dec-b96a-66fe81c366c3
 # Deploy the AppLocker Policy into Production
 This topic for the IT professional describes the tasks that should be completed before you deploy AppLocker application control settings.
 
-After successfully testing and modifying the AppLocker policy for each Group Policy Object \(GPO\), you are ready to deploy the enforcement settings into production. For most organizations, this means switching the AppLocker enforcement setting from **Audit only** to **Enforce rules**. However, it is important to follow the deployment plan that you created earlier. For more information, see the [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md). Depending on the needs of different business groups in your organization, you might deploy different enforcement settings for linked GPOs.
+After successfully testing and modifying the AppLocker policy for each Group Policy Object (GPO), you are ready to deploy the enforcement settings into production. For most organizations, this means switching the AppLocker enforcement setting from **Audit only** to **Enforce rules**. However, it is important to follow the deployment plan that you created earlier. For more information, see the [AppLocker Policies Design Guide](AppLocker-Policies-Design-Guide.md). Depending on the needs of different business groups in your organization, you might deploy different enforcement settings for linked GPOs.
 
 ### Understand your design decisions
 Before you deploy an AppLocker policy, you should determine:

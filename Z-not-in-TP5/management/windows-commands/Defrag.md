@@ -32,7 +32,7 @@ defrag <volume> /T [/H] [/U] [/V]
 |C|Perform the operation on all volumes.|
 |A|Perform analysis on the specified volumes.|
 |E|Perform the operation on all volumes except those specified.|
-|H|Run the operation at normal priority \(default is low\).|
+|H|Run the operation at normal priority (default is low).|
 |M|Run the operation on each volume in parallel in the background.|
 |T|Track an operation already in progress on the specified volume.|
 |U|Print the progress of the operation on the screen.|
@@ -54,7 +54,7 @@ defrag <volume> /T [/H] [/U] [/V]
 
     -   You cannot defragment file system volumes that are not **NTFS**, **FAT** or **FAT32**.
 
--   With  Windows Server 2008 R2 ,  Windows Server 2008 , and, Windows Vista, you can schedule to defragment a volume. However, you cannot schedule to defragment a Solid State Drive \(SSD\) or a volume on a Virtual Hard Disk \(VHD\) that resides on an SSD.
+-   With  Windows Server 2008 R2 ,  Windows Server 2008 , and, Windows Vista, you can schedule to defragment a volume. However, you cannot schedule to defragment a Solid State Drive (SSD) or a volume on a Virtual Hard Disk (VHD) that resides on an SSD.
 
 -   To perform this procedure, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. As a security best practice, consider using Run as to perform this procedure.
 
@@ -62,13 +62,13 @@ defrag <volume> /T [/H] [/U] [/V]
 
 -   While **defrag** is analyzing and defragmenting a volume, it displays a blinking cursor. When **defrag** is finished analyzing and defragmenting the volume, it displays the analysis report, the defragmentation report, or both reports, and then exits to the command prompt.
 
--   By default, **defrag** displays a summary of both the analysis and defragmentation reports if you do not specify the **\/a** or **\/v** parameters.
+-   By default, **defrag** displays a summary of both the analysis and defragmentation reports if you do not specify the **/a** or **/v** parameters.
 
 -   You can send the reports to a text file by typing **>***FileName.txt*, where *FileName.txt* is a file name you specify. For example: `defragVolume/v>FileName.txt`
 
--   To interrupt the defragmentation process, at the command line, press **CTRL\+C**.
+-   To interrupt the defragmentation process, at the command line, press **CTRL+C**.
 
--   Running the **defrag** command and Disk Defragmenter are mutually exclusive. If you are using Disk Defragmenter to defragment a volume and you run the **defrag** command at a command\-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk Defragmenter, the defragmentation options in Disk Defragmenter are unavailable.
+-   Running the **defrag** command and Disk Defragmenter are mutually exclusive. If you are using Disk Defragmenter to defragment a volume and you run the **defrag** command at a command-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk Defragmenter, the defragmentation options in Disk Defragmenter are unavailable.
 
 ## <a name="BKMK_examples"></a>Examples
 To defragment the volume on drive C while providing progress and verbose output, type:

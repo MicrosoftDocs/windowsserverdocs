@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: e8a64b9c-4e24-44a2-8027-9acfbc2808e5
 ---
 # Create WMI Filters for the GPO
-To make sure that each GPO associated with a group can only be applied to computers running the correct version of Windows, use the Group Policy Management MMC snap\-in to create and assign WMI filters to the GPO. Although you can create a separate membership group for each GPO, you would then have to manage the memberships of the different groups. Instead, use only a single membership group, and let WMI filters automatically ensure the correct GPO is applied to each computer.
+To make sure that each GPO associated with a group can only be applied to computers running the correct version of Windows, use the Group Policy Management MMC snap-in to create and assign WMI filters to the GPO. Although you can create a separate membership group for each GPO, you would then have to manage the memberships of the different groups. Instead, use only a single membership group, and let WMI filters automatically ensure the correct GPO is applied to each computer.
 
 -   [To create a WMI filter that queries for a specified version of Windows](#bkmk_1)
 
@@ -21,7 +21,7 @@ To make sure that each GPO associated with a group can only be applied to comput
 
 To complete these procedures, you must be a member of the Domain Administrators group, or otherwise be delegated permissions to modify the GPOs.
 
-First, create the WMI filter and configure it to look for a specified version \(or versions\) of the Windows operating system.
+First, create the WMI filter and configure it to look for a specified version (or versions) of the Windows operating system.
 
 ## <a name="bkmk_1"></a>
 #### To create a WMI filter that queries for a specified version of Windows
@@ -41,7 +41,7 @@ First, create the WMI filter and configure it to look for a specified version \(
 
 6.  Click **Add**.
 
-7.  Leave the **Namespace** value set to **root\\CIMv2**.
+7.  Leave the **Namespace** value set to **root\CIMv2**.
 
 8.  In the **Query** text box, type:
 
@@ -49,13 +49,13 @@ First, create the WMI filter and configure it to look for a specified version \(
     select * from Win32_OperatingSystem where Version like "6.%"
     ```
 
-    This query will return **true** for computers running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , and  Windows Server 2008 R2 . To set a filter for just Windows 8 and  Windows Server 2012 , use `"6.2%"`. To specify multiple versions, combine them with `or`, as shown in the following:
+    This query will return **true** for computers running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , and  Windows Server 2008 R2 . To set a filter for just Windows 8 and  Windows Server 2012 , use `"6.2%"`. To specify multiple versions, combine them with `or`, as shown in the following:
 
     ```
     ... where Version like "6.1%" or Version like "6.2%"
     ```
 
-    To restrict the query to only clients or only servers, add a clause that includes the `ProductType` parameter. To filter for client operating systems only, such as Windows 8 or  Windows 7 , use only `ProductType="1"`. For server operating systems that are not domain controllers, use `ProductType="3"`. For domain controllers only, use `ProductType="2"`. This is a useful distinction, because you often want to prevent your GPOs from being applied to the domain controllers on your network.
+    To restrict the query to only clients or only servers, add a clause that includes the `ProductType` parameter. To filter for client operating systems only, such as Windows 8 or  Windows 7 , use only `ProductType="1"`. For server operating systems that are not domain controllers, use `ProductType="3"`. For domain controllers only, use `ProductType="2"`. This is a useful distinction, because you often want to prevent your GPOs from being applied to the domain controllers on your network.
 
     The following clause returns **true** for all computers that are not domain controllers:
 

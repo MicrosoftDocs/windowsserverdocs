@@ -10,7 +10,7 @@ ms.assetid: 81d5fa65-2aea-49d3-b353-357441846c00
 author: jaimeo
 ---
 # Dcgpofix
-Recreates the default Group Policy Objects \(GPOs\) for a domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
+Recreates the default Group Policy Objects (GPOs) for a domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
   
 ## Syntax  
   
@@ -22,15 +22,15 @@ DCGPOFix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/ignoreschema|Ignores the version of the Active Directory® schema mc<br /><br />when you run this command. Otherwise, the command only works on the same schema version as the Windows version in which the command was shipped.|  
-|\/target {Domain &#124; DC &#124; Both}|Specifies which GPO to restore. You can restore the Default Domain Policy GPO, the Default Domain Controllers GPO, or both.|  
-|\/?|Displays Help at the command prompt.|  
+|/ignoreschema|Ignores the version of the Active Directory® schema mc<br /><br />when you run this command. Otherwise, the command only works on the same schema version as the Windows version in which the command was shipped.|  
+|/target {Domain &#124; DC &#124; Both}|Specifies which GPO to restore. You can restore the Default Domain Policy GPO, the Default Domain Controllers GPO, or both.|  
+|/?|Displays Help at the command prompt.|  
   
 ## Remarks  
   
--   The **dcgpofix** command is available in  Windows Server 2008 R2  and  Windows Server 2008 , except on Server Core installations.  
+-   The **dcgpofix** command is available in  Windows Server 2008 R2  and  Windows Server 2008 , except on Server Core installations.  
   
--   Although the Group Policy Management Console \(GPMC\) is distributed with  Windows Server 2008 R2  and  Windows Server 2008 , you must install Group Policy Management as a feature through Server Manager.  
+-   Although the Group Policy Management Console (GPMC) is distributed with  Windows Server 2008 R2  and  Windows Server 2008 , you must install Group Policy Management as a feature through Server Manager.  
   
 ## <a name="BKMK_Examples"></a>Examples  
 Restore the Default Domain Policy GPO to its original state. You will lose any changes that you have made to this GPO. As a best practice, you should configure the Default Domain Policy GPO only to manage the default Account Policies settings, Password Policy, Account Lockout Policy, and Kerberos Policy. In this example, you ignore the version of the Active Directory schema so that the **dcgpofix** command is not limited to same schema as the Windows version in which the command was shipped.  

@@ -9,7 +9,7 @@ ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
 author: jamesmci
 ---
 # Configure the Server Certificate Template
-You can use this procedure to configure the certificate template that Active Directory® Certificate Services \(AD CS\) uses as the basis for server certificates that are enrolled to servers on your network.  
+You can use this procedure to configure the certificate template that Active Directory® Certificate Services (AD CS) uses as the basis for server certificates that are enrolled to servers on your network.  
   
 While configuring this template, you can specify the servers by Active Directory group that should automatically receive a server certificate from AD CS.   
   
@@ -22,9 +22,9 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
   
 ### To configure the certificate template  
   
-1.  On CA1, in Server Manager, click **Tools**, and then click **Certification Authority**. The Certification Authority Microsoft Management Console \(MMC\) opens.  
+1.  On CA1, in Server Manager, click **Tools**, and then click **Certification Authority**. The Certification Authority Microsoft Management Console (MMC) opens.  
   
-2.  In the MMC, double\-click the CA name, right\-click **Certificate Templates**, and then click **Manage**.  
+2.  In the MMC, double-click the CA name, right-click **Certificate Templates**, and then click **Manage**.  
   
 3.  The Certificate Templates console opens. All of the certificate templates are displayed in the details pane.  
   

@@ -19,13 +19,13 @@ Users may experience connectivity issues when you enable multisite if the config
   
 **Cause**  
   
-In a multisite deployment, Windows 10® and Windows® 8 client computers are able to roam between different entry points.  Windows 7  client computers must be associated with a specific entry point in the multisite deployment. If client computers are not in the correct security group, they may receive the wrong group policy settings.  
+In a multisite deployment, Windows 10® and Windows® 8 client computers are able to roam between different entry points.  Windows 7  client computers must be associated with a specific entry point in the multisite deployment. If client computers are not in the correct security group, they may receive the wrong group policy settings.  
   
 **Solution**  
   
-DirectAccess requires at least one security group for all Windows 10 and Windows 8 client computers; we recommend using one security group for all Windows 10 and Windows 8 computers per domain. DirectAccess also requires a security group for  Windows 7  client computers for each entry point. Each client computer should be included in only one security group. Therefore, you should make sure that the security groups for Windows 10 and Windows 8 clients contain only computers running Windows 10 or Windows 8, and that each  Windows 7  client computer belongs to a single dedicated security group for the relevant entry point and that no Windows 10 or Windows 8 clients belong to the  Windows 7  security groups.  
+DirectAccess requires at least one security group for all Windows 10 and Windows 8 client computers; we recommend using one security group for all Windows 10 and Windows 8 computers per domain. DirectAccess also requires a security group for  Windows 7  client computers for each entry point. Each client computer should be included in only one security group. Therefore, you should make sure that the security groups for Windows 10 and Windows 8 clients contain only computers running Windows 10 or Windows 8, and that each  Windows 7  client computer belongs to a single dedicated security group for the relevant entry point and that no Windows 10 or Windows 8 clients belong to the  Windows 7  security groups.  
   
-Configure the Windows 8 security groups on the **Select Groups** page of the **DirectAccess Client Setup** wizard. Configure  Windows 7  security groups on the **Client Support** page of the **Enable Multisite Deployment** wizard, or on the **Client Support** page of the **Add an Entry Point** wizard.  
+Configure the Windows 8 security groups on the **Select Groups** page of the **DirectAccess Client Setup** wizard. Configure  Windows 7  security groups on the **Client Support** page of the **Enable Multisite Deployment** wizard, or on the **Client Support** page of the **Add an Entry Point** wizard.  
   
 ## Kerberos proxy authentication  
 **Error received**—Kerberos proxy authentication is not supported in a multisite deployment. You must enable the use of computer certificates for IPsec user authentication.  
@@ -44,30 +44,30 @@ To enable computer certificate authentication:
   
 To enable computer certificate authentication using Windows PowerShell, use the `Set-DAServer` cmdlet and specify the *IPsecRootCertificate* parameter.  
   
-## IP\-HTTPS certificates  
-**Error received**—The DirectAccess server uses a self\-signed IP\-HTTPS certificate. Configure IP\-HTTPS to use a signed certificate from a known CA.  
+## IP-HTTPS certificates  
+**Error received**—The DirectAccess server uses a self-signed IP-HTTPS certificate. Configure IP-HTTPS to use a signed certificate from a known CA.  
   
 **Cause**  
   
-The IP\-HTTPS certificate is self\-signed. You cannot use self\-signed certificates in a multisite deployment.  
+The IP-HTTPS certificate is self-signed. You cannot use self-signed certificates in a multisite deployment.  
   
 **Solution**  
   
-To select an IP\-HTTPS certificate:  
+To select an IP-HTTPS certificate:  
   
 1.  In the Remote Access Management console, in the details pane, under **Step 2 Remote Access Server**, click **Edit**.  
   
-2.  In the **Remote Access Server Setup** wizard, on the **Network Adapters** page, under **Select the certificate used to authenticate IP\-HTTPS connections**, make sure the **Use a self\-signed certificate created automatically by DirectAccess** check box is cleared, and click **Browse** to select a certificate issued by a trusted CA.  
+2.  In the **Remote Access Server Setup** wizard, on the **Network Adapters** page, under **Select the certificate used to authenticate IP-HTTPS connections**, make sure the **Use a self-signed certificate created automatically by DirectAccess** check box is cleared, and click **Browse** to select a certificate issued by a trusted CA.  
   
 ## Network location server  
   
 -   **Issue 1**  
   
-    **Error received**—DirectAccess is configured to use a self\-signed certificate for the network location server. Configure the network location server to use a signed certificate from a CA.  
+    **Error received**—DirectAccess is configured to use a self-signed certificate for the network location server. Configure the network location server to use a signed certificate from a CA.  
   
     **Cause**  
   
-    The network location server is deployed on the Remote Access server and uses a self\-signed certificate. You cannot use self\-signed certificates in a multisite deployment.  
+    The network location server is deployed on the Remote Access server and uses a self-signed certificate. You cannot use self-signed certificates in a multisite deployment.  
   
     **Solution**  
   
@@ -75,7 +75,7 @@ To select an IP\-HTTPS certificate:
   
     1.  In the Remote Access Management console, in the details pane, under **Step 3 Infrastructure Servers**, click **Edit**.  
   
-    2.  In the **Infrastructure Server Setup** wizard, on the **Network Location Server** page, under **The network location server is deployed on the Remote Access server**, make sure the **Use a self\-signed certificate** check box is cleared, and click **Browse** to select a certificate issued by an Enterprise CA.  
+    2.  In the **Infrastructure Server Setup** wizard, on the **Network Location Server** page, under **The network location server is deployed on the Remote Access server**, make sure the **Use a self-signed certificate** check box is cleared, and click **Browse** to select a certificate issued by an Enterprise CA.  
   
 -   **Issue 2**  
   
@@ -100,14 +100,14 @@ To select an IP\-HTTPS certificate:
   
 **Cause**  
   
-In the existing DirectAccess deployment,  Windows 7  client support was enabled.  
+In the existing DirectAccess deployment,  Windows 7  client support was enabled.  
   
 **Solution**  
   
-DirectAccess requires at least one security group for all Windows 8 client computers and a security group for  Windows 7  client computers for each entry point. Each client computer should be included in only one security group. Therefore, you should make sure that the security group for Windows 8 clients contains only computers running Windows 8, and that each  Windows 7  client computer belongs to a single dedicated security group for the relevant entry point and that no Windows 8 clients belong to the  Windows 7  security groups.  
+DirectAccess requires at least one security group for all Windows 8 client computers and a security group for  Windows 7  client computers for each entry point. Each client computer should be included in only one security group. Therefore, you should make sure that the security group for Windows 8 clients contains only computers running Windows 8, and that each  Windows 7  client computer belongs to a single dedicated security group for the relevant entry point and that no Windows 8 clients belong to the  Windows 7  security groups.  
   
 ## Active Directory site  
-**Error received**—The server <server\_name> is not associated with an Active Directory Site.  
+**Error received**—The server <server_name> is not associated with an Active Directory Site.  
   
 **Cause**  
   
@@ -115,10 +115,10 @@ DirectAccess could not determine the Active Directory site. In the Active Direct
   
 **Solution**  
   
-Confirm that this is the issue by running the command `nltest /dsgetsite` on your Remote Access server. If this is the issue, the command will return ERROR\_NO\_SITENAME. To solve this issue, on your domain controller, make sure that a subnet which contains the internal server IP address exists and that it is defined with an Active Directory site.  
+Confirm that this is the issue by running the command `nltest /dsgetsite` on your Remote Access server. If this is the issue, the command will return ERROR_NO_SITENAME. To solve this issue, on your domain controller, make sure that a subnet which contains the internal server IP address exists and that it is defined with an Active Directory site.  
   
 ## <a name="SaveGPOSettings"></a>Saving server GPO settings  
-**Error received**—An error occurred while saving Remote Access settings to GPO <GPO\_name>.  
+**Error received**—An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
 **Cause**  
   
@@ -137,7 +137,7 @@ This may be caused by an unexpected entry point table configuration in the clien
   
 **Solution**  
   
-Review the entry point table configuration in all client GPOs and fix any inconsistencies in the multisite configuration between the different instances of the client GPOs and the DirectAccess configuration. Use the `Get-DaEntryPointTableItem` cmdlet with the name of the client GPO to get the entry point table on the client. Use the `Get-NetIPHttpsConfiguration` cmdlet to get all the IP\-HTTPS profiles for all the entry points.  
+Review the entry point table configuration in all client GPOs and fix any inconsistencies in the multisite configuration between the different instances of the client GPOs and the DirectAccess configuration. Use the `Get-DaEntryPointTableItem` cmdlet with the name of the client GPO to get the entry point table on the client. Use the `Get-NetIPHttpsConfiguration` cmdlet to get all the IP-HTTPS profiles for all the entry points.  
   
 For further information, see [DirectAccess Client Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/hh848426).  
   

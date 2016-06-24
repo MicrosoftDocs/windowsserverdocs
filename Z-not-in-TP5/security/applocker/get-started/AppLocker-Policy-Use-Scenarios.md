@@ -17,7 +17,7 @@ AppLocker can help you improve the management of application control and the mai
 
 1.  **Application inventory**
 
-    AppLocker has the ability to enforce its policy in an audit\-only mode where all application access activity is collected in event logs for further analysis. Windows PowerShell cmdlets are also available to help you understand application usage and access.
+    AppLocker has the ability to enforce its policy in an audit-only mode where all application access activity is collected in event logs for further analysis. Windows PowerShell cmdlets are also available to help you understand application usage and access.
 
 2.  **Protection against unwanted software**
 
@@ -63,7 +63,7 @@ The following are examples of scenarios in which AppLocker can be used:
 -   In addition to other measures, you need to control the access to sensitive data through application usage.
 
 ## See also
-To explore specific use scenarios, see [AppLocker Step\-by\-Step Scenarios](http://technet.microsoft.com/library/ee791835(v=ws.10).aspx).
+To explore specific use scenarios, see [AppLocker Step-by-Step Scenarios](http://technet.microsoft.com/library/ee791835(v=ws.10).aspx).
 
 ## See Also
 [AppLocker Technical Reference](AppLocker-Technical-Reference.md)

@@ -14,7 +14,7 @@ ms.assetid: 2e42f92c-53a6-4389-bd68-fdd268df53ed
 This security policy reference topic for the IT professional describes the best practices, location, values, and security considerations for this policy setting.
 
 ## Reference
-When a session is locked in a Windows operating system \(meaning the user at the computer pressed CTRL\+ALT\+DEL and the Secure Desktop is displayed\), user information is displayed. By default, this information is in the form of **<user name> is logged on**. The displayed user name is the user’s full name as set on the Properties page for that user. These settings do not apply to the logon tiles, which are displayed on the desktop after using the **Switch User** feature. The information that is displayed can be changed to meet your security requirements using the following possible values.
+When a session is locked in a Windows operating system (meaning the user at the computer pressed CTRL+ALT+DEL and the Secure Desktop is displayed), user information is displayed. By default, this information is in the form of **<user name> is logged on**. The displayed user name is the user’s full name as set on the Properties page for that user. These settings do not apply to the logon tiles, which are displayed on the desktop after using the **Switch User** feature. The information that is displayed can be changed to meet your security requirements using the following possible values.
 
 ### Possible values
 
@@ -40,15 +40,15 @@ Your implementation of this policy depends on your security requirements for dis
 Depending on your security policy, you might also want to enable the **Interactive logon: Do not display last user name** policy, which will prevent the Windows operating system from displaying the logon name and logon tile of the last user to logon.
 
 ### Location
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options**
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**
 
 ### Default values
 
-|Server type or Group Policy object \(GPO\)|Default value|
+|Server type or Group Policy object (GPO)|Default value|
 |----------------------------------------------|-----------------|
 |Default domain policy|Not defined|
 |Default domain controller policy|Not defined|
-|Stand\-alone server default settings|Not defined|
+|Stand-alone server default settings|Not defined|
 |Domain controller effective default settings|**User display name, domain and user names**|
 |Member server effective default settings|**User display name, domain and user names**|
 |Effective GPO default settings on client computers|**User display name, domain and user names**|
@@ -66,7 +66,7 @@ None. Changes to this policy become effective without a computer restart when th
 None.
 
 ### Group Policy
-This policy setting can be configured by using the Group Policy Management Console \(GPMC\) to be distributed through Group Policy Objects \(GPOs\). If this policy is not contained in a distributed GPO, this policy can be configured on the local computer by using the Local Security Policy snap\-in.
+This policy setting can be configured by using the Group Policy Management Console (GPMC) to be distributed through Group Policy Objects (GPOs). If this policy is not contained in a distributed GPO, this policy can be configured on the local computer by using the Local Security Policy snap-in.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
@@ -75,7 +75,7 @@ This section describes how an attacker might exploit a feature or its configurat
 When a computer displays the Secure Desktop in an unsecured area, certain user information can be readily available to anyone looking at the monitor, either physically or through a remote connection. The displayed user information could include the domain user account name or the full name of the user who locked the session or who had logged on last.
 
 ### Countermeasure
-Enabling this policy setting allows the operating system to hide certain user information from being displayed on the Secure Desktop \(after the computer has been booted or when the session has been locked by using CTRL\+ALT\+DEL\). However, user information is displayed if the **Switch user** feature is used so that the logon tiles are displayed for each logged on user.
+Enabling this policy setting allows the operating system to hide certain user information from being displayed on the Secure Desktop (after the computer has been booted or when the session has been locked by using CTRL+ALT+DEL). However, user information is displayed if the **Switch user** feature is used so that the logon tiles are displayed for each logged on user.
 
 You might also want to enable the **Interactive logon: Do not display last user name** policy, which will prevent the Windows operating system from displaying the logon name and logon tile of the last user to logon.
 

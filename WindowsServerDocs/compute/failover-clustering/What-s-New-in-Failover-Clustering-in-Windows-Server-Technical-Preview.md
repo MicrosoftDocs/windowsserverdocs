@@ -34,11 +34,11 @@ This topic explains the new and changed functionality in Failover Clustering in 
 -   [Simplified SMB Multichannel and Multi-NIC Cluster Networks](#BKMK_SMBMultiChannel)  
 
 ## <a name="BKMK_RollingUpgrade"></a>Cluster Operating System Rolling Upgrade  
-A new feature in Failover Clustering, Cluster Operating System Rolling Upgrade, enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 Technical Preview without stopping the Hyper\-V or the Scale\-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements \(SLA\) can be avoided.  
+A new feature in Failover Clustering, Cluster Operating System Rolling Upgrade, enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 Technical Preview without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
 
 **What value does this change add?**  
 
-Upgrading a Hyper\-V or Scale\-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 Technical Preview no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016 Technical Preview. The cluster functional level is upgraded to Windows Server 2016 Technical Preview by using the Windows PowerShell cmdlt `Update-ClusterFunctionalLevel`.  
+Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 Technical Preview no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016 Technical Preview. The cluster functional level is upgraded to Windows Server 2016 Technical Preview by using the Windows PowerShell cmdlt `Update-ClusterFunctionalLevel`.  
 
 > [!WARNING]  
 > -   After you update the cluster functional level, you cannot go back to a  Windows Server 2012 R2  cluster functional level.  
@@ -46,13 +46,13 @@ Upgrading a Hyper\-V or Scale\-Out File Server cluster from Windows Server 2012 
 
 **What works differently?**  
 
-A Hyper\-V or Scale\-Out File Server failover cluster can now easily be upgraded without any downtime or need to build a new cluster with nodes that are running the Windows Server 2016 Technical Preview operating system. Migrating clusters to Windows Server 2012 R2 involved taking the existing cluster offline and reinstalling the new operating system for each nodes, and then bringing the cluster back online. The old process was cumbersome and required downtime. However, in Windows Server 2016 Technical Preview, the cluster does not need to go offline at any point.  
+A Hyper-V or Scale-Out File Server failover cluster can now easily be upgraded without any downtime or need to build a new cluster with nodes that are running the Windows Server 2016 Technical Preview operating system. Migrating clusters to Windows Server 2012 R2 involved taking the existing cluster offline and reinstalling the new operating system for each nodes, and then bringing the cluster back online. The old process was cumbersome and required downtime. However, in Windows Server 2016 Technical Preview, the cluster does not need to go offline at any point.  
 
 The cluster operating systems for the upgrade in phases are as follows for each node in a cluster:  
 
 -   The node is paused and drained of all virtual machines that are running on it.  
 
--   The virtual machines \(or other cluster workload\) are migrated to another node in the cluster.The virtual machines are migrated to another node in the cluster.  
+-   The virtual machines (or other cluster workload) are migrated to another node in the cluster.The virtual machines are migrated to another node in the cluster.  
 
 -   The existing operating system is removed and a clean installation of the Windows Server 2016 Technical Preview operating system on the node is performed.  
 
@@ -69,7 +69,7 @@ The cluster operating systems for the upgrade in phases are as follows for each 
 For more information, see [Cluster Operating System Rolling Upgrade](Cluster-Operating-System-Rolling-Upgrade.md).  
 
 ## <a name="BKMK_SR"></a>Storage Replica  
-Storage Replica \(SR\) is a new feature that enables storage\-agnostic, block\-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash\-consistent volumes to ensure zero data loss at the file\-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
+Storage Replica (SR) is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 **What value does this change add?**  
 
@@ -81,7 +81,7 @@ Storage Replication enables you to do the following:
 
 -   Stretch Windows failover clusters to metropolitan distances.  
 
--   Use Microsoft software end to end for storage and clustering, such as Hyper\-V, Storage Replica, Storage Spaces, Cluster, Scale\-Out File Server, SMB3, Deduplication, and ReFS\/NTFS.  
+-   Use Microsoft software end to end for storage and clustering, such as Hyper-V, Storage Replica, Storage Spaces, Cluster, Scale-Out File Server, SMB3, Deduplication, and ReFS/NTFS.  
 
 -   Help reduce cost and complexity as follows:  
 
@@ -91,7 +91,7 @@ Storage Replication enables you to do the following:
 
     -   Features ease of graphical management for individual nodes and clusters through Failover Cluster Manager.  
 
-    -   Includes comprehensive, large\-scale scripting options through Windows PowerShell.  
+    -   Includes comprehensive, large-scale scripting options through Windows PowerShell.  
 
 -   Help reduce downtime, and increase reliability and productivity intrinsic to Windows.  
 
@@ -114,18 +114,18 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Uses the standard publically available Microsoft Azure Blob Storage which eliminates the extra maintenance overhead of VMs hosted in a public cloud.  
 
--   Same Microsoft Azure Storage Account can be used for multiple clusters \(one blob file per cluster; cluster unique id used as blob file name\).  
+-   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).  
 
--   Provides a very low on\-going cost to the Storage Account \(very small data written per blob file, blob file updated only once when cluster nodes’ state changes\).  
+-   Provides a very low on-going cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes’ state changes).  
 
-For more information, see 	[Deploy a Cloud Witness For a Failover Cluster](Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md).  
+For more information, see   [Deploy a Cloud Witness For a Failover Cluster](Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md).  
 
 **What works differently?**  
 
 This capability is new in Windows Server 2016 Technical Preview.  
 
 ## <a name="BKMK_VMs"></a>Virtual Machine Resiliency  
-**Compute Resiliency**Windows Server 2016 Technical Preview includes increased virtual machines compute resiliency to help reduce intra\-cluster communication issues in your compute cluster as follows: .  
+**Compute Resiliency**Windows Server 2016 Technical Preview includes increased virtual machines compute resiliency to help reduce intra-cluster communication issues in your compute cluster as follows: .  
 
 -   **Resiliency options  available for virtual machines:**  You can now configure virtual machine resiliency options that define behavior of the virtual machines during transient failures:  
 
@@ -146,21 +146,21 @@ In Windows Server 2016 Technical Preview, virtual machine storage resiliency is 
 ## <a name="BKMK_Diagnostics"></a>Diagnostic Improvements in Failover Clustering  
 To help diagnose issues with failover clusters, Windows Server 2016 Technical Preview includes the following:  
 
--   Several enhancements to cluster log files \(such as Time Zone Information and DiagnosticVerbose log\) that makes is easier to troubleshoot failover clustering issues. For more information, see  [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](http://blogs.msdn.com/b/clustering/archive/2015/05/15/10614930.aspx).  
+-   Several enhancements to cluster log files (such as Time Zone Information and DiagnosticVerbose log) that makes is easier to troubleshoot failover clustering issues. For more information, see  [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](http://blogs.msdn.com/b/clustering/archive/2015/05/15/10614930.aspx).  
 
 -   A new  a dump type of **Active memory dump**, which filters out most memory pages allocated to virtual machines, and therefore makes the memory.dmp much smaller and easier to save or copy.  For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](http://blogs.msdn.com/b/clustering/archive/2015/05/18/10615526.aspx).  
 
-## <a name="BKMK_SiteAware"></a>Site\-aware Failover Clusters  
-Windows Server 2016 Technical Preview includes site\- aware failover clusters that enable group nodes in stretched clusters based on their physical location \(site\). Cluster site\-awareness enhances key operations during the cluster lifecycle such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/19/10636304.aspx).  
+## <a name="BKMK_SiteAware"></a>Site-aware Failover Clusters  
+Windows Server 2016 Technical Preview includes site- aware failover clusters that enable group nodes in stretched clusters based on their physical location (site). Cluster site-awareness enhances key operations during the cluster lifecycle such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/19/10636304.aspx).  
 
-## <a name="BKMK_multidomainclusters"></a>Workgroup and Multi\-domain clusters  
+## <a name="BKMK_multidomainclusters"></a>Workgroup and Multi-domain clusters  
 In  Windows Server 2012 R2  and previous versions, a cluster can only be created between member nodes joined to the same domain.   Windows Server 2016 Technical Preview breaks down these barriers and introduces the ability to create a Failover Cluster without Active Directory dependencies. You can now create failover clusters in the following configurations:  
 
--   **Single\-domain Clusters.** Clusters with all nodes joined to the same domain.  
+-   **Single-domain Clusters.** Clusters with all nodes joined to the same domain.  
 
--   **Multi\-domain Clusters.** Clusters with nodes which are members of different domains.  
+-   **Multi-domain Clusters.** Clusters with nodes which are members of different domains.  
 
--   **Workgroup Clusters.** Clusters with nodes which are member servers \/ workgroup \(not domain joined\).  
+-   **Workgroup Clusters.** Clusters with nodes which are member servers / workgroup (not domain joined).  
 
 For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)  
 ## <a name="BKMK_VMNodeFairness"></a>Virtual Machine Node Fairness  

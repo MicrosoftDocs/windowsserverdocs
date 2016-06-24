@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: ea25a4b2-5fad-4360-9c47-c2c9df7ea31f
 ---
 # Using The Reject-AutoAddDevices Command
-Rejects computers that are pending administrative approval. When the Auto\-Add policy is enabled, administrative approval is required before unknown computers \(those that are not prestaged\) can install an image. You can enable this policy using the **PXE Response** tab of the server’s properties page.
+Rejects computers that are pending administrative approval. When the Auto-Add policy is enabled, administrative approval is required before unknown computers (those that are not prestaged) can install an image. You can enable this policy using the **PXE Response** tab of the server’s properties page.
 
 ## Syntax
 
@@ -21,8 +21,8 @@ WDSUTIL [Options] /Reject-AutoAddDevices [/Server:<Server name>] /RequestId:<Req
 
 |Parameter|Description|
 |-------------|---------------|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name \(FQDN\). If no server name is specified, the local server will be used.|
-|\/RequestId:<Request ID &#124; ALL>|Specifies the request ID assigned to the pending computer. To reject all pending computers, specify **ALL**.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|/RequestId:<Request ID &#124; ALL>|Specifies the request ID assigned to the pending computer. To reject all pending computers, specify **ALL**.|
 
 ## <a name="BKMK_examples"></a>Examples
 To reject a single computer, type:

@@ -14,9 +14,9 @@ Use this topic to find the documentation resources and other technical informati
   
 **Did you mean…**  
   
--   [Group Policy Settings Reference for Windows Server 2012 and Windows 8](http://go.microsoft.com/fwlink/?LinkId=261775)  
+-   [Group Policy Settings Reference for Windows Server 2012 and Windows 8](http://go.microsoft.com/fwlink/?LinkId=261775)  
   
--   [Overview of Group Policy \(Windows Server 2008 R2\)](http://technet.microsoft.com/library/cc726027.aspx)  
+-   [Overview of Group Policy (Windows Server 2008 R2)](http://technet.microsoft.com/library/cc726027.aspx)  
   
 -   [Overview of Preferences](http://go.microsoft.com/fwlink/p/?linkid=216977)  
   
@@ -29,7 +29,7 @@ Use this topic to find the documentation resources and other technical informati
 -   [Windows Firewall with Advanced Security Overview](assetId:///9ae80ae1-a693-48ed-917a-f03ea92b550d)  
   
 ## <a name="BKMK_OVER"></a>Feature description  
-Group Policy is an infrastructure that allows you to specify managed configurations for users and computers through Group Policy settings and Group Policy Preferences. To configure Group Policy settings that affect only a local computer or user, you can use the Local Group Policy Editor. You can manage Group Policy settings and Group Policy Preferences in an Active Directory Domain Services \(AD DS\) environment through the Group Policy Management Console \(GPMC\). Group Policy management tools also are included in the Remote Server Administration Tools pack to provide a way for you to administer Group Policy settings from your desktop.  
+Group Policy is an infrastructure that allows you to specify managed configurations for users and computers through Group Policy settings and Group Policy Preferences. To configure Group Policy settings that affect only a local computer or user, you can use the Local Group Policy Editor. You can manage Group Policy settings and Group Policy Preferences in an Active Directory Domain Services (AD DS) environment through the Group Policy Management Console (GPMC). Group Policy management tools also are included in the Remote Server Administration Tools pack to provide a way for you to administer Group Policy settings from your desktop.  
   
 **Windows PowerShell** When the GPMC is installed on servers or client computers, the Windows PowerShell module is also installed. You have full Windows PowerShell functionality. If you install the Remote Server Administration Tools pack, the latest Windows PowerShell cmdlets for Group Policy are also installed. For more information about Windows PowerShell cmdlets and scripts that you can use to manage Group Policy, see [Group Policy Cmdlets](http://technet.microsoft.com/library/hh967461.aspx).  
   
@@ -51,7 +51,7 @@ Here are some  Windows Server 2012  scenarios that use Group Policy to implement
 ## <a name="BKMK_NEW"></a>New and changed functionality  
 Group Policy designs can become very complex. Various factors, such as the large number of policy settings and preference items available, the interaction between multiple policies, and inheritance options, can make it difficult to determine if Group Policy is functioning correctly on each computer.  
   
-In  Windows Server 2012 , Group Policy focused on improving the Group Policy troubleshooting experience.  Windows Server 2012 R2  expands the support for IPv6 networking, adds policy caching to reduce sign\-in times in synchronous mode, and provides more detailed event logging. For more details about these changes and more information about the additional changes in functionality that are not listed here, see [What's New in Group Policy in Windows Server 2012 \[redirected\]](assetId:///2e7bfa32-9fa9-4031-8160-d3a8c526df8d) and [What's New in Group Policy in Windows Server](What-s-New-in-Group-Policy-in-Windows-Server.md).  
+In  Windows Server 2012 , Group Policy focused on improving the Group Policy troubleshooting experience.  Windows Server 2012 R2  expands the support for IPv6 networking, adds policy caching to reduce sign-in times in synchronous mode, and provides more detailed event logging. For more details about these changes and more information about the additional changes in functionality that are not listed here, see [What's New in Group Policy in Windows Server 2012 \[redirected\]](assetId:///2e7bfa32-9fa9-4031-8160-d3a8c526df8d) and [What's New in Group Policy in Windows Server](What-s-New-in-Group-Policy-in-Windows-Server.md).  
   
 ## <a name="BKMK_LINKS"></a>See also  
   

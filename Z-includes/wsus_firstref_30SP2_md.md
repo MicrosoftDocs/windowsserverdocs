@@ -1,1 +1,1 @@
-Windows Server Update Services \(WSUS\)
+Windows Server Update Services (WSUS)

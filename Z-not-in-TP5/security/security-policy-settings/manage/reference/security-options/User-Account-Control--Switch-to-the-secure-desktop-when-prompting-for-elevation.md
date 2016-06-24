@@ -18,7 +18,7 @@ This policy setting determines whether the elevation request prompts on the inte
   
 The secure desktop presents the logon UI and restricts functionality and access to the system until the logon requirements are satisfied.  
   
-The secure desktop’s primary difference from the user desktop is that only trusted processes running as SYSTEM are allowed to run here \(that is, nothing is running at the user’s privilege level\). The path to get to the secure desktop from the user desktop must also be trusted through the entire chain.  
+The secure desktop’s primary difference from the user desktop is that only trusted processes running as SYSTEM are allowed to run here (that is, nothing is running at the user’s privilege level). The path to get to the secure desktop from the user desktop must also be trusted through the entire chain.  
   
 ### Possible values  
   
@@ -35,7 +35,7 @@ The secure desktop’s primary difference from the user desktop is that only tru
 1.  Enable the **User Account Control: Switch to the secure desktop when prompting for elevation setting**. The secure desktop helps protect against input and output spoofing by presenting the credentials dialog box in a protected section of memory that is accessible only by trusted system processes.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -44,13 +44,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Enabled|  
+|Stand-Alone Server Default Settings|Enabled|  
 |DC Effective Default Settings|Enabled|  
 |Member Server Effective Default Settings|Enabled|  
 |Client Computer Effective Default Settings|Enabled|  
   
 ### Operating system version differences  
-There are no differences in this security policy between operating systems beginning with Windows Vista.  
+There are no differences in this security policy between operating systems beginning with Windows Vista.  
   
 ## Policy management  
 This section describes features and tools that are available to help you manage this policy.  
@@ -59,7 +59,7 @@ This section describes features and tools that are available to help you manage 
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.  
   
 ### Group Policy  
-This policy has no impact of Windows operating systems earlier than Windows Vista.  
+This policy has no impact of Windows operating systems earlier than Windows Vista.  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  

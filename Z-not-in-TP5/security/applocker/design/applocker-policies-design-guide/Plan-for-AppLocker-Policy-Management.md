@@ -19,7 +19,7 @@ Before you begin the deployment process, consider how the AppLocker rules will b
 ### Application and user support policy
 Developing a process for managing AppLocker rules helps assure that AppLocker continues to effectively control how applications are allowed to run in your organization. Considerations include:
 
--   What type of end\-user support is provided for blocked applications?
+-   What type of end-user support is provided for blocked applications?
 
 -   How are new rules added to the policy?
 
@@ -39,9 +39,9 @@ If your organization has an established help desk support department in place, c
 
 -   How will the support department resolve application control issues between the end user and those who maintain the AppLocker rules?
 
-**End\-user support**
+**End-user support**
 
-Because AppLocker is preventing unapproved applications from running, it is important that your organization carefully plan how to provide end\-user support. Considerations include:
+Because AppLocker is preventing unapproved applications from running, it is important that your organization carefully plan how to provide end-user support. Considerations include:
 
 -   Do you want to use an intranet site as a first line of support for users who have tried to run a blocked application?
 
@@ -55,31 +55,31 @@ The following image shows an example of the error message for a blocked applicat
 
 ![](../../../media/Plan-for-AppLocker-Policy-Management/BlockedAppMsg.gif)
 
-For steps to display a custom URL for the message, see [Display a Custom URL Message When Users Try to Run a Blocked Application](http://go.microsoft.com/fwlink/?LinkId=160265) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=160265\).
+For steps to display a custom URL for the message, see [Display a Custom URL Message When Users Try to Run a Blocked Application](http://go.microsoft.com/fwlink/?LinkId=160265) (http://go.microsoft.com/fwlink/?LinkId=160265).
 
 **AppLocker event management**
 
-Each time that a process requests permission to run, AppLocker creates an event in the AppLocker event log. The event details which file tried to run, the attributes of that file, the user that initiated the request, and the rule GUID that was used to make the AppLocker execution decision. The AppLocker event log is located in the following path: **Applications and Services Logs\\Microsoft\\Windows\\AppLocker**. The AppLocker log includes three logs:
+Each time that a process requests permission to run, AppLocker creates an event in the AppLocker event log. The event details which file tried to run, the attributes of that file, the user that initiated the request, and the rule GUID that was used to make the AppLocker execution decision. The AppLocker event log is located in the following path: **Applications and Services Logs\Microsoft\Windows\AppLocker**. The AppLocker log includes three logs:
 
-1.  **EXE and DLL**. Contains events for all files affected by the executable and DLL rule collections \(.exe, .com, .dll, and .ocx\).
+1.  **EXE and DLL**. Contains events for all files affected by the executable and DLL rule collections (.exe, .com, .dll, and .ocx).
 
-2.  **MSI and Script**. Contains events for all files affected by the Windows Installer and script rule collections \(.msi, .msp, .ps1, .bat, .cmd, .vbs, and .js\).
+2.  **MSI and Script**. Contains events for all files affected by the Windows Installer and script rule collections (.msi, .msp, .ps1, .bat, .cmd, .vbs, and .js).
 
-3.  **Packaged app\-Deployment** or **Packaged app\-Execution**, contains events for all Windows 8 apps affected by the Packaged app and Packed app installer rule collection \(.appx\).
+3.  **Packaged app-Deployment** or **Packaged app-Execution**, contains events for all Windows 8 apps affected by the Packaged app and Packed app installer rule collection (.appx).
 
-Collecting these events in a central location can help you maintain your AppLocker  policy and troubleshoot rule configuration problems. Event collection technologies such as those available in Windows  allow administrators to subscribe to specific event channels and have the events from source computers aggregated into a forwarded event log on a Windows Server operating system collector. For more information about setting up an event subscription, see [Configure Computers to Collect and Forward Events](http://go.microsoft.com/fwlink/?LinkId=145012) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=145012\).
+Collecting these events in a central location can help you maintain your AppLocker  policy and troubleshoot rule configuration problems. Event collection technologies such as those available in Windows  allow administrators to subscribe to specific event channels and have the events from source computers aggregated into a forwarded event log on a Windows Server operating system collector. For more information about setting up an event subscription, see [Configure Computers to Collect and Forward Events](http://go.microsoft.com/fwlink/?LinkId=145012) (http://go.microsoft.com/fwlink/?LinkId=145012).
 
 ### Policy maintenance
 As new applications are deployed or existing applications are updated by the software publisher, you will need to make revisions to your rule collections to ensure that the policy is current.
 
-You can edit an AppLocker policy by adding, changing, or removing rules. However, you cannot specify a version for the policy by importing additional rules. To ensure version control when modifying an AppLocker policy, use Group Policy management software that allows you to create versions of Group Policy Objects \(GPOs\). An example of this type of software is the Advanced Group Policy Management feature from the Microsoft Desktop Optimization Pack. For more information about Advanced Group Policy Management, see [Advanced Group Policy Management Overview](http://go.microsoft.com/fwlink/?LinkId=145013) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=145013\).
+You can edit an AppLocker policy by adding, changing, or removing rules. However, you cannot specify a version for the policy by importing additional rules. To ensure version control when modifying an AppLocker policy, use Group Policy management software that allows you to create versions of Group Policy Objects (GPOs). An example of this type of software is the Advanced Group Policy Management feature from the Microsoft Desktop Optimization Pack. For more information about Advanced Group Policy Management, see [Advanced Group Policy Management Overview](http://go.microsoft.com/fwlink/?LinkId=145013) (http://go.microsoft.com/fwlink/?LinkId=145013).
 
 > [!CAUTION]
 > You should not edit an AppLocker rule collection while it is being enforced in Group Policy. Because AppLocker controls what files are allowed to run, making changes to a live policy can create unexpected behavior.
 
 **New version of a supported application**
 
-When a new version of an application is deployed in the organization, you need to determine whether to continue to support the previous version of that application. To add the new version, you might only need to create a new rule for each file that is associated with the application. If you are using publisher conditions and the version is not specified, then the existing rule or rules might be sufficient to allow the updated file to run. You must ensure, however, that the updated application has not altered the file names or added files to support new functionality. If so, then you must modify the existing rules or create new rules. To continue to reuse a publisher\-based rule without a specific file version, you must also ensure that the file's digital signature is still identical to the previous version—the publisher, product name, and file name \(if configured in your rule\) must all match for the rule to be correctly applied.
+When a new version of an application is deployed in the organization, you need to determine whether to continue to support the previous version of that application. To add the new version, you might only need to create a new rule for each file that is associated with the application. If you are using publisher conditions and the version is not specified, then the existing rule or rules might be sufficient to allow the updated file to run. You must ensure, however, that the updated application has not altered the file names or added files to support new functionality. If so, then you must modify the existing rules or create new rules. To continue to reuse a publisher-based rule without a specific file version, you must also ensure that the file's digital signature is still identical to the previous version—the publisher, product name, and file name (if configured in your rule) must all match for the rule to be correctly applied.
 
 To determine whether a file has been modified during an application update, review the publisher's release details provided with the update package. You can also review the publisher's Web page to retrieve this information. Each file can also be inspected to determine the version.
 
@@ -105,12 +105,12 @@ A file could be blocked for three reasons:
 
 -   A deny rule, which cannot be overridden, is explicitly blocking the file.
 
-Before editing the rule collection, first determine what rule is preventing the file from running. You can troubleshoot the problem by using the **Test\-AppLockerPolicy** Windows PowerShell cmdlet. For more information about troubleshooting an AppLockerpolicy, see [Testing and Updating an AppLocker Policy](http://go.microsoft.com/fwlink/?LinkId=160269) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=160269\).
+Before editing the rule collection, first determine what rule is preventing the file from running. You can troubleshoot the problem by using the **Test-AppLockerPolicy** Windows PowerShell cmdlet. For more information about troubleshooting an AppLockerpolicy, see [Testing and Updating an AppLocker Policy](http://go.microsoft.com/fwlink/?LinkId=160269) (http://go.microsoft.com/fwlink/?LinkId=160269).
 
 ## Next steps
 After deciding how your organization will manage your AppLocker policy, record your findings.
 
--   **End\-user support policy.** Document the process that you will use for handling calls from users who have attempted to run a blocked application, and ensure that support personnel have clear escalation steps so that the administrator can update the AppLocker policy, if necessary.
+-   **End-user support policy.** Document the process that you will use for handling calls from users who have attempted to run a blocked application, and ensure that support personnel have clear escalation steps so that the administrator can update the AppLocker policy, if necessary.
 
 -   **Event processing.** Document whether events will be collected in a central location called a store, how that store will be archived, and whether the events will be processed for analysis.
 

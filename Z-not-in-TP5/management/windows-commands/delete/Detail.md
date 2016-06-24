@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 305755bd-1a51-486b-8515-62d3f227c291
 ---
 # Detail
-Displays information about the selected disk, partition, volume, or virtual hard disk \(VHD\).
+Displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 
 ## Syntax
 

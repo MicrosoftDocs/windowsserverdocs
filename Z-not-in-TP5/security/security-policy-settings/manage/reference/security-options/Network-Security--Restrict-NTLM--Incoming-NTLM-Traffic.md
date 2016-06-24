@@ -28,7 +28,7 @@ The **Network Security: Restrict NTLM: Incoming NTLM Traffic** policy setting al
   
 -   **Deny all accounts**  
   
-    The server will deny NTLM authentication requests from all incoming traffic \(whether domain account logon or local account logon\), return an NTLM blocked error message to the client computer, and log the error.  
+    The server will deny NTLM authentication requests from all incoming traffic (whether domain account logon or local account logon), return an NTLM blocked error message to the client computer, and log the error.  
   
 -   Not defined  
   
@@ -38,7 +38,7 @@ The **Network Security: Restrict NTLM: Incoming NTLM Traffic** policy setting al
 If you select **Deny all domain accounts** or **Deny all accounts**, incoming NTLM traffic to the member server will be restricted. It is better to set the **Network Security: Restrict NTLM: Audit Incoming NTLM Traffic** policy setting and then review the Operational log to understand what authentication attempts are made to the member servers, and subsequently what client applications are using NTLM.  
   
 ### Location  
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options**  
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**  
   
 ### Default values  
   
@@ -46,13 +46,13 @@ If you select **Deny all domain accounts** or **Deny all accounts**, incoming NT
 |----------------------|-----------------|  
 |Default domain policy|Not defined|  
 |Default domain controller policy|Not defined|  
-|Stand\-alone server default settings|Not defined|  
+|Stand-alone server default settings|Not defined|  
 |Domain controller effective default settings|Not defined|  
 |Member server effective default settings|Not defined|  
 |Client computer effective default settings|Not defined|  
   
 ### Operating system version differences  
-This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .  
+This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .  
   
 ## Policy management  
 This section describes different features and tools available to help you manage this policy.  
@@ -64,14 +64,14 @@ None. Changes to this policy become effective without a restart when saved local
 Setting and deploying this policy using Group Policy takes precedence over the setting on the local computer. If the Group Policy is set to **Not Configured**, local settings will apply.  
   
 ### Auditing  
-View the Operational log to see if this policy is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\\Microsoft\\Windows\\NTLM**.  
+View the Operational log to see if this policy is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\Microsoft\Windows\NTLM**.  
   
 There are no Security Audit Event policies that can be configured to view event output from this policy.  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
-NTLM and NTLMv2 authentication is vulnerable to a variety of malicious attacks, including SMB replay, man\-in\-the\-middle attacks, and brute force attacks. Reducing and eliminating NTLM authentication from your environment forces the Windows operating system to use more secure protocols, such as the Kerberos version 5 protocol, or different authentication mechanisms, such as smart cards.  
+NTLM and NTLMv2 authentication is vulnerable to a variety of malicious attacks, including SMB replay, man-in-the-middle attacks, and brute force attacks. Reducing and eliminating NTLM authentication from your environment forces the Windows operating system to use more secure protocols, such as the Kerberos version 5 protocol, or different authentication mechanisms, such as smart cards.  
   
 ### Vulnerability  
 Malicious attacks on NTLM authentication traffic that result in a compromised server can occur only if the server handles NTLM requests. If those requests are denied, brute force attacks on NTLM are eliminated.  

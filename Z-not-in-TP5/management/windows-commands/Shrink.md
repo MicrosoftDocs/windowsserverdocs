@@ -26,8 +26,8 @@ shrink querymax [noerr]
 
 |Parameter|Description|
 |-------------|---------------|
-|desired\=<n>|Specifies the desired amount of space in megabytes \(MB\) to reduce the size of the volume by.|
-|minimum\=<n>|Specifies the minimum amount of space in MB to reduce the size of the volume by.|
+|desired=<n>|Specifies the desired amount of space in megabytes (MB) to reduce the size of the volume by.|
+|minimum=<n>|Specifies the minimum amount of space in MB to reduce the size of the volume by.|
 |querymax|Returns the maximum amount of space in MB by which the volume can be reduced. This value may change if applications are currently accessing the volume.|
 |nowait|Forces the command to return immediately while the shrink process is still in progress.|
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
@@ -38,9 +38,9 @@ shrink querymax [noerr]
 
 -   This command works on basic volumes, and on simple or spanned dynamic volumes.
 
--   If a desired amount is not specified, the volume will be reduced by the minimum amount \(if specified\).
+-   If a desired amount is not specified, the volume will be reduced by the minimum amount (if specified).
 
--   If a minimum amount is not specified, the volume will be reduced by the desired amount \(if specified\).
+-   If a minimum amount is not specified, the volume will be reduced by the desired amount (if specified).
 
 -   If neither a minimum amount nor a desired amount is specified, the volume will be reduced by as much as possible.
 
@@ -48,7 +48,7 @@ shrink querymax [noerr]
 
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 
--   This command does not operate on original equipment manufacturer \(OEM\) partitions, Extensible Firmware Interface \(EFI\) system partitions, or recovery partitions.
+-   This command does not operate on original equipment manufacturer (OEM) partitions, Extensible Firmware Interface (EFI) system partitions, or recovery partitions.
 
 ## <a name="BKMK_examples"></a>Examples
 To reduce the size of the selected volume by the largest possible amount between 250 and 500 megabytes, type:
@@ -68,6 +68,6 @@ shrink querymax
 
 [Diskpart \[LH\]](assetId:///26a4a166-95fa-4faf-95bc-2d5345f4a57a)
 
-[Resize\-Partition](http://technet.microsoft.com/library/hh848680.aspx)
+[Resize-Partition](http://technet.microsoft.com/library/hh848680.aspx)
 
 

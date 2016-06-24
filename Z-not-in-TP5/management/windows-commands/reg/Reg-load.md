@@ -23,9 +23,9 @@ reg load KeyName FileName
 
 |Parameter|Description|
 |-------------|---------------|
-|<KeyName>|Specifies the full path of the subkey to be loaded. For specifying remote computers, include the computer name \(in the format \\\\ComputerName\\\) as part of the *KeyName*. Omitting \\\\ComputerName\\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
+|<KeyName>|Specifies the full path of the subkey to be loaded. For specifying remote computers, include the computer name (in the format \\\ComputerName\\) as part of the *KeyName*. Omitting \\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
 |<FileName>|Specifies the name and path of the file to be loaded. This file must be created in advance by using the **reg save** operation and a .hiv extension.|
-|\/?|Displays help for **reg load** at the command prompt.|
+|/?|Displays help for **reg load** at the command prompt.|
 
 ## Remarks
 The following table lists the return values for the **reg load** operation.
@@ -36,7 +36,7 @@ The following table lists the return values for the **reg load** operation.
 |1|Failure|
 
 ## <a name="BKMK_examples"></a>Examples
-To load the file named TempHive.hiv to the key HKLM\\TempHive, type:
+To load the file named TempHive.hiv to the key HKLM\TempHive, type:
 
 ```
 REG LOAD HKLM\TempHive TempHive.hiv

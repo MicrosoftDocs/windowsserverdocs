@@ -11,16 +11,16 @@ ms.topic: article
 ms.assetid: 7a36c339-51b4-45ef-b44e-b7e0e2c7155a
 ---
 # Certificate Propagation Service
-This topic for the IT professional describes the certificate propagation service \(CertPropSvc\), which is used in smart card implementation.
+This topic for the IT professional describes the certificate propagation service (CertPropSvc), which is used in smart card implementation.
 
-The certificate propagation service activates when a signed\-in user inserts a smart card in a reader that is attached to the computer. This action causes the certificate to be read from the smart card. The certificates are then added to the user's Personal store. Certificate propagation service actions are controlled by using Group Policy. For more information, see [Smart Card Group Policy and Registry Settings](smart-card-tools-and-settings/Smart-Card-Group-Policy-and-Registry-Settings.md).
+The certificate propagation service activates when a signed-in user inserts a smart card in a reader that is attached to the computer. This action causes the certificate to be read from the smart card. The certificates are then added to the user's Personal store. Certificate propagation service actions are controlled by using Group Policy. For more information, see [Smart Card Group Policy and Registry Settings](smart-card-tools-and-settings/Smart-Card-Group-Policy-and-Registry-Settings.md).
 
 > [!NOTE]
 > The certificate propagation service must be running for smart card Plug and Play to work.
 
-The following figure shows the flow of the certificate propagation service. The action begins when a signed\-in user inserts a smart card.
+The following figure shows the flow of the certificate propagation service. The action begins when a signed-in user inserts a smart card.
 
-1.  The arrow labeled **1** indicates that the Service Control Manager \(SCM\) notifies the certificate propagation service \(CertPropSvc\) when a user signs in, and CertPropSvc begins to monitor the smart cards in the user session.
+1.  The arrow labeled **1** indicates that the Service Control Manager (SCM) notifies the certificate propagation service (CertPropSvc) when a user signs in, and CertPropSvc begins to monitor the smart cards in the user session.
 
 2.  The arrow labeled **R** represents the possibility of a remote session and the use of smart card redirection.
 
@@ -32,7 +32,7 @@ The following figure shows the flow of the certificate propagation service. The 
 
 ![](../../media/Certificate-Propagation-Service/WindowsSmartCardTechnicalReference_06.gif)
 
-1.  A signed\-in user inserts a smart card.
+1.  A signed-in user inserts a smart card.
 
 2.  CertPropSvc is notified that a smart card was inserted.
 
@@ -43,9 +43,9 @@ The following figure shows the flow of the certificate propagation service. The 
 
 Properties of the certificate propagation service include:
 
--   CERT\_STORE\_ADD\_REPLACE\_EXISTING\_INHERIT\_PROPERTIES adds certificates to a user's Personal store.
+-   CERT_STORE_ADD_REPLACE_EXISTING_INHERIT_PROPERTIES adds certificates to a user's Personal store.
 
--   If the certificate has the CERT\_ENROLLMENT\_PROP\_ID property \(as defined by wincrypt.h\), it filters empty requests and places them in the current user's request store, but it does not propagate them to the user's Personal store.
+-   If the certificate has the CERT_ENROLLMENT_PROP_ID property (as defined by wincrypt.h), it filters empty requests and places them in the current user's request store, but it does not propagate them to the user's Personal store.
 
 -   The service does not propagate any computer certificates to a user's Personal store or propagate user certificates to a computer store.
 
@@ -58,7 +58,7 @@ Properties of the certificate propagation service include:
     -   **Configure root certificate cleanup** specifies how root certificates are removed.
 
 ## Root certificate propagation service
-Root certificate propagation is responsible for the following smart card deployment scenarios when public key infrastructure \(PKI\) trust has not yet been established:
+Root certificate propagation is responsible for the following smart card deployment scenarios when public key infrastructure (PKI) trust has not yet been established:
 
 -   Joining the domain
 
@@ -71,6 +71,6 @@ When the smart card is inserted, the certificate propagation service propagates 
 For more information about root certificate requirements, see [Smart card root certificate requirements for use with domain join](Certificate-Requirements-and-Enumeration.md#BKMK_SmartCardRoot).
 
 ## See also
-[How Smart Card Sign\-in Works in Windows](assetId:///36330874-3984-4551-ac31-cccd52fd3c92)
+[How Smart Card Sign-in Works in Windows](assetId:///36330874-3984-4551-ac31-cccd52fd3c92)
 
 

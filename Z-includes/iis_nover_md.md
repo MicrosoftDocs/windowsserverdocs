@@ -1,1 +1,1 @@
-Internet Information Services \(IIS\)
+Internet Information Services (IIS)

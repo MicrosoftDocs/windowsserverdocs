@@ -27,15 +27,15 @@ To complete this procedure, you must be a member of the **Administrators** group
 >To perform this procedure by using Windows PowerShell, open PowerShell, type the following command, and then press ENTER.  
 `Install-WindowsFeature Web-Server -IncludeManagementTools`  
   
-1.	In Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.  
-2.	In **Before You Begin**, click **Next**.  
+1.  In Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard opens.  
+2.  In **Before You Begin**, click **Next**.  
   
 **Note**   
 The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously run the Add Roles and Features Wizard and you selected **Skip this page by default** at that time.  
   
-3.	On the **Installation Type** page, click **Next**.  
-4.	On the **Server selection** page, click **Next**.  
-5.	On the **Server roles** page, select **Web Server (IIS)**, and then click **Next**.  
-6.	Click **Next** until you have accepted all of the default web server settings, and then click **Install**.  
-7.	Verify that all installations were successful, and then click **Close**.
+3.  On the **Installation Type** page, click **Next**.  
+4.  On the **Server selection** page, click **Next**.  
+5.  On the **Server roles** page, select **Web Server (IIS)**, and then click **Next**.  
+6.  Click **Next** until you have accepted all of the default web server settings, and then click **Install**.  
+7.  Verify that all installations were successful, and then click **Close**.
 

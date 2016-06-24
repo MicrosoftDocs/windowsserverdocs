@@ -27,8 +27,8 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 |-------------|---------------|
 |<Drive1>|Specifies the drive that contains the source disk.|
 |<Drive2>|Specifies the drive that contains the destination disk.|
-|\/v|Verifies that the information is copied correctly. This option slows down the copying process.|
-|\/?|Displays help at the command prompt.|
+|/v|Verifies that the information is copied correctly. This option slows down the copying process.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -85,7 +85,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
     |Exit code|Description|
     |-------------|---------------|
     |0|Copy operation was successful|
-    |1|Nonfatal Read\/Write error occurred|
+    |1|Nonfatal Read/Write error occurred|
     |3|Fatal hard error occurred|
     |4|Initialization error occurred|
 

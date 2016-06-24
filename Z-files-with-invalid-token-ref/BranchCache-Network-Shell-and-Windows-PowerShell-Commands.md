@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
 ---
 # BranchCache Network Shell and Windows PowerShell Commands
-In [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)], you can configure and manage BranchCache by using either Windows PowerShell or the Network Shell \(Netsh\) commands for BranchCache.
+In [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)], you can configure and manage BranchCache by using either Windows PowerShell or the Network Shell (Netsh) commands for BranchCache.
 
 In future versions of Windows, Microsoft might remove the netsh functionality for BranchCache. Microsoft recommends that you transition to Windows PowerShell if you currently use netsh to configure and manage BranchCache and other networking technologies.
 

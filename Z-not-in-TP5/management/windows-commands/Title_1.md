@@ -25,7 +25,7 @@ title [<String>]
 |Parameter|Description|  
 |-------------|---------------|  
 |<String>|Specifies the title of the Command Prompt window.|  
-|\/?|Displays help at the command prompt.|  
+|/?|Displays help at the command prompt.|  
   
 ## Remarks  
   

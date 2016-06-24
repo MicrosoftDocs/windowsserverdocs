@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
 ---
 # Using the delete-AutoAddDevices Command
-Deletes computers that are pending, rejected, or approved from the Auto\-Add database. This database stores information about these computers on the server.
+Deletes computers that are pending, rejected, or approved from the Auto-Add database. This database stores information about these computers on the server.
 
 ## Syntax
 
@@ -21,8 +21,8 @@ WDSUTIL /Delete-AutoAddDevices [/Server:<Server name>] /DeviceType:{PendingDevic
 
 |Parameter|Description|
 |-------------|---------------|
-|\[\/Server:<Server name>\]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name \(FQDN\). If no server name is specified, the local server will be used.|
-|\/DeviceType:{PendingDevices &#124; RejectedDevices &#124;ApprovedDevices}|Specifies the type of computer to delete from the database. This can be any of the following three types:<br /><br />-   **PendingDevices** returns all computers in the database that have a status of pending.<br />-   **RejectedDevices** returns all computers in the database that have a status of rejected.<br />-   **ApprovedDevices** returns all computers that have a status of approved.|
+|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|/DeviceType:{PendingDevices &#124; RejectedDevices &#124;ApprovedDevices}|Specifies the type of computer to delete from the database. This can be any of the following three types:<br /><br />-   **PendingDevices** returns all computers in the database that have a status of pending.<br />-   **RejectedDevices** returns all computers in the database that have a status of rejected.<br />-   **ApprovedDevices** returns all computers that have a status of approved.|
 
 ## <a name="BKMK_examples"></a>Examples
 To delete all rejected computers, type:

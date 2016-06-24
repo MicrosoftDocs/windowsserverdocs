@@ -24,7 +24,7 @@ Reg import FileName
 |Parameter|Description|
 |-------------|---------------|
 |<FileName>|Specifies the name and path of the file that has content to be copied into the registry of the local computer. This file must be created in advance by using **reg export**.|
-|\/?|Displays help for **reg import** at the command prompt.|
+|/?|Displays help for **reg import** at the command prompt.|
 
 ## Remarks
 The following table lists the return values for the **reg import** operation.

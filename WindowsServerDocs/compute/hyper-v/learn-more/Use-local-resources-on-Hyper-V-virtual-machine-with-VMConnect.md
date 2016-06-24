@@ -13,20 +13,20 @@ ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 author: cwatsonmsft
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
-You can give a virtual machine access to a computer’s local resources, like a removable USB flash drive, when you use Virtual Connection Manager \(VMConnect\). To make this happen, turn on enhanced session mode on the Hyper\-V host, use VMConnect to connect to the virtual machine, and before you connect, choose the local resource that you want to use.  
+You can give a virtual machine access to a computer’s local resources, like a removable USB flash drive, when you use Virtual Connection Manager (VMConnect). To make this happen, turn on enhanced session mode on the Hyper-V host, use VMConnect to connect to the virtual machine, and before you connect, choose the local resource that you want to use.  
   
-## <a name="BKMK_OVER"></a>Turn on enhanced session mode on Hyper\-V host  
-If your Hyper\-V host runs Windows 8 or Windows 8.1, you might not have to go through the following steps to turn on enhanced session mode. It's turn on by default. But if your host runs  Windows Server 2012  or  Windows Server 2012 R2 , you must turn on enhanced session mode to use it. It is turned off by default for those operating systems.  
+## <a name="BKMK_OVER"></a>Turn on enhanced session mode on Hyper-V host  
+If your Hyper-V host runs Windows 8 or Windows 8.1, you might not have to go through the following steps to turn on enhanced session mode. It's turn on by default. But if your host runs  Windows Server 2012  or  Windows Server 2012 R2 , you must turn on enhanced session mode to use it. It is turned off by default for those operating systems.  
   
 To turn on enhanced session mode,  
   
 1.  Connect to the computer that hosts the virtual machine.  
   
-2.  In Hyper\-V Manager, select the host’s computer name.  
+2.  In Hyper-V Manager, select the host’s computer name.  
   
     ![](media/Hyper-V-HyperVManager-HostNameSelected.png)  
   
-3.  Select **Hyper\-V settings**.  
+3.  Select **Hyper-V settings**.  
   
     ![](media/HyperV-ActionsHyperVSettings.png)  
   
@@ -85,7 +85,7 @@ You can easily edit your connection settings for VMConnect by running the follow
 ## <a name="BKMK_NEW"></a>What’s needed to use a computer’s local resources?  
 To be able to use a computer’s local resources on a virtual machine:  
   
--   The Hyper\-V host  must have **Enhanced session mode policy** and **Enhanced session mode** settings turned on.  
+-   The Hyper-V host  must have **Enhanced session mode policy** and **Enhanced session mode** settings turned on.  
   
 -   The computer that you use to connect to the virtual machine with VMConnect must run Windows 8, Windows 8.1,  Windows Server 2012 , or  Windows Server 2012 R2 .  
   
@@ -114,7 +114,7 @@ You might want use a computer’s local resources to:
   
 -   Troubleshoot a virtual machine without a network connection to the virtual machine.  
   
--   Copy and paste files to and from the virtual machine in the same way you copy and paste using a Remote Desktop Connection \(RDP\).  
+-   Copy and paste files to and from the virtual machine in the same way you copy and paste using a Remote Desktop Connection (RDP).  
   
 -   Sign in to the virtual machine by using a smart card.  
   

@@ -13,11 +13,11 @@ ms.assetid: 7ec08523-9e1f-4992-a2eb-da32d1c43f4b
 # Audit Policy
 This reference topic for the IT professional provides information about one collection of auditing settings that is available in Windows and links to information about each setting.
 
-The security audit policy settings under **Security Settings\\Local Policies\\Audit Policy** provide broad security audit capabilities for client computers and servers that cannot use advanced security audit policy settings.
+The security audit policy settings under **Security Settings\Local Policies\Audit Policy** provide broad security audit capabilities for client computers and servers that cannot use advanced security audit policy settings.
 
 For information about setting security policies, see [How to Configure Security Policy Settings](How-to-Configure-Security-Policy-Settings.md).
 
-The basic audit policy settings under **Security Settings\\Local Policies\\Audit Policy** are:
+The basic audit policy settings under **Security Settings\Local Policies\Audit Policy** are:
 
 -   [Audit account logon events](http://technet.microsoft.com/library/cc787176(v=ws.10).aspx)
 

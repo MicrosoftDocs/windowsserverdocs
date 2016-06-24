@@ -23,7 +23,7 @@ detail volume
 
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 
--   The volume details are not applicable to read\-only volumes, such as a DVD\-ROM or CD\-ROM drive.
+-   The volume details are not applicable to read-only volumes, such as a DVD-ROM or CD-ROM drive.
 
 ## <a name="BKMK_examples"></a>Examples
 To see all the disks in which the current volume resides, type:

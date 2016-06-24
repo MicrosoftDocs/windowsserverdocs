@@ -22,7 +22,7 @@ Constant: SeSystemtimePrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not Defined  
   
@@ -31,7 +31,7 @@ Constant: SeSystemtimePrivilege
 1.  Restrict the **Change the system time** user right to users with a legitimate need to change the system time, such as members of the IT team.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
 By default, members of the Administrators and Local Service groups have this right on workstations and servers. Members of the Administrators, Server Operators, and Local Service groups have this right on domain controllers.  
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not Defined|  
 |Default Domain Controller Policy|Administrators<br /><br />Server Operators<br /><br />Local Service|  
-|Stand\-Alone Server Default Settings|Administrators<br /><br />Local Service|  
+|Stand-Alone Server Default Settings|Administrators<br /><br />Local Service|  
 |DC Effective Default Settings|Administrators<br /><br />Server Operators<br /><br />Local Service|  
 |Member Server Effective Default Settings|Administrators<br /><br />Local Service|  
 |Client Computer Effective Default Settings|Administrators<br /><br />Local Service|  
@@ -58,7 +58,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   
@@ -84,13 +84,13 @@ Users who can change the time on a computer could cause several problems. For ex
   
 -   Users who try to log on to the domain from computers with inaccurate time might not be able to authenticate.  
   
-Also, because the Kerberos authentication protocol requires that the requester and authenticator have their clocks synchronized within an administrator\-defined skew period, an attacker who changes a computer's time may cause that computer to be unable to obtain or grant Kerberos protocol tickets.  
+Also, because the Kerberos authentication protocol requires that the requester and authenticator have their clocks synchronized within an administrator-defined skew period, an attacker who changes a computer's time may cause that computer to be unable to obtain or grant Kerberos protocol tickets.  
   
-The risk from these types of events is mitigated on most domain controllers, member servers, and end\-user computers because the Windows Time Service automatically synchronizes time with domain controllers in the following ways:  
+The risk from these types of events is mitigated on most domain controllers, member servers, and end-user computers because the Windows Time Service automatically synchronizes time with domain controllers in the following ways:  
   
 -   All desktop client computers and member servers use the authenticating domain controller as their inbound time partner.  
   
--   All domain controllers in a domain nominate the primary domain controller \(PDC\) emulator operations master as their inbound time partner.  
+-   All domain controllers in a domain nominate the primary domain controller (PDC) emulator operations master as their inbound time partner.  
   
 -   All PDC emulator operations masters follow the hierarchy of domains in the selection of their inbound time partner.  
   

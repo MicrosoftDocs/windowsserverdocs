@@ -15,7 +15,7 @@ To perform this procedure, you must be a member of the Administrators group.
   
 #### To prepare the CAPolicy.inf file  
   
-1.  Open Windows PowerShell, type **notepad c:\\Windows\\CAPolicy.inf** and press ENTER.  
+1.  Open Windows PowerShell, type **notepad c:\Windows\CAPolicy.inf** and press ENTER.  
   
 2.  When prompted to create a new file, click **Yes**.  
   
@@ -60,6 +60,6 @@ To perform this procedure, you must be a member of the Administrators group.
 6.  Close Notepad.  
   
 > [!IMPORTANT]  
-> In the CAPolicy.inf, you can see there is a line specifying the URL http:\/\/pki.corp.contoso.com\/pki\/cps.txt. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement \(CPS\). In this guide, you are not instructed to create the certificate practice statement \(CPS\).  
+> In the CAPolicy.inf, you can see there is a line specifying the URL http://pki.corp.contoso.com/pki/cps.txt. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement (CPS). In this guide, you are not instructed to create the certificate practice statement (CPS).  
   
 

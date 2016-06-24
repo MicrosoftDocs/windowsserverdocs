@@ -17,7 +17,7 @@ This topic provides a listing of the documentation for the two main Remote Acces
 You can use the section below to gain an understanding of the differences between the DirectAccess Basic and Advanced deployment paths, and you can use the documentation links to locate the deployment guide that is best suited to your goals.  
   
 ## Deploy Basic DirectAccess  
-With a basic DirectAccess deployment, DirectAccess is configured with default settings by using a wizard, without any need to configure infrastructure settings such as a certification authority \(CA\) or Active Directory security groups.  
+With a basic DirectAccess deployment, DirectAccess is configured with default settings by using a wizard, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
   
 -   [Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md). You can use this guide to deploy basic DirectAccess in a production environment.  
   

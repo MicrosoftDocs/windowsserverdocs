@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 907ea637-5c6c-4752-84c2-46bbf2a68a33
 ---
 # Finger
-Displays information about a user or users on a specified remote computer \(typically a computer running UNIX\) that is running the Finger service or daemon. The remote computer specifies the format and output of the user information display. Used without parameters, **finger** displays help. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
+Displays information about a user or users on a specified remote computer (typically a computer running UNIX) that is running the Finger service or daemon. The remote computer specifies the format and output of the user information display. Used without parameters, **finger** displays help. For examples of how this command can be used, see [Examples](assetId:///c6d43992-8243-4f0a-8605-3152c8a8fe9a#BKMK_Examples).
 
 ## Syntax
 
@@ -21,17 +21,17 @@ finger [-l] [<User>] [@<Host>] [...]
 
 |Parameter|Description|
 |-------------|---------------|
-|\-l|Displays user information in long list format.|
+|-l|Displays user information in long list format.|
 |<User>|Specifies the user about which you want information. If you omit the *User* parameter, **finger** displays information about all users on the specified computer.|
 |@<Host>|Specifies the remote computer running the Finger service where you are looking for user information. You can specify a computer name or IP address.|
-|\/?|Displays Help at the command prompt.|
+|/?|Displays Help at the command prompt.|
 
 ## Remarks
 Multiple User@Host parameters can be specified.
 
-You must prefix **finger** parameters with a hyphen \(\-\) rather than a slash \(\/\).
+You must prefix **finger** parameters with a hyphen (-) rather than a slash (/).
 
-This command is available only if the Internet Protocol \(TCP\/IP\) protocol is installed as a component in the properties of a network adapter in Network Connections.
+This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 
 The Windows Server 2003 does not provide a finger service.
 

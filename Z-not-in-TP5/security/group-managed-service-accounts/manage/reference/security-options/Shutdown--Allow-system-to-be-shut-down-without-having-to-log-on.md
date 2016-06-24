@@ -16,7 +16,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference
 This policy setting determines whether a computer can be shut down without having to log on to the Windows operating system. If you enable this policy setting, the **Shut Down** option is available on the logon screen in the Windows operating system. If you disable this policy setting, the **Shut Down** option is removed from the logon screen. This configuration requires that users are able to log on to the computer successfully and that they have the **Shut down the system** user right before they can perform a computer shutdown.
 
-Users who can access the console locally can shut down the system. Attackers or misguided users can connect to the server by using Terminal Services or Remote Desktop Services, and then shut it down or restart it without having to identify themselves. A malicious user might also cause a temporary denial\-of\-service condition by walking up to the local console and restarting the server, or shutting down the server and thus rendering unavailable all its applications and services.
+Users who can access the console locally can shut down the system. Attackers or misguided users can connect to the server by using Terminal Services or Remote Desktop Services, and then shut it down or restart it without having to identify themselves. A malicious user might also cause a temporary denial-of-service condition by walking up to the local console and restarting the server, or shutting down the server and thus rendering unavailable all its applications and services.
 
 ### Possible values
 
@@ -37,7 +37,7 @@ Users who can access the console locally can shut down the system. Attackers or 
 2.  On client computers, set this policy to **Enabled** and define the list of those with the right to shut them down or restart them with the User Rights Assignment policy **Shut down the system**.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -46,13 +46,13 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Not defined|
-|Stand\-Alone Server Default Settings|Disabled|
+|Stand-Alone Server Default Settings|Disabled|
 |DC Effective Default Settings|Disabled|
 |Member Server Effective Default Settings|Disabled|
 |Client Computer Effective Default Settings|Enabled|
 
 ### Operating system version differences
-There are no differences in this policy between operating systems beginning with Windows Server 2008 and Windows Vista.
+There are no differences in this policy between operating systems beginning with Windows Server 2008 and Windows Vista.
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.

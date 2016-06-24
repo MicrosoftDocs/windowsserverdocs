@@ -36,7 +36,7 @@ The impact of enabling this policy setting should be small for most organization
 -   Best practices for this policy are dependent on your security and operational requirements for task scheduling.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -45,7 +45,7 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Not defined|  
+|Stand-Alone Server Default Settings|Not defined|  
 |DC Effective Default Settings|Not defined|  
 |Member Server Effective Default Settings|Not defined|  
 |Client Computer Effective Default Settings|Not defined|  
@@ -59,7 +59,7 @@ This section describes features and tools that are available to help you manage 
 ### Restart requirement  
 None. Changes to this policy become effective without a computer restart when they are saved locally or distributed through Group Policy.  
   
-### Command\-line tools  
+### Command-line tools  
 The **at** command schedules commands and programs to run on a computer at a specified time and date. The Schedule service must be running to use the **at** command. For more information about the **at** command, see [At \[Vista\]](At.md).  
   
 ## Security considerations  
@@ -72,6 +72,6 @@ Tasks that run under the context of the Local System account can affect resource
 Disable the **Domain controller: Allow server operators to schedule tasks** setting.  
   
 ### Potential impact  
-The impact should be small for most organizations. Users \(including those in the Server Operators group\) can still create jobs by means of the Task Scheduler snap\-in. However, those jobs run in the context of the account that the user authenticates with when setting up the job.  
+The impact should be small for most organizations. Users (including those in the Server Operators group) can still create jobs by means of the Task Scheduler snap-in. However, those jobs run in the context of the account that the user authenticates with when setting up the job.  
   
 

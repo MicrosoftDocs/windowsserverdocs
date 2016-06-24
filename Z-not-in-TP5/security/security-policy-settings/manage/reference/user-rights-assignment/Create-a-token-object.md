@@ -14,7 +14,7 @@ ms.assetid: 14cc4310-4aa8-4458-9805-27cac8b3fb94
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-This policy setting determines which accounts a process can use to create a token, and which accounts it can then use to gain access to local resources when the process uses NtCreateToken\(\) or other token\-creation APIs.  
+This policy setting determines which accounts a process can use to create a token, and which accounts it can then use to gain access to local resources when the process uses NtCreateToken() or other token-creation APIs.  
   
 When a user logs on to the local computer or connects to a remote computer through a network, Windows builds the user’s access token. Then the system examines the token to determine the level of the user's privileges. When you revoke a privilege, the change is immediately recorded, but the change is not reflected in the user's access token until the next time the user logs on or connects.  
   
@@ -24,7 +24,7 @@ Constant: SeCreateTokenPrivilege
   
 ### Possible values  
   
--   User\-defined list of accounts  
+-   User-defined list of accounts  
   
 -   Not Defined  
   
@@ -33,7 +33,7 @@ Constant: SeCreateTokenPrivilege
 1.  This user right is used internally by the operating system. Unless it is necessary, do not assign this user right to a user, group, or process other than Local System.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment  
   
 ### Default values  
 This user right is used internally by the operating system. By default, it is not assigned to any user groups.  
@@ -44,7 +44,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|  
 |Default Domain Policy|Not Defined|  
 |Default Domain Controller Policy|Not Defined|  
-|Stand\-Alone Server Default Settings|Not Defined|  
+|Stand-Alone Server Default Settings|Not Defined|  
 |Domain Controller Effective Default Settings|Local System|  
 |Member Server Effective Default Settings|Local System|  
 |Client Computer Effective Default Settings|Local System|  
@@ -58,7 +58,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.  
   
 ### Group Policy  
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:  
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:  
   
 1.  Local policy settings  
   

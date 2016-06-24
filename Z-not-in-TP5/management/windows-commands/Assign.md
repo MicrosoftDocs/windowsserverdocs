@@ -25,8 +25,8 @@ assign [{letter=<d> | mount=<path>}] [noerr]
 
 |Parameter|Description|
 |-------------|---------------|
-|letter\=<d>|The drive letter you want to assign to the volume.|
-|mount\=<path>|The mount point path you want to assign to the volume.<br /><br />For instructions regarding how to use this command, see [Assign a mount point folder path to a drive](http://go.microsoft.com/fwlink/?LinkId=207059) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=207059\).|
+|letter=<d>|The drive letter you want to assign to the volume.|
+|mount=<path>|The mount point path you want to assign to the volume.<br /><br />For instructions regarding how to use this command, see [Assign a mount point folder path to a drive](http://go.microsoft.com/fwlink/?LinkId=207059) (http://go.microsoft.com/fwlink/?LinkId=207059).|
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
 
 ## Remarks
@@ -35,7 +35,7 @@ assign [{letter=<d> | mount=<path>}] [noerr]
 
 -   By using the assign command, you can change the drive letter associated with a removable drive.
 
--   You cannot assign drive letters to system volumes, boot volumes, or volumes that contain the paging file. In addition, you cannot assign a drive letter to an Original Equipment Manufacturer \(OEM\) partition or any GUID Partition Table \(GPT\) partition other than a basic data partition.
+-   You cannot assign drive letters to system volumes, boot volumes, or volumes that contain the paging file. In addition, you cannot assign a drive letter to an Original Equipment Manufacturer (OEM) partition or any GUID Partition Table (GPT) partition other than a basic data partition.
 
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 

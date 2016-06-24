@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Remote Desktop resource authorization policy (RD RAP)</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Remote Desktop resource authorization policy (RD RAP)</Token>

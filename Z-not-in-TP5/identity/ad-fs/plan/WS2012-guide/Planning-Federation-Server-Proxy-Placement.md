@@ -13,7 +13,7 @@ ms.assetid: f9e35688-fab9-4d32-a2e0-cda2bb257b58
 author: billmath
 ---
 # Planning Federation Server Proxy Placement
-After you gather all the information that you will use to design your Active Directory Federation Services \(AD FS\) infrastructure and after you plan your federation server and Web server strategy, you can plan when and where to place federation server proxies in your new design. The information in the following topics can help you determine when and where to place a federation server proxy and whether to configure it for the account partner role or the resource partner role:  
+After you gather all the information that you will use to design your Active Directory Federation Services (AD FS) infrastructure and after you plan your federation server and Web server strategy, you can plan when and where to place federation server proxies in your new design. The information in the following topics can help you determine when and where to place a federation server proxy and whether to configure it for the account partner role or the resource partner role:  
   
 -   [Review the Role of the Federation Server in the Account Partner](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
   

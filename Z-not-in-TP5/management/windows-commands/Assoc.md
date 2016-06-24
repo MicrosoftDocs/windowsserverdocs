@@ -25,7 +25,7 @@ assoc [<.ext>[=[<FileType>]]]
 |-------------|---------------|
 |<.ext>|Specifies the file name extension.|
 |<FileType>|Specifies the file type to associate with the specified file name extension.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 

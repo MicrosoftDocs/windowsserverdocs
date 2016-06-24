@@ -14,18 +14,18 @@ author: lizap
 # Azure services for desktop hosting
 The following sections describe Azure Infrastructure Services.  
   
-##	Azure portal  
+##  Azure portal  
 After the provider creates an Azure subscription, the Azure portal can be used to manually create each tenant’s environment. This process can also be automated using PowerShell Scripts.  
   
 Additional information:  
 [Microsoft Azure](http://www.azure.microsoft.com)  
   
-##	Azure Load Balancer  
+##  Azure Load Balancer  
 The tenant’s components run on virtual machines that communicate with each other on an isolated network. During the deployment process, these virtual machines can be accessed externally through the Azure Load Balancer using Remote Desktop Protocol endpoints or Remote PowerShell endpoint. Once a deployment is complete, these endpoints will typically be deleted to reduce the attack surface area. The only endpoints will be the HTTPS and UDP endpoints created for the VM running the RD Web and RD Gateway components. This allows clients on the Internet to connect to sessions running in the tenant’s desktop hosting service. If a user opens an application that connects to the Internet, such as Internet Explorer Web browser, the connections will be passed through the Azure Load Balancer.  
   
 [Microsoft Azure: Load Balancing Virtual Machines](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-load-balance/)  
   
-##	Security Considerations  
+##  Security Considerations  
 This Azure Desktop Hosting Reference Architecture Guide is designed to provide a highly secure and isolated environment for each tenant. The security of the system also depends on safeguards taken by the provider during deployment and operation of the hosted service. Following is a list of some mitigations that the provider must consider to help ensure the security of a desktop hosting solution based on this reference architecture.  
 - All administrative passwords must be strong, and ideally randomly generated, changed frequently, and saved in secure central location that is only accessible by a select few provider administrators.  
 - Care must be taken when replicating the tenant environment for new tenants to avoid using the same or weak administrative passwords.   
@@ -37,7 +37,7 @@ Additional information:
 [Security Best Practices for IIS 8](https://technet.microsoft.com/library/jj635855.aspx)  
 [Secure Windows Server 2012 R2](https://technet.microsoft.com/library/hh831360.aspx)  
   
-##	Design Considerations  
+##  Design Considerations  
 Microsoft Azure Infrastructure Services have a number of constraints that must be considered when designing a multitenant desktop hosting service. The following is a list of some constraints that the provider must consider to achieve a functional and cost effective desktop hosting solution based on this reference architecture.  
   
 - An Azure subscription has a maximum number of virtual networks, VM cores, and Cloud Services that can be used. Consequently, providers may need to create multiple subscriptions.   

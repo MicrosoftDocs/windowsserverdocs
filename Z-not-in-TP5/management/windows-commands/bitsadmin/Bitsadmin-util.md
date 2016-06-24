@@ -24,7 +24,7 @@ Bitsadmin /Util /Version
 
 |Parameter|Description|
 |-------------|---------------|
-|[Bitsadmin util and help](bitsadmin-util/Bitsadmin-util-and-help.md)|Displays the command\-line usage for the \/Util commands.|
+|[Bitsadmin util and help](bitsadmin-util/Bitsadmin-util-and-help.md)|Displays the command-line usage for the /Util commands.|
 |[Bitsadmin util and getieproxy](bitsadmin-util/Bitsadmin-util-and-getieproxy.md)|Retrieves the proxy usage for the given service account.|
 |[Bitsadmin util and repairservice](bitsadmin-util/Bitsadmin-util-and-repairservice.md)|Repairs known issues with BITS service|
 |[Bitsadmin util and setieproxy](bitsadmin-util/Bitsadmin-util-and-setieproxy.md)|Specifies proxy settings to use when transferring files using a service account.|

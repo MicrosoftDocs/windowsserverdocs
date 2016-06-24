@@ -10,7 +10,7 @@ ms.assetid: 23d1044b-f5c1-4180-ae6d-f553b48da4d9
 author: jaimeo
 ---
 # Exit_2
-Exits the Cmd.exe program \(the command interpreter\) or the current batch script.  
+Exits the Cmd.exe program (the command interpreter) or the current batch script.  
   
 For examples of how to use this command, see [Examples](#BKMK_examples).  
   
@@ -24,9 +24,9 @@ exit [/b] [<ExitCode>]
   
 |Parameter|Description|  
 |-------------|---------------|  
-|\/b|Exits the current batch script instead of exiting Cmd.exe. If executed from outside a batch script, exits Cmd.exe.|  
-|<ExitCode>|Specifies a numeric number. If **\/b** is specified, the ERRORLEVEL environment variable is set to that number. If you are quitting **Cmd.exe**, the process exit code is set to that number.|  
-|\/?|Displays help at the command prompt.|  
+|/b|Exits the current batch script instead of exiting Cmd.exe. If executed from outside a batch script, exits Cmd.exe.|  
+|<ExitCode>|Specifies a numeric number. If **/b** is specified, the ERRORLEVEL environment variable is set to that number. If you are quitting **Cmd.exe**, the process exit code is set to that number.|  
+|/?|Displays help at the command prompt.|  
   
 ## <a name="BKMK_examples"></a>Examples  
 To close the command interpreter, Cmd.exe, type:  

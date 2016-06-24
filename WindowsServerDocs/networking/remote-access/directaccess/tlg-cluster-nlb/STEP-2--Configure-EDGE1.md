@@ -24,7 +24,7 @@ The following procedure is performed on the DirectAccess server:
   
 3.  In the middle pane of the console, in the **Step 2 Remote Access Server** area, click **Edit**.  
   
-4.  In the **Remote Access Server Setup** wizard, click **Prefix Configuration**. On the **Prefix Configuration** page, in **IPv6 prefix assigned to DirectAccess client computers**, enter **2001:db8:1:1000::\/59**, and then click **Next**.  
+4.  In the **Remote Access Server Setup** wizard, click **Prefix Configuration**. On the **Prefix Configuration** page, in **IPv6 prefix assigned to DirectAccess client computers**, enter **2001:db8:1:1000::/59**, and then click **Next**.  
   
 5.  Click **Finish**.  
   

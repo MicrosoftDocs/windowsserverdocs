@@ -42,7 +42,7 @@ ResiliencySettingName : Mirror
 
 The FaultDomainAwareness property on the virtual disk controls data placement in all scenarios, including initial data allocation when creating the virtual disk,  when repairing a virtual disk from a disk, enclosure or node failure, when rebalancing virtual disks in a storage pool. All of these operations will take into account the “StorageScaleUnit” fault domain and ensure that copies of data are placed on different nodes.  
 
-Let us examine some basics about virtual disks. A virtual disk consists of extents, each of which are 1GB in size. A 100GB virtual disk will therefore consist of 100 1GB extents. If the virtual disk is mirrored \(using ResiliencySettingName\) there will be multiple copies of each  extent. The number of copies of the extent \(using NumberOfDataCopes\) can be two or three. All in all, a 100GB mirrored virtual disk with three data copes will consume 300 extents. The placement of extents is governed by the fault domain, which in Storage Spaces Direct is nodes \(StorageScaleUnit\), so the three copies of an extent \(A\) will be placed on three different storage nodes e.g. node 1, 2 and 3 in the diagram below. Another extent \(B\) of the same virtual disk might have its three copies placed on different nodes, e.g. 1, 3, and 4 and so on. This means that a virtual disk might have its extents distributed all storage nodes and the copies of each extent is placed on different nodes. Figure 6 below illustrates a four node deployment with a mirrored virtual disk with 3 copies and an example layout of extents:  
+Let us examine some basics about virtual disks. A virtual disk consists of extents, each of which are 1GB in size. A 100GB virtual disk will therefore consist of 100 1GB extents. If the virtual disk is mirrored (using ResiliencySettingName) there will be multiple copies of each  extent. The number of copies of the extent (using NumberOfDataCopes) can be two or three. All in all, a 100GB mirrored virtual disk with three data copes will consume 300 extents. The placement of extents is governed by the fault domain, which in Storage Spaces Direct is nodes (StorageScaleUnit), so the three copies of an extent (A) will be placed on three different storage nodes e.g. node 1, 2 and 3 in the diagram below. Another extent (B) of the same virtual disk might have its three copies placed on different nodes, e.g. 1, 3, and 4 and so on. This means that a virtual disk might have its extents distributed all storage nodes and the copies of each extent is placed on different nodes. Figure 6 below illustrates a four node deployment with a mirrored virtual disk with 3 copies and an example layout of extents:  
 
 ![](media/Storage-Spaces-Fault-Tolerance/StorageSpacesFaultTolerance.png)  
 
@@ -73,13 +73,13 @@ In this scenario Storage Spaces will do one of two things:
 
 -   If however only the physical disk is missing, then Storage Spaces will retire the disk.  
 
-    The reason for \#1 above is that during a storage node restart or temporary maintenance of a storage node all the disks associated with that node will be reported missing. Automatically retiring all those disks would potentially result in a massive amount of repair activity as all extents on those disks would have to be rebuild elsewhere in the storage system – this could easily be multiple terabytes of data. If the disks are really missing and will not come back to the storage system, the administrator will need to retire the missing physical disks and start the repair process.  
+    The reason for #1 above is that during a storage node restart or temporary maintenance of a storage node all the disks associated with that node will be reported missing. Automatically retiring all those disks would potentially result in a massive amount of repair activity as all extents on those disks would have to be rebuild elsewhere in the storage system – this could easily be multiple terabytes of data. If the disks are really missing and will not come back to the storage system, the administrator will need to retire the missing physical disks and start the repair process.  
 
 ### <a name="BKMK_FaultTolerance_Scenario4"></a>Scenario 4: Storage node restart or maintenance  
 In this scenario Storage Spaces will not automatically retire physical disks from the storage pool for the reasons described above in scenario 3. Once the storage node comes back online, Storage Spaces will automatically update all extents that are not up to date with the copies that were not affected by the restart or maintenance.  
 
 ### <a name="BKMK_FaultTolerance_Scenario5"></a>Scenario 5: Permanent storage node failure  
-In this scenario, Storage Spaces will require the administrator to retire all the affected physical disks from the storage pool, add additional storage nodes to the storage system if needed, and then start repair. The reason this not an automatic process is that Storage Spaces does not know if it is a temporary or permanent failure. It is not desirable to initiate a repair that could potentially result in significant I\/O and CPU activity.  
+In this scenario, Storage Spaces will require the administrator to retire all the affected physical disks from the storage pool, add additional storage nodes to the storage system if needed, and then start repair. The reason this not an automatic process is that Storage Spaces does not know if it is a temporary or permanent failure. It is not desirable to initiate a repair that could potentially result in significant I/O and CPU activity.  
 
 For more information on Fault Domains, see [Fault Domains in Windows Server 2016 Technical Preview](Fault-Domains-in-Windows-Server-2016-Technical-Preview.md)  
 
@@ -95,9 +95,9 @@ For more information on Fault Domains, see [Fault Domains in Windows Server 2016
 
 ## See Also  
 
--   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) \(video\)  
+-   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 
--   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) \(blog\)  
+-   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
 
 -   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
 

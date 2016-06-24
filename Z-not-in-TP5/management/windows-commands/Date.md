@@ -23,15 +23,15 @@ date [/t | <Month-Day-Year>]
 
 |Parameter|Description|
 |-------------|---------------|
-|<Month\-Day\-Year>|Sets the date specified, where *Month* is the month \(one or two digits\), *Day* is the day \(one or two digits\), and *Year* is the year \(two or four digits\).|
-|\/t|Displays the current date without prompting you for a new date.|
-|\/?|Displays help at the command prompt.|
+|<Month-Day-Year>|Sets the date specified, where *Month* is the month (one or two digits), *Day* is the day (one or two digits), and *Year* is the year (two or four digits).|
+|/t|Displays the current date without prompting you for a new date.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   To change the current date, you must have administrative credentials.
 
--   You must separate values for *Month*, *Day*, and *Year* with periods \(.\), hyphens \(\-\), or slash marks \(\/\).
+-   You must separate values for *Month*, *Day*, and *Year* with periods (.), hyphens (-), or slash marks (/).
 
 -   Valid *Month* values are 1 through 12.
 

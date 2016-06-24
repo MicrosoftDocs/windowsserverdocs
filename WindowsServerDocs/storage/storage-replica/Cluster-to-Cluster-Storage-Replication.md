@@ -12,11 +12,11 @@ ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: kumudd
 ---
 # Cluster to Cluster Storage Replication
-Cluster\-to\-cluster replication is now available in Windows Server 2016 Technical Preview, including the replication of clusters using Storage Spaces Direct \(i.e. shared nothing, direct attached storage\). The management and configuration is similar to server\-to\-server replication.  
+Cluster-to-cluster replication is now available in Windows Server 2016 Technical Preview, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct attached storage). The management and configuration is similar to server-to-server replication.  
 
-You will configure these computers and storage in a cluster\-to\-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
+You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 Technical Preview that can configure Storage Replica for cluster\-to\-cluster replication.  
+There are no graphical tools in Windows Server 2016 Technical Preview that can configure Storage Replica for cluster-to-cluster replication.  
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster.  
@@ -26,9 +26,9 @@ There are no graphical tools in Windows Server 2016 Technical Preview that can c
 ### Terms  
 This walkthrough uses the following environment as an example:  
 
--   Two member servers, named **SR\-SRV01** and **SR\-SRV02** in a cluster named **SR\-SRVCLUSA**.  
+-   Two member servers, named **SR-SRV01** and **SR-SRV02** in a cluster named **SR-SRVCLUSA**.  
 
--   Two member servers named **SR\-SRV03** and **SR\-SRV04** in a cluster named **SR\-SRVCLUSB**.  
+-   Two member servers named **SR-SRV03** and **SR-SRV04** in a cluster named **SR-SRVCLUSB**.  
 
 -   A pair of logical “sites” that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
 
@@ -54,23 +54,23 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 > [!WARNING]  
 > Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
 
-1.  Install Windows Server 2016 Technical Preview on all four server nodes with an installation type of Windows Server 2016 Technical Preview **\(Desktop Experience\)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
+1.  Install Windows Server 2016 Technical Preview on all four server nodes with an installation type of Windows Server 2016 Technical Preview **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
 2.  Add network information and join them to the domain, then restart them.  
 
     > [!IMPORTANT]  
-    > From this point on, always logon as a domain user who is a member of the built\-in administrator group on all servers. Always remember to elevate your Windows PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.  
+    > From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your Windows PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.  
 
-3.  Connect first set of JBOD storage enclosure, iSCSI target, FC SAN, or local fixed disk \(DAS\) storage to the server in site **Redmond**.  
+3.  Connect first set of JBOD storage enclosure, iSCSI target, FC SAN, or local fixed disk (DAS) storage to the server in site **Redmond**.  
 
 4.  Connect second set of storage to the server in site **Bellevue**.  
 
-5.  As appropriate, install latest vendor storage and enclosure firmware and drivers, latest vendor HBA drivers, latest vendor BIOS\/UEFI firmware, latest vendor network drivers, and latest motherboard chipset drivers on all four nodes. Restart nodes as needed.  
+5.  As appropriate, install latest vendor storage and enclosure firmware and drivers, latest vendor HBA drivers, latest vendor BIOS/UEFI firmware, latest vendor network drivers, and latest motherboard chipset drivers on all four nodes. Restart nodes as needed.  
 
     > [!NOTE]  
     > Consult your hardware vendor documentation for configuring shared storage and networking hardware.  
 
-6.  Ensure that BIOS\/UEFI settings for servers enable high performance, such as disabling C\-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to high performance. Restart as required.  
+6.  Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to high performance. Restart as required.  
 
 7.  Configure roles as follows:  
 
@@ -82,7 +82,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
     -   **Windows PowerShell method**  
 
-        On SR\-SRV04 or a remote management computer, run the following command in a Windows PowerShell console to install the required features and roles for a stretch cluster on the four nodes and restart them:  
+        On SR-SRV04 or a remote management computer, run the following command in a Windows PowerShell console to install the required features and roles for a stretch cluster on the four nodes and restart them:  
 
         ```  
         $Servers = 'SR-SRV01','SR-SRV02','SR-SRV03','SR-SRV04'  
@@ -101,22 +101,22 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   The two log volumes should be of identical size.  
     > -   All replicated data disks must have the same sector sizes.  
     > -   All log disks must have the same sector sizes.  
-    > -   The log volumes should use flash\-based storage, such as SSD.  
+    > -   The log volumes should use flash-based storage, such as SSD.  
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The data volume should be no larger than 10TB \(for a first test, we recommend no more than 1TB, in order to lower initial replication sync times\).  
+    > -   The data volume should be no larger than 10TB (for a first test, we recommend no more than 1TB, in order to lower initial replication sync times).  
     > -   The log volume must be at least 8GB and may need to be larger based on log requirements.  
 
     -   **For JBOD enclosures:**  
 
         1.  Ensure that each cluster can see that site’s storage enclosures only and that the SAS connections are correctly configured.  
 
-        2.  Provision the storage using Storage Spaces by following **Steps 1\-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
+        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
 
     -   **For iSCSI Target storage:**  
 
         1.  Ensure that each cluster can see that site’s storage enclosures only. You should use more than one single network adapter if using iSCSI.  
 
-        2.  Provision the storage using your vendor documentation. If using Windows\-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
+        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
 
     -   **For FC SAN storage:**  
 
@@ -149,35 +149,35 @@ For example, to validate two of the proposed stretch cluster nodes that each hav
         Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
 
 
-    >[!IMPORTANT] When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production\-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
+    >[!IMPORTANT] When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
     `Diskspd.exe -c1g –d300 -W5 -C5 -b8k -t2 -o2 -r –w5 –h d:\test.dat`  
 
 11. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
     ![](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
 
-### Configure two Scale\-Out File Server Failover Clusters  
+### Configure two Scale-Out File Server Failover Clusters  
 You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
 
 #### Graphical method  
 
 1.  Run **cluadmin.msc** against a node in each site.  
 
-2.  Validate the proposed cluster and analyze the results to ensure you can continue. The example used below are **SR\-SRVCLUSA** and **SR\-SRVCLUSB**.  
+2.  Validate the proposed cluster and analyze the results to ensure you can continue. The example used below are **SR-SRVCLUSA** and **SR-SRVCLUSB**.  
 
 3.  Create the two clusters. Ensure that the cluster names are 15 characters or fewer.  
 
 4.  Configure a File Share Witness or Cloud Witness.  
 
     > [!NOTE]  
-    > Windows Server 2016 Technical Preview now includes an option for Cloud \(Azure\)\-based Witness. You can choose this quorum option instead of the file share witness.  
+    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
     > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
 
 5.  Add one disk in the **Redmond** site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
-6.  Create the clustered Scale\-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.comlibrary/hh831718.aspx)  
+6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](http://technet.microsoft.comlibrary/hh831718.aspx)  
 
 #### Windows PowerShell method  
 
@@ -188,43 +188,43 @@ You will now create two normal failover clusters. After configuration, validatio
     Test-Cluster SR-SRV03,SR-SRV04  
     ```  
 
-2.  Create the clusters \(you must specify your own static IP addresses for the clusters\). Ensure that each cluster name is 15 characters or fewer:  
+2.  Create the clusters (you must specify your own static IP addresses for the clusters). Ensure that each cluster name is 15 characters or fewer:  
 
     ```  
     New-Cluster -Name SR-SRVCLUSA -Node SR-SRV01,SR-SRV02 -StaticAddress <your IP here>  
     New-Cluster -Name SR-SRVCLUSB -Node SR-SRV03,SR-SRV04 -StaticAddress <your IP here>  
     ```  
 
-3.  Configure a File Share Witness or Cloud \(Azure\) witness in each cluster that points to a share hosted on the domain controller or some other independent server. For example:  
+3.  Configure a File Share Witness or Cloud (Azure) witness in each cluster that points to a share hosted on the domain controller or some other independent server. For example:  
 
     ```  
     Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
     ```  
 
     > [!NOTE]  
-    > Windows Server 2016 Technical Preview now includes an option for Cloud \(Azure\)\-based Witness. You can choose this quorum option instead of the file share witness.  
+    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
     > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide’s](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
 
-4.  Create the clustered Scale\-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
+4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
 
 ### Configure Cluster to Cluster Replication using Windows PowerShell  
-Now you will configure cluster\-to\-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools  
+Now you will configure cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools  
 
-1.  Grant the first cluster full access to the other cluster by running the **Grant\-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
+1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
 
     ```  
     Grant-SRAccess -ComputerName SR-SRV01 –Cluster SR-SRVCLUSB  
     ```  
 
-2.  Grant the second cluster full access to the other cluster by running the **Grant\-ClusterAccess** cmdlet on any node in the second cluster, or remotely.  
+2.  Grant the second cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the second cluster, or remotely.  
 
     ```  
     Grant-SRAccess -ComputerName SR-SRV03 –Cluster SR-SRVCLUSA  
     ```  
 
-3.  Configure the cluster\-to\-cluster replication, specifying the source and destination disks, the source and destination logs, the source and destination cluster names, and the log size. You can perform this command locally on the server or using a remote management computer.  
+3.  Configure the cluster-to-cluster replication, specifying the source and destination disks, the source and destination logs, the source and destination cluster names, and the log size. You can perform this command locally on the server or using a remote management computer.  
 
     ```  
     New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:  
@@ -233,7 +233,7 @@ Now you will configure cluster\-to\-cluster replication using Windows PowerShell
     > [!WARNING]  
     > The default log size is 8GB. Depending on the results of the **Test-SRTopology** cmdlet, you may decide to use **–LogSizeInBytes** with a higher or lower value.  
 
-4.  To get replication source and destination state, use **Get\-SRGroup** and **Get\-SRPartnership** as follows:  
+4.  To get replication source and destination state, use **Get-SRGroup** and **Get-SRPartnership** as follows:  
 
     ```  
     Get-SRGroup  
@@ -276,7 +276,7 @@ Now you will configure cluster\-to\-cluster replication using Windows PowerShell
 
         (Get-SRGroup).Replicas | Select-Object numofbytesremaining  
 
-   As a progress sample \(that will not terminate\):  
+   As a progress sample (that will not terminate):  
 
          while($true) {  
          $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
@@ -289,70 +289,70 @@ Now you will configure cluster\-to\-cluster replication using Windows PowerShell
         Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL  
 
    > [!NOTE]  
-        > The destination cluster disk will always show as **Online \(No Access\)** when replicated.  
+        > The destination cluster disk will always show as **Online (No Access)** when replicated.  
 
 ### Manage replication  
-Now you will manage and operate your cluster\-to\-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+Now you will manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
 
-1.  Use **Get\-ClusterGroup** or **Failover Cluster Manager** to determine the current source and destination of replication and their status.  
+1.  Use **Get-ClusterGroup** or **Failover Cluster Manager** to determine the current source and destination of replication and their status.  
 
-2.  To measure replication performance, use the **Get\-Counter** cmdlet on both the source and destination nodes. The counter names are:  
+2.  To measure replication performance, use the **Get-Counter** cmdlet on both the source and destination nodes. The counter names are:  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Number of times flush paused  
+    -   \Storage Replica Partition I/O Statistics(*)\Number of times flush paused  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Number of pending flush I\/O  
+    -   \Storage Replica Partition I/O Statistics(*)\Number of pending flush I/O  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Number of requests for last log write  
+    -   \Storage Replica Partition I/O Statistics(*)\Number of requests for last log write  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Avg. Flush Queue Length  
+    -   \Storage Replica Partition I/O Statistics(*)\Avg. Flush Queue Length  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Current Flush Queue Length  
+    -   \Storage Replica Partition I/O Statistics(*)\Current Flush Queue Length  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Number of Application Write Requests  
+    -   \Storage Replica Partition I/O Statistics(*)\Number of Application Write Requests  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Avg. Number of requests per log write  
+    -   \Storage Replica Partition I/O Statistics(*)\Avg. Number of requests per log write  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Avg. App Write Latency  
+    -   \Storage Replica Partition I/O Statistics(*)\Avg. App Write Latency  
 
-    -   \\Storage Replica Partition I\/O Statistics\(\*\)\\Avg. App Read Latency  
+    -   \Storage Replica Partition I/O Statistics(*)\Avg. App Read Latency  
 
-    -   \\Storage Replica Statistics\(\*\)\\Target RPO  
+    -   \Storage Replica Statistics(*)\Target RPO  
 
-    -   \\Storage Replica Statistics\(\*\)\\Current RPO  
+    -   \Storage Replica Statistics(*)\Current RPO  
 
-    -   \\Storage Replica Statistics\(\*\)\\Avg. Log Queue Length  
+    -   \Storage Replica Statistics(*)\Avg. Log Queue Length  
 
-    -   \\Storage Replica Statistics\(\*\)\\Current Log Queue Length  
+    -   \Storage Replica Statistics(*)\Current Log Queue Length  
 
-    -   \\Storage Replica Statistics\(\*\)\\Total Bytes Received  
+    -   \Storage Replica Statistics(*)\Total Bytes Received  
 
-    -   \\Storage Replica Statistics\(\*\)\\Total Bytes Sent  
+    -   \Storage Replica Statistics(*)\Total Bytes Sent  
 
-    -   \\Storage Replica Statistics\(\*\)\\Avg. Network Send Latency  
+    -   \Storage Replica Statistics(*)\Avg. Network Send Latency  
 
-    -   \\Storage Replica Statistics\(\*\)\\Replication State  
+    -   \Storage Replica Statistics(*)\Replication State  
 
-    -   \\Storage Replica Statistics\(\*\)\\Avg. Message Round Trip Latency  
+    -   \Storage Replica Statistics(*)\Avg. Message Round Trip Latency  
 
-    -   \\Storage Replica Statistics\(\*\)\\Last Recovery Elapsed Time  
+    -   \Storage Replica Statistics(*)\Last Recovery Elapsed Time  
 
-    -   \\Storage Replica Statistics\(\*\)\\Number of Flushed Recovery Transactions  
+    -   \Storage Replica Statistics(*)\Number of Flushed Recovery Transactions  
 
-    -   \\Storage Replica Statistics\(\*\)\\Number of Recovery Transactions  
+    -   \Storage Replica Statistics(*)\Number of Recovery Transactions  
 
-    -   \\Storage Replica Statistics\(\*\)\\Number of Flushed Replication Transactions  
+    -   \Storage Replica Statistics(*)\Number of Flushed Replication Transactions  
 
-    -   \\Storage Replica Statistics\(\*\)\\Number of Replication Transactions  
+    -   \Storage Replica Statistics(*)\Number of Replication Transactions  
 
-    -   \\Storage Replica Statistics\(\*\)\\Max Log Sequence Number  
+    -   \Storage Replica Statistics(*)\Max Log Sequence Number  
 
-    -   \\Storage Replica Statistics\(\*\)\\Number of Messages Received  
+    -   \Storage Replica Statistics(*)\Number of Messages Received  
 
-    -   \\Storage Replica Statistics\(\*\)\\Number of Messages Sent  
+    -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
     For more information on performance counters in Windows PowerShell, see [Get-Counter](http://technet.microsoft.com/library/hh849685.aspx).  
 
-3.  To move the replication direction from one site, use the **Set\-SRPartnership** cmdlet.  
+3.  To move the replication direction from one site, use the **Set-SRPartnership** cmdlet.  
 
     ```  
     Set-SRPartnership -NewSourceComputerName SR-SRVCLUSB -SourceRGName rg02 -DestinationComputerName SR-SRVCLUSA -DestinationRGName rg01  
@@ -364,14 +364,14 @@ Now you will manage and operate your cluster\-to\-cluster replication. You can p
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 
     > [!NOTE]  
-    > The destination cluster disk will always show as **Online \(No Access\)** when replicated.  
+    > The destination cluster disk will always show as **Online (No Access)** when replicated.  
 
-4.  To change the log size from the default 8GB in Windows Server 2016 Technical Preview, use **Set\-SRGroup** on both the source and destination Storage Replica groups.  
+4.  To change the log size from the default 8GB in Windows Server 2016 Technical Preview, use **Set-SRGroup** on both the source and destination Storage Replica groups.  
 
     > [!IMPORTANT]  
     > The default log size is 8GB. Depending on the results of the **Test-SRTopology** cmdlet, you may decide to use –LogSizeInBytes with a higher or lower value.  
 
-5.  To remove replication, use **Get\-SRGroup**, **Get\-SRPartnership**, **Remove\-SRGroup**, and **Remove\-SRPartnership** on each cluster.  
+5.  To remove replication, use **Get-SRGroup**, **Get-SRPartnership**, **Remove-SRGroup**, and **Remove-SRPartnership** on each cluster.  
 
     ```  
     Get-SRPartnership | Remove-SRPartnership  

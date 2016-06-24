@@ -22,20 +22,20 @@ wscript[<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/j
 |Parameter|Description|
 |-------------|---------------|
 |ScriptName|Specifies the path and file name of the script file.|
-|\/b|Specifies batch mode, which does not display alerts, scripting errors, or input prompts.|
-|\/d|Starts the debugger.|
-|\/e|Specifies the engine that is used to run the script.|
-|\/h:cscript|Registers **cscript.exe** as the default script host for running scripts.|
-|\/h:wscript|Default. Registers **wscript.exe** as the default script host for running scripts. This is the default.|
-|\/i|Specifies interactive mode, which displays alerts, scripting errors, and input prompts.<br /><br />This is the default and the opposite of **\/b**.|
-|\/job:<identifier>|Runs the job identified by *identifier* in a **.wsf** script file.|
-|\/logo|Specifies that the Windows Script Host banner is displayed in the console before the script runs.<br /><br />This is the default and the opposite of **\/nologo**.|
-|\/nologo|Specifies that the Windows Script Host banner is not displayed before the script runs.|
-|\/s|Saves the current command\-prompt options for the current user.|
-|\/t:<number>|Specifies the maximum time the script can run \(in seconds\). You can specify up to 32,767 seconds.<br /><br />The default is no time limit.|
-|\/x|Starts the script in the debugger.|
-|ScriptArguments|Specifies the arguments passed to the script. Each script argument must be preceded by a slash \(\/\).|
-|\/?|Displays Help at the command prompt.|
+|/b|Specifies batch mode, which does not display alerts, scripting errors, or input prompts.|
+|/d|Starts the debugger.|
+|/e|Specifies the engine that is used to run the script.|
+|/h:cscript|Registers **cscript.exe** as the default script host for running scripts.|
+|/h:wscript|Default. Registers **wscript.exe** as the default script host for running scripts. This is the default.|
+|/i|Specifies interactive mode, which displays alerts, scripting errors, and input prompts.<br /><br />This is the default and the opposite of **/b**.|
+|/job:<identifier>|Runs the job identified by *identifier* in a **.wsf** script file.|
+|/logo|Specifies that the Windows Script Host banner is displayed in the console before the script runs.<br /><br />This is the default and the opposite of **/nologo**.|
+|/nologo|Specifies that the Windows Script Host banner is not displayed before the script runs.|
+|/s|Saves the current command-prompt options for the current user.|
+|/t:<number>|Specifies the maximum time the script can run (in seconds). You can specify up to 32,767 seconds.<br /><br />The default is no time limit.|
+|/x|Starts the script in the debugger.|
+|ScriptArguments|Specifies the arguments passed to the script. Each script argument must be preceded by a slash (/).|
+|/?|Displays Help at the command prompt.|
 
 ## Remarks
 
@@ -45,11 +45,11 @@ wscript[<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/j
 
 -   Each parameter is optional; however, you cannot specify script arguments without specifying a script. If you do not specify a script or any script arguments, **wscript.exe** displays the **Windows Script Host Settings** dialog box, which you can use to set global scripting properties for all scripts that **wscript.exe** runs on the local computer.
 
--   The **\/t** parameter prevents excessive running of scripts by setting a timer. When the time exceeds the specified value, **wscript** interrupts the script engine and ends the process.
+-   The **/t** parameter prevents excessive running of scripts by setting a timer. When the time exceeds the specified value, **wscript** interrupts the script engine and ends the process.
 
 -   Windows script files usually have one of the following file name extensions: **.wsf**, **.vbs**, **.js**.
 
--   If you double\-click a script file with an extension that has no association, the **Open With** dialog box appears. Select **wscript** or **cscript**, and then select **Always use this program to open this file type**. This registers **wscript.exe** or **cscript** as the default script host for files of this file type.
+-   If you double-click a script file with an extension that has no association, the **Open With** dialog box appears. Select **wscript** or **cscript**, and then select **Always use this program to open this file type**. This registers **wscript.exe** or **cscript** as the default script host for files of this file type.
 
 -   You can set properties for individual scripts. See [Windows Script Host overview](https://technet.microsoft.com/library/cc738350(v=ws.10).aspx) for more information.
 

@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">This content is the same for both Windows Server 2008 and Windows Server 2008 R2.</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">This content is the same for both Windows Server 2008 and Windows Server 2008 R2.</Token>

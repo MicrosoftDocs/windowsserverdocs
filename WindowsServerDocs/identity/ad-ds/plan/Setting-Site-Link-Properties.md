@@ -12,7 +12,7 @@ ms.assetid: 4628cb02-0114-43bf-852e-e9c772f22c61
 author: Femila
 ---
 # Setting Site Link Properties
-Intersite replication occurs according to the properties of the connection objects. When the Knowledge Consistency Checker \(KCC\) creates connection objects, it derives the replication schedule from properties of the site link objects. Each site link object represents the wide area network \(WAN\) connection between two or more sites.  
+Intersite replication occurs according to the properties of the connection objects. When the Knowledge Consistency Checker (KCC) creates connection objects, it derives the replication schedule from properties of the site link objects. Each site link object represents the wide area network (WAN) connection between two or more sites.  
   
 Setting site link object properties includes the following steps:  
   

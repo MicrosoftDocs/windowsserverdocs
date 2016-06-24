@@ -23,14 +23,14 @@ bootcfg /default [/s <Computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntr
 
 |Parameter|Description|
 |-------------|---------------|
-|\/s <Computer>|Specifies the name or IP address of a remote computer \(do not use backslashes\). The default is the local computer.|
-|\/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User> or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
-|\/p <Password>|Specifies the password of the user account that is specified in the **\/u** parameter.|
-|\/id <OSEntryLineNum>|Specifies the operating system entry line number in the \[operating systems\] section of the Boot.ini file to designate as default. The first line after the \[operating systems\] section header is 1.|
-|\/?|Displays help at the command prompt.|
+|/s <Computer>|Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.|
+|/u <Domain>\\<User>|Runs the command with the account permissions of the user specified by <User> or <Domain>\\<User>. The default is the permissions of the current logged on user on the computer issuing the command.|
+|/p <Password>|Specifies the password of the user account that is specified in the **/u** parameter.|
+|/id <OSEntryLineNum>|Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to designate as default. The first line after the [operating systems] section header is 1.|
+|/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_examples"></a>Examples
-The following examples show how you can use the **bootcfg \/default**command:
+The following examples show how you can use the **bootcfg /default**command:
 
 ```
 bootcfg /default /id 2

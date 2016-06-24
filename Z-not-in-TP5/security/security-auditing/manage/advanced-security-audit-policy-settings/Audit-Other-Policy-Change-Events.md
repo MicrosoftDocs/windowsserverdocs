@@ -15,9 +15,9 @@ This topic for the IT professional describes the Advanced Security Audit policy 
 
 These other activities in the Policy Change category that can be audited include:
 
--   Trusted Platform Module \(TPM\) configuration changes.
+-   Trusted Platform Module (TPM) configuration changes.
 
--   Kernel\-mode cryptographic self tests.
+-   Kernel-mode cryptographic self tests.
 
 -   Cryptographic provider operations.
 
@@ -27,7 +27,7 @@ Event volume: Low
 
 Default: Not configured
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

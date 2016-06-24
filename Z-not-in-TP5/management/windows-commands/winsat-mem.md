@@ -23,20 +23,20 @@ winsat mem <parameters>
 
 |Parameter|Description|
 |-------------|---------------|
-|\-up|Force memory testing with only one thread. The default is to run one thread per physical CPU or core.|
-|\-rn|Specify that the assessment’s threads should run at normal priority. The default is to run at priority 15.|
-|\-nc|Specify that the assessment should allocate memory and flag it as un\-cached. This means that the processor’s caches will be bypassed for copy operations. The default is to run in cached space.|
-|\-do <n>|Specify the distance, in bytes, between the end of the source buffer and the beginning of the destination buffer. The default is 64 bytes. The maximum allowable destination offset is 16MB. Specifying an invalid destination offset will result in an error. **Note:** Zero is a valid value for **<n>**, but negative numbers are not.|
-|\-mint <n>|Specify the minimum run time in seconds for the assessment. The default is 2.0. The minimum value is 1.0. The maximum value is 30.0. **Note:** Specifying a **\-mint** value greater than the **\-maxt** value when the two parameters are used in combination will result in an error.|
-|\-maxt <n>|Specify the maximum run time in seconds for the assessment. The default is 5.0. The minimum value is 1.0. The maximum value is 30.0. If used in combination with the **\-mint** parameter, the assessment will begin to do periodic statistical checks of its results after the period of time specified in **\-mint**. If the statistical checks pass, then the assessment will finish before the period of time specified in **\-maxt** has elapsed. If the assessment runs for the period of time specified in **\-maxt** without satisfying the statistical checks, then the assessment will finish at that time and return the results it has collected.|
-|\-buffersize <n>|Specify the buffer size that the memory copy test should use. Twice this amount will be allocated per CPU, which determines the amount of data copied from one buffer to another. The default is 16MB. This value is rounded to the nearest 4 KB boundary. The maximum value is 32MB. The minimum value is 4 KB. Specifying an invalid buffer size will result in an error.|
-|\-v|Send verbose output to STDOUT, including status and progress information. Any errors will also be written to the command window.|
-|\-xml <file name>|Save the output of the assessment as the specified XML file. If the specified file exists, it will be overwritten.|
-|\-idiskinfo|Save information about physical volumes and logical disks as part of the **<SystemConfig>** section in the XML output.|
-|\-iguid|Create a globally unique identifier \(GUID\) in the XML output file.|
-|\-note "note text"|Add the note text to the **<note>** section in the XML output file.|
-|\-icn|Include the local computer name in the XML output file.|
-|\-eef|Enumerate extra system information in the XML output file.|
+|-up|Force memory testing with only one thread. The default is to run one thread per physical CPU or core.|
+|-rn|Specify that the assessment’s threads should run at normal priority. The default is to run at priority 15.|
+|-nc|Specify that the assessment should allocate memory and flag it as un-cached. This means that the processor’s caches will be bypassed for copy operations. The default is to run in cached space.|
+|-do <n>|Specify the distance, in bytes, between the end of the source buffer and the beginning of the destination buffer. The default is 64 bytes. The maximum allowable destination offset is 16MB. Specifying an invalid destination offset will result in an error. **Note:** Zero is a valid value for **<n>**, but negative numbers are not.|
+|-mint <n>|Specify the minimum run time in seconds for the assessment. The default is 2.0. The minimum value is 1.0. The maximum value is 30.0. **Note:** Specifying a **-mint** value greater than the **-maxt** value when the two parameters are used in combination will result in an error.|
+|-maxt <n>|Specify the maximum run time in seconds for the assessment. The default is 5.0. The minimum value is 1.0. The maximum value is 30.0. If used in combination with the **-mint** parameter, the assessment will begin to do periodic statistical checks of its results after the period of time specified in **-mint**. If the statistical checks pass, then the assessment will finish before the period of time specified in **-maxt** has elapsed. If the assessment runs for the period of time specified in **-maxt** without satisfying the statistical checks, then the assessment will finish at that time and return the results it has collected.|
+|-buffersize <n>|Specify the buffer size that the memory copy test should use. Twice this amount will be allocated per CPU, which determines the amount of data copied from one buffer to another. The default is 16MB. This value is rounded to the nearest 4 KB boundary. The maximum value is 32MB. The minimum value is 4 KB. Specifying an invalid buffer size will result in an error.|
+|-v|Send verbose output to STDOUT, including status and progress information. Any errors will also be written to the command window.|
+|-xml <file name>|Save the output of the assessment as the specified XML file. If the specified file exists, it will be overwritten.|
+|-idiskinfo|Save information about physical volumes and logical disks as part of the **<SystemConfig>** section in the XML output.|
+|-iguid|Create a globally unique identifier (GUID) in the XML output file.|
+|-note "note text"|Add the note text to the **<note>** section in the XML output file.|
+|-icn|Include the local computer name in the XML output file.|
+|-eef|Enumerate extra system information in the XML output file.|
 
 ## <a name="BKMK_examples"></a>Examples
 
@@ -50,7 +50,7 @@ winsat mem <parameters>
 
 -   Membership in the local Administrators group, or equivalent, is the minimum required to use **winsat**. The command must be executed from an elevated command prompt window.
 
--   To open an elevated command prompt window, click **Start**, click **Accessories**, right\-click **Command Prompt**, and click **Run as administrator**.
+-   To open an elevated command prompt window, click **Start**, click **Accessories**, right-click **Command Prompt**, and click **Run as administrator**.
 
 #### Additional references
 [winsat \[vista\]](assetId:///11b0e51f-fe58-4553-9e7c-a562e5385fbb)

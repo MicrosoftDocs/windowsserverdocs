@@ -16,22 +16,22 @@ This planning topic describes the application information that you should docume
 ## Record your findings
 **Applications**
 
-Record the name of the application, whether it is signed as indicated by the publisher's name, and whether it is a mission critical, business productivity, optional, or personal application. Later, as you manage your rules, AppLocker displays this information in the format shown in the following example: *MICROSOFT OFFICE INFOPATH signed by O\=MICROSOFT CORPORATION, L\=REDMOND, S\=WASHINGTON, C\=US*.
+Record the name of the application, whether it is signed as indicated by the publisher's name, and whether it is a mission critical, business productivity, optional, or personal application. Later, as you manage your rules, AppLocker displays this information in the format shown in the following example: *MICROSOFT OFFICE INFOPATH signed by O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US*.
 
 **Installation path**
 
-Record the installation path of the applications. For example, Microsoft Office 2007 installs files to *%programfiles%\\Microsoft Office\\Office12\\*, which is *C:\\Program Files\\Microsoft Office\\Office12\\* on most computers.
+Record the installation path of the applications. For example, Microsoft Office 2007 installs files to *%programfiles%\Microsoft Office\Office12\\*, which is *C:\Program Files\Microsoft Office\Office12\\* on most computers.
 
 The following table provides an example of how to list applications for each business group at the early stage of designing your application control policies. Eventually, as more planning information is added to the list, the information can be used to build AppLocker rules.
 
 |Business group|Organizational unit|Implement AppLocker?|Applications|Installation path|
 |------------------|-----------------------|------------------------|----------------|---------------------|
-|Bank Tellers|Teller\-East and Teller\-West|Yes|Teller Software|C:\\Program Files\\Woodgrove\\Teller.exe|
-||||Windows files|C:\\Windows|
-|Human Resources|HR\-All|Yes|Check Payout|C:\\Program Files\\Woodgrove\\HR\\Checkcut.exe|
-||||Time Sheet Organizer|C:\\Program Files\\Woodgrove\\HR\\Timesheet.exe|
-||||Internet Explorer 7|C:\\Program Files\\Internet Explorer\\|
-||||Windows files|C:\\Windows|
+|Bank Tellers|Teller-East and Teller-West|Yes|Teller Software|C:\Program Files\Woodgrove\Teller.exe|
+||||Windows files|C:\Windows|
+|Human Resources|HR-All|Yes|Check Payout|C:\Program Files\Woodgrove\HR\Checkcut.exe|
+||||Time Sheet Organizer|C:\Program Files\Woodgrove\HR\Timesheet.exe|
+||||Internet Explorer 7|C:\Program Files\Internet Explorer\|
+||||Windows files|C:\Windows|
 
 > [!NOTE]
 > AppLocker only supports publisher rules for Windows Store apps. Therefore, collecting the installation path information for Windows Store apps is not necessary.

@@ -29,7 +29,7 @@ mkdir [<Drive>:]<Path>
 |-------------|---------------|
 |<Drive>:|Specifies the drive on which you want to create the new directory.|
 |<Path>|Required. Specifies the name and location of the new directory. The maximum length of any single path is determined by the file system.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 Command extensions, which are enabled by default, allow you to use a single **md** command to create intermediate directories in a specified path.
@@ -41,13 +41,13 @@ To create a directory named Directory1 within the current directory, type:
 md Directory1
 ```
 
-To create the directory tree Taxes\\Property\\Current within the root directory, with command extensions enabled, type:
+To create the directory tree Taxes\Property\Current within the root directory, with command extensions enabled, type:
 
 ```
 md \Taxes\Property\Current
 ```
 
-To create the directory tree Taxes\\Property\\Current within the root directory as in the previous example, but with command extensions disabled, type the following sequence of commands:
+To create the directory tree Taxes\Property\Current within the root directory as in the previous example, but with command extensions disabled, type the following sequence of commands:
 
 ```
 md \Taxes

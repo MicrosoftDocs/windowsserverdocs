@@ -26,7 +26,7 @@ To perform this procedure you must be a member of **Domain Admins**.
   
 2.  To verify that your CDP and AIA extension locations are correctly configured, type `pkiview.msc`, and then press ENTER. The pkiview Enterprise PKI MMC opens.  
   
-3.  Click your CA name. For example, if your CA name is corp\-CA1\-CA, click **corp\-CA1\-CA**. In the details pane, verify that the **Status** value for the **CA Certificate**, **AIA Location \#1**, and **CDP Location \#1** are all **OK**.  
+3.  Click your CA name. For example, if your CA name is corp-CA1-CA, click **corp-CA1-CA**. In the details pane, verify that the **Status** value for the **CA Certificate**, **AIA Location #1**, and **CDP Location #1** are all **OK**.  
   
 The following illustration depicts the pkiview results pane with a status of OK for all items.  
   

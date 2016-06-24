@@ -17,9 +17,9 @@ Activities that violate the integrity of the security subsystem include the foll
 
 -   Audited events are lost due to a failure of the auditing system.
 
--   A process uses an invalid local procedure call \(LPC\) port in an attempt to impersonate a client, reply to a client address space, read to a client address space, or write from a client address space.
+-   A process uses an invalid local procedure call (LPC) port in an attempt to impersonate a client, reply to a client address space, read to a client address space, or write from a client address space.
 
--   A remote procedure call \(RPC\) integrity violation is detected.
+-   A remote procedure call (RPC) integrity violation is detected.
 
 -   A code integrity violation with an invalid hash value of an executable file is detected.
 
@@ -32,7 +32,7 @@ Event volume: Low
 
 Default: Success and failure
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista, unless otherwise noted.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies to** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista, unless otherwise noted.
 
 |Event ID|Event message|
 |------------|-----------------|
@@ -41,11 +41,11 @@ If this policy setting is configured, the following events appear on computers r
 |4618|A monitored security event pattern has occurred.|
 |4816|RPC detected an integrity violation while decrypting an incoming message.|
 |5038|Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a potential disk device error.|
-|5056|A cryptographic self\-test was performed.|
+|5056|A cryptographic self-test was performed.|
 |5057|A cryptographic primitive operation failed.|
 |5060|Verification operation failed.|
 |5061|Cryptographic operation.|
-|5062|A kernel\-mode cryptographic self\-test was performed.|
+|5062|A kernel-mode cryptographic self-test was performed.|
 |6281|Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes or corrupt due to unauthorized modification. The invalid hashes could indicate a potential disk device error. **Note:** This event is logged only on computers running the supported versions of the Windows operating system.|
 
 ## Related resource

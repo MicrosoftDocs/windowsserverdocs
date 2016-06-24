@@ -17,7 +17,7 @@ author: Femila
 In this topic, we’ll cover a basic scenario that explains how to configure claims transformations between trusting and trusted forests. You will learn how claims transformation policy objects can be created and linked to the trust on the trusting forest and the trusted forest. You will then validate the scenario.  
   
 ## Scenario overview  
-Adatum Corporation provides financial services to Contoso, Ltd. Each quarter, Adatum accountants copy their account spreadsheets to a folder on a file server located at Contoso, Ltd. There is a two\-way trust set up from Contoso to Adatum. Contoso, Ltd. wants to protect the share so that only Adatum employees can access the remote share.  
+Adatum Corporation provides financial services to Contoso, Ltd. Each quarter, Adatum accountants copy their account spreadsheets to a folder on a file server located at Contoso, Ltd. There is a two-way trust set up from Contoso to Adatum. Contoso, Ltd. wants to protect the share so that only Adatum employees can access the remote share.  
   
 In this scenario:  
   
@@ -30,9 +30,9 @@ In this scenario:
 4.  [Validate the scenario](Deploy-Claims-Across-Forests--Demonstration-Steps-.md#BKMK_5)  
   
 ## <a name="BKMK_1.1"></a>Set up the prerequisites and the test environment  
-The test configuration involves setting up two forests: Adatum Corporation and Contoso, Ltd, and having a two\-way trust between Contoso and Adatum. "adatum.com" is the trusted forest and "contoso.com" is the trusting forest.  
+The test configuration involves setting up two forests: Adatum Corporation and Contoso, Ltd, and having a two-way trust between Contoso and Adatum. "adatum.com" is the trusted forest and "contoso.com" is the trusting forest.  
   
-The claims transformation scenario demonstrates transformation of a claim in the trusted forest to a claim in the trusting forest. To do this, you need to set up a new forest called adatum.com and populate the forest with a test user with a company value of “Adatum”. You then have to set up a two\-way trust between contoso.com and adatum.com.  
+The claims transformation scenario demonstrates transformation of a claim in the trusted forest to a claim in the trusting forest. To do this, you need to set up a new forest called adatum.com and populate the forest with a test user with a company value of “Adatum”. You then have to set up a two-way trust between contoso.com and adatum.com.  
   
 > [!IMPORTANT]  
 > When setting up the Contoso and Adatum forests, you must ensure that both the root domains are at the Windows Server 2012 Domain Functional Level for claims transformation to work.  
@@ -62,16 +62,16 @@ Use the following information to complete this scenario:
 |Objects|Details|  
 |-----------|-----------|  
 |Users|Jeff Low, Contoso|  
-|User claims on Adatum and Contoso|ID: ad:\/\/ext\/Company:ContosoAdatum,<br /><br />Source attribute: company<br /><br />Suggested values: Contoso, Adatum **Important:** You must set the ID on the “Company” claim type on both Contoso and Adatum to be the same for the claims transformation to work.|  
+|User claims on Adatum and Contoso|ID: ad://ext/Company:ContosoAdatum,<br /><br />Source attribute: company<br /><br />Suggested values: Contoso, Adatum **Important:** You must set the ID on the “Company” claim type on both Contoso and Adatum to be the same for the claims transformation to work.|  
 |Central access rule on Contoso|AdatumEmployeeAccessRule|  
 |Central access policy on Contoso|Adatum Only Access Policy|  
 |Claims Transformation policies on Adatum and Contoso|DenyAllExcept Company|  
-|File folder on Contoso|D:\\EARNINGS|  
+|File folder on Contoso|D:\EARNINGS|  
   
-## <a name="BKMK_3"></a>Set up claims transformation on trusted forest \(Adatum\)  
+## <a name="BKMK_3"></a>Set up claims transformation on trusted forest (Adatum)  
 In this step you create a transformation policy in Adatum to deny all claims except “Company” to pass to Contoso.  
   
-The Active Directory module for Windows PowerShell provides the **DenyAllExcept** argument, which drops everything except the specified claims in the transformation policy.  
+The Active Directory module for Windows PowerShell provides the **DenyAllExcept** argument, which drops everything except the specified claims in the transformation policy.  
   
 To set up a claims transformation, you need to create a claims transformation policy and link it between the trusted and trusting forests.  
   
@@ -110,8 +110,8 @@ In this step, you apply the newly created claims transformation policy on Adatum
   
     ```  
   
-## <a name="BKMK_4"></a>Set up claims transformation in the trusting forest \(Contoso\)  
-In this step you create a claims transformation policy in Contoso \(the trusting forest\) to deny all claims except “Company.” You need to create a claims transformation policy and link it to the forest trust.  
+## <a name="BKMK_4"></a>Set up claims transformation in the trusting forest (Contoso)  
+In this step you create a claims transformation policy in Contoso (the trusting forest) to deny all claims except “Company.” You need to create a claims transformation policy and link it to the forest trust.  
   
 ### <a name="BKMK_4.1"></a>Create a claims transformation policy in Contoso  
   
@@ -149,13 +149,13 @@ In this step, you apply the newly created claims transformation policy on the co
     ```  
   
 ## <a name="BKMK_5"></a>Validate the scenario  
-In this step you try to access the D:\\EARNINGS folder that was set up on the file server FILE1 to validate that the user has access to the shared folder.  
+In this step you try to access the D:\EARNINGS folder that was set up on the file server FILE1 to validate that the user has access to the shared folder.  
   
 #### To ensure that the Adatum user can access the shared folder  
   
 1.  Sign in to the Client machine, CLIENT1 as Jeff Low with the password **pass@word1**.  
   
-2.  Browse to the folder \\\\FILE1.contoso.com\\Earnings.  
+2.  Browse to the folder \\\FILE1.contoso.com\Earnings.  
   
 3.  Jeff Low should be able to access the folder.  
   
@@ -164,9 +164,9 @@ Following is a list of additional common cases in claims transformation.
   
 |Scenario|Policy|  
 |------------|----------|  
-|Allow all claims that come from Adatum to go through to Contoso Adatum|Code \- <br />New\-ADClaimTransformPolicy \`<br /> \-Description:"Claims transformation policy to allow all claims" \`<br />\-Name:"AllowAllClaimsPolicy" \`<br />\-AllowAll \`<br />\-Server:"contoso.com" \`<br />Set\-ADClaimTransformLink \`<br />\-Identity:"adatum.com" \`<br />\-Policy:"AllowAllClaimsPolicy" \`<br />\-TrustRole:Trusting \`<br />\-Server:"contoso.com" \`|  
-|Deny all claims that come from Adatum to go through to Contoso Adatum|Code \- <br />New\-ADClaimTransformPolicy \`<br />\-Description:"Claims transformation policy to deny all claims" \`<br />\-Name:"DenyAllClaimsPolicy" \`<br /> \-DenyAll \`<br />\-Server:"contoso.com" \`<br />Set\-ADClaimTransformLink \`<br />\-Identity:"adatum.com" \`<br />\-Policy:"DenyAllClaimsPolicy" \`<br />\-TrustRole:Trusting \`<br />\-Server:"contoso.com"\`|  
-|Allow all claims that come from Adatum except “Company” and “Department” to go through to Contoso Adatum|Code <br />\- New\-ADClaimTransformationPolicy \`<br />\-Description:"Claims transformation policy to allow all claims except company and department" \`<br /> \-Name:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br />\-AllowAllExcept:company,department \`<br />\-Server:"contoso.com" \`<br />Set\-ADClaimTransformLink \`<br /> \-Identity:"adatum.com" \`<br />\-Policy:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br /> \-TrustRole:Trusting \`<br />\-Server:"contoso.com" \`|  
+|Allow all claims that come from Adatum to go through to Contoso Adatum|Code - <br />New-ADClaimTransformPolicy \`<br /> -Description:"Claims transformation policy to allow all claims" \`<br />-Name:"AllowAllClaimsPolicy" \`<br />-AllowAll \`<br />-Server:"contoso.com" \`<br />Set-ADClaimTransformLink \`<br />-Identity:"adatum.com" \`<br />-Policy:"AllowAllClaimsPolicy" \`<br />-TrustRole:Trusting \`<br />-Server:"contoso.com" `|  
+|Deny all claims that come from Adatum to go through to Contoso Adatum|Code - <br />New-ADClaimTransformPolicy \`<br />-Description:"Claims transformation policy to deny all claims" \`<br />-Name:"DenyAllClaimsPolicy" \`<br /> -DenyAll \`<br />-Server:"contoso.com" \`<br />Set-ADClaimTransformLink \`<br />-Identity:"adatum.com" \`<br />-Policy:"DenyAllClaimsPolicy" \`<br />-TrustRole:Trusting \`<br />-Server:"contoso.com"`|  
+|Allow all claims that come from Adatum except “Company” and “Department” to go through to Contoso Adatum|Code <br />- New-ADClaimTransformationPolicy \`<br />-Description:"Claims transformation policy to allow all claims except company and department" \`<br /> -Name:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br />-AllowAllExcept:company,department \`<br />-Server:"contoso.com" \`<br />Set-ADClaimTransformLink \`<br /> -Identity:"adatum.com" \`<br />-Policy:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br /> -TrustRole:Trusting \`<br />-Server:"contoso.com" `|  
   
 ## <a name="BKMK_Links"></a>See also  
   

@@ -36,7 +36,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 4.  On the **Select features** dialog, click **Next**.  
   
-5.  Click **Next**, and then on the **Select role services** dialog, click the **DirectAccess and VPN \(RAS\)** check box.  
+5.  Click **Next**, and then on the **Select role services** dialog, click the **DirectAccess and VPN (RAS)** check box.  
   
 6.  Click **Add Features**, click **Next**, and then click **Install**.  
   
@@ -44,7 +44,7 @@ To deploy Remote Access, you must install the Remote Access role on a server in 
   
 ![](../../../media/Step-2--Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word\-wrapped across several lines here because of formatting constraints.  
+The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
 Install-WindowsFeature RemoteAccess -IncludeManagementTools  
@@ -67,7 +67,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 5.  Click **Finish**.  
   
-6.  Since there is no PKI used in this deployment, if certificates are not found, the wizard will automatically provision self\-signed certificates for IP\-HTTPS and the Network Location Server, and will automatically enable Kerberos proxy. The wizard will also enable NAT64 and DNS64 for protocol translation in the IPv4\-only environment. After the wizard successfully completes applying the configuration, click **Close**.  
+6.  Since there is no PKI used in this deployment, if certificates are not found, the wizard will automatically provision self-signed certificates for IP-HTTPS and the Network Location Server, and will automatically enable Kerberos proxy. The wizard will also enable NAT64 and DNS64 for protocol translation in the IPv4-only environment. After the wizard successfully completes applying the configuration, click **Close**.  
   
 7.  In the console tree of the Remote Access Management console, select **Operations Status**. Wait until the status of all monitors display as "Working". In the Tasks pane under Monitoring, click **Refresh** periodically to update the display.  
   
@@ -81,13 +81,13 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 3.  Wait for the computer policy update to complete successfully.  
   
-4.  Type **Get\-DnsClientNrptPolicy** and then press **ENTER**  
+4.  Type **Get-DnsClientNrptPolicy** and then press **ENTER**  
   
-    The Name Resolution Policy Table \(NRPT\) entries for DirectAccess are displayed. Note that the NLS server exemption is displayed. The Getting Started wizard automatically created this DNS entry for the DirectAccess server, and provisioned an associated self\-signed certificate so that the DirectAccess server can function as the Network Location Server.  
+    The Name Resolution Policy Table (NRPT) entries for DirectAccess are displayed. Note that the NLS server exemption is displayed. The Getting Started wizard automatically created this DNS entry for the DirectAccess server, and provisioned an associated self-signed certificate so that the DirectAccess server can function as the Network Location Server.  
   
-5.  Type **Get\-NCSIPolicyConfiguration** and then press **ENTER**. The network connectivity status indicator settings deployed by the wizard are displayed. Note the value of DomainLocationDeterminationURL. Whenever this network location server URL is accessible, the client will determine that it is inside the corporate network, and NRPT settings will not be applied.  
+5.  Type **Get-NCSIPolicyConfiguration** and then press **ENTER**. The network connectivity status indicator settings deployed by the wizard are displayed. Note the value of DomainLocationDeterminationURL. Whenever this network location server URL is accessible, the client will determine that it is inside the corporate network, and NRPT settings will not be applied.  
   
-6.  Type **Get\-DAConnectionStatus** and then press **ENTER**. Since the client can reach the network location server URL, the status will display as **ConnectedLocally**.  
+6.  Type **Get-DAConnectionStatus** and then press **ENTER**. Since the client can reach the network location server URL, the status will display as **ConnectedLocally**.  
   
 ## <a name="BKMK_Links"></a>Previous step  
   

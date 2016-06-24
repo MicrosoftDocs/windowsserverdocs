@@ -1,1 +1,1 @@
- To open the failover cluster snap\-in, click **Start**, click **Administrative Tools**, and then click **Failover Cluster Management**. 
+ To open the failover cluster snap-in, click **Start**, click **Administrative Tools**, and then click **Failover Cluster Management**. 

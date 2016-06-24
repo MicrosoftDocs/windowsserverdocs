@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: edcbf69b-eaa4-466e-b210-3dd8892f4d93
 ---
 # Dir
-Displays a list of a directory's files and subdirectories. If used without parameters, **dir** displays the disk's volume label and serial number, followed by a list of directories and files on the disk \(including their names and the date and time each was last modified\). For files, **dir** displays the name extension and the size in bytes. **Dir** also displays the total number of files and directories listed, their cumulative size, and the free space \(in bytes\) remaining on the disk.
+Displays a list of a directory's files and subdirectories. If used without parameters, **dir** displays the disk's volume label and serial number, followed by a list of directories and files on the disk (including their names and the date and time each was last modified). For files, **dir** displays the name extension and the size in bytes. **Dir** also displays the total number of files and directories listed, their cumulative size, and the free space (in bytes) remaining on the disk.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -23,39 +23,39 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
 
 |Parameter|Description|
 |-------------|---------------|
-|\[<Drive>:\]\[<Path>\]|Specifies the drive and directory for which you want to see a listing.|
-|\[<FileName>\]|Specifies a particular file or group of files for which you want to see a listing.|
-|\/p|Displays one screen of the listing at a time. To see the next screen, press any key on the keyboard.|
-|\/q|Displays file ownership information.|
-|\/w|Displays the listing in wide format, with as many as five file names or directory names on each line.|
-|\/d|Displays the listing in the same format as **\/w**, but the files are sorted by column.|
-|\/a\[\[:\]<Attributes>\]|Displays only the names of those directories and files with the attributes that you specify. If you omit **\/a**, **dir** displays the names of all files except hidden and system files. If you use **\/a** without specifying *Attributes*, **dir** displays the names of all files, including hidden and system files.<br /><br />The following list describes each of the values that you can use for *Attributes*. Using a colon \(:\) is optional. Use any combination of these values, and do not separate the values with spaces.<br /><br />**d** Directories<br /><br />**h** Hidden files<br /><br />**s** System files<br /><br />**l** Reparse points<br /><br />**r** Read\-only files<br /><br />**a** Files ready for archiving<br /><br />**i** Not content indexed files<br /><br />**\-** Prefix meaning "not"|
-|\/o\[\[:\]<SortOrder>\]|Sorts the output according to *SortOrder*, which can be any combination of the following values:<br /><br />**n** By name \(alphabetical\)<br /><br />**e** By extension \(alphabetical\)<br /><br />**g** Group directories first<br /><br />**s** By size \(smallest first\)<br /><br />**d** By date\/time \(oldest first\)<br /><br />**\-** Prefix to reverse order **Note:** Using a colon is optional. Multiple values are processed in the order in which you list them. Do not separate multiple values with spaces.<br /><br />If *SortOrder* is not specified, **dir \/o** lists the directories in alphabetic order, followed by the files, which are also sorted in alphabetic order.|
-|\/t\[\[:\]<TimeField>\]|Specifies which time field to display or use for sorting. The following list describes each of the values you can use for *TimeField*:<br /><br />**c** Creation<br /><br />**a** Last access<br /><br />**w** Last written|
-|\/s|Lists every occurrence of the specified file name within the specified directory and all subdirectories.|
-|\/b|Displays a bare list of directories and files, with no additional information. **\/b** overrides **\/w**.|
-|\/l|Displays unsorted directory names and file names in lowercase.|
-|\/n|Displays a long list format with file names on the far right of the screen.|
-|\/x|Displays the short names generated for non\-8dot3 file names. The display is the same as the display for **\/n**, but the short name is inserted before the long name.|
-|\/c|Displays the thousand separator in file sizes. This is the default behavior. Use **\/\-c** to hide separators.|
-|\/4|Displays years in four\-digit format.|
-|\/?|Displays help at the command prompt.|
+|[<Drive>:][<Path>]|Specifies the drive and directory for which you want to see a listing.|
+|[<FileName>]|Specifies a particular file or group of files for which you want to see a listing.|
+|/p|Displays one screen of the listing at a time. To see the next screen, press any key on the keyboard.|
+|/q|Displays file ownership information.|
+|/w|Displays the listing in wide format, with as many as five file names or directory names on each line.|
+|/d|Displays the listing in the same format as **/w**, but the files are sorted by column.|
+|/a[[:]<Attributes>]|Displays only the names of those directories and files with the attributes that you specify. If you omit **/a**, **dir** displays the names of all files except hidden and system files. If you use **/a** without specifying *Attributes*, **dir** displays the names of all files, including hidden and system files.<br /><br />The following list describes each of the values that you can use for *Attributes*. Using a colon (:) is optional. Use any combination of these values, and do not separate the values with spaces.<br /><br />**d** Directories<br /><br />**h** Hidden files<br /><br />**s** System files<br /><br />**l** Reparse points<br /><br />**r** Read-only files<br /><br />**a** Files ready for archiving<br /><br />**i** Not content indexed files<br /><br />**-** Prefix meaning "not"|
+|/o[[:]<SortOrder>]|Sorts the output according to *SortOrder*, which can be any combination of the following values:<br /><br />**n** By name (alphabetical)<br /><br />**e** By extension (alphabetical)<br /><br />**g** Group directories first<br /><br />**s** By size (smallest first)<br /><br />**d** By date/time (oldest first)<br /><br />**-** Prefix to reverse order **Note:** Using a colon is optional. Multiple values are processed in the order in which you list them. Do not separate multiple values with spaces.<br /><br />If *SortOrder* is not specified, **dir /o** lists the directories in alphabetic order, followed by the files, which are also sorted in alphabetic order.|
+|/t[[:]<TimeField>]|Specifies which time field to display or use for sorting. The following list describes each of the values you can use for *TimeField*:<br /><br />**c** Creation<br /><br />**a** Last access<br /><br />**w** Last written|
+|/s|Lists every occurrence of the specified file name within the specified directory and all subdirectories.|
+|/b|Displays a bare list of directories and files, with no additional information. **/b** overrides **/w**.|
+|/l|Displays unsorted directory names and file names in lowercase.|
+|/n|Displays a long list format with file names on the far right of the screen.|
+|/x|Displays the short names generated for non-8dot3 file names. The display is the same as the display for **/n**, but the short name is inserted before the long name.|
+|/c|Displays the thousand separator in file sizes. This is the default behavior. Use **/-c** to hide separators.|
+|/4|Displays years in four-digit format.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   To use multiple *FileName* parameters, separate each file name with a space, comma, or semicolon.
 
--   You can use wildcard characters \(**\*** or**?**\), to represent one or more characters of a file name and to display a subset of files or subdirectories.
+-   You can use wildcard characters (**\*** or**?**), to represent one or more characters of a file name and to display a subset of files or subdirectories.
 
-    **Asterisk \(\*\):** Use the asterisk as a substitute for any string of characters, for example:
+    **Asterisk (\*):** Use the asterisk as a substitute for any string of characters, for example:
 
-    -   **dir \*.txt** lists all files in the current directory with extensions that begin with .txt, such as .txt, .txt1, .txt\_old.
+    -   **dir \*.txt** lists all files in the current directory with extensions that begin with .txt, such as .txt, .txt1, .txt_old.
 
-    -   **dir read\*.txt** lists all files in the current directory that begin with "read" and with extensions that begin with .txt, such as .txt, .txt1, or .txt\_old.
+    -   **dir read\*.txt** lists all files in the current directory that begin with "read" and with extensions that begin with .txt, such as .txt, .txt1, or .txt_old.
 
     -   **dir read\*.\*** lists all files in the current directory that begin with "read" with any extension.
 
-    The asterisk wildcard always uses short file name mapping, so you might get unexpected results. For example, the following directory contains two files \(t.txt2 and t97.txt\):
+    The asterisk wildcard always uses short file name mapping, so you might get unexpected results. For example, the following directory contains two files (t.txt2 and t97.txt):
 
     ```
     C:\test>dir /x
@@ -72,19 +72,19 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
 
     You might expect that typing **dir t97\*** would return the file t97.txt. However, typing **dir t97\*** returns both files, because the asterisk wildcard matches the file t.txt2 to t97.txt by using its short name map T97B4~1.TXT. Similarly, typing **del t97\*** would delete both files.
 
-    **Question mark \(?\):** Use the question mark as a substitute for a single character in a name. For example, typing **dir read???.txt** lists any files in the current directory with the .txt extension that begin with "read" and are followed by up to three characters. This includes Read.txt, Read1.txt, Read12.txt, Read123.txt, and Readme1.txt, but not Readme12.txt.
+    **Question mark (?):** Use the question mark as a substitute for a single character in a name. For example, typing **dir read???.txt** lists any files in the current directory with the .txt extension that begin with "read" and are followed by up to three characters. This includes Read.txt, Read1.txt, Read12.txt, Read123.txt, and Readme1.txt, but not Readme12.txt.
 
 -   Specifying file display attributes
 
-    If you use **\/a** with more than one value in *Attributes*, **dir** displays the names of only those files with all the specified attributes. For example, if you use **\/a** with **r** and **\-h** as attributes \(by using either **\/a:r\-h** or **\/ar\-h**\), **dir** will only display the names of the read\-only files that are not hidden.
+    If you use **/a** with more than one value in *Attributes*, **dir** displays the names of only those files with all the specified attributes. For example, if you use **/a** with **r** and **-h** as attributes (by using either **/a:r-h** or **/ar-h**), **dir** will only display the names of the read-only files that are not hidden.
 
 -   Specifying file name sorting
 
-    If you specify more than one *SortOrder* value, **dir** sorts the file names by the first criterion, then by the second criterion, and so on. For example, if you use **\/o** with the **e** and **\-s** values for *SortOrder* \(by using either **\/o:e\-s** or **\/oe\-s**\), **dir** sorts the names of directories and files by extension, with the largest first, and then displays the final result. The alphabetic sorting by extension causes file names with no extensions to appear first, then directory names, and then file names with extensions.
+    If you specify more than one *SortOrder* value, **dir** sorts the file names by the first criterion, then by the second criterion, and so on. For example, if you use **/o** with the **e** and **-s** values for *SortOrder* (by using either **/o:e-s** or **/oe-s**), **dir** sorts the names of directories and files by extension, with the largest first, and then displays the final result. The alphabetic sorting by extension causes file names with no extensions to appear first, then directory names, and then file names with extensions.
 
 -   Using redirection symbols and pipes
 
-    When you use the redirection symbol \(**>**\) to send **dir** output to a file or a pipe \(**|**\) to send **dir** output to another command, use **\/a:\-d** and **\/b** to list the file names only. You can use *FileName* with **\/b** and **\/s** to specify that **dir** is to search the current directory and its subdirectories for all file names that match *FileName*. **Dir** lists only the drive letter, directory name, file name, and file name extension \(one path per line\), for each file name it finds. Before you use a pipe to send **dir** output to another command, you should set the TEMP environment variable in your Autoexec.nt file.
+    When you use the redirection symbol (**>**) to send **dir** output to a file or a pipe (**|**) to send **dir** output to another command, use **/a:-d** and **/b** to list the file names only. You can use *FileName* with **/b** and **/s** to specify that **dir** is to search the current directory and its subdirectories for all file names that match *FileName*. **Dir** lists only the drive letter, directory name, file name, and file name extension (one path per line), for each file name it finds. Before you use a pipe to send **dir** output to another command, you should set the TEMP environment variable in your Autoexec.nt file.
 
 -   The **dir** command, with different parameters, is available from the Recovery Console.
 

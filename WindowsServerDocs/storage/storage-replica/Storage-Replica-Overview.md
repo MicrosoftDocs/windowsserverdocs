@@ -31,7 +31,7 @@ Storage Replica may allow you to decommission existing file replication systems 
 Storage Replica also supports asynchronous replication for longer ranges and higher latency networks. Because it is not checkpoint-based, and instead continuously replicates, the delta of changes will tend to be far lower than snapshot-based products. Furthermore, Storage Replica operates at the partition layer and therefore replicates all VSS snapshots created by Windows Server or backup software; this allows use of application-consistent data snapshots for point in time recovery, especially unstructured user data replicated asynchronously.  
 
 ### <a name="BKMK_SRSupportedScenarios"></a>Supported Storage Replica configurations in Windows Server 2016 Technical Preview  
-Using this guide and Windows Server 2016 Technical Preview, you can deploy storage replication in a stretch cluster, between cluster\-to\-cluster, and in server\-to\-server configurations \(see Figures 1\-3\). To reiterate from the Windows Server 2016 Technical Preview EULA, this feature is provided “AS\-IS” and is not supported in production environments.  
+Using this guide and Windows Server 2016 Technical Preview, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3). To reiterate from the Windows Server 2016 Technical Preview EULA, this feature is provided “AS-IS” and is not supported in production environments.  
 
 **Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize shared Storage Spaces on JBOD, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
 
@@ -43,13 +43,13 @@ Using this guide and Windows Server 2016 Technical Preview, you can deploy stora
 
 ![](./media/Storage-Replica-Overview/Storage_SR_ClustertoCluster.png)  
 
-**FIGURE 2: Cluster\-to\-cluster storage replication using Storage Replica**  
+**FIGURE 2: Cluster-to-cluster storage replication using Storage Replica**  
 
 **Server to server** allows synchronous and asynchronous replication between two standalone servers, using Storage Spaces on JBOD, SAN and iSCSI-attached LUNs, and local drives. It is managed with PowerShell and requires manual intervention for failover.  
 
 ![](./media/Storage-Replica-Overview/Storage_SR_ServertoServer.png)  
 
-**FIGURE 3: Server\-to\-server storage replication using Storage Replica**  
+**FIGURE 3: Server-to-server storage replication using Storage Replica**  
 
 > [!NOTE]
 > You can also configure server-to-self replication, using four separate volumes on one computer. However, this guide does not cover this scenario.  
@@ -80,25 +80,25 @@ Windows Server 2016 Technical Preview implements the following features in Stora
 
 |Feature|Details|  
 |-----------|-----------|  
-|Type|Host\-based|  
+|Type|Host-based|  
 |Synchronous|Yes|  
 |Asynchronous|Yes|  
 |Storage hardware agnostic|Yes|  
-|Replication unit|Volume \(Partition\)|  
+|Replication unit|Volume (Partition)|  
 |Windows Server Stretch Cluster creation|Yes|  
 |Server to server replication|Yes|  
 |Cluster to cluster replication|Yes|  
 |Transport|SMB3|  
-|Network|TCP\/IP or RDMA|  
-|RDMA*|iWARP\, InfiniBand, RoCE v2|  
-|Replication network port firewall requirements|Single IANA port \(TCP 445 or 5445\)|  
-|Multipath\/Multichannel|Yes \(SMB3\)|  
-|Kerberos support|Yes \(SMB3\)|  
-|Over the wire encryption and signing|Yes \(SMB3\)|  
-|Per\-volume failovers allowed|Yes|  
-|Management UI in\-box|PowerShell, Failover Cluster Manager|  
+|Network|TCP/IP or RDMA|  
+|RDMA*|iWARP, InfiniBand, RoCE v2|  
+|Replication network port firewall requirements|Single IANA port (TCP 445 or 5445)|  
+|Multipath/Multichannel|Yes (SMB3)|  
+|Kerberos support|Yes (SMB3)|  
+|Over the wire encryption and signing|Yes (SMB3)|  
+|Per-volume failovers allowed|Yes|  
+|Management UI in-box|PowerShell, Failover Cluster Manager|  
 
-\*May require additional long haul equipment and cabling.  
+*May require additional long haul equipment and cabling.  
 
 ## <a name="BKMK_SR3"></a> Storage Replica Prerequisites  
 
@@ -134,7 +134,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 |Mode|Diagram|Steps|  
 |--------|-----------|---------|  
-|**Asynchronous**<br /><br />Near zero data loss<br /><br />\(depends on multiple factors\)<br /><br />RPO|![](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
+|**Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO|![](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through|  
 
 ### Changes and improvements between Technical Preview 4 and Technical Preview 5  
 
@@ -187,7 +187,7 @@ This guide frequently uses the following terms:
 
 -   The source is a computer’s volume that allows local writes and replicates outbound. Also known as “primary”.  
 
--   The destination is a computer’s volume that does not allow local writes and replicates inbound. Also known as "secondary".   
+-   The destination is a computer’s volume that does not allow local writes and replicates inbound. Also known as "secondary".   
 
 -   A replication partnership is the synchronization relationship between a source and destination computer for one or more volumes and utilizes a single log.  
 

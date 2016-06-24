@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 36ce3ffc-0092-4eb1-a374-28e6616ca946
 ---
 # Query process
-Displays information about processes that are running on a Remote Desktop Session Host \(RD Session Host\) server.
+Displays information about processes that are running on a Remote Desktop Session Host (RD Session Host) server.
 
 You can use this command to find out which programs a specific user is running, and also which users are running a specific program.
 
@@ -28,20 +28,20 @@ query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <Progra
 
 |Parameter|Description|
 |-------------|---------------|
-|\*|Lists the processes for all sessions.|
+|*|Lists the processes for all sessions.|
 |<ProcessID>|Specifies the numeric ID identifying the process that you want to query.|
 |<UserName>|Specifies the name of the user whose processes you want to list.|
 |<SessionName>|Specifies the name of the session whose processes you want to list.|
-|\/id:<nn>|Specifies the ID of the session whose processes you want to list.|
+|/id:<nn>|Specifies the ID of the session whose processes you want to list.|
 |<ProgramName>|Specifies the name of the program whose processes you want to query. The .exe extension is required.|
-|\/server:<ServerName>|Specifies the RD Session Host server whose processes you want to list. If unspecified, the server where you are currently logged on is used.|
-|\/?|Displays help at the command prompt.|
+|/server:<ServerName>|Specifies the RD Session Host server whose processes you want to list. If unspecified, the server where you are currently logged on is used.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   Administrators have full access to all **query process** functions.
 
--   If you do not specify the <*UserName*>, <*SessionName*>, **\/id:**<*nn*>, <*ProgramName*>, or **\*** parameters, **query process** displays only the processes that belong to the current user.
+-   If you do not specify the <*UserName*>, <*SessionName*>, **/id:**<*nn*>, <*ProgramName*>, or **\*** parameters, **query process** displays only the processes that belong to the current user.
 
 -   If a session is specified, it must identify an active session.
 
@@ -57,7 +57,7 @@ query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <Progra
 
     -   The ID of the process
 
--   When **query process** returns information, a greater than \(>\) symbol is displayed before each process that belongs to the current session.
+-   When **query process** returns information, a greater than (>) symbol is displayed before each process that belongs to the current session.
 
 ## <a name="BKMK_examples"></a>Examples
 

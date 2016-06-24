@@ -22,7 +22,7 @@ finger [<UserName>] [{[>] <FileName>|[>>] <FileName>}]
 |Parameter|Description|
 |-------------|---------------|
 |<UserName>|Specifies the name of the user to look up.|
-|<FileName>|Specifies a file name in which to save the output. You can use the greater than \(>\) and double greater than \(>>\) characters to redirect the output in the usual manner.|
+|<FileName>|Specifies a file name in which to save the output. You can use the greater than (>) and double greater than (>>) characters to redirect the output in the usual manner.|
 |{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
 
 ## Additional references

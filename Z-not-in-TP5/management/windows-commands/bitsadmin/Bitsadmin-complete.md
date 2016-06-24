@@ -24,7 +24,7 @@ bitsadmin /complete <Job>
 |Job|The job's display name or GUID|
 
 ## <a name="BKMK_examples"></a>Examples
-When the state of the job is TRANSFERRED, BITS has successfully transferred all files in the job. However, the files are not available until you use the **\/complete** switch. If multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
+When the state of the job is TRANSFERRED, BITS has successfully transferred all files in the job. However, the files are not available until you use the **/complete** switch. If multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
 
 ```
 C:\>bitsadmin /complete myDownloadJob

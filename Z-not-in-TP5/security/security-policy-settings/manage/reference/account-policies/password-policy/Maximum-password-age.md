@@ -14,16 +14,16 @@ ms.assetid: cd899b7f-ce5f-47e1-bd91-30c444ce7db4
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.  
   
 ## Reference  
-The **Maximum password age** policy setting determines the period of time \(in days\) that a password can be used before the system requires the user to change it. You can set passwords to expire after a number of days between 1 and 999, or you can specify that passwords never expire by setting the number of days to 0. If **Maximum password age** is between 1 and 999 days, the minimum password age must be less than the maximum password age. If **Maximum password age** is set to 0, **Minimum password age** can be any value between 0 and 998 days.  
+The **Maximum password age** policy setting determines the period of time (in days) that a password can be used before the system requires the user to change it. You can set passwords to expire after a number of days between 1 and 999, or you can specify that passwords never expire by setting the number of days to 0. If **Maximum password age** is between 1 and 999 days, the minimum password age must be less than the maximum password age. If **Maximum password age** is set to 0, **Minimum password age** can be any value between 0 and 998 days.  
   
 > [!NOTE]  
-> Setting **Maximum password age** to \-1 is equivalent to 0, which means it never expires. Setting it to any other negative number is equivalent to setting it to **Not Defined**.  
+> Setting **Maximum password age** to -1 is equivalent to 0, which means it never expires. Setting it to any other negative number is equivalent to setting it to **Not Defined**.  
   
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.  
   
 ### Possible values  
   
--   User\-specified number of days between 0 and 999  
+-   User-specified number of days between 0 and 999  
   
 -   Not defined  
   
@@ -31,16 +31,16 @@ This policy setting is supported on versions of Windows that are designated in t
 Set **Maximum password age** to 60 days, depending on your environment. This way, an attacker has a limited amount of time in which to compromise a user's password and have access to your network resources.  
   
 ### Location  
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Account Policies\\Password Policy**  
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy**  
   
 ### Default values  
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.  
   
-|Server type or Group Policy Object \(GPO\)|Default value|  
+|Server type or Group Policy Object (GPO)|Default value|  
 |----------------------------------------------|-----------------|  
 |Default domain policy|42 days|  
 |Default domain controller policy|Not defined|  
-|Stand\-alone server default settings|42 days|  
+|Stand-alone server default settings|42 days|  
 |Domain controller effective default settings|42 days|  
 |Member server effective default settings|42 days|  
 |Effective GPO default settings on client computers|42 days|  

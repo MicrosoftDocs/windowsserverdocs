@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 3cfc1fca-6515-4a4d-bfae-615fa8045ea9
 ---
 # Create partition efi
-On Itanium\-based computers, creates an Extensible Firmware Interface \(EFI\) system partition on a GUID Partition Table \(GPT\) disk.
+On Itanium-based computers, creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (GPT) disk.
 
 For examples of how this command can be used, see [Examples](#BKMK_examples).
 
@@ -25,8 +25,8 @@ create partition efi [size=<n>] [offset=<n>] [noerr]
 
 |Parameter|Description|
 |-------------|---------------|
-|size\=<n>|The size of the partition in megabytes \(MB\). If no size is given, the partition continues until there is no more free space in the current region.|
-|offset\=<n>|The offset in kilobytes \(KB\), at which the partition is created. If no offset is given, the partition is placed in the first disk extent that is large enough to hold it.|
+|size=<n>|The size of the partition in megabytes (MB). If no size is given, the partition continues until there is no more free space in the current region.|
+|offset=<n>|The offset in kilobytes (KB), at which the partition is created. If no offset is given, the partition is placed in the first disk extent that is large enough to hold it.|
 |noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
 
 ## Remarks

@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 ---
 # Windows Server 2016 Technical Preview 5
-**\[This information is preliminary and subject to change.\]**
+**[This information is preliminary and subject to change.]**
 
 Welcome to [!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)] 5.
 

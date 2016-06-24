@@ -15,8 +15,8 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
-    <para>If a domain controller has not replicated with its partner for longer than a tombstone lifetime, it is possible that a lingering object problem exists on one or both domain controllers. The tombstone lifetime in an Active Directory forest determines how long a deleted object (called a “tombstone”) is retained in Active Directory Domain Services (AD DS). The tombstone lifetime is determined by the value of the <system>tombstoneLifetime</system> attribute on the Directory Service object in the configuration directory partition. </para>
-    <para>When the condition that causes Event ID 2042 to be logged occurs, inbound replication with the source partner is stopped on the destination domain controller and Event ID 2042 is logged in the Directory Service event log. The event identifies the source domain controller and the appropriate steps to take to either remove the outdated domain controller or remove lingering objects and restore replication from the source domain controller.</para>
+    <para>If a domain controller has not replicated with its partner for longer than a tombstone lifetime, it is possible that a lingering object problem exists on one or both domain controllers. The tombstone lifetime in an Active Directory forest determines how long a deleted object (called a “tombstone”) is retained in Active Directory Domain Services (AD DS). The tombstone lifetime is determined by the value of the <system>tombstoneLifetime</system> attribute on the Directory Service object in the configuration directory partition. </para>
+    <para>When the condition that causes Event ID 2042 to be logged occurs, inbound replication with the source partner is stopped on the destination domain controller and Event ID 2042 is logged in the Directory Service event log. The event identifies the source domain controller and the appropriate steps to take to either remove the outdated domain controller or remove lingering objects and restore replication from the source domain controller.</para>
     <para>The following is an example of the event text: </para>
     <code>
 Log Name: Directory Service
@@ -64,7 +64,7 @@ Once the systems replicate once, it is recommended that you remove
 the key to reinstate the protection. 
 Registry Key: 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Allow Replication With Divergent and Corrupt Partner</code>
-    <para>The <system>repadmin /showrepl</system> command also reports error 8416, as shown in the following example:</para>
+    <para>The <system>repadmin /showrepl</system> command also reports error 8416, as shown in the following example:</para>
     <code>Source: Default-First-Site-Name\DC1
 ******* &lt;number&gt; CONSECUTIVE FAILURES since &lt;date&gt; &lt;time&gt;
 Last error: 8614 (0x21a6):
@@ -75,10 +75,10 @@ exceeded the tombstone lifetime.</code>
   <section>
     <title>Cause</title>
     <content>
-      <para>There are a few potential causes for the logging of Event ID 2042, which include the following:</para>
+      <para>There are a few potential causes for the logging of Event ID 2042, which include the following:</para>
       <list class="bullet">
         <listItem>
-          <para> Windows Server 2003 pre–Service Pack 1 (SP1) domain controllers having a software issue that causes replication failures</para>
+          <para> Windows Server 2003 pre–Service Pack 1 (SP1) domain controllers having a software issue that causes replication failures</para>
         </listItem>
         <listItem>
           <para>Replication failures that have existed longer than the configured tombstone lifetime value</para>
@@ -95,11 +95,11 @@ exceeded the tombstone lifetime.</code>
       <para>The resolution of this issue depends on the actual cause or causes of the issue. To resolve this issue, check for each of the following conditions:</para>
       <list class="ordered">
         <listItem>
-          <para>Determine whether there are any Windows Server 2003 domain controllers that do not have at least SP1 applied. If you find any such domain controllers, ensure that you update them to at least SP1 to resolve this issue.</para>
+          <para>Determine whether there are any Windows Server 2003 domain controllers that do not have at least SP1 applied. If you find any such domain controllers, ensure that you update them to at least SP1 to resolve this issue.</para>
         </listItem>
         <listItem>
           <para>Determine whether there are any replication failures that have been allowed to exceed the tombstone lifetime of the forest. Typically, the tombstone lifetime of the forest is 60 to 180 days by default. The event message indicates the tombstone lifetime of the forest as it is currently configured. </para>
-          <para>Run the command <system>repadmin /showrepl</system> to determine whether a replication issue exists. If you suspect that there is a replication issue, see <externalLink><linkText>Monitoring and Troubleshooting Active Directory Replication Using Repadmin</linkText><linkUri>http://go.microsoft.com/fwlink/?linkid=140631</linkUri></externalLink> (http://go.microsoft.com/fwlink/?linkid=140631) for information about how to resolve the issue.</para>
+          <para>Run the command <system>repadmin /showrepl</system> to determine whether a replication issue exists. If you suspect that there is a replication issue, see <externalLink><linkText>Monitoring and Troubleshooting Active Directory Replication Using Repadmin</linkText><linkUri>http://go.microsoft.com/fwlink/?linkid=140631</linkUri></externalLink> (http://go.microsoft.com/fwlink/?linkid=140631) for information about how to resolve the issue.</para>
         </listItem>
         <listItem>
           <para>Determine whether there are lingering objects. You can do this by running the command <system>repadmin /removelingeringobjects</system> in advisory mode, as described in the following procedure. </para>
@@ -141,7 +141,7 @@ exceeded the tombstone lifetime.</code>
     </content>
     <sections>
       <section>
-        <title>Restart replication following Event ID 2042</title>
+        <title>Restart replication following Event ID 2042</title>
         <content>
           <para>The normal state of replication is one in which changes to objects and their attributes converge in a way that domain controllers receive the latest information. When a partner domain controller is discovered to be passing older changes, the changes from the partner are deemed to be “divergent.” The partner is said to be engaged in “divergent replication.” Domain controllers will normally stop replicating with any partner that is deemed to be engaged in divergent replication. </para>
           <para>After you remove all lingering objects, you can restart replication on the domain controller that logged the event by editing the registry.</para>
@@ -150,7 +150,7 @@ exceeded the tombstone lifetime.</code>
           </alert>
           <para>Membership in <embeddedLabel>Domain Admins</embeddedLabel>, or equivalent, is the minimum required to complete this procedure. <token>gen_win7_review_detailincludes></para>
           <procedure>
-            <title>Use Repadmin to restart replication following Event ID 2042</title>
+            <title>Use Repadmin to restart replication following Event ID 2042</title>
             <steps class="ordered">
               <step>
                 <content>
@@ -180,7 +180,7 @@ exceeded the tombstone lifetime.</code>
                           <para>/regkey</para>
                         </TD>
                         <TD>
-                          <para>Enables (<system>+</system>) and disables (<system>-</system>) the value for the <embeddedLabel>Strict Replication Consistency</embeddedLabel> registry entry in <embeddedLabel>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters</embeddedLabel>.</para>
+                          <para>Enables (<system>+</system>) and disables (<system>-</system>) the value for the <embeddedLabel>Strict Replication Consistency</embeddedLabel> registry entry in <embeddedLabel>HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesNTDSParameters</embeddedLabel>.</para>
                         </TD>
                       </tr>
                       <tr>
@@ -202,7 +202,7 @@ exceeded the tombstone lifetime.</code>
                     </tbody>
                   </table>
                   <alert class="note">
-                    <para>If you did not use <system>*</system> to apply the change to all domain controllers, repeat step 2 for every domain controller on which you want to allow divergent replication.</para>
+                    <para>If you did not use <system>*</system> to apply the change to all domain controllers, repeat step 2 for every domain controller on which you want to allow divergent replication.</para>
                   </alert>
                 </content>
               </step>

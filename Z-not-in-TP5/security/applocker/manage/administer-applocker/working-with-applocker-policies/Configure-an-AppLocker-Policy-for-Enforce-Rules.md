@@ -18,11 +18,11 @@ This topic describes the steps to enable the AppLocker policy enforcement settin
 
 For information about how AppLocker policies are applied within a GPO structure, see [Understanding AppLocker Rules and Enforcement Setting Inheritance in Group Policy](http://technet.microsoft.com/library/ee449492(WS.10).aspx).
 
-You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object \(GPO\) or by using the Local Security Policy snap\-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap\-ins to administer AppLocker, see [Using the MMC snap\-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
+You can perform this task by using the Group Policy Management Console for an AppLocker policy in a Group Policy Object (GPO) or by using the Local Security Policy snap-in for an AppLocker policy on a local computer or in a security template. For information how to use these MMC snap-ins to administer AppLocker, see [Using the MMC snap-ins to administer AppLocker](Administer-AppLocker.md#BKMK_Using_Snapins).
 
 #### To enable the Enforce rules enforcement setting
 
-1.  In the console tree of the snap\-in under **Computer Configuration\\Windows Settings\\Security Settings\\Application Control Policies**, right\-click **AppLocker**, and then click **Properties**.
+1.  In the console tree of the snap-in under **Computer Configuration\Windows Settings\Security Settings\Application Control Policies**, right-click **AppLocker**, and then click **Properties**.
 
 2.  On the **Enforcement** tab of the **AppLocker Properties** dialog box, select the **Configured** check box for the rule collection that you are editing, and then verify that **Enforce rules** is selected.
 

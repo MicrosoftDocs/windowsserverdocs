@@ -33,7 +33,7 @@ On the **Updates** page, you can do the following:
 
 1.  In the WSUS administration console, expand the Updates node, and then click All Updates.
 
-2.  By default, updates are displayed with their title, classification, installed\/not applicable percentage, and approval status. If you wish to display more or different update properties, right\-click the column heading bar and select the appropriate columns.
+2.  By default, updates are displayed with their title, classification, installed/not applicable percentage, and approval status. If you wish to display more or different update properties, right-click the column heading bar and select the appropriate columns.
 
 3.  To sort by different criteria, such as download status, title, classification, release date, or approval status, click the appropriate column heading.
 
@@ -71,11 +71,11 @@ Your new view will appear in the tree view pane under Updates. It will be displa
 
 #### To search for an update
 
-1.  Select the **Updates** node \(or any node under it\).
+1.  Select the **Updates** node (or any node under it).
 
 2.  In the **Actions** pane, click **Search**.
 
-3.  In the **Search** window, on the **Updates** tab, enter your search criteria. You can use text from the **Title**, **Description**, and **Microsoft Knowledge Base \(KB\) article number** fields. Each of these items is a property listed on the **Details** tab in the update properties.
+3.  In the **Search** window, on the **Updates** tab, enter your search criteria. You can use text from the **Title**, **Description**, and **Microsoft Knowledge Base (KB) article number** fields. Each of these items is a property listed on the **Details** tab in the update properties.
 
 #### To view the properties for an update
 
@@ -85,15 +85,15 @@ Your new view will appear in the tree view pane under Updates. It will be displa
 
 3.  In the lower pane, you will see the different property sections:
 
-    -   The title bar displays the title of the update; for example, Security Update for Windows Media Player 9 \(KB911565\).
+    -   The title bar displays the title of the update; for example, Security Update for Windows Media Player 9 (KB911565).
 
-    -   The Status section displays the installation status of the update \(the computers on which it needs to be installed, computers on which it was installed with errors, computers on which it has been installed or is not applicable, and computers that have not reported status for the update\), as well as general information \(KB and MSRC numbers release date, etc.\).
+    -   The Status section displays the installation status of the update (the computers on which it needs to be installed, computers on which it was installed with errors, computers on which it has been installed or is not applicable, and computers that have not reported status for the update), as well as general information (KB and MSRC numbers release date, etc.).
 
     -   The Description section displays a brief description of the update.
 
     -   The Additional Details section displays the following information:
 
-        -   The installation behavior of the update \(whether or not it is removable, requests a restart, requires user input, or must be installed exclusively\).
+        -   The installation behavior of the update (whether or not it is removable, requests a restart, requires user input, or must be installed exclusively).
 
         -   Whether or not the update has Microsoft Software License Terms
 
@@ -124,9 +124,9 @@ You will be setting up and running synchronizations, adding computers and comput
 
     -   Whether to set up a hierarchy of WSUS servers and how the hierarchy should be structured.
 
-    -   What computer groups to create, and how to assign computers to them \(server\-side or client\-side targeting\).
+    -   What computer groups to create, and how to assign computers to them (server-side or client-side targeting).
 
-    -   Which database to use for update metadata \(for example, Windows® Internal Database, SQL Server\).
+    -   Which database to use for update metadata (for example, Windows® Internal Database, SQL Server).
 
     -   Whether updates should be synchronized automatically, and at what time.
 
@@ -134,30 +134,30 @@ You will be setting up and running synchronizations, adding computers and comput
 
 -   Get the updates and associated metadata on your WSUS server through synchronization from either Microsoft Update or an upstream WSUS server.
 
--   Approve or decline updates. You have the option of allowing users to install the updates themselves \(if they are local administrators on their client computers\).
+-   Approve or decline updates. You have the option of allowing users to install the updates themselves (if they are local administrators on their client computers).
 
 -   Configure automatic approvals. You can also configure whether you want to enable automatic approval of revisions to existing updates or approve revisions manually. If you choose to approve revisions manually, then your WSUS server will continue using the older version until you manually approve the new revision.
 
--   Check the status of updates. You can view update status, print a status report, or configure e\-mail for regular status reports.
+-   Check the status of updates. You can view update status, print a status report, or configure e-mail for regular status reports.
 
 ## Update Products and Classifications
-Updates available on Microsoft Update are differentiated by product \(or product family\) and classification.
+Updates available on Microsoft Update are differentiated by product (or product family) and classification.
 
 A product is a specific edition of an operating system or application, for example, Windows Server 2012. A product family is the base operating system or application from which the individual products are derived. An example of a product family is Microsoft Windows, of which Windows Server 2012 is a member. You can select the products or product families for which you want your server to synchronize updates. You can specify a product family or individual products within the family. Selecting any product or product family will get updates for current and future versions of the product.
 
-Update classifications represent the type of update. For any given product or product family, updates could be available among multiple update classifications \(for example, Windows 7 family Critical Updates and Security Updates\). The following table lists update classifications.
+Update classifications represent the type of update. For any given product or product family, updates could be available among multiple update classifications (for example, Windows 7 family Critical Updates and Security Updates). The following table lists update classifications.
 
 |||
 |----|----|
-|Critical Updates|Broadly released fixes for specific problems addressing critical, non\-security related bugs.|
+|Critical Updates|Broadly released fixes for specific problems addressing critical, non-security related bugs.|
 |Definition Updates|Updates to virus or other definition files.|
 |Drivers|Software components designed to support new hardware.|
 |Feature packs|New feature releases, usually rolled into products at the next release.|
 |Security updates|Broadly released fixes for specific products, addressing security issues.|
-|Service packs|Cumulative sets of all hotfixes, security updates, critical updates, and updates created since the release of the product. Service packs might also contain a limited number of customer\-requested design changes or features.|
+|Service packs|Cumulative sets of all hotfixes, security updates, critical updates, and updates created since the release of the product. Service packs might also contain a limited number of customer-requested design changes or features.|
 |Tools|Utilities or features that aid in accomplishing a task or set of tasks.|
-|Update rollups|A cumulative set of hotfixes, security updates, critical updates, and other updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a specific component, such as Internet Information Services \(IIS\).|
-|Updates|Broadly released fixes for specific problems addressing non\-critical, non\-security related bugs.|
+|Update rollups|A cumulative set of hotfixes, security updates, critical updates, and other updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a specific component, such as Internet Information Services (IIS).|
+|Updates|Broadly released fixes for specific problems addressing non-critical, non-security related bugs.|
 
 ## See also
 

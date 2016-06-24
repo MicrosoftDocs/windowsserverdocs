@@ -10,7 +10,7 @@ ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818
 author: vhorne
 ---
 # Pushprinterconnections
-Reads Deployed Printer Connection settings from Group Policy, and deploys\/removes printer connections as needed.  
+Reads Deployed Printer Connection settings from Group Policy, and deploys/removes printer connections as needed.  
   
 ## Syntax  
   
@@ -22,8 +22,8 @@ pushprinterconnections <-log> <-?>
   
 |Parameter|Description|  
 |-------------|---------------|  
-|<\-log>|Writes a per user debug log file to %temp, or writes a per machine debug log to %windir%\\temp.|  
-|<\-?>|Displays Help at the command prompt.|  
+|<-log>|Writes a per user debug log file to %temp, or writes a per machine debug log to %windir%\temp.|  
+|<-?>|Displays Help at the command prompt.|  
   
 ## Remarks  
 This utility is for use in machine startup or user logon scripts, and should not be run from the command line.  

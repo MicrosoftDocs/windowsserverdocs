@@ -21,10 +21,10 @@ tzutil [/?] [/g] [/s <TimeZoneID>[_dstoff]] [/l]
 
 |Parameter|Description|
 |-------------|---------------|
-|\/?|Displays Help at the command prompt.|
-|\/g|Displays the current time zone ID.|
-|\/s <TimeZoneID>\[\_dstoff\]|Sets the current time zone using the specified time zone ID. The **\_dstoff** suffix disables Daylight Saving Time adjustments for the time zone \(where applicable\).|
-|\/l|Lists all valid time zone IDs and display names. The output will be:<br /><br />-   <display name><br />-   <time zone ID>|
+|/?|Displays Help at the command prompt.|
+|/g|Displays the current time zone ID.|
+|/s <TimeZoneID>[_dstoff]|Sets the current time zone using the specified time zone ID. The **_dstoff** suffix disables Daylight Saving Time adjustments for the time zone (where applicable).|
+|/l|Lists all valid time zone IDs and display names. The output will be:<br /><br />-   <display name><br />-   <time zone ID>|
 
 ## Remarks
 An exit code of **0** indicates the command completed successfully.

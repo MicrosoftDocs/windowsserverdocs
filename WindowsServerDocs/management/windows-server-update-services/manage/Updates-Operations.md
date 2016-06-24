@@ -12,22 +12,22 @@ ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
 author: coreyp-at-msft
 ---
 # Updates Operations
-After updates have been synchronized to your WSUS server, they will be scanned automatically for relevance to the server's client computers. However, you must approve the updates before they are deployed to the computers on your network. When you approve an update, you are essentially telling WSUS what to do with it \(your choices are **Install** or **Decline** for a new update\). You can approve updates for the **All Computers** group or for subgroups. If you do not approve an update, its approval status remains **Not approved**, and your WSUS server allows clients to evaluate whether or not they need the update.
+After updates have been synchronized to your WSUS server, they will be scanned automatically for relevance to the server's client computers. However, you must approve the updates before they are deployed to the computers on your network. When you approve an update, you are essentially telling WSUS what to do with it (your choices are **Install** or **Decline** for a new update). You can approve updates for the **All Computers** group or for subgroups. If you do not approve an update, its approval status remains **Not approved**, and your WSUS server allows clients to evaluate whether or not they need the update.
 
 If your WSUS server is running in replica mode, you will not be able to approve updates on your WSUS server. For more information about replica mode, see [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md).
 
 ## Approving Updates
-You can approve the installation of updates for all the computers in your WSUS network or for different computer groups. After approving an update, you can do one \(or more\) of the following:
+You can approve the installation of updates for all the computers in your WSUS network or for different computer groups. After approving an update, you can do one (or more) of the following:
 
 -   Apply this approval to child groups, if any.
 
--   Set a deadline for automatic installation. When you select this option, you set specific times and dates to install updates, overriding any settings on the client computers. In addition, you can specify a past date for the deadline if you want to approve an update immediately \(to be installed the next time client computers contact the WSUS server\).
+-   Set a deadline for automatic installation. When you select this option, you set specific times and dates to install updates, overriding any settings on the client computers. In addition, you can specify a past date for the deadline if you want to approve an update immediately (to be installed the next time client computers contact the WSUS server).
 
 -   Remove an installed update if that update supports removal.
 
 There are two important considerations that you should keep in mind:
 
--   First, you cannot set a deadline for automatic installation for an update if user input is required \(for example, specifying a setting relevant to the update\). To determine whether an update will require user input, look at the **May request user input** field in the update properties for an update displayed on the **Updates** page. Also check for a message in the **Approve Updates** box that says, "**The selected update requires user input and does not support an installation deadline**."
+-   First, you cannot set a deadline for automatic installation for an update if user input is required (for example, specifying a setting relevant to the update). To determine whether an update will require user input, look at the **May request user input** field in the update properties for an update displayed on the **Updates** page. Also check for a message in the **Approve Updates** box that says, "**The selected update requires user input and does not support an installation deadline**."
 
 -   If there are updates to the WSUS server component, you cannot approve other updates to client systems until the WSUS update is approved. You will see this warning message in the Approve Updates dialog: "There are WSUS updates that have not been approved. You should approve the WSUS updates before approving this update." In this case, you should click the WSUS Updates node and make sure that all of the updates in that view have been approved before returning to the general updates.
 
@@ -35,15 +35,15 @@ There are two important considerations that you should keep in mind:
 
 1.  In the WSUS administrative console, click **Updates** and then click **All Updates**.
 
-2.  In the list of updates, select the update that you want to approve and right\-click \(or go to the Actions pane\), and in the Approve Updates dialog, select the computer group for which you want to approve the update, and click the arrow next to it.
+2.  In the list of updates, select the update that you want to approve and right-click (or go to the Actions pane), and in the Approve Updates dialog, select the computer group for which you want to approve the update, and click the arrow next to it.
 
 3.  Select **Approved for Install**, and then click **Approve**.
 
 4.  The **Approval Progress** window will display the progress toward completing the approval. When the process is complete, the **Close** button appears. Click **Close**.
 
-5.  You can select a deadline by right\-clicking the update, selecting the appropriate computer group, clicking the arrow next to it, and then clicking **Deadline**.
+5.  You can select a deadline by right-clicking the update, selecting the appropriate computer group, clicking the arrow next to it, and then clicking **Deadline**.
 
-    -   You can  select one of the standard deadlines \(one week, two weeks, one month\), or you can click **Custom** to specify a date and time.
+    -   You can  select one of the standard deadlines (one week, two weeks, one month), or you can click **Custom** to specify a date and time.
 
     -   If you want an update to be installed as soon as the client computers contact the server, click **Custom**, and then set a date and time to the current date and time or to one in the past.
 
@@ -53,7 +53,7 @@ There are two important considerations that you should keep in mind:
 
 2.  To select multiple contiguous updates, press **SHIFT** while selecting updates. To select multiple noncontiguous updates, press and hold down **CTRL** while selecting updates.
 
-3.  Right\-click the selection and click **Approve**. The **Approve Updates** dialog opens with the **Approval status** set to **Keep existing approvals** and the **OK** button disabled.
+3.  Right-click the selection and click **Approve**. The **Approve Updates** dialog opens with the **Approval status** set to **Keep existing approvals** and the **OK** button disabled.
 
 4.  You can change the approvals for the individual groups, but doing so will not affect child approvals. Select the group for which you want to change the approval, and click the arrow to its left. In the shortcut menu, click **Approved for Install**.
 
@@ -66,7 +66,7 @@ There are two important considerations that you should keep in mind:
 8.  Click **OK** after setting all your approvals. The **Approval Progress** window will display the progress toward completing the approval. When the process is complete, the **Close** button will be available. Click **Close**.
 
 ## Declining updates
-If you select this option, the update is removed from the default list of available updates and the WSUS server will not offer the update to clients, either for evaluation or installation. You can reach this option by selecting an update or group of updates and right\-clicking or going to the Actions pane. Declined updates will appear in the updates list only if you select **Declined** in the Approval list when specifying the filter for the update list under **View**.
+If you select this option, the update is removed from the default list of available updates and the WSUS server will not offer the update to clients, either for evaluation or installation. You can reach this option by selecting an update or group of updates and right-clicking or going to the Actions pane. Declined updates will appear in the updates list only if you select **Declined** in the Approval list when specifying the filter for the update list under **View**.
 
 #### To decline updates
 
@@ -90,9 +90,9 @@ After an update has been declined, you can still reinstate it.
 
 3.  In the list of updates, select one or more declined updates that you want to reinstate.
 
-4.  To reinstate a particular update, right click on the update and select **Approve**. In the **Approve Updates** dialog, click **OK** to re\-apply the default “Not Approved” approval status. The update will show in the list as **Not approved** instead of Declined.
+4.  To reinstate a particular update, right click on the update and select **Approve**. In the **Approve Updates** dialog, click **OK** to re-apply the default “Not Approved” approval status. The update will show in the list as **Not approved** instead of Declined.
 
-After a declined update has been cleaned up by using the WSUS Server Cleanup Wizard, it will be deleted from the WSUS server and will no longer appear in the All Updates view. You can re\-import Declined, cleaned\-up updates from the Microsoft Update Catalog. For additional information, see [WSUS and the Catalog Site](WSUS-and-the-Catalog-Site.md).
+After a declined update has been cleaned up by using the WSUS Server Cleanup Wizard, it will be deleted from the WSUS server and will no longer appear in the All Updates view. You can re-import Declined, cleaned-up updates from the Microsoft Update Catalog. For additional information, see [WSUS and the Catalog Site](WSUS-and-the-Catalog-Site.md).
 
 ## Change an Approved Update to Not Approved
 If an update has been approved and you decide not to install it at this time, and instead want to save it for a future time, you can change the update to a status of Not Approved. This means that the update will remain in the default list of available updates and will report client compliance, but will not be installed on clients.
@@ -106,7 +106,7 @@ If an update has been approved and you decide not to install it at this time, an
 3.  In the shortcut menu or the **Actions** pane, select **Not Approved**, and then click **Yes** on the confirmation message.
 
 ## Approving Updates for Removal
-You can approve an update for removal \(that is, to uninstall an already\-installed update\). This option is available only if the update is already installed and supports removal. You can specify a deadline for the update to be uninstalled, or specify a past date for the deadline if you want to remove the update immediately \(the next time client computers contact the WSUS server\).
+You can approve an update for removal (that is, to uninstall an already-installed update). This option is available only if the update is already installed and supports removal. You can specify a deadline for the update to be uninstalled, or specify a past date for the deadline if you want to remove the update immediately (the next time client computers contact the WSUS server).
 
 It is important to mention that not all updates support removal. You can see whether an update supports removal by selecting an individual update and looking at the **Details** pane. Under **Additional Details**, you will see the **Removable** category. If the update cannot be removed through WSUS, in some cases it can be removed with **Add or Remove Programs** from **Control Panel**.
 
@@ -114,20 +114,20 @@ It is important to mention that not all updates support removal. You can see whe
 
 1.  In the WSUS administrative console, click **Updates** and then click **All Updates**.
 
-2.  In the list of updates, select one or more updates that you want to approve for removal and right\-click them \(or go to the **Actions** pane\).
+2.  In the list of updates, select one or more updates that you want to approve for removal and right-click them (or go to the **Actions** pane).
 
 3.  In the **Approve Updates** dialog, select the computer group from which you want to remove the update, and click the arrow next to it.
 
 4.  Select **Approved for Removal**, and then click the **Remove** button.
 
-5.  After the remove approval has completed, you can select a deadline by right\-clicking the update once more, selecting the appropriate computer group, and then clicking the arrow next to it. Then select **Deadline**. You may select one of the standard deadlines \(one week, two weeks, one month\), or you can click **Custom** to select a specific date and time.
+5.  After the remove approval has completed, you can select a deadline by right-clicking the update once more, selecting the appropriate computer group, and then clicking the arrow next to it. Then select **Deadline**. You may select one of the standard deadlines (one week, two weeks, one month), or you can click **Custom** to select a specific date and time.
 
 6.  If you want an update to be removed as soon as the client computers contact the server, click **Custom**, and set a date in the past.
 
 ## Approving Updates Automatically
-You can configure your WSUS server for automatic approval of certain updates. You can also specify automatic approval of revisions to existing updates as they become available. This option is selected by default. A revision is a version of an update that has had changes made to it \(for example, it might have expired, or its applicability rules might have changed\). If you do not choose to approve the revised version of an update automatically, WSUS will use the older version, and you must manually approve the update revision.
+You can configure your WSUS server for automatic approval of certain updates. You can also specify automatic approval of revisions to existing updates as they become available. This option is selected by default. A revision is a version of an update that has had changes made to it (for example, it might have expired, or its applicability rules might have changed). If you do not choose to approve the revised version of an update automatically, WSUS will use the older version, and you must manually approve the update revision.
 
-You can create rules that your WSUS server will automatically apply during synchronization. You specify what updates you want to automatically approve for installation, by update classification, by product, and by computer group. This applies only to new updates, as opposed to revised updates. You can also specify an update approval deadline, which sets a number of days and a specific time of offering before the approved update is deadline\-installed. These settings are available in the **Options** pane, under **Automatic Approvals**.
+You can create rules that your WSUS server will automatically apply during synchronization. You specify what updates you want to automatically approve for installation, by update classification, by product, and by computer group. This applies only to new updates, as opposed to revised updates. You can also specify an update approval deadline, which sets a number of days and a specific time of offering before the approved update is deadline-installed. These settings are available in the **Options** pane, under **Automatic Approvals**.
 
 #### To automatically approve updates
 
@@ -135,7 +135,7 @@ You can create rules that your WSUS server will automatically apply during synch
 
 2.  In **Update Rules**, click **New Rule**.
 
-3.  In the **Add Rule** dialog, under **Step 1: Select properties**, select whether to use **When an update is in a specific classification** or **When an update is in a specific product** \(or both\) as criteria. Optionally, select whether to **Set a deadline** for the approval.
+3.  In the **Add Rule** dialog, under **Step 1: Select properties**, select whether to use **When an update is in a specific classification** or **When an update is in a specific product** (or both) as criteria. Optionally, select whether to **Set a deadline** for the approval.
 
 4.  In **Step 2: Edit the properties** click the underlined properties to select the Classifications, Products, and Computer groups for which you want automatic approvals, as applicable. Optionally, choose the update approval deadline Day and Time.
 
@@ -143,13 +143,13 @@ You can create rules that your WSUS server will automatically apply during synch
 
 6.  Click **OK**.
 
-Automatic approval rules will not apply to updates requiring an End User License Agreement \(EULA\) that has not yet been accepted on the server. If you find that applying an automatic approval rule does not cause all the relevant updates to be approved, you should approve these updates manually.
+Automatic approval rules will not apply to updates requiring an End User License Agreement (EULA) that has not yet been accepted on the server. If you find that applying an automatic approval rule does not cause all the relevant updates to be approved, you should approve these updates manually.
 
 ## Automatically Approving Revisions to Updates and Declining Expired Updates
 The Automatic Approvals section of the Options pane contains a default option to automatically approve revisions to approved updates. You can also set your WSUS server to automatically decline expired updates. If you choose not to approve the revised version of an update automatically, your WSUS server will use the older revision, and you must manually approve the update revision.
 
 > [!NOTE]
-> A revision is a version of an update that has changed \(for example, it might have expired or have updated applicability rules\).
+> A revision is a version of an update that has changed (for example, it might have expired or have updated applicability rules).
 
 #### To automatically approve revisions to updates and decline expired updates
 
@@ -167,13 +167,13 @@ When you approve a new update that supersedes an existing update which is automa
 
 To search for superseded updates, you can select the “Superseded” flag column in the All Updates view, and sort on that column. There will be four groups:
 
--   Updates which have never been superseded \(a blank icon\).
+-   Updates which have never been superseded (a blank icon).
 
--   Updates which have been superseded, but have never superseded another update \(an icon with a blue square at the bottom\).
+-   Updates which have been superseded, but have never superseded another update (an icon with a blue square at the bottom).
 
--   Updates which have been superseded and have superseded another update \(an icon with a blue square in the middle\).
+-   Updates which have been superseded and have superseded another update (an icon with a blue square in the middle).
 
--   Updates which have superseded another update \(an icon with a blue square at the top\).
+-   Updates which have superseded another update (an icon with a blue square at the top).
 
 There is no feature in Windows Server Update Services that automatically declines superseded updates upon approval of a newer update. It is recommended to first set the approval to “Not Approved,” and then use the Server Cleanup Wizard to automatically decline the update when all relevant conditions have been satisfied. For more information, see: [The Server Cleanup Wizard](The-Server-Cleanup-Wizard.md).
 

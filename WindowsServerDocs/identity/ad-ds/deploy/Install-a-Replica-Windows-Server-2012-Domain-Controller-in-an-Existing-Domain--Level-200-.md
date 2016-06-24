@@ -31,11 +31,11 @@ The following diagram illustrates the Active Directory Domain Services configura
   
 |||  
 |-|-|  
-|**ADDSDeployment  Cmdlet**|Arguments \(**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.\)|  
-|Install\-AddsDomainController|\-SkipPreChecks<br /><br />***\-DomainName***<br /><br />*\-SafeModeAdministratorPassword*<br /><br />*\-SiteName*<br /><br />*\-ADPrepCredential*<br /><br />\-ApplicationPartitionsToReplicate<br /><br />*\-AllowDomainControllerReinstall*<br /><br />\-Confirm<br /><br />*\-CreateDNSDelegation*<br /><br />***\-Credential***<br /><br />\-CriticalReplicationOnly<br /><br />*\-DatabasePath*<br /><br />*\-DNSDelegationCredential*<br /><br />\-Force<br /><br />*\-InstallationMediaPath*<br /><br />*\-InstallDNS*<br /><br />*\-LogPath*<br /><br />\-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />\-NoDnsOnNetwork<br /><br />*\-NoGlobalCatalog*<br /><br />\-Norebootoncompletion<br /><br />*\-ReplicationSourceDC*<br /><br />\-SkipAutoConfigureDNS<br /><br />\-SiteName<br /><br />*\-SystemKey*<br /><br />*\-SYSVOLPath*<br /><br />*\-UseExistingAccount*<br /><br />*\-Whatif*|  
+|**ADDSDeployment  Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
+|Install-AddsDomainController|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-SiteName*<br /><br />*-ADPrepCredential*<br /><br />-ApplicationPartitionsToReplicate<br /><br />*-AllowDomainControllerReinstall*<br /><br />-Confirm<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-Force<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />-NoDnsOnNetwork<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />-SiteName<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-UseExistingAccount*<br /><br />*-Whatif*|  
   
 > [!NOTE]  
-> The **\-credential** argument is only required if you are not already logged on as a member of the Enterprise Admins and Schema Admins groups \(if you are upgrading the forest\) or the Domain Admins group \(if you are adding a new DC to an existing domain\).  
+> The **-credential** argument is only required if you are not already logged on as a member of the Enterprise Admins and Schema Admins groups (if you are upgrading the forest) or the Domain Admins group (if you are adding a new DC to an existing domain).  
   
 ## <a name="BKMK_Dep"></a>Deployment  
   
@@ -69,7 +69,7 @@ Certain tests perform at each page, some of which repeat later as discrete prere
 ### Domain Controller Options  
 ![](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDCOptions.png)  
   
-The **Domain Controller Options** page specifies the domain controller capabilities for the new domain controller. The configurable domain controller capabilities are **DNS server**, **Global Catalog**, and **Read\-only domain controller**. Microsoft recommends that all domain controllers provide DNS and GC services for high availability in distributed environments. GC is always selected by default and DNS server is selected by default if the current domain hosts DNS already on its DCs based on Start of Authority query. The **Domain Controller Options** page also enables you to choose the appropriate Active Directory logical **site name** from the forest configuration. By default, it selects the site with the most correct subnet. If there is only one site, it selects automatically.  
+The **Domain Controller Options** page specifies the domain controller capabilities for the new domain controller. The configurable domain controller capabilities are **DNS server**, **Global Catalog**, and **Read-only domain controller**. Microsoft recommends that all domain controllers provide DNS and GC services for high availability in distributed environments. GC is always selected by default and DNS server is selected by default if the current domain hosts DNS already on its DCs based on Start of Authority query. The **Domain Controller Options** page also enables you to choose the appropriate Active Directory logical **site name** from the forest configuration. By default, it selects the site with the most correct subnet. If there is only one site, it selects automatically.  
   
 > [!NOTE]  
 > If the server does not belong to an Active Directory subnet and there is more than one Active Directory site, nothing is selected and the **Next** button is unavailable until you choose a site from the list.  
@@ -86,7 +86,7 @@ The **Domain Controller Options** ADDSDeployment arguments are:
 ```  
   
 > [!IMPORTANT]  
-> The site name must already exist when provided as an argument to **\-sitename**. The **install\-AddsDomainController** cmdlet does not create sites. You can use cmdlet **new\-adreplicationsite** to create new sites.  
+> The site name must already exist when provided as an argument to **-sitename**. The **install-AddsDomainController** cmdlet does not create sites. You can use cmdlet **new-adreplicationsite** to create new sites.  
   
 The **SafeModeAdministratorPassword** argument's operation is special:  
   
@@ -100,7 +100,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  
   
-For example, you can manually prompt for a password by using the **Read\-Host** cmdlet to prompt the user for a secure string:  
+For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string:  
   
 ```  
 -safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
@@ -109,7 +109,7 @@ For example, you can manually prompt for a password by using the **Read\-Host** 
 > [!WARNING]  
 > As the previous option does not confirm the password, use extreme caution: the password is not visible.  
   
-You can also provide a secure string as a converted clear\-text variable, although this is highly discouraged.  
+You can also provide a secure string as a converted clear-text variable, although this is highly discouraged.  
   
 ```  
 -safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
@@ -161,7 +161,7 @@ For more information about whether you need to create a DNS delegation, see [Und
   
 The **Additional Options** page provides the configuration option to name a domain controller as the replication source, or you can use any domain controller as the replication source.  
   
-You can also choose to install the domain controller using backed up media using the Install from media \(IFM\) option. The **Install from media** checkbox provides a browse option once selected and you must click **Verify** to ensure the provided path is valid media. Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server 2012 computer only; you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller. For more information about changes in IFM, see [Simplified Administration Appendix](../../ad-ds/deploy/Simplified-Administration-Appendix.md). If using media protected with a SYSKEY, Server Manager prompts for the image's password during verification.  
+You can also choose to install the domain controller using backed up media using the Install from media (IFM) option. The **Install from media** checkbox provides a browse option once selected and you must click **Verify** to ensure the provided path is valid media. Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server 2012 computer only; you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller. For more information about changes in IFM, see [Simplified Administration Appendix](../../ad-ds/deploy/Simplified-Administration-Appendix.md). If using media protected with a SYSKEY, Server Manager prompts for the image's password during verification.  
   
 ![](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_NtdsutilIFM.png)  
   
@@ -189,7 +189,7 @@ The Active Directory Paths ADDSDeployment cmdlet arguments are:
 ### Preparation Options  
 ![](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradePrepOptions.png)  
   
-The **Preparation Options** page alerts you that the AD DS configuration includes extending the Schema \(forestprep\) and updating the domain \(domainprep\).  You only see this page when the forest and domain have not been prepared by previous Windows Server 2012 domain controller installation or from manually running Adprep.exe. For example, the Active Directory Domain Services Configuration Wizard suppresses this page if you add a new domain controller to an existing Windows Server 2012 forest root domain.  
+The **Preparation Options** page alerts you that the AD DS configuration includes extending the Schema (forestprep) and updating the domain (domainprep).  You only see this page when the forest and domain have not been prepared by previous Windows Server 2012 domain controller installation or from manually running Adprep.exe. For example, the Active Directory Domain Services Configuration Wizard suppresses this page if you add a new domain controller to an existing Windows Server 2012 forest root domain.  
   
 Extending the Schema and updating the domain do not occur when you click **Next**. These events occur only during the installation phase. This page simply brings awareness about the events that will occur later in the installation.  
   
@@ -204,9 +204,9 @@ The Additional Options ADDSDeployment cmdlet argument is:
 ```  
   
 > [!IMPORTANT]  
-> As with previous versions of Windows Server, automated domain preparation for domain controllers that run Windows Server 2012 does not run GPPREP. Run **adprep.exe \/gpprep** manually for all domains that were not previously prepared for Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2. You should run GPPrep only once in the history of a domain, not with every upgrade. Adprep.exe does not run \/gpprep automatically because its operation can cause all files and folders in the SYSVOL folder to re\-replicate on all domain controllers.  
+> As with previous versions of Windows Server, automated domain preparation for domain controllers that run Windows Server 2012 does not run GPPREP. Run **adprep.exe /gpprep** manually for all domains that were not previously prepared for Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2. You should run GPPrep only once in the history of a domain, not with every upgrade. Adprep.exe does not run /gpprep automatically because its operation can cause all files and folders in the SYSVOL folder to re-replicate on all domain controllers.  
 >   
-> Automatic RODCPrep runs when you promote the first un\-staged RODC in a domain. It does not occur when you promote the first writeable Windows Server 2012 domain controller. You can also still manually **adprep.exe \/rodcprep** if you plan to deploy read\-only domain controllers.  
+> Automatic RODCPrep runs when you promote the first un-staged RODC in a domain. It does not occur when you promote the first writeable Windows Server 2012 domain controller. You can also still manually **adprep.exe /rodcprep** if you plan to deploy read-only domain controllers.  
   
 ### Review Options and View Script  
 ![](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeReviewOptions.png)  
@@ -237,9 +237,9 @@ Install-ADDSDomainController `
 ```  
   
 > [!NOTE]  
-> Server Manager generally fills in all arguments with values when promoting and does not rely on defaults \(as they may change between future versions of Windows or service packs\). The one exception to this is the **\-safemodeadministratorpassword** argument. To force a confirmation prompt omit the value when running cmdlet interactively  
+> Server Manager generally fills in all arguments with values when promoting and does not rely on defaults (as they may change between future versions of Windows or service packs). The one exception to this is the **-safemodeadministratorpassword** argument. To force a confirmation prompt omit the value when running cmdlet interactively  
 >   
-> Use the optional **Whatif** argument with the **Install\-ADDSDomainController** cmdlet to review configuration information. This enables you to see the explicit and implicit values of the arguments for a cmdlet.  
+> Use the optional **Whatif** argument with the **Install-ADDSDomainController** cmdlet to review configuration information. This enables you to see the explicit and implicit values of the arguments for a cmdlet.  
   
 ![](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSWhatIf.png)  
   
@@ -271,13 +271,13 @@ Click **Install** to begin the domain controller promotion process. This is last
   
 When the **Installation** page displays, the domain controller configuration begins and cannot be halted or canceled. Detailed operations display on this page and are written to logs:  
   
--   %systemroot%\\debug\\dcpromo.log  
+-   %systemroot%\debug\dcpromo.log  
   
--   %systemroot%\\debug\\dcpromoui.log  
+-   %systemroot%\debug\dcpromoui.log  
   
--   %systemroot%\\debug\\adprep\\logs  
+-   %systemroot%\debug\adprep\logs  
   
--   %systemroot%\\debug\\netsetup.log \(if server is in a workgroup\)  
+-   %systemroot%\debug\netsetup.log (if server is in a workgroup)  
   
 To install a new Active Directory forest using the ADDSDeployment module, use the following cmdlet:  
   
@@ -287,11 +287,11 @@ Install-addsdomaincontroller
   
 See [Upgrade and Replica Windows PowerShell](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_PS) for required and optional arguments.  
   
-The **Install\-AddsDomainController** cmdlet only has two phases \(prerequisite checking and installation\). The two figures below show the installation phase with the minimum required arguments of **\-domainname** and **\-credential**. Note how the Adprep operation happens automatically as part of adding the first Windows Server 2012 domain controller to an existing Windows Server 2003 forest:  
+The **Install-AddsDomainController** cmdlet only has two phases (prerequisite checking and installation). The two figures below show the installation phase with the minimum required arguments of **-domainname** and **-credential**. Note how the Adprep operation happens automatically as part of adding the first Windows Server 2012 domain controller to an existing Windows Server 2003 forest:  
   
 ![](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSGetCred.png)  
   
-Note how, just like Server Manager, **Install\-ADDSDomainController** reminds you that promotion will reboot the server automatically. To accept the reboot prompt automatically, use the **\-force** or **\-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **\-norebootoncompletion** argument.  
+Note how, just like Server Manager, **Install-ADDSDomainController** reminds you that promotion will reboot the server automatically. To accept the reboot prompt automatically, use the **-force** or **-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **-norebootoncompletion** argument.  
   
 > [!WARNING]  
 > Overriding the reboot is discouraged. The domain controller must reboot to function correctly.  
@@ -300,7 +300,7 @@ Note how, just like Server Manager, **Install\-ADDSDomainController** reminds yo
   
 ![](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
   
-To configure a domain controller remotely using Windows PowerShell, wrap the **install\-adddomaincontroller** cmdlet *inside* of the **invoke\-command** cmdlet. This requires using the curly braces.  
+To configure a domain controller remotely using Windows PowerShell, wrap the **install-adddomaincontroller** cmdlet *inside* of the **invoke-command** cmdlet. This requires using the curly braces.  
   
 ```  
 invoke-command {install-addsdomaincontroller –domainname <domain> -credential (get-credential)} -computername <dc name>  
@@ -318,6 +318,6 @@ For example:
   
 The **Results** page shows the success or failure of the promotion and any important administrative information. If successful, the domain controller will automatically reboot after 10 seconds.  
   
-As with previous versions of Windows Server, automated domain preparation for domain controllers that run Windows server 2012 does not run GPPREP. Run **adprep.exe \/gpprep** manually for all domains that were not previously prepared for Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2. You should run GPPrep only once in the history of a domain, not with every upgrade. Adprep.exe does not run \/gpprep automatically because its operation can cause all files and folders in the SYSVOL folder to re\-replicate on all domain controllers.  
+As with previous versions of Windows Server, automated domain preparation for domain controllers that run Windows server 2012 does not run GPPREP. Run **adprep.exe /gpprep** manually for all domains that were not previously prepared for Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2. You should run GPPrep only once in the history of a domain, not with every upgrade. Adprep.exe does not run /gpprep automatically because its operation can cause all files and folders in the SYSVOL folder to re-replicate on all domain controllers.  
   
 

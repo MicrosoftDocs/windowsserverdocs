@@ -14,11 +14,11 @@ ms.assetid: 196142cb-bd7d-47e2-b18c-11d83220b15c
 This security policy reference topic for the IT professional describes the best practices, location, values, and security considerations for this policy setting.  
   
 ## Reference  
-The **Accounts: Limit local account use of blank passwords to console logon only** policy setting determines whether remote interactive logons by network services such as Remote Desktop Services \(formerly Terminal Services\), Telnet, and File Transfer Protocol \(FTP\) are allowed for local accounts that have blank passwords. If this policy setting is enabled, a local account must have a nonblank password to be used to perform an interactive or network logon from a remote client.  
+The **Accounts: Limit local account use of blank passwords to console logon only** policy setting determines whether remote interactive logons by network services such as Remote Desktop Services (formerly Terminal Services), Telnet, and File Transfer Protocol (FTP) are allowed for local accounts that have blank passwords. If this policy setting is enabled, a local account must have a nonblank password to be used to perform an interactive or network logon from a remote client.  
   
-This policy setting does not affect interactive logons that are performed physically at the console or logons that use domain accounts. It is possible for non\-Microsoft applications that use remote interactive logons to bypass this policy setting.  
+This policy setting does not affect interactive logons that are performed physically at the console or logons that use domain accounts. It is possible for non-Microsoft applications that use remote interactive logons to bypass this policy setting.  
   
-Blank passwords are a serious threat to computer security and they should be forbidden through both corporate policy and suitable technical measures. Nevertheless, if a user with the ability to create new accounts creates one that has bypassed your domain\-based password policy settings, that account might have a blank password. For example, a user could build a stand\-alone system, create one or more accounts with blank passwords, and then join the computer to the domain. The local accounts with blank passwords would still function. Anyone who knows the account name can then use accounts with blank passwords to log on to systems.  
+Blank passwords are a serious threat to computer security and they should be forbidden through both corporate policy and suitable technical measures. Nevertheless, if a user with the ability to create new accounts creates one that has bypassed your domain-based password policy settings, that account might have a blank password. For example, a user could build a stand-alone system, create one or more accounts with blank passwords, and then join the computer to the domain. The local accounts with blank passwords would still function. Anyone who knows the account name can then use accounts with blank passwords to log on to systems.  
   
 Computers that are not in physically secure locations should always enforce strong password policies for all local user accounts. Otherwise, anyone with physical access to the computer can log on by using a user account that does not have a password. This is especially important for portable computers.  
   
@@ -37,7 +37,7 @@ If you apply this security policy to the Everyone group, no one will be able to 
 1.  It is advisable to set **Accounts: Limit local account use of blank passwords to console logon only** to Enabled.  
   
 ### Location  
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options  
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options  
   
 ### Default values  
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.  
@@ -46,7 +46,7 @@ The following table lists the actual and effective default values for this polic
 |----------------------|-----------------|  
 |Default Domain Policy|Not defined|  
 |Default Domain Controller Policy|Not defined|  
-|Stand\-Alone Server Default Settings|Enabled|  
+|Stand-Alone Server Default Settings|Enabled|  
 |DC Effective Default Settings|Enabled|  
 |Member Server Effective Default Settings|Enabled|  
 |Client Computer Effective Default Settings|Enabled|  
@@ -64,13 +64,13 @@ None. Changes to this policy become effective without a computer restart when th
 The policy as distributed through the GPO takes precedence over the locally configured policy setting on a computer joined to a domain. On the domain controller, use ADSI Edit or the dsquery command to determine effective minimum password length.  
   
 ### Group Policy  
-This policy setting can be configured by using the Group Policy Management Console \(GPMC\) to be distributed through Group Policy Objects \(GPOs\). If this policy is not contained in a distributed GPO, this policy can be configured on the local computer by using the Local Security Policy snap\-in.  
+This policy setting can be configured by using the Group Policy Management Console (GPMC) to be distributed through Group Policy Objects (GPOs). If this policy is not contained in a distributed GPO, this policy can be configured on the local computer by using the Local Security Policy snap-in.  
   
 ## Security considerations  
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.  
   
 ### Vulnerability  
-Blank passwords are a serious threat to computer security, and they should be forbidden through organizational policy and suitable technical measures.The default settings for Active Directory® domains in Windows Server 2003 require complex passwords of at least seven characters, and eight characters for  Windows Server 2008 R2  and  Windows Server 2008 . However, if users with the ability to create new accounts bypass your domain\-based password policies, they could create accounts with blank passwords. For example, a user could build a stand\-alone computer, create one or more accounts with blank passwords, and then join the computer to the domain. The local accounts with blank passwords would still function. Anyone who knows the name of one of these unprotected accounts could then use it to log on.  
+Blank passwords are a serious threat to computer security, and they should be forbidden through organizational policy and suitable technical measures.The default settings for Active Directory® domains in Windows Server 2003 require complex passwords of at least seven characters, and eight characters for  Windows Server 2008 R2  and  Windows Server 2008 . However, if users with the ability to create new accounts bypass your domain-based password policies, they could create accounts with blank passwords. For example, a user could build a stand-alone computer, create one or more accounts with blank passwords, and then join the computer to the domain. The local accounts with blank passwords would still function. Anyone who knows the name of one of these unprotected accounts could then use it to log on.  
   
 ### Countermeasure  
 Enable the **Accounts: Limit local account use of blank passwords to console logon only** setting.  

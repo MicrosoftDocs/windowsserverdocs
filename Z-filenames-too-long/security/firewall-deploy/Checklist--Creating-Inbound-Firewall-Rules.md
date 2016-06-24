@@ -13,7 +13,7 @@ ms.assetid: 94ebfa68-23ea-4b70-a3e7-96e306e3c021
 # Checklist: Creating Inbound Firewall Rules
 This checklist includes tasks for creating firewall rules in your GPOs.
 
-## <a name="bkmk_section1"></a>![](../../../media/Checklist--Creating-Inbound-Firewall-Rules/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**Checklist: Creating inbound firewall rules for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2**
+## <a name="bkmk_section1"></a>![](../../../media/Checklist--Creating-Inbound-Firewall-Rules/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**Checklist: Creating inbound firewall rules for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2**
 
 ||Task|Reference|
 |-|--------|-------------|

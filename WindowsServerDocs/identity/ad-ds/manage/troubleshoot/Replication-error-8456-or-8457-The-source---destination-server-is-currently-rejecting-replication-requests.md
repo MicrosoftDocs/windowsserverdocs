@@ -39,54 +39,54 @@ author: Femila
     <content>
       <list class="ordered">
         <listItem>
-          <para>The DCPROMO promotion of a new domain controller in an existing forest fails with the error "The source server is currently rejecting replication requests." </para>
-          <para>Dialog title text:  </para>
-          <para>Active Directory Installation Wizard </para>
+          <para>The DCPROMO promotion of a new domain controller in an existing forest fails with the error "The source server is currently rejecting replication requests." </para>
+          <para>Dialog title text:  </para>
+          <para>Active Directory Installation Wizard </para>
           <para>Dialog message text:</para>
-          <para>The operation failed because:  Active Directory could not transfer the remaining data in directory partition &lt;directory partition DN path&gt; to domain controller &lt;destination DC&gt;.  "The source server is currently rejecting replication requests."</para>
+          <para>The operation failed because:  Active Directory could not transfer the remaining data in directory partition &lt;directory partition DN path&gt; to domain controller &lt;destination DC&gt;.  "The source server is currently rejecting replication requests."</para>
         </listItem>
         <listItem>
           <para>DCDIAG reports the error "The source server is currently rejecting replication requests" or "The destination server is currently rejecting replication requests."</para>
-          <code>Testing server: Default-First-Site-Name\&lt;DC NAME&gt;
-      Starting test: Replications
-         * Replications Check
-         [Replications Check,&lt;DC NAME&gt;] A recent replication attempt failed:
-            From IADOMINO to &lt;DC NAME&gt;
-            Naming Context: DC=&lt;DN path of partition&gt;
-           <codeFeaturedElement>The replication generated an error (8456):
-            The source server is currently rejecting replication requests.</codeFeaturedElement>
-            The failure occurred at &lt;Date&gt; &lt;Time&gt;.
-            The last success occurred at &lt;Date&gt; &lt;time&gt;.
-            957 failures have occurred since the last success.
-            Replication has been explicitly disabled through the server options
+          <code>Testing server: Default-First-Site-Name&lt;DC NAME&gt;
+      Starting test: Replications
+         * Replications Check
+         [Replications Check,&lt;DC NAME&gt;] A recent replication attempt failed:
+            From IADOMINO to &lt;DC NAME&gt;
+            Naming Context: DC=&lt;DN path of partition&gt;
+           <codeFeaturedElement>The replication generated an error (8456):
+            The source server is currently rejecting replication requests.</codeFeaturedElement>
+            The failure occurred at &lt;Date&gt; &lt;Time&gt;.
+            The last success occurred at &lt;Date&gt; &lt;time&gt;.
+            957 failures have occurred since the last success.
+            Replication has been explicitly disabled through the server options
 
 Testing server: Default-First-Site-Name\&lt;DC NAME&gt;
-      Starting test: Replications
-         * Replications Check
-         [Replications Check,&lt;DC NAME&gt;] A recent replication attempt failed:
-            From IADOMINO to &lt;DC NAME&gt;
-            Naming Context: DC=&lt;DN path of partition&gt;
-           <codeFeaturedElement>The replication generated an error (8457):
-            The destination server is currently rejecting replication requests.</codeFeaturedElement>
-            The failure occurred at &lt;Date&gt; &lt;Time&gt;.
-            The last success occurred at &lt;Date&gt; &lt;time&gt;.
-            957 failures have occurred since the last success.
-            Replication has been explicitly disabled through the server options
+      Starting test: Replications
+         * Replications Check
+         [Replications Check,&lt;DC NAME&gt;] A recent replication attempt failed:
+            From IADOMINO to &lt;DC NAME&gt;
+            Naming Context: DC=&lt;DN path of partition&gt;
+           <codeFeaturedElement>The replication generated an error (8457):
+            The destination server is currently rejecting replication requests.</codeFeaturedElement>
+            The failure occurred at &lt;Date&gt; &lt;Time&gt;.
+            The last success occurred at &lt;Date&gt; &lt;time&gt;.
+            957 failures have occurred since the last success.
+            Replication has been explicitly disabled through the server options
 </code>
         </listItem>
         <listItem>
           <para>REPADMIN indicates that incoming and outgoing Active Directory replication may be failing with the error "The source | destination server is currently rejecting replication."</para>
           <code>DC=Contoso,DC=COM
-    &lt;site name&gt;\&lt;dc name&gt; via RPC
-        DC object GUID: &lt;objectguid of source DCs NTDS settings object&gt;
-        Last attempt @ &lt;date&gt; &lt;time&gt; failed, result 8457 (0x2109):
-            The destination server is currently rejecting replication requests.
+    &lt;site name&gt;\&lt;dc name&gt; via RPC
+        DC object GUID: &lt;objectguid of source DCs NTDS settings object&gt;
+        Last attempt @ &lt;date&gt; &lt;time&gt; failed, result 8457 (0x2109):
+            The destination server is currently rejecting replication requests.
 
 DC=Contoso,DC=COM
-    &lt;site name&gt;\&lt;dc name&gt; via RPC
-        DC object GUID: &lt;objectguid of source DCs NTDS settings object&gt;
-        Last attempt @ &lt;date&gt; &lt;time&gt; failed, result 8456 (0x2108):
-            The source server is currently rejecting replication requests.</code>
+    &lt;site name&gt;\&lt;dc name&gt; via RPC
+        DC object GUID: &lt;objectguid of source DCs NTDS settings object&gt;
+        Last attempt @ &lt;date&gt; &lt;time&gt; failed, result 8456 (0x2108):
+            The source server is currently rejecting replication requests.</code>
           <alert class="note">
             <para>REPADMIN commands may display both the hexadecimal and the decimal equivalent for the "currently rejecting replication" error.</para>
           </alert>
@@ -309,7 +309,7 @@ DC=Contoso,DC=COM
                   <para>Path</para>
                 </TD>
                 <TD>
-                  <para>HKLM\System\CurrentControlSet\Services\NTDS</para>
+                  <para>HKLMSystemCurrentControlSetServicesNTDS</para>
                 </TD>
               </tr>
               <tr>

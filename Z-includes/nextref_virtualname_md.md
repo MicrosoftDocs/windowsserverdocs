@@ -1,1 +1,1 @@
-Hyper\-V
+Hyper-V

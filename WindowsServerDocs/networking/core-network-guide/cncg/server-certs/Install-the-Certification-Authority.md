@@ -9,11 +9,11 @@ ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 author: jamesmci
 ---
 # Install the Certification Authority
-You can use this procedure to install Active Directory® Certificate Services \(AD CS\) so that you can enroll a server certificate to servers that are running Network Policy Server \(NPS\), Routing and Remote Access Service \(RRAS\), or both.  
+You can use this procedure to install Active Directory® Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.  
   
 > [!IMPORTANT]  
-> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the Windows Server® 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx) at http:\/\/technet.microsoft.com\/library\/hmt604042.aspx.  
-> -   To perform this procedure, the computer on which you are installing AD CS must be joined to a domain where Active Directory Domain Services \(AD DS\) is installed.  
+> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the Windows Server® 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx) at http://technet.microsoft.com/library/hmt604042.aspx.  
+> -   To perform this procedure, the computer on which you are installing AD CS must be joined to a domain where Active Directory Domain Services (AD DS) is installed.  
   
 Membership in both the **Enterprise Admins** and the root domain's **Domain Admins** group is the minimum required to complete this procedure.  
   
@@ -37,7 +37,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
     > [!NOTE]  
     > The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you have previously selected **Skip this page by default** when the Add Roles and Features Wizard was run.  
   
-4.  In **Select Installation Type**, ensure that **Role\-Based or feature\-based installation** is selected, and then click **Next**.  
+4.  In **Select Installation Type**, ensure that **Role-Based or feature-based installation** is selected, and then click **Next**.  
   
 5.  In **Select destination server**, ensure that **Select a server from the server pool** is selected. In **Server Pool**, ensure that the local computer is selected. Click **Next**.  
   
@@ -57,13 +57,13 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
   
 13. On the **Specify the type of the private key** page, verify that **Create a new private key** is selected, and then click **Next**.  
   
-14. On the **Cryptography for CA** page, keep the default settings for CSP \(**RSA\#Microsoft Software Key Storage Provider**\) and hash algorithm \(**SHA1**\), and determine the best key character length for your deployment. Large key character lengths provide optimal security; however, they can impact server performance and might not be compatible with legacy applications. It is recommended that you keep the default setting of 2048. Click **Next**.  
+14. On the **Cryptography for CA** page, keep the default settings for CSP (**RSA#Microsoft Software Key Storage Provider**) and hash algorithm (**SHA1**), and determine the best key character length for your deployment. Large key character lengths provide optimal security; however, they can impact server performance and might not be compatible with legacy applications. It is recommended that you keep the default setting of 2048. Click **Next**.  
   
 15. On the **CA Name** page, keep the suggested common name for the CA or change the name according to your requirements. Ensure that you are certain the CA name is compatible with your naming conventions and purposes, because you cannot change the CA name after you have installed AD CS. Click **Next**.  
   
-16. On the **Validity Period** page, in **Specify the validity period**, type the number and select a time value \(Years, Months, Weeks, or Days\). The default setting of five years is recommended. Click **Next**.  
+16. On the **Validity Period** page, in **Specify the validity period**, type the number and select a time value (Years, Months, Weeks, or Days). The default setting of five years is recommended. Click **Next**.  
   
-17. On the **CA Database** page, in **Specify the database locations**, specify the folder location for the certificate database and the certificate database log. If you specify locations other than the default locations, ensure that the folders are secured with access control lists \(ACLs\) that prevent unauthorized users or computers from accessing the CA database and log files. Click **Next**.  
+17. On the **CA Database** page, in **Specify the database locations**, specify the folder location for the certificate database and the certificate database log. If you specify locations other than the default locations, ensure that the folders are secured with access control lists (ACLs) that prevent unauthorized users or computers from accessing the CA database and log files. Click **Next**.  
   
 18. In **Confirmation**, click **Configure** to apply your selections, and then click **Close**.  
   

@@ -26,16 +26,16 @@ expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 |Parameter|Description|
 |-------------|---------------|
 |ShadowID|Specifies the shadow ID of the shadow copy you want to expose.|
-|<Drive:>|Exposes the specified shadow copy as a drive letter \(for example, P:\).|
-|<Share>|Exposes the specified shadow copy at a share \(for example, \\\\*MachineName*\\\).|
-|<MountPoint>|Exposes the specified shadow copy to a mount point \(for example, C:\\shadowcopy\\\).|
+|<Drive:>|Exposes the specified shadow copy as a drive letter (for example, P:).|
+|<Share>|Exposes the specified shadow copy at a share (for example, \\\\*MachineName*\\).|
+|<MountPoint>|Exposes the specified shadow copy to a mount point (for example, C:\shadowcopy\\).|
 
 ## Remarks
 
 -   You can use an existing alias or an environment variable in place of *ShadowID*. Use **add** without parameters to see existing aliases.
 
 ## <a name="BKMK_examples"></a>Examples
-To expose the persistent shadow copy associated with the VSS\_SHADOW\_1 environment variable as drive X, type:
+To expose the persistent shadow copy associated with the VSS_SHADOW_1 environment variable as drive X, type:
 
 ```
 expose %vss_shadow_1% x:

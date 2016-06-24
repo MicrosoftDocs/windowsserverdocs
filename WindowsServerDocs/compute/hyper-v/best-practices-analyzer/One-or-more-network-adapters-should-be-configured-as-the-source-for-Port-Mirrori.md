@@ -13,14 +13,14 @@ ms.assetid: 147fd00f-1440-44d1-94e3-3a8af63aa7ed
 author: KBDAzure
 ---
 # One or more network adapters should be configured as the source for Port Mirroring
-\[This information is preliminary and subject to change.\]  
+[This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |||  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview  
-|**Product\/Feature**|Hyper\-V|  
+|**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
@@ -35,6 +35,6 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 \<list of virtual machines>  
   
 ## **Resolution**  
-*Use Windows PowerShell or Hyper\-V Manager to complete or correct the Port Mirroring configuration.*  
+*Use Windows PowerShell or Hyper-V Manager to complete or correct the Port Mirroring configuration.*  
   
 

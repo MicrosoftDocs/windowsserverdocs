@@ -29,18 +29,18 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 
 |Parameter|Description|
 |-------------|---------------|
-|\/query|Displays the current logon status, whether enabled or disabled.|
-|\/enable|Enables logons from client sessions, but not from the console.|
-|\/disable|Disables subsequent logons from client sessions, but not from the console. Does not affect currently logged on users.|
-|\/drain|Disables logons from new client sessions, but allows reconnections to existing sessions.|
-|\/drainuntilrestart|Disables logons from new client sessions until the computer is restarted, but allows reconnections to existing sessions.|
-|\/?|Displays help at the command prompt.|
+|/query|Displays the current logon status, whether enabled or disabled.|
+|/enable|Enables logons from client sessions, but not from the console.|
+|/disable|Disables subsequent logons from client sessions, but not from the console. Does not affect currently logged on users.|
+|/drain|Disables logons from new client sessions, but allows reconnections to existing sessions.|
+|/drainuntilrestart|Disables logons from new client sessions until the computer is restarted, but allows reconnections to existing sessions.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
 -   Only administrators can use the **change logon** command.
 
--   Logons are re\-enabled when you restart the system. If you are connected to the Remote Desktop Session Host \(RD Session Host\) server from a client session and disable logons, and then log off before re\-enabling logons, you will not be able to reconnect to your session. To re\-enable logons from client sessions, log on at the console.
+-   Logons are re-enabled when you restart the system. If you are connected to the Remote Desktop Session Host (RD Session Host) server from a client session and disable logons, and then log off before re-enabling logons, you will not be able to reconnect to your session. To re-enable logons from client sessions, log on at the console.
 
 ## <a name="BKMK_examples"></a>Examples
 

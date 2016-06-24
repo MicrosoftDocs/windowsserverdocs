@@ -14,11 +14,11 @@ ms.assetid: eb0e40fd-c7f9-4422-98e3-ed82b0280adf
 This security policy reference topic for the IT professional describes the best practices, location, and values, policy management and security considerations for this policy setting.
 
 ## Reference
-This policy setting controls the level of validation that a server with shared folders or printers performs on the service principal name \(SPN\) that is provided by the client computer when the client computer establishes a session by using the Server Message Block \(SMB\) protocol. The level of validation can help prevent a class of attacks against SMB services \(referred to as SMB relay attacks\). This setting will affect both SMB1 and SMB2.
+This policy setting controls the level of validation that a server with shared folders or printers performs on the service principal name (SPN) that is provided by the client computer when the client computer establishes a session by using the Server Message Block (SMB) protocol. The level of validation can help prevent a class of attacks against SMB services (referred to as SMB relay attacks). This setting will affect both SMB1 and SMB2.
 
-Servers that use SMB  provide availability to their file systems and other resources, such as printers, to networked client computers. Most servers that use SMB validate user access to resources by using NT Domain authentication \(NTLMv1 and NTLMv2\) and the Kerberos protocol.
+Servers that use SMB  provide availability to their file systems and other resources, such as printers, to networked client computers. Most servers that use SMB validate user access to resources by using NT Domain authentication (NTLMv1 and NTLMv2) and the Kerberos protocol.
 
-Windows Server 2008 and Windows Vista support SMB protocol \(SMB 2.0 or SMB2\).  Windows Server 2008 R2  and  Windows 7  supports SMB 2.0, SMB2 and SMB 2.1.
+Windows Server 2008 and Windows Vista support SMB protocol (SMB 2.0 or SMB2).  Windows Server 2008 R2  and  Windows 7  supports SMB 2.0, SMB2 and SMB 2.1.
 
 ### Possible values
 The options for validation levels are:
@@ -41,25 +41,25 @@ The default setting is Off.
 This setting affects the server SMB behavior, and its implementation should be carefully evaluated and tested to prevent disruptions to file and print serving capabilities.
 
 > [!NOTE]
-> All Windows operating systems support a client\-side SMB component and a server\-side SMB component.
+> All Windows operating systems support a client-side SMB component and a server-side SMB component.
 
 ### Location
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options**
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**
 
 ### Default values
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
 
-|Server type or Group Policy object \(GPO\)|Default value|
+|Server type or Group Policy object (GPO)|Default value|
 |----------------------------------------------|-----------------|
 |Default domain policy|Off|
 |Default domain controller policy|Off|
-|Stand\-alone server default settings|Off|
+|Stand-alone server default settings|Off|
 |Domain controller effective default settings|Validation level check not implemented|
 |Member server effective default settings|Validation level check not implemented|
 |Effective GPO default settings on client computers|Validation level check not implemented|
 
 ### Operating system version differences
-This policy was introduced in Windows Server 2008 and Windows Vista, and it can be applied through Group Policy to all Windows server operating systems beginning with Windows Server 2003 and Windows XP.
+This policy was introduced in Windows Server 2008 and Windows Vista, and it can be applied through Group Policy to all Windows server operating systems beginning with Windows Server 2003 and Windows XP.
 
 ## Policy management
 This section describes features and tools that are available to help you manage this policy.
@@ -71,19 +71,19 @@ None. Changes to this policy become effective without a computer restart when th
 None.
 
 ### Group Policy
-This policy setting can be configured by using the Group Policy Management Console \(GPMC\) to be distributed through Group Policy Objects \(GPOs\). If this policy is not contained in a distributed GPO, this policy can be configured on the local computer by using the Local Security Policy snap\-in.
+This policy setting can be configured by using the Group Policy Management Console (GPMC) to be distributed through Group Policy Objects (GPOs). If this policy is not contained in a distributed GPO, this policy can be configured on the local computer by using the Local Security Policy snap-in.
 
 ## Security considerations
 This section describes how an attacker might exploit a feature or its configuration, how to implement the countermeasure, and the possible negative consequences of countermeasure implementation.
 
 ### Vulnerability
-This policy setting controls the level of validation that a server with shared folders or printers performs on the service principal name \(SPN\) that is provided by the client computer when the client computer establishes a session by using the SMB protocol. The level of validation can help prevent a class of attacks against SMB servers \(referred to as SMB relay attacks\). This setting will affect both SMB1 and SMB2.
+This policy setting controls the level of validation that a server with shared folders or printers performs on the service principal name (SPN) that is provided by the client computer when the client computer establishes a session by using the SMB protocol. The level of validation can help prevent a class of attacks against SMB servers (referred to as SMB relay attacks). This setting will affect both SMB1 and SMB2.
 
 ### Countermeasure
 For countermeasures that are appropriate to your environment, see **Possible values** above.
 
 ### Potential impact
-All Windows operating systems support a client\-side SMB component and a server\-side SMB component. This setting affects the server SMB behavior, and its implementation should be carefully evaluated and tested to prevent disruptions to file and print serving capabilities.
+All Windows operating systems support a client-side SMB component and a server-side SMB component. This setting affects the server SMB behavior, and its implementation should be carefully evaluated and tested to prevent disruptions to file and print serving capabilities.
 
 Because the SMB protocol is widely deployed, setting the options to **Accept if provided by client** or **Required from client** will prevent some clients from successfully authenticating to some servers in your environment.
 

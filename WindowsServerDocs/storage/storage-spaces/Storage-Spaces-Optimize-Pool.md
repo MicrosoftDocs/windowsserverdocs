@@ -24,7 +24,7 @@ You can optimize a storage pool with the following command:
 Optimize-StoragePool <PoolName>  
 ```  
 
-The output of the Optimize\-StoragePool command include a progress bar that measures the progress of the re\-balance operation  
+The output of the Optimize-StoragePool command include a progress bar that measures the progress of the re-balance operation  
 
 You can monitor the progress of the optimize job with the following command:  
 
@@ -44,9 +44,9 @@ Get-StorageJob | ? Name –eq Optimize
 
 ## See Also  
 
--   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) \(video\)  
+-   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 
--   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) \(blog\)  
+-   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
 
 -   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
 

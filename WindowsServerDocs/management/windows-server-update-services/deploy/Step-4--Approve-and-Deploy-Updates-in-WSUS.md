@@ -29,7 +29,7 @@ Use the following procedure to approve and deploy updates.
 
 3.  In the list of updates, select the updates that you want to approve for installation in your test computer group. Information about a selected update is available in the bottom pane of the **Updates** panel. To select multiple contiguous updates, hold down the **SHIFT** key while clicking the update names. To select multiple noncontiguous updates, press down the **CTRL** key while clicking the update names.
 
-4.  Right\-click the selection, and then click **Approve**.
+4.  Right-click the selection, and then click **Approve**.
 
 5.  In the **Approve Updates** dialog box, select your test group, and then click the down arrow.
 
@@ -37,7 +37,7 @@ Use the following procedure to approve and deploy updates.
 
 7.  The **Approval Progress** window appears, which shows the progress of the tasks that affect update approval. When the approval process is complete, click **Close**.
 
-## <a name="BKM_4.2.a."></a>4.2. Configure auto\-approval rules
+## <a name="BKM_4.2.a."></a>4.2. Configure auto-approval rules
 Automatic Approvals enables you to specify how to automatically approve installation of updates for selected groups, and how to approve revisions to existing updates.
 
 #### To configure Automatic Approvals

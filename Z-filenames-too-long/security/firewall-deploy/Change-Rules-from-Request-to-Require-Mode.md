@@ -19,20 +19,20 @@ To complete these procedures, you must be a member of the Domain Administrators 
 
 In this topic:
 
--   [Convert a rule in a GPO for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2](#bkmk_section1)
+-   [Convert a rule in a GPO for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2](#bkmk_section1)
 
 -   [Convert a rule for an earlier version of Windows](#bkmk_section2)
 
 -   [Refresh policy on the client computers to receive the modified GPOs](#bkmk_section3)
 
 ## <a name="bkmk_Section1"></a>
-#### To convert a rule from request to require mode for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2
+#### To convert a rule from request to require mode for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2
 
 1.  [Open the Group Policy Management Console to Windows Firewall with Advanced Security](Open-the-Group-Policy-Management-Console-to-Windows-Firewall-with-Advanced-Security.md).
 
 2.  In the navigation pane, click **Connection Security Rules**.
 
-3.  In the details pane, double\-click the connection security rule that you want to modify.
+3.  In the details pane, double-click the connection security rule that you want to modify.
 
 4.  Click the **Authentication** tab.
 
@@ -49,7 +49,7 @@ In this topic:
 
 2.  To verify that the modified GPO is correctly applied to the client computers, you can run one of the following commands:
 
-    On computers that are running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , run the following command:
+    On computers that are running Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , or  Windows Server 2008 R2 , run the following command:
 
     ```
     gpresult /r /scope computer

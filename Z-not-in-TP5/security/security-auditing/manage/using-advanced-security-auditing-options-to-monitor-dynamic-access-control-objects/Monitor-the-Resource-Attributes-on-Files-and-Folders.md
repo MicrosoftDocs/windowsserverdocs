@@ -34,9 +34,9 @@ Use the following procedures to configure settings to monitor changes to resourc
 
 2.  In Server Manager, point to **Tools**, and then click **Group Policy Management**.
 
-3.  In the console tree, right\-click the flexible access Group Policy Object, and then click **Edit**.
+3.  In the console tree, right-click the flexible access Group Policy Object, and then click **Edit**.
 
-4.  Double\-click **Computer Configuration**, double\-click **Security Settings**, double\-click **Advanced Audit Policy Configuration**, double\-click **Policy Change**, and then double\-click **Audit Authorization Policy Change**.
+4.  Double-click **Computer Configuration**, double-click **Security Settings**, double-click **Advanced Audit Policy Configuration**, double-click **Policy Change**, and then double-click **Audit Authorization Policy Change**.
 
 5.  Select the **Configure the following audit events** check box, select the **Success** and **Failure** check boxes, and then click **OK**.
 
@@ -44,12 +44,12 @@ After you configure settings to monitor resource attributes on files, verify tha
 
 ##### To verify that changes to resource attributes on files are monitored
 
-1.  Use administrator credentials to sign in to the server that hosts the resource you want to monitor. Press the Windows key \+ R, and then type **cmd** to open a Command Prompt window.
+1.  Use administrator credentials to sign in to the server that hosts the resource you want to monitor. Press the Windows key + R, and then type **cmd** to open a Command Prompt window.
 
     > [!NOTE]
     > If the User Account Control dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.
 
-2.  Type **gpupdate \/force**, and press ENTER.
+2.  Type **gpupdate /force**, and press ENTER.
 
 3.  Attempt to change resource properties on one or more files and folders.
 

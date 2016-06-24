@@ -11,38 +11,38 @@ ms.assetid: 3641488e-c0a6-469c-8d3e-5e47e75d7827
 # Editing Software Settings Using GPMC
 This topic contains procedures for using the GPMC tool to edit Group Policy Software Settings.
 
-Group Policy Software Installation enables you to provide on\-demand software installation and automatic repair of applications. Group Policy offers a convenient method for delivering software, especially if you are already using Group Policy for other purposes such as securing your client and server computers.
+Group Policy Software Installation enables you to provide on-demand software installation and automatic repair of applications. Group Policy offers a convenient method for delivering software, especially if you are already using Group Policy for other purposes such as securing your client and server computers.
 
 ## How to open Group Policy Software Installation
 
 #### To open Group Policy Software Installation
 
-1.  Open the **Group Policy Management Console**. Right\-click the Group Policy object you want to edit and then click **Edit**.
+1.  Open the **Group Policy Management Console**. Right-click the Group Policy object you want to edit and then click **Edit**.
 
-2.  To assign software applications to computers, in the console tree expand **Computer Configuration\\Policies**. To assign or publish software applications to users, in the console tree expand **User Configuration\\Policies**.
+2.  To assign software applications to computers, in the console tree expand **Computer Configuration\Policies**. To assign or publish software applications to users, in the console tree expand **User Configuration\Policies**.
 
 3.  Expand **Software Settings**, and then click **Software installation**.
 
 ## How to set Options for Group Policy Software Installation
-To add software installation packages to user settings, you can either publish or assign them. Published packages are available for installation by users in the selected site, domain, or organizational unit by using either Add or Remove Programs in Control Panel or file activation. Users in the selected site, domain, or organizational unit receive assigned packages the next time they log on \(for assignment to users\) or when the computer restarts \(for assignment to computers\).
+To add software installation packages to user settings, you can either publish or assign them. Published packages are available for installation by users in the selected site, domain, or organizational unit by using either Add or Remove Programs in Control Panel or file activation. Users in the selected site, domain, or organizational unit receive assigned packages the next time they log on (for assignment to users) or when the computer restarts (for assignment to computers).
 
 #### To set Group Policy Software Installation defaults
 
-1.  Open Group Policy Software Installation. \(In the console tree, right\-click **Software installation**.\)
+1.  Open Group Policy Software Installation. (In the console tree, right-click **Software installation**.)
 
 2.  Click **Properties**, and on the **General** tab specify the following options:
 
     -   In **Default package location**, specify the default software distribution point.
 
-    -   In **New packages**, specify how to add new packages to user settings. By default, packages can either be published or assigned. \(To computers, they can only be assigned\). If you want to select these options for each package, click **Display the Deploy Software** dialog box. For even more control on a per\-package basis, click **Advanced**.
+    -   In **New packages**, specify how to add new packages to user settings. By default, packages can either be published or assigned. (To computers, they can only be assigned). If you want to select these options for each package, click **Display the Deploy Software** dialog box. For even more control on a per-package basis, click **Advanced**.
 
     -   In **Installation user interface options**, click **Basic** or **Maximum**, depending on how apparent you want the installation process to be to users.
 
 #### To specify automatic installation options based on file name extension
 
-1.  Open Group Policy Software Installation. \(In the console tree, right\-click **Software installation**.\)
+1.  Open Group Policy Software Installation. (In the console tree, right-click **Software installation**.)
 
-2.  In the console tree, right\-click **Software installation**.
+2.  In the console tree, right-click **Software installation**.
 
 3.  Click **Properties**, and then click the **File Extensions** tab.
 
@@ -64,7 +64,7 @@ To add software installation packages to user settings, you can either publish o
 
 1.  Open Group Policy Software Installation.
 
-2.  In the console tree, right\-click **Software installation**.
+2.  In the console tree, right-click **Software installation**.
 
 3.  Click **Properties**, and then click the **Categories** tab.
 
@@ -86,7 +86,7 @@ To add software installation packages to user settings, you can either publish o
 
 1.  Open Group Policy Software Installation.
 
-2.  In the console tree, right\-click **Software installation**, point to **New**, and then click **Package**.
+2.  In the console tree, right-click **Software installation**, point to **New**, and then click **Package**.
 
 3.  In the **Open** dialog box, use the search boxes to find the application you want to deploy, click the Windows Installer package, and then click **Open**.
 
@@ -104,7 +104,7 @@ To add software installation packages to user settings, you can either publish o
 
 1.  Open Group Policy Software Installation.
 
-2.  Right\-click in the results pane, point to **New**, and then click **Package**.
+2.  Right-click in the results pane, point to **New**, and then click **Package**.
 
 3.  In the **Open** dialog box, use the search boxes to find the package you want to publish, click the Windows Installer package to be published, and then click **Open**.
 
@@ -126,7 +126,7 @@ To add software installation packages to user settings, you can either publish o
 
 1.  Open Group Policy Software Installation.
 
-2.  In the results pane, right\-click the new Windows Installer upgrade package \(that is, not the package to be upgraded\).
+2.  In the results pane, right-click the new Windows Installer upgrade package (that is, not the package to be upgraded).
 
 3.  Click **Properties**, and then click the **Upgrades** tab.
 
@@ -136,17 +136,17 @@ To add software installation packages to user settings, you can either publish o
 
     -   Click **Current Group Policy object**.
 
-    -   Click **A specific GPO**, click **Browse**, and then click the Group Policy object \(GPO\) that you want to upgrade.
+    -   Click **A specific GPO**, click **Browse**, and then click the Group Policy object (GPO) that you want to upgrade.
 
 6.  Review the list of packages under **Package to upgrade**, which lists all of the other packages that are assigned or published within the selected GPO.
 
 7.  Click the package that you want to upgrade, and then do one of the following:
 
-    -   To replace an application with a completely different application \(perhaps an application from a different vendor\), click **Uninstall the existing package, then install the upgrade package**.
+    -   To replace an application with a completely different application (perhaps an application from a different vendor), click **Uninstall the existing package, then install the upgrade package**.
 
     -   To install a newer version of the same product while retaining the user's application preferences, document type associations, and the like, click **Package can upgrade over the existing package**.
 
-8.  \(Optional\) To make the upgrade mandatory, on the **Upgrades** tab, select the **Required upgrade for existing packages** check box.
+8.  (Optional) To make the upgrade mandatory, on the **Upgrades** tab, select the **Required upgrade for existing packages** check box.
 
     **Additional considerations**
 
@@ -158,7 +158,7 @@ To add software installation packages to user settings, you can either publish o
 
 1.  Open Group Policy Software Installation.
 
-2.  In the results pane, right\-click the application that you want to remove, point to **All Tasks**, and then click **Remove**.
+2.  In the results pane, right-click the application that you want to remove, point to **All Tasks**, and then click **Remove**.
 
 3.  In the **Remove Software** dialog box, click one of the following removal methods:
 
@@ -172,7 +172,7 @@ To add software installation packages to user settings, you can either publish o
 
 1.  Open Group Policy Software Installation.
 
-2.  In the results pane, right\-click the application for which you want to edit installation options, and then click **Properties**.
+2.  In the results pane, right-click the application for which you want to edit installation options, and then click **Properties**.
 
 3.  In the **Properties** dialog box for the application, click the **Deployment** tab.
 
@@ -180,11 +180,11 @@ To add software installation packages to user settings, you can either publish o
 
     -   **Published**: Users in the selected site, domain, or organizational unit can install the application by using either **Add or Remove Programs** in **Control Panel** or file activation.
 
-    -   **Assigned**: Users in the selected site, domain, or organizational unit receive this application the next time they log on \(for assignment to users\) or when the computer restarts \(for assignment to computers\).
+    -   **Assigned**: Users in the selected site, domain, or organizational unit receive this application the next time they log on (for assignment to users) or when the computer restarts (for assignment to computers).
 
 5.  Under **Deployment options**, select the check boxes for the following options that you want:
 
-    -   **Autoinstall this application by file extension activation**: Select this option if you want to use the application precedence for the file name extension as it is determined on the **File Extensions** tab in the **Software installation properties** dialog box. If the application is not already installed, selecting this option causes the application to be installed when the user opens a file with this file association \(for example, by double\-clicking the file\).
+    -   **Autoinstall this application by file extension activation**: Select this option if you want to use the application precedence for the file name extension as it is determined on the **File Extensions** tab in the **Software installation properties** dialog box. If the application is not already installed, selecting this option causes the application to be installed when the user opens a file with this file association (for example, by double-clicking the file).
 
     -   **Uninstall this application when it falls out of the scope of management**: Select this option if you want the application to be removed when users log on, or when computers start up, if they have moved to a site, domain, or organizational unit for which the application is not deployed.
 
@@ -204,7 +204,7 @@ To add software installation packages to user settings, you can either publish o
 
     -   **Remove existing installs of this product for users, if the product was not installed by Group Policy–based Software Installation**: This option might be useful, for example, if company policy does not allow users to install applications from their own compact discs.
 
-    -   **Make this 32\-bit X86 application available to Win64 machines**: Specifies whether the 32\-bit application should be assigned or published to 64\-bit computers.
+    -   **Make this 32-bit X86 application available to Win64 machines**: Specifies whether the 32-bit application should be assigned or published to 64-bit computers.
 
     -   **Include OLE class and product information**: Specifies whether to deploy information about COM components with the package so that software on the client can install them from Active Directory as needed, in a manner similar to activation by file extension.
 
@@ -214,15 +214,15 @@ To add software installation packages to user settings, you can either publish o
 
     |Field|Data|
     |---------|--------|
-    |Product code|A globally unique identifier \(GUID\) representing the product|
+    |Product code|A globally unique identifier (GUID) representing the product|
     |Deployment count|The number of times the package has been deployed in this Group Policy object|
-    |Script name|The full network path, including GUIDs, to the application assignment script \(.aas file\)|
+    |Script name|The full network path, including GUIDs, to the application assignment script (.aas file)|
 
 #### To specify application categories for Add or Remove Programs in Control Panel
 
 1.  Open Group Policy Software Installation.
 
-2.  In the results pane, right\-click the managed application for which you want to set categories, and then click **Properties**.
+2.  In the results pane, right-click the managed application for which you want to set categories, and then click **Properties**.
 
 3.  In the **Properties** dialog box for the application, click the **Categories** tab.
 
@@ -244,11 +244,11 @@ To add software installation packages to user settings, you can either publish o
 
 2.  In the console tree, click **Software installation**.
 
-3.  In the results pane, right\-click the application that you want to be installed automatically when the user tries to open a file with the associated extension.
+3.  In the results pane, right-click the application that you want to be installed automatically when the user tries to open a file with the associated extension.
 
 4.  Click **Properties**, and then click the **Deployment** tab.
 
-5.  Under **Deployment options**, select the **Auto\-install this application by file extension activation** check box, and then click **OK**. This option is recommended, and it is selected by default.
+5.  Under **Deployment options**, select the **Auto-install this application by file extension activation** check box, and then click **OK**. This option is recommended, and it is selected by default.
 
     **Additional considerations**
 
@@ -256,9 +256,9 @@ To add software installation packages to user settings, you can either publish o
 
 #### To set permissions for Group Policy Software Installation
 
-1.  Open the Group Policy object \(GPO\) that you want to edit.
+1.  Open the Group Policy object (GPO) that you want to edit.
 
-2.  In the console tree, right\-click the icon or name of the GPO, and then click **Properties**.
+2.  In the console tree, right-click the icon or name of the GPO, and then click **Properties**.
 
 3.  Click the **Security** tab, and in the **Group or user names** box, click the security group for which you want to set permissions.
 
@@ -266,13 +266,13 @@ To add software installation packages to user settings, you can either publish o
 
     -   To change the set of security groups that has permissions on this GPO, click **Add** or **Remove** to add or remove security groups.
 
-    -   If the security group represents administrators \(who manage software for users and computers in the organization\), in the **Permissions** box for the selected security group, select the **Allow** check box for Full Control, and then click **OK**.
+    -   If the security group represents administrators (who manage software for users and computers in the organization), in the **Permissions** box for the selected security group, select the **Allow** check box for Full Control, and then click **OK**.
 
-    -   If the security group represents users \(who use software that is assigned or published by an administrator\), in the **Permissions** box for the selected security group, select the **Allow** check box for both **Apply Group Policy** and **Read**, and then click **OK**.
+    -   If the security group represents users (who use software that is assigned or published by an administrator), in the **Permissions** box for the selected security group, select the **Allow** check box for both **Apply Group Policy** and **Read**, and then click **OK**.
 
     **Additional considerations**
 
-    -   The permissions that you set in this procedure pertain only to the GPO. In addition, the network must have a shared folder \(a software distribution point\) containing the packages to be installed. Administrators must have Full Control of the software distribution point, and users must have Read permission.
+    -   The permissions that you set in this procedure pertain only to the GPO. In addition, the network must have a shared folder (a software distribution point) containing the packages to be installed. Administrators must have Full Control of the software distribution point, and users must have Read permission.
 
 ## How to work with modifications for an application package
 
@@ -280,7 +280,7 @@ To add software installation packages to user settings, you can either publish o
 
 1.  Open Group Policy Software Installation.
 
-2.  In the console tree, right\-click **Software installation**, point to **New**, and then click **Package**.
+2.  In the console tree, right-click **Software installation**, point to **New**, and then click **Package**.
 
 3.  In the **Open** dialog box, click the Windows Installer package, and then click **Open**.
 
@@ -290,7 +290,7 @@ To add software installation packages to user settings, you can either publish o
 
 6.  Do any of the following:
 
-    -   To add modifications, click **Add**. In the **Open** dialog box, browse to the transform file \(.mst\), and then click **Open**.
+    -   To add modifications, click **Add**. In the **Open** dialog box, browse to the transform file (.mst), and then click **Open**.
 
     -   To remove modifications, on the **Modifications** tab, click the modification that you want to remove, and then click **Remove**. Repeat this step until you have removed each modification that you do not want.
 
@@ -305,7 +305,7 @@ To add software installation packages to user settings, you can either publish o
 
 -   If the Windows Installer package is located on a different shared network directory, navigate to the correct software distribution point in the **Open** dialog box, click the package, and then click **Open**.
 
--   Modifications \(.mst files\) are applied to Windows Installer packages \(which have the .msi extension\) in an order that you specify. This order must be determined before the application is assigned or published.
+-   Modifications (.mst files) are applied to Windows Installer packages (which have the .msi extension) in an order that you specify. This order must be determined before the application is assigned or published.
 
 -   You can add multiple modifications, which are also called transforms. The transforms are applied in the order that you specify in the **Modifications** list, from top to bottom. To rearrange the list, click a transform in the list, and then click **Move Up** or **Move Down**.
 

@@ -12,7 +12,7 @@ ms.assetid: ec41eeae-9cd6-4835-be3b-f852e3f2da57
 author: Femila
 ---
 # Domain Controller Location
-Clients use Domain Name System \(DNS\) to locate domain controllers to complete operations such as processing logon requests or searching the directory for published resources. Domain controllers register a variety of records in DNS to help clients and other computers locate them. These records are collectively referred to as the locator records.  
+Clients use Domain Name System (DNS) to locate domain controllers to complete operations such as processing logon requests or searching the directory for published resources. Domain controllers register a variety of records in DNS to help clients and other computers locate them. These records are collectively referred to as the locator records.  
   
 Domain controllers also use DNS to locate other domain controllers and to perform tasks such as replication. The process by which domain controllers locate other domain controllers is the same as the process by which clients locate domain controllers.  
   

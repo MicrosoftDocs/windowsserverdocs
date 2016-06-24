@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: bf9aaf36-fc3c-4007-bba9-c0b752774601
 ---
 # Enable DirectAccess
-[!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)] and [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)] combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Remote Access server with basic settings.
+[!INCLUDE[winthreshold_server_1](includes/winthreshold_server_1_md.md)] and [!INCLUDE[win8_server_1](includes/win8_server_1_md.md)] combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single [!INCLUDE[winthreshold_server_2](includes/winthreshold_server_2_md.md)] or [!INCLUDE[win8_server_2](includes/win8_server_2_md.md)] Remote Access server with basic settings.
 
 -   [Step 1: Configure the Remote Access infrastructure](assetId:///aad8e18a-4b20-4140-b209-057a041a92d3). This step includes configuring network and server settings, DNS settings and Active Directory settings.
 

@@ -26,10 +26,10 @@ writer exclude [<Writer> | <Component>]
 |-------------|---------------|
 |verify|Verifies that the specified writer or component is included in the backup or restore procedure. The backup or restore procedure will fail if the writer or component is not included.|
 |exclude|Excludes the specified writer or component from the backup or restore procedure.|
-|\[<Writer> &#124; <Component>\]|Specifies the writer or component to verify or exclude. Writers are specified by writer GUID or by the writer name, for example "System Writer."|
+|[<Writer> &#124; <Component>]|Specifies the writer or component to verify or exclude. Writers are specified by writer GUID or by the writer name, for example "System Writer."|
 
 ## <a name="BKMK_examples"></a>Examples
-To verify a writer by specifying its GUID \(for this example, 4dc3bdd4\-ab48\-4d07\-adb0\-3bee2926fd7f\), type:
+To verify a writer by specifying its GUID (for this example, 4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f), type:
 
 ```
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}

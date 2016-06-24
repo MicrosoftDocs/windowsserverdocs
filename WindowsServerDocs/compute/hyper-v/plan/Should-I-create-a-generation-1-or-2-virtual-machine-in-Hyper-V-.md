@@ -17,7 +17,7 @@ author: cwatsonmsft
   
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
   
--   The VHD you want to boot from is not [UEFI\-compatible](http://technet.microsoft.com/library/hh824898.aspx).  
+-   The VHD you want to boot from is not [UEFI-compatible](http://technet.microsoft.com/library/hh824898.aspx).  
   
 -   You [plan to move your virtual machine to Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-questions/).  
   
@@ -37,10 +37,10 @@ You can’t change a virtual machine’s generation after you’ve created it. S
 - [What's the difference in device support?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_DeviceCompare)
 - [More about generation 2 virtual machines](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_More)
 
- - [Enable kernel debugging by using a COM port on a generation 2 virtual machine](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Debug)
+ - [Enable kernel debugging by using a COM port on a generation 2 virtual machine](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Debug)
   
 ## <a name="BKMK_OS"></a>Which guest operating systems are supported?  
-Generation 1 virtual machines support most guest operating systems. Generation 2 virtual machines support most 64\-bit versions of Windows and more current versions of Linux and FreeBSD operating systems. Use the following sections to see which generation of virtual machine supports the guest operating system you want to install.  
+Generation 1 virtual machines support most guest operating systems. Generation 2 virtual machines support most 64-bit versions of Windows and more current versions of Linux and FreeBSD operating systems. Use the following sections to see which generation of virtual machine supports the guest operating system you want to install.  
   
 -   [Windows guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Windows)  
   
@@ -57,9 +57,9 @@ Generation 1 virtual machines support most guest operating systems. Generation 2
 -   [Ubuntu guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Ubuntu)  
   
 ### <a name="BKMK_Windows"></a>Windows guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for 64\-bit versions of Windows as guest operating systems.  
+The following table shows what generation 1 and generation 2 virtual machines support for 64-bit versions of Windows as guest operating systems.  
   
-|64\-bit versions of Windows|Generation 1|Generation 2|  
+|64-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
 | Windows Server 2012 R2 |✔|✔|  
 | Windows Server 2012 |✔|✔|  
@@ -70,9 +70,9 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |Windows 8|✔|✔|  
 |Windows 7|✔|✖|  
   
-The following table shows what generation 1 and generation 2 virtual machines support for 32\-bit versions of Windows as guest operating systems.  
+The following table shows what generation 1 and generation 2 virtual machines support for 32-bit versions of Windows as guest operating systems.  
   
-|32\-bit versions of Windows|Generation 1|Generation 2|  
+|32-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
 |Windows 10®|✔|✖|  
 |Windows 8.1|✔|✖|  
@@ -81,25 +81,25 @@ The following table shows what generation 1 and generation 2 virtual machines su
   
   
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for versions of Red Hat Enterprise Linux \(RHEL\) and CentOS as guest operating systems.  
+The following table shows what generation 1 and generation 2 virtual machines support for versions of Red Hat Enterprise Linux (RHEL) and CentOS as guest operating systems.  
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|RHEL\/CentOS 7.x Series|✔|✔|  
-|RHEL\/CentOS 6.x Series|✔|✖|  
-|RHEL\/CentOS 5.x Series|✔|✖|  
+|RHEL/CentOS 7.x Series|✔|✔|  
+|RHEL/CentOS 6.x Series|✔|✖|  
+|RHEL/CentOS 5.x Series|✔|✖|  
   
-For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper\-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
+For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Debian"></a>Debian guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of Debian as guest operating systems.  
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|Debian 7.0\-7.10|✔|✖|  
-|Devian 8.0\-8.4|✔|✔|  
+|Debian 7.0-7.10|✔|✖|  
+|Devian 8.0-8.4|✔|✔|  
   
-For more information, see [Debian virtual machines on Hyper\-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
+For more information, see [Debian virtual machines on Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_FreeBSD"></a>FreeBSD guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of FreeBSD as guest operating systems.  
@@ -110,7 +110,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |FreeBSD 9.1 and 9.3|✔|✖|  
 |FreeBSD 8.4|✔|✖|  
   
-For more information, see [FreeBSD virtual machines on Hyper\-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
+For more information, see [FreeBSD virtual machines on Hyper-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Oracle"></a>Oracle Linux guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for Red Hat Compatible Kernel Series versions as guest operating systems.  
@@ -122,13 +122,13 @@ The following table shows what generation 1 and generation 2 virtual machines su
   
 The following table shows what generation 1 and generation 2 virtual machines support for Unbreakable Enterprise Kernel versions as guest operating systems.  
   
-|Unbreakable Enterprise Kernel \(UEK\) versions|Generation 1|Generation 2|  
+|Unbreakable Enterprise Kernel (UEK) versions|Generation 1|Generation 2|  
 |--------------------------------------------------|----------------|----------------|  
 |Oracle Linux UEK R3 QU3|✔|✖|  
 |Oracle Linux UEK R3 QU2|✔|✖|  
 |Oracle Linux UEK R3 QU1|✔|✖|  
   
-For more information, see [Oracle Linux virtual machines on Hyper\-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
+For more information, see [Oracle Linux virtual machines on Hyper-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_SUSE"></a>SUSE guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of SUSE as guest operating systems.  
@@ -141,7 +141,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |SUSE Linux Enterprise Server 11 SP3|✔|✖|  
 |Open SUSE 12.3|✔|✖|  
   
-For more information, see [SUSE virtual machines on Hyper\-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
+For more information, see [SUSE virtual machines on Hyper-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Ubuntu"></a>Ubuntu guest operating system support  
 The following table shows what generation 1 and generation 2 virtual machines support for versions of Ubuntu as guest operating systems.  
@@ -151,7 +151,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |Ubuntu 14.04 and later versions|✔|✔|  
 |Ubuntu 12.04|✔|✖|  
   
-For more information, see [Ubuntu virtual machines on Hyper\-V](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md).  
+For more information, see [Ubuntu virtual machines on Hyper-V](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md).  
   
 ## <a name="BKMK_Boot"></a>How can I boot the virtual machine?  
 The following table shows which boot methods are supported by generation 1 and generation 2 virtual machines.  
@@ -160,69 +160,69 @@ The following table shows which boot methods are supported by generation 1 and g
 |---------------|----------------|----------------|  
 |PXE boot by using a standard network adapter|✖|✔|  
 |PXE boot by using a legacy network adapter|✔|✖|  
-|Boot from a SCSI virtual hard disk \(.VHDX\) or virtual DVD \(.ISO\)|✖|✔|  
-|Boot from IDE Controller virtual hard disk \(.VHD\) or virtual DVD \(.ISO\)|✔|✖|  
-|Boot from floppy \(.VFD\)|✔|✖|  
+|Boot from a SCSI virtual hard disk (.VHDX) or virtual DVD (.ISO)|✖|✔|  
+|Boot from IDE Controller virtual hard disk (.VHD) or virtual DVD (.ISO)|✔|✖|  
+|Boot from floppy (.VFD)|✔|✖|  
   
 ## <a name="BKMK_Advantages"></a>What are the advantages of using generation 2 virtual machines?  
 Here are some of the advantages you get when you use a generation 2 virtual machine:  
   
--   **Secure Boot** – This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that’s not supported by Secure Boot, you can disable it after the virtual machine’s created.  For more information, see [Secure Boot](https://technet.microsoft.com/library/dn486875.aspx).  
+-   **Secure Boot** – This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that’s not supported by Secure Boot, you can disable it after the virtual machine’s created.  For more information, see [Secure Boot](https://technet.microsoft.com/library/dn486875.aspx).  
   
     To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.  
   
--   **Larger boot volume** \- The maximum boot volume for generation 2 virtual machines is 64TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper\-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
+-   **Larger boot volume** - The maximum boot volume for generation 2 virtual machines is 64TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
   
  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
  
  ## <a name="BKMK_DeviceCompare"></a> What's the difference in device support?  
-The following table compares the devices available between generation 1 and generation 2 virtual machines.  
+The following table compares the devices available between generation 1 and generation 2 virtual machines.  
   
-|Generation 1 Device|Generation 2 Replacement|Generation 2 Enhancements|  
+|Generation 1 Device|Generation 2 Replacement|Generation 2 Enhancements|  
 |-----------------------|----------------------------|-----------------------------|  
-|IDE controller|Virtual SCSI controller|Boot from .vhdx \(64 TB maximum size, and online resize capability\)|  
-|IDE CD\-ROM|Virtual SCSI CD\-ROM|Support for up to 64 SCSI DVD devices per SCSI controller.|  
+|IDE controller|Virtual SCSI controller|Boot from .vhdx (64 TB maximum size, and online resize capability)|  
+|IDE CD-ROM|Virtual SCSI CD-ROM|Support for up to 64 SCSI DVD devices per SCSI controller.|  
 |Legacy BIOS|UEFI firmware|Secure Boot|  
 |Legacy network adapter|Synthetic network adapter|Network boot with IPv4 and IPv6|  
 |Floppy controller and DMA controller|No floppy controller support||  
-|Universal asynchronous receiver\/transmitter \(UART\) for COM ports|Optional UART for debugging|Faster and more reliable|  
-|i8042 keyboard controller|Software\-based input|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
-|PS\/2 keyboard|Software\-based keyboard|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
-|PS\/2 mouse|Software\-based mouse|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
-|S3 video|Software\-based video|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
+|Universal asynchronous receiver/transmitter (UART) for COM ports|Optional UART for debugging|Faster and more reliable|  
+|i8042 keyboard controller|Software-based input|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
+|PS/2 keyboard|Software-based keyboard|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
+|PS/2 mouse|Software-based mouse|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
+|S3 video|Software-based video|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
 |PCI bus|No longer required||  
-|Programmable interrupt controller \(PIC\)|No longer required||  
-|Programmable interval timer \(PIT\)|No longer required||  
-|Super I\/O device|No longer required||  
+|Programmable interrupt controller (PIC)|No longer required||  
+|Programmable interval timer (PIT)|No longer required||  
+|Super I/O device|No longer required||  
  
  ## <a name="BKMK_More"></a> More about generation 2 virtual machines
 The following sections may answer some additional questions you have about generation 2 virtual machines. 
 ###  Attaching or adding a DVD drive
 
-- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the Oscdimg  command line tool. For more information, see [Oscdimg Command\-Line Options](http://msdn.microsoft.com/library/hh824847.aspx).
-- When you create a new virtual machine with the New\-VM Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
+- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the Oscdimg  command line tool. For more information, see [Oscdimg Command-Line Options](http://msdn.microsoft.com/library/hh824847.aspx).
+- When you create a new virtual machine with the New-VM Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
 
 ###  Using UEFI firmware
  
 - Secure Boot or UEFI firmware isn't required on the physical host. The virtual firmware and its configuration are independent of the physical platform.  
-- UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.   
-- We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non\-Microsoft UEFI shell or UEFI applications is technically possible if they are compiled directly from the sources. If these applications are not appropriately digitally signed, you must disable Secure Boot for the virtual machine.
+- UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.   
+- We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they are compiled directly from the sources. If these applications are not appropriately digitally signed, you must disable Secure Boot for the virtual machine.
  
  ### Working with VHDX files
  
- - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
-- We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.  
-- The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.  
-- A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
+ - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
+- We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.  
+- The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.  
+- A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
 ### Using IPv6 instead of IPv4
-By default, generation 2 virtual machines use IPv4. You can set a virtual machine to use IPv6 instead of IPv4 by using the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
+By default, generation 2 virtual machines use IPv4. You can set a virtual machine to use IPv6 instead of IPv4 by using the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
   
 ```  
 Set-VMFirmware –VMName TestVM –IPProtocolPreference IPv6  
 ```  
 
- ## <a name="BKMK_Debug"></a>Enable kernel debugging by using a COM port on a generation 2 virtual machine  
-By default, COM ports are not visible in generation 2 virtual machines. You can configure COM ports by using Windows PowerShell or Windows Management Instrumentation \(WMI\).  
+ ## <a name="BKMK_Debug"></a>Enable kernel debugging by using a COM port on a generation 2 virtual machine  
+By default, COM ports are not visible in generation 2 virtual machines. You can configure COM ports by using Windows PowerShell or Windows Management Instrumentation (WMI).  
   
 To enable kernel debugging by using a COM port, follow these steps:  
   
@@ -235,15 +235,15 @@ To enable kernel debugging by using a COM port, follow these steps:
 2.  Configure a COM port. Use the [Set-VMComPort](https://technet.microsoft.com/library/hh848616.aspx) Windows PowerShell cmdlet to add a COM port to the virtual machine. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:  
   
     ```  
-    Set-VMComPort –VMName TestVM 1 \\.\pipe\TestPipe  
+    Set-VMComPort –VMName TestVM 1 \\.\pipe\TestPipe  
     ```  
   
 > [!NOTE]  
-> Configured COM ports are not visible when looking at the settings of a virtual machine in the Hyper\-V Manager console.  
+> Configured COM ports are not visible when looking at the settings of a virtual machine in the Hyper-V Manager console.  
    
 ## See Also  
 
-[Linux and FreeBSD Virtual Machines on Hyper\-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) 
+[Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) 
 [Use local resources on Hyper-V virtual machine with VMConnect](https://technet.microsoft.com/library/dn282274.aspx) 
 [Plan for Hyper-V scalability in Windows Server 2016](https://technet.microsoft.com/library/jj680093.aspx)
   

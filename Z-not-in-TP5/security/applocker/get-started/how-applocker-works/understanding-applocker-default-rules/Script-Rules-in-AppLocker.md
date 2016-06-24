@@ -29,9 +29,9 @@ The following table lists the default rules that are available for the script ru
 
 |Purpose|Name|User|Rule condition type|
 |-----------|--------|--------|-----------------------|
-|Allows members of the local Administrators group to run all scripts|\(Default Rule\) All scripts|BUILTIN\\Administrators|Path: \*|
-|Allow all users to run scripts in the Windows folder|\(Default Rule\) All scripts located in the Windows folder|Everyone|Path: %windir%\\\*|
-|Allow all users to run scripts in the Program Files folder|\(Default Rule\) All scripts located in the Program Files folder|Everyone|Path: %programfiles%\\\*|
+|Allows members of the local Administrators group to run all scripts|(Default Rule) All scripts|BUILTIN\Administrators|Path: *|
+|Allow all users to run scripts in the Windows folder|(Default Rule) All scripts located in the Windows folder|Everyone|Path: %windir%\\*|
+|Allow all users to run scripts in the Program Files folder|(Default Rule) All scripts located in the Program Files folder|Everyone|Path: %programfiles%\\*|
 
 ## See Also
 [Understanding AppLocker Default Rules](Understanding-AppLocker-Default-Rules.md)

@@ -31,11 +31,11 @@ Use the following procedures to configure settings to monitor central access pol
 
 2.  In Server Manager, point to **Tools**, and then click **Group Policy Management**.
 
-3.  In the console tree, right\-click the flexible access Group Policy Object, and then click **Edit**.
+3.  In the console tree, right-click the flexible access Group Policy Object, and then click **Edit**.
 
-4.  Double\-click **Computer Configuration**, double\-click **Security Settings**, double\-click **Advanced Audit Policy Configuration**, double\-click **Policy Change**, and then double\-click **Audit Authorization Policy Change**.
+4.  Double-click **Computer Configuration**, double-click **Security Settings**, double-click **Advanced Audit Policy Configuration**, double-click **Policy Change**, and then double-click **Audit Authorization Policy Change**.
 
-5.  Select the **Configure the following audit events** check box, select the **Success** check box \(and the **Failure** check box, if desired\), and then click **OK**.
+5.  Select the **Configure the following audit events** check box, select the **Success** check box (and the **Failure** check box, if desired), and then click **OK**.
 
 6.  Enable auditing for a file or folder as described in the following procedure.
 
@@ -43,13 +43,13 @@ Use the following procedures to configure settings to monitor central access pol
 
 1.  Sign in as a member of the local administrators group on the computer that contains the files or folders that you want to audit.
 
-2.  Right\-click the file or folder, click **Properties**, and then click the **Security** tab.
+2.  Right-click the file or folder, click **Properties**, and then click the **Security** tab.
 
 3.  Click **Advanced**, and then click the **Auditing** tab.
 
     If the User Account Control dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.
 
-4.  Click **Add**, type a user name or group name in the format **contoso\\user1**, and then click **OK**.
+4.  Click **Add**, type a user name or group name in the format **contoso\user1**, and then click **OK**.
 
 5.  In the **Auditing Entries for** dialog box, select the permissions that you want to audit, such as **Full Control** or **Delete**.
 
@@ -59,7 +59,7 @@ Use the following procedures to configure settings to monitor central access pol
 
 8.  Open an elevated command prompt, and run the following command:
 
-    **gpupdate \/force**
+    **gpupdate /force**
 
 After you configure settings to monitor changes to the central access policies that are associated with files and folders, verify that the changes are being monitored.
 
@@ -69,9 +69,9 @@ After you configure settings to monitor changes to the central access policies t
 
 2.  Open a File Explorer window and select the file or folder that you configured for auditing in the previous procedure.
 
-3.  Right\-click the file or folder, click **Properties**, click the **Security** tab, and then click **Advanced**.
+3.  Right-click the file or folder, click **Properties**, click the **Security** tab, and then click **Advanced**.
 
-4.  Click the **Central Policy** tab, click **Change**, and select a different central access policy \(if one is available\) or select **No Central Access Policy**, and then click **OK** twice.
+4.  Click the **Central Policy** tab, click **Change**, and select a different central access policy (if one is available) or select **No Central Access Policy**, and then click **OK** twice.
 
     > [!NOTE]
     > You must select a setting that is different than your original setting to generate the audit event.
@@ -80,7 +80,7 @@ After you configure settings to monitor changes to the central access policies t
 
 6.  Expand **Windows Logs**, and then click **Security**.
 
-7.  Look for event 4913, which is generated when the central access policy that is associated with a file or folder is changed. This event includes the security identifiers \(SIDs\) of the old and new central access policies.
+7.  Look for event 4913, which is generated when the central access policy that is associated with a file or folder is changed. This event includes the security identifiers (SIDs) of the old and new central access policies.
 
 ### Related resource
 [Using Advanced Security Auditing Options to Monitor Dynamic Access Control Objects](../Using-Advanced-Security-Auditing-Options-to-Monitor-Dynamic-Access-Control-Objects.md)

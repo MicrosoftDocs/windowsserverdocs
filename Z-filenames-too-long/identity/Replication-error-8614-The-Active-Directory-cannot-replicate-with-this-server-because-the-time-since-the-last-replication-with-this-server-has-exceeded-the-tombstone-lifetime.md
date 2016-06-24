@@ -40,7 +40,7 @@ author: Femila
       <list class="ordered">
         <listItem>
           <para>DCDIAG reports that Active Directory Replications test failed with error status code (8614): "Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime."</para>
-          <code>Testing server: &lt;site name&gt;\&lt;destination dc name&gt;
+          <code>Testing server: &lt;site name&gt;&lt;destination dc name&gt;
             Starting test: Replications
                * Replications Check
                [Replications Check,&lt;destination DC name] A recent replication attempt failed:
@@ -70,14 +70,14 @@ author: Femila
             </listItem>
           </list>
           <para>Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error is shown below:</para>
-          <code>Default-First-Site-Name\CONTOSO-DC1
+          <code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 ==== INBOUND NEIGHBORS ======================================
       DC=contoso,DC=com
-        Default-First-Site-Name\CONTOSO-DC2 via RPC
+        Default-First-Site-NameCONTOSO-DC2 via RPC
           DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
                     Last attempt @ &lt;date&gt; &lt;time&gt; failed, result 8614(0x21a6):
                        The Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.
@@ -123,7 +123,7 @@ DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
           <para>Event Source: NTDS Replication</para>
           <para>Event Category: Replication</para>
           <para>Event ID: 2042</para>
-          <para>User: NT AUTHORITY\ANONYMOUS LOGON</para>
+          <para>User: NT AUTHORITYANONYMOUS LOGON</para>
           <para>Computer: &lt;name of DC that logged event&gt;</para>
           <para>Description:</para>
           <para>It has been too long since this machine last replicated with the named source 
@@ -285,7 +285,7 @@ Error 8614 is an example of logic added in domain controllers that are running W
                   <para>Syntax</para>
                 </TD>
                 <TD>
-                  <para>c:\&gt;repadmin /removelingeringobjects &lt;Dest_DSA_LIST&gt; &lt;Source DSA GUID&gt; &lt;NC&gt; [/advisory_mode]</para>
+                  <para>c:&gt;repadmin /removelingeringobjects &lt;Dest_DSA_LIST&gt; &lt;Source DSA GUID&gt; &lt;NC&gt; [/advisory_mode]</para>
                 </TD>
               </tr>
               <tr>
@@ -293,7 +293,7 @@ Error 8614 is an example of logic added in domain controllers that are running W
                   <para>Online help (Windows Server 2008 and later) </para>
                 </TD>
                 <TD>
-                  <para>c:\&gt;repadmin /help:removelingeringobject</para>
+                  <para>c:&gt;repadmin /help:removelingeringobject</para>
                 </TD>
               </tr>
             </tbody>
@@ -310,7 +310,7 @@ Error 8614 is an example of logic added in domain controllers that are running W
                   <para>Path</para>
                 </TD>
                 <TD>
-                  <para>hklm\system\ccs\services\ntds\parameters</para>
+                  <para>hklmsystemccsservicesntdsparameters</para>
                 </TD>
               </tr>
               <tr>
@@ -397,7 +397,7 @@ Error 8614 is an example of logic added in domain controllers that are running W
                   <para>Path</para>
                 </TD>
                 <TD>
-                  <para>hklm\system\ccs\services\ntds\parameters</para>
+                  <para>hklmsystemccsservicesntdsparameters</para>
                 </TD>
               </tr>
               <tr>

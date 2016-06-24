@@ -28,7 +28,7 @@ The possible values are:
 
 -   PRECONFIG—use the owner's Internet Explorer defaults.
 
--   NO\_PROXY—do not use a proxy server.
+-   NO_PROXY—do not use a proxy server.
 
 -   OVERRIDE—Use an explicit proxy list.
 

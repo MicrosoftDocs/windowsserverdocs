@@ -34,7 +34,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Edit-a-DNS-Zone/ipam_EditZone_01.jpg)  
   
-5.  In the display pane, right\-click the zone that you want to edit, and then click **Edit DNS Zone**.  
+5.  In the display pane, right-click the zone that you want to edit, and then click **Edit DNS Zone**.  
   
     ![](../../media/Edit-a-DNS-Zone/ipam_EditZone_02.jpg)  
   
@@ -46,7 +46,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     ![](../../media/Edit-a-DNS-Zone/ipam_EditZone_04a.jpg)  
   
-8.  If needed, select the additional zone properties page names \(Name Servers, SOA, Zone Transfers\), make your edits, and click **Apply** or **OK**. To review all of your zone edits, click **Summary**, and then click **OK**.  
+8.  If needed, select the additional zone properties page names (Name Servers, SOA, Zone Transfers), make your edits, and click **Apply** or **OK**. To review all of your zone edits, click **Summary**, and then click **OK**.  
   
 ## See Also  
 [DNS Zone Management](DNS-Zone-Management.md)  

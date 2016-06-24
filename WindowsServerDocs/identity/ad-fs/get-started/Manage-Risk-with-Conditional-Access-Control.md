@@ -17,10 +17,10 @@ ms.assetid: 627cbc9d-30f2-4ed3-86c4-b8d1d97222c5
 
 -   [Managing Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
-## <a name="BKMK_1"></a>Key concepts \- conditional access control in AD FS
+## <a name="BKMK_1"></a>Key concepts - conditional access control in AD FS
 The overall function of AD FS is to issue an access token that contains a set of claims. The decision regarding what claims AD FS accepts and then issues is governed by claim rules.
 
-Access control in AD FS is implemented with issuance authorization claim rules that are used to issue a permit or deny claims that will determine whether a user or a group of users will be allowed to access AD FS\-secured resources or not. Authorization rules can only be set on relying party trusts.
+Access control in AD FS is implemented with issuance authorization claim rules that are used to issue a permit or deny claims that will determine whether a user or a group of users will be allowed to access AD FS-secured resources or not. Authorization rules can only be set on relying party trusts.
 
 |Rule option|Rule logic|
 |---------------|--------------|
@@ -30,11 +30,11 @@ Access control in AD FS is implemented with issuance authorization claim rules t
 
 For more information about these rule options and logic, see [When to Use an Authorization Claim Rule](https://technet.microsoft.com/library/ee913560.aspx).
 
-In AD FS in Windows Server® 2012 R2, access control is enhanced with multiple factors, including user, device, location, and authentication data. This is made possible by a greater variety of claim types available for the authorization claim rules.  In other words, in AD FS in Windows Server® 2012 R2, you can enforce conditional access control based on user identity or group membership, network location, device \(whether it is workplace joined, for more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)\), and the authentication state \(whether multifactor authentication \(MFA\) was performed \).
+In AD FS in Windows Server® 2012 R2, access control is enhanced with multiple factors, including user, device, location, and authentication data. This is made possible by a greater variety of claim types available for the authorization claim rules.  In other words, in AD FS in Windows Server® 2012 R2, you can enforce conditional access control based on user identity or group membership, network location, device (whether it is workplace joined, for more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)), and the authentication state (whether multifactor authentication (MFA) was performed ).
 
 Conditional access control in AD FS in Windows Server® 2012 R2, offers the following benefits:
 
--   Flexible and expressive per\-application authorization policies, whereby you can permit or deny access based on user, device, network location, and authentication state
+-   Flexible and expressive per-application authorization policies, whereby you can permit or deny access based on user, device, network location, and authentication state
 
 -   Creating issuance authorization rules for relying party applications
 
@@ -42,7 +42,7 @@ Conditional access control in AD FS in Windows Server® 2012 R2, offers the foll
 
 -   Rich claims language & Windows PowerShell support for advanced conditional access control scenarios
 
--   Custom \(per relying party application\) ‘Access Denied’ messages. For more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx). By being able to customize these messages, you can explain why a user is being denied access and also facilitate self\-service remediation where it is possible, for example, prompt users to workplace join their devices. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+-   Custom (per relying party application) ‘Access Denied’ messages. For more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx). By being able to customize these messages, you can explain why a user is being denied access and also facilitate self-service remediation where it is possible, for example, prompt users to workplace join their devices. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
 The following table includes all the claim types available in AD FS in Windows Server® 2012 R2 to be used for implementing conditional access control.
 
@@ -51,9 +51,9 @@ The following table includes all the claim types available in AD FS in Windows S
 |Email Address|The email address of the user.|
 |Given Name|The given name of the user.|
 |Name|The unique name of the user,|
-|UPN|The user principal name \(UPN\) of the user.|
+|UPN|The user principal name (UPN) of the user.|
 |Common Name|The common name of the user.|
-|AD FS 1 x E\-mail Address|The email address of the user when interoperating with AD FS 1.1 or AD FS 1.0.|
+|AD FS 1 x E-mail Address|The email address of the user when interoperating with AD FS 1.1 or AD FS 1.0.|
 |Group|A group that the user is a member of.|
 |AD FS 1 x UPN|The UPN of the user when interoperating with AD FS 1.1 or AD FS 1.0.|
 |Role|A role that the user has.|
@@ -62,13 +62,13 @@ The following table includes all the claim types available in AD FS in Windows S
 |Name ID|The SAML name identifier of the user.|
 |Authentication time stamp|Used to display the time and date that the user was authenticated.|
 |Authentication method|The method used to authenticate the user.|
-|Deny only group SID|The deny\-only group SID of the user.|
-|Deny only primary SID|The deny\-only primary SID of the user.|
-|Deny only primary group SID|The deny\-only primary group SID of the user.|
+|Deny only group SID|The deny-only group SID of the user.|
+|Deny only primary SID|The deny-only primary SID of the user.|
+|Deny only primary group SID|The deny-only primary group SID of the user.|
 |Group SID|The group SID of the user.|
 |Primary group SID|The primary group SID of the user.|
 |Primary SID|The primary SID of the user.|
-|Windows account name|The domain account name of the user in the form of domain\\user.|
+|Windows account name|The domain account name of the user in the form of domain\user.|
 |Is Registered User|User is registered to use this device.|
 |Device Identifier|Identifier of the device.|
 |Device Registration Identifier|Identifier for Device Registration.|
@@ -101,8 +101,8 @@ The following table includes all the claim types available in AD FS in Windows S
 |Subject|The subject from the certificate.|
 |Subject Key Identifier|The subject key identifier of the certificate.|
 |Subject Name|The subject distinguished name from a certificate.|
-|V2 Template Name|The name of the version 2 certificate template used wen issuing or renewing a certificate. This is a Microsoft\-specific value.|
-|V1 Template Name|The name of the version 1 certificate template used when issuing or renewing a certificate. This is a Microsoft\-specific value.|
+|V2 Template Name|The name of the version 2 certificate template used wen issuing or renewing a certificate. This is a Microsoft-specific value.|
+|V1 Template Name|The name of the version 1 certificate template used when issuing or renewing a certificate. This is a Microsoft-specific value.|
 |Thumbprint|Thumbprint of the certificate.|
 |X 509 Version|The X.509 format version of the certificate.|
 |Inside Corporate Network|Used to indicate if a request originated from inside the corporate network.|
@@ -115,7 +115,7 @@ The following table includes all the claim types available in AD FS in Windows S
 Using the available settings, there are many ways in which you can manage risk by implementing conditional access control.
 
 ### Common Scenarios
-For example, imagine a simple scenario of implementing conditional access control based on the user’s group membership data for a particular application \(relying party trust\). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions \(using the UI and Windows PowerShell\) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+For example, imagine a simple scenario of implementing conditional access control based on the user’s group membership data for a particular application (relying party trust). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions (using the UI and Windows PowerShell) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 ### Advanced Scenarios
 Other examples of implementing conditional access control in AD FS in Windows Server® 2012 R2 include the following:

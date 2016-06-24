@@ -25,7 +25,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 |-------------|---------------|
 |<Drive1>|Specifies the drive containing one of the floppy disks.|
 |<Drive2>|Specifies the drive containing the other floppy disk.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -74,7 +74,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
 -   Comparing different types of disks
 
-    **Diskcomp** cannot compare a single\-sided disk with a double\-sided disk, nor a high\-density disk with a double\-density disk. If the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:
+    **Diskcomp** cannot compare a single-sided disk with a double-sided disk, nor a high-density disk with a double-density disk. If the disk in *Drive1* is not of the same type as the disk in *Drive2*, **diskcomp** displays the following message:
 
     ```
     Drive types or diskette types not compatible
@@ -113,7 +113,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
     To process exit codes that are returned by **diskcomp**, you can use the ERRORLEVEL environment variable on the **if** command line in a batch program.
 
 ## <a name="BKMK_examples"></a>Examples
-If your computer has only one floppy disk drive \(for example, drive A\), and you want to compare two disks, type:
+If your computer has only one floppy disk drive (for example, drive A), and you want to compare two disks, type:
 
 ```
 diskcomp a: a:

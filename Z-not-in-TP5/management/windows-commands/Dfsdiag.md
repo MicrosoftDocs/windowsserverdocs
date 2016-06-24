@@ -29,7 +29,7 @@ dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| 
 |[Dfsdiag TestDFSConfig](dfsdiag/Dfsdiag-TestDFSConfig.md)|Checks DFS Namespace configuration.|
 |[Dfsdiag TestDFSIntegrity](dfsdiag/Dfsdiag-TestDFSIntegrity.md)|Checks DFS Namespace integrity.|
 |[Dfsdiag TestReferral](dfsdiag/Dfsdiag-TestReferral.md)|Checks referral responses.|
-|\/?|Displays help at the command prompt.|
+|/?|Displays help at the command prompt.|
 
 ## Additional references
 

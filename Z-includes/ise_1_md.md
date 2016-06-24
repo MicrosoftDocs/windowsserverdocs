@@ -1,1 +1,1 @@
-Windows PowerShell® Integrated Scripting Environment \(ISE\)
+Windows PowerShell® Integrated Scripting Environment (ISE)

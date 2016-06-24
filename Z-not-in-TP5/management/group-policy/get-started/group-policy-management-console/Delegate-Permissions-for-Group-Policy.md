@@ -18,13 +18,13 @@ With GPMC, the following tasks can be delegated:
 
 -   Set permissions on a GPO.
 
--   Set policy\-related permissions on site, domain or organizational unit.
+-   Set policy-related permissions on site, domain or organizational unit.
 
     -   Link GPOs to a given site, domain or organizational unit.
 
-    -   Perform Group Policy Modeling analyses on a given domain or organizational unit \(but not on a site\).
+    -   Perform Group Policy Modeling analyses on a given domain or organizational unit (but not on a site).
 
-    -   Read Group Policy Results data for objects in a given domain or organizational unit \(but not on a site\).
+    -   Read Group Policy Results data for objects in a given domain or organizational unit (but not on a site).
 
 -   Create WMI filters in a domain.
 
@@ -32,13 +32,13 @@ With GPMC, the following tasks can be delegated:
 
 GPMC simplifies delegation by managing the various ACEs required for a task as a single bundle of permissions for the task. If you want to see the ACL in detail, you can click the Advanced button on the Delegation tab. The underlying mechanism for achieving delegation is the application of the appropriate DACLs to GPOs and other objects in Active Directory. This mechanism is identical to using security groups to filter the application of GPOs to various users.
 
-You can also specify Group Policy to control the behavior of MMC and MMC snap\-ins. For example, you can use Group Policy to manage the rights to create, configure, and use MMC consoles, and to control access to individual snap\-ins.
+You can also specify Group Policy to control the behavior of MMC and MMC snap-ins. For example, you can use Group Policy to manage the rights to create, configure, and use MMC consoles, and to control access to individual snap-ins.
 
 ## How to delegate permissions for a group or user on a Group Policy Object
 
 #### To delegate permissions for a group or user on a Group Policy Object
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, expand the **Group Policy Objects** node in the forest and domain containing the Group Policy object \(GPO\) for which you want to add or remove permissions.
+1.  In the Group Policy Management Console (GPMC) console tree, expand the **Group Policy Objects** node in the forest and domain containing the Group Policy object (GPO) for which you want to add or remove permissions.
 
 2.  Click the GPO.
 
@@ -56,7 +56,7 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
     -   To search for the name, click **Advanced**, type the search criteria, click **Find Now**, select the name in the list box, click **OK**, and then click **OK** again.
 
-    -   In the **Permissions** box of the **Add Group or User** dialog box, select the appropriate permissions from the drop\-down list, and then click **OK**.
+    -   In the **Permissions** box of the **Add Group or User** dialog box, select the appropriate permissions from the drop-down list, and then click **OK**.
 
 ### Additional considerations
 
@@ -70,15 +70,15 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
 #### To delegate permissions to link Group Policy Objects
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, do one of the following:
+1.  In the Group Policy Management Console (GPMC) console tree, do one of the following:
 
-    -   To delegate permission to link Group Policy objects \(GPOs\) to either the domain or an organizational unit \(OU\), click the domain or the OU.
+    -   To delegate permission to link Group Policy objects (GPOs) to either the domain or an organizational unit (OU), click the domain or the OU.
 
     -   To delegate permission to link GPOs to a site, click the site.
 
 2.  In the results pane, click the **Delegation** tab.
 
-3.  In the **Permission** drop down\-list box, select **Link GPOs**. Click **Add**.
+3.  In the **Permission** drop down-list box, select **Link GPOs**. Click **Add**.
 
 4.  In the **Select User, Computer, or Group** dialog box, click **Object Types**, select the types of objects to which you want to delegate permissions for the domain, site, or OU, and then click **OK**.
 
@@ -90,7 +90,7 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
     -   To search for the name, click **Advanced**, enter the search criteria, click **Find Now**, select the name in the list box, click **OK**, and then click **OK** again.
 
-7.  In the **Add Group or User** dialog box, in the **Permissions** drop\-down list, select the level to which you want permissions to apply for this group or user, and then click **OK**.
+7.  In the **Add Group or User** dialog box, in the **Permissions** drop-down list, select the level to which you want permissions to apply for this group or user, and then click **OK**.
 
 ### Additional considerations
 
@@ -100,13 +100,13 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
 -   You cannot remove groups and users that inherit permissions from a parent container.
 
--   Some entries in the **Groups and users** drop\-down list, such as **System**, do not have an associated property dialog box, so **Properties** is unavailable for these entries.
+-   Some entries in the **Groups and users** drop-down list, such as **System**, do not have an associated property dialog box, so **Properties** is unavailable for these entries.
 
 ## How to delegate permissions for generating Group Policy Modeling data
 
 #### To delegate permissions for generating Group Policy Modeling data
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, click the domain or organizational unit \(OU\) for which you want to delegate Group Policy Modeling permissions.
+1.  In the Group Policy Management Console (GPMC) console tree, click the domain or organizational unit (OU) for which you want to delegate Group Policy Modeling permissions.
 
 2.  In the results pane, click the **Delegation** tab.
 
@@ -122,9 +122,9 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
     -   If you know the name, type it, and then click **OK** again.
 
-    -   To search for the name, click **Advanced**, enter the search criteria, click **Find Now**, select the name in the drop\-down list, click **OK**, and then click **OK**.
+    -   To search for the name, click **Advanced**, enter the search criteria, click **Find Now**, select the name in the drop-down list, click **OK**, and then click **OK**.
 
-8.  In the **Add Group or User** dialog box, in the **Permissions** drop\-down list, select the level to which you want permissions to apply for this group or user, and then click **OK**.
+8.  In the **Add Group or User** dialog box, in the **Permissions** drop-down list, select the level to which you want permissions to apply for this group or user, and then click **OK**.
 
 ### Additional considerations
 
@@ -138,11 +138,11 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
 #### To delegate permissions to generate Group Policy Results
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, click the domain or organizational unit \(OU\) for which you want to delegate permission to generate Group Policy Results.
+1.  In the Group Policy Management Console (GPMC) console tree, click the domain or organizational unit (OU) for which you want to delegate permission to generate Group Policy Results.
 
 2.  In the results pane, click the **Delegation** tab.
 
-3.  In the **Permissions** drop\-down list, select **Read Group Policy Results data to add a new group or user to the permissions list.**
+3.  In the **Permissions** drop-down list, select **Read Group Policy Results data to add a new group or user to the permissions list.**
 
 4.  On the **Delegation** tab, click **Add**.
 
@@ -150,7 +150,7 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
 6.  Select the user or group to which permission should be delegated.
 
-7.  In the **Add Group or User** dialog box, in the **Permissions** drop\-down list, select the level to which you want permissions to apply for this group or user, and then click **OK**.
+7.  In the **Add Group or User** dialog box, in the **Permissions** drop-down list, select the level to which you want permissions to apply for this group or user, and then click **OK**.
 
 ### Additional considerations
 
@@ -164,7 +164,7 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
 #### To delegate permissions for a group or user on a WMI filter
 
-1.  In the Group Policy Management Console \(GPMC\) console tree, click the WMI filter for which you want to delegate permissions.
+1.  In the Group Policy Management Console (GPMC) console tree, click the WMI filter for which you want to delegate permissions.
 
 2.  In the results pane, click the **Delegation** tab.
 
@@ -192,7 +192,7 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
 -   You cannot use the GPMC to remove Read permissions from WMI filters.
 
--   WMI Filters are available if at least one domain controller in the domain is running Microsoft Windows Server 2003 or later.
+-   WMI Filters are available if at least one domain controller in the domain is running Microsoft Windows Server 2003 or later.
 
 -   You can also use the delegation tab to change or remove permissions for a group or user for WMI filters.
 
@@ -218,6 +218,6 @@ You can also specify Group Policy to control the behavior of MMC and MMC snap\-i
 
     -   To search for the name, click **Advanced**, type the search criteria, click **Find Now**, select the name in the list box, click **OK**, and then click **OK** again.
 
-8.  In the **Permissions** box of the **Add Group or User** dialog box, select the appropriate permissions from the drop\-down list, and then click **OK**.
+8.  In the **Permissions** box of the **Add Group or User** dialog box, select the appropriate permissions from the drop-down list, and then click **OK**.
 
 

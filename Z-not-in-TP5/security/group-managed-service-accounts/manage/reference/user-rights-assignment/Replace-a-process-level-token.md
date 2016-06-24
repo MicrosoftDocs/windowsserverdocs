@@ -16,7 +16,7 @@ This security policy reference topic for the IT professional describes the best 
 ## Reference
 This policy setting determines which parent processes can replace the access token that is associated with a child process.
 
-Specifically, the **Replace a process level token** setting determines which user accounts can call the CreateProcessAsUser\(\) application programming interface \(API\) so that one service can start another. An example of a process that uses this user right is Task Scheduler, where the user right is extended to any processes that can be managed by Task Scheduler.
+Specifically, the **Replace a process level token** setting determines which user accounts can call the CreateProcessAsUser() application programming interface (API) so that one service can start another. An example of a process that uses this user right is Task Scheduler, where the user right is extended to any processes that can be managed by Task Scheduler.
 
 An access token is an object that describes the security context of a process or thread. The information in a token includes the identity and privileges of the user account that is associated with the process or thread. With this user right, every child process that runs on behalf of this user account would have its access token replaced with the process level token.
 
@@ -26,7 +26,7 @@ Constant: SeAssignPrimaryTokenPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Defaults
 
@@ -37,10 +37,10 @@ Constant: SeAssignPrimaryTokenPrivilege
 1.  For member servers, ensure that only the Local Service and Network Service accounts have the **Replace a process level token** user right.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
-By default this setting is Network Service and Local Service on domain controllers and on stand\-alone servers.
+By default this setting is Network Service and Local Service on domain controllers and on stand-alone servers.
 
 The following table lists the actual and effective default policy values for the most recent supported versions of Windows. Default values are also listed on the policy’s property page.
 
@@ -48,7 +48,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not defined|
 |Default Domain Controller Policy|Network Service<br /><br />Local Service|
-|Stand\-Alone Server Default Settings|Network Service<br /><br />Local Service|
+|Stand-Alone Server Default Settings|Network Service<br /><br />Local Service|
 |Domain Controller Effective Default Settings|Network Service<br /><br />Local Service|
 |Member Server Effective Default Settings|Network Service<br /><br />Local Service|
 |Client Computer Effective Default Settings|Network Service<br /><br />Local Service|
@@ -64,7 +64,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
 ### Group Policy
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 
@@ -86,7 +86,7 @@ Users with the **Replace a process level token** user right can start processes 
 For member servers, ensure that only the Local Service and Network Service accounts have the **Replace a process level token** user right.
 
 ### Potential impact
-On most computers, restricting the **Replace a process level token** user right to the Local Service and the Network Service built\-in accounts is the default configuration, and there is no negative impact. However, if you have installed optional components such as ASP.NET or IIS, you may need to assign the **Replace a process level token** user right to additional accounts. For example, IIS requires that the Service, Network Service, and IWAM\_*<ComputerName>* accounts be explicitly granted this user right.
+On most computers, restricting the **Replace a process level token** user right to the Local Service and the Network Service built-in accounts is the default configuration, and there is no negative impact. However, if you have installed optional components such as ASP.NET or IIS, you may need to assign the **Replace a process level token** user right to additional accounts. For example, IIS requires that the Service, Network Service, and IWAM_*<ComputerName>* accounts be explicitly granted this user right.
 
 ## See Also
 [User Rights Assignment](User-Rights-Assignment.md)

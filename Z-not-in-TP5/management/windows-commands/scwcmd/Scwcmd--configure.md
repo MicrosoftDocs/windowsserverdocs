@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 6528b9dc-3d82-4228-b734-ed717458d74c
 ---
 # Scwcmd: configure
-Applies a Security Configuration Wizard \(SCW\)\-generated security policy to a computer. This command\-line tool also accepts a list of computer names as input.
+Applies a Security Configuration Wizard (SCW)-generated security policy to a computer. This command-line tool also accepts a list of computer names as input.
 
 ## Syntax
 
@@ -21,17 +21,17 @@ scwcmd configure [[[/m:<ComputerName> | /ou:<OuName>] /p:<Policy>] | /i:<Compute
 
 |Parameter|Description|
 |-------------|---------------|
-|\/m:<ComputerName>|Specifies the NetBIOS name, DNS name, or IP address of the computer to configure. If the **\/m** parameter is specified, then the **\/p** parameter must also be specified.|
-|\/ou:<OuName>|Specifies the fully qualified domain name \(FQDN\) of an organizational unit \(OU\) in Active Directory Domain Services. If the **\/ou** parameter is specified, then the **\/p** parameter must also be specified. All computers in the OU will be analyzed according to the given policy.|
-|\/p:<Policy>|Specifies the path and file name of the .xml policy file to be used to perform the configuration.|
-|\/i:<ComputerList>|Specifies the path and file name of an .xml file that contains a list of computers along with their expected policy files. All computers in the .xml file will be configured according to their corresponding policy files. A sample .xml file is %windir%\\security\\SampleMachineList.xml.|
-|\/u:<UserName>|Specifies an alternate user credential to use when configuring a remote computer. The default is the logged on user.|
-|\/pw:<Password>|Specifies an alternate user credential to use when configuring a remote computer. The default is the password of the logged on user.|
-|\/t:<Threads>|Specifies the number of simultaneous outstanding configuration operations that should be maintained during the configuration process \(DefaultValue\=40, MinValue\=1, MaxValue\=1000\).|
-|\/?|Displays help at the command prompt.|
+|/m:<ComputerName>|Specifies the NetBIOS name, DNS name, or IP address of the computer to configure. If the **/m** parameter is specified, then the **/p** parameter must also be specified.|
+|/ou:<OuName>|Specifies the fully qualified domain name (FQDN) of an organizational unit (OU) in Active Directory Domain Services. If the **/ou** parameter is specified, then the **/p** parameter must also be specified. All computers in the OU will be analyzed according to the given policy.|
+|/p:<Policy>|Specifies the path and file name of the .xml policy file to be used to perform the configuration.|
+|/i:<ComputerList>|Specifies the path and file name of an .xml file that contains a list of computers along with their expected policy files. All computers in the .xml file will be configured according to their corresponding policy files. A sample .xml file is %windir%\security\SampleMachineList.xml.|
+|/u:<UserName>|Specifies an alternate user credential to use when configuring a remote computer. The default is the logged on user.|
+|/pw:<Password>|Specifies an alternate user credential to use when configuring a remote computer. The default is the password of the logged on user.|
+|/t:<Threads>|Specifies the number of simultaneous outstanding configuration operations that should be maintained during the configuration process (DefaultValue=40, MinValue=1, MaxValue=1000).|
+|/?|Displays help at the command prompt.|
 
 ## Remarks
-Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
+Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
 ## <a name="BKMK_Examples"></a>Examples
 To configure a security policy against the file webpolicy.xml, type:

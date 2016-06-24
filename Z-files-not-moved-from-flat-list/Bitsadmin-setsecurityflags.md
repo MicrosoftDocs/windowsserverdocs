@@ -35,7 +35,7 @@ The **Value** parameter can contain one or more of the following notification fl
 |Ignore invalid date in server certificate|Set the 3rd bit from the right|  
 |Ignore invalid certification authority in server certificate|Set the 4th bit from the right|  
 |Ignore invalid usage of the certificate|Set the 5th bit from the right|  
-|Redirection policy|Controlled by the 9th to 11th bits from the right<br /><br />0,0,0 \- Redirects will be automatically allowed.<br /><br />0,0,1 \- Remote name in the IBackgroundCopyFile interface will be updated if a redirect occurs.<br /><br />0,1,0 \- BITS will fail the job if a redirect occurs.|  
+|Redirection policy|Controlled by the 9th to 11th bits from the right<br /><br />0,0,0 - Redirects will be automatically allowed.<br /><br />0,0,1 - Remote name in the IBackgroundCopyFile interface will be updated if a redirect occurs.<br /><br />0,1,0 - BITS will fail the job if a redirect occurs.|  
 |Allow redirection from HTTPS to HTTP|Set the 12th bit from the right|  
   
 ## <a name="BKMK_examples"></a>Examples  

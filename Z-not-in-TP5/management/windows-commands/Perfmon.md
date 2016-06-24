@@ -21,10 +21,10 @@ perfmon </res|report|rel|sys>
 
 |Parameter|Description|
 |-------------|---------------|
-|\/res|Start Resource View.|
-|\/report|Start the System Diagnostics Data Collector Set and display a report of the results.|
-|\/rel|Start Reliability Monitor.|
-|\/sys|Start Performance Monitor.|
+|/res|Start Resource View.|
+|/report|Start the System Diagnostics Data Collector Set and display a report of the results.|
+|/rel|Start Reliability Monitor.|
+|/sys|Start Performance Monitor.|
 
 #### Additional references
 [Windows Performance Monitor \[w8\]](assetId:///53582ab0-24a0-411c-9c7a-7b2466741699)

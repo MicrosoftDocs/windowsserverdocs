@@ -1,4 +1,4 @@
-﻿---
+---
 title: Appendix E: Securing Enterprise Admins Groups in Active Directory
 ms.custom: 
   - AD
@@ -16,13 +16,13 @@ author: Femila
 # Appendix E: Securing Enterprise Admins Groups in Active Directory
   
 ## Appendix E: Securing Enterprise Admins Groups in Active Directory  
-The Enterprise Admins \(EA\) group, which is housed in the forest root domain, should contain no users on a day\-to\-day basis, with the possible exception of the root domain’s Administrator account, provided it is secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
+The Enterprise Admins (EA) group, which is housed in the forest root domain, should contain no users on a day-to-day basis, with the possible exception of the root domain’s Administrator account, provided it is secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
-Enterprise Admins are, by default, members of the Administrators group in each domain in the forest. You should not remove the EA group from the Administrators groups in each domain because in the event of a forest disaster recovery scenario, EA rights will likely be required. The forest’s Enterprise Admins group should be secured as detailed in the step\-by\-step instructions that follow.  
+Enterprise Admins are, by default, members of the Administrators group in each domain in the forest. You should not remove the EA group from the Administrators groups in each domain because in the event of a forest disaster recovery scenario, EA rights will likely be required. The forest’s Enterprise Admins group should be secured as detailed in the step-by-step instructions that follow.  
   
 For the Enterprise Admins group in the forest:  
   
-1.  In GPOs linked to OUs containing member servers and workstations in each domain, the Enterprise Admins group should be added to the following user rights in **Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Settings\\User Rights Assignments**:  
+1.  In GPOs linked to OUs containing member servers and workstations in each domain, the Enterprise Admins group should be added to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
   
     -   Deny access to this computer from the network  
   
@@ -36,11 +36,11 @@ For the Enterprise Admins group in the forest:
   
 2.  Configure auditing to send alerts if any modifications are made to the properties or membership of the Enterprise Admins group.  
   
-### Step\-by\-Step Instructions for Removing All Members from the Enterprise Admins Group  
+### Step-by-Step Instructions for Removing All Members from the Enterprise Admins Group  
   
 1.  In **Server Manager**, click **Tools**, and click **Active Directory Users and Computers**.  
   
-2.  If you are not managing the root domain for the forest, in the console tree, right\-click <Domain>, and then click **Change Domain** \(where <Domain> is the name of the domain you’re currently administering\).  
+2.  If you are not managing the root domain for the forest, in the console tree, right-click <Domain>, and then click **Change Domain** (where <Domain> is the name of the domain you’re currently administering).  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_43.gif)  
   
@@ -50,40 +50,40 @@ For the Enterprise Admins group in the forest:
   
 4.  To remove all members from the EA group:  
   
-    1.  Double\-click the **Enterprise Admins** group and then click the **Members** tab.  
+    1.  Double-click the **Enterprise Admins** group and then click the **Members** tab.  
   
         ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_45.gif)  
   
     2.  Select a member of the group, click **Remove**, click **Yes**, and click **OK**.  
   
-5.  Repeat step 2 until all members of the EA group have been removed.  
+5.  Repeat step 2 until all members of the EA group have been removed.  
   
-### Step\-by\-Step Instructions to Secure Enterprise Admins in Active Directory  
+### Step-by-Step Instructions to Secure Enterprise Admins in Active Directory  
   
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.  
   
-2.  In the console tree, expand <Forest>\\Domains\\<Domain>, and then **Group Policy Objects** \(where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy\).  
+2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
   
     > [!NOTE]  
     > In a forest that contains multiple domains, a similar GPO should be created in each domain that requires that the Enterprise Admins group be secured.  
   
-3.  In the console tree, right\-click **Group Policy Objects**, and click **New**.  
+3.  In the console tree, right-click **Group Policy Objects**, and click **New**.  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_46.gif)  
   
-4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** \(where <GPO Name> is the name of this GPO\).  
+4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO).  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_47.gif)  
   
-5.  In the details pane, right\-click <GPO Name>, and click **Edit**.  
+5.  In the details pane, right-click <GPO Name>, and click **Edit**.  
   
-6.  Navigate to **Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Policies**, and click **User Rights Assignment**.  
+6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_48.gif)  
   
 7.  Configure the user rights to prevent members of the Enterprise Admins group from accessing member servers and workstations over the network by doing the following:  
   
-    1.  Double\-click **Deny access to this computer from the network** and select **Define these policy settings**.  
+    1.  Double-click **Deny access to this computer from the network** and select **Define these policy settings**.  
   
     2.  Click **Add User or Group** and click **Browse**.  
   
@@ -95,7 +95,7 @@ For the Enterprise Admins group in the forest:
   
 8.  Configure the user rights to prevent members of the Enterprise Admins group from logging on as a batch job by doing the following:  
   
-    1.  Double\-click **Deny log on as a batch job** and select **Define these policy settings**.  
+    1.  Double-click **Deny log on as a batch job** and select **Define these policy settings**.  
   
     2.  Click **Add User or Group** and click **Browse**.  
   
@@ -110,7 +110,7 @@ For the Enterprise Admins group in the forest:
   
 9. Configure the user rights to prevent members of the EA group from logging on as a service by doing the following:  
   
-    1.  Double\-click **Deny log as a service** and select **Define these policy settings**.  
+    1.  Double-click **Deny log as a service** and select **Define these policy settings**.  
   
     2.  Click **Add User or Group** and then click **Browse**.  
   
@@ -125,7 +125,7 @@ For the Enterprise Admins group in the forest:
   
 10. Configure user rights to prevent members of the Enterprise Admins group from logging on locally to member servers and workstations by doing the following:  
   
-    1.  Double\-click **Deny log on locally** and select **Define these policy settings**.  
+    1.  Double-click **Deny log on locally** and select **Define these policy settings**.  
   
     2.  Click **Add User or Group** and then click **Browse**.  
   
@@ -140,7 +140,7 @@ For the Enterprise Admins group in the forest:
   
 11. Configure the user rights to prevent members of the Enterprise Admins group from accessing member servers and workstations via Remote Desktop Services by doing the following:  
   
-    1.  Double\-click **Deny log on through Remote Desktop Services** and select **Define these policy settings**.  
+    1.  Double-click **Deny log on through Remote Desktop Services** and select **Define these policy settings**.  
   
     2.  Click **Add User or Group** and then click **Browse**.  
   
@@ -157,9 +157,9 @@ For the Enterprise Admins group in the forest:
   
 13. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:  
   
-    1.  Navigate to the <Forest>\\Domains\\<Domain> \(where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy\).  
+    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
   
-    2.  Right\-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
+    2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
   
         ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_54.gif)  
   
@@ -179,19 +179,19 @@ For the Enterprise Admins group in the forest:
 ### Verification Steps  
   
 #### Verify “Deny access to this computer from the network” GPO Settings  
-From any member server or workstation that is not affected by the GPO changes \(such as a “jump server”\), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:  
+From any member server or workstation that is not affected by the GPO changes (such as a “jump server”), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:  
   
 1.  Log on locally using an account that is a member of the EA group.  
   
-2.  With the mouse, move the pointer into the upper\-right or lower\-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
-3.  In the **Search** box, type **command prompt**, right\-click **Command Prompt**, and then click **Run as administrator** to open an elevated command prompt.  
+3.  In the **Search** box, type **command prompt**, right-click **Command Prompt**, and then click **Run as administrator** to open an elevated command prompt.  
   
 4.  When prompted to approve the elevation, click **Yes**.  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_56.gif)  
   
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\\c$**, where <Server Name> is the name of the member server or workstation you’re attempting to access over the network.  
+5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you’re attempting to access over the network.  
   
 6.  The following screen shot shows the error message that should appear.  
   
@@ -202,7 +202,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 ##### Create a Batch File  
   
-1.  With the mouse, move the pointer into the upper\-right or lower\-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
 2.  In the **Search** box, type **notepad**, and click **Notepad**.  
   
@@ -210,26 +210,26 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 4.  Click **File**, and click **Save As**.  
   
-5.  In the **File** name box, type **<Filename>.bat** \(where <Filename> is the name of the new batch file\).  
+5.  In the **File** name box, type **<Filename>.bat** (where <Filename> is the name of the new batch file).  
   
 ##### Schedule a Task  
   
-1.  With the mouse, move the pointer into the upper\-right or lower\-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
 2.  In the **Search** box, type **task scheduler**, and click **Task Scheduler**.  
   
     > [!NOTE]  
-    > On computers running Windows 8, in the **Search** box, type **schedule tasks**, and click **Schedule tasks**.  
+    > On computers running Windows 8, in the **Search** box, type **schedule tasks**, and click **Schedule tasks**.  
   
 3.  Click **Action**, and click **Create Task**.  
   
-4.  In the **Create Task** dialog box, type **<Task Name>** \(where <Task Name> is the name of the new task\).  
+4.  In the **Create Task** dialog box, type **<Task Name>** (where <Task Name> is the name of the new task).  
   
 5.  Click the **Actions** tab, and click **New**.  
   
 6.  In the **Action** field, select **Start a program**.  
   
-7.  Under **Program\/script**, click **Browse**, locate and select the batch file created in the **Create a Batch File** section, and click **Open**.  
+7.  Under **Program/script**, click **Browse**, locate and select the batch file created in the **Create a Batch File** section, and click **Open**.  
   
 8.  Click **OK**.  
   
@@ -255,11 +255,11 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
-2.  With the mouse, move the pointer into the upper\-right or lower\-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
 3.  In the **Search** box, type **services**, and click **Services**.  
   
-4.  Locate and double\-click **Print Spooler**.  
+4.  Locate and double-click **Print Spooler**.  
   
 5.  Click the **Log On** tab.  
   
@@ -271,7 +271,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 9. Click **OK** three more times.  
   
-10. Right\-click the **Print Spooler** service and select **Restart**.  
+10. Right-click the **Print Spooler** service and select **Restart**.  
   
 11. When the service is restarted, a dialog box similar to the following should appear.  
   
@@ -281,11 +281,11 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
-2.  With the mouse, move the pointer into the upper\-right or lower\-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
 3.  In the **Search** box, type **services**, and click **Services**.  
   
-4.  Locate and double\-click **Print Spooler**.  
+4.  Locate and double-click **Print Spooler**.  
   
 5.  Click the **Log On** tab.  
   
@@ -299,11 +299,11 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 #### Verify “Deny log on through Remote Desktop Services” GPO Settings  
   
-1.  With the mouse, move the pointer into the upper\-right or lower\-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
 2.  In the **Search** box, type **remote desktop connection**, and then click **Remote Desktop Connection**.  
   
-3.  In the **Computer** field, type the name of the computer that you want to connect to, and then click **Connect**. \(You can also type the IP address instead of the computer name.\)  
+3.  In the **Computer** field, type the name of the computer that you want to connect to, and then click **Connect**. (You can also type the IP address instead of the computer name.)  
   
 4.  When prompted, provide credentials for an account that is a member of the EA group.  
   

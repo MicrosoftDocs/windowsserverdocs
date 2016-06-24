@@ -16,7 +16,7 @@ This topic for the IT professional describes the Advanced Security Audit policy 
 These events occur on the computer that was accessed. In the case of an interactive logon, these events are generated on the computer that was logged on to.
 
 > [!NOTE]
-> There is no failure event in this subcategory because failed logoffs \(such as when a system abruptly shuts down\) do not generate an audit record.
+> There is no failure event in this subcategory because failed logoffs (such as when a system abruptly shuts down) do not generate an audit record.
 
 Logon events are essential to understanding user activity and detecting potential attacks. Logoff events are not 100 percent reliable. For example, the computer can be turned off without a proper logoff and shutdown; in this case, a logoff event is not generated.
 
@@ -24,7 +24,7 @@ Event volume: Low
 
 Default: Success
 
-If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
+If this policy setting is configured, the following events appear on computers running the supported versions of the Windows operating system as designated in the **Applies To** list at the beginning of this topic, in addition to Windows Server 2008 and Windows Vista.
 
 |Event ID|Event message|
 |------------|-----------------|

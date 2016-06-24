@@ -14,7 +14,7 @@ ms.assetid: 7acbe703-4d0e-4158-bfd5-681fd69875bf
 This security policy reference topic for the IT professional describes the best practices, location, values, policy management, and security considerations for this policy setting.
 
 ## Reference
-This user right determines which accounts can be used by processes to create a directory object by using the object manager. Directory objects include Active Directory objects, files and folders, printers, registry keys, processes, and threads. Users who have this capability can create permanent shared objects, including devices, semaphores, and mutexes. This user right is useful to kernel\-mode components that extend the object namespace. Because components that are running in kernel\-mode inherently have this user right assigned to them, it is not necessary to specifically assign it.
+This user right determines which accounts can be used by processes to create a directory object by using the object manager. Directory objects include Active Directory objects, files and folders, printers, registry keys, processes, and threads. Users who have this capability can create permanent shared objects, including devices, semaphores, and mutexes. This user right is useful to kernel-mode components that extend the object namespace. Because components that are running in kernel-mode inherently have this user right assigned to them, it is not necessary to specifically assign it.
 
 This policy setting is supported on versions of Windows that are designated in the **Applies To** list at the beginning of this topic.
 
@@ -22,7 +22,7 @@ Constant: SeCreatePermanentPrivilege
 
 ### Possible values
 
--   User\-defined list of accounts
+-   User-defined list of accounts
 
 -   Not Defined
 
@@ -31,7 +31,7 @@ Constant: SeCreatePermanentPrivilege
 1.  Users who have the **Create permanent shared objects** user right could create new shared objects and expose sensitive data to the network. Therefore, do not assign this right to any users.
 
 ### Location
-*GPO\_name*\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+*GPO_name*\Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
 
 ### Default values
 By default, **LocalSystem** is the only account that has this right.
@@ -42,7 +42,7 @@ The following table lists the actual and effective default policy values for the
 |----------------------|-----------------|
 |Default Domain Policy|Not Defined|
 |Default Domain Controller Policy|Not Defined|
-|Stand\-Alone Server Default Settings|Not Defined|
+|Stand-Alone Server Default Settings|Not Defined|
 |Domain Controller Effective Default Settings|**LocalSystem**|
 |Member Server Effective Default Settings|**LocalSystem**|
 |Client Computer Effective Default Settings|**LocalSystem**|
@@ -58,7 +58,7 @@ A restart of the computer is not required for this policy setting to be effectiv
 Any change to the user rights assignment for an account becomes effective the next time the owner of the account logs on.
 
 ### Group Policy
-Settings are applied in the following order through a Group Policy Object \(GPO\), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 

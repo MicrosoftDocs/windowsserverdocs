@@ -20,11 +20,11 @@ If you configure this policy setting, you can define a list of remote servers to
 
 If you do not configure this policy setting, no exceptions will be applied, and if **Network Security: Restrict NTLM: Outgoing NTLM traffic to remote servers** is enabled, NTLM authentication attempts from the client computers will fail.
 
-List the NetBIOS server names that are used by the applications as the naming format, one per line. To ensure exceptions, the names that are used by all applications need to be in the list. A single asterisk \(\*\) can be used anywhere in the string as a wildcard character.
+List the NetBIOS server names that are used by the applications as the naming format, one per line. To ensure exceptions, the names that are used by all applications need to be in the list. A single asterisk (*) can be used anywhere in the string as a wildcard character.
 
 ### Possible values
 
--   User\-defined list of remote servers
+-   User-defined list of remote servers
 
     When you enter a list of remote servers to which clients are allowed to use NTLM authentication, the policy is defined and enabled.
 
@@ -39,7 +39,7 @@ List the NetBIOS server names that are used by the applications as the naming fo
 2.  After you have set the server exception list, enforce the **Network Security: Restrict NTLM: Audit Incoming NTLM Traffic** or **Network Security: Restrict NTLM: Audit NTLM authentication in this domain** policy setting and then review the Operational log again before setting the policies to block NTLM traffic.
 
 ### Location
-*GPO\_name***\\Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options**
+*GPO_name***\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**
 
 ### Default values
 
@@ -47,13 +47,13 @@ List the NetBIOS server names that are used by the applications as the naming fo
 |----------------------|-----------------|
 |Default domain policy|Not defined|
 |Default domain controller policy|Not defined|
-|Stand\-alone server default settings|Not defined|
+|Stand-alone server default settings|Not defined|
 |Domain controller effective default settings|Not defined|
 |Member server effective default settings|Not defined|
 |Client computer effective default settings|Not defined|
 
 ### Operating system version differences
-This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .
+This policy setting was introduced in  Windows Server 2008 R2  and  Windows 7 .
 
 ## Policy management
 This section describes the features and tools that are available to help you manage this policy.
@@ -65,7 +65,7 @@ None. Changes to this policy become effective without a computer restart when th
 Setting and deploying this policy through Group Policy takes precedence over the setting on the local computer. If the Group Policy setting is set to **Not Configured**, local settings will apply.
 
 ### Auditing
-View the Operational log to see if your server exception list is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\\Microsoft\\Windows\\NTLM**.
+View the Operational log to see if your server exception list is functioning as intended. Audit and block events are recorded on this computer in the Operational log located in **Applications and Services Log\Microsoft\Windows\NTLM**.
 
 There are no Security Audit policies that can be configured to view output from this policy.
 
@@ -78,7 +78,7 @@ When it has been determined that the NTLM authentication protocol should not be 
 If you define an exception list of servers to which client computers are allowed to use NTLM authentication, then NTLM authentication traffic will continue to flow between those client applications and servers. The servers then are vulnerable to any malicious attack that takes advantage of security weaknesses in NTLM.
 
 ### Countermeasure
-When you use **Network Security: Restrict NTLM: Outgoing NTLM traffic to remote servers** in audit\-only mode, you can determine by reviewing which client applications are making NTLM authentication requests to the remote servers in your environment. When assessed, you will have to determine on a case\-by\-case basis if NTLM authentication still minimally meets your security requirements. If not, the client application has to be upgraded to use something other than NTLM authentication.
+When you use **Network Security: Restrict NTLM: Outgoing NTLM traffic to remote servers** in audit-only mode, you can determine by reviewing which client applications are making NTLM authentication requests to the remote servers in your environment. When assessed, you will have to determine on a case-by-case basis if NTLM authentication still minimally meets your security requirements. If not, the client application has to be upgraded to use something other than NTLM authentication.
 
 ### Potential impact
 Defining a list of servers for this policy setting will enable NTLM authentication traffic from the client application that uses those servers, and this might result in a security vulnerability.

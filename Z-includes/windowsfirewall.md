@@ -1,1 +1,1 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows Firewall is not included in the original release of the Windows Server 2003 operating systems.</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows Firewall is not included in the original release of the Windows Server 2003 operating systems.</Token>

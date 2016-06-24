@@ -1,4 +1,4 @@
-﻿---
+---
 title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 ms.custom: 
   - AD
@@ -14,13 +14,13 @@ ms.assetid: 6fa9e6b7-e95d-4473-8928-1fa0f358bc74
 author: Femila
 ---
 # Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
-This topic covers the updated Active Directory Administrative Center with its new Active Directory Recycle Bin, Fine\-grained Password policy, and Windows PowerShell History Viewer in more detail, including architecture, examples for common tasks, and troubleshooting information. For an introduction, see [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
+This topic covers the updated Active Directory Administrative Center with its new Active Directory Recycle Bin, Fine-grained Password policy, and Windows PowerShell History Viewer in more detail, including architecture, examples for common tasks, and troubleshooting information. For an introduction, see [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
   
 -   [Active Directory Administrative Center Architecture](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Arch)  
   
 -   [Enabling and Managing the Active Directory Recycle Bin Using Active Directory Administrative Center](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_EnableRecycleBin)  
   
--   [Configuring and Managing Fine\-Grained Password Policies Using Active Directory Administrative Center](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
+-   [Configuring and Managing Fine-Grained Password Policies Using Active Directory Administrative Center](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
   
 -   [Using the Active Directory Administrative Center Windows PowerShell History Viewer](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_HistoryViewer)  
   
@@ -55,18 +55,18 @@ The underlying Windows PowerShell and layer of operations for the new Recycle Bi
   
 ### Limitations  
   
--   Because the Active Directory Administrative Center can only manage domain partitions, it cannot restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions \(you cannot delete objects from the Schema partition\). To restore objects from non\-domain partitions, use [Restore\-ADObject](http://technet.microsoft.com/library/ee617262.aspx).  
+-   Because the Active Directory Administrative Center can only manage domain partitions, it cannot restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you cannot delete objects from the Schema partition). To restore objects from non-domain partitions, use [Restore-ADObject](http://technet.microsoft.com/library/ee617262.aspx).  
   
--   The Active Directory Administrative Center cannot restore sub\-trees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU does not restore the child objects.  
+-   The Active Directory Administrative Center cannot restore sub-trees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU does not restore the child objects.  
   
     > [!NOTE]  
-    > The Active Directory Administrative Center batch restore operation does a “best effort” sort of the deleted objects *within the selection only* so parents are ordered before the children for the restore list. In simple test cases, sub\-trees of objects may be restored in a single action. But corner cases, such as a selection that contains partial trees – trees with some of the deleted parent nodes missing \- or error cases, such as skipping the child objects when parent restore fails, may not work as expected. For this reason, you should always restore sub\-trees of objects as a separate action after you restore the parent objects.  
+    > The Active Directory Administrative Center batch restore operation does a “best effort” sort of the deleted objects *within the selection only* so parents are ordered before the children for the restore list. In simple test cases, sub-trees of objects may be restored in a single action. But corner cases, such as a selection that contains partial trees – trees with some of the deleted parent nodes missing - or error cases, such as skipping the child objects when parent restore fails, may not work as expected. For this reason, you should always restore sub-trees of objects as a separate action after you restore the parent objects.  
   
-Active Directory Recycle Bin requires a Windows Server 2008 R2 Forest Functional Level and you must be a member of the Enterprise Admins group. Once enabled, you cannot disable Active Directory Recycle Bin. Active Directory Recycle Bin increases the size of the Active Directory database \(NTDS.DIT\) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.  
+Active Directory Recycle Bin requires a Windows Server 2008 R2 Forest Functional Level and you must be a member of the Enterprise Admins group. Once enabled, you cannot disable Active Directory Recycle Bin. Active Directory Recycle Bin increases the size of the Active Directory database (NTDS.DIT) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.  
   
-For more information, see [Active Directory Recycle Bin Step\-by\-Step Guide](http://technet.microsoft.com/library/dd392261(v=WS.10).aspx) and [Assess Hardware Requirements \(for Active Directory Recycle Bin\)](http://technet.microsoft.com/library/cc753439(WS.10).aspx).  
+For more information, see [Active Directory Recycle Bin Step-by-Step Guide](http://technet.microsoft.com/library/dd392261(v=WS.10).aspx) and [Assess Hardware Requirements (for Active Directory Recycle Bin)](http://technet.microsoft.com/library/cc753439(WS.10).aspx).  
   
-You can *lower* the forest and domain functional levels from Windows Server 2012 to Windows Server 2008 R2, even after enabling the Active Directory Recycle Bin. This requires using the **Set\-ADForestMode** and **Set\-ADDomainMode** Active Directory cmdlets.  
+You can *lower* the forest and domain functional levels from Windows Server 2012 to Windows Server 2008 R2, even after enabling the Active Directory Recycle Bin. This requires using the **Set-ADForestMode** and **Set-ADDomainMode** Active Directory cmdlets.  
   
 For example:  
   
@@ -76,7 +76,7 @@ Set-AdDomainMode -identity research.corp.contoso.com -server dc3.research.corp.c
   
 ```  
   
-You cannot use the Active Directory Administrative Center to make this change \- it only raises functional levels.  
+You cannot use the Active Directory Administrative Center to make this change - it only raises functional levels.  
   
 ### Enabling Active Directory Recycle Bin using Active Directory Administrative Center  
 To enable the Active Directory Recycle Bin, open the **Active Directory Administrative Center** and click the name of your forest in the navigation pane. From the **Tasks** pane, click **Enable Recycle Bin**.  
@@ -97,7 +97,7 @@ The equivalent Active Directory Windows PowerShell cmdlet is still:
 Enable-ADOptionalFeature  
 ```  
   
-For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step\-by\-Step Guide](http://technet.microsoft.com/library/dd392261(v=WS.10).aspx).  
+For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](http://technet.microsoft.com/library/dd392261(v=WS.10).aspx).  
   
 ### Managing Active Directory Recycle Bin using Active Directory Administrative Center  
 This section uses the example of an existing domain named **corp.contoso.com**. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department, which each contain further OUs, users, and groups.  
@@ -105,11 +105,11 @@ This section uses the example of an existing domain named **corp.contoso.com**. 
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)  
   
 #### Storage and Filtering  
-The Active Directory Recycle Bin preserves all objects deleted in the forest. It saves these objects according to the **msDS\-deletedObjectLifetime** attribute, which by default is set to match the **tombstoneLifetime** attribute of the forest. In any forest created using Windows Server 2003 SP1 or later, the value of **tombstoneLifetime** is set to 180 days by default. In any forest upgraded from Windows 2000 or installed with Windows Server 2003 \(no service pack\), the default tombstoneLifetime attribute is NOT SET and Windows therefore uses the internal default of 60 days. All of this is configurable.You can use the Active Directory Administrative Center to restore any objects deleted from the domain partitions of the forest. You must continue to use the cmdlet **Restore\-ADObject** to restore deleted objects from other partitions, such as Configuration.Enabling the Active Directory Recycle Bin makes the **Deleted Objects** container visible under every domain partition in the Active Directory Administrative Center.  
+The Active Directory Recycle Bin preserves all objects deleted in the forest. It saves these objects according to the **msDS-deletedObjectLifetime** attribute, which by default is set to match the **tombstoneLifetime** attribute of the forest. In any forest created using Windows Server 2003 SP1 or later, the value of **tombstoneLifetime** is set to 180 days by default. In any forest upgraded from Windows 2000 or installed with Windows Server 2003 (no service pack), the default tombstoneLifetime attribute is NOT SET and Windows therefore uses the internal default of 60 days. All of this is configurable.You can use the Active Directory Administrative Center to restore any objects deleted from the domain partitions of the forest. You must continue to use the cmdlet **Restore-ADObject** to restore deleted objects from other partitions, such as Configuration.Enabling the Active Directory Recycle Bin makes the **Deleted Objects** container visible under every domain partition in the Active Directory Administrative Center.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_DeletedObjectsContainer.png)  
   
-The **Deleted Objects** container shows you all the restorable objects in that domain partition. Deleted objects older than **msDS\-deletedObjectLifetime** are known as recycled objects. The Active Directory Administrative Center does not show recycled objects and you cannot restore these objects using Active Directory Administrative Center.  
+The **Deleted Objects** container shows you all the restorable objects in that domain partition. Deleted objects older than **msDS-deletedObjectLifetime** are known as recycled objects. The Active Directory Administrative Center does not show recycled objects and you cannot restore these objects using Active Directory Administrative Center.  
   
 For a deeper explanation of the recycle bin's architecture and processing rules, see [The AD Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](http://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx).  
   
@@ -120,19 +120,19 @@ The Active Directory Administrative Center artificially limits the default numbe
 #### Restoration  
   
 ##### Filtering  
-Active Directory Administrative Center offers powerful criteria and filtering options that you should become familiar with before you need to use them in a real\-life restoration. Domains intentionally delete many objects over their lifetime .With a likely deleted object lifetime of 180 days, you cannot simply restore all objects when an accident occurs.  
+Active Directory Administrative Center offers powerful criteria and filtering options that you should become familiar with before you need to use them in a real-life restoration. Domains intentionally delete many objects over their lifetime .With a likely deleted object lifetime of 180 days, you cannot simply restore all objects when an accident occurs.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_AddCriteria.png)  
   
 Rather than writing complex LDAP filters and converting UTC values into dates and times, use the basic and advanced **Filter** menu to list only the relevant objects. If you know the day of deletion, the names of objects, or any other key data, use that to your advantage when filtering. Toggle the advanced filter options by clicking the chevron to the right of the search box.  
   
-The restore operation supports all the standard filter criteria options, the same as any other search. Of the built\-in filters, the important ones for restoring objects are typically:  
+The restore operation supports all the standard filter criteria options, the same as any other search. Of the built-in filters, the important ones for restoring objects are typically:  
   
--   *ANR \(ambiguous name resolution \- not listed in the menu, but what is used when you type in the****Filter****box\)*  
+-   *ANR (ambiguous name resolution - not listed in the menu, but what is used when you type in the****Filter****box)*  
   
 -   Last modified between given dates  
   
--   Object is user\/inetorgperson\/computer\/group\/organization unit  
+-   Object is user/inetorgperson/computer/group/organization unit  
   
 -   Name  
   
@@ -146,7 +146,7 @@ The restore operation supports all the standard filter criteria options, the sam
   
 -   City  
   
--   Country \/region  
+-   Country /region  
   
 -   Department  
   
@@ -160,13 +160,13 @@ The restore operation supports all the standard filter criteria options, the sam
   
 -   SAMaccountname  
   
--   State\/Province  
+-   State/Province  
   
 -   Telephone number  
   
 -   UPN  
   
--   ZIP\/Postal code  
+-   ZIP/Postal code  
   
 You can add multiple criteria. For example, you can find all user objects deleted on September 24<sup>th</sup> 2012 from Chicago, Illinois with a job title of Manager.  
   
@@ -181,9 +181,9 @@ Restoring deleted objects has always been a single operation.  The Active Direct
   
 1.  Click the domain name in the navigation pane of the Active Directory Administrative Center.  
   
-2.  Double\-click **Deleted Objects** in the management list.  
+2.  Double-click **Deleted Objects** in the management list.  
   
-3.  Right\-click the object and then click **Restore**, or click **Restore** from the **Tasks** pane.  
+3.  Right-click the object and then click **Restore**, or click **Restore** from the **Tasks** pane.  
   
 The object restores to its original location.  
   
@@ -194,14 +194,14 @@ Click **Restore To…** to change the restore location. This is useful if the de
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreToSingle.gif)  
   
 ##### Multiple Peer Objects  
-You can restore multiple peer\-level objects, such as all the users in an OU. Hold down the CTRL key and click one or more deleted objects you want to restore. Click **Restore** from the Tasks pane. You can also select all displayed objects by holding down the CTRL and A keys, or a range of objects using SHIFT and clicking.  
+You can restore multiple peer-level objects, such as all the users in an OU. Hold down the CTRL key and click one or more deleted objects you want to restore. Click **Restore** from the Tasks pane. You can also select all displayed objects by holding down the CTRL and A keys, or a range of objects using SHIFT and clicking.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestorePeers.png)  
   
 ##### Multiple Parent and Child Objects  
-It is critical to understand the restoration process for a multi\-parent\-child restoration because the Active Directory Administrative Center cannot restore a nested tree of deleted objects with a single action.  
+It is critical to understand the restoration process for a multi-parent-child restoration because the Active Directory Administrative Center cannot restore a nested tree of deleted objects with a single action.  
   
-1.  Restore the top\-most deleted object in a tree.  
+1.  Restore the top-most deleted object in a tree.  
   
 2.  Restore the immediate children of that parent object.  
   
@@ -217,7 +217,7 @@ The **Last Known Parent** attribute shows the parent relationship of each object
   
 Consider the scenario where an administrator accidentally deletes the Sales OU, which contains child OUs and users.  
   
-First, observe the value of the **Last Known Parent** attribute for all the deleted users and how it reads **OU\=Sales\\0ADEL:*<guid\+deleted objects container distinguished name>***:  
+First, observe the value of the **Last Known Parent** attribute for all the deleted users and how it reads **OU=Sales\0ADEL:*<guid+deleted objects container distinguished name>***:  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)  
   
@@ -235,7 +235,7 @@ Filter on all the Sales users. Hold down the CTRL and A keys to select all the d
   
 If the **Sales** OU contained child OUs of its own, then you would restore the child OUs first before restoring their children, and so on.  
   
-To restore all nested deleted objects by specifying a deleted parent container, see [Appendix B: Restore Multiple, Deleted Active Directory Objects \(Sample Script\)](http://technet.microsoft.com/library/dd379504(WS.10).aspx).  
+To restore all nested deleted objects by specifying a deleted parent container, see [Appendix B: Restore Multiple, Deleted Active Directory Objects (Sample Script)](http://technet.microsoft.com/library/dd379504(WS.10).aspx).  
   
 The Active Directory Windows PowerShell cmdlet for restoring deleted objects is:  
   
@@ -244,40 +244,40 @@ Restore-adobject
   
 ```  
   
-The **Restore\-ADObject** cmdlet functionality did not change between Windows Server 2008 R2 and Windows Server 2012.  
+The **Restore-ADObject** cmdlet functionality did not change between Windows Server 2008 R2 and Windows Server 2012.  
   
-##### Server\-side Filtering  
-It is possible that over time, the Deleted Objects container will accumulate over 20,000 \(or even 100,000\) objects in medium and large enterprises and have difficulty showing all objects. Since the filter mechanism in Active Directory Administrative Center relies on client\-side filtering, it cannot show these additional objects. To work around this limitation, use the following steps to perform a server\-side search:  
+##### Server-side Filtering  
+It is possible that over time, the Deleted Objects container will accumulate over 20,000 (or even 100,000) objects in medium and large enterprises and have difficulty showing all objects. Since the filter mechanism in Active Directory Administrative Center relies on client-side filtering, it cannot show these additional objects. To work around this limitation, use the following steps to perform a server-side search:  
   
 1.  Right click the **Deleted Objects** container and click **Search under this node**.  
   
-2.  Click the chevron to expose the **\+Add criteria** menu, select and add **Last modified between given dates**. The Last Modified time \(the **whenChanged** attribute\) is a close approximation of the deletion time; in most environments, they are identical. This query performs a server\-side search.  
+2.  Click the chevron to expose the **+Add criteria** menu, select and add **Last modified between given dates**. The Last Modified time (the **whenChanged** attribute) is a close approximation of the deletion time; in most environments, they are identical. This query performs a server-side search.  
   
 3.  Locate the deleted objects to restore by using further display filtering, sorting, and so on in the results, and then restore them normally.  
   
-## <a name="BKMK_FGPP"></a>Configuring and Managing Fine\-Grained Password Policies Using Active Directory Administrative Center  
+## <a name="BKMK_FGPP"></a>Configuring and Managing Fine-Grained Password Policies Using Active Directory Administrative Center  
   
-### Configuring Fine\-Grained Password Policies  
-The Active Directory Administrative Center enables you to create and manage Fine\-Grained Password Policy \(FGPP\) objects. Windows Server 2008 introduced the FGPP feature but Windows Server 2012 has the first graphical management interface for it. You apply Fine\-Grained Password Policies at a domain level and it enables overriding the single domain password required by Windows Server 2003. By creating different FGPP with different settings, individual users or groups get differing password policies in a domain.  
+### Configuring Fine-Grained Password Policies  
+The Active Directory Administrative Center enables you to create and manage Fine-Grained Password Policy (FGPP) objects. Windows Server 2008 introduced the FGPP feature but Windows Server 2012 has the first graphical management interface for it. You apply Fine-Grained Password Policies at a domain level and it enables overriding the single domain password required by Windows Server 2003. By creating different FGPP with different settings, individual users or groups get differing password policies in a domain.  
   
-For information about the Fine\-Grained Password Policy, see [AD DS Fine\-Grained Password and Account Lockout Policy Step\-by\-Step Guide \(Windows Server 2008 R2\)](http://technet.microsoft.com/library/cc770842(WS.10).aspx).  
+For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](http://technet.microsoft.com/library/cc770842(WS.10).aspx).  
   
 In the Navigation pane, click Tree View, click your domain, click **System**, click **Password Settings Container**, and then in the Tasks pane, click **New** and **Password Settings**.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)  
   
-### Managing Fine\-Grained Password Policies  
-Creating a new FGPP or editing an existing one brings up the **Password Settings** editor. From here, you configure all desired password policies, as you would have in Windows Server 2008 or Windows Server 2008 R2, only now with a purpose\-built editor.  
+### Managing Fine-Grained Password Policies  
+Creating a new FGPP or editing an existing one brings up the **Password Settings** editor. From here, you configure all desired password policies, as you would have in Windows Server 2008 or Windows Server 2008 R2, only now with a purpose-built editor.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)  
   
-Fill out all required \(red asterisk\) fields and any optional fields, and then click **Add** to set the users or groups that receives this policy. FGPP overrides default domain policy settings for those specified security principals. In the figure above, an extremely restrictive policy applies only to the built\-in Administrator account, to prevent compromise. The policy is far too complex for standard users to comply with, but is perfect for a high\-risk account used only by IT professionals.  
+Fill out all required (red asterisk) fields and any optional fields, and then click **Add** to set the users or groups that receives this policy. FGPP overrides default domain policy settings for those specified security principals. In the figure above, an extremely restrictive policy applies only to the built-in Administrator account, to prevent compromise. The policy is far too complex for standard users to comply with, but is perfect for a high-risk account used only by IT professionals.  
   
 You also set precedence and to which users and groups the policy applies within a given domain.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_Precedence.png)  
   
-The Active Directory Windows PowerShell cmdlets for Fine\-Grained Password Policy are:  
+The Active Directory Windows PowerShell cmdlets for Fine-Grained Password Policy are:  
   
 ```  
 Add-ADFineGrainedPasswordPolicySubject  
@@ -290,7 +290,7 @@ Set-ADFineGrainedPasswordPolicy
   
 ```  
   
-Fine\-Grained Password Policy cmdlet functionality did not change between the Windows Server 2008 R2 and Windows Server 2012. As a convenience, the following diagram illustrates the associated arguments for cmdlets:  
+Fine-Grained Password Policy cmdlet functionality did not change between the Windows Server 2008 R2 and Windows Server 2012. As a convenience, the following diagram illustrates the associated arguments for cmdlets:  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPP.gif)  
   
@@ -307,13 +307,13 @@ Implicit FGPP assignment does not display here; for that, you must use the **Vie
 ## <a name="BKMK_HistoryViewer"></a>Using the Active Directory Administrative Center Windows PowerShell History Viewer  
 The future of Windows management is Windows PowerShell. By layering graphical tools on top of a task automation framework, management of the most complex distributed systems becomes consistent and efficient. You need to understand how Windows PowerShell works in order to reach your full potential and maximize your computing investments.  
   
-The Active Directory Administrative Center now provides a complete history of all the Windows PowerShell cmdlets it runs and their arguments and values. You can copy the cmdlet history elsewhere for study or modification and re\-use. You can create Task notes to assist in isolating what your Active Directory Administrative Center commands resulted in Windows PowerShell. You can also filter the history to find points of interest.  
+The Active Directory Administrative Center now provides a complete history of all the Windows PowerShell cmdlets it runs and their arguments and values. You can copy the cmdlet history elsewhere for study or modification and re-use. You can create Task notes to assist in isolating what your Active Directory Administrative Center commands resulted in Windows PowerShell. You can also filter the history to find points of interest.  
   
 The Active Directory Administrative Center Windows PowerShell History Viewer's purpose is for you to learn through practical experience.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_HistoryViewer.gif)  
   
-Click the chevron \(arrow\) to show Windows PowerShell History Viewer.  
+Click the chevron (arrow) to show Windows PowerShell History Viewer.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RaiseViewer.png)  
   
@@ -329,7 +329,7 @@ For example, to see the Windows PowerShell commands used to change a user's pass
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RemoveUser.gif)  
   
-Selecting the Show All check box also shows the Get\-\* verb Windows PowerShell cmdlets that only retrieve data.  
+Selecting the Show All check box also shows the Get-* verb Windows PowerShell cmdlets that only retrieve data.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ShowAll.png)  
   
@@ -358,7 +358,7 @@ Because of its relative newness and lack of usage in existing customer environme
 ### Troubleshooting Options  
   
 #### Logging Options  
-The Active Directory Administrative Center now contains built\-in logging in Windows Server 2012, as part of a tracing config file. Create\/modify the following file in the same folder as dsac.exe:  
+The Active Directory Administrative Center now contains built-in logging in Windows Server 2012, as part of a tracing config file. Create/modify the following file in the same folder as dsac.exe:  
   
 **dsac.exe.config**  
   
@@ -383,7 +383,7 @@ Create the following contents:
   
 The verbosity levels for **DsacLogLevel** are **None**, **Error**, **Warning**, **Info**, and **Verbose**. The output file name is configurable and writes to the same folder as dsac.exe. The output can tell you more about how ADAC is operating, which domain controllers it contacted, what Windows PowerShell commands executed, what the responses were, and further details.  
   
-For example, while using the INFO level, which returns all results except the trace\-level verbosity:  
+For example, while using the INFO level, which returns all results except the trace-level verbosity:  
   
 -   DSAC.exe starts  
   
@@ -490,7 +490,7 @@ For example, while using the INFO level, which returns all results except the tr
 Setting the Verbose level also shows the .NET stacks for each function, but these do not include enough data to be particularly useful except when troubleshooting the Dsac.exe suffering an access violation or crash.  
   
 > [!IMPORTANT]  
-> There is also an out\-of\-band version of the service called the [Active Directory Management Gateway](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=2852), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.  
+> There is also an out-of-band version of the service called the [Active Directory Management Gateway](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=2852), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.  
   
 The two likely causes of this issue are:  
   
@@ -504,11 +504,11 @@ The errors shown when no Active Directory Web Services instances are available a
 |-|-|  
 |Error|Operation|  
 |"Cannot connect to any domain. Refresh or try again when connection is available"|Shown at start of the Active Directory Administrative Center application|  
-|"Cannot find an available server in the *<NetBIOS domain name>* domain that is running the Active Directory Web Service \(ADWS\)”|Shown when trying to select a domain node in the Active Directory Administrative Center application|  
+|"Cannot find an available server in the *<NetBIOS domain name>* domain that is running the Active Directory Web Service (ADWS)”|Shown when trying to select a domain node in the Active Directory Administrative Center application|  
   
 To troubleshoot this issue, use these steps:  
   
-1.  Validate the Active Directory Web Services service is started on at least one domain controller in the domain \(and preferably all domain controllers in the forest\). Ensure that it is set to start automatically on all domain controllers as well.  
+1.  Validate the Active Directory Web Services service is started on at least one domain controller in the domain (and preferably all domain controllers in the forest). Ensure that it is set to start automatically on all domain controllers as well.  
   
 2.  From the computer running the Active Directory Administrative Center, validate that you can locate a server running ADWS by running these NLTest.exe commands:  
   
@@ -518,7 +518,7 @@ To troubleshoot this issue, use these steps:
   
     ```  
   
-    If those tests fail even though the ADWS service is running, the issue is with name resolution or LDAP and not ADWS or Active Directory Administrative Center. This test fails with error "1355 0x54B ERROR\_NO\_SUCH\_DOMAIN" if ADWS is not running on any domain controllers though, so double\-check before reaching any conclusions.  
+    If those tests fail even though the ADWS service is running, the issue is with name resolution or LDAP and not ADWS or Active Directory Administrative Center. This test fails with error "1355 0x54B ERROR_NO_SUCH_DOMAIN" if ADWS is not running on any domain controllers though, so double-check before reaching any conclusions.  
   
 3.  On the domain controller returned by NLTest, dump the listening port list with command:  
   
@@ -538,12 +538,12 @@ To troubleshoot this issue, use these steps:
   
     ```  
   
-    If listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services \(TCP\-in\)". If not listening, validate again that the service is running on this server and restart it. Validate that no other process is already listening on port 9389.  
+    If listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services (TCP-in)". If not listening, validate again that the service is running on this server and restart it. Validate that no other process is already listening on port 9389.  
   
-4.  Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by NLTEST. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or arrive and the domain controller replies but they never reach the client, it is likely there is a firewall in between the computers on the network dropping packets on that port. This firewall may be software or hardware, and may be part of third party endpoint protection \(antivirus\) software.  
+4.  Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by NLTEST. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or arrive and the domain controller replies but they never reach the client, it is likely there is a firewall in between the computers on the network dropping packets on that port. This firewall may be software or hardware, and may be part of third party endpoint protection (antivirus) software.  
   
-#### Known\/Likely Issues and Support Scenarios  
-The only likely issue with the Active Directory Administrative Center is an inability to connect to the Active Directory Web Service \(ADWS\) running on a Windows Server 2012 or Windows Server 2008 R2 domain controller.  
+#### Known/Likely Issues and Support Scenarios  
+The only likely issue with the Active Directory Administrative Center is an inability to connect to the Active Directory Web Service (ADWS) running on a Windows Server 2012 or Windows Server 2008 R2 domain controller.  
   
 ## See Also  
 [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)  

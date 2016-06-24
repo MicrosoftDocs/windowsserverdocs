@@ -21,7 +21,7 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink} -size <SizeinMB>
 
 |Parameter|Description|
 |-------------|---------------|
-|<SizeinMB>|Indicates the number of megabytes \(MB\) to use for the new partition.|
+|<SizeinMB>|Indicates the number of megabytes (MB) to use for the new partition.|
 
 ## Remarks
 If you do not specify a size, the tool will use the default value of 300 MB. The minimum size of the system drive is 100 MB. If you will store system recovery or other system tools on the system partition, you should increase the size accordingly.

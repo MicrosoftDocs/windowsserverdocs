@@ -1,4 +1,4 @@
-﻿---
+---
 title: Directory Services component updates
 ms.custom: 
   - AD
@@ -50,25 +50,25 @@ With the release, there are new domain and forest functional levels:
   
 ### The Windows Server 2012 R2 Domain Functional Level enables support for the following:  
   
-1.  DC\-side protections for *Protected Users*  
+1.  DC-side protections for *Protected Users*  
   
     *Protected Users* authenticating to a Windows Server 2012 R2 domain can **no longer**:  
   
     -   Authenticate with NTLM authentication  
   
-    -   Use DES or RC4 cipher suites in Kerberos pre\-authentication  
+    -   Use DES or RC4 cipher suites in Kerberos pre-authentication  
   
     -   Be delegated with unconstrained or constrained delegation  
   
-    -   Renew user tickets \(TGTs\) beyond the initial 4 hour lifetime  
+    -   Renew user tickets (TGTs) beyond the initial 4 hour lifetime  
   
 2.  Authentication Policies  
   
-    New forest\-based Active Directory policies which can be applied to accounts in Windows Server 2012 R2 domains to control which hosts an account can sign\-on from and apply access control conditions for authentication to services running as an account  
+    New forest-based Active Directory policies which can be applied to accounts in Windows Server 2012 R2 domains to control which hosts an account can sign-on from and apply access control conditions for authentication to services running as an account  
   
 3.  Authentication Policy Silos  
   
-    New forest\-based Active Directory object which can create a relationship between user, managed service and computer accounts to be used to classify accounts for authentication policies or for authentication isolation.  
+    New forest-based Active Directory object which can create a relationship between user, managed service and computer accounts to be used to classify accounts for authentication policies or for authentication isolation.  
   
 See How to Configure Protected Accounts for more information.  
   
@@ -84,7 +84,7 @@ Windows Server 2008 DFL is the minimum functional level supported on new domain 
 ### Lowering the forest and domain functional levels  
 The forest and domain functional levels are set to Windows Server 2012 R2 by default on new domain and new forest creation but can be lowered using Windows PowerShell.  
   
-To raise or lower the forest functional level using Windows PowerShell, use the **Set\-ADForestMode** cmdlet.  
+To raise or lower the forest functional level using Windows PowerShell, use the **Set-ADForestMode** cmdlet.  
   
 **To set the contoso.com FFL to Windows Server 2008 mode:**  
   
@@ -92,7 +92,7 @@ To raise or lower the forest functional level using Windows PowerShell, use the 
 Set-ADForestMode -ForestMode Windows2008Forest -Identity contoso.com  
 ```  
   
-To raise or lower the domain functional level using Windows PowerShell, use the Set\-ADDomainMode cmdlet.  
+To raise or lower the domain functional level using Windows PowerShell, use the Set-ADDomainMode cmdlet.  
   
 **To set the contoso.com DFL to Windows Server 2008 mode:**  
   
@@ -142,9 +142,9 @@ These .ldf files contain schema changes for the **Device Registration Service**.
 ## <a name="BKMK_NTFRS"></a>Deprecation of NTFRS  
   
 ### Overview  
-FRS is deprecated in Windows Server 2012 R2.  The deprecation of FRS is accomplished by enforcing a minimum domain functional level \(DFL\) of Windows Server 2008.  This enforcement is present only if the new domain is created using Server Manager or Windows PowerShell.  
+FRS is deprecated in Windows Server 2012 R2.  The deprecation of FRS is accomplished by enforcing a minimum domain functional level (DFL) of Windows Server 2008.  This enforcement is present only if the new domain is created using Server Manager or Windows PowerShell.  
   
-You use the \-DomainMode parameter with the Install\-ADDSForest or Install\-ADDSDomain cmdlets to specify the domain functional level.  Supported values for this parameter can be either a valid integer or a corresponding enumerated string value. For example, to set the domain mode level to Windows Server 2008 R2, you can specify either a value of 4 or "Win2008R2".  When executing these cmdlets from Server 2012 R2 valid values include those for Windows Server 2008 \(3, Win2008\) Windows Server 2008 R2 \(4, Win2008R2\) Windows Server 2012 \(5, Win2012\) and Windows Server 2012 R2 \(6, Win2012R2\). The domain functional level cannot be lower than the forest functional level, but it can be higher.  Since FRS is deprecated in this release, Windows Server 2003 \(2, Win2003\) is not a recognized parameter with these cmdlets when executed from Windows Server 2012 R2.  
+You use the -DomainMode parameter with the Install-ADDSForest or Install-ADDSDomain cmdlets to specify the domain functional level.  Supported values for this parameter can be either a valid integer or a corresponding enumerated string value. For example, to set the domain mode level to Windows Server 2008 R2, you can specify either a value of 4 or "Win2008R2".  When executing these cmdlets from Server 2012 R2 valid values include those for Windows Server 2008 (3, Win2008) Windows Server 2008 R2 (4, Win2008R2) Windows Server 2012 (5, Win2012) and Windows Server 2012 R2 (6, Win2012R2). The domain functional level cannot be lower than the forest functional level, but it can be higher.  Since FRS is deprecated in this release, Windows Server 2003 (2, Win2003) is not a recognized parameter with these cmdlets when executed from Windows Server 2012 R2.  
   
 ![](media/Directory-Services-component-updates/GTR_ADDS_PS_Install2003DFL.gif)  
   
@@ -156,7 +156,7 @@ You use the \-DomainMode parameter with the Install\-ADDSForest or Install\-ADDS
 The LDAP query optimizer algorithm was reevaluated and further optimized.  The result is the performance improvement in LDAP search efficiency and LDAP search time of complex queries.  
   
 > [!NOTE]  
-> **From the Developer:**…improvements in the performance of searches through improvements in the mapping from LDAP query to ESE query.  LDAP filters beyond a certain level of complexity prevent optimized index selection, resulting in drastically decreased performance \(1000x or more\). This change alters the way in which we select indices for LDAP queries to avoid this problem.  
+> **From the Developer:**…improvements in the performance of searches through improvements in the mapping from LDAP query to ESE query.  LDAP filters beyond a certain level of complexity prevent optimized index selection, resulting in drastically decreased performance (1000x or more). This change alters the way in which we select indices for LDAP queries to avoid this problem.  
   
 > [!NOTE]  
 > A complete overhaul of the LDAP query optimizer algorithm, resulting in:  
@@ -164,7 +164,7 @@ The LDAP query optimizer algorithm was reevaluated and further optimized.  The r
 > -   Faster search times  
 > -   Efficiency gains allow DCs to do more  
 > -   Less support calls regarding AD Performance issues  
-> -   Back ported to Windows Server 2008 R2 \(KB 2862304\)  
+> -   Back ported to Windows Server 2008 R2 (KB 2862304)  
   
 ### Background  
 The ability to search Active Directory is a core service provided by domain controllers.  Other services and line of business applications rely on Active Directory searches.  Business operations can cease to a halt if this feature is not available.  As a core and heavily used service, it is imperative that domain controllers handle LDAP search traffic efficiently.  The LDAP query optimizer algorithm attempts to make LDAP searches efficient as possible by mapping LDAP search filters to a result set that can be satisfied via records already indexed in the database.  This algorithm was reevaluated and further optimized.  The result is the performance improvement in LDAP search efficiency and LDAP search time of complex queries.  
@@ -172,7 +172,7 @@ The ability to search Active Directory is a core service provided by domain cont
 ### Details of change  
 An LDAP search contains:  
   
--   A location \(NC head, OU, Object\) within the hierarchy to begin the search  
+-   A location (NC head, OU, Object) within the hierarchy to begin the search  
   
 -   A search filter  
   
@@ -268,7 +268,7 @@ Log Record Bytes Generated: 0
   
 2.  On the **Options** menu, click **Controls**.  
   
-3.  On the Controls dialog box, expand the **Load Predefined** pull\-down menu, click **Search Stats** and then click **OK**.  
+3.  On the Controls dialog box, expand the **Load Predefined** pull-down menu, click **Search Stats** and then click **OK**.  
   
     ![](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)  
   
@@ -281,38 +281,38 @@ Log Record Bytes Generated: 0
     ![](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)  
   
 ### Try This: Use LDP to return query statistics  
-Perform the following on a domain controller, or from a domain\-joined client or server that has the AD DS tools installed.  Repeat the following targeting your Windows Server 2012 DC and your Windows Server 2012 R2 DC.  
+Perform the following on a domain controller, or from a domain-joined client or server that has the AD DS tools installed.  Repeat the following targeting your Windows Server 2012 DC and your Windows Server 2012 R2 DC.  
   
 1.  Review the ["Creating More Efficient Microsoft AD Enabled Applications"](http://msdn.microsoft.com/library/ms808539.aspx) article and refer back to it as needed.  
   
-2.  Using LDP, enable search statistics \(see [To enable the Stats control in LDP](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_EnableStats)\)  
+2.  Using LDP, enable search statistics (see [To enable the Stats control in LDP](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_EnableStats))  
   
 3.  Conduct several LDAP searches and observe the statistical information at the top of the results.  You will repeat the same search in other activities so document them in a notepad text file.  
   
 4.  Perform an LDAP search that the query optimizer should be able to optimize because of attributes indices  
   
-5.  Attempt to construct a search that takes a long time to complete \(you may want to increase the **Time limit** option so the search does not timeout\).  
+5.  Attempt to construct a search that takes a long time to complete (you may want to increase the **Time limit** option so the search does not timeout).  
   
 ### Additional Resources  
 [What Are Active Directory Searches?](http://technet.microsoft.com/library/cc783845(v=ws.10).aspx)  
   
 [How Active Directory Searches Work](http://technet.microsoft.com/library/cc755809(v=WS.10).aspx)  
   
-[Creating More Efficient Microsoft Active Directory\-Enabled Applications](http://msdn.microsoft.com/library/ms808539.aspx)  
+[Creating More Efficient Microsoft Active Directory-Enabled Applications](http://msdn.microsoft.com/library/ms808539.aspx)  
   
-[951581](http://support.microsoft.com/kb/951581) LDAP queries are executed more slowly than expected in the AD or LDS\/ADAM directory service and Event ID 1644 may be logged  
+[951581](http://support.microsoft.com/kb/951581) LDAP queries are executed more slowly than expected in the AD or LDS/ADAM directory service and Event ID 1644 may be logged  
   
 ## <a name="BKMK_1644"></a>1644 Event improvements  
   
 ### Overview  
-This update adds additional LDAP search result statistics to event ID 1644 to aid in troubleshooting purposes.  Additionally, there is a new registry value that can be used to enable logging on a time\-based threshold.  These improvements were made available in Windows Server 2012 and Windows Server 2008 R2 SP1 via KB [2800945](http://support.microsoft.com/kb/2800945) and will be made available to Windows Server 2008 SP2.  
+This update adds additional LDAP search result statistics to event ID 1644 to aid in troubleshooting purposes.  Additionally, there is a new registry value that can be used to enable logging on a time-based threshold.  These improvements were made available in Windows Server 2012 and Windows Server 2008 R2 SP1 via KB [2800945](http://support.microsoft.com/kb/2800945) and will be made available to Windows Server 2008 SP2.  
   
 > [!NOTE]  
 > -   Additional LDAP search statistics are added to event ID 1644 to aid in troubleshooting inefficient or expensive LDAP searches  
-> -   You can now specify a Search Time Threshold \(eg. Log event 1644 for searches taking longer than 100ms\) instead of specifying the Expensive and Inefficient search result threshold values  
+> -   You can now specify a Search Time Threshold (eg. Log event 1644 for searches taking longer than 100ms) instead of specifying the Expensive and Inefficient search result threshold values  
   
 ### Background  
-While troubleshooting Active Directory performance problems, it becomes apparent that LDAP search activity may be contributing to the problem.  You decide to enable logging so that you can see expensive or inefficient LDAP queries processed by domain controller.  In order to enable the logging, you must set the Field Engineering diagnostics value and can optionally specify the expensive \/ inefficient search results threshold values.  Upon enabling the Field Engineering logging level to a value of 5, any search that meets these criteria is logged in the Directory Services event log with an event ID 1644.  
+While troubleshooting Active Directory performance problems, it becomes apparent that LDAP search activity may be contributing to the problem.  You decide to enable logging so that you can see expensive or inefficient LDAP queries processed by domain controller.  In order to enable the logging, you must set the Field Engineering diagnostics value and can optionally specify the expensive / inefficient search results threshold values.  Upon enabling the Field Engineering logging level to a value of 5, any search that meets these criteria is logged in the Directory Services event log with an event ID 1644.  
   
 The event contains:  
   
@@ -332,7 +332,7 @@ The event contains:
   
 -   Returned entries  
   
-However, key data is missing from the event such as the amount of time spent on the search operation and what \(if any\) index was used.  
+However, key data is missing from the event such as the amount of time spent on the search operation and what (if any) index was used.  
   
 #### Additional search statistics added to event 1644  
   
@@ -352,8 +352,8 @@ However, key data is missing from the event such as the amount of time spent on 
   
 -   Attributes Preventing Optimization  
   
-#### New time\-based threshold registry value for event 1644 logging  
-Instead of specifying the Expensive and Inefficient search result threshold values, you can specify Search Time Threshold.  If you wanted to log all search results that took 50 ms or greater, you would specify 50 decimal \/ 32 hex \(in addition to setting the Field Engineering value\).  
+#### New time-based threshold registry value for event 1644 logging  
+Instead of specifying the Expensive and Inefficient search result threshold values, you can specify Search Time Threshold.  If you wanted to log all search results that took 50 ms or greater, you would specify 50 decimal / 32 hex (in addition to setting the Field Engineering value).  
   
 ```  
 Windows Registry Editor Version 5.00  
@@ -374,7 +374,7 @@ NEW
   
 1.  Repeat the following targeting your Windows Server 2012 DC and your Windows Server 2012 R2 DC. Observe the event ID 1644s on both DCs after each search.  
   
-2.  Using regedit, enable event ID 1644 logging using a time\-based threshold on the Windows Server 2012 R2 DC and the old method on the Windows Server 2012 DC.  
+2.  Using regedit, enable event ID 1644 logging using a time-based threshold on the Windows Server 2012 R2 DC and the old method on the Windows Server 2012 DC.  
   
 3.  Conduct several LDAP searches that exceed the threshold and observe the statistical information at the top of the results.  Use the LDAP queries you documented earlier and repeat the same searches.  
   
@@ -383,7 +383,7 @@ NEW
 ## <a name="BKMK_ADRepl"></a>Active Directory Replication throughput improvement  
   
 ### Overview  
-AD replication uses RPC for its replication transport. By default, RPC uses an 8K transmit buffer and a 5K packet size. This has the net effect where the sending instance will transmit three packets \(approximately 15K worth of data\) and then have to wait for a network round trip before sending more. Assuming a 3ms roundtrip time, the highest throughput would be around 40Mbps, even on 1Gbps or 10 Gbps networks.  
+AD replication uses RPC for its replication transport. By default, RPC uses an 8K transmit buffer and a 5K packet size. This has the net effect where the sending instance will transmit three packets (approximately 15K worth of data) and then have to wait for a network round trip before sending more. Assuming a 3ms roundtrip time, the highest throughput would be around 40Mbps, even on 1Gbps or 10 Gbps networks.  
   
 > [!NOTE]  
 > -   This update adjusts the maximum AD Replication throughput from 40Mbps to around 600 Mbps.  

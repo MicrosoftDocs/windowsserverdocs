@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 6c00b3c9-bb26-4538-a73f-43db1ddd204a
 ---
 # Fsutil fsinfo
-Lists all drives, queries the drive type, queries volume information, queries NTFS\-specific volume information, or queries file system statistics.
+Lists all drives, queries the drive type, queries volume information, queries NTFS-specific volume information, or queries file system statistics.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -30,12 +30,12 @@ fsutil fsinfo [volumeinfo] <RootPath>
 |Parameter|Description|
 |-------------|---------------|
 |drives|Lists all drives in the computer.|
-|drivetype|Queries a drive and lists its type, for example CD\-ROM drive.|
+|drivetype|Queries a drive and lists its type, for example CD-ROM drive.|
 |ntfsinfo|Lists NTFS specific volume information for the specified volume, such as the number of sectors, total clusters, free clusters, and the start and end of the MFT Zone.|
 |statistics|Lists file system statistics for the specified volume, such as metadata, log file, and MFT reads and writes.|
-|volumeinfo|Lists information for the specified volume, such as the file system, and whether the volume supports case\-sensitive file names, unicode in file names, or disk quotas.|
-|<VolumePath>|Specifies the drive letter \(followed by a colon\).|
-|<RootPathname>|Specifies the drive letter \(followed by a colon\) of the root drive.|
+|volumeinfo|Lists information for the specified volume, such as the file system, and whether the volume supports case-sensitive file names, unicode in file names, or disk quotas.|
+|<VolumePath>|Specifies the drive letter (followed by a colon).|
+|<RootPathname>|Specifies the drive letter (followed by a colon) of the root drive.|
 
 ## <a name="BKMK_examples"></a>Examples
 To list all of the drives in the computer, type:
@@ -87,7 +87,7 @@ File System Name : NTFS
 Supports Named Streams       
 ```
 
-To query drive F for NTFS\-specific volume information, type:
+To query drive F for NTFS-specific volume information, type:
 
 ```
 fsutil fsinfo ntfsinfo f:

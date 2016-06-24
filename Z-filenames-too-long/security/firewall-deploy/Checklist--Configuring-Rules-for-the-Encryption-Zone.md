@@ -15,9 +15,9 @@ This checklist includes tasks for configuring connection security rules and IPse
 
 Rules for the encryption zone are typically the same as those for the isolated domain, with the exception that the main rule requires encryption in addition to authentication.
 
-![](../../../media/Checklist--Configuring-Rules-for-the-Encryption-Zone/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**Checklist: Configuring encryption zone rules for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2**
+![](../../../media/Checklist--Configuring-Rules-for-the-Encryption-Zone/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**Checklist: Configuring encryption zone rules for Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, or Windows Server 2008 R2**
 
-A GPO for Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , and  Windows Server 2008 R2  can simply be copied and then customized. This checklist assumes that you have already created the GPO for the isolated domain as described in [Checklist: Implementing a Domain Isolation Policy Design](Checklist--Implementing-a-Domain-Isolation-Policy-Design.md). You can then copy those GPOs for use with the encryption zone. After you create the copies, modify the main rule to require encryption in addition to the authentication required by the rest of the isolated domain.
+A GPO for Windows 8,  Windows 7 , Windows Vista,  Windows Server 2012 ,  Windows Server 2008 , and  Windows Server 2008 R2  can simply be copied and then customized. This checklist assumes that you have already created the GPO for the isolated domain as described in [Checklist: Implementing a Domain Isolation Policy Design](Checklist--Implementing-a-Domain-Isolation-Policy-Design.md). You can then copy those GPOs for use with the encryption zone. After you create the copies, modify the main rule to require encryption in addition to the authentication required by the rest of the isolated domain.
 
 ||Task|Reference|
 |-|--------|-------------|
