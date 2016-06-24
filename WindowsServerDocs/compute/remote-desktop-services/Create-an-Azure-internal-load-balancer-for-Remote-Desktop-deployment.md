@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35f1cd3b-4eb0-40e3-8e48-20e779fd42dc
 author: lizap
+manager: msswadhwa
 ---
 # Create an Azure internal load balancer for Remote Desktop deployment
 This section provides steps to deploy an Azure Internal Load Balancer to effectively load balance incoming connections to the RD Connection Brokers setup in High Availability. Another method of load balancing is DNS round-robin, which is detailed below in the Appendix.   

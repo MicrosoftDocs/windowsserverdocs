@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: adc85c02-5391-4f8a-abd7-827a70746c4d
 author: lizap
+manager: msswadhwa
 ---
 # Validate and secure your Remote Desktop deployment
 Once you have deployed your Remote Desktop servers, you can validate the deployment by connecting to Remote Desktop from a client computer over the Internet.   

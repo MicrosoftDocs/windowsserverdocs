@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1905e1fc-bd2c-45d9-95f2-d4ff55ea2481
 author: lizap
+manager: msswadhwa
 ---
 # Add the RDSH server to the collection farm
 Now that your environment is ready, use the following steps to add the Remote Desktop Session Host server to the collection farm.  

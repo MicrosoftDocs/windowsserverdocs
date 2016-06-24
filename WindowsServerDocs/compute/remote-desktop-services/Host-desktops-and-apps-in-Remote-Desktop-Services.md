@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0bbef1b-6333-4f86-81bf-fd739387f551
 author: lizap
+manager: msswadhwa
 ---
 # Host desktops and apps in Remote Desktop Services on Azure
 Remote Desktop Services in Windows Server 2016 lets users access computers, apps, and resources remotely.   

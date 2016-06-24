@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ecf48ac5-ccd3-4fc6-a41b-319b3274903c
 author: lizap
+manager: msswadhwa
 ---
 # Create a virtual machine for the Remote Desktop Session Host server
 Note: To create a virtual machine from a custom image, see the steps provided in the Basic Deployment Guide.   

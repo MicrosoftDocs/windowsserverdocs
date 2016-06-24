@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 03feb939-bba9-483c-aedd-cfc8986aaa26
 author: lizap
+manager: msswadhwa
 ---
 # Configure the current RD Web and Gateway virtual machine for load balancing
 Use the following steps to configure load balancing for the RD Web and Gateway virtual machine:  

@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b3eebb38-a835-4fa6-9e41-1966014bf2cb
 author: lizap
+manager: msswadhwa
 ---
 # Tenant on-premises components
 The following information describes the on-premises components that make up the desktop hosting deployment.  

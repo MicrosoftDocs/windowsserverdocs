@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dd6152b3-5aaa-4f83-98cb-3de9ee5b63c0
 author: lizap
+manager: msswadhwa
 ---
 # Deploy RemoteApp programs
 RemoteApp programs let you share apps, programs, and resources with your users as part of your Remote Desktop Services deployment. To do this, you need to deploy a Remote Desktop Session Host (RDSH) server and collection  

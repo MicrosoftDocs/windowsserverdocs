@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa15d0c3-2aa1-48b0-9c39-6bfc0ca4299e
 author: lizap
+manager: msswadhwa
 ---
 # Configure your desktop hosting environment
 Before you start deploying any of the desktop hosting solutions for Remote Desktop Services, there are some steps you need to take to prepare your environment:  

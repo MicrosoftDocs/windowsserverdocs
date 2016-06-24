@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
 author: lizap
+manager: msswadhwa
 ---
 # Azure services for desktop hosting
 The following sections describe Azure Infrastructure Services.  
