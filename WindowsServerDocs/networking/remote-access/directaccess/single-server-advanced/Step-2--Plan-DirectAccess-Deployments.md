@@ -108,11 +108,11 @@ Consider the following decisions when you are planning to deploy your DirectAcce
 ## <a name="bkmk_2_3_Inf_servers"></a>2.3 Plan infrastructure servers  
 DirectAccess requires three types of infrastructure servers:  
   
--   **DNS servers**. For more information, see [1.4 Plan DNS requirements](Step-1--Plan-the-DirectAccess-Infrastructure_1.md#bkmk_1_3_DNS)  
+-   **DNS servers**. For more information, see [1.4 Plan DNS requirements](Step-1--Plan-the-DirectAccess-Infrastructure.md#bkmk_1_3_DNS)  
   
--   **Network location server**. For more information, see [1.5 Plan the network location server](Step-1--Plan-the-DirectAccess-Infrastructure_1.md#bkmk_1_4_NLS)  
+-   **Network location server**. For more information, see [1.5 Plan the network location server](Step-1--Plan-the-DirectAccess-Infrastructure.md#bkmk_1_4_NLS)  
   
--   **Management servers**. For more information, see [1.6 Plan management servers](Step-1--Plan-the-DirectAccess-Infrastructure_1.md#bkmk_1_5_mgmt_servers)  
+-   **Management servers**. For more information, see [1.6 Plan management servers](Step-1--Plan-the-DirectAccess-Infrastructure.md#bkmk_1_5_mgmt_servers)  
   
 ## <a name="bkmk_AppServers"></a>2.4 Plan application servers  
 Application servers are the servers on the corporate network that are accessible by client computers over a DirectAccess connection. Application servers are identified by adding them into a security group. The application server GPO is then applied to servers in that group.  
@@ -139,6 +139,6 @@ If the VPN connection lists its default gateway as empty or all zeros \(0.0.0.0\
   
 ## <a name="BKMK_Links"></a>Previous step  
   
--   [Step 1: Plan the DirectAccess Infrastructure](Step-1-Plan-the-DirectAccess-Infrastructure.md)  
+-   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
   
 
