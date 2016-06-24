@@ -72,9 +72,15 @@ Use the following steps to validate that host networking is setup correctly.
       
     ``Get-VMSwitch “<switch name>”``  
 2. Verify that the Management vNIC on the VM Switch is connected to the Management VLAN:  
+<<<<<<< HEAD
+	>[!NOTE]
+	>Relevant only if Management and Tenant traffic share the same NIC.    
+	  
+=======
     >[!NOTE]
     >Relevant only if Management and Tenant traffic share the same NIC.    
       
+>>>>>>> f9728e39087dfe4507735111900176a30cf4a330
     ``Get-VMNetworkAdapterIsolation -ManagementOS``  
 3. Validate that all Hyper-V hosts (and external management resources, for example: DNS servers) are accessible via ping using their Management IP address and/or fully qualified domain name (FQDN).   
       
@@ -162,6 +168,24 @@ Now that fabric resources have been deployed, you can validate your SDN deployme
 
 #### Validation  
 To validate that the tenant deployment was successful, do the following:
+<<<<<<< HEAD
+1.	Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
+2.	Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
+	  
+	``Debug-NetworkControllerConfigurationState –NCIP <FQDN of Network Controller REST Name>``  
+	  
+3.	Validate policy has been received and persisted in the Network Controller Host Agent  
+	  
+	``ovsdb-client.exe dump tcp:127.0.0.1:6641 ms_vtep``  
+	  
+4.	Check that an IP address has been assigned for a Provider Address (PA) Host vNIC and the ethernet adapters for the PA Host vNIC.  
+	  
+	``ipconfig /allcompartments /all``   
+	  
+5.	Check PA connectivity between two hosts using ping. Obtain the compartment ID from the output of the previous command (for example: Compartment 3)  
+	  
+	``ping –c <compartment Id> <Remote Hyper-V Host PA IP Address>``  
+=======
 1.  Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
 2.  Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
       
@@ -178,6 +202,7 @@ To validate that the tenant deployment was successful, do the following:
 5.  Check PA connectivity between two hosts using ping. Obtain the compartment ID from the output of the previous command (for example: Compartment 3)  
       
     ``ping –c <compartment Id> <Remote Hyper-V Host PA IP Address>``  
+>>>>>>> f9728e39087dfe4507735111900176a30cf4a330
   
   
 ## Deploy a simulated tenant enterprise infrastructure  
