@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: afcbc712-3c8d-4b4e-a78f-38ec57e50c31
 author: lizap
+manager: msswadhwa
 ---
 # Create a second RD Connection Broker virtual machine
 Use the following steps to create a virtual machine to host the RD Connection Broker role service:  

@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f837325-cd40-4414-a8a5-ebf759fbbb18
 author: lizap
+manager: msswadhwa
 ---
 # Deploy a RD Web Access and Gateway farm
 You can deploy a Remote Desktop Web Access (RD Web Access) and Remote Desktop Gateway (RD Gateway) farm to improve the availability and scale of a Windows Server 2012 R2 Remote Desktop Services (RDS) deployment in Microsoft Azure Infrastructure Services. This document assumes, as a starting point, a basic desktop hosting deployment based on the Microsoft Azure Desktop Hosting Reference Architecture Guide and the Microsoft Azure Desktop Hosting Deployment Guide.  

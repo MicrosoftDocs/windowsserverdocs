@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac7e1cf8-b63f-4a3b-92ef-56dc8512f7db
 author: lizap
+manager: msswadhwa
 ---
 # Add RD Web and Gateway server to the RDS deployment
 Use the following steps to add the RD Web and Gateway server you created to your existing Remote Desktop Services basic deployment.  

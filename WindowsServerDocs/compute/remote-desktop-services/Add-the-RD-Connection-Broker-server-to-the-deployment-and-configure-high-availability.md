@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6581da74-f36a-48b6-a33c-97d02285389d
 author: lizap
+manager: msswadhwa
 ---
 # Add the RD Connection Broker server to the deployment and configure high availability
 1. Connect to the RDMS server virtual machine. (The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.)   

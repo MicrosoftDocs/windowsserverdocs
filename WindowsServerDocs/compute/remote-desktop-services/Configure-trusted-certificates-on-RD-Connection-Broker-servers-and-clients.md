@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb58cc93-d39a-4677-9bde-d8d816a7e636
 author: lizap
+manager: msswadhwa
 ---
 # Configure trusted certificates on RD Connection Broker servers and clients
 Use the following steps to configure trusted certificates.  

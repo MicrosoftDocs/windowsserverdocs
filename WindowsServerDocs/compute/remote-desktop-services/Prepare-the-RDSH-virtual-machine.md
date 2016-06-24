@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d720a65e-b33c-4577-84ad-d84f47dee15b
 author: lizap
+manager: msswadhwa
 ---
 # Prepare the RDSH virtual machine
 Use the following steps to prepare the virtual machine for the Remote Desktop Session Host server:  

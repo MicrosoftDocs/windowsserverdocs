@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4ed2eb96-2bc4-4b1a-977c-ff7a11f21cef
 author: lizap
+manager: msswadhwa
 ---
 # Deploy your Remote Desktop environment
 Use the following steps to deploy the Remote Desktop servers in your environment.  

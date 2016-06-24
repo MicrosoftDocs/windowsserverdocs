@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8bfa3e48-5198-4dd8-b2d8-4013477135fb
 author: lizap
+manager: msswadhwa
 ---
 # Desktop hosting service
 The following information describes the components of the desktop hosting service.  

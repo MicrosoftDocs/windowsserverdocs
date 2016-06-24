@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bc58e11-cc5a-4845-b441-eaf7a5ab86c5
 author: lizap
+manager: msswadhwa
 ---
 # Deploy a Remote Desktop Connection Broker cluster
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of a desktop hosting solution based on the Microsoft Azure Desktop Hosting Reference Architecture Guide.   

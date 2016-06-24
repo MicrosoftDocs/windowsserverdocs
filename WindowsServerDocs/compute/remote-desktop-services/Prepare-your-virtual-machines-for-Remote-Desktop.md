@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2fc39dff-61ca-4eba-81ab-52289081bead
 author: lizap
+manager: msswadhwa
 ---
 # Prepare your virtual machines for Remote Desktop
 Use the following steps to prepare the virtual machines you created in the previous step.  

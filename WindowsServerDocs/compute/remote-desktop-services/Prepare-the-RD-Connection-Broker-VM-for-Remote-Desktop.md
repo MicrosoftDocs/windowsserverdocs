@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 432de387-9bad-46df-ad26-3254de377ff7
 author: lizap
+manager: msswadhwa
 ---
 # Prepare the RD Connection Broker VM for Remote Desktop
 Use the following steps to prepare the virtual machine for the Remote Desktop Connection Broker server:  

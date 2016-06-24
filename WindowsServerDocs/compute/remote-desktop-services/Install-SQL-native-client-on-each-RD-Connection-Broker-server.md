@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ca521c65-eab4-458e-b762-456ff043c4f7
 author: lizap
+manager: msswadhwa
 ---
 # Install SQL native client on each RD Connection Broker server
 Use the following steps to install a SQL native client on each RD COnnection Broker server:  
