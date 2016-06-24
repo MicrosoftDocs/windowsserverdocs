@@ -104,13 +104,13 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 
 When you create a Microsoft Azure Storage Account, it is associated with two Access Keys that are automatically generated - Primary Access key and Secondary Access key. For a first-time creation of Cloud Witness, use the **Primary Access Key**. There is no restriction regarding which key to use for Cloud Witness.  
 
- #### To view and copy storage access keys
+#### To view and copy storage access keys
 
 In the Azure Portal, navigate to your storage account, click **All settings** and then click **Access keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications (see figure 4).
 
-  ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png)  
+![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png)  
 
- **Figure 4: Storage access keys**
+**Figure 4: Storage access keys**
 
 ### View and copy endpoint URL Links  
 
@@ -127,7 +127,7 @@ In the Azure Portal, navigate to your storage account, click **All settings** an
 
 ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)  
 
-   **Figure 5: Cloud Witness endpoint URL links**
+**Figure 5: Cloud Witness endpoint URL links**
 
  For more information about creating and managing Azure Storage Accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)
 
@@ -140,22 +140,18 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 1. Launch Failover Cluster Manager.
 2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 6).This launches the Configure Cluster Quorum Wizard  
 
-    ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)  
+  ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png)
+  **Figure 6. Cluster Quorum Settings**
 
-   **Figure 6. Cluster Quorum Settings**
- 
+1. On the  **Select Quorum Configurations** page, select **Select the quorum witness** (see figure 7).  
 
-1.  On the  **Select Quorum Configurations** page, select **Select the quorum witness** (see figure 7).  
-
-    ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
-
-     **Figure 7. Select the Quorum Configuration**
+  ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
+  **Figure 7. Select the Quorum Configuration**
 
 1. On the **Select Quorum Witness** page, select **Configure a cloud witness** (see figure 8).  
 
-    ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_9.png)
-
-     **Figure 8. Select the Quorum Witness**  
+  ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_9.png)
+  **Figure 8. Select the Quorum Witness**  
 
 1. On the **Configure Cloud Witness** page, enter the following information:
 
@@ -169,15 +165,13 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 
     3.  (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
 
-    ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)
-        
-    **Figure 9: Configure your Cloud Witness**
+  ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
+  **Figure 9: Configure your Cloud Witness**
 
 1.  Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 10).
 
-     ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png)
-
-    **Figure 10: Successful configuration of Cloud Witness**
+  ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png)
+  **Figure 10: Successful configuration of Cloud Witness**
 
 ### Configuring Cloud Witness using PowerShell  
 
