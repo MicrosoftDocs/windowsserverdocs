@@ -639,3 +639,4 @@
 #### [Securing Privileged Access](security/securing-privileged-access/Securing-Privileged-Access.md)
 ##### [Privileged Access Workstations](security/securing-privileged-access/Privileged-Access-Workstations.md)
 ##### [Securing Privileged Access Reference Material](security/securing-privileged-access/Securing-Privileged-Access-Reference-Material.md)
+#### [Device Health Attestation](security/Device-Health-Attestation.md)
