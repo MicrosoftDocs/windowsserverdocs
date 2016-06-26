@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
+author: coreyp-at-msft
 ---
 # Device Health Attestation
 Introduced in Windows 10, version 1506, Device Health Attestation (DHA) included the following:
