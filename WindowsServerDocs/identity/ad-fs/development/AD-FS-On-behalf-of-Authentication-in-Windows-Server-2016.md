@@ -51,8 +51,6 @@ WebAPIOBO | Backend web api that is used by ToDoService to perform the requisite
   
 This walk-through uses Visual Studio 2015. The project heavily uses Active Directory Authentication Library (ADAL). To learn about ADAL please read [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/azure/mt417579.aspx)  
    
-<< Add info about references here>>  
-  
 The sample also uses SQL LocalDB v11.0. Install the SQL LocalDB prior to working on the sample.  
   
 ## Setting up the environment  
