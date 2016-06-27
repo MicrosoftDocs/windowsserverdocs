@@ -40,7 +40,7 @@ This walkthrough uses the following environment as an example:
 -   At least 2GB of RAM and two cores per server. You will need more memory and cores for more virtual machines.  
 -   Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 -   A network between servers with enough bandwidth to contain your IO write workload and an average of ≤5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
-- The replicated storage cannot be located on the drive containing the Windows operating system folder.
+-   The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the following steps.  
 
@@ -138,9 +138,9 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
         For example:      
 
-            MD c:temp  
+            MD c:\temp  
 
-            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:temp        
+            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName D: -SourceLogVolumeName E: -DestinationComputerName SR-SRV03 -DestinationVolumeName D: -DestinationLogVolumeName E: -DurationInMinutes 30 -ResultPath c:\temp        
 
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it Test-SRTopology will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run DISKSPD to generate write IOs. For instance, a sample with a low write IO workload for five thirty minutes to the D: volume:   
@@ -371,7 +371,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 3. Configure a File Share Witness or Cloud (Azure) witness in the cluster that points to a share hosted on the domain controller or some other independent server. For example:  
 
-       Set-ClusterQuorum -FileShareWitness someserversomeshare  
+       Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
 
     >[!NOTE]
     > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
@@ -385,9 +385,9 @@ You will now create a normal failover cluster. After configuration, validation, 
         Get-ClusterResource  
         Add-ClusterFileServerRole -Name SR-CLU-FS2 -Storage "Cluster Disk 4"  
 
-        MD e:share01  
+        MD e:\share01  
 
-        New-SmbShare -Name Share01 -Path f:share01 -ContinuouslyAvailable $false  
+        New-SmbShare -Name Share01 -Path f:\share01 -ContinuouslyAvailable $false  
 
  6. Configure stretch cluster site awareness so that servers SR-SRV01 and SR-SRV02 are in site Redmond, SR-SRV03 and SR-SRV04 are in site Bellevue, and Redmond is preferred for node ownership of the source storage and virtual machines:  
 
@@ -633,7 +633,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 
     4.  To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.  
 
-        > [!NOTE] 
+        > [!NOTE]
         > In Windows Server 2016 Technical Preview, you may need to use Failover Cluster Manager or Move-ClusterGroup to move the destination disks back to the other site manually after the nodes come back online.  
 
         > [!NOTE]
@@ -763,7 +763,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
     ```  
 
     > [!NOTE]
-    > If using a remote management computer you will need to specify the cluster name to these cmdlets and provide the two RG names  
+    > If using a remote management computer you will need to specify the cluster name to these cmdlets and provide the two RG names.  
 
 ### Related Topics  
 
