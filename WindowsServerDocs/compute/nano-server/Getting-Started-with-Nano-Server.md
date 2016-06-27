@@ -46,7 +46,7 @@ Follow these steps to create a Nano Server VHD that will run in a virtual machin
 >[!NOTE]  
 >You might have to adjust the Windows PowerShell execution policy. `Set-ExecutionPolicy RemoteSigned` should work well.  
   
-3.  Create a VHD for the Standard edition that sets a computer name and includes the Hyper-V guest drivers by running the following command which will prompt you for an administrator password for the new VHD:  
+3.  Create a VHD for the Standard edition that sets a computer name and includes the Hyper-V **guest drivers** by running the following command which will prompt you for an administrator password for the new VHD:  
   
     `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` where  
   
@@ -127,7 +127,7 @@ This table shows the roles and features that are available in this release of Na
   
 |Role or feature|Option|  
 |-------------------|----------|  
-|Hyper-V role|-Compute|  
+|Hyper-V role (including NetQoS|-Compute|  
 |Failover Clustering|-Clustering|  
 |Basic drivers for a variety of network adapters and storage controllers. This is the same set of drivers included in a Server Core installation of Windows Server 2016 Technical Preview.|-OEMDrivers|  
 |File Server role and other storage components|-Storage|  
@@ -139,7 +139,7 @@ This table shows the roles and features that are available in this release of Na
 |Host support for Windows Containers|-Containers|  
 |System Center Virtual Machine Manager agent|   -Packages Microsoft-NanoServer-SCVMM-Package<br />   -Packages Microsoft-NanoServer-SCVMM-Compute-Package <br>**Note:**     Use the SCVMM Compute package only if you are monitoring Hyper-V.|  
 |Network Performance Diagnostics Service (NPDS) (**Note:** Requires Windows Defender Anti-Malware package, which you should install before installing NPDS)|-Packages Microsoft-NanoServer-NPDS-Package |  
-|Data Center Bridging|-Packages Microsoft-NanoServer-DCB-Package|  
+|Data Center Bridging (including DCBQoS|-Packages Microsoft-NanoServer-DCB-Package|  
 |Ability to boot and run from a RAM disk|Microsoft-NanoServer-BootFromWim-Package|  
 |Deploying on a virtual machine|Microsoft-NanoServer-Guest-Package|  
 |Deploying on a physical machine|Microsoft-NanoServer-Host-Package|  
@@ -271,7 +271,7 @@ The generic PackageManagement cmdlets are:
 `Install-Package`  
 `Get-Package`  
   
-To use any of these cmdlets with Windows packages on Nano Server, add `–provider NanoServerPackage`.  If you don't add the –provider parameter, PackageManagement will iterate all of the providers. For a complete details for the cmdlets, use `get-help <cmdlet>`, but here are some examples of common usages:  
+To use any of these cmdlets with Windows packages on Nano Server, add `–provider NanoServerPackage`. If you don't add the –provider parameter, PackageManagement will iterate all of the providers. For a complete details for the cmdlets, use `get-help <cmdlet>`, but here are some examples of common usages:  
     
 ### Searching for Windows packages  
 You can use either `Find-NanoServerPackage` or `Find-Package` to search for and return a list of Windows Packages that are available in the online repository. For example, you can get a list of all the latest packages with  
@@ -399,6 +399,30 @@ Run New-NanoServerImage using the harvested blob:
 `New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\JoinDomNoHrvest.vhd -DomainBlobPath .\Path\To\Domain\Blob\JoinDomNoHrvestContoso.djoin`  
   
 In the event that you already have a node in the domain with the same computer name as your future Nano Server, you could reuse the computer name by adding the `-ReuseDomainNode` parameter.  
+
+### Adding additional drivers
+Nano Server offers a package that includes a set of basic drivers for a variety of network adapters and storage controllers; it's possible that drivers for your network adapters might not be included. You can use these steps to find drivers in a working system, extract them, and then add them to the Nano Server image.
+
+1.	Install Windows Server 2016 on the physical computer where you will run Nano Server.
+2.	Open Device Manager and identify devices in the following categories:
+* Network adapters
+* Storage controllers
+* Disk drives
+3.	For each device in these categories, right-click the device name, and click **Properties**. In the dialog that opens, click the **Driver** tab, and then click **Driver Details**.
+4.	Note the filename and path of the driver file that appears. For example, let’s say the driver file is e1i63x64.sys, which is in C:\Windows\System32\Drivers.
+5.	In a command prompt, search for the driver file and search for all instances with dir e1i*.sys /s /b. In this example, the driver file is also present in the path C:\Windows\System32\DriverStore\FileRepository\net1ic64.inf_amd64_fafa7441408bbecd\e1i63x64.sys.
+6.	In an elevated command prompt, navigate to the directory where the Nano Server VHD is and run the following commands:
+     **md mountdir**
+     
+     **dism\dism /Mount-Image /ImageFile:.\NanoServer.vhd /Index:1 /MountDir:.\mountdir**
+     
+     **dism\dism /Add-Driver /image:.\mountdir /driver: C:\Windows\System32\DriverStore\FileRepository\net1ic64.inf_amd64_fafa7441408bbecd**
+     
+     **dism\dism /Unmount-Image /MountDir:.\MountDir /Commit**
+7.	Repeat these steps for each driver file you need.
+
+> [!NOTE]  
+> In the folder where you keep your drivers, both the SYS files and corresponding INF files must be present. Also, Nano Server only supports signed, 64\-bit drivers. 
   
 ### Injecting drivers  
 Nano Server offers a package that includes a set of basic drivers for a variety of network adapters and storage controllers; it's possible that drivers for your network adapters might not be included. You can use this syntax to have New-NanoServerImage search the directory for available drivers and inject them into the Nano Server image:  
@@ -516,7 +540,7 @@ Specifying an administrator password or computer name in this unattend file will
   
     **copy odjblob z:\Temp**  
   
-3.  Open an elevated command prompt, start Windows PowerShell and then connect to the Nano Server computer with Windows PowerShell remoting with these commands:  
+3.  Check the domain you want to join Nano Server to and ensure that DNS is configured. Also, verify that name resolution of the domain or a domain controller works as expected. To do this, open an elevated command prompt, start Windows PowerShell and then connect to the Nano Server computer with Windows PowerShell remoting with these commands:  
   
     `Set-Item WSMan:\localhost\Client\TrustedHosts "<IP address of Nano Server>"`  
   
@@ -524,17 +548,22 @@ Specifying an administrator password or computer name in this unattend file will
   
     `Enter-PSSession -ComputerName $ip -Credential $ip\Administrator`  
   
-    When prompted, provide the Administrator password, then run this command to join the domain:  
+    When prompted, provide the Administrator password. Nslookup is not available on Nano Server, so you can verify name resolution with Resolve-DNSName.
+
+4. If name resolution succeeds, then in the same Windows PowerShell session, run this command to join the domain:  
   
     `djoin /requestodj /loadfile c:\Temp\odjblob /windowspath c:\windows /localos`  
   
-4.  Restart the Nano Server computer, and then exist the Windows PowerShell session:  
+5.  Restart the Nano Server computer, and then exit the Windows PowerShell session:  
   
     `shutdown /r /t 5`  
   
     `Exit-PSSession`  
   
-5.  After you have joined Nano Server to a domain, add the domain user account to the Administrators group on the Nano Server.  
+6.  After you have joined Nano Server to a domain, add the domain user account to the Administrators group on the Nano Server.
+
+7. For security, remove the Nano Server from the trusted hosts list with this command:
+`Set-Item WSMan:\localhost\client\TrustedHosts ""` 
   
 **Alternate method to join a domain in one step**  
   
@@ -590,6 +619,11 @@ To use any remote management tool, you will probably need to know the IP address
   
 ### Using Windows PowerShell remoting  
 To manage Nano Server with Windows PowerShell remoting, you need to add the IP address of the Nano Server to your management computer’s list of trusted hosts, add the account you are using to the Nano Server’s administrators, and enable CredSSP if you plan to use that feature.  
+
+ >[!NOTE]  
+    > If the target Nano Server and your management computer are in the same AD DS forest (or in forests with a trust relationship), you should not add the Nano Server to the trusted hosts list--you can connect to the Nano Server by using its fully qualified domain name, for example:
+    PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
+  
   
 To add the Nano Server to the list of trusted hosts, run this command at an elevated Windows PowerShell prompt:  
   
@@ -639,7 +673,7 @@ You can run programs remotely on the Nano Server with Windows Remote Management 
   
 **winrm quickconfig**  
   
-**winrm set winrm/config/client @{TrustedHosts="\*"}**  
+**winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server"}**  
   
 **chcp 65001**  
   
