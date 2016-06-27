@@ -57,7 +57,7 @@ Generation 1 virtual machines support most guest operating systems. Generation 2
 -   [Ubuntu guest operating system support](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Ubuntu)  
   
 ### <a name="BKMK_Windows"></a>Windows guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for 64-bit versions of Windows as guest operating systems.  
+The following table shows which 64-bit versions of Windows you can use as a guest operating system for generation 1 and generation 2 virtual machines.  
   
 |64-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
@@ -70,7 +70,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 |Windows 8|✔|✔|  
 |Windows 7|✔|✖|  
   
-The following table shows what generation 1 and generation 2 virtual machines support for 32-bit versions of Windows as guest operating systems.  
+The following table shows which 32-bit versions of Windows you can use as a guest operating system for generation 1 and generation 2 virtual machines. 
   
 |32-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
@@ -81,7 +81,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
   
   
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for versions of Red Hat Enterprise Linux (RHEL) and CentOS as guest operating systems.  
+he following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and CentOS you can use as a guest operating system for generation 1 and generation 2 virtual machines.   
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -92,7 +92,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Debian"></a>Debian guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for versions of Debian as guest operating systems.  
+The following table shows which versions of Debian you can use as a guest operating system for generation 1 and generation 2 virtual machines.
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -102,7 +102,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 For more information, see [Debian virtual machines on Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_FreeBSD"></a>FreeBSD guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for versions of FreeBSD as guest operating systems.  
+The following table shows which versions of FreeBSD you can use as a guest operating system for generation 1 and generation 2 virtual machines.  
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -113,14 +113,14 @@ The following table shows what generation 1 and generation 2 virtual machines su
 For more information, see [FreeBSD virtual machines on Hyper-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Oracle"></a>Oracle Linux guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for Red Hat Compatible Kernel Series versions as guest operating systems.  
+The following table shows which versions of Red Hat Compatible Kernel Series you can use as a guest operating system for generation 1 and generation 2 virtual machines.  
   
 |Red Hat Compatible Kernel Series versions|Generation 1|Generation 2|  
 |---------------------------------------------|----------------|----------------|  
 |Oracle Linux 7.x Series|✔|✔|  
 |Oracle Linux 6.6, 6.5, and 6.4|✔|✖|  
   
-The following table shows what generation 1 and generation 2 virtual machines support for Unbreakable Enterprise Kernel versions as guest operating systems.  
+The following table shows which versions of Unbreakable Enterprise Kernel you can use as a guest operating system for generation 1 and generation 2 virtual machines.
   
 |Unbreakable Enterprise Kernel (UEK) versions|Generation 1|Generation 2|  
 |--------------------------------------------------|----------------|----------------|  
@@ -131,7 +131,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 For more information, see [Oracle Linux virtual machines on Hyper-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_SUSE"></a>SUSE guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for versions of SUSE as guest operating systems.  
+he following table shows which versions of SUSE you can use as a guest operating system for generation 1 and generation 2 virtual machines.
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -144,7 +144,7 @@ The following table shows what generation 1 and generation 2 virtual machines su
 For more information, see [SUSE virtual machines on Hyper-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
   
 ### <a name="BKMK_Ubuntu"></a>Ubuntu guest operating system support  
-The following table shows what generation 1 and generation 2 virtual machines support for versions of Ubuntu as guest operating systems.  
+The following table shows which versions of Ubuntu you can use as a guest operating system for generation 1 and generation 2 virtual machines.    
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
@@ -184,16 +184,16 @@ The following table compares the devices available between generation 1 and gene
 |IDE CD-ROM|Virtual SCSI CD-ROM|Support for up to 64 SCSI DVD devices per SCSI controller.|  
 |Legacy BIOS|UEFI firmware|Secure Boot|  
 |Legacy network adapter|Synthetic network adapter|Network boot with IPv4 and IPv6|  
-|Floppy controller and DMA controller|No floppy controller support||  
+|Floppy controller and DMA controller|No floppy controller support|N/A|  
 |Universal asynchronous receiver/transmitter (UART) for COM ports|Optional UART for debugging|Faster and more reliable|  
 |i8042 keyboard controller|Software-based input|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
 |PS/2 keyboard|Software-based keyboard|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
 |PS/2 mouse|Software-based mouse|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
 |S3 video|Software-based video|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|  
-|PCI bus|No longer required||  
-|Programmable interrupt controller (PIC)|No longer required||  
-|Programmable interval timer (PIT)|No longer required||  
-|Super I/O device|No longer required||  
+|PCI bus|No longer required|N/A|  
+|Programmable interrupt controller (PIC)|No longer required|N/A|  
+|Programmable interval timer (PIT)|No longer required|N/A|  
+|Super I/O device|No longer required|N/A|  
  
  ## <a name="BKMK_More"></a> More about generation 2 virtual machines
 The following sections may answer some additional questions you have about generation 2 virtual machines. 
@@ -204,13 +204,13 @@ The following sections may answer some additional questions you have about gener
 
 ###  Using UEFI firmware
  
-- Secure Boot or UEFI firmware isn't required on the physical host. The virtual firmware and its configuration are independent of the physical platform.  
+- Secure Boot or UEFI firmware isn't required on the physical Hyper-V host. Hyper-V provides virtual firmware to virtual machines that is independent of what's on the Hyper-V host.    
 - UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.   
 - We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they are compiled directly from the sources. If these applications are not appropriately digitally signed, you must disable Secure Boot for the virtual machine.
  
  ### Working with VHDX files
  
- - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
+- You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
 - We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.  
 - The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.  
 - A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
