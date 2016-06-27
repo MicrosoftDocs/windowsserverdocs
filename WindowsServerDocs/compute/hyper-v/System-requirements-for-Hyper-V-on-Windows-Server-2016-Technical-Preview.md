@@ -13,8 +13,7 @@ ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
 author: KBDAzure
 ---
 # System requirements for Hyper-V on Windows Server 2016 Technical Preview
-**This is preliminary content and subject to change.**  
-  
+**This is preliminary content and subject to change.** 
 
 Hyper-V has specific hardware requirements, and some Hyper-V features have additional requirements. Use the details in this article to decide what requirements your system must meet so you can use Hyper-V the way you plan to. Then, review the [Windows Server catalog](https://www.windowsservercatalog.com/). Keep in mind that requirements for Hyper-V exceed the general minimum requirements for Windows Server 2016 Technical Preview because a virtualization environment requires more computing resources.  
 
