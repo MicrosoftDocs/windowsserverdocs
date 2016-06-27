@@ -107,7 +107,9 @@ This is caused by a timing issue in Windows Server 2016 Technical Preview where 
 
 ## Running Test-SRTopology fails with errors “Invalid value entered for target computer name” or "Invalid value entered for source computer name"  
 
-When attempting to use `Test-SRTopology`, you receive the following error:  
+When attempting to use `Test-SRTopology`, you receive one of the following errors:  
+
+**ERROR EXAMPLE 1:**
 
     WARNING: Invalid value entered for target computer name: sr-srv03. Test-SrTopology cmdlet does not accept IP address as  
     input for target computer name parameter. NetBIOS names and fully qualified domain names are acceptable inputs  
@@ -122,7 +124,11 @@ When attempting to use `Test-SRTopology`, you receive the following error:
         + CategoryInfo          : InvalidArgument: (:) [Test-SRTopology], Exception  
         + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand  
 
-This cmdlet has limited error handing in Windows Server 2016 Technical Preview and will return the same output for many common issues. The error can appear for the following reasons:  
+**ERROR EXAMPLE 2:**
+
+    WARNING: Invalid value entered for source computer name
+
+This cmdlet has limited error handling in Windows Server 2016 Technical Preview and will return the same output for many common issues. The error can appear for the following reasons:  
 
 * You are logged on to the source computer as a local user, not a domain user.  
 * The destination computer is not running or is not accessible over the network.  
