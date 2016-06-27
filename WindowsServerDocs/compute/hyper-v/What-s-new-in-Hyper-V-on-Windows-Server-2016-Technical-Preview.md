@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ---
-# What&#39;s new in Hyper-V on Windows Server 2016 Technical Preview
+# What's new in Hyper-V on Windows Server 2016 Technical Preview
 **This is preliminary content and subject to change.**  
   
 This article explains the new and changed functionality of Hyper-V on Windows Server 2016 Technical Preview and Microsoft Hyper-V Server Technical Preview. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016 Technical Preview, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  

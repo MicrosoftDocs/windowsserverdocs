@@ -13,6 +13,9 @@ ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 author: KBDAzure
 ---
 # Use live migration without Failover Clustering to move a virtual machine
+
+**This is preliminary content and subject to change.**
+
 This article shows you how to move a virtual machine by doing a live migration without using Failover Clustering. A live migration moves running virtual machines between Hyper-V hosts without any noticeable downtime.   
   
 To be able to do this, you'll need:   
