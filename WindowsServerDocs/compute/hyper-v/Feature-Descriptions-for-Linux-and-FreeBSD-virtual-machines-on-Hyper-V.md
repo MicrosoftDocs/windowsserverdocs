@@ -51,7 +51,7 @@ The following features are described in this section:
 |Static IP Injection|With this feature, you can replicate the static IP address of a virtual machine after it has been failed over to its replica on a different host. Such IP replication ensures that network workloads continue to work seamlessly after a failover event.|  
 |vRSS (Virtual Receive Side Scaling)|Spreads the load from a virtual network adapter across multiple virtual processors in a virtual machine.  For more information, see [Virtual Receive-side Scaling in Windows Server 2012 R2](https://technet.microsoft.com/library/dn383582.aspx).|  
 |TCP Segmentation and Checksum Offloads|Transfers segmentation and checksum work from the guest CPU to the host virtual switch or network adapter during network data transfers.|  
-  
+|Large Receive Offload (LRO)|Increases inbound throughput of high-bandwidth connections by aggregating multiple packets into a larger buffer, decreasing CPU overhead.|
 ## <a name="BKMK_Storage"></a>Storage  
   
 |**Feature**|**Description**|  

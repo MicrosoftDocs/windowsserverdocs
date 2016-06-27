@@ -37,7 +37,7 @@ Before you install Windows Server 2016 Technical Preview or enable Hyper-V, make
   
 8.  On the **Confirm installation selections** page, select **Restart the destination server automatically if required**, and then click **Install**.  
   
-9. When installation is finished, verify the installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed Hyper-V, and viewing the **Roles and Features** tile on the page for the selected server.  
+9. When installation is finished, verify that Hyper-V installed correctly. Open the **All Servers** page in Server Manager and select a server on which you installed Hyper-V. Check the **Roles and Features** tile on the page for the selected server.  
   
 ## <a name="BKMK_PWRSH"></a>Install Hyper-V role by using the Install-WindowsFeature cmdlet  
   

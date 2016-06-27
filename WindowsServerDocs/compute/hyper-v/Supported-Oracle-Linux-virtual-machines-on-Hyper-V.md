@@ -36,7 +36,7 @@ In this section:
 ## <a name="BKMK_rhc"></a>Red Hat Compatible Kernel Series  
 The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS support for Oracle Linux RHCK 6.0-6.3. Oracle Linux 7.x kernels are 64-bit only.  
   
-|**Feature**|**Windows server version**|**6.4-6.7 and 7.0-7.2**|**6.4-6.7 and 7.0-7.1**|**RHCK 7.0-7.2**|**RHCK 6.6**|**RHCK 6.5**|**RHCK6.4**|  
+|**Feature**|**Windows server version**|**6.4-6.7 and 7.0-7.2**|**6.4-6.7 and 7.0-7.1**|**RHCK 7.0-7.2**|**RHCK 6.6, 6.7, 6.8**|**RHCK 6.5**|**RHCK6.4**|  
 |-|-|-|-|-|-|-|-|  
 |**Availability**||[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|[LIS 4.0](http://www.microsoft.com/download/details.aspx?id=46842)|Built in|Built in|Built in|Built in|  
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|√|√|√|√|√|√|  
