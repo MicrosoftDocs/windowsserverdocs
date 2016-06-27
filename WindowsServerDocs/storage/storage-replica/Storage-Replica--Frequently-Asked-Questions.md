@@ -68,7 +68,7 @@ On the Nano server (through a remote PSSession) :
 
        Then copy the results to your management computer or share the path. Because Nano lacks the necessary graphical libraries, you can use Test-SRTopology to process the results and give you a report file with charts. For example:  
 
-        Test-SRTopology -GenerateReport -DataPath sr-srv05c$temp  
+        Test-SRTopology -GenerateReport -DataPath \\sr-srv05\c$\temp  
 
 
 ## <a name="FAQ2"></a> How do I see the progress of replication during initial sync?  
@@ -150,7 +150,7 @@ You can also use seeded data volumes, by ensuring that the destination volume ha
 
 You can use the `Grant-SRDelegation` cmdlet in Windows Server 2016 Technical Preview. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:  
 
-    Grant-SRDelegation -UserName thresholdsradmin  
+    Grant-SRDelegation -UserName threshold\sradmin  
 
 The cmdlet will remind you that the user needs to log off and on of the server they are planning to administer in order for the change to take effect. You can use `Get-SRDelegation` and `Revoke-SRDelegation` to further control this.  
 
