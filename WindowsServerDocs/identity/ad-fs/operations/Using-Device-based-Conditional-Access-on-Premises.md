@@ -19,7 +19,7 @@ This document describes conditional access policies based on devices in a hybrid
   
 AD FS provides the on premises component of conditional access policies in a hybrid scenario.  When you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.  
   
-![ADFS_ITPRO_1media/ADFS_ITPRO4.png)  
+![](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
   
 ### Types of registered devices  
 There are three kinds of registered devices, all of which are represented as Device objects in Azure AD and can be used for conditional access with AD FS on premises as well.  
@@ -156,7 +156,7 @@ a.  read/write access to the specified AD connector account name on the new obje
 6.  object of type msDS-DeviceRegistrationService in the above container  
   
 #### See it work  
-To evaluate the new claims and policies, first register a device.  For example, you can Azure AD Join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps here.  For information on joining Windows 10 mobile devices, see the document here.  For more ways to register Windows and non-Windows devices, see the document here.  
+To evaluate the new claims and policies, first register a device.  For example, you can Azure AD Join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps [here](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/).  For information on joining Windows 10 mobile devices, see the document [here](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory).  
   
 For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You will be able to see new claims including isManaged, isCompliant, and trusttype.  If you enable Microsoft Passport for work, you will also see the prt claim.  
   
