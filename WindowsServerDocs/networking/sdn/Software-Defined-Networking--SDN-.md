@@ -12,6 +12,9 @@ ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
 author: jamesmci
 ---
 # Software Defined Networking (SDN)
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in Windows Server, System Center, and Microsoft Azure.  
   
 > [!NOTE]  

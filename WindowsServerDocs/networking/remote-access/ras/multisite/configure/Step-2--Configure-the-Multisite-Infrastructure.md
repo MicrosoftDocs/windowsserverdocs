@@ -13,7 +13,7 @@ author: coreyp
 ---
 # Step 2: Configure the Multisite Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2012 R2, Windows Server 2012
 
 To configure a multisite deployment, there are a number of steps required to modify network infrastructure settings including: configuring additional Active Directory sites and domain controllers, configuring additional security groups, and configuring Group Policy Objects (GPOs) if you are not using automatically configured GPOs.  
   
@@ -28,7 +28,7 @@ To configure a multisite deployment, there are a number of steps required to mod
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](http://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="BKMK_ConfigAD"></a>2.1. Configure additional Active Directory sites  
-As discussed in [2.1 Plan Active Directory](assetId:///bd7b4f5e-91b5-49ac-81bb-53c0008b7f4f#bkmk_2_1_AD), all entry points can reside in a single Active Directory site. Therefore, at least one Active Directory site is required for the implementation of Remote Access servers in a multisite configuration. Use this procedure if you need to create the first Active Directory site, or if you desire to use additional Active Directory sites for the multisite deployment. Use the Active Directory Sites and Services snap-in to create new sites in your organization’s network.  
+As discussed in [2.1 Plan Active Directory](assetId:///bd7b4f5e-91b5-49ac-81bb-53c0008b7f4f#bkmk_2_1_AD), all entry points can reside in a single Active Directory site. Therefore, at least one Active Directory site is required for the implementation of Remote Access servers in a multisite configuration. Use this procedure if you need to create the first Active Directory site, or if you desire to use additional Active Directory sites for the multisite deployment. Use the Active Directory Sites and Services snap-in to create new sites in your organizationï¿½s network.  
   
 Membership in the **Enterprise Admins** group in the forest or the **Domain Admins** group in the forest root domain, or equivalent, at a minimum is required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](http://go.microsoft.com/fwlink/?LinkId=83477).  
   
@@ -58,21 +58,21 @@ For more information, see [Adding a Site to the Forest](http://technet.microsoft
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-To install the Windows Feature ‘Active Directory module for Windows PowerShell’:  
+To install the Windows Feature ï¿½Active Directory module for Windows PowerShellï¿½:  
   
 ```  
-Install-WindowsFeature –Name RSAT-AD-PowerShell  
+Install-WindowsFeature ï¿½Name RSAT-AD-PowerShell  
 ```  
   
-or add the ‘Active Directory PowerShell Snap-In’ via OptionalFeatures.  
+or add the ï¿½Active Directory PowerShell Snap-Inï¿½ via OptionalFeatures.  
   
-If running the following cmdlets on  Windows 7®  or  Windows Server 2008 R2 , then the Active Directory PowerShell module must be imported:  
+If running the following cmdlets on  Windows 7ï¿½  or  Windows Server 2008 R2 , then the Active Directory PowerShell module must be imported:  
   
 ```  
 Import-Module ActiveDirectory  
 ```  
   
-To configure an Active Directory site named ‘Second-Site’ using the built-in DEFAULTIPSITELINK:  
+To configure an Active Directory site named ï¿½Second-Siteï¿½ using the built-in DEFAULTIPSITELINK:  
   
 ```  
 New-ADReplicationSite -Name "Second-Site"  
@@ -115,16 +115,16 @@ For more information, see [Installing an Additional Domain Controller](http://te
   
     1.  Make the following selections:  
   
-        -   **Domain Name System (DNS) server**—This option is selected by default so that your domain controller can function as a Domain Name System (DNS) server. If you do not want the domain controller to be a DNS server, clear this option.  
+        -   **Domain Name System (DNS) server**ï¿½This option is selected by default so that your domain controller can function as a Domain Name System (DNS) server. If you do not want the domain controller to be a DNS server, clear this option.  
   
             If the DNS server role is not installed on the Primary Domain Controller (PDC) emulator in the forest root domain, then the option to install DNS server on an additional domain controller is not available. As a workaround in this situation, you can install the DNS server role before or after the AD DS installation.  
   
             > [!NOTE]  
             > If you select the option to install DNS server, you might receive a message that indicates that a DNS delegation for the DNS server could not be created and that you should manually create a DNS delegation to the DNS server to ensure reliable name resolution. If you are installing an additional domain controller in either the forest root domain or a tree root domain, you do not have to create the DNS delegation. In this case, click **Yes** and disregard the message.  
   
-        -   **Global Catalog (GC)**—This option is selected by default. It adds the global catalog, read-only directory partitions to the domain controller, and it enables global catalog search functionality.  
+        -   **Global Catalog (GC)**ï¿½This option is selected by default. It adds the global catalog, read-only directory partitions to the domain controller, and it enables global catalog search functionality.  
   
-        -   **Read-only domain controller (RODC)**—This option is not selected by default. It makes the additional domain controller read only; that is, it makes the domain controller an RODC.  
+        -   **Read-only domain controller (RODC)**ï¿½This option is not selected by default. It makes the additional domain controller read only; that is, it makes the domain controller an RODC.  
   
     2.  In **Site name**, select a site from the list.  
   
@@ -169,15 +169,15 @@ A multisite deployment requires an additional security group for  Windows 7  cli
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-To install the Windows Feature ‘Active Directory module for Windows PowerShell’:  
+To install the Windows Feature ï¿½Active Directory module for Windows PowerShellï¿½:  
   
 ```  
-Install-WindowsFeature –Name RSAT-AD-PowerShell  
+Install-WindowsFeature ï¿½Name RSAT-AD-PowerShell  
 ```  
   
-or add the ‘Active Directory PowerShell Snap-In’ via OptionalFeatures.  
+or add the ï¿½Active Directory PowerShell Snap-Inï¿½ via OptionalFeatures.  
   
-If running the following cmdlets on  Windows 7®  or  Windows Server 2008 R2 , then the Active Directory PowerShell module must be imported:  
+If running the following cmdlets on  Windows 7ï¿½  or  Windows Server 2008 R2 , then the Active Directory PowerShell module must be imported:  
   
 ```  
 Import-Module ActiveDirectory  
@@ -202,7 +202,7 @@ A multisite Remote Access deployment requires the following Group Policy Objects
     > [!NOTE]  
     > If you do not have any  Windows 7  client computers, you do not need to create GPOs for  Windows 7  computers.  
   
-When you configure Remote Access, the wizard automatically creates the required Group Policy Objects if they don’t already exist. If you do not have the required permissions to create Group Policy Objects, they must be created prior to configuring Remote Access. The DirectAccess administrator must have full permissions on the GPOs (Edit + modify security + delete).  
+When you configure Remote Access, the wizard automatically creates the required Group Policy Objects if they donï¿½t already exist. If you do not have the required permissions to create Group Policy Objects, they must be created prior to configuring Remote Access. The DirectAccess administrator must have full permissions on the GPOs (Edit + modify security + delete).  
   
 > [!IMPORTANT]  
 > After manually creating the GPOs for Remote Access you must allow sufficient time for Active Directory and DFS replication to the domain controller in the Active Directory site that is associated with the Remote Access server. If Remote Access automatically created the Group Policy Objects, then no wait time is required.  
@@ -239,56 +239,56 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
   
 -   Run the Windows PowerShell cmdlet  `HYPERLINK "http://technet.microsoft.com/en-us/library/hh918412.aspx" Set-DAEntryPointDC` on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
   
-    -   To replace the unreachable domain controller ‘dc1.corp.contoso.com’ with the domain controller ‘dc2.corp.contoso.com’, do the following:  
+    -   To replace the unreachable domain controller ï¿½dc1.corp.contoso.comï¿½ with the domain controller ï¿½dc2.corp.contoso.comï¿½, do the following:  
   
         ```  
-        Set-DAEntryPointDC –ExistingDC 'dc1.corp.contoso.com' –NewDC 'dc2.corp.contoso.com' –ErrorAction Inquire  
+        Set-DAEntryPointDC ï¿½ExistingDC 'dc1.corp.contoso.com' ï¿½NewDC 'dc2.corp.contoso.com' ï¿½ErrorAction Inquire  
         ```  
   
-    -   To replace the unreachable domain controller ‘dc1.corp.contoso.com’ with a domain controller in the closest Active Directory site to the Remote Access server ‘DA1.corp.contoso.com’, do the following:  
+    -   To replace the unreachable domain controller ï¿½dc1.corp.contoso.comï¿½ with a domain controller in the closest Active Directory site to the Remote Access server ï¿½DA1.corp.contoso.comï¿½, do the following:  
   
         ```  
-        Set-DAEntryPointDC –ExistingDC 'dc1.corp.contoso.com' –ComputerName 'DA1.corp.contoso.com' –ErrorAction Inquire  
+        Set-DAEntryPointDC ï¿½ExistingDC 'dc1.corp.contoso.com' ï¿½ComputerName 'DA1.corp.contoso.com' ï¿½ErrorAction Inquire  
         ```  
   
 ### <a name="ChangeTwoDCs"></a>Change two or more domain controllers that manage server GPOs  
 In a minimal number of cases, two or more domain controllers that manage server GPOs are unavailable. If this occurs, more steps are required to change the domain controller association for the server GPOs.  
   
-Domain controller association information is stored both in the registry of the Remote Access servers and in all server GPOs. In the following example, there are two entry points with two Remote Access servers, ‘DA1’ in ‘Entry point 1’ and ‘DA2’ in ‘Entry point 2’. The server GPO of ‘Entry point 1’ is managed in the domain controller ‘DC1’, while the server GPO of ‘Entry point 2’ is managed in the domain controller ‘DC2’. Both ‘DC1’ and ‘DC2’ are unavailable. A third domain controller is still available in the domain, ‘DC3’, and the data from ‘DC1’ and ‘DC2’ was already replicated to ‘DC3’.  
+Domain controller association information is stored both in the registry of the Remote Access servers and in all server GPOs. In the following example, there are two entry points with two Remote Access servers, ï¿½DA1ï¿½ in ï¿½Entry point 1ï¿½ and ï¿½DA2ï¿½ in ï¿½Entry point 2ï¿½. The server GPO of ï¿½Entry point 1ï¿½ is managed in the domain controller ï¿½DC1ï¿½, while the server GPO of ï¿½Entry point 2ï¿½ is managed in the domain controller ï¿½DC2ï¿½. Both ï¿½DC1ï¿½ and ï¿½DC2ï¿½ are unavailable. A third domain controller is still available in the domain, ï¿½DC3ï¿½, and the data from ï¿½DC1ï¿½ and ï¿½DC2ï¿½ was already replicated to ï¿½DC3ï¿½.  
   
 ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc1.png)  
   
 ##### To change two or more domain controllers that manage server GPOs  
   
-1.  To replace the unavailable domain controller ‘DC2’ with the domain controller ‘DC3’, run the following command:  
+1.  To replace the unavailable domain controller ï¿½DC2ï¿½ with the domain controller ï¿½DC3ï¿½, run the following command:  
   
     ```  
-    Set-DAEntryPointDC –ExistingDC 'DC2' –NewDC 'DC3' –ComputerName 'DA2' –ErrorAction Continue  
+    Set-DAEntryPointDC ï¿½ExistingDC 'DC2' ï¿½NewDC 'DC3' ï¿½ComputerName 'DA2' ï¿½ErrorAction Continue  
     ```  
   
-    This command updates the domain controller association for the ‘Entry point 2’ server GPO in the registry of DA2 and in the ‘Entry point 2’ server GPO itself; however, it does not update the ‘Entry point 1’ server GPO because the domain controller that manages it is unavailable.  
+    This command updates the domain controller association for the ï¿½Entry point 2ï¿½ server GPO in the registry of DA2 and in the ï¿½Entry point 2ï¿½ server GPO itself; however, it does not update the ï¿½Entry point 1ï¿½ server GPO because the domain controller that manages it is unavailable.  
   
     > [!TIP]  
-    > This command uses the Continue value for the *ErrorAction* parameter, which updates the ‘Entry point 2’ server GPO despite the failure to update ‘Entry point 1’ server GPO.  
+    > This command uses the Continue value for the *ErrorAction* parameter, which updates the ï¿½Entry point 2ï¿½ server GPO despite the failure to update ï¿½Entry point 1ï¿½ server GPO.  
   
     The resulting configuration is shown in the following diagram.  
   
     ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc2.png)  
   
-2.  To replace the unavailable domain controller ‘DC1’ with the domain controller ‘DC3’, run the following command:  
+2.  To replace the unavailable domain controller ï¿½DC1ï¿½ with the domain controller ï¿½DC3ï¿½, run the following command:  
   
     ```  
-    Set-DAEntryPointDC –ExistingDC 'DC1' –NewDC 'DC3' –ComputerName 'DA2' –ErrorAction Continue  
+    Set-DAEntryPointDC ï¿½ExistingDC 'DC1' ï¿½NewDC 'DC3' ï¿½ComputerName 'DA2' ï¿½ErrorAction Continue  
     ```  
   
-    This command updates the domain controller association for the ‘Entry point 1’ server GPO in the registry of DA1 and in the ‘Entry point 1’ and ‘Entry point 2’ server GPOs. The resulting configuration is shown in the following diagram.  
+    This command updates the domain controller association for the ï¿½Entry point 1ï¿½ server GPO in the registry of DA1 and in the ï¿½Entry point 1ï¿½ and ï¿½Entry point 2ï¿½ server GPOs. The resulting configuration is shown in the following diagram.  
   
     ![](../../../../media/Step-2--Configure-the-Multisite-Infrastructure/DCAssoc3.png)  
   
-3.  To synchronize the domain controller association for the ‘Entry point 2’ server GPO in the ‘Entry point 1’ server GPO, run the command to replace ‘DC2’ with ‘DC3’, and specify the Remote Access server whose server GPO is not synchronized, in this case ‘DA1’, for the *ComputerName* parameter.  
+3.  To synchronize the domain controller association for the ï¿½Entry point 2ï¿½ server GPO in the ï¿½Entry point 1ï¿½ server GPO, run the command to replace ï¿½DC2ï¿½ with ï¿½DC3ï¿½, and specify the Remote Access server whose server GPO is not synchronized, in this case ï¿½DA1ï¿½, for the *ComputerName* parameter.  
   
     ```  
-    Set-DAEntryPointDC –ExistingDC 'DC2' –NewDC 'DC3' –ComputerName 'DA1' –ErrorAction Continue  
+    Set-DAEntryPointDC ï¿½ExistingDC 'DC2' ï¿½NewDC 'DC3' ï¿½ComputerName 'DA1' ï¿½ErrorAction Continue  
     ```  
   
     The final configuration is shown in the following diagram.  
@@ -313,16 +313,16 @@ In these scenarios, run the PowerShell cmdlet `Set-DAEntryPointDC` on the Remote
   
 To optimize the configuration distribution time, do one of the following:  
   
--   To manage the server GPO of entry point ‘Entry point 1’ on a domain controller in the closest Active Directory site to the Remote Access server ‘DA1.corp.contoso.com’, run the following command:  
+-   To manage the server GPO of entry point ï¿½Entry point 1ï¿½ on a domain controller in the closest Active Directory site to the Remote Access server ï¿½DA1.corp.contoso.comï¿½, run the following command:  
   
     ```  
-    Set-DAEntryPointDC –EntryPointName 'Entry point 1' –ComputerName 'DA1.corp.contoso.com' –ErrorAction Inquire  
+    Set-DAEntryPointDC ï¿½EntryPointName 'Entry point 1' ï¿½ComputerName 'DA1.corp.contoso.com' ï¿½ErrorAction Inquire  
     ```  
   
--   To manage the server GPO of entry point ‘Entry point 1’ on the domain controller ‘dc2.corp.contoso.com’, run the following command:  
+-   To manage the server GPO of entry point ï¿½Entry point 1ï¿½ on the domain controller ï¿½dc2.corp.contoso.comï¿½, run the following command:  
   
     ```  
-    Set-DAEntryPointDC –EntryPointName 'Entry point 1' –NewDC 'dc2.corp.contoso.com' –ComputerName 'DA1.corp.contoso.com' –ErrorAction Inquire  
+    Set-DAEntryPointDC ï¿½EntryPointName 'Entry point 1' ï¿½NewDC 'dc2.corp.contoso.com' ï¿½ComputerName 'DA1.corp.contoso.com' ï¿½ErrorAction Inquire  
     ```  
   
     > [!NOTE]  

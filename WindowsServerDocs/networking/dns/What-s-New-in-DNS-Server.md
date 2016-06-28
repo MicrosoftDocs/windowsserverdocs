@@ -12,6 +12,9 @@ ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 author: jamesmci
 ---
 # What&#39;s New in DNS Server in Windows Server Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016 Technical Preview 3.  
   
 ## <a name="BKMK_DNSClient2012R2"></a>What’s new in DNS Server in Windows Server Technical Preview  
