@@ -5,7 +5,7 @@
     {
       "docset_name": "WindowsServerDocs",
       "build_source_folder": "WindowsServerDocs",
-      "build_output_subfolder": "windows-server",
+      "build_output_subfolder": "WindowsServerDocs",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": false,
