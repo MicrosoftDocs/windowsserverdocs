@@ -26,7 +26,9 @@ author: KBDAzure
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
-  
+
+In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
+
 ## Issue  
   
 *The security certificate that Hyper-V Replica has been configured to use to provide certificate-based replication is not installed on the Replica server (or any failover cluster nodes).*  

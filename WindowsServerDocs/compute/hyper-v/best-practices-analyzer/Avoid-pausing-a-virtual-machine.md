@@ -18,7 +18,7 @@ author: KBDAzure
 
 [This information is preliminary and subject to change.]  
   
-*For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: View and Configure Performance, Event, and Service Data_1
+title: View and Configure Performance, Event, and Service Data
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1
 author: coreyp-at-msft
 ---
-# View and Configure Performance, Event, and Service Data_1
+# View and Configure Performance, Event, and Service Data
 
 > Applies To: Windows Server Technical Preview
 
