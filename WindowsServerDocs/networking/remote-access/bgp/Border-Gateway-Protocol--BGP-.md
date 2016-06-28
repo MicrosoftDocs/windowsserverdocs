@@ -12,6 +12,9 @@ ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
 author: jamesmci
 ---
 # Border Gateway Protocol (BGP)
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to gain an understanding of Border Gateway Protocol (BGP), including BGP supported deployment topologies and BGP features and capabilities.  
   
 > [!NOTE]  

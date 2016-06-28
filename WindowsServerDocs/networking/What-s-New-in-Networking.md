@@ -12,6 +12,9 @@ ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18
 author: jamesmci
 ---
 # What&#39;s New in Networking
+
+>Applies To: Windows Server Technical Preview
+
 Following are the new or enhanced networking technologies in Windows Server® 2016 Technical Preview.  
   
 This topic contains the following sections.  

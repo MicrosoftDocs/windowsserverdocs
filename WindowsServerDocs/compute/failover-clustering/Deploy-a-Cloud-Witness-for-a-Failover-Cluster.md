@@ -12,6 +12,9 @@ ms.assetid: 2d3f7741-ca13-42d2-a952-747c90393175
 author: kumudd
 ---
 # Deploy a Cloud Witness for a Failover Cluster
+
+>Applies To: Windows Server Technical Preview
+
 Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016 Technical Preview. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016 Technical Preview.
 *    [Cloud Witness Overview](#BKMK_CloudWitnessOverview)
 *    [Cloud Witness Supported Scenarios](#BKMK_CloudWitnessSupportedScenarios)

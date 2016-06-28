@@ -9,6 +9,9 @@ ms.assetid: bfae23f0-ae12-486b-94fe-50a137e141a5
 author: jamesmci
 ---
 # Create an Alias (CNAME) Record in DNS for WEB1
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to add an Alias canonical name (CNAME) resource record for your Web server to a zone in DNS on your domain controller. With CNAME records, you can use more than one name to point to a single host, making it easy to do such things as host both a File Transfer Protocol (FTP) server and a Web server on the same computer.   
   
 Because of this, you are free to use your Web server to host the certificate revocation list (CRL) for your certification authority (CA) as well as to perform additional services, such as FTP or Web server.  

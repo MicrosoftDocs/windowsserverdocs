@@ -12,6 +12,9 @@ ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
 author: jamesmci
 ---
 # Enable BranchCache on a File Share (Optional)
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to enable BranchCache on a file share.  
   
 > [!IMPORTANT]  

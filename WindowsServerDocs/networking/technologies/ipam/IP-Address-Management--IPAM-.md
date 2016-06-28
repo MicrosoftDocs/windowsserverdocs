@@ -12,6 +12,9 @@ ms.assetid: 6a6291ba-0d39-4434-a8c5-0f0369860faa
 author: jamesmci
 ---
 # IP Address Management (IPAM)
+
+>Applies To: Windows Server Technical Preview
+
 IP Address Management (IPAM) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System (DNS) servers on your network and enables you to manage them from a central interface.  
   
 > [!NOTE]  
