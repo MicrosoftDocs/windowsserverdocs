@@ -14,6 +14,9 @@ ms.assetid: a0c7e030-27e5-4d58-bc11-e2d180a3ffb2
 author: Femila
 ---
 # What&#39;s New in Active Directory Domain Services Installation and Removal
+
+>Applies To: Windows Server Technical Preview
+
 This topic covers:  
   
 -   [The Active Directory Domain Services Configuration Wizard](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_ADConfigurationWizard)  

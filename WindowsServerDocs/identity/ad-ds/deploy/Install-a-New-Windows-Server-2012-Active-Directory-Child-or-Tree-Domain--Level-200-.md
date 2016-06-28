@@ -14,6 +14,9 @@ ms.assetid: 2ba77b0f-0803-4255-8bf7-a78a60ee2c9b
 author: Femila
 ---
 # Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains how to add child and tree domains to an existing Windows Server 2012 forest, using Server Manager or Windows PowerShell.  
   
 -   [Child and Tree Domain Workflow](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md#BKMK_Workflow)  

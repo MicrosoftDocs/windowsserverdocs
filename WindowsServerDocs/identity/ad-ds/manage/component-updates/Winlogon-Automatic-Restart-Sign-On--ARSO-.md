@@ -13,6 +13,9 @@ ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
 ---
 # Winlogon Automatic Restart Sign-On (ARSO)
+
+>Applies To: Windows Server Technical Preview
+
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
 > [!NOTE]

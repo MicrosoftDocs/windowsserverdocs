@@ -14,6 +14,9 @@ ms.assetid: 77f398f3-355d-4bcf-bad6-559382730deb
 author: Femila
 ---
 # Deploy Encryption of Office Files (Demonstration Steps)
+
+>Applies To: Windows Server Technical Preview
+
 Contoso’s Finance Department has a number of file servers that store their documents. These documents can be general documentation or they can have a high-business impact (HBI). For example, any document that contains confidential information is deemed, by Contoso, to have a high-business impact. Contoso wants to ensure that all their documentation has a minimum amount of protection and that their HBI documentation is restricted to the appropriate people. To accomplish this, Contoso is exploring using the File Classification Infrastructure (FCI) and AD RMS that is available in  Windows Server 2012 . By using FCI, Contoso will classify all of the documents on their file server, based on the content, and then use AD RMS to apply the appropriate rights policy.  
   
 In this scenario, you’ll perform the following steps:  

@@ -14,6 +14,9 @@ ms.assetid: 0f3bd00c-1459-449f-b4c4-6b64d144ac21
 author: Femila
 ---
 # Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains the new AD DS replication and topology management cmdlets in more detail, and provides additional examples. For an introduction, see [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md).  
   
 1.  [Introduction](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Intro)  

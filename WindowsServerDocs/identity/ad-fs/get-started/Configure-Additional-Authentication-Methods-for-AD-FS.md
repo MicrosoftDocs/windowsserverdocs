@@ -12,6 +12,9 @@ ms.topic: article
 ms.assetid: 8a9a0ad9-4d2c-46c9-8c51-229f1304764f
 ---
 # Configure Additional Authentication Methods for AD FS
+
+>Applies To: Windows Server Technical Preview
+
 In order to enable multi-factor authentication (MFA), you must select at least one additional authentication method. By default, in Active Directory Federation Services (AD FS) in Windows Server® 2012 R2, you can select Certificate Authentication (in other words, smart card-based authentication) as an additional authentication method.
 
 > [!NOTE]

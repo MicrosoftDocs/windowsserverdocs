@@ -12,6 +12,9 @@ ms.topic: article
 author: billmath
 ---
 # AD FS 2016 Overview
+
+>Applies To: Windows Server Technical Preview
+
 This document contains a list of all of the documentation overviews for AD FS for Windows Server 2016. This includes the following:
   
   

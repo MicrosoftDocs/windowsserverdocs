@@ -13,6 +13,9 @@ ms.topic: article
 ms.assetid: ce8888a3-ba77-47f1-9e8e-a9bcbfd9a37c
 ---
 # Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)
+
+>Applies To: Windows Server Technical Preview
+
 Virtualization of Active Directory Domain Services (AD DS) environments has been ongoing for a number of years. Beginning with Windows Server® 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization-safe capabilities and enabling rapid deployment of virtual domain controllers through cloning. These new virtualization features provide greater support for public and private clouds, hybrid environments where portions of AD DS exist on-premises and in the cloud, and AD DS infrastructures that reside completely on-premises.
 
 **In this document**

@@ -14,6 +14,9 @@ ms.assetid: 6090f7f9-0ca7-4129-b19e-87b98e9cc3cf
 author: Femila
 ---
 # Deploy Security Auditing with Central Audit Policies (Demonstration Steps)
+
+>Applies To: Windows Server Technical Preview
+
 In this scenario, you will audit access to files in the Finance Documents folder by using the Finance Policy that you created in [Deploy a Central Access Policy &#40;Demonstration Steps&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md). If a user who is not authorized to access the folder attempts to access it, the activity is captured in the event viewer.   
  The following steps are required to test this scenario.  
   

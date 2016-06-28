@@ -12,6 +12,9 @@ ms.topic: article
 ms.assetid: 4e298a12-7aff-4135-85c1-48cc86f373f3
 ---
 # Configuring Alternate Login ID
+
+>Applies To: Windows Server Technical Preview
+
 Users can sign in to Active Directory Federation Services (AD FS) enabled applications using any form of user identifier that is accepted by Active Directory Domain Services (AD DS). These include User Principal Names (UPNs) (johndoe@contoso.com) or domain qualified sam-account names (contoso\johndoe or contoso.com\johndoe).
 
 In some environments, due to corporate policy or on-premises line-of-business application dependencies, end users may only be aware of their email address and not their UPN or sam-account name. In some cases, the UPN is also non-routable (jdoe@contoso.local) and is only used for authenticating into applications on the corporate network.

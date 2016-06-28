@@ -13,6 +13,9 @@ ms.assetid: b550ae27-6ff5-4cb9-8ab4-28095de395e3
 ---
 # Walkthrough: Workplace Join to an Android device
 
+>Applies To: Windows Server Technical Preview
+
+
 ## Join your device with Workplace Join
 
 > [!NOTE]

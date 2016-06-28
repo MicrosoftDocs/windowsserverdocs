@@ -14,6 +14,9 @@ ms.assetid: 3ee5c7ea-8e05-458b-948d-3a1d515201b6
 author: Femila
 ---
 # Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
+
+>Applies To: Windows Server Technical Preview
+
 You can set retention periods for folders and put files on legal hold by using File Classification Infrastructure and File Server Resource Manager.  
   
 **In this document**  

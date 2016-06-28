@@ -13,6 +13,8 @@ ms.assetid: d133f97f-4b37-475f-b965-56d97d6c0e16
 author: billmath
 ---
 # What&#39;s new in Active Directory Federation Services for Windows Server 2016 Technical Preview
+
+>Applies To: Windows Server Technical Preview
   
 ## What's new in Active Directory Federation Services for Windows Server 2016 Preview  
 If you are looking for information on earlier versions of AD FS, see the following articles:  
