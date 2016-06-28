@@ -12,6 +12,9 @@ ms.assetid: 87acf6ce-5166-4ab4-b8d7-42b03bab226a
 author: Femila
 ---
 # Replication error 5 Access is denied
+
+>Applies To: Windows Server Technical Preview
+
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
@@ -113,7 +116,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
           <para>Antivirus software that uses a mini-firewall network adapter filter driver on the source or destination DC has been known to cause this issue.</para>
         </listItem>
       </list>
-      <para>Active Directory errors and events like those cited in the symptoms section of this topic can also fail with error 8453 with similar error string "Replication Access was denied." The following root cause reasons can cause AD operations to fail with 8453: "replication access was denied" but do not cause failures with error 5: ‚Äúreplication is denied":</para>
+      <para>Active Directory errors and events like those cited in the symptoms section of this topic can also fail with error 8453 with similar error string "Replication Access was denied." The following root cause reasons can cause AD operations to fail with 8453: "replication access was denied" but do not cause failures with error 5: ìreplication is denied":</para>
       <list class="ordered">
         <listItem>
           <para>NC head not granted the "replicating directory changes" permission.</para>
@@ -136,7 +139,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
     <content>
       <para>There are multiple root causes for Active Directory Replication failing with error 5. Attack the problem initially by using tools like DCDIAG, DCDIAG /TEST:CheckSecurityError and NETDIAG to expose common problems. </para>
       <para>Run DCDIAG, DCDIAG /TEST:CheckSecurityError and NETDIAG</para>
-      <para>The generic DCDIAG runs multiple tests. <embeddedLabel>DCDIAG /TEST:CheckSecurityErrors</embeddedLabel> was written to perform specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: ‚Äùaccess is denied‚Äù and error 8453: ‚Äúreplication access was denied" but is NOT run as part of the default execution of DCDIAG.</para>
+      <para>The generic DCDIAG runs multiple tests. <embeddedLabel>DCDIAG /TEST:CheckSecurityErrors</embeddedLabel> was written to perform specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: îaccess is deniedî and error 8453: ìreplication access was denied" but is NOT run as part of the default execution of DCDIAG.</para>
       <list class="ordered">
         <listItem>
           <para>Run DCDIAG on the destination DC.</para>
@@ -518,15 +521,15 @@ Ignoring DC CONTOSO-DC1 in the convergence test of object CN=CONTOSO-DC3,OU=Doma
 Testing server: &lt;site name&gt;&lt;dc name&gt;
 Test omitted by user request: Advertising
 Starting test: CheckSecurityError
-* Dr Auth: Beginning security errors check‚Äô
+* Dr Auth: Beginning security errors checkí
 Found KDC &lt;KDC DC&gt; for domain &lt;DNS Name of AD domain&gt; in site &lt;site name&gt;
 Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;NetBIOS domain name&gt;
-* Missing SPN :LDAP/bba727ef‚Äîbe4e‚Äî477d‚Äî9796‚Äî63b6cee3bSf.&lt;forest root domain DN&gt;
-* SPN found :E3514235‚Äî4B06‚ÄîI1D1‚ÄîAB√ò4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
+* Missing SPN :LDAP/bba727efóbe4eó477dó9796ó63b6cee3bSf.&lt;forest root domain DN&gt;
+* SPN found :E3514235ó4B06óI1D1óABÿ4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
 * Missing SPN :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;
@@ -538,15 +541,15 @@ Unable to verify the machine account (&lt;DN path for Dc machine account&gt;) fo
       <code>Testing server: &lt;site name&gt;&lt;dc name&gt;
 Test omitted by user request: Advertising
 Starting test: CheckSecurityError
-* Dr Auth: Beginning security errors check‚Äô
+* Dr Auth: Beginning security errors checkí
 Found KDC &lt;KDC DC&gt; for domain &lt;DNS Name of AD domain&gt; in site &lt;site name&gt;
 Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;NetBIOS domain name&gt;
-* Missing SPN :LDAP/bba727ef‚Äîbe4e‚Äî477d‚Äî9796‚Äî63b6cee3bSf.&lt;forest root domain DN&gt;
-* SPN found :E3514235‚Äî4B06‚ÄîI1D1‚ÄîAB√ò4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
+* Missing SPN :LDAP/bba727efóbe4eó477dó9796ó63b6cee3bSf.&lt;forest root domain DN&gt;
+* SPN found :E3514235ó4B06óI1D1óABÿ4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
 * Missing SPN :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;
@@ -567,4 +570,5 @@ Unable to verify the machine account (&lt;DN path for Dc machine account&gt;) fo
     </externalLink>
 <externalLink><linkText>repsFrom, RepsFrom</linkText><linkUri>http://msdn.microsoft.com/library/cc228409(PROT.13).aspx</linkUri></externalLink></relatedTopics>
 </developerConceptualDocument>
+
 

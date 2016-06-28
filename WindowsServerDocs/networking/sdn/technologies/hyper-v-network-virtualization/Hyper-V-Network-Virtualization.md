@@ -12,6 +12,9 @@ ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 author: vhorne
 ---
 # Hyper-V Network Virtualization
+
+>Applies To: Windows Server Technical Preview
+
 Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.  
   
 For more information, see the following topics:  
@@ -24,4 +27,5 @@ For more information, see the following topics:
 |-|-|  
 |![](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure virtualization solutions](http://aka.ms/f9bh7g).<br /><br />Create a hybrid virtualization solution in Microsoft Azure:<br />- [Connect an On-premises Network to Azure via Site to Site VPN and Extend Active Directory onto an IaaS VM DC in Azure](http://aka.ms/d1dinb)|  
   
+
 

@@ -9,6 +9,9 @@ ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
 author: jamesmci
 ---
 # Configure Server Certificate Autoenrollment
+
+>Applies To: Windows Server Technical Preview
+
   
 > [!NOTE]  
 > Before you perform this procedure, you must configure a server certificate template by using the Certificate Templates Microsoft Management Console snap-in on a CA that is running AD CS.  
@@ -17,7 +20,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
   
 ### To configure server certificate autoenrollment  
   
-1.  On the computer where AD DS is installed, open Windows PowerShellÂ®, type **mmc**, and then press ENTER. The Microsoft Management Console opens.  
+1.  On the computer where AD DS is installed, open Windows PowerShell®, type **mmc**, and then press ENTER. The Microsoft Management Console opens.  
   
 2.  On the **File** menu, click **Add/Remove Snap-in**. The **Add or Remove Snap-ins** dialog box opens.  
   
@@ -44,4 +47,5 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
   
 9. Click **OK**.  
   
+
 

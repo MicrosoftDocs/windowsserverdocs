@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Deploy a Remote Desktop Session Host farm to improve availability
+
+>Applies To: Windows Server Technical Preview
+
 If you want to improve the availability and scale of your desktop hosting solution, you can deploy a Remote Desktop Session Host (RDSH) farm based on the [Microsoft Azure Desktop Hosting Reference Architecture Guide](Desktop-Hosting-Reference-Architecture.md).   
   
 The scope of this scenario is limited to adding a second RDSH virtual machine to a collection in a desktop hosting deployment. For higher scale, you can add additional RDSH virtual machines by repeating the steps in this document for the same collection and other collections.   
@@ -28,4 +31,5 @@ Use the following steps to set up your deployment:
 3. [Prepare that virtual machine for Remote Desktop.](Prepare-the-RDSH-virtual-machine.md)  
 4. [Add the RDSH server to the collection farm](Add-the-RDSH-server-to-the-collection-farm.md).  
 5. [Validate and secure the deployment](Validate-and-secure-your-remote-desktop-deployment.md).  
+
 

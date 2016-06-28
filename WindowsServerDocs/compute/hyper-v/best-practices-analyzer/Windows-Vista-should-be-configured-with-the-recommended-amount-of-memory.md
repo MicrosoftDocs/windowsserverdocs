@@ -13,6 +13,9 @@ ms.assetid: 64f4e53b-4adb-4e1d-bc48-c24f5f9d222f
 author: KBDAzure
 ---
 # Windows Vista should be configured with the recommended amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -67,4 +70,5 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

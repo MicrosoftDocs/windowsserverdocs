@@ -14,6 +14,9 @@ ms.assetid: 49d9fc2a-4c0a-481f-8a4b-edc0b5b650a8
 author: Femila
 ---
 # Scenario: File Access Auditing
+
+>Applies To: Windows Server Technical Preview
+
 Security Auditing is one of the most powerful tools to help maintain the security of an enterprise. One of the key goals of security audits is regulatory compliance. Industry standards such as Sarbanes Oxley, Health Insurance Portability and Accountability Act (HIPAA), and Payment Card Industry (PCI) require enterprises to follow a strict set of rules related to data security and privacy. Security audits help establish the presence of such policies and prove compliance with these standards. Additionally, security audits help detect anomalous behavior, identify and mitigate gaps in security policies, and deter irresponsible behavior by creating a trail of user activity that can be used for forensic analysis.  
   
 Audit policy requirements are typically driven at the following levels:  
@@ -38,7 +41,7 @@ With  Windows Server 2012 , you can author audit policies by using claims and re
   
 These policies help regulate the volume of audit events and limit them to only the most relevant data or users.  
   
-After administrators have created and applied the audit policies, the next consideration for them is gleaning meaningful information from the audit events that they collected. Expression-based audit events help reduce the volume of audits. However, users need a way to query these events for meaningful information and ask questions such as, ‚ÄúWho is accessing my HBI data?‚Äù or ‚ÄúWas there an unauthorized attempt to access sensitive data?‚Äù  
+After administrators have created and applied the audit policies, the next consideration for them is gleaning meaningful information from the audit events that they collected. Expression-based audit events help reduce the volume of audits. However, users need a way to query these events for meaningful information and ask questions such as, ìWho is accessing my HBI data?î or ìWas there an unauthorized attempt to access sensitive data?î  
   
  Windows Server 2012  enhances existing data access events with user, computer, and resource claims. These events are generated on a per-server basis. To provide a full view of events across the organization, Microsoft is working with partners to provide event collection and analysis tools, such as the Audit Collection Services in System Center Operation Manager .  
   
@@ -73,4 +76,5 @@ The following table lists the roles and features that are part of this scenario 
 |Active Directory Doman Services role|AD DS in  Windows Server 2012  introduces a claims-based authorization platform that enables creating user claims and device claims, compound identity, (user plus device claims), new central access policies (CAP) model, and the use of file classification information in authorization decisions.|  
 |File and Storage Services role|File servers in  Windows Server 2012  provide a user interface where administrators can view the effective permissions for users for a file or folder and troubleshoot access issues and grant access as required.|  
   
+
 

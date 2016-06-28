@@ -12,6 +12,9 @@ ms.assetid: b1edd538-2fc4-4a24-bd28-440d02922585
 author: Femila
 ---
 # Fixing Replication Security Problems
+
+>Applies To: Windows Server Technical Preview
+
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
@@ -112,8 +115,9 @@ author: Femila
         </tr>
       </tbody>
     </table>
-    <para>Use the procedures in <link xlink:href="282cee9f-abef-43c9-9f33-b2c416cf8c38">An ‚ÄúAccess denied‚Äù or other security error has caused replication problems</link> to diagnose and fix replication security problems.</para>
+    <para>Use the procedures in <link xlink:href="282cee9f-abef-43c9-9f33-b2c416cf8c38">An ìAccess deniedî or other security error has caused replication problems</link> to diagnose and fix replication security problems.</para>
   </introduction>
   <relatedTopics />
 </developerConceptualDocument>
+
 

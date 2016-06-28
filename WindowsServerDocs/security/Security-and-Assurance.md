@@ -12,6 +12,9 @@ ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ---
 # Security and Assurance
+
+>Applies To: Windows Server Technical Preview
+
 This collection contains detailed information about security solutions and features for the IT professional to deploy in your datacenter and cloud environment. The following are security technologies and documentation for Windows Server 2016 Technical Preview.  
   
 ## Overview of Security in Windows Server 2016  
@@ -21,7 +24,7 @@ Link  |Description
 --------------|---------  
 [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)|This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team.  
 [Windows Server Security YouTube channel](https://www.youtube.com/playlist?list=PL8nfc9haGeb5IZGM8HvmRozetHRpBDKSw)|You can find important technical videos about Windows Security on this channel.  
-[Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)  | In this 6-minute video, Anders Vinberg provides an overview of Microsoftâ€™s security and assurance strategy. Vinberg discusses industry trends and landscape shifts as they relate to security, and then focuses on Microsoftâ€™s key initiatives to protect workloads from the underlying fabric, protect against direct attacks from privileged accounts, and, should intrusions happen, he explains how new detection and forensic capabilities can help better identify the threat.          
+[Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)  | In this 6-minute video, Anders Vinberg provides an overview of Microsoft’s security and assurance strategy. Vinberg discusses industry trends and landscape shifts as they relate to security, and then focuses on Microsoft’s key initiatives to protect workloads from the underlying fabric, protect against direct attacks from privileged accounts, and, should intrusions happen, he explains how new detection and forensic capabilities can help better identify the threat.          
 [Protecting Your Datacenter and Cloud from Emerging Threats blog post](http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx) |This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.           
 [Platform Vision & Strategy (5 of 7): Security and Assurance Overview (Ignite Video)](http://channel9.msdn.com/Events/Ignite/2015/BRK2482)   |This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.  
 [Windows Server 2016 Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)|This blog post from the Windows Server security team highlights many of the improvements in Windows Servers 2016 that increase security for hosting and hybrid cloud envrionments.    
@@ -47,7 +50,7 @@ Link  |Description
 ---------|---------  
 [Securing Privileged Access](Securing-Privileged-Access\Securing-Privileged-Access.md) |This set of articles in the TechNet Library explains concepts and processes for securing privileged access.  
 [Just in Time Administration with Microsoft Identity Manager](https://technet.microsoft.com/library/mt150258.aspx)  |This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.           
-[Protecting Windows and Microsoft Azure Active Directory with<br />Privileged Access Management](http://channel9.msdn.com/Events/Ignite/2015/BRK3873) |This Ignite presentation covers Microsoftâ€™s strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication and managing access using Just in Time and Just Enough Administration.  
+[Protecting Windows and Microsoft Azure Active Directory with<br />Privileged Access Management](http://channel9.msdn.com/Events/Ignite/2015/BRK3873) |This Ignite presentation covers Microsoft’s strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication and managing access using Just in Time and Just Enough Administration.  
 [Just Enough Administration Article](http://aka.ms/JEA)  | This document shares the vision and technical details of Just Enough Administration (JEA), a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks        
 [JEA: A PowerShell Toolkit to Secure a Post-Snowden World](http://channel9.msdn.com/Events/Ignite/2015/BRK2470) |    This Ignite presentation discusses how you can use the Just Enough Administration PowerShell Toolkit to control administrator access and reduce breach expansion       
          
@@ -74,5 +77,6 @@ Link  |Description
 [What's New in DNS in Windows Server 2016](../networking/dns/What-s-New-in-DNS-Server.md)  |This overview topic provides brief descriptions of new capabilities in DNS along with links for more information.   
   
   
+
 
 

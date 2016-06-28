@@ -12,6 +12,9 @@ ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 author: coreyp
 ---
 # Step 3: Plan OTP Certificate Deployment
+
+>Applies To: Windows Server Technical Preview
+
 After planning the RADIUS server, you must plan for certification authority (CA) requirements, including the CA that will issue one-time password (OTP) certificates, the OTP certificate template, and the registration authority certificate used by the Remote Access server to sign all DirectAccess client OTP certificate requests. These certificates are used as follows:  
   
 1.  The DirectAccess client requests an OTP certificate, and the Remote Access server receives the request.  
@@ -66,4 +69,5 @@ When DirectAccess clients request an OTP certificate, the Remote Access server r
   
 -   [Step 4: Plan OTP for the Remote Access server](assetId:///0beff91b-3815-4438-9b0e-420704cc5510)  
   
+
 

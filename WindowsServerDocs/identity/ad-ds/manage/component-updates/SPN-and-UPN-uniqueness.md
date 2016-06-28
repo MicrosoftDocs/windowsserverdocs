@@ -14,6 +14,9 @@ ms.assetid: 257cefbc-a2f5-461a-b19f-080b0ff6b5f0
 author: Femila
 ---
 # SPN and UPN uniqueness
+
+>Applies To: Windows Server Technical Preview
+
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
 > [!NOTE]  
@@ -268,7 +271,7 @@ servicePrincipalName Value=<SPN>
   
     -   ***UPN case***  
   
-        -   Submit LDAP query against closest GC  query GC’s forest-wide UPN index for supplied UPN (*userPrincipalName; a global index*)  
+        -   Submit LDAP query against closest GC ? query GC�s forest-wide UPN index for supplied UPN (*userPrincipalName; a global index*)  
   
             -   If entries returned == 0 ->           write proceeds  
   
@@ -284,7 +287,7 @@ servicePrincipalName Value=<SPN>
   
     -   ***SPN case***  
   
-        -   Submit LDAP query against closest GC  query GC’s forest-wide SPN index for supplied SPN (*servicePrincipalName; a global index*)  
+        -   Submit LDAP query against closest GC ? query GC�s forest-wide SPN index for supplied SPN (*servicePrincipalName; a global index*)  
   
             -   If entries returned == 0 -> write proceeds  
   
@@ -358,4 +361,5 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
   
 6.  Imagine you have just been presented with the error you see in the previous step.  (and don't have a history of the steps you just performed)Your goal is to complete the restore of the account.  See the workbook for example steps.  
   
+
 

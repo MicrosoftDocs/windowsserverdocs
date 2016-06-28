@@ -13,6 +13,9 @@ ms.assetid: cea7eeaa-c1a7-4f87-89be-d4e1208c546f
 author: KBDAzure
 ---
 # Test failover should be attempted after initial replication is complete
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *Use Hyper-V Manager to conduct a test failover.*  
   
+
 

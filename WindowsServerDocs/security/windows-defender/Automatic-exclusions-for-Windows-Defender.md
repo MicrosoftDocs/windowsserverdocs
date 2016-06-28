@@ -13,9 +13,12 @@ manager: dongill
 author: coreyp-at-msft
 ---
 # Automatic exclusions for Windows Defender
-This topic introduces automatic exclusions for Windows Defender on Windows ServerÂ® 2016 Technical Preview.
 
-Are you looking for information about Windows Defender on WindowsÂ® 8 or WindowsÂ® 8.1? If so, see the information [Using Windows Defender](http://windows.microsoft.com/windows/using-defender).
+>Applies To: Windows Server Technical Preview
+
+This topic introduces automatic exclusions for Windows Defender on Windows Server® 2016 Technical Preview.
+
+Are you looking for information about Windows Defender on Windows® 8 or Windows® 8.1? If so, see the information [Using Windows Defender](http://windows.microsoft.com/windows/using-defender).
 
 ## About Windows Defender automatic exclusions
 Windows Server 2016 Technical Preview includes Windows Defender. To help ensure security and performance, certain exclusions are needed based on the roles and features you install.
@@ -34,7 +37,7 @@ In Windows Server 2016 Technical Preview the predefined exclusions delivered by 
 
 To opt out of automatic exclusions, start a Windows PowerShell console as an administrator, and run the following command:
 
-`Set-MpPreference â€“DisableAutoExclusions $true`
+`Set-MpPreference –DisableAutoExclusions $true`
 
 ## Automatic exclusions
 The following sections contain the exclusions that are delivered with automatic exclusions file paths and file types.
@@ -207,7 +210,7 @@ This section lists the default exclusions for all Windows Server 2016 Technical 
     -   *%systemroot%*\Sysvol\Domain\Oscfilter.ini
 
 ### Active Directory exclusions
-This section lists the exclusions that are delivered automatically when you install Active DirectoryÂ® Domain Services.
+This section lists the exclusions that are delivered automatically when you install Active Directory® Domain Services.
 
 -   NTDS database files. The database files are specified in the registry key `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\DSA Database File`.
 
@@ -335,5 +338,6 @@ This section lists the folder exclusions that are delivered automatically when y
 [Windows Defender Overview for Windows Server Technical Preview](Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md)
 [Windows Defender Events](Windows-Defender-Events.md)
 [Windows Defender Cmdlets](http://technet.microsoft.com/library/dn433280.aspx)
+
 
 

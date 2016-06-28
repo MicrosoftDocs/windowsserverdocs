@@ -12,6 +12,9 @@ ms.assetid: 3e6a25db-b784-4b16-bfe8-d96585de9c20
 author: Femila
 ---
 # Selecting the Forest Root Domain
+
+>Applies To: Windows Server Technical Preview
+
 The first domain that you deploy in an Active Directory forest is called the forest root domain. This domain remains the forest root domain for the life cycle of the AD DS deployment.  
   
 The forest root domain contains the Enterprise Admins and Schema Admins groups. These service administrator groups are used to manage forest-level operations such as the addition and removal of domains and the implementation of changes to the schema.  
@@ -78,4 +81,5 @@ It is important for the Active Directory DNS owner to work with the DNS owner fo
 ## Documenting the forest root domain name  
 Document the DNS prefix and suffix that you select for the forest root domain. At this point, identify what domain will be the forest root. You can add the forest root domain name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains and your domain names. To open it, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Domain Planning" (DSSLOGI_5.doc).  
   
+
 

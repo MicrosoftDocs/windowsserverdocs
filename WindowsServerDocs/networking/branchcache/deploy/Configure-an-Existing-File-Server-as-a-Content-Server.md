@@ -12,6 +12,9 @@ ms.assetid: bdac7d2a-25b4-4f61-bed1-b290700c18f3
 author: jamesmci
 ---
 # Configure an Existing File Server as a Content Server
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to install the **BranchCache for Network Files** role service of the File Services server role on a computer running Windows Server 2016 Technical Preview.  
   
 > [!IMPORTANT]  
@@ -49,4 +52,5 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
   
 7.  In **Confirm installation selections**, review your selections, and then click **Install**. The **Installation progress** pane is displayed during installation. When installation is complete, click **Close**.  
   
+
 

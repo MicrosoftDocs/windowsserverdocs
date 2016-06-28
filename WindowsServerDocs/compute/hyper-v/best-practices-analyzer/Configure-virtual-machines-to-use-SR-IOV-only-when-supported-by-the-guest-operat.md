@@ -13,6 +13,9 @@ ms.assetid: 33cf5b68-e43e-47ef-adbc-6b266c1d4dce
 author: KBDAzure
 ---
 # Configure virtual machines to use SR-IOV only when supported by the guest operating system
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -39,4 +42,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 SR-IOV is supported only in some 64-bit Windows guests. For details, see [Hyper-V feature compatibility by generation and guest](../Hyper-V-feature-compatibility-by-generation-and-guest.md).  
   
+
 

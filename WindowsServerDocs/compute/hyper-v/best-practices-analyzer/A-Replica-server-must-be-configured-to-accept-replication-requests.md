@@ -13,6 +13,9 @@ ms.assetid: 9f5ddb52-bfb2-4d57-90e5-3e1bf595941c
 author: KBDAzure
 ---
 # A Replica server must be configured to accept replication requests
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -77,4 +80,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMStorage DEFAULT  
 ```  
   
+
 

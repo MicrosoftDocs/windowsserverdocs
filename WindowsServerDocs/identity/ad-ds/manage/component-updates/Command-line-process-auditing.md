@@ -14,6 +14,9 @@ ms.assetid: cdd4b7f8-03a8-47c1-8457-ef8348acadb3
 author: Femila
 ---
 # Command line process auditing
+
+>Applies To: Windows Server Technical Preview
+
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
 > [!NOTE]  
@@ -117,4 +120,5 @@ The following procedure shows how to prevent conflicts by blocking the applicati
   
 4.  Execute the same script as before and observe the events  
   
+
 

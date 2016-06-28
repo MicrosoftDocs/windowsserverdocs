@@ -12,6 +12,9 @@ ms.assetid: bf5da04d-c247-40cc-a77d-95a41343a7a8
 author: Femila
 ---
 # Mapping Your Requirements to an AD DS Deployment Strategy
+
+>Applies To: Windows Server Technical Preview
+
 After you finish reviewing and identifying the Active Directory Domain Services (AD DS) design and deployment requirements and you determine which of them are related to your specific deployment, you can map those requirements to a specific AD DS deployment strategy.  
   
 Use the following table to determine which AD DS deployment strategy maps to the appropriate combination of AD DS design and deployment requirements for your organization. ("Yes" means that a specific requirement is necessary for your deployment strategy; "No" means that a specific requirement is not necessary for your deployment strategy.)  
@@ -38,4 +41,5 @@ However, you can create a hybrid or custom AD DS deployment strategy by using an
 |[Restructuring AD DS Domains Between Forests](http://go.microsoft.com/fwlink/?LinkId=93678)|Yes, if you want to migrate a pilot domain into your production environment, merge with another organization and consolidate the two information technology (IT) infrastructures, or consolidate resource and account domains that you upgraded in place from Windows 2000 or Windows Server 2003 environments.|Yes, if you want to merge with another organization and consolidate the two IT infrastructures or consolidate resource and account domains that you upgraded in place from Windows 2000 or Windows Server 2003 environments.|Yes, if you want to merge with another organization and consolidate the two IT infrastructures or consolidate resource and account domains that you upgraded in place from Windows 2000 or Windows Server 2003 environments.|  
 |[Restructuring AD DS Domains Within Forests](http://go.microsoft.com/fwlink/?LinkId=82740))|No|Yes, if you need to reduce the number of domains, reduce replication traffic and the amount of required user and group administration, or simplify the administration of Group Policy.|Yes, if you need to reduce the number of domains, reduce replication traffic and the amount of required user and group administration, or simplify the administration of Group Policy.|  
   
+
 

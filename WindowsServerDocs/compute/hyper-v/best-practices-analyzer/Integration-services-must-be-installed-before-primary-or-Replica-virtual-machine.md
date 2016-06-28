@@ -13,6 +13,9 @@ ms.assetid: a7fdd185-d6c8-4f58-9b58-2df5827bb056
 author: KBDAzure
 ---
 # Integration services must be installed before primary or Replica virtual machines can use an alternate IP address after a failover
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -38,4 +41,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *Use Virtual Machine Connection to install integration services in the virtual machine.*  
   
 As of Windows Server 2016 Technical Preview, integration services for Windows virtual machines are delivered through Windows Update. Ensure these virtual machines are configured to receive Windows updates to get the latest version of integration services. The Linux kernel now includes Linux integration services (LIS) and is updated for new releases, but Linux distributions based on older kernels may not have the latest enhancements or fixes. For details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
+
 

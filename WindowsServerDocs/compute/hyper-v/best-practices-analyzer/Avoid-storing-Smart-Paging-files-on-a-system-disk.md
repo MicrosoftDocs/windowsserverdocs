@@ -13,6 +13,9 @@ ms.assetid: 9b57c9b8-76c5-43c7-bfa6-2c95b3cb6510
 author: KBDAzure
 ---
 # Avoid storing Smart Paging files on a system disk
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates text that appears in the Best Pract
 ## Resolution  
 *Reconfigure the virtual machines to store the Smart Paging files on a non-system disk.*  
   
+
 

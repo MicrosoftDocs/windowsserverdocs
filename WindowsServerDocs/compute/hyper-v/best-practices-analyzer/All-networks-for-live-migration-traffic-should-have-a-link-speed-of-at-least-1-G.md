@@ -13,6 +13,9 @@ ms.assetid: 89411b63-bec8-463d-b486-107548ed440e
 author: KBDAzure
 ---
 # All networks for live migration traffic should have a link speed of at least 1 Gbps
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 |||  
@@ -35,4 +38,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 See the documentation from your network hardware vendor to find out if any of your existing network adapters can support a link speed of at least 1 Gbps.  
   
+
 

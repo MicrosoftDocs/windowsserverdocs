@@ -14,6 +14,9 @@ ms.assetid: 32e3f2f3-7b65-49ca-b092-e9a6650deb15
 author: Femila
 ---
 # Active Directory Domain Services Component Updates
+
+>Applies To: Windows Server Technical Preview
+
 This module introduces the components that received minor updates in the Directory Services and Identity spaces.  
   
 |About the Author|  
@@ -55,4 +58,5 @@ After completing this module, you will be able to:
   
         -   [Active Directory Replication throughput improvement](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
   
+
 

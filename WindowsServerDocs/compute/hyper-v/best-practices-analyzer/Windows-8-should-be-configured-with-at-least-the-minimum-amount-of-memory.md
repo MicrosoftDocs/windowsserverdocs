@@ -13,6 +13,9 @@ ms.assetid: 519d1091-fa4d-44d7-83ca-83f6aa71fb7d
 author: KBDAzure
 ---
 # Windows 8 should be configured with at least the minimum amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -64,4 +67,5 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 817a2b30-2ca7-48a5-82a1-401fe3a95878
 author: Femila
 ---
 # Appendix A: DNS Inventory
+
+>Applies To: Windows Server Technical Preview
+
 You can use the following tables to assist you in documenting the recursive name resolution method of your current Domain Name System (DNS) structure as part of the logical structure design for  Windows Server 2008  Active Directory Domain Services (AD DS).  
   
 ## Root hints  
@@ -26,4 +29,5 @@ You can use the following tables to assist you in documenting the recursive name
 |--------|----------------|----------------|---------------------|  
 |||||  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 1b511e1a-686d-441f-a1c7-d4d029e1a061
 author: jamesmci
 ---
 # Use Windows PowerShell to Configure Non-Domain Member Client Computers
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to manually configure a BranchCache client computer for distributed cache mode or hosted cache mode.  
   
 > [!NOTE]  
@@ -32,8 +35,9 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
         `Enable-BCHostedClient`  
   
         > [!TIP]  
-        > If you want to specify the available hosted cache servers, use the `â€“ServerNames` parameter with a comma separated list of your hosted cache servers as the parameter value. For example, if you have two hosted cache servers named HCS1 and HCS2, configure the client computer for hosted cache mode with the following command.  
+        > If you want to specify the available hosted cache servers, use the `–ServerNames` parameter with a comma separated list of your hosted cache servers as the parameter value. For example, if you have two hosted cache servers named HCS1 and HCS2, configure the client computer for hosted cache mode with the following command.  
         >   
-        > `Enable-BCHostedClient â€“ServerNames HCS1,HCS2`  
+        > `Enable-BCHostedClient –ServerNames HCS1,HCS2`  
   
+
 

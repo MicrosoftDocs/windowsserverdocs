@@ -12,6 +12,9 @@ ms.assetid: d8e0b934-be71-4929-b377-d3330c6811e9
 author: Femila
 ---
 # Event ID 1388 or 1988: A lingering object is detected
+
+>Applies To: Windows Server Technical Preview
+
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
@@ -562,7 +565,7 @@ objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=&lt;ForestRootDomain&
             <content>
               <para>At the command prompt, type the following command, and then press ENTER: </para>
               <para>
-                <codeInline>ldifde -i â€“f &lt;Path&gt;&lt;FileName&gt;</codeInline>
+                <codeInline>ldifde -i –f &lt;Path&gt;&lt;FileName&gt;</codeInline>
               </para>
               <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
                 <thead>
@@ -611,4 +614,5 @@ objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=&lt;ForestRootDomain&
   </section>
   <relatedTopics />
 </developerConceptualDocument>
+
 

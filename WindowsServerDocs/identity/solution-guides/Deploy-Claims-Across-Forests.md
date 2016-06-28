@@ -14,7 +14,10 @@ ms.assetid: 1d57984a-5b84-4159-8767-a95445ffd9ef
 author: Femila
 ---
 # Deploy Claims Across Forests
-In  Windows Server 2012 , a claim type is an assertion about the object with which itâ€™s associated. Claim types are defined per forest in Active Directory. There are many scenarios where a security principal may need to traverse a trust boundary to access resources in a trusted forest. Cross-forest claims transformation in  Windows Server 2012  enables you to transform egress and ingress claims that traverse forests so that the claims are recognized and accepted in the trusting and trusted forests. Some of the real-world scenarios for transformation of claims are:  
+
+>Applies To: Windows Server Technical Preview
+
+In  Windows Server 2012 , a claim type is an assertion about the object with which it’s associated. Claim types are defined per forest in Active Directory. There are many scenarios where a security principal may need to traverse a trust boundary to access resources in a trusted forest. Cross-forest claims transformation in  Windows Server 2012  enables you to transform egress and ingress claims that traverse forests so that the claims are recognized and accepted in the trusting and trusted forests. Some of the real-world scenarios for transformation of claims are:  
   
 -   Trusting forests can use claim transformation as a guard against elevation of privilege by filtering the incoming claims with specific values.  
   
@@ -51,4 +54,5 @@ The following table lists the roles and features that are part of this scenario 
 |Active Directory Domain Services|In this scenario, you are required to set up two Active Directory forests with a two-way trust. You have claims in both forests. You also set central access policies on the trusting forest where the resources reside.|  
 |File and Storage Services role|In this scenario, the data classification is applied to the resources on the file servers. The central access policy is applied to the folder where you want to grant user access. After transformation, the claim grants user access to resources based on the central access policy that is applied to the folder on the file server.|  
   
+
 

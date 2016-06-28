@@ -13,6 +13,9 @@ ms.assetid: 73127bdd-8086-4268-a93c-2fdf1623e91b
 author: KBDAzure
 ---
 # Virtual machines configured with a virtual Fibre Channel adapter should be configured for high availability to the Fibre Channel-based storage
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ Note: The following sections provide details about the specific issue. Italics i
 ## **Resolution**  
 *Add another connection from the virtual machine to the host bus adapter and configure multipath I/O (MPIO) in the guest operating system to establish redundant Fibre Channel connections.*  
   
+
 

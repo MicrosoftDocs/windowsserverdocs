@@ -13,6 +13,9 @@ ms.assetid: d43a62f5-75ff-4b50-9687-3e58f42c0f4f
 author: KBDAzure
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows 8.1 and enabled for Dynamic Memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -63,4 +66,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 512MB -MinimumBytes 256MB -StartupBytes 512MB  
 ```  
   
+
 

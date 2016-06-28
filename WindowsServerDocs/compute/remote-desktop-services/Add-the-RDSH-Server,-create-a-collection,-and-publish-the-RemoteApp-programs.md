@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Add the RDSH Server, create a collection, and publish the RemoteApp programs
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to deploy RemoteApp programs in your desktop hosting environment. Make sure you have reviewed and completed the prerequisites before starting.  
   
 ## Add the RD Session Host to your deployment  
@@ -59,4 +62,5 @@ Use the following steps to deploy RemoteApp programs in your desktop hosting env
 10. Select the programs you want to publish, and then click **Publish**.  
   
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: 4dc7f362-d045-4ed1-9290-4c2f54a54d31
 ---
 # Getting Started with AD FS
 
+>Applies To: Windows Server 2012 R2
+
+
 -   [Configure Additional Authentication Methods for AD FS](../ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md)
 
 -   [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
@@ -32,5 +35,6 @@ ms.assetid: 4dc7f362-d045-4ed1-9290-4c2f54a54d31
 
 ## See Also
 [Active Directory Federation Services Overview](AD-FS-2016-Overview.md)
+
 
 

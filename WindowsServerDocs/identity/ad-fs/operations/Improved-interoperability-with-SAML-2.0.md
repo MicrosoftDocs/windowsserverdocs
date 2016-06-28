@@ -13,6 +13,9 @@ ms.assetid: ddb90df6-3b23-4766-bbd1-053e6b25873f
 author: billmath
 ---
 # Improved interoperability with SAML 2.0
+
+>Applies To: Windows Server Technical Preview
+
   
 AD FS in Windows Server 2016 contains additional SAML protocol support, including support for importing trusts based on metadata that contains multiple entities.  This enables you to configure AD FS to participate in confederations such as InCommon Federation and other implementations conforming to the eGov 2.0 standard.   
   
@@ -33,7 +36,7 @@ Add-AdfsClaimsProviderTrustsGroup -MetadataUrl "https://www.contosoconsortium.co
   
   
 ```  
-Add-AdfsClaimsProviderTrustsGroup -MetadataFile “C:\metadata.xml”   
+Add-AdfsClaimsProviderTrustsGroup -MetadataFile �C:\metadata.xml�   
 ```  
   
 ## References  
@@ -41,4 +44,5 @@ Add-AdfsClaimsProviderTrustsGroup -MetadataFile “C:\metadata.xml”
 The eGov 2.0 profile can be found [here.](https://kantarainitiative.org/confluence/download/attachments/60817482/kantara-report-egov-saml2-profile-2.0.pdf?version=1&modificationDate=1345580916000&api=v2)  
   
 The SAML Core specification can be found [here.](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf)   
+
 

@@ -12,7 +12,10 @@ ms.assetid: a3f1f7c4-d9b2-43e6-8bfa-fac707bbd4d3
 author: jamesmci
 ---
 # Enable Hash Publication for Domain Member File Servers
-When youâ€™re using Active Directory Domain Services (AD DS), you can use domain Group Policy to enable BranchCache hash publication for multiple file servers. To do so, you must create an organizational unit (OU), add file servers to the OU, create a BranchCache hash publication Group Policy Object (GPO), and then configure the GPO.  
+
+>Applies To: Windows Server Technical Preview
+
+When you’re using Active Directory Domain Services (AD DS), you can use domain Group Policy to enable BranchCache hash publication for multiple file servers. To do so, you must create an organizational unit (OU), add file servers to the OU, create a BranchCache hash publication Group Policy Object (GPO), and then configure the GPO.  
   
 See the following topics to enable hash publication for multiple file servers.  
   
@@ -24,4 +27,5 @@ See the following topics to enable hash publication for multiple file servers.
   
 -   [Configure the BranchCache Hash Publication Group Policy Object](../../branchcache/deploy/Configure-the-BranchCache-Hash-Publication-Group-Policy-Object.md)  
   
+
 

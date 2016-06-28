@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Configure the current RD Web and Gateway virtual machine for load balancing
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to configure load balancing for the RD Web and Gateway virtual machine:  
   
 1.  Remove the public IP address from the first RD Web and Gateway server:  
@@ -43,4 +46,5 @@ e.  Click **Create**.
     3.  Enter a name for the rule, for example, HTTPS, and select **TCP** for the **Protocol**. Enter **443** for both **Port** and **Backend port**, and click **OK**.  
     4.  In **Load balancing rules**, click **Add** for the **UDP rule**.  
     5.  Enter a name for the rule, for example, **UDP**, and select **UDP** for the **Protocol**. Enter **3391** for both **Port** and **Backend port**, and click **OK**.  
+
 

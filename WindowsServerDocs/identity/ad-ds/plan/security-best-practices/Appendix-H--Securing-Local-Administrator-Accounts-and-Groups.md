@@ -14,6 +14,9 @@ ms.assetid: 0683f6f0-6a4f-4edf-8caf-285c9fd4ad50
 author: Femila
 ---
 # Appendix H: Securing Local Administrator Accounts and Groups
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Appendix H: Securing Local Administrator Accounts and Groups  
 On all versions of Windows currently in mainstream support, the local Administrator account is disabled by default, which makes the account unusable for pass-the-hash and other credential theft attacks. However, in environments that contain legacy operating systems or in which local Administrator accounts have been enabled, these accounts can be used as previously described to propagate compromise across member servers and workstations. Each local Administrator account and group should be secured as described in the step-by-step instructions that follow.  
@@ -23,7 +26,7 @@ For detailed information about considerations in securing Built-in Administrator
 #### Controls for Local Administrator Accounts  
 For the local Administrator account in each domain in your forest, you should configure the following settings:  
   
--   Configure GPOs to restrict the domain‚Äôs Administrator account‚Äôs use on domain-joined systems  
+-   Configure GPOs to restrict the domainís Administrator accountís use on domain-joined systems  
   
     -   In one or more GPOs that you create and link to workstation and member server OUs in each domain, add the Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
   
@@ -68,7 +71,7 @@ For the local Administrator account in each domain in your forest, you should co
     3.  Click OK.  
   
         > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring a local Administrator account or a domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain‚Äôs Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        > When you add the Administrator account to these settings, you specify whether you are configuring a local Administrator account or a domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domainís Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
   
 8.  Configure the user rights to prevent the local Administrator account from logging on as a batch job by doing the following:  
   
@@ -81,7 +84,7 @@ For the local Administrator account in each domain in your forest, you should co
     3.  Click **OK**.  
   
         > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain‚Äôs Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domainís Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
   
 9. Configure the user rights to prevent the local Administrator account from logging on as a service by doing the following:  
   
@@ -94,7 +97,7 @@ For the local Administrator account in each domain in your forest, you should co
     3.  Click **OK**.  
   
         > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain‚Äôs Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domainís Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
   
 10. Configure the user rights to prevent the local Administrator account from accessing member servers and workstations via Remote Desktop Services by doing the following:  
   
@@ -107,7 +110,7 @@ For the local Administrator account in each domain in your forest, you should co
     3.  Click **OK**.  
   
         > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain‚Äôs Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domainís Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
   
 11. To exit **Group Policy Management Editor**, click **File**, and click **Exit**.  
   
@@ -129,7 +132,7 @@ For the local Administrator account in each domain in your forest, you should co
   
 #### Verification Steps  
   
-##### Verify ‚ÄúDeny access to this computer from the network‚Äù GPO Settings  
+##### Verify ìDeny access to this computer from the networkî GPO Settings  
 From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
   
 1.  Log on locally to any member server or workstation that is not affected by the GPO changes.  
@@ -142,16 +145,16 @@ From any member server or workstation that is not affected by the GPO changes (s
   
     ![](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_110.png)  
   
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$ /user:<Server Name>\Administrator**, where <Server Name> is the name of the member server or workstation you‚Äôre attempting to access over the network.  
+5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$ /user:<Server Name>\Administrator**, where <Server Name> is the name of the member server or workstation youíre attempting to access over the network.  
   
     > [!NOTE]  
-    > The local Administrator credentials must be from the same system you‚Äôre attempting to access over the network.  
+    > The local Administrator credentials must be from the same system youíre attempting to access over the network.  
   
 6.  The following screenshot shows the error message that should appear.  
   
     ![](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_111.png)  
   
-##### Verify ‚ÄúDeny log on as a batch job‚Äù GPO Settings  
+##### Verify ìDeny log on as a batch jobî GPO Settings  
 From any member server or workstation affected by the GPO changes, log on locally.  
   
 ###### Create a Batch File  
@@ -191,7 +194,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 10. In the **Security options** field, click **Change User or Group**.  
   
-11. Type the name of the system‚Äôs local Administrator account, click **Check Names**, and click **OK**.  
+11. Type the name of the systemís local Administrator account, click **Check Names**, and click **OK**.  
   
 12. Select **Run whether the user is logged on or not** and **Do not store password**. The task will only have access to local computer resources.  
   
@@ -205,7 +208,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_112.png)  
   
-###### Verify ‚ÄúDeny log on as a service‚Äù GPO Settings  
+###### Verify ìDeny log on as a serviceî GPO Settings  
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
@@ -219,9 +222,9 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  In **Log on as** field, click **This account**.  
   
-7.  Click **Browse**, type the system‚Äôs local Administrator account, click **Check Names**, and click **OK**.  
+7.  Click **Browse**, type the systemís local Administrator account, click **Check Names**, and click **OK**.  
   
-8.  In the **Password** and **Confirm password** fields, type the selected account‚Äôs password, and click **OK**.  
+8.  In the **Password** and **Confirm password** fields, type the selected accountís password, and click **OK**.  
   
 9. Click **OK** three more times.  
   
@@ -245,7 +248,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  In the **Log on as**: field, select **Local Systemaccount**, and click **OK**.  
   
-###### Verify ‚ÄúDeny log on through Remote Desktop Services‚Äù GPO Settings  
+###### Verify ìDeny log on through Remote Desktop Servicesî GPO Settings  
   
 1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
@@ -253,10 +256,11 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 3.  In the **Computer** field, type the name of the computer that you want to connect to, and click **Connect**. (You can also type the IP address instead of the computer name.)  
   
-4.  When prompted, provide credentials for the system‚Äôs local **Administrator** account.  
+4.  When prompted, provide credentials for the systemís local **Administrator** account.  
   
 5.  A dialog box similar to the following should appear.  
   
     ![](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_114.png)  
   
+
 

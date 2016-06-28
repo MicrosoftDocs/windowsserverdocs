@@ -12,6 +12,9 @@ ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
 author: coreyp
 ---
 # Manage DirectAccess Clients Remotely
+
+>Applies To: Windows Server Technical Preview
+
 Remote Access monitoring reports remote user activity and status for DirectAccess and VPN connections. It tracks the number and duration of client connections (among other statistics), and monitors the operations status of the server. An easy-to-use monitoring console provides a view of your entire Remote Access infrastructure. Monitoring views are available for single server, cluster, and multisite configurations.  
   
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
@@ -59,4 +62,5 @@ Remote client monitoring is based on connections. There are two types of tunnel 
   
 For DirectAccess, a connection is uniquely identified by the IP address of the remote client. For example, if a machine tunnel is open for a client computer, and a user is connected from that computer, these would be using the same connection. In a situation where the user disconnects and connects again while the machine tunnel is still active, it is a single connection.  
   
+
 

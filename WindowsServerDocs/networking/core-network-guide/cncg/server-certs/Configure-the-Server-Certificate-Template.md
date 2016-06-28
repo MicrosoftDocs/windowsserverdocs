@@ -9,7 +9,10 @@ ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
 author: jamesmci
 ---
 # Configure the Server Certificate Template
-You can use this procedure to configure the certificate template that Active DirectoryÂ® Certificate Services (AD CS) uses as the basis for server certificates that are enrolled to servers on your network.  
+
+>Applies To: Windows Server Technical Preview
+
+You can use this procedure to configure the certificate template that Active Directory® Certificate Services (AD CS) uses as the basis for server certificates that are enrolled to servers on your network.  
   
 While configuring this template, you can specify the servers by Active Directory group that should automatically receive a server certificate from AD CS.   
   
@@ -42,4 +45,5 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
   
 10. In **Enable Certificate Templates**, click the name of the certificate template that you just configured, and then click **OK**. For example, if you did not change the default certificate template name, click **Copy of RAS and IAS Server**, and then click **OK**.  
   
+
 

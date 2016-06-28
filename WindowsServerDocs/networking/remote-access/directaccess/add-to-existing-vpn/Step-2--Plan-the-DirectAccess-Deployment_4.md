@@ -12,6 +12,9 @@ ms.assetid: 72b5b2af-6925-41e0-a3f9-b8809ed711d1
 author: coreyp
 ---
 # Step 2: Plan the DirectAccess Deployment_4
+
+>Applies To: Windows Server Technical Preview
+
 After planning the Remote Access infrastructure, the next step in enabling DirectAccess is to plan the settings for the Enable DirectAccesss Wizard.  
   
 |Task|Description|  
@@ -33,29 +36,30 @@ There are two decisions to make when planning your client deployment:
 ## <a name="bkmk_2_2_server"></a>Planning for Remote Access server deployment  
 There are a number of decisions to make when planning to deploy your Remote Access server:  
   
--   **Network topology**â€”There are two topologies available when deploying a Remote Access server:  
+-   **Network topology**—There are two topologies available when deploying a Remote Access server:  
   
-    -   **Two adapters**â€”With two network adapters, Remote Access can be configured with one network adapter connected directly to the Internet, and the other is connected to the internal network. Or alternatively the server is installed behind an edge device such as a firewall or a router. In this configuration one network adapter is connected to the perimeter network, the other is connected to the internal network.  
+    -   **Two adapters**—With two network adapters, Remote Access can be configured with one network adapter connected directly to the Internet, and the other is connected to the internal network. Or alternatively the server is installed behind an edge device such as a firewall or a router. In this configuration one network adapter is connected to the perimeter network, the other is connected to the internal network.  
   
-    -   **Single network adapter**â€”In this configuration the Remote Access server is installed behind an edge device such as a firewall or a router. The network adapter is connected to the internal network.  
+    -   **Single network adapter**—In this configuration the Remote Access server is installed behind an edge device such as a firewall or a router. The network adapter is connected to the internal network.  
   
--   **Network adapters**â€”The Enable DirectAccess wizard automatically detects the network adapters configured on the Remote Access server, based on the interfaces used by VPN. You must make sure that the correct adapters are selected.  
+-   **Network adapters**—The Enable DirectAccess wizard automatically detects the network adapters configured on the Remote Access server, based on the interfaces used by VPN. You must make sure that the correct adapters are selected.  
   
--   **ConnectTo address**â€”Client computers use the ConnectTo address in order to connect to the Remote Access server. The address that you choose must match the subject name of the IP-HTTPS certificate that you deploy for the IP-HTTPS connection and must be available in the public DNS. See Planning website certificates for IP-HTTPS.  
+-   **ConnectTo address**—Client computers use the ConnectTo address in order to connect to the Remote Access server. The address that you choose must match the subject name of the IP-HTTPS certificate that you deploy for the IP-HTTPS connection and must be available in the public DNS. See Planning website certificates for IP-HTTPS.  
   
--   **IP-HTTPS certificate**â€”If SSTP VPN is configured, the Enable DirectAccess wizard picks up the certificate used by SSTP for IP-HTTPS. If SSTP VPN is not configured, the wizard will try to see if a certificate for IP-HTTPS has been configured. If not, it will automatically provision self-signed certificates for IP-HTTPS.The wizard automatically enables Kerberos authentication. The wizard will also enable NAT64 and DNS64 for protocol translation in the IPv4-only environment.  
+-   **IP-HTTPS certificate**—If SSTP VPN is configured, the Enable DirectAccess wizard picks up the certificate used by SSTP for IP-HTTPS. If SSTP VPN is not configured, the wizard will try to see if a certificate for IP-HTTPS has been configured. If not, it will automatically provision self-signed certificates for IP-HTTPS.The wizard automatically enables Kerberos authentication. The wizard will also enable NAT64 and DNS64 for protocol translation in the IPv4-only environment.  
   
--   **IPv6 prefixes**â€”If the wizard detects that IPv6 has been deployed on the network adapters, it automatically creates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 or ISATAP infrastructure, you must manually change them. See [1.1 Planning network and server topology and settings](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_1_1_Network_svr_top_settings).  
+-   **IPv6 prefixes**—If the wizard detects that IPv6 has been deployed on the network adapters, it automatically creates IPv6 prefixes for the internal network, an IPv6 prefix to assign to DirectAccess client computers, and an IPv6 prefix to assign to VPN client computers. If the automatically generated prefixes are not correct for your native IPv6 or ISATAP infrastructure, you must manually change them. See [1.1 Planning network and server topology and settings](assetId:///0064848b-b82e-4397-8fde-0c660c596076#bkmk_1_1_Network_svr_top_settings).  
   
--   **Windows 7 clients**â€”By default,  Windows 7  client computers cannot connect to a  Windows Server 2012  Remote Access deployment. If you have  Windows 7  client computers in your organization that require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the Enable DirectAccess wizard.  
+-   **Windows 7 clients**—By default,  Windows 7  client computers cannot connect to a  Windows Server 2012  Remote Access deployment. If you have  Windows 7  client computers in your organization that require remote access to internal resources, you can allow them to connect. Any client computers that you want to allow to access internal resources must be a member of a security group that you specify in the Enable DirectAccess wizard.  
   
     > [!NOTE]  
     > Allowing  Windows 7  client computers to connect using DirectAccess requires you to use computer certificate authentication.  
   
--   **Authentication**â€”The Enable DirectAccess wizard uses Active Directory to authenticate the user credentials. To deploy two-factor authentication, see [Deploy Remote Access with OTP authentication](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001).  
+-   **Authentication**—The Enable DirectAccess wizard uses Active Directory to authenticate the user credentials. To deploy two-factor authentication, see [Deploy Remote Access with OTP authentication](assetId:///0abf224d-b65c-4c43-8233-25cf79e2b001).  
   
 ## <a name="BKMK_Links"></a>See also  
   
 -   Step 1: Plan the Remote Access infrastructure  
   
+
 

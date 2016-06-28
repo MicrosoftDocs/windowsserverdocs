@@ -14,6 +14,9 @@ ms.assetid: 016befea-01e0-4385-8045-fc353c52758b
 author: Femila
 ---
 # Troubleshooting Domain Controller Deployment
+
+>Applies To: Windows Server Technical Preview
+
 This topic covers detailed methodology on troubleshooting domain controller configuration and deployment.  
   
 -   [Introduction to Troubleshooting](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md#BKMK_Intro)  
@@ -357,8 +360,9 @@ The following are common issues seen during the Windows Server 2012 development 
   
 |||  
 |-|-|  
-|Issue|Promotion ‚Äúhangs‚Äù at creating NTDS settings object, never completes|  
-|Symptoms|If you promote a replica DC or RODC, the promotion reaches ‚Äúcreating NTDS settings object‚Äù and never proceeds or completes. The logs stop updating as well.|  
-|Resolution and Notes|This is a known issue caused by providing credentials of the built-in local Administrator account with a matching password to the built-in domain Administrator account. This causes a failure down in the core setup engine that does not error, but instead waits indefinitely (quasi-loop). This is expected ‚Äì albeit undesirable ‚Äì behavior.<br /><br />To fix the server:<br /><br />1.  Reboot it.<br /><br />1.  In AD, delete that server‚Äôs member computer account (it will not yet be a DC account)<br /><br />1.  On that server, forcibly disjoin it from the domain<br /><br />1.  On that server, remove the AD DS role.<br /><br />1.  Reboot<br /><br />1.  Re-add the AD DS role and reattempt promotion, ensuring that you always provide the ***domain\admin*** formatted credentials to DC promotion and not just the built-in local administrator account|  
+|Issue|Promotion ìhangsî at creating NTDS settings object, never completes|  
+|Symptoms|If you promote a replica DC or RODC, the promotion reaches ìcreating NTDS settings objectî and never proceeds or completes. The logs stop updating as well.|  
+|Resolution and Notes|This is a known issue caused by providing credentials of the built-in local Administrator account with a matching password to the built-in domain Administrator account. This causes a failure down in the core setup engine that does not error, but instead waits indefinitely (quasi-loop). This is expected ñ albeit undesirable ñ behavior.<br /><br />To fix the server:<br /><br />1.  Reboot it.<br /><br />1.  In AD, delete that serverís member computer account (it will not yet be a DC account)<br /><br />1.  On that server, forcibly disjoin it from the domain<br /><br />1.  On that server, remove the AD DS role.<br /><br />1.  Reboot<br /><br />1.  Re-add the AD DS role and reattempt promotion, ensuring that you always provide the ***domain\admin*** formatted credentials to DC promotion and not just the built-in local administrator account|  
   
+
 

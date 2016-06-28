@@ -12,6 +12,9 @@ ms.assetid: 066d1fe4-cd49-4efb-9e24-3ab0612620fc
 author: Femila
 ---
 # Forest Design Models
+
+>Applies To: Windows Server Technical Preview
+
 You can apply one of the following three forest design models in your Active Directory environment:  
   
 -   Organizational forest model  
@@ -47,4 +50,5 @@ Users from other forests cannot be granted access to the restricted data because
   
 In extreme cases, the restricted access forest might be maintained on a separate physical network. Organizations that work on classified government projects sometimes maintain restricted access forests on separate networks to meet security requirements.  
   
+
 

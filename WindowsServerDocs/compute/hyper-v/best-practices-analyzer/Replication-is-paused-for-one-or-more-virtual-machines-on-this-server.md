@@ -13,6 +13,9 @@ ms.assetid: e1119a40-eda3-4058-8648-7df81cbc6c29
 author: KBDAzure
 ---
 # Replication is paused for one or more virtual machines on this server
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *Confirm that pausing replication was intended. If replication was paused to address low disk space or network connectivity, resume replication as soon as those issues are resolved.*  
   
+
 

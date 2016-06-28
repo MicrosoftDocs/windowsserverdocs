@@ -12,6 +12,9 @@ ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 author: jamesmci
 ---
 # Install the Web Server WEB1
+
+>Applies To: Windows Server 2016 Datacenter Technical Preview 5
+
 The Web Server (IIS) role in Windows Server 2016 provides a secure, easy-to-manage, modular and extensible platform for reliably hosting websites, services, and applications. With IIS, you can share information with users on the Internet, an intranet, or an extranet. IIS is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).  
   
 When you deploy server certificates, your Web server provides you with a location where you can publish the certificate revocation list (CRL) for your certification authority (CA). After publication, the CRL is accessible to all computers on your network so that they can use this list during the authentication process to verify that certificates presented by other computers are not revoked.   
@@ -38,4 +41,5 @@ The **Before You Begin** page of the Add Roles and Features Wizard is not displa
 5.  On the **Server roles** page, select **Web Server (IIS)**, and then click **Next**.  
 6.  Click **Next** until you have accepted all of the default web server settings, and then click **Install**.  
 7.  Verify that all installations were successful, and then click **Close**.
+
 

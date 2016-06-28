@@ -12,6 +12,9 @@ ms.assetid: 15df3aec-0e5c-41da-a7c6-7710d57f9ffd
 author: Femila
 ---
 # Event ID 2088: DNS lookup failure occurred with replication success
+
+>Applies To: Windows Server Technical Preview
+
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
@@ -102,4 +105,5 @@ type was found</code>
   </section>
   <relatedTopics />
 </developerConceptualDocument>
+
 

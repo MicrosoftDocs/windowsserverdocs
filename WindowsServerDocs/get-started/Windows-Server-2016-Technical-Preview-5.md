@@ -12,9 +12,12 @@ ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 author: jaimeo
 ---
 # Windows Server 2016 Technical Preview 5
+
+>Applies To: Windows Server Technical Preview
+
 **[This information is preliminary and subject to change.]**  
   
-Welcome to Windows ServerÂ® 2016 Technical Preview 5.  
+Welcome to Windows Server® 2016 Technical Preview 5.  
   
 This is the fifth release of Windows Server 2016 Technical Preview. In this documentation, Windows Server is referred to as Windows Server Technical Preview unless there is a need to distinguish between this release and the previous release. This collection contains information about the following:  
   
@@ -36,4 +39,5 @@ This is the fifth release of Windows Server 2016 Technical Preview. In this docu
   
 Want to provide feedback or make a suggestion? Is there something that  we could do better? You can use the [Windows Server User Voice site](http://windowsserver.uservoice.com/forums/295047-general-feedback) to give feedback, recommend features, and to see what others are saying.  
   
+
 

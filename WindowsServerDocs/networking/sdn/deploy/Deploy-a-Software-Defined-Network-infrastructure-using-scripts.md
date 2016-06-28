@@ -13,6 +13,9 @@ ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 author: vhorne
 ---
 # Deploy a Software Defined Network infrastructure using scripts
+
+>Applies To: Windows Server Technical Preview
+
 This topic covers how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts. The infrastructure includes a highly available (HA) network controller, an HA Software Load Balancer (SLB)/MUX, virtual networks, and associated Access Control Lists (ACLs). Additionally, another script deploys a tenant workload for you to validate your SDN infrastructure.  
   
 If you want your tenant workloads to communicate outside their virtual networks, you can setup SLB NAT rules, Site-to-Site Gateway tunnels, or Layer-3 Forwarding to route between virtual and physical workloads.  
@@ -33,24 +36,24 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
 2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016 Technical Preview](https://technet.microsoft.com/en-us/library/mt126159.aspx).   
   
    From an elevated Windows PowerShellcommand prompt:  
-   ``Install-WindowsFeature ‚ÄìName Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart``  
+   ``Install-WindowsFeature ñName Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart``  
     
     a. Create the Hyper-V virtual switch (use the same switch name for all hosts. For example: **sdnSwitch**). Configure at least one network adapter or, if using Switch Embedded Teaming, configure at least two network adapters. Maximum inbound spreading occurs when using two NICs.  
- `` New-VMSwitch ‚Äú<switch name>‚Äù ‚ÄìNetAdapterName ‚Äú<NetAdapter1>‚Äù [, ‚Äú<NetAdapter2>‚Äù ‚ÄìEnableEmbeddedTeaming $True] ‚ÄìAllowManagementOS $True``  
+ `` New-VMSwitch ì<switch name>î ñNetAdapterName ì<NetAdapter1>î [, ì<NetAdapter2>î ñEnableEmbeddedTeaming $True] ñAllowManagementOS $True``  
  
  >[!NOTE] 
  >You  can skip steps 4 and 5 if you have separate Management NICs.
 
  b. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to obtain the VLAN ID of the Management VLAN. Attach the Management vNIC of the newly created Virtual Switch to the Management VLAN. This step can be omitted if your environment does not use VLAN tags.  
- `` Set-VMNetworkAdapterIsolation -ManagementOS -IsolationMode Vlan ‚ÄìDefaultIsolationID <Management VLAN> -AllowUntaggedTraffic $True``  
+ `` Set-VMNetworkAdapterIsolation -ManagementOS -IsolationMode Vlan ñDefaultIsolationID <Management VLAN> -AllowUntaggedTraffic $True``  
  
  c. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to use either DHCP or static IP assignments to assign an IP address to the Management vNIC of the newly created vSwitch. The following example shows how to create a static IP address and assign it to the Management vNIC of the vSwitch:  
- ``New-NetIPAddress -InterfaceAlias "vEthernet (<switch name>)" -IPAddress <IP> -DefaultGateway <Gateway IP> -AddressFamily IPv4 -PrefixLength <Length of Subnet Mask ‚Äì for example: 24>``  
+ ``New-NetIPAddress -InterfaceAlias "vEthernet (<switch name>)" -IPAddress <IP> -DefaultGateway <Gateway IP> -AddressFamily IPv4 -PrefixLength <Length of Subnet Mask ñ for example: 24>``  
       
 3. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx) and a DNS Server.  
    
    a. Connect the Active Directory/DNS Server virtual machine to the Management VLAN:  
-   ``Set-VMNetworkAdapterIsolation ‚ÄìVMName ‚Äú<VM Name>‚Äù ‚ÄìAccess ‚ÄìVlanId <Management VLAN> -AllowUntaggedTraffic $True``  
+   ``Set-VMNetworkAdapterIsolation ñVMName ì<VM Name>î ñAccess ñVlanId <Management VLAN> -AllowUntaggedTraffic $True``  
    
    b. Install Active Directory Domain Services and DNS.  
       >[!NOTE]
@@ -70,7 +73,7 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
 Use the following steps to validate that host networking is setup correctly.  
 1. Ensure the VM Switch was created successfully:  
       
-    ``Get-VMSwitch ‚Äú<switch name>‚Äù``  
+    ``Get-VMSwitch ì<switch name>î``  
 2. Verify that the Management vNIC on the VM Switch is connected to the Management VLAN:  
 <<<<<<< HEAD
 	>[!NOTE]
@@ -88,7 +91,7 @@ Use the following steps to validate that host networking is setup correctly.
    ``ping <Hyper-V Host FQDN>``  
 4. Run the following command on the deployment host and specify the FQDN of each Hyper-V host to ensure the Kerberos credentials used provides access to all the servers.  
       
-   ``winrm id ‚Äìr:<Hyper-V Host FQDN>``  
+   ``winrm id ñr:<Hyper-V Host FQDN>``  
       
 ### Nano installation requirements and notes  
 If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the following are additional requirements:  
@@ -108,7 +111,7 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
   
 2.  Designate one computer as your deployment computer.  This computer must be running Windows Server 2016 Technical Preview. Expand the zip file and copy the **SDNExpress** folder to the deployment computer's `C:\` folder.  
   
-3.  Share the `C:\SDNExpress` folder as ‚Äú**SDNExpress**‚Äù with permission for **Everyone** to **Read/Write**.  
+3.  Share the `C:\SDNExpress` folder as ì**SDNExpress**î with permission for **Everyone** to **Read/Write**.  
   
 4.  Navigate to the `C:\SDNExpress` folder.
 
@@ -129,11 +132,11 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
 7. Create a Host A record in DNS for the NetworkControllerRestName (FQDN) and NetworkControllerRestIP.  
 8. Run the script as a user with domain administrator credentials:  
       
-    ``SDNExpress\scripts\SDNExpress.ps1 ‚ÄìConfigurationDataFile FabricConfig.psd1 -Verbose``  
+    ``SDNExpress\scripts\SDNExpress.ps1 ñConfigurationDataFile FabricConfig.psd1 -Verbose``  
       
 9.  To undo all operations, run the following command:  
       
-    ``SDNExpress\scripts\SDNExpressUndo.ps1 ‚ÄìConfigurationDataFile FabricConfig.psd1 -Verbose``  
+    ``SDNExpress\scripts\SDNExpressUndo.ps1 ñConfigurationDataFile FabricConfig.psd1 -Verbose``  
       
 #### Validation  
 Assuming that the SDN Express script ran to completion without reporting any errors, you can perform the following steps to ensure the fabric resources have been deployed correctly and are available for tenant deployment.  
@@ -143,12 +146,12 @@ Assuming that the SDN Express script ran to completion without reporting any err
 2.  Test network connectivity (on the Management logical network) between all Network Controller node virtual machines and Hyper-V hosts using ping.  
 3.  Check that the NC Host Agent is connected to the network controller on TCP:6640.  
       
-    ``netstat ‚Äìanp tcp |findstr 6640``  
+    ``netstat ñanp tcp |findstr 6640``  
       
 4. Ensure that the DIPs (Dynamic IPs) associated with all Hyper-V hosts that will be hosting load-balanced tenant workload virtual machines have Layer-3 IP connectivity to the Software Load Balancer Manager (SLBM) Virtual IP (VIP) address. The SLBM VIP is usually the first IP address in the VIP IP Pool range specified in the FabricConfig.psd file   
 5.  Use [diagnostic tools](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md) to ensure there are no errors on any fabric resources in the network controller.  
       
-    ``Debug-NetworkControllerConfigurationState ‚ÄìNcIpAddress <FQDN of Network Controller Rest Name>``  
+    ``Debug-NetworkControllerConfigurationState ñNcIpAddress <FQDN of Network Controller Rest Name>``  
       
 6.  Check the BGP peering state to ensure that the SLB/MUX is peered to the Top-of-Rack (ToR) switch or RRAS virtual machine (the BGP peer). Run the following command from a network controller node virtual machine:  
       
@@ -158,13 +161,13 @@ Assuming that the SDN Express script ran to completion without reporting any err
    
 ### Deploy a sample tenant workload with the software load balancer  
     
-Now that fabric resources have been deployed, you can validate your SDN deployment end-to-end by deploying a sample tenant workload. This tenant workload consists of two virtual subnets (web tier and database tier) protected via Access Control List (ACL) rules using the SDN distributed firewall. The web tier‚Äôs virtual subnet is accessible through the SLB/MUX using a Virtual IP (VIP) address. The script automatically deploys two web tier virtual machines and one database tier virtual machine and connects these to the virtual subnets.  
+Now that fabric resources have been deployed, you can validate your SDN deployment end-to-end by deploying a sample tenant workload. This tenant workload consists of two virtual subnets (web tier and database tier) protected via Access Control List (ACL) rules using the SDN distributed firewall. The web tierís virtual subnet is accessible through the SLB/MUX using a Virtual IP (VIP) address. The script automatically deploys two web tier virtual machines and one database tier virtual machine and connects these to the virtual subnets.  
   
 1.  Customize the SDNExpress\scripts\TenantConfig.psd1 file by changing the **<< Replace >>** tags with specific values (for example: VHD image name, network controller REST name, vSwitch Name, etc. as previously defined in the FabricConfig.psd1 file)  
 2.  Run the script. For example:  
-``SDNExpress\scripts\SDNExpressTenant.ps1 ‚ÄìConfigurationDataFile TenantConfig.psd1 ‚ÄìVerbose``  
+``SDNExpress\scripts\SDNExpressTenant.ps1 ñConfigurationDataFile TenantConfig.psd1 ñVerbose``  
 3.  To undo the configuration, run the same script with the **undo** parameter. For example:  
-``SDNExpress\scripts\SDNExpressTenant.ps1 ‚ÄìUndo ‚ÄìConfigurationDataFile TenantConfig.psd1 ‚ÄìVerbose``  
+``SDNExpress\scripts\SDNExpressTenant.ps1 ñUndo ñConfigurationDataFile TenantConfig.psd1 ñVerbose``  
 
 #### Validation  
 To validate that the tenant deployment was successful, do the following:
@@ -172,7 +175,7 @@ To validate that the tenant deployment was successful, do the following:
 1.	Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
 2.	Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
 	  
-	``Debug-NetworkControllerConfigurationState ‚ÄìNCIP <FQDN of Network Controller REST Name>``  
+	``Debug-NetworkControllerConfigurationState ñNCIP <FQDN of Network Controller REST Name>``  
 	  
 3.	Validate policy has been received and persisted in the Network Controller Host Agent  
 	  
@@ -184,12 +187,12 @@ To validate that the tenant deployment was successful, do the following:
 	  
 5.	Check PA connectivity between two hosts using ping. Obtain the compartment ID from the output of the previous command (for example: Compartment 3)  
 	  
-	``ping ‚Äìc <compartment Id> <Remote Hyper-V Host PA IP Address>``  
+	``ping ñc <compartment Id> <Remote Hyper-V Host PA IP Address>``  
 =======
 1.  Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
 2.  Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
       
-    ``Get-NetworkControllerConfigurationState ‚ÄìNCIP <FQDN of Network Controller REST Name>``  
+    ``Get-NetworkControllerConfigurationState ñNCIP <FQDN of Network Controller REST Name>``  
       
 3.  Validate policy has been received and persisted in the Network Controller Host Agent  
       
@@ -201,7 +204,7 @@ To validate that the tenant deployment was successful, do the following:
       
 5.  Check PA connectivity between two hosts using ping. Obtain the compartment ID from the output of the previous command (for example: Compartment 3)  
       
-    ``ping ‚Äìc <compartment Id> <Remote Hyper-V Host PA IP Address>``  
+    ``ping ñc <compartment Id> <Remote Hyper-V Host PA IP Address>``  
 >>>>>>> f9728e39087dfe4507735111900176a30cf4a330
   
   
@@ -212,16 +215,16 @@ To validate that the tenant deployment was successful, do the following:
 2.  Run the **SDNExpressEnterpriseExample.ps1** script to deploy the Enterprise site Gateways and (optionally) clients:  
   
     ``  
-    ./SDNExpressEnterpriseExample.ps1 ‚ÄìConfigurationDataFile .\EnterpriseConfig.psd1 verbose  
+    ./SDNExpressEnterpriseExample.ps1 ñConfigurationDataFile .\EnterpriseConfig.psd1 verbose  
     ``  
   
     This script creates the following:  
   
     -   One or more tenant enterprise sites with a VPN S2S Gateway per site, connected to the "Internet" network.  
   
-    -   An internal tenant enterprise network switch for this site‚Äôs internal connectivity.  
+    -   An internal tenant enterprise network switch for this siteís internal connectivity.  
   
-    -   A S2S VPN interface on this gateway with a destination to the gateway‚Äôs public IP address and post connect IPv4 route to the service provider BGP router IPv4 address.  
+    -   A S2S VPN interface on this gateway with a destination to the gatewayís public IP address and post connect IPv4 route to the service provider BGP router IPv4 address.  
   
     -   Installs a BGP router on the tenant enterprise site and creates a BGP Peer with the destination IP address at the service provider BGP router.  
   
@@ -239,7 +242,7 @@ To validate that the tenant deployment was successful, do the following:
   
     -   From one of the tenant enterprise gateways, ping the other tenant enterprise network.  
         
-        For example: `ping 14.1.20.1 ‚ÄìS 14.1.10.1`  
+        For example: `ping 14.1.20.1 ñS 14.1.10.1`  
   
     -   From one of the tenant enterprise gateways, try to establish an RDP connection with the WebTier virtual machine in the virtual network hosted at the service provider.  
 
@@ -249,11 +252,12 @@ To validate that the tenant deployment was successful, do the following:
   
 5.  Optional - gateway failover scenario  
   
-    To simulate a gateway failover scenario in M+N deployment mode, find out the currently active gateway for the tenant by using the following Windows PowerShell command: `Get-NCVirtualGateway ‚ÄìResourceID <TenantName>`  
+    To simulate a gateway failover scenario in M+N deployment mode, find out the currently active gateway for the tenant by using the following Windows PowerShell command: `Get-NCVirtualGateway ñResourceID <TenantName>`  
   
-    Now log on to the gateway virtual machine and either shutdown the Remote Access service or shutdown the virtual machine to simulate failover. Check whether the tenant‚Äôs virtual gateway has been re-provisioned on a standby Gateway virtual machine by running the above Windows PowerShell command again.  
+    Now log on to the gateway virtual machine and either shutdown the Remote Access service or shutdown the virtual machine to simulate failover. Check whether the tenantís virtual gateway has been re-provisioned on a standby Gateway virtual machine by running the above Windows PowerShell command again.  
   
 This completes the configuration for SDN environment and the corresponding tenant enterprise sites.  
 If you need to configure additional tenant enterprise sites or network connections, you can modify the corresponding configuration and run it again.  
   
+
 

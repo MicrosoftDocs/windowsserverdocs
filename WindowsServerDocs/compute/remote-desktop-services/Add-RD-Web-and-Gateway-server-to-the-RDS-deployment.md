@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Add RD Web and Gateway server to the RDS deployment
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to add the RD Web and Gateway server you created to your existing Remote Desktop Services basic deployment.  
   
 1.  Create a public IP address for the virtual machine running Remote Desktop Management Services (RDMS). The RDMS virtual machine is usually the virtual machine running the first instance of the RD Connection Broker role. Note that this step is not necessary if the RDMS virtual machine already has a public IP address to allow RDP connections.  
@@ -52,7 +55,7 @@ Use the following steps to add the RD Web and Gateway server you created to your
     1.  In Server Manager on the RDMS server, click **All Servers**. Right-click the first RD Web Access server, e.g. Contoso-WebGw1, and then click **Remote Desktop Connection**.  
     2.  Sign into the RD Web Access server using a Domain Admin account.  
     3.  Now, on the RD Web Access server, launch Server Manager. Click **Tools > Terminal Services > Internet Information Services (IIS) Manager**.  
-    4.  In the IIS Managerâ€™s left pane, expand the local computer (e.g. Contoso-WebGw1) > Sites > Default Web Site, and then click **RDWeb**.  
+    4.  In the IIS Manager’s left pane, expand the local computer (e.g. Contoso-WebGw1) > Sites > Default Web Site, and then click **RDWeb**.  
     5.  Right-click **Machine Key**, and then click **Open Feature**.  
     6.  On the Machine Key page, in the **Actions** pane, select **Generate Keys**, and then click **Apply**.  
     7.  Copy the validation key (you can right-click the key and then click **Copy**.)  
@@ -72,4 +75,5 @@ Use the following steps to add the RD Web and Gateway server you created to your
     6.  Click **Apply**.   
     7.  Repeat steps c. through f. for the RD Web Access Role Service.  
   
+
 

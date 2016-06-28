@@ -12,15 +12,18 @@ ms.assetid: 6dfffd1e-f4f4-43b6-9e3c-49015ce34338
 author: coreyp
 ---
 # Troubleshooting Web Probe URLs
+
+>Applies To: Windows Server Technical Preview
+
 This topic contains troubleshooting information for issues related to the `Set-DAEntryPointDC` command. To confirm that the error you received is related to setting the entry point domain controller, check in the Windows Event log for the event ID 10065.  
   
 ## <a name="SaveGPOSettings"></a>Saving server GPO settings  
-**Error received**‚ÄîAn error occurred while saving Remote Access settings to GPO <GPO_name>.  
+**Error received**óAn error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
 To troubleshoot this error, see [Saving server GPO settings](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#SaveGPOSettings).  
   
 ## Remote Access is not configured  
-**Error received**‚ÄîRemote Access is not configured on <server_name>. Specify the name of a server that belongs to a multisite deployment.  
+**Error received**óRemote Access is not configured on <server_name>. Specify the name of a server that belongs to a multisite deployment.  
   
 Or  
   
@@ -37,7 +40,7 @@ The `Set-DaEntryPointDC` cmdlet is available only on servers that are part of a 
 Run the command and make sure to specify the *ComputerName* parameter with the name of the server that is already configured as part of the multisite deployment.  
   
 ## Multisite is not enabled  
-**Error received**‚ÄîYou must enable a multisite deployment before performing this operation. Use the `Enable-DAMultiSite` cmdlet to do this.  
+**Error received**óYou must enable a multisite deployment before performing this operation. Use the `Enable-DAMultiSite` cmdlet to do this.  
   
 **Cause**  
   
@@ -52,7 +55,7 @@ Run the command and make sure to specify the *ComputerName* parameter with the n
 ## Entry point and domain controller not provided in cmdlet  
 The `Set-DaEntryPointDC` cmdlet enables you to change the domain controller that is associated with different entry points, for example, if a particular domain controller is no longer available. You can update a specific entry point to use a different domain controller, or you can update all entry points which use a specific domain controller to use a new domain controller. In the first case, you should use the *EntryPointName* parameter to specify which entry point should be updated. In the second case, you should use the *ExistingDC* parameter to specify which domain controller should be replaced. You can specify only one of these parameters.  
   
-**Error received**‚ÄîNo required parameters were specified. Provide the name of an entry point or an existing domain controller.  
+**Error received**óNo required parameters were specified. Provide the name of an entry point or an existing domain controller.  
   
 Or  
   
@@ -67,7 +70,7 @@ The *EntryPointName* or *ExistingDC* parameters were not specified, or both para
 Run the command and make sure to specify either the *EntryPointName* parameter or the *ExistingDC* parameter.  
   
 ## Could not locate domain controller  
-**Error received**‚ÄîUnable to locate a new domain controller automatically. Retry later or verify domain controller settings.  
+**Error received**óUnable to locate a new domain controller automatically. Retry later or verify domain controller settings.  
   
 **Cause**  
   
@@ -81,7 +84,7 @@ Make sure that the remote computer is accessible over RPC and that there is a wr
   
 -   **Issue 1**  
   
-    **Error received**‚ÄîThe domain controller <domain_controller> cannot be reached. Check network connectivity and server availability.  
+    **Error received**óThe domain controller <domain_controller> cannot be reached. Check network connectivity and server availability.  
   
     **Cause**  
   
@@ -93,7 +96,7 @@ Make sure that the remote computer is accessible over RPC and that there is a wr
   
 -   **Issue 2**  
   
-    **Error received**‚ÄîThe domain controller <domain_controller> cannot be contacted.  
+    **Error received**óThe domain controller <domain_controller> cannot be contacted.  
   
     **Cause**  
   
@@ -105,19 +108,19 @@ Make sure that the remote computer is accessible over RPC and that there is a wr
   
 -   **Issue 3**  
   
-    **Error received**‚ÄîDomain controller <domain_controller> cannot be reached for %2!s!.  
+    **Error received**óDomain controller <domain_controller> cannot be reached for %2!s!.  
   
     **Cause**  
   
-    To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. When the domain controller that manages an entry point‚Äôs server GPO is not available, Remote Access configuration settings cannot be read or modified.  
+    To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. When the domain controller that manages an entry pointís server GPO is not available, Remote Access configuration settings cannot be read or modified.  
   
     **Solution**  
   
-    Follow the procedure ‚ÄúTo change the domain controller that manages server GPOs‚Äù described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
+    Follow the procedure ìTo change the domain controller that manages server GPOsî described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
   
 -   **Issue 4**  
   
-    **Error received**‚ÄîThe primary domain controller in domain <domain_name> cannot be reached.  
+    **Error received**óThe primary domain controller in domain <domain_name> cannot be reached.  
   
     **Cause**  
   
@@ -125,10 +128,10 @@ Make sure that the remote computer is accessible over RPC and that there is a wr
   
     **Solution**  
   
-    Follow the procedure ‚ÄúTo transfer the PDC emulator role‚Äù described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
+    Follow the procedure ìTo transfer the PDC emulator roleî described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
   
 ## Read-only domain controller  
-**Error received**‚ÄîThe domain controller <domain_controller> is read-only. Specify a domain controller that is not read-only.  
+**Error received**óThe domain controller <domain_controller> is read-only. Specify a domain controller that is not read-only.  
   
 **Cause**  
   
@@ -142,7 +145,7 @@ When using the `Set-DAEntryPointDC`, the *NewDC* parameter is used to update the
   
 -   **Issue 1**  
   
-    **Error received**‚ÄîGPO <GPO_name> on domain controller <previous_domain_controller> cannot be retrieved from domain controller <replacement_domain_controller> because they are not in the same domain.  
+    **Error received**óGPO <GPO_name> on domain controller <previous_domain_controller> cannot be retrieved from domain controller <replacement_domain_controller> because they are not in the same domain.  
   
     **Cause**  
   
@@ -154,7 +157,7 @@ When using the `Set-DAEntryPointDC`, the *NewDC* parameter is used to update the
   
 -   **Issue 2**  
   
-    **Error received**‚ÄîGPO <GPO_name> on domain controller <previous_domain_controller> cannot be retrieved from domain controller <replacement_domain_controller>. Wait until domain replication completes and then try again.  
+    **Error received**óGPO <GPO_name> on domain controller <previous_domain_controller> cannot be retrieved from domain controller <replacement_domain_controller>. Wait until domain replication completes and then try again.  
   
     **Cause**  
   
@@ -166,7 +169,7 @@ When using the `Set-DAEntryPointDC`, the *NewDC* parameter is used to update the
   
 -   **Issue 3**  
   
-    **Error received**‚ÄîYou do not have permissions to access GPO <GPO_name>.  
+    **Error received**óYou do not have permissions to access GPO <GPO_name>.  
   
     **Cause**  
   
@@ -177,7 +180,7 @@ When using the `Set-DAEntryPointDC`, the *NewDC* parameter is used to update the
     The GPO exists on the domain controller, but it cannot be read. Make sure that you have the required permissions and try again.  
   
 ## Entry point not part of multisite deployment  
-**Error received**‚ÄîEntry point <entry_point_name> is not part of the multisite deployment. Specify an alternate value.  
+**Error received**óEntry point <entry_point_name> is not part of the multisite deployment. Specify an alternate value.  
   
 **Cause**  
   
@@ -191,7 +194,7 @@ Make sure that the entry point name is spelled correctly and that GPOs are repli
   
 -   **Issue 1**  
   
-    **Error received**‚ÄîServer <server_name> in entry point <entry_point_name> cannot be accessed.  
+    **Error received**óServer <server_name> in entry point <entry_point_name> cannot be accessed.  
   
     **Cause**  
   
@@ -203,7 +206,7 @@ Make sure that the entry point name is spelled correctly and that GPOs are repli
   
 -   **Issue 2**  
   
-    **Error received**‚ÄîSettings cannot be saved to the registry on server <server_name> in entry point <entry_point_name>.  
+    **Error received**óSettings cannot be saved to the registry on server <server_name> in entry point <entry_point_name>.  
   
     **Cause**  
   
@@ -215,7 +218,7 @@ Make sure that the entry point name is spelled correctly and that GPOs are repli
   
 -   **Issue 3**  
   
-    **Error received**‚ÄîGPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  
+    **Error received**óGPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  
   
     **Cause**  
   
@@ -226,7 +229,7 @@ Make sure that the entry point name is spelled correctly and that GPOs are repli
     Any servers that were not updated can be seen using the **Configuration Status** in the **DASHBOARD** of the Remote Access Management Console. This does not cause any functional problems; however, you can run `gpupdate /force` on any servers that were not updated to get the configuration status updated immediately.  
   
 ## Problem resolving FQDN  
-**Error received**‚ÄîServer <server_name> in entry point <entry_point_name> cannot be accessed.  
+**Error received**óServer <server_name> in entry point <entry_point_name> cannot be accessed.  
   
 **Cause**  
   
@@ -237,7 +240,7 @@ While getting the list of DirectAccess servers to modify, the cmdlet was not abl
 The entry point specified in the error message is associated with a domain controller. Make sure that the domain controller is available for the entry point. If the computer to which the specified SID belongs was removed from the domain, ignore this message and then remove the server from the multisite deployment.  
   
 ## No entry points to update  
-**Warning received**‚ÄîDomain controller settings were not modified. If you think changes are required, ensure that cmdlet parameters are configured correctly, and that GPOs are replicated to the required domain controllers.  
+**Warning received**óDomain controller settings were not modified. If you think changes are required, ensure that cmdlet parameters are configured correctly, and that GPOs are replicated to the required domain controllers.  
   
 **Cause**  
   
@@ -247,4 +250,5 @@ When calling the `Set-DaEntryPointDC` cmdlet with the *ExistingDC* parameter, Di
   
 To see the list of entry points and their associated domain controllers, use the `Get-DAEntryPointDC` cmdlet. If changes should have been made, make sure that the cmdlet parameters are spelled correctly, and that the GPOs are replicated to the required domain controllers, and then try again.  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
 author: coreyp
 ---
 # STEP 12: Test DirectAccess Connectivity
+
+>Applies To: Windows Server Technical Preview
+
 Before you can test connectivity from the client computers when they are located on the Internet or Homenet networks, you must make sure they have the correct group policy settings.  
   
 -   [To verify clients have the correct group policy](assetId:///aa293b5d-4b6f-4004-95f3-0ab54804b15c#policy)  
@@ -35,9 +38,9 @@ Connect both client computers to the Corpnet network, and then restart both clie
   
 3.  In the Windows PowerShell window type **Get-DnsClientNrptPolicy** and press ENTER. The Name Resolution Policy Table (NRPT) entries for DirectAccess are displayed.  
   
-    -   .corp.contoso.comâ€”These settings indicate that all connections to corp.contoso.com should be resolved by one of the DirectAccess DNS servers, with the IPv6 address 2001:db8:1::2 or 2001:db8:2::20.  
+    -   .corp.contoso.com—These settings indicate that all connections to corp.contoso.com should be resolved by one of the DirectAccess DNS servers, with the IPv6 address 2001:db8:1::2 or 2001:db8:2::20.  
   
-    -   nls.corp.contoso.comâ€”These settings indicate that there is an exemption for the name nls.corp.contoso.com.  
+    -   nls.corp.contoso.com—These settings indicate that there is an exemption for the name nls.corp.contoso.com.  
   
 4.  Leave the Windows PowerShell window open for the next procedure.  
   
@@ -51,9 +54,9 @@ Connect both client computers to the Corpnet network, and then restart both clie
   
     In the output, there should be two sections:  
   
-    -   .corp.contoso.comâ€”These settings indicate that all connections to corp.contoso.com should be resolved by the DirectAccess DNS server, with the IPv6 address 2001:db8:1::2.  
+    -   .corp.contoso.com—These settings indicate that all connections to corp.contoso.com should be resolved by the DirectAccess DNS server, with the IPv6 address 2001:db8:1::2.  
   
-    -   nls.corp.contoso.comâ€”These settings indicate that there is an exemption for the name nls.corp.contoso.com.  
+    -   nls.corp.contoso.com—These settings indicate that there is an exemption for the name nls.corp.contoso.com.  
   
 8.  Leave the Windows PowerShell window open for the next procedure.  
   
@@ -136,9 +139,9 @@ Connect both client computers to the Corpnet network, and then restart both clie
   
     In the output, there should be two sections:  
   
-    -   .corp.contoso.comâ€”These settings indicate that all connections to corp.contoso.com should be resolved by the DirectAccess DNS server, with the IPv6 address 2001:db8:2::20.  
+    -   .corp.contoso.com—These settings indicate that all connections to corp.contoso.com should be resolved by the DirectAccess DNS server, with the IPv6 address 2001:db8:2::20.  
   
-    -   nls.corp.contoso.comâ€”These settings indicate that there is an exemption for the name nls.corp.contoso.com.  
+    -   nls.corp.contoso.com—These settings indicate that there is an exemption for the name nls.corp.contoso.com.  
   
 ## <a name="DAConnect"></a>Test DirectAccess connectivity from the Internet through 2-EDGE1  
   
@@ -184,4 +187,5 @@ Connect both client computers to the Corpnet network, and then restart both clie
   
 14. Repeat this procedure on CLIENT2 from step 3.  
   
+
 

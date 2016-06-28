@@ -13,6 +13,9 @@ ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
 author: vhorne
 ---
 # Deploy a Software Defined Network Infrastructure
+
+>Applies To: Windows Server Technical Preview
+
 The following topics describe the methods you can use to deploy Microsoft's Software Defined Networking (SDN) infrastructure.   
   
 These deployments include all the technologies you need for a fully functional infrastructure, including Hyper-V Network Virtualization (HNV), network controllers, software load balancers (SLB/MUX), and gateways.  
@@ -33,4 +36,5 @@ These deployments include all the technologies you need for a fully functional i
 For more information about SDN, see:  
 [Software Defined Networking (SDN)](../Software-Defined-Networking--SDN-.md)  
   
+
 

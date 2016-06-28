@@ -12,6 +12,9 @@ ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
 author: jamesmci
 ---
 # Create a DNS Zone
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to create a DNS zone by using the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -34,4 +37,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [DNS Zone Management](DNS-Zone-Management.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

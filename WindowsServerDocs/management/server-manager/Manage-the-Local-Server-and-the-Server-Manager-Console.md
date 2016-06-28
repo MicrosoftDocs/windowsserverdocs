@@ -12,7 +12,10 @@ ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
 author: coreyp-at-msft
 ---
 # Manage the Local Server and the Server Manager Console
-In Windows ServerÂ® 2016 Technical Preview, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
+
+>Applies To: Windows Server Technical Preview
+
+In Windows Server® 2016 Technical Preview, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
 
 The **Local Server** page in Server Manager displays server properties, events, service and performance counter data, and Best Practices Analyzer (BPA) results for the local server. Event, service, BPA, and performance tiles function as they do on role and server group pages. For more information about configuring the data that is displayed in these tiles, see [View and Configure Performance, Event, and Service Data](View-and-Configure-Performance-Event-and-Service-Data.md) and [Run Best Practices Analyzer Scans and Manage Scan Results](Run-Best-Practices-Analyzer-Scans-and-Manage-Scan-Results.md).
 
@@ -39,7 +42,7 @@ Shutting down the local server by using this method, unlike shutting down Window
 > Only members of the Administrators group can shut down or restart a server. Standard users cannot shut down or restart a server. Clicking the **Shut Down Local Server** command logs standard users off server sessions. This matches the experience of a standard user running the **Alt+F4** shutdown command from the server desktop.
 
 ## <a name="BKMK_props"></a>Configure Server Manager properties
-You can view or change the following settings in the **Properties** tile on the **Local Server** page. To change a settingâ€™s value, click the hypertext value of the setting.
+You can view or change the following settings in the **Properties** tile on the **Local Server** page. To change a setting’s value, click the hypertext value of the setting.
 
 > [!NOTE]
 > Typically, the properties displayed in the Local Server **Properties** tile can only be changed on the local server. You cannot change the local server properties from a remote computer by using Server Manager because the **Properties** tile can only get information about the local computer, not remote computers.
@@ -48,8 +51,8 @@ You can view or change the following settings in the **Properties** tile on the 
 
 |Setting|Description|
 |-----------|---------------|
-|Computer name|Displays the computer friendly name, and opens the **System Properties** dialog box, which lets you change the serverâ€™s name, domain membership, and other system settings such as user profiles.|
-|Domain (or Workgroup, if the server is not joined to a domain)|Displays the domain or workgroup of which the server is a member. Opens the **System Properties** dialog box, which lets you change the serverâ€™s name, domain membership, and other system settings such as user profiles.|
+|Computer name|Displays the computer friendly name, and opens the **System Properties** dialog box, which lets you change the server’s name, domain membership, and other system settings such as user profiles.|
+|Domain (or Workgroup, if the server is not joined to a domain)|Displays the domain or workgroup of which the server is a member. Opens the **System Properties** dialog box, which lets you change the server’s name, domain membership, and other system settings such as user profiles.|
 |Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkId=253465).|
 |Remote management|Displays Server Manager and Windows PowerShell remote management status. Opens the **Configure Remote Management** dialog box. For more information about remote management, see [Configure Remote Management in Server Manager](Configure-Remote-Management-in-Server-Manager.md).|
 |Remote Desktop|Shows whether users can connect to the server remotely by using Remote Desktop sessions. Opens the **Remote** tab of the **System Properties** dialog box.|
@@ -63,9 +66,9 @@ You can view or change the following settings in the **Properties** tile on the 
 |Windows Error Reporting|Displays Windows Error Reporting opt-in status. Opens the **Windows Error Reporting Configuration** dialog box. For more information about Windows Error Reporting, its benefits, privacy statements, and opt-in settings, see [Windows Error Reporting](http://go.microsoft.com/fwlink/?LinkID=245991).|
 |Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. For more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](http://go.microsoft.com/fwlink/?LinkID=245992).|
 |Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. For more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](http://go.microsoft.com/fwlink/?LinkId=253461).|
-|Time zone|Displays the local serverâ€™s time zone. Opens the **Date and Time** dialog box.|
+|Time zone|Displays the local server’s time zone. Opens the **Date and Time** dialog box.|
 |Product ID|Displays the Windows activation status and product ID number (if Windows has been activated) of the Windows Server 2016 Technical Preview operating system. This is not the same number as the Windows product key. Opens the **Windows Activation** dialog box.|
-|Processors|This read-only field displays manufacturer, model name, and speed information about the local serverâ€™s processors.|
+|Processors|This read-only field displays manufacturer, model name, and speed information about the local server’s processors.|
 |Installed memory (RAM)|This read-only field displays the amount of available RAM, in gigabytes.|
 |Total disk space|This read-only field displays the amount of available disk space, in gigabytes.|
 
@@ -127,7 +130,7 @@ The following procedure describes how to create an example folder called *MyTool
 
 3.  If you do not need to restrict user access rights to your custom tool shortcuts, go on to step 6. Otherwise, right-click either the tool file (or the *MyTools* folder), and then click **Properties**.
 
-4.  On the **Security** tab of the fileâ€™s **Properties** dialog box, click **Edit**.
+4.  On the **Security** tab of the file’s **Properties** dialog box, click **Edit**.
 
 5.  For users for whom you want to restrict tool access, clear check boxes for **Read & execute**, **Read**, and **Write** permissions. These permissions are inherited by the tool shortcut n the **Administrative Tools** folder.
 
@@ -136,7 +139,7 @@ The following procedure describes how to create an example folder called *MyTool
     > [!NOTE]
     > If you restrict access to an entire folder that you have copied to Administrative Tools, restricted users can see neither the folder nor its contents in the Server Manager**Tools** menu.
     > 
-    > Edit permissions for the folder in the **Administrative Tools** folder. Because hidden files and folders in Administrative Tools are always displayed in the Server Manager**Tools** menu, do not use the **Hidden** setting on a file or folderâ€™s **Properties** dialog box to restrict user access to your custom tool shortcuts.
+    > Edit permissions for the folder in the **Administrative Tools** folder. Because hidden files and folders in Administrative Tools are always displayed in the Server Manager**Tools** menu, do not use the **Hidden** setting on a file or folder’s **Properties** dialog box to restrict user access to your custom tool shortcuts.
     > 
     > **Deny** permissions always overwrite **Allow** permissions.
 
@@ -171,5 +174,6 @@ In Windows Server 2016 Technical Preview, the following roles and feature have m
 [File and Storage Services](http://go.microsoft.com/fwlink/p/?LinkId=241530)
 [Remote Desktop Services (RDS)](http://go.microsoft.com/fwlink/p/?LinkId=241532)
 [IP Address Management (IPAM)](http://go.microsoft.com/fwlink/p/?LinkId=241533)
+
 
 

@@ -12,6 +12,9 @@ ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
 author: jamesmci
 ---
 # RAS Gateway Deployment Architecture
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.  
   
 The following sections provide brief overviews of some of the RAS Gateway new features so that you can understand how to use these features in the design of your gateway deployment.  
@@ -51,7 +54,7 @@ You can easily scale a gateway pool up or down by adding or removing gateway VMs
 For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
 ### <a name="bkmk_m"></a>M+N Gateway Pool Redundancy  
-Every gateway pool is M+N redundant. This means that an â€˜Mâ€™ number of active gateway VMs are backed up by an â€˜Nâ€™ number of standby gateway VMs. M+N redundancy provides you with more flexibility in determining  the level of reliability that you require when you deploy RAS Gateway.  
+Every gateway pool is M+N redundant. This means that an ‘M’ number of active gateway VMs are backed up by an ‘N’ number of standby gateway VMs. M+N redundancy provides you with more flexibility in determining  the level of reliability that you require when you deploy RAS Gateway.  
   
 For more information, see [What's New in RAS Gateway](../../../sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
@@ -152,4 +155,5 @@ To ensure a fast failover response, you can configure the BGP Keepalive paramete
   
  
   
+
 

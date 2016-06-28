@@ -12,6 +12,9 @@ ms.assetid: 3dfcd7e0-7fbc-4c36-964e-04ae62e9a66f
 author: Femila
 ---
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
+
+>Applies To: Windows Server Technical Preview
+
 You can find the following documentation about Active Directory Domain Services (AD DS) on the Windows Server 2003 and  Windows Server 2008  TechCenter Web sites:  
   
 -   For more information about the process of locating a domain controller, see Active Directory Collection ([http://go.microsoft.com/fwlink/?LinkID=88626](http://go.microsoft.com/fwlink/?LinkID=88626)).  
@@ -48,4 +51,5 @@ You can find the following documentation about Active Directory Domain Services 
   
 -   For information about how to deploy an RODC, see the Step-by-Step Guide for Read-only Domain Controllers ([http://go.microsoft.com/fwlink/?LinkID=92728](http://go.microsoft.com/fwlink/?LinkID=92728)).  
   
+
 

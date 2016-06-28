@@ -12,6 +12,9 @@ ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 author: coreyp
 ---
 # Monitor the operations status of the Remote Access server and its components
+
+>Applies To: Windows Server Technical Preview
+
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 The management console in the Remote Access server can be used to monitor its operations status.  
@@ -25,7 +28,7 @@ The management console in the Remote Access server can be used to monitor its op
   
 2.  Click **DASHBOARD** to navigate to **Remote Access Reporting** in the **Remote Access Management Console**.  
   
-3.  On the monitoring dashboard, notice the **Operations Status** tile within the **Server Status** tile. This tile lists the server operations status and the status of all the serverâ€™s components.  
+3.  On the monitoring dashboard, notice the **Operations Status** tile within the **Server Status** tile. This tile lists the server operations status and the status of all the server’s components.  
   
 4.  Click **Refresh** under **Tasks** in the right pane to reload the operations status. The operations status is automatically refreshed every five minutes, which is the default refresh interval. To change the default refresh interval, click **Configure Refresh Interval**.  
   
@@ -38,7 +41,8 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
   
 ```  
 PS> Get-RemoteAccessHealth  
-PS> Get-RemoteAccessHealth â€“Cluster  
+PS> Get-RemoteAccessHealth –Cluster  
 ```  
   
+
 

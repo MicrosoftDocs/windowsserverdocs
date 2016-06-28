@@ -12,6 +12,9 @@ ms.assetid: 8758beb3-8c6e-4ff0-9f6e-953512e0fbae
 author: Femila
 ---
 # AD DS Deployment Requirements
+
+>Applies To: Windows Server Technical Preview
+
 The structure of your existing environment determines your strategy for deploying  Windows Server 2008  Active Directory Domain Services (AD DS). If you are creating an AD DS environment and you do not have an existing domain structure, complete your AD DS design before you begin creating your AD DS environment. Then, you can deploy a new forest root domain and deploy the rest of your domain structure according to your design.  
   
 Also, as part of your AD DS deployment, you might decide to upgrade and restructure your environment. For example, if your organization has an existing Windows 2000 domain structure, you might perform an in-place upgrade of some domains and restructure others. In addition, you might decide to reduce the complexity of your environment by either restructuring domains between forests or restructuring domains within a forest after you deploy AD DS.  
@@ -40,4 +43,5 @@ When you restructure  Windows Server 2008  domains within a  Windows Server 2008
   
 For more information about how to use the Active Directory Migration Tool (ADMT) version 3.1 (ADMT v3.1) to restructure domains, see [ADMT v3.1 Migration Guide](http://go.microsoft.com/fwlink/?LinkId=93678).  
   
+
 

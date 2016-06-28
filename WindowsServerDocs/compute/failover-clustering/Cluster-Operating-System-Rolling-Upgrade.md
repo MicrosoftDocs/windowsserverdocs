@@ -13,6 +13,9 @@ author: kumudd
 ---
 # Cluster Operating System Rolling Upgrade
 
+>Applies To: Windows Server Technical Preview
+
+
 > [!NOTE]  
 > This content is pre-release documentation and is subject to change in future releases.  
 
@@ -28,7 +31,7 @@ Cluster OS Rolling Upgrade provides the following benefits:
 
 -   A new cluster is not required. The existing cluster is upgraded. In addition, existing cluster objects stored in Active Directory are used.  
 
--   The upgrade process is reversible until the customer choses the ‚Äúpoint-of-no-return‚Äù, when all cluster nodes are running Windows Server 2016 Technical Preview, and when the Update-ClusterFunctionalLevel PowerShell cmdlet is run.  
+-   The upgrade process is reversible until the customer choses the ìpoint-of-no-returnî, when all cluster nodes are running Windows Server 2016 Technical Preview, and when the Update-ClusterFunctionalLevel PowerShell cmdlet is run.  
 
 -   The cluster can support patching and maintenance operations while running in the mixed-OS mode.  
 
@@ -73,30 +76,30 @@ Complete the following requirements before you begin the Cluster OS Rolling Upgr
 ## Cluster transition states during Cluster OS Rolling Upgrade  
 This section describes the various transition states of the  Windows Server 2012 R2  cluster that is being upgraded to Windows Server 2016 Technical Preview using Cluster OS Rolling Upgrade.  
 
-In order to keep the cluster workloads running during the Cluster OS Rolling Upgrade process, moving a cluster workload from a  Windows Server 2012 R2  node to Windows Server 2016 Technical Preview node works as if both nodes were running the  Windows Server 2012 R2  operating system. When Windows Server 2016 Technical Preview nodes are added to the cluster, they operate in a  Windows Server 2012 R2  compatibility mode. A new conceptual cluster mode, called ‚Äúmixed-OS mode‚Äù, allows nodes of different versions to exist in the same cluster (see Figure 1).  
+In order to keep the cluster workloads running during the Cluster OS Rolling Upgrade process, moving a cluster workload from a  Windows Server 2012 R2  node to Windows Server 2016 Technical Preview node works as if both nodes were running the  Windows Server 2012 R2  operating system. When Windows Server 2016 Technical Preview nodes are added to the cluster, they operate in a  Windows Server 2012 R2  compatibility mode. A new conceptual cluster mode, called ìmixed-OS modeî, allows nodes of different versions to exist in the same cluster (see Figure 1).  
 
 ![](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Overview.png)  
 
 **Figure 1: Cluster operating system state transitions**  
 
-A  Windows Server 2012 R2  cluster enters mixed-OS mode when a Windows Server 2016 Technical Preview node is added to the cluster. The process is fully reversible ‚Äì Windows Server 2016 Technical Preview nodes can be removed from the cluster and  Windows Server 2012 R2  nodes can be added to the cluster in this mode. The ‚Äúpoint of no return‚Äù occurs when the Update-ClusterFunctionalLevel PowerShell cmdlet is run on the cluster. In order for this cmdlet to succeed, all nodes must be Windows Server 2016 Technical Preview, and all nodes must be online.  
+A  Windows Server 2012 R2  cluster enters mixed-OS mode when a Windows Server 2016 Technical Preview node is added to the cluster. The process is fully reversible ñ Windows Server 2016 Technical Preview nodes can be removed from the cluster and  Windows Server 2012 R2  nodes can be added to the cluster in this mode. The ìpoint of no returnî occurs when the Update-ClusterFunctionalLevel PowerShell cmdlet is run on the cluster. In order for this cmdlet to succeed, all nodes must be Windows Server 2016 Technical Preview, and all nodes must be online.  
 
 ## Transition states of a four-node cluster while performing Rolling OS Upgrade  
 This section illustrates and describes the four different stages of a cluster with shared storage whose nodes are upgraded from  Windows Server 2012 R2  to Windows Server 2016 Technical Preview.  
 
-‚ÄúStage 1‚Äù is the initial state ‚Äì we start with a  Windows Server 2012 R2  cluster.  
+ìStage 1î is the initial state ñ we start with a  Windows Server 2012 R2  cluster.  
 
 ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage1.png)  
 
 **Figure 2: Initial State:  Windows Server 2012 R2  Failover Cluster (Stage 1)**  
 
-In ‚ÄúStage 2‚Äù, two nodes have been paused, drained, evicted, reformatted, and installed with Windows Server 2016 Technical Preview.  
+In ìStage 2î, two nodes have been paused, drained, evicted, reformatted, and installed with Windows Server 2016 Technical Preview.  
 
 ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage2.png)  
 
 **Figure 3: Intermediate State: Mixed-OS mode:  Windows Server 2012 R2  and Windows Server 2016 Technical Preview Failover cluster (Stage 2)**  
 
-At ‚ÄúStage 3‚Äù, all of the nodes in the cluster have been upgraded to Windows Server 2016 Technical Preview, and the cluster is ready to be upgraded with Update-ClusterFunctionalLevel PowerShell cmdlet.  
+At ìStage 3î, all of the nodes in the cluster have been upgraded to Windows Server 2016 Technical Preview, and the cluster is ready to be upgraded with Update-ClusterFunctionalLevel PowerShell cmdlet.  
 
 > [!NOTE]  
 > At this stage, the process can be fully reversed, and  Windows Server 2012 R2  nodes can be added to this cluster.  
@@ -105,7 +108,7 @@ At ‚ÄúStage 3‚Äù, all of the nodes in the cluster have been upgraded to Windows 
 
 **Figure 4: Intermediate State: All nodes upgraded to Windows Server 2016 Technical Preview, ready for Update-ClusterFunctionalLevel (Stage 3)**  
 
-After the Update-ClusterFunctionalLevelcmdlet is run, the cluster enters ‚ÄúStage 4‚Äù, where new Windows Server 2016 Technical Preview cluster features can be used.  
+After the Update-ClusterFunctionalLevelcmdlet is run, the cluster enters ìStage 4î, where new Windows Server 2016 Technical Preview cluster features can be used.  
 
 ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage4.png)  
 
@@ -162,7 +165,7 @@ Cluster OS Rolling upgrade includes the following steps:
 
         **Figure 12: Remove a node from the cluster using Remove-ClusterNode PowerShell cmdlet**  
 
-    3.  Reformat the system drive and perform a ‚Äúclean Operating System install‚Äù of Windows Server 2016 Technical Preview on the node using the  **Custom: Install Windows only (advanced)** installation (See Figure 13) option in  setup.exe. Avoid selecting the  **Upgrade: Install Windows and keep files, settings, and applications** option since Cluster OS Rolling Upgrade does not encourage in-place upgrade.  
+    3.  Reformat the system drive and perform a ìclean Operating System installî of Windows Server 2016 Technical Preview on the node using the  **Custom: Install Windows only (advanced)** installation (See Figure 13) option in  setup.exe. Avoid selecting the  **Upgrade: Install Windows and keep files, settings, and applications** option since Cluster OS Rolling Upgrade does not encourage in-place upgrade.  
 
         ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_InstallOption.png)  
 
@@ -175,13 +178,13 @@ Cluster OS Rolling upgrade includes the following steps:
     6.  Using the Server Manager UI or Install-WindowsFeature PowerShell cmdlet, install any server roles that you need, such as Hyper-V.  
 
         ```  
-        Install-WindowsFeature ‚ÄìName Hyper-V  
+        Install-WindowsFeature ñName Hyper-V  
         ```  
 
     7.  Using the Server Manager UI or Install-WindowsFeature PowerShell cmdlet, install the Failover Clustering feature.  
 
         ```  
-        Install-WindowsFeature ‚ÄìName Failover-Clustering  
+        Install-WindowsFeature ñName Failover-Clustering  
         ```  
 
     8.  Install any additional features needed by your cluster workloads.  
@@ -211,7 +214,7 @@ Cluster OS Rolling upgrade includes the following steps:
         **Figure 16: Adding a node to the cluster using Add-ClusterNode PowerShell cmdlet**  
 
         > [!NOTE]  
-        > When the first  Windows Server 2016 Technical Preview node joins  the cluster, the  cluster enters ‚ÄúMixed-OS‚Äù mode, and the cluster core resources are moved to the Windows Server 2016 Technical Preview node. A ‚ÄúMixed-OS‚Äù mode cluster is a fully functional cluster where the new nodes run in a compatibility mode with the old nodes. ‚ÄúMixed-OS‚Äù mode is a transitory mode for the cluster. It is not intended to be permanent and customers are expected to update all nodes of their cluster within four weeks.  
+        > When the first  Windows Server 2016 Technical Preview node joins  the cluster, the  cluster enters ìMixed-OSî mode, and the cluster core resources are moved to the Windows Server 2016 Technical Preview node. A ìMixed-OSî mode cluster is a fully functional cluster where the new nodes run in a compatibility mode with the old nodes. ìMixed-OSî mode is a transitory mode for the cluster. It is not intended to be permanent and customers are expected to update all nodes of their cluster within four weeks.  
 
     14. After the  Windows Server 2016 Technical Preview node is successfully added to the cluster, you can (optionally) move some of the cluster workload to the newly added  node in order to rebalance the workload across the cluster as follows  
 
@@ -222,7 +225,7 @@ Cluster OS Rolling upgrade includes the following steps:
         1.  Use **Live Migration** from the Failover Cluster Manager for virtual machines or the **Move-ClusterVirtualMachineRole** PowerShell cmdlet (see Figure 17) to perform a live migration of the virtual machines.  
 
             ```  
-            Move-ClusterVirtualMachineRole ‚ÄìName VM1 ‚ÄìNode robhind-host3  
+            Move-ClusterVirtualMachineRole ñName VM1 ñNode robhind-host3  
             ```  
 
         2.  Use **Move** from the Failover Cluster Manager or the Move-ClusterGroup PowerShell cmdlet for other cluster workloads.  
@@ -242,7 +245,7 @@ Cluster OS Rolling upgrade includes the following steps:
 
     2.  Check that all cluster nodes are online  and running using the **Get-ClusterNode** PowerShell cmdlet.  
 
-    3.  Run the **Update-ClusterFunctionalLevel** cmdlet ‚Äì no errors should be returned (see Figure 19).  
+    3.  Run the **Update-ClusterFunctionalLevel** cmdlet ñ no errors should be returned (see Figure 19).  
 
         ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SelectFunctionalLevel.png)  
 
@@ -271,13 +274,13 @@ Cluster OS Rolling upgrade includes the following steps:
 
         **Figure 21: Viewing the Hyper-V VM configuration versions supported by the host**  
 
-   3.  On each Hyper-V host node in the cluster, Hyper-V VM configuration versions can be upgraded by scheduling a brief maintenance window with users, backing up, , turning off virtual machines, and running the **Update-VMVersion** PowerShell cmdlet (see Figure 22). This will update the virtual machine version, and enable new Hyper-V features, eliminating the need for future Hyper-V Integration Component (IC) updates. This cmdlet can be run from the Hyper-V node that is hosting the VM, , or the ‚ÄìComputerName parameter can be used to update the VM Version remotely.  In this example, here we upgrade the configuration version of VM1 from 5.0 to 7.0 to take advantage of many new Hyper-V features associated with this VM configuration version such as Production Checkpoints (Application Consistent backups), and binary VM configuration file.  
+   3.  On each Hyper-V host node in the cluster, Hyper-V VM configuration versions can be upgraded by scheduling a brief maintenance window with users, backing up, , turning off virtual machines, and running the **Update-VMVersion** PowerShell cmdlet (see Figure 22). This will update the virtual machine version, and enable new Hyper-V features, eliminating the need for future Hyper-V Integration Component (IC) updates. This cmdlet can be run from the Hyper-V node that is hosting the VM, , or the ñComputerName parameter can be used to update the VM Version remotely.  In this example, here we upgrade the configuration version of VM1 from 5.0 to 7.0 to take advantage of many new Hyper-V features associated with this VM configuration version such as Production Checkpoints (Application Consistent backups), and binary VM configuration file.  
 
         ![](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
 
         **Figure 22: Upgrading a VM version using the Update-VMVersion PowerShell cmdlet**  
         > [!CAUTION]  
-       > Leave Production VMs at Configuration Version 5.0 ‚Äì only VMs with Configuration Version 5.0 are guaranteed to be able to Live Migrate to Windows Server 2016 RTM version. Upgrade the VM Configuration Version only for Test VMs..  
+       > Leave Production VMs at Configuration Version 5.0 ñ only VMs with Configuration Version 5.0 are guaranteed to be able to Live Migrate to Windows Server 2016 RTM version. Upgrade the VM Configuration Version only for Test VMs..  
 
     4.  Storage pools can be upgraded using the Update-StoragePool PowerShell cmdlet - this is an online operation.  
 
@@ -289,7 +292,7 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 
 -   This feature works only for  Windows Server 2012 R2  to Windows Server 2016 Technical Preview versions only. This feature cannot upgrade earlier versions of Windows Server such as Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 to Windows Server 2016 Technical Preview.  
 
--   Each Windows Server 2016 Technical Preview node must be reformatted /new installation only. ‚ÄúIn-place‚Äù or ‚Äúupgrade‚Äù installation type is not encouraged.  
+-   Each Windows Server 2016 Technical Preview node must be reformatted /new installation only. ìIn-placeî or ìupgradeî installation type is not encouraged.  
 
 -   A Windows Server 2016 Technical Preview node must be used to add Windows Server 2016 Technical Preview nodes to the cluster.  
 
@@ -352,3 +355,4 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 -   [What's New in Windows Server 2016 Technical Preview 5](../../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
 
 -   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
+

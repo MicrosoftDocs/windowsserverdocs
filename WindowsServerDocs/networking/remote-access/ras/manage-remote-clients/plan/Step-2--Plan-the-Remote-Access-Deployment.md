@@ -12,6 +12,9 @@ ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 author: coreyp
 ---
 # Step 2: Plan the Remote Access Deployment
+
+>Applies To: Windows Server Technical Preview
+
 After you plan for the infrastructure that you intend to use to set up your single Remote Access server for remote management of DirectAccess clients, you are ready to plan the settings that the Remote Access Setup Wizard will use.  
   
 > [!NOTE]  
@@ -21,7 +24,7 @@ After you plan for the infrastructure that you intend to use to set up your sing
 |--------|---------------|  
 |[Plan a client deployment strategy](#bkmk_2_1_client)|Decide which managed computers will be configured as DirectAccess clients.|  
 |[Plan a Remote Access server deployment strategy](#BKMK_PlanDeploy2)|Plan how to deploy the Remote Access server.|  
-|[Plan the infrastructure serversâ€™ configurations](#bkmk_2_3_Inf_servers)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
+|[Plan the infrastructure servers’ configurations](#bkmk_2_3_Inf_servers)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
   
 ## <a name="bkmk_2_1_client"></a>Plan a client deployment strategy  
 There are three decisions to make when you are planning your client deployment:  
@@ -100,17 +103,18 @@ Decisions that you need to make when you are planning to deploy your Remote Acce
   
     Before you configure Remote Access, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (for example, they are unmanaged or they run an operating system for which DirectAccess is not supported). The Remote Access Server Setup Wizard allows you to configure how IP addresses are assigned (by using DHCP or from a static address pool) and how VPN clients are authenticated (by using Active Directory or a RADIUS server).  
   
-## <a name="bkmk_2_3_Inf_servers"></a>Plan the infrastructure serversâ€™ configurations  
+## <a name="bkmk_2_3_Inf_servers"></a>Plan the infrastructure servers’ configurations  
 Remote Access requires three types of infrastructure servers:  
   
 -   **Network location server**: For more information, see [Plan the network location server configuration](#BKMK_Location).  
   
 -   **DNS servers**: For more information, see [Plan DNS requirements](#BKMK_DNS).  
   
--   **Management servers**: For more information, see [Plan management serversâ€™ configurations](#BKMK_Management).  
+-   **Management servers**: For more information, see [Plan management servers’ configurations](#BKMK_Management).  
   
 ## <a name="BKMK_Links"></a>See also  
   
 -   [Step 1: Plan the Remote Access Infrastructure [client]](assetId:///f7e327cd-5efb-4601-b567-c2576c414be1)  
   
+
 

@@ -9,10 +9,13 @@ ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 author: jamesmci
 ---
 # Install the Certification Authority
-You can use this procedure to install Active DirectoryÂ® Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.  
+
+>Applies To: Windows Server Technical Preview
+
+You can use this procedure to install Active Directory® Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.  
   
 > [!IMPORTANT]  
-> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the Windows ServerÂ® 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx) at http://technet.microsoft.com/library/hmt604042.aspx.  
+> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the Windows Server® 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx) at http://technet.microsoft.com/library/hmt604042.aspx.  
 > -   To perform this procedure, the computer on which you are installing AD CS must be joined to a domain where Active Directory Domain Services (AD DS) is installed.  
   
 Membership in both the **Enterprise Admins** and the root domain's **Domain Admins** group is the minimum required to complete this procedure.  
@@ -24,7 +27,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 >   
 > After AD CS is installed, type the following command and press ENTER.  
 >   
-> `Install-AdcsCertificationAuthority â€“CAType EnterpriseRootCA`  
+> `Install-AdcsCertificationAuthority –CAType EnterpriseRootCA`  
   
 ### To install Active Directory Certificate Services  
   
@@ -67,4 +70,5 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
   
 18. In **Confirmation**, click **Configure** to apply your selections, and then click **Close**.  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 author: coreyp
 ---
 # Step 2: Configure the Remote Access Server
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to configure the client and server settings that are required for remote management of DirectAccess clients. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Step 2: Plan the Remote Access Deployment](assetId:///d68d8d84-d08a-4ee9-b113-5e391166f8dd).  
   
 |Task|Description|  
@@ -198,4 +201,5 @@ When the Remote Access configuration is complete, the **Remote Access Review** i
   
 -   Manage DirectAccess Clients Remotely  
   
+
 

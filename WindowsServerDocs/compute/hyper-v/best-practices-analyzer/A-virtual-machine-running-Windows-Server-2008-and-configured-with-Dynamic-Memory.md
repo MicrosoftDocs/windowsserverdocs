@@ -13,6 +13,9 @@ ms.assetid: f4c05a2c-52d0-4fa2-987d-37a6ed667134
 author: KBDAzure
 ---
 # A virtual machine running Windows Server 2008 and configured with Dynamic Memory should use recommended values for memory settings
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -63,4 +66,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 512MB -MinimumBytes 256MB -StartupBytes 512MB  
 ```  
   
+
 

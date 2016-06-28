@@ -12,6 +12,9 @@ ms.assetid: a9cea3ca-3f39-4f78-81f3-71f9a23cc49e
 author: Femila
 ---
 # Reviewing the Domain Models
+
+>Applies To: Windows Server Technical Preview
+
 The following factors impact the domain design model that you select:  
   
 -   Amount of available capacity on your network that you are willing to allocate to Active Directory Domain Services (AD DS). The goal is to select a model that provides efficient replication of information with minimal impact on available network bandwidth.  
@@ -50,4 +53,5 @@ The regional domain model enables you to maintain a stable environment over time
   
 The regional domain model consists of a forest root domain and one or more regional domains. Creating a regional domain model design involves identifying what domain is the forest root domain and determining the number of additional domains that are required to meet your replication requirements. If your organization includes groups that require data isolation or service isolation from other groups in the organization, create a separate forest for these groups. Domains do not provide data isolation or service isolation.  
   
+
 

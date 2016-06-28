@@ -14,12 +14,15 @@ ms.assetid: a7079fc4-3065-4295-b56d-54272b54bdd5
 author: Femila
 ---
 # Scenario: Get Insight into Your Data by Using Classification
+
+>Applies To: Windows Server Technical Preview
+
 Reliance on data and storage resources has continued to grow in importance for most organizations. IT administrators face the growing challenge of overseeing larger and more complex storage infrastructures, while simultaneously being tasked with the responsibility to ensure that total cost-of-ownership is maintained at reasonable levels. Managing storage resources is not only about the volume or availability of data; it is also about enforcing company policies and knowing how storage is consumed to enable efficient utilization and compliance to mitigate risk. File Classification Infrastructure provides insight into your data by automating classification processes so that you can manage your data more effectively. The following classification methods are available with File Classification Infrastructure: manual, programmatic, and automatic. This topic focuses on the automatic file classification method.  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 File Classification Infrastructure uses classification rules to automatically scan files and classify them according to the contents of the file. Classification properties are defined centrally in Active Directory so that these definitions can be shared across file servers in the organization. You can create classification rules that scan files for a standard string or for a string that matches a pattern (regular expression). When a configured classification parameter is found in a file, that file is classified as configured in the classification rule. Some examples of classification rules include:  
   
--   Classify any file that contains the string ‚ÄúContoso Confidential‚Äù as having high business impact  
+-   Classify any file that contains the string ìContoso Confidentialî as having high business impact  
   
 -   Classify any file that contains at least 10 social security numbers as having personally identifiable information  
   
@@ -45,4 +48,5 @@ The following table lists the features that are part of this scenario and descri
 |[File Server Resource Manager Overview](https://technet.microsoft.com/library/hh831701.aspx)|File Classification Infrastructure is a feature that is included in File Server Resource Manager.|  
 |[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)|File Server Resource Manager is a feature that is included with the File Services server role.|  
   
+
 

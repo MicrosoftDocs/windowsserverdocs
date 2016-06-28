@@ -14,6 +14,9 @@ ms.assetid: ad8fbdf8-549f-4ff2-91ab-ad5fcde9fcdb
 author: Femila
 ---
 # AD DS Simplified Administration
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains the new capabilities and benefits of Windows Server 2012 domain controller deployment and administration, and the differences between previous operating system DC deployment and the new Windows Server 2012 implementation.  
   
 Windows Server 2012 introduces the next generation of Active Directory Domain Services Simplified Administration, and is the most radical domain re-envisioning since Windows 2000 Server. AD DS Simplified Administration takes lessons learned from twelve years of Active Directory and makes a more supportable, more flexible, more intuitive administrative experience for architects and administrators. This meant creating new versions of existing technologies as well as extending the capabilities of components released in Windows Server 2008 R2.  
@@ -238,4 +241,5 @@ There is no need to run these cmdlets, ordinarily; they already automatically ex
 |VerifyMachineAdmin<br /><br />Password|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB (SAMR)|Validate the safe mode password set for DSRM meets domain complexity requirements.|  
 |VerifySafeModePassword|*N/A*|Validate the local Administrator password set meets computer security policy complexity requirements.|  
   
+
 

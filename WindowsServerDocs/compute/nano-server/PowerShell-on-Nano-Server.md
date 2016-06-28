@@ -12,6 +12,9 @@ ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
 author: jaimeo
 ---
 # PowerShell on Nano Server
+
+>Applies To: Windows Server Technical Preview
+
   
   
   
@@ -97,7 +100,7 @@ Nano Server includes PowerShell Core by default in all Nano Server installations
 * Enable-PSRemoting, Disable-PSRemoting (PowerShell remoting is enabled by default; see the "Using Windows PowerShell Remoting" section of [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)).  
 * Scheduled jobs and PSScheduledJob module   
 * Computer cmdlets for joining a domain { Add | Remove } (for different methods to join Nano Server to a domain, see the "Joining Nano Server to a domain" section of [Getting Started with Nano Server](Getting-Started-with-Nano-Server.md)).  
-* Reset‑ComputerMachinePassword, Test‑ComputerSecureChannel   
+* Reset-ComputerMachinePassword, Test-ComputerSecureChannel   
 * Profiles (you can add a startup script for incoming remote connections with `Set-PSSessionConfiguration`)  
 * Clipboard cmdlets   
 * EventLog cmdlets { Clear | Get | Limit | New | Remove | Show | Write } (use the New-WinEvent and Get-WinEvent cmdlets instead).   
@@ -122,4 +125,5 @@ You can manage Nano Server as target nodes with Windows PowerShell Desired State
 For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc).  
   
   
+
 

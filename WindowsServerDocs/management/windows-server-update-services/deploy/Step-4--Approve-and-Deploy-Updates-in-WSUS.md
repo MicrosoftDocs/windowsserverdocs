@@ -10,6 +10,9 @@ ms.topic: article
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
 ---
 # Step 4: Approve and Deploy Updates in WSUS
+
+>Applies To: Windows Server Technical Preview
+
 Computers in a computer group automatically contact the WSUS server over the next 24 hours to obtain updates. You can use the WSUS reporting feature to determine whether those updates were deployed to the test computers. When the tests are successfully completed, you can approve the updates for the applicable computer groups in your organization. The following checklist describes the steps to approve and deploy updates by using WSUS management console.
 
 |Task|Description|
@@ -84,5 +87,6 @@ Automatic Approvals enables you to specify how to automatically approve installa
 -   [Step 3: Configure WSUS](Step-3--Configure-WSUS.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
+
 
 

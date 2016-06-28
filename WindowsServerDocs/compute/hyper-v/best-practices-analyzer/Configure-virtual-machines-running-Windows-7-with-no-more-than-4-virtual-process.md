@@ -13,6 +13,9 @@ ms.assetid: 8fcf0868-b543-4f94-aee7-35324346da55
 author: KBDAzure
 ---
 # Configure virtual machines running Windows 7 with no more than 4 virtual processors
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -49,4 +52,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 5.  On the **Processor** page, set the number of processors to **3** or less, and then click **OK**.  
   
+
 

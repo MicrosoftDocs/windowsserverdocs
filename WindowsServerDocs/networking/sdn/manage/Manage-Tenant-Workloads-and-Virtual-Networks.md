@@ -12,6 +12,9 @@ ms.assetid: 7e2b4540-de56-4d5f-bb8e-9f81ca0ea4eb
 author: jamesmci
 ---
 # Manage Tenant Workloads and Virtual Networks
+
+>Applies To: Windows Server Technical Preview
+
 You can use the topics in this section to manage tenant workloads and virtual networks.  
   
 >[!NOTE]  
@@ -24,4 +27,5 @@ You can use the topics in this section to manage tenant workloads and virtual ne
 This section contains the following topics.  
   
 - [Manage Tenant Virtual Networks](../../sdn/manage/Manage-Tenant-Virtual-Networks.md)
+
 

@@ -14,6 +14,9 @@ ms.assetid: ecdcc211-6983-4a8c-9f9d-84e45b5cb0b6
 author: Femila
 ---
 # Scenario: Implement Retention of Information on File Servers
+
+>Applies To: Windows Server Technical Preview
+
 A retention period is the amount of time that a document should be kept before it is expired. Depending on the organization, the retention period can be different. You can classify files in a folder as having a short, medium, or long-term retention period, and then assign a timeframe for each period. You may want to keep a file indefinitely by putting it on legal hold.  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
@@ -40,4 +43,5 @@ The following table lists the features that are part of this scenario and descri
 |[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)|File Server Resource Manager is a feature that is included with the File Services server role.|  
   
   
+
 

@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Configure trusted certificates on RD Connection Broker servers and clients
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to configure trusted certificates.  
   
 1. Connect to the RDMS server:   
@@ -29,7 +32,7 @@ Use the following steps to configure trusted certificates.
   
     2. Expand **Certificates**.   
   
-    3. Scroll down to the table, and then click **RD Connection Broker â€“ Enable Single Sign On > Create new certificate**.  
+    3. Scroll down to the table, and then click **RD Connection Broker – Enable Single Sign On > Create new certificate**.  
   
     4. Enter the certificate name, using the internal FQDN of the Connection Broker load balancer (for example,  CBLB.contoso.com), and a password.   
   
@@ -41,7 +44,7 @@ Use the following steps to configure trusted certificates.
   
     8. Click **Apply**. Wait for the certificate to be successfully applied to the RD Connection Broker server   
   
-    9. Back in the Certificates view, click **RD Connection Broker â€“ Publishing > Select existing certificate**.   
+    9. Back in the Certificates view, click **RD Connection Broker – Publishing > Select existing certificate**.   
   
     10. Browse to the certificate created for the RD Gateway server (for example, ContosoCBLBCert), and then click **Open**.   
   
@@ -96,4 +99,5 @@ Use the following steps to configure trusted certificates.
     4. Browse to the Trusted Root Certification Authorities, and then click **OK**.  
       
     5. Click **Next**, **Finish**, and finally **OK**.   
+
 

@@ -13,6 +13,9 @@ ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
 author: KBDAzure
 ---
 # Offer all available integration services to virtual machines
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -54,4 +57,5 @@ The availability of some integration services can be managed through the virtual
   
 5.  In the list of integration services, select the check box for each service you want to offer to the virtual machine. If a check box is unavailable, that particular integration service is not supported by the guest operating system that runs in the virtual machine.  
   
+
 

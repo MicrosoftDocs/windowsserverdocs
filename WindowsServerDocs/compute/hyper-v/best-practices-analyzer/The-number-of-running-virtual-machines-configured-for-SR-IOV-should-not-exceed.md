@@ -13,6 +13,9 @@ ms.assetid: 8bd4af5e-9e7d-4710-8950-39435a8bb373
 author: KBDAzure
 ---
 # The number of running virtual machines configured for SR-IOV should not exceed the number of virtual functions available to the virtual machines
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *Consider disabling SR-IOV on one or more virtual machines that do not require an SR-IOV virtual function.*  
   
+
 

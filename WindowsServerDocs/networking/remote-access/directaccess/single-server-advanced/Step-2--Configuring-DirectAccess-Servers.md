@@ -12,6 +12,9 @@ ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
 author: vhorne
 ---
 # Step 2: Configuring DirectAccess Servers
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to configure the client and server settings that are required for an advanced Remote Access deployment that uses a single Remote Access server in a mixed IPv4 and IPv6 environment. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).  
   
 |Task|Description|  
@@ -157,7 +160,7 @@ To configure the infrastructure servers in a Remote Access deployment, you must 
 5.  On the **Management** page, add any management servers that are not detected automatically, and then click **Next**. Remote Access automatically adds domain controllers and System Center Configuration Manager servers.  
   
     > [!NOTE]  
-    > Although the servers are added automatically, they donâ€™t appear in the list. After you apply the configuration the first time, the System Center Configuration Manager servers appear in the list.  
+    > Although the servers are added automatically, they don’t appear in the list. After you apply the configuration the first time, the System Center Configuration Manager servers appear in the list.  
   
 6.  Click **Finish**.  
   
@@ -238,4 +241,5 @@ Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connecti
   
 -   [Step 3: Verify the Deployment](../../../remote-access/directaccess/single-server-advanced/Step-3--Verify-the-Deployment.md)  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: a85971c3-3e64-4a05-873c-45b8ee0570f5
 author: Femila
 ---
 # Active Directory Replication Concepts
+
+>Applies To: Windows Server Technical Preview
+
 Before designing site topology, become familiar with some Active Directory replication concepts.  
   
 -   [Connection object](#BKMK_1)  
@@ -49,7 +52,7 @@ Within a site, the connections between writable domain controllers are always ar
 On each domain controller, the KCC creates replication routes by creating one-way inbound connection objects that define connections from other domain controllers. For domain controllers in the same site, the KCC creates connection objects automatically without administrative intervention. When you have more than one site, you configure site links between sites, and a single KCC in each site automatically creates connections between sites as well.  
   
 ### KCC improvements for Windows Server 2008 RODCs  
-There are a number of KCC improvements to accommodate the newly available read-only domain controller (RODC) in  Windows Server 2008 . A typical deployment scenario for RODC is the branch office. The Active Directory replication topology most commonly deployed in this scenario is based on a hub‚Äìand-spoke design, where branch domain controllers in multiple sites replicate with a small number of bridgehead servers in a hub site.  
+There are a number of KCC improvements to accommodate the newly available read-only domain controller (RODC) in  Windows Server 2008 . A typical deployment scenario for RODC is the branch office. The Active Directory replication topology most commonly deployed in this scenario is based on a hubñand-spoke design, where branch domain controllers in multiple sites replicate with a small number of bridgehead servers in a hub site.  
   
 One of the benefits of deploying RODC in this scenario is unidirectional replication. Bridgehead servers are not required to replicate from the RODC, which reduces administration and network usage.  
   
@@ -61,7 +64,7 @@ For  Windows Server 2008  RODCs, normal functioning of the KCC provides some reb
   
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**  
   
-**‚ÄúRandom BH Loadbalancing Allowed‚Äù**  
+**ìRandom BH Loadbalancing Allowedî**  
   
 **1 = Enabled (default), 0 = Disabled**  
   
@@ -112,4 +115,5 @@ Universal group membership caching allows the domain controller to cache univers
   
 Enabling universal group membership caching eliminates the need for a global catalog server at every site in a domain, which minimizes network bandwidth usage because a domain controller does not need to replicate all of the objects located in the forest. It also reduces logon times because the authenticating domain controllers do not always need to access a global catalog to obtain universal group membership information. For more information about when to use universal group membership caching, see [Planning Global Catalog Server Placement](../../../ad-ds/plan/Planning-Global-Catalog-Server-Placement.md).  
   
+
 

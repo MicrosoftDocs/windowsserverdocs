@@ -12,6 +12,9 @@ ms.assetid: 842ed937-559a-4f30-86dc-c93475433b4e
 author: jamesmci
 ---
 # Deploy Software Defined Network Technologies using Windows PowerShell
+
+>Applies To: Windows Server Technical Preview
+
 You can use the topics in this section to deploy individual SDN technologies using Windows PowerShell.  
   
 This section contains the following topics.  
@@ -20,4 +23,5 @@ This section contains the following topics.
   
  
   
+
 

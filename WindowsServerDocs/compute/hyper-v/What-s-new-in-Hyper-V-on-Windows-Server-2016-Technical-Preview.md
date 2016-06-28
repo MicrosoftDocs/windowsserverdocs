@@ -13,6 +13,9 @@ ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ---
 # What's new in Hyper-V on Windows Server 2016 Technical Preview
+
+>Applies To: Microsoft Hyper-V Server Technical Preview, Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 This article explains the new and changed functionality of Hyper-V on Windows Server 2016 Technical Preview and Microsoft Hyper-V Server Technical Preview. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016 Technical Preview, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
@@ -57,15 +60,15 @@ Set-VMProcessor -EnableHostResourceProtection $true
 ## <a name="BKMK_hot"></a>Hot add and remove for network adapters and memory  
 You can now add or remove a network adapter while the virtual machine is running, without incurring downtime. This works for generation 2 virtual machines that run either Windows or Linux operating systems.  
   
-You can also adjust the amount of memory assigned to a virtual machine while it's running, even if you havenâ€™t enabled Dynamic Memory. This works for both generation 1 and generation 2 virtual machines, running Windows Server 2016 Technical Preview or Windows 10.  
+You can also adjust the amount of memory assigned to a virtual machine while it's running, even if you haven’t enabled Dynamic Memory. This works for both generation 1 and generation 2 virtual machines, running Windows Server 2016 Technical Preview or Windows 10.  
   
 ## <a name="BKMK_Mgmt"></a>Hyper-V Manager improvements  
   
--   **Alternate credentials support** â€“ You can now use a different set of credentials in Hyper-V Manager when you connect to another Windows Server 2016 Technical Preview or Windows 10 remote host. You can also save these credentials to make it easier to log on again.  
+-   **Alternate credentials support** – You can now use a different set of credentials in Hyper-V Manager when you connect to another Windows Server 2016 Technical Preview or Windows 10 remote host. You can also save these credentials to make it easier to log on again.  
   
--   **Manage earlier versions** â€“ With Hyper-V Manager in Windows Server 2016 Technical Preview and Windows 10, you can manage computers running Hyper-V on  Windows Server 2012 , Windows 8,  Windows Server 2012 R2  and Windows 8.1.  
+-   **Manage earlier versions** – With Hyper-V Manager in Windows Server 2016 Technical Preview and Windows 10, you can manage computers running Hyper-V on  Windows Server 2012 , Windows 8,  Windows Server 2012 R2  and Windows 8.1.  
   
--   **Updated management protocol** â€“ Hyper-V Manager has been updated to communicate with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos or NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can do a live migration without enabling constrained delegation in Active Directory. The WS-MAN-based infrastructure also makes it easier to enable a host for remote management. WS-MAN connects over port 80, which is open by default.  
+-   **Updated management protocol** – Hyper-V Manager has been updated to communicate with remote Hyper-V hosts using the WS-MAN protocol, which permits CredSSP, Kerberos or NTLM authentication. When you use CredSSP to connect to a remote Hyper-V host, you can do a live migration without enabling constrained delegation in Active Directory. The WS-MAN-based infrastructure also makes it easier to enable a host for remote management. WS-MAN connects over port 80, which is open by default.  
   
 ## <a name="BKMK_IS"></a>Integration services delivered through Windows Update  
 Updates to integration services for Windows guests are distributed through Windows Update. For service providers and private cloud hosters, this puts the control of applying updates into the hands of the tenants who own the virtual machines. Tenants can now update their Windows virtual machines with all updates, including the integration services, using a single method. For details about integration services for Linux guests, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).  
@@ -105,7 +108,7 @@ New networking features include:
 For more about new networking features, see [What's New in Networking](../../networking/What-s-New-in-Networking.md).  
   
 ## <a name="BKMK_check"></a>Production checkpoints  
-Production checkpoints are â€œpoint-in-timeâ€ images of a virtual machine. These give you a way to apply a checkpoint that complies with support policies when a virtual machine runs a production workload. Production checkpoints are based on backup technology inside the guest instead of a saved state. For Windows virtual machines, the Volume Snapshot Service (VSS) is used. For Linux virtual machines, the file system buffers are flushed to create a checkpoint that's consistent with the file system. If you'd rather use checkpoints based on saved states, choose standard checkpoints instead. For details, see [Choose between standard or production checkpoints](https://technet.microsoft.com/library/dn872510.aspx).  
+Production checkpoints are “point-in-time” images of a virtual machine. These give you a way to apply a checkpoint that complies with support policies when a virtual machine runs a production workload. Production checkpoints are based on backup technology inside the guest instead of a saved state. For Windows virtual machines, the Volume Snapshot Service (VSS) is used. For Linux virtual machines, the file system buffers are flushed to create a checkpoint that's consistent with the file system. If you'd rather use checkpoints based on saved states, choose standard checkpoints instead. For details, see [Choose between standard or production checkpoints](https://technet.microsoft.com/library/dn872510.aspx).  
   
 > [!IMPORTANT]  
 > New virtual machines use production checkpoints as the default.  
@@ -163,9 +166,9 @@ Virtual machine configuration files use a new format that makes reading and writ
 > The .vmcx file name extension indicates a binary file. Editing .vmcx or .vmrs files isn't supported.  
   
 ## <a name="BKMK_ConfgVersion"></a>Virtual machine configuration version  
-The version represents the compatibility of the virtual machineâ€™s configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with  Windows Server 2012 R2  and can run on both  Windows Server 2012 R2  and Windows Server 2016 Technical Preview. Virtual machines with versions introduced in Windows Server 2016 Technical Preview won't run in Hyper-V on  Windows Server 2012 R2 .   
+The version represents the compatibility of the virtual machine’s configuration, saved state, and snapshot files with the version of Hyper-V. Virtual machines with version 5 are compatible with  Windows Server 2012 R2  and can run on both  Windows Server 2012 R2  and Windows Server 2016 Technical Preview. Virtual machines with versions introduced in Windows Server 2016 Technical Preview won't run in Hyper-V on  Windows Server 2012 R2 .   
   
-If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 Technical Preview from  Windows Server 2012 R2 , the virtual machineâ€™s configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs  Windows Server 2012 R2 . But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
+If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 Technical Preview from  Windows Server 2012 R2 , the virtual machine’s configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs  Windows Server 2012 R2 . But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   
 For instructions on checking and upgrading the version, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md). This article also lists the version in which some features were introduced.   
   
@@ -206,5 +209,6 @@ For requirements and instructions, see [Manage Windows virtual machines with Pow
 [What's new in Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/about/whats_new)  
   
   
+
 
 

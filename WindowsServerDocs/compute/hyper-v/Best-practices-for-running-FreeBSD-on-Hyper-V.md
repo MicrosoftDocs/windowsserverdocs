@@ -13,6 +13,9 @@ ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
 author: cwatsonmsft
 ---
 # Best practices for running FreeBSD on Hyper-V
+
+>Applies To: Hyper-V Server 2012, Hyper-V Server 2012 R2, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server Technical Preview
+
 This topic contains a list of recommendations for running FreeBSD virtual machine on Hyper-V.  
   
 ## Enable CARP in FreeBSD 10.2 on Hyper-V  
@@ -93,7 +96,7 @@ The Fast IDE driver conflicts with the Hyper-V IDE driver which results in the C
 ## <a name="BKMK_GEOM"></a>Create GEOM labels on FreeBSD 8.x  
 During startup, device nodes are created as new devices are discovered. This can mean that device names can change when new devices are added. If you get a ROOT MOUNT ERROR during startup, you should create permanent GEOM labels for each IDE partition to avoid conflicts and changes.  
   
-1.  Reboot the system into single user mode. This can be accomplished by selecting boot menu option 4, or performing a ‚Äòboot -s‚Äô from the boot prompt. Alternatively, you can boot a specific kernel by specifying ‚Äúboot -s‚Äù. Note the ordering of the last command.  
+1.  Reboot the system into single user mode. This can be accomplished by selecting boot menu option 4, or performing a ëboot -sí from the boot prompt. Alternatively, you can boot a specific kernel by specifying ìboot -sî. Note the ordering of the last command.  
   
 2.  In Single user mode, create GEOM labels for each of the IDE disk partitions listed in your fstab (both root and swap). For example:  
   
@@ -125,4 +128,5 @@ During startup, device nodes are created as new devices are discovered. This can
 ## See also  
 [Supported FreeBSD virtual machines on Hyper-V](Supported-FreeBSD-virtual-machines-on-Hyper-V.md)  
   
+
 

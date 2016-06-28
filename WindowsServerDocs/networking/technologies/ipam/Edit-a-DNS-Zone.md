@@ -12,6 +12,9 @@ ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
 author: jamesmci
 ---
 # Edit a DNS Zone
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to edit a DNS zone in the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -52,4 +55,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [DNS Zone Management](DNS-Zone-Management.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

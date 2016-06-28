@@ -12,25 +12,28 @@ ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
 author: coreyp
 ---
 # Overview of the Test Lab Scenario_4
+
+>Applies To: Windows Server Technical Preview
+
 In this test lab scenario, DirectAccess is deployed with:  
   
--   **DC1**â€”A server that is configured as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain.  
+-   **DC1**—A server that is configured as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain.  
   
--   **2-DC1**â€”A server that is configured as a domain controller and DNS server for the corp2.corp.contoso.com domain.  
+-   **2-DC1**—A server that is configured as a domain controller and DNS server for the corp2.corp.contoso.com domain.  
   
--   **EDGE1 and 2-EDGE1**â€”Two servers on the internal network that are configured as Remote Access servers. Each server has two network adapters; one connected to the internal network, and the other connected to the external network.  
+-   **EDGE1 and 2-EDGE1**—Two servers on the internal network that are configured as Remote Access servers. Each server has two network adapters; one connected to the internal network, and the other connected to the external network.  
   
--   **APP1 and 2-APP1**â€”Two servers on the internal network that are configured as web and file servers.  
+-   **APP1 and 2-APP1**—Two servers on the internal network that are configured as web and file servers.  
   
--   **APP2**â€”A computer on the internal network that is configured as an IPv4 only web and file server. This computer is used to highlight the NAT64/DNS64 capabilities.  
+-   **APP2**—A computer on the internal network that is configured as an IPv4 only web and file server. This computer is used to highlight the NAT64/DNS64 capabilities.  
   
--   **ROUTER1**â€”A server that is configured to provide routing between the two corporate internal networks.  
+-   **ROUTER1**—A server that is configured to provide routing between the two corporate internal networks.  
   
--   **INET1**â€”A server that is configured as an Internet DNS and DHCP server.  
+-   **INET1**—A server that is configured as an Internet DNS and DHCP server.  
   
--   **NAT1**â€”A client computer that is configured as a network address translator (NAT) device using Internet Connection Sharing.  
+-   **NAT1**—A client computer that is configured as a network address translator (NAT) device using Internet Connection Sharing.  
   
--   **CLIENT1 and CLIENT2**â€”Two client computers that are configured as DirectAccess clients that will be used to test DirectAccess connectivity when moving between the internal network, the simulated Internet, and a home network. **CLIENT2** is a  Windows 7Â®  client.  
+-   **CLIENT1 and CLIENT2**—Two client computers that are configured as DirectAccess clients that will be used to test DirectAccess connectivity when moving between the internal network, the simulated Internet, and a home network. **CLIENT2** is a  Windows 7®  client.  
   
 The test lab consists of four subnets that simulate the following:  
   
@@ -46,4 +49,5 @@ Computers on each subnet connect using either a physical or virtual hub or switc
   
 ![](../../../media/Overview-of-the-Test-Lab-Scenario_4/TLG_DA_Multisite.png)  
   
+
 

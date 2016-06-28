@@ -13,6 +13,9 @@ ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 author: cwatsonmsft
 ---
 # Install the Hyper-V role on Windows Server Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 To create and run virtual machines, install the Hyper-V role on  Windows Server 2016 Technical Preview by using  Server Manager or by using the Install-WindowsFeature cmdlet in Windows PowerShell.  To install the Hyper-V role on a Nano Server, see [Getting Started with Nano Server](../../nano-server/Getting-Started-with-Nano-Server.md). For Windows 10, see [Install Hyper-V on Windows 10](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install).    
@@ -48,7 +51,7 @@ Before you install Windows Server 2016 Technical Preview or enable Hyper-V, make
 3.  To install Hyper-V on a server you're connected to  remotely, run the following command and  replace <computer_name> with the name of server.  
   
     ```  
-    Install-WindowsFeature â€“Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart  
+    Install-WindowsFeature –Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart  
     ```  
   
     If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.  
@@ -68,4 +71,5 @@ Before you install Windows Server 2016 Technical Preview or enable Hyper-V, make
   
 -   [Install-WindowsFeature](http://technet.microsoft.com/jj205467.aspx)  
   
+
 

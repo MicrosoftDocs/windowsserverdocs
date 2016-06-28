@@ -12,6 +12,9 @@ ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
 author: coreyp
 ---
 # STEP 5: Verify OTP Health on EDGE1
+
+>Applies To: Windows Server Technical Preview
+
 The following procedures verify that OTP is configured and functioning correctly using DirectAccess Server Health Monitoring on EDGE1.  
   
 ### Verify OTP Health on EDGE1 using DirectAccess Server Health Monitoring  
@@ -22,4 +25,5 @@ The following procedures verify that OTP is configured and functioning correctly
   
 3.  Verify that the status of OTP is **Working**.  
   
+
 

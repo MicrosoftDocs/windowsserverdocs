@@ -13,6 +13,9 @@ ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 author: KBDAzure
 ---
 # The Hyper-V Virtual Machine Management service must be running
+
+>Applies To: Windows Server Technical Preview
+
 *[This information is preliminary and subject to change.]*  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -82,4 +85,5 @@ If the service is already configured to start automatically and you just need to
   
 3.  In the **Actions** pane, click **Start Service**.  
   
+
 

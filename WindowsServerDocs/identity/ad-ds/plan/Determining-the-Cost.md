@@ -12,6 +12,9 @@ ms.assetid: 56650a8d-8f76-4f6c-a30d-669b14a18a2f
 author: Femila
 ---
 # Determining the Cost
+
+>Applies To: Windows Server Technical Preview
+
 You assign cost values to site links to favor inexpensive connections over expensive connections. Certain applications and services, such as Domain Controller Locator (DCLocator) and Distributed File System Namespaces (DFSN), also use cost information to locate the nearest resources. Site link cost can be used to determine which domain controller is contacted by clients in one site if the domain controller for the specified domain does not exist at that site. The client contacts the domain controller by using the site link that has the lowest cost assigned to it.  
   
 We recommend that the cost value be defined on a site-wide basis. Cost is usually based not only on the total bandwidth of the link but also on the availability, latency, and monetary cost of the link.  
@@ -51,4 +54,5 @@ Use the following table to calculate the cost of each site link based on wide ar
   
 These costs do not reflect differences in reliability between network links. Set higher costs on any failure-prone network links so that you do not have to rely on those links for replication. By setting higher site link costs, you can control replication failover when a site link fails.  
   
+
 

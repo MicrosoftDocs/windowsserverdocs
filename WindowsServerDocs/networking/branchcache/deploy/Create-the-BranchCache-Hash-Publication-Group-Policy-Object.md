@@ -12,6 +12,9 @@ ms.assetid: c3d33bed-83ef-4eb8-acf9-0719ecb4a931
 author: jamesmci
 ---
 # Create the BranchCache Hash Publication Group Policy Object
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to create the BranchCache hash publication Group Policy Object (GPO).  
   
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.  
@@ -31,4 +34,5 @@ Membership in **Domain Admins**, or equivalent is the minimum required to perfor
   
 5.  Right-click **BranchCache file servers**, and then click **Create a GPO in this domain, and Link it here**. The **New GPO** dialog box opens. In **Name**, type a name for the new GPO. For example, if you want to name the object BranchCache Hash Publication, type **BranchCache Hash Publication**. Click **OK**.  
   
+
 

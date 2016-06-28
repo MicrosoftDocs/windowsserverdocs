@@ -12,7 +12,10 @@ ms.assetid: 7aa1f2f8-3cd1-4a74-8991-1a063fda5ad1
 author: Femila
 ---
 # Collecting Network Information
-The first step in designing an effective site topology in Active Directory Domain Services (AD DS) is to consult your organizationâ€™s networking group to collect information and communicate with them regularly about your physical network topology.  
+
+>Applies To: Windows Server Technical Preview
+
+The first step in designing an effective site topology in Active Directory Domain Services (AD DS) is to consult your organization’s networking group to collect information and communicate with them regularly about your physical network topology.  
   
 ## Creating a location map  
 Create a location map that represents the physical network infrastructure of your organization. On the location map, identify the geographic locations that contain groups of computers with internal connectivity of 10 megabits per second (Mbps) or higher (local area network (LAN) speed or better).  
@@ -27,7 +30,7 @@ Document each location and the other locations that are linked to it. In additio
 ## Listing IP subnets within each location  
 After you document the communication links and the available bandwidth between each location, record the IP subnets within each location. If you do not already know the subnet mask and IP address within each location, consult your networking group.  
   
-AD DS associates a workstation with a site by comparing the workstationâ€™s IP address with the subnets that are associated with each site. As you add domain controllers to a domain, AD DS also examines their IP addresses and places them in the most appropriate site.  
+AD DS associates a workstation with a site by comparing the workstation’s IP address with the subnets that are associated with each site. As you add domain controllers to a domain, AD DS also examines their IP addresses and places them in the most appropriate site.  
   
 For a worksheet to assist you in listing the IP subnets within each location, see Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Locations and Subnets" (DSSTOPO_2.doc).  
   
@@ -39,4 +42,5 @@ The number of users for each regional domain that is represented in a location i
   
 Record the locations, the domains that are represented in each location, and the number of users for each domain that is represented in each location. For a worksheet to assist you in listing the domains and the number of users that are represented in each location, see Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Domains and Users in Each Location" (DSSTOPO_3.doc).  
   
+
 

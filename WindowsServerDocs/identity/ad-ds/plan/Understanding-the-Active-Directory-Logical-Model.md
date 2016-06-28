@@ -12,6 +12,9 @@ ms.assetid: 0302f7b2-b2ec-448f-994b-32938cf2e783
 author: Femila
 ---
 # Understanding the Active Directory Logical Model
+
+>Applies To: Windows Server Technical Preview
+
 Designing your logical structure for Active Directory Domain Services (AD DS) involves defining the relationships between the containers in your directory. These relationships might be based on administrative requirements, such as delegation of authority, or they might be defined by operational requirements, such as the need to control replication.  
   
 Before you design your Active Directory logical structure, it is important to understand the Active Directory logical model. AD DS is a distributed database that stores and manages information about network resources as well as application-specific data from directory-enabled applications. AD DS allows administrators to organize elements of a network (such as users, computers, and devices) into a hierarchical containment structure. The top-level container is the forest. Within forests are domains, and within domains are organizational units (OUs). This is called the logical model because it is independent of the physical aspects of the deployment, such as the number of domain controllers required within each domain and network topology.  
@@ -33,4 +36,5 @@ A domain is a partition in an Active Directory forest. Partitioning data enables
 ## Active Directory organizational units  
 OUs can be used to form a hierarchy of containers within a domain. OUs are used to group objects for administrative purposes such as the application of Group Policy or delegation of authority. Control (over an OU and the objects within it) is determined by the access control lists (ACLs) on the OU and on the objects in the OU. To facilitate the management of large numbers of objects, AD DS supports the concept of delegation of authority. By means of delegation, owners can transfer full or limited administrative control over objects to other users or groups. Delegation is important because it helps to distribute the management of large numbers of objects across a number of people who are trusted to perform management tasks.  
   
+
 

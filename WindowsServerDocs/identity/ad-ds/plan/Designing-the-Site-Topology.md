@@ -12,6 +12,9 @@ ms.assetid: e3a6521b-ad89-44b6-a998-c23a923b2689
 author: Femila
 ---
 # Designing the Site Topology
+
+>Applies To: Windows Server Technical Preview
+
 A directory service site topology is a logical representation of your physical network. Designing a site topology for Active Directory Domain Services (AD DS) involves planning for domain controller placement and designing sites, subnets, site links, and site link bridges to ensure efficient routing of query and replication traffic.  
   
 Designing a site topology helps you efficiently route client queries and Active Directory replication traffic. A well-designed site topology helps your organization achieve the following benefits:  
@@ -44,4 +47,5 @@ After you complete your site topology design, you must verify that your domain c
   
 -   [Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design](../../ad-ds/plan/Finding-Additional-Resources-for-Windows-Server-2008-Active-Directory-Site-Topology-Design.md)  
   
+
 

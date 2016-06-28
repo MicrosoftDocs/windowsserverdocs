@@ -13,6 +13,9 @@ ms.assetid: 93d1b155-bf44-46b0-bb69-d34d5b30e574
 author: KBDAzure
 ---
 # VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## **Resolution**  
 *Enable VMQ using the Enable-NetAdapterVmq Windows PowerShell cmdlet or using the Advanced Properties user interface for the network adapter.*  
   
+
 

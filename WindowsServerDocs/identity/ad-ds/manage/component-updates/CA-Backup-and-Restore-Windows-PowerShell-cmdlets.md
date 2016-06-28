@@ -14,6 +14,9 @@ ms.assetid: 7cd66583-e0e0-447f-8004-3fc43458c640
 author: Femila
 ---
 # CA Backup and Restore Windows PowerShell cmdlets
+
+>Applies To: Windows Server Technical Preview
+
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
 > [!NOTE]  
@@ -97,4 +100,5 @@ A non-password protected backup is taken if the ConvertTo-SecureString function 
   
 2.  Hold off on the restore of the CA at this time.  
   
+
 

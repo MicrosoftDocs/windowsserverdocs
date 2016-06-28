@@ -13,6 +13,9 @@ ms.assetid: 75a1212c-aa72-4163-98ee-80c453a6df5e
 author: billmath
 ---
 # AD FS 2016 Operations
+
+>Applies To: Windows Server Technical Preview
+
 This document contains a list of all of the documentation operations for AD FS for Windows Server 2016. This includes the following:  
   
   
@@ -39,4 +42,5 @@ This document contains a list of all of the documentation operations for AD FS f
   
   
   
+
 

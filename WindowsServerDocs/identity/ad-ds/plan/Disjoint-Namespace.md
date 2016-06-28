@@ -12,6 +12,9 @@ ms.assetid: 9b519506-a37f-4810-b0c5-4bb151f553c0
 author: Femila
 ---
 # Disjoint Namespace
+
+>Applies To: Windows Server Technical Preview
+
 A disjoint namespace occurs when one or more domain member computers have a primary Domain Name Service (DNS) suffix that does not match the DNS name of the Active Directory domain of which the computers are members. For example, a member computer that uses a primary DNS suffix of corp.fabrikam.com in an Active Directory domain named na.corp.fabrikam.com is using a disjoint namespace.  
   
 A disjoint namespace is more complex to administer, maintain, and troubleshoot than a contiguous namespace. In a contiguous namespace, the primary DNS suffix matches the Active Directory domain name. Network applications that are written to assume that the Active Directory namespace is identical to the primary DNS suffix for all domain member computers do not function properly in a disjoint namespace.  
@@ -82,7 +85,7 @@ Before you modify a namespace, review the following considerations, which apply 
   
     For more information, see Service Logons Fail Due to Incorrectly Set SPNs ([http://go.microsoft.com/fwlink/?LinkId=102304](http://go.microsoft.com/fwlink/?LinkId=102304)).  
   
-    -   If you use Windows Server 2003â€“based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=102306](http://go.microsoft.com/fwlink/?LinkId=102306)).  
+    -   If you use Windows Server 2003–based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=102306](http://go.microsoft.com/fwlink/?LinkId=102306)).  
   
     -   If you want to delegate permissions to modify SPNs to subordinate administrators, see Delegating Authority to Modify SPNs ([http://go.microsoft.com/fwlink/?LinkId=106639](http://go.microsoft.com/fwlink/?LinkId=106639)).  
   
@@ -110,4 +113,5 @@ Take the following precautions if you deploy computers in an environment that ha
   
 5.  Evangelize the importance of disjoint namespace support with operating system and application providers.  
   
+
 

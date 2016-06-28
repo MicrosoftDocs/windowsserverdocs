@@ -12,6 +12,9 @@ ms.assetid: e2616396-12e6-4bad-a081-f94c03288710
 author: Femila
 ---
 # Planning Operations Master Role Placement
+
+>Applies To: Windows Server Technical Preview
+
 Active Directory Domain Services (AD DS) supports multimaster replication of directory data, which means any domain controller can accept directory changes and replicate the changes to all other domain controllers. However, certain changes, such as schema modifications, are impractical to perform in a multimaster fashion. For this reason certain domain controllers, known as operations masters, hold roles responsible for accepting requests for certain specific changes.  
   
 > [!NOTE]  
@@ -54,9 +57,9 @@ For a worksheet to assist you in documenting the information about where you pla
 You need to refer to the information about locations in which you need to place PDC emulators when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
 ## Requirements for infrastructure master placement  
-The infrastructure master updates the names of security principals from other domains that are added to groups in its own domain. For example, if a user from one domain is a member of a group in a second domain and the userâ€™s name is changed in the first domain, the second domain is not notified that the userâ€™s name must be updated in the groupâ€™s membership list. Because domain controllers in one domain do not replicate security principals to domain controllers in another domain, the second domain never becomes aware of the change in the absence of the infrastructure master.  
+The infrastructure master updates the names of security principals from other domains that are added to groups in its own domain. For example, if a user from one domain is a member of a group in a second domain and the user’s name is changed in the first domain, the second domain is not notified that the user’s name must be updated in the group’s membership list. Because domain controllers in one domain do not replicate security principals to domain controllers in another domain, the second domain never becomes aware of the change in the absence of the infrastructure master.  
   
-The infrastructure master constantly monitors group memberships, looking for security principals from other domains. If it finds one, it checks with the security principalâ€™s domain to verify that the information is updated. If the information is out of date, the infrastructure master performs the update and then replicates the change to the other domain controllers in its domain.  
+The infrastructure master constantly monitors group memberships, looking for security principals from other domains. If it finds one, it checks with the security principal’s domain to verify that the information is updated. If the information is out of date, the infrastructure master performs the update and then replicates the change to the other domain controllers in its domain.  
   
 Two exceptions apply to this rule. First, if all domain controllers are global catalog servers, the domain controller that hosts the infrastructure master role is insignificant because global catalogs replicate the updated information regardless of the domain to which they belong. Second, if the forest has only one domain, the domain controller that hosts the infrastructure master role is insignificant because security principals from other domains do not exist.  
   
@@ -81,4 +84,5 @@ For a worksheet to assist you in planning operations master role placement, see 
   
 You will need to refer to this information when you create the forest root domain and regional domains. For more information about deploying the forest root domain, see Deploying a [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx). For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
+
 

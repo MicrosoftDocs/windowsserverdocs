@@ -14,11 +14,14 @@ ms.assetid: 763b5a5d-a20e-4234-b631-8f3571566c56
 author: Femila
 ---
 # Appendix F: Securing Domain Admins Groups in Active Directory
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Appendix F: Securing Domain Admins Groups in Active Directory  
 As is the case with the Enterprise Admins (EA) group, membership in the Domain Admins (DA) group should be required only in build or disaster recovery scenarios. There should be no day-to-day user accounts in the DA group with the exception of the built-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
-Domain Admins are, by default, members of the local Administrators groups on all member servers and workstations in their respective domains. This default nesting should not be modified for supportability and disaster recovery purposes. If Domain Admins have been removed from the local Administrators groups on the member servers, the group should be added to the Administrators group on each member server and workstation in the domain. Each domain‚Äôs Domain Admins group should be secured as described in the step-by-step instructions that follow.  
+Domain Admins are, by default, members of the local Administrators groups on all member servers and workstations in their respective domains. This default nesting should not be modified for supportability and disaster recovery purposes. If Domain Admins have been removed from the local Administrators groups on the member servers, the group should be added to the Administrators group on each member server and workstation in the domain. Each domainís Domain Admins group should be secured as described in the step-by-step instructions that follow.  
   
 For the Domain Admins group in each domain in the forest:  
   
@@ -155,8 +158,8 @@ For the Domain Admins group in each domain in the forest:
   
 #### Verification Steps  
   
-##### Verify ‚ÄúDeny access to this computer from the network‚Äù GPO Settings  
-From any member server or workstation that is not affected by the GPO changes (such as a ‚Äújump server‚Äù), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
+##### Verify ìDeny access to this computer from the networkî GPO Settings  
+From any member server or workstation that is not affected by the GPO changes (such as a ìjump serverî), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
   
 1.  Log on locally using an account that is a member of the Domain Admins group.  
   
@@ -168,13 +171,13 @@ From any member server or workstation that is not affected by the GPO changes (s
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_73.gif)  
   
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you‚Äôre attempting to access over the network.  
+5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation youíre attempting to access over the network.  
   
 6.  The following screen shot shows the error message that should appear.  
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)  
   
-##### Verify ‚ÄúDeny log on as a batch job‚Äù GPO Settings  
+##### Verify ìDeny log on as a batch jobî GPO Settings  
 From any member server or workstation affected by the GPO changes, log on locally.  
   
 ###### Create a Batch File  
@@ -228,7 +231,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_75.gif)  
   
-##### Verify ‚ÄúDeny log on as a service‚Äù GPO Settings  
+##### Verify ìDeny log on as a serviceî GPO Settings  
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
@@ -244,7 +247,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 7.  Click **Browse**, type the name of an account that is a member of the Domain Admins group, click **Check Names**, and click **OK**.  
   
-8.  Under **Password** and **Confirm password**, type the selected account‚Äôs password, and click **OK**.  
+8.  Under **Password** and **Confirm password**, type the selected accountís password, and click **OK**.  
   
 9. Click **OK** three more times.  
   
@@ -268,13 +271,13 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  Under **Log on as**, select the **Local System** account, and click **OK**.  
   
-##### Verify ‚ÄúDeny log on locally‚Äù GPO Settings  
+##### Verify ìDeny log on locallyî GPO Settings  
   
 1.  From any member server or workstation affected by the GPO changes, attempt to log on locally using an account that is a member of the Domain Admins group. A dialog box similar to the following should appear.  
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_77.gif)  
   
-##### Verify ‚ÄúDeny log on through Remote Desktop Services‚Äù GPO Settings  
+##### Verify ìDeny log on through Remote Desktop Servicesî GPO Settings  
   
 1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
@@ -288,4 +291,5 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_78.gif)  
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: 1074f086-1a2e-42e1-b58c-f55e657d5ce1
 author: KBDAzure
 ---
 # A team bound to a virtual switch should only have one exposed team interface
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## **Resolution**  
 *Use the Windows PowerShell cmdlet Remove-NetLbfoTeamNic to remove all team interfaces from the team other than the default team interface.*  
   
+
 

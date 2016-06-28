@@ -12,6 +12,9 @@ ms.assetid: f22dcf10-b453-4664-a9ef-e40e95c72f63
 author: coreyp
 ---
 # Step 4: Verify the Cluster
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to verify that you have correctly configured your DirectAccess cluster deployment.  
   
 ### To verify access to internal resources through the cluster  
@@ -26,4 +29,5 @@ This topic describes how to verify that you have correctly configured your Direc
   
     You should be able to access all corporate resources through each cluster server.  
   
+
 

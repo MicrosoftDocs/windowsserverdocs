@@ -13,6 +13,9 @@ ms.assetid: d77d648c-6e26-43fa-be0a-6eb4b28f9cb4
 author: KBDAzure
 ---
 # Windows 7 should be configured with the recommended amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -65,4 +68,5 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 455a4a18-5c97-4559-ac5a-b0109abd647b
 author: Femila
 ---
 # Creating a Site Link Bridge Design
+
+>Applies To: Windows Server Technical Preview
+
 A site link bridge connects two or more site links and enables transitivity between site links. Each site link in a bridge must have a site in common with another site link in the bridge. The Knowledge Consistency Checker (KCC) uses the information on each site link to compute the cost of replication between sites in one site link and sites in the other site links of the bridge. Without the presence of a common site between site links, the KCC also cannot establish direct connections between domain controllers in the sites that are connected by the same site link bridge.  
   
 By default, all site links are transitive. We recommend that you keep transitivity enabled by not changing the default value of **Bridge all site links** (enabled by default). However, you will need to disable **Bridge all site links** and complete a site link bridge design if:  
@@ -31,4 +34,5 @@ If your organization has a hub-and-spoke network topology, you generally do not 
 ### Controlling replication through a firewall  
 If two domain controllers representing the same domain in two different sites are specifically allowed to communicate with each other only through a firewall, you can disable **Bridge all site links** and create site link bridges for sites on the same side of the firewall. Therefore, if your network is separated by firewalls, we recommend that you disable transitivity of site links and create site link bridges for the network on one side of the firewall. For information about managing replication through firewalls, see Active Directory in Networks Segmented by Firewalls ([http://go.microsoft.com/fwlink/?LinkId=107074](http://go.microsoft.com/fwlink/?LinkId=107074)).  
   
+
 

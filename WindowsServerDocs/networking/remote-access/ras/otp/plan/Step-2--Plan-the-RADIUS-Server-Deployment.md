@@ -12,11 +12,14 @@ ms.assetid: 2d6ad863-02a5-49b0-9aff-d189e78b2b80
 author: coreyp
 ---
 # Step 2: Plan the RADIUS Server Deployment
+
+>Applies To: Windows Server Technical Preview
+
 After deploying a single Remote Access server, plan for the one-time password (OTP) authentication server.  
   
 |Task|Description|  
 |--------|---------------|  
-|2.1 Plan the RADIUS server|For the OTP authentication server, Remote Access in Windows ServerÂ® 2016 Technical Preview and Windows ServerÂ® 2012 supports any RADIUS-enabled OTP server that supports the password authentication protocol (PAP).|  
+|2.1 Plan the RADIUS server|For the OTP authentication server, Remote Access in Windows Server® 2016 Technical Preview and Windows Server® 2012 supports any RADIUS-enabled OTP server that supports the password authentication protocol (PAP).|  
   
 ## <a name="BKMK_1.1"></a>2.1 Plan the RADIUS server  
 Note the following when planning a RADIUS server for OTP authentication:  
@@ -33,4 +36,5 @@ You can view an example test lab guide that sets up OTP authentication with an R
   
   
   
+
 

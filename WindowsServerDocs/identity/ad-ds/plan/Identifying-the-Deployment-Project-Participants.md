@@ -12,6 +12,9 @@ ms.assetid: c706c515-90fa-4239-be2e-f95fa9821201
 author: Femila
 ---
 # Identifying the Deployment Project Participants
+
+>Applies To: Windows Server Technical Preview
+
 The first step in establishing a deployment project for Active Directory Domain Service (AD DS) is to establish the design and deployment project teams that will be responsible for managing the design phase and deployment phase of the Active Directory project cycle. In addition, you must identify the individuals and groups who will be responsible for owning and maintaining the directory after the deployment is completed.  
   
 -   [Defining project-specific roles](#BKMK_1)  
@@ -44,7 +47,7 @@ The responsibilities of the Active Directory project architect include the follo
   
 -   Establishing consensus between design, deployment, and operations teams  
   
--   Understanding the needs of AD DSâ€“integrated applications  
+-   Understanding the needs of AD DS–integrated applications  
   
 The final Active Directory design must reflect a combination of business goals and technical decisions. Therefore, the project architect must review design decisions to ensure that they align with business goals.  
   
@@ -121,7 +124,7 @@ The forest owner is typically a senior information technology (IT) manager in th
   
 -   Any other Group Policy settings that are applied at the domain level  
   
-The forest owner has authority over the entire forest. It is the forest ownerâ€™s responsibility to set Group Policy and business policies and to select the individuals who are service administrators. The forest owner is a service owner.  
+The forest owner has authority over the entire forest. It is the forest owner’s responsibility to set Group Policy and business policies and to select the individuals who are service administrators. The forest owner is a service owner.  
   
 #### DNS for AD DS owner  
 The DNS for AD DS owner is an individual who has a thorough understanding of the existing DNS infrastructure and the existing namespace of the organization.  
@@ -247,4 +250,5 @@ The deployment team works with the service and data administrators during the de
 ### Documenting the design and deployment teams  
 Document the names and contact information for the people who will participate in the design and deployment of AD DS. Identify who will be responsible for each role on the design and deployment teams. Initially, this list includes the potential forest owners, the project manager, and the project architect. When you determine the number of forests that you will deploy, you might need to create new design teams for additional forests. Note that you will need to update your documentation as team memberships change and as you identify the various Active Directory owners during the design process. For a worksheet to assist you in documenting the design and deployment teams for each forest, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Design and Deployment Team Information" (DSSLOGI_1.doc).  
   
+
 

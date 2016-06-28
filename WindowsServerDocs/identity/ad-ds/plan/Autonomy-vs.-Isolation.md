@@ -12,6 +12,9 @@ ms.assetid: 022fd4ef-c9c3-403b-8561-7bd21190bff0
 author: Femila
 ---
 # Autonomy vs. Isolation
+
+>Applies To: Windows Server Technical Preview
+
 You can design your Active Directory logical structure to achieve either of the following:  
   
 -   **Autonomy**. Involves independent but not exclusive control of a resource. When you achieve autonomy, administrators have the authority to manage resources independently; however, administrators with greater authority exist who also have control over those resources and can take control away if necessary. You can design your Active Directory logical structure to achieve the following types of autonomy:  
@@ -67,4 +70,5 @@ Service autonomy might be required within an organization for a group that wants
 ## Limited connectivity  
 If a group within your organization owns networks that are separated by devices that restrict or limit connectivity between networks (such as firewalls and Network Address Translation (NAT) devices), this can impact your forest design. When you identify your forest design requirements, be sure to note the locations where you have limited network connectivity. This information is required to enable you to make decisions regarding the forest design.  
   
+
 

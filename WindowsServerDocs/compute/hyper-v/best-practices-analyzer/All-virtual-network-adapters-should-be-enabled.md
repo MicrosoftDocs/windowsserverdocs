@@ -13,6 +13,9 @@ ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48
 author: KBDAzure
 ---
 # All virtual network adapters should be enabled
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 |||  
@@ -38,4 +41,5 @@ The management operating system can't connect to a physical (external) network u
   
 *Use Network &  Internet Settings to enable the virtual network adapter. Or, use Virtual Switch Manager to reconfigure the external virtual switch so that it is not shared with the management operating system.*  
   
+
 

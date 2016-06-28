@@ -12,6 +12,9 @@ ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
 author: vhorne
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
+
+>Applies To: Windows Server Technical Preview
+
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.  
   
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites  
@@ -22,7 +25,7 @@ You can use the following topics to review prerequisites and other information b
 -   [Prerequisites for Deploying DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running either  Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2 or Windows ServerÂ® 2012,  is configured as a DirectAccess server with advanced settings.  
+In this scenario, a single computer running either  Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012,  is configured as a DirectAccess server with advanced settings.  
   
 > [!NOTE]  
 > If you want to configure a basic deployment with simple settings only, see [Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md). In the simple scenario, DirectAccess is configured with default settings by using a wizard, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
@@ -65,7 +68,7 @@ For detailed deployment steps, see [Install and Configure Advanced DirectAccess]
 ## <a name="BKMK_APP"></a>Practical applications  
 Deploying a single DirectAccess server provides the following:  
   
--   **Ease of access**. Managed client computers running Windows 10Â®, WindowsÂ® 8.1, WindowsÂ® 8, and WindowsÂ® 7 can be configured as DirectAccess client computers. These clients can access internal network resources via DirectAccess any time they are located on the Internet without needing to log in to a VPN connection. Client computers not running one of these operating systems can connect to the internal network via VPN.  
+-   **Ease of access**. Managed client computers running Windows 10®, Windows® 8.1, Windows® 8, and Windows® 7 can be configured as DirectAccess client computers. These clients can access internal network resources via DirectAccess any time they are located on the Internet without needing to log in to a VPN connection. Client computers not running one of these operating systems can connect to the internal network via VPN.  
   
 -   **Ease of management**. DirectAccess client computers located on the Internet can be remotely managed by Remote Access administrators over DirectAccess, even when the client computers are not located in the internal corporate network. Client computers that do not meet corporate requirements can be remediated automatically by management servers. Both DirectAccess and VPN are managed in the same console and with the same set of wizards. Additionally, one or more DirectAccess servers can be managed from a single Remote Access Management console  
   
@@ -74,7 +77,7 @@ The following table lists the roles and features that are required for this scen
   
 |Role/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess and Routing and Remote Access Services (RRAS). The Remote Access role consists of two components:<br /><br />1.  DirectAccess and RRAS VPNâ€”DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routingâ€”RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access server role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server â€“ This feature is required to configure the network location server on the DirectAccess server, and the default web probe.<br />-   Windows Internal Databaseâ€”Used for local accounting on the DirectAccess server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess and Routing and Remote Access Services (RRAS). The Remote Access role consists of two components:<br /><br />1.  DirectAccess and RRAS VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access server role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server – This feature is required to configure the network location server on the DirectAccess server, and the default web probe.<br />-   Windows Internal Database—Used for local accounting on the DirectAccess server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a DirectAccess server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the DirectAccess server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access graphical user interface (GUI)<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
@@ -143,4 +146,5 @@ The following table provides links to additional resources.
 |**Community resources**|[DirectAccess Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
 |**Related technologies**|[How IPv6 works](http://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
   
+
 

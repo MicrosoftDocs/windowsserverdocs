@@ -13,6 +13,9 @@ ms.assetid: 511e1172-aeef-463d-b5dd-2bffae411ff1
 author: KBDAzure
 ---
 # Configure a virtual machine with a SCSI controller to be able to hot plug and hot unplug storage
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -44,4 +47,5 @@ The ability to hot plug or hot unplug storage makes it easier to manage the stor
   
 To use a SCSI controller to hot plug and hot unplug storage, the guest operating system must be running the current version of integration services.  
   
+
 

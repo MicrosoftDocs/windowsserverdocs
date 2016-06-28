@@ -13,6 +13,9 @@ ms.assetid: 9a3f8b74-f3c0-433f-a320-850ca8610757
 author: cwatsonmsft
 ---
 # Get started with Hyper-V on Windows Server 2016 Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
   
   
 Use the following resources to set up and try out Hyper-V on the Nano Server, Server Core or GUI installation option of Windows Server 2016 Technical Preview. But before you install anything, check the  [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).    
@@ -27,4 +30,5 @@ Use the following resources to set up and try out Hyper-V on the Nano Server, Se
 -   [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md)  
 -   [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)  
   
+
 

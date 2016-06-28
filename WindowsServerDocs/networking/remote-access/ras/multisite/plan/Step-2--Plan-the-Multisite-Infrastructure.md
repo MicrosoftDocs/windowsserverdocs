@@ -12,6 +12,9 @@ ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
 author: coreyp
 ---
 # Step 2: Plan the Multisite Infrastructure
+
+>Applies To: Windows Server Technical Preview
+
 The next step in deploying Remote Access in a multisite topology is to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.  
   
 |Task|Description|  
@@ -24,11 +27,11 @@ The next step in deploying Remote Access in a multisite topology is to complete 
 ## <a name="bkmk_2_1_AD"></a>2.1 Plan Active Directory  
 A Remote Access multisite deployment can be configured in a number of topologies:  
   
--   **Single Active Directory site, multiple entry points**‚ÄîIn this topology, you have a single Active Directory site for your entire organization with fast intranet links throughout the site, but you have multiple Remote Access servers deployed throughout your organization, each acting as an entry point. A geographical example of this topology is to have a single Active Directory site for the United States with entry points on the East coast and the West coast.  
+-   **Single Active Directory site, multiple entry points**óIn this topology, you have a single Active Directory site for your entire organization with fast intranet links throughout the site, but you have multiple Remote Access servers deployed throughout your organization, each acting as an entry point. A geographical example of this topology is to have a single Active Directory site for the United States with entry points on the East coast and the West coast.  
   
     ![](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo1.png)  
   
--   **Multiple Active Directory sites, multiple entry points**‚ÄîIn this topology, you have two or more Active Directory sites with a Remote Access server deployed as an entry point for each site. Each Remote Access server is associated with the Active Directory domain controller for the site. A geographical example of this topology is to have an Active Directory site for the United States and one for Europe with a single entry point for each site. Note that if you have multiple Active Directory sites you do not need to have an entry point associated with each site. In addition, some Active Directory sites can have more than one entry point associated with it.  
+-   **Multiple Active Directory sites, multiple entry points**óIn this topology, you have two or more Active Directory sites with a Remote Access server deployed as an entry point for each site. Each Remote Access server is associated with the Active Directory domain controller for the site. A geographical example of this topology is to have an Active Directory site for the United States and one for Europe with a single entry point for each site. Note that if you have multiple Active Directory sites you do not need to have an entry point associated with each site. In addition, some Active Directory sites can have more than one entry point associated with it.  
   
     ![](../../../../media/Step-2--Plan-the-Multisite-Infrastructure/RAMultisiteTopo2.png)  
   
@@ -39,11 +42,11 @@ Note the following recommendations and constraints for Active Directory deployme
   
 1.  Each Active Directory site can contain one or more Remote Access servers, or a server cluster, functioning as multisite entry points for client computers. However an Active Directory site is not required to have an entry point.  
   
-2.  A multisite entry point can only be associated with a single Active Directory site. When client computers running Windows¬Æ 8 connect to a specific entry point, they are considered as belonging to the Active Directory site associated with that entry point.  
+2.  A multisite entry point can only be associated with a single Active Directory site. When client computers running WindowsÆ 8 connect to a specific entry point, they are considered as belonging to the Active Directory site associated with that entry point.  
   
 3.  It is recommended that each Active Directory site has a domain controller. The domain controller can be read-only.  
   
-4.  If each Active Directory site contains a domain controller, The GPO for a server in the entry point is managed by one of the domain controllers in the Active Directory site associated with the endpoint. If there are no write-enabled domain controllers in that site, then the GPO for a server is managed on a write-enabled domain controller that is found closest to the first Remote Access server that is configured in the entry point. Closest is determined by a link cost calculation. Note that in this scenario, after making configuration changes there might be a delay when replicating between the domain controller managing the GPO and the read-only domain controller in the server‚Äôs Active Directory site.  
+4.  If each Active Directory site contains a domain controller, The GPO for a server in the entry point is managed by one of the domain controllers in the Active Directory site associated with the endpoint. If there are no write-enabled domain controllers in that site, then the GPO for a server is managed on a write-enabled domain controller that is found closest to the first Remote Access server that is configured in the entry point. Closest is determined by a link cost calculation. Note that in this scenario, after making configuration changes there might be a delay when replicating between the domain controller managing the GPO and the read-only domain controller in the serverís Active Directory site.  
   
 5.  Client GPOs and optional application server GPOs are managed on the domain controller running as the Primary Domain Controller (PDC) emulator. This means that client GPOs are not necessarily managed in the Active Directory site containing the entry point to which clients connect.  
   
@@ -73,9 +76,9 @@ DirectAccess settings configured during Remote Access deployment are collected i
   
 GPOs can be configured as follows:  
   
--   **Automatically**‚ÄîYou can specify that GPOs are created automatically by Remote Access. A default name is specified for each GPO, and can be modified.  
+-   **Automatically**óYou can specify that GPOs are created automatically by Remote Access. A default name is specified for each GPO, and can be modified.  
   
--   **Manually**‚ÄîYou can use GPOs that have been created manually by the Active Directory administrator.  
+-   **Manually**óYou can use GPOs that have been created manually by the Active Directory administrator.  
   
 > [!NOTE]  
 > Once DirectAccess is configured to use specific GPOs, it cannot be configured to use different GPOs.  
@@ -110,9 +113,9 @@ Note the following when using manually-created GPOs:
   
 -   The following GPOs should be created manually for the multisite deployment:  
   
-    -   **Server GPO**‚ÄîA server GPO for each entry point (in the domain in which the entry point is located). This GPO will be applied on each Remote Access server in the entry point.  
+    -   **Server GPO**óA server GPO for each entry point (in the domain in which the entry point is located). This GPO will be applied on each Remote Access server in the entry point.  
   
-    -   **Client GPO (Windows 7)**‚ÄîA GPO for each entry point and each domain containing  Windows 7  client computers that will connect to entry points in the multisite deployment. For example Domain1\DA_W7_Clients_GPO_Europe; Domain2\DA_W7_Clients_GPO_Europe; Domain1\DA_W7_Clients_GPO_US; Domain2\DA_W7_Clients_GPO_US. If no  Windows 7  client computers will connect to entry points, GPOs are not required.  
+    -   **Client GPO (Windows 7)**óA GPO for each entry point and each domain containing  Windows 7  client computers that will connect to entry points in the multisite deployment. For example Domain1\DA_W7_Clients_GPO_Europe; Domain2\DA_W7_Clients_GPO_Europe; Domain1\DA_W7_Clients_GPO_US; Domain2\DA_W7_Clients_GPO_US. If no  Windows 7  client computers will connect to entry points, GPOs are not required.  
   
 -   There is no requirement to create additional GPOs for Windows 8 client computers. A GPO for each domain containing client computers was already created when the single Remote Access server was deployed. In a multisite deployment these client GPOs will function as the GPOs for Windows 8 clients.  
   
@@ -133,7 +136,7 @@ Each GPO will be managed by a specific domain controller, as follows:
   
 If you want to manually modify GPO settings note the following:  
   
--   For server GPOs, in order to identify which domain controller is associated with a specific entry point, run the PowerShell cmdlet `Get-DAEntryPointDC ‚ÄìEntryPointName <name of entry point>`.  
+-   For server GPOs, in order to identify which domain controller is associated with a specific entry point, run the PowerShell cmdlet `Get-DAEntryPointDC ñEntryPointName <name of entry point>`.  
   
 -   By default, when you make changes with networking PowerShell cmdlets or the Group Policy Management console, the domain controller acting as the PDC emulator is used.  
   
@@ -150,17 +153,17 @@ If you want to manually modify GPO settings note the following:
     2.  To do this in PowerShell, specify the DomainController parameter for the Open-NetGPO cmdlet. For example, to enable the private and public profiles in Windows Firewall on a GPO named domain1\DA_Server_GPO _Europe using a domain controller named europe-dc.corp.contoso.com, do the following:  
   
         ```  
-        $gpoSession = Open-NetGPO ‚ÄìPolicyStore ‚Äúdomain1\DA_Server_GPO _Europe‚Äù ‚ÄìDomainController ‚Äúeurope-dc.corp.contoso.com‚Äù  
-        Set-NetFirewallProfile ‚ÄìGpoSession $gpoSession ‚ÄìName @(‚ÄúPrivate‚Äù,‚ÄùPublic‚Äù) ‚ÄìEnabled True  
-        Save-NetGPO ‚ÄìGpoSession $gpoSession  
+        $gpoSession = Open-NetGPO ñPolicyStore ìdomain1\DA_Server_GPO _Europeî ñDomainController ìeurope-dc.corp.contoso.comî  
+        Set-NetFirewallProfile ñGpoSession $gpoSession ñName @(ìPrivateî,îPublicî) ñEnabled True  
+        Save-NetGPO ñGpoSession $gpoSession  
         ```  
   
 #### Modifying domain controller association  
 To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. In some scenarios, it may be required to assign a different domain controller for a GPO:  
   
--   **Domain controller maintenance and downtime**‚ÄîWhen the domain controller that manages a GPO is not available, it may be required to manage the GPO on a different domain controller. See [Domain controller maintenance and downtime](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#DCMaintandDowntime).  
+-   **Domain controller maintenance and downtime**óWhen the domain controller that manages a GPO is not available, it may be required to manage the GPO on a different domain controller. See [Domain controller maintenance and downtime](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#DCMaintandDowntime).  
   
--   **Optimization of configuration distribution**‚ÄîAfter network infrastructure changes, it may be required to manage the server GPO of an entry point on a domain controller in the same Active Directory site as the entry point. See [Optimization of configuration distribution](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigDistOptimization).  
+-   **Optimization of configuration distribution**óAfter network infrastructure changes, it may be required to manage the server GPO of an entry point on a domain controller in the same Active Directory site as the entry point. See [Optimization of configuration distribution](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigDistOptimization).  
   
 ## <a name="bkmk_2_4_DNS"></a>2.4 Plan DNS  
 Note the following when planning DNS for a multisite deployment:  
@@ -171,9 +174,9 @@ Note the following when planning DNS for a multisite deployment:
   
 3.  Remote Access creates a default web probe that is used by DirectAccess client computers to verify connectivity to the internal network. During configuration of the single server the following names should have been registered in DNS:  
   
-    1.  directaccess-WebProbeHost‚Äîshould resolve to the internal IPv4 address of the Remote Access server, or to the IPv6 address in an IPv6-only environment.  
+    1.  directaccess-WebProbeHostóshould resolve to the internal IPv4 address of the Remote Access server, or to the IPv6 address in an IPv6-only environment.  
   
-    2.  directaccess-CorpConnectivityHost‚Äîshould resolve to a localhost (loopback) address (either ::1 or 127.0.0.1, depending on whether IPv6 is deployed in the corporate network).  
+    2.  directaccess-CorpConnectivityHostóshould resolve to a localhost (loopback) address (either ::1 or 127.0.0.1, depending on whether IPv6 is deployed in the corporate network).  
   
     In a multisite deployment an additional DNS entry for directaccess-WebProbeHost must be created for each entry point. When adding an entry point, Remote Access tries to automatically create this additional directaccess-WebProbeHost entry. However, if it fails a warning will be shown and you must create the entry manually.  
   
@@ -193,4 +196,5 @@ Note the following when planning DNS for a multisite deployment:
   
 -   [Deploy Remote Access in an Enterprise_Beta](assetId:///59cb282f-ddbf-494d-9392-1c79607c28cc)  
   
+
 

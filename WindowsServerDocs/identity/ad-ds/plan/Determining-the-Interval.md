@@ -12,6 +12,9 @@ ms.assetid: 988f01e8-ba59-4b34-8b71-60e0fa074674
 author: Femila
 ---
 # Determining the Interval
+
+>Applies To: Windows Server Technical Preview
+
 You must set the site link replication interval property to indicate how frequently you want replication to occur during the times when the schedule allows replication. For example, if the schedule allows replication between 02:00 hours and 04:00 hours, and the replication interval is set for 30 minutes, replication can occur up to four times during the scheduled time. The default replication interval is 180 minutes, or 3 hours. The minimum interval is 15 minutes.  
   
 Consider the following criteria to determine how often replication occurs within the schedule window:  
@@ -44,7 +47,7 @@ With a store-and-forward replication strategy, it is difficult to determine just
   
 -   Combine these maximum latencies to determine the maximum latency for the entire network.  
   
-    For example, if the maximum latency between Seattle and its satellite site in Los Angeles is one day, the maximum replication latency for this set of links (Washington, D.C.â€“New Yorkâ€“Seattleâ€“Los Angeles) is 31 hours, that is, 4 (Washington, D.C.â€“New York) + 3 (New Yorkâ€“Seattle) + 24 (Seattleâ€“Los Angeles), as shown in the following table.  
+    For example, if the maximum latency between Seattle and its satellite site in Los Angeles is one day, the maximum replication latency for this set of links (Washington, D.C.–New York–Seattle–Los Angeles) is 31 hours, that is, 4 (Washington, D.C.–New York) + 3 (New York–Seattle) + 24 (Seattle–Los Angeles), as shown in the following table.  
   
     |Sites|Seattle|Boston|Los Angeles|New York|Washington, D.C.|  
     |---------|-----------|----------|---------------|------------|--------------------|  
@@ -54,4 +57,5 @@ With a store-and-forward replication strategy, it is difficult to determine just
     |New York||||0.25|4.00|  
     |Washington, D.C.|||||0.25|  
   
+
 

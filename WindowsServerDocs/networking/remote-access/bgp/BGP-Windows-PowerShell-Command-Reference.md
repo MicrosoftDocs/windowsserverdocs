@@ -12,6 +12,9 @@ ms.assetid: 4b0240a3-b927-4a1e-b241-5f8f29a9552f
 author: jamesmci
 ---
 # BGP Windows PowerShell Command Reference
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic as a reference, when writing Windows PowerShell scripts, to add, configure, and remove BGP capabilities from RAS Gateway and Remote Access Local Area Network (LAN) routers.  
   
 These BGP commands are part of the Remote Access Windows PowerShell command set for Windows Server 2016 Technical Preview. This topic helps you quickly locate the BGP commands that you want to use in scripts.  
@@ -205,11 +208,11 @@ Install-RemoteAccess [-VpnType] <String> {Vpn | VpnS2S | SstpProxy | RoutingOnly
 ```  
   
 > [!IMPORTANT]  
-> When you install RAS Gateway in Multitenant mode, you must specify whether BGP is enabled for each tenant by using the **Enable-RemoteAccessRoutingDomain** Windows PowerShell command with the **‚ÄìType** parameter value of **All**. The following example code illustrates how to install RAS in Multitenancy mode with all RAS features (point-to-site VPN, site-to-site VPN, and BGP routing) enabled for two tenants, Contoso and Fabrikam.  
+> When you install RAS Gateway in Multitenant mode, you must specify whether BGP is enabled for each tenant by using the **Enable-RemoteAccessRoutingDomain** Windows PowerShell command with the **ñType** parameter value of **All**. The following example code illustrates how to install RAS in Multitenancy mode with all RAS features (point-to-site VPN, site-to-site VPN, and BGP routing) enabled for two tenants, Contoso and Fabrikam.  
   
 ```  
 $Contoso_RoutingDomain = "ContosoTenant"  
-$Fabrikam_RoutingDomain = ‚ÄúFabrikamTenant‚Äù  
+$Fabrikam_RoutingDomain = ìFabrikamTenantî  
   
 Install-RemoteAccess -MultiTenancy  
   
@@ -356,4 +359,5 @@ Uninstalls Remote Access from the computer, including all Remote Access features
 Uninstall-RemoteAccess [-CimSession <CimSession[]> ] [-ComputerName <String> ] [-EntrypointName <String> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-ThrottleLimit <Int32> ] [-VpnType <String> {Vpn | VpnS2S} ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
+
 

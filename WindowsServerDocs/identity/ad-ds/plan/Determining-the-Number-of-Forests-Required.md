@@ -12,6 +12,9 @@ ms.assetid: a2936b2a-1d3e-4549-a2f5-8de82851e267
 author: Femila
 ---
 # Determining the Number of Forests Required
+
+>Applies To: Windows Server Technical Preview
+
 To determine the number of forests that you must deploy, you need to carefully identify and evaluate the isolation and autonomy requirements for each group in your organization and map those requirements to the appropriate forest design models.  
   
 When determining the number of forests to deploy for your organization, consider the following:  
@@ -63,4 +66,5 @@ This support limitation exists because:
   
 -   [Using the Organizational Domain Forest Model](../../ad-ds/plan/Using-the-Organizational-Domain-Forest-Model.md)  
   
+
 

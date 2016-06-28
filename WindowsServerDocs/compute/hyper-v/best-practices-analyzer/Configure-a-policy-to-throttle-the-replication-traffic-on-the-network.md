@@ -13,6 +13,9 @@ ms.assetid: 82cb1aef-cdc3-4d0a-88d4-ef497ab79606
 author: KBDAzure
 ---
 # Configure a policy to throttle the replication traffic on the network
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -38,4 +41,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *If you use another method to throttle network traffic, you can ignore this. Otherwise, use Group Policy Editor to configure a policy that will throttle the network traffic to the relevant port of the Replica server.*  
   
   
+
 

@@ -14,6 +14,9 @@ ms.assetid: 22f363ed-d4cf-4c01-8238-75cc1d5b8d6b
 author: Femila
 ---
 # Virtualized Domain Controller Technical Reference Appendix
+
+>Applies To: Windows Server Technical Preview
+
 This topic covers:  
   
 -   [Terminology](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_Terms)  
@@ -22,21 +25,21 @@ This topic covers:
   
 ## <a name="BKMK_Terms"></a>Terminology  
   
--   **Snapshot** â€“ The state of a virtual machine at a particular point in time. It is dependent on the chain of previous snapshots taken, on the hardware, and on the virtualization platform.  
+-   **Snapshot** – The state of a virtual machine at a particular point in time. It is dependent on the chain of previous snapshots taken, on the hardware, and on the virtualization platform.  
   
--   **Clone** â€“ A complete and separate copy of a virtual machine. It is dependent on the virtual hardware (hypervisor).  
+-   **Clone** – A complete and separate copy of a virtual machine. It is dependent on the virtual hardware (hypervisor).  
   
--   **Full Clone** â€“ A full clone is an independent copy of a virtual machine that shares no resources with the parent virtual machine after the cloning operation. Ongoing operation of a full clone is entirely separate from the parent virtual machine.  
+-   **Full Clone** – A full clone is an independent copy of a virtual machine that shares no resources with the parent virtual machine after the cloning operation. Ongoing operation of a full clone is entirely separate from the parent virtual machine.  
   
 -   **Differencing disk** - A copy of a virtual machine that shares virtual disks with the parent virtual machine in an ongoing manner. This usually conserves disk space and allows multiple virtual machines to use the same software installation.  
   
 -   **VM Copy**- A file system copy of all the related files and folders of a virtual machine.  
   
--   **VHD File Copy** â€“ A copy of a virtual machineâ€™s VHD  
+-   **VHD File Copy** – A copy of a virtual machine’s VHD  
   
--   **VM Generation ID** â€“ a 128-bit integer given to the virtual machine by the hypervisor. This ID is stored in memory and reset every time a snapshot is applied. The design uses a hypervisor-agnostic mechanism for surfacing the VM-Generation ID in the virtual machine. The Hyper-V implementation exposes the ID in the ACPI table of the virtual machine.  
+-   **VM Generation ID** – a 128-bit integer given to the virtual machine by the hypervisor. This ID is stored in memory and reset every time a snapshot is applied. The design uses a hypervisor-agnostic mechanism for surfacing the VM-Generation ID in the virtual machine. The Hyper-V implementation exposes the ID in the ACPI table of the virtual machine.  
   
--   **Import/Export** â€“ A Hyper-V feature that allows the user to save the entire virtual machine (VM files, VHD and the machine configuration). It then allows users to using that set of files to bring the machine back on the same machine as the same VM (Restore), on a different machine as the same VM (Move), or a new VM (copy)  
+-   **Import/Export** – A Hyper-V feature that allows the user to save the entire virtual machine (VM files, VHD and the machine configuration). It then allows users to using that set of files to bring the machine back on the same machine as the same VM (Restore), on a different machine as the same VM (Move), or a new VM (copy)  
   
 ## <a name="BKMK_FixPDCPerms"></a>FixVDCPermissions.ps1  
   
@@ -73,4 +76,5 @@ write-host "Done writing new VDC permissions."
 cd c:   
 ```  
   
+
 

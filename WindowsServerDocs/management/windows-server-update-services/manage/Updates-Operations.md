@@ -12,6 +12,9 @@ ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
 author: coreyp-at-msft
 ---
 # Updates Operations
+
+>Applies To: Windows Server Technical Preview
+
 After updates have been synchronized to your WSUS server, they will be scanned automatically for relevance to the server's client computers. However, you must approve the updates before they are deployed to the computers on your network. When you approve an update, you are essentially telling WSUS what to do with it (your choices are **Install** or **Decline** for a new update). You can approve updates for the **All Computers** group or for subgroups. If you do not approve an update, its approval status remains **Not approved**, and your WSUS server allows clients to evaluate whether or not they need the update.
 
 If your WSUS server is running in replica mode, you will not be able to approve updates on your WSUS server. For more information about replica mode, see [Running WSUS Replica Mode](Running-WSUS-Replica-Mode.md).
@@ -90,7 +93,7 @@ After an update has been declined, you can still reinstate it.
 
 3.  In the list of updates, select one or more declined updates that you want to reinstate.
 
-4.  To reinstate a particular update, right click on the update and select **Approve**. In the **Approve Updates** dialog, click **OK** to re-apply the default ‚ÄúNot Approved‚Äù approval status. The update will show in the list as **Not approved** instead of Declined.
+4.  To reinstate a particular update, right click on the update and select **Approve**. In the **Approve Updates** dialog, click **OK** to re-apply the default ìNot Approvedî approval status. The update will show in the list as **Not approved** instead of Declined.
 
 After a declined update has been cleaned up by using the WSUS Server Cleanup Wizard, it will be deleted from the WSUS server and will no longer appear in the All Updates view. You can re-import Declined, cleaned-up updates from the Microsoft Update Catalog. For additional information, see [WSUS and the Catalog Site](WSUS-and-the-Catalog-Site.md).
 
@@ -163,9 +166,9 @@ The Automatic Approvals section of the Options pane contains a default option to
     > Keeping the default values for these options allows you maintain good performance on your WSUS network. If you do not want expired updates to be declined automatically, you should make sure to decline them manually on a periodic basis.
 
 ## Automatically Declining Superseded Updates
-When you approve a new update that supersedes an existing update which is automatically approved, the superseded update becomes ‚ÄúNot Applicable‚Äù to a computer or device once the newer update has been installed. You can verify in the WSUS console that an update is Not Applicable for all computers. When that is the case, the update can be safely Declined. Additionally, the update may be automatically declined when you run the WSUS Server Cleanup Wizard.
+When you approve a new update that supersedes an existing update which is automatically approved, the superseded update becomes ìNot Applicableî to a computer or device once the newer update has been installed. You can verify in the WSUS console that an update is Not Applicable for all computers. When that is the case, the update can be safely Declined. Additionally, the update may be automatically declined when you run the WSUS Server Cleanup Wizard.
 
-To search for superseded updates, you can select the ‚ÄúSuperseded‚Äù flag column in the All Updates view, and sort on that column. There will be four groups:
+To search for superseded updates, you can select the ìSupersededî flag column in the All Updates view, and sort on that column. There will be four groups:
 
 -   Updates which have never been superseded (a blank icon).
 
@@ -175,7 +178,7 @@ To search for superseded updates, you can select the ‚ÄúSuperseded‚Äù flag colum
 
 -   Updates which have superseded another update (an icon with a blue square at the top).
 
-There is no feature in Windows Server Update Services that automatically declines superseded updates upon approval of a newer update. It is recommended to first set the approval to ‚ÄúNot Approved,‚Äù and then use the Server Cleanup Wizard to automatically decline the update when all relevant conditions have been satisfied. For more information, see: [The Server Cleanup Wizard](The-Server-Cleanup-Wizard.md).
+There is no feature in Windows Server Update Services that automatically declines superseded updates upon approval of a newer update. It is recommended to first set the approval to ìNot Approved,î and then use the Server Cleanup Wizard to automatically decline the update when all relevant conditions have been satisfied. For more information, see: [The Server Cleanup Wizard](The-Server-Cleanup-Wizard.md).
 
 ## Approving Superseding or Superseded Updates
 Typically, an update that supersedes other updates does one or more of the following:
@@ -207,5 +210,6 @@ WSUS does not automatically decline superseded updates, and it is recommended th
 -   [The Server Cleanup Wizard](The-Server-Cleanup-Wizard.md)
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
+
 
 

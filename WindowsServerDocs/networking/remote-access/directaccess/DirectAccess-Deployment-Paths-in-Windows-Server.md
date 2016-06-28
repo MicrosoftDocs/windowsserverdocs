@@ -12,6 +12,9 @@ ms.assetid: 22ccd5c3-0a26-484c-88c8-54119d1228cc
 author: vhorne
 ---
 # DirectAccess Deployment Paths in Windows Server
+
+>Applies To: Windows Server Technical Preview
+
 This topic provides a listing of the documentation for the two main Remote Access deployment paths: **Basic** and **Advanced**.  
   
 You can use the section below to gain an understanding of the differences between the DirectAccess Basic and Advanced deployment paths, and you can use the documentation links to locate the deployment guide that is best suited to your goals.  
@@ -26,4 +29,5 @@ With an advanced DirectAccess deployment, you deploy a single DirectAccess serve
   
 -   [Deploy a Single DirectAccess Server with Advanced Settings](../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). You can use this guide to deploy DirectAccess with advanced settings in a production environment.  
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: a0fcd250-e5f7-41b3-b0e8-240f8236e210
 author: femila
 ---
 # Windows Time Service
+
+>Applies To: Windows Server Technical Preview
+
   
   
 ## <a name="w2k3tr_times_intro"></a>Windows Time Service Technical Reference  
@@ -25,9 +28,9 @@ author: femila
 * Windows Time Service Tools and Settings  
   
 > [!NOTE]  
-> In Windows ServerÂ® 2003 and Microsoft Windows 2000 Server, the directory service is named Active DirectoryÂ® directory service. In  Windows Server 2008 R2  and  Windows Server 2008 , the directory service is named Active Directory Domain Services (AD DS). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory Domain Services in Windows Server 2016.  
+> In Windows Server® 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory® directory service. In  Windows Server 2008 R2  and  Windows Server 2008 , the directory service is named Active Directory Domain Services (AD DS). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory Domain Services in Windows Server 2016.  
   
-The WindowsÂ® Time service, also known as W32Time, synchronizes the date and time for all computers running in an AD DS domain. Time synchronization is critical for the proper operation of many Windows services and line-of-business applications. The Windows Time service uses the Network Time Protocol (NTP) to synchronize computer clocks on the network so that an accurate clock value, or time stamp, can be assigned to network validation and resource access requests. The service integrates NTP and time providers, making it a reliable and scalable time service for enterprise administrators.  
+The Windows® Time service, also known as W32Time, synchronizes the date and time for all computers running in an AD DS domain. Time synchronization is critical for the proper operation of many Windows services and line-of-business applications. The Windows Time service uses the Network Time Protocol (NTP) to synchronize computer clocks on the network so that an accurate clock value, or time stamp, can be assigned to network validation and resource access requests. The service integrates NTP and time providers, making it a reliable and scalable time service for enterprise administrators.  
   
 > [!IMPORTANT]  
 > The W32Time service is not a full-featured NTP solution that meets time-sensitive application needs and is not supported by Microsoft as such. For more information, see Microsoft Knowledge Base article 939322, [Support boundary to configure the Windows Time service for high-accuracy environments](http://go.microsoft.com/fwlink/?LinkID=179459) (http://go.microsoft.com/fwlink/?LinkID=179459).  
@@ -54,7 +57,7 @@ This guide does **not** discuss configuring the Windows Time service. There are 
   
 -   To configure the Windows Time service on a host computer that runs a virtual environment, see Microsoft Knowledge Base article 816042, [How to configure an authoritative time server in Windows Server](http://go.microsoft.com/fwlink/?LinkID=60402) (http://go.microsoft.com/fwlink/?LinkID=60402). If you are working with a non-Microsoft virtualization product, be sure to consult the documentation of the vendor for that product.  
   
--   To configure the Windows Time service on a domain controller that is running in a virtual machine, it is recommended that you partially disable time synchronization between the host system and guest operating system acting as a domain controller. This enables your guest domain controller to synchronize time for the domain hierarchy, but protects it from having a time skew if it is restored from a Saved state. For more information, see Microsoft Knowledge Base article 976924, [You receive Windows Time Service event IDs 24, 29, and 38 on a virtualized domain controller that is running on a Windows Server 2008â€“based host server with Hyper-V](http://go.microsoft.com/fwlink/?LinkID=192236) (http://go.microsoft.com/fwlink/?LinkID=192236) and [Deployment Considerations for Virtualized Domain Controllers](http://go.microsoft.com/fwlink/?LinkID=192235) (http://go.microsoft.com/fwlink/?LinkID=192235).  
+-   To configure the Windows Time service on a domain controller that is running in a virtual machine, it is recommended that you partially disable time synchronization between the host system and guest operating system acting as a domain controller. This enables your guest domain controller to synchronize time for the domain hierarchy, but protects it from having a time skew if it is restored from a Saved state. For more information, see Microsoft Knowledge Base article 976924, [You receive Windows Time Service event IDs 24, 29, and 38 on a virtualized domain controller that is running on a Windows Server 2008–based host server with Hyper-V](http://go.microsoft.com/fwlink/?LinkID=192236) (http://go.microsoft.com/fwlink/?LinkID=192236) and [Deployment Considerations for Virtualized Domain Controllers](http://go.microsoft.com/fwlink/?LinkID=192235) (http://go.microsoft.com/fwlink/?LinkID=192235).  
   
 -   To configure the Windows Time service on a domain controller acting as the forest root PDC emulator that is also running in a virtual computer, follow the same instructions for a physical computer as described in [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](http://go.microsoft.com/fwlink/?LinkId=91969) (http://go.microsoft.com/fwlink/?LinkId=91969).  
   
@@ -80,4 +83,5 @@ The Windows Time service uses NTP to help synchronize time across a network. NTP
 [Microsoft Knowledge Base article 902229](http://go.microsoft.com/fwlink/?LinkId=186066)  
 [Videos about the Windows Time Service](http://go.microsoft.com/fwlink/?LinkID=197277)  
   
+
 

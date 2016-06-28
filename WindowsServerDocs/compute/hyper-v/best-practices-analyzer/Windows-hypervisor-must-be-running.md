@@ -13,6 +13,9 @@ ms.assetid: 501a9beb-c464-46c0-88c5-e3e7e3e70101
 author: KBDAzure
 ---
 # Windows hypervisor must be running
+
+>Applies To: Windows Server Technical Preview
+
 *[This information is preliminary and subject to change.]*  
   
 |||  
@@ -51,13 +54,13 @@ To check the catalog, see [Windows Server catalog](http://go.microsoft.com/fwlin
   
         -   Usually available under the settings for the main processor or performance. Sometimes it's under the security settings.  
   
-        -   Look for parameter names that include ‚Äúvirtualization‚Äù or ‚Äúvirtualization technology‚Äù.  
+        -   Look for parameter names that include ìvirtualizationî or ìvirtualization technologyî.  
   
     -   Hardware-enforced DEP:  
   
         -   Usually available under the security or memory settings.  
   
-        -   Look for parameter names that include ‚Äúexecution‚Äù, ‚Äúexecute‚Äù, or ‚Äúprevention‚Äù.  
+        -   Look for parameter names that include ìexecutionî, ìexecuteî, or ìpreventionî.  
   
 3.  If necessary, turn on the settings by following the instructions in the configuration tool. Save the changes and exit.  
   
@@ -79,9 +82,10 @@ Next, check the Hyper-V-Hypervisor event log. If there are problems, you'll also
 4.  Open the System log. (In the navigation pane, expand **Windows Logs** and then select **System**.)  
   
 5.  Use a filter to find Hyper-V-Hypervisor events:   
-    1. In the **Actions** pane, click **Filter Current Log**. For **Event sources**, specify ‚ÄúHyper-V-Hypervisor‚Äù.   
-    2. Look for events that report problems. For example, event ID 41 indicates a problem with the BIOS configuration: ‚ÄúHyper-V launch failed; Either VMX not present or not enabled in BIOS.‚Äù  
+    1. In the **Actions** pane, click **Filter Current Log**. For **Event sources**, specify ìHyper-V-Hypervisorî.   
+    2. Look for events that report problems. For example, event ID 41 indicates a problem with the BIOS configuration: ìHyper-V launch failed; Either VMX not present or not enabled in BIOS.î  
   
 ### See Also  
 For details about using Hyper-V on Windows 10, including how to check that your computer can run Hyper-V, see [Windows 10 Hyper-V System Requirements](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_compatibility). 
+
 

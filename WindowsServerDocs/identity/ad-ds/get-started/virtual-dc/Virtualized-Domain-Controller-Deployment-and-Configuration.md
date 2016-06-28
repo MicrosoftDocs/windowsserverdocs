@@ -14,6 +14,9 @@ ms.assetid: f3e09c62-c40b-46f8-b115-c00c45c3c0ae
 author: Femila
 ---
 # Virtualized Domain Controller Deployment and Configuration
+
+>Applies To: Windows Server Technical Preview
+
 This topic covers:  
   
 -   [Installation Considerations](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_InstallConsiderations)  
@@ -381,7 +384,7 @@ Copy-Item
 Combine with VM cmdlets in pipelines to aid automation. The pipeline is a channel used between multiple cmdlets to pass data. For example, to copy the drive of an offline source domain controller named DC2-SOURCECLONE to a new disk called c:\temp\copy.vhd without the need to know the exact path to its system drive:  
   
 ```  
-Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-item â€“path $_.path â€“destination c:\temp\copy.vhd}  
+Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-item –path $_.path –destination c:\temp\copy.vhd}  
 ```  
   
 ![](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSCopyDrive.png)  
@@ -426,7 +429,7 @@ The final option is to use the disk merge and conversion options within Hyper-V.
 ##### Hyper-V Manager Method  
 To create a merged disk using Hyper-V Manager:  
   
-1.  Click **Edit Diskâ€¦**.  
+1.  Click **Edit Disk…**.  
   
 2.  Browse for the lowest child disk. For example, if you are using a differencing disk, the child disk is the lowest child. If the virtual machine has a snapshot (or multiple ones), the currently selected snapshot is the lowest child disk.  
   
@@ -472,37 +475,37 @@ The following locations can contain the CustomDCCloneAllowList.xml file:
   
 You can run New-ADDCCloneConfigFile with the **-offline** argument (also known as offline mode) to create the DcCloneConfig.xml file and place it in a correct location. The following examples show how to run New-ADDCCloneConfigFile in offline mode.  
   
-To create a clone domain controller named CloneDC1 in offline mode, in a site called â€œREDMONDâ€ with static IPv4 address, type:  
+To create a clone domain controller named CloneDC1 in offline mode, in a site called “REDMOND” with static IPv4 address, type:  
   
 ```  
-New-ADDCCloneConfigFile â€“Offline â€“CloneComputerName CloneDC1 â€“SiteName REDMOND -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" â€“Static â€“Path F:\Windows\NTDS  
+New-ADDCCloneConfigFile –Offline –CloneComputerName CloneDC1 –SiteName REDMOND -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" –Static –Path F:\Windows\NTDS  
   
 ```  
   
 To create a clone domain controller named Clone2 in offline mode with static IPv4 and static IPv6 settings, type:  
   
 ```  
-New-ADDCCloneConfigFile â€“Offline -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" â€“Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone2" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" â€“Path F:\Windows\NTDS  
+New-ADDCCloneConfigFile –Offline -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" –Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone2" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" –Path F:\Windows\NTDS  
   
 ```  
   
 To create a clone domain controller in offline mode with static IPv4 and dynamic IPv6 settings and specify multiple DNS servers for the DNS resolver settings, type:  
   
 ```  
-New-ADDCCloneConfigFile â€“Offline -IPv4Address "10.0.0.10" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" -IPv4DNSResolver @( "10.0.0.1","10.0.0.2" ) â€“Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" â€“Path F:\Windows\NTDS   
+New-ADDCCloneConfigFile –Offline -IPv4Address "10.0.0.10" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" -IPv4DNSResolver @( "10.0.0.1","10.0.0.2" ) –Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" –Path F:\Windows\NTDS   
 ```  
   
 To create a clone domain controller named Clone1 in offline mode with dynamic IPv4 and static IPv6 settings, type:  
   
 ```  
-New-ADDCCloneConfigFile â€“Offline -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone1" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" -SiteName "REDMOND" â€“Path F:\Windows\NTDS  
+New-ADDCCloneConfigFile –Offline -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone1" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" -SiteName "REDMOND" –Path F:\Windows\NTDS  
   
 ```  
   
 To create a clone domain controller in offline mode with dynamic IPv4 and dynamic IPv6 settings, type:  
   
 ```  
-New-ADDCCloneConfigFile â€“Offline -IPv4DNSResolver "10.0.0.1" -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" â€“Path F:\Windows\NTDS  
+New-ADDCCloneConfigFile –Offline -IPv4DNSResolver "10.0.0.1" -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" –Path F:\Windows\NTDS  
   
 ```  
   
@@ -644,7 +647,7 @@ For example:
 > [!WARNING]  
 > Ensure that, when importing the computer, static MAC addresses were not assigned to the source domain controller. If a source computer with a static MAC is cloned, those copied computers will not correctly send or receive any network traffic. Set a new unique static or dynamic MAC address if this is the case. You can see if a VM uses static MAC addresses with the command:  
 >   
-> **Get-VM â€“VMName**   
+> **Get-VM –VMName**   
 >  ***test-vm* | Get-VMNetworkAdapter | fl \***  
   
 ### Step 9 - Clone the New Virtual Machine  
@@ -806,4 +809,5 @@ Rename-VMSnapshot
 Restore-VMSnapshot  
 ```  
   
+
 

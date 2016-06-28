@@ -13,6 +13,9 @@ ms.assetid: 271ac068-f1f9-4f9a-a19e-bdfc6e539523
 ---
 # AD FS Technical Reference
 
+>Applies To: Windows Server 2012 R2
+
+
 -   [Understanding Key AD FS Concepts](https://technet.microsoft.com/library/ee913566(v=ws.11).aspx)
 
 > [!TIP]
@@ -20,5 +23,6 @@ ms.assetid: 271ac068-f1f9-4f9a-a19e-bdfc6e539523
 
 ## See Also
 [Active Directory Federation Services Overview](AD-FS-2016-Overview.md)
+
 
 

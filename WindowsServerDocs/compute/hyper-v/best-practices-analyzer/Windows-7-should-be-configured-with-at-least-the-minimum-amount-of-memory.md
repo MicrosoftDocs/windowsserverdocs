@@ -13,6 +13,9 @@ ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
 author: KBDAzure
 ---
 # Windows 7 should be configured with at least the minimum amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -65,4 +68,5 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

@@ -14,6 +14,9 @@ ms.assetid: ef51a2e0-9cd6-43c7-80b4-4f3c696c5c2a
 author: Femila
 ---
 # Simplified Administration Appendix
+
+>Applies To: Windows Server Technical Preview
+
   
 -   [Server Manager Add Servers Dialog (Active Directory)](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)  
   
@@ -26,7 +29,7 @@ author: Femila
 -   [Ntdsutil.exe Install from Media Changes](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)  
   
 ## <a name="BKMK_AddServers"></a>Server Manager Add Servers Dialog (Active Directory)  
-The **Add Servers** dialog allows searching Active Directory for servers, by operating system, using wildcards, and by location. The dialog also allows using DNS queries by fully qualified domain name or prefix name. These searches use native DNS and LDAP protocols implemented through .NET, not AD Windows PowerShell against the AD Management Gateway through SOAP â€“ meaning that the domain controllers contacted by Server Manager can even run Windows Server 2003. You can also import a file with server names for provisioning purposes.  
+The **Add Servers** dialog allows searching Active Directory for servers, by operating system, using wildcards, and by location. The dialog also allows using DNS queries by fully qualified domain name or prefix name. These searches use native DNS and LDAP protocols implemented through .NET, not AD Windows PowerShell against the AD Management Gateway through SOAP – meaning that the domain controllers contacted by Server Manager can even run Windows Server 2003. You can also import a file with server names for provisioning purposes.  
   
 The Active Directory search uses the following LDAP filters:  
   
@@ -101,4 +104,5 @@ The following table describes the two new menu items:
   
 ![](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)  
   
+
 

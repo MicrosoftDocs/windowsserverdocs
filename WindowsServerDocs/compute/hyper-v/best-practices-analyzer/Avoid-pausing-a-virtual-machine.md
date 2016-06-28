@@ -13,6 +13,9 @@ ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 author: KBDAzure
 ---
 # Avoid pausing a virtual machine
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -57,4 +60,5 @@ You can do this in one command by using filtering and the pipeline after you get
 get-vm | where state -eq 'paused' | resume-vm  
 ```  
   
+
 

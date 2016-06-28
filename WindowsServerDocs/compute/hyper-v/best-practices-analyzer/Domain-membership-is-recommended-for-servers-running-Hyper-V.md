@@ -13,6 +13,9 @@ ms.assetid: 2f4578e5-0848-46b4-a50b-7dbd480b80bf
 author: KBDAzure
 ---
 # Domain membership is recommended for servers running Hyper-V
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -49,4 +52,5 @@ Joining a computer to a domain requires permissions on the computer and the doma
   
 For instructions, see [Join the Computer to the Domain](http://go.microsoft.com/fwlink/?LinkId=190193) (http://go.microsoft.com/fwlink/?LinkId=190193).  
   
+
 

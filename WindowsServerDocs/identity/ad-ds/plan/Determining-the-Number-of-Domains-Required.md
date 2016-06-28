@@ -12,6 +12,9 @@ ms.assetid: bf0230ae-4f1a-4200-892f-b621278657ec
 author: Femila
 ---
 # Determining the Number of Domains Required
+
+>Applies To: Windows Server Technical Preview
+
 Every forest starts with a single domain. The maximum number of users that a single domain forest can contain is based on the slowest link that must accommodate replication between domain controllers and the available bandwidth that you want to allocate to Active Directory Domain Services (AD DS). The following table lists the maximum recommended number of users that a domain can contain based on a single domain forest, the speed of the slowest link, and the percentage of bandwidth that you want to reserve for replication. This information applies to forests that contain a maximum of 100,000 users and that have a connectivity of 28.8 kilobits per second (Kbps) or higher. For recommendations that apply to forests that contain more than 100,000 users or connectivity of less than 28.8 Kbps, consult an experienced Active Directory designer. The values in the following table are based on the replication traffic generated in an environment that has the following characteristics:  
   
 -   New users join the forest at a rate of 20 percent per year.  
@@ -22,7 +25,7 @@ Every forest starts with a single domain. The maximum number of users that a sin
   
 -   The ratio of users to computers is 1:1.  
   
--   Active Directoryâ€“integrated Domain Name System (DNS) is used.  
+-   Active Directory–integrated Domain Name System (DNS) is used.  
   
 -   DNS scavenging is used.  
   
@@ -65,7 +68,7 @@ First, determine the maximum number of users that your forest can host. Base thi
   
 -   The ratio of users to computers is 1:1.  
   
--   Active Directoryâ€“integrated DNS is used.  
+-   Active Directory–integrated DNS is used.  
   
 -   DNS scavenging is used.  
   
@@ -105,7 +108,7 @@ Determine the number of users that need to be hosted in each region, and then ve
   
 -   The ratio of users to computers is 1:1.  
   
--   Active Directoryâ€“integrated DNS is used.  
+-   Active Directory–integrated DNS is used.  
   
 -   DNS scavenging is used.  
   
@@ -138,4 +141,5 @@ After you divide your organization into regional domains, document the regions t
   
 For a worksheet to assist you in documenting the regions you identified, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Identifying Regions" (DSSLOGI_4.doc).  
   
+
 

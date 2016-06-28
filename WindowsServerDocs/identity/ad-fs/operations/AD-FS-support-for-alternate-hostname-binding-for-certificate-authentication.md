@@ -13,6 +13,9 @@ ms.assetid: c253e60c-f335-42ad-a0cb-fc2796a3196b
 author: billmath
 ---
 # AD FS support for alternate hostname binding for certificate authentication
+
+>Applies To: Windows Server Technical Preview
+
 On many networks the local firewall policies might not allow traffic through non-standard ports like 49443.   This became an issue with trying to accomplish certificate authentication with AD FS prior to AD FS in Windows Server 2016.  This is because you could not have different bindings for device authentication and user certificate authentication on the same host.  The default port 443 is bound to receive device certificates and cannot be altered to support multiple binding in the same channel.  The results were that smart card authentication would not work and users were unaware of what happened since there is no indication of what really happened.  
   
 With AD FS in Windows Server 2016 this can be accomplished  
@@ -36,4 +39,5 @@ When prompted, click Yes to confirm.  And that should  be it.
   
 ![](media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_3.png)  
   
+
 

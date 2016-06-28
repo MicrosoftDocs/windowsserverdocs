@@ -14,15 +14,18 @@ ms.assetid: 4014cfb7-fe62-4e5c-9b8b-c502a3bed324
 author: Femila
 ---
 # Implementing Secure Administrative Hosts
-Secure administrative hosts are workstations or servers that have been configured specifically for the purposes of creating secure platforms from which privileged accounts can perform administrative tasks in Active Directory or on domain controllers, domain-joined systems, and applications running on domain-joined systems. In this case, ‚Äúprivileged accounts‚Äù refers not only to accounts that are members of the most privileged groups in Active Directory, but to any accounts that have been delegated rights and permissions that allow administrative tasks to be performed.  
+
+>Applies To: Windows Server Technical Preview
+
+Secure administrative hosts are workstations or servers that have been configured specifically for the purposes of creating secure platforms from which privileged accounts can perform administrative tasks in Active Directory or on domain controllers, domain-joined systems, and applications running on domain-joined systems. In this case, ìprivileged accountsî refers not only to accounts that are members of the most privileged groups in Active Directory, but to any accounts that have been delegated rights and permissions that allow administrative tasks to be performed.  
   
 These accounts may be Help Desk accounts that have the ability to reset passwords for most of the users in a domain, accounts that are used to administer DNS records and zones, or accounts that are used for configuration management. Secure administrative hosts are dedicated to administrative functionality, and they do not run software such as email applications, web browsers, or productivity software such as Microsoft Office.  
   
-Although the ‚Äúmost privileged‚Äù accounts and groups should accordingly be the most stringently protected, this does not eliminate the need to protect any accounts and groups to which privileges above those of standard user accounts have been granted.  
+Although the ìmost privilegedî accounts and groups should accordingly be the most stringently protected, this does not eliminate the need to protect any accounts and groups to which privileges above those of standard user accounts have been granted.  
   
-A secure administrative host can be a dedicated workstation that is used only for administrative tasks, a member server that runs the Remote Desktop Gateway server role and to which IT users connect to perform administration of destination hosts, or a server that runs the Hyper-V¬Æ role and provides a unique virtual machine for each IT user to use for their administrative tasks. In many environments, combinations of all three approaches may be implemented.  
+A secure administrative host can be a dedicated workstation that is used only for administrative tasks, a member server that runs the Remote Desktop Gateway server role and to which IT users connect to perform administration of destination hosts, or a server that runs the Hyper-VÆ role and provides a unique virtual machine for each IT user to use for their administrative tasks. In many environments, combinations of all three approaches may be implemented.  
   
-Implementing secure administrative hosts requires planning and configuration that is consistent with your organization‚Äôs size, administrative practices, risk appetite, and budget. Considerations and options for implementing secure administrative hosts are provided here for you to use in developing an administrative strategy suitable for your organization.  
+Implementing secure administrative hosts requires planning and configuration that is consistent with your organizationís size, administrative practices, risk appetite, and budget. Considerations and options for implementing secure administrative hosts are provided here for you to use in developing an administrative strategy suitable for your organization.  
   
 ## Principles for Creating Secure Administrative Hosts  
 To effectively secure systems against attacks, a few general principles should be kept in mind:  
@@ -47,11 +50,11 @@ You should also configure secure administrative hosts to permit logons only by a
 This grants interactive (and, where appropriate, Remote Desktop Services) logon rights only to authorized users of the secure administrative host.  
   
 ### Physical Security  
-For administrative hosts to be considered trustworthy, they must be configured and protected to the same degree as the systems they manage. Most of the recommendations provided in [Securing Domain Controllers Against Attack](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md) are also applicable to the hosts that are used to administer domain controllers and the AD DS database. One of the challenges of implementing secure administrative systems in most environments is that physical security can be more difficult to implement because these computers often reside in areas that are not as secure as servers hosted in datacenters, such as administrative users‚Äô desktops.  
+For administrative hosts to be considered trustworthy, they must be configured and protected to the same degree as the systems they manage. Most of the recommendations provided in [Securing Domain Controllers Against Attack](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md) are also applicable to the hosts that are used to administer domain controllers and the AD DS database. One of the challenges of implementing secure administrative systems in most environments is that physical security can be more difficult to implement because these computers often reside in areas that are not as secure as servers hosted in datacenters, such as administrative usersí desktops.  
   
 Physical security includes controlling physical access to administrative hosts. In a small organization, this may mean that you maintain a dedicated administrative workstation that is kept locked in an office or a desk drawer when not in use. Or it may mean that when you need to perform administration of Active Directory or your domain controllers, you log on to the domain controller directly.  
   
-In medium-sized organizations, you may consider implementing secure administrative ‚Äújump servers‚Äù that are located in a secured location in an office and are used when management of Active Directory or domain controllers is required. You may also implement administrative workstations that are locked in secure locations when not in use, with or without jump servers.  
+In medium-sized organizations, you may consider implementing secure administrative ìjump serversî that are located in a secured location in an office and are used when management of Active Directory or domain controllers is required. You may also implement administrative workstations that are locked in secure locations when not in use, with or without jump servers.  
   
 In large organizations, you can deploy datacenter-housed jump servers that provide strictly controlled access to Active Directory; domain controllers; and file, print, or application servers. Implementation of a jump server architecture is most likely to include a combination of secure workstations and servers in large environments.  
   
@@ -61,7 +64,7 @@ Regardless of the size of your organization and the design of your administrativ
 All administrative hosts, whether servers or workstations, should run the newest operating system in use in your organization for the reasons described earlier in this document. By running current operating systems, your administrative staff benefits from new security features, full vendor support, and additional functionality introduced in the operating system. Moreover, when you are evaluating a new operating system, by deploying it first to administrative hosts, you will need to familiarize yourself with the new features, settings and management mechanisms it offers, which can subsequently be leveraged in planning broader deployment of the operating system. By then, the most sophisticated users in your organization will also be the users who are familiar with the new operating system and best positioned to support it.  
   
 ### Microsoft Security Configuration Wizard  
-If you implement jump servers as part of your administrative host strategy, you should use the built-in Security Configuration Wizard to configure service, registry, audit, and firewall settings to reduce the server‚Äôs attack surface. When the Security Configuration Wizard configuration settings have been collected and configured, the settings can be converted to a GPO that is used to enforce a consistent baseline configuration on all jump servers. You can further edit the GPO to implement security settings specific to jump servers, and can combine all of the settings with additional baseline settings extracted from the Microsoft Security Compliance Manager.  
+If you implement jump servers as part of your administrative host strategy, you should use the built-in Security Configuration Wizard to configure service, registry, audit, and firewall settings to reduce the serverís attack surface. When the Security Configuration Wizard configuration settings have been collected and configured, the settings can be converted to a GPO that is used to enforce a consistent baseline configuration on all jump servers. You can further edit the GPO to implement security settings specific to jump servers, and can combine all of the settings with additional baseline settings extracted from the Microsoft Security Compliance Manager.  
   
 ### Microsoft Security Compliance Manager  
 The [Microsoft Security Compliance Manager](http://technet.microsoft.com/library/cc677002.aspx) is a freely available tool that integrates security configurations that are recommended by Microsoft, based on operating system version and role configuration, and collects them in a single tool and UI that can be used to create and configure baseline security settings for domain controllers. Microsoft Security Compliance Manager templates can be combined with Security Configuration Wizard settings to produce comprehensive configuration baselines for jump servers that are deployed and enforced by GPOs deployed at the OUs in which jump servers are located in Active Directory.  
@@ -70,7 +73,7 @@ The [Microsoft Security Compliance Manager](http://technet.microsoft.com/library
 > As of this writing, the Microsoft Security Compliance Manager does not include settings specific to jump servers or other secure administrative hosts, but Security Compliance Manager (SCM) can still be used to create initial baselines for your administrative hosts. To properly secure the hosts, however, you should apply additional security settings appropriate to highly secured workstations and servers.  
   
 ### AppLocker  
-Administrative hosts and virtual machinesshould be configured with script, tool, and application whitelists via AppLocker or a third-party application restriction software. Any administrative applications or utilities that do not adhere to secure settings should be upgraded or replaced with tooling that adheres to secure development and administrative practices. When new or additional tooling is needed on an administrative host, applications and utilities should be thoroughly tested, and if the tooling is suitable for deployment on administrative hosts, it can be added to the systems‚Äô whitelists.  
+Administrative hosts and virtual machinesshould be configured with script, tool, and application whitelists via AppLocker or a third-party application restriction software. Any administrative applications or utilities that do not adhere to secure settings should be upgraded or replaced with tooling that adheres to secure development and administrative practices. When new or additional tooling is needed on an administrative host, applications and utilities should be thoroughly tested, and if the tooling is suitable for deployment on administrative hosts, it can be added to the systemsí whitelists.  
   
 ### RDP Restrictions  
 Although the specific configuration will vary depending on the architecture of your administrative systems, you should include restrictions on which accounts and computers can be used to establish Remote Desktop Protocol (RDP) connections to managed systems, such as using Remote Desktop Gateway (RD Gateway) jump servers to control access to domain controllers and other managed systems from authorized users and systems.  
@@ -83,18 +86,18 @@ Smaller organizations may rely on offerings such as Windows Update or [Windows S
 Although you should not implement manual update processes for secure systems, you should configure a separate infrastructure for updating secure systems. Even in very large organizations, this infrastructure can usually be implemented via dedicated WSUS servers and GPOs for secured systems.  
   
 ### Blocking Internet Access  
-Administrative hosts should not be permitted to access the Internet, nor should they be able to browse an organization‚Äôs intranet. Web browsers and similar applications should not be permitted on administrative hosts. You can block Internet access for secure hosts via a combination of perimeter firewall settings, WFAS configuration, and ‚Äúblack hole‚Äù proxy configuration on secure hosts. You can also use application whitelisting to prevent web browsers from being used on administrative hosts.  
+Administrative hosts should not be permitted to access the Internet, nor should they be able to browse an organizationís intranet. Web browsers and similar applications should not be permitted on administrative hosts. You can block Internet access for secure hosts via a combination of perimeter firewall settings, WFAS configuration, and ìblack holeî proxy configuration on secure hosts. You can also use application whitelisting to prevent web browsers from being used on administrative hosts.  
   
 ### Virtualization  
 Where possible, consider implementing virtual machines as administrative hosts. Using virtualization, you can create per-user administrative systems that are centrally stored and managed, and which can be easily shut down when not in use, ensuring that credentials are not left active on the administrative systems. You can also require that virtual administrative hosts are reset to an initial snapshot after each use, ensuring that the virtual machines remain pristine. More information about options for virtualization of administrative hosts is provided in the following section.  
   
 ## Sample Approaches to Implementing Secure Administrative Hosts  
-Regardless of how you design and deploy your administrative host infrastructure, you should keep in mind the guidelines provided in ‚ÄúPrinciples for Creating Secure Administrative Hosts‚Äù earlier in this topic. Each of the approaches described here provides general information about how you can separate ‚Äúadministrative‚Äù and ‚Äúproductivity‚Äù systems used by your IT staff. Productivity systems are computers that IT administrators employ to check email, browse the Internet, and to use general productivity software such as Microsoft Office. Administrative systems are computers that are hardened and dedicated to use for day-to-day administration of an IT environment.  
+Regardless of how you design and deploy your administrative host infrastructure, you should keep in mind the guidelines provided in ìPrinciples for Creating Secure Administrative Hostsî earlier in this topic. Each of the approaches described here provides general information about how you can separate ìadministrativeî and ìproductivityî systems used by your IT staff. Productivity systems are computers that IT administrators employ to check email, browse the Internet, and to use general productivity software such as Microsoft Office. Administrative systems are computers that are hardened and dedicated to use for day-to-day administration of an IT environment.  
   
-The simplest way to implement secure administrative hosts is to provide your IT staff with secured workstations from which they can perform administrative tasks. In a workstation-only implementation, each administrative workstation is used to launch management tools and RDP connections to manage servers and other infrastructure. Workstation-only implementations can be effective in smaller organizations, although larger, more complex infrastructures may benefit from a distributed design for administrative hosts in which dedicated administrative servers and workstations are used, as described in ‚ÄúImplementing Secure Administrative Workstations and Jump Servers‚Äù later in this topic.  
+The simplest way to implement secure administrative hosts is to provide your IT staff with secured workstations from which they can perform administrative tasks. In a workstation-only implementation, each administrative workstation is used to launch management tools and RDP connections to manage servers and other infrastructure. Workstation-only implementations can be effective in smaller organizations, although larger, more complex infrastructures may benefit from a distributed design for administrative hosts in which dedicated administrative servers and workstations are used, as described in ìImplementing Secure Administrative Workstations and Jump Serversî later in this topic.  
   
 ### Implementing Separate Physical Workstations  
-One way that you can implement administrative hosts is to issue each IT user two workstations. One workstation is used with a ‚Äúregular‚Äù user account to perform activities such as checking email and using productivity applications, while the second workstation is dedicated strictly to administrative functions.  
+One way that you can implement administrative hosts is to issue each IT user two workstations. One workstation is used with a ìregularî user account to perform activities such as checking email and using productivity applications, while the second workstation is dedicated strictly to administrative functions.  
   
 For the productivity workstation, the IT staff can be given regular user accounts rather than using privileged accounts to log on to unsecured computers. The administrative workstation should be configured with a stringently controlled configuration and the IT staff should use a different account to log on to the administrative workstation.  
   
@@ -126,8 +129,8 @@ In this approach, IT users are given a secured administrative workstation from w
   
 -   If the physical workstations are not stored securely, they may be vulnerable to physical attacks that compromise the hardware or the operating system and make them susceptible to communications interception.  
   
-### Implementing a Single Secure Workstation with Connections to Separate ‚ÄúProductivity‚Äù and ‚ÄúAdministrative‚Äù Virtual Machines  
-In this approach, you can issue IT users a single physical workstation that is locked down as previously described, and on which IT users do not have privileged access. You can provide Remote Desktop Services connections to virtual machines hosted on dedicated servers, providing IT staff with one virtual machine that runs email and other productivity applications, and a second virtual machine that is configured as the user‚Äôs dedicated administrative host.  
+### Implementing a Single Secure Workstation with Connections to Separate ìProductivityî and ìAdministrativeî Virtual Machines  
+In this approach, you can issue IT users a single physical workstation that is locked down as previously described, and on which IT users do not have privileged access. You can provide Remote Desktop Services connections to virtual machines hosted on dedicated servers, providing IT staff with one virtual machine that runs email and other productivity applications, and a second virtual machine that is configured as the userís dedicated administrative host.  
   
 You should require smart card or other multifactor logon for the virtual machines, using separate accounts other than the account that is used to log on to the physical computer. After an IT user logs on to a physical computer, they can use their productivity smart card to connect to their remote productivity computer and a separate account and smart card to connect to their remote administrative computer.  
   
@@ -135,11 +138,11 @@ You should require smart card or other multifactor logon for the virtual machine
   
 -   IT users can use a single physical workstation.  
   
--   By requiring separate accounts for the virtual hosts and using Remote Desktop Services connections to the virtual machines, IT users‚Äô credentials are not cached in memory on the local computer.  
+-   By requiring separate accounts for the virtual hosts and using Remote Desktop Services connections to the virtual machines, IT usersí credentials are not cached in memory on the local computer.  
   
 -   The physical host can be secured to the same degree as administrative hosts, reducing the likelihood of compromise of the local computer.  
   
--   In cases in which an IT user‚Äôs productivity virtual machine or their administrative virtual machine may have been compromised, the virtual machine can easily be reset to a ‚Äúknown good‚Äù state.  
+-   In cases in which an IT userís productivity virtual machine or their administrative virtual machine may have been compromised, the virtual machine can easily be reset to a ìknown goodî state.  
   
 -   If the physical computer is compromised, no privileged credentials will be cached in memory, and the use of smart cards can prevent compromise of credentials by keystroke loggers.  
   
@@ -156,13 +159,13 @@ Jump servers should be configured to run the Remote Desktop Gateway role to allo
   
 By giving the administrative users per-user virtual machines on the jump server, you provide physical security for the administrative workstations, and administrative users can reset or shut down their virtual machines when not in use. If you prefer not to install the Hyper-V role and the Remote Desktop Gateway role on the same administrative host, you can install them on separate computers.  
   
-Wherever possible, remote administration tools should be used to manage servers. The Remote Server Administration Tools (RSAT) feature should be installed on the users‚Äô virtual machines (or the jump server if you are not implementing per-user virtual machines for administration), and administrative staff should connect via RDP to their virtual machines to perform administrative tasks.  
+Wherever possible, remote administration tools should be used to manage servers. The Remote Server Administration Tools (RSAT) feature should be installed on the usersí virtual machines (or the jump server if you are not implementing per-user virtual machines for administration), and administrative staff should connect via RDP to their virtual machines to perform administrative tasks.  
   
 In cases when an administrative user must connect via RDP to a destination server to manage it directly, RD Gateway should be configured to allow the connection to be made only if the appropriate user and computer are used to establish the connection to the destination server. Execution of RSAT (or similar) tools should be prohibited on systems that are not designated management systems, such as general-use workstations and member servers that are not jump servers.  
   
 #### Pros  
   
--   Creating jump servers allows you to map specific servers to ‚Äúzones‚Äù (collections of systems with similar configuration, connection, and security requirements) in your network and to require that the administration of each zone is achieved by administrative staff connecting from secure administrative hosts to a designated ‚Äúzone‚Äù server.  
+-   Creating jump servers allows you to map specific servers to ìzonesî (collections of systems with similar configuration, connection, and security requirements) in your network and to require that the administration of each zone is achieved by administrative staff connecting from secure administrative hosts to a designated ìzoneî server.  
   
 -   By mapping jump servers to zones, you can implement granular controls for connection properties and configuration requirements, and can easily identify attempts to connect from unauthorized systems.  
   
@@ -174,4 +177,5 @@ In cases when an administrative user must connect via RDP to a destination serve
   
 -   Implementing designated jump servers and administrative workstations requires careful planning and configuration that maps to any security zones configured in the environment.  
   
+
 

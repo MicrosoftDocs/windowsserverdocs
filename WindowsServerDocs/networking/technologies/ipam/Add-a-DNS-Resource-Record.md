@@ -12,6 +12,9 @@ ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244
 author: jamesmci
 ---
 # Add a DNS Resource Record
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to add one or more new DNS resource records by using the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -66,4 +69,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

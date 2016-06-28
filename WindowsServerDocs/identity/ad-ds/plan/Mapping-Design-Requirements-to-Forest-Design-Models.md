@@ -12,6 +12,9 @@ ms.assetid: c7b00aad-8e05-4e28-90fb-52923b2bc38f
 author: Femila
 ---
 # Mapping Design Requirements to Forest Design Models
+
+>Applies To: Windows Server Technical Preview
+
 Most groups in your organization can share a single organizational forest that is managed by a single information technology (IT) group and that contains the user accounts and resources for all of the groups that share the forest. This shared forest, called the initial organizational forest, is the foundation of the forest design model for the organization.  
   
 Because the initial organizational forest can host multiple groups in the organization, the forest owner must establish service level agreements with each group so that all the parties understand what is expected of them. This protects both the individual groups and the forest owner by establishing agreed-on service expectations.  
@@ -142,4 +145,5 @@ Considerations for service isolation include the following:
   
 For more information about configuring firewalls for use with AD DS, see Active Directory in Networks Segmented by Firewalls ([http://go.microsoft.com/fwlink/?LinkId=37928](http://go.microsoft.com/fwlink/?LinkId=37928)).  
   
+
 

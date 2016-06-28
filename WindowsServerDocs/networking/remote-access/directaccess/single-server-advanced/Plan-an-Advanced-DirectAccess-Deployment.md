@@ -12,7 +12,10 @@ ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
 author: vhorne
 ---
 # Plan an Advanced DirectAccess Deployment
-This topic lists the planning steps that are required to deploy a single DirectAccess server running Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2, or Windows ServerÂ® 2012 with a full range of basic and advanced features. The planning phase includes the following topics.  
+
+>Applies To: Windows Server Technical Preview
+
+This topic lists the planning steps that are required to deploy a single DirectAccess server running Windows Server® 2016 Technical Preview, Windows Server® 2012 R2, or Windows Server® 2012 with a full range of basic and advanced features. The planning phase includes the following topics.  
   
 -   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
   
@@ -25,4 +28,5 @@ This topic lists the planning steps that are required to deploy a single DirectA
 ## Next step  
 After you have completed these planning steps, you can begin the server deployment. For instructions, see [Install and Configure Advanced DirectAccess](Install-and-Configure-Advanced-DirectAccess.md).  
   
+
 

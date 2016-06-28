@@ -12,6 +12,9 @@ ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ---
 # IIS on Nano Server
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Overview of IIS on Nano Server  
 You can install the Internet Information Services (IIS) server role on Nano Server by using the -Packages parameter with Microsoft-NanoServer-IIS-Package. For information about configuring Nano Server, including installing packages, see [Get Started with Nano Server](Getting-Started-with-Nano-Server.md).  
@@ -185,11 +188,11 @@ The IISAdministration module of Windows PowerShell allows you to easily add or r
   
     Set-IISConfigAttributeValue -ConfigElement $section -AttributeName "enabled" -AttributeValue $false  
   
-    Set-IISConfigAttributeValue -ConfigElement $section â€“AttributeName "authPersistNonNTLM" -AttributeValue $true  
+    Set-IISConfigAttributeValue -ConfigElement $section –AttributeName "authPersistNonNTLM" -AttributeValue $true  
   
-    $collection = Get-IISConfigElement -ConfigElement $section â€“ChildElementName "providers" | Get-IISConfigCollection  
+    $collection = Get-IISConfigElement -ConfigElement $section –ChildElementName "providers" | Get-IISConfigCollection  
   
-    New-IISConfigCollectionElement -ConfigCollection $collection â€“ConfigAttribute @{"value"="Negotiate"}  
+    New-IISConfigCollectionElement -ConfigCollection $collection –ConfigAttribute @{"value"="Negotiate"}  
   
     New-IISConfigCollectionElement -ConfigCollection $collection -ConfigAttribute @{"value"="NTLM"}   
   
@@ -553,4 +556,5 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 |\<globalModules>|<add name="WebSocketModule" image="%windir%\System32\inetsrv\iiswsock.dll" \/>|  
 |\<modules>|<add name="WebSocketModule" lockItem="true" \/>|  
   
+
 

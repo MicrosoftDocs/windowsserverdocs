@@ -12,11 +12,14 @@ ms.assetid: f009fdd1-94e6-4ccb-8c6e-609a5394db53
 author: coreyp
 ---
 # STEP 3: Install and Configure CLIENT2
-CLIENT2 is a  Windows 7Â®  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows ServerÂ® 2012 servers.  
+
+>Applies To: Windows Server Technical Preview
+
+CLIENT2 is a  Windows 7®  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server® 2012 servers.  
   
-1.  [To install the operating system on CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#installOS)â€”Install WindowsÂ® 7 Enterprise or WindowsÂ® 7 Ultimate on CLIENT2.  
+1.  [To install the operating system on CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#installOS)—Install Windows® 7 Enterprise or Windows® 7 Ultimate on CLIENT2.  
   
-2.  [To join CLIENT2 to the CORP domain](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#Join)â€”Join CLIENT2 to the corp.contoso.com domain.  
+2.  [To join CLIENT2 to the CORP domain](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#Join)—Join CLIENT2 to the corp.contoso.com domain.  
   
 ## <a name="installOS"></a>To install the operating system on CLIENT2  
   
@@ -57,4 +60,5 @@ When you configure the  Windows 7  operating system, you are required to click *
   
 9. After the computer restarts, log on as CORP\User1.  
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
 author: KBDAzure
 ---
 # The number of logical processors in use must not exceed the supported maximum
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -50,4 +53,5 @@ See the following instructions to use Msconfig. For details about removing proce
   
 4.  Restart the computer to run it using the new number of processors.  
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: 92e1d0d0-f2c1-4ba2-8510-c8eb091cf5d6
 author: cwatsonmsft
 ---
 # Enable or disable checkpoints in Hyper-V
+
+>Applies To: Windows 10, Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 You can choose to enable or disable checkpoints for each virtual machine.  
@@ -28,4 +31,5 @@ You can choose to enable or disable checkpoints for each virtual machine.
 ## See also  
   
 [Choose between standard or production checkpoints in Hyper-V](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
+
 

@@ -12,6 +12,9 @@ ms.assetid: 04f9603d-b4a8-4a33-af4a-257aca2f3279
 author: Femila
 ---
 # Creating an Organizational Unit Design
+
+>Applies To: Windows Server Technical Preview
+
 Forest owners are responsible for creating organizational unit (OU) designs for their domains. Creating an OU design involves designing the OU structure, assigning the OU owner role, and creating account and resource OUs.  
   
 Initially, design your OU structure to enable delegation of administration. When the OU design is complete, you can create additional OU structures for the application of Group Policy to the users and computers and to limit the visibility of objects. For more information, see Designing a Group Policy Infrastructure ([http://go.microsoft.com/fwlink/?LinkId=106655](http://go.microsoft.com/fwlink/?LinkId=106655)).  
@@ -41,4 +44,5 @@ For a worksheet to assist you in documenting your OU design, download Job_Aids_D
   
 -   [Delegating Administration by Using OU Objects](../../ad-ds/plan/Delegating-Administration-by-Using-OU-Objects.md)  
   
+
 

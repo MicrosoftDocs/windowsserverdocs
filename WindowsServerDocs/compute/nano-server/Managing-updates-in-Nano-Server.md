@@ -12,6 +12,9 @@ ms.assetid: fff84002-d2f8-4f11-a603-624d824a030e
 author: jaimeo
 ---
 # Managing updates in Nano Server
+
+>Applies To: Windows Server Technical Preview
+
   
 Currently you can use the Windows Update provider for Windows Management Instrumentation (WMI) to find the list of applicable updates, and then install all or a subset of them. If you use Windows Server Update Services (WSUS), you can also configure Nano Server to contact the WSUS server to obtain updates.  
   
@@ -80,7 +83,7 @@ Using WSUS
 ---  
 The commands listed above will query the Windows Update and Microsoft Update serviceon the Internet to find and download updates. If you use WSUS, you can set registry keys on the Nano Server to use your WSUS server instead.  
   
-See the "Windows Update Agent Environment Options Registry Keys" table in  [Configure Automatic Updates in a Nonâ€“Active Directory Environment](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
+See the "Windows Update Agent Environment Options Registry Keys" table in  [Configure Automatic Updates in a Non–Active Directory Environment](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
   
 You should set at least the **WUServer** and **WUStatusServer** registry keys, but depending on how you have implemented WSUS, other values might be needed. You can always confirm these settings by examining another Windows Server in the same environment.  
   
@@ -95,4 +98,5 @@ Currently, the way to automate update installation is to convert the steps above
   
   
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: ac5992e6-3c0b-46c2-a48e-6ef37b679228
 author: KBDAzure
 ---
 # Display adapters should be enabled in virtual machines to provide video capabilities
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -44,4 +47,5 @@ Microsoft Virtual Machine Bus Video Device is a virtual video adapter optimized 
   
 The steps required to use Device Manager vary depending on the operating system. For instructions, see Help in the guest operating system.  
   
+
 

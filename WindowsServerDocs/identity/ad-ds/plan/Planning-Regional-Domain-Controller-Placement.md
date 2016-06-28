@@ -12,6 +12,9 @@ ms.assetid: a90604bc-ab0c-4f83-b8e5-85332a8f6e7c
 author: Femila
 ---
 # Planning Regional Domain Controller Placement
+
+>Applies To: Windows Server Technical Preview
+
 To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" (DSSTOPO_1.doc) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.  
   
 Plan to place regional domain controllers for each domain that is represented in each hub location. After you place regional domain controllers in all hub locations, evaluate the need for placing regional domain controllers at satellite locations. Eliminating unnecessary regional domain controllers from satellite locations reduces the support costs required to maintain a remote server infrastructure.  
@@ -71,4 +74,5 @@ For a worksheet to assist you in documenting the placement of regional domain co
   
 You will need to refer to the information about locations in which you need to place regional domain controllers when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
+
 

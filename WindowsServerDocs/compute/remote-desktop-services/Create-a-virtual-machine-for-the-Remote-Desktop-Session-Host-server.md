@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Create a virtual machine for the Remote Desktop Session Host server
+
+>Applies To: Windows Server Technical Preview
+
 Note: To create a virtual machine from a custom image, see the steps provided in the Basic Deployment Guide.   
   
 Use the following steps to create a virtual machine to host the RDSH role service:  
@@ -30,4 +33,5 @@ Use the following steps to create a virtual machine to host the RDSH role servic
 11. For **Availability set**, select the availability set created in the basic deployment, (for example, SHAvSet).  
 12. Accept the other default options, and then click **OK**.  
 13. Click **OK** to deploy.   
+
 

@@ -13,6 +13,9 @@ ms.assetid: 91b7f50f-a071-4ab6-beb1-1b29f92f52b6
 author: KBDAzure
 ---
 # Dynamic Memory is enabled but not responding on some virtual machines
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -41,4 +44,5 @@ As of Windows Server 2016 Technical Preview, integration services are delivered 
   
 Dynamic Memory works with specific versions of supported guests. See [Hyper-V Dynamic Memory Overview](https://technet.microsoft.com/library/hh831766.aspx) for versions older than Windows Server 2016 and Windows 10.  
   
+
 

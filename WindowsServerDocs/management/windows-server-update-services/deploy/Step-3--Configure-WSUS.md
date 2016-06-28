@@ -10,6 +10,9 @@ ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 ---
 # Step 3: Configure WSUS
+
+>Applies To: Windows Server Technical Preview
+
 After installing the WSUS server role on your server, you need to properly configure it. The following checklist summarises the steps involved in performing the initial configuration for your WSUS server.
 
 |Task|Description|
@@ -43,7 +46,7 @@ When you have the answers for these questions, you can start configuring the fol
 -   **Firewall** If you identified that WSUS is behind a corporate firewall, there are some additional steps that must be done at the edge device to properly allow WSUS traffic.
 
 ### 3.1.1. Connection from the WSUS server to the Internet
-If there is a corporate firewall between WSUS and the Internet, you might have to configure that firewall to ensure WSUS can obtain updates. To obtain updates from Microsoft Update, the WSUS server uses port 443 for HTTPS protocol. Although most of corporate firewalls allow this type of traffic, there are some companies that restrict Internet access from the servers due the companyâ€™s security policies. If your company restricts access, you need to obtain authorization to allow Internet access from WSUS to the following list of URLs:
+If there is a corporate firewall between WSUS and the Internet, you might have to configure that firewall to ensure WSUS can obtain updates. To obtain updates from Microsoft Update, the WSUS server uses port 443 for HTTPS protocol. Although most of corporate firewalls allow this type of traffic, there are some companies that restrict Internet access from the servers due the company’s security policies. If your company restricts access, you need to obtain authorization to allow Internet access from WSUS to the following list of URLs:
 
 -   http://windowsupdate.microsoft.com
 
@@ -108,7 +111,7 @@ To set up two proxy servers, each of which will handle one protocol for WSUS, us
 
 4.  In the Command Prompt window, go to the C:\Program Files\Update Services\Tools folder. Type the following command:
 
-    **wsusutil ConfigureSSLProxy [< proxy_server proxy_port>] â€“enable**, where:
+    **wsusutil ConfigureSSLProxy [< proxy_server proxy_port>] –enable**, where:
 
     1.  proxy_server is the name of the proxy server that supports HTTPS.
 
@@ -187,7 +190,7 @@ This procedure assumes that you are using the WSUS Configuration Wizard, which a
 
 9. When it connects, click **Next** to proceed.
 
-10. On the **Choose Languages** page, you have the option to select the languages from which WSUS will receive updatesâ€”all languages or a subset of languages. Selecting a subset of languages will save disk space, but it is important to choose all of the languages that are needed by all the clients of this WSUS server. If you choose to get updates only for specific languages, select **Download updates only in these languages**, and then select the languages for which you want updates; otherwise, leave the default selection.
+10. On the **Choose Languages** page, you have the option to select the languages from which WSUS will receive updates—all languages or a subset of languages. Selecting a subset of languages will save disk space, but it is important to choose all of the languages that are needed by all the clients of this WSUS server. If you choose to get updates only for specific languages, select **Download updates only in these languages**, and then select the languages for which you want updates; otherwise, leave the default selection.
 
     > [!WARNING]
     > If you select the option **Download updates only in these languages**, and this server has a downstream WSUS server connected to it, this option will force the downstream server to also use only the selected languages.
@@ -238,7 +241,7 @@ Use the following procedure to create a new group and assign a computer to this 
 ## <a name="BKM_ConfigureClientUpdates"></a>3.4. Configure client updates
 WSUS Setup automatically configures IIS to distribute the latest version of Automatic Updates to each client computer that contacts the WSUS server. The best way to configure Automatic Updates depends on the network environment.
 
--   In an environment that uses Active Directory directory service, you can use an existing domainâ€“based Group Policy Object (GPO) or create a new GPO.
+-   In an environment that uses Active Directory directory service, you can use an existing domain–based Group Policy Object (GPO) or create a new GPO.
 
 -   In an environment without Active Directory, use the Local Group Policy Editor to configure Automatic Updates, and then point the client computers to the WSUS server.
 
@@ -292,7 +295,7 @@ Link this WSUS GPO to an Active Directory container that is appropriate for your
 
 10. Click **OK**.
 
-After you set up a client computer, it will take several minutes before the computer appears on the **Computers** page in the WSUS Administration Console. For client computers that are configured with a domain-based Group Policy Object, it can take about 20 minutes for Group Policy to apply the new policy settings to the client computer. By default, Group Policy updates in the background every 90 minutes, with a random offset of 0â€“30 minutes. If you want to update Group Policy sooner, you can open a Command Prompt window on the client computer and type gpupdate /force.
+After you set up a client computer, it will take several minutes before the computer appears on the **Computers** page in the WSUS Administration Console. For client computers that are configured with a domain-based Group Policy Object, it can take about 20 minutes for Group Policy to apply the new policy settings to the client computer. By default, Group Policy updates in the background every 90 minutes, with a random offset of 0–30 minutes. If you want to update Group Policy sooner, you can open a Command Prompt window on the client computer and type gpupdate /force.
 
 For client computers that are configured by using the Local Group Policy Editor, the GPO is applied immediately, and the update takes about 20 minutes. If you begin detection manually, you do not have to wait 20 minutes for the client computer to contact WSUS.
 
@@ -446,5 +449,6 @@ WSUS has the ability to publish custom update packages to update Microsoft and n
 -   [Step 2: Install the WSUS Server Role](Step-2--Install-the-WSUS-Server-Role.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
+
 
 

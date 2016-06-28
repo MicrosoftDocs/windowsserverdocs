@@ -9,6 +9,9 @@ ms.assetid: 7eb746e0-1046-4123-b532-77d5683ded44
 author: jamesmci
 ---
 # Server Certificate Deployment Planning
+
+>Applies To: Windows Server Technical Preview
+
 Before you deploy server certificates, you must plan the following items:  
   
 -   [Plan basic server configuration](#bkmk_basic)  
@@ -38,12 +41,12 @@ To log on to the domain, the computer must be a domain member computer and the u
 For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx).  
   
 ## <a name="bkmk_virtual"></a>Plan the location and name of the virtual directory on your Web server  
-To provide access to the CRL and the CA certificate to other computers, you must store these items in a virtual directory on your Web server. In this guide, the virtual directory is located on the Web server WEB1. This folder is on the ‚ÄúC:‚Äù drive and is named ‚Äúpki.‚Äù You can locate your virtual directory on your Web server at any folder location that is appropriate for your deployment.  
+To provide access to the CRL and the CA certificate to other computers, you must store these items in a virtual directory on your Web server. In this guide, the virtual directory is located on the Web server WEB1. This folder is on the ìC:î drive and is named ìpki.î You can locate your virtual directory on your Web server at any folder location that is appropriate for your deployment.  
   
 ## <a name="bkmk_cname"></a>Plan a DNS alias (CNAME) record for your Web server  
 Alias (CNAME) resource records are also sometimes called canonical name resource records. With these records, you can use more than one name to point to a single host, making it easy to do such things as host both a File Transfer Protocol (FTP) server and a Web server on the same computer. For example, the well-known server names (ftp, www) are registered using alias (CNAME) resource records that map to the Domain Name System (DNS) host name, such as WEB1, for the server computer that hosts these services.  
   
-This guide provides instructions for configuring your Web server to host the certificate revocation list (CRL) for your certification authority (CA). Because you might also want to use your Web server for other purposes, such as to host an FTP or Web site, it‚Äôs a good idea to create an alias resource record in DNS for your Web server. In this guide, the CNAME record is named ‚Äúpki,‚Äù but you can choose a name that is appropriate for your deployment.  
+This guide provides instructions for configuring your Web server to host the certificate revocation list (CRL) for your certification authority (CA). Because you might also want to use your Web server for other purposes, such as to host an FTP or Web site, itís a good idea to create an alias resource record in DNS for your Web server. In this guide, the CNAME record is named ìpki,î but you can choose a name that is appropriate for your deployment.  
   
 ## <a name="bkmk_capolicy"></a>Plan configuration of CAPolicy.inf  
 Before you install AD CS, you must configure CAPolicy.inf on the CA with information that is correct for your deployment. A CAPolicy.inf file contains the following information:  
@@ -68,7 +71,7 @@ AlternateSignatureAlgorithm=1
 ```  
 You must plan the following items for this file:  
   
--   **URL**. The example CAPolicy.inf file has a URL value of **http://pki.corp.contoso.com/pki/cps.txt**. This is because the Web server in this guide is named WEB1 and has a DNS CNAME resource record of pki. The Web server is also joined to the corp.contoso.com domain. In addition, there is a virtual directory on the Web server named ‚Äúpki‚Äù where the certificate revocation list is stored. Ensure that the value that you provide for URL in your CAPolicy.inf file points to a virtual directory on your Web server in your domain.  
+-   **URL**. The example CAPolicy.inf file has a URL value of **http://pki.corp.contoso.com/pki/cps.txt**. This is because the Web server in this guide is named WEB1 and has a DNS CNAME resource record of pki. The Web server is also joined to the corp.contoso.com domain. In addition, there is a virtual directory on the Web server named ìpkiî where the certificate revocation list is stored. Ensure that the value that you provide for URL in your CAPolicy.inf file points to a virtual directory on your Web server in your domain.  
   
 -   **RenewalKeyLength**. The default renewal key length for AD CS in  Windows Server 2012  is 2048. The key length that you select should be as long as possible while still providing compatibility with the applications that you intend to use.  
   
@@ -96,7 +99,7 @@ The CDP location that you must enter during this deployment step has the format:
   
 `http:\/\/*DNSAlias\(CNAME\)RecordName*.*Domain*.com\/*VirtualDirectoryName*\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl.`  
   
-For example, if your Web server is named WEB1 and your DNS alias CNAME record for the Web server is ‚Äúpki,‚Äù your domain is corp.contoso.com, and your virtual directory is named pki, the CDP location is:  
+For example, if your Web server is named WEB1 and your DNS alias CNAME record for the Web server is ìpki,î your domain is corp.contoso.com, and your virtual directory is named pki, the CDP location is:  
   
 `http:\/\/pki.corp.contoso.com\/pki\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`  
   
@@ -104,17 +107,18 @@ The AIA location that you must enter has the format:
   
 `http:\/\/*DNSAlias\(CNAME\)RecordName*.*Domain*.com\/*VirtualDirectoryName*\/<ServerDNSName>\_<CaName><CertificateName>.crt.`  
   
-For example, if your Web server is named WEB1 and your DNS alias CNAME record for the Web server is ‚Äúpki,‚Äù your domain is corp.contoso.com, and your virtual directory is named pki, the AIA location is:  
+For example, if your Web server is named WEB1 and your DNS alias CNAME record for the Web server is ìpki,î your domain is corp.contoso.com, and your virtual directory is named pki, the AIA location is:  
   
 `http:\/\/pki.corp.contoso.com\/pki\/<ServerDNSName>\_<CaName><CertificateName>.crt`  
   
 ## <a name="bkmk_copy"></a>Plan the copy operation between the CA and the Web server  
-To publish the CRL and CA certificate from the CA to the Web server virtual directory, you can run the certutil ‚Äìcrl command after you configure the CDP and AIA locations on the CA. Ensure that you configure the correct paths on the CA Properties **Extensions** tab before you run this command using the instructions in this guide. In addition, to copy the Enterprise CA certificate to the Web server, you must have already created the virtual directory on the Web server and configured the folder as a shared folder.  
+To publish the CRL and CA certificate from the CA to the Web server virtual directory, you can run the certutil ñcrl command after you configure the CDP and AIA locations on the CA. Ensure that you configure the correct paths on the CA Properties **Extensions** tab before you run this command using the instructions in this guide. In addition, to copy the Enterprise CA certificate to the Web server, you must have already created the virtual directory on the Web server and configured the folder as a shared folder.  
   
 ## <a name="bkmk_template"></a>Plan the configuration of the server certificate template on the CA  
 To deploy autoenrolled server certificates, you must copy the certificate template named **RAS and IAS Server**. By default, this copy is named **Copy of RAS and IAS Server**. If you want to rename this template copy, plan the name that you want to use during this deployment step.  
   
 > [!NOTE]  
-> The last three deployment sections in this guide ‚Äì which allow you to configure server certificate autoenrollment, refresh Group Policy on servers, and verify that the servers have received a valid server certificate from the CA ‚Äì do not require additional planning steps.  
+> The last three deployment sections in this guide ñ which allow you to configure server certificate autoenrollment, refresh Group Policy on servers, and verify that the servers have received a valid server certificate from the CA ñ do not require additional planning steps.  
   
+
 

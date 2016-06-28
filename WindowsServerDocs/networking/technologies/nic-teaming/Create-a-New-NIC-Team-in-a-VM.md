@@ -12,6 +12,9 @@ ms.assetid: dd80eadf-c87c-4aaa-b96a-cbb04b01db72
 author: jamesmci
 ---
 # Create a New NIC Team in a VM
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to connect a virtual machine (VM) to Hyper-V Virtual Switches in a manner that is consistent with NIC Teaming requirements within VMs. You can also use this topic to create a new NIC team in a VM.  
   
 This topic contains the following sections.  
@@ -33,7 +36,7 @@ The physical switch, Hyper-V Virtual Switch, local area network (LAN), and NIC T
   
 -   The VM in which you want to configure NIC Teaming must be connected to both external virtual switches that you create.  
   
--   The Windows ServerÂ® 2016 Technical Preview NIC Teaming solution supports teams with two members in VMs. Larger teams can be created but such teams are not supported.  
+-   The Windows Server® 2016 Technical Preview NIC Teaming solution supports teams with two members in VMs. Larger teams can be created but such teams are not supported.  
   
 -   NIC Teams within a VM must have their Teaming mode configured as Switch Independent. In addition, Load Balancing mode for the NIC Team in a VM must be configured with the Address Hash distribution mode.  
   
@@ -118,4 +121,5 @@ To create a new NIC Team in your VM, follow the instructions in the topic [Creat
 [Create a New NIC Team on a Host Computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)  
 [NIC Teaming](NIC-Teaming.md)  
   
+
 

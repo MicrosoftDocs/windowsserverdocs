@@ -12,6 +12,9 @@ ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 author: jamesmci
 ---
 # View DNS Zones
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to view DNS zones in the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -36,4 +39,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [DNS Zone Management](DNS-Zone-Management.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

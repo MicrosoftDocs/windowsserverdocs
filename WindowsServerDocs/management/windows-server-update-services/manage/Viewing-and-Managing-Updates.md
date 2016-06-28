@@ -12,6 +12,9 @@ ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
 author: coreyp-at-msft
 ---
 # Viewing and Managing Updates
+
+>Applies To: Windows Server Technical Preview
+
 You can use the WSUS console to view and manage updates.
 
 ## Viewing Updates
@@ -126,7 +129,7 @@ You will be setting up and running synchronizations, adding computers and comput
 
     -   What computer groups to create, and how to assign computers to them (server-side or client-side targeting).
 
-    -   Which database to use for update metadata (for example, WindowsÂ® Internal Database, SQL Server).
+    -   Which database to use for update metadata (for example, Windows® Internal Database, SQL Server).
 
     -   Whether updates should be synchronized automatically, and at what time.
 
@@ -164,5 +167,6 @@ Update classifications represent the type of update. For any given product or pr
 -   [WSUS and the Catalog Site](WSUS-and-the-Catalog-Site.md)
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
+
 
 

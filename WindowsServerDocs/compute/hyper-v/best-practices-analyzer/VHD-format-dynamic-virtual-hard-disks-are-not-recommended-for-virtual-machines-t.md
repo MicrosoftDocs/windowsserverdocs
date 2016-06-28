@@ -13,6 +13,9 @@ ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce
 author: KBDAzure
 ---
 # VHD-format dynamic virtual hard disks are not recommended for virtual machines that run server workloads in a production environment
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ Note: The following sections provide details about the specific issue. Italics i
 ## **Resolution**  
 *Shut down the virtual machine and convert the VHD-format dynamic virtual hard disk to a VHDX-format virtual hard disk or to a fixed virtual hard disk. (The VHDX format has reliability mechanisms that help protect the disk from corruptions due to system power failures.) However, do not convert the virtual hard disk if it is likely to be attached to an earlier release of Windows at some point. Windows releases earlier than  Windows Server 2012  do not support the VHDX format.*  
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: 4cabbce3-9367-4ddc-a108-1e5e1ab2bcff
 author: KBDAzure
 ---
 # Certificate-based authentication is configured, but the specified certificate is not installed on the Replica server or failover cluster nodes
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -38,4 +41,5 @@ author: KBDAzure
   
 *Install the configured certificate on the Replica server (and all associated nodes in the failover cluster, if any).*  
   
+
 

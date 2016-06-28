@@ -12,6 +12,9 @@ ms.assetid: 2f7cb5ed-4730-49b7-ad76-c1bd240e8650
 author: Femila
 ---
 # Verify DNS Functionality to Support Directory Replication
+
+>Applies To: Windows Server Technical Preview
+
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
@@ -78,12 +81,12 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>Note the names of all the domain controllers that report ‚ÄúWarn‚Äù or ‚ÄúFail‚Äù status in the Summary table.</para>
+              <para>Note the names of all the domain controllers that report ìWarnî or ìFailî status in the Summary table.</para>
             </content>
           </step>
           <step>
             <content>
-              <para>Try to determine if there is a problem domain controller by finding the detailed breakout section by searching for the string ‚ÄúDC: <placeholder>DCName</placeholder>,‚Äù where <placeholder>DCName</placeholder> is the actual name of the domain controller.</para>
+              <para>Try to determine if there is a problem domain controller by finding the detailed breakout section by searching for the string ìDC: <placeholder>DCName</placeholder>,î where <placeholder>DCName</placeholder> is the actual name of the domain controller.</para>
             </content>
           </step>
           <step>
@@ -103,7 +106,7 @@ author: Femila
   <section>
     <title>Verifying resource record registration</title>
     <content>
-      <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)‚Äîor, if that fails, NetBIOS names‚Äîthe presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning. </para>
+      <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)óor, if that fails, NetBIOS namesóthe presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning. </para>
       <para>You can use the following procedure to verify resource record registration, including alias (CNAME) resource record registration.</para>
       <procedure>
         <title>To verify resource record registration</title>
@@ -209,7 +212,7 @@ author: Femila
           </step>
           <step>
             <content>
-              <para>On the <ui>General</ui> tab, verify that the zone type is <ui>Active Directory‚Äìintegrated</ui>.</para>
+              <para>On the <ui>General</ui> tab, verify that the zone type is <ui>Active Directoryñintegrated</ui>.</para>
             </content>
           </step>
           <step>
@@ -258,4 +261,5 @@ author: Femila
   </section>
   <relatedTopics />
 </developerConceptualDocument>
+
 

@@ -12,7 +12,10 @@ ms.topic: get-started-article
 ms.assetid: b86471af-4f72-4927-bdfa-b32fa3b9f826
 ---
 # Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
-The rapid increase in the number of consumer devices and ubiquitous information access is changing the way that people perceive their technology. The constant use of information technology throughout the day, along with easy access of information, is blurring traditional boundaries between work and home life. These shifting boundaries are accompanied by a belief that personal technologyâ€”selected and customized to fit usersâ€™ personalities, activities, and schedulesâ€”should extend into the workplace. To accommodate the growing requirement of personal consumer devices to be connected to enterprise networks, we are introducing the following value propositions:
+
+>Applies To: Windows Server 2012 R2
+
+The rapid increase in the number of consumer devices and ubiquitous information access is changing the way that people perceive their technology. The constant use of information technology throughout the day, along with easy access of information, is blurring traditional boundaries between work and home life. These shifting boundaries are accompanied by a belief that personal technology—selected and customized to fit users’ personalities, activities, and schedules—should extend into the workplace. To accommodate the growing requirement of personal consumer devices to be connected to enterprise networks, we are introducing the following value propositions:
 
 -   Administrators can control who has access to company resources that are based on application, user, device, and location.
 
@@ -52,5 +55,6 @@ This solution guides takes you through the following walkthrough steps:
 
 ## See Also
 [Configure a federation server with Device Registration Service](assetId:///007016d9-b1c9-4ee1-a30f-13865f784c80)
+
 
 
