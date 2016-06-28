@@ -14,6 +14,9 @@ ms.assetid: 24d106f2-b050-4fc0-ba73-9f11560a28f2
 author: Femila
 ---
 # Deploy Access-Denied Assistance (Demonstration Steps)
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains how to configure access-denied assistance, and verify that it is working properly.  
   
 **In this document**  

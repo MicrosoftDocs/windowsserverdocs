@@ -14,6 +14,9 @@ ms.assetid: 4fff7ac7-b90f-41d0-8c87-9ffe08dc6c01
 author: Femila
 ---
 # Install Active Directory Domain Services (Level 100)
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains how to install AD DS in  Windows Server 2012  by using any of the following methods:  
   
 -   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds)  

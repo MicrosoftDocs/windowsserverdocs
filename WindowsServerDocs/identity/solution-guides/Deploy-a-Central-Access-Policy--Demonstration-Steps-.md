@@ -14,6 +14,9 @@ ms.assetid: 5fae4b82-0cd0-4d5a-b4ae-b89895d6f7b9
 author: Femila
 ---
 # Deploy a Central Access Policy (Demonstration Steps)
+
+>Applies To: Windows Server Technical Preview
+
 In this scenario, the finance department security operations is working with central information security to specify the need for a central access policy so that they can protect archived finance information stored on file servers. The archived finance information from each country can be accessed as read-only by finance employees from the same country. A central finance admin group can access the finance information from all countries.  
   
 Deploying a central access policy includes the following phases:  

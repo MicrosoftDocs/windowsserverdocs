@@ -13,6 +13,9 @@ ms.topic: article
 ms.assetid: bd2dc32b-1ca8-4737-be8a-344a7975dfab
 ---
 # Introduction to Active Directory Administrative Center Enhancements (Level 100)
+
+>Applies To: Windows Server Technical Preview
+
 ADAC in  Windows Server 2012  includes management features for the following:
 
 -   [Active Directory Recycle Bin](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#ad_recycle_bin_mgmt)

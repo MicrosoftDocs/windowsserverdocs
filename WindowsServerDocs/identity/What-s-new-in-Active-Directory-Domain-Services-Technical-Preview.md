@@ -12,6 +12,9 @@ ms.assetid: 7e122d0d-66fa-4479-87f9-90eaf75dccc3
 author: Femila
 ---
 # What&#39;s new in Active Directory Domain Services Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 The following new features in Active Directory Domain Services (AD DS) improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements include:  
   
 -   [Privileged access management](https://technet.microsoft.com/library/mt150258.aspx   

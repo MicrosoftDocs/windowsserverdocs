@@ -12,6 +12,9 @@ ms.assetid: dbf0cdec-d72f-4ba3-bc7a-46410e02abb0
 author: Femila
 ---
 # Understanding Active Directory Domain Services (AD DS) Functional Levels
+
+>Applies To: Windows Server Technical Preview
+
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels do not affect which operating systems you can run on workstations and member servers that are joined to the domain or forest.  
   
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support. This way, you can use as many AD DS features as possible. For example, if you are sure that you will never add domain controllers that run Windows Server 2003 to the domain or forest, select the  Windows Server 2008  functional level during the deployment process. However, if you might retain or add domain controllers that run Windows Server 2003, select the Windows Server 2003 functional level.  

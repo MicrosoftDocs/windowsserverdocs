@@ -12,6 +12,9 @@ ms.topic: article
 author: billmath
 ---
 # AD FS 2016 Deployment
+
+>Applies To: Windows Server Technical Preview
+
 This document contains a list of all of the documentation for deploying AD FS for Windows Server 2016. This includes the following:
   
   

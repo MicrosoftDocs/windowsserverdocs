@@ -14,6 +14,9 @@ ms.assetid: e8d7f1ac-5d94-4744-84d6-797f5e610757
 author: Femila
 ---
 # Virtualized Domain Controller Technical Reference (Level 300)
+
+>Applies To: Windows Server Technical Preview
+
 The virtualized domain controller (VDC) technical reference consists of the following topics:  
   
 -   [Virtualized Domain Controller Architecture](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)  

@@ -8,6 +8,9 @@ ms.topic: article
 ms.assetid: 9d20833e-a0bf-4a93-8e7c-ff4335ff33bc
 ---
 # AD FS and Azure Multi-Factor Authentication
+
+>Applies To: Windows Server Technical Preview
+
 AD FS in Windows Server 2016 introduces and builds upon the multi-factor authentication capabilities that were introduced with Windows Server 2012 R2.   By introducing a built-in Azure MFA adapter, setup and configuration for using Azure MFA as the primary authentication provider has never been simpler.
 
 ## Why use AD FS with Azure MFA

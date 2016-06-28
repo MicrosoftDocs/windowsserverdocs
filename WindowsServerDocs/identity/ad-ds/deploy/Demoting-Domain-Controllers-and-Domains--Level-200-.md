@@ -14,6 +14,9 @@ ms.assetid: 2aab5c57-1ff9-4af5-9049-bacd73d46bd3
 author: Femila
 ---
 # Demoting Domain Controllers and Domains (Level 200)
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains how to remove AD DS, using Server Manager or Windows PowerShell.  
   
 -   [AD DS Removal Workflow](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md#BKMK_Workflow)  

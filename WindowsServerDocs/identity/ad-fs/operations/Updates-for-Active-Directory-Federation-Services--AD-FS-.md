@@ -31,6 +31,8 @@ translation.priority.mt:
   - zh-tw
 ---
 # Updates for Active Directory Federation Services (AD FS)
+
+>Applies To: Windows Server Technical Preview
   
 ## Updates for Active Directory Federation Services \(AD FS\)  
 Updates have been released for Active Directory Federation Services \(AD FS\) 2.0, AD FS in Windows Server 2012 and AD FS in Windows Server 2012 R2. This following tables capture the updates that are available for download.  

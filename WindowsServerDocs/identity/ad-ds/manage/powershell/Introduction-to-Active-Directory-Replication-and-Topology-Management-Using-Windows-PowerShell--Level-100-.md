@@ -13,6 +13,9 @@ ms.topic: article
 ms.assetid: da5e5bab-1abf-4a96-b10d-eacec6f3fe77
 ---
 # Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
+
+>Applies To: Windows Server Technical Preview
+
 Windows PowerShell for Active Directory includes the ability to manage replication, sites, domains and forests, domain controllers, and partitions. Users of prior management tools such as the Active Directory Sites and Services snap-in and repadmin.exe will notice that similar functionality is now available from within the Windows PowerShell for Active Directory context. In addition, the cmdlets are compatible with the existing Windows PowerShell for Active Directory cmdlets, thus creating a streamlined experience and allowing customers to easily create automation scripts.
 
 > [!NOTE]

@@ -14,6 +14,9 @@ ms.assetid: 9f5809cb-5d80-44db-a699-afddbe9a3bfd
 author: Femila
 ---
 # Install a New Windows Server 2012 Active Directory Forest (Level 200)
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains the new Windows Server 2012 Active Directory Domain Services domain controller promotion feature at an introductory level. In Windows Server 2012, AD DS replaces the Dcpromo tool with a Server Manager and Windows PowerShell-based deployment system.  
   
 -   [Active Directory Domain Services Simplified Administration](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SimplifiedAdmin)  

@@ -13,7 +13,7 @@ ms.assetid: 271ac068-f1f9-4f9a-a19e-bdfc6e539523
 ---
 # AD FS Technical Reference
 
->Applies To: Windows Server 2012 R2
+>Applies To: Windows Server Technical Preview
 
 
 -   [Understanding Key AD FS Concepts](https://technet.microsoft.com/library/ee913566(v=ws.11).aspx)

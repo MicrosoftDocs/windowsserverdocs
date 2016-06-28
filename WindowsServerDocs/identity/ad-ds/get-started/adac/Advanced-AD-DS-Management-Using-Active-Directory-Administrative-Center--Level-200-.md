@@ -14,6 +14,9 @@ ms.assetid: 6fa9e6b7-e95d-4473-8928-1fa0f358bc74
 author: Femila
 ---
 # Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
+
+>Applies To: Windows Server Technical Preview
+
 This topic covers the updated Active Directory Administrative Center with its new Active Directory Recycle Bin, Fine-grained Password policy, and Windows PowerShell History Viewer in more detail, including architecture, examples for common tasks, and troubleshooting information. For an introduction, see [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
   
 -   [Active Directory Administrative Center Architecture](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Arch)  

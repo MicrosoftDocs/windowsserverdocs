@@ -14,6 +14,9 @@ ms.assetid: 9ddcc1c2-48a8-4619-a96d-a3e63a0e5282
 author: Femila
 ---
 # Deploy Automatic File Classification (Demonstration Steps)
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains how to enable resource properties in Active Directory, create classification rules on the file server, and then assign values to the resource properties for files on the file server. For this example, the following classification rules are created:  
   
 -   A content classification rule that searches a set of files for the string “Contoso Confidential.” If the string is found in a file, the Impact resource property is set to High on the file.  
