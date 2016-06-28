@@ -12,6 +12,9 @@ ms.assetid: 5c73a50c-47f3-4470-a77f-fac1a6739942
 author: jamesmci
 ---
 # NIC Teaming in Virtual Machines (VMs)
+
+>Applies To: Windows Server Technical Preview
+
 This topic provides information about using NIC Teaming within Hyper-V VMs, and contains the following sections.  
   
 -   [NIC Teaming Configuration Requirements](#bkmk_config)  

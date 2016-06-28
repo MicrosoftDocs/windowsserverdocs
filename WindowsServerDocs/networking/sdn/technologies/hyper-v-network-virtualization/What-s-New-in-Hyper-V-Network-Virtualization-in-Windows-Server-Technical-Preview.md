@@ -12,6 +12,9 @@ ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
 author: vhorne
 ---
 # What&#39;s New in Hyper-V Network Virtualization in Windows Server Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server 2016 Technical Preview.  
   
 ## <a name="BKMK_IPAM2012R2"></a>Updates in HNV  

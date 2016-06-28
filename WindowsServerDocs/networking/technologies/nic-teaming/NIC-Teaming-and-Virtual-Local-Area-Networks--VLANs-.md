@@ -12,6 +12,9 @@ ms.assetid: a8ca82f6-a543-4430-98b9-06ba383b610d
 author: jamesmci
 ---
 # NIC Teaming and Virtual Local Area Networks (VLANs)
+
+>Applies To: Windows Server Technical Preview
+
 This topic provides information about using NIC Teaming with virtual Local Area Networks (VLANs) on both host computers and VMs, and includes the following sections.  
   
 -   [Team interfaces and VLANs](#bkmk_team)  

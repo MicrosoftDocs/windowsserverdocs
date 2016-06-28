@@ -12,6 +12,9 @@ ms.topic: article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
 ---
 # Windows Server Update Services (WSUS)
+
+>Applies To: Windows Server Technical Preview
+
 Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to  fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
 
 ## WSUS Server role description
