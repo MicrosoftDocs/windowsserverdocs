@@ -12,6 +12,9 @@ ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
 author: coreyp
 ---
 # Monitor the existing load on the Remote Access server
+
+>Applies To: Windows Server Technical Preview
+
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 The term **Load** refers to the statistics that relate to the number of connections on the Remote Access server. Following are the steps required to track the load on the Remote Access server.  
@@ -55,4 +58,5 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 PS> Get-RemoteAccessConnectionStatisticsSummary  
 ```  
   
+
 

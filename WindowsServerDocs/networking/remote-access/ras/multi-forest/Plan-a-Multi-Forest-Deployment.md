@@ -12,6 +12,9 @@ ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
 author: coreyp
 ---
 # Plan a Multi-Forest Deployment
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes the planning steps required when configuring Remote Access in a multi-forest deployment.  
   
 ## Prerequisites  
@@ -31,8 +34,8 @@ In addition, the Remote Access administrator must be a local administrator on al
 You must configure at least one security group in the new forest for DirectAccess client machines in the new forest. This is because a single security group cannot contain accounts from several forests.  
   
 > [!NOTE]  
-> -   DirectAccess requires at least one Windows 10Â® or WindowsÂ® 8 client security group for each forest. However, it is recommended to have one Windows 10 or Windows 8 client security group for each domain that contains Windows 10 or Windows 8 clients.  
-> -   When multisite is enabled, DirectAccess requires at least one  Windows 7Â®  client security group per forest for each DirectAccess entry point in which  Windows 7  client computers are supported. However, it is recommended to have a separate  Windows 7  client security group for each entry point for each domain that contains  Windows 7  clients.  
+> -   DirectAccess requires at least one Windows 10® or Windows® 8 client security group for each forest. However, it is recommended to have one Windows 10 or Windows 8 client security group for each domain that contains Windows 10 or Windows 8 clients.  
+> -   When multisite is enabled, DirectAccess requires at least one  Windows 7®  client security group per forest for each DirectAccess entry point in which  Windows 7  client computers are supported. However, it is recommended to have a separate  Windows 7  client security group for each entry point for each domain that contains  Windows 7  clients.  
 >   
 > For DirectAccess to be applied on client computers in additional domains, client GPOs must be created in those domains. Adding security groups triggers writing new client GPOs for the new domains; therefore, if you add a new security group from a new domain to the list of DirectAccess client security groups, a client GPO will be automatically created on the new domain and client computers from the new domain will get the DirectAccess settings via the client GPO.  
 >   
@@ -46,4 +49,5 @@ When using IPsec machine certificate authentication, all client and server compu
 ## Plan OTP exemptions  
 If you are using DirectAccess OTP authentication, note that the OTP exemption security group is limited to users of a single forest. This is because each security group can contain only users from a single forest and only one such security group can be configured.  
   
+
 

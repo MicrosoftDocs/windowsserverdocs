@@ -13,6 +13,9 @@ ms.assetid: 16e202ad-3795-40c9-8176-7ca319e56d26
 author: KBDAzure
 ---
 # Enable all integration services in virtual machines
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -62,4 +65,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
     sc config <service-name> start=auto  
     ```  
   
+
 

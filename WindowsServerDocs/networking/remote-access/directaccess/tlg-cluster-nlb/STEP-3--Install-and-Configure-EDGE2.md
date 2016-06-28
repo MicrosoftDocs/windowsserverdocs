@@ -12,19 +12,22 @@ ms.assetid: f04eb11e-ed5f-42a1-a77b-57a248ba2d10
 author: coreyp
 ---
 # STEP 3: Install and Configure EDGE2
+
+>Applies To: Windows Server Technical Preview
+
 EDGE2 is the second member of a Remote Access cluster. EDGE2 is installed and configured before enabling the cluster configuration.  
   
 You will perform the following steps to configure EDGE2:  
   
-1.  [Install the operating system on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#installOS)â€”Install Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2 or Windows ServerÂ® 2012 on EDGE2.  
+1.  [Install the operating system on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#installOS)—Install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012 on EDGE2.  
   
-2.  [Configure TCP/IP properties](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#TCP)â€”After installing the operating system on EDGE2, configure static IP addressing information on its internal and external network adapters.  
+2.  [Configure TCP/IP properties](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#TCP)—After installing the operating system on EDGE2, configure static IP addressing information on its internal and external network adapters.  
   
-3.  [Rename EDGE2 and join it to the domain](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#rename)â€”Rename the computer to EDGE2 and join it to the CORP domain.  
+3.  [Rename EDGE2 and join it to the domain](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#rename)—Rename the computer to EDGE2 and join it to the CORP domain.  
   
-4.  [Install the IP-HTTPS certificate](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#IPHTTPSCert)â€”To accept incoming IP-HTTPS requests, the EDGE2 Remote Access cluster member must have an IP-HTTPS website certificate installed in its machine certificate store. The certificate must have the same name as the IP-HTTPS certificate on EDGE1.  
+4.  [Install the IP-HTTPS certificate](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#IPHTTPSCert)—To accept incoming IP-HTTPS requests, the EDGE2 Remote Access cluster member must have an IP-HTTPS website certificate installed in its machine certificate store. The certificate must have the same name as the IP-HTTPS certificate on EDGE1.  
   
-5.  [Install the Remote Access role on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#InstallDA)â€”Before you can join EDGE2 to the Remote Access cluster, you must install the Remote Access server role on EDGE2.  
+5.  [Install the Remote Access role on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#InstallDA)—Before you can join EDGE2 to the Remote Access cluster, you must install the Remote Access server role on EDGE2.  
   
 ## <a name="installOS"></a>Install the operating system on EDGE2  
   
@@ -152,4 +155,5 @@ You will perform the following steps to configure EDGE2:
   
 6.  On the **Installation progress** dialog, verify that the installation was successful, and then click **Close**.  
   
+
 

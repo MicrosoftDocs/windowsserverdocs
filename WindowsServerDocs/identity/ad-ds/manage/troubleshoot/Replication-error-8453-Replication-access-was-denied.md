@@ -12,6 +12,9 @@ ms.assetid: 985b9945-78c9-4754-8a69-146878d9f790
 author: Femila
 ---
 # Replication error 8453 Replication access was denied
+
+>Applies To: Windows Server Technical Preview
+
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
@@ -489,7 +492,7 @@ Buttons in Dialog: OK</para>
                       <para>Within the Connection Settings dialog:</para>
                       <list class="bullet">
                         <listItem>
-                          <para>Click <ui>Select a well known Naming Context</ui> and chose <ui>Default naming context</ui> (that is, the computer account‚Äôs domain partition).</para>
+                          <para>Click <ui>Select a well known Naming Context</ui> and chose <ui>Default naming context</ui> (that is, the computer accountís domain partition).</para>
                         </listItem>
                         <listItem>
                           <para>Click <ui>Default (Domain or server that you are logged on to)</ui>.</para>
@@ -715,7 +718,7 @@ Buttons in Dialog: OK</para>
               <alert class="note">
                 <para>The DCDIAG NcSecDesc test may report false positive errors when run in environments with mixed operating system versions as documented in <externalLink><linkText>MSKB 829306</linkText><linkUri>http://support.microsoft.com/kb/829306</linkUri></externalLink>. </para>
               </alert>
-              <para>The DSACLS command can be used to dump the permissions on a given directory partition using the syntax "DSACLS &lt;DN path of directory partition&gt;‚Äù.</para>
+              <para>The DSACLS command can be used to dump the permissions on a given directory partition using the syntax "DSACLS &lt;DN path of directory partition&gt;î.</para>
               <code>C:\&gt;dsacls dc=contoso,dc=com</code>
               <para>The command can be targeted to a remote domain controller using the syntax:</para>
               <code>c:\&gt;dsacls \contoso-dc2\dc=contoso,dc=com</code>
@@ -776,7 +779,7 @@ Buttons in Dialog: OK</para>
           <para>Once the right security groups have been granted the required permissions on directory partitions, the last remaining task is to verify that users initiating replication have effective membership in direct or nested security groups being granted replication permissions.</para>
           <list class="ordered">
             <listItem>
-              <para>Log on with the user account where ad-hoc replication is failing with "replication access was denied.‚Äù</para>
+              <para>Log on with the user account where ad-hoc replication is failing with "replication access was denied.î</para>
             </listItem>
             <listItem>
               <para>From a CMD prompt type "WHOAMI /ALL" and verify membership in the security groups that have been granted the "replicating directory changes" permissions on the relevant directory partitions.</para>
@@ -822,4 +825,5 @@ Buttons in Dialog: OK</para>
     </externalLink>
   </relatedTopics>
 </developerConceptualDocument>
+
 

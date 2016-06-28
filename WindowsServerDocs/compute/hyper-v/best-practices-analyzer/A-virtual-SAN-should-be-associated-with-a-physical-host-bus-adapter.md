@@ -13,6 +13,9 @@ ms.assetid: 14bca69b-e779-4e90-b5c1-1b015625572f
 author: KBDAzure
 ---
 # A virtual SAN should be associated with a physical host bus adapter
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -42,4 +45,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
   
   
+
 

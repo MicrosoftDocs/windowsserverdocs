@@ -13,6 +13,9 @@ ms.assetid: c3a0292a-a619-4d1c-8f9d-391c741411c1
 author: KBDAzure
 ---
 # A virtual machine running Windows 7 and configured with Dynamic Memory should use recommended values for memory settings
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -63,4 +66,5 @@ Note: The following sections provide details about the specific issue. Italics i
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 512MB -MinimumBytes 256MB -StartupBytes 512MB  
 ```  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
 author: coreyp-at-msft
 ---
 # WSUS Messages and Troubleshooting Tips
+
+>Applies To: Windows Server Technical Preview
+
 This topic provides information about some common WSUS messages.
 
 ## WSUS Messages
@@ -101,5 +104,6 @@ For additional details, see: [WSUS sync in ConfigMgr 2012 fails with HTTP 503 er
 
 ### See also
 WSUS resources on the [Windows Server Update Services](https://technet.microsoft.com/en-us/windowsserver/bb332157.aspx) Windows Server Update Services  TechCenter page
+
 
 

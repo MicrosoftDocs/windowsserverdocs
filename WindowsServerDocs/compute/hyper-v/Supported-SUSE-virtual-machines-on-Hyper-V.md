@@ -13,52 +13,55 @@ ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 author: cwatsonmsft
 ---
 # Supported SUSE virtual machines on Hyper-V
+
+>Applies To: Hyper-V Server 2012, Hyper-V Server 2012 R2, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server Technical Preview
+
 The following is a feature distribution map that indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.  
   
 The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by SUSE. An example configuration can be viewed in this bulletin: [SUSE YES Certification Bulletin](https://www.suse.com/nbswebapp/yesBulletin.jsp?bulletinNumber=144176).  
   
 **Table legend**  
   
--   **Built in** – LIS are included as part of this Linux distribution.  The Microsoft-provided LIS download package does not work for this distribution, so do not install it.  The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
+-   **Built in** � LIS are included as part of this Linux distribution.  The Microsoft-provided LIS download package does not work for this distribution, so do not install it.  The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
   
--   **√** - Feature available  
+-   **v** - Feature available  
   
 -   (*blank*) - Feature not available  
   
 |**Feature**|**Windows Server operating system version**|**SLES 12 SP1**|**SLES 12**|**SLES 11 SP4**|**SLES 11 SP3**|**SLES 11 SP2**|**Open SUSE 12.3**|  
 |-|-|-|-|-|-|-|-|  
 |**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|  
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|**√**|**√**|  
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||  
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|**√**|**√**|  
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|**√**|**√**|  
-|Live migration|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|**√**|**√**|  
-|Static IP Injection|2016, 2012 R2, 2012|**√**  Note 1|**√**  Note 1|**√**  Note 1|**√**  Note 1|**√**  Note 1|**√**  Note 1|  
-|vRSS|2016, 2012 R2|**√**|**√**|||||  
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**||||  
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
+|Live migration|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
+|Static IP Injection|2016, 2012 R2, 2012|**v**  Note 1|**v**  Note 1|**v**  Note 1|**v**  Note 1|**v**  Note 1|**v**  Note 1|  
+|vRSS|2016, 2012 R2|**v**|**v**|||||  
+|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**||||  
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||  
-|VHDX resize|2016, 2012 R2|**√**|**√**|**√**|**√**|||  
-|Virtual Fibre Channel|2016, 2012 R2|**√**|**√**|**√**|**√**|||  
-|Live virtual machine backup|2016, 2012 R2|**√** Note 2, 3, 8|**√** Note 2, 3, 8|**√** Note 2, 3, 8|**√** Note 2, 3, 8|||  
+|VHDX resize|2016, 2012 R2|**v**|**v**|**v**|**v**|||  
+|Virtual Fibre Channel|2016, 2012 R2|**v**|**v**|**v**|**v**|||  
+|Live virtual machine backup|2016, 2012 R2|**v** Note 2, 3, 8|**v** Note 2, 3, 8|**v** Note 2, 3, 8|**v** Note 2, 3, 8|||  
 |TRIM support|2016, 2012 R2|||||||  
 |SCSI WWN|2016, 2012 R2|||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||  
-|Configuration of MMIO gap|2016, 2012 R2|**√**|**√**|**√**|**√**|**√**|**√**|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|**√** Note 5, 6|**√** Note 5, 6|**√** Note 4, 5, 6|**√** Note 4, 5, 6|||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|**√** Note 5, 6|**√** Note 5, 6|**√** Note 4, 5, 6|**√** Note 4, 5, 6||**√** Note 4, 5, 6|  
+|Configuration of MMIO gap|2016, 2012 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
+|Dynamic Memory � Hot Add|2016, 2012 R2, 2012|**v** Note 5, 6|**v** Note 5, 6|**v** Note 4, 5, 6|**v** Note 4, 5, 6|||  
+|Dynamic Memory � Ballooning|2016, 2012 R2, 2012|**v** Note 5, 6|**v** Note 5, 6|**v** Note 4, 5, 6|**v** Note 4, 5, 6||**v** Note 4, 5, 6|  
 |Manual Memory Hot Add|2016|||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||  
-|Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|||  
+|Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||  
-|Key/value pair|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√** Note 7|**√** Note 7|**√** Note 7|**√** Note 7|  
-|Non-Maskable Interrupt|2016, 2012 R2|**√**|**√**|**√**|**√**|**√**|**√**|  
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|**√**|**√**|  
-|File copy from host to guest|2016, 2012 R2|**√**|**√**|**√**||||  
+|Key/value pair|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v** Note 7|**v** Note 7|**v** Note 7|**v** Note 7|  
+|Non-Maskable Interrupt|2016, 2012 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
+|File copy from host to guest|2016, 2012 R2|**v**|**v**|**v**||||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||||  
 |Hyper-V Sockets|2016|||||||  
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||  
-|Boot using UEFI|2016, 2012 R2|**√** Note 9|**√** Note 9|**√** Note 9||||  
-|Secure boot|2016, 2012 R2|√|√|||||  
+|Boot using UEFI|2016, 2012 R2|**v** Note 9|**v** Note 9|**v** Note 9||||  
+|Secure boot|2016, 2012 R2|v|v|||||  
   
 ## <a name="BKMK_notes"></a>Notes  
   
@@ -84,7 +87,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 9. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper-V Manager or you can disable it using Powershell:  
   
     ```  
-    Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  
+    Set-VMFirmware �VMName "VMname" -EnableSecureBoot Off  
   
     ```  
   
@@ -105,4 +108,5 @@ See Also
 -   [Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)  
   
 -   [Best Practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)  
+
 

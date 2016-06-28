@@ -12,6 +12,9 @@ ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
 author: coreyp
 ---
 # DirectAccess Offline Domain Join
+
+>Applies To: Windows Server Technical Preview
+
 This guide explains the steps to perform an offline domain join with DirectAccess. During an offline domain join, a computer is configured to join a domain without physical or VPN connection.  
   
 This guide includes the following sections:  
@@ -34,9 +37,9 @@ Introduced in Windows Server 2008 R2, domain controllers include a feature calle
 3.  Reboot the destination computer, and the computer will be joined to the domain.  
   
 ### <a name="BKMK_ODJOverview"></a>Offline domain join with DirectAccess policies scenario overview  
-DirectAccess offline domain join is a process that computers running Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012, Windows 10Â® and WindowsÂ® 8 can use to join a domain without being physically joined to the corporate network, or connected through VPN. This makes it possible to join computers to a domain from locations where there is no connectivity to a corporate network. Offline domain join for DirectAccess provides DirectAccess policies to clients to allow remote provisioning.  
+DirectAccess offline domain join is a process that computers running Windows Server® 2016 Technical Preview, Windows Server® 2012, Windows 10® and Windows® 8 can use to join a domain without being physically joined to the corporate network, or connected through VPN. This makes it possible to join computers to a domain from locations where there is no connectivity to a corporate network. Offline domain join for DirectAccess provides DirectAccess policies to clients to allow remote provisioning.  
   
-A domain join creates a computer account and establishes a trust relationship between a computer running a Windows operating system and an Active DirectoryÂ® domain.  
+A domain join creates a computer account and establishes a trust relationship between a computer running a Windows operating system and an Active Directory® domain.  
   
 ## <a name="BKMK_ODJRequirements"></a>Prepare for offline domain join  
   
@@ -58,7 +61,7 @@ To perform an offline domain join, you must have the rights that are necessary t
   
 -   Edit the access control list (ACL) of the default Computers container for the domain to delegate the correct permissions to you.  
   
--   Create an OU and edit the ACL on that OU to grant you the **Create child â€“ Allow** permission. Pass the **/machineOU** parameter to the **djoin /provision** command.  
+-   Create an OU and edit the ACL on that OU to grant you the **Create child – Allow** permission. Pass the **/machineOU** parameter to the **djoin /provision** command.  
   
 The following procedures show how to grant the user rights with Group Policy and how to delegate the correct permissions.  
   
@@ -129,7 +132,7 @@ Complete the following steps to perform the offline domain join:
   
 4.  On the **Members** tab, click **Add**.  
   
-5.  Click **Object Typesâ€¦**, select **Computers**, and then click **OK**.  
+5.  Click **Object Types…**, select **Computers**, and then click **OK**.  
   
 6.  Type the client name to add, and then click **OK**.  
   
@@ -151,4 +154,5 @@ Complete the following steps to perform the offline domain join:
 [NetProvisionComputerAccount Function](http://go.microsoft.com/fwlink/?LinkId=162426)  
 [NetRequestOfflineDomainJoin Function](http://go.microsoft.com/fwlink/?LinkId=162427)  
   
+
 

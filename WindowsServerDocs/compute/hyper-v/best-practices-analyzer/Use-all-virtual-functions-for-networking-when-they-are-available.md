@@ -13,6 +13,9 @@ ms.assetid: bf895484-6a0d-4aa4-9a42-9fac739e875d
 author: KBDAzure
 ---
 # Use all virtual functions for networking when they are available
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *Consider configuring the virtual network adapter for SR-IOV if the physical hardware supports SR-IOV and if this configuration does not conflict with the networking features required by the virtual machine.*  
   
+
 

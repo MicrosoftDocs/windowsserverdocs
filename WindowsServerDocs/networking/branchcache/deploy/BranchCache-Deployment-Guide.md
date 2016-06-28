@@ -12,7 +12,10 @@ ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
 author: jamesmci
 ---
 # BranchCache Deployment Guide
-You  can use this guide to learn how to deploy BranchCache in Windows ServerÂ® 2016 Technical Preview.  
+
+>Applies To: Windows Server Technical Preview
+
+You  can use this guide to learn how to deploy BranchCache in Windows Server® 2016 Technical Preview.  
   
 In addition to this topic, this guide contains the following sections.  
   
@@ -21,11 +24,11 @@ In addition to this topic, this guide contains the following sections.
 -   [Deploy BranchCache](../../branchcache/deploy/Deploy-BranchCache.md)  
   
 ## BranchCache Deployment Overview  
-BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of Windows Server 2016 Technical Preview, Windows ServerÂ® 2012 R2, Windows ServerÂ® 2012,   Windows ServerÂ® 2008 R2 , and related Windows client operating systems.  
+BranchCache is a wide area network (WAN) bandwidth optimization technology that is included in some editions of Windows Server 2016 Technical Preview, Windows Server® 2012 R2, Windows Server® 2012,   Windows Server® 2008 R2 , and related Windows client operating systems.  
   
 To optimize WAN bandwidth, BranchCache copies content from your main office content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.  
   
-At branch offices, content is cached either on servers that are running the BranchCache feature of Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,    Windows Server 2012 , or  Windows Server 2008 R2  - or, if there are no servers available in the branch office, content is cached on client computers that are running Windows 10Â®, WindowsÂ® 8.1,  Windows 8, or  Windows 7Â® .  
+At branch offices, content is cached either on servers that are running the BranchCache feature of Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,    Windows Server 2012 , or  Windows Server 2008 R2  - or, if there are no servers available in the branch office, content is cached on client computers that are running Windows 10®, Windows® 8.1,  Windows 8, or  Windows 7® .  
   
 After a client computer requests and receives content from the main office or cloud datacenter and the content is cached at the branch office, other computers at the same branch office can obtain the content locally rather than contacting the content server over the WAN link.  
   
@@ -67,7 +70,7 @@ Following are the requirements for deploying BranchCache by using this guide.
   
 **BranchCache history and documentation**  
   
-BranchCache was first introduced in  Windows 7Â®  and  Windows ServerÂ® 2008 R2 , and was improved in  Windows Server 2012 , Windows 8, and later operating systems.  .  
+BranchCache was first introduced in  Windows 7®  and  Windows Server® 2008 R2 , and was improved in  Windows Server 2012 , Windows 8, and later operating systems.  .  
   
 > [!NOTE]  
 > If you are deploying BranchCache in operating systems other than Windows Server 2016 Technical Preview, the following documentation resources are available.  
@@ -75,4 +78,5 @@ BranchCache was first introduced in  Windows 7Â®  and  Windows ServerÂ® 2008 R2 
 > -   For information about BranchCache in Windows 8, Windows 8.1,  Windows Server 2012 , and  Windows Server 2012 R2 , see [BranchCache Overview](https://technet.microsoft.com/en-us/library/hh831696.aspx).  
 > -   For information about BranchCache in  Windows 7  and  Windows Server 2008 R2 , see  [BranchCache for Windows Server 2008 R2](http://technet.microsoft.com/library/dd996634(WS.10).aspx).  
   
+
 

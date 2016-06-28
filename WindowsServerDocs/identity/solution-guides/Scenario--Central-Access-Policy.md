@@ -14,6 +14,9 @@ ms.assetid: 2fade159-f2b3-4247-92f4-d03bcf334efb
 author: Femila
 ---
 # Scenario: Central Access Policy
+
+>Applies To: Windows Server Technical Preview
+
 Central access policies for files enable organizations to centrally deploy and manage authorization policies that include conditional expressions that use user groups, user claims, device claims, and resource properties. (Claims are assertions about the attributes of the object with which they are associated). For example, to access high-business-impact (HBI) data, a user must be a full-time employee, obtain access from a managed device, and log on with a smart card. These policies are defined and hosted in Active Directory Domain Services (AD DS).  
   
 Organizational access policies are driven by compliance and business regulatory requirements. For example, if an organization has a business requirement to restrict access to personally identifiable information (PII) in files to only the file owner and members of the human resources (HR) department who are allowed to view PII information, this policy applies to PII files wherever they are located on file servers across the organization. In this example, you need to be able to:  
@@ -88,4 +91,5 @@ The following table lists the roles and features that are part of this scenario 
 |File and Storage Services Server role|File and Storage Services provides technologies that help you set up and manage one or more file servers that provide central locations on your network where you can store files and share them with users. If your network users need access to the same files and applications, or if centralized backup and file management are important to your organization, you should set up one or more computers as a file server by adding the File and Storage Services role and the appropriate role services to the computers.|  
 |Windows client computer|Users can access files and folders on the network through the client computer.|  
   
+
 

@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Add the RD Connection Broker server to the deployment and configure high availability
+
+>Applies To: Windows Server Technical Preview
+
 1. Connect to the RDMS server virtual machine. (The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.)   
     1.  In the Azure portal click **Browse > Virtual Machines**.  
     2.  Select the new RDSH virtual machine (for example, Contoso-RDSH1).  
@@ -47,4 +50,5 @@ manager: msswadhwa
   
     3. Page through wizard until you get to Server Selection, then select the newly created RD Connection Broker server (for example, Contoso-CB2).  
     4. Complete the wizard, accepting the default values.   
+
 

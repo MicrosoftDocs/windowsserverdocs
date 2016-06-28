@@ -13,6 +13,9 @@ ms.assetid: b5065a3f-364d-4aa9-8703-eafa7a46b575
 author: KBDAzure
 ---
 # Windows Server 2008 should be configured with at least the minimum amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -68,4 +71,5 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

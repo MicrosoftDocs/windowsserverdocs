@@ -12,6 +12,9 @@ ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 author: kumudd
 ---
 # Storage Spaces Direct in Windows Server 2016 Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 Windows Server 2016 Technical Preview introduces Storage Spaces Direct, which enables building highly available and scalable storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
 With Windows Server 2016 Technical Preview Storage Spaces Direct, you can now build HA Storage Systems using storage nodes with only local storage, which is either disk devices that are internal to each storage node (Figure 1). This eliminates the need for a shared SAS fabric and its complexities, but also enables using devices such as SATA solid state drives, which can help further reduce cost or NVMe solid state devices to improve performance.  
@@ -28,7 +31,7 @@ This topic provides an overview of Storage Spaces Direct and the scenarios that 
 * [Supported Storage Spaces Direct  Deployment Scenarios](#BKMK_S2DSupportedScenarios)  
 
 ## <a name="BKMK_S2DOverview"></a>Storage Spaces Direct Overview  
-Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Scale-Out File Server, Clustered Shared Volume File System (CSVFS), Storage Spaces and Failover Clustering. Figure 3 below illustrates the ‚ÄúStorage Spaces Direct‚Äù stack:  
+Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Scale-Out File Server, Clustered Shared Volume File System (CSVFS), Storage Spaces and Failover Clustering. Figure 3 below illustrates the ìStorage Spaces Directî stack:  
 
 ![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectStack.png)  
 
@@ -37,7 +40,7 @@ Storage Spaces Direct seamlessly integrates with the features you know today tha
 
 ![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectHyperconverged.png)  
 
-**FIGURE 3: Hyperconverged Storage Spaces Direct stack ‚Äì same cluster configured for Storage Spaces Direct  and the hosting of virtual machines**  
+**FIGURE 3: Hyperconverged Storage Spaces Direct stack ñ same cluster configured for Storage Spaces Direct  and the hosting of virtual machines**  
 
 The Storage Spaces Direct stack includes the following, starting from the bottom:  
 
@@ -96,3 +99,4 @@ The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storag
 -   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 
 -   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)
+

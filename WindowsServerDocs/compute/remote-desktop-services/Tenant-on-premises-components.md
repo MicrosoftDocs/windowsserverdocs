@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Tenant on-premises components
+
+>Applies To: Windows Server Technical Preview
+
 The following information describes the on-premises components that make up the desktop hosting deployment.  
   
 ##  Clients  
@@ -20,7 +23,7 @@ To access the hosted desktops and applications, the users must use Remote Deskto
   
 Additional information:  
 [RemoteFX Enabled Devices](http://social.technet.microsoft.com/wiki/contents/articles/14534.remotefx-enabled-devices.aspx)  
-[Whatâ€™s new in Windows Server 2012 R2 Remote Desktop Gateway](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#transport)  
+[What’s new in Windows Server 2012 R2 Remote Desktop Gateway](https://blogs.technet.microsoft.com/enterprisemobility/2013/03/14/whats-new-in-windows-server-2012-remote-desktop-gateway/#transport)  
 [Microsoft Remote Desktop Clients](https://technet.microsoft.com/library/dn473009.aspx)  
 [Remote Desktop app for Windows in the Microsoft Store](http://apps.microsoft.com/windows/app/remote-desktop/051f560e-5e9b-4dad-8b2e-fa5e0b05a480)  
 [Microsoft Remote Desktop - Android Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)  
@@ -28,9 +31,10 @@ Additional information:
 [Microsoft Remote Desktop in the App Store](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)  
   
 ##  Active Directory Domain Services  
-Some larger and more sophisticated tenants may choose to host an Active Directory Domain Services (AD DS) server on their premises. In this case, the AD DS server in the tenantâ€™s environment will typically be a replica of AD DS server that is on the tenantâ€™s premises. This is supported by creating a virtual network in the tenantâ€™s environment and using the Azure VPN to create a site-to-site connection from the tenantâ€™s on-premises network to the tenantâ€™s virtual network in the Azure data center.  
+Some larger and more sophisticated tenants may choose to host an Active Directory Domain Services (AD DS) server on their premises. In this case, the AD DS server in the tenant’s environment will typically be a replica of AD DS server that is on the tenant’s premises. This is supported by creating a virtual network in the tenant’s environment and using the Azure VPN to create a site-to-site connection from the tenant’s on-premises network to the tenant’s virtual network in the Azure data center.  
   
 Additional information:  
 [Microsoft Azure Virtual Network Overview](https://azure.microsoft.com/documentation/articles/virtual-networks-overview/)  
 [Create a resource manager VNet with a Site-to-Site VPN connection using the Azure Portal](https://azure.microsoft.com/documentation/articles/vpn-gateway-howto-site-to-site-resource-manager-portal/)  
+
 

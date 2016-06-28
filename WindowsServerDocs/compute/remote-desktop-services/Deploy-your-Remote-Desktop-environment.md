@@ -13,9 +13,12 @@ author: lizap
 manager: msswadhwa
 ---
 # Deploy your Remote Desktop environment
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to deploy the Remote Desktop servers in your environment.  
   
->[NOTE] The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS server, is used to deploy and manage the rest of the servers in the tenantâ€™s hosted desktop environment. The remainder of this document asks you to sign in with a user in the AAD DC Administrators group for administrative actions. If your deployment does not match this configuration and instead has users in a Domain Administrators group, use those credentials instead.  
+>[NOTE] The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS server, is used to deploy and manage the rest of the servers in the tenant’s hosted desktop environment. The remainder of this document asks you to sign in with a user in the AAD DC Administrators group for administrative actions. If your deployment does not match this configuration and instead has users in a Domain Administrators group, use those credentials instead.  
   
 1.  Connect to the RDMS virtual machine using the Remote Desktop (RDC) client:  
     1.  In the Azure portal, click **Browse > Virtual machines**.  
@@ -62,7 +65,7 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     9.  Browse to the certificate created for the RD Gateway server (for example, ContosoRdGwCert), and then click **Open**.  
     10. Enter the password for the certificate, select **Allow the certificate to be added to the Trusted Root Certificate store on the destination computers**, and then click **OK**.  
     11. Click **Apply**, and then wait for the certificate to be successfully applied to the RD Web Access server.  
-    12. Repeat steps c. - r. for the **RD Connection Broker â€“ Enable Single Sign On** and **RD Connection Broker - Publishing services** using the internal FQDN of the RD Connection Broker server for the new certificateâ€™s name (for example, Contoso-Cb1.Contoso.com).  
+    12. Repeat steps c. - r. for the **RD Connection Broker – Enable Single Sign On** and **RD Connection Broker - Publishing services** using the internal FQDN of the RD Connection Broker server for the new certificate’s name (for example, Contoso-Cb1.Contoso.com).  
 8.  Export self-signed public certificates and copy them to a client computer. If you are using certificates from a trusted certificate authority, you can skip this step.  
     1.  Launch certlm.msc.  
     2.  Expand **Personal**, and then click **Certificates**.  
@@ -87,4 +90,5 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     3.  Select an RD Session Host Server (Contoso-SH1), accept the default user groups (Contoso\Domain Users), and enter the Universal Naming Convention (UNC) Path to the user profile disks created above (\Contoso-Cb1\UserDisks).  
     4.  Set a Maximum size, and then click **Create**.  
   
+
 

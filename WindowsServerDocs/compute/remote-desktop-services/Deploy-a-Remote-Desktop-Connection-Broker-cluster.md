@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Deploy a Remote Desktop Connection Broker cluster
+
+>Applies To: Windows Server Technical Preview
+
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of a desktop hosting solution based on the Microsoft Azure Desktop Hosting Reference Architecture Guide.   
   
 This article will show you how to add a second RD Connection Broker server to your existing Remote Desktop Services deployment. This article assumes that you have already created a basic deployment of Remote Desktop Services that leverages Azure Infrastructure Services.  
@@ -29,4 +32,5 @@ Use the following steps to set up your RD Connection Broker cluster:
 6. [Add the RD Connection Broker server to the deployment](Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md), and then configure high availability.  
 7. [Configure trusted certificates on RD Connection Broker servers and clients](Configure-trusted-certificates-on-RD-Connection-Broker-servers-and-clients.md).  
 8. [Validate and secure the Remote Desktop deployment](Validate-and-secure-your-Remote-Desktop-deployment.md).   
+
 

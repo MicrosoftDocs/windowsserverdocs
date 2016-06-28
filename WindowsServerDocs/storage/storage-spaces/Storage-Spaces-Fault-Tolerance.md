@@ -14,9 +14,12 @@ author: kumudd
 ---
 # Storage Spaces Fault Tolerance
 
+>Applies To: Windows Server Technical Preview
+
+
 Windows Server 2016 Technical Preview Storage Spaces Direct enhances the resiliency of virtual disks to enable resiliency to node failures. This is in addition to the existing disk and enclosure resiliency.  
 
-When using Storage Spaces Direct, storage pools and virtual disks will, by default, be resilient to node failures. When a storage pool is created the ‚ÄúFaultDomainAwarenessDefault‚Äù property is set to ‚ÄúStorageScaleUnit‚Äù. This controls the default for virtual disk creation. You can inspect the storage pool property by running the following command:  
+When using Storage Spaces Direct, storage pools and virtual disks will, by default, be resilient to node failures. When a storage pool is created the ìFaultDomainAwarenessDefaultî property is set to ìStorageScaleUnitî. This controls the default for virtual disk creation. You can inspect the storage pool property by running the following command:  
 
 ```  
 Get-StoragePool -FriendlyName <PoolName> | FL FriendlyName, Size, FaultDomainAwarenessDefault  
@@ -26,7 +29,7 @@ Size                        : <Size>
 FaultDomainAwarenessDefault : StorageScaleUnit  
 ```  
 
-Subsequently, when a virtual disk is created in a pool, it inherits the default value of the pool and therefore will have its ‚ÄúFaultDomainAwareness‚Äù set to ‚ÄúStorageScaleUnit‚Äù. You can inspect the virtual disk property by running the following command:  
+Subsequently, when a virtual disk is created in a pool, it inherits the default value of the pool and therefore will have its ìFaultDomainAwarenessî set to ìStorageScaleUnitî. You can inspect the virtual disk property by running the following command:  
 
 ```  
 Get-VirtualDisk -FriendlyName <VirtualDiskName>| FL FriendlyName, Size, FaultDomainAwareness, ResiliencySettingName  
@@ -40,7 +43,7 @@ ResiliencySettingName : Mirror
 > [!NOTE]  
 > Do not change the **FaultDomainAwarenessDefault** and **FaultDomainAwareness** values in a Storage Spaces Direct deployment.  
 
-The FaultDomainAwareness property on the virtual disk controls data placement in all scenarios, including initial data allocation when creating the virtual disk,  when repairing a virtual disk from a disk, enclosure or node failure, when rebalancing virtual disks in a storage pool. All of these operations will take into account the ‚ÄúStorageScaleUnit‚Äù fault domain and ensure that copies of data are placed on different nodes.  
+The FaultDomainAwareness property on the virtual disk controls data placement in all scenarios, including initial data allocation when creating the virtual disk,  when repairing a virtual disk from a disk, enclosure or node failure, when rebalancing virtual disks in a storage pool. All of these operations will take into account the ìStorageScaleUnitî fault domain and ensure that copies of data are placed on different nodes.  
 
 Let us examine some basics about virtual disks. A virtual disk consists of extents, each of which are 1GB in size. A 100GB virtual disk will therefore consist of 100 1GB extents. If the virtual disk is mirrored (using ResiliencySettingName) there will be multiple copies of each  extent. The number of copies of the extent (using NumberOfDataCopes) can be two or three. All in all, a 100GB mirrored virtual disk with three data copes will consume 300 extents. The placement of extents is governed by the fault domain, which in Storage Spaces Direct is nodes (StorageScaleUnit), so the three copies of an extent (A) will be placed on three different storage nodes e.g. node 1, 2 and 3 in the diagram below. Another extent (B) of the same virtual disk might have its three copies placed on different nodes, e.g. 1, 3, and 4 and so on. This means that a virtual disk might have its extents distributed all storage nodes and the copies of each extent is placed on different nodes. Figure 6 below illustrates a four node deployment with a mirrored virtual disk with 3 copies and an example layout of extents:  
 
@@ -73,7 +76,7 @@ In this scenario Storage Spaces will do one of two things:
 
 -   If however only the physical disk is missing, then Storage Spaces will retire the disk.  
 
-    The reason for #1 above is that during a storage node restart or temporary maintenance of a storage node all the disks associated with that node will be reported missing. Automatically retiring all those disks would potentially result in a massive amount of repair activity as all extents on those disks would have to be rebuild elsewhere in the storage system ‚Äì this could easily be multiple terabytes of data. If the disks are really missing and will not come back to the storage system, the administrator will need to retire the missing physical disks and start the repair process.  
+    The reason for #1 above is that during a storage node restart or temporary maintenance of a storage node all the disks associated with that node will be reported missing. Automatically retiring all those disks would potentially result in a massive amount of repair activity as all extents on those disks would have to be rebuild elsewhere in the storage system ñ this could easily be multiple terabytes of data. If the disks are really missing and will not come back to the storage system, the administrator will need to retire the missing physical disks and start the repair process.  
 
 ### <a name="BKMK_FaultTolerance_Scenario4"></a>Scenario 4: Storage node restart or maintenance  
 In this scenario Storage Spaces will not automatically retire physical disks from the storage pool for the reasons described above in scenario 3. Once the storage node comes back online, Storage Spaces will automatically update all extents that are not up to date with the copies that were not affected by the restart or maintenance.  
@@ -104,3 +107,4 @@ For more information on Fault Domains, see [Fault Domains in Windows Server 2016
 -   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 
 -   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
+

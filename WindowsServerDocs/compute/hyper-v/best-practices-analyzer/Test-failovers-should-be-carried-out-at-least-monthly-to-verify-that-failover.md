@@ -13,6 +13,9 @@ ms.assetid: 57a8aa50-e59e-4a4b-8571-1099d5a8eee4
 author: KBDAzure
 ---
 # Test failovers should be carried out at least monthly to verify that failover will succeed and that virtual machine workloads will operate as expected after failover
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *Use Hyper-V Manager to conduct a test failover.*  
   
+
 

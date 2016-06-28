@@ -13,6 +13,9 @@ ms.assetid: 5df97522-e05c-42de-ab79-65d02a1e0dd3
 author: Femila
 ---
 # Active Directory Domain Services
+
+>Applies To: Windows Server Technical Preview
+
   
 **[This information is preliminary and subject to change.]**  
   
@@ -26,4 +29,5 @@ You will find links to Active Directory Domain services content on this page.
 * [AD DS Operations](../ad-ds/manage/component-updates/AD-DS-Operations.md)   
 * [Active Directory Domain Services Virtualization](../ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Virtualization.md)  
 * [AD DS Troubleshooting](../ad-ds/manage/AD-DS-Troubleshooting.md)
+
 

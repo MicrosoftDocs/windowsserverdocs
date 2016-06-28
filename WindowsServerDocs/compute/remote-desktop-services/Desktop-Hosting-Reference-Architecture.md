@@ -13,11 +13,14 @@ author: lizap
 manager: msswadhwa
 ---
 # Desktop Hosting Reference Architecture
-This article defines a set of architectural blocks for using Remote Desktop Services (RDS) and Microsoft Azure virtual machines to create multitenant, hosted Windows desktop and application services, which we call â€œdesktop hosting.â€ You can use this architecture reference to create highly secure, scalable, and reliable desktop hosting solutions for small- and medium-sized organizations with 5 to 5000 users.    
+
+>Applies To: Windows Server Technical Preview
+
+This article defines a set of architectural blocks for using Remote Desktop Services (RDS) and Microsoft Azure virtual machines to create multitenant, hosted Windows desktop and application services, which we call “desktop hosting.” You can use this architecture reference to create highly secure, scalable, and reliable desktop hosting solutions for small- and medium-sized organizations with 5 to 5000 users.    
   
 The primary audience for this reference architecture are hosting providers who want to leverage Microsoft Azure Infrastructure Services to deliver desktop hosting services and Subscriber Access Licenses (SALs) to multiple tenants via the [Microsoft Service Provider Licensing Agreement](http://www.microsoft.com/hosting/en/us/licensing/splabenefits.aspx) (SPLA) program. A second audience for this reference architecture are end customers who want to create and manage desktop hosting solutions in Microsoft Azure Infrastructure Services for their own employees using [RDS User CALs extended rights through Software Assurance](http://download.microsoft.com/download/6/B/A/6BA3215A-C8B5-4AD1-AA8E-6C93606A4CFB/Windows_Server_2012_R2_Remote_Desktop_Services_Licensing_Datasheet.pdf) (SA).   
   
-To deliver a desktop hosting solutions, hosting partners and SA customers leverage Windows ServerÂ® and the Windows Desktop Experience feature to deliver Windows users an application experience that is familiar to business users and consumers. Although Windows 8.1, Windows 7, and earlier Windows client versions are not licensed for hosting environments with shared hardware, the Desktop Experience feature in Windows Server 2012 R2 provides a similar user experience and application support.    
+To deliver a desktop hosting solutions, hosting partners and SA customers leverage Windows Server® and the Windows Desktop Experience feature to deliver Windows users an application experience that is familiar to business users and consumers. Although Windows 8.1, Windows 7, and earlier Windows client versions are not licensed for hosting environments with shared hardware, the Desktop Experience feature in Windows Server 2012 R2 provides a similar user experience and application support.    
   
 The scope of this document is limited to:   
   
@@ -44,4 +47,5 @@ The following topics are covered:
 - [Tenant on-premises components](Tenant-on-premises-components.md)  
   
  
+
 

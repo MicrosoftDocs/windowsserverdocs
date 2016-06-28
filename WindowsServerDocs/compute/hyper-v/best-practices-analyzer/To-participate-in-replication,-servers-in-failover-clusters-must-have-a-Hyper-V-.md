@@ -13,6 +13,9 @@ ms.assetid: 5ec88ce5-a8b2-4ece-9062-366523c8b17f
 author: KBDAzure
 ---
 # To participate in replication, servers in failover clusters must have a Hyper-V Replica Broker configured
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -35,4 +38,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *Use Failover Cluster Manager to configure the Hyper-V Replica Broker. In Hyper-V Manager, ensure that the replication configuration uses the Hyper-V Replica Broker name as the server name.*  
   
+
 

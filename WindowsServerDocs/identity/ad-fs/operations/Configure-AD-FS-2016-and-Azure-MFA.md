@@ -13,6 +13,9 @@ ms.assetid: 3b7d2ea8-9a9d-4e0a-9203-c5059e3034d7
 author: Femila
 ---
 # Configure AD FS 2016 and Azure MFA
+
+>Applies To: Windows Server Technical Preview
+
   
 The following topic describes how to get started and configure AD FS for enabling multi-factor authentication with Azure.  
   
@@ -83,4 +86,5 @@ This cmdlet needs to be executed only once for an AD FS farm.  Use PowerShell to
 After this, you will see that Azure MFA is available as a primary authentication method for intranet and extranet use.    
   
 ![ADFS_AzureMFA6media/ADFS_AzureMFA6.png)  
+
 

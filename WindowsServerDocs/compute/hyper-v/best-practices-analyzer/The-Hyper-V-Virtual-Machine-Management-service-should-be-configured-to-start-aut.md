@@ -13,6 +13,9 @@ ms.assetid: 222bbe76-c514-4a3f-b61b-860a4dc2826a
 author: KBDAzure
 ---
 # The Hyper-V Virtual Machine Management service should be configured to start automatically
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -68,4 +71,5 @@ Virtual machines that are running will continue to run. However, you won't be ab
     start-service -name vmms  
     ```  
   
+
 

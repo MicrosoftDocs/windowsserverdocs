@@ -13,6 +13,9 @@ ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
 author: cwatsonmsft
 ---
 # Manage Hyper-V on Windows Server 2016 Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
 Use the resources in this section to help you manage Hyper-V on Windows Server 2016 Technical Preview.   
 -   [Choose between standard or production checkpoints](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
@@ -20,4 +23,5 @@ Use the resources in this section to help you manage Hyper-V on Windows Server 2
 -   [Manage Windows virtual machines with PowerShell Direct](Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
 - [Set up Hyper-V Replica](Set-up-Hyper-V-Replica.md)  
   
+
 

@@ -13,11 +13,14 @@ author: kumudd
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
 
+>Applies To: Windows Server Technical Preview
+
+
 Simplified SMB Multichannel and Multi-NIC Cluster Networks is a new feature in Windows Server 2016 Technical Preview that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Mutichannel.  
 
 Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the following benefits:  
 
--   Failover Clustering automatically recognizes all NICs on nodes that are using the same switch / same subnet ‚Äì no additional configuration needed.  
+-   Failover Clustering automatically recognizes all NICs on nodes that are using the same switch / same subnet ñ no additional configuration needed.  
 
 -   SMB Multichannel is enabled automatically.  
 
@@ -41,7 +44,7 @@ This section describes how to take advantage of the new multi-NIC clusters netwo
 
 ### Use at least two networks for Failover Clustering   
 
-Although it is rare, network switches can fail ‚Äì it is still best practice to use at least two networks for Failover Clustering. All networks that are found are used for cluster heartbeats. Avoid using a single network for your Failover Cluster in order to avoid a single point of failure. Ideally, there should be multiple physical communication paths between the nodes in the cluster, and no single point of failure.  
+Although it is rare, network switches can fail ñ it is still best practice to use at least two networks for Failover Clustering. All networks that are found are used for cluster heartbeats. Avoid using a single network for your Failover Cluster in order to avoid a single point of failure. Ideally, there should be multiple physical communication paths between the nodes in the cluster, and no single point of failure.  
 
   ![](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig1.png)  
 
@@ -49,12 +52,12 @@ Although it is rare, network switches can fail ‚Äì it is still best practice to 
 
 ### Use Multiple NICs across clusters  
 
-Maximum benefit of the simplified SMB multichannel is achieved when multiple NICs are used across clusters ‚Äì in both storage and storage workload clusters. This allows the workload clusters (Hyper-V, SQL Server Failover Cluster Instance, Storage Replica, etc.) to use SMB multichannel and results in more efficient use of the network. In a converged (also known as disaggregated) cluster configuration where a Scale-out File Server cluster is used for storing workload data for a Hyper-V or SQL Server Failover Cluster Instance cluster, this network is often called ‚Äúthe North-South subnet‚Äù / network. Many customers maximize throughput of this network by investing in RDMA capable NIC cards and switches.  
+Maximum benefit of the simplified SMB multichannel is achieved when multiple NICs are used across clusters ñ in both storage and storage workload clusters. This allows the workload clusters (Hyper-V, SQL Server Failover Cluster Instance, Storage Replica, etc.) to use SMB multichannel and results in more efficient use of the network. In a converged (also known as disaggregated) cluster configuration where a Scale-out File Server cluster is used for storing workload data for a Hyper-V or SQL Server Failover Cluster Instance cluster, this network is often called ìthe North-South subnetî / network. Many customers maximize throughput of this network by investing in RDMA capable NIC cards and switches.  
 
 
 ![](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig2.png)  
 
-**Figure 2: To achieve maximum network throughput, use multiple NICs on both the Scale-out File Server cluster and the Hyper-V or SQL Server Failover Cluster Instance cluster ‚Äì which share the North-South subnet**  
+**Figure 2: To achieve maximum network throughput, use multiple NICs on both the Scale-out File Server cluster and the Hyper-V or SQL Server Failover Cluster Instance cluster ñ which share the North-South subnet**  
 
 
 ![](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig3.png)  
@@ -89,7 +92,7 @@ Windows Server 2016 automatically detects NIC capabilities and will attempt to u
 
 -   **Can a multi-NIC network be used for cluster communication only? Or can it only be used for client and cluster communication?**  
 
-    Either configuration will work ‚Äì all cluster network roles will work on a multi-NIC network.  
+    Either configuration will work ñ all cluster network roles will work on a multi-NIC network.  
 
 -   **Is SMB Multichannel also used for CSV and cluster traffic?**  
 
@@ -109,3 +112,4 @@ Windows Server 2016 automatically detects NIC capabilities and will attempt to u
 
 
 -   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
+

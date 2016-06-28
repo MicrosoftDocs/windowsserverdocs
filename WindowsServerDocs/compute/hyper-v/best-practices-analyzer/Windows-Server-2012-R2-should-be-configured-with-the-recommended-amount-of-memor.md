@@ -13,6 +13,9 @@ ms.assetid: b383a3c9-3ab6-442e-abd8-0942a32b60f8
 author: KBDAzure
 ---
 # Windows Server 2012 R2 should be configured with the recommended amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -64,4 +67,5 @@ Set-VMMemory <MyVM> -StartupBytes 2GB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

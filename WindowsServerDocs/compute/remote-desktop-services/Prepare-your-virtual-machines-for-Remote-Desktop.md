@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Prepare your virtual machines for Remote Desktop
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to prepare the virtual machines you created in the previous step.  
   
 1.  Connect to the virtual machine using the Remote Desktop Connection (RDC) client:  
@@ -52,4 +55,5 @@ Use the following steps to prepare the virtual machines you created in the previ
     6.  Select **Everyone**, and then click **Remove**. Now click **Add**, enter **AAD DC Administrators**, and click **OK**. If you are using AD DS on a VM and not Azure AD Domain Services, enter **Administrators** instead of **AAD DC Administrators**.  
     7.  Select **Allow Full Control**, and then click **OK > OK > Close**.  
     8.  Repeat steps c. to g. to create a shared folder for certificates.   
+
 

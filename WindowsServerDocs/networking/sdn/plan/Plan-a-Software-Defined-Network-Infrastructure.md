@@ -13,6 +13,9 @@ ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
 author: vhorne
 ---
 # Plan a Software Defined Network Infrastructure
+
+>Applies To: Windows Server Technical Preview
+
 Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment.  After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.  
   
 In addition to this topic, the following SDN planning content is available.  
@@ -46,11 +49,11 @@ A DHCP server can automatically assign IP addresses for the Management network o
 The fabric administrator statically assigns the HNV Provider IP addresses used by the SLB/MUX via PowerShell scripts or VMM. The Network Controller assigns an HNV Provider IP address to a physical compute host only after the Network Controller Host Agent receives network policy for a specific tenant virtual machine.  
   
 #### Sample network topology  
-Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administratorâ€™s guidance.  
+Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator’s guidance.  
   
 |Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations (examples)|  
 |----------------|----------|--------|--------------------|-----------|-----------------------------|  
-|**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br />â€¦<br />10.184.108.X - Compute host X|  
+|**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br />…<br />10.184.108.X - Compute host X|  
 |**HNV Provider**|10.10.56.0|23|11|10.10.56.1|10.10.56.1 - Router<br /><br />10.10.56.2 - SLB/MUX1|  
   
 ### Logical Networks for Gateways and the Software Load Balancer  
@@ -58,7 +61,7 @@ Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your 
 Additional logical networks need to be created and provisioned for gateway and SLB usage. Once again, you need to work with your network administrator to obtain the correct IP prefixes, VLAN IDs, and gateway IP addresses for these networks.   
 #### Transit logical network  
   
-The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run HNV Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hostsâ€™ network adapters are connected. Each SLB/MUX or HNV Gateway virtual machine is statically assigned one IP address from the Transit logical network.  
+The RAS Gateway and SLB/MUX use the Transit logical network to exchange BGP peering information and North/South (external-internal) tenant traffic. The size of this subnet will typically be smaller than the others. Only physical compute hosts that run HNV Gateway or SLB/MUX virtual machines need to have connectivity to this subnet with these VLANs trunked and accessible on the switch ports to which the compute hosts’ network adapters are connected. Each SLB/MUX or HNV Gateway virtual machine is statically assigned one IP address from the Transit logical network.  
 #### Public VIP logical network  
   
 The Public VIP logical network is required to have IP subnet prefixes that are routable outside of the cloud environment (typically Internet routable).  These will be the front-end IP addresses used by external clients to access resources in the virtual networks including the front end VIP for the Site-to-site gateway.   
@@ -72,7 +75,7 @@ The Private VIP logical network is not required to be routable outside of the cl
   The GRE VIP network is a subnet that exists solely for defining VIPs that are assigned to gateway virtual machines running on your SDN fabric for a S2S GRE connection type. This network does not need to be pre-configured in your physical switches or router and need not have a VLAN assigned.   
   
 ### Sample network topology  
-Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administratorâ€™s guidance.  
+Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator’s guidance.  
   
 |Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations (examples)|  
 |----------------|----------|--------|--------------------|-----------|-----------------------------|  
@@ -247,4 +250,5 @@ When the tenant workload virtual machines begin to consume too many resources on
 [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
 [Software Defined Networking &#40;SDN&#41;](../Software-Defined-Networking--SDN-.md)  
   
+
 

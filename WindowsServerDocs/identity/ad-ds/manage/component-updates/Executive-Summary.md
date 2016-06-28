@@ -14,9 +14,12 @@ ms.assetid: 378dc030-d3d8-47a5-9ddc-adf5602abe54
 author: Femila
 ---
 # Executive Summary
-No organization with an information technology (IT) infrastructure is immune from attack, but if appropriate policies, processes, and controls are implemented to protect key segments of an organization‚Äôs computing infrastructure, it might be possible to prevent a breach event from growing to a wholesale compromise of the computing environment.  
+
+>Applies To: Windows Server Technical Preview
+
+No organization with an information technology (IT) infrastructure is immune from attack, but if appropriate policies, processes, and controls are implemented to protect key segments of an organizationís computing infrastructure, it might be possible to prevent a breach event from growing to a wholesale compromise of the computing environment.  
   
-This executive summary is intended to be useful as a standalone document summarizing the content of the document, which contains recommendations that will assist organizations in enhancing the security of their Active Directory installations. By implementing these recommendations, organizations will be able to identify and prioritize security activities, protect key segments of their organization‚Äôs computing infrastructure, and create controls that significantly decrease the likelihood of successful attacks against critical components of the IT environment.  
+This executive summary is intended to be useful as a standalone document summarizing the content of the document, which contains recommendations that will assist organizations in enhancing the security of their Active Directory installations. By implementing these recommendations, organizations will be able to identify and prioritize security activities, protect key segments of their organizationís computing infrastructure, and create controls that significantly decrease the likelihood of successful attacks against critical components of the IT environment.  
   
 Although this document discusses the most common attacks against Active Directory and countermeasures to reduce the attack surface, it also contains recommendations for recovery in the event of complete compromise. The only sure way to recover in the event of a complete compromise of Active Directory is to be prepared for the compromise before it happens.  
   
@@ -31,11 +34,11 @@ The major sections of this document are:
 -   Planning for Compromise  
   
 ## Avenues to Compromise  
-This section provides information about some of the most commonly leveraged vulnerabilities used by attackers to compromise customers‚Äô infrastructures. It contains general categories of vulnerabilities and how they‚Äôre used to initially penetrate customers‚Äô infrastructures, propagate compromise across additional systems, and eventually target Active Directory and domain controllers to obtain complete control of the organizations‚Äô forests. It does not provide detailed recommendations about addressing each type of vulnerability, particularly in the areas in which the vulnerabilities are not used to directly target Active Directory. However, for each type of vulnerability, we have provided links to additional information to use to develop countermeasures and reduce the organization‚Äôs attack surface.  
+This section provides information about some of the most commonly leveraged vulnerabilities used by attackers to compromise customersí infrastructures. It contains general categories of vulnerabilities and how theyíre used to initially penetrate customersí infrastructures, propagate compromise across additional systems, and eventually target Active Directory and domain controllers to obtain complete control of the organizationsí forests. It does not provide detailed recommendations about addressing each type of vulnerability, particularly in the areas in which the vulnerabilities are not used to directly target Active Directory. However, for each type of vulnerability, we have provided links to additional information to use to develop countermeasures and reduce the organizationís attack surface.  
   
 Included are the following subjects:  
   
--   **Initial breach targets** - Most information security breaches start with the compromise of small pieces of an organization‚Äôs infrastructure‚Äîoften one or two systems at a time. These initial events, or entry points into the network, often exploit vulnerabilities that could have been fixed, but weren‚Äôt. Commonly seen vulnerabilities are:  
+-   **Initial breach targets** - Most information security breaches start with the compromise of small pieces of an organizationís infrastructureóoften one or two systems at a time. These initial events, or entry points into the network, often exploit vulnerabilities that could have been fixed, but werenít. Commonly seen vulnerabilities are:  
   
     -   Gaps in antivirus and antimalware deployments  
   
@@ -50,7 +53,7 @@ Included are the following subjects:
 -   **Attractive Accounts for Credential Theft** - Credential theft attacks are those in which an attacker initially gains privileged access to a computer on a network and then uses freely available tooling to extract credentials from the sessions of other logged-on accounts.   
     Included in this section are the following:  
   
-    -   **Activities that Increase the Likelihood of Compromise** - Because the target of credential theft is usually highly privileged domain accounts and ‚Äúvery important person‚Äù (VIP) accounts, it is important for administrators to be conscious of activities that increase the likelihood of a success of a credential-theft attack. These activities are:  
+    -   **Activities that Increase the Likelihood of Compromise** - Because the target of credential theft is usually highly privileged domain accounts and ìvery important personî (VIP) accounts, it is important for administrators to be conscious of activities that increase the likelihood of a success of a credential-theft attack. These activities are:  
   
         -   Logging on to unsecured computers with privileged accounts  
   
@@ -68,7 +71,7 @@ Included are the following subjects:
   
         -   VIP accounts  
   
-        -   ‚ÄúPrivilege-Attached‚Äù Active Directory accounts  
+        -   ìPrivilege-Attachedî Active Directory accounts  
   
         -   Domain controllers  
   
@@ -81,7 +84,7 @@ This section focuses on technical controls to reduce the attack surface of an Ac
   
 -   The **Implementing Least-Privilege Administrative Models** section focuses on identifying the risk that the use of highly privileged accounts for day-to-day administration presents, in addition to providing recommendations to reduce that risk.  
   
-Excessive privilege isn‚Äôt only found in Active Directory in compromised environments. When an organization has developed the habit of granting more privilege than is required, it is typically found throughout the infrastructure:  
+Excessive privilege isnít only found in Active Directory in compromised environments. When an organization has developed the habit of granting more privilege than is required, it is typically found throughout the infrastructure:  
   
 -   In Active Directory  
   
@@ -109,18 +112,18 @@ Included in this section are the following:
   
 Included in this section are the following subjects:  
   
--   **Physical Security for Domain Controllers** ‚Äì Contains recommendations for providing physical security for domain controllers in datacenters, branch offices, and remote locations.  
+-   **Physical Security for Domain Controllers** ñ Contains recommendations for providing physical security for domain controllers in datacenters, branch offices, and remote locations.  
   
--   **Domain Controller Operating Systems** ‚Äì Contains recommendations for securing the domain controller operating systems.  
+-   **Domain Controller Operating Systems** ñ Contains recommendations for securing the domain controller operating systems.  
   
--   **Secure Configuration of Domain Controllers** ‚Äì Native and freely available configuration tools and settings can be used to create security configuration baselines for domain controllers that can subsequently be enforced by Group Policy Objects (GPOs).  
+-   **Secure Configuration of Domain Controllers** ñ Native and freely available configuration tools and settings can be used to create security configuration baselines for domain controllers that can subsequently be enforced by Group Policy Objects (GPOs).  
   
 ## Monitoring Active Directory for Signs of Compromise  
-This section provides information about legacy audit categories and audit policy subcategories (which were introduced in Windows Vista and Windows Server¬Æ 2008), and Advanced Audit Policy (which was introduced in Windows Server 2008 R2). Also provided is information about events and objects to monitor that can indicate attempts to compromise the environment and some additional references that can be used to construct a comprehensive audit policy for Active Directory.  
+This section provides information about legacy audit categories and audit policy subcategories (which were introduced in Windows Vista and Windows ServerÆ 2008), and Advanced Audit Policy (which was introduced in Windows Server 2008 R2). Also provided is information about events and objects to monitor that can indicate attempts to compromise the environment and some additional references that can be used to construct a comprehensive audit policy for Active Directory.  
   
 Included in this section are the following subjects:  
   
--   **Windows Audit Policy** ‚Äì Windows security event logs have categories and subcategories that determine which security events are tracked and recorded.  
+-   **Windows Audit Policy** ñ Windows security event logs have categories and subcategories that determine which security events are tracked and recorded.  
   
 -   **Audit Policy Recommendations** - This section describes the Windows default audit policy settings, audit policy settings that are recommended by Microsoft, and more aggressive recommendations for organizations to use to audit critical servers and workstations.  
   
@@ -133,15 +136,15 @@ This section contains recommendations that will help organizations prepare for a
   
     -   Defining a limited, risk-based migration plan  
   
-    -   Leveraging ‚Äúnonmigratory‚Äù migrations where necessary  
+    -   Leveraging ìnonmigratoryî migrations where necessary  
   
-    -   Implementing ‚Äúcreative destruction‚Äù  
+    -   Implementing ìcreative destructionî  
   
     -   Isolating legacy systems and applications  
   
     -   Simplifying security for end users  
   
--   **Maintaining a More Secure Environment** ‚Äì Contains high-level recommendations meant to be used as guidelines to use in developing not only effective security, but effective lifecycle management. Included in this section are the following subjects:  
+-   **Maintaining a More Secure Environment** ñ Contains high-level recommendations meant to be used as guidelines to use in developing not only effective security, but effective lifecycle management. Included in this section are the following subjects:  
   
     -   **Creating Business-Centric Security Practices for Active Directory** - To effectively manage the lifecycle of the users, data, applications and systems managed by Active Directory, follow these principles.  
   
@@ -160,7 +163,7 @@ This section contains recommendations that will help organizations prepare for a
 ## Summary of Best Practices for Securing Active Directory Domain Services  
 The following table provides a summary of the recommendations provided in this document for securing an AD DS installation. Some best practices are strategic in nature and require comprehensive planning and implementation projects; others are tactical and focused on specific components of Active Directory and related infrastructure.  
   
-Practices are listed in approximate order of priority, that is., lower numbers indicate higher priority. Where applicable, best practices are identified as preventative or detective in nature. All of these recommendations should be thoroughly tested and modified as needed for your organization‚Äôs characteristics and requirements.  
+Practices are listed in approximate order of priority, that is., lower numbers indicate higher priority. Where applicable, best practices are identified as preventative or detective in nature. All of these recommendations should be thoroughly tested and modified as needed for your organizationís characteristics and requirements.  
   
 |||||  
 |-|-|-|-|  
@@ -188,4 +191,5 @@ Practices are listed in approximate order of priority, that is., lower numbers i
 |21|Implement business-centric lifecycle management for IT assets.|Strategic|N/A|  
 |22|Create or update incident recovery plans.|Strategic|N/A|  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
 author: jamesmci
 ---
 # Filter the View of DNS Resource Records
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to filter the view of DNS resource records in the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -52,4 +55,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

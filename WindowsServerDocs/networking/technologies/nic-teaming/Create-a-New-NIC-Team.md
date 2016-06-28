@@ -12,7 +12,10 @@ ms.assetid: abc08a10-4b97-47d0-8876-9223c7b79691
 author: jamesmci
 ---
 # Create a New NIC Team
-You can use this topic to create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) that is running Windows ServerÂ® 2016 Technical Preview.  
+
+>Applies To: Windows Server Technical Preview
+
+You can use this topic to create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) that is running Windows Server® 2016 Technical Preview.  
   
 > [!IMPORTANT]  
 > If you are creating a new NIC Team in a VM, review the topic [Create a New NIC Team in a VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md) before you perform this procedure.  
@@ -54,7 +57,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
     -   To provide a tNIC interface name, type an interface name.  
   
-    -   To configure VLAN membership, click **Specific VLAN**. Type the VLAN information in the first section of the dialog box, which is highlighted in the illustration below. For example, if you want to add this NIC Team to the accounting VLAN number 44, Type Accounting 44 â€“ VLAN. Next, to the right of **Specific VLAN**, type the VLAN number that you want to use. For example, type **44**.  
+    -   To configure VLAN membership, click **Specific VLAN**. Type the VLAN information in the first section of the dialog box, which is highlighted in the illustration below. For example, if you want to add this NIC Team to the accounting VLAN number 44, Type Accounting 44 – VLAN. Next, to the right of **Specific VLAN**, type the VLAN number that you want to use. For example, type **44**.  
   
     ![](../../media/Create-a-New-NIC-Team/nict_012_vlan.jpg)  
   
@@ -65,4 +68,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [Create a New NIC Team in a VM](../../technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md)  
 [NIC Teaming](NIC-Teaming.md)  
   
+
 

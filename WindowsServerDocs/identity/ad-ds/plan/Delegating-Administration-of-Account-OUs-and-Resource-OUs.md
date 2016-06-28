@@ -12,6 +12,9 @@ ms.assetid: 7a820c22-ca12-4209-96c1-edfc8b3774ab
 author: Femila
 ---
 # Delegating Administration of Account OUs and Resource OUs
+
+>Applies To: Windows Server Technical Preview
+
 Account organizational units (OUs) contain user, group, and computer objects. Resource OUs contain resources and the accounts that are responsible for managing those resources. The forest owner is responsible for creating an OU structure to manage these objects and resources and for delegating control of that structure to the OU owner.  
   
 ## Delegating administration of account OUs  
@@ -61,4 +64,5 @@ The following illustration shows the administrative group design for a resource 
   
 Placing the computer accounts into a resource OU gives the OU owner control over the account objects but does not make the OU owner an administrator of the computers. In an Active Directory domain, the Domain Admins group is, by default, placed in the local Administrators group on all computers. That is, service administrators have control over those computers. If resource OU owners require administrative control over the computers in their OUs, the forest owner can apply a Restricted Groups Group Policy to make the resource OU owner a member of the Administrators group on the computers in that OU.  
   
+
 

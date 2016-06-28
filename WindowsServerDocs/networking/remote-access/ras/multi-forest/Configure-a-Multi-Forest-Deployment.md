@@ -12,6 +12,9 @@ ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 author: coreyp
 ---
 # Configure a Multi-Forest Deployment
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to configure a Remote Access multi-forest deployment in several possible scenarios. All of the scenarios assume that DirectAccess is currently deployed on a single forest called Forest1, and that you are configuring DirectAccess to work with a new forest called Forest2.  
   
 -   [Accessing resources from Forest2](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#AccessForest2)  
@@ -38,7 +41,7 @@ In this scenario, you configure the Remote Access deployment to allow clients fr
   
 1.  Add the security group of the clients from Forest2. See [Add client security groups](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#SGs).  
   
-2.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the clientsâ€™ domain in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. See [Add NRPT rules and DNS suffixes](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#NRPT_DNSSearchSuffix).  
+2.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the clients’ domain in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. See [Add NRPT rules and DNS suffixes](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#NRPT_DNSSearchSuffix).  
   
 3.  Add the internal IPv6 prefixes in Forest2 to enable DirectAccess to create the IPsec tunnel to the domain controllers for authentication. See [Add internal IPv6 prefix](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#IPv6Prefix).  
   
@@ -62,13 +65,13 @@ In this scenario, DirectAccess is deployed in a multisite configuration on Fores
 ## <a name="OTPMultiForest"></a>Configure OTP in a multi-forest deployment  
 Note the following terms when configuring OTP in a multi-forest deployment:  
   
--   Root CAâ€”The forest(s) main PKI tree CA.  
+-   Root CA—The forest(s) main PKI tree CA.  
   
--   Enterprise CAâ€”All other CAs.  
+-   Enterprise CA—All other CAs.  
   
--   Resource Forestâ€”The forest that contains the Root CA, and is considered to be the â€˜Managing forest\domainâ€™.  
+-   Resource Forest—The forest that contains the Root CA, and is considered to be the ‘Managing forest\domain’.  
   
--   Account Forestâ€”All other forests in the topology.  
+-   Account Forest—All other forests in the topology.  
   
 The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: PKISync.ps1 Script for Cross-forest Certificate Enrollment](http://technet.microsoft.com/library/ff961506.aspx).  
   
@@ -133,7 +136,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
     ```  
     .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Template -cn <DA OTP registration authority template common name>.  
     .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Template -cn <Secure DA OTP logon certificate template common name>.  
-    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Oid â€“f  
+    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Oid –f  
     ```  
   
 ### <a name="BKMK_Publish"></a>Publish OTP certificate templates  
@@ -151,13 +154,13 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
 2.  Synchronize CAs across forests from the Account Forests to the Resource Forest using the following PowerShell command:  
   
     ```  
-    .\PKISync.ps1 -sourceforest <account forest DNS> -targetforest <resource forest DNS> -type CA -cn <enterprise CA sanitized name> â€“f  
+    .\PKISync.ps1 -sourceforest <account forest DNS> -targetforest <resource forest DNS> -type CA -cn <enterprise CA sanitized name> –f  
     ```  
   
 3.  Synchronize CAs across forests from the Resource Forest to the Account Forests using the following PowerShell command:  
   
     ```  
-    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type CA -cn <enterprise CA sanitized name> â€“f  
+    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type CA -cn <enterprise CA sanitized name> –f  
     ```  
   
 ## Configuration procedures  
@@ -174,7 +177,7 @@ The DNS suffix search list allows the clients to use short label names instead o
   
 2.  On the **Network Location Server** page, click **Next**.  
   
-3.  On the **DNS** page, in the table, enter any additional name suffixes that are part of the corporate network in Forest 2. In **DNS Server Address**, enter the DNS server address manually, or by clicking **Detect**. If you donâ€™t enter the address, the new entries are applied as NRPT exemptions. Then click **Next**.  
+3.  On the **DNS** page, in the table, enter any additional name suffixes that are part of the corporate network in Forest 2. In **DNS Server Address**, enter the DNS server address manually, or by clicking **Detect**. If you don’t enter the address, the new entries are applied as NRPT exemptions. Then click **Next**.  
   
 4.  Optional: On the **DNS Suffix Search List** page, add any DNS suffixes by entering the suffix in the **New Suffix** box, and then clicking **Add**. Then click **Next**.  
   
@@ -241,4 +244,5 @@ The automatic discovery process of infrastructure servers is required to allow a
   
 2.  On the **Refreshing Management Servers** dialog box, click **Close**.  
   
+
 

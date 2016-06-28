@@ -12,6 +12,9 @@ ms.assetid: 0326818f-9144-496c-b946-f82be4eefbd3
 author: coreyp
 ---
 # Step 2: Configure the RADIUS Server
+
+>Applies To: Windows Server Technical Preview
+
 Before you configure the Remote Access server to support DirectAccess with OTP support, you configure the RADIUS server.  
   
 |Task|Description|  
@@ -28,7 +31,7 @@ The RADIUS server must be configured with the necessary license and software and
 ## <a name="BKMK_1.2"></a>2.2 Configure the RADIUS security information  
 The RADIUS server uses UDP ports for communication purposes, and each RADIUS vendor has its own default UDP ports for incoming and outgoing communication. For the RADIUS server to work with the Remote Access server, make sure that all firewalls in the environment are configured to allow UDP traffic between the DirectAccess and OTP servers over the required ports as needed.  
   
-The RADIUS server uses a shared secret for authentication purposes. Configure the RADIUS server with a strong password for the shared secret, and note that this will be used when configuring the DirectAccess serverâ€™s client computer configuration for use with DirectAccess with OTP.  
+The RADIUS server uses a shared secret for authentication purposes. Configure the RADIUS server with a strong password for the shared secret, and note that this will be used when configuring the DirectAccess server’s client computer configuration for use with DirectAccess with OTP.  
   
 ## <a name="BKMK_Probe"></a>2.3 Adding user account for OTP probing  
 On the RADIUS server create a new user account called **DAProbeUser** and give it the password **DAProbePass**.  
@@ -45,4 +48,5 @@ The RADIUS server must have user accounts that correspond to the users in Active
 ## <a name="BKMK_AuthAgent"></a>2.5 Configure the RADIUS authentication agent  
 The Remote Access server must be configured as a RADIUS authentication agent for the DirectAccess with OTP implementation. Follow the RADIUS vendor instructions to configure the Remote Access server as a RADIUS authentication agent.  
   
+
 

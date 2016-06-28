@@ -12,6 +12,9 @@ ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
 author: vhorne
 ---
 # Step 1: Plan the DirectAccess Infrastructure
+
+>Applies To: Windows Server Technical Preview
+
 The first step of planning for an advanced DirectAccess deployment on a single server is to plan the infrastructure that is required for the deployment. This topic describes the infrastructure planning steps. These planning tasks do not need to be completed in a specific order.  
   
 |Task|Description|  
@@ -104,11 +107,11 @@ Enabling force tunneling has the following consequences:
 ## <a name="ConfigFirewalls"></a>1.2 Plan firewall requirements  
 If the DirectAccess server is behind an edge firewall, the following exceptions are required for Remote Access traffic when the DirectAccess server is on the IPv4 Internet:  
   
--   Teredo trafficâ€”User Datagram Protocol (UDP) destination port 3544 inbound, and UDP source port 3544 outbound.  
+-   Teredo traffic—User Datagram Protocol (UDP) destination port 3544 inbound, and UDP source port 3544 outbound.  
   
--   6to4 trafficâ€”IP Protocol 41 inbound and outbound.  
+-   6to4 traffic—IP Protocol 41 inbound and outbound.  
   
--   IP-HTTPSâ€”Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound.  
+-   IP-HTTPS—Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound.  
   
 -   If you are deploying Remote Access with a single network adapter, and installing the network location server on the DirectAccess server, TCP port 62000 should also be exempted.  
   
@@ -127,7 +130,7 @@ The following exceptions are required for Remote Access traffic when the DirectA
   
 When you use additional firewalls, apply the following internal network firewall exceptions for Remote Access traffic:  
   
--   ISATAPâ€”Protocol 41 inbound and outbound  
+-   ISATAP—Protocol 41 inbound and outbound  
   
 -   TCP/UDP for all IPv4 and IPv6 traffic  
   
@@ -154,7 +157,7 @@ The certification authority (CA) requirements for each scenario are summarized i
   
 |IPsec authentication|IP-HTTPS server|Network location server|  
 |------------------------|--------------------|---------------------------|  
-|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you donâ€™t use the Kerberos proxy for authentication|Internal CA:<br /><br />You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Internal CA:<br /><br />You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point has high availability from the internal network.|  
+|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you don’t use the Kerberos proxy for authentication|Internal CA:<br /><br />You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Internal CA:<br /><br />You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point has high availability from the internal network.|  
 ||Self-signed certificate:<br /><br />You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally.<br /><br />A self-signed certificate cannot be used in multisite deployments.|Self-signed certificate:<br /><br />You can use a self-signed certificate for the network location server website.<br /><br />A self-signed certificate cannot be used in multisite deployments.|  
 ||**Recommended**<br /><br />Public CA:<br /><br />It is recommended to use a public CA to issue the IP-HTTPS certificate. This ensures that the CRL distribution point is available externally.|  
   
@@ -340,9 +343,9 @@ Auto detection works as follows:
   
     Remote Access creates a default web probe that is used by DirectAccess client computers to verify connectivity to the internal network. To ensure that the probe works as expected, the following names must be registered manually in DNS:  
   
-    -   **directaccess-webprobehost**â€”Should resolve to the internal IPv4 address of the DirectAccess server, or to the IPv6 address in an IPv6-only environment.  
+    -   **directaccess-webprobehost**—Should resolve to the internal IPv4 address of the DirectAccess server, or to the IPv6 address in an IPv6-only environment.  
   
-    -   **directaccess-corpconnectivityhost**â€”Should resolve to the local host (loopback) address. The following host (A) and (AAAA) resource records should be created: a host (A) resource record with value 127.0.0.1, and a host (AAAA) resource record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the Windows PowerShell command **get-netnattransitionconfiguration**.  
+    -   **directaccess-corpconnectivityhost**—Should resolve to the local host (loopback) address. The following host (A) and (AAAA) resource records should be created: a host (A) resource record with value 127.0.0.1, and a host (AAAA) resource record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the Windows PowerShell command **get-netnattransitionconfiguration**.  
   
         > [!NOTE]  
         > This is valid only in an IPv4-only environment. In an IPv4 plus IPv6, or an IPv6-only environment, only a host (AAAA) resource record should be created with the loopback IP address ::1.  
@@ -395,7 +398,7 @@ If multiple domains and Windows Internet Name Service (WINS) are deployed in you
   
 Split-brain DNS is the use of the same DNS domain for Internet and intranet name resolution.  
   
-For split-brain DNS deployments, you must list the FQDNs that are duplicated on the Internet and intranet, and decide which resources the DirectAccess client should reachâ€”the intranet or the Internet version. For each name that corresponds to a resource for which you want DirectAccess clients to reach the Internet version, you must add the corresponding FQDN as an exemption rule to the NRPT for your DirectAccess clients.  
+For split-brain DNS deployments, you must list the FQDNs that are duplicated on the Internet and intranet, and decide which resources the DirectAccess client should reach—the intranet or the Internet version. For each name that corresponds to a resource for which you want DirectAccess clients to reach the Internet version, you must add the corresponding FQDN as an exemption rule to the NRPT for your DirectAccess clients.  
   
 In a split-brain DNS environment, if you want both versions of the resource to be available, configure your intranet resources with alternate names, that are not duplicates of the names used on the Internet, and instruct your users to use the alternate name when on the Intranet. For example, configure the alternate name www.internal.contoso.com for the internal name www.contoso.com.  
   
@@ -447,11 +450,11 @@ DirectAccess clients attempt to reach the network location server to determine i
 ## <a name="bkmk_1_5_mgmt_servers"></a>1.6 Plan management servers  
 DirectAccess clients initiate communications with management servers that provide services such as Windows Update and antivirus updates. DirectAccess clients also use the Kerberos protocol to contact domain controllers to authenticate before they access the internal network. During remote management of DirectAccess clients, management servers communicate with client computers to perform management functions such as software or hardware inventory assessments. Remote Access can automatically discover some management servers, including:  
   
--   Domain controllersâ€”Auto-discovery of domain controllers is performed for all domains in the same forest as the DirectAccess server and client computers.  
+-   Domain controllers—Auto-discovery of domain controllers is performed for all domains in the same forest as the DirectAccess server and client computers.  
   
--   System Center Configuration Manager serversâ€”Auto-discovery of System Center Configuration Manager servers is performed for all domains in the same forest as the DirectAccess server and client computers.  
+-   System Center Configuration Manager servers—Auto-discovery of System Center Configuration Manager servers is performed for all domains in the same forest as the DirectAccess server and client computers.  
   
-Domain controllers and System Center Configuration Manager servers are automatically detected the first time that DirectAccess is configured. Detected domain controllers are not displayed in the console, but settings can be retrieved by using the Windows PowerShell cmdlet **Get-DAMgmtServer â€“Type All**. If domain controller or System Center Configuration Manager servers are modified, clicking **Refresh Management Servers** in the Remote Access Management console refreshes the management server list.  
+Domain controllers and System Center Configuration Manager servers are automatically detected the first time that DirectAccess is configured. Detected domain controllers are not displayed in the console, but settings can be retrieved by using the Windows PowerShell cmdlet **Get-DAMgmtServer –Type All**. If domain controller or System Center Configuration Manager servers are modified, clicking **Refresh Management Servers** in the Remote Access Management console refreshes the management server list.  
   
 **Management server requirements**  
   
@@ -488,7 +491,7 @@ DirectAccess uses AD DS and Active Directory Group policy objects (GPOs) as foll
   
 When you plan AD DS for a DirectAccess deployment, consider the following requirements:  
   
--   At least one domain controller must be installed with the Windows ServerÂ® 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008  operating system.  
+-   At least one domain controller must be installed with the Windows Server® 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008  operating system.  
   
     If the domain controller is on a perimeter network (and therefore reachable from the Internet-facing network adapter of the DirectAccess server), you must prevent the DirectAccess server from reaching it by adding packet filters on the domain controller to prevent connectivity to the IP address of the Internet adapter.  
   
@@ -562,9 +565,9 @@ DirectAccess settings that are configured when you configure Remote Access are c
   
 GPOs can be configured in two ways:  
   
--   **Automatically**â€”You can specify that they are created automatically. A default name is specified for each GPO.  
+-   **Automatically**—You can specify that they are created automatically. A default name is specified for each GPO.  
   
--   **Manually**â€”You can use GPOs that have been predefined by the Active Directory administrator.  
+-   **Manually**—You can use GPOs that have been predefined by the Active Directory administrator.  
   
 > [!NOTE]  
 > After DirectAccess is configured to use specific GPOs, it cannot be configured to use different GPOs.  
@@ -634,9 +637,9 @@ Alternatively, you can change the default setting by using the **Change Domain C
 -   To do this in Windows PowerShell, specify the **DomainController** parameter for the **Open-NetGPO** cmdlet. For example, to enable the private and public profiles in Windows Firewall on a GPO named domain1\DA_Server_GPO _Europe by using a domain controller named europe-dc.corp.contoso.com, enter the following:  
   
     ```  
-    $gpoSession = Open-NetGPO â€“PolicyStore "domain1\DA_Server_GPO _Europe" â€“DomainController "europe-dc.corp.contoso.com"  
-    Set-NetFirewallProfile â€“GpoSession $gpoSession â€“Name @("Private","Public") â€“Enabled True  
-    Save-NetGPO â€“GpoSession $gpoSession  
+    $gpoSession = Open-NetGPO –PolicyStore "domain1\DA_Server_GPO _Europe" –DomainController "europe-dc.corp.contoso.com"  
+    Set-NetFirewallProfile –GpoSession $gpoSession –Name @("Private","Public") –Enabled True  
+    Save-NetGPO –GpoSession $gpoSession  
     ```  
   
 ### <a name="bkmk_manageGPO"></a>1.8.4 Manage Remote Access GPOs with limited permissions  
@@ -671,4 +674,5 @@ The Remote Access Management console will display the following error message: *
   
 -   [Step 2: Plan DirectAccess Deployments](../../../remote-access/directaccess/single-server-advanced/Step-2--Plan-DirectAccess-Deployments.md)  
   
+
 

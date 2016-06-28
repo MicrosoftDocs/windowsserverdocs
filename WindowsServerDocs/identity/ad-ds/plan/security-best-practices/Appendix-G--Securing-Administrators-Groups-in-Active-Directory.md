@@ -14,11 +14,14 @@ ms.assetid: 19f3f2c2-badf-4b5c-93ef-d0081d71843a
 author: Femila
 ---
 # Appendix G: Securing Administrators Groups in Active Directory
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Appendix G: Securing Administrators Groups in Active Directory  
 As is the case with the Enterprise Admins (EA) and Domain Admins (DA) groups, membership in the built-in Administrators (BA) group should be required only in build or disaster recovery scenarios. There should be no day-to-day user accounts in the Administrators group with the exception of the Built-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
-Administrators are, by default, the owners of most of the AD DS objects in their respective domains. Membership in this group may be required in build or disaster recovery scenarios in which ownership or the ability to take ownership of objects is required. Additionally, DAs and EAs inherit a number of their rights and permissions by virtue of their default membership in the Administrators group. Default group nesting for privileged groups in Active Directory should not be modified, and each domain‚Äôs Administrators group should be secured as described in the step-by-step instructions that follow.  
+Administrators are, by default, the owners of most of the AD DS objects in their respective domains. Membership in this group may be required in build or disaster recovery scenarios in which ownership or the ability to take ownership of objects is required. Additionally, DAs and EAs inherit a number of their rights and permissions by virtue of their default membership in the Administrators group. Default group nesting for privileged groups in Active Directory should not be modified, and each domainís Administrators group should be secured as described in the step-by-step instructions that follow.  
   
 For the Administrators group in each domain in the forest:  
   
@@ -134,9 +137,9 @@ For the Administrators group in each domain in the forest:
         > If jump servers are used to administer domain controllers and Active Directory, ensure that jump servers are located in an OU to which this GPOs is not linked.  
   
         > [!NOTE]  
-        > When you implement restrictions on the Administrators group in GPOs, Windows applies the settings to members of a computer‚Äôs local Administrators group in addition to the domain‚Äôs Administrators group. Therefore, you should use caution when implementing restrictions in the Administrators group. Although prohibiting network, batch, and service logons for members of the Administrators group is advised wherever it is feasible to implement, do not restrict local logons or logons through Remote Desktop Services. Blocking these logon types can block legitimate administration of a computer by members of the local Administrators group.  
+        > When you implement restrictions on the Administrators group in GPOs, Windows applies the settings to members of a computerís local Administrators group in addition to the domainís Administrators group. Therefore, you should use caution when implementing restrictions in the Administrators group. Although prohibiting network, batch, and service logons for members of the Administrators group is advised wherever it is feasible to implement, do not restrict local logons or logons through Remote Desktop Services. Blocking these logon types can block legitimate administration of a computer by members of the local Administrators group.  
         >   
-        > The following screen shot shows configuration settings that block misuse of built-in local and domain Administrator accounts, in addition to misuse of built-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computer‚Äôs Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.  
+        > The following screen shot shows configuration settings that block misuse of built-in local and domain Administrator accounts, in addition to misuse of built-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computerís Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.  
   
         ![](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_88.gif)  
   
@@ -212,8 +215,8 @@ For the Administrators group in each domain in the forest:
   
 #### Verification Steps  
   
-##### Verify ‚ÄúDeny access to this computer from the network‚Äù GPO Settings  
-From any member server or workstation that is not affected by the GPO changes (such as a ‚Äújump server‚Äù), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
+##### Verify ìDeny access to this computer from the networkî GPO Settings  
+From any member server or workstation that is not affected by the GPO changes (such as a ìjump serverî), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
   
 1.  Log on locally using an account that is a member of the Administrators group.  
   
@@ -225,13 +228,13 @@ From any member server or workstation that is not affected by the GPO changes (s
   
     ![](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_97.gif)  
   
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you‚Äôre attempting to access over the network.  
+5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation youíre attempting to access over the network.  
   
 6.  The following screen shot shows the error message that should appear.  
   
     ![](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_98.gif)  
   
-##### Verify ‚ÄúDeny log on as a batch job‚Äù GPO Settings  
+##### Verify ìDeny log on as a batch jobî GPO Settings  
 From any member server or workstation affected by the GPO changes, log on locally.  
   
 ###### Create a Batch File  
@@ -285,7 +288,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_99.gif)  
   
-##### Verify ‚ÄúDeny log on as a service‚Äù GPO Settings  
+##### Verify ìDeny log on as a serviceî GPO Settings  
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
@@ -301,7 +304,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 7.  Click **Browse**, type the name of an account that is a member of the Administrators group, click **Check Names**, and click **OK**.  
   
-8.  In the **Password** and **Confirm password** fields, type the selected account‚Äôs password, and click **OK**.  
+8.  In the **Password** and **Confirm password** fields, type the selected accountís password, and click **OK**.  
   
 9. Click **OK** three more times.  
   
@@ -325,4 +328,5 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  In the **Log on as** field, click **Local System** account, and click **OK**.  
   
+
 

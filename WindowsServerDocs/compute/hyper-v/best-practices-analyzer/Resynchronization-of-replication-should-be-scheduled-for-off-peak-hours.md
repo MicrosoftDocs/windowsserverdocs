@@ -13,6 +13,9 @@ ms.assetid: 093a7bb7-8e0a-486b-b42b-04edd8809710
 author: KBDAzure
 ---
 # Resynchronization of replication should be scheduled for off-peak hours
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution  
 *Use Hyper-V Manager to modify the replication settings for the virtual machine to perform resynchronization automatically during off-peak hours.*  
   
+
 

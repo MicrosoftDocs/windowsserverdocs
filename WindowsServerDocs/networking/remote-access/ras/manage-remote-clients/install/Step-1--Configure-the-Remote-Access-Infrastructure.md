@@ -12,6 +12,9 @@ ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
 author: coreyp
 ---
 # Step 1: Configure the Remote Access Infrastructure
+
+>Applies To: Windows Server Technical Preview
+
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 This topic describes how to configure the infrastructure that is required for an advanced Remote Access deployment using a single Remote Access server in a mixed IPv4 and IPv6 environment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan the Remote Access Infrastructure [client]](assetId:///f7e327cd-5efb-4601-b567-c2576c414be1).  
@@ -60,9 +63,9 @@ If the Remote Access server has two network adapters (one for the domain profile
 2.  If the second network adapter cannot be configured for the domain profile for any reason, the DirectAccess IPsec policy must be manually scoped to all profiles by using the following Windows PowerShell command:  
   
     ```  
-    $gposession = Open-NetGPO â€“PolicyStore <Name of the server GPO>  
-    Set-NetIPsecRule â€“DisplayName <Name of the IPsec policy> â€“GPOSession $gposession â€“Profile Any  
-    Save-NetGPO â€“GPOSession $gposession  
+    $gposession = Open-NetGPO –PolicyStore <Name of the server GPO>  
+    Set-NetIPsecRule –DisplayName <Name of the IPsec policy> –GPOSession $gposession –Profile Any  
+    Save-NetGPO –GPOSession $gposession  
     ```  
   
     The names of the IPsec policies to use in this command are **DirectAccess-DaServerToInfra** and **DirectAccess-DaServerToCorp**.  
@@ -102,7 +105,7 @@ Apply the following Internet-facing firewall exceptions for Remote Access traffi
   
 -   UDP destination port 500 inbound, and UDP source port 500 outbound.  
   
--   Internet Control Message Protocol for IPv6 (ICMPv6) traffic inbound and outbound â€“ for Teredo implementations only.  
+-   Internet Control Message Protocol for IPv6 (ICMPv6) traffic inbound and outbound – for Teredo implementations only.  
   
 ### Remote Access traffic  
 Apply the following internal network firewall exceptions for Remote Access traffic:  
@@ -331,7 +334,7 @@ An administrator can manually link the DirectAccess Group Policy Objects to an o
   
 4.  If the GPOs are already linked to an OU, the links will not be removed, but they are not linked to the domain.  
   
-5.  For server GPOs, the OU must contain the server computer objectâ€”otherwise, the GPO will be linked to the root of the domain.  
+5.  For server GPOs, the OU must contain the server computer object—otherwise, the GPO will be linked to the root of the domain.  
   
 6.  If the OU has not been linked previously by running the DirectAccess Setup Wizard, after the configuration is complete, the administrator can link the DirectAccess GPOs to the required OUs, and remove the link to the domain.  
   
@@ -448,4 +451,5 @@ Whether you use a private certificate or a self-signed certificate, they require
   
 -   [Manage DirectAccess Clients Remotely](assetId:///d7993da0-0bbd-4d67-9529-de72f53e8550)  
   
+
 

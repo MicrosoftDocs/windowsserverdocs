@@ -13,6 +13,9 @@ ms.assetid: 24992453-762b-4892-9a50-55d237b9b7f2
 author: KBDAzure
 ---
 # Avoid mapping one storage path to multiple resource pools
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ Note: The following sections provide details about the specific issue. Italics i
 ## **Resolution**  
 *Use Windows PowerShell to reconfigure the storage resource pools so that multiple pools do not use the same storage path.*  
   
+
 

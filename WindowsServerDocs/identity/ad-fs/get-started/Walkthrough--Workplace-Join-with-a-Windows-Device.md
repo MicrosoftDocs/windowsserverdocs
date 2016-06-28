@@ -12,6 +12,9 @@ ms.topic: article
 ms.assetid: 8097655c-c72f-4803-b0a2-1c65819271b3
 ---
 # Walkthrough: Workplace Join with a Windows Device
+
+>Applies To: Windows Server 2012 R2
+
 This topic demonstrates how to use Workplace Join to connect your Windows device with your workplace and how to access a web application by using Single Sign-On. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough.
 
 ## Access the web application before device registration
@@ -77,5 +80,6 @@ In this part of the demonstration, you access a company web application from you
 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 [Walkthrough: Workplace Join with an iOS Device](Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+
 
 

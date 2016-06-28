@@ -14,6 +14,9 @@ author: KBDAzure
 ---
 # Use live migration without Failover Clustering to move a virtual machine
 
+>Applies To: Windows Server Technical Preview
+
+
 **This is preliminary content and subject to change.**
 
 This article shows you how to move a virtual machine by doing a live migration without using Failover Clustering. A live migration moves running virtual machines between Hyper-V hosts without any noticeable downtime.   
@@ -43,14 +46,14 @@ To be able to do this, you'll need:
 The following example uses the Move-VM cmdlet to move a virtual machine named *LMTest* to a destination server named *TestServer02* and moves the virtual hard disks and other file, such checkpoints and Smart Paging files, to the *D:\LMTest* directory on the destination server.  
   
 ```  
-PS C:\> Move-VM LMTest TestServer02 â€“IncludeStorage â€“DestinationStoragePath D:\LMTest  
+PS C:\> Move-VM LMTest TestServer02 –IncludeStorage –DestinationStoragePath D:\LMTest  
 ```  
   
 ## Troubleshooting
 
 ### Failed to establish a connection 
 
-If you havenâ€™t set up constrained delegation, you must sign in to source server before you can move a virtual machine. If you don't do this, the authentication attempt fails, an error occurs, and this message is displayed:  
+If you haven’t set up constrained delegation, you must sign in to source server before you can move a virtual machine. If you don't do this, the authentication attempt fails, an error occurs, and this message is displayed:  
   
  **Virtual machine migration operation failed at migration Source.**  
   
@@ -77,4 +80,5 @@ If you havenâ€™t set up constrained delegation, you must sign in to source serve
   PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
   ```
  
+
 

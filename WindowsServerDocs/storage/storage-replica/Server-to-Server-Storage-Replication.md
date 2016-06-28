@@ -12,6 +12,9 @@ ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 author: kumudd
 ---
 # Server to Server Storage Replication
+
+>Applies To: Windows Server Technical Preview
+
 You will configure these computers and storage in a server-to-server configuration, where one node replicates its own set of storage with another node and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
 There are no graphical tools in Windows Server 2016 Technical Preview that can configure Storage Replica for standalone replication.  
@@ -24,7 +27,7 @@ This walkthrough uses the following environment as an example:
 
 -   Two servers, named **SR-SRV05** and **SR-SRV06**.  
 
--   A pair of logical â€œsitesâ€ that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
+-   A pair of logical “sites” that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
 
 ![](media/Server-to-Server-Storage-Replication/Storage_SR_ServertoServer.png)  
 
@@ -38,7 +41,7 @@ This walkthrough uses the following environment as an example:
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
-* A network between servers with enough bandwidth to contain your IO write workload and an average of â‰¤5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
+* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.  
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 Many of these requirements can be determined by using the `Test-SRTopology cmdlet`. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
@@ -81,7 +84,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
         ```  
         $Servers = 'SR-SRV05','SR-SRV06'  
 
-        $Servers | ForEach { Install-WindowsFeature â€“ComputerName $_ â€“Name Storage-Replica,FS-FileServer â€“IncludeManagementTools -restart }  
+        $Servers | ForEach { Install-WindowsFeature –ComputerName $_ –Name Storage-Replica,FS-FileServer –IncludeManagementTools -restart }  
         ```  
 
         For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](http://technet.microsoft.co/library/hh831809.aspx)  
@@ -102,19 +105,19 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
     > -   The File Server role is only necessary for Test-SRTopology to operate, as it opens the necessary firewall ports for testing.  
     -   **For JBOD enclosures:**  
 
-        1.  Ensure that each server can see that siteâ€™s storage enclosures only and that the SAS connections are correctly configured.  
+        1.  Ensure that each server can see that site’s storage enclosures only and that the SAS connections are correctly configured.  
 
         2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
 
     -   **For iSCSI storage:**  
 
-        1.  Ensure that each server can see that siteâ€™s storage enclosures only. You should use more than one single network adapter if using iSCSI.  
+        1.  Ensure that each server can see that site’s storage enclosures only. You should use more than one single network adapter if using iSCSI.  
 
         2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
 
     -   **For FC SAN storage:**  
 
-        1.  Ensure that each set server can see that siteâ€™s storage enclosures only and that you have properly zoned the hosts.  
+        1.  Ensure that each set server can see that site’s storage enclosures only and that you have properly zoned the hosts.  
 
         2.  Provision the storage using your vendor documentation.  
 
@@ -138,7 +141,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
         >   
-        > Diskspd.exe -c1g â€“d300 -W5 -C5 -b8k -t2 -o2 -r â€“w5 â€“h d:\test.  
+        > Diskspd.exe -c1g –d300 -W5 -C5 -b8k -t2 -o2 -r –w5 –h d:\test.  
 
  10. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
@@ -157,7 +160,7 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
     ![](media/Server-to-Server-Storage-Replication/Storage_SR_PS_NewSRPartnership.png)  
 
     > [!IMPORTANT]
-    > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use â€“LogSizeInBytes with a  higher or lower value.  
+    > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use –LogSizeInBytes with a  higher or lower value.  
 
 2.  To get replication source and destination state, use `Get-SRGroup` and `Get-SRPartnership` as follows:  
 
@@ -174,7 +177,7 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
     1.  On the source server, run the following command and examine events 5015, 5002, 5004, 1237, 5001, and 2200:  
 
         ```  
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica â€“max 20  
+        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica –max 20  
         ```  
 
     2.  On the destination server, run the following command to see the Storage Replica events that show creation of the partnership. This event states the number of copied bytes and the time taken. Example:  
@@ -358,3 +361,4 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 -   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
 -   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+

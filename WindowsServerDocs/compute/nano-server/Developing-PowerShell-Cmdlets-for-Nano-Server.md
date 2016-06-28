@@ -12,6 +12,9 @@ ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
 author: jaimeo
 ---
 # Developing PowerShell Cmdlets for Nano Server
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Overview  
 Nano Server includes PowerShell Core by default in all Nano Server installations. PowerShell Core is a reduced-footprint edition of PowerShell that is built on .NET Core and runs on reduced-footprint editions of Windows, such as Nano Server and Windows IoT Core. PowerShell Core functions in the same way as other editions of PowerShell, such as Windows PowerShell running on Windows Server 2016. However, the reduced footprint of Nano Server means that not all PowerShell features from Windows Server 2016 are available in PowerShell Core on Nano Server.  
@@ -132,7 +135,7 @@ For prerequisites and a walkthrough of developing C++ on Nano Server, see [Devel
 Most C# code is supported on Nano Server. You can use [ApiPort](https://github.com/Microsoft/dotnet-apiport) to scan for incompatible APIs.  
   
 ### Powershell Core SDK  
-The module ‚ÄúMicrosoft.PowerShell.NanoServer.SDK‚Äù is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/1.0.0.4) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
+The module ìMicrosoft.PowerShell.NanoServer.SDKî is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/1.0.0.4) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
   
 `Find-Module Microsoft.PowerShell.NanoServer.SDK -Repository PSGallery | Install-Module -Scope <scope>`  
   
@@ -240,4 +243,5 @@ The WMI v1 cmdlets (e.g., Get-WmiObject) are not supported on Nano Server. Howev
 WMI .NET wraps the WMIv1 interface, while MI .NET wraps the WMIv2 (CIM) interface. The classes exposed might be different, but the underlying operations are very similar. You enumerate or get instances of objects and invoke operations on them to accomplish tasks.   
   
   
+
 

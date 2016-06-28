@@ -13,6 +13,9 @@ ms.assetid: 627cbc9d-30f2-4ed3-86c4-b8d1d97222c5
 ---
 # Manage Risk with Conditional Access Control
 
+>Applies To: Windows Server 2012 R2
+
+
 -   [Key concepts-conditional access control in AD FS](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
 -   [Managing Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
@@ -30,9 +33,9 @@ Access control in AD FS is implemented with issuance authorization claim rules t
 
 For more information about these rule options and logic, see [When to Use an Authorization Claim Rule](https://technet.microsoft.com/library/ee913560.aspx).
 
-In AD FS in Windows ServerÂ® 2012 R2, access control is enhanced with multiple factors, including user, device, location, and authentication data. This is made possible by a greater variety of claim types available for the authorization claim rules.  In other words, in AD FS in Windows ServerÂ® 2012 R2, you can enforce conditional access control based on user identity or group membership, network location, device (whether it is workplace joined, for more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)), and the authentication state (whether multifactor authentication (MFA) was performed ).
+In AD FS in Windows Server® 2012 R2, access control is enhanced with multiple factors, including user, device, location, and authentication data. This is made possible by a greater variety of claim types available for the authorization claim rules.  In other words, in AD FS in Windows Server® 2012 R2, you can enforce conditional access control based on user identity or group membership, network location, device (whether it is workplace joined, for more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)), and the authentication state (whether multifactor authentication (MFA) was performed ).
 
-Conditional access control in AD FS in Windows ServerÂ® 2012 R2, offers the following benefits:
+Conditional access control in AD FS in Windows Server® 2012 R2, offers the following benefits:
 
 -   Flexible and expressive per-application authorization policies, whereby you can permit or deny access based on user, device, network location, and authentication state
 
@@ -42,9 +45,9 @@ Conditional access control in AD FS in Windows ServerÂ® 2012 R2, offers the foll
 
 -   Rich claims language & Windows PowerShell support for advanced conditional access control scenarios
 
--   Custom (per relying party application) â€˜Access Deniedâ€™ messages. For more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx). By being able to customize these messages, you can explain why a user is being denied access and also facilitate self-service remediation where it is possible, for example, prompt users to workplace join their devices. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+-   Custom (per relying party application) ‘Access Denied’ messages. For more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx). By being able to customize these messages, you can explain why a user is being denied access and also facilitate self-service remediation where it is possible, for example, prompt users to workplace join their devices. For more information, see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
-The following table includes all the claim types available in AD FS in Windows ServerÂ® 2012 R2 to be used for implementing conditional access control.
+The following table includes all the claim types available in AD FS in Windows Server® 2012 R2 to be used for implementing conditional access control.
 
 |Claim type|Description|
 |--------------|---------------|
@@ -115,19 +118,19 @@ The following table includes all the claim types available in AD FS in Windows S
 Using the available settings, there are many ways in which you can manage risk by implementing conditional access control.
 
 ### Common Scenarios
-For example, imagine a simple scenario of implementing conditional access control based on the userâ€™s group membership data for a particular application (relying party trust). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions (using the UI and Windows PowerShell) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+For example, imagine a simple scenario of implementing conditional access control based on the user’s group membership data for a particular application (relying party trust). In other words, you can set up an issuance authorization rule on your federation server to permit users that belong to a certain group in your AD domain access to a particular application that is secured by AD FS.  The detailed step by step instructions (using the UI and Windows PowerShell) for implementing this scenario are covered in [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md). In order to complete the steps in this walkthrough, you must set up a lab environment and follow the steps in [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 ### Advanced Scenarios
-Other examples of implementing conditional access control in AD FS in Windows ServerÂ® 2012 R2 include the following:
+Other examples of implementing conditional access control in AD FS in Windows Server® 2012 R2 include the following:
 
--   Permit access to an application secured by AD FS only if this userâ€™s identity was validated with MFA
+-   Permit access to an application secured by AD FS only if this user’s identity was validated with MFA
 
     You can use the following code:
 
     ```
-    @RuleTemplate = â€œAuthorizationâ€
-    @RuleName = â€œPermitAccessWithMFAâ€
-    c:[Type == â€œhttp://schemas.microsoft.com/claims/authnmethodsreferencesâ€, Value =~ â€œ^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$â€] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = â€œPermitUsersWithClaim");
+    @RuleTemplate = “Authorization”
+    @RuleName = “PermitAccessWithMFA”
+    c:[Type == “http://schemas.microsoft.com/claims/authnmethodsreferences”, Value =~ “^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$”] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = “PermitUsersWithClaim");
 
     ```
 
@@ -136,9 +139,9 @@ Other examples of implementing conditional access control in AD FS in Windows Se
     You can use the following code:
 
     ```
-    @RuleTemplate = â€œAuthorizationâ€
-    @RuleName = â€œPermitAccessFromRegisteredWorkplaceJoinedDeviceâ€
-    c:[Type == â€œhttp://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduserâ€, Value =~ â€œ^(?i)true$â€] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = â€œPermitUsersWithClaim");
+    @RuleTemplate = “Authorization”
+    @RuleName = “PermitAccessFromRegisteredWorkplaceJoinedDevice”
+    c:[Type == “http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser”, Value =~ “^(?i)true$”] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = “PermitUsersWithClaim");
 
     ```
 
@@ -147,10 +150,10 @@ Other examples of implementing conditional access control in AD FS in Windows Se
     You can use the following code
 
     ```
-    @RuleTemplate = â€œAuthorizationâ€
-    @RuleName = â€œRequireMFAOnRegisteredWorkplaceJoinedDeviceâ€
-    c1:[Type == â€œhttp://schemas.microsoft.com/claims/authnmethodsreferencesâ€, Value =~ â€œ^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$â€] &&
-    c2:[Type == â€œhttp://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduserâ€, Value =~ â€œ^(?i)true$â€] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = â€œPermitUsersWithClaim");
+    @RuleTemplate = “Authorization”
+    @RuleName = “RequireMFAOnRegisteredWorkplaceJoinedDevice”
+    c1:[Type == “http://schemas.microsoft.com/claims/authnmethodsreferences”, Value =~ “^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$”] &&
+    c2:[Type == “http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser”, Value =~ “^(?i)true$”] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = “PermitUsersWithClaim");
 
     ```
 
@@ -159,15 +162,16 @@ Other examples of implementing conditional access control in AD FS in Windows Se
     You can use the following code:
 
     ```
-    @RuleTemplate = â€œAuthorizationâ€
-    @RuleName = â€œRequireMFAForExtranetAccessâ€
-    c1:[Type == â€œhttp://schemas.microsoft.com/claims/authnmethodsreferencesâ€, Value =~ â€œ^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$â€] &&
-    c2:[Type == â€œhttp://schemas.microsoft.com/ws/2012/01/insidecorporatenetworkâ€, Value =~ â€œ^(?i)false$â€] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = â€œPermitUsersWithClaim");
+    @RuleTemplate = “Authorization”
+    @RuleName = “RequireMFAForExtranetAccess”
+    c1:[Type == “http://schemas.microsoft.com/claims/authnmethodsreferences”, Value =~ “^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$”] &&
+    c2:[Type == “http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork”, Value =~ “^(?i)false$”] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = “PermitUsersWithClaim");
 
     ```
 
 ## See Also
 [Walkthrough Guide: Manage Risk with Conditional Access Control](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 [Set up the lab environment for AD FS in Windows Server 2012 R2](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
+
 
 

@@ -12,6 +12,9 @@ ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
 author: coreyp
 ---
 # STEP 6: Install and Configure 2-DC1
+
+>Applies To: Windows Server Technical Preview
+
 2-DC1 provides the following services:  
   
 -   A domain controller for the corp2.corp.contoso.com Active Directory Domain Services (AD DS) domain.  
@@ -33,7 +36,7 @@ author: coreyp
 -   [Force replication between DC1 and 2-DC1](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#replication)  
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on 2-DC1  
-First, install Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2 or Windows ServerÂ® 2012.  
+First, install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012.  
   
 #### To install the operating system on 2-DC1  
   
@@ -204,4 +207,5 @@ Before you can enroll for certificates on 2-EDGE1, you must force the replicatio
   
 7.  Close the Command Prompt window.  
   
+
 

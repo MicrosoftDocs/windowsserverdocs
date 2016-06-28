@@ -14,6 +14,9 @@ ms.assetid: d16c51ef-a86f-4301-a446-af7c9465bdbb
 author: Femila
 ---
 # Identity component updates
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Lesson 1: Identity component updates  
 This lesson explains the Identity component updates in Windows Server 2012 R2.  
@@ -40,4 +43,5 @@ After completing this lesson, you will be able to:
 > [!NOTE]  
 > This content is written by a Microsoft customer support engineer, and is intended for experienced administrators and systems architects who are looking for deeper technical explanations of features and solutions in Windows Server 2012 R2 than topics on TechNet usually provide. However, it has not undergone the same editing passes, so some of the language may seem less polished than what is typically found on TechNet.  
   
+
 

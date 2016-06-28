@@ -13,6 +13,9 @@ ms.assetid: 178ed24f-ebc2-4447-b7a2-c774b0d27278
 author: billmath
 ---
 # Access Control Policies in AD FS
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Access Control Policy Templates in AD FS  
 Active Directory Federation Services now supports the use of access control policy templates.  By using access control policy templates, an administrator can enforce policy settings by assigning the policy template to a group of relying parties (RPs). Administrator can also make updates to the policy template and the changes will be applied to the relying parties automatically if there is no user interaction needed.  
@@ -51,7 +54,7 @@ If an administrator selects multiple conditions, they are of **AND** relationshi
 |**Policy**|**Policy rules**|  
 |Extranet access requires MFA<br /><br />All users are permitted|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />**Rule#2**<br /><br />from **intranet**<br /><br />Permit|  
 |External access are not permitted except non-FTE<br /><br />Intranet access for FTE on workplace joined device are permitted|**Rule #1**<br /><br />From **extranet**<br /><br />and from **non-FTE** group<br /><br />Permit<br /><br />**Rule #2**<br /><br />from **intranet**<br /><br />and from **workplace joined** device<br /><br />and from **FTE** group<br /><br />Permit|  
-|Extranet access requires MFA except ‚Äúservice admin‚Äù<br /><br />All users are permitted to access|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />Except **service admin group**<br /><br />**Rule #2**<br /><br />always<br /><br />Permit|  
+|Extranet access requires MFA except ìservice adminî<br /><br />All users are permitted to access|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />Except **service admin group**<br /><br />**Rule #2**<br /><br />always<br /><br />Permit|  
 |non-work place joined device accessing from extranet requires MFA<br /><br />Permit AD fabric for intranet and extranet access|**Rule #1**<br /><br />from **intranet**<br /><br />And from **AD Fabric** group<br /><br />Permit<br /><br />**Rule #2**<br /><br />from **extranet**<br /><br />and from **non-workplace joined** device<br /><br />and from **AD Fabric** group<br /><br />and with MFA<br /><br />Permit<br /><br />**Rule #3**<br /><br />from **extranet**<br /><br />and from **workplace joined** device<br /><br />and from **AD Fabric** group<br /><br />Permit|  
   
 ## Parameterized policy template vs non-parameterized policy template  
@@ -177,4 +180,5 @@ From here you can select the access control policy and apply it to the applicati
   
 ![](media/Access-Control-Policies-in-AD-FS/ADFSACP15.PNG)  
   
+
 

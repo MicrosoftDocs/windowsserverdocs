@@ -12,6 +12,9 @@ ms.assetid: ed2a1616-30c6-482a-9a02-4a5023621f58
 author: coreyp
 ---
 # STEP 7: Test DirectAccess Connectivity from the Internet
+
+>Applies To: Windows Server Technical Preview
+
 The DirectAccess one-time password (OTP) deployment has been tested from the Homenet subnet, and can now be tested from the Internet.  
   
 ### To test OTP functionality from the Internet on CLIENT1  
@@ -52,4 +55,5 @@ The DirectAccess one-time password (OTP) deployment has been tested from the Hom
   
 17. In the **Files** shared folder window, double-click the **New Text Document.txt** file. You will see the contents of the New Text Document.txt file.  
   
+
 

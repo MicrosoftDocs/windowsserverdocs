@@ -13,6 +13,9 @@ ms.assetid: 12418668-52d3-4e70-b56f-85dcb144a8c0
 author: KBDAzure
 ---
 # Windows Server 2008 R2 should be configured with at least the minimum amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
@@ -66,4 +69,5 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

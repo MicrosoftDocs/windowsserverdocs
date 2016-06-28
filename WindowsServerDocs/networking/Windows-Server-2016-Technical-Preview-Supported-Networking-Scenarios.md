@@ -12,7 +12,10 @@ ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
 author: jamesmci
 ---
 # Windows Server 2016 Technical Preview Supported Networking Scenarios
-This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of  Windows ServerÂ® 2016 Technical Preview.  
+
+>Applies To: Windows Server Technical Preview
+
+This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of  Windows Server® 2016 Technical Preview.  
   
 This topic contains the following sections.  
   
@@ -51,7 +54,7 @@ The Network Controller scenarios allow you to:
   
 -   Use Network Controller to programmatically define network policy by using the REST Northbound API.  
   
--   Use Network Controller to create and manage virtual networks with Hyper-V Network Virtualization â€“ using NVGRE or VXLAN encapsulation.  
+-   Use Network Controller to create and manage virtual networks with Hyper-V Network Virtualization – using NVGRE or VXLAN encapsulation.  
   
 For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md).  
   
@@ -154,7 +157,7 @@ The NIC Teaming scenarios allow you to:
 -   Remove network adapters from the NIC team  
   
 > [!NOTE]  
-> In Windows Server 2016 Technical Preview 4, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq â€“Name <NetworkAdapterName> -Enable`  
+> In Windows Server 2016 Technical Preview 4, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq –Name <NetworkAdapterName> -Enable`  
   
 The following NIC Teaming scenarios are not supported in Windows Server 2016 Technical Preview 4.  
   
@@ -177,4 +180,5 @@ The following networking scenarios are not supported in Windows Server 2016 Tech
   
 -   IPv6 is not supported in either the underlay or overlay.  
   
+
 

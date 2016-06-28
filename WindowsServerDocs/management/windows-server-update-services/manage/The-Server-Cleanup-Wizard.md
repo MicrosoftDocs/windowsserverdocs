@@ -12,6 +12,9 @@ ms.assetid: 7c351797-2716-4442-a668-60d5b4e77751
 author: coreyp-at-msft
 ---
 # The Server Cleanup Wizard
+
+>Applies To: Windows Server Technical Preview
+
 The Server Cleanup Wizard is integrated into the user interface and can be used to help you manage your disk space. This wizard can do the following operations:
 
 -   Remove unused updates and update revisions remove all older updates and update revisions that have not been approved.
@@ -36,12 +39,13 @@ The Server Cleanup Wizard is integrated into the user interface and can be used 
 
 It is important to mention that if you choose to remove unneeded content with the Server Cleanup Wizard, all the private update files that you have downloaded from the Catalog Site will be removed as well. You will need to re-import these files after running the Server Cleanup Wizard.
 
-If updates are approved using an auto-approval rule, they might still be in the â€œApprovedâ€ state, and will not be removed by The Server Cleanup Wizard. To remove auto-approved updates that are in an â€œapprovedâ€ state , the WSUS Admin must â€“ at minimum - manually set the approval status of superseded updates to â€œNot Approvedâ€ so they will be eligible for declination by the Server Cleanup Wizard. The Server Cleanup Wizard will ensure a newer update is approved and that no client system is still reporting that update as needed before marking the update as â€œDeclined.â€
+If updates are approved using an auto-approval rule, they might still be in the “Approved” state, and will not be removed by The Server Cleanup Wizard. To remove auto-approved updates that are in an “approved” state , the WSUS Admin must – at minimum - manually set the approval status of superseded updates to “Not Approved” so they will be eligible for declination by the Server Cleanup Wizard. The Server Cleanup Wizard will ensure a newer update is approved and that no client system is still reporting that update as needed before marking the update as “Declined.”
 
 ## See also
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
 
 -   [Windows Server Update Services](../Windows-Server-Update-Services-WSUS.md)
+
 
 

@@ -12,7 +12,10 @@ ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 author: jamesmci
 ---
 # Deploy Network Controller using Windows PowerShell
-This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server¬Æ 2016 Technical Preview.  
+
+>Applies To: Windows Server Technical Preview
+
+This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows ServerÆ 2016 Technical Preview.  
   
 This topic contains the following sections.  
   
@@ -38,7 +41,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 To install Network Controller by using Windows PowerShell, type the following commands at a Windows PowerShell prompt, and then press ENTER.  
   
-`Install-WindowsFeature -Name NetworkController ‚ÄìIncludeManagementTools`  
+`Install-WindowsFeature -Name NetworkController ñIncludeManagementTools`  
   
 Installation of Network Controller requires that you restart the computer. To do so, type the following command, and then press ENTER.  
   
@@ -48,7 +51,7 @@ Installation of Network Controller requires that you restart the computer. To do
 The Network Controller cluster provides high availability and scalability to the Network Controller application, which you can configure after creating the cluster, and which is  hosted on top of the cluster.  
   
 > [!NOTE]  
-> You can perform the procedures in the following sections either directly on the computer or VM where you installed Network Controller, or you can use the Remote Server Administration Tools for Windows Server 2016 Technical Preview to perform the procedures from a remote computer that is running either Windows Server 2016 Technical Preview or Windows 10¬Æ. In addition membership in **Administrators**, or equivalent, is the minimum required to perform this procedure. If the computer or VM upon which you installed Network Controller is joined to a domain, your user account must be a member of **Domain Users**.  
+> You can perform the procedures in the following sections either directly on the computer or VM where you installed Network Controller, or you can use the Remote Server Administration Tools for Windows Server 2016 Technical Preview to perform the procedures from a remote computer that is running either Windows Server 2016 Technical Preview or Windows 10Æ. In addition membership in **Administrators**, or equivalent, is the minimum required to perform this procedure. If the computer or VM upon which you installed Network Controller is joined to a domain, your user account must be a member of **Domain Users**.  
   
 You can create a Network Controller cluster by creating a node object and then configuring the cluster.  
   
@@ -58,7 +61,7 @@ You need to create a node object for each computer or VM that is a member of the
 To create a node object,  type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.  
   
 ```  
-New-NetworkControllerNodeObject ‚ÄìName <string> -Server <String> -FaultDomain <string>-RestInterface <string> [-NodeCertificate <X509Certificate2>]  
+New-NetworkControllerNodeObject ñName <string> -Server <String> -FaultDomain <string>-RestInterface <string> [-NodeCertificate <X509Certificate2>]  
 ```  
   
 The following table provides descriptions for each parameter of the **New-NetworkControllerNodeObject** command.  
@@ -67,7 +70,7 @@ The following table provides descriptions for each parameter of the **New-Networ
 |-------------|---------------|  
 |Name|The **Name** parameter specifies the friendly name of the server that you want to add to the cluster|  
 |Server|The **Server** parameter specifies the host name, Fully Qualified Domain Name (FQDN), or IP address of the server that you want to add to the cluster. For domain-joined computers, FQDN is required.|  
-|FaultDomain|The **FaultDomain** parameter specifies the failure domain for the server that you are adding to the cluster. This parameter defines the servers that might experience failure at the same time as the server that you are adding to the cluster. This failure might be due to shared physical dependencies such as power and networking sources. Fault domains typically represent hierarchies that are related to these shared dependencies, with more servers likely to fail together from a higher point in the fault domain tree. During runtime, Network Controller considers the fault domains in the cluster and attempts to spread out the Network Controller services so that they are in separate fault domains. This process helps ensure, in case of failure of any one fault domain, that the availability of that service and its state is not compromised. Fault domains are specified in a hierarchical format. For example: ‚ÄúFd:/DC1/Rack1/Host1‚Äù, where DC1 is the datacenter name, Rack1 is the rack name and Host1 is the name of the host where the node is placed.|  
+|FaultDomain|The **FaultDomain** parameter specifies the failure domain for the server that you are adding to the cluster. This parameter defines the servers that might experience failure at the same time as the server that you are adding to the cluster. This failure might be due to shared physical dependencies such as power and networking sources. Fault domains typically represent hierarchies that are related to these shared dependencies, with more servers likely to fail together from a higher point in the fault domain tree. During runtime, Network Controller considers the fault domains in the cluster and attempts to spread out the Network Controller services so that they are in separate fault domains. This process helps ensure, in case of failure of any one fault domain, that the availability of that service and its state is not compromised. Fault domains are specified in a hierarchical format. For example: ìFd:/DC1/Rack1/Host1î, where DC1 is the datacenter name, Rack1 is the rack name and Host1 is the name of the host where the node is placed.|  
 |RestInterface|The **RestInterface** parameter specifies the name of the interface on the node where the  Representational State Transfer (REST) communication is terminated. This Network Controller interface receives Northbound API requests from the network's management layer.|  
 |NodeCertificate|The **NodeCertificate** parameter specifies the certificate that Network Controller uses for computer authentication. The certificate is required if you use certificate-based authentication for communication within the cluster; the certificate is also used for encryption of traffic between Network Controller services. The certificate subject name must be same as the DNS name of the node.|  
   
@@ -75,7 +78,7 @@ The following table provides descriptions for each parameter of the **New-Networ
 To configure the cluster,  type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.  
   
 ```  
-Install-NetworkControllerCluster ‚ÄìNode <NetworkControllerNode[]> ‚ÄìClusterAuthentication <ClusterAuthentication> [-ManagementSecurityGroup <string>][-DiagnosticLogLocation <string>][-LogLocationCredential <PSCredential>] [-CredentialEncryptionCertificate <X509Certificate2>][-Credential <PSCredential>][-CertificateThumbprint <String> ] [-UseSSL][-ComputerName <string>]  
+Install-NetworkControllerCluster ñNode <NetworkControllerNode[]> ñClusterAuthentication <ClusterAuthentication> [-ManagementSecurityGroup <string>][-DiagnosticLogLocation <string>][-LogLocationCredential <PSCredential>] [-CredentialEncryptionCertificate <X509Certificate2>][-Credential <PSCredential>][-CertificateThumbprint <String> ] [-UseSSL][-ComputerName <string>]  
 ```  
   
 The following table provides descriptions for each parameter of the **Install-NetworkControllerCluster**  command.  
@@ -97,7 +100,7 @@ The following table provides descriptions for each parameter of the **Install-Ne
 To configure the Network Controller application, type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.  
   
 ```  
-Install-NetworkController ‚ÄìNode <NetworkControllerNode[]> ‚ÄìClientAuthentication <ClientAuthentication>  [-ClientCertificateThumbprint <string[]>]  [-ClientSecurityGroup <string>] -ServerCertificate <X509Certificate2> [-RESTIPAddress <String>] [-RESTName <String>] [-Credential <PSCredential>][-CertificateThumbprint <String> ] [-UseSSL]  
+Install-NetworkController ñNode <NetworkControllerNode[]> ñClientAuthentication <ClientAuthentication>  [-ClientCertificateThumbprint <string[]>]  [-ClientSecurityGroup <string>] -ServerCertificate <X509Certificate2> [-RESTIPAddress <String>] [-RESTName <String>] [-Credential <PSCredential>][-CertificateThumbprint <String> ] [-UseSSL]  
 ```  
   
 The following table provides descriptions for each parameter of the **Install-NetworkController** command.  
@@ -134,7 +137,7 @@ If you are using Kerberos as the ClientAuthentication mechanism, membership in t
     $cred.username="admin"  
     $cred.value="abcd"  
   
-    New-NetworkControllerCredential -ConnectionUri https://networkcontroller -Properties $cred ‚ÄìResourceId cred1  
+    New-NetworkControllerCredential -ConnectionUri https://networkcontroller -Properties $cred ñResourceId cred1  
     ```  
   
 3.  To retrieve the credential that you added to Network Controller, type the following command, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.  
@@ -173,7 +176,7 @@ The following table provides the syntax for Windows PowerShell commands that you
 |Task|Command|Syntax|  
 |--------|-------|----------|  
 |Modify Network Controller cluster settings|Set-NetworkControllerCluster|`Set-NetworkControllerCluster [-ManagementSecurityGroup <string>][-Credential <PSCredential>] [-computerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`  
-|Modify Network Controller application settings|Set-NetworkController|`Set-NetworkController [‚ÄìClientAuthentication <ClientAuthentication>] [-Credential <PSCredential>] [-ClientCertificateThumbprint <string[]>] [-ClientSecurityGroup <string>] [-ServerCertificate <X509Certificate2>] [-RestIPAddress <String>] [-ComputerName <String>][-CertificateThumbprint <String> ] [-UseSSL]`  
+|Modify Network Controller application settings|Set-NetworkController|`Set-NetworkController [ñClientAuthentication <ClientAuthentication>] [-Credential <PSCredential>] [-ClientCertificateThumbprint <string[]>] [-ClientSecurityGroup <string>] [-ServerCertificate <X509Certificate2>] [-RestIPAddress <String>] [-ComputerName <String>][-CertificateThumbprint <String> ] [-UseSSL]`  
 |Modify Network Controller node settings|Set-NetworkControllerNode|`Set-NetworkControllerNode -Name <string> > [-RestInterface <string>] [-NodeCertificate <X509Certificate2>] [-Credential <PSCredential>] [-ComputerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`  
 |Modify Network Controller diagnostic settings|Set-NetworkControllerDiagnostic|`Set-NetworkControllerDiagnostic [-LogScope <string>] [-DiagnosticLogLocation <string>] [-LogLocationCredential <PSCredential>] [-UseLocalLogLocation] >] [-LogLevel <loglevel>][-LogSizeLimitInMBs <uint32>] [-LogTimeLimitInDays <uint32>] [-Credential <PSCredential>] [-ComputerName <string>][-CertificateThumbprint <String> ] [-UseSSL]`  
 |Remove the Network Controller application|Uninstall-NetworkController|`Uninstall-NetworkController [-Credential <PSCredential>][-ComputerName <string>] [-CertificateThumbprint <String> ] [-UseSSL]`  
@@ -187,17 +190,18 @@ The following table provides the syntax for Windows PowerShell commands that you
 > Windows PowerShell commands for Network Controller are in the TechNet Library at [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx).  
   
 ## <a name="bkmk_script"></a>Sample Network Controller configuration script  
-The following sample configuration script shows how to create a multi-node Network Controller cluster and install the Network Controller application. In addition, the $cert variable selects a certificate from the local computer certificates store that matches the subject name string ‚ÄúnetworkController.contoso.com‚Äù .  
+The following sample configuration script shows how to create a multi-node Network Controller cluster and install the Network Controller application. In addition, the $cert variable selects a certificate from the local computer certificates store that matches the subject name string ìnetworkController.contoso.comî .  
   
 ```  
-$a = New-NetworkControllerNodeObject ‚ÄìName Node1 -Server NCNode1.contoso.com -FaultDomain fd:/rack1/host1 -RestInterface Internal  
-$b = New-NetworkControllerNodeObject ‚ÄìName Node2 -Server NCNode2.contoso.com -FaultDomain fd:/rack1/host2 -RestInterface Internal  
-$c = New-NetworkControllerNodeObject ‚ÄìName Node3 -Server NCNode3.contoso.com -FaultDomain fd:/rack1/host3 -RestInterface Internal  
+$a = New-NetworkControllerNodeObject ñName Node1 -Server NCNode1.contoso.com -FaultDomain fd:/rack1/host1 -RestInterface Internal  
+$b = New-NetworkControllerNodeObject ñName Node2 -Server NCNode2.contoso.com -FaultDomain fd:/rack1/host2 -RestInterface Internal  
+$c = New-NetworkControllerNodeObject ñName Node3 -Server NCNode3.contoso.com -FaultDomain fd:/rack1/host3 -RestInterface Internal  
   
-$cert= get-item Cert:\LocalMachine\My | get-ChildItem | where {$_.Subject -imatch ‚ÄúnetworkController.contoso.com" }  
+$cert= get-item Cert:\LocalMachine\My | get-ChildItem | where {$_.Subject -imatch ìnetworkController.contoso.com" }  
   
-Install-NetworkControllerCluster ‚ÄìNode @($a,$b,$c)  ‚ÄìClusterAuthentication Kerberos -DiagnosticLogLocation \\share\Diagnostics ‚Äì ManagementSecurityGroup Contoso\NCManagementAdmins -CredentialEncryptionCertificate $cert  
-Install-NetworkController ‚ÄìNode @($a,$b,$c) ‚ÄìClientAuthentication Kerberos -ClientSecurityGroup Contoso\NCRESTClients -ServerCertificate $cert ‚ÄìRestIpAddress 10.0.0.1/24  
+Install-NetworkControllerCluster ñNode @($a,$b,$c)  ñClusterAuthentication Kerberos -DiagnosticLogLocation \\share\Diagnostics ñ ManagementSecurityGroup Contoso\NCManagementAdmins -CredentialEncryptionCertificate $cert  
+Install-NetworkController ñNode @($a,$b,$c) ñClientAuthentication Kerberos -ClientSecurityGroup Contoso\NCRESTClients -ServerCertificate $cert ñRestIpAddress 10.0.0.1/24  
 ```  
   
+
 

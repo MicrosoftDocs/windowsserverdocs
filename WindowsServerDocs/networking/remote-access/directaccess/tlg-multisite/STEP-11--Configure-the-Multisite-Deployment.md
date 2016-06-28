@@ -12,6 +12,9 @@ ms.assetid: 8cbdeb1d-5f7c-4360-bcc1-ab40d3cd8040
 author: coreyp
 ---
 # STEP 11: Configure the Multisite Deployment
+
+>Applies To: Windows Server Technical Preview
+
 To configure a multisite deployment, make changes to the current Remote Access configuration wizard on EDGE1, enable the multisite feature, and then add 2-EDGE1 as a second entry point.  
   
 -   [Configure Remote Access on EDGE1](assetId:///537e4b68-043f-49c9-94d8-15ce8c4b18e2#configDA)  
@@ -88,4 +91,5 @@ To configure a multisite deployment, make changes to the current Remote Access c
   
 12. On the **Adding Entry Point** dialog box, click **Close** and then on the Add an Entry Point wizard, click **Close**.  
   
+
 

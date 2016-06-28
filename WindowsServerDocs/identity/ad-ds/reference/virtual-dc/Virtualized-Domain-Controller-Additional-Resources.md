@@ -14,6 +14,9 @@ ms.assetid: af60b60f-5bc9-4ca5-aae7-edc90090e6cd
 author: Femila
 ---
 # Virtualized Domain Controller Additional Resources
+
+>Applies To: Windows Server Technical Preview
+
   
 -   [AD DS Virtualization (Cloning and Virtualization safe improvements)](http://go.microsoft.com/fwlink/p/?LinkID=238316)  
   
@@ -29,4 +32,5 @@ author: Femila
   
 -   [Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](http://blogs.technet.com/b/askds)  
   
+
 

@@ -13,6 +13,9 @@ ms.assetid: b83c166d-f010-47c4-a4bb-02167f2e3361
 author: KBDAzure
 ---
 # One or more network adapters should be configured as the destination for Port Mirroring
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -37,4 +40,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## **Resolution**  
 *Use Windows PowerShell or Hyper-V Manager to complete or correct the Port Mirroring configuration.*  
   
+
 

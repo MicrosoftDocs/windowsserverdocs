@@ -12,6 +12,9 @@ ms.assetid: 43ac612e-2e77-418c-8171-ebb2086b7cb6
 author: coreyp
 ---
 # Step 3: Verify the Deployment_5
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to verify that you have correctly configured your DirectAccess deployment.  
   
 ### To verify access to internal resources through DirectAccess  
@@ -26,4 +29,5 @@ This topic describes how to verify that you have correctly configured your Direc
   
     You should be able to access all corporate resources.  
   
+
 

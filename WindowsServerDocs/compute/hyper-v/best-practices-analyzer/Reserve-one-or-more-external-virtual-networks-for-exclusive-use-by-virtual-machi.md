@@ -13,6 +13,9 @@ ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9
 author: KBDAzure
 ---
 # Reserve one or more external virtual networks for exclusive use by virtual machines
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -50,4 +53,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 5.  Click **OK**.  
   
+
 

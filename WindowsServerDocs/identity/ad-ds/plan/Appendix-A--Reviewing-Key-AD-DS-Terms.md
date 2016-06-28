@@ -12,6 +12,9 @@ ms.assetid: dfee30ba-0b6b-4f7b-9c6d-ba016afb47b1
 author: Femila
 ---
 # Appendix A: Reviewing Key AD DS Terms
+
+>Applies To: Windows Server Technical Preview
+
 The following terms are relevant to the deployment process for  Windows Server 2008  Active Directory Domain Services (AD DS).  
   
 ## Active Directory domain  
@@ -54,4 +57,5 @@ The first domain that is created in the Active Directory forest. This domain is 
 ## Regional domain  
 A child domain that is created in a geographic region to optimize replication traffic.  
   
+
 

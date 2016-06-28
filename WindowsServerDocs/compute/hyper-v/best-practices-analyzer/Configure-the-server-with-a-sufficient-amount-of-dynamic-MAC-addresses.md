@@ -13,6 +13,9 @@ ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe
 author: KBDAzure
 ---
 # Configure the server with a sufficient amount of dynamic MAC addresses
+
+>Applies To: Windows Server Technical Preview
+
 *This topic is intended to address a specific issue identified by a Best Practices Analyzer scan. You should apply the information in this topic only to computers that have had the Hyper-V Best Practices Analyzer run against them and are experiencing the issue addressed by this topic. For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
@@ -36,4 +39,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 *Use Virtual Switch Manager to view and extend the range of dynamic addresses.*  
   
+
 

@@ -14,6 +14,9 @@ ms.assetid: befe071a-a900-4f1c-a142-cfa5b625a2d2
 author: Femila
 ---
 # Directory Services component updates
+
+>Applies To: Windows Server Technical Preview
+
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group  
   
 > [!NOTE]  
@@ -156,7 +159,7 @@ You use the -DomainMode parameter with the Install-ADDSForest or Install-ADDSDom
 The LDAP query optimizer algorithm was reevaluated and further optimized.  The result is the performance improvement in LDAP search efficiency and LDAP search time of complex queries.  
   
 > [!NOTE]  
-> **From the Developer:**â€¦improvements in the performance of searches through improvements in the mapping from LDAP query to ESE query.  LDAP filters beyond a certain level of complexity prevent optimized index selection, resulting in drastically decreased performance (1000x or more). This change alters the way in which we select indices for LDAP queries to avoid this problem.  
+> **From the Developer:**…improvements in the performance of searches through improvements in the mapping from LDAP query to ESE query.  LDAP filters beyond a certain level of complexity prevent optimized index selection, resulting in drastically decreased performance (1000x or more). This change alters the way in which we select indices for LDAP queries to avoid this problem.  
   
 > [!NOTE]  
 > A complete overhaul of the LDAP query optimizer algorithm, resulting in:  
@@ -198,7 +201,7 @@ adfind -b dc=blue,dc=contoso,dc=com -f "(| (& (|(cn=justintu) (postalcode=80304)
   
 Using server: WINSRV-DC1.blue.contoso.com:389  
   
-â€¦<removed search results>  
+…<removed search results>  
   
 Statistics  
 =====  
@@ -228,7 +231,7 @@ adfind -b dc=blue,dc=contoso,dc=com -f "(| (& (|(cn=justintu) (postalcode=80304)
   
 Using server: winblueDC1.blue.contoso.com:389  
   
-â€¦.<removed search results>  
+….<removed search results>  
   
 Statistics  
 =====  
@@ -399,4 +402,5 @@ This updates increase the maximum throughput to around 600 Mbps by changing the 
 ### Additional Resources  
 [How the Active Directory Replication Model Works](http://technet.microsoft.com/library/cc772726(v=WS.10).aspx)  
   
+
 

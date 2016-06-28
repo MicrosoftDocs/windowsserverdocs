@@ -12,6 +12,9 @@ ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
 author: jamesmci
 ---
 # Role-based Access Control
+
+>Applies To: Windows Server Technical Preview
+
 This topic provides information about using role-based access control in IPAM.  
   
 > [!NOTE]  
@@ -36,4 +39,5 @@ You can configure access control so that users are restricted to the following p
 [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

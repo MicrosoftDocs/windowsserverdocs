@@ -12,6 +12,9 @@ ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 author: vhorne
 ---
 # Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack
+
+>Applies To: Windows Server Technical Preview
+
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.  
   
 For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../../sdn/Software-Defined-Networking--SDN-.md).  
@@ -35,19 +38,19 @@ Most errors can be classified into a small set of classes:
    
 ## Diagnostic tools  
   
-Before discussing the troubleshooting workflows for each of these type of errors, letâ€™s examine the diagnostic tools available.   
+Before discussing the troubleshooting workflows for each of these type of errors, let’s examine the diagnostic tools available.   
   
 To use these tools, you must first install the RSAT-NetworkController feature and import the ``NetworkControllerDiagnostics`` module:  
   
 ```  
-Add-WindowsFeature RSAT-NetworkController â€“IncludeManagementTools  
+Add-WindowsFeature RSAT-NetworkController –IncludeManagementTools  
 Import-Module NetworkControllerDiagnostics  
 ```  
   
   
 ### Network controller diagnostics  
   
-* **``Debug-NetworkControllerConfigurationState â€“NcIpAddress <FQDN of NC REST>``**  
+* **``Debug-NetworkControllerConfigurationState –NcIpAddress <FQDN of NC REST>``**  
  This script can run from anywhere that has Layer-3 connectivity to the NetworkController REST IP Address and has the Network Controller REST certificate installed. It queries the Network Controller to see if there are any tenant or fabric resources which are in a failure or warning configuration state based on the actual configuration state of the component. It also returns detailed info containing the source of the error, a message, and error code. The resources on which Configuration State has been implemented and the list of error codes are provided in the Appendix of this topic.  
  * **``Debug-SlbConfigState -NcIp <NC REST IP Address> [-LogPath <string>]``**  
   This script must be run from one of the Network Controller nodes. It queries the Network Controller Software Load Balancer (SLB) Manager service module and sends the output to a text file named ``SlbConfigState.txt``. The default log path location is under ``C:\Tools`` on the host from where the script ran. The text file includes information including the state of the SLB Multiplexers, how many Hyper-V Hosts are connected to the SLB Mux, BGP peering status, advertised routes, and VIPs.  
@@ -55,9 +58,9 @@ Import-Module NetworkControllerDiagnostics
  This script must be run from one of the Network Controller nodes. It queries the Network Controller Service Fabric to show the replication status and health state of each Network Controller node. It also shows a "win-diff"-like evolution of the status of the nodes by regularly polling for changes.  
  * **``Get-Replica``**  
 This script must be run from one of the Network Controller nodes. It queries the Network Controller's Service Fabric to determine which node the specific Network Controller service modules (e.g. SDNAPI, SlbManagerService, etc.) are primary. It also checks to see if there is a quorum of service module replicas running which are required for consensus and correct operation.  
-* **``Test-VNetPing.ps1 â€“RestUri <string> -SenderIp <string> -ReceiverIp <string> -vNetResourceId <string>``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-VNetPing.ps1))  
+* **``Test-VNetPing.ps1 –RestUri <string> -SenderIp <string> -ReceiverIp <string> -vNetResourceId <string>``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-VNetPing.ps1))  
  This script allows you to create an ICMP packet to send between two Customer Address (CA) IP Addresses. The tenant administrator specifies the sender and receiver CA IP Addresses and references the virtual network where these IP addresses are attached. The ICMP packet attempts to traverse the layers in the Virtual Filtering Platform (VFP) Hyper-V virtual switch extension. To get the results, query the Network Controller using the ``Get-ConnectivityResults`` command.  
-* **``Test-LogicalNetworkPing.ps1 -RestUri <string> â€“SenderIp <string> -ReceiverIp <string> -LogicalNetworkResourceId <string>``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-LogicalNetworkPing.ps1))  
+* **``Test-LogicalNetworkPing.ps1 -RestUri <string> –SenderIp <string> -ReceiverIp <string> -LogicalNetworkResourceId <string>``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-LogicalNetworkPing.ps1))  
 This script allows a user to create an ICMP packet to be sent between two Provider Address (PA) IP Addresses. The hosting provider administrator specifies the sender and receiver PA IP addresses and reference the HNV Provider logical network where these IPs are attached. To get the results, query the Network Controller using the ``Get-ConnectivityResults`` command.  
 * **``Get-ConnectivityResults.ps1 -RestUri <string> [-OperationId <string>]``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Get-ConnectivityResults.ps1))  
  This script checks the connectivity results from both CA and PA Connectivity checks. You can optionally supply an operation Id (returned by Test-*AConnectivity) as a parameter. If no Operation Id is given, all recent connectivity results are returned. Results are available for one hour.  
@@ -75,7 +78,7 @@ import-module hnvdiagnostics
   - **Virtual Subnet ID (VSID)**   
   This value is unique per virtual subnet and corresponds to the VxLAN Network Identifier (VNI) or the NVGRE Tenant Network Identifier (TNI) in the VxLAN and NVGRE headers respectively.  
   - **Provider Address (PA)**   
-  The IP Address assigned to a hidden network adapter on the Hyper-V Host. This IP address is used as the encapsulating packetâ€™s Layer-3 IP header.   
+  The IP Address assigned to a hidden network adapter on the Hyper-V Host. This IP address is used as the encapsulating packet’s Layer-3 IP header.   
   - **MAC Address**   
   The CA MAC Address assigned to the tenant virtual machine.  
 * **``Get-CustomerRoute``**  
@@ -90,7 +93,7 @@ import-module hnvdiagnostics
   The next-hop required to reach the given CA IP Prefix, usually the default gateway assigned to the HNV distributed router.  
   - **Routing Domain ID**  
 * **``Test-LogicalNetworkConnection [PA IP Address]``**  
-   This script pings the supplied Provider Address (PA) IP Address on a remote host and automatically determines the correct TCP/IP network compartment where the PA Host vNIC resides. This command is short-hand for the following:  ``ping â€“c <PA Host vNIC compartment> <PA IP Address>``. PA Connectivity can also be checked through the Network Controller using the ``Test-LogicalNetworkPing.ps1`` command documented previously.  
+   This script pings the supplied Provider Address (PA) IP Address on a remote host and automatically determines the correct TCP/IP network compartment where the PA Host vNIC resides. This command is short-hand for the following:  ``ping –c <PA Host vNIC compartment> <PA IP Address>``. PA Connectivity can also be checked through the Network Controller using the ``Test-LogicalNetworkPing.ps1`` command documented previously.  
   
 ## Troubleshooting scenarios  
 The following are common troubleshooting scenarios, with a logical sequence of troubleshooting steps, specific diagnostic tools to use, required inputs, expected outputs, and follow-up actions for each output.  
@@ -104,7 +107,7 @@ The following are common troubleshooting scenarios, with a logical sequence of t
 6.  [Hosting provider] If a problem still exists, run ``Test-LogicalNetworkPing.ps1`` to validate connectivity between the two Hyper-V hosts themselves. Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question. Run the ``Get-NCLogicalNetwork`` command to determine the resource ID of the HNV provider network. Specify the sender and receive PA IP addresses.  
 7.  [Hosting provider]] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.  
 8.  [Hosting provider]] If PA IP Addresses are not present and/or CA Connectivity is broken, check to ensure network policy has been received. Run ``Get-PACAMapping`` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.  
-9.  [Hosting provider]] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat â€“anp tcp |findstr 6640`` to see if the   
+9.  [Hosting provider]] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat –anp tcp |findstr 6640`` to see if the   
 10. [Hosting provider]] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.  
 11. [Hosting provider]] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.  
   
@@ -124,8 +127,8 @@ The following are common troubleshooting scenarios, with a logical sequence of t
     2.  If using physical Top-of-Rack (ToR) switch as BGP Peer, consult your documentation  
         1.  For example: # show bgp instance  
 4.  Check configuration state and VIP ranges in Software Load Balancer Manager Resource  
-    1.  Get-NCLoadBalancerManager | convertto-json â€“depth 8 (check VIP ranges and ensure SLBM self-VIP and any tenant-facing VIPs are within this range)  
-    2.  Debug-NetworkControllerConfigurationState â€“  
+    1.  Get-NCLoadBalancerManager | convertto-json –depth 8 (check VIP ranges and ensure SLBM self-VIP and any tenant-facing VIPs are within this range)  
+    2.  Debug-NetworkControllerConfigurationState –  
    
 If any of the checks above fail, the tenant SLB state will also be in a failure mode.  
    
@@ -145,8 +148,8 @@ Based on the following diagnostic information presented, fix the following:
     1.  Validate DIP endpoints which are registered in SLBM are hosting tenant virtual machines which correspond to the LoadBalancer Back-end Address pool IP configurations  
 3.  [Hosting provider] If DIP endpoints are not discovered or connected:   
     1.  Check *Debug-NetworkControllerConfigurationState*  
-        1.  Validate that NC and SLB Host Agent is successfully connected to the Network Controller Event Coordinator using ``netstat â€“anp tcp |findstr 6640)``  
-    2.  Check *HostId* in *nchostagent* service regkey (reference *HostNotConnected* error code in the Appendix) matches the corresponding server resource's instance Id (``Get-NCServer |convertto-json â€“depth 8``)  
+        1.  Validate that NC and SLB Host Agent is successfully connected to the Network Controller Event Coordinator using ``netstat –anp tcp |findstr 6640)``  
+    2.  Check *HostId* in *nchostagent* service regkey (reference *HostNotConnected* error code in the Appendix) matches the corresponding server resource's instance Id (``Get-NCServer |convertto-json –depth 8``)  
     3.  Check port profile id for virtual machine port matches corresponding virtual machine NIC resource's Instance Id   
 4.  [Hosting provider] Collect logs   
   
@@ -222,8 +225,8 @@ If the packet is dropped due to rule misconfiguration, this is typically evident
 Rule/Drop Reason  |Description  |Action    
 ---------|---------|---------  
 No rule match     | Network Controller Host Agent was unable to program vSwitch layers or rules in Virtual Filtering Platform (VFP).        | Run the ``Debug-NetworkControllerConfigurationState`` to determine which resource is in an error state.          
-PA route rule     |No route to PA destination|PA network configuration. For example: Duplicate PA IP address<br><br>Hosting provider should use ``Test-LogicalNetworkConnectivity`` (or ``ping â€“c <compartmentId> <PA IP>``) to diagnose PA connectivity issue.|       
-ACL rules     |Packet isnâ€™t allowed through firewall         |Tenant admin should inspect and fix any ACLs applied on the VM NIC or virtual subnet which may be precluding traffic from flowing           
+PA route rule     |No route to PA destination|PA network configuration. For example: Duplicate PA IP address<br><br>Hosting provider should use ``Test-LogicalNetworkConnectivity`` (or ``ping –c <compartmentId> <PA IP>``) to diagnose PA connectivity issue.|       
+ACL rules     |Packet isn’t allowed through firewall         |Tenant admin should inspect and fix any ACLs applied on the VM NIC or virtual subnet which may be precluding traffic from flowing           
 Address resolution failure(ARP/ND interception)|Address resolution failed for CA destination. This is likely a configuration issue.|Example: VM IP address was manually changed.<br><br>Network Controller configuration state should point out issues with address management (e.g. failure to assign IP through DHCP or duplicate CA)  
 MAP encap rule|Missing CA-PA mapping|Tenant admin should consult Network Controller Configuration State (VM NIC resource) and IP configuration to ensure the CA IP address is correctly specified.           
 Forwarding     |Packet does not match any of the ports for forwarding|Tenant admin should consult Network Controller Configuration State (VM NIC resource) and IP configuration to ensure the CA IP address is correctly specified.           
@@ -259,4 +262,5 @@ Redirection Rules|Misconfigured redirection rule causes the packet not to be red
 | RoutePublicationFailure               | Loadbalancer MUX is not connected to a BGP router.                                            | Check if the MUX has connectivity with the BGP routers and that BGP peering is setup correctly.                                                                                                                                                                                                            |  
 | VirtualServerUnreachable              | Loadbalancer MUX is not connected to SLB manager.                                             | Check connectivity between SLBM and MUX.                                                                                                                                                                                                                                                                   |  
 | QosConfigurationFailure               | Failed to configure QOS policies.                                                             | See if sufficient bandwidth is available for all VM's if QOS reservation is used.                                                                                                                                                                                                                          |
+
 

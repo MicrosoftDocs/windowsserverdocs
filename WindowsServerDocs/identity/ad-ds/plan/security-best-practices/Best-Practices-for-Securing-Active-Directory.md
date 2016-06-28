@@ -14,7 +14,10 @@ ms.assetid: 1550791a-361c-4399-92c8-ac3fe862ee02
 author: Femila
 ---
 # Best Practices for Securing Active Directory
-This document provides a practitionerâ€™s perspective and contains a set of practical techniques to help IT executives protect an enterprise Active Directory environment. Active Directory plays a critical role in the IT infrastructure, and ensures the harmony and security of different network resources in a global, interconnected environment. The methods discussed are based largely on the Microsoft Information Security and Risk Management (ISRM) organizationâ€™s experience, which is accountable for protecting the assets of Microsoft IT and other Microsoft Business Divisions, in addition to advising a selected number of Microsoft Global 500 customers.  
+
+>Applies To: Windows Server Technical Preview
+
+This document provides a practitioner’s perspective and contains a set of practical techniques to help IT executives protect an enterprise Active Directory environment. Active Directory plays a critical role in the IT infrastructure, and ensures the harmony and security of different network resources in a global, interconnected environment. The methods discussed are based largely on the Microsoft Information Security and Risk Management (ISRM) organization’s experience, which is accountable for protecting the assets of Microsoft IT and other Microsoft Business Divisions, in addition to advising a selected number of Microsoft Global 500 customers.  
   
 -   [Foreword](https://technet.microsoft.com/library/dn487451.aspx)  
   
@@ -74,4 +77,5 @@ This document provides a practitionerâ€™s perspective and contains a set of prac
   
 -   [Appendix M: Document Links and Recommended Reading](../../../ad-ds/manage/Appendix-M--Document-Links-and-Recommended-Reading.md)  
   
+
 

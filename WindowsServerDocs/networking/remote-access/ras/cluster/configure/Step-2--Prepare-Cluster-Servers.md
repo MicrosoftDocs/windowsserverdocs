@@ -12,6 +12,9 @@ ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 author: coreyp
 ---
 # Step 2: Prepare Cluster Servers
+
+>Applies To: Windows Server Technical Preview
+
 Before you can configure a cluster deployment, you prepare additional servers to add to the cluster.  
   
 |Task|Description|  
@@ -76,4 +79,5 @@ To configure a Remote Access cluster, you must install the Network Load Balancin
   
 -   [Step 3: Configure a load-balanced cluster](assetId:///7a817ca0-2b4a-4476-9d28-9a63ff2453f9)  
   
+
 

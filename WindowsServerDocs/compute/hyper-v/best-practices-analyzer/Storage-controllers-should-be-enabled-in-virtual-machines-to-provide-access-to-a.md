@@ -13,6 +13,9 @@ ms.assetid: 532548a1-8ffe-4b5b-902e-ed2f0819012b
 author: KBDAzure
 ---
 # Storage controllers should be enabled in virtual machines to provide access to attached storage
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -54,4 +57,5 @@ For instructions on how to use Device Manager, see Help in the guest operating s
   
 6.  In the right pane, click **Remove**.  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
 author: jamesmci
 ---
 # Enable Hash Publication for File Servers
+
+>Applies To: Windows Server Technical Preview
+
 You can enable BranchCache hash publication on one file server or on multiple file servers.  
   
 -   To enable hash publication on one file server using local computer Group Policy, see [Enable Hash Publication for Non-Domain Member File Servers](../../branchcache/deploy/Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
@@ -21,4 +24,5 @@ You can enable BranchCache hash publication on one file server or on multiple fi
 > [!NOTE]  
 > If you have multiple file servers and you want to enable hash publication per share, rather than enabling hash publication for all shares, you can use the instructions in the topic [Enable Hash Publication for Non-Domain Member File Servers](Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
   
+
 

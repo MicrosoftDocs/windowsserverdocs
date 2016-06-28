@@ -12,7 +12,10 @@ ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
 author coreyp-at-msft
 ---
 # Keyboard Shortcuts for Server Manager
-Because Server Manager was fully redesigned starting in Windows ServerÂ® 2012, keyboard shortcuts that worked in the Server Manager console in  Windows Server 2008 R2  or  Windows Server 2008  are not necessarily the same commands. This topic describes the new keyboard shortcuts and access keys for Server Manager in  Windows Server 2012  and newer releases of Windows Server.
+
+>Applies To: Windows Server Technical Preview
+
+Because Server Manager was fully redesigned starting in Windows Server® 2012, keyboard shortcuts that worked in the Server Manager console in  Windows Server 2008 R2  or  Windows Server 2008  are not necessarily the same commands. This topic describes the new keyboard shortcuts and access keys for Server Manager in  Windows Server 2012  and newer releases of Windows Server.
 
 Commands that do not have their own keyboard shortcuts or access keys are accessible by pressing the **Tab** key, and tabbing through their control group when it is in focus.
 
@@ -89,5 +92,6 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 |Filter control|**Alt+F**|
 |Query control|**Alt+Q**|
 |Save queries|**Alt+S**|
+
 
 

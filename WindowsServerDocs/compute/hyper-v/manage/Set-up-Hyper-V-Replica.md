@@ -10,6 +10,9 @@ ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 author: KBDAzure
 ---
 # Set up Hyper-V Replica
+
+>Applies To: Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper-V host server to another to keep your workloads available.  Hyper-V Replica creates a copy of a live virtual machine  to a replica offline virtual machine.  Note the following:  
@@ -116,4 +119,5 @@ After completing these deployment steps your replicated environment is up and ru
   
 **Unplanned failover**: To run an unplanned failover right-click on the replica virtual machine and select **Replication** > **Unplanned Failover** from Hyper-V Manager or Failover Clustering Manager. You can recover from the latest recovery point or from previous recovery points if this option is enabled. After failover check everything's working as expected on the failed over virtual machine and then click Complete on the replica virtual machine to finish up the failover. [Read more](http://blogs.technet.com/b/virtualization/archive/2012/08/08/types-of-failover-operations-in-hyper-v-replica-part-iii-unplanned-failover.aspx).  
   
+
 

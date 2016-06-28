@@ -12,6 +12,9 @@ ms.assetid: 375feefc-949e-47c3-9e61-35b79e021966
 author: jamesmci
 ---
 # View DNS Resource Records for a DNS Zone
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to view DNS resource records for a DNS zone in the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -42,4 +45,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [DNS Zone Management](DNS-Zone-Management.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

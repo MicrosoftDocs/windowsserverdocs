@@ -12,7 +12,10 @@ ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
 author: coreyp-at-msft
 ---
 # Install or Uninstall Roles, Role Services, or Features
-In Windows ServerÂ® 2016 Technical Preview, the Server Manager console and Windows PowerShellÂ® cmdlets for Server Manager allow installation of roles and features to local or remote servers, or offline virtual hard disks (VHDs). You can install multiple roles and features on a single remote server or offline VHD in a single Add Roles and Features Wizard or Windows PowerShell session.  
+
+>Applies To: Windows Server Technical Preview
+
+In Windows Server® 2016 Technical Preview, the Server Manager console and Windows PowerShell® cmdlets for Server Manager allow installation of roles and features to local or remote servers, or offline virtual hard disks (VHDs). You can install multiple roles and features on a single remote server or offline VHD in a single Add Roles and Features Wizard or Windows PowerShell session.  
   
 > [!IMPORTANT]  
 > Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012 R2  or Windows 8.1 cannot be used to install roles, role services, and features on servers that are running Windows Server 2016 Technical Preview.  
@@ -84,7 +87,7 @@ In a single session in the Add Roles and Features Wizard, you can install roles,
 8.  After you click **Install**, the **Installation progress** page displays installation progress, results, and messages such as warnings, failures, or post-installation configuration steps that are required for the roles or features that you installed. In  Windows Server 2012  and later releases of Windows Server, you can close the Add Roles and Features Wizard while installation is still in progress, and view installation results or other messages in the **Notifications** area at the top of the Server Manager console. Click the **Notifications** flag icon to see more details about installations or other tasks that you are performing in Server Manager.  
   
 ## <a name="BKMK_installwps"></a>Install roles, role services, and features by using Windows PowerShell cmdlets  
-The Server Manager deployment cmdlets for Windows PowerShell function similarly to the GUI-based Add Roles and Features Wizard and Remove Roles and Features Wizard, with an important difference. In Windows PowerShell, unlike in the Add Roles and Features Wizard, management tools and snap-ins for a role are not included by default. To include management tools as part of a role installation, add the `IncludeManagementTools` parameter to the cmdlet. If you are installing roles and features on a server that is running the Server Core installation option of  Windows Server 2012  or later releases, you can add a roleâ€™s management tools to an installation, but GUI-based management tools and snap-ins cannot be installed on servers that are running the Server Core installation option of Windows Server. Only command-line and Windows PowerShell management tools can be installed on the Server Core installation option.  
+The Server Manager deployment cmdlets for Windows PowerShell function similarly to the GUI-based Add Roles and Features Wizard and Remove Roles and Features Wizard, with an important difference. In Windows PowerShell, unlike in the Add Roles and Features Wizard, management tools and snap-ins for a role are not included by default. To include management tools as part of a role installation, add the `IncludeManagementTools` parameter to the cmdlet. If you are installing roles and features on a server that is running the Server Core installation option of  Windows Server 2012  or later releases, you can add a role’s management tools to an installation, but GUI-based management tools and snap-ins cannot be installed on servers that are running the Server Core installation option of Windows Server. Only command-line and Windows PowerShell management tools can be installed on the Server Core installation option.  
   
 #### To install roles and features by using the Install-WindowsFeature cmdlet  
   
@@ -107,7 +110,7 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
 4.  Type the following, and then press **Enter**, where *feature_name* represents the command name of a role or feature that you want to install (obtained in step 2), and *computer_name* represents a remote computer on which you want to install roles and features. Separate multiple values for *feature_name* by using commas. The `Restart` parameter automatically restarts the destination server if required by the role or feature installation.  
   
     ```  
-    Install-WindowsFeature â€“Name <feature_name> -ComputerName <computer_name> -Restart  
+    Install-WindowsFeature –Name <feature_name> -ComputerName <computer_name> -Restart  
     ```  
   
     To install roles and features on an offline VHD, add both the `ComputerName` parameter and the `VHD` parameter. If you do not add the `ComputerName` parameter, the cmdlet assumes that the local computer is mounted to access the VHD. The `ComputerName` parameter contains the name of the server on which to mount the VHD, and the `VHD` parameter contains the path to the VHD file on the specified server.  
@@ -125,13 +128,13 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
     >     -   **Full Control** access on the **Security** tab , file or folder **Properties** dialog box.  
   
     ```  
-    Install-WindowsFeature -Name <feature_name> â€“VHD <path> -ComputerName <computer_name> -Restart  
+    Install-WindowsFeature -Name <feature_name> –VHD <path> -ComputerName <computer_name> -Restart  
     ```  
   
     **Example:** The following cmdlet installs the Active Directory Domain Services role and the Group Policy Management feature on a remote server, ContosoDC1. Management tools and snap-ins are added by using the `IncludeManagementTools` parameter, and the destination server is to be restarted automatically, if installation requires that the servers be restarted.  
   
     ```  
-    Install-WindowsFeature â€“Name AD-Domain-Services,GPMC â€“ComputerName ContosoDC1 â€“IncludeManagementTools -Restart  
+    Install-WindowsFeature –Name AD-Domain-Services,GPMC –ComputerName ContosoDC1 –IncludeManagementTools -Restart  
     ```  
   
 5.  When installation is finished, verify installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server (Get-WindowsFeature -ComputerName <*computer_name*>) to view a list of roles and features that are installed on the server.  
@@ -198,7 +201,7 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
 4.  Type the following, and then press **Enter**, where *feature_name* represents the command name of a role or feature that you want to remove (obtained in step 2), and *computer_name* represents a remote computer from which you want to remove roles and features. Separate multiple values for *feature_name* by using commas. The `Restart` parameter automatically restarts destination servers if required by the role or feature removal.  
   
     ```  
-    Uninstall-WindowsFeature â€“Name <feature_name> -ComputerName <computer_name> -Restart  
+    Uninstall-WindowsFeature –Name <feature_name> -ComputerName <computer_name> -Restart  
     ```  
   
     To remove roles and features from an offline VHD, add both the `ComputerName` parameter and the `VHD` parameter. If you do not add the `ComputerName` parameter, the cmdlet assumes that the local computer is mounted to access the VHD. The `ComputerName` parameter contains the name of the server on which to mount the VHD, and the `VHD` parameter contains the path to the VHD file on the specified server.  
@@ -212,13 +215,13 @@ The Server Manager deployment cmdlets for Windows PowerShell function similarly 
     > -   **Full Control** access on the **Security** tab , file or folder **Properties** dialog box.  
   
     ```  
-    Uninstall-WindowsFeature â€“Name <feature_name> â€“VHD <path> -ComputerName <computer_name> -Restart  
+    Uninstall-WindowsFeature –Name <feature_name> –VHD <path> -ComputerName <computer_name> -Restart  
     ```  
   
     **Example:** The following cmdlet removes the Active Directory Domain Services role and the Group Policy Management feature from a remote server, ContosoDC1. Management tools and snap-ins are also removed, and the destination server is to be restarted automatically, if removal requires that the servers be restarted.  
   
     ```  
-    Uninstall-WindowsFeature â€“Name AD-Domain-Services,GPMC â€“ComputerName ContosoDC1 â€“IncludeManagementTools -Restart  
+    Uninstall-WindowsFeature –Name AD-Domain-Services,GPMC –ComputerName ContosoDC1 –IncludeManagementTools -Restart  
     ```  
   
 5.  When removal is finished, verify that the roles and features are removed by opening the **All Servers** page in Server Manager, selecting the server from which you removed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at the selected server (Get-WindowsFeature -ComputerName <*computer_name*>) to view a list of roles and features that are installed on the server.  
@@ -278,7 +281,7 @@ Although you cannot use the Add Roles and Features Wizard to install roles, role
   
     2.  To run the function, type the following, and then press **Enter**, where `$ServerNames` is an example of the variable that you created in the preceding step, and *C:\Users\Sampleuser\Desktop\DeploymentConfigTemplate.xml* is an example of a path to the configuration file that you created in step 1.  
   
-        **Invoke-WindowsFeatureBatchDeployment â€“ComputerNames $ServerNames â€“ConfigurationFilePath C:\Users\Sampleuser\Desktop\DeploymentConfigTemplate.xml**  
+        **Invoke-WindowsFeatureBatchDeployment –ComputerNames $ServerNames –ConfigurationFilePath C:\Users\Sampleuser\Desktop\DeploymentConfigTemplate.xml**  
   
 5.  When installation is finished, verify installation by opening the **All Servers** page in Server Manager, selecting a server on which you installed roles and features, and viewing the **Roles and Features** tile on the page for the selected server. You can also run the `Get-WindowsFeature` cmdlet targeted at a specific server (`Get-WindowsFeature -ComputerName` <*computer_name*>) to view a list of roles and features that are installed on the server.  
   
@@ -318,7 +321,7 @@ You can install .NET Framework 3.5 by doing one of the following.
 2.  Type the following command, and then press **Enter**. In the following example, the source files are located in a side-by-side store (abbreviated to as **SxS**) in installation media on drive D.  
   
     ```  
-    Install-WindowsFeature NET-Framework-Core â€“Source D:\Sources\SxS  
+    Install-WindowsFeature NET-Framework-Core –Source D:\Sources\SxS  
     ```  
   
     If you want the command to use Windows Update as a source for missing feature files, or if a default source has already been configured by using Group Policy, you do not need to add the `Source` parameter unless you want to specify a different source.  
@@ -406,4 +409,5 @@ The Group Policy setting described in this section specifies authorized source l
 [Microsoft .NET Framework 3.5 Deployment Considerations](http://go.microsoft.com/fwlink/p/?LinkId=248869)  
 [How to Enable or Disable Windows Features](http://go.microsoft.com/fwlink/p/?LinkId=246552)  
   
+
 

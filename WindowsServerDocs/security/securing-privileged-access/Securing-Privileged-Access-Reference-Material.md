@@ -11,6 +11,9 @@ manager:
 author: YuriDio
 ---
 # Securing Privileged Access Reference Material
+
+>Applies To: Windows Server Technical Preview
+
 This section contains reference information for Securing Privileged Access including:
 
 -   [Active Directory administrative tier model](#ADATM_BM)
@@ -30,17 +33,17 @@ The purpose of this tier model is to protect identity systems using a set of buf
 
 The Tier model is composed of three levels and only includes administrative accounts, not standard user accounts:
 
--   **Tier 0** ‚Äì Direct Control of enterprise identities in the environment. Tier 0 includes accounts, groups, and other assets that have direct or indirect administrative control of the Active Directory forest, domains, or domain controllers, and all the assets in it. The security sensitivity of all Tier 0 assets is equivalent as they are all effectively in control of each other.
+-   **Tier 0** ñ Direct Control of enterprise identities in the environment. Tier 0 includes accounts, groups, and other assets that have direct or indirect administrative control of the Active Directory forest, domains, or domain controllers, and all the assets in it. The security sensitivity of all Tier 0 assets is equivalent as they are all effectively in control of each other.
 
--   **Tier 1** ‚Äì Control of enterprise servers and applications. Tier 1 assets include server operating systems, cloud services, and enterprise applications. Tier 1 administrator accounts have administrative control of a significant amount of business value that is hosted on these assets. A common example role is server administrators who maintain these operating systems with the ability to impact all enterprise services.
+-   **Tier 1** ñ Control of enterprise servers and applications. Tier 1 assets include server operating systems, cloud services, and enterprise applications. Tier 1 administrator accounts have administrative control of a significant amount of business value that is hosted on these assets. A common example role is server administrators who maintain these operating systems with the ability to impact all enterprise services.
 
--   **Tier 2** ‚Äì Control of user workstations and devices. Tier 2 administrator accounts have administrative control of a significant amount of business value that is hosted on user workstations and devices. Examples include Help Desk and computer support administrators because they can impact the integrity of almost any user data.
+-   **Tier 2** ñ Control of user workstations and devices. Tier 2 administrator accounts have administrative control of a significant amount of business value that is hosted on user workstations and devices. Examples include Help Desk and computer support administrators because they can impact the integrity of almost any user data.
 
 > [!NOTE]
-> The tiers also serve as a basic prioritization mechanism for protecting administrative assets, but it is important to consider that an attacker with control of all assets at any tier can access most or all business assets. The reason it is useful as a basic prioritization mechanism is attacker difficulty/cost. It is easier for an attacker to operate with full control of all identities (Tier 0) or servers and cloud services (Tier 1) than it is if they must access each individual workstation or user device (Tier 2) to get your organization‚Äôs data.
+> The tiers also serve as a basic prioritization mechanism for protecting administrative assets, but it is important to consider that an attacker with control of all assets at any tier can access most or all business assets. The reason it is useful as a basic prioritization mechanism is attacker difficulty/cost. It is easier for an attacker to operate with full control of all identities (Tier 0) or servers and cloud services (Tier 1) than it is if they must access each individual workstation or user device (Tier 2) to get your organizationís data.
 
 ### Containment and security zones
-The tiers are relative to a specific security zone. While they have gone by many names, security zones are a well-established approach that provide containment of security threats through network layer isolation between them. The tier model complements the isolation by providing containment of adversaries within a security zone where network isolation isn‚Äôt effective. Security zones can span both on-premises and cloud infrastructure, such as in the example where Domain Controllers and domain members in the same domain are hosted on-premises and in Azure.
+The tiers are relative to a specific security zone. While they have gone by many names, security zones are a well-established approach that provide containment of security threats through network layer isolation between them. The tier model complements the isolation by providing containment of adversaries within a security zone where network isolation isnít effective. Security zones can span both on-premises and cloud infrastructure, such as in the example where Domain Controllers and domain members in the same domain are hosted on-premises and in Azure.
 
 ![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig2.JPG)
 
@@ -121,7 +124,7 @@ The source of the software should be validated through one of the following mean
 
     -   Compare the downloaded files using a utility like certutil:
 
-        `certutil ‚Äìhashfile <filename>`
+        `certutil ñhashfile <filename>`
 
 When possible, all application software, such as application installers and tools should be digitally signed and verified using Windows Authenticode with the [Windows Sysinternal](http://www.microsoft.com/sysinternals)s tool, *sigcheck.exe*, with revocation checking. Some software may be required where the vendor may not provide this type of digital signature.
 
@@ -134,7 +137,7 @@ Ideally, the software should be validated at the time it is used, such as when i
 ### Clean source for architecture and design
 Applying the clean source principle to the system architecture requires you to ensure that the system is not dependent on lower trust systems. A system can be dependent on a higher trust system, but not on a lower trust system with lower security standards.
 
-As an example, its acceptable for Active Directory to control a standard user desktop but it‚Äôs a significant escalation of privilege risk for a standard user desktop to be in control of the Active Directory.
+As an example, its acceptable for Active Directory to control a standard user desktop but itís a significant escalation of privilege risk for a standard user desktop to be in control of the Active Directory.
 
 ![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig09.JPG)
 
@@ -149,12 +152,12 @@ Because of the large number of assets that depend on identity systems like Activ
 For more information on hardening the top risks of active directory, see [this page](http://aka.ms/hardenAD).
 
 ### <a name="OSBCS_BM"></a>Operational standards based on clean source principle
-This section describes the operational standards and expectations for administrative personnel. These standards are designed to secure administrative control of an organization‚Äôs information technology systems against risks that could be created by operational practices and processes.
+This section describes the operational standards and expectations for administrative personnel. These standards are designed to secure administrative control of an organizationís information technology systems against risks that could be created by operational practices and processes.
 
 ![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig11.JPG)
 
 #### Integrating the standards
-You can integrate these standards into your organization‚Äôs overall standards and practices. You can adapt these to the specific requirements, available tools, and risk appetite of your organization, but we recommend only minimum modifications to reduce risk. We recommend you use the defaults in this guidance as the benchmark for your ideal end state and manage any deltas as exceptions to be addressed in priority order.
+You can integrate these standards into your organizationís overall standards and practices. You can adapt these to the specific requirements, available tools, and risk appetite of your organization, but we recommend only minimum modifications to reduce risk. We recommend you use the defaults in this guidance as the benchmark for your ideal end state and manage any deltas as exceptions to be addressed in priority order.
 
 The standards guidance is organized into these sections:
 
@@ -209,13 +212,13 @@ Each standard in this document is broken out by the criticality of meeting the s
 
 All exceptions for Mandatory items (marked with red octagon   or an orange triangle   in this document) are considered temporary, and they need to be approved by the CAB. Guidelines include:
 
--   The initial request requires justification risk acceptance signed by personnel‚Äôs immediate supervisor, and it expires after six months.
+-   The initial request requires justification risk acceptance signed by personnelís immediate supervisor, and it expires after six months.
 
 -   Renewals require justification and risk acceptance signed by a business unit director, and they expire after six months.
 
 All exceptions for Recommended items (marked with a yellow circle   in this document) are considered temporary, and need to be approved by the CAB. Guidelines include:
 
--   The initial request requires justification risk acceptance signed by personnel‚Äôs immediate supervisor, and it expires after 12 months.
+-   The initial request requires justification risk acceptance signed by personnelís immediate supervisor, and it expires after 12 months.
 
 -   Renewals require justification and risk acceptance signed by a business unit director, and they expire after 12 months.
 
@@ -319,13 +322,13 @@ If the number of personnel assigned to any role exceeds two, the change approval
 
 -   Specific reason why the tasks cannot be performed by another administrator on their behalf
 
--   Document all other known alternative approaches to granting the privilege and why each isn‚Äôt acceptable
+-   Document all other known alternative approaches to granting the privilege and why each isnít acceptable
 
 ###### Dynamically assign privileges
-Administrators are required to obtain permissions ‚Äújust-in-time‚Äù to use them as they perform tasks. No permissions will be permanently assigned to administrative accounts.
+Administrators are required to obtain permissions ìjust-in-timeî to use them as they perform tasks. No permissions will be permanently assigned to administrative accounts.
 
 > [!NOTE]
-> Permanently assigned administrative privileges naturally create a ‚Äúmost privilege‚Äù strategy because administrative personnel require rapid access to permissions to maintain operational availability if there is an issue. Just-in-time permissions provide the ability to:
+> Permanently assigned administrative privileges naturally create a ìmost privilegeî strategy because administrative personnel require rapid access to permissions to maintain operational availability if there is an issue. Just-in-time permissions provide the ability to:
 > 
 > -   Assign permissions more granularly, getting closer to least privilege.
 > -   Reduce the exposure time of privileges
@@ -337,9 +340,9 @@ Use the following practices to proper manage risk of credential exposure.
 ###### Separate administrative accounts
 All personnel that are authorized to possess administrative privileges must have separate accounts for administrative functions that are distinct from user accounts.
 
--   **Standard user accounts** ‚Äì Granted standard user privileges for standard user tasks, such as email, web browsing, and using line-of-business applications. These accounts should not be granted administrative privileges.
+-   **Standard user accounts** ñ Granted standard user privileges for standard user tasks, such as email, web browsing, and using line-of-business applications. These accounts should not be granted administrative privileges.
 
--   **Administrative accounts** ‚Äì Separate accounts created for personnel who are assigned the appropriate administrative privileges. An administrator who is required to manage assets in each Tier should have a separate account for each Tier. These accounts should have no access to email or the public Internet.
+-   **Administrative accounts** ñ Separate accounts created for personnel who are assigned the appropriate administrative privileges. An administrator who is required to manage assets in each Tier should have a separate account for each Tier. These accounts should have no access to email or the public Internet.
 
 ###### Administrator logon practices
 Before an administrator can log on to a host interactively (locally over standard RDP, by using RunAs, or by using the virtualization console), that host must meet or exceed the standard for the admin account Tier (or a higher Tier).
@@ -372,9 +375,9 @@ Ensure that the following practices are applied for this scenario:
     -   **Primary (interactive)** - Use RDP RestrictedAdmin or a Standard RDP Session from an admin workstation with a domain account
 
     > [!NOTE]
-    > If you have a Tier 0 privilege management solution, add ‚Äúthat uses permissions obtained just-in-time from a privileged access management solution.‚Äù
+    > If you have a Tier 0 privilege management solution, add ìthat uses permissions obtained just-in-time from a privileged access management solution.î
 
--   **Physical server support** ‚Äì When physically present at a server console or at a virtual machine console (Hyper-V or VMWare tools), these accounts have no specific administrative tool usage restrictions, only the general restrictions from standard user tasks like email and browsing the open internet.
+-   **Physical server support** ñ When physically present at a server console or at a virtual machine console (Hyper-V or VMWare tools), these accounts have no specific administrative tool usage restrictions, only the general restrictions from standard user tasks like email and browsing the open internet.
 
     > [!NOTE]
     > Tier 0 administration is different from administration of other tiers because all Tier 0 assets already have direct or indirect control of all assets. As an example, an attacker in control of a DC has no need to steal credentials from logged on administrators as they already have access to all domain credentials in the database.
@@ -394,46 +397,46 @@ Ensure that the following practices are applied for this scenario:
 
     -   **Forbidden** - Using the domain account credentials while in the session (for example, using *RunAs* or authenticating to a share). This exposes the logon credentials to the risk of theft.
 
--   **Physical server support** ‚Äì When physically present at a server console or at a virtual machine console (Hyper-V or VMWare tools), Tier 1 administrators must retrieve the local account password from LAPS prior to accessing the server.
+-   **Physical server support** ñ When physically present at a server console or at a virtual machine console (Hyper-V or VMWare tools), Tier 1 administrators must retrieve the local account password from LAPS prior to accessing the server.
 
-    -   **Primary** ‚Äì Retrieve the local account password set by LAPS from an admin workstation before logging on to the server.
+    -   **Primary** ñ Retrieve the local account password set by LAPS from an admin workstation before logging on to the server.
 
-    -   **Forbidden** ‚Äì Logging on with a domain account is not allowed in this scenario.
+    -   **Forbidden** ñ Logging on with a domain account is not allowed in this scenario.
 
-    -   **Forbidden** ‚Äì Using the domain account credentials while in the session (for example, RunAs or authenticating to a share). This exposes the logon credentials to the risk of theft.
+    -   **Forbidden** ñ Using the domain account credentials while in the session (for example, RunAs or authenticating to a share). This exposes the logon credentials to the risk of theft.
 
 ###### Tier 2 help desk and user support
-Help Desk and user support organizations perform support for end users (which doesn‚Äôt require administrative privileges) and the user workstations (which does require administrative privileges).
+Help Desk and user support organizations perform support for end users (which doesnít require administrative privileges) and the user workstations (which does require administrative privileges).
 
-**User support** ‚Äì Tasks include assisting users with performing tasks that require no modification to the workstation, frequently showing them how to use an application feature or operating system feature.
+**User support** ñ Tasks include assisting users with performing tasks that require no modification to the workstation, frequently showing them how to use an application feature or operating system feature.
 
--   **Desk-side user support** ‚Äì The Tier 2 support personnel is physically at the user‚Äôs workspace.
+-   **Desk-side user support** ñ The Tier 2 support personnel is physically at the userís workspace.
 
-    -   **Primary** ‚Äì ‚ÄúOver the shoulder‚Äù support can be provided with no tools.
+    -   **Primary** ñ ìOver the shoulderî support can be provided with no tools.
 
-    -   **Forbidden** ‚Äì Logging on with domain account administrative credentials is not allowed in this scenario. Switch to desk-side workstation support if administrative privileges are required.
+    -   **Forbidden** ñ Logging on with domain account administrative credentials is not allowed in this scenario. Switch to desk-side workstation support if administrative privileges are required.
 
--   **Remote user support** ‚Äì The Tier 2 support personnel is physically remote to the user.
+-   **Remote user support** ñ The Tier 2 support personnel is physically remote to the user.
 
-    -   **Primary** ‚Äì Remote Assistance, Skype for Business, or similar user-screen sharing may be used. For more information, see [What is Windows Remote Assistance?](http://windows.microsoft.com/en-us/windows/what-is-windows-remote-assistance)
+    -   **Primary** ñ Remote Assistance, Skype for Business, or similar user-screen sharing may be used. For more information, see [What is Windows Remote Assistance?](http://windows.microsoft.com/en-us/windows/what-is-windows-remote-assistance)
 
-    -   **Forbidden** ‚Äì Logging on with domain account administrative credentials is not allowed in this scenario. Switch to workstation support if administrative privileges are required.
+    -   **Forbidden** ñ Logging on with domain account administrative credentials is not allowed in this scenario. Switch to workstation support if administrative privileges are required.
 
--   **Workstation support** ‚Äì Tasks include performing workstation maintenance or troubleshooting that requires access to a system for viewing logs, installing software, updating drivers, and so on.
+-   **Workstation support** ñ Tasks include performing workstation maintenance or troubleshooting that requires access to a system for viewing logs, installing software, updating drivers, and so on.
 
-    -   **Desk-side workstation support** ‚Äì The Tier 2 support personnel is physically at the user‚Äôs workstation.
+    -   **Desk-side workstation support** ñ The Tier 2 support personnel is physically at the userís workstation.
 
-        -   **Primary** ‚Äì Retrieve the local account password set by LAPS from an admin workstation before connecting to user workstation.
+        -   **Primary** ñ Retrieve the local account password set by LAPS from an admin workstation before connecting to user workstation.
 
-        -   **Forbidden** ‚Äì Logging on with domain account administrative credentials is not allowed in this scenario.
+        -   **Forbidden** ñ Logging on with domain account administrative credentials is not allowed in this scenario.
 
-    -   **Remote workstation support** ‚Äì The Tier 2 support personnel is physically remote to the workstation.
+    -   **Remote workstation support** ñ The Tier 2 support personnel is physically remote to the workstation.
 
-        -   **Primary** ‚Äì Use RDP RestrictedAdmin from an admin workstation with a domain account that uses permissions obtained just-in-time from a privileged access management solution.
+        -   **Primary** ñ Use RDP RestrictedAdmin from an admin workstation with a domain account that uses permissions obtained just-in-time from a privileged access management solution.
 
-        -   **Secondary** ‚Äì Retrieve a local account password set by LAPS from an admin workstation before connecting to user workstation.
+        -   **Secondary** ñ Retrieve a local account password set by LAPS from an admin workstation before connecting to user workstation.
 
-        -   **Forbidden** ‚Äì Use standard RDP with a domain account.
+        -   **Forbidden** ñ Use standard RDP with a domain account.
 
 ###### No browsing the public Internet with admin accounts or from admin workstations
 Administrative personnel cannot browse the open Internet while logged on with an administrative account or while logged on to an administrative workstation. The only authorized exceptions are the use of a web browser to administer a cloud-based service, such as Microsoft Azure, Amazon Web Services, Microsoft Office 365, or enterprise Gmail.
@@ -458,9 +461,9 @@ Use the following practices to proper configure strong authentication.
 ###### Enforce smartcard multi-factor authentication (MFA) for all admin accounts
 No administrative account is allowed to use a password for authentication. The only authorized exceptions are the emergency access accounts that are protected by the appropriate processes.
 
-Link all administrative accounts to a smart card and enable the attribute ‚Äú**Smart Card Required for Interactive Logon**.‚Äù
+Link all administrative accounts to a smart card and enable the attribute ì**Smart Card Required for Interactive Logon**.î
 
-A script should be implemented to automatically and periodically reset the random password hash value by disabling and immediately re-enabling the attribute ‚Äú**Smart Card Required for Interactive Logon**.‚Äù
+A script should be implemented to automatically and periodically reset the random password hash value by disabling and immediately re-enabling the attribute ì**Smart Card Required for Interactive Logon**.î
 
 Allow no exceptions for accounts used by human personnel beyond the emergency access accounts.
 
@@ -511,18 +514,18 @@ For all use of emergency access accounts:
 Privileges should be added as needed and removed after use. The emergency account should have these privileges assigned for only the duration of the task to be completed, and for a maximum of 10 hours. All usage and duration of these privileges should be captured in the change approval board record after the task is completed.
 
 ## <a name="ESAE_BM"></a>ESAE Administrative Forest Design Approach
-This section contains an approach for an administrative forest based on the Enhanced Security Administrative Environment (ESAE) reference architecture deployed by Microsoft‚Äôs cybersecurity professional services teams to protect customers against cybersecurity attacks.
+This section contains an approach for an administrative forest based on the Enhanced Security Administrative Environment (ESAE) reference architecture deployed by Microsoftís cybersecurity professional services teams to protect customers against cybersecurity attacks.
 
 Dedicated administrative forests allow organizations to host administrative accounts, workstations, and groups in an environment that has stronger security controls than the production environment.
 
-This architecture enables a number of security controls that aren‚Äôt possible or easily configured in a single forest architecture, even one managed with Privileged Access Workstations (PAWs). This approach allows the provisioning of accounts as standard non-privileged users in the administrative forest that are highly privileged in the production environment, enabling greater technical enforcement of governance. This architecture also enables the use of the selective authentication feature of a trust as a means to restrict logons (and credential exposure) to only authorized hosts. In situations in which a greater level of assurance is desired for the production forest without incurring the cost and complexity of a complete rebuild, an administrative forest can provide an environment that increases the assurance level of the production environment.
+This architecture enables a number of security controls that arenít possible or easily configured in a single forest architecture, even one managed with Privileged Access Workstations (PAWs). This approach allows the provisioning of accounts as standard non-privileged users in the administrative forest that are highly privileged in the production environment, enabling greater technical enforcement of governance. This architecture also enables the use of the selective authentication feature of a trust as a means to restrict logons (and credential exposure) to only authorized hosts. In situations in which a greater level of assurance is desired for the production forest without incurring the cost and complexity of a complete rebuild, an administrative forest can provide an environment that increases the assurance level of the production environment.
 
 While this approach does add a forest to an Active Directory environment, the cost and complexity are limited by the fixed design, small hardware/software footprint, and small number of users.
 
 > [!NOTE]
-> This approach works well for administering Active Directory, but many applications aren‚Äôt compatible with being administered by accounts from an external forest using a standard trust.
+> This approach works well for administering Active Directory, but many applications arenít compatible with being administered by accounts from an external forest using a standard trust.
 
-This figure depicts an ESAE forest used for administration of Tier 0 Assets and a PRIV forest configured for use with Microsoft Identity Manager‚Äôs Privileged Access Management capability. For more information on deploying a MIM PAM instance, see [Privileged Identity Management for Active Directory Domain Services (AD DS)](https://technet.microsoft.com/en-us/library/mt150258.aspx) article.
+This figure depicts an ESAE forest used for administration of Tier 0 Assets and a PRIV forest configured for use with Microsoft Identity Managerís Privileged Access Management capability. For more information on deploying a MIM PAM instance, see [Privileged Identity Management for Active Directory Domain Services (AD DS)](https://technet.microsoft.com/en-us/library/mt150258.aspx) article.
 
 ![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig14.JPG)
 
@@ -530,19 +533,19 @@ A dedicated administrative forest is a standard single domain Active Directory f
 
 An administrative forest design should include the following considerations:
 
--   **Limited scope** ‚Äì The primary value of an admin forest is the high level of security assurance and reduced attack surface resulting in lower residual risk. The forest can be used to house additional management functions and applications, but each increase in scope will increase the attack surface of the forest and its resources. The objective is to limit the functions of the forest and admin users inside to keep the attack surface minimal, so each scope increase should be considered carefully.
+-   **Limited scope** ñ The primary value of an admin forest is the high level of security assurance and reduced attack surface resulting in lower residual risk. The forest can be used to house additional management functions and applications, but each increase in scope will increase the attack surface of the forest and its resources. The objective is to limit the functions of the forest and admin users inside to keep the attack surface minimal, so each scope increase should be considered carefully.
 
--   **Trust configurations** ‚Äì Configure trust from managed forests(s) or domain(s) to the administrative forest
+-   **Trust configurations** ñ Configure trust from managed forests(s) or domain(s) to the administrative forest
 
     -   A one-way trust is required from production environment to the admin forest. This can be a domain trust or a forest trust. The admin forest/domain does not need to trust the managed domains/forests to manage Active Directory, though additional applications may require a two-way trust relationship, security validation, and testing.
 
-    -   Selective authentication should be used to restrict accounts in the admin forest to only logging on to the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the ‚ÄúAllowed to logon‚Äù right for domain controllers to designated Tier 0 admin accounts in the admin forest. See Configuring Selective Authentication Settings for more information.
+    -   Selective authentication should be used to restrict accounts in the admin forest to only logging on to the appropriate production hosts. For maintaining domain controllers and delegating rights in Active Directory, this typically requires granting the ìAllowed to logonî right for domain controllers to designated Tier 0 admin accounts in the admin forest. See Configuring Selective Authentication Settings for more information.
 
--   **Privileges and domain hardening** ‚Äì The administrative forest should be configured to least privilege based on the requirements for Active Directory administration.
+-   **Privileges and domain hardening** ñ The administrative forest should be configured to least privilege based on the requirements for Active Directory administration.
 
     -   Granting rights to administer domain controllers and delegate permissions requires adding admin forest accounts to the BUILTIN\Administrators domain local group. This is because the Domain Admins global group cannot have members from an external domain.
 
-    -   One caveat to using this group to grant rights is that they won‚Äôt have administrative access to new group policy objects by default. This can be changed by following the procedure in [this knowledge base article](http://support.microsoft.com/kb/321476) to change the schema default permissions.
+    -   One caveat to using this group to grant rights is that they wonít have administrative access to new group policy objects by default. This can be changed by following the procedure in [this knowledge base article](http://support.microsoft.com/kb/321476) to change the schema default permissions.
 
     -   Accounts in the admin forest that are used to administer the production environment should not be granted administrative privileges to the admin forest, domains in it, or workstations in it.
 
@@ -553,11 +556,11 @@ An administrative forest design should include the following considerations:
     -   All admin forest hosts should be automatically updated with security updates. While this may create risk of interrupting domain controller maintenance operations, it provides a significant mitigation of security risk of unpatched vulnerabilities.
 
         > [!NOTE]
-        > A dedicated Windows Server Update Services instance can be configured to automatically approve updates. For more information, see the ‚ÄúAutomatically Approve Updates for Installation‚Äù section in Approving Updates.
+        > A dedicated Windows Server Update Services instance can be configured to automatically approve updates. For more information, see the ìAutomatically Approve Updates for Installationî section in Approving Updates.
 
 -   **Workstation Hardening** - Build the administrative workstations using the [Privileged Access Workstations](../securing-privileged-access/Privileged-Access-Workstations.md) (through Phase 3), but change the domain membership to the administrative forest instead of the production environment.
 
--   **Server and DC hardening** ‚Äì For all domain controllers and servers in the administrative forest:
+-   **Server and DC hardening** ñ For all domain controllers and servers in the administrative forest:
 
     -   Ensure all media is validated using the guidance in [Clean Source for installation media](http://aka.ms/cleansource)
 
@@ -566,7 +569,7 @@ An administrative forest design should include the following considerations:
     -   Admin forest hosts should be automatically updated with security updates.
 
         > [!NOTE]
-        > Windows Server Update Services can be configured to automatically approve updates. For more information, see the ‚ÄúAutomatically Approve Updates for Installation‚Äù section in Approving Updates.
+        > Windows Server Update Services can be configured to automatically approve updates. For more information, see the ìAutomatically Approve Updates for Installationî section in Approving Updates.
 
     -   Security Baselines should be used as starting configurations.
 
@@ -606,7 +609,7 @@ An administrative forest design should include the following considerations:
         ![](../media/Securing-Privileged-Access-Reference-Material/PAW_RM_Fig15.JPG)
 
         > [!NOTE]
-        > This can interrupt operations in progress that are using this account, so this process should be initiated only when administrators won‚Äôt be using the account, such as at night or on weekends.
+        > This can interrupt operations in progress that are using this account, so this process should be initiated only when administrators wonít be using the account, such as at night or on weekends.
 
 -   Detective controls
 
@@ -659,29 +662,29 @@ This table includes guidance for the most common administrative tools and connec
 
 |Connection<br />method|Logon type|Reusable credentials on destination|Comments|
 |---------------------|--------------|---------------------------------------|------------|
-|Log on at console|Interactive|‚àö|Includes hardware remote access / lights-out cards and network KVMs.|
-|RUNAS|Interactive|‚àö||
-|RUNAS /NETWORK|NewCredentials|‚àö|Clones current LSA session for local access, but uses new credentials when connecting to network resources.|
-|Remote Desktop (success)|RemoteInteractive|‚àö|If the remote desktop client is configured to share local devices and resources, those may be compromised as well.|
+|Log on at console|Interactive|v|Includes hardware remote access / lights-out cards and network KVMs.|
+|RUNAS|Interactive|v||
+|RUNAS /NETWORK|NewCredentials|v|Clones current LSA session for local access, but uses new credentials when connecting to network resources.|
+|Remote Desktop (success)|RemoteInteractive|v|If the remote desktop client is configured to share local devices and resources, those may be compromised as well.|
 |Remote Desktop (failure - logon type was denied)|RemoteInteractive|-|By default, if RDP logon fails credentials are only stored very briefly. This may not be the case if the computer is compromised.|
 |Net use * \\\SERVER|Network|-||
 |Net use * \\\SERVER /u:user|Network|-||
 |MMC snap-ins to remote computer|Network|-|Example: Computer Management, Event Viewer, Device Manager, Services|
 |PowerShell WinRM|Network|-|Example: Enter-PSSession server|
-|PowerShell WinRM with CredSSP|NetworkClearText|‚àö|New-PSSession server<br />-Authentication Credssp<br />-Credential cred|
+|PowerShell WinRM with CredSSP|NetworkClearText|v|New-PSSession server<br />-Authentication Credssp<br />-Credential cred|
 |PsExec without explicit creds|Network|-|Example: PsExec \\\server cmd|
-|PsExec with explicit creds|Network + Interactive|‚àö|PsExec \\\server -u user -p pwd cmd<br />Creates multiple logon sessions.|
+|PsExec with explicit creds|Network + Interactive|v|PsExec \\\server -u user -p pwd cmd<br />Creates multiple logon sessions.|
 |Remote Registry|Network|-||
 |Remote Desktop Gateway|Network|-|Authenticating to Remote Desktop Gateway.|
-|Scheduled task|Batch|‚àö|Password will also be saved as LSA secret on disk.|
-|Run tools as a service|Service|‚àö|Password will also be saved as LSA secret on disk.|
+|Scheduled task|Batch|v|Password will also be saved as LSA secret on disk.|
+|Run tools as a service|Service|v|Password will also be saved as LSA secret on disk.|
 |Vulnerability scanners|Network|-|Most scanners default to using network logons, though some vendors may implement non-network logons and introduce more credential theft risk.|
 
 For web authentication, use the reference from the table below:
 
 |Connection<br />method|Logon type|Reusable credentials on destination|Comments|
 |---------------------|--------------|---------------------------------------|------------|
-|IIS "Basic Authentication"|NetworkCleartext<br />(IIS 6.0+)<br /><br />Interactive<br />(prior to IIS 6.0)|‚àö||
+|IIS "Basic Authentication"|NetworkCleartext<br />(IIS 6.0+)<br /><br />Interactive<br />(prior to IIS 6.0)|v||
 |IIS "Integrated Windows Authentication"|Network|-|NTLM and Kerberos Providers.|
 
 Column Definitions:
@@ -702,7 +705,7 @@ The symbols in this table defined as follows:
 
 -   (-) denotes when credentials are not exposed.
 
--   (‚àö) denotes when credentials are exposed.
+-   (v) denotes when credentials are exposed.
 
 For management applications that are not in this table, you can determine the logon type from the logon type field in the audit logon events. For more information, see [Audit logon events](http://technet.microsoft.com/en-us/library/cc787567(v=ws.10).aspx).
 
@@ -716,7 +719,7 @@ In Windows-based computers, all authentications are processed as one of several 
 |Service|5|Password (usually stored as LSA secret)|Yes|Windows services|
 |NetworkCleartext|8|Password|Yes|IIS Basic Auth (IIS 6.0 and newer);<br />Windows PowerShell with CredSSP|
 |NewCredentials|9|Password|Yes|RUNAS /NETWORK|
-|RemoteInteractive|10|Password, Smartcard,<br />other|Yes|Remote Desktop (formerly known as ‚ÄúTerminal Services‚Äù)|
+|RemoteInteractive|10|Password, Smartcard,<br />other|Yes|Remote Desktop (formerly known as ìTerminal Servicesî)|
 
 Column definitions:
 
@@ -732,5 +735,6 @@ Column definitions:
 
 > [!NOTE]
 > For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](http://technet.microsoft.com/en-us/library/aa380129(VS.85).aspx).
+
 
 

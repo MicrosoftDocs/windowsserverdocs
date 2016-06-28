@@ -13,6 +13,9 @@ ms.assetid: 861f194f-467e-4b07-a1c5-55b35f6327c4
 author: KBDAzure
 ---
 # Configure SCSI controllers only when supported by the guest operating system
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 |||  
@@ -38,4 +41,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 *Shut down the virtual machine and use Hyper-V Manager to remove the SCSI controller from the virtual machine. Then, restart the virtual machine.*  
   
+
 

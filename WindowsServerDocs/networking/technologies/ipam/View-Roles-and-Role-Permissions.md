@@ -12,6 +12,9 @@ ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
 author: jamesmci
 ---
 # View Roles and Role Permissions
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to view Access Control user roles in the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -34,4 +37,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [Role-based Access Control](Role-based-Access-Control.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

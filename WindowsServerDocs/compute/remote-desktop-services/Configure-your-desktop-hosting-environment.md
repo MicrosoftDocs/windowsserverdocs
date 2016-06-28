@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Configure your desktop hosting environment
+
+>Applies To: Windows Server Technical Preview
+
 Before you start deploying any of the desktop hosting solutions for Remote Desktop Services, there are some steps you need to take to prepare your environment:  
   
 - Create a [Microsoft Azure subscription](https://azure.microsoft.com/free/).  
@@ -22,4 +25,5 @@ Before you start deploying any of the desktop hosting solutions for Remote Deskt
 - Create [virtual machines](Create-virtual-machines-for-Remote-Desktop.md) and [prepare them for Remote Desktop](Prepare-your-virtual-machines-for-Remote-Desktop.md).  
   
 Then, after you follow the steps in the hosting guides, you'll want to [validate the connection and secure the deployment](Validate-and-secure-your-Remote-Desktop-deployment.md).
+
 

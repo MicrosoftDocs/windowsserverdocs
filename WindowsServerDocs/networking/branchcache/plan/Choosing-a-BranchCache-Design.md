@@ -12,6 +12,9 @@ ms.assetid: 86c1ccad-2aa4-40fe-84c1-f77c49eb1216
 author: jamesmci
 ---
 # Choosing a BranchCache Design
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn about BranchCache modes and to select the best modes for your deployment.  
   
 You can use this guide to deploy BranchCache in the following modes and mode combinations.  
@@ -28,4 +31,5 @@ The following illustration depicts a dual mode installation, with one branch off
   
 Before you deploy BranchCache, select the mode you prefer for each branch office in your organization.  
   
+
 

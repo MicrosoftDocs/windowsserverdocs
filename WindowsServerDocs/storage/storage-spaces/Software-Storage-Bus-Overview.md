@@ -12,6 +12,9 @@ ms.assetid: 7266d237-4d46-4a37-8165-d68df509e215
 author: kumudd
 ---
 # Software Storage Bus Overview
+
+>Applies To: Windows Server Technical Preview
+
 The Software Storage Bus  is a virtual storage bus spanning all the servers that make up the cluster. Software Storage Bus essentially makes it possible for each server to see all disks across all servers in the cluster providing full mesh connectivity. Software Storage Bus consists of two components on each server in the cluster; ClusPort and ClusBlft. ClusPort implements a virtual HBA that allows the node to connect to disk devices in all the other servers in the cluster. ClusBlft implements virtualization of the disk devices and enclosures in each server for ClusPort in other servers to connect to.  
 
   ![](media/Software-Storage-Bus-Overview/S2D_SoftwareStorageBus.png)  
@@ -63,3 +66,4 @@ Software Bus Cache creates a special partition on each caching device that, by d
 -   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 
 -   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
+

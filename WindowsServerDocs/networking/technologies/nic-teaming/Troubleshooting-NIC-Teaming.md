@@ -12,6 +12,9 @@ ms.assetid: fdee02ec-3a7e-473e-9784-2889dc1b6dbb
 author: jamesmci
 ---
 # Troubleshooting NIC Teaming
+
+>Applies To: Windows Server Technical Preview
+
 This topic provides information about troubleshooting NIC Teaming, and contains the following sections, which describe possible causes of issues with NIC Teaming.  
   
 -   [Hardware that doesn't conform to specification](#bkmk_hardware)  
@@ -51,4 +54,5 @@ The **Enable-NetAdapter \*** command does, however, enable the member NICs, whic
 ## See Also  
 [NIC Teaming](NIC-Teaming.md)  
   
+
 

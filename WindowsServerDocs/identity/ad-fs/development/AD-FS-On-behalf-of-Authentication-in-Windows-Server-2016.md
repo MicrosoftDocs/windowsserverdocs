@@ -13,6 +13,9 @@ ms.assetid: 84466432-339f-4715-9e2a-bc6666f23d53
 author: billmath
 ---
 # AD FS On-behalf-of Authentication in Windows Server 2016
+
+>Applies To: Windows Server Technical Preview
+
 This walkthrough provides instruction for implementing an on-behalf-of (OBO) authentication using AD FS in Windows Server 2016 TP5.  o learn more about OBO authentication please read [AD FS Scenarios for Developers](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)  
   
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.  
@@ -491,4 +494,5 @@ In the first interaction, we present the access code to the token endpoint and g
   
 In the second interaction with the token endpoint, you can see that we have **requested_token_use** set as **on_behalf_of** and we are using the access token obtained for the middle-tier web service, i.e. https://localhost:44321/ as the assertion to obtain the on-behalf-of token.  
 ![](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
+
 

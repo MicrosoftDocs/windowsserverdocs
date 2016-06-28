@@ -12,6 +12,9 @@ ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
 author: coreyp
 ---
 # STEP 3: Configure DC1
+
+>Applies To: Windows Server Technical Preview
+
 DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contoso.com domain. Configure DC1 as follows:  
   
 ### Verify User1 has a User Principal Name defined on DC1  
@@ -22,4 +25,5 @@ DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contos
   
 3.  Click **OK**. Close the **Active Directory Users and Computers** console.  
   
+
 

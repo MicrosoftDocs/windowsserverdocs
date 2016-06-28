@@ -12,6 +12,9 @@ ms.assetid: aeb2265d-8965-4b7e-bb28-704c36be4d40
 author: Femila
 ---
 # Reviewing DNS Concepts
+
+>Applies To: Windows Server Technical Preview
+
 Domain Name System (DNS) is a distributed database that represents a namespace. The namespace contains all of the information needed for any client to look up any name. Any DNS server can answer queries about any name within its namespace. A DNS server answers queries in one of the following ways:  
   
 -   If the answer is in its cache, it answers the query from the cache.  
@@ -20,7 +23,7 @@ Domain Name System (DNS) is a distributed database that represents a namespace. 
   
 -   If the server cannot answer the query from its cache or zones, it queries other servers for the answer.  
   
-It is important to understand the core features of DNS, such as delegation, recursive name resolution, and Active Directoryâ€“integrated DNS zones, because they have a direct impact on your Active Directory logical structure design.  
+It is important to understand the core features of DNS, such as delegation, recursive name resolution, and Active Directory–integrated DNS zones, because they have a direct impact on your Active Directory logical structure design.  
   
 For more information about DNS and Active Directory Domain Services (AD DS), see [DNS and AD DS](../../ad-ds/plan/DNS-and-AD-DS.md).  
   
@@ -85,4 +88,5 @@ In this example, the following events occur:
   
 8.  The original DNS server then returns the result to the client.  
   
+
 

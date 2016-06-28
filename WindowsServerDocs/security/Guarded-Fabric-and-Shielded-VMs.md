@@ -11,12 +11,15 @@ manager: dongill
 author: coreyp-at-msft
 ---
 # Guarded Fabric and Shielded VMs
+
+>Applies To: Windows Server Technical Preview
+
 ## Overview of the Guarded Fabric
-Virtualization security is a major investment area in Windows Server 2016 Hyper-V. In addition to protecting hosts or other virtual machines from a virtual machine running malicious software , we also need to protect virtual machines from a compromised host. Since a virtual machine is just a file, we need to protect it from attacks via the storage system, the network, or while it is backed up. This is a fundamental need for every virtualization platform today, whether it‚Äôs Hyper-V, VMware or any other. Quite simply, if a virtual machine gets out of an organization (either maliciously or accidentally) that virtual machine can be run on any other system.  Protecting high value assets in your organization such as domain controllers, sensitive file servers, and HR systems is a top priority.
+Virtualization security is a major investment area in Windows Server 2016 Hyper-V. In addition to protecting hosts or other virtual machines from a virtual machine running malicious software , we also need to protect virtual machines from a compromised host. Since a virtual machine is just a file, we need to protect it from attacks via the storage system, the network, or while it is backed up. This is a fundamental need for every virtualization platform today, whether itís Hyper-V, VMware or any other. Quite simply, if a virtual machine gets out of an organization (either maliciously or accidentally) that virtual machine can be run on any other system.  Protecting high value assets in your organization such as domain controllers, sensitive file servers, and HR systems is a top priority.
 
 To help protect against compromised fabric, Windows Server 2016 Hyper-V introduces Shielded VMs. A Shielded VM is a generation 2  (supported on Windows Server 2012 and later) that has a virtual TPM, is encrypted using BitLocker and can only run on healthy and approved hosts in the fabric.
 
-Shielded VMs and Guarded fabric enables cloud service providers or enterprise private cloud administrators, to provide a more secure environment for tenant VMs. A guarded fabric is comprised of one Host Guardian Service (HGS)‚Äîtypically, a cluster of 3 nodes‚Äîone or more guarded hosts and a set of shielded Virtual Machines. The diagram below shows how the Host Guardian Service uses ‚ÄúAttestation‚Äù to ensure that only known, valid hosts can start the shielded VMs, and the ‚ÄúKey Protection Service‚Äù to securely release the keys for shielded VMs.
+Shielded VMs and Guarded fabric enables cloud service providers or enterprise private cloud administrators, to provide a more secure environment for tenant VMs. A guarded fabric is comprised of one Host Guardian Service (HGS)ótypically, a cluster of 3 nodesóone or more guarded hosts and a set of shielded Virtual Machines. The diagram below shows how the Host Guardian Service uses ìAttestationî to ensure that only known, valid hosts can start the shielded VMs, and the ìKey Protection Serviceî to securely release the keys for shielded VMs.
 
 ![Guarded Host Overview Diagrammedia/Guarded-Host-Overview-Diagram.png)
 ### Attestation modes in the Guarded Fabric solution
@@ -33,4 +36,5 @@ For more information about deploying and operating the Guarded Fabric solution s
 * [Shielded VMs and Guarded Fabric Deployment Guide for Windows Server 2016 TP5](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-98d2b045)
 * [Shielded VMs and Guarded Fabric Operations Guide for Windows Server 2016](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-b05d8078)
 * [Shielded VMs and Guarded Fabric Troubleshooting Guide for Windows Server 2016](https://gallery.technet.microsoft.com/Shielded-VMs-and-Guarded-70c5b471)
+
 

@@ -12,6 +12,9 @@ ms.assetid: 7407f969-f375-4885-9a71-2702a388226a
 author: Femila
 ---
 # Finding Additional Resources for Logical Structure Design
+
+>Applies To: Windows Server Technical Preview
+
 You can find the following documentation about Active Directory Domain Services (AD DS) on the Windows Server 2003 and  Windows Server 2008  TechCenter Web sites:  
   
 -   For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology.md).  
@@ -52,4 +55,5 @@ You can find the following documentation about Active Directory Domain Services 
   
 -   For more information about naming conventions in AD DS, see article 909264 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkID=106629](http://go.microsoft.com/fwlink/?LinkID=106629)).  
   
+
 

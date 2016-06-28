@@ -12,6 +12,9 @@ ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
 author: jamesmci
 ---
 # Deploy BranchCache
+
+>Applies To: Windows Server Technical Preview
+
 The following sections provide information about deploying BranchCache in distributed and hosted cache modes.  
   
 -   [Install and Configure Content Servers](../../branchcache/deploy/Install-and-Configure-Content-Servers.md)  
@@ -25,4 +28,5 @@ The following sections provide information about deploying BranchCache in distri
 > [!NOTE]  
 > The procedures in this guide do not include instructions for those cases in which the **User Account Control** dialog box opens to request your permission to continue. If this dialog box opens while you are performing the procedures in this guide, and if the dialog box was opened in response to your actions, click **Continue**.  
   
+
 

@@ -12,7 +12,10 @@ ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 author: jamesmci
 ---
 # Remote Access
-This topic provides an overview of the Remote Access server role in Windows ServerÂ® 2016 Technical Preview.  
+
+>Applies To: Windows Server Technical Preview
+
+This topic provides an overview of the Remote Access server role in Windows Server® 2016 Technical Preview.  
   
 > [!NOTE]  
 > In addition to this topic, the following RAS documentation is available.  
@@ -53,7 +56,7 @@ You can use Remote Access to route network traffic between subnets on your Local
 To install Remote Access as a LAN router, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Routing** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.  
   
 ```  
-Install-RemoteAccess â€“VpnType RoutingOnly  
+Install-RemoteAccess –VpnType RoutingOnly  
 ```  
   
 ## <a name="bkmk_proxy"></a>Web Application Proxy  
@@ -62,8 +65,9 @@ Web Application Proxy is a Remote Access role service in Windows Server 2016 Tec
 To install Remote Access as a Web Application Proxy, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Web Application Proxy** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.  
   
 ```  
-Install-RemoteAccess â€“VpnType SstpProxy  
+Install-RemoteAccess –VpnType SstpProxy  
 ```  
 
   
+
 

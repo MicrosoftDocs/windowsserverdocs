@@ -12,6 +12,9 @@ ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
 author: coreyp
 ---
 # Install and Configure Deployment for Remote Management of DirectAccess Clients
+
+>Applies To: Windows Server Technical Preview
+
 This topic introduces the configuration steps that are required to deploy a single  Remote Access server that can be used for remote management of DirectAccess clients.  
   
 -   [Step 1: Configure the Remote Access Infrastructure](assetId:///183f07d4-e195-4ccb-9f80-4d33961dd80e): This topic describes how to configure network and server settings, certificate requirements, DNS settings, network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy Objects.  
@@ -26,4 +29,5 @@ This topic introduces the configuration steps that are required to deploy a sing
 ## See also  
 [Manage DirectAccess Clients Remotely](assetId:///d7993da0-0bbd-4d67-9529-de72f53e8550)  
   
+
 

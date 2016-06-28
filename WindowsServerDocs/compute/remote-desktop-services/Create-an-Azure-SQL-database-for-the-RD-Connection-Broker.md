@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Create an Azure SQL database for the RD Connection Broker
+
+>Applies To: Windows Server Technical Preview
+
 This article provides steps to deploy an Azure SQL Database instance for Remote Desktop. Alternatively, you could deploy a SQL server AlwaysOn Availability Group in multiple virtual machines or use a database in an existing SQL server deployment. For more details, see [Create a SQL AlwaysOn Availability Group in Microsoft Azure End-to-End](https://blogs.msdn.microsoft.com/sqlalwayson/2013/01/23/test-lab-create-an-alwayson-availability-group-in-windows-azure-end-to-end/).   
   
 1. [Create an Azure SQL Database](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance.   
@@ -28,5 +31,6 @@ This article provides steps to deploy an Azure SQL Database instance for Remote 
       
         Driver={SQL Server Native Client 11.0};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;   
   
-    5. Replace ‚Äúyour_password_here‚Äù with the actual password. You‚Äôll use this entire string, with your included password, when connecting to the database.   
+    5. Replace ìyour_password_hereî with the actual password. Youíll use this entire string, with your included password, when connecting to the database.   
+
 

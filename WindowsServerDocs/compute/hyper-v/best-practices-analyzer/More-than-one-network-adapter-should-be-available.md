@@ -13,6 +13,9 @@ ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09
 author: KBDAzure
 ---
 # More than one network adapter should be available
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -38,4 +41,5 @@ author: KBDAzure
   
 For information about adding a network adapter to the computer, consult the documentation for the computer or the network adapter. Then, to reserve it exclusively for the management operating system, don't connect it to a virtual switch.   
   
+
 

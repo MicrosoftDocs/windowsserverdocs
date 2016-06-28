@@ -12,6 +12,9 @@ ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
 author: jamesmci
 ---
 # Create, Delete, or Update Tenant Virtual Networks
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn how to create, delete, and update Hyper-V Network Virtualization Virtual Networks after you deploy Software Defined Networking (SDN).  
   
 Using Hyper-V Network Virtualization, you can isolate tenant networks so that each tenant network is a completely separate entity with no cross-connection possibility unless you configure public access workloads.  
@@ -45,7 +48,7 @@ Contoso    |6001         |  24.30.1.0/24
 Contoso    | 6002        |  24.30.2.0/24         
 Contoso     | 6003        | 24.30.3.0/24          
   
-The following example script uses Windows PowerShell commands exported from the **NetworkController** module to create Contoso‚Äôs virtual network and one subnet:   
+The following example script uses Windows PowerShell commands exported from the **NetworkController** module to create Contosoís virtual network and one subnet:   
   
 ```  
 import-module networkcontroller  
@@ -62,15 +65,15 @@ foreach ($ln in $logicalnetworks) {
   
 #Find the Access Control List to user per virtual subnet  
   
-$acllist = Get-NetworkControllerAccessControlList ‚ÄìConnectionUri $uri ‚ÄìResourceId ‚ÄúAllowAll‚Äù  
+$acllist = Get-NetworkControllerAccessControlList ñConnectionUri $uri ñResourceId ìAllowAllî  
   
 #Create the Virtual Subnet  
   
 $vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet  
-$vsubnet.ResourceId = ‚ÄúContoso_WebTier‚Äù  
+$vsubnet.ResourceId = ìContoso_WebTierî  
 $vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties  
 $vsubnet.Properties.AccessControlList = $acllist  
-$vsubnet.Properties.AddressPrefix = ‚Äú24.30.1.0/24‚Äù  
+$vsubnet.Properties.AddressPrefix = ì24.30.1.0/24î  
   
 #Create the Virtual Network  
   
@@ -79,7 +82,7 @@ $vnetproperties.AddressSpace = new-object Microsoft.Windows.NetworkController.Ad
 $vnetproperties.AddressSpace.AddressPrefixes = @("24.30.1.0/24")  
 $vnetproperties.LogicalNetwork = $HNVProviderLogicalNetwork  
 $vnetproperties.Subnets = @($vsubnet)  
-New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri ‚ÄìProperties $vnetproperties  
+New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri ñProperties $vnetproperties  
   
   
 ```  
@@ -90,17 +93,17 @@ You can use Windows PowerShell to update an existing Virtual subnet or network.
 When you run the following example script, the updated resources are simply PUT to Network Controller with the same resource ID. If your tenant Contoso wants to add a new virtual subnet (24.30.2.0/24) to their virtual network, either you or the Contoso Administrator can use the following script.  
   
 ```  
-$acllist = Get-NetworkControllerAccessControlList ‚ÄìConnectionUri $uri ‚ÄìResourceId ‚ÄúAllowAll‚Äù  
+$acllist = Get-NetworkControllerAccessControlList ñConnectionUri $uri ñResourceId ìAllowAllî  
   
 $vnet = Get-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri  
   
 $vnet.properties.AddressSpace.AddressPrefixes += "24.30.2.0/24"  
   
 $vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet  
-$vsubnet.ResourceId = ‚ÄúContoso_DBTier‚Äù  
+$vsubnet.ResourceId = ìContoso_DBTierî  
 $vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties  
 $vsubnet.Properties.AccessControlList = $acllist  
-$vsubnet.Properties.AddressPrefix = ‚Äú24.30.2.0/24‚Äù  
+$vsubnet.Properties.AddressPrefix = ì24.30.2.0/24î  
   
 $vnet.properties.Subnets += $vsubnet  
   
@@ -115,4 +118,5 @@ You can use Windows PowerShell to delete a Virtual Network.
 The following Windows PowerShell example deletes a tenant Virtual Network by issuing an HTTP delete to the URI of the Resource ID.  
   
     Remove-NetworkControllerVirtualNetwork -ResourceId "Contoso_Vnet1" -ConnectionUri $uri  
+
 

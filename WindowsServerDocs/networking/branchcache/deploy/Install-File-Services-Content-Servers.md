@@ -12,6 +12,9 @@ ms.assetid: 74b0a5ed-dc20-4974-9d4b-2426987a01a1
 author: jamesmci
 ---
 # Install File Services Content Servers
+
+>Applies To: Windows Server Technical Preview
+
 To deploy content servers that are running the File Services server role, you must install the BranchCache for network files role service of the File Services server role. In addition, you must enable BranchCache on file shares according to your requirements.  
   
 During the configuration of the content server, you can allow BranchCache publication of content for all file shares or you can select a subset of file shares to publish.  
@@ -29,4 +32,5 @@ See the following topics to deploy content servers.
   
 -   [Enable BranchCache on a File Share &#40;Optional&#41;](../../branchcache/deploy/Enable-BranchCache-on-a-File-Share--Optional-.md)  
   
+
 

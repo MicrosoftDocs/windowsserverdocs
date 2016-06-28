@@ -13,6 +13,9 @@ ms.assetid: c575cc74-9d3f-49d2-a74a-fb289155ea81
 author: billmath
 ---
 # AD FS Scenarios for Developers
+
+>Applies To: Windows Server Technical Preview
+
 AD FS in Windows Server 2016 [AD FS 2016] enables you to add industry standard OpenID Connect and OAuth 2.0 based authentication and authorization to applications you are developing, and have those applications authenticate users directly against AD FS.    
   
 AD FS 2016 also supports the WS-Federation, WS-Trust, and SAML protocols and profiles we have supported in previous versions.  If you are interested in developer guidance for these protocols, see the article here.  This article will focus on how to use and benefit from the newer protocol support.  
@@ -28,9 +31,9 @@ While you can continue using AD FS for sign on with WS-Federation, WS-Trust, and
     * Use the same set of libraries you can already use to authenticate users against Azure AD  
 * **Flexibility**  
     * In addition to standard user authorization, enable more complex scenarios such as:      
-        * ÔÇß 3-legged sign on flows in which a user authorizes one web application or service to access resources that reside with another web app or service.    
-        * ÔÇß Server-to-server flows in which a mid-tier service accesses a back end API  
-        * ÔÇß JavaScript based single-page applications (SPA)  
+        * ? 3-legged sign on flows in which a user authorizes one web application or service to access resources that reside with another web app or service.    
+        * ? Server-to-server flows in which a mid-tier service accesses a back end API  
+        * ? JavaScript based single-page applications (SPA)  
 * **Industry support**  
     * OAuth 2.0 and OpenID Connect enjoy wide utilization across the industry, so knowledge of these patterns will help you enable authentication and authorization outside of an Active Directory environment as well  
   
@@ -39,11 +42,11 @@ You can add AD FS modern authentication to your application using the same set o
   
 In AD FS scenarios of course, it is AD FS and not Azure AD that serves as the identity provider and authorization server.  Otherwise the concepts are exactly the same: users provide their credentials and obtain tokens, either directly or via an intermediary, for access to resources.  
   
-The most basic scenario consists of a user or ‚Äúresource owner‚Äù, interacting with a browser to access a web application:  
+The most basic scenario consists of a user or ìresource ownerî, interacting with a browser to access a web application:  
   
 ![ADFS_DEV_1media/ADFS_DEV_1.png)  
   
-The web application is called a ‚Äúclient‚Äù because it initiates the request to the authorization server (AD FS) for an access token to the resource.  The resource may be hosted by the web app itself or may be accessible as a web API somewhere on the network or internet.   The user or ‚Äúresource owner‚Äù authorizes the client web app to receive that access token by providing credentials to the authorization server.    
+The web application is called a ìclientî because it initiates the request to the authorization server (AD FS) for an access token to the resource.  The resource may be hosted by the web app itself or may be accessible as a web API somewhere on the network or internet.   The user or ìresource ownerî authorizes the client web app to receive that access token by providing credentials to the authorization server.    
   
 ## How it works: components  
 OAuth 2.0 and OpenID Connect scenarios in AD FS make use of the same set of tools and libraries you use when Azure AD is the identity provider.  These components are:  
@@ -64,8 +67,8 @@ To represent these scenarios in AD FS policy, we have introduced a new concept c
 Application Group / Application Type  |Description  |Role    
 ---------|---------|---------  
 Native application     |  Sometimes called a public client, this is intended to be a client app that runs on a pc or device and with which the user interacts.       | Requests tokens from the authorization server (AD FS) for user access to resources.  Sends HTTP requests to protected resources, using the tokens as HTTP headers.        
-Server application     |   A web application that runs on a server and is generally accessible to users via a browser.  Because it is capable of maintaining its own client ‚Äòsecret‚Äô or credential, it is sometimes called a confidential client.      | Requests tokens from the authorization server (AD FS) for user access to resources.  Sends HTTP requests to protected resources, using the tokens as HTTP headers.               
-Web API     |  The end resource the user is accessing. Think of these as the new representation of ‚Äúrelying parties".| Consumes tokens obtained by clients  
+Server application     |   A web application that runs on a server and is generally accessible to users via a browser.  Because it is capable of maintaining its own client ësecretí or credential, it is sometimes called a confidential client.      | Requests tokens from the authorization server (AD FS) for user access to resources.  Sends HTTP requests to protected resources, using the tokens as HTTP headers.               
+Web API     |  The end resource the user is accessing. Think of these as the new representation of ìrelying parties".| Consumes tokens obtained by clients  
   
 ### Differences from AD FS 2012 R2  
 Application groups combine trust and authorization elements that AD FS 2012 R2 exposed separately, as relying parties, clients, and application permissions.  
@@ -95,8 +98,8 @@ The following section describes the scenarios we support in more detail.
 ### Tokens used  
 These scenarios make use of three token types:  
   
-* **id_token:** A JWT token used to represent the identity of the user. The ‚Äòaud‚Äô or audience claim of the id_token matches the client ID of the native or server application.  
-* **access_token:** A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource.  The ‚Äòaud‚Äô or audience claim of this token must match the identifier of the resource or Web API.  
+* **id_token:** A JWT token used to represent the identity of the user. The ëaudí or audience claim of the id_token matches the client ID of the native or server application.  
+* **access_token:** A JWT token used in Oauth and OpenID connect scenarios and intended to be consumed by the resource.  The ëaudí or audience claim of this token must match the identifier of the resource or Web API.  
 * **refresh_token:** This token is submitted in place of collecting user credentials to provide a single sign on experience.  This token is both issued and consumed by AD FS, and is not readable by clients or resources.    
   
 ### Native client to Web API  
@@ -113,14 +116,14 @@ GET https://fs.contoso.com/adfs/oauth2/authorize?
   
 Parameter|Value  
 ---------|---------  
-response_type|‚Äúcode‚Äù  
+response_type|ìcodeî  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|client Id of the native application in the application group  
 redirect_uri|Redirect URI of native application in application group  
   
 **Authorization request response:**  
 If the user has not signed in before, the user is prompted for credentials.    
-AD FS responds by returning an authorization code as the ‚Äúcode‚Äù parameter in the query component of the redirect_uri.  For example: HTTP/1.1 302 Found Location: **http://redirect_uri:80/?code=&lt;code&gt;.**  
+AD FS responds by returning an authorization code as the ìcodeî parameter in the query component of the redirect_uri.  For example: HTTP/1.1 302 Found Location: **http://redirect_uri:80/?code=&lt;code&gt;.**  
   
 2.  The native client then sends the code, along with the following parameters, to the AD FS token endpoint:  
   
@@ -129,7 +132,7 @@ POST https://fs.contoso.com/adfs/oautincludes
   
 Parameter|Value  
 ---------|---------  
-grant_type|‚Äúauthorization_code‚Äù  
+grant_type|ìauthorization_codeî  
 code|authorization code from 1  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|client Id of the native application in the application group  
@@ -148,7 +151,7 @@ After the access token expires, ADAL will automatically send a refresh token bas
 POST https://fs.contoso.com/adfs/oautincludes   
 Parameter|Value  
 ---------|---------  
-grant_type|‚Äúrefresh_token‚Äù  
+grant_type|ìrefresh_tokenî  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|client Id of the native application in the application group  
 refresh_token|the refresh token issued by AD FS in response to the initial token request  
@@ -156,7 +159,7 @@ refresh_token|the refresh token issued by AD FS in response to the initial token
 **Refresh token request response:**  
 If the refresh token is within <SSO_period>, the request will result in a new access token. The user is not prompted for credentials.  For more information on SSO settings see [AD FS Single Sign On Settings](../../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)  
   
-If the refresh token has expired, the request results in an HTTP 401 with error ‚Äúinvalid_grant‚Äù and ‚Äúerror_description‚Äù ‚ÄúMSIS9615: The refresh token received in refresh_token parameter has expired‚Äù. In this case, ADAL automatically submits a new authorization request that looks just like #1 above.    
+If the refresh token has expired, the request results in an HTTP 401 with error ìinvalid_grantî and ìerror_descriptionî ìMSIS9615: The refresh token received in refresh_token parameter has expiredî. In this case, ADAL automatically submits a new authorization request that looks just like #1 above.    
   
 ### Web Browser to Web App   
 In this scenario, a user with a browser needs to access resources hosted by a web application.    
@@ -173,14 +176,14 @@ GET https://fs.contoso.com/adfs/oauth2/authorize?
   
 Parameter|Value  
 ---------|---------  
-response_type|‚Äúcode‚Äù  
+response_type|ìcodeî  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|Client Id of the native application in the application group  
 redirect_uri|Redirect URI of web app (server application) in application group  
   
 Authorization request response:  
 If the user has not signed in before, the user is prompted for credentials.  
-AD FS responds by returning an authorization code as the ‚Äúcode‚Äù parameter in the query component of the redirect_uri, for example: HTTP/1.1 302 Found Location: https://webapp.contoso.com/?code=&lt;code&gt;.  
+AD FS responds by returning an authorization code as the ìcodeî parameter in the query component of the redirect_uri, for example: HTTP/1.1 302 Found Location: https://webapp.contoso.com/?code=&lt;code&gt;.  
   
 2.  As a result of the above 302, the browser initiates an HTTP GET to the web app, for example: GET http://redirect_uri:80/?code=&lt;code&gt;.   
   
@@ -190,12 +193,12 @@ POST https://fs.contoso.com/adfs/oautincludes
   
 Parameter|Value  
 ---------|---------  
-grant_type|‚Äúauthorization_code‚Äù  
+grant_type|ìauthorization_codeî  
 code|authorization code from 2 above  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|Client Id of the web app (server application) in the application group  
 redirect_uri|Redirect URI of web app (server application) in application group  
-client_secret|Secret of the web app (server application) in the application group. **Note: The client‚Äôs credential does not need to be a client_secret.  AD FS supports the ability to use certificates or Windows Integrated Authentication as well.**  
+client_secret|Secret of the web app (server application) in the application group. **Note: The clientís credential does not need to be a client_secret.  AD FS supports the ability to use certificates or Windows Integrated Authentication as well.**  
   
 **Token request response:**  
 AD FS responds with an HTTP 200 with the access_token, refresh_token, and id_token in the body.  
@@ -203,7 +206,7 @@ claims
 4.  The web application then either consumes the access_token part of the above response (in the case in which the web app itself hosts the resource), or otherwise sends it as the Authorization header in the HTTP request to the web API.  
   
 #### Single sign on behavior  
-While the access token will still be valid for 1 hour (by default) in the client‚Äôs cache, you may think that the second request will work as in the native client scenario above ‚Äì that a new request will not trigger any traffic to AD FS as the access token will automatically be fetched from the cache by ADAL.  However, it is possible that the web app can sends distinct authorization and token requests, the former via distinct URL link, as in our sample.  
+While the access token will still be valid for 1 hour (by default) in the clientís cache, you may think that the second request will work as in the native client scenario above ñ that a new request will not trigger any traffic to AD FS as the access token will automatically be fetched from the cache by ADAL.  However, it is possible that the web app can sends distinct authorization and token requests, the former via distinct URL link, as in our sample.  
   
 In this case, it is the AD FS browser SSO cookie that enables AD FS to issue a new authorization code without prompting the user for credentials. The web app then calls to AD FS to exchange the new authorization code for a new access token.  The user is not prompted for credentials.  
   
@@ -215,7 +218,7 @@ Otherwise, if the web app is smart enough to know if the user is already authent
 POST https://fs.contoso.com/adfs/oautincludes   
 Parameter|Value  
 ---------|---------  
-grant_type|‚Äúrefresh_token‚Äù  
+grant_type|ìrefresh_tokenî  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|Client Id of the web app (server application) in the application group  
 refresh_token|Refresh token issued by AD FS in response to the initial token request  
@@ -224,7 +227,7 @@ client_secret|Secret of the web app (server application) in the application grou
 **Refresh token request response:**  
 If the refresh token is within <SSO_period>, the request will result in a new access token. The user is not prompted for credentials. For more information on SSO settings see [AD FS Single Sign On Settings](../../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)   
   
-If the refresh token has expired, the request results in an HTTP 401 with error ‚Äúinvalid_grant‚Äù and ‚Äúerror_description‚Äù ‚ÄúMSIS9615: The refresh token received in refresh_token parameter has expired‚Äù. In this case, ADAL automatically submits a new authorization request that looks just like #1 above.    
+If the refresh token has expired, the request results in an HTTP 401 with error ìinvalid_grantî and ìerror_descriptionî ìMSIS9615: The refresh token received in refresh_token parameter has expiredî. In this case, ADAL automatically submits a new authorization request that looks just like #1 above.    
   
 #### OpenID Connect: Hybrid flow  
 This scenario is similar to the above in that there is an authorization request initiated by the web app via browser redirect, and a code for token exchange from the web app to AD FS.  The difference in this scenario is that AD FS issues an id_token as part of the initial authorization request response.  
@@ -238,8 +241,8 @@ GET https://fs.contoso.com/adfs/oauth2/authorize?
   
 Parameter|Value  
 ---------|---------  
-response_type|‚Äúcode+id_token‚Äù  
-response_mode|‚Äúform_post‚Äù  
+response_type|ìcode+id_tokenî  
+response_mode|ìform_postî  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|Client Id of the web app (server application) in the application group  
 redirect_uri|Redirect URI of web app (server application) in the application group  
@@ -260,7 +263,7 @@ POST https://fs.contoso.com/adfs/oautincludes
   
 Parameter|Value  
 ---------|---------  
-grant_type|‚Äúauthorization_code‚Äù  
+grant_type|ìauthorization_codeî  
 code|authorization code from above  
 resource|RP ID (Identifier) of Web API in application group  
 client_id|Client Id of the web app (server application) in the application group  
@@ -276,10 +279,11 @@ AD FS responds with an HTTP 200 with the access_token, refresh_token, and id_tok
 The single sign on behavior is the same as for the Oauth 2.0 confidential client flow above.  
   
 ### On Behalf Of  
-In this scenario, a web app uses the original access token from a user to request and obtain another access token for another Web API, which the web app will then access as the end user.  This is called an ‚Äúon behalf of‚Äù flow.  
+In this scenario, a web app uses the original access token from a user to request and obtain another access token for another Web API, which the web app will then access as the end user.  This is called an ìon behalf ofî flow.  
   
 ![Description of protocol flowmedia/ADFS_DEV_6.png)  
   
 Steps 1 and 2 work just like steps 3 and 4 in the previous flow.  
 In Step 3, the key requirement is that the client_id parameter, the client ID of the Web app 2, must match the RP ID of Web API A.  In other words, the audience of the access token being exchanged for the new token must match the client ID of the entity requesting the new token.  
+
 

@@ -12,6 +12,9 @@ ms.assetid: f7022f0d-0099-410c-8178-c654e624bc42
 author: Femila
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
+
+>Applies To: Windows Server Technical Preview
+
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
@@ -45,7 +48,7 @@ author: Femila
       <para>This article describes symptoms, cause and resolution steps for Active Directory operations that fail with Win32 error 1753: "There are no more endpoints available from the endpoint mapper."</para>
       <list class="ordered">
         <listItem>
-          <para>DCDIAG reports that the Connectivity test, Active Directory Replications test or KnowsOfRoleHolders test has failed with error 1753: ‚ÄúThere are no more endpoints available from the endpoint mapper."</para>
+          <para>DCDIAG reports that the Connectivity test, Active Directory Replications test or KnowsOfRoleHolders test has failed with error 1753: ìThere are no more endpoints available from the endpoint mapper."</para>
           <code>Testing server: &lt;site&gt;&lt;DC Name&gt;
 Starting test: Connectivity
 * Active Directory LDAP Services Check
@@ -94,7 +97,7 @@ Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 175
 There are no more endpoints available from the endpoint mapper.</codeFeaturedElement>
 &lt;#&gt; consecutive failure(s).
 Last success @ &lt;date&gt; &lt;time&gt;.
-</code></listItem><listItem><para>The <ui>Check Replication Topology</ui> command in Active Directory Sites and Services returns "There are no more endpoints available from the endpoint mapper."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Check Replication Topology</ui> fails with ‚ÄúThere are no more endpoints available from the endpoint mapper.‚Äù The on-screen error message is shown below:</para><para>Dialog title text: Check Replication Topology</para><para>Dialog message text: </para><para>The following error occurred during the attempt to contact the domain controller: There are no more endpoints available from the endpoint mapper.</para></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "there are no more endpoints available from the endpoint mapper."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with "There are no more endpoints available from the endpoint mapper.‚Äù The on-screen error message is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: The following error occurred during the attempt to synchronize naming context &lt;%directory partition name%&gt; from Domain Controller &lt;Source DC&gt; to Domain Controller &lt;Destination DC&gt;:</para><para>
+</code></listItem><listItem><para>The <ui>Check Replication Topology</ui> command in Active Directory Sites and Services returns "There are no more endpoints available from the endpoint mapper."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Check Replication Topology</ui> fails with ìThere are no more endpoints available from the endpoint mapper.î The on-screen error message is shown below:</para><para>Dialog title text: Check Replication Topology</para><para>Dialog message text: </para><para>The following error occurred during the attempt to contact the domain controller: There are no more endpoints available from the endpoint mapper.</para></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "there are no more endpoints available from the endpoint mapper."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with "There are no more endpoints available from the endpoint mapper.î The on-screen error message is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: The following error occurred during the attempt to synchronize naming context &lt;%directory partition name%&gt; from Domain Controller &lt;Source DC&gt; to Domain Controller &lt;Destination DC&gt;:</para><para>
 There are no more endpoints available from the endpoint mapper.</para><para>The operation will not continue</para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the -2146893022 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the -2146893022 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1655</para></TD><TD><para>NTDS General</para></TD><TD><para>Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link for the following writable directory partition failed.</para></TD></tr><tr><TD><para>1265</para></TD><TD><para>NTDS KCC</para></TD><TD><para>An attempt by the Knowledge Consistency Checker (KCC) to add a replication agreement for the following directory partition and source domain controller failed.</para></TD></tr></tbody></table></listItem>
 </list>
     </content>
@@ -188,16 +191,16 @@ For Windows Server 2008 or Windows Server 2008 R2: from the console of the sourc
           <code>c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs primary DNS Server IP &gt;
 c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs secondary DNS Server IP&gt;</code>
           <para>Verify that the IP address returned by NSLOOKUP "owns" the host name / security identity of the source DC:</para>
-          <code>C:&gt;NBTSTAT ‚ÄìA &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
+          <code>C:&gt;NBTSTAT ñA &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
           <para>or</para>
           <para>Log onto the console of the source DC, run "IPCONFIG" from the CMD prompt and verify that the source DC owns the IP address returned by the NSLOOKUP command above</para>
           <para>Check for stale / duplicate host to IP mappings in DNS</para>
-          <code>NSLOOKUP ‚Äìtype=hostname &lt;single label hostname of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
-NSLOOKUP ‚Äìtype=hostname &lt;single label hostname of source DC&gt; &lt;secondary DNS Server IP on destination DC&gt;
+          <code>NSLOOKUP ñtype=hostname &lt;single label hostname of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
+NSLOOKUP ñtype=hostname &lt;single label hostname of source DC&gt; &lt;secondary DNS Server IP on destination DC&gt;
 
-NSLOOKUP ‚Äìtype=hostname &lt;fully qualified computer name of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
-NSLOOKUP ‚Äìtype=hostname &lt;fully qualified computer name of source DC&gt; &lt;secondary DNS Server IP on dest. DC&gt;</code>
-<para>If invalid IP addresses exist in host records, investigate whether DNS scavenging is enabled and properly configured. </para><para>If the tests above or a network trace doesn‚Äôt show a name query returning an invalid IP address, consider stale entries in HOST files, LMHOSTS files and WINS Servers. Note that DNS Servers can also be configured to perform WINS fallback name resolution.</para>
+NSLOOKUP ñtype=hostname &lt;fully qualified computer name of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
+NSLOOKUP ñtype=hostname &lt;fully qualified computer name of source DC&gt; &lt;secondary DNS Server IP on dest. DC&gt;</code>
+<para>If invalid IP addresses exist in host records, investigate whether DNS scavenging is enabled and properly configured. </para><para>If the tests above or a network trace doesnít show a name query returning an invalid IP address, consider stale entries in HOST files, LMHOSTS files and WINS Servers. Note that DNS Servers can also be configured to perform WINS fallback name resolution.</para>
 </listItem>
         <listItem>
           <para>
@@ -454,4 +457,5 @@ ncacn_ip_udp REG_SZ rpcrt4.dll</code>
 <externalLink><linkText>KB article 154596 How to configure RPC dynamic port allocation to work with firewalls</linkText><linkUri>http://support.microsoft.com/kb/154596</linkUri></externalLink><externalLink><linkText>How RPC Works</linkText><linkUri>http://msdn.microsoft.com/library/aa373935(VS.85).aspx</linkUri></externalLink><externalLink><linkText>How the Server Prepares for a Connection</linkText><linkUri>http://msdn.microsoft.com/library/aa373938(VS.85).aspx</linkUri></externalLink>
 <externalLink><linkText>How the Client Establishes a Connection</linkText><linkUri>http://msdn.microsoft.com/library/aa373937(VS.85).aspx</linkUri></externalLink><externalLink><linkText>Registering the Interface</linkText><linkUri>http://msdn.microsoft.com/library/aa375357(VS.85).aspx</linkUri></externalLink><externalLink><linkText>Making the Server Available on the Network</linkText><linkUri>http://msdn.microsoft.com/library/aa373974(VS.85).aspx</linkUri></externalLink><externalLink><linkText>Registering Endpoints</linkText><linkUri>http://msdn.microsoft.com/library/aa375255(VS.85).aspx</linkUri></externalLink><externalLink><linkText>Listening for Client Calls</linkText><linkUri>http://msdn.microsoft.com/library/aa373966(VS.85).aspx</linkUri></externalLink><externalLink><linkText>How the Client Establishes a Connection</linkText><linkUri>http://msdn.microsoft.com/library/aa373937(VS.85).aspx</linkUri></externalLink><externalLink><linkText>Restricting Active Directory replication traffic and client RPC traffic to a specific port</linkText><linkUri>http://support.microsoft.com/kb/224196</linkUri></externalLink><externalLink><linkText>SPN for a Target DC in AD DS</linkText><linkUri>http://msdn.microsoft.com/library/dd207688(PROT.13).aspx</linkUri></externalLink></relatedTopics>
 </developerConceptualDocument>
+
 

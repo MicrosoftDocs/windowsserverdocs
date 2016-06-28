@@ -12,6 +12,9 @@ ms.assetid: 77b6ac92-eaff-46d7-95db-ee6fc96742ed
 author: jamesmci
 ---
 # Manage Role Based Access Control with Server Manager
+
+>Applies To: Windows Server Technical Preview
+
 You can use the following topics to manage role based access control by using Server Manager, which has a graphical user interface.  
   
 -   [Create a User Role for Access Control](../../technologies/ipam/Create-a-User-Role-for-Access-Control.md)  
@@ -29,4 +32,5 @@ Alternately, you can use Windows PowerShell to manage IPAM role based access con
 ## See Also  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

@@ -13,6 +13,9 @@ author: kumudd
 ---
 # Storage Spaces Direct Hardware Requirements
 
+>Applies To: Windows Server Technical Preview
+
+
 We are working with our hardware partners to define and validate specific hardware configurations, including SAS HBA, SATA SSD and HDD, RDMA enabled network adapters etc.  to make sure of a good user experience.  
 
 Use PowerShell to deploy and manage Storage Spaces Direct.  Do not use Server Manager or Failover Cluster Manager to manage Storage Spaces Direct.  
@@ -44,3 +47,4 @@ Storage Spaces Direct in <Token xmlns:xlink="http://www.w3.org/1999/xlink">Windo
 -   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
 
 -   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)
+

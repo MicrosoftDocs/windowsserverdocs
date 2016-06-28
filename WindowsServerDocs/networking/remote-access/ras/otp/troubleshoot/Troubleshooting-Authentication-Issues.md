@@ -12,12 +12,15 @@ ms.assetid: 71307757-f8f4-4f82-b8b3-ffd4fd8c5d6d
 author: coreyp
 ---
 # Troubleshooting Authentication Issues
+
+>Applies To: Windows Server Technical Preview
+
 This topic contains troubleshooting information for issues related to problems users may have when attempting to connect to DirectAccess using OTP authentication. DirectAccerss OTP related events are logged on the client computer in Event Viewer under **Applications and Services Logs/Microsoft/Windows/OtpCredentialProvider**. Make sure that this log is enabled when troubleshooting issues with DirectAccess OTP.  
   
 ## Failed to access the CA that issues OTP certificates  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”OTP certificate enrollment for user <username> failed on CA server <CA_name>, request failed, possible reasons for failure: CA server name cannot be resolved, CA server cannot be accessed over the first DirectAccess tunnel or the connection to the CA server cannot be established.  
+**Error received** (client event log)—OTP certificate enrollment for user <username> failed on CA server <CA_name>, request failed, possible reasons for failure: CA server name cannot be resolved, CA server cannot be accessed over the first DirectAccess tunnel or the connection to the CA server cannot be established.  
   
 **Cause**  
   
@@ -27,14 +30,14 @@ The user provided a valid one-time password and the DirectAccess server signed t
   
 On the DirectAccess server, run the following Windows PowerShell commands:  
   
-1.  Get the list of configured OTP issuing CAs and check the value of â€˜CAServerâ€™: `Get-DAOtpAuthentication`  
+1.  Get the list of configured OTP issuing CAs and check the value of ‘CAServer’: `Get-DAOtpAuthentication`  
   
 2.  Make sure that the CAs are configured as a management servers: `Get-DAMgmtServer -Type All`  
   
 3.  Make sure that the client computer has established the infrastructure tunnel: In the Windows Firewall with Advanced Security console, expand **Monitoring/Security Associations**, click **Main Mode**, and make sure that the IPsec security associations appear with the correct remote addresses for your DirectAccess configuration.  
   
 ## DirectAccess server connectivity issues  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
 **Error received** (client event log)  
   
@@ -55,22 +58,22 @@ The client computer cannot access the DirectAccess server over the Internet, due
 Make sure that the Internet connection on the client computer is working, and make sure that the DirectAccess service is running and accessible over the Internet.  
   
 ## Failed to enroll for the DirectAccess OTP logon certificate  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”Certificate enrollment from CA <CA_name> failed. The request was not signed as expected by the OTP signing certificate, or the user does not have permission to enroll.  
+**Error received** (client event log)—Certificate enrollment from CA <CA_name> failed. The request was not signed as expected by the OTP signing certificate, or the user does not have permission to enroll.  
   
 **Cause**  
   
-The one-time password provided by the user was correct, but the issuing certification authority (CA) refused to issue the OTP logon certificate. The certificate request may not be properly signed with the correct EKU (OTP registration authority application policy), or the user does not have the â€œEnrollâ€ permission on the DA OTP template.  
+The one-time password provided by the user was correct, but the issuing certification authority (CA) refused to issue the OTP logon certificate. The certificate request may not be properly signed with the correct EKU (OTP registration authority application policy), or the user does not have the “Enroll” permission on the DA OTP template.  
   
 **Solution**  
   
-Make sure that DirectAccess OTP users have permission to enroll for the DirectAccess OTP logon certificate and that the proper â€œApplication Policyâ€ is included in the DA OTP registration authority signing template. Also make sure that the DirectAccess registration authority certificate on the Remote Access server is valid. See [3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert) and [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert).  
+Make sure that DirectAccess OTP users have permission to enroll for the DirectAccess OTP logon certificate and that the proper “Application Policy” is included in the DA OTP registration authority signing template. Also make sure that the DirectAccess registration authority certificate on the Remote Access server is valid. See [3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert) and [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert).  
   
 ## Missing or invalid computer account certificate  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€” OTP authentication cannot be completed because the computer certificate required for OTP cannot be found in local machine certificate store.  
+**Error received** (client event log)— OTP authentication cannot be completed because the computer certificate required for OTP cannot be found in local machine certificate store.  
   
 **Cause**  
   
@@ -84,14 +87,14 @@ Make sure that the computer certificate exists and is valid:
   
 2.  Make sure that there is a certificate issued that matches the computer name and double-click the certificate.  
   
-3.  On the **Certificate** dialog box, on the **Certificate Path** tab, under **Certificate status**, make sure that it says â€œThis certificate is OK.â€  
+3.  On the **Certificate** dialog box, on the **Certificate Path** tab, under **Certificate status**, make sure that it says “This certificate is OK.”  
   
 If a valid certificate is not found, delete the invalid certificate (if it exists) and re-enroll for the computer certificate by either running `gpupdate /Force` from an elevated command prompt or restarting the client computer.  
   
 ## Missing CA that issues OTP certificates  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”OTP authentication cannot be completed because the DA server did not return an address of an issuing CA.  
+**Error received** (client event log)—OTP authentication cannot be completed because the DA server did not return an address of an issuing CA.  
   
 **Cause**  
   
@@ -107,12 +110,12 @@ Either there are no CAs that issue OTP certificates configured, or all of the co
   
     2.  Apply the new configuration and force the clients to refresh the DirectAccess GPO settings by running `gpupdate /Force` from an elevated command prompt or restarting the client machine.  
   
-3.  If there are CAs configured, make sure theyâ€™re online and responding to enrollment requests.  
+3.  If there are CAs configured, make sure they’re online and responding to enrollment requests.  
   
 ## Misconfigured DirectAccess server address  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”OTP authentication cannot complete as expected. The name or address of the Remote Access server cannot be determined.  Error code: <error_code>. DirectAccess settings should be validated by the server administrator.  
+**Error received** (client event log)—OTP authentication cannot complete as expected. The name or address of the Remote Access server cannot be determined.  Error code: <error_code>. DirectAccess settings should be validated by the server administrator.  
   
 **Cause**  
   
@@ -125,36 +128,36 @@ Check the configured DirectAccess server address using `Get-DirectAccess` and co
 Make sure the latest settings are deployed on the client computer by running `gpupdate /force` from an elevated command prompt or restart the client machine.  
   
 ## Failed to generate the OTP logon certificate request  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”The certificate request for OTP authentication cannot be initialized. Either a private key cannot be generated, or user <username> cannot access certificate template <OTP_template_name> on the domain controller.  
+**Error received** (client event log)—The certificate request for OTP authentication cannot be initialized. Either a private key cannot be generated, or user <username> cannot access certificate template <OTP_template_name> on the domain controller.  
   
 **Cause**  
   
 There are two possible causes for this error:  
   
--   The user doesnâ€™t have permission to read the OTP logon template.  
+-   The user doesn’t have permission to read the OTP logon template.  
   
--   The userâ€™s computer canâ€™t access the domain controller because of network issues.  
+-   The user’s computer can’t access the domain controller because of network issues.  
   
 **Solution**  
   
--   Review the permissions setting on the OTP logon template and make sure that all users provisioned for DirectAccess OTP have â€˜Readâ€™ permission.  
+-   Review the permissions setting on the OTP logon template and make sure that all users provisioned for DirectAccess OTP have ‘Read’ permission.  
   
 -   Make sure that the domain controller is configured as a management server and that the client machine can reach the domain controller over the infrastructure tunnel. See [3.2 Plan the OTP certificate template](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_2_OTP_Cert).  
   
 ## No connection to the domain controller  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”A connection with the domain controller for the purpose of OTP authentication cannot be established. Error code: <error_code>.  
+**Error received** (client event log)—A connection with the domain controller for the purpose of OTP authentication cannot be established. Error code: <error_code>.  
   
 **Cause**  
   
 There are two possible causes for this error:  
   
--   The userâ€™s computer has no network connectivity.  
+-   The user’s computer has no network connectivity.  
   
--   The domain controller isnâ€™t accessible over the infrastructure tunnel.  
+-   The domain controller isn’t accessible over the infrastructure tunnel.  
   
 **Solution**  
   
@@ -163,9 +166,9 @@ There are two possible causes for this error:
 -   Make sure that the client computer can reach the domain controller over the infrastructure tunnel.  
   
 ## OTP provider requires challenge/response  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”OTP authentication with Remote Access server (<DirectAccess_server_name>) for user (<username>) required a challenge from the user.  
+**Error received** (client event log)—OTP authentication with Remote Access server (<DirectAccess_server_name>) for user (<username>) required a challenge from the user.  
   
 **Cause**  
   
@@ -176,9 +179,9 @@ The OTP provider used requires the user to provide additional credentials in the
 Configure the OTP provider to not require challenge/response in any scenario.  
   
 ## Incorrect OTP logon template used  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”The CA template from which user <username> requested a certificate is not configured to issue OTP certificates.  
+**Error received** (client event log)—The CA template from which user <username> requested a certificate is not configured to issue OTP certificates.  
   
 **Cause**  
   
@@ -193,13 +196,13 @@ Make sure the client computer is using the latest OTP configuration by performin
 -   Restart the client machine.  
   
 ## Missing OTP signing certificate  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (client event log)â€”An OTP signing certificate cannot be found. The OTP certificate enrollment request cannot be signed.  
+**Error received** (client event log)—An OTP signing certificate cannot be found. The OTP certificate enrollment request cannot be signed.  
   
 **Cause**  
   
-The DirectAccess OTP signing certificate cannot be found on the Remote Access server; therefore, the user certificate request canâ€™t be signed by the Remote Access server. Either there is no signing certificate, or the signing certificate has expired and was not renewed.  
+The DirectAccess OTP signing certificate cannot be found on the Remote Access server; therefore, the user certificate request can’t be signed by the Remote Access server. Either there is no signing certificate, or the signing certificate has expired and was not renewed.  
   
 **Solution**  
   
@@ -214,7 +217,7 @@ Perform these steps on the Remote Access server.
 To create the OTP signing certificate template see [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert).  
   
 ## Missing or incorrect UPN/DN for the user  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
 **Error received** (client event log)  
   
@@ -237,7 +240,7 @@ The user does not have the User Principal Name (UPN) or Distinguished Name (DN) 
 Use the Active Directory Users and Computers console on the domain controller to verify that both of these attributes are properly set for the authenticating user.  
   
 ## OTP certificate is not trusted for login  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
 **Cause**  
   
@@ -248,9 +251,9 @@ The CA that issues OTP certificates is not in the enterprise NTAuth store; there
 Make sure that the certificate of the root of the CA hierarchy that issues OTP certificates is installed in the enterprise NTAuth Certificate store of the domain to which the user is attempting to authenticate.  
   
 ## Windows could not verify user credentials  
-**Scenario**â€”User fails to authenticate using OTP with the error: â€œAuthentication failed due to an internal errorâ€  
+**Scenario**—User fails to authenticate using OTP with the error: “Authentication failed due to an internal error”  
   
-**Error received** (Client computer)â€”Something went wrong while Windows was verifying your credentials. Try again, or ask your administrator for help.  
+**Error received** (Client computer)—Something went wrong while Windows was verifying your credentials. Try again, or ask your administrator for help.  
   
 **Cause**  
   
@@ -268,4 +271,5 @@ The Kerberos authentication protocol does not work when the DirectAccess OTP log
   
 2.  On the CA server, open the Certification Authority MMC, right click the issuing CA and click **Properties**. On the **Extensions** tab make sure that CRL publishing is correctly configured.  
   
+
 

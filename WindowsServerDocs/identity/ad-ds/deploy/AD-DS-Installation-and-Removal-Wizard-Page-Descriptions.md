@@ -14,6 +14,9 @@ ms.assetid: 2c1c453e-3852-4575-923b-f544f0212016
 author: Femila
 ---
 # AD DS Installation and Removal Wizard Page Descriptions
+
+>Applies To: Windows Server Technical Preview
+
 This is pre-release documentation that is subject to change in future releases. Blank sections are included as placeholders.  
   
 This topic provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.  
@@ -55,7 +58,7 @@ The following options appear when you create a new forest.
   
 ![](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DeploymentConfiguration_Forest.gif)  
   
--   When you create a new forest, you must specify a name for the forest root domain. The forest root domain name cannot be single-labeled (for example, it must be â€œcontoso.comâ€ instead of â€œcontosoâ€). It must use allowed DNS domain naming conventions. You can specify an Internationalized Domain Name (IDN). For more information about DNS domain naming conventions, see [KB 909264](http://support.microsoft.com/kb/909264).  
+-   When you create a new forest, you must specify a name for the forest root domain. The forest root domain name cannot be single-labeled (for example, it must be “contoso.com” instead of “contoso”). It must use allowed DNS domain naming conventions. You can specify an Internationalized Domain Name (IDN). For more information about DNS domain naming conventions, see [KB 909264](http://support.microsoft.com/kb/909264).  
   
 -   Do not create new Active Directory forests with the same name as your external DNS name. For example, if your Internet DNS URL is http://contoso.com, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic, such as corp.contoso.com.  
   
@@ -99,7 +102,7 @@ If you are creating a new forest, the Domain Controller Options page has these o
   
 -   The forest and domain functional levels are set to  Windows Server 2012  by default.  
   
-    There is one new feature available at the  Windows Server 2012  domain functional level: the Support for Dynamic Access Control and Kerberos armoring KDC administrative template policy has two settings (Always provide claims and Fail unarmored authentication requests) that require  Windows Server 2012  domain functional level. For more information, see â€œSupport for claims, compound authentication and Kerberos armoringâ€ in [What's new in Kerberos Authentication](http://technet.microsoft.com/library/hh831747.aspx).  
+    There is one new feature available at the  Windows Server 2012  domain functional level: the Support for Dynamic Access Control and Kerberos armoring KDC administrative template policy has two settings (Always provide claims and Fail unarmored authentication requests) that require  Windows Server 2012  domain functional level. For more information, see “Support for claims, compound authentication and Kerberos armoring” in [What's new in Kerberos Authentication](http://technet.microsoft.com/library/hh831747.aspx).  
   
     The  Windows Server 2012  forest functional level does not provide any new features, but it ensures that any new domain created in the forest will automatically operate at the  Windows Server 2012  domain functional level. The  Windows Server 2012  domain functional level does not provide any new other features beside support for Dynamic Access Control and Kerberos armoring, but it ensures that any domain controller in the domain runs  Windows Server 2012 . For more information about other features that are available at different functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](http://technet.microsoft.com/library/understanding-active-directory-functional-levels(v=WS.10).aspx).  
   
@@ -147,7 +150,7 @@ When you install DNS server, delegation records that point to the DNS server as 
   
 -   A name server (NS) resource record to effect the delegation. This resource record advertises that the server named ns1.na.example.microsoft.com is an authoritative server for the delegated subdomain.  
   
--   A host (A or AAAA) resource recordâ€”also known as a glue recordâ€”must be present to resolve the name of the server that is specified in the name server (NS) resource record to its IP address. The process of resolving the host name in this resource record to the delegated DNS server in the name server (NS) resource record is sometimes referred to as "glue chasing."  
+-   A host (A or AAAA) resource record—also known as a glue record—must be present to resolve the name of the server that is specified in the name server (NS) resource record to its IP address. The process of resolving the host name in this resource record to the delegated DNS server in the name server (NS) resource record is sometimes referred to as "glue chasing."  
   
 You can have the Active Directory Domain Services Configuration Wizard create them automatically. The wizard verifies that the appropriate records exist in the parent DNS zone after you click **Next** on the **Domain Controller Options** page. If the wizard cannot verify that the records exist in the parent domain, the wizard provides you with the option to create a new DNS delegation for a new domain (or update the existing delegation) automatically and continue with the new domain controller installation.  
   
@@ -170,7 +173,7 @@ The following options appear when you install a read-only domain controller (ROD
   
 ![](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_RODCOptions.gif)  
   
--   Delegated administrator accounts gain local administrative permissions to the RODC. These users can operate with privileges equivalent to the local computerâ€™s Administrators group. They are not members of the Domain Admins or the domain built-in Administrators groups. This option is useful for delegating branch office administration without giving out domain administrative permissions. Configuring delegation of administration is not required. For more information, see [Administrator Role Separation](http://technet.microsoft.com/library/cc753170(v=WS.10).aspx).  
+-   Delegated administrator accounts gain local administrative permissions to the RODC. These users can operate with privileges equivalent to the local computer’s Administrators group. They are not members of the Domain Admins or the domain built-in Administrators groups. This option is useful for delegating branch office administration without giving out domain administrative permissions. Configuring delegation of administration is not required. For more information, see [Administrator Role Separation](http://technet.microsoft.com/library/cc753170(v=WS.10).aspx).  
   
 -   The Password Replication Policy acts as an access control list (ACL). It determines if an RODC should be permitted to cache a password. After the RODC receives an authenticated user or computer logon request, it refers to the Password Replication Policy to determine if the password for the account should be cached. The same account can then perform subsequent logons more efficiently.  
   
@@ -229,7 +232,7 @@ For more information about Adprep.exe, see [Adprep.exe integration](../../ad-ds/
   
 Some of the warnings that appear on this page include:  
   
--   Domain controllers that run  Windows Server 2008  or later have a default setting for â€œAllow cryptography algorithms compatible with Windows NT 4â€ that prevents weaker cryptography algorithms when establishing secure channel sessions. For more information about the potential impact and a workaround, see KB article [942564](http://support.microsoft.com/kb/942564).  
+-   Domain controllers that run  Windows Server 2008  or later have a default setting for “Allow cryptography algorithms compatible with Windows NT 4” that prevents weaker cryptography algorithms when establishing secure channel sessions. For more information about the potential impact and a workaround, see KB article [942564](http://support.microsoft.com/kb/942564).  
   
 -   DNS delegation could not be created or updated. For more information, see [DNS Options](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).  
   
@@ -251,7 +254,7 @@ If the target server fails to restart in this case, you must manually restart it
   
 You configure demotion options on the **Credentials** page. Provide the credentials necessary to perform the demotion from the following list:  
   
--   Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller objectâ€™s metadata from Active Directory.  
+-   Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller object’s metadata from Active Directory.  
   
     > [!IMPORTANT]  
     > Do not select this option unless the domain controller cannot contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all un-replicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software. If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For steps, review [Clean Up Server Metadata](http://technet.microsoft.com/library/cc816907(WS.10).aspx).  
@@ -296,7 +299,7 @@ If the domain controller is a DNS server that is delegated to host the DNS zone,
 For more information about removing AD DS, see [Remove Active Directory Domain Services (Level 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) and [Demoting Domain Controllers and Domains &#40;Level 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md).  
   
 ## <a name="BKMK_NewAdminPwdPage"></a>New Administrator Password  
-The **New Administrator Password** page requires you to provide a password for the built-in local computerâ€™s Administrator account, once the demotion completes and the computer becomes a domain member server or workgroup computer.  
+The **New Administrator Password** page requires you to provide a password for the built-in local computer’s Administrator account, once the demotion completes and the computer becomes a domain member server or workgroup computer.  
   
 ![](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_NewAdminPwd.gif)  
   
@@ -307,4 +310,5 @@ The **Review Options** page provides you the chance to export the configuration 
   
 ![](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif)  
   
+
 

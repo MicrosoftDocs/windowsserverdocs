@@ -12,6 +12,9 @@ ms.assetid: a96a8752-5678-49c5-b069-d2cce8042a51
 author: jamesmci
 ---
 # Set Access Scope for DNS Resource Records
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to set the access scope for a DNS resource records by using the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -38,4 +41,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [Role-based Access Control](Role-based-Access-Control.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

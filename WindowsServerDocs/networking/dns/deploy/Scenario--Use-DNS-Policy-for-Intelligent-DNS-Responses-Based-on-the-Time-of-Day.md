@@ -12,6 +12,9 @@ ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
 author: jamesmci
 ---
 # Scenario: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.  
   
 This scenario is useful in situations where you want to direct traffic in one time zone to alternate application servers, such as Web servers, that are located in another time zone. This allows you to load balance traffic across application instances during peak time periods when your primary servers are overloaded with traffic.   
@@ -71,7 +74,7 @@ The following sections provide detailed configuration instructions.
 #### <a name="bkmk_subnets"></a>Create the DNS Client Subnets  
 The first step is to identify the subnets or IP address space of the regions for which you want to redirect traffic. For example, if you want to redirect traffic for the U.S. and Europe, you need to identify the subnets or IP address spaces of these regions.  
   
-You can obtain this information from Geo-IP maps. Based on these Geo-IP distributions, you must create the ‚ÄúDNS Client Subnets.‚Äù A DNS Client Subnet is a logical grouping of IPv4 or IPv6 subnets from which queries are sent to a DNS server.  
+You can obtain this information from Geo-IP maps. Based on these Geo-IP distributions, you must create the ìDNS Client Subnets.î A DNS Client Subnet is a logical grouping of IPv4 or IPv6 subnets from which queries are sent to a DNS server.  
   
 You can use the following Windows PowerShell commands to create DNS Client Subnets.  
   
@@ -138,15 +141,15 @@ You can use the following Windows PowerShell commands to create a DNS policy tha
 >In this example, the DNS server is in the GMT time zone, so the peak hour time periods must be expressed in the equivalent GMT time.  
   
 ```  
-Add-DnsServerQueryResolutionPolicy -Name "America6To9Policy" -Action ALLOW ‚ÄìClientSubnet ‚Äúeq,AmericaSubnet‚Äù -ZoneScope "SeattleZoneScope,4;DublinZoneScope,1" ‚ÄìTimeOfDay ‚ÄúEQ,01:00-04:00‚Äù -ZoneName "contosogiftservices.com" ‚ÄìProcessingOrder 1  
+Add-DnsServerQueryResolutionPolicy -Name "America6To9Policy" -Action ALLOW ñClientSubnet ìeq,AmericaSubnetî -ZoneScope "SeattleZoneScope,4;DublinZoneScope,1" ñTimeOfDay ìEQ,01:00-04:00î -ZoneName "contosogiftservices.com" ñProcessingOrder 1  
   
-Add-DnsServerQueryResolutionPolicy -Name "Europe6To9Policy" -Action ALLOW ‚ÄìClientSubnet ‚Äúeq,EuropeSubnet‚Äù -ZoneScope "SeattleZoneScope,1;DublinZoneScope,4" ‚ÄìTimeOfDay ‚ÄúEQ,17:00-20:00‚Äù -ZoneName "contosogiftservices.com" ‚ÄìProcessingOrder 2  
+Add-DnsServerQueryResolutionPolicy -Name "Europe6To9Policy" -Action ALLOW ñClientSubnet ìeq,EuropeSubnetî -ZoneScope "SeattleZoneScope,1;DublinZoneScope,4" ñTimeOfDay ìEQ,17:00-20:00î -ZoneName "contosogiftservices.com" ñProcessingOrder 2  
   
-Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW ‚ÄìClientSubnet ‚Äúeq,AmericaSubnet‚Äù -ZoneScope "SeattleZoneScope,1" -ZoneName "contosogiftservices.com" ‚ÄìProcessingOrder 3  
+Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW ñClientSubnet ìeq,AmericaSubnetî -ZoneScope "SeattleZoneScope,1" -ZoneName "contosogiftservices.com" ñProcessingOrder 3  
   
-Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW ‚ÄìClientSubnet ‚Äúeq,EuropeSubnet‚Äù -ZoneScope "DublinZoneScope,1" -ZoneName "contosogiftservices.com" ‚ÄìProcessingOrder 4  
+Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW ñClientSubnet ìeq,EuropeSubnetî -ZoneScope "DublinZoneScope,1" -ZoneName "contosogiftservices.com" ñProcessingOrder 4  
   
-Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW ‚Äì-ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" ‚ÄìProcessingOrder 5  
+Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW ñ-ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" ñProcessingOrder 5  
   
 ```  
 For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).  
@@ -156,4 +159,5 @@ Now the DNS server is configured with the required DNS policies to redirect traf
 When the DNS server receives name resolution queries, the DNS server evaluates the fields in the DNS request against the configured DNS policies. If the source IP address in the name resolution request matches any of the policies, the associated zone scope is used to respond to the query, and the user is directed to the resource that is geographically closest to them.  
   
 You can create hundreds of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.
+
 

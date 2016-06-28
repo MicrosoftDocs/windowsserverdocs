@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Create a second RD Connection Broker virtual machine
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to create a virtual machine to host the RD Connection Broker role service:  
   
 1. In the Azure portal, click **Browse > Virtual machines > Add > Windows Server**.   
@@ -28,4 +31,5 @@ Use the following steps to create a virtual machine to host the RD Connection Br
 11. For **Availability set**, select the availability set created in the basic deployment, (for example, CBAvSet).  
 12. Accept the other default options, and then click **OK**.  
 13. Click **OK** 
+
 

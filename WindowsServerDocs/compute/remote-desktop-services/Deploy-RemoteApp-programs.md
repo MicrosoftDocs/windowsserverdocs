@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Deploy RemoteApp programs
+
+>Applies To: Windows Server Technical Preview
+
 RemoteApp programs let you share apps, programs, and resources with your users as part of your Remote Desktop Services deployment. To do this, you need to deploy a Remote Desktop Session Host (RDSH) server and collection  
   
 There are multiple ways to deploy a desktop hosting solution. Throughout the document, specific examples are given that can be used as a starting point for a basic deployment. These examples are identified with the ( ) notation.  
@@ -27,4 +30,5 @@ Before you get started, make sure you have:
 4. [Add the RDSH server to the deployment, create a collection, and publish your apps and programs to users](Add-the-RDSH-Server,-create-a-collection,-and-publish-the-RemoteApp-programs.md).  
 5. [Validate and secure the deployment](Validate-and-secure-your-remote-desktop-deployment.md).  
   
+
 

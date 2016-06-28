@@ -13,6 +13,9 @@ ms.assetid: 0baef6b8-598c-4fe0-9f31-5869fc4e0f69
 author: cwatsonmsft
 ---
 # Hyper-V on Windows Server 2016 Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 The Hyper-V server role in Windows Server lets you create a virtualized server computing environment where you can create and manage virtual machines. You can run multiple operating systems on one physical computer and isolate the operating systems from each other. With this technology, you can improve the efficiency of your computing resources and free up your hardware resources.  
@@ -38,7 +41,8 @@ The following table lists technologies that you might want to use in your virtua
 |[Client Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome)|Virtualization technology included with Windows 8, Windows 8.1 and Windows 10 that you can install through **Programs and Features** in the **Control Panel**.|  
 |[Failover Clustering](https://technet.microsoft.com/library/dn765474.aspx)|Windows Server feature that provides high availability for Hyper-V hosts and virtual machines.|  
 |[Nano Server](http://technet.microsoft.com/library/mt126167.aspx)|New installation option for Windows Server 2016 Technical Preview that is a remotely administered server operating system optimized for hosting in private clouds and datacenters.|  
-|[Virtual Machine Manager](http://technet.microsoft.com/library/mt203994.aspx)|System Center component that provides a management solution for the virtualized datacenter. You can configure and manage your virtualization hosts, networks, and storage resources so you can create and deploy virtual machines and services to private clouds that youâ€™ve created.|  
+|[Virtual Machine Manager](http://technet.microsoft.com/library/mt203994.aspx)|System Center component that provides a management solution for the virtualized datacenter. You can configure and manage your virtualization hosts, networks, and storage resources so you can create and deploy virtual machines and services to private clouds that you’ve created.|  
 |[Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/)|Use Windows Server and Hyper-V containers to provide standardized environments for development, test, and production teams.|  
   
+
 

@@ -12,16 +12,20 @@ ms.assetid: aaabdf3b-d926-48d9-9d01-358668da88ba
 author: coreyp
 ---
 # Configuration Requirements
+
+>Applies To: Windows Server Technical Preview
+
 The following components are required to configure Remote Access in the test lab:  
   
--   The product disc or files for Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2 or Windows ServerÂ® 2012.  
+-   The product disc or files for Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012.  
   
 -   Nine computers or virtual machines that meet the minimum hardware requirements for Windows Server 2016 Technical Preview,  Windows Server 2012 R2  or  Windows Server 2012  ; three of these computers have two network adapters installed.  
   
--   The product disc or files for Windows 10Â® or WindowsÂ® 8 .  
+-   The product disc or files for Windows 10® or Windows® 8 .  
   
 -   The product disc or files for Windows 7 Ultimate.  
   
--   Three computers or virtual machines that meet the minimum hardware requirements for  Windows 10Â®, Windows 8 or  Windows 7 ; one of these computers has two network adapters installed.  
+-   Three computers or virtual machines that meet the minimum hardware requirements for  Windows 10®, Windows 8 or  Windows 7 ; one of these computers has two network adapters installed.  
   
+
 

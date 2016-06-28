@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Validate and secure your Remote Desktop deployment
+
+>Applies To: Windows Server Technical Preview
+
 Once you have deployed your Remote Desktop servers, you can validate the deployment by connecting to Remote Desktop from a client computer over the Internet.   
   
 Once you validate the deployment, you'll want to secure your deployment.  
@@ -43,4 +46,5 @@ To secure your deployment, you need to delete all public IP addresses except tho
 2. Click the VM (for example, Contoso-Cb1), then click the Public IP address in the **Essentials** pane.  
 3. Click **Delete**.  
   
+
 

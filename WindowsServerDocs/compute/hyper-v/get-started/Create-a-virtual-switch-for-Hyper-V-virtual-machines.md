@@ -13,6 +13,9 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: cwatsonmsft
 ---
 # Create a virtual switch for Hyper-V virtual machines
+
+>Applies To: Windows 10, Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server Technical Preview. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../../networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
@@ -73,7 +76,7 @@ Virtual machine networking can be a complex subject. And there are several new v
 4.  Create a virtual switch by using the [New-VMSwitch](http://technet.microsoft.com/library/hh848455.aspx) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.  
   
     ```  
-    New-VMSwitch â€“name ExternalSwitch  â€“NetAdapterName Ethernet â€“AllowManagementOS $true  
+    New-VMSwitch –name ExternalSwitch  –NetAdapterName Ethernet –AllowManagementOS $true  
     ```  
   
     To create an internal switch, run the following command.  
@@ -93,4 +96,5 @@ For more advanced Windows PowerShell scripts that cover improved or new virtual 
 ## Next step  
 [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)  
   
+
 

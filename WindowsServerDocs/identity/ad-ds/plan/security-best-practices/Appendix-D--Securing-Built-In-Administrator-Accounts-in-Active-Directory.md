@@ -14,11 +14,14 @@ ms.assetid: 9fc56513-bb7f-4a89-a866-f9442f1a46ba
 author: Femila
 ---
 # Appendix D: Securing Built-In Administrator Accounts in Active Directory
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Appendix D: Securing Built-In Administrator Accounts in Active Directory  
 In each domain in Active Directory, an Administrator account is created as part of the creation of the domain. This account is by default a member of the Domain Admins and Administrators groups in the domain, and if the domain is the forest root domain, the account is also a member of the Enterprise Admins group.  
   
-Use of a domain‚Äôs Administrator account should be reserved only for initial build activities, and possibly, disaster-recovery scenarios. To ensure that an Administrator account can be used to effect repairs in the event that no other accounts can be used, you should not change the default membership of the Administrator account in any domain in the forest. Instead, you should secure the Administrator account in each domain in the forest as described in the following section and detailed in the step-by-step instructions that follow.  
+Use of a domainís Administrator account should be reserved only for initial build activities, and possibly, disaster-recovery scenarios. To ensure that an Administrator account can be used to effect repairs in the event that no other accounts can be used, you should not change the default membership of the Administrator account in any domain in the forest. Instead, you should secure the Administrator account in each domain in the forest as described in the following section and detailed in the step-by-step instructions that follow.  
   
 #### Controls for Built-in Administrator Accounts  
 For the built-in Administrator account in each domain in your forest, you should configure the following settings:  
@@ -29,9 +32,9 @@ For the built-in Administrator account in each domain in your forest, you should
   
 -   Disable the account.  
   
--   Configure GPOs to restrict the Administrator account‚Äôs use on domain-joined systems:  
+-   Configure GPOs to restrict the Administrator accountís use on domain-joined systems:  
   
-    -   In one or more GPOs that you create and link to workstation and member server OUs in each domain, add each domain‚Äôs Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
+    -   In one or more GPOs that you create and link to workstation and member server OUs in each domain, add each domainís Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
   
         -   Deny access to this computer from the network  
   
@@ -42,15 +45,15 @@ For the built-in Administrator account in each domain in your forest, you should
         -   Deny log on through Remote Desktop Services  
   
 > [!NOTE]  
-> When you add accounts to this setting, you must specify whether you are configuring local Administrator accounts or domain Administrator accounts. For example, to add the NWTRADERS domain‚Äôs Administrator account to these deny rights, you must type the account as NWTRADERS\Administrator, or browse to the Administrator account for the NWTRADERS domain. If you type ‚ÄúAdministrator‚Äù in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied.  
+> When you add accounts to this setting, you must specify whether you are configuring local Administrator accounts or domain Administrator accounts. For example, to add the NWTRADERS domainís Administrator account to these deny rights, you must type the account as NWTRADERS\Administrator, or browse to the Administrator account for the NWTRADERS domain. If you type ìAdministratorî in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied.  
 >   
-> We recommend restricting local Administrator accounts on member servers and workstations in the same manner as domain-based Administrator accounts. Therefore you should generally add the Administrator account for each domain in the forest and the Administrator account for the local computers to these user rights settings. The following screenshot shows an example of configuring these user rights to block local Administrator accounts and a domain‚Äôs Administrator account from performing logons that should not be needed for these accounts.  
+> We recommend restricting local Administrator accounts on member servers and workstations in the same manner as domain-based Administrator accounts. Therefore you should generally add the Administrator account for each domain in the forest and the Administrator account for the local computers to these user rights settings. The following screenshot shows an example of configuring these user rights to block local Administrator accounts and a domainís Administrator account from performing logons that should not be needed for these accounts.  
   
 ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_23.gif)  
   
 -   Configure GPOs to restrict Administrator accounts on domain controllers  
   
-    -   In each domain in the forest, the Default Domain Controllers GPO or a policy linked to the domain controllers OU should be modified to add each domain‚Äôs Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
+    -   In each domain in the forest, the Default Domain Controllers GPO or a policy linked to the domain controllers OU should be modified to add each domainís Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Settings\User Rights Assignments**:  
   
         -   Deny access to this computer from the network  
   
@@ -61,17 +64,17 @@ For the built-in Administrator account in each domain in your forest, you should
         -   Deny log on through Remote Desktop Services  
   
 > [!NOTE]  
-> These settings will ensure that the domain‚Äôs built-in Administrator account cannot be used to connect to a domain controller, although the account, if enabled, can log on locally to domain controllers. Because this account should only be enabled and used in disaster-recovery scenarios, it is anticipated that physical access to at least one domain controller will be available, or that other accounts with permissions to access domain controllers remotely can be used.  
+> These settings will ensure that the domainís built-in Administrator account cannot be used to connect to a domain controller, although the account, if enabled, can log on locally to domain controllers. Because this account should only be enabled and used in disaster-recovery scenarios, it is anticipated that physical access to at least one domain controller will be available, or that other accounts with permissions to access domain controllers remotely can be used.  
   
 -   Configure Auditing of Administrator Accounts  
   
-    When you have secured each domain‚Äôs Administrator account and disabled it, you should configure auditing to monitor for changes to the account. If the account is enabled, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.  
+    When you have secured each domainís Administrator account and disabled it, you should configure auditing to monitor for changes to the account. If the account is enabled, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.  
   
 #### Step-by-Step Instructions to Secure Built-in Administrator Accounts in Active Directory  
   
 1.  In **Server Manager**, click **Tools**, and click **Active Directory Users and Computers**.  
   
-2.  To prevent attacks that leverage delegation to use the account‚Äôs credentials on other systems, perform the following steps:  
+2.  To prevent attacks that leverage delegation to use the accountís credentials on other systems, perform the following steps:  
   
     1.  Right-click the **Administrator** account and click **Properties**.  
   
@@ -191,27 +194,27 @@ For the built-in Administrator account in each domain in your forest, you should
     5.  Create links to all other OUs that contain member servers.  
   
 > [!IMPORTANT]  
-> When you add the Administrator account to these settings, you specify whether you are configuring a local Administrator account or a domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain‚Äôs Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type ‚ÄúAdministrator‚Äù in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+> When you add the Administrator account to these settings, you specify whether you are configuring a local Administrator account or a domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domainís Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type ìAdministratorî in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
   
 #### Verification Steps  
 The verification steps outlined here are specific to Windows 8 and Windows Server 2012.  
   
-##### Verify ‚ÄúSmart card is required for interactive logon‚Äù Account Option  
+##### Verify ìSmart card is required for interactive logonî Account Option  
   
-1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain‚Äôs built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.  
+1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domainís built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.  
   
 ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_36.gif)  
   
-##### Verify ‚ÄúAccount is disabled‚Äù Account Option  
+##### Verify ìAccount is disabledî Account Option  
   
-1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain‚Äôs built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.  
+1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domainís built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.  
   
 ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_37.gif)  
   
-##### Verify ‚ÄúDeny access to this computer from the network‚Äù GPO Settings  
+##### Verify ìDeny access to this computer from the networkî GPO Settings  
 From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:  
   
-1.  Log on to the domain using the domain‚Äôs built-in Administrator account.  
+1.  Log on to the domain using the domainís built-in Administrator account.  
   
 2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
@@ -227,7 +230,7 @@ From any member server or workstation that is not affected by the GPO changes (s
   
     ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_39.gif)  
   
-##### Verify ‚ÄúDeny log on as a batch job‚Äù GPO Settings  
+##### Verify ìDeny log on as a batch jobî GPO Settings  
 From any member server or workstation affected by the GPO changes, log on locally.  
   
 ###### Create a Batch File  
@@ -259,7 +262,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  Under **Action:**, select **Start a program**.  
   
-7.  Under **Program/script:**, click **Browse**, locate and select the batch file created in the ‚ÄúCreate a Batch File‚Äù section, and click **Open**.  
+7.  Under **Program/script:**, click **Browse**, locate and select the batch file created in the ìCreate a Batch Fileî section, and click **Open**.  
   
 8.  Click **OK**.  
   
@@ -281,7 +284,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_40.gif)  
   
-##### Verify ‚ÄúDeny log on as a service‚Äù GPO Settings  
+##### Verify ìDeny log on as a serviceî GPO Settings  
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
@@ -297,7 +300,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 7.  Click **Browse**, type the name of the BA account at the domain-level, click **Check Names**, and click **OK**.  
   
-8.  Under **Password:** and **Confirm password:**, type the Administrator account‚Äôs password, and click **OK**.  
+8.  Under **Password:** and **Confirm password:**, type the Administrator accountís password, and click **OK**.  
   
 9. Click **OK** three more times.  
   
@@ -321,7 +324,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  Under **Log on as:**, select the **Local System** account, and click **OK**.  
   
-##### Verify ‚ÄúDeny log on through Remote Desktop Services‚Äù GPO Settings  
+##### Verify ìDeny log on through Remote Desktop Servicesî GPO Settings  
   
 1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   
@@ -335,4 +338,5 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_42.gif)  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
 author: coreyp
 ---
 # Identify and resolve Remote Access server operations problems
+
+>Applies To: Windows Server Technical Preview
+
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 You can using the following procedures to identify Remote Access server operations issues, their root causes, and the resolution required to fix the issues.  
@@ -85,7 +88,8 @@ To restore the IP Helper service on your Remote Access server, you can follow th
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-PS> Get-RemoteAccessHealth | Where-Object {$_.Component â€“eq â€œIP-HTTPSâ€} | Format-List â€“Property *  
+PS> Get-RemoteAccessHealth | Where-Object {$_.Component –eq “IP-HTTPS”} | Format-List –Property *  
 ```  
   
+
 

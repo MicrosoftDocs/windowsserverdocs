@@ -13,6 +13,9 @@ ms.assetid: 0c810b82-b06a-4382-b598-5c642e8534be
 author: KBDAzure
 ---
 # Windows 10 should be configured with the recommended amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -64,4 +67,5 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

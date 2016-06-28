@@ -12,11 +12,14 @@ ms.assetid: 23d96652-a0d9-4f70-9742-514110c99da6
 author: Femila
 ---
 # Designing the Logical Structure
+
+>Applies To: Windows Server Technical Preview
+
 Active Directory Domain Services (AD DS) enables organizations to create a scalable, secure, and manageable infrastructure for user and resource management. It also enables them to support directory-enabled applications.  
   
 A well-designed Active Directory logical structure provides the following benefits:  
   
--   Simplified management of MicrosoftÂ® WindowsÂ®â€“based networks that contain large numbers of objects  
+-   Simplified management of Microsoft® Windows®–based networks that contain large numbers of objects  
   
 -   A consolidated domain structure and reduced administration costs  
   
@@ -50,4 +53,5 @@ When you design an Active Directory logical structure before you deploy AD DS, y
   
 -   [Appendix A: DNS Inventory](../../ad-ds/plan/Appendix-A--DNS-Inventory.md)  
   
+
 

@@ -12,11 +12,14 @@ ms.assetid: 26d105e0-afc3-44b5-bb5e-0c884a4c5d62
 author: jamesmci
 ---
 # NIC Teaming MAC Address Use and Management
+
+>Applies To: Windows Server Technical Preview
+
 When you configure a NIC Team with switch independent mode and either address hash or dynamic load distribution, the team uses the media access control (MAC) address of the primary NIC Team member on outbound traffic. The primary NIC Team member is a network adapter selected by the operating system from the initial set of team members.  
   
 The primary team member is the first team member to bind to the team after you create it or after the host computer is restarted. Because the primary team member might change in a non-deterministic manner at each boot, NIC disable/enable action, or other reconfiguration activities, the primary team member might change, and the MAC address of the team might vary.  
   
-In most situations this doesnâ€™t cause problems, but there are a few cases where issues might arise.  
+In most situations this doesn’t cause problems, but there are a few cases where issues might arise.  
   
 If the primary team member is removed from the team and then placed into operation there may be a MAC address conflict. To resolve this conflict, disable and then enable the team interface. The process of disabling and then enabling the team interface causes the interface to select a new MAC address from the remaining team members, thereby eliminating the MAC address conflict.  
   
@@ -63,4 +66,5 @@ Following are lists that describe NIC Teaming MAC address replacement behavior, 
 [Create a New NIC Team on a Host Computer or VM](Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md)  
 [NIC Teaming](NIC-Teaming.md)  
   
+
 

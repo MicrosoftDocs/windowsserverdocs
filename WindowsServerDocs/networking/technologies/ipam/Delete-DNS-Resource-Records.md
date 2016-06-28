@@ -12,6 +12,9 @@ ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
 author: jamesmci
 ---
 # Delete DNS Resource Records
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to delete one or more DNS resource records by using the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -40,4 +43,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

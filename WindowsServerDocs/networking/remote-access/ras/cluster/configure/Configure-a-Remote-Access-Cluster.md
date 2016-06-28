@@ -12,7 +12,10 @@ ms.assetid: e8df3619-f365-4070-8117-888c88db13eb
 author: coreyp
 ---
 # Configure a Remote Access Cluster
-Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access server in a load-balanced cluster.  
+
+>Applies To: Windows Server Technical Preview
+
+Windows Server� 2016 Technical Preview and Windows Server� 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access server in a load-balanced cluster.  
   
 -   [Step 1: Implement a single server Remote Access deployment](assetId:///3ea23db1-cd55-4be0-a9d1-a1e657122c9e).  
   
@@ -22,4 +25,5 @@ Windows Server® 2016 Technical Preview and Windows Server® 2012 combine Direct
   
 -   [Step 4: Verify the cluster](assetId:///eaa5ec3a-8a69-48c5-b458-fd5165951b52).  
   
+
 

@@ -9,6 +9,9 @@ ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
 author: jamesmci
 ---
 # Verify Server Enrollment of a Server Certificate
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to verify that your Network Policy Server (NPS) servers have enrolled a server certificate from the certification authority (CA).   
   
 >[!NOTE]  
@@ -46,4 +49,5 @@ To verify that a server certificate is correctly configured and is enrolled to t
     > [!NOTE]  
     > Because you are not completing the wizard, the test network policy is not created in NPS.  
   
+
 

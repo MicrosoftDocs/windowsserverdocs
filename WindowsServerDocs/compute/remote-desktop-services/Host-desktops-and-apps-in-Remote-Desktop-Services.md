@@ -12,7 +12,10 @@ ms.assetid: a0bbef1b-6333-4f86-81bf-fd739387f551
 author: lizap
 manager: msswadhwa
 ---
-# Host desktops and apps in Remote Desktop Services on Azure
+# Host desktops and apps in Remote Desktop Services
+
+>Applies To: Windows Server Technical Preview
+ on Azure
 Remote Desktop Services in Windows Server 2016 lets users access computers, apps, and resources remotely.   
   
 You can use Remote Desktop Services plus Azure services to create hosting solutions. Use the following information to get started with desktop hosting in Remote Desktop Services in Windows Server.
@@ -27,3 +30,4 @@ If you need a highly available and highly scalable desktop hosting environment, 
 - [Deploy a Remote Desktop Session Host farm](Deploy-a-Remote-Desktop-Session-Host-farm-to-improve-availability.md)  
 - [Deploy a Remote Desktop Connection Broker cluster](Deploy-a-Remote-Desktop-Connection-Broker-cluster.md)  
 - [Deploy a RD Web and Gateway farm](Deploy-a-RD-Web-Access-and-Gateway-farm.md)   
+

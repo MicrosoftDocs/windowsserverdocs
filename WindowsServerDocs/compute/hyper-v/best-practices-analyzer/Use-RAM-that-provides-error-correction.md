@@ -13,6 +13,9 @@ ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
 author: KBDAzure
 ---
 # Use RAM that provides error correction
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -40,4 +43,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 To check whether the server is listed,  see the [Windows Server catalog](https://www.windowsservercatalog.com/).  
   
+
 

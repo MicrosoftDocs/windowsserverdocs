@@ -13,6 +13,9 @@ ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2
 author: KBDAzure
 ---
 # Windows Vista should be configured with at least the minimum amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
@@ -65,4 +68,5 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

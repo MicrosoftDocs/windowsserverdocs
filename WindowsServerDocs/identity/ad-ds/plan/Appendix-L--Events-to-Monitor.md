@@ -14,11 +14,14 @@ ms.assetid: d236c573-0b52-4428-ae8d-ccd56a3e2849
 author: Femila
 ---
 # Appendix L: Events to Monitor
+
+>Applies To: Windows Server Technical Preview
+
   
 ## Appendix L: Events to Monitor  
-The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the ‚ÄúCurrent Windows Event ID‚Äù column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.  
+The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the ìCurrent Windows Event IDî column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.  
   
-The ‚ÄúLegacy Windows Event ID‚Äù column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier. The ‚ÄúPotential Criticality‚Äù column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the ‚ÄúEvent Summary‚Äù column provides a brief description of the event.  
+The ìLegacy Windows Event IDî column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier. The ìPotential Criticalityî column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the ìEvent Summaryî column provides a brief description of the event.  
   
 A potential criticality of High means that one occurrence of the event should be investigated. Potential criticality of Medium or Low means that these events should only be investigated if they occur unexpectedly or in numbers that significantly exceed the expected baseline in a measured period of time. All organizations should test these recommendations in their environments before creating alerts that require mandatory investigative responses. Every environment is different, and some of the events ranked with a potential criticality of High may occur due to other harmless events.  
   
@@ -45,7 +48,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4714|618|Medium|Encrypted data recovery policy was changed.|  
 |4715|N/A|Medium|The audit policy (SACL) on an object was changed.|  
 |4716|620|Medium|Trusted domain information was modified.|  
-|4724|628|Medium|An attempt was made to reset an account‚Äôs password.|  
+|4724|628|Medium|An attempt was made to reset an accountís password.|  
 |4727|631|Medium|A security-enabled global group was created.|  
 |4735|639|Medium|A security-enabled local group was changed.|  
 |4737|641|Medium|A security-enabled global group was changed.|  
@@ -53,7 +56,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4754|658|Medium|A security-enabled universal group was created.|  
 |4755|659|Medium|A security-enabled universal group was changed.|  
 |4764|667|Medium|A security-disabled group was deleted|  
-|4764|668|Medium|A group‚Äôs type was changed.|  
+|4764|668|Medium|A groupís type was changed.|  
 |4780|684|Medium|The ACL was set on accounts which are members of administrators groups.|  
 |4816|N/A|Medium|RPC detected an integrity violation while decrypting an incoming message.|  
 |4865|N/A|Medium|A trusted forest information entry was added.|  
@@ -176,7 +179,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4718|622|Low|System security access was removed from an account.|  
 |4720|624|Low|A user account was created.|  
 |4722|626|Low|A user account was enabled.|  
-|4723|627|Low|An attempt was made to change an account‚Äôs password.|  
+|4723|627|Low|An attempt was made to change an accountís password.|  
 |4725|629|Low|A user account was disabled.|  
 |4726|630|Low|A user account was deleted.|  
 |4728|632|Low|A member was added to a security-enabled global group.|  
@@ -412,4 +415,5 @@ A potential criticality of High means that one occurrence of the event should be
   
 For more information about Windows security event IDs and their meanings, see the Microsoft Support articles [Description of security events in Windows Vista and in Windows Server 2008](http://support.microsoft.com/kb/947226) and [Description of security events in Windows 7 and in Windows Server 2008 R2](http://support.microsoft.com/kb/977519). You can also download [Security Audit Events for Windows 7 and Windows Server 2008 R2](http://www.microsoft.com/download/details.aspx?id=21561) and [Windows 8 and Windows Server 2012 Security Event Details](http://www.microsoft.com/download/details.aspx?id=35753), which provide detailed event information for the referenced operating systems in spreadsheet format.  
   
+
 

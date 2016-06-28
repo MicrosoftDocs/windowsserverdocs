@@ -14,6 +14,9 @@ ms.assetid: 628d2ae6-2030-43ba-b08f-89152b194402
 author: Femila
 ---
 # Forest-Wide Updates
+
+>Applies To: Windows Server Technical Preview
+
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2012 R2 and Windows Server 2012.  
   
 Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](http://technet.microsoft.com/library/dd464018(v=ws.10).aspx).  
@@ -87,4 +90,5 @@ After the operations that are performed by the **forestprep** command in Windows
 |**Operation 129**: {e0b11c80-62c5-47f7-ad0d-3734a71b8312}|Added ACE to grant Principal Self Write Property and Read Property on CN=Sam-Domain object.|N/A|(OA;CIOI;RPWP;3f78c3e5-f79a-46bd-a0b8-9d18116ddc79;;PS)|  
 |**Operation 130**: { 2ada1a2d-b02f-4731-b4fe-59f955e24f71}|Added ACE to grant Principal Self Write Property and Read Property on CN=Domain-DNS object.|N/A|(OA;CIOI;RPWP;3f78c3e5-f79a-46bd-a0b8-9d18116ddc79;;PS)|  
   
+
 

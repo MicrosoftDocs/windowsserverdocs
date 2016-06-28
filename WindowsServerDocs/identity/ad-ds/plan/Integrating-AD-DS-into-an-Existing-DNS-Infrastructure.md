@@ -12,6 +12,9 @@ ms.assetid: 22e0e45d-aea3-4a22-a8a7-04a50b7a06a7
 author: Femila
 ---
 # Integrating AD DS into an Existing DNS Infrastructure
+
+>Applies To: Windows Server Technical Preview
+
 If your organization already has an existing Domain Name System (DNS) Server service, the DNS for Active Directory Domain Services (AD DS) owner must work with the DNS owner for your organization to integrate AD DS into the existing infrastructure. This involves creating a DNS server and DNS client configuration.  
   
 ## Creating a DNS server configuration  
@@ -31,14 +34,14 @@ When integrating AD DS with an existing DNS namespace, we recommend that you do 
     > [!NOTE]  
     > AD DS uses forest-wide locator records to enable replication partners to find each other and to enable clients to find global catalog servers. AD DS stores the forest-wide locator records in the _msdcs.*forestname* zone. Because the information in the zone must be widely available, this zone is replicated to all DNS servers in the forest by means of the forest-wide DNS application directory partition.  
   
-The existing DNS structure remains intact. You do not need to move any servers or zones. You simply need to create a delegation to your Active Directoryâ€“integrated DNS zones from your existing DNS hierarchy.  
+The existing DNS structure remains intact. You do not need to move any servers or zones. You simply need to create a delegation to your Active Directory–integrated DNS zones from your existing DNS hierarchy.  
   
 ## Creating the DNS client configuration  
 To configure DNS on client computers, the DNS for AD DS owner must specify the computer naming scheme and how the clients will locate DNS servers. The following table lists our recommended configurations for these design elements.  
   
 |Design element|Configuration|  
 |------------------|-----------------|  
-|Computer naming|Use default naming. When a Windows 2000, Windows XP, Windows Server 2003,  Windows Server 2008 , or Windows Vistaâ€“based computer joins a domain, the computer assigns itself a fully qualified domain name (FQDN) that comprises the host name of the computer and the name of the Active Directory domain.|  
+|Computer naming|Use default naming. When a Windows 2000, Windows XP, Windows Server 2003,  Windows Server 2008 , or Windows Vista–based computer joins a domain, the computer assigns itself a fully qualified domain name (FQDN) that comprises the host name of the computer and the name of the Active Directory domain.|  
 |Client resolver configuration|Configure client computers to point to any DNS server on the network.|  
   
 > [!NOTE]  
@@ -54,4 +57,5 @@ Clients can still be located by either name. Any existing DNS, DHCP, or integrat
   
 If you want to take advantage of Kerberos authentication when connecting to a server running Windows 2000, Windows Server 2003, or  Windows Server 2008 , you must make sure that the client connects to the server by using the primary name.  
   
+
 

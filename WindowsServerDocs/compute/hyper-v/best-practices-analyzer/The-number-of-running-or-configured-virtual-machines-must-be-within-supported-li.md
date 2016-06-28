@@ -13,6 +13,9 @@ ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
 author: KBDAzure
 ---
 # The number of running or configured virtual machines must be within supported limits
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -42,7 +45,7 @@ To move a virtual machine to another server, you can:
 - Export the virtual machine from the current server and then import it to a new server as described below.   
 - Do a live migration:   
     - If this server belongs to a failover cluster, use the tools provided with the Failover Clustering feature. For instructions, see [Live Migrate, Quick Migrate, or Move a Virtual Machine from Node to Node](http://go.microsoft.com/fwlink/?LinkID=181519).  
-    - If this is a standalone server, see these instructions â€” [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](https://technet.microsoft.com//library/jj134199(v=ws.11).aspx)  
+    - If this is a standalone server, see these instructions — [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](https://technet.microsoft.com//library/jj134199(v=ws.11).aspx)  
   
 ### To export a virtual machine  
   
@@ -92,4 +95,5 @@ Membership in the **Domain Administrators** group is required to complete this p
   
   
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
 author: jamesmci
 ---
 # Create a User Role for Access Control
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to create a new Access Control user role in the IPAM client console.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
@@ -51,4 +54,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 [Role-based Access Control](Role-based-Access-Control.md)  
 [Manage IPAM](Manage-IPAM.md)  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 author: coreyp-at-msft
 ---
 # WSUS and the Catalog Site
+
+>Applies To: Windows Server Technical Preview
+
 The catalog site is the Microsoft location from which you can import hotfixes and hardware drivers.
 
 ## The Microsoft Update catalog site
@@ -69,5 +72,6 @@ The Microsoft Update Catalog Web site includes updates that support multiple lan
 -   [Updates Operations](Updates-Operations.md)
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
+
 
 

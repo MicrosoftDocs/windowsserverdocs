@@ -12,6 +12,9 @@ ms.assetid: da74fea7-52b2-4d6d-9d21-19184eedbe3c
 author: jamesmci
 ---
 # Configure the BranchCache Hash Publication Group Policy Object
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to configure the BranchCache hash publication Group Policy Object (GPO) so that all file servers that you added to your OU have the same hash publication policy setting applied to them.  
   
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.  
@@ -50,4 +53,5 @@ Membership in **Domain Admins**, or equivalent is the minimum required to perfor
 > [!NOTE]  
 > In most cases, you must save the MMC console and refresh the view to display the configuration changes you have made.  
   
+
 

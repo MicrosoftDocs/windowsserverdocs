@@ -13,29 +13,32 @@ ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: cwatsonmsft
 ---
 # Supported FreeBSD virtual machines on Hyper-V
+
+>Applies To: Hyper-V Server 2012, Hyper-V Server 2012 R2, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server Technical Preview
+
 The following feature distribution map indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.  
   
 **Table legend**  
   
--   **Built in** – BIS are included as part of this FreeBSD release.  
+-   **Built in** � BIS are included as part of this FreeBSD release.  
   
--   **√** - Feature available  
+-   **v** - Feature available  
   
 -   (*blank*) - Feature not available  
   
   
-|**Feature**|**Windows Server operating system version**|**10.3**|**10.2**|**10 – 10.1**|**9.1 – 9.3**|**8.4**|  
+|**Feature**|**Windows Server operating system version**|**10.3**|**10.2**|**10 � 10.1**|**9.1 � 9.3**|**8.4**|  
 |-|-|-|-|-|-|  
 |**Availability**||Built in|Built in|Built in|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 1|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 2|  
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√** Note 3|**√** Note 3|  
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v** Note 3|**v** Note 3|  
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||| 
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|**√** Note 4|**√** Note 4|**√** Note 4|**√** Note 4|**√** Note 4|  
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|**√**|  
-|Live migration|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|**√**|**√**|**√**|  
-|Static IP Injection|2016, 2012 R2, 2012|**√** Note 5|**√** Note 5|**√** Note 5|**√**|**√**|  
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|**v** Note 4|**v** Note 4|**v** Note 4|**v** Note 4|**v** Note 4|  
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|**v**|  
+|Live migration|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|**v**|  
+|Static IP Injection|2016, 2012 R2, 2012|**v** Note 5|**v** Note 5|**v** Note 5|**v**|**v**|  
 |vRSS|2016, 2012 R2||||||  
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|**√**|**√**||||  
-|Large Receive Offload (LRO)|2016, 2012 R2, 2012, 2008 R2|**√**|||||
+|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|**v**|**v**||||  
+|Large Receive Offload (LRO)|2016, 2012 R2, 2012, 2008 R2|**v**|||||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|||||||
 |VHDX resize|2016, 2012 R2||||||  
 |Virtual Fibre Channel|2016, 2012 R2||||||  
@@ -43,15 +46,15 @@ The following feature distribution map indicates the features in each version. T
 |TRIM support|2016, 2012 R2||||||  
 |SCSI WWN|2016, 2012 R2||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||| 
-|Configuration of MMIO gap|2016, 2012 R2|**√**|**√**|**√**|**√**|**√**|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|||||| 
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012||||||  
+|Configuration of MMIO gap|2016, 2012 R2|**v**|**v**|**v**|**v**|**v**|  
+|Dynamic Memory � Hot Add|2016, 2012 R2, 2012|||||| 
+|Dynamic Memory � Ballooning|2016, 2012 R2, 2012||||||  
 |Manual Memory Hot Add|2016||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||||||
 |Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|||||||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||| 
-|Key/value pair|2016, 2012 R2, 2012, 2008 R2|**√** Note 7|**√** Note 7|**√** Note 6, 7|**√** Note 7|**√** Note 7|  
-|Non-Maskable Interrupt|2016, 2012 R2|**√**|**√**|**√**|**√**|**√**|   
+|Key/value pair|2016, 2012 R2, 2012, 2008 R2|**v** Note 7|**v** Note 7|**v** Note 6, 7|**v** Note 7|**v** Note 7|  
+|Non-Maskable Interrupt|2016, 2012 R2|**v**|**v**|**v**|**v**|**v**|   
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2||||||  
 |File copy from host to guest|2016, 2012 R2||||||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2||||||  
@@ -82,4 +85,5 @@ The following feature distribution map indicates the features in each version. T
   
 -   [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
 author: coreyp
 ---
 # STEP 6: Test DirectAccess Connectivity from the Homenet Subnet
+
+>Applies To: Windows Server Technical Preview
+
 The DirectAccess one-time password (OTP) deployment is now complete and you can start to test connectivity from the Homenet subnet.  
   
 ### To test OTP functionality from the Homenet subnet on CLIENT1  
@@ -52,4 +55,5 @@ The DirectAccess one-time password (OTP) deployment is now complete and you can 
   
 17. In the **Files** shared folder window, double-click the **New Text Document.txt** file. You will see the contents of the New Text Document.txt file.  
   
+
 

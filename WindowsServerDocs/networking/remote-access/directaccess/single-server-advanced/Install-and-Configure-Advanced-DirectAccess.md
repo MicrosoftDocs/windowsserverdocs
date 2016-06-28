@@ -12,7 +12,10 @@ ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
 author: vhorne
 ---
 # Install and Configure Advanced DirectAccess
-This overview lists the configuration steps required to deploy a single DirectAccess server running Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2, or Windows ServerÂ® 2012 with IPv4 and IPv6.  
+
+>Applies To: Windows Server Technical Preview
+
+This overview lists the configuration steps required to deploy a single DirectAccess server running Windows Server® 2016 Technical Preview, Windows Server® 2012 R2, or Windows Server® 2012 with IPv4 and IPv6.  
   
 -   [Step 1: Configuring DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-advanced/Step-1--Configuring-DirectAccess-Infrastructure.md).  
   
@@ -28,4 +31,5 @@ This overview lists the configuration steps required to deploy a single DirectAc
   
 Before you start your deployment, verify the planning steps that are described in [Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).  
   
+
 

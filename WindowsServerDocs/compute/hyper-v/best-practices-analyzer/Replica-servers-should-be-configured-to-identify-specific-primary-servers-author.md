@@ -13,6 +13,9 @@ ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
 author: KBDAzure
 ---
 # Replica servers should be configured to identify specific primary servers authorized to send replication traffic
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -80,4 +83,5 @@ New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMSt
 ## See Also  
 [New-VMReplicationAuthorizationEntry](https://technet.microsoft.com/library/hh848606.aspx)  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
 author: coreyp
 ---
 # Generate a usage report for remote clients using historical data
+
+>Applies To: Windows Server Technical Preview
+
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 The management console on the Remote Access server can be used to generate a usage report for the remote clients that are accessing the server. To generate a usage report for remote clients, you first enable accounting on the Remote Access server. After you generate the report, you can use the monitoring dashboard that is available in the management console on the Remote Access server to view the load statistics on the server.  
@@ -52,12 +55,13 @@ The management console on the Remote Access server can be used to generate a usa
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-In the following script, change the date range for which you want a report in the **â€“StartDateTime** and **â€“EndDateTime** parameters.  
+In the following script, change the date range for which you want a report in the **–StartDateTime** and **–EndDateTime** parameters.  
   
 ```  
-PS> Get-RemoteAccessConnectionStatisticsSummary â€“StartDateTime â€œ1 October 2010 00:00:00â€ â€“EndDateTime â€œ14 October 2010 00:00:00â€  
+PS> Get-RemoteAccessConnectionStatisticsSummary –StartDateTime “1 October 2010 00:00:00” –EndDateTime “14 October 2010 00:00:00”  
 Shows server load statistics.  
-PS> Get-RemoteAccessUserActivity â€“HostIPAddress 10.0.0.1 â€“StartDateTime â€œ1 October 2010 00:00:00â€ â€“EndDateTime â€œ14 October 2010 00:00:00â€  
+PS> Get-RemoteAccessUserActivity –HostIPAddress 10.0.0.1 –StartDateTime “1 October 2010 00:00:00” –EndDateTime “14 October 2010 00:00:00”  
 ```  
   
+
 

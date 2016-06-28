@@ -12,6 +12,9 @@ ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
 author: jamesmci
 ---
 # Verify Client Computer Settings
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to verify that the client computer is correctly configured for BranchCache.  
   
 > [!NOTE]  
@@ -45,4 +48,5 @@ You must be a member of **Administrators**, or equivalent to perform this proced
   
 5.  If any of the BranchCache settings listed above do not have the correct values, use the steps in this guide to verify the Group Policy or Local Computer Policy settings, as well as the firewall exceptions, that you configured, and ensure that they are correct. In addition, either restart the computer or follow the steps in this procedure to refresh Group Policy and restart the BranchCache service.  
   
+
 

@@ -12,9 +12,12 @@ ms.assetid: 7000e80f-31b1-43c5-b51e-1469d26909e5
 author: coreyp
 ---
 # STEP 4: Configure APP1
+
+>Applies To: Windows Server Technical Preview
+
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.  
   
--   [To configure the default gateway and DNS server](assetId:///a0ee655e-c01e-4bf3-a7b3-064e9614f810#IPv6)â€”The multisite configuration uses the ROUTER1 computer as a default gateway. Configure the default gateway on APP1.  
+-   [To configure the default gateway and DNS server](assetId:///a0ee655e-c01e-4bf3-a7b3-064e9614f810#IPv6)—The multisite configuration uses the ROUTER1 computer as a default gateway. Configure the default gateway on APP1.  
   
 ## <a name="IPv6"></a>To configure the default gateway and DNS server  
   
@@ -32,4 +35,5 @@ Configure static IPv6 addressing and gateway settings to enable APP1 access to t
   
 7.  On the **Wired Ethernet Connection Properties** dialog box, click **Close**, and then close the **Network Connections** window.  
   
+
 

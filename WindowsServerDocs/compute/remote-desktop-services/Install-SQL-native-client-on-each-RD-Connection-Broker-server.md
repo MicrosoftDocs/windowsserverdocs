@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Install SQL native client on each RD Connection Broker server
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to install a SQL native client on each RD COnnection Broker server:  
   
 1. Create a public IP address for the first RD Connection Broker. (You only have to do this if the RDMS virtual machine does not already have a public IP address to allow RDP connections.)   
@@ -34,4 +37,5 @@ Use the following steps to install a SQL native client on each RD COnnection Bro
 5. Open the sqlincli.msi file and install the native client.  
   
 6. Repeat steps 2-5 for the second RD Connection Broker server, (for example, Contoso-CB2).   
+
 

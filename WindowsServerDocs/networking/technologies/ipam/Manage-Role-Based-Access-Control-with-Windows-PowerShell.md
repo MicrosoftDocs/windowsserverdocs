@@ -12,6 +12,9 @@ ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 author: jamesmci
 ---
 # Manage Role Based Access Control with Windows PowerShell
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn how to use IPAM to manage role based access control with Windows PowerShell.  
   
 >[!NOTE]
@@ -128,4 +131,5 @@ DynamicUpdateStatus  : None
 ScavengeStaleRecords : False  
 ```  
   
+
 

@@ -12,6 +12,9 @@ ms.assetid: fbef4d91-e18c-4f1b-952f-a9a7ad46cd74
 author: jaimeo
 ---
 # MPIO on Nano Server
+
+>Applies To: Windows Server Technical Preview
+
 This topic introduces the use of MPIO in Nano Server installations of Windows Server 2016 Technical Preview. For general information about MPIO in Windows Server, see [Multipath I/O Overview](https://technet.microsoft.com/library/cc725907.aspx).  
   
 ## Using MPIO on Nano Server  
@@ -357,4 +360,5 @@ if ($changed -eq 'true')
 }  
 ```  
   
+
 

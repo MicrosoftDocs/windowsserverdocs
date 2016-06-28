@@ -13,6 +13,9 @@ author: kumudd
 ---
 # Health Service in Windows Server 2016
 
+>Applies To: Windows Server Technical Preview
+
+
 The Health Service is a new feature in Windows Server 2016 Technical Preview which significantly improves the day-to-day monitoring, operations, and maintenance experience of Storage Spaces. As of Technical Preview 5, it is supported only for Storage Spaces Direct.  
 
 ## Prerequisites  
@@ -71,7 +74,7 @@ The notion of available capacity in Storage Spaces is nuanced. To help you plan 
 
 -   Pool Capacity Available: The pool capacity which is not allocated to the footprint of volumes.  
 
--   Volume Capacity Total: The total usable (‚Äúinside‚Äù) capacity of existing volumes.  
+-   Volume Capacity Total: The total usable (ìinsideî) capacity of existing volumes.  
 
 -   Volume Capacity Available: The amount of additional data which can be stored in existing volumes.  
 
@@ -82,7 +85,7 @@ The following diagram illustrates the relationship between these quantities.
 
 ## Faults  
 
-The Health Service constantly monitors your Storage Spaces Direct cluster to detect problems and generate ‚ÄúFaults‚Äù. One new cmdlet displays any current Faults, allowing you to easily verify the health of your deployment without looking at every entity or feature in turn. Faults are designed to be precise, easy to understand, and actionable.  
+The Health Service constantly monitors your Storage Spaces Direct cluster to detect problems and generate ìFaultsî. One new cmdlet displays any current Faults, allowing you to easily verify the health of your deployment without looking at every entity or feature in turn. Faults are designed to be precise, easy to understand, and actionable.  
 
 Each Fault contains five important fields:  
 
@@ -182,13 +185,13 @@ To see any current Faults, run the following cmdlet in PowerShell:
 This returns any Faults which affect the overall Storage Spaces Direct cluster. Most often, these Faults relate to hardware or configuration. If there are no Faults, this cmdlet will return nothing.  
 
 >[!NOTE]
-> In a non-production environment, and at your own risk, you can experiment with this feature by triggering Faults yourself ‚Äì for example, by removing one physical disk or shutting down one node. Once the Fault has appeared, re-insert the physical disk or restart the node and the Fault will disappear again.  
+> In a non-production environment, and at your own risk, you can experiment with this feature by triggering Faults yourself ñ for example, by removing one physical disk or shutting down one node. Once the Fault has appeared, re-insert the physical disk or restart the node and the Fault will disappear again.  
 
 You can also view Faults that are affecting only specific volumes or file shares with the following cmdlets:  
 
-        Get-Volume ‚ÄìFileSystemLabel <Label> | Debug-Volume  
+        Get-Volume ñFileSystemLabel <Label> | Debug-Volume  
 
-        Get-FileShare ‚ÄìName <Name> | Debug-FileShare  
+        Get-FileShare ñName <Name> | Debug-FileShare  
 
 This returns returns any Faults which affect only the specific volume or file share. Most often, these Faults relate to data resiliency or features like Storage QoS or Storage Replica.  
 
@@ -199,12 +202,12 @@ This returns returns any Faults which affect only the specific volume or file sh
 
 Starting in Technical Preview 5, the Health Service can assess the potential causality among faulting entities to identify and combine faults which are consequences of the same underlying problem. By recognizing chains of effect, this makes for less chatty reporting. For now, this functionality is limited to nodes, enclosures, and physical disks in the event of lost connectivity.  
 
-For example, if an enclosure has lost connectivity, it follows that those physical disk devices within the enclosure will also be without connectivity. Therefore, only one Fault will be raised for the root cause ‚Äì in this case, the enclosure.  
+For example, if an enclosure has lost connectivity, it follows that those physical disk devices within the enclosure will also be without connectivity. Therefore, only one Fault will be raised for the root cause ñ in this case, the enclosure.  
 
 
 ## Actions  
 
-The next section describes workflows which are automated by the Health Service. To verify that an action is indeed being taken autonomously, or to track its progress or outcome, the Health Service generates ‚ÄúActions‚Äù. Unlike logs, Actions disappear shortly after they have completed, and are intended primarily to provide insight into ongoing activity which may impact performance or capacity (e.g. restoring resiliency or rebalancing data).  
+The next section describes workflows which are automated by the Health Service. To verify that an action is indeed being taken autonomously, or to track its progress or outcome, the Health Service generates ìActionsî. Unlike logs, Actions disappear shortly after they have completed, and are intended primarily to provide insight into ongoing activity which may impact performance or capacity (e.g. restoring resiliency or rebalancing data).  
 
 ### Usage  
 
@@ -229,7 +232,7 @@ This section describes workflows which are automated by the Health Service in th
 
 ### Disk Lifecycle   
 
-The Health Service automates most stages of the physical disk lifecycle. Let‚Äôs say that the initial state of your deployment is in perfect health ‚Äì which is to say, all physical disks are working properly.  
+The Health Service automates most stages of the physical disk lifecycle. Letís say that the initial state of your deployment is in perfect health ñ which is to say, all physical disks are working properly.  
 
 #### Retirement  
 
@@ -258,11 +261,11 @@ Once a physical disk has been retired, the Health Service immediately begins cop
 If possible, the Health Service will begin blinking the indicator light on the retired physical disk or its slot. This will continue indefinitely, until the retired disk is replaced.  
 
 >[!NOTE]
-> In some cases, the disk may have failed in a way that precludes even its indicator light from functioning ‚Äì for example, a total loss of power.  
+> In some cases, the disk may have failed in a way that precludes even its indicator light from functioning ñ for example, a total loss of power.  
 
 #### Physical replacement  
 
-You should replace the retired physical disk when possible. Most often, this consists of a hot-swap ‚Äì i.e. powering off the node or storage enclosure is not required. See the Fault for helpful location and part information.  
+You should replace the retired physical disk when possible. Most often, this consists of a hot-swap ñ i.e. powering off the node or storage enclosure is not required. See the Fault for helpful location and part information.  
 
 #### Quarantine  
 
@@ -270,7 +273,7 @@ When the replacement disk is inserted, it will be verified against the Allow Lis
 
 #### Pooling  
 
-If allowed, the replacement disk is automatically substituted into its predecessor‚Äôs pool to enter use. At this point, the system is returned to its initial state of perfect health, and then the Fault disappears.  
+If allowed, the replacement disk is automatically substituted into its predecessorís pool to enter use. At this point, the system is returned to its initial state of perfect health, and then the Fault disappears.  
 
 ## Quarantine  
 The Health Service provides an enforcement mechanism to restrict the components and devices used by a Spaces Direct cluster to those on an Allow List provided by the administrator or solution vendor. This can be used to prevent mistaken use of unsupported hardware by you or others, which may help with warranty or support contract compliance. As of Technical Preview 5, this functionality is limited to physical disk devices, including SSDs, HDDs, and NVMe devices. The Allow List can restrict on model, manufacturer (optional), and firmware version (optional).  
@@ -299,16 +302,16 @@ The Allow List is specified using an XML-inspired syntax. We recommend using you
      </Disks>  
     </Components>         
 
-To allow multiple disk devices, simply add additional **&lt;Disk&gt;** tags with the fields you‚Äôd like to restrict on.  
+To allow multiple disk devices, simply add additional **&lt;Disk&gt;** tags with the fields youíd like to restrict on.  
 
 To set the Allow List, run the following PowerShell cmdlet:  
 
     $xml = Get-Content <Path/To/File.xml> | Out-String  
-    Get-StorageSubSystem clus* | Set-StorageHealthSetting ‚ÄìName "System.Storage.SupportedComponents.Document" -Value $xml  
+    Get-StorageSubSystem clus* | Set-StorageHealthSetting ñName "System.Storage.SupportedComponents.Document" -Value $xml  
 
 
 [!NOTE]  
- The model, manufacturer, and the firmware version properties should exactly match the values that you get using the **Get-PhysicalDisk** cmdlet. This may differ from your ‚Äúcommon sense‚Äù expectation, depending on your vendor‚Äôs implementation. For example, rather than ‚ÄúContoso‚Äù, the manufacturer may be ‚ÄúCONTOSO-LTD‚Äù, or it may be blank while the model is ‚ÄúContoso-XZY9000‚Äù.  
+ The model, manufacturer, and the firmware version properties should exactly match the values that you get using the **Get-PhysicalDisk** cmdlet. This may differ from your ìcommon senseî expectation, depending on your vendorís implementation. For example, rather than ìContosoî, the manufacturer may be ìCONTOSO-LTDî, or it may be blank while the model is ìContoso-XZY9000î.  
 
 You can verify using the following PowerShell cmdlet:  
 
@@ -319,3 +322,4 @@ You can verify using the following PowerShell cmdlet:
 -   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](../../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
 
 -  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+

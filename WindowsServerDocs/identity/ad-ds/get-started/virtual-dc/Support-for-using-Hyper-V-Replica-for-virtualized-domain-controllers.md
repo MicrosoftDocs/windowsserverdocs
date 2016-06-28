@@ -14,6 +14,9 @@ ms.assetid: fa8965fe-b922-4bee-b0af-0d9cb967ab3e
 author: Femila
 ---
 # Support for using Hyper-V Replica for virtualized domain controllers
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains the supportability of using Hyper-V Replica to replicate a virtual machine (VM) that runs as a domain controller (DC). Hyper-V Replica is a new capability of Hyper-V beginning with Windows Server 2012 that provides a built-in replication mechanism at a VM level.  
   
 Hyper-V Replica asynchronously replicates selected VMs from a primary Hyper-V host to a replica Hyper-V host across either LAN or WAN links. After initial replication is complete, subsequent changes are replicated at an interval defined by the administrator.  
@@ -66,4 +69,5 @@ The following table explains support for virtualized DCs that run Windows Server
 |Supported but not recommended because DCs that run these versions of Windows Server do not support VMGenID or use associated virtualization safeguards. This places them at risk for USN rollback. For more information, see [USN and USN Rollback](http://technet.microsoft.com/en-us/library/d2cae85b-41ac-497f-8cd1-5fbaa6740ffe(v=ws.10)).|Not supported **Note:** Unplanned failover would be supported where USN rollback is not a risk, such as a single DC in the forest (a configuration that is not recommended).|  
 |Test case:<br /><br />-   DC1 and DC2 are running Windows Server 2008 R2.<br /><br />-   DC2 is shut down and a planned failover is performed on DC2-Rec. All data on DC2 is replicated to DC2-Rec before the shutdown is complete.<br /><br />-   After DC2-Rec starts, it resumes replication with DC1 using the same invocationID as DC2.|N/A|  
   
+
 

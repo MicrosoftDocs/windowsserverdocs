@@ -12,7 +12,10 @@ ms.assetid: a92e61c3-f7d4-4e42-8575-79d75d05a218
 author: jamesmci
 ---
 # Create Security Policies with Extended Port Access Control Lists
-This topic provides information about  extended port Access Control Lists (ACLs) in Windows ServerÂ® 2016 Technical Preview. You can configure extended ACLs on the Hyper-V Virtual Switch to allow and block network traffic to and from the virtual machines (VMs) that are connected to the switch via virtual network adapters.  
+
+>Applies To: Windows Server Technical Preview
+
+This topic provides information about  extended port Access Control Lists (ACLs) in Windows Server® 2016 Technical Preview. You can configure extended ACLs on the Hyper-V Virtual Switch to allow and block network traffic to and from the virtual machines (VMs) that are connected to the switch via virtual network adapters.  
   
 This topic contains the following sections.  
   
@@ -32,10 +35,10 @@ This ability to designate the protocol traffic that can or cannot be received by
 ### Configuring ACL rules with Windows PowerShell  
 To configure an extended ACL, you must use the Windows PowerShell command **Add-VMNetworkAdapterExtendedAcl**. This command has four different syntaxes, with a distinct use for each syntax:  
   
-1.  Add an extended ACL to all of the network adapters of a named VM â€“ which is specified by the first parameter, -VMName. Syntax:  
+1.  Add an extended ACL to all of the network adapters of a named VM – which is specified by the first parameter, -VMName. Syntax:  
   
     > [!NOTE]  
-    > If you want to add an extended ACL to one network adapter rather than all, you can specify the network adapter with the parameter â€“VMNetworkAdapterName.  
+    > If you want to add an extended ACL to one network adapter rather than all, you can specify the network adapter with the parameter –VMNetworkAdapterName.  
   
     ```  
     Add-VMNetworkAdapterExtendedAcl [-VMName] <string[]> [-Action] <VMNetworkAdapterExtendedAclAction> {Allow | Deny}  
@@ -58,7 +61,7 @@ To configure an extended ACL, you must use the Windows PowerShell command **Add-
 3.  Add an extended ACL to all virtual network adapters that are reserved for use by the Hyper-V host management operating system.  
   
     > [!NOTE]  
-    > If you want to add an extended ACL to one network adapter rather than all, you can specify the network adapter with the parameter â€“VMNetworkAdapterName.  
+    > If you want to add an extended ACL to one network adapter rather than all, you can specify the network adapter with the parameter –VMNetworkAdapterName.  
   
     ```  
     Add-VMNetworkAdapterExtendedAcl [-Action] <VMNetworkAdapterExtendedAclAction> {Allow | Deny} [-Direction]  
@@ -68,7 +71,7 @@ To configure an extended ACL, you must use the Windows PowerShell command **Add-
         [-ComputerName <string[]>] [-WhatIf] [-Confirm]  [<CommonParameters>]  
     ```  
   
-4.  Add an extended ACL to a VM object that you have created in Windows PowerShell, such as **$vm = get-vm â€œmy_vmâ€**. In the next line of code you can run this command to create an extended ACL with the following syntax:  
+4.  Add an extended ACL to a VM object that you have created in Windows PowerShell, such as **$vm = get-vm “my_vm”**. In the next line of code you can run this command to create an extended ACL with the following syntax:  
   
     ```  
     Add-VMNetworkAdapterExtendedAcl [-VM] <VirtualMachine[]> [-Action] <VMNetworkAdapterExtendedAclAction> {Allow |  
@@ -99,14 +102,14 @@ For example, you might want to allow a user to login to an application server in
 |-------------|------------------|------------|---------------|--------------------|-------------|----------|  
 |*|*|TCP|*|3389|In|Allow|  
   
-Following are two examples of how you can create rules with Windows PowerShell commands. The first example rule blocks all traffic to the VM named â€œApplicationServer.â€ The second example rule, which is applied to the network adapter of the VM named â€œApplicationServer,â€ allows only inbound RDP traffic to the VM.  
+Following are two examples of how you can create rules with Windows PowerShell commands. The first example rule blocks all traffic to the VM named “ApplicationServer.” The second example rule, which is applied to the network adapter of the VM named “ApplicationServer,” allows only inbound RDP traffic to the VM.  
   
 > [!NOTE]  
-> When you create rules, you can use the **â€“Weight** parameter to determine the order in which the Hyper-V Virtual Switch processes the rules. Values for **â€“Weight** are expressed as integers; rules with a higher integer are processed before rules with lower integers. For example, if you have applied two rules to a VM network adapter, one with a weight of 1 and one with a weight of 10, the rule with the weight of 10 is applied first.  
+> When you create rules, you can use the **–Weight** parameter to determine the order in which the Hyper-V Virtual Switch processes the rules. Values for **–Weight** are expressed as integers; rules with a higher integer are processed before rules with lower integers. For example, if you have applied two rules to a VM network adapter, one with a weight of 1 and one with a weight of 10, the rule with the weight of 10 is applied first.  
   
 ```  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œApplicationServerâ€ â€“Action â€œDenyâ€ â€“Direction â€œInboundâ€ â€“Weight 1  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œApplicationServerâ€ â€“Action â€œAllowâ€ â€“Direction â€œInboundâ€ â€“LocalPort 3389 â€“Protocol â€œTCPâ€ â€“Weight 10  
+Add-VMNetworkAdapterExtendedAcl –VMName “ApplicationServer” –Action “Deny” –Direction “Inbound” –Weight 1  
+Add-VMNetworkAdapterExtendedAcl –VMName “ApplicationServer” –Action “Allow” –Direction “Inbound” –LocalPort 3389 –Protocol “TCP” –Weight 10  
 ```  
   
 ### <a name="bkmk_both"></a>Enforce both user-level and application-level security  
@@ -123,10 +126,10 @@ For example, if you want to provide DHCP service to a limited number of client c
 Following are examples of how you can create these rules with Windows PowerShell commands.  
   
 ```  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œServerNameâ€ â€“Action â€œDenyâ€ â€“Direction â€œOutboundâ€ â€“Weight 1  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œServerNameâ€ â€“Action â€œAllowâ€ â€“Direction â€œOutboundâ€ â€“RemoteIPAddress 255.255.255.255 â€“RemotePort 67 â€“Protocol â€œUDPâ€â€“Weight 10  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œServerNameâ€ â€“Action â€œAllowâ€ â€“Direction â€œOutboundâ€ â€“RemoteIPAddress 10.175.124.0/25 â€“RemotePort 67 â€“Protocol â€œUDPâ€â€“Weight 20  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œServerNameâ€ â€“Action â€œAllowâ€ â€“Direction â€œInboundâ€ â€“RemoteIPAddress 10.175.124.0/25 â€“RemotePort 68 â€“Protocol â€œUDPâ€â€“Weight 20  
+Add-VMNetworkAdapterExtendedAcl –VMName “ServerName” –Action “Deny” –Direction “Outbound” –Weight 1  
+Add-VMNetworkAdapterExtendedAcl –VMName “ServerName” –Action “Allow” –Direction “Outbound” –RemoteIPAddress 255.255.255.255 –RemotePort 67 –Protocol “UDP”–Weight 10  
+Add-VMNetworkAdapterExtendedAcl –VMName “ServerName” –Action “Allow” –Direction “Outbound” –RemoteIPAddress 10.175.124.0/25 –RemotePort 67 –Protocol “UDP”–Weight 20  
+Add-VMNetworkAdapterExtendedAcl –VMName “ServerName” –Action “Allow” –Direction “Inbound” –RemoteIPAddress 10.175.124.0/25 –RemotePort 68 –Protocol “UDP”–Weight 20  
 ```  
   
 ### <a name="bkmk_tcp"></a>Provide security support to a non-TCP/UDP application  
@@ -143,12 +146,12 @@ While most network traffic in a datacenter is TCP and UDP, there is still some t
 Following is an example of how you can create these rules with Windows PowerShell commands.  
   
 ```  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œServerNameâ€ â€“Action â€œAllowâ€ â€“Direction â€œInboundâ€ â€“Protocol 2 â€“Weight 20  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œServerNameâ€ â€“Action â€œAllowâ€ â€“Direction â€œOutboundâ€ â€“Protocol 2 â€“Weight 20  
+Add-VMNetworkAdapterExtendedAcl –VMName “ServerName” –Action “Allow” –Direction “Inbound” –Protocol 2 –Weight 20  
+Add-VMNetworkAdapterExtendedAcl –VMName “ServerName” –Action “Allow” –Direction “Outbound” –Protocol 2 –Weight 20  
 ```  
   
 ## <a name="bkmk_stateful"></a>Stateful ACL rules  
-Another new capability of extended ACLs allows you to configure stateful rules. A stateful rule filters packets based on five attributes in a packet â€“ Source IP, Destination IP, Protocol, Source Port, and Destination Port.  
+Another new capability of extended ACLs allows you to configure stateful rules. A stateful rule filters packets based on five attributes in a packet – Source IP, Destination IP, Protocol, Source Port, and Destination Port.  
   
 Stateful rules have the following capabilities:  
   
@@ -189,9 +192,10 @@ The stateful rule allows the VM application server to connect to a remote Web se
 Following is an example of how you can create these rules with Windows PowerShell commands.  
   
 ```  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œApplicationServerâ€ â€“Action â€œDenyâ€ â€“Direction â€œInboundâ€ â€“Weight 1   
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œApplicationServerâ€ â€“Action â€œDenyâ€ â€“Direction â€œOutboundâ€ â€“Weight 1  
-Add-VMNetworkAdapterExtendedAcl â€“VMName â€œApplicationServerâ€ â€“Action â€œAllowâ€ â€“Direction â€œOutboundâ€ 80 â€œTCPâ€ â€“Weight 100 â€“Stateful â€“Timeout 3600  
+Add-VMNetworkAdapterExtendedAcl –VMName “ApplicationServer” –Action “Deny” –Direction “Inbound” –Weight 1   
+Add-VMNetworkAdapterExtendedAcl –VMName “ApplicationServer” –Action “Deny” –Direction “Outbound” –Weight 1  
+Add-VMNetworkAdapterExtendedAcl –VMName “ApplicationServer” –Action “Allow” –Direction “Outbound” 80 “TCP” –Weight 100 –Stateful –Timeout 3600  
 ```  
   
+
 

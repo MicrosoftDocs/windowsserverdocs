@@ -12,6 +12,9 @@ ms.assetid: 28882508-357e-43a3-a405-c573d830c5cc
 author: Femila
 ---
 # Creating a Site Design
+
+>Applies To: Windows Server Technical Preview
+
 Creating a site design involves deciding which locations will become sites, creating site objects, creating subnet objects, and associating the subnets with sites.  
   
 ## Deciding which locations will become sites  
@@ -42,4 +45,5 @@ Associate each subnet object with a site object by referring to the "Associating
   
 For more information about how to create subnet objects, see Create a Subnet ([http://go.microsoft.com/fwlink/?LinkId=107068](http://go.microsoft.com/fwlink/?LinkId=107068)).  
   
+
 

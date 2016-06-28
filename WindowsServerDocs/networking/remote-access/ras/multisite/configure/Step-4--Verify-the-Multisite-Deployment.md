@@ -12,6 +12,9 @@ ms.assetid: 345b676a-a397-4d51-9973-8b25bc05fa55
 author: coreyp
 ---
 # Step 4: Verify the Multisite Deployment
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to verify that you have correctly configured your Remote Access multisite deployment.  
   
 ### To verify access to internal resources through the multisite deployment  
@@ -26,7 +29,7 @@ This topic describes how to verify that you have correctly configured your Remot
   
     You should be able to access all corporate resources through each multisite server.  
   
-4.  Connect a  Windows 7Â®  client computer to the corporate network and obtain the group policy.  
+4.  Connect a  Windows 7®  client computer to the corporate network and obtain the group policy.  
   
 5.  Connect the  Windows 7  client computer to the external network and attempt to access internal resources.  
   
@@ -38,4 +41,5 @@ This topic describes how to verify that you have correctly configured your Remot
   
     In a production environment this method may not be feasible due to the amount of time required for changes to replicate throughout the domain. You may want to force replication where possible. Testing can also be done from multiple different  Windows 7  client computers that are already members of the different  Windows 7  security groups in the multisite deployment.  
   
+
 

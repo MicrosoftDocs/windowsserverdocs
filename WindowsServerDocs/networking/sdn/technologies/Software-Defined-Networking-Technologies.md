@@ -13,7 +13,10 @@ ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 author: jamesmci
 ---
 # Software Defined Networking Technologies
-The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows ServerÂ® 2016 Technical Preview.  
+
+>Applies To: Windows Server Technical Preview
+
+The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server® 2016 Technical Preview.  
   
 > [!NOTE]  
 > For additional Software Defined Networking documentation, you can use the following library sections.  
@@ -28,7 +31,7 @@ There are many technologies that work together to create Microsoft's Software De
   
 -   **[Border Gateway Protocol &#40;BGP&#41;](../../remote-access/bgp/Border-Gateway-Protocol--BGP-.md)**  
   
-    When configured on a Windows ServerÂ® 2016 Technical Preview Remote Access Service (RAS) Gateway, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenantsâ€™ VM networks and their remote sites. BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections.  
+    When configured on a Windows Server® 2016 Technical Preview Remote Access Service (RAS) Gateway, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants’ VM networks and their remote sites. BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections.  
   
 -   **[Datacenter Firewall Overview](../../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)**  
   
@@ -68,4 +71,5 @@ There are many technologies that work together to create Microsoft's Software De
 -   **System Center**   
     System Center Virtual Machine Manager (VMM) can be used to deploy and manage many SDN components.  
   
+
 

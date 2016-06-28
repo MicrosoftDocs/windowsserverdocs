@@ -13,6 +13,9 @@ ms.assetid: a98a8594-603b-487a-8739-78887c568e57
 author: KBDAzure
 ---
 # Windows Server 2008 should be configured with the recommended amount of memory
+
+>Applies To: Windows Server Technical Preview
+
 For more information about best practices and scans, see  [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |||  
@@ -67,4 +70,5 @@ Set-VMMemory <MyVM> -StartupBytes 2GB
 ## See Also  
 [Set-VMMemory](https://technet.microsoft.com/library/hh848572.aspx)  
   
+
 

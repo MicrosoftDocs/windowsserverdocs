@@ -12,6 +12,9 @@ ms.assetid: d35bcae0-fe46-4f6f-8cf2-df09e5896546
 author: Femila
 ---
 # Creating a Site Link Design
+
+>Applies To: Windows Server Technical Preview
+
 Create a site link design to connect your sites with site links. Site links reflect the intersite connectivity and method used to transfer replication traffic. You must connect sites with site links so that domain controllers at each site can replicate Active Directory changes.  
   
 ## Connecting sites with site links  
@@ -37,4 +40,5 @@ To name site links, use a consistent naming scheme, such as name_of_site1-name_o
 ## In this guide  
 [Setting Site Link Properties](Setting-Site-Link-Properties.md)  
   
+
 

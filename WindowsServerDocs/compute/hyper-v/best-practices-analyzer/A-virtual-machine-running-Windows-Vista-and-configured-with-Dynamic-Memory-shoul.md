@@ -13,6 +13,9 @@ ms.assetid: c35f08b2-e624-4811-a159-c1e5bb6d5281
 author: KBDAzure
 ---
 # A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -63,4 +66,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 1GB -MinimumBytes 256MB -StartupBytes 512MB  
 ```  
   
+
 

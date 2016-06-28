@@ -13,6 +13,9 @@ ms.assetid: b9a14f85-326f-4916-9278-2c8d39a32848
 author: KBDAzure
 ---
 # A virtual machine running Windows 8.1 and configured with Dynamic Memory should use recommended values for memory settings
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -64,4 +67,5 @@ The guest operating system on the following virtual machines might not run or mi
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 1GB -MinimumBytes 256MB -StartupBytes 512MB  
 ```  
   
+
 

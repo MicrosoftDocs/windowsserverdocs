@@ -12,6 +12,9 @@ ms.assetid: 82f8f382-246e-4164-8306-437f7a019e0f
 author: jamesmci
 ---
 # Manage Resources in Multiple Active Directory Forests
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn how to use IPAM to manage domain controllers, DHCP servers, and DNS servers in multiple Active Directory forests.  
   
 To use IPAM to manage resources in remote Active Directory forests, each forest that you want to manage must have a two way trust with the forest where IPAM is installed.  
@@ -30,4 +33,5 @@ In the example illustration above, the IPAM server is installed in the contoso.c
   
 After you have specified forests, domains, and server roles, click **OK**. IPAM performs discovery, and when discovery completes, you can manage resources in both the local and remote forest.  
   
+
 

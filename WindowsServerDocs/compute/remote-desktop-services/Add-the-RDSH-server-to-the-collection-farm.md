@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Add the RDSH server to the collection farm
+
+>Applies To: Windows Server Technical Preview
+
 Now that your environment is ready, use the following steps to add the Remote Desktop Session Host server to the collection farm.  
   
 1. Create a public IP address for the virtual machine running Remote Desktop Management Services (RDMS). The RDMS virtual machine will typically be the virtual machine running the first instance of the RD Connection Broker role.   
@@ -47,4 +50,5 @@ Now that your environment is ready, use the following steps to add the Remote De
     3. Under **Host Servers**, click **Tasks > Add RD Session Host Servers**.   
     4. Select the newly created server (for example, Contoso-SH2), and then click **Next**.   
     5. On the Confirmation page, click **Add**.   
+
 

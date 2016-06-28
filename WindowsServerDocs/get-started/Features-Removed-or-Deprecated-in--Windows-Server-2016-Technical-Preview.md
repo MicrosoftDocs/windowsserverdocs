@@ -12,7 +12,10 @@ ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
 author: jaimeo
 ---
 # Features Removed or Deprecated in  Windows Server 2016 Technical Preview
-The following is a list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (â€œdeprecatedâ€). It is intended for IT professionals who are updating operating systems in a commercial environment. This list is subject to change in subsequent releases and may not include every deprecated feature or functionality. For more details about a particular feature or functionality and its replacement, see the documentation for that feature.  
+
+>Applies To: Windows Server Technical Preview
+
+The following is a list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (“deprecated”). It is intended for IT professionals who are updating operating systems in a commercial environment. This list is subject to change in subsequent releases and may not include every deprecated feature or functionality. For more details about a particular feature or functionality and its replacement, see the documentation for that feature.  
   
 ## Features removed from Windows Server Technical Preview  
 The following features and functionalities have been removed from this release of Windows Server 2016. Applications, code, or usage that depend on these features will not function in this release unless you employ an alternate method.  
@@ -59,4 +62,5 @@ SMB 2+ over NetBT is deprecated. Instead, implement SMB over TCP or RDMA.
   
 1.0  
   
+
 

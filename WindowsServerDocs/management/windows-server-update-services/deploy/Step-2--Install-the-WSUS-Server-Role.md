@@ -10,6 +10,9 @@ ms.topic: article
 ms.assetid: fabc8619-350e-403b-96f8-116424931300
 ---
 # Step 2: Install the WSUS Server Role
+
+>Applies To: Windows Server Technical Preview
+
 The next step in the deployment of your WSUS server is to install the WSUS server role. The following procedure describes how to install the WSUS server role by using Server Manager.
 
 > [!IMPORTANT]
@@ -61,5 +64,6 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 -   [Step 1: Prepare for Your WSUS Deployment](Step-1--Prepare-for-Your-WSUS-Deployment.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
+
 
 

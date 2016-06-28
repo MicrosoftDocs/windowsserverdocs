@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Prepare the RD Connection Broker VM for Remote Desktop
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to prepare the virtual machine for the Remote Desktop Connection Broker server:  
   
 1.  Connect to the virtual machine:  
@@ -33,4 +36,5 @@ Use the following steps to prepare the virtual machine for the Remote Desktop Co
     2.  Click **Change > Domain**, and then enter the domain name (for example, Contoso.com).  
     3.  Enter the domain administrator credentials.  
  
+
 

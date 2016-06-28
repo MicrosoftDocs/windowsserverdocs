@@ -13,6 +13,9 @@ ms.assetid: 46f9a5dc-355b-415b-863d-fb740609d6b6
 author: KBDAzure
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows Server 2012 and enabled for Dynamic Memory
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -63,4 +66,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 512MB -MinimumBytes 256MB -StartupBytes 512MB  
 ```  
   
+
 

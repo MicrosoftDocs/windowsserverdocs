@@ -12,6 +12,9 @@ ms.assetid: 93594c1f-8d9d-4fa6-89bf-efaa6feeb491
 author: Femila
 ---
 # Assigning Domain Names
+
+>Applies To: Windows Server Technical Preview
+
 You must assign a name to every domain in your plan. Active Directory Domain Services (AD DS) domains have two types of names: Domain Name System (DNS) names and NetBIOS names. In general, both names are visible to end users. The DNS names of Active Directory domains include two parts, a prefix and a suffix. When creating domain names, first determine the DNS prefix. This is the first label in the DNS name of the domain. The suffix is determined when you select the name of the forest root domain. The following table lists the prefix naming rules for DNS names.  
   
 |Rule|Explanation|  
@@ -31,4 +34,5 @@ For each new domain that you deploy, select a prefix that is appropriate for the
   
 Document the DNS prefix and NetBIOS names that you select for each domain in your forest. You can add the DNS and NetBIOS name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains. To open it, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)) and open "Domain Planning" (DSSLOGI_5.doc).  
   
+
 

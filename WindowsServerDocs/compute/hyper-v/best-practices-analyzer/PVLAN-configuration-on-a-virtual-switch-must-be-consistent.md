@@ -13,6 +13,9 @@ ms.assetid: 4db63bcc-7a54-4f19-98a6-c274c3956d51
 author: KBDAzure
 ---
 # PVLAN configuration on a virtual switch must be consistent
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -35,4 +38,5 @@ Note: The following sections provide details about the specific issue. Italics i
 ## **Resolution**  
 *Use the Windows PowerShell cmdlet, Set-VMNetworkAdapterVlan, to configure PVLAN correctly.*  
   
+
 

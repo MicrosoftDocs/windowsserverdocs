@@ -12,6 +12,9 @@ ms.assetid: 4f31dc61-2dbe-4c7e-b3f9-85ae49a45049
 author: jamesmci
 ---
 # Install the BranchCache Feature
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to install the BranchCache feature and start the BranchCache service on a computer running  Windows Server 2012 .  
   
 Membership in **Administrators** or equivalent is the minimum required to perform this procedure.  
@@ -39,6 +42,7 @@ Before you perform this procedure, it is recommended that you install and config
   
 6.  In **Confirm installation selections**, click **Install**. In **Installation progress**, the BranchCache feature installation proceeds. When installation is complete, click **Close**.  
   
-After you install the BranchCache feature, the BranchCache service â€“ also called the PeerDistSvc - is enabled, and the start type is Automatic.  
+After you install the BranchCache feature, the BranchCache service – also called the PeerDistSvc - is enabled, and the start type is Automatic.  
   
+
 

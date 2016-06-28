@@ -12,6 +12,9 @@ ms.assetid: f92b1335-ac4a-4501-a5ec-d1851e6f0fc7
 author: coreyp
 ---
 # Troubleshoot a Multisite Deployment
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment. For a list of known issues when configuring multisite Remote Access, see [Known issues](assetId:///a9249820-3563-499c-9da6-143ede2a1eb7#KnownIssues).  
   
 -   [Troubleshooting enabling multisite](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b)  
@@ -24,4 +27,5 @@ This topic describes how to troubleshoot the most common errors that may occur w
   
 -   [Troubleshooting general issues](assetId:///71fe9fa9-2f9c-4dbd-8a42-ee8152edcfc4)  
   
+
 

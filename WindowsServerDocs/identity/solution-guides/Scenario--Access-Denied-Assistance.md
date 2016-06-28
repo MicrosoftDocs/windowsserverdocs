@@ -14,6 +14,9 @@ ms.assetid: d1faa8c9-89ea-40c5-9c1b-abd04e09b9d7
 author: Femila
 ---
 # Scenario: Access-Denied Assistance
+
+>Applies To: Windows Server Technical Preview
+
 Users will get an access-denied message when they try to access shared files and folders on a file server for which they do not have permissions. Administrators often do not have the appropriate context to troubleshoot the access issue, which makes it hard to resolve the issue.  
   
 ## Scenario description  
@@ -53,4 +56,5 @@ The following table lists the features that are part of this scenario and descri
 |[File Server Resource Manager Overview](https://technet.microsoft.com/library/hh831701.aspx)|Access-denied assistance can be configured by using the File Server Resource Manager console on the file server.|  
 |[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)|File Server Resource Manager is a File and Storage Services role service, and it is comprised of a set of features that can be used to administer the file servers on your network.|  
   
+
 

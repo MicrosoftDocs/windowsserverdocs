@@ -13,6 +13,9 @@ manager: dongill
 author: coreyp-at-msft
 ---
 # Windows Defender Events
+
+>Applies To: Windows Server Technical Preview
+
 Windows Defender Events
 
 |EventID|Symbol|Description|
@@ -70,5 +73,6 @@ Windows Defender Events
 |5012|MALWAREPROTECTION_ANTIVIRUS_DISABLED|Scanning for viruses is disabled.|
 |5100|MALWAREPROTECTION_EXPIRATION_WARNING_STATE|The antimalware platform will expire soon.|
 |5101|MALWAREPROTECTION_DISABLED_EXPIRED_STATE|The antimalware platform is expired.|
+
 
 

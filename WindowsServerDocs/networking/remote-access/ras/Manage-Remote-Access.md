@@ -12,9 +12,12 @@ ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
 author: coreyp
 ---
 # Manage Remote Access
+
+>Applies To: Windows Server Technical Preview
+
 The DirectAccess Remote Client Management deployment scenario uses DirectAccess to maintain clients over the Internet. This section explains the scenario, including its phases, roles, features, and links to additional resources.  
   
-Windows ServerÂ® 2016 Technical Preview and Windows ServerÂ® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role.   
+Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role.   
   
 > [!NOTE]  
 > In addition to this topic, the following Remote Access management topics are available.  
@@ -101,7 +104,7 @@ Hardware requirements for this scenario include the following:
   
 -   During remote management of DirectAccess client computers, clients initiate communications with management servers, such as domain controllers, System Center Configuration Servers, and Health Registration Authority (HRA) servers. These servers provide services that include Windows and antivirus updates and Network Access Protection (NAP) client compliance. You should deploy the required servers before you begin the Remote Access deployment.  
   
--   A DNS server running Windows ServerÂ® 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, or Windows Server 2008 with SP2 is required.  
+-   A DNS server running Windows Server® 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows Server 2008 R2, or Windows Server 2008 with SP2 is required.  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
 Software requirements for this scenario include the following:  
@@ -133,4 +136,5 @@ The following table provides links to additional resources.
 |**Community resources**|[RRAS Product Team blog](http://blogs.technet.com/RRAS/) &#124; [Remote Access  TechNet Forum](http://social.technet.microsoft.com/Forums/RRAS/threads)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  
 |**Related technologies**|[How IPv6 works](http://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
   
+
 

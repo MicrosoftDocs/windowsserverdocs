@@ -12,6 +12,9 @@ ms.assetid: 98131208-9868-472a-8a0e-c633f9ec93e3
 author: Femila
 ---
 # Identifying Forest Design Requirements
+
+>Applies To: Windows Server Technical Preview
+
 To create a forest design for your organization, you must identify the business requirements that your directory structure needs to accommodate. This involves determining how much autonomy the groups in your organization need to manage their network resources and whether or not each group needs to isolate their resources on the network from other groups.  
   
 Active Directory Domain Services (AD DS) enables you to design a directory infrastructure that accommodates multiple groups within an organization that have unique management requirements and to achieve structural and operational independence between groups as needed.  
@@ -42,4 +45,5 @@ The design team must document the isolation and autonomy requirements for servic
   
 -   [Autonomy vs. Isolation](../../ad-ds/plan/Autonomy-vs.-Isolation.md)  
   
+
 

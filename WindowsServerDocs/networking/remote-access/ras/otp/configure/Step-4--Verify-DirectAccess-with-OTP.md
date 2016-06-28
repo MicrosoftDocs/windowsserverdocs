@@ -12,6 +12,9 @@ ms.assetid: ed49a0a3-1c45-42e5-8f13-cad20c1c1d68
 author: coreyp
 ---
 # Step 4: Verify DirectAccess with OTP
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes how to verify that you have correctly configured your DirectAccess with OTP deployment.  
   
 ### To verify OTP health on the Remote Access server  
@@ -43,4 +46,5 @@ This topic describes how to verify that you have correctly configured your Direc
   
 7.  Attempt to access internal resources. You should be able to access all corporate resources.  
   
+
 

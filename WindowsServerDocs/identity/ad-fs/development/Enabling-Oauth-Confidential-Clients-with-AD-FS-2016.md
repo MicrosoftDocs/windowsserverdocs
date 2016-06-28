@@ -13,6 +13,9 @@ ms.assetid: dc3f9966-9e69-4d40-9ba0-fa321c5ac628
 author: billmath
 ---
 # Enabling Oauth Confidential Clients with AD FS 2016
+
+>Applies To: Windows Server Technical Preview
+
 Building on the initial Oauth support in AD FS in Windows Server 2012 R2, AD FS 2016 introduces support for clients capable of maintaining their own secret, such as an app or service running on a web server.  These clients are known as confidential clients.    
 Below is a schematic of a web application running on a web server and serving as a confidential client to AD FS:  
   
@@ -258,4 +261,5 @@ In this section we will test the confidential client solution.  Use the followin
   
     ![](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
   
+
 

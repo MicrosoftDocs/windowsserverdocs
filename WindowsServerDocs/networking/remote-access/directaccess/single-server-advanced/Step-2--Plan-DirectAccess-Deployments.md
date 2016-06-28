@@ -12,6 +12,9 @@ ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
 author: vhorne
 ---
 # Step 2: Plan DirectAccess Deployments
+
+>Applies To: Windows Server Technical Preview
+
 After you plan the DirectAccess infrastructure, the next step in deploying advanced DirectAccess on a single server with IPv4 and IPv6 is to plan the settings for the Remote Access Setup Wizard.  
   
 |Task|Description|  
@@ -141,4 +144,5 @@ If the VPN connection lists its default gateway as empty or all zeros (0.0.0.0),
   
 -   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
   
+
 

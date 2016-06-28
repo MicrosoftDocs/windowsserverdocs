@@ -13,6 +13,9 @@ ms.assetid: b7cf994e-bf4b-4b1b-bad6-ecf7d46d105e
 author: KBDAzure
 ---
 # Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
@@ -43,4 +46,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 -   *Use a registry setting to enable a VHD-format virtual hard disk to report a physical sector size of 4k*  
   
+
 

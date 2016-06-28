@@ -13,6 +13,9 @@ ms.assetid: 59297022-a898-456c-b299-d79cd5860238
 author: cwatsonmsft
 ---
 # Create a virtual machine in Hyper-V
+
+>Applies To: Windows 10, Windows Server Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.  
@@ -59,7 +62,7 @@ In this article,
     > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 Technical Preview isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions).  
   
     -   **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
-        **-Name** is the name that you provide for the virtual machine that youâ€™re creating.  
+        **-Name** is the name that you provide for the virtual machine that you’re creating.  
         **-MemoryStartupBytes** is the amount of memory   that is available to the virtual machine at start up.  
         **-BootDevice** is the device that the virtual machine boots to  when it starts like the network adapter (NetworkAdapter) or virtual hard disk (VHD).  
         **-VHDPath** is the path to the virtual machine disk that you want to use.  
@@ -90,13 +93,13 @@ In this article,
 5.  Start the virtual machine by using the [Start-VM](https://technet.microsoft.com/library/hh848589.aspx) cmdlet. Run the following cmdlet where Name is the name of the  virtual machine you created.  
   
     ```  
-    Start-VM â€“Name <Name>  
+    Start-VM –Name <Name>  
     ```  
   
     For example:  
   
     ```  
-    Start-VM â€“Name Win10VM  
+    Start-VM –Name Win10VM  
     ```  
   
 6.  Connect to the virtual machine by using Virtual Machine Connection (VMConnect).  
@@ -130,4 +133,5 @@ The following table lists the options you can pick when you create a virtual mac
   
 
   
+
 

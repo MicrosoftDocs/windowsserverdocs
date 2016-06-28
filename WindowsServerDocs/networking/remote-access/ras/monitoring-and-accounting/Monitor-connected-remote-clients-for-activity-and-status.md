@@ -12,6 +12,9 @@ ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
 author: coreyp
 ---
 # Monitor connected remote clients for activity and status
+
+>Applies To: Windows Server Technical Preview
+
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.  
   
 You can use the management console on the Remote Access server to monitor remote client activity and status.  
@@ -54,4 +57,5 @@ The user statistics can be filtered, based on criteria selections, by using the 
 ## See Also  
 [Additional way to monitor DirectAccess machine/user activity on Windows 2012 and 2012R2 DirectAccess with component event logging](http://blogs.technet.com/b/martin_j_solis/archive/2015/03/20/additional-way-to-monitor-directaccess-machine-user-activity-on-windows-2012-and-2012r2-directaccess-with-component-even-logging.aspx)  
   
+
 

@@ -9,6 +9,9 @@ ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
 author: jamesmci
 ---
 # Refresh Group Policy
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to manually refresh Group Policy on the local computer. When Group Policy is refreshed, if certificate autoenrollment is configured and functioning correctly, the local computer is autoenrolled a certificate by the certification authority (CA).  
   
 > [!NOTE]  
@@ -18,8 +21,9 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
   
 ### To refresh Group Policy on the local computer  
   
-1.  On the computer where NPS is installed, open Windows PowerShellÂ® by using the icon on the taskbar.  
+1.  On the computer where NPS is installed, open Windows PowerShell® by using the icon on the taskbar.  
   
 2.  At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.  
   
+
 

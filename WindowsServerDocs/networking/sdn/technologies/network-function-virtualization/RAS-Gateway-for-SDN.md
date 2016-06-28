@@ -12,6 +12,9 @@ ms.assetid: a32357a5-ab1a-4a4c-848a-7a4ed65b1921
 author: jamesmci
 ---
 # RAS Gateway for SDN
+
+>Applies To: Windows Server Technical Preview
+
 You can use this topic to learn about RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
   
 > [!NOTE]  
@@ -32,7 +35,7 @@ You cannot use the Windows interface to install Remote Access when you want to d
   
 But before you can install RAS Gateway by using Windows PowerShell, you must use Windows PowerShell to add the **RemoteAccess** Windows feature. To do so, run the following command at the Windows PowerShell prompt.  
   
-`Add-WindowsFeature â€“Name RemoteAccess â€“IncludeAllSubFeature â€“IncludeManagementTools`  
+`Add-WindowsFeature –Name RemoteAccess –IncludeAllSubFeature –IncludeManagementTools`  
   
 This command adds the **RemoteAccess** feature and the Windows PowerShell commands for the feature.  
   
@@ -53,4 +56,5 @@ Following are RAS Gateway features in Windows Server 2016 Technical Preview. You
   
 
   
+
 

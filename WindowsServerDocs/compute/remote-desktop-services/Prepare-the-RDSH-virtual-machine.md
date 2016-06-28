@@ -13,6 +13,9 @@ author: lizap
 manager: msswadhwa
 ---
 # Prepare the RDSH virtual machine
+
+>Applies To: Windows Server Technical Preview
+
 Use the following steps to prepare the virtual machine for the Remote Desktop Session Host server:  
   
 1.  Connect to the virtual machine:  
@@ -33,4 +36,5 @@ Use the following steps to prepare the virtual machine for the Remote Desktop Se
     2.  Click **Change > Domain**, and then enter the domain name (for example, Contoso.com).  
     3.  Enter the domain administrator credentials.  
     4.  Restart the virtual machine.
+
 

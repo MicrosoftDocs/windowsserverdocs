@@ -9,6 +9,9 @@ ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
 author: jamesmci
 ---
 # Configure the CDP and AIA Extensions on CA1
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1.  
   
 To perform this procedure, you must be a member of Domain Admins.  
@@ -71,4 +74,5 @@ To perform this procedure, you must be a member of Domain Admins.
   
 15. When prompted to restart Active Directory Certificate Services, click **No**. You will restart the service later.  
   
+
 

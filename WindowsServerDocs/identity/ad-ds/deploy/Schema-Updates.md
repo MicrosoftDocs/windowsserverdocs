@@ -14,6 +14,9 @@ ms.assetid: a2db7dab-8013-4257-abcf-622e12ee7681
 author: Femila
 ---
 # Schema Updates
+
+>Applies To: Windows Server Technical Preview
+
 This topic lists the LDF files that include the changes that Adprep.exe makes in  Windows Server 2012 R2  and.  
   
 These are the LDF files included in  Windows Server 2012 R2 :  
@@ -450,7 +453,7 @@ changetype: ntdsSchemaAdd
 objectClass: attributeSchema  
 cn: ms-DS-Registered-Users  
 adminDisplayName: ms-DS-Registered-Users  
-adminDescription: Contains the list of users that have registered the device.  Users in this list have all of the features provided by the ‚ÄúCompany Portal‚Äù app.  And they have SSO to company resources.  
+adminDescription: Contains the list of users that have registered the device.  Users in this list have all of the features provided by the ìCompany Portalî app.  And they have SSO to company resources.  
 ldapDisplayName: msDS-RegisteredUsers  
 attributeId: 1.2.840.113556.1.4.2263  
 omSyntax: 4  
@@ -4577,4 +4580,5 @@ objectVersion: 56
 -  
 ```  
   
+
 

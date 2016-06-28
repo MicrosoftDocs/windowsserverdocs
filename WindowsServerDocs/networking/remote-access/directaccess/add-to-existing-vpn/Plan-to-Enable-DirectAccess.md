@@ -12,6 +12,9 @@ ms.assetid: 458a3bcf-50b6-47b2-b53c-1b8204c5189e
 author: coreyp
 ---
 # Plan to Enable DirectAccess
+
+>Applies To: Windows Server Technical Preview
+
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role. This section describes the planning steps that are required to deploy a single Remote Access server running  Windows Server 2012  with basic features. The planning phase includes the following steps:  
   
 -   [Step 1: Plan the Remote Access infrastructure](assetId:///27cdb4a4-189b-413c-9e52-c7c29d5cccb5)  
@@ -28,4 +31,5 @@ author: coreyp
   
 -   [Enable DirectAcess](assetId:///a27e20c8-9a2c-4a0e-8408-ec8cb210037b)  
   
+
 

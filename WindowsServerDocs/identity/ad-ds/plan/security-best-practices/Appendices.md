@@ -14,6 +14,9 @@ ms.assetid: ff4086dd-992f-41bc-a05f-521dd950d480
 author: Femila
 ---
 # Appendices
+
+>Applies To: Windows Server Technical Preview
+
 Appendices are included in this document to augment the information contained in the body of the document. The list of appendices and a brief description of each in included the following table.  
   
 |||  
@@ -33,4 +36,5 @@ Appendices are included in this document to augment the information contained in
 |[Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)|Lists events for which you should monitor in your environment.|  
 |[Appendix M: Document Links and Recommended Reading](../../../ad-ds/manage/Appendix-M--Document-Links-and-Recommended-Reading.md)|Contains a list of recommended reading. Also contains a list of links to external documents and their URLs so that readers of hard copies of this document can access this information.|  
   
+
 

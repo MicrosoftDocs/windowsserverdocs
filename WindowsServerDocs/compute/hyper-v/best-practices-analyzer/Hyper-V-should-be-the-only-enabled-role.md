@@ -13,6 +13,9 @@ ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
 author: KBDAzure
 ---
 # Hyper-V should be the only enabled role
+
+>Applies To: Windows Server Technical Preview
+
 [This information is preliminary and subject to change.]  
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
@@ -53,4 +56,5 @@ To use Server Manager, you must be logged on to the computer as an administrator
   
   
   
+
 

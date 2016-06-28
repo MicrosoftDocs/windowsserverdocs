@@ -12,6 +12,9 @@ ms.assetid: 0eec0e7e-28f3-4fb2-bd41-e97bc3560bcb
 author: kumudd
 ---
 # Storage Spaces Optimize Pool
+
+>Applies To: Windows Server Technical Preview
+
 Windows Server 2016 Technical Preview Storage Spaces Direct can optimize a storage pool to balance data equally across the set of physical disks that comprise the pool.  
 
 Over time, as physical disks are added or removed or as data is written or deleted, the distribution of data among the set of physical disks that comprise the pool may become uneven. In some cases, this may result in certain physical disks becoming full while other disks in the same pool have much lower consumption.  
@@ -29,7 +32,7 @@ The output of the Optimize-StoragePool command include a progress bar that measu
 You can monitor the progress of the optimize job with the following command:  
 
 ```  
-Get-StorageJob | ? Name –eq Optimize  
+Get-StorageJob | ? Name �eq Optimize  
 ```  
 
 ## Related Topics  
@@ -53,3 +56,4 @@ Get-StorageJob | ? Name –eq Optimize
 -   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
 
 -   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
+

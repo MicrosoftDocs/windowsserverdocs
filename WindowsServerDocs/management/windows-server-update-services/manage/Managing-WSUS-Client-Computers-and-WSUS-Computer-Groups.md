@@ -12,6 +12,9 @@ ms.assetid: 4b1ea915-0f9f-4f0e-8913-a1dd460d07ab
 author: coreyp-at-msft
 ---
 # Managing WSUS Client Computers and WSUS Computer Groups
+
+>Applies To: Windows Server Technical Preview
+
 The Computers node is central access point in the WSUS administrative console for managing WSUS client computers and devices. Under this node you can find the different groups you have set up (plus the default group, Unassigned Computers).
 
 ## Managing Client Computers
@@ -50,5 +53,6 @@ You can assign computers to computer groups by using one of two methods, server-
 -   [Viewing and Managing Updates](Viewing-and-Managing-Updates.md)
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
+
 
 

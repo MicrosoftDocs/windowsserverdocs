@@ -12,7 +12,10 @@ ms.assetid: 88ffd598-2fde-402c-bd12-be790f84dc96
 author: coreyp
 ---
 # Plan a Remote Access Cluster Deployment
-Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the planning steps required in order to deploy a cluster of Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access servers.  
+
+>Applies To: Windows Server Technical Preview
+
+Windows Server� 2016 Technical Preview and Windows Server� 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the planning steps required in order to deploy a cluster of Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access servers.  
   
 -   [Step 1: Plan a single server Remote Access deployment](assetId:///d85aa8a8-ef06-4021-a4ea-38de816f19cd). This step includes planning for the infrastructure required to deploy a single server. It includes planning for network and server settings, certificate requirements, DNS settings, network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy Objects (GPOs).  
   
@@ -24,4 +27,5 @@ Windows Server® 2016 Technical Preview and Windows Server® 2012 combine Direct
   
 After you have completed these planning steps, see [Configure a Remote Access cluster](assetId:///dad5ada5-746a-4c29-aca9-15f20624c151). For instructions on configuring a cluster deployment as a proof of concept in a lab environment, see [Test Lab Guide: Demonstrate DirectAccess in a cluster with Windows NLB](assetId:///f3e5209b-aaa9-49a7-b523-0a130ec10a4b).  
   
+
 

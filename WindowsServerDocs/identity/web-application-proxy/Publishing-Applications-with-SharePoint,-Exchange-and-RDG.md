@@ -13,6 +13,9 @@ ms.assetid: fcae5237-b07c-49d2-90de-03750b931601
 author: kgremban
 ---
 # Publishing Applications with SharePoint, Exchange and RDG
+
+>Applies To: Windows Server Technical Preview
+
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   
 This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway (RDP) through Web Application Proxy.  
@@ -36,9 +39,9 @@ The following table describes the Exchange services that you can publish through
 |Exchange service|Pre-authentication|Notes|  
 |--------------------|-----------------------|---------|  
 |Outlook Web App|-   AD FS using non-claims-based authentication<br />-   Pass-through<br />-   AD FS using claims-based authentication for on-premises Exchange 2013 Service Pak 1 (SP1)|For more information see: [Using AD FS claims-based authentication with Outlook Web App and EAC](http://go.microsoft.com/fwlink/?LinkId=393723)|  
-|Exchange Control Panel|Pass-through|â€”|  
+|Exchange Control Panel|Pass-through|—|  
 |Outlook Anywhere|Pass-through|You must publish three URLs for Outlook Anywhere to work correctly:<br /><br />-   The autodiscover URL.<br />-   The external host name of the Exchange Server; that is, the URL that is configured for clients to connect to.<br />-   The internal FQDN of the Exchange Server.|  
-|Exchange ActiveSync|Pass-through|â€”|  
+|Exchange ActiveSync|Pass-through|—|  
   
 To publish Outlook Web App using Integrated Windows authentication, you must use the Add Non-Claims-Based Relying Party Trust Wizard to configure the relying party trust for the application.  
   
@@ -59,9 +62,9 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
     You can also  publish the two virtual directories individually e.g.https://rdg.contoso.com/rdweb/ and https://rdg.contoso.com/rpc/.  
   
-3.  If the RD Web Access and the RD Gateway are hosted on separate RDG servers, you have to publish the two virtual directories individually. You can use the same or different external FQDNâ€™s e.g. https://rdweb.contoso.com/rdweb/ and https://gateway.contoso.com/rpc/.  
+3.  If the RD Web Access and the RD Gateway are hosted on separate RDG servers, you have to publish the two virtual directories individually. You can use the same or different external FQDN’s e.g. https://rdweb.contoso.com/rdweb/ and https://gateway.contoso.com/rpc/.  
   
-4.  If the External and Internal FQDNâ€™s are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server  
+4.  If the External and Internal FQDN’s are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server  
   
     ```  
     Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true  
@@ -99,7 +102,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
     It is possible to publish /rdweb and /rpc as separate applications and even to use different published servers. You just need to ensure that you publish both using the same Relying Party Trust as the Web Application Proxy token is issued for the Relying Party Trust and is therefore valid across applications published with the same Relying Party Trust.  
   
-5.  If the External and Internal FQDNâ€™s are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server:  
+5.  If the External and Internal FQDN’s are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server:  
   
     ```  
     Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true  
@@ -153,4 +156,5 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
 -   [Web Application Proxy Walkthrough Guide](assetId:///ad72afff-bbb0-4c37-b4d8-2f68f790db70)  
   
+
 
