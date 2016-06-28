@@ -12,6 +12,8 @@ ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jaimeo
 ---
 # What&#39;s New in Windows Server 2016 Technical Preview 5
+>Applies To: Windows Server Technical Preview
+
 The content in this section describes what's new and changed in Windows Server® 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. There are several new additions in each of these areas: [Compute](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Compute), [Identity](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Identity), [Management and Automation](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_ManagAuto), [Networking](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Networking), [Security](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Security), and [Storage](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Storage).  
   
 > [!IMPORTANT]  
