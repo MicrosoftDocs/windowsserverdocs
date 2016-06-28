@@ -12,6 +12,9 @@ ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
 author: jamesmci
 ---
 # What&#39;s New in IPAM
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016 Technical Preview.  
   
 IPAM provides highly customizable administrative and monitoring capabilities for the IP address and DNS infrastructure on an Enterprise or Cloud Service Provider (CSP) network. You can monitor, audit, and manage servers running Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) by using IPAM.  

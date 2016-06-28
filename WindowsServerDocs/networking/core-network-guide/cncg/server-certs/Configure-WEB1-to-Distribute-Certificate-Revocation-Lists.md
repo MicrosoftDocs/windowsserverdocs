@@ -9,6 +9,9 @@ ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
 author: jamesmci
 ---
 # Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
+
+>Applies To: Windows Server Technical Preview
+
 You can use this procedure to configure the web server WEB1 to distribute CRLs.  
   
 In the extensions of the root CA, it was stated that the CRL from the root CA would be available via http://pki.corp.contoso.com/pki. Currently, there is not a PKI virtual directory on WEB1, so one must be created.  

@@ -12,6 +12,9 @@ ms.assetid: 6edaba84-4595-4fd8-95d7-64d4d975a38a
 author: jamesmci
 ---
 # What&#39;s New in DNS Client in Windows Server Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 This topic describes the Domain Name System (DNS) client functionality that is new or changed in Windows 10®.  
   
 ## <a name="BKMK_DNSClient2012R2"></a>Updates to DNS Client in Windows Technical Preview  

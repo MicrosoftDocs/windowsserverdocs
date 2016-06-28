@@ -12,6 +12,9 @@ ms.assetid: 596f28ec-e154-4c2e-9e82-7e42afe0e9fa
 author: kumudd
 ---
 # What&#39;s New in File and Storage Services in Windows Server 2016 Technical Preview
+
+>Applies To: Windows Server Technical Preview
+
 This topic explains the new and changed functionality in Storage Services in Windows Server 2016 Technical Preview.  
 
 -   [Storage Spaces Direct](#BKMK_SSD)  

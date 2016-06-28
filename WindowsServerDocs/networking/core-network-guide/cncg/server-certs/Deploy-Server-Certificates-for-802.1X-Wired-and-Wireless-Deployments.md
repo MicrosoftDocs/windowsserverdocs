@@ -12,8 +12,6 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-  
-  
 You can use this guide to deploy server certificates to your Remote Access and Network Policy Server (NPS) infrastructure servers.   
   
 This guide contains the following sections.  

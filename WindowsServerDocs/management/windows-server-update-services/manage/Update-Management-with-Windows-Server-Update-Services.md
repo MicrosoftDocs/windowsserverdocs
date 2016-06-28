@@ -11,6 +11,9 @@ ms.assetid: 28fde77a-f5fc-4e51-835d-8bc304dcfa54
 author: coreyp-at-msft
 ---
 # Update Management with Windows Server Update Services
+
+>Applies To: Windows Server Technical Preview
+
 You should check the WSUS administration console home page regularly to view overall update compliance and network health. Check application logs frequently, if you suspect problems such as download failures or client computers that are failing to report to the WSUS server. This guide provides information to help you manage Windows Server Update Services.  
   
 ## In this guide  
