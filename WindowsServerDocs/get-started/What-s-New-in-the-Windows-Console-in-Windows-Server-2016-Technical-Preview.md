@@ -10,6 +10,8 @@ ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: jaimeo
 ---
 # What&#39;s New in the Windows Console in Windows Server 2016 Technical Preview
+>Applies To: Windows Server Technical Preview
+
 The console host (the underlying code that supports all character-mode applications including the Windows command prompt, the Windows PowerShell prompt, and others) has been updated in several ways to add a variety of new capabilities.  
   
 ## Controlling the new features  
