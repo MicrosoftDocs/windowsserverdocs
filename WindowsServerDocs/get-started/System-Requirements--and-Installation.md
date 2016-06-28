@@ -15,7 +15,7 @@ author: jaimeo
 
 >Applies To: Windows Server Technical Preview
 
-This topic addresses the information you need to install Windows Server® 2016 Technical Preview. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 Technical Preview deployment.  
+This topic addresses the information you need to install Windows ServerÂ® 2016 Technical Preview. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 Technical Preview deployment.  
   
 -   **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. Clean installation is the only supported option for this release  
   
@@ -48,7 +48,7 @@ This topic addresses the information you need to install Windows Server® 2016 Te
 The following are estimated system requirements for the Windows Server 2016 Technical Preview. If your computer has less than the "minimum" requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.  
   
 > [!IMPORTANT]  
-> The highly diverse scope of potential deployments makes it unrealistic to state “recommended” system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
+> The highly diverse scope of potential deployments makes it unrealistic to state "recommended" system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
   
 ## Processor  
 Processor performance depends not only on the clock frequency of the processor, but also on the number of processor cores and the size of the processor cache. The following are the processor requirements for this product:  
@@ -117,7 +117,7 @@ The following items are not strictly required, but are necessary for certain fea
   
 -   Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution  
   
--   Keyboard and Microsoft® mouse (or other compatible pointing device)  
+-   Keyboard and MicrosoftÂ® mouse (or other compatible pointing device)  
   
 -   Internet access (fees may apply)  
   
