@@ -17,5 +17,7 @@
       "build_entry_point": "op"
     }
   ],
-  "skip_source_output_uploading": false
+  "skip_source_output_uploading": false,
+  "notification_subscribers": [""],
+  "branches_to_filter": [""]
 }
