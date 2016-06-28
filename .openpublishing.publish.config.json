@@ -4,7 +4,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "WindowsServerDocs",
-      "build_source_folder": "windows-server",
+      "build_source_folder": "WindowsServerDocs",
       "build_output_subfolder": "windows-server",
       "locale": "en-us",
       "version": 0,
