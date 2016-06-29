@@ -22,6 +22,6 @@ This document contains a list of all of the documentation walkthroughs for AD FS
   
 * [Enabling Open Id Connect with AD FS 2016](../ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)  
   
-* [Enabling Oauth Confidentiatl Clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
+* [Enabling Oauth Confidential Clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 
 

@@ -20,12 +20,12 @@ In this scenario, the finance department security operations is working with cen
   
 Deploying a central access policy includes the following phases:  
   
-|Phase|Description|  
-|---------|---------------|  
-|[Plan: Identify the need for policy and the configuration required for deployment](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.2)|HYPERLINK "http://sharepoint/sites/flexibleaccess/Shared%20Documents/IX-UA%20Documentation/DynamicAccessControlDeploymentGuide.docx" \l "_Plan:_Identify_the" Identify the need for a policy and the configuration required for deployment.|  
-|[Implement: Configure the components and policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.3)|Configure the components and policy.|  
-|[Deploy the central access policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.4)|Deploy the policy.|  
-|[Maintain: Change and stage the policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.5)|Policy changes and staging|  
+|Phase|Description  
+|---------|---------------  
+|[Plan: Identify the need for policy and the configuration required for deployment](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.2)|Identify the need for a policy and the configuration required for deployment. 
+|[Implement: Configure the components and policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.3)|Configure the components and policy.  
+|[Deploy the central access policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.4)|Deploy the policy.  
+|[Maintain: Change and stage the policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.5)|Policy changes and staging. 
   
 ## <a name="BKMK_1.1"></a>Set up a test environment  
 Before you begin, you need to set up lab to test this scenario. The steps for setting up the lab are explained in detail in [Appendix B: Setting Up the Test Environment](Appendix-B--Setting-Up-the-Test-Environment.md).  
