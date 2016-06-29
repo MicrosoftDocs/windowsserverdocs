@@ -13,7 +13,7 @@ author: coreyp-at-msft
 ---
 # View and Configure Performance, Event, and Service Data
 
-> Applies To: Windows Server Technical Preview
+>Applies To: Windows Server Technical Preview
 
 This topic describes how to view and configure the event log entries, performance counters, and service alerts that are displayed for local and remote servers in Server Manager.  
   

@@ -13,7 +13,7 @@ author: jaimeo
 ---
 # Windows Server 2016 Technical Preview 5
 
-> Applies To: Windows Server Technical Preview
+>Applies To: Windows Server Technical Preview
 
 **[This information is preliminary and subject to change.]**  
   

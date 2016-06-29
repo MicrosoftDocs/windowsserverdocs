@@ -12,6 +12,9 @@ ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
 author: coreyp-at-msft
 ---
 # Manage Multiple, Remote Servers with Server Manager
+
+>Applies To: Windows Server 2016 Technical Preview
+
 Server Manager is a management console in Windows Server® 2012 R2 and Windows Server® 2012 that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (RDP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2 and Windows Server 2008, Server Manager was updated in  Windows Server 2012, to support remote, multi-server management, and help increase the number of servers an administrator can manage.
 
 In our tests, Server Manager in  Windows Server 2012 R2  and  Windows Server 2012 can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer’s resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft® System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
