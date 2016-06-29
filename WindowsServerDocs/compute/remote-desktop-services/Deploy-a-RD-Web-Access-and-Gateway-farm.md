@@ -22,6 +22,7 @@ The scope of this document is limited to:
 - Deployment guidance for adding a second RD Web Access and RD Gateway virtual machine to a basic desktop hosting deployment.  
   
   For higher scale, additional virtual machines running RD Web Access and RD Gateway can be added by repeating the steps in this document.  
+
 After reading this document, the reader should understand:  
   
 - How to deploy a second RD Web Access and RD Gateway virtual machine within a basic desktop hosting deployment in a single Microsoft Azure Cloud Service.  
