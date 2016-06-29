@@ -1,5 +1,5 @@
 ---
-title: Appendix B: Setting Up the Test Environment
+title: Appendix B Setting Up the Test Environment
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold

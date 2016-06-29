@@ -1,5 +1,5 @@
 ---
-title: Scenario: Implement Retention of Information on File Servers
+title: Scenario Implement Retention of Information on File Servers
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold

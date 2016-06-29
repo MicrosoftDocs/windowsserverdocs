@@ -1,5 +1,5 @@
 ---
-title: Scenario: File Access Auditing
+title: Scenario File Access Auditing
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold

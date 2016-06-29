@@ -1,5 +1,5 @@
 ---
-title: Appendix A: Dynamic Access Control Glossary
+title: Appendix A Dynamic Access Control Glossary
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold

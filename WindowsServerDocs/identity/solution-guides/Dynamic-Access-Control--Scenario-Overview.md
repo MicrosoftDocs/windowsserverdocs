@@ -1,18 +1,17 @@
 ---
-title: Dynamic Access Control: Scenario Overview
-ms.custom: na
+title: Dynamic Access Control Scenario Overview
+description: " "
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
+ms.service: na
+manager: timlt
 ms.technology: 
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c2a4cb7c-22b3-4dba-8d39-e1c72a51f085
 author: femila
-
 ---
+
 # Dynamic Access Control: Scenario Overview
 
 >Applies To: Windows Server Technical Preview

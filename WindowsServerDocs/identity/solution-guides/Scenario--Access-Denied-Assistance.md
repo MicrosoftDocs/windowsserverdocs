@@ -1,5 +1,5 @@
 ---
-title: Scenario: Access-Denied Assistance
+title: Scenario Access-Denied Assistance
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold
