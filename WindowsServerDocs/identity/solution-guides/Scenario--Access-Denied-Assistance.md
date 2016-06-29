@@ -1,13 +1,12 @@
 ---
 title: Scenario: Access-Denied Assistance
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
+manager: femila
 ms.service: active-directory
-ms.suite: na
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d1faa8c9-89ea-40c5-9c1b-abd04e09b9d7

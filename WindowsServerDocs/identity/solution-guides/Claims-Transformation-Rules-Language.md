@@ -1,13 +1,12 @@
 ---
 title: Claims Transformation Rules Language
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
+manager: femila
 ms.service: active-directory
-ms.suite: na
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a86d6f34-d183-4925-b820-f786983ac4c1
@@ -21,7 +20,7 @@ The across-forest claims transformation feature enables you to bridge claims for
   
 The Windows PowerShell cmdlets for transformation policies on across-forest trusts have options to set simple policies that are required in common scenarios. These cmdlets translate the user input into policies and rules in the claims transformation rules language, and then store them in Active Directory in the prescribed format. For more information about cmdlets for claims transformation, see the [AD DS Cmdlets for Dynamic Access Control](http://go.microsoft.com/fwlink/?LinkId=243150).  
   
-Depending on the claims configuration and the requirements placed on the across-forest trust in your Active Directory forests, your claims transformation policies may have to be more complex than the policies supported by the Windows PowerShell cmdlets for Active Directory. To effectively author such policies, it is essential to understand the claims transformation rules language syntax and semantics. This claims transformation rules language (ìthe languageî) in Active Directory is a subset of the language that is used by [Active Directory Federation Services](http://go.microsoft.com/fwlink/?LinkId=243982) for similar purposes, and it has a very similar syntax and semantics. However, there are fewer operations allowed, and additional syntax restrictions are placed in the Active Directory version of the language.  
+Depending on the claims configuration and the requirements placed on the across-forest trust in your Active Directory forests, your claims transformation policies may have to be more complex than the policies supported by the Windows PowerShell cmdlets for Active Directory. To effectively author such policies, it is essential to understand the claims transformation rules language syntax and semantics. This claims transformation rules language (‚Äúthe language‚Äù) in Active Directory is a subset of the language that is used by [Active Directory Federation Services](http://go.microsoft.com/fwlink/?LinkId=243982) for similar purposes, and it has a very similar syntax and semantics. However, there are fewer operations allowed, and additional syntax restrictions are placed in the Active Directory version of the language.  
   
 This topic briefly explains the syntax and semantics of the claims transformation rules language in Active Directory and considerations to be made when authoring policies. It provides several sets of example rules to get you started, and examples of incorrect syntax and the messages they generate, to help you decipher error messages when you author the rules.  
   
@@ -55,9 +54,9 @@ This example shows a rule that can be used to translate the claims Type between 
   
 ```  
 C1: [TYPE=="EmployeeType"]    
-                 => ISSUE (TYPE= ìEmpTypeî, VALUE = C1.VALUE, VALUETYPE = C1.VALUETYPE);  
+                 => ISSUE (TYPE= ‚ÄúEmpType‚Äù, VALUE = C1.VALUE, VALUETYPE = C1.VALUETYPE);  
 [TYPE=="EmployeeType"] == Select Condition List with one Matching Condition for claims Type.  
-ISSUE (TYPE= ìEmpTypeî, VALUE = C1.VALUE, VALUETYPE = C1.VALUETYPE) == Rule Action that issues a claims using string literal and matching claim referred with the Identifier.  
+ISSUE (TYPE= ‚ÄúEmpType‚Äù, VALUE = C1.VALUE, VALUETYPE = C1.VALUETYPE) == Rule Action that issues a claims using string literal and matching claim referred with the Identifier.  
   
 ```  
   
@@ -94,34 +93,34 @@ This example shows the runtime operation of a claims transformation that uses tw
   
 ```  
   
-     C1:[Type==îEmpTypeî, Value==îFullTimeî,ValueType==îstringî] =>  
-                Issue(Type==îEmployeeTypeî, Value==îFullTimeî,ValueType==îstringî);  
-     [Type==îEmployeeTypeî] =>   
-               Issue(Type==îAccessTypeî, Value==îPrivilegedî, ValueType==îstringî);  
+     C1:[Type==‚ÄùEmpType‚Äù, Value==‚ÄùFullTime‚Äù,ValueType==‚Äùstring‚Äù] =>  
+                Issue(Type==‚ÄùEmployeeType‚Äù, Value==‚ÄùFullTime‚Äù,ValueType==‚Äùstring‚Äù);  
+     [Type==‚ÄùEmployeeType‚Äù] =>   
+               Issue(Type==‚ÄùAccessType‚Äù, Value==‚ÄùPrivileged‚Äù, ValueType==‚Äùstring‚Äù);  
 Input claims and Initial Evaluation Context:  
-  {(Type= ìEmpTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
-{(Type= ìOrganizationî),(Value=îMarketingî),(ValueType=îStringî)}  
+  {(Type= ‚ÄúEmpType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
+{(Type= ‚ÄúOrganization‚Äù),(Value=‚ÄùMarketing‚Äù),(ValueType=‚ÄùString‚Äù)}  
 After Processing Rule 1:  
  Evaluation Context:  
-  {(Type= ìEmpTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
-{(Type= ìOrganizationî), (Value=îMarketingî),(ValueType=îStringî)}  
-  {(Type= ìEmployeeTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
+  {(Type= ‚ÄúEmpType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
+{(Type= ‚ÄúOrganization‚Äù), (Value=‚ÄùMarketing‚Äù),(ValueType=‚ÄùString‚Äù)}  
+  {(Type= ‚ÄúEmployeeType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
 Output Context:  
-  {(Type= ìEmployeeTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
+  {(Type= ‚ÄúEmployeeType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
   
 After Processing Rule 2:  
 Evaluation Context:  
-  {(Type= ìEmpTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
-{(Type= ìOrganizationî),(Value=îMarketingî),(ValueType=îStringî)}  
-  {(Type= ìEmployeeTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
-  {(Type= ìAccessTypeî),(Value=îPrivilegedî),(ValueType=îStringî)}  
+  {(Type= ‚ÄúEmpType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
+{(Type= ‚ÄúOrganization‚Äù),(Value=‚ÄùMarketing‚Äù),(ValueType=‚ÄùString‚Äù)}  
+  {(Type= ‚ÄúEmployeeType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
+  {(Type= ‚ÄúAccessType‚Äù),(Value=‚ÄùPrivileged‚Äù),(ValueType=‚ÄùString‚Äù)}  
 Output Context:  
-  {(Type= ìEmployeeTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
-  {(Type= ìAccessTypeî),(Value=îPrivilegedî),(ValueType=îStringî)}  
+  {(Type= ‚ÄúEmployeeType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
+  {(Type= ‚ÄúAccessType‚Äù),(Value=‚ÄùPrivileged‚Äù),(ValueType=‚ÄùString‚Äù)}  
   
 Final Output:  
-  {(Type= ìEmployeeTypeî),(Value=îFullTimeî),(ValueType=îStringî)}  
-  {(Type= ìAccessTypeî),(Value=îPrivilegedî),(ValueType=îStringî)}  
+  {(Type= ‚ÄúEmployeeType‚Äù),(Value=‚ÄùFullTime‚Äù),(ValueType=‚ÄùString‚Äù)}  
+  {(Type= ‚ÄúAccessType‚Äù),(Value=‚ÄùPrivileged‚Äù),(ValueType=‚ÄùString‚Äù)}  
   
 ```  
   
@@ -137,14 +136,14 @@ The following are special syntax for rules:
     The following rule matches every claim in the working set.  
   
     ```  
-    => Issue (Type = ìUserTypeî, Value = ìExternalî, ValueType = ìstringî)  
+    => Issue (Type = ‚ÄúUserType‚Äù, Value = ‚ÄúExternal‚Äù, ValueType = ‚Äústring‚Äù)  
     ```  
   
 3.  Empty Select Matching List == Every claim matches the Select Condition List  
   
     **Example: Empty Matching Conditions**  
   
-    The following rule matches every claim in the working set. This is the basic ìAllow-allî rule if it is used alone.  
+    The following rule matches every claim in the working set. This is the basic ‚ÄúAllow-all‚Äù rule if it is used alone.  
   
     ```  
     C1:[] => Issule (claim = C1);  
@@ -195,26 +194,26 @@ Active Directory is unable to determine the intent in this case and goes into a 
     Exact type  
   
     ```  
-    C1:[type==îXYZî] => Issue (claim = C1);  
+    C1:[type==‚ÄùXYZ‚Äù] => Issue (claim = C1);  
     ```  
   
     Using Regex  
   
     ```  
-    C1: [type =~ ìXYZ*î] => Issue (claim = C1);  
+    C1: [type =~ ‚ÄúXYZ*‚Äù] => Issue (claim = C1);  
     ```  
   
 -   **Disallow a certain claim type**  
     Exact type  
   
     ```  
-    C1:[type != ìXYZî] => Issue (claim=C1);  
+    C1:[type != ‚ÄúXYZ‚Äù] => Issue (claim=C1);  
     ```  
   
     Using Regex  
   
     ```  
-    C1:[Type !~ ìXYZ?î] => Issue (claim=C1);  
+    C1:[Type !~ ‚ÄúXYZ?‚Äù] => Issue (claim=C1);  
     ```  
   
 ## Examples of rules parser errors  
@@ -250,7 +249,7 @@ This section illustrates some examples of rules that are written with incorrect 
     c1:[type=="x1", value=="1", valuetype=="bool"]=>Issue(claim=c1)  
     ```  
   
-    ìboolî is not a Terminal in the language, and it is not a valid ValueType. Valid terminals are listed in the following error message.   
+    ‚Äúbool‚Äù is not a Terminal in the language, and it is not a valid ValueType. Valid terminals are listed in the following error message.   
     **Error message:**  
     *POLICY0002: Could not parse policy data.*  
     Line number: 1, Column number: 39, Error token: "bool". Line: 'c1:[type=="x1", value=="1",valuetype=="bool"]=>Issue(claim=c1);'.   
@@ -290,7 +289,7 @@ This section illustrates some examples of rules that are written with incorrect 
           Issue(type=c1.type, value=c1.value, valuetype = "string");  
     ```  
   
-    This example is syntactically and semantically correct. However, using ìbooleanî as a string value is bound to cause confusion, and it should be avoided. As previously mentioned, using language terminals as claims values should be avoided where possible.  
+    This example is syntactically and semantically correct. However, using ‚Äúboolean‚Äù as a string value is bound to cause confusion, and it should be avoided. As previously mentioned, using language terminals as claims values should be avoided where possible.  
   
 ## <a name="BKMK_LT"></a>Language terminals  
 The following table lists the complete set of terminal strings and the associated language terminals that are used in the claims transformation rules language. These definitions use case-insensitive UTF-16 strings.  

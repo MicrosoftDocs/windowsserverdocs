@@ -1,11 +1,12 @@
 ---
 title: Dynamic Access Control Overview
-ms.custom: na
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
+description: " "
+ms.custom: AD
+ms.prod: windows-server-threshold
+manager: femila
+ms.service: active-directory
 ms.technology: 
-  - techgroup-security
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fac8c7d6-f2aa-4a55-9319-b28919af71c8
@@ -18,7 +19,7 @@ This overview topic for the IT professional describes Dynamic Access Control and
   
 Domain-based Dynamic Access Control enables administrators to apply access-control permissions and restrictions based on well-defined rules that can include the sensitivity of the resources, the job or role of the user, and the configuration of the device that is used to access these resources.  
   
-For example, a user might have different permissions when they access a resource from their office computer versus when they are using a portable computer over a virtual private network. Or access may be allowed only if a device meets the security requirements that are defined by the network administrators. When Dynamic Access Control is used, a user’s permissions change dynamically without additional administrator intervention if the user’s job or role changes (resulting in changes to the user’s account attributes in AD DS).  
+For example, a user might have different permissions when they access a resource from their office computer versus when they are using a portable computer over a virtual private network. Or access may be allowed only if a device meets the security requirements that are defined by the network administrators. When Dynamic Access Control is used, a userâ€™s permissions change dynamically without additional administrator intervention if the userâ€™s job or role changes (resulting in changes to the userâ€™s account attributes in AD DS).  
   
 Dynamic Access Control is not supported in Windows operating systems prior to  Windows Server 2012  and Windows 8. When Dynamic Access Control is configured in environments with supported and non-supported versions of Windows, only the supported versions will implement the changes.  
   
@@ -40,7 +41,7 @@ A central access rule is an expression of authorization rules that can include o
 If one or more central access rules have been defined for a domain, file share administrators can match specific rules to specific resources and business requirements.  
   
 ### <a name="BKMK_Policies"></a>Central access policies  
-Central access policies are authorization policies that include conditional expressions. For example, let’s say an organization has a business requirement to restrict access to personally identifiable information (PII) in files to only the file owner and members of the human resources (HR) department who are allowed to view PII information. This represents an organization-wide policy that applies to PII files wherever they are located on file servers across the organization. To implement this policy, an organization needs to be able to:  
+Central access policies are authorization policies that include conditional expressions. For example, letâ€™s say an organization has a business requirement to restrict access to personally identifiable information (PII) in files to only the file owner and members of the human resources (HR) department who are allowed to view PII information. This represents an organization-wide policy that applies to PII files wherever they are located on file servers across the organization. To implement this policy, an organization needs to be able to:  
   
 -   Identify and mark the files that contain the PII.  
   
@@ -51,7 +52,7 @@ Central access policies are authorization policies that include conditional expr
 Central access policies act as security umbrellas that an organization applies across its servers. These policies are in addition to (but do not replace) the local access policies or discretionary access control lists (DACLs) that are applied to files and folders.  
   
 ### <a name="BKMK_Claims"></a>Claims  
-A claim is a unique piece of information about a user, device, or resource that has been published by a domain controller. The user’s title, the department classification of a file, or the health state of a computer are valid examples of a claim. An entity can involve more than one claim, and any combination of claims can be used to authorize access to resources. The following types of claims are available in the supported versions of Windows:  
+A claim is a unique piece of information about a user, device, or resource that has been published by a domain controller. The userâ€™s title, the department classification of a file, or the health state of a computer are valid examples of a claim. An entity can involve more than one claim, and any combination of claims can be used to authorize access to resources. The following types of claims are available in the supported versions of Windows:  
   
 -   **User claims** Active Directory attributes that are associated with a specific user.  
   
@@ -113,11 +114,11 @@ For domains that support user claims, every domain controller running the suppor
   
 -   **Supported** When you use this setting, monitor domain controllers to ensure that the number of domain controllers running the supported versions of Windows Server is sufficient for the number of client computers that need to access resources protected by Dynamic Access Control.  
   
-If the user domain and file server domain are in different forests, all domain controllers in the file server’s forest root must be set at the  Windows Server 2012  or higher functional level.  
+If the user domain and file server domain are in different forests, all domain controllers in the file serverâ€™s forest root must be set at the  Windows Server 2012  or higher functional level.  
   
 If clients do not recognize Dynamic Access Control, there must be a two-way trust relationship between the two forests.  
   
-If claims are transformed when they leave a forest, all domain controllers in the user’s forest root must be set at the  Windows Server 2012  or higher functional level.  
+If claims are transformed when they leave a forest, all domain controllers in the userâ€™s forest root must be set at the  Windows Server 2012  or higher functional level.  
   
 A file server running  Windows Server 2012  or  Windows Server 2012 R2  must have a Group Policy setting that specifies whether it needs to get user claims for user tokens that do not carry claims. This setting is set by default to **Automatic**, which results in this Group Policy setting to be turned **On** if there is a central policy that contains user or device claims for that file server. If the file server contains discretionary ACLs that include user claims, you need to set this Group Policy to **On** so that the server knows to request claims on behalf of users that do not provide claims when they access the server.  
   
