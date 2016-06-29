@@ -12,6 +12,8 @@ ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
 ---
 # Run Best Practices Analyzer Scans and Manage Scan Results_1
 
+>Applies To: Windows Server 2016 Technical Preview
+
 
 |||
 |-|-|

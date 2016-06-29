@@ -13,6 +13,9 @@ ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 author: KBDAzure
 ---
 # Hyper-V Technology Overview
+
+>Applies To: Windows Server 2016 Technical Preview
+
 **This is preliminary content and subject to change.**  
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.  
   

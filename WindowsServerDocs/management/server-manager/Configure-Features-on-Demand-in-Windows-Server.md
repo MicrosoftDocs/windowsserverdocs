@@ -12,6 +12,9 @@ ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 author: coreyp-at-msft
 ---
 # Configure Features on Demand in Windows Server
+
+>Applies To: Windows Server 2016 Technical Preview
+
 This topic describes how to remove feature files in a Features on Demand configuration by using the Uninstall-WindowsFeature cmdlet.
 
 Features on Demand is a feature, introduced in Windows® 8 and  Windows Server 2012 , that allows you to remove role and feature files (sometimes called feature *payload*) from the operating system to conserve disk space, and install roles and features from remote locations or installation media instead of from local computers. You can remove feature files from running physical or virtual computers. You can also add feature files to or remove feature files from Windows image (WIM) files or offline virtual hard disks (VHDs) to create a reproducible copy of Features on Demand configurations.
