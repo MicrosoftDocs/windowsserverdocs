@@ -1,5 +1,5 @@
 ---
-title: Scenario: Get Insight into Your Data by Using Classification
+title: Scenario Get Insight into Your Data by Using Classification
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold

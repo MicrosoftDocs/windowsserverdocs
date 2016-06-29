@@ -1,5 +1,5 @@
 ---
-title: Scenario: Central Access Policy
+title: Scenario Central Access Policy
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold
