@@ -1,13 +1,12 @@
 ---
 title: Deploy a Central Access Policy (Demonstration Steps)
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
+manager: femila
 ms.service: active-directory
-ms.suite: na
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fae4b82-0cd0-4d5a-b4ae-b89895d6f7b9

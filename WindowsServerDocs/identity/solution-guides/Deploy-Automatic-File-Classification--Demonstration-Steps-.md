@@ -1,13 +1,12 @@
 ---
 title: Deploy Automatic File Classification (Demonstration Steps)
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
+manager: femila
 ms.service: active-directory
-ms.suite: na
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9ddcc1c2-48a8-4619-a96d-a3e63a0e5282

@@ -1,13 +1,12 @@
 ---
 title: Deploy Claims Across Forests (Demonstration Steps)
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
+manager: femila
 ms.service: active-directory
-ms.suite: na
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3c842f5-0615-4234-912f-5e21755f2d78

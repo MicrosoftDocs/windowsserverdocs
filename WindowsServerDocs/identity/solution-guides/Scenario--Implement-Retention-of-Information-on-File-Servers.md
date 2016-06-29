@@ -1,13 +1,12 @@
 ---
 title: Scenario: Implement Retention of Information on File Servers
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
+manager: femila
 ms.service: active-directory
-ms.suite: na
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ecdcc211-6983-4a8c-9f9d-84e45b5cb0b6

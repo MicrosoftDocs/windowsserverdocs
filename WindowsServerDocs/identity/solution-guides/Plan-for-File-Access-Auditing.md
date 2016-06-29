@@ -1,13 +1,12 @@
 ---
 title: Plan for File Access Auditing
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
+manager: femila
 ms.service: active-directory
-ms.suite: na
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a988c26-5412-4117-8ffb-06b422c15cd1
@@ -28,7 +27,7 @@ The following security auditing capabilities in  Windows Server 2012  can be use
   
 -   **Additional information from object access auditing**. File access auditing is not new to  Windows Server 2012 . With the right audit policy in place, the Windows and Windows Server operating systems generate an audit event each time a user accesses a file. Existing File Access events (4656, 4663) contain information about the attributes of the file that was accessed. This information can be used by event log filtering tools to help you identify the most relevant audit events. For more information, see [Audit Handle Manipulation](http://technet.microsoft.com//library/dd772626(WS.10).aspx) and [Audit Security Accounts Manager](http://go.microsoft.com/fwlink/?LinkId=241501).  
   
--   **More information from user logon events**. With the right audit policy in place, Windows  operating systems generate an audit event every time a user signs in to a computer locally or remotely. In  Windows Server 2012  or Windows 8, you can also monitor user and device claims associated with a userís security token. Examples can include Department, Company, Project, and Security clearances.Event 4626 contains information about these user claims and device claims, which can be leveraged by audit log management tools to correlate user logon events with object access events to enable event filtering based on file attributes and user attributes. For more information about user logon auditing, see [Audit Logon](http://go.microsoft.com/fwlink/?LinkId=241502).  
+-   **More information from user logon events**. With the right audit policy in place, Windows  operating systems generate an audit event every time a user signs in to a computer locally or remotely. In  Windows Server 2012  or Windows 8, you can also monitor user and device claims associated with a user‚Äôs security token. Examples can include Department, Company, Project, and Security clearances.Event 4626 contains information about these user claims and device claims, which can be leveraged by audit log management tools to correlate user logon events with object access events to enable event filtering based on file attributes and user attributes. For more information about user logon auditing, see [Audit Logon](http://go.microsoft.com/fwlink/?LinkId=241502).  
   
 -   **Change tracking for new types of securable objects**. Tracking changes to securable objects can be important in the following scenarios:  
   
@@ -40,9 +39,9 @@ The following security auditing capabilities in  Windows Server 2012  can be use
   
     -   **Chang tracking for the central access policy associated with a file.** Event 4913 displays the security identifiers (SIDs) of the old and new central access policies. Each central access policy also has a user friendly name that can be looked up using this security identifier. For more information, see [Authorization Policy Change auditing](http://go.microsoft.com/fwlink/?LinkId=241504).  
   
-    -   **Change tracking for user and computer attributes**. Like files, user and computer objects can have attributes, and changes to these attributes can impact the userís ability to access files. Therefore, it can be valuable to track changes to user or computer attributes. User and computer objects are stored in AD DS; therefore, changes to their attributes can be audited. For more information, see [DS Access](http://go.microsoft.com/fwlink/?LinkId=241508).  
+    -   **Change tracking for user and computer attributes**. Like files, user and computer objects can have attributes, and changes to these attributes can impact the user‚Äôs ability to access files. Therefore, it can be valuable to track changes to user or computer attributes. User and computer objects are stored in AD DS; therefore, changes to their attributes can be audited. For more information, see [DS Access](http://go.microsoft.com/fwlink/?LinkId=241508).  
   
--   **Policy change staging**. Changes to central access policies can impact the access control decisions on all computers where the policies are enforced. A loose policy could grant more access than desired, and an overly restrictive policy could generate an excessive number of Help Desk calls. As a result, it can be extremely valuable to verify changes to a central access policy before enforcing the change. For that purpose,  Windows Server 2012  introduces the concept of ìstaging.î Staging enables users to verify their proposed policy changes before enforcing them. To use policy staging, proposed policies are deployed with the enforced policies, but staged policies do not actually grant or deny permissions. Instead,  Windows Server 2012  logs an audit event (4818) any time the result of the access check that uses the staged policy is different from the result of an access check that uses the enforced policy.  
+-   **Policy change staging**. Changes to central access policies can impact the access control decisions on all computers where the policies are enforced. A loose policy could grant more access than desired, and an overly restrictive policy could generate an excessive number of Help Desk calls. As a result, it can be extremely valuable to verify changes to a central access policy before enforcing the change. For that purpose,  Windows Server 2012  introduces the concept of ‚Äústaging.‚Äù Staging enables users to verify their proposed policy changes before enforcing them. To use policy staging, proposed policies are deployed with the enforced policies, but staged policies do not actually grant or deny permissions. Instead,  Windows Server 2012  logs an audit event (4818) any time the result of the access check that uses the staged policy is different from the result of an access check that uses the enforced policy.  
   
 
 
