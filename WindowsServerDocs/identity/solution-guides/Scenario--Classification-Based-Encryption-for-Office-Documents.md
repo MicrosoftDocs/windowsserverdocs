@@ -1,5 +1,5 @@
 ---
-title: Scenario: Classification-Based Encryption for Office Documents
+title: Scenario Classification-Based Encryption for Office Documents
 description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold
