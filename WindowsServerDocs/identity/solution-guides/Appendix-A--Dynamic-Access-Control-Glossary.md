@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d2cc0be5-4029-4352-a1d0-c56daf29f4d0
-author: Femila
+author: billmath
 ---
 # Appendix A: Dynamic Access Control Glossary
 
