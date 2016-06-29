@@ -15,7 +15,7 @@ robots: noindex,nofollow
 ---
 # Generation 2 virtual machine security settings for Hyper-V
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To: Windows Server 2016 Technical Preview, Windows 10
 
 **This is preliminary content and subject to change.**  
   
