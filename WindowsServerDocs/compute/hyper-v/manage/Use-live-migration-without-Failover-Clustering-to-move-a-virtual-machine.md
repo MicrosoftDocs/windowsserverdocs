@@ -57,9 +57,9 @@ If you haven't set up constrained delegation, you must sign in to source server 
   
  **Virtual machine migration operation failed at migration Source.**  
   
-**Failed to establish a connection with host***\<computer name>***: No credentials are available in the security package \0x8009030E).**
+**Failed to establish a connection with host** *computer name*: **No credentials are available in the security package 0x8009030E.**
   
- To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. (Note that this requires domain administrator credentials.) For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
+ To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. You'll need domain administrator credentials to set up constrained delegation. For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
  
  ### Failed because the host hardware isn't compatible
  
@@ -79,6 +79,3 @@ If you haven't set up constrained delegation, you must sign in to source server 
   ```
   PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
   ```
- 
-
-
