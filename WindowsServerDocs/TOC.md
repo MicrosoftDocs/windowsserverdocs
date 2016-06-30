@@ -317,7 +317,7 @@
 ##### [Publishing Applications using AD FS Preauthentication](identity/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 ##### [Publishing Applications with SharePoint, Exchange and RDG](identity/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)
 ##### [Troubleshooting Web Application Proxy](identity/web-application-proxy/Troubleshooting-Web-Application-Proxy.md)
-### [Management andÂ   Automation](management/Management-and-Automation.md)
+### [Management and Automation](management/Management-and-Automation.md)
 #### [Remote Server Administration Tools](management/Remote-Server-Administration-Tools.md)
 #### [Server Manager](management/server-manager/Server-Manager.md)
 ##### [Manage the Local Server and the Server Manager Console](management/server-manager/Manage-the-Local-Server-and-the-Server-Manager-Console.md)
