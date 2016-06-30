@@ -73,7 +73,7 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
   
 9. From **Add Services**, in the list of available services, do the following and then click **OK**:  
   
-    -   To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, as well as if you want to move only a virtual machine’s storage. If the server is configured to use SMB storage for Hyper-V, this should already be selected.  
+    -   To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, as well as if you want to move only a virtual machine's storage. If the server is configured to use SMB storage for Hyper-V, this should already be selected.  
   
     -   To move virtual machines, select **Microsoft Virtual System Migration Service**.  
   
@@ -99,7 +99,7 @@ This step includes choosing options for authentication and networking. As a secu
   
 4.  In the **Live Migrations** pane, check **Enable incoming and outgoing live migrations**.  
   
-5.  Under **Simultaneous live migrations**, specify a different number if you don’t want to use the default of 2.  
+5.  Under **Simultaneous live migrations**, specify a different number if you don't want to use the default of 2.  
   
 6.  Under **Incoming live migrations**, if you want to use specific network connections to accept live migration traffic, click **Add** to type the IP address information. Otherwise, click **Use any available network for live migration**. Click **OK**.  
   
@@ -126,7 +126,7 @@ PS C:\> Enable-VMMigration
   
 PS C:\> Set-VMMigrationNetwork 192.168.10.1  
   
-PS C:\> Set-VMHost –VirtualMachineMigrationAuthenticationType Kerberos  
+PS C:\> Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos  
   
 ```  
 Set-VMHost also lets you choose a performance option (and many other host settings). For example, to choose SMB but leave the authentication protocol set to the default of CredSSP, type:  

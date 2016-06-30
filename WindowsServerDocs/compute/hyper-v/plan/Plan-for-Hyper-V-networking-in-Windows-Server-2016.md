@@ -40,11 +40,11 @@ Virtual switch types are:
   
 -   **Internal virtual switch** — Connects to a network that can be used only by the virtual machines running on the host that has the virtual switch, and between the host and the virtual machines.  
   
--   **Private virtual switch** — Connects to a network that can be used only by the virtual machines running on the host that has the virtual switch, but doesn’t provide networking between the host and the virtual machines.  
+-   **Private virtual switch** — Connects to a network that can be used only by the virtual machines running on the host that has the virtual switch, but doesn't provide networking between the host and the virtual machines.  
   
 Virtual network adapter types are:  
   
--   **Hyper-V specific network adapter** — Available for both generation 1 and generation 2 virtual machines. It’s designed specifically for Hyper-V and requires a driver that’s included in Hyper-V integration services. This type of network adapter  faster and is the recommended choice unless you need to boot to the network or are running an unsupported guest operating system. The required driver is provided only for supported guest operating systems. Note that in Hyper-V Manager and the networking cmdlets, this type is just referred to as a network adapter.  
+-   **Hyper-V specific network adapter** — Available for both generation 1 and generation 2 virtual machines. It's designed specifically for Hyper-V and requires a driver that's included in Hyper-V integration services. This type of network adapter  faster and is the recommended choice unless you need to boot to the network or are running an unsupported guest operating system. The required driver is provided only for supported guest operating systems. Note that in Hyper-V Manager and the networking cmdlets, this type is just referred to as a network adapter.  
   
 -   **Legacy network adapter** — Available only in generation 1 virtual machines. Emulates an Intel 21140-based PCI Fast Ethernet Adapter and can be used to boot to a network so you can install an operating system from a service such as Windows Deployment Services.  
   
