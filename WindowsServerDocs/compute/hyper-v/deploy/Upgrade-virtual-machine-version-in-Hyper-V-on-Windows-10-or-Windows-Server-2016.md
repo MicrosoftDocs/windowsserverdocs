@@ -48,6 +48,7 @@ Update-VMVersion <vmname>
 <a name="BKMK_SupportedConfigVersions"></a>Supported virtual machine configuration versions  
 ---  
 The following table shows which virtual machine configuration versions are supported by Hyper-V hosts that run on specific versions of Windows operating systems.  
+
 |Hyper-V host Windows version|  Supported virtual machine configuration versions|  
 |-|-|  
 |Windows Server 2016 Technical Preview| 7.1, 7.0, 6.2, 5.0|  
