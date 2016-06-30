@@ -1,5 +1,5 @@
 ---
-title: STEP 5: Verify OTP Health on EDGE1
+title: STEP 5 Verify OTP Health on EDGE1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
 author: coreyp
 ---
-# STEP 5: Verify OTP Health on EDGE1
+# STEP 5 Verify OTP Health on EDGE1
 
 >Applies To: Windows Server Technical Preview
 

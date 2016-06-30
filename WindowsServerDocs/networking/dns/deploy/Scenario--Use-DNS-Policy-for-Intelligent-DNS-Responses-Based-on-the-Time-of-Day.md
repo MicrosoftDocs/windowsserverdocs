@@ -1,5 +1,5 @@
 ---
-title: Scenario: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
+title: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
 author: jamesmci
 ---
-# Scenario: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
+# Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 
 >Applies To: Windows Server Technical Preview
 
@@ -38,7 +38,7 @@ To ensure that contosogiftservices.com customers get a responsive experience fro
   
 The following illustration depicts this scenario.  
   
-![dns_policy_tod1media/dns_policy_tod1.png)  
+![](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
   
 ### <a name="bkmk_works1"></a>How Intelligent DNS Responses Based on Time of Day Works  
   

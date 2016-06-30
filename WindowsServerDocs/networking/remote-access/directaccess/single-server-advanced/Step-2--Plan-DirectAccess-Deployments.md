@@ -1,5 +1,5 @@
 ---
-title: Step 2: Plan DirectAccess Deployments
+title: Step 2 Plan DirectAccess Deployments
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
-author: vhorne
+author: coreyp
 ---
-# Step 2: Plan DirectAccess Deployments
+# Step 2 Plan DirectAccess Deployments
 
 >Applies To: Windows Server Technical Preview
 

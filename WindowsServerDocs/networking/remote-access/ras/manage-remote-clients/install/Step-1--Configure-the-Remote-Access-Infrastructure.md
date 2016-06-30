@@ -1,5 +1,5 @@
 ---
-title: Step 1: Configure the Remote Access Infrastructure
+title: Step 1 Configure the Remote Access Infrastructure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
 author: coreyp
 ---
-# Step 1: Configure the Remote Access Infrastructure
+# Step 1 Configure the Remote Access Infrastructure
 
 >Applies To: Windows Server Technical Preview
 
@@ -334,7 +334,7 @@ An administrator can manually link the DirectAccess Group Policy Objects to an o
   
 4.  If the GPOs are already linked to an OU, the links will not be removed, but they are not linked to the domain.  
   
-5.  For server GPOs, the OU must contain the server computer object—otherwise, the GPO will be linked to the root of the domain.  
+5.  For server GPOs, the OU must contain the server computer objectâ€”otherwise, the GPO will be linked to the root of the domain.  
   
 6.  If the OU has not been linked previously by running the DirectAccess Setup Wizard, after the configuration is complete, the administrator can link the DirectAccess GPOs to the required OUs, and remove the link to the domain.  
   

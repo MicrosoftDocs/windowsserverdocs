@@ -103,8 +103,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
     > -   The data volume should be no larger than 10TB (for a first test, we recommend no more than 1TB, in order to lower initial replication sync times).  
     > -   The log volume must be at least 8GB and may need to be larger based on log requirements.  
     > -   The File Server role is only necessary for Test-SRTopology to operate, as it opens the necessary firewall ports for testing.
-
-
+    
     - **For JBOD enclosures:**  
 
         1.  Ensure that each server can see that site's storage enclosures only and that the SAS connections are correctly configured.  
@@ -119,7 +118,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
     - **For FC SAN storage:**  
 
-        1.  Ensure that each cluster can see that site�s storage enclosures only and that you have properly zoned the hosts.   
+        1.  Ensure that each cluster can see that site's storage enclosures only and that you have properly zoned the hosts.   
 
         2.  Provision the storage using your vendor documentation.  
 
@@ -133,21 +132,16 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
     For example, to validate the proposed nodes that each have a **F:** and **G:** volume and run the test for 30 minutes:  
 
-        MD c:temp  
+        MD c:\temp  
 
         Test-SRTopology -SourceComputerName SR-SRV05 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV06 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:temp  
 
-
-
-
-      > [!IMPORTANT]
+    > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period, consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run  [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
-        >   
+      >
+      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test` 
 
-        > Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.  
-
-
- 10. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
+10. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
     ![](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)  
 

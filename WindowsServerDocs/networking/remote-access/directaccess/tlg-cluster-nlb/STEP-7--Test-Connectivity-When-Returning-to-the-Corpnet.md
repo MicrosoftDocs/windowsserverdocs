@@ -1,5 +1,5 @@
 ---
-title: STEP 7: Test Connectivity When Returning to the Corpnet
+title: STEP 7 Test Connectivity When Returning to the Corpnet
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 5a7252d0-6db8-4a9d-98ee-75082ecd2929
 author: coreyp
 ---
-# STEP 7: Test Connectivity When Returning to the Corpnet
+# STEP 7 Test Connectivity When Returning to the Corpnet
 
 >Applies To: Windows Server Technical Preview
 

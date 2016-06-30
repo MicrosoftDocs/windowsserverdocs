@@ -1,5 +1,5 @@
 ---
-title: Step 2: Configure the Remote Access Server
+title: Step 2 Configure the Remote Access Server
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 author: coreyp
 ---
-# Step 2: Configure the Remote Access Server
+# Step 2 Configure the Remote Access Server
 
 >Applies To: Windows Server Technical Preview
 

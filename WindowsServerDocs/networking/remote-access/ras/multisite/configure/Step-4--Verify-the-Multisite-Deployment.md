@@ -1,5 +1,5 @@
 ---
-title: Step 4: Verify the Multisite Deployment
+title: Step 4 Verify the Multisite Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 345b676a-a397-4d51-9973-8b25bc05fa55
 author: coreyp
 ---
-# Step 4: Verify the Multisite Deployment
+# Step 4 Verify the Multisite Deployment
 
 >Applies To: Windows Server Technical Preview
 
@@ -29,7 +29,7 @@ This topic describes how to verify that you have correctly configured your Remot
   
     You should be able to access all corporate resources through each multisite server.  
   
-4.  Connect a  Windows 7®  client computer to the corporate network and obtain the group policy.  
+4.  Connect a  Windows 7Â®  client computer to the corporate network and obtain the group policy.  
   
 5.  Connect the  Windows 7  client computer to the external network and attempt to access internal resources.  
   

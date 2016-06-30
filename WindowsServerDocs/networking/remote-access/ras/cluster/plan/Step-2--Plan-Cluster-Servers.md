@@ -1,5 +1,5 @@
 ---
-title: Step 2: Plan Cluster Servers
+title: Step 2 Plan Cluster Servers
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc
 author: coreyp
 ---
-# Step 2: Plan Cluster Servers
+# Step 2 Plan Cluster Servers
 
 >Applies To: Windows Server Technical Preview
 
@@ -34,19 +34,19 @@ For each server that will be added to the cluster, plan IP address and domain se
   
 3.  Each server in the cluster should have the same number of network adapters in use for the DirectAccess deployment.  
   
-For more information about configuring server settings, see the single server planning guide —[Step 1: Configure the Remote Access infrastructure](assetId:///0064848b-b82e-4397-8fde-0c660c596076).  
+For more information about configuring server settings, see the single server planning guide â€”[Step 1: Configure the Remote Access infrastructure](assetId:///0064848b-b82e-4397-8fde-0c660c596076).  
   
 When you load balance the cluster using Windows NLB the following Windows NLB settings are applied:  
   
-1.  Operation mode—Unicast. This can be changed to multicast using NLB Manager. This setting cannot be modified in the Remote Access Management console.  
+1.  Operation modeâ€”Unicast. This can be changed to multicast using NLB Manager. This setting cannot be modified in the Remote Access Management console.  
   
-2.  Load weight factor—Defined as Equal, where all cluster servers have equal load.  
+2.  Load weight factorâ€”Defined as Equal, where all cluster servers have equal load.  
   
-3.  Filtering mode—Traffic will be load balanced across multiple hosts.  
+3.  Filtering modeâ€”Traffic will be load balanced across multiple hosts.  
   
-4.  Affinity—Single affinity is defined.  
+4.  Affinityâ€”Single affinity is defined.  
   
-5.  Protocols—Both  
+5.  Protocolsâ€”Both  
   
 ## <a name="BKMK_Links"></a>See also  
   

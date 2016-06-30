@@ -1,5 +1,5 @@
 ---
-title: STEP 10: Install and Configure 2-EDGE1
+title: STEP 10 Install and Configure 2-EDGE1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,25 +11,25 @@ ms.topic: article
 ms.assetid: d98d6f7a-a2e6-45b1-9c63-08e2986a5c03
 author: coreyp
 ---
-# STEP 10: Install and Configure 2-EDGE1
+# STEP 10 Install and Configure 2-EDGE1
 
 >Applies To: Windows Server Technical Preview
 
 2-EDGE1 configuration consists of the following:  
   
--   [Install the operating system on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#installOS)—Install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012 on 2-EDGE1.  
+-   [Install the operating system on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#installOS)â€”Install Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2 or Windows ServerÂ® 2012 on 2-EDGE1.  
   
--   [Configure TCP/IP properties](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#tcpip)—Configure 2-EDGE1 with static addresses on both network interfaces.  
+-   [Configure TCP/IP properties](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#tcpip)â€”Configure 2-EDGE1 with static addresses on both network interfaces.  
   
--   [Configure routing between subnets](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#routing)—To enable communication between the Corpnet and 2-Corpnet subnets, you must configure routing.  
+-   [Configure routing between subnets](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#routing)â€”To enable communication between the Corpnet and 2-Corpnet subnets, you must configure routing.  
   
--   [Join 2-EDGE1 to the CORP2 domain](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#Join)—Join 2-EDGE1 to the corp2.corp.contoso.com domain.  
+-   [Join 2-EDGE1 to the CORP2 domain](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#Join)â€”Join 2-EDGE1 to the corp2.corp.contoso.com domain.  
   
--   [Obtain certificates on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#certs)—Certificates are required for the IPsec connection between DirectAccess clients and the Remote Access server, and to authenticate the IP-HTTPS listener when clients connect over HTTPS.  
+-   [Obtain certificates on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#certs)â€”Certificates are required for the IPsec connection between DirectAccess clients and the Remote Access server, and to authenticate the IP-HTTPS listener when clients connect over HTTPS.  
   
--   [Provide access to CORP\User1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#Access)—The user CORP\User1 is the Remote Access administrator. To enable this user to make changes to 2-EDGE1 from EDGE1, you must grant access to the user.  
+-   [Provide access to CORP\User1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#Access)â€”The user CORP\User1 is the Remote Access administrator. To enable this user to make changes to 2-EDGE1 from EDGE1, you must grant access to the user.  
   
--   [Install the Remote Access role on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#InstallDA)—To enable a multisite deployment, you must install the Remote Access role on 2-EDGE1.  
+-   [Install the Remote Access role on 2-EDGE1](assetId:///1938c4f3-ca96-475d-9f2e-6bea3b7a4130#InstallDA)â€”To enable a multisite deployment, you must install the Remote Access role on 2-EDGE1.  
   
 2-EDGE1 must have two network adapters installed.  
   

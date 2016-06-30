@@ -1,5 +1,5 @@
 ---
-title: Step 2: Configure the RADIUS Server
+title: Step 2 Configure the RADIUS Server
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 0326818f-9144-496c-b946-f82be4eefbd3
 author: coreyp
 ---
-# Step 2: Configure the RADIUS Server
+# Step 2 Configure the RADIUS Server
 
 >Applies To: Windows Server Technical Preview
 

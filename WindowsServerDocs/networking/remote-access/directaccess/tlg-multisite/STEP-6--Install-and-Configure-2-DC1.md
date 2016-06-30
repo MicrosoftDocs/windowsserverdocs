@@ -1,5 +1,5 @@
 ---
-title: STEP 6: Install and Configure 2-DC1
+title: STEP 6 Install and Configure 2-DC1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
 author: coreyp
 ---
-# STEP 6: Install and Configure 2-DC1
+# STEP 6 Install and Configure 2-DC1
 
 >Applies To: Windows Server Technical Preview
 
@@ -36,7 +36,7 @@ author: coreyp
 -   [Force replication between DC1 and 2-DC1](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#replication)  
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on 2-DC1  
-First, install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012.  
+First, install Windows ServerÂ® 2016 Technical Preview, Windows ServerÂ® 2012 R2 or Windows ServerÂ® 2012.  
   
 #### To install the operating system on 2-DC1  
   
