@@ -1,5 +1,5 @@
 ---
-title: Step 1: Plan DirectAccess Infrastructure
+title: Step 1 Plan DirectAccess Infrastructure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -34,9 +34,9 @@ The planning tasks do not need to be done in a specific order.
   
 1.  Identify the network adapter topology you want to use. Remote Access can be set up with either of the following:  
   
-    -   With two network adapters—Either at the edge with one network adapter connected to the Internet and the other to the internal network, or behind a NAT, firewall, or router device, with one network adapter connected to a perimeter network and the other to the internal network.  
+    -   With two network adapters -Either at the edge with one network adapter connected to the Internet and the other to the internal network, or behind a NAT, firewall, or router device, with one network adapter connected to a perimeter network and the other to the internal network.  
   
-    -   Behind a NAT device with one network adapter—The Remote Access server is installed behind a NAT device, and the single network adapter is connected to the internal network.  
+    -   Behind a NAT device with one network adapter -The Remote Access server is installed behind a NAT device, and the single network adapter is connected to the internal network.  
   
 2.  Identity your IP addressing requirements:  
   
@@ -63,9 +63,9 @@ The planning tasks do not need to be done in a specific order.
 ### <a name="ConfigFirewalls"></a>Plan firewall requirements  
 If the Remote Access server is behind an edge firewall, the following exceptions will be required for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
   
--   6to4 traffic—IP Protocol 41 inbound and outbound.  
+-   6to4 traffic -IP Protocol 41 inbound and outbound.  
   
--   IP-HTTPS—Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound.  
+-   IP-HTTPS -Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound.  
   
 -   If you are deploying Remote Access with a single network adapter, and installing the network location server on the Remote Access server, TCP port 62000 should also be exempted.  
   
@@ -77,24 +77,24 @@ The following exceptions will be required for Remote Access traffic when the Rem
   
 When using additional firewalls, apply the following internal network firewall exceptions for Remote Access traffic:  
   
--   ISATAP—Protocol 41 inbound and outbound  
+-   ISATAP -Protocol 41 inbound and outbound  
   
 -   TCP/UDP for all IPv4/IPv6 traffic  
   
 ### <a name="bkmk_1_2_CAs_and_certs"></a>Plan certificate requirements  
 Certificate requirements for IPsec include a computer certificate used by DirectAccess client computers when establishing the IPsec connection between the client and the Remote Access server, and a computer certificate used by Remote Access servers to establish IPsec connections with DirectAccess clients. For DirectAccess in Windows Server 2012 the use of these IPsec certificates is not mandatory. The Enable DirectAccess Wizard configures the Remote Access server to act as a Kerberos proxy to perform IPsec authentication without requiring certificates.  
   
-1.  **IP-HTTPS server**—When you configure Remote Access, the Remote Access server is automatically configured to act as the IP-HTTPS web listener. The IP-HTTPS site requires a website certificate, and client computers must be able to contact the certificate revocation list (CRL) site for the certificate. The Enable DirectAccess wizard tries to use the SSTP VPN certificate. If SSTP is not configured, it checks if a certificate for IP-HTTPS is present in the machine personal store. If none is available, it automatically creates a self-signed certificate.  
+1.  **IP-HTTPS server** -When you configure Remote Access, the Remote Access server is automatically configured to act as the IP-HTTPS web listener. The IP-HTTPS site requires a website certificate, and client computers must be able to contact the certificate revocation list (CRL) site for the certificate. The Enable DirectAccess wizard tries to use the SSTP VPN certificate. If SSTP is not configured, it checks if a certificate for IP-HTTPS is present in the machine personal store. If none is available, it automatically creates a self-signed certificate.  
   
-2.  **Network location server**—The network location server is a website used to detect whether      client computers are located in the corporate network. The network location server requires a       website certificate. DirectAccess clients must be able to contact the CRL site for the        certificate. The Enable DirectAccess wizard checks if a certificate for Network Location Server      is present in  the machine personal store. If not present, it automatically creates a self-signed       certificate.  
+2.  **Network location server** -The network location server is a website used to detect whether      client computers are located in the corporate network. The network location server requires a       website certificate. DirectAccess clients must be able to contact the CRL site for the        certificate. The Enable DirectAccess wizard checks if a certificate for Network Location Server      is present in  the machine personal store. If not present, it automatically creates a self-signed       certificate.  
   
 The certification requirements for each of these are summarized in the following table:  
   
 |IPsec authentication|IP-HTTPS server|Network location server|  
 |------------------------|--------------------|---------------------------|  
-|An internal CA is required to issue computer certificates to the Remote Access server and clients for IPsec authentication when you don't use the Kerberos proxy for authentication|Public CA—It is recommended to use a public CA to issue the IP-HTTPS certificate, this ensures that the CRL distribution point is available externally.|Internal CA—You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point is highly available from the internal network.|  
-||Internal CA—You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Self-signed certificate—You can use a self-signed certificate for the network location server website; however, you cannot use a self-signed certificate in multisite deployments.|  
-||Self-signed certificate—You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally. A self-signed certificate cannot be used in a multisite deployment.||  
+|An internal CA is required to issue computer certificates to the Remote Access server and clients for IPsec authentication when you don't use the Kerberos proxy for authentication|Public CA -It is recommended to use a public CA to issue the IP-HTTPS certificate, this ensures that the CRL distribution point is available externally.|Internal CA -You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point is highly available from the internal network.|  
+||Internal CA -You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Self-signed certificate -You can use a self-signed certificate for the network location server website; however, you cannot use a self-signed certificate in multisite deployments.|  
+||Self-signed certificate -You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally. A self-signed certificate cannot be used in a multisite deployment.||  
   
 #### <a name="bkmk_website_cert_IPHTTPS"></a>Plan certificates for IP-HTTPS  
 The Remote Access server acts as an IP-HTTPS listener, and you must manually install an HTTPS website certificate on the server. Note the following when planning:  
@@ -132,7 +132,7 @@ When planning for the network location server website, note the following:
 #### Plan DNS requirements  
 In a Remote Access deployment, DNS is required for the following:  
   
--   **DirectAccess client requests**—DNS is used to resolve requests from DirectAccess client computers that are not located on the internal network. DirectAccess clients attempt to connect to the DirectAccess network location server in order to determine whether they are located on the Internet, or on the corporate network: If the connection is successful, then clients are determined to be on the intranet and DirectAccess is not used, and client requests are resolved using the DNS server configured on the network adapter of the client computer. If the connection does not succeed, clients are assumed to be on the Internet. DirectAccess clients will use the name resolution policy table (NRPT) to determine which DNS server to use when resolving name requests. You can specify that clients should use DirectAccess DNS64 to resolve names, or an alternative internal DNS server. When performing name resolution, the NRPT is used by DirectAccess clients to identify how to handle a request. Clients request an FQDN or single-label name such as http://internal. If a single-label name is requests, a DNS suffix is appended to make an FQDN. If the DNS query matches an entry in the NRPT, and DNS4 or an intranet DNS server is specified for the entry, then the query is sent for name resolution using the specified server. If a match exists but no DNS server is specified, then this indicates an exemption rule and normal name resolution is applied.  
+-   **DirectAccess client requests** -DNS is used to resolve requests from DirectAccess client computers that are not located on the internal network. DirectAccess clients attempt to connect to the DirectAccess network location server in order to determine whether they are located on the Internet, or on the corporate network: If the connection is successful, then clients are determined to be on the intranet and DirectAccess is not used, and client requests are resolved using the DNS server configured on the network adapter of the client computer. If the connection does not succeed, clients are assumed to be on the Internet. DirectAccess clients will use the name resolution policy table (NRPT) to determine which DNS server to use when resolving name requests. You can specify that clients should use DirectAccess DNS64 to resolve names, or an alternative internal DNS server. When performing name resolution, the NRPT is used by DirectAccess clients to identify how to handle a request. Clients request an FQDN or single-label name such as http://internal. If a single-label name is requests, a DNS suffix is appended to make an FQDN. If the DNS query matches an entry in the NRPT, and DNS4 or an intranet DNS server is specified for the entry, then the query is sent for name resolution using the specified server. If a match exists but no DNS server is specified, then this indicates an exemption rule and normal name resolution is applied.  
   
     Note that when a new suffix is added to the NRPT in the Remote Access Management console, the default DNS servers for the suffix can be automatically discovered by clicking the **Detect** button. Auto detection works as follows:  
   
@@ -140,21 +140,21 @@ In a Remote Access deployment, DNS is required for the following:
   
     2.  If the corporate network is IPv6-based, the default address is the IPv6 address of DNS servers in the corporate network.  
   
--   **Infrastructure servers**—  
+-   **Infrastructure servers**  
   
-    1.  **Network location server**—DirectAccess clients attempt to reach the network location server to determine if they are on the internal network. Clients on the internal network must be able to resolve the name of the network location server, but must be prevented from resolving the name when they are located on the Internet. To ensure this occurs, by default, the FQDN of the network location server is added as an exemption rule to the NRPT. In addition, when you configure Remote Access, the following rules are created automatically:  
+    1.  **Network location server** -DirectAccess clients attempt to reach the network location server to determine if they are on the internal network. Clients on the internal network must be able to resolve the name of the network location server, but must be prevented from resolving the name when they are located on the Internet. To ensure this occurs, by default, the FQDN of the network location server is added as an exemption rule to the NRPT. In addition, when you configure Remote Access, the following rules are created automatically:  
   
         1.  A DNS suffix rule for root domain or the domain name of the Remote Access server, and the IPv6 addresses corresponding to the intranet DNS servers configured on the Remote Access server. For example, if the Remote Access server is a member of the corp.contoso.com domain, a rule is created for the corp.contoso.com DNS suffix.  
   
         2.  An exemption rule for the FQDN of the network location server. For example, if the network location server URL is https://nls.corp.contoso.com, an exemption rule is created for the FQDN nls.corp.contoso.com.  
   
-        **IP-HTTPS server**—The Remote Access server acts as an IP-HTTPS listener and uses its server certificate to authenticate to IP-HTTPS clients. The IP-HTTPS name must be resolvable by DirectAccess clients using public DNS servers.  
+        **IP-HTTPS server**â€”The Remote Access server acts as an IP-HTTPS listener and uses its server certificate to authenticate to IP-HTTPS clients. The IP-HTTPS name must be resolvable by DirectAccess clients using public DNS servers.  
   
-        **Connectivity verifiers**—Remote Access creates a default web probe that is used by DirectAccess client computers use to verify connectivity to the internal network. To ensure the probe works as expected the following names must be registered manually in DNS:  
+        **Connectivity verifiers**â€”Remote Access creates a default web probe that is used by DirectAccess client computers use to verify connectivity to the internal network. To ensure the probe works as expected the following names must be registered manually in DNS:  
   
-        1.  directaccess-webprobehost—should resolve to the internal IPv4 address of the Remote Access server, or to the IPv6 address in an IPv6-only environment.  
+        1.  directaccess-webprobehostâ€”should resolve to the internal IPv4 address of the Remote Access server, or to the IPv6 address in an IPv6-only environment.  
   
-        2.  directaccess-corpconnectivityhost—should resolve to localhost (loopback) address. A and AAAA record should be created, A record with value 127.0.0.1 and AAAA record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the cmdlet get-netnattransitionconfiguration.  
+        2.  directaccess-corpconnectivityhostâ€”should resolve to localhost (loopback) address. A and AAAA record should be created, A record with value 127.0.0.1 and AAAA record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the cmdlet get-netnattransitionconfiguration.  
   
             > [!NOTE]  
             > This is valid only in an IPv4-only environment. In an IPv4+IPv6, or IPv6-only environment, only a AAAA record should be created with the loopback IP address ::1.  
@@ -168,13 +168,13 @@ In a Remote Access deployment, DNS is required for the following:
 ### <a name="bkmk_1_6_AD"></a>Plan Active Directory  
 Remote Access uses Active Directory and Active Directory Group Policy Objects as follows:  
   
--   **Authentication**—Active Directory is used for authentication. The intranet tunnel uses Kerberos authentication for the user to access internal resources.  
+-   **Authentication** -Active Directory is used for authentication. The intranet tunnel uses Kerberos authentication for the user to access internal resources.  
   
--   **Group policy objects**—Remote Access gathers configuration settings into group policy objects that are applied to Remote Access servers, clients, and internal application servers.  
+-   **Group policy objects** -Remote Access gathers configuration settings into group policy objects that are applied to Remote Access servers, clients, and internal application servers.  
   
--   **Security groups**—Remote Access uses security groups to gather together and identify DirectAccess client computers, and Remote Access servers. The group policies are applied to the required security group.  
+-   **Security groups** -Remote Access uses security groups to gather together and identify DirectAccess client computers, and Remote Access servers. The group policies are applied to the required security group.  
   
--   **Extended IPsec policies**—Remote Access can use IPsec authentication and encryption between clients and the Remote Access server. You can extend IPsec authentication and encryption through to specified internal application servers. To do this, see [Deploying Advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   **Extended IPsec policies** -Remote Access can use IPsec authentication and encryption between clients and the Remote Access server. You can extend IPsec authentication and encryption through to specified internal application servers. To do this, see [Deploying Advanced Remote Access](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
   
 **Active Directory Requirements**  
   
@@ -201,11 +201,11 @@ When planning Active Directory for a Remote Access deployment, the following is 
 ### <a name="bkmk_1_7_GPOs"></a>Plan Group Policy Objects  
 DirectAccess settings configured when you configure Remote Access are collected into Group Policy Objects (GPO). Three different GPOs are populated with DirectAccess settings, and distributed as follows:  
   
--   **DirectAccess client GPO**—This GPO contains client settings, including IPv6 transition technology settings, NRPT entries, and Windows Firewall with Advanced Security connection security rules. The GPO is applied to the security groups specified for the client computers.  
+-   **DirectAccess client GPO** -This GPO contains client settings, including IPv6 transition technology settings, NRPT entries, and Windows Firewall with Advanced Security connection security rules. The GPO is applied to the security groups specified for the client computers.  
   
--   **DirectAccess server GPO**—This GPO contains the DirectAccess configuration settings that are applied to any server configured as a Remote Access server in your deployment. It also contains Windows Firewall with Advanced Security connection security rules.  
+-   **DirectAccess server GPO** -This GPO contains the DirectAccess configuration settings that are applied to any server configured as a Remote Access server in your deployment. It also contains Windows Firewall with Advanced Security connection security rules.  
   
--   **Application servers GPO**—This GPO contains settings for selected application servers to which you optionally extend authentication and encryption from DirectAccess clients. If authentication and encryption are not extended then this GPO is not used.  
+-   **Application servers GPO** -This GPO contains settings for selected application servers to which you optionally extend authentication and encryption from DirectAccess clients. If authentication and encryption are not extended then this GPO is not used.  
   
 GPOs are created automatically by the Enable DirectAccess Wizard and a default name is specified for each GPO.  
   
@@ -214,9 +214,9 @@ GPOs are created automatically by the Enable DirectAccess Wizard and a default n
   
 GPOs can be configured in two ways:  
   
-1.  **Automatically**—You can specify that they are created automatically. A default name is specified for each GPO.  
+1.  **Automatically** -You can specify that they are created automatically. A default name is specified for each GPO.  
   
-2.  **Manually**—You can use GPOs that have been predefined by the Active Directory        administrator.  
+2.  **Manually** -You can use GPOs that have been predefined by the Active Directory        administrator.  
   
 Note that once DirectAccess is configured to use specific GPOs, it cannot be configured to use different GPOs.  
   
