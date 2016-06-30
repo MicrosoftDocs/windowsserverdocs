@@ -20,14 +20,14 @@ The following feature distribution map indicates the features in each version. T
   
 **Table legend**  
   
--   **Built in** – BIS are included as part of this FreeBSD release.  
+-   **Built in** ï¿½ BIS are included as part of this FreeBSD release.  
   
 -   **v** - Feature available  
   
 -   (*blank*) - Feature not available  
   
   
-|**Feature**|**Windows Server operating system version**|**10.3**|**10.2**|**10 – 10.1**|**9.1 – 9.3**|**8.4**|  
+|**Feature**|**Windows Server operating system version**|**10.3**|**10.2**|**10 ï¿½ 10.1**|**9.1 ï¿½ 9.3**|**8.4**|  
 |-|-|-|-|-|-|  
 |**Availability**||Built in|Built in|Built in|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 1|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 2|  
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v** Note 3|**v** Note 3|  
@@ -47,11 +47,11 @@ The following feature distribution map indicates the features in each version. T
 |SCSI WWN|2016, 2012 R2||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||| 
 |Configuration of MMIO gap|2016, 2012 R2|**v**|**v**|**v**|**v**|**v**|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|||||| 
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012||||||  
+|Dynamic Memory ï¿½ Hot Add|2016, 2012 R2, 2012|||||| 
+|Dynamic Memory ï¿½ Ballooning|2016, 2012 R2, 2012||||||  
 |Manual Memory Hot Add|2016||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||||||
-|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|||||||  
+|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2||||||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||| 
 |Key/value pair|2016, 2012 R2, 2012, 2008 R2|**v** Note 7|**v** Note 7|**v** Note 6, 7|**v** Note 7|**v** Note 7|  
 |Non-Maskable Interrupt|2016, 2012 R2|**v**|**v**|**v**|**v**|**v**|   
@@ -60,7 +60,7 @@ The following feature distribution map indicates the features in each version. T
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2||||||  
 |Hyper-V Sockets|2016||||||  
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|||||||  
-|Boot using UEFI|2016, 2012 R2|||||||  
+|Boot using UEFI|2016, 2012 R2||||||  
 |Secure boot|2016||||||| 
   
 ## <a name="BKMK_notes"></a>Notes  

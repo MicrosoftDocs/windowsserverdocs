@@ -96,7 +96,7 @@ The Fast IDE driver conflicts with the Hyper-V IDE driver which results in the C
 ## <a name="BKMK_GEOM"></a>Create GEOM labels on FreeBSD 8.x  
 During startup, device nodes are created as new devices are discovered. This can mean that device names can change when new devices are added. If you get a ROOT MOUNT ERROR during startup, you should create permanent GEOM labels for each IDE partition to avoid conflicts and changes.  
   
-1.  Reboot the system into single user mode. This can be accomplished by selecting boot menu option 4, or performing a ‘boot -s’ from the boot prompt. Alternatively, you can boot a specific kernel by specifying “boot -s”. Note the ordering of the last command.  
+1.  Reboot the system into single user mode. This can be accomplished by selecting boot menu option 4, or performing a 'boot -s' from the boot prompt. Alternatively, you can boot a specific kernel by specifying "boot -s". Note the ordering of the last command.  
   
 2.  In Single user mode, create GEOM labels for each of the IDE disk partitions listed in your fstab (both root and swap). For example:  
   

@@ -182,11 +182,11 @@ The existing ~Set-ClusterQuorum~ PowerShell command has new additional parameter
 
 You can configure Cloud Witness using the following PowerShell command:  
 
-    Set-ClusterQuorum â€“CloudWitness â€“AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>  
+    Set-ClusterQuorum â€"CloudWitness â€"AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>  
 
 In case you need to use a different endpoint (rare):  
 
-    Set-ClusterQuorum â€“CloudWitness â€“AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>  
+    Set-ClusterQuorum â€"CloudWitness â€"AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>  
 
 
 ### Azure Storage Account considerations with Cloud Witness  
