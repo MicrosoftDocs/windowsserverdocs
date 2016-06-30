@@ -1,4 +1,4 @@
----
+﻿---
 title: Configuring Alternate Login ID
 ms.custom: 
   - AD
@@ -112,12 +112,12 @@ The following performance counters have been added to measure the performance of
 The following are various error cases and corresponding impact on a user’s sign-in experience with events logged by AD FS:
 
 
-|-|-|-|
-|**Error Cases**|**Impact on Sign-in Experience**|**Event**|
-|Unable to get a value for SAMAccountName for the user object|Login failure|Event ID 364 with exception message MSIS8012: Unable to find samAccountName for the user: '{0}'.|
-|The CanonicalName attribute is not accessible|Login failure|Event ID 364 with exception message MSIS8013: CanonicalName: '{0}' of the user:'{1}' is in bad format.|
-|Multiple user objects are found in one forests|Login failure|Event ID 364 with exception message MSIS8015: Found multiple user accounts with identity '{0}' in forest '{1}' with identities: {2}|
-|Multiple user objects are found across multiple forests|Login failure|Event ID 364 with exception message MSIS8014: Found multiple user accounts with identity '{0}' in forests: {1}|
+**Error Cases**|**Impact on Sign-in Experience**|**Event**|
+---------|---------|---------
+Unable to get a value for SAMAccountName for the user object|Login failure|Event ID 364 with exception message MSIS8012: Unable to find samAccountName for the user: '{0}'.|
+The CanonicalName attribute is not accessible|Login failure|Event ID 364 with exception message MSIS8013: CanonicalName: '{0}' of the user:'{1}' is in bad format.|
+Multiple user objects are found in one forests|Login failure|Event ID 364 with exception message MSIS8015: Found multiple user accounts with identity '{0}' in forest '{1}' with identities: {2}|
+Multiple user objects are found across multiple forests|Login failure|Event ID 364 with exception message MSIS8014: Found multiple user accounts with identity '{0}' in forests: {1}|
 
 ## See Also
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)

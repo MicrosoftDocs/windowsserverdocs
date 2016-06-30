@@ -76,7 +76,7 @@ Virtual machine networking can be a complex subject. And there are several new v
 4.  Create a virtual switch by using the [New-VMSwitch](http://technet.microsoft.com/library/hh848455.aspx) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.  
   
     ```  
-    New-VMSwitch �name ExternalSwitch  �NetAdapterName Ethernet �AllowManagementOS $true  
+    New-VMSwitch -name ExternalSwitch  -NetAdapterName Ethernet -AllowManagementOS $true  
     ```  
   
     To create an internal switch, run the following command.  
@@ -91,7 +91,8 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private  
     ```  
   
-For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016 Technical Preview, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;]((../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016 Technical Preview, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../../networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
+
   
 ## Next step  
 [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)  

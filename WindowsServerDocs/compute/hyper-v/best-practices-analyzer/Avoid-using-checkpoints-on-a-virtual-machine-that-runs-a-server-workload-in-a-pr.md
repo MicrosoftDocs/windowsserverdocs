@@ -38,7 +38,7 @@ author: KBDAzure
   
 *Available space may run out on the physical disk that stores the checkpoints files. If this occurs, no additional disk operations can be performed on the physical storage. Any virtual machine that relies on the physical storage could be affected.*  
   
-If physical disk space runs out, any running virtual machine that has checkpoints or virtual hard disks stored on that disk may be paused automatically. Hyper-V Manager shows the status of these virtual machines as “paused-critical”.  
+If physical disk space runs out, any running virtual machine that has checkpoints or virtual hard disks stored on that disk may be paused automatically. Hyper-V Manager shows the status of these virtual machines as "paused-critical".  
   
 ## Resolution  
   
