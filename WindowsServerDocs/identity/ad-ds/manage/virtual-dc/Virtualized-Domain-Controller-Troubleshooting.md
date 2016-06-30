@@ -1,4 +1,4 @@
----
+﻿---
 title: Virtualized Domain Controller Troubleshooting
 ms.custom: 
   - AD
@@ -164,11 +164,7 @@ To review the event logs on a server running a Server Core installation:
   
 -   Run PowerShell cmdlet Get-WinEvent locally  
   
-<<<<<<< HEAD
 -   If you have enabled the Windows Advanced Firewall rules for the "Remote Event Log Management" groups (or equivalent ports) to allow inbound communication, you can manage the event log remotely using Eventvwr.exe, wevtutil.exe, or Get-Winevent. This can be done on Server Core installation using NETSH.exe, Group Policy, or the new Set-NetFirewallRule cmdlet in Windows PowerShell 3.0.  
-=======
--   If you have enabled the Windows Advanced Firewall rules for the �Remote Event Log Management� groups (or equivalent ports) to allow inbound communication, you can manage the event log remotely using Eventvwr.exe, wevtutil.exe, or Get-Winevent. This can be done on Server Core installation using NETSH.exe, Group Policy, or the new Set-NetFirewallRule cmdlet in Windows PowerShell 3.0.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 > [!WARNING]  
 > Do not attempt to add the graphical shell back to the computer while it is in DSRM. Windows servicing stack (CBS) cannot operate correctly while in Safe Mode or DSRM. Attempts to add features or roles while in DSRM will not complete and leave the computer in an unstable state until it is booted normally. Since a virtualized domain controller clone in DSRM cannot boot normally, and should not be booted normally under most circumstances, it is impossible to safely add the graphical shell. Doing so is unsupported and may leave you with an unusable server.  
@@ -762,11 +758,7 @@ The following are common issues seen during the Windows Server 2012 development 
 |-|-|  
 |**Issue**|**Cloning fails, boots into DSRM, general networking errors**|  
 |**Symptoms**|Clone boots into Directory Services Repair Mode. There are general networking errors.|  
-<<<<<<< HEAD
 |Resolution and Notes|Ensure that the new clone does not have a duplicate static MAC address assigned from the source domain controller; you can see if a VM uses static MAC addresses by running this command on the hypervisor host for both the source and clone virtual machines:<br /><br />Get-VM -VMName *test-vm* &#124; Get-VMNetworkAdapter &#124; fl *<br /><br />Change the MAC address to a unique static address or switch to using dynamic MAC addresses.<br /><br />Described in KB 2742844|  
-=======
-|Resolution and Notes|Ensure that the new clone does not have a duplicate static MAC address assigned from the source domain controller; you can see if a VM uses static MAC addresses by running this command on the hypervisor host for both the source and clone virtual machines:<br /><br />Get-VM �VMName *test-vm* &#124; Get-VMNetworkAdapter &#124; fl *<br /><br />Change the MAC address to a unique static address or switch to using dynamic MAC addresses.<br /><br />Described in KB 2742844|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 |||  
 |-|-|  
@@ -784,11 +776,7 @@ The following are common issues seen during the Windows Server 2012 development 
 |-|-|  
 |**Issue**|**Cloning fails, boots into DSRM, general networking errors**|  
 |**Symptoms**|Clone boots into Directory Services Restore Mode. There are general networking errors.|  
-<<<<<<< HEAD
 |**Resolution and Notes**|Ensure that the new clone does not have a duplicate static MAC address assigned from the source domain controller; you can see if a VM uses static MAC addresses by running this command on the Hyper-V host for both the source and clone virtual machines:<br /><br />Get-VM -VMName *test-vm* &#124; Get-VMNetworkAdapter &#124; fl *<br /><br />Change the MAC address to a unique static address or switch to using dynamic MAC addresses.<br /><br />Described in KB 2742844.|  
-=======
-|**Resolution and Notes**|Ensure that the new clone does not have a duplicate static MAC address assigned from the source domain controller; you can see if a VM uses static MAC addresses by running this command on the Hyper-V host for both the source and clone virtual machines:<br /><br />Get-VM �VMName *test-vm* &#124; Get-VMNetworkAdapter &#124; fl *<br /><br />Change the MAC address to a unique static address or switch to using dynamic MAC addresses.<br /><br />Described in KB 2742844.|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 |||  
 |-|-|  
@@ -840,11 +828,7 @@ The Directory Services log contains the majority of event-based cloning operatio
 |**Event ID**|**Source**|**Message**|  
 |**2160**|ActiveDirectory_DomainService|The local Active Directory Domain Services has found a virtual domain controller cloning configuration file.<br /><br />The virtual domain controller cloning configuration file is found at:<br /><br />*<path>*\DCCloneConfig.xml<br /><br />The existence of the virtual domain controller cloning configuration file indicates that the local virtual domain controller is a clone of another virtual domain controller. The Active Directory Domain Services will start to clone itself.|  
 |**2191**|ActiveDirectory_DomainService|Active Directory Domain Services set the following registry value to disable DNS updates.<br /><br />Registry Key:<br /><br />SYSTEM\CurrentControlSet\Services\Netlogon\Parameters<br /><br />Registry Value:<br /><br />UseDynamicDns<br /><br />Registry Value data:<br /><br />0<br /><br />During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed.|  
-<<<<<<< HEAD
 |**2191**|ActiveDirectory_DomainService|Active Directory Domain Services set the following registry value to disable DNS updates.<br /><br />Registry Key:<br /><br />SYSTEM\CurrentControlSet\Services\Dnscache\Parameters<br /><br />Registry Value:<br /><br />RegistrationEnabled<br /><br />Registry Value data:<br /><br />0<br /><br />During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed.<br /><br />"Information 2/7/2012 3:12:49 PM Microsoft-Windows-ActiveDirectory_DomainService 2191 Internal Configuration" Active Directory Domain Services set the following registry value to disable DNS updates.<br /><br />Registry Key:<br /><br />SYSTEM\CurrentControlSet\Services\Tcpip\Parameters<br /><br />Registry Value:<br /><br />DisableDynamicUpdate<br /><br />Registry Value data:<br /><br />1<br /><br />During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed.|  
-=======
-|**2191**|ActiveDirectory_DomainService|Active Directory Domain Services set the following registry value to disable DNS updates.<br /><br />Registry Key:<br /><br />SYSTEM\CurrentControlSet\Services\Dnscache\Parameters<br /><br />Registry Value:<br /><br />RegistrationEnabled<br /><br />Registry Value data:<br /><br />0<br /><br />During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed.<br /><br />�Information 2/7/2012 3:12:49 PM Microsoft-Windows-ActiveDirectory_DomainService 2191 Internal Configuration� Active Directory Domain Services set the following registry value to disable DNS updates.<br /><br />Registry Key:<br /><br />SYSTEM\CurrentControlSet\Services\Tcpip\Parameters<br /><br />Registry Value:<br /><br />DisableDynamicUpdate<br /><br />Registry Value data:<br /><br />1<br /><br />During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed.|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |**2172**|ActiveDirectory_DomainService|Read the msDS-GenerationId attribute of the Domain Controller's computer object.<br /><br />msDS-GenerationId attribute value:<br /><br />*<Number>*|  
 |**2170**|ActiveDirectory_DomainService|A Generation ID change has been detected.<br /><br />Generation ID cached in DS (old value):<br /><br />*<Number>*<br /><br />Generation ID currently in VM (new value):<br /><br />*<Number>*<br /><br />The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. Active Directory Domain Services will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application.|  
 |**1109**|ActiveDirectory_DomainService|The invocationID attribute for this directory server has been changed. The highest update sequence number at the time the backup was created is as follows:<br /><br />InvocationID attribute (old value):<br /><br />*<GUID>*<br /><br />InvocationID attribute (new value):<br /><br />*<GUID>*<br /><br />Update sequence number:<br /><br />*<Number>*<br /><br />The invocationID is changed when a directory server is restored from backup media, is configured to host a writeable application directory partition, has been resumed after a virtual machine snapshot has been applied, after a virtual machine import operation, or after a live migration operation. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services-aware backup application.|  
