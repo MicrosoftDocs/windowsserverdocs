@@ -24,13 +24,13 @@ Your choice to create a generation 1 or generation 2 virtual machine depends on 
   
 -   You [plan to move your virtual machine to Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-questions/).  
   
--   Generation 2 doesn�t support the operating system you want to run on the virtual machine.  
+-   Generation 2 doesn"t support the operating system you want to run on the virtual machine.  
   
--   Generation 2 doesn�t support the boot method you want to use.  
+-   Generation 2 doesn"t support the boot method you want to use.  
  
  For  more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](https://technet.microsoft.com/library/mt695680.aspx). 
   
-You can�t change a virtual machine�s generation after you�ve created it. So review the following sections in this article to make sure the generation you pick supports the operating system, boot method, and features you want to use.  
+You can"t change a virtual machine"s generation after you"ve created it. So review the following sections in this article to make sure the generation you pick supports the operating system, boot method, and features you want to use.  
   
 -   [Which guest operating systems are supported?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_OS)  
   
@@ -68,7 +68,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 | Windows Server 2012 |?|?|  
 |Windows Server 2008 R2|?|?|  
 |Windows Server 2008|?|?|  
-|Windows 10�|?|?|  
+|Windows 10"|?|?|  
 |Windows 8.1|?|?|  
 |Windows 8|?|?|  
 |Windows 7|?|?|  
@@ -77,7 +77,7 @@ The following table shows which 32-bit versions of Windows you can use as a gues
   
 |32-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-|Windows 10�|?|?|  
+|Windows 10"|?|?|  
 |Windows 8.1|?|?|  
 |Windows 8|?|?|  
 |Windows 7|?|?|  
@@ -170,7 +170,7 @@ The following table shows which boot methods are supported by generation 1 and g
 ## <a name="BKMK_Advantages"></a>What are the advantages of using generation 2 virtual machines?  
 Here are some of the advantages you get when you use a generation 2 virtual machine:  
   
--   **Secure Boot** � This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that�s not supported by Secure Boot, you can disable it after the virtual machine�s created.  For more information, see [Secure Boot](https://technet.microsoft.com/library/dn486875.aspx).  
+-   **Secure Boot** " This is a feature that verifies the boot loader is signed by a trusted authority in the UEFI database to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that"s not supported by Secure Boot, you can disable it after the virtual machine"s created.  For more information, see [Secure Boot](https://technet.microsoft.com/library/dn486875.aspx).  
   
     To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.  
   
@@ -221,7 +221,7 @@ The following sections may answer some additional questions you have about gener
 By default, generation 2 virtual machines use IPv4. You can set a virtual machine to use IPv6 instead of IPv4 by using the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
   
 ```  
-Set-VMFirmware �VMName TestVM �IPProtocolPreference IPv6  
+Set-VMFirmware "VMName TestVM "IPProtocolPreference IPv6  
 ```  
 
  ## <a name="BKMK_Debug"></a>Enable kernel debugging by using a COM port on a generation 2 virtual machine  
@@ -232,13 +232,13 @@ To enable kernel debugging by using a COM port, follow these steps:
 1.  Disable Secure Boot. Kernel debugging is not compatible with Secure Boot, so Secure Boot must be disabled in the virtual machine. Use the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet  to disable Secure Boot when the virtual machine is in an Off state. For example, the following command disables Secure Boot on virtual machine TestVM:  
   
     ```  
-    Set-VMFirmware �Vmname TestVM �EnableSecureBoot Off  
+    Set-VMFirmware "Vmname TestVM "EnableSecureBoot Off  
     ```  
   
 2.  Configure a COM port. Use the [Set-VMComPort](https://technet.microsoft.com/library/hh848616.aspx) Windows PowerShell cmdlet to add a COM port to the virtual machine. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:  
   
     ```  
-    Set-VMComPort �VMName TestVM 1 \\.\pipe\TestPipe  
+    Set-VMComPort "VMName TestVM 1 \\.\pipe\TestPipe  
     ```  
   
 > [!NOTE]  
