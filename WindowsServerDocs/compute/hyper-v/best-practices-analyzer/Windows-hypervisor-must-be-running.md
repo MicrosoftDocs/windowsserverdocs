@@ -54,13 +54,13 @@ To check the catalog, see [Windows Server catalog](http://go.microsoft.com/fwlin
   
         -   Usually available under the settings for the main processor or performance. Sometimes it's under the security settings.  
   
-        -   Look for parameter names that include “virtualization” or “virtualization technology”.  
+        -   Look for parameter names that include "virtualization" or "virtualization technology".  
   
     -   Hardware-enforced DEP:  
   
         -   Usually available under the security or memory settings.  
   
-        -   Look for parameter names that include “execution”, “execute”, or “prevention”.  
+        -   Look for parameter names that include "execution", "execute", or "prevention".  
   
 3.  If necessary, turn on the settings by following the instructions in the configuration tool. Save the changes and exit.  
   
@@ -82,8 +82,8 @@ Next, check the Hyper-V-Hypervisor event log. If there are problems, you'll also
 4.  Open the System log. (In the navigation pane, expand **Windows Logs** and then select **System**.)  
   
 5.  Use a filter to find Hyper-V-Hypervisor events:   
-    1. In the **Actions** pane, click **Filter Current Log**. For **Event sources**, specify “Hyper-V-Hypervisor”.   
-    2. Look for events that report problems. For example, event ID 41 indicates a problem with the BIOS configuration: “Hyper-V launch failed; Either VMX not present or not enabled in BIOS.”  
+    1. In the **Actions** pane, click **Filter Current Log**. For **Event sources**, specify "Hyper-V-Hypervisor".   
+    2. Look for events that report problems. For example, event ID 41 indicates a problem with the BIOS configuration: "Hyper-V launch failed; Either VMX not present or not enabled in BIOS."  
   
 ### See Also  
 For details about using Hyper-V on Windows 10, including how to check that your computer can run Hyper-V, see [Windows 10 Hyper-V System Requirements](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_compatibility). 

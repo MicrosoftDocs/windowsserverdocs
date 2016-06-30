@@ -49,7 +49,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 3.  Run this command after replacing External with the name  of your external switch:  
   
 ```  
-Enable-VMSwitchExtension –VMSwitchName External –Name "Microsoft Windows Filtering Platform"  
+Enable-VMSwitchExtension -VMSwitchName External -Name "Microsoft Windows Filtering Platform"  
 ```  
   
 ## See Also  
