@@ -1,4 +1,4 @@
----
+﻿---
 title: Cluster to Cluster Storage Replication
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -404,4 +404,3 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
 -   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
-
