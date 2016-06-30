@@ -47,8 +47,8 @@ The following feature distribution map indicates the features in each version. T
 |SCSI WWN|2016, 2012 R2||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||| 
 |Configuration of MMIO gap|2016, 2012 R2|**√**|**√**|**√**|**√**|**√**|  
-|Dynamic Memory " Hot Add|2016, 2012 R2, 2012|||||| 
-|Dynamic Memory " Ballooning|2016, 2012 R2, 2012||||||  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|||||| 
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012||||||  
 |Manual Memory Hot Add|2016||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||||||
 |Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2||||||  
