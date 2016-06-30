@@ -311,6 +311,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
     Get-SRPartnership | Remove-SRPartnership  
     Get-SRGroup | Remove-SRGroup  
     ```  
+
 ## Replacing DFS Replication with Storage Replica  
 Many Microsoft customers deploy DFS Replication as a disaster recovery solution for unstructured user data like home folders and departmental shares. DFSR has shipped in Windows Server 2003 R2 and all later operating systems and operates on low bandwidth networks, which makes it attractive for high latency and low change environments with many nodes. However, DFSR has notable limitations as a DR solution:  
 * It does not replicate in-use or open files.  
