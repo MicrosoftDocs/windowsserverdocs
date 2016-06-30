@@ -1,12 +1,12 @@
 ---
 title: Appendix B: Privileged Accounts and Groups in Active Directory
-ms.custom: 
+ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: 
+ms.service:
 ms.suite: na
-ms.technology: 
+ms.technology:
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -17,41 +17,29 @@ author: Femila
 
 >Applies To: Windows Server Technical Preview
 
-  
+
 ## Appendix B: Privileged Accounts and Groups in Active Directory  
-<<<<<<< HEAD
 "Privileged" accounts and groups in Active Directory are those to which powerful rights, privileges, and permissions are granted that allow them to perform nearly any action in Active Directory and on domain-joined systems. This appendix begins by discussing rights, privileges, and permissions, followed by information about the "highest privilege" accounts and groups in Active Directory,that is, the most powerful accounts and groups.  
-=======
-ï¿½Privilegedï¿½ accounts and groups in Active Directory are those to which powerful rights, privileges, and permissions are granted that allow them to perform nearly any action in Active Directory and on domain-joined systems. This appendix begins by discussing rights, privileges, and permissions, followed by information about the ï¿½highest privilegeï¿½ accounts and groups in Active Directory,that is, the most powerful accounts and groups.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+
 Information is also provided about built-in and default accounts and groups in Active Directory, in addition to their rights. Although specific configuration recommendations for securing the highest privilege accounts and groups are provided as separate appendices, this appendix provides background information that helps you identify the users and groups you should focus on securing. You should do so because they can be leveraged by attackers to compromise and even destroy your Active Directory installation.  
-  
+
 ### Rights, Privileges, and Permissions in Active Directory  
 The differences between rights, permissions, and privileges can be confusing and contradictory, even within documentation from Microsoft. This section describes some of the characteristics of each as they are used in this document. These descriptions should not be considered authoritative for other Microsoft documentation, because it may use these terms differently.  
-  
+
 #### Rights and Privileges  
-<<<<<<< HEAD
-Rights and privileges are effectively the same thing—system-wide capabilities that are granted to security principals such as users, services, computers, or groups. In interfaces typically used by IT professionals, these are usually referred to as "rights" or "user rights," and they are often assigned by Group Policy Objects. The following screenshot shows some of the most common user rights that can be assigned to security principals (it represents the Default Domain Controllers GPO in a Windows Server 2012 domain). Some of these rights apply to Active Directory, such as the **Enable computer and user accounts to be trusted for delegation** user right, while other rights apply to the Windows operating system, such as **Change the system time**.  
-=======
-Rights and privileges are effectively the same thingï¿½system-wide capabilities that are granted to security principals such as users, services, computers, or groups. In interfaces typically used by IT professionals, these are usually referred to as ï¿½rightsï¿½ or ï¿½user rights,ï¿½ and they are often assigned by Group Policy Objects. The following screenshot shows some of the most common user rights that can be assigned to security principals (it represents the Default Domain Controllers GPO in a Windows Server 2012 domain). Some of these rights apply to Active Directory, such as the **Enable computer and user accounts to be trusted for delegation** user right, while other rights apply to the Windows operating system, such as **Change the system time**.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+Rights and privileges are effectively the same system-wide capabilities that are granted to security principals such as users, services, computers, or groups. In interfaces typically used by IT professionals, these are usually referred to as "rights" or "user rights," and they are often assigned by Group Policy Objects. The following screenshot shows some of the most common user rights that can be assigned to security principals (it represents the Default Domain Controllers GPO in a Windows Server 2012 domain). Some of these rights apply to Active Directory, such as the **Enable computer and user accounts to be trusted for delegation** user right, while other rights apply to the Windows operating system, such as **Change the system time**.  
+
 ![](media/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory/SAD_8.gif)  
-  
+
 In interfaces such as the Group Policy Object Editor, all of these assignable capabilities are referred to broadly as user rights. In reality however, some user rights are programmatically referred to as rights, while others are programmatically referred to as privileges. Table B-1: User Rights and Privileges provides some of the most common assignable user rights and their programmatic constants. Although Group Policy and other interfaces refer to all of these as user rights, some are programmatically identified as rights, while others are defined as privileges.  
-  
+
 For more information about each of the user rights listed in the following table, use the links in the table or see [Threats and Countermeasures Guide: User Rights](http://technet.microsoft.com/library/hh125917(v=ws.10).aspx) in the [Threats and Vulnerabilities Mitigation](http://technet.microsoft.com/library/cc755181(v=ws.10).aspx) guide for Windows Server 2008 R2 on the Microsoft TechNet site. For information applicable to Windows Server 2008, please see [User Rights](http://technet.microsoft.com/library/dd349804(v=WS.10).aspx) in the [Threats and Vulnerabilities Mitigation](http://technet.microsoft.com/library/cc755181(v=ws.10).aspx) documentation on the Microsoft TechNet site. As of the writing of this document, corresponding documentation for Windows Server 2012 is not yet published.  
-  
+
 > [!NOTE]  
-<<<<<<< HEAD
 > For the purposes of this document, the terms "rights" and "user rights" are used to identify rights and privileges unless otherwise specified.  
-=======
-> For the purposes of this document, the terms ï¿½rightsï¿½ and ï¿½user rightsï¿½ are used to identify rights and privileges unless otherwise specified.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+
 ##### Table B-1: User Rights and Privileges  
-  
+
 |||  
 |-|-|  
 |**User Right in Group Policy**|**Name of Constant**|  
@@ -99,101 +87,65 @@ For more information about each of the user rights listed in the following table
 |[Shut down the system](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_41)|SeShutdownPrivilege|  
 |[Synchronize directory service data](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_42)|SeSyncAgentPrivilege|  
 |[Take ownership of files or other objects](http://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_43)|SeTakeOwnershipPrivilege|  
-  
+
 #### Permissions  
-Permissions are access controls that are applied to securable objects such as the file system, registry, service, and Active Directory objects. Each securable object has an associated access control list (ACL), which contains access control entries (ACEs) that grant or deny security principals (users, services, computers, or groups) the ability to perform various operations on the object. For example, the ACLs for many objects in Active Directory contain ACEs that allow Authenticated Users to read general information about the objects, but do not grant them the ability to read sensitive information or to change the objects.  
-  
-<<<<<<< HEAD
+Permissions are access controls that are applied to securable objects such as the file system, registry, service, and Active Directory objects. Each securable object has an associated access control list (ACL), which contains access control entries (ACEs) that grant or deny security principals (users, services, computers, or groups) the ability to perform various operations on the object. For example, the ACLs for many objects in Active Directory contain ACEs that allow Authenticated Users to read general information about the objects, but do not grant them the ability to read sensitive information or to change the objects.
 With the exception of each domain's built-in Guest account, every security principal that logs on and is authenticated by a domain controller in an Active Directory forest or a trusted forest has the Authenticated Users Security Identifier (SID) added to its access token by default. Therefore, whether a user, service, or computer account attempts to read general properties on user objects in a domain, the read operation is successful.  
-  
+
 If a security principal attempts to access an object for which no ACEs are defined and that contain a SID that is present in the principal's access token, the principal cannot access the object. Moreover, if an ACE in an object's ACL contains a deny entry for a SID that matches the user's access token, the "deny" ACE will generally override a conflicting "allow" ACE. For more information about access control in Windows, see [Access Control](http://msdn.microsoft.com/library/aa374860(v=VS.85).aspx) on the MSDN website.  
-  
+
 Within this document, permissions refers to capabilities that are granted or denied to security principals on securable objects. Whenever there is a conflict between a user right and a permission, the user right generally takes precedence. For example, if an object in Active Directory has been configured with an ACL that denies Administrators all read and write access to an object, a user who is a member of the domain's Administrators group will be unable to view much information about the object. However, because the Administrators group is granted the user right "Take ownership of files or other objects," the user can simply take ownership of the object in question, then rewrite the object's ACL to grant Administrators full control of the object.  
-=======
-With the exception of each domainï¿½s built-in Guest account, every security principal that logs on and is authenticated by a domain controller in an Active Directory forest or a trusted forest has the Authenticated Users Security Identifier (SID) added to its access token by default. Therefore, whether a user, service, or computer account attempts to read general properties on user objects in a domain, the read operation is successful.  
-  
-If a security principal attempts to access an object for which no ACEs are defined and that contain a SID that is present in the principalï¿½s access token, the principal cannot access the object. Moreover, if an ACE in an objectï¿½s ACL contains a deny entry for a SID that matches the userï¿½s access token, the ï¿½denyï¿½ ACE will generally override a conflicting ï¿½allowï¿½ ACE. For more information about access control in Windows, see [Access Control](http://msdn.microsoft.com/library/aa374860(v=VS.85).aspx) on the MSDN website.  
-  
-Within this document, permissions refers to capabilities that are granted or denied to security principals on securable objects. Whenever there is a conflict between a user right and a permission, the user right generally takes precedence. For example, if an object in Active Directory has been configured with an ACL that denies Administrators all read and write access to an object, a user who is a member of the domainï¿½s Administrators group will be unable to view much information about the object. However, because the Administrators group is granted the user right ï¿½Take ownership of files or other objects,ï¿½ the user can simply take ownership of the object in question, then rewrite the objectï¿½s ACL to grant Administrators full control of the object.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+
 It is for this reason that this document encourages you to avoid using powerful accounts and groups for day-to-day administration, rather than trying to restrict the capabilities of the accounts and groups. It is not effectively possible to stop a determined user who has access to powerful credentials from using those credentials to gain access to any securable resource.  
-  
+
 ### Built-in Privileged Accounts and Groups  
-<<<<<<< HEAD
 Active Directory is intended to facilitate delegation of administration and the principle of least privilege in assigning rights and permissions. "Regular" users who have accounts in an Active Directory domain are, by default, able to read much of what is stored in the directory, but are able to change only a very limited set of data in the directory. Users who require additional privilege can be granted membership in various privileged groups that are built into the directory so that they may perform specific tasks related to their roles, but cannot perform tasks that are not relevant to their duties.  
 =======
 Active Directory is intended to facilitate delegation of administration and the principle of least privilege in assigning rights and permissions. ï¿½Regularï¿½ users who have accounts in an Active Directory domain are, by default, able to read much of what is stored in the directory, but are able to change only a very limited set of data in the directory. Users who require additional privilege can be granted membership in various privileged groups that are built into the directory so that they may perform specific tasks related to their roles, but cannot perform tasks that are not relevant to their duties.  
 >>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+
 Within Active Directory, there are three built-in groups that comprise the highest privilege groups in the directory: the Enterprise Admins (EA) group, the Domain Admins (DA) group, and the built-in Administrators (BA) group.  
-  
+
 A fourth group, the Schema Admins (SA) group, has privileges that, if abused, can damage or destroy an entire Active Directory forest, but this group is more restricted in its capabilities than the EA, DA, and BA groups.  
-  
-<<<<<<< HEAD
+
 In addition to these four groups, there are a number of additional built-in and default accounts and groups in Active Directory, each of which is granted rights and permissions that allow specific administrative tasks to be performed. Although this appendix does not provide a thorough discussion of every built-in or default group in Active Directory, it does provide a table of the groups and accounts that you're most likely to see in your installations.  
-=======
-In addition to these four groups, there are a number of additional built-in and default accounts and groups in Active Directory, each of which is granted rights and permissions that allow specific administrative tasks to be performed. Although this appendix does not provide a thorough discussion of every built-in or default group in Active Directory, it does provide a table of the groups and accounts that youï¿½re most likely to see in your installations.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+
 For example, if you install Microsoft Exchange Server into an Active Directory forest, additional accounts and groups may be created in the Built-in and Users containers in your domains. This appendix describes only the groups and accounts that are created in the Built-in and Users containers in Active Directory, based on native roles and features. Accounts and groups that are created by the installation of enterprise software are not included.  
-  
+
 #### Enterprise Admins  
 The Enterprise Admins (EA) group is located in the forest root domain, and by default, it is a member of the built-in Administrators group in every domain in the forest. The Built-in Administrator account in the forest root domain is the only default member of the EA group. EAs are granted rights and permissions that allow them to affect forest-wide changes. These are changes that affect all domains in the forest, such as adding or removing domains, establishing forest trusts, or raising forest functional levels. In a properly designed and implemented delegation model, EA membership is required only when first constructing the forest or when making certain forest-wide changes such as establishing an outbound forest trust.  
-  
-<<<<<<< HEAD
+
 The EA group is located by default in the Users container in the forest root domain, and it is a universal security group, unless the forest root domain is running in Windows 2000 Server mixed mode, in which case the group is a global security group. Although some rights are granted directly to the EA group, many of this group's rights are actually inherited by the EA group because it is a member of the Administrators group in each domain in the forest. Enterprise Admins have no default rights on workstations or member servers.  
-  
+
 #### Domain Admins  
 Each domain in a forest has its own Domain Admins (DA) group, which is a member of that domain's built-in Administrators (BA) group in addition to a member of the local Administrators group on every computer that is joined to the domain. The only default member of the DA group for a domain is the Built-in Administrator account for that domain.  
-  
+
 DAs are all-powerful within their domains, while EAs have forest-wide privilege. In a properly designed and implemented delegation model, DA membership should be required only in "break glass" scenarios, which are situations in which an account with high levels of privilege on every computer in the domain is needed, or when certain domain wide changes must be made. Although native Active Directory delegation mechanisms do allow delegation to the extent that it is possible to use DA accounts only in emergency scenarios, constructing an effective delegation model can be time consuming, and many organizations use third-party applications to expedite the process.  
-  
+
 The DA group is a global security group located in the Users container for the domain. There is one DA group for each domain in the forest, and the only default member of a DA group is the domain's Built-in Administrator account. Because a domain's DA group is nested in the domain's BA group and every domain-joined system's local Administrators group, DAs not only have permissions that are specifically granted to Domain Admins, but they also inherit all rights and permissions granted to the domain's Administrators group and the local Administrators group on all systems joined to the domain.  
-  
+
 #### Administrators  
 The built-in Administrators (BA) group is a domain local group in a domain's Built-in container into which DAs and EAs are nested, and it is this group that is granted many of the direct rights and permissions in the directory and on domain controllers. However, the Administrators group for a domain does not have any privileges on member servers or on workstations. Membership in domain-joined computers' local Administrators group is where local privilege is granted; and of the groups discussed, only DAs are members of all domain-joined computers' local Administrators groups by default.  
-  
+
 The Administrators group is a domain-local group in the domain's Built-in container. By default, every domain's BA group contains the local domain's Built-in Administrator account, the local domain's DA group, and the forest root domain's EA group. Many user rights in Active Directory and on domain controllers are granted specifically to the Administrators group, not to EAs or DAs. A domain's BA group is granted full control permissions on most directory objects, and can take ownership of directory objects. Although EA and DA groups are granted certain object-specific permissions in the forest and domains, much of the power of groups is actually "inherited" from their membership in BA groups.  
-=======
-The EA group is located by default in the Users container in the forest root domain, and it is a universal security group, unless the forest root domain is running in Windows 2000 Server mixed mode, in which case the group is a global security group. Although some rights are granted directly to the EA group, many of this groupï¿½s rights are actually inherited by the EA group because it is a member of the Administrators group in each domain in the forest. Enterprise Admins have no default rights on workstations or member servers.  
-  
-#### Domain Admins  
-Each domain in a forest has its own Domain Admins (DA) group, which is a member of that domainï¿½s built-in Administrators (BA) group in addition to a member of the local Administrators group on every computer that is joined to the domain. The only default member of the DA group for a domain is the Built-in Administrator account for that domain.  
-  
-DAs are all-powerful within their domains, while EAs have forest-wide privilege. In a properly designed and implemented delegation model, DA membership should be required only in ï¿½break glassï¿½ scenarios, which are situations in which an account with high levels of privilege on every computer in the domain is needed, or when certain domain wide changes must be made. Although native Active Directory delegation mechanisms do allow delegation to the extent that it is possible to use DA accounts only in emergency scenarios, constructing an effective delegation model can be time consuming, and many organizations use third-party applications to expedite the process.  
-  
-The DA group is a global security group located in the Users container for the domain. There is one DA group for each domain in the forest, and the only default member of a DA group is the domainï¿½s Built-in Administrator account. Because a domainï¿½s DA group is nested in the domainï¿½s BA group and every domain-joined systemï¿½s local Administrators group, DAs not only have permissions that are specifically granted to Domain Admins, but they also inherit all rights and permissions granted to the domainï¿½s Administrators group and the local Administrators group on all systems joined to the domain.  
-  
-#### Administrators  
-The built-in Administrators (BA) group is a domain local group in a domainï¿½s Built-in container into which DAs and EAs are nested, and it is this group that is granted many of the direct rights and permissions in the directory and on domain controllers. However, the Administrators group for a domain does not have any privileges on member servers or on workstations. Membership in domain-joined computersï¿½ local Administrators group is where local privilege is granted; and of the groups discussed, only DAs are members of all domain-joined computersï¿½ local Administrators groups by default.  
-  
-The Administrators group is a domain-local group in the domainï¿½s Built-in container. By default, every domainï¿½s BA group contains the local domainï¿½s Built-in Administrator account, the local domainï¿½s DA group, and the forest root domainï¿½s EA group. Many user rights in Active Directory and on domain controllers are granted specifically to the Administrators group, not to EAs or DAs. A domainï¿½s BA group is granted full control permissions on most directory objects, and can take ownership of directory objects. Although EA and DA groups are granted certain object-specific permissions in the forest and domains, much of the power of groups is actually ï¿½inheritedï¿½ from their membership in BA groups.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+
 > [!NOTE]  
 > Although these are the default configurations of these privileged groups, a member of any one of the three groups can manipulate the directory to gain membership in any of the other groups. In some cases, it is trivial to achieve, while in others it is more difficult, but from the perspective of potential privilege, all three groups should be considered effectively equivalent.  
-  
+
 #### Schema Admins  
-<<<<<<< HEAD
 The Schema Admins (SA) group is a universal group in the forest root domain and has only that domain's Built-in Administrator account as a default member, similar to the EA group. Although membership in the SA group can allow an attacker to compromise the Active Directory schema, which is the framework for the entire Active Directory forest, SAs have few default rights and permissions beyond the schema.  
-  
+
 You should carefully manage and monitor membership in the SA group, but in some respects, this group is "less privileged" than the three highest privileged groups described earlier because the scope of its privilege is very narrow; that is, SAs have no administrative rights anywhere other than the schema.  
-=======
-The Schema Admins (SA) group is a universal group in the forest root domain and has only that domainï¿½s Built-in Administrator account as a default member, similar to the EA group. Although membership in the SA group can allow an attacker to compromise the Active Directory schema, which is the framework for the entire Active Directory forest, SAs have few default rights and permissions beyond the schema.  
-  
-You should carefully manage and monitor membership in the SA group, but in some respects, this group is ï¿½less privilegedï¿½ than the three highest privileged groups described earlier because the scope of its privilege is very narrow; that is, SAs have no administrative rights anywhere other than the schema.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
+
 #### Additional Built-in and Default Groups in Active Directory  
 To facilitate delegating administration in the directory, Active Directory ships with various built-in and default groups that have been granted specific rights and permissions. These groups are described briefly in the following table.  
-  
+
 The following table lists the built-in and default groups in Active Directory. Both sets of groups exist by default; however, built-in groups are located (by default) in the Built-in container in Active Directory, while default groups are located (by default) in the Users container in Active Directory. Groups in the Built-in container are all Domain Local groups, while groups in the Users container are a mixture of Domain Local, Global, and Universal groups, in addition to three individual user accounts (Administrator, Guest, and Krbtgt).  
-  
+
 In addition to the highest privileged groups described earlier in this appendix, some built-in and default accounts and groups are granted elevated privileges and should also be protected and used only on secure administrative hosts. These groups and accounts can be found in the shaded rows in Table B-1: Built-in and Default Groups and Accounts in Active Directory. Because some of these groups and accounts are granted rights and permissions that can be misused to compromise Active Directory or domain controllers, they are afforded additional protections as described in [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).  
-  
+
 ##### Table B-1: Built-in and Default Accounts and Groups in Active Directory  
-  
+
 ||||  
 |-|-|-|  
 |**Account or Group**|**Default Container, Group Scope and Type**|**Description and Default User Rights**|  
@@ -214,20 +166,16 @@ In addition to the highest privileged groups described earlier in this appendix,
 |Distributed COM Users|Built-in container<br /><br />Domain-local security group|Members of this group are allowed to launch, activate, and use distributed COM objects on this computer.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |DnsAdmins|Users container<br /><br />Domain-local security group|Members of this group have administrative access to the DNS Server service.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |DnsUpdateProxy|Users container<br /><br />Global security group|Members of this group are DNS clients who are permitted to perform dynamic updates on behalf of clients that cannot themselves perform dynamic updates. Members of this group are typically DHCP servers.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
-<<<<<<< HEAD
+
 |Domain Admins|Users container<br /><br />Global security group|Designated administrators of the domain; Domain Admins is a member of every domain-joined computer's local Administrators group and receives rights and permissions granted to the local Administrators group, in addition to the domain's Administrators group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Adjust memory quotas for a process<br /><br />Allow log on locally<br /><br />Allow log on through Remote Desktop Services<br /><br />Back up files and directories<br /><br />Bypass traverse checking<br /><br />Change the system time<br /><br />Change the time zone<br /><br />Create a pagefile<br /><br />Create global objects<br /><br />Create symbolic links<br /><br />Debug programs<br /><br />Enable computer and user accounts to be trusted for delegation<br /><br />Force shutdown from a remote system<br /><br />Impersonate a client after authentication<br /><br />Increase a process working set<br /><br />Increase scheduling priority<br /><br />Load and unload device drivers<br /><br />Log on as a batch job<br /><br />Manage auditing and security log<br /><br />Modify firmware environment values<br /><br />Perform volume maintenance tasks<br /><br />Profile single process<br /><br />Profile system performance<br /><br />Remove computer from docking station<br /><br />Restore files and directories<br /><br />Shut down the system<br /><br />Take ownership of files or other objects|  
-=======
-|Domain Admins|Users container<br /><br />Global security group|Designated administrators of the domain; Domain Admins is a member of every domain-joined computerï¿½s local Administrators group and receives rights and permissions granted to the local Administrators group, in addition to the domainï¿½s Administrators group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Adjust memory quotas for a process<br /><br />Allow log on locally<br /><br />Allow log on through Remote Desktop Services<br /><br />Back up files and directories<br /><br />Bypass traverse checking<br /><br />Change the system time<br /><br />Change the time zone<br /><br />Create a pagefile<br /><br />Create global objects<br /><br />Create symbolic links<br /><br />Debug programs<br /><br />Enable computer and user accounts to be trusted for delegation<br /><br />Force shutdown from a remote system<br /><br />Impersonate a client after authentication<br /><br />Increase a process working set<br /><br />Increase scheduling priority<br /><br />Load and unload device drivers<br /><br />Log on as a batch job<br /><br />Manage auditing and security log<br /><br />Modify firmware environment values<br /><br />Perform volume maintenance tasks<br /><br />Profile single process<br /><br />Profile system performance<br /><br />Remove computer from docking station<br /><br />Restore files and directories<br /><br />Shut down the system<br /><br />Take ownership of files or other objects|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
+
 |Domain Computers|Users container<br /><br />Global security group|All workstations and servers that are joined to the domain are by default members of this group.<br /><br />**Default direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Domain Controllers|Users container<br /><br />Global security group|All domain controllers in the domain. Note: Domain controllers are not a member of the Domain Computers group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Domain Guests|Users container<br /><br />Global security group|All guests in the domain<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Domain Users|Users container<br /><br />Global security group|All users in the domain<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
-<<<<<<< HEAD
+
 |Enterprise Admins (exists only in forest root domain)|Users container<br /><br />Universal security group|Enterprise Admins have permissions to change forest-wide configuration settings; Enterprise Admins is a member of every domain's Administrators group and receives rights and permissions granted to that group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Adjust memory quotas for a process<br /><br />Allow log on locally<br /><br />Allow log on through Remote Desktop Services<br /><br />Back up files and directories<br /><br />Bypass traverse checking<br /><br />Change the system time<br /><br />Change the time zone<br /><br />Create a pagefile<br /><br />Create global objects<br /><br />Create symbolic links<br /><br />Debug programs<br /><br />Enable computer and user accounts to be trusted for delegation<br /><br />Force shutdown from a remote system<br /><br />Impersonate a client after authentication<br /><br />Increase a process working set<br /><br />Increase scheduling priority<br /><br />Load and unload device drivers<br /><br />Log on as a batch job<br /><br />Manage auditing and security log<br /><br />Modify firmware environment values<br /><br />Perform volume maintenance tasks<br /><br />Profile single process<br /><br />Profile system performance<br /><br />Remove computer from docking station<br /><br />Restore files and directories<br /><br />Shut down the system<br /><br />Take ownership of files or other objects|  
-=======
-|Enterprise Admins (exists only in forest root domain)|Users container<br /><br />Universal security group|Enterprise Admins have permissions to change forest-wide configuration settings; Enterprise Admins is a member of every domainï¿½s Administrators group and receives rights and permissions granted to that group.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Adjust memory quotas for a process<br /><br />Allow log on locally<br /><br />Allow log on through Remote Desktop Services<br /><br />Back up files and directories<br /><br />Bypass traverse checking<br /><br />Change the system time<br /><br />Change the time zone<br /><br />Create a pagefile<br /><br />Create global objects<br /><br />Create symbolic links<br /><br />Debug programs<br /><br />Enable computer and user accounts to be trusted for delegation<br /><br />Force shutdown from a remote system<br /><br />Impersonate a client after authentication<br /><br />Increase a process working set<br /><br />Increase scheduling priority<br /><br />Load and unload device drivers<br /><br />Log on as a batch job<br /><br />Manage auditing and security log<br /><br />Modify firmware environment values<br /><br />Perform volume maintenance tasks<br /><br />Profile single process<br /><br />Profile system performance<br /><br />Remove computer from docking station<br /><br />Restore files and directories<br /><br />Shut down the system<br /><br />Take ownership of files or other objects|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
+
 |Enterprise Read-only Domain Controllers|Users container<br /><br />Universal security group|This group contains the accounts for all read-only domain controllers in the forest.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Event Log Readers|Built-in container<br /><br />Domain-local security group|Members of this group in can read the event logs on domain controllers.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Group Policy Creator Owners|Users container<br /><br />Global security group|Members of this group can create and modify Group Policy Objects in the domain.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
@@ -236,11 +184,9 @@ In addition to the highest privileged groups described earlier in this appendix,
 |Hyper-V Administrators (Windows Server 2012)|Built-in container<br /><br />Domain-local security group|Members of this group have complete and unrestricted access to all features of Hyper-V.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |IIS_IUSRS|Built-in container<br /><br />Domain-local security group|Built-in group used by Internet Information Services.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Incoming Forest Trust Builders (exists only in forest root domain)|Built-in container<br /><br />Domain-local security group|Members of this group can create incoming, one-way trusts to this forest. (Creation of outbound forest trusts is reserved for Enterprise Admins.)<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
-<<<<<<< HEAD
+
 |Krbtgt|Users container<br /><br />Not a group|The Krbtgt account is the service account for the Kerberos Key Distribution Center in the domain. This account has access to all accounts' credentials stored in Active Directory. This account is disabled by default and should never be enabled<br /><br />**User rights:** N/A|  
-=======
-|Krbtgt|Users container<br /><br />Not a group|The Krbtgt account is the service account for the Kerberos Key Distribution Center in the domain. This account has access to all accountsï¿½ credentials stored in Active Directory. This account is disabled by default and should never be enabled<br /><br />**User rights:** N/A|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
+
 |Network Configuration Operators|Built-in container<br /><br />Domain-local security group|Members of this group are granted privileges that allow them to manage configuration of networking features.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Performance Log Users|Built-in container<br /><br />Domain-local security group|Members of this group can schedule logging of performance counters, enable trace providers, and collect event traces locally and via remote access to the computer.<br /><br />**Direct user rights:**<br /><br />Log on as a batch job<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |Performance Monitor Users|Built-in container<br /><br />Domain-local security group|Members of this group can access performance counter data locally and remotely.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
@@ -260,6 +206,3 @@ In addition to the highest privileged groups described earlier in this appendix,
 |Users|Built-in container<br /><br />Domain-local security group|Users have permissions that allow them to read many objects and attributes in Active Directory, although they cannot change most. Users are prevented from making accidental or intentional system-wide changes and can run most applications.<br /><br />**Direct user rights:**<br /><br />Increase a process working set<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking|  
 |Windows Authorization Access Group|Built-in container<br /><br />Domain-local security group|Members of this group have access to the computed tokenGroupsGlobalAndUniversal attribute on User objects<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
 |WinRMRemoteWMIUsers_ (Windows Server 2012)|Users container<br /><br />Domain-local security group|Members of this group can access WMI resources over management protocols (such as WS-Management via the Windows Remote Management service). This applies only to WMI namespaces that grant access to the user.<br /><br />**Direct user rights:** None<br /><br />**Inherited user rights:**<br /><br />Access this computer from the network<br /><br />Add workstations to domain<br /><br />Bypass traverse checking<br /><br />Increase a process working set|  
-  
-
-
