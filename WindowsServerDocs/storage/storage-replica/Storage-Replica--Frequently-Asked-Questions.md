@@ -1,5 +1,5 @@
 ---
-title: Storage Replica: Frequently Asked Questions
+title: Frequently Asked Questions about Storage Replica
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: get-started-article
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 author: kumudd
 ---
-# Storage Replica: Frequently Asked Questions
+# Frequently Asked Questions about Storage Replica
 
 >Applies To: Windows Server Technical Preview
 
@@ -134,10 +134,10 @@ If configuring cluster-to-cluster replication, Storage Replica fully supports Sc
 This is not a supported configuration in Windows Server 2016 Technical Preview.  This may change in a later release. If configuring cluster-to-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper-V Servers, including the use of Storage Spaces Direct.  
 
 ## <a name="FAQ9"></a>How do I configure asynchronous replication?  
-Specify `New-SRPartnership –ReplicationMode` and provide argument **Asynchronous**. By default, all replication in Storage Replica is synchronous. You can also change the mode with `Set-SRPartnership -ReplicationMode`.  
+Specify `New-SRPartnership ï¿½ReplicationMode` and provide argument **Asynchronous**. By default, all replication in Storage Replica is synchronous. You can also change the mode with `Set-SRPartnership -ReplicationMode`.  
 
 ## <a name="FAQ10"></a>How do I prevent automatic failover of a stretch cluster?  
-To prevent automatic failover, you can use PowerShell to configure `Get-ClusterNode –Name "NodeName").NodeWeight=0`. This removes the vote on each node in the disaster recovery site. Then you can use `Start-ClusterNode –PreventQuorum` on nodes in the primary site and `Start-ClusterNode –ForceQuorum` on nodes in the disaster site to force failover. There is no graphical option for preventing automatic failover, and preventing automatic failover is not recommended.  
+To prevent automatic failover, you can use PowerShell to configure `Get-ClusterNode ï¿½Name "NodeName").NodeWeight=0`. This removes the vote on each node in the disaster recovery site. Then you can use `Start-ClusterNode ï¿½PreventQuorum` on nodes in the primary site and `Start-ClusterNode ï¿½ForceQuorum` on nodes in the disaster site to force failover. There is no graphical option for preventing automatic failover, and preventing automatic failover is not recommended.  
 
 ## <a name="FAQ11"></a>How do I disable virtual machine resiliency?  
 To prevent the new Hyper-V virtual machine resiliency feature from running and therefore pausing virtual machines instead of failing them over to the disaster recovery site, run `(Get-Cluster).ResiliencyDefaultPeriod=0`  
@@ -146,7 +146,7 @@ To prevent the new Hyper-V virtual machine resiliency feature from running and t
 
 You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including non-clustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs.  
 
-You can also use seeded data volumes, by ensuring that the destination volume has some subset of data from the primary – via a restored backup, old snapshot, previous replication, copied files, etc. – then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`.  
+You can also use seeded data volumes, by ensuring that the destination volume has some subset of data from the primary ï¿½ via a restored backup, old snapshot, previous replication, copied files, etc. ï¿½ then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`.  
 
 
 ## <a name="FAQ13"></a> Can I delegate users to administer replication?  
@@ -219,4 +219,3 @@ For technical assistance with Storage Replica, you can post at the Microsoft Tec
 -   [Storage](../Storage.md)  
 
 -   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
-
