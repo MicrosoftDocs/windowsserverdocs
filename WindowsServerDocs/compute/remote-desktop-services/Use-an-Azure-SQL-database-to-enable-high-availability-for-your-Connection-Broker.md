@@ -19,8 +19,8 @@ manager: msswadhwa
 The following article demonstrates the steps necessary to use Azure SQL Database to create a highly available environment for the Remote Desktop Connection Broker in a Remote Desktop Services (RDS) deployment. These steps serve to outline the new capabilities and features of RDS in Windows Server Technical Preview 5 and do not highlight all of the steps necessary for end-to-end configuration of high availability; for a full list of steps, see [Add the RD Connection Broker server to the deployment and configure high availability](Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md).  
   
 1. [Create an Azure SQL database](Create-an-Azure-SQL-database-for-the-RD-Connection-Broker.md).  
-2. Configure load balancing.  
-3. Configure high availability.  
+2. [Configure load balancing](#configure-load-balancing).  
+3. [Configure high availability](#configure-high-availability).  
   
 ## Configure load balancing  
   
@@ -36,7 +36,7 @@ After configuring a load-balancing mechanism, ensure the following:
   
 ## Configure high availability  
   
-With an Azure SQL Database deployed and load-balancing configured for the RD Connection Broker machines, connect to the machine that currently manages the RDS deployment—which is typically the first RD connection broker machine. use the following steps to configure high availability:  
+With an Azure SQL Database deployed and load-balancing configured for the RD Connection Broker machines, connect to the machine that currently manages the RDS deployment, which is typically the first RD connection broker machine. use the following steps to configure high availability:  
   
 1. In Server Manager, click **Remote Desktop Services > Overview**. Right-click the RD Connection Broker icon in the **Deployment Overview** section, and then click **Configure High Availability**.    
 ![RD Connection Broker in Server Manager](media/RD-Connection-Broker-in-Server-Manager.png)  
