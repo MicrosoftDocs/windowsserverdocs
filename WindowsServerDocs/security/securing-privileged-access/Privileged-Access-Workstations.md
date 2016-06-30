@@ -512,11 +512,11 @@ Phase 1 includes the following steps:
 
                 3.  Click **New Item** and select **Security group**.
 
-                4.  Select the "�" button and browse for the PAW Users group.
+                4.  Select the "..." button and browse for the PAW Users group.
 
                 5.  Click **New Item** and select **Security group**.
 
-                6.  Select the "�" button and browse for the **Cloud Services Admins** group.
+                6.  Select the "..." button and browse for the **Cloud Services Admins** group.
 
                 7.  Click on the **Cloud Services Admins** item and click **Item Options**.
 
@@ -549,11 +549,11 @@ Phase 1 includes the following steps:
 
                 3.  Click **New Item** and select security group.
 
-                4.  Select the "�" button and add the PAW Users group.
+                4.  Select the "..." button and add the PAW Users group.
 
                 5.  Click **New Item** and select security group.
 
-                6.  Select the "�" button and browse for the **Cloud Services Admins** group.
+                6.  Select the "..." button and browse for the **Cloud Services Admins** group.
 
                 7.  Click on the **Cloud Services Admins** item and click **Item Options**.
 
