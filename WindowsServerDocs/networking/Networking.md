@@ -4,7 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - techgroup-networking
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -15,34 +15,34 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This collection contains detailed information about networking products and features for the IT professional to design, deploy, and maintain Windows Server. Following are the networking technologies and documentation for Windows Server® 2016 Technical Preview.  
-  
+This collection contains detailed information about networking products and features for the IT professional to design, deploy, and maintain Windows Server. Following are the networking technologies and documentation for Windows Serverï¿½ 2016 Technical Preview.  
+
 > [!NOTE]  
 > To download Windows Server 2016 Technical Preview, see [Windows Server Evaluations](http://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).  
-  
+
 ## <a name="bkmk_start"></a>Start  
 To discover new networking features and supported networking scenarios   in  Windows Server 2016 Technical Preview, start with the following topics.  
-  
+
 -   [Windows Server 2016 Technical Preview Supported Networking Scenarios](Windows-Server-2016-Technical-Preview-Supported-Networking-Scenarios.md)  
-  
+
 -   [What's New in Networking](What-s-New-in-Networking.md)  
-  
+
 ## <a name="bkmk_sdn"></a>Software Defined Networking Technologies  
 The following table provides links to some of the Software Defined Networking (SDN) technologies in Windows Server 2016 Technical Preview.  
-  
+
 |Technology|Description|  
 |-|-|  
 |[Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md)|You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.|  
 |[Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)|This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.|  
 |[Datacenter Firewall Overview](sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)|Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.|  
 |[Network Controller](sdn/technologies/network-controller/Network-Controller.md)|Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.|  
-|[Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)|In  software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This “network function virtualization” is a natural progression of server virtualization and network virtualization.|  
+|[Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)|In  software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This ï¿½network function virtualizationï¿½ is a natural progression of server virtualization and network virtualization.|  
 |[RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)|RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview, is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.|  
 |[Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)|Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 Technical Preview can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.|  
-  
+
 ## <a name="bkmk_networking"></a>Networking Technologies  
 The following table provides links to some of the networking technologies in Windows Server 2016 Technical Preview.  
-  
+
 |Technology|Description|  
 |-|-|  
 |[What's New in Networking](What-s-New-in-Networking.md)|Discover new networking technologies and new features for existing technologies in Windows Server 2016 Technical Preview|  
@@ -56,11 +56,10 @@ The following table provides links to some of the networking technologies in Win
 |[NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)|NIC Teaming allows you to group physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.|  
 |[Remote Access](https://technet.microsoft.com/library/mt421241.aspx)|The Remote Access server role includes DirectAccess and virtual private network (VPN), local area network (LAN) Routing, and Web Application Proxy. RAS allows you to provide network connectivity to remote employees, site-to-site VPN to connect remote office locations over the Internet, and the RAS Gateway, which has multitenant and Border Gateway Protocol ((BGP) capabilities for Enterprises and Cloud Service Providers (CSPs).|  
 |[Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md)|This topic provides instructions on how to use Windows PowerShell commands to enable Data Center Bridging (DCB), create a Hyper-V Virtual Switch with an RDMA virtual NIC (vNIC), and create a Hyper-V Virtual Switch with SET and RDMA vNICs.|  
-  
+
 ## Additional Resources  
-Networking resources for operating systems earlier than [!INCLUDE[winthreshold_server_2_mdincludes/winthreshold_server_2_md.md)] are available at the following locations.  
+Networking resources for operating systems earlier than Windows Server 2016 Technical Preview are available at the following locations.  
+
 - Windows Server 2012 and Windows Server 2012 R2 [Networking Overview](https://technet.microsoft.com/library/hh831357(v=ws.11).aspx)  
 - Windows Server 2008 and Windows Server 2008 R2 [Networking](https://technet.microsoft.com/library/cc753940(v=ws.10))  
 - Windows Server 2003 [Network Services](https://technet.microsoft.com/library/cc787191(v=ws.10))  
-
-
