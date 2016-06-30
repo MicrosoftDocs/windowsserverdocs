@@ -1,5 +1,5 @@
 ---
-title: What&#39;s New in File and Storage Services in Windows Server 2016 Technical Preview
+title: What's New in File and Storage Services in Windows Server 2016 Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: get-started-article
 ms.assetid: 596f28ec-e154-4c2e-9e82-7e42afe0e9fa
 author: kumudd
 ---
-# What&#39;s New in File and Storage Services in Windows Server 2016 Technical Preview
+# What's New in File and Storage Services in Windows Server 2016 Technical Preview
 
 >Applies To: Windows Server Technical Preview
 
