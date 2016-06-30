@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -21,7 +21,7 @@ author: Femila
 ## Appendix C: Protected Accounts and Groups in Active Directory  
 Within Active Directory, a default set of highly privileged accounts and groups are considered protected accounts and groups. With most objects in Active Directory, delegated administrators (users who have been delegated permissions to manage Active Directory objects) can change permissions on the objects, including changing permissions to allow themselves to change memberships of the groups, for example.  
   
-However, with protected accounts and groups, the objects’ permissions are set and enforced via an automatic process that ensures the permissions on the objects remains consistent even if the objects are moved the directory. Even if somebody manually changes a protected object’s permissions, this process ensures that permissions are returned to their defaults quickly.  
+However, with protected accounts and groups, the objectsï¿½ permissions are set and enforced via an automatic process that ensures the permissions on the objects remains consistent even if the objects are moved the directory. Even if somebody manually changes a protected objectï¿½s permissions, this process ensures that permissions are returned to their defaults quickly.  
   
 ### Protected Groups  
 The following table contains the protected groups in Active Directory listed by domain controller operating system.  
@@ -30,7 +30,7 @@ The following table contains the protected groups in Active Directory listed by 
   
 |||||  
 |-|-|-|-|  
-|**Windows 2000 <SP4**|**Windows 2000 SP4 – Windows Server 2003 RTM**|**Windows Server 2003 SP1+**|**Windows Server 2012, Windows Server 2008 R2, Windows Server 2008**|  
+|**Windows 2000 <SP4**|**Windows 2000 SP4 ï¿½ Windows Server 2003 RTM**|**Windows Server 2003 SP1+**|**Windows Server 2012, Windows Server 2008 R2, Windows Server 2008**|  
 |Administrators|Account Operators|Account Operators|Account Operators|  
 ||Administrator|Administrator|Administrator|  
 ||Administrators|Administrators|Administrators|  
@@ -47,12 +47,12 @@ The following table contains the protected groups in Active Directory listed by 
 ||Server Operators|Server Operators|Server Operators|  
   
 #### AdminSDHolder  
-The purpose of the AdminSDHolder object is to provide “template” permissions for the protected accounts and groups in the domain. AdminSDHolder is automatically created as an object in the System container of every Active Directory domain. Its path is: **CN=AdminSDHolder,CN=System,DC=<domain_component>,DC=<domain_component>….**  
+The purpose of the AdminSDHolder object is to provide ï¿½templateï¿½ permissions for the protected accounts and groups in the domain. AdminSDHolder is automatically created as an object in the System container of every Active Directory domain. Its path is: **CN=AdminSDHolder,CN=System,DC=<domain_component>,DC=<domain_component>ï¿½.**  
   
-Unlike most objects in the Active Directory domain, which are owned by the Administrators group, AdminSDHolder is owned by the Domain Admins group. By default, EAs can make changes to any domain’s AdminSDHolder object, as can the domain’s Domain Admins and Administrators groups. Additionally, although the default owner of AdminSDHolder is the domain’s Domain Admins group, members of Administrators or Enterprise Admins can take ownership of the object.  
+Unlike most objects in the Active Directory domain, which are owned by the Administrators group, AdminSDHolder is owned by the Domain Admins group. By default, EAs can make changes to any domainï¿½s AdminSDHolder object, as can the domainï¿½s Domain Admins and Administrators groups. Additionally, although the default owner of AdminSDHolder is the domainï¿½s Domain Admins group, members of Administrators or Enterprise Admins can take ownership of the object.  
   
 #### SDProp  
-SDProp is a process that runs every 60 minutes (by default) on the domain controller that holds the domain’s PDC Emulator (PDCE). SDProp compares the permissions on the domain’s AdminSDHolder object with the permissions on the protected accounts and groups in the domain. If the permissions on any of the protected accounts and groups do not match the permissions on the AdminSDHolder object, the permissions on the protected accounts and groups are reset to match those of the domain’s AdminSDHolder object.  
+SDProp is a process that runs every 60 minutes (by default) on the domain controller that holds the domainï¿½s PDC Emulator (PDCE). SDProp compares the permissions on the domainï¿½s AdminSDHolder object with the permissions on the protected accounts and groups in the domain. If the permissions on any of the protected accounts and groups do not match the permissions on the AdminSDHolder object, the permissions on the protected accounts and groups are reset to match those of the domainï¿½s AdminSDHolder object.  
   
 Additionally, permissions inheritance is disabled on protected groups and accounts, which means that even if the accounts and groups are moved to different locations in the directory, they do not inherit permissions from their new parent objects. Inheritance is disabled on the AdminSDHolder object so that permission changes to the parent objects do not change the permissions of AdminSDHolder.  
   
