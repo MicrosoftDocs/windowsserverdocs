@@ -21,7 +21,7 @@ The diagram below depicts a separate "channel" for administration (a highly sens
 
 ![](../media/Privileged-Access-Workstations/PAWFig1.JPG)
 
-This architectural approach builds on the protections found in the Windows 10[Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx) and [Device Guard](https://technet.microsoft.com/en-us/library/dn986865(v=vs.85).aspx) features and goes beyond those protections for sensitive accounts and tasks.
+This architectural approach builds on the protections found in the Windows 10 [Credential Guard](https://technet.microsoft.com/en-us/library/mt483740%28v=vs.85%29.aspx) and [Device Guard](https://technet.microsoft.com/en-us/library/dn986865(v=vs.85).aspx) features and goes beyond those protections for sensitive accounts and tasks.
 
 This methodology is appropriate for accounts with access to high value assets:
 
@@ -512,11 +512,11 @@ Phase 1 includes the following steps:
 
                 3.  Click **New Item** and select **Security group**.
 
-                4.  Select the "…" button and browse for the PAW Users group.
+                4.  Select the "..." button and browse for the PAW Users group.
 
                 5.  Click **New Item** and select **Security group**.
 
-                6.  Select the "…" button and browse for the **Cloud Services Admins** group.
+                6.  Select the "..." button and browse for the **Cloud Services Admins** group.
 
                 7.  Click on the **Cloud Services Admins** item and click **Item Options**.
 
@@ -549,11 +549,11 @@ Phase 1 includes the following steps:
 
                 3.  Click **New Item** and select security group.
 
-                4.  Select the "…" button and add the PAW Users group.
+                4.  Select the "..." button and add the PAW Users group.
 
                 5.  Click **New Item** and select security group.
 
-                6.  Select the "…" button and browse for the **Cloud Services Admins** group.
+                6.  Select the "..." button and browse for the **Cloud Services Admins** group.
 
                 7.  Click on the **Cloud Services Admins** item and click **Item Options**.
 
@@ -573,33 +573,33 @@ Phase 1 includes the following steps:
 
     1.  Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should have the following settings:
 
-        -   (i) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
+        - (i) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
 
-        **Groups to add to policy settings:**
+            **Groups to add to policy settings:**
 
-        Enterprise Admins
+            Enterprise Admins
 
-        Domain Admins
+            Domain Admins
 
-        Schema Admins
+            Schema Admins
 
-        DOMAIN\Administrators
+            DOMAIN\Administrators
 
-        Account Operators
+            Account Operators
 
-        Backup Operators
+            Backup Operators
 
-        Print Operators
+            Print Operators
 
-        Server Operators
+            Server Operators
 
-        Domain Controllers
+            Domain Controllers
 
-        Read-Only Domain Controllers
+            Read-Only Domain Controllers
 
-        Group Policy Creators Owners
+            Group Policy Creators Owners
 
-        Cryptographic Operators
+            Cryptographic Operators
 
         > [!NOTE]
         > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
@@ -614,7 +614,7 @@ Phase 1 includes the following steps:
         > [!NOTE]
         > Note: This Group was created earlier in Phase 1
 
-        -   (ii) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
+       - (ii) In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
 
             **Groups to add to policy settings:**
 
@@ -981,11 +981,11 @@ Once you confirm that all steps were done, perform the steps below to complete P
 
                 9. Click **New Item** and select **security group**.
 
-                10. Select the "…" button and browse for the **Cloud Services Admins** group.
+                10. Select the "..." button and browse for the **Cloud Services Admins** group.
 
                 11. Click **New Item** and select **security group**.
 
-                12. Select the "…" button and browse for the **PAW Users** group.
+                12. Select the "..." button and browse for the **PAW Users** group.
 
                 13. Click on the **PAW Users** item and click **Item Options**.
 

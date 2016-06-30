@@ -382,6 +382,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 
    The output should look something like this:                                                                                                                                                          
 
+<<<<<<< HEAD
       Name           : SMB  
       Owner          : Group Policy (Machine)  
       NetworkProfile : All  
@@ -390,22 +391,33 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
       NetDirectPort  : 445  
       PriorityValue  :   
 
+=======
+    ```  
+   Name           : SMB  
+   Owner          : Group Policy (Machine)  
+   NetworkProfile : All  
+   Precedence     : 127  
+   JobObject      :  
+   NetDirectPort  : 445  
+   PriorityValue  :   
+   ```
+>>>>>>> 930faf146342a2e16eb9849fbb51a3cc2da0ea90
 
 1. Turn on Flow Control for SMB as follows:                                                                                                                                                                       
 
-       Enable-NetQosFlowControl -Priority 3                                                                                                                                                     
+        Enable-NetQosFlowControl -Priority 3                                                                                                                                                     
 
  1.  Disable flow control for other traffic as follows:                                                                                                                                                             
 
-         Disable-NetQosFlowControl -Priority 0,1,2,4,5,6,7                                                                                                                                                    
+            Disable-NetQosFlowControl -Priority 0,1,2,4,5,6,7                                                                                                                                                    
 
  1.  Get a list of the network adapters to identify the target adapters (RDMA adapters) as follows:                                                                                                                
 
-         Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed                                                                                                                                       
+            Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed                                                                                                                                       
 
      The output should look something like the following. The Mellanox ConnectX03 Pro adapters are the RDMA network adapters and are the only ones connected to a switch, in this example configuration.   
 
-         [MachineName]: PS C:\Users\User\Documents> Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed                                                                                                                                                                              
+            [MachineName]: PS C:\Users\User\Documents> Get-NetAdapter | FT Name,InterfaceDescription,Status,LinkSpeed                                                                                                                                                                              
 
 
           Name                  InterfaceDescription                                    Status     LinkSpeed  
