@@ -1,5 +1,5 @@
 ---
-title: Step 1: Plan an Advanced Single Server Deployment
+title: Step 1 Plan an Advanced Single Server Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 96538cbb-7d6c-4860-9ec7-b1834284ad10
 author: coreyp
 ---
-# Step 1: Plan an Advanced Single Server Deployment
+# Step 1 Plan an Advanced Single Server Deployment
 
 >Applies To: Windows Server Technical Preview
 

@@ -1,5 +1,5 @@
 ---
-title: Step 2: Prepare Cluster Servers
+title: Step 2 Prepare Cluster Servers
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 author: coreyp
 ---
-# Step 2: Prepare Cluster Servers
+# Step 2 Prepare Cluster Servers
 
 >Applies To: Windows Server Technical Preview
 

@@ -1,5 +1,5 @@
 ---
-title: STEP 3: Configure DC1
+title: STEP 3 Configure DC1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
 author: coreyp
 ---
-# STEP 3: Configure DC1
+# STEP 3 Configure DC1
 
 >Applies To: Windows Server Technical Preview
 

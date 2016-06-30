@@ -1,5 +1,5 @@
 ---
-title: Step 3: Configure the Remote Access Server for OTP
+title: Step 3 Configure the Remote Access Server for OTP
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: df1e87f2-6a0f-433b-8e42-816ae75395f9
 author: coreyp
 ---
-# Step 3: Configure the Remote Access Server for OTP
+# Step 3 Configure the Remote Access Server for OTP
 
 >Applies To: Windows Server Technical Preview
 

@@ -1,5 +1,5 @@
 ---
-title: STEP 8: Snapshot the Configuration
+title: STEP 8 Snapshot the Configuration
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 915ef7dd-169d-4d58-9174-438d8ffa3584
 author: coreyp
 ---
-# STEP 8: Snapshot the Configuration
+# STEP 8 Snapshot the Configuration
 
 >Applies To: Windows Server Technical Preview
 

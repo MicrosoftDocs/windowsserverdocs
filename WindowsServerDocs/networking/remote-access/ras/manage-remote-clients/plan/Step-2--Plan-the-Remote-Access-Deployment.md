@@ -1,5 +1,5 @@
 ---
-title: Step 2: Plan the Remote Access Deployment
+title: Step 2 Plan the Remote Access Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 author: coreyp
 ---
-# Step 2: Plan the Remote Access Deployment
+# Step 2 Plan the Remote Access Deployment
 
 >Applies To: Windows Server Technical Preview
 
