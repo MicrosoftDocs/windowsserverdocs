@@ -15,10 +15,10 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server® 2016 Technical Preview. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
+You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
   
 > [!NOTE]  
-> In Windows Server® 2012 R2, RAS Gateway is named RRAS Gateway; and in System Center Virtual Machine Manager, RAS Gateway is named Windows Server Gateway.  
+> In Windows Server 2012 R2, RAS Gateway is named RRAS Gateway; and in System Center Virtual Machine Manager, RAS Gateway is named Windows Server Gateway.  
   
 This topic contains the following sections.  
   

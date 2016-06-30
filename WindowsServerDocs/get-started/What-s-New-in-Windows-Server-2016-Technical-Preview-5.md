@@ -14,7 +14,7 @@ author: jaimeo
 # What&#39;s New in Windows Server 2016 Technical Preview 5
 >Applies To: Windows Server Technical Preview
 
-The content in this section describes what's new and changed in Windows ServerÂ® 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. There are several new additions in each of these areas: [Compute](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Compute), [Identity](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Identity), [Management and Automation](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_ManagAuto), [Networking](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Networking), [Security](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Security), and [Storage](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Storage).  
+The content in this section describes what's new and changed in Windows Server&reg; 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. There are several new additions in each of these areas: [Compute](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Compute), [Identity](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Identity), [Management and Automation](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_ManagAuto), [Networking](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Networking), [Security](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Security), and [Storage](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Storage).  
   
 > [!IMPORTANT]  
 > This preview release should not be used in production environments.  
@@ -55,7 +55,7 @@ The latest version of Web Application Proxyfocuses on new features that enable p
 ##  <a name="BKMK_ManagAuto"></a>Management and Automation  
 The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server Technical Preview, including Windows PowerShell.  
   
-Windows PowerShell 5.0 includes significant new featuresâ€”including support for developing with classes, and new security featuresâ€”that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/releasenotes) for details. **Starting in Technical Preview 5**, new additions include:  
+Windows PowerShell 5.0 includes significant new featuresâ€"including support for developing with classes, and new security featuresâ€"that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/releasenotes) for details. **Starting in Technical Preview 5**, new additions include:  
 the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.   
   
 ## <a name="BKMK_Networking"></a>Networking  

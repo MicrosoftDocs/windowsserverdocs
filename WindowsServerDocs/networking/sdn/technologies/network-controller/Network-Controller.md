@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-New in Windows Server® 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
+New in Windows Server 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
   
 > [!NOTE]  
 > In addition to this topic, the following Network Controller documentation is available.  
@@ -58,7 +58,7 @@ Using Windows PowerShell, the REST API, or a management application, you can use
   
 -   Load Balancers  
   
-In the following illustration, an Administrator uses a Management Tool that interacts directly with Network Controller. Network Controller provides information about the network infrastructure, including both virtual and physical infrastructure, to the Management Tool, and makes configuration changes according to the Administrator’s actions when using the tool.  
+In the following illustration, an Administrator uses a Management Tool that interacts directly with Network Controller. Network Controller provides information about the network infrastructure, including both virtual and physical infrastructure, to the Management Tool, and makes configuration changes according to the Administrator's actions when using the tool.  
   
 ![](../../../media/Network-Controller/NetController_overview.png)  
   
@@ -104,11 +104,11 @@ This Network Controller feature allows you to deploy, configure, and manage Hype
   
 -   Site-to-site VPN gateway connectivity between remote tenant networks and your datacenter using Generic Routing Encapsulation (GRE).  
   
--   Point-to-site VPN gateway connectivity so that your tenants’ administrators can access their resources on your datacenter from anywhere.  
+-   Point-to-site VPN gateway connectivity so that your tenants' administrators can access their resources on your datacenter from anywhere.  
   
 -   Layer 3 forwarding capability.  
   
--   Border Gateway Protocol (BGP) routing, which allows you to manage the routing of network traffic between your tenants’ VM networks and their remote sites.  
+-   Border Gateway Protocol (BGP) routing, which allows you to manage the routing of network traffic between your tenants' VM networks and their remote sites.  
   
 Network Controller is capable of dual-tunnel configuration of site-to-site VPN gateways and the automatic placement of tunnel end-points on separate gateways. In addition, Network Controller can load balance site-to-site and point-to-site VPN connections between gateway VMs, as well as logging configuration and state changes by using logging services.  
   

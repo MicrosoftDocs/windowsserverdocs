@@ -115,7 +115,11 @@ author: Femila
         </tr>
       </tbody>
     </table>
+<<<<<<< HEAD
+    <para>Use the procedures in <link xlink:href="282cee9f-abef-43c9-9f33-b2c416cf8c38">An "Access denied" or other security error has caused replication problems</link> to diagnose and fix replication security problems.</para>
+=======
     <para>Use the procedures in <link xlink:href="282cee9f-abef-43c9-9f33-b2c416cf8c38">An �Access denied� or other security error has caused replication problems</link> to diagnose and fix replication security problems.</para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   </introduction>
   <relatedTopics />
 </developerConceptualDocument>

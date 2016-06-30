@@ -48,23 +48,23 @@ This section describes the configuration steps for enabling an external load bal
   
 1.  External VIPs (IPs that the client will use to connect to Remote Access) were decided to be 131.107.0.102, 131.107.0.103  
   
-2.  Load balancer on external network self-IPs – 131.107.0.245 (Internet), 131.107.1.245  
+2.  Load balancer on external network self-IPs - 131.107.0.245 (Internet), 131.107.1.245  
   
     The perimeter network (also known as demilitarized zone and DMZ) is between the load balancer on the external network and the Remote Access server.  
   
-3.  IP addresses for the Remote Access server on the perimeter network – 131.107.1.102, 131.107.1.103  
+3.  IP addresses for the Remote Access server on the perimeter network - 131.107.1.102, 131.107.1.103  
   
-4.  IP addresses for the Remote Access server on the ELB network (i.e. between the Remote Access server and the load balancer on the internal network) – 30.11.1.101, 2006:2005:11:1::101  
+4.  IP addresses for the Remote Access server on the ELB network (i.e. between the Remote Access server and the load balancer on the internal network) - 30.11.1.101, 2006:2005:11:1::101  
   
-5.  Load balancer on internal network self-IPs – 30.11.1.245 2006:2005:11:1::245 (ELB), 30.1.1.245 2006:2005:1:1::245 (Corpnet)  
+5.  Load balancer on internal network self-IPs - 30.11.1.245 2006:2005:11:1::245 (ELB), 30.1.1.245 2006:2005:1:1::245 (Corpnet)  
   
 6.  Internal VIPs (IP addresses used for client web-probe and for network location server, if installed on the Remote Access servers) were decided to be 30.1.1.10, 2006:2005:1:1::10  
   
 ##### Steps  
   
-1.  Configure the Remote Access server’s external network adapter (that is connected to the perimeter network) with addresses 131.107.0.102, 131.107.0.103. This step is required for the DirectAccess configuration to detect the correct IPsec tunnel endpoints.  
+1.  Configure the Remote Access server's external network adapter (that is connected to the perimeter network) with addresses 131.107.0.102, 131.107.0.103. This step is required for the DirectAccess configuration to detect the correct IPsec tunnel endpoints.  
   
-2.  Configure the Remote Access server’s internal network adapter (that is connected to the ELB network) with the web-probe/network location server IP addresses (30.1.1.10, 2006:2005:1:1::10). This step is required for allowing clients to access the web-probe IP, so the network connectivity assistant correctly indicates the connection status to DirectAccess. This step also allows access to the network location server, if it is configured on the DirectAccess server.  
+2.  Configure the Remote Access server's internal network adapter (that is connected to the ELB network) with the web-probe/network location server IP addresses (30.1.1.10, 2006:2005:1:1::10). This step is required for allowing clients to access the web-probe IP, so the network connectivity assistant correctly indicates the connection status to DirectAccess. This step also allows access to the network location server, if it is configured on the DirectAccess server.  
   
     > [!NOTE]  
     > Make sure that the domain controller is reachable from the Remote Access server with this configuration.  

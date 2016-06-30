@@ -17,7 +17,11 @@ author: Femila
 
 Active Directory Domain Services (AD DS) uses Domain Name System (DNS) name resolution services to make it possible for clients to locate domain controllers and for the domain controllers that host the directory service to communicate with each other.  
   
+<<<<<<< HEAD
+AD DS enables easy integration of the Active Directory namespace into an existing DNS namespace. Features such as Active Directory-integrated DNS zones make it easier for you to deploy DNS by eliminating the need to set up secondary zones, and then configure zone transfers.  
+=======
 AD DS enables easy integration of the Active Directory namespace into an existing DNS namespace. Features such as Active Directory�integrated DNS zones make it easier for you to deploy DNS by eliminating the need to set up secondary zones, and then configure zone transfers.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 For information about how DNS supports AD DS, see the DNS Support for Active Directory Technical Reference ([http://go.microsoft.com/fwlink/?LinkID=48147](http://go.microsoft.com/fwlink/?LinkID=48147)).  
   

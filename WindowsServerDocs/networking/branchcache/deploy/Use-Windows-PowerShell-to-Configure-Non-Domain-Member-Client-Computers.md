@@ -35,9 +35,9 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
         `Enable-BCHostedClient`  
   
         > [!TIP]  
-        > If you want to specify the available hosted cache servers, use the `–ServerNames` parameter with a comma separated list of your hosted cache servers as the parameter value. For example, if you have two hosted cache servers named HCS1 and HCS2, configure the client computer for hosted cache mode with the following command.  
+        > If you want to specify the available hosted cache servers, use the `-ServerNames` parameter with a comma separated list of your hosted cache servers as the parameter value. For example, if you have two hosted cache servers named HCS1 and HCS2, configure the client computer for hosted cache mode with the following command.  
         >   
-        > `Enable-BCHostedClient –ServerNames HCS1,HCS2`  
+        > `Enable-BCHostedClient -ServerNames HCS1,HCS2`  
   
 
 

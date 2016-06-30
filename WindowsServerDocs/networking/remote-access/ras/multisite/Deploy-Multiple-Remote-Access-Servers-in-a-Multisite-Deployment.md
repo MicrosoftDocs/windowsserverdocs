@@ -15,12 +15,12 @@ author: coreyp
 
 >Applies To: Windows Server Technical Preview
 
-Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.  
+Windows Server 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 In a multisite deployment two or more Remote Access servers or server clusters are deployed and configured as different entry points in a single location, or in dispersed geographical locations. Deploying multiple entry points in a single location allows for server redundancy, or for the alignment of Remote Access servers with existing network architecture. Deployment by geographical location ensures efficient use of resources, as remote client computers can connect to internal network resources using an entry point closest to them. Traffic across a multisite deployment can be distributed and balanced with an external global load balancer.  
   
-A multisite deployment supports client computers running Windows 10®, Windows® 8 or  Windows 7 . Client computers running Windows 10 or Windows 8 automatically identify an entry point, or the user can manually select an entry point. Automatic assignment occurs in the following priority order:  
+A multisite deployment supports client computers running Windows 10, Windows 8 or  Windows 7 . Client computers running Windows 10 or Windows 8 automatically identify an entry point, or the user can manually select an entry point. Automatic assignment occurs in the following priority order:  
   
 1.  Use an entry point selected manually by the user.  
   
@@ -68,7 +68,7 @@ The following table lists the roles and features used in this scenario.
   
 |Role/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services (RRAS), which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services (RRAS) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services (IIS) Web Server – This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services (RRAS), which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services (RRAS) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
@@ -115,7 +115,7 @@ The following are known issues when configuring a multisite scenario:
 -   **Multiple entry points in the same IPv4 subnet**—Adding multiple entry points in the same IPv4 subnet will result in an IP address conflict message, and the DNS64 address for the entry point will not be configured as expected. This issue occurs when IPv6 has not been deployed on the internal interfaces of the servers on the corporate network. To prevent this problem run the following Windows PowerShell command on all current and future Remote Access servers:  
   
     ```  
-    Set-NetIPInterface –InterfaceAlias <InternalInterfaceName> –AddressFamily IPv6 –DadTransmits 0  
+    Set-NetIPInterface -InterfaceAlias <InternalInterfaceName> -AddressFamily IPv6 -DadTransmits 0  
     ```  
   
 -   If the public address specified for DirectAccess clients to connect to the Remote Access server has a suffix included in NRPT, DirectAccess might not work as expected. Ensure that the NRPT has an exemption for the public name. In a multisite deployment, exemptions should be added for the public names of all entry points. Note that if force tunneling is enabled these exemptions are added automatically. They are removed if force tunneling is disabled.  

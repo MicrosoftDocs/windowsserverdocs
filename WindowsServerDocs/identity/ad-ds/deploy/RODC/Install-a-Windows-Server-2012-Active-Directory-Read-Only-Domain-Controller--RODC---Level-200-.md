@@ -132,7 +132,7 @@ The **Read-only domain controller (RODC)** option is pre-selected and cannot be 
 ```  
   
 > [!NOTE]  
-> By default, the **â€“NoGlobalCatalog** value is $false, which means the domain controller will be a global catalog server if the argument is not specified.  
+> By default, the **â€"NoGlobalCatalog** value is $false, which means the domain controller will be a global catalog server if the argument is not specified.  
   
 ### Specify the Password Replication Policy  
 ![](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1PRP.png)  
@@ -255,7 +255,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create a new RODC in the corp.contoso.com and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSDomainController â€“DomainName corp.contoso.com â€“credential (get-credential)  
+    Install-ADDSDomainController â€"DomainName corp.contoso.com â€"credential (get-credential)  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  
@@ -467,7 +467,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create a new RODC in the corp.contoso.com and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSDomainController â€“DomainName corp.contoso.com â€“credential (get-credential)  
+    Install-ADDSDomainController â€"DomainName corp.contoso.com â€"credential (get-credential)  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  

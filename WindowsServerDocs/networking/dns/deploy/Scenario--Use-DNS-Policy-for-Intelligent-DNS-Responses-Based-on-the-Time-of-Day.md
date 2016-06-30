@@ -74,7 +74,7 @@ The following sections provide detailed configuration instructions.
 #### <a name="bkmk_subnets"></a>Create the DNS Client Subnets  
 The first step is to identify the subnets or IP address space of the regions for which you want to redirect traffic. For example, if you want to redirect traffic for the U.S. and Europe, you need to identify the subnets or IP address spaces of these regions.  
   
-You can obtain this information from Geo-IP maps. Based on these Geo-IP distributions, you must create the “DNS Client Subnets.” A DNS Client Subnet is a logical grouping of IPv4 or IPv6 subnets from which queries are sent to a DNS server.  
+You can obtain this information from Geo-IP maps. Based on these Geo-IP distributions, you must create the "DNS Client Subnets." A DNS Client Subnet is a logical grouping of IPv4 or IPv6 subnets from which queries are sent to a DNS server.  
   
 You can use the following Windows PowerShell commands to create DNS Client Subnets.  
   
@@ -141,15 +141,15 @@ You can use the following Windows PowerShell commands to create a DNS policy tha
 >In this example, the DNS server is in the GMT time zone, so the peak hour time periods must be expressed in the equivalent GMT time.  
   
 ```  
-Add-DnsServerQueryResolutionPolicy -Name "America6To9Policy" -Action ALLOW –ClientSubnet “eq,AmericaSubnet” -ZoneScope "SeattleZoneScope,4;DublinZoneScope,1" –TimeOfDay “EQ,01:00-04:00” -ZoneName "contosogiftservices.com" –ProcessingOrder 1  
+Add-DnsServerQueryResolutionPolicy -Name "America6To9Policy" -Action ALLOW -ClientSubnet "eq,AmericaSubnet" -ZoneScope "SeattleZoneScope,4;DublinZoneScope,1" -TimeOfDay "EQ,01:00-04:00" -ZoneName "contosogiftservices.com" -ProcessingOrder 1  
   
-Add-DnsServerQueryResolutionPolicy -Name "Europe6To9Policy" -Action ALLOW –ClientSubnet “eq,EuropeSubnet” -ZoneScope "SeattleZoneScope,1;DublinZoneScope,4" –TimeOfDay “EQ,17:00-20:00” -ZoneName "contosogiftservices.com" –ProcessingOrder 2  
+Add-DnsServerQueryResolutionPolicy -Name "Europe6To9Policy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "SeattleZoneScope,1;DublinZoneScope,4" -TimeOfDay "EQ,17:00-20:00" -ZoneName "contosogiftservices.com" -ProcessingOrder 2  
   
-Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW –ClientSubnet “eq,AmericaSubnet” -ZoneScope "SeattleZoneScope,1" -ZoneName "contosogiftservices.com" –ProcessingOrder 3  
+Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ClientSubnet "eq,AmericaSubnet" -ZoneScope "SeattleZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 3  
   
-Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW –ClientSubnet “eq,EuropeSubnet” -ZoneScope "DublinZoneScope,1" -ZoneName "contosogiftservices.com" –ProcessingOrder 4  
+Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "DublinZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 4  
   
-Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW –-ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" –ProcessingOrder 5  
+Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW --ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 5  
   
 ```  
 For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).  

@@ -44,7 +44,7 @@ To configure Remote Access to use a multisite topology, it is necessary to add a
 8.  Close the **Network Connections** window.  
   
 ## <a name="SecGroup"></a>Create security groups for Windows 7 DirectAccess clients on DC1  
-Create the DirectAccess security groups for  Windows 7®  with the following procedure.  
+Create the DirectAccess security groups for  Windows 7  with the following procedure.  
   
  Windows 7  client computers must be members of separate security groups because they are able to connect to internal resources through a single entry point only. When enabling Multisite support or adding entry points, if  Windows 7  support is requested, then a separate GPO will be automatically created by DirectAccess for  Windows 7  clients for each entry point.  
   
@@ -90,7 +90,7 @@ Create the DirectAccess security groups for  Windows 7®  with the following proc
   
 7.  In the console tree, right-click **Subnets**, and then click **New Subnet**.  
   
-8.  On the **New Object – Subnet** dialog box, under **Prefix**, type **2001:db8:1::/64**, in the **Select a site object for this prefix** list, click **Default-First-Site-Name**, and then click **OK**.  
+8.  On the **New Object - Subnet** dialog box, under **Prefix**, type **2001:db8:1::/64**, in the **Select a site object for this prefix** list, click **Default-First-Site-Name**, and then click **OK**.  
   
 9. In the console tree, right-click **Subnets**, and then click **New Subnet**.  
   
@@ -98,7 +98,7 @@ Create the DirectAccess security groups for  Windows 7®  with the following proc
   
 11. In the console tree, right-click **Subnets**, and then click **New Subnet**.  
   
-12. On the **New Object – Subnet** dialog box, under **Prefix**, type **2001:db8:2::/64**, in the **Select a site object for this prefix** list, click **Second-Site**, and then click **OK**.  
+12. On the **New Object - Subnet** dialog box, under **Prefix**, type **2001:db8:2::/64**, in the **Select a site object for this prefix** list, click **Second-Site**, and then click **OK**.  
   
 13. Close Active Directory Sites and Services.  
   

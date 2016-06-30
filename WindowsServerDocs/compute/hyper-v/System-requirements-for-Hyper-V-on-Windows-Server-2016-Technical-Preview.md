@@ -25,13 +25,13 @@ If you're already using Hyper-V, it's likely that you can use your existing hard
 For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows-Server-Technical-Preview.md).  
   
 ## General requirements  
-Regardless of the Hyper-V features you want to use, you’ll need:  
+Regardless of the Hyper-V features you want to use, you'll need:  
   
--   A 64-bit processor with second-level address translation (SLAT). To install the Hyper-V virtualization components such as Windows hypervisor, the processor must have SLAT. However, it’s not required to install Hyper-V management tools like Virtual Machine Connection (VMConnect), Hyper-V Manager, and the Hyper-V cmdlets for Windows PowerShell. See "How to check for Hyper-V requirements," below, to find out if your processor has SLAT.  
+-   A 64-bit processor with second-level address translation (SLAT). To install the Hyper-V virtualization components such as Windows hypervisor, the processor must have SLAT. However, it's not required to install Hyper-V management tools like Virtual Machine Connection (VMConnect), Hyper-V Manager, and the Hyper-V cmdlets for Windows PowerShell. See "How to check for Hyper-V requirements," below, to find out if your processor has SLAT.  
   
 -   VM Monitor Mode extensions  
   
--   Enough memory – plan for *at least* 4 GB of RAM. More memory is better. You’ll need enough memory for the host and all virtual machines that you want to run at the same time.  
+-   Enough memory - plan for *at least* 4 GB of RAM. More memory is better. You'll need enough memory for the host and all virtual machines that you want to run at the same time.  
   
 -   Virtualization support turned on in the BIOS or UEFI:  
   
@@ -52,13 +52,13 @@ Here are the requirements for discrete device assignment and shielded virtual ma
 ### Discrete device assignment  
 **Host** requirements are similar to the existing requirements for the SR-IOV feature in Hyper-V.  
   
--   The processor must have either Intel’s Extended Page Table (EPT) or AMD’s Nested Page Table (NPT).  
+-   The processor must have either Intel's Extended Page Table (EPT) or AMD's Nested Page Table (NPT).  
   
 -   The chipset must have:  
   
-    -   Interrupt remapping — Intel’s VT-d with the Interrupt Remapping capability (VT-d2) or any version of AMD I/O Memory Management Unit (I/O MMU).  
+    -   Interrupt remapping — Intel's VT-d with the Interrupt Remapping capability (VT-d2) or any version of AMD I/O Memory Management Unit (I/O MMU).  
   
-    -   DMA remapping — Intel’s VT-d with Queued Invalidations or any AMD I/O MMU.  
+    -   DMA remapping — Intel's VT-d with Queued Invalidations or any AMD I/O MMU.  
   
     -   Access control services (ACS) on PCI Express root ports.  
   

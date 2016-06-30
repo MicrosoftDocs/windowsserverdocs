@@ -42,7 +42,7 @@ Traditional security approaches have focused on using the ingress and egress poi
 
 -   Adversaries have demonstrated a consistent and ongoing ability to obtain access on workstations inside the network boundary through phishing and other web and email attacks.
 
-The natural replacement for the network security perimeter in a complex modern enterprise is the authentication and authorization controls in an organization’s identity layer. Privileged administrative accounts are effectively in control of this new “security perimeter” so it's critical to protect privileged access:
+The natural replacement for the network security perimeter in a complex modern enterprise is the authentication and authorization controls in an organization's identity layer. Privileged administrative accounts are effectively in control of this new "security perimeter" so it's critical to protect privileged access:
 
 ![](../media/Securing-Privileged-Access/PAW_LP_Fig2.JPG)
 
@@ -52,7 +52,7 @@ An adversary that gains control of an administrative account can use those privi
 
 For more information on the types of attacks that commonly lead to attackers in control of administrative accounts, please visit the [Pass The Hash web site](http://www.microsoft.com/pth) for informative white papers, videos and more.
 
-This figure depicts the separate “channel” for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email.
+This figure depicts the separate "channel" for administration that the roadmap establishes to isolate privileged access tasks from high risk standard user tasks like web browsing and accessing email.
 
 ![](../media/Securing-Privileged-Access/PAW_LP_Fig4.JPG)
 
@@ -65,11 +65,11 @@ The roadmap is designed to maximize the use of technologies that you may already
 
 The roadmap of Microsoft recommendations is broken into 3 stages:
 
--   2-4 week plan – Quickly mitigate the most frequently used attack techniques
+-   2-4 week plan - Quickly mitigate the most frequently used attack techniques
 
--   1-3 month plan – Build visibility and control of admin activity
+-   1-3 month plan - Build visibility and control of admin activity
 
--   6+ month plan – Continue building defenses to a more proactive security posture
+-   6+ month plan - Continue building defenses to a more proactive security posture
 
 Each stage of the roadmap is designed to raise the cost and difficulty for adversaries to attack privileged access for your on-premises and cloud assets. The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation.
 
@@ -112,7 +112,7 @@ To separate internet risks from all privileged administrative accounts, continue
 
 To lower the exposure time of privileges and increase visibility into their use, provide privileges just in time (JIT) using an appropriate solution such as the ones below:
 
--   For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)’s [Privileged Access Manager (PAM)](https://technet.microsoft.com/en-us/library/mt150258.aspx) capability.
+-   For Active Directory Domain Services (AD DS), use Microsoft Identity Manager (MIM)'s [Privileged Access Manager (PAM)](https://technet.microsoft.com/en-us/library/mt150258.aspx) capability.
 
 -   For Azure Active Directory, use [Azure AD Privileged Identity Management (PIM)](http://aka.ms/AzurePIM) capability.
 
@@ -135,7 +135,7 @@ To get visibility into active credential theft and identity attacks so that you 
 
 Prior to installing ATA, you should ensure you have a process in place to handle a major security incident that ATA may detect.
 
--   For more information on setting up an incident response process, see [Responding to IT Security Incidents](http://aka.ms/irr) and the “Respond to suspicious activity” and “Recover from a breach” sections of [Mitigating Pass-the-Hash and Other Credential Theft](https://www.microsoft.com/pth), version 2.
+-   For more information on setting up an incident response process, see [Responding to IT Security Incidents](http://aka.ms/irr) and the "Respond to suspicious activity" and "Recover from a breach" sections of [Mitigating Pass-the-Hash and Other Credential Theft](https://www.microsoft.com/pth), version 2.
 
 -   For more information on engaging Microsoft services to assist with preparing your IR process for ATA generated events and deploying ATA, contact your Microsoft representative by accessing [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
 
@@ -171,14 +171,14 @@ To limit the risk of unauthorized programs on your domain controllers from adver
 
 **5. Shielded VMs for virtual DCs (Server 2016 Hyper-V Fabric)**
 
-To protect virtualized domain controllers from attack vectors that exploit a virtual machine’s inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks.
+To protect virtualized domain controllers from attack vectors that exploit a virtual machine's inherent loss of physical security, use this new Server 2016 Hyper-V capability to help prevent the theft of Active Directory secrets from Virtual DCs. Using this solution, you can encrypt Generation 2 VMs to protect the VM data against inspection, theft, and tampering by storage and network administrators as well as harden the access to the VM against Hyper-V host administrators attacks.
 
 ## Am I done?
 Completing this roadmap will gain you strong privileged access protections for the attacks that are currently known and available to adversaries today. Unfortunately, security threats will constantly evolve and shift, so we recommend you view security as an ongoing process focused on raising the cost and reducing the success rate of adversaries targeting your environment.
 
 Securing privileged access is a critical first step to establishing security assurances for business assets in a modern organization, but it is not the only part of a complete security program that would include elements like policy, operations, information security, servers, applications, PCs, devices, cloud fabric, and other components provide the security assurances you require.
 
-For more information on building a complete security roadmap, see the “Customer responsibilities and roadmap” section of the Microsoft Cloud Security for Enterprise Architects document available [here](http://aka.ms/securecustomer).
+For more information on building a complete security roadmap, see the "Customer responsibilities and roadmap" section of the Microsoft Cloud Security for Enterprise Architects document available [here](http://aka.ms/securecustomer).
 
 For more information on engaging Microsoft services to assist with any of these topics, contact your Microsoft representative or visit [this page](https://www.microsoft.com/en-us/microsoftservices/campaigns/cybersecurity-protection.aspx).
 

@@ -535,12 +535,20 @@ type was found.
                   </step>
                   <step>
                     <content>
+<<<<<<< HEAD
+                      <para>Note the names of all domain controllers that report "Warn" or "Fail" status in the Summary table. </para>
+=======
                       <para>Note the names of all domain controllers that report �Warn� or �Fail� status in the Summary table. </para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
                     </content>
                   </step>
                   <step>
                     <content>
+<<<<<<< HEAD
+                      <para>Find the detailed breakout section for the problem domain controller by searching for the string "DC: &lt;DomainControllerName&gt;". </para>
+=======
                       <para>Find the detailed breakout section for the problem domain controller by searching for the string �DC: &lt;DomainControllerName&gt;�. </para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
                     </content>
                   </step>
                   <step>
@@ -650,7 +658,11 @@ type was found.
                   </step>
                   <step>
                     <content>
+<<<<<<< HEAD
+                      <para>On the <ui>General</ui> tab, verify that the zone type is Active Directory-integrated. </para>
+=======
                       <para>On the <ui>General</ui> tab, verify that the zone type is Active Directory�integrated. </para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
                     </content>
                   </step>
                   <step>

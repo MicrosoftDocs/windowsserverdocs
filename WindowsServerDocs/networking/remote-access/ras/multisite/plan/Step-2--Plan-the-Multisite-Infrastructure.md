@@ -42,11 +42,11 @@ Note the following recommendations and constraints for Active Directory deployme
   
 1.  Each Active Directory site can contain one or more Remote Access servers, or a server cluster, functioning as multisite entry points for client computers. However an Active Directory site is not required to have an entry point.  
   
-2.  A multisite entry point can only be associated with a single Active Directory site. When client computers running Windows® 8 connect to a specific entry point, they are considered as belonging to the Active Directory site associated with that entry point.  
+2.  A multisite entry point can only be associated with a single Active Directory site. When client computers running Windows 8 connect to a specific entry point, they are considered as belonging to the Active Directory site associated with that entry point.  
   
 3.  It is recommended that each Active Directory site has a domain controller. The domain controller can be read-only.  
   
-4.  If each Active Directory site contains a domain controller, The GPO for a server in the entry point is managed by one of the domain controllers in the Active Directory site associated with the endpoint. If there are no write-enabled domain controllers in that site, then the GPO for a server is managed on a write-enabled domain controller that is found closest to the first Remote Access server that is configured in the entry point. Closest is determined by a link cost calculation. Note that in this scenario, after making configuration changes there might be a delay when replicating between the domain controller managing the GPO and the read-only domain controller in the server’s Active Directory site.  
+4.  If each Active Directory site contains a domain controller, The GPO for a server in the entry point is managed by one of the domain controllers in the Active Directory site associated with the endpoint. If there are no write-enabled domain controllers in that site, then the GPO for a server is managed on a write-enabled domain controller that is found closest to the first Remote Access server that is configured in the entry point. Closest is determined by a link cost calculation. Note that in this scenario, after making configuration changes there might be a delay when replicating between the domain controller managing the GPO and the read-only domain controller in the server's Active Directory site.  
   
 5.  Client GPOs and optional application server GPOs are managed on the domain controller running as the Primary Domain Controller (PDC) emulator. This means that client GPOs are not necessarily managed in the Active Directory site containing the entry point to which clients connect.  
   
@@ -136,7 +136,7 @@ Each GPO will be managed by a specific domain controller, as follows:
   
 If you want to manually modify GPO settings note the following:  
   
--   For server GPOs, in order to identify which domain controller is associated with a specific entry point, run the PowerShell cmdlet `Get-DAEntryPointDC –EntryPointName <name of entry point>`.  
+-   For server GPOs, in order to identify which domain controller is associated with a specific entry point, run the PowerShell cmdlet `Get-DAEntryPointDC -EntryPointName <name of entry point>`.  
   
 -   By default, when you make changes with networking PowerShell cmdlets or the Group Policy Management console, the domain controller acting as the PDC emulator is used.  
   
@@ -153,9 +153,9 @@ If you want to manually modify GPO settings note the following:
     2.  To do this in PowerShell, specify the DomainController parameter for the Open-NetGPO cmdlet. For example, to enable the private and public profiles in Windows Firewall on a GPO named domain1\DA_Server_GPO _Europe using a domain controller named europe-dc.corp.contoso.com, do the following:  
   
         ```  
-        $gpoSession = Open-NetGPO –PolicyStore “domain1\DA_Server_GPO _Europe” –DomainController “europe-dc.corp.contoso.com”  
-        Set-NetFirewallProfile –GpoSession $gpoSession –Name @(“Private”,”Public”) –Enabled True  
-        Save-NetGPO –GpoSession $gpoSession  
+        $gpoSession = Open-NetGPO -PolicyStore "domain1\DA_Server_GPO _Europe" -DomainController "europe-dc.corp.contoso.com"  
+        Set-NetFirewallProfile -GpoSession $gpoSession -Name @("Private","Public") -Enabled True  
+        Save-NetGPO -GpoSession $gpoSession  
         ```  
   
 #### Modifying domain controller association  

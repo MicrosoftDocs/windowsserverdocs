@@ -18,7 +18,7 @@ During synchronization, a WSUS server downloads updates (update metadata and fil
 
 The first time a WSUS server downloads updates may take a long time. If you are setting up multiple WSUS servers, you can speed up the process to a certain extent by downloading all the updates on one WSUS server and then copying the updates to the content directories of the other WSUS servers.
 
-You can copy content from one WSUS server’s content directory to another. The location of the content directory is specified when you run the WSUS post installation procedure. You can use the wsusutil.exe tool to export update metadata from one WSUS server to a file. You can then import that file into other WSUS servers.
+You can copy content from one WSUS server's content directory to another. The location of the content directory is specified when you run the WSUS post installation procedure. You can use the wsusutil.exe tool to export update metadata from one WSUS server to a file. You can then import that file into other WSUS servers.
 
 ## Setting up Update Synchronizations
 The **Options** page is the central access point in the WSUS Administration Console for customizing how your WSUS server synchronizes updates. You can specify which updates are synchronized automatically, where your server gets updates, connection settings, and the synchronization schedule. You can also use the Configuration Wizard from the **Options** page to configure or reconfigure your WSUS server at any time.

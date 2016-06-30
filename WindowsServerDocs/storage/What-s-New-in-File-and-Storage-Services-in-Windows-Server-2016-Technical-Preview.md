@@ -166,7 +166,7 @@ If SMB signing and mutual authentication are unavailable, a Windows 10 or Window
 > [!NOTE]  
 > The registry values for these settings aren’t present by default, but the hardening rules still apply until overridden by Group Policy or other registry values.  
 
-For more information on these security improvements – also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
+For more information on these security improvements �" also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
 
 
 ## See also  

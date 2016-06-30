@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory® domain in a new forest.  
+This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.  
   
 > [!NOTE]  
 > This guide is available for download in Microsoft Word format from TechNet Gallery. For more information, see [Core Network Guide for Windows Server 2016 Technical Preview](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).  
@@ -43,7 +43,7 @@ A core network is a collection of network hardware, devices, and software that p
   
 A Windows Server core network provides you with many benefits, including the following.  
   
--   Core protocols for network connectivity between computers and other Transmission Control Protocol/Internet Protocol (TCP/IP) compatible devices. TCP/IP is a suite of standard protocols for connecting computers and building networks. TCP/IP is network protocol software provided with Microsoft® Windows® operating systems that implements and supports the TCP/IP protocol suite.  
+-   Core protocols for network connectivity between computers and other Transmission Control Protocol/Internet Protocol (TCP/IP) compatible devices. TCP/IP is a suite of standard protocols for connecting computers and building networks. TCP/IP is network protocol software provided with Microsoft Windows operating systems that implements and supports the TCP/IP protocol suite.  
   
 -   Dynamic Host Configuration Protocol (DHCP) automatic IP address assignment to computers and other devices that are configured as DHCP clients. Manual configuration of IP addresses on all computers on your network is time-consuming and less flexible than dynamically providing computers and other devices with IP address configurations using a DHCP server.  
   
@@ -191,23 +191,23 @@ Before you deploy a core network, you must plan the following items.
 The following sections provide more detail on each of these items.  
   
 > [!NOTE]  
-> For assistance with planning your deployment, also see [Appendix E – Core Network Planning Preparation Sheet](#BKMK_E).  
+> For assistance with planning your deployment, also see [Appendix E - Core Network Planning Preparation Sheet](#BKMK_E).  
   
 ### <a name="bkmk_NetFndtn_Pln_Subnt"></a>Planning subnets  
 In Transmission Control Protocol/Internet Protocol (TCP/IP) networking, routers are used to interconnect the hardware and software used on different physical network segments called subnets. Routers are also used to forward IP packets between each of the subnets. Determine the physical layout of your network, including the number of routers and subnets you need, before proceeding with the instructions in this guide.  
   
-In addition, to configure the servers on your network with static IP addresses, you must determine the IP address range that you want to use for the subnet where your core network servers are located. In this guide, the private IP address ranges 10.0.0.1 – 10.0.0.254 and 10.0.1.1 – 10.0.1.254 are used as examples, but you can use any private IP address range that you prefer.  
+In addition, to configure the servers on your network with static IP addresses, you must determine the IP address range that you want to use for the subnet where your core network servers are located. In this guide, the private IP address ranges 10.0.0.1 - 10.0.0.254 and 10.0.1.1 - 10.0.1.254 are used as examples, but you can use any private IP address range that you prefer.  
   
 > [!IMPORTANT]  
 > After you select the IP address ranges that you want to use for each subnet, ensure that you configure your routers with an IP address from the same IP address range as that used on the subnet where the router is installed. For example, if your router is configured by default with an IP address of 192.168.1.1, but you are installing the router on a subnet with an IP address range of 10.0.0.0/24, you must reconfigure the router to use an IP address from the 10.0.0.0/24 IP address range.  
   
 The following recognized private IP address ranges are specified by Internet Request for Comments (RFC) 1918:  
   
--   10.0.0.0 – 10.255.255.255  
+-   10.0.0.0 - 10.255.255.255  
   
--   172.16.0.0 – 172.31.255.255  
+-   172.16.0.0 - 172.31.255.255  
   
--   192.168.0.0 – 192.168.255.255  
+-   192.168.0.0 - 192.168.255.255  
   
 When you use the private IP address ranges as specified in RFC 1918, you cannot connect directly to the Internet using a private IP address because requests going to or from these addresses are automatically discarded by Internet service provider (ISP) routers. To add Internet connectivity to your core network later, you must contract with an ISP to obtain a public IP address.  
   
@@ -383,7 +383,7 @@ To prevent addressing and routing problems, you should make sure that all TCP/IP
 #### Planning exclusion ranges  
 When you create a scope on a DHCP server, you specify an IP address range that includes all of the IP addresses that the DHCP server is allowed to lease to DHCP clients, such as computers and other devices. If you then go and manually configure some servers and other devices with static IP addresses from the same IP address range that the DHCP server is using, you can accidentally create an IP address conflict, where you and the DHCP server have both assigned the same IP address to different devices.  
   
-To solve this problem, you can create an exclusion range for the DHCP scope. An exclusion range is a contiguous range of IP addresses within the scope’s IP address range that the DHCP server is not allowed to use. If you create an exclusion range, the DHCP server does not assign the addresses in that range, allowing you to manually assign these addresses without creating an IP address conflict.  
+To solve this problem, you can create an exclusion range for the DHCP scope. An exclusion range is a contiguous range of IP addresses within the scope's IP address range that the DHCP server is not allowed to use. If you create an exclusion range, the DHCP server does not assign the addresses in that range, allowing you to manually assign these addresses without creating an IP address conflict.  
   
 You can exclude IP addresses from distribution by the DHCP server by creating an exclusion range for each scope. You should use exclusions for all devices that are configured with a static IP address. The excluded addresses should include all IP addresses that you assigned manually to other servers, non-DHCP clients, diskless workstations, or Routing and Remote Access and PPP clients.  
   
@@ -462,7 +462,7 @@ You can use the procedure in this section to change the name of a computer. Rena
 4.  Click **OK** twice, and then click **Close**. If you want to restart the computer immediately to complete the name change, click **Restart Now**. Otherwise, click **Restart Later**.  
   
 > [!NOTE]  
-> For information on how to rename computers that are running other Microsoft operating systems, see [Appendix A – Renaming computers](#BKMK_A).  
+> For information on how to rename computers that are running other Microsoft operating systems, see [Appendix A - Renaming computers](#BKMK_A).  
   
 #### <a name="BKMK_ip"></a>Configure a static IP address  
 You can use the procedures in this topic to configure the Internet Protocol version 4 (IPv4) properties of a network connection with a static IP address for computers running Windows Server 2016 Technical Preview.  
@@ -500,7 +500,7 @@ You can use the procedures in this topic to configure the Internet Protocol vers
 10. Click **OK**, and then click **Close**.  
   
 > [!NOTE]  
-> For information on how to configure a static IP address on computers that are running other Microsoft operating systems, see [Appendix B – Configuring static IP addresses](#BKMK_B).  
+> For information on how to configure a static IP address on computers that are running other Microsoft operating systems, see [Appendix B - Configuring static IP addresses](#BKMK_B).  
   
 #### <a name="BKMK_deployADDNS01"></a>Deploying DC1  
 To deploy DC1, which is the computer running Active Directory Domain Services (AD DS) and DNS, you must complete these steps in the following order:  
@@ -608,7 +608,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to perfo
   
     -   Active Directory Users and Computers/*domain node*/*folder*  
   
-3.  Point to **New**, and then click **User**. The **New Object – User** dialog box opens.  
+3.  Point to **New**, and then click **User**. The **New Object - User** dialog box opens.  
   
 4.  In **First name**, type the user's first name.  
   
@@ -639,7 +639,7 @@ Membership in **Domain Admins**, or equivalent is the minimum required to perfor
   
     -   **Active Directory Users and Computers**/*domain node*/*folder that contains the group*  
   
-3.  In the details pane, right-click the object that you want to add to a group, such as a user or computer, and then click **Properties**. The object’s **Properties** dialog box opens. Click the **Member of** tab.  
+3.  In the details pane, right-click the object that you want to add to a group, such as a user or computer, and then click **Properties**. The object's **Properties** dialog box opens. Click the **Member of** tab.  
   
 4.  On the **Member of** tab, click **Add**.  
   
@@ -653,7 +653,7 @@ You can use this procedure to configure a reverse lookup zone in Domain Name Sys
 Membership in **Domain Admins** is the minimum required to perform this procedure.  
   
 > [!NOTE]  
-> -   For medium and large organizations, it’s recommended that you configure and use the DNSAdmins group in Active Directory Users and Computers. For more information, see [Additional Technical Resources](#BKMK_resources)  
+> -   For medium and large organizations, it's recommended that you configure and use the DNSAdmins group in Active Directory Users and Computers. For more information, see [Additional Technical Resources](#BKMK_resources)  
 > -   To perform this procedure by using Windows PowerShell, open PowerShell and type the following cmdlet on one line, and then press ENTER. You must also replace the DNS reverse lookup zone and zonefile names in this example with the values that you want to use. Ensure that you reverse the network ID for the reverse zone name. For example, if the network ID is 192.168.0, create the reverse lookup zone name **0.168.192.in-addr.arpa**.  
 >   
 > `Add-DnsServerPrimaryZone 0.0.10.in-addr.arpa -ZoneFile 0.0.10.in-addr.arpa.dns`  
@@ -721,7 +721,7 @@ On all servers that you are deploying, except for the server running AD DS, do t
 7.  On the **System Properties** dialog box, on the **Computer Name** tab, click **Close**. The **Microsoft Windows** dialog box opens, and displays a message, again indicating that you must restart the computer to apply the changes. Click **Restart Now**.  
   
 > [!NOTE]  
-> For information on how to join computers that are running other Microsoft operating systems to the domain, see [Appendix C – Joining computers to the domain](#BKMK_C).  
+> For information on how to join computers that are running other Microsoft operating systems to the domain, see [Appendix C - Joining computers to the domain](#BKMK_C).  
   
 ###### To log on to the domain using computers running Windows Server 2016 Technical Preview  
   
@@ -736,7 +736,7 @@ On all servers that you are deploying, except for the server running AD DS, do t
 5.  In **Password**, type your domain password, and then click the arrow, or press ENTER.  
   
 > [!NOTE]  
-> For information on how to log on to the domain using computers that are running other Microsoft operating systems, see [Appendix D – Log on to the domain](#BKMK_D).  
+> For information on how to log on to the domain using computers that are running other Microsoft operating systems, see [Appendix D - Log on to the domain](#BKMK_D).  
   
 #### <a name="BKMK_deployDHCP01"></a>Deploying DHCP1  
 Before deploying this component of the core network, you must do the following:  
@@ -756,15 +756,15 @@ To deploy DHCP1, which is the computer running the Dynamic Host Configuration Pr
 >   
 > `Install-WindowsFeature DHCP -IncludeManagementTools`  
 >   
-> `Add-DhcpServerv4Scope -name "Corpnet" -StartRange 10.0.0.1 -EndRange 10.0.0.254 -SubnetMask 255.255.255.0 –State Active`  
+> `Add-DhcpServerv4Scope -name "Corpnet" -StartRange 10.0.0.1 -EndRange 10.0.0.254 -SubnetMask 255.255.255.0 -State Active`  
 >   
-> `Add-DhcpServerv4ExclusionRange –ScopeID 10.0.0.0 –StartRange 10.0.0.1 –EndRange 10.0.0.15`  
+> `Add-DhcpServerv4ExclusionRange -ScopeID 10.0.0.0 -StartRange 10.0.0.1 -EndRange 10.0.0.15`  
 >   
 > `Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.0.1 -ScopeID 10.0.0.0 -ComputerName DHCP1.corp.contoso.com`  
 >   
-> `Add-DhcpServerv4Scope -name "Corpnet2" -StartRange 10.0.1.1 -EndRange 10.0.1.254 -SubnetMask 255.255.255.0 –State Active`  
+> `Add-DhcpServerv4Scope -name "Corpnet2" -StartRange 10.0.1.1 -EndRange 10.0.1.254 -SubnetMask 255.255.255.0 -State Active`  
 >   
-> `Add-DhcpServerv4ExclusionRange –ScopeID 10.0.1.0 –StartRange 10.0.1.1 –EndRange 10.0.1.15`  
+> `Add-DhcpServerv4ExclusionRange -ScopeID 10.0.1.0 -StartRange 10.0.1.1 -EndRange 10.0.1.15`  
 >   
 > `Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.1.1 -ScopeID 10.0.1.0 -ComputerName DHCP1.corp.contoso.com`  
 >   
@@ -794,7 +794,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to perfo
   
 6.  In **Select features**, click **Next**, and in **DHCP Server**, review the information that is provided, and then click **Next**.  
   
-7.  In **Confirm installation selections**, click **Restart the destination server automatically if required**. When you are prompted to confirm this selection, click **Yes**, and then click **Install**. The **Installation progress** page displays status during the installation process. When the process completes, the message “Configuration required. Installation succeeded on *ComputerName*” is displayed, where *ComputerName* is the name of the computer upon which you installed DHCP Server. In the message window, click **Complete DHCP configuration**. The DHCP Post-Install configuration wizard opens. Click **Next**.  
+7.  In **Confirm installation selections**, click **Restart the destination server automatically if required**. When you are prompted to confirm this selection, click **Yes**, and then click **Install**. The **Installation progress** page displays status during the installation process. When the process completes, the message "Configuration required. Installation succeeded on *ComputerName*" is displayed, where *ComputerName* is the name of the computer upon which you installed DHCP Server. In the message window, click **Complete DHCP configuration**. The DHCP Post-Install configuration wizard opens. Click **Next**.  
   
 8.  In **Authorization**, specify the credentials that you want to use to authorize the DHCP server in Active Directory Domain Services, and then click **Commit**. After authorization is complete, click **Close**.  
   
@@ -948,7 +948,7 @@ Network Policy Server (NPS) allows you to centrally configure and manage network
   
 NPS is an optional component of a core network, but you should install NPS if any of the following are true:  
   
--   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , Windows Server® 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.  
+-   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 , Windows Server 2012,  Windows Server 2008 R2  or  Windows Server 2008  and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.  
   
 -   You plan to deploy NAP.  
   
@@ -1016,7 +1016,7 @@ To complete this procedure, you must be a member of the **Domain Admins** group.
   
 7.  In **Select role services**, click **Network Policy Server**.  In **Add features that are required for Network Policy Server**, click **Add Features**. Click **Next**.  
   
-8.  In **Confirm installation selections**, click **Restart the destination server automatically if required**. When you are prompted to confirm this selection, click **Yes**, and then click **Install**. The Installation progress page displays status during the installation process. When the process completes, the message “Installation succeeded on *ComputerName*” is displayed, where *ComputerName* is the name of the computer upon which you installed Network Policy Server. Click **Close**.  
+8.  In **Confirm installation selections**, click **Restart the destination server automatically if required**. When you are prompted to confirm this selection, click **Yes**, and then click **Install**. The Installation progress page displays status during the installation process. When the process completes, the message "Installation succeeded on *ComputerName*" is displayed, where *ComputerName* is the name of the computer upon which you installed Network Policy Server. Click **Close**.  
   
 ##### <a name="BKMK_registerNPS"></a>Register the NPS Server in the Default Domain  
 You can use this procedure to register an NPS server in the domain where the server is a domain member.  
@@ -1114,14 +1114,14 @@ The following sections contain additional configuration information for computer
   
 2.  [Appendix B - Configuring static IP addresses](#BKMK_B)  
   
-3.  [Appendix C – Joining computers to the domain](#BKMK_C)  
+3.  [Appendix C - Joining computers to the domain](#BKMK_C)  
   
-4.  [Appendix D – Log on to the domain](#BKMK_D)  
+4.  [Appendix D - Log on to the domain](#BKMK_D)  
   
 5.  [Appendix E - Core Network Planning Preparation Sheet](#BKMK_E)  
   
 ## <a name="BKMK_A"></a>Appendix A - Renaming computers  
-You can use the procedures in this section to provide computers running Windows Server 2008 R2, Windows 7,  Windows Server® 2008 , and Windows Vista® with a different computer name.  
+You can use the procedures in this section to provide computers running Windows Server 2008 R2, Windows 7,  Windows Server 2008 , and Windows Vista with a different computer name.  
   
 -   [Windows Server 2008 R2 and Windows 7](#bkmk_NetFndtn_Pln_rename_R2)  
   
@@ -1226,8 +1226,8 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
   
 11. Click **OK**, and then click **Close**.  
   
-## <a name="BKMK_C"></a>Appendix C – Joining computers to the domain  
-You can use these procedures to join computers running Windows Server 2008 R2, Windows 7,  Windows Server® 2008 ,  and Windows Vista® to the domain.  
+## <a name="BKMK_C"></a>Appendix C - Joining computers to the domain  
+You can use these procedures to join computers running Windows Server 2008 R2, Windows 7,  Windows Server 2008 ,  and Windows Vista to the domain.  
   
 -   [Windows Server 2008 R2 and Windows 7](#BKMK_c1)  
   
@@ -1285,8 +1285,8 @@ Membership in **Domain Users**, or equivalent, is the minimum required to perfor
   
 9. On the **System Properties** dialog box, on the **Computer Name** tab, click **Close**. The **Microsoft Windows** dialog box opens, and displays a message, again indicating that you must restart the computer to apply the changes. Click **Restart Now**.  
   
-## <a name="BKMK_D"></a>Appendix D – Log on to the domain  
-You can use these procedures to log on to the domain using computers running Windows Server 2008 R2, Windows 7,  Windows Server® 2008 , and Windows Vista®.  
+## <a name="BKMK_D"></a>Appendix D - Log on to the domain  
+You can use these procedures to log on to the domain using computers running Windows Server 2008 R2, Windows 7,  Windows Server 2008 , and Windows Vista.  
   
 -   [Windows Server 2008 R2 and Windows 7](#BKMK_d1)  
   

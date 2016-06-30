@@ -22,7 +22,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
   
 **Table legend**  
   
--   **Built in** – LIS are included as part of this Linux distribution.  The Microsoft-provided LIS download package does not work for this distribution, so do not install it.  The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
+-   **Built in** - LIS are included as part of this Linux distribution.  The Microsoft-provided LIS download package does not work for this distribution, so do not install it.  The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
   
 -   **v** - Feature available  
   
@@ -47,8 +47,8 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 |SCSI WWN|2016, 2012 R2|||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||  
 |Configuration of MMIO gap|2016, 2012 R2|**v**|**v**|**v**|**v**|**v**|**v**|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|**v** Note 5, 6|**v** Note 5, 6|**v** Note 4, 5, 6|**v** Note 4, 5, 6|||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|**v** Note 5, 6|**v** Note 5, 6|**v** Note 4, 5, 6|**v** Note 4, 5, 6||**v** Note 4, 5, 6|  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|**v** Note 5, 6|**v** Note 5, 6|**v** Note 4, 5, 6|**v** Note 4, 5, 6|||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|**v** Note 5, 6|**v** Note 5, 6|**v** Note 4, 5, 6|**v** Note 4, 5, 6||**v** Note 4, 5, 6|  
 |Manual Memory Hot Add|2016|||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||  
 |Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|**v**|**v**|**v**|**v**|||  
@@ -87,7 +87,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 9. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper-V Manager or you can disable it using Powershell:  
   
     ```  
-    Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off  
   
     ```  
   

@@ -34,7 +34,7 @@ In this section:
   
 **Table legend**  
   
--   **Built in** – LIS are included as part of this Linux distribution. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
+-   **Built in** - LIS are included as part of this Linux distribution. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
   
 -   **v** - Feature available  
   
@@ -62,8 +62,8 @@ This series only has 64-bit kernels.
 |SCSI WWN|2016, 2012 R2|v|||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||  
 |Configuration of MMIO gap|2016, 2012 R2|v|v|v|v|v|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|v Note 8, 9, 10|v Note 8, 9, 10|v|v|v Note 8, 9, 10|  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|v Note 8, 9, 10|v Note 9, 10|v Note 9, 10|v Note 9, 10|v Note 9, 10|  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|v Note 8, 9, 10|v Note 8, 9, 10|v|v|v Note 8, 9, 10|  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|v Note 8, 9, 10|v Note 9, 10|v Note 9, 10|v Note 9, 10|v Note 9, 10|  
 |Manual Memory Hot Add|2016 ||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||  
 |Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|v|v|v|v|v|  
@@ -101,8 +101,8 @@ The 32-bit kernel for this series is PAE enabled. There is no built-in LIS suppo
 |SCSI WWN|2016, 2012 R2|v|||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
 |Configuration of MMIO gap|2016, 2012 R2|v|v|v|v|v|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|v Note 7, 8, 9, 10|v Note 7, 8, 9, 10|v Note 7, 8, 9, 10|v Note 7, 8, 9, 10||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|v Note 7, 8, 9, 10|v Note 7, 9, 10|v Note 7, 9, 10|v Note 7, 9, 10|v Note 7, 9, 10, 11|  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|v Note 7, 8, 9, 10|v Note 7, 8, 9, 10|v Note 7, 8, 9, 10|v Note 7, 8, 9, 10||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|v Note 7, 8, 9, 10|v Note 7, 9, 10|v Note 7, 9, 10|v Note 7, 9, 10|v Note 7, 9, 10, 11|  
 |Manual Memory Hot Add|2016 ||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
 |Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|v|v|v|v||  
@@ -120,7 +120,7 @@ The 32-bit kernel for this series is PAE enabled. There is no built-in LIS suppo
 ## <a name="BKMK_5x"></a>RHEL/CentOS 5.x Series  
 This series has a supported 32-bit PAE kernel available. There is no built-in LIS support for RHEL/CentOS before 5.9.  
   
-|**Feature**|**Windows Server version**|5.2 -5.11|**5.5-5.11**|**5.9 – 5.11**|  
+|**Feature**|**Windows Server version**|5.2 -5.11|**5.5-5.11**|**5.9 - 5.11**|  
 |-|-|-|-|-|  
 |**Availability**||[LIS 4.1](http://www.microsoft.com/download/details.aspx?id=51612)|[LIS 4.0](http://www.microsoft.com/download/details.aspx?id=46842)|Built in|  
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|v|v|v|  
@@ -139,8 +139,8 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 |SCSI WWN|2016, 2012 R2||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
 |Configuration of MMIO gap|2016, 2012 R2|v|v|v|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012||||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|v Note 7, 9, 10, 11|v Note 7, 9, 10, 11||  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012||||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|v Note 7, 9, 10, 11|v Note 7, 9, 10, 11||  
 |Manual Memory Hot Add|2016 ||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
 |Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|v|v||  
@@ -167,7 +167,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
   
 5.  Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).  
   
-6.  Live backup support for RHEL/CentOS 5.9 – 5.11/6.4/6.5 is available through [Hyper-V Backup Essentials for Linux](https://github.com/LIS/backupessentials/tree/1.0).  
+6.  Live backup support for RHEL/CentOS 5.9 - 5.11/6.4/6.5 is available through [Hyper-V Backup Essentials for Linux](https://github.com/LIS/backupessentials/tree/1.0).  
   
 7.  Dynamic memory support is only available on 64-bit virtual machines.  
   
@@ -196,7 +196,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 14. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:  
   
     ```  
-    Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off  
       
     ```  
   

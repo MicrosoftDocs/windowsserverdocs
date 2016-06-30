@@ -53,9 +53,9 @@ The following network interface settings are required for a single server deploy
 > 2.  If the 2nd NIC cannot be configured for the domain profile for any reason, then the DirectAccess IPsec policy must be manually scoped to all profiles using the following Windows PowerShell commands:  
 >   
 >     ```  
->     $gposession = Open-NetGPO –PolicyStore <Name of the server GPO>  
->     Set-NetIPsecRule –DisplayName <Name of the IPsec policy> –GPOSession $gposession –Profile Any  
->     Save-NetGPO –GPOSession $gposession  
+>     $gposession = Open-NetGPO -PolicyStore <Name of the server GPO>  
+>     Set-NetIPsecRule -DisplayName <Name of the IPsec policy> -GPOSession $gposession -Profile Any  
+>     Save-NetGPO -GPOSession $gposession  
 >     ```  
   
 ## <a name="ConfigRouting"></a>Configure routing in the corporate network  
