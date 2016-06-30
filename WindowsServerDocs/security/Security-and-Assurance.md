@@ -73,5 +73,4 @@ Link  |Description
 Link  |Description  
 ---------|---------  
 [Datacenter Firewall Overview](https://technet.microsoft.com/library/dn920240.aspx)  |This overview discusses Datacenter Firewall, a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.   
-
 [What's New in DNS in Windows Server 2016](../networking/dns/What-s-New-in-DNS-Server.md)  |This overview topic provides brief descriptions of new capabilities in DNS along with links for more information.   
