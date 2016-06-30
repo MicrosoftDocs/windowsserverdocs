@@ -39,12 +39,10 @@ Consider how you want to set up the following:
    - Kerberos lets you avoid having to sign in to the server, but requires constrained delegation to be set up. See below for instructions.  
    - CredSSP lets you avoid configuring constrained delegation, but requires you sign in to the source server. You can do this  through a local console session, a Remote Desktop session, or a remote Windows PowerShell session.  
   
-    > [!NOTE]  
-    > CredSPP requires signing in for situations that might not be obvious. For example, if you sign in to TestServer01 to move a virtual machine to TestServer02, and then want to move the virtual machine back to TestServer01, you'll need to sign in to TestServer02 before you try to move the virtual machine back to TestServer01. If you don't do this, the authentication attempt fails, an error occurs, and the following message is displayed:  
-    >   
-    > **Virtual machine migration operation failed at migration Source.**  
-    >   
-    > **Failed to establish a connection with host**  *computer name*: **No credentials are available in the security package 0x8009030E.**  
+      CredSPP requires signing in for situations that might not be obvious. For example, if you sign in to TestServer01 to move a virtual machine to TestServer02, and then want to move the virtual machine back to TestServer01, you'll need to sign in to TestServer02 before you try to move the virtual machine back to TestServer01. If you don't do this, the authentication attempt fails, an error occurs, and the following message is displayed:  
+    
+      "Virtual machine migration operation failed at migration Source.  
+      Failed to establish a connection with host *computer name*: No credentials are available in the security package 0x8009030E."
   
 -   **Performance**: Does it makes sense to configure performance options? These options can reduce network and CPU usage, as well as make live migrations go faster. Consider your requirements and your infrastructure, and test different configurations to help you decide. The options are described at the end of step 2.  
   
