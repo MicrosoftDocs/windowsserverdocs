@@ -1,4 +1,4 @@
----
+﻿---
 title: Determining the Number of Domains Required
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -25,11 +25,7 @@ Every forest starts with a single domain. The maximum number of users that a sin
   
 -   The ratio of users to computers is 1:1.  
   
-<<<<<<< HEAD
 -   Active Directory-integrated Domain Name System (DNS) is used.  
-=======
--   Active Directory�integrated Domain Name System (DNS) is used.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   DNS scavenging is used.  
   
@@ -72,11 +68,7 @@ First, determine the maximum number of users that your forest can host. Base thi
   
 -   The ratio of users to computers is 1:1.  
   
-<<<<<<< HEAD
 -   Active Directory-integrated DNS is used.  
-=======
--   Active Directory�integrated DNS is used.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   DNS scavenging is used.  
   
@@ -116,11 +108,7 @@ Determine the number of users that need to be hosted in each region, and then ve
   
 -   The ratio of users to computers is 1:1.  
   
-<<<<<<< HEAD
 -   Active Directory-integrated DNS is used.  
-=======
--   Active Directory�integrated DNS is used.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   DNS scavenging is used.  
   

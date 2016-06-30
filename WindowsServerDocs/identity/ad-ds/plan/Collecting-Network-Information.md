@@ -1,4 +1,4 @@
----
+﻿---
 title: Collecting Network Information
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,11 +15,7 @@ author: Femila
 
 >Applies To: Windows Server Technical Preview
 
-<<<<<<< HEAD
 The first step in designing an effective site topology in Active Directory Domain Services (AD DS) is to consult your organization's networking group to collect information and communicate with them regularly about your physical network topology.  
-=======
-The first step in designing an effective site topology in Active Directory Domain Services (AD DS) is to consult your organization�s networking group to collect information and communicate with them regularly about your physical network topology.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ## Creating a location map  
 Create a location map that represents the physical network infrastructure of your organization. On the location map, identify the geographic locations that contain groups of computers with internal connectivity of 10 megabits per second (Mbps) or higher (local area network (LAN) speed or better).  
@@ -34,11 +30,7 @@ Document each location and the other locations that are linked to it. In additio
 ## Listing IP subnets within each location  
 After you document the communication links and the available bandwidth between each location, record the IP subnets within each location. If you do not already know the subnet mask and IP address within each location, consult your networking group.  
   
-<<<<<<< HEAD
 AD DS associates a workstation with a site by comparing the workstation's IP address with the subnets that are associated with each site. As you add domain controllers to a domain, AD DS also examines their IP addresses and places them in the most appropriate site.  
-=======
-AD DS associates a workstation with a site by comparing the workstation�s IP address with the subnets that are associated with each site. As you add domain controllers to a domain, AD DS also examines their IP addresses and places them in the most appropriate site.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 For a worksheet to assist you in listing the IP subnets within each location, see Job Aids for Windows Server 2003 Deployment Kit ([http://go.microsoft.com/fwlink/?LinkID=102558](http://go.microsoft.com/fwlink/?LinkID=102558)), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Locations and Subnets" (DSSTOPO_2.doc).  
   

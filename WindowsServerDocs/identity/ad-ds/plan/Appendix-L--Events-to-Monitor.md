@@ -1,4 +1,4 @@
----
+﻿---
 title: Appendix L: Events to Monitor
 ms.custom: 
   - AD
@@ -19,15 +19,9 @@ author: Femila
 
   
 ## Appendix L: Events to Monitor  
-<<<<<<< HEAD
 The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the "Current Windows Event ID" column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.  
   
 The "Legacy Windows Event ID" column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier. The "Potential Criticality" column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the "Event Summary" column provides a brief description of the event.  
-=======
-The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the �Current Windows Event ID� column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.  
-  
-The �Legacy Windows Event ID� column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier. The �Potential Criticality� column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the �Event Summary� column provides a brief description of the event.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 A potential criticality of High means that one occurrence of the event should be investigated. Potential criticality of Medium or Low means that these events should only be investigated if they occur unexpectedly or in numbers that significantly exceed the expected baseline in a measured period of time. All organizations should test these recommendations in their environments before creating alerts that require mandatory investigative responses. Every environment is different, and some of the events ranked with a potential criticality of High may occur due to other harmless events.  
   
@@ -54,11 +48,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4714|618|Medium|Encrypted data recovery policy was changed.|  
 |4715|N/A|Medium|The audit policy (SACL) on an object was changed.|  
 |4716|620|Medium|Trusted domain information was modified.|  
-<<<<<<< HEAD
 |4724|628|Medium|An attempt was made to reset an account's password.|  
-=======
-|4724|628|Medium|An attempt was made to reset an account�s password.|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |4727|631|Medium|A security-enabled global group was created.|  
 |4735|639|Medium|A security-enabled local group was changed.|  
 |4737|641|Medium|A security-enabled global group was changed.|  
@@ -66,11 +56,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4754|658|Medium|A security-enabled universal group was created.|  
 |4755|659|Medium|A security-enabled universal group was changed.|  
 |4764|667|Medium|A security-disabled group was deleted|  
-<<<<<<< HEAD
 |4764|668|Medium|A group's type was changed.|  
-=======
-|4764|668|Medium|A group�s type was changed.|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |4780|684|Medium|The ACL was set on accounts which are members of administrators groups.|  
 |4816|N/A|Medium|RPC detected an integrity violation while decrypting an incoming message.|  
 |4865|N/A|Medium|A trusted forest information entry was added.|  
@@ -193,11 +179,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4718|622|Low|System security access was removed from an account.|  
 |4720|624|Low|A user account was created.|  
 |4722|626|Low|A user account was enabled.|  
-<<<<<<< HEAD
 |4723|627|Low|An attempt was made to change an account's password.|  
-=======
-|4723|627|Low|An attempt was made to change an account�s password.|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |4725|629|Low|A user account was disabled.|  
 |4726|630|Low|A user account was deleted.|  
 |4728|632|Low|A member was added to a security-enabled global group.|  
