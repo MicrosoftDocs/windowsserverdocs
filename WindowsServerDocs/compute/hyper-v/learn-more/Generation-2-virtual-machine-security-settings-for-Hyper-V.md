@@ -64,7 +64,7 @@ To enable Isolated User Mode on the Hyper-V host that runs Windows 10,
     ```  
     Enable-WindowsOptionalFeature -Feature IsolatedUserMode -Online  
     New-Item -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Force  
-    New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard   -Name EnableVirtualizationBasedSecurity -Value 1 -PropertyType DWord â€"Force  
+    New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1 -PropertyType DWord -Force  
   
     ```  
   
