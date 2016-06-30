@@ -1,5 +1,5 @@
 ---
-title: Step 1: Implement a Single Server Remote Access Deployment-5
+title: Step 1 Implement a Single Server Remote Access Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: c0f4d665-d44e-4348-a89f-5f9191bd96fd
 author: coreyp
 ---
-# Step 1: Implement a Single Server Remote Access Deployment-5
+# Step 1 Implement a Single Server Remote Access Deployment
 
 >Applies To: Windows Server Technical Preview
 

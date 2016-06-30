@@ -1,5 +1,5 @@
 ---
-title: STEP 6: Test DirectAccess Client Connectivity from Behind a NAT Device
+title: STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: aded2881-99ed-4f18-868b-b765ab926597
 author: coreyp
 ---
-# STEP 6: Test DirectAccess Client Connectivity from Behind a NAT Device
+# STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device
 
 >Applies To: Windows Server Technical Preview
 
@@ -19,9 +19,9 @@ When a DirectAccess client is connected to the Internet from behind a NAT device
   
 The following procedures are performed on both client computers:  
   
-1.  [Test Teredo connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#TeredoCLIENT1)—The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544.  
+1.  [Test Teredo connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#TeredoCLIENT1)â€”The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544.  
   
-2.  [Test IP-HTTPS connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#IPHTTPS_CLIENT1)—The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers.  
+2.  [Test IP-HTTPS connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#IPHTTPS_CLIENT1)â€”The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers.  
   
 > [!TIP]  
 > We recommend that you clear the Internet Explorer cache before performing these procedures to make sure that you are testing the connection and not retrieving the website pages from the cache.  

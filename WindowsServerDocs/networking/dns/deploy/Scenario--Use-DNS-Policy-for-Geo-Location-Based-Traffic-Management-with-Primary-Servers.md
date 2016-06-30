@@ -1,5 +1,5 @@
 ---
-title: Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
+title: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 
 author: jamesmci
 ---
-# Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
+# Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
 
 >Applies To: Windows Server 2016 Technical Preview
 

@@ -1,5 +1,5 @@
 ---
-title: Step 1: Configuring DirectAccess Infrastructure
+title: Step 1 Configuring DirectAccess Infrastructure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 author: vhorne
 ---
-# Step 1: Configuring DirectAccess Infrastructure
+# Step 1 Configuring DirectAccess Infrastructure
 
 >Applies To: Windows Server 2012 R2, Windows Server 2012
 

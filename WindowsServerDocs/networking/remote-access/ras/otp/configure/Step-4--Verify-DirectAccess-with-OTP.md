@@ -1,5 +1,5 @@
 ---
-title: Step 4: Verify DirectAccess with OTP
+title: Step 4 Verify DirectAccess with OTP
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: ed49a0a3-1c45-42e5-8f13-cad20c1c1d68
 author: coreyp
 ---
-# Step 4: Verify DirectAccess with OTP
+# Step 4 Verify DirectAccess with OTP
 
 >Applies To: Windows Server Technical Preview
 

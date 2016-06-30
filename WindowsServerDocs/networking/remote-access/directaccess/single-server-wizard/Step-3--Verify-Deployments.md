@@ -1,5 +1,5 @@
 ---
-title: Step 3: Verify Deployments
+title: Step 3 Verify Deployments
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
-author: vhorne
+author: coreyp
 ---
-# Step 3: Verify Deployments
+# Step 3 Verify Deployments
 
 >Applies To: Windows Server Technical Preview
 

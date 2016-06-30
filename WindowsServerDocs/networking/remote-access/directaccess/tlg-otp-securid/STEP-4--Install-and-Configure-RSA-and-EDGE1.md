@@ -1,5 +1,5 @@
 ---
-title: STEP 4: Install and Configure RSA and EDGE1
+title: STEP 4 Install and Configure RSA and EDGE1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
 author: coreyp
 ---
-# STEP 4: Install and Configure RSA and EDGE1
+# STEP 4 Install and Configure RSA and EDGE1
 
 >Applies To: Windows Server Technical Preview
 
@@ -19,27 +19,27 @@ RSA is the RADIUS and OTP server, and is installed prior to configuring RADIUS a
   
 You will perform the following steps to configure the RSA deployment:  
   
-1.  [Install the operating system on the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#InstallOS)—Install Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012 on the RSA server.  
+1.  [Install the operating system on the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#InstallOS)â€”Install Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012 on the RSA server.  
   
-2.  [Configure TCP/IP on RSA](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#TCP)—Configure TCP/IP settings on the RSA server.  
+2.  [Configure TCP/IP on RSA](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#TCP)â€”Configure TCP/IP settings on the RSA server.  
   
-3.  [Copy Authentication Manager installation files to the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#copyinstfiles)—After installing the operating system on RSA, copy the Authentication Manager files to the RSA computer.  
+3.  [Copy Authentication Manager installation files to the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#copyinstfiles)â€”After installing the operating system on RSA, copy the Authentication Manager files to the RSA computer.  
   
-4.  [Join the RSA server to the CORP domain](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#JoinDomain)—Join RSA to the CORP domain.  
+4.  [Join the RSA server to the CORP domain](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#JoinDomain)â€”Join RSA to the CORP domain.  
   
-5.  [Disable Windows Firewall on RSA](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#BKMK_Firewall)—Disable the Windows Firewall on the RSA server.  
+5.  [Disable Windows Firewall on RSA](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#BKMK_Firewall)â€”Disable the Windows Firewall on the RSA server.  
   
-6.  [Install RSA Authentication Manager on the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#install)—Install RSA Authentication Manager.  
+6.  [Install RSA Authentication Manager on the RSA server](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#install)â€”Install RSA Authentication Manager.  
   
-7.  [Configure RSA Authentication Manager](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#confiauthmgr)—Configure Authentication Manager.  
+7.  [Configure RSA Authentication Manager](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#confiauthmgr)â€”Configure Authentication Manager.  
   
-8.  [Create DAProbeUser](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#BKMK_DAProbeUser)—Create a user account for probing purposes.  
+8.  [Create DAProbeUser](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#BKMK_DAProbeUser)â€”Create a user account for probing purposes.  
   
-9. [Install RSA SecurID software token on CLIENT1](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#InstToken)—Install RSA SecurID software token on CLIENT1.  
+9. [Install RSA SecurID software token on CLIENT1](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#InstToken)â€”Install RSA SecurID software token on CLIENT1.  
   
-10. [Configure EDGE1 as an RSA Authentication Agent](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#configAuthAgt)—Configure RSA Authentication Agent on EDGE1.  
+10. [Configure EDGE1 as an RSA Authentication Agent](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#configAuthAgt)â€”Configure RSA Authentication Agent on EDGE1.  
   
-11. [Configure EDGE1 to support OTP authentication](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#configOTP)—Configure OTP for DirectAccess, and verify the configuration.  
+11. [Configure EDGE1 to support OTP authentication](assetId:///baa4c28c-add7-42e2-8afd-ccc7a559406a#configOTP)â€”Configure OTP for DirectAccess, and verify the configuration.  
   
 ## <a name="InstallOS"></a>Install the operating system on the RSA server  
   

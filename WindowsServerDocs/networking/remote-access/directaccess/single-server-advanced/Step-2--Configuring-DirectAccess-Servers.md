@@ -1,5 +1,5 @@
 ---
-title: Step 2: Configuring DirectAccess Servers
+title: Step 2 Configuring DirectAccess Servers
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
-author: vhorne
+author: coreyp
 ---
-# Step 2: Configuring DirectAccess Servers
+# Step 2 Configuring DirectAccess Servers
 
 >Applies To: Windows Server Technical Preview
 
