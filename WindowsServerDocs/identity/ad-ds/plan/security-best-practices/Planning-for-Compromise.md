@@ -1,4 +1,4 @@
----
+﻿---
 title: Planning for Compromise
 ms.custom: 
   - AD
@@ -68,15 +68,9 @@ By implementing the recommended configuration settings in a newly built forest, 
   
 2.  Define a limited, risk-based migration plan.  
   
-<<<<<<< HEAD
 3.  Leverage "nonmigratory" migrations where necessary.  
   
 4.  Implement "creative destruction."  
-=======
-3.  Leverage �nonmigratory� migrations where necessary.  
-  
-4.  Implement �creative destruction.�  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 5.  Isolate legacy systems and applications.  
   

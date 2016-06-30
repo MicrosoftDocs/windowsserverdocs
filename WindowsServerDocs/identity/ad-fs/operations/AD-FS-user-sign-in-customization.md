@@ -1,4 +1,4 @@
----
+﻿---
 title: AD FS user sign-in customization
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -79,7 +79,7 @@ To assign a custom theme per RP use the following procedure:
 For home realm dicovery customization see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  
   
 ## Updated password page  
-For information on customizing the update password page see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspxd).  
+For information on customizing the update password page see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  
   
 ## Customizing and Alternate IDs  
 Users can sign in to Active Directory Federation Services (AD FS)-enabled applications using any form of user identifier that is accepted by Active Directory Domain Services (AD DS). These include User Principal Names (UPNs) (johndoe@contoso.com) or domain qualified sam-account names (contoso\johndoe or contoso.com\johndoe).  For more information on this see [Configuring Alternate Login ID.](Configuring-Alternate-Login-ID.md)  
