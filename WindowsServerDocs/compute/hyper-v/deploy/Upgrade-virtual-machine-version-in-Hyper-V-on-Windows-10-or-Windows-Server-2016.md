@@ -17,12 +17,11 @@ author: cwatsonmsft
 >Applies To: Windows 10, Windows Server Technical Preview
 
 **This is preliminary content and subject to change.**  
-
-Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don"t do this until:  
+Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don't do this until:  
   
 - You upgrade your Hyper-V hosts to the latest version of Windows or Windows Server.  
 - You upgrade the cluster functional level.   
-- You're sure that you won"t need to move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server.  
+- You're sure that you won't need to move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server.  
   
 For more information, see [Cluster Operating System Rolling Upgrade ](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) and [Upgrading Windows Server 2012 R2 clusters to Windows Server 2016 Technical Preview in VMM](https://technet.microsoft.com/library/mt445417.aspx).  
     
@@ -69,17 +68,10 @@ New-VM -Name "WindowsCV5" -Version 5.0
    
 Why should I upgrade the virtual machine configuration version?  
 ---  
-<<<<<<< HEAD
-When you move or import a virtual machine to a computer that runs Hyper-V on Windows Server 2016 Technical Preview or Windows 10, the virtual machine’s configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version. You can't downgrade the virtual machine configuration version after you've upgraded it.  
-  
-   
-The virtual machine configuration version represents the compatibility of the virtual machine’s configuration, saved state, and snapshot files with the version of Hyper-V. When you update the configuration version, you change the file structure that is used to store the virtual machines configuration and the checkpoint files. You also update the configuration version to the latest version supported by that Hyper-V host. Upgraded virtual machines use a new configuration file format, which is designed to increase the efficiency of reading and writing virtual machine configuration data. The upgrade also reduces the potential for data corruption in the event of a storage failure.  
-=======
 When you move or import a virtual machine to a computer that runs Hyper-V on Windows Server 2016 Technical Preview or Windows 10, the virtual machine"s configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version. You can't downgrade the virtual machine configuration version after you've upgraded it.  
   
    
 The virtual machine configuration version represents the compatibility of the virtual machine"s configuration, saved state, and snapshot files with the version of Hyper-V. When you update the configuration version, you change the file structure that is used to store the virtual machines configuration and the checkpoint files. You also update the configuration version to the latest version supported by that Hyper-V host. Upgraded virtual machines use a new configuration file format, which is designed to increase the efficiency of reading and writing virtual machine configuration data. The upgrade also reduces the potential for data corruption in the event of a storage failure.  
->>>>>>> c60ec882ab48894d02f399af50370c785f62fac2
    
 The following table lists descriptions, file name extensions, and default locations for each type of file that's used for new or upgraded virtual machines.  
    
@@ -92,12 +84,12 @@ The following table lists descriptions, file name extensions, and default locati
  |Checkpoint|Checkpoints are stored in multiple checkpoint files. Each checkpoint creates a configuration file and runtime state file.<br> File name extensions: .vmrs and .vmcx <br>Default location: C:\ProgramData\Microsoft\Windows\Snapshots|   
   
   
-=======
 What happens if I don't upgrade the virtual machine configuration version?  
 ---  
 If you have virtual machines that you created with an earlier version of Hyper-V, some features may not work with those virtual machines until you update the configuration version.  
   
 The following table shows the minimum virtual machine configuration version required to use new Hyper-V features.  
+
 |Feature|Minimum VM configuration version|  
 |-|-|  
 |Hot Add/Remove Memory|6.2|  
