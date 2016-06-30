@@ -107,23 +107,23 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
 
     - **For JBOD enclosures:**  
 
-      1.  Ensure that each server can see that site's storage enclosures only and that the SAS connections are correctly configured.  
+        1.  Ensure that each server can see that site's storage enclosures only and that the SAS connections are correctly configured.  
 
-      2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
+        2.  Provision the storage using Storage Spaces by following **Steps 1-3** provided in the [Deploy Storage Spaces on a Stand-Alone Server](http://technet.microsoft.com/library/jj822938.aspx) using Windows PowerShell or Server Manager.  
 
     - **For iSCSI storage:**  
 
-  1.  Ensure that each cluster can see that site's storage enclosures only. You should use more than one single network adapter if using iSCSI.    
+        1.  Ensure that each cluster can see that site's storage enclosures only. You should use more than one single network adapter if using iSCSI.    
 
-  2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
+        2.  Provision the storage using your vendor documentation. If using Windows-based iSCSI Targeting, consult [iSCSI Target Block Storage, How To](http://technet.microsoft.com/library/hh848268.aspx).  
 
     - **For FC SAN storage:**  
 
-  1.  Ensure that each cluster can see that site�s storage enclosures only and that you have properly zoned the hosts.   
+        1.  Ensure that each cluster can see that site�s storage enclosures only and that you have properly zoned the hosts.   
 
-  2.  Provision the storage using your vendor documentation.  
+        2.  Provision the storage using your vendor documentation.  
 
-    -   For local fixed disk (DAS) storage:  
+    - **For local fixed disk (DAS) storage:**  
 
         -   Ensure the storage does not contain a system volume, page file, or dump files.  
 
