@@ -35,7 +35,7 @@ Regardless of the Hyper-V features you want to use, you'll need:
   
 -   Virtualization support turned on in the BIOS or UEFI:  
   
-    -   Hardware-assisted virtualization. This is available in processors that include a virtualization option — specifically processors with Intel Virtualization Technology (Intel VT) or AMD Virtualization (AMD-V) technology.  
+    -   Hardware-assisted virtualization. This is available in processors that include a virtualization option - specifically processors with Intel Virtualization Technology (Intel VT) or AMD Virtualization (AMD-V) technology.  
   
     -   Hardware-enforced Data Execution Prevention (DEP) must be available and enabled. For Intel systems, this is the XD bit (execute disable bit). For AMD systems, this is the NX bit (no execute bit).  
   
@@ -56,9 +56,9 @@ Here are the requirements for discrete device assignment and shielded virtual ma
   
 -   The chipset must have:  
   
-    -   Interrupt remapping — Intel's VT-d with the Interrupt Remapping capability (VT-d2) or any version of AMD I/O Memory Management Unit (I/O MMU).  
+    -   Interrupt remapping - Intel's VT-d with the Interrupt Remapping capability (VT-d2) or any version of AMD I/O Memory Management Unit (I/O MMU).  
   
-    -   DMA remapping — Intel's VT-d with Queued Invalidations or any AMD I/O MMU.  
+    -   DMA remapping - Intel's VT-d with Queued Invalidations or any AMD I/O MMU.  
   
     -   Access control services (ACS) on PCI Express root ports.  
   
@@ -70,13 +70,13 @@ Here are the requirements for discrete device assignment and shielded virtual ma
 These virtual machines rely on virtualization-based security, which supports several new features in Windows Server 2016 Technical preview.  
   
 **Host** requirements are:  
--   UEFI 2.3.1c — supports secure, measured boot  
+-   UEFI 2.3.1c - supports secure, measured boot  
   
     The following two are optional for virtualization-based security in general, but required for the host if you want the protection these features provide:  
   
--   TPM v2.0 — protects platform security assets  
+-   TPM v2.0 - protects platform security assets  
   
--   IOMMU (Intel VT-D) — so the hypervisor can provide direct memory access (DMA) protection  
+-   IOMMU (Intel VT-D) - so the hypervisor can provide direct memory access (DMA) protection  
   
 **Virtual machine** requirements are:  
   
