@@ -45,7 +45,7 @@ To move a virtual machine to another server, you can:
 - Export the virtual machine from the current server and then import it to a new server as described below.   
 - Do a live migration:   
     - If this server belongs to a failover cluster, use the tools provided with the Failover Clustering feature. For instructions, see [Live Migrate, Quick Migrate, or Move a Virtual Machine from Node to Node](http://go.microsoft.com/fwlink/?LinkID=181519).  
-    - If this is a standalone server, see these instructions — [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](https://technet.microsoft.com//library/jj134199(v=ws.11).aspx)  
+    - If this is a standalone server, see instructions in [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](https://technet.microsoft.com//library/jj134199(v=ws.11).aspx)  
   
 ### To export a virtual machine  
   
