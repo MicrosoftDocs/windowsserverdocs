@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -42,7 +42,11 @@ By default, a domain has capacity for roughly one billion security principals, s
   
 All of these situations use up RIDs unnecessarily, often by mistake. Over many years, a few environments ran out of RIDs and this forced them to migrate to a new domain or perform forest recoveries.  
   
+<<<<<<< HEAD
 Windows Server 2012 addresses issues with RID allocation that have only become problematic with the age and ubiquity of Active Directory. These include better event logging, more appropriate limits, and the ability to - in an emergency - to double the overall size of the global RID space for a domain.  
+=======
+Windows Server 2012 addresses issues with RID allocation that have only become problematic with the age and ubiquity of Active Directory. These include better event logging, more appropriate limits, and the ability to - in an emergency � to double the overall size of the global RID space for a domain.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ### Periodic Consumption Warnings  
 Windows Server 2012 adds global RID space event tracking that provides early warning when major milestones are crossed. The model computes the ten (10) percent used mark in the global pool and logs an event when reached. Then it computes the next ten percent used of the remaining and the event cycle continues. As the global RID space is exhausted, events will accelerate as ten percent hits faster in a decreasing pool (but event log dampening will prevent more than one entry per hour). The System event log on every domain controller writes Directory-Services-SAM warning event 16658.  

@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -271,7 +271,11 @@ servicePrincipalName Value=<SPN>
   
     -   ***UPN case***  
   
+<<<<<<< HEAD
         -   Submit LDAP query against closest GC ? query GC's forest-wide UPN index for supplied UPN (*userPrincipalName; a global index*)  
+=======
+        -   Submit LDAP query against closest GC ? query GC�s forest-wide UPN index for supplied UPN (*userPrincipalName; a global index*)  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
             -   If entries returned == 0 ->           write proceeds  
   
@@ -287,7 +291,11 @@ servicePrincipalName Value=<SPN>
   
     -   ***SPN case***  
   
+<<<<<<< HEAD
         -   Submit LDAP query against closest GC ? query GC's forest-wide SPN index for supplied SPN (*servicePrincipalName; a global index*)  
+=======
+        -   Submit LDAP query against closest GC ? query GC�s forest-wide SPN index for supplied SPN (*servicePrincipalName; a global index*)  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
             -   If entries returned == 0 -> write proceeds  
   

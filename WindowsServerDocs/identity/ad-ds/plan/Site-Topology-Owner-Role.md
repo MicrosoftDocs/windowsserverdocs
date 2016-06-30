@@ -3,7 +3,7 @@ title: Site Topology Owner Role
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -15,13 +15,21 @@ author: Femila
 
 >Applies To: Windows Server Technical Preview
 
+<<<<<<< HEAD
 The administrator who manages the site topology is known as the site topology owner. The site topology owner understands the conditions of the network between sites and has the authority to change settings in Active Directory Domain Services (AD DS) to implement changes to the site topology. Changes to the site topology affect changes in the replication topology. The site topology owner's responsibilities include:  
+=======
+The administrator who manages the site topology is known as the site topology owner. The site topology owner understands the conditions of the network between sites and has the authority to change settings in Active Directory Domain Services (AD DS) to implement changes to the site topology. Changes to the site topology affect changes in the replication topology. The site topology owner�s responsibilities include:  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   Controlling changes to the site topology if network connectivity changes.  
   
 -   Obtaining and maintaining information about network connections and routers from the network group. The site topology owner must maintain a list of subnet addresses, subnet masks, and the location to which each belongs. The site topology owner must also understand any issues about network speed and capacity that affect site topology to effectively set costs for site links.  
   
+<<<<<<< HEAD
 -   Moving Active Directory server objects representing domain controllers between sites if a domain controller's IP address changes to a different subnet in a different site, or if the subnet itself is assigned to a different site. In either case, the site topology owner must manually move the Active Directory server object of the domain controller to the new site.  
+=======
+-   Moving Active Directory server objects representing domain controllers between sites if a domain controller�s IP address changes to a different subnet in a different site, or if the subnet itself is assigned to a different site. In either case, the site topology owner must manually move the Active Directory server object of the domain controller to the new site.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 
 

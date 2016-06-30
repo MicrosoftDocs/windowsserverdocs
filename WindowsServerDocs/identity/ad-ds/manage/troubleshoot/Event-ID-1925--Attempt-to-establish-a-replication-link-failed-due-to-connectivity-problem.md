@@ -3,7 +3,7 @@ title: Event ID 1925: Attempt to establish a replication link failed due to conn
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -153,7 +153,7 @@ Error value:
               </step>
               <step>
                 <content>
-                  <para>Edit—or, if it does not exist in the details pane, create—the entry <embeddedLabel>MaxPacketSize</embeddedLabel> as follows:</para>
+                  <para>Editï¿½or, if it does not exist in the details pane, createï¿½the entry <embeddedLabel>MaxPacketSize</embeddedLabel> as follows:</para>
                   <list class="ordered">
                     <listItem>
                       <para>To edit the entry if it exists in the details pane:</para>

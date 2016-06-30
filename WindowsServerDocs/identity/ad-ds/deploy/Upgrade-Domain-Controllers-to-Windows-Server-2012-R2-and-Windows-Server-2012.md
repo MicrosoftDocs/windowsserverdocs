@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -23,9 +23,15 @@ This topic provides background information about Active Directory Domain Service
   
 -   [What's new in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewEight)  
   
+<<<<<<< HEAD
 -   [What's new in AD DS in Windows Server 2012 R2?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_NewWS2012R2)  
   
 -   [What's new in AD DS in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewAD)  
+=======
+-   [Whatï¿½s new in AD DS in Windows Server 2012 R2?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_NewWS2012R2)  
+  
+-   [Whatï¿½s new in AD DS in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewAD)  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   [AD DS server role installation changes](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_InstallationChanges)  
   
@@ -120,7 +126,11 @@ Windows 8 and Windows Server 2012 introduce a new feature called [Automatic Main
   
 Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windows Server 2012, its own internal schedule for setting a day and time to install updates is no longer effective. To help ensure consistent and predictable restart behavior for all devices and computers in your enterprise, including those that run Windows 8 and Windows Server 2012, see Microsoft KB article [2885694](http://support.microsoft.com/kb/2885694) (or see October 2013 cumulative rollup [2883201](http://support.microsoft.com/kb/2883201)), then configure policy settings described in the WSUS blog post [Enabling a more predictable Windows Update experience for Windows 8 and Windows Server 2012 (KB 2885694)](http://blogs.technet.com/b/wsus/archive/2013/10/08/enabling-a-more-predictable-windows-update-experience-for-windows-8-and-windows-server-2012-kb-2885694.aspx).  
   
+<<<<<<< HEAD
 ## <a name="BKMK_NewWS2012R2"></a>What's new in AD DS in Windows Server 2012 R2?  
+=======
+## <a name="BKMK_NewWS2012R2"></a>Whatï¿½s new in AD DS in Windows Server 2012 R2?  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 The following table summarizes new features for AD DS in Windows Server 2012 R2, with a link to more detailed information where it is available. For a more detailed explanation of some features, including their requirements, see [What's New in Active Directory in Windows Server 2012 R2](http://technet.microsoft.com/library/dn268294.aspx).  
   
 |Feature|Description|  
@@ -132,14 +142,23 @@ The following table summarizes new features for AD DS in Windows Server 2012 R2,
 |[Winlogon Automatic Restart Sign-On (ARSO)](http://technet.microsoft.com/library/dn535772.aspx)|Enables lock screen applications to be restarted and available on Windows 8.1 devices.|  
 |[TPM Key Attestation](http://technet.microsoft.com/library/dn581921.aspx)|Enables CAs to cryptographically attest in an issued certificate that the certificate requester private key is actually protected by a Trusted Platform Module (TPM).|  
 |[Credentials Protection and Management](http://technet.microsoft.com/library/dn408190.aspx)|New credential protection and domain authentication controls to reduce credential theft.|  
+<<<<<<< HEAD
 |[Deprecation of File Replication Service (FRS)](http://technet.microsoft.com/library/dn535775.aspx)|The Windows Server 2003 domain functional level is also deprecated because at the functional level, FRS is used to replicate SYSVOL. That means when you create a new domain on a server that runs Windows Server 2012 R2, the domain functional level must be Windows Server 2008 or newer. You can still add a domain controller that runs Windows Server 2012 R2 to an existing domain that has a Windows Server 2003 domain functional level; you just can't create a new domain at that level.|  
+=======
+|[Deprecation of File Replication Service (FRS)](http://technet.microsoft.com/library/dn535775.aspx)|The Windows Server 2003 domain functional level is also deprecated because at the functional level, FRS is used to replicate SYSVOL. That means when you create a new domain on a server that runs Windows Server 2012 R2, the domain functional level must be Windows Server 2008 or newer. You can still add a domain controller that runs Windows Server 2012 R2 to an existing domain that has a Windows Server 2003 domain functional level; you just canï¿½t create a new domain at that level.|  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |[New domain and forest functional levels](http://technet.microsoft.com/library/understanding-active-directory-functional-levels(WS.10).aspx)|There are new functional levels for Windows Server 2012 R2. New features are available at Windows Server 2012 R2 DFL.|  
 |[LDAP query optimizer changes](http://technet.microsoft.com/library/dn535775.aspx)|Performance improvement in LDAP search efficiency and LDAP search time of complex queries.|  
 |[1644 Event improvements](http://technet.microsoft.com/library/dn535775.aspx)|LDAP search result statistics were added to event ID 1644 to aid in troubleshooting.|  
 |[Active Directory replication throughput improvement](http://technet.microsoft.com/library/dn535775.aspx)|Adjusts the maximum AD Replication throughput from 40Mbps to around 600 Mbps|  
   
+<<<<<<< HEAD
 ## <a name="BKMK_WhatsNewAD"></a>What's new in AD DS in Windows Server 2012?  
 The following table summarizes the new features for AD DS in Windows Server 2012, with a link to more detailed information where it is available. For a more detailed explanation of some features, including their requirements, see [What's New in Active Directory Domain Services (AD DS)](http://technet.microsoft.com/library/hh831477.aspx).  
+=======
+## <a name="BKMK_WhatsNewAD"></a>Whatï¿½s new in AD DS in Windows Server 2012?  
+The following table summarizes the new features for AD DS in Windows Server 2012, with a link to more detailed information where it is available. For a more detailed explanation of some features, including their requirements, see [Whatï¿½s New in Active Directory Domain Services (AD DS)](http://technet.microsoft.com/library/hh831477.aspx).  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 |Feature|Description|  
 |-----------|---------------|  
@@ -176,16 +195,26 @@ The following table lists some examples of how to configure these settings to pr
 |||  
 |-|-|  
 |**Scenario**|**Recommended configuration(s)**|  
+<<<<<<< HEAD
 |**WSUS managed**<br /><br />-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<br /><br />**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 - Auto download and schedule the install<br /><br />**Policy**: No auto-restart with logged-on users… (Disabled)<br /><br />**WSUS deadlines**: set to Fridays at 11PM|  
 |**WSUS managed**<br /><br />-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<br /><br />Use above steps for previous scenario<br /><br />Set different deadlines for different target groups|  
 |**Not WSUS-managed - no support for deadlines**<br /><br />-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 - Auto download and schedule the install<br /><br />**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](http://support.microsoft.com/kb/2835627)<br /><br />**Policy:** Automatic Maintenance Random Delay (Enabled)<br /><br />Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<br /><br />-   Updates will install at the configured maintenance time plus a random delay<br /><br />-   Restart for each machine will take place exactly 3 days later<br /><br />Alternatively, set a different maintenance time for each group of machines|  
+=======
+|**WSUS managed**<br /><br />-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<br /><br />**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 ï¿½ Auto download and schedule the install<br /><br />**Policy**: No auto-restart with logged-on usersï¿½ (Disabled)<br /><br />**WSUS deadlines**: set to Fridays at 11PM|  
+|**WSUS managed**<br /><br />-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<br /><br />Use above steps for previous scenario<br /><br />Set different deadlines for different target groups|  
+|**Not WSUS-managed ï¿½ no support for deadlines**<br /><br />-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 ï¿½ Auto download and schedule the install<br /><br />**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](http://support.microsoft.com/kb/2835627)<br /><br />**Policy:** Automatic Maintenance Random Delay (Enabled)<br /><br />Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<br /><br />-   Updates will install at the configured maintenance time plus a random delay<br /><br />-   Restart for each machine will take place exactly 3 days later<br /><br />Alternatively, set a different maintenance time for each group of machines|  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 For more information about why the Windows engineering team implemented these changes, see [Minimizing restarts after automatic updating in Windows Update](http://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx).  
   
 ## <a name="BKMK_InstallationChanges"></a>AD DS server role installation changes  
 In Windows Server 2003 through Windows Server 2008 R2, you ran the x86 or X64 version of the Adprep.exe command-line tool before running the Active Directory Installation Wizard, Dcpromo.exe, and Dcpromo.exe had optional variants to install from media or for unattended installation.  
   
+<<<<<<< HEAD
 Beginning in Windows Server 2012, command-line installations are performed by using the ADDSDeployment Module in Windows PowerShell. GUI-based promotions are performed in Server Manager using a completely new AD DS Configuration Wizard. To simplify the installation process, ADPREP has been integrated into the AD DS installation and runs automatically as needed. The Windows PowerShell-based AD DS Configuration Wizard automatically targets the schema and infrastructure master roles in the domains where DCs are being added, then remotely runs the required ADPREP commands on the relevant domain controllers.  
+=======
+Beginning in Windows Server 2012, command-line installations are performed by using the ADDSDeployment Module in Windows PowerShell. GUI-based promotions are performed in Server Manager using a completely new AD DS Configuration Wizard. To simplify the installation process, ADPREP has been integrated into the AD DS installation and runs automatically as needed. The Windows PowerShellï¿½based AD DS Configuration Wizard automatically targets the schema and infrastructure master roles in the domains where DCs are being added, then remotely runs the required ADPREP commands on the relevant domain controllers.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 Prerequisite checks in the AD DS Installation Wizard identify potential errors before the installation begins. Error conditions can be corrected to eliminate concerns from a partially complete upgrade. The wizard also exports a Windows PowerShell script that contains all the options that were specified during the graphical installation.  
   
@@ -241,7 +270,11 @@ In this case, you can try an offline defragmentation of the Active Directory dat
 There are 4 editions of Windows Server: Foundation, Essentials, Standard and Datacenter.   
 The two editions that support the AD DS role are Standard and Datacenter.  
   
+<<<<<<< HEAD
 In previous releases, Windows Server editions differed in their support of server roles, processor counts and large memory support. The Standard and Datacenter editions of Windows Server support all features and underlying hardware but vary in their virtualization rights - two virtual instances are allowed for Standard edition and unlimited virtual instances are allowed for Datacenter edition.  
+=======
+In previous releases, Windows Server editions differed in their support of server roles, processor counts and large memory support. The Standard and Datacenter editions of Windows Server support all features and underlying hardware but vary in their virtualization rights ï¿½ two virtual instances are allowed for Standard edition and unlimited virtual instances are allowed for Datacenter edition.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ### Windows client and Windows Server operating systems that are supported to join Windows Server domains  
 The following Windows client and Windows Server operating systems are supported for domain member computers with domain controllers that run Windows Server 2012 or later:  
@@ -336,7 +369,11 @@ The following table covers common Active Directory-integrated Microsoft applicat
 |-----------|---------|  
 |[Microsoft Configuration Manager 2007](http://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|Configuration Manager 2007 with SP2 (includes Configuration Manager 2007 R2 and Configuration Manager 2007 R3):<br /><br />-   Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter **Note:** Though these will be fully supported as clients, there is no plan to add support for deploying these as operating systems by using the Configuration Manager 2007 operating system deployment feature. Also, no site servers or site systems will be supported on any SKU of Windows Server 2012.|  
 |[Microsoft SharePoint 2007](http://support.microsoft.com/kb/2728964)|Microsoft Office SharePoint Server 2007 is not supported for installation on Windows Server 2012.|  
+<<<<<<< HEAD
 |[Microsoft SharePoint 2010](http://support.microsoft.com/kb/2724471)|SharePoint 2010 Service Pack 2 is required to install and operate <br />SharePoint 2010 on Windows Server 2012 Servers<br /><br />SharePoint 2010 Foundation Service Pack 2 is required to install and operate SharePoint 2010 Foundation on Windows Server 2012 Servers<br /><br />The SharePoint Server 2010 (without service packs) installation process fails on Windows Server 2012<br /><br />The SharePoint Server 2010 prerequisite installer (PrerequisiteInstaller.exe) fails with error "This program has compatibility issues." Clicking "Run the program without getting help" displays the error "Verifying if SharePoint can be installed &#124; SharePoint Server 2010 (without service packs) cannot be installed on Windows Server 2012."|  
+=======
+|[Microsoft SharePoint 2010](http://support.microsoft.com/kb/2724471)|SharePoint 2010 Service Pack 2 is required to install and operate <br />SharePoint 2010 on Windows Server 2012 Servers<br /><br />SharePoint 2010 Foundation Service Pack 2 is required to install and operate SharePoint 2010 Foundation on Windows Server 2012 Servers<br /><br />The SharePoint Server 2010 (without service packs) installation process fails on Windows Server 2012<br /><br />The SharePoint Server 2010 prerequisite installer (PrerequisiteInstaller.exe) fails with error ï¿½This program has compatibility issues.ï¿½ Clicking ï¿½Run the program without getting helpï¿½ displays the error ï¿½Verifying if SharePoint can be installed &#124; SharePoint Server 2010 (without service packs) cannot be installed on Windows Server 2012.ï¿½|  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |[Microsoft SharePoint 2013](http://technet.microsoft.com/library/cc262485(v=office.15).aspx)|Minimum requirements for a database server in a farm<br /><br />The 64-bit edition of Windows Server 2008 R2 Service Pack 1 (SP1) Standard, Enterprise, or Datacenter or the 64-bit edition of Windows Server 2012 Standard or Datacenter<br /><br />Minimum requirements for a single server with built-in database:<br /><br />The 64-bit edition of Windows Server 2008 R2 Service Pack 1 (SP1) Standard, Enterprise, or Datacenter or the 64-bit edition of Windows Server 2012 Standard or Datacenter<br /><br />Minimum requirements for front-end web servers and application servers in a farm:<br /><br />The 64-bit edition of Windows Server 2008 R2 Service Pack 1 (SP1) Standard, Enterprise, or Datacenter or the 64-bit edition of Windows Server 2012 Standard or Datacenter.|  
 |[Microsoft System Center Configuration Manager 2012](http://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|System Center 2012 Configuration Manager Service Pack 1:<br /><br />Microsoft will add the following operating systems to our client support matrix with the release of Service Pack 1:<br /><br />-   Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter<br /><br />All site server roles - including site servers, SMS providers, and management points - can be deployed to servers with the following operating system editions:<br /><br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter|  
 |[Microsoft Lync Server 2013](http://technet.microsoft.com/library/gg412883.aspx)|Lync Server 2013 requires with Windows Server 2008 R2 or Windows Server 2012. It cannot be run on a Server Core installation. It can be run on [virtual servers](http://technet.microsoft.com/library/gg399035.aspx).|  
@@ -367,7 +404,11 @@ The following table lists known issues related to AD DS installation.
 |[2737516](http://support.microsoft.com/kb/2737516): IFM verification limitations in Windows Server 2012 Server Manager|AD DS Installation|IFM verification can have limitations as explained in the KB article.|  
 |[2737535](http://support.microsoft.com/kb/2737535): Install-AddsDomainController cmdlet returns parameter set error for RODC|AD DS Installation|You can receive an error when you try to attach a server to an RODC account if you specify arguments that are already populated on the pre-created RODC account.|  
 |[2737560](http://support.microsoft.com/kb/2737560): "Unable to perform Exchange schema conflict check" error, and prerequisites check fails|AD DS Installation|Prerequisite check fails when you configure the first Windows Server 2012 DC in an existing domain because DCs are missing the SeServiceLogonRight for Network Service or because WMI or DCOM protocols are blocked.|  
+<<<<<<< HEAD
 |[2737797](http://support.microsoft.com/kb/2737797): AddsDeployment module with the -Whatif argument shows incorrect DNS results|AD DS Installation|The -WhatIf parameter shows DNS server will not be installed but it will be.|  
+=======
+|[2737797](http://support.microsoft.com/kb/2737797): AddsDeployment module with the -Whatif argument shows incorrect DNS results|AD DS Installation|The ï¿½WhatIf parameter shows DNS server will not be installed but it will be.|  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |[2737807](http://support.microsoft.com/kb/2737807): The Next button is not available on the Domain Controller Options page|AD DS Installation|The Next button is disabled on the Domain Controller Options page because the IP address of the target DC does not map to an existing subnet or site, or because the DSRM password is not typed and confirmed correctly.|  
 |[2737935](http://support.microsoft.com/kb/2737935): Active Directory installation stalls at the "Creating the NTDS settings object" stage|AD DS Installation|The installation hangs because the local Administrator password matches the domain Administrator password, or because networking problems prevent critical replication from completing.|  
 |[2738060](http://support.microsoft.com/kb/2738060): "Access is denied" error message when you create a child domain remotely by using Install-AddsDomain|AD DS Installation|You receive the error when you run Install-ADDSDomain with the Invoke-Command cmdlet if the DNSDelegationCredential has a bad password.|  
@@ -378,7 +419,11 @@ The following table lists known issues related to AD DS installation.
 |[2753560](http://support.microsoft.com/kb/2753560): ADMT 3.2 and PES 3.1 installation errors on Windows Server 2012|ADMT|ADMT 3.2 cannot be installed on Windows Server 2012 by design.|  
 |[2750857](http://support.microsoft.com/kb/2750857): DFS Replication diagnostic reports do not display correctly in Internet Explorer 10|DFS Replication|DFS Replication diagnostic report does not display correctly because of changes in Internet Explorer 10.|  
 |[2741537](http://support.microsoft.com/kb/2741537): Remote Group Policy updates are visible to users|Group Policy|This is due to scheduled tasks run in the context of each user who is logged on. The Windows Task Scheduler design requires an interactive prompt in this scenario.|  
+<<<<<<< HEAD
 |[2741591](http://support.microsoft.com/kb/2741591): ADM files are not present in SYSVOL in the GPMC Infrastructure Status option|Group Policy|GP replication can report "replication in progress" because GPMC Infrastructure Status does not follow customized filtering rules.|  
+=======
+|[2741591](http://support.microsoft.com/kb/2741591): ADM files are not present in SYSVOL in the GPMC Infrastructure Status option|Group Policy|GP replication can report ï¿½replication in progressï¿½ because GPMC Infrastructure Status does not follow customized filtering rules.|  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 |[2737880](http://support.microsoft.com/kb/2737880): "The service cannot be started" error during AD DS configuration|Virtual DC cloning|You receive this error while installing or removing AD DS, or cloning, because the DS Role Server service is disabled.|  
 |[2742836](http://support.microsoft.com/kb/2742836): Two DHCP leases are created for each domain controller when you use the VDC cloning feature|Virtual DC cloning|This happens because the cloned domain controller received a lease before cloning and again when cloning was complete.|  
 |[2742844](http://support.microsoft.com/kb/2742844): Domain controller cloning fails and the server restarts in DSRM in Windows Server 2012|Virtual DC cloning|The cloned DC starts in DSRM because cloning failed for any of a variety of reasons listed in the KB article.|  
@@ -391,7 +436,11 @@ The following table lists known issues related to AD DS installation.
 |[2743278](http://support.microsoft.com/kb/2743278): Domain controller cloning error 0x80041005|Virtual DC cloning|The cloned DC boots into DSRM because only one WINS server was specified. If any WINS server is specified, both Preferred and Alternate WINS servers must be specified.|  
 |[2745013](http://support.microsoft.com/kb/2745013): "Server is not operational" error message if you run New-AdDcCloneConfigFile in Windows Server 2012|Virtual DC cloning|You receive this error after you run the New-ADDCCloneConfigFile cmdlet because the server cannot contact a global catalog server.|  
 |[2747974](http://support.microsoft.com/kb/2747974): Domain controller cloning event 2224 provides incorrect guidance|Virtual DC cloning|Event ID 2224 incorrectly states that managed service accounts must be removed before cloning. Standalone MSAs must be removed but Group MSAs do not block cloning.|  
+<<<<<<< HEAD
 |[2748266](http://support.microsoft.com/kb/2748266): You cannot unlock a BitLocker-encrypted drive after you upgrade to Windows 8|BitLocker|You receive an "Application not found" error when you try to unlock a drive on a computer that was upgraded from Windows 7.|  
+=======
+|[2748266](http://support.microsoft.com/kb/2748266): You cannot unlock a BitLocker-encrypted drive after you upgrade to Windows 8|BitLocker|You receive an ï¿½Application not foundï¿½ error when you try to unlock a drive on a computer that was upgraded from Windows 7.|  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ## See Also  
 [Windows Server 2012 Evaluation Resources](http://technet.microsoft.com/evalcenter/hh708766.aspx)  

@@ -3,7 +3,7 @@ title: Identifying the Deployment Project Participants
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -47,7 +47,11 @@ The responsibilities of the Active Directory project architect include the follo
   
 -   Establishing consensus between design, deployment, and operations teams  
   
+<<<<<<< HEAD
 -   Understanding the needs of AD DS-integrated applications  
+=======
+-   Understanding the needs of AD DS�integrated applications  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 The final Active Directory design must reflect a combination of business goals and technical decisions. Therefore, the project architect must review design decisions to ensure that they align with business goals.  
   
@@ -124,7 +128,11 @@ The forest owner is typically a senior information technology (IT) manager in th
   
 -   Any other Group Policy settings that are applied at the domain level  
   
+<<<<<<< HEAD
 The forest owner has authority over the entire forest. It is the forest owner's responsibility to set Group Policy and business policies and to select the individuals who are service administrators. The forest owner is a service owner.  
+=======
+The forest owner has authority over the entire forest. It is the forest owner�s responsibility to set Group Policy and business policies and to select the individuals who are service administrators. The forest owner is a service owner.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 #### DNS for AD DS owner  
 The DNS for AD DS owner is an individual who has a thorough understanding of the existing DNS infrastructure and the existing namespace of the organization.  

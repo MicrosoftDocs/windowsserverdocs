@@ -3,7 +3,7 @@ title: Planning Operations Master Role Placement
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -57,9 +57,15 @@ For a worksheet to assist you in documenting the information about where you pla
 You need to refer to the information about locations in which you need to place PDC emulators when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).  
   
 ## Requirements for infrastructure master placement  
+<<<<<<< HEAD
 The infrastructure master updates the names of security principals from other domains that are added to groups in its own domain. For example, if a user from one domain is a member of a group in a second domain and the user's name is changed in the first domain, the second domain is not notified that the user's name must be updated in the group's membership list. Because domain controllers in one domain do not replicate security principals to domain controllers in another domain, the second domain never becomes aware of the change in the absence of the infrastructure master.  
   
 The infrastructure master constantly monitors group memberships, looking for security principals from other domains. If it finds one, it checks with the security principal's domain to verify that the information is updated. If the information is out of date, the infrastructure master performs the update and then replicates the change to the other domain controllers in its domain.  
+=======
+The infrastructure master updates the names of security principals from other domains that are added to groups in its own domain. For example, if a user from one domain is a member of a group in a second domain and the user�s name is changed in the first domain, the second domain is not notified that the user�s name must be updated in the group�s membership list. Because domain controllers in one domain do not replicate security principals to domain controllers in another domain, the second domain never becomes aware of the change in the absence of the infrastructure master.  
+  
+The infrastructure master constantly monitors group memberships, looking for security principals from other domains. If it finds one, it checks with the security principal�s domain to verify that the information is updated. If the information is out of date, the infrastructure master performs the update and then replicates the change to the other domain controllers in its domain.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 Two exceptions apply to this rule. First, if all domain controllers are global catalog servers, the domain controller that hosts the infrastructure master role is insignificant because global catalogs replicate the updated information regardless of the domain to which they belong. Second, if the forest has only one domain, the domain controller that hosts the infrastructure master role is insignificant because security principals from other domains do not exist.  
   

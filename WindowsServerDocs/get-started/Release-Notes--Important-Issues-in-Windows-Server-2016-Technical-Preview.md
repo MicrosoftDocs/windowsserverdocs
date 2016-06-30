@@ -1,5 +1,5 @@
 ---
-title: Release Notes: Important Issues in Windows Server 2016 Technical Preview
+title: Release Notes - Important Issues in Windows Server 2016 Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,7 +10,6 @@ ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ---
-
 # Release Notes: Important Issues in Windows Server 2016 Technical Preview
 
 >Applies To: Windows Server Technical Preview

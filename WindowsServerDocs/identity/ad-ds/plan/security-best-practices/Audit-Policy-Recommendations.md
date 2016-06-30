@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -58,23 +58,23 @@ These tables contain the Windows default setting, the baseline recommendations, 
   
 **Audit Policy**  
   
-|Audit Policy Category or Subcategory|Windows Default<br /><br />Success  ¦  Failure|Baseline Recommendation<br /><br />Success  ¦  Failure|Stronger Recommendation<br /><br />Success  ¦  Failure|  
+|Audit Policy Category or Subcategory|Windows Default<br /><br />Success  ï¿½  Failure|Baseline Recommendation<br /><br />Success  ï¿½  Failure|Stronger Recommendation<br /><br />Success  ï¿½  Failure|  
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**Account Logon**||||  
-|Audit Credential Validation|No  ¦  No|Yes  ¦  No|Yes  ¦  Yes|  
-|Audit Kerberos Authentication Service|||Yes  ¦  Yes|  
-|Audit Kerberos Service Ticket Operations|||Yes  ¦  Yes|  
-|Audit Other Account Logon Events|||Yes  ¦  Yes|  
+|Audit Credential Validation|No  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  Yes|  
+|Audit Kerberos Authentication Service|||Yes  ï¿½  Yes|  
+|Audit Kerberos Service Ticket Operations|||Yes  ï¿½  Yes|  
+|Audit Other Account Logon Events|||Yes  ï¿½  Yes|  
 |**Account Management**||||  
 |Audit Application Group Management||||  
-|Audit Computer Account Management||Yes  ¦  No|Yes  ¦  Yes|  
+|Audit Computer Account Management||Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |Audit Distribution Group Management||||  
-|Audit Other Account Management Events||Yes  ¦  No|Yes  ¦  Yes|  
-|Audit Security Group Management||Yes  ¦  No|Yes  ¦  Yes|  
-|Audit User Account Management|Yes  ¦  No|Yes  ¦  No|Yes  ¦  Yes|  
+|Audit Other Account Management Events||Yes  ï¿½  No|Yes  ï¿½  Yes|  
+|Audit Security Group Management||Yes  ï¿½  No|Yes  ï¿½  Yes|  
+|Audit User Account Management|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |**Detailed Tracking**||||  
-|Audit DPAPI Activity|||Yes  ¦  Yes|  
-|Audit Process Creation||Yes  ¦  No|Yes  ¦  Yes|  
+|Audit DPAPI Activity|||Yes  ï¿½  Yes|  
+|Audit Process Creation||Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |Audit Process Termination||||  
 |Audit RPC Events||||  
 |**DS Access**||||  
@@ -83,16 +83,16 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |Audit Directory Service Changes||||  
 |Audit Directory Service Replication||||  
 |**Logon and Logoff**||||  
-|Audit Account Lockout|Yes  ¦  No||Yes  ¦  No|  
+|Audit Account Lockout|Yes  ï¿½  No||Yes  ï¿½  No|  
 |Audit User/Device Claims||||  
 |Audit IPsec Extended Mode||||  
-|Audit IPsec Main Mode|||IF  ¦   IF|  
+|Audit IPsec Main Mode|||IF  ï¿½   IF|  
 |Audit IPsec Quick Mode||||  
-|Audit Logoff|Yes  ¦  No|Yes  ¦  No|Yes  ¦  No|  
-|Audit Logon|Yes  ¦  No|Yes  ¦  No|Yes  ¦  Yes|  
-|Audit Network Policy Server|Yes  ¦  Yes|||  
+|Audit Logoff|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  No|  
+|Audit Logon|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  Yes|  
+|Audit Network Policy Server|Yes  ï¿½  Yes|||  
 |Audit Other Logon/Logoff Events||||  
-|Audit Special Logon|Yes  ¦  No|Yes  ¦  No|Yes  ¦  Yes|  
+|Audit Special Logon|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |**Object Access**||||  
 |Audit Application Generated||||  
 |Audit Certification Services||||  
@@ -109,22 +109,22 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |Audit SAM||||  
 |Audit Central Access Policy Staging||||  
 |**Policy Change**||||  
-|Audit Audit Policy Change|Yes  ¦  No|Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Authentication Policy Change|Yes  ¦  No|Yes  ¦  No|Yes  ¦  Yes|  
+|Audit Audit Policy Change|Yes  ï¿½  No|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Authentication Policy Change|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |Audit Authorization Policy Change||||  
 |Audit Filtering Platform Policy Change||||  
-|Audit MPSSVC Rule-Level Policy Change|||Yes  ¦|  
+|Audit MPSSVC Rule-Level Policy Change|||Yes  ï¿½|  
 |Audit Other Policy Change Events||||  
 |**Privilege Use**||||  
 |Audit Non Sensitive Privilege Use||||  
 |Audit Other Privilege Use Events||||  
 |Audit Sensitive Privilege Use||||  
 |**System**||||  
-|Audit IPsec Driver||Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Other System Events|Yes  ¦  Yes|||  
-|Audit Security State Change|Yes  ¦  No|Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Security System Extension||Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit System Integrity|Yes  ¦  Yes|Yes  ¦  Yes|Yes  ¦  Yes|  
+|Audit IPsec Driver||Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Other System Events|Yes  ï¿½  Yes|||  
+|Audit Security State Change|Yes  ï¿½  No|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Security System Extension||Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit System Integrity|Yes  ï¿½  Yes|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
 |**Global Object Access Auditing**||||  
 |Audit IPsec Driver||||  
 |Audit Other System Events||||  
@@ -134,41 +134,41 @@ These tables contain the Windows default setting, the baseline recommendations, 
   
 **Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings Recommendations**  
   
-|Audit Policy Category or Subcategory|Windows Default<br /><br />Success  ¦  Failure|Baseline Recommendation<br /><br />Success  ¦  Failure|Stronger Recommendation<br /><br />Success  ¦  Failure|  
+|Audit Policy Category or Subcategory|Windows Default<br /><br />Success  ï¿½  Failure|Baseline Recommendation<br /><br />Success  ï¿½  Failure|Stronger Recommendation<br /><br />Success  ï¿½  Failure|  
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**Account Logon**||||  
-|Audit Credential Validation|No  ¦  No|Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Kerberos Authentication Service|||Yes  ¦  Yes|  
-|Audit Kerberos Service Ticket Operations|||Yes  ¦  Yes|  
-|Audit Other Account Logon Events|||Yes  ¦  Yes|  
+|Audit Credential Validation|No  ï¿½  No|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Kerberos Authentication Service|||Yes  ï¿½  Yes|  
+|Audit Kerberos Service Ticket Operations|||Yes  ï¿½  Yes|  
+|Audit Other Account Logon Events|||Yes  ï¿½  Yes|  
 |**Account Management**||||  
 |Audit Application Group Management||||  
-|Audit Computer Account Management||Yes  ¦  DC|Yes  ¦  Yes|  
+|Audit Computer Account Management||Yes  ï¿½  DC|Yes  ï¿½  Yes|  
 |Audit Distribution Group Management||||  
-|Audit Other Account Management Events||Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Security Group Management||Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit User Account Management|Yes  ¦  No|Yes  ¦  Yes|Yes  ¦  Yes|  
+|Audit Other Account Management Events||Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Security Group Management||Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit User Account Management|Yes  ï¿½  No|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
 |**Detailed Tracking**||||  
-|Audit DPAPI Activity|||Yes  ¦  Yes|  
-|Audit Process Creation||Yes  ¦  No|Yes  ¦  Yes|  
+|Audit DPAPI Activity|||Yes  ï¿½  Yes|  
+|Audit Process Creation||Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |Audit Process Termination||||  
 |Audit RPC Events||||  
 |**DS Access**||||  
 |Audit Detailed Directory Service Replication||||  
-|Audit Directory Service Access||DC  ¦  DC|DC  ¦  DC|  
-|Audit Directory Service Changes||DC  ¦  DC|DC  ¦  DC|  
+|Audit Directory Service Access||DC  ï¿½  DC|DC  ï¿½  DC|  
+|Audit Directory Service Changes||DC  ï¿½  DC|DC  ï¿½  DC|  
 |Audit Directory Service Replication||||  
 |**Logon and Logoff**||||  
-|Audit Account Lockout|Yes  ¦  No||Yes  ¦  No|  
+|Audit Account Lockout|Yes  ï¿½  No||Yes  ï¿½  No|  
 |Audit User/Device Claims||||  
 |Audit IPsec Extended Mode||||  
-|Audit IPsec Main Mode|||IF  ¦   IF|  
+|Audit IPsec Main Mode|||IF  ï¿½   IF|  
 |Audit IPsec Quick Mode||||  
-|Audit Logoff|Yes  ¦  No|Yes  ¦  No|Yes  ¦  No|  
-|Audit Logon|Yes  ¦  No|Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Network Policy Server|Yes  ¦  Yes|||  
-|Audit Other Logon/Logoff Events|||Yes  ¦  Yes|  
-|Audit Special Logon|Yes  ¦  No|Yes  ¦  No|Yes  ¦  Yes|  
+|Audit Logoff|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  No|  
+|Audit Logon|Yes  ï¿½  No|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Network Policy Server|Yes  ï¿½  Yes|||  
+|Audit Other Logon/Logoff Events|||Yes  ï¿½  Yes|  
+|Audit Special Logon|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |**Object Access**||||  
 |Audit Application Generated||||  
 |Audit Certification Services||||  
@@ -185,22 +185,22 @@ These tables contain the Windows default setting, the baseline recommendations, 
 |Audit SAM||||  
 |Audit Central Access Policy Staging||||  
 |**Policy Change**||||  
-|Audit Audit Policy Change|Yes  ¦  No|Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Authentication Policy Change|Yes  ¦  No|Yes  ¦  No|Yes  ¦  Yes|  
+|Audit Audit Policy Change|Yes  ï¿½  No|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Authentication Policy Change|Yes  ï¿½  No|Yes  ï¿½  No|Yes  ï¿½  Yes|  
 |Audit Authorization Policy Change||||  
 |Audit Filtering Platform Policy Change||||  
-|Audit MPSSVC Rule-Level Policy Change|||Yes  ¦|  
+|Audit MPSSVC Rule-Level Policy Change|||Yes  ï¿½|  
 |Audit Other Policy Change Events||||  
 |**Privilege Use**||||  
 |Audit Non Sensitive Privilege Use||||  
 |Audit Other Privilege Use Events||||  
 |Audit Sensitive Privilege Use||||  
 |**System**||||  
-|Audit IPsec Driver||Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Other System Events|Yes  ¦  Yes|||  
-|Audit Security State Change|Yes  ¦  No|Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit Security System Extension||Yes  ¦  Yes|Yes  ¦  Yes|  
-|Audit System Integrity|Yes  ¦  Yes|Yes  ¦  Yes|Yes  ¦  Yes|  
+|Audit IPsec Driver||Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Other System Events|Yes  ï¿½  Yes|||  
+|Audit Security State Change|Yes  ï¿½  No|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit Security System Extension||Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
+|Audit System Integrity|Yes  ï¿½  Yes|Yes  ï¿½  Yes|Yes  ï¿½  Yes|  
 |**Global Object Access Auditing**||||  
 |Audit IPsec Driver||||  
 |Audit Other System Events||||  
@@ -271,11 +271,16 @@ Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-
   
 -   Management accounts to log all writes to the account  
   
+<<<<<<< HEAD
 -   Built-in Security Configuration Wizard to configure service, registry, audit, and firewall settings to reduce the server's attack surface. Use this wizard if you implement jump servers as part of your administrative host strategy.  
+=======
+-   Built-in Security Configuration Wizard to configure service, registry, audit, and firewall settings to reduce the serverï¿½s attack surface. Use this wizard if you implement jump servers as part of your administrative host strategy.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ## Additional Information for Monitoring Active Directory Domain Services  
 Review the following links for additional information about monitoring AD DS:  
   
+<<<<<<< HEAD
 -   [Global Object Access Auditing is Magic](http://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) - Provides information about configuring and using Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2.  
   
 -   [Introducing Auditing Changes in Windows 2008](http://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) - Introduces the auditing changes made in Windows 2008.  
@@ -285,6 +290,17 @@ Review the following links for additional information about monitoring AD DS:
 -   [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](http://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) - Contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
   
 -   [AD DS Auditing Step-by-Step Guide](http://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) - Describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
+=======
+-   [Global Object Access Auditing is Magic](http://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) ï¿½ Provides information about configuring and using Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2.  
+  
+-   [Introducing Auditing Changes in Windows 2008](http://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) ï¿½ Introduces the auditing changes made in Windows 2008.  
+  
+-   [Cool Auditing Tricks in Vista and 2008](http://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) ï¿½ Explains interesting new features of auditing in Windows Vista and Windows Server 2008 that can be used for troubleshooting problems or seeing whatï¿½s happening in your environment.  
+  
+-   [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](http://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) ï¿½ Contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
+  
+-   [AD DS Auditing Step-by-Step Guide](http://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) ï¿½ Describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ## General List of Security Event ID Recommendation Criticalities  
 All Event ID recommendations are accompanied by a criticality rating as follows:  

@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -17,13 +17,21 @@ author: Femila
 
 >Applies To: Windows Server Technical Preview
 
+<<<<<<< HEAD
 *Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](http://technet.microsoft.com/security/hh278941.aspx)  
+=======
+*Law Number Three: If a bad guy has unrestricted physical access to your computer, itï¿½s not your computer anymore.* ï¿½ [Ten Immutable Laws of Security (Version 2.0)](http://technet.microsoft.com/security/hh278941.aspx)  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 Domain controllers provide the physical storage for the AD DS database, in addition to providing the services and data that allow enterprises to effectively manage their servers, workstations, users, and applications. If privileged access to a domain controller is obtained by a malicious user, that user can modify, corrupt, or destroy the AD DS database and, by extension, all of the systems and accounts that are managed by Active Directory.  
   
 Because domain controllers can read from and write to anything in the AD DS database, compromise of a domain controller means that your Active Directory forest can never be considered trustworthy again unless you are able to recover using a known good backup and to close the gaps that allowed the compromise in the process.  
   
+<<<<<<< HEAD
 Depending on an attacker's preparation, tooling, and skill, modification or even irreparable damage to the AD DS database can be completed in minutes to hours, not days or weeks. What matters isn't how long an attacker has privileged access to Active Directory, but how much the attacker has planned for the moment when privileged access is obtained. Compromising a domain controller can provide the most expedient path to wide scale propagation of access, or the most direct path to destruction of member servers, workstations, and Active Directory. Because of this, domain controllers should be secured separately and more stringently than the general Windows infrastructure.  
+=======
+Depending on an attackerï¿½s preparation, tooling, and skill, modification or even irreparable damage to the AD DS database can be completed in minutes to hours, not days or weeks. What matters isnï¿½t how long an attacker has privileged access to Active Directory, but how much the attacker has planned for the moment when privileged access is obtained. Compromising a domain controller can provide the most expedient path to wide scale propagation of access, or the most direct path to destruction of member servers, workstations, and Active Directory. Because of this, domain controllers should be secured separately and more stringently than the general Windows infrastructure.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ## Physical Security for Domain Controllers  
 This section provides information about physically securing domain controllers, whether the domain controllers are physical or virtual machines, in datacenter locations, branch offices, and even remote locations with only basic infrastructure controls.  
@@ -54,7 +62,11 @@ You should run all domain controllers on the newest version of Windows Server th
 A number of freely available tools, some of which are installed by default in Windows, can be used to create an initial security configuration baseline for domain controllers that can subsequently be enforced by GPOs. These tools are described here.  
   
 ### Security Configuration Wizard  
+<<<<<<< HEAD
 All domain controllers should be locked down upon initial build. This can be achieved using the Security Configuration Wizard that ships natively in Windows Server to configure service, registry, system, and WFAS settings on a "base build" domain controller. Settings can be saved and exported to a GPO that can be linked to the Domain Controllers OU in each domain in the forest to enforce consistent configuration of domain controllers. If your domain contains multiple versions of Windows operating systems, you can configure Windows Management Instrumentation (WMI) filters to apply GPOs only to the domain controllers running the corresponding version of the operating system.  
+=======
+All domain controllers should be locked down upon initial build. This can be achieved using the Security Configuration Wizard that ships natively in Windows Server to configure service, registry, system, and WFAS settings on a ï¿½base buildï¿½ domain controller. Settings can be saved and exported to a GPO that can be linked to the Domain Controllers OU in each domain in the forest to enforce consistent configuration of domain controllers. If your domain contains multiple versions of Windows operating systems, you can configure Windows Management Instrumentation (WMI) filters to apply GPOs only to the domain controllers running the corresponding version of the operating system.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ### Microsoft Security Compliance Manager  
 [Microsoft Security Compliance Manager](http://technet.microsoft.com/library/cc677002.aspx) domain controller settings can be combined with Security Configuration Wizard settings to produce comprehensive configuration baselines for domain controllers that are deployed and enforced by GPOs deployed at the Domain Controllers OU in Active Directory.  
@@ -63,15 +75,21 @@ All domain controllers should be locked down upon initial build. This can be ach
 AppLocker or a third-party application whitelisting tool should be used to configure services and applications that are permitted to run on domain controllers, and these permitted applications and services should be comprised only of what is required for the computer to host AD DS and possibly DNS, plus any system security software such as antivirus software. By whitelisting permitted applications on domain controllers, an additional layer of security is added so that even if an unauthorized application is installed on a domain controller, the application cannot run.  
   
 ### RDP Restrictions  
-Group Policy Objects that link to all domain controllers OUs in a forest should be configured to allow RDP connections only from authorized users and systems—that is, jump servers. This can be achieved through a combination of user rights settings and WFAS configuration and should be implemented in GPOs so that the policy is consistently applied. If it is bypassed, the next Group Policy refresh returns the system to its proper configuration.  
+Group Policy Objects that link to all domain controllers OUs in a forest should be configured to allow RDP connections only from authorized users and systemsï¿½that is, jump servers. This can be achieved through a combination of user rights settings and WFAS configuration and should be implemented in GPOs so that the policy is consistently applied. If it is bypassed, the next Group Policy refresh returns the system to its proper configuration.  
   
 ### Patch and Configuration Management for Domain Controllers  
 Although it may seem counterintuitive, you should consider patching domain controllers and other critical infrastructure components separately from your general Windows infrastructure. If you leverage enterprise configuration management software for all computers in your infrastructure, compromise of the systems management software can be used to compromise or destroy all infrastructure components managed by that software. By separating patch and systems management for domain controllers from the general population, you can reduce the amount of software installed on domain controllers, in addition to tightly controlling their management.  
   
 ### Blocking Internet Access for Domain Controllers  
+<<<<<<< HEAD
 One of the checks that is performed as part of an Active Directory Security Assessment is the use and configuration of Internet Explorer on domain controllers. Internet Explorer (or any other web browser) should not be used on domain controllers, but analysis of thousands of domain controllers has revealed numerous cases in which privileged users used Internet Explorer to browse the organization's intranet or the Internet.  
   
 As previously described in the "Misconfiguration" section of [Avenues to Compromise](../../../ad-ds/plan/security-best-practices/Avenues-to-Compromise.md), browsing the Internet (or an infected intranet) from one of the most powerful computers in a Windows infrastructure using a highly privileged account (which are the only accounts permitted to log on locally to domain controllers by default) presents an extraordinary risk to an organization's security. Whether via a drive by download or by download of malware-infected "utilities," attackers can gain access to everything they need to completely compromise or destroy the Active Directory environment.  
+=======
+One of the checks that is performed as part of an Active Directory Security Assessment is the use and configuration of Internet Explorer on domain controllers. Internet Explorer (or any other web browser) should not be used on domain controllers, but analysis of thousands of domain controllers has revealed numerous cases in which privileged users used Internet Explorer to browse the organizationï¿½s intranet or the Internet.  
+  
+As previously described in the ï¿½Misconfigurationï¿½ section of [Avenues to Compromise](../../../ad-ds/plan/security-best-practices/Avenues-to-Compromise.md), browsing the Internet (or an infected intranet) from one of the most powerful computers in a Windows infrastructure using a highly privileged account (which are the only accounts permitted to log on locally to domain controllers by default) presents an extraordinary risk to an organizationï¿½s security. Whether via a drive by download or by download of malware-infected ï¿½utilities,ï¿½ attackers can gain access to everything they need to completely compromise or destroy the Active Directory environment.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 Although Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, and current versions of Internet Explorer offer a number of protections against malicious downloads, in most cases in which domain controllers and privileged accounts had been used to browse the Internet, the domain controllers were running Windows Server 2003, or protections offered by newer operating systems and browsers had been intentionally disabled.  
   
@@ -81,10 +99,17 @@ Launching web browsers on domain controllers should be prohibited not only by po
 Perimeter firewalls should be configured to block outbound connections from domain controllers to the Internet. Although domain controllers may need to communicate across site boundaries, perimeter firewalls can be configured to allow intersite communication by following the guidelines provided in [How to configure a firewall for domains and trusts](http://support.microsoft.com/kb/179442) on the Microsoft Support website.  
   
 ### DC Firewall Configurations  
+<<<<<<< HEAD
 As described earlier, you should use the Security Configuration Wizard to capture configuration settings for the Windows Firewall with Advanced Security on domain controllers. You should review the output of Security Configuration Wizard to ensure that the firewall configuration settings meet your organization's requirements, and then use GPOs to enforce configuration settings.  
   
 ### Preventing Web Browsing from Domain Controllers  
 You can use a combination of AppLocker configuration, "black hole" proxy configuration, and WFAS configuration to prevent domain controllers from accessing the Internet and to prevent the use of web browsers on domain controllers.  
+=======
+As described earlier, you should use the Security Configuration Wizard to capture configuration settings for the Windows Firewall with Advanced Security on domain controllers. You should review the output of Security Configuration Wizard to ensure that the firewall configuration settings meet your organizationï¿½s requirements, and then use GPOs to enforce configuration settings.  
+  
+### Preventing Web Browsing from Domain Controllers  
+You can use a combination of AppLocker configuration, ï¿½black holeï¿½ proxy configuration, and WFAS configuration to prevent domain controllers from accessing the Internet and to prevent the use of web browsers on domain controllers.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 
 

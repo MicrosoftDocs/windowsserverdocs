@@ -3,7 +3,7 @@ title: Using Device-based Conditional Access on-Premises
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -133,7 +133,11 @@ a.  Where the [AD connector account name] is the name of the account you configu
   
 #### Prepare AD for Device Write Back   
 To ensure AD DS objects and containers are in the correct state for write back of devices from Azure AD, do the following.  
+<<<<<<< HEAD
 1.  PS C:\&gt;Initialize-ADSyncDeviceWriteBack â€"DomainName &lt;AD DS domain name&gt; â€"AdConnectorAccount [AD connector account name]  
+=======
+1.  PS C:>Initialize-ADSyncDeviceWriteBack â€“DomainName &lt;AD DS domain name&gt; â€“AdConnectorAccount [AD connector account name]  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
     1. Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory in domain\accountname format  
     2. The above command creates the following objects for device write back to AD DS, if they do not exist already, and allows access to the specified AD connector account name  
         1. RegisteredDevices container in the AD domain partition  

@@ -3,7 +3,7 @@ title: What&#39;s new in Active Directory Domain Services Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na

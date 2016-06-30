@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -21,7 +21,11 @@ author: Femila
 ## Appendix F: Securing Domain Admins Groups in Active Directory  
 As is the case with the Enterprise Admins (EA) group, membership in the Domain Admins (DA) group should be required only in build or disaster recovery scenarios. There should be no day-to-day user accounts in the DA group with the exception of the built-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
+<<<<<<< HEAD
 Domain Admins are, by default, members of the local Administrators groups on all member servers and workstations in their respective domains. This default nesting should not be modified for supportability and disaster recovery purposes. If Domain Admins have been removed from the local Administrators groups on the member servers, the group should be added to the Administrators group on each member server and workstation in the domain. Each domain's Domain Admins group should be secured as described in the step-by-step instructions that follow.  
+=======
+Domain Admins are, by default, members of the local Administrators groups on all member servers and workstations in their respective domains. This default nesting should not be modified for supportability and disaster recovery purposes. If Domain Admins have been removed from the local Administrators groups on the member servers, the group should be added to the Administrators group on each member server and workstation in the domain. Each domain�s Domain Admins group should be secured as described in the step-by-step instructions that follow.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 For the Domain Admins group in each domain in the forest:  
   
@@ -158,8 +162,13 @@ For the Domain Admins group in each domain in the forest:
   
 #### Verification Steps  
   
+<<<<<<< HEAD
 ##### Verify "Deny access to this computer from the network" GPO Settings  
 From any member server or workstation that is not affected by the GPO changes (such as a "jump server"), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
+=======
+##### Verify �Deny access to this computer from the network� GPO Settings  
+From any member server or workstation that is not affected by the GPO changes (such as a �jump server�), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 1.  Log on locally using an account that is a member of the Domain Admins group.  
   
@@ -171,13 +180,21 @@ From any member server or workstation that is not affected by the GPO changes (s
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_73.gif)  
   
+<<<<<<< HEAD
 5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you're attempting to access over the network.  
+=======
+5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you�re attempting to access over the network.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 6.  The following screen shot shows the error message that should appear.  
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)  
   
+<<<<<<< HEAD
 ##### Verify "Deny log on as a batch job" GPO Settings  
+=======
+##### Verify �Deny log on as a batch job� GPO Settings  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 From any member server or workstation affected by the GPO changes, log on locally.  
   
 ###### Create a Batch File  
@@ -231,7 +248,11 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_75.gif)  
   
+<<<<<<< HEAD
 ##### Verify "Deny log on as a service" GPO Settings  
+=======
+##### Verify �Deny log on as a service� GPO Settings  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
@@ -247,7 +268,11 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 7.  Click **Browse**, type the name of an account that is a member of the Domain Admins group, click **Check Names**, and click **OK**.  
   
+<<<<<<< HEAD
 8.  Under **Password** and **Confirm password**, type the selected account's password, and click **OK**.  
+=======
+8.  Under **Password** and **Confirm password**, type the selected account�s password, and click **OK**.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 9. Click **OK** three more times.  
   
@@ -271,13 +296,21 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  Under **Log on as**, select the **Local System** account, and click **OK**.  
   
+<<<<<<< HEAD
 ##### Verify "Deny log on locally" GPO Settings  
+=======
+##### Verify �Deny log on locally� GPO Settings  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 1.  From any member server or workstation affected by the GPO changes, attempt to log on locally using an account that is a member of the Domain Admins group. A dialog box similar to the following should appear.  
   
     ![](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_77.gif)  
   
+<<<<<<< HEAD
 ##### Verify "Deny log on through Remote Desktop Services" GPO Settings  
+=======
+##### Verify �Deny log on through Remote Desktop Services� GPO Settings  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   

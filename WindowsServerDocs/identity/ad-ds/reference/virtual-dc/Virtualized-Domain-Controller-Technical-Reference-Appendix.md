@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -25,21 +25,37 @@ This topic covers:
   
 ## <a name="BKMK_Terms"></a>Terminology  
   
+<<<<<<< HEAD
 -   **Snapshot** - The state of a virtual machine at a particular point in time. It is dependent on the chain of previous snapshots taken, on the hardware, and on the virtualization platform.  
   
 -   **Clone** - A complete and separate copy of a virtual machine. It is dependent on the virtual hardware (hypervisor).  
   
 -   **Full Clone** - A full clone is an independent copy of a virtual machine that shares no resources with the parent virtual machine after the cloning operation. Ongoing operation of a full clone is entirely separate from the parent virtual machine.  
+=======
+-   **Snapshot** � The state of a virtual machine at a particular point in time. It is dependent on the chain of previous snapshots taken, on the hardware, and on the virtualization platform.  
+  
+-   **Clone** � A complete and separate copy of a virtual machine. It is dependent on the virtual hardware (hypervisor).  
+  
+-   **Full Clone** � A full clone is an independent copy of a virtual machine that shares no resources with the parent virtual machine after the cloning operation. Ongoing operation of a full clone is entirely separate from the parent virtual machine.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   **Differencing disk** - A copy of a virtual machine that shares virtual disks with the parent virtual machine in an ongoing manner. This usually conserves disk space and allows multiple virtual machines to use the same software installation.  
   
 -   **VM Copy**- A file system copy of all the related files and folders of a virtual machine.  
   
+<<<<<<< HEAD
 -   **VHD File Copy** - A copy of a virtual machine's VHD  
   
 -   **VM Generation ID** - a 128-bit integer given to the virtual machine by the hypervisor. This ID is stored in memory and reset every time a snapshot is applied. The design uses a hypervisor-agnostic mechanism for surfacing the VM-Generation ID in the virtual machine. The Hyper-V implementation exposes the ID in the ACPI table of the virtual machine.  
   
 -   **Import/Export** - A Hyper-V feature that allows the user to save the entire virtual machine (VM files, VHD and the machine configuration). It then allows users to using that set of files to bring the machine back on the same machine as the same VM (Restore), on a different machine as the same VM (Move), or a new VM (copy)  
+=======
+-   **VHD File Copy** � A copy of a virtual machine�s VHD  
+  
+-   **VM Generation ID** � a 128-bit integer given to the virtual machine by the hypervisor. This ID is stored in memory and reset every time a snapshot is applied. The design uses a hypervisor-agnostic mechanism for surfacing the VM-Generation ID in the virtual machine. The Hyper-V implementation exposes the ID in the ACPI table of the virtual machine.  
+  
+-   **Import/Export** � A Hyper-V feature that allows the user to save the entire virtual machine (VM files, VHD and the machine configuration). It then allows users to using that set of files to bring the machine back on the same machine as the same VM (Restore), on a different machine as the same VM (Move), or a new VM (copy)  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ## <a name="BKMK_FixPDCPerms"></a>FixVDCPermissions.ps1  
   
