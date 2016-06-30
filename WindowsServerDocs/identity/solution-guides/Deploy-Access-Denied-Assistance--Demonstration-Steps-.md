@@ -71,14 +71,14 @@ You can configure access-denied assistance for the domain by using Group Policy 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName AllowEmailRequests-Type DWORD-value 1  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName GenerateLog-Type DWORD-value 1  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName IncludeDeviceClaims-Type DWORD-value 1  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName IncludeUserClaims-Type DWORD-value 1  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName PutAdminOnTo-Type DWORD-value 1  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName PutDataOwnerOnTo-Type DWORD-value 1  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName ErrorMessage-Type MultiString-value “Type the text that the user will see in the error message dialog box.”  
-Set-GPRegistryValue-Name “Name of GPO”-key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied”-ValueName Enabled-Type DWORD-value 1 
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName AllowEmailRequests -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName GenerateLog -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName IncludeDeviceClaims -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName IncludeUserClaims -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName PutAdminOnTo -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName PutDataOwnerOnTo -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName ErrorMessage -Type MultiString -value "Type the text that the user will see in the error message dialog box."  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName Enabled -Type DWORD -value 1 
   
 ```  
   
