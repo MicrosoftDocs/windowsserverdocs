@@ -21,7 +21,7 @@ To help protect against compromised fabric, Windows Server 2016 Hyper-V introduc
 
 Shielded VMs and Guarded fabric enables cloud service providers or enterprise private cloud administrators, to provide a more secure environment for tenant VMs. A guarded fabric is comprised of one Host Guardian Service (HGS) - typically, a cluster of 3 nodes: one or more guarded hosts and a set of shielded Virtual Machines. The diagram below shows how the Host Guardian Service uses "Attestation" to ensure that only known, valid hosts can start the shielded VMs, and the "Key Protection Service" to securely release the keys for shielded VMs.
 
-![./media/guarded-fabric-and-shielded-vms/Guarded-Host-Overview-Diagram.png)
+![Guarded host overview diagram](./media/guarded-fabric-and-shielded-vms/Guarded-Host-Overview-Diagram.png)
 ### Attestation modes in the Guarded Fabric solution
 The Host Guardian Service supports two different deployments of a Guarded fabric (attestation modes): TPM-trusted attestation (Hardware based) and Admin-trusted attestation (AD based). 
 TPM trusted attestation is the mode we recommend that you use because it offers stronger assurances but it requires that your Hyper-V hosts have TPM 2.0. If you currently do not have TPM 2.0, you can use Admin-trusted attestation and if you decide to move to TPM trusted attestation when you acquire new hardware, you can do so by switching the attestation mode on the Host Guardian Service with minimal to no interruption to your fabric.
