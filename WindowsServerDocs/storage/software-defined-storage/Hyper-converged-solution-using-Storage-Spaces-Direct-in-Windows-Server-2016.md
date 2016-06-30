@@ -382,7 +382,6 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 
    The output should look something like this:                                                                                                                                                          
 
-<<<<<<< HEAD
       Name           : SMB  
       Owner          : Group Policy (Machine)  
       NetworkProfile : All  
@@ -391,17 +390,6 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
       NetDirectPort  : 445  
       PriorityValue  :   
 
-=======
-    ```  
-   Name           : SMB  
-   Owner          : Group Policy (Machine)  
-   NetworkProfile : All  
-   Precedence     : 127  
-   JobObject      :  
-   NetDirectPort  : 445  
-   PriorityValue  :   
-   ```
->>>>>>> 930faf146342a2e16eb9849fbb51a3cc2da0ea90
 
 1. Turn on Flow Control for SMB as follows:                                                                                                                                                                       
 
