@@ -19,9 +19,15 @@ author: Femila
 
   
 ## Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory  
+<<<<<<< HEAD
+One of the challenges in implementing an Active Directory model that does not rely on permanent membership in highly privileged groups is that there must be a mechanism to populate these groups when temporary membership in the groups is required. Some privileged identity management solutions require that the software's service accounts are granted permanent membership in groups such as DA or Administrators in each domain in the forest. However, it is technically not necessary for Privileged Identity Management (PIM) solutions to run their services in such highly privileged contexts.  
+  
+This appendix provides information that you can use for natively implemented or third-party PIM solutions to create accounts that have limited privileges and can be stringently controlled, but can be used to populate privileged groups in Active Directory when temporary elevation is required. If you are implementing PIM as a native solution, these accounts may be used by administrative staff to perform the temporary group population, and if you're implementing PIM via third-party software, you might be able to adapt these accounts to function as service accounts.  
+=======
 One of the challenges in implementing an Active Directory model that does not rely on permanent membership in highly privileged groups is that there must be a mechanism to populate these groups when temporary membership in the groups is required. Some privileged identity management solutions require that the software�s service accounts are granted permanent membership in groups such as DA or Administrators in each domain in the forest. However, it is technically not necessary for Privileged Identity Management (PIM) solutions to run their services in such highly privileged contexts.  
   
 This appendix provides information that you can use for natively implemented or third-party PIM solutions to create accounts that have limited privileges and can be stringently controlled, but can be used to populate privileged groups in Active Directory when temporary elevation is required. If you are implementing PIM as a native solution, these accounts may be used by administrative staff to perform the temporary group population, and if you�re implementing PIM via third-party software, you might be able to adapt these accounts to function as service accounts.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 > [!NOTE]  
 > The procedures described in this appendix provide one approach to the management of highly privileged groups in Active Directory. You can adapt these procedures to suit your needs, add additional restrictions, or omit some of the restrictions that are described here.  
@@ -31,7 +37,11 @@ Creating accounts that can be used to manage the membership of privileged groups
   
 1.  First, you should create a group that will manage the accounts, because these accounts should be managed by a limited set of trusted users. If you do not already have an OU structure that accommodates segregating privileged and protected accounts and systems from the general population in the domain, you should create one. Although specific instructions are not provided in this appendix, screenshots show an example of such an OU hierarchy.  
   
+<<<<<<< HEAD
+2.  Create the management accounts. These accounts should be created as "regular" user accounts and granted no user rights beyond those that are already granted to users by default.  
+=======
 2.  Create the management accounts. These accounts should be created as �regular� user accounts and granted no user rights beyond those that are already granted to users by default.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 3.  Implement restrictions on the management accounts that make them usable only for the specialized purpose for which they were created, in addition to controlling who can enable and use the accounts (the group you created in the first step).  
   
@@ -53,16 +63,28 @@ To create a group to enable and disable management accounts, perform the followi
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_115.png)  
   
+<<<<<<< HEAD
+2.  In the **New Object - Group** dialog box, enter a name for the group. If you plan to use this group to "activate" all management accounts in your forest, make it a universal security group. If you have a single-domain forest or if you plan to create a group in each domain, you can create a global security group. Click **OK** to create the group.  
+  
+    ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)  
+  
+3.  Right-click the group you just created, click **Properties**, and click the **Object** tab. In the group's **Object property** dialog box, select **Protect object from accidental deletion**, which will not only prevent otherwise-authorized users from deleting the group, but also from moving it to another OU unless the attribute is first deselected.  
+=======
 2.  In the **New Object � Group** dialog box, enter a name for the group. If you plan to use this group to �activate� all management accounts in your forest, make it a universal security group. If you have a single-domain forest or if you plan to create a group in each domain, you can create a global security group. Click **OK** to create the group.  
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)  
   
 3.  Right-click the group you just created, click **Properties**, and click the **Object** tab. In the group�s **Object property** dialog box, select **Protect object from accidental deletion**, which will not only prevent otherwise-authorized users from deleting the group, but also from moving it to another OU unless the attribute is first deselected.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_117.png)  
   
     > [!NOTE]  
+<<<<<<< HEAD
+    > If you have already configured permissions on the group's parent OUs to restrict administration to a limited set of users, you may not need to perform the following steps. They are provided here so that even if you have not yet implemented limited administrative control over the OU structure in which you've created this group, you can secure the group against modification by unauthorized users.  
+=======
     > If you have already configured permissions on the group�s parent OUs to restrict administration to a limited set of users, you may not need to perform the following steps. They are provided here so that even if you have not yet implemented limited administrative control over the OU structure in which you�ve created this group, you can secure the group against modification by unauthorized users.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 4.  Click the **Members** tab, and add the accounts for members of your team who will be responsible for enabling management accounts or populating protected groups when necessary.  
   
@@ -72,11 +94,19 @@ To create a group to enable and disable management accounts, perform the followi
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_119.png)  
   
+<<<<<<< HEAD
+6.  In the **Advanced Security Settings for [Group]** dialog box, click **Disable Inheritance**. When prompted, click **Convert inherited permissions into explicit permissions on this object**, and click **OK** to return to the group's **Security** dialog box.  
+  
+    ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_120.png)  
+  
+7.  On the **Security** tab, remove groups that should not be permitted to access this group. For example, if you do not want Authenticated Users to be able to read the group's name and general properties, you can remove that ACE. You can also remove ACEs, such as those for account operators and pre-Windows 2000 Server compatible access. You should, however, leave a minimum set of object permissions in place. Leave the following ACEs intact:  
+=======
 6.  In the **Advanced Security Settings for [Group]** dialog box, click **Disable Inheritance**. When prompted, click **Convert inherited permissions into explicit permissions on this object**, and click **OK** to return to the group�s **Security** dialog box.  
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_120.png)  
   
 7.  On the **Security** tab, remove groups that should not be permitted to access this group. For example, if you do not want Authenticated Users to be able to read the group�s name and general properties, you can remove that ACE. You can also remove ACEs, such as those for account operators and pre-Windows 2000 Server compatible access. You should, however, leave a minimum set of object permissions in place. Leave the following ACEs intact:  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     -   SELF  
   
@@ -99,10 +129,17 @@ To create a group to enable and disable management accounts, perform the followi
     > [!NOTE]  
     > If you have not already configured audit policies for the objects in the OU structure where you created this group, you should configure auditing to log changes this group.  
   
+<<<<<<< HEAD
+8.  You have completed configuration of the group that will be used to "check out" management accounts when they are needed and "check in" the accounts when their activities have been completed.  
+  
+##### Creating the Management Accounts  
+You should create at least one account that will be used to manage the membership of privileged groups in your Active Directory installation, and preferably a second account to serve as a backup. Whether you choose to create the management accounts in a single domain in the forest and grant them management capabilities for all domains' protected groups, or whether you choose to implement management accounts in each domain in the forest, the procedures are effectively the same.  
+=======
 8.  You have completed configuration of the group that will be used to �check out� management accounts when they are needed and �check in� the accounts when their activities have been completed.  
   
 ##### Creating the Management Accounts  
 You should create at least one account that will be used to manage the membership of privileged groups in your Active Directory installation, and preferably a second account to serve as a backup. Whether you choose to create the management accounts in a single domain in the forest and grant them management capabilities for all domains� protected groups, or whether you choose to implement management accounts in each domain in the forest, the procedures are effectively the same.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 > [!NOTE]  
 > The steps in this document assume that you have not yet implemented role-based access controls and privileged identity management for Active Directory. Therefore, some procedures must be performed by a user whose account is a member of the Domain Admins group for the domain in question.  
@@ -111,21 +148,35 @@ You should create at least one account that will be used to manage the membershi
   
 To create the management accounts, perform the following steps:  
   
+<<<<<<< HEAD
+1.  Log on to a domain controller with an account that is a member of the domain's DA group.  
+=======
 1.  Log on to a domain controller with an account that is a member of the domain�s DA group.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 2.  Launch **Active Directory Users and Computers** and navigate to the OU where you will be creating the management account.  
   
 3.  Right-click the OU and click **New** and click **User**.  
   
+<<<<<<< HEAD
+4.  In the **New Object - User** dialog box, enter your desired naming information for the account and click **Next**.  
+  
+5.  Log on to a domain controller with an account that is a member of the domain's DA group.  
+=======
 4.  In the **New Object � User** dialog box, enter your desired naming information for the account and click **Next**.  
   
 5.  Log on to a domain controller with an account that is a member of the domain�s DA group.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 6.  Launch **Active Directory Users and Computers** and navigate to the OU where you will be creating the management account.  
   
 7.  Right-click the OU and click **New** and click **User**.  
   
+<<<<<<< HEAD
+8.  In the **New Object - User** dialog box, enter your desired naming information for the account and click **Next**.  
+=======
 8.  In the **New Object � User** dialog box, enter your desired naming information for the account and click **Next**.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_122.png)  
   
@@ -158,12 +209,20 @@ To create the management accounts, perform the following steps:
   
 15. Click the **Remote control** tab.  
   
+<<<<<<< HEAD
+16. Clear the **Enable remote control** flag. It should never be necessary for support staff to connect to this account's sessions to implement fixes.  
+=======
 16. Clear the **Enable remote control** flag. It should never be necessary for support staff to connect to this account�s sessions to implement fixes.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_126.png)  
   
     > [!NOTE]  
+<<<<<<< HEAD
+    > Every object in Active Directory should have a designated IT owner and a designated business owner, as described in [Planning for Compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md). If you are tracking ownership of AD DS objects in Active Directory (as opposed to an external database), you should enter appropriate ownership information in this object's properties.  
+=======
     > Every object in Active Directory should have a designated IT owner and a designated business owner, as described in [Planning for Compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md). If you are tracking ownership of AD DS objects in Active Directory (as opposed to an external database), you should enter appropriate ownership information in this object�s properties.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
     >   
     > In this case, the business owner is most likely an IT division, andthere is no prohibition on business owners also being IT owners. The point of establishing ownership of objects is to allow you to identify contacts when changes need to be made to the objects, perhaps years from their initial creation.  
   
@@ -182,7 +241,11 @@ To create the management accounts, perform the following steps:
     > [!NOTE]  
     > It is unlikely that this account will be used to log on to read-only domain controllers (RODCs) in your environment. However, should circumstance ever require the account to log on to an RODC, you should add this account to the Denied RODC Password Replication Group so that its password is not cached on the RODC.  
     >   
+<<<<<<< HEAD
+    > Although the account's password should be reset after each use and the account should be disabled, implementing this setting does not have a deleterious effect on the account, and it might help in situations in which an administrator forgets to reset the account's password and disable it.  
+=======
     > Although the account�s password should be reset after each use and the account should be disabled, implementing this setting does not have a deleterious effect on the account, and it might help in situations in which an administrator forgets to reset the account�s password and disable it.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 21. Click the **Member Of** tab.  
   
@@ -225,7 +288,11 @@ To create the management accounts, perform the following steps:
   
 33. Click **Advanced** and verify that the Advanced Security Settings dialog box looks similar to the following screenshot.  
   
+<<<<<<< HEAD
+34. Click **OK**, and **OK** again to close the account's property dialog box.  
+=======
 34. Click **OK**, and **OK** again to close the account�s property dialog box.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_135.png)  
   
@@ -246,9 +313,15 @@ SIEM solutions take event information from involved security sources (for exampl
 For more information about recommended audit configuration settings for domain controllers, see [Monitoring Active Directory for Signs of Compromise](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). Domain controller-specific configuration settings are provided in [Monitoring Active Directory for Signs of Compromise](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md).  
   
 ##### Enabling Management Accounts to Modify the Membership of Protected Groups  
+<<<<<<< HEAD
+In this procedure, you will configure permissions on the domain's AdminSDHolder object to allow the newly created management accounts to modify the membership of protected groups in the domain. This procedure cannot be performed via a graphical user interface (GUI).  
+  
+As discussed in [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md), the ACL on a domain's AdminSDHolder object is effectively "copied" to protected objects when the SDProp task runs. Protected groups and accounts do not inherit their permissions from the AdminSDHolder object; their permissions are explicitly set to match those on the AdminSDHolder object. Therefore, when you modify permissions on the AdminSDHolder object, you must modify them for attributes that are appropriate to the type of the protected object you are targeting.  
+=======
 In this procedure, you will configure permissions on the domain�s AdminSDHolder object to allow the newly created management accounts to modify the membership of protected groups in the domain. This procedure cannot be performed via a graphical user interface (GUI).  
   
 As discussed in [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md), the ACL on a domain�s AdminSDHolder object is effectively �copied� to protected objects when the SDProp task runs. Protected groups and accounts do not inherit their permissions from the AdminSDHolder object; their permissions are explicitly set to match those on the AdminSDHolder object. Therefore, when you modify permissions on the AdminSDHolder object, you must modify them for attributes that are appropriate to the type of the protected object you are targeting.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 In this case, you will be granting the newly created management accounts to allow them to read and write the members attribute on group objects. However, the AdminSDHolder object is not a group object and group attributes are not exposed in the graphical ACL editor. It is for this reason that you will implement the permissions changes via the Dsacls command-line utility. To grant the (disabled) management accounts permissions to modify the membership of protected groups, perform the following steps:  
   
@@ -287,7 +360,11 @@ In this case, you will be granting the newly created management accounts to allo
   
     For more information about use of **Dsacls**, type Dsacls without any parameters at a command prompt.  
   
+<<<<<<< HEAD
+    If you have created multiple management accounts for the domain, you should run the Dsacls command for each account. When you have completed the ACL configuration on the AdminSDHolder object, you should force SDProp to run, or wait until its scheduled run completes. For information about forcing SDProp to run, see "Running SDProp Manually" in [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).  
+=======
     If you have created multiple management accounts for the domain, you should run the Dsacls command for each account. When you have completed the ACL configuration on the AdminSDHolder object, you should force SDProp to run, or wait until its scheduled run completes. For information about forcing SDProp to run, see �Running SDProp Manually� in [Appendix C: Protected Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     When SDProp has run, you can verify that the changes you made to the AdminSDHolder object have been applied to protected groups in the domain. You cannot verify this by viewing the ACL on the AdminSDHolder object for the reasons previously described, but you can verify that the permissions have been applied by viewing the ACLs on protected groups.  
   
@@ -306,7 +383,11 @@ In this case, you will be granting the newly created management accounts to allo
 9. You can repeat the previous steps for other protected groups in the domain; the permissions should be the same for all protected groups. You have now completed creation and configuration of the management accounts for the protected groups in this domain.  
   
     > [!NOTE]  
+<<<<<<< HEAD
+    > Any account that has permission to write membership of a group in Active Directory can also add itself to the group. This behavior is by design and cannot be disabled. For this reason, you should always keep management accounts disabled when not in use, and should closely monitor the accounts when they're disabled and when they're in use.  
+=======
     > Any account that has permission to write membership of a group in Active Directory can also add itself to the group. This behavior is by design and cannot be disabled. For this reason, you should always keep management accounts disabled when not in use, and should closely monitor the accounts when they�re disabled and when they�re in use.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ##### Verifying Group and Account Configuration Settings  
 Now that you have created and configured management accounts that can modify the membership of protected groups in the domain (which includes the most highly privileged EA, DA, and BA groups), you should verify that the accounts and their management group have been created properly. Verification consists of these general tasks:  
@@ -347,7 +428,11 @@ Now that you have created and configured management accounts that can modify the
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_148.gif)  
   
+<<<<<<< HEAD
+9. Click the **Account** tab for the account and attempt to change the account's name, logon hours, or logon workstations. All should fail, and account options that are not controlled by the **userAccountControl** attribute should be grayed out and unavailable for modification.  
+=======
 9. Click the **Account** tab for the account and attempt to change the account�s name, logon hours, or logon workstations. All should fail, and account options that are not controlled by the **userAccountControl** attribute should be grayed out and unavailable for modification.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     ![](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_149.gif)  
   

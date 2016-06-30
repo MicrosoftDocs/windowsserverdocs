@@ -140,11 +140,11 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     **Cause**  
   
-    When this deployment was first installed, the internal network was detected as an IPv4 only network. In a multisite deployment, different entry points are assumed to be located in different subnets with different characteristics. Therefore, although the deployment is configured as an IPv4 only deployment, it can contain an entry point located in an IPv6+IPv4 subnet. However, although the entry point will be added to the deployment, DirectAccess will ignore the IPv6 addresses configured on the new entry point’s internal interface.  
+    When this deployment was first installed, the internal network was detected as an IPv4 only network. In a multisite deployment, different entry points are assumed to be located in different subnets with different characteristics. Therefore, although the deployment is configured as an IPv4 only deployment, it can contain an entry point located in an IPv6+IPv4 subnet. However, although the entry point will be added to the deployment, DirectAccess will ignore the IPv6 addresses configured on the new entry point's internal interface.  
   
     **Solution**  
   
-    If the entire internal network is configured with IPv6 and IPv4 addresses, consider moving to an IPv6+IPv4 deployment to benefit from IPv6 technologies. See “Transitioning from a pure IPv4 to an IPv6+IPv4 corporate network” in [Step 3: Plan the multisite deployment](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d).  
+    If the entire internal network is configured with IPv6 and IPv4 addresses, consider moving to an IPv6+IPv4 deployment to benefit from IPv6 technologies. See "Transitioning from a pure IPv4 to an IPv6+IPv4 corporate network" in [Step 3: Plan the multisite deployment](assetId:///19d49dbf-1786-47bb-ab97-f0458c53d91d).  
   
 -   **Issue 2**  
   
@@ -156,7 +156,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     **Solution**  
   
-    If the entire network is already configured with IPv6 addresses, you should move to an IPv6+IPv4 or IPv6-only deployment. See “Plan the transition to IPv6 when multisite Remote Access is deployed”.  
+    If the entire network is already configured with IPv6 addresses, you should move to an IPv6+IPv4 or IPv6-only deployment. See "Plan the transition to IPv6 when multisite Remote Access is deployed".  
   
 -   **Issue 3**  
   
@@ -178,7 +178,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
     When this deployment was first installed, it was detected that the internal network is IPv6+IPv4. In this deployment mode, DNS64 and NAT64 are enabled to allow client computers to access machines on the internal network that are configured with only IPv4 addresses.  
   
-    When adding the new entry point, Remote Access detected that the internal interface on the new computer has only IPv6 addresses. To configure DNS64 and NAT64, an IPv4 address is required in order to route packets from the Remote Access server to the IPv4 only computer. Since no such IP exists on the new computer, NAT64 and DNS64 won't be configured on the Remote Access server. Therefore, client machines accessing the corporate network over DirectAccess using this entry point won't be able to access IPv4 only servers on the internal network. For information on how to transition to an IPv6+IPv4 network, or an IPv6-only network, see “Plan the transition to IPv6 when multisite Remote Access is deployed”.  
+    When adding the new entry point, Remote Access detected that the internal interface on the new computer has only IPv6 addresses. To configure DNS64 and NAT64, an IPv4 address is required in order to route packets from the Remote Access server to the IPv4 only computer. Since no such IP exists on the new computer, NAT64 and DNS64 won't be configured on the Remote Access server. Therefore, client machines accessing the corporate network over DirectAccess using this entry point won't be able to access IPv4 only servers on the internal network. For information on how to transition to an IPv6+IPv4 network, or an IPv6-only network, see "Plan the transition to IPv6 when multisite Remote Access is deployed".  
   
     **Solution**  
   

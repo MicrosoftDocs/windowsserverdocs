@@ -19,7 +19,7 @@ This topic contains the following sections.
 -   [Server certificate deployment process overview](#bkmk_process)  
   
 ## <a name="bkmk_components"></a>Server certificate deployment components  
-You can use this guide to install Active Directory® Certificate Services (AD CS) as an Enterprise root certification authority (CA) and to enroll server certificates to servers that are running Network Policy Server (NPS), Routing and Remote Access service (RRAS), or both NPS and RRAS.  
+You can use this guide to install Active Directory Certificate Services (AD CS) as an Enterprise root certification authority (CA) and to enroll server certificates to servers that are running Network Policy Server (NPS), Routing and Remote Access service (RRAS), or both NPS and RRAS.  
   
 If you deploy SDN with certificate-based authentication, servers are required to use a server certificate to prove their identities to other servers so that they achieve secure communications.  
   
@@ -107,7 +107,7 @@ The process of configuring server certificate enrollment occurs in these stages:
 10. Refresh Group Policy on servers. When Group Policy is refreshed, the servers receive the server certificate, which is based on the template that you configured in the previous step. This certificate is used by the server to prove its identity to client computers and other servers during the authentication process.  
   
     > [!NOTE]  
-    > All domain member computers automatically receive the Enterprise Root CA’s certificate without the configuration of autoenrollment. This certificate is different than the server certificate that you configure and distribute by using autoenrollment. The CA's certificate is automatically installed in the Trusted Root Certification Authorities certificate store for all domain member computers so that they will trust certificates that are issued by this CA.   
+    > All domain member computers automatically receive the Enterprise Root CA's certificate without the configuration of autoenrollment. This certificate is different than the server certificate that you configure and distribute by using autoenrollment. The CA's certificate is automatically installed in the Trusted Root Certification Authorities certificate store for all domain member computers so that they will trust certificates that are issued by this CA.   
   
 10. Verify that all servers have enrolled a valid server certificate.  
   

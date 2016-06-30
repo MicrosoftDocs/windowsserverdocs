@@ -157,7 +157,7 @@ The certification authority (CA) requirements for each scenario are summarized i
   
 |IPsec authentication|IP-HTTPS server|Network location server|  
 |------------------------|--------------------|---------------------------|  
-|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you don’t use the Kerberos proxy for authentication|Internal CA:<br /><br />You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Internal CA:<br /><br />You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point has high availability from the internal network.|  
+|An internal CA is required to issue computer certificates to the DirectAccess server and clients for IPsec authentication when you don't use the Kerberos proxy for authentication|Internal CA:<br /><br />You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Internal CA:<br /><br />You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point has high availability from the internal network.|  
 ||Self-signed certificate:<br /><br />You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally.<br /><br />A self-signed certificate cannot be used in multisite deployments.|Self-signed certificate:<br /><br />You can use a self-signed certificate for the network location server website.<br /><br />A self-signed certificate cannot be used in multisite deployments.|  
 ||**Recommended**<br /><br />Public CA:<br /><br />It is recommended to use a public CA to issue the IP-HTTPS certificate. This ensures that the CRL distribution point is available externally.|  
   
@@ -454,7 +454,7 @@ DirectAccess clients initiate communications with management servers that provid
   
 -   System Center Configuration Manager servers—Auto-discovery of System Center Configuration Manager servers is performed for all domains in the same forest as the DirectAccess server and client computers.  
   
-Domain controllers and System Center Configuration Manager servers are automatically detected the first time that DirectAccess is configured. Detected domain controllers are not displayed in the console, but settings can be retrieved by using the Windows PowerShell cmdlet **Get-DAMgmtServer –Type All**. If domain controller or System Center Configuration Manager servers are modified, clicking **Refresh Management Servers** in the Remote Access Management console refreshes the management server list.  
+Domain controllers and System Center Configuration Manager servers are automatically detected the first time that DirectAccess is configured. Detected domain controllers are not displayed in the console, but settings can be retrieved by using the Windows PowerShell cmdlet **Get-DAMgmtServer -Type All**. If domain controller or System Center Configuration Manager servers are modified, clicking **Refresh Management Servers** in the Remote Access Management console refreshes the management server list.  
   
 **Management server requirements**  
   
@@ -491,7 +491,7 @@ DirectAccess uses AD DS and Active Directory Group policy objects (GPOs) as foll
   
 When you plan AD DS for a DirectAccess deployment, consider the following requirements:  
   
--   At least one domain controller must be installed with the Windows Server® 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008  operating system.  
+-   At least one domain controller must be installed with the Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008  operating system.  
   
     If the domain controller is on a perimeter network (and therefore reachable from the Internet-facing network adapter of the DirectAccess server), you must prevent the DirectAccess server from reaching it by adding packet filters on the domain controller to prevent connectivity to the IP address of the Internet adapter.  
   
@@ -637,9 +637,9 @@ Alternatively, you can change the default setting by using the **Change Domain C
 -   To do this in Windows PowerShell, specify the **DomainController** parameter for the **Open-NetGPO** cmdlet. For example, to enable the private and public profiles in Windows Firewall on a GPO named domain1\DA_Server_GPO _Europe by using a domain controller named europe-dc.corp.contoso.com, enter the following:  
   
     ```  
-    $gpoSession = Open-NetGPO –PolicyStore "domain1\DA_Server_GPO _Europe" –DomainController "europe-dc.corp.contoso.com"  
-    Set-NetFirewallProfile –GpoSession $gpoSession –Name @("Private","Public") –Enabled True  
-    Save-NetGPO –GpoSession $gpoSession  
+    $gpoSession = Open-NetGPO -PolicyStore "domain1\DA_Server_GPO _Europe" -DomainController "europe-dc.corp.contoso.com"  
+    Set-NetFirewallProfile -GpoSession $gpoSession -Name @("Private","Public") -Enabled True  
+    Save-NetGPO -GpoSession $gpoSession  
     ```  
   
 ### <a name="bkmk_manageGPO"></a>1.8.4 Manage Remote Access GPOs with limited permissions  

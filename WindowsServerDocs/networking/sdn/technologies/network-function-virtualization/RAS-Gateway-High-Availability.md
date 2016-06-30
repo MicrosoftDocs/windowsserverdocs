@@ -32,9 +32,9 @@ If your organization is a Cloud Service Provider (CSP) or an Enterprise with mul
   
 You can deploy RAS Gateway in multitenant mode as an edge gateway to route tenant customer network traffic to tenant virtual networks and resources.  
   
-When you deploy multiple instances of RAS Gateway VMs that provide high availability and failover, you are deploying a gateway pool. In Windows Server® 2012 R2, all the gateway VMs formed a single pool, which made a logical separation of the gateway deployment a little difficult.  Windows Server 2012 R2  gateway  offered a 1:1 redundancy deployment for the gateway VMs, which resulted in under-utilization of the available capacity for site-to-site (S2S) VPN connections.  
+When you deploy multiple instances of RAS Gateway VMs that provide high availability and failover, you are deploying a gateway pool. In Windows Server 2012 R2, all the gateway VMs formed a single pool, which made a logical separation of the gateway deployment a little difficult.  Windows Server 2012 R2  gateway  offered a 1:1 redundancy deployment for the gateway VMs, which resulted in under-utilization of the available capacity for site-to-site (S2S) VPN connections.  
   
-This issue is resolved in Windows Server® 2016 Technical Preview, which provides multiple Gateway Pools - which can be of different types for logical separation. The new mode of M+N redundancy allows for a more efficient failover configuration.  
+This issue is resolved in Windows Server 2016 Technical Preview, which provides multiple Gateway Pools - which can be of different types for logical separation. The new mode of M+N redundancy allows for a more efficient failover configuration.  
   
 For more overview information about RAS Gateway, see [RAS Gateway](../../../remote-access/ras-gateway/RAS-Gateway.md).  
   
@@ -47,7 +47,7 @@ The following illustration shows different types of gateway pools that provide t
   
 Each pool has the following properties.  
   
--   Each pool is M+N redundant. This means that an  ‘M’ number of active gateway VMs are backed up by an ‘N’ number of standby gateway VMs. The value of N (standby gateways) is always less than or equal to M (active gateways).  
+-   Each pool is M+N redundant. This means that an  'M' number of active gateway VMs are backed up by an 'N' number of standby gateway VMs. The value of N (standby gateways) is always less than or equal to M (active gateways).  
   
 -   A pool can perform any of the individual gateway functions - Internet Key Exchange version 2 (IKEv2) S2S, Layer 3 (L3), and Generic Routing Encapsulation (GRE) - or the pool can perform all of these functions.  
   
@@ -59,7 +59,7 @@ Each pool has the following properties.
   
 Gateway pools also provide the flexibility to enable additional scenarios:  
   
--   Single-tenant pools – you can create one pool for use by one tenant.  
+-   Single-tenant pools - you can create one pool for use by one tenant.  
   
 -   If you are selling cloud services through partner (reseller) channels, you can create separate sets of pools for every reseller.  
   
@@ -106,7 +106,7 @@ After Network Controller selects a RAS Gateway for the connection, Network Contr
 If BGP routing is enabled for the connection, then BGP peering is initiated by RAS Gateway - and routes are exchanged between on-premises and cloud gateways. The routes that are learned by BGP (or that are statically configured routes if BGP is not used) are sent to Network Controller. Network Controller then plumbs the routes down to the Hyper-V hosts upon which the tenant VMs are installed. At this point, tenant traffic can be routed to the correct on-premises site. Network Controller also creates associated Hyper-V Network Virtualization policies that specify gateway locations, and plumbs them down to the Hyper-V hosts.  
   
 ### <a name="bkmk_ike"></a>High Availability for IKEv2 S2S  
-A RAS Gateway in a pool consists of both connections and BGP peering of different tenants. Every pool has ‘M’ active gateways and ‘N’ standby gateways.  
+A RAS Gateway in a pool consists of both connections and BGP peering of different tenants. Every pool has 'M' active gateways and 'N' standby gateways.  
   
 Network Controller handles the failure of gateways in the following manner.  
   
@@ -144,11 +144,11 @@ At the time of GRE connection provisioning, Network Controller selects a gateway
 When a gateway fails, Network Controller copies the VIP address of the failed gateway and other configuration data to the standby gateway. When the standby gateway becomes active, it advertises the VIP to its TOR switch and further into the physical network. Remote routers continue to connect GRE tunnels to the same VIP and the routing infrastructure ensures that packets are routed to the new active gateway.  
   
 ### <a name="bkmk_l3"></a>High Availability for L3 Forwarding Gateways  
-A Hyper-V Network Virtualization L3 forwarding gateway is a bridge between the physical infrastructure in the datacenter and the virtualized infrastructure in the Hyper-V Network Virtualization cloud. On a multitenant L3 forwarding gateway, each tenant uses its own VLAN tagged logical network for connectivity with the tenant’s physical network.  
+A Hyper-V Network Virtualization L3 forwarding gateway is a bridge between the physical infrastructure in the datacenter and the virtualized infrastructure in the Hyper-V Network Virtualization cloud. On a multitenant L3 forwarding gateway, each tenant uses its own VLAN tagged logical network for connectivity with the tenant's physical network.  
   
-When a new tenant creates a new L3 gateway, Network Controller Gateway Service Manager selects an available gateway VM and configures a new tenant interface with a highly available Customer Address (CA) space IP address (from the tenant’s VLAN tagged logical network). The IP address is used as the peer IP address on the remote (physical network) gateway, and is the Next-Hop to reach the tenant’s Hyper-V Network Virtualization network.  
+When a new tenant creates a new L3 gateway, Network Controller Gateway Service Manager selects an available gateway VM and configures a new tenant interface with a highly available Customer Address (CA) space IP address (from the tenant's VLAN tagged logical network). The IP address is used as the peer IP address on the remote (physical network) gateway, and is the Next-Hop to reach the tenant's Hyper-V Network Virtualization network.  
   
-Unlike IPsec or GRE network connections, the TOR switch will not learn the tenant’s VLAN tagged network dynamically. The routing for the tenant’s VLAN tagged network needs to be configured on the TOR switch and all the intermediate switches and routers between physical infrastructure and the gateway to ensure end to end connectivity.  Following is an example CSP Virtual Network configuration as depicted in the illustration below.  
+Unlike IPsec or GRE network connections, the TOR switch will not learn the tenant's VLAN tagged network dynamically. The routing for the tenant's VLAN tagged network needs to be configured on the TOR switch and all the intermediate switches and routers between physical infrastructure and the gateway to ensure end to end connectivity.  Following is an example CSP Virtual Network configuration as depicted in the illustration below.  
   
 |Network|Subnet|VLAN ID|Default Gateway|  
 |-----------|----------|-----------|-------------------|  
@@ -168,7 +168,7 @@ Following is the illustration of these configurations in a CSP datacenter.
   
 The gateway failures, failure detection, and the gateway failover process in the context of an L3 forwarding gateway is similar to the processes for IKEv2 and GRE RAS Gateways. The differences are in the way the external IP addresses are handled.  
   
-When the gateway VM state becomes unhealthy, Network Controller selects one of the standby gateways from the pool and re-provisions the network connections and routing on the standby gateway. While moving the connections, the L3 Forwarding gateway’s highly available CA space IP address is also moved to the new gateway VM along with the CA space BGP IP address of the tenant.  
+When the gateway VM state becomes unhealthy, Network Controller selects one of the standby gateways from the pool and re-provisions the network connections and routing on the standby gateway. While moving the connections, the L3 Forwarding gateway's highly available CA space IP address is also moved to the new gateway VM along with the CA space BGP IP address of the tenant.  
   
 Because the L3 Peering IP address is moved to the new gateway VM during the failover, the remote physical infrastructure is again able to connect to this IP address and, subsequently, reach the Hyper-V Network Virtualization workload. For BGP dynamic routing, as the CA space BGP IP address is moved to the new gateway VM, the remote BGP Router can re-establish peering and learn all Hyper-V Network Virtualization routes again.  
   

@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This topic describes the Domain Name System (DNS) client functionality that is new or changed in Windows 10®.  
+This topic describes the Domain Name System (DNS) client functionality that is new or changed in Windows 10.  
   
 ## <a name="BKMK_DNSClient2012R2"></a>Updates to DNS Client in Windows Technical Preview  
 **DNS Client service binding**: In Windows 10, the DNS Client service offers enhanced support for computers with more than one network interface. For multi-homed computers, DNS resolution is optimized in the following ways:  

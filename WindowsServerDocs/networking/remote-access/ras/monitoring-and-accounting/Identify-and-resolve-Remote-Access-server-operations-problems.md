@@ -88,7 +88,7 @@ To restore the IP Helper service on your Remote Access server, you can follow th
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-PS> Get-RemoteAccessHealth | Where-Object {$_.Component –eq “IP-HTTPS”} | Format-List –Property *  
+PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property *  
 ```  
   
 

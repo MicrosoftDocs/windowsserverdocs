@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-You can use this topic to learn about Software Load Balancing  for Software Defined Networking in Windows ServerÂ® 2016 Technical Preview.  
+You can use this topic to learn about Software Load Balancing  for Software Defined Networking in Windows Server 2016 Technical Preview.  
   
 This topic contains the following sections.  
   
@@ -67,9 +67,9 @@ VIPs are located in the SLB Multiplexer (MUX).  The MUX consists of one or more 
   
 When public traffic arrives from the Internet, the SLB MUX examines the traffic, which contains the VIP as a destination, and maps and rewrites the traffic so that it will arrive at an individual DIP. For inbound network traffic, this transaction is performed in a two-step process that is split between the MUX virtual machines (VMs) and the Hyper-V host where the destination DIP is located:  
   
--   Load balance â€“ the MUX uses the VIP to select a DIP, encapsulates the packet, and forwards the traffic to the Hyper-V host where the DIP is located.  
+-   Load balance â€" the MUX uses the VIP to select a DIP, encapsulates the packet, and forwards the traffic to the Hyper-V host where the DIP is located.  
   
--   Network Address Translation (NAT) â€“  the Hyper-V host removes encapsulation from the packet, translates the VIP to a DIP, remaps the ports, and forwards the packet  to the DIP VM.  
+-   Network Address Translation (NAT) â€"  the Hyper-V host removes encapsulation from the packet, translates the VIP to a DIP, remaps the ports, and forwards the packet  to the DIP VM.  
   
 The MUX knows how to map VIPs to the correct DIPs because of  load balancing policies that you define by using Network Controller. These rules include Protocol, Front-end Port, Back-end port, and distribution algorithm (5, 3, or 2 tuples).  
   

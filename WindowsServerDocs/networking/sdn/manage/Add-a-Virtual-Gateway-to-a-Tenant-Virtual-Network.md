@@ -51,32 +51,32 @@ This topic contains the following sections.
   
 Step 1: Verify that the Gateway Pool Object exists in Network Controller.  
 ```  
-$uri = “https://ncrest.contoso.com”   
+$uri = "https://ncrest.contoso.com"   
   
 # Retrieve the Gateway Pool configuration  
-$gwPool = Get-NetworkControllerGatewayPool –ConnectionUri $uri  
+$gwPool = Get-NetworkControllerGatewayPool -ConnectionUri $uri  
   
 # Display in JSON format  
-$gwPool | ConvertTo-Json –Depth 2   
+$gwPool | ConvertTo-Json -Depth 2   
   
   
 ```  
-Step 2: Verify that the subnet to be used for routing packets out of Tenant’s Virtual Network exists in Network Controller; and retrieve the virtual subnet that is to be used for routing between the tenant gateway and virtual network.  
+Step 2: Verify that the subnet to be used for routing packets out of Tenant's Virtual Network exists in Network Controller; and retrieve the virtual subnet that is to be used for routing between the tenant gateway and virtual network.  
   
 ```  
-$uri = “https://ncrest.contoso.com”   
+$uri = "https://ncrest.contoso.com"   
   
 # Retrieve the Tenant Virtual Network configuration  
-$Vnet = Get-NetworkControllerVirtualNetwork –ConnectionUri $uri  -ResourceId “Contoso_Vnet1”   
+$Vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri  -ResourceId "Contoso_Vnet1"   
   
 # Display in JSON format  
-$Vnet | ConvertTo-Json –Depth 4   
+$Vnet | ConvertTo-Json -Depth 4   
   
 # Retrieve the Tenant Virtual Subnet configuration  
-$RoutingSubnet = Get-NetworkControllerVirtualSubnet –ConnectionUri $uri  -ResourceId “Contoso_WebTier”   
+$RoutingSubnet = Get-NetworkControllerVirtualSubnet -ConnectionUri $uri  -ResourceId "Contoso_WebTier"   
   
 # Display in JSON format  
-$RoutingSubnet | ConvertTo-Json –Depth 4   
+$RoutingSubnet | ConvertTo-Json -Depth 4   
   
 ```  
 Step 3: Create a virtual gateway JSON Object and add it to Network Controller.  
@@ -94,12 +94,12 @@ $VirtualGWProperties.GatewaySubnets = @()
 $VirtualGWProperties.GatewaySubnets += $RoutingSubnet   
   
 # Update the rest of the Virtual Gateway object properties  
-$VirtualGWProperties.RoutingType = “Dynamic”   
+$VirtualGWProperties.RoutingType = "Dynamic"   
 $VirtualGWProperties.NetworkConnections = @()   
 $VirtualGWProperties.BgpRouters = @()   
   
 # Add the new Virtual Gateway for tenant   
-$virtualGW = New-NetworkControllerVirtualGateway –ConnectionUri $uri  -ResourceId “Contoso_VirtualGW” –Properties $VirtualGWProperties –Force   
+$virtualGW = New-NetworkControllerVirtualGateway -ConnectionUri $uri  -ResourceId "Contoso_VirtualGW" -Properties $VirtualGWProperties -Force   
   
 ```  
   
@@ -116,17 +116,17 @@ Create a Network Connection JSON Object and add it to Network Controller.
 $nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
   
 # Update the common object properties  
-$nwConnectionProperties.ConnectionType = “IPSec”   
+$nwConnectionProperties.ConnectionType = "IPSec"   
 $nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
 $nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
   
 # Update specific properties depending on the Connection Type  
 $nwConnectionProperties.IpSecConfiguration = New-Object Microsoft.Windows.NetworkController.IpSecConfiguration   
-$nwConnectionProperties.IpSecConfiguration.AuthenticationMethod = “PSK”   
-$nwConnectionProperties.IpSecConfiguration.SharedSecret = “P@ssw0rd”   
+$nwConnectionProperties.IpSecConfiguration.AuthenticationMethod = "PSK"   
+$nwConnectionProperties.IpSecConfiguration.SharedSecret = "P@ssw0rd"   
   
 $nwConnectionProperties.IpSecConfiguration.QuickMode = New-Object Microsoft.Windows.NetworkController.QuickMode   
-$nwConnectionProperties.IpSecConfiguration.QuickMode.PerfectForwardSecrecy = “PFS2048”   
+$nwConnectionProperties.IpSecConfiguration.QuickMode.PerfectForwardSecrecy = "PFS2048"   
 $nwConnectionProperties.IpSecConfiguration.QuickMode.AuthenticationTransformationConstant = "SHA256128"   
 $nwConnectionProperties.IpSecConfiguration.QuickMode.CipherTransformationConstant = "DES3"   
 $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeSeconds = 1233   
@@ -134,9 +134,9 @@ $nwConnectionProperties.IpSecConfiguration.QuickMode.IdleDisconnectSeconds = 500
 $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2000   
   
 $nwConnectionProperties.IpSecConfiguration.MainMode = New-Object Microsoft.Windows.NetworkController.MainMode   
-$nwConnectionProperties.IpSecConfiguration.MainMode.DiffieHellmanGroup = “Group2”   
-$nwConnectionProperties.IpSecConfiguration.MainMode.IntegrityAlgorithm = “SHA256”   
-$nwConnectionProperties.IpSecConfiguration.MainMode.EncryptionAlgorithm = “AES256”   
+$nwConnectionProperties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Group2"   
+$nwConnectionProperties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"   
+$nwConnectionProperties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"   
 $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 1234   
 $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000   
   
@@ -155,7 +155,7 @@ $nwConnectionProperties.Routes += $ipv4Route
 $nwConnectionProperties.DestinationIPAddress = "10.127.134.121"   
   
 # Add the new Network Connection for the tenant  
-New-NetworkControllerVirtualGatewayNetworkConnection –ConnectionUri $uri –VirtualGatewayId $virtualGW.ResourceId –ResourceId “Contoso_IPSecGW” –Properties $nwConnectionProperties –Force   
+New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_IPSecGW" -Properties $nwConnectionProperties -Force   
   
   
 ```  
@@ -168,7 +168,7 @@ Create a Network Connection JSON Object and add it to Network Controller.
 $nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
   
 # Update the common object properties  
-$nwConnectionProperties.ConnectionType = “GRE”   
+$nwConnectionProperties.ConnectionType = "GRE"   
 $nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
 $nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
   
@@ -192,7 +192,7 @@ $nwConnectionProperties.IPAddresses = @()
 $nwConnectionProperties.PeerIPAddresses = @()   
   
 # Add the new Network Connection for the tenant  
-New-NetworkControllerVirtualGatewayNetworkConnection –ConnectionUri $uri –VirtualGatewayId $virtualGW.ResourceId –ResourceId “Contoso_GreGW” –Properties $nwConnectionProperties –Force   
+New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_GreGW" -Properties $nwConnectionProperties -Force   
   
 ```  
 ### L3 Forwarding Network Connection  
@@ -210,16 +210,16 @@ $lnProperties.Subnets = @()
   
 # Create a new object for the Logical Subnet to be used for L3 Forwarding and update properties  
 $logicalsubnet = New-Object Microsoft.Windows.NetworkController.LogicalSubnet  
-$logicalsubnet.ResourceId = “Contoso_L3_Subnet”  
+$logicalsubnet.ResourceId = "Contoso_L3_Subnet"  
 $logicalsubnet.Properties = New-Object Microsoft.Windows.NetworkController.LogicalSubnetProperties  
 $logicalsubnet.Properties.VlanID = 1001  
-$logicalsubnet.Properties.AddressPrefix = “10.127.134.0/25”  
-$logicalsubnet.Properties.DefaultGateway = “10.127.134.1”  
+$logicalsubnet.Properties.AddressPrefix = "10.127.134.0/25"  
+$logicalsubnet.Properties.DefaultGateway = "10.127.134.1"  
   
 $lnProperties.Subnets += $logicalsubnet  
   
 # Add the new Logical Network to Network Controller  
-$vlanNetwork = New-NetworkControllerLogicalNetwork –ConnectionUri $uri –ResourceId “Contoso_L3_Network” –Properties $lnProperties –Force  
+$vlanNetwork = New-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "Contoso_L3_Network" -Properties $lnProperties -Force  
   
 ```  
 Step 2: Create a Network Connection JSON Object and add it to Network Controller.  
@@ -229,7 +229,7 @@ Step 2: Create a Network Connection JSON Object and add it to Network Controller
 $nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
   
 # Update the common object properties  
-$nwConnectionProperties.ConnectionType = “L3”   
+$nwConnectionProperties.ConnectionType = "L3"   
 $nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
 $nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
   
@@ -242,11 +242,11 @@ $nwConnectionProperties.L3Configuration.VlanSubnet = $vlanNetwork.properties.Sub
   
 $nwConnectionProperties.IPAddresses = @()   
 $localIPAddress = New-Object Microsoft.Windows.NetworkController.CidrIPAddress   
-$localIPAddress.IPAddress = “10.127.134.55”   
+$localIPAddress.IPAddress = "10.127.134.55"   
 $localIPAddress.PrefixLength = 25   
 $nwConnectionProperties.IPAddresses += $localIPAddress   
   
-$nwConnectionProperties.PeerIPAddresses = @(“10.127.134.65”)   
+$nwConnectionProperties.PeerIPAddresses = @("10.127.134.65")   
   
 # Update the IPv4 Routes that are reachable over the site-to-site VPN Tunnel  
 $nwConnectionProperties.Routes = @()   
@@ -256,7 +256,7 @@ $ipv4Route.metric = 10
 $nwConnectionProperties.Routes += $ipv4Route   
   
 # Add the new Network Connection for the tenant  
-New-NetworkControllerVirtualGatewayNetworkConnection –ConnectionUri $uri –VirtualGatewayId $virtualGW.ResourceId –ResourceId “Contoso_L3GW” –Properties $nwConnectionProperties –Force   
+New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_L3GW" -Properties $nwConnectionProperties -Force   
   
 ```  
   
@@ -273,12 +273,12 @@ Create a BGP Router JSON Object and add it to Network Controller.
 $bgpRouterproperties = New-Object Microsoft.Windows.NetworkController.VGwBgpRouterProperties   
   
 # Update the BGP Router properties  
-$bgpRouterproperties.ExtAsNumber = “0.64512”   
-$bgpRouterproperties.RouterId = “192.168.0.2”   
-$bgpRouterproperties.RouterIP = @(“192.168.0.2”)   
+$bgpRouterproperties.ExtAsNumber = "0.64512"   
+$bgpRouterproperties.RouterId = "192.168.0.2"   
+$bgpRouterproperties.RouterIP = @("192.168.0.2")   
   
 # Add the new BGP Router for the tenant  
-$bgpRouter = New-NetworkControllerVirtualGatewayBgpRouter –ConnectionUri $uri –VirtualGatewayId $virtualGW.ResourceId –ResourceId “Contoso_BgpRouter1” –Properties $bgpRouterProperties –Force   
+$bgpRouter = New-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_BgpRouter1" -Properties $bgpRouterProperties -Force   
    
   
 ```  
@@ -291,12 +291,12 @@ Create a BGP Peer JSON Object and add it to Network Controller.
 $bgpPeerProperties = New-Object Microsoft.Windows.NetworkController.VGwBgpPeerProperties   
   
 # Update the BGP Peer properties  
-$bgpPeerProperties.PeerIpAddress = “14.1.10.1”   
+$bgpPeerProperties.PeerIpAddress = "14.1.10.1"   
 $bgpPeerProperties.AsNumber = 64521   
-$bgpPeerProperties.ExtAsNumber = “0.64521”   
+$bgpPeerProperties.ExtAsNumber = "0.64521"   
   
 # Add the new BGP Peer for tenant  
-New-NetworkControllerVirtualGatewayBgpPeer –ConnectionUri $uri –VirtualGatewayId $virtualGW.ResourceId –BgpRouterName $bgpRouter.ResourceId –ResourceId “Contoso_IPSec_Peer” –Properties $bgpPeerProperties –Force   
+New-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -BgpRouterName $bgpRouter.ResourceId -ResourceId "Contoso_IPSec_Peer" -Properties $bgpPeerProperties -Force   
   
 ```  
 ## <a name="bkmk_all3"></a>Configure a gateway with all three connection types (IPsec, GRE, L3) and BGP  
@@ -315,7 +315,7 @@ $VirtualGWProperties.GatewaySubnets = @()
 $VirtualGWProperties.GatewaySubnets += $RoutingSubnet  
   
 # Update some basic properties  
-$VirtualGWProperties.RoutingType = “Dynamic”  
+$VirtualGWProperties.RoutingType = "Dynamic"  
   
 # Update Network Connection object(s)  
 $VirtualGWProperties.NetworkConnections = @()  
@@ -324,18 +324,18 @@ $VirtualGWProperties.NetworkConnections = @()
 $ipSecConnection = New-Object Microsoft.Windows.NetworkController.NetworkConnection  
 $ipSecConnection.ResourceId = "Contoso_IPSecGW"  
 $ipSecConnection.Properties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties  
-$ipSecConnection.Properties.ConnectionType = “IPSec”  
+$ipSecConnection.Properties.ConnectionType = "IPSec"  
 $ipSecConnection.Properties.OutboundKiloBitsPerSecond = 10000  
 $ipSecConnection.Properties.InboundKiloBitsPerSecond = 10000  
   
 $ipSecConnection.Properties.IpSecConfiguration = New-Object Microsoft.Windows.NetworkController.IpSecConfiguration  
   
-$ipSecConnection.Properties.IpSecConfiguration.AuthenticationMethod = “PSK”  
-$ipSecConnection.Properties.IpSecConfiguration.SharedSecret = “P@ssw0rd”  
+$ipSecConnection.Properties.IpSecConfiguration.AuthenticationMethod = "PSK"  
+$ipSecConnection.Properties.IpSecConfiguration.SharedSecret = "P@ssw0rd"  
   
 $ipSecConnection.Properties.IpSecConfiguration.QuickMode = New-Object Microsoft.Windows.NetworkController.QuickMode  
   
-$ipSecConnection.Properties.IpSecConfiguration.QuickMode.PerfectForwardSecrecy = “PFS2048”  
+$ipSecConnection.Properties.IpSecConfiguration.QuickMode.PerfectForwardSecrecy = "PFS2048"  
 $ipSecConnection.Properties.IpSecConfiguration.QuickMode.AuthenticationTransformationConstant = "SHA256128"  
 $ipSecConnection.Properties.IpSecConfiguration.QuickMode.CipherTransformationConstant = "DES3"  
 $ipSecConnection.Properties.IpSecConfiguration.QuickMode.SALifeTimeSeconds = 1233  
@@ -344,9 +344,9 @@ $ipSecConnection.Properties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2
   
 $ipSecConnection.Properties.IpSecConfiguration.MainMode = New-Object Microsoft.Windows.NetworkController.MainMode  
   
-$ipSecConnection.Properties.IpSecConfiguration.MainMode.DiffieHellmanGroup = “Group2”  
-$ipSecConnection.Properties.IpSecConfiguration.MainMode.IntegrityAlgorithm = “SHA256”  
-$ipSecConnection.Properties.IpSecConfiguration.MainMode.EncryptionAlgorithm = “AES256”  
+$ipSecConnection.Properties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Group2"  
+$ipSecConnection.Properties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"  
+$ipSecConnection.Properties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"  
 $ipSecConnection.Properties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 1234  
 $ipSecConnection.Properties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000  
   
@@ -367,7 +367,7 @@ $greConnection = New-Object Microsoft.Windows.NetworkController.NetworkConnectio
 $greConnection.ResourceId = "Contoso_GreGW"  
   
 $greConnection.Properties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties  
-$greConnection.Properties.ConnectionType = “GRE”  
+$greConnection.Properties.ConnectionType = "GRE"  
 $greConnection.Properties.OutboundKiloBitsPerSecond = 10000  
 $greConnection.Properties.InboundKiloBitsPerSecond = 10000  
   
@@ -393,7 +393,7 @@ $l3Connection = New-Object Microsoft.Windows.NetworkController.NetworkConnection
 $l3Connection.ResourceId = "Contoso_L3GW"  
   
 $l3Connection.Properties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties  
-$l3Connection.Properties.ConnectionType = “L3”  
+$l3Connection.Properties.ConnectionType = "L3"  
 $l3Connection.Properties.OutboundKiloBitsPerSecond = 10000  
 $l3Connection.Properties.InboundKiloBitsPerSecond = 10000  
   
@@ -403,11 +403,11 @@ $l3Connection.Properties.L3Configuration.VlanSubnet = $vlanNetwork.properties.Su
   
 $l3Connection.Properties.IPAddresses = @()  
 $localIPAddress = New-Object Microsoft.Windows.NetworkController.CidrIPAddress  
-$localIPAddress.IPAddress = “10.127.134.55”  
+$localIPAddress.IPAddress = "10.127.134.55"  
 $localIPAddress.PrefixLength = 25  
 $l3Connection.Properties.IPAddresses += $localIPAddress  
   
-$l3Connection.Properties.PeerIPAddresses = @(“10.127.134.65”)  
+$l3Connection.Properties.PeerIPAddresses = @("10.127.134.65")  
   
 $l3Connection.Properties.Routes = @()  
 $ipv4Route = New-Object Microsoft.Windows.NetworkController.RouteInfo  
@@ -419,12 +419,12 @@ $l3Connection.Properties.Routes += $ipv4Route
 $VirtualGWProperties.BgpRouters = @()  
   
 $bgpRouter = New-Object Microsoft.Windows.NetworkController.VGwBgpRouter  
-$bgpRouter.ResourceId = “Contoso_BgpRouter1”  
+$bgpRouter.ResourceId = "Contoso_BgpRouter1"  
 $bgpRouter.Properties = New-Object Microsoft.Windows.NetworkController.VGwBgpRouterProperties  
   
-$bgpRouter.Properties.ExtAsNumber = “0.64512”  
-$bgpRouter.Properties.RouterId = “192.168.0.2”  
-$bgpRouter.Properties.RouterIP = @(“192.168.0.2”)  
+$bgpRouter.Properties.ExtAsNumber = "0.64512"  
+$bgpRouter.Properties.RouterId = "192.168.0.2"  
+$bgpRouter.Properties.RouterIP = @("192.168.0.2")  
   
 $bgpRouter.Properties.BgpPeers = @()  
   
@@ -434,9 +434,9 @@ $bgpPeer_IPSec = New-Object Microsoft.Windows.NetworkController.VGwBgpPeer
 $bgpPeer_IPSec.ResourceId = "Contoso_IPSec_Peer"  
   
 $bgpPeer_IPSec.Properties = New-Object Microsoft.Windows.NetworkController.VGwBgpPeerProperties  
-$bgpPeer_IPSec.Properties.PeerIpAddress = “14.1.10.1”  
+$bgpPeer_IPSec.Properties.PeerIpAddress = "14.1.10.1"  
 $bgpPeer_IPSec.Properties.AsNumber = 64521  
-$bgpPeer_IPSec.Properties.ExtAsNumber = “0.64521”  
+$bgpPeer_IPSec.Properties.ExtAsNumber = "0.64521"  
   
 $bgpRouter.Properties.BgpPeers += $bgpPeer_IPSec  
   
@@ -445,9 +445,9 @@ $bgpPeer_Gre = New-Object Microsoft.Windows.NetworkController.VGwBgpPeer
 $bgpPeer_Gre.ResourceId = "Contoso_Gre_Peer"  
   
 $bgpPeer_Gre.Properties = New-Object Microsoft.Windows.NetworkController.VGwBgpPeerProperties  
-$bgpPeer_Gre.Properties.PeerIpAddress = “14.2.20.1”  
+$bgpPeer_Gre.Properties.PeerIpAddress = "14.2.20.1"  
 $bgpPeer_Gre.Properties.AsNumber = 64522  
-$bgpPeer_Gre.Properties.ExtAsNumber = “0.64522”  
+$bgpPeer_Gre.Properties.ExtAsNumber = "0.64522"  
   
 $bgpRouter.Properties.BgpPeers += $bgpPeer_Gre  
   
@@ -456,16 +456,16 @@ $bgpPeer_L3 = New-Object Microsoft.Windows.NetworkController.VGwBgpPeer
 $bgpPeer_L3.ResourceId = "Contoso_L3_Peer"  
   
 $bgpPeer_L3.Properties = New-Object Microsoft.Windows.NetworkController.VGwBgpPeerProperties  
-$bgpPeer_L3.Properties.PeerIpAddress = “14.3.30.1”  
+$bgpPeer_L3.Properties.PeerIpAddress = "14.3.30.1"  
 $bgpPeer_L3.Properties.AsNumber = 64523  
-$bgpPeer_L3.Properties.ExtAsNumber = “0.64523”  
+$bgpPeer_L3.Properties.ExtAsNumber = "0.64523"  
   
 $bgpRouter.Properties.BgpPeers += $bgpPeer_L3  
   
 $VirtualGWProperties.BgpRouters += $bgpRouter  
   
 # Finally Add the new Virtual Gateway for tenant  
-New-NetworkControllerVirtualGateway –ConnectionUri $uri  -ResourceId “Contoso_VirtualGW” –Properties $VirtualGWProperties –Force  
+New-NetworkControllerVirtualGateway -ConnectionUri $uri  -ResourceId "Contoso_VirtualGW" -Properties $VirtualGWProperties -Force  
   
 ```  
 ## <a name="bkmk_modify"></a>Modify or remove a gateway for a Virtual Network  
@@ -478,7 +478,7 @@ You can use the following commands to modify an existing gateway.
 Step 1: Retrieve the configuration for the component and store it in a variable  
   
 ```  
-$nwConnection = Get-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW”  
+$nwConnection = Get-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW"  
 ```  
 Step 2: Navigate the variable structure to reach the required property and set it to the updates value  
   
@@ -488,14 +488,14 @@ $nwConnection.properties.IpSecConfiguration.SharedSecret = "C0mplexP@ssW0rd"
 Step 3: Add the modified configuration to replace the older configuration on Network Controller  
   
 ```  
-New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId $nwConnection.ResourceId -Properties $nwConnection.Properties –Force  
+New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId $nwConnection.ResourceId -Properties $nwConnection.Properties -Force  
 ```  
 ### Remove a gateway  
 You can use the following Windows PowerShell commands to remove either individual gateway features or the entire gateway.  
   
 #### Remove a network connection  
 ```  
-Remove-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW" –Force  
+Remove-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW" -Force  
 ```  
 #### Remove a BGP peer  
 ```  
@@ -503,7 +503,7 @@ Remove-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewa
 ```  
 #### Remove a BGP router  
 ```  
-Remove-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_BgpRouter1" –Force  
+Remove-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_BgpRouter1" -Force  
 ```  
 #### Remove a gateway  
 ```  

@@ -18,7 +18,11 @@ author: Femila
 <?xml version="1.0" encoding="utf-8"?>
 <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
   <introduction>
+<<<<<<< HEAD
+    <para>If a domain controller has not replicated with its partner for longer than a tombstone lifetime, it is possible that a lingering object problem exists on one or both domain controllers. The tombstone lifetime in an Active Directory forest determines how long a deleted object (called a "tombstone") is retained in Active Directory Domain Services (AD DS). The tombstone lifetime is determined by the value of the <system>tombstoneLifetime</system> attribute on the Directory Service object in the configuration directory partition. </para>
+=======
     <para>If a domain controller has not replicated with its partner for longer than a tombstone lifetime, it is possible that a lingering object problem exists on one or both domain controllers. The tombstone lifetime in an Active Directory forest determines how long a deleted object (called a �tombstone�) is retained in Active Directory Domain Services (AD DS). The tombstone lifetime is determined by the value of the <system>tombstoneLifetime</system> attribute on the Directory Service object in the configuration directory partition. </para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
     <para>When the condition that causes Event ID 2042 to be logged occurs, inbound replication with the source partner is stopped on the destination domain controller and Event ID 2042 is logged in the Directory Service event log. The event identifies the source domain controller and the appropriate steps to take to either remove the outdated domain controller or remove lingering objects and restore replication from the source domain controller.</para>
     <para>The following is an example of the event text: </para>
     <code>
@@ -81,7 +85,11 @@ exceeded the tombstone lifetime.</code>
       <para>There are a few potential causes for the logging of Event ID 2042, which include the following:</para>
       <list class="bullet">
         <listItem>
+<<<<<<< HEAD
+          <para> Windows Server 2003 pre-Service Pack 1 (SP1) domain controllers having a software issue that causes replication failures</para>
+=======
           <para> Windows Server 2003 pre�Service Pack 1 (SP1) domain controllers having a software issue that causes replication failures</para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
         </listItem>
         <listItem>
           <para>Replication failures that have existed longer than the configured tombstone lifetime value</para>
@@ -146,7 +154,11 @@ exceeded the tombstone lifetime.</code>
       <section>
         <title>Restart replication following Event ID 2042</title>
         <content>
+<<<<<<< HEAD
+          <para>The normal state of replication is one in which changes to objects and their attributes converge in a way that domain controllers receive the latest information. When a partner domain controller is discovered to be passing older changes, the changes from the partner are deemed to be "divergent." The partner is said to be engaged in "divergent replication." Domain controllers will normally stop replicating with any partner that is deemed to be engaged in divergent replication. </para>
+=======
           <para>The normal state of replication is one in which changes to objects and their attributes converge in a way that domain controllers receive the latest information. When a partner domain controller is discovered to be passing older changes, the changes from the partner are deemed to be �divergent.� The partner is said to be engaged in �divergent replication.� Domain controllers will normally stop replicating with any partner that is deemed to be engaged in divergent replication. </para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
           <para>After you remove all lingering objects, you can restart replication on the domain controller that logged the event by editing the registry.</para>
           <alert class="caution">
             <para>Restart replication only after you have removed all lingering objects. <token>Registrincludes></para>
@@ -199,7 +211,11 @@ exceeded the tombstone lifetime.</code>
                           <para>+allowDivergent</para>
                         </TD>
                         <TD>
+<<<<<<< HEAD
+                          <para>Enables replication to start again with the replication partner that had lingering objects. You should run this command only after all the lingering objects have been removed. After replication is running properly again, use the <system>-allowDivergent</system> switch to prevent divergent replication from occurring. </para>
+=======
                           <para>Enables replication to start again with the replication partner that had lingering objects. You should run this command only after all the lingering objects have been removed. After replication is running properly again, use the <system>�allowDivergent</system> switch to prevent divergent replication from occurring. </para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
                         </TD>
                       </tr>
                     </tbody>
@@ -216,7 +232,11 @@ exceeded the tombstone lifetime.</code>
       <section>
         <title>Reset the registry to protect against outdated replication</title>
         <content>
+<<<<<<< HEAD
+          <para>When you are satisfied that lingering objects have been removed and replication has occurred successfully from the source domain controller, use Repadmin to prevent divergent replication. To do prevent divergent replication, run the command <codeInline>repadmin /regkey &lt;hostname&gt; -allowDivergent</codeInline>. For example, to restrict divergent replication on a domain controller named DC1 in the Fabrikam.com domain, run the command <codeInline>repadmin /regkey dc1.fabrikam.com -allowDivergent</codeInline>.</para>
+=======
           <para>When you are satisfied that lingering objects have been removed and replication has occurred successfully from the source domain controller, use Repadmin to prevent divergent replication. To do prevent divergent replication, run the command <codeInline>repadmin /regkey &lt;hostname&gt; -allowDivergent</codeInline>. For example, to restrict divergent replication on a domain controller named DC1 in the Fabrikam.com domain, run the command <codeInline>repadmin /regkey dc1.fabrikam.com �allowDivergent</codeInline>.</para>
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
           <alert class="note">
             <para>If you did not remove all the lingering objects, attempting replication might result in replication of a lingering object. If strict replication consistency is enabled on the destination domain controller, replication with the source domain controller will be blocked again.</para>
           </alert>

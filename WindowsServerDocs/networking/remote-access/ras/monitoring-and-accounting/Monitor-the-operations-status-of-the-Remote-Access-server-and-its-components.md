@@ -28,7 +28,7 @@ The management console in the Remote Access server can be used to monitor its op
   
 2.  Click **DASHBOARD** to navigate to **Remote Access Reporting** in the **Remote Access Management Console**.  
   
-3.  On the monitoring dashboard, notice the **Operations Status** tile within the **Server Status** tile. This tile lists the server operations status and the status of all the server’s components.  
+3.  On the monitoring dashboard, notice the **Operations Status** tile within the **Server Status** tile. This tile lists the server operations status and the status of all the server's components.  
   
 4.  Click **Refresh** under **Tasks** in the right pane to reload the operations status. The operations status is automatically refreshed every five minutes, which is the default refresh interval. To change the default refresh interval, click **Configure Refresh Interval**.  
   
@@ -41,7 +41,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
   
 ```  
 PS> Get-RemoteAccessHealth  
-PS> Get-RemoteAccessHealth –Cluster  
+PS> Get-RemoteAccessHealth -Cluster  
 ```  
   
 

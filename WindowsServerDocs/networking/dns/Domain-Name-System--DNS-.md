@@ -25,7 +25,7 @@ Domain Name System (DNS) is one of the industry-standard suite of protocols that
 > -   [DNS Policy Scenario Guide](deploy/DNS-Policy-Scenario-Guide.md)  
 > -   Video: [Windows Server 2016: DNS management in IPAM](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)  
   
-In Windows Server® 2016 Technical Preview, DNS is a server role that you can install by using Server Manager or Windows PowerShell commands. If you are installing a new Active Directory forest and domain, DNS is automatically installed with Active Directory as the Global Catalogue server for the forest and domain.  
+In Windows Server 2016 Technical Preview, DNS is a server role that you can install by using Server Manager or Windows PowerShell commands. If you are installing a new Active Directory forest and domain, DNS is automatically installed with Active Directory as the Global Catalogue server for the forest and domain.  
   
 Active Directory Domain Services (AD DS) uses DNS as its domain controller location mechanism. When any of the principal Active Directory operations is performed, such as authentication, updating, or searching, computers use DNS to locate Active Directory domain controllers. In addition, domain controllers use DNS to locate each other.  
   

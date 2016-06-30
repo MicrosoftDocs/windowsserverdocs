@@ -35,7 +35,7 @@ You cannot use the Windows interface to install Remote Access when you want to d
   
 But before you can install RAS Gateway by using Windows PowerShell, you must use Windows PowerShell to add the **RemoteAccess** Windows feature. To do so, run the following command at the Windows PowerShell prompt.  
   
-`Add-WindowsFeature –Name RemoteAccess –IncludeAllSubFeature –IncludeManagementTools`  
+`Add-WindowsFeature -Name RemoteAccess -IncludeAllSubFeature -IncludeManagementTools`  
   
 This command adds the **RemoteAccess** feature and the Windows PowerShell commands for the feature.  
   

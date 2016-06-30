@@ -48,7 +48,7 @@ To configure Remote Access to use two-factor authentication and OTP with the RAD
   
 1.  Open **Remote Access Management** and click **Configuration**.  
   
-2.  In the **DirectAccess Setup** window, under **Step 2 – Remote Access Server**, click **Edit**.  
+2.  In the **DirectAccess Setup** window, under **Step 2 - Remote Access Server**, click **Edit**.  
   
 3.  Click **Next** three times, and in the **Authentication** section select both **Two factor authentication** and **Use OTP**, and ensure that **Use computer certificates** is checked.  
   
@@ -79,7 +79,7 @@ To configure Remote Access to use two-factor authentication and OTP with the RAD
   
 11. On the **Remote Access Server Setup** page click **Finish**.  
   
-12. In the **DirectAccess Setup** window, under **Step 3 – Infrastructure Servers**, click **Edit**.  
+12. In the **DirectAccess Setup** window, under **Step 3 - Infrastructure Servers**, click **Edit**.  
   
 13. Click **Next** two times, and in the **Management** section double-click the **Management Servers** field.  
   
@@ -143,7 +143,7 @@ To allow temporary access for users with smart cards that are unusable, do the f
 To grant access to a user that cannot use their smart card, temporarily add their user account to the Active Directory security group. Remove the user account from the group when the smart card is usable.  
   
 ### Under the covers: Smart card authorization  
-Smart card authorization works by enabling tunnel mode authorization on the intranet tunnel connection security rule of the DirectAccess server for a specific Kerberos-based security identifier (SID). For smart card authorization, this is the well-known SID (S-1-5-65-1), which maps to smart card-based logons. This SID is present in a DirectAccess client’s Kerberos token and is referred to as “This Organization Certificate” when configured in the global IPsec tunnel mode authorization settings.  
+Smart card authorization works by enabling tunnel mode authorization on the intranet tunnel connection security rule of the DirectAccess server for a specific Kerberos-based security identifier (SID). For smart card authorization, this is the well-known SID (S-1-5-65-1), which maps to smart card-based logons. This SID is present in a DirectAccess client's Kerberos token and is referred to as "This Organization Certificate" when configured in the global IPsec tunnel mode authorization settings.  
   
 When you enable smart card authorization in Step 2 of the DirectAccess Setup Wizard, the DirectAccess Setup Wizard configures the global IPsec tunnel mode authorization setting with this SID for the DirectAccess server Group Policy Object. To view this configuration in the Windows Firewall with Advanced Security snap-in for the DirectAccess server Group Policy Object, do the following:  
   
@@ -151,7 +151,7 @@ When you enable smart card authorization in Step 2 of the DirectAccess Setup Wiz
   
 2.  On the IPsec Settings tab, in IPsec tunnel authorization, click Customize.  
   
-3.  Click the Users tab. You should see the “NT AUTHORITY\This Organization Certificate” as an authorized user.  
+3.  Click the Users tab. You should see the "NT AUTHORITY\This Organization Certificate" as an authorized user.  
   
 
 

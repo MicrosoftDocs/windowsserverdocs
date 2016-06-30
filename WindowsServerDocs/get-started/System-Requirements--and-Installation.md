@@ -15,7 +15,7 @@ author: jaimeo
 
 >Applies To: Windows Server Technical Preview
 
-This topic addresses the information you need to install Windows Server® 2016 Technical Preview. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 Technical Preview deployment.  
+This topic addresses the information you need to install Windows Server&reg; 2016 Technical Preview. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 Technical Preview deployment.  
   
 -   **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. Clean installation is the only supported option for this release  
   
@@ -117,7 +117,7 @@ The following items are not strictly required, but are necessary for certain fea
   
 -   Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution  
   
--   Keyboard and Microsoft® mouse (or other compatible pointing device)  
+-   Keyboard and Microsoft&reg; mouse (or other compatible pointing device)  
   
 -   Internet access (fees may apply)  
   

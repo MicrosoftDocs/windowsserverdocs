@@ -23,7 +23,11 @@ Domain Name System (DNS) is a distributed database that represents a namespace. 
   
 -   If the server cannot answer the query from its cache or zones, it queries other servers for the answer.  
   
+<<<<<<< HEAD
+It is important to understand the core features of DNS, such as delegation, recursive name resolution, and Active Directory-integrated DNS zones, because they have a direct impact on your Active Directory logical structure design.  
+=======
 It is important to understand the core features of DNS, such as delegation, recursive name resolution, and Active Directory�integrated DNS zones, because they have a direct impact on your Active Directory logical structure design.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 For more information about DNS and Active Directory Domain Services (AD DS), see [DNS and AD DS](../../ad-ds/plan/DNS-and-AD-DS.md).  
   

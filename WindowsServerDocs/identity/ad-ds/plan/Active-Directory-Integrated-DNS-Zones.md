@@ -17,11 +17,19 @@ author: Femila
 
 Domain Name System (DNS) servers running on domain controllers can store their zones in Active Directory Domain Services (AD DS). In this way, it is not necessary to configure a separate DNS replication topology that uses ordinary DNS zone transfers because all zone data is replicated automatically by means of Active Directory replication. This simplifies the process of deploying DNS and provides the following advantages:  
   
+<<<<<<< HEAD
+-   Multiple masters are created for DNS replication. Therefore, any domain controller in the domain running the DNS Server service can write updates to the Active Directory-integrated DNS zones for the domain name for which they are authoritative. A separate DNS zone transfer topology is not needed.  
+  
+-   Secure dynamic updates are supported. Secure dynamic updates allow an administrator to control what computers update what names and prevent unauthorized computers from overwriting existing names in DNS.  
+  
+Active Directory-integrated DNS in  Windows Server 2008  stores zone data in application directory partitions. (There are no behavioral changes from Windows Server 2003-based DNS integration with Active Directory.) The following DNS-specific application directory partitions are created during AD DS installation:  
+=======
 -   Multiple masters are created for DNS replication. Therefore, any domain controller in the domain running the DNS Server service can write updates to the Active Directory�integrated DNS zones for the domain name for which they are authoritative. A separate DNS zone transfer topology is not needed.  
   
 -   Secure dynamic updates are supported. Secure dynamic updates allow an administrator to control what computers update what names and prevent unauthorized computers from overwriting existing names in DNS.  
   
 Active Directory�integrated DNS in  Windows Server 2008  stores zone data in application directory partitions. (There are no behavioral changes from Windows Server 2003�based DNS integration with Active Directory.) The following DNS-specific application directory partitions are created during AD DS installation:  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   A forest-wide application directory partition, called ForestDnsZones  
   

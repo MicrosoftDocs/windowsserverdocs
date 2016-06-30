@@ -32,13 +32,21 @@ author: femila
 > This topic explains only how the Windows Time service (W32Time) works. For information about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
   
 > [!NOTE]  
+<<<<<<< HEAD
+> In Windows Server 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory directory service. In  Windows Server 2008  and later versions, the directory service is named Active Directory Domain Services (AD DS). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  
+=======
 > In Windows Server� 2003 and Microsoft Windows 2000 Server, the directory service is named Active Directory� directory service. In  Windows Server 2008  and later versions, the directory service is named Active Directory Domain Services (AD DS). The rest of this topic refers to AD DS, but the information is also applicable to Active Directory.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 Although the Windows Time service is not an exact implementation of the Network Time Protocol (NTP), it uses the complex suite of algorithms that is defined in the NTP specifications to ensure that clocks on computers throughout a network are as accurate as possible. Ideally, all computer clocks in an AD DS domain are synchronized with the time of an authoritative computer. Many factors can affect time synchronization on a network. The following factors often affect the accuracy of synchronization in AD DS:  
   
 -   Network conditions  
   
+<<<<<<< HEAD
+-   The accuracy of the computer's hardware clock  
+=======
 -   The accuracy of the computer�s hardware clock  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   The amount of CPU and network resources available to the Windows Time service  
   
@@ -47,11 +55,19 @@ Although the Windows Time service is not an exact implementation of the Network 
   
 Computers that synchronize their time less frequently, such as computers running Windows XP Home Edition, computers with intermittent network connections, or computers that are not joined to a domain, are configured by default to synchronize with time.windows.com. Because they do not synchronize their clock frequently and because the factors that affect time accuracy may not be known, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.  
   
+<<<<<<< HEAD
+An AD DS forest has a predetermined time synchronization hierarchy. The Windows Time service synchronizes time between computers within the hierarchy, with the most accurate reference clocks at the top. If more than one time source is configured on a computer, Windows Time uses NTP algorithms to select the best time source from the configured sources based on the computer's ability to synchronize with that time source. The Windows Time service does not support network synchronization from broadcast or multicast peers. For more information about these NTP features, see RFC 1305 in the IETF RFC Database.  
+  
+Every computer that is running the Windows Time service uses the service to maintain the most accurate time. In most cases, it is not necessary to configure the Windows Time service. Computers that are members of a domain act as a time client by default. In addition, the Windows Time service can be configured to request time from a designated reference time source, and can also be configured to provide time to clients.  
+  
+The degree to which a computer's time is accurate is called a stratum. The most accurate time source on a network (such as a hardware clock) occupies the lowest stratum level, or stratum one. This accurate time source is called a reference clock. An NTP server that acquires its time directly from a reference clock occupies a stratum that is one level higher than that of the reference clock. Resources that acquire time from the NTP server are two steps away from the reference clock, and therefore occupy a stratum that is two higher than the most accurate time source, and so on. As a computer's stratum number increases, the time on its system clock may become less accurate. Therefore, the stratum level of any computer is an indicator of how closely that computer is synchronized with the most accurate time source.  
+=======
 An AD DS forest has a predetermined time synchronization hierarchy. The Windows Time service synchronizes time between computers within the hierarchy, with the most accurate reference clocks at the top. If more than one time source is configured on a computer, Windows Time uses NTP algorithms to select the best time source from the configured sources based on the computer�s ability to synchronize with that time source. The Windows Time service does not support network synchronization from broadcast or multicast peers. For more information about these NTP features, see RFC 1305 in the IETF RFC Database.  
   
 Every computer that is running the Windows Time service uses the service to maintain the most accurate time. In most cases, it is not necessary to configure the Windows Time service. Computers that are members of a domain act as a time client by default. In addition, the Windows Time service can be configured to request time from a designated reference time source, and can also be configured to provide time to clients.  
   
 The degree to which a computer�s time is accurate is called a stratum. The most accurate time source on a network (such as a hardware clock) occupies the lowest stratum level, or stratum one. This accurate time source is called a reference clock. An NTP server that acquires its time directly from a reference clock occupies a stratum that is one level higher than that of the reference clock. Resources that acquire time from the NTP server are two steps away from the reference clock, and therefore occupy a stratum that is two higher than the most accurate time source, and so on. As a computer�s stratum number increases, the time on its system clock may become less accurate. Therefore, the stratum level of any computer is an indicator of how closely that computer is synchronized with the most accurate time source.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 When the W32Time Manager receives time samples, it uses special algorithms in NTP to determine which of the time samples is the most appropriate for use. The time service also uses another set of algorithms to determine which of the configured time sources is the most accurate. When the time service has determined which time sample is best, based on the above criteria, it adjusts the local clock rate to allow it to converge toward the correct time. If the time difference between the local clock and the selected accurate time sample (also called the time skew) is too large to correct by adjusting the local clock rate, the time service sets the local clock to the correct time. This adjustment of clock rate or direct clock time change is known as clock discipline.  
   
@@ -87,7 +103,11 @@ The time synchronization process involves the following steps:
 If a computer has been designated as a time server, it can send the time on to any computer requesting time synchronization at any point in this process.  
   
 ## <a name="w2k3tr_times_how_ekoc"></a>Windows Time Service Time Protocols  
+<<<<<<< HEAD
+Time protocols determine how closely two computers' clocks are synchronized. A time protocol is responsible for determining the best available time information and converging the clocks to ensure that a consistent time is maintained on separate systems.  
+=======
 Time protocols determine how closely two computers� clocks are synchronized. A time protocol is responsible for determining the best available time information and converging the clocks to ensure that a consistent time is maintained on separate systems.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 The Windows Time service uses the Network Time Protocol (NTP) to help synchronize time across a network. NTP is an Internet time protocol that includes the discipline algorithms necessary for synchronizing clocks. NTP is a more accurate time protocol than the Simple Network Time Protocol (SNTP) that is used in some versions of Windows; however W32Time continues to support SNTP to enable backward compatibility with computers running SNTP-based time services, such as Windows 2000.  
   
@@ -115,7 +135,11 @@ The NTP provider is the standard time provider included with the operating syste
 Although the actual operations of these two providers are closely related, they appear independent to the time service. Starting with Windows 2000 Server, when a Windows computer is connected to a network, it is configured as an NTP client. Also, computers running the Windows Time service only attempt to synchronize time with a domain controller or a manually specified time source by default. These are the preferred time providers because they are automatically available, secure sources of time.  
   
 #### NTP Security  
+<<<<<<< HEAD
+Within an AD DS forest, the Windows Time service relies on standard domain security features to enforce the authentication of time data. The security of NTP packets that are sent between a domain member computer and a local domain controller that is acting as a time server is based on shared key authentication. The Windows Time service uses the computer's Kerberos session key to create authenticated signatures on NTP packets that are sent across the network. NTP packets are not transmitted inside the Net Logon secure channel. Instead, when a computer requests the time from a domain controller in the domain hierarchy, the Windows Time service requires that the time be authenticated. The domain controller then returns the required information in the form of a 64-bit value that has been authenticated with the session key from the Net Logon service. If the returned NTP packet is not signed with the computer's session key or is signed incorrectly, the time is rejected. All such authentication failures are logged in the Event Log. In this way, the Windows Time service provides security for NTP data in an AD DS forest.  
+=======
 Within an AD DS forest, the Windows Time service relies on standard domain security features to enforce the authentication of time data. The security of NTP packets that are sent between a domain member computer and a local domain controller that is acting as a time server is based on shared key authentication. The Windows Time service uses the computer�s Kerberos session key to create authenticated signatures on NTP packets that are sent across the network. NTP packets are not transmitted inside the Net Logon secure channel. Instead, when a computer requests the time from a domain controller in the domain hierarchy, the Windows Time service requires that the time be authenticated. The domain controller then returns the required information in the form of a 64-bit value that has been authenticated with the session key from the Net Logon service. If the returned NTP packet is not signed with the computer�s session key or is signed incorrectly, the time is rejected. All such authentication failures are logged in the Event Log. In this way, the Windows Time service provides security for NTP data in an AD DS forest.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 Generally, Windows time clients automatically obtain accurate time for synchronization from domain controllers in the same domain. In a forest, the domain controllers of a child domain synchronize time with domain controllers in their parent domains. When a time server returns an authenticated NTP packet to a client that requests the time, the packet is signed by means of a Kerberos session key defined by an interdomain trust account. The interdomain trust account is created when a new AD DS domain joins a forest, and the Net Logon service manages the session key. In this way, the domain controller that is configured as reliable in the forest root domain becomes the authenticated time source for all of the domain controllers in both the parent and child domains, and indirectly for all computers located in the domain tree.  
   
@@ -136,12 +160,20 @@ The Windows Time service can operate in a mixed environment of computers running
   
 The time service in Windows NT Server 4.0, called TimeServ, synchronizes time across a Windows NT 4.0 network. TimeServ is an add-on feature available as part of the *Microsoft Windows NT 4.0 Resource Kit* and does not provide the degree of reliability of time synchronization that is required by Windows Server 2003.  
   
+<<<<<<< HEAD
+The Windows Time service can interoperate with computers running Windows NT 4.0 because they can synchronize time with computers running Windows 2000 or Windows Server 2003; however, a computer running Windows 2000 or Windows Server 2003 does not automatically discover Windows NT 4.0 time servers. For example, if your domain is configured to synchronize time by using the domain hierarchy-based method of synchronization and you want computers in the domain hierarchy to synchronize time with a Windows NT 4.0 domain controller, you have to configure those computers manually to synchronize with the Windows NT 4.0 domain controllers.  
+=======
 The Windows Time service can interoperate with computers running Windows NT 4.0 because they can synchronize time with computers running Windows 2000 or Windows Server 2003; however, a computer running Windows 2000 or Windows Server 2003 does not automatically discover Windows NT 4.0 time servers. For example, if your domain is configured to synchronize time by using the domain hierarchy�based method of synchronization and you want computers in the domain hierarchy to synchronize time with a Windows NT 4.0 domain controller, you have to configure those computers manually to synchronize with the Windows NT 4.0 domain controllers.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 Windows NT 4.0 uses a simpler mechanism for time synchronization than the Windows Time service uses. Therefore, to ensure accurate time synchronization across your network, it is recommended that you upgrade any Windows NT 4.0 domain controllers to Windows 2000 or Windows Server 2003.  
   
 ## <a name="w2k3tr_times_how_izcr"></a>Windows Time Service Processes and Interactions  
+<<<<<<< HEAD
+The Windows Time service is designed to synchronize the clocks of computers on a network. The network time synchronization process, also called time convergence, occurs throughout a network as each computer accesses time from a more accurate time server. Time convergence involves a process by which an authoritative server provides the current time to client computers in the form of NTP packets. The information provided within a packet indicates whether an adjustment needs to be made to the computer's current clock time so that it is synchronized with the more accurate server.  
+=======
 The Windows Time service is designed to synchronize the clocks of computers on a network. The network time synchronization process, also called time convergence, occurs throughout a network as each computer accesses time from a more accurate time server. Time convergence involves a process by which an authoritative server provides the current time to client computers in the form of NTP packets. The information provided within a packet indicates whether an adjustment needs to be made to the computer�s current clock time so that it is synchronized with the more accurate server.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 As part of the time convergence process, domain members attempt to synchronize time with any domain controller located in the same domain. If the computer is a domain controller, it attempts to synchronize with a more authoritative domain controller.  
   
@@ -161,7 +193,11 @@ After you have established a Windows Server 2003 network, you can configure the 
   
 Each of these synchronization types is discussed in the following section.  
   
+<<<<<<< HEAD
+### Domain Hierarchy-Based Synchronization  
+=======
 ### Domain Hierarchy�Based Synchronization  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 Synchronization that is based on a domain hierarchy uses the AD DS domain hierarchy to find a reliable source with which to synchronize time. Based on domain hierarchy, the Windows Time service determines the accuracy of each time server. In a Windows Server 2003 forest, the computer that holds the primary domain controller (PDC) emulator operations master role, located in the forest root domain, holds the position of best time source, unless another reliable time source has been configured. The following figure illustrates a path of time synchronization between computers in a domain hierarchy.  
   
 **Time Synchronization in an AD DS Hierarchy**  
@@ -178,7 +214,11 @@ The time source selection process can create two problems on a network:
   
 -   Increased volume in network traffic.  
   
+<<<<<<< HEAD
+A cycle in the synchronization network occurs when time remains consistent between a group of domain controllers and the same time is shared between them continuously without a resynchronization with another reliable time source. The Windows Time service's time source selection algorithm is designed to protect against these types of problems.  
+=======
 A cycle in the synchronization network occurs when time remains consistent between a group of domain controllers and the same time is shared between them continuously without a resynchronization with another reliable time source. The Windows Time service�s time source selection algorithm is designed to protect against these types of problems.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 A computer uses one of the following methods to identify a time source to synchronize with:  
   
@@ -232,7 +272,11 @@ Manually-specified synchronization enables you to designate a single peer or lis
 Manually-specified time sources are not authenticated unless a specific time provider is written for them, and they are therefore vulnerable to attackers. Also, if a computer synchronizes with a manually-specified source rather than its authenticating domain controller, the two computers might be out of synchronization, causing Kerberos authentication to fail. This might cause other actions requiring network authentication to fail, such as printing or file sharing. If only the forest root is configured to synchronize with an external source, all other computers within the forest remain synchronized with each other, making replay attacks difficult.  
   
 ### All Available Synchronization Mechanisms  
+<<<<<<< HEAD
+The "all available synchronization mechanisms" option is the most valuable synchronization method for users on a network. This method allows synchronization with the domain hierarchy and may also provide an alternate time source if the domain hierarchy becomes unavailable, depending on the configuration. If the client is unable to synchronize time with the domain hierarchy, the time source automatically falls back to the time source specified by the **NtpServer** setting. This method of synchronization is most likely to provide accurate time to clients.  
+=======
 The �all available synchronization mechanisms� option is the most valuable synchronization method for users on a network. This method allows synchronization with the domain hierarchy and may also provide an alternate time source if the domain hierarchy becomes unavailable, depending on the configuration. If the client is unable to synchronize time with the domain hierarchy, the time source automatically falls back to the time source specified by the **NtpServer** setting. This method of synchronization is most likely to provide accurate time to clients.  
+>>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 ### Stopping Time Synchronization  
 There are certain situations in which you will want to stop a computer from synchronizing its time. For example, if a computer attempts to synchronize from a time source on the Internet or from another site over a WAN by means of a dial-up connection, it can incur costly telephone charges. When you disable synchronization on that computer, you prevent the computer from attempting to access a time source over a dial-up connection.  
