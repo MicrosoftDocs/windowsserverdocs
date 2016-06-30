@@ -1,4 +1,4 @@
-# WndowsServerDocs-pr
+# WindowsServerDocs-pr
 Windows Server Documentation Repository (private)
 
 Testing.
