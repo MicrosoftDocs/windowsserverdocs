@@ -29,11 +29,11 @@ The following feature distribution map indicates the features that are present i
 |**Feature**|**Windows Server operating system version**|**8.0-8.4 (jessie)**|**7.0-7.10 (wheezy)**|  
 |-|-|-|-|  
 |**Availability**||Built in|Built in (Note 6)|  
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|v|v|  
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|  
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|  
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|v|v|  
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|v|v|  
-|Live Migration|2016, 2012 R2, 2012, 2008 R2|v|v|  
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|  
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|  
+|Live Migration|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|  
 |Static IP Injection|2016, 2012 R2, 2012|||  
 |vRSS|2016, 2012 R2|||  
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|||  
@@ -44,16 +44,16 @@ The following feature distribution map indicates the features that are present i
 |TRIM support|2016, 2012 R2|||  
 |SCSI WWN|2016, 2012 R2|||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
-|Configuration of MMIO gap|2016, 2012 R2|v|v|  
+|Configuration of MMIO gap|2016, 2012 R2|**√**|**√**|  
 |Dynamic Memory - Hot Add|2016, 2012 R2, 2012|||  
 |Dynamic Memory - Ballooning|2016, 2012 R2, 2012|||  
 |Manual Memory Hot Add|2016|||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
-|Hyper-V-specific  video device|2016, 2012 R2, 2012, 2008 R2|v||  
+|Hyper-V-specific  video device|2016, 2012 R2, 2012, 2008 R2|**√**||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|  
 |Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|v Note 4||  
-|Non-Maskable Interrupt|2016, 2012 R2|v|v|  
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|v|v|  
+|Non-Maskable Interrupt|2016, 2012 R2|**√**|**√**|  
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|  
 |File copy from host to guest|2016, 2012 R2|v Note 4||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||  
 |Hyper-V Sockets|2016|||  

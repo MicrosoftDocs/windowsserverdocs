@@ -61,7 +61,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 |Hyper-V Sockets|2016|||||||  
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||  
 |Boot using UEFI|2016, 2012 R2|**v** Note 9|**v** Note 9|**v** Note 9||||  
-|Secure boot|2016, 2012 R2|v|v|||||  
+|Secure boot|2016, 2012 R2|**√**|**√**|||||  
   
 ## <a name="BKMK_notes"></a>Notes  
   
