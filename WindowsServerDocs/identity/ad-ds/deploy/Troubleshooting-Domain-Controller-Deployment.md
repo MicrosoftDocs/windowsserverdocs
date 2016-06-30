@@ -352,23 +352,12 @@ The following are common issues seen during the Windows Server 2012 development 
 |Symptoms|If you promote a domain controller using Server Manager and save the Windows PowerShell deployment script, the file is named with a random temporary name and not as a PS1 file.|  
 |Resolution and Notes|Manually rename the file. This behavior is expected and by design.|  
   
-|||  
-|-|-|  
 |Issue|Dcpromo /unattend allows unsupported functional levels|  
+|-|-|  
 |Symptoms|If you promote a domain controller using dcpromo /unattend with the following sample answer file:<br /><br />Code -<br /><br />[DCInstall]<br />NewDomain=Forest<br /><br />ReplicaOrNewDomain=Domain<br /><br />NewDomainDNSName=corp.contoso.com<br /><br />SafeModeAdminPassword=Safepassword@6<br /><br />DomainNetbiosName=corp<br /><br />DNSOnNetwork=Yes<br /><br />AutoConfigDNS=Yes<br /><br />RebootOnSuccess=NoAndNoPromptEither<br /><br />RebootOnCompletion=No<br /><br />*DomainLevel=0*<br /><br />*ForestLevel=0*<br /><br />Promotion fails with the following errors in the dcpromoui.log:<br /><br />Code - dcpromoui EA4.5B8 0089 13:31:50.783       Enter CArgumentsSpec::ValidateArgument DomainLevel<br /><br />dcpromoui EA4.5B8 008A 13:31:50.783         Value for DomainLevel is 0<br /><br />dcpromoui EA4.5B8 008B 13:31:50.783   Exit code is 77<br /><br />dcpromoui EA4.5B8 008C 13:31:50.783   The specified argument is invalid.<br /><br />dcpromoui EA4.5B8 008D 13:31:50.783 closing log<br /><br />dcpromoui EA4.5B8 0032 13:31:50.830   Exit code is 77<br /><br />Level 0 is Windows 2000, which is not supported in Windows Server 2012.|  
 |Resolution and Notes|Do not use the deprecated dcpromo /unattend and understand that it allows you to specify invalid settings that later fail. This behavior is expected and by design.|  
-  
-|||  
-|-|-|  
-<<<<<<< HEAD
+
 |Issue|Promotion "hangs" at creating NTDS settings object, never completes|  
+|-|-|  
 |Symptoms|If you promote a replica DC or RODC, the promotion reaches "creating NTDS settings object" and never proceeds or completes. The logs stop updating as well.|  
 |Resolution and Notes|This is a known issue caused by providing credentials of the built-in local Administrator account with a matching password to the built-in domain Administrator account. This causes a failure down in the core setup engine that does not error, but instead waits indefinitely (quasi-loop). This is expected - albeit undesirable - behavior.<br /><br />To fix the server:<br /><br />1.  Reboot it.<br /><br />1.  In AD, delete that server's member computer account (it will not yet be a DC account)<br /><br />1.  On that server, forcibly disjoin it from the domain<br /><br />1.  On that server, remove the AD DS role.<br /><br />1.  Reboot<br /><br />1.  Re-add the AD DS role and reattempt promotion, ensuring that you always provide the ***domain\admin*** formatted credentials to DC promotion and not just the built-in local administrator account|  
-=======
-|Issue|Promotion �hangs� at creating NTDS settings object, never completes|  
-|Symptoms|If you promote a replica DC or RODC, the promotion reaches �creating NTDS settings object� and never proceeds or completes. The logs stop updating as well.|  
-|Resolution and Notes|This is a known issue caused by providing credentials of the built-in local Administrator account with a matching password to the built-in domain Administrator account. This causes a failure down in the core setup engine that does not error, but instead waits indefinitely (quasi-loop). This is expected � albeit undesirable � behavior.<br /><br />To fix the server:<br /><br />1.  Reboot it.<br /><br />1.  In AD, delete that server�s member computer account (it will not yet be a DC account)<br /><br />1.  On that server, forcibly disjoin it from the domain<br /><br />1.  On that server, remove the AD DS role.<br /><br />1.  Reboot<br /><br />1.  Re-add the AD DS role and reattempt promotion, ensuring that you always provide the ***domain\admin*** formatted credentials to DC promotion and not just the built-in local administrator account|  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
-  
-
-
