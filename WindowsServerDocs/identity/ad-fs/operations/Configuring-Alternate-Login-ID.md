@@ -1,4 +1,4 @@
----
+﻿---
 title: Configuring Alternate Login ID
 ms.custom: 
   - AD
@@ -110,7 +110,6 @@ The following performance counters have been added to measure the performance of
 -   Average Search Latency for Alternate Login ID: average search latency across the forests that an administrator has configured for alternate login ID
 
 The following are various error cases and corresponding impact on a user’s sign-in experience with events logged by AD FS:
-
 
 
 **Error Cases**|**Impact on Sign-in Experience**|**Event**|
