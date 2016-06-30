@@ -1,4 +1,4 @@
----
+﻿---
 title: Event ID 1388 or 1988: A lingering object is detected
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -565,11 +565,7 @@ objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=&lt;ForestRootDomain&
             <content>
               <para>At the command prompt, type the following command, and then press ENTER: </para>
               <para>
-<<<<<<< HEAD
                 <codeInline>ldifde -i -f &lt;Path&gt;&lt;FileName&gt;</codeInline>
-=======
-                <codeInline>ldifde -i �f &lt;Path&gt;&lt;FileName&gt;</codeInline>
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
               </para>
               <table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11">
                 <thead>

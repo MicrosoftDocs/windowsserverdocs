@@ -1,4 +1,4 @@
----
+﻿---
 title: Verify DNS Functionality to Support Directory Replication
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -81,20 +81,12 @@ author: Femila
           </step>
           <step>
             <content>
-<<<<<<< HEAD
               <para>Note the names of all the domain controllers that report "Warn" or "Fail" status in the Summary table.</para>
-=======
-              <para>Note the names of all the domain controllers that report �Warn� or �Fail� status in the Summary table.</para>
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
             </content>
           </step>
           <step>
             <content>
-<<<<<<< HEAD
               <para>Try to determine if there is a problem domain controller by finding the detailed breakout section by searching for the string "DC: <placeholder>DCName</placeholder>," where <placeholder>DCName</placeholder> is the actual name of the domain controller.</para>
-=======
-              <para>Try to determine if there is a problem domain controller by finding the detailed breakout section by searching for the string �DC: <placeholder>DCName</placeholder>,� where <placeholder>DCName</placeholder> is the actual name of the domain controller.</para>
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
             </content>
           </step>
           <step>
@@ -220,11 +212,7 @@ author: Femila
           </step>
           <step>
             <content>
-<<<<<<< HEAD
               <para>On the <ui>General</ui> tab, verify that the zone type is <ui>Active Directory-integrated</ui>.</para>
-=======
-              <para>On the <ui>General</ui> tab, verify that the zone type is <ui>Active Directory�integrated</ui>.</para>
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
             </content>
           </step>
           <step>
