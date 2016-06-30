@@ -187,7 +187,6 @@ The IISAdministration module of Windows PowerShell allows you to easily add or r
     $section = Get-IISConfigSection "system.webServer/security/authentication/windowsAuthentication"  
 
     Set-IISConfigAttributeValue -ConfigElement $section -AttributeName "enabled" -AttributeValue $false  
-<<<<<<< HEAD
   
     Set-IISConfigAttributeValue -ConfigElement $section -AttributeName "authPersistNonNTLM" -AttributeValue $true  
   
@@ -195,15 +194,6 @@ The IISAdministration module of Windows PowerShell allows you to easily add or r
   
     New-IISConfigCollectionElement -ConfigCollection $collection -ConfigAttribute @{"value"="Negotiate"}  
   
-=======
-
-    Set-IISConfigAttributeValue -ConfigElement $section �AttributeName "authPersistNonNTLM" -AttributeValue $true  
-
-    $collection = Get-IISConfigElement -ConfigElement $section �ChildElementName "providers" | Get-IISConfigCollection  
-
-    New-IISConfigCollectionElement -ConfigCollection $collection �ConfigAttribute @{"value"="Negotiate"}  
-
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
     New-IISConfigCollectionElement -ConfigCollection $collection -ConfigAttribute @{"value"="NTLM"}   
 
     # commit the changes to disk   

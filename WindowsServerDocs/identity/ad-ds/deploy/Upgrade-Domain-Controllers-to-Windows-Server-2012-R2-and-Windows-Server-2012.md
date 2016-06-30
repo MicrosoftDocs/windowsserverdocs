@@ -23,15 +23,9 @@ This topic provides background information about Active Directory Domain Service
   
 -   [What's new in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewEight)  
   
-<<<<<<< HEAD
 -   [What's new in AD DS in Windows Server 2012 R2?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_NewWS2012R2)  
   
 -   [What's new in AD DS in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewAD)  
-=======
--   [Whatï¿½s new in AD DS in Windows Server 2012 R2?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_NewWS2012R2)  
-  
--   [Whatï¿½s new in AD DS in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewAD)  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
 -   [AD DS server role installation changes](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_InstallationChanges)  
   
@@ -196,7 +190,7 @@ The following table lists some examples of how to configure these settings to pr
 |-|-|  
 |**Scenario**|**Recommended configuration(s)**|  
 <<<<<<< HEAD
-|**WSUS managed**<br /><br />-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<br /><br />**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 - Auto download and schedule the install<br /><br />**Policy**: No auto-restart with logged-on users… (Disabled)<br /><br />**WSUS deadlines**: set to Fridays at 11PM|  
+|**WSUS managed**<br /><br />-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<br /><br />**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 - Auto download and schedule the install<br /><br />**Policy**: No auto-restart with logged-on usersï¿½ (Disabled)<br /><br />**WSUS deadlines**: set to Fridays at 11PM|  
 |**WSUS managed**<br /><br />-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<br /><br />Use above steps for previous scenario<br /><br />Set different deadlines for different target groups|  
 |**Not WSUS-managed - no support for deadlines**<br /><br />-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 - Auto download and schedule the install<br /><br />**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](http://support.microsoft.com/kb/2835627)<br /><br />**Policy:** Automatic Maintenance Random Delay (Enabled)<br /><br />Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<br /><br />-   Updates will install at the configured maintenance time plus a random delay<br /><br />-   Restart for each machine will take place exactly 3 days later<br /><br />Alternatively, set a different maintenance time for each group of machines|  
 =======
