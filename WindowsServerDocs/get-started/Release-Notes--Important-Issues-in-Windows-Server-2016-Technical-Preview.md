@@ -215,7 +215,7 @@ This document is provided ‚Äúas-is‚Äù. Information and views expressed in this d
 
 This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.  
 
-¬©©©©2016 Microsoft Corporation. All rights reserved.  
+¬© 2016 Microsoft Corporation. All rights reserved.  
 
 Microsoft, Active Directory, Hyper-V, Windows, and Windows Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.  
 
