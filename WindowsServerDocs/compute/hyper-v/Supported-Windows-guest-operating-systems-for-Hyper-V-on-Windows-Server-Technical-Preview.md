@@ -22,7 +22,7 @@ Hyper-V supports several versions of Windows Server, Windows, and Linux distribu
 Some operating systems have the integration services built-in. Others require that you install or upgrade integration services as a separate step after you set up the operating system in the virtual machine. For more information, see the sections below and  [Integration Services](https://technet.microsoft.com/library/dn798297.aspx).  
   
 ## Supported Windows Server guest operating systems  
-The following table lists the Windows Server operating systems supported in Windows Server® 2016 Technical Preview for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
+The following table lists the Windows Server operating systems supported in Windows Server 2016 Technical Preview for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
   
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  
@@ -35,7 +35,7 @@ The following table lists the Windows Server operating systems supported in Wind
 |Windows Small Business Server 2011|Essentials edition 2<br /><br />Standard edition 4|Install the integration services after you set up the operating system in the virtual machine.|Essentials and Standard editions.|  
   
 ## Supported Windows client guest operating systems  
-The following table lists the Windows client operating systems supported in Windows Server® 2016 Technical Preview for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
+The following table lists the Windows client operating systems supported in Windows Server 2016 Technical Preview for use as guest operating systems in Hyper-V virtual machines, as well as provides information about integration services.  
   
 |Guest operating system (client)|Maximum number of virtual processors|Integration Services|Notes|  
 |-------------------------------------|----------------------------------------|------------------------|---------|  
