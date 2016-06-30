@@ -37,11 +37,11 @@ The general AD FS preauthentication flow is as follows:
   
     The user authenticates using the authentication method required by the AD FS server; for example, user name and password, two-factor authentication with a one-time password, and so on.  
   
-3.  After the user is authenticated, the AD FS server issues a security token, the ‘edge token’, containing the following information and redirects the HTTPS request back to the Web Application Proxy server:  
+3.  After the user is authenticated, the AD FS server issues a security token, the 'edge token', containing the following information and redirects the HTTPS request back to the Web Application Proxy server:  
   
     -   The resource identifier that the user attempted to access.  
   
-    -   The user’s identity as a user principal name (UPN).  
+    -   The user's identity as a user principal name (UPN).  
   
     -   The expiry of the access grant approval; that is, the user is granted access for a limited period of time, after which they are required to authenticate again.  
   
@@ -254,7 +254,7 @@ The authentication flow for clients that use the MS-OFBA protocol using claims-b
 The steps to publish an application that uses MS-OFBA are identical to the steps for a claims-based application or a non-claims-based application. For claims-based applications, see [Publish a Claims-based Application for Web Browser Clients](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md#BKMK_1.1), for non-claims-based applications, see [Publish an Integrated Windows authenticated-based Application for Web Browser Clients](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md#BKMK_1.2). Web Application Proxy automatically detects the client and will authenticate the user as required.  
   
 ## Publish an Application that uses HTTP Basic  
-HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. For more information on HTTP Basic, see [RFC 2617](http://www.ietf.org/rfc/rfc2617.txt). Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients; most rich clients don’t support cookies or state management. Publishing an app using HTTP basic provides support for ActiveSync clients in Web Application Proxy by caching the token that is received from AD FS and serving the token from the cache to overcome this limitation and avoid a high load on AD FS. In this way Web Application Proxy enables the HTTP app to receive a non-claims relying party trust for the application to the Federation Service. See [Plan Active Directory](assetId:///a0d4c023-e75b-4140-b0aa-0fdb7f28a59d#BKMK_AD).  
+HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. For more information on HTTP Basic, see [RFC 2617](http://www.ietf.org/rfc/rfc2617.txt). Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients; most rich clients don't support cookies or state management. Publishing an app using HTTP basic provides support for ActiveSync clients in Web Application Proxy by caching the token that is received from AD FS and serving the token from the cache to overcome this limitation and avoid a high load on AD FS. In this way Web Application Proxy enables the HTTP app to receive a non-claims relying party trust for the application to the Federation Service. See [Plan Active Directory](assetId:///a0d4c023-e75b-4140-b0aa-0fdb7f28a59d#BKMK_AD).  
   
 The authentication flow for clients that use HTTP Basic is described below and in this diagram:  
   
@@ -333,7 +333,7 @@ Add-WebApplicationProxyApplication
      -Name 'Exchange ActiveSync'   
      -ExternalPreAuthentication ADFSforRichClients  
      -ADFSRelyingPartyName 'EAS_Relying_Party'  
-     -ADFSUserCertificateStore ‘AdfsTrustedDevices’  
+     -ADFSUserCertificateStore 'AdfsTrustedDevices'  
 ```  
   
 ## <a name="BKMK_1.4"></a>Publish an Application that uses OAuth2 such as a Windows Store App  
@@ -357,7 +357,7 @@ The authentication flow for clients that use Windows Store apps is described bel
   
 2.  The app sends an HTTPS request to the URL published by Web Application Proxy.  
   
-3.  Web Application Proxy returns an HTTP 401 response to the app containing the URL of the authenticating AD FS server. This process is known as ‘discovery’.  
+3.  Web Application Proxy returns an HTTP 401 response to the app containing the URL of the authenticating AD FS server. This process is known as 'discovery'.  
   
     > [!NOTE]  
     > If the app knows the URL of the authenticating AD FS server and already has a combo token containing the OAuth token and the edge token, steps 2 and 3 are skipped in this authentication flow.  
@@ -420,7 +420,7 @@ Enter each cmdlet on a single line, even though they may appear word-wrapped acr
 To set the OAuth authentication URL for a federation server address of fs.contoso.com and a URL path of /adfs/oauth2/:  
   
 ```  
-Set-WebApplicationProxyConfiguration –OAuthAuthenticationURL 'https://fs.contoso.com/adfs/oauth2/'  
+Set-WebApplicationProxyConfiguration -OAuthAuthenticationURL 'https://fs.contoso.com/adfs/oauth2/'  
 ```  
   
 To publish the application:  

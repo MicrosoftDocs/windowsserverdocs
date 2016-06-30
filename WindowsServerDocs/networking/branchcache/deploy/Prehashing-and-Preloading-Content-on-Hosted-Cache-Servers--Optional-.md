@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-You can use this procedure to force the creation of content information â€“ also called hashes - on BranchCache-enabled Web and file servers. You can also gather the data on file and web servers into packages that can be transferred to remote hosted cache servers.  This provides you with the ability to preload content on remote hosted cache servers so that data is available for the first client access.  
+You can use this procedure to force the creation of content information â€" also called hashes - on BranchCache-enabled Web and file servers. You can also gather the data on file and web servers into packages that can be transferred to remote hosted cache servers.  This provides you with the ability to preload content on remote hosted cache servers so that data is available for the first client access.  
   
 You must be a member of **Administrators**, or equivalent to perform this procedure.  
   

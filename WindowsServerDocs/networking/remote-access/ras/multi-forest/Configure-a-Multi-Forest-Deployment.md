@@ -41,7 +41,7 @@ In this scenario, you configure the Remote Access deployment to allow clients fr
   
 1.  Add the security group of the clients from Forest2. See [Add client security groups](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#SGs).  
   
-2.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the clients’ domain in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. See [Add NRPT rules and DNS suffixes](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#NRPT_DNSSearchSuffix).  
+2.  If the DNS suffix of Forest2 is not part of the DNS suffix of Forest1, add NRPT rules with the suffixes of the clients' domain in Forest2 to enable access to the domain controllers for authentication, and optionally, add the suffixes of the domains in Forest2 to the DNS suffix search list. See [Add NRPT rules and DNS suffixes](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#NRPT_DNSSearchSuffix).  
   
 3.  Add the internal IPv6 prefixes in Forest2 to enable DirectAccess to create the IPsec tunnel to the domain controllers for authentication. See [Add internal IPv6 prefix](assetId:///79404dbc-1e3d-4524-aad0-3422c56ed31b#IPv6Prefix).  
   
@@ -69,7 +69,7 @@ Note the following terms when configuring OTP in a multi-forest deployment:
   
 -   Enterprise CA—All other CAs.  
   
--   Resource Forest—The forest that contains the Root CA, and is considered to be the ‘Managing forest\domain’.  
+-   Resource Forest—The forest that contains the Root CA, and is considered to be the 'Managing forest\domain'.  
   
 -   Account Forest—All other forests in the topology.  
   
@@ -136,7 +136,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
     ```  
     .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Template -cn <DA OTP registration authority template common name>.  
     .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Template -cn <Secure DA OTP logon certificate template common name>.  
-    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Oid –f  
+    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Oid -f  
     ```  
   
 ### <a name="BKMK_Publish"></a>Publish OTP certificate templates  
@@ -154,13 +154,13 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
 2.  Synchronize CAs across forests from the Account Forests to the Resource Forest using the following PowerShell command:  
   
     ```  
-    .\PKISync.ps1 -sourceforest <account forest DNS> -targetforest <resource forest DNS> -type CA -cn <enterprise CA sanitized name> –f  
+    .\PKISync.ps1 -sourceforest <account forest DNS> -targetforest <resource forest DNS> -type CA -cn <enterprise CA sanitized name> -f  
     ```  
   
 3.  Synchronize CAs across forests from the Resource Forest to the Account Forests using the following PowerShell command:  
   
     ```  
-    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type CA -cn <enterprise CA sanitized name> –f  
+    .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type CA -cn <enterprise CA sanitized name> -f  
     ```  
   
 ## Configuration procedures  
@@ -177,7 +177,7 @@ The DNS suffix search list allows the clients to use short label names instead o
   
 2.  On the **Network Location Server** page, click **Next**.  
   
-3.  On the **DNS** page, in the table, enter any additional name suffixes that are part of the corporate network in Forest 2. In **DNS Server Address**, enter the DNS server address manually, or by clicking **Detect**. If you don’t enter the address, the new entries are applied as NRPT exemptions. Then click **Next**.  
+3.  On the **DNS** page, in the table, enter any additional name suffixes that are part of the corporate network in Forest 2. In **DNS Server Address**, enter the DNS server address manually, or by clicking **Detect**. If you don't enter the address, the new entries are applied as NRPT exemptions. Then click **Next**.  
   
 4.  Optional: On the **DNS Suffix Search List** page, add any DNS suffixes by entering the suffix in the **New Suffix** box, and then clicking **Add**. Then click **Next**.  
   

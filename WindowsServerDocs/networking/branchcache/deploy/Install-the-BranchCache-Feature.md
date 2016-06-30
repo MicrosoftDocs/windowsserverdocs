@@ -42,7 +42,7 @@ Before you perform this procedure, it is recommended that you install and config
   
 6.  In **Confirm installation selections**, click **Install**. In **Installation progress**, the BranchCache feature installation proceeds. When installation is complete, click **Close**.  
   
-After you install the BranchCache feature, the BranchCache service – also called the PeerDistSvc - is enabled, and the start type is Automatic.  
+After you install the BranchCache feature, the BranchCache service - also called the PeerDistSvc - is enabled, and the start type is Automatic.  
   
 
 

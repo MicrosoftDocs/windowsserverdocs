@@ -106,7 +106,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
 If you chose to use an external load balancer in the planning steps: then execute the following:  
   
 ```  
-Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0" -InternalDedicatedIPAddress @("10.1.1.30/255.255.255.0","3ffe::20/64") –UseThirdPrtyLoadBalancer  
+Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0" -InternalDedicatedIPAddress @("10.1.1.30/255.255.255.0","3ffe::20/64") -UseThirdPrtyLoadBalancer  
 ```  
   
 > [!NOTE]  
@@ -129,7 +129,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 6.  On the **Export Private Key** page, click **Yes, export the private key**, and then click **Next**.  
   
-7.  On the **Export File Format** page, click **Personal Information Exchange – PKCS #12 (.PFX)**, and then click **Next**.  
+7.  On the **Export File Format** page, click **Personal Information Exchange - PKCS #12 (.PFX)**, and then click **Next**.  
   
 8.  On the **Security** page, select the **Password** check box, enter a password in the **Password** box and confirm the password, and then click **Next**.  
   

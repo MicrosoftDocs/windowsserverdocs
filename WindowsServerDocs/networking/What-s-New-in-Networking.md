@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-Following are the new or enhanced networking technologies in Windows Server® 2016 Technical Preview.  
+Following are the new or enhanced networking technologies in Windows Server 2016 Technical Preview.  
   
 This topic contains the following sections.  
   
@@ -33,7 +33,7 @@ The following sections contain information about these new networking features a
 ### Software Defined Networking Infrastructure  
 Following are the new or improved SDN infrastructure technologies.  
   
--   **Network Controller**. New in Windows Server® 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](https://technet.microsoft.com/library/mt427380.aspx).  
+-   **Network Controller**. New in Windows Server 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](https://technet.microsoft.com/library/mt427380.aspx).  
   
 -   **Hyper-V Virtual Switch**. The Hyper-V Virtual Switch runs on Hyper-V hosts, and allows you to create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. For more information, see [Hyper-V Virtual Switch](technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   

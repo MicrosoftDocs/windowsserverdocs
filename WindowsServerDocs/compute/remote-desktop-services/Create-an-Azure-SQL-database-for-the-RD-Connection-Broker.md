@@ -31,6 +31,6 @@ This article provides steps to deploy an Azure SQL Database instance for Remote 
       
         Driver={SQL Server Native Client 11.0};Server=tcp:cb-sqls1.database.windows.net,1433;Database=CB-DB1;Uid=sqladmin@contoso;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;   
   
-    5. Replace “your_password_here” with the actual password. You’ll use this entire string, with your included password, when connecting to the database.   
+    5. Replace "your_password_here" with the actual password. You'll use this entire string, with your included password, when connecting to the database.   
 
 

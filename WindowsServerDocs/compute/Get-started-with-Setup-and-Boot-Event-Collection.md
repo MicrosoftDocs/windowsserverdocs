@@ -17,13 +17,13 @@ author: jaimeo
 
   
 ## Overview  
-Setup and Boot Event Collection is a new feature starting in Windows Server 2016 Technical Preview that allows you to designate a “collector” computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.  
+Setup and Boot Event Collection is a new feature starting in Windows Server 2016 Technical Preview that allows you to designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.  
   
-Previously, these events have been impossible to monitor because the infrastructure needed to collect them doesn’t exist until a computer is already set up. The kinds of setup and boot events you can monitor include:  
+Previously, these events have been impossible to monitor because the infrastructure needed to collect them doesn't exist until a computer is already set up. The kinds of setup and boot events you can monitor include:  
   
 -   Loading of kernel modules and drivers  
   
--   Enumeration of devices and initialization of their drivers (including “devices” such as CPU type)  
+-   Enumeration of devices and initialization of their drivers (including "devices" such as CPU type)  
   
 -   Verification and mounting of file systems  
   
@@ -49,7 +49,7 @@ Starting with the Windows Server 2016  Technical Preview, the event collector se
   
 This command creates a service called BootEventCollector and starts it with an empty configuration file.  
   
-Confirm that the installation succeed by checking `get-service –displayname *boot*`. The Boot Event Collector should be running. It runs under the Network Service Account and creates an empty configuration file (Active.xml) in **%SystemDrive%\ProgramData\Microsoft\BootEventCollector\Config**.  
+Confirm that the installation succeed by checking `get-service -displayname *boot*`. The Boot Event Collector should be running. It runs under the Network Service Account and creates an empty configuration file (Active.xml) in **%SystemDrive%\ProgramData\Microsoft\BootEventCollector\Config**.  
   
 You can also install the Setup and Boot Event Collection service with the Add Roles and Features wizard in Server Manager.  
   
@@ -64,7 +64,7 @@ You need to configure two items to collect setup and boot events.
 > You cannot configure a computer to send the startup or boot events to itself. But if you want to monitor two computers, you can configure them to send the events to each other.  
   
 ### Configuring a target computer  
-On each target computer, you first enable the KDNET/EVENT-NET transport, then enable sending of ETW events through the transport, and then restart the target computer. EVENT-NET is an in-kernel transport protocol which is similar to KDNET (the kernel debugger protocol). EVENT-NET only transmits events and doesn’t allow debugger access. These two protocols are mutually exclusive; you can only enable one of them at a time.  
+On each target computer, you first enable the KDNET/EVENT-NET transport, then enable sending of ETW events through the transport, and then restart the target computer. EVENT-NET is an in-kernel transport protocol which is similar to KDNET (the kernel debugger protocol). EVENT-NET only transmits events and doesn't allow debugger access. These two protocols are mutually exclusive; you can only enable one of them at a time.  
   
 You can enable event transport remotely (with Windows PowerShell) or locally.  
   
@@ -83,23 +83,23 @@ You can enable event transport remotely (with Windows PowerShell) or locally.
     -   Or in a command prompt: **winrm set winrm/config/client @{TrustedHosts="\<target1>,\<target2>,...";AllowUnencrypted="true"}**  
   
         > [!IMPORTANT]  
-        > This sets up unencrypted communication, so don’t do this outside of a lab environment.  
+        > This sets up unencrypted communication, so don't do this outside of a lab environment.  
   
 4.  Test the remote connection by going to the collector computer and running one of these Windows PowerShell commands:  
   
-    If the target computer is in the same domain as the collector computer, run `New-PSSession –Computer <target> | Remove-PSSession`  
+    If the target computer is in the same domain as the collector computer, run `New-PSSession -Computer <target> | Remove-PSSession`  
   
     If the target computer is not in the same domain, run `New-PSSession -Computer  <target>  -Credential Administrator | Remove-PSSession`, which will prompt you for credentials.  
   
-    If the command doesn’t return anything, remoting was successful.  
+    If the command doesn't return anything, remoting was successful.  
   
 5.  On the target computer, open an elevated Windows PowerShell prompt and run this command:  
   
-    `Enable-SbecBcd –ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d>`  
+    `Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d>`  
   
-    Here <target_name> is the name of the target computer, \<ip> is the IP address of the collector computer. \<port> is the port number where the collector will run. The Key <a.b.c.d> is a required encryption key for the communication, comprising four alphanumeric strings separated by dots. This same key is used on the collector computer. If you don’t enter a key, the system generates a random key; you’ll need this for the collector computer, so make a note of it.  
+    Here <target_name> is the name of the target computer, \<ip> is the IP address of the collector computer. \<port> is the port number where the collector will run. The Key <a.b.c.d> is a required encryption key for the communication, comprising four alphanumeric strings separated by dots. This same key is used on the collector computer. If you don't enter a key, the system generates a random key; you'll need this for the collector computer, so make a note of it.  
   
-6.  If you already have a collector computer set up, update the configuration file on the collector computer with the information for the new target computer. See the “Configuring the collector computer” section for details.  
+6.  If you already have a collector computer set up, update the configuration file on the collector computer with the information for the new target computer. See the "Configuring the collector computer" section for details.  
   
 ##### To enable event transport locally on the target computer  
   
@@ -109,9 +109,9 @@ You can enable event transport remotely (with Windows PowerShell) or locally.
   
     **bcdedit /eventsettings  net hostip:1.2.3.4 port:50000 key:a.b.c.d**  
   
-    Here “1.2.3.4” is an example; replace this with the IP address of the collector computer. Also replace “50000” with the port number where the collector will run and “a.b.c.d” with the required encryption key for the communication. This same key is used on the collector computer. If you don’t enter a key, the system generates a random key; you’ll need this for the collector computer, so make a note of it.  
+    Here "1.2.3.4" is an example; replace this with the IP address of the collector computer. Also replace "50000" with the port number where the collector will run and "a.b.c.d" with the required encryption key for the communication. This same key is used on the collector computer. If you don't enter a key, the system generates a random key; you'll need this for the collector computer, so make a note of it.  
   
-2.  If you already have a collector computer set up, update the configuration file on the collector computer with the information for the new target computer. See the “Configuring the collector computer” section for details.  
+2.  If you already have a collector computer set up, update the configuration file on the collector computer with the information for the new target computer. See the "Configuring the collector computer" section for details.  
   
 **Now that event transport itself is enabled, you must enable the system to actually send ETW events through that transport.**  
   
@@ -119,9 +119,9 @@ You can enable event transport remotely (with Windows PowerShell) or locally.
   
 1.  On the collector computer, open an elevated Windows PowerShell prompt.  
   
-2.  Run `Enable-SbecAutologger –ComputerName <target_name>`, where <target_name> is the name of the target computer.  
+2.  Run `Enable-SbecAutologger -ComputerName <target_name>`, where <target_name> is the name of the target computer.  
   
-If you aren’t able to set up Windows PowerShell Remoting, you can always enable sending of events directly on the target computer.  
+If you aren't able to set up Windows PowerShell Remoting, you can always enable sending of events directly on the target computer.  
   
 ##### To enable sending of ETW events through the transport locally  
   
@@ -146,7 +146,7 @@ If the target computer has more than one network adapter, the KDNET driver will 
   
 3.  Run either one of these commands:  
   
-    From an elevated Windows PowerShell prompt: `Enable-SbecBcd –ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d> -BusParams <X.Y.Z>`  
+    From an elevated Windows PowerShell prompt: `Enable-SbecBcd -ComputerName <target_name> -CollectorIP <ip> -CollectorPort <port> -Key <a.b.c.d> -BusParams <X.Y.Z>`  
   
     From an elevated command prompt: **bcdedit /eventsettings  net hostip:aaa port:50000 key:bbb busparams:X.Y.Z**  
   
@@ -163,14 +163,14 @@ To check settings on the target computer, open an elevated command prompt and ru
   
 -   DHCP = yes  
   
-Also check that you have enabled **bcdedit /event**, since **/debug** and **/event** are mutually exclusive. You can only run one or the other. Similarly, you can’t mix /eventsettings with /debug or /dbgsettings with /event.  
+Also check that you have enabled **bcdedit /event**, since **/debug** and **/event** are mutually exclusive. You can only run one or the other. Similarly, you can't mix /eventsettings with /debug or /dbgsettings with /event.  
   
-Note also that event collection doesn’t work if you set it to a serial port.  
+Note also that event collection doesn't work if you set it to a serial port.  
   
 ### Configuring the collector computer  
 The collector service receives the events and saves them in ETL files. These ETL files can then be read by other tools, such as Event Viewer, Message Analyzer, Wevtutil, and Windows PowerShell cmdlets.  
   
-Since the ETW format doesn’t allow you to specify the target computer name, the events for each target computer must be saved to a separate file. The display tools might show a computer name but it will be the name of the computer on which the tool runs.  
+Since the ETW format doesn't allow you to specify the target computer name, the events for each target computer must be saved to a separate file. The display tools might show a computer name but it will be the name of the computer on which the tool runs.  
   
 More exactly, each target computer is assigned a ring of ETL files. Each file name includes an index from 000 to a maximum value that you configure (up to 999). When the file reaches the maximum configured size, it switches writing events to the next file. After the highest possible file it switches back to file index 000. In this way, the files are automatically recycled, limiting usage of disk space. You can also set additional external retention policies to further limit disk usage; for example, you can delete files older than a set number of days.  
   
@@ -249,13 +249,13 @@ There are several details to keep in mind regarding the configuration file:
     >   
     > The \<collectorport> element defines the UDP port number where the collector will listen for incoming data. This is the same port as was specified in the target configuration step for Bcdedit. The collector supports only one port and all the targets must connect to the same port.  
     >   
-    > The \<forwarder> element specifies how ETW events received from the target computers will be forwarded. There is only one type of forwarder, which writes them to the ETL files. The parameters specify the file name pattern, the size limit for each file in the ring, and the size of the ring for each computer. The setting “toxml” specifies that the ETW events will be written in the binary form as they were received, without conversion to XML. See the “XML event conversion” section for information about deciding whether to confer the events to XML or not. The file name pattern contains these substitutions: {computer} for the computer name and {#3} for the index of file in the ring.  
+    > The \<forwarder> element specifies how ETW events received from the target computers will be forwarded. There is only one type of forwarder, which writes them to the ETL files. The parameters specify the file name pattern, the size limit for each file in the ring, and the size of the ring for each computer. The setting "toxml" specifies that the ETW events will be written in the binary form as they were received, without conversion to XML. See the "XML event conversion" section for information about deciding whether to confer the events to XML or not. The file name pattern contains these substitutions: {computer} for the computer name and {#3} for the index of file in the ring.  
     >   
     > In this example file, two target computers are defined with the \<target> element. Each definition specifies the IP address with \<ipv4>, but you could also use the MAC address (for example, <mac value="11:22:33:44:55:66"\/> or <mac value="11-22-33-44-55-66"\/>) or SMBIOS GUID (for example, <guid value="{269076F9-4B77-46E1-B03B-CA5003775B88}"\/>) to identify the target computer. Also note the encryption key (the same as was specified or generated with Bcdedit on the target computer), and the computer name.  
   
 4.  Enter the details for each target computer as a separate \<target> element in the configuration file, and then save Newconfig.xml and close Notepad.  
   
-5.  Apply the new configuration with `$result = (Get-Content .\newconfig.xml | Set-SbecActiveConfig); $result`. The output should return with the Success field “true.” If you get another result, see the Troubleshooting section of this topic.  
+5.  Apply the new configuration with `$result = (Get-Content .\newconfig.xml | Set-SbecActiveConfig); $result`. The output should return with the Success field "true." If you get another result, see the Troubleshooting section of this topic.  
   
 You can always check the current active configuration with `(Get-SbecActiveConfig).text`.  
   
@@ -282,9 +282,9 @@ The minimal interface offered by Nano Server can sometimes make it hard to diagn
   
     2.  Start a Windows PowerShell console with elevated permissions and run `Import-Module BootEventCollector` .  
   
-    3.  Update the Nano Server VHD registry to enable AutoLoggers. To do this, run `Enable-SbecAutoLogger –Path C:\NanoServer\Workloads\IncludingWorkloads.vhd`. This adds a basic list of the most typical setup and boot events; you can research others  at [Controlling Event Tracing Sessions](https://msdn.microsoft.com/library/windows/desktop/aa363694(v=vs.85).aspx).  
+    3.  Update the Nano Server VHD registry to enable AutoLoggers. To do this, run `Enable-SbecAutoLogger -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd`. This adds a basic list of the most typical setup and boot events; you can research others  at [Controlling Event Tracing Sessions](https://msdn.microsoft.com/library/windows/desktop/aa363694(v=vs.85).aspx).  
   
-4.  Update BCD settings in the Nano Server image to enable the Events flag and set the collector computer to ensure diagnostic events are sent to the right server. Note the collector computer's IPv4 address, TCP port, and encryption key you configured in the collector's Active.XML file (described elsewhere in this topic). Use this command in a Windows PowerShell console with elevated permissions: `Enable-SbecBcd –Path C:\NanoServer\Workloads\IncludingWorkloads.vhd –CollectorIp 192.168.100.1 –CollectorPort 50000 –Key a.b.c.d`  
+4.  Update BCD settings in the Nano Server image to enable the Events flag and set the collector computer to ensure diagnostic events are sent to the right server. Note the collector computer's IPv4 address, TCP port, and encryption key you configured in the collector's Active.XML file (described elsewhere in this topic). Use this command in a Windows PowerShell console with elevated permissions: `Enable-SbecBcd -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd -CollectorIp 192.168.100.1 -CollectorPort 50000 -Key a.b.c.d`  
   
 5.  Update the collector computer to receive event sent by the Nano Server computer by adding either the IPv4 address range, the specific IPv4 address, or the MAC address of the Nano Server to the Active.XML file on the collector computer (see the "Configuring the collector computer" section of this topic).  
   
@@ -303,19 +303,19 @@ From the command line, you can access the collected log with this command:
   
 ||Error|Error description|Symptom|Potential problem|  
 |-|---------|---------------------|-----------|---------------------|  
-|Dism.exe|87|The feature-name option is not recognized in this context||-   This can happen if you misspell the feature name. Verify that you have the correct spelling and try again.<br />-   Confirm that this feature is available on the operating system version you are using. In Windows PowerShell, run **dism /online /get-features &#124; ?{$_ -match “boot”}**. If no match is returned, you’re probably running a version that doesn’t support this feature.|  
+|Dism.exe|87|The feature-name option is not recognized in this context||-   This can happen if you misspell the feature name. Verify that you have the correct spelling and try again.<br />-   Confirm that this feature is available on the operating system version you are using. In Windows PowerShell, run **dism /online /get-features &#124; ?{$_ -match "boot"}**. If no match is returned, you're probably running a version that doesn't support this feature.|  
 |Dism.exe|0x800f080c|Feature \<name> is unknown.||Same as above|  
   
 ### Troubleshooting the collector  
   
 **Logging:**  
-The Collector logs its own events as ETW provider Microsoft-Windows-BootEvent-Collector. It’s the first place you should look for troubleshooting problems with the collector. You can find them in Event Viewer under Applications and Services Logs > Microsoft > Windows > BootEvent-Collector > Admin, or you can read them in a command window with either of these commands:  
+The Collector logs its own events as ETW provider Microsoft-Windows-BootEvent-Collector. It's the first place you should look for troubleshooting problems with the collector. You can find them in Event Viewer under Applications and Services Logs > Microsoft > Windows > BootEvent-Collector > Admin, or you can read them in a command window with either of these commands:  
   
 In an ordinary command prompt: **wevtutil qe Microsoft-Windows-BootEvent-Collector/Admin**  
   
-In a Windows PowerShell prompt: `Get-WinEvent -LogName Microsoft-Windows-BootEvent-Collector/Admin` (you can append `–Oldest` to return the list in chronological order with oldest events first)  
+In a Windows PowerShell prompt: `Get-WinEvent -LogName Microsoft-Windows-BootEvent-Collector/Admin` (you can append `-Oldest` to return the list in chronological order with oldest events first)  
   
-You can adjust the level of detail in the logs from “error,” through “warning,” “info” (the default), “verbose,” and “debug.” More detailed levels than “info” are useful for diagnosing problems with target computers not connecting, but they might generate a large amount of data, so use them with care.  
+You can adjust the level of detail in the logs from "error," through "warning," "info" (the default), "verbose," and "debug." More detailed levels than "info" are useful for diagnosing problems with target computers not connecting, but they might generate a large amount of data, so use them with care.  
   
 You set the minimum log level in the \<collector> element of the configuration file. For example: <collector configVersionMajor="1" minlog\="verbose">.  
   
@@ -323,7 +323,7 @@ The verbose level logs a record for every packet received as it is processed. Th
   
 At the debug level, it might be useful to write the log into a file rather than trying to view it in the usual logging system. To do this, add an additional element in the \<collector> element of the configuration file:  
   
-<collector configVersionMajor="1" minlog=”debug” log\="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
+<collector configVersionMajor="1" minlog="debug" log\="c:\ProgramData\Microsoft\BootEventCollector\Logs\log.txt">  
       
  **A suggested approach to troubleshooting the Collector:**  
    
@@ -372,10 +372,10 @@ Alternately, if you don't want to save the result in a variable, you can use `Ge
   
 ||Error|Error description|Symptom|Potential problem|  
 |-|---------|---------------------|-----------|---------------------|  
-|Target computer||Target is not connecting to the Collector||-   The target computer didn’t get restarted after it was configured. Restart the target computer.<br />-   The target computer has incorrect BCD settings. Check the settings in the “Validate target computer settings” section. Correct as necessary, and then restart the target computer.<br />-   The KDNET/EVENT-NET driver was not able to connect to a network adapter or connected to the wrong network adapter. In Windows PowerShell, run `gwmi Win32_NetworkAdapter` and check the output for one with the ServiceName **kdnic**. If the wrong network adapter is selected, re-do the steps in “To specify a network adapter.” If the network adapter doesn’t appear at all, it could be that the driver doesn’t support any of your network adapters.<br>**See also** "A suggested approach to troubleshooting the Collector" above, especially Steps 5 through 8.|  
-|Collector||I am no longer seeing events after migrating the VM my collector is hosted on.||Verify that the IP address of the collector computer has not changed. If it has, review “To enable sending of ETW events through the transport remotely.”|  
+|Target computer||Target is not connecting to the Collector||-   The target computer didn't get restarted after it was configured. Restart the target computer.<br />-   The target computer has incorrect BCD settings. Check the settings in the "Validate target computer settings" section. Correct as necessary, and then restart the target computer.<br />-   The KDNET/EVENT-NET driver was not able to connect to a network adapter or connected to the wrong network adapter. In Windows PowerShell, run `gwmi Win32_NetworkAdapter` and check the output for one with the ServiceName **kdnic**. If the wrong network adapter is selected, re-do the steps in "To specify a network adapter." If the network adapter doesn't appear at all, it could be that the driver doesn't support any of your network adapters.<br>**See also** "A suggested approach to troubleshooting the Collector" above, especially Steps 5 through 8.|  
+|Collector||I am no longer seeing events after migrating the VM my collector is hosted on.||Verify that the IP address of the collector computer has not changed. If it has, review "To enable sending of ETW events through the transport remotely."|  
 |Collector||The ETL files are not created.|`Get-SbecForwarding` shows that the target has connected, with no errors, but the ETL files are not created.|The target computer has probably not sent any data yet; ETL files are only created when data is received.|  
-|Collector||An event is not showing in the ETL file.|The target computer has sent an event but when the ETL file is read with Event Viewer of Message Analyzer, the event is not present.|-   The event could still be in the buffer. Events aren’t written to the ETL file until a full 64 KB buffer is collected or a timeout of about 10-15 seconds with no new events has occurred. Either wait for the timeout to expire or flush the buffers with `Save-SbecInstance`.<br />-   The event manifest is not available on the collector computer or the computer where the Event Viewer or Message Analyzer runs.  In this case, the Collector might not be able to process the event (check the Collector log) or the viewer might not be able to show it.  It is a good practice to have all the manifests installed on the collector computer and install updates on the collector computer before installing them on the target computers.|  
+|Collector||An event is not showing in the ETL file.|The target computer has sent an event but when the ETL file is read with Event Viewer of Message Analyzer, the event is not present.|-   The event could still be in the buffer. Events aren't written to the ETL file until a full 64 KB buffer is collected or a timeout of about 10-15 seconds with no new events has occurred. Either wait for the timeout to expire or flush the buffers with `Save-SbecInstance`.<br />-   The event manifest is not available on the collector computer or the computer where the Event Viewer or Message Analyzer runs.  In this case, the Collector might not be able to process the event (check the Collector log) or the viewer might not be able to show it.  It is a good practice to have all the manifests installed on the collector computer and install updates on the collector computer before installing them on the target computers.|  
   
 
 

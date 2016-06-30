@@ -98,7 +98,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create an additional domain controller in treyresearch.net domain and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSDomainController â€“DomainName treyresearch.net â€“credential (get-credential)  
+    Install-ADDSDomainController â€"DomainName treyresearch.net â€"credential (get-credential)  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  
@@ -306,7 +306,7 @@ Note how, just like Server Manager, **Install-ADDSDomainController** reminds you
 To configure a domain controller remotely using Windows PowerShell, wrap the **install-adddomaincontroller** cmdlet *inside* of the **invoke-command** cmdlet. This requires using the curly braces.  
   
 ```  
-invoke-command {install-addsdomaincontroller â€“domainname <domain> -credential (get-credential)} -computername <dc name>  
+invoke-command {install-addsdomaincontroller â€"domainname <domain> -credential (get-credential)} -computername <dc name>  
 ```  
   
 For example:  

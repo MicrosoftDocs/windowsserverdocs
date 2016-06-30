@@ -37,9 +37,9 @@ Introduced in Windows Server 2008 R2, domain controllers include a feature calle
 3.  Reboot the destination computer, and the computer will be joined to the domain.  
   
 ### <a name="BKMK_ODJOverview"></a>Offline domain join with DirectAccess policies scenario overview  
-DirectAccess offline domain join is a process that computers running Windows Server® 2016 Technical Preview, Windows Server® 2012, Windows 10® and Windows® 8 can use to join a domain without being physically joined to the corporate network, or connected through VPN. This makes it possible to join computers to a domain from locations where there is no connectivity to a corporate network. Offline domain join for DirectAccess provides DirectAccess policies to clients to allow remote provisioning.  
+DirectAccess offline domain join is a process that computers running Windows Server 2016 Technical Preview, Windows Server 2012, Windows 10 and Windows 8 can use to join a domain without being physically joined to the corporate network, or connected through VPN. This makes it possible to join computers to a domain from locations where there is no connectivity to a corporate network. Offline domain join for DirectAccess provides DirectAccess policies to clients to allow remote provisioning.  
   
-A domain join creates a computer account and establishes a trust relationship between a computer running a Windows operating system and an Active Directory® domain.  
+A domain join creates a computer account and establishes a trust relationship between a computer running a Windows operating system and an Active Directory domain.  
   
 ## <a name="BKMK_ODJRequirements"></a>Prepare for offline domain join  
   
@@ -61,7 +61,7 @@ To perform an offline domain join, you must have the rights that are necessary t
   
 -   Edit the access control list (ACL) of the default Computers container for the domain to delegate the correct permissions to you.  
   
--   Create an OU and edit the ACL on that OU to grant you the **Create child – Allow** permission. Pass the **/machineOU** parameter to the **djoin /provision** command.  
+-   Create an OU and edit the ACL on that OU to grant you the **Create child - Allow** permission. Pass the **/machineOU** parameter to the **djoin /provision** command.  
   
 The following procedures show how to grant the user rights with Group Policy and how to delegate the correct permissions.  
   

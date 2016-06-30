@@ -21,7 +21,7 @@ author: Femila
 ## Appendix K: Third-Party PIM Vendors  
   
 > [!NOTE]  
-> Descriptions of software described in this appendix were obtained from the respective vendors’ websites. No endorsement of or preference for any solution is intended or implied.  
+> Descriptions of software described in this appendix were obtained from the respective vendors' websites. No endorsement of or preference for any solution is intended or implied.  
   
 ### Cyber-Ark  
 Privileged accounts and passwords are extremely powerful, allowing a privileged user to log on anonymously and have complete control of the target system with full access to all of the information about that system. This vulnerability could potentially cause tremendous financial losses and reputational damage for businesses. For enterprises, privileged accounts are especially difficult to manage:  
@@ -37,7 +37,7 @@ Privileged accounts and passwords are extremely powerful, allowing a privileged 
 -   Administrative and application accounts are subject to regulations such as Sarbanes Oxley, PCI, and Basel II, requiring that companies prove exactly who logs in to sensitive systems and, increasingly, what they are doing.  
   
 #### What is the PIM Suite?  
-[Cyber-Ark’s Privileged Identity Management (PIM) Suite](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp) is an enterprise-class, unified policy-based solution that secures, manages and logs all privileged accounts and activities associated with datacenter management whether on-premise or in the cloud:  
+[Cyber-Ark's Privileged Identity Management (PIM) Suite](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp) is an enterprise-class, unified policy-based solution that secures, manages and logs all privileged accounts and activities associated with datacenter management whether on-premise or in the cloud:  
   
 -   Control access to privileged accounts based on pre-defined security policies  
   
@@ -64,9 +64,9 @@ The PIM Suite offers a robust set of system features and capabilities for consis
   
 Because they share a common server platform, an initial deployment of any individual solution can quickly and easily be expanded to address any additional audit or security challenges that may arise in the future.  
   
-With Cyber-Ark’s Privileged Identity Management suite you can:  
+With Cyber-Ark's Privileged Identity Management suite you can:  
   
--   Approach Compliance with Confidence:  Superior security that protects the ‘keys to your kingdom’ with a proven ability to meet regulatory requirements  
+-   Approach Compliance with Confidence:  Superior security that protects the 'keys to your kingdom' with a proven ability to meet regulatory requirements  
   
 -   Minimize Internal or External Threats:  Control who is accessing your most sensitive assets with out of the box best practices for defining and enforcing a unified policy for privileged identity management  
   
@@ -91,7 +91,7 @@ With Cyber-Ark’s Privileged Identity Management suite you can:
 Privileged identities are accounts that hold elevated permission to access files, install and run programs, and change configuration settings. These keys to your IT kingdom exist on virtually every server and desktop operating system, business application, database, Web service, and network appliance in your organization.  
   
 ##### Risks of Unsecured Privileged Identities  
-Privileged identities aren’t controlled by your identity access management (IAM) system, so in all likelihood:  
+Privileged identities aren't controlled by your identity access management (IAM) system, so in all likelihood:  
   
 -   You do not know of all the privileged logins that exist on your network;  
   
@@ -104,7 +104,7 @@ Privileged identities aren’t controlled by your identity access management (IAM)
 -   You have no reliable list of privileged logins stored within your applications, and no way to know which in-house and vendor personnel can use these credentials to access sensitive information.  
   
 ##### Controlling Privileged Account Access  
-[Enterprise Random Password Manager (ERPM)](http://www.liebsoft.com/Random_Password_Manager/) from Lieberman Software can help your organization’s privileged account management through a four-part I.D.E.A. process:  
+[Enterprise Random Password Manager (ERPM)](http://www.liebsoft.com/Random_Password_Manager/) from Lieberman Software can help your organization's privileged account management through a four-part I.D.E.A. process:  
   
 -   Identify and document critical IT assets, their privileged accounts and their interdependencies.  
   
@@ -129,7 +129,7 @@ Taking control of privileged identities can help your organization:
   
 -   Improve IT governance by automatically documenting which individuals have access to sensitive data and the ability to make changes that impact IT service delivery; at what times, and for what purpose.  
   
--   Lower cost and uncertainty of IT regulatory compliance audits by providing detailed reports that prove compliance with today’s regulatory standards including SOX, PCI-DSS, HIPAA, CAG-8 and others.  
+-   Lower cost and uncertainty of IT regulatory compliance audits by providing detailed reports that prove compliance with today's regulatory standards including SOX, PCI-DSS, HIPAA, CAG-8 and others.  
   
 -   Mitigate risks whenever planned and unplanned changes happen in your IT environment or IT staff turnover occurs.  
   
@@ -144,7 +144,7 @@ Do you have visibility into everything that privileged users are doing on your s
   
 ###### Smart privileged user control features  
   
--   Secure cross-platform privileged user management Control and record “which privileged user have access to what.” You centrally define the commands that privileged users are able to run on any UNIX, Linux or Windows platform.  
+-   Secure cross-platform privileged user management Control and record "which privileged user have access to what." You centrally define the commands that privileged users are able to run on any UNIX, Linux or Windows platform.  
   
 -   Simplified policy management with web-based console. Centrally manage security policies from a single point. The intuitive drag-and-drop interface makes it easy to create rules instead of relying on manual scripting.  
   
@@ -171,15 +171,15 @@ Whether applications reside in the enterprise or the cloud, managing the identit
 Organizations are seeking solutions that automate identity-related processes throughout the enterprise—from the mainframe to the cloud, across employees, contractors, partners, and customers. The result is a smarter, more efficiently managed infrastructure that helps IT save money, reduce risk, and deliver a more reliable service.  
   
 ##### Solution Overview  
-CA IdentityMinder delivers a unified approach for managing users’ identities throughout their entire lifecycle and providing them with timely, appropriate access to applications and data.  
+CA IdentityMinder delivers a unified approach for managing users' identities throughout their entire lifecycle and providing them with timely, appropriate access to applications and data.  
   
-CA IdentityMinder can be used to organize identity information within the context of an organization’s unique business roles and processes. It helps streamline the on-boarding and off-boarding of users, enables the business to manage access requests, and automates identity compliance processes. CA IdentityMinder contains a range of features for managing identities and access rights, and meeting identity compliance requirements.  
+CA IdentityMinder can be used to organize identity information within the context of an organization's unique business roles and processes. It helps streamline the on-boarding and off-boarding of users, enables the business to manage access requests, and automates identity compliance processes. CA IdentityMinder contains a range of features for managing identities and access rights, and meeting identity compliance requirements.  
   
 CA IdentityMinder can increase operational efficiency and user productivity while decreasing Help Desk workload and costs. In addition, the CA Technologies approach to identity management and administration helps improve your overall security posture with a consistent, auditable method for managing identity-related activities and a platform to help maintain adherence to regulations.  
   
 ##### Key features  
   
--   **User provisioning and deprovisioning**. Automates account provisioning, removal, and approval processes throughout the user’s entire lifecycle. Customizable workflows support the unique way each organization approves, alerts, and schedules these activities.  
+-   **User provisioning and deprovisioning**. Automates account provisioning, removal, and approval processes throughout the user's entire lifecycle. Customizable workflows support the unique way each organization approves, alerts, and schedules these activities.  
   
 -   **User self-service**. Enables users to manage attributes of their own identities, reset  
   

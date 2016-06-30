@@ -535,12 +535,12 @@ type was found.
                   </step>
                   <step>
                     <content>
-                      <para>Note the names of all domain controllers that report “Warn” or “Fail” status in the Summary table. </para>
+                      <para>Note the names of all domain controllers that report "Warn" or "Fail" status in the Summary table. </para>
                     </content>
                   </step>
                   <step>
                     <content>
-                      <para>Find the detailed breakout section for the problem domain controller by searching for the string “DC: &lt;DomainControllerName&gt;”. </para>
+                      <para>Find the detailed breakout section for the problem domain controller by searching for the string "DC: &lt;DomainControllerName&gt;". </para>
                     </content>
                   </step>
                   <step>
@@ -650,7 +650,7 @@ type was found.
                   </step>
                   <step>
                     <content>
-                      <para>On the <ui>General</ui> tab, verify that the zone type is Active Directory–integrated. </para>
+                      <para>On the <ui>General</ui> tab, verify that the zone type is Active Directory-integrated. </para>
                     </content>
                   </step>
                   <step>

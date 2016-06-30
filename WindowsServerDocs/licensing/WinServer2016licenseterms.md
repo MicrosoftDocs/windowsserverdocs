@@ -69,7 +69,7 @@ If you give feedback about the software to Microsoft, you give to Microsoft, wit
 ## 8. SCOPE OF LICENSE  
 The software is licensed, not sold. This agreement only gives you some rights to use the software. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not:  
   
--   disclose the results of any benchmark tests of the software, other than the Microsoft .NET Framework \(see separate term above\), to any third party without Microsoft�s prior written approval;  
+-   disclose the results of any benchmark tests of the software, other than the Microsoft .NET Framework \(see separate term above\), to any third party without Microsoft"s prior written approval;  
   
 -   work around any technical limitations in the software;  
   
@@ -91,7 +91,7 @@ The software includes one or more components of the .NET Framework, which you ma
 ## 10. H.264\/AVC AND MPEG\-4 VISUAL STANDARDS AND VC\-1 AND MPEG\-2 VIDEO STANDARDS  
 This software may include H.264\/AVC, VC\-1, and MPEG\-4 Part 2, and MPEG\-2 visual compression technology. MPEG LA, L.L.C. requires this notice:  
   
-THIS PRODUCT IS LICENSED UNDER THE AVC, THE VC\-1, THE MPEG\-4 PART 2 VISUAL, AND THE MPEG\-2 VIDEO PATENT PORTFOLIO LICENSES FOR THE PERSONAL AND NON\-COMMERCIAL USE OF A CONSUMER TO \(i\) ENCODE VIDEO IN COMPLIANCE WITH THE ABOVE STANDARDS \(�VIDEO STANDARDS�\) AND\/OR \(ii\) DECODE AVC, VC\-1, MPEG\-4 PART 2 AND MPEG\-2 VIDEO THAT WAS ENCODED BY A CONSUMER ENGAGED IN A PERSONAL AND NON\-COMMERCIAL ACTIVITY AND\/OR WAS OBTAINED FROM A VIDEO PROVIDER LICENSED TO PROVIDE SUCH VIDEO. NO LICENSE IS GRANTED OR SHALL BE IMPLIED FOR ANY OTHER USE. ADDITIONAL INFORMATION MAY BE OBTAINED FROM MPEG LA, L.L.C SEE [WWW.MPEGLA.COM](http://WWW.MPEGLA.COM).  
+THIS PRODUCT IS LICENSED UNDER THE AVC, THE VC\-1, THE MPEG\-4 PART 2 VISUAL, AND THE MPEG\-2 VIDEO PATENT PORTFOLIO LICENSES FOR THE PERSONAL AND NON\-COMMERCIAL USE OF A CONSUMER TO \(i\) ENCODE VIDEO IN COMPLIANCE WITH THE ABOVE STANDARDS \("VIDEO STANDARDS"\) AND\/OR \(ii\) DECODE AVC, VC\-1, MPEG\-4 PART 2 AND MPEG\-2 VIDEO THAT WAS ENCODED BY A CONSUMER ENGAGED IN A PERSONAL AND NON\-COMMERCIAL ACTIVITY AND\/OR WAS OBTAINED FROM A VIDEO PROVIDER LICENSED TO PROVIDE SUCH VIDEO. NO LICENSE IS GRANTED OR SHALL BE IMPLIED FOR ANY OTHER USE. ADDITIONAL INFORMATION MAY BE OBTAINED FROM MPEG LA, L.L.C SEE [WWW.MPEGLA.COM](http://WWW.MPEGLA.COM).  
   
 ## 11. ADOBE FLASH PLAYER  
 The software may include a version of Adobe Flash Player. You agree that your use of the Adobe Flash Player is governed by the license terms for Adobe Systems Incorporated, at [go.microsoft.com\/fwlink\/?LinkID\=248532](http://go.microsoft.com/fwlink/?LinkID=248532). Adobe and Flash are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States and\/or other countries.  
@@ -103,7 +103,7 @@ The software may include third party programs that Microsoft, not the third part
 The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [microsoft.com\/exporting](http://www.microsoft.com/exporting).  
   
 ## 14. SUPPORT SERVICES  
-Because this software is �as is,� we may not provide support services for it.  
+Because this software is "as is," we may not provide support services for it.  
   
 ## 15. ENTIRE AGREEMENT  
 This agreement, and the terms for supplements, updates, Internet\-based services and support services that you use, are the entire agreement for the software and support services.  
@@ -117,9 +117,9 @@ Outside the United States. If you acquired the software in any other country, th
 This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
   
 ## 18. DISCLAIMER OF WARRANTY  
-The software is licensed �as\-is.� You bear the risk of using it. Microsoft gives no express warranties, guarantees or conditions. You may have additional consumer rights or statutory guarantees under your local laws which this agreement cannot change. To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non\-infringement.  
+The software is licensed "as\-is." You bear the risk of using it. Microsoft gives no express warranties, guarantees or conditions. You may have additional consumer rights or statutory guarantees under your local laws which this agreement cannot change. To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non\-infringement.  
   
-**For Australia only** � You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.  
+**For Australia only** " You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.  
   
 ## 19. LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES  
 You can recover from Microsoft and its suppliers only direct damages up to $5.00 USD. **You cannot recover any other damages, including consequential, lost profits, special, indirect or incidental damages.**  

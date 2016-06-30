@@ -453,7 +453,7 @@ changetype: ntdsSchemaAdd
 objectClass: attributeSchema  
 cn: ms-DS-Registered-Users  
 adminDisplayName: ms-DS-Registered-Users  
-adminDescription: Contains the list of users that have registered the device.  Users in this list have all of the features provided by the “Company Portal” app.  And they have SSO to company resources.  
+adminDescription: Contains the list of users that have registered the device.  Users in this list have all of the features provided by the "Company Portal" app.  And they have SSO to company resources.  
 ldapDisplayName: msDS-RegisteredUsers  
 attributeId: 1.2.840.113556.1.4.2263  
 omSyntax: 4  

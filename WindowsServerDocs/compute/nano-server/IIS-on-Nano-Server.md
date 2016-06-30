@@ -188,11 +188,11 @@ The IISAdministration module of Windows PowerShell allows you to easily add or r
   
     Set-IISConfigAttributeValue -ConfigElement $section -AttributeName "enabled" -AttributeValue $false  
   
-    Set-IISConfigAttributeValue -ConfigElement $section –AttributeName "authPersistNonNTLM" -AttributeValue $true  
+    Set-IISConfigAttributeValue -ConfigElement $section -AttributeName "authPersistNonNTLM" -AttributeValue $true  
   
-    $collection = Get-IISConfigElement -ConfigElement $section –ChildElementName "providers" | Get-IISConfigCollection  
+    $collection = Get-IISConfigElement -ConfigElement $section -ChildElementName "providers" | Get-IISConfigCollection  
   
-    New-IISConfigCollectionElement -ConfigCollection $collection –ConfigAttribute @{"value"="Negotiate"}  
+    New-IISConfigCollectionElement -ConfigCollection $collection -ConfigAttribute @{"value"="Negotiate"}  
   
     New-IISConfigCollectionElement -ConfigCollection $collection -ConfigAttribute @{"value"="NTLM"}   
   

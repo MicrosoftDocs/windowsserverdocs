@@ -22,11 +22,11 @@ When you want to configure VLAN settings on Hyper-V Virtual Switch ports, you ca
 If you are using VMM, VMM uses the following Windows PowerShell command to configure the switch port.
 
 ```
-Set-VMNetworkAdapterIsolation <VM-name|-managementOS> -IsolationMode VLAN –DefaultIsolationID <vlan-value> -AllowUntaggedTraffic $True
+Set-VMNetworkAdapterIsolation <VM-name|-managementOS> -IsolationMode VLAN -DefaultIsolationID <vlan-value> -AllowUntaggedTraffic $True
 ```
 If you are not using VMM and are configuring the switch port in Windows Server, you can use the Hyper-V Manager console or the following Windows PowerShell command.
 ```
-Set-VMNetworkAdapterVlan <VM-name|-managementOS> -Access –VlanID <vlan-value>
+Set-VMNetworkAdapterVlan <VM-name|-managementOS> -Access -VlanID <vlan-value>
 ```
 
 Because of these two methods for configuring VLAN settings on Hyper-V Virtual Switch ports, it is possible that when you attempt to view the switch port settings, it appears to you that the VLAN settings are not configured - even when they are configured.

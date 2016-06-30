@@ -28,7 +28,7 @@ In this section:
   
 **Table legend**  
   
--   **Built in** – LIS are included as part of this Linux distribution. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
+-   **Built in** - LIS are included as part of this Linux distribution. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
   
 -   **v** - Feature available  
   
@@ -58,8 +58,8 @@ The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS su
 |SCSI WWN|2016, 2012 R2|v||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
 |Configuration of MMIO gap|2016, 2012 R2|v|v|v|v|v|v|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|v Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|v Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|v Note 6, 7, 8, 9|v Note 6, 7, 8, 9|v Note 6, 7, 8, 9||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|v Note 7, 9, 10 (Note 6 for 6.4-6.7)|v Note 7, 9, 10 (Note 6 for 6.4-6.7)|v Note 6, 8, 9|v Note 6, 8, 9|v Note 6, 8, 9|v Note 6, 8, 9, 10|  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|v Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|v Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|v Note 6, 7, 8, 9|v Note 6, 7, 8, 9|v Note 6, 7, 8, 9||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|v Note 7, 9, 10 (Note 6 for 6.4-6.7)|v Note 7, 9, 10 (Note 6 for 6.4-6.7)|v Note 6, 8, 9|v Note 6, 8, 9|v Note 6, 8, 9|v Note 6, 8, 9, 10|  
 |Manual Memory Hot-Add|2016|||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
 |Hyper-V-specific  video device|2016,2012 R2, 2012, 2008 R2|v|v|v|v|v||  
@@ -96,8 +96,8 @@ The Oracle Linux Unbreakable Enterprise Kenel (UEK) is 64-bit only and has LIS s
 |SCSI WWN|2016, 2012 R2||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
 |Configuration of MMIO gap|2016, 2012 R2|v|v|v|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012||||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012||||  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012||||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012||||  
 |Manual Memory Hot-Add|2016||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
 |Hyper-V-specific  video device|2016, 2012 R2, 2012, 2008 R2|v|v||  
@@ -151,7 +151,7 @@ The Oracle Linux Unbreakable Enterprise Kenel (UEK) is 64-bit only and has LIS s
 13. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:  
   
     ```  
-    Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off  
       
     ```  
   

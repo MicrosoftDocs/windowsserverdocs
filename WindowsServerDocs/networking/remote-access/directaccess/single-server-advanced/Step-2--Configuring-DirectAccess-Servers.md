@@ -160,7 +160,7 @@ To configure the infrastructure servers in a Remote Access deployment, you must 
 5.  On the **Management** page, add any management servers that are not detected automatically, and then click **Next**. Remote Access automatically adds domain controllers and System Center Configuration Manager servers.  
   
     > [!NOTE]  
-    > Although the servers are added automatically, they don’t appear in the list. After you apply the configuration the first time, the System Center Configuration Manager servers appear in the list.  
+    > Although the servers are added automatically, they don't appear in the list. After you apply the configuration the first time, the System Center Configuration Manager servers appear in the list.  
   
 6.  Click **Finish**.  
   

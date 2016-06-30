@@ -25,7 +25,7 @@ Every forest starts with a single domain. The maximum number of users that a sin
   
 -   The ratio of users to computers is 1:1.  
   
--   Active Directory–integrated Domain Name System (DNS) is used.  
+-   Active Directory-integrated Domain Name System (DNS) is used.  
   
 -   DNS scavenging is used.  
   
@@ -68,7 +68,7 @@ First, determine the maximum number of users that your forest can host. Base thi
   
 -   The ratio of users to computers is 1:1.  
   
--   Active Directory–integrated DNS is used.  
+-   Active Directory-integrated DNS is used.  
   
 -   DNS scavenging is used.  
   
@@ -108,7 +108,7 @@ Determine the number of users that need to be hosted in each region, and then ve
   
 -   The ratio of users to computers is 1:1.  
   
--   Active Directory–integrated DNS is used.  
+-   Active Directory-integrated DNS is used.  
   
 -   DNS scavenging is used.  
   

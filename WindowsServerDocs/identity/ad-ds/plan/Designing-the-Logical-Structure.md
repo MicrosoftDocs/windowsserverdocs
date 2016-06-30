@@ -19,7 +19,7 @@ Active Directory Domain Services (AD DS) enables organizations to create a scala
   
 A well-designed Active Directory logical structure provides the following benefits:  
   
--   Simplified management of Microsoft® Windows®–based networks that contain large numbers of objects  
+-   Simplified management of Microsoft Windows-based networks that contain large numbers of objects  
   
 -   A consolidated domain structure and reduced administration costs  
   

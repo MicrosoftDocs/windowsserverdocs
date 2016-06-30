@@ -157,15 +157,15 @@ Last success @ &lt;date&gt; &lt;time&gt;.
         <title>REPADMIN /SYNCALL </title>
         <content>
           <para>The REPADMIN /syncall operation will cause a DC to initiate replication from all of its source replication partners and make the source replication partners initiate replication from all of their source replication partners, and so on. </para>
-          <para>For example, suppose we have a replication topology DC1 &lt;- DC2 &lt;- DC3. If you run “repadmin /syncall” on DC1, it will initiate the following replication: DC2 &lt;- DC3, and DC1 &lt;- DC2.</para>
+          <para>For example, suppose we have a replication topology DC1 &lt;- DC2 &lt;- DC3. If you run "repadmin /syncall" on DC1, it will initiate the following replication: DC2 &lt;- DC3, and DC1 &lt;- DC2.</para>
           <para>There are two cases where error 8452 might be observed in this scenario:</para>
           <list class="bullet">
             <listItem>
               <para>Case 1: Change the replication topology to make DC2 inbound replicate from DC4 so that the current topology becomes DC1 &lt;- DC2 &lt;- DC4.</para>
-              <para>If you run “repadmin /syncall” on DC1 before knowledge of the DC2 &lt;- DC4 topology change inbound replicates to DC1, the syncall operation will initiate DC2 &lt;- DC3 replications because DC1 still has the old replication topology stored locally. Because on DC2 at this moment KCC has created a replica link from DC4 and has deleted the replica link from DC3, the replication from DC2 &lt;- DC3 cannot be executed and the operation logs error 8452.</para>
+              <para>If you run "repadmin /syncall" on DC1 before knowledge of the DC2 &lt;- DC4 topology change inbound replicates to DC1, the syncall operation will initiate DC2 &lt;- DC3 replications because DC1 still has the old replication topology stored locally. Because on DC2 at this moment KCC has created a replica link from DC4 and has deleted the replica link from DC3, the replication from DC2 &lt;- DC3 cannot be executed and the operation logs error 8452.</para>
             </listItem>
             <listItem>
-              <para>Case 2: Suppose a NC on DC3 is being removing when you run “repadmin /syncall &lt;the NC&gt;” on DC1. DC2 &lt;- DC3 replication will be initiated as before. Because the NC on DC3 is in the process of being removed, it is not a valid replication source, and the error 8452 appears.</para>
+              <para>Case 2: Suppose a NC on DC3 is being removing when you run "repadmin /syncall &lt;the NC&gt;" on DC1. DC2 &lt;- DC3 replication will be initiated as before. Because the NC on DC3 is in the process of being removed, it is not a valid replication source, and the error 8452 appears.</para>
             </listItem>
           </list>
         </content>
@@ -179,7 +179,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
           <list class="bullet">
             <listItem>
               <para>Case 1: Suppose we change the replication topology on DC2 to make it inbound replicate from DC4. The new replication topology is DC1 &lt;- DC2 &lt;- DC4. Until knowledge of this this topology change outbound replicates to DC1, the topology on DC1 is still the old topology of DC1 &lt;- DC2 &lt;- DC3. </para>
-              <para>Starting the Active Directory Sites and Services UI focused on DC1s copy of Active Directory still shows that DC2 has an inbound connection object from source DC3. Right-clicking on DC3’s inbound connection object from DC2 and choosing <ui>Replicate now</ui> will initiate a DC2 &lt;- DC3 replication on DC2. However, the KCC on DC2 already removed the replica link inbound replicating to DC2 from DC3 and created a replica link to DC2. Because the replication attempt DC2 &lt;-&gt; DC2 cannot be executed, the request fails error 8452.</para>
+              <para>Starting the Active Directory Sites and Services UI focused on DC1s copy of Active Directory still shows that DC2 has an inbound connection object from source DC3. Right-clicking on DC3's inbound connection object from DC2 and choosing <ui>Replicate now</ui> will initiate a DC2 &lt;- DC3 replication on DC2. However, the KCC on DC2 already removed the replica link inbound replicating to DC2 from DC3 and created a replica link to DC2. Because the replication attempt DC2 &lt;-&gt; DC2 cannot be executed, the request fails error 8452.</para>
             </listItem>
             <listItem>
               <para>Case2: Suppose we are removing a NC on DC3 when we right-click the connection object and select <ui>Replicate now</ui> on DC1 to initiate DC2 &lt;- DC3 replication for this NC. Because the NC on DC3 is in the process of being removed, DC3 is not a valid replication source, and error 8452 appears.</para>
@@ -217,7 +217,7 @@ Last success @ &lt;date&gt; &lt;time&gt;.
       <section>
         <title>NTDS Replication Event 1586</title>
         <content>
-          <para>NTDS replication event 1586 is generated in a mixed domain environment which contains both Windows NT 4.0 and Active Directory domain controllers. In this mixed domain environment, Active Directory domain controllers replicate amongst themselves using the DS replication protocol, while the Active Directory PDC emulator replicates to Windows NT 4 BDCs using the legacy netlogon replication protocol. In this case the Active Directory PDC FSMO role holder is the single point for replication to NT4 BDCs in a common domain. The PDC maintains a checkpoint for each BDC representing the most recent replicated change. If the PDC emulator role is transferred to another Active Directory domain controller in the domain, the information about each individual BDC’s checkpoint must be replicated to the new PDC emulator. Hence the new PDC emulator must have a direct replication relationship with the old PDC emulator. If the new PDC emulator does not replicate directly with the old PDC emulator (that is on the new PDC emulator there is no replica link from old PDC emulator), then error 8452 appears in event 1586.</para>
+          <para>NTDS replication event 1586 is generated in a mixed domain environment which contains both Windows NT 4.0 and Active Directory domain controllers. In this mixed domain environment, Active Directory domain controllers replicate amongst themselves using the DS replication protocol, while the Active Directory PDC emulator replicates to Windows NT 4 BDCs using the legacy netlogon replication protocol. In this case the Active Directory PDC FSMO role holder is the single point for replication to NT4 BDCs in a common domain. The PDC maintains a checkpoint for each BDC representing the most recent replicated change. If the PDC emulator role is transferred to another Active Directory domain controller in the domain, the information about each individual BDC's checkpoint must be replicated to the new PDC emulator. Hence the new PDC emulator must have a direct replication relationship with the old PDC emulator. If the new PDC emulator does not replicate directly with the old PDC emulator (that is on the new PDC emulator there is no replica link from old PDC emulator), then error 8452 appears in event 1586.</para>
         </content>
       </section>
       <section>

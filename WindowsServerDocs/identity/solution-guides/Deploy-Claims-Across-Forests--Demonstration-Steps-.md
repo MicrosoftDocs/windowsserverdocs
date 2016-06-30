@@ -108,7 +108,7 @@ In this step, you apply the newly created claims transformation policy on Adatum
       Set-ADClaimTransformLink `  
     -Identity:"contoso.com" `  
     -Policy:"DenyAllClaimsExceptCompanyPolicy" `  
-    â€“TrustRole:Trusted `  
+    â€"TrustRole:Trusted `  
   
     ```  
   
@@ -146,7 +146,7 @@ In this step, you apply the newly created claims transformation policy on the co
       Set-ADClaimTransformLink   
     -Identity:"adatum.com" `  
     -Policy:"DenyAllClaimsExceptCompanyPolicy" `  
-    â€“TrustRole:Trusting `  
+    â€"TrustRole:Trusting `  
   
     ```  
   

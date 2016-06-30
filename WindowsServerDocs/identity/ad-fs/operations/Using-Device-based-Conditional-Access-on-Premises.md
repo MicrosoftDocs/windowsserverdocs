@@ -34,7 +34,7 @@ There are three kinds of registered devices, all of which are represented as Dev
 Description    |  Users add their work or school account to their BYOD device interactively.  **Note:** Add Work or School Account is the replacement for Workplace Join in Windows 8/8.1       | Users join their Windows 10 work device to Azure AD.|Windows 10 domain joined devices automatically register with Azure AD.           
 How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account.       |   Login to Windows as the (work or school) account that registered the device.      |     Login using AD account.      
 How devices are managed    |      MDM Policies (with additional Intune enrollment)   | MDM Policies (with additional Intune enrollment)        |   Group Policy, System Center Configuration Manager (SCCM)        
- W10 Settings location    | Settings â€“ Accounts â€“ Your account â€“ Add a work or school account        | Settings â€“ System â€“ About â€“ Join Azure AD       |   Settings â€“ System â€“ About â€“ Join a domain        
+ W10 Settings location    | Settings â€" Accounts â€" Your account â€" Add a work or school account        | Settings â€" System â€" About â€" Join Azure AD       |   Settings â€" System â€" About â€" Join a domain        
 Also available for iOS and Android Devices?   |    Yes     |       No  |   No        
   
 For more information on the different ways to register devices, see also:  
@@ -86,7 +86,7 @@ For complete list of AD FS 2016 device and conditional access claims, see Refere
 ### Infrastructure pre-requisites  
   
 1. An Azure AD subscription with Azure AD Premium (to enable device write back for on premises conditional access - a free trial is fine)  
-2.  Intune subscription (only required for MDM integration for device compliance scenarios â€“ a free trial is fine)  
+2.  Intune subscription (only required for MDM integration for device compliance scenarios â€" a free trial is fine)  
 3.  Azure AD Connect (November 2015 QFE or later)  
 4.  Windows Server 2016 build 10586 or newer for AD FS  
 5.  Windows Server 2016 Active Directory schema (schema level 85 or higher) (required for msDS-IsCompliant attribute for device compliance scenarios)  
@@ -114,7 +114,7 @@ Note: The below commands require Active Directory administration tools, so if yo
 1.  Run the Add Roles & Features wizard and select feature Remote Server Administration tools -> Role Administration Tools -> AD DS and AD LDS Tools -> Choose both the Active Directory module for Windows PowerShell and the AD DS Tools.  
 2.  On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated powershell prompt.  Then, execute the following PowerShell commands:  
     1. Import-module activedirectory  
-    2. PS C:\ &gt; Initialize-ADDeviceRegistration â€“ServiceAccountName â€œ&lt;AD FS service account name&gt;â€  
+    2. PS C:\ &gt; Initialize-ADDeviceRegistration â€"ServiceAccountName â€œ&lt;AD FS service account name&gt;â€  
     3. Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format â€œdomain\accountname$â€  
     4. The above PSH creates the following objects  
         1. RegisteredDevices container under the AD domain partition  
@@ -127,13 +127,13 @@ If you plan to use Windows 10 domain join (with automatic registration to Azure 
 {if necessary, copy the AdSyncPrep.psm1 file from your Azure AD Connect server}  
 2.  PS C:>$aadAdminCred = Get-Credential  
 {provide your Azure AD global administrator credentials, such as adminuser@contoso.onmicrosoft.com}  
-3.  PS C:>Initialize-ADSyncDomainJoinedComputerSync â€“AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred  
+3.  PS C:>Initialize-ADSyncDomainJoinedComputerSync â€"AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred  
 a.  Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory  
 4.  The above commands enable Windows 10 clients to find the correct Azure AD domain to join by creating the serviceConnectionpoint object in AD DS.  
   
 #### Prepare AD for Device Write Back   
 To ensure AD DS objects and containers are in the correct state for write back of devices from Azure AD, do the following.  
-1.  PS C:\&gt;Initialize-ADSyncDeviceWriteBack â€“DomainName &lt;AD DS domain name&gt; â€“AdConnectorAccount [AD connector account name]  
+1.  PS C:\&gt;Initialize-ADSyncDeviceWriteBack â€"DomainName &lt;AD DS domain name&gt; â€"AdConnectorAccount [AD connector account name]  
     1. Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory in domain\accountname format  
     2. The above command creates the following objects for device write back to AD DS, if they do not exist already, and allows access to the specified AD connector account name  
         1. RegisteredDevices container in the AD domain partition  
@@ -144,7 +144,7 @@ If you have not done so before, enable device write back in Azure AD Connect by 
   
 #### Configure Device Authentication in AD FS  
 Using an elevated PowerShell command window, configure AD FS policy by executing the following command  
-PS C:>Set-AdfsGlobalAuthenticationPolicy â€“DeviceAuthenticationEnabled $true  
+PS C:>Set-AdfsGlobalAuthenticationPolicy â€"DeviceAuthenticationEnabled $true  
   
 #### Check your configuration  
 For your reference, below is a comprehensive list of the AD DS devices, containers and permissions required for device write-back and authentication to work  

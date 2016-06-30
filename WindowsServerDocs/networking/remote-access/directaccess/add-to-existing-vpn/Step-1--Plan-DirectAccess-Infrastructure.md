@@ -46,7 +46,7 @@ The planning tasks do not need to be done in a specific order.
   
     -   [IP-HTTPS Tunneling Protocol Specification](http://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
   
-3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the ‘Internal network adapter’ column.  
+3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the 'Internal network adapter' column.  
   
     ||External network adapter|Internal network adapter<sup>1</sup>|Routing requirements|  
     |-|----------------------------|----------------------------------------|------------------------|  
@@ -82,7 +82,7 @@ When using additional firewalls, apply the following internal network firewall e
 -   TCP/UDP for all IPv4/IPv6 traffic  
   
 ### <a name="bkmk_1_2_CAs_and_certs"></a>Plan certificate requirements  
-Certificate requirements for IPsec include a computer certificate used by DirectAccess client computers when establishing the IPsec connection between the client and the Remote Access server, and a computer certificate used by Remote Access servers to establish IPsec connections with DirectAccess clients. For DirectAccess in Windows Server® 2012 the use of these IPsec certificates is not mandatory. The Enable DirectAccess Wizard configures the Remote Access server to act as a Kerberos proxy to perform IPsec authentication without requiring certificates.  
+Certificate requirements for IPsec include a computer certificate used by DirectAccess client computers when establishing the IPsec connection between the client and the Remote Access server, and a computer certificate used by Remote Access servers to establish IPsec connections with DirectAccess clients. For DirectAccess in Windows Server 2012 the use of these IPsec certificates is not mandatory. The Enable DirectAccess Wizard configures the Remote Access server to act as a Kerberos proxy to perform IPsec authentication without requiring certificates.  
   
 1.  **IP-HTTPS server**—When you configure Remote Access, the Remote Access server is automatically configured to act as the IP-HTTPS web listener. The IP-HTTPS site requires a website certificate, and client computers must be able to contact the certificate revocation list (CRL) site for the certificate. The Enable DirectAccess wizard tries to use the SSTP VPN certificate. If SSTP is not configured, it checks if a certificate for IP-HTTPS is present in the machine personal store. If none is available, it automatically creates a self-signed certificate.  
   
@@ -92,7 +92,7 @@ The certification requirements for each of these are summarized in the following
   
 |IPsec authentication|IP-HTTPS server|Network location server|  
 |------------------------|--------------------|---------------------------|  
-|An internal CA is required to issue computer certificates to the Remote Access server and clients for IPsec authentication when you don’t use the Kerberos proxy for authentication|Public CA—It is recommended to use a public CA to issue the IP-HTTPS certificate, this ensures that the CRL distribution point is available externally.|Internal CA—You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point is highly available from the internal network.|  
+|An internal CA is required to issue computer certificates to the Remote Access server and clients for IPsec authentication when you don't use the Kerberos proxy for authentication|Public CA—It is recommended to use a public CA to issue the IP-HTTPS certificate, this ensures that the CRL distribution point is available externally.|Internal CA—You can use an internal CA to issue the network location server website certificate. Make sure that the CRL distribution point is highly available from the internal network.|  
 ||Internal CA—You can use an internal CA to issue the IP-HTTPS certificate; however, you must make sure that the CRL distribution point is available externally.|Self-signed certificate—You can use a self-signed certificate for the network location server website; however, you cannot use a self-signed certificate in multisite deployments.|  
 ||Self-signed certificate—You can use a self-signed certificate for the IP-HTTPS server; however, you must make sure that the CRL distribution point is available externally. A self-signed certificate cannot be used in a multisite deployment.||  
   

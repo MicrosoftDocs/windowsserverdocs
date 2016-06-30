@@ -63,9 +63,9 @@ If the Remote Access server has two network adapters (one for the domain profile
 2.  If the second network adapter cannot be configured for the domain profile for any reason, the DirectAccess IPsec policy must be manually scoped to all profiles by using the following Windows PowerShell command:  
   
     ```  
-    $gposession = Open-NetGPO –PolicyStore <Name of the server GPO>  
-    Set-NetIPsecRule –DisplayName <Name of the IPsec policy> –GPOSession $gposession –Profile Any  
-    Save-NetGPO –GPOSession $gposession  
+    $gposession = Open-NetGPO -PolicyStore <Name of the server GPO>  
+    Set-NetIPsecRule -DisplayName <Name of the IPsec policy> -GPOSession $gposession -Profile Any  
+    Save-NetGPO -GPOSession $gposession  
     ```  
   
     The names of the IPsec policies to use in this command are **DirectAccess-DaServerToInfra** and **DirectAccess-DaServerToCorp**.  
@@ -105,7 +105,7 @@ Apply the following Internet-facing firewall exceptions for Remote Access traffi
   
 -   UDP destination port 500 inbound, and UDP source port 500 outbound.  
   
--   Internet Control Message Protocol for IPv6 (ICMPv6) traffic inbound and outbound – for Teredo implementations only.  
+-   Internet Control Message Protocol for IPv6 (ICMPv6) traffic inbound and outbound - for Teredo implementations only.  
   
 ### Remote Access traffic  
 Apply the following internal network firewall exceptions for Remote Access traffic:  

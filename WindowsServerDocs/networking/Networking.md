@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This collection contains detailed information about networking products and features for the IT professional to design, deploy, and maintain Windows Server. Following are the networking technologies and documentation for Windows Server® 2016 Technical Preview.  
+This collection contains detailed information about networking products and features for the IT professional to design, deploy, and maintain Windows Server. Following are the networking technologies and documentation for Windows Server 2016 Technical Preview.  
   
 > [!NOTE]  
 > To download Windows Server 2016 Technical Preview, see [Windows Server Evaluations](http://www.microsoft.com/evalcenter/evaluate-windows-server-technical-preview).  
@@ -36,7 +36,7 @@ The following table provides links to some of the Software Defined Networking (S
 |[Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)|This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.|  
 |[Datacenter Firewall Overview](sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)|Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.|  
 |[Network Controller](sdn/technologies/network-controller/Network-Controller.md)|Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.|  
-|[Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)|In  software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This “network function virtualization” is a natural progression of server virtualization and network virtualization.|  
+|[Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)|In  software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization.|  
 |[RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)|RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview, is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.|  
 |[Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)|Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 Technical Preview can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.|  
   

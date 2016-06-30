@@ -112,11 +112,11 @@ Make sure that the remote computer is accessible over RPC and that there is a wr
   
     **Cause**  
   
-    To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. When the domain controller that manages an entry point’s server GPO is not available, Remote Access configuration settings cannot be read or modified.  
+    To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. When the domain controller that manages an entry point's server GPO is not available, Remote Access configuration settings cannot be read or modified.  
   
     **Solution**  
   
-    Follow the procedure “To change the domain controller that manages server GPOs” described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
+    Follow the procedure "To change the domain controller that manages server GPOs" described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
   
 -   **Issue 4**  
   
@@ -128,7 +128,7 @@ Make sure that the remote computer is accessible over RPC and that there is a wr
   
     **Solution**  
   
-    Follow the procedure “To transfer the PDC emulator role” described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
+    Follow the procedure "To transfer the PDC emulator role" described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
   
 ## Read-only domain controller  
 **Error received**—The domain controller <domain_controller> is read-only. Specify a domain controller that is not read-only.  

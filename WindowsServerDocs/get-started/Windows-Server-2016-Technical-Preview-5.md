@@ -17,7 +17,7 @@ author: jaimeo
 
 **[This information is preliminary and subject to change.]**  
   
-Welcome to Windows Server® 2016 Technical Preview 5.  
+Welcome to Windows Server&reg; 2016 Technical Preview 5.  
   
 This is the fifth release of Windows Server 2016 Technical Preview. In this documentation, Windows Server is referred to as Windows Server Technical Preview unless there is a need to distinguish between this release and the previous release. This collection contains information about the following:  
   

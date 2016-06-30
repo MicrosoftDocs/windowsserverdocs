@@ -37,7 +37,7 @@ After configuring the multisite infrastructure follow these steps to set up the 
   
 1.  Make sure that each Remote Access server is configured with the proper deployment topology (Edge, behind a NAT, single network interface), and corresponding routes as described in [Step 1: Implement a single server Remote Access deployment](assetId:///a811b73d-56af-4457-aa82-0c23b4c57b4f).  
   
-2.  Configure the IP addresses on each Remote Access server according to the site topology and your organization’s IP addressing scheme.  
+2.  Configure the IP addresses on each Remote Access server according to the site topology and your organization's IP addressing scheme.  
   
 3.  Join each Remote Access server to an Active Directory domain.  
   
@@ -60,7 +60,7 @@ After configuring the multisite infrastructure follow these steps to set up the 
   
 ![](../../../../media/Step-3--Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
   
-Steps 1 – 3 must be performed manually, and are not accomplished using this Windows PowerShell cmdlet.  
+Steps 1 - 3 must be performed manually, and are not accomplished using this Windows PowerShell cmdlet.  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -186,7 +186,7 @@ If you selected to set up the network location server website on the Remote Acce
 7.  Repeat this procedure before adding servers as additional entry points in the deployment.  
   
 ## <a name="BKMK_Client"></a>3.5. Configure DirectAccess clients for a multisite deployment  
-DirectAccess Windows client computers must be members of security group(s) which define their DirectAccess association. Before multisite is enabled, these security group(s) can contain both Windows 8 clients and  Windows 7  clients (if the appropriate “downlevel” mode was selected). Once multisite is enabled, existing client security group(s), in single server mode, are converted to security group(s) for Windows 8 only. After multisite is enabled, DirectAccess  Windows 7  client computers must be moved to corresponding dedicated  Windows 7  client security groups (which are associated with specific entry-points), or they will not be able to connect over DirectAccess. The  Windows 7  clients must first be removed from the existing security groups which are now Windows 8 security groups. Caution:  Windows 7  client computers that are members of both  Windows 7  and Windows 8 client security groups will lose remote connectivity, and  Windows 7  clients without SP1 installed will lose corporate connectivity as well. Therefore, all  Windows 7  client computers must be removed from Windows 8 security groups.  
+DirectAccess Windows client computers must be members of security group(s) which define their DirectAccess association. Before multisite is enabled, these security group(s) can contain both Windows 8 clients and  Windows 7  clients (if the appropriate "downlevel" mode was selected). Once multisite is enabled, existing client security group(s), in single server mode, are converted to security group(s) for Windows 8 only. After multisite is enabled, DirectAccess  Windows 7  client computers must be moved to corresponding dedicated  Windows 7  client security groups (which are associated with specific entry-points), or they will not be able to connect over DirectAccess. The  Windows 7  clients must first be removed from the existing security groups which are now Windows 8 security groups. Caution:  Windows 7  client computers that are members of both  Windows 7  and Windows 8 client security groups will lose remote connectivity, and  Windows 7  clients without SP1 installed will lose corporate connectivity as well. Therefore, all  Windows 7  client computers must be removed from Windows 8 security groups.  
   
 #### Remove  Windows 7  clients from Windows 8 security groups  
   
@@ -206,7 +206,7 @@ To configure a multisite deployment, enable the multisite feature on your existi
   
 1.  Global load balancer settings and IP addresses if you want to load balance DirectAccess client connections across all entry-points in your deployment.  
   
-2.  The security group(s) containing  Windows 7®  client computers for the first entry point in your deployment, if you want to enable Remote Access for  Windows 7  client computers.  
+2.  The security group(s) containing  Windows 7  client computers for the first entry point in your deployment, if you want to enable Remote Access for  Windows 7  client computers.  
   
 3.  Group Policy Object names, if you are required to use non-default Group Policy Objects, which are applied on  Windows 7  client computers for the first entry point in your deployment, if you require support for  Windows 7  client computers.  
   
@@ -224,7 +224,7 @@ To configure a multisite deployment, enable the multisite feature on your existi
   
 5.  On the **Entry Point Selection** page, do one of the following:  
   
-    -   Click **Assign entry points automatically, and allow clients to select manually** to automatically route client computers to the most suitable entry point, while also allowing client computers to select an entry point manually. Manual entry point selection is available only for Windows® 8 computers. Click **Next**.  
+    -   Click **Assign entry points automatically, and allow clients to select manually** to automatically route client computers to the most suitable entry point, while also allowing client computers to select an entry point manually. Manual entry point selection is available only for Windows 8 computers. Click **Next**.  
   
     -   Click **Assign entry points automatically** to automatically route client computers to the most suitable entry point, and then click **Next**.  
   
@@ -257,7 +257,7 @@ To configure a multisite deployment, enable the multisite feature on your existi
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-To enable a multisite deployment named ‘Contoso’ on the first entry point named ‘Edge1-US’. The deployment allows clients to manually select the entry point, and does not use a global load balancer.  
+To enable a multisite deployment named 'Contoso' on the first entry point named 'Edge1-US'. The deployment allows clients to manually select the entry point, and does not use a global load balancer.  
   
 ```  
 Enable-DAMultiSite -Name 'Contoso' -EntryPointName 'Edge1-US' -ManualEntryPointSelectionAllowed 'Enabled'  
@@ -274,11 +274,11 @@ After enabling multisite in your deployment, you can add additional entry points
   
 -   Global load balancer IP addresses for each new entry point if you are using global load balancing.  
   
--   The security group(s) containing  Windows 7®  client computers for each entry point that will be added if you want to enable Remote Access for  Windows 7  client computers.  
+-   The security group(s) containing  Windows 7  client computers for each entry point that will be added if you want to enable Remote Access for  Windows 7  client computers.  
   
 -   Group Policy Object names, if you are required to use non-default Group Policy Objects, which are applied on  Windows 7  client computers for each entry point that will be added, if you require support for  Windows 7  client computers.  
   
--   In the case where IPv6 is deployed in the organization’s network you will need to prepare the IP-HTTPS prefix for the new entry point.  
+-   In the case where IPv6 is deployed in the organization's network you will need to prepare the IP-HTTPS prefix for the new entry point.  
   
 [Do this step using Windows PowerShell](assetId:///2325da4a-3987-4132-b8d0-95c275f544b1#BKMK_PSstep10)  
   
@@ -341,10 +341,10 @@ After enabling multisite in your deployment, you can add additional entry points
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-To add the computer edge2 from the corp2 domain as a second entry point named Edge2-Europe. The entry point configuration is: a client IPv6 prefix ‘2001:db8:2:2000::/64’, a connect to address (the IP-HTTPS certificate on the edge2 computer) ‘edge2.contoso.com’, a server GPO named “DirectAccess Server Settings – Edge2-Europe”, and the internal and external interfaces named Internet and Corpnet2 respectively:  
+To add the computer edge2 from the corp2 domain as a second entry point named Edge2-Europe. The entry point configuration is: a client IPv6 prefix '2001:db8:2:2000::/64', a connect to address (the IP-HTTPS certificate on the edge2 computer) 'edge2.contoso.com', a server GPO named "DirectAccess Server Settings - Edge2-Europe", and the internal and external interfaces named Internet and Corpnet2 respectively:  
   
 ```  
-Add-DAEntryPoint -RemoteAccessServer 'edge2.corp2.corp.contoso.com' -Name 'Edge2-Europe' -ClientIPv6Prefix '2001:db8:2:2000::/64' -ConnectToAddress 'Europe.contoso.com' -ServerGpoName 'corp2.corp.contoso.com\DirectAccess Server Settings – Edge2-Europe' -InternetInterface 'Internet' -InternalInterface 'Corpnet2'  
+Add-DAEntryPoint -RemoteAccessServer 'edge2.corp2.corp.contoso.com' -Name 'Edge2-Europe' -ClientIPv6Prefix '2001:db8:2:2000::/64' -ConnectToAddress 'Europe.contoso.com' -ServerGpoName 'corp2.corp.contoso.com\DirectAccess Server Settings - Edge2-Europe' -InternetInterface 'Internet' -InternalInterface 'Corpnet2'  
 ```  
   
 To allow  Windows 7  client computers access through the second entry point through the security group DA_Clients_Europe and using the GPO DA_W7_Clients_GPO_Europe.  

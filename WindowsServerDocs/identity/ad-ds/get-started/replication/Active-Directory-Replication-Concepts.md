@@ -52,7 +52,7 @@ Within a site, the connections between writable domain controllers are always ar
 On each domain controller, the KCC creates replication routes by creating one-way inbound connection objects that define connections from other domain controllers. For domain controllers in the same site, the KCC creates connection objects automatically without administrative intervention. When you have more than one site, you configure site links between sites, and a single KCC in each site automatically creates connections between sites as well.  
   
 ### KCC improvements for Windows Server 2008 RODCs  
-There are a number of KCC improvements to accommodate the newly available read-only domain controller (RODC) in  Windows Server 2008 . A typical deployment scenario for RODC is the branch office. The Active Directory replication topology most commonly deployed in this scenario is based on a hub–and-spoke design, where branch domain controllers in multiple sites replicate with a small number of bridgehead servers in a hub site.  
+There are a number of KCC improvements to accommodate the newly available read-only domain controller (RODC) in  Windows Server 2008 . A typical deployment scenario for RODC is the branch office. The Active Directory replication topology most commonly deployed in this scenario is based on a hub-and-spoke design, where branch domain controllers in multiple sites replicate with a small number of bridgehead servers in a hub site.  
   
 One of the benefits of deploying RODC in this scenario is unidirectional replication. Bridgehead servers are not required to replicate from the RODC, which reduces administration and network usage.  
   
@@ -64,7 +64,7 @@ For  Windows Server 2008  RODCs, normal functioning of the KCC provides some reb
   
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**  
   
-**“Random BH Loadbalancing Allowed”**  
+**"Random BH Loadbalancing Allowed"**  
   
 **1 = Enabled (default), 0 = Disabled**  
   

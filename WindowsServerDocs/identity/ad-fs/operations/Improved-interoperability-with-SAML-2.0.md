@@ -36,7 +36,7 @@ Add-AdfsClaimsProviderTrustsGroup -MetadataUrl "https://www.contosoconsortium.co
   
   
 ```  
-Add-AdfsClaimsProviderTrustsGroup -MetadataFile “C:\metadata.xml”   
+Add-AdfsClaimsProviderTrustsGroup -MetadataFile "C:\metadata.xml"   
 ```  
   
 ## References  

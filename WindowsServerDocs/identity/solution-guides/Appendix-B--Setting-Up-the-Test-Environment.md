@@ -389,7 +389,7 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
 3.  To use Server Manager cmdlets to install the AD RMS server role, type:  
   
     ```  
-    Add-WindowsFeature ADRMS –IncludeAllSubFeature –IncludeManagementTools  
+    Add-WindowsFeature ADRMS �"IncludeAllSubFeature �"IncludeManagementTools  
     ```  
   
 4.  Create the Windows PowerShell drive to represent the AD RMS server you are installing.  
@@ -414,13 +414,13 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
     Next, to assign the AD RMS service account to the AD RMS cluster settings, type the following:  
   
     ```  
-    Set-ItemProperty –Path RC:\ -Name ServiceAccount -Value $svcacct  
+    Set-ItemProperty �"Path RC:\ -Name ServiceAccount -Value $svcacct  
     ```  
   
     Next, to set the AD RMS server to use the Windows Internal Database, at the Windows PowerShell command prompt, type:  
   
     ```  
-    Set-ItemProperty –Path RC:\ClusterDatabase -Name UseWindowsInternalDatabase -Value $true  
+    Set-ItemProperty �"Path RC:\ClusterDatabase -Name UseWindowsInternalDatabase -Value $true  
     ```  
   
     Next, to securely store the cluster key password in a variable, at the Windows PowerShell command prompt, type:  
@@ -461,7 +461,7 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
   
     ```  
     Set-Location RC:\  
-    Install-ADRMS –Path.  
+    Install-ADRMS �"Path.  
     ```  
   
     Type "Y" when the cmdlet prompts you to confirm you want to start the installation.  
@@ -485,7 +485,7 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
 10. To create new rights template for the Contoso finance administrator and assign it user rights with full control in your AD RMS installation, at the Windows PowerShell command prompt, type:  
   
     ```  
-    New-Item -Path RC:\RightsPolicyTemplate –LocaleName en-us -DisplayName "Contoso Finance Admin Only" -Description "Contoso Finance Admin Only" -UserGroup financeadmin@contoso.com  -Right ('FullControl')  
+    New-Item -Path RC:\RightsPolicyTemplate �"LocaleName en-us -DisplayName "Contoso Finance Admin Only" -Description "Contoso Finance Admin Only" -UserGroup financeadmin@contoso.com  -Right ('FullControl')  
     ```  
   
 11. To verify that you can see the new rights template for the Contoso finance administrator, at the Windows PowerShell command prompt:  
@@ -717,11 +717,11 @@ Create the user Jeff Low with the password **pass@word1**, and assign the compan
 2.  Open an elevated command prompt in Windows PowerShell, then type the following code:  
   
     ```  
-    New-ADClaimType –SourceTransformPolicy `  
-    –DisplayName “Company” `  
-    –ID “ad://ext/Company:ContosoAdatum” `  
-    –IsSingleValued $true `  
-    –ValueType “string” `  
+    New-ADClaimType �"SourceTransformPolicy `  
+    �"DisplayName “Company” `  
+    �"ID “ad://ext/Company:ContosoAdatum” `  
+    �"IsSingleValued $true `  
+    �"ValueType “string” `  
   
     ```  
   

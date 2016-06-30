@@ -22,7 +22,7 @@ Users may experience connectivity issues when you enable multisite if the config
   
 **Cause**  
   
-In a multisite deployment, Windows 10® and Windows® 8 client computers are able to roam between different entry points.  Windows 7  client computers must be associated with a specific entry point in the multisite deployment. If client computers are not in the correct security group, they may receive the wrong group policy settings.  
+In a multisite deployment, Windows 10 and Windows 8 client computers are able to roam between different entry points.  Windows 7  client computers must be associated with a specific entry point in the multisite deployment. If client computers are not in the correct security group, they may receive the wrong group policy settings.  
   
 **Solution**  
   
@@ -125,7 +125,7 @@ Confirm that this is the issue by running the command `nltest /dsgetsite` on you
   
 **Cause**  
   
-Changes to the server GPO couldn’t be saved either due to connectivity issues or if there is a sharing violation on the registry.pol file, for example, another user has locked the file.  
+Changes to the server GPO couldn't be saved either due to connectivity issues or if there is a sharing violation on the registry.pol file, for example, another user has locked the file.  
   
 **Solution**  
   

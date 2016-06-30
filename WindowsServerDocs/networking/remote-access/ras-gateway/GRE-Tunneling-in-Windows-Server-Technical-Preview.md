@@ -64,7 +64,7 @@ This scenario enables a scalable way to provide access from tenant virtual netwo
 ![](../../media/GRE-Tunneling-in-Windows-Server-Technical-Preview/GRE_.png)  
   
 ### <a name="BKMK_Speed"></a>High speed connectivity  
-This scenario enables a scalable way to provide high speed connectivity from the tenant on premise network to their virtual network located in the hosting service provider network. A tenant connects to the service provider network via multiprotocol label switching (MPLS), where a GRE tunnel is established between the hosting service provider’s edge router and the multitenant gateway to the tenant’s virtual network.  
+This scenario enables a scalable way to provide high speed connectivity from the tenant on premise network to their virtual network located in the hosting service provider network. A tenant connects to the service provider network via multiprotocol label switching (MPLS), where a GRE tunnel is established between the hosting service provider's edge router and the multitenant gateway to the tenant's virtual network.  
   
 ![](../../media/GRE-Tunneling-in-Windows-Server-Technical-Preview/GRE-.png)  
   
@@ -87,7 +87,7 @@ In this scenario, the single tenant gateway can be replaced by third-party hardw
 ![](../../media/GRE-Tunneling-in-Windows-Server-Technical-Preview/GRE-SharedResource.png)  
   
 ### <a name="BKMK_thirdparty"></a>Services of third party devices to tenants  
-This scenario can be used to integrate third party devices (such as hardware load balancers) into the tenant virtual network traffic flow. For example, traffic originating from an enterprise site passes through a S2S tunnel to the multitenant gateway. The traffic is routed to the load balancer over a GRE tunnel. The load balancer routes traffic to multiple virtual machines on the enterprise’s virtual network. The same thing happens for another tenant with potentially overlapping IP addresses in the virtual networks. The network traffic is isolated on the load balancer using VLANs, and is applicable to all layer 3 devices that support VLANs.  
+This scenario can be used to integrate third party devices (such as hardware load balancers) into the tenant virtual network traffic flow. For example, traffic originating from an enterprise site passes through a S2S tunnel to the multitenant gateway. The traffic is routed to the load balancer over a GRE tunnel. The load balancer routes traffic to multiple virtual machines on the enterprise's virtual network. The same thing happens for another tenant with potentially overlapping IP addresses in the virtual networks. The network traffic is isolated on the load balancer using VLANs, and is applicable to all layer 3 devices that support VLANs.  
   
 ![](../../media/GRE-Tunneling-in-Windows-Server-Technical-Preview/GREThirdParty.png)  
   

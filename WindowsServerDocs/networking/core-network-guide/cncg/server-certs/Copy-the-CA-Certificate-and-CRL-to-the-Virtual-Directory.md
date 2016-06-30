@@ -20,7 +20,7 @@ To perform this procedure you must be a member of **Domain Admins**.
   
 1.  On CA1, run Windows PowerShell as an Administrator, and then publish the CRL with the following command:  
   
-    - Type `certutil –crl`, and then press ENTER.  
+    - Type `certutil -crl`, and then press ENTER.  
   
     - To copy the CA certificate to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`, and then press ENTER.  
     - To copy the certificate revocation lists to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, and then press ENTER.  

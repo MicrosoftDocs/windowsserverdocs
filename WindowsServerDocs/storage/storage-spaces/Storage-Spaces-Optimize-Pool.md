@@ -32,7 +32,7 @@ The output of the Optimize-StoragePool command include a progress bar that measu
 You can monitor the progress of the optimize job with the following command:  
 
 ```  
-Get-StorageJob | ? Name –eq Optimize  
+Get-StorageJob | ? Name -eq Optimize  
 ```  
 
 ## Related Topics  
