@@ -28,15 +28,15 @@ Your choice to create a generation 1 or generation 2 virtual machine depends on 
   
 -   Generation 2 doesn't support the boot method you want to use.  
  
- For  more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](https://technet.microsoft.com/library/mt695680.aspx). 
+For  more information about what features are available with generation 2 virtual machines, see [Hyper-V feature compatibility by generation and guest](https://technet.microsoft.com/library/mt695680.aspx). 
   
 You can't change a virtual machine's generation after you've created it. So review the following sections in this article to make sure the generation you pick supports the operating system, boot method, and features you want to use.  
   
--   [Which guest operating systems are supported?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_OS)  
+- [Which guest operating systems are supported?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_OS)  
   
--   [How can I boot the virtual machine?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Boot)  
+- [How can I boot the virtual machine?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Boot)  
   
--   [What are the advantages of using generation 2 virtual machines?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Advantages) 
+- [What are the advantages of using generation 2 virtual machines?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_Advantages) 
 - [What's the difference in device support?](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_DeviceCompare)
 - [More about generation 2 virtual machines](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md#BKMK_More)
 
@@ -178,7 +178,7 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
   
  You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
  
- ## <a name="BKMK_DeviceCompare"></a> What's the difference in device support?  
+## <a name="BKMK_DeviceCompare"></a> What's the difference in device support?  
 The following table compares the devices available between generation 1 and generation 2 virtual machines.  
   
 |Generation 1 Device|Generation 2 Replacement|Generation 2 Enhancements|  
@@ -198,7 +198,7 @@ The following table compares the devices available between generation 1 and gene
 |Programmable interval timer (PIT)|No longer required|N/A|  
 |Super I/O device|No longer required|N/A|  
  
- ## <a name="BKMK_More"></a> More about generation 2 virtual machines
+## <a name="BKMK_More"></a> More about generation 2 virtual machines
 The following sections may answer some additional questions you have about generation 2 virtual machines. 
 ###  Attaching or adding a DVD drive
 
@@ -211,12 +211,13 @@ The following sections may answer some additional questions you have about gener
 - UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.   
 - We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they are compiled directly from the sources. If these applications are not appropriately digitally signed, you must disable Secure Boot for the virtual machine.
  
- ### Working with VHDX files
+### Working with VHDX files
  
 - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
 - We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.  
 - The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.  
 - A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
+
 ### Using IPv6 instead of IPv4
 By default, generation 2 virtual machines use IPv4. You can set a virtual machine to use IPv6 instead of IPv4 by using the [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:  
   
@@ -224,7 +225,7 @@ By default, generation 2 virtual machines use IPv4. You can set a virtual machin
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6  
 ```  
 
- ## <a name="BKMK_Debug"></a>Enable kernel debugging by using a COM port on a generation 2 virtual machine  
+## <a name="BKMK_Debug"></a>Enable kernel debugging by using a COM port on a generation 2 virtual machine  
 By default, COM ports are not visible in generation 2 virtual machines. You can configure COM ports by using Windows PowerShell or Windows Management Instrumentation (WMI).  
   
 To enable kernel debugging by using a COM port, follow these steps:  
