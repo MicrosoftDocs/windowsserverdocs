@@ -21,7 +21,7 @@ The following is a list of features and functionalities in Windows Server 2016 t
 The following features and functionalities have been removed from this release of Windows Server 2016. Applications, code, or usage that depend on these features will not function in this release unless you employ an alternate method.  
 
 > [!NOTE]  
-> If you are moving to Windows Server 2016 from a server release prior to Windows Server 2012 R2 or Windows Server 2012, you should also review [Features Removed or Deprecated in Windows Server 2012 R2](https://technet.microsoft.com/library/dn303411.aspx)and [Features Removed or Deprecated in Windows Server 2012](https://technet.microsoft.com/library/hh831568.aspx).  
+> If you are moving to Windows Server 2016 from a server release prior to Windows Server 2012 R2 or Windows Server 2012, you should also review [Features Removed or Deprecated in Windows Server 2012 R2](https://technet.microsoft.com/library/dn303411.aspx) and [Features Removed or Deprecated in Windows Server 2012](https://technet.microsoft.com/library/hh831568.aspx).  
 
 
 ### File server  

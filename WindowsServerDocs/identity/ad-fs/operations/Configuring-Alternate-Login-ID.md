@@ -111,7 +111,7 @@ The following performance counters have been added to measure the performance of
 
 The following are various error cases and corresponding impact on a user’s sign-in experience with events logged by AD FS:
 
-
+||||
 |-|-|-|
 |**Error Cases**|**Impact on Sign-in Experience**|**Event**|
 |Unable to get a value for SAMAccountName for the user object|Login failure|Event ID 364 with exception message MSIS8012: Unable to find samAccountName for the user: '{0}'.|
