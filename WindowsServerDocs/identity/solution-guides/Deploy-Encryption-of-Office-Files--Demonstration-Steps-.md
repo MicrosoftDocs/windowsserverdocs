@@ -52,8 +52,8 @@ In this scenario, youâ€™ll perform the following steps:
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-ADResourceProperty â€"Enabled:$true â€"Identity:"CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com"  
-Set-ADResourceProperty â€"Enabled:$true â€"Identity:"CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com"  
+Set-ADResourceProperty –Enabled:$true –Identity:"CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com"  
+Set-ADResourceProperty –Enabled:$true –Identity:"CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com" 
 ```  
   
 ## <a name="BKMK_2"></a>Step 2: Create classification rules  
@@ -176,7 +176,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
   
 ```  
 $fmjRmsEncryption = New-FSRMFmjAction -Type 'Rms' -RmsTemplate 'Contoso Finance Admin Only'  
-$fmjCondition1 = New-FSRMFmjCondition -Property 'PII_MS' -Condition 'Equal' â€"Value '5000'  
+$fmjCondition1 = New-FSRMFmjCondition -Property 'PII_MS' -Condition 'Equal' -Value '5000'  
 $date = get-date  
 $schedule = New-FsrmScheduledTask -Time $date -Weekly @('Sunday')    
 $fmj1=New-FSRMFileManagementJob -Name "High PII" -Description "Automatic RMS protection for high PII documents" -Namespace @('D:\Finance Documents') -Action $fmjRmsEncryption -Schedule $schedule -Continuous -Condition @($fmjCondition1)  
