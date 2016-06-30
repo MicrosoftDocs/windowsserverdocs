@@ -119,7 +119,7 @@ Alternatively, you can configure access-denied assistance individually on each f
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
   
 ```  
-Set-FSRMAdrSetting -Event "AccessDenied" ‚Ä"DisplayMessage ‚ÄúType the text that the user will see in the error message dialog box.‚Äù -Enabled:$true -AllowRequests:$true  
+Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the user will see in the error message dialog box." -Enabled:$true -AllowRequests:$true  
 ```  
   
 After you configure the access-denied assistance, you must enable it for all file types by using Group Policy.  
@@ -143,7 +143,7 @@ After you configure the access-denied assistance, you must enable it for all fil
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
 ```  
-Set-GPRegistryValue ‚Ä"Name ‚ÄúName of GPO‚Äù ‚Ä"key ‚ÄúHKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer‚Äù ‚Ä"ValueName EnableShellExecuteFileStreamCheck ‚Ä"Type DWORD ‚Ä"value 1  
+Set-GPRegistryValue -Name "Name of GPO"ù -key "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explore"ù -ValueName EnableShellExecuteFileStreamCheck -Type DWORD -value 1  
   
 ```  
   
@@ -182,7 +182,7 @@ You can also specify a separate access-denied message for each shared folder on 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
 ```  
-Set-FSRMMgmtProperty -Namespace "folder path‚Äù -Name "AccessDeniedMessage_MS" -Value ‚ÄúType the text that the user will see in the error message dialog box.‚Äù  
+Set-FSRMMgmtProperty -Namespace "folder path"ù -Name "AccessDeniedMessage_MS" -Value "Type the text that the user will see in the error message dialog box."ù  
 ```  
   
 ## <a name="BKMK_2"></a>Step 2: Configure the email notification settings  
@@ -211,7 +211,7 @@ You must configure the email notification settings on each file server that will
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
   
 ```  
-set-FSRMSetting -SMTPServer ‚Äúserver1‚Äù -AdminEmailAddress ‚Äúfileadmin@contoso.com‚Äù -FromEmailAddress ‚Äúfileadmin@contoso.com‚Äù  
+set-FSRMSetting -SMTPServer "server1"ù -AdminEmailAddress "fileadmin@contoso.com"ù -FromEmailAddress "fileadmin@contoso.com"ù  
 ```  
   
 ## <a name="BKMK_3"></a>Step 3: Verify that access-denied assistance is configured correctly  
