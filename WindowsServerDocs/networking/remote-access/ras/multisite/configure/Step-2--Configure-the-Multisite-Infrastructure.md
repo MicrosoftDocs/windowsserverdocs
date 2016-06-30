@@ -1,5 +1,5 @@
 ---
-title: Step 2: Configure the Multisite Infrastructure
+title: Step 2 Configure the Multisite Infrastructure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 author: coreyp
 ---
-# Step 2: Configure the Multisite Infrastructure
+# Step 2 Configure the Multisite Infrastructure
 
 >Applies To: Windows Server 2012 R2, Windows Server 2012
 

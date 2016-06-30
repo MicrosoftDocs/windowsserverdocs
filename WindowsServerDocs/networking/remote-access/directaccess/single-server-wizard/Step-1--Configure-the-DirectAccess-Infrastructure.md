@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
-author: vhorne
+author: coreyp
 ---
-# Step 1: Configure the DirectAccess Infrastructure
+# Step 1 Configure the DirectAccess Infrastructure
 
 >Applies To: Windows Server Technical Preview
 

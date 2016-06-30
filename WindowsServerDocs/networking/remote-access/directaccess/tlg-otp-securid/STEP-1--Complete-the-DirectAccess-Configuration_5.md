@@ -1,5 +1,5 @@
 ---
-title: STEP 1: Complete the DirectAccess Configuration_5
+title: STEP 1 Complete the DirectAccess Configuration
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: a815bc0d-4b4f-432e-85f0-23b2cc67d827
 author: coreyp
 ---
-# STEP 1: Complete the DirectAccess Configuration_5
+# STEP 1 Complete the DirectAccess Configuration
 
 >Applies To: Windows Server Technical Preview
 

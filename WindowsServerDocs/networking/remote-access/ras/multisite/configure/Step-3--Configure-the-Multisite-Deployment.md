@@ -1,5 +1,5 @@
 ---
-title: Step 3: Configure the Multisite Deployment
+title: Step 3 Configure the Multisite Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
 author: coreyp
 ---
-# Step 3: Configure the Multisite Deployment
+# Step 3 Configure the Multisite Deployment
 
 >Applies To: Windows Server Technical Preview
 

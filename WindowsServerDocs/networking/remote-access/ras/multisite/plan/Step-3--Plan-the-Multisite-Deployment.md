@@ -1,5 +1,5 @@
 ---
-title: Step 3: Plan the Multisite Deployment
+title: Step 3 Plan the Multisite Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 author: coreyp
 ---
-# Step 3: Plan the Multisite Deployment
+# Step 3 Plan the Multisite Deployment
 
 >Applies To: Windows Server Technical Preview
 
@@ -156,11 +156,11 @@ In a multisite deployment symmetric routing is enforced using Teredo and IP-HTTP
   
 3.  For each entry point there should be one to three routes in the internal network:  
   
-    1.  IP-HTTPS prefix—This prefix is chosen by the administrator in the Add an Entry Point wizard.  
+    1.  IP-HTTPS prefixâ€”This prefix is chosen by the administrator in the Add an Entry Point wizard.  
   
-    2.  VPN IPv6 prefix (optional)—This prefix can be chosen after enabling VPN for an entry point  
+    2.  VPN IPv6 prefix (optional)â€”This prefix can be chosen after enabling VPN for an entry point  
   
-    3.  Teredo prefix (optional)—This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
+    3.  Teredo prefix (optional)â€”This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
   
         1.  www.xxx.yyy.zzz  
   

@@ -1,5 +1,5 @@
 ---
-title: STEP 7: Install and Configure 2-APP1
+title: STEP 7 Install and Configure 2-APP1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
 author: coreyp
 ---
-# STEP 7: Install and Configure 2-APP1
+# STEP 7 Install and Configure 2-APP1
 
 >Applies To: Windows Server Technical Preview
 

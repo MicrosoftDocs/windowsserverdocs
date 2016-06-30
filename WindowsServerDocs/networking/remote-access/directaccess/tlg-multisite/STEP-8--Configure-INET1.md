@@ -1,5 +1,5 @@
 ---
-title: STEP 8: Configure INET1
+title: STEP 8 Configure INET1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
-author: coreyp
+author coreyp
 ---
 # STEP 8: Configure INET1
 
