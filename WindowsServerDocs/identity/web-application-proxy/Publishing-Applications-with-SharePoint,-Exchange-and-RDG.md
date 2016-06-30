@@ -62,15 +62,9 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
     You can also  publish the two virtual directories individually e.g.https://rdg.contoso.com/rdweb/ and https://rdg.contoso.com/rpc/.  
   
-<<<<<<< HEAD
 3.  If the RD Web Access and the RD Gateway are hosted on separate RDG servers, you have to publish the two virtual directories individually. You can use the same or different external FQDN's e.g. https://rdweb.contoso.com/rdweb/ and https://gateway.contoso.com/rpc/.  
   
 4.  If the External and Internal FQDN's are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server  
-=======
-3.  If the RD Web Access and the RD Gateway are hosted on separate RDG servers, you have to publish the two virtual directories individually. You can use the same or different external FQDN�s e.g. https://rdweb.contoso.com/rdweb/ and https://gateway.contoso.com/rpc/.  
-  
-4.  If the External and Internal FQDN�s are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     ```  
     Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true  
@@ -108,11 +102,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
     It is possible to publish /rdweb and /rpc as separate applications and even to use different published servers. You just need to ensure that you publish both using the same Relying Party Trust as the Web Application Proxy token is issued for the Relying Party Trust and is therefore valid across applications published with the same Relying Party Trust.  
   
-<<<<<<< HEAD
 5.  If the External and Internal FQDN's are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server:  
-=======
-5.  If the External and Internal FQDN�s are different you should disable request header translation on the RDWeb publishing rule. This can be done by running the following PowerShell script on the Web Application Proxy server:  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
   
     ```  
     Get-WebApplicationProxyApplication applicationname | Set-WebApplicationProxyApplication -DisableTranslateUrlInRequestHeaders:$true  
