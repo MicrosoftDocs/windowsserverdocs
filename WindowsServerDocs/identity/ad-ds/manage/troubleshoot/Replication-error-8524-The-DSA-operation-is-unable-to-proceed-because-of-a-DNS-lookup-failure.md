@@ -3,7 +3,7 @@ title: Replication error 8524 The DSA operation is unable to proceed because of 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -375,7 +375,7 @@ Last success @ YYYY-MM-DD HH:MM:SS.
                   <para>Use NSLOOKUP to verify that all of the DNS Servers that the source DC points to can resolve queries for the DNS zones in question.</para>
                   <para>Run IPCONFIG /ALL on the console of the source DC</para>
                   <code>c:\&gt;ipconfig /all
-…
+ï¿½
 DNS Servers . . . . . . . . . . . : 192.0.2.99 &lt;- Primary DNS Server IP&gt;
                                     192.0.2.101&lt;- Secondary DNS Server IP&gt; 
 </code>
@@ -397,7 +397,7 @@ c:\&gt;nslookup -type=soa _msdcs.contoso.com 192.0.2.101</code>
               <para>Use step 1 from "Check Active Directory Name Resolution using PING" to locate the current CNAME of the source DC.</para>
               <para>Run <embeddedLabel>ipconfig /all</embeddedLabel> on the console of the source DC to determine which DNS Servers the source DC points to name resolution.</para>
               <code>c:\&gt;ipconfig /all
-…
+ï¿½
 DNS Servers . . . . . . . . . . . : 192.0.2.99 &lt;- Primary DNS Server IP&gt;
                                     192.0.2.101&lt;- Secondary DNS Server IP&gt; 
 </code>
@@ -437,7 +437,7 @@ c:\&gt;nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.
               <para>Verify that the source DC has registered its host records</para>
               <para>From the console of the source DC, run <embeddedLabel>ipconfig /all</embeddedLabel> to determine which DNS Servers the source DC points to name resolution:</para>
               <code>c:\&gt;ipconfig /all
-…
+ï¿½
 DNS Servers . . . . . . . . . . . : 192.0.2.99 &lt;- Primary DNS Server IP&gt;
                                     192.0.2.101&lt;- Secondary DNS Server IP&gt; 
 </code>
@@ -495,7 +495,7 @@ c:\&gt;nslookup -type=A+AAAA contoso-dc1.contoso.com 192.0.2.101
                   <para>Use NSLOOKUP to verify that all of the DNS Servers that the source DC points to can resolve queries for the DNS zones in question.</para>
                   <para>Run IPCONFIG /ALL on the console of the source DC</para>
                   <code>c:\&gt;ipconfig /all
-…
+ï¿½
 DNS Servers . . . . . . . . . . . : 192.0.2.99 &lt;- Primary DNS Server IP&gt;
                                     192.0.2.101&lt;- Secondary DNS Server IP&gt; 
 </code>
@@ -517,7 +517,7 @@ c:\&gt;nslookup -type=soa _msdcs.contoso.com 192.0.2.101</code>
               <para>Verify that the DNS Server used by the destination DC can resolve the source DCs CNAME and HOST records</para>
               <para>From the console of the destination DC, run "ipconfig /all" to determine which DNS Servers that destination DC points to for name resolution:</para>
               <code>c:\&gt;ipconfig /all
-…
+ï¿½
 DNS Servers . . . . . . . . . . . : 192.0.2.102 &lt;- Primary DNS Server IP&gt;
                                     192.0.2.103&lt;- Secondary DNS Server IP&gt; 
 </code>

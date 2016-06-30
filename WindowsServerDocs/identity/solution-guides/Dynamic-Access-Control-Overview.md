@@ -4,7 +4,7 @@ description: " "
 ms.custom: AD
 ms.prod: windows-server-threshold
 manager: femila
-ms.service: active-directory
+ms.service: 
 ms.technology: 
 	-active-directory-domain-services
 ms.tgt_pltfrm: na

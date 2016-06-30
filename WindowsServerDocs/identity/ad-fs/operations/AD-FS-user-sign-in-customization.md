@@ -3,7 +3,7 @@ title: AD FS user sign-in customization
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -25,7 +25,7 @@ For general global settings you can refer to [Customizing the AD FS Sign-in Page
 ## Pre-requisites  
 The following pre-requisites are required before attempting the procedures outlined in this document.  
   
--   •AD FS in Windows Server 2016 TP4 or later  
+-   ï¿½AD FS in Windows Server 2016 TP4 or later  
   
 ## Configure AD FS Relying parties  
 Per relying party sign-in web elements and themes can be configured using the PowerShell examples below:  
@@ -34,18 +34,18 @@ Per relying party sign-in web elements and themes can be configured using the Po
   
 ```  
 PS C:\>Set-AdfsRelyingPartyWebContent  
-    -TargetRelyingPartyName “<RP trust Name>”  
-    -CompanyName “This text appears in place of the federation service display name”  
-    -OrganizationalNameDescriptionText “This text appears right below the company name”  
-    -SignInPageDescription “This text appears below the credential prompt”  
+    -TargetRelyingPartyName ï¿½<RP trust Name>ï¿½  
+    -CompanyName ï¿½This text appears in place of the federation service display nameï¿½  
+    -OrganizationalNameDescriptionText ï¿½This text appears right below the company nameï¿½  
+    -SignInPageDescription ï¿½This text appears below the credential promptï¿½  
 ```  
   
 ### Customize company name, logo, and image  
   
 ```  
 PS C:\>Set-AdfsRelyingPartyWebTheme  
-    -TargetRelyingPartyName “<RP trust Name>”  
-    -Logo @{path=“C:\Images\applogo.png”}  
+    -TargetRelyingPartyName ï¿½<RP trust Name>ï¿½  
+    -Logo @{path=ï¿½C:\Images\applogo.pngï¿½}  
     -Illustration @{path="C:\Images\appillustration.jpg"}  
 ```  
   
@@ -53,7 +53,7 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
   
 ```  
 PS C:\>Set-AdfsRelyingPartyWebTheme  
-    -TargetRelyingPartyName “<RP trust Name>”  
+    -TargetRelyingPartyName ï¿½<RP trust Name>ï¿½  
     -OnLoadScriptPath @{path="c:\scripts\adfstheme\onload.js"}  
 ```  
   
@@ -69,10 +69,10 @@ To assign a custom theme per RP use the following procedure:
 <code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code>  
 2.  Export the theme for customization  
 <code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
-3. Customize theme files (images, css, onload.js) – in your favorite editor or replace the file  
+3. Customize theme files (images, css, onload.js) ï¿½ in your favorite editor or replace the file  
 4. Import customized files from the file system to AD FS (targeting the new theme)  
 <code>Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}</code>  
-5. Apply the new, customized theme to the specific RP (or RP’s)  
+5. Apply the new, customized theme to the specific RP (or RPï¿½s)  
 <code>Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme</code>  
   
 ## Home Realm Discovery  
@@ -86,6 +86,6 @@ Users can sign in to Active Directory Federation Services (AD FS)-enabled applic
   
 You may additionally want to customize the AD FS sign-in page to give end users some hint about the alternate login ID. You can do it by adding the customized sign-in page description for more information see [Customizing the AD FS Sign-in Pages.](Chttps://technet.microsoft.com/library/dn280950.aspx)   
   
-You can also do this by customizing “Sign in with organizational account” string above username field.  For information on this see [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).  
+You can also do this by customizing ï¿½Sign in with organizational accountï¿½ string above username field.  For information on this see [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).  
 
 
