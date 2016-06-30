@@ -36,7 +36,7 @@ In this section:
   
 -   **Built in** - LIS are included as part of this Linux distribution. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
   
--   **v** - Feature available  
+-   **√** - Feature available  
   
 -   (*blank*) - Feature not available  
   

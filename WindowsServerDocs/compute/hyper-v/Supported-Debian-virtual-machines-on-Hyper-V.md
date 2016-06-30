@@ -22,7 +22,7 @@ The following feature distribution map indicates the features that are present i
   
 -   **Built in** - LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution so do not install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
   
--   **v** - Feature available  
+-   **√** - Feature available  
   
 -   (*blank*) - Feature not available  
   
@@ -38,9 +38,9 @@ The following feature distribution map indicates the features that are present i
 |vRSS|2016, 2012 R2|||  
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|||  
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|  
-|VHDX resize|2016, 2012 R2|v Note 1|v Note 1|  
+|VHDX resize|2016, 2012 R2|**√** Note 1|**√** Note 1|  
 |Virtual Fibre Channel|2016, 2012 R2|||  
-|Live virtual machine backup|2016, 2012 R2|v Note 4,5|v Note 4|  
+|Live virtual machine backup|2016, 2012 R2|**√** Note 4,5|**√** Note 4|  
 |TRIM support|2016, 2012 R2|||  
 |SCSI WWN|2016, 2012 R2|||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
@@ -51,10 +51,10 @@ The following feature distribution map indicates the features that are present i
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
 |Hyper-V-specific  video device|2016, 2012 R2, 2012, 2008 R2|**√**||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|  
-|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|v Note 4||  
+|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|**√** Note 4||  
 |Non-Maskable Interrupt|2016, 2012 R2|**√**|**√**|  
 |PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|**√**|**√**|  
-|File copy from host to guest|2016, 2012 R2|v Note 4||  
+|File copy from host to guest|2016, 2012 R2|**√** Note 4||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||  
 |Hyper-V Sockets|2016|||  
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|  

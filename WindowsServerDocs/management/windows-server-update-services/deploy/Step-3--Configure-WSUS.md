@@ -1,10 +1,10 @@
 ---
-title: Step 3: Configure WSUS
+title: Step 3 - Configure WSUS
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
@@ -190,7 +190,7 @@ This procedure assumes that you are using the WSUS Configuration Wizard, which a
 
 9. When it connects, click **Next** to proceed.
 
-10. On the **Choose Languages** page, you have the option to select the languages from which WSUS will receive updates—all languages or a subset of languages. Selecting a subset of languages will save disk space, but it is important to choose all of the languages that are needed by all the clients of this WSUS server. If you choose to get updates only for specific languages, select **Download updates only in these languages**, and then select the languages for which you want updates; otherwise, leave the default selection.
+10. On the **Choose Languages** page, you have the option to select the languages from which WSUS will receive updatesï¿½all languages or a subset of languages. Selecting a subset of languages will save disk space, but it is important to choose all of the languages that are needed by all the clients of this WSUS server. If you choose to get updates only for specific languages, select **Download updates only in these languages**, and then select the languages for which you want updates; otherwise, leave the default selection.
 
     > [!WARNING]
     > If you select the option **Download updates only in these languages**, and this server has a downstream WSUS server connected to it, this option will force the downstream server to also use only the selected languages.
@@ -449,6 +449,3 @@ WSUS has the ability to publish custom update packages to update Microsoft and n
 -   [Step 2: Install the WSUS Server Role](Step-2--Install-the-WSUS-Server-Role.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
-
-
-
