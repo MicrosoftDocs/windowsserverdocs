@@ -44,7 +44,7 @@ Consider how you want to set up the following:
     >   
     > **Virtual machine migration operation failed at migration Source.**  
     >   
-    > **Failed to establish a connection with host** *computer name*: **No credentials are available in the security package 0x8009030E.**  
+    > **Failed to establish a connection with host**  *computer name*: **No credentials are available in the security package 0x8009030E.**  
   
 -   **Performance**: Does it makes sense to configure performance options? These options can reduce network and CPU usage, as well as make live migrations go faster. Consider your requirements and your infrastructure, and test different configurations to help you decide. The options are described at the end of step 2.  
   
