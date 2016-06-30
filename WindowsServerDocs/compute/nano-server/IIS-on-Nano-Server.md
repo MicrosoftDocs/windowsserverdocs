@@ -353,7 +353,7 @@ Each feature of IIS exists as a set of configuration elements. This appendix lis
 **Default document**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="DefaultDocumentModule" image="%windir%\System32\inetsrv\defdoc.dll" />`|  
 |`<modules>`|`<add name="DefaultDocumentModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DefaultDocumentModule" resourceType="EiSecther" requireAccess="Read" />`|  
@@ -364,7 +364,7 @@ The `StaticFile <handlers>` entry might already be present; if so, just add "Def
 **Directory browsing**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|   
 |`<globalModules>`|`<add name="DirectoryListingModule" image="%windir%\System32\inetsrv\dirlist.dll" />`|  
 |`<modules>`|`<add name="DirectoryListingModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DirectoryListingModule" resourceType="Either" requireAccess="Read" />`|  
@@ -374,7 +374,7 @@ The `StaticFile <handlers>` entry might already be present; if so, just add "Dir
 **HTTP errors**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|   
 |`<globalModules>`|`<add name="CustomErrorModule" image="%windir%\System32\inetsrv\custerr.dll" />`|  
 |`<modules>`|`<add name="CustomErrorModule" lockItem="true" />`|  
 |`<httpErrors>`|`<httpErrors lockAttributes="allowAbsolutePathsWhenDelegated,defaultPath"><br />    <error statusCode="401"    prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="401.htm" ><br />    <error statusCode="403" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="403.htm" /><br />    <error statusCode="404" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="404.htm" /><br />    <error statusCode="405" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="405.htm" /><br />    <error statusCode="406" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="406.htm" /><br />    <error statusCode="412" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="412.htm" /><br />    <error statusCode="500" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="500.htm" /><br />    <error statusCode="501" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="501.htm" /><br />    <error statusCode="502" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="502.htm" /><br /></httpErrors>`|  
@@ -382,7 +382,7 @@ The `StaticFile <handlers>` entry might already be present; if so, just add "Dir
 **Static content**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="StaticFileModule" image="%windir%\System32\inetsrv\static.dll" />`|  
 |`<modules>`|`<add name="StaticFileModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="Either" requireAccess="Read" />`|  
@@ -392,7 +392,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **HTTP redirection**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|    
 |`<globalModules>`|`<add name="HttpRedirectionModule" image="%windir%\System32\inetsrv\redirect.dll" />`|  
 |`<modules>`|`<add name="HttpRedirectionModule" lockItem="true" />`|  
 |`<httpRedirect>`|`<httpRedirect enabled="false" />`|  
@@ -401,7 +401,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **HTTP logging**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|   
 |`<globalModules>`|`<add name="HttpLoggingModule" image="%windir%\System32\inetsrv\loghttp.dll" />`|  
 |`<modules>`|`<add name="HttpLoggingModule" lockItem="true" />`|  
 |`<httpLogging>`|`<httpLogging dontLog="false" />`|  
@@ -409,20 +409,20 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Custom logging**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="CustomLoggingModule" image="%windir%\System32\inetsrv\logcust.dll" />`|  
 |`<modules>`|`<add name="CustomLoggingModule" lockItem="true" />`|  
 
 **Request monitor**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="RequestMonitorModule" image="%windir%\System32\inetsrv\iisreqs.dll" />`|  
 
 **Tracing**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="TracingModule" image="%windir%\System32\inetsrv\iisetw.dll" \/><br /><add name="FailedRequestsTracingModule" image="%windir%\System32\inetsrv\iisfreb.dll" />`|  
 |`<modules>`|`<add name="FailedRequestsTracingModule" lockItem="true" />`|  
 |`<traceProviderDefinitions>`|`<traceProviderDefinitions><br />    <add name="WWW Server" guid\="{3a2a4e84-4c21-4981-ae10-3fda0d9b0f83}"><br />        <areas><br />            <clear /><br />            <add name="Authentication" value="2" /><br />            <add name="Security" value="4" /><br />            <add name="Filter" value="8" /><br />            <add name="StaticFile" value="16" /><br />            <add name="CGI" value="32" /><br />            <add name="Compression" value="64" /><br />            <add name="Cache" value="128" /><br />            <add name="RequestNotifications" value="256" /><br />            <add name="Module" value="512" /><br />            <add name="FastCGI" value="4096" /><br />            <add name="WebSocket" value="16384" /><br />        </areas><br />    </add><br />    <add name="ISAPI Extension" guid="{a1c2040e-8840-4c31-ba11-9871031a19ea}"><br />        <areas><br />            <clear /><br />        </areas><br />    </add><br /></traceProviderDefinitions>`|  
@@ -431,7 +431,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Static content compression**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="StaticCompressionModule" image="%windir%\System32\inetsrv\compstat.dll" />`|  
 |`<modules>`|`<add name="StaticCompressionModule" lockItem="true" />`|  
 |`<httpCompression>`|`<httpCompression directory="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files"><br />    <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" /><br />   <staticTypes><br />        <add mimeType="text/*" enabled="true" /><br />        <add mimeType="message/*" enabled="true" /><br />        <add mimeType="application/javascript" enabled="true" \/><br />        <add mimeType="application/atom+xml" enabled="true" /><br />        <add mimeType="application/xaml+xml" enabled="true" /><br />        <add mimeType="\*\*" enabled="false" /><br />    </staticTypes><br /></httpCompression>`|  
@@ -448,7 +448,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Request filtering**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`|  
 |`<modules>`|`<add name="RequestFilteringModule" lockItem="true" />`|  
 |`<requestFiltering>|`<requestFiltering><br />    <fileExtensions allowUnlisted="true" applyToWebDAV="true" /><br />    <verbs allowUnlisted="true" applyToWebDAV="true" /><br />    <hiddenSegments applyToWebDAV="true"><br />        <add segment="web.config" /><br />    </hiddenSegments><br /></requestFiltering>`|  
@@ -456,7 +456,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Basic authentication**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|   
 |`<globalModules>`|`<add name="BasicAuthenticationModule" image="%windir%\System32\inetsrv\authbas.dll" />`|  
 |`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
 |`<basicAuthentication>`|`<basicAuthentication enabled="false" />`|  
@@ -464,7 +464,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Client certificate mapping authentication**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="CertificateMappingAuthentication" image="%windir%\System32\inetsrv\authcert.dll" />`|  
 |`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" />`|  
 |`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
@@ -472,7 +472,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Digest authentication**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="DigestAuthenticationModule" image="%windir%\System32\inetsrv\authmd5.dll" />`|  
 |`<modules>`|`<add name="DigestAuthenticationModule" lockItem="true" />`|  
 |`<other>`|`<digestAuthentication enabled="false" />`|  
@@ -480,7 +480,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **IIS client certificate mapping authentication**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|   
 |`<globalModules>`|`<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />`|  
 |`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>`|  
 |`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
@@ -488,7 +488,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **IP and domain restrictions**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|```<add name="IpRestrictionModule" image="%windir%\System32\inetsrv\iprestr.dll" /><br /><add name="DynamicIpRestrictionModule" image="%windir%\System32\inetsrv\diprestr.dll" />```|  
 |`<modules>`|`<add name="IpRestrictionModule" lockItem="true" \/><br /><add name="DynamicIpRestrictionModule" lockItem="true" \/>`|  
 |`<ipSecurity>`|`<ipSecurity allowUnlisted="true" />`|  
@@ -496,7 +496,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **URL authorization**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="UrlAuthorizationModule" image="%windir%\System32\inetsrv\urlauthz.dll" />`|  
 |`<modules>`|`<add name="UrlAuthorizationModule" lockItem="true" />`|  
 |`<authorization>`|`<authorization><br />    <add accessType="Allow" users="*" /><br /></authorization>`|  
@@ -504,7 +504,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Windows authentication**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|    
 |`<globalModules>`|`<add name="WindowsAuthenticationModule" image="%windir%\System32\inetsrv\authsspi.dll" />`|  
 |`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
 |`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\/providers><br /><\/windowsAuthentication>`|  
@@ -513,14 +513,14 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **Application initialization**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="ApplicationInitializationModule" image="%windir%\System32\inetsrv\warmup.dll" />`|  
 |`<modules>`|`<add name="ApplicationInitializationModule" lockItem="true" />`|  
 
 **CGI**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|`<add name="CgiModule" image="%windir%\System32\inetsrv\cgi.dll" /><br /><add name="FastCgiModule" image="%windir%\System32\inetsrv\iisfcgi.dll" />`|  
 |`<modules>`|`<add name="CgiModule" lockItem="true" /><br /><add name="FastCgiModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="CGI-exe" path="*.exe" verb="\*" modules="CgiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />`|  
@@ -528,7 +528,7 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **ISAPI extensions**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|    
 |`<globalModules>`|`<add name="IsapiModule" image="%windir%\System32\inetsrv\isapi.dll" />`|  
 |`<modules>`|`<add name="IsapiModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="ISAPI-dll" path="*.dll" verb="*" modules="IsapiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />`|  
@@ -536,14 +536,14 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **ISAPI filters**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|    
 |`<globalModules>`|`<add name="IsapiFilterModule" image="%windir%\System32\inetsrv\filter.dll" />`|  
 |`<modules>`|`<add name="IsapiFilterModule" lockItem="true" />`|  
 
 **Server-side includes**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|  
 |`<globalModules>`|<`add name="ServerSideIncludeModule" image="%windir%\System32\inetsrv\iis_ssi.dll" />`|  
 |`<modules>`|`<add name="ServerSideIncludeModule" lockItem="true" />`|  
 |`<handlers>`|`<add name="SSINC-stm" path="*.stm" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" \/><br /><add name="SSINC-shtm" path="*.shtm" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" /><br /><add name="SSINC-shtml" path="*.shtml" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" />`|  
@@ -552,6 +552,6 @@ The `StaticFile \<handlers>` entry might already be present; if so, just add "St
 **WebSocket protocol**  
 
 |Section|Configuration elements|  
-|-----------|--------------------------|  
+|----------------|--------------------------|    
 |`<globalModules>`|`<add name="WebSocketModule" image="%windir%\System32\inetsrv\iiswsock.dll" />`|  
 |`<modules>`|`<add name="WebSocketModule" lockItem="true" />`|  

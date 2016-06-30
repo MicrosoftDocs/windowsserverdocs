@@ -40,10 +40,9 @@ Link  |Description
 [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded%20Virtual%20Machines%20in%20Windows%20Server.htm)  |  This video walkthrough shows how the Host Guardian Service, a new role available in Windows Server 2016 Technical Preview, enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.         
 [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](http://channel9.msdn.com/Events/Ignite/2015/BRK3457)|This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Guardian Server role to enable shielded VMs.     
 [Guarded Fabric Deployment Guide](http://go.microsoft.com/fwlink/?LinkId=708624) |This guide provides installation and validation information for Windows Server 2016 Technical Preview and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.  
-
 [Shielded VM and Guarded Fabric Operations Guide](http://go.microsoft.com/fwlink/?LinkId=708320) |This guide provides best practices and recommendations for how to configure your Shielded VM environment, including information specific to Guarded Hosts and tenants.  
-|[Shielded VM and Guarded Fabric Troubleshooting Guide](http://go.microsoft.com/fwlink/?LinkId=708321)|This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.  
-|[Shielded VM Article](http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016)|This white paper provides an overview of how shielded VMs provide increase overall security to prevent tampering.  
+[Shielded VM and Guarded Fabric Troubleshooting Guide](http://go.microsoft.com/fwlink/?LinkId=708321)|This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.  
+[Shielded VM Article](http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016)|This white paper provides an overview of how shielded VMs provide increase overall security to prevent tampering.  
 ## Privilged Access Management  
 
 
