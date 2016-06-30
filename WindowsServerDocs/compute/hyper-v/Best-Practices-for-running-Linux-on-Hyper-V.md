@@ -24,7 +24,7 @@ Some Linux file systems may consume significant amounts of real disk space even 
 -   When creating the VHDX, use 1MB BlockSizeBytes (from the default 32MB) in PowerShell, for example:  
   
     ```  
-    PS > New-VHD –Path C:\MyVHDs\test.vhdx –SizeBytes 127GB –Dynamic –BlockSizeBytes 1MB  
+    PS > New-VHD -Path C:\MyVHDs\test.vhdx -SizeBytes 127GB -Dynamic -BlockSizeBytes 1MB  
     ```  
   
 -   The ext4 format is preferred to ext3 because ext4 is more space efficient than ext3 when used with dynamic VHDX files.  
@@ -32,11 +32,11 @@ Some Linux file systems may consume significant amounts of real disk space even 
 -   When creating the filesystem specify the number of groups to be 4096, for example:  
   
     ```  
-    # mkfs.ext4 –G 4096 /dev/sdX1  
+    # mkfs.ext4 -G 4096 /dev/sdX1  
     ```  
   
 ## Grub Menu Timeout on Generation 2 Virtual Machines  
-Because of legacy hardware being removed from emulation in Generation 2 virtual machines, the grub menu countdown timer counts down too quickly for the grub menu to be displayed, immediately loading the default entry. Until grub is fixed to use the EFI-supported timer, modify **/boot/grub/grub.conf**, /**etc/default/grub**, or equivalent to have “timeout=100000” instead of the default “timeout=5”.  
+Because of legacy hardware being removed from emulation in Generation 2 virtual machines, the grub menu countdown timer counts down too quickly for the grub menu to be displayed, immediately loading the default entry. Until grub is fixed to use the EFI-supported timer, modify **/boot/grub/grub.conf**, /**etc/default/grub**, or equivalent to have "timeout=100000" instead of the default "timeout=5".  
   
 ## PxE Boot on Generation 2 Virtual Machines  
 Because the PIT timer is not present in Generation 2 Virtual Machines, network connections to the PxE TFTP server can be prematurely terminated and prevent the bootloader from reading Grub configuration and loading a kernel from the server.  
@@ -47,12 +47,12 @@ On Linux distributions other than RHEL 6.x, similar steps can be followed to con
   
 Additionally, on RHEL/CentOS 6.6 keyboard and mouse input will not work with the pre-install kernel which prevents specifying installation options in the menu. A serial console must be configured to allow choosing installation options.  
   
--   In the **efidefault** file on the PxE server, add the following kernel parameter **“console=ttyS1”**  
+-   In the **efidefault** file on the PxE server, add the following kernel parameter **"console=ttyS1"**  
   
 -   On the VM in Hyper-V, setup a COM port using this PowerShell cmdlet:  
   
     ```  
-    Set-VMComPort –VMName <Name> -Number 2 –Path \\.\pipe\dbg1  
+    Set-VMComPort -VMName <Name> -Number 2 -Path \\.\pipe\dbg1  
     ```  
   
 Specifying a kickstart file to the pre-install kernel would also avoid the need for keyboard and mouse input during installation.  
@@ -61,12 +61,12 @@ Specifying a kickstart file to the pre-install kernel would also avoid the need 
 Linux virtual machines that will be deployed using failover clustering should be configured with a static media access control (MAC) address for each virtual network adapter. In some versions of Linux, the networking configuration may be lost after failover because a new MAC address is assigned to the virtual network adapter. To avoid losing the network configuration, ensure that each virtual network adapter has a static MAC address. You can configure the MAC address by editing the settings of the virtual machine in Hyper-V Manager or Failover Cluster Manager.  
   
 ## Use Hyper-V-specific network adapters, not the legacy network adapter.  
-Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific network card with enhanced performance. If both legacy and Hyper-V-specific network adapters are attached to a virtual machine, the network names in the output of **ifconfig –a** might show random values such as **_tmp12000801310**. To avoid this issue, remove all legacy network adapters when using Hyper-V-specific network adapters in a Linux virtual machine.  
+Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific network card with enhanced performance. If both legacy and Hyper-V-specific network adapters are attached to a virtual machine, the network names in the output of **ifconfig -a** might show random values such as **_tmp12000801310**. To avoid this issue, remove all legacy network adapters when using Hyper-V-specific network adapters in a Linux virtual machine.  
   
 ## Use I/O scheduler NOOP for better disk I/O performance.  
-The Linux kernel has four different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader’s configuration (/etc/grub.conf, for example), add **elevator=noop** to the kernel parameters, and then restart.  
+The Linux kernel has four different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add **elevator=noop** to the kernel parameters, and then restart.  
   
-## Add “numa=off” if the Linux virtual machine has more than 7 virtual processors or more than 30 GB RAM.  
+## Add "numa=off" if the Linux virtual machine has more than 7 virtual processors or more than 30 GB RAM.  
 Linux virtual machines configured to use more than 7 virtual processors should add **numa=off** to the GRUB boot.cfg to work around a known issue in the 2.6.x Linux kernels. Linux virtual machines configured to use more than 30 GB RAM should also add **numa=off** to the GRUB boot.cfg.  
   
 ## Reserve more memory for kdump  
