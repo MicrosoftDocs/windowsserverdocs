@@ -3,7 +3,7 @@ title: Designing the Logical Structure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -19,7 +19,7 @@ Active Directory Domain Services (AD DS) enables organizations to create a scala
   
 A well-designed Active Directory logical structure provides the following benefits:  
   
--   Simplified management of Microsoft® Windows®–based networks that contain large numbers of objects  
+-   Simplified management of Microsoftï¿½ Windowsï¿½ï¿½based networks that contain large numbers of objects  
   
 -   A consolidated domain structure and reduced administration costs  
   

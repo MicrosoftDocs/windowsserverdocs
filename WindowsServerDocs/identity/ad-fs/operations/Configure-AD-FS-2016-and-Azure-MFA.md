@@ -3,15 +3,15 @@ title: Configure AD FS 2016 and Azure MFA
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3b7d2ea8-9a9d-4e0a-9203-c5059e3034d7
-author: Femila
----
+author: billmath
+
 # Configure AD FS 2016 and Azure MFA
 
 >Applies To: Windows Server Technical Preview
@@ -45,12 +45,12 @@ In order to complete configuration for Azure MFA for AD FS, you need to configur
 ### Step 1: Generate a certificate for Azure MFA on each AD FS server using the `New-AdfsAzureMfaTenantCertificate` cmdlet.   
 The first thing you need to do is generate a certificate for Azure MFA to use.  This can be done using PowerShell.  The certificate generated can be found in the local machines certificate store, and it is marked with a subject name containing the TenantID for your Azure AD directory.    
   
-![ADFS_AzureMFA3media/ADFS_AzureMFA3.png)  
+![](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)  
   
 Note that TenantID is the name of your directory in Azure AD.  Use the following PowerShell cmdlet to generate the new certificate.  
     `$certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>`  
       
-![ADFS_AzureMFA1media/ADFS_AzureMFA1.PNG)  
+![](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)  
   
 ### Step 2: Add the new credentials to Azure Multi-Factor Auth Client SPN   
 In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the SPN for the Azure Multi-Factor Auth Client. The certificates generated using the `New-AdfsAzureMFaTenantCertificate` cmdlet will serve as these credentials. Do the following using PowerShell to add the new credentials to the Azure Multi-Factor Auth Client SPN.  
@@ -62,7 +62,7 @@ In order to enable the AD FS servers to communicate with the Azure Multi-Factor 
     `$certX509 = New-Object.System.Security.Cryptography.X509Certificates.X509Certificate`  
     `$certX509.Import([System.Convert]::FromBase64String($certBase64))`  
       
-![ADFS_AzureMFA2media/ADFS_AzureMFA2.PNG)  
+![](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA2.PNG)  
   
 2. **Set the certificate as the new credential against the Azure Multi-Factor Auth Client**  
     `New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64 -StartDate $certX509.GetEffectiveDateString() -EndDate $certX509.GetExpirationDateString()`  
@@ -81,10 +81,10 @@ This cmdlet needs to be executed only once for an AD FS farm.  Use PowerShell to
   
     Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720  
       
-![ADFS_AzureMFA5media/ADFS_AzureMFA5.png)  
+![](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)  
   
 After this, you will see that Azure MFA is available as a primary authentication method for intranet and extranet use.    
   
-![ADFS_AzureMFA6media/ADFS_AzureMFA6.png)  
+![](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)  
 
 

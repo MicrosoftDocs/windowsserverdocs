@@ -3,7 +3,7 @@ title: Fixing Replication Topology Problems (Event ID 1311)
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services

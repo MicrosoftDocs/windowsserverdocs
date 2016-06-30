@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -19,9 +19,9 @@ author: Femila
 
   
 ## Appendix E: Securing Enterprise Admins Groups in Active Directory  
-The Enterprise Admins (EA) group, which is housed in the forest root domain, should contain no users on a day-to-day basis, with the possible exception of the root domain’s Administrator account, provided it is secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
+The Enterprise Admins (EA) group, which is housed in the forest root domain, should contain no users on a day-to-day basis, with the possible exception of the root domainï¿½s Administrator account, provided it is secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).  
   
-Enterprise Admins are, by default, members of the Administrators group in each domain in the forest. You should not remove the EA group from the Administrators groups in each domain because in the event of a forest disaster recovery scenario, EA rights will likely be required. The forest’s Enterprise Admins group should be secured as detailed in the step-by-step instructions that follow.  
+Enterprise Admins are, by default, members of the Administrators group in each domain in the forest. You should not remove the EA group from the Administrators groups in each domain because in the event of a forest disaster recovery scenario, EA rights will likely be required. The forestï¿½s Enterprise Admins group should be secured as detailed in the step-by-step instructions that follow.  
   
 For the Enterprise Admins group in the forest:  
   
@@ -43,7 +43,7 @@ For the Enterprise Admins group in the forest:
   
 1.  In **Server Manager**, click **Tools**, and click **Active Directory Users and Computers**.  
   
-2.  If you are not managing the root domain for the forest, in the console tree, right-click <Domain>, and then click **Change Domain** (where <Domain> is the name of the domain you’re currently administering).  
+2.  If you are not managing the root domain for the forest, in the console tree, right-click <Domain>, and then click **Change Domain** (where <Domain> is the name of the domain youï¿½re currently administering).  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_43.gif)  
   
@@ -181,8 +181,8 @@ For the Enterprise Admins group in the forest:
   
 ### Verification Steps  
   
-#### Verify “Deny access to this computer from the network” GPO Settings  
-From any member server or workstation that is not affected by the GPO changes (such as a “jump server”), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:  
+#### Verify ï¿½Deny access to this computer from the networkï¿½ GPO Settings  
+From any member server or workstation that is not affected by the GPO changes (such as a ï¿½jump serverï¿½), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:  
   
 1.  Log on locally using an account that is a member of the EA group.  
   
@@ -194,13 +194,13 @@ From any member server or workstation that is not affected by the GPO changes (s
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_56.gif)  
   
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation you’re attempting to access over the network.  
+5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$**, where <Server Name> is the name of the member server or workstation youï¿½re attempting to access over the network.  
   
 6.  The following screen shot shows the error message that should appear.  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_57.gif)  
   
-#### Verify “Deny log on as a batch job” GPO Settings  
+#### Verify ï¿½Deny log on as a batch jobï¿½ GPO Settings  
 From any member server or workstation affected by the GPO changes, log on locally.  
   
 ##### Create a Batch File  
@@ -254,7 +254,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_58.gif)  
   
-#### Verify “Deny log on as a service” GPO Settings  
+#### Verify ï¿½Deny log on as a serviceï¿½ GPO Settings  
   
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
   
@@ -270,7 +270,7 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 7.  Click **Browse**, type the name of an account that is a member of the EAs group, click **Check Names**, and click **OK**.  
   
-8.  Under **Password:** and **Confirm password**, type the selected account’s password, and click **OK**.  
+8.  Under **Password:** and **Confirm password**, type the selected accountï¿½s password, and click **OK**.  
   
 9. Click **OK** three more times.  
   
@@ -294,13 +294,13 @@ From any member server or workstation affected by the GPO changes, log on locall
   
 6.  Under **Log on as**, select the **Local System** account, and click **OK**.  
   
-#### Verify “Deny log on locally” GPO Settings  
+#### Verify ï¿½Deny log on locallyï¿½ GPO Settings  
   
 1.  From any member server or workstation affected by the GPO changes, attempt to log on locally using an account that is a member of the EA group. A dialog box similar to the following should appear.  
   
     ![](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_60.gif)  
   
-#### Verify “Deny log on through Remote Desktop Services” GPO Settings  
+#### Verify ï¿½Deny log on through Remote Desktop Servicesï¿½ GPO Settings  
   
 1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
   

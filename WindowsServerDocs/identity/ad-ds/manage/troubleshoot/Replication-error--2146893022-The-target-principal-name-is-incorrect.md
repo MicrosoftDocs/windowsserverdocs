@@ -3,7 +3,7 @@ title: Replication error -2146893022 The target principal name is incorrect
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -45,10 +45,10 @@ author: Femila
   <section address="BKMK_Symptoms">
     <title>Symptoms</title>
     <content>
-      <para>This article describes the symptoms, cause, and resolution steps when Active Directory replication fails with error -2146893022: “The target principal name is incorrect."</para>
+      <para>This article describes the symptoms, cause, and resolution steps when Active Directory replication fails with error -2146893022: ï¿½The target principal name is incorrect."</para>
       <list class="ordered">
         <listItem>
-          <para>DCDIAG reports that the Active Directory Replications test has failed with error -2146893022: “The target principal name is incorrect."</para>
+          <para>DCDIAG reports that the Active Directory Replications test has failed with error -2146893022: ï¿½The target principal name is incorrect."</para>
           <code>[Replications Check,&lt;DC Name&gt;] A recent replication attempt failed:
 From &lt;source DC&gt; to &lt;destination DC&gt;
 Naming Context: &lt;DN path of directory partition&gt;
@@ -78,7 +78,7 @@ c:\&gt;repadmin /syncall /Ade
 Syncing all NC's held on localhost.
 Syncing partition: DC=&lt;Directory DN path&gt;
 <codeFeaturedElement>CALLBACK MESSAGE: Error contacting server CN=NTDS Settings,CN=&lt;server name&gt;,CN=Servers,CN=&lt;site name&gt;,CN=Sites,CN=Configuration,DC=&lt;forest root domain&gt; (network error): -2146893022 (0x80090322):</codeFeaturedElement>
-</code></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "The target principal name is incorrect."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with ""The target principal name is incorrect.” The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to contact the domain controller &lt;source DC name&gt;:</para><para>The target principal name is incorrect</para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the -2146893022 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the -2146893022 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1586</para></TD><TD><para>NTDS Replication</para></TD><TD><para>The Windows NT 4.0 or earlier replication checkpoint with the PDC emulator master was unsuccessful. </para><para>
+</code></listItem><listItem><para>The <ui>Replicate now</ui> command in Active Directory Sites and Services returns "The target principal name is incorrect."</para><para>Right-clicking on the connection object from a source DC and choosing <ui>Replicate now</ui> fails with ""The target principal name is incorrect.ï¿½ The on-screen error message text and screenshot is shown below:</para><para>Dialog title text: Replicate Now</para><para>Dialog message text: </para><para>The following error occurred during the attempt to contact the domain controller &lt;source DC name&gt;:</para><para>The target principal name is incorrect</para></listItem><listItem><para>NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the -2146893022 status are logged in the Directory Services log in Event Viewer.</para><para>Active Directory events that commonly cite the -2146893022 status include but are not limited to:</para><table xmlns:caps="http://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Event ID</para></TD><TD><para>Event Source</para></TD><TD><para>Event String</para></TD></tr></thead><tbody><tr><TD><para>1586</para></TD><TD><para>NTDS Replication</para></TD><TD><para>The Windows NT 4.0 or earlier replication checkpoint with the PDC emulator master was unsuccessful. </para><para>
 
 A full synchronization of the security accounts manager (SAM) database to domain controllers running Windows NT 4.0 and earlier might take place if the PDC emulator master role is transferred to the local domain controller before the next successful checkpoint.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The attempt to establish a replication link for the following writable directory partition failed.</para></TD></tr><tr><TD><para>1308</para></TD><TD><para>NTDS KCC</para></TD><TD><para>The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed.</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>The attempt to establish a replication link to a read-only directory partition with the following parameters failed.</para></TD></tr><tr><TD><para>1373</para></TD><TD><para>NTDS Inter-site Messaging</para></TD><TD><para>The Intersite Messaging service could not receive any messages for the following service through the following transport. The query for messages failed.</para></TD></tr></tbody></table></listItem>
 </list>
@@ -237,7 +237,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
                   <para>MSRPC:c/o Bind: UUID{E3514235-4B06-11D1-AB04-00C04FC2DCD2} DRSR(DRSR) Call=0x2 Assoc Grp=0x0 Xmit=0x16D0 Recv=0x16D0</para>
                 </TD>
                 <TD>
-                  <para>RPC bind request to E351… service UUID</para>
+                  <para>RPC bind request to E351ï¿½ service UUID</para>
                 </TD>
               </tr>
               <tr>
@@ -376,7 +376,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
                   <para>Ipv4: Src = x.x.x.35, Dest = x.x.x.245, Next Protocol = TCP, Packet ID = 31546, Total IP Length = 278</para>
                 </TD>
                 <TD>
-                  <para>Verify that AD replication source DC (referred to here as the “Dest” computer in 1st column and “Src” computer in column 2 “owns’ the IP address cited in the trace (x.x.x.35 in this example).</para>
+                  <para>Verify that AD replication source DC (referred to here as the ï¿½Destï¿½ computer in 1st column and ï¿½Srcï¿½ computer in column 2 ï¿½ownsï¿½ the IP address cited in the trace (x.x.x.35 in this example).</para>
                 </TD>
               </tr>
               <tr>
@@ -394,12 +394,12 @@ Realm: &lt;verify that realm returned by the source DC matches the Kerberos real
 Sname: &lt;verify that the sName in the AP response matches contains the hostname of the intended source DC and NOT another DC that the destination incorrectly resolved to due to a bad name-to-ip mapping problem.</para>
                 </TD>
                 <TD>
-                  <para>In column 1, note the realm of the target Kerberos realm as “contoso.com” followed by the source DCs Replication SPN (“Sname”) which consists of the Active Directory replication service UUID (E351…) concatenated with object GUID of the source DCs NTDS Settings object.</para>
-                  <para>The GUIDED value "6f3f96d3-dfbf-4daf-9236-4d6da6909dd2" to the right of the E351... replication service UUID is the Object GUID for the source DCs NTDS settings object currently defined in the destination DCs copy of Active Directory. Verify that this object GUID matches the value in the “DSA Object GUID” field when “repadmin /showreps” is run from the console of the source DC).</para>
+                  <para>In column 1, note the realm of the target Kerberos realm as ï¿½contoso.comï¿½ followed by the source DCs Replication SPN (ï¿½Snameï¿½) which consists of the Active Directory replication service UUID (E351ï¿½) concatenated with object GUID of the source DCs NTDS Settings object.</para>
+                  <para>The GUIDED value "6f3f96d3-dfbf-4daf-9236-4d6da6909dd2" to the right of the E351... replication service UUID is the Object GUID for the source DCs NTDS settings object currently defined in the destination DCs copy of Active Directory. Verify that this object GUID matches the value in the ï¿½DSA Object GUIDï¿½ field when ï¿½repadmin /showrepsï¿½ is run from the console of the source DC).</para>
                   <para>A ping or nslookup of the source DCs fully qualified CNAME concatenated with "_msdcs.&lt;forest root DNS name&gt;" from the console of the destination DC must return the source DCs current IP address:</para>
                   <code>ping 6f3f96d3-dfbf-4daf-9236-4d6da6909dd2._msdcs.contoso.com</code>
-                  <code>nslookup –type=cname 6f3f96d3-dfbf-4daf-9236-4d6da6909dd2._msdcs.&lt;forest root domain&gt; &lt;DNS Server IP&gt;</code>
-                  <para>In the reply shown in column 2, focus on the “Sname” field and verify that it contains the hostname of the AD replication source DC.</para>
+                  <code>nslookup ï¿½type=cname 6f3f96d3-dfbf-4daf-9236-4d6da6909dd2._msdcs.&lt;forest root domain&gt; &lt;DNS Server IP&gt;</code>
+                  <para>In the reply shown in column 2, focus on the ï¿½Snameï¿½ field and verify that it contains the hostname of the AD replication source DC.</para>
                   <para>Bad name-to-IP mappings <placeholder>could</placeholder> cause the destination DC to connect to a DC in a completely invalid target realm causing the Realm value to be invalid as shown in this case. Bad host-to-IP mappings could cause DC1 to connect to DC3 in the same domain which would still generate KRB_AP_ERR_MODIFIED but the realm name in frame 8 would match the realm in frame 7.</para>
                 </TD>
               </tr>
@@ -434,7 +434,7 @@ Sname: &lt;verify that the sName in the AP response matches contains the hostnam
                   <para>REPADMIN /SHOWREPS |MORE</para>
                 </TD>
                 <TD>
-                  <para>Note value of “DSA Object GUID” which denotes the object GUID for the source DC’s NTDS Settings Object in the source DC’s copy of Active Directory.</para>
+                  <para>Note value of ï¿½DSA Object GUIDï¿½ which denotes the object GUID for the source DCï¿½s NTDS Settings Object in the source DCï¿½s copy of Active Directory.</para>
                 </TD>
               </tr>
             </tbody>
@@ -465,10 +465,10 @@ Sname: &lt;verify that the sName in the AP response matches contains the hostnam
                   <para>REPADMIN /SHOWREPS |MORE</para>
                 </TD>
                 <TD>
-                  <para>In the “Inbound Neighbors” section of the repadmin output, locate the replication status where the destination DC replicates a common partition from the source DC in question. </para>
+                  <para>In the ï¿½Inbound Neighborsï¿½ section of the repadmin output, locate the replication status where the destination DC replicates a common partition from the source DC in question. </para>
                   <para>
 
-The “DSA” object GUID” listed for the source DC in the replication status section of the report should match the object GUID listed in the /showreps header when run on the console of the source DC.</para>
+The ï¿½DSAï¿½ object GUIDï¿½ listed for the source DC in the replication status section of the report should match the object GUID listed in the /showreps header when run on the console of the source DC.</para>
                 </TD>
               </tr>
               <tr>
@@ -487,12 +487,12 @@ The “DSA” object GUID” listed for the source DC in the replication status sectio
                   <para>Check for host to IP mappings referencing the source DCs single label or fully qualified DNS name. Remove if present. Save changes to HOST file. </para>
                   <para>
 
-Run “Nbtstat –R” (upper case “R”) to refresh the NetBIOS name cache.</para>
+Run ï¿½Nbtstat ï¿½Rï¿½ (upper case ï¿½Rï¿½) to refresh the NetBIOS name cache.</para>
                 </TD>
               </tr>
               <tr>
                 <TD>
-                  <para>NSLOOKUP –type=CNAME &lt;object guid of source DCs NTDS Settings object&gt;._msdcs.&lt;forest root DNS name&gt; &lt;primary DNS Server IP </para>
+                  <para>NSLOOKUP ï¿½type=CNAME &lt;object guid of source DCs NTDS Settings object&gt;._msdcs.&lt;forest root DNS name&gt; &lt;primary DNS Server IP </para>
                   <para>
 
 Repeat for each additional DNS Server IP configured on the destination DC. </para>
@@ -532,7 +532,7 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
           <para>
             <embeddedLabel>The Kerberos target cannot decrypt Kerberos authenticated data due to a password mismatch</embeddedLabel>
           </para>
-          <para>This condition can occur if the password for the source DC differs between the KDC and source DC’s copy of Active Directory. The destination DC’s copy of the source DC computer account password may be stale if it is not using itself as the KDC. </para>
+          <para>This condition can occur if the password for the source DC differs between the KDC and source DCï¿½s copy of Active Directory. The destination DCï¿½s copy of the source DC computer account password may be stale if it is not using itself as the KDC. </para>
           <para>Replication failures can prevent DCs from having a current password values for DCs in a given domain. </para>
           <para>Every domain controller runs the KDC service for their domain realm. For same realm transactions, a destination DC <placeholder>favors</placeholder> getting Kerberos tickets from itself but may obtain a ticket from a remote DC. Referrals are used to obtain Kerberos tickets from other realms. </para>
           <para>To quickly identify which KDC a Kerberos client is targeting, open an elevated command prompt and run the following command near to when the SEC_E_WRONG_PRINCIPAL error appears.</para>
@@ -541,7 +541,7 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
           <para>Kerberos tickets for the logged on user account can be purged from an admin privileged CMD prompt using "KLIST purge".</para>
           <para>Kerberos tickets for the system account used by Active Directory replication can be purged <placeholder>without</placeholder> a reboot using "KLIST -li 0x3e7 purge".</para>
           <para>DCs can be made to use other DCs by stopping the KDC service on a local or remote DC.</para>
-          <para>Use REPADIN /SHOWOBJMETA to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source DC and destination DC’s copy of Active Directory </para>
+          <para>Use REPADIN /SHOWOBJMETA to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source DC and destination DCï¿½s copy of Active Directory </para>
           <code>C:\&gt;repadmin /showobjmeta &lt;source DC&gt; &lt;DN path of source DC computer account&gt;</code>
           <code>C:\&gt;repadmin /showobjmeta &lt;KDC selected by destination DC&gt; &lt;DN path of source DC computer account&gt;</code>
           <para>To reset DC machine account passwords, run the following command at an elevated command prompt: </para>
@@ -565,10 +565,10 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
               <para>Stop the KDC on DC1 and DC2 to force off-box Kerberos traffic that can be observed in network trace. End-to-end replication occurs without error.</para>
             </listItem>
             <listItem>
-              <para>Create Host file entry for DC2 pointing to IP address of a DC in a remote forest simulating a bad host to IP mapping in a host "A" / "AAAA" record or perhaps a stale NTDS Settings object in the destination DC’s copy of Active Directory.</para>
+              <para>Create Host file entry for DC2 pointing to IP address of a DC in a remote forest simulating a bad host to IP mapping in a host "A" / "AAAA" record or perhaps a stale NTDS Settings object in the destination DCï¿½s copy of Active Directory.</para>
             </listItem>
             <listItem>
-              <para>Start Active Directory Sites and Services on the console of DC1. Right-click DC1's inbound connection object from DC2 and note replication error "the target account name is incorrect.”</para>
+              <para>Start Active Directory Sites and Services on the console of DC1. Right-click DC1's inbound connection object from DC2 and note replication error "the target account name is incorrect.ï¿½</para>
             </listItem>
           </list>
         </content>
@@ -625,7 +625,7 @@ Repeat for all DNS Servers IPs configured on destination DC. </para>
               <para>The client contacts a KDC in the target DCs domain requesting a service ticket.</para>
             </listItem>
             <listItem>
-              <para>If the source DC’s SPN does not exist in the realm, you get an error.</para>
+              <para>If the source DCï¿½s SPN does not exist in the realm, you get an error.</para>
             </listItem>
             <listItem>
               <para>The destination DC contacts the target and presents its ticket.</para>
