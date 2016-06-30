@@ -382,13 +382,13 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 
    The output should look something like this:                                                                                                                                                          
 
-      Name           : SMB  
-      Owner          : Group Policy (Machine)  
-      NetworkProfile : All  
-      Precedence     : 127  
-      JobObject      :  
-      NetDirectPort  : 445  
-      PriorityValue  :   
+        Name           : SMB  
+        Owner          : Group Policy (Machine)  
+        NetworkProfile : All  
+        Precedence     : 127  
+        JobObject      :  
+        NetDirectPort  : 445  
+        PriorityValue  :   
 
 
 1. Turn on Flow Control for SMB as follows:                                                                                                                                                                       
