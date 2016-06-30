@@ -25,7 +25,7 @@ You can use the following topics to review prerequisites and other information b
 -   [Prerequisites for Deploying DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
-In this scenario, a single computer running either  Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012,  is configured as a DirectAccess server with default settings in a few easy wizard steps, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
+In this scenario, a single computer running either  Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012,  is configured as a DirectAccess server with default settings in a few easy wizard steps, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.  
   
 > [!NOTE]  
 > If you want to configure an advanced deployment with custom settings, see [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
@@ -38,7 +38,7 @@ Before you begin deploying this scenario, review this list for important require
   
 -   Windows firewall must be enabled on all profiles  
   
--   This scenario is only supported when your client computers are running Windows 10®, Windows® 8.1 or Windows® 8.  
+-   This scenario is only supported when your client computers are running Windows 10, Windows 8.1 or Windows 8.  
   
 -   ISATAP in the corporate network is not supported. If you are using ISATAP, you should remove it and use native IPv6.  
   
@@ -81,7 +81,7 @@ For detailed deployment steps, see [Install and Configure Basic DirectAccess](..
 ## <a name="BKMK_APP"></a>Practical applications  
 Deploying a single Remote Access server provides the following:  
   
--   Ease-of-access—You can configure managed client computers running Windows 10®, Windows 8.1, Windows 8, or Windows® 7, as DirectAccess clients. These clients can access internal network resources via DirectAccess any time they are located on the Internet without needing to log in to a VPN connection. Client computers that are not running one of these operating systems can connect to the internal network by using traditional VPN connections.  
+-   Ease-of-access—You can configure managed client computers running Windows 10, Windows 8.1, Windows 8, or Windows 7, as DirectAccess clients. These clients can access internal network resources via DirectAccess any time they are located on the Internet without needing to log in to a VPN connection. Client computers that are not running one of these operating systems can connect to the internal network by using traditional VPN connections.  
   
 -   Ease-of-management—DirectAccess client computers located on the Internet can be remotely managed by Remote Access administrators over DirectAccess, even when the client computers are not located in the internal corporate network. Client computers that do not meet corporate requirements can be remediated automatically by management servers. Both DirectAccess and VPN are managed in the same console and with the same set of wizards. Additionally, one or more Remote Access servers can be managed from a single Remote Access Management console  
   
@@ -90,7 +90,7 @@ The following table lists the roles and features required for the scenario:
   
 |Role/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server – This feature is required to configure the network location server on the Remote Access server, and the default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the Remote Access server, and the default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
@@ -106,13 +106,13 @@ Hardware requirements for this scenario include the following:
   
 -   Client requirements:  
   
-    -   A client computer must be running Windows 10®, Windows 8.1 or Windows 8.  
+    -   A client computer must be running Windows 10, Windows 8.1 or Windows 8.  
   
         > [!IMPORTANT]  
         > If some or all of your client computers are running Windows 7, you must use the Advanced Setup Wizard. The Getting Started Setup Wizard described in this document does not support client computers that are running Windows 7. See [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) for instructions on how to use Windows 7 clients with DirectAccess.  
   
         > [!NOTE]  
-        > Only the following operating systems can be used as DirectAccess clients: Windows 10®, Windows® 8.1 Enterprise, Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows® 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
+        > Only the following operating systems can be used as DirectAccess clients: Windows 10, Windows 8.1 Enterprise, Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.  
   
 -   Infrastructure and management server requirements:  
   

@@ -48,7 +48,7 @@ Contoso    |6001         |  24.30.1.0/24
 Contoso    | 6002        |  24.30.2.0/24         
 Contoso     | 6003        | 24.30.3.0/24          
   
-The following example script uses Windows PowerShell commands exported from the **NetworkController** module to create Contoso’s virtual network and one subnet:   
+The following example script uses Windows PowerShell commands exported from the **NetworkController** module to create Contoso's virtual network and one subnet:   
   
 ```  
 import-module networkcontroller  
@@ -65,15 +65,15 @@ foreach ($ln in $logicalnetworks) {
   
 #Find the Access Control List to user per virtual subnet  
   
-$acllist = Get-NetworkControllerAccessControlList –ConnectionUri $uri –ResourceId “AllowAll”  
+$acllist = Get-NetworkControllerAccessControlList -ConnectionUri $uri -ResourceId "AllowAll"  
   
 #Create the Virtual Subnet  
   
 $vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet  
-$vsubnet.ResourceId = “Contoso_WebTier”  
+$vsubnet.ResourceId = "Contoso_WebTier"  
 $vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties  
 $vsubnet.Properties.AccessControlList = $acllist  
-$vsubnet.Properties.AddressPrefix = “24.30.1.0/24”  
+$vsubnet.Properties.AddressPrefix = "24.30.1.0/24"  
   
 #Create the Virtual Network  
   
@@ -82,7 +82,7 @@ $vnetproperties.AddressSpace = new-object Microsoft.Windows.NetworkController.Ad
 $vnetproperties.AddressSpace.AddressPrefixes = @("24.30.1.0/24")  
 $vnetproperties.LogicalNetwork = $HNVProviderLogicalNetwork  
 $vnetproperties.Subnets = @($vsubnet)  
-New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri –Properties $vnetproperties  
+New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri -Properties $vnetproperties  
   
   
 ```  
@@ -93,17 +93,17 @@ You can use Windows PowerShell to update an existing Virtual subnet or network.
 When you run the following example script, the updated resources are simply PUT to Network Controller with the same resource ID. If your tenant Contoso wants to add a new virtual subnet (24.30.2.0/24) to their virtual network, either you or the Contoso Administrator can use the following script.  
   
 ```  
-$acllist = Get-NetworkControllerAccessControlList –ConnectionUri $uri –ResourceId “AllowAll”  
+$acllist = Get-NetworkControllerAccessControlList -ConnectionUri $uri -ResourceId "AllowAll"  
   
 $vnet = Get-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri  
   
 $vnet.properties.AddressSpace.AddressPrefixes += "24.30.2.0/24"  
   
 $vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet  
-$vsubnet.ResourceId = “Contoso_DBTier”  
+$vsubnet.ResourceId = "Contoso_DBTier"  
 $vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties  
 $vsubnet.Properties.AccessControlList = $acllist  
-$vsubnet.Properties.AddressPrefix = “24.30.2.0/24”  
+$vsubnet.Properties.AddressPrefix = "24.30.2.0/24"  
   
 $vnet.properties.Subnets += $vsubnet  
   

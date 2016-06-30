@@ -61,14 +61,14 @@ In this article,
     > [!NOTE]  
     > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 Technical Preview isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions).  
   
-    -   **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
-        **-Name** is the name that you provide for the virtual machine that you’re creating.  
-        **-MemoryStartupBytes** is the amount of memory   that is available to the virtual machine at start up.  
-        **-BootDevice** is the device that the virtual machine boots to  when it starts like the network adapter (NetworkAdapter) or virtual hard disk (VHD).  
-        **-VHDPath** is the path to the virtual machine disk that you want to use.  
-        **-Path** is the path to store the virtual machine configuration files.  
-        **-Generation** is the virtual machine generation. Use generation 1 for VHD and generation 2 for VHDX. See [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md)  
-        **-Switch** is the name of the virtual switch that you want the virtual machine to use to connect to other virtual machines or the network. See [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).  
+    - **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
+        -   **-Name** is the name that you provide for the virtual machine that you're creating.  
+        -   **-MemoryStartupBytes** is the amount of memory   that is available to the virtual machine at start up.  
+        -   **-BootDevice** is the device that the virtual machine boots to  when it starts like the network adapter (NetworkAdapter) or virtual hard disk (VHD).  
+        -   **-VHDPath** is the path to the virtual machine disk that you want to use.  
+        -   **-Path** is the path to store the virtual machine configuration files.  
+        -   **-Generation** is the virtual machine generation. Use generation 1 for VHD and generation 2 for VHDX. See [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V-.md)  
+        -   **-Switch** is the name of the virtual switch that you want the virtual machine to use to connect to other virtual machines or the network. See [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).  
   
         ```  
         New-VM -Name <Name> -MemoryStartupBytes <Memory> -BootDevice <BootDevice> -VHDPath <VHDPath> -Path <Path> -Generation <Generation> -Switch <SwitchName>  
@@ -93,13 +93,13 @@ In this article,
 5.  Start the virtual machine by using the [Start-VM](https://technet.microsoft.com/library/hh848589.aspx) cmdlet. Run the following cmdlet where Name is the name of the  virtual machine you created.  
   
     ```  
-    Start-VM –Name <Name>  
+    Start-VM -Name <Name>  
     ```  
   
     For example:  
   
     ```  
-    Start-VM –Name Win10VM  
+    Start-VM -Name Win10VM  
     ```  
   
 6.  Connect to the virtual machine by using Virtual Machine Connection (VMConnect).  

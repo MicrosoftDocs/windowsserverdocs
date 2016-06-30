@@ -63,13 +63,13 @@ The DNS policy criteria field is composed of two elements:
   
 |Name|Description|Sample values|  
 |--------|---------------|-----------------|  
-|**Client Subnet**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,Spain,France** - resolves to true if the subnet is identified as either Spain or France<br />-   **NE,Canada,Mexico** – resolves to true if the client subnet is any subnet other than Canada and Mexico|  
+|**Client Subnet**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,Spain,France** - resolves to true if the subnet is identified as either Spain or France<br />-   **NE,Canada,Mexico** - resolves to true if the client subnet is any subnet other than Canada and Mexico|  
 |**Transport Protocol**|Transport protocol used in the query. Possible entries are **UDP** and **TCP**|-   **EQ,TCP**<br />-   **EQ,UDP**|  
 |**Internet Protocol**|Network protocol used in the query. Possible entries are **IPv4** and **IPv6**|-   **EQ,IPv4**<br />-   **EQ,IPv6**|  
 |**Server Interface IP address**|IP address for the incoming DNS server network interface|-   **EQ,10.0.0.1**<br />-   **EQ,192.168.1.1**|  
-|**FQDN**|FQDN of record in the query, with the possibility of using a wild card|-   **EQ,www.contoso.com** – resolves tot rue only the if the query is trying to resolve the *www.contoso.com* FQDN<br />-   **EQ,\*.contoso.com,\*.woodgrove.com** – resolves to true if the query is for any record ending in *contoso.com***OR***woodgrove.com*|  
-|**Query Type**|Type of record being queried (A, SVR, TXT)|-   **EQ,TXT,SRV** – resolves tot rue if the query is requesting a TXT **OR** SRV record<br />-   **EQ,MX** – resolves tot rue if the query is requesting an MX record|  
-|**Time of Day**|Time of day the query is received|-   **EQ,10:00-12:00,22:00-23:00** – resolves tot rue if the query is received between 10 AM and noon, **OR** between 10PM and 11PM|  
+|**FQDN**|FQDN of record in the query, with the possibility of using a wild card|-   **EQ,www.contoso.com** - resolves tot rue only the if the query is trying to resolve the *www.contoso.com* FQDN<br />-   **EQ,\*.contoso.com,\*.woodgrove.com** - resolves to true if the query is for any record ending in *contoso.com***OR***woodgrove.com*|  
+|**Query Type**|Type of record being queried (A, SVR, TXT)|-   **EQ,TXT,SRV** - resolves tot rue if the query is requesting a TXT **OR** SRV record<br />-   **EQ,MX** - resolves tot rue if the query is requesting an MX record|  
+|**Time of Day**|Time of day the query is received|-   **EQ,10:00-12:00,22:00-23:00** - resolves tot rue if the query is received between 10 AM and noon, **OR** between 10PM and 11PM|  
   
 Using the table above as a starting point, the table below could be used to define a criterion that is used to match queries for any type of records but SRV records in the contoso.com domain coming from a client in the 10.0.0.0/24 subnet via TCP between 8 and 10 PM through interface 10.0.0.3:  
   
@@ -110,7 +110,7 @@ Zone transfer policies control whether a zone transfer is allowed or not by your
 You can use the server level zone transfer policy below to deny a zone transfer for the contoso.com domain from a given subnet:  
   
 ```  
-Add-DnsServerZoneTransferPolicy –Name DenyTransferOfCOnsotostoFabrikam –Zone contoso.com –Action DENY –ClientSubnet “EQ,192.168.1.0/24”  
+Add-DnsServerZoneTransferPolicy -Name DenyTransferOfCOnsotostoFabrikam -Zone contoso.com -Action DENY -ClientSubnet "EQ,192.168.1.0/24"  
 ```  
   
 You can create multiple zone transfer policies of the same level, as long as they have a different value for the processing order. When multiple policies are available, the DNS server processes incoming queries in the following manner:  
@@ -160,7 +160,7 @@ Add-DnsServerRecursionScope -Name "InternalClients" -EnableRecursion $True
 Add-DnsServerQueryResolutionPolicy -Name "SplitBrainPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP  "EQ,10.0.0.34"  
 ```  
   
-The first line in the script changes the default recursion scope, simply named as “.” (dot) to disable recursion. The second line creates a recursion scope named *InternalClients* with recursion enabled. And the third line creates a policy to apply the newly create recursion scope to any queries coming in through a server interface that has 10.0.0.34 as an IP address.  
+The first line in the script changes the default recursion scope, simply named as "." (dot) to disable recursion. The second line creates a recursion scope named *InternalClients* with recursion enabled. And the third line creates a policy to apply the newly create recursion scope to any queries coming in through a server interface that has 10.0.0.34 as an IP address.  
   
 ### Create a server level zone transfer policy  
 You can control zone transfer in a more granular form by using DNS Zone Transfer policies. The sample script below can be used to allow zone transfers for any server on a given subnet:  

@@ -1,5 +1,5 @@
 ---
-title: STEP 7: Install and Configure 2-APP1
+title: STEP 7 Install and Configure 2-APP1
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
 author: coreyp
 ---
-# STEP 7: Install and Configure 2-APP1
+# STEP 7 Install and Configure 2-APP1
 
 >Applies To: Windows Server Technical Preview
 
@@ -28,7 +28,7 @@ author: coreyp
 -   [Create a shared folder on 2-APP1](assetId:///7d04b54e-590a-4d33-9766-415789859f29#bkmk_Share)  
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on 2-APP1  
-First, install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012.  
+First, install Windows Server 2016 Technical Preview, Windows Server 2012 R2 or Windows Server 2012.  
   
 #### To install the operating system on 2-APP1  
   
@@ -120,7 +120,7 @@ Create a shared folder and a text file within the folder on 2-APP1.
   
 4.  On the **Start** screen, type**notepad.exe**, right-click **Notepad**, click **Advanced**, and then click **Run as administrator**.  
   
-5.  In the **Untitled – Notepad** window, type **This is a shared file on 2-APP1**.  
+5.  In the **Untitled - Notepad** window, type **This is a shared file on 2-APP1**.  
   
 6.  Click **File**, click **Save**, click **Computer**, double-click **Local Disk (C:)**, and then double-click the **Files** folder.  
   

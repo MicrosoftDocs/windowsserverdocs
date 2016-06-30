@@ -3,7 +3,7 @@ title: Reviewing DNS Concepts
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -23,7 +23,7 @@ Domain Name System (DNS) is a distributed database that represents a namespace. 
   
 -   If the server cannot answer the query from its cache or zones, it queries other servers for the answer.  
   
-It is important to understand the core features of DNS, such as delegation, recursive name resolution, and Active Directory–integrated DNS zones, because they have a direct impact on your Active Directory logical structure design.  
+It is important to understand the core features of DNS, such as delegation, recursive name resolution, and Active Directory-integrated DNS zones, because they have a direct impact on your Active Directory logical structure design.  
   
 For more information about DNS and Active Directory Domain Services (AD DS), see [DNS and AD DS](../../ad-ds/plan/DNS-and-AD-DS.md).  
   

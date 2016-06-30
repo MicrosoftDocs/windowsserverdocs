@@ -1,5 +1,5 @@
 ---
-title: Step 1: Configure the DirectAccess Infrastructure
+title: Step 1 Configure the DirectAccess Infrastructure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
-author: vhorne
+author: coreyp
 ---
-# Step 1: Configure the DirectAccess Infrastructure
+# Step 1 Configure the DirectAccess Infrastructure
 
 >Applies To: Windows Server Technical Preview
 
@@ -59,9 +59,9 @@ The following network interface settings are required for a single server deploy
 > 2.  If the second NIC cannot be configured for the domain profile for any reason, then the DirectAccess IPsec policy must be manually scoped to all profiles using the following Windows PowerShell commands:  
 >   
 >     ```  
->     $gposession = Open-NetGPO –PolicyStore <Name of the server GPO>  
->     Set-NetIPsecRule –DisplayName <Name of the IPsec policy> –GPOSession $gposession –Profile Any  
->     Save-NetGPO –GPOSession $gposession  
+>     $gposession = Open-NetGPO -PolicyStore <Name of the server GPO>  
+>     Set-NetIPsecRule -DisplayName <Name of the IPsec policy> -GPOSession $gposession -Profile Any  
+>     Save-NetGPO -GPOSession $gposession  
 >     ```  
 >   
 >     The names of the IPsec policies are DirectAccess-DaServerToInfra and DirectAccess-DaServerToCorp.  
@@ -76,9 +76,9 @@ Configure routing in the corporate network as follows:
 ## <a name="ConfigFirewalls"></a>Configure firewalls  
 When using additional firewalls in your deployment, apply the following Internet-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
   
--   6to4 traffic—IP Protocol 41 inbound and outbound.  
+-   6to4 traffic -IP Protocol 41 inbound and outbound.  
   
--   IP-HTTPS—Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
+-   IP-HTTPS -Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
   
     > [!NOTE]  
     > This exemption has to be configured on the remote access server. All the other exemptions have to be configured on the edge firewall.  
@@ -94,7 +94,7 @@ When using additional firewalls, apply the following Internet-facing firewall ex
   
 When using additional firewalls, apply the following internal network firewall exceptions for Remote Access traffic:  
   
--   ISATAP—Protocol 41 inbound and outbound  
+-   ISATAP -Protocol 41 inbound and outbound  
   
 -   TCP/UDP for all IPv4/IPv6 traffic  
   
@@ -124,9 +124,9 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 You must also configure DNS entries for the following:  
   
--   **The IP-HTTPS server**—DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
+-   **The IP-HTTPS server** -DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
   
--   **CRL revocation checking**—DirectAccess uses certificate revocation checking for the IP-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
+-   **CRL revocation checking** -DirectAccess uses certificate revocation checking for the IP-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
   
 ## <a name="ConfigAD"></a>Configure Active Directory  
 The Remote Access server and all DirectAccess client computers must be joined to an Active Directory domain. DirectAccess client computers must be a member of one of the following domain types:  

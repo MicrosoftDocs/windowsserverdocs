@@ -1,10 +1,10 @@
 ---
-title: Step 5: Configure Group Policy Settings for Automatic Updates
+title: Step 5 - Configure Group Policy Settings for Automatic Updates
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - techgroup-management-and-automation
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -55,9 +55,9 @@ This section provides details about the following computer-based policy settings
 
 -   [Delay Restart for scheduled installations](#BKMK_Comp6)
 
--   [Do not adjust default option to “Install Updates and Shut Down” in Shut Down Windows dialog](#BKMK_Comp7)
+-   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog](#BKMK_Comp7)
 
--   [Do not display ”Install updates and Shut Down” option in Shut Down Windows dialog](#BKMK_Comp8)
+-   [Do not display "Install updates and Shut Down" option in Shut Down Windows dialog](#BKMK_Comp8)
 
 -   [Enable client-side targeting](#BKMK_Comp9)
 
@@ -88,7 +88,7 @@ Specifies whether Automatic Updates will automatically install updates that do n
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](http://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> If the “Configure Automatic Updates” policy setting is set to **Disabled**, this policy has no effect.
+> If the "Configure Automatic Updates" policy setting is set to **Disabled**, this policy has no effect.
 
 |||
 |-|-|
@@ -107,7 +107,7 @@ Specifies whether non-administrative users will receive update notifications bas
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](http://support.microsoft.com/gp/lifeselect).|See details in the table below.|
 
 > [!NOTE]
-> If the “Configure Automatic Updates” policy setting is disabled or is not configured, this policy setting has no effect.
+> If the "Configure Automatic Updates" policy setting is disabled or is not configured, this policy setting has no effect.
 
 > [!IMPORTANT]
 > Starting in Windows 8 and Windows RT, this policy setting is enabled by default. In all prior versions of Windows, it is disabled by default.
@@ -140,7 +140,7 @@ Specifies whether Automatic Updates accepts updates that are signed by entities 
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Specifies that updates from an intranet Microsoft update service location must be signed by Microsoft.|
-|**Enabled**|Specifies that Automatic Updates accepts updates received through an intranet Microsoft update service location if they are signed by a certificate found in the local computer’s "Trusted Publishers" certificate store.|
+|**Enabled**|Specifies that Automatic Updates accepts updates received through an intranet Microsoft update service location if they are signed by a certificate found in the local computer's "Trusted Publishers" certificate store.|
 |**Disabled**|Specifies that updates from an intranet Microsoft update service location must be signed by Microsoft.|
 
 **Options:** There are no options for this setting.
@@ -158,9 +158,9 @@ Specifies whether a restart timer will always begin immediately after Windows Up
 |||
 |-|-|
 |**Policy setting state**|**Behavior**|
-|**Not Configured**|Specifies that Windows Update will not alter the computer’s restart behavior.|
+|**Not Configured**|Specifies that Windows Update will not alter the computer's restart behavior.|
 |**Enabled**|Specifies that a restart timer will always begin immediately after Windows Update installs important updates, instead of first notifying users on the sign-in screen for at least two days.<br /><br />The restart timer can be configured to start with any value from 15 to 180 minutes. When the timer runs out, the restart will proceed even if the computer has signed-in users.|
-|**Disabled**|Specifies that Windows Update will not alter the computer’s restart behavior.|
+|**Disabled**|Specifies that Windows Update will not alter the computer's restart behavior.|
 
 **Options:** If this setting is enabled, you can specify the amount of time that will elapse after updates are installed before a forced computer restart occurs.
 
@@ -172,9 +172,9 @@ Specifies the hours that Windows will use to determine how long to wait before c
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](http://support.microsoft.com/gp/lifeselect).|Windows RT|
 
 > [!NOTE]
-> The “Specify intranet Microsoft update service location” setting must be enabled for this policy to have effect.
-> 
-> If “Configure Automatic Updates” policy setting is disabled, this policy has no effect.
+> The "Specify intranet Microsoft update service location" setting must be enabled for this policy to have effect.
+>
+> If "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
 
 > [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
@@ -203,7 +203,7 @@ To use this setting, select **Enabled**, and then in **Options** under **Configu
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Specifies that the use of automatic updates is not specified at the Group Policy level. However, a computer administrator can still configure automatic updates in the Control Panel.|
-|**Enabled**|Specifies that Windows recognizes when the computer is online and uses its Internet connection to search Windows Update for available updates.<br /><br />When enabled, local administrators will be allowed to use the Windows Update control panel to select a configuration option of their choice. However, local administrators will not be allowed to disable the configuration for Automatic Updates.<br /><br />-   **2 - Notify for download and notify for install**<br />    When Windows Update finds updates that apply to the computer, users will be notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.<br />-   **3 – Auto download and notify for install** (default setting)<br />    Windows Update finds applicable updates and downloads them in the background; the user is not notified or interrupted during the process. When the downloads are complete, users are notified that there are updates ready to install. Users can then run Windows Update to install the downloaded updates.<br />-   **4 – Auto download and schedule the install**<br />    You can specify the schedule by using the options in this Group Policy setting. If no schedule is specified, the default schedule for all installations will be every day at 3:00 A.M. If any updates require a restart to complete the installation, Windows will restart the computer automatically. (If a user is signed in to the computer when Windows is ready to restart, the user will be notified and given the option to delay the restart.) **Note:**     Starting Windows 8, you can set updates to install during automatic maintenance instead of using a specific schedule tied to Windows Update. Automatic maintenance will install updates when the computer is not in use, and avoid installing updates when the computer is running on battery power. If automatic maintenance is unable to install updates within days, Windows Update will install updates right away. Users will then be notified about a pending restart. A pending restart will only take place if there is no potential for accidental data loss.    You can specify schedule options in the GPME Maintenance Scheduler settings, which are located in the path, *PolicyName* > **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Maintenance Scheduler** > **Automatic Maintenance Activation Boundary**. See the section of this reference titled: [Maintenance Scheduler settings](#BKMK_MtncScheduler), for setting details.    **5 - Allow local admin to choose setting**<br />-   Specifies whether local administrators are allowed to use the Automatic Updates control panel to select a configuration option of their choice—for example, whether local administrators can choose a scheduled installation time.<br />    Local administrators will not be allowed to disable the configuration for Automatic Updates.|
+|**Enabled**|Specifies that Windows recognizes when the computer is online and uses its Internet connection to search Windows Update for available updates.<br /><br />When enabled, local administrators will be allowed to use the Windows Update control panel to select a configuration option of their choice. However, local administrators will not be allowed to disable the configuration for Automatic Updates.<br /><br />-   **2 - Notify for download and notify for install**<br />    When Windows Update finds updates that apply to the computer, users will be notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.<br />-   **3 - Auto download and notify for install** (default setting)<br />    Windows Update finds applicable updates and downloads them in the background; the user is not notified or interrupted during the process. When the downloads are complete, users are notified that there are updates ready to install. Users can then run Windows Update to install the downloaded updates.<br />-   **4 - Auto download and schedule the install**<br />    You can specify the schedule by using the options in this Group Policy setting. If no schedule is specified, the default schedule for all installations will be every day at 3:00 A.M. If any updates require a restart to complete the installation, Windows will restart the computer automatically. (If a user is signed in to the computer when Windows is ready to restart, the user will be notified and given the option to delay the restart.) **Note:**     Starting Windows 8, you can set updates to install during automatic maintenance instead of using a specific schedule tied to Windows Update. Automatic maintenance will install updates when the computer is not in use, and avoid installing updates when the computer is running on battery power. If automatic maintenance is unable to install updates within days, Windows Update will install updates right away. Users will then be notified about a pending restart. A pending restart will only take place if there is no potential for accidental data loss.    You can specify schedule options in the GPME Maintenance Scheduler settings, which are located in the path, *PolicyName* > **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Maintenance Scheduler** > **Automatic Maintenance Activation Boundary**. See the section of this reference titled: [Maintenance Scheduler settings](#BKMK_MtncScheduler), for setting details.    **5 - Allow local admin to choose setting**<br />-   Specifies whether local administrators are allowed to use the Automatic Updates control panel to select a configuration option of their choiceï¿½for example, whether local administrators can choose a scheduled installation time.<br />    Local administrators will not be allowed to disable the configuration for Automatic Updates.|
 |**Disabled**|Specifies that any client updates that are available from the public Windows Update service must be manually downloaded from the Internet and installed.|
 
 #### <a name="BKMK_Comp6"></a>Delay Restart for scheduled installations
@@ -225,7 +225,7 @@ Specifies the amount of time Automatic Updates will wait before proceeding with 
 
 **Options:** If this setting is enabled, you can use this option to specify the amount of time (in minutes) Automatic Updates waits before proceeding with a scheduled restart.
 
-#### <a name="BKMK_Comp7"></a>Do not adjust default option to “Install Updates and Shut Down” in Shut Down Windows dialog
+#### <a name="BKMK_Comp7"></a>Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog
 This policy setting enables you to specify whether the **Install Updates and Shut Down** option is permitted as the default choice in the **Shut Down Windows** dialog box.
 
 |Supported on:|Excluding:|
@@ -233,7 +233,7 @@ This policy setting enables you to specify whether the **Install Updates and Shu
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](http://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy setting has no impact if the *PolicyName* > **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Update** > **Do not display ”Install Updates and Shut Down” option in Shut Down Windows dialog** policy setting is enabled.
+> This policy setting has no impact if the *PolicyName* > **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Update** > **Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog** policy setting is enabled.
 
 |||
 |-|-|
@@ -265,7 +265,7 @@ Enabling this policy will disable the functionality to periodically retrieve inf
 
 **Options:** There are no options for this setting.
 
-#### <a name="BKMK_Comp8"></a>Do not display “Install updates and Shut Down” option in Shut Down Windows dialog
+#### <a name="BKMK_Comp8"></a>Do not display "Install updates and Shut Down" option in Shut Down Windows dialog
 Specifies whether the **Install Updates and Shut Down** option is displayed in the **Shut Down Windows** dialog box.
 
 |Supported on:|Excluding:|
@@ -289,7 +289,7 @@ Specifies the target group name or names that are configured in the WSUS console
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](http://support.microsoft.com/gp/lifeselect).|Windows RT|
 
 > [!NOTE]
-> This policy applies only when this computer is configured to support the specified target group names in WSUS. If the target group name doesn’t exist in WSUS, it will be ignored until it is created. If the "Specify intranet Microsoft update service location" policy setting is disabled or not configured, this policy has no effect.
+> This policy applies only when this computer is configured to support the specified target group names in WSUS. If the target group name doesn't exist in WSUS, it will be ignored until it is created. If the "Specify intranet Microsoft update service location" policy setting is disabled or not configured, this policy has no effect.
 
 > [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
@@ -397,7 +397,7 @@ This setting enables you to specify a WSUS server on your network that will func
 To use this setting, you must set two server name values: the server from which the client detects and downloads updates, and the server to which updated workstations upload statistics. The values need not be different if both services are configured on the same server.
 
 > [!NOTE]
-> If the “Configure Automatic Updates” policy setting is disabled, this policy has no effect.
+> If the "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
 
 > [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
@@ -435,9 +435,9 @@ Specifies whether Automatic Updates will deliver important and recommended updat
 #### <a name="BKMK_Comp16"></a>Turn on Software Notifications
 This policy setting enables you to control whether users see detailed enhanced notification messages about featured software from the Microsoft Update service. Enhanced notification messages convey the value and promote the installation and use of optional software. This policy setting is intended for use in loosely managed environments in which you allow the end user access to the Microsoft Update service.
 
-If you are not using the Microsoft Update service, the “Software Notifications” policy setting has no effect.
+If you are not using the Microsoft Update service, the "Software Notifications" policy setting has no effect.
 
-If the “Configure Automatic Updates” policy setting is disabled or is not configured, the “Software Notifications” policy setting has no effect.
+If the "Configure Automatic Updates" policy setting is disabled or is not configured, the "Software Notifications" policy setting has no effect.
 
 |Supported on:|Excluding:|
 |-----------------|--------------|
@@ -456,7 +456,7 @@ If the “Configure Automatic Updates” policy setting is disabled or is not config
 **Options:** There are no options for this setting.
 
 ### <a name="BKMK_MtncScheduler"></a>Computer Configuration > Maintenance Scheduler policy settings
-In the Configure Automatic Updates setting, you selected the option **4 – Auto download and schedule the install**, you can specify schedule Maintenance Scheduler settings in the GPMC for computers running Windows 8 and Windows RT. If you did not select option 4 in the “Configure Automatic Updates” setting, you do not need to configure these settings for the purpose of automatic updates. Maintenance Scheduler settings are located in the path: *PolicyName* > **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Maintenance Scheduler**. The Maintenance Scheduler extension of Group Policy contains the following settings:
+In the Configure Automatic Updates setting, you selected the option **4 - Auto download and schedule the install**, you can specify schedule Maintenance Scheduler settings in the GPMC for computers running Windows 8 and Windows RT. If you did not select option 4 in the "Configure Automatic Updates" setting, you do not need to configure these settings for the purpose of automatic updates. Maintenance Scheduler settings are located in the path: *PolicyName* > **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Maintenance Scheduler**. The Maintenance Scheduler extension of Group Policy contains the following settings:
 
 -   [Automatic Maintenance Activation Boundary](#BKMK_Comp5a)
 
@@ -465,7 +465,7 @@ In the Configure Automatic Updates setting, you selected the option **4 – Auto d
 -   [Automatic WakeUp Policy](#BKMK_Comp5c)
 
 #### <a name="BKMK_Comp5a"></a>Automatic Maintenance Activation Boundary
-This policy enables you to configure the “Automatic Maintenance activation boundary” setting.
+This policy enables you to configure the "Automatic Maintenance activation boundary" setting.
 
 The maintenance activation boundary is the daily scheduled time at which Automatic Maintenance starts.
 
@@ -514,7 +514,7 @@ The maintenance wake-up policy specifies whether Automatic Maintenance should ma
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](http://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> If the operating computer’s power-wake policy is explicitly disabled, this setting has no effect.
+> If the operating computer's power-wake policy is explicitly disabled, this setting has no effect.
 
 > [!NOTE]
 > This setting is related to option 4 in **Configure Automatic Updates**. If you did not select option 4 in **Configure Automatic Updates**, it is not necessary to configure this setting.
@@ -529,9 +529,9 @@ The maintenance wake-up policy specifies whether Automatic Maintenance should ma
 ### <a name="BKMK_UserPol"></a>User Configuration > Windows Update policy settings
 This section provides details about the following user-based policy settings:
 
--   [Do not display ”Install Updates and Shut Down” option in Shut Down Windows dialog box](#BKMK_Client1)
+-   [Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog box](#BKMK_Client1)
 
--   [Do not adjust default option to “Install Updates and Shut Down” in Shut Down Windows dialog box](#BKMK_Client2)
+-   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog box](#BKMK_Client2)
 
 -   [Remove access to use all Windows Update features](#BKMK_Client3)
 
@@ -543,7 +543,7 @@ In the GPMC, the user settings for automatic computer updates are located in the
 > [!TIP]
 > For each of these settings, you can use the following steps to enable, disable, or navigate between settings:
 
-#### <a name="BKMK_Client1"></a>Do not display ‘Install Updates and Shut Down’ option in Shut Down Windows dialog box
+#### <a name="BKMK_Client1"></a>Do not display 'Install Updates and Shut Down' option in Shut Down Windows dialog box
 Specifies whether the **Install Updates and Shut Down** option is displayed in the **Shut Down Windows** dialog box.
 
 |Supported on:|Excluding:|
@@ -559,7 +559,7 @@ Specifies whether the **Install Updates and Shut Down** option is displayed in t
 
 **Options:** There are no options for this setting.
 
-#### <a name="BKMK_Client2"></a>Do not adjust default option to “Install Updates and Shut Down” in Shut Down Windows dialog box
+#### <a name="BKMK_Client2"></a>Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog box
 Specifies whether the **Install Updates and Shut Down** option is allowed as the default choice in the **Shut Down Windows** dialog box.
 
 |Supported on:|Excluding:|
@@ -567,7 +567,7 @@ Specifies whether the **Install Updates and Shut Down** option is allowed as the
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](http://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy setting has no impact if the *PolicyName* > **User Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Update** > **Do not display “Install Updates and Shut Down” option in Shut Down Windows dialog box** is enabled.
+> This policy setting has no impact if the *PolicyName* > **User Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Update** > **Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog box** is enabled.
 
 |||
 |-|-|
@@ -691,6 +691,3 @@ Following is a list of terms used in this guide.
 
 ## See also
 [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
-
-
-

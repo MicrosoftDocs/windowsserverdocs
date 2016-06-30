@@ -1,10 +1,10 @@
 ---
-title: Step 4: Approve and Deploy Updates in WSUS
+title: Step 4 - Approve and Deploy Updates in WSUS
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
@@ -87,6 +87,3 @@ Automatic Approvals enables you to specify how to automatically approve installa
 -   [Step 3: Configure WSUS](Step-3--Configure-WSUS.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
-
-
-

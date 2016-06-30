@@ -19,13 +19,13 @@ manager: msswadhwa
 The following sections describe Azure Infrastructure Services.  
   
 ##  Azure portal  
-After the provider creates an Azure subscription, the Azure portal can be used to manually create each tenant’s environment. This process can also be automated using PowerShell Scripts.  
+After the provider creates an Azure subscription, the Azure portal can be used to manually create each tenant's environment. This process can also be automated using PowerShell Scripts.  
   
 Additional information:  
 [Microsoft Azure](http://www.azure.microsoft.com)  
   
 ##  Azure Load Balancer  
-The tenant’s components run on virtual machines that communicate with each other on an isolated network. During the deployment process, these virtual machines can be accessed externally through the Azure Load Balancer using Remote Desktop Protocol endpoints or Remote PowerShell endpoint. Once a deployment is complete, these endpoints will typically be deleted to reduce the attack surface area. The only endpoints will be the HTTPS and UDP endpoints created for the VM running the RD Web and RD Gateway components. This allows clients on the Internet to connect to sessions running in the tenant’s desktop hosting service. If a user opens an application that connects to the Internet, such as Internet Explorer Web browser, the connections will be passed through the Azure Load Balancer.  
+The tenant's components run on virtual machines that communicate with each other on an isolated network. During the deployment process, these virtual machines can be accessed externally through the Azure Load Balancer using Remote Desktop Protocol endpoints or Remote PowerShell endpoint. Once a deployment is complete, these endpoints will typically be deleted to reduce the attack surface area. The only endpoints will be the HTTPS and UDP endpoints created for the VM running the RD Web and RD Gateway components. This allows clients on the Internet to connect to sessions running in the tenant's desktop hosting service. If a user opens an application that connects to the Internet, such as Internet Explorer Web browser, the connections will be passed through the Azure Load Balancer.  
   
 [Microsoft Azure: Load Balancing Virtual Machines](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-load-balance/)  
   
@@ -34,7 +34,7 @@ This Azure Desktop Hosting Reference Architecture Guide is designed to provide a
 - All administrative passwords must be strong, and ideally randomly generated, changed frequently, and saved in secure central location that is only accessible by a select few provider administrators.  
 - Care must be taken when replicating the tenant environment for new tenants to avoid using the same or weak administrative passwords.   
 - The RD Web Access site URL, name, and certificates must be unique and recognizable to each tenant to mitigate spoofing attacks.  
-- During the normal operation of the desktop hosting service, all public IP addresses should be deleted for all VMs except the RD Web and RD Gateway VM that allow users to securely connect to the tenant’s desktop hosting cloud service. Public IP addresses may be temporarily added to allow management tasks to be performed but should always be deleted.  
+- During the normal operation of the desktop hosting service, all public IP addresses should be deleted for all VMs except the RD Web and RD Gateway VM that allow users to securely connect to the tenant's desktop hosting cloud service. Public IP addresses may be temporarily added to allow management tasks to be performed but should always be deleted.  
   
 Additional information:  
 [Security and Protection Overview](https://technet.microsoft.com/library/hh831778.aspx)  

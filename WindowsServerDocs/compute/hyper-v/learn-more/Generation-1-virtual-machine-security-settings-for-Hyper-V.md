@@ -14,6 +14,9 @@ author: cwatsonmsft
 robots: noindex,nofollow
 ---
 # Generation 1 virtual machine security settings
+
+>Applies To: Windows Server 2016 Technical Preview, Windows 10
+
 Use the generation 1 virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. 
 
 ## Encryption support settings in Hyper-V Manager

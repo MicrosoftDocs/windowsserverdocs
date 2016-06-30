@@ -1,5 +1,5 @@
 ---
-title: Step 1: Configuring DirectAccess Infrastructure
+title: Step 1 Configuring DirectAccess Infrastructure
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 author: vhorne
 ---
-# Step 1: Configuring DirectAccess Infrastructure
+# Step 1 Configuring DirectAccess Infrastructure
 
 >Applies To: Windows Server 2012 R2, Windows Server 2012
 
@@ -62,9 +62,9 @@ The following network interface settings are required for a single server deploy
 > -   If the second network adapter cannot be configured for the domain profile, the DirectAccess IPsec policy must be manually scoped to all profiles by using the following Windows PowerShell command after DirectAccess is configured:  
 >   
 >     ```  
->     $gposession = Open-NetGPO �PolicyStore <Name of the server GPO>  
->     Set-NetIPsecRule �DisplayName <Name of the IPsec policy> �GPOSession $gposession �Profile Any  
->     Save-NetGPO �GPOSession $gposession  
+>     $gposession = Open-NetGPO "PolicyStore <Name of the server GPO>  
+>     Set-NetIPsecRule "DisplayName <Name of the IPsec policy> "GPOSession $gposession "Profile Any  
+>     Save-NetGPO "GPOSession $gposession  
 >     ```  
   
 ## <a name="BKMK_forcetunnel"></a>1.2 Configure force tunneling  
@@ -81,7 +81,7 @@ Selecting the check box for force tunneling does the following:
 To make Internet resources available to DirectAccess clients that use force tunneling, you can use a proxy server, which can receive IPv6-based requests for Internet resources and translate them to requests for IPv4-based Internet resources. To configure a proxy server for Internet resources, you need to modify the default entry in NRPT to add the proxy server. You can accomplish this by using the Remote Access PowerShell cmdlets or the DNS PowerShell cmdlets. For example, use the Remote Access PowerShell cmdlet as follows:  
   
 ```  
-Set-DAClientDNSConfiguration �DNSSuffix �.� �ProxyServer <Name of the proxy server:port>  
+Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy server:port>  
 ```  
   
 > [!NOTE]  
@@ -95,16 +95,16 @@ Configure routing in the corporate network as follows:
   
 -   When native IPv6 is deployed in the organization, add a route so that the routers on the internal network route IPv6 traffic back through the DirectAccess server.  
   
--   Manually configure the organization�s IPv4 and IPv6 routes on the DirectAccess servers. Add a published route so that all traffic with an organization (/48) IPv6 prefix is forwarded to the internal network. For IPv4 traffic, add explicit routes so that IPv4 traffic is forwarded to the internal network.  
+-   Manually configure the organization"s IPv4 and IPv6 routes on the DirectAccess servers. Add a published route so that all traffic with an organization (/48) IPv6 prefix is forwarded to the internal network. For IPv4 traffic, add explicit routes so that IPv4 traffic is forwarded to the internal network.  
   
 ## <a name="ConfigFirewalls"></a>1.4 Configure firewalls  
 When using additional firewalls in your deployment, apply the following Internet-facing firewall exceptions for Remote Access traffic when the DirectAccess server is on the IPv4 Internet:  
   
--   Teredo traffic�User Datagram Protocol (UDP) destination port 3544 inbound, and UDP source port 3544 outbound.  
+-   Teredo traffic"User Datagram Protocol (UDP) destination port 3544 inbound, and UDP source port 3544 outbound.  
   
--   6to4 traffic�IP Protocol 41 inbound and outbound.  
+-   6to4 traffic"IP Protocol 41 inbound and outbound.  
   
--   IP-HTTPS�Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the DirectAccess server has a single network adapter, and the network location server is on the DirectAccess server, then TCP port 62000 is also required.  
+-   IP-HTTPS"Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the DirectAccess server has a single network adapter, and the network location server is on the DirectAccess server, then TCP port 62000 is also required.  
   
     > [!NOTE]  
     > This exemption must be configured on the DirectAccess server, while all the other exemptions have to be configured on the edge firewall.  
@@ -118,11 +118,11 @@ When using additional firewalls, apply the following Internet-facing firewall ex
   
 -   UDP destination port 500 inbound, and UDP source port 500 outbound.  
   
--   Internet Control Message Protocol for IPv6 (ICMPv6) traffic inbound and outbound � for Teredo implementations only.  
+-   Internet Control Message Protocol for IPv6 (ICMPv6) traffic inbound and outbound " for Teredo implementations only.  
   
 When using additional firewalls, apply the following internal network firewall exceptions for Remote Access traffic:  
   
--   ISATAP�Protocol 41 inbound and outbound  
+-   ISATAP"Protocol 41 inbound and outbound  
   
 -   TCP/UDP for all IPv4/IPv6 traffic  
   
@@ -374,7 +374,7 @@ In a deployment that uses staging and production GPOs, the domain administrator 
   
 4.  Grant the Remote Access administrator **Edit settings, delete and modify security** permissions on all of the staging GPOs. For more informantion, see [Delegate Permissions for a Group or User on a Group Policy Object](http://technet.microsoft.com/library/cc754542).  
   
-5.  Deny the Remote Access administrator permissions to link GPOs in all domains (or verify that the Remote Access administrator doesn�t have such permissions). For more information, see [Delegate Permissions to Link Group Policy Objects](http://technet.microsoft.com/library/cc755086).  
+5.  Deny the Remote Access administrator permissions to link GPOs in all domains (or verify that the Remote Access administrator doesn"t have such permissions). For more information, see [Delegate Permissions to Link Group Policy Objects](http://technet.microsoft.com/library/cc755086).  
   
 When Remote Access administrators configure Remote Access, they should always specify only the staging GPOs (not the production GPOs). This is true in the initial configuration of Remote Access and when performing additional configuration operations where additional GPOs are required; for example, when adding entry points in a multisite deployment or enabling client computers in additional domains.  
   
@@ -420,28 +420,28 @@ After the Remote Access administrator completes any changes to the Remote Access
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
--   To back up the staging client GPO �DirectAccess Client Settings - Staging� in domain �corp.contoso.com� to the backup folder �C:\Backups\�:  
+-   To back up the staging client GPO "DirectAccess Client Settings - Staging" in domain "corp.contoso.com" to the backup folder "C:\Backups\":  
   
     ```  
-    $backup = Backup-GPO �Name 'DirectAccess Client Settings - Staging' �Domain 'corp.contoso.com' �Path 'C:\Backups\'  
+    $backup = Backup-GPO "Name 'DirectAccess Client Settings - Staging' "Domain 'corp.contoso.com' "Path 'C:\Backups\'  
     ```  
   
--   To see the security filtering of the staging client GPO �DirectAccess Client Settings - Staging� in domain �corp.contoso.com�:  
+-   To see the security filtering of the staging client GPO "DirectAccess Client Settings - Staging" in domain "corp.contoso.com":  
   
     ```  
-    Get-GPPermission �Name 'DirectAccess Client Settings - Staging' �Domain 'corp.contoso.com' �All | ?{ $_.Permission �eq 'GpoApply'}  
+    Get-GPPermission "Name 'DirectAccess Client Settings - Staging' "Domain 'corp.contoso.com' "All | ?{ $_.Permission "eq 'GpoApply'}  
     ```  
   
--   To add the security group �corp.contoso.com\DirectAccess clients� to the security filter of the production client GPO �DirectAccess Client Settings � Production� in domain �corp.contoso.com�:  
+-   To add the security group "corp.contoso.com\DirectAccess clients" to the security filter of the production client GPO "DirectAccess Client Settings " Production" in domain "corp.contoso.com":  
   
     ```  
-    Set-GPPermission �Name 'DirectAccess Client Settings - Production' �Domain 'corp.contoso.com' �PermissionLevel GpoApply �TargetName 'corp.contoso.com\DirectAccess clients' �TargetType Group  
+    Set-GPPermission "Name 'DirectAccess Client Settings - Production' "Domain 'corp.contoso.com' "PermissionLevel GpoApply "TargetName 'corp.contoso.com\DirectAccess clients' "TargetType Group  
     ```  
   
--   To import settings from the backup to the production client GPO �DirectAccess Client Settings � Production� in domain �corp.contoso.com�:  
+-   To import settings from the backup to the production client GPO "DirectAccess Client Settings " Production" in domain "corp.contoso.com":  
   
     ```  
-    Import-GPO �BackupId $backup.Id �Path $backup.BackupDirectory �TargetName 'DirectAccess Client Settings - Production' �Domain 'corp.contoso.com'  
+    Import-GPO "BackupId $backup.Id "Path $backup.BackupDirectory "TargetName 'DirectAccess Client Settings - Production' "Domain 'corp.contoso.com'  
     ```  
   
 ## <a name="ConfigSGs"></a>1.9 Configure security groups  

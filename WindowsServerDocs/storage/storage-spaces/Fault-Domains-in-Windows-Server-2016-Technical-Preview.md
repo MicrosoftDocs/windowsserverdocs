@@ -19,7 +19,7 @@ author: kumudd
 A fault domain is a set of hardware components that share a single point of failure. For example, all physical disk drives in one server are vulnerable to that server going down; similarly, all servers in one rack are vulnerable to that rack going down. Even, everything in one geographic site may be vulnerable to power outages or natural disasters.  
 
 
-Fault domains are closely related to the concept of “fault tolerance”. To be fault tolerant to any given level, it is necessary to have multiple fault domains at that level. For example, to be “rack fault tolerant”, your servers and your data must be distributed across multiple racks.  
+Fault domains are closely related to the concept of "fault tolerance". To be fault tolerant to any given level, it is necessary to have multiple fault domains at that level. For example, to be "rack fault tolerant", your servers and your data must be distributed across multiple racks.  
 
 ## Benefits  
 
@@ -35,7 +35,7 @@ Benefits of doing so include:
 
 ## Levels of Fault Domains  
 
-There are four levels of fault domains – Site, Rack, Chassis, and Node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment does not use blade servers, the Chassis level may not make sense for you.  
+There are four levels of fault domains - Site, Rack, Chassis, and Node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment does not use blade servers, the Chassis level may not make sense for you.  
 
    ![](media/Fault-Domains-in-Windows-Server-2016/Clustering_FaultDomains.png)  
 ## Usage  
@@ -54,7 +54,7 @@ This returns the current fault domain specification for the cluster, as XML. Thi
 Run the following to save this output to a file.  
 
     Get-ClusterFaultDomainXML | Out-File <Path>  
-Open the file, and add **&lt;Site&gt;**, **&lt;Rack&gt;**, and **&lt;Chassis&gt;** tags to specify how these nodes are distributed across sites, racks, and chassis. Every tag must be identified by a unique **Name**. For nodes, you must keep the node’s name as populated by default.  
+Open the file, and add **&lt;Site&gt;**, **&lt;Rack&gt;**, and **&lt;Chassis&gt;** tags to specify how these nodes are distributed across sites, racks, and chassis. Every tag must be identified by a unique **Name**. For nodes, you must keep the node's name as populated by default.  
 
 >[!IMPORTANT]
 > While all additional tags are optional, they must adhere to the transitive Site &gt; Rack &gt; Chassis &gt; Node hierarchy, and must be properly closed.  
@@ -102,7 +102,7 @@ To set the new fault domain specification, save your XML and run the following i
 This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt;, &lt;**Chassis**&gt;, and &lt;**Node**&gt; tags can be mixed and matched in many additional ways to reflect the physical topology of your deployment, whatever that may be. We hope these examples illustrate the flexibility of these tags and the value of freeform location descriptors to disambiguate them.  
 
 >[!IMPORTANT]
->The cluster cannot verify the correctness of your fault domains – they are accepted as-is. If hardware is moved or added later, the XML should be updated and reset accordingly. Stretch Clustering preferential ownership and Health Service alerts will dynamically adjust to these changes. However, once the pool and volumes have been created, Storage Spaces Direct will not retroactively move data in response to changes. For this reason, moving nodes between chassis, racks, or sites after enabling Storage Spaces Direct is not recommended nor supported unless you first evict the node and its drives from the pool.  
+>The cluster cannot verify the correctness of your fault domains - they are accepted as-is. If hardware is moved or added later, the XML should be updated and reset accordingly. Stretch Clustering preferential ownership and Health Service alerts will dynamically adjust to these changes. However, once the pool and volumes have been created, Storage Spaces Direct will not retroactively move data in response to changes. For this reason, moving nodes between chassis, racks, or sites after enabling Storage Spaces Direct is not recommended nor supported unless you first evict the node and its drives from the pool.  
 ## See Also  
 
 -   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  

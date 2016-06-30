@@ -1,5 +1,5 @@
 ---
-title: Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
+title: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
 author: jamesmci
 ---
-# Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
+# Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 
 >Applies To: Windows Server Technical Preview
 
@@ -66,11 +66,11 @@ The traffic management scenario requires additional steps to partition the zones
   
 After you configure your DNS infrastructure with primary and secondary servers, zone scope level transfers are performed automatically by DNS, using the following processes.  
   
-To ensure the Zone scope level transfer, DNS servers use the Extension Mechanisms for DNS (EDNS0) OPT RR. All zone transfer (AXFR or IXFR) requests from the zones with scopes originate with an EDNS0 OPT RR, whose option ID is set to “65433” by default. For more information about EDNSO, see the IETF [Request for Comments 6891](https://tools.ietf.org/html/rfc6891).  
+To ensure the Zone scope level transfer, DNS servers use the Extension Mechanisms for DNS (EDNS0) OPT RR. All zone transfer (AXFR or IXFR) requests from the zones with scopes originate with an EDNS0 OPT RR, whose option ID is set to "65433" by default. For more information about EDNSO, see the IETF [Request for Comments 6891](https://tools.ietf.org/html/rfc6891).  
   
 The value of the OPT RR is the zone scope name for which the request is being sent. When a primary DNS server receives this packet from a trusted secondary server, it interprets the request as coming for that zone scope.   
   
-If the primary server has that zone scope it responds with the transfer (XFR) data from that scope. The response contains an OPT RR with the same option ID “65433” and value set to the same zone scope. The secondary servers receive this response, retrieve the scope information from the response, and update that particular scope of the zone.  
+If the primary server has that zone scope it responds with the transfer (XFR) data from that scope. The response contains an OPT RR with the same option ID "65433" and value set to the same zone scope. The secondary servers receive this response, retrieve the scope information from the response, and update that particular scope of the zone.  
   
 After this process, the primary server maintains a list of trusted secondaries which have sent such a zone scope request for notifications.   
   
@@ -104,9 +104,9 @@ For example, you can create the secondary copy of www.woodgrove.com on Secondary
 You can use the following Windows PowerShell commands to create the secondary zones.  
   
 ```  
-Add-DnsServerSecondaryZone -Name "woodgrove.com" -ZoneFile "woodgrove.com.dns" -MasterServers 10.0.0.1 –ComputerName SecondaryServer1  
+Add-DnsServerSecondaryZone -Name "woodgrove.com" -ZoneFile "woodgrove.com.dns" -MasterServers 10.0.0.1 -ComputerName SecondaryServer1  
   
-Add-DnsServerSecondaryZone -Name "woodgrove.com" -ZoneFile "woodgrove.com.dns" -MasterServers 10.0.0.1 –ComputerName SecondaryServer2  
+Add-DnsServerSecondaryZone -Name "woodgrove.com" -ZoneFile "woodgrove.com.dns" -MasterServers 10.0.0.1 -ComputerName SecondaryServer2  
   
 ```  
 For more information, see [Add-DnsServerSecondaryZone](https://technet.microsoft.com/library/jj649900.aspx).  
@@ -122,7 +122,7 @@ You can use the following Windows PowerShell commands to configure the zone tran
 >In the following example command, the parameter **-Notify** specifies that the primary server will send notifications about updates to the select list of secondaries.  
   
 ```  
-Set-DnsServerPrimaryZone -Name “woodgrove.com -Notify Notify -SecondaryServers “10.0.0.2,10.0.0.3” –SecureSecondaries TransferToSecureServers –ComputerName PrimaryServer  
+Set-DnsServerPrimaryZone -Name "woodgrove.com -Notify Notify -SecondaryServers "10.0.0.2,10.0.0.3" -SecureSecondaries TransferToSecureServers -ComputerName PrimaryServer  
   
 ```  
   
@@ -135,9 +135,9 @@ You must copy the DNS Client Subnets from the primary server to the secondary se
 You can use the following Windows PowerShell commands to copy the subnets to the secondary servers.  
   
 ```  
-Get-DnsServerClientSubnet –ComputerName PrimaryServer | Add-DnsServerClientSubnet –ComputerName SecondaryServer1  
+Get-DnsServerClientSubnet -ComputerName PrimaryServer | Add-DnsServerClientSubnet -ComputerName SecondaryServer1  
   
-Get-DnsServerClientSubnet –ComputerName PrimaryServer | Add-DnsServerClientSubnet –ComputerName SecondaryServer2  
+Get-DnsServerClientSubnet -ComputerName PrimaryServer | Add-DnsServerClientSubnet -ComputerName SecondaryServer2  
   
 ```  
   
@@ -149,9 +149,9 @@ You must create the zone scopes on the secondary servers. In DNS for [!INCLUDE[w
 You can use the following Windows PowerShell commands to create the zone scopes on the secondary servers.  
   
 ```  
-Get-DnsServerZoneScope -ZoneName "woodgrove.com" –ComputerName PrimaryServer|Add-DnsServerZoneScope -ZoneName "woodgrove.com" –ComputerName SecondaryServer1 –ErrorAction Ignore  
+Get-DnsServerZoneScope -ZoneName "woodgrove.com" -ComputerName PrimaryServer|Add-DnsServerZoneScope -ZoneName "woodgrove.com" -ComputerName SecondaryServer1 -ErrorAction Ignore  
   
-Get-DnsServerZoneScope -ZoneName "woodgrove.com" –ComputerName PrimaryServer|Add-DnsServerZoneScope -ZoneName "woodgrove.com" –ComputerName SecondaryServer2 –ErrorAction Ignore  
+Get-DnsServerZoneScope -ZoneName "woodgrove.com" -ComputerName PrimaryServer|Add-DnsServerZoneScope -ZoneName "woodgrove.com" -ComputerName SecondaryServer2 -ErrorAction Ignore  
   
 ```  
 >[!NOTE]
@@ -164,11 +164,11 @@ After you have created the subnets, the partitions (zone scopes), and you have a
   
 You can use the following Windows PowerShell commands to create a DNS policy that links the DNS Client Subnets and the zone scopes.   
 ```  
-$policy = Get-DnsServerQueryResolutionPolicy -ZoneName "woodgrove.com" –ComputerName PrimaryServer  
+$policy = Get-DnsServerQueryResolutionPolicy -ZoneName "woodgrove.com" -ComputerName PrimaryServer  
   
-$policy | Add-DnsServerQueryResolutionPolicy -ZoneName "woodgrove.com" –ComputerName SecondaryServer1  
+$policy | Add-DnsServerQueryResolutionPolicy -ZoneName "woodgrove.com" -ComputerName SecondaryServer1  
   
-$policy | Add-DnsServerQueryResolutionPolicy -ZoneName "woodgrove.com" –ComputerName SecondaryServer2  
+$policy | Add-DnsServerQueryResolutionPolicy -ZoneName "woodgrove.com" -ComputerName SecondaryServer2  
   
 ```  
   

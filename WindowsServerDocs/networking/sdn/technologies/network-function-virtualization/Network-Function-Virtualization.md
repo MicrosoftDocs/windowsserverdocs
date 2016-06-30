@@ -23,12 +23,12 @@ You can use this topic to learn about Network Function Virtualization, which all
 > - [RAS Gateway for SDN](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)  
 > - [Software Load Balancing (SLB) for SDN](../../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)  
   
-In today’s software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This “network function virtualization” is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
+In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
   
 Microsoft included a standalone gateway as a virtual appliance starting with  Windows Server 2012 R2 . For more information, see [Windows Server Gateway](assetId:///e39e8b8c-a23c-4dbd-b895-d1e3f2885e9e). Now with Windows Server 2016 Technical Preview Microsoft continues to expand and invest in the network function virtualization market.  
   
 ## Virtual appliance benefits  
-A virtual appliance is dynamic and easy to change because it is a pre-built, customized virtual machine. It can be one or more virtual machines packaged, updated, and maintained as a unit. Together with software defined networking (SDN), you get the agility and flexibility needed in today’s cloud-based infrastructure. For example:  
+A virtual appliance is dynamic and easy to change because it is a pre-built, customized virtual machine. It can be one or more virtual machines packaged, updated, and maintained as a unit. Together with software defined networking (SDN), you get the agility and flexibility needed in today's cloud-based infrastructure. For example:  
   
 -   SDN presents the network as a pooled and dynamic resource.  
   
@@ -82,7 +82,7 @@ The marketplace for virtualized network functions is growing quickly. The follow
 ## Why Microsoft is a great platform for virtual appliances  
 ![](../../../media/Network-Function-Virtualization/Microsoft-Network-Function-Virtualization.png)  
   
-The Microsoft platform has been engineered to be a great platform to build and deploy virtual appliances. Here’s why:  
+The Microsoft platform has been engineered to be a great platform to build and deploy virtual appliances. Here's why:  
   
 -   Microsoft provides key virtualized network functions with Windows Server 2016 Technical Preview.  
   
@@ -99,7 +99,7 @@ The following virtual appliances are provided with Windows Server 2016 Technical
   
 **Software load balancer**  
   
-A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure’s load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](https://technet.microsoft.com/library/mt632286.aspx). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](http://azure.microsoft.com/blog/2014/04/08/microsoft-azure-load-balancing-services/).  
+A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](https://technet.microsoft.com/library/mt632286.aspx). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](http://azure.microsoft.com/blog/2014/04/08/microsoft-azure-load-balancing-services/).  
   
 **Gateway**. RAS Gateway provides all combinations of the following gateway functions.  
   

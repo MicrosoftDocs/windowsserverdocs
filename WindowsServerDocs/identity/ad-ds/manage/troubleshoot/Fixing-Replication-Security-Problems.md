@@ -1,9 +1,9 @@
----
+ï»¿---
 title: Fixing Replication Security Problems
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -115,7 +115,7 @@ author: Femila
         </tr>
       </tbody>
     </table>
-    <para>Use the procedures in <link xlink:href="282cee9f-abef-43c9-9f33-b2c416cf8c38">An “Access denied” or other security error has caused replication problems</link> to diagnose and fix replication security problems.</para>
+    <para>Use the procedures in <link xlink:href="282cee9f-abef-43c9-9f33-b2c416cf8c38">An "Access denied" or other security error has caused replication problems</link> to diagnose and fix replication security problems.</para>
   </introduction>
   <relatedTopics />
 </developerConceptualDocument>

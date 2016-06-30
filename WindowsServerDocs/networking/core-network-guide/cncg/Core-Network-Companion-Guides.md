@@ -9,6 +9,9 @@ ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
 author: vhorne
 ---
 # Core Network Companion Guides
+
+>Applies To: Windows Server 2016 Technical Preview
+
 While the Core Network Guide provides instructions on how to deploy a new Active Directory forest with a new root domain and the supporting networking infrastructure, Companion Guides provide you with the ability to add features to your network. Each companion guide allows you to accomplish a specific goal after you have deployed your core network. In some cases, there are multiple companion guides that, when deployed together and in the correct order, allow you to accomplish very complex goals in a measured, cost-effective, reasonable manner.  
   
 If you deployed your Active Directory domain and core network before encountering the Core Network Guide, you can still use the Companion Guides to add features to your network. Simply use the Core Network Guide as a list of prerequisites, and know that to deploy additional features with the Companion Guides, your network must meet the prerequisites that are provided by the Core Network Guide.  

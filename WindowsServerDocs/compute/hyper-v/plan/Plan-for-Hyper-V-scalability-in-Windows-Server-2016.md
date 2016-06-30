@@ -13,6 +13,9 @@ ms.assetid: 1db68a42-6cd8-48fb-95ce-19aa79bf2ec7
 author: KBDAzure
 ---
 # Plan for Hyper-V scalability in Windows Server 2016
+
+>Applies To: Windows Server 2016 Technical Preview
+
 **This is preliminary content and subject to change.**  
   
 This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine as well as those that apply to the Hyper-V host. These numbers are similar to those that apply to  Windows Server 2012 R2 .  
@@ -54,6 +57,7 @@ These maximums apply to each Hyper-V host.
 |Virtual processors per server|2048|None.|  
 |Virtual storage area networks (SANs)|No limits imposed by Hyper-V.|None.|  
 |Virtual switches|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|  
+
   
 ### Failover Clusters and Hyper-V  
 The following table lists the maximums that apply to highly available servers running Hyper-V. It is important to do capacity planning to ensure that there will be enough hardware resources to run all the virtual machines in a clustered environment.  

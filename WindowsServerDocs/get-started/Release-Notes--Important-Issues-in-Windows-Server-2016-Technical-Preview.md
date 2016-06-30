@@ -1,5 +1,5 @@
 ---
-title: Release Notes: Important Issues in Windows Server 2016 Technical Preview
+title: Release Notes - Important Issues in Windows Server 2016 Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -10,12 +10,11 @@ ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ---
-
 # Release Notes: Important Issues in Windows Server 2016 Technical Preview
 
 >Applies To: Windows Server Technical Preview
 
-These release notes summarize the most critical issues in the Windows Server® 2016 Technical Preview operating system, including ways to avoid or work around the issues, if known. For information about by-design changes, new features, and fixes in this release, see [What’s New in the Windows Server Technical Preview](http://technet.microsoft.com/library/dn765472.aspx) and announcements from the specific feature teams. Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server 2016 Technical Preview.  
+These release notes summarize the most critical issues in the Windows Server&reg; 2016 Technical Preview operating system, including ways to avoid or work around the issues, if known. For information about by-design changes, new features, and fixes in this release, see [What’s New in the Windows Server Technical Preview](http://technet.microsoft.com/library/dn765472.aspx) and announcements from the specific feature teams. Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server 2016 Technical Preview.  
 
 This document is continuously updated. As critical issues requiring a workaround are discovered, they are added.  
 
@@ -216,7 +215,7 @@ This document is provided “as-is”. Information and views expressed in this d
 
 This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.  
 
-©2016 Microsoft Corporation. All rights reserved.  
+© 2016 Microsoft Corporation. All rights reserved.  
 
 Microsoft, Active Directory, Hyper-V, Windows, and Windows Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.  
 

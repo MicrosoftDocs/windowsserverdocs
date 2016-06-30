@@ -1,10 +1,10 @@
----
+ï»¿---
 title: TPM Key Attestation
 ms.custom: 
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -46,7 +46,7 @@ Beginning with Windows 8, a Trusted Platform Module (TPM) can be used to secure 
 -   It was not possible to limit the list of TPMs that are allowed to protect enterprise issued certificates (in the event that the PKI Administrator wants to control the types of devices that can be used to obtain certificates in the environment).  
   
 ### TPM key attestation  
-TPM key attestation is the ability of the user who is requesting a certificate to cryptographically prove to a CA that the RSA key in the certificate request is protected by either “a” or “the” TPM that the CA trusts. The TPM trust model is discussed more in the [Deployment overview](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_DeploymentOverview) section in this topic.  
+TPM key attestation is the ability of the user who is requesting a certificate to cryptographically prove to a CA that the RSA key in the certificate request is protected by either "a" or "the" TPM that the CA trusts. The TPM trust model is discussed more in the [Deployment overview](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_DeploymentOverview) section in this topic.  
   
 ### Why is TPM key attestation important?  
 A user certificate with a TPM-attested key provides higher security assurance backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.  
@@ -149,9 +149,9 @@ To configure the certificate template for TPM key attestation, do the following 
   
     |OID|Key attestation type|Description|Assurance level|  
     |-------|------------------------|---------------|-------------------|  
-    |1.3.6.1.4.1.311.21.30|EK|“EK Verified”:   For administrator-managed list of EK|High|  
-    |1.3.6.1.4.1.311.21.31|Endorsement certificate|“EK Certificate Verified”: When EK certificate chain is validated|Medium|  
-    |1.3.6.1.4.1.311.21.32|User credentials|“EK Trusted on Use”: For user-attested EK|Low|  
+    |1.3.6.1.4.1.311.21.30|EK|"EK Verified":   For administrator-managed list of EK|High|  
+    |1.3.6.1.4.1.311.21.31|Endorsement certificate|"EK Certificate Verified": When EK certificate chain is validated|Medium|  
+    |1.3.6.1.4.1.311.21.32|User credentials|"EK Trusted on Use": For user-attested EK|Low|  
   
     The OIDs will be inserted into the issued certificate if **Include Issuance Policies** is selected (the default configuration).  
   
@@ -208,10 +208,8 @@ To configure the certificate template for TPM key attestation, do the following 
     2.  **Populate the EKPUB list:** Use the following Windows PowerShell cmdlet to obtain the public key hash of the TPM EK by using Windows PowerShell on each device and then send this public key hash to the CA and store it on the EKPubList folder.  
   
         ```powershell  
-        PS C:>\$a=Get-TpmEndorsementKeyInfo –hashalgorithm sha256  
-        PS C:>$b=new-item $a.PublickKeyHash –ItemType file  
-        PS C:>\xcopy $b \\enterpriseCA.contoso.com\EKPubList  
-  
+        PS C:>\$a=Get-TpmEndorsementKeyInfo -hashalgorithm sha256  
+        PS C:>$b=new-item $a.PublickKeyHash -ItemType file  
         ```  
   
 ## Troubleshooting  
@@ -247,7 +245,7 @@ Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify t
     1.  **Extract the EKPub from the client computer:** The EKPub can be extracted from a client computer via **Get-TpmEndorsementKeyInfo**. From an elevated command prompt, run the following:  
   
         ```  
-        PS C:>\$a=Get-TpmEndorsementKeyInfo –hashalgorithm sha256  
+        PS C:>\$a=Get-TpmEndorsementKeyInfo -hashalgorithm sha256  
         ```  
   
     2.  **Verify trust on an EKCert on a CA computer:** Copy the extracted string (the SHA-2 hash of the EKPub) to the server (for example, via email) and pass it to the Confirm-CAEndorsementKeyInfo cmdlet. Note that this parameter must be 64 characters.  
@@ -265,10 +263,10 @@ Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify t
         PS C:>\$a.manufacturerCertificates|Export-Certificate c:\myEkcert.cer  
         ```  
   
-    2.  **Verify trust on an KCert on a CA computer:** Copy the extracted EKCert (EkCert.cer) to the CA (for example, via email or xcopy). As an example, if you copy the certificate file the “c:\diagnose” folder on the CA server, run the following to finish verification:  
+    2.  **Verify trust on an KCert on a CA computer:** Copy the extracted EKCert (EkCert.cer) to the CA (for example, via email or xcopy). As an example, if you copy the certificate file the "c:\diagnose" folder on the CA server, run the following to finish verification:  
   
         ```  
-        PS C:>new-object System.Security.Cryptography.X509Certificates.X509Certificate2 “c:\diagnose\myEKcert.cer” | Confirm-CAEndorsementKeyInfo  
+        PS C:>new-object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\diagnose\myEKcert.cer" | Confirm-CAEndorsementKeyInfo  
         ```  
   
 ## See Also  

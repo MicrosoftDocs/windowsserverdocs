@@ -1,10 +1,10 @@
----
+ï»¿---
 title: SPN and UPN uniqueness
 ms.custom: 
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -271,7 +271,7 @@ servicePrincipalName Value=<SPN>
   
     -   ***UPN case***  
   
-        -   Submit LDAP query against closest GC ? query GC’s forest-wide UPN index for supplied UPN (*userPrincipalName; a global index*)  
+        -   Submit LDAP query against closest GC ? query GC's forest-wide UPN index for supplied UPN (*userPrincipalName; a global index*)  
   
             -   If entries returned == 0 ->           write proceeds  
   
@@ -287,7 +287,7 @@ servicePrincipalName Value=<SPN>
   
     -   ***SPN case***  
   
-        -   Submit LDAP query against closest GC ? query GC’s forest-wide SPN index for supplied SPN (*servicePrincipalName; a global index*)  
+        -   Submit LDAP query against closest GC ? query GC's forest-wide SPN index for supplied SPN (*servicePrincipalName; a global index*)  
   
             -   If entries returned == 0 -> write proceeds  
   

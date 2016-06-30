@@ -14,6 +14,9 @@ author: cwatsonmsft
 robots: noindex,nofollow
 ---
 # Generation 2 virtual machine security settings for Hyper-V
+
+>Applies To: Windows Server 2016 Technical Preview, Windows 10
+
 **This is preliminary content and subject to change.**  
   
 Use the virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. You can protect virtual machines from inspection, theft, and tampering from both malware that may run on the host, and datacenter administrators. The level of security you get depends on the host hardware you run, the virtual machine generation, and whether you set up the service, called the Host Guardian Service, that authorizes hosts to start shielded virtual machines.  
@@ -61,7 +64,7 @@ To enable Isolated User Mode on the Hyper-V host that runs Windows 10,
     ```  
     Enable-WindowsOptionalFeature -Feature IsolatedUserMode -Online  
     New-Item -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Force  
-    New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard   -Name EnableVirtualizationBasedSecurity -Value 1 -PropertyType DWord –Force  
+    New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1 -PropertyType DWord -Force  
   
     ```  
   

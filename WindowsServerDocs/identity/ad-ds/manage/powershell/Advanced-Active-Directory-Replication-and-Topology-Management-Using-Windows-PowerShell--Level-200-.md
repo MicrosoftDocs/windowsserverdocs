@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -248,7 +248,7 @@ new-adreplicationsitelink -name "chicago<-->waukegan" -sitesincluded chicago,wau
 Alternatively, find every site in the forest and replace their **Options** attributes with the flag to enable inter-site change notification, in order to replicate at maximum speed with compression:  
   
 ```  
-get-adreplicationsitelink -filter * | set-adobject â€“replace @{options=$($_.options â€“bor 1)}  
+get-adreplicationsitelink -filter * | set-adobject â€"replace @{options=$($_.options â€"bor 1)}  
 ```  
   
 ![](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSiteLink.gif)  

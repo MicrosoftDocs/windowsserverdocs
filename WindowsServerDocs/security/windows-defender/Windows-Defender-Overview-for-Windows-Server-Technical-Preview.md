@@ -16,7 +16,7 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server Technical Preview
 
-Windows Server® 2016 Technical Preview now includes Windows Defender. Windows Defender is malware protection that immediately and actively protects Windows Server 2016 Technical Preview against known malware and can regularly update antimalware definitions through Windows Update.
+Windows Server 2016 Technical Preview now includes Windows Defender. Windows Defender is malware protection that immediately and actively protects Windows Server 2016 Technical Preview against known malware and can regularly update antimalware definitions through Windows Update.
 
 This topic includes information important for running Windows Defender on a server platform. Use the following links to get to the information you need in this topic:
 
@@ -31,7 +31,7 @@ This topic includes information important for running Windows Defender on a serv
 -   [Automatic exclusions](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefExclusions)
 
 ## <a name="BKMK_UsingDef"></a>Using Windows Defender
-By default, Windows Defender is installed and functional on Windows Server 2016 Technical Preview. The user interface is installed by default on some SKUs. You can manage Windows Defender by using WMI, Windows PowerShell®, or by using Group Policy.
+By default, Windows Defender is installed and functional on Windows Server 2016 Technical Preview. The user interface is installed by default on some SKUs. You can manage Windows Defender by using WMI, Windows PowerShell, or by using Group Policy.
 
 If the user interface is not installed,  use **Add Roles and Features Wizard**, or the **Install-WindowsFeature** cmdlet.
 
@@ -92,7 +92,7 @@ For more information about managing Windows Defender by using Windows PowerShell
 
 As an example of managing Windows Defender by using Windows PowerShell cmdlets, scheduling a time of day to check for definition updates would be enabled by starting a Windows PowerShell console as an administrator and setting the **ScanScheduleTime** value:
 
-`Set-MpPreference –ScanScheduleTime 120`
+`Set-MpPreference -ScanScheduleTime 120`
 
 ## <a name="BKMK_DefSamples"></a>Submit Samples
 Sample submission allows Microsoft to collect samples of potentially malicious software.  To help provide continued and up-to-date protection, Microsoft researchers use these samples to analyze suspicious activities and produce updated antimalware definitions.
@@ -105,7 +105,7 @@ We collect program executable files, such as EXE files and DLL files. We do not 
 
     -   **0** Always prompt. The Windows Defender service prompts you to confirm submission of all required files. This is the default setting for Windows Defender, but is not recommended for Windows Server 2016 Technical Preview installations without a GUI.
 
-    -   **1** Send safe samples automatically. The Windows Defender service sends all files marked as “safe” and prompts for the remainder of the files.
+    -   **1** Send safe samples automatically. The Windows Defender service sends all files marked as "safe" and prompts for the remainder of the files.
 
     -   **2** Never send. The Windows Defender service does not prompt and does not send any files.
 

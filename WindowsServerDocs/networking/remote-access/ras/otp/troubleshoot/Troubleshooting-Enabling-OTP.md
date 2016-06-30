@@ -24,7 +24,7 @@ This topic contains troubleshooting information for issues related to enabling D
   
 There are three possible causes for this error:  
   
--   The template doesn’t exist.  
+-   The template doesn't exist.  
   
 -   The permissions set on the template do not allow the DirectAccess server to enroll.  
   
@@ -38,7 +38,7 @@ There are three possible causes for this error:
   
     2.  Is set to be issued by at least one CA that can issue certificates to the DirectAccess server.  
   
-2.  If the template doesn’t exist, create it as described in [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert), or if another matching template exists reconfigure DirectAccess OTP with the new template name.  
+2.  If the template doesn't exist, create it as described in [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert), or if another matching template exists reconfigure DirectAccess OTP with the new template name.  
   
 ## Failed to enable DirectAccess OTP when WebDAV is installed  
 **Scenario**—While attempting to apply the DirectAccess OTP configuration in the Remote Access Management console or by using the `Enable-DAOtpAuthentication` PowerShell cmdlet, the operation fails.  
@@ -91,7 +91,7 @@ There are two possible causes for this error:
   
 **Cause**  
   
-The Certificate Templates MMC snap-in in Windows Server 2003 doesn’t allow you to set the renewal period of a template to 1 hour.  
+The Certificate Templates MMC snap-in in Windows Server 2003 doesn't allow you to set the renewal period of a template to 1 hour.  
   
 **Solution**  
   

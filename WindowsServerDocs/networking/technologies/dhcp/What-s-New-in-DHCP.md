@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This topic describes the Dynamic Host Configuration Protocol (DHCP) functionality that is new or changed in Windows Server® 2016 Technical Preview.  
+This topic describes the Dynamic Host Configuration Protocol (DHCP) functionality that is new or changed in Windows Server 2016 Technical Preview.  
   
 DHCP is an Internet Engineering Task Force (IETF) standard that is designed to reduce the administrative burden and complexity of configuring hosts on a TCP/IP-based network, such as a private intranet. By using the DHCP Server service, the process of configuring TCP/IP on DHCP clients is automatic.  
   

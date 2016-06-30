@@ -1,13 +1,12 @@
 ---
 title: Deploy Access-Denied Assistance (Demonstration Steps)
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
+manager: femila
+ms.service: 
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 24d106f2-b050-4fc0-ba73-9f11560a28f2
@@ -72,14 +71,14 @@ You can configure access-denied assistance for the domain by using Group Policy 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName AllowEmailRequests –Type DWORD –value 1  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName GenerateLog –Type DWORD –value 1  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName IncludeDeviceClaims –Type DWORD –value 1  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName IncludeUserClaims –Type DWORD –value 1  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName PutAdminOnTo –Type DWORD –value 1  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName PutDataOwnerOnTo –Type DWORD –value 1  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName ErrorMessage –Type MultiString –value “Type the text that the user will see in the error message dialog box.”  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied” –ValueName Enabled –Type DWORD –value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName AllowEmailRequests -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName GenerateLog -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName IncludeDeviceClaims -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName IncludeUserClaims -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName PutAdminOnTo -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName PutDataOwnerOnTo -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName ErrorMessage -Type MultiString -value "Type the text that the user will see in the error message dialog box."  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\Windows\ADR\AccessDenied" -ValueName Enabled -Type DWORD -value 1 
   
 ```  
   
@@ -120,7 +119,7 @@ Alternatively, you can configure access-denied assistance individually on each f
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
   
 ```  
-Set-FSRMAdrSetting -Event "AccessDenied" –DisplayMessage “Type the text that the user will see in the error message dialog box.” -Enabled:$true -AllowRequests:$true  
+Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the user will see in the error message dialog box." -Enabled:$true -AllowRequests:$true  
 ```  
   
 After you configure the access-denied assistance, you must enable it for all file types by using Group Policy.  
@@ -144,7 +143,7 @@ After you configure the access-denied assistance, you must enable it for all fil
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
 ```  
-Set-GPRegistryValue –Name “Name of GPO” –key “HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer” –ValueName EnableShellExecuteFileStreamCheck –Type DWORD –value 1  
+Set-GPRegistryValue -Name "Name of GPO"� -key "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explore"� -ValueName EnableShellExecuteFileStreamCheck -Type DWORD -value 1  
   
 ```  
   
@@ -183,7 +182,7 @@ You can also specify a separate access-denied message for each shared folder on 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
 ```  
-Set-FSRMMgmtProperty -Namespace "folder path” -Name "AccessDeniedMessage_MS" -Value “Type the text that the user will see in the error message dialog box.”  
+Set-FSRMMgmtProperty -Namespace "folder path"� -Name "AccessDeniedMessage_MS" -Value "Type the text that the user will see in the error message dialog box."�  
 ```  
   
 ## <a name="BKMK_2"></a>Step 2: Configure the email notification settings  
@@ -212,7 +211,7 @@ You must configure the email notification settings on each file server that will
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
   
 ```  
-set-FSRMSetting -SMTPServer “server1” -AdminEmailAddress “fileadmin@contoso.com” -FromEmailAddress “fileadmin@contoso.com”  
+set-FSRMSetting -SMTPServer "server1"� -AdminEmailAddress "fileadmin@contoso.com"� -FromEmailAddress "fileadmin@contoso.com"�  
 ```  
   
 ## <a name="BKMK_3"></a>Step 3: Verify that access-denied assistance is configured correctly  

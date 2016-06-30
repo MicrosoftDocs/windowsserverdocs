@@ -1,9 +1,9 @@
----
+ï»¿---
 title: Identifying Your Functional Level Upgrade
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -40,7 +40,7 @@ After you assess your current environment, you have to identify the functional l
 -   New  Windows Server 2008 R2  forest  
   
 ## Upgrading functional levels in a native Windows 2000 Active Directory forest  
-In a Windows 2000 native environment that consists only of Windows 2000–based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:  
+In a Windows 2000 native environment that consists only of Windows 2000-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:  
   
 -   Windows 2000 native domain functional level  
   
@@ -48,7 +48,7 @@ In a Windows 2000 native environment that consists only of Windows 2000–based do
   
 To use all the forest-level and domain-level features in  Windows Server 2008  or  Windows Server 2008 R2 , you have to upgrade this Windows 2000 environment to  Windows Server 2008  or  Windows Server 2008 R2 . You can perform this upgrade in either of the following ways:  
   
--   Introduce newly installed  Windows Server 2008 –based or  Windows Server 2008 R2 –based domain controllers into the forest, and then retire all domain controllers running Windows 2000.  
+-   Introduce newly installed  Windows Server 2008 -based or  Windows Server 2008 R2 -based domain controllers into the forest, and then retire all domain controllers running Windows 2000.  
   
 -   Perform an in-place upgrade of all existing domain controllers running Windows 2000 in the forest to domain controllers running Windows Server 2003. Then, perform an in-place upgrade of those domain controllers to  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains \[LH\]](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61).  
   
@@ -58,14 +58,14 @@ To use all the forest-level and domain-level features in  Windows Server 2008  o
 To use the  Windows Server 2008  or  Windows Server 2008 R2  domain-level features without upgrading your entire Windows 2000 forest to  Windows Server 2008  or  Windows Server 2008 R2 , raise only the domain functional level to  Windows Server 2008  or  Windows Server 2008 R2 .  
   
 > [!NOTE]  
-> Before you raise the domain functional level, you must upgrade all Windows 2000–based domain controllers in that domain to  Windows Server 2008  or  Windows Server 2008 R2 .  
+> Before you raise the domain functional level, you must upgrade all Windows 2000-based domain controllers in that domain to  Windows Server 2008  or  Windows Server 2008 R2 .  
   
-After you replace all the Windows 2000–based domain controllers in the forest with domain controllers that run  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows 2000 native or higher to  Windows Server 2008  or  Windows Server 2008 R2 .  
+After you replace all the Windows 2000-based domain controllers in the forest with domain controllers that run  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows 2000 native or higher to  Windows Server 2008  or  Windows Server 2008 R2 .  
   
 For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1).  
   
 ## Upgrading functional levels in a Windows Server 2003 Active Directory forest  
-In a Windows Server 2003 environment that consists of only Windows Server 2003–based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:  
+In a Windows Server 2003 environment that consists of only Windows Server 2003-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:  
   
 -   Windows 2000 native domain functional level  
   
@@ -73,7 +73,7 @@ In a Windows Server 2003 environment that consists of only Windows Server 2003–b
   
 To use all the forest-level and domain-level features in  Windows Server 2008  or  Windows Server 2008 R2 , you have to upgrade this Windows Server 2003 environment to  Windows Server 2008  or  Windows Server 2008 R2 . You can perform this upgrade in either of the following ways:  
   
--   Introduce a newly installed  Windows Server 2008 –based or  Windows Server 2008 R2 –based domain controller into the forest, and then retire all domain controllers running Windows Server 2003 or upgrade them to  Windows Server 2008  or  Windows Server 2008 R2 .  
+-   Introduce a newly installed  Windows Server 2008 -based or  Windows Server 2008 R2 -based domain controller into the forest, and then retire all domain controllers running Windows Server 2003 or upgrade them to  Windows Server 2008  or  Windows Server 2008 R2 .  
   
 -   Perform an in-place upgrade of all existing domain controllers running Windows Server 2003 to domain controllers running  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains \[LH\]](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61).  
   
@@ -83,9 +83,9 @@ To use all the forest-level and domain-level features in  Windows Server 2008  o
 To use all the  Windows Server 2008  or  Windows Server 2008 R2  domain-level features without upgrading your entire Windows Server 2003 forest to  Windows Server 2008  or  Windows Server 2008 R2 , raise only the domain functional level to  Windows Server 2008  or  Windows Server 2008 R2 .  
   
 > [!NOTE]  
-> Before you raise the domain functional level, you must upgrade all Windows Server 2003–based domain controllers in that domain to  Windows Server 2008  or  Windows Server 2008 R2 .  
+> Before you raise the domain functional level, you must upgrade all Windows Server 2003-based domain controllers in that domain to  Windows Server 2008  or  Windows Server 2008 R2 .  
   
-After you upgrade all the Windows Server 2003–based domain controllers in the forest to  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows Server 2003 to  Windows Server 2008  or  Windows Server 2008 R2 .  
+After you upgrade all the Windows Server 2003-based domain controllers in the forest to  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows Server 2003 to  Windows Server 2008  or  Windows Server 2008 R2 .  
   
 For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1).  
   
@@ -96,10 +96,10 @@ When you install the first domain controller in a new  Windows Server 2008  fore
   
 -   Windows 2000 forest functional level  
   
-Functional levels are set at these default levels to give you the option of adding Windows 2000 or Windows Server 2003–based domain controllers to your new  Windows Server 2008  forest. After you create a forest root domain, the domain functional level for each domain that you add to the  Windows Server 2008  forest is set to Windows 2000 native. However, if you want all domain controllers in your new  Windows Server 2008  environment to run  Windows Server 2008 , set the forest functional level, and then the domain functional level, to  Windows Server 2008  when you install the first domain controller in your forest. Doing this saves time and enables all the forest-level and domain-level features in  Windows Server 2008 .  
+Functional levels are set at these default levels to give you the option of adding Windows 2000 or Windows Server 2003-based domain controllers to your new  Windows Server 2008  forest. After you create a forest root domain, the domain functional level for each domain that you add to the  Windows Server 2008  forest is set to Windows 2000 native. However, if you want all domain controllers in your new  Windows Server 2008  environment to run  Windows Server 2008 , set the forest functional level, and then the domain functional level, to  Windows Server 2008  when you install the first domain controller in your forest. Doing this saves time and enables all the forest-level and domain-level features in  Windows Server 2008 .  
   
 > [!IMPORTANT]  
-> If the forest operates at the  Windows Server 2008  functional level and you attempt to install Active Directory on a Windows Server 2003–based member server or a Windows 2000–based member server, the installation fails.  
+> If the forest operates at the  Windows Server 2008  functional level and you attempt to install Active Directory on a Windows Server 2003-based member server or a Windows 2000-based member server, the installation fails.  
   
 For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1).  
   
@@ -110,10 +110,10 @@ When you install the first domain controller in a new  Windows Server 2008 R2  f
   
 -   Windows Server 2003 forest functional level  
   
-Functional levels are set at these default levels to give you the option of adding Windows Server 2003–based domain controllers to your new  Windows Server 2008 R2  forest. After you create a forest root domain, the domain functional level for each domain that you add to the  Windows Server 2008 R2  forest is set to Windows Server 2003. However, if you want all domain controllers in your new  Windows Server 2008 R2  environment to run  Windows Server 2008 R2 , set the forest functional level, and then the domain functional level, to  Windows Server 2008 R2  when you install the first domain controller in your forest. Doing this saves time and enables all forest-level and domain-level features in  Windows Server 2008 R2 .  
+Functional levels are set at these default levels to give you the option of adding Windows Server 2003-based domain controllers to your new  Windows Server 2008 R2  forest. After you create a forest root domain, the domain functional level for each domain that you add to the  Windows Server 2008 R2  forest is set to Windows Server 2003. However, if you want all domain controllers in your new  Windows Server 2008 R2  environment to run  Windows Server 2008 R2 , set the forest functional level, and then the domain functional level, to  Windows Server 2008 R2  when you install the first domain controller in your forest. Doing this saves time and enables all forest-level and domain-level features in  Windows Server 2008 R2 .  
   
 > [!IMPORTANT]  
-> If the forest operates at the  Windows Server 2008 R2  functional level and you attempt to install Active Directory on a  Windows Server 2008 –based or Windows Server 2003–based member server, or on a Windows 2000–based member server, the installation fails.  
+> If the forest operates at the  Windows Server 2008 R2  functional level and you attempt to install Active Directory on a  Windows Server 2008 -based or Windows Server 2003-based member server, or on a Windows 2000-based member server, the installation fails.  
   
 For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1).  
   

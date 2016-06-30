@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -48,7 +48,7 @@ If you plan to enable Active Directory Recycle Bin in  Windows Server 2012 , con
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on WindowsÂ® 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 ### Active Directory Recycle Bin step-by-step
 In the following steps, you will use ADAC to perform the following Active Directory Recycle Bin tasks in  Windows Server 2012 :
@@ -80,10 +80,10 @@ In this step, you will raise the forest functional level. You must first raise t
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Set-ADForestMode â€“Identity contoso.com -ForestMode Windows2008R2Forest â€“Confirm:$false
+Set-ADForestMode â€"Identity contoso.com -ForestMode Windows2008R2Forest â€"Confirm:$false
 ```
 
-For the **â€“Identity** argument, specify the fully qualified DNS name.
+For the **â€"Identity** argument, specify the fully qualified DNS name.
 
 ### <a name="bkmk_enable_recycle_bin"></a>Step 2: Enable Recycle Bin
 In this step, you will enable the Recycle Bin to restore deleted objects in AD DS.
@@ -103,7 +103,7 @@ In this step, you will enable the Recycle Bin to restore deleted objects in AD D
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Enable-ADOptionalFeature â€“Identity 'CN=Recycle Bin Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com' â€“Scope ForestOrConfigurationSet â€“Target 'contoso.com'
+Enable-ADOptionalFeature â€"Identity 'CN=Recycle Bin Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com' â€"Scope ForestOrConfigurationSet â€"Target 'contoso.com'
 ```
 
 ### <a name="bkmk_create_test_env"></a>Step 3: Create test users, group and organizational unit
@@ -172,7 +172,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-1..2 | ForEach-Object {New-ADUser -SamAccountName test$_ -Name "test$_" â€“Path "DC=fabrikam,DC=com" -AccountPassword (ConvertTo-SecureString -AsPlainText "p@ssword1" -Force) -Enabled $true}
+1..2 | ForEach-Object {New-ADUser -SamAccountName test$_ -Name "test$_" â€"Path "DC=fabrikam,DC=com" -AccountPassword (ConvertTo-SecureString -AsPlainText "p@ssword1" -Force) -Enabled $true}
 New-ADGroup -Name "group1" -SamAccountName group1 -GroupCategory Security -GroupScope Global -DisplayName "group1"
 New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
@@ -194,7 +194,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
     ```
-    Get-ADUser â€“Filter 'Name â€“Like "*test*"'|Remove-ADUser -Confirm:$false
+    Get-ADUser â€"Filter 'Name â€"Like "*test*"'|Remove-ADUser -Confirm:$false
     ```
 
 4.  Navigate to the **Deleted Objects** container, select **test2** and **test1** and then click **Restore** in the **Tasks** pane.
@@ -209,7 +209,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 ```
-Get-ADObject â€“Filter 'Name â€“Like "*test*"' â€“IncludeDeletedObjects | Restore-ADObject
+Get-ADObject â€"Filter 'Name â€"Like "*test*"' â€"IncludeDeletedObjects | Restore-ADObject
 ```
 
 ##### To restore deleted objects to a different location
@@ -231,7 +231,7 @@ Get-ADObject â€“Filter 'Name â€“Like "*test*"' â€“IncludeDeletedObjects | Restor
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Get-ADObject â€“Filter 'Name â€“Like "*test*"' â€“IncludeDeletedObjects | Restore-ADObject â€“TargetPath "OU=OU1,DC=contoso,DC=com"
+Get-ADObject â€"Filter 'Name â€"Like "*test*"' â€"IncludeDeletedObjects | Restore-ADObject â€"TargetPath "OU=OU1,DC=contoso,DC=com"
 ```
 
 ## <a name="fine_grained_pswd_policy_mgmt"></a>Fine-Grained Password Policy
@@ -250,7 +250,7 @@ If you plan to use fine-grained password policies in  Windows Server 2012 , cons
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on WindowsÂ® 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 ### Fine-Grained Password Policy step-by-step
 In the following steps, you will use ADAC to perform the following fine-grained password policy tasks:
@@ -395,7 +395,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Set-ADFineGrainedPasswordPolicy â€“Identity TestPswd â€“ProtectedFromAccidentalDeletion $False
+Set-ADFineGrainedPasswordPolicy â€"Identity TestPswd â€"ProtectedFromAccidentalDeletion $False
 Remove-ADFineGrainedPasswordPolicy TestPswd -Confirm
 ```
 
@@ -409,7 +409,7 @@ When using the Windows PowerShell History Viewer in  Windows Server 2012  consid
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on WindowsÂ® 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 -   Have some basic Windows PowerShell knowledge. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](http://technet.microsoft.com/library/ee176927.aspx).
 

@@ -40,9 +40,9 @@ This topic contains the following sections.
 ## <a name="bkmk_rras"></a>RAS Gateway  
 RAS Gateway is a software router and gateway that you can use in either single tenant mode or multitenant mode.  
   
-Single tenant mode allows organizations of any size to deploy the gateway as an exterior, or Internet-facing edge virtual private network (VPN) and DirectAccess server. In single tenant mode, you can deploy RAS Gateway on a physical server or virtual machine (VM) running Windows Server® 2016 Technical Preview.  
+Single tenant mode allows organizations of any size to deploy the gateway as an exterior, or Internet-facing edge virtual private network (VPN) and DirectAccess server. In single tenant mode, you can deploy RAS Gateway on a physical server or virtual machine (VM) running Windows Server 2016 Technical Preview.  
   
-Multitenant mode allows Cloud Service Providers (CSPs) and Enterprises to use RAS Gateway to enable datacenter and cloud network traffic routing between virtual and physical networks, including the Internet. For multitenant mode, it is recommended that you deploy RAS Gateway on VMs that are running Windows Server® 2016 Technical Preview.  
+Multitenant mode allows Cloud Service Providers (CSPs) and Enterprises to use RAS Gateway to enable datacenter and cloud network traffic routing between virtual and physical networks, including the Internet. For multitenant mode, it is recommended that you deploy RAS Gateway on VMs that are running Windows Server 2016 Technical Preview.  
   
 > [!NOTE]  
 > RAS Gateway supports IPv4 and IPv6, including IPv4 and IPv6 forwarding. When you configure RAS Gateway with Network Address Translation (NAT), only NAT44 is supported.  
@@ -57,7 +57,7 @@ If you are a system administrator, network architect, or other IT professional, 
   
 -   You want to provide full network connectivity between physical networks and virtual networks.  
   
--   You want to provide your organization’s customers with access to their virtual networks over the Internet.  
+-   You want to provide your organization's customers with access to their virtual networks over the Internet.  
   
 -   You want to provide your organization's employees with remote access to your organization network.  
   
@@ -76,7 +76,7 @@ Multitenancy is the ability of a cloud infrastructure to support the virtual mac
   
 For example, an Enterprise might have many different virtual subnets, each of which is dedicated to servicing a specific department, such as Research and Development or Accounting. In another example, a CSP has many tenants with isolated virtual subnets existing in the same physical datacenter. In both cases, RAS Gateway can route traffic to and from each tenant while maintaining the designed isolation of each tenant. This capability makes the RAS Gateway multitenant-aware.  
   
-Virtual networks are created by using Hyper-V Network Virtualization, which is a technology that was introduced in Windows Server® 2012, and is improved in Windows Server 2016 Technical Preview. RAS Gateway is integrated with Hyper-V Network Virtualization, and is able to route network traffic effectively in circumstances where there are many different customers – or tenants – who have isolated virtual networks in the same datacenter.  
+Virtual networks are created by using Hyper-V Network Virtualization, which is a technology that was introduced in Windows Server 2012, and is improved in Windows Server 2016 Technical Preview. RAS Gateway is integrated with Hyper-V Network Virtualization, and is able to route network traffic effectively in circumstances where there are many different customers - or tenants - who have isolated virtual networks in the same datacenter.  
   
 Hyper-V Network Virtualization provides you with the ability to deploy a virtual machine (VM) network that is independent of the underlying physical network. With VM networks, which are composed of one or more virtual subnets, the exact physical location of an IP subnet is decoupled from the virtual network topology. As a result, you can easily move your on premises subnets to the cloud - while preserving your existing IP addresses and topology in the cloud. This ability to preserve infrastructure allows existing services to continue to work, unaware of the physical location of the subnets. That is, Hyper-V Network Virtualization enables a seamless hybrid cloud.  
   
@@ -87,7 +87,7 @@ In Windows Server 2016 Technical Preview, RAS Gateway routes network traffic bet
   
 For example, if you have both a physical network and a virtual network at the same physical location, you can deploy a computer running Hyper-V that is configured with an RAS Gateway VM to act as a forwarding gateway and route traffic between the virtual and physical networks.  
   
-In another example, if your virtual networks exist in the cloud, your CSP can deploy an RAS Gateway so that you can create a virtual private network (VPN) site-to-site connection between your VPN server and the CSP’s RAS Gateway; when this link is established you can connect to your virtual resources in the cloud over the VPN connection.  
+In another example, if your virtual networks exist in the cloud, your CSP can deploy an RAS Gateway so that you can create a virtual private network (VPN) site-to-site connection between your VPN server and the CSP's RAS Gateway; when this link is established you can connect to your virtual resources in the cloud over the VPN connection.  
   
 For more information, see [RAS Gateway High Availability](../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
@@ -113,7 +113,7 @@ RAS Gateway includes the following capabilities.
   
 -   **Network Address Translation (NAT)**. Network address translation (NAT) allows you to share a connection to the public Internet through a single interface with a single public IP address. The computers on the private network use private, non-routable addresses. NAT maps the private addresses to the public address. This RAS Gateway feature allows organization employees with single tenant deployments to access Internet resources from behind the gateway. For CSPs, this feature allows applications that are running on tenant VMs to access the Internet. For example, a tenant VM that is configured as a Web server can contact external financial resources to process credit card transactions.  
   
--   **DirectAccess server**. DirectAccess is a feature that allows employee connectivity to organization network resources without the need for traditional Virtual Private Network (VPN) connections. With DirectAccess, client computers are always connected to your organization – there is no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they are running and Internet connected.  
+-   **DirectAccess server**. DirectAccess is a feature that allows employee connectivity to organization network resources without the need for traditional Virtual Private Network (VPN) connections. With DirectAccess, client computers are always connected to your organization - there is no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they are running and Internet connected.  
   
 ## <a name="bkmk_deploy"></a>RAS Gateway Deployment Scenarios  
 Following are the recommended deployment scenarios for RAS Gateway.  

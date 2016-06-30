@@ -1,5 +1,5 @@
 ---
-title: Step 3: Plan a Load-Balanced Cluster Deployment
+title: Step 3 Plan a Load-Balanced Cluster Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 7540c17b-81de-47de-a04f-3247afa26f70
 author: coreyp
 ---
-# Step 3: Plan a Load-Balanced Cluster Deployment
+# Step 3 Plan a Load-Balanced Cluster Deployment
 
 >Applies To: Windows Server Technical Preview
 
@@ -27,9 +27,9 @@ The next step is to plan the load-balancing configuration and cluster deployment
 ## <a name="bkmk_2_1_Plan_LB"></a>3.1 Plan load balancing  
 Remote Access can be deployed on a single server, or on a cluster of Remote Access servers. Traffic to the cluster can be load balanced to provide high availability and scalability for DirectAccess clients. There are two load balancing options:  
   
--   **Windows NLB**—Windows NLB is a Windows server feature. To use it, you do not require additional hardware because all the servers in the cluster are responsible for managing the traffic load. Windows NLB supports a maximum of eight servers in a Remote Access cluster.  
+-   **Windows NLB**â€”Windows NLB is a Windows server feature. To use it, you do not require additional hardware because all the servers in the cluster are responsible for managing the traffic load. Windows NLB supports a maximum of eight servers in a Remote Access cluster.  
   
--   **External load balancer**—Using an external load balancer requires external hardware to manage the traffic load between the Remote Access cluster servers. In addition, using an external load balancer supports a maximum of 32 Remote Access servers in a cluster. Some points to keep in mind when configuring external load balancing are:  
+-   **External load balancer**â€”Using an external load balancer requires external hardware to manage the traffic load between the Remote Access cluster servers. In addition, using an external load balancer supports a maximum of 32 Remote Access servers in a cluster. Some points to keep in mind when configuring external load balancing are:  
   
     -   The administrator must ensure that the Virtual IPs configured through the Remote Access load balancing wizard are used on the external load balancers (like F5 Big-Ip Local Traffic Manager system). When external load balancing is enabled, the IP addresses on the external and internal interfaces will be promoted to Virtual IP addresses, and have to be plumbed on the load balancers. This is done so that the administrator does not have to change the DNS entry for the public name of the cluster deployment. Also, the IPsec tunnel endpoints are derived from the server IPs. If the administrator provides separate Virtual IPs, then the client will not be able to connect to the server. See example for configuring DirectAccess with External Load Balancing in [3.1.1 External Load Balancer configuration example](assetId:///22e3a2dc-4f9c-417c-9630-c329506a3e8b#ELBConfigEx).  
   
@@ -48,23 +48,23 @@ This section describes the configuration steps for enabling an external load bal
   
 1.  External VIPs (IPs that the client will use to connect to Remote Access) were decided to be 131.107.0.102, 131.107.0.103  
   
-2.  Load balancer on external network self-IPs – 131.107.0.245 (Internet), 131.107.1.245  
+2.  Load balancer on external network self-IPs - 131.107.0.245 (Internet), 131.107.1.245  
   
     The perimeter network (also known as demilitarized zone and DMZ) is between the load balancer on the external network and the Remote Access server.  
   
-3.  IP addresses for the Remote Access server on the perimeter network – 131.107.1.102, 131.107.1.103  
+3.  IP addresses for the Remote Access server on the perimeter network - 131.107.1.102, 131.107.1.103  
   
-4.  IP addresses for the Remote Access server on the ELB network (i.e. between the Remote Access server and the load balancer on the internal network) – 30.11.1.101, 2006:2005:11:1::101  
+4.  IP addresses for the Remote Access server on the ELB network (i.e. between the Remote Access server and the load balancer on the internal network) - 30.11.1.101, 2006:2005:11:1::101  
   
-5.  Load balancer on internal network self-IPs – 30.11.1.245 2006:2005:11:1::245 (ELB), 30.1.1.245 2006:2005:1:1::245 (Corpnet)  
+5.  Load balancer on internal network self-IPs - 30.11.1.245 2006:2005:11:1::245 (ELB), 30.1.1.245 2006:2005:1:1::245 (Corpnet)  
   
 6.  Internal VIPs (IP addresses used for client web-probe and for network location server, if installed on the Remote Access servers) were decided to be 30.1.1.10, 2006:2005:1:1::10  
   
 ##### Steps  
   
-1.  Configure the Remote Access server’s external network adapter (that is connected to the perimeter network) with addresses 131.107.0.102, 131.107.0.103. This step is required for the DirectAccess configuration to detect the correct IPsec tunnel endpoints.  
+1.  Configure the Remote Access server's external network adapter (that is connected to the perimeter network) with addresses 131.107.0.102, 131.107.0.103. This step is required for the DirectAccess configuration to detect the correct IPsec tunnel endpoints.  
   
-2.  Configure the Remote Access server’s internal network adapter (that is connected to the ELB network) with the web-probe/network location server IP addresses (30.1.1.10, 2006:2005:1:1::10). This step is required for allowing clients to access the web-probe IP, so the network connectivity assistant correctly indicates the connection status to DirectAccess. This step also allows access to the network location server, if it is configured on the DirectAccess server.  
+2.  Configure the Remote Access server's internal network adapter (that is connected to the ELB network) with the web-probe/network location server IP addresses (30.1.1.10, 2006:2005:1:1::10). This step is required for allowing clients to access the web-probe IP, so the network connectivity assistant correctly indicates the connection status to DirectAccess. This step also allows access to the network location server, if it is configured on the DirectAccess server.  
   
     > [!NOTE]  
     > Make sure that the domain controller is reachable from the Remote Access server with this configuration.  
@@ -79,9 +79,9 @@ This section describes the configuration steps for enabling an external load bal
   
 ## <a name="bkmk_2_2_NLB"></a>3.2 Plan IP-HTTPS  
   
-1.  **Certificate requirements**—During deployment of the single Remote Access server you selected to use either an IP-HTTPS certificate issued by a public or internal certification authority (CA), or a self-signed certificate. For the cluster deployment, you must use identical type of certificate on each member of the Remote Access cluster. That is, if you used a certificate issued by a public CA (recommended), you must install a certificate issued by a public CA on each member of the cluster. The subject name of the new certificate should be identical to the subject name of the IP-HTTPS certificate currently used in your deployment. Note that if you are using self-signed certificates these will be configured automatically on each server during cluster deployment.  
+1.  **Certificate requirements**â€”During deployment of the single Remote Access server you selected to use either an IP-HTTPS certificate issued by a public or internal certification authority (CA), or a self-signed certificate. For the cluster deployment, you must use identical type of certificate on each member of the Remote Access cluster. That is, if you used a certificate issued by a public CA (recommended), you must install a certificate issued by a public CA on each member of the cluster. The subject name of the new certificate should be identical to the subject name of the IP-HTTPS certificate currently used in your deployment. Note that if you are using self-signed certificates these will be configured automatically on each server during cluster deployment.  
   
-2.  **Prefix requirements**—Remote Access enables load balancing of both SSL-based traffic and DirectAccess traffic. To load balance all IPv6 based DirectAccess traffic, Remote Access must examine the IPv4 tunneling for all transition technologies. Because IP-HTTPS traffic is encrypted, examining the content of the IPv4 tunnel is not possible. To enable IP-HTTPS traffic to be load balanced, you must allocate a wide enough IPv6 prefix so that a different IPv6 /64 prefix can be assigned to every cluster member. You can configure a maximum of 32 servers in a load balanced cluster; therefore, you must specify a /59 prefix. This prefix must be routable to the internal IPv6 address of the Remote Access cluster, and is configured in the Remote Access Server Setup wizard.  
+2.  **Prefix requirements**â€”Remote Access enables load balancing of both SSL-based traffic and DirectAccess traffic. To load balance all IPv6 based DirectAccess traffic, Remote Access must examine the IPv4 tunneling for all transition technologies. Because IP-HTTPS traffic is encrypted, examining the content of the IPv4 tunnel is not possible. To enable IP-HTTPS traffic to be load balanced, you must allocate a wide enough IPv6 prefix so that a different IPv6 /64 prefix can be assigned to every cluster member. You can configure a maximum of 32 servers in a load balanced cluster; therefore, you must specify a /59 prefix. This prefix must be routable to the internal IPv6 address of the Remote Access cluster, and is configured in the Remote Access Server Setup wizard.  
   
     > [!NOTE]  
     > The prefix requirements are relevant only in an IPv6 enabled internal network (IPv6-only, or IPV4+IPv6). In an IPv4 only corporate network, the client prefix is automatically configured and the administrator cannot change it.  

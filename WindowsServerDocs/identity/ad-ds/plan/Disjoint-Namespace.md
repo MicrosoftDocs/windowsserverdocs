@@ -1,9 +1,9 @@
----
+ï»¿---
 title: Disjoint Namespace
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -85,7 +85,7 @@ Before you modify a namespace, review the following considerations, which apply 
   
     For more information, see Service Logons Fail Due to Incorrectly Set SPNs ([http://go.microsoft.com/fwlink/?LinkId=102304](http://go.microsoft.com/fwlink/?LinkId=102304)).  
   
-    -   If you use Windows Server 2003–based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=102306](http://go.microsoft.com/fwlink/?LinkId=102306)).  
+    -   If you use Windows Server 2003-based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base ([http://go.microsoft.com/fwlink/?LinkId=102306](http://go.microsoft.com/fwlink/?LinkId=102306)).  
   
     -   If you want to delegate permissions to modify SPNs to subordinate administrators, see Delegating Authority to Modify SPNs ([http://go.microsoft.com/fwlink/?LinkId=106639](http://go.microsoft.com/fwlink/?LinkId=106639)).  
   

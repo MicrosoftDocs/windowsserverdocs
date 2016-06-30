@@ -48,10 +48,10 @@ Before you install Windows Server 2016 Technical Preview or enable Hyper-V, make
   
 2.  Right-click Windows PowerShell and select **Run as Administrator**.  
   
-3.  To install Hyper-V on a server you're connected to  remotely, run the following command and  replace <computer_name> with the name of server.  
+3.  To install Hyper-V on a server you're connected to  remotely, run the following command and replace `<computer_name>` with the name of server.  
   
     ```  
-    Install-WindowsFeature –Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart  
+    Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart  
     ```  
   
     If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.  

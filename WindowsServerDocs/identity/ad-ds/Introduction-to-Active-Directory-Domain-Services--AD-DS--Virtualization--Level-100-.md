@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -16,7 +16,7 @@ ms.assetid: ce8888a3-ba77-47f1-9e8e-a9bcbfd9a37c
 
 >Applies To: Windows Server Technical Preview
 
-Virtualization of Active Directory Domain Services (AD DS) environments has been ongoing for a number of years. Beginning with Windows ServerÂ® 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization-safe capabilities and enabling rapid deployment of virtual domain controllers through cloning. These new virtualization features provide greater support for public and private clouds, hybrid environments where portions of AD DS exist on-premises and in the cloud, and AD DS infrastructures that reside completely on-premises.
+Virtualization of Active Directory Domain Services (AD DS) environments has been ongoing for a number of years. Beginning with Windows Server 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization-safe capabilities and enabling rapid deployment of virtual domain controllers through cloning. These new virtualization features provide greater support for public and private clouds, hybrid environments where portions of AD DS exist on-premises and in the cloud, and AD DS infrastructures that reside completely on-premises.
 
 **In this document**
 
@@ -123,12 +123,12 @@ For more information, see [Virtualized domain controller cloning architecture](.
 ### Cloning components
 The cloning components include new cmdlets in the Active Directory module for Windows PowerShell and associated XML files:
 
--   **New-ADDCCloneConfigFile** â€“ This cmdlet creates and places DCCloneConfig.xml at the right location to ensure it is available to trigger cloning. It also performs prerequisite checks to ensure successful cloning. It is included in the Active Directory module for Windows PowerShell. You can run it locally on a virtualized domain controller that is being prepared for cloning, or you can run it remotely using the -offline option. You can specify settings for the clone domain controller, such as its name, site, and IP address.
+-   **New-ADDCCloneConfigFile** â€" This cmdlet creates and places DCCloneConfig.xml at the right location to ensure it is available to trigger cloning. It also performs prerequisite checks to ensure successful cloning. It is included in the Active Directory module for Windows PowerShell. You can run it locally on a virtualized domain controller that is being prepared for cloning, or you can run it remotely using the -offline option. You can specify settings for the clone domain controller, such as its name, site, and IP address.
 
     The prerequisite checks that it performs are:
 
     > [!NOTE]
-    > The prerequisite checks are not performed when the â€“offline option is used. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#BKMK_OfflineMode).
+    > The prerequisite checks are not performed when the â€"offline option is used. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#BKMK_OfflineMode).
 
     -   The DC being prepared is authorized for cloning (is a member of the **Cloneable Domain Controllers** group)
 
@@ -136,7 +136,7 @@ The cloning components include new cmdlets in the Active Directory module for Wi
 
     -   Any programs or services listed from running **Get-ADDCCloningExcludedApplicationList** are included in CustomDCCloneAllowList.xml (explained in more detail at the end of this list of cloning components).
 
--   **DCCloneConfig.xml** â€“ To successfully clone a virtualized domain controller, this file must be present in the directory where the DIT resides, *%windir%\NTDS*, or the root of a removable media drive. Besides being used as one of the triggers to detect and initiate cloning, it also provides a means to specify configuration settings for the clone domain controller.
+-   **DCCloneConfig.xml** â€" To successfully clone a virtualized domain controller, this file must be present in the directory where the DIT resides, *%windir%\NTDS*, or the root of a removable media drive. Besides being used as one of the triggers to detect and initiate cloning, it also provides a means to specify configuration settings for the clone domain controller.
 
     The schema and a sample file for the DCCloneConfig.xml file are stored on all  Windows Server 2012  computers at:
 
@@ -146,7 +146,7 @@ The cloning components include new cmdlets in the Active Directory module for Wi
 
     It is recommended that you use the New-ADDCCloneConfigFile cmdlet to create the DCCloneConfig.xml file. Although you could also use the schema file with an XML-aware editor to create this file, manually editing the file increases the likelihood of errors. If you edit the file, it must be done by using XML-aware editors, such as Visual Studio, [XML Notepad](http://www.microsoft.com/download/details.aspx?displaylang=en&id=7973), or third-party applications (do not use Notepad).
 
--   **Get-ADDCCloningExcludedApplicationList** â€“ This cmdlet is run on the source domain controller before beginning the cloning process to determine which services or installed programs are not on the default supported list, DefaultDCCloneAllowList.xml, or a user-defined inclusion list named CustomDCCloneAllowList.xml file, and thereby have not been evaluated for cloning impact.
+-   **Get-ADDCCloningExcludedApplicationList** â€" This cmdlet is run on the source domain controller before beginning the cloning process to determine which services or installed programs are not on the default supported list, DefaultDCCloneAllowList.xml, or a user-defined inclusion list named CustomDCCloneAllowList.xml file, and thereby have not been evaluated for cloning impact.
 
     This cmdlet searches the source domain controller for services in the Services Control Manager, and installed programs listed under **HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall** that are not specified in the default list (DefaultDCCloneAllowList.xml) or, if one is provided, the user-defined inclusion list (CustomDCCloneAllowList.xml file). The list of applications and services that is returned by running the cmdlet is the difference between what has already been provided in the DefaultDCCloneAllowList.xml or the CustomDCCloneAllowList.xml file and the list that is constructed at run time, based on what is installed on the source DC. The services and programs output from Get-ADDCCloningExcludedApplicationList can be added to the CustomDCCloneAllowList.xml file if you determine that the services and programs can be safely cloned. To determine if a service or installed program can be safely cloned, evaluate the following conditions:
 
@@ -171,9 +171,9 @@ The cloning components include new cmdlets in the Active Directory module for Wi
     |-Force|Overwrites an existing CustomDCCloneAllowList.XML file.|
     |-Path|Folder path to create the CustomDCCloneAllowList.XML.|
 
--   **DefaultDCCloneAllowList.xml** â€“ This file is present by default on every  Windows Server 2012  domain controller in the *%windir%\system32*. It lists the services and installed programs that can be safely cloned by default. You must not change the location or contents of this file or cloning will fail.
+-   **DefaultDCCloneAllowList.xml** â€" This file is present by default on every  Windows Server 2012  domain controller in the *%windir%\system32*. It lists the services and installed programs that can be safely cloned by default. You must not change the location or contents of this file or cloning will fail.
 
--   **CustomDCCloneAllowList.xml** â€“ If you have services or installed programs that reside on your source domain controller that are outside of those listed in the DefaultDCCloneAllowList.xml file, those services and programs must be included in this file. To find the services or installed programs that are not listed in the in the DefaultDCCloneAllowList.xml file, run the **Get-ADDCCloningExcludedApplicationList** cmdlet. You should use the **â€“GenerateXml** argument to generate the XML file.
+-   **CustomDCCloneAllowList.xml** â€" If you have services or installed programs that reside on your source domain controller that are outside of those listed in the DefaultDCCloneAllowList.xml file, those services and programs must be included in this file. To find the services or installed programs that are not listed in the in the DefaultDCCloneAllowList.xml file, run the **Get-ADDCCloningExcludedApplicationList** cmdlet. You should use the **â€"GenerateXml** argument to generate the XML file.
 
     The cloning process checks the following locations in order for this file and uses the first XML file found, regardless of the other folder's contents:
 
@@ -232,7 +232,7 @@ The following deployment scenarios are supported for virtual domain controller c
 -   A deployed  Windows Server 2012  domain controller (virtualized or physical) that hosts the PDC emulator role (**DC1**). To verify whether the PDC emulator role is hosted on a  Windows Server 2012  domain controller, run the following Windows PowerShell command:
 
     ```
-    Get-ADComputer (Get-ADDomainController â€“Discover â€“Service "PrimaryDC").name â€“Property operatingsystemversion | fl
+    Get-ADComputer (Get-ADDomainController â€"Discover â€"Service "PrimaryDC").name â€"Property operatingsystemversion | fl
     ```
 
     The OperatingSystemVersion value should return as a version 6.2. If necessary, you can transfer the PDC emulator role to a domain controller that runs  Windows Server 2012 . For more information, see [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](http://support.microsoft.com/kb/255504).
@@ -280,7 +280,7 @@ In this procedure, you grant the source domain controller the permission to be c
 The following Windows PowerShell cmdlet performs the same function as the preceding procedure:
 
 ```
-Add-ADGroupMember â€“Identity "CN=Cloneable Domain Controllers,CN=Users, DC=Fabrikam,DC=Com" â€“Member "CN=VirtualDC1,OU=Domain Controllers,DC=Fabrikam,DC=com"
+Add-ADGroupMember â€"Identity "CN=Cloneable Domain Controllers,CN=Users, DC=Fabrikam,DC=Com" â€"Member "CN=VirtualDC1,OU=Domain Controllers,DC=Fabrikam,DC=com"
 
 ```
 
@@ -297,7 +297,7 @@ In this procedure, run the `Get-ADDCCloningExcludedApplicationList` cmdlet on th
 
 2.  Vet the list of the returned services and installed programs with the software vendor to determine whether they can be safely cloned. If applications or services in the list cannot be safely cloned, you must remove them from the source domain controller or cloning will fail.
 
-3.  For the set of services and installed programs that were determined to be safely cloned, run the command again with the **â€“GenerateXML** switch to provision these services and programs in the **CustomDCCloneAllowList.xml** file.
+3.  For the set of services and installed programs that were determined to be safely cloned, run the command again with the **â€"GenerateXML** switch to provision these services and programs in the **CustomDCCloneAllowList.xml** file.
 
     ```
     Get-ADDCCloningExcludedApplicationList -GenerateXml
@@ -309,7 +309,7 @@ Run New-ADDCCloneConfigFile on the source domain controller, and optionally spec
 For example, to create a clone domain controller named VirtualDC2 with a static IPv4 address, type:
 
 ```
-New-ADDCCloneConfigFile â€“Static -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.255.0" -CloneComputerName "VirtualDC2" -IPv4DefaultGateway "10.0.0.3" -SiteName "REDMOND"
+New-ADDCCloneConfigFile â€"Static -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.255.0" -CloneComputerName "VirtualDC2" -IPv4DefaultGateway "10.0.0.3" -SiteName "REDMOND"
 
 ```
 
@@ -320,7 +320,7 @@ The computer name is optional. If you do not specify one, a unique name will be 
 
 -   The prefix is the first 8 characters of the source domain controller computer name. For example, a source computer name of SourceComputer is truncated to a prefix string of SourceCo.
 
--   A unique naming suffix of the format "â€“CL*nnnn*" is appended to the prefix string where *nnnn* is the next available value from 0001-9999 that the PDC determines is not currently in use. For example, if 0047 is the next available number in the allowed range, using the preceding example of the computer name prefix SourceCo, the derived name to use for the clone computer will be set as SourceCo-CL0047.
+-   A unique naming suffix of the format "â€"CL*nnnn*" is appended to the prefix string where *nnnn* is the next available value from 0001-9999 that the PDC determines is not currently in use. For example, if 0047 is the next available number in the allowed range, using the preceding example of the computer name prefix SourceCo, the derived name to use for the clone computer will be set as SourceCo-CL0047.
 
 > [!NOTE]
 > A global catalog server (GC) is required for the New-ADDCCloneConfigFile cmdlet to work successfully. The source domain controllerâ€™s membership in the **Cloneable Domain Controllers** group must be reflected on the GC. The GC does not need to be the same domain controller as the PDC emulator, but preferably it should be in the same site. If a GC is not available, the command fails with the error â€œThe server is not operational.â€ For more information, see [Virtualized Domain Controller Troubleshooting](../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md).
@@ -328,11 +328,11 @@ The computer name is optional. If you do not specify one, a unique name will be 
 To create a clone domain controller named Clone1 with static IPv4 settings and specify preferred and alternate WINS servers, type:
 
 ```
-New-ADDCCloneConfigFile â€“CloneComputerName "Clone1" â€“Static -IPv4Address "10.0.0.5" â€“IPv4DNSResolver "10.0.0.1" â€“IPv4SubnetMask "255.255.0.0" â€“PreferredWinsServer "10.0.0.1" â€“AlternateWinsServer "10.0.0.2"
+New-ADDCCloneConfigFile â€"CloneComputerName "Clone1" â€"Static -IPv4Address "10.0.0.5" â€"IPv4DNSResolver "10.0.0.1" â€"IPv4SubnetMask "255.255.0.0" â€"PreferredWinsServer "10.0.0.1" â€"AlternateWinsServer "10.0.0.2"
 ```
 
 > [!NOTE]
-> If you specify WINS servers, you must specify both **â€“PreferredWINSServer** and **â€“AlternateWINSServer**. If you specify only of those arguments, cloning fails with error code 0x80041005 appearing in the dcpromo.log.
+> If you specify WINS servers, you must specify both **â€"PreferredWINSServer** and **â€"AlternateWINSServer**. If you specify only of those arguments, cloning fails with error code 0x80041005 appearing in the dcpromo.log.
 
 To create a clone domain controller named Clone2 with dynamic IPv4 settings, type:
 
@@ -346,7 +346,7 @@ New-ADDCCloneConfigFile -CloneComputerName "Clone2" -IPv4DNSResolver "10.0.0.1"
 To create a clone domain controller named Clone2 with dynamic IPv4 settings and specify preferred and alternate WINS servers, type:
 
 ```
-New-ADDCCloneConfigFile -CloneComputerName "Clone2" -IPv4DNSResolver "10.0.0.1" -SiteName "REDMOND" â€“PreferredWinsServer "10.0.0.1" â€“AlternateWinsServer "10.0.0.2"
+New-ADDCCloneConfigFile -CloneComputerName "Clone2" -IPv4DNSResolver "10.0.0.1" -SiteName "REDMOND" â€"PreferredWinsServer "10.0.0.1" â€"AlternateWinsServer "10.0.0.2"
 
 ```
 
@@ -360,50 +360,50 @@ New-ADDCCloneConfigFile -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc"
 To create a clone domain controller with static IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile â€“Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc"
+New-ADDCCloneConfigFile â€"Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc"
 ```
 
 > [!NOTE]
-> When specifying IPv6 settings, the only difference between the static and dynamic settings is the inclusion of **â€“Static** switch. The inclusion of the **â€“Static** switch makes it mandatory to specify at least one **IPv6DNSResolver**.The static IPv6 address is expected to be configured via stateless address auto configuration (SLAAC) with router assigned prefixes. With dynamic IPv6, the DNS resolvers are optional, but itâ€™s expected that the clone can reach an IPv6-enabled DHCP server on the subnet to obtain IPv6 address and DNS configuration information.
+> When specifying IPv6 settings, the only difference between the static and dynamic settings is the inclusion of **â€"Static** switch. The inclusion of the **â€"Static** switch makes it mandatory to specify at least one **IPv6DNSResolver**.The static IPv6 address is expected to be configured via stateless address auto configuration (SLAAC) with router assigned prefixes. With dynamic IPv6, the DNS resolvers are optional, but itâ€™s expected that the clone can reach an IPv6-enabled DHCP server on the subnet to obtain IPv6 address and DNS configuration information.
 
 #### <a name="BKMK_OfflineMode"></a>Running New-ADDCCloneConfigFile in offline mode
 If you have multiple copies of source domain controller media that have been prepared for cloning (meaning the source domain controller is authorized for cloning, the Get-ADDCCloningExcludedApplicationList cmdlet has been run, and so on) and you want to specify different settings for each copy of the media, you can run New-ADDCCloneConfigFile in offline mode. This can be more efficient than individually preparing each VM, for example, by importing each copy.
 
-In this case, domain administrators can mount the offline disk and use Remote Server Administration Tools (RSAT) to run the New-ADDCCloneConfigFile cmdlet with the â€“offline argument in order to add the XML files, which allows for factory-like automation using new Windows PowerShell options included in Windows Server 2012. For more information about how to mount the offline disk in order to run the New-ADDCCloneConfigFile cmdlet in offline mode, see [Adding XML to the Offline System Disk](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_Offline).
+In this case, domain administrators can mount the offline disk and use Remote Server Administration Tools (RSAT) to run the New-ADDCCloneConfigFile cmdlet with the â€"offline argument in order to add the XML files, which allows for factory-like automation using new Windows PowerShell options included in Windows Server 2012. For more information about how to mount the offline disk in order to run the New-ADDCCloneConfigFile cmdlet in offline mode, see [Adding XML to the Offline System Disk](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_Offline).
 
 You should first run the cmdlet locally on the source media to ensure that prerequisite checks pass. The prerequisite checks are not performed in offline mode because the cmdlet could be run from a machine that may not be from the same domain or from a domain-joined computer. After you run the cmdlet locally, it will create a DCCloneConfig.xml file. You may delete the DCCloneConfig.xml that is created locally if you plan to use the offline mode subsequently.
 
 To create a clone domain controller named CloneDC1 in offline mode, in a site called â€œREDMONDâ€ with static IPv4 address, type:
 
 ```
-New-ADDCCloneConfigFile â€“Offline â€“CloneComputerName CloneDC1 â€“SiteName REDMOND -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" â€“Static â€“Path F:\Windows\NTDS
+New-ADDCCloneConfigFile â€"Offline â€"CloneComputerName CloneDC1 â€"SiteName REDMOND -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" â€"Static â€"Path F:\Windows\NTDS
 
 ```
 
 To create a clone domain controller named Clone2 in offline mode with static IPv4 and static IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile â€“Offline -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" â€“Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone2" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" â€“Path F:\Windows\NTDS
+New-ADDCCloneConfigFile â€"Offline -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" â€"Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone2" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" â€"Path F:\Windows\NTDS
 
 ```
 
 To create a clone domain controller in offline mode with static IPv4 and dynamic IPv6 settings and specify multiple DNS servers for the DNS resolver settings, type:
 
 ```
-New-ADDCCloneConfigFile â€“Offline -IPv4Address "10.0.0.10" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" -IPv4DNSResolver @( "10.0.0.1","10.0.0.2" ) â€“Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" â€“Path F:\Windows\NTDS 
+New-ADDCCloneConfigFile â€"Offline -IPv4Address "10.0.0.10" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" -IPv4DNSResolver @( "10.0.0.1","10.0.0.2" ) â€"Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" â€"Path F:\Windows\NTDS 
 ```
 
 To create a clone domain controller named Clone1 in offline mode with dynamic IPv4 and static IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile â€“Offline -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone1" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" -SiteName "REDMOND" â€“Path F:\Windows\NTDS
+New-ADDCCloneConfigFile â€"Offline -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone1" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" -SiteName "REDMOND" â€"Path F:\Windows\NTDS
 
 ```
 
 To create a clone domain controller in offline mode with dynamic IPv4 and dynamic IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile â€“Offline -IPv4DNSResolver "10.0.0.1" -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" â€“Path F:\Windows\NTDS
+New-ADDCCloneConfigFile â€"Offline -IPv4DNSResolver "10.0.0.1" -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" â€"Path F:\Windows\NTDS
 
 ```
 
@@ -421,7 +421,7 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Stop-VM â€“Name VirtualDC1 â€“ComputerName HyperV1
+    Stop-VM â€"Name VirtualDC1 â€"ComputerName HyperV1
     ```
 
 2.  On **HyperV1**, delete snapshots and then export the source domain controller (VirtualDC1) to the c:\CloneDCs directory.
@@ -432,8 +432,8 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Get-VMSnapshot VirtualDC1 | Remove-VMSnapshot â€“IncludeAllChildSnapshots
-    Export-VM â€“Name VirtualDC1 â€“ComputerName HyperV1 -Path c:\CloneDCs\VirtualDC1
+    Get-VMSnapshot VirtualDC1 | Remove-VMSnapshot â€"IncludeAllChildSnapshots
+    Export-VM â€"Name VirtualDC1 â€"ComputerName HyperV1 -Path c:\CloneDCs\VirtualDC1
     ```
 
 3.  Copy the folder **virtualdc1** to the c:\Import directory of **HyperV2**.
@@ -446,7 +446,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
     ```
     $path = Get-ChildItem "C:\CloneDCs\VirtualDC1\VirtualDC1\Virtual Machines"
-    $vm = Import-VM â€“Path $path.fullname â€“Copy -GenerateNewId
+    $vm = Import-VM â€"Path $path.fullname â€"Copy -GenerateNewId
     Rename-VM $vm VirtualDC2
 
     ```
@@ -459,7 +459,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
         ```
         $path = Get-ChildItem "C:\CloneDCs\VirtualDC1\VirtualDC1\Virtual Machines" 
-        Import-VM â€“Path $path.fullname â€“Copy â€“GenerateNewId â€“ComputerName HyperV2 â€“VhdDestinationPath "path" â€“SnapshotFilePath "path" â€“SmartPagingFilePath "path" â€“VirtualMachinePath "path"
+        Import-VM â€"Path $path.fullname â€"Copy â€"GenerateNewId â€"ComputerName HyperV2 â€"VhdDestinationPath "path" â€"SnapshotFilePath "path" â€"SmartPagingFilePath "path" â€"VirtualMachinePath "path"
         ```
 
     > [!NOTE]
@@ -470,7 +470,7 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Start-VM â€“Name VirtualDC1 â€“ComputerName HyperV1
+    Start-VM â€"Name VirtualDC1 â€"ComputerName HyperV1
     ```
 
 6.  On **HyperV2**, start the virtual machine (**VirtualDC2**) to bring it online as a clone domain controller in the domain.
@@ -478,7 +478,7 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Start-VM â€“Name VirtualDC2 â€“ComputerName HyperV2
+    Start-VM â€"Name VirtualDC2 â€"ComputerName HyperV2
     ```
 
     > [!NOTE]

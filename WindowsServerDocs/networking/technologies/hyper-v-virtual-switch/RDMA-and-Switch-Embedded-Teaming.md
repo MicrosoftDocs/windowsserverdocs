@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows ServerÂ® 2016 Technical Preview, in addition fo information about Switch Embedded Teaming (SET).  
+This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016 Technical Preview, in addition fo information about Switch Embedded Teaming (SET).  
   
 > [!NOTE]  
 > In editions of Windows Server previous to Windows Server 2016 Technical Preview, it is not possible to configure RDMA on network adapters that  are bound to a NIC Team or to a Hyper-V Virtual Switch.  In Windows Server 2016 Technical Preview, you can  enable RDMA on network adapters that are  bound to a Hyper-V Virtual Switch with or without Switch Embedded Teaming (SET).  
@@ -27,7 +27,7 @@ This topic contains the following sections.
 -   [Switch Embedded Teaming (SET)](#bkmk_sswitchembedded)  
   
 ## <a name="bkmk_rdma"></a>Configuring RDMA Interfaces with Hyper-V  
-In Windows ServerÂ® 2012 R2, using both RDMA and Hyper-V on the same computer as  the network adapters that provide RDMA services can not be bound to a Hyper-V Virtual Switch.  This increases the number of physical network adapters that are required to be installed in the Hyper-V host.    In Windows Server 2016 Technical Preview, you can use fewer network adapters while using RDMA with or without SET.  
+In Windows Server 2012 R2, using both RDMA and Hyper-V on the same computer as  the network adapters that provide RDMA services can not be bound to a Hyper-V Virtual Switch.  This increases the number of physical network adapters that are required to be installed in the Hyper-V host.    In Windows Server 2016 Technical Preview, you can use fewer network adapters while using RDMA with or without SET.  
   
 The image below illustrates the software architecture changes between  Windows Server 2012 R2  and Windows Server 2016 Technical Preview.  
   
@@ -66,7 +66,7 @@ If you have a kernel debugger installed in the system, you must configure the de
 ```  
 # Override the Debugger - by default the debugger blocks NetQos  
 #  
-Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 â€“Force  
+Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 â€"Force  
 ```  
   
 ### Create a Hyper-V Virtual Switch with an RDMA vNIC  
@@ -114,8 +114,8 @@ Get-NetAdapterRdma | fl *
 # so make sure host adapters for RDMA are on VLANs. (This example assigns the two SMB_*  
 # host virtual adapters to VLAN 42.)  
 #  
-Set-VMNetworkAdapter â€“ManagementOS â€“VMNetworkAdapter SMB_1  â€“IsolationMode VLAN â€“DefaultIsolationID 42  
-Set-VMNetworkAdapter â€“ManagementOS â€“VMNetworkAdapter SMB_2  â€“IsolationMode VLAN â€“DefaultIsolationID 42  
+Set-VMNetworkAdapter â€"ManagementOS â€"VMNetworkAdapter SMB_1  â€"IsolationMode VLAN â€"DefaultIsolationID 42  
+Set-VMNetworkAdapter â€"ManagementOS â€"VMNetworkAdapter SMB_2  â€"IsolationMode VLAN â€"DefaultIsolationID 42  
   
 ```  
   
@@ -207,7 +207,7 @@ SET is not compatible with the following networking technologies in Windows Serv
 ## <a name="bkmk_modes"></a>SET Modes and Settings  
 Unlike NIC Teaming, when you create a SET team, you cannot configure a team name. In addition, using a standby adapter is supported in NIC Teaming, but it is not supported in SET. When you deploy SET, all network adapters are active and none are in standby mode.  
   
-Another key difference between NIC Teaming and SET is that NIC Teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode. With Switch Independent mode, the switch or switches to which the SET Team members are connected are unaware of the presence of the SET team and do not determine how to distribute network traffic to SET team members â€“ instead, the SET team distributes inbound network traffic across the SET team members.  
+Another key difference between NIC Teaming and SET is that NIC Teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode. With Switch Independent mode, the switch or switches to which the SET Team members are connected are unaware of the presence of the SET team and do not determine how to distribute network traffic to SET team members â€" instead, the SET team distributes inbound network traffic across the SET team members.  
   
 When you create a new SET team, you must configure the following team properties.  
   

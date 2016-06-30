@@ -119,7 +119,7 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).  
 
--   Provides a very low on-going cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes’ state changes).  
+-   Provides a very low on-going cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes' state changes).  
 
 For more information, see   [Deploy a Cloud Witness For a Failover Cluster](Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md).  
 
@@ -142,7 +142,7 @@ For more information virtual machine compute resiliency workflow and node quaran
 
 **Storage Resiliency** In Windows Server 2016 Technical Preview, virtual machines are more resilient to transient storage failures. The improved virtual machine resiliency helps preserve tenant virtual machine session states in the event of a storage disruption. This is achieved by intelligent and quick virtual machine response to storage infrastructure issues.  
 
-When a virtual machine disconnects from its underlying storage, it pauses and waits for storage to recover. While paused, the virtual machine retains the context of applications that are running in it. When the virtual machine’s connection to its storage is restored, the virtual machine returns to its running state. As a result, the tenant machine’s session state is retained on recovery.  
+When a virtual machine disconnects from its underlying storage, it pauses and waits for storage to recover. While paused, the virtual machine retains the context of applications that are running in it. When the virtual machine's connection to its storage is restored, the virtual machine returns to its running state. As a result, the tenant machine's session state is retained on recovery.  
 
 In Windows Server 2016 Technical Preview, virtual machine storage resiliency is aware and optimized for guest clusters too.  
 

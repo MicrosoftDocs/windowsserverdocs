@@ -13,6 +13,9 @@ ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 author: KBDAzure
 ---
 # Hyper-V Technology Overview
+
+>Applies To: Windows Server 2016 Technical Preview
+
 **This is preliminary content and subject to change.**  
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.  
   
@@ -39,17 +42,17 @@ Hyper-V can help you:
   
 Hyper-V offers many features. This is an overview, grouped by what the features provide or help you do.   
   
-**Computing environment** — A Hyper-V virtual machine includes the same basic parts as a physical computer, such as memory, processor, storage, and networking. All these parts have features and options that you can configure different ways to meet different needs. Storage and networking can each be considered categories of their own, because of the many ways you can configure them.   
+**Computing environment** - A Hyper-V virtual machine includes the same basic parts as a physical computer, such as memory, processor, storage, and networking. All these parts have features and options that you can configure different ways to meet different needs. Storage and networking can each be considered categories of their own, because of the many ways you can configure them.   
   
-**Disaster recovery and backup** — For disaster recovery, Hyper-V Replica creates copies of virtual machines, intended to be stored in another physical location, so you can restore the virtual machine from the copy. For backup, Hyper-V offers two types. One uses saved states and the other uses Volume Shadow Copy Service (VSS) so you can make application-consistent backups for programs that support VSS.  
+**Disaster recovery and backup** - For disaster recovery, Hyper-V Replica creates copies of virtual machines, intended to be stored in another physical location, so you can restore the virtual machine from the copy. For backup, Hyper-V offers two types. One uses saved states and the other uses Volume Shadow Copy Service (VSS) so you can make application-consistent backups for programs that support VSS.  
   
-**Optimization** — Each supported guest operating system has a customized set of services and drivers, called *integration services*, that make it easier to use the operating system in a Hyper-V virtual machine.  
+**Optimization** - Each supported guest operating system has a customized set of services and drivers, called *integration services*, that make it easier to use the operating system in a Hyper-V virtual machine.  
   
-**Portability** — Features such as live migration, storage migration, and import/export make it easier to move or distribute a virtual machine.  
+**Portability** - Features such as live migration, storage migration, and import/export make it easier to move or distribute a virtual machine.  
   
-**Remote connectivity** — Hyper-V includes Virtual Machine Connection, a remote connection tool for use with both Windows and Linux. Unlike Remote Desktop, this tool gives you console access, so you can see what's happening in the guest even when the operating system isn't booted yet.   
+**Remote connectivity** - Hyper-V includes Virtual Machine Connection, a remote connection tool for use with both Windows and Linux. Unlike Remote Desktop, this tool gives you console access, so you can see what's happening in the guest even when the operating system isn't booted yet.   
    
-**Security** — Secure boot and shielded virtual machines help protect against malware and other unauthorized access to a virtual machine and its data.  
+**Security** - Secure boot and shielded virtual machines help protect against malware and other unauthorized access to a virtual machine and its data.  
   
 For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server 2016 Technical Preview](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).  
   

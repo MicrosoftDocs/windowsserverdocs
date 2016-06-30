@@ -23,7 +23,7 @@ This article shows you how to move a virtual machine by doing a live migration w
   
 To be able to do this, you'll need:   
 
- - A user account that's a member of the local Hyper-V Administrators group or the Administrators group on both the source and destination computers. 
+- A user account that's a member of the local Hyper-V Administrators group or the Administrators group on both the source and destination computers. 
   
 - The Hyper-V role in Windows Server 2016 Technical Preview installed on the source and destination servers and set up for live migrations. For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
   
@@ -39,27 +39,26 @@ To be able to do this, you'll need:
   
 4.  Use the wizard pages to choose the type of move, destination server, and options.
   
-7.  On the **Summary** page, review your choices and then click **Finish**.  
+5.  On the **Summary** page, review your choices and then click **Finish**.  
 
 ## Use Windows PowerShell to move a running virtual machine
   
 The following example uses the Move-VM cmdlet to move a virtual machine named *LMTest* to a destination server named *TestServer02* and moves the virtual hard disks and other file, such checkpoints and Smart Paging files, to the *D:\LMTest* directory on the destination server.  
   
 ```  
-PS C:\> Move-VM LMTest TestServer02 –IncludeStorage –DestinationStoragePath D:\LMTest  
+PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\LMTest  
 ```  
   
 ## Troubleshooting
 
 ### Failed to establish a connection 
 
-If you haven’t set up constrained delegation, you must sign in to source server before you can move a virtual machine. If you don't do this, the authentication attempt fails, an error occurs, and this message is displayed:  
+If you haven't set up constrained delegation, you must sign in to source server before you can move a virtual machine. If you don't do this, the authentication attempt fails, an error occurs, and this message is displayed:  
   
- **Virtual machine migration operation failed at migration Source.**  
+"Virtual machine migration operation failed at migration Source.  
+Failed to establish a connection with host *computer name*: No credentials are available in the security package 0x8009030E."
   
-**Failed to establish a connection with host***\<computer name>***: No credentials are available in the security package \0x8009030E).**
-  
- To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. (Note that this requires domain administrator credentials.) For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
+ To fix this problem, sign in to the source server and try the move again. To avoid having to sign in to a source server before doing a live migration, set up constrained delegation. You'll need domain administrator credentials to set up constrained delegation. For instructions, see [Set up hosts for live migration](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
  
  ### Failed because the host hardware isn't compatible
  
@@ -79,6 +78,3 @@ If you haven’t set up constrained delegation, you must sign in to source server 
   ```
   PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
   ```
- 
-
-

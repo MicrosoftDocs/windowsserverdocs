@@ -1,13 +1,12 @@
 ---
 title: Deploy Claims Across Forests (Demonstration Steps)
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
+manager: femila
+ms.service: 
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3c842f5-0615-4234-912f-5e21755f2d78
@@ -109,7 +108,7 @@ In this step, you apply the newly created claims transformation policy on Adatum
       Set-ADClaimTransformLink `  
     -Identity:"contoso.com" `  
     -Policy:"DenyAllClaimsExceptCompanyPolicy" `  
-    â€“TrustRole:Trusted `  
+    â€"TrustRole:Trusted `  
   
     ```  
   
@@ -147,7 +146,7 @@ In this step, you apply the newly created claims transformation policy on the co
       Set-ADClaimTransformLink   
     -Identity:"adatum.com" `  
     -Policy:"DenyAllClaimsExceptCompanyPolicy" `  
-    â€“TrustRole:Trusting `  
+    â€"TrustRole:Trusting `  
   
     ```  
   

@@ -31,7 +31,7 @@ The "Minimal Server Interface" and "Server with a GUI" modes present in Windows 
 ### If you choose the Server with Desktop Experience option  
 With this option, the standard user interface and all tools are installed, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods.  
 
--   **User interface:** standard graphical user interface (�Server Graphical Shell�). The Server Graphical Shell includes the new Windows 10 shell. The specific Windows features installed by default with this option are User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation and Desktop Experience. **While these features do appear in Server Manager in this release, uninstalling them is not supported and they will not be available in future releases.**  
+-   **User interface:** standard graphical user interface ("Server Graphical Shell"). The Server Graphical Shell includes the new Windows 10 shell. The specific Windows features installed by default with this option are User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation and Desktop Experience. **While these features do appear in Server Manager in this release, uninstalling them is not supported and they will not be available in future releases.**  
 
 -   **Install, configure, uninstall server roles locally:** with Server Manager or with Windows PowerShell  
 
@@ -40,7 +40,7 @@ With this option, the standard user interface and all tools are installed, inclu
 -   **Microsoft Management Console:** installed  
 
 ### If you choose the Windows Server 2016 Technical Preview option  
-With this option, the standard user interface (the �Server Graphical Shell�) is not installed; you manage the server using the command line, Windows PowerShell, or by remote methods.  
+With this option, the standard user interface (the "Server Graphical Shell") is not installed; you manage the server using the command line, Windows PowerShell, or by remote methods.  
 
 -   **User interface:** command prompt  
 

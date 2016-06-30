@@ -1,5 +1,5 @@
 ---
-title: Step 4: Plan for OTP on the Remote Access Server
+title: Step 4 Plan for OTP on the Remote Access Server
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 4b97b2fd-767a-45c1-a64e-5b3edd0c8a47
 author: coreyp
 ---
-# Step 4: Plan for OTP on the Remote Access Server
+# Step 4 Plan for OTP on the Remote Access Server
 
 >Applies To: Windows Server Technical Preview
 
@@ -33,7 +33,7 @@ When OTP authentication is enabled, by default all users are required to authent
 By default,  Windows 7  client computers cannot authenticate using OTP.  Windows 7  client computers require DCA 2.0 to authenticate using OTP in a  Windows Server 2012  Remote Access deployment. For more information about DCA 2.0, see [DirectAccess Connectivity Assistant 2.0](http://go.microsoft.com/fwlink/?LinkId=253699) on the Microsoft Download Center.  
   
 ## <a name="BKMK_smartcard"></a>4.3 Plan for smart cards  
-When OTP authentication is enabled, the option to enable the use of smart cards for additional authorization is available. Create a security group to allow temporary access in the event that a user’s smart card is not functional.  
+When OTP authentication is enabled, the option to enable the use of smart cards for additional authorization is available. Create a security group to allow temporary access in the event that a user's smart card is not functional.  
   
 ## <a name="BKMK_Links"></a>See also  
   

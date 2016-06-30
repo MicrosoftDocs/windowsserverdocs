@@ -4,7 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - service-management-automation-(sma)
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -53,6 +53,3 @@ You can assign computers to computer groups by using one of two methods, server-
 -   [Viewing and Managing Updates](Viewing-and-Managing-Updates.md)
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
-
-
-

@@ -19,6 +19,6 @@ This table details the license expiration date for each of the Windows Server 20
   
 |Release|Release date|License expiration date|  
 |-----------|----------------|---------------------------|  
-|Windows Server � 2016 Technical Preview 3|August 2015|August 1, 2016|  
-|Windows Server � 2016 Technical Preview 4|November 2015|October 15, 2016|  
-|Windows Server � 2016 Technical Preview 5|April 2016|February 28, 2017|  
+|Windows Server " 2016 Technical Preview 3|August 2015|August 1, 2016|  
+|Windows Server " 2016 Technical Preview 4|November 2015|October 15, 2016|  
+|Windows Server " 2016 Technical Preview 5|April 2016|February 28, 2017|  

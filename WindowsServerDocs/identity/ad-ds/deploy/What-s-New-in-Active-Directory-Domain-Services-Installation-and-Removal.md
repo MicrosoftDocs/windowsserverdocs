@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -247,7 +247,7 @@ If you experience this problem, check the dcpromo.log file in the %systemroot%\d
 ### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services Configuration Wizard warns when a non-normalized DNS name is specified  
 If you create a new domain or forest and you specify a DNS domain name that includes internationalized characters that are not normalized, then the Active Directory Domain Services Configuration Wizard displays a warning that DNS queries for the name can fail. Although the DNS domain name is specified in the Deployment Configuration page, the warning appears on the Prerequisites Check page later in the wizard.  
   
-If a DNS domain name is specified using an un-normalized name like füßball.com or ΒΣΤΑ.com (the normalized versions are: füssball.com and βστα.com), client applications that try to access it with WinHTTP will normalize the name before calling name resolution APIs. If the user types “ΒΣΤΑ.com” on some dialog, the DNS query will be sent as “βστα.com” and no DNS server will match it with a resource record for “ΒΣΤΑ.com”. The user will be unable to resolve name.  
+If a DNS domain name is specified using an un-normalized name like füßball.com or �'ΣΤ�'.com (the normalized versions are: füssball.com and βστα.com), client applications that try to access it with WinHTTP will normalize the name before calling name resolution APIs. If the user types “�'ΣΤ�'.com” on some dialog, the DNS query will be sent as “βστα.com” and no DNS server will match it with a resource record for “�'ΣΤ�'.com”. The user will be unable to resolve name.  
   
 The following example explains one of the issues that can happen when using an IDN name that is not normalized:  
   

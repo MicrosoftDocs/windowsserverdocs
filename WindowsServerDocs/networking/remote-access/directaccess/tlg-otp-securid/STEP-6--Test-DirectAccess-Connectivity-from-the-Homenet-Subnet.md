@@ -1,5 +1,5 @@
 ---
-title: STEP 6: Test DirectAccess Connectivity from the Homenet Subnet
+title: STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
 author: coreyp
 ---
-# STEP 6: Test DirectAccess Connectivity from the Homenet Subnet
+# STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 
 >Applies To: Windows Server Technical Preview
 

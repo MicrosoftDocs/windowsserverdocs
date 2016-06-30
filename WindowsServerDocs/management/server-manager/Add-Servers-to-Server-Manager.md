@@ -15,12 +15,12 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server Technical Preview
 
-In Windows Server® 2016 Technical Preview, you can manage multiple remote servers by using a single Server Manager console. Servers that you want to manage by using Server Manager can be running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008 . Note that you cannot manage a newer release of Windows Server with an older release of Server Manager.
+In Windows Server 2016 Technical Preview, you can manage multiple remote servers by using a single Server Manager console. Servers that you want to manage by using Server Manager can be running Windows Server 2016 Technical Preview,  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 , or  Windows Server 2008 . Note that you cannot manage a newer release of Windows Server with an older release of Server Manager.
 
 This topic describes how to add servers to the Server Manager server pool.
 
 > [!NOTE]
-> In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer’s resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft® System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
+> In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
 > 
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
 > 
@@ -57,7 +57,7 @@ After you add servers to manage by following procedures in this topic, but befor
 ## <a name="BKMK_add"></a>Add servers to manage
 You can add servers to Server Manager to manage by using any of three methods in the **Add Servers** dialog box.
 
--   **Active Directory® Domain Services** Add servers to manage that Active Directory finds in the same domain as the local computer.
+-   **Active Directory Domain Services** Add servers to manage that Active Directory finds in the same domain as the local computer.
 
 -   **Domain Name System (DNS) entry** Search for servers to manage by computer name or IP address.
 
@@ -112,9 +112,9 @@ These or similar errors can occur in the following conditions.
 
 2.  Determine whether the workgroup server that you want to manage is in the same subnet as the computer on which you are running Server Manager.
 
-    If the two computers are in the same subnet, or if the workgroup server’s network profile is set to **Private** in the **Network and Sharing Center**, go on to the next step.
+    If the two computers are in the same subnet, or if the workgroup server's network profile is set to **Private** in the **Network and Sharing Center**, go on to the next step.
 
-    If they are not in the same subnet, or if the workgroup server’s network profile is not set to **Private**, on the workgroup server, change the inbound **Windows Remote Management (HTTP-In)** setting in Windows Firewall to explicitly allow connections from remote computers by adding the computer names on the **Computers** tab of the setting’s **Properties** dialog box.
+    If they are not in the same subnet, or if the workgroup server's network profile is not set to **Private**, on the workgroup server, change the inbound **Windows Remote Management (HTTP-In)** setting in Windows Firewall to explicitly allow connections from remote computers by adding the computer names on the **Computers** tab of the setting's **Properties** dialog box.
 
 3.  > [!IMPORTANT]
     > Running the cmdlet in this step overrides User Account Control (UAC) measures that prevent elevated processes from running on workgroup computers unless the built-in Administrator or the System account is running the processes. The cmdlet lets members of the Administrators group manage the workgroup server without logging on as the built-in Administrator. Allowing additional users to manage the workgroup server can reduce its security; however, this is more secure than providing built-in Administrator account credentials to what might be multiple people who are managing the workgroup server.
@@ -135,7 +135,7 @@ These or similar errors can occur in the following conditions.
 
 ##### To add remote servers when Server Manager is running on a workgroup computer
 
-1.  On the computer that is running Server Manager, add remote servers to the local computer’s **TrustedHosts** list in a Windows PowerShell session. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
+1.  On the computer that is running Server Manager, add remote servers to the local computer's **TrustedHosts** list in a Windows PowerShell session. To add a computer name to an existing list of trusted hosts, add the `Concatenate` parameter to the command. For example, to add the `Server01` computer to an existing list of trusted hosts, use the following command.
 
     ```
     Set-Item wsman:\localhost\Client\TrustedHosts Server01 -Concatenate -Force
@@ -143,9 +143,9 @@ These or similar errors can occur in the following conditions.
 
 2.  Determine whether the server that you want to manage is in the same subnet as the workgroup computer on which you are running Server Manager.
 
-    If the two computers are in the same subnet, or if the workgroup computer’s network profile is set to **Private** in the **Network and Sharing Center**, go on to the next step.
+    If the two computers are in the same subnet, or if the workgroup computer's network profile is set to **Private** in the **Network and Sharing Center**, go on to the next step.
 
-    If they are not in the same subnet, or if the workgroup computer’s network profile is not set to **Private**, on the workgroup computer that is running Server Manager, change the inbound **Windows Remote Management (HTTP-In)** setting in Windows Firewall to explicitly allow connections from remote computers by adding the computer names on the **Computers** tab of the setting’s **Properties** dialog box.
+    If they are not in the same subnet, or if the workgroup computer's network profile is not set to **Private**, on the workgroup computer that is running Server Manager, change the inbound **Windows Remote Management (HTTP-In)** setting in Windows Firewall to explicitly allow connections from remote computers by adding the computer names on the **Computers** tab of the setting's **Properties** dialog box.
 
 3.  On the computer on which you are running Server Manager, open the **All Servers** page.
 
@@ -162,7 +162,7 @@ You can use Server Manager to manage servers that are in failover clusters (also
 
 -   Server Manager does not display data for clustered virtual servers, because the data is dynamic, and is identical to data for the server on which the virtual clustered node is hosted. You can select the server that is hosting the virtual server to view its data.
 
--   If you add a server to Server Manager by using the server’s virtual cluster object name, the virtual object name is displayed in Server Manager instead of the physical server name (expected).
+-   If you add a server to Server Manager by using the server's virtual cluster object name, the virtual object name is displayed in Server Manager instead of the physical server name (expected).
 
 -   You cannot install roles and features on a clustered virtual server.
 

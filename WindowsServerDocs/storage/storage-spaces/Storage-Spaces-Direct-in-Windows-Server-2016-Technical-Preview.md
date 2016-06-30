@@ -31,7 +31,7 @@ This topic provides an overview of Storage Spaces Direct and the scenarios that 
 * [Supported Storage Spaces Direct  Deployment Scenarios](#BKMK_S2DSupportedScenarios)  
 
 ## <a name="BKMK_S2DOverview"></a>Storage Spaces Direct Overview  
-Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Scale-Out File Server, Clustered Shared Volume File System (CSVFS), Storage Spaces and Failover Clustering. Figure 3 below illustrates the “Storage Spaces Direct” stack:  
+Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Scale-Out File Server, Clustered Shared Volume File System (CSVFS), Storage Spaces and Failover Clustering. Figure 3 below illustrates the "Storage Spaces Direct" stack:  
 
 ![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectStack.png)  
 
@@ -40,7 +40,7 @@ Storage Spaces Direct seamlessly integrates with the features you know today tha
 
 ![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectHyperconverged.png)  
 
-**FIGURE 3: Hyperconverged Storage Spaces Direct stack – same cluster configured for Storage Spaces Direct  and the hosting of virtual machines**  
+**FIGURE 3: Hyperconverged Storage Spaces Direct stack - same cluster configured for Storage Spaces Direct  and the hosting of virtual machines**  
 
 The Storage Spaces Direct stack includes the following, starting from the bottom:  
 

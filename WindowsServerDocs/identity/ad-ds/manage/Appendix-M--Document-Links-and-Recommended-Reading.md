@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -144,16 +144,16 @@ The following table contains a list of links to external documents and their URL
 |[Role-based access control (RBAC)](http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.security%2Fdoc%2Fsecurity%2Fdomain_rbac.htm)|[http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.security%2Fdoc%2Fsecurity%2Fdomain_rbac.htm](http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.security%2Fdoc%2Fsecurity%2Fdomain_rbac.htm)|  
 |[The RBAC model](http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html)|[http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html](http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html)|  
 |[Active Directory-centric access control](http://www.centrify.com/solutions/it-security-access-control.asp)|[http://www.centrify.com/solutions/it-security-access-control.asp](http://www.centrify.com/solutions/it-security-access-control.asp)|  
-|[Cyber-Ark’s Privileged Identity Management (PIM) Suite](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp)|[http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp)|  
+|[Cyber-Ark's Privileged Identity Management (PIM) Suite](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp)|[http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp)|  
 |[Quest One](http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w)|[http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w](http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w)|  
 |[Enterprise Random Password Manager (ERPM)](http://www.liebsoft.com/Random_Password_Manager/)|[http://www.liebsoft.com/Random_Password_Manager/](http://www.liebsoft.com/Random_Password_Manager/)|  
 |[NetIQ Privileged User Manager](https://www.netiq.com/products/privileged-user-manager/)|[https://www.netiq.com/products/privileged-user-manager/](https://www.netiq.com/products/privileged-user-manager/)|  
-|[CA IdentityMinder™](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|[http://awards.scmagazine.com/ca-technologies-ca-identity-manager](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|  
+|[CA IdentityMinderï¿½](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|[http://awards.scmagazine.com/ca-technologies-ca-identity-manager](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|  
 |[Description of security events in Windows Vista and in Windows Server 2008](http://support.microsoft.com/kb/947226)|[http://support.microsoft.com/kb/947226](http://support.microsoft.com/kb/947226)|  
 |[Description of security events in Windows 7 and in Windows Server 2008 R2](http://support.microsoft.com/kb/977519)|[http://support.microsoft.com/kb/977519](http://support.microsoft.com/kb/977519)|  
 |[Security Audit Events for Windows 7](http://www.microsoft.com/download/details.aspx?id=21561)|[http://www.microsoft.com/download/details.aspx?id=21561](http://www.microsoft.com/download/details.aspx?id=21561)|  
 |[Windows Server 2008 R2 and Windows 8 and Windows Server 2012 Security Event Details](http://www.microsoft.com/download/details.aspx?id=35753)|[http://www.microsoft.com/download/details.aspx?id=35753](http://www.microsoft.com/download/details.aspx?id=35753)|  
-|[Georgia Tech’s Emerging Cyber Threats for 2013 report](http://www.gtsecuritysummit.com/report.html)|[http://www.gtsecuritysummit.com/report.html](http://www.gtsecuritysummit.com/report.html)|  
+|[Georgia Tech's Emerging Cyber Threats for 2013 report](http://www.gtsecuritysummit.com/report.html)|[http://www.gtsecuritysummit.com/report.html](http://www.gtsecuritysummit.com/report.html)|  
 |[Microsoft Security Intelligence Report](http://www.microsoft.com/security/sir/default.aspx)|[http://www.microsoft.com/security/sir/default.aspx](http://www.microsoft.com/security/sir/default.aspx)|  
 |[Australian Government Defense Signals Directory Top 35 Mitigation Strategies](http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm)|[http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm](http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm)|  
 |[Cloud Computing Security Benefits](http://www.microsoft.com/news/Press/2012/May12/05-14SMBSecuritySurveyPR.aspx)|[http://www.microsoft.com/news/Press/2012/May12/05-14SMBSecuritySurveyPR.aspx](http://www.microsoft.com/news/Press/2012/May12/05-14SMBSecuritySurveyPR.aspx)|  
@@ -163,7 +163,7 @@ The following table contains a list of links to external documents and their URL
 |[Best Practices for Delegating Active Directory Administration](http://www.microsoft.com/download/details.aspx?id=21678) for Windows Server 2003|[http://www.microsoft.com/en-us/download/details.aspx?id=21678](http://www.microsoft.com/download/details.aspx?id=21678)|  
 |[Microsoft Support Lifecycle](http://support.microsoft.com/lifecycle/)|[http://support.microsoft.com/common/international.aspx?RDPATH=%2flifecycle%2fdefault.aspx](http://support.microsoft.com/common/international.aspx?RDPATH=%2flifecycle%2fdefault.aspx)|  
 |[Active Directory Technical Specification](http://msdn.microsoft.com/library/cc223122(v=prot.20).aspx)|[http://msdn.microsoft.com/library/cc223122(v=prot.20).aspx](http://msdn.microsoft.com/library/cc223122(v=prot.20).aspx)|  
-|[Error message when nonadministrator users who have been delegated control try to join computers to a Windows Server 2003-based or a Windows Server 2008-based domain controller: “Access is denied”](http://support.microsoft.com/kb/932455)|[http://support.microsoft.com/kb/932455](http://support.microsoft.com/kb/932455)|  
+|[Error message when nonadministrator users who have been delegated control try to join computers to a Windows Server 2003-based or a Windows Server 2008-based domain controller: "Access is denied"](http://support.microsoft.com/kb/932455)|[http://support.microsoft.com/kb/932455](http://support.microsoft.com/kb/932455)| 
 |[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](http://technet.microsoft.com/library/dd378897(WS.10).aspx)|[http://technet.microsoft.com/library/dd378897(WS.10).aspx](http://technet.microsoft.com/library/dd378897(WS.10).aspx)|  
 |[Strict KDC Validation](http://www.microsoft.com/download/details.aspx?id=6382)|[http://www.microsoft.com/download/details.aspx?id=6382](http://www.microsoft.com/download/details.aspx?id=6382)|  
   
@@ -173,7 +173,7 @@ The following table contains a list of recommended reading that will assist you 
 ||  
 |-|  
 |**Recommended Reading**|  
-|[Georgia Tech’s Emerging Cyber Threats for 2014 Report](http://www.gtsecuritysummit.com/2014Report.pdf)|  
+|[Georgia Tech's Emerging Cyber Threats for 2014 Report](http://www.gtsecuritysummit.com/2014Report.pdf)|  
 |[Microsoft Security Intelligence Report](http://www.microsoft.com/security/sir/default.aspx)|  
 |[Mitigating Pass-the-Hash (PTH) Attacks and Other Credential Theft Techniques](http://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|  
 |[Australian Government Defense Signals Directory Top 35 Mitigation Strategies](http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm)|  
@@ -186,7 +186,7 @@ The following table contains a list of recommended reading that will assist you 
 |[Best Practices for Delegating Active Directory Administration](http://www.microsoft.com/download/details.aspx?id=21678) for Windows Server 2003|  
 |[Microsoft Support Lifecycle](http://support.microsoft.com/lifecycle/)|  
 |[Active Directory Technical Specification](http://msdn.microsoft.com/library/cc223122(v=prot.20).aspx) - dSHeuristics information|  
-|[Error message when nonadministrator users who have been delegated control try to join computers to a Windows Server 2003-based or a Windows Server 2008-based domain controller: “Access is denied”](http://support.microsoft.com/kb/932455)|  
+|[Error message when nonadministrator users who have been delegated control try to join computers to a Windows Server 2003-based or a Windows Server 2008-based domain controller: "Access is denied"](http://support.microsoft.com/kb/932455)|  
 |[Best Practice Guide for Securing Active Directory Installations.doc](http://go.microsoft.com/fwlink/?LinkId=140862)|  
 |[Hyper-V Security Guide](http://www.microsoft.com/download/details.aspx?id=16650)|  
 |[Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](http://technet.microsoft.com/library/dd378897(WS.10).aspx).|  
@@ -205,7 +205,7 @@ Microsoft, Active Directory, BitLocker, Hyper-V, Internet Explorer, Windows Vist
   
 The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious. No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred.  
   
-© 2013 Microsoft Corporation. All rights reserved.  
+ï¿½ 2013 Microsoft Corporation. All rights reserved.  
   
 
 
