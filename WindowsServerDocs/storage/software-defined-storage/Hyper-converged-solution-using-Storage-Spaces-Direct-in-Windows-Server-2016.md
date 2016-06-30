@@ -364,8 +364,8 @@ The following assumes 2 RDMA NIC Ports (1 dual port, or 2 single port). In order
 
 **Figure 4: Process for configuring the network in a hyper-converged solution using Windows Server 2016 Technical Preview.**  
 
-    > [!NOTE]
-    > Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
+> [!NOTE]
+> Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
 
 
 #### Configure the Top of Rack (TOR) Switch  
@@ -382,6 +382,16 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
 
    The output should look something like this:                                                                                                                                                          
 
+<<<<<<< HEAD
+      Name           : SMB  
+      Owner          : Group Policy (Machine)  
+      NetworkProfile : All  
+      Precedence     : 127  
+      JobObject      :  
+      NetDirectPort  : 445  
+      PriorityValue  :   
+
+=======
     ```  
    Name           : SMB  
    Owner          : Group Policy (Machine)  
@@ -391,6 +401,7 @@ Network QoS is used to in this hyper-converged configuration to ensure that the 
    NetDirectPort  : 445  
    PriorityValue  :   
    ```
+>>>>>>> 930faf146342a2e16eb9849fbb51a3cc2da0ea90
 
 1. Turn on Flow Control for SMB as follows:                                                                                                                                                                       
 
@@ -769,4 +780,3 @@ Values should show **True** for RDMA Capable for the RDMA enabled interfaces. Th
 [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 
 [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
-

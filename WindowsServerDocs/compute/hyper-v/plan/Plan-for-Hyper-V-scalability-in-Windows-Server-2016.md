@@ -57,6 +57,7 @@ These maximums apply to each Hyper-V host.
 |Virtual processors per server|2048|None.|  
 |Virtual storage area networks (SANs)|No limits imposed by Hyper-V.|None.|  
 |Virtual switches|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|  
+
   
 ### Failover Clusters and Hyper-V  
 The following table lists the maximums that apply to highly available servers running Hyper-V. It is important to do capacity planning to ensure that there will be enough hardware resources to run all the virtual machines in a clustered environment.  
