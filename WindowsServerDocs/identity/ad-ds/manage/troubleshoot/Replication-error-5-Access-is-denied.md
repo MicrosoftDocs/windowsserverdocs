@@ -521,11 +521,7 @@ Ignoring DC CONTOSO-DC1 in the convergence test of object CN=CONTOSO-DC3,OU=Doma
 Testing server: &lt;site name&gt;&lt;dc name&gt;
 Test omitted by user request: Advertising
 Starting test: CheckSecurityError
-<<<<<<< HEAD
 * Dr Auth: Beginning security errors check'
-=======
-* Dr Auth: Beginning security errors check�
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 Found KDC &lt;KDC DC&gt; for domain &lt;DNS Name of AD domain&gt; in site &lt;site name&gt;
 Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;

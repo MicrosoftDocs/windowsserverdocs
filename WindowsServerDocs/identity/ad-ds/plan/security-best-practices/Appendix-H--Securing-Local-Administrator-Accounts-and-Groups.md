@@ -1,4 +1,4 @@
----
+﻿---
 title: Appendix H: Securing Local Administrator Accounts and Groups
 ms.custom:
   - AD
@@ -131,11 +131,8 @@ For the local Administrator account in each domain in your forest, you should co
 
 #### Verification Steps  
 
-<<<<<<< HEAD
 ##### Verify "Deny access to this computer from the network" GPO Settings  
-=======
-##### Verify �Deny access to this computer from the network� GPO Settings  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
+
 From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
 
 1.  Log on locally to any member server or workstation that is not affected by the GPO changes.  
@@ -148,27 +145,16 @@ From any member server or workstation that is not affected by the GPO changes (s
 
     ![](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_110.png)  
 
-<<<<<<< HEAD
 5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$ /user:<Server Name>\Administrator**, where <Server Name> is the name of the member server or workstation you're attempting to access over the network.  
 
     > [!NOTE]  
     > The local Administrator credentials must be from the same system you're attempting to access over the network.  
-=======
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$ /user:<Server Name>\Administrator**, where <Server Name> is the name of the member server or workstation you�re attempting to access over the network.  
-
-    > [!NOTE]  
-    > The local Administrator credentials must be from the same system you�re attempting to access over the network.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 
 6.  The following screenshot shows the error message that should appear.  
 
     ![](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_111.png)  
 
-<<<<<<< HEAD
 ##### Verify "Deny log on as a batch job" GPO Settings  
-=======
-##### Verify �Deny log on as a batch job� GPO Settings  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 From any member server or workstation affected by the GPO changes, log on locally.  
 
 ###### Create a Batch File  
@@ -208,11 +194,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 10. In the **Security options** field, click **Change User or Group**.  
 
-<<<<<<< HEAD
 11. Type the name of the system's local Administrator account, click **Check Names**, and click **OK**.  
-=======
-11. Type the name of the system�s local Administrator account, click **Check Names**, and click **OK**.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 
 12. Select **Run whether the user is logged on or not** and **Do not store password**. The task will only have access to local computer resources.  
 
@@ -226,11 +208,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
     ![](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_112.png)  
 
-<<<<<<< HEAD
 ###### Verify "Deny log on as a service" GPO Settings  
-=======
-###### Verify �Deny log on as a service� GPO Settings  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 
 1.  From any member server or workstation affected by the GPO changes, log on locally.  
 
@@ -244,15 +222,9 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 6.  In **Log on as** field, click **This account**.  
 
-<<<<<<< HEAD
 7.  Click **Browse**, type the system's local Administrator account, click **Check Names**, and click **OK**.  
 
 8.  In the **Password** and **Confirm password** fields, type the selected account's password, and click **OK**.  
-=======
-7.  Click **Browse**, type the system�s local Administrator account, click **Check Names**, and click **OK**.  
-
-8.  In the **Password** and **Confirm password** fields, type the selected account�s password, and click **OK**.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 
 9. Click **OK** three more times.  
 
@@ -276,11 +248,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 6.  In the **Log on as**: field, select **Local Systemaccount**, and click **OK**.  
 
-<<<<<<< HEAD
 ###### Verify "Deny log on through Remote Desktop Services" GPO Settings  
-=======
-###### Verify �Deny log on through Remote Desktop Services� GPO Settings  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 
 1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
 
@@ -288,11 +256,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 3.  In the **Computer** field, type the name of the computer that you want to connect to, and click **Connect**. (You can also type the IP address instead of the computer name.)  
 
-<<<<<<< HEAD
 4.  When prompted, provide credentials for the system's local **Administrator** account.  
-=======
-4.  When prompted, provide credentials for the system�s local **Administrator** account.  
->>>>>>> 9aa2dce86f802cd3079157fffcd57e0fc313c401
 
 5.  A dialog box similar to the following should appear.  
 
