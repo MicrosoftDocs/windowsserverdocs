@@ -364,8 +364,8 @@ The following assumes 2 RDMA NIC Ports (1 dual port, or 2 single port). In order
 
 **Figure 4: Process for configuring the network in a hyper-converged solution using Windows Server 2016 Technical Preview.**  
 
-  > [!NOTE]
-  > Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
+> [!NOTE]
+> Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
 
 
 #### Configure the Top of Rack (TOR) Switch  
