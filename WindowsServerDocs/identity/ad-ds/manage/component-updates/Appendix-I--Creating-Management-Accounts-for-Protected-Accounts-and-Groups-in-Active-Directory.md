@@ -1,5 +1,5 @@
 ﻿---
-title: Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory
+title: Appendix I - Creating Management Accounts for Protected Accounts and Groups in Active Directory
 ms.custom: 
   - AD
 ms.prod: windows-server-threshold

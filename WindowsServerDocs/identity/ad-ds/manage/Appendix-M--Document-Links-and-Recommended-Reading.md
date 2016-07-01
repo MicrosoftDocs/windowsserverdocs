@@ -1,5 +1,5 @@
 ---
-title: Appendix M: Document Links and Recommended Reading
+title: Appendix M - Document Links and Recommended Reading
 ms.custom: 
   - AD
 ms.prod: windows-server-threshold
@@ -148,7 +148,7 @@ The following table contains a list of links to external documents and their URL
 |[Quest One](http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w)|[http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w](http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w)|  
 |[Enterprise Random Password Manager (ERPM)](http://www.liebsoft.com/Random_Password_Manager/)|[http://www.liebsoft.com/Random_Password_Manager/](http://www.liebsoft.com/Random_Password_Manager/)|  
 |[NetIQ Privileged User Manager](https://www.netiq.com/products/privileged-user-manager/)|[https://www.netiq.com/products/privileged-user-manager/](https://www.netiq.com/products/privileged-user-manager/)|  
-|[CA IdentityMinder�](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|[http://awards.scmagazine.com/ca-technologies-ca-identity-manager](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|  
+|[CA IdentityMinder?](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|[http://awards.scmagazine.com/ca-technologies-ca-identity-manager](http://awards.scmagazine.com/ca-technologies-ca-identity-manager)|  
 |[Description of security events in Windows Vista and in Windows Server 2008](http://support.microsoft.com/kb/947226)|[http://support.microsoft.com/kb/947226](http://support.microsoft.com/kb/947226)|  
 |[Description of security events in Windows 7 and in Windows Server 2008 R2](http://support.microsoft.com/kb/977519)|[http://support.microsoft.com/kb/977519](http://support.microsoft.com/kb/977519)|  
 |[Security Audit Events for Windows 7](http://www.microsoft.com/download/details.aspx?id=21561)|[http://www.microsoft.com/download/details.aspx?id=21561](http://www.microsoft.com/download/details.aspx?id=21561)|  
@@ -205,7 +205,7 @@ Microsoft, Active Directory, BitLocker, Hyper-V, Internet Explorer, Windows Vist
   
 The example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious. No association with any real company, organization, product, domain name, e-mail address, logo, person, place, or event is intended or should be inferred.  
   
-� 2013 Microsoft Corporation. All rights reserved.  
+? 2013 Microsoft Corporation. All rights reserved.  
   
 
 

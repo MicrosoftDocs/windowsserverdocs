@@ -1,5 +1,5 @@
 ﻿---
-title: Appendix L: Events to Monitor
+title: Appendix L - Events to Monitor
 ms.custom: 
   - AD
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Appendix J: Third-Party RBAC Vendors
+title: Appendix J - Third-Party RBAC Vendors
 ms.custom:
   - AD
 ms.prod: windows-server-threshold
