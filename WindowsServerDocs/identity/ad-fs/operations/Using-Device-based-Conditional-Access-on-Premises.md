@@ -86,7 +86,7 @@ For complete list of AD FS 2016 device and conditional access claims, see Refere
 ### Infrastructure pre-requisites  
 
 1. An Azure AD subscription with Azure AD Premium (to enable device write back for on premises conditional access - a free trial is fine)  
-2.  Intune subscription (only required for MDM integration for device compliance scenarios ��" a free trial is fine)  
+2.  Intune subscription (only required for MDM integration for device compliance scenarios -a free trial is fine)  
 3.  Azure AD Connect (November 2015 QFE or later)  
 4.  Windows Server 2016 build 10586 or newer for AD FS  
 5.  Windows Server 2016 Active Directory schema (schema level 85 or higher) (required for msDS-IsCompliant attribute for device compliance scenarios)  
@@ -114,7 +114,7 @@ Note: The below commands require Active Directory administration tools, so if yo
 1.  Run the Add Roles & Features wizard and select feature Remote Server Administration tools -> Role Administration Tools -> AD DS and AD LDS Tools -> Choose both the Active Directory module for Windows PowerShell and the AD DS Tools.  
 2.  On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated powershell prompt.  Then, execute the following PowerShell commands:  
     1. Import-module activedirectory  
-    2. PS C:\ &gt; Initialize-ADDeviceRegistration ��"ServiceAccountName “&lt;AD FS service account name&gt;”  
+    2. PS C:\ &gt; Initialize-ADDeviceRegistration -ServiceAccountName “&lt;AD FS service account name&gt;”  
     3. Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format “domain\accountname$”  
     4. The above PSH creates the following objects  
         1. RegisteredDevices container under the AD domain partition  
@@ -127,7 +127,7 @@ If you plan to use Windows 10 domain join (with automatic registration to Azure 
 {if necessary, copy the AdSyncPrep.psm1 file from your Azure AD Connect server}  
 2.  PS C:>$aadAdminCred = Get-Credential  
 {provide your Azure AD global administrator credentials, such as adminuser@contoso.onmicrosoft.com}  
-3.  PS C:>Initialize-ADSyncDomainJoinedComputerSync ��"AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred  
+3.  PS C:>Initialize-ADSyncDomainJoinedComputerSync -AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred  
 a.  Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory  
 4.  The above commands enable Windows 10 clients to find the correct Azure AD domain to join by creating the serviceConnectionpoint object in AD DS.  
 
@@ -145,7 +145,7 @@ If you have not done so before, enable device write back in Azure AD Connect by 
 
 #### Configure Device Authentication in AD FS  
 Using an elevated PowerShell command window, configure AD FS policy by executing the following command  
-PS C:>Set-AdfsGlobalAuthenticationPolicy ��"DeviceAuthenticationEnabled $true  
+PS C:>Set-AdfsGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true  
 
 #### Check your configuration  
 For your reference, below is a comprehensive list of the AD DS devices, containers and permissions required for device write-back and authentication to work  
