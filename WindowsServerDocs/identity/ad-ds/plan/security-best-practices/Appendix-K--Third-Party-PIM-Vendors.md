@@ -1,5 +1,5 @@
 ---
-title: Appendix K: Third-Party PIM Vendors
+title: Appendix K - Third-Party PIM Vendors
 ms.custom:
   - AD
 ms.prod: windows-server-threshold
@@ -30,7 +30,7 @@ Privileged accounts and passwords are extremely powerful, allowing a privileged 
 
 -   Administrative and application accounts (hard-coded, embedded credentials) are found on virtually every piece of hardware, software, and application within an organization, including virtual environments.  
 
--   Administrative or application accounts are shared, which means that the system does not track WHO logged on as an Administrator, merely that a login occurred�a significant audit challenge.  
+-   Administrative or application accounts are shared, which means that the system does not track WHO logged on as an Administrator, merely that a login occurred?a significant audit challenge.  
 
 -   Unlike a personal identity, such as Jdoe, administrative or application accounts are nearly impossible to disable due to high potential for disruption to business.  
 
@@ -77,11 +77,11 @@ With Cyber-Ark's Privileged Identity Management suite you can:
 #### Privileged Account Management  
 
 ##### Controlling and Auditing Superuser Access  
-[Quest One](http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w) helps you control and audit administrative access with privileged credentials through granular delegation and command control, keystroke logging and session audit, policy-based control, and secure and automated workflows. This approach enhances security and compliance while improving the efficiency of administering superuser access. Administrators are granted only the rights they need�nothing more, nothing less�and all activity is tracked and audited.  
+[Quest One](http://www.quest.com/landing/?id=7370&gclid=CJnNgNyr3rMCFYp_QgodXFwA3w) helps you control and audit administrative access with privileged credentials through granular delegation and command control, keystroke logging and session audit, policy-based control, and secure and automated workflows. This approach enhances security and compliance while improving the efficiency of administering superuser access. Administrators are granted only the rights they need?nothing more, nothing less?and all activity is tracked and audited.  
 
--   Enhance security by granting administrators only the access rights required for their jobs�nothing more, nothing less�and basing those rights on established and intelligently controlled policy. In addition, when full credentials must be used, secure the process of requesting, approving and issuing access to those accounts, including the critical application-to-application (A2A) and application-to-database (A2D) passwords that pose the greatest security risk.  
+-   Enhance security by granting administrators only the access rights required for their jobs?nothing more, nothing less?and basing those rights on established and intelligently controlled policy. In addition, when full credentials must be used, secure the process of requesting, approving and issuing access to those accounts, including the critical application-to-application (A2A) and application-to-database (A2D) passwords that pose the greatest security risk.  
 
--   Achieve compliance through access control and separation of duties for privileged access that you can track through comprehensive audit capabilities that include policy, rights and activities performed through privileged access�even down to the keystroke level on many critical systems.  
+-   Achieve compliance through access control and separation of duties for privileged access that you can track through comprehensive audit capabilities that include policy, rights and activities performed through privileged access?even down to the keystroke level on many critical systems.  
 
 -   Improve efficiency through granular, policy-driven delegation of elevated access privileges and execution of specific commands across a wide range of systems and platforms, with centralized management and comprehensive audit. Through automated workflows, your administrators gain sufficient rights to do their jobs eliminating the need for manual credential management. In addition, Quest One adds significant value to Sudo by centralizing management of Sudo policy and providing visibility into Sudo-related activities.  
 
@@ -149,14 +149,14 @@ Do you have visibility into everything that privileged users are doing on your s
 
 -   Simplified policy management with web-based console. Centrally manage security policies from a single point. The intuitive drag-and-drop interface makes it easy to create rules instead of relying on manual scripting.  
 
--   Detailed analysis with color-coded risk ratings Powerful risk-analysis tools record and play back user activity�down to the keystroke level. The unique risk-profiling capability points out any collected user input that poses a risk.  
+-   Detailed analysis with color-coded risk ratings Powerful risk-analysis tools record and play back user activity?down to the keystroke level. The unique risk-profiling capability points out any collected user input that poses a risk.  
 
 -   Automatic data filtering for continuous compliance Prove compliance with permanent audit records 24x7x365, not only around compliance audits. Detailed logs of user activity help maintain your compliance posture.  
 
 ### CA  
 
 #### CA IdentityMinder  
-[CA IdentityMinder�](http://awards.scmagazine.com/ca-technologies-ca-identity-manager) helps improve the operational efficiency and effectiveness of IT organizations by providing a scalable and configurable identity management foundation that can organize your identity information within the context of your unique business roles and processes. It helps streamline the on-boarding and off-boarding of users, enables the business to manage access requests, and automates identity compliance processes.  
+[CA IdentityMinder?](http://awards.scmagazine.com/ca-technologies-ca-identity-manager) helps improve the operational efficiency and effectiveness of IT organizations by providing a scalable and configurable identity management foundation that can organize your identity information within the context of your unique business roles and processes. It helps streamline the on-boarding and off-boarding of users, enables the business to manage access requests, and automates identity compliance processes.  
 
 ##### Business Challenges  
 Whether applications reside in the enterprise or the cloud, managing the identities and access of users to key resources is a critical function for IT organizations that are under increasing pressure to cut operating costs while demonstrating continuous compliance. They must also deal with other challenges such as:  
@@ -169,7 +169,7 @@ Whether applications reside in the enterprise or the cloud, managing the identit
 
 -   Support business initiatives. Adopt new technologies easily (such as virtualization and cloud) that support business initiatives.  
 
-Organizations are seeking solutions that automate identity-related processes throughout the enterprise�from the mainframe to the cloud, across employees, contractors, partners, and customers. The result is a smarter, more efficiently managed infrastructure that helps IT save money, reduce risk, and deliver a more reliable service.  
+Organizations are seeking solutions that automate identity-related processes throughout the enterprise?from the mainframe to the cloud, across employees, contractors, partners, and customers. The result is a smarter, more efficiently managed infrastructure that helps IT save money, reduce risk, and deliver a more reliable service.  
 
 ##### Solution Overview  
 CA IdentityMinder delivers a unified approach for managing users' identities throughout their entire lifecycle and providing them with timely, appropriate access to applications and data.  

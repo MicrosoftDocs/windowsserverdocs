@@ -1,5 +1,5 @@
 ---
-title: Appendix E: Securing Enterprise Admins Groups in Active Directory
+title: Appendix E - Securing Enterprise Admins Groups in Active Directory
 ms.custom:
   - AD
 ms.prod: windows-server-threshold

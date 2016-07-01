@@ -1,5 +1,5 @@
 ---
-title: Walkthrough Guide: Manage Risk with Conditional Access Control
+title: Walkthrough Guide - Manage Risk with Conditional Access Control
 ms.custom: 
   - AD
 ms.prod: windows-server-2012

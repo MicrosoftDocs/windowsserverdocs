@@ -1,5 +1,5 @@
 ---
-title: Appendix A: Locations and Subnet Prefixes
+title: Appendix A - Locations and Subnet Prefixes
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
