@@ -15,7 +15,7 @@ author: coreyp
 
 >Applies To: Windows Server Technical Preview
 
-Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access server in a load-balanced cluster.  
+Windows Server&reg; 2016 Technical Preview and Windows Server&reg; 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access server in a load-balanced cluster.  
   
 -   [Step 1: Implement a single server Remote Access deployment](assetId:///3ea23db1-cd55-4be0-a9d1-a1e657122c9e).  
   

@@ -15,11 +15,11 @@ author: coreyp
 
 >Applies To: Windows Server Technical Preview
 
-CLIENT2 is a  Windows 7®  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server® 2012 servers.  
+CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server&reg; 2012 servers.  
   
-1.  [To install the operating system on CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#installOS)—Install Windows® 7 Enterprise or Windows® 7 Ultimate on CLIENT2.  
+1.  [To install the operating system on CLIENT2](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#installOS). Install Windows&reg; 7 Enterprise or Windows&reg; 7 Ultimate on CLIENT2.  
   
-2.  [To join CLIENT2 to the CORP domain](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#Join)—Join CLIENT2 to the corp.contoso.com domain.  
+2.  [To join CLIENT2 to the CORP domain](assetId:///6cbee1b5-f6f6-443f-8fa9-31cc5c05a0ee#Join). Join CLIENT2 to the corp.contoso.com domain.  
   
 ## <a name="installOS"></a>To install the operating system on CLIENT2  
   

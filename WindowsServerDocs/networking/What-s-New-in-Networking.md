@@ -59,7 +59,7 @@ Following are the new or improved SDN infrastructure technologies.
 For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md).  
   
 ### Cloud Scale Fundamentals  
-The following cloud scale fundamentals are now available in Technical Preview 3.  
+The following cloud scale fundamentals are now available.  
   
 -   **Converged Network Interface Card (NIC)**. The converged NIC allows you to use a single network adapter for management, Remote Direct Memory Access (RDMA)-enabled storage, and tenant traffic. This reduces the capital expenditures that are associated with each server in your datacenter, because you need fewer network adapters to manage different types of traffic per server.  
   

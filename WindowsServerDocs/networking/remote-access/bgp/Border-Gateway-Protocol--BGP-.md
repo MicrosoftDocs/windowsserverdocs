@@ -28,24 +28,24 @@ This topic contains the following sections.
   
 -   [BGP Features](#bkmk_features)  
   
-When configured on a Windows Server 2016 Technical Preview Remote Access Service (RAS) Gateway in multitenant mode, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants‚Äô VM networks and their remote sites. You can also use BGP for single tenant RAS Gateway deployments, and when you deploy Remote Access as a Local Area Network (LAN) router.  
+When configured on a Windows Server 2016 Technical Preview Remote Access Service \(RAS\) Gateway in multitenant mode, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants‚Äô VM networks and their remote sites. You can also use BGP for single tenant RAS Gateway deployments, and when you deploy Remote Access as a Local Area Network \(LAN\) router.  
   
 BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections.  
   
-To use BGP routing, you must install the **Remote Access Service (RAS)** and/or the **Routing** role service of the Remote Access server role on a computer or virtual machine (VM) ‚Ä" the type of system you use depends on whether or not you have a multitenant deployment:  
+To use BGP routing, you must install the **Remote Access Service \(RAS\)** and/or the **Routing** role service of the Remote Access server role on a computer or virtual machine \(VM\) - the type of system you use depends on whether or not you have a multitenant deployment:  
   
--   For a multitenant deployment, it is recommended that you install the RAS Gateway on one or more VMs. Use of multiple VMs provides high availability. The RAS Gateway is capable of handling multiple connections from multiple tenants, and consists of a Hyper-V host and a virtual machine (VM) that is actually configured as the gateway. This gateway is configured with site-to-site VPN connections as a multitenant BGP router to exchange tenant and Cloud Service Provider (CSP) subnet routes.  
+-   For a multitenant deployment, it is recommended that you install the RAS Gateway on one or more VMs. Use of multiple VMs provides high availability. The RAS Gateway is capable of handling multiple connections from multiple tenants, and consists of a Hyper-V host and a VM that is actually configured as the gateway. This gateway is configured with site-to-site VPN connections as a multitenant BGP router to exchange tenant and Cloud Service Provider \(CSP\) subnet routes.  
   
 -   For a single tenant edge gateway deployment or a LAN router deployment, you can install the RAS Gateway on either a physical computer or a VM.  
   
 > [!IMPORTANT]  
-> When you install a RAS Gateway, you must specify whether BGP is enabled for each tenant by using the **Enable-RemoteAccessRoutingDomain** Windows PowerShell command with the **‚Ä"Type** parameter value of **All**. To install Remote Access as a BGP-enabled LAN router without multitenant capabilities, you can use the command **Install-RemoteAccess ‚Ä"VpnType RoutingOnly**.  
+> When you install a RAS Gateway, you must specify whether BGP is enabled for each tenant by using the **Enable-RemoteAccessRoutingDomain** Windows PowerShell command with the **Type** parameter value of **All**. To install Remote Access as a BGP-enabled LAN router without multitenant capabilities, you can use the command **Install-RemoteAccess -VpnType RoutingOnly**.  
 >   
 > The following example code illustrates how to install RAS in Multitenancy mode with all RAS features (point-to-site VPN, site-to-site VPN, and BGP routing) enabled for two tenants, Contoso and Fabrikam.  
   
 ```  
 $Contoso_RoutingDomain = "ContosoTenant"  
-$Fabrikam_RoutingDomain = ‚ÄúFabrikamTenant‚Äù  
+$Fabrikam_RoutingDomain = "FabrikamTenant"ù  
   
 Install-RemoteAccess -MultiTenancy  
   
@@ -56,7 +56,7 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
 ## <a name="bkmk_top"></a>BGP Supported Deployment Topologies  
 Listed below are the supported deployment topologies where Enterprise sites are connected to a Cloud Service Provider (CSP) datacenter.  
   
-In all scenarios, the CSP gateway is a Windows Server 2016 Technical Preview RAS Gateway at the edge. The RAS Gateway, which is capable of handling multiple connections from multiple tenants, consists of a Hyper-V host and a virtual machine (VM) that is actually configured as the gateway. This edge gateway is configured with site-to-site VPN connections as a multitenant BGP router to exchange Enterprise and CSP subnet routes.  
+In all scenarios, the CSP gateway is a Windows Server 2016 Technical Preview RAS Gateway at the edge. The RAS Gateway, which is capable of handling multiple connections from multiple tenants, consists of a Hyper-V host and a VM that is actually configured as the gateway. This edge gateway is configured with site-to-site VPN connections as a multitenant BGP router to exchange Enterprise and CSP subnet routes.  
   
 Tenants connect to their resources at the CSP datacenter by using a site-to-site (S2S) VPN connection. In addition, the BGP routing protocol is deployed for dynamic routing information exchange between the Enterprise and CSP gateways.  
   
@@ -155,7 +155,7 @@ Following are the features of the RAS Gateway BGP Router.
   
 **IPv4 and IPv6 unicast route learning and advertisement capability (Multiprotocol Network Layer Reachability Information [NLRI])**. No matter what transport you use, the BGP Router can exchange IPv4 and IPv6 routes if the appropriate capability is announced by other BGP routers while establishing the session. To configure IPv6 routing, parameter IPv6Routing must be enabled, and a Local Global IPv6 address must be configured at the router level.  
   
-**Mixed mode and Passive mode peering**. You can configure BGP peering sessions in either mixed mode ‚Ä" where the BGP router acts as both initiator and responder - or passive mode, where the BGP router does not initiate peering, but does respond to incoming requests. Mixed mode is the default, and is recommended for BGP peering. This is true unless you want to use passive mode for debugging or diagnostic purposes. For all of the BGP router deployment topologies, mixed mode peering is required to enable automatic restarts in case of failure events.  
+**Mixed mode and Passive mode peering**. You can configure BGP peering sessions in either mixed mode - where the BGP router acts as both initiator and responder - or passive mode, where the BGP router does not initiate peering, but does respond to incoming requests. Mixed mode is the default, and is recommended for BGP peering. This is true unless you want to use passive mode for debugging or diagnostic purposes. For all of the BGP router deployment topologies, mixed mode peering is required to enable automatic restarts in case of failure events.  
   
 **Route Attribute rewrite capability**. You can add, modify, or remove the following attributes from the BGP router ingress and egress route advertisements by using the BGP Routing policies Next-Hop, MED, Local-Pref, and Community.  
   

@@ -65,7 +65,7 @@ You must be a member of **Domain Admins**, or equivalent to perform these proced
   
 2.  In the Group Policy Management console, ensure that **Group Policy Objects** is selected, and in the details pane right-click the BranchCache client computers GPO that you created previously. For example, if you named your GPO BranchCache Client Computers, right-click **BranchCache Client Computers**. Click **Edit**. The Group Policy Management Editor console opens.  
   
-3.  In the Group Policy Management Editor console, expand the following path: **Computer Configuration**, **Policies**, **Windows Settings**, **Security Settings**, **Windows Firewall with Advanced Security**, **Windows Firewall with Advanced Security - LDAP…**, **Inbound Rules**.  
+3.  In the Group Policy Management Editor console, expand the following path: **Computer Configuration**, **Policies**, **Windows Settings**, **Security Settings**, **Windows Firewall with Advanced Security**, **Windows Firewall with Advanced Security - LDAP**, **Inbound Rules**.  
   
 4.  Right-click **Inbound Rules**, and then click **New Rule**. The New Inbound Rule Wizard opens.  
   

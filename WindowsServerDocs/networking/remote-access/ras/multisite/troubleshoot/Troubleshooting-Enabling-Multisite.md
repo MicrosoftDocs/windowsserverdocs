@@ -31,7 +31,7 @@ DirectAccess requires at least one security group for all Windows 10 and Windows
 Configure the Windows 8 security groups on the **Select Groups** page of the **DirectAccess Client Setup** wizard. Configure  Windows 7  security groups on the **Client Support** page of the **Enable Multisite Deployment** wizard, or on the **Client Support** page of the **Add an Entry Point** wizard.  
   
 ## Kerberos proxy authentication  
-**Error received**—Kerberos proxy authentication is not supported in a multisite deployment. You must enable the use of computer certificates for IPsec user authentication.  
+**Error received**. Kerberos proxy authentication is not supported in a multisite deployment. You must enable the use of computer certificates for IPsec user authentication.  
   
 **Cause**  
   
@@ -48,7 +48,7 @@ To enable computer certificate authentication:
 To enable computer certificate authentication using Windows PowerShell, use the `Set-DAServer` cmdlet and specify the *IPsecRootCertificate* parameter.  
   
 ## IP-HTTPS certificates  
-**Error received**—The DirectAccess server uses a self-signed IP-HTTPS certificate. Configure IP-HTTPS to use a signed certificate from a known CA.  
+**Error received**. The DirectAccess server uses a self-signed IP-HTTPS certificate. Configure IP-HTTPS to use a signed certificate from a known CA.  
   
 **Cause**  
   
@@ -66,7 +66,7 @@ To select an IP-HTTPS certificate:
   
 -   **Issue 1**  
   
-    **Error received**—DirectAccess is configured to use a self-signed certificate for the network location server. Configure the network location server to use a signed certificate from a CA.  
+    **Error received**. DirectAccess is configured to use a self-signed certificate for the network location server. Configure the network location server to use a signed certificate from a CA.  
   
     **Cause**  
   
@@ -82,7 +82,7 @@ To select an IP-HTTPS certificate:
   
 -   **Issue 2**  
   
-    **Error received**—To deploy a network load balanced cluster or multisite deployment, obtain a certificate for the network location server with a subject name that is different from the internal name of the Remote Access server.  
+    **Error received**. To deploy a network load balanced cluster or multisite deployment, obtain a certificate for the network location server with a subject name that is different from the internal name of the Remote Access server.  
   
     **Cause**  
   
@@ -99,7 +99,7 @@ To select an IP-HTTPS certificate:
     2.  In the **Infrastructure Server Setup** wizard, on the **Network Location Server** page, under **The network location server is deployed on the Remote Access server**, click **Browse** to select the certificate you previously obtained. The certificate must have a subject name that is different from the internal name of the Remote Access server.  
   
 ## Windows 7 client computers  
-**Warning received**—When enabling multisite, the security groups configured for DirectAccess clients must not contain Windows 7 computers. To support Windows 7 client computers in a multisite deployment, select a security group containing the clients for each entry point.  
+**Warning received**. When enabling multisite, the security groups configured for DirectAccess clients must not contain Windows 7 computers. To support Windows 7 client computers in a multisite deployment, select a security group containing the clients for each entry point.  
   
 **Cause**  
   
@@ -110,7 +110,7 @@ In the existing DirectAccess deployment,  Windows 7  client support was enabled.
 DirectAccess requires at least one security group for all Windows 8 client computers and a security group for  Windows 7  client computers for each entry point. Each client computer should be included in only one security group. Therefore, you should make sure that the security group for Windows 8 clients contains only computers running Windows 8, and that each  Windows 7  client computer belongs to a single dedicated security group for the relevant entry point and that no Windows 8 clients belong to the  Windows 7  security groups.  
   
 ## Active Directory site  
-**Error received**—The server <server_name> is not associated with an Active Directory Site.  
+**Error received**. The server <server_name> is not associated with an Active Directory Site.  
   
 **Cause**  
   
@@ -121,7 +121,7 @@ DirectAccess could not determine the Active Directory site. In the Active Direct
 Confirm that this is the issue by running the command `nltest /dsgetsite` on your Remote Access server. If this is the issue, the command will return ERROR_NO_SITENAME. To solve this issue, on your domain controller, make sure that a subnet which contains the internal server IP address exists and that it is defined with an Active Directory site.  
   
 ## <a name="SaveGPOSettings"></a>Saving server GPO settings  
-**Error received**—An error occurred while saving Remote Access settings to GPO <GPO_name>.  
+**Error received**. An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
 **Cause**  
   
@@ -132,7 +132,7 @@ Changes to the server GPO couldn't be saved either due to connectivity issues or
 Make sure that there is connectivity between the Remote Access server and the domain controller. If there is connectivity, check on the domain controller if the registry.pol file is locked to another user, and if necessary, end that user session to unlock the file.  
   
 ## <a name="InternalServerError"></a>Internal error occurred  
-**Error received**—An internal error occurred.  
+**Error received**. An internal error occurred.  
   
 **Cause**  
   
