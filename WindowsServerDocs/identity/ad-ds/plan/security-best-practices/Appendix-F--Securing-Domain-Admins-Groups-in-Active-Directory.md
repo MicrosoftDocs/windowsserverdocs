@@ -1,5 +1,5 @@
 ---
-title: Appendix F: Securing Domain Admins Groups in Active Directory
+title: Appendix F - Securing Domain Admins Groups in Active Directory
 ms.custom:
   - AD
 ms.prod: windows-server-threshold

@@ -1,5 +1,5 @@
 ---
-title: Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB
+title: Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

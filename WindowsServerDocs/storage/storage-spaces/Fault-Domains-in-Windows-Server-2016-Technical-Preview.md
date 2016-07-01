@@ -58,7 +58,7 @@ Open the file, and add **&lt;Site&gt;**, **&lt;Rack&gt;**, and **&lt;Chassis&gt;
 
 >[!IMPORTANT]
 > While all additional tags are optional, they must adhere to the transitive Site &gt; Rack &gt; Chassis &gt; Node hierarchy, and must be properly closed.  
-In addition to name, freeform **Location="…"** and **Description="…"** descriptors can be added to any tag.  
+In addition to name, freeform **Location="..."** and **Description="..."** descriptors can be added to any tag.  
 
 ### Example: Two Sites, One Rack Each  
 

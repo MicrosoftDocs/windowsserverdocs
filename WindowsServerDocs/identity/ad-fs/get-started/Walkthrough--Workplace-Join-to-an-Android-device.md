@@ -1,5 +1,5 @@
 ---
-title: Walkthrough: Workplace Join to an Android device
+title: Walkthrough - Workplace Join to an Android device
 ms.custom: 
   - AD
 ms.prod: windows-server-2012

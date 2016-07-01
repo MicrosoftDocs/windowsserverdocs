@@ -1,5 +1,5 @@
 ---
-title: Appendix A: DNS Inventory
+title: Appendix A - DNS Inventory
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

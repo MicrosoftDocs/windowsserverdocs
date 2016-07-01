@@ -1,5 +1,5 @@
 ---
-title: Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment
+title: Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

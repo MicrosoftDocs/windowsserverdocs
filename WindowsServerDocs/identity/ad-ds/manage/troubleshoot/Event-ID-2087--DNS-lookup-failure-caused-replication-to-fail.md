@@ -1,5 +1,5 @@
 ﻿---
-title: Event ID 2087: DNS lookup failure caused replication to fail
+title: Event ID 2087 - DNS lookup failure caused replication to fail
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -561,7 +561,7 @@ type was found.
           <section>
             <title>Verify resource record registration</title>
             <content>
-              <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server 2003 with SP1 can locate source replication partners by using FQDNs�or, if that fails, NetBIOS names�the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.</para>
+              <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server 2003 with SP1 can locate source replication partners by using FQDNs?or, if that fails, NetBIOS names?the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.</para>
               <para>You can use Dcdiag to verify registration of all resource records that are essential for domain controller location by using the <system>dcdiag /test:dns /DnsRecordRegistration</system> test. This test verifies registration of the following resource records in DNS:</para>
               <list class="bullet">
                 <listItem>

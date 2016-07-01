@@ -1,5 +1,5 @@
 ﻿---
-title: Appendix H: Securing Local Administrator Accounts and Groups
+title: Appendix H - Securing Local Administrator Accounts and Groups
 ms.custom:
   - AD
 ms.prod: windows-server-threshold

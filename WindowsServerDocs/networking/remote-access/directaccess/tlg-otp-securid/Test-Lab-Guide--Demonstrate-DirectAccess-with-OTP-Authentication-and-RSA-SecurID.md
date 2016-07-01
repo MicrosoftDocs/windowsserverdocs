@@ -1,5 +1,5 @@
 ---
-title: Test Lab Guide: Demonstrate DirectAccess with OTP Authentication and RSA SecurID
+title: Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
