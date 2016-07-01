@@ -1,5 +1,5 @@
 ---
-title: Event ID 2088: DNS lookup failure occurred with replication success
+title: Event ID 2088 - DNS lookup failure occurred with replication success
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na

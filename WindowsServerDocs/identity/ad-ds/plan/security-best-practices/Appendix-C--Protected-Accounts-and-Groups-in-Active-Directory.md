@@ -1,5 +1,5 @@
 ---
-title: Appendix C: Protected Accounts and Groups in Active Directory
+title: Appendix C - Protected Accounts and Groups in Active Directory
 ms.custom:
   - AD
 ms.prod: windows-server-threshold
@@ -47,7 +47,7 @@ The following table contains the protected groups in Active Directory listed by 
 ||Server Operators|Server Operators|Server Operators|  
 
 #### AdminSDHolder  
-The purpose of the AdminSDHolder object is to provide "template" permissions for the protected accounts and groups in the domain. AdminSDHolder is automatically created as an object in the System container of every Active Directory domain. Its path is: **CN=AdminSDHolder,CN=System,DC=<domain_component>,DC=<domain_component>�.**  
+The purpose of the AdminSDHolder object is to provide "template" permissions for the protected accounts and groups in the domain. AdminSDHolder is automatically created as an object in the System container of every Active Directory domain. Its path is: **CN=AdminSDHolder,CN=System,DC=<domain_component>,DC=<domain_component>?.**  
 
 Unlike most objects in the Active Directory domain, which are owned by the Administrators group, AdminSDHolder is owned by the Domain Admins group. By default, EAs can make changes to any domain's AdminSDHolder object, as can the domain's Domain Admins and Administrators groups. Additionally, although the default owner of AdminSDHolder is the domain's Domain Admins group, members of Administrators or Enterprise Admins can take ownership of the object.  
 

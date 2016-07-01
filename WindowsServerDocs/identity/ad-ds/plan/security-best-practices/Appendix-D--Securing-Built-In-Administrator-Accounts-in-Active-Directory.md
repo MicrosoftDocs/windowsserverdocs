@@ -1,5 +1,5 @@
 ---
-title: Appendix D: Securing Built-In Administrator Accounts in Active Directory
+title: Appendix D - Securing Built-In Administrator Accounts in Active Directory
 ms.custom:
   - AD
 ms.prod: windows-server-threshold

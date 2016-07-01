@@ -1,5 +1,5 @@
 ---
-title: Walkthrough: Workplace Join with an iOS Device
+title: Walkthrough - Workplace Join with an iOS Device
 ms.custom: 
   - AD
 ms.prod: windows-server-2012
