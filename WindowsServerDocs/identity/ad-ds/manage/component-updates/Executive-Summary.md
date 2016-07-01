@@ -165,7 +165,7 @@ The following table provides a summary of the recommendations provided in this d
   
 Practices are listed in approximate order of priority, that is., lower numbers indicate higher priority. Where applicable, best practices are identified as preventative or detective in nature. All of these recommendations should be thoroughly tested and modified as needed for your organization's characteristics and requirements.  
   
-|||||  
+  
 |-|-|-|-|  
 ||**Best Practice**|**Tactical or Strategic**|**Preventative or Detective**|  
 |1|Patch applications.|Tactical|Preventative|  
