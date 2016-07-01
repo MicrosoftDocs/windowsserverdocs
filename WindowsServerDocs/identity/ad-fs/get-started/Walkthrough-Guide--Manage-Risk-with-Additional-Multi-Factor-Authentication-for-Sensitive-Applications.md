@@ -1,5 +1,5 @@
 ---
-title: Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
+title: Walkthrough Guide - Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
 ms.custom: 
   - AD
 ms.prod: windows-server-2012

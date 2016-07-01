@@ -1,5 +1,5 @@
 ﻿---
-title: Event ID 2042: It has been too long since this machine replicated
+title: Event ID 2042 - It has been too long since this machine replicated
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -88,7 +88,7 @@ exceeded the tombstone lifetime.</code>
           <para>Replication failures that have existed longer than the configured tombstone lifetime value</para>
         </listItem>
         <listItem>
-          <para>System time advance or rollback that causes objects to be deleted on some�but not all�domain controllers</para>
+          <para>System time advance or rollback that causes objects to be deleted on some?but not all?domain controllers</para>
         </listItem>
       </list>
     </content>
@@ -125,15 +125,15 @@ exceeded the tombstone lifetime.</code>
               <list class="bullet">
                 <listItem>
                   <para>
-                    <codeInline>DestDCName</codeInline>�The host name of the domain controller that you are targeting for lingering object clean-up. For example, if you want to remove lingering objects from DC1 in the contoso.com domain, substitute <codeInline>dc1.contoso.com</codeInline> for <codeInline>&lt;DestDCName&gt;</codeInline>.</para>
+                    <codeInline>DestDCName</codeInline>?The host name of the domain controller that you are targeting for lingering object clean-up. For example, if you want to remove lingering objects from DC1 in the contoso.com domain, substitute <codeInline>dc1.contoso.com</codeInline> for <codeInline>&lt;DestDCName&gt;</codeInline>.</para>
                 </listItem>
                 <listItem>
                   <para>
-                    <codeInline>SourceDCGUID</codeInline>�Run the command <codeInline>repadmin /showrepl AuthDCname |more</codeInline>, where <codeInline>AuthDCname</codeInline> is the host name of the domain controller that you selected as authoritative. Substitute the first <codeInline>DSA object GUID</codeInline> that appears for <codeInline>&lt;SourceDCGUID&gt;</codeInline>.</para>
+                    <codeInline>SourceDCGUID</codeInline>?Run the command <codeInline>repadmin /showrepl AuthDCname |more</codeInline>, where <codeInline>AuthDCname</codeInline> is the host name of the domain controller that you selected as authoritative. Substitute the first <codeInline>DSA object GUID</codeInline> that appears for <codeInline>&lt;SourceDCGUID&gt;</codeInline>.</para>
                 </listItem>
                 <listItem>
                   <para>
-                    <codeInline>LDAPPartition</codeInline>�The Lightweight Directory Access Partition (LDAP) name of the partition that you are targeting. For example, if the lingering objects are in the domain partition of the contoso.com domain, substitute <codeInline>dc=contoso,dc=com</codeInline> for <codeInline>&lt;LDAPPartition&gt;</codeInline>.</para>
+                    <codeInline>LDAPPartition</codeInline>?The Lightweight Directory Access Partition (LDAP) name of the partition that you are targeting. For example, if the lingering objects are in the domain partition of the contoso.com domain, substitute <codeInline>dc=contoso,dc=com</codeInline> for <codeInline>&lt;LDAPPartition&gt;</codeInline>.</para>
                 </listItem>
               </list>
               <para>The following is an example command for identifying lingering objects: <codeInline>repadmin /removelingeringobjects dc1.contoso.com 4a8717eb-8e58-456c-995a-c92e4add7e8e dc=contoso,dc=com /advisory_mode</codeInline></para>

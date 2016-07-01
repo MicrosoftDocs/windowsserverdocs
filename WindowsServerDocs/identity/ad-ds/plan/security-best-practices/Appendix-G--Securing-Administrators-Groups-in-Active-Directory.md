@@ -1,5 +1,5 @@
 ---
-title: Appendix G: Securing Administrators Groups in Active Directory
+title: Appendix G - Securing Administrators Groups in Active Directory
 ms.custom:
   - AD
 ms.prod: windows-server-threshold
