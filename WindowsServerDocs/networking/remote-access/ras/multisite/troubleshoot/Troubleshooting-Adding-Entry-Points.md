@@ -18,12 +18,12 @@ author: coreyp
 This topic contains troubleshooting information for issues related to the `Add-DAEntryPoint` command. To confirm that the error you received is related to adding an entry point, check in the Windows Event log for the event ID 10067.  
   
 ## <a name="InternalServerError"></a>Internal error occurred  
-**Error received**—An internal error occurred.  
+**Error received**. An internal error occurred.  
   
 To troubleshoot this error, see [Internal error occurred](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#InternalServerError).  
   
 ## Missing RemoteAccessServer parameter  
-**Error received**—You must supply a value for the parameter RemoteAccessServer.  
+**Error received**. You must supply a value for the parameter RemoteAccessServer.  
   
 **Cause**  
   
@@ -34,7 +34,7 @@ When adding a new entry point to a multisite deployment, you must specify the pa
 Run the command and make sure to specify the *RemoteAccessServer* parameter with the name of the server to be added as an entry point.  
   
 ## Remote Access is not configured  
-**Error received**—Remote Access is not configured on <server_name>. Specify the name of a server that belongs to a multisite deployment.  
+**Error received**. Remote Access is not configured on <server_name>. Specify the name of a server that belongs to a multisite deployment.  
   
 **Cause**  
   
@@ -47,7 +47,7 @@ When adding a new entry point to a multisite deployment, you must specify two pa
 Run the command and make sure to specify the *ComputerName* parameter with the name of the server that is already configured as part of the multisite deployment, or run the command from a computer that is part of the multisite deployment.  
   
 ## Multisite not enabled  
-**Error received**—You must enable a multisite deployment before performing this operation. Use the `Enable-DAMultiSite` cmdlet to do this.  
+**Error received**. You must enable a multisite deployment before performing this operation. Use the `Enable-DAMultiSite` cmdlet to do this.  
   
 **Cause**  
   
@@ -61,7 +61,7 @@ Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, se
   
 -   **Issue 1**  
   
-    **Error received**—IPv6 is deployed in the internal network, but you have not specified a client IPv6 prefix.  
+    **Error received**. IPv6 is deployed in the internal network, but you have not specified a client IPv6 prefix.  
   
     **Cause**  
   
@@ -75,7 +75,7 @@ Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, se
   
 -   **Issue 2**  
   
-    **Error received**—The client IPv6 prefix is already in use by another entry point. Specify an alternate value.  
+    **Error received**. The client IPv6 prefix is already in use by another entry point. Specify an alternate value.  
   
     **Cause**  
   
@@ -88,7 +88,7 @@ Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, se
     2.  Run the `Add-DAEntryPoint` cmdlet and specify the IP-HTTPS prefix in the *ClientIPv6Prefix* parameter.  
   
 ## ConnectTo address  
-**Error received**—The address (<connect_to_address>) to which DirectAccess clients connect on the RemoteAccess server is the same as the network location server address. Specify an alternate value.  
+**Error received**. The address (<connect_to_address>) to which DirectAccess clients connect on the RemoteAccess server is the same as the network location server address. Specify an alternate value.  
   
 **Cause**  
   
@@ -99,7 +99,7 @@ The ConnectTo address and the network location server address are the same.
 The ConnectTo address should be resolvable over the Internet to allow client machines to connect over IP-HTTPS. The network location server address should be resolvable over the corporate network but should not be resolvable over the Internet. Make sure that the network location server and the ConnectTo addresses are not the same. Select different addresses and try again.  
   
 ## DirectAccess or VPN already installed  
-**Error received**—A VPN installation was detected on the server <server_name>. Specify an alternate server that does not have Remote Access installed, or remove the VPN configuration from the server.  
+**Error received**. A VPN installation was detected on the server <server_name>. Specify an alternate server that does not have Remote Access installed, or remove the VPN configuration from the server.  
   
 Or  
   
@@ -116,7 +116,7 @@ To add a server to a multisite deployment, you must install the Remote Access ro
 Run the command and make sure that the server you specify in the *RemoteAccessServer* parameter does not have DirectAccess or VPN configured.  
   
 ## IPsec root certificate  
-**Error received**—The configured IPsec root certificate cannot be located on server <server_name>.  
+**Error received**. The configured IPsec root certificate cannot be located on server <server_name>.  
   
 **Cause**  
   
@@ -136,7 +136,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
 -   **Issue 1**  
   
-    **Warning received**—The Remote Access server being added is configured with both IPv4 and IPv6 addresses. This is an IPv4 only deployment, and Remote Access will ignore the IPv6 addresses.  
+    **Warning received**. The Remote Access server being added is configured with both IPv4 and IPv6 addresses. This is an IPv4 only deployment, and Remote Access will ignore the IPv6 addresses.  
   
     **Cause**  
   
@@ -148,7 +148,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
 -   **Issue 2**  
   
-    **Error received**—The internal network adapters of the Remote Accces servers in this multisite deployment are configured with IPv4 addresses. The entry point you are adding must also be configured with an IPv4 address on the internal network adapter.  
+    **Error received**. The internal network adapters of the Remote Accces servers in this multisite deployment are configured with IPv4 addresses. The entry point you are adding must also be configured with an IPv4 address on the internal network adapter.  
   
     **Cause**  
   
@@ -160,7 +160,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
 -   **Issue 3**  
   
-    **Error received**—This entry point is located in an IPv4 network, but previous entry points are located in an IPv6 network. Connect this entry point to the IPv6 network before adding it to the same multisite deployment.  
+    **Error received**. This entry point is located in an IPv4 network, but previous entry points are located in an IPv6 network. Connect this entry point to the IPv6 network before adding it to the same multisite deployment.  
   
     **Cause**  
   
@@ -172,7 +172,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
 -   **Issue 4**  
   
-    **Warning received**—The internal network adapter on the Remote Access server is not configured with an IPv4 address. DNS64 and NAT64 will not be configured on this server. DirectAccess clients can access IPv6 internal servers only.  
+    **Warning received**. The internal network adapter on the Remote Access server is not configured with an IPv4 address. DNS64 and NAT64 will not be configured on this server. DirectAccess clients can access IPv6 internal servers only.  
   
     **Cause**  
   
@@ -188,7 +188,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
 -   **Issue 1**  
   
-    **Error received**—The domain specified in the ServerGpoName parameter <server_GPO> does not exist. Specify the domain <domain_name> instead.  
+    **Error received**. The domain specified in the ServerGpoName parameter <server_GPO> does not exist. Specify the domain <domain_name> instead.  
   
     **Cause**  
   
@@ -200,7 +200,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
   
 -   **Issue 2**  
   
-    **Error received**—The server GPO must be located in the Remote Access server domain. Specify the domain <domain_name> in the ServerGpoName parameter.  
+    **Error received**. The server GPO must be located in the Remote Access server domain. Specify the domain <domain_name> in the ServerGpoName parameter.  
   
     **Cause**  
   
@@ -211,7 +211,7 @@ When DirectAccess is installed for the first time, the internal network adapter 
     The server GPO should be located in the same domain as the Remote Access server. Use the server's domain name for the server GPO and try again.  
   
 ## Split-brain DNS  
-**Warning received**—The NRPT entry for the DNS suffix <DNS_suffix> contains the public name used by client computers to connect to the Remote Access server. Add the name <connect_to_address> as an exemption in the NRPT.  
+**Warning received**. The NRPT entry for the DNS suffix <DNS_suffix> contains the public name used by client computers to connect to the Remote Access server. Add the name <connect_to_address> as an exemption in the NRPT.  
   
 **Cause**  
   
@@ -232,12 +232,12 @@ To exempt an address in the NRPT rules:
 When you add name suffixes without specifying a server address, the suffix is treated as an NRPT exemption.  
   
 ## Saving server GPO settings  
-**Error received**—An error occurred while saving Remote Access settings to GPO <GPO_name>.  
+**Error received**. An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
 To troubleshoot this error, see [Saving server GPO settings](assetId:///7d36fe78-341d-47be-9988-18d65c6c602b#SaveGPOSettings).  
   
 ## GPO updates cannot be applied  
-**Warning received**—GPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  
+**Warning received**. GPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  
   
 **Cause**  
   

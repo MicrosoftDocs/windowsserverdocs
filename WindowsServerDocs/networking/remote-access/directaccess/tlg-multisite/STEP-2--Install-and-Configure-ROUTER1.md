@@ -26,7 +26,7 @@ In this multisite test lab guide, the router computer provides an IPv4 and IPv6 
 -   [Configure routing and forwarding](assetId:///e4b1a298-d5b0-410e-970b-c5358a9378f9#RouteandForward)  
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on ROUTER1  
-First, install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012.  
+First, install Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
   
 #### To install the operating system on ROUTER1  
   

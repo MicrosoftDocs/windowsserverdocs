@@ -15,7 +15,7 @@ author: coreyp
 
 >Applies To: Windows Server Technical Preview
 
-Following are links to the test lab guides for DirectAccess in Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 and Windows Server® 2012.  
+Following are links to the test lab guides for DirectAccess in Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 and Windows Server&reg; 2012.  
   
 -   [Test Lab Guide: Demonstrate DirectAccess in a cluster with Windows NLB](assetId:///f3e5209b-aaa9-49a7-b523-0a130ec10a4b)  
   
