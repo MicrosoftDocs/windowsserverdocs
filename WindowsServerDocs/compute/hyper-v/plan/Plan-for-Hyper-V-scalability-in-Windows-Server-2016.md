@@ -18,10 +18,10 @@ author: KBDAzure
 
 **This is preliminary content and subject to change.**  
   
-This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine as well as those that apply to the Hyper-V host. These numbers are similar to those that apply to  Windows Server 2012 R2 .  
+This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine as well as those that apply to the Hyper-V host. These numbers are similar to those that apply to  Windows Server 2012 R2.  
   
 > [!NOTE]  
-> For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994.aspx). VMM is a Microsoft product for managing a virtualized data center that is sold separately.  
+> For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](https://technet.microsoft.com/en-us/system-center-docs/vmm/virtual-machine-manager). VMM is a Microsoft product for managing a virtualized data center that is sold separately.  
   
 ## Maximums for virtual machines  
 These maximums apply to each virtual machine. Not all components are available in both generations of virtual machines.  
@@ -37,7 +37,7 @@ These maximums apply to each virtual machine. Not all components are available i
 |Virtual hard disk capacity|64 TB supported by the VHDX format; 2040 GB supported by the VHD format|Each virtual hard disk is stored on physical media as either a .vhdx or a .vhd file, depending on the format used by the virtual hard disk.|  
 |Virtual IDE disks|4|The startup disk (sometimes called the boot disk) must be attached to one of the IDE devices. The startup disk can be either a virtual hard disk or a physical disk attached directly to a virtual machine.|  
 |Virtual processors|64|The number of virtual processors supported by a guest operating system might be lower. For details, see the information published for the specific operating system.|  
-|Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/library/dn531030.aspx) and [Supported Windows guest operating systems](https://technet.microsoft.com/library/mt126119.aspx).|  
+|Virtual SCSI controllers|4|Use of virtual SCSI devices requires integration services, which are available for supported guest operating systems. For details on which operating systems are supported, see [Supported Linux and FreeBSD virtual machines](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows) and [Supported Windows guest operating systems](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows-server-technical-preview).|  
 |Virtual SCSI disks|256|Each SCSI controller supports up to 64 disks, which means that each virtual machine can be configured with as many as 256 virtual SCSI disks. (4 controllers x 64 disks per controller)|  
 |Virtual network adapters|12 total:<br> - 8 Hyper-V specific network adapters<br>- 4 legacy network adapters|The Hyper-V specific network adapter provides better performance and requires a driver included in integration services. For more information, see [Plan for Hyper-V networking in Windows Server 2016](Plan-for-Hyper-V-networking-in-Windows-Server-2016.md).|  
   
@@ -51,17 +51,18 @@ These maximums apply to each Hyper-V host.
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|For details, see [NIC Teaming](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|  
 |Physical network adapters|No limits imposed by Hyper-V.|None.|  
 |Running virtual machines per server|1024|None.|  
-|Storage|Limited by what is supported by the management operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage is not supported.|  
+|Storage|Limited by what is supported by the management operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage is not supported.|
 |Virtual network switch ports per server|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|  
 |Virtual processors per logical processor|No ratio imposed by Hyper-V.|None.|  
 |Virtual processors per server|2048|None.|  
 |Virtual storage area networks (SANs)|No limits imposed by Hyper-V.|None.|  
 |Virtual switches|Varies; no limits imposed by Hyper-V.|The practical limit depends on the available computing resources.|  
+ 
+## Failover Clusters and Hyper-V  
+This table lists the maximums that apply when using Hyper-V and Failover Clustering. It's important to do capacity planning to ensure that there will be enough hardware resources to run all the virtual machines in a clustered environment.  
 
-  
-### Failover Clusters and Hyper-V  
-The following table lists the maximums that apply to highly available servers running Hyper-V. It is important to do capacity planning to ensure that there will be enough hardware resources to run all the virtual machines in a clustered environment.  
-  
+To learn about updates to Failover Clustering, including new features for virtual machines, see [What's New in Failover Clustering in Windows Server Technical Preview](https://technet.microsoft.com/en-us/windows-server-docs/compute/failover-clustering/what-s-new-in-failover-clustering-in-windows-server-technical-preview).
+
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
 |Nodes per cluster|64|Consider the number of nodes you want to reserve for failover, as well as maintenance tasks such as applying updates. We recommend that you plan for enough resources to allow for 1 node to be reserved for failover, which means it remains idle until another node is failed over to it. (This is sometimes referred to as a passive node.) You can increase this number if you want to reserve additional nodes. There is no recommended ratio or multiplier of reserved nodes to active nodes; the only requirement is that the total number of nodes in a cluster can't exceed the maximum of 64.|  
