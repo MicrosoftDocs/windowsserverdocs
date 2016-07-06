@@ -19,11 +19,11 @@ DC1 acts as a domain controller, DNS server, and DHCP server for the corp.contos
   
 To configure Remote Access to use a multisite topology, it is necessary to add an additional Active Directory Domain Services (AD DS) site for the second domain controller 2-DC1, and to configure routing between the subnets.  
   
-1.  [To configure the default gateway on the domain controller](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#IPv6)—Configure the default gateway on DC1.  
+1.  [To configure the default gateway on the domain controller](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#IPv6). Configure the default gateway on DC1.  
   
-2.  [Create security groups for Windows 7 DirectAccess clients on DC1](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#SecGroup)—When DirectAccess is configured, it automatically creates Group Policy Objects (GPOs) and GPO settings that are applied to DirectAccess clients and servers. The DirectAccess client GPO is applied to specific Active Directory security groups.  
+2.  [Create security groups for Windows 7 DirectAccess clients on DC1](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#SecGroup). When DirectAccess is configured, it automatically creates Group Policy Objects (GPOs) and GPO settings that are applied to DirectAccess clients and servers. The DirectAccess client GPO is applied to specific Active Directory security groups.  
   
-3.  [To add a new AD DS site](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#ADSite)—Create a second AD DS site.  
+3.  [To add a new AD DS site](assetId:///205ca795-93ce-4e53-aa6b-b44c87f0e14a#ADSite). Create a second AD DS site.  
   
 ## <a name="IPv6"></a>To configure the default gateway on the domain controller  
   

@@ -53,7 +53,7 @@ Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your 
   
 |Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations (examples)|  
 |----------------|----------|--------|--------------------|-----------|-----------------------------|  
-|**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br />…<br />10.184.108.X - Compute host X|  
+|**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br /><br />10.184.108.X - Compute host X|  
 |**HNV Provider**|10.10.56.0|23|11|10.10.56.1|10.10.56.1 - Router<br /><br />10.10.56.2 - SLB/MUX1|  
   
 ### Logical Networks for Gateways and the Software Load Balancer  

@@ -18,7 +18,7 @@ author: coreyp
 This topic contains troubleshooting information for general issues related to Remote Access.  
   
 ## GPO retrieval error  
-**Error received**—DirectAccess server GPO settings cannot be retrieved. Ensure you have edit permissions for the GPO.  
+**Error received**. DirectAccess server GPO settings cannot be retrieved. Ensure you have edit permissions for the GPO.  
   
 The Remote Access management console is unresponsive after receiving this error.  
   
@@ -47,7 +47,7 @@ $ServerGpos | ForEach-Object { $GpoName = $_['GpoName'] ; $DC = $_['DC'] ; Write
 ```  
   
 ## Windows 7 to Windows 8 or 10 client upgrade  
-**Symptom**—After a  Windows 7  client upgrades to Windows 10 or Windows 8 in a multisite deployment, the DirectAccess connection is not visible in the Networks list.  
+**Symptom**. After a  Windows 7  client upgrades to Windows 10 or Windows 8 in a multisite deployment, the DirectAccess connection is not visible in the Networks list.  
   
 **Cause**  
   
@@ -70,7 +70,7 @@ If a client has already been upgraded or the DCA is not configured, move the cli
   
 -   **Issue 1**  
   
-    **Error received**—Domain controller <domain_controller> cannot be reached for <server_name or entry_point_name>.  
+    **Error received**. Domain controller <domain_controller> cannot be reached for <server_name or entry_point_name>.  
   
     **Cause**  
   
@@ -82,7 +82,7 @@ If a client has already been upgraded or the DCA is not configured, move the cli
   
 -   **Issue 2**  
   
-    **Error received**—The primary domain controller in domain <domain_name> cannot be reached.  
+    **Error received**. The primary domain controller in domain <domain_name> cannot be reached.  
   
     **Cause**  
   

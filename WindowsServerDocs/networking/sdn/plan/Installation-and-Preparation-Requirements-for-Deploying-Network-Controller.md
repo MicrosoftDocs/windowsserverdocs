@@ -37,7 +37,7 @@ Network Controller deployment requires one or more computers or VMs that will se
   
 -   Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016 Technical Preview.  
   
--   The management client computer or VM for Network Controller must be running Windows® 8, Windows® 8.1, or Windows 10®.  
+-   The management client computer or VM for Network Controller must be running Windows&reg; 8, Windows&reg; 8.1, or Windows 10&reg;.  
   
 ### Additional requirements  
 Following are additional steps you must take before deploying Network Controller.  

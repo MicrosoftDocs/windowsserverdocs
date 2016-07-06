@@ -34,8 +34,8 @@ In addition, the Remote Access administrator must be a local administrator on al
 You must configure at least one security group in the new forest for DirectAccess client machines in the new forest. This is because a single security group cannot contain accounts from several forests.  
   
 > [!NOTE]  
-> -   DirectAccess requires at least one Windows 10® or Windows® 8 client security group for each forest. However, it is recommended to have one Windows 10 or Windows 8 client security group for each domain that contains Windows 10 or Windows 8 clients.  
-> -   When multisite is enabled, DirectAccess requires at least one  Windows 7®  client security group per forest for each DirectAccess entry point in which  Windows 7  client computers are supported. However, it is recommended to have a separate  Windows 7  client security group for each entry point for each domain that contains  Windows 7  clients.  
+> -   DirectAccess requires at least one Windows 10&reg; or Windows&reg; 8 client security group for each forest. However, it is recommended to have one Windows 10 or Windows 8 client security group for each domain that contains Windows 10 or Windows 8 clients.  
+> -   When multisite is enabled, DirectAccess requires at least one  Windows 7&reg;  client security group per forest for each DirectAccess entry point in which  Windows 7  client computers are supported. However, it is recommended to have a separate  Windows 7  client security group for each entry point for each domain that contains  Windows 7  clients.  
 >   
 > For DirectAccess to be applied on client computers in additional domains, client GPOs must be created in those domains. Adding security groups triggers writing new client GPOs for the new domains; therefore, if you add a new security group from a new domain to the list of DirectAccess client security groups, a client GPO will be automatically created on the new domain and client computers from the new domain will get the DirectAccess settings via the client GPO.  
 >   

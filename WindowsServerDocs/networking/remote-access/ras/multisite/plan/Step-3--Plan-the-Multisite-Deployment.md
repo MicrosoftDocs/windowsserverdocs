@@ -158,9 +158,9 @@ In a multisite deployment symmetric routing is enforced using Teredo and IP-HTTP
   
     1.  IP-HTTPS prefix—This prefix is chosen by the administrator in the Add an Entry Point wizard.  
   
-    2.  VPN IPv6 prefix (optional)—This prefix can be chosen after enabling VPN for an entry point  
+    2.  VPN IPv6 prefix (optional). This prefix can be chosen after enabling VPN for an entry point  
   
-    3.  Teredo prefix (optional)—This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
+    3.  Teredo prefix (optional). This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
   
         1.  www.xxx.yyy.zzz  
   
