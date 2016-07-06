@@ -15,10 +15,10 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016 Technical Preview 3.  
+This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016 Technical Preview.  
   
 ## <a name="BKMK_DNSClient2012R2"></a>What’s new in DNS Server in Windows Server Technical Preview  
-In Windows Server 2016 Technical Preview 3, DNS Server offers enhanced support in the following areas.  
+In Windows Server 2016 Technical Preview, DNS Server offers enhanced support in the following areas.  
   
 |Functionality|New or Improved|Description|  
 |-----------------|-------------------|---------------|  
@@ -46,7 +46,7 @@ DNS Policies can be used in different scenarios, including:
   
 -   **Time of day based redirection**. DNS clients can be redirected to datacenters based on the time of the day.  
   
-In Technical Preview 3 (TP3) you can also use DNS policies for active directory integrated DNS zones.  
+You can also use DNS policies for Active Directory integrated DNS zones.  
 ## Response Rate Limiting  
 You can configure RRL settings to control how to respond to requests to a DNS client when your server receives several requests targeting the same client. By doing this, you can prevent someone from sending a Denial of Service (Dos) attack using your DNS servers. For instance, a bot net can send requests to your DNS server using the IP address of a third computer as the requestor. Without RRL, your DNS servers might respond to all the requests, flooding the third computer. When you use RRL, you can configure the following settings:  
   

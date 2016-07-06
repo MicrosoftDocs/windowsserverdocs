@@ -15,7 +15,7 @@ author: coreyp
 
 >Applies To: Windows Server Technical Preview
 
-Windows Server® 2016 Technical Preview and Windows Server® 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access multisite deployment.  
+Windows Server&reg; 2016 Technical Preview and Windows Server&reg; 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single Windows Server 2016 Technical Preview or  Windows Server 2012  Remote Access multisite deployment.  
   
   
 -   [Step 1: Plan an advanced single server deployment](assetId:///2e91e90f-1ca3-402e-8f48-a2b82762cc9b). This step includes planning for the infrastructure required to deploy a single server. It includes planning for network and server settings, certificate requirements, DNS settings, network location server deployment, DirectAccess management servers, Active Directory settings, and Group Policy objects (GPOs).  

@@ -33,7 +33,7 @@ In this test lab scenario, DirectAccess is deployed with:
   
 -   **NAT1**—A client computer that is configured as a network address translator (NAT) device using Internet Connection Sharing.  
   
--   **CLIENT1 and CLIENT2**—Two client computers that are configured as DirectAccess clients that will be used to test DirectAccess connectivity when moving between the internal network, the simulated Internet, and a home network. **CLIENT2** is a  Windows 7®  client.  
+-   **CLIENT1 and CLIENT2**—Two client computers that are configured as DirectAccess clients that will be used to test DirectAccess connectivity when moving between the internal network, the simulated Internet, and a home network. **CLIENT2** is a  Windows 7&reg;  client.  
   
 The test lab consists of four subnets that simulate the following:  
   
