@@ -15,7 +15,8 @@ author: jamesmci
 Follow these steps to install an enterprise root certification authority (CA) and to deploy server certificates for use with PEAP and EAP.  
   
 > [!IMPORTANT]  
-> >Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. After you install AD CS, you cannot change the computer name or the domain membership of the computer, however you can change the IP address if needed. For more information on how to accomplish these tasks, see the Windows Server® 2016 Technical Preview [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
+> Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. After you install AD CS, you cannot change the computer name or the domain membership of the computer, however you can change the IP address if needed. For more information on how to accomplish these tasks, see the Windows Server&reg; 2016 Technical Preview [Core Network Guide](../../Core-Network-Guide.md) at http://technet.microsoft.com/library/mt604042.aspx.  
+
   
 -   [Install the Web Server WEB1](../../../core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md)  
   

@@ -33,7 +33,7 @@ This topic introduces concepts and explains the key benefits and capabilities of
   
 For more technical details about networking virtualization in Windows Server 2016 Technical Preview, see [Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization-Technical-Details-in-Windows-Server-Technical-Preview.md).  
   
-**Did you mean…**  
+**Did you mean**  
   
 -   [Hyper-V Network Virtualization Overview](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) ( Windows Server 2012 R2 )  
   

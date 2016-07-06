@@ -19,12 +19,12 @@ When a DirectAccess client is connected to the Internet from behind a NAT device
   
 The following procedures are performed on both client computers:  
   
-1.  [Test Teredo connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#TeredoCLIENT1)—The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544.  
+1.  [Test Teredo connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#TeredoCLIENT1). The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544.  
   
-2.  [Test IP-HTTPS connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#IPHTTPS_CLIENT1)—The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers.  
+2.  [Test IP-HTTPS connectivity](assetId:///56cfbafa-7a8d-4241-8930-b038e989b809#IPHTTPS_CLIENT1). The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers.  
   
 > [!TIP]  
-> We recommend that you clear the Internet Explorer cache before performing these procedures to make sure that you are testing the connection and not retrieving the website pages from the cache.  
+> It is recommended that you clear the Internet Explorer cache before performing these procedures to ensure that you are testing the connection and not retrieving the website pages from the cache.  
   
 ## Prerequisites  
 Before performing these tests, unplug CLIENT1 from the Internet switch and connect it to the Homenet switch. If asked what type of network you want to define the current network, select **Home Network**.  

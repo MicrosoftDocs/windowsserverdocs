@@ -29,7 +29,7 @@ This topic describes how to verify that you have correctly configured your Remot
   
     You should be able to access all corporate resources through each multisite server.  
   
-4.  Connect a  Windows 7®  client computer to the corporate network and obtain the group policy.  
+4.  Connect a  Windows 7&reg;  client computer to the corporate network and obtain the group policy.  
   
 5.  Connect the  Windows 7  client computer to the external network and attempt to access internal resources.  
   
