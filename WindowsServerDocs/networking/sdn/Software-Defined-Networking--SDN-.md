@@ -71,7 +71,7 @@ Windows Server includes the following software defined networking technologies.
 ### <a name="bkmk_nc"></a>Network Controller  
 New in Windows Server 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
   
-Network Controller is a highly available and scalable server role, and provides one application programming interface (API) â€" the Southbound API - that allows Network Controller to communicate with the network, and a second API â€" the Northbound API - that allows you to communicate with Network Controller.  
+Network Controller is a highly available and scalable server role, and provides one application programming interface (API) - the Southbound API - that allows Network Controller to communicate with the network, and a second API - the Northbound API - that allows you to communicate with Network Controller.  
   
 Using Windows PowerShell, the Representational State Transfer (REST) API, or a management application, you can use Network Controller to manage the following physical and virtual network infrastructure.  
   
@@ -174,9 +174,9 @@ To deploy Windows Server Gateway, you must use System Center 2012 R2 and Virtual
 For more information, see [Windows Server Gateway](https://technet.microsoft.com/library/dn313101.aspx).  
   
 ## <a name="bkmk_az"></a>Microsoft Azure  
-Microsoft Azure is Microsoftâ€™s cloud platform: a growing collection of integrated servicesâ€"compute, storage, data, networking, and appâ€"that help you move faster, do more, and save money.  
+Microsoft Azure is Microsoft's cloud platform: a growing collection of integrated services - compute, storage, data, networking, and app - that help you move faster, do more, and save money.  
   
-Microsoftâ€™s approach to software defined networking includes designing, building, and operating global-scale datacenter networks for services like Microsoft Azure. Microsoft Azure global datacenters perform tens of thousands of network changes every day, which is possible only because of software defined networking.  
+Microsoft's approach to software defined networking includes designing, building, and operating global-scale datacenter networks for services like Microsoft Azure. Microsoft Azure global datacenters perform tens of thousands of network changes every day, which is possible only because of software defined networking.  
   
 Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoftâ€™s experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.  
   

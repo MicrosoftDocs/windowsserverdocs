@@ -36,7 +36,7 @@ author: coreyp
 -   [Force replication between DC1 and 2-DC1](assetId:///16752f61-edbf-4ff4-9d7a-e2077b66a127#replication)  
   
 ## <a name="bkmk_InstallOS"></a>Install the operating system on 2-DC1  
-First, install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012.  
+First, install Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012.  
   
 #### To install the operating system on 2-DC1  
   

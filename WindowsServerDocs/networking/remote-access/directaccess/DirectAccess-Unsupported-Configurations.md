@@ -54,7 +54,7 @@ For information on migrating from FRS to DFS-R, see the [SYSVOL Replication Migr
 Network Access Protection (NAP) is used to determine whether remote client computers meet IT policies before they are granted access to the corporate network. NAP was deprecated in Windows Server 2012 R2. This means that NAP may not be supported in future versions of Windows. For this reason, starting a new deployment of DirectAccess with NAP is not recommended. A different method of end point control for the security of DirectAccess clients is recommended.  
   
 ## <a name="bkmk_multi"></a>Multisite support for Windows 7 clients  
-When DirectAccess is configured in a multisite deployment, Windows 10®, Windows® 8.1, and Windows® 8 clients have the capability of connecting to the nearest site.  Windows 7®  client computers do not have the same capability. Site selection for  Windows 7  clients is set to a particular site at the time of policy configuration, and these clients will always connect to that designated site, regardless of their location.  
+When DirectAccess is configured in a multisite deployment, Windows 10&reg;, Windows&reg; 8.1, and Windows&reg; 8 clients have the capability of connecting to the nearest site.  Windows 7&reg;  client computers do not have the same capability. Site selection for  Windows 7  clients is set to a particular site at the time of policy configuration, and these clients will always connect to that designated site, regardless of their location.  
   
 ## <a name="bkmk_user"></a>User-based access control  
 DirectAccess policies are computer based, not user based. Specifying DirectAccess user policies to control access to the corporate network is not supported.  
@@ -63,7 +63,7 @@ DirectAccess policies are computer based, not user based. Specifying DirectAcces
 DirectAccess can be configured by using the DirectAccess Setup Wizard, the Remote Access Management console, or the Remote Access Windows PowerShell cmdlets. Using any means other than the DirectAccess Setup Wizard to configure DirectAccess, such as modifying DirectAccess Group Policy Objects directly or manually modifying the default policy settings on the server or client, is not supported. These modifications may result in an unusable configuration.  
   
 ## <a name="bkmk_kerb"></a>KerbProxy authentication  
-When you configure a DirectAccess server with the Getting Started Wizard, the DirectAccess server is automatically configured to use KerbProxy authentication for computer and user authentication. Because of this, you should only use the Getting Started Wizard for single-site deployments where only Windows 10®, Windows 8.1, or Windows 8 clients are deployed.  
+When you configure a DirectAccess server with the Getting Started Wizard, the DirectAccess server is automatically configured to use KerbProxy authentication for computer and user authentication. Because of this, you should only use the Getting Started Wizard for single-site deployments where only Windows 10&reg;, Windows 8.1, or Windows 8 clients are deployed.  
   
 In addition, the following features should not be used with KerbProxy authentication:  
   

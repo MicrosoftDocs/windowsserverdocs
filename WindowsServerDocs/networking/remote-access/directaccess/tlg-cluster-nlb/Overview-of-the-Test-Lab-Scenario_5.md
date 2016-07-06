@@ -1,5 +1,5 @@
 ---
-title: Overview of the Test Lab Scenario_5
+title: Overview of the Test Lab Scenario
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: cd1e9efd-19e9-49e7-8432-881f661c9792
 author: coreyp
 ---
-# Overview of the Test Lab Scenario_5
+# Overview of the Test Lab Scenario
 
 >Applies To: Windows Server Technical Preview
 

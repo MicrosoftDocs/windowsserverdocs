@@ -19,9 +19,9 @@ When a DirectAccess client is connected to the Internet from behind a NAT device
   
 The following procedures are performed on both client computers:  
   
-1.  [Test Teredo connectivity](assetId:///41f8195b-00a1-4991-9db8-3703514dbe0c#TeredoCLIENT1)—The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
+1.  [Test Teredo connectivity](assetId:///41f8195b-00a1-4991-9db8-3703514dbe0c#TeredoCLIENT1). The first set of tests are performed when the DirectAccess client is configured to use Teredo. This is the automatic setting when the NAT device allows outbound access to UDP port 3544. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
   
-2.  [Test IP-HTTPS connectivity](assetId:///41f8195b-00a1-4991-9db8-3703514dbe0c#IPHTTPS_CLIENT1)—The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
+2.  [Test IP-HTTPS connectivity](assetId:///41f8195b-00a1-4991-9db8-3703514dbe0c#IPHTTPS_CLIENT1). The second set of tests are performed when the DirectAccess client is configured to use IP-HTTPS. In order to demonstrate IP-HTTPS connectivity, Teredo is disabled on the client computers. First run the tests on CLIENT1 and then run the tests on CLIENT2.  
   
 ## Prerequisites  
 Start EDGE1 and 2-EDGE1 if they are not already running, and make sure they are connected to the Internet subnet.  

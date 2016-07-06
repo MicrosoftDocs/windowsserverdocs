@@ -15,7 +15,7 @@ author: vhorne
 
 >Applies To: Windows Server Technical Preview
 
-This topic lists the planning steps that are required to deploy a single DirectAccess server running Windows Server® 2016 Technical Preview, Windows Server® 2012 R2, or Windows Server® 2012 with a full range of basic and advanced features. The planning phase includes the following topics.  
+This topic lists the planning steps that are required to deploy a single DirectAccess server running Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2, or Windows Server&reg; 2012 with a full range of basic and advanced features. The planning phase includes the following topics.  
   
 -   [Step 1: Plan the DirectAccess Infrastructure](Step-1--Plan-the-DirectAccess-Infrastructure.md)  
   

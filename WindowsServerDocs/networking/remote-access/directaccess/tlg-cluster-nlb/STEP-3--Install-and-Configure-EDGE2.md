@@ -19,7 +19,7 @@ EDGE2 is the second member of a Remote Access cluster. EDGE2 is installed and co
   
 You will perform the following steps to configure EDGE2:  
   
-1.  [Install the operating system on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#installOS)—Install Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 or Windows Server® 2012 on EDGE2.  
+1.  [Install the operating system on EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#installOS)—Install Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 or Windows Server&reg; 2012 on EDGE2.  
   
 2.  [Configure TCP/IP properties](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51#TCP)—After installing the operating system on EDGE2, configure static IP addressing information on its internal and external network adapters.  
   
