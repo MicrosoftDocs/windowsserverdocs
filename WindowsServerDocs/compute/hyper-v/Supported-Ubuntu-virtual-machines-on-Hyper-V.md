@@ -14,7 +14,7 @@ author: cwatsonmsft
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
->Applies To: Hyper-V Server 2012, Hyper-V Server 2012 R2, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows Server Technical Preview, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Hyper-V Server 2012, Hyper-V Server 2012 R2, Windows 8, Windows 8.1
 
 Beginning with Ubuntu 12.04, loading the "linux-virtual" package installs a kernel suitable for use as a guest virtual machine. This package always depends on the latest minimal generic kernel image and headers used for virtual machines. While its use is optional, the linux-virtual kernel will load fewer drivers than a more generic image.  
   

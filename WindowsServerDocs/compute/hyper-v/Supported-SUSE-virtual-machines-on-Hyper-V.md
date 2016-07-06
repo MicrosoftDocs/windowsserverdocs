@@ -14,7 +14,7 @@ author: cwatsonmsft
 ---
 # Supported SUSE virtual machines on Hyper-V
 
->Applies To: Hyper-V Server 2012, Hyper-V Server 2012 R2, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows Server Technical Preview, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Hyper-V Server 2012, Hyper-V Server 2012 R2, Windows 8, Windows 8.1
 
 The following is a feature distribution map that indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.  
   
