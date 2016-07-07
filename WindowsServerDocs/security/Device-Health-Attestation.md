@@ -244,6 +244,7 @@ Get-DHASInactiveSigningCertificates
 Remove-DHASInactiveSigningCertificates -Force
 Remove-DHASInactiveSigningCertificates  -Thumbprint "<hex>" -Force
 ```
+
 > **Note:** Only *one* inactive certificate (of any type) may exist in the service at any time. Certificates should be removed from the list of inactive certificates once they are no longer required.
 
 ### Get the active encryption certificate
@@ -273,6 +274,7 @@ Get-DHASInactiveEncryptionCertificates
 Remove-DHASInactiveEncryptionCertificates -Force
 Remove-DHASInactiveEncryptionCertificates -Thumbprint "<hex>" -Force 
 ```
+
 ### Get the X509ChainPolicy configuration 
 
 ```
