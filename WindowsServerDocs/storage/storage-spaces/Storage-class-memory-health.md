@@ -75,25 +75,7 @@ The following table lists some info about this condition.
 |More info|OperationalStatus field of the PhysicalDisk object. EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |What to do|Depending on the warning threshold breached, it may be prudent to consider replacing the entire, or certain parts of the NVDIMM-N. For example, if the NVM lifetime threshold is breached, replacing the NVDIMM-N may make sense.|
 
-
-This condition is when you check the health of a storage-class memory device and see <>, as shown in this example output:
-
-|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
-|---|---|---|---|
-|802c-01-1602-117cb5fc|Healthy|OK||
-|802c-01-1602-117cb64f|Warning|Predictive Failure||
-
-The following table lists some info about this condition.
-
-||Description|
-|---|---|
-|Likely condition||
-|General behavior||
-|Storage Spaces behavior||
-|More info||
-|What to do||
-
-##Writes to an NVDIMM-N fail
+## Writes to an NVDIMM-N fail
 
 This condition is when you check the health of a storage-class memory device and see the Health Status listed as **Unhealthy**, and Operational Status mentions an **IO Error**, as shown in this example output:
 
@@ -147,3 +129,23 @@ The following table lists some info about this condition.
 |Storage Spaces behavior|Storage Spaces remains operational if only one NVDIMM is affected).<br>NVDIMM-N physical disk object will be shown with the Health Status “Unhealthy” and is not used by Storage Spaces.|
 |More info|OperationalStatus field of the PhysicalDisk object.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |What to do|If the user doesn't want to replace the affected device, they can use the **Reset-PhysicalDisk** cmdlet to clear the read-only condition on the affected NVDIMM-N. In Storage Spaces environments this will also attempt to re-integrate the NVDIMM-N into Storage Space and start the repair process.|
+
+## Condition template for authoring
+
+This condition is when you check the health of a storage-class memory device and see <>, as shown in this example output:
+
+|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
+|---|---|---|---|
+|802c-01-1602-117cb5fc|Healthy|OK||
+|802c-01-1602-117cb64f|Warning|Predictive Failure||
+
+The following table lists some info about this condition.
+
+||Description|
+|---|---|
+|Cause||
+|Likely condition||
+|General behavior||
+|Storage Spaces behavior||
+|More info||
+|What to do||
