@@ -66,7 +66,7 @@ If you have a kernel debugger installed in the system, you must configure the de
 ```  
 # Override the Debugger - by default the debugger blocks NetQos  
 #  
-Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 ‚Ä"Force  
+Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 -Force  
 ```  
   
 ### Create a Hyper-V Virtual Switch with an RDMA vNIC  
@@ -110,12 +110,12 @@ Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)"
 #  
 Get-NetAdapterRdma | fl *  
 #  
-# Many switches won‚Äôt pass traffic class information on untagged VLAN traffic,  
+# Many switches won't pass traffic class information on untagged VLAN traffic,  
 # so make sure host adapters for RDMA are on VLANs. (This example assigns the two SMB_*  
 # host virtual adapters to VLAN 42.)  
 #  
-Set-VMNetworkAdapter ‚Ä"ManagementOS ‚Ä"VMNetworkAdapter SMB_1  ‚Ä"IsolationMode VLAN ‚Ä"DefaultIsolationID 42  
-Set-VMNetworkAdapter ‚Ä"ManagementOS ‚Ä"VMNetworkAdapter SMB_2  ‚Ä"IsolationMode VLAN ‚Ä"DefaultIsolationID 42  
+Set-VMNetworkAdapter -ManagementOS -VMNetworkAdapter SMB_1  -IsolationMode VLAN -DefaultIsolationID 42  
+Set-VMNetworkAdapter -ManagementOS -VMNetworkAdapter SMB_2  -IsolationMode VLAN -DefaultIsolationID 42  
   
 ```  
   
@@ -207,7 +207,7 @@ SET is not compatible with the following networking technologies in Windows Serv
 ## <a name="bkmk_modes"></a>SET Modes and Settings  
 Unlike NIC Teaming, when you create a SET team, you cannot configure a team name. In addition, using a standby adapter is supported in NIC Teaming, but it is not supported in SET. When you deploy SET, all network adapters are active and none are in standby mode.  
   
-Another key difference between NIC Teaming and SET is that NIC Teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode. With Switch Independent mode, the switch or switches to which the SET Team members are connected are unaware of the presence of the SET team and do not determine how to distribute network traffic to SET team members ‚Ä" instead, the SET team distributes inbound network traffic across the SET team members.  
+Another key difference between NIC Teaming and SET is that NIC Teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode. With Switch Independent mode, the switch or switches to which the SET Team members are connected are unaware of the presence of the SET team and do not determine how to distribute network traffic to SET team members - instead, the SET team distributes inbound network traffic across the SET team members.  
   
 When you create a new SET team, you must configure the following team properties.  
   
@@ -267,7 +267,7 @@ Live Migration is supported in Windows Server 2016 Technical Preview 4, but is n
 ## <a name="bkmk_mac"></a>MAC Address Use on Transmitted Packets  
 When you configure a SET team with dynamic load distribution, the packets from a single source (such as a single VM) are simultaneously distributed across multiple team members. To prevent the switches from getting confused and to prevent MAC flapping alarms, SET replaces the source MAC address  with a different MAC address on the frames that are transmitted on team members other than the affinitized team member. Because of this, each team member uses a different MAC address, and MAC address conflicts are prevented unless and until failure occurs.  
   
-When a failure is detected on the primary NIC, the SET teaming software starts using the VM's MAC address on the team member that is chosen to serve as the temporary affinitized team member (i.e., the one that will now appear to the switch as the VM‚Äôs interface).  This change only applies to traffic that was going to be sent on the VM‚Äôs affinitized team member with the VM‚Äôs own MAC address as its source MAC address. Other traffic continues to be sent with whatever source MAC address it would have used prior to the failure.  
+When a failure is detected on the primary NIC, the SET teaming software starts using the VM's MAC address on the team member that is chosen to serve as the temporary affinitized team member (i.e., the one that will now appear to the switch as the VM's interface).  This change only applies to traffic that was going to be sent on the VM's affinitized team member with the VM's own MAC address as its source MAC address. Other traffic continues to be sent with whatever source MAC address it would have used prior to the failure.  
   
 Following are lists that describe SET teaming MAC address replacement behavior, based on how the team is configured:  
   
@@ -314,7 +314,7 @@ New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1" -EnableEmbeddedTeaming 
 ```  
   
 ### Adding or removing a SET team member  
-The Set-VMSwitchTeam command includes the NetAdapterName option.  To change the team members in a SET team, enter the desired list of team members after the  NetAdapterName option. If TeamedvSwitch was originally created with NIC 1 and NIC 2, then the following example command deletes SET team member ‚ÄúNIC 2‚Äù and adds new SET team member ‚ÄúNIC 3‚Äù.  
+The Set-VMSwitchTeam command includes the NetAdapterName option.  To change the team members in a SET team, enter the desired list of team members after the  NetAdapterName option. If TeamedvSwitch was originally created with NIC 1 and NIC 2, then the following example command deletes SET team member "NIC 2" and adds new SET team member "NIC 3".  
   
 ```  
 Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"  
