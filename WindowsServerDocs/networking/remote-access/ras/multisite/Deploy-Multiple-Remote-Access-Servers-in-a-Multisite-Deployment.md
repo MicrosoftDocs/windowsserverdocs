@@ -48,13 +48,13 @@ Before you begin deploying this scenario, review this list for important require
 ## In this scenario  
 The multisite deployment scenario includes a number of steps:  
   
-1.  **[Plan and deploy a single server](assetId:///3475e527-541f-4a34-b940-18d481ac59f6)**—A single Remote Access server with advanced settings must be deployed before setting up a multisite deployment.  
+1.  **[Plan and deploy a single server](assetId:///3475e527-541f-4a34-b940-18d481ac59f6)**. A single Remote Access server with advanced settings must be deployed before setting up a multisite deployment.  
   
-2.  **[Plan a  multisite deployment](assetId:///00701341-eec3-4b8a-b72b-819fc1ed1496)**—To build a multisite deployment from a single server a number of additional planning steps are required, including compliance with multisite prerequisites, and planning for Active Directory security groups, Group Policy Objects (GPOs), DNS, and client settings.  
+2.  **[Plan a  multisite deployment](assetId:///00701341-eec3-4b8a-b72b-819fc1ed1496)**. To build a multisite deployment from a single server a number of additional planning steps are required, including compliance with multisite prerequisites, and planning for Active Directory security groups, Group Policy Objects (GPOs), DNS, and client settings.  
   
-3.  **[Configure a multisite deployment](assetId:///68492f3d-772e-4e68-a0ae-572be4e7d35f)**—This consists of a number of configuration steps, including preparation of the Active Directory infrastructure, configuration of the existing Remote Access server, and the addition of multiple Remote Access servers as entry points to the multisite deployment.  
+3.  **[Configure a multisite deployment](assetId:///68492f3d-772e-4e68-a0ae-572be4e7d35f)**. This consists of a number of configuration steps, including preparation of the Active Directory infrastructure, configuration of the existing Remote Access server, and the addition of multiple Remote Access servers as entry points to the multisite deployment.  
   
-4.  **[Troubleshoot a Multisite Deployment](assetId:///972a6d12-57b4-4be2-9692-a40d19244691)**—This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access in a multisite deployment.  
+4.  **[Troubleshoot a Multisite Deployment](assetId:///972a6d12-57b4-4be2-9692-a40d19244691)**. This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access in a multisite deployment.  
   
 ## <a name="BKMK_APP"></a>Practical applications  
 A multisite deployment provides the following:  
@@ -112,7 +112,7 @@ Software requirements for this scenario include the following:
 ## <a name="KnownIssues"></a>Known issues  
 The following are known issues when configuring a multisite scenario:  
   
--   **Multiple entry points in the same IPv4 subnet**—Adding multiple entry points in the same IPv4 subnet will result in an IP address conflict message, and the DNS64 address for the entry point will not be configured as expected. This issue occurs when IPv6 has not been deployed on the internal interfaces of the servers on the corporate network. To prevent this problem run the following Windows PowerShell command on all current and future Remote Access servers:  
+-   **Multiple entry points in the same IPv4 subnet**. Adding multiple entry points in the same IPv4 subnet will result in an IP address conflict message, and the DNS64 address for the entry point will not be configured as expected. This issue occurs when IPv6 has not been deployed on the internal interfaces of the servers on the corporate network. To prevent this problem run the following Windows PowerShell command on all current and future Remote Access servers:  
   
     ```  
     Set-NetIPInterface -InterfaceAlias <InternalInterfaceName> -AddressFamily IPv6 -DadTransmits 0  

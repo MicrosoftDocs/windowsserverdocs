@@ -77,8 +77,8 @@ Hyper-V has required parts that work together so you can create and run virtual 
   
 Hyper-V also has tools for management and connectivity. You can install these on the same computer that Hyper-V role is installed on, and on computers without the Hyper-V role installed. These tools are:  
 - Hyper-V Manager  
--   [Hyper-V module for Windows PowerShell](https://technet.microsoft.com/library/hh848559.aspx)  
-- Virtual Machine Connection (VMConnect)  
+- [Hyper-V module for Windows PowerShell](https://technet.microsoft.com/library/hh848559.aspx)  
+- [Virtual Machine Connection](https://technet.microsoft.com/library/dn744329.aspx) \(sometimes called VMConnect\)
 - [Windows PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
   
 ## Related technologies  
@@ -86,7 +86,7 @@ These are some technologies from Microsoft that are often used with Hyper-V:
   
 * [Failover Clustering](../failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
 * [Remote Desktop Services](../remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
-* [Virtual Machine Manager](https://technet.microsoft.com/library/mt203994)  
+* [Virtual Machine Manager](https://technet.microsoft.com/library/en-us/system-center-docs/vmm/virtual-machine-manager)  
   
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct  
   

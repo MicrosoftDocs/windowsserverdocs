@@ -9,13 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8228d1ed-0efc-4858-89df-eb2c426440f9
-author: vhorne
+author: coreyp
 ---
 # Install and Configure Basic DirectAccess
 
 >Applies To: Windows Server Technical Preview
 
-This overview provides an introduction to the configuration steps required to deploy a single DirectAccess server running Windows Server® 2016 Technical Preview, Windows Server® 2012 R2, or Windows Server® 2012with basic settings.  
+This overview provides an introduction to the configuration steps required to deploy a single DirectAccess server running Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2, or Windows Server&reg; 2012with basic settings.  
   
 -   [Step 1: Configure the DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-wizard/Step-1--Configure-the-DirectAccess-Infrastructure.md). This step includes configuring network and server settings, DNS settings and Active Directory settings.  
   

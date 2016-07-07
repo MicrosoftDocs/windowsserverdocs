@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-author: vhorne
+author: coreyp
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
 
@@ -61,9 +61,9 @@ Before you begin deploying this scenario, review this list for important require
 ### Planning steps  
 Planning is divided into two phases:  
   
-1.  Planning for the DirectAccess infrastructure—This phase describes the planning required to set up the network infrastructure before beginning the DirectAccess deployment. It includes planning the network and server topology, and the DirectAccess network location server.  
+1.  Planning for the DirectAccess infrastructure. This phase describes the planning required to set up the network infrastructure before beginning the DirectAccess deployment. It includes planning the network and server topology, and the DirectAccess network location server.  
   
-2.  Planning for the DirectAccess deployment—This phase describes the planning steps required to prepare for the DirectAccess deployment. It includes planning for DirectAccess client computers, server and client authentication requirements, VPN settings, infrastructure servers, and management and application servers.  
+2.  Planning for the DirectAccess deployment. This phase describes the planning steps required to prepare for the DirectAccess deployment. It includes planning for DirectAccess client computers, server and client authentication requirements, VPN settings, infrastructure servers, and management and application servers.  
   
 For detailed planning steps, see [Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).  
   
@@ -72,25 +72,25 @@ Deployment is divided into three phases:
   
 1.  Configuring the DirectAccess infrastructure—This phase includes configuring network and routing, configuring firewall settings if required, configuring certificates, DNS servers, Active Directory and GPO settings, and the DirectAccess network location server.  
   
-2.  Configuring DirectAccess server settings—This phase includes steps for configuring DirectAccess client computers, the DirectAccess server, infrastructure servers, management and application servers.  
+2.  Configuring DirectAccess server settings. This phase includes steps for configuring DirectAccess client computers, the DirectAccess server, infrastructure servers, management and application servers.  
   
-3.  Verifying the deployment—This phase includes steps to verify that the deployment is working as required.  
+3.  Verifying the deployment. This phase includes steps to verify that the deployment is working as required.  
   
 For detailed deployment steps, see [Install and Configure Basic DirectAccess](../../../remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-DirectAccess.md).  
   
 ## <a name="BKMK_APP"></a>Practical applications  
 Deploying a single Remote Access server provides the following:  
   
--   Ease-of-access—You can configure managed client computers running Windows 10, Windows 8.1, Windows 8, or Windows 7, as DirectAccess clients. These clients can access internal network resources via DirectAccess any time they are located on the Internet without needing to log in to a VPN connection. Client computers that are not running one of these operating systems can connect to the internal network by using traditional VPN connections.  
+-   Ease-of-access. You can configure managed client computers running Windows 10, Windows 8.1, Windows 8, or Windows 7, as DirectAccess clients. These clients can access internal network resources via DirectAccess any time they are located on the Internet without needing to log in to a VPN connection. Client computers that are not running one of these operating systems can connect to the internal network by using traditional VPN connections.  
   
--   Ease-of-management—DirectAccess client computers located on the Internet can be remotely managed by Remote Access administrators over DirectAccess, even when the client computers are not located in the internal corporate network. Client computers that do not meet corporate requirements can be remediated automatically by management servers. Both DirectAccess and VPN are managed in the same console and with the same set of wizards. Additionally, one or more Remote Access servers can be managed from a single Remote Access Management console  
+-   Ease-of-management. DirectAccess client computers located on the Internet can be remotely managed by Remote Access administrators over DirectAccess, even when the client computers are not located in the internal corporate network. Client computers that do not meet corporate requirements can be remediated automatically by management servers. Both DirectAccess and VPN are managed in the same console and with the same set of wizards. Additionally, one or more Remote Access servers can be managed from a single Remote Access Management console  
   
 ## <a name="BKMK_NEW"></a>Roles and features included in this scenario  
 The following table lists the roles and features required for the scenario:  
   
 |Role/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the Remote Access server, and the default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN. DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing. RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the Remote Access server, and the default web probe.<br />-   Windows Internal Database. Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  

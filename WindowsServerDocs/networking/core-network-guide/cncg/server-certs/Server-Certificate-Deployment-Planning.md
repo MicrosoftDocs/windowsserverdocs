@@ -33,12 +33,12 @@ Before you deploy server certificates, you must plan the following items:
 ## <a name="bkmk_basic"></a>Plan basic server configuration  
 After you install Windows Server 2016 Technical Preview on the computers that you are planning to use as your certification authority and Web server, you must rename the computer and assign and configure a static IP address for the local computer.  
   
-For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx).  
+For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
   
 ## <a name="bkmk_domain"></a>Plan domain access  
 To log on to the domain, the computer must be a domain member computer and the user account must be created in AD DS before the logon attempt. In addition, most procedures in this guide require that the user account is a member of the Enterprise Admins or Domain Admins groups in Active Directory Users and Computers, so you must log on to the CA with an account that has the appropriate group membership.  
   
-For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx).  
+For more information, see the Windows Server 2016 Technical Preview [Core Network Guide](../../../core-network-guide/Core-Network-Guide.md).  
   
 ## <a name="bkmk_virtual"></a>Plan the location and name of the virtual directory on your Web server  
 To provide access to the CRL and the CA certificate to other computers, you must store these items in a virtual directory on your Web server. In this guide, the virtual directory is located on the Web server WEB1. This folder is on the "C:" drive and is named "pki." You can locate your virtual directory on your Web server at any folder location that is appropriate for your deployment.  
@@ -96,21 +96,21 @@ Critical=Yes
 When you configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1, you need the name of your Web server and your domain name. You also need the name of the virtual directory that you create on your Web server where the certificate revocation list (CRL) and the certification authority certificate are stored.  
   
 The CDP location that you must enter during this deployment step has the format:  
-  
-`http:\/\/*DNSAlias\(CNAME\)RecordName*.*Domain*.com\/*VirtualDirectoryName*\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl.`  
-  
+      
+    `http:\/\/*DNSAlias\(CNAME\)RecordName*.*Domain*.com\/*VirtualDirectoryName*\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl.`  
+      
 For example, if your Web server is named WEB1 and your DNS alias CNAME record for the Web server is "pki," your domain is corp.contoso.com, and your virtual directory is named pki, the CDP location is:  
-  
-`http:\/\/pki.corp.contoso.com\/pki\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`  
-  
+      
+    `http:\/\/pki.corp.contoso.com\/pki\/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`  
+      
 The AIA location that you must enter has the format:  
-  
-`http:\/\/*DNSAlias\(CNAME\)RecordName*.*Domain*.com\/*VirtualDirectoryName*\/<ServerDNSName>\_<CaName><CertificateName>.crt.`  
-  
+      
+    `http:\/\/*DNSAlias\(CNAME\)RecordName*.*Domain*.com\/*VirtualDirectoryName*\/<ServerDNSName>\_<CaName><CertificateName>.crt.`  
+      
 For example, if your Web server is named WEB1 and your DNS alias CNAME record for the Web server is "pki," your domain is corp.contoso.com, and your virtual directory is named pki, the AIA location is:  
-  
-`http:\/\/pki.corp.contoso.com\/pki\/<ServerDNSName>\_<CaName><CertificateName>.crt`  
-  
+      
+    `http:\/\/pki.corp.contoso.com\/pki\/<ServerDNSName>\_<CaName><CertificateName>.crt`  
+      
 ## <a name="bkmk_copy"></a>Plan the copy operation between the CA and the Web server  
 To publish the CRL and CA certificate from the CA to the Web server virtual directory, you can run the certutil -crl command after you configure the CDP and AIA locations on the CA. Ensure that you configure the correct paths on the CA Properties **Extensions** tab before you run this command using the instructions in this guide. In addition, to copy the Enterprise CA certificate to the Web server, you must have already created the virtual directory on the Web server and configured the folder as a shared folder.  
   

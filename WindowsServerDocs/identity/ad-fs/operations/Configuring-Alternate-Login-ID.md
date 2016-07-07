@@ -1,4 +1,4 @@
----
+﻿---
 title: Configuring Alternate Login ID
 ms.custom: 
   - AD
@@ -66,7 +66,7 @@ Configure your AD FS claims provider trusts to enable alternate login ID
 
     **LookupForests** is the list of forest DNS that your users belong to.
 
-    To enable alternate login ID feature, you must configure both ‘AlternateLoginID’ and ‘LookupForests’ parameters with a non-null, valid value.
+    To enable alternate login ID feature, you must configure both -AlternateLoginID and -LookupForests parameters with a non-null, valid value.
 
     In the following example, you are enabling alternate login ID functionality such that your users with accounts in contoso.com and fabrikam.com forests can log in to AD FS-enabled applications with their "mail" attribute.
 
@@ -96,7 +96,7 @@ Configure your AD FS claims provider trusts to enable alternate login ID
 
 -   If one of the forests that is configured by the administrator is down, AD FS will continue to look up user account with alternate login ID in other forests that are configured. If AD FS server finds a unique user objects across the forests that it has searched, a user will log in successfully.
 
--   You may additionally want to customize the AD FS sign-in page to give end users some hint about the alternate login ID. You can do it by either adding the customized sign-in page description (for more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx) or customizing “Sign in with organizational account” string above username field (for more information, see [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).
+-   You may additionally want to customize the AD FS sign-in page to give end users some hint about the alternate login ID. You can do it by either adding the customized sign-in page description (for more information, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx) or customizing "Sign in with organizational account" string above username field (for more information, see [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).
 
 -   The new claim type that contains the alternate login ID value is **http:schemas.microsoft.com/ws/2013/11/alternateloginid**
 

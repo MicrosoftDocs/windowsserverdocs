@@ -22,11 +22,11 @@ This guide contains the following sections.
   
 -   [Technology overviews](#bkmk_tech)  
   
--   [Server Certificate Deployment Overview](assetId:///ca5c3e04-ae25-4590-97f3-0376a9c2a9a2)  
+-   [Server Certificate Deployment Overview](../../core-network-guide/cncg/server-certs/Server-Certificate-Deployment-Overview.md)  
   
--   [Server Certificate Deployment Planning](assetId:///7eb746e0-1046-4123-b532-77d5683ded44)  
+-   [Server Certificate Deployment Planning](../../core-network-guide/cncg/server-certs/Server-Certificate-Deployment-Planning.md)  
   
--   [Server Certificate Deployment](assetId:///1ae4384b-f4e4-41e8-bc5f-9ac41953bca4)  
+-   [Server Certificate Deployment](../../core-network-guide/cncg/server-certs/Server-Certificate-Deployment.md)  
   
 ### **Digital server certificates**  
 This guide provides instructions for using Active Directory Certificate Services (AD CS) to automatically enroll certificates to Remote Access and NPS infrastructure servers. AD CS allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.  

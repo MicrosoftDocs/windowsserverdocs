@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
-author: vhorne
+author: coreyp
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
@@ -77,7 +77,7 @@ The following table lists the roles and features that are required for this scen
   
 |Role/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess and Routing and Remote Access Services (RRAS). The Remote Access role consists of two components:<br /><br />1.  DirectAccess and RRAS VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access server role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the DirectAccess server, and the default web probe.<br />-   Windows Internal Database—Used for local accounting on the DirectAccess server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess and Routing and Remote Access Services (RRAS). The Remote Access role consists of two components:<br/><br/>1.  DirectAccess and RRAS VPN. DirectAccess and VPN are managed together in the Remote Access Management console.<br/>2.  RRAS Routing. RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access server role is dependent on the following server roles/features:<br/><br/> - Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the DirectAccess server, and the default web probe.<br/> - Windows Internal Database. Used for local accounting on the DirectAccess server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a DirectAccess server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the DirectAccess server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access graphical user interface (GUI)<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
@@ -140,7 +140,6 @@ The following table provides links to additional resources.
   
 |Content type|References|  
 |----------------|--------------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](http://technet.microsoft.com/network/bb545655.aspx)|  
 |**Deployment**|[DirectAccess Deployment Paths in Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<br /><br />[Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
 |**Tools and settings**|[Remote Access PowerShell cmdlets](http://technet.microsoft.com/library/hh918399.aspx)|  
 |**Community resources**|[DirectAccess Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<br /><br />[DirectAccess Wiki entries](http://go.microsoft.com/fwlink/?LinkId=236871)|  

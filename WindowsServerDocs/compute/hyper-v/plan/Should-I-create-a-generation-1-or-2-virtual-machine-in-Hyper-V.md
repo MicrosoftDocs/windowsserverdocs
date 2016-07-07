@@ -68,7 +68,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 | Windows Server 2012 |✔|✔|  
 |Windows Server 2008 R2|✔|✖|  
 |Windows Server 2008|✔|✖|  
-|Windows 10"|✔|✔|  
+|Windows 10|✔|✔|  
 |Windows 8.1|✔|✔|  
 |Windows 8|✔|✔|  
 |Windows 7|✔|✖|   
@@ -77,7 +77,7 @@ The following table shows which 32-bit versions of Windows you can use as a gues
   
 |32-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-|Windows 10"|✔|✖|  
+|Windows 10|✔|✖|  
 |Windows 8.1|✔|✖|  
 |Windows 8|✔|✖|  
 |Windows 7|✔|✖|  
@@ -88,9 +88,9 @@ he following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|RHEL/CentOS 7.x Series|✔|✔|  
-|RHEL/CentOS 6.x Series|✔|✖|  
-|RHEL/CentOS 5.x Series|✔|✖|  
+|RHEL/CentOS 7.x series|✔|✔|  
+|RHEL/CentOS 6.x series|✔|✖|  
+|RHEL/CentOS 5.x series|✔|✖|  
   
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
   
@@ -99,8 +99,8 @@ The following table shows which versions of Debian you can use as a guest operat
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|Debian 7.0-7.10|✔|✖|  
-|Devian 8.0-8.4|✔|✔|  
+|Debian 7.x series|✔|✖|  
+|Devian 8.x series|✔|✔|  
   
 For more information, see [Debian virtual machines on Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
   
@@ -120,8 +120,8 @@ The following table shows which versions of Red Hat Compatible Kernel Series you
   
 |Red Hat Compatible Kernel Series versions|Generation 1|Generation 2|  
 |---------------------------------------------|----------------|----------------|  
-|Oracle Linux 7.x Series|✔|✔| 
-|Oracle Linux 6.6, 6.5, and 6.4|✔|✖|  
+|Oracle Linux 7.x series|✔|✔| 
+|Oracle Linux 6.x series|✔|✖|  
   
 The following table shows which versions of Unbreakable Enterprise Kernel you can use as a guest operating system for generation 1 and generation 2 virtual machines.
   
@@ -138,10 +138,8 @@ he following table shows which versions of SUSE you can use as a guest operating
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|SUSE Linux Enterprise Server 12 SP1|✔|✔|  
-|SUSE Linux Enterprise Server 12|✔|✔|  
-|SUSE Linux Enterprise Server 11 SP4|✔|✖|  
-|SUSE Linux Enterprise Server 11 SP3|✔|✖|  
+|SUSE Linux Enterprise Server 12 series|✔|✔|  
+|SUSE Linux Enterprise Server 11 series|✔|✖|  
 |Open SUSE 12.3|✔|✖|  
   
 For more information, see [SUSE virtual machines on Hyper-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
