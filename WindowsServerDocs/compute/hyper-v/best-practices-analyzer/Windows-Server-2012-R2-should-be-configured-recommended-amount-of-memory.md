@@ -20,7 +20,7 @@ author: KBDAzure
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
@@ -34,9 +34,9 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 ## **Impact**  
 *The guest operating system and applications might not perform well. There might not be enough memory to run multiple applications at once. This impacts the following virtual machines:*  
-```  
-<list of virtual machines>  
-```  
+ 
+\<list of virtual machines>  
+ 
 ## **Resolution**  
 *Use Hyper-V Manager to increase the memory allocated to this virtual machine to at least 2 GB.*  
   
