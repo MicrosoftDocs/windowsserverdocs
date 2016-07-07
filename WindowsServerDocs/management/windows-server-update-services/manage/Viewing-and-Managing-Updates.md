@@ -129,7 +129,7 @@ You will be setting up and running synchronizations, adding computers and comput
 
     -   What computer groups to create, and how to assign computers to them (server-side or client-side targeting).
 
-    -   Which database to use for update metadata (for example, Windows� Internal Database, SQL Server).
+    -   Which database to use for update metadata (for example, Windows Internal Database, SQL Server).
 
     -   Whether updates should be synchronized automatically, and at what time.
 

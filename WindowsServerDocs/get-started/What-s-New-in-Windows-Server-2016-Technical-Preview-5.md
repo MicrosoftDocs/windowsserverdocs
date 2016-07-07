@@ -55,8 +55,9 @@ The latest version of Web Application Proxyfocuses on new features that enable p
 ##  <a name="BKMK_ManagAuto"></a>Management and Automation  
 The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server Technical Preview, including Windows PowerShell.  
   
-Windows PowerShell 5.0 includes significant new featuresâ€"including support for developing with classes, and new security featuresâ€"that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/releasenotes) for details. **Starting in Technical Preview 5**, new additions include:  
-the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.   
+Windows PowerShell 5.0 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [Windows Management Framework (WMF) 5.0 RTM Release Notes Overview](https://msdn.microsoft.com/powershell/wmf/releasenotes) for details. 
+
+**Starting in Technical Preview 5**, new additions include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.   
   
 ## <a name="BKMK_Networking"></a>Networking  
 This area addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server Technical Preview.  
