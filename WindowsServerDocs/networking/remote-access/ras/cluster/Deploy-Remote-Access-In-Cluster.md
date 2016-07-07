@@ -68,16 +68,16 @@ The following table lists the roles and features required for the scenario:
 ## <a name="BKMK_HARD"></a>Hardware requirements  
 Hardware requirements for this scenario include the following:  
   
--   At least two computers that meet the hardware requirements for [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)].  
+-   At least two computers that meet the hardware requirements for Windows Server 2012.  
   
 -   For the External Load Balancer scenario, dedicated hardware is required \(i.e. F5 BigIP\).  
   
--   In order to test the scenario, at least one computer running [!INCLUDE[win8_client_2](../Token/win8_client_2_md.md)] or [!INCLUDE[nextref_client_7](../Token/nextref_client_7_md.md)], and configured as a DirectAccess client is required.  
+-   In order to test the scenario, at least one computer running Windows 10, Windows 8, or Windows 7, and configured as a DirectAccess client is required.   
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
 There are a number of requirements for this scenario:  
   
--   Software requirements for single server deployment. For more information see [Deploy a Single Remote Access Server with Advanced Settings](assetId:///3475e527-541f-4a34-b940-18d481ac59f6).  
+-   Software requirements for single server deployment. For more information see [Deploy a Single DirectAccess Server with Advanced Settings](../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
   
 -   In addition to software requirements for a single server there are a number of cluster\-specific requirements:  
   
