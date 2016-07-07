@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
-author: vhorne
+author: coreyp
 ---
 # Step 1 Plan the DirectAccess Infrastructure
 

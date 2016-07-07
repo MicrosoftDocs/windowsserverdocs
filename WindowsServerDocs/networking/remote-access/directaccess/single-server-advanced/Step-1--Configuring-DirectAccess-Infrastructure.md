@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
-author: vhorne
+author: coreyp
 ---
 # Step 1 Configuring DirectAccess Infrastructure
 
