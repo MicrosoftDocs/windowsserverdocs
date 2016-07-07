@@ -92,13 +92,13 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
 2.  Type the following, and then press **Enter**.
 
     ```
-    Uninstall-WindowsFeature â€"Name <feature_name> -ComputerName <computer_name> -Remove
+    Uninstall-WindowsFeature -Name <feature_name> -ComputerName <computer_name> -Remove
     ```
 
     **Example:** Remote Desktop Licensing is the last remaining role service of Remote Desktop Services that is installed. The command uninstalls Remote Desktop Licensing, and then deletes feature files for the entire Remote Desktop Services role from the specified server, *contoso_1*.
 
     ```
-    Uninstall-WindowsFeature -Name RDS-Licensing â€"ComputerName contoso_1 -Remove
+    Uninstall-WindowsFeature -Name RDS-Licensing -ComputerName contoso_1 -Remove
     ```
 
     **Example:** In the following example, the command removes Active Directory Domain Services and Group Policy Management from an offline VHD. The role and feature are first uninstalled, then their feature files removed entirely from the offline VHD, *Contoso.vhd*.
@@ -109,7 +109,7 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
     > If you enter the name of a VHD file from a network share, that share must grant **Read** and **Write** permissions to the computer account of the server that you selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.
 
     ```
-    Uninstall-WindowsFeature â€"Name AD-Domain-Services,GPMC â€"VHD C:\WS2012VHDs\Contoso.vhd â€"ComputerName ContosoDC1
+    Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -VHD C:\WS2012VHDs\Contoso.vhd -ComputerName ContosoDC1
     ```
 
 ## See Also
