@@ -20,14 +20,14 @@ author: KBDAzure
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Information|  
 |**Category**|Configuration|  
   
-Note: The following sections provide details about the specific issue. Italics indicates UI text that appears in the Best Practices Analyzer tool for the specific issue.  
+In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
   
 ## **Issue**  
 *One or more virtual machines lack a highly available connection to Fibre Channel-based storage because those virtual machines are configured with a virtual Fibre Channel adapter that is connected to only one host bus adapter (HBA).*  

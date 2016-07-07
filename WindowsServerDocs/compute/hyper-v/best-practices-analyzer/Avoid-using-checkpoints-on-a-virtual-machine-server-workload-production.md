@@ -20,13 +20,15 @@ author: KBDAzure
   
 *For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Operations|  
-  
+
+In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
+
 > [!NOTE]  
 > In Windows Server 2012 R2, virtual machine snapshots were renamed to virtual machine checkpoints in Hyper-V Manager to match the terminology used in System Center Virtual Machine Management. For details, see [Checkpoints and Snapshots Overview](https://technet.microsoft.com/library/dn818483.aspx).  
   

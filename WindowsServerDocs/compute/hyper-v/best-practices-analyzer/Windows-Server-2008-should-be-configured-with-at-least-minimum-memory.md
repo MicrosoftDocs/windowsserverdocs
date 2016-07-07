@@ -18,9 +18,9 @@ author: KBDAzure
 
 [This information is preliminary and subject to change.]  
   
-*For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
@@ -37,8 +37,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 *The guest operating system on the following virtual machines might not run or might run unreliably:*  
   
-\<list of virtual machine names>  
-  
+\<list of virtual machine names>
   
 ## Resolution  
   

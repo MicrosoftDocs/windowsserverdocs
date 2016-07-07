@@ -16,9 +16,9 @@ author: KBDAzure
 
 >Applies To: Windows Server Technical Preview
 
-*For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  

@@ -18,15 +18,17 @@ author: KBDAzure
 
 [This information is preliminary and subject to change.]  
   
-*For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
-  
+
+In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
+
 ## Issue  
   
 *A virtual machine running Windows 7 is configured with less than the minimum amount of RAM, which is 512 MB.*  
