@@ -58,8 +58,8 @@ In this step, we enable the Retention Period and Discoverability resource proper
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-ADResourceProperty �"Enabled:$true �"Identity:”CN=RetentionPeriod_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com”  
-Set-ADResourceProperty �"Enabled:$true �"Identity:”CN=Discoverability_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com”  
+Set-ADResourceProperty -Enabled:$true -Identity:”CN=RetentionPeriod_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com”  
+Set-ADResourceProperty -Enabled:$true -Identity:”CN=Discoverability_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com”  
 ```  
   
 ## <a name="BKMK_Step2"></a>Step 2: Configure notifications  
@@ -83,7 +83,7 @@ In this step, we use the File Server Resource Manager console to configure the S
   
     -   In the **Default administrator recipients** box, type the email address of the administrator who should get the notification.  
   
-    -   In the **Default “From” e-mail address** box, type the email address that should be used to send the notifications.  
+    -   In the **Default "From"� e-mail address** box, type the email address that should be used to send the notifications.  
   
 6.  Click **OK**.  
   
@@ -92,7 +92,7 @@ In this step, we use the File Server Resource Manager console to configure the S
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-FsrmSetting �"SmtpServer IP address of SMTP server -FromEmailAddress “FromEmailAddress” -AdminEmailAddress “AdministratorEmailAddress”  
+Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEmailAddress"� -AdminEmailAddress "AdministratorEmailAddress"�  
 ```  
   
 ## <a name="BKMK_Step3"></a>Step 3: Create a file management task  
@@ -146,7 +146,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 $fmjexpiration = New-FSRMFmjAction -Type 'Expiration' -ExpirationFolder folder  
 $fmjNotificationAction = New-FsrmFmjNotificationAction -Type Email -MailTo "[FileOwner],[AdminEmail]"  
 $fmjNotification = New-FsrmFMJNotification -Days 10 -Action @($fmjNotificationAction)  
-$fmjCondition1 = New-FSRMFmjCondition -Property ‘Discoverability_MS’ -Condition ‘NotEqual’ �"Value “Hold”  
+$fmjCondition1 = New-FSRMFmjCondition -Property 'Discoverability_MS' -Condition 'NotEqual' -Value "Hold" 
 $fmjCondition2 = New-FSRMFmjCondition -Property 'RetentionPeriod_MS' -Condition 'Equal' -Value "Long-term"  
 $fmjCondition3 = New-FSRMFmjCondition -Property 'File.DateLastAccessed' -Condition 'Equal' -Value 3650  
 $date = get-date  
