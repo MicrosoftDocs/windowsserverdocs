@@ -110,7 +110,7 @@ The following table describes the changes in Data Deduplication functionality in
 
 |Functionality|New or Updated|Description|  
 |-----------------|------------------|---------------|  
-|[Support for Volume Sizes up to 64 TB](#BKMK_Dedup1)|Updated|Deduplication Processing Pipeline is now multithreaded and able to utilize multiple CPU’s per volume to increase optimization throughput rates on volume sizes up to 64 TB.|  
+|[Support for Volume Sizes up to 64 TB](#BKMK_Dedup1)|Updated|Deduplication Processing Pipeline is now multithreaded and able to utilize multiple CPU's per volume to increase optimization throughput rates on volume sizes up to 64 TB.|  
 |[Support for File Sizes up to 1 TB](#BKMK_Dedup2)|Updated|Deduplication of large files is vastly improved: faster optimization throughput, better performance access, and the ability to resume optimization of large files (rather than restart) after failover.|  
 |[Simplified Deduplication Configuration for Virtualized Backup Applications](#BKMK_Dedup3)|Updated|New predefined configuration for Virtualized Backup Applications |  
 |[Support for Nano server](#BKMK_Dedup4)|New |Deduplication is now supported in the Nano Server deployment option for Windows Server 2016.|  
@@ -118,7 +118,7 @@ The following table describes the changes in Data Deduplication functionality in
 ### <a name="BKMK_Dedup1"></a>Support for Volume Sizes up to 64 TB  
 **What value does this change add?**  
 
-In Windows Server 2012 R2, in order to get the best performance out of Data Deduplication, workload type must be considered when creating the volume to ensure that the Deduplication Processing Pipeline can keep up with the rate of data changes, or “churn”. Typically, this means that Deduplication in Windows Server 2012 R2 is not performant on volumes greater than 10 TB in size (or less for workloads with a high rate of data changes).  
+In Windows Server 2012 R2, in order to get the best performance out of Data Deduplication, workload type must be considered when creating the volume to ensure that the Deduplication Processing Pipeline can keep up with the rate of data changes, or "churn". Typically, this means that Deduplication in Windows Server 2012 R2 is not performant on volumes greater than 10 TB in size (or less for workloads with a high rate of data changes).  
 In Windows Server 2016, Data Deduplication performs on volumes up to 64 TB  
 
 **What works differently?**  
@@ -131,11 +131,11 @@ In  Windows Server 2012 R2 , Data Deduplication optimizes data using a single-th
 In Windows Server 2012 R2, very large files are not good candidates for Data Deduplication due to decreased performance of the Deduplication Processing Pipeline. In Windows Server 2016, Deduplication of files up to 1 TB is very performant, enabling administrators to apply deduplication savings to a larger range of workloads. For example, enabling deduplication of very large files normally associated with backup workloads.  
 
 **What works differently?**  
-In Windows Server 2016, Data Deduplication makes use of new stream map structures and other “under-the-hood” improvements to increase optimization throughput and access performance. Additionally, the Deduplication Processing Pipeline can now resume optimization progress on a file (rather than restart) after a failover. These changes add up to Deduplication on files up to 1 TB being highly performant.  
+In Windows Server 2016, Data Deduplication makes use of new stream map structures and other "under-the-hood" improvements to increase optimization throughput and access performance. Additionally, the Deduplication Processing Pipeline can now resume optimization progress on a file (rather than restart) after a failover. These changes add up to Deduplication on files up to 1 TB being highly performant.  
 
 ### <a name="BKMK_Dedup3"></a>Simplified Deduplication Configuration for Virtualized Backup Applications  
 **What value does this change add?**  
-While Deduplication for Virtualized Backup Applications is a supported scenario in Windows Server 2012 R2, it requires manually tuning the Deduplication settings. In Windows Server 2016, the configuration of Deduplication for Virtualized Backup Applications is drastically simplified by a predefined “Usage Type” option when enabling Deduplication for a volume, just like our options for General Purpose File Server and VDI.   
+While Deduplication for Virtualized Backup Applications is a supported scenario in Windows Server 2012 R2, it requires manually tuning the Deduplication settings. In Windows Server 2016, the configuration of Deduplication for Virtualized Backup Applications is drastically simplified by a predefined "Usage Type" option when enabling Deduplication for a volume, just like our options for General Purpose File Server and VDI.   
 
 ### <a name="BKMK_Dedup4"></a>Support for Nano Server  
 **What value does this change add?**  
@@ -161,12 +161,12 @@ In Windows 10 and Windows Server 2016 Technical Preview client connections to th
 This change reduces the likelihood of man-in-the-middle attacks.   
 
 **What works differently?**  
-If SMB signing and mutual authentication are unavailable, a Windows 10 or Windows Server 2016 computer won’t process domain-based Group Policy and scripts.  
+If SMB signing and mutual authentication are unavailable, a Windows 10 or Windows Server 2016 computer won't process domain-based Group Policy and scripts.  
 
 > [!NOTE]  
-> The registry values for these settings aren’t present by default, but the hardening rules still apply until overridden by Group Policy or other registry values.  
+> The registry values for these settings aren't present by default, but the hardening rules still apply until overridden by Group Policy or other registry values.  
 
-For more information on these security improvements �" also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
+For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
 
 
 ## See also  
