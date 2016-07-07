@@ -629,6 +629,7 @@
 ### [Storage Quality of Service](storage/software-defined-storage/Storage-Quality-of-Service.md)
 ### [Health Service in Windows Server 2016](storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md)
 ### [Fault Domains in Windows Server 2016 Technical Preview](storage/storage-spaces/Fault-Domains-in-Windows-Server-2016-Technical-Preview.md)
+### [Format](storage/commands/format.md)
 ## [Security and Assurance](security/Security-and-Assurance.md)
 ### [Windows Defender Overview for Windows Server Technical Preview](security/windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md)
 #### [Windows Defender Events](security/windows-defender/Windows-Defender-Events.md)
