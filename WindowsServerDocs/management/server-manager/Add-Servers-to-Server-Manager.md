@@ -84,7 +84,7 @@ You can add servers to Server Manager to manage by using any of three methods in
 4.  When you are finished adding servers, click **OK**.
 
 ### Add and manage servers in workgroups
-Although adding servers that are in workgroups to Server Manager might be successful, after they are added, the **Manageability** column of the **Servers** tile—on a role or group page that includes a workgroup server—can display **Credentials not valid** errors that occur while trying to connect to or collect data from the remote, workgroup server.
+Although adding servers that are in workgroups to Server Manager might be successful, after they are added, the **Manageability** column of the **Servers** tileï¿½on a role or group page that includes a workgroup serverï¿½can display **Credentials not valid** errors that occur while trying to connect to or collect data from the remote, workgroup server.
 
 These or similar errors can occur in the following conditions.
 
@@ -156,7 +156,7 @@ These or similar errors can occur in the following conditions.
 If you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_Remote_Troubleshooting](http://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
 
 ### Add and manage servers in clusters
-You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters—whether the cluster nodes are physical or virtual—have some unique behaviors and management limitations in Server Manager.
+You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters (whether the cluster nodes are physical or virtual) have some unique behaviors and management limitations in Server Manager.
 
 -   Both physical and virtual servers in clusters are automatically added to Server Manager when one server in the cluster is added to Server Manager. Similarly, when you remove a clustered server from Server Manager, you are prompted to remove other servers in the cluster.
 
