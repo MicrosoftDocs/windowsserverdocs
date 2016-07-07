@@ -64,23 +64,23 @@ The following table shows which 64-bit versions of Windows you can use as a gues
   
 |64-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-| Windows Server 2012 R2 |✔|✔|  
-| Windows Server 2012 |✔|✔|  
-|Windows Server 2008 R2|✔|✖|  
-|Windows Server 2008|✔|✖|  
-|Windows 10|✔|✔|  
-|Windows 8.1|✔|✔|  
-|Windows 8|✔|✔|  
-|Windows 7|✔|✖|   
+| Windows Server 2012 R2 |&#10004;|&#10004;|  
+| Windows Server 2012 |&#10004;|&#10004;|  
+|Windows Server 2008 R2|&#10004;| &#10006;|  
+|Windows Server 2008|&#10004;| &#10006;|  
+|Windows 10|&#10004;|&#10004;|  
+|Windows 8.1|&#10004;|&#10004;|  
+|Windows 8|&#10004;|&#10004;|  
+|Windows 7|&#10004;| &#10006;|   
   
 The following table shows which 32-bit versions of Windows you can use as a guest operating system for generation 1 and generation 2 virtual machines. 
   
 |32-bit versions of Windows|Generation 1|Generation 2|  
 |-------------------------------|----------------|----------------|  
-|Windows 10|✔|✖|  
-|Windows 8.1|✔|✖|  
-|Windows 8|✔|✖|  
-|Windows 7|✔|✖|  
+|Windows 10|&#10004;| &#10006;|  
+|Windows 8.1|&#10004;| &#10006;|  
+|Windows 8|&#10004;| &#10006;|  
+|Windows 7|&#10004;| &#10006;|  
   
   
 ### <a name="BKMK_CentOS"></a>CentOS and Red Hat Enterprise Linux guest operating system support  
@@ -88,9 +88,9 @@ he following table shows which versions of Red Hat Enterprise Linux \(RHEL\) and
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|RHEL/CentOS 7.x series|✔|✔|  
-|RHEL/CentOS 6.x series|✔|✖|  
-|RHEL/CentOS 5.x series|✔|✖|  
+|RHEL/CentOS 7.x series|&#10004;|&#10004;|  
+|RHEL/CentOS 6.x series|&#10004;| &#10006;|  
+|RHEL/CentOS 5.x series|&#10004;| &#10006;|  
   
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
   
@@ -99,8 +99,8 @@ The following table shows which versions of Debian you can use as a guest operat
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|Debian 7.x series|✔|✖|  
-|Devian 8.x series|✔|✔|  
+|Debian 7.x series|&#10004;| &#10006;|  
+|Devian 8.x series|&#10004;|&#10004;|  
   
 For more information, see [Debian virtual machines on Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
   
@@ -109,9 +109,9 @@ The following table shows which versions of FreeBSD you can use as a guest opera
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|FreeBSD 10 and 10.1|✔|✖|  
-|FreeBSD 9.1 and 9.3|✔|✖|  
-|FreeBSD 8.4|✔|✖|  
+|FreeBSD 10 and 10.1|&#10004;| &#10006;|  
+|FreeBSD 9.1 and 9.3|&#10004;| &#10006;|  
+|FreeBSD 8.4|&#10004;| &#10006;|  
   
 For more information, see [FreeBSD virtual machines on Hyper-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
   
@@ -120,16 +120,16 @@ The following table shows which versions of Red Hat Compatible Kernel Series you
   
 |Red Hat Compatible Kernel Series versions|Generation 1|Generation 2|  
 |---------------------------------------------|----------------|----------------|  
-|Oracle Linux 7.x series|✔|✔| 
-|Oracle Linux 6.x series|✔|✖|  
+|Oracle Linux 7.x series|&#10004;|&#10004;| 
+|Oracle Linux 6.x series|&#10004;| &#10006;|  
   
 The following table shows which versions of Unbreakable Enterprise Kernel you can use as a guest operating system for generation 1 and generation 2 virtual machines.
   
 |Unbreakable Enterprise Kernel (UEK) versions|Generation 1|Generation 2|  
 |--------------------------------------------------|----------------|----------------|  
-|Oracle Linux UEK R3 QU3|✔|✖|  
-|Oracle Linux UEK R3 QU2|✔|✖|  
-|Oracle Linux UEK R3 QU1|✔|✖|  
+|Oracle Linux UEK R3 QU3|&#10004;| &#10006;|  
+|Oracle Linux UEK R3 QU2|&#10004;| &#10006;|  
+|Oracle Linux UEK R3 QU1|&#10004;| &#10006;|  
   
 For more information, see [Oracle Linux virtual machines on Hyper-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
   
@@ -138,9 +138,9 @@ he following table shows which versions of SUSE you can use as a guest operating
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|SUSE Linux Enterprise Server 12 series|✔|✔|  
-|SUSE Linux Enterprise Server 11 series|✔|✖|  
-|Open SUSE 12.3|✔|✖|  
+|SUSE Linux Enterprise Server 12 series|&#10004;|&#10004;|  
+|SUSE Linux Enterprise Server 11 series|&#10004;| &#10006;|  
+|Open SUSE 12.3|&#10004;| &#10006;|  
   
 For more information, see [SUSE virtual machines on Hyper-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
   
@@ -149,8 +149,8 @@ The following table shows which versions of Ubuntu you can use as a guest operat
   
 |Operating system versions|Generation 1|Generation 2|  
 |-----------------------------|----------------|----------------|  
-|Ubuntu 14.04 and later versions|✔|✔|  
-|Ubuntu 12.04|✔|✖|  
+|Ubuntu 14.04 and later versions|&#10004;|&#10004;|  
+|Ubuntu 12.04|&#10004;| &#10006;|  
   
 For more information, see [Ubuntu virtual machines on Hyper-V](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md).  
   
@@ -159,11 +159,11 @@ The following table shows which boot methods are supported by generation 1 and g
   
 |Boot method|Generation 1|Generation 2|  
 |---------------|----------------|----------------|  
-|PXE boot by using a standard network adapter|✖|✔|  
-|PXE boot by using a legacy network adapter|✔|✖|  
-|Boot from a SCSI virtual hard disk (.VHDX) or virtual DVD (.ISO)|✖|✔|  
-|Boot from IDE Controller virtual hard disk (.VHD) or virtual DVD (.ISO)|✔|✖|  
-|Boot from floppy (.VFD)|✔|✖|  
+|PXE boot by using a standard network adapter| &#10006;|&#10004;|  
+|PXE boot by using a legacy network adapter|&#10004;| &#10006;|  
+|Boot from a SCSI virtual hard disk (.VHDX) or virtual DVD (.ISO)| &#10006;|&#10004;|  
+|Boot from IDE Controller virtual hard disk (.VHD) or virtual DVD (.ISO)|&#10004;| &#10006;|  
+|Boot from floppy (.VFD)|&#10004;| &#10006;|  
   
 ## <a name="BKMK_Advantages"></a>What are the advantages of using generation 2 virtual machines?  
 Here are some of the advantages you get when you use a generation 2 virtual machine:  

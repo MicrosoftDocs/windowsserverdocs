@@ -54,7 +54,7 @@ To manage servers that are running  Windows Server 2008 R2  or  Windows Server 2
 
 -   [.NET Framework 4](http://www.microsoft.com/download/en/details.aspx?id=17718)
 
--   [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008  and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  or  Windows Server 2008 R2  have a manageability status of **Not accessible â€" Verify earlier versions run Windows Management Framework 3.0**.
+-   [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/p/?LinkID=229019) The Windows Management Framework 3.0 download package updates Windows Management Instrumentation (WMI) providers on  Windows Server 2008  and  Windows Server 2008 R2 . The updated WMI providers let Server Manager collect information about roles and features that are installed on the managed servers. Until the update is applied, servers that are running  Windows Server 2008  or  Windows Server 2008 R2  have a manageability status of **Not accessible - Verify earlier versions run Windows Management Framework 3.0**.
 
 -   The performance update associated with [Knowledge Base article 2682011](http://go.microsoft.com/fwlink/p/?LinkID=245487) allows Server Manager to collect performance data from  Windows Server 2008 and  Windows Server 2008 R2.
 

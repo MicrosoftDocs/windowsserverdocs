@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
 ---
-# Run Best Practices Analyzer Scans and Manage Scan Results_1
+# Run Best Practices Analyzer Scans and Manage Scan Results
 
 >Applies To: Windows Server 2016 Technical Preview
 
@@ -244,11 +244,11 @@ To view and manage scan results by using Windows PowerShell cmdlets, see the fol
 
     `Get-BPAResult <Model ID>`
 
-    **Example:**`Get-BPAResult Microsoft/Windows/DNSServer,Microsoft/Windows/FileServices`
+    **Example:** `Get-BPAResult Microsoft/Windows/DNSServer,Microsoft/Windows/FileServices`
 
     If you scanned a submodel of a model, such as a role service, get the results for only that submodel by including the submodel ID in the cmdlet.
 
-    **Example:**`Get-BPAResult Microsoft/Windows/FileServices â€"SubmodelID FSRM`
+    **Example:** `Get-BPAResult Microsoft/Windows/FileServices -SubmodelID FSRM`
 
 #### <a name="BKMK_formats"></a>To view or save BPA results from Windows PowerShell sessions in different formats
 
