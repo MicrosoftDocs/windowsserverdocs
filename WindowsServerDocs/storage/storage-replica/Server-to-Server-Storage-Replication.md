@@ -84,7 +84,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
         ```  
         $Servers = 'SR-SRV05','SR-SRV06'  
 
-        $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,FS-FileServer -IncludeManagementTools -restart }  
+        $Servers | ForEach { Install-WindowsFeature –ComputerName $_ –Name Storage-Replica,FS-FileServer –IncludeManagementTools -restart }  
         ```  
 
         For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](http://technet.microsoft.co/library/hh831809.aspx)  
