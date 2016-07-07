@@ -20,14 +20,14 @@ author: KBDAzure
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Warning|  
 |**Category**|Configuration|  
   
-Note: The following sections provide details about the specific issue. Italics indicates UI text that appears in the Best Practices Analyzer tool for the specific issue.  
+In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
   
 ## **Issue**  
 *A virtual machine running Windows Server 2016 Technical Preview is configured with less than the recommended amount of RAM, which is 1 GB.*  
@@ -35,7 +35,7 @@ Note: The following sections provide details about the specific issue. Italics i
 ## **Impact**  
 *The guest operating system and applications might not perform well. There might not be enough memory to run multiple applications at once. This impacts the following virtual machines:*  
   
-*<list of virtual machines>*  
+\<list of virtual machines> 
   
 ## **Resolution**  
 *Use Hyper-V Manager to increase the memory allocated to this virtual machine to at least 1 GB.*  
