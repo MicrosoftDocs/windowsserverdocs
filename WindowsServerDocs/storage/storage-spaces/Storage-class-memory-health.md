@@ -31,12 +31,9 @@ If you aren't familiar with Windows’ support for storage-class memory devices,
 
 JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows with native drivers, starting in Windows Server 2016 and Windows 10 Anniversary Edition. While these devices behave similar to other disks (HDDs and SSDs), there are some differences.
 
-For example, you can't use your system BIOS to combine two or more storage-class memory devices into an interleaved set or RAID. Windows doesn't support interleaved sets of NVDIMM-Ns — Windows can't correctly identify individual NVDIMMs in the set and identify a particular device that has failed or caused an error.
+All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used and how long and heavily it is used.
 
-All other conditions here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used and how long and heavily it is used.
-
-The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space, either
-in a stand-alone server or in a Storage Spaces Direct cluster. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](http://msdn.microsoft.com/library/mt650885.aspx).
+The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](http://msdn.microsoft.com/library/mt650885.aspx).
 
 ## Checking the health of storage-class memory
 To query the health of storage-class memory, use the following commands in a Windows PowerShell session.
@@ -68,7 +65,8 @@ The following table lists some info about this condition.
 ||Description|
 |---|---|
 |Likely condition|NVDIMM-N Warning Threshold breached|
-|General behavior|NVDIMM-N devices track various thresholds, such as temperature, NVM lifetime, and/or energy source lifetime. When one of those thresholds is exceeded, the operating system is notified.|
+|Root Cause|NVDIMM-N devices track various thresholds, such as temperature, NVM lifetime, and/or energy source lifetime. When one of those thresholds is exceeded, the operating system is notified.|
+|General behavior|Device remains fully operational. This is a warning, not an error.|
 |Storage Spaces behavior|Device remains fully operational. This is a warning, not an error.|
 |More info|OperationalStatus field of the PhysicalDisk object. EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |What to do|Depending on the warning threshold breached, it may be prudent to consider replacing the entire, or certain parts of the NVDIMM-N. For example, if the NVM lifetime threshold is breached, replacing the NVDIMM-N may make sense.|
@@ -87,28 +85,33 @@ The following table lists some info about this condition.
 ||Description|
 |---|---|
 |Likely condition|Loss of Persistence / Backup Power|
-|Cause|NVDIMM-N devices rely on a back-up power source for their persistence – usually a battery or super-cap. If this back-up power source is unavailable or the device cannot perform a backup for any reason (Controller/Flash Error), data is at risk and Windows will prevent any further writes to the affected devices. Reads are still possible to evacuate data.|
+|Root Cause|NVDIMM-N devices rely on a back-up power source for their persistence – usually a battery or super-cap. If this back-up power source is unavailable or the device cannot perform a backup for any reason (Controller/Flash Error), data is at risk and Windows will prevent any further writes to the affected devices. Reads are still possible to evacuate data.|
 |General behavior|The NTFS volume will be dismounted.<br>The PhysicalDisk Health Status field will show “Unhealthy” for all affected NVDIMM-N devices.|
 |Storage Spaces behavior|Storage Space will remain operational as long as only one NVDIMM-N is affected. If multiple devices are affected, writes to the Storage Space will fail. <br>The PhysicalDisk Health Status field will show “Unhealthy” for all affected NVDIMM-N devices.|
 |More info|OperationalStatus field of the PhysicalDisk object.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
-|What to do|We recommended backing-up the affected NVDIMM-N’s data. To gain read access, you can manually bring the disk online (it will surface as a read-only NTFS volume).<br><br>To fully clear this condition, the root cause must be resolved (i.e. service power supply or replace NVDIMM-N, depending on issue) and the volume on the NVDIMM-N must be taken offline and brought online again. After the hardware issue is fixed, restart Windows to clear the read-only condition.<br><br>To make the NVDIMM-N usable in Storage Spaces again, use the **Reset-PhysicalDisk** cmdlet, which re-integrates the device and starts the repair process.|
+|What to do|We recommended backing-up the affected NVDIMM-N’s data. To gain read access, you can manually bring the disk online (it will surface as a read-only NTFS volume).<br><br>To fully clear this condition, the root cause must be resolved (i.e. service power supply or replace NVDIMM-N, depending on issue) and the volume on the NVDIMM-N must either be taken offline and brought online again, or the system must be rebooted.<br><br>To make the NVDIMM-N usable in Storage Spaces again, use the **Reset-PhysicalDisk** cmdlet, which re-integrates the device and starts the repair process.|
 
-## NVDIMM-N is shown with a capacity of ‘0’ Bytes
+## NVDIMM-N is shown with a capacity of ‘0’ Bytes or as a "Generic Physical Disk"
 
-This condition is when a storage-class memory device is shown with a capacity of 0 bytes or shows as uninitialized.
+This condition is when a storage-class memory device is shown with a capacity of 0 bytes and cannot be initialized, or is exposed as a "Generic Physical Disk" object with an Operational Status of **Lost Communication**, as shown in this example output:
+
+|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
+|---|---|---|---|
+|802c-01-1602-117cb5fc|Healthy|OK||
+||Warning|Lost Communication||
 
 The following table lists some info about this condition.
 
 ||Description|
 |---|---|
 |Likely condition|BIOS Did Not Expose NVDIMM-N to OS|
-|Cause|NVDIMM-N devices are DRAM based. When a corrupt DRAM address is referenced, most CPUs will initiate a machine check and restart the server. Some server platforms then un-map the NVDIMM, preventing the OS from accessing it and potentially causing another machine check. This may also occur if the BIOS detects that the NVDIMM-N has failed and needs to be replaced.|
+|Root Cause|NVDIMM-N devices are DRAM based. When a corrupt DRAM address is referenced, most CPUs will initiate a machine check and restart the server. Some server platforms then un-map the NVDIMM, preventing the OS from accessing it and potentially causing another machine check. This may also occur if the BIOS detects that the NVDIMM-N has failed and needs to be replaced.|
 |General behavior|NVDIMM-N is shown as uninitialized, with a capacity of 0 bytes and cannot be read or written.|
-|Storage Spaces behavior|Storage Space remains operational (provided only 1 NVDIMM-N is affected).<br>NVDIMM-N PhysicalDisk object is shown with a Health Status of Warning|
+|Storage Spaces behavior|Storage Space remains operational (provided only 1 NVDIMM-N is affected).<br>NVDIMM-N PhysicalDisk object is shown with a Health Status of Warning and as a "General Physical Disk"|
 |More info|OperationalStatus field of the PhysicalDisk object. <br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
-|What to do|The NVDIMM-N device must be replaced or sanitized, such that the server platform exposes it to the host OS again. Should the device not re-surface after it was sanitized, disabling and re-enabling it in Device Manager should solve the issue.|
+|What to do|The NVDIMM-N device must be replaced or sanitized, such that the server platform exposes it to the host OS again. Replacement of the device is recommended, as additional uncorrectable errors could occur. Adding a replacement device to a storage spaces configuration can be achieved with the **Add-Physicaldisk** cmdlet.|
 
-## NVDIMM-N is shown as RAW or an additional NVDIMM-N PhysicalDisk is shown
+## NVDIMM-N is shown as a RAW or empty disk after a reboot
 
 This condition is when you check the health of a storage-class memory device and see a Health Status of **Unhealthy** and Operational Status of **Unrecognized Metadata**, as shown in this example output:
 
@@ -122,28 +125,16 @@ The following table lists some info about this condition.
 ||Description|
 |---|---|
 |Likely condition|Backup/Restore Failure|
-|Cause|A failure in the backup or restore procedure will likely result in all data on the NVDIMM-N to be lost. When the operating system loads, it will appear as a brand new NVDIMM-N without a partition or file system and surface as RAW, meaning it doesn't have a file system.|
+|Root Cause|A failure in the backup or restore procedure will likely result in all data on the NVDIMM-N to be lost. When the operating system loads, it will appear as a brand new NVDIMM-N without a partition or file system and surface as RAW, meaning it doesn't have a file system.|
 |General behavior|NVDIMM-N will be in read-only mode. Explicit user action is needed to begin using it again.|
 |Storage Spaces behavior|Storage Spaces remains operational if only one NVDIMM is affected).<br>NVDIMM-N physical disk object will be shown with the Health Status “Unhealthy” and is not used by Storage Spaces.|
 |More info|OperationalStatus field of the PhysicalDisk object.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
 |What to do|If the user doesn't want to replace the affected device, they can use the **Reset-PhysicalDisk** cmdlet to clear the read-only condition on the affected NVDIMM-N. In Storage Spaces environments this will also attempt to re-integrate the NVDIMM-N into Storage Space and start the repair process.|
 
-## Condition template for authoring
+## Interleaved Sets
 
-This condition is when you check the health of a storage-class memory device and see <>, as shown in this example output:
+Interleaved sets can often be created in a platform's BIOS to make multiple NVDIMM-N devices appear as a single device to the host operating system.
 
-|SerialNumber|HealthStatus|OperationalStatus|OperationalDetails|
-|---|---|---|---|
-|802c-01-1602-117cb5fc|Healthy|OK||
-|802c-01-1602-117cb64f|Warning|Predictive Failure||
+Windows Server 2016 and Windows 10 Anniversary Edition do not support interleaved sets of NVDIMM-Ns.
 
-The following table lists some info about this condition.
-
-||Description|
-|---|---|
-|Cause||
-|Likely condition||
-|General behavior||
-|Storage Spaces behavior||
-|More info||
-|What to do||
+At the time of this writing, there is no mechanism for the host operating system to correctly identify individual NVDIMM-Ns in such a set and clearly communicate to the user which particular device may have caused an error or needs to be serviced.
