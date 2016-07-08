@@ -42,9 +42,7 @@ in a stand-alone server or in a Storage Spaces Direct cluster. To set up such a 
 To query the health of storage-class memory, use the following commands in a Windows PowerShell session.
 
 ```
-PS C:\> Get-PhysicalDisk | where BusType -eq “SCM”
-| select SerialNumber, HealthStatus, OperationalStatus,
-OperationalDetails
+PS C:\> Get-PhysicalDisk | where BusType -eq “SCM” | select SerialNumber, HealthStatus, OperationalStatus, OperationalDetails
 ```
 
 Doing so yields this example output:
