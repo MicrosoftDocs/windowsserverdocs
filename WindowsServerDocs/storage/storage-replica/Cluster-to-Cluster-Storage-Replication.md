@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cluster to Cluster Storage Replication
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -106,7 +106,6 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The data volume should be no larger than 10TB (for a first test, we recommend no more than 1TB, in order to lower initial replication sync times).  
     > -   The log volume must be at least 8GB and may need to be larger based on log requirements.  
 
     -   **For JBOD enclosures:**  
