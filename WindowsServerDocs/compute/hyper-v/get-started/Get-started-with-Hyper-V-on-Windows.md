@@ -18,7 +18,7 @@ author: cwatsonmsft
 
   
   
-Use the following resources to set up and try out Hyper-V on the Nano Server, Server Core or GUI installation option of Windows Server 2016 Technical Preview. But before you install anything, check the  [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).    
+Use the following resources to set up and try out Hyper-V on the Nano Server, Server Core or GUI installation option of Windows Server 2016 Technical Preview. But before you install anything, check the  [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md).    
 -   [Download and install Windows Server 2016 Technical Preview](http://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview)  
       
 **To use Nano Server as a virtual machine host:**  
@@ -26,7 +26,7 @@ Use the following resources to set up and try out Hyper-V on the Nano Server, Se
 -   [Using Hyper-V on Nano Server](../../nano-server/Getting-Started-with-Nano-Server.md#BKMK_HyperV)  
   
 **To use the Server Core or GUI installation option of  Windows Server 2016 Technical Preview as a virtual machine host:**  
--   [Install the Hyper-V role on Windows Server Technical Preview](Install-the-Hyper-V-role-on-Windows-Server-Technical-Preview.md)  
+-   [Install the Hyper-V role on Windows Server Technical Preview](Install-the-Hyper-V-role-on-Windows-Server.md)  
 -   [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md)  
 -   [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)  
   

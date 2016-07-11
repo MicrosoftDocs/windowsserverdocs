@@ -59,7 +59,7 @@ In this article,
 4.  Use the [New-VM](https://technet.microsoft.com/library/hh848537.aspx) cmdlet to create the  virtual machine.  See the following examples.  
 
     > [!NOTE]  
-    > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 Technical Preview isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions).  
+    > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](https://technet.microsoft.com/library/hh848537.aspx) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 Technical Preview isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#BKMK_SupportedConfigVersions).  
 
     - **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, you can use the following command where,  
         -   **-Name** is the name that you provide for the virtual machine that you're creating.  
@@ -125,7 +125,7 @@ The following table lists the options you can pick when you create a virtual mac
 
 - [New-VM](https://technet.microsoft.com/library/hh848537.aspx)  
 
-- [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md#BKMK_SupportedConfigVersions)  
+- [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#BKMK_SupportedConfigVersions)  
 
 -   [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)  
 
