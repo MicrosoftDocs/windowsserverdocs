@@ -107,5 +107,5 @@ This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt
 
 -   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](storage-spaces-direct-windows-server-2016.md)  
 

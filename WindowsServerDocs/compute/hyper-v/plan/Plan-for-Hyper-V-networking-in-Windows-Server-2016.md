@@ -57,7 +57,7 @@ Some features rely on specific networking configurations or do better under cert
   
 **Live migration** - Use performance options to reduce network and CPU usage and the time it takes to  complete a live migration. For instructions, see [Set up hosts for live migration without Failover Clustering](https://technet.microsoft.com/library/mt708952.aspx).  
   
-**Storage Spaces Direct** - This feature relies on the SMB3.0 network protocol and RDMA. For details, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../../../storage/storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md).  
+**Storage Spaces Direct** - This feature relies on the SMB3.0 network protocol and RDMA. For details, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../../../storage/storage-spaces/storage-spaces-direct-windows-server-2016.md).  
   
 
 
