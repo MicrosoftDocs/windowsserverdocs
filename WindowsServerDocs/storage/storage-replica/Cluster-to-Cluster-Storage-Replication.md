@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cluster to Cluster Storage Replication
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -90,7 +90,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
         ```  
         $Servers = 'SR-SRV01','SR-SRV02','SR-SRV03','SR-SRV04'  
 
-        $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,Failover-Clustering,FS-FileServer -IncludeManagementTools -restart }  
+        $Servers | ForEach { Install-WindowsFeature –ComputerName $_ –Name Storage-Replica,Failover-Clustering,FS-FileServer –IncludeManagementTools -restart }  
         ```  
 
         For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](http://technet.microsoft.com/library/hh831809.aspx)  
@@ -106,7 +106,6 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log disks must have the same sector sizes.  
     > -   The log volumes should use flash-based storage, such as SSD.  
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.  
-    > -   The data volume should be no larger than 10TB (for a first test, we recommend no more than 1TB, in order to lower initial replication sync times).  
     > -   The log volume must be at least 8GB and may need to be larger based on log requirements.  
 
     -   **For JBOD enclosures:**  
@@ -145,15 +144,15 @@ For example, to validate two of the proposed stretch cluster nodes that each hav
 
     8.  Now that you have mounted all your storage with drive letters and evaluate the cluster with `Test-SRTopology`.  
 
-     For example:  
+        For example:  
 
-        MD c:\temp  
+            MD c:\temp  
 
-        Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
+            Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
 
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
-      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`  
+      > `Diskspd.exe -c1g –d300 -W5 -C5 -b8k -t2 -o2 -r –w5 –h d:\test.dat`  
 
 11. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
@@ -208,7 +207,7 @@ You will now create two normal failover clusters. After configuration, validatio
     > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
-    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
+    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
 
 4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
 
@@ -218,13 +217,13 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
 1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
 
     ```  
-    Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
+    Grant-SRAccess -ComputerName SR-SRV01 –Cluster SR-SRVCLUSB  
     ```  
 
 2.  Grant the second cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the second cluster, or remotely.  
 
     ```  
-    Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
+    Grant-SRAccess -ComputerName SR-SRV03 –Cluster SR-SRVCLUSA  
     ```  
 
 3.  Configure the cluster-to-cluster replication, specifying the source and destination disks, the source and destination logs, the source and destination cluster names, and the log size. You can perform this command locally on the server or using a remote management computer.  

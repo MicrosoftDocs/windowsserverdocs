@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This topic provides an overview of the Core Network Guide for Windows Server® 2016 Technical Preview, and contains the following sections.  
+This topic provides an overview of the Core Network Guide for Windows Server&reg; 2016 Technical Preview, and contains the following sections.  
   
 -   [Introduction to the Windows Server Core Network](#bkmk_intro)  
   
@@ -26,7 +26,7 @@ A core network is a collection of network hardware, devices, and software that p
   
 A Windows Server core network provides you with many benefits, including the following.  
   
--   Core protocols for network connectivity between computers and other Transmission Control Protocol/Internet Protocol (TCP/IP) compatible devices. TCP/IP is a suite of standard protocols for connecting computers and building networks. TCP/IP is network protocol software provided with Microsoft® Windows® operating systems that implements and supports the TCP/IP protocol suite.  
+-   Core protocols for network connectivity between computers and other Transmission Control Protocol/Internet Protocol (TCP/IP) compatible devices. TCP/IP is a suite of standard protocols for connecting computers and building networks. TCP/IP is network protocol software provided with Microsoft&reg; Windows&reg; operating systems that implements and supports the TCP/IP protocol suite.  
   
 -   Dynamic Host Configuration Protocol (DHCP) server automatic IP addressing. Manual configuration of IP addresses on all computers on your network is time-consuming and less flexible than dynamically providing computers and other devices with IP address leases from a DHCP server.  
   
@@ -41,7 +41,7 @@ A Windows Server core network provides you with many benefits, including the fol
 A core network also allows you to scale your network as your organization grows and IT requirements change. For example, with a core network you can add domains, IP subnets, remote access services, wireless services, and other features and server roles provided by Windows Server 2016 Technical Preview.  
   
 ## <a name="bkmk_core"></a>Core Network Guide for Windows Server 2016 Technical Preview  
-The Windows Server 2016 Technical Preview Core Network Guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory® domain in a new forest. Using this guide, you can deploy computers configured with the following Windows server components:  
+The Windows Server 2016 Technical Preview Core Network Guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory&reg; domain in a new forest. Using this guide, you can deploy computers configured with the following Windows server components:  
   
 -   The Active Directory Domain Services (AD DS) server role  
   

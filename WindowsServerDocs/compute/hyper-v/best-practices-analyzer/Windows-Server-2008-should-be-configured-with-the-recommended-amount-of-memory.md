@@ -16,9 +16,9 @@ author: KBDAzure
 
 >Applies To: Windows Server Technical Preview
 
-For more information about best practices and scans, see  [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
@@ -34,10 +34,8 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Impact  
   
 *The guest operating system and applications might not perform well. There might not be enough memory to run multiple applications at once. This impacts the following virtual machines:*  
-  
    
 \<list of virtual machine names>  
-  
   
 ## Resolution  
   

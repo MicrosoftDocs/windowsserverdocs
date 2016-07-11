@@ -1,4 +1,4 @@
-﻿---
+---
 title: AD FS user sign-in customization
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -84,7 +84,7 @@ For information on customizing the update password page see [Customizing the AD 
 ## Customizing and Alternate IDs  
 Users can sign in to Active Directory Federation Services (AD FS)-enabled applications using any form of user identifier that is accepted by Active Directory Domain Services (AD DS). These include User Principal Names (UPNs) (johndoe@contoso.com) or domain qualified sam-account names (contoso\johndoe or contoso.com\johndoe).  For more information on this see [Configuring Alternate Login ID.](Configuring-Alternate-Login-ID.md)  
   
-You may additionally want to customize the AD FS sign-in page to give end users some hint about the alternate login ID. You can do it by adding the customized sign-in page description for more information see [Customizing the AD FS Sign-in Pages.](Chttps://technet.microsoft.com/library/dn280950.aspx)   
+You may additionally want to customize the AD FS sign-in page to give end users some hint about the alternate login ID. You can do it by adding the customized sign-in page description for more information see [Customizing the AD FS Sign-in Pages.](https://technet.microsoft.com/library/dn280950.aspx)   
   
 You can also do this by customizing "Sign in with organizational account" string above username field.  For information on this see [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).  
 
