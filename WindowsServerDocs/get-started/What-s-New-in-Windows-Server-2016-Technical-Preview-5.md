@@ -26,7 +26,7 @@ The Compute area includes virtualization products and features for the IT profes
 **New for Technical Preview 5**: Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.  
   
 ### Hyper-V  
--   [What's new in Hyper-V on Windows Server 2016 Technical Preview](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016 Technical Preview, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server Technical Preview.  
+-   [What's new in Hyper-V on Windows Server 2016 Technical Preview](../compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016 Technical Preview, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server Technical Preview.  
   
 -   [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/containers_welcome):  **new for Technical Preview 5**, Windows Server 2016 Technical Preview container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](http://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).  
   
