@@ -19,7 +19,7 @@ Windows Server 2016 Technical Preview introduces Storage Spaces Direct, which en
 
 With Windows Server 2016 Technical Preview Storage Spaces Direct, you can now build HA Storage Systems using storage nodes with only local storage, which is either disk devices that are internal to each storage node (Figure 1). This eliminates the need for a shared SAS fabric and its complexities, but also enables using devices such as SATA solid state drives, which can help further reduce cost or NVMe solid state devices to improve performance.  
 
-![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectwithInternalDisks.png)  
+![](media/storage-spaces-direct-windows-server-2016/StorageSpacesDirectwithInternalDisks.png)  
 
 **FIGURE 1: Storage Spaces with internal disks**  
 
@@ -33,12 +33,12 @@ This topic provides an overview of Storage Spaces Direct and the scenarios that 
 ## <a name="BKMK_S2DOverview"></a>Storage Spaces Direct Overview  
 Storage Spaces Direct seamlessly integrates with the features you know today that make up the Windows Server software defined storage stack, including Scale-Out File Server, Clustered Shared Volume File System (CSVFS), Storage Spaces and Failover Clustering. Figure 3 below illustrates the "Storage Spaces Direct" stack:  
 
-![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectStack.png)  
+![](media/storage-spaces-direct-windows-server-2016/StorageSpacesDirectStack.png)  
 
 
 **FIGURE 2: Storage Spaces Direct stack**  
 
-![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectHyperconverged.png)  
+![](media/storage-spaces-direct-windows-server-2016/StorageSpacesDirectHyperconverged.png)  
 
 **FIGURE 3: Hyperconverged Storage Spaces Direct stack - same cluster configured for Storage Spaces Direct  and the hosting of virtual machines**  
 
@@ -68,7 +68,7 @@ There are two targeted deployment scenarios for Windows Server 2016 Technical Pr
 
 The **disaggregated** deployment scenario has the Hyper-V servers (compute component) in a separate cluster from the Storage Spaces Direct servers (storage component).  Virtual machines are configured to store their files on the Scale-Out File Server which is accessed through the network using the SMB3 protocol. This allows for scaling Hyper-V clusters (compute) and Scale Out File Server cluster (storage) independently. For example, the compute nodes are nearing capacity for the number of VMs that they can host but the storage has excess capacity (both disk and IOPS), more compute nodes can be added without adding additional storage nodes. Figure 4 illustrates the disaggregated deployment scenario.  
 
-![](media/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview/StorageSpacesDirectDisaggregated.png)  
+![](media/storage-spaces-direct-windows-server-2016/StorageSpacesDirectDisaggregated.png)  
 
 **FIGURE 4:  Disaggregated deployment of Storage Spaces Direct**  
 
@@ -77,7 +77,7 @@ The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storag
 
 ## Related Topics  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](storage-spaces-direct-windows-server-2016.md)  
 
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 
@@ -94,9 +94,9 @@ The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storag
 
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
 
--   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
+-   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/whats-new-failover-clustering-windows-server.md)  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/storage-replica-windows-server-2016.md)  
 
 -   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)
 

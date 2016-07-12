@@ -54,7 +54,7 @@ Following are the new or improved SDN infrastructure technologies.
   
 -   **Standardized Protocols**. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).  
   
--   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
+-   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/Software-Defined-Networking--SDN-.md).  
   
@@ -115,12 +115,12 @@ For more information, see [What's New in DNS Server in Windows Server Technical 
 ## <a name="bkmk_GRE"></a>GRE Tunneling  
 RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) tunnels for site to site connections and M+N redundancy of gateways. GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork.  
   
-For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
+For more information, see [GRE Tunneling in Windows Server Technical Preview](remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 ## <a name="HNV"></a>Hyper-V Network Virtualization  
 Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.  
   
-For more information, see [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md)  
+For more information, see [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
   
 ## <a name="bkmk_ipam"></a>IPAM  
 IPAM provides highly customizable administrative and monitoring capabilities for the IP address and DNS infrastructure on an organization network. Using IPAM, you can monitor, audit, and manage servers that are running Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS).  

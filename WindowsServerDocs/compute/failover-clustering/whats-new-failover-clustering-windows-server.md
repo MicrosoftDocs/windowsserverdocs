@@ -100,7 +100,7 @@ Storage Replication enables you to do the following:
 
 -   Provide supportability, performance metrics, and diagnostic capabilities.  
 
-For more information, see the [Storage Replica in Windows Server 2016 Technical Preview](../../storage/storage-replica/Storage-Replica-in-Windows-Server-2016-Technical-Preview.md).  
+For more information, see the [Storage Replica in Windows Server 2016 Technical Preview](../../storage/storage-replica/storage-replica-windows-server-2016.md).  
 
 **What works differently?**  
 
@@ -176,5 +176,5 @@ Failover Cluster networks are no longer limited to a single NIC per subnet / net
 
 ##See Also  
 * [Storage](../../storage/Storage.md)  
-* [What's New in File and Storage Services](../../storage/What-s-New-in-File-and-Storage-Services-in-Windows-Server-2016-Technical-Preview.md)  
+* [What's New in File and Storage Services](../../storage/whats-new-file-storage-services-windows-server-2016.md)  
 

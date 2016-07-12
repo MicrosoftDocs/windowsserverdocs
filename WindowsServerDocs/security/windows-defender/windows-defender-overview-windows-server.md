@@ -20,15 +20,15 @@ Windows Server 2016 Technical Preview now includes Windows Defender. Windows Def
 
 This topic includes information important for running Windows Defender on a server platform. Use the following links to get to the information you need in this topic:
 
--   [Using Windows Defender](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_UsingDef)
+-   [Using Windows Defender](../windows-defender/windows-defender-overview-windows-server.md#BKMK_UsingDef)
 
--   [Verify Windows Defender is running](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefRun)
+-   [Verify Windows Defender is running](../windows-defender/windows-defender-overview-windows-server.md#BKMK_DefRun)
 
--   [Update antimalware definitions](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_UpdateDef)
+-   [Update antimalware definitions](../windows-defender/windows-defender-overview-windows-server.md#BKMK_UpdateDef)
 
--   [Submit Samples](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefSamples)
+-   [Submit Samples](../windows-defender/windows-defender-overview-windows-server.md#BKMK_DefSamples)
 
--   [Automatic exclusions](../windows-defender/Windows-Defender-Overview-for-Windows-Server-Technical-Preview.md#BKMK_DefExclusions)
+-   [Automatic exclusions](../windows-defender/windows-defender-overview-windows-server.md#BKMK_DefExclusions)
 
 ## <a name="BKMK_UsingDef"></a>Using Windows Defender
 By default, Windows Defender is installed and functional on Windows Server 2016 Technical Preview. The user interface is installed by default on some SKUs. You can manage Windows Defender by using WMI, Windows PowerShell, or by using Group Policy.

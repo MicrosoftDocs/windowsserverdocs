@@ -23,7 +23,7 @@ This collection contains detailed information about networking products and feat
 ## <a name="bkmk_start"></a>Start  
 To discover new networking features and supported networking scenarios   in  Windows Server 2016 Technical Preview, start with the following topics.  
 
--   [Windows Server 2016 Technical Preview Supported Networking Scenarios](Windows-Server-2016-Technical-Preview-Supported-Networking-Scenarios.md)  
+-   [Windows Server 2016 Technical Preview Supported Networking Scenarios](windows-server-2016-supported-networking-scenarios.md)  
 
 -   [What's New in Networking](What-s-New-in-Networking.md)  
 
@@ -47,7 +47,7 @@ The following table provides links to some of the networking technologies in Win
 |-|-|  
 |[What's New in Networking](What-s-New-in-Networking.md)|Discover new networking technologies and new features for existing technologies in Windows Server 2016 Technical Preview|  
 |[BranchCache](branchcache/BranchCache.md)|BranchCache is a wide area network (WAN) bandwidth optimization technology. To optimize WAN bandwidth when users access content on remote servers, BranchCache fetches content from your main office or hosted cloud content servers and caches the content at branch office locations, allowing client computers at branch offices to access the content locally rather than over the WAN.|  
-|[Core Network Guide for Windows Server Technical Preview](core-network-guide/Core-Network-Guide-for-Windows-Server-Technical-Preview.md)|Learn how to deploy a Windows Server network with the Core Network Guide.|  
+|[Core Network Guide for Windows Server Technical Preview](core-network-guide/core-network-guide-windows-server.md)|Learn how to deploy a Windows Server network with the Core Network Guide.|  
 |[Domain Name System &#40;DNS&#41;](dns/Domain-Name-System--DNS-.md)|Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.|  
 |[Dynamic Host Configuration Protocol &#40;DHCP&#41;](technologies/dhcp/Dynamic-Host-Configuration-Protocol--DHCP-.md)|Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information, such as the subnet mask and default gateway.|  
 |[Hyper-V Network Virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)|Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure.|  
