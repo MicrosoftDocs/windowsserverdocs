@@ -45,7 +45,7 @@ With AD FS in Windows Server 2016, organizations can take advantage of Azure MFA
 ### Improved device registration for delivering hybrid conditional access  
 AD FS in Windows Server 2016 builds on our previous device registration capabilities to enable these scenarios. AD FS in Windows Server 2016 can consume the computer or device compliance status, so that you can apply the same policies to your on premises resources as you do for the cloud. Compliance is re-evaluated when device attributes change, so that you can always ensure policies are being enforced.  
   
-![](media/What-s-new-in-Active-Directory-Federation-Services-for-Windows-Server-2016-Technical-Preview/ADFS_ITPRO_1.png)  
+![](media/whats-new-active-directory-federation-services-windows-server-2016/ADFS_ITPRO_1.png)  
   
 Device authentication is the foundation for device-based conditional access scenarios. Device registration provides the device with an identity which is used to authenticate the device when the user signs in. The authenticated device, and the attributes of the device, can then be used to:  
 * Enable Access only from devices that are managed and/or compliant  

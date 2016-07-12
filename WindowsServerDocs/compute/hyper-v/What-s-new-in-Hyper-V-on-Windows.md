@@ -18,26 +18,26 @@ author: KBDAzure
 
 **This is preliminary content and subject to change.**  
   
-This article explains the new and changed functionality of Hyper-V on Windows Server 2016 Technical Preview and Microsoft Hyper-V Server Technical Preview. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016 Technical Preview, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
+This article explains the new and changed functionality of Hyper-V on Windows Server 2016 Technical Preview and Microsoft Hyper-V Server Technical Preview. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2016 Technical Preview, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).  
   
 Here's what's included in this article and whether the functionality is new or updated.  
   
 |Feature or Functionality|New or Updated|  
 |--------|-------|  
-|[Compatible with Connected Standby](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_standby) | New |  
+|[Compatible with Connected Standby](What-s-new-in-Hyper-V-on-Windows.md#BKMK_standby) | New |  
 |[Discrete device assignment](#BKMK_device)| New |  
-|[Host resource protection](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_host)| New|  
-|[Hot add and remove for network adapters and memory](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_hot)| New|  
-|[Hyper-V Manager improvements](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_Mgmt)| Updated|  
+|[Host resource protection](What-s-new-in-Hyper-V-on-Windows.md#BKMK_host)| New|  
+|[Hot add and remove for network adapters and memory](What-s-new-in-Hyper-V-on-Windows.md#BKMK_hot)| New|  
+|[Hyper-V Manager improvements](What-s-new-in-Hyper-V-on-Windows.md#BKMK_Mgmt)| Updated|  
 |[Integration services delivered through Windows Update](#BKMK_IS)| Updated|  
-|[Linux Secure Boot](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_linux)| New|  
+|[Linux Secure Boot](What-s-new-in-Hyper-V-on-Windows.md#BKMK_linux)| New|  
 |[Nested virtualization](#BKMK_nested)| New|  
 |[Networking features](#BKMK_networking)| New|  
 |[Production checkpoints](#BKMK_check)| New|  
-|[Rolling Hyper-V Cluster Upgrade](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_HyperVRollingUpgrades)| New|  
+|[Rolling Hyper-V Cluster Upgrade](What-s-new-in-Hyper-V-on-Windows.md#BKMK_HyperVRollingUpgrades)| New|  
 |[Shared virtual hard disks](#BKMK_shared) | Updated|
 |[Start order priority for clustered virtual machines](#BKMK_StartOrder)| New|  
-|[Storage quality of service (QoS)](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_QoS)| Updated|  
+|[Storage quality of service (QoS)](What-s-new-in-Hyper-V-on-Windows.md#BKMK_QoS)| Updated|  
 |[Shielded virtual machines](#BKMK_shielded)| New|  
 |[Virtual machine configuration file format](#BKMK_Config)| Updated|  
 |[Virtual machine configuration version](#BKMK_ConfgVersion)| Updated|  
@@ -48,7 +48,7 @@ Here's what's included in this article and whether the functionality is new or u
 When the Hyper-V role is installed on a computer that uses the Always On/Always Connected (AOAC) power model, the **Connected Standby** power state is now available.  
   
 ## <a name="BKMK_device"></a>Discrete device assignment  
-This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016 Technical Preview](System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
+This feature lets you give a virtual machine direct and exclusive access to some PCIe hardware devices. Using a device in this way bypasses the Hyper-V virtualization stack, which results in faster access. For details on supported hardware, see  "Discrete device assignment" in [System requirements for Hyper-V on Windows Server 2016 Technical Preview](System-requirements-for-Hyper-V-on-Windows.md). For details, including how to use this feature and considerations, see the post "[Discrete Device Assignment -- Description and background](http://blogs.technet.com/b/virtualization/archive/2015/11/19/discrete-device-assignment.aspx)" in the Virtualization blog.  
   
 ## <a name="BKMK_host"></a>Host resource protection  
 This feature helps prevent a virtual machine from using more than its share of system resources by looking for excessive levels of activity. This can help prevent a virtual machine's excessive activity from degrading the performance of the host or other virtual machines. When monitoring detects a virtual machine with excessive activity, the virtual machine is given fewer resources. This monitoring and enforcement is off by default. Use Windows PowerShell to turn it on or off. To turn it on, run this command:  
@@ -135,7 +135,7 @@ After you update the cluster functional level:
   
 -   You can enable new Hyper-V features.  
   
--   To make new virtual machine features available, use the Update-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md).  
+-   To make new virtual machine features available, use the Update-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).  
   
 -   You can't add a node to the Hyper-V Cluster that runs  Windows Server 2012 R2 .  
   
@@ -170,7 +170,7 @@ The version represents the compatibility of the virtual machine's configuration,
   
 If you move or import a virtual machine to a server that runs Hyper-V on Windows Server 2016 Technical Preview from  Windows Server 2012 R2 , the virtual machine's configuration isn't automatically updated. This means you can move the virtual machine back to a server that runs  Windows Server 2012 R2 . But, this also means you can't use the new virtual machine features until you manually update the version of the virtual machine configuration.  
   
-For instructions on checking and upgrading the version, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-10-or-Windows-Server-2016.md). This article also lists the version in which some features were introduced.   
+For instructions on checking and upgrading the version, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). This article also lists the version in which some features were introduced.   
   
 > [!IMPORTANT]  
 > -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2 .  

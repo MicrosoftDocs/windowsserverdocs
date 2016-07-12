@@ -111,5 +111,5 @@ Windows Server 2016 automatically detects NIC capabilities and will attempt to u
  
 
 
--   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
+-   [What's New in Failover Clustering in Windows Server Technical Preview](whats-new-failover-clustering-windows-server.md)  
 

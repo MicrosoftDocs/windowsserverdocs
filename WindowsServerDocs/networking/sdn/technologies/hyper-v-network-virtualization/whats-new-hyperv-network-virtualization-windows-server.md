@@ -22,10 +22,10 @@ HNV offers enhanced support in the following areas:
   
 |Feature/Functionality|New or improved|Description|  
 |--------------------------|-------------------|---------------|  
-|[Programmable Hyper-V switch](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md#SDN)|New|HNV policy is programmable through the Microsoft Network Controller.|  
-|[VXLAN encapsulation support](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md#VXLAN)|New|HNV now supports VXLAN encapsulation.|  
-|[Software Load Balancer (SLB) interoperability](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md#SLB)|New|HNV is fully integrated with the Microsoft Software Load Balancer.|  
-|[Compliant IEEE Ethernet headers](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md#L2)|Improved|Compliant with IEEE Ethernet standards|  
+|[Programmable Hyper-V switch](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SDN)|New|HNV policy is programmable through the Microsoft Network Controller.|  
+|[VXLAN encapsulation support](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#VXLAN)|New|HNV now supports VXLAN encapsulation.|  
+|[Software Load Balancer (SLB) interoperability](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SLB)|New|HNV is fully integrated with the Microsoft Software Load Balancer.|  
+|[Compliant IEEE Ethernet headers](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#L2)|Improved|Compliant with IEEE Ethernet standards|  
   
 ### <a name="SDN"></a>Programmable Hyper-V switch  
 HNV is a fundamental building block of Microsoftâ€™s updated Software Defined Networking (SDN) solution, and is fully integrated into the SDN stack.  
@@ -41,7 +41,7 @@ The Hyper-V switch supports both stateless and stateful flow rules based on simp
   
 For more information about network controller integration, see Windows Server 2016 Technical Preview HNV Technical Details (coming soon)  
   
-![](../../../media/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview/HNVOverview.png)  
+![](../../../media/whats-new-hyperv-network-virtualization-windows-server/HNVOverview.png)  
   
 ### <a name="VXLAN"></a>VXLAN encapsulation support  
 The Virtual eXtensible Local Area Network (VXLAN - [RFC 7348](http://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Dell, HP and others. HNV also now supports this encapsulation scheme using MAC distribution mode through the Microsoft Network Controller to program mappings for tenant overlay network IP addresses (Customer Address, or CA) to the physical underlay network IP addresses (Provider Address, or PA). Both NVGRE and VXLAN Task Offloads are supported for improved performance through third-party drivers.  

@@ -54,10 +54,10 @@ Hyper-V offers many features. This is an overview, grouped by what the features 
    
 **Security** - Secure boot and shielded virtual machines help protect against malware and other unauthorized access to a virtual machine and its data.  
   
-For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server 2016 Technical Preview](What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).  
+For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server 2016 Technical Preview](What-s-new-in-Hyper-V-on-Windows.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).  
   
 ## How to get Hyper-V  
-Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server Technical Preview](get-started/Install-the-Hyper-V-role-on-Windows-Server-Technical-Preview.md). On Windows, it's available as [feature](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://technet.microsoft.com/library/hh923062.aspx).
+Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server Technical Preview](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://msdn.microsoft.com/virtualization/hyperv_on_windows/windows_welcome) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://technet.microsoft.com/library/hh923062.aspx).
   
 ## Supported operating systems  
   
@@ -65,10 +65,10 @@ Many operating systems will run on virtual machines. In general, an operating sy
   
 -   [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
   
--   [Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows-Server-Technical-Preview.md)  
+-   [Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
   
 ## How Hyper-V works  
-Hyper-V is a hypervisor-based virtualization technology. Hyper-V uses the Windows hypervisor, which requires a physical processor with specific features. For hardware details, see [System requirements for Hyper-V on Windows Server 2016 Technical Preview](System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).  
+Hyper-V is a hypervisor-based virtualization technology. Hyper-V uses the Windows hypervisor, which requires a physical processor with specific features. For hardware details, see [System requirements for Hyper-V on Windows Server 2016 Technical Preview](System-requirements-for-Hyper-V-on-Windows.md).  
   
 In most cases, the hypervisor manages the interactions between the hardware and the virtual machines. This hypervisor-controlled access to the hardware gives virtual machines the isolated environment in which they run. In some configurations, a virtual machine or the operating system running in the virtual machine has direct access to graphics, networking, or storage hardware.  
   
@@ -84,7 +84,7 @@ Hyper-V also has tools for management and connectivity. You can install these on
 ## Related technologies  
 These are some technologies from Microsoft that are often used with Hyper-V:  
   
-* [Failover Clustering](../failover-clustering/What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)  
+* [Failover Clustering](../failover-clustering/whats-new-failover-clustering-windows-server.md)  
 * [Remote Desktop Services](../remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)  
 * [Virtual Machine Manager](https://technet.microsoft.com/library/en-us/system-center-docs/vmm/virtual-machine-manager)  
   

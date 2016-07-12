@@ -100,6 +100,6 @@ The following table shows the minimum virtual machine configuration version requ
 |Virtual Trusted Platform Module (vTPM)|7.0|  
 |Virtual machine multi queues (VMMQ)|7.1|   
   
-For more information about these features, see [What's new in Hyper-V on Windows Server 2016](../What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).
+For more information about these features, see [What's new in Hyper-V on Windows Server 2016](../What-s-new-in-Hyper-V-on-Windows.md).
 
 

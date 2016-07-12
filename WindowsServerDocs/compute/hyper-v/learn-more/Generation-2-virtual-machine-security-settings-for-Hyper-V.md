@@ -68,7 +68,7 @@ To enable Isolated User Mode on the Hyper-V host that runs Windows 10,
 
     ```  
 
-You can migrate a virtual machine with virtual TPM enabled to any host that runs Windows Server 2016, Windows 10 build 10586 or higher versions. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../../security/Guarded-Fabric-and-Shielded-VMs.md) and [System requirements for Hyper-V on Windows Server 2016 Technical Preview](../System-requirements-for-Hyper-V-on-Windows-Server-2016-Technical-Preview.md).  
+You can migrate a virtual machine with virtual TPM enabled to any host that runs Windows Server 2016, Windows 10 build 10586 or higher versions. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../../security/Guarded-Fabric-and-Shielded-VMs.md) and [System requirements for Hyper-V on Windows Server 2016 Technical Preview](../System-requirements-for-Hyper-V-on-Windows.md).  
 
 ## Security Policy in Hyper-V Manager  
 For more virtual machine security, use the **Enable Shielding** option to disable management features like console connection, PowerShell Direct, and some integration components. If you select this option, **Secure Boot**, **Enable Trusted Platform Module**, and **Encrypt State and VM migration traffic** options are selected and enforced.   
