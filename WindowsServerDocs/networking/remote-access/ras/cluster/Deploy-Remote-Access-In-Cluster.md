@@ -41,11 +41,11 @@ Before you begin deploying this scenario, review this list for important require
 ## In this scenario  
 The cluster deployment scenario includes a number of steps:  
 
-1.  [Deploy a Single DirectAccess Server with Advanced Settings](../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server with advanced settings must be deployed before setting up a cluster deployment.  
+1.  [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server with advanced settings must be deployed before setting up a cluster deployment.  
 
-2.  [Plan a Remote Access Cluster Deployment](../plan/Plan-a-Remote-Access-Cluster-Deployment.md). To build a cluster from a single server deployment a number of additional steps are required, including preparing certificates for the cluster deployment.  
+2.  [Plan a Remote Access Cluster Deployment](networking/remote-access/ras/cluster/plan/Plan-a-Remote-Access-Cluster-Deployment.md). To build a cluster from a single server deployment a number of additional steps are required, including preparing certificates for the cluster deployment.  
 
-3.  [Configure a Remote Access Cluster](../cluster/configure/Configure-a-Remote-Access-Cluster.md). This consists of a number of configuration steps, including preparing the single server for Windows NLB or the external load balancer, preparing additional servers to join the cluster, and enabling load balancing.  
+3.  [Configure a Remote Access Cluster](networking/remote-access/ras/cluster/configure/Configure-a-Remote-Access-Cluster.md). This consists of a number of configuration steps, including preparing the single server for Windows NLB or the external load balancer, preparing additional servers to join the cluster, and enabling load balancing.  
 
 ## <a name="BKMK_APP"></a>Practical applications  
 Gathering multiple servers into a server cluster provides the following:  
@@ -77,7 +77,7 @@ Hardware requirements for this scenario include the following:
 ## <a name="BKMK_SOFT"></a>Software requirements  
 There are a number of requirements for this scenario:  
 
--   Software requirements for single server deployment. For more information see [Deploy a Single DirectAccess Server with Advanced Settings](../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access).  
+-   Software requirements for single server deployment. For more information see [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access).  
 
 -   In addition to software requirements for a single server there are a number of cluster\-specific requirements:  
 
