@@ -4,12 +4,12 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - techgroup-management-and-automation
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
-author coreyp-at-msft
+author: coreyp-at-msft
 ---
 # Keyboard Shortcuts for Server Manager
 
@@ -92,6 +92,3 @@ Commands that do not have their own keyboard shortcuts or access keys are access
 |Filter control|**Alt+F**|
 |Query control|**Alt+Q**|
 |Save queries|**Alt+S**|
-
-
-
