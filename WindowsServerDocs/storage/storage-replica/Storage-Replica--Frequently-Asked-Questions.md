@@ -202,7 +202,7 @@ For technical assistance with Storage Replica, you can post at the Microsoft Tec
 
 ## Related Topics  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
 
 -   [Storage Replica Overview](Storage-Replica-Overview.md)  
 
@@ -218,4 +218,4 @@ For technical assistance with Storage Replica, you can post at the Microsoft Tec
 
 -   [Storage](../Storage.md)  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  

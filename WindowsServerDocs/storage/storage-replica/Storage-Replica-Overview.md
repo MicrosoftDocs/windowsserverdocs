@@ -198,7 +198,7 @@ This guide frequently uses the following terms:
 
 ## Related Topics  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
 
 -   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
 
@@ -214,5 +214,5 @@ This guide frequently uses the following terms:
 
 -   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
 

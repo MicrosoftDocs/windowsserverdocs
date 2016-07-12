@@ -164,7 +164,7 @@ This is caused by selecting a data volume that is on the same partition as the S
 
 ### Related Topics  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
 -  [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
 
 -   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
@@ -175,5 +175,5 @@ This is caused by selecting a data volume that is on the same partition as the S
 
 ## See Also  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
 

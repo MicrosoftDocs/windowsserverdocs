@@ -31,7 +31,7 @@ For more information about a network virtualization solution that uses all of th
   
 This topic introduces concepts and explains the key benefits and capabilities of Hyper-V Network Virtualization (one part of the overall network virtualization solution) in Windows Server 2016 Technical Preview. It explains how network virtualization benefits both private clouds looking for enterprise workload consolidation and public cloud service providers of Infrastructure as a Service (IaaS).  
   
-For more technical details about networking virtualization in Windows Server 2016 Technical Preview, see [Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization-Technical-Details-in-Windows-Server-Technical-Preview.md).  
+For more technical details about networking virtualization in Windows Server 2016 Technical Preview, see [Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md).  
   
 **Did you mean**  
   

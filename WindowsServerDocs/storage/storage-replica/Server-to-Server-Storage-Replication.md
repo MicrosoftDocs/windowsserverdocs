@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: Server to Server Storage Replication
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -84,7 +84,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
         ```  
         $Servers = 'SR-SRV05','SR-SRV06'  
 
-        $Servers | ForEach { Install-WindowsFeature â€“ComputerName $_ â€“Name Storage-Replica,FS-FileServer â€“IncludeManagementTools -restart }  
+        $Servers | ForEach { Install-WindowsFeature –ComputerName $_ –Name Storage-Replica,FS-FileServer –IncludeManagementTools -restart }  
         ```  
 
         For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](http://technet.microsoft.co/library/hh831809.aspx)  
@@ -343,7 +343,7 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 
 ## Related Topics  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
 
 -   [Storage Replica Overview](Storage-Replica-Overview.md)  
 
@@ -359,4 +359,4 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 
 -   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  

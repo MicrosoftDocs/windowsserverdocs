@@ -20,7 +20,7 @@ The Health Service is a new feature in Windows Server 2016 Technical Preview whi
 
 ## Prerequisites  
 
-The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md).  
+The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md).  
 
 ## Metrics  
 
@@ -113,7 +113,7 @@ For example, here is a typical fault:
 
 
  >[!NOTE]
- > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016 Technical Preview](../storage-spaces/Fault-Domains-in-Windows-Server-2016-Technical-Preview.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
+ > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016 Technical Preview](../storage-spaces/fault-domains-windows-server-2016.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
 
 ### Coverage  
 
@@ -320,4 +320,4 @@ You can verify using the following PowerShell cmdlet:
 
 -   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](../../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
 
--  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
