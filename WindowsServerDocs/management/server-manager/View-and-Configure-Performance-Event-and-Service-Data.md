@@ -1,5 +1,5 @@
 ---
-title: View and Configure Performance, Event, and Service Data
+title: View and Configure Performance Event and Service Data
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
