@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5a7252d0-6db8-4a9d-98ee-75082ecd2929
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 7 Test Connectivity When Returning to the Corpnet
 

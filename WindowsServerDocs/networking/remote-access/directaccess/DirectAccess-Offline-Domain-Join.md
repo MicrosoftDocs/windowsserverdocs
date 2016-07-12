@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
-author: coreyp
+author: coreyp-at-msft
 ---
 # DirectAccess Offline Domain Join
 

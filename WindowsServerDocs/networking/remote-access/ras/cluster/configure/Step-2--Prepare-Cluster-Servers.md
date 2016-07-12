@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 2 Prepare Cluster Servers
 

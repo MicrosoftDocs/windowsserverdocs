@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c6df007-4c39-4b72-9f2c-b2c9b2825c2f
-author: coreyp
+author: coreyp-at-msft
 ---
 # Remote Access Server Role Documentation
 

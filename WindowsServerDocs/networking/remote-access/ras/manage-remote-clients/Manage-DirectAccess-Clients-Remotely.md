@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
-author: coreyp
+author: coreyp-at-msft
 ---
 # Manage DirectAccess Clients Remotely
 

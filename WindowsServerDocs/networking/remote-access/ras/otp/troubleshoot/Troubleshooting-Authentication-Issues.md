@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71307757-f8f4-4f82-b8b3-ffd4fd8c5d6d
-author: coreyp
+author: coreyp-at-msft
 ---
 # Troubleshooting Authentication Issues
 

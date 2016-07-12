@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd1e9efd-19e9-49e7-8432-881f661c9792
-author: coreyp
+author: coreyp-at-msft
 ---
 # Overview of the Test Lab Scenario
 

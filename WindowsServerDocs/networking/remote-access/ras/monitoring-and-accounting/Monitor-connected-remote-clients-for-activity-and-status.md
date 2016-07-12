@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
-author: coreyp
+author: coreyp-at-msft
 ---
 # Monitor connected remote clients for activity and status
 
