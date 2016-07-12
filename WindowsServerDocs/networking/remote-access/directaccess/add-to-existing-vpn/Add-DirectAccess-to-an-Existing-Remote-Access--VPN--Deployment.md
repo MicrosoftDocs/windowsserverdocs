@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2
-author: coreyp
+author: coreyp-at-msft
 ---
 # Add DirectAccess to an Existing Remote Access (VPN) Deployment
 

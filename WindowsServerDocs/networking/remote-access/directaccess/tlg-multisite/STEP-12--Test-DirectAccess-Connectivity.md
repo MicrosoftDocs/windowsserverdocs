@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 12 Test DirectAccess Connectivity
 

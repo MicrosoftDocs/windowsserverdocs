@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
 

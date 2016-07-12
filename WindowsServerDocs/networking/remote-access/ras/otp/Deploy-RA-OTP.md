@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy Remote Access with OTP Authentication
 Windows Server&reg; 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment
 

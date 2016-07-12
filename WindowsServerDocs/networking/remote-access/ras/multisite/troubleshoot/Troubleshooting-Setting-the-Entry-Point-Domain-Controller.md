@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b12dd0e8-1d80-4d4b-bb45-586f19d17ef0
-author: coreyp
+author: coreyp-at-msft
 ---
 # Troubleshooting Setting the Entry Point Domain Controller
 

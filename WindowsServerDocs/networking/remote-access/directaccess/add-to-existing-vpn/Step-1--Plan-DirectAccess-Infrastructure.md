@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4ca50ea8-6987-4081-acd5-5bf9ead62acd
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 1 Plan DirectAccess Infrastructure
 

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 3 Configure DC1
 

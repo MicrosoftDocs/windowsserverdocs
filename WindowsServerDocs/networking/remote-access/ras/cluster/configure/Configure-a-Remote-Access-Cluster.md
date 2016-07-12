@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e8df3619-f365-4070-8117-888c88db13eb
-author: coreyp
+author: coreyp-at-msft
 ---
 # Configure a Remote Access Cluster
 

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 762bc463-eead-46ac-8b90-32355743c27c
-author: coreyp
+author: coreyp-at-msft
 ---
 # Plan Remote Access with OTP Authentication
 

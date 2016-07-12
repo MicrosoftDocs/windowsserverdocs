@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84457351-1ca7-4e7c-8e2c-53d55b1fcdc0
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 2 Configure EDGE1
 

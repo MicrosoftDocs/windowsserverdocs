@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 7 Install and Configure 2-APP1
 

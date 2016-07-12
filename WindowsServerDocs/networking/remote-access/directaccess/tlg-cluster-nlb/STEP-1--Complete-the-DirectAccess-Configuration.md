@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e1e15544-b575-4f39-af0b-771bfae8b0b7
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 1 Complete the DirectAccess Configuration
 

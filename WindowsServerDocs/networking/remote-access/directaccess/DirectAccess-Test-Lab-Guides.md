@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
-author: coreyp
+author: coreyp-at-msft
 ---
 # DirectAccess Test Lab Guides
 

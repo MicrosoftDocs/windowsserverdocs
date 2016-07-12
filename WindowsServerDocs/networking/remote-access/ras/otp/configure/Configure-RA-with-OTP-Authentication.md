@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82505b18-dd77-4dd1-aa27-b2962b8241ca
-author: coreyp
+author: coreyp-at-msft
 ---
 # Configure Remote Access with OTP Authentication
 

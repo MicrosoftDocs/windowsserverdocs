@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
-author coreyp
+author coreyp-at-msft
 ---
 # STEP 8: Configure INET1
 

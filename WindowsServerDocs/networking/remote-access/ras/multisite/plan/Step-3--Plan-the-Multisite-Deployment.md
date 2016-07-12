@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 3 Plan the Multisite Deployment
 

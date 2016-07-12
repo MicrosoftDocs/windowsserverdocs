@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 1 Plan the Remote Access Infrastructure
 
