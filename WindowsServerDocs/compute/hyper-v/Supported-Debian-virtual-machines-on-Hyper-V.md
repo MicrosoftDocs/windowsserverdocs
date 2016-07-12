@@ -14,47 +14,47 @@ author: cwatsonmsft
 ---
 # Supported Debian virtual machines on Hyper-V
 
->Applies To: Hyper-V Server 2012, Hyper-V Server 2012 R2, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows Server Technical Preview, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Hyper-V Server 2012, Hyper-V Server 2012 R2, Windows 8, Windows 8.1
 
 The following feature distribution map indicates the features that are present in each version. The known issues and workarounds for each distribution are listed after the table.  
   
 **Table legend**  
   
--   **Built in** – LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution so do not install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
+-   **Built in** - LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution so do not install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch does not indicate that the built in LIS is out of date.  
   
--   **v** - Feature available  
+-   &#10004; - Feature available  
   
 -   (*blank*) - Feature not available  
   
 |**Feature**|**Windows Server operating system version**|**8.0-8.4 (jessie)**|**7.0-7.10 (wheezy)**|  
 |-|-|-|-|  
 |**Availability**||Built in|Built in (Note 6)|  
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|v|v|  
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|  
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|  
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|v|v|  
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|v|v|  
-|Live Migration|2016, 2012 R2, 2012, 2008 R2|v|v|  
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|  
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|  
+|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|  
 |Static IP Injection|2016, 2012 R2, 2012|||  
 |vRSS|2016, 2012 R2|||  
 |TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|||  
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|  
-|VHDX resize|2016, 2012 R2|v Note 1|v Note 1|  
+|VHDX resize|2016, 2012 R2|&#10004; Note 1|&#10004; Note 1|  
 |Virtual Fibre Channel|2016, 2012 R2|||  
-|Live virtual machine backup|2016, 2012 R2|v Note 4,5|v Note 4|  
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 4,5|&#10004; Note 4|  
 |TRIM support|2016, 2012 R2|||  
 |SCSI WWN|2016, 2012 R2|||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
-|Configuration of MMIO gap|2016, 2012 R2|v|v|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|||  
+|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|||  
 |Manual Memory Hot Add|2016|||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
-|Hyper-V-specific  video device|2016, 2012 R2, 2012, 2008 R2|v||  
+|Hyper-V-specific  video device|2016, 2012 R2, 2012, 2008 R2|&#10004;||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|  
-|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|v Note 4||  
-|Non-Maskable Interrupt|2016, 2012 R2|v|v|  
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|v|v|  
-|File copy from host to guest|2016, 2012 R2|v Note 4||  
+|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 4||  
+|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|  
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|  
+|File copy from host to guest|2016, 2012 R2|&#10004; Note 4||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||  
 |Hyper-V Sockets|2016|||  
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|  

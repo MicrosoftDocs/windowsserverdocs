@@ -1,10 +1,10 @@
 ---
-title: Step 1: Prepare for Your WSUS Deployment
+title: Step 1 - Prepare for Your WSUS Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
@@ -140,7 +140,7 @@ By default, the WSUS server uses port 80 for HTTP protocol and port 443 for HTTP
 The following figure shows a simple WSUS server scenario in which an administrator can set up a server running WSUS inside the corporate firewall, which synchronizes content directly with Microsoft Update and distributes updates to client computers.
 
 ### Multiple WSUS servers
-Administrators can deploy multiple servers running WSUS that synchronize all content within their organization’s intranet. In Figure 2, only one server is exposed to the Internet. In this configuration, this is the only server that downloads updates from Microsoft Update. This server is set up as the upstream server—the source to which the downstream servers synchronize. When applicable, servers can be located throughout a geographically dispersed network to provide the best connectivity to all client computers.
+Administrators can deploy multiple servers running WSUS that synchronize all content within their organization's intranet. In Figure 2, only one server is exposed to the Internet. In this configuration, this is the only server that downloads updates from Microsoft Update. This server is set up as the upstream serverï¿½the source to which the downstream servers synchronize. When applicable, servers can be located throughout a geographically dispersed network to provide the best connectivity to all client computers.
 
 ### Disconnected WSUS server
 If corporate policy or other conditions limit computer access to the Internet, administrators can set up an internal server to run WSUS. An example of this is a server that is connected to the intranet but is isolated from the Internet. After downloading, testing, and approving the updates on this server, an administrator would export the update metadata and content to a DVD. The update metadata and content is imported from the DVD to servers running WSUS within the intranet.
@@ -307,7 +307,7 @@ Choosing languages for an upstream server is not the same as choosing languages 
 
         > [!NOTE]
         > You should do this even though you want the downstream server to download the same languages as the upstream server. This setting causes the upstream server to download updates in all languages, including languages that were not originally configured for the upstream server. If you add languages to the upstream server, you should copy the new updates to its replica servers.
-        > 
+        >
         > Changing language options on the upstream server alone might cause a mismatch between the number of updates that are approved on the central server and the number of updates approved on the replica servers.
 
 ## <a name="BKMK_1.5"></a>1.5. Plan WSUS computer groups
@@ -407,7 +407,7 @@ You can approve updates, and download the update metadata before you download th
 
 In a hierarchy of WSUS servers, WSUS automatically sets all downstream servers to use the deferred download setting of the root WSUS server. You can change this default setting. For example, you can configure an upstream server to perform full, immediate synchronizations, and then configure a downstream server to defer the downloads.
 
-If you deploy a hierarchy of connected WSUS servers, we recommend that you do not deeply nest the servers. If you enable deferred downloads and a downstream server requests an update that is not approved on the upstream server, the downstream server’s request forces a download on the upstream server. The downstream server then downloads the update on a subsequent synchronization. In a deep hierarchy of WSUS servers, delays can occur as updates are requested, downloaded, and then passed through the server hierarchy. By default, deferred downloads are enabled when you store updates locally. You can change this option manually.
+If you deploy a hierarchy of connected WSUS servers, we recommend that you do not deeply nest the servers. If you enable deferred downloads and a downstream server requests an update that is not approved on the upstream server, the downstream server's request forces a download on the upstream server. The downstream server then downloads the update on a subsequent synchronization. In a deep hierarchy of WSUS servers, delays can occur as updates are requested, downloaded, and then passed through the server hierarchy. By default, deferred downloads are enabled when you store updates locally. You can change this option manually.
 
 ### <a name="BKMK_1.6.Filters"></a>Filters
 WSUS lets you filter update synchronizations by language, product, and classification. In a hierarchy of WSUS servers, WSUS automatically sets all downstream servers to use the update filtering options that are selected on the root WSUS server. You can reconfigure download servers to receive only a subset of the languages.
@@ -463,6 +463,3 @@ After the new updates are downloaded, Automatic Updates polls the WSUS server fo
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
 
 -   [Windows Server Update Services](../Windows-Server-Update-Services-WSUS.md)
-
-
-

@@ -1,5 +1,5 @@
 ---
-title: Storage Replica: Known Issues
+title: Known Issues with Storage Replica
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: get-started-article
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 author: kumudd
 ---
-# Storage Replica: Known Issues
+# Known Issues with Storage Replica
 
 >Applies To: Windows Server Technical Preview
 
@@ -22,34 +22,34 @@ In Windows Server 2016 Technical Preview, you may be unable to provision replica
 
 To fix, you must clear the hidden Storage Replica partition off the disks and return them to a writeable state. Previously this required complex **DISKPART** steps but Windows Server 2016 Technical Preview introduces a simple cmdlet named `Clear-SRMetadata`.  
 
--   To remove all orphaned Storage Replica  partition databases slots and remount all partitions, use the `–AllPartitions` parameter as follows:  
+-   To remove all orphaned Storage Replica  partition databases slots and remount all partitions, use the `-AllPartitions` parameter as follows:  
 
     ```  
     Clear-SRMetadata -AllPartitions  
     ```  
 
--   To remove all orphaned Storage Replica log data, use the `–AllLogs` parameter as follows:  
+-   To remove all orphaned Storage Replica log data, use the `-AllLogs` parameter as follows:  
 
     ```  
     Clear-SRMetadata -AllLogs  
     ```  
 
--   To remove all orphaned failover cluster configuration data, use the `–AllConfiguration` parameter as follows:  
+-   To remove all orphaned failover cluster configuration data, use the `-AllConfiguration` parameter as follows:  
 
     ```  
     Clear-SRMetadata -AllConfiguration  
     ```  
 
--   To remove individual replication group metadata, use the `–Name` parameter and specify a replication group as follows:  
+-   To remove individual replication group metadata, use the `-Name` parameter and specify a replication group as follows:  
 
     ```  
-    Clear-SRMetadata –Name RG01 –Logs -Partition  
+    Clear-SRMetadata -Name RG01 -Logs -Partition  
     ```  
 
-The server may need to restart after cleaning the partition database; you can suppress this temporarily with `–NoRestart` but you should not skip restarting the server if requested by the cmdlet. This cmdlet does not remove data volumes nor data contained within those volumes.  
+The server may need to restart after cleaning the partition database; you can suppress this temporarily with `-NoRestart` but you should not skip restarting the server if requested by the cmdlet. This cmdlet does not remove data volumes nor data contained within those volumes.  
 
 ## During initial sync, see event log 4004 warnings  
-In Windows Server 2016 Technical Preview, when configuring replication, both the source and destination servers may show multiple **StorageReplica\Admin** event log 4004 warnings each during initial sync, with a status of “insufficient system resources exist to complete the API”. You are likely to see 5014 errors as well. These indicate that the servers do not have enough physical memory (RAM) to perform both initial synchronization as well as run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.  
+In Windows Server 2016 Technical Preview, when configuring replication, both the source and destination servers may show multiple **StorageReplica\Admin** event log 4004 warnings each during initial sync, with a status of "insufficient system resources exist to complete the API". You are likely to see 5014 errors as well. These indicate that the servers do not have enough physical memory (RAM) to perform both initial synchronization as well as run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.  
 
 ## When using guest clusters with Shared VHDX and a host without a CSV, virtual machines stop responding after configuring replication  
 In Windows Server 2016 Technical Preview, when using Hyper-V guest clusters for Storage Replica testing or demonstration purposes, and using Shared VHDX as the guest cluster storage, the virtual machines stop responding after you configure replication. If you restart the Hyper-V host, the virtual machines start responding but replication configuration will not be complete and no replication will occur.  
@@ -89,7 +89,7 @@ When attempting to use the Add Replication Partnership Wizard in Failover Cluste
 
     Unable to move cluster resource group Available Storage to cluster node <node name>  
 
-This is caused by a known issue in Windows Server 2016 Technical Preview. As a workaround, add an additional disk to Available Storage. This need for an additional ‘dummy’ disk in available storage is due to a regression and not intentional. Failover Cluster Manager previously supported addition of more disks normally, and will again in a later release.  
+This is caused by a known issue in Windows Server 2016 Technical Preview. As a workaround, add an additional disk to Available Storage. This need for an additional 'dummy' disk in available storage is due to a regression and not intentional. Failover Cluster Manager previously supported addition of more disks normally, and will again in a later release.  
 
 ## Setting partnership on a previously replicated group leads to suspended state  
 When attempting set a partnership on replication groups in a stretch cluster that were previously in a partnership, the replication groups enter a suspended state. Replication does to commence and the volumes are not available to user access. This does not happen with server to server replication.  
@@ -108,7 +108,7 @@ When replicating data with Storage Replica and rebooting the participating serve
 
 This is caused by a timing issue in Windows Server 2016 Technical Preview where network conditions prevent access to a Domain Controller during the boot up phase. As a workaround, configure the **Storage Replica** service to have a startup type of **Automatic (Delayed Start)** using Services.msc, SC.exe, or Set-Service. This issue will be fixed in a later release of Windows Server 2016.  
 
-## Running Test-SRTopology fails with errors “Invalid value entered for target computer name” or "Invalid value entered for source computer name"  
+## Running Test-SRTopology fails with errors "Invalid value entered for target computer name" or "Invalid value entered for source computer name"  
 
 When attempting to use `Test-SRTopology`, you receive one of the following errors:  
 
@@ -164,7 +164,7 @@ This is caused by selecting a data volume that is on the same partition as the S
 
 ### Related Topics  
 
--   [Storage Replica in Windows Server 2016 Technical Preview](Storage-Replica-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
 -  [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
 
 -   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
@@ -175,5 +175,5 @@ This is caused by selecting a data volume that is on the same partition as the S
 
 ## See Also  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
 

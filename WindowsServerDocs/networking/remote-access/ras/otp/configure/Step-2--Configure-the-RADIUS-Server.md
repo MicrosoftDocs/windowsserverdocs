@@ -1,5 +1,5 @@
 ---
-title: Step 2: Configure the RADIUS Server
+title: Step 2 Configure the RADIUS Server
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 0326818f-9144-496c-b946-f82be4eefbd3
 author: coreyp
 ---
-# Step 2: Configure the RADIUS Server
+# Step 2 Configure the RADIUS Server
 
 >Applies To: Windows Server Technical Preview
 
@@ -31,7 +31,7 @@ The RADIUS server must be configured with the necessary license and software and
 ## <a name="BKMK_1.2"></a>2.2 Configure the RADIUS security information  
 The RADIUS server uses UDP ports for communication purposes, and each RADIUS vendor has its own default UDP ports for incoming and outgoing communication. For the RADIUS server to work with the Remote Access server, make sure that all firewalls in the environment are configured to allow UDP traffic between the DirectAccess and OTP servers over the required ports as needed.  
   
-The RADIUS server uses a shared secret for authentication purposes. Configure the RADIUS server with a strong password for the shared secret, and note that this will be used when configuring the DirectAccess server’s client computer configuration for use with DirectAccess with OTP.  
+The RADIUS server uses a shared secret for authentication purposes. Configure the RADIUS server with a strong password for the shared secret, and note that this will be used when configuring the DirectAccess server's client computer configuration for use with DirectAccess with OTP.  
   
 ## <a name="BKMK_Probe"></a>2.3 Adding user account for OTP probing  
 On the RADIUS server create a new user account called **DAProbeUser** and give it the password **DAProbePass**.  

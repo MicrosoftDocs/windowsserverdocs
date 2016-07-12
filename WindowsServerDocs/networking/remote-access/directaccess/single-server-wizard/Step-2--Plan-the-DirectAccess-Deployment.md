@@ -1,5 +1,5 @@
 ---
-title: Step 2: Plan the DirectAccess Deployment
+title: Step 2 Plan the DirectAccess Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
-author: vhorne
+author: coreyp
 ---
-# Step 2: Plan the DirectAccess Deployment
+# Step 2 Plan the DirectAccess Deployment
 
 >Applies To: Windows Server Technical Preview
 
@@ -36,21 +36,21 @@ There are two decisions to make when planning your client deployment:
 ## <a name="bkmk_2_2_server"></a>Planning for DirectAccess server deployment  
 There are a number of decisions to make when planning to deploy your DirectAccess server:  
   
--   **Network topology**—There are two topologies available when deploying a DirectAccess server:  
+-   **Network topology** -There are two topologies available when deploying a DirectAccess server:  
   
-    -   **Two adapters**—With two network adapters, DirectAccess can be configured with one network adapter connected directly to the Internet, and the other is connected to the internal network. Or alternatively the server is installed behind an edge device such as a firewall or a router. In this configuration one network adapter is connected to the perimeter network, the other is connected to the internal network.  
+    -   **Two adapters** -With two network adapters, DirectAccess can be configured with one network adapter connected directly to the Internet, and the other is connected to the internal network. Or alternatively the server is installed behind an edge device such as a firewall or a router. In this configuration one network adapter is connected to the perimeter network, the other is connected to the internal network.  
   
-    -   **Single network adapter**—In this configuration the DirectAccess server is installed behind an edge device such as a firewall or a router. The network adapter is connected to the internal network.  
+    -   **Single network adapter** -In this configuration the DirectAccess server is installed behind an edge device such as a firewall or a router. The network adapter is connected to the internal network.  
   
--   **Network adapters**—The DirectAccess wizard automatically detects the network adapters configured on the DirectAccess server. You can make sure that the correct adapters are selected from the **Review** page.  
+-   **Network adapters** -The DirectAccess wizard automatically detects the network adapters configured on the DirectAccess server. You can make sure that the correct adapters are selected from the **Review** page.  
   
--   **IP-HTTPS certificate**—Since there is no PKI required in this deployment, the wizard automatically provisions self-signed certificates for IP-HTTPS and the Network Location Server (if no certificates are present), and automatically enables Kerberos proxy. The wizard also enables NAT64 and DNS64 for protocol translation in the IPv4-only environment. After the wizard successfully completes applying the configuration, click **Close**.  
+-   **IP-HTTPS certificate** -Since there is no PKI required in this deployment, the wizard automatically provisions self-signed certificates for IP-HTTPS and the Network Location Server (if no certificates are present), and automatically enables Kerberos proxy. The wizard also enables NAT64 and DNS64 for protocol translation in the IPv4-only environment. After the wizard successfully completes applying the configuration, click **Close**.  
   
--   **Windows 7 clients**—You cannot enable support for Windows 7 clients from the Getting Started wizard. This can be enabled from the Advanced Setup Wizard. For more details, see [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
+-   **Windows 7 clients** -You cannot enable support for Windows 7 clients from the Getting Started wizard. This can be enabled from the Advanced Setup Wizard. For more details, see [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
   
--   **VPN configuration**—Before you configure DirectAccess, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (either because they are unmanaged or run an operating system for which DirectAccess is not supported). The Getting Started Wizard configures VPN IP address assignment using DHCP and configures VPN clients to be authenticated using Active Directory.  
+-   **VPN configuration** -Before you configure DirectAccess, decide if you are going to provide VPN access to remote clients. You should provide VPN access if you have client computers in your organization that do not support DirectAccess connectivity (either because they are unmanaged or run an operating system for which DirectAccess is not supported). The Getting Started Wizard configures VPN IP address assignment using DHCP and configures VPN clients to be authenticated using Active Directory.  
   
--   **Force Tunneling** — If you plan to use Force Tunneling, or might add it in the future, you should use [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) to deploy a two tunnel configuration. Because of security considerations, Force Tunneling in a single tunnel configuration is not supported.  
+-   **Force Tunneling** -If you plan to use Force Tunneling, or might add it in the future, you should use [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) to deploy a two tunnel configuration. Because of security considerations, Force Tunneling in a single tunnel configuration is not supported.  
   
 ## <a name="BKMK_Links"></a>Previous step  
   

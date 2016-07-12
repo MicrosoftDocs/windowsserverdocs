@@ -1,5 +1,5 @@
 ---
-title: Walkthrough: Workplace Join with a Windows Device
+title: Walkthrough - Workplace Join with a Windows Device
 ms.custom: 
   - AD
 ms.prod: windows-server-2012

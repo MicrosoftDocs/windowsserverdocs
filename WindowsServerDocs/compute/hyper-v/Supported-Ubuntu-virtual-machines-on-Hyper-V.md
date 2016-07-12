@@ -14,9 +14,9 @@ author: cwatsonmsft
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
->Applies To: Hyper-V Server 2012, Hyper-V Server 2012 R2, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server Technical Preview
+>Applies To: Windows Server Technical Preview, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Hyper-V Server 2012, Hyper-V Server 2012 R2, Windows 8, Windows 8.1
 
-Beginning with Ubuntu 12.04, loading the “linux-virtual” package installs a kernel suitable for use as a guest virtual machine. This package always depends on the latest minimal generic kernel image and headers used for virtual machines. While its use is optional, the linux-virtual kernel will load fewer drivers than a more generic image.  
+Beginning with Ubuntu 12.04, loading the "linux-virtual" package installs a kernel suitable for use as a guest virtual machine. This package always depends on the latest minimal generic kernel image and headers used for virtual machines. While its use is optional, the linux-virtual kernel will load fewer drivers than a more generic image.  
   
 To get full use of Hyper-V, load the appropriate linux-tools and linux-cloud-tools packages, which installs tools and daemons for use with virtual machines. When using the linux-virtual kernel, load linux-tools-virtual and linux-cloud-tools-virtual.  
   
@@ -24,46 +24,46 @@ The following feature distribution map indicates the features in each version. T
   
 **Table legend**  
   
--   **Built in** – LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution, so don't install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
+-   **Built in** - LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution, so don't install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.  
   
--   **v** - Feature available  
+-   &#10004; - Feature available  
   
 -   (*blank*) - Feature not available  
   
 |**Feature**|**Windows Server operating system version**|**16.04**|**15.10**|**14.04**|**12.04**|  
 |-|-|-|-|-|-|  
 |**Availability**||Built-in|Built-in|Built-in|Built-in|  
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|v|v|v|v|  
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||  
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|v|v|v|v|  
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|v|v|v|v|  
-|Live migration|2016, 2012 R2, 2012, 2008 R2|v|v|v|v|  
-|Static IP Injection|2016, 2012 R2, 2012|v Note 1|v Note 1|v Note 1|v Note 1|  
-|vRSS|2016, 2012 R2|v|v|v||  
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|v|v|v||  
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
+|Live migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
+|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|  
+|vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
+|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||  
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||  
-|VHDX resize|2016, 2012 R2|v|v|v||  
-|Virtual Fibre Channel|2016, 2012 R2|v Note 2|v Note 2|v Note 2||  
-|Live virtual machine backup|2016, 2012 R2|v Note 3, 4, 5|v Note 3, 4, 6|v Note 3, 4, 5||  
-|TRIM support|2016, 2012 R2|v|v|v||  
-|SCSI WWN|2016, 2012 R2|v||||  
+|VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
+|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||  
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 6|&#10004; Note 3, 4, 5||  
+|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
+|SCSI WWN|2016, 2012 R2|&#10004;||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|||  
-|Configuration of MMIO gap|2016, 2012 R2|v|v|v|v|  
-|Dynamic Memory – Hot Add|2016, 2012 R2, 2012|v Note 7, 8, 9|v Note 7, 8, 9|v Note 7, 8, 9||  
-|Dynamic Memory – Ballooning|2016, 2012 R2, 2012|v Note 7, 8, 9|v Note 7, 8, 9|v Note 7, 8, 9||  
+|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
+|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||  
 |Manual Memory Hot Add|2016|||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||  
-|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|v|v|v||  
+|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||  
-|Key/value pair|2016, 2012 R2, 2012, 2008 R2|v Note 5, 10|v Note 6, 10|v Note 5, 10|v Note 5, 10|  
-|Non-Maskable Interrupt|2016, 2012 R2|v|v|v|v|  
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|v|v|v|v|  
-|File copy from host to guest|2016, 2012 R2|v|v|v||  
+|Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 5, 10|&#10004; Note 6, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|  
+|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
+|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||  
 |Hyper-V Sockets|2016|||||  
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||  
-|Boot using UEFI|2016, 2012 R2|v Note 11, 12|v Note 11, 12|v Note 11, 12||  
-|Secure boot|2016|v|v|v||  
+|Boot using UEFI|2016, 2012 R2|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12||  
+|Secure boot|2016|&#10004;|&#10004;|&#10004;||  
   
 ## <a name="BKMK_notes"></a>Notes  
   
@@ -105,9 +105,9 @@ The following feature distribution map indicates the features in each version. T
       
     On  Ubuntu 12.04, 14.04, and 16.04 the Hyper-V daemons are in a separately installed package:  
    
-    -   **VSS Snapshot daemon** – This daemon is required to create live Linux virtual machine backups.  
-    -   **KVP daemon** – This daemon allows setting and querying intrinsic and extrinsic key value pairs.  
-    -   **fcopy daemon** – This daemon implements a file copying service between the host and guest.  
+    -   **VSS Snapshot daemon** - This daemon is required to create live Linux virtual machine backups.  
+    -   **KVP daemon** - This daemon allows setting and querying intrinsic and extrinsic key value pairs.  
+    -   **fcopy daemon** - This daemon implements a file copying service between the host and guest.  
       
     To install the Hyper-V daemons on 16.04, run the following commands as root (or sudo):  
   
@@ -144,9 +144,9 @@ The following feature distribution map indicates the features in each version. T
       
     On 15.10, the following daemons are installed from a separate package.  
    
-    -   **VSS Snapshot daemon** – This daemon is required to create live Linux virtual machine backups.  
-    -   **KVP daemon** – This daemon allows setting and querying intrinsic and extrinsic key value pairs.  
-    -   **fcopy daemon** – This daemon implements a file copying service between the host and guest.  
+    -   **VSS Snapshot daemon** - This daemon is required to create live Linux virtual machine backups.  
+    -   **KVP daemon** - This daemon allows setting and querying intrinsic and extrinsic key value pairs.  
+    -   **fcopy daemon** - This daemon implements a file copying service between the host and guest.  
    
     To install these daemons when using the run the following commands as root (or sudo):  
    
@@ -170,7 +170,7 @@ The following feature distribution map indicates the features in each version. T
 11. On  Windows Server 2012 R2  Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:  
    
     ```  
-    Set-VMFirmware –VMName "VMname" -EnableSecureBoot Off  
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off  
   
     ```  
   
@@ -187,7 +187,7 @@ The following feature distribution map indicates the features in each version. T
     3.  Copy the ubuntu directory in to a new directory named boot:  
   
         ```  
-        # sudo cp –r ubuntu/ boot  
+        # sudo cp -r ubuntu/ boot  
   
         ```  
           
@@ -221,7 +221,7 @@ The following feature distribution map indicates the features in each version. T
   
 -   [Set-VMFirmware](http://technet.microsoft.com/library/dn464287.aspx)  
   
--   [Ubuntu 14.04 in a Generation 2 VM - Ben Armstrong’s Virtualization Blog](http://blogs.msdn.com/b/virtual_pc_guy/archive/2014/06/09/ubuntu-14-04-in-a-generation-2-vm.aspx)  
+-   [Ubuntu 14.04 in a Generation 2 VM - Ben Armstrong's Virtualization Blog](http://blogs.msdn.com/b/virtual_pc_guy/archive/2014/06/09/ubuntu-14-04-in-a-generation-2-vm.aspx)  
   
 
 

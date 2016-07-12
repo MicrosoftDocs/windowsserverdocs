@@ -65,11 +65,11 @@ You must be a member of **Domain Admins**, or equivalent to perform these proced
   
 2.  In the Group Policy Management console, ensure that **Group Policy Objects** is selected, and in the details pane right-click the BranchCache client computers GPO that you created previously. For example, if you named your GPO BranchCache Client Computers, right-click **BranchCache Client Computers**. Click **Edit**. The Group Policy Management Editor console opens.  
   
-3.  In the Group Policy Management Editor console, expand the following path: **Computer Configuration**, **Policies**, **Windows Settings**, **Security Settings**, **Windows Firewall with Advanced Security**, **Windows Firewall with Advanced Security – LDAP…**, **Inbound Rules**.  
+3.  In the Group Policy Management Editor console, expand the following path: **Computer Configuration**, **Policies**, **Windows Settings**, **Security Settings**, **Windows Firewall with Advanced Security**, **Windows Firewall with Advanced Security - LDAP**, **Inbound Rules**.  
   
 4.  Right-click **Inbound Rules**, and then click **New Rule**. The New Inbound Rule Wizard opens.  
   
-5.  In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache – Content Retrieval (Uses HTTP)**. Click **Next**.  
+5.  In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache - Content Retrieval (Uses HTTP)**. Click **Next**.  
   
 6.  In **Predefined Rules**, click **Next**.  
   
@@ -80,7 +80,7 @@ You must be a member of **Domain Admins**, or equivalent to perform these proced
   
 8.  To create the WS-Discovery firewall exception, again right-click **Inbound Rules**, and then click **New Rule**. The New Inbound Rule Wizard opens.  
   
-9. In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache – Peer Discovery (Uses WSD)**. Click **Next**.  
+9. In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache - Peer Discovery (Uses WSD)**. Click **Next**.  
   
 10. In **Predefined Rules**, click **Next**.  
   
@@ -93,7 +93,7 @@ You must be a member of **Domain Admins**, or equivalent to perform these proced
   
 1.  In the Group Policy Management Editor console, right-click **Outbound Rules**, and then click **New Rule**. The New Outbound Rule Wizard opens.  
   
-2.  In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache – Content Retrieval (Uses HTTP)**. Click **Next**.  
+2.  In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache - Content Retrieval (Uses HTTP)**. Click **Next**.  
   
 3.  In **Predefined Rules**, click **Next**.  
   
@@ -104,7 +104,7 @@ You must be a member of **Domain Admins**, or equivalent to perform these proced
   
 5.  To create the WS-Discovery firewall exception, again right-click **Outbound Rules**, and then click **New Rule**. The New Outbound Rule Wizard opens.  
   
-6.  In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache – Peer Discovery (Uses WSD)**. Click **Next**.  
+6.  In **Rule Type**, click **Predefined**, expand the list of choices, and then click **BranchCache - Peer Discovery (Uses WSD)**. Click **Next**.  
   
 7.  In **Predefined Rules**, click **Next**.  
   

@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -35,7 +35,7 @@ Active Directory Recycle Bin, starting in Windows Server 2008 R2, builds on the 
 
 When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. Active Directory Recycle Bin works for both AD DS and AD LDS environments. For a detailed description of Active Directory Recycle Bin, see [What's New in AD DS: Active Directory Recycle Bin](http://technet.microsoft.com/library/dd391916(WS.10).aspx).
 
-**What’s new?** In  Windows Server 2012 , the Active Directory Recycle Bin feature has been enhanced with a new graphical user interface for users to manage and restore deleted objects. Users can now visually locate a list of deleted objects and restore them to their original or desired locations.
+**What's new?** In  Windows Server 2012 , the Active Directory Recycle Bin feature has been enhanced with a new graphical user interface for users to manage and restore deleted objects. Users can now visually locate a list of deleted objects and restore them to their original or desired locations.
 
 If you plan to enable Active Directory Recycle Bin in  Windows Server 2012 , consider the following:
 
@@ -48,7 +48,7 @@ If you plan to enable Active Directory Recycle Bin in  Windows Server 2012 , con
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows® 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 ### Active Directory Recycle Bin step-by-step
 In the following steps, you will use ADAC to perform the following Active Directory Recycle Bin tasks in  Windows Server 2012 :
@@ -80,10 +80,10 @@ In this step, you will raise the forest functional level. You must first raise t
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Set-ADForestMode –Identity contoso.com -ForestMode Windows2008R2Forest –Confirm:$false
+Set-ADForestMode -Identity contoso.com -ForestMode Windows2008R2Forest -Confirm:$false
 ```
 
-For the **–Identity** argument, specify the fully qualified DNS name.
+For the **-Identity** argument, specify the fully qualified DNS name.
 
 ### <a name="bkmk_enable_recycle_bin"></a>Step 2: Enable Recycle Bin
 In this step, you will enable the Recycle Bin to restore deleted objects in AD DS.
@@ -103,7 +103,7 @@ In this step, you will enable the Recycle Bin to restore deleted objects in AD D
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Enable-ADOptionalFeature –Identity 'CN=Recycle Bin Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com' –Scope ForestOrConfigurationSet –Target 'contoso.com'
+Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com' -Scope ForestOrConfigurationSet -Target 'contoso.com'
 ```
 
 ### <a name="bkmk_create_test_env"></a>Step 3: Create test users, group and organizational unit
@@ -172,7 +172,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-1..2 | ForEach-Object {New-ADUser -SamAccountName test$_ -Name "test$_" –Path "DC=fabrikam,DC=com" -AccountPassword (ConvertTo-SecureString -AsPlainText "p@ssword1" -Force) -Enabled $true}
+1..2 | ForEach-Object {New-ADUser -SamAccountName test$_ -Name "test$_" -Path "DC=fabrikam,DC=com" -AccountPassword (ConvertTo-SecureString -AsPlainText "p@ssword1" -Force) -Enabled $true}
 New-ADGroup -Name "group1" -SamAccountName group1 -GroupCategory Security -GroupScope Global -DisplayName "group1"
 New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
@@ -194,7 +194,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
     ```
-    Get-ADUser –Filter 'Name –Like "*test*"'|Remove-ADUser -Confirm:$false
+    Get-ADUser -Filter 'Name -Like "*test*"'|Remove-ADUser -Confirm:$false
     ```
 
 4.  Navigate to the **Deleted Objects** container, select **test2** and **test1** and then click **Restore** in the **Tasks** pane.
@@ -209,7 +209,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 ![](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
 ```
-Get-ADObject –Filter 'Name –Like "*test*"' –IncludeDeletedObjects | Restore-ADObject
+Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
 ```
 
 ##### To restore deleted objects to a different location
@@ -231,7 +231,7 @@ Get-ADObject –Filter 'Name –Like "*test*"' –IncludeDeletedObjects | Restor
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Get-ADObject –Filter 'Name –Like "*test*"' –IncludeDeletedObjects | Restore-ADObject –TargetPath "OU=OU1,DC=contoso,DC=com"
+Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject -TargetPath "OU=OU1,DC=contoso,DC=com"
 ```
 
 ## <a name="fine_grained_pswd_policy_mgmt"></a>Fine-Grained Password Policy
@@ -239,7 +239,7 @@ The Windows Server 2008 operating system provides organizations with a way to de
 
 You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. In other cases, you might want to apply a special password policy for accounts whose passwords are synchronized with other data sources. For a detailed description of Fine-Grained Password Policy, see [AD DS: Fine-Grained Password Policies](http://technet.microsoft.com/library/cc770394(WS.10).aspx)
 
-**What’s new?** In  Windows Server 2012 , fine-grained password policy management is made easier and more visual by providing a user interface for AD DS administrators to manage them in ADAC. Administrators can now view a given user’s resultant policy, view and sort all password policies within a given domain, and manage individual password policies visually.
+**What's new?** In  Windows Server 2012 , fine-grained password policy management is made easier and more visual by providing a user interface for AD DS administrators to manage them in ADAC. Administrators can now view a given user's resultant policy, view and sort all password policies within a given domain, and manage individual password policies visually.
 
 If you plan to use fine-grained password policies in  Windows Server 2012 , consider the following:
 
@@ -250,7 +250,7 @@ If you plan to use fine-grained password policies in  Windows Server 2012 , cons
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows® 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 ### Fine-Grained Password Policy step-by-step
 In the following steps, you will use ADAC to perform the following fine-grained password policy tasks:
@@ -395,12 +395,12 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
 ```
-Set-ADFineGrainedPasswordPolicy –Identity TestPswd –ProtectedFromAccidentalDeletion $False
+Set-ADFineGrainedPasswordPolicy -Identity TestPswd -ProtectedFromAccidentalDeletion $False
 Remove-ADFineGrainedPasswordPolicy TestPswd -Confirm
 ```
 
 ## <a name="windows_powershell_history_viewer"></a>Windows PowerShell History Viewer
-ADAC is a user interface tool built on top of Windows PowerShell.  In  Windows Server 2012 , IT administrators can leverage ADAC to learn Windows PowerShell for Active Directory cmdlets by using the Windows PowerShell History Viewer. As actions are executed in the user interface, the equivalent Windows PowerShell command is shown to the user in Windows PowerShell History Viewer. This allows administrators to create automated scripts and reduce repetitive tasks, thus increasing IT productivity.  Also, this feature reduces the time to learn Windows PowerShell for Active Directory and increases the users’ confidence in the correctness of their automation scripts.
+ADAC is a user interface tool built on top of Windows PowerShell.  In  Windows Server 2012 , IT administrators can leverage ADAC to learn Windows PowerShell for Active Directory cmdlets by using the Windows PowerShell History Viewer. As actions are executed in the user interface, the equivalent Windows PowerShell command is shown to the user in Windows PowerShell History Viewer. This allows administrators to create automated scripts and reduce repetitive tasks, thus increasing IT productivity.  Also, this feature reduces the time to learn Windows PowerShell for Active Directory and increases the users' confidence in the correctness of their automation scripts.
 
 When using the Windows PowerShell History Viewer in  Windows Server 2012  consider the following:
 
@@ -409,7 +409,7 @@ When using the Windows PowerShell History Viewer in  Windows Server 2012  consid
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) on  Windows Server 2012  computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     > 
-    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows® 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
+    > You can use [RSAT](http://go.microsoft.com/fwlink/?LinkID=238560) on Windows&reg; 8 computers to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
 
 -   Have some basic Windows PowerShell knowledge. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](http://technet.microsoft.com/library/ee176927.aspx).
 

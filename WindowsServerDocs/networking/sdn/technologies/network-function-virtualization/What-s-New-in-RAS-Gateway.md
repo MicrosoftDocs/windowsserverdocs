@@ -15,10 +15,10 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server® 2016 Technical Preview. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
+You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in Windows Server 2016 Technical Preview. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
   
 > [!NOTE]  
-> In Windows Server® 2012 R2, RAS Gateway is named RRAS Gateway; and in System Center Virtual Machine Manager, RAS Gateway is named Windows Server Gateway.  
+> In Windows Server 2012 R2, RAS Gateway is named RRAS Gateway; and in System Center Virtual Machine Manager, RAS Gateway is named Windows Server Gateway.  
   
 This topic contains the following sections.  
   
@@ -35,7 +35,7 @@ This topic contains the following sections.
 ## <a name="bkmk_s2s"></a>Site-to-site Connectivity Options  
 RAS Gateway now supports three types of VPN site-to-site connections:  Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networking (VPN), Layer 3 (L3) VPN, and Generic Routing Encapsulation (GRE) tunnels.  
   
-For more information about GRE, see [GRE Tunneling in Windows Server Technical Preview](../../../remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
+For more information about GRE, see [GRE Tunneling in Windows Server Technical Preview](../../../remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 ## <a name="bkmk_pools"></a>Gateway Pools  
 In Windows Server 2016 Technical Preview, you can create gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks. Gateway pools can perform any of the individual gateway functions - Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networking (VPN), Layer 3 (L3) VPN, and Generic Routing Encapsulation (GRE) tunnels - or the pool can perform all of these functions and act as a mixed pool.  

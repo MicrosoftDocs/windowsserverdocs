@@ -1,9 +1,9 @@
----
+ï»¿---
 title: Determining the Interval
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -47,7 +47,7 @@ With a store-and-forward replication strategy, it is difficult to determine just
   
 -   Combine these maximum latencies to determine the maximum latency for the entire network.  
   
-    For example, if the maximum latency between Seattle and its satellite site in Los Angeles is one day, the maximum replication latency for this set of links (Washington, D.C.–New York–Seattle–Los Angeles) is 31 hours, that is, 4 (Washington, D.C.–New York) + 3 (New York–Seattle) + 24 (Seattle–Los Angeles), as shown in the following table.  
+    For example, if the maximum latency between Seattle and its satellite site in Los Angeles is one day, the maximum replication latency for this set of links (Washington, D.C.-New York-Seattle-Los Angeles) is 31 hours, that is, 4 (Washington, D.C.-New York) + 3 (New York-Seattle) + 24 (Seattle-Los Angeles), as shown in the following table.  
   
     |Sites|Seattle|Boston|Los Angeles|New York|Washington, D.C.|  
     |---------|-----------|----------|---------------|------------|--------------------|  

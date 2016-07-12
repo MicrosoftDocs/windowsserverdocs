@@ -20,7 +20,7 @@ author: KBDAzure
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
@@ -30,7 +30,7 @@ For more information about best practices and scans, see [Run Best Practices Ana
 In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.  
   
 ## **Issue**  
-*Some virtual switches are bound to a team interface but the team interface doesn’t pass traffic on all VLANs to the virtual switches.*  
+*Some virtual switches are bound to a team interface but the team interface doesn't pass traffic on all VLANs to the virtual switches.*  
   
 ## **Impact**  
 *The following virtual switches cannot have access to all VLANs: \n{0}*  

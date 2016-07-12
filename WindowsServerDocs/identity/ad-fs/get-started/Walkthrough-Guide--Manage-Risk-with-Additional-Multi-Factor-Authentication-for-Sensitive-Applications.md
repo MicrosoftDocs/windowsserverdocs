@@ -1,5 +1,5 @@
 ---
-title: Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
+title: Walkthrough Guide - Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
 ms.custom: 
   - AD
 ms.prod: windows-server-2012
@@ -17,7 +17,7 @@ ms.assetid: ccef8246-4c26-4295-9d15-650812c039cd
 
 
 ## About This Guide
-This walkthrough provides instructions for configuring multifactor authentication (MFA) in Active Directory Federation Services (AD FS) in Windows Server® 2012 R2 based on the user’s group membership data.
+This walkthrough provides instructions for configuring multifactor authentication (MFA) in Active Directory Federation Services (AD FS) in Windows Server 2012 R2 based on the user's group membership data.
 
 For more information about MFA and authentication mechanisms in AD FS, see [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md).
 
@@ -34,9 +34,9 @@ This walkthrough consists of the following sections:
 ## <a name="BKMK_1"></a>Step 1: Setting up the lab environment
 In order to complete this walkthrough, you need an environment that consists of the following components:
 
--   An Active Directory domain with a test user and group accounts, running on Windows Server® 2012 R2 or an Active Directory domain running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to Windows Server® 2012 R2
+-   An Active Directory domain with a test user and group accounts, running on Windows Server 2012 R2 or an Active Directory domain running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to Windows Server 2012 R2
 
--   A federation server running on Windows Server® 2012 R2
+-   A federation server running on Windows Server 2012 R2
 
 -   A web server that hosts your sample application
 
@@ -61,7 +61,7 @@ In this step you will verify the default AD FS access control mechanism (**Forms
     You will be granted access to the application.
 
 ## <a name="BKMK_3"></a>Step 3: Configure MFA on your federation server
-There are two parts to configuring MFA in AD FS in Windows Server® 2012 R2:
+There are two parts to configuring MFA in AD FS in Windows Server 2012 R2:
 
 -   [Select an additional authentication method](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
 
@@ -70,7 +70,7 @@ There are two parts to configuring MFA in AD FS in Windows Server® 2012 R2:
 ### <a name="BKMK_5"></a>Select an additional authentication method
 In order to set up MFA, you must select an additional authentication method. In this walkthrough, for additional authentication method, you can choose between the following options:
 
--   Select [Certificate authentication](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in AD FS in Windows Server® 2012 R2 by default
+-   Select [Certificate authentication](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) method that is available in AD FS in Windows Server 2012 R2 by default
 
 -   Configure and select [Windows Azure Multi-Factor Authentication](../../ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8)
 
@@ -88,7 +88,7 @@ Complete either of the following procedures to select Certificate authentication
 1.  On your federation server, open the Windows PowerShell command window and run the following command:
 
     ```
-    Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationProvider CertificateAuthentication
+    Set-AdfsGlobalAuthenticationPolicy -AdditionalAuthenticationProvider CertificateAuthentication
 
     ```
 
@@ -120,17 +120,17 @@ Complete the following procedures in order to download and configure and select 
 
 6.  Fill in the following fields and select **Create**.
 
-    1.  **Name** – The name of the Multi-Factor Auth Provider.
+    1.  **Name** - The name of the Multi-Factor Auth Provider.
 
-    2.  **Usage Model** – The usage model of the Multi-Factor Authentication Provider.
+    2.  **Usage Model** - The usage model of the Multi-Factor Authentication Provider.
 
-        -   **Per Authentication** – purchasing model that charges per authentication. Typically used for scenarios that use Windows Azure Multi-Factor Authentication in a consumer-facing application.
+        -   **Per Authentication** - purchasing model that charges per authentication. Typically used for scenarios that use Windows Azure Multi-Factor Authentication in a consumer-facing application.
 
-        -   **Per Enabled User** – purchasing model that charges per enabled user.  Typically used for employee-facing scenarios such as Office 365.
+        -   **Per Enabled User** - purchasing model that charges per enabled user.  Typically used for employee-facing scenarios such as Office 365.
 
         For additional information on usage models, see [Windows Azure pricing details](http://www.windowsazure.com/pricing/details/active-directory/).
 
-    3.  **Directory** – The Windows Azure Active Directory tenant that the Multi-Factor Authentication Provider is associated with. This is optional as the provider does not have to be linked to Windows Azure Active Directory when securing on-premises applications.
+    3.  **Directory** - The Windows Azure Active Directory tenant that the Multi-Factor Authentication Provider is associated with. This is optional as the provider does not have to be linked to Windows Azure Active Directory when securing on-premises applications.
 
 7.  Once you click create, the Multi-Factor Authentication Provider will be created and you should see a message stating:  Successfully created Multi-Factor Authentication Provider.  Click **Ok**.
 
@@ -173,7 +173,7 @@ You are now ready to launch the Windows Azure Multi-Factor Authentication server
 
 5.  In the **Users** list, select the **Robert Hatley** account, click **Edit**, and in the **Edit User** window, provide a cell phone number of this account, make sure the **Enabled** checkbox is checked, and then click **Apply**.
 
-6.  In the **Users** list, select the **Robert Hatley** account, and click **Test**. In the **Test User** window, provide the credentials for the **Robert Hatley** account. When the cell phone rings, press ‘#’ to complete the account verification.
+6.  In the **Users** list, select the **Robert Hatley** account, and click **Test**. In the **Test User** window, provide the credentials for the **Robert Hatley** account. When the cell phone rings, press '#' to complete the account verification.
 
 7.  In the **Multi-Factor Authentication Server** user interface, select the **AD FS** icon, make sure that **Allow user enrollment**, **Allow users to select method** (including **Phone call** and **Text message**), **Use security questions for fallback** and **Enable logging** checkboxes are checked, click **Install AD FS Adapter**, and complete the **Multi-Factor Authentication AD FS Adapter** installation wizard.
 
@@ -198,7 +198,7 @@ In order to enable MFA, you must set up the MFA policy on your federation server
 
 You can set up the MFA policy either via the AD FS Management Console or using the Windows PowerShell.
 
-##### To configure the MFA policy based on user’s group membership data for ‘claimapp’  via the AD FS Management Console
+##### To configure the MFA policy based on user's group membership data for 'claimapp'  via the AD FS Management Console
 
 1.  On your federation server, in the AD FS Management Console, navigate to **Authentication Policies**\\**Per Relying Party Trust** node, and select the relying party trust that represents your sample application (**claimapp**).
 
@@ -208,19 +208,19 @@ You can set up the MFA policy either via the AD FS Management Console or using t
 
 4.  Click **OK** in the **Edit Relying Party Trust for claimapp** window.
 
-##### To configure the MFA policy based on user’s group membership data for ‘claimapp’  via Windows PowerShell
+##### To configure the MFA policy based on user's group membership data for 'claimapp'  via Windows PowerShell
 
 1.  On your federation server, open the Windows PowerShell command window and run the following command:
 
     ```
-    $rp = Get-AdfsRelyingPartyTrust –Name claimapp
+    $rp = Get-AdfsRelyingPartyTrust -Name claimapp
     ```
 
 2.  In the same Windows PowerShell command window, run the following command:
 
     ```
-    $GroupMfaClaimTriggerRule = ‘c:[Type == “http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid”, Value =~ “^(?i) <group_SID>$”] => issue(Type = “http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod”, Value = “http://schemas.microsoft.com/claims/multipleauthn”);’
-    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules $GroupMfaClaimTriggerRule
+    $GroupMfaClaimTriggerRule = 'c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i) <group_SID>$"] => issue(Type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn");'
+    Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -AdditionalAuthenticationRules $GroupMfaClaimTriggerRule
 
     ```
 

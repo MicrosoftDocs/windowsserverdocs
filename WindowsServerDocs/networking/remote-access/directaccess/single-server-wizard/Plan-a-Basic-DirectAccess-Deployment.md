@@ -9,13 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d12632d7-4f47-4b4e-a4ad-f18322d726e2
-author: vhorne
+author: coreyp
 ---
 # Plan a Basic DirectAccess Deployment
 
 >Applies To: Windows Server Technical Preview
 
-This topic describes the planning steps required to deploy a single DirectAccess server running Windows Server® 2016 Technical Preview, Windows Server® 2012 R2, or Windows Server® 2012 with basic features:  
+This topic describes the planning steps required to deploy a single DirectAccess server running Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2, or Windows Server&reg; 2012 with basic features:  
   
 1.  [Step 1: Plan the DirectAccess Infrastructure](../../../remote-access/directaccess/single-server-advanced/Step-1--Plan-the-DirectAccess-Infrastructure.md)—Plan network and server topology, firewall settings, certificate requirements, DNS and Active Directory.  
   

@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -16,7 +16,7 @@ ms.assetid: ce8888a3-ba77-47f1-9e8e-a9bcbfd9a37c
 
 >Applies To: Windows Server Technical Preview
 
-Virtualization of Active Directory Domain Services (AD DS) environments has been ongoing for a number of years. Beginning with Windows Server® 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization-safe capabilities and enabling rapid deployment of virtual domain controllers through cloning. These new virtualization features provide greater support for public and private clouds, hybrid environments where portions of AD DS exist on-premises and in the cloud, and AD DS infrastructures that reside completely on-premises.
+Virtualization of Active Directory Domain Services (AD DS) environments has been ongoing for a number of years. Beginning with Windows Server 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization-safe capabilities and enabling rapid deployment of virtual domain controllers through cloning. These new virtualization features provide greater support for public and private clouds, hybrid environments where portions of AD DS exist on-premises and in the cloud, and AD DS infrastructures that reside completely on-premises.
 
 **In this document**
 
@@ -29,20 +29,20 @@ Virtualization of Active Directory Domain Services (AD DS) environments has been
 -   [Troubleshooting](../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#troubleshooting)
 
 ## <a name="safe_virt_dc"></a>Safe virtualization of domain controllers
-Virtual environments present unique challenges to distributed workloads that depend upon a logical clock-based replication scheme. AD DS replication, for example, uses a monotonically increasing value (known as a USN or Update Sequence Number) assigned to transactions on each domain controller. Each domain controller’s database instance is also given an identity, known as an InvocationID. The InvocationID of a domain controller and its USN together serve as a unique identifier associated with every write-transaction performed on each domain controller and must be unique within the forest.
+Virtual environments present unique challenges to distributed workloads that depend upon a logical clock-based replication scheme. AD DS replication, for example, uses a monotonically increasing value (known as a USN or Update Sequence Number) assigned to transactions on each domain controller. Each domain controller's database instance is also given an identity, known as an InvocationID. The InvocationID of a domain controller and its USN together serve as a unique identifier associated with every write-transaction performed on each domain controller and must be unique within the forest.
 
-AD DS replication uses InvocationID and USNs on each domain controller to determine what changes need to be replicated to other domain controllers. If a domain controller is rolled back in time outside of the domain controller’s awareness and a USN is reused for an entirely different transaction, replication will not converge because other domain controllers will believe they have already received the updates associated with the re-used USN under the context of that InvocationID.
+AD DS replication uses InvocationID and USNs on each domain controller to determine what changes need to be replicated to other domain controllers. If a domain controller is rolled back in time outside of the domain controller's awareness and a USN is reused for an entirely different transaction, replication will not converge because other domain controllers will believe they have already received the updates associated with the re-used USN under the context of that InvocationID.
 
-For example, the following illustration shows the sequence of events that occurs in Windows Server 2008 R2 and earlier operating systems when USN rollback is detected on VDC2, the destination domain controller that is running on a virtual machine. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value that was seen previously by the replication partner, which indicates that VDC2’s database has rolled back in time improperly.
+For example, the following illustration shows the sequence of events that occurs in Windows Server 2008 R2 and earlier operating systems when USN rollback is detected on VDC2, the destination domain controller that is running on a virtual machine. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value that was seen previously by the replication partner, which indicates that VDC2's database has rolled back in time improperly.
 
 ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_Exampleofhowreplicationcanbecomeinconsistent.png)
 
-A virtual machine (VM) makes it easy for hypervisor administrators to roll back a domain controller’s USNs (its logical clock) by, for example, applying a snapshot outside of the domain controller’s awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](http://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback).
+A virtual machine (VM) makes it easy for hypervisor administrators to roll back a domain controller's USNs (its logical clock) by, for example, applying a snapshot outside of the domain controller's awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](http://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback).
 
 Beginning with  Windows Server 2012 , AD DS virtual domain controllers hosted on hypervisor platforms that expose an identifier called VM-Generation ID can detect and employ necessary safety measures to protect the AD DS environment if the virtual machine is rolled back in time by the application of a VM snapshot. The VM-GenerationID design uses a hypervisor-vendor independent mechanism to expose this identifier in the address space of the guest virtual machine, so the safe virtualization experience is consistently available of any hypervisor that supports VM-GenerationID. This identifier can be sampled by services and applications running inside the virtual machine to detect if a virtual machine has been rolled back in time.
 
 ### <a name="BKMK_HowSafeguardsWork"></a>How do these virtualization safeguards work?
-During domain controller installation, AD DS initially stores the VM GenerationID identifier as part of the msDS-GenerationID attribute on the domain controller’s computer object in its database (often referred to as the directory information tree, or DIT). The VM GenerationID is independently tracked by a Windows driver inside the virtual machine.
+During domain controller installation, AD DS initially stores the VM GenerationID identifier as part of the msDS-GenerationID attribute on the domain controller's computer object in its database (often referred to as the directory information tree, or DIT). The VM GenerationID is independently tracked by a Windows driver inside the virtual machine.
 
 When an administrator restores the virtual machine from a previous snapshot, the current value of the VM GenerationID from the virtual machine driver is compared against a value in the DIT.
 
@@ -56,10 +56,10 @@ The following illustration shows how virtualization safeguards are applied when 
 
 In this case, when the hypervisor detects a change to VM-GenerationID value, virtualization safeguards are triggered, including the reset of the InvocationID for the virtualized DC (from A to B in the preceding example) and updating the VM-GenerationID value saved on the VM to match the new value (G2) stored by the hypervisor. The safeguards ensure that replication converges for both domain controllers.
 
-With  Windows Server 2012 , AD DS employs safeguards on virtual domain controllers hosted on VM-GenerationID aware hypervisors and ensures that the accidental application of snapshots or other such hypervisor-enabled mechanisms that could ‘rollback’ a virtual machine’s state does not disrupt the AD DS environment (by preventing replication problems such as a USN bubble or lingering objects). However, restoring a domain controller by applying a virtual machine snapshot is not recommended as an alternative mechanism to backing up a domain controller. It is recommended that you continue to use Windows Server Backup or other VSS-writer based backup solutions.
+With  Windows Server 2012 , AD DS employs safeguards on virtual domain controllers hosted on VM-GenerationID aware hypervisors and ensures that the accidental application of snapshots or other such hypervisor-enabled mechanisms that could rollback a virtual machine's state does not disrupt the AD DS environment (by preventing replication problems such as a USN bubble or lingering objects). However, restoring a domain controller by applying a virtual machine snapshot is not recommended as an alternative mechanism to backing up a domain controller. It is recommended that you continue to use Windows Server Backup or other VSS-writer based backup solutions.
 
 > [!CAUTION]
-> If a domain controller in a production environment is accidentally reverted to a snapshot, it’s advised that you consult the vendors for the applications, and services hosted on that virtual machine, for guidance on verifying the state of these programs after snapshot restore.
+> If a domain controller in a production environment is accidentally reverted to a snapshot, it's advised that you consult the vendors for the applications, and services hosted on that virtual machine, for guidance on verifying the state of these programs after snapshot restore.
 
 For more information, see [Virtualized domain controller safe restore architecture](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md#BKMK_SafeRestoreArch).
 
@@ -92,7 +92,7 @@ With the virtual machine provisioning typically under the purview of the hypervi
 > Anyone allowed to administer the hypervisor that hosts a virtual domain controller must be highly trusted and audited in the environment.
 
 ### How does virtual domain controller cloning work?
-The process of cloning involves making a copy of an existing virtual domain controller’s VHD (or, for more complex configurations, the domain controller VM), authorizing it for cloning in AD DS and creating a clone configuration file. This reduces the number of steps and time involved in deploying a replica virtual domain controller by eliminating otherwise repetitive deployment tasks.
+The process of cloning involves making a copy of an existing virtual domain controller's VHD (or, for more complex configurations, the domain controller VM), authorizing it for cloning in AD DS and creating a clone configuration file. This reduces the number of steps and time involved in deploying a replica virtual domain controller by eliminating otherwise repetitive deployment tasks.
 
 The clone domain controller uses the following criteria to detect that it is a copy of another domain controller:
 
@@ -123,12 +123,12 @@ For more information, see [Virtualized domain controller cloning architecture](.
 ### Cloning components
 The cloning components include new cmdlets in the Active Directory module for Windows PowerShell and associated XML files:
 
--   **New-ADDCCloneConfigFile** – This cmdlet creates and places DCCloneConfig.xml at the right location to ensure it is available to trigger cloning. It also performs prerequisite checks to ensure successful cloning. It is included in the Active Directory module for Windows PowerShell. You can run it locally on a virtualized domain controller that is being prepared for cloning, or you can run it remotely using the -offline option. You can specify settings for the clone domain controller, such as its name, site, and IP address.
+-   **New-ADDCCloneConfigFile** �" This cmdlet creates and places DCCloneConfig.xml at the right location to ensure it is available to trigger cloning. It also performs prerequisite checks to ensure successful cloning. It is included in the Active Directory module for Windows PowerShell. You can run it locally on a virtualized domain controller that is being prepared for cloning, or you can run it remotely using the -offline option. You can specify settings for the clone domain controller, such as its name, site, and IP address.
 
     The prerequisite checks that it performs are:
 
     > [!NOTE]
-    > The prerequisite checks are not performed when the –offline option is used. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#BKMK_OfflineMode).
+    > The prerequisite checks are not performed when the �"offline option is used. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/../ad-ds/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-.md#BKMK_OfflineMode).
 
     -   The DC being prepared is authorized for cloning (is a member of the **Cloneable Domain Controllers** group)
 
@@ -136,7 +136,7 @@ The cloning components include new cmdlets in the Active Directory module for Wi
 
     -   Any programs or services listed from running **Get-ADDCCloningExcludedApplicationList** are included in CustomDCCloneAllowList.xml (explained in more detail at the end of this list of cloning components).
 
--   **DCCloneConfig.xml** – To successfully clone a virtualized domain controller, this file must be present in the directory where the DIT resides, *%windir%\NTDS*, or the root of a removable media drive. Besides being used as one of the triggers to detect and initiate cloning, it also provides a means to specify configuration settings for the clone domain controller.
+-   **DCCloneConfig.xml** �" To successfully clone a virtualized domain controller, this file must be present in the directory where the DIT resides, *%windir%\NTDS*, or the root of a removable media drive. Besides being used as one of the triggers to detect and initiate cloning, it also provides a means to specify configuration settings for the clone domain controller.
 
     The schema and a sample file for the DCCloneConfig.xml file are stored on all  Windows Server 2012  computers at:
 
@@ -146,7 +146,7 @@ The cloning components include new cmdlets in the Active Directory module for Wi
 
     It is recommended that you use the New-ADDCCloneConfigFile cmdlet to create the DCCloneConfig.xml file. Although you could also use the schema file with an XML-aware editor to create this file, manually editing the file increases the likelihood of errors. If you edit the file, it must be done by using XML-aware editors, such as Visual Studio, [XML Notepad](http://www.microsoft.com/download/details.aspx?displaylang=en&id=7973), or third-party applications (do not use Notepad).
 
--   **Get-ADDCCloningExcludedApplicationList** – This cmdlet is run on the source domain controller before beginning the cloning process to determine which services or installed programs are not on the default supported list, DefaultDCCloneAllowList.xml, or a user-defined inclusion list named CustomDCCloneAllowList.xml file, and thereby have not been evaluated for cloning impact.
+-   **Get-ADDCCloningExcludedApplicationList** �" This cmdlet is run on the source domain controller before beginning the cloning process to determine which services or installed programs are not on the default supported list, DefaultDCCloneAllowList.xml, or a user-defined inclusion list named CustomDCCloneAllowList.xml file, and thereby have not been evaluated for cloning impact.
 
     This cmdlet searches the source domain controller for services in the Services Control Manager, and installed programs listed under **HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall** that are not specified in the default list (DefaultDCCloneAllowList.xml) or, if one is provided, the user-defined inclusion list (CustomDCCloneAllowList.xml file). The list of applications and services that is returned by running the cmdlet is the difference between what has already been provided in the DefaultDCCloneAllowList.xml or the CustomDCCloneAllowList.xml file and the list that is constructed at run time, based on what is installed on the source DC. The services and programs output from Get-ADDCCloningExcludedApplicationList can be added to the CustomDCCloneAllowList.xml file if you determine that the services and programs can be safely cloned. To determine if a service or installed program can be safely cloned, evaluate the following conditions:
 
@@ -171,9 +171,9 @@ The cloning components include new cmdlets in the Active Directory module for Wi
     |-Force|Overwrites an existing CustomDCCloneAllowList.XML file.|
     |-Path|Folder path to create the CustomDCCloneAllowList.XML.|
 
--   **DefaultDCCloneAllowList.xml** – This file is present by default on every  Windows Server 2012  domain controller in the *%windir%\system32*. It lists the services and installed programs that can be safely cloned by default. You must not change the location or contents of this file or cloning will fail.
+-   **DefaultDCCloneAllowList.xml** �" This file is present by default on every  Windows Server 2012  domain controller in the *%windir%\system32*. It lists the services and installed programs that can be safely cloned by default. You must not change the location or contents of this file or cloning will fail.
 
--   **CustomDCCloneAllowList.xml** – If you have services or installed programs that reside on your source domain controller that are outside of those listed in the DefaultDCCloneAllowList.xml file, those services and programs must be included in this file. To find the services or installed programs that are not listed in the in the DefaultDCCloneAllowList.xml file, run the **Get-ADDCCloningExcludedApplicationList** cmdlet. You should use the **–GenerateXml** argument to generate the XML file.
+-   **CustomDCCloneAllowList.xml** �" If you have services or installed programs that reside on your source domain controller that are outside of those listed in the DefaultDCCloneAllowList.xml file, those services and programs must be included in this file. To find the services or installed programs that are not listed in the in the DefaultDCCloneAllowList.xml file, run the **Get-ADDCCloningExcludedApplicationList** cmdlet. You should use the **�"GenerateXml** argument to generate the XML file.
 
     The cloning process checks the following locations in order for this file and uses the first XML file found, regardless of the other folder's contents:
 
@@ -193,7 +193,7 @@ The cloning components include new cmdlets in the Active Directory module for Wi
 ### Deployment scenarios
 The following deployment scenarios are supported for virtual domain controller cloning:
 
--   Deploy a clone domain controller by making a copy of a source domain controller’s virtual hard disk (vhd) file.
+-   Deploy a clone domain controller by making a copy of a source domain controller's virtual hard disk (vhd) file.
 
 -   Deploy a clone domain controller by copying the virtual machine of a source domain controller using the export/import semantics exposed by the hypervisor.
 
@@ -232,7 +232,7 @@ The following deployment scenarios are supported for virtual domain controller c
 -   A deployed  Windows Server 2012  domain controller (virtualized or physical) that hosts the PDC emulator role (**DC1**). To verify whether the PDC emulator role is hosted on a  Windows Server 2012  domain controller, run the following Windows PowerShell command:
 
     ```
-    Get-ADComputer (Get-ADDomainController –Discover –Service "PrimaryDC").name –Property operatingsystemversion | fl
+    Get-ADComputer (Get-ADDomainController �"Discover �"Service "PrimaryDC").name �"Property operatingsystemversion | fl
     ```
 
     The OperatingSystemVersion value should return as a version 6.2. If necessary, you can transfer the PDC emulator role to a domain controller that runs  Windows Server 2012 . For more information, see [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](http://support.microsoft.com/kb/255504).
@@ -280,7 +280,7 @@ In this procedure, you grant the source domain controller the permission to be c
 The following Windows PowerShell cmdlet performs the same function as the preceding procedure:
 
 ```
-Add-ADGroupMember –Identity "CN=Cloneable Domain Controllers,CN=Users, DC=Fabrikam,DC=Com" –Member "CN=VirtualDC1,OU=Domain Controllers,DC=Fabrikam,DC=com"
+Add-ADGroupMember �"Identity "CN=Cloneable Domain Controllers,CN=Users, DC=Fabrikam,DC=Com" �"Member "CN=VirtualDC1,OU=Domain Controllers,DC=Fabrikam,DC=com"
 
 ```
 
@@ -297,7 +297,7 @@ In this procedure, run the `Get-ADDCCloningExcludedApplicationList` cmdlet on th
 
 2.  Vet the list of the returned services and installed programs with the software vendor to determine whether they can be safely cloned. If applications or services in the list cannot be safely cloned, you must remove them from the source domain controller or cloning will fail.
 
-3.  For the set of services and installed programs that were determined to be safely cloned, run the command again with the **–GenerateXML** switch to provision these services and programs in the **CustomDCCloneAllowList.xml** file.
+3.  For the set of services and installed programs that were determined to be safely cloned, run the command again with the **�"GenerateXML** switch to provision these services and programs in the **CustomDCCloneAllowList.xml** file.
 
     ```
     Get-ADDCCloningExcludedApplicationList -GenerateXml
@@ -309,7 +309,7 @@ Run New-ADDCCloneConfigFile on the source domain controller, and optionally spec
 For example, to create a clone domain controller named VirtualDC2 with a static IPv4 address, type:
 
 ```
-New-ADDCCloneConfigFile –Static -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.255.0" -CloneComputerName "VirtualDC2" -IPv4DefaultGateway "10.0.0.3" -SiteName "REDMOND"
+New-ADDCCloneConfigFile �"Static -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.255.0" -CloneComputerName "VirtualDC2" -IPv4DefaultGateway "10.0.0.3" -SiteName "REDMOND"
 
 ```
 
@@ -320,19 +320,19 @@ The computer name is optional. If you do not specify one, a unique name will be 
 
 -   The prefix is the first 8 characters of the source domain controller computer name. For example, a source computer name of SourceComputer is truncated to a prefix string of SourceCo.
 
--   A unique naming suffix of the format "–CL*nnnn*" is appended to the prefix string where *nnnn* is the next available value from 0001-9999 that the PDC determines is not currently in use. For example, if 0047 is the next available number in the allowed range, using the preceding example of the computer name prefix SourceCo, the derived name to use for the clone computer will be set as SourceCo-CL0047.
+-   A unique naming suffix of the format "�"CL*nnnn*" is appended to the prefix string where *nnnn* is the next available value from 0001-9999 that the PDC determines is not currently in use. For example, if 0047 is the next available number in the allowed range, using the preceding example of the computer name prefix SourceCo, the derived name to use for the clone computer will be set as SourceCo-CL0047.
 
 > [!NOTE]
-> A global catalog server (GC) is required for the New-ADDCCloneConfigFile cmdlet to work successfully. The source domain controller’s membership in the **Cloneable Domain Controllers** group must be reflected on the GC. The GC does not need to be the same domain controller as the PDC emulator, but preferably it should be in the same site. If a GC is not available, the command fails with the error “The server is not operational.” For more information, see [Virtualized Domain Controller Troubleshooting](../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md).
+> A global catalog server (GC) is required for the New-ADDCCloneConfigFile cmdlet to work successfully. The source domain controller's membership in the **Cloneable Domain Controllers** group must be reflected on the GC. The GC does not need to be the same domain controller as the PDC emulator, but preferably it should be in the same site. If a GC is not available, the command fails with the error “The server is not operational.” For more information, see [Virtualized Domain Controller Troubleshooting](../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md).
 
 To create a clone domain controller named Clone1 with static IPv4 settings and specify preferred and alternate WINS servers, type:
 
 ```
-New-ADDCCloneConfigFile –CloneComputerName "Clone1" –Static -IPv4Address "10.0.0.5" –IPv4DNSResolver "10.0.0.1" –IPv4SubnetMask "255.255.0.0" –PreferredWinsServer "10.0.0.1" –AlternateWinsServer "10.0.0.2"
+New-ADDCCloneConfigFile �"CloneComputerName "Clone1" �"Static -IPv4Address "10.0.0.5" �"IPv4DNSResolver "10.0.0.1" �"IPv4SubnetMask "255.255.0.0" �"PreferredWinsServer "10.0.0.1" �"AlternateWinsServer "10.0.0.2"
 ```
 
 > [!NOTE]
-> If you specify WINS servers, you must specify both **–PreferredWINSServer** and **–AlternateWINSServer**. If you specify only of those arguments, cloning fails with error code 0x80041005 appearing in the dcpromo.log.
+> If you specify WINS servers, you must specify both **�"PreferredWINSServer** and **�"AlternateWINSServer**. If you specify only of those arguments, cloning fails with error code 0x80041005 appearing in the dcpromo.log.
 
 To create a clone domain controller named Clone2 with dynamic IPv4 settings, type:
 
@@ -346,7 +346,7 @@ New-ADDCCloneConfigFile -CloneComputerName "Clone2" -IPv4DNSResolver "10.0.0.1"
 To create a clone domain controller named Clone2 with dynamic IPv4 settings and specify preferred and alternate WINS servers, type:
 
 ```
-New-ADDCCloneConfigFile -CloneComputerName "Clone2" -IPv4DNSResolver "10.0.0.1" -SiteName "REDMOND" –PreferredWinsServer "10.0.0.1" –AlternateWinsServer "10.0.0.2"
+New-ADDCCloneConfigFile -CloneComputerName "Clone2" -IPv4DNSResolver "10.0.0.1" -SiteName "REDMOND" �"PreferredWinsServer "10.0.0.1" �"AlternateWinsServer "10.0.0.2"
 
 ```
 
@@ -360,50 +360,50 @@ New-ADDCCloneConfigFile -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc"
 To create a clone domain controller with static IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile –Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc"
+New-ADDCCloneConfigFile �"Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc"
 ```
 
 > [!NOTE]
-> When specifying IPv6 settings, the only difference between the static and dynamic settings is the inclusion of **–Static** switch. The inclusion of the **–Static** switch makes it mandatory to specify at least one **IPv6DNSResolver**.The static IPv6 address is expected to be configured via stateless address auto configuration (SLAAC) with router assigned prefixes. With dynamic IPv6, the DNS resolvers are optional, but it’s expected that the clone can reach an IPv6-enabled DHCP server on the subnet to obtain IPv6 address and DNS configuration information.
+> When specifying IPv6 settings, the only difference between the static and dynamic settings is the inclusion of **-Static** switch. The inclusion of the **-Static** switch makes it mandatory to specify at least one **IPv6DNSResolver**.The static IPv6 address is expected to be configured via stateless address auto configuration (SLAAC) with router assigned prefixes. With dynamic IPv6, the DNS resolvers are optional, but it's expected that the clone can reach an IPv6-enabled DHCP server on the subnet to obtain IPv6 address and DNS configuration information.
 
 #### <a name="BKMK_OfflineMode"></a>Running New-ADDCCloneConfigFile in offline mode
 If you have multiple copies of source domain controller media that have been prepared for cloning (meaning the source domain controller is authorized for cloning, the Get-ADDCCloningExcludedApplicationList cmdlet has been run, and so on) and you want to specify different settings for each copy of the media, you can run New-ADDCCloneConfigFile in offline mode. This can be more efficient than individually preparing each VM, for example, by importing each copy.
 
-In this case, domain administrators can mount the offline disk and use Remote Server Administration Tools (RSAT) to run the New-ADDCCloneConfigFile cmdlet with the –offline argument in order to add the XML files, which allows for factory-like automation using new Windows PowerShell options included in Windows Server 2012. For more information about how to mount the offline disk in order to run the New-ADDCCloneConfigFile cmdlet in offline mode, see [Adding XML to the Offline System Disk](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_Offline).
+In this case, domain administrators can mount the offline disk and use Remote Server Administration Tools (RSAT) to run the New-ADDCCloneConfigFile cmdlet with the -offline argument in order to add the XML files, which allows for factory-like automation using new Windows PowerShell options included in Windows Server 2012. For more information about how to mount the offline disk in order to run the New-ADDCCloneConfigFile cmdlet in offline mode, see [Adding XML to the Offline System Disk](../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_Offline).
 
 You should first run the cmdlet locally on the source media to ensure that prerequisite checks pass. The prerequisite checks are not performed in offline mode because the cmdlet could be run from a machine that may not be from the same domain or from a domain-joined computer. After you run the cmdlet locally, it will create a DCCloneConfig.xml file. You may delete the DCCloneConfig.xml that is created locally if you plan to use the offline mode subsequently.
 
-To create a clone domain controller named CloneDC1 in offline mode, in a site called “REDMOND” with static IPv4 address, type:
+To create a clone domain controller named CloneDC1 in offline mode, in a site called REDMOND� with static IPv4 address, type:
 
 ```
-New-ADDCCloneConfigFile –Offline –CloneComputerName CloneDC1 –SiteName REDMOND -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" –Static –Path F:\Windows\NTDS
+New-ADDCCloneConfigFile -Offline -CloneComputerName CloneDC1 -SiteName REDMOND -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" -Static -Path F:\Windows\NTDS
 
 ```
 
 To create a clone domain controller named Clone2 in offline mode with static IPv4 and static IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile –Offline -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" –Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone2" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" –Path F:\Windows\NTDS
+New-ADDCCloneConfigFile -Offline -IPv4Address "10.0.0.2" -IPv4DNSResolver "10.0.0.1" -IPv4SubnetMask "255.255.0.0" -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone2" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" -Path F:\Windows\NTDS
 
 ```
 
 To create a clone domain controller in offline mode with static IPv4 and dynamic IPv6 settings and specify multiple DNS servers for the DNS resolver settings, type:
 
 ```
-New-ADDCCloneConfigFile –Offline -IPv4Address "10.0.0.10" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" -IPv4DNSResolver @( "10.0.0.1","10.0.0.2" ) –Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" –Path F:\Windows\NTDS 
+New-ADDCCloneConfigFile -Offline -IPv4Address "10.0.0.10" -IPv4SubnetMask "255.255.0.0" -IPv4DefaultGateway "10.0.0.1" -IPv4DNSResolver @( "10.0.0.1","10.0.0.2" ) -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -Path F:\Windows\NTDS 
 ```
 
 To create a clone domain controller named Clone1 in offline mode with dynamic IPv4 and static IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile –Offline -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone1" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" -SiteName "REDMOND" –Path F:\Windows\NTDS
+New-ADDCCloneConfigFile -Offline -Static -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -CloneComputerName "Clone1" -PreferredWINSServer "10.0.0.1" -AlternateWINSServer "10.0.0.3" -SiteName "REDMOND" -Path F:\Windows\NTDS
 
 ```
 
 To create a clone domain controller in offline mode with dynamic IPv4 and dynamic IPv6 settings, type:
 
 ```
-New-ADDCCloneConfigFile –Offline -IPv4DNSResolver "10.0.0.1" -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" –Path F:\Windows\NTDS
+New-ADDCCloneConfigFile -Offline -IPv4DNSResolver "10.0.0.1" -IPv6DNSResolver "2002:4898:e0:31fc:d61:2b0a:c9c9:2ccc" -Path F:\Windows\NTDS
 
 ```
 
@@ -421,7 +421,7 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Stop-VM –Name VirtualDC1 –ComputerName HyperV1
+    Stop-VM -Name VirtualDC1 -ComputerName HyperV1
     ```
 
 2.  On **HyperV1**, delete snapshots and then export the source domain controller (VirtualDC1) to the c:\CloneDCs directory.
@@ -432,8 +432,8 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Get-VMSnapshot VirtualDC1 | Remove-VMSnapshot –IncludeAllChildSnapshots
-    Export-VM –Name VirtualDC1 –ComputerName HyperV1 -Path c:\CloneDCs\VirtualDC1
+    Get-VMSnapshot VirtualDC1 | Remove-VMSnapshot -IncludeAllChildSnapshots
+    Export-VM -Name VirtualDC1 -ComputerName HyperV1 -Path c:\CloneDCs\VirtualDC1
     ```
 
 3.  Copy the folder **virtualdc1** to the c:\Import directory of **HyperV2**.
@@ -446,7 +446,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
     ```
     $path = Get-ChildItem "C:\CloneDCs\VirtualDC1\VirtualDC1\Virtual Machines"
-    $vm = Import-VM –Path $path.fullname –Copy -GenerateNewId
+    $vm = Import-VM -Path $path.fullname -Copy -GenerateNewId
     Rename-VM $vm VirtualDC2
 
     ```
@@ -459,7 +459,7 @@ If there are snapshots on the source domain controller, they should be deleted b
 
         ```
         $path = Get-ChildItem "C:\CloneDCs\VirtualDC1\VirtualDC1\Virtual Machines" 
-        Import-VM –Path $path.fullname –Copy –GenerateNewId –ComputerName HyperV2 –VhdDestinationPath "path" –SnapshotFilePath "path" –SmartPagingFilePath "path" –VirtualMachinePath "path"
+        Import-VM -Path $path.fullname -Copy -GenerateNewId -ComputerName HyperV2 -VhdDestinationPath "path" -SnapshotFilePath "path" -SmartPagingFilePath "path" -VirtualMachinePath "path"
         ```
 
     > [!NOTE]
@@ -470,7 +470,7 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Start-VM –Name VirtualDC1 –ComputerName HyperV1
+    Start-VM -Name VirtualDC1 -ComputerName HyperV1
     ```
 
 6.  On **HyperV2**, start the virtual machine (**VirtualDC2**) to bring it online as a clone domain controller in the domain.
@@ -478,7 +478,7 @@ If there are snapshots on the source domain controller, they should be deleted b
     ![](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****
 
     ```
-    Start-VM –Name VirtualDC2 –ComputerName HyperV2
+    Start-VM -Name VirtualDC2 -ComputerName HyperV2
     ```
 
     > [!NOTE]

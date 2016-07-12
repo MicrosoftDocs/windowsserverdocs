@@ -1,5 +1,5 @@
 ---
-title: Step 3: Plan OTP Certificate Deployment
+title: Step 3 Plan OTP Certificate Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 author: coreyp
 ---
-# Step 3: Plan OTP Certificate Deployment
+# Step 3 Plan OTP Certificate Deployment
 
 >Applies To: Windows Server Technical Preview
 

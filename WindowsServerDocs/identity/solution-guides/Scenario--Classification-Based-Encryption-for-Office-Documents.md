@@ -1,13 +1,12 @@
 ---
-title: Scenario: Classification-Based Encryption for Office Documents
-ms.custom: 
-  - AD
+title: Scenario Classification-Based Encryption for Office Documents
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
+manager: femila
+ms.service: 
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e077a7d-4ec3-48c2-9125-e860930f4aed

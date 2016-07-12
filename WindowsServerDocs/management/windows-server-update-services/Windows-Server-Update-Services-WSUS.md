@@ -32,7 +32,7 @@ The core scenarios where WSUS adds value to your business are:
 ### New and changed functionality
 
 > [!NOTE]
-> Upgrade from any version of Windows Server that supports WSUS 3.2 to Windows Server® 2012 R2 requires that you first uninstall WSUS 3.2.
+> Upgrade from any version of Windows Server that supports WSUS 3.2 to Windows Server 2012 R2 requires that you first uninstall WSUS 3.2.
 > 
 > In Windows Server 2012, upgrading from any version of Windows Server with WSUS 3.2 installed is blocked during the installation process if WSUS 3.2 is detected. In that case, you will be prompted to first uninstall Windows Server Update Services prior to upgrading your server.
 > 

@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -73,7 +73,7 @@ You use a graphical wizard in Server Manager or the ServerManager module for Win
 #### AD DS Role Configuration  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_DeploymentConfiguration_Forest.gif)  
   
-Active Directory Domain Services configuration â€“ previously known as DCPROMO â€“ is a now a discrete operation from role installation. After installing the AD DS role, an administrator configures the server as a domain controller using a separate wizard within Server Manager or using the ADDSDeployment Windows PowerShell module.  
+Active Directory Domain Services configuration â€" previously known as DCPROMO â€" is a now a discrete operation from role installation. After installing the AD DS role, an administrator configures the server as a domain controller using a separate wizard within Server Manager or using the ADDSDeployment Windows PowerShell module.  
   
 AD DS role configuration builds on twelve years of field experience and now configures domain controllers based on the most recent Microsoft best practices. For example, Domain Name System and Global Catalogs install by default on every domain controller.  
   
@@ -179,7 +179,7 @@ Additional **Features** can be added here as desired.
 #### Active Directory Domain Services  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ADDSIntro.png)  
   
-The **Active Directory Domain Services** dialog provides limited information on requirements and best practices. It mainly acts as a confirmation that you chose the AD DS role â€“ if this screen does not appear, you did not select AD DS.  
+The **Active Directory Domain Services** dialog provides limited information on requirements and best practices. It mainly acts as a confirmation that you chose the AD DS role â€" if this screen does not appear, you did not select AD DS.  
   
 #### Confirmation  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_Confirmation.png)  
@@ -474,7 +474,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create a new forest named corp.contoso.com and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSForest â€“DomainName corp.contoso.com  
+    Install-ADDSForest â€"DomainName corp.contoso.com  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  

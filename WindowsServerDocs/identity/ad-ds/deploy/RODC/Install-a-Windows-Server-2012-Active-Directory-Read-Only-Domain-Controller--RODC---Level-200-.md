@@ -6,7 +6,7 @@ ms.date: "06/21/2016"
 ms.custom: AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: active-directory-domain-services
 ms.tgt_pltfrm: na
@@ -67,7 +67,7 @@ If you have experience creating read-only domain controllers, you will discover 
   
 Windows Server 2012 introduces a new ADDSDeployment cmdlet to stage RODC computer accounts, but the wizard does not use the cmdlet for its operation. The following sections display the equivalent cmdlet and arguments in order to make the information associated with each easier to understand.  
   
-The **Pre-create a Read-only domain controller account** link in the Active Directory Administrative Center’s task pane is equivalent to the ADDSDeployment Windows PowerShell cmdlet:  
+The **Pre-create a Read-only domain controller account** link in the Active Directory Administrative Center's task pane is equivalent to the ADDSDeployment Windows PowerShell cmdlet:  
   
 ```  
 Add-addsreadonlydomaincontrolleraccount  
@@ -132,7 +132,7 @@ The **Read-only domain controller (RODC)** option is pre-selected and cannot be 
 ```  
   
 > [!NOTE]  
-> By default, the **–NoGlobalCatalog** value is $false, which means the domain controller will be a global catalog server if the argument is not specified.  
+> By default, the **-NoGlobalCatalog** value is $false, which means the domain controller will be a global catalog server if the argument is not specified.  
   
 ### Specify the Password Replication Policy  
 ![](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1PRP.png)  
@@ -161,7 +161,7 @@ The equivalent ADDSDeployment Windows PowerShell arguments are:
 ### Delegation of RODC Installation and Administration  
 ![](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1DelegateAdmin.png)  
   
-The **Delegation of RODC Installation and Administration** dialog enables you to configure a user or group containing users who are allowed to attach the server to the RODC computer account. Click **Set** to browse the domain for a user or group. The user or group specified in this dialog gains local administrative permissions to the RODC. The specified user or members of the specified group can perform operations on the RODC with privileges equivalent to the computer’s Administrators group. They are *not* members of the Domain Admins or domain built-in Administrators groups.  
+The **Delegation of RODC Installation and Administration** dialog enables you to configure a user or group containing users who are allowed to attach the server to the RODC computer account. Click **Set** to browse the domain for a user or group. The user or group specified in this dialog gains local administrative permissions to the RODC. The specified user or members of the specified group can perform operations on the RODC with privileges equivalent to the computer's Administrators group. They are *not* members of the Domain Admins or domain built-in Administrators groups.  
   
 Use this option to delegate branch office administration without granting the branch administrator membership to the Domain Admins group. Delegating RODC administration is not required.  
   
@@ -230,7 +230,7 @@ Install-AddsDomainController
 The **Domain Controller Options** page shows the domain controller options for the new domain controller. When this page loads, the Active Directory Domain Services Configuration Wizard sends an LDAP query to an existing domain controller to check for unoccupied accounts. If the query finds an unoccupied domain controller computer account that shares the same name as the current computer, then the wizard displays an informational message at the top of the page that reads "**A Pre-created RODC account that matches the name of the target server exists in the directory. Choose whether to use this existing RODC account or reinstall this domain controller**." The wizard uses the **Use existing RODC account** as the default configuration.  
   
 > [!IMPORTANT]  
-> You can use the **Reinstall this domain controller** option when a domain controller has suffered a physical problem and cannot return to functionality. This saves time when configuring the replacement domain controller, by leaving the domain controller computer account and object metadata in Active Directory. Install the new computer with the *same name*, and promote it as a domain controller in the domain. The **Reinstall this domain controller** option is unavailable if you removed the domain controller object’s metadata from Active Directory (metadata cleanup).  
+> You can use the **Reinstall this domain controller** option when a domain controller has suffered a physical problem and cannot return to functionality. This saves time when configuring the replacement domain controller, by leaving the domain controller computer account and object metadata in Active Directory. Install the new computer with the *same name*, and promote it as a domain controller in the domain. The **Reinstall this domain controller** option is unavailable if you removed the domain controller object's metadata from Active Directory (metadata cleanup).  
   
 You cannot configure domain controller options when you are attaching a server to an RODC computer account. You configure domain controller options when you create the staged RODC computer account.  
   
@@ -255,7 +255,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create a new RODC in the corp.contoso.com and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSDomainController –DomainName corp.contoso.com –credential (get-credential)  
+    Install-ADDSDomainController -DomainName corp.contoso.com -credential (get-credential)  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  
@@ -467,7 +467,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create a new RODC in the corp.contoso.com and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSDomainController –DomainName corp.contoso.com –credential (get-credential)  
+    Install-ADDSDomainController -DomainName corp.contoso.com -credential (get-credential)  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  
@@ -513,7 +513,7 @@ The **RODC Options** page enables you to modify the settings:
   
 -   Accounts that are denied from replicating passwords to the RODC  
   
-Delegated administrator accounts gain local administrative permissions to the RODC. These users can operate with privileges equivalent to the local computer’s Administrators group.  They are not members of the Domain Admins or the domain built-in Administrators groups. This option is useful for delegating branch office administration without giving out domain administrative permissions. Configuring delegation of administration is not required.  
+Delegated administrator accounts gain local administrative permissions to the RODC. These users can operate with privileges equivalent to the local computer's Administrators group.  They are not members of the Domain Admins or the domain built-in Administrators groups. This option is useful for delegating branch office administration without giving out domain administrative permissions. Configuring delegation of administration is not required.  
   
 The equivalent ADDSDeployment Windows PowerShell argument is:  
   

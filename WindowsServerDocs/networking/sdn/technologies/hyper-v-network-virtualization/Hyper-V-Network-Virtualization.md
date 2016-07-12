@@ -19,9 +19,9 @@ Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables 
   
 For more information, see the following topics:  
   
--   [Hyper-V Network Virtualization Overview in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization-Overview-in-Windows-Server-Technical-Preview.md)  
+-   [Hyper-V Network Virtualization Overview in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)  
   
--   [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/What-s-New-in-Hyper-V-Network-Virtualization-in-Windows-Server-Technical-Preview.md)  
+-   [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)  
   
 |||  
 |-|-|  

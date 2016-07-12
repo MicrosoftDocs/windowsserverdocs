@@ -1,5 +1,5 @@
 ---
-title: Step 3: Plan the Multisite Deployment
+title: Step 3 Plan the Multisite Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 author: coreyp
 ---
-# Step 3: Plan the Multisite Deployment
+# Step 3 Plan the Multisite Deployment
 
 >Applies To: Windows Server Technical Preview
 
@@ -103,7 +103,7 @@ Note the following when planning for IPsec client authentication in a multisite 
 ## <a name="bkmk_3_4_GSLB"></a>3.4 Plan global server load balancing  
 In a multisite deployment, you can additionally configure a global server load balancer. A global server load balancer can be useful to your organization if your deployment covers a large geographical distribution because it can distribute traffic load between the entry points.  The global server load balancer can be configured to provide DirectAccess clients with the entry point information of the closest entry point. The process works as follows:  
   
-1.  Client computers running Windows 10® or Windows® 8 have a list of global server load balancer IP addresses, each associated with an entry point.  
+1.  Client computers running Windows 10 or Windows 8 have a list of global server load balancer IP addresses, each associated with an entry point.  
   
 2.  The Windows 10 or Windows 8 client computer attempts to resolve the FQDN of the global server load balancer in the public DNS to an IP address. If the resolved IP address is listed as the global server load balancer IP address of an entry point, the client computer automatically selects that entry point and connects to its IP-HTTPS URL (ConnectTo address), or to its Teredo server IP address. Note that the IP address of the global server load balancer does not need to be identical to the ConnectTo address or to the Teredo server address of the entry point, since the client computers never try to connect to the global server load balancer IP address.  
   
@@ -156,11 +156,11 @@ In a multisite deployment symmetric routing is enforced using Teredo and IP-HTTP
   
 3.  For each entry point there should be one to three routes in the internal network:  
   
-    1.  IP-HTTPS prefix—This prefix is chosen by the administrator in the Add an Entry Point wizard.  
+    1.  IP-HTTPS prefixâ€”This prefix is chosen by the administrator in the Add an Entry Point wizard.  
   
-    2.  VPN IPv6 prefix (optional)—This prefix can be chosen after enabling VPN for an entry point  
+    2.  VPN IPv6 prefix (optional). This prefix can be chosen after enabling VPN for an entry point  
   
-    3.  Teredo prefix (optional)—This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
+    3.  Teredo prefix (optional). This prefix is relevant only if the Remote Access server is configured with two consecutive public IPv4 addresses on the external adapter. The prefix is based on the first public IPv4 address of the address pair. For example if the external addresses are:  
   
         1.  www.xxx.yyy.zzz  
   
@@ -192,7 +192,7 @@ When a client computer running Windows 10 or Windows 8 is connected to an entry 
   
 If your organization uses an Active Directory topology with site-specific IPv6 prefixes (for example an internal resource FQDN app.corp.com is hosted in both North America and Europe with a site-specific IP address in each location) this is not configured by default using the Remote Access console, and site-specific IPv6 prefixes are not configured for each entry point. If you do want to enable this optional scenario, you need to configure each entry point with the specific IPv6 prefixes that should be preferred by client computers connecting to a specific entry point. Do this as follows:  
   
-1.  For each GPO used for Windows 10® or Windows 8 client computers, run the Set-DAEntryPointTableItem PowerShell cmdlet  
+1.  For each GPO used for Windows 10 or Windows 8 client computers, run the Set-DAEntryPointTableItem PowerShell cmdlet  
   
 2.  Set the EntryPointRange parameter for the cmdlet with the site-specific IPv6 prefixes. For example, to add the site-specific prefixes 2001:db8:1:1::/64 and 2001:db:1:2::/64 to an entry point called Europe, run the following  
   
@@ -200,7 +200,7 @@ If your organization uses an Active Directory topology with site-specific IPv6 p
     $entryPointName = "Europe"  
     $prefixesToAdd = @("2001:db8:1:1::/64", "2001:db8:1:2::/64")  
     $clientGpos = (Get-DAClient).GpoName  
-    $clientGpos | % { Get-DAEntryPointTableItem –EntryPointName $entryPointName -PolicyStore $_ | %{ Set-DAEntryPointTableItem -PolicyStore $_.PolicyStore -EntryPointName $_.EntryPointName -EntryPointRange ($_.EntryPointRange) + $prefixesToAdd}}  
+    $clientGpos | % { Get-DAEntryPointTableItem -EntryPointName $entryPointName -PolicyStore $_ | %{ Set-DAEntryPointTableItem -PolicyStore $_.PolicyStore -EntryPointName $_.EntryPointName -EntryPointRange ($_.EntryPointRange) + $prefixesToAdd}}  
     ```  
   
 3.  When modifying the EntryPointRange parameter, ensure that you do not remove the existing 128-bit prefixes which belong to the IPsec tunnel endpoints and the DNS64 address.  
@@ -237,7 +237,7 @@ After you have completed the transition from an IPv4-only deployment to an IPv6+
   
 -   If you need to delete IPv4 addresses from a deployed server, you must remove the server from the DirectAccess deployment, remove its IPv4 corporate network address, and add it again to the deployment.  
   
-To support client connectivity to the corporate network, you must ensure that the network location server can be resolved by the corporate DNS to its IPv6 address. An additional IPv4 address can be set as well, but isn’t required.  
+To support client connectivity to the corporate network, you must ensure that the network location server can be resolved by the corporate DNS to its IPv6 address. An additional IPv4 address can be set as well, but isn't required.  
   
 ### <a name="DualDeployment"></a>Transition from an IPv4-only to an IPv6-only deployment using dual DirectAccess deployments  
 The transition from an IPv4-only to an IPv6-only corporate network cannot be done without reinstalling the DirectAccess deployment. To maintain client connectivity during the transition, you can use another DirectAccess deployment. Dual deployment is required when the first transition stage finishes (IPv4-only network upgraded to IPv4+IPv6) and you intend to prepare for a future transition to an IPv6-only corporate network orto take advantage of the native IPv6 connectivity benefits. The dual deployment is described in the following general steps:  

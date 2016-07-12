@@ -17,7 +17,7 @@ author: coreyp-at-msft
 
 This topic describes how to remove feature files in a Features on Demand configuration by using the Uninstall-WindowsFeature cmdlet.
 
-Features on Demand is a feature, introduced in Windows® 8 and  Windows Server 2012 , that allows you to remove role and feature files (sometimes called feature *payload*) from the operating system to conserve disk space, and install roles and features from remote locations or installation media instead of from local computers. You can remove feature files from running physical or virtual computers. You can also add feature files to or remove feature files from Windows image (WIM) files or offline virtual hard disks (VHDs) to create a reproducible copy of Features on Demand configurations.
+Features on Demand is a feature, introduced in Windows 8 and  Windows Server 2012 , that allows you to remove role and feature files (sometimes called feature *payload*) from the operating system to conserve disk space, and install roles and features from remote locations or installation media instead of from local computers. You can remove feature files from running physical or virtual computers. You can also add feature files to or remove feature files from Windows image (WIM) files or offline virtual hard disks (VHDs) to create a reproducible copy of Features on Demand configurations.
 
 In a Features on Demand configuration, when feature files are not available on a computer, if an installation requires those feature files,  Windows Server 2012 R2  or  Windows Server 2012  can be directed to get the files from a side-by-side feature store (a shared folder that contains feature files, and is available to the computer on the network), from Windows Update, or from installation media. By default, when feature files are not available on the target server, Features on Demand searches for missing feature files by performing the following tasks, in the order shown.
 
@@ -92,13 +92,13 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
 2.  Type the following, and then press **Enter**.
 
     ```
-    Uninstall-WindowsFeature –Name <feature_name> -ComputerName <computer_name> -Remove
+    Uninstall-WindowsFeature -Name <feature_name> -ComputerName <computer_name> -Remove
     ```
 
     **Example:** Remote Desktop Licensing is the last remaining role service of Remote Desktop Services that is installed. The command uninstalls Remote Desktop Licensing, and then deletes feature files for the entire Remote Desktop Services role from the specified server, *contoso_1*.
 
     ```
-    Uninstall-WindowsFeature -Name RDS-Licensing –ComputerName contoso_1 -Remove
+    Uninstall-WindowsFeature -Name RDS-Licensing -ComputerName contoso_1 -Remove
     ```
 
     **Example:** In the following example, the command removes Active Directory Domain Services and Group Policy Management from an offline VHD. The role and feature are first uninstalled, then their feature files removed entirely from the offline VHD, *Contoso.vhd*.
@@ -109,7 +109,7 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
     > If you enter the name of a VHD file from a network share, that share must grant **Read** and **Write** permissions to the computer account of the server that you selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.
 
     ```
-    Uninstall-WindowsFeature –Name AD-Domain-Services,GPMC –VHD C:\WS2012VHDs\Contoso.vhd –ComputerName ContosoDC1
+    Uninstall-WindowsFeature -Name AD-Domain-Services,GPMC -VHD C:\WS2012VHDs\Contoso.vhd -ComputerName ContosoDC1
     ```
 
 ## See Also

@@ -1,5 +1,5 @@
 ---
-title: Step 4: Verify the Cluster
+title: Step 4 Verify the Cluster
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: f22dcf10-b453-4664-a9ef-e40e95c72f63
 author: coreyp
 ---
-# Step 4: Verify the Cluster
+# Step 4 Verify the Cluster
 
 >Applies To: Windows Server Technical Preview
 

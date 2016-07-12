@@ -54,7 +54,7 @@ The options for Teaming mode are **Switch Independent**, **Static Teaming**, and
   
 **Switch Independent**  
   
-With Switch Independent mode, the switch or switches to which the NIC Team members are connected are unaware of the presence of the NIC team and do not determine how to distribute network traffic to NIC Team members – instead, the NIC Team distributes inbound network traffic across the NIC Team members.  
+With Switch Independent mode, the switch or switches to which the NIC Team members are connected are unaware of the presence of the NIC team and do not determine how to distribute network traffic to NIC Team members - instead, the NIC Team distributes inbound network traffic across the NIC Team members.  
   
 When you use Switch Independent mode with Dynamic distribution, the network traffic load is distributed based on the TCP Ports address hash as modified by the Dynamic load balancing algorithm. The Dynamic load balancing algorithm redistributes flows to optimize team member bandwidth utilization so that individual flow transmissions can move from one active team member to another. The algorithm takes into account the small possibility that redistributing traffic could cause out-of-order delivery of packets, so it takes steps to minimize that possibility.  
   
@@ -67,7 +67,7 @@ With Switch Dependent modes, the switch to which the NIC Team members are connec
   
 Static Teaming requires you to manually configure both the switch and the host to identify which links form the team. Because this is a statically configured solution, there is no additional protocol to assist the switch and the host to identify incorrectly plugged cables or other errors that could cause the team to fail to perform. This mode is typically supported by server-class switches.  
   
-Unlike Static Teaming, LACP Teaming mode dynamically identifies links that are connected between the host and the switch. This dynamic connection enables the automatic creation of a team and, in theory but rarely in practice, the expansion and reduction of a team simply by the transmission or receipt of LACP packets from the peer entity. All server-class switches support LACP, and all require the network operator to administratively enable LACP on the switch port. When you configure a Teaming mode of LACP, NIC Teaming always operates in LACP’s Active mode with a short timer.  No option is presently available to modify the timer or change the LACP mode.  
+Unlike Static Teaming, LACP Teaming mode dynamically identifies links that are connected between the host and the switch. This dynamic connection enables the automatic creation of a team and, in theory but rarely in practice, the expansion and reduction of a team simply by the transmission or receipt of LACP packets from the peer entity. All server-class switches support LACP, and all require the network operator to administratively enable LACP on the switch port. When you configure a Teaming mode of LACP, NIC Teaming always operates in LACP's Active mode with a short timer.  No option is presently available to modify the timer or change the LACP mode.  
   
 When you use Switch Dependent modes with Dynamic distribution, the network traffic load is distributed based on the TransportPorts address hash as modified by the Dynamic load balancing algorithm.  The Dynamic load balancing algorithm redistributes flows to optimize team member bandwidth utilization. Individual flow transmissions can move from one active team member to another as part of the dynamic distribution. The algorithm takes into account the small possibility that redistributing traffic could cause out-of-order delivery of packets, so it takes steps to minimize that possibility.  
   
@@ -92,7 +92,7 @@ The TCP ports hash creates the most granular distribution of traffic streams, re
   
 **Hyper-V Port**  
   
-There is an advantage in using Hyper-V Port mode for NIC Teams that are configured on Hyper-V hosts. Because VMs have independent MAC addresses, the VM’s MAC address - or the port the VM is connected to on the Hyper-V Virtual Switch - can be the basis upon which to divide network traffic between NIC Team members.  
+There is an advantage in using Hyper-V Port mode for NIC Teams that are configured on Hyper-V hosts. Because VMs have independent MAC addresses, the VM's MAC address - or the port the VM is connected to on the Hyper-V Virtual Switch - can be the basis upon which to divide network traffic between NIC Team members.  
   
 > [!IMPORTANT]  
 > NIC Teams that you create within VMs cannot be configured with the Hyper-V Port load balancing mode. Use the Address Hash load balancing mode instead.  

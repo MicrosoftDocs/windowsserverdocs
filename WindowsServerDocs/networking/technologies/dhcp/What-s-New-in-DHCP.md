@@ -11,15 +11,15 @@ ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
 author: jamesmci
 ---
-# What&#39;s New in DHCP
+# What's New in DHCP
 
 >Applies To: Windows Server Technical Preview
 
-This topic describes the Dynamic Host Configuration Protocol (DHCP) functionality that is new or changed in Windows Server® 2016 Technical Preview.  
+This topic describes the Dynamic Host Configuration Protocol (DHCP) functionality that is new or changed in Windows Server 2016 Technical Preview.  
   
 DHCP is an Internet Engineering Task Force (IETF) standard that is designed to reduce the administrative burden and complexity of configuring hosts on a TCP/IP-based network, such as a private intranet. By using the DHCP Server service, the process of configuring TCP/IP on DHCP clients is automatic.  
   
-## <a name="BKMK_DHCP2012R2"></a>What’s new in DHCP  
+## <a name="BKMK_DHCP2012R2"></a>What's new in DHCP  
 Network Access Protection (NAP) is deprecated in  Windows Server 2012 R2 , and in Windows Server 2016 Technical Preview the DHCP Server role no longer supports NAP. For more information, see [Features Removed or Deprecated in Windows Server 2012 R2](http://technet.microsoft.com/library/dn303411.aspx).  
   
 NAP support was introduced to the DHCP Server role with  Windows Server 2008  and is supported in Windows client and server operating systems prior to Windows 10 and Windows Server 2016 Technical Preview. The following table summarizes support for NAP in Windows Server.  

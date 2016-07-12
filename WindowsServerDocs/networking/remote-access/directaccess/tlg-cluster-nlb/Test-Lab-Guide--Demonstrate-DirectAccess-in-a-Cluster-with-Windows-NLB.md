@@ -1,5 +1,5 @@
 ---
-title: Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB
+title: Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -15,7 +15,7 @@ author: coreyp
 
 >Applies To: Windows Server Technical Preview
 
-Remote Access is a server role in the Windows Server® 2016 Technical Preview, Windows Server® 2012 R2 andWindows Server® 2012 operating systems that enables remote users to securely access internal network resources using DirectAccess or RRAS VPN. This guide contains step-by-step instructions for extending the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](http://go.microsoft.com/fwlink/p/?LinkId=237004) to demonstrate DirectAccess Network Load Balancing and cluster configuration.  
+Remote Access is a server role in the Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 andWindows Server&reg; 2012 operating systems that enables remote users to securely access internal network resources using DirectAccess or RRAS VPN. This guide contains step-by-step instructions for extending the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](http://go.microsoft.com/fwlink/p/?LinkId=237004) to demonstrate DirectAccess Network Load Balancing and cluster configuration.  
   
 ## About this guide  
 This guide contains instructions for configuring and demonstrating Remote Access using six servers and two client computers. The completed Remote Access test lab with NLB simulates an intranet, the Internet, and a home network and demonstrates Remote Access functionality in different Internet connection scenarios.  

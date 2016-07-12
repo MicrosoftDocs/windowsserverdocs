@@ -55,7 +55,11 @@ Use the following steps to add the RD Web and Gateway server you created to your
     1.  In Server Manager on the RDMS server, click **All Servers**. Right-click the first RD Web Access server, e.g. Contoso-WebGw1, and then click **Remote Desktop Connection**.  
     2.  Sign into the RD Web Access server using a Domain Admin account.  
     3.  Now, on the RD Web Access server, launch Server Manager. Click **Tools > Terminal Services > Internet Information Services (IIS) Manager**.  
+<<<<<<< HEAD
+    4.  In the IIS Manager's left pane, expand the local computer (e.g. Contoso-WebGw1) > Sites > Default Web Site, and then click **RDWeb**.  
+=======
     4.  In the IIS Manager�s left pane, expand the local computer (e.g. Contoso-WebGw1) > Sites > Default Web Site, and then click **RDWeb**.  
+>>>>>>> 45cb7c0bd86588260c8f1470b1cb01db285e15c4
     5.  Right-click **Machine Key**, and then click **Open Feature**.  
     6.  On the Machine Key page, in the **Actions** pane, select **Generate Keys**, and then click **Apply**.  
     7.  Copy the validation key (you can right-click the key and then click **Copy**.)  

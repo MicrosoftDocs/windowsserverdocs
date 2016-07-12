@@ -3,7 +3,7 @@ title: Improved interoperability with SAML 2.0
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -36,7 +36,7 @@ Add-AdfsClaimsProviderTrustsGroup -MetadataUrl "https://www.contosoconsortium.co
   
   
 ```  
-Add-AdfsClaimsProviderTrustsGroup -MetadataFile “C:\metadata.xml”   
+Add-AdfsClaimsProviderTrustsGroup -MetadataFile "C:\metadata.xml"   
 ```  
   
 ## References  

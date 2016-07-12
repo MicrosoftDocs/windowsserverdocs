@@ -1,5 +1,5 @@
 ---
-title: Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
+title: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 
 author: jamesmci
 ---
-# Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
+# Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
 
 >Applies To: Windows Server 2016 Technical Preview
 
@@ -33,20 +33,20 @@ You can use the following DNS policy parameters to control the DNS server respon
 
 
 
-- **Client Subnet** - Name of a predefined client subnet. Used to verify the subnet from which the query was sent.
-- **Transport Protocol** -  Transport protocol used in the query. Possible entries are **UDP** and **TCP**.
-- **Internet Protocol** - Network protocol used in the query. Possible entries are **IPv4** and **IPv6**.
-- **Server Interface IP address** - IP address of the network interface of the DNS server which received the DNS request.
-- **FQDN** - The Fully Qualified Domain Name (FQDN) of the record in the query, with the possibility of using a wild card.
-- **Query Type** - Type of record being queried (A, SRV, TXT, etc.).
-- **Time of Day** - Time of day the query is received. 
+- **Client Subnet**. Name of a predefined client subnet. Used to verify the subnet from which the query was sent.
+- **Transport Protocol**. Transport protocol used in the query. Possible entries are **UDP** and **TCP**.
+- **Internet Protocol**. Network protocol used in the query. Possible entries are **IPv4** and **IPv6**.
+- **Server Interface IP address**. IP address of the network interface of the DNS server which received the DNS request.
+- **FQDN**. The Fully Qualified Domain Name (FQDN) of the record in the query, with the possibility of using a wild card.
+- **Query Type**. Type of record being queried (A, SRV, TXT, etc.).
+- **Time of Day**. Time of day the query is received. 
   
 You can combine the following criteria with a logical operator (AND/OR) to formulate policy expressions. When these expressions match, the policies are expected to perform one of the following actions.  
   
  
-- **Ignore** - The DNS server silently drops the query.          
-- **Deny** - The DNS server responds that query with a failure response.          
-- **Allow** - The DNS server responds back with traffic managed response.          
+- **Ignore**. The DNS server silently drops the query.          
+- **Deny**. The DNS server responds that query with a failure response.          
+- **Allow**. The DNS server responds back with traffic managed response.          
   
 ##  <a name="bkmk_example"></a>Geo-Location Based Traffic Management Example  
 Following is an example of how you can use DNS policy to achieve traffic redirection on the basis of the physical location of the client that performs a DNS query.   

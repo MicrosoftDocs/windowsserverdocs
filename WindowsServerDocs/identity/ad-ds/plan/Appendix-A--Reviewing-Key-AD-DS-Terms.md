@@ -1,9 +1,9 @@
 ---
-title: Appendix A: Reviewing Key AD DS Terms
+title: Appendix A - Reviewing Key AD DS Terms
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services

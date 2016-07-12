@@ -18,7 +18,7 @@ author: coreyp
 This topic contains troubleshooting information for general issues related to Remote Access.  
   
 ## GPO retrieval error  
-**Error received**—DirectAccess server GPO settings cannot be retrieved. Ensure you have edit permissions for the GPO.  
+**Error received**. DirectAccess server GPO settings cannot be retrieved. Ensure you have edit permissions for the GPO.  
   
 The Remote Access management console is unresponsive after receiving this error.  
   
@@ -33,7 +33,7 @@ Make sure that each entry point in the deployment has a corresponding GPO on its
 As a workaround, use the configuration cmdlets instead of using the Remote Access management console; for example, using `Get-RemoteAccess` and `Get-DAEntryPoint`.  
   
 > [!NOTE]  
-> This scenario does not occur when the server GPO of the current entry point isn’t available.  
+> This scenario does not occur when the server GPO of the current entry point isn't available.  
   
 You can use the `Get-DAEntryPointDC` cmdlet to list all domain controllers that store server GPOs and `Get-DAMultiSite` in conjunction with `Get-RemoteAccess` to retrieve a complete list of the server GPOs in the deployment. For example:  
   
@@ -47,7 +47,7 @@ $ServerGpos | ForEach-Object { $GpoName = $_['GpoName'] ; $DC = $_['DC'] ; Write
 ```  
   
 ## Windows 7 to Windows 8 or 10 client upgrade  
-**Symptom**—After a  Windows 7  client upgrades to Windows 10® or Windows® 8 in a multisite deployment, the DirectAccess connection is not visible in the Networks list.  
+**Symptom**. After a  Windows 7  client upgrades to Windows 10 or Windows 8 in a multisite deployment, the DirectAccess connection is not visible in the Networks list.  
   
 **Cause**  
   
@@ -70,19 +70,19 @@ If a client has already been upgraded or the DCA is not configured, move the cli
   
 -   **Issue 1**  
   
-    **Error received**—Domain controller <domain_controller> cannot be reached for <server_name or entry_point_name>.  
+    **Error received**. Domain controller <domain_controller> cannot be reached for <server_name or entry_point_name>.  
   
     **Cause**  
   
-    To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. When the domain controller that manages an entry point’s server GPO is not available, Remote Access configuration settings cannot be read or modified.  
+    To maintain the configuration consistency in a multisite deployment, it is important to make sure that each GPO is managed by a single domain controller. When the domain controller that manages an entry point's server GPO is not available, Remote Access configuration settings cannot be read or modified.  
   
     **Solution**  
   
-    Follow the procedure “To change the domain controller that manages server GPOs” described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
+    Follow the procedure "To change the domain controller that manages server GPOs" described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
   
 -   **Issue 2**  
   
-    **Error received**—The primary domain controller in domain <domain_name> cannot be reached.  
+    **Error received**. The primary domain controller in domain <domain_name> cannot be reached.  
   
     **Cause**  
   
@@ -90,7 +90,7 @@ If a client has already been upgraded or the DCA is not configured, move the cli
   
     **Solution**  
   
-    Follow the procedure “To transfer the PDC emulator role” described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
+    Follow the procedure "To transfer the PDC emulator role" described in [2.4. Configure GPOs](assetId:///b1960686-a81e-4f48-83f1-cc4ea484df43#ConfigGPOs).  
   
 
 

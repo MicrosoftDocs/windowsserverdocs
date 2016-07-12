@@ -4,7 +4,7 @@ ms.custom:
   - AD
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -80,7 +80,7 @@ For each command (/forestprep, /domainprep, or /rodcprep), Adprep performs a gro
   
 The /user and /userdomain are new parameters for Adprep.exe in  Windows Server 2012 . These parameters specify the user account name and user domain, respectively, of the user who runs the adprep command. The Adprep.exe command-line utility blocks specifying one of /userdomain and /user but omitting the other.  
   
-However, Adprep operations can also be run as part of an AD DS installation using Windows PowerShell or Server Manager. Those experiences share the same underlying implementation (adprep.dll) as adprep.exe. The Windows PowerShell and Server Manager experiences have their separate credentials input, which does not impose the same requirements as by adprep.exe. Using Windows PowerShell or Server Manager, it is possible to pass a value for /user but not /userdomain to adprep.dll. If /user is specified but /userdomain is not specified, the local machine’s domain is used to perform the check. If the machine is not domain joined, group membership cannot be checked.  
+However, Adprep operations can also be run as part of an AD DS installation using Windows PowerShell or Server Manager. Those experiences share the same underlying implementation (adprep.dll) as adprep.exe. The Windows PowerShell and Server Manager experiences have their separate credentials input, which does not impose the same requirements as by adprep.exe. Using Windows PowerShell or Server Manager, it is possible to pass a value for /user but not /userdomain to adprep.dll. If /user is specified but /userdomain is not specified, the local machine's domain is used to perform the check. If the machine is not domain joined, group membership cannot be checked.  
   
 When group membership cannot be checked, Adprep shows a warning message in the adprep log files and continues:  
   
@@ -247,7 +247,7 @@ If you experience this problem, check the dcpromo.log file in the %systemroot%\d
 ### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services Configuration Wizard warns when a non-normalized DNS name is specified  
 If you create a new domain or forest and you specify a DNS domain name that includes internationalized characters that are not normalized, then the Active Directory Domain Services Configuration Wizard displays a warning that DNS queries for the name can fail. Although the DNS domain name is specified in the Deployment Configuration page, the warning appears on the Prerequisites Check page later in the wizard.  
   
-If a DNS domain name is specified using an un-normalized name like füßball.com or ΒΣΤΑ.com (the normalized versions are: füssball.com and βστα.com), client applications that try to access it with WinHTTP will normalize the name before calling name resolution APIs. If the user types “ΒΣΤΑ.com” on some dialog, the DNS query will be sent as “βστα.com” and no DNS server will match it with a resource record for “ΒΣΤΑ.com”. The user will be unable to resolve name.  
+If a DNS domain name is specified using an un-normalized name like füßball.com or �'ΣΤ�'.com (the normalized versions are: füssball.com and βστα.com), client applications that try to access it with WinHTTP will normalize the name before calling name resolution APIs. If the user types “�'ΣΤ�'.com” on some dialog, the DNS query will be sent as “βστα.com” and no DNS server will match it with a resource record for “�'ΣΤ�'.com”. The user will be unable to resolve name.  
   
 The following example explains one of the issues that can happen when using an IDN name that is not normalized:  
   

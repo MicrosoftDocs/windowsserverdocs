@@ -178,15 +178,15 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 
 ### Configuring Cloud Witness using PowerShell  
 
-The existing ~Set-ClusterQuorum~ PowerShell command has new additional parameters corresponding to Cloud Witness.  
+The existing Set-ClusterQuorum PowerShell command has new additional parameters corresponding to Cloud Witness.  
 
 You can configure Cloud Witness using the following PowerShell command:  
 
-    Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>  
+    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>  
 
 In case you need to use a different endpoint (rare):  
 
-    Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>  
+    Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>  
 
 
 ### Azure Storage Account considerations with Cloud Witness  
@@ -197,4 +197,4 @@ In case you need to use a different endpoint (rare):
 
 *  Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.  
 ## See Also
--   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)
+-   [What's New in Failover Clustering in Windows Server Technical Preview](whats-new-failover-clustering-windows-server.md)

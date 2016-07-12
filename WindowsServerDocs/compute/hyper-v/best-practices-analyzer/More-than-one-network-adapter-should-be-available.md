@@ -18,15 +18,17 @@ author: KBDAzure
 
 [This information is preliminary and subject to change.]  
   
-*For more information about best practices and scans, see* [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
+For more information about best practices and scans, see [Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=122786).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
 |**Severity**|Error|  
 |**Category**|Configuration|  
-  
+
+In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
+
 ## Issue  
   
 *This server is configured with one network adapter, which must be shared by the management operating system and all virtual machines that require access to a physical network.*  

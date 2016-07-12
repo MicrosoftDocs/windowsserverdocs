@@ -1,13 +1,12 @@
 ---
 title: Deploy a Central Access Policy (Demonstration Steps)
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
+manager: femila
+ms.service: 
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fae4b82-0cd0-4d5a-b4ae-b89895d6f7b9
@@ -21,12 +20,12 @@ In this scenario, the finance department security operations is working with cen
   
 Deploying a central access policy includes the following phases:  
   
-|Phase|Description|  
-|---------|---------------|  
-|[Plan: Identify the need for policy and the configuration required for deployment](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.2)|HYPERLINK "http://sharepoint/sites/flexibleaccess/Shared%20Documents/IX-UA%20Documentation/DynamicAccessControlDeploymentGuide.docx" \l "_Plan:_Identify_the" Identify the need for a policy and the configuration required for deployment.|  
-|[Implement: Configure the components and policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.3)|Configure the components and policy.|  
-|[Deploy the central access policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.4)|Deploy the policy.|  
-|[Maintain: Change and stage the policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.5)|Policy changes and staging|  
+|Phase|Description  
+|---------|---------------  
+|[Plan: Identify the need for policy and the configuration required for deployment](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.2)|Identify the need for a policy and the configuration required for deployment. 
+|[Implement: Configure the components and policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.3)|Configure the components and policy.  
+|[Deploy the central access policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.4)|Deploy the policy.  
+|[Maintain: Change and stage the policy](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.5)|Policy changes and staging. 
   
 ## <a name="BKMK_1.1"></a>Set up a test environment  
 Before you begin, you need to set up lab to test this scenario. The steps for setting up the lab are explained in detail in [Appendix B: Setting Up the Test Environment](Appendix-B--Setting-Up-the-Test-Environment.md).  
@@ -50,8 +49,8 @@ This section presents an example that deploys a central access policy for financ
 |------|--------|-----------|  
 |2.1|Create claim types|Create the following claim types:<br /><br />-   Department<br />-   Country|  
 |2.2|Create resource properties|Create and enable the following resource properties:<br /><br />-   Department<br />-   Country|  
-|2.3|HYPERLINK "http://sharepoint/sites/flexibleaccess/Shared%20Documents/IX-UA%20Documentation/DynamicAccessControlDeploymentGuide.docx" \l "_Step_2.3:_Create_1" Configure a central access rule|Create a Finance Documents rule that includes the policy determined in the previous section.|  
-|2.4|HYPERLINK "http://sharepoint/sites/flexibleaccess/Shared%20Documents/IX-UA%20Documentation/DynamicAccessControlDeploymentGuide.docx" \l "_Step_2.4:_Add" Configure a central access policy (CAP)|Create a CAP called Finance Policy and add the Finance Documents rule to that CAP.|  
+|2.3|Configure a central access rule|Create a Finance Documents rule that includes the policy determined in the previous section.|  
+|2.4|Configure a central access policy (CAP)|Create a CAP called Finance Policy and add the Finance Documents rule to that CAP.|  
 |2.5|Target central access policy to the file servers|Publish the Finance Policy CAP to the file servers.|  
 |2.6|Enable KDC Support for claims, compound authentication and Kerberos armoring.|Enable KDC Support for claims, compound authentication and Kerberos armoring for contoso.com.|  
   
@@ -86,11 +85,11 @@ In the following procedure, you create two claim types: Country and Department.
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-```  
-New-ADClaimType country -SourceAttribute c -SuggestedValues:@((New-Object Microsoft.ActiveDirectory.Management.ADSuggestedValueEntry("US","US","")), (New-Object Microsoft.ActiveDirectory.Management.ADSuggestedValueEntry("JP","JP","")))  
-New-ADClaimType department -SourceAttribute department  
-  
-```  
+ 
+    New-ADClaimType country -SourceAttribute c -SuggestedValues:@((New-Object Microsoft.ActiveDirectory.Management.ADSuggestedValueEntry("US","US","")), (New-Object Microsoft.ActiveDirectory.Management.ADSuggestedValueEntry("JP","JP","")))  
+    New-ADClaimType department -SourceAttribute department  
+      
+ 
   
 > [!TIP]  
 > You can use the Windows PowerShell History Viewer in Active Directory Administrative Center to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](http://technet.microsoft.com/library/hh831702)  
@@ -190,7 +189,7 @@ Access Rules:
   
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-    ```  
+ 
     $countryClaimType = Get-ADClaimType country  
     $departmentClaimType = Get-ADClaimType department  
     $countryResourceProperty = Get-ADResourceProperty Country  
@@ -198,11 +197,10 @@ Access Rules:
     $currentAcl = "O:SYG:SYD:AR(A;;FA;;;OW)(A;;FA;;;BA)(A;;0x1200a9;;;S-1-5-21-1787166779-1215870801-2157059049-1113)(A;;0x1301bf;;;S-1-5-21-1787166779-1215870801-2157059049-1112)(A;;FA;;;SY)(XA;;0x1200a9;;;AU;((@USER." + $countryClaimType.Name + " Any_of @RESOURCE." + $countryResourceProperty.Name + ") && (@USER." + $departmentClaimType.Name + " Any_of @RESOURCE." + $departmentResourceProperty.Name + ")))"  
     $resourceCondition = "(@RESOURCE." + $departmentResourceProperty.Name + " Contains {`"Finance`"})"  
     New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -ResourceCondition $resourceCondition  
+
   
-    ```  
-  
-    > [!IMPORTANT]  
-    > In the above cmdlet example, the security identifiers (SIDs) for the group FinanceAdmin and users is determined at creation time and will be different in your example. For example, the provided SID value (S-1-5-21-1787166779-1215870801-2157059049-1113) for the FinanceAdmins needs to be replaced with the actual SID for the FinanceAdmin group that you would need to create in your deployment. You can use Windows PowerShell to look up the SID value of this group, assign that value to a variable, and then use the variable here. For more information, see [Windows PowerShell Tip: Working with SIDs](http://go.microsoft.com/fwlink/?LinkId=253545).  
+> [!IMPORTANT]  
+> In the above cmdlet example, the security identifiers (SIDs) for the group FinanceAdmin and users is determined at creation time and will be different in your example. For example, the provided SID value (S-1-5-21-1787166779-1215870801-2157059049-1113) for the FinanceAdmins needs to be replaced with the actual SID for the FinanceAdmin group that you would need to create in your deployment. You can use Windows PowerShell to look up the SID value of this group, assign that value to a variable, and then use the variable here. For more information, see [Windows PowerShell Tip: Working with SIDs](http://go.microsoft.com/fwlink/?LinkId=253545).  
   
 You should now have a central access rule that allows people to access documents from the same country and the same department. The rule allows the FinanceAdmin group to edit the documents, and it allows the FinanceException group to read the documents. This rule targets only documents classified as Finance.  
   

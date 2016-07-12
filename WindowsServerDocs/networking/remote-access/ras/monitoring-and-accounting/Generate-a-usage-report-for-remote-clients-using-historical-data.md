@@ -55,12 +55,12 @@ The management console on the Remote Access server can be used to generate a usa
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
-In the following script, change the date range for which you want a report in the **–StartDateTime** and **–EndDateTime** parameters.  
+In the following script, change the date range for which you want a report in the **-StartDateTime** and **-EndDateTime** parameters.  
   
 ```  
-PS> Get-RemoteAccessConnectionStatisticsSummary –StartDateTime “1 October 2010 00:00:00” –EndDateTime “14 October 2010 00:00:00”  
+PS> Get-RemoteAccessConnectionStatisticsSummary -StartDateTime "1 October 2010 00:00:00" -EndDateTime "14 October 2010 00:00:00"  
 Shows server load statistics.  
-PS> Get-RemoteAccessUserActivity –HostIPAddress 10.0.0.1 –StartDateTime “1 October 2010 00:00:00” –EndDateTime “14 October 2010 00:00:00”  
+PS> Get-RemoteAccessUserActivity -HostIPAddress 10.0.0.1 -StartDateTime "1 October 2010 00:00:00" -EndDateTime "14 October 2010 00:00:00"  
 ```  
   
 

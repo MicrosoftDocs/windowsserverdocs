@@ -20,7 +20,7 @@ author: KBDAzure
   
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](http://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  
@@ -28,7 +28,6 @@ For more information about best practices and scans, see [Run Best Practices Ana
 |**Category**|Configuration|  
   
 In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.  
-  
   
 ## Issue  
 *One or more virtual machines are configured to use Dynamic Memory with less than the amount of memory required for Windows Server 2008 R2.*  

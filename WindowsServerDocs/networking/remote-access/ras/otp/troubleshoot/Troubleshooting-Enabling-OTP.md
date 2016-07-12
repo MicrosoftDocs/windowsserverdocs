@@ -18,13 +18,13 @@ author: coreyp
 This topic contains troubleshooting information for issues related to enabling DirectAccess OTP authentication using either the `Enable-DAOtpAuthentication` PowerShell cmdlet or the Remote Access Management console.  
   
 ## Failed to enroll the OTP signing certificate  
-**Error received** (server event log)—An OTP signing certificate cannot be enrolled using certificate template <OTP_signing_template_name>  
+**Error received** (server event log). An OTP signing certificate cannot be enrolled using certificate template <OTP_signing_template_name>  
   
 **Cause**  
   
 There are three possible causes for this error:  
   
--   The template doesn’t exist.  
+-   The template doesn't exist.  
   
 -   The permissions set on the template do not allow the DirectAccess server to enroll.  
   
@@ -38,12 +38,12 @@ There are three possible causes for this error:
   
     2.  Is set to be issued by at least one CA that can issue certificates to the DirectAccess server.  
   
-2.  If the template doesn’t exist, create it as described in [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert), or if another matching template exists reconfigure DirectAccess OTP with the new template name.  
+2.  If the template doesn't exist, create it as described in [3.3 Plan the registration authority certificate](assetId:///15df37b5-5056-4b8f-9343-0984d59635ca#bkmk_3_3_RA_Cert), or if another matching template exists reconfigure DirectAccess OTP with the new template name.  
   
 ## Failed to enable DirectAccess OTP when WebDAV is installed  
-**Scenario**—While attempting to apply the DirectAccess OTP configuration in the Remote Access Management console or by using the `Enable-DAOtpAuthentication` PowerShell cmdlet, the operation fails.  
+**Scenario**. While attempting to apply the DirectAccess OTP configuration in the Remote Access Management console or by using the `Enable-DAOtpAuthentication` PowerShell cmdlet, the operation fails.  
   
-**Error received** (server event log)—DirectAccess OTP settings cannot be applied because the WebDAV IIS extension is running on the server. Remove WebDAV and apply the settings again.  
+**Error received** (server event log). DirectAccess OTP settings cannot be applied because the WebDAV IIS extension is running on the server. Remove WebDAV and apply the settings again.  
   
 **Cause**  
   
@@ -64,7 +64,7 @@ Uninstall the WebDAV role:
 5.  Re-apply the DirectAccess OTP configuration.  
   
 ## No templates available in the Remote Access Management console  
-**Scenario**—While configuring OTP or registration authority certificate templates using the Remote Access Management console, some, or all of the templates are missing from the selection windows.  
+**Scenario**. While configuring OTP or registration authority certificate templates using the Remote Access Management console, some, or all of the templates are missing from the selection windows.  
   
 **Cause**  
   
@@ -87,11 +87,11 @@ There are two possible causes for this error:
     3.  Click **Certificate Templates** and make sure the required templates are enabled. If not, right-click **Certificate Templates**, click **New**, click **Certificate Template to issue**, and then select the templates you want to enable.  
   
 ## Cannot set renewal period of OTP template to 1 hour  
-**Scenario**—When configuring the DirectAccess OTP logon template using Windows 2003 CA, it is not possible to set the renewal period of the template to 1 hour.  
+**Scenario**. When configuring the DirectAccess OTP logon template using Windows 2003 CA, it is not possible to set the renewal period of the template to 1 hour.  
   
 **Cause**  
   
-The Certificate Templates MMC snap-in in Windows Server 2003 doesn’t allow you to set the renewal period of a template to 1 hour.  
+The Certificate Templates MMC snap-in in Windows Server 2003 doesn't allow you to set the renewal period of a template to 1 hour.  
   
 **Solution**  
   

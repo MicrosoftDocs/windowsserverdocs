@@ -1,9 +1,9 @@
----
+ï»¿---
 title: Replication error 8606 Insufficient attributes were given to create an object
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -342,7 +342,7 @@ Replication failures that appear on a destination domain controller may be cause
               <para>Are virtual host and guest computers configured to source time according to the hosting manufacturer's recommendations?</para>
             </listItem>
           </list>
-          <para>Microsoft Knowledge Base article <externalLink><linkText>884776</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> documents steps to help protect domain controllers from “listening” to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the <externalLink><linkText>W32Time Blog</linkText><linkUri>http://blogs.msdn.com/b/w32time/</linkUri></externalLink> post <externalLink><linkText>Configuring the Time Service: Max[Pos/Neg]PhaseCorrection</linkText><linkUri>http://blogs.msdn.com/b/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx</linkUri></externalLink>. Microsoft Knowledge Base article <externalLink><linkText>961027</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;961027</linkUri></externalLink> describes some helpful precision updates when you are configuring time-based settings in policy.</para>
+          <para>Microsoft Knowledge Base article <externalLink><linkText>884776</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;884776</linkUri></externalLink> documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the <externalLink><linkText>W32Time Blog</linkText><linkUri>http://blogs.msdn.com/b/w32time/</linkUri></externalLink> post <externalLink><linkText>Configuring the Time Service: Max[Pos/Neg]PhaseCorrection</linkText><linkUri>http://blogs.msdn.com/b/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx</linkUri></externalLink>. Microsoft Knowledge Base article <externalLink><linkText>961027</linkText><linkUri>http://support.microsoft.com/default.aspx?scid=kb;EN-US;961027</linkUri></externalLink> describes some helpful precision updates when you are configuring time-based settings in policy.</para>
           <para>Check for lingering objects by using "repadmin /removelingeringobjects /advisorymode," and then remove them as required. 
 </para>
           <para>

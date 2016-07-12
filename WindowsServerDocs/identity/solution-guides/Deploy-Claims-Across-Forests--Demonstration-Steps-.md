@@ -1,13 +1,12 @@
 ---
 title: Deploy Claims Across Forests (Demonstration Steps)
-ms.custom: 
-  - AD
+description: " "
+ms.custom: AD
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: active-directory
-ms.suite: na
+manager: femila
+ms.service: 
 ms.technology: 
-  - active-directory-domain-services
+	-active-directory-domain-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3c842f5-0615-4234-912f-5e21755f2d78
@@ -17,7 +16,7 @@ author: Femila
 
 >Applies To: Windows Server Technical Preview
 
-In this topic, we’ll cover a basic scenario that explains how to configure claims transformations between trusting and trusted forests. You will learn how claims transformation policy objects can be created and linked to the trust on the trusting forest and the trusted forest. You will then validate the scenario.  
+In this topic, we'll cover a basic scenario that explains how to configure claims transformations between trusting and trusted forests. You will learn how claims transformation policy objects can be created and linked to the trust on the trusting forest and the trusted forest. You will then validate the scenario.  
   
 ## Scenario overview  
 Adatum Corporation provides financial services to Contoso, Ltd. Each quarter, Adatum accountants copy their account spreadsheets to a folder on a file server located at Contoso, Ltd. There is a two-way trust set up from Contoso to Adatum. Contoso, Ltd. wants to protect the share so that only Adatum employees can access the remote share.  
@@ -95,8 +94,8 @@ To set up a claims transformation, you need to create a claims transformation po
   
     ```  
   
-### <a name="BKMK_2.3"></a>Set a claims transformation link on Adatum’s trust domain object  
-In this step, you apply the newly created claims transformation policy on Adatum’s trust domain object for Contoso.  
+### <a name="BKMK_2.3"></a>Set a claims transformation link on Adatum's trust domain object  
+In this step, you apply the newly created claims transformation policy on Adatum's trust domain object for Contoso.  
   
 ##### To apply the claims transformation policy  
   
@@ -109,7 +108,7 @@ In this step, you apply the newly created claims transformation policy on Adatum
       Set-ADClaimTransformLink `  
     -Identity:"contoso.com" `  
     -Policy:"DenyAllClaimsExceptCompanyPolicy" `  
-    –TrustRole:Trusted `  
+    �"TrustRole:Trusted `  
   
     ```  
   
@@ -133,8 +132,8 @@ In this step you create a claims transformation policy in Contoso (the trusting 
   
     ```  
   
-### <a name="BKMK_4.2"></a>Set a claims transformation link on Contoso’s trust domain object  
-In this step, you apply the newly created claims transformation policy on the contoso.com trust domain object for Adatum to allow “Company” be passed through to contoso.com. The trust domain object is named adatum.com.  
+### <a name="BKMK_4.2"></a>Set a claims transformation link on Contoso's trust domain object  
+In this step, you apply the newly created claims transformation policy on the contoso.com trust domain object for Adatum to allow "Company"� be passed through to contoso.com. The trust domain object is named adatum.com.  
   
 ##### To set the claims transformation policy  
   
@@ -147,7 +146,7 @@ In this step, you apply the newly created claims transformation policy on the co
       Set-ADClaimTransformLink   
     -Identity:"adatum.com" `  
     -Policy:"DenyAllClaimsExceptCompanyPolicy" `  
-    –TrustRole:Trusting `  
+    -TrustRole:Trusting `  
   
     ```  
   
@@ -169,7 +168,7 @@ Following is a list of additional common cases in claims transformation.
 |------------|----------|  
 |Allow all claims that come from Adatum to go through to Contoso Adatum|Code - <br />New-ADClaimTransformPolicy \`<br /> -Description:"Claims transformation policy to allow all claims" \`<br />-Name:"AllowAllClaimsPolicy" \`<br />-AllowAll \`<br />-Server:"contoso.com" \`<br />Set-ADClaimTransformLink \`<br />-Identity:"adatum.com" \`<br />-Policy:"AllowAllClaimsPolicy" \`<br />-TrustRole:Trusting \`<br />-Server:"contoso.com" `|  
 |Deny all claims that come from Adatum to go through to Contoso Adatum|Code - <br />New-ADClaimTransformPolicy \`<br />-Description:"Claims transformation policy to deny all claims" \`<br />-Name:"DenyAllClaimsPolicy" \`<br /> -DenyAll \`<br />-Server:"contoso.com" \`<br />Set-ADClaimTransformLink \`<br />-Identity:"adatum.com" \`<br />-Policy:"DenyAllClaimsPolicy" \`<br />-TrustRole:Trusting \`<br />-Server:"contoso.com"`|  
-|Allow all claims that come from Adatum except “Company” and “Department” to go through to Contoso Adatum|Code <br />- New-ADClaimTransformationPolicy \`<br />-Description:"Claims transformation policy to allow all claims except company and department" \`<br /> -Name:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br />-AllowAllExcept:company,department \`<br />-Server:"contoso.com" \`<br />Set-ADClaimTransformLink \`<br /> -Identity:"adatum.com" \`<br />-Policy:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br /> -TrustRole:Trusting \`<br />-Server:"contoso.com" `|  
+|Allow all claims that come from Adatum except "Company"� and "Department"� to go through to Contoso Adatum|Code <br />- New-ADClaimTransformationPolicy \`<br />-Description:"Claims transformation policy to allow all claims except company and department" \`<br /> -Name:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br />-AllowAllExcept:company,department \`<br />-Server:"contoso.com" \`<br />Set-ADClaimTransformLink \`<br /> -Identity:"adatum.com" \`<br />-Policy:"AllowAllClaimsExceptCompanyAndDepartmentPolicy" \`<br /> -TrustRole:Trusting \`<br />-Server:"contoso.com" `|  
   
 ## <a name="BKMK_Links"></a>See also  
   

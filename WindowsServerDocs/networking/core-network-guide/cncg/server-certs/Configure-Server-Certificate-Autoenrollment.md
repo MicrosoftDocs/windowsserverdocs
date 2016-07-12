@@ -20,7 +20,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
   
 ### To configure server certificate autoenrollment  
   
-1.  On the computer where AD DS is installed, open Windows PowerShell®, type **mmc**, and then press ENTER. The Microsoft Management Console opens.  
+1.  On the computer where AD DS is installed, open Windows PowerShell&reg;, type **mmc**, and then press ENTER. The Microsoft Management Console opens.  
   
 2.  On the **File** menu, click **Add/Remove Snap-in**. The **Add or Remove Snap-ins** dialog box opens.  
   

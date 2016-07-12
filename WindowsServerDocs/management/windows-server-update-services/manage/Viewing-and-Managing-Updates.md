@@ -4,7 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - techgroup-management-and-automation
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -129,7 +129,7 @@ You will be setting up and running synchronizations, adding computers and comput
 
     -   What computer groups to create, and how to assign computers to them (server-side or client-side targeting).
 
-    -   Which database to use for update metadata (for example, Windows® Internal Database, SQL Server).
+    -   Which database to use for update metadata (for example, Windows Internal Database, SQL Server).
 
     -   Whether updates should be synchronized automatically, and at what time.
 
@@ -150,7 +150,7 @@ A product is a specific edition of an operating system or application, for examp
 
 Update classifications represent the type of update. For any given product or product family, updates could be available among multiple update classifications (for example, Windows 7 family Critical Updates and Security Updates). The following table lists update classifications.
 
-|||
+| Update Classifications  | Description   |
 |----|----|
 |Critical Updates|Broadly released fixes for specific problems addressing critical, non-security related bugs.|
 |Definition Updates|Updates to virus or other definition files.|
@@ -167,6 +167,3 @@ Update classifications represent the type of update. For any given product or pr
 -   [WSUS and the Catalog Site](WSUS-and-the-Catalog-Site.md)
 
 -   [Update Management with Windows Server Update Services](Update-Management-with-Windows-Server-Update-Services.md)
-
-
-

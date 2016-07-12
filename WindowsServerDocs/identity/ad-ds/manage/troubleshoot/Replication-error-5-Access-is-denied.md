@@ -1,9 +1,9 @@
----
+ï»¿---
 title: Replication error 5 Access is denied
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.service: active-directory
+ms.service: 
 ms.suite: na
 ms.technology: 
   - active-directory-domain-services
@@ -116,7 +116,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
           <para>Antivirus software that uses a mini-firewall network adapter filter driver on the source or destination DC has been known to cause this issue.</para>
         </listItem>
       </list>
-      <para>Active Directory errors and events like those cited in the symptoms section of this topic can also fail with error 8453 with similar error string "Replication Access was denied." The following root cause reasons can cause AD operations to fail with 8453: "replication access was denied" but do not cause failures with error 5: “replication is denied":</para>
+      <para>Active Directory errors and events like those cited in the symptoms section of this topic can also fail with error 8453 with similar error string "Replication Access was denied." The following root cause reasons can cause AD operations to fail with 8453: "replication access was denied" but do not cause failures with error 5: "replication is denied":</para>
       <list class="ordered">
         <listItem>
           <para>NC head not granted the "replicating directory changes" permission.</para>
@@ -139,7 +139,7 @@ Access is denied</para><para>The operation will not continue</para><para>&lt;ins
     <content>
       <para>There are multiple root causes for Active Directory Replication failing with error 5. Attack the problem initially by using tools like DCDIAG, DCDIAG /TEST:CheckSecurityError and NETDIAG to expose common problems. </para>
       <para>Run DCDIAG, DCDIAG /TEST:CheckSecurityError and NETDIAG</para>
-      <para>The generic DCDIAG runs multiple tests. <embeddedLabel>DCDIAG /TEST:CheckSecurityErrors</embeddedLabel> was written to perform specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: ”access is denied” and error 8453: “replication access was denied" but is NOT run as part of the default execution of DCDIAG.</para>
+      <para>The generic DCDIAG runs multiple tests. <embeddedLabel>DCDIAG /TEST:CheckSecurityErrors</embeddedLabel> was written to perform specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: "access is denied" and error 8453: "replication access was denied" but is NOT run as part of the default execution of DCDIAG.</para>
       <list class="ordered">
         <listItem>
           <para>Run DCDIAG on the destination DC.</para>
@@ -521,15 +521,15 @@ Ignoring DC CONTOSO-DC1 in the convergence test of object CN=CONTOSO-DC3,OU=Doma
 Testing server: &lt;site name&gt;&lt;dc name&gt;
 Test omitted by user request: Advertising
 Starting test: CheckSecurityError
-* Dr Auth: Beginning security errors check’
+* Dr Auth: Beginning security errors check'
 Found KDC &lt;KDC DC&gt; for domain &lt;DNS Name of AD domain&gt; in site &lt;site name&gt;
 Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;NetBIOS domain name&gt;
-* Missing SPN :LDAP/bba727ef—be4e—477d—9796—63b6cee3bSf.&lt;forest root domain DN&gt;
-* SPN found :E3514235—4B06—I1D1—ABØ4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
+* Missing SPN :LDAP/bba727efï¿½be4eï¿½477dï¿½9796ï¿½63b6cee3bSf.&lt;forest root domain DN&gt;
+* SPN found :E3514235ï¿½4B06ï¿½I1D1ï¿½ABï¿½4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
 * Missing SPN :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;
@@ -541,15 +541,15 @@ Unable to verify the machine account (&lt;DN path for Dc machine account&gt;) fo
       <code>Testing server: &lt;site name&gt;&lt;dc name&gt;
 Test omitted by user request: Advertising
 Starting test: CheckSecurityError
-* Dr Auth: Beginning security errors check’
+* Dr Auth: Beginning security errors check'
 Found KDC &lt;KDC DC&gt; for domain &lt;DNS Name of AD domain&gt; in site &lt;site name&gt;
 Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;NetBIOS domain name&gt;
-* Missing SPN :LDAP/bba727ef—be4e—477d—9796—63b6cee3bSf.&lt;forest root domain DN&gt;
-* SPN found :E3514235—4B06—I1D1—ABØ4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
+* Missing SPN :LDAP/bba727efï¿½be4eï¿½477dï¿½9796ï¿½63b6cee3bSf.&lt;forest root domain DN&gt;
+* SPN found :E3514235ï¿½4B06ï¿½I1D1ï¿½ABï¿½4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
 * Missing SPN :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;
