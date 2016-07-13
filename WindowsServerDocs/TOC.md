@@ -298,6 +298,7 @@
 ##### [AD FS On-behalf-of Authentication in Windows Server 2016](identity/ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md)
 ##### [Enabling OpenId Connect with AD FS 2016](identity/ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)
 ##### [Enabling Oauth Confidential Clients with AD FS 2016](identity/ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
+##### [Single Page Application with AD FS](identity/ad-fs/development/Single-Page-Application-with-AD-FS.md)
 #### [AD FS 2016 Operations](identity/ad-fs/AD-FS-2016-Operations.md)
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configuring Alternate Login ID](identity/ad-fs/operations/Configuring-Alternate-Login-ID.md)
