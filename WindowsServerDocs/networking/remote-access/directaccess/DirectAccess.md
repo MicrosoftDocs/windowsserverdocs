@@ -23,10 +23,10 @@ You can use this topic for a brief overview of DirectAccess, including the serve
 > -   [DirectAccess Deployment Paths in Windows Server](DirectAccess-Deployment-Paths-in-Windows-Server.md)  
 > -   [Prerequisites for Deploying DirectAccess](Prerequisites-for-Deploying-DirectAccess.md)  
 > -   [DirectAccess Unsupported Configurations](DirectAccess-Unsupported-Configurations.md)  
-> -   [DirectAccess Test Lab Guides](directaccess/DirectAccess-Test-Lab-Guides.md)  
-> -   [DirectAccess Known Issues](directaccess/DirectAccess-Known-Issues.md)  
+> -   [DirectAccess Test Lab Guides](DirectAccess-Test-Lab-Guides.md)  
+> -   [DirectAccess Known Issues](DirectAccess-Known-Issues.md)  
 > -   [DirectAccess Capacity Planning](DirectAccess-Capacity-Planning.md)  
-> -   [DirectAccess Offline Domain Join](DirectAccess-Offline-Domain-Join.md)\  
+> -   [DirectAccess Offline Domain Join](DirectAccess-Offline-Domain-Join.md)  
 > -   [Troubleshooting DirectAccess](Troubleshooting-DirectAccess.md)  
 > -   [Deploy a Single DirectAccess Server Using the Getting Started Wizard](/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)  
 > -   [Deploy a Single DirectAccess Server with Advanced Settings](/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)  
