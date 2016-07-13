@@ -20,6 +20,8 @@ author: billmath
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.
+
+
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow 
 
