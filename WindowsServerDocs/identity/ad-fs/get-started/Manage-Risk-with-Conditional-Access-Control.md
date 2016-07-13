@@ -1,16 +1,15 @@
 ---
 title: Manage Risk with Conditional Access Control
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 627cbc9d-30f2-4ed3-86c4-b8d1d97222c5
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Manage Risk with Conditional Access Control
 
 >Applies To: Windows Server 2012 R2

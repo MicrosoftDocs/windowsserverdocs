@@ -1,16 +1,13 @@
 ---
 title: What&#39;s new in Active Directory Federation Services for Windows Server 2016 Technical Preview
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d133f97f-4b37-475f-b965-56d97d6c0e16
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # What&#39;s new in Active Directory Federation Services for Windows Server 2016 Technical Preview
 

@@ -1,17 +1,15 @@
 ---
 title: Scenario Access-Denied Assistance
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: d1faa8c9-89ea-40c5-9c1b-abd04e09b9d7
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Scenario: Access-Denied Assistance
 
 >Applies To: Windows Server Technical Preview

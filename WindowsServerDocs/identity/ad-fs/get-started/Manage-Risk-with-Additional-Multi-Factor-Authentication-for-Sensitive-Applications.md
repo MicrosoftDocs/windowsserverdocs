@@ -1,16 +1,15 @@
 ---
 title: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: f63b93ba-4228-45e1-aae9-0ccb962e933d
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
 
 >Applies To: Windows Server 2012 R2

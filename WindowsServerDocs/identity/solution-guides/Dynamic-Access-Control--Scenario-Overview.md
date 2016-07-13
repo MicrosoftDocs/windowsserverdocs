@@ -1,15 +1,13 @@
 ---
 title: Dynamic Access Control Scenario Overview
-description: " "
-ms.prod: windows-server-threshold
-ms.service: na
-manager: timlt
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c2a4cb7c-22b3-4dba-8d39-e1c72a51f085
+description:
 author: femila
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
 
 # Dynamic Access Control: Scenario Overview

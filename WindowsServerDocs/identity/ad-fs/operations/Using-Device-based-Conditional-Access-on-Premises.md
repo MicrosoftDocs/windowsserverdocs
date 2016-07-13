@@ -1,16 +1,13 @@
 ---
 title: Using Device-based Conditional Access on-Premises
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f88d7774-b7f8-4eb8-8edd-7a980e24199d
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # Using Device-based Conditional Access on-Premises
 
