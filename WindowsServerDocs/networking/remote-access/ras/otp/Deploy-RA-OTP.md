@@ -21,7 +21,7 @@ In this scenario a Remote Access server with DirectAccess enabled is configured 
 ## Prerequisites  
 Before you begin deploying this scenario, review this list for important requirements:  
   
--   [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before you deploy OTP.  
+-   [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before you deploy OTP.  
   
 -   Windows 7 Clients must use DCA 2.0 to support OTP.  
   
@@ -36,13 +36,13 @@ Before you begin deploying this scenario, review this list for important require
 ## In this scenario  
 The OTP authentication scenario includes a number of steps:  
   
-1.  [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server must be deployed before configuring OTP. Planning and deploying a single server includes designing and configuring a network topology, planning and deploying certificates, setting up DNS and Active Directory, configuring Remote Access server settings, deploying DirectAccess clients, and preparing intranet servers.  
+1.  [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server must be deployed before configuring OTP. Planning and deploying a single server includes designing and configuring a network topology, planning and deploying certificates, setting up DNS and Active Directory, configuring Remote Access server settings, deploying DirectAccess clients, and preparing intranet servers.  
   
-2.  [Plan Remote Access with OTP Authentication](networking/remote-access/ras/otp/plan/Plan-Remote-Access-with-OTP-Authentication.md). In addition to the planning required for a single server, OTP requires planning for a Microsoft certification authority \(CA\) and certificate templates for OTP; and a RADIUS\-enabled OTP server. Planning might also include a requirement for security groups to exempt specific users from strong \(OTP or smart card\) authentication. For information regarding the configuration of OTP in a multi\-forest environment, see [Configure a Multi-Forest Deployment](networking/remote-access/ras/multi-forest/Configure-a-Multi-Forest-Deployment.md).  
+2.  [Plan Remote Access with OTP Authentication](/plan/Plan-Remote-Access-with-OTP-Authentication.md). In addition to the planning required for a single server, OTP requires planning for a Microsoft certification authority \(CA\) and certificate templates for OTP; and a RADIUS\-enabled OTP server. Planning might also include a requirement for security groups to exempt specific users from strong \(OTP or smart card\) authentication. For information regarding the configuration of OTP in a multi\-forest environment, see [Configure a Multi-Forest Deployment](../../ras/multi-forest/Configure-a-Multi-Forest-Deployment.md).  
   
-3.  [Configure DirectAccess with OTP Authentication](networking/remote-access/ras/otp/configure/Configure-DirectAccess-with-OTP-Authentication.md). OTP deployment consists of a number of configuration steps, including preparing the infrastructure for OTP authentication, configuring the OTP server, configuring OTP settings on the Remote Access server, and updating DirectAccess client settings.  
+3.  [Configure DirectAccess with OTP Authentication](/configure/Configure-DirectAccess-with-OTP-Authentication.md). OTP deployment consists of a number of configuration steps, including preparing the infrastructure for OTP authentication, configuring the OTP server, configuring OTP settings on the Remote Access server, and updating DirectAccess client settings.  
   
-4.  [Troubleshoot an OTP Deployment]((networking/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.  
+4.  [Troubleshoot an OTP Deployment]((/troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.  
   
 ## <a name="BKMK_APP"></a>Practical applications  
 Increase security—Using OTP increases the security of your DirectAccess deployment. A user requires OTP credentials in order to gain access to the internal network. A user supplies OTP credentials via the Workplace Connections available in the network connections on the Windows 10 or Windows 8 client computer, or by using DirectAccess Connectivity Assistant \(DCA\) on client computers running Windows 7. The OTP authentication process works as follows:  
@@ -81,7 +81,7 @@ Hardware requirements for this scenario include the following:
 ## <a name="BKMK_SOFT"></a>Software requirements  
 There are a number of requirements for this scenario:  
   
-1.  Software requirements for single server deployment. For more information, see [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
+1.  Software requirements for single server deployment. For more information, see [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
   
 2.  In addition to software requirements for a single server there are a number of OTP\-specific requirements:  
   
