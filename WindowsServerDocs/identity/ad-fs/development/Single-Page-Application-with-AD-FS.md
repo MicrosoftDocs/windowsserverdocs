@@ -25,7 +25,7 @@ This walkthrough provides instruction for authenticating against AD FS using ADA
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow 
 
-![Overview](media/Single-Page-Application-with-AD-FS/overview.PNG) 
+
 
 ![AD FS Authorization](media/Single-Page-Application-with-AD-FS/singleapp1.PNG) 
 
