@@ -27,7 +27,7 @@ In this sample we will be creating an authentication flow where a single page ap
 
 
 
-![AD FS Authorization](media/Single-Page-Application-with-AD-FS/singleapp1.PNG) 
+![AD FS Authorization](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG) 
 
 When using a single page application, the user navigates to a starting location, from where starting page and a collection of JavaScript files and HTML views are loaded. You need to configure the Active Directory Authentication Library (ADAL) to know the critical information about your application, i.e. the AD FS instance, client ID, so that it can direct the authentication to your AD FS.
 
