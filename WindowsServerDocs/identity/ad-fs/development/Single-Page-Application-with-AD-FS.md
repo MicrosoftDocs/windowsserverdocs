@@ -20,10 +20,12 @@ author: billmath
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
 >WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.
+
+
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow 
 
-![Overview](media/Single-Page-Application-with-AD-FS/overview.PNG) 
+
 
 ![AD FS Authorization](media/Single-Page-Application-with-AD-FS/singleapp1.PNG) 
 
@@ -144,11 +146,11 @@ The browser will load the SPA and you will be presented with the following scree
 
 Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS will direct the authentication to AD FS
 
-![Login](media/Single-Page-Application-with-AD-FS/singleapp4.PNG)
+![Login](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
 
 In Fiddler you can see the token being returned as part of the URL in the # fragment.
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5.PNG)
+![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.PNG)
 
 You will be able to now call the backend API to add ToDo List items for the logged-in user:
 
