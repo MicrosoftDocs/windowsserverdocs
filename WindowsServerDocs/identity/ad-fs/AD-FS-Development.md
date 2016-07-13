@@ -24,4 +24,5 @@ This document contains a list of all of the documentation walkthroughs for AD FS
   
 * [Enabling Oauth Confidential Clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 
+- [Single Page Application with AD FS](../ad-fs/development/Single-Page-Application-with-AD-FS.md)
 
