@@ -146,11 +146,11 @@ The browser will load the SPA and you will be presented with the following scree
 
 Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS will direct the authentication to AD FS
 
-![Login](media/Single-Page-Application-with-AD-FS/singleapp4.PNG)
+![Login](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
 
 In Fiddler you can see the token being returned as part of the URL in the # fragment.
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5.PNG)
+![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.PNG)
 
 You will be able to now call the backend API to add ToDo List items for the logged-in user:
 
