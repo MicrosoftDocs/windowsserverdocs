@@ -15,17 +15,17 @@ author: coreyp-at-msft
 
 >Applies To: Windows Server Technical Preview
 
-This topic describes how to verify that you have correctly configured your DirectAccess with OTP deployment.  
+This topic describes how to verify that you have correctly configured your DirectAccess with OTP deployment.
   
-### To verify OTP health on the Remote Access server  
-  
-1.  On the Remote Access server open the **Remote Access Management** console.  
-  
-2.  Under **Remote Access Servers** click the Remote Access server that has been configured for OTP support.  
-  
-3.  Click **Operations Status**.  
-  
-4.  Verify that the status of OTP displays the green icon and is Working.  
+### To verify OTP health on the Remote Access server
+
+1. On the Remote Access server open the **Remote Access Management** console.  
+
+2. Under **Remote Access Servers** click the Remote Access server that has been configured for OTP support.  
+
+3. Click **Operations Status**.  
+
+4. Verify that the status of OTP displays the green icon and is Working.  
   
     > [!NOTE]  
     > The health status update interval will be a maximum of the sum of the values from the registry key HKLM\SYSTEM\CCS\Services\Ramgmtsvc\parameters\HealthRefreshTimeout and the **Time interval for server activity** that was set in the Remote Access configuration.  
