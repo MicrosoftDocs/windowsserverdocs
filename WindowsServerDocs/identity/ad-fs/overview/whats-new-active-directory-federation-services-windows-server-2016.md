@@ -15,7 +15,7 @@ ms.technology: active-directory-federation-services
   
 ## What's new in Active Directory Federation Services for Windows Server 2016 Preview  
 If you are looking for information on earlier versions of AD FS, see the following articles:  
- [ADFS in Windows Server 2012 or 2012 R2](https://technet.microsoft.com/library/hh831502.aspx) and [AD FS 2.0](https://technet.microsoft.com/library/adfs2(v=ws.10).aspx)  
+ [ADFS in Windows Server 2012 or 2012 R2](https://technet.microsoft.com/library/hh831502.aspx) and [AD FS 2.0](https://technet.microsoft.com/library/adfs2.aspx)  
    
  Active Directory Federation Services provides access control and single sign on across a wide variety of applications including Office 365, cloud based SaaS applications, and applications on the corporate network.  
 * For the IT organization, we enable you to provide authentication and access control to both modern and legacy applications, on premises and in the cloud, based on the same set of credentials and policies, ensuring that you are only allowing access to users, devices and network locations that meet your corporate policies.  
