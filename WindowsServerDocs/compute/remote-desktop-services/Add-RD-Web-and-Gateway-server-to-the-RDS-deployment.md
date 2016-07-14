@@ -58,7 +58,7 @@ Use the following steps to add the RD Web and Gateway server you created to your
 <<<<<<< HEAD
     4.  In the IIS Manager's left pane, expand the local computer (e.g. Contoso-WebGw1) > Sites > Default Web Site, and then click **RDWeb**.  
 =======
-    4.  In the IIS Manager�s left pane, expand the local computer (e.g. Contoso-WebGw1) > Sites > Default Web Site, and then click **RDWeb**.  
+    4.  In the IIS Managers left pane, expand the local computer (e.g. Contoso-WebGw1) > Sites > Default Web Site, and then click **RDWeb**.  
 >>>>>>> 45cb7c0bd86588260c8f1470b1cb01db285e15c4
     5.  Right-click **Machine Key**, and then click **Open Feature**.  
     6.  On the Machine Key page, in the **Actions** pane, select **Generate Keys**, and then click **Apply**.  
