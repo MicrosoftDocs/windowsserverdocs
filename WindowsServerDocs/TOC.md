@@ -205,7 +205,7 @@
 ###### [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](identity/ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md)
 ##### [Demoting Domain Controllers and Domains (Level 200)](identity/ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
 ##### [AD DS Installation and Removal Wizard Page Descriptions](identity/ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md)
-##### [Changes Made by Adprep.exe](identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep.exe.md)
+##### [Changes Made by Adprep](identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep.md)
 ###### [Schema Updates](identity/ad-ds/deploy/Schema-Updates.md)
 ###### [Read-Only Domain Controller Updates](identity/ad-ds/deploy/RODC/Read-Only-Domain-Controller-Updates.md)
 ###### [Domain-Wide Updates](identity/ad-ds/deploy/Domain-Wide-Updates.md)
