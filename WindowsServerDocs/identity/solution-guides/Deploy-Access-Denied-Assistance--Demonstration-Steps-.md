@@ -198,7 +198,7 @@ You must configure the email notification settings on each file server that will
   
     -   In the **SMTP server name or IP address** box, type the name of IP address of the SMTP server in your organization.  
   
-    -   In the **Default administrator recipients** and **Default â&euro;œFromâ&euro; e-mail address** boxes, type the email address of the file server administrator.  
+    -   In the **Default administrator recipients** and **Default 'From' e-mail address** boxes, type the email address of the file server administrator.  
   
 5.  Click **Send Test E-mail** to ensure that the email notifications are configured correctly.  
   

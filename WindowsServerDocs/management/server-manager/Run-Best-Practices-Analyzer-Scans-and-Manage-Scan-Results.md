@@ -34,7 +34,7 @@ This topic contains the following sections.
 You can find the Best Practices Analyzer tile on role and server group pages of Server Manager in  Windows Server 2012 R2  and  Windows Server 2012, or you can open a Windows PowerShell session with elevated user rights to run Best Practices Analyzer cmdlets.
 
 ## <a name="BKMK_how"></a>How BPA works
-BPA works by measuring a role’s compliance with best practice rules in eight different categories of effectiveness, trustworthiness, and reliability. Results of measurements can be any of the three severity levels described in the following table.
+BPA works by measuring a role's compliance with best practice rules in eight different categories of effectiveness, trustworthiness, and reliability. Results of measurements can be any of the three severity levels described in the following table.
 
 |Severity level|Description|
 |------------------|---------------|
@@ -47,8 +47,8 @@ The following table describes the best practice rules categories against which r
 
 |Category Name|Description|
 |-----------------|---------------|
-|Security|Security rules are applied to measure a role’s relative risk for exposure to threats such as unauthorized or malicious users, or loss or theft of confidential or proprietary data.|
-|Performance|Performance rules are applied to measure a role’s ability to process requests and perform its prescribed duties in the enterprise within expected periods of time given the role’s workload.|
+|Security|Security rules are applied to measure a role's relative risk for exposure to threats such as unauthorized or malicious users, or loss or theft of confidential or proprietary data.|
+|Performance|Performance rules are applied to measure a role's ability to process requests and perform its prescribed duties in the enterprise within expected periods of time given the role's workload.|
 |Configuration|Configuration rules are applied to identify role settings that might require modification for the role to perform optimally. Configuration rules can help prevent conflicts in settings that can result in error messages or prevent the role from performing its prescribed duties in an enterprise.|
 |Policy|Policy rules are applied to identify Group Policy or Windows Registry settings that might require modification for a role to operate optimally and securely.|
 |Operation|Operation rules are applied to identify possible failures of a role to perform prescribed tasks in the enterprise.|
@@ -226,7 +226,7 @@ When you want to view scan results that were excluded, you can include those sca
 
     The final part of the command, after the second pipe character, includes results that are filtered by the second part of the cmdlet, by setting the value of the **-Exclude** parameter to **false**.
 
-    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq “Information”} | Set-BPAResult -Exclude $false`
+    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq "Information"} | Set-BPAResult -Exclude $false`
 
 ### View and export BPA scan results in Windows PowerShell
 To view and manage scan results by using Windows PowerShell cmdlets, see the following procedures. Before you can use any of the following procedures, run at least one BPA scan on at least one model or submodel.
@@ -274,7 +274,7 @@ To view and manage scan results by using Windows PowerShell cmdlets, see the fol
 
     -   To format BPA results in a table, run the following cmdlet, adding the result properties that you want to see from the preceding example.
 
-        `Get-BPAResult Model ID | Format-Table -Property <property1,property2,property3…>`
+        `Get-BPAResult Model ID | Format-Table -Property <property1,property2,property3...>`
 
         **Example:**`Get-BPAResult Microsoft/Windows/FileServices | Format-Table -Property ModelId,SubModelId,ComputerName,Source,Severity,Category,Title,Problem,Impact,Resolution,Compliance,Help`
 

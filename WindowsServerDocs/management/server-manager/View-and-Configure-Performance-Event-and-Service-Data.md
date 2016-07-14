@@ -36,7 +36,7 @@ This topic contains the following sections.
 -   [View and copy event or performance entries](#BKMK_copy)  
 
 ## <a name="BKMK_thumb"></a>What are thumbnails?  
-*Thumbnails* are displayed on the Server Manager dashboard for each role (a role’s thumbnail reflects data collected about all of the servers in the Server Manager pool that are running the role), for each server group, for the **All Servers** group (all of the servers in the Server Manager pool), and for the local server. After Server Manager gets data from managed servers, thumbnails are automatically created for roles that are running on servers in the server pool.  
+*Thumbnails* are displayed on the Server Manager dashboard for each role (a role's thumbnail reflects data collected about all of the servers in the Server Manager pool that are running the role), for each server group, for the **All Servers** group (all of the servers in the Server Manager pool), and for the local server. After Server Manager gets data from managed servers, thumbnails are automatically created for roles that are running on servers in the server pool.  
 
 If the Server Manager console is running on a client computer as part of Remote Server Administration Tools, there is no **Local Server** thumbnail.  
 

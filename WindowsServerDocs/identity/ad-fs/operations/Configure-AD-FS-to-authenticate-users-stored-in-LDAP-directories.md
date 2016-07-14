@@ -82,7 +82,7 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
     -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName) 
 
     # General claims provider properties
-    -AcceptanceTransformRules "c:[Type != "˜"'"] => issue(claim=c);" -Enabled $true 
+    -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true 
 
     # Optional - supply user name suffix if you want to use Ws-Trust
     -OrganizationalAccountSuffix "vendors.contoso.com"
