@@ -1,5 +1,5 @@
-﻿---
-title Server Certificate Deployment Overview
+---
+title: Server Certificate Deployment Overview
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
