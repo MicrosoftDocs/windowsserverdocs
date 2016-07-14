@@ -32,12 +32,12 @@ HNV is a fundamental building block of Microsoft's updated Software Defined Netw
   
 Microsoft's new Network Controller pushes HNV policies down to a Host Agent running on each host using Open vSwitch Database Management Protocol (OVSDB) as the SouthBound Interface (SBI). The Host Agent stores this policy using a customization of the [VTEP schema](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) and programs complex flow rules into a performant flow engine in the Hyper-V switch.  
   
-The flow engine inside the Hyper-V switch is the same as Microsoft Azureâ&euro;&trade;s, which has been proven at hyper-scale in the Microsoft Azure public cloud. Additionally, the entire SDN stack up through the Network Controller, and Network Resource Provider (details coming soon) is consistent with Microsoft Azure, thus bringing the power of the Microsoft Azure public cloud to our enterprise and hosting service provider customers.  
+The flow engine inside the Hyper-V switch is the same engine used in Microsoft Azure&trade;, which has been proven at hyper-scale in the Microsoft Azure public cloud. Additionally, the entire SDN stack up through the Network Controller, and Network Resource Provider (details coming soon) is consistent with Microsoft Azure, thus bringing the power of the Microsoft Azure public cloud to our enterprise and hosting service provider customers.  
   
 > [!NOTE]  
 > For more information about OVSDB, see [RFC 7047](http://www.rfc-editor.org/info/rfc7047).  
   
-The Hyper-V switch supports both stateless and stateful flow rules based on simple â&euro;œmatch actionâ&euro; within Microsoftâ&euro;&trade;s flow engine.  
+The Hyper-V switch supports both stateless and stateful flow rules based on simple 'match action' within Microsoft's flow engine.  
   
 For more information about network controller integration, see Windows Server 2016 Technical Preview HNV Technical Details (coming soon)  
   

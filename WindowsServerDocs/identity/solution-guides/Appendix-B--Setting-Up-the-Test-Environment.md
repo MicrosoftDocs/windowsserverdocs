@@ -168,7 +168,7 @@ Create the following users by using Active Directory Administrative Center.
   
 1.  Hover the cursor on the upper right corner of screen and click the search icon. In the Search box, type **group policy management**, and click **Group Policy Management**.  
   
-2.  Expand **Forest: contoso.com**, and then expand **Domains**, navigate to **contoso.com**, expand **(contoso.com)**, and then select **FileServerOU**. Right-click **Create a GPO in this domain and Link it hereâ&euro;¦**  
+2.  Expand **Forest: contoso.com**, and then expand **Domains**, navigate to **contoso.com**, expand **(contoso.com)**, and then select **FileServerOU**. Right-click **Create a GPO in this domain and Link it here'¦**  
   
 3.  Type a descriptive name for the GPO, such as **FlexibleAccessGPO**, and then click **OK**.  
   
@@ -250,7 +250,7 @@ When you create quotas and file screens, you have the option of sending email no
   
 2.  Create the following files with the details specified:  
   
-    -   **Finance Memo.docx**: Add some finance related text in the document. For example, â&euro;œThe business rules about who can access finance documents have changed. Finance documents are now only accessed by members of the FinanceExpert group. No other departments or groups have access.â&euro; You need to evaluate the impact of this change before implementing it in the environment. Ensure that this document has CONTOSO CONFIDENTIAL as the footer on every page.  
+    -   **Finance Memo.docx**: Add some finance related text in the document. For example, 'œThe business rules about who can access finance documents have changed. Finance documents are now only accessed by members of the FinanceExpert group. No other departments or groups have access.' You need to evaluate the impact of this change before implementing it in the environment. Ensure that this document has CONTOSO CONFIDENTIAL as the footer on every page.  
   
     -   **Request for Approval to Hire.docx**: Create a form in this document that collects applicant information. You must have the following fields in the document: **Applicant Name, Social Security number, Job Title, Proposed Salary, Starting Date, Supervisor name, Department**. Add an additional section in the document that has a form for **Supervisor Signature, Approved Salary, Conformation of Offer**, and **Status of Offer**.   
         Make the document rights-management enabled.  
@@ -387,7 +387,7 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
 3.  To use Server Manager cmdlets to install the AD RMS server role, type:  
   
     ```  
-    Add-WindowsFeature ADRMS â&euro;"IncludeAllSubFeature â&euro;"IncludeManagementTools  
+    Add-WindowsFeature ADRMS '"IncludeAllSubFeature '"IncludeManagementTools  
     ```  
   
 4.  Create the Windows PowerShell drive to represent the AD RMS server you are installing.  
@@ -412,13 +412,13 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
     Next, to assign the AD RMS service account to the AD RMS cluster settings, type the following:  
   
     ```  
-    Set-ItemProperty â&euro;"Path RC:\ -Name ServiceAccount -Value $svcacct  
+    Set-ItemProperty -Path RC:\ -Name ServiceAccount -Value $svcacct  
     ```  
   
     Next, to set the AD RMS server to use the Windows Internal Database, at the Windows PowerShell command prompt, type:  
   
     ```  
-    Set-ItemProperty â&euro;"Path RC:\ClusterDatabase -Name UseWindowsInternalDatabase -Value $true  
+    Set-ItemProperty -Path RC:\ClusterDatabase -Name UseWindowsInternalDatabase -Value $true  
     ```  
   
     Next, to securely store the cluster key password in a variable, at the Windows PowerShell command prompt, type:  
@@ -459,7 +459,7 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
   
     ```  
     Set-Location RC:\  
-    Install-ADRMS â&euro;"Path.  
+    Install-ADRMS -Path.  
     ```  
   
     Type "Y" when the cmdlet prompts you to confirm you want to start the installation.  
@@ -483,7 +483,7 @@ Optionally, instead of using the Add Roles and Features Wizard in Server Manager
 10. To create new rights template for the Contoso finance administrator and assign it user rights with full control in your AD RMS installation, at the Windows PowerShell command prompt, type:  
   
     ```  
-    New-Item -Path RC:\RightsPolicyTemplate â&euro;"LocaleName en-us -DisplayName "Contoso Finance Admin Only" -Description "Contoso Finance Admin Only" -UserGroup financeadmin@contoso.com  -Right ('FullControl')  
+    New-Item -Path RC:\RightsPolicyTemplate '"LocaleName en-us -DisplayName "Contoso Finance Admin Only" -Description "Contoso Finance Admin Only" -UserGroup financeadmin@contoso.com  -Right ('FullControl')  
     ```  
   
 11. To verify that you can see the new rights template for the Contoso finance administrator, at the Windows PowerShell command prompt:  
@@ -525,7 +525,7 @@ Configure Microsoft Exchange Server on this computer. For more information, see 
   
 4.  Create a shortcut to Outlook on the contoso\administrator desktop.  
   
-5.  Open Outlook and address all the â&euro;œfirst time launchedâ&euro; messages.  
+5.  Open Outlook and address all the 'œfirst time launched' messages.  
   
 6.  Delete any test messages that were generated.  
   
@@ -715,11 +715,11 @@ Create the user Jeff Low with the password **pass@word1**, and assign the compan
 2.  Open an elevated command prompt in Windows PowerShell, then type the following code:  
   
     ```  
-    New-ADClaimType â&euro;"SourceTransformPolicy `  
-    â&euro;"DisplayName â&euro;œCompanyâ&euro; `  
-    â&euro;"ID â&euro;œad://ext/Company:ContosoAdatumâ&euro; `  
-    â&euro;"IsSingleValued $true `  
-    â&euro;"ValueType â&euro;œstringâ&euro; `  
+    New-ADClaimType '"SourceTransformPolicy `  
+    '"DisplayName 'œCompany' `  
+    '"ID 'œad://ext/Company:ContosoAdatum' `  
+    '"IsSingleValued $true `  
+    '"ValueType 'œstring' `  
   
     ```  
   
@@ -777,7 +777,7 @@ Create the user Jeff Low with the password **pass@word1**, and assign the compan
     > [!TIP]  
     > If the **Show Administrative tools** setting is disabled, the Administrative Tools folder and its contents will not appear in the **Settings** results.  
   
-2.  Right-click the contoso.com domain, click **Create a GPO in this domain and Link it hereâ&euro;¦**  
+2.  Right-click the contoso.com domain, click **Create a GPO in this domain and Link it here'¦**  
   
 3.  Type a descriptive name for the GPO, such as **AdatumAccessGPO**, and then click **OK**.  
   
