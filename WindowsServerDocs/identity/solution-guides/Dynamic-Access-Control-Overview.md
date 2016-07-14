@@ -1,16 +1,15 @@
 ---
 title: Dynamic Access Control Overview
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: fac8c7d6-f2aa-4a55-9319-b28919af71c8
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Dynamic Access Control Overview
 
 >Applies To: Windows Server 2012 R2, Windows Server 2012

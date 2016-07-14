@@ -1,17 +1,15 @@
 ---
 title: Deploy Encryption of Office Files (Demonstration Steps)
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 77f398f3-355d-4bcf-bad6-559382730deb
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Deploy Encryption of Office Files (Demonstration Steps)
 
 >Applies To: Windows Server Technical Preview
@@ -52,12 +50,12 @@ In this scenario, you'll perform the following steps:
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-ADResourceProperty ñEnabled:$true ñIdentity:"CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com"  
-Set-ADResourceProperty ñEnabled:$true ñIdentity:"CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com" 
+Set-ADResourceProperty ‚ÄìEnabled:$true ‚ÄìIdentity:"CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com"  
+Set-ADResourceProperty ‚ÄìEnabled:$true ‚ÄìIdentity:"CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com" 
 ```  
   
 ## <a name="BKMK_2"></a>Step 2: Create classification rules  
-This step explains how to create the **High Impact** classification rule. This rule will search the content of documents and if the string "Contoso Confidential"ù is found, it will classify this document as having high-business impact. This classification will override any previously assigned classification of low-business impact.  
+This step explains how to create the **High Impact** classification rule. This rule will search the content of documents and if the string "Contoso Confidential"¬ù is found, it will classify this document as having high-business impact. This classification will override any previously assigned classification of low-business impact.  
   
 You will also create a **High PII** rule. This rule searches the content of documents, and if a Social Security number is found, it classifies the document as having high PII.  
   
@@ -77,7 +75,7 @@ You will also create a **High PII** rule. This rule searches the content of docu
   
 7.  In the **Rule name** box, type **High Business Impact**.  
   
-8.  In the **Description** box, type **Determines if the document has a high business impact based on the presence of the string "Contoso Confidential"ù**  
+8.  In the **Description** box, type **Determines if the document has a high business impact based on the presence of the string "Contoso Confidential"¬ù**  
   
 9. On the **Scope** tab, click **Set Folder Management Properties**, select **Folder Usage**, click **Add**, then click **Browse**, browse to D:\Finance Documents as the path, click **OK**, and then choose a property value named **Group Files** and click **Close**. Once management properties are set, on the **Rule Scope** tab select **Group Files**.  
   
@@ -100,7 +98,7 @@ Update-FSRMClassificationPropertyDefinition
 $date = Get-Date  
 $AutomaticClassificationScheduledTask = New-FsrmScheduledTask -Time $date -Weekly @(3, 2, 4, 5,1,6,0) -RunDuration 0;  
 Set-FsrmClassification -Continuous -schedule $AutomaticClassificationScheduledTask  
-New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -Description "Determines if the document has a high business impact based on the presence of the string 'Contoso Confidential'" -PropertyValue "3000" -Namespace @("D:\Finance Documents"ù) -ClassificationMechanism "Content Classifier" -Parameters @("StringEx=Min=1;Expr=Contoso Confidential") -ReevaluateProperty Overwrite  
+New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -Description "Determines if the document has a high business impact based on the presence of the string 'Contoso Confidential'" -PropertyValue "3000" -Namespace @("D:\Finance Documents"¬ù) -ClassificationMechanism "Content Classifier" -Parameters @("StringEx=Min=1;Expr=Contoso Confidential") -ReevaluateProperty Overwrite  
 ```  
   
 #### To create the high-PII classification rule  

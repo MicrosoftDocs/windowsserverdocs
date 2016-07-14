@@ -1,17 +1,15 @@
 ---
 title: Plan for File Access Auditing
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 1a988c26-5412-4117-8ffb-06b422c15cd1
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Plan for File Access Auditing
 
 >Applies To: Windows Server Technical Preview

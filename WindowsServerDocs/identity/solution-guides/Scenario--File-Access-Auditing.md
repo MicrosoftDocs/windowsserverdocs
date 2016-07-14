@@ -1,17 +1,15 @@
 ---
 title: Scenario File Access Auditing
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 49d9fc2a-4c0a-481f-8a4b-edc0b5b650a8
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Scenario: File Access Auditing
 
 >Applies To: Windows Server Technical Preview

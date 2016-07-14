@@ -1,17 +1,15 @@
 ---
 title: Claims Transformation Rules Language
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: a86d6f34-d183-4925-b820-f786983ac4c1
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Claims Transformation Rules Language
 
 >Applies To: Windows Server Technical Preview

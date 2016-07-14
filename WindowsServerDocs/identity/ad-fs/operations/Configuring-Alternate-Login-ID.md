@@ -1,15 +1,13 @@
-﻿---
+---
 title: Configuring Alternate Login ID
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 4e298a12-7aff-4135-85c1-48cc86f373f3
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # Configuring Alternate Login ID
 

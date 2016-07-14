@@ -1,17 +1,15 @@
 ---
 title: AD FS Scenarios for Developers
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c575cc74-9d3f-49d2-a74a-fb289155ea81
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # AD FS Scenarios for Developers
 
 >Applies To: Windows Server Technical Preview

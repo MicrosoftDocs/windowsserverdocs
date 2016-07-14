@@ -1,17 +1,15 @@
 ---
 title: Enabling OpenId Connect with AD FS 2016
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e8b115a-9dba-489c-b2ff-a23ad319cd44
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Enabling OpenId Connect with AD FS 2016
 
 >Applies To: Windows Server Technical Preview
