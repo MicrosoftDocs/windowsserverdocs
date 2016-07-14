@@ -1,15 +1,13 @@
 ---
 title: AD FS Technical Reference
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 271ac068-f1f9-4f9a-a19e-bdfc6e539523
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # AD FS Technical Reference
 

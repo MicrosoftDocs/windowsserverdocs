@@ -1,11 +1,13 @@
 ---
 title: AD FS and Azure Multi-Factor Authentication
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 9d20833e-a0bf-4a93-8e7c-ff4335ff33bc
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # AD FS and Azure Multi-Factor Authentication
 

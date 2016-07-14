@@ -1,17 +1,15 @@
 ---
 title: Web Application Proxy in Windows Server Technical Preview
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 31e5931b-6a4c-4c28-b4ab-438915cef6dc
+description:
 author: kgremban
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: web-app-proxy
 ---
+
 # Web Application Proxy in Windows Server Technical Preview
 
 >Applies To: Windows Server Technical Preview

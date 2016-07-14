@@ -1,16 +1,13 @@
 ---
 title: AD FS 2016 Single Sign On Settings
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: ae14f2b8-c670-409b-9998-9cea2ae6fb78
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # AD FS 2016 Single Sign On Settings
 
