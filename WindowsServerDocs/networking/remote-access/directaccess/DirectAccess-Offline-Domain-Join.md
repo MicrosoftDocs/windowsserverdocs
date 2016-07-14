@@ -132,7 +132,7 @@ Complete the following steps to perform the offline domain join:
   
 4.  On the **Members** tab, click **Add**.  
   
-5.  Click **Object Types…**, select **Computers**, and then click **OK**.  
+5.  Click **Object Types**, select **Computers**, and then click **OK**.  
   
 6.  Type the client name to add, and then click **OK**.  
   

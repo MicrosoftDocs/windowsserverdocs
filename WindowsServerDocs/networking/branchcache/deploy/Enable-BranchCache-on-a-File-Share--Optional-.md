@@ -32,7 +32,7 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
   
 4.  Double-click **Shared Folders (Local)**, and then click **Shares**.  
   
-5.  In the details pane, right-click a share, and then click **Properties**. The share’s **Properties** dialog box opens.  
+5.  In the details pane, right-click a share, and then click **Properties**. The share's **Properties** dialog box opens.  
   
 6.  In the **Properties** dialog box, on the **General** tab, click **Offline Settings**. The **Offline Settings** dialog box opens.  
   

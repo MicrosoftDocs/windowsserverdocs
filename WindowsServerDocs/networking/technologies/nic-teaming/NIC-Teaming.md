@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server® 2016 Technical Preview, and contains the following sections.  
+This topic provides an overview of Network Interface Card (NIC) Teaming in Windows Server&reg; 2016 Technical Preview, and contains the following sections.  
   
 -   [NIC Teaming Overview](#bkmk_over)  
   
@@ -49,7 +49,7 @@ NIC Team member network adapters must all be installed in the same physical host
 > [!NOTE]  
 > A NIC team that contains only one network adapter cannot provide load balancing and failover; however with one network adapter, you can use NIC Teaming for separation of network traffic when you are also using virtual Local Area Networks (VLANs).  
   
-When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. Windows Server® 2016 Technical Preview supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
+When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. Windows Server&reg; 2016 Technical Preview supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
   
 The following illustration depicts a NIC Team with multiple tNICs.  
   
