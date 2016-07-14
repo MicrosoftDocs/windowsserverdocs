@@ -48,7 +48,7 @@ The DHA service integrates with MDM solutions and provides the following:
 -	Combine the info they receive from devices (through existing device management communication channels) with the DHA report
 -	Make a more secure and trusted security decision, based on hardware attested and protected data
 
-Here's an example that shows how you can use DHA to help raise the security protection bar for your organization’s assets.
+Here's an example that shows how you can use DHA to help raise the security protection bar for your organization's assets.
 
 1. You create a policy that checks the following boot configuration/attributes:
   - Secure Boot
@@ -66,7 +66,7 @@ Here's an example that shows how you can use DHA to help raise the security prot
 The DHA cloud service provides the following benefits:
 
 -	Reviews the TCG and PCR device boot logs it receives from a device that is enrolled with an MDM solution. 
--	Creates a tamper resistant and tamper evident report (DHA report) that describes how the device started based on data that is collected and protected by a device’s TPM chip. 
+-	Creates a tamper resistant and tamper evident report (DHA report) that describes how the device started based on data that is collected and protected by a device's TPM chip. 
 -	Delivers the DHA report to the MDM server that requested the report in a protected communication channel.
 
 #### DHA on-premises service
@@ -90,7 +90,7 @@ EKCert validation mode is optimized for devices in organizations that are not co
 
 When DHA is running in EKCert validation mode, it relies on an enterprise managed chain of trust that needs to updated occasionally (approximately 5 - 10 times per year). 
 
-Microsoft publishes aggregated packages of trusted Roots and intermediate CA’s for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
+Microsoft publishes aggregated packages of trusted Roots and intermediate CA's for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
 
 An example archive is http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab.
 
@@ -123,7 +123,7 @@ Install Windows Server 2016 Technical Preview 5 using your preferred installatio
 
 You can install the Device Health Attestation server role and its dependencies by using Server Manager. 
 
-After you’ve installed Windows Server 2016, the device restarts and opens Server Manager. If Server manager doesn’t start automatically, click **Start**, and then click **Server Manager**.
+After you've installed Windows Server 2016, the device restarts and opens Server Manager. If Server manager doesn't start automatically, click **Start**, and then click **Server Manager**.
 
 1.	Click **Add roles and features**.
 2.	On the **Before you begin** page, click **Next**.
