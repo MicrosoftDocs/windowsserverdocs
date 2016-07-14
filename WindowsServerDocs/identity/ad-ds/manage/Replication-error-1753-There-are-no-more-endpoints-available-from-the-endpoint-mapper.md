@@ -1,4 +1,4 @@
-﻿---
+---
 title: Replication error 1753 There are no more endpoints available from the endpoint mapper
 ms.custom: na
 ms.prod: windows-server-threshold

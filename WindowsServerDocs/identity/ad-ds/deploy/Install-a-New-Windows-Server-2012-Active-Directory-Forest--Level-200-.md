@@ -73,11 +73,11 @@ You use a graphical wizard in Server Manager or the ServerManager module for Win
 #### AD DS Role Configuration  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_DeploymentConfiguration_Forest.gif)  
   
-Active Directory Domain Services configuration â€" previously known as DCPROMO â€" is a now a discrete operation from role installation. After installing the AD DS role, an administrator configures the server as a domain controller using a separate wizard within Server Manager or using the ADDSDeployment Windows PowerShell module.  
+Active Directory Domain Services configuration " previously known as DCPROMO " is a now a discrete operation from role installation. After installing the AD DS role, an administrator configures the server as a domain controller using a separate wizard within Server Manager or using the ADDSDeployment Windows PowerShell module.  
   
 AD DS role configuration builds on twelve years of field experience and now configures domain controllers based on the most recent Microsoft best practices. For example, Domain Name System and Global Catalogs install by default on every domain controller.  
   
-The Server Manager AD DS configuration wizard merges many individual dialogs into fewer prompts and no longer hides settings in an â€œadvancedâ€ mode. The entire promotion process is in one expanding dialog box during installation. The wizard and the ADDSDeployment Windows PowerShell module show you notable changes and security concerns, with links to further information.  
+The Server Manager AD DS configuration wizard merges many individual dialogs into fewer prompts and no longer hides settings in an "advanced" mode. The entire promotion process is in one expanding dialog box during installation. The wizard and the ADDSDeployment Windows PowerShell module show you notable changes and security concerns, with links to further information.  
   
 The Dcpromo.exe remains in Windows Server 2012 for command-line unattended installations only, and no longer runs the graphical installation wizard. It is highly recommended that you discontinue use of Dcpromo.exe for unattended installs and replace it with the ADDSDeployment module, as the now-deprecated executable will not be included in the next version of Windows.  
   
@@ -88,11 +88,11 @@ These new features are not backwards compatible to Windows Server 2008 R2 or old
 > [!IMPORTANT]  
 > Dcpromo.exe no longer contains a graphical wizard and no longer installs role or feature binaries. Attempting to run Dcpromo.exe from the Explorer shell returns:  
 >   
-> â€œThe Active Directory Domain Services Installation Wizard is relocated in Server Manager. For more information, see http://go.microsoft.com/fwlink/?LinkId=220921.â€  
+> "The Active Directory Domain Services Installation Wizard is relocated in Server Manager. For more information, see http://go.microsoft.com/fwlink/?LinkId=220921."  
 >   
 > Attempting to run Dcpromo.exe /unattend still installs the binaries, as in previous operating systems, but warns:  
 >   
-> â€œThe dcpromo unattended operation is replaced by the ADDSDeployment module for Windows PowerShell. For more information, see http://go.microsoft.com/fwlink/?LinkId=220924.â€  
+> "The dcpromo unattended operation is replaced by the ADDSDeployment module for Windows PowerShell. For more information, see http://go.microsoft.com/fwlink/?LinkId=220924."  
 >   
 > Windows Server 2012 deprecates dcpromo.exe and it will not be included with future versions of Windows, nor will it receive further enhancements in this operating system. Administrators should discontinue its use and switch to the supported Windows PowerShell modules if they wish to create domain controllers from the command-line.  
   
@@ -179,7 +179,7 @@ Additional **Features** can be added here as desired.
 #### Active Directory Domain Services  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ADDSIntro.png)  
   
-The **Active Directory Domain Services** dialog provides limited information on requirements and best practices. It mainly acts as a confirmation that you chose the AD DS role â€" if this screen does not appear, you did not select AD DS.  
+The **Active Directory Domain Services** dialog provides limited information on requirements and best practices. It mainly acts as a confirmation that you chose the AD DS role " if this screen does not appear, you did not select AD DS.  
   
 #### Confirmation  
 ![](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_Confirmation.png)  
@@ -474,7 +474,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create a new forest named corp.contoso.com and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSForest â€"DomainName corp.contoso.com  
+    Install-ADDSForest "DomainName corp.contoso.com  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  

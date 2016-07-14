@@ -426,7 +426,7 @@ In the following procedure, you will use the Windows PowerShell History Viewer i
 
 4.  Select user, **test1**.
 
-5.  Click **Add to group…** in the **Tasks** pane.
+5.  Click **Add to group...** in the **Tasks** pane.
 
 6.  Navigate to **group1** and click **OK** in the dialog box.
 

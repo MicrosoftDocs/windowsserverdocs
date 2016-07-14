@@ -257,7 +257,7 @@ You should now have a central access rule that allows people to access documents
   
 11. Close the Group Policy Management Editor. You have now included the central access policy to the Group Policy.  
   
-For a domain’s domain controllers to provide claims or device authorization data, the domain controllers need to be configured to support dynamic access control.  
+For a domain's domain controllers to provide claims or device authorization data, the domain controllers need to be configured to support dynamic access control.  
   
 #### To enable support for claims and compound authentication for contoso.com  
   
@@ -320,7 +320,7 @@ In the next step, you ensure that access is appropriately configured.  User acco
   
 2.  Click the **Security** tab, click **Advanced**, and then click the **Effective Access** tab.  
   
-3.  To examine the permissions for a user, click **Select a user**, type the user’s name, and then click  **View effective access** to see the effective access rights. For example:  
+3.  To examine the permissions for a user, click **Select a user**, type the user's name, and then click  **View effective access** to see the effective access rights. For example:  
   
     -   Myriam Delesalle (MDelesalle) is in the Finance department and should have Read access to the folder.  
   
@@ -330,7 +330,7 @@ In the next step, you ensure that access is appropriately configured.  User acco
   
     -   Maira Wenzel (MWenzel) is not in the Finance department and is not a member of either the FinanceAdmin or FinanceException group. She should not have any access to the folder.  
   
-    Notice that the last column named **Access limited by** in the effective access window. This column tells you which gates are effecting the person’s permissions. In this case, the Share and NTFS permissions allow all users full control. However, the central access policy restricts access based on the rules you configured earlier.  
+    Notice that the last column named **Access limited by** in the effective access window. This column tells you which gates are effecting the person's permissions. In this case, the Share and NTFS permissions allow all users full control. However, the central access policy restricts access based on the rules you configured earlier.  
   
 ## <a name="BKMK_1.5"></a>Maintain: Change and stage the policy  
   
@@ -340,7 +340,7 @@ In the next step, you ensure that access is appropriately configured.  User acco
 |4.1|Configure Device Claims for Clients|Set the group policy setting to enable device claims|  
 |4.2|Enable a claim for devices.|Enable the country claim type for devices.|  
 |4.3|Add a staging policy to the existing central access rule that you would like to modify.|Modify the Finance Documents Rule to add a staging policy.|  
-|4.4|View the results of the staging policy.|Check for Ester Velle’s permissions.|  
+|4.4|View the results of the staging policy.|Check for Ester Velle's permissions.|  
   
 #### To set up group policy setting to enable claims for devices  
   

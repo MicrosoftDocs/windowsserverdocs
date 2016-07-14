@@ -70,7 +70,7 @@ The key files containing authentication logic are the following:
 ## Registering the public client in AD FS
 In the sample, the WebAPI is configured to listen at https://localhost:44326/. In order for configuring implicit grant flow for the client, it should be registered as public client. Open PowerShell on the AD FS server under administrative privileges and execute the below command:
 
-    Add-AdfsClient -ClientId https://localhost:44326/ -RedirectUri https://localhost:44326/ -Name SPAJS -Description ‘Test SPA’
+    Add-AdfsClient -ClientId https://localhost:44326/ -RedirectUri https://localhost:44326/ -Name SPAJS -Description 'Test SPA'
  
 ![Register the client](media/Single-Page-Application-with-AD-FS/singleapp2.PNG)    
 
@@ -92,7 +92,7 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
 |Configuration|Description
 |--------|--------
 |instance|Your STS URL, e.g. https://fs.<yourdomain>/
-|tenant|Keep it as ‘adfs’
+|tenant|Keep it as 'adfs'
 |clientID|This is the client ID you specified while configuring the public client for your single page application
 
 ## Configure WebAPI to use AD FS
@@ -121,8 +121,8 @@ and add:
 
 |Parameter|Description
 |--------|--------
-|ValidAudience|This configures the value of ‘audience’ that will be checked against in the token
-|ValidIssuer|This configures the value of ‘issuer that will be checked against in the token
+|ValidAudience|This configures the value of 'audience' that will be checked against in the token
+|ValidIssuer|This configures the value of 'issuer that will be checked against in the token
 |MetadataEndpoint|This points to the metadata information of your STS
 
 ## Add application configuration for AD FS

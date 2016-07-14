@@ -56,8 +56,8 @@ In this step, we enable the Retention Period and Discoverability resource proper
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-ADResourceProperty -Enabled:$true -Identity:â€CN=RetentionPeriod_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=comâ€  
-Set-ADResourceProperty -Enabled:$true -Identity:â€CN=Discoverability_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=comâ€  
+Set-ADResourceProperty -Enabled:$true -Identity:â&euro;CN=RetentionPeriod_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=comâ&euro;  
+Set-ADResourceProperty -Enabled:$true -Identity:â&euro;CN=Discoverability_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=comâ&euro;  
 ```  
   
 ## <a name="BKMK_Step2"></a>Step 2: Configure notifications  
@@ -81,7 +81,7 @@ In this step, we use the File Server Resource Manager console to configure the S
   
     -   In the **Default administrator recipients** box, type the email address of the administrator who should get the notification.  
   
-    -   In the **Default "From" e-mail address** box, type the email address that should be used to send the notifications.  
+    -   In the **Default "From" e-mail address** box, type the email address that should be used to send the notifications.  
   
 6.  Click **OK**.  
   
@@ -90,7 +90,7 @@ In this step, we use the File Server Resource Manager console to configure the S
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEmailAddress" -AdminEmailAddress "AdministratorEmailAddress"  
+Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEmailAddress" -AdminEmailAddress "AdministratorEmailAddress"  
 ```  
   
 ## <a name="BKMK_Step3"></a>Step 3: Create a file management task  

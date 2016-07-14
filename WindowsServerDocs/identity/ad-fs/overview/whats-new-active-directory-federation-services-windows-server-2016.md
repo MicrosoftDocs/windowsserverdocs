@@ -46,7 +46,7 @@ AD FS in Windows Server 2016 builds on our previous device registration capabili
   
 Device authentication is the foundation for device-based conditional access scenarios. Device registration provides the device with an identity which is used to authenticate the device when the user signs in. The authenticated device, and the attributes of the device, can then be used to:  
 * Enable Access only from devices that are managed and/or compliant  
-* Restrict access to corporate ‘joined’ PC’s (including managed devices and domain joined PC’s)  
+* Restrict access to corporate 'joined' PC's (including managed devices and domain joined PC's)  
 * Require multi-factor authentication for computers that are not domain joined and devices that are not compliant  
   
  For more information see   
@@ -54,7 +54,7 @@ Device authentication is the foundation for device-based conditional access scen
 * [Access Control Policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
   
 ### Deep Windows 10 and Microsoft Passport integration  
-One of the benefits of Windows 10 devices is the convenience and security that comes with Windows Hello and Microsoft Passport for Work.  Microsoft Passport for Work replaces user passwords with strong device-bound user credentials protected by a user’s gesture (a PIN or a biometric gesture like fingerprint or facial recognition i.e. Windows Hello).    
+One of the benefits of Windows 10 devices is the convenience and security that comes with Windows Hello and Microsoft Passport for Work.  Microsoft Passport for Work replaces user passwords with strong device-bound user credentials protected by a user's gesture (a PIN or a biometric gesture like fingerprint or facial recognition i.e. Windows Hello).    
   
 This allows users to sign-in to applications on any device without having to send their corporate credentials.  These applications can be hosted in the cloud or on-premises.  
   

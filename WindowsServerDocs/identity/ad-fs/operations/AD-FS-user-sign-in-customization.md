@@ -22,7 +22,7 @@ For general global settings you can refer to [Customizing the AD FS Sign-in Page
 ## Pre-requisites  
 The following pre-requisites are required before attempting the procedures outlined in this document.  
   
--   �AD FS in Windows Server 2016 TP4 or later  
+-   AD FS in Windows Server 2016 TP4 or later  
   
 ## Configure AD FS Relying parties  
 Per relying party sign-in web elements and themes can be configured using the PowerShell examples below:  
