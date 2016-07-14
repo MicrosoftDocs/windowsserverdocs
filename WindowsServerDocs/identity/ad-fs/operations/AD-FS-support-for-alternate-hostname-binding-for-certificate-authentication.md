@@ -1,16 +1,13 @@
 ---
 title: AD FS support for alternate hostname binding for certificate authentication
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c253e60c-f335-42ad-a0cb-fc2796a3196b
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # AD FS support for alternate hostname binding for certificate authentication
 

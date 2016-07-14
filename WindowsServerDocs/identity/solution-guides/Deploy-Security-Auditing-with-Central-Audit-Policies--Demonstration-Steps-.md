@@ -1,17 +1,15 @@
 ---
 title: Deploy Security Auditing with Central Audit Policies (Demonstration Steps)
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 6090f7f9-0ca7-4129-b19e-87b98e9cc3cf
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Deploy Security Auditing with Central Audit Policies (Demonstration Steps)
 
 >Applies To: Windows Server Technical Preview

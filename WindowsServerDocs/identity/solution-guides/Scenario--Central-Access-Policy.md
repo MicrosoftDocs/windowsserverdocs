@@ -1,17 +1,15 @@
 ---
 title: Scenario Central Access Policy
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 2fade159-f2b3-4247-92f4-d03bcf334efb
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Scenario: Central Access Policy
 
 >Applies To: Windows Server Technical Preview

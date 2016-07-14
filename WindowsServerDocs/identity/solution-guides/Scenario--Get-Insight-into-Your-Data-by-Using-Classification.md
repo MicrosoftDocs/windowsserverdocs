@@ -1,17 +1,15 @@
 ---
 title: Scenario Get Insight into Your Data by Using Classification
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: a7079fc4-3065-4295-b56d-54272b54bdd5
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Scenario: Get Insight into Your Data by Using Classification
 
 >Applies To: Windows Server Technical Preview
