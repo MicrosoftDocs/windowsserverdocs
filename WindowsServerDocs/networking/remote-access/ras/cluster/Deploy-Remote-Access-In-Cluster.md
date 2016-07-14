@@ -32,7 +32,7 @@ Before you begin deploying this scenario, review this list for important require
 
 -   The load balanced nodes must be in the same IPv4 subnet.  
 
--   In ELB deployments, if manage out is needed, then DirectAccess clients cannot use Teredo. Only IPHTTPS can be used for end\-to\-end communication.  
+-   In ELB deployments, if manage out is needed, then DirectAccess clients cannot use&nbsp;Teredo. Only IPHTTPS can be used for end\-to\-end communication.  
 
 -   Ensure all known NLB\/ELB hotfixes are installed.  
 
@@ -61,7 +61,7 @@ The following table lists the roles and features required for the scenario:
 
 |Role\/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services \(RRAS\), which was previously a role service under the Network Policy and Access Services \(NPAS\) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services \(RRAS\) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services \(IIS\) Web Server – This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services \(RRAS\), which was previously a role service under the Network Policy and Access Services \(NPAS\) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services \(RRAS\) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services \(IIS\) Web Server - This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database-Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit \(CMAK\)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
 |Network Load Balancing|This feature provides load balancing in a cluster using Windows NLB.|  
 

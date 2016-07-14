@@ -63,13 +63,13 @@ The following illustration depicts this scenario.
   
 ##  <a name="bkmk_works"></a>How the DNS name resolution process works  
   
-During the name resolution process, the user tries to connect to www.woodgrove.com. This results in a DNS name resolution request that is sent to the DNS server that is configured in the Network Connection properties on the user’s computer. Typically, this is the DNS server provided by the local ISP acting as a caching resolver, and is referred as the LDNS.   
+During the name resolution process, the user tries to connect to www.woodgrove.com. This results in a DNS name resolution request that is sent to the DNS server that is configured in the Network Connection properties on the user's computer. Typically, this is the DNS server provided by the local ISP acting as a caching resolver, and is referred as the LDNS.   
   
-If the DNS name is not present in the local cache of LDNS, the LDNS server forwards the query to the DNS server that is authoritative for woodgrove.com. The authoritative DNS server responds with the requested record (www.woodgrove.com) to the LDNS server, which in turn caches the record locally before sending it to the user’s computer.  
+If the DNS name is not present in the local cache of LDNS, the LDNS server forwards the query to the DNS server that is authoritative for woodgrove.com. The authoritative DNS server responds with the requested record (www.woodgrove.com) to the LDNS server, which in turn caches the record locally before sending it to the user's computer.  
   
 Because Contoso Cloud Services uses DNS Server policies, the authoritative DNS server that hosts contoso.com is configured to return geo-location based traffic managed responses. This results in the direction of European Clients to the European datacenter and the direction of American Clients to the U.S. datacenter, as depicted in the illustration.  
   
-In this scenario, the authoritative DNS server usually sees the name resolution request coming from the LDNS server and, very rarely, from the user’s computer. Because of this, the source IP address in the name resolution request as seen by the authoritative DNS server is that of the LDNS server and not that of the user’s computer. However,  using the IP address of the LDNS server when you configure geo-location based query responses provides a fair estimate of the geo-location of the user, because the user is querying the DNS server of his local ISP.  
+In this scenario, the authoritative DNS server usually sees the name resolution request coming from the LDNS server and, very rarely, from the user's computer. Because of this, the source IP address in the name resolution request as seen by the authoritative DNS server is that of the LDNS server and not that of the user's computer. However,  using the IP address of the LDNS server when you configure geo-location based query responses provides a fair estimate of the geo-location of the user, because the user is querying the DNS server of his local ISP.  
   
 >[!NOTE]  
 >DNS policies utilize the sender IP in the UDP/TCP packet that contains the DNS query. If the query reaches the primary server through multiple resolver/LDNS hops, the policy will consider only the IP of the last resolver from which the DNS server receives the query.  
@@ -94,7 +94,7 @@ The following sections provide detailed configuration instructions.
   
 The first step is to identify the subnets or IP address space of the regions for which you want to redirect traffic. For example, if you want to redirect traffic for the U.S. and Europe, you need to identify the subnets or IP address spaces of these regions.  
   
-You can obtain this information from Geo-IP maps. Based on these Geo-IP distributions, you must create the “DNS Client Subnets.” A DNS Client Subnet is a logical grouping of IPv4 or IPv6 subnets from which queries are sent to a DNS server.  
+You can obtain this information from Geo-IP maps. Based on these Geo-IP distributions, you must create the "DNS Client Subnets." A DNS Client Subnet is a logical grouping of IPv4 or IPv6 subnets from which queries are sent to a DNS server.  
   
 You can use the following Windows PowerShell commands to create DNS Client Subnets.  
   

@@ -334,7 +334,7 @@ An administrator can manually link the DirectAccess Group Policy Objects to an o
   
 4.  If the GPOs are already linked to an OU, the links will not be removed, but they are not linked to the domain.  
   
-5.  For server GPOs, the OU must contain the server computer object—otherwise, the GPO will be linked to the root of the domain.  
+5.  For server GPOs, the OU must contain the server computer object-otherwise, the GPO will be linked to the root of the domain.  
   
 6.  If the OU has not been linked previously by running the DirectAccess Setup Wizard, after the configuration is complete, the administrator can link the DirectAccess GPOs to the required OUs, and remove the link to the domain.  
   

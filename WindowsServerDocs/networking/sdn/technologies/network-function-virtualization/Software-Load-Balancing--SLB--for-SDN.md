@@ -30,7 +30,7 @@ Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defin
   
 Windows Server SLB includes the following capabilities.  
   
--   Layer 4 (L4) load balancing services for â€œNorth-Southâ€ and â€œEast-Westâ€ TCP/UDP traffic.  
+-   Layer 4 (L4) load balancing services for â&euro;œNorth-Southâ&euro; and â&euro;œEast-Westâ&euro; TCP/UDP traffic.  
   
 -   Public and Internal network traffic load balancing.  
   
@@ -187,7 +187,7 @@ Following are some of the features and capabilities of SLB.
   
 **Core functionality**  
   
--   SLB provides Layer 4 load balancing services for â€œNorth-Southâ€  and â€œEast-Westâ€ TCP/UDP traffic  
+-   SLB provides Layer 4 load balancing services for â&euro;œNorth-Southâ&euro;  and â&euro;œEast-Westâ&euro; TCP/UDP traffic  
   
 -   You can use SLB on a Hyper-V Network Virtualization-based network  
   

@@ -26,7 +26,7 @@ This topic contains the following sections.
 ## <a name="bkmk_features"></a>New Networking Features and Technologies  
 Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 Technical Preview provides new and improved Software Defined Networking (SDN) technologies   to help you move to a fully realized SDDC solution for your organization.  
   
-When you manage networks as a software defined resource, you can describe an application’s infrastructure requirements one time, and then choose where the application  runs - on premises or in the cloud.  This consistency means that your applications are now easier to scale and you can seamlessly run  applications , anywhere, with equal confidence around security, performance, quality of service, and availability.  
+When you manage networks as a software defined resource, you can describe an application's infrastructure requirements one time, and then choose where the application  runs - on premises or in the cloud.  This consistency means that your applications are now easier to scale and you can seamlessly run  applications , anywhere, with equal confidence around security, performance, quality of service, and availability.  
   
 The following sections contain information about these new networking features and technologies.  
   
@@ -37,7 +37,7 @@ Following are the new or improved SDN infrastructure technologies.
   
 -   **Hyper-V Virtual Switch**. The Hyper-V Virtual Switch runs on Hyper-V hosts, and allows you to create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. For more information, see [Hyper-V Virtual Switch](technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
--   **Network Function Virtualization (NFV)**. In today’s software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being deployed as virtual appliances. This “network function virtualization” is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services. The following NFV technologies are available in Windows Server 2016 Technical Preview.  
+-   **Network Function Virtualization (NFV)**. In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being deployed as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services. The following NFV technologies are available in Windows Server 2016 Technical Preview.  
   
     -   **Datacenter Firewall**. This distributed firewall provides granular access control lists (ACLs),  enabling you to apply firewall policies at the VM interface level or at the subnet level.  
   

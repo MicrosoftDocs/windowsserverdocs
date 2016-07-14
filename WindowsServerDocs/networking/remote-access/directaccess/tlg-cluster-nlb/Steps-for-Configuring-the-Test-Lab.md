@@ -25,7 +25,7 @@ In this test lab guide you will build a Network Load Balancing (NLB) enabled Rem
   
 -   [STEP 3: Install and configure EDGE2](assetId:///e75e9778-0993-4f06-9421-6ddeaabfbd51). EDGE2 acts as the second Remote Access server in a Remote Access cluster.  
   
--   [STEP 4: Create the network load balanced Remote Access cluster](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544)—EDGE1 is configured as the first server in a Remote Access cluster. EDGE2 is joined to the cluster and NLB is configured for the cluster.  
+-   [STEP 4: Create the network load balanced Remote Access cluster](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544)-EDGE1 is configured as the first server in a Remote Access cluster. EDGE2 is joined to the cluster and NLB is configured for the cluster.  
   
 -   [STEP 5: Test DirectAccess connectivity from the Internet and through the cluster](assetId:///1d10aefd-e240-491b-b7cf-6b8e1c0eb9a6). After NLB and cluster configuration is complete you can test DirectAccess client connectivity through the load balanced cluster.  
   

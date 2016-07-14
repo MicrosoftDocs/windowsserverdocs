@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-This guide provides administration and troubleshooting information for the IP Address Management (IPAM) feature in Windows Server® 2016 Technical Preview.  
+This guide provides administration and troubleshooting information for the IP Address Management (IPAM) feature in Windows Server&reg; 2016 Technical Preview.  
   
 In Windows Server 2016 Technical Preview, IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers. In addition, IPAM supports role-based access control and all functionality in previous versions of the technology.  
   
