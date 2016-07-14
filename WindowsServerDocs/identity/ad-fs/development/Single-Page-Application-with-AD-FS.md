@@ -1,16 +1,13 @@
 ---
 title: Single Page Application with AD FS
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 
 # Single Page Application with AD FS
@@ -27,7 +24,7 @@ In this sample we will be creating an authentication flow where a single page ap
 
 
 
-![AD FS Authorization](media/Single-Page-Application-with-AD-FS/singleapp1.PNG) 
+![AD FS Authorization](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG) 
 
 When using a single page application, the user navigates to a starting location, from where starting page and a collection of JavaScript files and HTML views are loaded. You need to configure the Active Directory Authentication Library (ADAL) to know the critical information about your application, i.e. the AD FS instance, client ID, so that it can direct the authentication to your AD FS.
 

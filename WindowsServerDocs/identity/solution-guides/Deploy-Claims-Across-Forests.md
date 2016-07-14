@@ -1,17 +1,15 @@
 ---
 title: Deploy Claims Across Forests
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 1d57984a-5b84-4159-8767-a95445ffd9ef
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Deploy Claims Across Forests
 
 >Applies To: Windows Server Technical Preview
