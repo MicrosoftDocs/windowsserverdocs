@@ -28,9 +28,9 @@ HNV offers enhanced support in the following areas:
 |[Compliant IEEE Ethernet headers](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#L2)|Improved|Compliant with IEEE Ethernet standards|  
   
 ### <a name="SDN"></a>Programmable Hyper-V switch  
-HNV is a fundamental building block of Microsoftâ€™s updated Software Defined Networking (SDN) solution, and is fully integrated into the SDN stack.  
+HNV is a fundamental building block of Microsoft's updated Software Defined Networking (SDN) solution, and is fully integrated into the SDN stack.  
   
-Microsoftâ€™s new Network Controller pushes HNV policies down to a Host Agent running on each host using Open vSwitch Database Management Protocol (OVSDB) as the SouthBound Interface (SBI). The Host Agent stores this policy using a customization of the [VTEP schema](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) and programs complex flow rules into a performant flow engine in the Hyper-V switch.  
+Microsoft's new Network Controller pushes HNV policies down to a Host Agent running on each host using Open vSwitch Database Management Protocol (OVSDB) as the SouthBound Interface (SBI). The Host Agent stores this policy using a customization of the [VTEP schema](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) and programs complex flow rules into a performant flow engine in the Hyper-V switch.  
   
 The flow engine inside the Hyper-V switch is the same as Microsoft Azureâ€™s, which has been proven at hyper-scale in the Microsoft Azure public cloud. Additionally, the entire SDN stack up through the Network Controller, and Network Resource Provider (details coming soon) is consistent with Microsoft Azure, thus bringing the power of the Microsoft Azure public cloud to our enterprise and hosting service provider customers.  
   
@@ -41,7 +41,7 @@ The Hyper-V switch supports both stateless and stateful flow rules based on simp
   
 For more information about network controller integration, see Windows Server 2016 Technical Preview HNV Technical Details (coming soon)  
   
-![](../../../media/whats-new-hyperv-network-virtualization-windows-server/HNVOverview.png)  
+![](../../../media/what-s-new-in-hyper-v-network-virtualization-in-windows-server/HNVOverview.png)  
   
 ### <a name="VXLAN"></a>VXLAN encapsulation support  
 The Virtual eXtensible Local Area Network (VXLAN - [RFC 7348](http://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Dell, HP and others. HNV also now supports this encapsulation scheme using MAC distribution mode through the Microsoft Network Controller to program mappings for tenant overlay network IP addresses (Customer Address, or CA) to the physical underlay network IP addresses (Provider Address, or PA). Both NVGRE and VXLAN Task Offloads are supported for improved performance through third-party drivers.  
