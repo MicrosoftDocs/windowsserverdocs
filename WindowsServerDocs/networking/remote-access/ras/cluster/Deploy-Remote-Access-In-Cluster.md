@@ -43,9 +43,9 @@ The cluster deployment scenario includes a number of steps:
 
 1.  [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server with advanced settings must be deployed before setting up a cluster deployment.  
 
-2.  [Plan a Remote Access Cluster Deployment](/plan/Plan-a-Remote-Access-Cluster-Deployment.md). To build a cluster from a single server deployment a number of additional steps are required, including preparing certificates for the cluster deployment.  
+2.  [Plan a Remote Access Cluster Deployment](../../remote-access/ras/cluster/plan/Plan-a-Remote-Access-Cluster-Deployment.md). To build a cluster from a single server deployment a number of additional steps are required, including preparing certificates for the cluster deployment.  
 
-3.  [Configure a Remote Access Cluster](/configure/Configure-a-Remote-Access-Cluster.md). This consists of a number of configuration steps, including preparing the single server for Windows NLB or the external load balancer, preparing additional servers to join the cluster, and enabling load balancing.  
+3.  [Configure a Remote Access Cluster](../../remote-access/ras/cluster/configure/Configure-a-Remote-Access-Cluster.md). This consists of a number of configuration steps, including preparing the single server for Windows NLB or the external load balancer, preparing additional servers to join the cluster, and enabling load balancing.  
 
 ## <a name="BKMK_APP"></a>Practical applications  
 Gathering multiple servers into a server cluster provides the following:  
