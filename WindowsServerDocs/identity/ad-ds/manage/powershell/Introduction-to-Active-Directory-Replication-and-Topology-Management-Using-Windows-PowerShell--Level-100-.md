@@ -61,7 +61,7 @@ To complete the steps in the following procedures, you must be a member of the D
     > 
     > Example: Type `Get-ADRep` and press Tab multiple times to skip through the matching commands until you reach `Get-ADReplicationSite`. Auto-complete also works for parameter names such as `Filter`.
 
-    To format the output from the `Get-ADReplicationSite` command as a table and limit the display to specific fields, you can pipe the output to the `Format-Table` command (or “`ft`” for short):
+    To format the output from the `Get-ADReplicationSite` command as a table and limit the display to specific fields, you can pipe the output to the `Format-Table` command (or "`ft`" for short):
 
     `Get-ADReplicationSite -Filter * | ft Name`
 
@@ -138,7 +138,7 @@ To complete the steps in the following procedures, you must be a member of the D
 
     `Get-ADReplicationUpToDatenessVectorTable DC1`
 
-    This shows a list of the highest USNs seen by **DC1** for every domain controller in the forest. The **Server** value refers to the server maintaining the table, in this case **DC1**. The **Partner** value refers to the replication partner (direct or indirect) on which changes were made. The UsnFilter value is the highest USN seen by **DC1** from Partner. If a new domain controller is added to the forest, it will not appear in **DC1**’s table until **DC1** receives a change that originated from the new domain.
+    This shows a list of the highest USNs seen by **DC1** for every domain controller in the forest. The **Server** value refers to the server maintaining the table, in this case **DC1**. The **Partner** value refers to the replication partner (direct or indirect) on which changes were made. The UsnFilter value is the highest USN seen by **DC1** from Partner. If a new domain controller is added to the forest, it will not appear in **DC1**'s table until **DC1** receives a change that originated from the new domain.
 
 #### To view the up-to-dateness vector table for all domain controllers in a domain
 

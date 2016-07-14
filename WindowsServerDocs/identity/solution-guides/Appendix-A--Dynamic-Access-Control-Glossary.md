@@ -39,7 +39,7 @@ Following are the list of terms and definitions that are included in the Dynamic
 |Staging policy|A central access policy that is not yet in effect.|  
 |System access control list (SACL)|An access control list that specifies the types of access attempts by particular trustees for which audit records need to be generated.|  
 |User claim|Attributes of a user that are provided within the user security token. Examples include: Department, Company, Project, and Security clearance.  Information in the user token from systems prior to  Windows Server 2012 , such as the security groups that the user is part of, can also be considered user claims. Some user claims are provided through Active Directory and others are calculated dynamically, such as whether the user logged in with a smart card.|  
-|User token|A data object that identifies a user and the user claims and device claims that are associated with that user. It is used to authorize the user’s access to resources.|  
+|User token|A data object that identifies a user and the user claims and device claims that are associated with that user. It is used to authorize the user's access to resources.|  
   
 ## See Also  
 [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)  

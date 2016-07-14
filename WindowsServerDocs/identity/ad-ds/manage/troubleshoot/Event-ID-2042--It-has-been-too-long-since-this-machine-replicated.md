@@ -1,4 +1,4 @@
-﻿---
+---
 title: Event ID 2042 - It has been too long since this machine replicated
 ms.custom: na
 ms.prod: windows-server-threshold

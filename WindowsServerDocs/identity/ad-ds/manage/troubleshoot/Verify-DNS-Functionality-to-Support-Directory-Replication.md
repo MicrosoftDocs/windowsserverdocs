@@ -1,4 +1,4 @@
-﻿---
+---
 title: Verify DNS Functionality to Support Directory Replication
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -106,7 +106,7 @@ author: Femila
   <section>
     <title>Verifying resource record registration</title>
     <content>
-      <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)�or, if that fails, NetBIOS names�the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning. </para>
+      <para>The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)or, if that fails, NetBIOS namesthe presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning. </para>
       <para>You can use the following procedure to verify resource record registration, including alias (CNAME) resource record registration.</para>
       <procedure>
         <title>To verify resource record registration</title>

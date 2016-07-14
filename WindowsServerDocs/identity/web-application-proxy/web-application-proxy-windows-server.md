@@ -16,7 +16,7 @@ ms.technology: web-app-proxy
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
   
-The content in this section describes what's new and changed in the Web Application Proxy for Windows Server� 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.  
+The content in this section describes what's new and changed in the Web Application Proxy for Windows Server 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.  
   
 ## Web Application Proxy New Features  
   

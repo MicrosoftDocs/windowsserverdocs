@@ -1,4 +1,4 @@
-﻿---
+---
 title: Collecting Network Information
 ms.custom: na
 ms.prod: windows-server-threshold

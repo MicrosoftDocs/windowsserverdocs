@@ -19,7 +19,7 @@ Reliance on data and storage resources has continued to grow in importance for m
 ## <a name="BKMK_OVER"></a>Scenario description  
 File Classification Infrastructure uses classification rules to automatically scan files and classify them according to the contents of the file. Classification properties are defined centrally in Active Directory so that these definitions can be shared across file servers in the organization. You can create classification rules that scan files for a standard string or for a string that matches a pattern (regular expression). When a configured classification parameter is found in a file, that file is classified as configured in the classification rule. Some examples of classification rules include:  
   
--   Classify any file that contains the string “Contoso Confidential” as having high business impact  
+-   Classify any file that contains the string "Contoso Confidential" as having high business impact  
   
 -   Classify any file that contains at least 10 social security numbers as having personally identifiable information  
   

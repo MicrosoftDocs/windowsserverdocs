@@ -1,4 +1,4 @@
-﻿---
+---
 title: Virtualized Domain Controller Troubleshooting
 ms.custom: 
   - AD
