@@ -1,17 +1,15 @@
 ---
 title: Appendix A Dynamic Access Control Glossary
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: d2cc0be5-4029-4352-a1d0-c56daf29f4d0
-author: billmath
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Appendix A: Dynamic Access Control Glossary
 
 >Applies To: Windows Server Technical Preview

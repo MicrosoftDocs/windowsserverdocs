@@ -1,17 +1,15 @@
 ---
 title: AD FS On-behalf-of Authentication in Windows Server 2016
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 84466432-339f-4715-9e2a-bc6666f23d53
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # AD FS On-behalf-of Authentication in Windows Server 2016
 
 >Applies To: Windows Server Technical Preview

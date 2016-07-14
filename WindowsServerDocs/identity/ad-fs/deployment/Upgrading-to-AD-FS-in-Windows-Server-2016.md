@@ -1,17 +1,15 @@
 ---
 title: Upgrading to AD FS in Windows Server 2016
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d05a834b-9a1a-460c-aadc-ffa9c9d30d04
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Upgrading to AD FS in Windows Server 2016
 
 >Applies To: Windows Server Technical Preview
