@@ -1,4 +1,4 @@
-﻿---
+---
 title: Guarded Fabric and Shielded VMs
 ms.custom: na
 ms.prod: windows-server-threshold

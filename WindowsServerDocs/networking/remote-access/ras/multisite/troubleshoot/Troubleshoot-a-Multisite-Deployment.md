@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f92b1335-ac4a-4501-a5ec-d1851e6f0fc7
-author: coreyp
+author: coreyp-at-msft
 ---
 # Troubleshoot a Multisite Deployment
 

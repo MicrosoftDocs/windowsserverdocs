@@ -90,7 +90,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
         ```  
         $Servers = 'SR-SRV01','SR-SRV02','SR-SRV03','SR-SRV04'  
 
-        $Servers | ForEach { Install-WindowsFeature –ComputerName $_ –Name Storage-Replica,Failover-Clustering,FS-FileServer –IncludeManagementTools -restart }  
+        $Servers | ForEach { Install-WindowsFeature -ComputerName $_ -Name Storage-Replica,Failover-Clustering,FS-FileServer -IncludeManagementTools -restart }  
         ```  
 
         For more information on these steps, see [Install or Uninstall Roles, Role Services, or Features](http://technet.microsoft.com/library/hh831809.aspx)  
@@ -152,7 +152,7 @@ For example, to validate two of the proposed stretch cluster nodes that each hav
 
       > [!IMPORTANT]
       > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:  
-      > `Diskspd.exe -c1g –d300 -W5 -C5 -b8k -t2 -o2 -r –w5 –h d:\test.dat`  
+      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`  
 
 11. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.  
 
@@ -217,13 +217,13 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
 1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
 
     ```  
-    Grant-SRAccess -ComputerName SR-SRV01 –Cluster SR-SRVCLUSB  
+    Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
     ```  
 
 2.  Grant the second cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the second cluster, or remotely.  
 
     ```  
-    Grant-SRAccess -ComputerName SR-SRV03 –Cluster SR-SRVCLUSA  
+    Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
     ```  
 
 3.  Configure the cluster-to-cluster replication, specifying the source and destination disks, the source and destination logs, the source and destination cluster names, and the log size. You can perform this command locally on the server or using a remote management computer.  

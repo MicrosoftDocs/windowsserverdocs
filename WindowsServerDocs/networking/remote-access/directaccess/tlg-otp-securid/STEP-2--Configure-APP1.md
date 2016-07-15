@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 19a7a4a6-9a04-42ea-a5d0-ecb28a34dbaa
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 2 Configure APP1
 

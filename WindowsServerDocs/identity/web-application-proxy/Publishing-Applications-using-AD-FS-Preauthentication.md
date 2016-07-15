@@ -1,17 +1,15 @@
 ---
 title: Publishing Applications using AD FS Preauthentication
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c11fe09d-22d4-4bb2-9d06-d63f0c227abf
+description:
 author: kgremban
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: web-app-proxy
 ---
+
 # Publishing Applications using AD FS Preauthentication
 
 >Applies To: Windows Server Technical Preview

@@ -27,7 +27,7 @@ Windows 8 introduced lock screen apps.  These are the applications that run and 
 ## What's changed?
 When a user signs in on a Windows 8.1 device, LSA will save the user credentials in encrypted memory accessible only by lsass.exe. When Windows Update initiates an automatic reboot without user presence, these credentials will be used to configure Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
 
-On rebooting, the user will automatically be signed in via the Autologon mechanism and then additionally locked to protect the user’s session. The locking will be initiated via Winlogon whereas the credential management is done by LSA.  By automatically signing on and locking the user on the console, the user’s lock screen applications will be restarted and available.
+On rebooting, the user will automatically be signed in via the Autologon mechanism and then additionally locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by LSA.  By automatically signing on and locking the user on the console, the user's lock screen applications will be restarted and available.
 
 > [!NOTE]
 > After a Windows Update induced reboot, the last interactive user is automatically signed on and the session is locked so the user's lock screen apps can run.
@@ -81,7 +81,7 @@ This policy setting controls whether a device will automatically sign-in the las
 
 If you enable or do not configure this policy setting, the device securely saves the user's credentials (including the user name, domain, and encrypted password) to configure automatic sign-in after a Windows Update restart. After the Windows Update restart, the user is automatically signed-in and the session is automatically locked with all the lock screen apps configured for that user.
 
-If you disable this policy setting, the device does not store the user's credentials for automatic sign-in after a Windows Update restart. The users’ lock screen apps are not restarted after the system restarts.
+If you disable this policy setting, the device does not store the user's credentials for automatic sign-in after a Windows Update restart. The users' lock screen apps are not restarted after the system restarts.
 
 **Registry Editor**
 
@@ -104,7 +104,7 @@ Value: 0 or 1
 ![](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/GTR_ADDS_SignInPolicy.gif)
 
 ## Troubleshooting
-When WinLogon automatically locks, WinLogon’s state trace will be stored in the WinLogon event log.
+When WinLogon automatically locks, WinLogon's state trace will be stored in the WinLogon event log.
 
 The status of an Autologon configuration attempt is logged
 
@@ -116,7 +116,7 @@ The status of an Autologon configuration attempt is logged
 
     -   records what the failure was
 
--   When BitLocker’s state changes:
+-   When BitLocker's state changes:
 
     -   the removal of credentials will be logged
 

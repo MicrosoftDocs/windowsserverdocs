@@ -1,4 +1,4 @@
-﻿---
+---
 title: TPM Key Attestation
 ms.custom: 
   - AD

@@ -15,7 +15,7 @@ author: jamesmci
 
 >Applies To: Windows Server Technical Preview
 
-You  can use this guide to learn how to deploy BranchCache in Windows Server® 2016 Technical Preview.  
+You  can use this guide to learn how to deploy BranchCache in Windows Server&reg; 2016 Technical Preview.  
   
 In addition to this topic, this guide contains the following sections.  
   

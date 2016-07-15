@@ -1,16 +1,15 @@
 ---
 title: Configure Additional Authentication Methods for AD FS
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 8a9a0ad9-4d2c-46c9-8c51-229f1304764f
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Configure Additional Authentication Methods for AD FS
 
 >Applies To: Windows Server Technical Preview

@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to Configure Protected Accounts
 ms.custom: 
   - AD

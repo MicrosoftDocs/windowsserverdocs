@@ -58,7 +58,7 @@ Azure Active Directory Join enhances identity experiences for enterprise, busine
   
 Benefits:  
   
--   **Availability of Modern Settings** on corp-owned Windows devices. Oxygen Services no longer require a personal Microsoft account: they now run off users’ existing work accounts to ensure compliance. Oxygen Services will work on PCs that are joined to an on-premises Windows domain, and PCs and devices that are “joined” to your Azure AD tenant (“cloud domain”). These settings include:  
+-   **Availability of Modern Settings** on corp-owned Windows devices. Oxygen Services no longer require a personal Microsoft account: they now run off users' existing work accounts to ensure compliance. Oxygen Services will work on PCs that are joined to an on-premises Windows domain, and PCs and devices that are "joined" to your Azure AD tenant ("cloud domain"). These settings include:  
   
     -   Roaming or personalization, accessibility settings and credentials  
   
@@ -68,7 +68,7 @@ Benefits:
   
     -   Live tiles and notifications  
   
--   **Access organizational resources** on mobile devices (phones, phablets) that can’t be joined to a Windows Domain, whether they are corp-owned or BYOD  
+-   **Access organizational resources** on mobile devices (phones, phablets) that can't be joined to a Windows Domain, whether they are corp-owned or BYOD  
   
 -   **Single-Sign On** to Office 365 and other organizational apps, websites and resources.  
   

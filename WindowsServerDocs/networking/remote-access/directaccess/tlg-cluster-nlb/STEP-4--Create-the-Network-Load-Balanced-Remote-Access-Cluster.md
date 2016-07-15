@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 4 Create the Network Load Balanced Remote Access Cluster
 
@@ -19,11 +19,11 @@ Windows Server&reg; 2016 Technical Preview, Windows Server&reg; 2012 R2 and Wind
   
 The following procedures enable you to create and test a Remote Access cluster:  
   
-1.  [Install the Network Load Balancing feature on EDGE1 and EDGE2](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#NLBfeature)—Before enabling load balancing, you must install the Network Load Balancing feature on both EDGE1 and EDGE2.  
+1.  [Install the Network Load Balancing feature on EDGE1 and EDGE2](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#NLBfeature)-Before enabling load balancing, you must install the Network Load Balancing feature on both EDGE1 and EDGE2.  
   
-2.  [Enable load balancing on EDGE1](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#EnableNLB)—EDGE1 was originally installed in single server mode. To enable load balancing, you configure new external and internal dedicated IP addresses (DIPs) for EDGE1. The previous DIPs on EDGE1 are automatically configured as virtual IP addresses (VIPs) for the cluster. The new external DIP is 131.107.0.10, the new internal IPv4 DIP is 10.0.0.10, the new internal IPv6 DIP is 2001:db8:1::10. The cluster VIPs are 131.107.0.2 and 131.107.0.3 (external), and 10.0.0.2 and 2001:db8:1::2 (internal).  
+2.  [Enable load balancing on EDGE1](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#EnableNLB)-EDGE1 was originally installed in single server mode. To enable load balancing, you configure new external and internal dedicated IP addresses (DIPs) for EDGE1. The previous DIPs on EDGE1 are automatically configured as virtual IP addresses (VIPs) for the cluster. The new external DIP is 131.107.0.10, the new internal IPv4 DIP is 10.0.0.10, the new internal IPv6 DIP is 2001:db8:1::10. The cluster VIPs are 131.107.0.2 and 131.107.0.3 (external), and 10.0.0.2 and 2001:db8:1::2 (internal).  
   
-3.  [Add EDGE2 to the load balanced cluster](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#AddDA2)—After enabling load balancing, you can now add EDGE2 to the cluster to provide load balancing and high availability for DirectAccess client connections.  
+3.  [Add EDGE2 to the load balanced cluster](assetId:///0607a59a-e295-4b5c-aabe-a299d461e544#AddDA2)-After enabling load balancing, you can now add EDGE2 to the cluster to provide load balancing and high availability for DirectAccess client connections.  
   
 ## Prerequisites  
 If you are creating this test lab on virtual machines, you must enable MAC address spoofing on EDGE1 and EDGE2.  

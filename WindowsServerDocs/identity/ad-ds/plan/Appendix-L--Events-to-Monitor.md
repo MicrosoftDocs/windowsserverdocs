@@ -1,4 +1,4 @@
-﻿---
+---
 title: Appendix L - Events to Monitor
 ms.custom: 
   - AD

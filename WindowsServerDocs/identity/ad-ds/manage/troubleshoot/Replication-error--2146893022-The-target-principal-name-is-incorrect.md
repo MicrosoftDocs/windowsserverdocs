@@ -237,7 +237,7 @@ A full synchronization of the security accounts manager (SAM) database to domain
                   <para>MSRPC:c/o Bind: UUID{E3514235-4B06-11D1-AB04-00C04FC2DCD2} DRSR(DRSR) Call=0x2 Assoc Grp=0x0 Xmit=0x16D0 Recv=0x16D0</para>
                 </TD>
                 <TD>
-                  <para>RPC bind request to E351ï¿½ service UUID</para>
+                  <para>RPC bind request to E351 service UUID</para>
                 </TD>
               </tr>
               <tr>
@@ -394,7 +394,7 @@ Realm: &lt;verify that realm returned by the source DC matches the Kerberos real
 Sname: &lt;verify that the sName in the AP response matches contains the hostname of the intended source DC and NOT another DC that the destination incorrectly resolved to due to a bad name-to-ip mapping problem.</para>
                 </TD>
                 <TD>
-                  <para>In column 1, note the realm of the target Kerberos realm as "contoso.com" followed by the source DCs Replication SPN ("Sname") which consists of the Active Directory replication service UUID (E351…) concatenated with object GUID of the source DCs NTDS Settings object.</para>
+                  <para>In column 1, note the realm of the target Kerberos realm as "contoso.com" followed by the source DCs Replication SPN ("Sname") which consists of the Active Directory replication service UUID (E351) concatenated with object GUID of the source DCs NTDS Settings object.</para>
                   <para>The GUIDED value "6f3f96d3-dfbf-4daf-9236-4d6da6909dd2" to the right of the E351... replication service UUID is the Object GUID for the source DCs NTDS settings object currently defined in the destination DCs copy of Active Directory. Verify that this object GUID matches the value in the "DSA Object GUID" field when "repadmin /showreps" is run from the console of the source DC).</para>
                   <para>A ping or nslookup of the source DCs fully qualified CNAME concatenated with "_msdcs.&lt;forest root DNS name&gt;" from the console of the destination DC must return the source DCs current IP address:</para>
                   <code>ping 6f3f96d3-dfbf-4daf-9236-4d6da6909dd2._msdcs.contoso.com</code>

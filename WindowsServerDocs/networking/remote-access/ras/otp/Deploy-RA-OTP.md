@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy Remote Access with OTP Authentication
 Windows Server&reg; 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.   
@@ -21,7 +21,7 @@ In this scenario a Remote Access server with DirectAccess enabled is configured 
 ## Prerequisites  
 Before you begin deploying this scenario, review this list for important requirements:  
   
--   [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before you deploy OTP.  
+-   [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) must be deployed before you deploy OTP.  
   
 -   Windows 7 Clients must use DCA 2.0 to support OTP.  
   
@@ -36,16 +36,16 @@ Before you begin deploying this scenario, review this list for important require
 ## In this scenario  
 The OTP authentication scenario includes a number of steps:  
   
-1.  [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server must be deployed before configuring OTP. Planning and deploying a single server includes designing and configuring a network topology, planning and deploying certificates, setting up DNS and Active Directory, configuring Remote Access server settings, deploying DirectAccess clients, and preparing intranet servers.  
+1.  [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server must be deployed before configuring OTP. Planning and deploying a single server includes designing and configuring a network topology, planning and deploying certificates, setting up DNS and Active Directory, configuring Remote Access server settings, deploying DirectAccess clients, and preparing intranet servers.  
   
-2.  [Plan Remote Access with OTP Authentication](networking/remote-access/ras/otp/plan/Plan-Remote-Access-with-OTP-Authentication.md). In addition to the planning required for a single server, OTP requires planning for a Microsoft certification authority \(CA\) and certificate templates for OTP; and a RADIUS\-enabled OTP server. Planning might also include a requirement for security groups to exempt specific users from strong \(OTP or smart card\) authentication. For information regarding the configuration of OTP in a multi\-forest environment, see [Configure a Multi-Forest Deployment](networking/remote-access/ras/multi-forest/Configure-a-Multi-Forest-Deployment.md).  
+2.  [Plan Remote Access with OTP Authentication](/plan/Plan-Remote-Access-with-OTP-Authentication.md). In addition to the planning required for a single server, OTP requires planning for a Microsoft certification authority \(CA\) and certificate templates for OTP; and a RADIUS\-enabled OTP server. Planning might also include a requirement for security groups to exempt specific users from strong \(OTP or smart card\) authentication. For information regarding the configuration of OTP in a multi\-forest environment, see [Configure a Multi-Forest Deployment](../../ras/multi-forest/Configure-a-Multi-Forest-Deployment.md).  
   
-3.  [Configure DirectAccess with OTP Authentication](networking/remote-access/ras/otp/configure/Configure-DirectAccess-with-OTP-Authentication.md). OTP deployment consists of a number of configuration steps, including preparing the infrastructure for OTP authentication, configuring the OTP server, configuring OTP settings on the Remote Access server, and updating DirectAccess client settings.  
+3.  [Configure DirectAccess with OTP Authentication](/configure/Configure-DirectAccess-with-OTP-Authentication.md). OTP deployment consists of a number of configuration steps, including preparing the infrastructure for OTP authentication, configuring the OTP server, configuring OTP settings on the Remote Access server, and updating DirectAccess client settings.  
   
-4.  [Troubleshoot an OTP Deployment]((networking/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.  
+4.  [Troubleshoot an OTP Deployment]((/troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.  
   
 ## <a name="BKMK_APP"></a>Practical applications  
-Increase security—Using OTP increases the security of your DirectAccess deployment. A user requires OTP credentials in order to gain access to the internal network. A user supplies OTP credentials via the Workplace Connections available in the network connections on the Windows 10 or Windows 8 client computer, or by using DirectAccess Connectivity Assistant \(DCA\) on client computers running Windows 7. The OTP authentication process works as follows:  
+Increase security-Using OTP increases the security of your DirectAccess deployment. A user requires OTP credentials in order to gain access to the internal network. A user supplies OTP credentials via the Workplace Connections available in the network connections on the Windows 10 or Windows 8 client computer, or by using DirectAccess Connectivity Assistant \(DCA\) on client computers running Windows 7. The OTP authentication process works as follows:  
   
 1.  The DirectAccess client enters domain credentials to access DirectAccess infrastructure servers \(over the infrastructure tunnel\).  If no connection to the internal network is available, due to a specific IKE failure, Workplace Connection on the client computer notifies the user that credentials are required. On client computers running Windows 7, a pop\-up requesting smart card credentials appears.  
   
@@ -64,7 +64,7 @@ The following table lists the roles and features required for the scenario:
   
 |Role\/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|*Remote Access Management role*|The role is installed and uninstalled using the Server Manager console. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services \(NPAS\) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services \(RRAS\) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access role is dependent on the following server features:<br /><br />-   Internet Information Services \(IIS\) Web Server – This feature is required to configure the network location server, utilize OTP authentication, and configure the default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
+|*Remote Access Management role*|The role is installed and uninstalled using the Server Manager console. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services \(NPAS\) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services \(RRAS\) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access role is dependent on the following server features:<br /><br />-   Internet Information Services \(IIS\) Web Server - This feature is required to configure the network location server, utilize OTP authentication, and configure the default web probe.<br />-   Windows Internal Database-Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit \(CMAK\)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
@@ -81,17 +81,17 @@ Hardware requirements for this scenario include the following:
 ## <a name="BKMK_SOFT"></a>Software requirements  
 There are a number of requirements for this scenario:  
   
-1.  Software requirements for single server deployment. For more information, see [Deploy a Single DirectAccess Server with Advanced Settings](networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
+1.  Software requirements for single server deployment. For more information, see [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
   
 2.  In addition to software requirements for a single server there are a number of OTP\-specific requirements:  
   
-    1.  CA for IPsec authentication—In an OTP deployment DirectAccess must be deployed using IPsec machines certificates issued by a CA. IPsec authentication using the Remote Access server as a Kerberos proxy is not supported in an OTP deployment. An internal CA is required.  
+    1.  CA for IPsec authentication-In an OTP deployment DirectAccess must be deployed using IPsec machines certificates issued by a CA. IPsec authentication using the Remote Access server as a Kerberos proxy is not supported in an OTP deployment. An internal CA is required.  
   
-    2.  CA for OTP authentication—A Microsoft Enterprise CA \(running on Windows 2003 Server or later\) is required to issue the OTP client certificate. The same CA used for issuing certificates for IPsec authentication can be used. The CA server must be available over the first infrastructure tunnel.  
+    2.  CA for OTP authentication-A Microsoft Enterprise CA \(running on Windows 2003 Server or later\) is required to issue the OTP client certificate. The same CA used for issuing certificates for IPsec authentication can be used. The CA server must be available over the first infrastructure tunnel.  
   
-    3.  Security group—To exempt users from strong authentication, an Active Directory security group containing these users is required.  
+    3.  Security group-To exempt users from strong authentication, an Active Directory security group containing these users is required.  
   
-    4.  Client\-side requirements—For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. This is available as a download on the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=29039).  
+    4.  Client\-side requirements-For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. This is available as a download on the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=29039).  
   
     5.  Note the following:  
   

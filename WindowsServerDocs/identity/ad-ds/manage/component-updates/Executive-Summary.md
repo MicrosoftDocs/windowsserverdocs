@@ -38,7 +38,7 @@ This section provides information about some of the most commonly leveraged vuln
   
 Included are the following subjects:  
   
--   **Initial breach targets** - Most information security breaches start with the compromise of small pieces of an organization's infrastructure—often one or two systems at a time. These initial events, or entry points into the network, often exploit vulnerabilities that could have been fixed, but weren't. Commonly seen vulnerabilities are:  
+-   **Initial breach targets** - Most information security breaches start with the compromise of small pieces of an organization's infrastructure-often one or two systems at a time. These initial events, or entry points into the network, often exploit vulnerabilities that could have been fixed, but weren't. Commonly seen vulnerabilities are:  
   
     -   Gaps in antivirus and antimalware deployments  
   

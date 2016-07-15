@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed2a1616-30c6-482a-9a02-4a5023621f58
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 7 Test DirectAccess Connectivity from the Internet
 
