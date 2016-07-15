@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88ffd598-2fde-402c-bd12-be790f84dc96
-author: coreyp
+author: coreyp-at-msft
 ---
 # Plan a Remote Access Cluster Deployment
 

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
 
@@ -70,7 +70,7 @@ For detailed planning steps, see [Plan an Advanced DirectAccess Deployment](../.
 ### Deployment steps  
 Deployment is divided into three phases:  
   
-1.  Configuring the DirectAccess infrastructure—This phase includes configuring network and routing, configuring firewall settings if required, configuring certificates, DNS servers, Active Directory and GPO settings, and the DirectAccess network location server.  
+1.  Configuring the DirectAccess infrastructure-This phase includes configuring network and routing, configuring firewall settings if required, configuring certificates, DNS servers, Active Directory and GPO settings, and the DirectAccess network location server.  
   
 2.  Configuring DirectAccess server settings. This phase includes steps for configuring DirectAccess client computers, the DirectAccess server, infrastructure servers, management and application servers.  
   

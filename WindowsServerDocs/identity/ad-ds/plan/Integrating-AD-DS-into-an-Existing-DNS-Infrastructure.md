@@ -1,4 +1,4 @@
-﻿---
+---
 title: Integrating AD DS into an Existing DNS Infrastructure
 ms.custom: na
 ms.prod: windows-server-threshold

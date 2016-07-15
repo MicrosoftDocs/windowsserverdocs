@@ -63,7 +63,7 @@ The underlying Windows PowerShell and layer of operations for the new Recycle Bi
 -   The Active Directory Administrative Center cannot restore sub-trees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU does not restore the child objects.  
   
     > [!NOTE]  
-    > The Active Directory Administrative Center batch restore operation does a “best effort” sort of the deleted objects *within the selection only* so parents are ordered before the children for the restore list. In simple test cases, sub-trees of objects may be restored in a single action. But corner cases, such as a selection that contains partial trees - trees with some of the deleted parent nodes missing - or error cases, such as skipping the child objects when parent restore fails, may not work as expected. For this reason, you should always restore sub-trees of objects as a separate action after you restore the parent objects.  
+    > The Active Directory Administrative Center batch restore operation does a "best effort" sort of the deleted objects *within the selection only* so parents are ordered before the children for the restore list. In simple test cases, sub-trees of objects may be restored in a single action. But corner cases, such as a selection that contains partial trees - trees with some of the deleted parent nodes missing - or error cases, such as skipping the child objects when parent restore fails, may not work as expected. For this reason, you should always restore sub-trees of objects as a separate action after you restore the parent objects.  
   
 Active Directory Recycle Bin requires a Windows Server 2008 R2 Forest Functional Level and you must be a member of the Enterprise Admins group. Once enabled, you cannot disable Active Directory Recycle Bin. Active Directory Recycle Bin increases the size of the Active Directory database (NTDS.DIT) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.  
   
@@ -192,7 +192,7 @@ The object restores to its original location.
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreSingle.gif)  
   
-Click **Restore To…** to change the restore location. This is useful if the deleted object's parent container was also deleted but you do not want to restore the parent.  
+Click **Restore To...** to change the restore location. This is useful if the deleted object's parent container was also deleted but you do not want to restore the parent.  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreToSingle.gif)  
   
@@ -297,7 +297,7 @@ Fine-Grained Password Policy cmdlet functionality did not change between the Win
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPP.gif)  
   
-The Active Directory Administrative Center also enables you to locate the resultant set of applied FGPP for a specific user. Right click any user and click **View resultant password settings…** to open the *Password Settings* page that applies to that user through implicit or explicit assignment:  
+The Active Directory Administrative Center also enables you to locate the resultant set of applied FGPP for a specific user. Right click any user and click **View resultant password settings...** to open the *Password Settings* page that applies to that user through implicit or explicit assignment:  
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)  
   
@@ -305,7 +305,7 @@ Examining the **Properties** of any user or group shows the **Directly Associate
   
 ![](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)  
   
-Implicit FGPP assignment does not display here; for that, you must use the **View resultant password settings…** option.  
+Implicit FGPP assignment does not display here; for that, you must use the **View resultant password settings...** option.  
   
 ## <a name="BKMK_HistoryViewer"></a>Using the Active Directory Administrative Center Windows PowerShell History Viewer  
 The future of Windows management is Windows PowerShell. By layering graphical tools on top of a task automation framework, management of the most complex distributed systems becomes consistent and efficient. You need to understand how Windows PowerShell works in order to reach your full potential and maximize your computing investments.  
@@ -507,7 +507,7 @@ The errors shown when no Active Directory Web Services instances are available a
 |-|-|  
 |Error|Operation|  
 |"Cannot connect to any domain. Refresh or try again when connection is available"|Shown at start of the Active Directory Administrative Center application|  
-|"Cannot find an available server in the *<NetBIOS domain name>* domain that is running the Active Directory Web Service (ADWS)”|Shown when trying to select a domain node in the Active Directory Administrative Center application|  
+|"Cannot find an available server in the *<NetBIOS domain name>* domain that is running the Active Directory Web Service (ADWS)"|Shown when trying to select a domain node in the Active Directory Administrative Center application|  
   
 To troubleshoot this issue, use these steps:  
   

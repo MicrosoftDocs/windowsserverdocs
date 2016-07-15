@@ -1,4 +1,4 @@
-﻿---
+---
 title: Active Directory-Integrated DNS Zones
 ms.custom: na
 ms.prod: windows-server-threshold

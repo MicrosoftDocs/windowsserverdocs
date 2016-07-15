@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 1 Plan the Remote Access Infrastructure
 
@@ -259,7 +259,7 @@ If multiple domains and Windows Internet Name Service (WINS) are deployed in you
 ##### Split-brain DNS  
 Split-brain DNS refers to the use of the same DNS domain for Internet and intranet name resolution.  
   
-For split-brain DNS deployments, you must list the FQDNs that are duplicated on the Internet and intranet, and decide which resources the DirectAccess client should reach—the intranet or the Internet version. When you want DirectAccess clients to reach the Internet version, you must add the corresponding FQDN as an exemption rule to the NRPT for each resource.  
+For split-brain DNS deployments, you must list the FQDNs that are duplicated on the Internet and intranet, and decide which resources the DirectAccess client should reach-the intranet or the Internet version. When you want DirectAccess clients to reach the Internet version, you must add the corresponding FQDN as an exemption rule to the NRPT for each resource.  
   
 In a split-brain DNS environment, if you want both versions of the resource to be available, configure your intranet resources with names that do not duplicate the names that are used on the Internet. Then instruct your users to use the alternate name when they access the resource on the intranet. For example, configure www.internal.contoso.com for the internal name of www.contoso.com.  
   

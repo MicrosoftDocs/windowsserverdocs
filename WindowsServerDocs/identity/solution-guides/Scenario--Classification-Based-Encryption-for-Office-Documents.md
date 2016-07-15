@@ -1,17 +1,15 @@
 ---
 title: Scenario Classification-Based Encryption for Office Documents
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 9e077a7d-4ec3-48c2-9125-e860930f4aed
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Scenario: Classification-Based Encryption for Office Documents
 
 >Applies To: Windows Server Technical Preview

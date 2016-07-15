@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
-author: coreyp
+author: coreyp-at-msft
 ---
 # Install and Configure Advanced DirectAccess
 

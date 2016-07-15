@@ -1,17 +1,15 @@
 ---
 title: Troubleshooting Web Application Proxy
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5b81d25b-75ae-4019-ac97-4c9c5e0e66ce
+description:
 author: kgremban
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: web-app-proxy
 ---
+
 # Troubleshooting Web Application Proxy
 
 >Applies To: Windows Server Technical Preview

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 915ef7dd-169d-4d58-9174-438d8ffa3584
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 8 Snapshot the Configuration
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: AD DS Design and Planning
 ms.custom: na
 ms.prod: windows-server-threshold

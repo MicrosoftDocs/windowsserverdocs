@@ -1,16 +1,13 @@
 ---
 title: AD FS user sign-in customization
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d4fafc19-e9e4-4e82-a09a-38ebef4044c9
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # AD FS user sign-in customization
 
@@ -25,7 +22,7 @@ For general global settings you can refer to [Customizing the AD FS Sign-in Page
 ## Pre-requisites  
 The following pre-requisites are required before attempting the procedures outlined in this document.  
   
--   �AD FS in Windows Server 2016 TP4 or later  
+-   AD FS in Windows Server 2016 TP4 or later  
   
 ## Configure AD FS Relying parties  
 Per relying party sign-in web elements and themes can be configured using the PowerShell examples below:  

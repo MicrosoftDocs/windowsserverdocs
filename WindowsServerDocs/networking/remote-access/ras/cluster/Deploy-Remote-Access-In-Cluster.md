@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid:
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy Remote Access in a Cluster
 Windows Server 2016 Technical Preview and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role. You can deploy Remote Access in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing \(NLB\) or with an external load balancer \(ELB\), such as F5 Big\-IP.  
@@ -32,7 +32,7 @@ Before you begin deploying this scenario, review this list for important require
 
 -   The load balanced nodes must be in the same IPv4 subnet.  
 
--   In ELB deployments, if manage out is needed, then DirectAccess clients cannot use Teredo. Only IPHTTPS can be used for end\-to\-end communication.  
+-   In ELB deployments, if manage out is needed, then DirectAccess clients cannot use&nbsp;Teredo. Only IPHTTPS can be used for end\-to\-end communication.  
 
 -   Ensure all known NLB\/ELB hotfixes are installed.  
 
@@ -41,11 +41,11 @@ Before you begin deploying this scenario, review this list for important require
 ## In this scenario  
 The cluster deployment scenario includes a number of steps:  
 
-1.  [Deploy a Single DirectAccess Server with Advanced Settings](../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server with advanced settings must be deployed before setting up a cluster deployment.  
+1.  [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access server with advanced settings must be deployed before setting up a cluster deployment.  
 
-2.  [Plan a Remote Access Cluster Deployment](../plan/Plan-a-Remote-Access-Cluster-Deployment.md). To build a cluster from a single server deployment a number of additional steps are required, including preparing certificates for the cluster deployment.  
+2.  [Plan a Remote Access Cluster Deployment](plan/Plan-a-Remote-Access-Cluster-Deployment.md). To build a cluster from a single server deployment a number of additional steps are required, including preparing certificates for the cluster deployment.  
 
-3.  [Configure a Remote Access Cluster](../cluster/configure/Configure-a-Remote-Access-Cluster.md). This consists of a number of configuration steps, including preparing the single server for Windows NLB or the external load balancer, preparing additional servers to join the cluster, and enabling load balancing.  
+3.  [Configure a Remote Access Cluster](configure/Configure-a-Remote-Access-Cluster.md). This consists of a number of configuration steps, including preparing the single server for Windows NLB or the external load balancer, preparing additional servers to join the cluster, and enabling load balancing.  
 
 ## <a name="BKMK_APP"></a>Practical applications  
 Gathering multiple servers into a server cluster provides the following:  
@@ -61,7 +61,7 @@ The following table lists the roles and features required for the scenario:
 
 |Role\/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services \(RRAS\), which was previously a role service under the Network Policy and Access Services \(NPAS\) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services \(RRAS\) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services \(IIS\) Web Server – This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services \(RRAS\), which was previously a role service under the Network Policy and Access Services \(NPAS\) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services \(RRAS\) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services \(IIS\) Web Server - This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database-Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit \(CMAK\)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
 |Network Load Balancing|This feature provides load balancing in a cluster using Windows NLB.|  
 
@@ -77,7 +77,7 @@ Hardware requirements for this scenario include the following:
 ## <a name="BKMK_SOFT"></a>Software requirements  
 There are a number of requirements for this scenario:  
 
--   Software requirements for single server deployment. For more information see [Deploy a Single DirectAccess Server with Advanced Settings](../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access).  
+-   Software requirements for single server deployment. For more information see [Deploy a Single DirectAccess Server with Advanced Settings](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md). A single Remote Access).  
 
 -   In addition to software requirements for a single server there are a number of cluster\-specific requirements:  
 

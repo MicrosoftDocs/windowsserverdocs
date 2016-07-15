@@ -1,17 +1,15 @@
 ---
 title: Publishing Applications with SharePoint, Exchange and RDG
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fcae5237-b07c-49d2-90de-03750b931601
+description:
 author: kgremban
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: web-app-proxy
 ---
+
 # Publishing Applications with SharePoint, Exchange and RDG
 
 >Applies To: Windows Server Technical Preview
@@ -39,9 +37,9 @@ The following table describes the Exchange services that you can publish through
 |Exchange service|Pre-authentication|Notes|  
 |--------------------|-----------------------|---------|  
 |Outlook Web App|-   AD FS using non-claims-based authentication<br />-   Pass-through<br />-   AD FS using claims-based authentication for on-premises Exchange 2013 Service Pak 1 (SP1)|For more information see: [Using AD FS claims-based authentication with Outlook Web App and EAC](http://go.microsoft.com/fwlink/?LinkId=393723)|  
-|Exchange Control Panel|Pass-through|�|  
+|Exchange Control Panel|Pass-through||  
 |Outlook Anywhere|Pass-through|You must publish three URLs for Outlook Anywhere to work correctly:<br /><br />-   The autodiscover URL.<br />-   The external host name of the Exchange Server; that is, the URL that is configured for clients to connect to.<br />-   The internal FQDN of the Exchange Server.|  
-|Exchange ActiveSync|Pass-through|�|  
+|Exchange ActiveSync|Pass-through||  
   
 To publish Outlook Web App using Integrated Windows authentication, you must use the Add Non-Claims-Based Relying Party Trust Wizard to configure the relying party trust for the application.  
   

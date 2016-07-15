@@ -1,4 +1,4 @@
-﻿---
+---
 title: Event ID 2087 - DNS lookup failure caused replication to fail
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Determining the Number of Domains Required
 ms.custom: na
 ms.prod: windows-server-threshold

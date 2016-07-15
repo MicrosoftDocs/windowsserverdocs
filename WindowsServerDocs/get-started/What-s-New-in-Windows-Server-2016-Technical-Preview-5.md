@@ -41,13 +41,13 @@ There are also improvements to the Recovery Console, including separation of inb
 New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.  
   
 ### Active Directory Certificate Services  
-What’s New in Active Directory Certificate Services. Active Directory Certificate Services (AD CS) in Windows Server 2016 Technical Preview increases support for TPM key attestation: You can now use Smart Card KSP for key attestation, and devices that are not joined to the domain can now use NDES enrollment to get certificates that can be attested for keys being in a TPM.  
+What's New in Active Directory Certificate Services. Active Directory Certificate Services (AD CS) in Windows Server 2016 Technical Preview increases support for TPM key attestation: You can now use Smart Card KSP for key attestation, and devices that are not joined to the domain can now use NDES enrollment to get certificates that can be attested for keys being in a TPM.  
   
 ### Active Directory Domain Services  
 Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server Technical Preview](https://technet.microsoft.com/library/mt163897.aspx).   
   
 ### Active Directory Federation Services  
-What’s New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 Technical Preview includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see   [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md).  
+What's New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 Technical Preview includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see   [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md).  
   
 ### Web Application Proxy  
 The latest version of Web Application Proxyfocuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [What's New in Web Application Proxy in Windows Server Technical Preview](https://technet.microsoft.com/library/dn765473.aspx).  

@@ -21,9 +21,9 @@ robots: noindex,nofollow
 
 Use the virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine. You can protect virtual machines from inspection, theft, and tampering from both malware that may run on the host, and datacenter administrators. The level of security you get depends on the host hardware you run, the virtual machine generation, and whether you set up the service, called the Host Guardian Service, that authorizes hosts to start shielded virtual machines.  
 
-The Host Guardian Service is a new role in Windows Server 2016. It identifies legitimate Hyper-V hosts and allows them to run a given virtual machine. You’d most commonly set up the Host Guardian Service for a datacenter. But you can create a shielded virtual machine to run it locally without setting up a Host Guardian Service. You can later distribute the shielded virtual machine to a Host Guardian Fabric.  
+The Host Guardian Service is a new role in Windows Server 2016. It identifies legitimate Hyper-V hosts and allows them to run a given virtual machine. You'd most commonly set up the Host Guardian Service for a datacenter. But you can create a shielded virtual machine to run it locally without setting up a Host Guardian Service. You can later distribute the shielded virtual machine to a Host Guardian Fabric.  
 
-If you haven’t set up the Host Guardian Service or are running it in local mode on the Hyper-V host and the host has the virtual machine owner’s guardian key, you can change the settings described in this topic.   An owner of a guardian key is an organization that creates and shares a private or public key to own all virtual machines created with that key.  
+If you haven't set up the Host Guardian Service or are running it in local mode on the Hyper-V host and the host has the virtual machine owner's guardian key, you can change the settings described in this topic.   An owner of a guardian key is an organization that creates and shares a private or public key to own all virtual machines created with that key.  
 
 To learn how you can make your virtual machines more secure with the Host Guardian Service, see the following resources.  
 

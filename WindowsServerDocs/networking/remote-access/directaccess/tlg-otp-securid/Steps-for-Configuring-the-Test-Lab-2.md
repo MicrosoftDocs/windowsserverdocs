@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a40183c-afd1-43ca-b306-05745640a37d
-author: coreyp
+author: coreyp-at-msft
 ---
 # Steps for Configuring the Test Lab
 

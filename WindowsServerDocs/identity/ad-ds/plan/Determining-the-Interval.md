@@ -1,4 +1,4 @@
-﻿---
+---
 title: Determining the Interval
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Event ID 1388 or 1988 - A lingering object is detected
 ms.custom: na
 ms.prod: windows-server-threshold

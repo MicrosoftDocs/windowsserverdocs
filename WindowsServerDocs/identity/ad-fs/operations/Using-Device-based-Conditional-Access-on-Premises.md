@@ -1,16 +1,13 @@
 ---
 title: Using Device-based Conditional Access on-Premises
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service:
-ms.suite: na
-ms.technology:
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f88d7774-b7f8-4eb8-8edd-7a980e24199d
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # Using Device-based Conditional Access on-Premises
 
@@ -43,7 +40,7 @@ For more information on the different ways to register devices, see also:
 [Join Windows 10 Mobile to Azure Active Directory](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory)  
 
 ### How Windows 10 User and Device Sign on is different from previous versions  
-For Windows 10 and AD FS 2016 there are some new aspects of device registration and authentication you should know about (especially if you are very familiar with device registration and “workplace join” in previous releases).  
+For Windows 10 and AD FS 2016 there are some new aspects of device registration and authentication you should know about (especially if you are very familiar with device registration and "workplace join" in previous releases).  
 
 First, in Windows 10 and AD FS in Windows Server 2016, device registration and authentication is no longer based solely on an X509 user certificate.  There is a new and more robust protocol that provides better security and a more seamless user experience.  The key differences are that, for Windows 10 Domain Join and Azure AD Join, there is an X509 computer certificate and a new credential called a PRT.  You can read all about it [here](https://jairocadena.com/2016/01/18/how-domain-join-is-different-in-windows-10-with-azure-ad/) and [here](https://jairocadena.com/2016/02/01/azure-ad-join-what-happens-behind-the-scenes/).  
 
@@ -114,8 +111,8 @@ Note: The below commands require Active Directory administration tools, so if yo
 1.  Run the Add Roles & Features wizard and select feature Remote Server Administration tools -> Role Administration Tools -> AD DS and AD LDS Tools -> Choose both the Active Directory module for Windows PowerShell and the AD DS Tools.  
 2.  On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA) privileges and open an elevated powershell prompt.  Then, execute the following PowerShell commands:  
     1. Import-module activedirectory  
-    2. PS C:\ &gt; Initialize-ADDeviceRegistration -ServiceAccountName “&lt;AD FS service account name&gt;”  
-    3. Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format “domain\accountname$”  
+    2. PS C:\ &gt; Initialize-ADDeviceRegistration -ServiceAccountName "&lt;AD FS service account name&gt;"  
+    3. Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format "domain\accountname$"  
     4. The above PSH creates the following objects  
         1. RegisteredDevices container under the AD domain partition  
         2. Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration  
@@ -133,7 +130,7 @@ a.  Where the [AD connector account name] is the name of the account you configu
 
 #### Prepare AD for Device Write Back   
 To ensure AD DS objects and containers are in the correct state for write back of devices from Azure AD, do the following.  
-1.  PS C:>Initialize-ADSyncDeviceWriteBack –DomainName &lt;AD DS domain name&gt; –AdConnectorAccount [AD connector account name]  
+1.  PS C:>Initialize-ADSyncDeviceWriteBack -DomainName &lt;AD DS domain name&gt; -AdConnectorAccount [AD connector account name]  
 
     1. Where the [AD connector account name] is the name of the account you configured in Azure AD Connect when adding your on premises AD DS directory in domain\accountname format  
     2. The above command creates the following objects for device write back to AD DS, if they do not exist already, and allows access to the specified AD connector account name  
@@ -141,7 +138,7 @@ To ensure AD DS objects and containers are in the correct state for write back o
         2. Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration  
 
 #### Enable Device Write Back in Azure AD Connect  
-If you have not done so before, enable device write back in Azure AD Connect by running the wizard a second time and selecting “Customize Synchronization Options”, then checking the box for device write back and selecting the forest in which you have run the above cmdlets  
+If you have not done so before, enable device write back in Azure AD Connect by running the wizard a second time and selecting "Customize Synchronization Options", then checking the box for device write back and selecting the forest in which you have run the above cmdlets  
 
 #### Configure Device Authentication in AD FS  
 Using an elevated PowerShell command window, configure AD FS policy by executing the following command  
@@ -183,13 +180,13 @@ For information on enabling Windows 10 with Microsoft Passport for Work, see [En
 To enable automatic MDM enrollment of registered devices so that you can use the isCompliant claim in your access control policy, follow the steps [here.](https://blogs.technet.microsoft.com/ad/2015/08/14/windows-10-azure-ad-and-microsoft-intune-automatic-mdm-enrollment-powered-by-the-cloud/)  
 
 ### Troubleshooting  
-1.  if you get an error on Initialize-ADDeviceRegistration that complains about an object already existing in the wrong state, such as “The drs service object has been found without all the required attributes”, you may have executed Azure AD Connect powershell commands previously and have a partial configuration in AD DS.  Try deleting manually the objects under CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt; and trying again.  
+1.  if you get an error on Initialize-ADDeviceRegistration that complains about an object already existing in the wrong state, such as "The drs service object has been found without all the required attributes", you may have executed Azure AD Connect powershell commands previously and have a partial configuration in AD DS.  Try deleting manually the objects under CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt; and trying again.  
 2.  For Windows 10 domain joined clients  
     1. To verify that device authentication is working, sign on to the domain joined client as a test user account. To trigger provisioning quickly, lock and unlock the desktop at least one time.   
     2. Instructions to check for stk key credential link on AD DS object (does sync still have to run twice?)  
 3.  If you get an error upon trying to register a Windows computer that the device was already enrolled, but you are unable or have already unenrolled the device, you may have a fragment of device enrollment configuration in the registry.  To investigate and remove this, use the following steps:  
     1. On the Windows computer, open Regedit and navigate to HKLM\Software\Microsoft\Enrollments   
-    2. Under this key, there will be many subkeys in the GUID form.  Navigate to the subkey which has ~17 values in it and has "EnrollmentType" of  “6” [MDM joined] or “13” (Azure AD joined)  
+    2. Under this key, there will be many subkeys in the GUID form.  Navigate to the subkey which has ~17 values in it and has "EnrollmentType" of  "6" [MDM joined] or "13" (Azure AD joined)  
     3. Modify EnrollmentType to 0  
     4. Try the device enrollment or registration again  
 
