@@ -38,6 +38,6 @@ In Windows Server 2016 Technical Preview, DHCP servers will not enforce NAP poli
   
 ## See also  
   
--   [Dynamic Host Configuration Protocol (DHCP) Overview](assetId:///eb9ac71c-9eb7-4d51-b98c-8d50b9ddeaec)  
+-   [Dynamic Host Configuration Protocol (DHCP)](Dynamic-Host-Configuration-Protocol--DHCP-.md)  
   
 

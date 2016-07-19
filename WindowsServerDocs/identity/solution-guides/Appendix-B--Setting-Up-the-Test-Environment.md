@@ -168,7 +168,7 @@ Create the following users by using Active Directory Administrative Center.
   
 1.  Hover the cursor on the upper right corner of screen and click the search icon. In the Search box, type **group policy management**, and click **Group Policy Management**.  
   
-2.  Expand **Forest: contoso.com**, and then expand **Domains**, navigate to **contoso.com**, expand **(contoso.com)**, and then select **FileServerOU**. Right-click **Create a GPO in this domain and Link it here'¦**  
+2.  Expand **Forest: contoso.com**, and then expand **Domains**, navigate to **contoso.com**, expand **(contoso.com)**, and then select **FileServerOU**. Right-click **Create a GPO in this domain and Link it here**
   
 3.  Type a descriptive name for the GPO, such as **FlexibleAccessGPO**, and then click **OK**.  
   
@@ -250,7 +250,7 @@ When you create quotas and file screens, you have the option of sending email no
   
 2.  Create the following files with the details specified:  
   
-    -   **Finance Memo.docx**: Add some finance related text in the document. For example, 'œThe business rules about who can access finance documents have changed. Finance documents are now only accessed by members of the FinanceExpert group. No other departments or groups have access.' You need to evaluate the impact of this change before implementing it in the environment. Ensure that this document has CONTOSO CONFIDENTIAL as the footer on every page.  
+    -   **Finance Memo.docx**: Add some finance related text in the document. For example, 'The business rules about who can access finance documents have changed. Finance documents are now only accessed by members of the FinanceExpert group. No other departments or groups have access.' You need to evaluate the impact of this change before implementing it in the environment. Ensure that this document has CONTOSO CONFIDENTIAL as the footer on every page.  
   
     -   **Request for Approval to Hire.docx**: Create a form in this document that collects applicant information. You must have the following fields in the document: **Applicant Name, Social Security number, Job Title, Proposed Salary, Starting Date, Supervisor name, Department**. Add an additional section in the document that has a form for **Supervisor Signature, Approved Salary, Conformation of Offer**, and **Status of Offer**.   
         Make the document rights-management enabled.  
@@ -525,7 +525,7 @@ Configure Microsoft Exchange Server on this computer. For more information, see 
   
 4.  Create a shortcut to Outlook on the contoso\administrator desktop.  
   
-5.  Open Outlook and address all the 'œfirst time launched' messages.  
+5.  Open Outlook and address all the 'first time launched' messages.  
   
 6.  Delete any test messages that were generated.  
   
@@ -716,10 +716,10 @@ Create the user Jeff Low with the password **pass@word1**, and assign the compan
   
     ```  
     New-ADClaimType '"SourceTransformPolicy `  
-    '"DisplayName 'œCompany' `  
-    '"ID 'œad://ext/Company:ContosoAdatum' `  
+    '"DisplayName 'Company' `  
+    '"ID 'ad://ext/Company:ContosoAdatum' `  
     '"IsSingleValued $true `  
-    '"ValueType 'œstring' `  
+    '"ValueType 'string' `  
   
     ```  
   
@@ -777,7 +777,7 @@ Create the user Jeff Low with the password **pass@word1**, and assign the compan
     > [!TIP]  
     > If the **Show Administrative tools** setting is disabled, the Administrative Tools folder and its contents will not appear in the **Settings** results.  
   
-2.  Right-click the contoso.com domain, click **Create a GPO in this domain and Link it here'¦**  
+2.  Right-click the contoso.com domain, click **Create a GPO in this domain and Link it here**  
   
 3.  Type a descriptive name for the GPO, such as **AdatumAccessGPO**, and then click **OK**.  
   
