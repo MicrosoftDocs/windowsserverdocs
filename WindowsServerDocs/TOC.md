@@ -497,7 +497,7 @@
 ##### [Troubleshooting DirectAccess](networking/remote-access/directaccess/Troubleshooting-DirectAccess.md)
 ##### [Deploy a Single DirectAccess Server Using the Getting Started Wizard](networking/remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)
 ###### [Plan a Basic DirectAccess Deployment](networking/remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment.md)
-####### [Step 1: Plan the DirectAccess Infrastructure](networking/remote-access/directaccess/single-server-advanced/Step-1--Plan-the-DirectAccess-Infrastructure.md)
+####### [Step 1 Plan the Basic DirectAccess Infrastructure](networking/remote-access/directaccess/single-server-wizard/Step-1-Plan-Basic-DA-Infrastructure.md)
 ####### [Step 2: Plan the DirectAccess Deployment](networking/remote-access/directaccess/single-server-wizard/Step-2--Plan-the-DirectAccess-Deployment.md)
 ###### [Install and Configure Basic DirectAccess](networking/remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-DirectAccess.md)
 ####### [Step 1: Configure the DirectAccess Infrastructure](networking/remote-access/directaccess/single-server-wizard/Step-1--Configure-the-DirectAccess-Infrastructure.md)
