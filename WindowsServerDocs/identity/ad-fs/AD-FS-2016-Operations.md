@@ -33,7 +33,9 @@ This document contains a list of all of the documentation operations for AD FS f
   
 * [Improved interoperability with SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)  
   
-* [Using Device-based Conditional Access on Premises](../ad-fs/operations/Using-Device-based-Conditional-Access-on-Premises.md)  
+* [Plan Device-based Conditional Access on Premises](../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md) 
+
+*  [Configure Device-based Conditional Access on Premises](../ad-fs/operations/Configure-Device-based-Conditional-Access-on-Premises.md)   
   
 * [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)  
   
