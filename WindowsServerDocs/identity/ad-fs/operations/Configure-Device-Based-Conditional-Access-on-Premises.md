@@ -1,5 +1,5 @@
 ---
-title: Using Device-based Conditional Access on-Premises
+title: Configure Device-based Conditional Access on-Premises
 description:
 author: billmath
 manager: femila
@@ -11,11 +11,11 @@ ms.technology: active-directory-federation-services
 ---
 
 
-# Configuring On-Premises Conditional Access using registered devices (TP5)  
+# Configure On-Premises Conditional Access using registered devices (TP5)  
 
 The following document will guide you through installing and configuring on-premises conditional access with registered devices.
 
-![](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
+![](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
 ## Infrastructure per-requisites
 The following per-requisites are required before you can begin with on-premises conditional access. 
