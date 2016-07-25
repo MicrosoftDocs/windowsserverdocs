@@ -31,7 +31,7 @@ If you aren't familiar with Windows’ support for storage-class memory devices,
 
 JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows with native drivers, starting in Windows Server 2016 and Windows 10 Anniversary Edition. While these devices behave similar to other disks (HDDs and SSDs), there are some differences.
 
-All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used and how long and heavily it is used.
+All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used.
 
 The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](http://msdn.microsoft.com/library/mt650885.aspx).
 
@@ -89,7 +89,7 @@ The following table lists some info about this condition.
 |General behavior|The NTFS volume will be dismounted.<br>The PhysicalDisk Health Status field will show “Unhealthy” for all affected NVDIMM-N devices.|
 |Storage Spaces behavior|Storage Space will remain operational as long as only one NVDIMM-N is affected. If multiple devices are affected, writes to the Storage Space will fail. <br>The PhysicalDisk Health Status field will show “Unhealthy” for all affected NVDIMM-N devices.|
 |More info|OperationalStatus field of the PhysicalDisk object.<br>EventLog – Microsoft-Windows-ScmDisk0101/Operational|
-|What to do|We recommended backing-up the affected NVDIMM-N’s data. To gain read access, you can manually bring the disk online (it will surface as a read-only NTFS volume).<br><br>To fully clear this condition, the root cause must be resolved (i.e. service power supply or replace NVDIMM-N, depending on issue) and the volume on the NVDIMM-N must either be taken offline and brought online again, or the system must be rebooted.<br><br>To make the NVDIMM-N usable in Storage Spaces again, use the **Reset-PhysicalDisk** cmdlet, which re-integrates the device and starts the repair process.|
+|What to do|We recommended backing-up the affected NVDIMM-N’s data. To gain read access, you can manually bring the disk online (it will surface as a read-only NTFS volume).<br><br>To fully clear this condition, the root cause must be resolved (i.e. service power supply or replace NVDIMM-N, depending on issue) and the volume on the NVDIMM-N must either be taken offline and brought online again, or the system must be restarted.<br><br>To make the NVDIMM-N usable in Storage Spaces again, use the **Reset-PhysicalDisk** cmdlet, which re-integrates the device and starts the repair process.|
 
 ## NVDIMM-N is shown with a capacity of ‘0’ Bytes or as a "Generic Physical Disk"
 
