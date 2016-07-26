@@ -42,7 +42,7 @@ For this walkthrough we will be using a basic setup of:
 
 You can, if you want, use only two machines. One for DC/AD FS and the other for developing the sample.
 
-How to setup the domain controller and AD FS is beyond the scope of this article. The basic setup is the same as Windows Server 2012 R2.  For additional deployment information see:
+How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
 
 - [AD FS Deployment](../ad-fs/AD-FS-Deployment.md)
 
