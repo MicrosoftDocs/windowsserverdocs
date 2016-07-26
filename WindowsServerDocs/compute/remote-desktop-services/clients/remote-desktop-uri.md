@@ -31,20 +31,20 @@ This table gives a complete list of supported attributes that may be used with t
 
 | **RDP attribute**                                           | **Android** | **Mac** | **iOS** |
 |---------------------------------------------------------|---------|-----|-----|
-| allow desktop composition=i:&lt;;0 or 1&gt;                    | x       | x   | x   |
+| allow desktop composition=i:&lt;0 or 1&gt;                    | x       | x   | x   |
 | allow font smoothing=i:<0 or 1&gt;                         | x       | x   | x   |
-| alternate shell=s:&lt;;string&gt;                              | x       | x   | x   |
-| [audiomode=i:&lt;;0, 1, or 2&gt;](https://technet.microsoft.com/library/ff393707.aspx)                                | x       | x   | x   |
-| [authentication level=i:&lt;;0 or 1&gt;](https://technet.microsoft.com/library/ff393709.aspx)                         | x       | x   | x   |
-| connect to console=i:&lt;;0 or 1&gt;                           | x       | x   | x   |
-| disable cursor settings=i:&lt;;0 or 1&gt;                      | x       | x   | x   |
-| disable full window drag=i:&lt;;0 or 1&gt;                     | x       | x   | x   |
-| disable menu anims=i:&lt;;0 or 1&gt;                           | x       | x   | x   |
-| disable themes=i:&lt;;0 or 1&gt;                               | x       | x   | x   |
-| disable wallpaper=i:&lt;;0 or 1&gt;                            | x       | x   | x   |
+| alternate shell=s:&lt;string&gt;                              | x       | x   | x   |
+| [audiomode=i:&lt;0, 1, or 2&gt;](https://technet.microsoft.com/library/ff393707.aspx)                                | x       | x   | x   |
+| [authentication level=i:&lt;0 or 1&gt;](https://technet.microsoft.com/library/ff393709.aspx)                         | x       | x   | x   |
+| connect to console=i:&lt;0 or 1&gt;                           | x       | x   | x   |
+| disable cursor settings=i:&lt;0 or 1&gt;                      | x       | x   | x   |
+| disable full window drag=i:&lt;0 or 1&gt;                     | x       | x   | x   |
+| disable menu anims=i:&lt;0 or 1&gt;                           | x       | x   | x   |
+| disable themes=i:&lt;0 or 1&gt;                               | x       | x   | x   |
+| disable wallpaper=i:&lt;0 or 1&gt;                            | x       | x   | x   |
 | [drivestoredirect=s:*](https://technet.microsoft.com/library/ff393728(v=ws.10).aspx) (this is the only supported value) | x       | x   |     |
-| [desktopheight=i:&lt;;value in pixels&gt;](https://technet.microsoft.com/library/ff393702.aspx)                       |         | x   |     |
-| [desktopwidth=i:&lt;;value in pixels&gt;](https://technet.microsoft.com/library/ff393697.aspx)                        |         | x   |     |
+| [desktopheight=i:&lt;value in pixels&gt;](https://technet.microsoft.com/library/ff393702.aspx)                       |         | x   |     |
+| [desktopwidth=i:&lt;value in pixels&gt;](https://technet.microsoft.com/library/ff393697.aspx)                        |         | x   |     |
 | [domain=s:&lt;string&gt;](https://technet.microsoft.com/library/ff393673.aspx)                           | x | x | x |
 | [full address=s:&lt;string&gt;](https://technet.microsoft.com/library/ff393661.aspx)                     | x | x | x |
 | gatewayhostname=s:&lt;string&gt;                  | x | x | x |
