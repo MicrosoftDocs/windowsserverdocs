@@ -14,7 +14,7 @@ author: vhorne
 ---
 # Deploy a Software Defined Network infrastructure using scripts
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic covers how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts. The infrastructure includes a highly available (HA) network controller, an HA Software Load Balancer (SLB)/MUX, virtual networks, and associated Access Control Lists (ACLs). Additionally, another script deploys a tenant workload for you to validate your SDN infrastructure.  
   
@@ -27,7 +27,7 @@ You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). F
 > [!IMPORTANT]  
 > Before you begin deployment, you must plan and configure your hosts and physical network infrastructure. For more information, see [Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md).  
   
-All Hyper-V hosts must have Windows Server 2016 Technical Preview installed.  
+All Hyper-V hosts must have Windows Server 2016 installed.  
   
 ## Deployment Steps  
 Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switch and  IP address assignment. Any storage type that is compatible with Hyper-V, shared or local may be used.  
@@ -103,7 +103,7 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
   
 1.  The installation files are located on GitHub. Download the zip file from the [Microsoft SDN GitHub Repository](https://github.com/Microsoft/SDN.git). On the Microsoft SDN repository page, click **Download ZIP**.  
   
-2.  Designate one computer as your deployment computer.  This computer must be running Windows Server 2016 Technical Preview. Expand the zip file and copy the **SDNExpress** folder to the deployment computer's `C:\` folder.  
+2.  Designate one computer as your deployment computer.  This computer must be running Windows Server 2016. Expand the zip file and copy the **SDNExpress** folder to the deployment computer's `C:\` folder.  
   
 3.  Share the `C:\SDNExpress` folder as "**SDNExpress**" with permission for **Everyone** to **Read/Write**.  
   
@@ -115,12 +115,12 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
 |---------------|---------------|  
 |AgentConf|Holds fresh copies of OVSDB schemas used by the SDN Host Agent on each Windows Server 2016 Hyper-V host to program network policy.|  
 |Certs|Temporary shared location for the NC certificate file.|  
-|Images|Empty, place your Windows Server 2016 Technical Preview vhdx image here|  
+|Images|Empty, place your Windows Server 2016 vhdx image here|  
 |Tools|Utilities for troubleshooting and debugging.  Copied to the hosts and virtual machines.  We recommend you place Network Monitor or Wireshark here so it is available if needed.|  
 |Scripts|Deployment scripts.<br /><br />-   **SDNExpress.ps1**<br />    Deploys and configures the fabric, including the Network controller virtual machines, SLB Mux virtual machines, gateway pool(s) and the HNV gateway virtual machine(s) corresponding to the pool(s) .<br />-   **FabricConfig.psd1**<br />    A  configuration file template for the SDNExpress script.  You will customize this for your environment.<br />-   **SDNExpressTenant.ps1**<br />    Deploys a sample tenant workload on a virtual network with a load balanced VIP.<br />    Also provisions one or more network connections (IPSec S2S VPN, GRE, L3) on the service provider edge gateways which are connected to the previously created tenant workload. The IPSec and GRE gateways are available for connectivity over the corresponding VIP IP Address, and the L3 forwarding gateway over the corresponding address pool.<br />    This script can be used to delete  the corresponding configuration with an Undo option as well.<br />-   **TenantConfig.psd1**<br />    A template configuration file for tenant workload and S2S gateway configuration.<br />-   **SDNExpressUndo.ps1**<br />    Cleans up the fabric environment and resets it to a starting state.<br />-   **SDNExpressEnterpriseExample.ps1**<br />    Provisions one or more enterprise site environments with one Remote Access Gateway and (optionally) one corresponding enterprise virtual machine per site. The IPSec or GRE enterprise gateways connects to the corresponding VIP IP address of the service provider gateway to establish the S2S tunnels. The L3 Forwarding Gateway connects over the corresponding Peer IP Address. <br />            This script can be used to delete the corresponding configuration with an Undo option as well.<br />-   **EnterpriseConfig.psd1**<br />    A template configuration file for the Enterprise site-to-site gateway and Client VM configuration.|  
 |TenantApps|Files used to deploy example tenant workloads.|  
   
-5.  Verify the Windows Server 2016 Technical Preview VHDX file is in the **Images** folder.  
+5.  Verify the Windows Server 2016 VHDX file is in the **Images** folder.  
   
 6. Customize the SDNExpress\scripts\FabricConfig.psd1 file by changing the **<< Replace >>** tags with specific values to fit your lab infrastructure including host names, domain names, usernames and passwords, and network information for the networks listed in the Planning Network topic.  
 7. Create a Host A record in DNS for the NetworkControllerRestName (FQDN) and NetworkControllerRestIP.  
