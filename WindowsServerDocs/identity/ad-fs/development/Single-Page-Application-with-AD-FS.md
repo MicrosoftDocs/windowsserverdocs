@@ -16,7 +16,7 @@ ms.technology: active-directory-federation-services
 
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
->WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.
+>WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
 
 ## Overview
@@ -42,10 +42,11 @@ For this walkthrough we will be using a basic setup of:
 
 You can, if you want, use only two machines. One for DC/AD FS and the other for developing the sample.
 
-How to setup the domain controller and AD FS is beyond the scope of this article. Please follow the articles below in case you need any help in setting up AD FS / domain controller.
+How to setup the domain controller and AD FS is beyond the scope of this article. The basic setup is the same as Windows Server 2012 R2.  For additional deployment information see:
 
-- [Install a New Windows Server 2012 Active Directory Forest](https://technet.microsoft.com/library/jj574166.aspx)
-- [Windows Server 2012 R2 AD FS Deployment Guide](https://technet.microsoft.com/library/dn486820.aspx)
+- [AD FS Deployment](../ad-fs/AD-FS-Deployment.md)
+
+
 
 ## Clone or download this repository
 We will be using the sample application created for integrating Azure AD into an AngularJS single page app and modifying it to instead secure the backend resource by using AD FS.
