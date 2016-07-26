@@ -37,7 +37,7 @@ Before you start, make sure you check out the [supported configuration](remote-d
 
 ## Remote Desktop client for Mac
 - [Getting started with Remote Desktop client on Mac](remote-desktop-mac.md)
-- [Remote Desktop client on Mac FAQ](remote-desktop-mac-faq)
+- [Remote Desktop client on Mac FAQ](remote-desktop-mac-faq.md)
 - Download [Microsoft Remote Desktop for Mac](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12&ls=1)
 
 ## Remote Desktop client for Windows

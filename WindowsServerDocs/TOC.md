@@ -88,7 +88,7 @@
 ##### [Getting started with Remote Desktop client on iOS](compute/remote-desktop-services/clients/remote-desktop-ios.md)
 ##### [Remote Desktop client on iOS FAQ](compute/remote-desktop-services/clients/remote-desktop-ios-faq.md)
 ##### [Getting started with Remote Desktop client on Mac](compute/remote-desktop-services/clients/remote-desktop-mac.md)
-##### [Remote Desktop client on Mac FAQ](compute/remote-desktop-services/clients/remote-desktop-mac-faq)
+##### [Remote Desktop client on Mac FAQ](compute/remote-desktop-services/clients/remote-desktop-mac-faq.md)
 ##### [Supported PCs](compute/remote-desktop-services/clients/remote-desktop-supported-config.md)
 ##### [Remote Desktop URI scheme](compute/remote-desktop-services/clients/remote-desktop-uri.md)
 ## [Identity and Access](identity/Identity-and-Access.md)
