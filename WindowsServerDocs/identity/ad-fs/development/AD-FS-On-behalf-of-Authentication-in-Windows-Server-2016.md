@@ -65,6 +65,7 @@ You can, if you want, use only two machines. One for DC/ADFS and the other for d
 
 How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
 
+- [AD DS Deployment](../ad-ds/deploy/AD-DS-Deployment.md)
 - [AD FS Deployment](../AD-FS-Deployment.md)
 
 The sample is based on the existing OBO sample against Azure created by Vittorio Bertocci and available [here](https://github.com/Azure-Samples/active-directory-dotnet-webapi-onbehalfof). Follow the instructions to clone the project on your development machine and create a copy of the sample to start working with.

@@ -44,6 +44,7 @@ You can, if you want, use only two machines. One for DC/AD FS and the other for 
 
 How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
 
+- [AD DS Deployment](../ad-ds/deploy/AD-DS-Deployment.md) 
 - [AD FS Deployment](../AD-FS-Deployment.md)
 
 
@@ -92,7 +93,7 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
 
 |Configuration|Description
 |--------|--------
-|instance|Your STS URL, e.g. https://fs.<yourdomain>/
+|instance|Your STS URL, e.g. https://fs.contoso.com/
 |tenant|Keep it as 'adfs'
 |clientID|This is the client ID you specified while configuring the public client for your single page application
 
