@@ -51,7 +51,7 @@ Use the following steps to prepare the virtual machines hosting the Remote Deskt
     3.  Enter a name for the user disks folder, for example, **UserDisks**.  
     4.  Right-click the new folder and click **Properties > Sharing > Advanced Sharing**.  
     5.  Select **Share this folder** and click **Permissions**.  
-    6.  Select **Everyone**, and then click **Remove**. Now click **Add**, enter **Domain Administrators**, and click **OK**.  
+    6.  Select **Everyone**, and then click **Remove**. Now click **Add**, enter **Domain Admins**, and click **OK**.  
     7.  Select **Allow Full Control**, and then click **OK > OK > Close**.  
     8.  Repeat steps c. to g. to create a shared folder for certificates.   
 

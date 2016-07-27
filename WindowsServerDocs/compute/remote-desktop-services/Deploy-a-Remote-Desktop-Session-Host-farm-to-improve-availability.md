@@ -26,7 +26,7 @@ Use the following steps to set up your deployment:
   
 1. [Create a basic desktop hosting deployment.](Deploy-a-basic-desktop-hosting-environment-using-Azure-IaaS.md)  
 2. Create an additional Remote Desktop Session Host (RDSH) [virtual machine](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/).
-    - To have some constants in our naming, We named the second RDSH server "Contoso-Sh2"
+    - For consistency, we named the second RDSH server "Contoso-Sh2"
     - Make sure to include it the same availability set as the existing RDSH server to ensure high availability  
     - You can also create a [customized RDSH virtual machine image](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/).  
 3. [Prepare that virtual machine for Remote Desktop.](Prepare-the-RDSH-virtual-machine.md)  
