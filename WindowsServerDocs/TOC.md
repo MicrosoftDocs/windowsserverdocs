@@ -7,7 +7,7 @@
 ## [What's New in Windows Server 2016 Technical Preview 5](get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)
 ### [What's New in the Windows Console in Windows Server 2016 Technical Preview](get-started/What-s-New-in-the-Windows-Console-in-Windows-Server-2016-Technical-Preview.md)
 ## [Compute](compute/Compute.md)
-### Failover Clustering
+### [Failover Clustering](compute/failover-clustering/failover-clustering.md)
 #### [Deploy a Cloud Witness for a Failover Cluster](compute/failover-clustering/Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md)
 #### [What's New in Failover Clustering](compute/failover-clustering/whats-new-failover-clustering-windows-server.md)
 #### [Cluster Operating System Rolling Upgrade](compute/failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)
