@@ -1,5 +1,6 @@
 ---
-title: Prepare the RDSH virtual machine
+title: Prepare the RD Web and Gateway VM for Remote Desktop
+description: After creating the new virtual machine, prepare it for the RDS deployment as the RD Web and Gateway role.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,21 +9,21 @@ ms.technology:
   - remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: d720a65e-b33c-4577-84ad-d84f47dee15b
-author: lizap
-manager: msswadhwa
+ms.assetid: 5ae47c2c-e37e-4897-9ef0-f77f3fa68665
+author: ChristianMontoya
+manager: scottman
 ---
-# Prepare the RDSH virtual machine
+# Prepare the RD Web and Gateway VM for Remote Desktop
 
 >Applies To: Windows Server Technical Preview
 
-Use the following steps to prepare the virtual machine for the Remote Desktop Session Host server:  
+Use the following steps to prepare the virtual machine for the Remote Desktop Web and Gateway roles:  
   
 1.  Connect to the virtual machine:  
     1.  In the Azure portal click **Browse > Resource groups** and click the resource group for the deployment.  
-    2.  Select the new RDSH virtual machine (for example, Contoso-Sh2).  
+    2.  Select the new RD Web and Gateway virtual machine (for example, Contoso-WebGw2).  
     3.  Click **Connect > Open**.  
-    4.  In the client, click **Connect**, and then click **Use another user account**. Enter the user name and password for the local administrator account.  
+    4.  Click **Connect**, and then click **Use another user account**. Enter the user name and password for the local administrator account.  
     5.  Click **Yes** when warned about the certificate.  
 2.  Enable remote management:  
     1.  In Server Manager, click **Local Server > Remote management current setting (disabled)**.  
@@ -33,8 +34,5 @@ Use the following steps to prepare the virtual machine for the Remote Desktop Se
     2.  Select **Advanced options > Defer upgrades**.  
 4.  Add the server to the domain:  
     1.  In Server Manager, click **Local Server > Workgroup current setting**.  
-    2.  Click **Change > Domain**, and then enter the domain name (for example, Contoso.com).  
+    2.  Click **Change > Domain**, and then enter the domain name (for example, contoso.com).  
     3.  Enter the domain administrator credentials.  
-    4.  Restart the virtual machine.
-
-

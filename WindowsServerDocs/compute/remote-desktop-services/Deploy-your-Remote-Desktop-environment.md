@@ -18,19 +18,18 @@ manager: msswadhwa
 
 Use the following steps to deploy the Remote Desktop servers in your environment.  
   
->[NOTE] The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS server, is used to deploy and manage the rest of the servers in the tenant's hosted desktop environment. The remainder of this document asks you to sign in with a user in the AAD DC Administrators group for administrative actions. If your deployment does not match this configuration and instead has users in a Domain Administrators group, use those credentials instead.  
+>[NOTE] The virtual machine you created for the Remote Desktop Connection Broker (RD Connection Broker) role service will also run Remote Desktop Management Services (RDMS). This virtual machine, referred to as the RDMS virtual machine, is used to deploy and manage the rest of the servers in the tenant's hosted desktop environment.  
   
 1.  Connect to the RDMS virtual machine using the Remote Desktop (RDC) client:  
-    1.  In the Azure portal, click **Browse > Virtual machines**.  
+    1.  In the Azure portal, click **Browse > Resource groups** and click the resource group for the deployment.  
     2.  Select the RDMS server virtual machine (for example, Contoso-Cb1).  
     3.  Click **Connect > Open** to open the Remote Desktop client.  
-    4.  In the RDC client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a user in the AAD DC Administrators group.  
+    4.  In the RDC client, click **Connect**, and then click **Use another user account**. Enter the user name and password for a domain administrator account.  
     5.  Click **Yes** when warned about the certificate.  
 2.  Add all servers to Server Manager:  
     1.  In Server Manager click **Manage > Add Servers**.  
-    2.  Click **DNS**.  
-    3.  Browse to find each server in the deployment (for example, Contoso-Cb1, Contoso-WebGw1, and Contoso-Sh1).  
-    4.  Click **OK**.  
+    2.  Click **Find Now**.  
+    3.  Click each server in the deployment (for example, Contoso-Cb1, Contoso-WebGw1, and Contoso-Sh1) and click **OK**.  
 3.  Create a session-based deployment:  
     1.  In Server Manager, click **Manage > Add Roles and Features**.  
     2.  Click **Remote Desktop Services installation**, **Standard Deployment**, and **Session-based desktop deployment**.  
@@ -41,7 +40,6 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     1.  In Server Manager, click **Remote Desktop Services > Overview > +RD Licensing**.  
     2.  Select the virtual machine where the RD license server will be installed (for example, Contoso-Cb1).  
     3.  Click **Next**, and then click **Add**.  
-      
 5.  Activate the RD License Server and add it to the License Servers group:  
     1.  In Server Manager, click **Tools > Terminal Services > Remote Desktop Licensing Manager**.  
     2.  In RD Licensing Manager, select the server, and then click **Action > Activate Server**.  
@@ -52,7 +50,9 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     1.  In Server Manager, click **Remote Desktop Services > Overview > + RD Gateway**.  
     2.  In the Add RD Gateway Servers wizard, select the virtual machine where you want to install the RD Gateway server (for example, Contoso-WebGw1).  
     3.  Enter the SSL certificate name for the RD Gateway server using the external fully qualified DNS Name (FQDN) of the RD Gateway server. In Azure, this is the **DNS name** label and uses the format servicename.location.cloudapp.azure.com. For example, contoso.westus.cloudapp.azure.com.  
-    4.  Click **Next**, and then click **Add**.  
+    4.  Click **Next**, and then click **Add**.
+
+>[NOTE] Certificate operations (Steps 7 and 8) will differ if you plan on using a certificate from a trusted root certification authority.  
 7.  Create and install self-signed certificates for the RD Gateway and RD Connection Broker servers. Note that this procedure will be different if you are using certificates from a trusted certificate authority.    
     1.  In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.  
     2.  Expand **Certificates**, and then scroll down to the table. Click **RD Gateway > Create new certificate**.  
@@ -75,7 +75,7 @@ Use the following steps to deploy the Remote Desktop servers in your environment
     6.  Browse to the shared folder you created for certificates, for example \Contoso-Cb1\Certificates.  
     7.  Enter a File name, for example ContosoCbClientCert, and then click **Save**.  
     8.  Click **Next**, and then click **Finish**.  
-    9.  Repeat steps c. through i. for the RD Gateway and Web certificate, (for example Contoso-CS1.cloudapp.net), giving the exported certificate an appropriate file name, for example **ContosoWebGwClientCert**.  
+    9.  Repeat steps c. through i. for the RD Gateway and Web certificate, (for example contoso.westus.cloudapp.azure.com), giving the exported certificate an appropriate file name, for example **ContosoWebGwClientCert**.  
     10. In File Explorer, navigate to the folder where the certificates are stored, for example \Contoso-Cb1\Certificates.  
     11. Select the two exported client certificates, then right-click them, and click **Copy**.  
     12. Paste the certifcates on the local client computer.  
@@ -87,7 +87,7 @@ Use the following steps to deploy the Remote Desktop servers in your environment
 10. Create a session collection:  
     1.  In Server Manager, click **Remote Desktop Services > Collections > Tasks > Create Session Collection**.  
     2.  Enter a collection Name (for example, ContosoDesktop).  
-    3.  Select an RD Session Host Server (Contoso-SH1), accept the default user groups (Contoso\Domain Users), and enter the Universal Naming Convention (UNC) Path to the user profile disks created above (\Contoso-Cb1\UserDisks).  
+    3.  Select an RD Session Host Server (Contoso-Sh1), accept the default user groups (Contoso\Domain Users), and enter the Universal Naming Convention (UNC) Path to the user profile disks created above (\Contoso-Cb1\UserDisks).  
     4.  Set a Maximum size, and then click **Create**.  
   
 
