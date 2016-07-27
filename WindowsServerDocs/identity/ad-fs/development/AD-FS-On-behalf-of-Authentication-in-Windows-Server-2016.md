@@ -63,10 +63,9 @@ We will be working with a basic setup of:
   
 You can, if you want, use only two machines. One for DC/ADFS and the other for developing the sample.  
   
-How to setup the domain controller and AD FS is beyond the scope of this article. Please follow the articles below in case you need any help in setting up AD FS / domain controller.  
+How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
   
-* [Install a New Windows Server 2012 Active Directory Forest](https://technet.microsoft.com/library/jj574166.aspx)  
-* [Install AD FS on Windows Server 2016 TP5]()  
+- [AD FS Deployment](../ad-fs/AD-FS-Deployment.md)
   
 The sample is based on the existing OBO sample against Azure created by Vittorio Bertocci and available [here](https://github.com/Azure-Samples/active-directory-dotnet-webapi-onbehalfof). Follow the instructions to clone the project on your development machine and create a copy of the sample to start working with.  
   
