@@ -28,8 +28,8 @@ Use the following steps to set up your RD Connection Broker cluster:
 2. Create a second RD Connection Broker [virtual machine](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/), and [prepare it for Remote Desktop](Prepare-the-RD-Connection-Broker-VM-for-Remote-Desktop.md).  
 3. [Install a SQL native client on each RD Connection Broker server](Install-SQL-native-client-on-each-RD-Connection-Broker-server.md).  
 4. [Create an Azure SQL database](Create-an-Azure-SQL-database-for-the-RD-Connection-Broker.md).  
-5. [Create an Azure internal load balancer](Create-an-Azure-internal-load-balancer-for-Remote-Desktop-deployment.md) (or implement DNS round-robin for the cluster).  
-6. [Add the RD Connection Broker server to the deployment](Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md), and then configure high availability.  
+5. [Create load balancing for the RD Connection Brokers](Create-an-Azure-internal-load-balancer-for-Remote-Desktop-deployment.md).  
+6. [Add the RD Connection Broker server to the deployment and configure high availability](Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md).  
 7. [Configure trusted certificates on RD Connection Broker servers and clients](Configure-trusted-certificates-on-RD-Connection-Broker-servers-and-clients.md).  
 8. [Validate and secure the Remote Desktop deployment](Validate-and-secure-your-Remote-Desktop-deployment.md).   
 

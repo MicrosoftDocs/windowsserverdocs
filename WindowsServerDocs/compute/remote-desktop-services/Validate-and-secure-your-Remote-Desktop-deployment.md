@@ -25,7 +25,8 @@ Use the following information to do both of these tasks.
 ## Connect to a Remote Desktop deployment over the Internet  
 Use the following steps to connect from a client computer:  
   
-1.  Install the self-signed client certificates on the client computer. (Note that this is not required if a certificate has been obtained from a trusted root certificate authority.)  
+>[NOTE] This certificate installation step is not required if the certificate has been obtained from a trusted root certificate authority. 
+1.  Install the self-signed client certificates on the client computer:  
     1.  Sign into the client computer with an administrative account, and then navigate to the folder where you copied the certificates. Right-click one of the certificate files, and then click **Install certificate**.  
     2.  In the Certificate Import Wizard, click **Local Machine > Place all certificates in the following store**.  
     3.  Browse to the Trusted Root Certification Authorities, and then click **OK**.  
@@ -40,11 +41,12 @@ Use the following steps to connect from a client computer:
 Note: There are multiple ways to connect from a client computer to the desktop hosting deployment. These are described in [Distribution of Remote Apps and Desktops in Windows Server 2012](http://social.technet.microsoft.com/wiki/contents/articles/14488.distribution-of-remote-apps-and-desktops-in-windows-server-2012.aspx). The steps in this section connect using the RD Web Access site.  
   
 ## Secure the deployment  
-To secure your deployment, you need to delete all public IP addresses except those assigned to the RD Web and Gateway virtual machine. Use the following steps:  
+To secure your deployment, you need to delete all public IP addresses except those assigned to external load balancers:  
   
-1. In the Azure portal, click **Browse > Virtual machines**.  
-2. Click the VM (for example, Contoso-Cb1), then click the Public IP address in the **Essentials** pane.  
-3. Click **Delete**.  
+1. In the Azure portal, click **Browse > Resource Groups**.  
+2. Click the virtual machine that has a public IP address assigned to it (for example, Contoso-Cb1), then click the public IP address in the **Essentials** pane.  
+3. Click **Delete**.
+4. Repeat these steps for other virtual machines as necessary.  
   
 
 
