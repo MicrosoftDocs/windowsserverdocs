@@ -52,8 +52,9 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
       
 3. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx) and a DNS Server.  
    
-   a. Connect the Active Directory/DNS Server virtual machine to the Management VLAN:  
-   ``Set-VMNetworkAdapterIsolation -VMName "<VM Name>" -Access -VlanId <Management VLAN> -AllowUntaggedTraffic $True``  
+    a. Connect the Active Directory/DNS Server virtual machine to the Management VLAN:
+    
+        ``Set-VMNetworkAdapterIsolation -VMName "<VM Name>" -Access -VlanId <Management VLAN> -AllowUntaggedTraffic $True``  
    
    b. Install Active Directory Domain Services and DNS.  
       >[!NOTE]
@@ -101,7 +102,7 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
          
 ### Run SDN Express Scripts  
   
-1.  The installation files are located on GitHub. Download the zip file from the [Microsoft SDN GitHub Repository](https://github.com/Microsoft/SDN.git). On the Microsoft SDN repository page, click **Download ZIP**.  
+1.  The installation files are located on GitHub. Download the zip file from the [Microsoft SDN GitHub Repository](https://github.com/Microsoft/SDN.git). On the Microsoft SDN repository page, click **Clone or download** and then click **Download ZIP**.  
   
 2.  Designate one computer as your deployment computer.  This computer must be running Windows Server 2016. Expand the zip file and copy the **SDNExpress** folder to the deployment computer's `C:\` folder.  
   
