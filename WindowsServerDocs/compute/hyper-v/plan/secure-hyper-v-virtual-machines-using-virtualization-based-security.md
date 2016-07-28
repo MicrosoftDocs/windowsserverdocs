@@ -15,7 +15,9 @@ author: cwatsonmsft
 
 >Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016
 
-We recommend that you enable virtualization-based security (VBS) on Hyper-V to help secure generation 2 virtual machines (VMs) that run Windows 10 Anniversary Update or Windows Server 2016. VBS is a new security technology that is available for Hyper-V hosts and guests that run Windows 10 and Windows Server 2016. It's part of the Microsoft Device Guard feature set. You can use VBS with other security technologies like Secure Boot, Shielded VMs, and Credential Guard to make your VMs even more secure. But you enable VBS seperately from those technologies.
+We recommend that you enable virtualization-based security (VBS) on generation 2 virtual machines (VMs) that run the Windows 10 Anniversary Update or Windows Server 2016. VBS is a new security technology that is available for Hyper-V hosts and guests that run Windows 10 and Windows Server 2016. VBS is on by default when you install Hyper-V on the host computer. But you have to manually turn on VBS in the guest virtual machines. 
+
+VBS is part of the Microsoft Device Guard feature set. You can use VBS with other security technologies like Secure Boot, Shielded VMs, and Credential Guard to make your VMs even more secure. But you enable VBS on the guest virtual machine seperately from those technologies.
 
 For more information about the related security technologies, see [Generation 2 virtual machine security settings for Hyper-V](https://technet.microsoft.com/en-us/windows-server-docs/compute/hyper-v/learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V), the [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide), and [Guarded Fabric and Shielded VMs](https://technet.microsoft.com/windows-server-docs/security/Guarded-Fabric-and-Shielded-VMs).
 
