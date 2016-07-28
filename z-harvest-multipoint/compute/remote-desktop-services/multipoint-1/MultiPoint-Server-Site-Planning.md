@@ -1,5 +1,5 @@
 ---
-title: MultiPoint Server Site Planning
+title: MultiPoint Services Site Planning
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: multipoint-server-2012
@@ -8,28 +8,28 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
 # MultiPoint Server Site Planning
-You should consider the location where one or more computers running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] and its associated stations will be deployed.  
+You should consider the location where one or more computers running MultiPoint Services and its associated stations will be deployed.  
   
-The computer that is running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] should have convenient access to a power supply and to the peripheral devices that are connected directly to it, such as a printer. Additionally, the computer running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] must have convenient access to a network connection. A network connection is required for accessing the Internet, and where available, a LAN.  
+The computer that is running MultiPoint Services should have convenient access to a power supply and to the peripheral devices that are connected directly to it, such as a printer. Additionally, the computer running MultiPoint Services must have convenient access to a network connection. A network connection is required for accessing the Internet, and where available, a LAN.  
   
 Additional factors to consider include the following:  
   
--   Will the [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] system be set up in a specific room, or will it be set up on a rolling cart or table, so that it can be moved from place to place?  
+-   Will the MultiPoint Services system be set up in a specific room, or will it be set up on a rolling cart or table, so that it can be moved from place to place?  
   
     > [!NOTE]  
-    > If you plan to use a mobile setup, you can *associate* the stations with [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] every time you reconnect them to make sure that each keyboard and mouse is associated with the appropriate monitor.  
+    > If you plan to use a mobile setup, you can *associate* the stations with MultiPoint Services every time you reconnect them to make sure that each keyboard and mouse is associated with the appropriate monitor.  
   
--   Will the primary station be located next to the other stations, or will it be separate? For example, if the [!INCLUDE[wms_2011_prodname_2](../../../compute/remote-desktop-services/multipoint-1/includes/wms_2011_prodname_2_md.md)] system is set up in a classroom, will the primary station be on the teacher’s desk and the standard stations positioned elsewhere in the room? When the computer running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] is restarted, the primary station will have access to the startup screens. If you are concerned about this level of access in a classroom setting, you may prefer to put the primary station at the teacher’s desk.  
+-   Will the primary station be located next to the other stations, or will it be separate? For example, if the MultiPoint server system is set up in a classroom, will the primary station be on the teacher’s desk and the standard stations positioned elsewhere in the room? When the computer running MultiPoint Services is restarted, the primary station will have access to the startup screens. If you are concerned about this level of access in a classroom setting, you may prefer to put the primary station at the teacher’s desk.  
   
 -   How many stations will fit in the room?  
   
 -   Do you need a network? A single server solution that uses direct video connected or USB zero client connected stations does not need a network.  
   
--   Are there enough network connections in the room to support the required number of computers running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)]  
+-   Are there enough network connections in the room to support the required number of computers running MultiPoint Services  
   
 -   Where are the power outlets located?  
   
@@ -40,7 +40,7 @@ Additional factors to consider include the following:
 -   Consider how you might want to expand in the future. Will you be adding more stations?  
   
 ## Station layout and configuration  
-The physical layout of your site may affect your choice of station type. For more details about the different station types, refer to [MultiPoint Server Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Stations.md) in this guide. Multiple station types are allowed on a single [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)]. This provides you with extra flexibility to meet your installation needs.  
+The physical layout of your site may affect your choice of station type. For more details about the different station types, refer to [MultiPoint Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Stations.md) in this guide. Multiple station types are allowed on a single MultiPoint Services. This provides you with extra flexibility to meet your installation needs.  
   
 ### Layout for direct\-video\-connected stations  
   
@@ -72,10 +72,10 @@ The physical layout of your site may affect your choice of station type. For mor
 **Figure 5** MultiPoint Server system with three USB zero clients connected to a single intermediate hub  
   
 ### Layout for RDP\-over\-LAN connected stations  
-There are no physical distance limitations for LAN clients. As long as they are on the LAN, they can connect to the [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] system.  
+There are no physical distance limitations for LAN clients. As long as they are on the LAN, they can connect to the MultiPoint Services system.  
   
 ## Using additional hubs  
-Additional hubs can be used to make installation easier. There are three types of hubs that are used on a [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] system:  
+Additional hubs can be used to make installation easier. There are three types of hubs that are used on a MultiPoint Services system:  
   
 -   [Station hubs](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md#BKMK_StationHubs)  
   
@@ -84,14 +84,14 @@ Additional hubs can be used to make installation easier. There are three types o
 -   [Downstream hubs](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md#BKMK_Downstreamhubs)  
   
 ### <a name="BKMK_StationHubs"></a>Station hubs  
-A station hub is an external hub that has been associated with a [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] station. As a minimum, the station hub will have a keyboard plugged\-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high\-powered devices will plugin to them.  
+A station hub is an external hub that has been associated with a MultiPoint Services station. As a minimum, the station hub will have a keyboard plugged\-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high\-powered devices will plugin to them.  
   
-**Root hub** A USB hub that is built\-in to the host controller on a computer’s motherboard is known as a *root hub*. Station hubs are generally plugged\-in to the root hub on the computer running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)].  
+**Root hub** A USB hub that is built\-in to the host controller on a computer’s motherboard is known as a *root hub*. Station hubs are generally plugged\-in to the root hub on the computer running MultiPoint Services.  
   
 > [!NOTE]  
 > Root hubs should not be used as station hubs. When USB ports are built\-in to a computer, often it is not possible to determine which USB root hub they are internally connected to. As such, if you plugged\-in a station keyboard and mouse directly to the USB ports of the computer, you may actually be plugging\-in the keyboard and mouse to different USB root hubs. To guarantee that the keyboard and mouse are on the same hub, plug\-in a station hub to the computer’s USB port, and then plug\-in the keyboard and mouse to that station hub.  
   
-**Daisy chaining stations** It may be easier to connect station hubs to another station hub rather than directly to the computer. New for [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] is the ability to daisy chain stations. This allows you to connect a USB hub to a station hub that is already plugged\-in to the computer, so that you have a station hub attached to another station hub.  
+**Daisy chaining stations** It may be easier to connect station hubs to another station hub rather than directly to the computer. This allows you to connect a USB hub to a station hub that is already plugged\-in to the computer, so that you have a station hub attached to another station hub.  
   
 There should be no more than three USB zero clients or station hubs daisy chained consecutively. Care must be taken that the USB bandwidth is not exceeded when daisy chaining station hubs.  
   
@@ -109,10 +109,10 @@ A downstream hub is connected to a station hub to add more available ports for s
   
 ![Multiple USB zero client connections](../../../compute/remote-desktop-services/multipoint-1/media/WMS_diagram4.gif "WMS_diagram4")  
   
-**Figure 7** MultiPoint Server system with an intermediate hub, a station hub, and a downstream hub  
+**Figure 7** MultiPoint server system with an intermediate hub, a station hub, and a downstream hub  
   
 ## <a name="BKMK_NumberofUsersStationsandComputersRunningMultiPointServer"></a>Users, stations, and computers  
-The number of stations you will need depends on the number of people who will have to access the computers running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] at the same time. Similarly, the number of computers running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] you will need depends on the total number of stations required. A single computer running [!INCLUDE[win8_server_multipoint-std_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-std_2_md.md)] can support up to ten concurrently logged on stations. A single computer running [!INCLUDE[win8_server_multipoint-prem_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-prem_2_md.md)] can support up to 20 concurrently logged on stations. Direct\-video\-connected stations, USB\-zero\-client\-connected stations, and RDP\-over\-LAN\-connected stations are all considered stations. In addition, if the split\-screen functionality is used, each half is considered a station.  
+The number of stations you will need depends on the number of people who will have to access the computers running MultiPoint Services at the same time. Similarly, the number of computers running MultiPoint Services you will need depends on the total number of stations required. Direct\-video\-connected stations, USB\-zero\-client\-connected stations, and RDP\-over\-LAN\-connected stations are all considered stations. In addition, if the split\-screen functionality is used, each half is considered a station.  
   
 ## Power considerations  
 The following components require access to a power strip or outlet:  
@@ -128,16 +128,16 @@ The following components require access to a power strip or outlet:
 -   Powered USB devices, such as some external storage devices and DVD drives  
   
 ## Sample MultiPoint Server system layouts  
-Depending on the available furniture, the size of the room, the number of computers that are running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)], and the stations in the room, there are a variety of ways that the physical stations can be arranged. The following diagrams illustrate five possible alternatives.  
+Depending on the available furniture, the size of the room, the number of computers that are running MultiPoint Services, and the stations in the room, there are a variety of ways that the physical stations can be arranged. The following diagrams illustrate five possible alternatives.  
   
 > [!NOTE]  
-> Some of these diagrams show a projector connected to the [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] system. This is only an example; including a projector in a [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] system is optional.  
+> Some of these diagrams show a projector connected to the MultiPoint Services system. This is only an example; including a projector in a MultiPoint Services system is optional.  
   
 **Computer lab** In this setup, the stations are arranged around the walls of the room, with the students facing the walls.  
   
 ![Computer Lab Classroom Set-up](../../../compute/remote-desktop-services/multipoint-1/media/WMS_ComputerLabLayout.gif "WMS_ComputerLabLayout")  
   
-**Groups** In this setup, there are three computers that are running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)], with stations clustered around each computer.  
+**Groups** In this setup, there are three computers that are running MultiPoint Services, with stations clustered around each computer.  
   
 ![Classroom configured with server pods](../../../compute/remote-desktop-services/multipoint-1/media/WMS_ClassroomPods.gif "WMS_ClassroomPods")  
   
@@ -145,11 +145,11 @@ Depending on the available furniture, the size of the room, the number of comput
   
 ![Classroom configured as Lecture Room](../../../compute/remote-desktop-services/multipoint-1/media/WMS_LectureRoom.gif "WMS_LectureRoom")  
   
-**Activity center** This setup consists of a traditional lecture\-room layout for the desks, and it has a separate area with a single computer that is running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] with its associated stations.  
+**Activity center** This setup consists of a traditional lecture\-room layout for the desks, and it has a separate area with a single computer that is running MultiPoint Services with its associated stations.  
   
 ![MultiPoint Server Activity Center](../../../compute/remote-desktop-services/multipoint-1/media/WMSActivityCenter.gif "WMSActivityCenter")  
   
-**Small business office** In this setup, the computer that is running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] is placed in a central location and users throughout the office connect to it by using a local area network \(LAN\).  
+**Small business office** In this setup, the computer that is running MultiPoint Services is placed in a central location and users throughout the office connect to it by using a local area network \(LAN\).  
   
 ![USB zero client connected station](../../../compute/remote-desktop-services/multipoint-1/media/Diagram1.gif "Diagram1")  
   

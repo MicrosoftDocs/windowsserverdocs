@@ -12,7 +12,7 @@ author: lizap
 manager: jwhit
 ---
 # Variables Affecting MultiPoint Server System Performance
-There are many variables that can affect the overall performance of your [!INCLUDE[wms_2011_prodname_2](../../../compute/remote-desktop-services/multipoint-1/includes/wms_2011_prodname_2_md.md)] system. You may want to consider these when designing your system.  
+There are many variables that can affect the overall performance of your MultiPoint Services system. You may want to consider these when designing your system.  
   
 ## Usage  
   
@@ -21,7 +21,7 @@ There are many variables that can affect the overall performance of your [!INCLU
 -   **Internet use** Consider if your users will be viewing multimedia content or web pages that use full\-motion videos. This type of content can overload the system if too many users are viewing concurrently.  
   
     > [!NOTE]  
-    > The projection feature in [!INCLUDE[wms_2011_prodname_2](../../../compute/remote-desktop-services/multipoint-1/includes/wms_2011_prodname_2_md.md)], which allows teachers to project their screens onto their student monitors, is not designed to project full\-motion video. The projection feature is designed for demonstration purposes, such as showing a procedure.  
+    > The projection feature in MultiPoint Services, which allows teachers to project their screens onto their student monitors, is not designed to project full\-motion video. The projection feature is designed for demonstration purposes, such as showing a procedure.  
   
 -   **High\-speed devices** If too many users are concurrently using a high\-speed device, like a web camera or DVD player, this affects the overall performance of the system.  
   
