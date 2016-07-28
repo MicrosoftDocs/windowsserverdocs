@@ -9,6 +9,9 @@ ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
 ---
+
+>Applies To: Windows 10 Anniversary Edition, Windows 10, Windows Server 2016
+
 # Format
 
 Formats a volume so that you can use it to store files. 
