@@ -16,15 +16,15 @@ ms.technology: active-directory-federation-services
 
 This walkthrough provides instruction for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application, implemented with an ASP.NET Web API backend.
 
->WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality and focuses ONLY on getting a successful OBO authentication.
+>WARNING: The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
 
 ## Overview
-In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow 
+In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow
 
 
 
-![AD FS Authorization](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG) 
+![AD FS Authorization](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG)
 
 When using a single page application, the user navigates to a starting location, from where starting page and a collection of JavaScript files and HTML views are loaded. You need to configure the Active Directory Authentication Library (ADAL) to know the critical information about your application, i.e. the AD FS instance, client ID, so that it can direct the authentication to your AD FS.
 
@@ -42,10 +42,12 @@ For this walkthrough we will be using a basic setup of:
 
 You can, if you want, use only two machines. One for DC/AD FS and the other for developing the sample.
 
-How to setup the domain controller and AD FS is beyond the scope of this article. Please follow the articles below in case you need any help in setting up AD FS / domain controller.
+How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
 
-- [Install a New Windows Server 2012 Active Directory Forest](https://technet.microsoft.com/library/jj574166.aspx)
-- [Windows Server 2012 R2 AD FS Deployment Guide](https://technet.microsoft.com/library/dn486820.aspx)
+- [AD DS Deployment](../../ad-ds/deploy/AD-DS-Deployment.md) 
+- [AD FS Deployment](../AD-FS-Deployment.md)
+
+
 
 ## Clone or download this repository
 We will be using the sample application created for integrating Azure AD into an AngularJS single page app and modifying it to instead secure the backend resource by using AD FS.
@@ -71,27 +73,27 @@ The key files containing authentication logic are the following:
 In the sample, the WebAPI is configured to listen at https://localhost:44326/. In order for configuring implicit grant flow for the client, it should be registered as public client. Open PowerShell on the AD FS server under administrative privileges and execute the below command:
 
     Add-AdfsClient -ClientId https://localhost:44326/ -RedirectUri https://localhost:44326/ -Name SPAJS -Description 'Test SPA'
- 
-![Register the client](media/Single-Page-Application-with-AD-FS/singleapp2.PNG)    
+
+![Register the client](media/Single-Page-Application-with-AD-FS/singleapp2.PNG)
 
 ## Modifying the sample
 Configure ADAL JS
 
 Open the **app.js** file and change the **adalProvider.init** definition to:
-    
+
 	adalProvider.init(
         {
-            instance: 'https://fs.contoso.com/', // your STS URL 
+            instance: 'https://fs.contoso.com/', // your STS URL
             tenant: 'adfs',                      // this should be adfs
-            clientId: 'https://localhost:44326/', // your client ID of the 
+            clientId: 'https://localhost:44326/', // your client ID of the
             //cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
         },
         $httpProvider
-        ); 
+        );
 
 |Configuration|Description
 |--------|--------
-|instance|Your STS URL, e.g. https://fs.<yourdomain>/
+|instance|Your STS URL, e.g. https://fs.contoso.com/
 |tenant|Keep it as 'adfs'
 |clientID|This is the client ID you specified while configuring the public client for your single page application
 
@@ -105,8 +107,8 @@ Open the **Startup.Auth.cs** file in the sample and remove
     Tenant = ConfigurationManager.AppSettings["ida:Tenant"]
     });
 
-and add: 
-            
+and add:
+
     app.UseActiveDirectoryFederationServicesBearerAuthentication(
     new ActiveDirectoryFederationServicesBearerAuthenticationOptions
     {
@@ -127,19 +129,19 @@ and add:
 
 ## Add application configuration for AD FS
 Change the appsettings as below:
-  
+
     <appSettings>
     <add key="ida:Audience" value="https://localhost:44326/" />
     <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
     <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
-      </appSettings> 
+      </appSettings>
 
 ## Running the solution
 Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
 
 The browser will load the SPA and you will be presented with the following screen:
 
-![Register the client](media/Single-Page-Application-with-AD-FS/singleapp3.PNG) 
+![Register the client](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
 
 Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS will direct the authentication to AD FS
 

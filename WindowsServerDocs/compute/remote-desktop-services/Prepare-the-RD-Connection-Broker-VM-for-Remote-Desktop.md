@@ -16,11 +16,11 @@ manager: msswadhwa
 
 >Applies To: Windows Server Technical Preview
 
-Use the following steps to prepare the virtual machine for the Remote Desktop Connection Broker server:  
+Use the following steps to prepare the virtual machine for the Remote Desktop Connection Broker role:  
   
 1.  Connect to the virtual machine:  
-    1.  In the Azure portal click **Browse > Virtual Machines**.  
-    2.  Select the new RDSH virtual machine (for example, Contoso-RDSH1).  
+    1.  In the Azure portal click **Browse > Resource groups** and click the resource group for the deployment.  
+    2.  Select the new RD CB virtual machine (for example, Contoso-Cb2).  
     3.  Click **Connect > Open**.  
     4.  Click **Connect**, and then click **Use another user account**. Enter the user name and password for the local administrator account.  
     5.  Click **Yes** when warned about the certificate.  
@@ -33,7 +33,7 @@ Use the following steps to prepare the virtual machine for the Remote Desktop Co
     2.  Select **Advanced options > Defer upgrades**.  
 4.  Add the server to the domain:  
     1.  In Server Manager, click **Local Server > Workgroup current setting**.  
-    2.  Click **Change > Domain**, and then enter the domain name (for example, Contoso.com).  
+    2.  Click **Change > Domain**, and then enter the domain name (for example, contoso.com).  
     3.  Enter the domain administrator credentials.  
  
 
