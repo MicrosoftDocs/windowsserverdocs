@@ -415,6 +415,7 @@
 ##### [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](networking/dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md)
 ##### [Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](networking/dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md)
 ##### [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](networking/dns/deploy/Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md)
+##### [DNS Responses Based on Time of Day with an Azure Cloud App Server](networking/dns/deploy/dns-tod-azure-cloud-app-server.md)
 ### [Dynamic Host Configuration Protocol (DHCP)](networking/technologies/dhcp/Dynamic-Host-Configuration-Protocol--DHCP-.md)
 #### [What's New in DHCP](networking/technologies/dhcp/What-s-New-in-DHCP.md)
 ### [Hyper-V Virtual Switch](networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
