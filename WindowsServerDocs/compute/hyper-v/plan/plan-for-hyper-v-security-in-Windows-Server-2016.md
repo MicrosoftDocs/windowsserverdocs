@@ -41,7 +41,6 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 - Don't install or use anti-malware in the host operating system. If you must run anti-malware for regulatory compliance or other reasons, configure any real-time scanning components to exclude the directories where virtual machine files are stored, and to exclude the program files vmms.exe and vmwp.exe in C:\Windows\System32. 
 - Don't mount unknown VHDs. This can expose the host to file system level attacks.
 - Don't enable nesting in your production environment unless it's required. If you enable nesting, don't run unsupported hypervisors on a virtual machine.  
--	Enable virtualization based security. This is on by default for Hyper-V on Windows Server 2016. But if you run Hyper-V on Windows 10, you need to manually turn it on. For more information, see [Secure Hyper-V virtual machines using virtualization-based security](secure-hyper-v-virtual-machines-using-virtualization-based-security.md).
 - Enable code integrity policies.
 
 For more secure environments:
