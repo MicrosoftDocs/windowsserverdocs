@@ -18,10 +18,9 @@ author: cwatsonMSFT
 
 **This is preliminary content and subject to change.**  
 
-To secure Hyper-V, use the best practices to secure the Hyper-V host operating system, and secure the virtual machines, configuration files, and data. Use the following list of recommended best practices as a checklist to help you enhance the security of your Hyper-V environment.
+Secure the Hyper-V host operating system, the virtual machines, configuration files, and virtual machine data. Use the following list of recommended best practices as a checklist to help you secure your Hyper-V environment.
 
 ## Secure the Hyper-V host
-We recommend you use the following best practices to secure the Hyper-V host.
 - Keep the host OS secure.
     - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see [Installation Options for Windows Server 2016 Technical Preview](../../../get-started/Installation-Options-for-Windows-Server-2016-Technical-Preview.md) and [Getting started with Nano Server](../../nano-server/getting-started-with-nano-server.md). In production environments, we don't recommend that you run Hyper-V on Windows 10.
     - Keep the Hyper-V host operating system, firmware, and device drivers up to date with the latest security updates. Check your vendor's recommendations to update firmware and drivers.
@@ -49,7 +48,6 @@ For more secure environments:
 -  Create generation 2 virtual machines with shielding enabled and deploy to a Guarded Fabric. For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../../security/Guarded-Fabric-and-Shielded-VMs.md).
 
 ## Secure virtual machines
-Use the following best practices to keep your virtual machines secure.
 - Create generation 2 virtual machines for supported guest operating systems. For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md).
 - Enable Secure Boot. For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md).
 - Keep the guest OS secure.
