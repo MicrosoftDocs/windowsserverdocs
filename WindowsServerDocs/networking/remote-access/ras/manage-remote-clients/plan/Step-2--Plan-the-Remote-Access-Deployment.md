@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 2 Plan the Remote Access Deployment
 
@@ -23,7 +23,7 @@ After you plan for the infrastructure that you intend to use to set up your sing
 |Task|Description|  
 |--------|---------------|  
 |[Plan a client deployment strategy](#bkmk_2_1_client)|Decide which managed computers will be configured as DirectAccess clients.|  
-|[Plan a Remote Access server deployment strategy](#BKMK_PlanDeploy2)|Plan how to deploy the Remote Access server.|  
+|[Plan a Remote Access server deployment strategy](#bkmk_2_2_servers)|Plan how to deploy the Remote Access server.|  
 |[Plan the infrastructure servers' configurations](#bkmk_2_3_Inf_servers)|Plan the infrastructure servers in your Remote Access deployment, including the DirectAccess network location server, DNS servers, and DirectAccess management servers.|  
   
 ## <a name="bkmk_2_1_client"></a>Plan a client deployment strategy  

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 2 Configure the Multisite Infrastructure
 

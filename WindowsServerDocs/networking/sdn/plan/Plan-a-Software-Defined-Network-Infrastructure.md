@@ -14,7 +14,7 @@ author: vhorne
 ---
 # Plan a Software Defined Network Infrastructure
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 Review the following information to help plan your Software Defined Network (SDN) infrastructure deployment.  After you review this information, see [Deploy a Software Defined Network infrastructure](../deploy/Deploy-a-Software-Defined-Network-Infrastructure.md) for deployment information.  
   
@@ -137,7 +137,7 @@ For Hyper-V hosts and storage nodes, use the Management network as the default g
        
   Remote Direct Memory Access (RDMA) is a kernel bypass technique that makes it possible to transfer large amounts of data without involving the host CPU. Because the DMA engine on the network adapter performs the transfer, the CPU is not used for the memory movement.  This frees the CPU to perform other work.  
        
-  Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016 Technical Preview. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.  
+  Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.  
          
   For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../../technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
   
@@ -225,7 +225,7 @@ The following table shows the minimum hardware and software requirements for the
   
 |Host|Hardware Requirements|Software Requirements|  
 |--------|-------------------------|-------------------------|  
-|Physical Hyper-v host|4-Core 2.66 GHz CPU<br /><br />32 GB of RAM<br /><br />300 GB Disk Space<br /><br />1 Gb/s (or faster) physical network adapter|OS: Windows Server 2016 Technical Preview 5<br /><br />Hyper-V Role installed|  
+|Physical Hyper-v host|4-Core 2.66 GHz CPU<br /><br />32 GB of RAM<br /><br />300 GB Disk Space<br /><br />1 Gb/s (or faster) physical network adapter|OS: Windows Server 2016<br /><br />Hyper-V Role installed|  
   
   
 **SDN infrastructure virtual machine role requirements**  

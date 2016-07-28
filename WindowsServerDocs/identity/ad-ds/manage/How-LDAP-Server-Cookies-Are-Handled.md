@@ -1,4 +1,4 @@
-﻿---
+---
 title: How LDAP Server Cookies Are Handled
 ms.custom: 
   - AD

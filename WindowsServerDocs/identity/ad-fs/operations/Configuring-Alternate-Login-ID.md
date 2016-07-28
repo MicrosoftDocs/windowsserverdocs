@@ -1,15 +1,13 @@
-﻿---
+---
 title: Configuring Alternate Login ID
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 4e298a12-7aff-4135-85c1-48cc86f373f3
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # Configuring Alternate Login ID
 
@@ -19,7 +17,7 @@ Users can sign in to Active Directory Federation Services (AD FS) enabled applic
 
 In some environments, due to corporate policy or on-premises line-of-business application dependencies, end users may only be aware of their email address and not their UPN or sam-account name. In some cases, the UPN is also non-routable (jdoe@contoso.local) and is only used for authenticating into applications on the corporate network.
 
-Since non-routable domains’ (ex. Contoso.local) ownership cannot be verified, Office 365 requires all user login IDs to be fully internet routable. If the on-premises UPN uses a non-routable domain (ex. Contoso.local), or the existing UPN cannot be changed due to local application dependencies, we recommend setting up alternate login ID. Alternate login ID allows you to configure a sign in experience where users can sign in with an attribute other than their UPN, such as mail.
+Since non-routable domains' (ex. Contoso.local) ownership cannot be verified, Office 365 requires all user login IDs to be fully internet routable. If the on-premises UPN uses a non-routable domain (ex. Contoso.local), or the existing UPN cannot be changed due to local application dependencies, we recommend setting up alternate login ID. Alternate login ID allows you to configure a sign in experience where users can sign in with an attribute other than their UPN, such as mail.
 
 One of the benefits of this feature is that it enables you to adopt SaaS providers, such as Office 365 without modifying your on-premise UPNs. It also enables you to support line-of-business service applications with consumer-provisioned identities.
 
@@ -35,7 +33,7 @@ Please refer to the table below for the user experience with Alternate ID using 
 |Cross premises Delegation|Not supported|Currently cross premises permissions are not supported in a hybrid configuration, but they also will not work if you use AltID.||
 |Archive mailbox access (Mailbox on-premises - archive in the cloud)|Supported|Users will get an extra prompt for credentials when accessing the archive, they will have to provide there alternate ID when prompted.<br /><br />See the first image below the table for user experience demo.||
 |Office 365 Pro Plus activation page|Supported - client side registry key recommended|With Alternate ID configured you will see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend to use the client side reg key  noted in the link column<br />.<br /><br />See the second image below the table for user experience demo.|[Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online](https://support.microsoft.com/en-us/kb/2913639)|
-|Lync / Skype for Business integration with Outlook (free busy, OOF, Calendar, etc)|Supported but there is a potential for user confusion (See Description)|If Skype for Business or Lync says “Exchange needs your credentials”, you need to provide the credentials that are valid for were the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID if the Mailbox is on-premises you need to provide the on-premises UPN.||
+|Lync / Skype for Business integration with Outlook (free busy, OOF, Calendar, etc)|Supported but there is a potential for user confusion (See Description)|If Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for were the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID if the Mailbox is on-premises you need to provide the on-premises UPN.||
 |ActiveSync for all mobile devices|Requires MDM solution or manual device configuration|For the autodiscover portion of ActiveSync to work you need to use an MDM solution, otherwise you will have to show your users how to manually configure ActiveSync profiles and be OK with the fact that if there is a reconfiguration needed it will be manual.|Use step 4 in the following:  [A mobile device can't connect to Exchange Online by using Exchange ActiveSync](https://support.microsoft.com/en-us/kb/2427193)|
 |Outlook Web Access|Supported|||
 |Outlook Mobile Apps for Android, IOS, and Windows Phone|Supported|||
@@ -92,7 +90,7 @@ Configure your AD FS claims provider trusts to enable alternate login ID
 
 -   When enabled, if the AD FS server finds more than one user object with the same alternate login ID value specified across all the configured user account forests, it will fail the login.
 
--   When alternate login ID feature is enabled, AD FS will try to authenticate the end user with alternate login ID first and then fall back to use UPN if it cannot find an account that can be identified by the alternate login ID. You should make sure there are no clashes between the alternate login ID and the UPN if you want to still support the UPN login. For example, setting one’s mail attribute with the other’s UPN will block the other user from signing in with his UPN.
+-   When alternate login ID feature is enabled, AD FS will try to authenticate the end user with alternate login ID first and then fall back to use UPN if it cannot find an account that can be identified by the alternate login ID. You should make sure there are no clashes between the alternate login ID and the UPN if you want to still support the UPN login. For example, setting one's mail attribute with the other's UPN will block the other user from signing in with his UPN.
 
 -   If one of the forests that is configured by the administrator is down, AD FS will continue to look up user account with alternate login ID in other forests that are configured. If AD FS server finds a unique user objects across the forests that it has searched, a user will log in successfully.
 
@@ -109,7 +107,7 @@ The following performance counters have been added to measure the performance of
 
 -   Average Search Latency for Alternate Login ID: average search latency across the forests that an administrator has configured for alternate login ID
 
-The following are various error cases and corresponding impact on a user’s sign-in experience with events logged by AD FS:
+The following are various error cases and corresponding impact on a user's sign-in experience with events logged by AD FS:
 
 
 

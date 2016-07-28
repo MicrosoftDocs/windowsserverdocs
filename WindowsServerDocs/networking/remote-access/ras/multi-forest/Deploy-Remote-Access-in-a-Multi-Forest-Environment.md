@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c44fecc9-fe39-40bd-b6da-d8f8afe1a01d
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy Remote Access in a Multi-Forest Environment
 

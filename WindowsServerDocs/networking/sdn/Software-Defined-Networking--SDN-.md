@@ -102,7 +102,7 @@ In Hyper-V Virtual Switch in Windows Server 2016 Technical Preview, you can also
 For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
 ### <a name="bkmk_nfv"></a>Network Function Virtualization  
-In today’s software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This “network function virtualization” is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
+In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
   
 The following NFV technologies are now available.  
   
@@ -178,7 +178,7 @@ Microsoft Azure is Microsoft's cloud platform: a growing collection of integrate
   
 Microsoft's approach to software defined networking includes designing, building, and operating global-scale datacenter networks for services like Microsoft Azure. Microsoft Azure global datacenters perform tens of thousands of network changes every day, which is possible only because of software defined networking.  
   
-Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoft’s experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.  
+Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoft's experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.  
   
 For more information, see [What is Microsoft Azure?](http://azure.microsoft.com/overview/what-is-azure/?WT.mc_id=azurebg_us_sem_bing_br_nontest_whatisazure_whatisazure&WT.srch=1).  
   

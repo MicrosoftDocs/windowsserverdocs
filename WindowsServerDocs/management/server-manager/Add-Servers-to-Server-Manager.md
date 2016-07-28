@@ -4,7 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - techgroup-management-and-automation
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -21,9 +21,9 @@ This topic describes how to add servers to the Server Manager server pool.
 
 > [!NOTE]
 > In our tests, Server Manager in  Windows Server 2012  and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](http://go.microsoft.com/fwlink/p/?LinkId=239437).
-> 
+>
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
-> 
+>
 > Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1, or Windows 8 cannot be used to manage servers that are running Windows Server 2016 Technical Preview.
 
 This topic contains the following sections.
@@ -84,7 +84,7 @@ You can add servers to Server Manager to manage by using any of three methods in
 4.  When you are finished adding servers, click **OK**.
 
 ### Add and manage servers in workgroups
-Although adding servers that are in workgroups to Server Manager might be successful, after they are added, the **Manageability** column of the **Servers** tile—on a role or group page that includes a workgroup server—can display **Credentials not valid** errors that occur while trying to connect to or collect data from the remote, workgroup server.
+Although adding servers that are in workgroups to Server Manager might be successful, after they are added, the **Manageability** column of the **Servers** tile on a role or group page that includes a workgroup server can display **Credentials not valid** errors that occur while trying to connect to or collect data from the remote, workgroup server.
 
 These or similar errors can occur in the following conditions.
 
@@ -156,7 +156,7 @@ These or similar errors can occur in the following conditions.
 If you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_Remote_Troubleshooting](http://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
 
 ### Add and manage servers in clusters
-You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters—whether the cluster nodes are physical or virtual—have some unique behaviors and management limitations in Server Manager.
+You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters (whether the cluster nodes are physical or virtual) have some unique behaviors and management limitations in Server Manager.
 
 -   Both physical and virtual servers in clusters are automatically added to Server Manager when one server in the cluster is added to Server Manager. Similarly, when you remove a clustered server from Server Manager, you are prompted to remove other servers in the cluster.
 
@@ -169,6 +169,3 @@ You can use Server Manager to manage servers that are in failover clusters (also
 ## See Also
 [Server Manager](Server-Manager.md)
 [Create and Manage Server Groups](Create-and-Manage-Server-Groups.md)
-
-
-

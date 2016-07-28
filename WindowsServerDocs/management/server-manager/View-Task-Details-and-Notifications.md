@@ -1,15 +1,15 @@
 ---
 title: View Task Details and Notifications
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - techgroup-management-and-automation
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3
-author:coreyp-at-msft
+author: coreyp-at-msft
 ---
 # View Task Details and Notifications
 
@@ -46,5 +46,3 @@ The bottom pane is particularly useful for troubleshooting failed tasks. If Serv
 ## See Also
 [Filter, Sort, and Query Data in Server Manager Tiles](Filter-Sort-and-Query-Data-in-Server-Manager-Tiles.md)
 [Server Manager Troubleshooting Guide](http://social.technet.microsoft.com/wiki/contents/articles/13443.windows-server-2012-server-manager-troubleshooting-guide-part-i-overview.aspx)
-
-

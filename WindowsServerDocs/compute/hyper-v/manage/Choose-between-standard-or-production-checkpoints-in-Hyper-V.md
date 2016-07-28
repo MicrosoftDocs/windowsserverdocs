@@ -40,7 +40,7 @@ Starting with Windows Server 2016 Technical Preview and Windows 10, you can choo
   
 ## See also  
   
--   [Production checkpoints](../What-s-new-in-Hyper-V-on-Windows-Server-2016-Technical-Preview.md#BKMK_check)  
+-   [Production checkpoints](../What-s-new-in-Hyper-V-on-Windows.md#BKMK_check)  
   
 -   [Enable or disable checkpoints](Enable-or-disable-checkpoints-in-Hyper-V.md)  
   

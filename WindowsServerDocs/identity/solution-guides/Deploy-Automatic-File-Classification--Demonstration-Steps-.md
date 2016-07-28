@@ -1,24 +1,22 @@
 ---
 title: Deploy Automatic File Classification (Demonstration Steps)
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 9ddcc1c2-48a8-4619-a96d-a3e63a0e5282
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Deploy Automatic File Classification (Demonstration Steps)
 
 >Applies To: Windows Server Technical Preview
 
 This topic explains how to enable resource properties in Active Directory, create classification rules on the file server, and then assign values to the resource properties for files on the file server. For this example, the following classification rules are created:  
   
--   A content classification rule that searches a set of files for the string “Contoso Confidential.” If the string is found in a file, the Impact resource property is set to High on the file.  
+-   A content classification rule that searches a set of files for the string 'Contoso Confidential.' If the string is found in a file, the Impact resource property is set to High on the file.  
   
 -   A content classification rule that searches a set of files for a regular expression that matches a social security number at least 10 times in one file. If the pattern is found, the file is classified as having personally identifiable information and the Personally Identifiable Information resource property is set to High.  
   
@@ -57,12 +55,12 @@ The Impact and Personally Identifiable Information resource properties are enabl
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-Set-ADResourceProperty �"Enabled:$true �"Identity:”CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com”   
-Set-ADResourceProperty �"Enabled:$true �"Identity:”CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com”  
+Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'   
+Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'  
 ```  
   
 ## <a name="BKMK_Step2"></a>Step 2: Create a string content classification rule  
-A string content classification rule scans a file for a specific string. If the string is found, the value of a resource property can be configured. In this example, we will scan each file on a network shared folder and look for the string “Contoso Confidential.” If the string is found, the associated file is classified as having high business impact.  
+A string content classification rule scans a file for a specific string. If the string is found, the value of a resource property can be configured. In this example, we will scan each file on a network shared folder and look for the string 'Contoso Confidential.' If the string is found, the associated file is classified as having high business impact.  
   
 [Do this step using Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
   
@@ -111,7 +109,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 $date = Get-Date  
 $AutomaticClassificationScheduledTask = New-FsrmScheduledTask -Time $date -Weekly @(3, 2, 4, 5,1,6,0) -RunDuration 0;$AutomaticClassificationScheduledTask  
 Set-FsrmClassification -Continuous -schedule $AutomaticClassificationScheduledTask  
-New-FSRMClassificationRule -Name “Contoso Confidential” -Property "Impact_MS" -PropertyValue "3000" -Namespace @(“D:\Finance Documents”) -ClassificationMechanism "Content Classifier" -Parameters @("StringEx=Min=1;Expr=Contoso Confidential") -ReevaluateProperty Overwrite  
+New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -PropertyValue "3000" -Namespace @('D:\Finance Documents') -ClassificationMechanism "Content Classifier" -Parameters @("StringEx=Min=1;Expr=Contoso Confidential") -ReevaluateProperty Overwrite  
 ```  
   
 ## <a name="BKMK_Step3"></a>Step 3: Create a regular expression content classification rule  
@@ -156,7 +154,7 @@ A regular expression classification rule scans a file for a pattern that matches
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
 ```  
-New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5000" -Namespace @(“D:\Finance Documents”) -ClassificationMechanism "Content Classifier" -Parameters @("RegularExpressionEx=Min=10;Expr=^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$") -ReevaluateProperty Overwrite  
+New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5000" -Namespace @('D:\Finance Documents') -ClassificationMechanism "Content Classifier" -Parameters @("RegularExpressionEx=Min=10;Expr=^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$") -ReevaluateProperty Overwrite  
 ```  
   
 ## <a name="BKMK_Step4"></a>Step 4: Verify that the files are classified correctly  
@@ -172,7 +170,7 @@ You can verify that the files are properly classified by viewing the properties 
   
     3.  Close the Automatic Classification Report.  
   
-    4.  You can do this by using Windows PowerShell with the following command: **Start-FSRMClassification �"RunDuration 0 -Confirm:$false**  
+    4.  You can do this by using Windows PowerShell with the following command: **Start-FSRMClassification '"RunDuration 0 -Confirm:$false**  
   
 2.  Navigate to the folder that was specified in the classification rules, such as D:\Finance Documents.  
   

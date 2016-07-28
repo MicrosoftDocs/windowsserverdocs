@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 3 Plan the Multisite Deployment
 
@@ -156,7 +156,7 @@ In a multisite deployment symmetric routing is enforced using Teredo and IP-HTTP
   
 3.  For each entry point there should be one to three routes in the internal network:  
   
-    1.  IP-HTTPS prefix—This prefix is chosen by the administrator in the Add an Entry Point wizard.  
+    1.  IP-HTTPS prefix-This prefix is chosen by the administrator in the Add an Entry Point wizard.  
   
     2.  VPN IPv6 prefix (optional). This prefix can be chosen after enabling VPN for an entry point  
   

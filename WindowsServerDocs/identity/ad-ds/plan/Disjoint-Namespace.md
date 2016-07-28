@@ -1,4 +1,4 @@
-﻿---
+---
 title: Disjoint Namespace
 ms.custom: na
 ms.prod: windows-server-threshold

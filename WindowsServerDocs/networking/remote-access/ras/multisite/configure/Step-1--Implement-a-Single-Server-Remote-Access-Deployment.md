@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f9086c4f-f950-44a9-93f1-7d03aecdaa60
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 1 Implement a Single Server Remote Access Deployment
 

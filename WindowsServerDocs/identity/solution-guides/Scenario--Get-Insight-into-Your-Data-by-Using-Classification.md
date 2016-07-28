@@ -1,17 +1,15 @@
 ---
 title: Scenario Get Insight into Your Data by Using Classification
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: a7079fc4-3065-4295-b56d-54272b54bdd5
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Scenario: Get Insight into Your Data by Using Classification
 
 >Applies To: Windows Server Technical Preview
@@ -21,7 +19,7 @@ Reliance on data and storage resources has continued to grow in importance for m
 ## <a name="BKMK_OVER"></a>Scenario description  
 File Classification Infrastructure uses classification rules to automatically scan files and classify them according to the contents of the file. Classification properties are defined centrally in Active Directory so that these definitions can be shared across file servers in the organization. You can create classification rules that scan files for a standard string or for a string that matches a pattern (regular expression). When a configured classification parameter is found in a file, that file is classified as configured in the classification rule. Some examples of classification rules include:  
   
--   Classify any file that contains the string “Contoso Confidential” as having high business impact  
+-   Classify any file that contains the string "Contoso Confidential" as having high business impact  
   
 -   Classify any file that contains at least 10 social security numbers as having personally identifiable information  
   

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a09ec1a9-38e1-4c6c-8213-cf5b6ae44043
-author: coreyp
+author: coreyp-at-msft
 ---
 # Configuration Requirements_1
 

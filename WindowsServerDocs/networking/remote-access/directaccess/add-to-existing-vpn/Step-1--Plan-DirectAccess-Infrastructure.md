@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4ca50ea8-6987-4081-acd5-5bf9ead62acd
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 1 Plan DirectAccess Infrastructure
 
@@ -148,13 +148,13 @@ In a Remote Access deployment, DNS is required for the following:
   
         2.  An exemption rule for the FQDN of the network location server. For example, if the network location server URL is https://nls.corp.contoso.com, an exemption rule is created for the FQDN nls.corp.contoso.com.  
   
-        **IP-HTTPS server**—The Remote Access server acts as an IP-HTTPS listener and uses its server certificate to authenticate to IP-HTTPS clients. The IP-HTTPS name must be resolvable by DirectAccess clients using public DNS servers.  
+        **IP-HTTPS server**-The Remote Access server acts as an IP-HTTPS listener and uses its server certificate to authenticate to IP-HTTPS clients. The IP-HTTPS name must be resolvable by DirectAccess clients using public DNS servers.  
   
-        **Connectivity verifiers**—Remote Access creates a default web probe that is used by DirectAccess client computers use to verify connectivity to the internal network. To ensure the probe works as expected the following names must be registered manually in DNS:  
+        **Connectivity verifiers**-Remote Access creates a default web probe that is used by DirectAccess client computers use to verify connectivity to the internal network. To ensure the probe works as expected the following names must be registered manually in DNS:  
   
-        1.  directaccess-webprobehost—should resolve to the internal IPv4 address of the Remote Access server, or to the IPv6 address in an IPv6-only environment.  
+        1.  directaccess-webprobehost-should resolve to the internal IPv4 address of the Remote Access server, or to the IPv6 address in an IPv6-only environment.  
   
-        2.  directaccess-corpconnectivityhost—should resolve to localhost (loopback) address. A and AAAA record should be created, A record with value 127.0.0.1 and AAAA record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the cmdlet get-netnattransitionconfiguration.  
+        2.  directaccess-corpconnectivityhost-should resolve to localhost (loopback) address. A and AAAA record should be created, A record with value 127.0.0.1 and AAAA record with value constructed out of NAT64 prefix with the last 32 bits as 127.0.0.1. The NAT64 prefix can be retrieved by running the cmdlet get-netnattransitionconfiguration.  
   
             > [!NOTE]  
             > This is valid only in an IPv4-only environment. In an IPv4+IPv6, or IPv6-only environment, only a AAAA record should be created with the loopback IP address ::1.  

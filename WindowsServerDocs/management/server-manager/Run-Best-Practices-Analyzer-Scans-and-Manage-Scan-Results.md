@@ -4,20 +4,15 @@ ms.custom: na
 ms.prod: windows-server-2012
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - techgroup-management-and-automation
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
 ---
-# Run Best Practices Analyzer Scans and Manage Scan Results_1
+# Run Best Practices Analyzer Scans and Manage Scan Results
 
 >Applies To: Windows Server 2016 Technical Preview
-
-
-|||
-|-|-|
-|!|Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> - [Deploy Windows Server Active Directory on Azure Virtual Machines.](http://aka.ms/jh4s4r)|
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under typical circumstances, to configure a server as defined by experts. For example, it is considered a best practice for most server applications to keep open only those ports required for the applications to communicate with other networked computers, and block unused ports. Although best practice violations, even crucial ones, are not necessarily problematic, they indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 
@@ -39,7 +34,7 @@ This topic contains the following sections.
 You can find the Best Practices Analyzer tile on role and server group pages of Server Manager in  Windows Server 2012 R2  and  Windows Server 2012, or you can open a Windows PowerShell session with elevated user rights to run Best Practices Analyzer cmdlets.
 
 ## <a name="BKMK_how"></a>How BPA works
-BPA works by measuring a role’s compliance with best practice rules in eight different categories of effectiveness, trustworthiness, and reliability. Results of measurements can be any of the three severity levels described in the following table.
+BPA works by measuring a role's compliance with best practice rules in eight different categories of effectiveness, trustworthiness, and reliability. Results of measurements can be any of the three severity levels described in the following table.
 
 |Severity level|Description|
 |------------------|---------------|
@@ -52,8 +47,8 @@ The following table describes the best practice rules categories against which r
 
 |Category Name|Description|
 |-----------------|---------------|
-|Security|Security rules are applied to measure a role’s relative risk for exposure to threats such as unauthorized or malicious users, or loss or theft of confidential or proprietary data.|
-|Performance|Performance rules are applied to measure a role’s ability to process requests and perform its prescribed duties in the enterprise within expected periods of time given the role’s workload.|
+|Security|Security rules are applied to measure a role's relative risk for exposure to threats such as unauthorized or malicious users, or loss or theft of confidential or proprietary data.|
+|Performance|Performance rules are applied to measure a role's ability to process requests and perform its prescribed duties in the enterprise within expected periods of time given the role's workload.|
 |Configuration|Configuration rules are applied to identify role settings that might require modification for the role to perform optimally. Configuration rules can help prevent conflicts in settings that can result in error messages or prevent the role from performing its prescribed duties in an enterprise.|
 |Policy|Policy rules are applied to identify Group Policy or Windows Registry settings that might require modification for a role to operate optimally and securely.|
 |Operation|Operation rules are applied to identify possible failures of a role to perform prescribed tasks in the enterprise.|
@@ -231,7 +226,7 @@ When you want to view scan results that were excluded, you can include those sca
 
     The final part of the command, after the second pipe character, includes results that are filtered by the second part of the cmdlet, by setting the value of the **-Exclude** parameter to **false**.
 
-    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq “Information”} | Set-BPAResult -Exclude $false`
+    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq "Information"} | Set-BPAResult -Exclude $false`
 
 ### View and export BPA scan results in Windows PowerShell
 To view and manage scan results by using Windows PowerShell cmdlets, see the following procedures. Before you can use any of the following procedures, run at least one BPA scan on at least one model or submodel.
@@ -244,11 +239,11 @@ To view and manage scan results by using Windows PowerShell cmdlets, see the fol
 
     `Get-BPAResult <Model ID>`
 
-    **Example:**`Get-BPAResult Microsoft/Windows/DNSServer,Microsoft/Windows/FileServices`
+    **Example:** `Get-BPAResult Microsoft/Windows/DNSServer,Microsoft/Windows/FileServices`
 
     If you scanned a submodel of a model, such as a role service, get the results for only that submodel by including the submodel ID in the cmdlet.
 
-    **Example:**`Get-BPAResult Microsoft/Windows/FileServices �"SubmodelID FSRM`
+    **Example:** `Get-BPAResult Microsoft/Windows/FileServices -SubmodelID FSRM`
 
 #### <a name="BKMK_formats"></a>To view or save BPA results from Windows PowerShell sessions in different formats
 
@@ -279,7 +274,7 @@ To view and manage scan results by using Windows PowerShell cmdlets, see the fol
 
     -   To format BPA results in a table, run the following cmdlet, adding the result properties that you want to see from the preceding example.
 
-        `Get-BPAResult Model ID | Format-Table -Property <property1,property2,property3…>`
+        `Get-BPAResult Model ID | Format-Table -Property <property1,property2,property3...>`
 
         **Example:**`Get-BPAResult Microsoft/Windows/FileServices | Format-Table -Property ModelId,SubModelId,ComputerName,Source,Severity,Category,Title,Problem,Impact,Resolution,Compliance,Help`
 
@@ -303,5 +298,3 @@ To view and manage scan results by using Windows PowerShell cmdlets, see the fol
 [Best Practices Analyzer resolution content on the Windows Server TechCenter](http://go.microsoft.com/fwlink/p/?LinkId=241597)
 [Filter, Sort, and Query Data in Server Manager Tiles](Filter-Sort-and-Query-Data-in-Server-Manager-Tiles.md)
 [Manage Multiple, Remote Servers with Server Manager](Manage-Multiple-Remote-Servers-with-Server-Manager.md)
-
-

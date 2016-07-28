@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshooting Active Directory Replication Problems
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -273,7 +273,7 @@ author: Femila
           <para>Directory database (store): The directory database might not be able to process transactions fast enough to keep up with replication time-outs.</para>
         </listItem>
         <listItem>
-          <para>Replication engine: If intersite replication schedules are too short, replication queues might be too large to process in the time that is required by the outbound replication schedule. In this case, replication of some changes can be stalled indefinitely�potentially, long enough to exceed the tombstone lifetime.</para>
+          <para>Replication engine: If intersite replication schedules are too short, replication queues might be too large to process in the time that is required by the outbound replication schedule. In this case, replication of some changes can be stalled indefinitelypotentially, long enough to exceed the tombstone lifetime.</para>
         </listItem>
         <listItem>
           <para>Replication topology: Domain controllers must have intersite links in AD DS that map to real wide area network (WAN) or virtual private network (VPN) connections. If you create objects in AD DS for the replication topology that are not supported by the actual site topology of your network, replication that requires the misconfigured topology fails.</para>
@@ -589,7 +589,7 @@ author: Femila
             <tbody>
               <tr>
                 <TD colspan="1">
-                  <para>1311 � NTDS KCC</para>
+                  <para>1311  NTDS KCC</para>
                 </TD>
                 <TD colspan="1">
                   <para>The replication configuration information in AD DS does not accurately reflect the physical topology of the network.</para>
@@ -602,7 +602,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>1388 � NTDS Replication</para>
+                  <para>1388  NTDS Replication</para>
                 </TD>
                 <TD colspan="1">
                   <para>Strict replication consistency is not in effect, and a lingering object has been replicated to the domain controller.</para>
@@ -615,7 +615,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>1925 � NTDS KCC</para>
+                  <para>1925  NTDS KCC</para>
                 </TD>
                 <TD colspan="1">
                   <para>The attempt to establish a replication link for a writable directory partition failed. This event can have different causes, depending on the error.</para>
@@ -631,7 +631,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>1988 � NTDS Replication</para>
+                  <para>1988  NTDS Replication</para>
                 </TD>
                 <TD colspan="1">
                   <para>The local domain controller has attempted to replicate an object from a source domain controller that is not present on the local domain controller because it may have been deleted and already garbage-collected. Replication will not proceed for this directory partition with this partner until the situation is resolved.</para>
@@ -644,7 +644,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>2042 � NTDS Replication</para>
+                  <para>2042  NTDS Replication</para>
                 </TD>
                 <TD colspan="1">
                   <para>Replication has not occurred with this partner for a tombstone lifetime, and replication cannot proceed.</para>
@@ -657,7 +657,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>2087 � NTDS Replication</para>
+                  <para>2087  NTDS Replication</para>
                 </TD>
                 <TD colspan="1">
                   <para>AD DS could not resolve the DNS host name of the source domain controller to an IP address, and replication failed.</para>
@@ -670,7 +670,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>2088 � NTDS Replication</para>
+                  <para>2088  NTDS Replication</para>
                 </TD>
                 <TD colspan="1">
                   <para>AD DS could not resolve the DNS host name of the source domain controller to an IP address, but replication succeeded.</para>
@@ -683,7 +683,7 @@ author: Femila
               </tr>
               <tr>
                 <TD colspan="1">
-                  <para>5805 � Net Logon</para>
+                  <para>5805  Net Logon</para>
                 </TD>
                 <TD colspan="1">
                   <para>A machine account failed to authenticate, which is usually caused by either multiple instances of the same computer name or the computer name not replicating to every domain controller.</para>

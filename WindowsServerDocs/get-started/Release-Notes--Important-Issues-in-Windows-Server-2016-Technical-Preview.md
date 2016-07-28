@@ -14,7 +14,7 @@ author: jaimeo
 
 >Applies To: Windows Server Technical Preview
 
-These release notes summarize the most critical issues in the Windows Server&reg; 2016 Technical Preview operating system, including ways to avoid or work around the issues, if known. For information about by-design changes, new features, and fixes in this release, see [What’s New in the Windows Server Technical Preview](http://technet.microsoft.com/library/dn765472.aspx) and announcements from the specific feature teams. Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server 2016 Technical Preview.  
+These release notes summarize the most critical issues in the Windows Server&reg; 2016 Technical Preview operating system, including ways to avoid or work around the issues, if known. For information about by-design changes, new features, and fixes in this release, see [What's New in the Windows Server Technical Preview](http://technet.microsoft.com/library/dn765472.aspx) and announcements from the specific feature teams. Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server 2016 Technical Preview.  
 
 This document is continuously updated. As critical issues requiring a workaround are discovered, they are added.  
 
@@ -143,8 +143,8 @@ else
 ```  
 Examples:  
 
-`Checkpoint.ps1 -VmName “Test” -SnapshotName “Test” -Verbose`  
-`Checkpoint.ps1 -VmName “Test” -SnapshotName “Test2” -Passthru`  
+`Checkpoint.ps1 -VmName "Test" -SnapshotName "Test" -Verbose`  
+`Checkpoint.ps1 -VmName "Test" -SnapshotName "Test2" -Passthru`  
 
 
 
@@ -166,7 +166,7 @@ The Nano Server Recovery Console is available in English only. There is no worka
 
 [comment]: # (ID: 363; Submitter: chrimo; state: signed off)  
 - If you have existing NAP policies and attempt to upgrade a Remote Desktop Gateway server to this release, the upgrade will fail.  
-To avoid this, use the Network Policy Server tool to remove the NAP Policies found under NPS > Polices > Network Policies. If these NAP Policies were created with the default names, the policy names you should remove will start with “NAP”. (If you encounter this error, you will also find an XML file on the desktop which lists the specific policies found.)  
+To avoid this, use the Network Policy Server tool to remove the NAP Policies found under NPS > Polices > Network Policies. If these NAP Policies were created with the default names, the policy names you should remove will start with "NAP". (If you encounter this error, you will also find an XML file on the desktop which lists the specific policies found.)  
 
 
 [comment]: # (ID: 364; Submitter: chrimo; state: signed off)  
@@ -211,11 +211,11 @@ There is no workaround at this time.
 
 
 ## Copyright  
-This document is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
+This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
 
 This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.  
 
-© 2016 Microsoft Corporation. All rights reserved.  
+&copy; 2016 Microsoft Corporation. All rights reserved.  
 
 Microsoft, Active Directory, Hyper-V, Windows, and Windows Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.  
 

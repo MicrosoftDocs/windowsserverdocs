@@ -1,16 +1,13 @@
 ---
 title: Auditing Enhancements to AD FS in Windows Server 2016
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a9cb6af6-e49a-478b-ac86-71d5069e5965
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # Auditing Enhancements to AD FS in Windows Server 2016
 

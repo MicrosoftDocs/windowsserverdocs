@@ -1,4 +1,4 @@
-﻿---
+---
 title: Replication error 8606 Insufficient attributes were given to create an object
 ms.custom: na
 ms.prod: windows-server-threshold

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
-author: coreyp
+author: coreyp-at-msft
 ---
 # Plan a Multisite Deployment
 

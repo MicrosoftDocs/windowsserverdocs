@@ -1,4 +1,4 @@
-﻿---
+---
 title: Replication error 1722 The RPC server is unavailable
 ms.custom: na
 ms.prod: windows-server-threshold

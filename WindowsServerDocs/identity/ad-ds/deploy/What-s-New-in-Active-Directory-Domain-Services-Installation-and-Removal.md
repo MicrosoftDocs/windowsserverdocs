@@ -224,7 +224,7 @@ If you experience this problem, check the dcpromo.log file in the %systemroot%\d
   
     AD DS installation requirements for network connectivity and name resolution are validated during the prerequisite check before the installation begins. But some error conditions can arise in the time after prerequisite validation occurs and before the installation completes, such as if the replication partner becomes unavailable during installation.  
   
--   During replica domain controller installation, the local Administrator account of the target server is specified for the installation credentials and the password of the local Administrator account matches the password of a Domain Admin account. In this case, you can complete the installation wizard and begin the installation before you encounter the “Access is denied” failure.  
+-   During replica domain controller installation, the local Administrator account of the target server is specified for the installation credentials and the password of the local Administrator account matches the password of a Domain Admin account. In this case, you can complete the installation wizard and begin the installation before you encounter the "Access is denied" failure.  
   
     For example, the dcpromo.log shows:  
   
@@ -247,13 +247,13 @@ If you experience this problem, check the dcpromo.log file in the %systemroot%\d
 ### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services Configuration Wizard warns when a non-normalized DNS name is specified  
 If you create a new domain or forest and you specify a DNS domain name that includes internationalized characters that are not normalized, then the Active Directory Domain Services Configuration Wizard displays a warning that DNS queries for the name can fail. Although the DNS domain name is specified in the Deployment Configuration page, the warning appears on the Prerequisites Check page later in the wizard.  
   
-If a DNS domain name is specified using an un-normalized name like füßball.com or �'ΣΤ�'.com (the normalized versions are: füssball.com and βστα.com), client applications that try to access it with WinHTTP will normalize the name before calling name resolution APIs. If the user types “�'ΣΤ�'.com” on some dialog, the DNS query will be sent as “βστα.com” and no DNS server will match it with a resource record for “�'ΣΤ�'.com”. The user will be unable to resolve name.  
+If a DNS domain name is specified using an un-normalized name like füßball.com or 'ΣΤ'.com (the normalized versions are: füssball.com and βστα.com), client applications that try to access it with WinHTTP will normalize the name before calling name resolution APIs. If the user types "'ΣΤ'.com" on some dialog, the DNS query will be sent as "βστα.com" and no DNS server will match it with a resource record for "'ΣΤ'.com". The user will be unable to resolve name.  
   
 The following example explains one of the issues that can happen when using an IDN name that is not normalized:  
   
 1.  The domain using a non-normalized name is  created and registered on dns server: füßball.com  
   
-2.  Machine “nps” is joined to the domain and gets its name registered: nps.füßball.com  
+2.  Machine "nps" is joined to the domain and gets its name registered: nps.füßball.com  
   
 3.  A client application tries to connect to the server nps.füßball.com  
   

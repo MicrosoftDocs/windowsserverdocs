@@ -1,17 +1,15 @@
 ---
 title: Scenario File Access Auditing
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 49d9fc2a-4c0a-481f-8a4b-edc0b5b650a8
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Scenario: File Access Auditing
 
 >Applies To: Windows Server Technical Preview
@@ -40,7 +38,7 @@ With  Windows Server 2012 , you can author audit policies by using claims and re
   
 These policies help regulate the volume of audit events and limit them to only the most relevant data or users.  
   
-After administrators have created and applied the audit policies, the next consideration for them is gleaning meaningful information from the audit events that they collected. Expression-based audit events help reduce the volume of audits. However, users need a way to query these events for meaningful information and ask questions such as, “Who is accessing my HBI data?” or “Was there an unauthorized attempt to access sensitive data?”  
+After administrators have created and applied the audit policies, the next consideration for them is gleaning meaningful information from the audit events that they collected. Expression-based audit events help reduce the volume of audits. However, users need a way to query these events for meaningful information and ask questions such as, "Who is accessing my HBI data?" or "Was there an unauthorized attempt to access sensitive data?"  
   
  Windows Server 2012  enhances existing data access events with user, computer, and resource claims. These events are generated on a per-server basis. To provide a full view of events across the organization, Microsoft is working with partners to provide event collection and analysis tools, such as the Audit Collection Services in System Center Operation Manager .  
   

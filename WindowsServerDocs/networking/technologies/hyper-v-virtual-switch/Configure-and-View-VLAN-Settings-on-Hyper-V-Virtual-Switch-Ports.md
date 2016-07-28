@@ -17,7 +17,7 @@ author: jamesmci
 
 You can use this topic to learn best practices for configuring and viewing virtual Local Area Network (VLAN) settings on a Hyper-V Virtual Switch port.
 
-When you want to configure VLAN settings on Hyper-V Virtual Switch ports, you can use either [!INCLUDE[winthreshold_server_1_mdincludes/winthreshold_server_1_md.md)] Hyper-V Manager or System Center Virtual Machine Manager (VMM).
+When you want to configure VLAN settings on Hyper-V Virtual Switch ports, you can use either Windows&reg; Server 2016 Hyper-V Manager or System Center Virtual Machine Manager (VMM).
 
 If you are using VMM, VMM uses the following Windows PowerShell command to configure the switch port.
 

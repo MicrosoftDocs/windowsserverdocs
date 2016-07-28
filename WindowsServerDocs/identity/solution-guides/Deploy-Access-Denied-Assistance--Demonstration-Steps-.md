@@ -1,17 +1,15 @@
 ---
 title: Deploy Access-Denied Assistance (Demonstration Steps)
-description: " "
-ms.custom: AD
-ms.prod: windows-server-threshold
+description:
+author: femila
 manager: femila
-ms.service: 
-ms.technology: 
-	-active-directory-domain-services
-ms.tgt_pltfrm: na
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 24d106f2-b050-4fc0-ba73-9f11560a28f2
-author: Femila
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: 
 ---
+
 # Deploy Access-Denied Assistance (Demonstration Steps)
 
 >Applies To: Windows Server Technical Preview
@@ -143,7 +141,7 @@ After you configure the access-denied assistance, you must enable it for all fil
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
 ```  
-Set-GPRegistryValue -Name "Name of GPO"ù -key "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explore"ù -ValueName EnableShellExecuteFileStreamCheck -Type DWORD -value 1  
+Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explore" -ValueName EnableShellExecuteFileStreamCheck -Type DWORD -value 1  
   
 ```  
   
@@ -182,7 +180,7 @@ You can also specify a separate access-denied message for each shared folder on 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints. 
   
 ```  
-Set-FSRMMgmtProperty -Namespace "folder path"ù -Name "AccessDeniedMessage_MS" -Value "Type the text that the user will see in the error message dialog box."ù  
+Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Value "Type the text that the user will see in the error message dialog box."  
 ```  
   
 ## <a name="BKMK_2"></a>Step 2: Configure the email notification settings  
@@ -200,7 +198,7 @@ You must configure the email notification settings on each file server that will
   
     -   In the **SMTP server name or IP address** box, type the name of IP address of the SMTP server in your organization.  
   
-    -   In the **Default administrator recipients** and **Default ‚ÄúFrom‚Äù e-mail address** boxes, type the email address of the file server administrator.  
+    -   In the **Default administrator recipients** and **Default 'From' e-mail address** boxes, type the email address of the file server administrator.  
   
 5.  Click **Send Test E-mail** to ensure that the email notifications are configured correctly.  
   
@@ -211,7 +209,7 @@ You must configure the email notification settings on each file server that will
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
   
 ```  
-set-FSRMSetting -SMTPServer "server1"ù -AdminEmailAddress "fileadmin@contoso.com"ù -FromEmailAddress "fileadmin@contoso.com"ù  
+set-FSRMSetting -SMTPServer "server1" -AdminEmailAddress "fileadmin@contoso.com" -FromEmailAddress "fileadmin@contoso.com"  
 ```  
   
 ## <a name="BKMK_3"></a>Step 3: Verify that access-denied assistance is configured correctly  

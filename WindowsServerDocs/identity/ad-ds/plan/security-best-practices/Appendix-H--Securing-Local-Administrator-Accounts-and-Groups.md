@@ -1,4 +1,4 @@
-﻿---
+---
 title: Appendix H - Securing Local Administrator Accounts and Groups
 ms.custom:
   - AD

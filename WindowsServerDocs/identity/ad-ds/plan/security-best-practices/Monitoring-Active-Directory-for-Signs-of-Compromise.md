@@ -389,7 +389,7 @@ This audit policy setting specifies whether the client generates an event when o
 > Some information provided here was taken from the Microsoft [Audit Option Type](http://msdn.microsoft.com/library/dd973862(prot.20).aspx) and the Microsoft SCM tool.  
   
 ### Enforcing Traditional Auditing or Advanced Auditing  
-In Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista, administrators can choose to enable the nine traditional categories or to use the subcategories. It's a binary choice that must be made in each Windows system. Either the main categories can be enabled or the subcategories�it cannot be both.  
+In Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista, administrators can choose to enable the nine traditional categories or to use the subcategories. It's a binary choice that must be made in each Windows system. Either the main categories can be enabled or the subcategoriesit cannot be both.  
   
 To prevent the legacy traditional category policy from overwriting audit policy subcategories, you must enable the **Force audit policy subcategory settings(Windows Vista or later) to override audit policy category settings** policy setting located under **Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**.  
   

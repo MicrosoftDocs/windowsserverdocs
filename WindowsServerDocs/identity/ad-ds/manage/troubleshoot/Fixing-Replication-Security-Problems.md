@@ -1,4 +1,4 @@
-﻿---
+---
 title: Fixing Replication Security Problems
 ms.custom: na
 ms.prod: windows-server-threshold

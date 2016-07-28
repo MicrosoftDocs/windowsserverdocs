@@ -1,4 +1,4 @@
-﻿---
+---
 title: Identifying the Deployment Project Participants
 ms.custom: na
 ms.prod: windows-server-threshold

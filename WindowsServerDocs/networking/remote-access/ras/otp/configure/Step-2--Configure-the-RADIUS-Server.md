@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0326818f-9144-496c-b946-f82be4eefbd3
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 2 Configure the RADIUS Server
 

@@ -57,7 +57,7 @@ Here's what you should verify before you begin:
 ## Deployment steps  
   
 ### Step 1: Set up the Hyper-V hosts  
-You'll need at least two Hyper-V hosts with one or more virtual machines on each server. [Get started with Hyper-V](../get-started/Get-started-with-Hyper-V-on-Windows-Server-2016-Technical-Preview.md). The host server that you'll replicate virtual machines to will need to be set up as the replica server.  
+You'll need at least two Hyper-V hosts with one or more virtual machines on each server. [Get started with Hyper-V](../get-started/Get-started-with-Hyper-V-on-Windows.md). The host server that you'll replicate virtual machines to will need to be set up as the replica server.  
   
 1.  In the Hyper-V settings for the server you'll replicate virtual machines to, in **Replication Configuration**, select **Enable this computer as a Replica server**.  
   

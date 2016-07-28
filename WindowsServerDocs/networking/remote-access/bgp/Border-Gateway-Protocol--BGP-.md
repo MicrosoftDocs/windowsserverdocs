@@ -28,7 +28,7 @@ This topic contains the following sections.
   
 -   [BGP Features](#bkmk_features)  
   
-When configured on a Windows Server 2016 Technical Preview Remote Access Service \(RAS\) Gateway in multitenant mode, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants‚Äô VM networks and their remote sites. You can also use BGP for single tenant RAS Gateway deployments, and when you deploy Remote Access as a Local Area Network \(LAN\) router.  
+When configured on a Windows Server 2016 Technical Preview Remote Access Service \(RAS\) Gateway in multitenant mode, Border Gateway Protocol (BGP) provides you with the ability to manage the routing of network traffic between your tenants' VM networks and their remote sites. You can also use BGP for single tenant RAS Gateway deployments, and when you deploy Remote Access as a Local Area Network \(LAN\) router.  
   
 BGP reduces the need for manual route configuration on routers because it is a dynamic routing protocol, and automatically learns routes between sites that are connected by using site-to-site VPN connections.  
   
@@ -45,7 +45,7 @@ To use BGP routing, you must install the **Remote Access Service \(RAS\)** and/o
   
 ```  
 $Contoso_RoutingDomain = "ContosoTenant"  
-$Fabrikam_RoutingDomain = "FabrikamTenant"ù  
+$Fabrikam_RoutingDomain = "FabrikamTenant"  
   
 Install-RemoteAccess -MultiTenancy  
   

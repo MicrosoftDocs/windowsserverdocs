@@ -18,7 +18,7 @@ author: KBDAzure
 
 *[This information is preliminary and subject to change.]*  
   
-|||  
+|Property|Details|  
 |-|-|  
 |**Operating System**|Windows Server 2016 Technical Preview|  
 |**Product/Feature**|Hyper-V|  

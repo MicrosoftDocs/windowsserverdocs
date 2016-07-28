@@ -1,4 +1,4 @@
-﻿---
+---
 title: Replication error 8452 The naming context is in the process of being removed or is not replicated from the specified server
 ms.custom: na
 ms.prod: windows-server-threshold

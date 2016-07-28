@@ -1,4 +1,4 @@
-﻿---
+---
 title: SPN and UPN uniqueness
 ms.custom: 
   - AD

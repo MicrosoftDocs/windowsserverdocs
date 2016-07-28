@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96538cbb-7d6c-4860-9ec7-b1834284ad10
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 1 Plan an Advanced Single Server Deployment
 
