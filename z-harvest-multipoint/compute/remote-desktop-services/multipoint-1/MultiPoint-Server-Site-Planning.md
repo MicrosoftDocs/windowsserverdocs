@@ -2,7 +2,7 @@
 title: MultiPoint Services Site Planning
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,7 +14,7 @@ manager: scottman
 # MultiPoint Server Site Planning
 You should consider the location where one or more computers running MultiPoint Services and its associated stations will be deployed.  
   
-The computer that is running MultiPoint Services should have convenient access to a power supply and to the peripheral devices that are connected directly to it, such as a printer. Additionally, the computer running MultiPoint Services must have convenient access to a network connection. A network connection is required for accessing the Internet, and where available, a LAN.  
+The computer that is running MultiPoint Services role should have convenient access to a power supply and to the peripheral devices that are connected directly to it, such as a printer. Additionally, the computer running MultiPoint Services must have convenient access to a network connection. A network connection is required for accessing the Internet, and where available, a LAN.  
   
 Additional factors to consider include the following:  
   

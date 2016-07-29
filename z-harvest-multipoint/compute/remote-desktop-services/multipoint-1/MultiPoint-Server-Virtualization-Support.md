@@ -12,26 +12,23 @@ author: lizap
 manager: jwhit
 ---
 # MultiPoint Server Virtualization Support
-[!INCLUDE[win8_server_multipoint-prem_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-prem_2_md.md)] supports the Hyper\-V® role in two ways:  
+MultiPoint Services supports the Hyper\-V® role in two ways:  
   
--   [!INCLUDE[win8_server_multipoint-prem_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-prem_2_md.md)] can be deployed as a guest operating system on a server running Hyper\-V.  
+-   MultiPoint Services can be deployed as a guest operating system on a server running Hyper\-V.  
   
--   [!INCLUDE[win8_server_multipoint-prem_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-prem_2_md.md)] can be used as a virtualization server.  
+-   MultiPoint Services can be used as a virtualization server.   
   
-> [!NOTE]  
-> [!INCLUDE[win8_server_multipoint-std_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-std_2_md.md)] does not support virtualization as guest operating system or as a virtualization server.  
+Running MultiPoint Services on a virtual machine provides the use of the Hyper\-V tools to manage operating systems. These tools include checkpoint and rollback features, and they allow you to export and import virtual machines. For larger installations, you can consolidate servers by running multiple [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] virtual computers on a single physical server. Possible scenarios include:  
   
-Running [!INCLUDE[win8_server_multipoint-prem_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-prem_2_md.md)] on a virtual machine provides the use of the Hyper\-V tools to manage operating systems. These tools include checkpoint and rollback features, and they allow you to export and import virtual machines. For larger installations, you can consolidate servers by running multiple [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] virtual computers on a single physical server. Possible scenarios include:  
-  
--   A single classroom or lab has more than 20 seats.  Rather than deploying multiple physical computers running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)], you can deploy multiple virtual machines on a single physical computer.  
+-   A single classroom or lab has more than 20 seats.  Rather than deploying multiple physical computers running MultiPoint Services, you can deploy multiple virtual machines on a single physical computer.  
   
     > [!NOTE]  
-    > You can manage multiple MultiPoint servers, whether physical or virtual, through a single [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] console.  
+    > You can manage multiple MultiPoint servers, whether physical or virtual, through a single MultiPoint Manager console.  
   
--   [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] is running on a virtual machine with another server infrastructure on the same physical computer. For example, [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] is running with Windows Small Business Server \(Windows SBS\) Essentials. Windows SBS centralizes the domain, security, and data for the network.  [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] provides Remote Desktop Services and centralizes the desktops.  
+-   The MultiPoint server is running on a virtual machine with another server infrastructure on the same physical computer. In that case this server infrastructure centralizes the domain, security, and data for the network.  The MultiPoint server provides Remote Desktop Services and centralizes the desktops.  
   
 > [!NOTE]  
-> When running [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] on a virtual machine, USB\-over\-Ethernet and RDP client stations are supported. Direct video and USB zero client connected stations are not supported.  
+> When running MultiPoint Services on a virtual machine, USB\-over\-Ethernet and RDP client stations are supported. Direct video and USB zero client connected stations are not supported.  
   
-For more information about the Hyper\-V role, see [Hyper\-V](http://go.microsoft.com/fwlink/?LinkId=211308) on Microsoft TechNet.  
+For more information about the Hyper\-V role, see [Hyper\-V](../../hyper-v/hyper-v-on-windows-server.md) on Microsoft TechNet.  
   
