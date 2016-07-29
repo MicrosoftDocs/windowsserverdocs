@@ -35,5 +35,4 @@ In order to keep the down-time to a minimum, it is best to follow the steps belo
 1. Now upgrade the remaining servers in the deployment by following steps 2 through 6 above.
 
 ## Upgrading a standalone RD Session Host server:
-
 A standalone RD Session Host server can be upgraded anytime.
