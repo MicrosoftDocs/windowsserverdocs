@@ -14,30 +14,28 @@ manager: swadhwa
 ---
 # Prepare to migrate to MultiPoint Services in Windows Server 2016
 
-Use the following information to prepare to migrate the MultiPoint Services role services from a source server running Windows Server 2016 to a destination server running Windows Server 2016.
+Use the following information to gather the information you need to migrate the MultiPoint Services role service from a source server running Windows Server 2016 Technical Preview 5 to a destination server running Windows Server 2016 RTM.
 
 At a minimum, you must be a member of the Administrators group on the source server and the destination server to install, remove, or set up MultiPoint Services.
 
 >[!NOTE]
 > The steps here do not provide guidance for migrating data saved to user folder or shared folders. Ensure that users back up their data before you begin the migration.
 
-## Gather data from your source server
-
 Use MultiPoint Manager to retrieve the information needed for migration. You will need server administrator permission to use MultiPoint Manager.
 
-Record the MultiPoint server, user, and environment settings in the [migration data collection worksheet](multipoint-services-migration-worksheet). Use the following steps to gather that information.
+Record the MultiPoint server, user, and environment settings in the [migration data collection worksheet](multipoint-services-migration-worksheet.md). Use the following steps to gather that information.
 
-### MultiPoint Server settings for the local server
+## MultiPoint Server settings for the local server
 1. Start MultiPoint Manager.
 2. On the **Home** tab, select the local server, and then click **Edit server settings.**
 3. Record the settings in the data worksheet.
 4. Close the settings window.
 
-### Managed servers and computers
+## Managed servers and computers
 
 You can find the names of the managed servers and computers on the **Home** tab in MultiPoint Manager.
 
-### Station settings
+## Station settings
 If auto-logon or display orientation are configured for the station, use the following steps to retrieve that information. Otherwise you can skip this step.
 
 To retrieve the station settings:
