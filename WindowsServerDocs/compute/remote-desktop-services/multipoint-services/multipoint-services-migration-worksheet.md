@@ -36,18 +36,18 @@ You can find the server settings on the **Home** tab in MultiPoint Manager. Plac
 
 Record the names of the managed servers and computers. You can find this information on the **Home** tab in MultiPoint Manager.
 
-| Computer | Computer name                                                                      |
-|----------|------------------------------------------------------------------------------------|
-| 1        | _________________________                                                          |
-| 2        | _________________________                                                          |
-| 3        | _________________________                                                          |
-| 4        | _________________________                                                          |
-| 5        | _________________________                                                          |
-| 6        | _________________________                                                          |
-| 7        | _________________________                                                          |
-| 8        | _________________________                                                          |
-| 9        | _________________________                                                          |
-| 10       | _________________________                                                          |
+| Computer | Computer name |
+|----------|---------------|
+| 1        |               |
+| 2        |               |
+| 3        |               |
+| 4        |               |
+| 5        |               |
+| 6        |               |
+| 7        |               |
+| 8        |               |
+| 9        |               |
+| 10       |               |
 
 
 ## Stations
@@ -56,44 +56,48 @@ Record the local stations and their settings. You can find this information on t
 
 | #  | Station name | Auto-logon user account | Display orientation |
 |----|--------------|-------------------------|---------------------|
-| 1  |_________________________ | _________________________ |                     |
-| 2  |_________________________ | _________________________ |                     |
-| 3  |_________________________ | _________________________ |                     |
-| 4  |_________________________ | _________________________ |                     |
-| 5  |_________________________ | _________________________ |                     |
-| 6  |_________________________ | _________________________ |                     |
-| 7  |_________________________ | _________________________ |                     |
-| 8  |_________________________ | _________________________ |                     |
-| 9  |_________________________ | _________________________ |                     |
-| 10 |_________________________ | _________________________ |                     |
+| 1  |              |                         |                     |
+| 2  |              |                         |                     |
+| 3  |              |                         |                     |
+| 4  |              |                         |                     |
+| 5  |              |                         |                     |
+| 6  |              |                         |                     |
+| 7  |              |                         |                     |
+| 8  |              |                         |                     |
+| 9  |              |                         |                     |
+| 10 |              |                         |                     |
 
 ## Administrators and MultiPoint Dashboard Users
 
 Copy the user names for the administrators and MultiPoint Dashboard users. You can find this information on the **Users** tab in MultiPoint Manager.
 
-| Administrators  |                           |
-|-----------------|---------------------------|
-| User name       | _________________________ |
-| User name       | _________________________ |
-| User name       | _________________________ |
-| User name       | _________________________ |
-| User name       | _________________________ |
-| Dashboard users |                           |
-| User name       | _________________________ |
-| User name       | _________________________ |
-| User name       | _________________________ |
-| User name       | _________________________ |
-| User name       | _________________________ |
+Administrators:
+
+- User name:
+- User name:
+- User name:
+- User name:
+- User name:
+- User name:
+
+Dashboard users:
+
+- User name:
+- User name:
+- User name:
+- User name:
+- User name:
+
 ## VDI template and virtual desktops
 
 Record the VDI template information and the names of virtual desktops in your MultiPoint Services deployment. You can find this information on the **Virtual Desktops** tab in MultiPoint Manager.
 
-**VDI template location**: ____________________________________________________________________________
+**VDI template location**: 
 
 | # | Virtual desktop name      |
 |---|---------------------------|
-| 1 | _________________________ |
-| 2 | _________________________ |
-| 3 | _________________________ |
-| 4 | _________________________ |
-| 5 | _________________________ |
+| 1 |                           |
+| 2 |                           |
+| 3 |                           |
+| 4 |                           |
+| 5 |                           |
