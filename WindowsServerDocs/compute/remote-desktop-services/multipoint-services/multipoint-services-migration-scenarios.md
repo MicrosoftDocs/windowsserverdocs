@@ -14,6 +14,8 @@ manager: swadhwa
 ---
 # Supported migration scenarios for MultiPoint Services in Windows Server 2016
 
+>Applies To: Windows Server 2016
+
 The MultiPoint Service role services is available in Windows Server 2016 Standard and Datacenter. This migration guide describes how to migrate the Multipoint Services role services from a source server running Windows Server 2016 to a destination server running the same version.
 
 ## Scenarios that are not supported

@@ -14,6 +14,8 @@ manager: swadhwa
 ---
 # Planning worksheet for MultiPoint Services migration
 
+>Applies To: Windows Server 2016
+
 Use the following lists and tables to gather the settings you need during MultiPoint Services migration.
 
 ## Source server settings

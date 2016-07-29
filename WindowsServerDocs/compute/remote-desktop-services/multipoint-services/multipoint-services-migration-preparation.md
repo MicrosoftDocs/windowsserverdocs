@@ -14,6 +14,8 @@ manager: swadhwa
 ---
 # Prepare to migrate to MultiPoint Services in Windows Server 2016
 
+>Applies To: Windows Server 2016
+
 Use the following information to gather the information you need to migrate the MultiPoint Services role service from a source server running Windows Server 2016 Technical Preview 5 to a destination server running Windows Server 2016 RTM.
 
 At a minimum, you must be a member of the Administrators group on the source server and the destination server to install, remove, or set up MultiPoint Services.
