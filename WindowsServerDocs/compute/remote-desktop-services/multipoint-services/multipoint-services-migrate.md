@@ -27,6 +27,18 @@ Before you begin the migration process, please note the following:
 - This guide does not contain instructions on how to migrate when the source server is running multiple roles. If your server is running multiple roles, you need to design a custom migration procedure that is specific to your server environment, based on information provided in the role migration guides.
 - This guide does not contain information for migrating Remote Desktop Services CALS. For this information, see [Migrate Remote Desktop Services Client Access Licenses (RDS CALs)](https://technet.microsoft.com/library/dd851844.aspx).
 
+## Supported migration scenarios for MultiPoint Services in Windows Server 2016
+The MultiPoint Service role services is available in Windows Server 2016 Standard and Datacenter. This migration guide describes how to migrate the Multipoint Services role services from a source server running Windows Server 2016 to a destination server running the same version.
+
+## Scenarios that are not supported
+
+The following migration scenarios are not supported:
+
+- Migrating or upgrading from Windows MultiPoint Server 2012 and 2011.
+- Migrating from a source server to a destination server that is running on operating system with a different system UI language installed.
+- Migrating the MultiPoint Services role service from physical servers to virtual machines.
+- Migrating any applications or application settings from the MultiPoint Server.
+
 ## The impact of migration on MultiPoint Services
 Be aware that the MultiPoint Services role will not be available during the migration. Plan your data migration to occur during off-peak hours to minimize downtime and reduce impact to users. Notify users that the resources will be unavailable during that time.
 

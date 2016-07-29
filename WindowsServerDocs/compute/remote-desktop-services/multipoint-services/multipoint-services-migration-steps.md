@@ -38,3 +38,6 @@ Before you can import the VDI template from the source server, enabled virtual d
 
 > [!NOTE]
 > When you import a virtual desktop template,  any customization applied to the template will be reset. 
+
+## Next step
+[Validate your new MultiPoint Services deployment.](multipoint-services-post-migration-steps.md)
