@@ -26,13 +26,13 @@ Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 a
 ## Upgrading a RDS session-based collection
 In order to keep the down-time to a minimum, it is best to follow the steps below while upgrading a RDS session-based collection:
 
-1. Identify the servers to be upgraded, say half the servers in the deployment.
-1. Prevent new connections to these servers by setting "Allow New Connections" to false.
-1. Log off all sessions on these servers. 
-1. Remove these servers from the collection.
-1. Upgrade the servers to Windows Server 2016.
-1. Add the upgraded servers back to their corresponding collections.
-1. Now upgrade the remaining servers in the deployment by following steps 2 through 6 above.
+1. Identify the servers to be upgraded, say, half the servers in the deployment.
+2. Prevent new connections to these servers by setting **Allow New Connections** to false.
+3. Log off all sessions on these servers. 
+4. Remove these servers from the collection.
+5. Upgrade the servers to Windows Server 2016.
+6. Add the upgraded servers back to their corresponding collections.
+7. Now upgrade the remaining servers in the deployment by following steps 2 through 6 above.
 
-## Upgrading a standalone RD Session Host server:
+## Upgrading a standalone RD Session Host server
 A standalone RD Session Host server can be upgraded anytime.
