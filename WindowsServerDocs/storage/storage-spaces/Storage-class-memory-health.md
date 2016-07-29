@@ -36,7 +36,7 @@ The various cases below may refer to Storage Spaces configurations. The particul
 ## Checking the health of storage-class memory
 To query the health of storage-class memory, use the following commands in a Windows PowerShell session.
 
-```
+```powershell
 PS C:\> Get-PhysicalDisk | where BusType -eq “SCM” | select SerialNumber, HealthStatus, OperationalStatus, OperationalDetails
 ```
 
