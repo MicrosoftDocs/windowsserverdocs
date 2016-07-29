@@ -57,4 +57,5 @@ To retrieve the display orientation settings, view the **station settings** for 
 ## VDI template location
  If you previously enabled the VDI template feature, record the location of the VDI template. As long as the source and destination servers are on the same network, you can import the template by using MultiPoint Manager.
  
-  
+## Next step
+You're now ready to [migrate to MultiPoint Services](multipoint-services-migration-steps.md) in the RTM release of Windows Server 2016.
