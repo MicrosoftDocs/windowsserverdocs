@@ -20,7 +20,7 @@ After you migrate to MultiPoint Services in Windows Server 2016, use the followi
 
 ## Validate the migration by running a pilot program
 
-You can validate your MultiPoint Services migration by creating a pilot project in the production environment. Run the pilot program on the servers before you put the migrated role services into production to verify that your deployment works as you expect. Consider limiting the number of connections at first, slowly increasing the number of users accessing MultiPoint Services.
+You can validate your MultiPoint Services migration by creating a pilot project in the production environment. Run the pilot project on the servers before you put the migrated role services into production to verify that your deployment works as you expect. Consider limiting the number of connections at first, slowly increasing the number of users accessing MultiPoint Services.
 
 > [!NOTE] 
 > Always use test accounts to test the migration. Use an account with administrative privileges and an account for a valid user.
