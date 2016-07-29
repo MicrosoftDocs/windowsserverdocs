@@ -23,9 +23,10 @@ This guide contains DNS policy overview information, as well as specific DNS pol
   
 This guide contains the following sections.  
   
-- [DNS Policies Overview](../../dns/deploy/DNS-Policies-Overview.md)  
-- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md)  
-- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md)  
-  
+- [DNS Policies Overview](DNS-Policies-Overview.md)  
+- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md)  
+- [Scenario: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments](Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md)  
+- [Use DNS Policy for Intelligent DNS Responses Based on the Time of Day](Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md)
+- [DNS Responses Based on Time of Day with an Azure Cloud App Server](dns-tod-azure-cloud-app-server.md)
 
 
