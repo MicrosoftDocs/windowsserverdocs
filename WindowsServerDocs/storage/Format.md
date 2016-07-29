@@ -9,6 +9,9 @@ ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
 ---
+
+>Applies To: Windows 10 Anniversary Edition, Windows 10, Windows Server 2016
+
 # Format
 
 Formats a volume so that you can use it to store files. 
@@ -22,7 +25,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples). To form
 
 ## Syntax
 
-```code
+```powershell
 format <Volume> [/fs:{FAT|FAT32|NTFS}] [/v:<Label>] [/q] [/a:<UnitSize>] [/c] [/x] [/s] [/i] [/dax] [/p:<Passes>]
 format <Volume> [/v:<Label>] [/q] [/f:<Size>] [/p:<Passes>]
 format <Volume> [/v:<Label>] [/q] [/t:<Tracks> /n:<Sectors>] [/p:<Passes>]
@@ -81,25 +84,25 @@ You can check these exit codes by using the ERRORLEVEL environment variable with
 ## <a name="BKMK_examples"></a>Examples
 To format a new floppy disk in drive A using the default size, type:
 
-```
+```powershell
 format a:
 ```
 
 To perform a quick format operation on a previously formatted floppy disk in drive A, type:
 
-```
+```powershell
 format a: /q
 ```
 
 To format a floppy disk in drive A and assign it the volume label "DATA," type:
 
-```
+```powershell
 format a: /v:DATA
 ```
 
 To perform a quick format of a storage-class memory device as drive F:\ with the NTFS file system and DirectAccess enabled, type
 
-```
+```powershell
 format f: /q /dax
 ```
 

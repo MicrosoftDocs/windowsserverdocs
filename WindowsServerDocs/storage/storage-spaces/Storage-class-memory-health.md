@@ -12,11 +12,9 @@ ms.assetid:
 author: jasongerend
 ---
 
-This article applies to the following operating system versions:
+>Applies To: Windows Server 2016, Windows 10 Anniversary Edition
 
-- Windows Server 2016
-
-- Windows 10 Anniversary Edition
+# Storage-class Memory (NVDIMM-N) Health Management in Windows
 
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 
@@ -38,7 +36,7 @@ The various cases below may refer to Storage Spaces configurations. The particul
 ## Checking the health of storage-class memory
 To query the health of storage-class memory, use the following commands in a Windows PowerShell session.
 
-```
+```powershell
 PS C:\> Get-PhysicalDisk | where BusType -eq “SCM” | select SerialNumber, HealthStatus, OperationalStatus, OperationalDetails
 ```
 
