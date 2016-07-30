@@ -55,7 +55,7 @@
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
 #### Get started
 ##### [Welcome to Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
-##### [Upgrade your Remote Desktop Services deployments to Windows Server 2016](compute/remote-desktop-services/upgrade-to-rds.md)
+##### [Upgrade your Remote Desktop Services deployments to Windows Server 2016](compute/remote-desktop-services/upgrade-to-rds-2016.md)
 ###### [Upgrade Remote Desktop Session Host servers](compute/remote-desktop-services/upgrade-to-rdsh-2016.md)
 ###### [Upgrade Remote Desktop Virtualization Host servers](compute/remote-desktop-services/upgrade-to-rdvh-2016.md)
 #### Plan

@@ -31,7 +31,7 @@ The deployment will not be available during RD Connection Broker servers upgrade
 
 2. **RD Session Host servers** can be upgraded next. To avoid down time during upgrade the admin can split the servers to be upgraded in 2 steps as detailed below. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers to Windows Server 2016](Upgrade-to-RDSH-2016.md).
 
-3. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](Upgrade-to-RDSV-2016.md).
+3. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers to Windows Server 2016](Upgrade-to-RDVH-2016.md).
 
 4. **RD Web Access servers** can be upgraded anytime.
    > [!NOTE]
