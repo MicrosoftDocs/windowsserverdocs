@@ -1,5 +1,5 @@
 ---
-title: Add printers in Windows MultiPoint Server 2012
+title: Add printers
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: multipoint-server-2012
@@ -8,18 +8,18 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e1f6d3ca-8caf-4aa0-b0ea-93cdfd3f3f37
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Add printers in Windows MultiPoint Server 2012
-Use the procedures in this topic to make a local printer available to all users on a [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)].  
+# Add printers
+Use the procedures in this topic to make a local printer available to all users on a MultiPoint Services system.  
   
 > [!NOTE]  
-> If you are using domain accounts in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)], users can use any network printer from their stations.  
+> If you are using domain accounts with MultiPoint Services, users can use any network printer from their stations.  
   
-### To make a local printer available to all users on a [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] system  
+### To make a local printer available to all users on a Multipoint Services system  
   
-1.  Connect the printer to the [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] computer.  
+1.  Connect the printer to the Multipoint server.  
   
 2.  Configure the printer as a shared printer:  
   
@@ -35,5 +35,5 @@ Use the procedures in this topic to make a local printer available to all users 
   
     6.  Click **Share this printer**, specify a share name for the printer, and then click **OK**.  
   
-Users logged on to any station that is connected to the [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] computer will be able to see and use the printer.  
+Users logged on to any station that is connected to the Multipoint Services computer will be able to see and use the printer.  
   
