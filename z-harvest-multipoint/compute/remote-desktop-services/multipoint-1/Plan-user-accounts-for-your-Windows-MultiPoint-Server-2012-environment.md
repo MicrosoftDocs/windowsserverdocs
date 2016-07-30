@@ -2,32 +2,32 @@
 title: Plan user accounts for your Windows MultiPoint Server 2012 environment
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d47be540-e891-47bd-85da-6df4bbf93b2f
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Plan user accounts for your Windows MultiPoint Server 2012 environment
-The best way to implement user accounts in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] depends on the size and complexity of your deployment:  
+# Plan user accounts for your MultiPoint Services environment
+The best way to implement user accounts in MultiPoint Services depends on the size and complexity of your deployment:  
   
--   **Local user accounts** \- For a small deployment with only a few computers running [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] and few users, you might find it most convenient to use *local user accounts* that are created on the MultiPoint Server computer. You can create an individual account for each person who will use the system, or create a generic account for each station, which anyone can use to log on. MultiPoint Server administrators create and manage local user accounts by using MultiPoint Manager. The local accounts can be administrators, have limited administrative rights, or be regular users with no access to the MultiPoint Server Desktop or MultiPoint Manager.  
+-   **Local user accounts** \- For a small deployment with only a few computers running MultiPoind Services and few users, you might find it most convenient to use *local user accounts* that are created on the MultiPoint server. You can create an individual account for each person who will use the system, or create a generic account for each station, which anyone can use to log on. MultiPoint server administrators create and manage local user accounts by using MultiPoint Manager. The local accounts can be administrators, have limited administrative rights, or be regular users with no access to the MultiPoint server Desktop or MultiPoint Manager.  
   
--   **Domain accounts** \- If your environment has many computers running MultiPoint Server and many users, you probably will find it more useful to set up an Active Directory Domain Services \(AD DS\) domain and use *domain user accounts*, which enable a user to access her own user profile and settings from any station in the domain. Domain user accounts must be created on the domain controller by a domain administrator.  
+-   **Domain accounts** \- If your environment has many computers running MultiPoint Services and many users, you probably will find it more useful to set up an Active Directory Domain Services \(AD DS\) domain and use *domain user accounts*, which enable a user to access her own user profile and settings from any station in the domain. Domain user accounts must be created on the domain controller by a domain administrator.  
   
 > [!NOTE]  
-> The following sections discuss scenarios that you might implement for local user accounts in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)]. If you are using domain user accounts, see the “One or more MultiPoint Server computers in a domain network environment” scenario in [Example scenarios: Windows MultiPoint Server 2012 user accounts](../Topic/Example%20scenarios:%20Windows%20MultiPoint%20Server%202012%20user%20accounts.md). For information about setting up domain user accounts in Active Directory Domain Services \(AD DS\), see [Create a New User Account](http://technet.microsoft.com/library/dd861308.aspx) \(http:\/\/technet.microsoft.com\/library\/dd861308.aspx\).  
+> The following sections discuss scenarios that you might implement for local user accounts in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)]. If you are using domain user accounts, see the “One or more MultiPoint servers  in a domain network environment” scenario in [Example scenarios: MultiPoint Services user accounts](../Topic/Example%20scenarios:%20Windows%20MultiPoint%20Server%202012%20user%20accounts.md). For information about setting up domain user accounts in Active Directory Domain Services \(AD DS\), see [Create a New User Account](http://technet.microsoft.com/library/dd861308.aspx) \(http:\/\/technet.microsoft.com\/library\/dd861308.aspx\).  
   
 ## Planning local user accounts  
-The following sections consider the advantages, disadvantages, and requirements for several ways to implement individual or shared local user accounts in your Windows MultiPoint Server 2012 environment.  
+The following sections consider the advantages, disadvantages, and requirements for several ways to implement individual or shared local user accounts in your Windows MultiPoint Services environment.  
   
 ### Use individual local user accounts  
-When creating local user accounts, you have the option of assigning each student to a particular computer running MultiPoint Server and creating a single account for each student. Alternatively, you might want to create an individual account for each student on every available computer running MultiPoint Server. A key advantage of implementing individual user accounts is that each user has his or her own Windows desktop experience that includes private folders for storing data. There are two approaches to creating individual local user accounts with MultiPoint Server: assign each user to a specific computer running MultiPoint Server, and then create an individual account for each user only on the computer to which they have been assigned; or, create local user accounts for all users on every computer running MultiPoint Server.  
+When creating local user accounts, you have the option two approaches.  Assign each user to a particular server running MultiPoint Services and creating a single account for each user. Or create local user accounts for all user on every computer running Multipoint services. A key advantage of implementing individual user accounts is that each user has his or her own Windows desktop experience that includes private folders for storing data. 
   
-From a system management perspective, assigning users to a specific MultiPoint Server computer might be more convenient. For example, if you have two computers running MultiPoint Server with five stations each, you might create local user accounts as illustrated in the following table.  
+From a system management perspective, assigning users to a specific MultiPoint Server computer might be more convenient. For example, if you have two MultiPoint servers with five stations each, you might create local user accounts as illustrated in the following table.  
   
 **Table 1: Assigning local user accounts to specific computers running MultiPoint Server**  
   
@@ -53,7 +53,7 @@ In contrast, it is also possible to replicate individual user accounts on all co
 |UserAccount\_04|UserAccount\_04|  
 |UserAccount\_05|UserAccount\_05|  
   
-An advantage of this approach is that users have a local user account on every available computer running MultiPoint Server. However, the disadvantages might outweigh this advantage. For example, even if the user name and password for a particular person are the same on both computers, the accounts are not linked to each other. Therefore, if a user logs on to his or her account on Computer A on Monday, saves a file, and then logs on to his or her account on Computer B on Tuesday, he or she will not be able to access the file previously saved on Computer A. Additionally, replicating user accounts on multiple computers increases the administrative overhead and storage requirements.  
+An advantage of this approach is that users have a local user account on every available MultiPoint server. However, the disadvantages might outweigh this advantage. For example, even if the user name and password for a particular person are the same on both computers, the accounts are not linked to each other. Therefore, if a user logs on to his or her account on Computer A on Monday, saves a file, and then logs on to his or her account on Computer B on Tuesday, he or she will not be able to access the file previously saved on Computer A. Additionally, replicating user accounts on multiple computers increases the administrative overhead and storage requirements.  
   
 ### Use generic local user accounts  
 If your MultiPoint Server system is not connected to a domain, and you do not want to create an individual account for each user, you can create generic accounts for each station. For example, if you have two computers running MultiPoint Server, and five stations are associated with each computer, you might decide to create user accounts similar to those shown in the following table.  
@@ -75,5 +75,5 @@ Another option is to create generic accounts on each server. Every user logs on 
 > [!IMPORTANT]  
 > It is important to understand that when users share a user account, either one per server or one per station, files saved on the server – even files saved in My Documents \- are not private. Any user who logs on with the account has access to those files. When you use one account per station, if a user saves files to My Documents on one station, the user does not have access to those files on a different station. The same occurs when logging on to different MultiPoint Server computers.  
   
-To enable users to access their files from any station, you can use a file server, create a file share for each user account, or let users store their personal documents on a USB flash drive or other private storage device. Individual USB flash drives enable individual users to store private documents even if they are sharing a user account in MultiPoint Server.  
+To enable users to access their files from any station, you can use a file server, create a file share for each user account, or let users store their personal documents on a USB flash drive or other private storage device. Individual USB flash drives enable individual users to store private documents even if they are sharing a user account on a MultiPoint server.  
   

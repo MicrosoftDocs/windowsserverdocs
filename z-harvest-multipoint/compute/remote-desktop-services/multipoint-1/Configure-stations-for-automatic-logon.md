@@ -2,17 +2,17 @@
 title: Configure stations for automatic logon
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52fcfac9-d500-4f1d-819f-b2ffc795e435
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
 # Configure stations for automatic logon
-If you want your stations to be available to anyone – and your users do not need private folders to store their personal data or personalized desktops – you can configure the stations for automatic logon. Auto\-logon automatically logs on a user account that has been specified in the auto\-logon settings when the MultiPoint Server starts.  
+If you want your stations to be available to anyone – and your users do not need private folders to store their personal data or personalized desktops – you can configure the stations for automatic logon. Auto\-logon automatically logs on a user account that has been specified in the auto\-logon settings when the MultiPoint server starts.  
   
 ### To configure a station for automatic log\-on  
   
