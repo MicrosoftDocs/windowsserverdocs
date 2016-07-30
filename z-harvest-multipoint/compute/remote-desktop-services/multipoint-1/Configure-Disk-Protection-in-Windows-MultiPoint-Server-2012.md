@@ -2,17 +2,17 @@
 title: Configure Disk Protection in Windows MultiPoint Server 2012
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd9bf5b9-e481-499b-9c15-7ee5a4f470c4
-author: lizap
-manager: jwhit
+author: liza
+manager: scottman
 ---
-# Configure Disk Protection in Windows MultiPoint Server 2012
-Use the procedures in this topic to enable Disk Protection in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] to protect your system volume from unintended updates, to schedule Windows Updates to be retained while Disk Protection is active, to temporarily disable Disk Protection, and to uninstall Disk Protection.  
+# Configure Disk Protection
+Use the procedures in this topic to enable Disk Protection in Multipoint Services to protect your system volume from unintended updates, to schedule Windows Updates to be retained while Disk Protection is active, to temporarily disable Disk Protection, and to uninstall Disk Protection.  
   
 By enabling Disk Protection in Windows MultiPoint Server 2012, you can protect the system volume \(the drive where Windows is installed—usually C:\) from unwanted changes. When Disk Protection is enabled, changes made to the system volume are stored in a temporary location so that simply restarting the computer discards them and automatically returns the system to the previous known\-good state.  
   

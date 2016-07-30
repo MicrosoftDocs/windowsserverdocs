@@ -1,38 +1,34 @@
 ---
-title: Create Windows 7 or Windows 8 Enterprise virtual desktops for stations
+title: Create Windows 10 Enterprise virtual desktops for stations
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Create Windows 7 or Windows 8 Enterprise virtual desktops for stations
-This optional configuration in [!INCLUDE[win8_server_multipoint-prem_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-prem_2_md.md)] is primarily intended for situations where an essential application requires its own instance of a client operating system for each user. Examples include applications that cannot be installed on Windows Server and applications that will not run multiple instances on the same host computer.  
+# Create Windows 10 Enterprise virtual desktops for stations
+This optional configuration in MultiPoint Services is primarily intended for situations where an essential application requires its own instance of a client operating system for each user. Examples include applications that cannot be installed on Windows Server and applications that will not run multiple instances on the same host computer.  
   
 > [!NOTE]  
 > These Virtual Desktops, also known as VDI, are much more resource intensive than the default MultiPoint Server desktop sessions, so we recommend that you use default MultiPoint Server sessions when possible.  
   
 ## Prerequisites  
-To prepare to create station virtual desktops, ensure that your MultiPoint Server system meets the following requirements:  
+To prepare to create station virtual desktops, ensure that your MultiPoint server system meets the following requirements:      
   
--   **Operating system requirements** – The [!INCLUDE[win8_server_multipoint-prem_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint-prem_2_md.md)] operating system is required.  
-  
--   **Hardware requirements for the MultiPoint Server computer** \- Windows MultiPoint Server 2012 is installed on a computer with the following minimum hardware.  
-  
-    |Hardware|Requirements|  
-    |------------|----------------|  
+    |Hardware|Requirements|         |
+    |------------|----------------|----------------| 
     |CPU \(multimedia\)|1 core or thread per virtual machine|  
     |Solid State Drive \(SSD\)|Capacity >\= 20GB per station \+ 40GB for the MultiPoint Server host operating system<br /><br />Random Read\/Write IOPS >\= 3K per station|  
     |RAM|2GB per station \+ 2GB for the Windows MultiPoint Server host operating system|  
     |Graphics|DX11|  
     |BIOS|BIOS CPU setting configured to enable virtualization – Second Level Address Translation \(SLAT\)|  
   
--   **Stations** \- Set up the stations for your MultiPoint Server system. For more information, see [Attach additional stations to your Windows MultiPoint Server 2012 computer](../../../compute/remote-desktop-services/multipoint-1/Attach-additional-stations-to-your-Windows-MultiPoint-Server-2012-computer.md).  
+-   **Stations** \- Set up the stations for your MultiPoint Server system. For more information, see [Attach additional stations to your MultiPoint server](../../../compute/remote-desktop-services/multipoint-1/Attach-additional-stations-to-your-Windows-MultiPoint-Server-2012-computer.md).  
   
 -   **Domain** \- In a domain environment, the Windows MultiPoint Server computer has been added to the domain, and a domain user has been added to the local Administrators group on the MultiPoint Server host operating system.  
   
@@ -66,31 +62,25 @@ Your next step is to create a Virtual Desktop template. You are literally creati
   
 3.  Click the **Virtual Desktops** tab.  
   
-4.  Insert a Windows 8 or Windows 7 Enterprise DVD in the DVD drive.  
+4.   Copy a Windows 10 Enterprise .iso file to the local SSD.  
   
-    \-Or\-  
+5.  On the Virtual Desktops tab, click **Create virtual desktop template.**   
   
-    Copy a Windows 8 or Windows 7 Enterprise .iso file to the local SSD.  
-  
-5.  On the Virtual Desktops tab, click **Create virtual desktop template.**  
-  
-6.  If you’re installing from a DVD, the dialog box automatically finds the Windows 8 or Windows 7 Enterprise .wim file on the DVD. If you’re using an .iso image file that you copied to a drive, use **Browse** to find the .iso file.  
-  
-7.  In **Prefix**, enter a prefix to use to identify the template and the virtual desktops created with the template. The default prefix is the host computer name.  
+6.  In **Prefix**, enter a prefix to use to identify the template and the virtual desktops created with the template. The default prefix is the host computer name.  
   
     The prefix is used to name the template and the virtual desktop stations. The template will be <*prefix*>\-t. The virtual desktop stations will be named <*prefix*>\-*n*, where *n* is the station identifier.  
   
-8.  Enter a username and password to use for the local Administrator account for the template. In a domain, enter the credentials for a domain account that will be added to the local Administrators group. This account can be used to log on to the template and all virtual desktop stations created from the template.  
+7.  Enter a username and password to use for the local Administrator account for the template. In a domain, enter the credentials for a domain account that will be added to the local Administrators group. This account can be used to log on to the template and all virtual desktop stations created from the template.  
   
-9. Click **OK**, and wait for template creation to complete.  
+8. Click **OK**, and wait for template creation to complete.  
   
-10. The new template will be listed on the **Virtual Desktops** tab. The template will be turned off.  
+9. The new template will be listed on the **Virtual Desktops** tab. The template will be turned off.  
   
 Your next step is to configure the template with the software and setting that you want on the virtual desktops. You must do this before you create any virtual desktops from the template.  
   
 ##### To customize a virtual desktop template  
   
-1.  Log on to the MultiPoint Server host operating system with a local administrator account or, in a domain, with a domain account in the local Administrators group.  
+1.  Log on to the MultiPoint server host operating system with a local administrator account or, in a domain, with a domain account in the local Administrators group.  
   
 2.  From the **Start** screen, open MultiPoint Manager.  
   
@@ -120,10 +110,10 @@ With your virtual desktop template configured the way you want your desktops to 
   
 ##### To create virtual desktops for your stations  
   
-1.  Log on to the Windows MultiPoint Server 2012 host operating system from a remote station \(for example, from a Windows computer by using Remote Desktop Connection\) using a local administrator account or, in a domain, a domain account in the local Administrators group.  
+1.  Log on to the Windows MultiPoint server from a remote station \(for example, from a Windows computer by using Remote Desktop Connection\) using a local administrator account or, in a domain, a domain account in the local Administrators group.  
   
     > [!NOTE]  
-    > Alternatively, you can log on to the host operating system using a local station. However, when you create a station virtual desktop, you will have to log off the station that you used to create the virtual desktop in order to connect the other station to the new virtual desktop.  
+    > Alternatively, you can log on to the server using a local station. However, when you create a station virtual desktop, you will have to log off the station that you used to create the virtual desktop in order to connect the other station to the new virtual desktop.  
   
 2.  From the **Start** screen, open MultiPoint Manager.  
   
@@ -151,21 +141,16 @@ Use the following procedure to create a copy of an existing virtual desktop temp
   
 ##### To import a virtual desktop template  
   
-1.  Log on to the MultiPiont Server 2012 host operating system as an administrator.  
+1.  Log on to the MultiPoint server as an administrator.  
   
 2.  From the **Start** screen, open MultiPoint Manager.  
   
 3.  Click the **Virtual Desktops** tab.  
   
-4.  Click **Import virtual desktop template**, and use **Browse** to select the .vhd file \(template\) that you want to import. When you import a template, a copy is made of the original .vhd. By default, MultiPoint Server stores .vhd files in the C:\\Users\\Public\\Documents\\Hyper\-V\\Virtual hard disks\\ folder.  
+4.  Click **Import virtual desktop template**, and use **Browse** to select the .vhd file \(template\) that you want to import. When you import a template, a copy is made of the original .vhd. By default, MultiPoint Services stores .vhd files in the C:\\Users\\Public\\Documents\\Hyper\-V\\Virtual hard disks\\ folder.  
   
 5.  Enter a prefix for the new template, and then click **OK**.  
   
 6.  If you are making further customizations to a local template, you might change the prefix name by incrementing a version number at the end of the prefix. Or, if you are importing a master template, you might want to add the version of the master template to the end of the default prefix name.  
   
 7.  When the task completes, you can customize the template or use it as it is to create stations.  
-  
-## See Also  
-[Windows Multipoint Server 2012 \- Creating Virtual Desktop Stations – Part 1](http://blogs.technet.com/b/multipointserver/archive/2012/10/23/windows-multipoint-server-2012-creating-virtual-desktop-stations-part-1.aspx)  
-[Windows Multipoint Server 2012 \- Creating Virtual Desktop Stations – Part 2](http://blogs.technet.com/b/multipointserver/archive/2013/01/22/windows-multipoint-server-2012-customizing-virtual-desktop-template-part-2.aspx)  
-  

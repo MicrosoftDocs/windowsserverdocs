@@ -2,7 +2,7 @@
 title: Allow one account to have multiple sessions
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,7 +12,7 @@ author: lizap
 manager: jwhit
 ---
 # Allow one account to have multiple sessions
-To enable a group of users use a shared account on multiple stations at the same time, configure the [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] computer to allow one account to be logged on to multiple stations simultaneously. By default, if a user logs on to a second station with a shared user account, the user account is logged off the first station.  
+To enable a group of users use a shared account on multiple stations at the same time, configure the MultiPoint server to allow one account to be logged on to multiple stations simultaneously. By default, if a user logs on to a second station with a shared user account, the user account is logged off the first station.  
   
 ### To configure the server to allow multiple session per account  
   
