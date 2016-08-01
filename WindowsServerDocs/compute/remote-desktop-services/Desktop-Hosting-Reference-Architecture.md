@@ -20,7 +20,7 @@ This article defines a set of architectural blocks for using Remote Desktop Serv
   
 The primary audience for this reference architecture are hosting providers who want to leverage Microsoft Azure Infrastructure Services to deliver desktop hosting services and Subscriber Access Licenses (SALs) to multiple tenants via the [Microsoft Service Provider Licensing Agreement](http://www.microsoft.com/hosting/en/us/licensing/splabenefits.aspx) (SPLA) program. A second audience for this reference architecture are end customers who want to create and manage desktop hosting solutions in Microsoft Azure Infrastructure Services for their own employees using [RDS User CALs extended rights through Software Assurance](http://download.microsoft.com/download/6/B/A/6BA3215A-C8B5-4AD1-AA8E-6C93606A4CFB/Windows_Server_2012_R2_Remote_Desktop_Services_Licensing_Datasheet.pdf) (SA).   
   
-To deliver a desktop hosting solutions, hosting partners and SA customers leverage Windows Server and the Windows Desktop Experience feature to deliver Windows users an application experience that is familiar to business users and consumers. Although Windows 8.1, Windows 7, and earlier Windows client versions are not licensed for hosting environments with shared hardware, the Desktop Experience feature in Windows Server 2012 R2 provides a similar user experience and application support.    
+To deliver a desktop hosting solutions, hosting partners and SA customers leverage Windows Server to deliver Windows users an application experience that is familiar to business users and consumers. Built on the foundations of Windows 10, Windows Server 2016 provides familiar application support and user experience.    
   
 The scope of this document is limited to:   
   
@@ -42,9 +42,8 @@ There are multiple ways to build a desktop hosting solution based on this archit
   
 The following topics are covered:  
 - [Desktop hosting logical architecture](Desktop-hosting-logical-architecture.md)  
-- [Desktop hosting service](Desktop-hosting-service.md)  
-- [Azure services for desktop hosting](Azure-services-for-desktop-hosting.md)  
-- [Tenant on-premises components](Tenant-on-premises-components.md)  
+- [Understanding the desktop hosting environment](Understanding-the-desktop-hosting-environment.md)  
+- [Azure services and considerations for desktop hosting](Azure-services-and-considerations-for-desktop-hosting.md)
   
  
 
