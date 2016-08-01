@@ -8,20 +8,13 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 426005e1-03af-4595-9418-964b0962b905
-author: lizap
-manager: jeffgilb
+author: evas
+manager: scottman
 ---
 # MultiPoint Services
 MultiPoint Services is a solution that allows multiple users, each with their own independent and familiar Windows experience, to simultaneously share one computer.   
   
 User stations, consisting of a monitor, keyboard, and mouse, are directly connected to the host computer through USB or video cables. Because MultiPoint Services is a genuine Microsoft published software product, when properly licensed, you are eligible to receive support by Microsoft or an authorized partner. This gives you the full capabilities of Windows, access to all the latest updates, and confidence that you are achieving the experience you expect.  
   
-Because MultiPoint Services enables multiple users to share one computer, it can provide a low\-cost alternative to traditional computing scenarios where each user has their own computer. MultiPoint Services also provides an easy management solution for MultiPoint Services system administration known as [!INCLUDE[wms_2011_manager](../../../compute/remote-desktop-services/multipoint-1/includes/wms_2011_manager_md.md)] and an easy management solution for day\-to\-day administration, known as [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)].  
-  
-  
-## See also  
-  
--   [Windows MultiPoint Server 2012](https://technet.microsoft.com/library/jj916259.aspx)  
-  
-  
+Because MultiPoint Services enables multiple users to share one computer, it can provide a low\-cost alternative to traditional computing scenarios where each user has their own computer. MultiPoint Services also provides an easy management solution for MultiPoint Services system administration known as MultiPoint Manager and an easy management solution for day\-to\-day administration, known as MultiPoint Dashboard.  
   
