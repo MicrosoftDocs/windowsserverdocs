@@ -42,7 +42,12 @@ All physical compute hosts need to have access to the Management logical network
   
 For IP Address planning purposes, each physical compute host must have at least one IP address assigned from the Management logical network. The network controller automatically assigns exactly two IP addresses from the HNV Provider logical network. If the physical compute host is running additional infrastructure virtual machines (for example, Network Controller, SLB/MUX, or Gateway) that host must have an additional IP address assigned from the Management logical network for each of the infrastructure virtual machines hosted.   
   
-Additionally, each SLB/MUX infrastructure virtual machine must have an IP address reserved from the HNV Provider logical network, and the Network Controller requires a reserved address from the Management network to serve as the REST IP address. You must manually create the HOST A record in DNS for the REST IP address.  
+Additionally, each SLB/MUX infrastructure virtual machine must have an IP address reserved from the HNV Provider logical network. 
+
+>[!IMPORTANT]
+>These SLB/MUX IP addresses must be assigned from outside the IP address pool that is configured for the HNV Provider logical network. Failure to do this may result in duplicate IP addresses on your network. 
+
+The Network Controller requires a reserved address from the Management network to serve as the REST IP address. You must manually create the HOST A record in DNS for the REST IP address.  
   
 A DHCP server can automatically assign IP addresses for the Management network or you can manually assign static IP address. The SDN stack automatically assigns IP addresses for the HNV provider network for the individual Hyper-V hosts from an IP Pool specified through and managed by the Network Controller.   
   
