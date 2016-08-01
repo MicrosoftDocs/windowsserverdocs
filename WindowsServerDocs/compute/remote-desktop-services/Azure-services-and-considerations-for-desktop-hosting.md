@@ -1,5 +1,5 @@
 ---
-title: Azure services for desktop hosting
+title: Azure services and considerations for desktop hosting
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,7 +12,7 @@ ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
 author: lizap
 manager: msswadhwa
 ---
-# Azure services for desktop hosting
+# Azure services and considerations for desktop hosting
 
 >Applies To: Windows Server Technical Preview
 

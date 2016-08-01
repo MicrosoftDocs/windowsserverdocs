@@ -1,18 +1,18 @@
 ---
-title: Configure Disk Protection in Windows MultiPoint Server 2012
+title: Configure Disk Protection in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd9bf5b9-e481-499b-9c15-7ee5a4f470c4
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Configure Disk Protection in Windows MultiPoint Server 2012
-Use the procedures in this topic to enable Disk Protection in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] to protect your system volume from unintended updates, to schedule Windows Updates to be retained while Disk Protection is active, to temporarily disable Disk Protection, and to uninstall Disk Protection.  
+# Configure Disk Protection
+Use the procedures in this topic to enable Disk Protection in Multipoint Services to protect your system volume from unintended updates, to schedule Windows Updates to be retained while Disk Protection is active, to temporarily disable Disk Protection, and to uninstall Disk Protection.  
   
 By enabling Disk Protection in Windows MultiPoint Server 2012, you can protect the system volume \(the drive where Windows is installed—usually C:\) from unwanted changes. When Disk Protection is enabled, changes made to the system volume are stored in a temporary location so that simply restarting the computer discards them and automatically returns the system to the previous known\-good state.  
   
@@ -21,15 +21,15 @@ The administrator can easily install software or make configuration changes by t
 ## Enable Disk Protection  
 Before you enable Disk Protection, make sure all applications and drivers are installed and up to date, and move your user profiles to a volume that will not be protected. If you need to make manual updates after you enable Disk Protection, you can temporarily disable Disk Protection. However, it's easiest to get the system into an ideal state before Disk Protection is turned on.  
   
-#### To enable Disk Protection in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)]  
+#### To enable Disk Protection in MultiPoint Services  
   
-1.  Log on to [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] as an administrator.  
+1.  Log on to the server running MultiPoint Services as an administrator.  
   
 2.  Before you enable Disk Protection:  
   
-    -   Ensure the MultiPoint Server system is in exactly the state in which you want it to remain. For example, ensure that installed software, system settings, and updates are correct.  
+    -   Ensure the MultiPoint Services system is in exactly the state in which you want it to remain. For example, ensure that installed software, system settings, and updates are correct.  
   
-    -   Move user profiles to a volume that is not protected, or set up a shared file location off the system volume as described in [Enable file sharing in Windows MultiPoint Server 2012](../../../compute/remote-desktop-services/multipoint-1/Enable-file-sharing-in-Windows-MultiPoint-Server-2012.md).  
+    -   Move user profiles to a volume that is not protected, or set up a shared file location off the system volume as described in [Enable file sharing in MultiPoint Services](../../../compute/remote-desktop-services/multipoint-1/Enable-file-sharing-in-Windows-MultiPoint-Server-2012.md).  
   
 3.  From the **Start** screen, open **MultiPoint Manager**.  
   
@@ -40,9 +40,9 @@ When Disk Protection is enabled for the first time, the system is prepared by in
 Windows needs to update a few system files – including the system pagefile, crash dump location, and event logs. Those files are not discarded when Disk Protection is enabled. To accomplish this, a new volume named DpReserved is created when Disk Protection is enabled for the first time, and those files are moved to that volume. The DpReserved partition is not protected, so writes to those files persist through restarts, even when Disk Protection is enabled.  
   
 ## Schedule software updates  
-If Windows is configured to automatically install Windows Updates, Disk Protection allows these updates at the configured time, and does not discard the updates. For example, if Windows updates are scheduled for 3:00 a.m., Disk Protection checks for updates each day at 3:00 a.m. If any updates are found, MultiPoint Server temporarily disables Disk Protection, applies the updates, and then re\-enables Disk Protection.  
+If Windows is configured to automatically install Windows Updates, Disk Protection allows these updates at the configured time, and does not discard the updates. For example, if Windows updates are scheduled for 3:00 a.m., Disk Protection checks for updates each day at 3:00 a.m. If any updates are found, MultiPoint Services temporarily disables Disk Protection, applies the updates, and then re\-enables Disk Protection.  
   
-#### To schedule software updates in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)]  
+#### To schedule software updates in MultiPoint Services  
   
 1.  In MultiPoint Manager, display the **Home** tab, and then click **Schedule software updates**.  
   

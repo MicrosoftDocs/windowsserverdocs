@@ -1,22 +1,22 @@
 ---
-title: Create local user accounts in Windows MultiPoint Server 2012
+title: Create local user accounts
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33321932-4266-4961-9924-2cb4620bfcb4
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Create local user accounts in Windows MultiPoint Server 2012
-Three levels of local user accounts can be created in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)]: Standard User accounts; MultiPoint Dashboard users, who have limited administrative rights; and full Administrative User accounts.  
+# Create local user accounts
+Three levels of local user accounts can be created in using the MultiPoint Manager: Standard User accounts; MultiPoint Dashboard users, who have limited administrative rights; and full Administrative User accounts.  
   
-Use the following procedure to create a local user account on a MultiPoint Server computer. If your environment includes multiple MultiPoint Server computers, and you want the user to be able to log on to any station on any server, you need to create a local user account on each of your servers. That setup has some limitations. In a domain environment, you can also let users use their domain accounts. For an overview of your options, see [Plan user accounts for your Windows MultiPoint Server 2012 environment](../../../compute/remote-desktop-services/multipoint-1/Plan-user-accounts-for-your-Windows-MultiPoint-Server-2012-environment.md).  
+Use the following procedure to create a local user account on a MultiPoint server. If your environment includes multiple MultiPoint servers, and you want the user to be able to log on to any station on any server, you need to create a local user account on each of your servers. That setup has some limitations. In a domain environment, you can also let users use their domain accounts. For an overview of your options, see [Plan user accounts for your Windows MultiPoint Services environment](../../../compute/remote-desktop-services/multipoint-1/Plan-user-accounts-for-your-Windows-MultiPoint-Server-2012-environment.md).  
   
-### To create a local user account in [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)]  
+### To create a local user account
   
 1.  Log on to the server as an administrator, and open MultiPoint Manager.  
   
