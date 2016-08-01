@@ -62,7 +62,7 @@
 ##### [Desktop Hosting Reference Architecture](compute/remote-desktop-services/Desktop-Hosting-Reference-Architecture.md)
 ###### [Desktop hosting logical architecture](compute/remote-desktop-services/Desktop-hosting-logical-architecture.md)
 ###### [Desktop hosting service](compute/remote-desktop-services/Desktop-hosting-service.md)
-###### [Azure services for desktop hosting](compute/remote-desktop-services/Azure-services-for-desktop-hosting.md)
+###### [Azure services and considerations for desktop hosting](compute/remote-desktop-services/Azure-services-and-considerations-for-desktop-hosting.md)
 ###### [Tenant on-premises components](compute/remote-desktop-services/Tenant-on-premises-components.md)
 #### Deploy
 ##### [Configure your desktop hosting environment](compute/remote-desktop-services/Configure-your-desktop-hosting-environment.md)
