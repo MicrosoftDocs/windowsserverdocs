@@ -198,8 +198,6 @@ MultiPoint Services supports peripheral devices that are connected to a station 
 ## <a name="BKMK_SelectingRDP-over-LAN-connectedstationhardware"></a>Selecting RDP\-over\-LAN\-connected station hardware  
 Any LAN client that can connect to Remote Desktop Services, by using Remote Desktop Protocol, can become a MultiPoint Services station.  
   
-For improved full screen video performance, we recommend that the client be RemoteFX capable. Refer to [Hardware Requirements and Performance Recommendations](../../../compute/remote-desktop-services/multipoint-1/Hardware-Requirements-and-Performance-Recommendations.md).  
-  
 If you want the LAN client to only be used as a MultiPoint station, you may want to “lock down” your LAN client. For example, configure your thin client so that it can only connect to a MultiPoint Services session, or configure your desktop computers so that access to desktop icons and Start Menu items such as a web browser is removed to prevent direct Internet access. You can make these configurations using your LAN client configuration tools or group or local policies.  
   
 ## <a name="BKMK_Selectingaudiodevices"></a>Selecting audio devices  

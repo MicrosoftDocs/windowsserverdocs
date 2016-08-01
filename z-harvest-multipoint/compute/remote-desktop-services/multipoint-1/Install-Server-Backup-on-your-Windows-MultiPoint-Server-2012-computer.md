@@ -1,21 +1,21 @@
 ---
-title: Install Server Backup on your Windows MultiPoint Server 2012 computer
+title: Install Server Backup on your MultiPoint server
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4331370-ba07-4529-92ab-db14a41bfc3b
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Install Server Backup on your Windows MultiPoint Server 2012 computer
-It is recommended that you consider a backup and recovery plan for your MultiPoint Server. For more information on the backup and recovery tools available on MultiPoint Server, see [Windows Server Backup Feature Overview \[Windows Server 8\]](assetId:///c72e1fe8-3762-4806-a3c3-0b9d567ba88d) \(http:\/\/technet.microsoft.com\/library\/jj614621.aspx\).  
+# Install Server Backup on your MultiPoint server
+It is recommended that you consider a backup and recovery plan for your MultiPoint server(s). For more information on the backup and recovery tools available on MultiPoint Services, see [Windows Server Backup Feature Overview \[Windows Server 8\]](assetId:///c72e1fe8-3762-4806-a3c3-0b9d567ba88d) \(http:\/\/technet.microsoft.com\/library\/jj614621.aspx\).  
   
 ## Configure MultiPoint Server Backup  
-A good backup and recovery plan is important for any size environment. Windows Server Backup is a feature in Windows Server 2012 that provides a set of wizards and other tools for you to perform basic backup and recovery tasks for the server on which it is installed. You can use Windows Server Backup to back up a full server \(all volumes\), selected volumes, the system state, or specific files or folders, and to create a backup that you can use to rebuild your system.  
+A good backup and recovery plan is important for any size environment. Windows Server Backup is a feature in Windows Server 2016 that provides a set of wizards and other tools for you to perform basic backup and recovery tasks for the server on which it is installed. You can use Windows Server Backup to back up a full server \(all volumes\), selected volumes, the system state, or specific files or folders, and to create a backup that you can use to rebuild your system.  
   
 You can recover volumes, folders, files, certain applications, and the system state. And, for disasters like hard disk failures, you can rebuild a system either from scratch or by using alternate hardware. To do this, you must have a backup of the full server or just the volumes that contain operating system files and the Windows Recovery Environment. This restores your complete system onto your old system or onto a new hard disk.  
   

@@ -2,22 +2,23 @@
 title: Configure group policies for a domain deployment
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 13e5fa90-d330-4155-a6b8-78eb650cbbfa
-author: lizap
-manager: jwhit
+author: evas    
+manager: scottman
 ---
 # Configure group policies for a domain deployment
-To ensure that your domain deployment of MultiPoint Server works properly, apply the following group policy settings to the WMSshell user account on a MultiPoint Server system.  
+To ensure that your domain deployment of MultiPoint Services works properly, apply the following group policy settings to the WMSshell user account on a MultiPoint Services system.  
   
 > [!IMPORTANT]  
-> Some group policy settings can prevent required configuration settings from being applied to MultiPoint Server. Be sure that you understand and define your group policy settings so that they work correctly on MultiPoint Server. For example, a Group Policy setting that prevents Autologon could present problems with MultiPoint Server logon behavior.  
+> Some group policy settings can prevent required configuration settings from being applied to MultiPoint Services. Be sure that you understand and define your group policy settings so that they work correctly on MultiPoint Services. For example, a Group Policy setting that prevents Autologon could present problems with MultiPoint Services logon behavior.  
   
-## Update group policies for the WMSshell user account  
+## Update group policies for the WMSshell user account 
+The WMSshell user account is a system account which MultiPoint services uses to sign-in into the console where the actuall stations are created. This account is not ment be managed by MultiPoint Manager.
   
 > [!NOTE]  
 > To find out how to update group policies, see [Local Group Policy Editor](https://technet.microsoft.com/library/dn265982.aspx).  
@@ -39,15 +40,15 @@ Assign the following values:
 |Allow log on locally|Ensure that the list of accounts includes the WMSshell account.<br /><br />**Note:** By default, the WMSshell account is a member of the Users group. If the Users group is in the list, and WMSshell is a member of the Users group, you do not need to add the WMSshell account to the list.|  
   
 > [!IMPORTANT]  
-> When you set any group policies, make sure that the policies do not interfere with automatic updates and error Windows error reporting on the MultiPoint Server computer. These are set by the **Install updates automatically** and **Automatic Windows Error Reporting** settings that were selected during Windows MultiPoint Server installation, configured in MultiPoint Manager using **Edit server settings**, or configured in scheduled updates for Disk Protection.  
+> When you set any group policies, make sure that the policies do not interfere with automatic updates and error Windows error reporting on the MultiPoint server. These are set by the **Install updates automatically** and **Automatic Windows Error Reporting** settings that were selected during Windows MultiPoint Server installation, configured in MultiPoint Manager using **Edit server settings**, or configured in scheduled updates for Disk Protection.  
   
 ## Update the Registry  
-For a domain deployment of [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)], you should update the following registry subkeys.  
+For a domain deployment of MultiPoint Services, you should update the following registry subkeys.  
   
 > [!IMPORTANT]  
 > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.  
   
-#### To update Registry subkeys for a domain deployment of [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)]  
+#### To update Registry subkeys for a domain deployment of MultiPoint Services  
   
 1.  Open Registry editor. \(At a command prompt, type **regedit.exe**, and press ENTER.\)  
   

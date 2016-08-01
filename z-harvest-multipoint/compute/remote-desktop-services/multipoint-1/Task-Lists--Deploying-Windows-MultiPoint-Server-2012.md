@@ -2,17 +2,17 @@
 title: Task Lists: Deploying Windows MultiPoint Server 2012
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e08c5784-5b3e-4028-86c1-96deaee41f09
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Task Lists: Deploying Windows MultiPoint Server 2012
-Use the task lists in this topic to help you’re the deployment of your [!INCLUDE[win8_server_multipoint_2](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_2_md.md)] system and keep track of completed tasks. Not all tasks apply to every environment. For example, some tasks are performed only if you deploy MultiPoint Serer on an Active Directory domain. Others, such as creating split\-screen stations or deploying virtual desktops for stations, are optional. For procedures that explain how to perform these tasks, see [Deploying Windows MultiPoint Server 2012 \[redirected\]](assetId:///75f16a5b-e829-41d2-95c2-1be93718b614).  
+# Task Lists: MultiPoint Services
+Use the task lists in this topic to help you’re the deployment of your MultiPoint Services system and keep track of completed tasks. Not all tasks apply to every environment. For example, some tasks are performed only if you deploy a MultiPoint server on an Active Directory domain. Others, such as creating split\-screen stations or deploying virtual desktops for stations, are optional. For procedures that explain how to perform these tasks, see [Deploying Windows MultiPoint Server 2012 \[redirected\]](assetId:///75f16a5b-e829-41d2-95c2-1be93718b614).  
   
 ## Task list: Deploy the server  
   
