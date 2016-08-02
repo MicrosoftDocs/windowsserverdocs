@@ -2,7 +2,7 @@
 title: Selecting Hardware for Your MultiPoint Services System
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: Windwos-server-2016
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -11,7 +11,7 @@ ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
 author: evas
 manager: scottman
 ---
-# Selecting Hardware for Your MultiPoint Server System
+# Selecting Hardware for Your MultiPoint Services System
 When you build a MultiPoint Services system, you should select a computer that meets the Windows Server 2016 system requirements. If you are deciding which components to select, consider the following:  
   
 -   The target price range of your complete solution.  
@@ -26,7 +26,7 @@ When you build a MultiPoint Services system, you should select a computer that m
   
 -   Future expansion plans. Do you plan to add stations to the MultiPoint Services system at a later date? Will you have enough video card slots, USB ports, or network taps? How many additional users will your hardware need to support?  
   
--   Physical layout. For more information, see [MultiPoint Server Site Planning](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md).  
+-   Physical layout. For more information, see [MultiPoint Services Site Planning](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md).  
   
 A MultiPoint Services system typically includes the following components:  
   
@@ -129,7 +129,7 @@ USB zero clients contain an external video controller to connect a monitor to th
 Select a USB zero client if you want to enable support for additional monitors without opening the computer, or if you want to support more stations than available video outputs. For example, if you previously had four monitors plugged\-in to internal video cards, and you want to add two more monitors, you can plug\-in two external video controllers to the computer and have room for two more monitors. In this manner, you can combine a USB zero client with the video controller and not use additional PCI or PCIe slots on the motherboard.  
   
 ## <a name="BKMK_Selectingdirect-video-connectedorUSBzeroclientstationdevices"></a>Selecting direct\-video\-connected or USB zero client station devices  
-A MultiPoint Services station consists of a station hub or USB zero client with a keyboard and mouse plugged\-in, and a monitor that is plugged\-in to the host computer or in to a USB zero client. Other peripheral devices can be plugged\-in to the station hub or USB zero client, but they are not required to create a MultiPoint Server station. These other peripheral devices are described in [Selecting other station peripheral devices](../../../compute/remote-desktop-services/multipoint-1/Selecting-Hardware-for-Your-MultiPoint-Server-System.md#BKMK_Selectingperipheraldevices).  
+A MultiPoint Services station consists of a station hub or USB zero client with a keyboard and mouse plugged\-in, and a monitor that is plugged\-in to the host computer or in to a USB zero client. Other peripheral devices can be plugged\-in to the station hub or USB zero client, but they are not required to create MultiPoint station. These other peripheral devices are described in [Selecting other station peripheral devices](../../../compute/remote-desktop-services/multipoint-1/Selecting-Hardware-for-Your-MultiPoint-Server-System.md#BKMK_Selectingperipheraldevices).  
   
 The devices that you select to create a MultiPoint Services station should meet minimum requirements to work with MultiPoint Services. Details about the requirements for the following MultiPoint Services station devices are provided in this topic:  
   

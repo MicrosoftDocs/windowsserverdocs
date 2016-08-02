@@ -20,8 +20,8 @@ In a MultiPoint Services system environment, *stations* are the user endpoints f
   
 -   RDP\-over\-LAN\-connected stations \(for rich client or thin client computers\)  
   
-Full PCs that have the MultiPoint Connector installed can also be monitored and controlled using the MultiPoint Dashboard. On Windows 10 the MultiPoint Connector can be enabled through the control panel for Windows  features 
-  
+Full PCs that have the MultiPoint Connector installed can also be monitored and controlled using the MultiPoint Dashboard. On Windows 10 the MultiPoint Connector can be enabled through the control panel for Windows features. 
+
 Multipoint Services supports any combination of these station types, but it is recommended that one station be a direct\-video\-connected station, which can serve as the primary station. The reason for this recommendation is to be able to anticipate support scenarios. For example, to interact with the system’s BIOS before MultiPoint Services is running.  
   
 ## Primary stations and standard stations  
