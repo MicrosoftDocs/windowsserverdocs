@@ -31,33 +31,22 @@ translation.priority.ht:
 # Managing MultiPoint Services
 MultiPoint™ Services allows multiple users, each with their own independent Windows experience, to simultaneously share one computer. User stations, consisting of a monitor, keyboard, and mouse, are directly connected to the host computer through USB, video cables, or the network.  
   
-The information in this section describes many of the tasks that you can perform in [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] and [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], such as how to manage MultiPoint Services stations by using [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], and how to use [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)] daily.  
+The information in this section describes many of the tasks that you can perform in [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)] and [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], such as how to manage MultiPoint Services stations by using [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], and how to use [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)] daily.  
   
 > [!NOTE]  
-> The information in this section is also included in the MultiPoint Services Help, which can be opened by clicking the Help icon or F1 on any [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] or [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)] screen.  
+> The information in this section is also included in the MultiPoint Services Help, which can be opened by clicking the Help icon or F1 on any [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)] or [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)] screen.  
   
 ## In this topic  
   
--   [Managing Your MultiPoint Services System](../../../compute/remote-desktop-services/multipoint-2/Managing-Your-MultiPoint-Services-System.md)  
-  
--   [Manage Station Hardware](../../../compute/remote-desktop-services/multipoint-2/Manage-Station-Hardware.md)  
--   [Manage System Tasks Using MultiPoint Manager](../../../compute/remote-desktop-services/multipoint-2/Manage-System-Tasks-Using-MultiPoint-Manager.md)  
-  
--   [Manage User Stations](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Stations.md)  
-  
--   [Manage User Accounts](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Accounts.md)  
-  
--   [Manage Virtual Desktops](../../../compute/remote-desktop-services/multipoint-2/Manage-Virtual-Desktops.md)  
-  
-
-  
--   [Manage User Files](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Files.md)  
-  
--   [Manage User Desktops Using MultiPoint Dashboard](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
-  
--   [Manage MultiPoint Systems Using MultiPoint Dashboard](../../../compute/remote-desktop-services/multipoint-2/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md)  
-  
--   [Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
+-   [Managing Your MultiPoint Services System](Managing-Your-MultiPoint-Services-System.md)  
+-   [Manage Station Hardware](Manage-Station-Hardware.md)  
+-   [Manage System Tasks Using MultiPoint Manager](Manage-System-Tasks-Using-MultiPoint-Manager.md)  
+-   [Manage User Stations](Manage-User-Stations.md)  
+-   [Manage User Accounts](Manage-User-Accounts.md)  
+-   [Manage Virtual Desktops](Manage-Virtual-Desktops.md)  
+-   [Manage User Files](Manage-User-Files.md)  
+-   [Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
+-   [Manage MultiPoint Systems Using MultiPoint Dashboard](Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md)  
   
 ## See also  
   

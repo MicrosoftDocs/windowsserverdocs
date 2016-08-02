@@ -36,7 +36,7 @@ The following illustration shows an example of the layout of a MultiPoint Servic
 > [!TIP]  
 > To best view this image, maximize the Help window.  
   
-![Image of MultiPoint Server USB-based system layout](/media/WMSMultiPointServerUSBSystemLayout.gif)  
+![Image of MultiPoint Server USB-based system layout](./media/WMSMultiPointServerUSBSystemLayout.gif)  
   
 The topics in this section describe how you can view the status of the hardware connected to your MultiPoint Services system, and provide detailed information about the types of USB devices and other peripheral hardware devices that you can use to set up a MultiPoint Services station. The following is a brief description of the topics in this section that can help you select hardware and set up your MultiPoint Services station.  
   
@@ -49,7 +49,7 @@ The topics in this section describe how you can view the status of the hardware 
 -   Set Up a Station  
   
 ## View Hardware Status  
-In [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], you can use the **Stations** tab to view the status of the stations and hardware devices that are connected to the MultiPoint Services computer. For more information about how to view the status of your MultiPoint Services computer and the hardware devices that are connected to it, see the [View Hardware Status](View-Hardware-Status.md) topic.  
+In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], you can use the **Stations** tab to view the status of the stations and hardware devices that are connected to the MultiPoint Services computer. For more information about how to view the status of your MultiPoint Services computer and the hardware devices that are connected to it, see the [View Hardware Status](View-Hardware-Status.md) topic.  
   
 ## Work with USB Devices  
 When USB devices and other peripheral hardware devices are connected to the MultiPoint Services system, they function differently when they are connected to the MultiPoint Services computer than when they are connected to a MultiPoint Services station. The [Work with USB Devices](Work-with-USB-Devices.md) topic describes how different hardware devices might function in these scenarios and provides detailed information about how to work with station hubs.  
