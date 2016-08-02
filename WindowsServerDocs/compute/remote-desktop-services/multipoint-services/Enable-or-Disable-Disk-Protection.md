@@ -33,7 +33,7 @@ The Disk Protection feature allows you to reset your MultiPoint Services system 
   
 #### To enable Disk Protection  
   
-1.  In [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then, under *computer name***Tasks**, click **Enable Disk Protection**.  
+1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then, under *computer name***Tasks**, click **Enable Disk Protection**.  
   
 2.  Review the information, and then click **OK**.  
   
@@ -41,7 +41,7 @@ The Disk Protection feature allows you to reset your MultiPoint Services system 
   
 #### To disable Disk Protection  
   
-1.  In [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then, under *computer name***Tasks**, click **Disable Disk Protection**.  
+1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then, under *computer name***Tasks**, click **Disable Disk Protection**.  
   
 2.  Review the information, and then click **OK**.  
   

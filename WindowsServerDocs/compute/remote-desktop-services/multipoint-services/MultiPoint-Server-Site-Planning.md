@@ -40,7 +40,7 @@ Additional factors to consider include the following:
 -   Consider how you might want to expand in the future. Will you be adding more stations?  
   
 ## Station layout and configuration  
-The physical layout of your site may affect your choice of station type. For more details about the different station types, refer to [MultiPoint Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Stations.md) in this guide. Multiple station types are allowed on a single MultiPoint Services. This provides you with extra flexibility to meet your installation needs.  
+The physical layout of your site may affect your choice of station type. For more details about the different station types, refer to [MultiPoint Stations](MultiPoint-Server-Stations.md) in this guide. Multiple station types are allowed on a single MultiPoint Services. This provides you with extra flexibility to meet your installation needs.  
   
 ### Layout for direct\-video\-connected stations  
   
@@ -67,7 +67,7 @@ The physical layout of your site may affect your choice of station type. For mor
 > [!NOTE]  
 > It is recommended that you verify the performance by using your applications and hardware to decide how many USB zero clients you can connect to a USB port on the server.  
   
-![Downstream hubs](../../../compute/remote-desktop-services/multipoint-1/media/WMS_diagram6.gif "WMS_diagram6")  
+![Downstream hubs](./media/WMS_diagram6.gif)  
   
 **Figure 5** MultiPoint Server system with three USB zero clients connected to a single intermediate hub  
   
@@ -77,11 +77,11 @@ There are no physical distance limitations for LAN clients. As long as they are 
 ## Using additional hubs  
 Additional hubs can be used to make installation easier. There are three types of hubs that are used on a MultiPoint Services system:  
   
--   [Station hubs](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md#BKMK_StationHubs)  
+-   [Station hubs](MultiPoint-Server-Site-Planning.md#BKMK_StationHubs)  
   
--   [Intermediate hubs](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md#BKMK_Intermediatehub)  
+-   [Intermediate hubs](MultiPoint-Server-Site-Planning.md#BKMK_Intermediatehub)  
   
--   [Downstream hubs](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md#BKMK_Downstreamhubs)  
+-   [Downstream hubs](MultiPoint-Server-Site-Planning.md#BKMK_Downstreamhubs)  
   
 ### <a name="BKMK_StationHubs"></a>Station hubs  
 A station hub is an external hub that has been associated with a MultiPoint Services station. As a minimum, the station hub will have a keyboard plugged\-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high\-powered devices will plugin to them.  
@@ -95,7 +95,7 @@ A station hub is an external hub that has been associated with a MultiPoint Serv
   
 There should be no more than three USB zero clients or station hubs daisy chained consecutively. Care must be taken that the USB bandwidth is not exceeded when daisy chaining station hubs.  
   
-![Daisy chaining stations](../../../compute/remote-desktop-services/multipoint-1/media/WMS_diagram5.gif "WMS_diagram5")  
+![Daisy chaining stations](./media/WMS_diagram5.gif)  
   
 **Figure 6** MultiPoint Server system with daisy\-chained stations  
   
@@ -107,7 +107,7 @@ Intermediate hubs must be USB 2.0 or later, and they must be externally powered
 ### <a name="BKMK_Downstreamhubs"></a>Downstream hubs  
 A downstream hub is connected to a station hub to add more available ports for station devices. A downstream hub can be externally powered or bus\-powered, depending on the devices that are plugged\-in to the hub.  
   
-![Multiple USB zero client connections](../../../compute/remote-desktop-services/multipoint-1/media/WMS_diagram4.gif "WMS_diagram4")  
+![Multiple USB zero client connections](./media/WMS_diagram4.gif "WMS_diagram4")  
   
 **Figure 7** MultiPoint server system with an intermediate hub, a station hub, and a downstream hub  
   
@@ -118,13 +118,9 @@ The number of stations you will need depends on the number of people who will ha
 The following components require access to a power strip or outlet:  
   
 -   Server  
-  
--   Monitors  
-  
--   Intermediate hubs \(if used\)  
-  
+-   Monitors
+-   Intermediate hubs \(if used\) 
 -   Some USB zero clients  
-  
 -   Powered USB devices, such as some external storage devices and DVD drives  
   
 ## Sample MultiPoint Server system layouts  
@@ -135,21 +131,20 @@ Depending on the available furniture, the size of the room, the number of comput
   
 **Computer lab** In this setup, the stations are arranged around the walls of the room, with the students facing the walls.  
   
-![Computer Lab Classroom Set-up](../../../compute/remote-desktop-services/multipoint-1/media/WMS_ComputerLabLayout.gif "WMS_ComputerLabLayout")  
+![Computer Lab Classroom Set-up](./media/WMS_ComputerLabLayout.gif)  
   
 **Groups** In this setup, there are three computers that are running MultiPoint Services, with stations clustered around each computer.  
   
-![Classroom configured with server pods](../../../compute/remote-desktop-services/multipoint-1/media/WMS_ClassroomPods.gif "WMS_ClassroomPods")  
+![Classroom configured with server pods](./media/WMS_ClassroomPods.gif)  
   
 **Lecture room** In this setup, the stations are set up in rows. An advantage of this setup is that all of the students face the instructor.  
   
-![Classroom configured as Lecture Room](../../../compute/remote-desktop-services/multipoint-1/media/WMS_LectureRoom.gif "WMS_LectureRoom")  
+![Classroom configured as Lecture Room](./media/WMS_LectureRoom.gif)  
   
 **Activity center** This setup consists of a traditional lecture\-room layout for the desks, and it has a separate area with a single computer that is running MultiPoint Services with its associated stations.  
   
-![MultiPoint Server Activity Center](../../../compute/remote-desktop-services/multipoint-1/media/WMSActivityCenter.gif "WMSActivityCenter")  
+![MultiPoint Server Activity Center](./media/WMSActivityCenter.gif)  
   
 **Small business office** In this setup, the computer that is running MultiPoint Services is placed in a central location and users throughout the office connect to it by using a local area network \(LAN\).  
   
-![USB zero client connected station](../../../compute/remote-desktop-services/multipoint-1/media/Diagram1.gif "Diagram1")  
-  
+![USB zero client connected station](./media/Diagram1.gif)

@@ -13,19 +13,19 @@ manager: jeffgilb
 robots: noindex,nofollow
 ---
 # Accessibility Features
-Microsoft is committed to making its products and services easier for you to use. Most accessibility provisions that are offered through Windows are available when you use [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)].  
+Microsoft is committed to making its products and services easier for you to use. Most accessibility provisions that are offered through Windows are available when you use [!INCLUDE[win8_server_multipoint_3](./includes/win8_server_multipoint_3_md.md)].  
   
 > [!TIP]  
-> For more information about accessibility provisions in Windows, search for **Accessibility Features** in Windows Help and Support. For more information about how to use Windows Help and Support, see the [Use Windows Server Help](../../../compute/remote-desktop-services/multipoint-2/Use-Windows-Server-Help.md) topic.  
+> For more information about accessibility provisions in Windows, search for **Accessibility Features** in Windows Help and Support. For more information about how to use Windows Help and Support, see the [Use Windows Server Help](Use-Windows-Server-Help.md) topic.  
   
-In addition to the accessibility features and utilities in Windows, using a specific combination of keys, or keyboard shortcuts, in [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] makes your computer more accessible for users who have disabilities.  
+In addition to the accessibility features and utilities in Windows, using a specific combination of keys, or keyboard shortcuts, in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] makes your computer more accessible for users who have disabilities.  
   
 ## Keyboard shortcuts  
 Keyboard shortcuts are combinations of two or more keys that, when they are pressed, can be used to perform a task that would typically require a mouse or other pointing device. Keyboard shortcuts can make it easier to interact with your computer. This saves you time and effort as you work with Windows and other programs.  
   
 Most programs also provide accelerator keys that can make it easier to work with menus and other commands. Check the menus of programs for accelerator keys. If a letter is underlined in a menu, it usually means that pressing the ALT key in combination with the underlined key will have the same effect as clicking that command.  
   
-[!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] provides shortcut keys in [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)]. Common shortcut keys are as shown in the following tables.  
+[!INCLUDE[win8_server_multipoint_3](./includes/win8_server_multipoint_3_md.md)] provides shortcut keys in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)]. Common shortcut keys are as shown in the following tables.  
   
 ### Add User wizard pages  
   
@@ -111,7 +111,4 @@ Most programs also provide accelerator keys that can make it easier to work with
 |ENTER|Finish|  
   
 ## See Also  
-[Managing Your MultiPoint Server System](../Topic/Managing%20Your%20MultiPoint%20Server%20System.md)  
-[Use Windows Server Help](../../../compute/remote-desktop-services/multipoint-2/Use-Windows-Server-Help.md)  
-[Glossary_1](../Topic/Glossary_1.md)  
-  
+[Managing Your MultiPoint Server System](Managing-Your-MultiPoint-Services-System.md)  

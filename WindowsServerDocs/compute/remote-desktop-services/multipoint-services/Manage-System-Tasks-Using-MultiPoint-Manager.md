@@ -29,7 +29,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage System Tasks Using MultiPoint Manager
-In [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], you can use the **Home** tab to perform MultiPoint Services tasks and check the state of the system. Tasks that you can perform on the **Home** tab include:  
+In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], you can use the **Home** tab to perform MultiPoint Services tasks and check the state of the system. Tasks that you can perform on the **Home** tab include:  
   
 -   Editing the settings you selected when you installed MultiPoint Services, as described in the [Edit Server Settings](Edit-Server-Settings.md) topic.  
   
