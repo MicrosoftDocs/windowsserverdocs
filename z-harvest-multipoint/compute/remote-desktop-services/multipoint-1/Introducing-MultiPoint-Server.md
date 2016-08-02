@@ -27,11 +27,11 @@ This document addresses the following factors to consider when you are planning 
   
 -   What type of desktops to use with your MultiPoint Services system: Will you need sessions, virtual machines, or Windows PCs?  
   
--   [Selecting Hardware for Your MultiPoint Server System](../../../compute/remote-desktop-services/multipoint-1/Selecting-Hardware-for-Your-MultiPoint-Server-System.md): What hardware decisions should you make?  
+-   [Selecting Hardware for Your MultiPoint Services System](../../../compute/remote-desktop-services/multipoint-1/Selecting-Hardware-for-Your-MultiPoint-Server-System.md): What hardware decisions should you make?  
   
 -   [Hardware Requirements and Performance Recommendations](../../../compute/remote-desktop-services/multipoint-1/Hardware-Requirements-and-Performance-Recommendations.md): What hardware is required for MultiPoint Services?  
   
--   [MultiPoint Server Site Planning](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md): Where will the computers that are running MultiPoint Services and their stations be located, and how will they be configured?  
+-   [MultiPoint Services Site Planning](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md): Where will the computers that are running MultiPoint Services and their stations be located, and how will they be configured?  
   
 -   [Network Considerations and User Accounts](../../../compute/remote-desktop-services/multipoint-1/Network-Considerations-and-User-Accounts.md): The networking environment into which the MultiPoint Services system is deployed can affect how user accounts are managed. What is your networking environment? How will user accounts be managed?  
   
