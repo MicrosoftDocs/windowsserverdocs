@@ -15,7 +15,7 @@ author: cwatsonmsft
 
 >Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016
 
-We recommend that you enable virtualization-based security (VBS) on generation 2 virtual machines (VMs) that run the Windows 10 Anniversary Update or Windows Server 2016. VBS is a new security technology that is available for Hyper-V hosts and guests that run Windows 10 and Windows Server 2016. VBS is on by default when you install Hyper-V on the host computer. But you have to manually turn on VBS in the guest virtual machines. 
+We recommend that you enable virtualization-based security (VBS) on generation 2 virtual machines (VMs) that run the Windows 10 or Windows Server 2016. VBS is a new security technology that is available for Hyper-V hosts that run Windows 10 Anniversary Update and Windows Server 2016. VBS is on by default when you install Hyper-V on the host computer. But you have to manually turn on VBS in the guest virtual machines. 
 
 VBS is part of the Microsoft Device Guard feature set. You can use VBS with other security technologies like Secure Boot, Shielded VMs, and Credential Guard to make your VMs even more secure. But you enable VBS on the guest virtual machine seperately from those technologies.
 
@@ -33,23 +33,23 @@ Set-VMSecurity -VMName <VMName> -VirtualizationBasedSecurityOptOut $true
 ## How VBS works
 In a VM, VBS provides a framework for isolating privileged code to run in an isolated environment outside of the normal operating system. This isolation protects secrets (like credentials) from the lesser-privileged and untrusted guest operating system. This solution is designed to protect secrets even if the guest kernel is exploited by malware. 
 
-VBS leverages the Hyper-V hypervisor to isolate secrets from the untrusted guest operating system. The hypervisor provides a strong security boundary between the privileged and untrusted environments by using hardware virtualization extensions. This is the same hardware technology that is used to isolate virtual machines. The following diagram shows that the Hyper-V hypervisor handles the protection for the guest virtual machine.
+VBS leverages the Hyper-V hypervisor to isolate secrets from the untrusted guest operating system. The hypervisor provides a strong security boundary between the privileged and untrusted environments by using hardware virtualization extensions. This is the same hardware technology that is used to isolate virtual machines. The following diagram shows that the Hyper-V hypervisor provides protection for the guest virtual machine.
 
-![Diagram that shows that the hypervisor handles protection for a guest VM.](images/hyper-v-VBS.png)
+![Diagram that shows that the hypervisor provides protection for a guest VM.](images/hyper-v-VBS.png)
 
-### Protection from the host
+### No added protection from the host
 When running in a VM, VBS protects secrets from untrusted parts of the guest operating system. This is to protect against exploits launched from within the VM. VBS running in a VM provides no additional protection from software running in the host.
 For further protection from malicious host administrators, use [Guarded Fabric and Shielded VMs](https://technet.microsoft.com/windows-server-docs/security/Guarded-Fabric-and-Shielded-VMs).
 
 ## Compatibility of VBS and nested VMs
-[Nested virtualization](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/nesting) lets you use a virtual machine as a Hyper-V host and create virtual machines within that virtualized host. You can use VBS with nested virtualization. But this configuration is less secure than if you enabled VBS for a guest virtual machine on a physical Hyper-V host. VBS relies on hardware virtualization extensions to create a completely isolated environment in the guest operating system. With nested virtualization, these hardware extensions (Intel VT-X and EPT) are virtualized. This means that the nested hypervisor isn't directly programming the hardware. So this changes the security guarantees of VBS.  We recommend that you only use nested virtualization with VBS for demonstration and testing purposes.   
+We recommend that you only use nested virtualization with VBS for demonstration and testing purposes. [Nested virtualization](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/nesting) lets you use a virtual machine as a Hyper-V host and create virtual machines within that virtualized host. You can use VBS with nested virtualization. But this configuration is less secure than if you enabled VBS for a guest virtual machine on a physical Hyper-V host. VBS relies on hardware virtualization extensions to create a completely isolated environment in the guest operating system. With nested virtualization, these hardware extensions are virtualized. This means that the nested hypervisor isn't directly programming the hardware. So this changes the security guarantees of VBS.    
 
 ### VBS in a nested configuration
-Virtualization based security is provided by the closest instance of Hyper-V. When you enable nested virtualization for a guest VM that has VBS running, there's no change to VBS. But when you install Hyper-V on that VM, then the underlying hypervisor on the physical host no longer plays a part in securing the VM. The nested instance of the Hyper-V host on the VM takes over protection of both the nested-enabled operating system and any nested guest virtual machines you create on that host. 
+Virtualization based security is provided by the closest instance of Hyper-V. When you enable nested virtualization for a guest VM that has VBS running, there's no change to VBS. But when you install Hyper-V on that VM, then the underlying hypervisor on the physical host no longer plays a part in securing the VM. The nested instance of the hypervisor on the VM takes over protection of both the nested-enabled operating system and any nested guest virtual machines you create on that host. 
 
-The following diagram shows that a physical Hyper-V host handles protection for a guest VM. But the nested instance of Hyper-V handles the protection of the nested-enabled OS and the nested guest virtual machine.
+The following diagram shows that a physical Hyper-V host provides protection for a guest VM. But the nested instance of Hyper-V handles the protection of the nested-enabled OS and the nested guest virtual machine.
 
-![Diagram that shows which hypervisor handles protection for a VM for non-nested and a nested instance of Hyper-V.](images/hyper-v-nested-VBS-compatibility-.png)
+![Diagram that shows which hypervisor provides protection for a VM for non-nested and a nested instance of Hyper-V.](images/hyper-v-nested-VBS-compatibility-.png)
 
 There are two major downsides to using nested virtualization with VBS enabled:
 
