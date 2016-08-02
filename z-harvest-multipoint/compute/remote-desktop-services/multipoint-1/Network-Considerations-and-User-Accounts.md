@@ -54,7 +54,7 @@ However, if every user must be able to log on to any of the computers running Mu
   
 Additionally, if a user has accounts on Computer A and Computer B, there is no way to automatically synchronize the passwords for the accounts. This can result in users having difficulty logging on should the account password be changed on one computer, but not the other. You can simplify user account management in this kind of network environment by assigning each user to a single computer that is running MultiPoint Services. This way, the user can log on to any of the stations that are associated with that computer and access the appropriate files.  
   
-## Multiple MultiPoint Server systems with domain accounts  
+## Multiple MultiPoint Services systems with domain accounts  
 Domain environments are common in large network environments that include multiple servers. For example, you might join one or more computers running the MultiPoint Services role to a domain, and then use Microsoft Active Directory to manage user accounts that can be accessed from any computer in the domain. This allows for individual domain user accounts to be created and accessed from any station in any MultiPoint Services system that is joined to the domain.  
  
 When you deploy MultiPoint Services in a domain environment, there are several factors to consider:  

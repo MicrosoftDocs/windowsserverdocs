@@ -1,17 +1,17 @@
 ---
-title: Variables Affecting MultiPoint Server System Performance
+title: Variables Affecting MultiPoint Services System Performance
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f3e8875-1b5e-4789-b16c-d06d6e31f38e
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
-# Variables Affecting MultiPoint Server System Performance
+# Variables Affecting MultiPoint Services System Performance
 There are many variables that can affect the overall performance of your MultiPoint Services system. You may want to consider these when designing your system.  
   
 ## Usage  
@@ -27,7 +27,7 @@ There are many variables that can affect the overall performance of your MultiPo
   
 ## Configuration  
   
--   **CPU, GPU, and RAM** See [Optimize MultiPoint Server System Performance](../../../compute/remote-desktop-services/multipoint-1/Hardware-Requirements-and-Performance-Recommendations.md#BKMK_OptimizeMultiPointServerSystemPerformance) in this guide for CPU, GPU, and RAM recommendations.  
+-   **CPU, GPU, and RAM** See [Optimize MultiPoint Services System Performance](../../../compute/remote-desktop-services/multipoint-1/Hardware-Requirements-and-Performance-Recommendations.md#BKMK_OptimizeMultiPointServerSystemPerformance) in this guide for CPU, GPU, and RAM recommendations.  
   
 -   **Network bandwidth** For RDP\-over\-LAN connected stations, the network bandwidth and the capability of the client \(for example, a thin client, desktop PC, or laptop\) is important, particularly if video is running in the user’s session. If you are using USB\-over\-Ethernet zero clients, network bandwidth should also be a consideration. Video data for all of the devices is sent over the same Ethernet connection, so you may want to consider setting up a separate Gigabit Ethernet network when using these devices.  
   
@@ -41,5 +41,5 @@ There are many variables that can affect the overall performance of your MultiPo
   
 -   **USB type** Using USB 3.0 instead of USB 2.0 increases the available bandwidth between the server and the intermediate hub if you are connecting more than three USB zero clients to the hub or if you are using high\-bandwidth USB devices.  
   
--   **Stations** The total number of stations affects the performance. If you have heavy graphics, processing, or video needs, you may want to limit the overall number of stations. For more information, see [Optimize MultiPoint Server system performance](../../../compute/remote-desktop-services/multipoint-1/Hardware-Requirements-and-Performance-Recommendations.md#BKMK_OptimizeMultiPointServerSystemPerformance) in this guide.  
+-   **Stations** The total number of stations affects the performance. If you have heavy graphics, processing, or video needs, you may want to limit the overall number of stations. For more information, see [Optimize MultiPoint Services System performance](../../../compute/remote-desktop-services/multipoint-1/Hardware-Requirements-and-Performance-Recommendations.md#BKMK_OptimizeMultiPointServerSystemPerformance) in this guide.  
   
