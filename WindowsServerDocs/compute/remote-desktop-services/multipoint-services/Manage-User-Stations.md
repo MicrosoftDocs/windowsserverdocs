@@ -29,7 +29,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage User Stations
-This section discusses managing the *stations* that make up the MultiPoint Services system. Managing a MultiPoint Services system includes both managing the hardware and software components of [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)]. In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*.  
+This section discusses managing the *stations* that make up the MultiPoint Services system. Managing a MultiPoint Services system includes both managing the hardware and software components of [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)]. In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*.  
   
 ## Station status  
 You can view the following types of status for each desktop on the **Stations** tab. Status includes:  
@@ -40,7 +40,7 @@ You can view the following types of status for each desktop on the **Stations** 
   
 -   Which stations are being used and by which user  
   
-For more information about viewing desktop status, see the [View User Connection Status](../../../compute/remote-desktop-services/multipoint-2/View-User-Connection-Status.md) topic.  
+For more information about viewing desktop status, see the [View User Connection Status](View-User-Connection-Status.md) topic.  
 
 >[!TIP] You can assign friendly names to each station, which might help you identify the stations more easily. Use **Identify station**, which dipslays the station name on the assigned screen.
   
@@ -49,22 +49,20 @@ As an *administrative user*, you can log off Windows at any time, which will hav
   
 As an administrative user, you might need to end a standard user’s *session*, rather than having the user log off. You can end a standard user’s session in one of two ways:  
   
--   End the session and log the user off. For more information about ending a user’s session, see the [End a User Session](../../../compute/remote-desktop-services/multipoint-2/End-a-User-Session.md) topic.  
+-   End the session and log the user off. For more information about ending a user’s session, see the [End a User Session](End-a-User-Session.md) topic.  
   
--   Suspend the user to temporarily end the user’s session, but keep the session active in the MultiPoint Services system’s computer memory. The suspended user can then reconnect to the session from the same station or a different station and continue his or her work. For more information about suspending a user’s session, see the [Suspend and Leave User Session Active](../../../compute/remote-desktop-services/multipoint-2/Suspend-and-Leave-User-Session-Active.md) topic.  
+-   Suspend the user to temporarily end the user’s session, but keep the session active in the MultiPoint Services system’s computer memory. The suspended user can then reconnect to the session from the same station or a different station and continue his or her work. For more information about suspending a user’s session, see the [Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md) topic.  
   
 ## Set a station to automatically log on  
-As an administrative user, you can set up one or more stations to automatically log on when the computer that is running MultiPoint Services starts. For more information about automatically logging on, see the [Set Up a Station for Automatic Logon](../../../compute/remote-desktop-services/multipoint-2/Set-up-a-Station-for-Automatic-Logon.md) topic.  
+As an administrative user, you can set up one or more stations to automatically log on when the computer that is running MultiPoint Services starts. For more information about automatically logging on, see the [Set Up a Station for Automatic Logon](Set-up-a-Station-for-Automatic-Logon.md) topic.  
   
 ## Split a station  
-Any station monitor that has a resolution greater than 1024x768 can be split into two stations. For more information about splitting a station, see the [Split a User Station](../../../compute/remote-desktop-services/multipoint-2/Split-a-User-Station.md) topic.  
+Any station monitor that has a resolution greater than 1024x768 can be split into two stations. For more information about splitting a station, see the [Split a User Station](Split-a-User-Station.md) topic.  
   
 ## See Also  
-[View User Connection Status](../../../compute/remote-desktop-services/multipoint-2/View-User-Connection-Status.md)  
-[Log off or Disconnect User Sessions](../../../compute/remote-desktop-services/multipoint-2/Log-off-or-Disconnect-User-Sessions.md)  
-[Suspend and Leave User Session Active](../../../compute/remote-desktop-services/multipoint-2/Suspend-and-Leave-User-Session-Active.md)  
-[Set Up a Station for Automatic Logon](../../../compute/remote-desktop-services/multipoint-2/Set-up-a-Station-for-Automatic-Logon.md)  
-[End a User Session](../../../compute/remote-desktop-services/multipoint-2/End-a-User-Session.md)  
-[Split a User Station](../../../compute/remote-desktop-services/multipoint-2/Split-a-User-Station.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[View User Connection Status](View-User-Connection-Status.md)  
+[Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)  
+[Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md)  
+[Set Up a Station for Automatic Logon](Set-up-a-Station-for-Automatic-Logon.md)  
+[End a User Session](End-a-User-Session.md)  
+[Split a User Station](Split-a-User-Station.md)

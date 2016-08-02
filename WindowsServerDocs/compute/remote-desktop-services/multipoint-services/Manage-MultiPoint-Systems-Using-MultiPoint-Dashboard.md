@@ -29,15 +29,15 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage MultiPoint Systems Using MultiPoint Dashboard
-In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], on the **Systems** tab, you can do the following:  
+In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], on the **Systems** tab, you can do the following:  
   
 ### Restart or shut down selected systems  
-You can restart or shut down selected MultiPoint Services systems. For information about restarting or shutting down selected systems, see the [Restart or Shut Down MultiPoint Systems](../../../compute/remote-desktop-services/multipoint-2/Restart-or-Shut-Down-MultiPoint-Systems.md) topic.  
+You can restart or shut down selected MultiPoint Services systems. For information about restarting or shutting down selected systems, see the [Restart or Shut Down MultiPoint Systems](Restart-or-Shut-Down-MultiPoint-Systems.md) topic.  
   
 ### Remap selected systems  
-You can remap selected MultiPoint Services systems. For more information about remapping selected systems, see the [Remap Selected MultiPoint Systems](../../../compute/remote-desktop-services/multipoint-2/Remap-Selected-MultiPoint-Systems.md) topic.  
+You can remap selected MultiPoint Services systems. For more information about remapping selected systems, see the [Remap Selected MultiPoint Systems](Remap-Selected-MultiPoint-Systems.md) topic.  
   
 ## See Also  
-[Restart or Shut Down MultiPoint Systems](../../../compute/remote-desktop-services/multipoint-2/Restart-or-Shut-Down-MultiPoint-Systems.md)  
-[Remap Selected MultiPoint Systems](../../../compute/remote-desktop-services/multipoint-2/Remap-Selected-MultiPoint-Systems.md)  
+[Restart or Shut Down MultiPoint Systems](Restart-or-Shut-Down-MultiPoint-Systems.md)  
+[Remap Selected MultiPoint Systems](Remap-Selected-MultiPoint-Systems.md)  
   

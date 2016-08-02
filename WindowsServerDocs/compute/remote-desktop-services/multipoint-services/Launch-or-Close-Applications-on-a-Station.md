@@ -33,7 +33,7 @@ As *MultiPoint Dashboard User*, you can open or close an application on a user窶
   
 #### To launch an application on a user station  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the user desktop on which you want to launch the application, and then click the drop窶電own menu for **Launch** in the ribbon under **Applications**.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the user desktop on which you want to launch the application, and then click the drop窶電own menu for **Launch** in the ribbon under **Applications**.  
   
 2.  Click **Launch an Application on Selected Desktops**. The **Launch Application** page opens.  
   
@@ -41,7 +41,7 @@ As *MultiPoint Dashboard User*, you can open or close an application on a user窶
   
 #### To launch an application on all user stations  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the drop窶電own menu for **Launch** (in the ribbon under **Applications**).  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], click the drop窶電own menu for **Launch** (in the ribbon under **Applications**).  
   
 2.  Click **Launch an Application on All Desktops**. The **Launch Application** page opens.  
   
@@ -49,12 +49,12 @@ As *MultiPoint Dashboard User*, you can open or close an application on a user窶
   
 #### To close an application on a user station  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop on which you want to close an application.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop on which you want to close an application.  
   
 2.  Click **Close** in the ribbon under **Applications** to open the **Close Application** page.  
   
 3.  Select the name of the application, folder, document, or Internet resource you want to close, and then click **Close Application**.  
   
 ## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
+[Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)  
   

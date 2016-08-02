@@ -41,7 +41,7 @@ You should end a user’s session when you have to log the user off from the Mul
   
 #### To end user sessions  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
   
 2.  Do one of the following:  
   
@@ -50,7 +50,7 @@ You should end a user’s session when you have to log the user off from the Mul
     -   To end all user sessions, under **Stations Tasks**, click **Log off all stations**.  
   
 ## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-[Log off or Disconnect User Sessions](../../../compute/remote-desktop-services/multipoint-2/Log-off-or-Disconnect-User-Sessions.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
+[Manage User Desktops](manage-user-desktops-using-multipoint-manager.md)  
+[Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)  
+  
   

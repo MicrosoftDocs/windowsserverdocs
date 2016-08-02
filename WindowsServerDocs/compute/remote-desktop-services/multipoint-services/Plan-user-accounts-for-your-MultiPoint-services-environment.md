@@ -1,5 +1,5 @@
 ---
-title: Plan user accounts for your Windows MultiPoint Server 2012 environment
+title: Plan user accounts for your MultiPoint Services environment
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016

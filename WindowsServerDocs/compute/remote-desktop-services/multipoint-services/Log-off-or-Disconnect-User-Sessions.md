@@ -49,13 +49,11 @@ The following table describes the different options that you, as an administrati
 |||  
 |-|-|  
 |**Action**|**Effect**|  
-|**Suspend:** In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], use the **Stations** tab to suspend the user’s session. For more information, see the [Suspend and Leave User Session Active](../../../compute/remote-desktop-services/multipoint-2/Suspend-and-Leave-User-Session-Active.md) topic.|The user’s session ends and is preserved in computer memory. The station becomes available for log on by the same user or a different user. The user can log on to the same station or another station and continue with their work.|  
-|**End:** In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], use the **Stations** tab to end the user’s session. You can also end all user sessions on the **Stations** tab. For more information, see the [End a User Session](../../../compute/remote-desktop-services/multipoint-2/End-a-User-Session.md) topic.|The user’s session ends and the station becomes available for log on by any user. The user’s session no longer displays on the **Stations** tab, and it is not in computer memory.|  
+|**Suspend:** In [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], use the **Stations** tab to suspend the user’s session. For more information, see the [Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md) topic.|The user’s session ends and is preserved in computer memory. The station becomes available for log on by the same user or a different user. The user can log on to the same station or another station and continue with their work.|  
+|**End:** In [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], use the **Stations** tab to end the user’s session. You can also end all user sessions on the **Stations** tab. For more information, see the [End a User Session](End-a-User-Session.md) topic.|The user’s session ends and the station becomes available for log on by any user. The user’s session no longer displays on the **Stations** tab, and it is not in computer memory.|  
   
 ## See Also  
-[Suspend and Leave User Session Active](../../../compute/remote-desktop-services/multipoint-2/Suspend-and-Leave-User-Session-Active.md)  
-[End a User Session](../../../compute/remote-desktop-services/multipoint-2/End-a-User-Session.md)  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-[Log Off User Sessions](../../../compute/remote-desktop-services/multipoint-2/Log-Off-User-Sessions.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md)  
+[End a User Session](End-a-User-Session.md)  
+[Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)  
+[Log Off User Sessions](Log-Off-User-Sessions.md)    

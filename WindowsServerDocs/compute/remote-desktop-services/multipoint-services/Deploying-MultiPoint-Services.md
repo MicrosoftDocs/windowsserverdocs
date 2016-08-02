@@ -19,31 +19,26 @@ This guide describes how to deploy a server running MultiPoint Services and set-
   
   
 ## In this guide  
-The *Deployment Guide* is organized in the following way. At a minimum, you need to complete the tasks for deploying your system and preparing your environment for users. Other tasks might or might not apply to your environment. For a summary of all deployment tasks, see [Task Lists: Deploying MultiPoint Services](../Topic/Task%20Lists:%20Deploying%20Windows%20MultiPoint%20Server%202012.md) in the appendix.  
-  
--   [Deploy a new MultiPoint Services System](../../../compute/remote-desktop-services/multipoint-1/Deploy-a-new-Windows-MultiPoint-Server-2012-system.md)  
+The *Deployment Guide* is organized in the following way. At a minimum, you need to complete the tasks for deploying your system and preparing your environment for users. Other tasks might or might not apply to your environment. 
+-   [Deploy a new MultiPoint Services System](Deploy-a-new-MultiPoint-services-system.md)  
   
     Set up your MultiPoint Services computer and stations. Install and configure MultiPoint Services; set up your stations; install drivers, updates, and software; optionally join a domain; add client licenses \(CALs\) for each station.  
   
--   [Optional configuration tasks for a MultiPoint Services deployment](../../../compute/remote-desktop-services/multipoint-1/Optional-configuration-tasks-for-a-Windows-MultiPoint-Server-2012-deployment.md)  
+-   [Optional configuration tasks for a MultiPoint Services deployment](Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md)  
   
-    Perform optional configuration tasks. Set up a split\-screen station; add printers; enable access over a wireless LAN; create virtual desktops for stations with the [!INCLUDE[firstref_client_7](../../../compute/remote-desktop-services/multipoint-1/includes/firstref_client_7_md.md)] or [!INCLUDE[win8_client_ent_1](../../../compute/remote-desktop-services/multipoint-1/includes/win8_client_ent_1_md.md)] operating system; change the display language for the system or for individual users.  
+    Perform optional configuration tasks. Set up a split\-screen station; add printers; enable access over a wireless LAN; create virtual desktops for stations with the [!INCLUDE[firstref_client_7](/includes/firstref_client_7_md.md)] or [!INCLUDE[win8_client_ent_1](/includes/win8_client_ent_1_md.md)] operating system; change the display language for the system or for individual users.  
   
--   [Prepare your MultiPoint Services system for users](../../../compute/remote-desktop-services/multipoint-1/Prepare-your-Windows-MultiPoint-Server-2012-system-for-users.md)  
+-   [Prepare your MultiPoint Services system for users](Prepare-your-Windows-MultiPoint-Server-2012-system-for-users.md)  
   
     Plan and create user accounts; restrict users’ access to the server; for open access, configure stations for automatic logon; allow multiple sessions for shared user accounts; implement file sharing for users.  
   
--   [System administration in MultiPoint Services](../../../compute/remote-desktop-services/multipoint-1/System-administration-in-Windows-MultiPoint-Server-2012.md)  
+-   [System administration in MultiPoint Services](System-administration-in-Windows-MultiPoint-Server-2012.md)  
   
     Perform some basic server administration tasks before you start using the server. Turn on Disk Protection; install Server Backup; to save power, configure sleep settings; configure group policies and the Registry for a domain deployment.  
   
--   [Appendix: Deploying MultiPoint Services](../Topic/Appendixes:%20Deploying%20Windows%20MultiPoint%20Server%202012.md)  
-  
-    View or print task lists for all deployment tasks.
-  
 ## See also  
   
-- [MultiPoint Services](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Services.md)
+- [MultiPoint Services](multipoint-1/MultiPoint-Services.md)
   
 -   [Windows MultiPoint Server Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
   

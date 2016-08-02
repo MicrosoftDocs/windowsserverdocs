@@ -33,7 +33,7 @@ Single computer VDI allows you to configure each *local* MultiPoint Services sta
   
 #### To enable the virtual desktop feature  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], and then click the **Virtual Desktops** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], and then click the **Virtual Desktops** tab.  
   
 2.  Under **VDI Tasks**, click **Create virtual desktop**, and then browse your Windows 10 Enterprise .iso or VHD.  
   
@@ -41,7 +41,7 @@ Single computer VDI allows you to configure each *local* MultiPoint Services sta
   
 #### To create a virtual desktop template  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], and then click the **Virtual Desktops** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)], and then click the **Virtual Desktops** tab.  
   
 2.  Under **VDI Tasks**, click **Create virtual desktop**, and then browse to your Windows 10 Enterprise .iso or VHD.  
   
@@ -74,8 +74,6 @@ In the case where you have created a virtual desktop template on another MultiPo
 ## Customize the virtual desktop template  
 After you have created the virtual desktop template, you can customize it with applications, software updates and configure system settings.   
   
-  
-  
 #### To customize the virtual desktop template  
   
 1. Open MultiPoint Manager, and then click the **Virtual Desktops** tab.  
@@ -85,7 +83,7 @@ The template opens in a separate window, and additional instructions are present
   
 #### To create virtual desktop stations  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Virtual Desktops** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Virtual Desktops** tab.  
   
     > [!NOTE]  
     > If the MultiPoint Services system is not running in station mode, restart it before completing this procedure.  
@@ -110,5 +108,4 @@ When disabling virtual desktops the Hyper-V feature will be turned off. All user
 #### To disable a virtual desktop  
 1. Open MultiPoint Manager in station mode, and then click the **Virtual Desktops** tab.  
   
-2. Under the VDI Tasks click **Disable virtual desktops**.  
-  
+2. Under the VDI Tasks click **Disable virtual desktops**. 
