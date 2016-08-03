@@ -135,7 +135,7 @@ For prerequisites and a walkthrough of developing C++ on Nano Server, see [Devel
 Most C# code is supported on Nano Server. You can use [ApiPort](https://github.com/Microsoft/dotnet-apiport) to scan for incompatible APIs.  
   
 ### Powershell Core SDK  
-The module "Microsoft.PowerShell.NanoServer.SDK" is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/1.0.0.4) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
+The module "Microsoft.PowerShell.NanoServer.SDK" is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
   
 `Find-Module Microsoft.PowerShell.NanoServer.SDK -Repository PSGallery | Install-Module -Scope <scope>`  
   
