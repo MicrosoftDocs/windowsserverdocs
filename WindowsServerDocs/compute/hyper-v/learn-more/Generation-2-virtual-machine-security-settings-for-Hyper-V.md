@@ -51,11 +51,15 @@ For more information, see the following topics.
 You can help protect the data and state of the virtual machine by selecting the following encryption support options.  
 
 - **Enable Trusted Platform Module** - This setting makes a virtualized Trusted Platform Module (TPM) chip available to your virtual machine. This allows the guest to encrypt the virtual machine disk by using BitLocker.   
+  - If your Hyper-V host is running Windows 10 1511, you have to enable Isolated User Mode. 
 -  **Encrypt State and VM migration traffic** - Encrypts the virtual machine saved state and live migration traffic.    
 
-If you select **Enable Trusted Platform Module**, you must also enable Isolated User Mode on Hyper-V hosts that run Windows 10 before you can start the virtual machine. You don't need to do this for Hyper-V hosts that run Windows Server 2016. Isolated User Mode is the runtime environment that hosts security applications inside Virtual Secure Mode on the Hyper-V host. Virtual Secure Mode is used to secure and protect the state of the virtual TPM chip.  
+### Enable Isolated User Mode ###
+If you select **Enable Trusted Platform Module** on Hyper-V hosts that run versions of Windows earlier than Windows 10 Anniversary Update, you must enable Isolated User Mode. You don't need to do this for Hyper-V hosts that run Windows Server 2016 or Windows 10 Anniversary Update.
 
-To enable Isolated User Mode on the Hyper-V host that runs Windows 10,  
+Isolated User Mode is the runtime environment that hosts security applications inside Virtual Secure Mode on the Hyper-V host. Virtual Secure Mode is used to secure and protect the state of the virtual TPM chip.  
+
+To enable Isolated User Mode on the Hyper-V host that run earlier versions of Windows 10,  
 
 1.  Open Windows PowerShell as an administrator.  
 
