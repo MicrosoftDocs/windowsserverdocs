@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5dc529f7-7bc3-48dd-b83d-92a09e4055c4
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 1 Configure the DirectAccess Infrastructure
 
@@ -68,9 +68,9 @@ Configure routing in the corporate network as follows:
 ## <a name="ConfigFirewalls"></a>Configure firewalls  
 When using additional firewalls in your deployment, apply the following Internet-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv4 Internet:  
   
--   6to4 traffic—IP Protocol 41 inbound and outbound.  
+-   6to4 traffic-IP Protocol 41 inbound and outbound.  
   
--   IP-HTTPS—Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
+-   IP-HTTPS-Transmission Control Protocol (TCP) destination port 443, and TCP source port 443 outbound. When the Remote Access server has a single network adapter, and the network location server is on the Remote Access server, then TCP port 62000 is also required.  
   
 When using additional firewalls, apply the following Internet-facing firewall exceptions for Remote Access traffic when the Remote Access server is on the IPv6 Internet:  
   
@@ -80,7 +80,7 @@ When using additional firewalls, apply the following Internet-facing firewall ex
   
 When using additional firewalls, apply the following internal network firewall exceptions for Remote Access traffic:  
   
--   ISATAP—Protocol 41 inbound and outbound  
+-   ISATAP-Protocol 41 inbound and outbound  
   
 -   TCP/UDP for all IPv4/IPv6 traffic  
   
@@ -99,17 +99,17 @@ When you use an internal CA to issue certificates, you must configure a certific
 ### Configure the IP-HTTPS certificate  
 Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connections to the Remote Access server. There are three certificate options for the IP-HTTPS certificate:  
   
--   **Public**—Supplied by a 3rd party.  
+-   **Public**-Supplied by a 3rd party.  
   
     A certificate used for IP-HTTPS authentication. In the case that the certificate subject name is not a wild card, then it must be the externally resolvable FQDN URL used only for the Remote Access server IP-HTTPS connections.  
   
--   **Private**—The following are required, if they do not already exist:  
+-   **Private**-The following are required, if they do not already exist:  
   
     -   A website certificate used for IP-HTTPS authentication. The certificate subject should be an externally resolvable fully qualified domain name (FQDN) reachable from the Internet. The certificate is based on the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp).  
   
     -   A certificate revocation list (CRL) distribution point that is reachable from a publicly resolvable FQDN.  
   
--   **Self-signed**—The following are required, if they do not already exist:  
+-   **Self-signed**-The following are required, if they do not already exist:  
   
     > [!NOTE]  
     > Self-signed certificates cannot be used in multisite deployments.  
@@ -192,9 +192,9 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 You must also configure DNS entries for the following:  
   
--   **The IP-HTTPS server**—DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
+-   **The IP-HTTPS server**-DirectAccess clients must be able to resolve the DNS name of the Remote Access server from the Internet.  
   
--   **CRL revocation checking**—DirectAccess uses certificate revocation checking for the IP-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
+-   **CRL revocation checking**-DirectAccess uses certificate revocation checking for the IP-HTTPS connection between DirectAccess clients and the Remote Access server, and for the HTTPS-based connection between the DirectAccess client and the network location server. In both cases, DirectAccess clients must be able to resolve and access the CRL distribution point location.  
   
 ## <a name="ConfigAD"></a>Configure Active Directory  
 The Remote Access server and all DirectAccess client computers must be joined to an Active Directory domain. DirectAccess client computers must be a member of one of the following domain types:  
@@ -281,13 +281,13 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
 ## <a name="ConfigNLS"></a>Configure the network location server  
 The network location server should be on a server with high availability, and a valid SSL certificate trusted by the DirectAccess clients. There are two certificate options for the network location server certificate:  
   
--   **Private**—The following are required, if they do not already exist:  
+-   **Private**-The following are required, if they do not already exist:  
   
     -   A website certificate used for the network location server. The certificate subject should be the URL of the network location server. The certificate is based on the certificate template created in [Configuring certificate templates](assetId:///6a5ec5c1-d653-47b1-a567-cc485004e7bc#ConfigCertTemp).  
   
     -   A CRL distribution point that is highly available from the internal network.  
   
--   **Self-signed**—The following are required, if they do not already exist:  
+-   **Self-signed**-The following are required, if they do not already exist:  
   
     > [!NOTE]  
     > Self-signed certificates cannot be used in multisite deployments.  

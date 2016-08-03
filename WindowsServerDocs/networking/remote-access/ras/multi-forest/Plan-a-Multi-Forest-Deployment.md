@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
-author: coreyp
+author: coreyp-at-msft
 ---
 # Plan a Multi-Forest Deployment
 

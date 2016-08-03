@@ -31,7 +31,7 @@ To perform this procedure, you must be a member of **Domain Admins**.
   
 3.  In **Alias name**, type the alias name **pki**.  
   
-4.  When you type a value for **Alias name**, the **Fully qualified domain name \(FQDN\)** auto-fills in the dialog box. For example, if your alias name is “pki” and your domain is corp.contoso.com, the value **pki.corp.contoso.com** is auto-filled for you.  
+4.  When you type a value for **Alias name**, the **Fully qualified domain name \(FQDN\)** auto-fills in the dialog box. For example, if your alias name is "pki" and your domain is corp.contoso.com, the value **pki.corp.contoso.com** is auto-filled for you.  
   
 5.  In **Fully qualified domain name \(FQDN\) for target host**, type the FQDN of your Web server. For example, if your Web server is named WEB1 and your domain is corp.contoso.com, type **WEB1.corp.contoso.com**.  
   

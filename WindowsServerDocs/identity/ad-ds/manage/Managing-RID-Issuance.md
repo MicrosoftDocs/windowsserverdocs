@@ -1,4 +1,4 @@
-﻿---
+---
 title: Managing RID Issuance
 ms.custom: 
   - AD

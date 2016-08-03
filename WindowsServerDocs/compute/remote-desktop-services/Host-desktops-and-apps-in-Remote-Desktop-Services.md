@@ -20,8 +20,7 @@ Remote Desktop Services in Windows Server 2016 lets users access computers, apps
   
 You can use Remote Desktop Services plus Azure services to create hosting solutions. Use the following information to get started with desktop hosting in Remote Desktop Services in Windows Server.
   
-- [Microsoft Azure Desktop Hosting Reference Architecture](Desktop-Hosting-Reference-Architecture.md)  
-- [Configure your environment for desktop hosting](Configure-your-desktop-hosting-environment.md)  
+- [Microsoft Azure Desktop Hosting Reference Architecture](Desktop-Hosting-Reference-Architecture.md)    
 - [Create a basic desktop hosting deployment](Deploy-a-basic-desktop-hosting-environment-using-Azure-IaaS.md)  
 - [Deploy apps using RemoteApps](Deploy-RemoteApp-programs.md)  
   

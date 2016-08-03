@@ -110,7 +110,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
     For example, to create a new child domain named NorthAmerica in the Contoso.com forest and be prompted to enter and confirm a masked password:  
   
     ```  
-    Install-ADDSDomain â€"NewDomainName NorthAmerica â€"ParentDomainName Contoso.com â€"DomainType Child  
+    Install-ADDSDomain "NewDomainName NorthAmerica "ParentDomainName Contoso.com "DomainType Child  
     ```  
   
 -   If specified *with a value*, the value must be a secure string. This is not the preferred usage when running the cmdlet interactively.  

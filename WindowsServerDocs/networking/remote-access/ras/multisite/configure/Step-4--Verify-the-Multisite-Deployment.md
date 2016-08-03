@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 345b676a-a397-4d51-9973-8b25bc05fa55
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 4 Verify the Multisite Deployment
 

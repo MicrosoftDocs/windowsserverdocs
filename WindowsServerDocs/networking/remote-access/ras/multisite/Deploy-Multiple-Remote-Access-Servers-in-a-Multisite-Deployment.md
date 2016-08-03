@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
-author: coreyp
+author: coreyp-at-msft
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment
 
@@ -59,16 +59,16 @@ The multisite deployment scenario includes a number of steps:
 ## <a name="BKMK_APP"></a>Practical applications  
 A multisite deployment provides the following:  
   
--   Improved performance—A multisite deployment allows client computers accessing internal resources using Remote Access to connect using the closest and most suitable entry point. Client access internal resources efficiently, and the speed of client Internet requests routed via DirectAccess is improved. Traffic across entry points can be balanced using an external global load balancer.  
+-   Improved performance-A multisite deployment allows client computers accessing internal resources using Remote Access to connect using the closest and most suitable entry point. Client access internal resources efficiently, and the speed of client Internet requests routed via DirectAccess is improved. Traffic across entry points can be balanced using an external global load balancer.  
   
--   Ease-of-management—Multisite allows administrators to align the Remote Access deployment to an Active Directory sites deployment, providing a simplified architecture. Shared settings can easily be set across entry point servers or clusters. Remote Access settings can be managed from any of the servers in the deployment, or remotely using Remote Server Administration Tools (RSAT). In addition, the entire multisite deployment can be monitored from a single Remote Access Management console.  
+-   Ease-of-management-Multisite allows administrators to align the Remote Access deployment to an Active Directory sites deployment, providing a simplified architecture. Shared settings can easily be set across entry point servers or clusters. Remote Access settings can be managed from any of the servers in the deployment, or remotely using Remote Server Administration Tools (RSAT). In addition, the entire multisite deployment can be monitored from a single Remote Access Management console.  
   
 ## <a name="BKMK_NEW"></a>Roles and features included in this scenario  
 The following table lists the roles and features used in this scenario.  
   
 |Role/feature|How it supports this scenario|  
 |-----------------|---------------------------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services (RRAS), which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services (RRAS) VPN—DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing—RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database—Used for local accounting on the Remote Access server.|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console. It encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services (RRAS), which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />-   DirectAccess and Routing and Remote Access Services (RRAS) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />-   RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />Dependencies are as follows:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server and default web probe.<br />-   Windows Internal Database-Used for local accounting on the Remote Access server.|  
 |Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI and Command Line Tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
@@ -87,13 +87,13 @@ Software requirements for this scenario include the following:
   
 -   In addition to software requirements for a single server there are a number of multisite-specific requirements:  
   
-    -   IPsec authentication requirements—In a multisite deployment DirectAccess must be deployed using IPsec machine certificate authentication. The option to perform IPsec authentication using the Remote Access server as a Kerberos proxy is not supported. An internal CA is required to deploy the IPsec certificates.  
+    -   IPsec authentication requirements-In a multisite deployment DirectAccess must be deployed using IPsec machine certificate authentication. The option to perform IPsec authentication using the Remote Access server as a Kerberos proxy is not supported. An internal CA is required to deploy the IPsec certificates.  
   
-    -   IP-HTTPS and network location server requirements—Certificates required for IP-HTTPS and the network location server must be issued by a CA. The option to use certificates that are automatically issued and self-signed by the Remote Access server is not supported. Certificates can be issued by an internal CA or by a third-party external CA.  
+    -   IP-HTTPS and network location server requirements-Certificates required for IP-HTTPS and the network location server must be issued by a CA. The option to use certificates that are automatically issued and self-signed by the Remote Access server is not supported. Certificates can be issued by an internal CA or by a third-party external CA.  
   
-    -   Active Directory requirements—At least one Active Directory site is required. The Remote Access server should be located in the site. For faster update times, it is recommended that each site has a writeable domain controller, though this is not mandatory.  
+    -   Active Directory requirements-At least one Active Directory site is required. The Remote Access server should be located in the site. For faster update times, it is recommended that each site has a writeable domain controller, though this is not mandatory.  
   
-    -   Security group requirements—Requirements are as follows:  
+    -   Security group requirements-Requirements are as follows:  
   
         -   A single security group is required for all Windows 8 client computers from all domains. It is recommended to create a unique security group of these clients for each domain.  
   
@@ -101,7 +101,7 @@ Software requirements for this scenario include the following:
   
         -   Computers should not be included in more than one security group that includes DirectAccess clients. If clients are included in multiple groups, name resolution for client requests will not work as expected.  
   
-    -   GPO requirements—GPOs can be manually created before configuring Remote Access, or automatically created during Remote Access deployment. Requirements are as follows:  
+    -   GPO requirements-GPOs can be manually created before configuring Remote Access, or automatically created during Remote Access deployment. Requirements are as follows:  
   
         -   A unique client GPO is required for each domain.  
   

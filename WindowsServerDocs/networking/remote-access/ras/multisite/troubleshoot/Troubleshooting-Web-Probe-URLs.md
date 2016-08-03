@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6dfffd1e-f4f4-43b6-9e3c-49015ce34338
-author: coreyp
+author: coreyp-at-msft
 ---
 # Troubleshooting Web Probe URLs
 

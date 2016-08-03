@@ -1,4 +1,4 @@
-﻿---
+---
 title: Designing the Logical Structure
 ms.custom: na
 ms.prod: windows-server-threshold

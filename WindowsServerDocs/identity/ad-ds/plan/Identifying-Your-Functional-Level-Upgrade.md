@@ -1,4 +1,4 @@
-﻿---
+---
 title: Identifying Your Functional Level Upgrade
 ms.custom: na
 ms.prod: windows-server-threshold

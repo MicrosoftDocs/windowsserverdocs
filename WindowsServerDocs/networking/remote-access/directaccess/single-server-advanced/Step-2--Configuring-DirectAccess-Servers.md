@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 2 Configuring DirectAccess Servers
 

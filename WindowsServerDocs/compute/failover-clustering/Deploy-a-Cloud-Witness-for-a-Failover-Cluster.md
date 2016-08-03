@@ -42,7 +42,7 @@ There are significant benefits which this approach:
 
 3.  Same Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).  
 
-4.  Very low on-going $cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes’ state changes).  
+4.  Very low on-going $cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes' state changes).  
 
 5.  Built-in Cloud Witness resource type.  
 
@@ -81,7 +81,7 @@ To set up a Cloud Witness as a quorum witness for your cluster, complete the fol
 ## Create an Azure Storage Account to use as a Cloud Witness
  This section describes how to create a storage account and view and copy endpoint URLs and access keys for that account.
 
-To configure Cloud Witness, you must have a valid Azure Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster’s unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.  
+To configure Cloud Witness, you must have a valid Azure Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.  
 
 When you use the same Azure Storage Account for configuring Cloud Witness for multiple different clusters,  a single **msft-cloud-witness** container gets created automatically. This container will contain one-blob file per cluster.  
 
@@ -197,4 +197,4 @@ In case you need to use a different endpoint (rare):
 
 *  Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.  
 ## See Also
--   [What's New in Failover Clustering in Windows Server Technical Preview](What-s-New-in-Failover-Clustering-in-Windows-Server-Technical-Preview.md)
+-   [What's New in Failover Clustering in Windows Server Technical Preview](whats-new-failover-clustering-windows-server.md)

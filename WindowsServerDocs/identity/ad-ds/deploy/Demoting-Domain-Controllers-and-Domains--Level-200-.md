@@ -104,7 +104,7 @@ Uninstall-windowsfeature
   
 You configure demotion options on the **Credentials** page. Provide the credentials necessary to perform the demotion from the following list:  
   
--   Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller object’s metadata from Active Directory.  
+-   Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller object's metadata from Active Directory.  
   
     > [!WARNING]  
     > Do not select this option unless the domain controller cannot contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all un-replicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software.  
@@ -155,7 +155,7 @@ The equivalent ADDSDeployment cmdlet arguments are:
 ### New Administrator Password  
 ![](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_NewAdminPwd.png)  
   
-The **New Administrator Password** page requires you to provide a password for the built-in local computer’s Administrator account, once the demotion completes and the computer becomes a domain member server or workgroup computer.  
+The **New Administrator Password** page requires you to provide a password for the built-in local computer's Administrator account, once the demotion completes and the computer becomes a domain member server or workgroup computer.  
   
 The **Uninstall-ADDSDomainController** cmdlet and arguments follow the same defaults as Server Manager if not specified.  
   

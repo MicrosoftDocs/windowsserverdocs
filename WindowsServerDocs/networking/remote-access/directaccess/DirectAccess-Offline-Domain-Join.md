@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
-author: coreyp
+author: coreyp-at-msft
 ---
 # DirectAccess Offline Domain Join
 
@@ -132,7 +132,7 @@ Complete the following steps to perform the offline domain join:
   
 4.  On the **Members** tab, click **Add**.  
   
-5.  Click **Object Types…**, select **Computers**, and then click **OK**.  
+5.  Click **Object Types**, select **Computers**, and then click **OK**.  
   
 6.  Type the client name to add, and then click **OK**.  
   

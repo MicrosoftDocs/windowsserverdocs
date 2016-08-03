@@ -21,13 +21,13 @@ You can use the following topics to manage role based access control by using Se
   
 -   [Create an Access Policy](../../technologies/ipam/Create-an-Access-Policy.md)  
   
--   [Set Access Scope for a DNS Zone](../../technologies/ipam/Set-Access-Scope-for-a-DNS-Zone.md)  
+-   [Set Access Scope for a DNS Zone](../../technologies/ipam/Set-Access-Scope-for-a-DNS-Zone.md)
   
--   [Set Access Scope for DNS Resource Records](../../technologies/ipam/Set-Access-Scope-for-DNS-Resource-Records.md)  
+-   [Set Access Scope for DNS Resource Records](../../technologies/ipam/Set-Access-Scope-for-DNS-Resource-Records.md)
   
--   [View Roles and Role Permissions](../../technologies/ipam/View-Roles-and-Role-Permissions.md)  
+-   [View Roles and Role Permissions](../../technologies/ipam/View-Roles-and-Role-Permissions.md)
   
-Alternately, you can use Windows PowerShell to manage IPAM role based access control. For more information, see [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md).  
+Alternately, you can use Windows PowerShell to manage IPAM role based access control. For more information, see [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md).
   
 ## See Also  
 [Manage IPAM](Manage-IPAM.md)  

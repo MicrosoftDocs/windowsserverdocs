@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10c7a49c-5671-4bec-b562-13fdd67f4629
-author: coreyp
+author: coreyp-at-msft
 ---
 # Test Lab Guide: Demonstrate DirectAccess with OTP Authentication and RSA SecurID
 

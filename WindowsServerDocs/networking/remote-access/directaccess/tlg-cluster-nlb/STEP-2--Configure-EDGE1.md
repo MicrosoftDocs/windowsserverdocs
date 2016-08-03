@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84457351-1ca7-4e7c-8e2c-53d55b1fcdc0
-author: coreyp
+author: coreyp-at-msft
 ---
 # STEP 2 Configure EDGE1
 
@@ -17,7 +17,7 @@ author: coreyp
 
 The following procedure is performed on the DirectAccess server:  
   
--   [Configure DirectAccess on EDGE1](assetId:///f292ee3b-ca77-41f4-9ac3-c6ed5b244855#configDA)—Configure DirectAccess for your organization.  
+-   [Configure DirectAccess on EDGE1](assetId:///f292ee3b-ca77-41f4-9ac3-c6ed5b244855#configDA)-Configure DirectAccess for your organization.  
   
 ## <a name="configDA"></a>Configure DirectAccess on EDGE1  
   

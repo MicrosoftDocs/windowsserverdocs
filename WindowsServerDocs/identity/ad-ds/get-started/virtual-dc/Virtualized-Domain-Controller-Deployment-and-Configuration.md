@@ -429,7 +429,7 @@ The final option is to use the disk merge and conversion options within Hyper-V.
 ##### Hyper-V Manager Method  
 To create a merged disk using Hyper-V Manager:  
   
-1.  Click **Edit Disk�**.  
+1.  Click **Edit Disk**.  
   
 2.  Browse for the lowest child disk. For example, if you are using a differencing disk, the child disk is the lowest child. If the virtual machine has a snapshot (or multiple ones), the currently selected snapshot is the lowest child disk.  
   

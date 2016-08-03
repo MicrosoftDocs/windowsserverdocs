@@ -47,31 +47,31 @@ The following example script uses Windows PowerShell commands exported from the 
   
 ```  
 $ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
-$ruleproperties.Protocol = “All”  
-$ruleproperties.SourcePortRange = “0-65535”  
-$ruleproperties.DestinationPortRange = “0-65535”  
-$ruleproperties.Action = “Allow”  
-$ruleproperties.SourceAddressPrefix = “*”  
-$ruleproperties.DestinationAddressPrefix = “*”  
-$ruleproperties.Priority = “100”  
-$ruleproperties.Type = “Inbound”  
-$ruleproperties.Logging = “Enabled”  
+$ruleproperties.Protocol = "All"  
+$ruleproperties.SourcePortRange = "0-65535"  
+$ruleproperties.DestinationPortRange = "0-65535"  
+$ruleproperties.Action = "Allow"  
+$ruleproperties.SourceAddressPrefix = "*"  
+$ruleproperties.DestinationAddressPrefix = "*"  
+$ruleproperties.Priority = "100"  
+$ruleproperties.Type = "Inbound"  
+$ruleproperties.Logging = "Enabled"  
 $aclrule1 = new-object Microsoft.Windows.NetworkController.AclRule  
 $aclrule1.Properties = $ruleproperties  
-$aclrule1.ResourceId = “AllowAll_Inbound”  
+$aclrule1.ResourceId = "AllowAll_Inbound"  
 $ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
-$ruleproperties.Protocol = “All”  
-$ruleproperties.SourcePortRange = “0-65535”  
-$ruleproperties.DestinationPortRange = “0-65535”  
-$ruleproperties.Action = “Allow”  
-$ruleproperties.SourceAddressPrefix = “*”  
-$ruleproperties.DestinationAddressPrefix = “*”  
-$ruleproperties.Priority = “110”  
-$ruleproperties.Type = “Outbound”  
-$ruleproperties.Logging = “Enabled”  
+$ruleproperties.Protocol = "All"  
+$ruleproperties.SourcePortRange = "0-65535"  
+$ruleproperties.DestinationPortRange = "0-65535"  
+$ruleproperties.Action = "Allow"  
+$ruleproperties.SourceAddressPrefix = "*"  
+$ruleproperties.DestinationAddressPrefix = "*"  
+$ruleproperties.Priority = "110"  
+$ruleproperties.Type = "Outbound"  
+$ruleproperties.Logging = "Enabled"  
 $aclrule2 = new-object Microsoft.Windows.NetworkController.AclRule  
 $aclrule2.Properties = $ruleproperties  
-$aclrule2.ResourceId = “AllowAll_Outbound”  
+$aclrule2.ResourceId = "AllowAll_Outbound"  
 $acllistproperties = new-object Microsoft.Windows.NetworkController.AccessControlListProperties  
 $acllistproperties.AclRules = @($aclrule1, $aclrule2)  
 New-NetworkControllerAccessControlList -ResourceId "AllowAll" -Properties $acllistproperties -ConnectionUri <NC REST FQDN>  
@@ -96,7 +96,7 @@ Source IP|Destination IP|Protocol|Source Port|Destination Port|Direction|Action|
 * | *  |All| * | * | Inbound | Allow |104  
 * | *  |All| * | * | Outbound | Allow |105  
   
-The ACL created by the example script below, identified by the resource id **Subnet-192-168-0-0**, can now be applied to a virtual network subnet that uses the “192.168.0.0/24” subnet address.  Any network interface that is attached to that virtual network subnet automatically gets the above ACL rules applied.  
+The ACL created by the example script below, identified by the resource id **Subnet-192-168-0-0**, can now be applied to a virtual network subnet that uses the "192.168.0.0/24" subnet address.  Any network interface that is attached to that virtual network subnet automatically gets the above ACL rules applied.  
   
 The following is an example script using Windows Powershell commands to create this ACL using the Network Controller REST API:  
   

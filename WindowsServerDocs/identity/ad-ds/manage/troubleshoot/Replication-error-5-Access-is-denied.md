@@ -1,4 +1,4 @@
-﻿---
+---
 title: Replication error 5 Access is denied
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -528,8 +528,8 @@ Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;NetBIOS domain name&gt;
-* Missing SPN :LDAP/bba727ef�be4e�477d�9796�63b6cee3bSf.&lt;forest root domain DN&gt;
-* SPN found :E3514235�4B06�I1D1�AB�4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
+* Missing SPN :LDAP/bba727efbe4e477d979663b6cee3bSf.&lt;forest root domain DN&gt;
+* SPN found :E35142354B06I1D1AB4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
 * Missing SPN :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;
@@ -548,8 +548,8 @@ Checking machine account for DC &lt;DC name&gt; on DC &lt;DC Name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;
 * Missing SPN :LDAP/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;NetBIOS domain name&gt;
-* Missing SPN :LDAP/bba727ef�be4e�477d�9796�63b6cee3bSf.&lt;forest root domain DN&gt;
-* SPN found :E3514235�4B06�I1D1�AB�4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
+* Missing SPN :LDAP/bba727efbe4e477d979663b6cee3bSf.&lt;forest root domain DN&gt;
+* SPN found :E35142354B06I1D1AB4-00c04fc2dcd2/&lt;NTDS Settings object GUID&gt;/&lt;forest root domain DNS name&gt;
 * Missing SPN :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;/&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;.&lt;DNS domain name&gt;
 * SPN found :HOST/&lt;hostname&gt;

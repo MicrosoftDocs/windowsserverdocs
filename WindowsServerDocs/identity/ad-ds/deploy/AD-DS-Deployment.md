@@ -29,7 +29,7 @@ This guide covers how to install and remove Active Directory Domain Services (AD
   
 -   [AD DS Installation and Removal Wizard Page Descriptions](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md)  
   
--   [Changes Made by Adprep.exe](../../ad-ds/deploy/adprep/Changes-Made-by-Adprep.exe.md)  
+-   [Changes Made by Adprep](../../ad-ds/deploy/adprep/Changes-Made-by-Adprep.md)  
   
 -   [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md)  
   

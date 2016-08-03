@@ -1,4 +1,4 @@
-﻿---
+---
 title: Replication error 8453 Replication access was denied
 ms.custom: na
 ms.prod: windows-server-threshold

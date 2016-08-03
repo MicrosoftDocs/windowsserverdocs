@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
-author: coreyp
+author: coreyp-at-msft
 ---
 # Configure a Multi-Forest Deployment
 
@@ -65,13 +65,13 @@ In this scenario, DirectAccess is deployed in a multisite configuration on Fores
 ## <a name="OTPMultiForest"></a>Configure OTP in a multi-forest deployment  
 Note the following terms when configuring OTP in a multi-forest deployment:  
   
--   Root CA—The forest(s) main PKI tree CA.  
+-   Root CA-The forest(s) main PKI tree CA.  
   
--   Enterprise CA—All other CAs.  
+-   Enterprise CA-All other CAs.  
   
--   Resource Forest—The forest that contains the Root CA, and is considered to be the 'Managing forest\domain'.  
+-   Resource Forest-The forest that contains the Root CA, and is considered to be the 'Managing forest\domain'.  
   
--   Account Forest—All other forests in the topology.  
+-   Account Forest-All other forests in the topology.  
   
 The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: PKISync.ps1 Script for Cross-forest Certificate Enrollment](http://technet.microsoft.com/library/ff961506.aspx).  
   

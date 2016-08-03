@@ -35,7 +35,7 @@ This topic contains the following sections.
 ## <a name="bkmk_s2s"></a>Site-to-site Connectivity Options  
 RAS Gateway now supports three types of VPN site-to-site connections:  Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networking (VPN), Layer 3 (L3) VPN, and Generic Routing Encapsulation (GRE) tunnels.  
   
-For more information about GRE, see [GRE Tunneling in Windows Server Technical Preview](../../../remote-access/ras-gateway/GRE-Tunneling-in-Windows-Server-Technical-Preview.md).  
+For more information about GRE, see [GRE Tunneling in Windows Server Technical Preview](../../../remote-access/ras-gateway/gre-tunneling-windows-server.md).  
   
 ## <a name="bkmk_pools"></a>Gateway Pools  
 In Windows Server 2016 Technical Preview, you can create gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks. Gateway pools can perform any of the individual gateway functions - Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networking (VPN), Layer 3 (L3) VPN, and Generic Routing Encapsulation (GRE) tunnels - or the pool can perform all of these functions and act as a mixed pool.  
@@ -58,7 +58,7 @@ You can easily scale a gateway pool up or down by adding or removing gateway VMs
 For more information, see [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   
 ## <a name="bkmk_m"></a>M+N Gateway Pool Redundancy  
-Every gateway pool is M+N redundant. This means that an ‘M’ number of active gateway virtual machines (VMs) are backed up by an ‘N’ number of standby gateway VMs. M+N redundancy provides you with more flexibility in determining  the level of reliability that you require when you deploy RAS Gateway. Rather than using only one standby RAS Gateway per active RAS Gateway VM - which is the only configuration option with  Windows Server 2012 R2  - you can now configure as many  standby VMs as you require. The Network Controller Gateway Service Manager feature efficiently uses the standby RAS Gateway VM capacity to provide reliable failover if an active RAS Gateway VM fails or loses connectivity.  
+Every gateway pool is M+N redundant. This means that an 'M' number of active gateway virtual machines (VMs) are backed up by an 'N' number of standby gateway VMs. M+N redundancy provides you with more flexibility in determining  the level of reliability that you require when you deploy RAS Gateway. Rather than using only one standby RAS Gateway per active RAS Gateway VM - which is the only configuration option with  Windows Server 2012 R2  - you can now configure as many  standby VMs as you require. The Network Controller Gateway Service Manager feature efficiently uses the standby RAS Gateway VM capacity to provide reliable failover if an active RAS Gateway VM fails or loses connectivity.  
   
 For more information, see [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).  
   

@@ -755,7 +755,7 @@ Values should show **True** for RDMA Capable for the RDMA enabled interfaces. Th
 
 ## Related Topics  
 
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/Storage-Spaces-Direct-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
 
 -   [Storage Spaces Direct Hardware Requirements](../storage-spaces/Storage-Spaces-Direct-Hardware-Requirements.md)  
 

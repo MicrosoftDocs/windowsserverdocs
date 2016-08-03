@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e
-author: coreyp
+author: coreyp-at-msft
 ---
 # Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment
 

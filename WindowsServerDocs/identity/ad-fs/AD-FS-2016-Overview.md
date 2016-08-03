@@ -1,15 +1,13 @@
 ---
 title: AD FS 2016 Overview
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # AD FS 2016 Overview
 
@@ -19,7 +17,7 @@ This document contains a list of all of the documentation overviews for AD FS fo
   
   
   
-* [What's New in AD FS for Windows Server 2016](../ad-fs/overview/What-s-new-in-Active-Directory-Federation-Services-for-Windows-Server-2016-Technical-Preview.md)  
+* [What's New in AD FS for Windows Server 2016](../ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)  
   
 * [AD FS Scenarios for Developers](../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)  
 

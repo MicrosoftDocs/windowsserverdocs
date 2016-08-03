@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
-author: coreyp
+author: coreyp-at-msft
 ---
 # Step 2 Plan the DirectAccess Deployment
 
