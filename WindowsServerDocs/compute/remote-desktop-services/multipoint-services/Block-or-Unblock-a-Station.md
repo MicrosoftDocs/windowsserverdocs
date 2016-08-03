@@ -33,35 +33,31 @@ You can block a user or users from the MultiPoint Services system if you need to
   
 #### To block a station  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], select the thumbnail image of the station you want to block.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], select the thumbnail image of the station you want to block.  
   
 2.  On the Blocking tab, click **Block**, and then click **Block Selected Desktop\(s\)**.  
   
 #### To block all stations  
   
-In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], on the Blocking tab, click **Block**, and then click **Block All Desktops**.  
+In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the Blocking tab, click **Block**, and then click **Block All Desktops**.  
   
 #### To unblock a station  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], select the thumbnail image of the station you want to unblock.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], select the thumbnail image of the station you want to unblock.  
   
 2.  On the Blocking tab, click **Unblock**, and then click **Unblock Selected Desktop\(s\)**.  
   
 #### To unblock all stations  
   
-In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], on the Blocking tab, click **Unblock**, and then click **Unblock All Desktops**.  
+In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the Blocking tab, click **Unblock**, and then click **Unblock All Desktops**.  
   
 ## Create a message to display for blocked users  
 Before you block a user, you may want to create a message to display on the user’s monitor when they are blocked. For example, “Please turn your attention to the speaker.” **Station blocked** is the default text if you do not create your own message.  
   
 #### To create a message to display for blocked users  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the **Home** tab.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the **Home** tab.  
   
 2.  Click the **Block** drop\-down menu, and then click **Set Message**. The **Set Message for Blocked Users** page opens.  
   
-3.  Type the message you want to display on the blocked station\(s\), and then click **OK**.  
-  
-## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-  
+3.  Type the message you want to display on the blocked station\(s\), and then click **OK**.

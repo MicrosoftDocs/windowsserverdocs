@@ -33,7 +33,7 @@ You can *disconnect* or *suspend* users from the MultiPoint Services system when
   
 #### To suspend all user sessions  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
   
 2.  In the **Computer** column, click name of the computer whose sessions you want to suspend.  
   
@@ -42,7 +42,5 @@ You can *disconnect* or *suspend* users from the MultiPoint Services system when
 After a user session has been suspended, the user can log on to the same or another station and continue to work in the original session.  
   
 ## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-[Log off or Disconnect User Sessions](../../../compute/remote-desktop-services/multipoint-2/Log-off-or-Disconnect-User-Sessions.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)  
+[Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)

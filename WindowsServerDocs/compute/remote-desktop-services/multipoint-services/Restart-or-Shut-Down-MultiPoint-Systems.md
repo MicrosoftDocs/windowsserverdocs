@@ -29,17 +29,16 @@ translation.priority.ht:
   - zh-tw
 ---
 # Restart or Shut Down MultiPoint Systems
-Using [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], you can restart or shut down one MultiPoint Services system or multiple MultiPoint Services systems.  
+Using [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], you can restart or shut down one MultiPoint Services system or multiple MultiPoint Services systems.  
   
 #### To restart a MultiPoint Services system or multiple systems  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the **Systems** tab.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the **Systems** tab.  
   
 2.  Click the thumbnail image\(s\) of the server\(s\) you want to restart, and then, on the **Hardware** tab, click **Restart**.  
   
 #### To shut down a MultiPoint Services system or multiple systems  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the **Systems** tab.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the **Systems** tab.  
   
-2.  Click the thumbnail image\(s\) of the server\(s\) you want to restart, and then, on the **Hardware** tab, click **Shut Down**.  
-  
+2.  Click the thumbnail image\(s\) of the server\(s\) you want to restart, and then, on the **Hardware** tab, click **Shut Down**.

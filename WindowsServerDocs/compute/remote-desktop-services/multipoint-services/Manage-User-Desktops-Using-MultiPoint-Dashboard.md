@@ -29,9 +29,9 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage User Desktops Using MultiPoint Dashboard
-In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*. The [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)] is a tool which helps you manage those desktops.   
+In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*. The [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)] is a tool which helps you manage those desktops.   
   
-In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], on the **Home** tab, you can do the following:  
+In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the **Home** tab, you can do the following:  
   
 ### View desktops  
 You can view the thumbnail images for each active desktop. For information about viewing thumbnails, see the [View Options for Session Thumbnails](View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md) topic.  
@@ -55,7 +55,7 @@ You can launch or close applications on a station. For information about launchi
 You can chat with selected users. The chat message is only visible to the Dashboard user and the user of the selected session. See [Use IM](Use-IM.md) for more information.  
   
 ### Change the size of thumbnail images  
-You can change the size of the thumbnails that display in [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)]. For information about changing the thumbnail size, see [View Options for Session Thumbnails](View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md).
+You can change the size of the thumbnails that display in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)]. For information about changing the thumbnail size, see [View Options for Session Thumbnails](View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md).
   
 ### Show all stations  
 You can view all of the stations that are connected to your system, including stations that are not active. For information about viewing all stations, see the [Show All Stations](Show-All-Stations.md) topic.  

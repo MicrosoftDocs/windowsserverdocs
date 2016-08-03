@@ -41,7 +41,7 @@ You should end a user’s session when you have to log the user off from the Mul
   
 #### To end user sessions  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
   
 2.  Do one of the following:  
   

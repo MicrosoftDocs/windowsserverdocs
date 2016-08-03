@@ -33,15 +33,15 @@ As a MultiPoint Dashboard User, you can assist another user by remotely accessin
   
 #### To take control of a user’s desktop  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], on the **Home** tab, click the thumbnail image of the desktop for the user you want to assist.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the **Home** tab, click the thumbnail image of the desktop for the user you want to assist.  
   
 2.  On the **Assist** tab, click **Take Control**. The user’s desktop opens on your desktop, and then you can navigate their desktop using your keyboard and mouse.  
   
-3.  When you are finished assisting the user, in [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)] click **Stop**.  
+3.  When you are finished assisting the user, in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)] click **Stop**.  
   
     > [!NOTE]  
-    > You may need to minimize the user’s desktop to see your [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)].  
+    > You may need to minimize the user’s desktop to see your [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)].  
   
 ## See Also  
-[Manage User Desktops Using MultiPoint Dashboard](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
+[Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
   

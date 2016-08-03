@@ -13,7 +13,7 @@ manager: jeffgilb
 robots: noindex,nofollow
 ---
 # Troubleshooting
-View the Troubleshooting topics to help resolve problems when you are using the [!INCLUDE[win8_server_multipoint_3](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_3_md.md)] system.  
+View the Troubleshooting topics to help resolve problems when you are using the [!INCLUDE[win8_server_multipoint_3](./includes/win8_server_multipoint_3_md.md)] system.  
   
-If you are connected to the Internet, you can see online resources for [!INCLUDE[Server_ProductNameShort](../../../compute/remote-desktop-services/multipoint-1/includes/Server_ProductNameShort_md.md)] that include additional troubleshooting material. [View MultiPoint Resources on the Web.](http://go.microsoft.com/fwlink/?LinkId=266475)  
+If you are connected to the Internet, you can see online resources for [!INCLUDE[Server_ProductNameShort](./includes/Server_ProductNameShort_md.md)] that include additional troubleshooting material. [View MultiPoint Resources on the Web.](http://go.microsoft.com/fwlink/?LinkId=266475)  
   

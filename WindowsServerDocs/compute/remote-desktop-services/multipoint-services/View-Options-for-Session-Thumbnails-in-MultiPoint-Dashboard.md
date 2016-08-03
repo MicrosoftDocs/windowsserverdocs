@@ -29,9 +29,9 @@ translation.priority.ht:
   - zh-tw
 ---
 # View Options for Session Thumbnails in MultiPoint Dashboard
-An easy way to monitor user activities on individual desktops is to view thumbnail images of each active desktop on your MultiPoint Services system. By default, images of desktops are displayed in [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)] on the **Home** tab.  
+An easy way to monitor user activities on individual desktops is to view thumbnail images of each active desktop on your MultiPoint Services system. By default, images of desktops are displayed in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)] on the **Home** tab.  
   
-Using [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], you can do the following:  
+Using [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], you can do the following:  
   
 1.  View a user’s desktop more closely by enlarging its view in the dashboard.  
   
@@ -63,8 +63,7 @@ Using [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-deskto
   
 3.  To change back to the filtered view, click **Show**, and then click **Filtered View**.  
 
->[!NOTE] Right-click one or more thumbnails to get to additional actions you can take on active or inactive sessions, like **Log off Selected Users**. See [Log Off User Sessions](../../../compute/remote-desktop-services/multipoint-2/Log-Off-User-Sessions.md) for more information.
+>[!NOTE] Right-click one or more thumbnails to get to additional actions you can take on active or inactive sessions, like **Log off Selected Users**. See [Log Off User Sessions](Log-Off-User-Sessions.md) for more information.
 
 ## See Also  
-[Manage User Desktops Using MultiPoint Dashboard](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
-  
+[Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)

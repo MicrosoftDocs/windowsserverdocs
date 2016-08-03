@@ -29,7 +29,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage MultiPoint Systems Using MultiPoint Dashboard
-In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], on the **Systems** tab, you can do the following:  
+In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the **Systems** tab, you can do the following:  
   
 ### Restart or shut down selected systems  
 You can restart or shut down selected MultiPoint Services systems. For information about restarting or shutting down selected systems, see the [Restart or Shut Down MultiPoint Systems](Restart-or-Shut-Down-MultiPoint-Systems.md) topic.  

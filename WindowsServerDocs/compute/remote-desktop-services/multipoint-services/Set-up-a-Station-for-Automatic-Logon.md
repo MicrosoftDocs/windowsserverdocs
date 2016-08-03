@@ -33,7 +33,7 @@ Auto\-logon enables each station to be automatically logged on when the computer
   
 #### To set a station for automatic logon  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
   
 2.  Click the name of the station you want to automatically log on.  
   
@@ -43,8 +43,7 @@ Auto\-logon enables each station to be automatically logged on when the computer
   
 5.  Enter the password for the user account, and then re\-enter the password to confirm it.  
   
-6.  Click **OK**. The page closes. The account name is displayed in the **Auto\-logon** column in [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)].  
+6.  Click **OK**. The page closes. The account name is displayed in the **Auto\-logon** column in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)].  
   
 ## See Also  
-[Manage User Stations](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Stations.md)  
-  
+[Manage User Stations](Manage-User-Stations.md)

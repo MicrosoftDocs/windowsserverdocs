@@ -33,26 +33,25 @@ As a MultiPoint Dashboard User, you can project your desktop to a single user’
   
 #### To project your desktop to a standard user’s station  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop to which you want to project your station.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop to which you want to project your station.  
   
 2.  On the **Home** tab, click the **Your Desktop** drop\-down menu, and then click **Project Your Desktop to Selected Desktop\(s\)**.  
   
-3.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
+3.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
   
 #### To project your desktop to all stations  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], on the **Home** tab, click the **Your Desktop** drop\-down menu, and then click **Project Your Desktop to All Desktop\(s\)**.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the **Home** tab, click the **Your Desktop** drop\-down menu, and then click **Project Your Desktop to All Desktop\(s\)**.  
   
-2.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
+2.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
   
 #### To project a different desktop to all desktops  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop you want to project to all desktops.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop you want to project to all desktops.  
   
 2.  On the **Home** tab, click the **Selected Desktop** drop\-down menu, and then click **Selected Desktop**. The selected desktop is displayed on all desktops.  
   
-3.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
+3.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
   
 ## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-  
+[Manage User Desktops](manage-user-desktops-with-multipoint-dashboard.md)

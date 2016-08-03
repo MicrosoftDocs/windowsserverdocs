@@ -33,7 +33,7 @@ If you are logged on as an *administrative user* on the MultiPoint Services syst
   
 #### To modify a user account  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Users** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Users** tab.  
   
 2.  In the **User** column, click the account that you want to modify.  
   
@@ -47,9 +47,7 @@ If you are logged on as an *administrative user* on the MultiPoint Services syst
     |Delete user account|Removes the user account from the MultiPoint Services system.|  
   
 ## See Also  
-[Create an Administrative User Account](../../../compute/remote-desktop-services/multipoint-2/Create-an-Administrative-User-Account.md)  
-[Create a Standard User Account](../../../compute/remote-desktop-services/multipoint-2/Create-a-Standard-User-Account.md)  
-[Use Windows Server Help](../../../compute/remote-desktop-services/multipoint-2/Use-Windows-Server-Help.md)  
-[Manage User Accounts](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Accounts.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Create an Administrative User Account](Create-an-Administrative-User-Account.md)  
+[Create a Standard User Account](Create-a-Standard-User-Account.md)  
+[Use Windows Server Help](Use-Windows-Server-Help.md)  
+[Manage User Accounts](Manage-User-Accounts.md)

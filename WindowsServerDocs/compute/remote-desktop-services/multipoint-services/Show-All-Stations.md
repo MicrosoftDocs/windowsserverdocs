@@ -29,14 +29,10 @@ translation.priority.ht:
   - zh-tw
 ---
 # Show All Stations
-As an administrator on the MultiPoint Services system, you may want to view all of the stations that are connected to your system, including non\-active or logged off stations. For example, per your license agreement, you may need to check the number of stations that are connected the MultiPoint Services system. You can view this information using [!INCLUDE[wms_2011_manager](../../../compute/remote-desktop-services/multipoint-1/includes/wms_2011_manager_md.md)].  
+As an administrator on the MultiPoint Services system, you may want to view all of the stations that are connected to your system, including non\-active or logged off stations. For example, per your license agreement, you may need to check the number of stations that are connected the MultiPoint Services system. You can view this information using [!INCLUDE[wms_2011_manager](./includes/wms_2011_manager_md.md)].  
   
 #### To show all user stations  
   
 1.  In normal mode, click the **Desktops** tab.  
   
-2.  Under **General Tasks**, click **Show all stations**.  
-  
-## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-  
+2.  Under **General Tasks**, click **Show all stations**.

@@ -29,7 +29,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Create an Administrative User Account
-Create *administrative user accounts* for those individuals who will manage your MultiPoint Services system. To see who has administrative access, in [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], click the **Users** tab. Administrative user accounts are displayed in the **Account Type** column as **Administrator**. *Administrative users* have access to all [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] tasks that change desktop and system settings, such as:  
+Create *administrative user accounts* for those individuals who will manage your MultiPoint Services system. To see who has administrative access, in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Users** tab. Administrative user accounts are displayed in the **Account Type** column as **Administrator**. *Administrative users* have access to all [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] tasks that change desktop and system settings, such as:  
   
 -   Creating accounts  
   
@@ -41,14 +41,14 @@ Create *administrative user accounts* for those individuals who will manage your
   
 Administrative users can perform tasks that affect all other users of the MultiPoint Services system, such as install software or change security settings. For this reason, administrative users should have unique user names and passwords that are known only to them.  
   
-For more information about issues that you, as an administrative user, should consider as you create and manage user accounts, see the [User Account Considerations](../../../compute/remote-desktop-services/multipoint-2/User-Account-Considerations.md) topic.  
+For more information about issues that you, as an administrative user, should consider as you create and manage user accounts, see the [User Account Considerations](User-Account-Considerations.md) topic.  
   
 > [!NOTE]  
 > You might want to create a *standard user account* for you to use when you perform tasks on the MultiPoint Services system that are not related to MultiPoint Services system management. You would then only log on to your administrative user account when you need to perform system management tasks.  
   
 #### To create an administrative user account  
   
-1.  In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], click the **Users** tab.  
+1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Users** tab.  
   
 2.  Under **User Tasks**, click **Add user account**. The **Add User Account** wizard opens.  
   
@@ -65,11 +65,9 @@ For more information about issues that you, as an administrative user, should co
 8.  MultiPoint Services will check all of the information and display a message when the account has been set up. When you see the text, **A new user account was successfully created**, click **Finish**.  
   
 > [!TIP]  
-> You can also create user accounts using Windows user account management functionality. For more information about creating user accounts in Windows, search for **create user accounts** in Windows Help and Support. For more information about using Windows Help and Support, see the [Use Windows Server Help](../../../compute/remote-desktop-services/multipoint-2/Use-Windows-Server-Help.md) topic.  
+> You can also create user accounts using Windows user account management functionality. For more information about creating user accounts in Windows, search for **create user accounts** in Windows Help and Support. For more information about using Windows Help and Support, see the [Use Windows Server Help](Use-Windows-Server-Help.md) topic.  
   
 ## See Also  
-[User Account Considerations](../../../compute/remote-desktop-services/multipoint-2/User-Account-Considerations.md)  
-[Manage User Accounts](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Accounts.md)  
-[Use Windows Server Help](../../../compute/remote-desktop-services/multipoint-2/Use-Windows-Server-Help.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[User Account Considerations](User-Account-Considerations.md)  
+[Manage User Accounts](Manage-User-Accounts.md)  
+[Use Windows Server Help](Use-Windows-Server-Help.md)

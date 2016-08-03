@@ -29,7 +29,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # View Hardware Status
-In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], use the **Stations** tab to view *station* information, such as:  
+In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], use the **Stations** tab to view *station* information, such as:  
   
 -   Station name  
   
@@ -46,13 +46,11 @@ In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-ser
   
 #### To view hardware status  
   
--   Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
+-   Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
   
     > [!NOTE]  
     > The **Stations** tab is unavailable when the system is in console mode.  
   
 ## See Also  
-[Manage Station Hardware](../../../compute/remote-desktop-services/multipoint-2/Manage-Station-Hardware.md)  
-[Switch Between Modes](../../../compute/remote-desktop-services/multipoint-2/Switch-Between-Modes.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Manage Station Hardware](Manage-Station-Hardware.md)  
+[Switch Between Modes](Switch-Between-Modes.md)

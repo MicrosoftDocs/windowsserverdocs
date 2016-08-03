@@ -33,7 +33,7 @@ If it has been enabled in the server settings, MultiPoint Dashboard users and st
   
 #### To send a chat message from the MultiPoint Dashboard to a user  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image or images of the user ypu want to send a message.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image or images of the user ypu want to send a message.  
   
 2.  Click **Send** in the ribbon - an IM chat window opens.  
   
@@ -42,4 +42,3 @@ If it has been enabled in the server settings, MultiPoint Dashboard users and st
 You dismiss messages by clicking **Dismiss** in the ribbon.
 
 > [!NOTE] Users can IM the dashboard user by using the IM icon in the Windows taskbar. It is automatically pinned when IM is enabled in the server settings.
-  

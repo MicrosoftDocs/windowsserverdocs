@@ -33,7 +33,7 @@ translation.priority.ht:
   
 #### To log off a user session or multiple sessions  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)], click the **Home** tab.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the **Home** tab.  
   
 2.  Do one of the following:  
   
@@ -42,8 +42,6 @@ translation.priority.ht:
     -   To log off all user sessions, click the top\-left drop\-down menu, click **Log Off Users**, and then click **Log Off All Users**.  
   
 ## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-[Log off or Disconnect User Sessions](../../../compute/remote-desktop-services/multipoint-2/Log-off-or-Disconnect-User-Sessions.md)  
-[Suspend and Leave User Session Active](../../../compute/remote-desktop-services/multipoint-2/Suspend-and-Leave-User-Session-Active.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Manage User Desktops](manage-user-desktops-using-multipoint-services.md)  
+[Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)  
+[Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md)

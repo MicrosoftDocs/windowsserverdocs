@@ -33,15 +33,15 @@ Using Remote Desktop, you can connect to a MultiPoint Services system from anoth
   
 There are three types of connection files you can create:  
   
-1.  **[!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] connection file**:  Allows [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] to be run on another computer as a remote application.  
+1.  **[!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] connection file**:  Allows [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] to be run on another computer as a remote application.  
   
-2.  **[!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)] connection file**: Allows [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)] to be run on another computer as a remote application.  
+2.  **[!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)] connection file**: Allows [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)] to be run on another computer as a remote application.  
   
 3.  **Remote station connection file**:  Allows another computer to connect to the MultiPoint Services system as a remote station.  
   
 #### To save system connection settings to a file  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Home** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Home** tab.  
   
 2.  In the **Computer** column, click the name of the computer for which you want to save the connection settings to a file.  
   
@@ -49,5 +49,4 @@ There are three types of connection files you can create:
   
 4.  Choose the type of connection file you want to create, and then click **OK**.  
   
-5.  Choose the folder where you want to save the file, edit the **File name** if preferred, and then click **Save**.  
-  
+5.  Choose the folder where you want to save the file, edit the **File name** if preferred, and then click **Save**.

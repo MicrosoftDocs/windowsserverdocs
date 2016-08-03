@@ -33,7 +33,7 @@ In addition to monitoring user activities on individual desktops, you, as an adm
   
 #### To limit web access on a station  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], on the **Web Limiting** tab, click **Configure**. The **Configure Web Limiting** page opens. Sites that the user can access are listed.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the **Web Limiting** tab, click **Configure**. The **Configure Web Limiting** page opens. Sites that the user can access are listed.  
   
 2.  Click the thumbnail image of the user station on which you want to limit web access.  
   
@@ -48,7 +48,7 @@ In addition to monitoring user activities on individual desktops, you, as an adm
   
 #### To limit web access on all stations  
   
-1.  In [!INCLUDE[win8_server_multipoint_dashboard](/includes/win8_server_multipoint_dashboard_md.md)], on the **Web Limiting** tab, click the Start drop\-down menu, and then click **Limit Web Access on All Desktops**.  
+1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the **Web Limiting** tab, click the Start drop\-down menu, and then click **Limit Web Access on All Desktops**.  
   
     The **Configure Web Limiting** page opens. Sites that the user can access are listed. Do one of the following:  
   

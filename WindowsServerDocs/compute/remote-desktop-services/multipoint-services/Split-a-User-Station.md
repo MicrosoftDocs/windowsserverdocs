@@ -46,7 +46,7 @@ Benefits of using a split\-screen station may include:
   
 #### To split a station  
   
-1.  In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], in station mode, click the **Stations** tab.  
+1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], in station mode, click the **Stations** tab.  
   
 2.  In the **Station** column, click the name of the station you want to split.  
   
@@ -54,12 +54,11 @@ Benefits of using a split\-screen station may include:
   
 ##### To return a split station to a single station  
   
-1.  In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], in station mode, click the **Stations** tab.  
+1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], in station mode, click the **Stations** tab.  
   
 2.  In the **Station** column, click the name of the station for which you want to end a split.  
   
 3.  Under **Stations Tasks**, click **Unsplit station**.  
   
 ## See Also  
-[Manage User Stations](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Stations.md)  
-  
+[Manage User Stations](Manage-User-Stations.md)

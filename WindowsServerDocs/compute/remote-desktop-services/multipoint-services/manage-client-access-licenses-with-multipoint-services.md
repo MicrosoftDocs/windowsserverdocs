@@ -16,7 +16,7 @@ To enable users to use stations in MultiPoint Services, you must obtain and inst
   
 #### To add client access licenses \(CALs\) in MultiPoint Services  
   
-1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, see visit the documentation for Remote Desktop licensing. <!--@Liza: add link to RDS licensing here-->
+1.  Purchase a client license for each station that is connected to your MultiPoint Services computer or server. For more information about purchasing CALs, visit the documentation for Remote Desktop licensing. <!--@Liza: add link to RDS licensing here-->
 
 2.  From the **Start** screen, open **MultiPoint Manager**.  
   

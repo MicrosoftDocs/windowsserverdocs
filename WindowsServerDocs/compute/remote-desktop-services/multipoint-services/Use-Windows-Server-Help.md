@@ -29,13 +29,10 @@ translation.priority.ht:
   - zh-tw
 ---
 # Use Windows Server Help
-As an *administrative user*, you manage your MultiPoint Services system using the [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] and [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)] consoles. This Help file describes many of the tasks that you can perform in [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] and [!INCLUDE[win8_server_multipoint_dashboard](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_dashboard_md.md)]. In addition to this material, you have access to the Windows Server Help system.  
+As an *administrative user*, you manage your MultiPoint Services system using the [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] and [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)] consoles. This Help file describes many of the tasks that you can perform in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] and [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)]. In addition to this material, you have access to the Windows Server Help system.  
   
 Windows Help and Support includes detailed instructions about important subjects, such as user privacy and computer security, in addition to the privacy and security information included in this Help file. For example, some topics in Managing MultiPoint Services Help include suggestions to search for specific terms in Windows Server Help. For example:  
-  
-> [!TIP]  
-> For more information about safe computing in Windows, search for **privacy** in Windows Help and Support. For more information about how to use Windows Help and Support, see the [Use Windows Server Help](assetId:///c58d13e2-acf1-4ec5-a6f9-32f3987ff346) topic.  
-  
+   
 #### To search for a term in Windows Server Help  
   
 1.  Right\-click the **Start** screen, and then click **Search**.  
@@ -49,6 +46,4 @@ Windows Help and Support includes detailed instructions about important subjects
 4.  Click one of the results to read the topic.  
   
 ## See Also  
-[Managing Your MultiPoint Services System](../../../compute/remote-desktop-services/multipoint-2/Managing-Your-MultiPoint-Services-System.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Managing Your MultiPoint Services System](Managing-Your-MultiPoint-Services-System.md)

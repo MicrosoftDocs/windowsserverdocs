@@ -12,7 +12,7 @@ author: lizap
 manager: jwhit
 ---
 # Example scenarios: Windows MultiPoint Server 2012 user accounts
-What do you need to do to implement the user account scenario that you chose for your [!INCLUDE[win8_server_multipoint_2](/includes/win8_server_multipoint_2_md.md)] environment? The following tables describe each task to perform to configure user accounts and prepare stations for shared or individual user accounts on a stand\-alone MultiPoint Server computer or on networked servers in a workgroup or an Active Directory domain. Choose the scenario that applies to your environment. Then follow the links in the table to complete each required configuration task.  
+What do you need to do to implement the user account scenario that you chose for your [!INCLUDE[win8_server_multipoint_2](./includes/win8_server_multipoint_2_md.md)] environment? The following tables describe each task to perform to configure user accounts and prepare stations for shared or individual user accounts on a stand\-alone MultiPoint Server computer or on networked servers in a workgroup or an Active Directory domain. Choose the scenario that applies to your environment. Then follow the links in the table to complete each required configuration task.  
   
 > [!NOTE]  
 > If you have not yet decided how to set up your user accounts, see [Plan user accounts for your MultiPoint Services environment](Plan-user-accounts-for-your-MultiPoint-services-environment.md) for more information about how each choice affects users.  

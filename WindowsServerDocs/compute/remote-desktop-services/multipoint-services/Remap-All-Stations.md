@@ -33,10 +33,10 @@ Remapping stations allows you to associate keyboards and mice to monitors. When 
   
 ### To remap all stations  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Home** tab.  
+1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Home** tab.  
 2.  Under **Tasks**, click **Remap all stations**.  
 3. Follow the instructions on the station screens to associate the keyboards to the stations in your system.
   
 ## See Also  
-[Manage System Tasks Using MultiPoint Manager](../../../compute/remote-desktop-services/multipoint-2/Manage-System-Tasks-Using-MultiPoint-Manager.md)  
+[Manage System Tasks Using MultiPoint Manager](Manage-System-Tasks-Using-MultiPoint-Manager.md)  
   

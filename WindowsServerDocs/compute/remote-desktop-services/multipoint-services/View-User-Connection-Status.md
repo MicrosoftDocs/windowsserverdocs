@@ -41,10 +41,8 @@ Status values include the following:
   
 #### To view station status  
   
--   In [!INCLUDE[win8_server_multipoint_manager](../../../compute/remote-desktop-services/multipoint-1/includes/win8_server_multipoint_manager_md.md)], in station mode, click the **Stations** tab.  
+-   In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], in station mode, click the **Stations** tab.  
   
 ## See Also  
-[Manage User Desktops](assetId:///248034b7-8cfa-4a2d-af59-13e9e0b5cb1b)  
-[Switch Between Modes](../../../compute/remote-desktop-services/multipoint-2/Switch-Between-Modes.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)  
+[Switch Between Modes](Switch-Between-Modes.md)
