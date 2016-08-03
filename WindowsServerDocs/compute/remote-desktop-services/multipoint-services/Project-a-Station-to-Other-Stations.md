@@ -31,7 +31,7 @@ translation.priority.ht:
 # Project a Station to Other Stations
 As a MultiPoint Dashboard User, you can project your desktop to a single user’s station or all users’ \(non\-administrator\) stations. This feature is useful when you want to demonstrate a task to a user or set of users.  
   
-#### To project your desktop to a standard user’s station  
+## To project your desktop to a standard user’s station  
   
 1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop to which you want to project your station.  
   
@@ -39,19 +39,16 @@ As a MultiPoint Dashboard User, you can project your desktop to a single user’
   
 3.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
   
-#### To project your desktop to all stations  
+## To project your desktop to all stations  
   
 1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], on the **Home** tab, click the **Your Desktop** drop\-down menu, and then click **Project Your Desktop to All Desktop\(s\)**.  
   
 2.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
   
-#### To project a different desktop to all desktops  
+## To project a different desktop to all desktops  
   
 1.  In [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click the thumbnail image of the desktop you want to project to all desktops.  
   
 2.  On the **Home** tab, click the **Selected Desktop** drop\-down menu, and then click **Selected Desktop**. The selected desktop is displayed on all desktops.  
   
 3.  To end the projection, in [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipoint_dashboard_md.md)], click **Stop** \(either on the **Projection** tab or in the right\-hand corner below the ribbon\).  
-  
-## See Also  
-[Manage User Desktops](manage-user-desktops-with-multipoint-dashboard.md)

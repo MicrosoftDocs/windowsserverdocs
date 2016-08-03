@@ -16,38 +16,21 @@ MultiPoint Services enables multiple stations to be connected to one computer. M
   
 > [!NOTE]  
 > For additional support, see the MultiPoint Services Help, which can be opened by clicking the Help icon or F1 on any MultiPoint Manager or MultiPoint Dashboard screen.  
+
+Use the following information to plan your deployment:
   
-## In this guide  
+-   [Introducing MultiPoint Services](Introducing-MultiPoint-services.md)   
+-   [Common Usage Scenarios](Common-MultiPoint-services-Usage-Scenarios.md)  
+-   [MultiPoint Stations](MultiPoint-services-Stations.md)  
+-   [Selecting Hardware for Your MultiPoint Services System](Selecting-Hardware-for-Your-MultiPoint-services-System.md)  
+-   [Hardware Requirements and Performance Recommendations](Hardware-Requirements-and-Performance-Recommendations.md)   
+-   [MultiPoint Services Site Planning](MultiPoint-services-Site-Planning.md)  
+-   [Network Considerations and User Accounts](Network-Considerations-and-User-Accounts.md)  
+-   [Storing Files with MultiPoint Services](Storing-Files-with-MultiPoint-services.md)  
+-   [Protecting the System Volume with Disk Protection](Protecting-the-System-Volume-with-Disk-Protection.md)
+-   [MultiPoint Services Virtualization Support](MultiPoint-services-Virtualization-Support.md)  
+-   [Application Considerations](Application-Considerations.md)  
+-   [Predeployment Checklist](Predeployment-Checklist.md)  
+-   [Glossary](Glossary.md)  
   
--   [Introducing MultiPoint Services](../../../compute/remote-desktop-services/multipoint-1/Introducing-MultiPoint-Server.md)  
-  
--   [Common Usage Scenarios](../../../compute/remote-desktop-services/multipoint-1/Common-MultiPoint-Server-Usage-Scenarios.md)  
-  
--   [MultiPoint Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Stations.md)  
-  
--   [Selecting Hardware for Your MultiPoint Services System](../../../compute/remote-desktop-services/multipoint-1/Selecting-Hardware-for-Your-MultiPoint-Server-System.md)  
-  
--   [Hardware Requirements and Performance Recommendations](../../../compute/remote-desktop-services/multipoint-1/Hardware-Requirements-and-Performance-Recommendations.md)  
-  
--   [MultiPoint Services Site Planning](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md)  
-  
--   [Network Considerations and User Accounts](../../../compute/remote-desktop-services/multipoint-1/Network-Considerations-and-User-Accounts.md)  
-  
--   [Storing Files with MultiPoint Services](../../../compute/remote-desktop-services/multipoint-1/Storing-Files-with-MultiPoint-Server.md)  
-  
--   [Protecting the System Volume with Disk Protection](../../../compute/remote-desktop-services/multipoint-1/Protecting-the-System-Volume-with-Disk-Protection.md)  
-  
--   [MultiPoint Services Virtualization Support](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Virtualization-Support.md)  
-  
--   [Microsoft RemoteFX](../../../compute/remote-desktop-services/multipoint-1/Microsoft-RemoteFX.md)  
-  
--   [Application Considerations](../../../compute/remote-desktop-services/multipoint-1/Application-Considerations.md)  
-  
--   [Predeployment Checklist](../../../compute/remote-desktop-services/multipoint-1/Predeployment-Checklist.md)  
-  
--   [Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
-## See also  
-  
--  [Windows MultiPoint Services Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
-  
+You can also visit the [Windows MultiPoint Services Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc) for additional information.

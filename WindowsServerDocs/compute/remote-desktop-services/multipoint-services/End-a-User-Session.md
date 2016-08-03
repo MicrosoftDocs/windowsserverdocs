@@ -50,5 +50,5 @@ You should end a user’s session when you have to log the user off from the Mul
     -   To end all user sessions, under **Stations Tasks**, click **Log off all stations**.  
   
 ## See Also  
-[Manage User Desktops](manage-user-desktops-using-multipoint-manager.md)  
+[Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)  
 [Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)

@@ -40,7 +40,7 @@ As an administrative user of your MultiPoint Services system, become familiar wi
 Shared computing resources, such as a MultiPoint Services system, may be prone to security threats due to the potentially large number of users of the system and the easy access to station hardware devices and wires. A malicious user may attempt to insert a keystroke logger or similar device at a MultiPoint Services station hub. If you see devices attached to any ports on your MultiPoint Services system that you do not recognize, consider it suspect and follow the security escalation guidelines of your organization.  
   
 > [!TIP]  
-> For more information about how to use safe computing in Windows, search for **privacy** in Windows Help and Support. For more information about how to use Windows Help and Support, see the [Use Windows Server Help](../../../compute/remote-desktop-services/multipoint-2/Use-Windows-Server-Help.md) topic.  
+> For more information about how to use safe computing in Windows, search for **privacy** in Windows Help and Support. For more information about how to use Windows Help and Support, see the [Use Windows Server Help](Use-Windows-Server-Help.md) topic.  
   
 ## See Also  
 [Manage User Files](Manage-User-Files.md)  

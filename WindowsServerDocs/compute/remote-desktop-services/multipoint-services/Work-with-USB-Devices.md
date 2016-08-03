@@ -37,24 +37,24 @@ You can connect devices to either the computer in your MultiPoint Services syste
   
 -   If you connect certain types of devices to the computer, such as a keyboard or mouse, the devices are not available to any users on the system.  
   
-The following table shows a list of devices and how they behave, depending on where they are connected to the system. Information about how to connect station hubs is described in the **Working with station hubs**, later in this topic. More information about how to connect video monitors to a station is described in the [Work with Video Devices](../../../compute/remote-desktop-services/multipoint-2/Work-with-Video-Devices.md) topic.  
+The following table shows a list of devices and how they behave, depending on where they are connected to the system. Information about how to connect station hubs is described in [Working with station hubs](#working-with-stations-hubs). More information about how to connect video monitors to a station is described in [Work with Video Devices](Work-with-Video-Devices.md).  
   
 |||||  
 |-|-|-|-|  
 |**Device**|**Behavior when it is connected directly to the computer**|**Behavior when it is connected to a station**|**Notes**|  
 |Keyboard|We do not recommend connecting a keyboard directly to the computer.|Accessible only to the station user.|If the keyboard contains a USB port, then the USB hub inside the keyboard may be the station hub. Other USB devices attached to that port are available only to user who is using that keyboard.<br /><br />Some station hubs are equipped with a PS\/2 mouse port that is converted into a USB connection inside the hub.|  
 |Mouse|We do not recommend connecting a mouse directly to the computer.|Accessible only to the station user.|Some station hubs are equipped with a PS\/2 mouse port that is converted into a USB connection inside the hub.|  
-|USB hub|See the **Working with station hubs** section later in this topic.|See the **Working with station hubs** section later in this topic.||  
-|Video monitor|See the [MultiPoint Services Video Devices](assetId:///7d9b4cda-bceb-44bd-bee8-e3c43c0b9b5d) topic.|See the [MultiPoint Services Video Devices](assetId:///7d9b4cda-bceb-44bd-bee8-e3c43c0b9b5d) topic.||  
+|USB hub|See [Working with station hubs](#working-with-station-hubs).|See [Working with station hubs](#working-with-station-hubs).||  
+|Video monitor|See [MultiPoint Services Video Devices](work-with-video-devices.md).|See [MultiPoint Services Video Devices](work-with-video-devices.md).||  
 |Audio output devices such as headphones|We do not recommend connecting an audio output device directly to the computer.|Accessible only to the station user.|Some station hubs are equipped with an analog audio port that is converted into a USB audio connection inside the hub.|  
 |Audio input devices such as microphones|We do not recommend connecting an audio input device directly to the computer.|Accessible only to the station user.|Some station hubs are equipped with an analog audio port that is converted into a USB audio connection inside the hub.|  
-|Printers|Accessible to all users on the system.\*|Accessible only to the station user.||  
+|Printers|Accessible to all users on the system.*|Accessible only to the station user.||  
 |USB mass storage device|Accessible to all users on the system.\*|Accessible only to the station user.|These devices include USB flash drives, external hard disk drives, and digital cameras.|  
-|Web cameras|Accessible to all users on the system.\*|Accessible only to the station user.|Only one user can connect to the camera at a time.|  
+|Web cameras|Accessible to all users on the system.*|Accessible only to the station user.|Only one user can connect to the camera at a time.|  
   
-\*Devices that are connected to the host computer are not visible to the users who are logged on to virtual desktop stations.  
+*Devices that are connected to the host computer are not visible to the users who are logged on to virtual desktop stations.  
   
-For more information about how to set up a station, see [Set Up a Station](../../../compute/remote-desktop-services/multipoint-2/Set-Up-a-Station.md).  
+For more information about how to set up a station, see [Set Up a Station](Set-Up-a-Station.md).  
   
 ### Working with station hubs  
 There are four scenarios for how a USB hub can be used when it is connected to a MultiPoint Services system. Each of the following scenarios provides different access to the devices that are connected to it, depending on the type of hub and where it is connected to the system.  
@@ -67,11 +67,9 @@ There are four scenarios for how a USB hub can be used when it is connected to a
   
 -   A USB hub connected to a station hub can be used to connect additional devices to the station hub. Keyboards must be connected directly to the station hub.  
   
-For more information about how to set up a MultiPoint Services station, see [Set Up a Station](../../../compute/remote-desktop-services/multipoint-2/Set-Up-a-Station.md).  
+For more information about how to set up a MultiPoint Services station, see [Set Up a Station](Set-Up-a-Station.md).  
   
 ## See Also  
-[Work with Video Devices](../../../compute/remote-desktop-services/multipoint-2/Work-with-Video-Devices.md)  
-[Manage Station Hardware](../../../compute/remote-desktop-services/multipoint-2/Manage-Station-Hardware.md)  
-[Set Up a Station](../../../compute/remote-desktop-services/multipoint-2/Set-Up-a-Station.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Work with Video Devices](Work-with-Video-Devices.md)  
+[Manage Station Hardware](Manage-Station-Hardware.md)  
+[Set Up a Station](Set-Up-a-Station.md)

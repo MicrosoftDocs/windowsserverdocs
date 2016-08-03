@@ -27,7 +27,7 @@ Split\-screen stations have several benefits:
   
 The following illustration shows a MultiPoint Server system with a split screen station \(on the right\).  
   
-![Split-screen stations](../../../compute/remote-desktop-services/multipoint-1/media/WMS_diagram3.gif "WMS_diagram3")  
+![Split-screen stations](./media/WMS_diagram3.gif)  
   
 **MultiPoint Services system with a split screen station**  
   
@@ -44,21 +44,21 @@ Use the following procedures to add a second hub for a split\-screen station and
 > [!NOTE]  
 > When you split a station, the active session on the station is suspended. The user must log on to the station again to resume work after the split occurs.  
   
-#### To add a second hub with keyboard and mouse  
+### To add a second hub with keyboard and mouse  
   
 1.  Connect a USB hub to an open USB port on the computer, as shown in the following illustration.  
   
-    ![Image of MultiPoint server USB hub connection](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBHubConnection.gif "WMSUSBHubConnection")  
+    ![Image of MultiPoint server USB hub connection](./media/WMSUSBHubConnection.gif)  
   
 2.  Connect a keyboard and mouse to the USB hub.  
   
-    ![Image of USB hub input device connections](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBDeviceConnection.gif "WMSUSBDeviceConnection")  
+    ![Image of USB hub input device connections](./media/WMSUSBDeviceConnection.gif)  
   
 3.  Connect any additional peripherals, such as headphones to the USB hub.  
   
 4.  If you are using an externally powered hub, connect the power cable of the hub to a power outlet.  
   
-#### To split a station  
+### To split a station  
   
 1.  In the MultiPoint Manager, click the **Stations** tab.  
   
@@ -72,11 +72,10 @@ Use the following procedures to add a second hub for a split\-screen station and
   
 After a station is split, one user can log on to the left station while another user logs on to the right station.  
   
-#### To return a split station to a single station  
+### To return a split station to a single station  
   
 1.  In the MultiPoint Manager, click the **Stations** tab.  
   
 2.  Under **Station**, click the name of the station you want to unsplit.  
   
-3.  Under **Selected Item Tasks**, click **Unsplit station**.  
-  
+3.  Under **Selected Item Tasks**, click **Unsplit station**.

@@ -63,7 +63,8 @@ Using [!INCLUDE[win8_server_multipoint_dashboard](./includes/win8_server_multipo
   
 3.  To change back to the filtered view, click **Show**, and then click **Filtered View**.  
 
->[!NOTE] Right-click one or more thumbnails to get to additional actions you can take on active or inactive sessions, like **Log off Selected Users**. See [Log Off User Sessions](Log-Off-User-Sessions.md) for more information.
+>[!NOTE] 
+> Right-click one or more thumbnails to get to additional actions you can take on active or inactive sessions, like **Log off Selected Users**. See [Log Off User Sessions](Log-Off-User-Sessions.md) for more information.
 
 ## See Also  
 [Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)

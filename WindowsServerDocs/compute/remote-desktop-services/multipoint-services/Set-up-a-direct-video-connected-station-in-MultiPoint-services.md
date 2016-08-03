@@ -14,30 +14,30 @@ manager: jwhit
 # Set up a direct-video-connected station in Windows MultiPoint Server 2012
 On a direct\-video\-connected station, the monitor is connected directly to a video port on the MultiPoint Server computer. A keyboard and mouse are then connected to a USB hub, and are associated with the monitor.  
   
-The following illustration shows a MultiPoint Server environment that has a single MultiPoint Server computer and four direct video\-connected stations. For more information, see [MultiPoint Server Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Stations.md).  
+The following illustration shows a MultiPoint Server environment that has a single MultiPoint Server computer and four direct video\-connected stations. For more information, see [MultiPoint Server Stations](MultiPoint-services-Stations.md).  
   
 **MultiPoint Server system with four direct video connections**  
   
-![Image of MultiPoint Server USB-based system layout](../../../compute/remote-desktop-services/multipoint-1/media/WMSMultiPointServerUSBSystemLayout.gif "WMSMultiPointServerUSBSystemLayout")  
+![Image of MultiPoint Server USB-based system layout](./media/WMSMultiPointServerUSBSystemLayout.gif)  
   
 > [!NOTE]  
 > To configure a direct\-video\-connected station, you must use a Latin keyboard \(such as an English\- or Spanish\-language keyboard\).  
   
-### To set up a direct video\-connected station  
+## To set up a direct video\-connected station  
   
 1.  Connect the monitor cable to the video display port on the computer, as shown below.  
   
-    ![Image of Video connection to USB hub-based system](../../../compute/remote-desktop-services/multipoint-1/media/WMSVideoConnection.gif "WMSVideoConnection")  
+    ![Image of Video connection to USB hub-based system](./media/WMSVideoConnection.gif "WMSVideoConnection") 
   
 2.  Connect the power cord of the video monitor to a power outlet.  
   
 3.  Connect a USB hub to an open USB port on the computer, as shown below.  
   
-    ![Image of MultiPoint Server USB hub connection](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBHubConnection.gif "WMSUSBHubConnection")  
+    ![Image of MultiPoint Server USB hub connection](./media/WMSUSBHubConnection.gif)  
   
 4.  Connect a keyboard and mouse to the USB station hub.  
   
-    ![Image of USB hub input device connections](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBDeviceConnection.gif "WMSUSBDeviceConnection")  
+    ![Image of USB hub input device connections](./media/WMSUSBDeviceConnection.gif)  
   
 5.  Connect any additional peripherals, such as headphones, to the USB hub.  
   
@@ -52,12 +52,11 @@ The following illustration shows a MultiPoint Server environment that has a sing
   
 If you add more than one direct video\-connected station to your MultiPoint Server environment, the primary station might change. You can easily find out which direct video connected station is your primary station.  
   
-### To find out which direct\-video\-connected station is the primary station  
+## To find out which direct\-video\-connected station is the primary station  
   
 1.  Turn on all monitors that are connected directly to the computer’s display adapters \(video cards\).  
   
 2.  Start \(or re\-start\) the MultiPoint Server computer, and see which monitor displays the startup screens. That station is the primary station.  
   
     > [!NOTE]  
-    > In some cases, BIOS startup information is displayed on multiple monitors simultaneously. In that case, any of the monitors can be considered the “primary station” for the purpose of accessing the BIOS.  
-  
+    > In some cases, BIOS startup information is displayed on multiple monitors simultaneously. In that case, any of the monitors can be considered the “primary station” for the purpose of accessing the BIOS.

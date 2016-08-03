@@ -42,6 +42,6 @@ translation.priority.ht:
     -   To log off all user sessions, click the top\-left drop\-down menu, click **Log Off Users**, and then click **Log Off All Users**.  
   
 ## See Also  
-[Manage User Desktops](manage-user-desktops-using-multipoint-services.md)  
+[Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)  
 [Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)  
 [Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md)

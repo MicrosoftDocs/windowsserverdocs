@@ -41,4 +41,5 @@ If it has been enabled in the server settings, MultiPoint Dashboard users and st
 
 You dismiss messages by clicking **Dismiss** in the ribbon.
 
-> [!NOTE] Users can IM the dashboard user by using the IM icon in the Windows taskbar. It is automatically pinned when IM is enabled in the server settings.
+> [!NOTE] 
+> Users can IM the dashboard user by using the IM icon in the Windows taskbar. It is automatically pinned when IM is enabled in the server settings.

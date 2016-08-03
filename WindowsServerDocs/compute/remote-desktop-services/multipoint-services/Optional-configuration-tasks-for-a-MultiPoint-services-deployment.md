@@ -13,13 +13,11 @@ manager: scottman
 ---
 # Optional configuration tasks for a MultiPoint Server 2012 deployment
 Topics in this section explain how to perform optional configuration tasks on your MultiPoint Services system.  
+   
+[Set up a split-screen station](Set-up-a-split-screen-station-in-MultiPoint-services.md)  
   
-## In this section  
-[Set up a split-screen station](../../../compute/remote-desktop-services/multipoint-1/Set-up-a-split-screen-station-in-Windows-MultiPoint-Server-2012.md)  
+[Add printers](Add-printers.md)  
   
-[Add printers](../../../compute/remote-desktop-services/multipoint-1/Add-printers-in-Windows-MultiPoint-Server-2012.md)  
+[Enable access over a wireless LAN](Enable-access-over-a-wireless-LAN-in-MultiPoint-services.md)  
   
-[Enable access over a wireless LAN](../../../compute/remote-desktop-services/multipoint-1/Enable-access-over-a-wireless-LAN-in-Windows-MultiPoint-Server-2012.md)  
-  
-[Create Windows 10 Enterprise virtual desktops for stations](../../../compute/remote-desktop-services/multipoint-1/Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md)  
-  
+[Create Windows 10 Enterprise virtual desktops for stations](Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md)  

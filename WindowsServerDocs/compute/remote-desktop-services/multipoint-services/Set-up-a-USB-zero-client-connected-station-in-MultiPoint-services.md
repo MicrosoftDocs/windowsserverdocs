@@ -12,14 +12,14 @@ author: lizap
 manager: jwhit
 ---
 # Set up a USB zero client-connected station in Windows MultiPoint Server 2012
-When you use USB zero clients to create MultiPoint Server stations, the monitor for each station is connected to the video port on the USB zero client, as shown in the following illustration. For more information about this and other station types, see [MultiPoint Server Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Stations.md) \(http:\/\/technet.microsoft.com\/library\/jj916411.aspx\).  
+When you use USB zero clients to create MultiPoint Server stations, the monitor for each station is connected to the video port on the USB zero client, as shown in the following illustration. For more information about this and other station types, see [MultiPoint Stations](MultiPoint-services-Stations.md).
   
 **MultiPoint Server system with one direct\-video\-connected station and two USB zero client\-connected stations**  
   
-![USB zerio-client connected stations](../../../compute/remote-desktop-services/multipoint-1/media/WMS11_diagram7.gif "WMS11_diagram7")  
+![USB zerio-client connected stations](./media/WMS11_diagram7.gif)  
   
 > [!IMPORTANT]  
-> Before you set up USB zero client\-connected stations, be sure to install the latest drivers for your video cards and the USB zero client. Outdated drivers can prevent the MultiPoint Server configuration from completing successfully. For instructions, see [Update and install device drivers if needed](../../../compute/remote-desktop-services/multipoint-1/Update-and-install-device-drivers-if-needed.md).  
+> Before you set up USB zero client\-connected stations, be sure to install the latest drivers for your video cards and the USB zero client. Outdated drivers can prevent the MultiPoint Server configuration from completing successfully. For instructions, see [Update and install device drivers if needed](Update-and-install-device-drivers-if-needed.md).  
   
 > [!IMPORTANT]  
 > If you are using a *USB\-over\-Ethernet zero client*, follow the instructions from your vendor, instead of this procedure, to use the Ethernet connection to set up the device on the network.  
@@ -28,19 +28,18 @@ When you use USB zero clients to create MultiPoint Server stations, the monitor 
   
 1.  Connect the video monitor cable to the DVI or VGA video display port on the USB zero client, as shown in the following illustration.  
   
-    ![Image of Video connection to USB hub-based system](../../../compute/remote-desktop-services/multipoint-1/media/WMSVideoConnection.gif "WMSVideoConnection")  
+    ![Image of Video connection to USB hub-based system](./media/WMSVideoConnection.gif)  
   
 2.  Connect the USB zero client to an open USB port on the computer.  
   
-    ![Image of MultiPoint Server USB hub connection](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBHubConnection.gif "WMSUSBHubConnection")  
+    ![Image of MultiPoint Server USB hub connection](./media/WMSUSBHubConnection.gif)  
   
 3.  Connect a keyboard and mouse to the USB zero client.  
   
-    ![Image of USB hub input device connections](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBDeviceConnection.gif "WMSUSBDeviceConnection")  
+    ![Image of USB hub input device connections](./media/WMSUSBDeviceConnection.gif)  
   
 4.  If you are using an externally powered USB zero client, connect the power cord of the USB zero client to a power outlet.  
   
 5.  Connect the power cord of the video monitor to a power outlet.  
   
-6.  If you are prompted to associate devices with the station, follow the instructions on the monitor to complete the setup. \(Generally, USB zero client\-connected stations are associated with stations automatically as you add them to the server.\)  
-  
+6.  If you are prompted to associate devices with the station, follow the instructions on the monitor to complete the setup. \(Generally, USB zero client\-connected stations are associated with stations automatically as you add them to the server.\)

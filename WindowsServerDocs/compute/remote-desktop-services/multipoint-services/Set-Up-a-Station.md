@@ -45,21 +45,21 @@ If you want to add a station to your MultiPoint Services system, first make sure
 ## Setting up station hardware  
 The procedures in this section describe how to connect MultiPoint Services station hardware to the different types of station hubs.  
   
-#### To set up a station with a USB hub  
+### To set up a station with a USB hub  
   
 1.  Before you can connect a new station, *end* all user *sessions*, and then shut down the computer and other powered devices in your MultiPoint Services system.  
   
 2.  Connect the new video monitor cable to the video display port on the computer, as shown in the following illustration:  
   
-    ![Image of Video connection to USB hub-based system](../../../compute/remote-desktop-services/multipoint-1/media/WMSVideoConnection.gif "WMSVideoConnection")  
+    ![Image of Video connection to USB hub-based system](./media/WMSVideoConnection.gif)  
   
 3.  Connect the new USB hub to an open USB port on the computer:  
   
-    ![Image of MultiPoint Server USB hub connection](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBHubConnection.gif "WMSUSBHubConnection")  
+    ![Image of MultiPoint Server USB hub connection](./media/WMSUSBHubConnection.gif)  
   
 4.  Connect a keyboard and mouse to the USB hub:  
   
-    ![Image of USB hub input device connections](../../../compute/remote-desktop-services/multipoint-1/media/WMSUSBDeviceConnection.gif "WMSUSBDeviceConnection")  
+    ![Image of USB hub input device connections](./media/WMSUSBDeviceConnection.gif)  
   
 5.  Connect the power cord of the video monitor to a power outlet.  
   
@@ -67,21 +67,21 @@ The procedures in this section describe how to connect MultiPoint Services stati
   
 7.  MultiPoint Services starts. Follow the instructions that appear on the new station’s video monitor to associate the devices to the new station.  
   
-#### To set up a station with a multifunction hub  
+### To set up a station with a multifunction hub  
   
 1.  Before you can connect a new station, end all user sessions, and then shut down the computer and other powered devices in your MultiPoint Services system.  
   
 2.  Connect the new video monitor cable to the DVI or VGA video display port on the multifunction hub, as shown in the following illustration:  
   
-    ![Image of multifunction hub and video connection](../../../compute/remote-desktop-services/multipoint-2/media/WMSMultifunctionHubVideoConnection.gif "WMSMultifunctionHubVideoConnection")  
+    ![Image of multifunction hub and video connection](./media/WMSMultifunctionHubVideoConnection.gif)  
   
 3.  Connect the new multifunction hub to an open USB port on the computer:  
   
-    ![Image of a multifunction hub connection](../../../compute/remote-desktop-services/multipoint-2/media/WMSMultifunctionHubConnection.gif "WMSMultifunctionHubConnection")  
+    ![Image of a multifunction hub connection](./media/WMSMultifunctionHubConnection.gif)  
   
 4.  Connect a keyboard and mouse to the PS2 or USB connectors on the multifunction hub:  
   
-    ![Image of multifunction hub and PS2 connectors](../../../compute/remote-desktop-services/multipoint-2/media/WMSMultifunctionHubPS2Connection.gif "WMSMultifunctionHubPS2Connection")  
+    ![Image of multifunction hub and PS2 connectors](./media/WMSMultifunctionHubPS2Connection.gif)  
   
 5.  Connect the power cord of the video monitor to a power outlet.  
   
@@ -90,9 +90,7 @@ The procedures in this section describe how to connect MultiPoint Services stati
 7.  MultiPoint Services starts. If prompted, follow the instructions that appear on the new station’s video monitor to *associate* the devices to the new station.  
   
 ## See Also  
-[End a User Session](../../../compute/remote-desktop-services/multipoint-2/End-a-User-Session.md)  
-[Restart or Shut Down](../../../compute/remote-desktop-services/multipoint-2/Restart-or-Shut-Down.md)  
-[Manage Station Hardware](../../../compute/remote-desktop-services/multipoint-2/Manage-Station-Hardware.md)  
-[Work with USB Devices](../../../compute/remote-desktop-services/multipoint-2/Work-with-USB-Devices.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[End a User Session](End-a-User-Session.md)  
+[Restart or Shut Down](Restart-or-Shut-Down.md)  
+[Manage Station Hardware](Manage-Station-Hardware.md)  
+[Work with USB Devices](Work-with-USB-Devices.md)

@@ -42,7 +42,8 @@ You can view the following types of status for each desktop on the **Stations** 
   
 For more information about viewing desktop status, see the [View User Connection Status](View-User-Connection-Status.md) topic.  
 
->[!TIP] You can assign friendly names to each station, which might help you identify the stations more easily. Use **Identify station**, which dipslays the station name on the assigned screen.
+>[!TIP] 
+> You can assign friendly names to each station, which might help you identify the stations more easily. Use **Identify station**, which dipslays the station name on the assigned screen.
   
 ## Different ways to log standard users off of the MultiPoint Services system  
 As an *administrative user*, you can log off Windows at any time, which will have no effect on active users in your MultiPoint Services system. *Standard users* can *disconnect* their session or *log off* the MultiPoint Services system too. In the care where disk protection is enabled, if a user is leaving for the day, they should make sure to save their work on the computer or an external storage device so that when the MultiPoint Services system is shut down, the user can still retrieve their saved work another day.  

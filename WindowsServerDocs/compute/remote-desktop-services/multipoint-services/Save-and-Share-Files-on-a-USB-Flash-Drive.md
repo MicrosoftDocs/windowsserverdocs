@@ -35,27 +35,25 @@ You can also use a removable storage device to save and store private documents 
   
   
  > [!NOTE]  
- > The Dashboard user can block the usage of USB storage. For more information, see [Block or Unblock USB Storage](../../../compute/remote-desktop-services/multipoint-2/Block-or-Unblock-USB-Storage.md).  
+ > The Dashboard user can block the usage of USB storage. For more information, see [Block or Unblock USB Storage](Block-or-Unblock-USB-Storage.md).  
   
-#### To share content that is stored directly on a removable storage device  
+## To share content that is stored directly on a removable storage device  
   
 1.  Connect the removable storage device to an open USB port on the host computer or a USB hub that is not a *station hub* in the MultiPoint Services system.  
   
 2.  Instruct users at other *stations* to navigate to and open the removable storage device drive in Windows Explorer. Likewise, other users can share content with you from their own removable storage devices the same way.  
   
-#### To share content that is stored on a removable storage device by using Public folders  
+## To share content that is stored on a removable storage device by using Public folders  
   
 1.  Connect the removable storage device to an open USB port on the host computer or a USB hub that is not a *station hub* in the MultiPoint Services system.  
   
 2.  Copy the content you want to share to a public folder in Windows Explorer, such as **Public Documents** in the **Documents** library.  
   
-#### To privately work with content that is stored on a USB storage device  
+## To privately work with content that is stored on a USB storage device  
   
 Connect the removable storage device to an open USB port on your station hub.  
   
 ## See Also  
-[Keep Files Private](../../../compute/remote-desktop-services/multipoint-2/Keep-Files-Private.md)  
-[Share Files](../../../compute/remote-desktop-services/multipoint-2/Share-Files.md)  
-[Manage User Files](../../../compute/remote-desktop-services/multipoint-2/Manage-User-Files.md)  
-[Glossary](../../../compute/remote-desktop-services/multipoint-1/Glossary.md)  
-  
+[Keep Files Private](Keep-Files-Private.md)  
+[Share Files](Share-Files.md)  
+[Manage User Files](Manage-User-Files.md)

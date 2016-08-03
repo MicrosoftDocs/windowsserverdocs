@@ -35,7 +35,7 @@ The computer running MultiPoint Services can contain multiple video cards, each 
 > [!IMPORTANT]  
 > There should be at least one *direct\-video\-connected station* per server to act as the primary station to display the startup process when the computer is turned on.  
   
-![Image of MultiPoint Server USB-based system layout](../../../compute/remote-desktop-services/multipoint-1/media/WMSMultiPointServerUSBSystemLayout.gif "WMSMultiPointServerUSBSystemLayout")  
+![Image of MultiPoint Server USB-based system layout](./media/WMSMultiPointServerUSBSystemLayout.gif)  
   
 **Figure 1** MultiPoint server system with four direct\-video\-connected stations  
   
@@ -47,18 +47,17 @@ USB\-zero\-client\-connected stations utilize a *USB zero client* as a station h
   
 The following diagram shows a MultiPoint server system with a primary station \(direct video connected station\) and two additional USB zero client connected stations.  
   
-![USB zerio-client connected stations](../../../compute/remote-desktop-services/multipoint-1/media/WMS11_diagram7.gif "WMS11_diagram7")  
+![USB zerio-client connected stations](./media/WMS11_diagram7.gif)  
   
-**Figure 2** MultiPoint server system with a primary station and two USB zero\-client\-connected stations  
+**Figure 2** MultiPoint Services system with a primary station and two USB zero\-client\-connected stations  
   
 ### USB\-over\-Ethernet zero clients  
-USB\-over\-Ethernet zero clients are a variation of USB zero clients that send USB over LAN to the MultiPoint Services system. These types of USB zero clients function similarly to other USB zero clients, but are not limited by USB cable length maximums. USB\-over\-Ethernet zero clients are not traditional thin clients, and they appear as virtual USB devices on theMultiPoint Services system. When using these devices, refer to the device manufacturer for specific performance and site planning recommendations. Most devices have a third\-party plugin for MultiPoint Manager that allows you to associate and connect devices to theMultiPoint Services] system.  
+USB\-over\-Ethernet zero clients are a variation of USB zero clients that send USB over LAN to the MultiPoint Services system. These types of USB zero clients function similarly to other USB zero clients, but are not limited by USB cable length maximums. USB\-over\-Ethernet zero clients are not traditional thin clients, and they appear as virtual USB devices on theMultiPoint Services system. When using these devices, refer to the device manufacturer for specific performance and site planning recommendations. Most devices have a third\-party plugin for MultiPoint Manager that allows you to associate and connect devices to the MultiPoint Services system.  
   
 ## RDP\-over\-LAN connected stations  
-Thin clients and traditional desktop, laptop, or tablet computers, can connect to the computer running MultiPoint Services through the local area network \(LAN\) by using Remote Desktop Protocol \(RDP\) or a proprietary protocol and the Remote Desktop Protocol Provider. RDP connections provide an end\-user experience that is very similar to any other MultiPoint station, but makes use of the local client computer’s hardware. Learn more about our remote desktop applications available for Android, iOS, Mac and Windows here. 
-<!--@Liza: add link to RD clients page--->
+Thin clients and traditional desktop, laptop, or tablet computers, can connect to the computer running MultiPoint Services through the local area network \(LAN\) by using Remote Desktop Protocol \(RDP\) or a proprietary protocol and the Remote Desktop Protocol Provider. RDP connections provide an end\-user experience that is very similar to any other MultiPoint station, but makes use of the local client computer’s hardware. Learn more about our remote desktop applications available for Android, iOS, Mac and Windows in [Remote Desktop clients](../clients/remote-desktop-clients.md). 
   
-Clients and devices that are running Microsoft RemoteFX® can provide a rich multimedia experience by taking advantage of the processor and video hardware capabilities of the local thin client or computer to provide high\-definition video over the network.  
+Clients and devices that are running Microsoft RemoteFX can provide a rich multimedia experience by taking advantage of the processor and video hardware capabilities of the local thin client or computer to provide high\-definition video over the network.  
   
 If you have existing LAN clients MultiPoint Services can provide a quick and cost effective way to simultaneously upgrade all of your users to a Windows 10 experience.  
   
@@ -78,9 +77,9 @@ From a deployment and administration perspective, the following differences exis
   
 -   No station rename or configuring automatic logon through the MultiPoint Manager console  
   
-![USB zero client connected station](../../../compute/remote-desktop-services/multipoint-1/media/Diagram1.gif "Diagram1")  
+![USB zero client connected station](./media/Diagram1.gif)  
   
-**Figure 3** MultiPoint Server system with RDP\-over\-LAN\-connected stations  
+**Figure 3** MultiPoint Services system with RDP\-over\-LAN\-connected stations  
   
 ## Additional configuration options  
   
@@ -101,9 +100,9 @@ To create split\-screen stations, you set up one direct\-video\-connected or USB
   
 After a station is split, one user can log on to the left station while another user logs on to the right station.  
   
-![Split-screen stations](../../../compute/remote-desktop-services/multipoint-1/media/WMS_diagram3.gif "WMS_diagram3")  
+![Split-screen stations](./media/WMS_diagram3.gif)  
   
-**Figure 4** MultiPoint Server system with split screen stations  
+**Figure 4** MultiPoint Services system with split screen stations  
   
 ## <a name="BKMK_StationTypeComparison"></a>Station type comparison  
   
@@ -117,5 +116,4 @@ After a station is split, one user can log on to the left station while another 
 |Access to server startup menus|Yes|No|No|  
   
 > [!NOTE]  
-> The total number of USB zero clients that are connected to the server may be limited by the manufacturer or the hardware capability of the computer running MultiPoint Services.  
-  
+> The total number of USB zero clients that are connected to the server may be limited by the manufacturer or the hardware capability of the computer running MultiPoint Services.

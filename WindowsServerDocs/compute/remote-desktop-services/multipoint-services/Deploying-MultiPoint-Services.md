@@ -28,17 +28,17 @@ The *Deployment Guide* is organized in the following way. At a minimum, you need
   
     Perform optional configuration tasks. Set up a split\-screen station; add printers; enable access over a wireless LAN; create virtual desktops for stations with the [!INCLUDE[firstref_client_7](./includes/firstref_client_7_md.md)] or [!INCLUDE[win8_client_ent_1](./includes/win8_client_ent_1_md.md)] operating system; change the display language for the system or for individual users.  
   
--   [Prepare your MultiPoint Services system for users](Prepare-your-Windows-MultiPoint-Server-2012-system-for-users.md)  
+-   [Prepare your MultiPoint Services system for users](Prepare-your-MultiPoint-services-system-for-users.md)  
   
     Plan and create user accounts; restrict users’ access to the server; for open access, configure stations for automatic logon; allow multiple sessions for shared user accounts; implement file sharing for users.  
   
--   [System administration in MultiPoint Services](System-administration-in-Windows-MultiPoint-Server-2012.md)  
+-   [System administration in MultiPoint Services](System-administration-in-MultiPoint-services.md)  
   
     Perform some basic server administration tasks before you start using the server. Turn on Disk Protection; install Server Backup; to save power, configure sleep settings; configure group policies and the Registry for a domain deployment.  
   
 ## See also  
   
-- [MultiPoint Services](multipoint-1/MultiPoint-Services.md)
+- [MultiPoint Services](MultiPoint-Services.md)
   
 -   [Windows MultiPoint Server Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
   
