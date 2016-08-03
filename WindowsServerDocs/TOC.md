@@ -141,8 +141,7 @@
 ####### [Configure stations for automatic logon](compute/remote-desktop-services/multipoint-services/Configure-stations-for-automatic-logon.md)
 ####### [Allow one account to have multiple sessions](compute/remote-desktop-services/multipoint-services/Allow-one-account-to-have-multiple-sessions.md)
 ####### [Enable file sharing in MultiPoint Services](compute/remote-desktop-services/multipoint-services/Enable-file-sharing-in-multipoint-services.md)
-###### [System administration in MultiPoint Services](compute/remote-desktop-services/multipoint-services/System-administration-in-multipoint-services
-.md)
+###### [System administration in MultiPoint Services](compute/remote-desktop-services/multipoint-services/System-administration-in-multipoint-services.md)
 ####### [Configure Disk Protection in MultiPoint Services](compute/remote-desktop-services/multipoint-services/Configure-Disk-Protection-in-MultiPoint-services.md)
 ####### [Install Server Backup on your MultiPoint system](compute/remote-desktop-services/multipoint-services/Install-Server-Backup-on-your-MultiPoint-services-computer.md)
 ####### [Configure group policies for a domain deployment](compute/remote-desktop-services/multipoint-services/Configure-group-policies-for-a-domain-deployment.md)
