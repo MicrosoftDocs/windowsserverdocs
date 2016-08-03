@@ -11,18 +11,18 @@ ms.assetid: d78ebf4e-0968-4014-9a42-9f75cc50cb52
 author: evas
 manager: scottman
 ---
-# Attach additional stations to your MultiPoint server
-In your MultiPoint Services environment, your users use stations to connect to the MultiPoint server  and do their work. The stations are the user endpoints for connecting to the computer running Multipoint Services.  
+# Attach additional stations to MultiPoint Services
+In your MultiPoint Services environment, your users use stations to connect to MultiPoint Services and do their work. The stations are the user endpoints for connecting to the computer running Multipoint Services.  
   
 MultiPoint services supports three types of station:  
   
--   Direct\-video\-connected stations  
+-   Direct-video-connected stations  
   
--   USB zero client\-connected stations \(and USB over Ethernet zero client connected stations\)  
+-   USB zero client-connected stations (and USB over Ethernet zero client connected stations)  
   
--   RDP\-over\-LAN connected stations  
+-   RDP-over-LAN connected stations  
   
-The classifications are based on a station’s hardware and the type of connection that it uses. You can mix and match connection types for your stations. The only requirement is that the primary station \(which you installed earlier\) must be a direct\-video\-connected station. For more information about station setups, see [MultiPoint server Stations](MultiPoint-Server-Stations.md).  
+The classifications are based on a station’s hardware and the type of connection that it uses. You can mix and match connection types for your stations. The only requirement is that the primary station (which you installed earlier) must be a direct-video-connected station. For more information about station setups, see [MultiPoint Stations](MultiPoint-services-Stations.md).  
   
 For instructions that explain how to set up each type of station, see the following:  
   
@@ -32,10 +32,10 @@ For instructions that explain how to set up each type of station, see the follow
   
 -   [Set up an RDP-over-LAN connected station](Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md)  
   
-For a detailed comparison of station types, see [Station type comparison](assetId:///a8a25e40-e3a5-4121-ac23-77e7c5ac358f#BKMK_StationTypeComparison) in [MultiPoint Server Stations](MultiPoint-Server-Stations.md).  
+For a detailed comparison of station types, see [Station type comparison](multipoint-services-stations.md#Station-Type-Comparison).  
   
 > [!NOTE]  
-> -   The procedures for attaching stations do not describe how to set up intermediate hubs or downstream hubs. For information about where to install these hubs, see [MultiPoint Server Stations](MultiPoint-Server-Stations.md).  
+> -   The procedures for attaching stations do not describe how to set up intermediate hubs or downstream hubs. For information about where to install these hubs, see [MultiPoint Stations](MultiPoint-Server-Stations.md).  
 > -   In some cases, you might need to create station virtual desktops, which run in virtual machines. For example, you use applications that cannot be installed on Windows Server or applications that will not run multiple instances on the same host computer. For more information, see [Create Windows 10 Enterprise virtual desktops for stations](Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md).  
   
 > [!TIP]  
