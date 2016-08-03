@@ -126,7 +126,7 @@
 ####### [Attach additional stations to your MultiPoint server](compute/remote-desktop-services/multipoint-services/Attach-additional-stations-to-your-MultiPoint-services-computer.md)
 ######## [Set up a direct-video-connected station](compute/remote-desktop-services/multipoint-services/Set-up-a-direct-video-connected-station-in-MultiPoint-services.md)
 ######## [Set up a USB zero client-connected station](compute/remote-desktop-services/multipoint-services/Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services.md)
-######## [Set up an RDP-over-LAN connected station](compute/remote-desktop-services/multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-Server-2012.md)
+######## [Set up an RDP-over-LAN connected station](compute/remote-desktop-services/multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md)
 ####### [Manage Client Access Licenses (CAL) with MultiPoint Services](compute/remote-desktop-services/multipoint-services/manage-client-access-licenses-with-multipoint-services.md)
 ####### [Install software on your MultiPoint Services System](compute/remote-desktop-services/multipoint-services/Install-software-on-your-MultiPoint-services-system.md)
 ###### [Optional configuration tasks for a MultiPoint Services deployment](compute/remote-desktop-services/multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md)
