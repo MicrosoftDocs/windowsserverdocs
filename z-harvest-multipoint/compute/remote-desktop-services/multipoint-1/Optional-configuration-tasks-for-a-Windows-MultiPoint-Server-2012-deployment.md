@@ -23,5 +23,3 @@ Topics in this section explain how to perform optional configuration tasks on yo
   
 [Create Windows 10 Enterprise virtual desktops for stations](../../../compute/remote-desktop-services/multipoint-1/Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md)  
   
-[Change the display language](../../../compute/remote-desktop-services/multipoint-1/Change-the-display-language-in-Windows-MultiPoint-Server-2012.md)  
-  

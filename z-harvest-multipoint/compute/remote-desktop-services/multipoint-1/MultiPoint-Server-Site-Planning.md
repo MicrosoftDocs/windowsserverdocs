@@ -11,7 +11,7 @@ ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evas
 manager: scottman
 ---
-# MultiPoint Server Site Planning
+# MultiPoint Services Site Planning
 You should consider the location where one or more computers running MultiPoint Services and its associated stations will be deployed.  
   
 The computer that is running MultiPoint Services role should have convenient access to a power supply and to the peripheral devices that are connected directly to it, such as a printer. Additionally, the computer running MultiPoint Services must have convenient access to a network connection. A network connection is required for accessing the Internet, and where available, a LAN.  

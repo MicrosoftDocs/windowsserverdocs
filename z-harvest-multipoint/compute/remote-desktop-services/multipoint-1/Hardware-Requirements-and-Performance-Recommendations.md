@@ -2,14 +2,14 @@
 title: Hardware Requirements and Performance Recommendations
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
-author: lizap
-manager: jwhit
+author: evas
+manager: scottman
 ---
 # Hardware Requirements and Performance Recommendations
 This topic describes the hardware that is required to run a MultiPoint Services system and support user application scenarios. The user scenario directly affects the CPU, RAM, and network bandwidth requirements.  
@@ -35,11 +35,7 @@ To achieve good performance with your MultiPoint Services system under various l
 |------------------------|----------------------|-------------------|------------------|-------------------|-------------------|-----------------|  
 |**Productivity**<br /><br />Office, web browsing, line\-of\-business applications|CPU: 2C<br /><br />RAM: 2 GB|CPU: 2C<br /><br />RAM: 4 GB|CPU: 4C<br /><br />RAM: 6 GB|CPU: 4C<br /><br />RAM: 8 GB|CPU: 4C\+MT or 6C<br /><br />RAM: 10 GB| CPU: 6C\+MT<br /><br />RAM: 12 GB|
 |**Mixed**<br /><br />Office, web browsing, line\-of\-business applications,  and occasional video use by some users|CPU: 2C<br /><br />RAM: 2 GB|CPU: 2C<br /><br />RAM: 4 GB|CPU: 4C<br /><br />RAM: 6 GB|CPU: 4C\+MT or 6C<br /><br />RAM: 8 GB|CPU: 6C\+MT<br /><br />RAM: 10 GB| CPU: 6C\+MT<br /><br />RAM: 12 GB| 
-|**Video intensive**<br /><br />Office, web browsing, line\-of\-business applications,  and frequent video use by all users **Note:** Video testing was performed using 360p H.264 video at native resolution.|CPU: 4C\+MT<br /><br />RAM: 2 GB|CPU: 6C\+MT<br /><br />RAM: 4 GB|CPU: 8C\+MT<br /><br />RAM: 6 GB|CPU: 12C\+MT<br /><br />RAM: 8 GB|CPU: 16C\+MT<br /><br />RAM: 10 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended| CPU: 20C\+MT<br /><br />RAM: 12 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended|  
-<!--@Liza:This is old documentation and I am not aware of any new one--->  
-> [!NOTE]  
-> RemoteFX, or equivalent technology for RDP, is required when 15–20 remotely connected thin clients are running full motion video within their session. For more information about the hardware requirements for RemoteFX, see [Hardware Considerations for RemoteFX](http://go.microsoft.com/fwlink/?LinkId=211310).  
- 
+|**Video intensive**<br /><br />Office, web browsing, line\-of\-business applications,  and frequent video use by all users **Note:** Video testing was performed using 360p H.264 video at native resolution.|CPU: 4C\+MT<br /><br />RAM: 2 GB|CPU: 6C\+MT<br /><br />RAM: 4 GB|CPU: 8C\+MT<br /><br />RAM: 6 GB|CPU: 12C\+MT<br /><br />RAM: 8 GB|CPU: 16C\+MT<br /><br />RAM: 10 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended| CPU: 20C\+MT<br /><br />RAM: 12 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended|   
   
 ## Minimum recommended hardware for running full Windows 10 virtual desktops  
 Running a full virtual operating system instance for each station is more compute resource\-intensive than running the default MultiPoint desktop sessions, so the host hardware requirements per station are higher:  

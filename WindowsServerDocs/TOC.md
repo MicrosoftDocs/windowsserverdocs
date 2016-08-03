@@ -55,9 +55,6 @@
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
 #### Get started
 ##### [Welcome to Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
-##### [Upgrade your Remote Desktop Services deployments to Windows Server 2016](compute/remote-desktop-services/upgrade-to-rds-2016.md)
-###### [Upgrade Remote Desktop Session Host servers](compute/remote-desktop-services/upgrade-to-rdsh-2016.md)
-###### [Upgrade Remote Desktop Virtualization Host servers](compute/remote-desktop-services/upgrade-to-rdvh-2016.md)
 #### Plan
 ##### [Desktop Hosting Reference Architecture](compute/remote-desktop-services/Desktop-Hosting-Reference-Architecture.md)
 ###### [Desktop hosting logical architecture](compute/remote-desktop-services/Desktop-hosting-logical-architecture.md)
@@ -65,6 +62,9 @@
 ###### [Azure services and considerations for desktop hosting](compute/remote-desktop-services/Azure-services-and-considerations-for-desktop-hosting.md)
 ###### [Tenant on-premises components](compute/remote-desktop-services/Tenant-on-premises-components.md)
 #### Deploy
+##### [Upgrade your Remote Desktop Services deployments to Windows Server 2016](compute/remote-desktop-services/upgrade-to-rds-2016.md)
+###### [Upgrade Remote Desktop Session Host servers](compute/remote-desktop-services/upgrade-to-rdsh-2016.md)
+###### [Upgrade Remote Desktop Virtualization Host servers](compute/remote-desktop-services/upgrade-to-rdvh-2016.md)
 ##### [Configure your desktop hosting environment](compute/remote-desktop-services/Configure-your-desktop-hosting-environment.md)
 ###### [Create virtual machines for Remote Desktop](compute/remote-desktop-services/Create-virtual-machines-for-Remote-Desktop.md)
 ###### [Prepare your virtual machines for Remote Desktop](compute/remote-desktop-services/Prepare-your-virtual-machines-for-Remote-Desktop.md)

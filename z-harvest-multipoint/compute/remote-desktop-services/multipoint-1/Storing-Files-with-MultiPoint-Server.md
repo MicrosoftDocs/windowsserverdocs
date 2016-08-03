@@ -11,7 +11,7 @@ ms.assetid: c9eb0461-3846-4ddc-97ff-de10f03f30cf
 author: evas
 manager: scottman
 ---
-# Storing Files with MultiPoint Server
+# Storing Files with MultiPoint Services
 MultiPoint Services supports storing user files in the following ways:  
   
 -   **On the operating system partition of the hard disk drive.** By default, MultiPoint Services stores user files on the hard disk drive with the operating system.  

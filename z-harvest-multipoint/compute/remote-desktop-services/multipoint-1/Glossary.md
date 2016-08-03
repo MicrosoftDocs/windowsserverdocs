@@ -45,7 +45,7 @@ A user account on a specific computer. A local user account is available only on
 **multifunction hub**  
 See *USB zero client*.  
   
-**MultiPoint system**  
+**MultiPoint Services system**  
 A collection of hardware and software that consists of one computer that has Windows Server 2016 installed with the MultiPoint Services role enabled and at least one MultiPoint *station*. For more information about system layout options, see [MultiPoint Server Site Planning](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Site-Planning.md)  
   
 **partition**  
