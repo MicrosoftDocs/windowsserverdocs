@@ -29,7 +29,7 @@ Before you enable Disk Protection, make sure all applications and drivers are in
   
     -   Ensure the MultiPoint Services system is in exactly the state in which you want it to remain. For example, ensure that installed software, system settings, and updates are correct.  
   
-    -   Move user profiles to a volume that is not protected, or set up a shared file location off the system volume as described in [Enable file sharing in MultiPoint Services](../../../compute/remote-desktop-services/multipoint-1/Enable-file-sharing-in-Windows-MultiPoint-Server-2012.md).  
+    -   Move user profiles to a volume that is not protected, or set up a shared file location off the system volume as described in [Enable file sharing in MultiPoint Services](Enable-file-sharing-in-MultiPoint-services.md).  
   
 3.  From the **Start** screen, open **MultiPoint Manager**.  
   
@@ -81,5 +81,4 @@ You can uninstall Disk Protection whether it is enabled or disabled.
   
 2.  On the Home tab, and click **Uninstall disk protection**, and then click **OK**.  
   
-    After you click **OK**, the computer restarts. The uninstallation process requires several restarts, during which the driver and cache file are removed. The DpReserved partition remains, and the pagefile, crash dump location, and event log files remain configured to use the DpReserved partition.  
-  
+    After you click **OK**, the computer restarts. The uninstallation process requires several restarts, during which the driver and cache file are removed. The DpReserved partition remains, and the pagefile, crash dump location, and event log files remain configured to use the DpReserved partition.

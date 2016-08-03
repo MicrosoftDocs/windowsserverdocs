@@ -51,6 +51,4 @@ You should end a user’s session when you have to log the user off from the Mul
   
 ## See Also  
 [Manage User Desktops](manage-user-desktops-using-multipoint-manager.md)  
-[Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)  
-  
-  
+[Log off or Disconnect User Sessions](Log-off-or-Disconnect-User-Sessions.md)

@@ -29,7 +29,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage User Stations
-This section discusses managing the *stations* that make up the MultiPoint Services system. Managing a MultiPoint Services system includes both managing the hardware and software components of [!INCLUDE[win8_server_multipoint_manager](/includes/win8_server_multipoint_manager_md.md)]. In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*.  
+This section discusses managing the *stations* that make up the MultiPoint Services system. Managing a MultiPoint Services system includes both managing the hardware and software components of [!INCLUDE[win8_server_multipoint_manager](,/includes/win8_server_multipoint_manager_md.md)]. In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*.  
   
 ## Station status  
 You can view the following types of status for each desktop on the **Stations** tab. Status includes:  

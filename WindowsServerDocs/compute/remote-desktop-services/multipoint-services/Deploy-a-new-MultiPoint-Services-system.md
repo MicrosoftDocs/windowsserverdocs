@@ -15,28 +15,27 @@ manager: scottman
 The topics in this section explain how to set up your MultiPoint Services System. You will install and configure a MultiPoint server; set up your stations; install drivers, updates, and software; optionally join a domain; activate MultiPoint Server; and add client access licenses \(CALs\) for each station.  
   
 > [!IMPORTANT]  
-> If you have not yet planned your MultiPoint Services deployment, see [Planning a Windows MultiPoint Services Deployment](../../../compute/remote-desktop-services/multipoint-1/Planning-a-MultiPoint-Services-Deployment.md).  
+> If you have not yet planned your MultiPoint Services deployment, see [Planning a Windows MultiPoint Services Deployment](Planning-a-MultiPoint-Services-Deployment.md).  
   
 ## In this section  
 For the initial installation, we recommend that you perform the tasks in the order in which they are presented.  
   
-1.  [Collect hardware and device drivers needed for the installation](../../../compute/remote-desktop-services/multipoint-1/Collect-hardware-and-device-drivers-needed-for-the-installation.md)  
+1.  [Collect hardware and device drivers needed for the installation](Collect-hardware-and-device-drivers-needed-for-the-installation.md)  
   
-2.  [Set up the physical computer and primary station](../../../compute/remote-desktop-services/multipoint-1/Set-up-the-physical-computer-and-primary-station.md)  
+2.  [Set up the physical computer and primary station](Set-up-the-physical-computer-and-primary-station.md)  
   
-3.  [Install Windows Server 2016 and enroll MultiPoint Services](../../../compute/remote-desktop-services/multipoint-1/Install-Windows-MultiPoint-Server-2012.md)  
+3.  [Install Windows Server 2016 and enroll MultiPoint Services](Install-MultiPoint-services.md)  
   
-4.  [Update and install device drivers if needed](../../../compute/remote-desktop-services/multipoint-1/Update-and-install-device-drivers-if-needed.md)  
+4.  [Update and install device drivers if needed](Update-and-install-device-drivers-if-needed.md)  
   
-5.  [Set the date, time, and time zone](../../../compute/remote-desktop-services/multipoint-1/Set-the-date--time--and-time-zone.md)  
+5.  [Set the date, time, and time zone](Set-the-date--time--and-time-zone.md)  
   
-6.  [Join the MultiPoint server to a domain &#40;optional&#41;](../../../compute/remote-desktop-services/multipoint-1/Join-the-MultiPoint-Server-computer-to-a-domain--optional-.md)  
+6.  [Join the MultiPoint server to a domain &#40;optional&#41;](Join-the-MultiPoint-Server-computer-to-a-domain--optional-.md)  
   
-7.  [Install updates](../../../compute/remote-desktop-services/multipoint-1/Install-updates.md)  
+7.  [Install updates](Install-updates.md)  
   
-8.  [Attach additional stations to your Windows MultiPoint Server 2012 computer](../../../compute/remote-desktop-services/multipoint-1/Attach-additional-stations-to-your-Windows-MultiPoint-Server-2012-computer.md)  
+8.  [Attach additional stations to your MultiPoint Services computer](Attach-additional-stations-to-your-MultiPoint-services-computer.md)  
   
-9. [Activate Windows Server 2016 and add Remote Desktop Services CALs](../../../compute/remote-desktop-services/multipoint-1/Activate-Windows-MultiPoint-Server-2012-and-add-CALs.md)  
+9. [Activate Windows Server 2016 and add Remote Desktop Services CALs](manage-client-access-licenses-with-multipoint-services.md)  
   
-10. [Install software on your MultiPoint Services system](../../../compute/remote-desktop-services/multipoint-1/Install-software-on-your-Windows-MultiPoint-Server-2012-system.md)  
-  
+10. [Install software on your MultiPoint Services system](Install-software-on-your-MultiPoint-Services-system.md)

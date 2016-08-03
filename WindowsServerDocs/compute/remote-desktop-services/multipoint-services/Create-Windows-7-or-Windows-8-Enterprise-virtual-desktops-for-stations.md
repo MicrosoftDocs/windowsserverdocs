@@ -28,7 +28,7 @@ To prepare to create station virtual desktops, ensure that your MultiPoint serve
     |Graphics|DX11|  
     |BIOS|BIOS CPU setting configured to enable virtualization – Second Level Address Translation \(SLAT\)|  
   
--   **Stations** \- Set up the stations for your MultiPoint Server system. For more information, see [Attach additional stations to your MultiPoint server](../../../compute/remote-desktop-services/multipoint-1/Attach-additional-stations-to-your-Windows-MultiPoint-Server-2012-computer.md).  
+-   **Stations** \- Set up the stations for your MultiPoint Server system. For more information, see [Attach additional stations to your MultiPoint server](Attach-additional-stations-to-your-MultiPoint-services-computer.md).  
   
 -   **Domain** \- In a domain environment, the Windows MultiPoint Server computer has been added to the domain, and a domain user has been added to the local Administrators group on the MultiPoint Server host operating system.  
   

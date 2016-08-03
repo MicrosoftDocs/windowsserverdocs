@@ -14,7 +14,7 @@ manager: scottman
 # Create local user accounts
 Three levels of local user accounts can be created in using the MultiPoint Manager: Standard User accounts; MultiPoint Dashboard users, who have limited administrative rights; and full Administrative User accounts.  
   
-Use the following procedure to create a local user account on a MultiPoint server. If your environment includes multiple MultiPoint servers, and you want the user to be able to log on to any station on any server, you need to create a local user account on each of your servers. That setup has some limitations. In a domain environment, you can also let users use their domain accounts. For an overview of your options, see [Plan user accounts for your Windows MultiPoint Services environment](../../../compute/remote-desktop-services/multipoint-1/Plan-user-accounts-for-your-Windows-MultiPoint-Server-2012-environment.md).  
+Use the following procedure to create a local user account on a MultiPoint server. If your environment includes multiple MultiPoint servers, and you want the user to be able to log on to any station on any server, you need to create a local user account on each of your servers. That setup has some limitations. In a domain environment, you can also let users use their domain accounts. For an overview of your options, see [Plan user accounts for your Windows MultiPoint Services environment](Plan-user-accounts-for-your-MultiPoint-services-environment.md).  
   
 ### To create a local user account
   
@@ -34,5 +34,4 @@ Use the following procedure to create a local user account on a MultiPoint serve
   
     -   **Administrative User** Has full administrative rights in MultiPoint Server. For example, an administrative user can run MultiPoint Manager, add and delete users, modify system settings, and update drivers.  
   
-5.  Click **Next**, and then click **Finish** to create the user account.  
-  
+5.  Click **Next**, and then click **Finish** to create the user account.

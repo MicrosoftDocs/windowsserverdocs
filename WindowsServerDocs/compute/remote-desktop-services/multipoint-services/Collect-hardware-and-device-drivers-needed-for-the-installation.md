@@ -16,7 +16,7 @@ Before you start deploying your MultiPoint Services system, you will need:
   
 -   **Hardware components for the server** \- Install any additional video cards or other system components at this time.  
   
--   **Hardware components for the stations** \- For information about planning stations for your environment, see [Selecting Hardware for Your MultiPoint Server System](../../../compute/remote-desktop-services/multipoint-1/Selecting-Hardware-for-Your-MultiPoint-Server-System.md).
+-   **Hardware components for the stations** \- For information about planning stations for your environment, see [Selecting Hardware for Your MultiPoint Server System](Selecting-Hardware-for-Your-MultiPoint-Server-System.md).
 -   **The latest drivers for your video cards** \- If your OEM or device manufacturer did not supply these, you will need to download them from the device manufacturer’s website.  
   
 -   **The latest USB zero client drivers** \- If you are using USB zero client stations, you must install the latest USB zero client drivers.  
