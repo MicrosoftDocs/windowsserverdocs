@@ -12,7 +12,7 @@ author: evas
 manager: scottman
 ---
 # Task Lists: MultiPoint Services
-Use the task lists in this topic to help you’re the deployment of your MultiPoint Services system and keep track of completed tasks. Not all tasks apply to every environment. For example, some tasks are performed only if you deploy a MultiPoint server on an Active Directory domain. Others, such as creating split\-screen stations or deploying virtual desktops for stations, are optional. For procedures that explain how to perform these tasks, see [Deploying MultiPoint Services](deploying-multipoint-services.md).  
+Use the task lists in this topic to help you’re the deployment of your MultiPoint Services system and keep track of completed tasks. Not all tasks apply to every environment. For example, some tasks are performed only if you deploy a MultiPoint server on an Active Directory domain. Others, such as creating split-screen stations or deploying virtual desktops for stations, are optional. For procedures that explain how to perform these tasks, see [Deploying MultiPoint Services](deploying-multipoint-services.md).  
   
 ## Task list: Deploy the server  
 
@@ -36,7 +36,7 @@ Use the task lists in this topic to help you’re the deployment of your MultiPo
 |--------|  
 |[Set up a split-screen station](Set-up-a-split-screen-station-in-MultiPoint-services.md)|  
 |[Add printers](Add-printers.md)|  
-|[Create virtual desktops for stations](Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md)|  
+|[Create virtual desktops for stations](Create-Windows-10-Enterprise-virtual-desktops-for-stations.md)|  
   
 ## Task list: Prepare your system for users  
   

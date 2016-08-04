@@ -35,8 +35,8 @@ For instructions that explain how to set up each type of station, see the follow
 For a detailed comparison of station types, see [Station type comparison](multipoint-services-stations.md#Station-Type-Comparison).  
   
 > [!NOTE]  
-> -   The procedures for attaching stations do not describe how to set up intermediate hubs or downstream hubs. For information about where to install these hubs, see [MultiPoint Stations](MultiPoint-Server-Stations.md).  
-> -   In some cases, you might need to create station virtual desktops, which run in virtual machines. For example, you use applications that cannot be installed on Windows Server or applications that will not run multiple instances on the same host computer. For more information, see [Create Windows 10 Enterprise virtual desktops for stations](Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md).  
+> -   The procedures for attaching stations do not describe how to set up intermediate hubs or downstream hubs. For information about where to install these hubs, see [MultiPoint Stations](MultiPoint-services-Stations.md).  
+> -   In some cases, you might need to create station virtual desktops, which run in virtual machines. For example, you use applications that cannot be installed on Windows Server or applications that will not run multiple instances on the same host computer. For more information, see [Create Windows 10 Enterprise virtual desktops for stations](Create-Windows-10-Enterprise-virtual-desktops-for-stations.md).  
   
 > [!TIP]  
 > It is useful to create your stations in the order of their physical locations so that they are identified sequentially in MultiPoint Server. If you later want to change the name of a station, you can do that in MultiPoint Manager. For more information, see Remap all stations in MultiPoint Server Help and Support.

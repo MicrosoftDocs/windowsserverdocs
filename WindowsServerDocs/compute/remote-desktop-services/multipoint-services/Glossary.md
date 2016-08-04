@@ -67,7 +67,7 @@ A station where a single monitor can be used to display two independent user des
 In contrast to the *primary station*, which can be used by an administrator to access startup menus, standard stations will not display startup menus, and they can only be used after MultiPoint Services has completed the startup process. See also: *station*.  
   
 **station**  
-User endpoint for connecting to the computer running MultiPoint Services. Three station types are supported: direct-video-connected, USB-zero-client-connected, and RDP-over-LAN-connected stations. For more information about stations, see [MultiPoint Server Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-Server-Stations.md).  
+User endpoint for connecting to the computer running MultiPoint Services. Three station types are supported: direct-video-connected, USB-zero-client-connected, and RDP-over-LAN-connected stations. For more information about stations, see [MultiPoint Server Stations](../../../compute/remote-desktop-services/multipoint-1/MultiPoint-services-Stations.md).  
   
 **station hub**  
 A USB hub that has been associated with a monitor to create a MultiPoint station. It connects peripheral USB devices to MultiPoint Services. See also: *USB zero client* and *USB hub*.  

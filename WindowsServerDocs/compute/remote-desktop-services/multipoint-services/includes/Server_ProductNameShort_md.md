@@ -1,1 +1,1 @@
-MultiPoint Server
+MultiPoint Services

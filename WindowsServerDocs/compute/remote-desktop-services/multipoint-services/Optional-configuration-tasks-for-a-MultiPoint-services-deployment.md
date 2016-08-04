@@ -18,6 +18,4 @@ Topics in this section explain how to perform optional configuration tasks on yo
   
 [Add printers](Add-printers.md)  
   
-[Enable access over a wireless LAN](Enable-access-over-a-wireless-LAN-in-MultiPoint-services.md)  
-  
-[Create Windows 10 Enterprise virtual desktops for stations](Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md)  
+[Create Windows 10 Enterprise virtual desktops for stations](Create-Windows-10-Enterprise-virtual-desktops-for-stations.md)  

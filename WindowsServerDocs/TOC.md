@@ -132,7 +132,7 @@
 ###### [Optional configuration tasks for a MultiPoint Services deployment](compute/remote-desktop-services/multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md)
 ####### [Set up a split-screen station](compute/remote-desktop-services/multipoint-services/Set-up-a-split-screen-station-in-multipoint-services.md)
 ####### [Add printers](compute/remote-desktop-services/multipoint-services/Add-printers.md)
-####### [Create Windows 10 Enterprise virtual desktops for stations](compute/remote-desktop-services/multipoint-services/Create-Windows-7-or-Windows-8-Enterprise-virtual-desktops-for-stations.md)
+####### [Create Windows 10 Enterprise virtual desktops for stations](compute/remote-desktop-services/multipoint-services/Create-Windows-10-Enterprise-virtual-desktops-for-stations.md)
 ###### [Prepare your MultiPoint Services System for users](compute/remote-desktop-services/multipoint-services/Prepare-your-MultiPoint-services-system-for-users.md)
 ####### [Plan user accounts for your MultiPoint Services environment](compute/remote-desktop-services/multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment.md)
 ####### [Example scenarios: MultiPoint Services user accounts](compute/remote-desktop-services/multipoint-services/Example-scenarios--MultiPoint-services-user-accounts.md)
