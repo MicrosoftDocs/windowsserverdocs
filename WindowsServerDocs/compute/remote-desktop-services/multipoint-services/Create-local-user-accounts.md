@@ -28,9 +28,9 @@ Use the following procedure to create a local user account on a MultiPoint serve
   
 4.  Select the type of user account that you want to create:  
   
-    -   **Standard User** \- Can log on to a station and perform user tasks, but has no access to MultiPoint Manager or the MultiPoint Server Dashboard, and cannot shut down the system.  
+    -   **Standard User** - Can log on to a station and perform user tasks, but has no access to MultiPoint Manager or the MultiPoint Server Dashboard, and cannot shut down the system.  
   
-    -   **MultiPoint Dashboard User** \- Has limited administrative rights. A Dashboard user can open the Dashboard and perform tasks such as logging users off the system or shutting down the MultiPoint Server computer, but the user does not have access to MultiPoint Manager.  
+    -   **MultiPoint Dashboard User** - Has limited administrative rights. A Dashboard user can open the Dashboard and perform tasks such as logging users off the system or shutting down the MultiPoint Server computer, but the user does not have access to MultiPoint Manager.  
   
     -   **Administrative User** Has full administrative rights in MultiPoint Server. For example, an administrative user can run MultiPoint Manager, add and delete users, modify system settings, and update drivers.  
   

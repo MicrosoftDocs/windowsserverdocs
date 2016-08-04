@@ -9,8 +9,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aca5f0be-f253-46b5-b1e7-0bffa15f3227
 author: lizap
-manager: jeffgilb
-robots: noindex,nofollow
+manager: swadhwa
+
 ---
 # Getting Started with MultiPoint Services
 Your [!INCLUDE[win8_server_multipoint_3](./includes/win8_server_multipoint_3_md.md)] system allows many users to use multiple *stations* that are physically connected by using *station hubs* to only one computer. Each station typically consists of a station hub, mouse, keyboard, and video monitor. Each user at a [!INCLUDE[win8_server_multipoint_3](./includes/win8_server_multipoint_3_md.md)] station experiences a unique Windows computing *session* that you can manage using [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)].  
@@ -58,7 +58,7 @@ Types of actions you can perform using [!INCLUDE[win8_server_multipoint_manager]
   
 The tabs are as follows:  
   
--   **Home tab:** Block or unblock stations, set web limiting options, project desktops to other desktops, launch or close applications, communicate via instant messaging, assist other users through remote desktop control, adjust desktop thumbnail views, and enable or disable instant messaging and application auto\-launch. For more information, see the [Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md) topic.  
+-   **Home tab:** Block or unblock stations, set web limiting options, project desktops to other desktops, launch or close applications, communicate via instant messaging, assist other users through remote desktop control, adjust desktop thumbnail views, and enable or disable instant messaging and application auto-launch. For more information, see the [Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md) topic.  
   
 -   **Systems tab:** Restart, shut down, or remap either all or selected systems. For more information, see the [Manage MultiPoint Systems Using MultiPoint Dashboard](Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md) topic.  
   
@@ -83,7 +83,7 @@ For more information about how to save and manage private and public content, se
   
 -   Users can disconnect from one station and log back on to their session on a different station without losing their work. For more information, see the [Suspend and Leave User Session Active](Suspend-and-Leave-User-Session-Active.md) topic.  
   
--   A standard user’s session \(or all user sessions\) can be disconnected or logged off by the administrative user through [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)]. For more information, see the [Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md) topic.  
+-   A standard user’s session (or all user sessions) can be disconnected or logged off by the administrative user through [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)]. For more information, see the [Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md) topic.  
   
 -   If a user forgets a password, you can reset the password from the **Users** tab, which uses standard Windows user account management functionality. For more information, see the [Update or Delete a User Account](Update-or-Delete-a-User-Account.md) topic.  
   

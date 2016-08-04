@@ -21,15 +21,15 @@ If you will access your MultiPoint Services computer over an Active Directory do
   
 1.  From the **Start** screen, open **Control Panel**. Click **System and Security**, and then click **System**.  
   
-    \-Or\-  
+    -Or-  
   
-    Open the computer properties in File Explorer. \(Right\-click **Computer**, and then click **Properties**.\)  
+    Open the computer properties in File Explorer. (Right-click **Computer**, and then click **Properties**.)  
   
 2.  Under **Computer name, domain, and workgroup settings**, click **Change settings**.  
   
 3.  On the **Computer name** tab, click **Change**.  
   
-4.  In the **Computer Name\/Domain Changes** dialog box, select **Domain**, enter the name of the domain, and click **OK**, and then follow the steps in the wizard to complete the process.  
+4.  In the **Computer Name/Domain Changes** dialog box, select **Domain**, enter the name of the domain, and click **OK**, and then follow the steps in the wizard to complete the process.  
   
 5.  After the computer restarts, log on as Administrator and wait for MultiPoint Manager to open.  
   

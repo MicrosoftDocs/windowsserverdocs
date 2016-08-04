@@ -8,25 +8,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ce4c5a9-3dec-412f-910b-54a252f8f209
+author: lizap
 manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
 ---
 # Create an Administrative User Account
 Create *administrative user accounts* for those individuals who will manage your MultiPoint Services system. To see who has administrative access, in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Users** tab. Administrative user accounts are displayed in the **Account Type** column as **Administrator**. *Administrative users* have access to all [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] tasks that change desktop and system settings, such as:  

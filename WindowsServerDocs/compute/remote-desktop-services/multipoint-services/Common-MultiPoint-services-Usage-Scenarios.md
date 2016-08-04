@@ -12,11 +12,11 @@ author: evas
 manager: scottman
 ---
 # Common Usage Scenarios
-MultiPoint Services delivers individual user desktops with the most important elements of the Windows 10 desktop experience. It also offers a simple management tool, the MultiPoint Manager, that system administrators can use for discovery and control of multiple MultiPoint servers and clients. Additionally, MultiPoint Services includes the MultiPoint Dashboard for real\-time visibility. Examples of what you can do with MultiPoint Services include the following:  
+MultiPoint Services delivers individual user desktops with the most important elements of the Windows 10 desktop experience. It also offers a simple management tool, the MultiPoint Manager, that system administrators can use for discovery and control of multiple MultiPoint servers and clients. Additionally, MultiPoint Services includes the MultiPoint Dashboard for real-time visibility. Examples of what you can do with MultiPoint Services include the following:  
   
 1.  Give each user a personal computing experience and private folders without needing a separate computer for each person.  
   
-2.  Manage multiple MultiPoint servers in a computer lab, classroom, training center, or small business environment.  
+2.  Manage multiple MultiPoint systems in a computer lab, classroom, training center, or small business environment.  
   
 3.  Install a program once, and access it from any station.  
   
@@ -32,5 +32,5 @@ MultiPoint Services delivers individual user desktops with the most important el
   
 9. Take control of a user’s session to demonstrate a task.  
   
-10. Do all of the above\-listed items for a user who is using a traditional PC, laptop, or any other mobile device.  
+10. Do all of the above-listed items for a user who is using a traditional PC, laptop, or any other mobile device.  
   

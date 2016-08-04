@@ -14,9 +14,9 @@ manager: scottman
 # Configure Disk Protection
 Use the procedures in this topic to enable Disk Protection in Multipoint Services to protect your system volume from unintended updates, to schedule Windows Updates to be retained while Disk Protection is active, to temporarily disable Disk Protection, and to uninstall Disk Protection.  
   
-By enabling Disk Protection in Windows MultiPoint Server 2012, you can protect the system volume \(the drive where Windows is installed—usually C:\) from unwanted changes. When Disk Protection is enabled, changes made to the system volume are stored in a temporary location so that simply restarting the computer discards them and automatically returns the system to the previous known\-good state.  
+By enabling Disk Protection in Windows MultiPoint Server 2012, you can protect the system volume (the drive where Windows is installed, usually C:) from unwanted changes. When Disk Protection is enabled, changes made to the system volume are stored in a temporary location so that simply restarting the computer discards them and automatically returns the system to the previous known-good state.  
   
-The administrator can easily install software or make configuration changes by temporarily disabling disk protection. In order to keep the system current with Windows Updates and anti\-malware definitions, Disk Protection schedules a maintenance window to download and install updates. The administrator can also provide a custom script to run during the maintenance window to accommodate any maintenance needs beyond Windows Update.  
+The administrator can easily install software or make configuration changes by temporarily disabling disk protection. In order to keep the system current with Windows Updates and anti-malware definitions, Disk Protection schedules a maintenance window to download and install updates. The administrator can also provide a custom script to run during the maintenance window to accommodate any maintenance needs beyond Windows Update.  
   
 ## Enable Disk Protection  
 Before you enable Disk Protection, make sure all applications and drivers are installed and up to date, and move your user profiles to a volume that will not be protected. If you need to make manual updates after you enable Disk Protection, you can temporarily disable Disk Protection. However, it's easiest to get the system into an ideal state before Disk Protection is turned on.  
@@ -40,13 +40,13 @@ When Disk Protection is enabled for the first time, the system is prepared by in
 Windows needs to update a few system files – including the system pagefile, crash dump location, and event logs. Those files are not discarded when Disk Protection is enabled. To accomplish this, a new volume named DpReserved is created when Disk Protection is enabled for the first time, and those files are moved to that volume. The DpReserved partition is not protected, so writes to those files persist through restarts, even when Disk Protection is enabled.  
   
 ## Schedule software updates  
-If Windows is configured to automatically install Windows Updates, Disk Protection allows these updates at the configured time, and does not discard the updates. For example, if Windows updates are scheduled for 3:00 a.m., Disk Protection checks for updates each day at 3:00 a.m. If any updates are found, MultiPoint Services temporarily disables Disk Protection, applies the updates, and then re\-enables Disk Protection.  
+If Windows is configured to automatically install Windows Updates, Disk Protection allows these updates at the configured time, and does not discard the updates. For example, if Windows updates are scheduled for 3:00 a.m., Disk Protection checks for updates each day at 3:00 a.m. If any updates are found, MultiPoint Services temporarily disables Disk Protection, applies the updates, and then re-enables Disk Protection.  
   
 #### To schedule software updates in MultiPoint Services  
   
 1.  In MultiPoint Manager, display the **Home** tab, and then click **Schedule software updates**.  
   
-2.  In the Schedule Software Updates dialog box, click **Update at**, and select a time for updates \- for example, **3:00 AM**.  
+2.  In the Schedule Software Updates dialog box, click **Update at**, and select a time for updates - for example, **3:00 AM**.  
   
 3.  Select the **Run Windows Update** check box.  
   
@@ -59,7 +59,7 @@ If Windows is configured to automatically install Windows Updates, Disk Protecti
 7.  Click **OK**.  
   
 ## Temporarily disable Disk Protection  
-If an administrator needs to install software, change system settings, or perform other maintenance tasks that involve system updates, they can temporarily disable Disk Protection. After the changes are made, re\-enable Disk Protection. During system restarts, the system will retain its state when Disk Protection was enabled.  
+If an administrator needs to install software, change system settings, or perform other maintenance tasks that involve system updates, they can temporarily disable Disk Protection. After the changes are made, re-enable Disk Protection. During system restarts, the system will retain its state when Disk Protection was enabled.  
   
 #### To disable disk protection  
   
@@ -68,10 +68,10 @@ If an administrator needs to install software, change system settings, or perfor
 2.  On the Home tab, click **Disable disk protection**, and then click **OK**.  
   
 > [!NOTE]  
-> Remember to re\-enable Disk Protection after maintenance is complete. The system will not be protected again until the administrator explicitly re\-enables Disk Protection.  
+> Remember to re-enable Disk Protection after maintenance is complete. The system will not be protected again until the administrator explicitly re-enables Disk Protection.  
   
 ## Uninstall Disk Protection  
-Uninstalling Disk Protection removes the driver and the cache file, so you should only do this if you want to stop using Disk Protection long\-term. If you simply want to perform maintenance or stop protection temporarily, use the Disable disk protection task instead.  
+Uninstalling Disk Protection removes the driver and the cache file, so you should only do this if you want to stop using Disk Protection long-term. If you simply want to perform maintenance or stop protection temporarily, use the Disable disk protection task instead.  
   
 You can uninstall Disk Protection whether it is enabled or disabled.  
   

@@ -8,25 +8,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 00aba4c4-0244-4b39-8c85-c46fd96e1d6a
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+anager: swadhwa
 ---
 # Enable or Disable Disk Protection
 The Disk Protection feature allows you to reset your MultiPoint Services system to a specified state each time you restart the system. Using Disk Protection, users can temporarily make changes to the MultiPoint Services system, and then those changes are discarded when the server is restarted. Examples of changes that will be discarded when the server is restarted include personalizing a user’s profile, saving files, changing settings, or installing applications.  

@@ -29,11 +29,10 @@ Use the procedures in this topic to make a local printer available to all users 
   
     3.  In Control Panel, click **Hardware**, and then click **Devices and Printers**.  
   
-    4.  Under **Printers and Faxes**, right\-click the printer, and then click **Printer Properties**.  
+    4.  Under **Printers and Faxes**, right-click the printer, and then click **Printer Properties**.  
   
     5.  Click the **Sharing** tab.  
   
     6.  Click **Share this printer**, specify a share name for the printer, and then click **OK**.  
   
-Users logged on to any station that is connected to the Multipoint Services computer will be able to see and use the printer.  
-  
+Users logged on to any station that is connected to the Multipoint Services computer will be able to see and use the printer. 

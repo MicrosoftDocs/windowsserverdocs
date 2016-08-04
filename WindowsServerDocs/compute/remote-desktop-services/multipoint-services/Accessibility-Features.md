@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c23f8a4-9cfb-4372-a571-a525355efb04
 author: lizap
-manager: jeffgilb
+manager: swadhwa
 robots: noindex,nofollow
 ---
 # Accessibility Features
@@ -34,11 +34,11 @@ Most programs also provide accelerator keys that can make it easier to work with
 |||  
 |-|-|  
 |**Press this key**|**To do this**|  
-|ALT\+U|Enter user name|  
-|ALT\+F|Enter full name|  
-|ALT\+P|Create password|  
-|ALT\+C|Confirm password|  
-|ALT\+N or ENTER|Next|  
+|ALT+U|Enter user name|  
+|ALT+F|Enter full name|  
+|ALT+P|Create password|  
+|ALT+C|Confirm password|  
+|ALT+N or ENTER|Next|  
 |ESC|Cancel|  
   
 #### Set level of access  
@@ -46,10 +46,10 @@ Most programs also provide accelerator keys that can make it easier to work with
 |||  
 |-|-|  
 |**Press this key**|**To do this**|  
-|ALT\+S|Select standard user|  
-|ALT\+A|Select administrator|  
-|ALT\+B|Back|  
-|ALT\+N or ENTER|Next|  
+|ALT+S|Select standard user|  
+|ALT+A|Select administrator|  
+|ALT+B|Back|  
+|ALT+N or ENTER|Next|  
 |ESC|Cancel|  
   
 #### Successfully added new user  
@@ -66,10 +66,10 @@ Most programs also provide accelerator keys that can make it easier to work with
 |||  
 |-|-|  
 |**Press this key**|**To do this**|  
-|ALT\+P|Select Product key|  
-|ALT\+V|Select Open license|  
-|ALT\+O|Select other volume licensing programs|  
-|ALT\+N|Next|  
+|ALT+P|Select Product key|  
+|ALT+V|Select Open license|  
+|ALT+O|Select other volume licensing programs|  
+|ALT+N|Next|  
 |ESC|Cancel|  
   
 #### Enter product key  
@@ -77,8 +77,8 @@ Most programs also provide accelerator keys that can make it easier to work with
 |||  
 |-|-|  
 |**Press this key**|**To do this**|  
-|ALT\+P|Enter product key|  
-|ALT\+N or ENTER|Next|  
+|ALT+P|Enter product key|  
+|ALT+N or ENTER|Next|  
 |ESC|Cancel|  
   
 #### Add a new open license CAL  
@@ -86,10 +86,10 @@ Most programs also provide accelerator keys that can make it easier to work with
 |||  
 |-|-|  
 |**Press this key**|**To do this**|  
-|ALT\+A|Enter authorization number|  
-|ALT\+C|Enter license number|  
-|ALT\+L|Enter number of licenses|  
-|ALT\+N|Next|  
+|ALT+A|Enter authorization number|  
+|ALT+C|Enter license number|  
+|ALT+L|Enter number of licenses|  
+|ALT+N|Next|  
 |ESC|Cancel|  
   
 #### Add a CAL for other volume licensing programs  
@@ -97,9 +97,9 @@ Most programs also provide accelerator keys that can make it easier to work with
 |||  
 |-|-|  
 |**Press this key**|**To do this**|  
-|ALT\+A|Enter agreement\/enrollment number|  
-|ALT\+L|Enter number of licenses|  
-|ALT\+N|Next|  
+|ALT+A|Enter agreement\/enrollment number|  
+|ALT+L|Enter number of licenses|  
+|ALT+N|Next|  
 |ESC|Cancel|  
   
 #### License installed  
@@ -107,8 +107,8 @@ Most programs also provide accelerator keys that can make it easier to work with
 |||  
 |-|-|  
 |**Press this key**|**To do this**|  
-|ALT\+A|Add another product key|  
+|ALT+A|Add another product key|  
 |ENTER|Finish|  
   
 ## See Also  
-[Managing Your MultiPoint Server System](Managing-Your-MultiPoint-Services-System.md)  
+[Managing Your MultiPoint Server System](Managing-Your-MultiPoint-Services-System.md)

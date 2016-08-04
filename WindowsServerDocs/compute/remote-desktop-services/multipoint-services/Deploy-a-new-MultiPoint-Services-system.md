@@ -12,7 +12,7 @@ author: evas
 manager: scottman
 ---
 # Deploy a new Windows MultiPoint Services system
-The topics in this section explain how to set up your MultiPoint Services System. You will install and configure a MultiPoint server; set up your stations; install drivers, updates, and software; optionally join a domain; activate MultiPoint Server; and add client access licenses \(CALs\) for each station.  
+The topics in this section explain how to set up your MultiPoint Services System. You will install and configure a MultiPoint server; set up your stations; install drivers, updates, and software; optionally join a domain; activate MultiPoint Server; and add client access licenses (CALs) for each station.  
   
 > [!IMPORTANT]  
 > If you have not yet planned your MultiPoint Services deployment, see [Planning a Windows MultiPoint Services Deployment](Planning-a-MultiPoint-Services-Deployment.md).  
@@ -30,7 +30,7 @@ For the initial installation, we recommend that you perform the tasks in the ord
   
 5.  [Set the date, time, and time zone](Set-the-date--time--and-time-zone.md)  
   
-6.  [Join the MultiPoint server to a domain &#40;optional&#41;](Join-the-MultiPoint-Server-computer-to-a-domain--optional-.md)  
+6.  [Join the MultiPoint Services system to a domain - optional](Join-the-MultiPoint-services-computer-to-a-domain--optional-.md)  
   
 7.  [Install updates](Install-updates.md)  
   

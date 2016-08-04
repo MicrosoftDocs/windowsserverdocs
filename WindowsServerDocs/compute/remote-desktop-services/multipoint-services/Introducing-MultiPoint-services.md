@@ -16,9 +16,9 @@ MultiPoint Services role in Windows Server 2016 allows multiple users, each with
   
 -   Directly to video ports on the computer  
   
--   Through specialized USB zero clients \(also referred to as multifunction USB hubs\), as well as through similar USB\-over\-Ethernet devices.  
+-   Through specialized USB zero clients (also referred to as multifunction USB hubs), as well as through similar USB-over-Ethernet devices.  
   
--   Over the local area network \(LAN\)  
+-   Over the local area network (LAN)  
   
 Each of these methods is described in more detail in [MultiPoint Services Stations](MultiPoint-services-Stations.md) later in this document.  
   

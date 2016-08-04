@@ -8,25 +8,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e113666-e45f-48b6-aad8-42c361c9046d
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Create a Standard User Account
 Create *standard user accounts* for those users who will regularly access stations, but who will not manage your MultiPoint Services system. Users with standard user accounts can run most applications and save files, but cannot run [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)]. To see who has standard user access, in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Users** tab. Standard user accounts are displayed in the **Account Type** column as **Standard**.  

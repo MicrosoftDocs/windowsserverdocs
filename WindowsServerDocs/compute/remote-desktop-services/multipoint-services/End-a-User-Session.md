@@ -8,25 +8,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # End a User Session
 You should end a user’s session when you have to log the user off from the MultiPoint Services system to return the desktop to its default settings. The user receives a warning that the connection is about to end. You should end a user’s connection when you want to:  

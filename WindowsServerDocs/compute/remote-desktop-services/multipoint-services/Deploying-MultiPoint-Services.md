@@ -12,7 +12,7 @@ author: evas
 manager: scottman
 ---
 # Deploying MultiPoint Services
-This guide describes how to deploy a server running MultiPoint Services and set-up MultiPoint stations, install and configure your system, set up user accounts, and perform some basic administration tasks, such as turning on Disk Protection and setting up backups, before you start using your system.  
+This guide describes how to deploy a server running MultiPoint Services and set up MultiPoint stations, install and configure your system, set up user accounts, and perform some basic administration tasks, such as turning on Disk Protection and setting up backups, before you start using your system.  
   
 > [!NOTE]  
 > For additional support, see the MultiPoint Services Help, which can be opened by clicking the Help icon or F1 on any MultiPoint Manager or MultiPoint Dashboard screen.  
@@ -22,11 +22,11 @@ This guide describes how to deploy a server running MultiPoint Services and set-
 The *Deployment Guide* is organized in the following way. At a minimum, you need to complete the tasks for deploying your system and preparing your environment for users. Other tasks might or might not apply to your environment. 
 -   [Deploy a new MultiPoint Services System](Deploy-a-new-MultiPoint-services-system.md)  
   
-    Set up your MultiPoint Services computer and stations. Install and configure MultiPoint Services; set up your stations; install drivers, updates, and software; optionally join a domain; add client licenses \(CALs\) for each station.  
+    Set up your MultiPoint Services computer and stations. Install and configure MultiPoint Services; set up your stations; install drivers, updates, and software; optionally join a domain; add client licenses (CALs) for each station.  
   
 -   [Optional configuration tasks for a MultiPoint Services deployment](Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md)  
   
-    Perform optional configuration tasks. Set up a split\-screen station; add printers; enable access over a wireless LAN; create virtual desktops for stations with the [!INCLUDE[firstref_client_7](./includes/firstref_client_7_md.md)] or [!INCLUDE[win8_client_ent_1](./includes/win8_client_ent_1_md.md)] operating system; change the display language for the system or for individual users.  
+    Perform optional configuration tasks. Set up a split-screen station; add printers; enable access over a wireless LAN; create virtual desktops for stations with the [!INCLUDE[firstref_client_7](./includes/firstref_client_7_md.md)] or [!INCLUDE[win8_client_ent_1](./includes/win8_client_ent_1_md.md)] operating system; change the display language for the system or for individual users.  
   
 -   [Prepare your MultiPoint Services system for users](Prepare-your-MultiPoint-services-system-for-users.md)  
   

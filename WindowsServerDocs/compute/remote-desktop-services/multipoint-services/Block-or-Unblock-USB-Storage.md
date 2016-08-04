@@ -8,24 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63f99c10-0289-4e79-b596-7c19160b3ad0
 author: lizap
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+manager: swadhwa
 ---
 # Block or Unblock USB Storage
 You can prevent users for using USB storage on their user stations.  

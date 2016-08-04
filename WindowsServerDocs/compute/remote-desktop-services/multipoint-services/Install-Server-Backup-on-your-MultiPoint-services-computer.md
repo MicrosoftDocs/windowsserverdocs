@@ -12,10 +12,10 @@ author: evas
 manager: scottman
 ---
 # Install Server Backup on your MultiPoint server
-It is recommended that you consider a backup and recovery plan for your MultiPoint server(s). For more information on the backup and recovery tools available on MultiPoint Services, see [Windows Server Backup Feature Overview \[Windows Server 8\]](assetId:///c72e1fe8-3762-4806-a3c3-0b9d567ba88d) \(http:\/\/technet.microsoft.com\/library\/jj614621.aspx\).  
+It is recommended that you consider a backup and recovery plan for your MultiPoint server(s).
   
 ## Configure MultiPoint Server Backup  
-A good backup and recovery plan is important for any size environment. Windows Server Backup is a feature in Windows Server 2016 that provides a set of wizards and other tools for you to perform basic backup and recovery tasks for the server on which it is installed. You can use Windows Server Backup to back up a full server \(all volumes\), selected volumes, the system state, or specific files or folders, and to create a backup that you can use to rebuild your system.  
+A good backup and recovery plan is important for any size environment. Windows Server Backup is a feature in Windows Server 2016 that provides a set of wizards and other tools for you to perform basic backup and recovery tasks for the server on which it is installed. You can use Windows Server Backup to back up a full server (all volumes), selected volumes, the system state, or specific files or folders, and to create a backup that you can use to rebuild your system.  
   
 You can recover volumes, folders, files, certain applications, and the system state. And, for disasters like hard disk failures, you can rebuild a system either from scratch or by using alternate hardware. To do this, you must have a backup of the full server or just the volumes that contain operating system files and the Windows Recovery Environment. This restores your complete system onto your old system or onto a new hard disk.  
   
@@ -35,10 +35,10 @@ Use the following procedures to set up the type of backup you require.
   
     The Add Features Wizard opens.  
   
-5.  On the **Select Features** page, expand Windows Server Backup Features, select the check boxes for **Windows Server Backup** and **Command\-line Tools**, and then click **Next**.  
+5.  On the **Select Features** page, expand Windows Server Backup Features, select the check boxes for **Windows Server Backup** and **Command-line Tools**, and then click **Next**.  
   
     > [!NOTE]  
-    > Or, if you just want to install the snap\-in and the Wbadmin command\-line tool, expand **Windows Server Backup Features**, and then select the **Windows Server Backup** check box only—make sure the **Command\-line Tools** check box is clear.  
+    > Or, if you just want to install the snap-in and the Wbadmin command-line tool, expand **Windows Server Backup Features**, and then select the **Windows Server Backup** check box only—make sure the **Command-line Tools** check box is clear.  
   
 6.  On the **Confirm Installation Selections** page, review your choices, and then click **Install**.  
   
@@ -46,11 +46,10 @@ Use the following procedures to set up the type of backup you require.
   
 7.  After the installation completes successfully, you should be able to access these backup and recovery tools:  
   
-    -   To open the Windows Server Backup snap\-in, on the **Start** screen, type **backup**, and then click **Windows Server Backup** in the results.  
+    -   To open the Windows Server Backup snap-in, on the **Start** screen, type **backup**, and then click **Windows Server Backup** in the results.  
   
-    -   To start the Wbadmin tool and view syntax for its commands: On the **Start** screen, type **command**. In the results, right\-click **Command Prompt**, click **Run as administrator** at the bottom of the page, and then click **Yes** at the confirmation prompt. At the command prompt, type **wbadmin \/?** and press ENTER. You should see command syntax and descriptions for the tool.  
+    -   To start the Wbadmin tool and view syntax for its commands: On the **Start** screen, type **command**. In the results, right-click **Command Prompt**, click **Run as administrator** at the bottom of the page, and then click **Yes** at the confirmation prompt. At the command prompt, type **wbadmin /?** and press ENTER. You should see command syntax and descriptions for the tool.  
   
 #### To configure backups using Windows Server Backup  
   
--   Follow the guidance in [Backing Up Your Server](http://technet.microsoft.com/library/cc753528.aspx).  
-  
+-   Follow the guidance in [Backing Up Your Server](http://technet.microsoft.com/library/cc753528.aspx). 

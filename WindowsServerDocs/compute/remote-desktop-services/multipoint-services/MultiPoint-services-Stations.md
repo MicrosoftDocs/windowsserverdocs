@@ -55,7 +55,7 @@ The following diagram shows a MultiPoint server system with a primary station (d
 USB-over-Ethernet zero clients are a variation of USB zero clients that send USB over LAN to the MultiPoint Services system. These types of USB zero clients function similarly to other USB zero clients, but are not limited by USB cable length maximums. USB-over-Ethernet zero clients are not traditional thin clients, and they appear as virtual USB devices on the MultiPoint Services system. When using these devices, refer to the device manufacturer for specific performance and site planning recommendations. Most devices have a third-party plugin for MultiPoint Manager that allows you to associate and connect devices to the MultiPoint Services system.  
   
 ## RDP-over-LAN connected stations  
-Thin clients and traditional desktop, laptop, or tablet computers, can connect to the computer running MultiPoint Services through the local area network (LAN) by using Remote Desktop Protocol (RDP) or a proprietary protocol and the Remote Desktop Protocol Provider. RDP connections provide an end\-user experience that is very similar to any other MultiPoint station, but makes use of the local client computer’s hardware. Learn more about our remote desktop applications available for Android, iOS, Mac and Windows in [Remote Desktop clients](../clients/remote-desktop-clients.md). 
+Thin clients and traditional desktop, laptop, or tablet computers, can connect to the computer running MultiPoint Services through the local area network (LAN) by using Remote Desktop Protocol (RDP) or a proprietary protocol and the Remote Desktop Protocol Provider. RDP connections provide an end-user experience that is very similar to any other MultiPoint station, but makes use of the local client computer’s hardware. Learn more about our remote desktop applications available for Android, iOS, Mac and Windows in [Remote Desktop clients](../clients/remote-desktop-clients.md). 
   
 Clients and devices that are running Microsoft RemoteFX can provide a rich multimedia experience by taking advantage of the processor and video hardware capabilities of the local thin client or computer to provide high-definition video over the network.  
   
@@ -83,7 +83,7 @@ From a deployment and administration perspective, the following differences exis
   
 ## Additional configuration options  
   
-### <a name="BKMK_SplitscreenStations"></a>Split\-screen stations  
+### <a name="BKMK_SplitscreenStations"></a>Split-screen stations  
 MultiPoint Services offers a split screen option on computers with direct-video-connected stations or USB-zero-client-connected stations. A split screen provides the ability to create an additional station per monitor. Instead of requiring two monitors, you can use one monitor with two station hub setups to create two stations with one monitor. You can quickly increase the number of available stations without purchasing additional monitors, USB-zero clients, or video cards.  
   
 The benefits of using a split-screen station can include:  

@@ -16,7 +16,7 @@ If you are installing a server from scratch follow these instructions to install
   
 
 #### Enable MultiPoint Services role service
-After you have installed Windows Server 2016 successfully login as Administrator. Use the Server Manager where you can enable MultiPoint Services. The Server Manager opens automatically at start-up. On the Dashboard select *Add roles and features* to enable MultiPoint Services and follow the instructions in the wizard.
+After you have installed Windows Server 2016 successfully sign in as Administrator. Use the Server Manager where you can enable MultiPoint Services. The Server Manager opens automatically at start-up. On the Dashboard select *Add roles and features* to enable MultiPoint Services and follow the instructions in the wizard.
 
 In the section for the installation type you might go either with the 
 - Role-based or feature-based installation or

@@ -50,27 +50,26 @@ For a domain deployment of MultiPoint Services, you should update the following 
   
 #### To update Registry subkeys for a domain deployment of MultiPoint Services  
   
-1.  Open Registry editor. \(At a command prompt, type **regedit.exe**, and press ENTER.\)  
+1.  Open Registry editor. (At a command prompt, type **regedit.exe**, and press ENTER.)  
   
 2.  In the left pane, locate and then select the following registry subkey:  
   
-    `HKEY_USERS\<SIDofWMSshell>\Software\Policies\Microsoft\Windows\Control Panel\Desktop`  
+    HKEY_USERS\<SIDofWMSshell>\Software\Policies\Microsoft\Windows\Control Panel\Desktop  
   
-    where `<SIDofWMSshell>` is the security identifier \(SID\) for the WMSshell account. To find out how to identify the SID, see [How to Associate a Username with a Security Identifier \(SID\)](http://support.microsoft.com/kb/154599) \(http:\/\/support.microsoft.com\/kb\/154599\).  
+    where '<SIDofWMSshell>' is the security identifier (SID) for the WMSshell account. To find out how to identify the SID, see [How to Associate a Username with a Security Identifier (SID)](http://support.microsoft.com/kb/154599).  
   
 3.  In the list on the right, update the following subkeys.  
   
     |Subkey|Value name|Value data|  
     |----------|--------------|--------------|  
-    |ScreenSaveActive|REG\_SZ|0 \(zero\)|  
-    |ScreenSaveTimeout|REG\_SZ|120|  
-    |ScreenSaverIsSecure|REG\_SZ|0 \(zero\)|  
+    |ScreenSaveActive|REG_SZ|0 (zero)|  
+    |ScreenSaveTimeout|REG_SZ|120|  
+    |ScreenSaverIsSecure|REG_SZ|0 (zero)|  
   
     To update a Registry subkey:  
   
-    1.  With the Registry key selected in the left pane, right\-click the subkey in the right pane, and then click **Modify**.  
+    1.  With the Registry key selected in the left pane, right-click the subkey in the right pane, and then click **Modify**.  
   
     2.  In the Edit String dialog box, type a new value in **Value data**, and then click **OK**.  
   
-4.  After you finish updating Registry subkeys, restart the computer to activate the changes.  
-  
+4.  After you finish updating Registry subkeys, restart the computer to activate the changes. 

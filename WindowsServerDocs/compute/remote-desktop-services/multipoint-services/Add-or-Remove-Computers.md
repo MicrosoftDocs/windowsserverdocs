@@ -8,25 +8,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1c37739d-7ab0-4b80-8d05-0330e79fd631
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Add or Remove Computers
 You can add other computers to manage with [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] or remove computers from your MultiPoint Services system. Adding other PCs to MultiPoint Manager allows the MultiPoint Dashboard to orchestrate any user's session when logged on to that PC in the same way it can for MultiPoint stations.  

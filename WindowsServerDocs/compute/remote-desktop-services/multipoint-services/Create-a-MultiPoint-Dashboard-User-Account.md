@@ -8,25 +8,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb9d7da1-eb5e-42c0-8d59-bb6d7b007ea9
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Create a MultiPoint Dashboard User Account
 Create *MultiPoint Dashboard user accounts* for those users who will regularly access stations, but who will not manage your MultiPoint Services system. Users with MultiPoint Dashboard user accounts can run most applications and save files, but cannot run [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)]. To see who has MultiPoint Dashboard user access, in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Users** tab. MultiPoint Dashboard user accounts are displayed in the **Account Type** column as **MultiPoint Dashboard User**.  
