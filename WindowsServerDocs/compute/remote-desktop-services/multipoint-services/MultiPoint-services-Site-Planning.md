@@ -40,7 +40,7 @@ Additional factors to consider include the following:
 -   Consider how you might want to expand in the future. Will you be adding more stations?  
   
 ## Station layout and configuration  
-The physical layout of your site may affect your choice of station type. For more details about the different station types, refer to [MultiPoint Stations](MultiPoint-Server-Stations.md) in this guide. Multiple station types are allowed on a single MultiPoint Services. This provides you with extra flexibility to meet your installation needs.  
+The physical layout of your site may affect your choice of station type. For more details about the different station types, refer to [MultiPoint Stations](MultiPoint-services-Stations.md) in this guide. Multiple station types are allowed on a single MultiPoint Services. This provides you with extra flexibility to meet your installation needs.  
   
 ### Layout for direct\-video\-connected stations  
   

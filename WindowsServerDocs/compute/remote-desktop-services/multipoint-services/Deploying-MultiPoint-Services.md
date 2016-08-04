@@ -26,7 +26,7 @@ The *Deployment Guide* is organized in the following way. At a minimum, you need
   
 -   [Optional configuration tasks for a MultiPoint Services deployment](Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md)  
   
-    Perform optional configuration tasks. Set up a split-screen station; add printers; enable access over a wireless LAN; create virtual desktops for stations with the [!INCLUDE[firstref_client_7](./includes/firstref_client_7_md.md)] or [!INCLUDE[win8_client_ent_1](./includes/win8_client_ent_1_md.md)] operating system; change the display language for the system or for individual users.  
+    Perform optional configuration tasks. Set up a split-screen station; add printers; enable access over a wireless LAN; create virtual desktops for stations with the Windows 10, Windows 8, or Windows 7 operating system; change the display language for the system or for individual users.  
   
 -   [Prepare your MultiPoint Services system for users](Prepare-your-MultiPoint-services-system-for-users.md)  
   
