@@ -1,4 +1,5 @@
 {
+  "build_entry_point": "op",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
@@ -16,7 +17,7 @@
       },
       "build_entry_point": "op"
     },
-    {
+     {
       "docset_name": "WindowsServerDocs",
       "build_source_folder": "WindowsServerDocs",
       "build_output_subfolder": "windows-server",
