@@ -3,6 +3,7 @@ title: Enable file sharing
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

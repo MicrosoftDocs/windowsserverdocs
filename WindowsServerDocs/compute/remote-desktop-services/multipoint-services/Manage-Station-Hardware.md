@@ -2,54 +2,27 @@
 title: Manage Station Hardware
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 429b8539-b17a-4e01-9576-860600466451
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Manage Station Hardware
-A MultiPoint Services system consists of a single computer and at least one *station*. Station hardware typically consists of a *station hub*, mouse, keyboard, and video monitor. Stations are typically physically wired to the computer.  
+A MultiPoint Services system consists of a single computer and at least one station. Station hardware typically consists of a station hub, mouse, keyboard, and video monitor. Stations are typically physically wired to the computer.  
   
-The following illustration shows an example of the layout of a MultiPoint Services system that has four stations. Each station is connected to the MultiPoint Services computer by using a *USB hub* and multi\-monitor video cards. This illustration does not represent stations that are connected by using *multifunction hubs*.  
-  
-> [!TIP]  
-> To best view this image, maximize the Help window.  
-  
-![Image of MultiPoint Server USB-based system layout](./media/WMSMultiPointServerUSBSystemLayout.gif)  
+The following illustration shows an example of the layout of a MultiPoint Services system that has four stations. Each station is connected to the MultiPoint Services computer by using a USB hub and multi-monitor video cards. This illustration does not represent stations that are connected by using multifunction hubs.  
+   
+![Image of MultiPoint Services USB-based system layout](./media/WMSMultiPointServerUSBSystemLayout.gif)  
   
 The topics in this section describe how you can view the status of the hardware connected to your MultiPoint Services system, and provide detailed information about the types of USB devices and other peripheral hardware devices that you can use to set up a MultiPoint Services station. The following is a brief description of the topics in this section that can help you select hardware and set up your MultiPoint Services station.  
   
--   View Hardware Status  
-  
--   Work with USB Devices  
-  
--   Work with Video Devices  
-  
--   Set Up a Station  
-  
 ## View Hardware Status  
-In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], you can use the **Stations** tab to view the status of the stations and hardware devices that are connected to the MultiPoint Services computer. For more information about how to view the status of your MultiPoint Services computer and the hardware devices that are connected to it, see the [View Hardware Status](View-Hardware-Status.md) topic.  
+In MultiPoint Manager, you can use the **Stations** tab to view the status of the stations and hardware devices that are connected to the MultiPoint Services computer. For more information about how to view the status of your MultiPoint Services computer and the hardware devices that are connected to it, see the [View Hardware Status](View-Hardware-Status.md) topic.  
   
 ## Work with USB Devices  
 When USB devices and other peripheral hardware devices are connected to the MultiPoint Services system, they function differently when they are connected to the MultiPoint Services computer than when they are connected to a MultiPoint Services station. The [Work with USB Devices](Work-with-USB-Devices.md) topic describes how different hardware devices might function in these scenarios and provides detailed information about how to work with station hubs.  
@@ -60,7 +33,7 @@ The [Work with Video Devices](Work-with-Video-Devices.md) topic discusses how vi
 ## Set Up a Station  
 The [Set Up a Station](Set-Up-a-Station.md) topic describes how to connect peripheral hardware devices to a MultiPoint Services station hub to create a MultiPoint Services station. MultiPoint Services supports two types of station hubs:  
   
--   An externally powered or bus\-powered multi\-port *USB hub* that can support a mouse, keyboard, and other USB peripheral devices  
+-   An externally powered or bus-powered multi-port *USB hub* that can support a mouse, keyboard, and other USB peripheral devices  
   
 -   A *multifunction hub* that can include an integrated video controller and ports for mouse, keyboard, and audio peripheral devices  
   

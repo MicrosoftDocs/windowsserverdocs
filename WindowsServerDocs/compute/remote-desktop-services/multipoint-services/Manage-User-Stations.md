@@ -2,34 +2,18 @@
 title: Manage User Stations
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b418578d-3a4c-49b0-90db-8389b320b2f6
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Manage User Stations
-This section discusses managing the *stations* that make up the MultiPoint Services system. Managing a MultiPoint Services system includes both managing the hardware and software components of [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)]. In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*.  
+This section discusses managing the *stations* that make up the MultiPoint Services system. Managing a MultiPoint Services system includes both managing the hardware and software components of MultiPoint Manager. In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user station.  
   
 ## Station status  
 You can view the following types of status for each desktop on the **Stations** tab. Status includes:  

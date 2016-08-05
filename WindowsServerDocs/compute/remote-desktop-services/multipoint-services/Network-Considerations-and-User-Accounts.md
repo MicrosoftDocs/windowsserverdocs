@@ -3,6 +3,7 @@ title: Network Considerations and User Accounts
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -37,7 +38,7 @@ By definition, *local user accounts* can only be accessed from the computer on w
 The following sections address user account management in these networking environments.  
   
 ## Single MultiPoint Server with local user accounts  
-In environments with a single computer that is running MultiPoint Services, there is no requirement to have a network. However, to take advantage of Internet resources, the networking requirements may be as basic as a router and a connection to an Internet service provider \(ISP\). Network connections that are associated with a network adapter on MultiPoint Services are configured, by default, to obtain an IP address and DNS server address automatically through DHCP. Internet routers are typically configured as DHCP servers, and they provide private IP addresses to computers that connect to them on the internal network. Therefore, a single computer running MultiPoint Services may be able to connect to the internal interface of the router, obtain automatic IP information, and connect to the Internet without significant effort or configuration by an administrator.  
+In environments with a single computer that is running MultiPoint Services, there is no requirement to have a network. However, to take advantage of Internet resources, the networking requirements may be as basic as a router and a connection to an Internet service provider (ISP). Network connections that are associated with a network adapter on MultiPoint Services are configured, by default, to obtain an IP address and DNS server address automatically through DHCP. Internet routers are typically configured as DHCP servers, and they provide private IP addresses to computers that connect to them on the internal network. Therefore, a single computer running MultiPoint Services may be able to connect to the internal interface of the router, obtain automatic IP information, and connect to the Internet without significant effort or configuration by an administrator.  
   
 A common way to manage users in this kind of environment is to create a local user account for each person who will access the system. Anyone who has a local user account on that computer can log on to MultiPoint Services from any station that is associated with the system. Local user accounts can be created and managed from MultiPoint Manager.  
   
@@ -48,7 +49,7 @@ Given that local user accounts are only accessible from the computer on which th
   
 -   You can use MultiPoint Manager to create accounts for every user on every computer running MultiPoint Services.  
   
-For example, if you plan to assign users to a specific computer running MultiPoint Services, you might create four local user accounts on Computer A \(user01, user02, user03, and user04\) and four local user accounts on Computer B \(user05, user06, user07, and user08\). In this scenario, users 01\-04 can log on to Computer A from any station that is connected to it; however, they cannot log on to Computer B. The same is true for users 05\-08, who would be able to log on only to Computer B, but not to Computer A. Depending on the specific deployment environment, this can be acceptable or even desirable.  
+For example, if you plan to assign users to a specific computer running MultiPoint Services, you might create four local user accounts on Computer A (user01, user02, user03, and user04) and four local user accounts on Computer B (user05, user06, user07, and user08). In this scenario, users 01\-04 can log on to Computer A from any station that is connected to it; however, they cannot log on to Computer B. The same is true for users 05\-08, who would be able to log on only to Computer B, but not to Computer A. Depending on the specific deployment environment, this can be acceptable or even desirable.  
   
 However, if every user must be able to log on to any of the computers running MultiPoint Services, a local user account must be created for each user on each computer that is running MultiPoint Services. Choosing to manage users in this manner introduces certain complexities. For example, if user01 logs on to Computer A on Monday and saves a file in the Documents folder, and then the user logs on to Computer B on Tuesday, the file that was saved in the Documents folder on Computer A will not be accessible on Computer B.  
   

@@ -2,34 +2,18 @@
 title: Work with USB Devices
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a33f2b83-bbc2-4fc1-8a94-aaa985dfe1f9
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Work with USB Devices
-You can connect devices to either the computer in your MultiPoint Services system or to a MultiPoint *station hub*. The location where a device is connected, and the type of device, affects whether a device is available to all users on the system, only to individual users, or not available to any users. The following are examples of the different connection types:  
+You can connect devices to either the computer in your MultiPoint Services system or to a MultiPoint station hub. The location where a device is connected, and the type of device, affects whether a device is available to all users on the system, only to individual users, or not available to any users. The following are examples of the different connection types:  
   
 -   If you connect a device directly to the computer, such as a printer or USB mass storage device, the device can be accessed by all session users on the MultiPoint Services system. Virtual desktop station users will not be able to access the devices connected directly to the computer.  
   

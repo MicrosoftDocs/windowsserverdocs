@@ -3,6 +3,7 @@ title: MultiPoint Services Virtualization Support
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,13 +13,13 @@ author: evas
 manager: scottman
 ---
 # MultiPoint Services Virtualization Support
-MultiPoint Services supports the Hyper\-V® role in two ways:  
+MultiPoint Services supports the Hyper-V role in two ways:  
   
--   MultiPoint Services can be deployed as a guest operating system on a server running Hyper\-V.  
+-   MultiPoint Services can be deployed as a guest operating system on a server running Hyper-V.  
   
 -   MultiPoint Services can be used as a virtualization server.   
   
-Running MultiPoint Services on a virtual machine provides the use of the Hyper\-V tools to manage operating systems. These tools include checkpoint and rollback features, and they allow you to export and import virtual machines. For larger installations, you can consolidate servers by running multiple MultiPoint Services virtual computers on a single physical server. Possible scenarios include:  
+Running MultiPoint Services on a virtual machine provides the use of the Hyper-V tools to manage operating systems. These tools include checkpoint and rollback features, and they allow you to export and import virtual machines. For larger installations, you can consolidate servers by running multiple MultiPoint Services virtual computers on a single physical server. Possible scenarios include:  
   
 -   A single classroom or lab has more than 20 seats. Rather than deploying multiple physical computers running MultiPoint Services, you can deploy multiple virtual machines on a single physical computer.  
   
@@ -28,6 +29,6 @@ Running MultiPoint Services on a virtual machine provides the use of the Hyper\-
 -   The MultiPoint server is running on a virtual machine with another server infrastructure on the same physical computer. In that case this server infrastructure centralizes the domain, security, and data for the network. The MultiPoint server provides Remote Desktop Services and centralizes the desktops.  
   
 > [!NOTE]  
-> When running MultiPoint Services on a virtual machine, USB\-over\-Ethernet and RDP client stations are supported. Direct video and USB zero client connected stations are not supported.  
+> When running MultiPoint Services on a virtual machine, USB-over-Ethernet and RDP client stations are supported. Direct video and USB zero client connected stations are not supported.  
   
-For more information about the Hyper\-V role, see [Hyper\-V](../../hyper-v/hyper-v-on-windows-server.md).  
+For more information about the Hyper-V role, see [Hyper-V](../../hyper-v/hyper-v-on-windows-server.md).  

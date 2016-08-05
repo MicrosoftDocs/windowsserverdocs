@@ -3,6 +3,7 @@ title: Join MultiPoint Services to a domain (optional)
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,14 +17,8 @@ If you will access your MultiPoint Services computer over an Active Directory do
   
 > [!IMPORTANT]  
 > You must verify your time zone before you join the computer to a domain. For instructions, see [Set the date, time, and time zone](Set-the-date--time--and-time-zone.md).  
-  
-### To join the MultiPoint Services computer to a domain  
-  
+   
 1.  From the **Start** screen, open **Control Panel**. Click **System and Security**, and then click **System**.  
-  
-    -Or-  
-  
-    Open the computer properties in File Explorer. (Right-click **Computer**, and then click **Properties**.)  
   
 2.  Under **Computer name, domain, and workgroup settings**, click **Change settings**.  
   

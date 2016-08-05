@@ -3,6 +3,7 @@ title: MultiPoint Services Site Planning
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -23,7 +24,7 @@ Additional factors to consider include the following:
     > [!NOTE]  
     > If you plan to use a mobile setup, you can *associate* the stations with MultiPoint Services every time you reconnect them to make sure that each keyboard and mouse is associated with the appropriate monitor.  
   
--   Will the primary station be located next to the other stations, or will it be separate? For example, if the MultiPoint server system is set up in a classroom, will the primary station be on the teacher’s desk and the standard stations positioned elsewhere in the room? When the computer running MultiPoint Services is restarted, the primary station will have access to the startup screens. If you are concerned about this level of access in a classroom setting, you may prefer to put the primary station at the teacher’s desk.  
+-   Will the primary station be located next to the other stations, or will it be separate? For example, if the MultiPoint Services system is set up in a classroom, will the primary station be on the teacher’s desk and the standard stations positioned elsewhere in the room? When the computer running MultiPoint Services is restarted, the primary station will have access to the startup screens. If you are concerned about this level of access in a classroom setting, you may prefer to put the primary station at the teacher’s desk.  
   
 -   How many stations will fit in the room?  
   
@@ -42,18 +43,18 @@ Additional factors to consider include the following:
 ## Station layout and configuration  
 The physical layout of your site may affect your choice of station type. For more details about the different station types, refer to [MultiPoint Stations](MultiPoint-services-Stations.md) in this guide. Multiple station types are allowed on a single MultiPoint Services. This provides you with extra flexibility to meet your installation needs.  
   
-### Layout for direct\-video\-connected stations  
+### Layout for direct-video-connected stations  
   
--   For a direct\-video\-connected station, the distance between the monitors and computer is limited by the video cable length.  
+-   For a direct-video-connected station, the distance between the monitors and computer is limited by the video cable length.  
   
--   Using intermediate hubs or daisy\-chained station hubs is supported for ease\-of\-deployment, but the maximum recommended number of consecutive hubs is three. This means that the maximum distance from the computer to the station hub is 15 meters, because each USB 2.0 cable has the maximum length of five meters.  
+-   Using intermediate hubs or daisy-chained station hubs is supported for ease-of-deployment, but the maximum recommended number of consecutive hubs is three. This means that the maximum distance from the computer to the station hub is 15 meters, because each USB 2.0 cable has the maximum length of five meters.  
   
 > [!IMPORTANT]  
 > There should always be at least one direct video connected station per computer to act as the primary station.  
   
 ### <a name="BKMK_USBZeroClientConnectedStations"></a>Layout for USB zero client connected stations  
   
--   Using intermediate hubs or daisy\-chained station hubs is supported for ease\-of\-deployment, but the maximum recommended number of consecutive hubs is three. This means that the maximum distance from the computer to the station hub is 15 meters, because each USB 2.0 cable has the maximum length of five meters.  
+-   Using intermediate hubs or daisy-chained station hubs is supported for ease-of-deployment, but the maximum recommended number of consecutive hubs is three. This means that the maximum distance from the computer to the station hub is 15 meters, because each USB 2.0 cable has the maximum length of five meters.  
   
 -   The maximum recommended number of USB zero clients connected to a single intermediate hub is three.  
   
@@ -69,9 +70,9 @@ The physical layout of your site may affect your choice of station type. For mor
   
 ![Downstream hubs](./media/WMS_diagram6.gif)  
   
-**Figure 5** MultiPoint Server system with three USB zero clients connected to a single intermediate hub  
+**Figure 5** MultiPoint Services system with three USB zero clients connected to a single intermediate hub  
   
-### Layout for RDP\-over\-LAN connected stations  
+### Layout for RDP-over-LAN connected stations  
 There are no physical distance limitations for LAN clients. As long as they are on the LAN, they can connect to the MultiPoint Services system.  
   
 ## Using additional hubs  
@@ -84,20 +85,20 @@ Additional hubs can be used to make installation easier. There are three types o
 -   [Downstream hubs](MultiPoint-services-site-Planning.md#BKMK_Downstreamhubs)  
   
 ### <a name="BKMK_StationHubs"></a>Station hubs  
-A station hub is an external hub that has been associated with a MultiPoint Services station. As a minimum, the station hub will have a keyboard plugged\-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high\-powered devices will plugin to them.  
+A station hub is an external hub that has been associated with a MultiPoint Services station. As a minimum, the station hub will have a keyboard plugged-in to it. It may also have additional peripherals attached. A station hub can be a generic USB hub that conforms to the USB 2.0 or later specification. Station hubs should be externally powered if high-powered devices will plugin to them.  
   
-**Root hub** A USB hub that is built\-in to the host controller on a computer’s motherboard is known as a *root hub*. Station hubs are generally plugged\-in to the root hub on the computer running MultiPoint Services.  
+**Root hub** A USB hub that is built-in to the host controller on a computer’s motherboard is known as a *root hub*. Station hubs are generally plugged-in to the root hub on the computer running MultiPoint Services.  
   
 > [!NOTE]  
-> Root hubs should not be used as station hubs. When USB ports are built\-in to a computer, often it is not possible to determine which USB root hub they are internally connected to. As such, if you plugged\-in a station keyboard and mouse directly to the USB ports of the computer, you may actually be plugging\-in the keyboard and mouse to different USB root hubs. To guarantee that the keyboard and mouse are on the same hub, plug\-in a station hub to the computer’s USB port, and then plug\-in the keyboard and mouse to that station hub.  
+> Root hubs should not be used as station hubs. When USB ports are built-in to a computer, often it is not possible to determine which USB root hub they are internally connected to. As such, if you plugged-in a station keyboard and mouse directly to the USB ports of the computer, you may actually be plugging-in the keyboard and mouse to different USB root hubs. To guarantee that the keyboard and mouse are on the same hub, plug-in a station hub to the computer’s USB port, and then plug-in the keyboard and mouse to that station hub.  
   
-**Daisy chaining stations** It may be easier to connect station hubs to another station hub rather than directly to the computer. This allows you to connect a USB hub to a station hub that is already plugged\-in to the computer, so that you have a station hub attached to another station hub.  
+**Daisy chaining stations** It may be easier to connect station hubs to another station hub rather than directly to the computer. This allows you to connect a USB hub to a station hub that is already plugged-in to the computer, so that you have a station hub attached to another station hub.  
   
 There should be no more than three USB zero clients or station hubs daisy chained consecutively. Care must be taken that the USB bandwidth is not exceeded when daisy chaining station hubs.  
   
 ![Daisy chaining stations](./media/WMS_diagram5.gif)  
   
-**Figure 6** MultiPoint Server system with daisy\-chained stations  
+**Figure 6** MultiPoint Services system with daisy-chained stations  
   
 ### <a name="BKMK_Intermediatehub"></a>Intermediate hubs  
 An intermediate hub is a hub that is between the server and a station hub. It is typically used to increase the number of ports that are available for station hubs or to extend the distance of the stations from the computer. It is recommended that no more than two intermediate hubs are used between a station hub and the server.  
@@ -105,14 +106,14 @@ An intermediate hub is a hub that is between the server and a station hub. It is
 Intermediate hubs must be USB 2.0 or later, and they must be externally powered. USB 3.0 is recommended between the server and the intermediate hub if you are connecting more than three USB zero clients to an intermediate hub.  
   
 ### <a name="BKMK_Downstreamhubs"></a>Downstream hubs  
-A downstream hub is connected to a station hub to add more available ports for station devices. A downstream hub can be externally powered or bus\-powered, depending on the devices that are plugged\-in to the hub.  
+A downstream hub is connected to a station hub to add more available ports for station devices. A downstream hub can be externally powered or bus-powered, depending on the devices that are plugged-in to the hub.  
   
 ![Multiple USB zero client connections](./media/WMS_diagram4.gif "WMS_diagram4")  
   
-**Figure 7** MultiPoint server system with an intermediate hub, a station hub, and a downstream hub  
+**Figure 7** MultiPoint Services system with an intermediate hub, a station hub, and a downstream hub  
   
 ## <a name="BKMK_NumberofUsersStationsandComputersRunningMultiPointServer"></a>Users, stations, and computers  
-The number of stations you will need depends on the number of people who will have to access the computers running MultiPoint Services at the same time. Similarly, the number of computers running MultiPoint Services you will need depends on the total number of stations required. Direct\-video\-connected stations, USB\-zero\-client\-connected stations, and RDP\-over\-LAN\-connected stations are all considered stations. In addition, if the split\-screen functionality is used, each half is considered a station.  
+The number of stations you will need depends on the number of people who will have to access the computers running MultiPoint Services at the same time. Similarly, the number of computers running MultiPoint Services you will need depends on the total number of stations required. Direct-video-connected stations, USB-zero-client-connected stations, and RDP-over-LAN-connected stations are all considered stations. In addition, if the split-screen functionality is used, each half is considered a station.  
   
 ## Power considerations  
 The following components require access to a power strip or outlet:  
@@ -123,7 +124,7 @@ The following components require access to a power strip or outlet:
 -   Some USB zero clients  
 -   Powered USB devices, such as some external storage devices and DVD drives  
   
-## Sample MultiPoint Server system layouts  
+## Sample MultiPoint Services system layouts  
 Depending on the available furniture, the size of the room, the number of computers that are running MultiPoint Services, and the stations in the room, there are a variety of ways that the physical stations can be arranged. The following diagrams illustrate five possible alternatives.  
   
 > [!NOTE]  
@@ -141,9 +142,9 @@ Depending on the available furniture, the size of the room, the number of comput
   
 ![Classroom configured as Lecture Room](./media/WMS_LectureRoom.gif)  
   
-**Activity center** This setup consists of a traditional lecture\-room layout for the desks, and it has a separate area with a single computer that is running MultiPoint Services with its associated stations.  
+**Activity center** This setup consists of a traditional lecture-room layout for the desks, and it has a separate area with a single computer that is running MultiPoint Services with its associated stations.  
   
-![MultiPoint Server Activity Center](./media/WMSActivityCenter.gif)  
+![MultiPoint Services Activity Center](./media/WMSActivityCenter.gif)  
   
 **Small business office** In this setup, the computer that is running MultiPoint Services is placed in a central location and users throughout the office connect to it by using a local area network \(LAN\).  
   

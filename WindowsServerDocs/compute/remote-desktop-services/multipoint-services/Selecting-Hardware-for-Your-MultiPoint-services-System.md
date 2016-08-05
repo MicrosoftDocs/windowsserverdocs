@@ -3,6 +3,7 @@ title: Selecting Hardware for Your MultiPoint Services System
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -38,7 +39,7 @@ A MultiPoint Services system typically includes the following components:
   
 -   Optional peripheral devices that are available to all users of the MultiPoint Services system, connected directly to the host computer, such as printers, external hard disk drives, and USB storage devices.  
   
-The following topics provide detailed information about the hardware decisions that you can make:  
+Use the following information to make hardware decisions:  
   
 -   [Selecting a CPU](#selecting-a-cpu)  
 -   [Selecting hardware components](#selecting-hardware-components)  

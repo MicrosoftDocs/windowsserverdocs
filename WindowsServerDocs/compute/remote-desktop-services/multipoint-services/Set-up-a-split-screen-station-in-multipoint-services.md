@@ -3,6 +3,7 @@ title: Set up a split-screen station
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +13,11 @@ author: evas
 manager: scottman
 ---
 # Set up a split-screen station
-Use the procedures in this topic to set up a split\-screen station that two users can use simultaneously and to return a split\-screen station to a single station.  
+You can set up a split-screen station so two users can simultaneously use the system.
+
+Any monitor that has a resolution of minimum 1200 x720, when connected to a station that supports the split-screen feature, can be split into two stations. After a station is split, the desktop that the monitor had displayed moves to the left half of the screen, and a new station is displayed on the right half of the screen. To finish creating the new station, you will need to map a keyboard, mouse, and USB hub to the station. After a station is split, a user can log on to the left station while another user logs on to the right station.  
   
-## About split\-screen stations  
-Any monitor that has a resolution of minimum 1200 x720, when connected to a station that supports the split\-screen feature, can be split into two stations. After a station is split, the desktop that the monitor had displayed moves to the left half of the screen, and a new station is displayed on the right half of the screen. To finish creating the new station, you will need to map a keyboard, mouse, and USB hub to the station. After a station is split, a user can log on to the left station while another user logs on to the right station.  
-  
-Split\-screen stations have several benefits:  
+Split-screen stations have several benefits:  
   
 -   You can reduce cost and space by accommodating more users on a MultiPoint Services system.  
   
@@ -25,26 +25,24 @@ Split\-screen stations have several benefits:
   
 -   A MultiPoint Dashboard user can demonstrate a procedure on one station while a student follows along on the other station.  
   
-The following illustration shows a MultiPoint Server system with a split screen station \(on the right\).  
+The following illustration shows a MultiPoint Services system with a split screen station (on the right).  
   
 ![Split-screen stations](./media/WMS_diagram3.gif)  
-  
-**MultiPoint Services system with a split screen station**  
-  
+   
 ## Requirements for a split screen station  
-To create a split\-screen station, the monitor and station must meet these requirements:  
+To create a split-screen station, the monitor and station must meet these requirements:  
   
 -   The monitor must have a resolution of 1200 x720 or higher.  
   
--   If you are using a USB\-over\-Ethernet zero client, check with your hardware vendor to find out whether split\-screen stations are supported. Many USB\-over\-Ethernet zero client devices have limitations that prevent their configuration as split\-screen stations.  
+-   If you are using a USB-over-Ethernet zero client, check with your hardware vendor to find out whether split-screen stations are supported. Many USB-over-Ethernet zero client devices have limitations that prevent their configuration as split-screen stations.  
   
-## Setting up a split\-screen station  
-Use the following procedures to add a second hub for a split\-screen station and then split the station in MultiPoint Services. The final procedure explains how to return a split\-screen station to a single station.  
+## Setting up a split-screen station  
+Use the following procedures to add a second hub for a split-screen station and then split the station in MultiPoint Services. The final procedure explains how to return a split-screen station to a single station.  
   
 > [!NOTE]  
 > When you split a station, the active session on the station is suspended. The user must log on to the station again to resume work after the split occurs.  
   
-### To add a second hub with keyboard and mouse  
+**To add a second hub with keyboard and mouse:**  
   
 1.  Connect a USB hub to an open USB port on the computer, as shown in the following illustration.  
   
@@ -58,7 +56,7 @@ Use the following procedures to add a second hub for a split\-screen station and
   
 4.  If you are using an externally powered hub, connect the power cable of the hub to a power outlet.  
   
-### To split a station  
+**To split a station:**  
   
 1.  In the MultiPoint Manager, click the **Stations** tab.  
   
@@ -72,7 +70,7 @@ Use the following procedures to add a second hub for a split\-screen station and
   
 After a station is split, one user can log on to the left station while another user logs on to the right station.  
   
-### To return a split station to a single station  
+**To return a split station to a single station:**  
   
 1.  In the MultiPoint Manager, click the **Stations** tab.  
   

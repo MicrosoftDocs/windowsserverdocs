@@ -3,6 +3,7 @@ title: Update and install device drivers if needed
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -18,7 +19,7 @@ Generally, the most current drivers are required for following types of devices:
   
 -   USB zero clients  
   
--   USB\-over\-Ethernet zero clients  
+-   USB-over-Ethernet zero clients  
   
 -   Disk controllers  
   
@@ -31,9 +32,9 @@ Generally, the most current drivers are required for following types of devices:
 -   Graphic Cards
 
 
-### To check for driver alerts in Device Manager  
+## To check for driver alerts in Device Manager  
   
-1.  [Open the Start screen](http://technet.microsoft.com/library/hh831491.aspx#BKMK_start).  
+1.  Open the Start screen.  
   
 2.  Type **computer management**, and then click **Computer Management** in the results.  
   
@@ -41,9 +42,9 @@ Generally, the most current drivers are required for following types of devices:
   
 4.  In the system devices on the right, check for driver alerts that might affect MultiPoint Server.  
   
-### To install device drivers in MultiPoint Manager  
+## To install device drivers in MultiPoint Manager  
   
-1.  To open MultiPoint Manager, [open the Start screen](http://technet.microsoft.com/library/hh831491.aspx#BKMK_start), type **MultiPoint Manager** in the search, and then click **MultiPoint Manager** in the results.  
+1.  To open MultiPoint Manager, search for "MultiPoint Manager," and then click **MultiPoint Manager** in the results.  
   
 2.  In MultiPoint Manager, click the **Home** tab, and then click **Switch to console mode**.  
   

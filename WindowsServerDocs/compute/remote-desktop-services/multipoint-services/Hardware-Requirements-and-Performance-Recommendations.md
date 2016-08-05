@@ -3,6 +3,7 @@ title: Hardware Requirements and Performance Recommendations
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -13,8 +14,7 @@ manager: scottman
 ---
 # Hardware Requirements and Performance Recommendations
 This topic describes the hardware that is required to run a MultiPoint Services system and support user application scenarios. The user scenario directly affects the CPU, RAM, and network bandwidth requirements.  
-    
-  
+
 ## <a name="BKMK_OptimizeMultiPointServerSystemPerformance"></a>Optimize MultiPoint server system performance  
 The performance of your MultiPoint Services system will be directly affected by the capability of the CPU, the GPU, and the amount of RAM that is available on the computer that is running MultiPoint Services.  
   
@@ -53,4 +53,3 @@ Running a full virtual operating system instance for each station is more comput
 BIOS CPU setting has been configured to enable virtualization – Second Level Address Translation (SLAT)  
   
 For more information about choosing the best MultiPoint Services hardware for your needs, contact your hardware vendor.  
-  

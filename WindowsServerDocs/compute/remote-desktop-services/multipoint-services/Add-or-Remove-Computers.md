@@ -2,7 +2,8 @@
 title: Add or Remove Computers
 ms.custom: na
 ms.date: 07/11/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,7 +15,7 @@ manager: swadhwa
 # Add or Remove Computers
 You can add other computers to manage with [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] or remove computers from your MultiPoint Services system. Adding other PCs to MultiPoint Manager allows the MultiPoint Dashboard to orchestrate any user's session when logged on to that PC in the same way it can for MultiPoint stations.  
   
-#### To add or remove servers in MultiPoint  
+## To add or remove servers in MultiPoint  
   
 1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Home** tab.  
   
@@ -28,7 +29,7 @@ You can add other computers to manage with [!INCLUDE[win8_server_multipoint_mana
   
     -   **To remove a server:** In the **Managed** list, click a server that you want to remove from management, and then click **Remove**.  
   
-#### To add or remove other computers  
+## To add or remove other computers  
   
 1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Home** tab.  
   

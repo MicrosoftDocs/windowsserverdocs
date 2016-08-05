@@ -2,7 +2,8 @@
 title: End a User Session
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -22,9 +23,9 @@ You should end a user’s session when you have to log the user off from the Mul
   
 -   Log off a user who forgot to log off  
   
-#### To end user sessions  
+To end user sessions:  
   
-1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Stations** tab.  
+1.  Open MultiPoint Manager in station mode, and then click the **Stations** tab.  
   
 2.  Do one of the following:  
   

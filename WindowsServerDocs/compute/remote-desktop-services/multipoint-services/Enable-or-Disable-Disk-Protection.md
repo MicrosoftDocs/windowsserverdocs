@@ -2,7 +2,8 @@
 title: Enable or Disable Disk Protection
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,19 +15,19 @@ anager: swadhwa
 # Enable or Disable Disk Protection
 The Disk Protection feature allows you to reset your MultiPoint Services system to a specified state each time you restart the system. Using Disk Protection, users can temporarily make changes to the MultiPoint Services system, and then those changes are discarded when the server is restarted. Examples of changes that will be discarded when the server is restarted include personalizing a user’s profile, saving files, changing settings, or installing applications.  
   
-#### To enable Disk Protection  
+## Enable Disk Protection  
   
-1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then, under *computer name***Tasks**, click **Enable Disk Protection**.  
-  
-2.  Review the information, and then click **OK**.  
-  
-    After the system restarts, any changes made to the system, including new applications that are installed, will be discarded on each subsequent restart.  
-  
-#### To disable Disk Protection  
-  
-1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then, under *computer name***Tasks**, click **Disable Disk Protection**.  
+1.  In MultiPoint Manager, click the **Home** tab, and then, under *computer name***Tasks**, click **Enable Disk Protection**.  
   
 2.  Review the information, and then click **OK**.  
   
-    After the system restarts, any changes made to the system, including applications that are installed on the server, are permanent and will not be discarded the next time the system is restarted.  
+After the system restarts, any changes made to the system, including new applications that are installed, will be discarded on each subsequent restart.  
+  
+## Disable Disk Protection  
+  
+1.  In MultiPoint Manager, click the **Home** tab, and then, under *computer name***Tasks**, click **Disable Disk Protection**.  
+  
+2.  Review the information, and then click **OK**.  
+  
+After the system restarts, any changes made to the system, including applications that are installed on the server, are permanent and will not be discarded the next time the system is restarted.  
   

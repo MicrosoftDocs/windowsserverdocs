@@ -2,7 +2,8 @@
 title: Create a MultiPoint Dashboard User Account
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,7 +13,7 @@ author: lizap
 manager: swadhwa
 ---
 # Create a MultiPoint Dashboard User Account
-Create *MultiPoint Dashboard user accounts* for those users who will regularly access stations, but who will not manage your MultiPoint Services system. Users with MultiPoint Dashboard user accounts can run most applications and save files, but cannot run [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)]. To see who has MultiPoint Dashboard user access, in [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Users** tab. MultiPoint Dashboard user accounts are displayed in the **Account Type** column as **MultiPoint Dashboard User**.  
+Create *MultiPoint Dashboard user accounts* for those users who will regularly access stations, but who will not manage your MultiPoint Services system. Users with MultiPoint Dashboard user accounts can run most applications and save files, but cannot run MultiPoint Manager. To see who has MultiPoint Dashboard user access, in MultiPoint Manager, click the **Users** tab. MultiPoint Dashboard user accounts are displayed in the **Account Type** column as **MultiPoint Dashboard User**.  
   
 If your MultiPoint Services users will store private documents in Windows, each user should log on to the MultiPoint Services system using a unique user name and password.  
   
@@ -21,7 +22,7 @@ If your MultiPoint Services users will store private documents in Windows, each 
   
 #### To create a MultiPoint Dashboard user account  
   
-1.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Users** tab.  
+1.  In MultiPoint Manager, click the **Users** tab.  
   
 2.  Under **User Tasks**, click **Add user account**. The **Add User Account** wizard opens.  
   
@@ -35,7 +36,7 @@ If your MultiPoint Services users will store private documents in Windows, each 
   
 7.  On the level of access page, select **MultiPoint Dashboard user**, and then click **Next**.  
   
-8.  [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] will check all of the information and display a message when the account has been set up. When you see the text, **A new user account was successfully created**, click **Finish**.  
+8.  Click **Finish**.  
   
 ## See Also  
 [User Account Considerations](User-Account-Considerations.md)

@@ -2,7 +2,8 @@
 title: Set up an RDP-over-LAN connected station in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -26,14 +27,14 @@ An RDP-over-LAN connected station is a thin client, traditional desktop, or lapt
   
 5.  On the client computer or thin client, start Remote Desktop Connection or an equivalent application, and enter the name or IP address of the computer running MultiPoint Services.
 
-## Setup a Windows 10 devices for remote management by making use of Connector Services
-Any PC or laptop running Windows 10 can be managed remotely:
+## Set up a Windows 10 device for remote management by using Connector Services
+Any PC or laptop running Windows 10 can be managed remotely as long as:
 - the Connector Services have been enabled  
 - the machine has been added to managed computers on the MultiPoint server.  
 
 On the PC running Windows 10 follow these steps to enable MultiPoint Connector:
 
-1. Type in the search "Turn Windows features on or off" and select the proper search result. 
+1. In the search box, type "Turn Windows features on or off" and select the proper search result. 
 
 2. In the list of features enable **MultiPoint Connector**. This will enable MultiPoint connector services which are needed to manage the device. 
 

@@ -3,6 +3,7 @@ title: Glossary
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -13,7 +14,7 @@ manager: scottman
 ---
 # Glossary
 **associate a station**  
-To specify which monitor is used with which *station* and peripheral devices, such as a keyboard and mouse. For direct video connected stations, this is done by pressing a specified key on the station’s keyboard when prompted to do so. For USB zero client connected stations, this typically happens automatically.  
+To specify which monitor is used with which station and peripheral devices, such as a keyboard and mouse. For direct video connected stations, this is done by pressing a specified key on the station’s keyboard when prompted to do so. For USB zero client connected stations, this typically happens automatically.  
   
 **bus-powered hub**  
 A hub that draws all of its power from the computer’s USB interface. Bus-powered hubs do not need separate power connections. However, many devices do not work with this type of hub because they require more power than this type of hub provides.  
@@ -46,13 +47,13 @@ A user account on a specific computer. A local user account is available only on
 See *USB zero client*.  
   
 **MultiPoint Services system**  
-A collection of hardware and software that consists of one computer that has Windows Server 2016 installed with the MultiPoint Services role enabled and at least one MultiPoint *station*. For more information about system layout options, see [MultiPoint Services Site Planning](MultiPoint-services-Site-Planning.md)  
+A collection of hardware and software that consists of one computer that has Windows Server 2016 installed with the MultiPoint Services role enabled and at least one MultiPoint station. For more information about system layout options, see [MultiPoint Services Site Planning](MultiPoint-services-Site-Planning.md)  
   
 **partition**  
 A section of space on a physical disk that functions as if it is a separate disk.  
   
 **primary station**  
-The station that is the first to start up when MultiPoint Services is started. The primary station can be used by an administrator to access startup menus and settings. When it is not being used by the administrator, it can be used as a normal station (it does not have to be reserved exclusively for administration). The primary station’s monitor must always be connected directly to a video output on the computer that is running MultiPoint Services. See also: *station*.  
+The station that is the first to start up when MultiPoint Services is started. The primary station can be used by an administrator to access startup menus and settings. When it is not being used by the administrator, it can be used as a normal station (it does not have to be reserved exclusively for administration). The primary station’s monitor must always be connected directly to a video output on the computer that is running MultiPoint Services. See also: station.  
   
 **RDP-over-LAN-connected station**  
 A station that is a thin client, traditional desktop, or laptop computer that connects to MultiPoint services by using Remote Desktop Protocol (RDP) through the local area network (LAN).  
@@ -64,9 +65,9 @@ A USB hub that is built-in to the host controller on a computer’s motherboard.
 A station where a single monitor can be used to display two independent user desktops. Two sets of hubs, keyboards, and mice are associated with a single monitor. One set is associated with the left side of the monitor, and the other set is associated with the right side of the monitor.  
   
 **standard station**  
-In contrast to the *primary station*, which can be used by an administrator to access startup menus, standard stations will not display startup menus, and they can only be used after MultiPoint Services has completed the startup process. See also: *station*.  
+In contrast to the *primary station*, which can be used by an administrator to access startup menus, standard stations will not display startup menus, and they can only be used after MultiPoint Services has completed the startup process. See also: station.  
   
-**station**  
+*station*  
 User endpoint for connecting to the computer running MultiPoint Services. Three station types are supported: direct-video-connected, USB-zero-client-connected, and RDP-over-LAN-connected stations. For more information about stations, see [MultiPoint Stations](MultiPoint-services-Stations.md).  
   
 **station hub**  

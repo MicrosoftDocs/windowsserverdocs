@@ -2,31 +2,15 @@
 title: Restart or Shut Down
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc9ce813-6ecb-4422-8f4b-5226386823f3
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Restart or Shut Down
 You might have to restart the host computer and all of the *stations* in your MultiPoint Services system if instructed after you install hardware, software, and software updates. If you have added new hardware devices to a station, you might also want to associate the hardware devices to that station. For more information about how to *associate stations*, see the [Switch Between Modes](Switch-Between-Modes.md) topic.  
@@ -36,17 +20,17 @@ To turn off your MultiPoint Services system’s computer safely, the computer mu
 > [!NOTE]  
 > Before you restart or shut down the computer that is running MultiPoint Services, all user *sessions* must have ended.  
   
-#### To restart the computer  
+## Restart the computer  
   
 1.  End all user sessions. For more information about ending user sessions, see the [End a User Session](End-a-User-Session.md) topic.  
   
-2.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then click **Restart the computer**.  
+2.  In MultiPoint Manager, click **Home**, and then click **Restart the computer**.  
   
-#### To shut down the computer  
+## Shut down the computer  
   
 1.  End all user sessions. For more information about ending user sessions, see the [End a User Session](End-a-User-Session.md) topic.  
   
-2.  In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], click the **Home** tab, and then click **Shut down the computer**.  
+2.  In MultiPoint Manager, click the **Home** tab, and then click **Shut down the computer**.  
   
 ## See Also  
 [End a User Session](End-a-User-Session.md)  

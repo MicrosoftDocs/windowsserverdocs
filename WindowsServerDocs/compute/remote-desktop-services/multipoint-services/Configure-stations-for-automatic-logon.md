@@ -3,6 +3,7 @@ title: Configure stations for automatic logon
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -13,8 +14,6 @@ manager: scottman
 ---
 # Configure stations for automatic logon
 If you want your stations to be available to anyone – and your users do not need private folders to store their personal data or personalized desktops – you can configure the stations for automatic logon. Auto-logon automatically logs on a user account that has been specified in the auto-logon settings when the MultiPoint Services starts.  
-  
-### To configure a station for automatic log-on  
   
 1.  From the **Start** screen, open **MultiPoint Manager**.  
   

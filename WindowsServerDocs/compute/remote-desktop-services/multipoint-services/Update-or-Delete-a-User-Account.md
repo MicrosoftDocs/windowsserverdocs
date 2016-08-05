@@ -2,38 +2,20 @@
 title: Update or Delete a User Account
 ms.custom: na
 ms.date: 07/11/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7f55a35-c932-482c-97d4-ef3c1f390cbf
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # Update or Delete a User Account
-If you are logged on as an *administrative user* on the MultiPoint Services system, you can modify any user account, including changing the level of access for an account, changing a full name and password, or deleting an account.  
+If you are logged on as an administrative user on the MultiPoint Services system, you can modify any user account, including changing the level of access for an account, changing a full name and password, or deleting an account.  
   
-#### To modify a user account  
-  
-1.  Open [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)] in station mode, and then click the **Users** tab.  
+1.  Open MultiPoint Manager in station mode, and then click the **Users** tab.  
   
 2.  In the **User** column, click the account that you want to modify.  
   

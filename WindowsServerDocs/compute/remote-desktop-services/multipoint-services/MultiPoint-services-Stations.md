@@ -3,6 +3,7 @@ title: MultiPoint Stations
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -35,9 +36,9 @@ The computer running MultiPoint Services can contain multiple video cards, each 
 > [!IMPORTANT]  
 > There should be at least one *direct-video-connected station* per server to act as the primary station to display the startup process when the computer is turned on.  
   
-![Image of MultiPoint Server USB-based system layout](./media/WMSMultiPointServerUSBSystemLayout.gif)  
+![Image of MultiPoint Services USB-based system layout](./media/WMSMultiPointServerUSBSystemLayout.gif)  
   
-**Figure 1** MultiPoint server system with four direct-video-connected stations  
+**Figure 1** MultiPoint services system with four direct-video-connected stations  
   
 ### <a name="BKMK_PS2stations"></a>PS/2 stations  
 With MultiPoint Services, you can map the PS/2 keyboard and mouse on the motherboard to a direct video connected monitor to create a PS/2 station. High-definition analog audio on the motherboard is the audio associated with this type of station. This does not apply to computers where there are no PS/2 jacks on the motherboard.  

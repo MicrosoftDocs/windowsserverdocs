@@ -2,7 +2,8 @@
 title: Add printers
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +17,6 @@ Use the procedures in this topic to make a local printer available to all users 
   
 > [!NOTE]  
 > If you are using domain accounts with MultiPoint Services, users can use any network printer from their stations.  
-  
-### To make a local printer available to all users on a Multipoint Services system  
   
 1.  Connect the printer to the Multipoint server.  
   

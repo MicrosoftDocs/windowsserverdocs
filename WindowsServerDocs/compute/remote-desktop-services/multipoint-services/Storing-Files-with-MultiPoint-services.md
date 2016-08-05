@@ -3,6 +3,7 @@ title: Storing Files with MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -22,5 +23,5 @@ MultiPoint Services supports storing user files in the following ways:
   
 -   **In a shared network folder.** To make user files available from any station, you can create a shared folder on the network. This requires another computer or server in addition to the computer running MultiPoint Services. This is the recommended method for storing files if there is a file server available.  
   
-    For small systems of 2\-3 computers running MultiPoint Services with no file server available, one of the MultiPoint Services computers can act as the file server for all of the MultiPoint Services computers. You would then create user accounts for all users on the MultiPoint Services that is acting as the file server.  
+    For small systems of 2-3 computers running MultiPoint Services with no file server available, one of the MultiPoint Services computers can act as the file server for all of the MultiPoint Services computers. You would then create user accounts for all users on the MultiPoint Services that is acting as the file server.  
   

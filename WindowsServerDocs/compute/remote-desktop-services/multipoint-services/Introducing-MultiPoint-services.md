@@ -3,6 +3,7 @@ title: Introducing MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -37,7 +38,3 @@ This document addresses the following factors to consider when you are planning 
 -   [Storing Files with MultiPoint Services](Storing-Files-with-MultiPoint-services.md): Where will user files be stored, and how will they be accessed?  
   
 -   [Predeployment Checklist](Predeployment-Checklist.md)  
-  
-
- 
-  

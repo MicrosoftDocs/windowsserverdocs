@@ -2,34 +2,18 @@
 title: View User Connection Status
 ms.custom: na
 ms.date: 07/08/2016
-ms.prod: multipoint-server-2012
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 426df382-07a0-4be1-a87a-12e63bd8157b
-manager: jeffgilb
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: lizap
+manager: swadhwa
 ---
 # View User Connection Status
-Use the **Stations** tab to determine the status of a *standard* or other *administrative user’s* connection to a MultiPoint Services *station*.  
+Use the **Stations** tab to determine the status of a standard or other administrative user’s connection to a MultiPoint Services station.  
   
 Status values include the following:  
   
@@ -39,10 +23,8 @@ Status values include the following:
   
 -   **Logged off**: A user who is logged off is not displayed on the **Stations** tab  
   
-#### To view station status  
-  
--   In [!INCLUDE[win8_server_multipoint_manager](./includes/win8_server_multipoint_manager_md.md)], in station mode, click the **Stations** tab.  
-  
+To view station status, open MultiPoint Manager in stations mode, and then click **Stations**.
+
 ## See Also  
 [Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)  
 [Switch Between Modes](Switch-Between-Modes.md)

@@ -3,6 +3,7 @@ title: Set up the physical computer and primary station
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -35,7 +36,7 @@ For more information about stations, see [MultiPoint Stations](multipoint-servic
   
     1.  Connect an external USB hub to an open USB port on the computer, as shown below.  
   
-        ![Image of MultiPoint Server USB hub connection](./media/WMSUSBHubConnection.gif)  
+        ![Image of MultiPoint Services USB hub connection](./media/WMSUSBHubConnection.gif)  
   
     2.  Connect the USB keyboard and mouse to the USB hub.  
   

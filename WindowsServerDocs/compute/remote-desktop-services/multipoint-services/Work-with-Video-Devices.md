@@ -2,8 +2,8 @@
 title: Work with Video Devices
 ms.custom: na
 ms.date: 07/15/2016
-ms.prod: multipoint-server-2012
-ms.reviewer: na
+ms.prod: windows-server-2016
+ms.technology: remote-desktop-servicesms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article

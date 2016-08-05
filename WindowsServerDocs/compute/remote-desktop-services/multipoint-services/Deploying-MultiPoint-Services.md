@@ -3,6 +3,7 @@ title: Deploying MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -17,9 +18,7 @@ This guide describes how to deploy a server running MultiPoint Services and set 
 > [!NOTE]  
 > For additional support, see the MultiPoint Services Help, which can be opened by clicking the Help icon or F1 on any MultiPoint Manager or MultiPoint Dashboard screen.  
   
-  
-## In this guide  
-The *Deployment Guide* is organized in the following way. At a minimum, you need to complete the tasks for deploying your system and preparing your environment for users. Other tasks might or might not apply to your environment. 
+The deployment information is organized in the following way. At a minimum, you need to complete the tasks for deploying your system and preparing your environment for users. Other tasks might or might not apply to your environment. 
 -   [Deploy a new MultiPoint Services System](Deploy-a-new-MultiPoint-services-system.md)  
   
     Set up your MultiPoint Services computer and stations. Install and configure MultiPoint Services; set up your stations; install drivers, updates, and software; optionally join a domain; add client licenses (CALs) for each station.  
@@ -39,6 +38,5 @@ The *Deployment Guide* is organized in the following way. At a minimum, you need
 ## See also  
   
 - [MultiPoint Services](MultiPoint-Services.md)
-  
--   [Windows MultiPoint Server Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
+-   [MultiPoint Services Forum](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  
   

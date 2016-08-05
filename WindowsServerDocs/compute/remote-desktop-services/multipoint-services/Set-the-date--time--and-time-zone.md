@@ -3,6 +3,7 @@ title: Set the date, time, and time zone
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-2016
+ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -13,8 +14,6 @@ manager: scottman
 ---
 # Set the date, time, and time zone
 After you finish installing device drivers, set the date, time, and time zone on the MultiPoint server.  
-  
-### To set the date, time, and time zone in MultiPoint Server  
   
 1.  From the **Start** screen of the MultiPoint server, open **Control Panel**.  
   
