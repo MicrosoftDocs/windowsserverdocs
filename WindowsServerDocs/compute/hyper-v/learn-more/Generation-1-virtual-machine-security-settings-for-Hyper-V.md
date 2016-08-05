@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
 author: cwatsonmsft
-robots: noindex,nofollow
+ms.author: cwatson
 ---
 # Generation 1 virtual machine security settings
 

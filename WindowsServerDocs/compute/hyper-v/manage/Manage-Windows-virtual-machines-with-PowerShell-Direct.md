@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc09093ba2d
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Manage Windows virtual machines with PowerShell Direct
 

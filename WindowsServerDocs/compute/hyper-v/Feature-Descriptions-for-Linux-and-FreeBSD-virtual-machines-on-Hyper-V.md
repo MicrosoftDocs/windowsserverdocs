@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a9ee931d-91fc-40cf-9a15-ed6fa6965cb6
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
 

@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Create a virtual machine in Hyper-V
 

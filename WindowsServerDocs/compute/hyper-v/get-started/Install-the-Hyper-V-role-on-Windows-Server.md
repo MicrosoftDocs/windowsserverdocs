@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Install the Hyper-V role on Windows Server Technical Preview
 

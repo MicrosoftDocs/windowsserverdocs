@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9a3f8b74-f3c0-433f-a320-850ca8610757
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Get started with Hyper-V on Windows Server 2016 Technical Preview
 

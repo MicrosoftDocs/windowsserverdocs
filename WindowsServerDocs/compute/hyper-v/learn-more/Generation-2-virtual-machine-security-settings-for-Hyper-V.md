@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
 author: cwatsonmsft
-robots: noindex,nofollow
+ms.author: cwatson
 ---
 # Generation 2 virtual machine security settings for Hyper-V
 
