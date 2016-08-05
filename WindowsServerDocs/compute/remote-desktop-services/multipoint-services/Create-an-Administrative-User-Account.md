@@ -47,11 +47,3 @@ For more information about issues that you, as an administrative user, should co
 7.  On the level of access page, select **Administrative user**, and then click **Next**.  
   
 8.  MultiPoint Services will check all of the information and display a message when the account has been set up. When you see the text, **A new user account was successfully created**, click **Finish**.  
-  
-> [!TIP]  
-> You can also create user accounts using Windows user account management functionality. For more information about creating user accounts in Windows, search for **create user accounts** in Windows Help and Support. For more information about using Windows Help and Support, see the [Use Windows Server Help](Use-Windows-Server-Help.md) topic.  
-  
-## See Also  
-[User Account Considerations](User-Account-Considerations.md)  
-[Manage User Accounts](Manage-User-Accounts.md)  
-[Use Windows Server Help](Use-Windows-Server-Help.md)

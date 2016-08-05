@@ -24,4 +24,3 @@ MultiPoint Services includes MultiPoint Manager, which helps you, as an administ
 ## See Also  
 [Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
 [Privacy and Security Considerations](Privacy-and-Security-Considerations.md)  
-[Use Windows Server Help](Use-Windows-Server-Help.md)

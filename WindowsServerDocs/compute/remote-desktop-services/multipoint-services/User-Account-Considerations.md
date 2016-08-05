@@ -35,6 +35,5 @@ One important consideration of user accounts is that each user account is alloca
 ## See Also  
 [Create an Administrative User Account](Create-an-Administrative-User-Account.md)  
 [Create a Standard User Account](Create-a-Standard-User-Account.md)  
-[Manage User Files](Manage-User-Files.md)  
-[Use Windows Server Help](Use-Windows-Server-Help.md)  
+[Manage User Files](Manage-User-Files.md)
 [Manage User Accounts](Manage-User-Accounts.md)

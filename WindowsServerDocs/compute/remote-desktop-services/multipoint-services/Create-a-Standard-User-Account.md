@@ -37,8 +37,3 @@ If your MultiPoint Services users will store private documents in Windows, each 
 7.  On the level of access page, select **Standard user**, and then click **Next**.  
   
 8.  Click **Finish**.  
-  
-## See Also  
-[Use Windows Server Help](Use-Windows-Server-Help.md)  
-[Manage User Accounts](Manage-User-Accounts.md)  
-[Use Windows Server Help](Use-Windows-Server-Help.md)

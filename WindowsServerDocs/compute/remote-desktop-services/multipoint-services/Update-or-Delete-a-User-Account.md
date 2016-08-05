@@ -31,5 +31,4 @@ If you are logged on as an administrative user on the MultiPoint Services system
 ## See Also  
 [Create an Administrative User Account](Create-an-Administrative-User-Account.md)  
 [Create a Standard User Account](Create-a-Standard-User-Account.md)  
-[Use Windows Server Help](Use-Windows-Server-Help.md)  
 [Manage User Accounts](Manage-User-Accounts.md)

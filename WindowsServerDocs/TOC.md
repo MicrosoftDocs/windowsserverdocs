@@ -148,7 +148,6 @@
 ##### [Managing MultiPoint Services](compute/remote-desktop-services/multipoint-services/Managing-MultiPoint-Services.md)
 ###### [Managing Your MultiPoint Services System](compute/remote-desktop-services/multipoint-services/Managing-Your-MultiPoint-Services-System.md)
 ####### [Privacy and Security Considerations](compute/remote-desktop-services/multipoint-services/Privacy-and-Security-Considerations.md)
-####### [Use Windows Server Help](compute/remote-desktop-services/multipoint-services/Use-Windows-Server-Help.md)
 ###### [Manage Station Hardware](compute/remote-desktop-services/multipoint-services/Manage-Station-Hardware.md)
 ####### [View Hardware Status](compute/remote-desktop-services/multipoint-services/View-Hardware-Status.md)
 ####### [Work with USB Devices](compute/remote-desktop-services/multipoint-services/Work-with-USB-Devices.md)
