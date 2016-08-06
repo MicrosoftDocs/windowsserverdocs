@@ -32,8 +32,8 @@ Dedup can be very effective to optimize storage and reduce the amount of disk sp
 
 * '**Always**' workloads are workloads that have been proven to both have datasets which benefit highly from Dedup and resource consumption patterns which are compatible with Dedup's post-processing model. Always enable Dedup on the following workloads:
 	* General purpose file servers (GPFS) serving shares like team shares, user home folders, Work Folders, and software development shares.
-	* Virtualized Desktop Infrastructure (VDI) servers
-	* Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx)
+	* Virtualized Desktop Infrastructure (VDI) servers.
+	* Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx).
 * '**Sometimes**' workloads are workloads which may sometimes benefit from enabling Dedup. Not every workload in every circumstance is a good candidate for Dedup. 'Sometimes' workloads fitness for Dedup should be evaluated before enabling Dedup. 'Sometimes' workloads includes workloads like:
 	* General Purpose Hyper-V hosts
 	* SQL Servers
@@ -64,20 +64,24 @@ In order to determine a 'Sometimes' workload's fitness for Dedup, there are seve
 	`Files excluded by error: 0`  
 
 2. **What do my workload's IO patterns to its dataset look like? What performance do I have for my workload?**  
-	Writes to a deduplicated volume always occur un-deduplicated as Dedup uses a post-processing model. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. The ideal IO patterns for workloads are sequential
+	Writes to a deduplicated volume always occur un-deduplicated as Dedup uses a post-processing model. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Dedup moves file content into the Dedup Chunk Store, and attempts to lay the Chunk Store out file as much as possible, read operations are most performant when they are to sequential ranges of a file.  
+	&nbsp;  
+	Database-like workloads typically have more random-like read patterns than sequential read patterns because databases do not typically optimize the database layout on possible queries that may be run. Because the sections of the Chunk Store may exist all over the volume, accessing data ranges in the Chunk Store for database queries may introduce additional latency. High performance workloads are particularly sensitive to this extra latency, however, other database-like workloads may not have this requirement. It is left up to the workload owner, you, to determine if this latency is acceptable.
 
 	> [!Note]  
 	> These concerns primarily apply to storage workloads on volumes made up of traditional rotational storage media (also known as Hard Disks drives, or HDDs). All flash storage infrastructure (also known as Solid State Disk drives, or SSDs), are less affected by random IO patterns because one of the properties of flash media is equal access time to all locations on the disk. Therefore, SSDs do not suffer from the seek issues that HDDs do.
 
 3. **What are the resource requirements of my workload on the server?**  
-Hello world
+	Because Dedup uses a post-processing model, Dedup needs to, periodically, have sufficient system resources to complete its optimization and other jobs (see more [here](jobs.md)). This means that workloads which have idle time, such as in the evening or on weekends, are excellent candidates for Dedup, while workloads that run 24/7 may not be. Workloads that have no idle time may have still be good candidates for Dedup if the workload does not have high resource requirements on the server. 
 
 ### <a id="enable-dedup-lights-on"></a>Enabling Dedup
-Before enabling Dedup, first pick the [Usage Type](usage-types.md) that matches your workload:  
+Before enabling Dedup, you must choose a [Usage Type](usage-types.md) that most closely resembles your workload. There are three Usage Types included with Dedup:
 
-* Use 'General purpose file server' ('Default' in PowerShell) if deploying GPFS workloads.  
-* Use 'Virtual Desktop Infrastructure (VDI) server' ('HyperV' in PowerShell) if deploying a VDI workload.
-* Use 'Virtualized Backup Server' ('Backup' in PowerShell) if deploying a virtualized backup application like DPM.
+* [Default](usage-types.md#default) - tuned specifically for general purpose file server
+* [Hyper-V](usage-types.md#hyperv) - tuned specifically for Virtualized Desktop Intrastructure (VDI) servers.
+* [Backup](usage-types.md#backup) - tuned specifically for Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx).
+
+These Usage Types give sensible defaults for '**Always**' workloads, and also provide a good starting point for '**Sometimes**' workloads. Is is possible to [configure Deduplication Settings](dedup-settings.md) to improve Dedup's performance.
 
 #### <a id="enable-dedup-via-server-manager"></a>Using Server Manager to enable Dedup
 1. Select **File and Storage Services** from the left-hand panel in Server Manager.  
@@ -100,5 +104,15 @@ Before enabling Dedup, first pick the [Usage Type](usage-types.md) that matches 
 > The Dedup PowerShell cmdlets, including `Enable-DedupVolume`, are remotable by appending `-CimSession` with a CIM Session input. This is particularly useful for running the Dedup PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run `New-CimSession`. More information about creating CIM Sessions can be found here: [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx). 
 
 #### <a id="enable-dedup-sometimes-considerations"></a>Special considerations for 'Sometimes' workloads
+* Dedup jobs should be scheduled to run when 
+More information on how to configure the schedule for Dedup jobs can be found [here](jobs.md#schedule-dedup-jobs). More information on how to configure the memory, CPU, and prioritization of Dedup jobs can be found [here](jobs.md#change-dedup-jobs).
 
 ## <a id="faq"></a>Frequently Asked Questions (FAQ)
+**I want to run Dedup on the dataset for X workload... is this supported?**
+
+**What are the memory requirements for Dedup?**
+
+**What are the volume sizing requirements for deduplicated volumes?**
+
+**Do I need to modify the schedule or other Dedup settings for 'Always' workloads?**
+
