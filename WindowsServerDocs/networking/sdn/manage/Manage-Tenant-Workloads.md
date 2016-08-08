@@ -1,8 +1,11 @@
 ---
 title: Manage Tenant Workloads
 ms.custom: na
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.technology: 
+  - techgroup-networking
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
