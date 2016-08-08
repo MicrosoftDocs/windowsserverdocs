@@ -13,11 +13,16 @@ Data Deduplication in Windows Server was created with the following two principl
 Once enabled for a volume, Data Deduplication runs in the background to identify repeated patterns across files on that volume and to seamlessly move those portions, or chunks, with special pointers called Reparse Points that point to a unique copy of that chunk. This occurs in the following four steps:
 
 1. Scan file system for files eligible per policy for optimization.  
-![Scan file system](media/understanding-dedup-how-dedup-works-1.gif)
-2. Break files into variable-size chunks.
-3. Identify unique chunks.
-4. Place chunks in the Dedup Chunk Store.
-5. Replace the file stream of now optimized files with a Reparse Point to the Dedup Chunk Store.
+![Scan file system](media/understanding-dedup-how-dedup-works-1.gif)  
+&nbsp;  
+2. Break files into variable-size chunks.  
+![Break files into chunks](media/understanding-dedup-how-dedup-works-2.gif)
+3. Identify unique chunks.  
+![Identify unique chunks](media/understanding-dedup-how-dedup-works-3.gif)
+4. Place chunks in the Dedup Chunk Store and optionally compress.  
+![Move to Chunk Store](media/understanding-dedup-how-dedup-works-4.gif)
+5. Replace the original file stream of now optimized files with a Reparse Point to the Dedup Chunk Store.  
+![Replace file stream with Reparse Point](media/understanding-dedup-how-dedup-works-5.gif)
 
 When optimized files are read, the file system hands off the files with a Dedup Reparse Point to the Dedup file system filter, which redirects the read operation to the appropriate chunks in the Dedup Chunk Store that constitute the stream for that file. If/when a modifications are made to ranges of a deduplicated file, those modifications get written unoptimized to the disk and are optimized by the by Dedup's [Optimization job](understanding-dedup.md#usage-type-optimization) the next time it runs.
 
