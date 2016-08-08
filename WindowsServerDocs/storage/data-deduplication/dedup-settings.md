@@ -1,3 +1,111 @@
+# Data Deduplication Settings
+
+## Modifying Dedup Volume Settings
+### Toggling Settings with PowerShell
+
+### Available Settings
+<table>
+	<thead>
+		<tr>
+			<th>Setting Name</th>
+			<th>Definition</th>
+			<th>Acceptable Values</th>
+			<th>Reason for Modification</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>ChunkRedundancyThreshold</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>DataAccessEnabled</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Enabled</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>ExcludeFileType</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>ExcludeFileTypeDefault</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>ExcludeFolder</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>InputOutputScale</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MinimumFileAgeDays</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MinimumFileSize</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>NoCompress</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>NoCompressionFileType</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>OptimizeInUseFiles</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>OptimizePartialFiles</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Verify</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+## Modifying Dedup Job Schedules
+
+## Modifying Dedup Registry Keys
+
 ### <a name="gc"></a>Garbage Collection Job
 Garbage Collection (GC) is one the regularly scheduled jobs used by Windows Server Deduplication to maintain the optimized data. GC is responsible for reclaiming disk space by removing unnecessary chunks that are no longer being referenced by files that have been recently modified or deleted.
 
