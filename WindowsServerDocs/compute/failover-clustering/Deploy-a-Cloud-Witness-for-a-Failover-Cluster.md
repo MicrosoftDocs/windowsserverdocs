@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d3f7741-ca13-42d2-a952-747c90393175
 author: kumudd
+ms.author: kumud
 ---
 # Deploy a Cloud Witness for a Failover Cluster
 

@@ -7,7 +7,7 @@ manager: timlt
 ms.technology: 
   - hyper-v
   - techgroup-compute
-ms.tgt_pltfrm: na
+ms.author: kathydav
 ms.topic: article
 ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
 author: KBDAzure

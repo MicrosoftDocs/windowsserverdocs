@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8a7b18d8-b1ab-42a5-85d9-366715aa851b
 author: cwatsonMSFT
+ms.author: cwatson
 ---
 # Compute
 

@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92bb573b-03b7-470e-b72e-e35edf52b349
 author: KBDAzure
+ms.author: kathydav
 ---
 # Choose between standard or production checkpoints in Hyper-V
 

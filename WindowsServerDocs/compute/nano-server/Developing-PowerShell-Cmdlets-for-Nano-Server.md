@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
 author: jaimeo
+ms.author: jaimeo
 ---
 # Developing PowerShell Cmdlets for Nano Server
 
