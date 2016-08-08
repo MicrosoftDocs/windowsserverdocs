@@ -1,7 +1,7 @@
 # Data Deduplication Settings
 
 ## Modifying Dedup Volume Settings
-### Toggling Settings with PowerShell
+### Toggling Volume Settings with PowerShell
 
 ### Available Settings
 <table>
@@ -10,26 +10,14 @@
 			<th>Setting Name</th>
 			<th>Definition</th>
 			<th>Acceptable Values</th>
-			<th>Reason for Modification</th>
+			<th>Why would you want to modify this value?</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>ChunkRedundancyThreshold</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>DataAccessEnabled</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Enabled</td>
-			<td></td>
-			<td></td>
+			<td>The number of times that a chunk is referenced before a chunk is duplicated into the "Hotspot" section of the Chunk Store. The value of the "Hotspot" section is that so-called "hot" chunks that are referenced a lot have multiple access paths to improve access time.</td>
+			<td>Positive integers</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -58,8 +46,8 @@
 		</tr>
 		<tr>
 			<td>MinimumFileAgeDays</td>
-			<td></td>
-			<td></td>
+			<td>Number of days after the file is created before the file is considered to be 'in-policy' for optimization.</td>
+			<td>Positive integers (inclusive of zero)</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -70,15 +58,15 @@
 		</tr>
 		<tr>
 			<td>NoCompress</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>Whether the Chunks should be compressed before being put into the Chunk Store.</td>
+			<td>True/False</td>
+			<td>Some types of files, particularly multimedia files and already compressed file types, may not compress well. This setting allows you to turn off compression for all files on the volume. This would be ideal if you are optimizing a dataset that has a lot of already compressed files, allowing you to saving the extra CPU used to compress/decompress chunks.</td>
 		</tr>
 		<tr>
 			<td>NoCompressionFileType</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>File types whose chunks should not be compressed before going into the Chunk Store.</td>
+			<td>Array of file extensions</td>
+			<td>Some types of files, particularly multimedia files and already compressed file types, may not compress well. This settings allows compression to be turned off of those files, saving the CPU resource for those file types.</td>
 		</tr>
 		<tr>
 			<td>OptimizeInUseFiles</td>
