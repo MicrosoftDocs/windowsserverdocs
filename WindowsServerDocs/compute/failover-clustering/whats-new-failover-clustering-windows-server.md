@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 52f5ef26-971f-4269-b373-169dd0100688
 author: kumudd
+ms.author: kumud
 ---
 # What's New in Failover Clustering in Windows Server Technical Preview
 

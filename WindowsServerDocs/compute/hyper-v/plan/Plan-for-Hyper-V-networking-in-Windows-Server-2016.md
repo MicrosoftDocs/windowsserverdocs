@@ -3,7 +3,7 @@ title: Plan for Hyper-V networking in Windows Server 2016
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-ms.suite: na
+ms.author: kathydav
 ms.technology: 
   - hyper-v
   - techgroup-compute
@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7067bd74-8786-4202-9093-520a286f5883
 author: KBDAzure
+ms.author: kathydav
 ---
 # Plan for Hyper-V networking in Windows Server 2016
 

@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 

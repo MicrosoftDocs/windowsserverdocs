@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 990ff94a-30fb-434b-b4a2-3804a5245ba6
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Supported Linux and FreeBSD virtual machines for Hyper-V on Windows
 

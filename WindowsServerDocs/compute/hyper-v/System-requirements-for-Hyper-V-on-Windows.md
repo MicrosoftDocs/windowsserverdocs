@@ -11,6 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
 author: KBDAzure
+ms.author: kathydav
+ms.author: cwatson
 ---
 # System requirements for Hyper-V on Windows Server 2016 Technical Preview
 

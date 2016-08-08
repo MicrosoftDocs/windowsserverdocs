@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Supported SUSE virtual machines on Hyper-V
 

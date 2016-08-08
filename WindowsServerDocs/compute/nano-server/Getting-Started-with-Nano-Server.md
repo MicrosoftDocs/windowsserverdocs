@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
 author: jaimeo
+ms.author: jaimeo
 ---
 # Getting Started with Nano Server
 

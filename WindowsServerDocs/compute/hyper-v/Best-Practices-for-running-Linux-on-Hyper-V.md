@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Best Practices for running Linux on Hyper-V
 
