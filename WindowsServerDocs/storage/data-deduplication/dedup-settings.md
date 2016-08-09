@@ -21,11 +21,13 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 	Set-DedupSchedule -Name BackgroundOptimization -Enabled $false
 	Set-DedupSchedule -Name PriorityOptimization -Enabled $false
 	```
+
 2. Remove the currently scheduled [Garbage Collection](understanding-dedup.md#job-info-gc) and [Integrity Scrubbing](understanding-dedup.md#job-info-scrubbing) jobs:
 	```PowerShell
 	Get-DedupSchedule -Type GarbageCollection | ForEach-Object { Remove-DedupSchedule -InputObject $_ }
 	Get-DedupSchedule -Type Scrubbing | ForEach-Object { Remove-DedupSchedule -InputObject $_ }
 	```
+
 3. Create a nightly Optimization job that runs at 7 PM with high priority and all the CPUs and Memory available on the system:
 	```PowerShell
 	New-DedupSchedule -Name "NightlyOptimization" -Type Optimization -DurationHours 11 -Memory 100 -Cores 100 -Priority High -Days @(1,2,3,4,5) -Start (Get-Date "2016-08-08 19:00:00")
@@ -37,6 +39,7 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 	```PowerShell
 	New-DedupSchedule -Name "WeeklyGarbageCollection" -Type GarbageCollection -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(6) -Start (Get-Date "2016-08-13 07:00:00")
 	```
+	
 5. Create a Weekly Integrity Scrubbing job that runs on Sunday starting at 7 AM with high priority and all the CPUs and memory available on the system:
 	```PowerShell
 	New-DedupSchedule -Name "WeeklyIntegrityScrubbing" -Type Scrubbing -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(0) -Start (Get-Date "2016-08-14 07:00:00")
