@@ -45,7 +45,9 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 	New-DedupSchedule -Name "WeeklyIntegrityScrubbing" -Type Scrubbing -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(0) -Start (Get-Date "2016-08-14 07:00:00")
 	```
 
-### <a id="modifying-job-schedules-change-parameters"></a>Available Parameters for Scheduled Dedup Jobs
+### <a id="modifying-job-schedules-change-parameters"></a>Available Job-wide Settings
+The following settings can be toggled for new or scheduled Dedup jobs:
+
 <table>
 	<thead>
 		<tr>
@@ -81,12 +83,6 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 			<td>This value helps the system determine how to appropriate allocate CPU time. 'High' will use more CPU time, 'Low' will use less.</td>
 		</tr>
 		<tr>
-			<td>InputOutputThrottleLevel</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
 			<td>Days</td>
 			<td>The days that the job is to be scheduled.</td>
 			<td>An array of integers 0-6 representing the days of the week:<ul>
@@ -103,7 +99,7 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 		<tr>
 			<td>Cores</td>
 			<td>The percentage of cores on the system that Dedup jobs should use.</td>
-			<td>Integers 0-100</td>
+			<td>Integers 0-100 (indicates a percentage)</td>
 			<td>To control what level of impact Dedup will have on the compute resources on the system.</td>
 		</tr>
 		<tr>
@@ -126,14 +122,14 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 		</tr>
 		<tr>
 			<td>InputOutputThrottle</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>Specifies the amount of input/output throttling applied to the deduplication job. </td>
+			<td>Integers 0-100 (indicates a percentage)</td>
+			<td>Throttling ensures that deduplication does not interfere with other I/O intensive processes.</td>
 		</tr>
 		<tr>
 			<td>Memory</td>
 			<td>The percentage of Memory on the system that Dedup jobs should use.</td>
-			<td>Integers 0-100</td>
+			<td>Integers 0-100 (indicates a percentage)</td>
 			<td>To control what level of impact Dedup will have on the memory resources of the system.</td>
 		</tr>
 		<tr>
@@ -144,40 +140,45 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 		</tr>
 		<tr>
 			<td>ReadOnly</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>ScheduledTask</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>Indicates that the scrubbing job processes and reports on corruptions that it finds but does not run any repair actions.</td>
+			<td>Switch (True/False)</td>
+			<td>You would like to manually restore (like from backup) files which sit on bad sections of the disk.</td>
 		</tr>
 		<tr>
 			<td>Start</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>Specifies the time a job should start.</td>
+			<td>`System.DateTime`</td>
+			<td>The 'date' part of the `System.Datetime` provided to 'Start' is irrelevant (as long as its in the past), but the 'time' part specifies when the job should start.</td>
 		</tr>
 		<tr>
 			<td>StopWhenSystemBusy</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>Specifies whether or not Dedup should back off if the system is busy.</td>
+			<td>Switch (True/False)</td>
+			<td>This switch gives you the desire to control Dedup's behavior - this is especially important if you desire to run Dedup while your workload is not idle.</td>
 		</tr>
 	</tbody>
 </table>
 
+## Modifying Dedup Volume-wide Settings
+### Toggling Volume Settings
+Dedup's volume-wide default settings are set via the [Usage Type](understanding-dedup.md#usage-type) that you select when you enable a Dedup for a volume. Dedup includes several cmdlets that make editing volume-wide settings easy:
 
-> [!Note]  
-> This can be done at the same time that the schedule itself is changed.
+* `Get-DedupVolume`
+* `Set-DedupVolume`
 
-## Modifying Dedup Volume Settings
-### Toggling Volume Settings with PowerShell
+The main reasons to modify the volume settings from the selected Usage Type are (1) to improve read performance for specific files (such as multimedia or other already compressed file types) and/or (2) to tune Dedup for better optimization for your specific workload. The following example shows how to modify the Dedup volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files which change frequently:
 
+1. See what the current volume settings are for Cluster Shared Volume 1 are:
+	```PowerShell
+	Get-DedupVolume -Volume C:\ClusterStorage\Volume1 | Select *
+	```
 
-### Available Settings
+2. Enable OptimizePartialFiles on Cluster Shared Volume 1, so that the MinimumFileAge policy applies to sections of the file rather than the whole file. This is done to make sure that the majority of the file gets optimized, even though sections of the file change regularly:
+	```PowerShell
+	Set-DedupVolume -Volume C:\ClusterStorage\Volume1 -OptimizePartialFiles
+	```
+
+### Available Volume-Wide Settings
 <table>
 	<thead>
 		<tr>
@@ -257,7 +258,43 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 	</tbody>
 </table>
 
-## Modifying Dedup Registry Keys
+## Modifying Dedup System-wide Settings
+Dedup has a few additional, system-wide settings that can be configured via the Registry. These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry. 
+
+### Available System-wide Settings
+<table>
+	<thead>
+		<tr>
+			<th>Setting Name</th>
+			<th>Definition</th>
+			<th>Acceptable Values</th>
+			<th>Why would you want to change this?</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>WlmMemoryOverPercentThreshold</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>EstimatedCompressionRate</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>DeepGCInterval</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings  
+HKLM:\CLUSTER\Dedup
 
 ## <a id="faq"></a>Frequently Asked Questions
 **I changed a Dedup setting and now Dedup jobs are slow or don't finish, or my workload performance has decreased. Why!?**  
