@@ -53,30 +53,6 @@ If the computers or VMs for Network Controller and the management client are dom
   
 -   Create a security group and add all of the users who have permission to configure and manage the network by using Network Controller.  For example, create a new group named **Network Controller Users**. All of the users that you add to the new group must also be members of the **Domain Users** group in Active Directory Users and Computers. All Network Controller configuration and management is performed using Representational State Transfer (REST).  
   
-**Configure certificates for non-Kerberos deployments**  
-  
-If the computers or VMs for Network Controller and the management client are not domain-joined, you must configure certificate-based authentication by completing the following steps.  
-  
--   Create a certificate on the Network Controller for Computer authentication. The certificate subject name must be same as the DNS name of the Network Controller computer or VM.  
-  
--   Create a certificate on the management client. This certificate must be trusted by the Network Controller.  
-  
--   Enroll a certificate on the Network Controller computer or VM. The certificate must meet the following requirements.  
-  
-    -   The Server Authentication purpose is present in Enhanced Key Usage (EKU) extensions.  
-  
-    -   The certificate subject name should resolve to:  
-  
-        -   The IP address of the Network Controller computer or VM, if Network Controller is deployed on a single computer or VM.  
-  
-        -   The REST IP address, if Network Controller is deployed on multiple computers, multiple VMs, or both.  
-  
-    -   This certificate must be trusted by all the REST clients. The certificate must also be trusted by the Software Load Balancing (SLB) Multiplexer (MUX) and the southbound host computers that are managed by Network Controller.  
-  
-    -   The certificate can be enrolled by a Certification Authority (CA) or can be a self-signed certificate. Self-signed certificates are not recommended for production deployments, but are acceptable for test lab environments.  
-  
-    -   The same certificate must be provisioned on all the Network Controller nodes. After creating the certificate on one node, you can export the certificate (with private key) and import it on the other nodes.  
-  
 **Configure log file locations if needed**  
   
 You can store Network Controller debug logs on the Network Controller computer or VM, or on a remote file share. If you want to store the logs in a remote file share, ensure that the share is accessible from the Network Controller.  
