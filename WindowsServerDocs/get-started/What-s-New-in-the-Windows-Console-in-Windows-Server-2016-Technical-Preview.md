@@ -1,13 +1,18 @@
 ---
 title: What's New in the Windows Console in Windows Server 2016 Technical Preview
+description: important new features in the console
 ms.custom: na
 ms.prod: windows-server-threshold
+ms.technology:
+  - server-general
 ms.reviewer: na
 ms.suite: na
+ms.date: 08/09/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: jaimeo
+manager: dongill
 ---
 # What&#39;s New in the Windows Console in Windows Server 2016 Technical Preview
 >Applies To: Windows Server Technical Preview

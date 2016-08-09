@@ -1,15 +1,18 @@
----
+--- 
 title: System Requirements and Installation
+description: minimum requirements for storage, CPU, network, memory, RAM in a clean installation 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.date: 08/09/2016
 ms.technology:
   - server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 author: jaimeo
+manager: dongill
 ---
 # System Requirements and Installation
 

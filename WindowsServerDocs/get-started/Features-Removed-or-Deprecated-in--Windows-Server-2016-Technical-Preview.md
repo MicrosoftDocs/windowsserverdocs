@@ -1,5 +1,6 @@
 ---
 title: Features Removed or Deprecated in  Windows Server 2016 Technical Preview
+description: features and functionalities removed or planned for removal in releases
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,8 +9,10 @@ ms.technology:
   - server-general
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.date: 08/09/2016
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
 author: jaimeo
+manager: dongill
 ---
 # Features Removed or Deprecated in  Windows Server 2016 Technical Preview
 

@@ -1,15 +1,18 @@
 ---
 title: What&#39;s New in Windows Server 2016 Technical Preview 5
+description: new features in compute, identity, management, automation, networking, security, storage
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.date: 08/09/2016
 ms.technology: 
   - server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jaimeo
+manager: dongill
 ---
 # What&#39;s New in Windows Server 2016 Technical Preview 5
 >Applies To: Windows Server Technical Preview
