@@ -92,7 +92,7 @@ When DHA is running in EKCert validation mode, it relies on an enterprise manage
 
 Microsoft publishes aggregated packages of trusted Roots and intermediate CA's for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
 
-An example archive is http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab.
+An example archive is [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
 
 #### AIKCert validation mode
 
@@ -160,7 +160,7 @@ To install the trusted TPM roots certificate package, you must extract it, remov
 #### Download the trusted TPM roots certificate package
 
 Before you install the certificate package, you can download the latest list of trusted TPM roots from
-http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab
+[http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
 
 > **Important:** Before installing the package, verify that it is digitally signed by Microsoft.
 
@@ -171,14 +171,15 @@ mkdir .\TrustedTpm
 expand -F:* .\TrustedTpm.cab .\TrustedTpm
 ```
 
-#### Remove the trust chains for TPM vendors that are *not* trusted by your organization
+#### Remove the trust chains for TPM vendors that are *not* trusted by your organization (Optional)
 
 Delete the folders for any TPM vendor trust chains that are not trusted by your organization.
 
 > **Note:** If using AIK Certificate mode, the Microsoft folder is required to validate Microsoft issued AIK certificates.
 
 #### Install the trusted certificate package
-Install the trusted certificate package by running the following command.
+Install the trusted certificate package by running the setup script from the .cab file.
+
 ```
 .\setup.cmd
 ```
