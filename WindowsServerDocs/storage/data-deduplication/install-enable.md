@@ -5,9 +5,9 @@ This document explains how to install the [Data Deduplication](overview.md) (com
 
 ## <a id="install-dedup"></a>Install the Data Deduplication feature
 ### <a id="install-dedup-via-server-manager"></a>To install the Data Deduplication feature on the server using Server Manager
-1. From the Add Roles and Feature Wizard, under Server Roles, select the **Data Deduplication** check box.
+1. From the Add Roles and Feature Wizard, under Server Roles, select the **Data Deduplication** check box.  
 ![Install Dedup via Server Manager: Select Dedup from Server Roles](media/install-dedup-via-server-manager-1.png)
-2. Click **Next** until the **Install** button is active, and then click **Install**.
+2. Click **Next** until the **Install** button is active, and then click **Install**.  
 ![Install Dedup via Server Manager: Click Install](media/install-dedup-via-server-manager-2.png) 
 
 ### <a id="install-dedup-via-powershell"></a>To install the Data Deduplication feature on the server using PowerShell
