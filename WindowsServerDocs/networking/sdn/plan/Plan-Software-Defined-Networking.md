@@ -13,11 +13,11 @@ author: vhorne
 ---
 # Plan Software Defined Networking
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-The topics in this section provide deployment planning and prerequisite information about the Software Defined Networking technologies that are included in Windows Server&reg; 2016 Technical Preview.  
+The topics in this section provide deployment planning and prerequisite information about the Software Defined Networking technologies that are included in Windows Server 2016.  
   
-This section includes the following topics.  
+This section includes the following topics:  
 - [Plan a Software Defined Networking Infrastructure](../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)  
 - [Installation and Preparation Requirements for Deploying Network Controller](../../sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
   
