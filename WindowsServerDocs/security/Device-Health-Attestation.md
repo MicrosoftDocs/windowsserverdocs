@@ -13,7 +13,7 @@ author: brianlic-msft
 ---
 # Device Health Attestation
 
->Applies To: Windows Server 2016 Technical Preview
+>Applies To: Windows Server 2016
 
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 
@@ -23,7 +23,7 @@ Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included
 
 -	Enables enterprises to raise the security bar of their organization to hardware monitored and attested security, with minimal or no impact on operation cost.
 
-Starting with Windows Server 2016 Technical Preview 5, you can now run the DHA service as a server role within your organization. Use this topic to learn how to install and configure the Device Health Attestation server role.
+Starting with Windows Server 2016, you can now run the DHA service as a server role within your organization. Use this topic to learn how to install and configure the Device Health Attestation server role.
 
 ## Overview
 
@@ -39,7 +39,7 @@ The DHA service validates the TPM and PCR logs for a device and then issues a DH
 
 - **DHA cloud service**  A Microsoft-managed DHA service that is free, geo-load-balanced, and optimized for access from different regions of the world.
 
-- **DHA on-premises service** A new server role introduced in Windows Server 2016 Technical Preview 5. It's available for free to customers that have a Windows Server 2016 license.
+- **DHA on-premises service** A new server role introduced in Windows Server 2016. It's available for free to customers that have a Windows Server 2016 license.
 
 - **DHA Azure cloud service** A virtual host in Microsoft Azure. To do this, you need a virtual host and licenses for the DHA on-premises service.
 
@@ -98,15 +98,15 @@ An example archive is [http://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab]
 
 AIKCert Validation Mode is optimized for operational environments that do have access to the Internet. Devices connecting to a DHA service running in AIKCert validation mode must have direct access to the Internet and are able to get an AIK certificate from Microsoft. 
 
-## Install and configure the DHA service on Windows Server 2016 Technical Preview 5
+## Install and configure the DHA service on Windows Server 2016
 
-Use the following sections to get DHA installed and configured on Windows Server 2016 Technical Preview 5.
+Use the following sections to get DHA installed and configured on Windows Server 2016.
 
 ### Prerequisites
 
 In order to set up and verify a DHA on-premises service, you need:
 
-- A server running Windows Server 2016 Technical Preview 5.
+- A server running Windows Server 2016.
 - One (or more) Windows 10 client devices with a TPM (either 1.2 or 2.0) that is in a clear/ready state running the latest Windows Insider build.
 - Decide if you are going to run in EKCert or AIKCert validation mode.
 - The following certificates:
@@ -115,9 +115,9 @@ In order to set up and verify a DHA on-premises service, you need:
   - **DHA encryption certificate** An x.509 certificate that chains to an enterprise trusted root with an exportable private key. The DHA service also uses this certificate for encryption. 
 
 
-### Install Windows Server 2016 Technical Preview 5
+### Install Windows Server 2016
 
-Install Windows Server 2016 Technical Preview 5 using your preferred installation method, such as Windows Deployment Services, or running the installer from bootable media, a USB drive, or the local file system. If this is the first time you are configuring the DHA on-premises service, you should install Windows Server 2016 Technical Preview 5 using the **Desktop Experience** installation option.
+Install Windows Server 2016 using your preferred installation method, such as Windows Deployment Services, or running the installer from bootable media, a USB drive, or the local file system. If this is the first time you are configuring the DHA on-premises service, you should install Windows Server 2016 using the **Desktop Experience** installation option.
 
 ### Add the Device Health Attestation server role
 
