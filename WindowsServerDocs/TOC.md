@@ -548,7 +548,7 @@
 ####### [Set Access Scope for DNS Resource Records](networking/technologies/ipam/Set-Access-Scope-for-DNS-Resource-Records.md)
 ####### [View Roles and Role Permissions](networking/technologies/ipam/View-Roles-and-Role-Permissions.md)
 ###### [Manage Role Based Access Control with Windows PowerShell](networking/technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-powershell.md)
-### [Network Load Balancing](../networking/technologies/Network-Load-Balancing.md)
+### [Network Load Balancing](networking/technologies/Network-Load-Balancing.md)
 ### [NIC Teaming](networking/technologies/nic-teaming/NIC-Teaming.md)
 #### [NIC Teaming in Virtual Machines (VMs)](networking/technologies/nic-teaming/NIC-Teaming-in-Virtual-Machines--VMs-.md)
 #### [NIC Teaming and Virtual Local Area Networks (VLANs)](networking/technologies/nic-teaming/NIC-Teaming-and-Virtual-Local-Area-Networks--VLANs-.md)

@@ -17,7 +17,7 @@ This topic provides an overview of the Network Load Balancing \(NLB\) feature in
 You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.   
 
 >[!NOTE]
->Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
+>Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
 
 The Network Load Balancing \(NLB\) feature distributes traffic across several servers by using the TCP\/IP networking protocol. By combining two or more computers that are running applications into a single virtual cluster, NLB provides reliability and performance for web servers and other mission\-critical servers.  
   
@@ -126,7 +126,7 @@ To install NLB by using Windows PowerShell, run the following command at an elev
     Install-WindowsFeature NLB -IncludeManagementTools
     
 
-For more information, see [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx)
+For more information, see [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx)
 
 After installation is complete, no restart of the computer is required.
 
@@ -139,8 +139,6 @@ The following table provides links to additional information about the NLB featu
 |----------------|--------------|  
 |Deployment|[Network Load Balancing Deployment Guide](http://technet.microsoft.com/library/cc754833(WS.10).aspx) &#124; [Configuring Network Load Balancing with Terminal Services](http://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|  
 |Operations|[Managing Network Load Balancing Clusters](http://technet.microsoft.com/library/cc753954(WS.10).aspx) &#124; [Setting Network Load Balancing Parameters](http://technet.microsoft.com/library/cc731619(WS.10).aspx) &#124; [Controlling Hosts on Network Load Balancing Clusters](http://technet.microsoft.com/library/cc770870(WS.10).aspx)|  
-|Troubleshooting|[Troubleshooting Network Load Balancing Clusters](http://technet.microsoft.com/library/cc732592(WS.10).aspx) &#124; [NLB Cluster Events and Errors](http://technet.microsoft.com/library/cc731678(WS.10).aspx)|  
-|Security|[Network Load Balancing Best Practices](http://technet.microsoft.com/library/cc740265(v=WS.10).aspx)|  
-|Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=238123)|  
-|Community resources|[High Availability \(Clustering\) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641) &#124; [Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)|  
-
+|Troubleshooting|[Troubleshooting Network Load Balancing Clusters](http://technet.microsoft.com/library/cc732592(WS.10).aspx) &#124; [NLB Cluster Events and Errors](http://technet.microsoft.com/library/cc731678(WS.10).aspx)|
+|Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=238123)|
+|Community resources|[High Availability \(Clustering\) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)
