@@ -705,6 +705,7 @@
 ###### [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)
 ##### [Network Controller](networking/sdn/technologies/network-controller/Network-Controller.md)
 ###### [Install the Network Controller server role using Server Manager](networking/sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md)
+###### [Post-Deployment Steps for Network Controller](networking/sdn/technologies/network-controller/post-deploy-steps-nc.md)
 ##### [Network Function Virtualization](networking/sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)
 ###### [Datacenter Firewall Overview](networking/sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
 ###### [RAS Gateway for SDN](networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
