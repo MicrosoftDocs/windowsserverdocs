@@ -1,6 +1,6 @@
 ---
 title: Release Notes - Important Issues in Windows Server 2016 Technical Preview
-description: critical issues requiring workaround to avoid crash, hang, installation failure, data loss
+description: "Summarizes critical issues requiring workaround to avoid crash, hang, installation failure, data loss."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
+ms.author: jaimeo
 manager: dongill
 ---
 # Release Notes: Important Issues in Windows Server 2016 Technical Preview
