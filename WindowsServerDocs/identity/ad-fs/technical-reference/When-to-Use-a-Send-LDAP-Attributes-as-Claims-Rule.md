@@ -52,7 +52,7 @@ You can create this rule by using either the claim rule language or by using the
   
 -   Mapping of LDAP attributes to outgoing claim types  
   
-For more information about how to create this rule, see [Create a Rule to Send LDAP Attributes as Claims_1](Create-a-Rule-to-Send-LDAP-Attributes-as-Claims_1.md).  
+For more information about how to create this rule, see [Create a Rule to Send LDAP Attributes as Claims](https://technet.microsoft.com/library/dd807115.aspx).  
   
 ## Using the claim rule language  
 If the query to Active Directory, AD DS, or Active Directory Lightweight Directory Services \(AD LDS\) must compare against an LDAP attribute other than **samAccountname**, you must use a custom rule instead. If there is no Windows Account Name claim in the input set, you must also use a custom rule to specify the claim to use for querying AD DS or AD LDS.  
@@ -144,6 +144,6 @@ param = regexreplace(c1.Value, ".*DC=(?<domain>.+),DC=corp,DC=fabrikam,DC=com", 
 > These rules work only if the user’s manager is in the same domain as the user \(corp.fabrikam.com in this example\).  
   
 ## Additional references  
-[Create a Rule to Send LDAP Attributes as Claims_1](Create-a-Rule-to-Send-LDAP-Attributes-as-Claims_1.md)  
+[Create a Rule to Send LDAP Attributes as Claims](https://technet.microsoft.com/library/dd807115.aspx)  
   
 
