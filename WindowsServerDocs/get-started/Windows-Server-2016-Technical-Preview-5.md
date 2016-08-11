@@ -1,15 +1,18 @@
 ---
 title: Windows Server 2016 Technical Preview 5
+description: "Get started with Windows Server 2016. " 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - server-general
+ms.date: 08/09/2016
+ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 author: jaimeo
+ms.author: jaimeo
+manager: dongill
 ---
 # Windows Server 2016 Technical Preview 5
 

@@ -1,5 +1,6 @@
 ---
 title: Customer Experience Guides for Windows Server 2016 Technical Preview 5
+description: "Guides introduce new features and offer walkthroughs to try."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -8,8 +9,11 @@ ms.technology:
   - server-general
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.date:08/09/2016
 ms.assetid: bd2a2a8f-5640-416d-ac8d-a9a1987b892e
 author: jaimeo
+ms.author: jaimeo
+manager: dongill
 robots: noindex,nofollow
 ---
 # Customer Experience Guides for Windows Server 2016 Technical Preview 5
