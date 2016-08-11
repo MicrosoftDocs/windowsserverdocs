@@ -13,6 +13,7 @@ ms.assetid: bd2a2a8f-5640-416d-ac8d-a9a1987b892e
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
+ROBOTS: "NOINDEX, NOFOLLOW"
 ---
 # Customer Experience Guides for Windows Server 2016 Technical Preview 5
 
