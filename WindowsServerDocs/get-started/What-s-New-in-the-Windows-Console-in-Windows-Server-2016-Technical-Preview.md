@@ -1,10 +1,9 @@
 ---
 title: What's New in the Windows Console in Windows Server 2016 Technical Preview
-description: important new features in the console
+description: "Lists the important new features in the Windows Server 2016 console."
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology:
-  - server-general
+ms.technology: server-general
 ms.reviewer: na
 ms.suite: na
 ms.date: 08/09/2016
@@ -12,9 +11,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: jaimeo
+ms.author: jaimeo
 manager: dongill
 ---
-# What&#39;s New in the Windows Console in Windows Server 2016 Technical Preview
+# What's New in the Windows Console in Windows Server 2016 Technical Preview
 >Applies To: Windows Server Technical Preview
 
 The console host (the underlying code that supports all character-mode applications including the Windows command prompt, the Windows PowerShell prompt, and others) has been updated in several ways to add a variety of new capabilities.  
