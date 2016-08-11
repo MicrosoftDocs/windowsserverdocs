@@ -15,7 +15,6 @@ ms.author: jaimeo
 manager: dongill
 robots: noindex,nofollow
 ---
-
 # Customer Experience Guides for Windows Server 2016 Technical Preview 5
 
 >Applies To: Windows Server Technical Preview
