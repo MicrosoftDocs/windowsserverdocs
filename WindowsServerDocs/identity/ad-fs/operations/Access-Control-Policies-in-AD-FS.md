@@ -1,16 +1,13 @@
 ---
 title: Access Control Policies in AD FS
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 178ed24f-ebc2-4447-b7a2-c774b0d27278
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # Access Control Policies in AD FS
 
@@ -54,7 +51,7 @@ If an administrator selects multiple conditions, they are of **AND** relationshi
 |**Policy**|**Policy rules**|  
 |Extranet access requires MFA<br /><br />All users are permitted|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />**Rule#2**<br /><br />from **intranet**<br /><br />Permit|  
 |External access are not permitted except non-FTE<br /><br />Intranet access for FTE on workplace joined device are permitted|**Rule #1**<br /><br />From **extranet**<br /><br />and from **non-FTE** group<br /><br />Permit<br /><br />**Rule #2**<br /><br />from **intranet**<br /><br />and from **workplace joined** device<br /><br />and from **FTE** group<br /><br />Permit|  
-|Extranet access requires MFA except �service admin�<br /><br />All users are permitted to access|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />Except **service admin group**<br /><br />**Rule #2**<br /><br />always<br /><br />Permit|  
+|Extranet access requires MFA except "service admin"<br /><br />All users are permitted to access|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />Except **service admin group**<br /><br />**Rule #2**<br /><br />always<br /><br />Permit|  
 |non-work place joined device accessing from extranet requires MFA<br /><br />Permit AD fabric for intranet and extranet access|**Rule #1**<br /><br />from **intranet**<br /><br />And from **AD Fabric** group<br /><br />Permit<br /><br />**Rule #2**<br /><br />from **extranet**<br /><br />and from **non-workplace joined** device<br /><br />and from **AD Fabric** group<br /><br />and with MFA<br /><br />Permit<br /><br />**Rule #3**<br /><br />from **extranet**<br /><br />and from **workplace joined** device<br /><br />and from **AD Fabric** group<br /><br />Permit|  
   
 ## Parameterized policy template vs non-parameterized policy template  

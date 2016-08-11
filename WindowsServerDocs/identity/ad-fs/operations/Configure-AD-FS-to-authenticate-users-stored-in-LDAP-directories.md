@@ -1,15 +1,13 @@
 ---
 title: Configure AD FS to authenticate users stored in LDAP directories
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: ed96b9ca-3f06-4c5b-a49c-5676861d6e56
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
 # Configure AD FS to authenticate users stored in LDAP directories
 
@@ -41,11 +39,11 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
 
     ```
     $DirectoryCred = Get-Credential
-    $vendorDirectory = New-AdfsLdapServerConnection –HostName dirserver –Port 50000 –SslMode None –AuthenticationMethod Basic –Credential $DirectoryCred
+    $vendorDirectory = New-AdfsLdapServerConnection -HostName dirserver -Port 50000 -SslMode None -AuthenticationMethod Basic -Credential $DirectoryCred
     ```
 
     > [!NOTE]
-    > It is recommended that you create a new connection object for each LDAP server you want to connect to. AD FS can connect to multiple replica LDAP servers and automatically fail over in case a specific LDAP server is down. For such a case, you can create one AdfsLdapServerConnection for each of these replica LDAP servers and then add the array of connection objects using the –**LdapServerConnection** parameter of the **Add-AdfsLocalClaimsProviderTrust** cmdlet.
+    > It is recommended that you create a new connection object for each LDAP server you want to connect to. AD FS can connect to multiple replica LDAP servers and automatically fail over in case a specific LDAP server is down. For such a case, you can create one AdfsLdapServerConnection for each of these replica LDAP servers and then add the array of connection objects using the -**LdapServerConnection** parameter of the **Add-AdfsLocalClaimsProviderTrust** cmdlet.
 
     **NOTE:** Your attempt to use Get-Credential and type in a DN and password to be used to bind to an LDAP instance might result in a failure because the of the user interface requirement for specific input formats, for example,  domain\username or user@domain.tld. You can instead use the ConvertTo-SecureString cmdlet as follows (the example below assumes uid=admin,ou=system as the DN of the credentials to be used to bind to the LDAP instance):
 
@@ -60,11 +58,11 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
 
     ```
     #Map given name claim
-    $GivenName = New-AdfsLdapAttributeToClaimMapping –LdapAttribute givenName –ClaimType “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname”
+    $GivenName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute givenName -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"
     # Map surname claim
-    $Surname = New-AdfsLdapAttributeToClaimMapping –LdapAttribute sn –ClaimType “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname” 
+    $Surname = New-AdfsLdapAttributeToClaimMapping -LdapAttribute sn -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
     # Map common name claim
-    $CommonName = New-AdfsLdapAttributeToClaimMapping –LdapAttribute cn –ClaimType “http://schemas.xmlsoap.org/claims/CommonName”
+    $CommonName = New-AdfsLdapAttributeToClaimMapping -LdapAttribute cn -ClaimType "http://schemas.xmlsoap.org/claims/CommonName"
     ```
 
     This mapping is done in order to make attributes from the LDAP store available as claims in AD FS in order to create conditional access control rules in AD FS. It also enables AD FS to work with custom schemas in LDAP stores by providing an easy way to map LDAP attributes to claims.
@@ -72,26 +70,26 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
 3.  Finally, you must register the LDAP store with AD FS as a local claims provider trust using the **Add-AdfsLocalClaimsProviderTrust** cmdlet:
 
     ```
-    Add-AdfsLocalClaimsProviderTrust –Name “Vendors” –Identifier “urn:vendors” –Type Ldap
+    Add-AdfsLocalClaimsProviderTrust -Name "Vendors" -Identifier "urn:vendors" -Type Ldap
 
     # Connection info
     -LdapServerConnection $vendorDirectory 
 
     # How to locate user objects in directory
-    –UserObjectClass inetOrgPerson –UserContainer “CN=VendorsContainer,CN=VendorsPartition” –LdapAuthenticationMethod Basic 
+    -UserObjectClass inetOrgPerson -UserContainer "CN=VendorsContainer,CN=VendorsPartition" -LdapAuthenticationMethod Basic 
 
     # Claims for authenticated users
-    –AnchorClaimLdapAttribute mail –AnchorClaimType “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn” –LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName) 
+    -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName) 
 
     # General claims provider properties
-    –AcceptanceTransformRules “c:[Type != ‘”’”] => issue(claim=c);” –Enabled $true 
+    -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true 
 
-    # Optional – supply user name suffix if you want to use Ws-Trust
-    –OrganizationalAccountSuffix “vendors.contoso.com”
+    # Optional - supply user name suffix if you want to use Ws-Trust
+    -OrganizationalAccountSuffix "vendors.contoso.com"
 
     ```
 
-    In the example above, you are creating a local claims provider trust called “Vendors”. You are specifying connection information for AD FS to connect to the LDAP directory this local claims provider trust represents by assigning `$vendorDirectory` to the `-LdapServerConnection` parameter. Note that in step one, you’ve assigned `$vendorDirectory` a connection string to be used when connecting to your specific LDAP directory. Finally, you are specifying that the `$GivenName`, `$Surname`, and `$CommonName` LDAP attributes (which you mapped to the AD FS claims) are to be used for conditional access control, including multi-factor authentication policies and issuance authorization rules, as well as for issuance via claims in AD FS-issued security tokens. In order to use active protocols like Ws-Trust with AD FS, you must specify the OrganizationalAccountSuffix parameter, which enables AD FS to disambiguate between local claims provider trusts when servicing an active authorization request.
+    In the example above, you are creating a local claims provider trust called "Vendors". You are specifying connection information for AD FS to connect to the LDAP directory this local claims provider trust represents by assigning `$vendorDirectory` to the `-LdapServerConnection` parameter. Note that in step one, you've assigned `$vendorDirectory` a connection string to be used when connecting to your specific LDAP directory. Finally, you are specifying that the `$GivenName`, `$Surname`, and `$CommonName` LDAP attributes (which you mapped to the AD FS claims) are to be used for conditional access control, including multi-factor authentication policies and issuance authorization rules, as well as for issuance via claims in AD FS-issued security tokens. In order to use active protocols like Ws-Trust with AD FS, you must specify the OrganizationalAccountSuffix parameter, which enables AD FS to disambiguate between local claims provider trusts when servicing an active authorization request.
 
 ## See Also
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)

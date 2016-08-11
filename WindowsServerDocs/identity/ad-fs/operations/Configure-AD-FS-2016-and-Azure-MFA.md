@@ -1,16 +1,14 @@
 ---
 title: Configure AD FS 2016 and Azure MFA
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
-ms.technology: 
-  - active-directory-domain-services
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3b7d2ea8-9a9d-4e0a-9203-c5059e3034d7
+description:
 author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
+---
 
 # Configure AD FS 2016 and Azure MFA
 

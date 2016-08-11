@@ -72,7 +72,7 @@ You create this rule using either the claim rule language or using the Pass Thro
   
 -   Pass through only claim values that start with a specific value  
   
-For more instructions on how to create this template, see [Create a Rule to Pass Through or Filter an Incoming Claim_1](Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim_1.md) in the AD FS Deployment Guide.  
+For more instructions on how to create this template, see [Create a Rule to Pass Through or Filter an Incoming Claim](https://technet.microsoft.com/library/dd807060.aspx) in the AD FS Deployment Guide.  
   
 ## Using the claim rule language  
 If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see When to Use a Custom Rule.  

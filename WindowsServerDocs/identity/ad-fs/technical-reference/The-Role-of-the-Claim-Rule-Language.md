@@ -157,6 +157,6 @@ exists([issuer == "MSFT"])
 The rule body can contain only a single issuance statement. If conditions are used without using the Exists function, the rule body is executed once for each time that the conditions part is matched.  
   
 ## Additional references  
-[Create a Rule to Send Claims Using a Custom Rule](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
+[Create a Rule to Send Claims Using a Custom Rule](https://technet.microsoft.com/library/dd807049.aspx)  
   
 

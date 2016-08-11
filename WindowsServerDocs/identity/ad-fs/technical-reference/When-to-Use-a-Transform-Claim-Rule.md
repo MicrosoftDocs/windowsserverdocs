@@ -69,7 +69,7 @@ You create this rule using either the claim rule language or using the **Transfo
   
 -   Replace incoming e\-mail suffix claims with a new e\-mail suffix  
   
-For more instructions on how to create this template, see [Create a Rule to Transform an Incoming Claim](Create-a-Rule-to-Transform-an-Incoming-Claim.md) in the AD FS Deployment Guide.  
+For more instructions on how to create this template, see [Create a Rule to Transform an Incoming Claim](https://technet.microsoft.com/library/dd807068.aspx) in the AD FS Deployment Guide.  
   
 ## Using the claim rule language  
 If the outgoing claim must be constructed from the content of more than one incoming claim, you must use a custom rule instead. If the claim value of the outgoing claim must be based on the value of the incoming claim—but with additional content—you must also use a custom rule in that context. For more information, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).  

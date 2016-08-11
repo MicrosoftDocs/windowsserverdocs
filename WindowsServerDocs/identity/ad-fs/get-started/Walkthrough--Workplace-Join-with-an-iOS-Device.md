@@ -1,16 +1,15 @@
 ---
-title: Walkthrough: Workplace Join with an iOS Device
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 2809e237-5782-4a90-84ff-c9e387f55270
+title: Walkthrough - Workplace Join with an iOS Device
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Walkthrough: Workplace Join with an iOS Device
 
 >Applies To: Windows Server 2012 R2

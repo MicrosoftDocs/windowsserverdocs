@@ -57,7 +57,7 @@ This rule template provides the following options:
   
 -   Type one or more optional conditions and an issuance statement using the AD FS claim rule language  
   
-For more instructions for creating a custom rule using this template, see [Create a Rule to Send Claims Using a Custom Rule](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md) in the AD FS Deployment Guide.  
+For more instructions for creating a custom rule using this template, see [Create a Rule to Send Claims Using a Custom Rule](https://technet.microsoft.com/library/dd807049.aspx) in the AD FS Deployment Guide.  
   
 For a better understanding of how the claim rule language works, view the claim rule language syntax of other rules that already exist in the snap\-in by clicking the **View Rule Language** tab in the properties for that rule. Using the information in this section and the syntax information on this tab can provide insight into how to construct your own custom rules.  
   

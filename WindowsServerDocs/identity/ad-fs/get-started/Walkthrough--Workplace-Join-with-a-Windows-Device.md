@@ -1,16 +1,15 @@
 ---
-title: Walkthrough: Workplace Join with a Windows Device
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
+title: Walkthrough - Workplace Join with a Windows Device
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
 ms.topic: article
-ms.assetid: 8097655c-c72f-4803-b0a2-1c65819271b3
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Walkthrough: Workplace Join with a Windows Device
 
 >Applies To: Windows Server Technical Preview

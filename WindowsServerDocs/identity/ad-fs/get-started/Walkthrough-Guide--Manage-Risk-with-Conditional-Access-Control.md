@@ -1,23 +1,22 @@
 ---
-title: Walkthrough Guide: Manage Risk with Conditional Access Control
-ms.custom: 
-  - AD
-ms.prod: windows-server-2012
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-identity
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 758f8daf-ac19-489c-807c-5e35ae51afc7
+title: Walkthrough Guide - Manage Risk with Conditional Access Control
+description:
+author: billmath
+manager: femila
+ms.date: 07/13/2016
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.service: active-directory
+ms.technology: active-directory-federation-services
 ---
+
 # Walkthrough Guide: Manage Risk with Conditional Access Control
 
 >Applies To: Windows Server 2012 R2
 
 
 ## About This Guide
-This walkthrough provides instructions for managing risk with one of the factors (user data) available through the conditional access control mechanism in Active Directory Federation Services (AD FS) in Windows Server® 2012 R2. For more information about conditional access control and authorization mechanisms in AD FS in Windows Server® 2012 R2, see [Manage Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md).
+This walkthrough provides instructions for managing risk with one of the factors (user data) available through the conditional access control mechanism in Active Directory Federation Services (AD FS) in Windows Server 2012 R2. For more information about conditional access control and authorization mechanisms in AD FS in Windows Server 2012 R2, see [Manage Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md).
 
 This walkthrough consists of the following sections:
 
@@ -32,9 +31,9 @@ This walkthrough consists of the following sections:
 ## <a name="BKMK_1"></a>Step 1: Setting up the lab environment
 In order to complete this walkthrough, you need an environment that consists of the following components:
 
--   An Active Directory domain with a test user and group accounts, running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to Windows Server® 2012 R2 or an Active Directory domain running on Windows Server® 2012 R2
+-   An Active Directory domain with a test user and group accounts, running on Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 with its schema upgraded to Windows Server 2012 R2 or an Active Directory domain running on Windows Server 2012 R2
 
--   A federation server running on Windows Server® 2012 R2
+-   A federation server running on Windows Server 2012 R2
 
 -   A web server that hosts your sample application
 
@@ -61,7 +60,7 @@ In this step you will verify the default AD FS access control mechanism, where t
     You will be granted access to the application.
 
 ## <a name="BKMK_3"></a>Step 3: Configure conditional access control policy based on user data
-In this step you will set up an access control policy based on the user group membership data. In other words, you will configure an **Issuance Authorization Rule** on your federation server for a relying party trust that represents your sample application - **claimapp**. By this rule’s logic, **Robert Hatley** AD user will be issued claims that are required to access this application because he belongs to a **Finance** group. You have added the **Robert Hatley** account to the **Finance** group in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
+In this step you will set up an access control policy based on the user group membership data. In other words, you will configure an **Issuance Authorization Rule** on your federation server for a relying party trust that represents your sample application - **claimapp**. By this rule's logic, **Robert Hatley** AD user will be issued claims that are required to access this application because he belongs to a **Finance** group. You have added the **Robert Hatley** account to the **Finance** group in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/get-started/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 You can complete this task using either AD FS Management Console or via Windows PowerShell.
 
@@ -92,15 +91,15 @@ You can complete this task using either AD FS Management Console or via Windows 
 1.  On your federation server, open the Windows PowerShell command window and run the following command:
 
     ```
-    $rp = Get-AdfsRelyingPartyTrust –Name claimapp
+    $rp = Get-AdfsRelyingPartyTrust -Name claimapp
 
     ```
 
 2.  In the same Windows PowerShell command window, run the following command:
 
     ```
-    $GroupAuthzRule = ‘@RuleTemplate = “Authorization” @RuleName = “Foo” c:[Type == “http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid”, Value =~ “^(?i)<group_SID>$”] =>issue(Type = “http://schemas.microsoft.com/authorization/claims/deny”, Value = “DenyUsersWithClaim”);’
-    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –IssuanceAuthorizationRules $GroupAuthzRule
+    $GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
+    Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule
 
     ```
 
@@ -120,7 +119,7 @@ In this step you will verify the conditional access control policy that you set 
 
 3.  Type in the credentials of another AD user that does NOT belong to the **Finance** group. (For more information on how to create user accounts in AD, see [http://technet.microsoft.com/library/cc7833232.aspx](http://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx).
 
-    At this point, because of the access control policy that you set up in the previous step, an ‘access denied’ message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign-in experience, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
+    At this point, because of the access control policy that you set up in the previous step, an 'access denied' message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign-in experience, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
 
 ## See Also
 [Manage Risk with Conditional Access Control](../../ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
