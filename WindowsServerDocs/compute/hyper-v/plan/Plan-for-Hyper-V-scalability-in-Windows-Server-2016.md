@@ -3,7 +3,7 @@ title: Plan for Hyper-V scalability in Windows Server 2016
 description: " "
 ms.prod: windows-server-threshold
 ms.service: na
-ms.suite: na
+ms.author: kathydav
 ms.technology: 
   - hyper-v
   - techgroup-compute
@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1db68a42-6cd8-48fb-95ce-19aa79bf2ec7
 author: KBDAzure
+ms.author: kathydav
 ---
 # Plan for Hyper-V scalability in Windows Server 2016
 

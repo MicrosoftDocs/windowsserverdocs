@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92e1d0d0-f2c1-4ba2-8510-c8eb091cf5d6
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Enable or disable checkpoints in Hyper-V
 

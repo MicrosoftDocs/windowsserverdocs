@@ -8,6 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 author: KBDAzure
+ms.author: kathydav
 ---
 # Set up Hyper-V Replica
 

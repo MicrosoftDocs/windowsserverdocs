@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid:
 author: Kumud
+ms.author: kumud
 ---
 # Failover Clustering
 

@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: kumudd
+ms.author: kumud
 ---
 # Cluster Operating System Rolling Upgrade
 

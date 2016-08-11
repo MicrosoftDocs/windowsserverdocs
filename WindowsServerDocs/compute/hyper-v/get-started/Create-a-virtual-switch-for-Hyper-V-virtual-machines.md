@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Create a virtual switch for Hyper-V virtual machines
 

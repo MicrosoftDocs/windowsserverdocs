@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
+ms.author: kathydav
 ---
 # What's new in Hyper-V on Windows Server 2016 Technical Preview
 

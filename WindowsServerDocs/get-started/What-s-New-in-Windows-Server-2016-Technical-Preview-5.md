@@ -1,17 +1,20 @@
 ---
-title: What&#39;s New in Windows Server 2016 Technical Preview 5
+title: What's New in Windows Server 2016 Technical Preview 5
+description: "What are the new features in compute, identity, management, automation, networking, security, storage."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - server-general
+ms.date: 08/09/2016
+ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jaimeo
+ms.author: jaimeo
+manager: dongill
 ---
-# What&#39;s New in Windows Server 2016 Technical Preview 5
+# What's New in Windows Server 2016 Technical Preview 5
 >Applies To: Windows Server Technical Preview
 
 The content in this section describes what's new and changed in Windows Server&reg; 2016 Technical Preview. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. There are several new additions in each of these areas: [Compute](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Compute), [Identity](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Identity), [Management and Automation](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_ManagAuto), [Networking](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Networking), [Security](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Security), and [Storage](What-s-New-in-Windows-Server-2016-Technical-Preview-5.md#BKMK_Storage).  
@@ -65,7 +68,7 @@ This area addresses networking products and features for the IT professional to 
 **Technical Preview 5** adds improvements in three main areas. You can now both mirror and route traffic to new or existing virtual appliances. Together with a distributed firewall and Network security groups, this enables you to dynamically segment and secure workloads in a manner similar to Azure. Second, you can deploy and manage the entire Software-defined networking (SDN) stack using System Center Virtual Machine Manager. Finally, you can use Docker to manage Windows Server container networking, and associate SDN policies not only with virtual machines but containers as well. For more information, see [Plan Software Defined Networking Deployment](https://technet.microsoft.com/library/mt605207.aspx).  
   
 ## <a name="BKMK_Security"></a>Security  
-Includes ecurity solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 Technical Preview generally, see [Security and Assurance](https://technet.microsoft.com/library/mt130644.aspx).  
+Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 Technical Preview generally, see [Security and Assurance](https://technet.microsoft.com/library/mt130644.aspx).  
   
 ### Just Enough Administration  
 Just Enough Administration in Windows Server Technical Preview is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. **In Technical Preview 5**, we added support for running under a network identity, connecting over PowerShell Direct, securely copying files to/from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](http://aka.ms/JEA).  
