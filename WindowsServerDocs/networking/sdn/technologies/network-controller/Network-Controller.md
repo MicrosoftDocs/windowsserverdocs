@@ -20,11 +20,12 @@ New in Windows Server 2016 Technical Preview, Network Controller provides a cent
 > [!NOTE]  
 > In addition to this topic, the following Network Controller documentation is available.  
 >   
-> -   [Installation and Preparation Requirements for Deploying Network Controller](../../../sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
-> -   [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
-> -   [Install the Network Controller server role using Server Manager](../../../sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)  
-> -   [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx)  
-> -   System Center Virtual Machine Manager Engineering Blog post [Deploying Network Controller using Microsoft Virtual Machine Manager 2016 Technical Preview 4](http://blogs.technet.com/b/scvmm/archive/2016/01/05/deploying-network-controller-using-microsoft-virtual-machine-manager-2016-technical-preview-4.aspx)  
+> - [Installation and Preparation Requirements for Deploying Network Controller](../../../sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)  
+> - [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)  
+> - [Install the Network Controller server role using Server Manager](../../../sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)
+> - [Post-Deployment Steps for Network Controller](post-deploy-steps-nc.md)
+> - [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx) 
+> - System Center Virtual Machine Manager Engineering Blog post [Deploying Network Controller using Microsoft Virtual Machine Manager 2016 Technical Preview 4](http://blogs.technet.com/b/scvmm/archive/2016/01/05/deploying-network-controller-using-microsoft-virtual-machine-manager-2016-technical-preview-4.aspx)  
   
 This topic contains the following sections.  
   

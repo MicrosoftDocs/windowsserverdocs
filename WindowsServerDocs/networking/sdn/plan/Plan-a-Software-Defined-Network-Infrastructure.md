@@ -56,10 +56,10 @@ The fabric administrator statically assigns the HNV Provider IP addresses used b
 #### Sample network topology  
 Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator's guidance.  
   
-|Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations (examples)|  
-|----------------|----------|--------|--------------------|-----------|-----------------------------|  
-|**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br /><br />10.184.108.X - Compute host X|  
-|**HNV Provider**|10.10.56.0|23|11|10.10.56.1|10.10.56.1 - Router<br /><br />10.10.56.2 - SLB/MUX1|  
+Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations<br />(examples)  
+----------------|----------|--------|--------------------|-----------|-----------------------------  
+|**Management**|10.184.108.0|24|7|10.184.108.1|10.184.108.1 - Router<br /><br />10.184.108.4 - Network Controller<br /><br />10.184.108.10 - Compute host 1<br /><br />10.184.108.11 - Compute host 2<br /><br />10.184.108.X - Compute host X  
+|**HNV Provider**|10.10.56.0|23|11|10.10.56.1|10.10.56.1 - Router<br /><br />10.10.56.2 - SLB/MUX1  
   
 ### Logical Networks for Gateways and the Software Load Balancer  
   
@@ -82,11 +82,11 @@ The Private VIP logical network is not required to be routable outside of the cl
 ### Sample network topology  
 Customize the subnet prefixes, VLAN IDs, and gateway IP addresses based on your network administrator's guidance.  
   
-|Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations (examples)|  
-|----------------|----------|--------|--------------------|-----------|-----------------------------|  
-|**Transit**|10.10.10.0|24|10|10.10.10.1|10.10.10.1 - router|  
-|**Public VIP**|41.40.40.0|27|NA|41.40.40.1|41.40.40.1 - router<br /> 41.40.40.2 - SLB/MUX VIP<br />41.40.40.3 - IPSec S2S VPN VIP|  
-|**Private VIP**|20.20.20.0|27|NA|20.20.20.1|20.20.20.1 - default GW (router)|  
+Network Name|Subnet|Mask|VLAN ID on trunk|Gateway|Reservations<br />(examples)  
+----------------|----------|--------|--------------------|-----------|-----------------------------  
+|**Transit**|10.10.10.0|24|10|10.10.10.1|10.10.10.1 - router  
+|**Public VIP**|41.40.40.0|27|NA|41.40.40.1|41.40.40.1 - router<br /> 41.40.40.2 - SLB/MUX VIP<br />41.40.40.3 - IPSec S2S VPN VIP  
+|**Private VIP**|20.20.20.0|27|NA|20.20.20.1|20.20.20.1 - default GW (router)  
 |**GRE VIP**|31.30.30.0|24|NA|31.30.30.1|31.30.30.1 - default GW|  
   
 ### Logical networks required for RDMA-based storage  
@@ -98,8 +98,8 @@ If you are using RDMA based storage, then you will need to define a VLAN and sub
   
 Network Name  |Subnet  |Mask  |VLAN ID on trunk  |Gateway  |Reservations<br />(examples)    
 ---------|---------|---------|---------|---------|---------  
-Storage1     |    10.60.36.0     | 25        |   8      |  10.60.36.1       |  10.60.36.1 - router<br />10.60.36.x - Compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster|  
-Storage2|10.60.36.128|25|9|10.60.36.129|10.60.36.129 - router<br />10.60.36.x - compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster  
+**Storage1**     |    10.60.36.0     | 25        |   8      |  10.60.36.1       |  10.60.36.1 - router<br />10.60.36.x - Compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster  
+|**Storage2**|10.60.36.128|25|9|10.60.36.129|10.60.36.129 - router<br />10.60.36.x - compute  host x<br />10.60.36.y - compute host y<br />10.60.36.v - compute cluster<br />10.60.36.w - storage cluster  
   
 For more information about configuring switches, see the **Configuration Examples** section.  
   
@@ -228,17 +228,17 @@ Any storage type that is compatible with Hyper-V, shared or local may be used.
 **Host compute requirements**  
 The following table shows the minimum hardware and software requirements for the four physical hosts used in the example deployment.  
   
-|Host|Hardware Requirements|Software Requirements|  
-|--------|-------------------------|-------------------------|  
+Host|Hardware Requirements|Software Requirements|  
+--------|-------------------------|-------------------------  
 |Physical Hyper-v host|4-Core 2.66 GHz CPU<br /><br />32 GB of RAM<br /><br />300 GB Disk Space<br /><br />1 Gb/s (or faster) physical network adapter|OS: Windows Server 2016<br /><br />Hyper-V Role installed|  
   
   
 **SDN infrastructure virtual machine role requirements**  
   
-|Role|vCPU requirements|Memory requirements|Disk requirements|  
-|--------|---------------------|-----------------------|---------------------|  
-|Network controller (three node)|4 vCPUs|4 GB min (8 GB recommended)|75 GB for the OS drive|  
-|SLB/MUX (three node)|8 vCPUs|8 GB recommended|75 GB for the OS drive|  
+Role|vCPU requirements|Memory requirements|Disk requirements|  
+--------|---------------------|-----------------------|---------------------  
+|Network controller (three node)|4 vCPUs|4 GB min (8 GB recommended)|75 GB for the OS drive  
+|SLB/MUX (three node)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
 |RAS Gateway<br /><br />(single pool of three node gateways, two active, one passive)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
 |RAS Gateway BGP router for SLB/MUX peering<br /><br />(alternatively use ToR switch as BGP Router)|2 vCPUs|2 GB|75 GB for the OS drive|  
   

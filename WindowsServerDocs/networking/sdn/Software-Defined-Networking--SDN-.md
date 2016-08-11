@@ -66,7 +66,7 @@ Windows Server includes the following software defined networking technologies.
   
 -   [Software Load Balancing (SLB)](#bkmk_slb)  
   
--   [NIC Teaming](#bkmk_team)  
+ 
   
 ### <a name="bkmk_nc"></a>Network Controller  
 New in Windows Server 2016 Technical Preview, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot both virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.  
@@ -138,16 +138,7 @@ For more information, see [RAS Gateway for SDN](../sdn/technologies/network-func
 ### <a name="bkmk_slb"></a>Software Load Balancing (SLB)  
 Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 Technical Preview can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   
-For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).  
-  
-### <a name="bkmk_team"></a>NIC Teaming  
-NIC Teaming allows you to group between one and thirty-two physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
-  
-When you configure network adapters into a NIC team, they are connected into the NIC teaming solution common core, which then presents one or more virtual adapters (also called team NICs [tNICs] or team interfaces) to the operating system. Windows Server 2016 Technical Preview supports up to 32 team interfaces per team. There are a variety of algorithms that distribute outbound traffic (load) between the NICs.  
-  
-In addition, you can use NIC Teaming with both VMs and VLANs.  
-  
-For more information, see [NIC Teaming](../technologies/nic-teaming/NIC-Teaming.md) and [Windows Server 2012 R2 NIC Teaming (LBFO) Deployment and Management](https://www.microsoft.com/en-us/download/details.aspx?id=40319).  
+For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
   
 ## <a name="bkmk_sc"></a>System Center Technologies for Software Defined Networking  
 System Center includes the following technologies for use with software defined networking.  
