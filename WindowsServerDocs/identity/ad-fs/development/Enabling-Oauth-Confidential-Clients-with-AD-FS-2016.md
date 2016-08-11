@@ -1,15 +1,17 @@
 ---
 title: Enabling Oauth Confidential Clients with AD FS 2016
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
+ms.custom: na
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.reviewer: na
+ms.service: 
+ms.suite: na
+ms.technology: 
+  - active-directory-domain-services
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: dc3f9966-9e69-4d40-9ba0-fa321c5ac628
+author: billmath
 ---
-
 # Enabling Oauth Confidential Clients with AD FS 2016
 
 >Applies To: Windows Server Technical Preview

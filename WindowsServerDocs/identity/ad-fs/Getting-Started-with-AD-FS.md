@@ -1,13 +1,15 @@
 ---
 title: Getting Started with AD FS
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
+ms.custom: 
+  - AD
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-identity
+ms.tgt_pltfrm: na
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.assetid: 4dc7f362-d045-4ed1-9290-4c2f54a54d31
 ---
 # Getting Started with AD FS
 

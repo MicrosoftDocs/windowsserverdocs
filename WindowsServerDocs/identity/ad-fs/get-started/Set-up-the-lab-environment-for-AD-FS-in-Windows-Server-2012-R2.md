@@ -1,15 +1,16 @@
 ---
 title: Set up the lab environment for AD FS in Windows Server 2012 R2
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
-ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.custom: 
+  - AD
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-identity
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
+ms.assetid: 80b48521-5bfd-4c87-8a7a-9ec7a6c3351f
 ---
-
 # Set up the lab environment for AD FS in Windows Server 2012 R2
 
 >Applies To: Windows Server 2012 R2
@@ -64,7 +65,7 @@ The group Managed Service Account (GMSA) account is required during the Active D
 1.  Open a Windows PowerShell command window and type:
 
     ```
-    Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
+    Add-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)
     New-ADServiceAccount FsGmsa -DNSHostName adfs1.contoso.com -ServicePrincipalNames http/adfs1.contoso.com
 
     ```
@@ -258,7 +259,7 @@ You must complete the following steps to set up a web server with this sample cl
 
     2.  Search the file for the second instance of `ExpectedClaims`.
 
-    3.  Comment out the entire `IF` statement and its braces. Indicate comments by typing "//" (without the quotes) at the beginning of a line.
+    3.  Comment out the entire `IF` statement and its braces. Indicate comments by typing “//” (without the quotes) at the beginning of a line.
 
     4.  Your `FOREACH` statement should now look like this code example.
 
@@ -266,7 +267,7 @@ You must complete the following steps to set up a web server with this sample cl
         Foreach (claim claim in claimsIdentity.Claims)
         {
            //Before showing the claims validate that this is an expected claim
-           //If it is not in the expected claims list then don't show it
+           //If it is not in the expected claims list then don’t show it
            //if (ExpectedClaims.Contains( claim.ClaimType ) )
            // {
               writeClaim( claim, table );

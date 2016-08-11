@@ -1,13 +1,16 @@
 ---
 title: AD FS Development
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
+ms.custom: na
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.reviewer: na
+ms.service: 
+ms.suite: na
+ms.technology: 
+  - active-directory-domain-services
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: ee546551-41e4-4bab-9b66-c61dcd650840
+author: billmath
 ---
 # AD FS Development
 
@@ -21,5 +24,4 @@ This document contains a list of all of the documentation walkthroughs for AD FS
   
 * [Enabling Oauth Confidential Clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 
-- [Single Page Application with AD FS](../ad-fs/development/Single-Page-Application-with-AD-FS.md)
 

@@ -1,13 +1,16 @@
 ---
 title: Improved interoperability with SAML 2.0
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
+ms.custom: na
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.reviewer: na
+ms.service: 
+ms.suite: na
+ms.technology: 
+  - active-directory-domain-services
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: ddb90df6-3b23-4766-bbd1-053e6b25873f
+author: billmath
 ---
 # Improved interoperability with SAML 2.0
 
@@ -33,7 +36,7 @@ Add-AdfsClaimsProviderTrustsGroup -MetadataUrl "https://www.contosoconsortium.co
   
   
 ```  
-Add-AdfsClaimsProviderTrustsGroup -MetadataFile "C:\metadata.xml"   
+Add-AdfsClaimsProviderTrustsGroup -MetadataFile �C:\metadata.xml�   
 ```  
   
 ## References  

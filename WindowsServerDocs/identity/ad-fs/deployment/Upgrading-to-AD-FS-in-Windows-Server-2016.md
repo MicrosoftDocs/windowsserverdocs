@@ -1,15 +1,17 @@
 ---
 title: Upgrading to AD FS in Windows Server 2016
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
+ms.custom: na
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.reviewer: na
+ms.service: 
+ms.suite: na
+ms.technology: 
+  - active-directory-domain-services
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: d05a834b-9a1a-460c-aadc-ffa9c9d30d04
+author: billmath
 ---
-
 # Upgrading to AD FS in Windows Server 2016
 
 >Applies To: Windows Server Technical Preview
@@ -29,7 +31,7 @@ New in AD FS for Windows Server 2016 is the farm behavior level feature (FBL).  
   
 A Windows Server 2016 AD FS server can be added to a Windows Server 2012 R2 farm and it will operate at the same FBL as a Windows Server 2012 R2.  When you have a Windows Server 2016 AD FS server operating in this fashion, your farm is said to be "mixed".  However, you will not be able to take advantage of the new Windows Server 2016 features until the FBL is raised to Windows Server 2016.  With a mixed farm:  
   
--   Administrators can add new, Windows Server 2016 federation servers to an existing Windows Server 2012 R2 farm.  As a result, the farm is in "mixed mode" and operates the Windows Server 2012 R2  farm behavior level.  To ensure consistent behavior across the farm, new Windows Server 2016 features cannot be configured or used in this mode.  
+-   Administrators can add new, Windows Server 2016 federation servers to an existing Windows Server 2012 R2 farm.  As a result, the farm is in �mixed mode� and operates the Windows Server 2012 R2  farm behavior level.  To ensure consistent behavior across the farm, new Windows Server 2016 features cannot be configured or used in this mode.  
   
 -   Once all Windows Server 2012 R2 federation servers have been removed from the mixed mode farm, and in the case of a WID farm, one of the new Windows Serve 2016 federation servers has been promoted to the role of primary node, the administrator can then raise the FBL from Windows Server 2012 R2 to Windows Server 2016.  As a result, any new AD FS Windows Server 2016 features can then be configured and used.  
   
@@ -54,15 +56,15 @@ The remainder of the is document provides the steps for adding a Windows Server 
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)  
   
-4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role PrimaryComputer  
+4.  Once the join is complete, on the Windows Server 2016 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties �Role PrimaryComputer  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)  
   
-5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}  
+5.  On the original AD FS Windows Server 2012 R2 server, open PowerShell and run the following cmdlt:  Set-AdfsSyncProperties �Role SecondaryComputer �PrimaryComputerName {FQDN}  
   
     ![](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
   
-6.  On your Web Application Proxy open PowerShell and run the followoing cmdlt:  Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -TrustCred $trustcred  
+6.  On your Web Application Proxy open PowerShell and run the followoing cmdlt:  Install-WebApplicationProxy �CertificateThumbprint {SSLCert} �fsname fsname �TrustCred $trustcred  
   
 7.  Now on the Windows Server 2016 federation server open AD FS Management.  Note that now all of the nodes appear because the primary role has been transferred to this server.  
   

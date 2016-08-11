@@ -1,13 +1,15 @@
 ---
-title: Walkthrough - Workplace Join to an Android device
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
-ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+title: Walkthrough: Workplace Join to an Android device
+ms.custom: 
+  - AD
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-identity
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
+ms.assetid: b550ae27-6ff5-4cb9-8ab4-28095de395e3
 ---
 # Walkthrough: Workplace Join to an Android device
 

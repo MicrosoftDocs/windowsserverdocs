@@ -1,13 +1,15 @@
 ---
 title: AD FS 2016 Deployment
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
+ms.custom: na
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.reviewer: na
+ms.service: 
+ms.suite: na
+ms.technology: 
+  - active-directory-domain-services
+ms.tgt_pltfrm: na
+ms.topic: article
+author: billmath
 ---
 # AD FS 2016 Deployment
 

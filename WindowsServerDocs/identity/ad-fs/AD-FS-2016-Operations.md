@@ -1,13 +1,16 @@
 ---
 title: AD FS 2016 Operations
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
-ms.topic: article
+ms.custom: na
 ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.reviewer: na
+ms.service: 
+ms.suite: na
+ms.technology: 
+  - active-directory-domain-services
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 75a1212c-aa72-4163-98ee-80c453a6df5e
+author: billmath
 ---
 # AD FS 2016 Operations
 
@@ -33,9 +36,7 @@ This document contains a list of all of the documentation operations for AD FS f
   
 * [Improved interoperability with SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)  
   
-* [Plan Device-based Conditional Access on Premises](../ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md) 
-
-*  [Configure Device-based Conditional Access on Premises](../ad-fs/operations/Configure-Device-based-Conditional-Access-on-Premises.md)   
+* [Using Device-based Conditional Access on Premises](../ad-fs/operations/Using-Device-based-Conditional-Access-on-Premises.md)  
   
 * [Configure AD FS 2016 and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)  
   

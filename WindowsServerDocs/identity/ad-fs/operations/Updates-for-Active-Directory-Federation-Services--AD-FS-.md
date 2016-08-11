@@ -1,13 +1,34 @@
 ---
 title: Updates for Active Directory Federation Services (AD FS)
-description:
-author: billmath
-manager: femila
-ms.date: 07/13/2016
+H1: na
+ms.custom: 
+  - AD
+ms.prod: windows-server-2012
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - techgroup-identity
+ms.tgt_pltfrm: na
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.assetid: 41a67058-237e-44c5-931c-2b0ce7718130
+translation.priority.mt: 
+  - cs-cz
+  - de-de
+  - es-es
+  - fr-fr
+  - hu-hu
+  - it-it
+  - ja-jp
+  - ko-kr
+  - nl-nl
+  - pl-pl
+  - pt-br
+  - pt-pt
+  - ru-ru
+  - sv-se
+  - tr-tr
+  - zh-cn
+  - zh-tw
 ---
 # Updates for Active Directory Federation Services (AD FS)
 
