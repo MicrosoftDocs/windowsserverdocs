@@ -425,6 +425,8 @@
 ##### [Plan Device-based Conditional Access on-Premises](identity/ad-fs/operations/Plan-Device-based-Conditional-Access-on-Premises.md)
 ##### [Configure Device-based Conditional Access on-Premises](identity/ad-fs/operations/Configure-Device-based-Conditional-Access-on-Premises.md)
 ##### [Best Practices for Securing AD FS](identity/ad-fs/operations/Best-Practices-Securing-AD-FS.md)
+#### [AD FS Technical Reference]identity/ad-fs/AD-FS-Technical-Reference.md)
+##### [Understanding Key AD FS Concepts](identity/ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 ### [Web Application Proxy in Windows Server Technical Preview](identity/web-application-proxy/web-application-proxy-windows-server.md)
 #### [Publishing Applications using AD FS Preauthentication](identity/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 #### [Publishing Applications with SharePoint, Exchange and RDG](identity/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)
