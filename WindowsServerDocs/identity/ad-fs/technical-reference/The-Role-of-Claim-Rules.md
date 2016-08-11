@@ -55,7 +55,7 @@ For more information about how to use the claim rule language syntax, see [The R
 ### How to create a claim rule  
 Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a claim rule template, start from scratch by authoring the rule using the claim rule language or use Windows PowerShell to customize a rule.  
   
-All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](Configuring-Claim-Rules.md) in the AD FSDeployment Guide.  
+All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](https://technet.microsoft.com/library/ee913571.aspx) in the AD FSDeployment Guide.  
   
 #### Using claim rule templates  
 Claim rule templates are only used during the claim rule creation process. You can use any of the following templates to create a claim rule:  

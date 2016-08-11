@@ -80,7 +80,7 @@ Each claim description includes a claim type URI, name, publishing state, and de
   
 -   **Publish this claim in federation metadata as a claim type that this Federation Service can send** \(Publish as Sent\)—Indicates the claim types that are offered by this Federation Service. These are the claim types the Federation Service publishes to others as those it is willing to send. The actual claim types sent by the claims provider are often a subset of this list.  
   
-For more information about how to set the publishing state of a claim type, see [Add a Claim Description](Add-a-Claim-Description.md) in the AD FS Deployment Guide.  
+For more information about how to set the publishing state of a claim type, see [Add a Claim Description](https://technet.microsoft.com/library/dd807051.aspx) in the AD FS Deployment Guide.  
   
 ### When generating Federation Metadata  
 Federation Metadata includes all the claim descriptions that are marked for publishing.  
