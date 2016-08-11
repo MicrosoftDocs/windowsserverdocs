@@ -1,17 +1,17 @@
 ---
 title: Installation Options for Windows Server 2016 Technical Preview
-description: summarizes differences between Server with Desktop Experience, Server Core
+description: "Summarizes differences between Server with Desktop Experience, Server Core."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.date: 08/09/2016
-ms.technology:
-  - server-general
+ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: jaimeo
+ms.author: jaimeo
 manager: dongill
 ---
 # Installation Options for Windows Server 2016 Technical Preview
