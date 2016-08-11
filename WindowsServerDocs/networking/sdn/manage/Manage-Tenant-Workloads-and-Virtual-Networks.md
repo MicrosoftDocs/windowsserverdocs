@@ -26,6 +26,7 @@ You can use the topics in this section to manage tenant workloads and virtual ne
   
 This section contains the following topics.  
   
-- [Manage Tenant Virtual Networks](../../sdn/manage/Manage-Tenant-Virtual-Networks.md)
+- [Manage Tenant Virtual Networks](Manage-Tenant-Virtual-Networks.md)
+- [Manage Tenant Workloads](Manage-Tenant-Workloads.md)
 
 

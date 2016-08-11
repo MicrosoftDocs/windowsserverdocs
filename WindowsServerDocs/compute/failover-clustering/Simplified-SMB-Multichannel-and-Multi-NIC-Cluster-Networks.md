@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8d43ad2-ccf0-471e-87c3-42c7dc30e26d
 author: kumudd
+ms.author: kumud
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
 

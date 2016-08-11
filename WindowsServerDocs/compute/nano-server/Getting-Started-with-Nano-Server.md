@@ -10,6 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c2be4bbf-5022-4bd7-aabb-dbe58fb1f7bb
 author: jaimeo
+ms.author: jaimeo
 ---
 # Getting Started with Nano Server
 
@@ -516,7 +517,7 @@ Specifying an administrator password or computer name in this unattend file will
   
 1.  Harvest a data blob from a computer in the domain that is already running Windows Threshold Server using this command:  
   
-    **djoin.exe /provision /domain <domain-name> /machine <machine-name> /savefile .\odjblob**  
+    `djoin.exe /provision /domain <domain-name> /machine <machine-name> /savefile .\odjblob`  
   
     This saves the data blob in a file called "odjblob".  
   
@@ -572,7 +573,7 @@ Specifying an administrator password or computer name in this unattend file will
   
 First, harvest the data blob from another computer running Windows Threshold Server that is already in your domain using this command:  
   
-**djoin.exe /provision /domain <domain-name> /machine <machine-name> /savefile .\odjblob**  
+`djoin.exe /provision /domain <domain-name> /machine <machine-name> /savefile .\odjblob`  
   
 Open the file "odjblob" (perhaps in Notepad), copy its contents, and then paste the contents into the \<AccountData> section of the Unattend.xml file below.  
   

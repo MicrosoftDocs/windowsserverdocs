@@ -19,17 +19,19 @@ This topic provides instructions on using Windows PowerShell to deploy Network C
   
 This topic contains the following sections.  
   
--   [Install the Network Controller server role](#bkmk_role)  
+- [Install the Network Controller server role](#bkmk_role)
   
--   [Configure the Network Controller cluster](#bkmk_configure)  
+- [Configure the Network Controller cluster](#bkmk_configure)
   
--   [Configure the Network Controller application](#bkmk_app)  
+- [Configure the Network Controller application](#bkmk_app)
   
--   [Network Controller deployment validation](#bkmk_validation)  
+- [Network Controller deployment validation](#bkmk_validation)
   
--   [Additional Windows PowerShell commands for Network Controller](#bkmk_ps)  
+- [Additional Windows PowerShell commands for Network Controller](#bkmk_ps)
   
--   [Sample Network Controller configuration script](#bkmk_script)  
+- [Sample Network Controller configuration script](#bkmk_script)
+
+- [Post-Deployment Steps for Non-Kerberos Deployments](#bkmk_nonkerb)
   
 ## <a name="bkmk_role"></a>Install the Network Controller server role  
 You can use this procedure to install the Network Controller server role on a computer or a VM.  
@@ -202,6 +204,9 @@ $cert= get-item Cert:\LocalMachine\My | get-ChildItem | where {$_.Subject -imatc
 Install-NetworkControllerCluster -Node @($a,$b,$c)  -ClusterAuthentication Kerberos -DiagnosticLogLocation \\share\Diagnostics - ManagementSecurityGroup Contoso\NCManagementAdmins -CredentialEncryptionCertificate $cert  
 Install-NetworkController -Node @($a,$b,$c) -ClientAuthentication Kerberos -ClientSecurityGroup Contoso\NCRESTClients -ServerCertificate $cert -RestIpAddress 10.0.0.1/24  
 ```  
-  
+## <a name="bkmk_nonkerb"></a>Post-Deployment Steps For non-Kerberos Deployments
+If you are not using Kerberos with your Network Controller deployment, you must deploy certificates.
+
+For more information, see [Post-Deployment Steps for Network Controller](../technologies/network-controller/post-deploy-steps-nc.md).
 
 

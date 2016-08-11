@@ -11,6 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 author: KBDAzure
+ms.author: kathydav
 ---
 # Set up hosts for live migration without Failover Clustering
 
