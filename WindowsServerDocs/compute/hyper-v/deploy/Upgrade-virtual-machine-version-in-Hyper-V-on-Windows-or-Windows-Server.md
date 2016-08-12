@@ -11,10 +11,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
 author: cwatsonmsft
+ms.author: cwatson
 ---
 # Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016
 
->Applies To: Windows 10, Windows Server Technical Preview
+>Applies To: Windows 10, Windows Server 2016 Technical Preview
 
 **This is preliminary content and subject to change.**  
 Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don't do this until:  
@@ -51,10 +52,11 @@ The following table shows which virtual machine configuration versions are suppo
 
 |Hyper-V host Windows version|  Supported virtual machine configuration versions|  
 |-|-|  
+|Windows 10 Anniversary Update |8.0, 7.1, 7.0, 6.2, 5.0|
 |Windows Server 2016 Technical Preview| 7.1, 7.0, 6.2, 5.0|  
 |Windows 10 build 10565 or later|   7.0, 6.2, 5.0 |  
 |Windows 10 builds earlier than 10565  |    6.2, 5.0 |  
-| Windows Server 2012 R2 |  5.0|  
+|Windows Server 2012 R2 |  5.0|  
 |Windows 8.1    |5.0|  
   
 Run the PowerShell cmdlet [Get-VMHostSupportedVersion](https://technet.microsoft.com/library/mt653838.aspx) to see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see what the default is, run the following command.  
@@ -98,7 +100,13 @@ The following table shows the minimum virtual machine configuration version requ
 |PowerShell Direct |6.2|  
 |Virtual Machine Grouping|6.2|  
 |Virtual Trusted Platform Module (vTPM)|7.0|  
-|Virtual machine multi queues (VMMQ)|7.1|   
+|Virtual machine multi queues (VMMQ)|7.1|  
+|XSAVE support|8.0|
+|Key storage drive|8.0|
+|Guest virtual secure mode (VSM)|8.0|
+|Nested virtualization|8.0| 
+|Virtual processor count|8.0|
+|Large memory VMs|8.0|
   
 For more information about these features, see [What's new in Hyper-V on Windows Server 2016](../What-s-new-in-Hyper-V-on-Windows.md).
 
