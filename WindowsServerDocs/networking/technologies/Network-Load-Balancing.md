@@ -77,7 +77,7 @@ NLB is installed as a standard Windows Server networking driver component. Its o
   
 ![](../media/NLB/nlb.jpg)  
   
-The NLB features include the following:  
+Following are the primary features of NLB.  
   
 - Requires no hardware changes to run.  
   
@@ -86,7 +86,7 @@ The NLB features include the following:
 - Enables clients to access the cluster by using a single, logical Internet name and virtual IP address, which is known as the cluster IP address \(it retains individual names for each computer\). NLB allows multiple virtual IP addresses for multihomed servers.  
   
 > [!NOTE]  
-> NLB does not require servers to be multihomed to have multiple virtual IP addresses in the case of virtual clusters.  
+> When you deploy VMs as virtual clusters, NLB does not require servers to be multihomed to have multiple virtual IP addresses.  
   
 - Enables NLB to be bound to multiple network adapters, which enables you to configure multiple independent clusters on each host. Support for multiple network adapters differs from virtual clusters in that virtual clusters allow you to configure multiple clusters on a single network adapter.  
   
@@ -97,7 +97,7 @@ The NLB features include the following:
 -   Enables you to take computers offline for preventive maintenance without disturbing the cluster operations on the other hosts.  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
-To run an NLB cluster, the following are hardware requirements:  
+Following are the hardware requirements to run an NLB cluster.  
   
 -   All hosts in the cluster must reside on the same subnet.  
   
@@ -108,7 +108,7 @@ To run an NLB cluster, the following are hardware requirements:
 -   If you use the unicast mode, the network adapter that is used to handle client\-to\-cluster traffic must support changing its media access control \(MAC\) address.  
   
 ## <a name="BKMK_SOFT"></a>Software requirements  
-To run an NLB cluster, the following are software requirements:  
+Following are the software requirements to run an NLB cluster.  
   
 -   Only TCP\/IP can be used on the adapter for which NLB is enabled on each host. Do not add any other protocols \(for example, IPX\) to this adapter.  
   
@@ -118,21 +118,30 @@ To run an NLB cluster, the following are software requirements:
 > NLB does not support Dynamic Host Configuration Protocol \(DHCP\). NLB disables DHCP on each interface that it configures.  
   
 ## <a name="BKMK_INSTALL"></a>Installation information  
-In Server Manager, use the Add Roles and Features Wizard to add the Network Load Balancing feature. Optionally you can install the Network Load Balancing Tools to manage a local or remote NLB cluster. The tools include Network Load Balancing Manager and the NLB cmdlets. 
+You can install NLB by using either Server Manager or the Windows PowerShell commands for NLB.
+
+Optionally you can install the Network Load Balancing Tools to manage a local or remote NLB cluster. The tools include Network Load Balancing Manager and the NLB Windows PowerShell commands.
+
+### Installation with Server Manager
+
+In Server Manager, you can use the Add Roles and Features Wizard to add the **Network Load Balancing** feature. When you complete the wizard, NLB is installed, and you do not need to restart the computer.
+
+
+### Installation with Windows PowerShell  
 
 To install NLB by using Windows PowerShell, run the following command at an elevated Windows PowerShell prompt on the computer where you want to install NLB.
 
     
     Install-WindowsFeature NLB -IncludeManagementTools
     
+After installation is complete, no restart of the computer is required.
 
 For more information, see [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx)
 
-After installation is complete, no restart of the computer is required.
-
+### Network Load Balancing Manager
 To open Network Load Balancing Manager in Server Manager, click **Tools**, and then click **Network Load Balancing Manager**.
   
-## <a name="BKMK_LINKS"></a>See also  
+## <a name="BKMK_LINKS"></a>Additional Resources  
 The following table provides links to additional information about the NLB feature.  
   
 |Content type|References|  
