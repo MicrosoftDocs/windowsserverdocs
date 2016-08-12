@@ -103,7 +103,7 @@ The following table shows the minimum virtual machine configuration version requ
 |Virtual machine multi queues (VMMQ)|7.1|  
 |XSAVE support|8.0|
 |Key storage drive|8.0|
-|Guest virtual secure mode (VSM)|8.0|
+|Guest Virtualization Based Security support (VBS)|8.0|
 |Nested virtualization|8.0| 
 |Virtual processor count|8.0|
 |Large memory VMs|8.0|
