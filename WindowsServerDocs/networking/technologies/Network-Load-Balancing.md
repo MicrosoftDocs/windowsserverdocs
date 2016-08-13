@@ -136,7 +136,7 @@ To install NLB by using Windows PowerShell, run the following command at an elev
     
 After installation is complete, no restart of the computer is required.
 
-For more information, see [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx)
+For more information, see [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467.aspx).
 
 ### Network Load Balancing Manager
 To open Network Load Balancing Manager in Server Manager, click **Tools**, and then click **Network Load Balancing Manager**.
