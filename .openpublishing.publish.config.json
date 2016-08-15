@@ -37,5 +37,6 @@
     ""
   ],
   "skip_source_output_uploading": false,
-  "dependent_repositories": []
+  "dependent_repositories": [],
+  "need_preview_pull_request": "true"
 }
