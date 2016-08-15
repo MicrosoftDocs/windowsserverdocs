@@ -1,3 +1,18 @@
+---
+title:"Installing and Enabling Data Deduplication"  
+description:"Learn how to install the Data Deduplication (Dedup) feature, evaluate workloads for Dedup, and enable Dedup on targeted volumes."  
+author:"wmgries"  
+ms.author:"wgries"   
+manager:"eldenc"  
+ms.date:"08/19/2016"   
+ms.topic:"get-started-article"  
+ms.prod:"windows-server-threshold"  
+ms.service:"na"  
+ms.technology:
+- techgroup-storage
+- dedup
+---
+
 # Installing and Enabling Data Deduplication
 > Applies to Windows Server 2016
 
@@ -72,16 +87,16 @@ In order to determine a 'Sometimes' workload's fitness for Dedup, there are seve
 	> These concerns primarily apply to storage workloads on volumes made up of traditional rotational storage media (also known as Hard Disks drives, or HDDs). All flash storage infrastructure (also known as Solid State Disk drives, or SSDs), are less affected by random IO patterns because one of the properties of flash media is equal access time to all locations on the disk. Therefore, Dedup will not introduce the same amount of latency for reads to a workload's datasets stored on all flash media as it would on traditional rotational storage media.
 
 3. **What are the resource requirements of my workload on the server?**  
-	Because Dedup uses a post-processing model, Dedup needs to, periodically, have sufficient system resources to complete its optimization and other jobs (see more [here](jobs.md)). This means that workloads that have idle time, such as in the evening or on weekends, are excellent candidates for Dedup, while workloads that run 24/7 may not be. Workloads that have no idle time may have still be good candidates for Dedup if the workload does not have high resource requirements on the server. 
+	Because Dedup uses a post-processing model, Dedup needs to, periodically, have sufficient system resources to complete its optimization and other jobs (see more [here](understand.md#job-info)). This means that workloads that have idle time, such as in the evening or on weekends, are excellent candidates for Dedup, while workloads that run 24/7 may not be. Workloads that have no idle time may have still be good candidates for Dedup if the workload does not have high resource requirements on the server. 
 
 ### <a id="enable-dedup-lights-on"></a>Enabling Dedup
-Before enabling Dedup, you must choose the [Usage Type](usage-types.md) that most closely resembles your workload. There are three Usage Types included with Dedup:
+Before enabling Dedup, you must choose the [Usage Type](understand.md#usage-type) that most closely resembles your workload. There are three Usage Types included with Dedup:
 
-* [Default](usage-types.md#default) - tuned specifically for general purpose file server.
-* [Hyper-V](usage-types.md#hyperv) - tuned specifically for Virtualized Desktop Intrastructure (VDI) servers.
-* [Backup](usage-types.md#backup) - tuned specifically for Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx).
+* [Default](understand.md#usage-type-default) - tuned specifically for general purpose file server.
+* [Hyper-V](understand.md#usage-type-hyperv) - tuned specifically for Virtualized Desktop Intrastructure (VDI) servers.
+* [Backup](understand.md#usage-type-backup) - tuned specifically for Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx).
 
-These Usage Types give sensible defaults for '**Always**' workloads, and also provide a good starting point for '**Sometimes**' workloads. It is possible (and recommended for '**Sometimes** workloads) to [configure deduplication Settings](dedup-settings.md) to improve Dedup's performance. It is not required to configure Dedup's settings for '**Always**' workloads.
+These Usage Types give sensible defaults for '**Always**' workloads, and also provide a good starting point for '**Sometimes**' workloads. It is possible (and recommended for '**Sometimes** workloads) to modify [Dedup's advanced settings](advanced-settings.md) to improve Dedup's performance. It is not required to configure Dedup's settings for '**Always**' workloads.
 
 #### <a id="enable-dedup-via-server-manager"></a>Using Server Manager to enable Dedup
 1. Select **File and Storage Services** from the left-hand panel in Server Manager.  
@@ -104,7 +119,7 @@ These Usage Types give sensible defaults for '**Always**' workloads, and also pr
 > The Dedup PowerShell cmdlets, including `Enable-DedupVolume`, are remotable by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Dedup PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run `New-CimSession`. More information about creating CIM Sessions can be found here: [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx). 
 
 #### <a id="enable-dedup-sometimes-considerations"></a>Special considerations for 'Sometimes' workloads
-* If the '**Sometimes**' workload have high resource requirements for on a server, Dedup jobs should be scheduled to run during the expected idle times for that workload. More information on how to configure the schedule for Dedup jobs can be found [here](jobs.md#schedule-dedup-jobs). This is particularly important when running dedup on a hyper-converged host, as running Dedup during expected working hours can starve VMs.
+* If the '**Sometimes**' workload have high resource requirements for on a server, Dedup jobs should be scheduled to run during the expected idle times for that workload. More information on how to configure the schedule for Dedup jobs can be found [here](advanced-settings.md#schedule-dedup-jobs). This is particularly important when running dedup on a hyper-converged host, as running Dedup during expected working hours can starve VMs.
 * If the '**Sometimes**' workload does not have high resource requirements, or if it is more important that Dedup optimization jobs complete than workload reqests be served, the memory, CPU, and priority of the Dedup jobs can be adjusted. More information on how to configure the memory, CPU, and prioritization of Dedup jobs can be found [here](jobs.md#change-dedup-jobs).
 
 ## <a id="faq"></a>Frequently Asked Questions (FAQ)
@@ -115,8 +130,6 @@ Aside from workloads which are [known not to interop with Dedup](interop.md), we
 In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a Dedup volume for a high churn workload was 1-2 TB, and the absolute maximum recommeneded size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, view [What's new in Data Deduplication](whats-new.md).
 
 **Do I need to modify the schedule or other Dedup settings for 'Always' workloads?**  
-No, the provided [Usage Types](usage-types.md) were created to provide reasonable defaults for '**Always**' workloads.
+No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for '**Always**' workloads.
 
 **What are the memory requirements for Dedup?**
-
-

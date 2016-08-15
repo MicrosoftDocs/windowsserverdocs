@@ -1,3 +1,18 @@
+---
+title:"Advanced Data Deduplication Settings"  
+description:"Learn how to modify advanced Data Deduplication (Dedup) settings."  
+author:"wmgries"    
+ms.author:"wgries"   
+manager:"eldenc"  
+ms.date:"08/19/2016"   
+ms.topic:"get-started-article"  
+ms.prod:"windows-server-threshold"  
+ms.service:"na"  
+ms.technology:
+- techgroup-storage
+- dedup
+---
+
 # Advanced Data Deduplication Settings
 
 > Applies to Windows Server 2016
@@ -5,24 +20,24 @@
 This document describes how to modify advanced [Data Deduplication](overview.md), or Dedup, settings. The default settings should be sufficient for ['Always' workloads](install-enable.md#enable-dedup-candidate-workloads); the main reason to modify these settings is to improve Dedup's performance with 'Sometimes' workloads.
 
 ## <a id="modifying-job-schedules"></a>Modifying Dedup Job Schedules
-The default Dedup job schedules are designed to (1) work well for 'Always' workloads, and (2) be as non-intrusive as possible (excluding the 'Priority Optimization' job that is enabled for the [Backup Usage Type](understanding-dedup.md#usage-type-backup)). More information about the default schedules can be found [here](understanding-dedup.md#job-info). Because 'Sometimes' workloads often have greater demands on the system, it is possible to ensure that jobs only run during idle hours and/or to reduce/increase the amount of system resources that a Dedup job is allowed to consume.
+The default Dedup job schedules are designed to (1) work well for 'Always' workloads, and (2) be as non-intrusive as possible (excluding the 'Priority Optimization' job that is enabled for the [Backup Usage Type](understand.md#usage-type-backup)). More information about the default schedules can be found [here](understand.md#job-info). Because 'Sometimes' workloads often have greater demands on the system, it is possible to ensure that jobs only run during idle hours and/or to reduce/increase the amount of system resources that a Dedup job is allowed to consume.
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Dedup Schedule
 Dedup jobs are scheduled via the Windows Task Scheduler, and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Dedup includes several cmdlets however that make scheduling easy:
-* `Get-DedupSchedule` which shows the current scheduled jobs
-* `New-DedupSchedule` which creates a new scheduled job
-* `Set-DedupSchedule` which modifies an existing scheduled job
-* `Remove-DedupSchedule` which removes a scheduled job.
+* [`Get-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848446.aspx) which shows the current scheduled jobs
+* [`New-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848445.aspx) which creates a new scheduled job
+* [`Set-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848447.aspx) which modifies an existing scheduled job
+* [`Remove-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848451.aspx) which removes a scheduled job.
 
 The most common reason for changing when the Dedup jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Dedup schedule for a 'sunny day' scenario: a hyper-converged Hyper-V host that is idle on weeknights starting at 7 PM and on weekends. To change the schedule, run the following PowerShell cmdlets in an Administrator context:
 
-1. Disable the scheduled hourly [Optimization](understanding-dedup.md#job-info-optimization) jobs:  
+1. Disable the scheduled hourly [Optimization](understand.md#job-info-optimization) jobs:  
 	```PowerShell
 	Set-DedupSchedule -Name BackgroundOptimization -Enabled $false
 	Set-DedupSchedule -Name PriorityOptimization -Enabled $false
 	```
 
-2. Remove the currently scheduled [Garbage Collection](understanding-dedup.md#job-info-gc) and [Integrity Scrubbing](understanding-dedup.md#job-info-scrubbing) jobs:
+2. Remove the currently scheduled [Garbage Collection](understand.md#job-info-gc) and [Integrity Scrubbing](understand.md#job-info-scrubbing) jobs:
 	```PowerShell
 	Get-DedupSchedule -Type GarbageCollection | ForEach-Object { Remove-DedupSchedule -InputObject $_ }
 	Get-DedupSchedule -Type Scrubbing | ForEach-Object { Remove-DedupSchedule -InputObject $_ }
@@ -45,7 +60,7 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 	New-DedupSchedule -Name "WeeklyIntegrityScrubbing" -Type Scrubbing -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(0) -Start (Get-Date "2016-08-14 07:00:00")
 	```
 
-### <a id="modifying-job-schedules-change-parameters"></a>Available Job-wide Settings
+### <a id="modifying-job-schedules-available-settings"></a>Available Job-wide Settings
 The following settings can be toggled for new or scheduled Dedup jobs:
 
 <table>
@@ -159,8 +174,8 @@ The following settings can be toggled for new or scheduled Dedup jobs:
 	</tbody>
 </table>
 
-## Modifying Dedup Volume-wide Settings
-### Toggling Volume Settings
+## <a id="modifying-volume-settings"></a>Modifying Dedup Volume-wide Settings
+### <a id="modifying-volume-settings-how-to-toggle"></a>Toggling Volume Settings
 Dedup's volume-wide default settings are set via the [Usage Type](understanding-dedup.md#usage-type) that you select when you enable a Dedup for a volume. Dedup includes several cmdlets that make editing volume-wide settings easy:
 
 * `Get-DedupVolume`
@@ -178,7 +193,7 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 	Set-DedupVolume -Volume C:\ClusterStorage\Volume1 -OptimizePartialFiles
 	```
 
-### Available Volume-Wide Settings
+### <a id="modifying-volume-settings-available-settings"></a>Available Volume-Wide Settings
 <table>
 	<thead>
 		<tr>
@@ -258,10 +273,10 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 	</tbody>
 </table>
 
-## Modifying Dedup System-wide Settings
+## <a id="modifying-dedup-system-settings"></a>Modifying Dedup System-wide Settings
 Dedup has a few additional, system-wide settings that can be configured via the Registry. These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry. 
 
-### Available System-wide Settings
+### <a id="modifying-dedup-system-settings-available-settings"></a>Available System-wide Settings
 <table>
 	<thead>
 		<tr>
