@@ -1,3 +1,18 @@
+---
+title:"Understanding Data Deduplication"  
+description:"Learn how Data Deduplication (Dedup) works, including Dedup's job model and default settings."  
+author:"wmgries"    
+ms.author:"wgries"   
+manager:"eldenc"  
+ms.date:"08/19/2016"   
+ms.topic:"get-started-article"  
+ms.prod:"windows-server-threshold"  
+ms.service:"na"  
+ms.technology:
+- techgroup-storage
+- dedup
+---
+
 # Understanding Data Deduplication
 > Applies to Windows Server 2016
 
@@ -100,7 +115,7 @@ Dedup, uses a post-processing strategy to optimize and maintain a volume's space
 	<tbody>
 		<tr>
 			<td><a id="job-info-optimization"></a>Optimization</td>
-			<td>The **Optimization** job deduplicates by chunking data on a volume per the volume policy settings, (optionally) compressing those chunks, and storing chunks uniquely in the Dedup Chunk Store. The optimization process that Dedup uses is described in detail [here](overview.md#how-does-dedup-work).</td>	
+			<td>The **Optimization** job deduplicates by chunking data on a volume per the volume policy settings, (optionally) compressing those chunks, and storing chunks uniquely in the Dedup Chunk Store. The optimization process that Dedup uses is described in detail [here](understand.md#how-does-dedup-work).</td>	
 			<td>Once every hour</td>
 		</tr>
 		<tr>
@@ -116,7 +131,7 @@ Dedup, uses a post-processing strategy to optimize and maintain a volume's space
 		<tr>
 			<td><a id="job-info-unoptimization"></a>Unoptimization</td>
 			<td>The **Unoptimization** job is a special job that can only be run manually that undoes the optimization done by Dedup and disables Dedup for that volume.</td>
-			<td>On-demand only</td>
+			<td>[On-demand only](run.md#disabling-dedup)</td>
 		</tr>
 	</tbody>
 </table>
@@ -202,13 +217,13 @@ There are several important differences between Data Deduplication, and other co
 	Archive file formats like zip, rar, 7z, cab, etc perform compression over a specified set of files. Like Dedup, this means that both duplicated patterns within files and duplicated patterns across files are optimized, however this requires manual intervention, in the form of choosing which files should be included in the archive, and changes the access semantics, because now accessing a specific file within the archive means opening the archive, selecting the specific file desired, and decompressing that file for use. Dedup operates transparently to users and administrators, and requires no manual kick-off. Additionally, Dedup preserves access semantics - optimized files appear unchanged after optimization.
 
 **Can I change the Dedup settings for my selected Usage Type?**  
-Yes, although Dedup provides reasonable defaults for 'Always' workloads, you may still find it desirable to tweak Dedup settings to get the most out of your storage. Additionally, 'Sometimes' workloads will [require some tweaking to ensure that Dedup does not interfere with the workload](install-enable.md#enable-dedup-sometimes-considerations). More information about how to change Dedup Volume settings can be found [here](dedup-settings.md).
+Yes, although Dedup provides reasonable defaults for 'Always' workloads, you may still find it desirable to tweak Dedup settings to get the most out of your storage. Additionally, 'Sometimes' workloads will [require some tweaking to ensure that Dedup does not interfere with the workload](install-enable.md#enable-dedup-sometimes-considerations). More information about how to change Dedup Volume settings can be found [here](advanced-settings.md#modifying-volume-settings).
 
 **Can I manually run a Dedup job?**  
-Yes, all Dedup jobs may be run manually. This may be desirable if scheduled jobs did not run due to insufficient system resources or because of an error. Additionally, the Unoptimization job can only be run manually. More information about how to run Dedup jobs manually can be found [here](running-dedup.md).
+Yes, all Dedup jobs may be run manually. This may be desirable if scheduled jobs did not run due to insufficient system resources or because of an error. Additionally, the Unoptimization job can only be run manually. More information about how to run Dedup jobs manually can be found [here](run.md).
 
 **Can I monitor the historical outcomes of Dedup jobs?**  
-Yes, all Dedup jobs make entries in the Windows Event Log. More information about how to interpret the events for Dedup can be found [here](running-dedup.md).
+Yes, all Dedup jobs make entries in the Windows Event Log. More information about how to interpret the events for Dedup can be found [here](run.md).
 
 **Can I change the default schedules for the Dedup jobs on my system?**  
 Yes, all schedules are configurable. Modifying the default Dedup schedules is particularly desirable for 'Sometimes' workloads to ensure that the Dedup jobs have time to finish and do not compete for resources with the workload. More information about how to change the Dedup schedules can be found [here](dedup-settings).
