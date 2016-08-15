@@ -178,7 +178,9 @@ SET is compatible with the following networking technologies in Windows Server 2
   
 -   Remote Direct Memory Access (RDMA)  
   
--   SDN Quality of Service (QoS)  
+-   SDN Quality of Service (QoS)
+
+-   Single root I/O virtualization (SR-IOV)
   
 -   Transmit-side Checksum offloads (IPv4, IPv6, TCP) - These are supported if all of the SET team members support them.  
   
@@ -197,8 +199,6 @@ SET is not compatible with the following networking technologies in Windows Serv
 -   Receive side coalescing (RSC)  
   
 -   Receive side scaling (RSS)  
-  
--   Single root I/O virtualization (SR-IOV)  
   
 -   TCP Chimney Offload  
   
