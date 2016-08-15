@@ -29,8 +29,15 @@ Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 
 ```
 
 ## <a id="monitoring-dedup"></a>Monitoring Data Deduplication
-### <a id="monitoring-dedup-optimization-rates"></a>Optimization Rates
-
 ### <a id="monitoring-dedup-job-successes"></a>Job Successes
+
+
+### <a id="monitoring-dedup-optimization-rates"></a>Optimization Rates
+One indicator of Optimization job success is the Optimization Rate; one explanation for an Optimization Rate that is trending downwards is that the Optimization jobs are not keeping up with the rate of changes, or churn. There are two ways to check the Optimization Rate:
+
+* [`Get-DedupStatus`](https://technet.microsoft.com/en-us/library/hh848437.aspx)
+* [`Get-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848448.aspx)
+
+
 
 ## <a id="disabling-dedup"></a>Disabling Data Deduplication
