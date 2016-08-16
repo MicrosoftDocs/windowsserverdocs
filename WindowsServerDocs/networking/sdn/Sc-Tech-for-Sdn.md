@@ -25,12 +25,16 @@ System Center 2016 Operations Manager provides infrastructure monitoring that is
 For more information, see [Operations Manager](https://technet.microsoft.com/library/hh205987.aspx).  
   
 ## <a name="bkmk_scvmm"></a>System Center Virtual Machine Manager  
-With System Center 2016 Virtual Machine Manager (VMM), you can provision and manage virtual networks at scale.
+With System Center 2016 Virtual Machine Manager (VMM), you can:
 
-You can deploy and manage the SDN infrastructure, including the network controllers, software load balancers, and gateways. 
+- Provision and manage virtual networks at scale.
+- Deploy and manage the SDN infrastructure, including network controllers, software load balancers, and gateways. 
+- Define and control virtual network policies centrally and link them to your applications or workloads. 
 
-You can define and control virtual network policies centrally and link them to your applications or workloads. When your workload is deployed or moved, the network configuration adjusts itself automatically. This is important because it removes the need for manual reconfiguration of network hardware, thereby reducing operational complexity while saving your valuable resources for higher-impact work. VMM also helps you to control traffic flow between virtual networks, including the ability to define guaranteed bandwidth for your critical applications and workloads.  
+  When your workload is deployed or moved, the network configuration adjusts itself automatically. This is important because it removes the need for manual reconfiguration of network hardware, thereby reducing operational complexity while saving your valuable resources for higher-impact work. 
+- Helps you to control traffic flow between virtual networks, including the ability to define guaranteed bandwidth for your critical applications and workloads.  
   
+
 For more information, see [Deploy a Software Defined Network infrastructure using VMM](https://technet.microsoft.com/en-us/system-center-docs/vmm/manage/deploy-a-software-defined-network-infrastructure-using-vmm).  
     
 
