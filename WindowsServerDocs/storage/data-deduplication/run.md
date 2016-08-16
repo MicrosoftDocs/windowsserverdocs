@@ -30,14 +30,31 @@ Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 
 
 ## <a id="monitoring-dedup"></a>Monitoring Data Deduplication
 ### <a id="monitoring-dedup-job-successes"></a>Job Successes
+Because Dedup uses a post-processing model, it is important that [Dedup jobs](understand.md#job-info) succeed. An easy way to check the status of the most recent job is to use the [`Get-DedupStatus`](https://technet.microsoft.com/en-us/library/hh848437.aspx) PowerShell cmdlet. Periodically check the following fields:
 
+* For the [Optimization job](understand.md#job-info-optimization), look at `LastOptimizationResult` (0 = Success), `LastOptimizationResultMessage`, and `LastOptimizationTime` (should be recent).
+* For the [Garbage Collection job](understand.md#job-info-gc), look at `LastGarbageCollectionResult` (0 = Success), `LastGarbageCollectionResultMessage`, and `LastGarbageCollectionTime` (should be recent).
+* For the [Integrity Scrubbing job](understand.md#job-info-scrubbing), look at `LastScrubbingResult` (0 = Success), `LastScrubbingResultMessage`, and `LastScrubbingTime` (should be recent).
+
+> [!Note]  
+> More detail on job successes and failures can be found in the Windows Event Viewer under `\Applications and Services Logs\Windows\Deduplication\Operational`.
 
 ### <a id="monitoring-dedup-optimization-rates"></a>Optimization Rates
-One indicator of Optimization job success is the Optimization Rate; one explanation for an Optimization Rate that is trending downwards is that the Optimization jobs are not keeping up with the rate of changes, or churn. There are two ways to check the Optimization Rate:
+One indicator of [Optimization job](understand.md#job-info-optimization) failure is a downward trending Optimization Rate because one explanation for an Optimization Rate that is trending downwards is that the Optimization jobs are not keeping up with the rate of changes, or churn. You can check the Optimization Rate by using the [`Get-DedupStatus`](https://technet.microsoft.com/en-us/library/hh848437.aspx) PowerShell cmdlet.
 
-* [`Get-DedupStatus`](https://technet.microsoft.com/en-us/library/hh848437.aspx)
-* [`Get-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848448.aspx)
-
-
+> [!Important]  
+> `Get-DedupStatus` has two fields relevant to the Optimization Rate: `OptimizedFilesSavingsRate` and `SavingsRate`. These are both important values to track, but have different meanings: `OptimizedFilesSavingsRate` applies only to the files that are 'in-policy' for optimization (`space used by optimized files after Dedup / space used by optimized files before Dedup`) while `SavingsRate` applies to the entire volume (`space used by optimized files after Dedup / total unoptimized size of the volume`).
 
 ## <a id="disabling-dedup"></a>Disabling Data Deduplication
+Dedup can be turned off by running the [Unoptimization job](understand.md#job-info-unoptimization). To undo volume optimization, run the following command:
+
+```PowerShell
+Start-DedupJob -Type Unoptimization -Volume <Desired-Volume>
+```
+
+> [!Important]  
+> The Unoptimization job will fail if the volume does not have sufficient space to hold the data unoptimized.
+
+## <a id="faq"></a>Frequently Asked Questions
+**Is there a System Center Operations Manager Management Pack available to monitor Dedup?**  
+Yes, Dedup can be monitored through the System Center Management Pack for File Server. For more information, view [this document](http://download.microsoft.com/download/6/F/7/6F7A33B9-9383-48ED-9252-23C2C8AD1BDA/MPGuide_FileServer2012R2.doc).
