@@ -184,6 +184,9 @@ You can use the following example command to configure DNS recursion policies.
     Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP  "EQ,10.0.0.39"
     
 
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).
+
 Now the DNS server is configured with the required DNS policies for either a split-brain name server or a DNS server with selective recursion control enabled for internal clients.
+
 
 You can create hundreds of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries. 
