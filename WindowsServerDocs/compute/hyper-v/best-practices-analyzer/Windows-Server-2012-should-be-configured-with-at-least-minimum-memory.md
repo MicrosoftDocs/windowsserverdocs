@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: f218a7c7-4361-45f1-835c-e19761b2565c
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Server 2012 should be configured with at least the minimum amount of memory
 

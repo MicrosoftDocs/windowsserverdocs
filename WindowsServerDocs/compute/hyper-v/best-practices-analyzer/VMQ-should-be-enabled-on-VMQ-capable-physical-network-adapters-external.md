@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 93d1b155-bf44-46b0-bb69-d34d5b30e574
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
 

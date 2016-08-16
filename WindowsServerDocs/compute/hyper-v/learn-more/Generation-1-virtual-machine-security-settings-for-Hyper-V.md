@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
 author: cwatsonmsft
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Generation 1 virtual machine security settings
 

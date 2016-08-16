@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 4bb832b8-f1aa-4c1f-a0f2-324dd53553ea
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Use at least SMB protocol version 3.0 for file shares that store files for virtual machines.
 

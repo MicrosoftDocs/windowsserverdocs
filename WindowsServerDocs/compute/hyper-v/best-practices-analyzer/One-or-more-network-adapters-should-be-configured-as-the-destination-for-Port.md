@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: b83c166d-f010-47c4-a4bb-02167f2e3361
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # One or more network adapters should be configured as the destination for Port Mirroring
 

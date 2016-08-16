@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 8c118e1e-865f-4cff-acdc-7c35e45d5da9
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # The team interface bound to a virtual switch should be in default mode
 

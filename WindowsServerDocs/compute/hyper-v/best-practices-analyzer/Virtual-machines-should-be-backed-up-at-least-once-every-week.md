@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 7dbd3dfc-c873-4a77-89f7-3166e18d9531
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Virtual machines should be backed up at least once every week
 

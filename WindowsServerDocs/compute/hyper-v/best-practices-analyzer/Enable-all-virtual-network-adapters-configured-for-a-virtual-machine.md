@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Enable all virtual network adapters configured for a virtual machine
 

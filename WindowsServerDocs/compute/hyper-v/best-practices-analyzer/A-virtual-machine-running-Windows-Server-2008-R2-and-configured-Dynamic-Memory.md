@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 81b5034a-31ea-4397-bcd0-7b9ef50beb94
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Server 2008 R2 and configured with Dynamic Memory should use recommended values for memory settings
 

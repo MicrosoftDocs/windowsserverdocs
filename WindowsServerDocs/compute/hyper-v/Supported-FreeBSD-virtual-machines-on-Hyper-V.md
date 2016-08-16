@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: cwatsonmsft
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Supported FreeBSD virtual machines on Hyper-V
 

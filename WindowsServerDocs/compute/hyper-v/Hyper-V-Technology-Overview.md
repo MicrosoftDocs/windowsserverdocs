@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 author: KBDAzure
 ms.author: kathydav
+ms.date: 8/16/2016
 ---
 # Hyper-V Technology Overview
 

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: b383a3c9-3ab6-442e-abd8-0942a32b60f8
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Server 2012 R2 should be configured with the recommended amount of memory
 

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 14bca69b-e779-4e90-b5c1-1b015625572f
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # A virtual SAN should be associated with a physical host bus adapter
 

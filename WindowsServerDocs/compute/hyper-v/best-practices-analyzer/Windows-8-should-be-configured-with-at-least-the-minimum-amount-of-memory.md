@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 519d1091-fa4d-44d7-83ca-83f6aa71fb7d
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows 8 should be configured with at least the minimum amount of memory
 

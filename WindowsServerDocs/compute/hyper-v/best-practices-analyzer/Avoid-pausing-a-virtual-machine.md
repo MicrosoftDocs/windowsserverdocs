@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Avoid pausing a virtual machine
 

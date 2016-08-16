@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: cf8be6e9-2909-4e4a-bb63-d1e1ebbc6930
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Compression is recommended for replication traffic
 

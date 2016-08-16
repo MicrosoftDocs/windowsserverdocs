@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: a7fdd185-d6c8-4f58-9b58-2df5827bb056
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Integration services must be installed before primary or Replica virtual machines can use an alternate IP address after a failover
 

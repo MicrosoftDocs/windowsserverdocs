@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: d324af73-af73-40b0-bd5b-8003ba3e921b
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Server 2016 Technical Preview should be configured with at least the minimum amount of memory
 
