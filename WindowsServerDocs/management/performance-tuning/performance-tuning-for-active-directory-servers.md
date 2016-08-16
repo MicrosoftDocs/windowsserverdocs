@@ -219,7 +219,7 @@ These scenarios can be detected using one or more of the following approaches:
 
 -   Active Directory Diagnostics Data Collector Set in Performance Monitor ([Son of SPA: AD Data Collector Sets in Win2008 and beyond](http://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx))
 
--   [Microsoft Server Performance Advisor](microsoft-server-performance-advisor.md) Active Directory Advisor Pack
+-   [Microsoft Server Performance Advisor](../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor Pack
 
 -   Searches using any filter besides “(objectClass=\*)” that use the Ancestors Index.
 
