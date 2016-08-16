@@ -55,7 +55,7 @@ Enable-NetQosFlowControl  -Priority 3
 Disable-NetQosFlowControl  -Priority 0,1,2,4,5,6,7  
 #  
 # Apply policy to the target adapters  
-Enable-NetAdapterQos  -InterfaceAlias "SLOT 2*"  
+Enable-NetAdapterQos  -Name "SLOT 2*"  
 #  
 # Give SMB Direct 30% of the bandwidth minimum  
 New-NetQosTrafficClass "SMB"  -Priority 3  -BandwidthPercentage 30  -Algorithm ETS  
