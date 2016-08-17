@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 26872519-ccf0-4757-827f-8df2a7a2b9f9
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Server 2008 R2 should be configured with the recommended amount of memory
 

@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: a9ee931d-91fc-40cf-9a15-ed6fa6965cb6
 author: shirgall
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
 

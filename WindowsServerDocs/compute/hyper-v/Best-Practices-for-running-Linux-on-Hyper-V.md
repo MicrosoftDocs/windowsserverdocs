@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Best Practices for running Linux on Hyper-V
 

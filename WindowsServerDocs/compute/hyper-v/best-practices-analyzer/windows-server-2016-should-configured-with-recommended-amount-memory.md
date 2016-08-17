@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 7860e609-d278-42a3-85a4-ca92c8b6b2ad
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Server 2016 Technical Preview should be configured with the recommended amount of memory
 

@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
 author: cwatsonmsft
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Manage Hyper-V on Windows Server 2016 Technical Preview
 

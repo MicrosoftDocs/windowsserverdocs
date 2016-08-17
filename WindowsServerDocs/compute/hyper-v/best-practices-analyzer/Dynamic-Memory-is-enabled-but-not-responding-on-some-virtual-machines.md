@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 91b7f50f-a071-4ab6-beb1-1b29f92f52b6
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Dynamic Memory is enabled but not responding on some virtual machines
 

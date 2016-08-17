@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 8827a3a7-9f3c-4f51-826a-8e2ec43e01df
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Authorization entries should have distinct trust group names for primary servers with virtual machines that are not part of the same trust group
 

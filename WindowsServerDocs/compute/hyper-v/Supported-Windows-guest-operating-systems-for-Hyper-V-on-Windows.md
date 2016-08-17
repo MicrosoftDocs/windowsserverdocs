@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 author: cwatsonmsft
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server Technical Preview
 

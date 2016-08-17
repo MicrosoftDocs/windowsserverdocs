@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Configure the server with a sufficient amount of dynamic MAC addresses
 

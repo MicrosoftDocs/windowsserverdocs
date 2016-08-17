@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 author: shirgall
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Supported SUSE virtual machines on Hyper-V
 

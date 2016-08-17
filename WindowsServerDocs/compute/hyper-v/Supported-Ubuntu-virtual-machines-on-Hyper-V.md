@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 

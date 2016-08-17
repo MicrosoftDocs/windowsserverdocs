@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 4972101a-c266-4045-bdd6-4e75a9cd750e
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows 8.1 should be configured with the recommended amount of memory
 
