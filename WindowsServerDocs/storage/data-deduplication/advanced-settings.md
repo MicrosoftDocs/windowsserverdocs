@@ -66,10 +66,10 @@ The following settings can be toggled for new or scheduled Dedup jobs:
 <table>
 	<thead>
 		<tr>
-			<th>Parameter Name</th>
-			<th>Definition</th>
-			<th>Acceptable Values</th>
-			<th>Why would you want to set this value?</th>
+			<th style="min-width:125px">Parameter Name</th>
+			<th style="min-width:125px">Definition</th>
+			<th style="min-width:125px">Acceptable Values</th>
+			<th style="min-width:125px">Why would you want to set this value?</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -197,10 +197,10 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 <table>
 	<thead>
 		<tr>
-			<th>Setting Name</th>
-			<th>Definition</th>
-			<th>Acceptable Values</th>
-			<th>Why would you want to modify this value?</th>
+			<th style="min-width:125px">Setting Name</th>
+			<th style="min-width:125px">Definition</th>
+			<th style="min-width:125px">Acceptable Values</th>
+			<th style="min-width:125px">Why would you want to modify this value?</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -276,7 +276,7 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 ## <a id="modifying-dedup-system-settings"></a>Modifying Dedup System-wide Settings
 Dedup has a few additional, system-wide settings that can be configured via [the Registry](https://technet.microsoft.com/en-us/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry. 
 
-For example, you may wish to disable Full Garbage Collection. To edit the registry with PowerShell:
+For example, you may wish to disable Full Garbage Collection. More information about why this may be useful for your scenario can be found [below](#faq-why-disable-full-gc). To edit the registry with PowerShell:
 
 * If Dedup is running in a Cluster:
 	```PowerShell
@@ -293,18 +293,18 @@ For example, you may wish to disable Full Garbage Collection. To edit the regist
 <table>
 	<thead>
 		<tr>
-			<th>Setting Name</th>
-			<th>Definition</th>
-			<th>Acceptable Values</th>
-			<th>Why would you want to change this?</th>
+			<th style="min-width:125px">Setting Name</th>
+			<th style="min-width:125px">Definition</th>
+			<th style="min-width:125px">Acceptable Values</th>
+			<th style="min-width:125px">Why would you want to change this?</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>WlmMemoryOverPercentThreshold</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>This settings allows Dedup to use more memory than Dedup judges to be available. For example, setting to 300 would mean that the job would have to use 3x the assigned memory to get canceled.</td>
+			<td>Positive integers (a value of 300 means 300% or 3x)</td>
+			<td>If you have another task that will back off if Dedup starts taking more memory.</td>
 		</tr>
 		<tr>
 			<td>EstimatedCompressionRate</td>
@@ -314,27 +314,27 @@ For example, you may wish to disable Full Garbage Collection. To edit the regist
 		</tr>
 		<tr>
 			<td>DeepGCInterval</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>This setting configures the interval at which Garbage Collection jobs become [Full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n (for example 2) would mean that every n<sup>th</sup> job was a Full Garbage Collection job.</td>
+			<td>Positive Integers (inclusive of zero)</td>
+			<td>See [this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)</td>
 		</tr>
 	</tbody>
 </table>
 
 ## <a id="faq"></a>Frequently Asked Questions
-**I changed a Dedup setting and now Dedup jobs are slow or don't finish, or my workload performance has decreased. Why!?**  
+<a id="faq-use-responsibly"></a>**I changed a Dedup setting and now Dedup jobs are slow or don't finish, or my workload performance has decreased. Why!?**  
 These Dedup settings give you a lot of power to control how Dedup runs. Use it responsibly, and [monitor performance](run.md#monitoring-dedup).
 
-**I want to run a Dedup job right now, but I don't want to create a new schedule - how can I do this?**  
+<a id="faq-running-dedup-jobs-manually"></a>**I want to run a Dedup job right now, but I don't want to create a new schedule - how can I do this?**  
 All Dedup jobs can be run manually with [`Start-DedupJob`](https://technet.microsoft.com/en-us/library/hh848442.aspx). Learn more [here](run.md#running-dedup-jobs-manually).
 
-**What is the difference between *Full* and *Regular* Garbage Collection?** 
+<a id="faq-full-v-regular-gc"></a>**What is the difference between *Full* and *Regular* Garbage Collection?** 
 There are two types of [Garbage Collection](understand.md#job-info-gc):
 
 - *Regular Garbage Collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular Garbage Collection compacts a chunk store container only if a minimum percentage of the chunks are unreferenced. This type of Garbage Collection runs much faster and uses much less resources than Full Garbage Collection. The default schedule of the Regular Garbage Collection job is to run once a week.
 - *Full Garbage Collection* does a much more thorough job finding unreferenced Dedup chunks and freeing more disk space. Full Garbage Collection compacts every container even if just a single chunk in the container is unreferenced. Full Garbage Collection will also free space that may have been in use if there was a crash or power failure during an optimization job. Full Garbage Collection jobs will recover 100% of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a Regular Garbage Collection job. The Full Garbage Collection job will typically find and release up to ~5% more of the unreferenced data than a Regular GC job. The default schedule of the Full GC job is to run every 4th time Garbage Collection is scheduled.
 
-**Why would I want to disable Full Garbage Collection?**  
+<a id="faq-why-disable-full-gc"></a>**Why would I want to disable Full Garbage Collection?**  
 Reasons to avoid running a regular scheduled Full GC job:
 
 - Because Full GC creates more churn, this could adversely impact the volume’s shadow copies life-time and the size of incremental backup. High churn or I/O intensive deduplication workloads may see large degradation in performance by Full GC jobs. See this KB article This link is external to TechNet Wiki. It will open in a new window. for more details to mitigate these types of scenarios.           
