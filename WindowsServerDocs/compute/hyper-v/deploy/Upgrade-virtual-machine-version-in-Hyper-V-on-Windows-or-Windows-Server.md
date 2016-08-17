@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
 author: cwatsonmsft
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server 2016
 

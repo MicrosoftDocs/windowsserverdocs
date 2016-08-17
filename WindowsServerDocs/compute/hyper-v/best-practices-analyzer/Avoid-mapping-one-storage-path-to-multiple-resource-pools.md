@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 24992453-762b-4892-9a50-55d237b9b7f2
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Avoid mapping one storage path to multiple resource pools
 

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: c0be8a5f-64a1-488a-944e-bb913bb90517
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Virtual hard disks with paging files should be excluded from replication
 

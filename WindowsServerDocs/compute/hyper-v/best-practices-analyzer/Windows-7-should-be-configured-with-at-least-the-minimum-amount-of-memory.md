@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows 7 should be configured with at least the minimum amount of memory
 

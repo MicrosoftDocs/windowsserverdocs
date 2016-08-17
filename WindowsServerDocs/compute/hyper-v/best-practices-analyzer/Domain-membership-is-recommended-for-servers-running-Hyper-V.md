@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 2f4578e5-0848-46b4-a50b-7dbd480b80bf
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Domain membership is recommended for servers running Hyper-V
 

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 532548a1-8ffe-4b5b-902e-ed2f0819012b
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Storage controllers should be enabled in virtual machines to provide access to attached storage
 

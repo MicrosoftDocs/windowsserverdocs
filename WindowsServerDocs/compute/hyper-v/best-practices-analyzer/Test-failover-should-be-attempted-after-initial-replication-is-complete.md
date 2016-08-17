@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: cea7eeaa-c1a7-4f87-89be-d4e1208c546f
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Test failover should be attempted after initial replication is complete
 

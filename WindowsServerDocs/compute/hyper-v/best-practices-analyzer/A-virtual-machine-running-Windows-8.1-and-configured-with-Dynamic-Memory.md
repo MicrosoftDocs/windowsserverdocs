@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: b9a14f85-326f-4916-9278-2c8d39a32848
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # A virtual machine running Windows 8.1 and configured with Dynamic Memory should use recommended values for memory settings
 

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 71f99aab-f994-4022-9da0-d661965b95ac
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Ensure sufficient physical disk space is available when virtual machines use differencing virtual hard disks
 
