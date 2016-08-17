@@ -10,12 +10,12 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-author: cwatsonmsft
+author: shirgall
 ms.author: cwatson
 ---
 # Supported SUSE virtual machines on Hyper-V
 
->Applies To: Windows Server Technical Preview, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Hyper-V Server 2012, Hyper-V Server 2012 R2, Windows 8, Windows 8.1
+>Applies To: Windows Server 2016 Technical Preview, Hyper-V Server 2016 Technical Preview, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 The following is a feature distribution map that indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.  
   
@@ -29,6 +29,8 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
   
 -   (*blank*) - Feature not available  
   
+SLES12 and SLES12SP1 are 64-bit only.
+
 |**Feature**|**Windows Server operating system version**|**SLES 12 SP1**|**SLES 12**|**SLES 11 SP4**|**SLES 11 SP3**|**SLES 11 SP2**|**Open SUSE 12.3**|  
 |-|-|-|-|-|-|-|-|  
 |**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|  
@@ -44,25 +46,26 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 |VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||  
 |Virtual Fibre Channel|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|||  
 |Live virtual machine backup|2016, 2012 R2|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|&#10004; Note 2, 3, 8|||  
-|TRIM support|2016, 2012 R2|||||||  
+|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;||||  
 |SCSI WWN|2016, 2012 R2|||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||  
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|N/A|N/A|&#10004;|&#10004;|&#10004;|&#10004;|
 |Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 4, 5, 6|&#10004; Note 4, 5, 6|||  
+|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 4, 5, 6|&#10004; Note 4, 5, 6|||  
 |Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 5, 6|&#10004; Note 5, 6|&#10004; Note 4, 5, 6|&#10004; Note 4, 5, 6||&#10004; Note 4, 5, 6|  
-|Manual Memory Hot Add|2016|||||||  
+|Runtime Memory Resize|2016|||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||  
 |Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||  
 |Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004; Note 7|&#10004; Note 7|&#10004; Note 7|&#10004; Note 7|  
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
 |File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;|&#10004;||||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||||  
 |Hyper-V Sockets|2016|||||||  
+|PCI Passthrough/DDA|2016|||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||  
 |Boot using UEFI|2016, 2012 R2|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9||||  
-|Secure boot|2016, 2012 R2|&#10004;|&#10004;|||||  
+|Secure boot|2016|&#10004;|&#10004;|||||  
   
 ## <a name="BKMK_notes"></a>Notes  
   
