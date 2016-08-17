@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: c3a0292a-a619-4d1c-8f9d-391c741411c1
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # A virtual machine running Windows 7 and configured with Dynamic Memory should use recommended values for memory settings
 

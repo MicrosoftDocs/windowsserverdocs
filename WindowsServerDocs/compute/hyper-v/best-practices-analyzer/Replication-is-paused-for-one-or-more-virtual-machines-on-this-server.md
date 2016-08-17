@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: e1119a40-eda3-4058-8648-7df81cbc6c29
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Replication is paused for one or more virtual machines on this server
 

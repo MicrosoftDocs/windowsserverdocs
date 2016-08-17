@@ -10,16 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
-author: cwatsonmsft
+author: shirgall
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
->Applies To: Windows Server Technical Preview, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Hyper-V Server 2012, Hyper-V Server 2012 R2, Windows 8, Windows 8.1
+>Applies To: Windows Server 2016 Technical Preview, Hyper-V Server 2016 Technical Preview, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
-Beginning with Ubuntu 12.04, loading the "linux-virtual" package installs a kernel suitable for use as a guest virtual machine. This package always depends on the latest minimal generic kernel image and headers used for virtual machines. While its use is optional, the linux-virtual kernel will load fewer drivers than a more generic image.  
+Beginning with Ubuntu 12.04, loading the "linux-virtual" package installs a kernel suitable for use as a guest virtual machine. This package always depends on the latest minimal generic kernel image and headers used for virtual machines. While its use is optional, the linux-virtual kernel will load fewer drivers and may boot faster and have less memory overhead than a generic image.  
   
-To get full use of Hyper-V, load the appropriate linux-tools and linux-cloud-tools packages, which installs tools and daemons for use with virtual machines. When using the linux-virtual kernel, load linux-tools-virtual and linux-cloud-tools-virtual.  
+To get full use of Hyper-V, install the appropriate linux-tools and linux-cloud-tools packages to install tools and daemons for use with virtual machines. When using the linux-virtual kernel, load linux-tools-virtual and linux-cloud-tools-virtual.  
   
 The following feature distribution map indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.  
   
@@ -31,40 +32,41 @@ The following feature distribution map indicates the features in each version. T
   
 -   (*blank*) - Feature not available  
   
-|**Feature**|**Windows Server operating system version**|**16.04**|**15.10**|**14.04**|**12.04**|  
-|-|-|-|-|-|-|  
-|**Availability**||Built-in|Built-in|Built-in|Built-in|  
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||  
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
-|Live migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
-|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|  
-|vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||  
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||  
-|VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
-|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||  
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 6|&#10004; Note 3, 4, 5||  
-|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
-|SCSI WWN|2016, 2012 R2|&#10004;||||  
+|**Feature**|**Windows Server operating system version**|**16.04**|**14.04**|**12.04**|  
+|-|-|-|-|-|  
+|**Availability**||Built-in|Built-in|Built-in|  
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|  
+|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|||  
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|  
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|  
+|Live migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|  
+|Static IP Injection|2016, 2012 R2, 2012|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|  
+|vRSS|2016, 2012 R2|&#10004;|&#10004;||  
+|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||  
+|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|||  
+|VHDX resize|2016, 2012 R2|&#10004;|&#10004;||  
+|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2||  
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5||  
+|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;|  
+|SCSI WWN|2016, 2012 R2|&#10004;|&#10004;||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|||  
-|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
-|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||  
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||  
-|Manual Memory Hot Add|2016|||||  
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||  
-|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||  
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||  
-|Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 5, 10|&#10004; Note 6, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|  
-|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|  
-|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;|&#10004;||  
-|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||  
-|Hyper-V Sockets|2016|||||  
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||  
-|Boot using UEFI|2016, 2012 R2|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12||  
-|Secure boot|2016|&#10004;|&#10004;|&#10004;||  
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
+|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|  
+|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9||  
+|Runtime Memory Resize|2016|&#10004;|&#10004;||  
+|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||  
+|Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||  
+|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|||  
+|Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 5, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|  
+|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|  
+|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;||  
+|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||  
+|Hyper-V Sockets|2016|&#10004;|&#10004;||  
+|PCI Passthrough/DDA|2016|&#10004;|&#10004;||
+|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|||  
+|Boot using UEFI|2016, 2012 R2|&#10004; Note 11, 12|&#10004; Note 11, 12||  
+|Secure boot|2016|&#10004;|&#10004;||  
   
 ## <a name="BKMK_notes"></a>Notes  
   
@@ -76,9 +78,7 @@ The following feature distribution map indicates the features in each version. T
   
 4.  Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).  
   
-5.    
-   
-    On long term support (LTS) releases, we recommend that you use the latest Hardware Enablement (HWE) kernel in the virtual flavor.   
+5.  On long term support (LTS) releases use latest virtual Hardware Enablement (HWE) kernel for up to date Linux Integration Services.  
       
     To install the virtual kernel on 16.04, run the following commands as root (or sudo):  
   
@@ -92,7 +92,7 @@ The following feature distribution map indicates the features in each version. T
    
     ```  
     # apt-get update  
-    # apt-get install --install-recommends linux-virtual-lts-wily  
+    # apt-get install --install-recommends linux-virtual-lts-xenial  
   
     ```  
    
@@ -120,7 +120,7 @@ The following feature distribution map indicates the features in each version. T
     To install the Hyper-V daemons on 14.04, run the following commands as root (or sudo).  
    
     ```  
-    # apt-get install --install-recommends hv-kvp-daemon-init linux-tools-virtual-lts-wily linux-cloud-tools-virtual-lts-wily  
+    # apt-get install --install-recommends hv-kvp-daemon-init linux-tools-virtual-lts-xenial linux-cloud-tools-virtual-lts-xenial  
   
     ```  
    
@@ -131,31 +131,9 @@ The following feature distribution map indicates the features in each version. T
   
     ```  
       
-    To use the new kernel and daemons, you must reboot the VM after installing.  
+    Whenever the kernel is updated, the virtual machine must be rebooted to use it.  
   
-6.  On 15.10, we recommend that you use the latest kernel in the virtual flavor.   
-      
-    To install the virtual kernel on 15.10, run the following commands as root (or sudo):  
-  
-    ```  
-    # apt-get update  
-    # apt-get install --install-recommends linux-virtual  
-      
-    ```  
-      
-    On 15.10, the following daemons are installed from a separate package.  
-   
-    -   **VSS Snapshot daemon** - This daemon is required to create live Linux virtual machine backups.  
-    -   **KVP daemon** - This daemon allows setting and querying intrinsic and extrinsic key value pairs.  
-    -   **fcopy daemon** - This daemon implements a file copying service between the host and guest.  
-   
-    To install these daemons when using the run the following commands as root (or sudo):  
-   
-    ```  
-    # apt-get update  
-    # apt-get install linux-tools-virtual linux-cloud-tools-virtual  
-  
-    ```  
+6.  (Note reserved for interim releases when they are in active support.)
    
 7.  Dynamic memory support is only available on 64-bit virtual machines.  
   

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 093a7bb7-8e0a-486b-b42b-04edd8809710
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Resynchronization of replication should be scheduled for off-peak hours
 

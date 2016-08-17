@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 1074f086-1a2e-42e1-b58c-f55e657d5ce1
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # A team bound to a virtual switch should only have one exposed team interface
 

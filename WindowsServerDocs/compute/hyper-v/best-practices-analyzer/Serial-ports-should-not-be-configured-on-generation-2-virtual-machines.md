@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 87061193-dd3f-4398-aa5d-4cee83cadfa3
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Serial ports should not be configured on generation 2 virtual machines
 

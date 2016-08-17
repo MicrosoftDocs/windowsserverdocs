@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Offer all available integration services to virtual machines
 
