@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0eec0e7e-28f3-4fb2-bd41-e97bc3560bcb
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Storage Spaces Optimize Pool
 

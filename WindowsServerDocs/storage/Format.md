@@ -1,13 +1,15 @@
 ---
 title: Format
 ms.custom: na
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
+manager: dongill
+ms.author: JGerend
 ---
 
 >Applies To: Windows 10 Anniversary Edition, Windows 10, Windows Server 2016

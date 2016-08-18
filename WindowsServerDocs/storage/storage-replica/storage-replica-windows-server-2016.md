@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a7041853-df43-4ced-96da-b638ba7c0603
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Storage Replica in Windows Server 2016 Technical Preview
 

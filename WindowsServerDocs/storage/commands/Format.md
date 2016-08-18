@@ -1,7 +1,11 @@
 ---
 title: Format
 ms.custom: na
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
+manager: dongill
+ms.author: JGerend
+ms.technology:
+  - techgroup-storage
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

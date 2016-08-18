@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a988dc0-37e6-4b56-a411-5896af814eda
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Storage Spaces Direct Hardware Requirements
 

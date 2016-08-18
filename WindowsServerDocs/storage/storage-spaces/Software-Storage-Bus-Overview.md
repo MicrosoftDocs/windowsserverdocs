@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7266d237-4d46-4a37-8165-d68df509e215
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Software Storage Bus Overview
 
