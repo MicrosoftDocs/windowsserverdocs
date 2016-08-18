@@ -1,0 +1,136 @@
+---
+title:"What's New in Storage in Windows Server 2016"  
+description:"This topic explains the new and changed functionality in Storage in Windows Server 2016."   
+author:"kumudd"  
+ms.author:"kumud"  
+manager:"carmonm"  
+ms.date:"08/19/2016"  
+ms.topic: get-started-article  
+ms.prod:"windows-server-threshold"  
+ms.custom: na  
+ms.reviewer: na  
+ms.suite: na  
+ms.tgt_pltfrm: na  
+ms.assetid: 596f28ec-e154-4c2e-9e82-7e42afe0e9fa  
+ms.technology:
+  - techgroup-storage  
+---
+# What's New in Storage in Windows Server 2016
+
+>Applies To: Windows Server 2016
+
+This topic explains the new and changed functionality in Storage in Windows Server 2016.  
+* [Storage Spaces Direct](#s2d)
+* [Storage Replica](#storage-replica)  
+* [Storage Quality of Service](#storage-qos)  
+* [Data Deduplication](#dedup)  
+* [SMB hardening improvements](#smb-hardening-improvements)   
+
+## <a name="s2d"></a>Storage Spaces Direct  
+Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies the deployment and management of software-defined storage systems and unlocks use of new classes of disk devices, such as SATA SSD and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
+
+**What value does this change add?**  
+Storage Spaces Direct enables service providers and enterprises to use industry standard servers with local storage to build highly available and scalable software defined storage. Using servers with local storage decreases complexity, increases scalability, and enables use of storage devices that were not previously possible, such as SATA solid state disks to lower cost of flash storage, or NVMe solid state disks for better performance.  
+
+Storage Spaces Direct removes the need for a shared SAS fabric, simplifying deployment and configuration. Instead it uses the network as a storage fabric, leveraging SMB3 and SMB Direct (RDMA) for high-speed, low-latency CPU efficient storage. To scale out, simply add more servers to increase storage capacity and I/O performance  
+For more information, see the [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct/overview.md).  
+
+**What works differently?**  
+This capability is new in Windows Server 2016.  
+
+## <a name="storage-replica"></a>Storage Replica  
+Storage Replica (SR) is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
+
+**What value does this change add?**  
+Storage Replication enables you to do the following:  
+
+* Provide a single vendor disaster recovery solution for planned and unplanned outages of mission critical workloads.
+* Use SMB3 transport with proven reliability, scalability, and performance.
+* Stretch Windows failover clusters to metropolitan distances.
+* Use Microsoft software end to end for storage and clustering, such as Hyper-V, Storage Replica, Storage Spaces, Cluster, Scale-Out File Server, SMB3, Deduplication, and ReFS/NTFS.
+* Help reduce cost and complexity as follows: 
+    * Is hardware agnostic, with no requirement for a specific storage configuration like DAS or SAN.
+    * Allows commodity storage and networking technologies.
+    * Features ease of graphical management for individual nodes and clusters through Failover Cluster Manager.
+    * Includes comprehensive, large-scale scripting options through Windows PowerShell. 
+* Help reduce downtime, and increase reliability and productivity intrinsic to Windows.  
+* Provide supportability, performance metrics, and diagnostic capabilities.  
+
+For more information, see the [Storage Replica in Windows Server 2016](storage-replica/overview.md).  
+
+**What works differently?**  
+This capability is new in Windows Server 2016.  
+
+## <a name="storage-qos"></a>Storage Quality of Service  
+You can now use storage quality of service (QoS) to centrally monitor end-to-end storage performance and create policies using Hyper-V and Scale-Out File Servers in Windows Server 2016.  
+
+**What value does this change add?**  
+You can now create storage QoS policies on a Scale-Out File Server and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates.  
+
+* Each policy specifies a reserve (minimum) and a limit (maximum) to be applied to a collection of data flows, such as a virtual hard disk, a single virtual machine or a group of virtual machines, a service, or a tenant.  
+* Using Windows PowerShell or WMI, you can perform the following tasks:  
+    * Create policies on a Scale-Out File Server.
+    * Enumerate policies available on a Scale-Out File Server.
+    * Assign a policy to a virtual hard disk on a server running Hyper-V. 
+    * Monitor the performance of each flow and status within the policy.  
+* If multiple virtual hard disks share the same policy, performance is fairly distributed to meet demand within the policy minimum and maximum. Therefore, a policy can be used to represent a virtual machine, multiple virtual machines comprising a service, or all virtual machines owned by a tenant.  
+
+**What works differently?**  
+This capability is new in Windows Server 2016. It was not possible to configure centralized policies for storage QoS in previous releases of Windows Server.  
+
+For more information, see [Storage Quality of Service](storage-qos/overview.md)
+
+## <a name="dedup"></a>Data Deduplication  
+<table>
+    <thead>
+        <tr>
+            <th style="min-width:125px">Functionality</th>
+            <th style="min-width:125px">New or Updated</th>
+            <th style="min-width:125px">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>[Support for Large Volumes](data-deduplication/whats-new.md#large-volume-support)</td>
+            <td>Updated</td>
+            <td>Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for Dedup. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**.</td>
+        </tr>
+        <tr>
+            <td>[Support for Large Files](data-deduplication/whats-new.md#large-file-support)</td>
+            <td>Updated</td>
+            <td>Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for Dedup. In Windows Server 2016, files **up to 1 TB** are fully supported.</td>
+        </tr>
+        <tr>
+            <td>[Support for Nano Server](data-deduplication/whats-new.md#nano-server-support)</td>
+            <td>New</td>
+            <td>Dedup is available and fully supported in the new Nano Server deployment option for Windows Server 2016.</td>
+        </tr>
+        <tr>
+            <td>[Simplified Backup Support](data-deduplication/whats-new.md#simple-backup-support)</td>
+            <td>New</td>
+            <td>In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](https://technet.microsoft.com/en-us/library/hh758173.aspx), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Dedup for Virtualized Backup Applications.</td>
+        </tr>
+        <tr>
+            <td>[Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#cluster-upgrade-support)</td>
+            <td>New</td>
+            <td>Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../compute/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016.</td>
+        </tr>
+    </tbody>
+</table>
+
+### <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections  
+In Windows 10 and Windows Server 2016 client connections to the Active Directory Domain Services default SYSVOL and NETLOGON shares on domain controllers now require SMB signing and mutual authentication (such as Kerberos).   
+
+**What value does this change add?**  
+This change reduces the likelihood of man-in-the-middle attacks.   
+
+**What works differently?**  
+If SMB signing and mutual authentication are unavailable, a Windows 10 or Windows Server 2016 computer won't process domain-based Group Policy and scripts.  
+
+> [!NOTE]  
+> The registry values for these settings aren't present by default, but the hardening rules still apply until overridden by Group Policy or other registry values.  
+
+For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
+
+## See also  
+* [What's New in Windows Server 2016](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  
