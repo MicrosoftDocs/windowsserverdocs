@@ -12,12 +12,11 @@ ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 author: kumudd
 ---
 # Server to Server Storage Replication
-
->Applies To: Windows Server Technical Preview
+> Applies To: Windows Server 2016
 
 You will configure these computers and storage in a server-to-server configuration, where one node replicates its own set of storage with another node and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 Technical Preview that can configure Storage Replica for standalone replication.  
+There are no graphical tools in Windows Server 2016 that can configure Storage Replica for standalone replication.  
 
 > [!IMPORTANT]
 >  In this test, one node will need to be in a physical or logical site, and the other node in a different physical or logical site. Each server must be able to communicate with the other via a network.  
@@ -35,8 +34,8 @@ This walkthrough uses the following environment as an example:
 
 ## Prerequisites  
 
-* Active Directory Domain Services forest (does not need to run Windows Server 2016 Technical Preview).  
-* Two servers with Windows Server 2016 Technical Preview installed.  
+* Active Directory Domain Services forest (does not need to run Windows Server 2016).  
+* Two servers with Windows Server 2016 installed.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, iSCSI target, or local SCSI/SATA storage. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the servers, with no shared access.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
@@ -47,11 +46,7 @@ This walkthrough uses the following environment as an example:
 Many of these requirements can be determined by using the `Test-SRTopology cmdlet`. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 
 ## Provision operating system, features, roles, storage, and network  
-
-> [!WARNING]
->  Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
-
-1.  Install Windows Server 2016 Technical Preview on both server nodes with an installation type of Windows Server 2016 Technical Preview 5 (Desktop Experience). Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
+1.  Install Windows Server 2016 on both server nodes with an installation type of Windows Server 2016 (Desktop Experience). Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
 2.  Add network information and join them to the domain, then restart them.  
 
@@ -146,7 +141,7 @@ Many of these requirements can be determined by using the `Test-SRTopology cmdle
     ![](media/Server-to-Server-Storage-Replication/SRTestSRTopologyReport.png)  
 
 ## Configure Server to Server Replication using Windows PowerShell  
-Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the  Windows Server 2016 Technical Preview RSAT management tools.  
+Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 1. Ensure you are using an elevated Powershell console as an administrator.  
 2. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.  
@@ -227,7 +222,7 @@ Now you will configure server-to-server replication using Windows PowerShell. Yo
         ```  
 
 ## Manage replication  
-Now you will manage and operate your server-to-server replicated infrastructure. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+Now you will manage and operate your server-to-server replicated infrastructure. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 1.  Use `Get-SRPartnership` and `Get-SRGroup` to determine the current source and destination of replication and their status.  
 
@@ -294,7 +289,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
     ```  
 
     > [!WARNING]  
-    > Windows Server 2016 Technical Preview does not prevent role switching when the initial sync is ongoing, which can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not switch directions until the initial sync is complete.  
+    > Windows Server 2016 does not prevent role switching when the initial sync is ongoing, which can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not switch directions until the initial sync is complete.  
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 
@@ -323,7 +318,7 @@ Storage Replica has none of these limitations. It does, however, have several th
 If these are not blocking factors, Storage Replica allows you to replace DFSR servers with this newer technology.   
 The process is, at a high level:  
 
-1.  Install Windows Server 2016 Technical Preview on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
+1.  Install Windows Server 2016 on two servers and configure your storage. This could mean upgrading an existing set of servers or cleanly installing.  
 2.  Ensure that any data you want to replicate exists on one or more data volumes and not on the C: drive.   
 a.  You can also seed the data on the other server to save time, using a backup or file copies, as well as use thin provisioned storage. Making the metadata-like security match perfectly is unnecessary, unlike DFSR.  
 3.  Share the data on your source server and make it accessible through a DFS Namespace. This is important, to ensure that users can still access it if the server name changes to one in a disaster site.  
@@ -342,21 +337,12 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
  > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be permanently unavailable.  
 
 ## Related Topics  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
-
--   [Storage Replica Overview](Storage-Replica-Overview.md)  
-
--   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
-
--   [Cluster to Cluster Storage Replication](Cluster-to-Cluster-Storage-Replication.md)
-
--   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
-
--   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
+-   [Storage Replica Overview](overview.md)  
+-   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+-   [Cluster to Cluster Storage Replication](cluster-to-cluster.md)
+-   [Storage Replica: Known Issues](known-issues.md)  
+-   [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
 
 ## See Also  
-
--   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
+-   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  

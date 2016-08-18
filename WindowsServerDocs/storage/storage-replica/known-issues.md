@@ -163,17 +163,11 @@ This is caused by selecting a data volume that is on the same partition as the S
 
 
 ### Related Topics  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
--  [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
-
--   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
-
--   [Cluster to Cluster Storage Replication](Cluster-to-Cluster-Storage-Replication.md)  
-
--   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
+- [Storage Replica in Windows Server 2016](overview.md)  
+- [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+- [Server to Server Storage Replication](server-to-server.md)  
+- [Cluster to Cluster Storage Replication](cluster-to-cluster.md)  
+- [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
 
 ## See Also  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
-
+-  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces-direct/overview.md)  

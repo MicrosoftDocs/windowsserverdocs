@@ -9,20 +9,23 @@ ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
 ---
+
+>Applies To: Windows 10 Anniversary Edition, Windows 10, Windows Server 2016
+
 # Format
 
-Formats a volume so that you can use it to store files. To instead format a volume using Windows PowerShell, use the Format-Volume cmdlet.
+Formats a volume so that you can use it to store files. 
 
-The **format** command creates a new root directory and file system for the drive. It can also check for bad areas on the disk, and it can delete all data on the drive. To be able to use a new drive, you must first use this command to format the drive.
+The **format** command creates a new root directory and file system for the drive. It can also check for bad areas on the disk, and it can delete all data on the drive.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples). To format a volume in a Windows PowerShell session, instead use the newer Format-Volume cmdlet.
 
 > [!NOTE]
 > You must be a member of the Administrators group to format a drive.
 
 ## Syntax
 
-```code
+```powershell
 format <Volume> [/fs:{FAT|FAT32|NTFS}] [/v:<Label>] [/q] [/a:<UnitSize>] [/c] [/x] [/s] [/i] [/dax] [/p:<Passes>]
 format <Volume> [/v:<Label>] [/q] [/f:<Size>] [/p:<Passes>]
 format <Volume> [/v:<Label>] [/q] [/t:<Tracks> /n:<Sectors>] [/p:<Passes>]
@@ -81,25 +84,25 @@ You can check these exit codes by using the ERRORLEVEL environment variable with
 ## <a name="BKMK_examples"></a>Examples
 To format a new floppy disk in drive A using the default size, type:
 
-```
+```powershell
 format a:
 ```
 
 To perform a quick format operation on a previously formatted floppy disk in drive A, type:
 
-```
+```powershell
 format a: /q
 ```
 
 To format a floppy disk in drive A and assign it the volume label "DATA," type:
 
-```
+```powershell
 format a: /v:DATA
 ```
 
 To perform a quick format of a storage-class memory device as drive F:\ with the NTFS file system and DirectAccess enabled, type
 
-```
+```powershell
 format f: /q /dax
 ```
 

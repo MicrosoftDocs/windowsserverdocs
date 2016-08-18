@@ -16,7 +16,7 @@ ms.technology:
 # What's New in Data Deduplication
 > Applies to Windows Server 2016
 
-[Data Deduplication](overview.md), or Dedup, in Windows Server 2016 has been optimized to be highly performant,  flexible, and manageable at "Private Cloud" scale. For more information about the Software Defined Storage stack in Windows Server 2016, please see [What's New in File and Storage Services in Windows Server 2016](../whats-new-file-storage-services-windows-server-2016).
+[Data Deduplication](overview.md), or Dedup, in Windows Server 2016 has been optimized to be highly performant,  flexible, and manageable at "Private Cloud" scale. For more information about the Software Defined Storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new).
 
 Dedup has the following enhancements in Windows Server 2016: 
 <table>
@@ -88,7 +88,7 @@ While Deduplication for Virtualized Backup Applications is a supported scenario 
 
 ## <a name="cluster-upgrade-support">Support for Cluster OS Rolling Upgrades</a>
 **What value does this change add?**<br />
-Windows Failover Clusters running Dedup can have a mix of nodes running Windows Server 2012 R2 versions of deduplication alongside nodes running Windows Server 2016 Technical Preview versions of deduplication. This enhancement provides full data access to all deduplicated volumes during a cluster rolling upgrade, allowing for the gradual rollout of the new version of deduplication on an existing Windows Server 2012 R2 cluster without incurring downtime to upgrade all nodes at once.
+Windows Failover Clusters running Dedup can have a mix of nodes running Windows Server 2012 R2 versions of deduplication alongside nodes running Windows Server 2016 versions of deduplication. This enhancement provides full data access to all deduplicated volumes during a cluster rolling upgrade, allowing for the gradual rollout of the new version of deduplication on an existing Windows Server 2012 R2 cluster without incurring downtime to upgrade all nodes at once.
 
 **What works differently?**<br />
-With previous versions of Windows Server, a Windows Failover Cluster required all nodes in the cluster to be at the exact same Windows Server version. Starting with the Windows Server 2016 Technical Preview, the cluster rolling upgrade functionality allows a cluster to run in a mixed-mode. Deduplication supports this new mixed-mode cluster configuration to enable full data access during a cluster rolling upgrade.
+With previous versions of Windows Server, a Windows Failover Cluster required all nodes in the cluster to be at the exact same Windows Server version. Starting with the Windows Server 2016, the cluster rolling upgrade functionality allows a cluster to run in a mixed-mode. Deduplication supports this new mixed-mode cluster configuration to enable full data access during a cluster rolling upgrade.
