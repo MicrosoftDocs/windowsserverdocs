@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f0d1fc9c-f5ea-45bc-a8da-623c5d081cdf
 author: lizap
 manager: swadhwa
+ms.author: elizapo
 ---
 # Split a User Station
 Any MultiPoint Services station monitor that has a resolution greater than 1024x768 can be split into two stations using the **Split station** task on the **Stations** tab. The desktop that is present on the monitor at the time that the split occurs moves to the left half of the monitor, and a new station is created on the right half of the same monitor. The new station must be mapped to a keyboard, mouse, and USB hub to complete its creation. After a station is split, a user can log on to the left station while another user logs on to the right station.  

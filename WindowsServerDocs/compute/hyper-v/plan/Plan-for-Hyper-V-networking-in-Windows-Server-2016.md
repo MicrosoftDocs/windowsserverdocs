@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 7067bd74-8786-4202-9093-520a286f5883
 author: KBDAzure
 ms.author: kathydav
+ms.date: 8/16/2016
 ---
 # Plan for Hyper-V networking in Windows Server 2016
 

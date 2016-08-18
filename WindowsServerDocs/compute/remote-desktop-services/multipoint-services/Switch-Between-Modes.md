@@ -1,7 +1,6 @@
 ---
 title: Switch Between Modes
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 5f1b2324-c1b0-4b61-ab51-39af15e7792a
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Switch Between Modes
 MultiPoint Manager includes the following modes to help you perform different types of MultiPoint Services system management:  

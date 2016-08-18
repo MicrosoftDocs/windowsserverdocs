@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Selecting Hardware for Your MultiPoint Services System
 When you build a MultiPoint Services system, you should select a computer that meets the Windows Server 2016 system requirements. If you are deciding which components to select, consider the following:  

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Vista should be configured with at least the minimum amount of memory
 

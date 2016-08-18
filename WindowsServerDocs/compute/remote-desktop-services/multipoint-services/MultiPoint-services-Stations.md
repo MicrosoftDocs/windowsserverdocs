@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # MultiPoint  Stations
 In a MultiPoint Services system environment, *stations* are the user endpoints for connecting to the computer running MultiPoint Services. Each station provides the user with an independent Windows 10 experience. The following station types are supported:  

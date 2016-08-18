@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 8fcf0868-b543-4f94-aee7-35324346da55
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Configure virtual machines running Windows 7 with no more than 4 virtual processors
 

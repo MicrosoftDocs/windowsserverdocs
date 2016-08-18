@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 861f194f-467e-4b07-a1c5-55b35f6327c4
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Configure SCSI controllers only when supported by the guest operating system
 

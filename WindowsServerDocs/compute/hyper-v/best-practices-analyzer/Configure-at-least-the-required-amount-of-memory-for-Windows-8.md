@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 1dab6af6-852f-4243-9600-afe541a0f4cd
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows 8 and enabled for Dynamic Memory
 

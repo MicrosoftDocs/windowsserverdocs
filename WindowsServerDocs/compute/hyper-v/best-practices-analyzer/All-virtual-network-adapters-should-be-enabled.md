@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # All virtual network adapters should be enabled
 

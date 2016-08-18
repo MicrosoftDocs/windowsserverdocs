@@ -1,7 +1,7 @@
 ---
 title: Create a MultiPoint Dashboard User Account
 ms.custom: na
-ms.date: 07/15/2016
+ 
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,9 +11,11 @@ ms.topic: article
 ms.assetid: eb9d7da1-eb5e-42c0-8d59-bb6d7b007ea9
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Create a MultiPoint Dashboard User Account
-Create *MultiPoint Dashboard user accounts* for those users who will regularly access stations, but who will not manage your MultiPoint Services system. Users with MultiPoint Dashboard user accounts can run most applications and save files, but cannot run MultiPoint Manager. To see who has MultiPoint Dashboard user access, in MultiPoint Manager, click the **Users** tab. MultiPoint Dashboard user accounts are displayed in the **Account Type** column as **MultiPoint Dashboard User**.  
+Create MultiPoint Dashboard user accounts for those users who will regularly access stations, but who will not manage your MultiPoint Services system. Users with MultiPoint Dashboard user accounts can run most applications and save files, but cannot run MultiPoint Manager. To see who has MultiPoint Dashboard user access, in MultiPoint Manager, click the **Users** tab. MultiPoint Dashboard user accounts are displayed in the **Account Type** column as **MultiPoint Dashboard User**.  
   
 If your MultiPoint Services users will store private documents in Windows, each user should log on to the MultiPoint Services system using a unique user name and password.  
   

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # The Hyper-V Virtual Machine Management service must be running
 

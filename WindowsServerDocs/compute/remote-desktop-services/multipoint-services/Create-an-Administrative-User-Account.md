@@ -1,7 +1,6 @@
 ---
 title: Create an Administrative User Account
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -10,7 +9,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ce4c5a9-3dec-412f-910b-54a252f8f209
 author: lizap
-manager: jeffgilb
+manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Create an Administrative User Account
 Create *administrative user accounts* for those individuals who will manage your MultiPoint Services system. To see who has administrative access, in MultiPoint Manager, click the **Users** tab. Administrative user accounts are displayed in the **Account Type** column as **Administrator**. *Administrative users* have access to all MultiPoint Manager tasks that change desktop and system settings, such as:  

@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Use RAM that provides error correction
 

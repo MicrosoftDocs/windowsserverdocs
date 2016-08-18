@@ -1,7 +1,6 @@
 ---
 title: Project a Station to Other Stations
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 2c0d0faf-ba5b-406d-bd89-b685ddf81e93
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Project a Station to Other Stations
 As a MultiPoint Dashboard User, you can project your desktop to a single user’s station or all users’ (non-administrator) stations. This feature is useful when you want to demonstrate a task to a user or set of users.  

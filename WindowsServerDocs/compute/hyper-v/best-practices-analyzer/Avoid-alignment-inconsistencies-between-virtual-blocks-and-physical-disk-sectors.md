@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: a17c8fd2-af81-485b-bfea-bd1ef3e43923
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Avoid alignment inconsistencies between virtual blocks and physical disk sectors on dynamic virtual hard disks or differencing disks
 

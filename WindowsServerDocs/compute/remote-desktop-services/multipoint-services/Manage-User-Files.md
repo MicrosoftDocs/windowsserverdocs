@@ -1,7 +1,6 @@
 ---
 title: Manage User Files
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: e94efa0b-8531-4a2d-94ce-858b5642cc68
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Manage User Files
 Both standard users and administrative users at MultiPoint Services stations can save documents in Windows Explorer libraries and folders. A library is a collection of items, such as files and folders. Common libraries in Windows Explorer include **Documents**, **Music**, **Pictures**, and **Videos**. When working with libraries, there are two options for storing documents:  
