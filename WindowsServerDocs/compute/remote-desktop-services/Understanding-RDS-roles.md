@@ -7,9 +7,12 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: 
   - remote-desktop-services
+  - techgroup-compute
+ms.author: chrimo
+ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
+ms.assetid: d6116f41-daa6-44e1-9d65-3f13005e3cd1
 author: ChristianMontoya
 manager: scottman
 ---

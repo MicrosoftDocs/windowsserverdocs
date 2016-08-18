@@ -7,6 +7,9 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: 
   - remote-desktop-services
+  - techgroup-compute
+ms.author: spatnaik
+ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5aed8ba7-f541-4416-b01c-4d3b1712e2b1

@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 22a87c5f-3bfc-4da1-9905-24f768ede959
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Set the date, time, and time zone
 After you finish installing device drivers, set the date, time, and time zone on the MultiPoint server.  
