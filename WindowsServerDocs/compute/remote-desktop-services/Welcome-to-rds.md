@@ -7,11 +7,14 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: 
   - remote-desktop-services
+  - techgroup-compute
+ms.author: chrimo
+ms.date: 08/01/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
-author: 
-manager: 
+author: christianmontoya
+manager: scottman
 ---
 # Welcome to Remote Desktop Services 
 

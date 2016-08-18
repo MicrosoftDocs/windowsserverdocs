@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: f6f8970b-de3f-4255-b2a1-5472a16ed02f
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Install MultiPoint Services
 If you are installing a server from scratch follow these instructions to install MultiPoint Services.  

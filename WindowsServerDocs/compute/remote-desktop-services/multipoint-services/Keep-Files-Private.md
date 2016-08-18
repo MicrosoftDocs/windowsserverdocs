@@ -1,7 +1,6 @@
 ---
 title: Keep Files Private
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 909049dc-6514-4040-89fb-fcf33fa96a9d
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Keep Files Private
 This topic applies to content, such as documents, that you \(as an *administrative user*\) and *standard users* do not want to share with other users in a MultiPoint Services system.  

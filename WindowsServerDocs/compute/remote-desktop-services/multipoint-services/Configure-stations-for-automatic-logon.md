@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: 52fcfac9-d500-4f1d-819f-b2ffc795e435
 author: evas
 manager: scottman
+ms.author: evas
+ms.date: 08/04/2016
 ---
 # Configure stations for automatic logon
 If you want your stations to be available to anyone – and your users do not need private folders to store their personal data or personalized desktops – you can configure the stations for automatic logon. Auto-logon automatically logs on a user account that has been specified in the auto-logon settings when the MultiPoint Services starts.  

@@ -1,7 +1,6 @@
 ---
 title: Restart or Shut Down MultiPoint Systems
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 6293b4f7-c009-419d-a503-fc4f3ea3913c
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Restart or Shut Down MultiPoint Systems
 You can restart or shut down one MultiPoint Services system or multiple MultiPoint Services systems in MultiPoint Dashboard.  
