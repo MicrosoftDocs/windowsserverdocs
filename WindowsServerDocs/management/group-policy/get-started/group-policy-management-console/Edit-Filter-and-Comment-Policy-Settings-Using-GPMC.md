@@ -43,7 +43,7 @@ The Group Policy Management Console or the Group Policy Management Editor, can h
 
     -   Add or remove modifications for an application package
 
--   [Using Startup, Shutdown, Logon, and Logoff Scripts in Group Policy](Using-Startup,-Shutdown,-Logon,-and-Logoff-Scripts-in-Group-Policy.md)
+-   [Using Startup, Shutdown, Logon, and Logoff Scripts in Group Policy](Using-Startup-Shutdown-Logon-and-Logoff-Scripts-in-Group-Policy.md)
 
     -   How to set up scripts on the domain controller
 
