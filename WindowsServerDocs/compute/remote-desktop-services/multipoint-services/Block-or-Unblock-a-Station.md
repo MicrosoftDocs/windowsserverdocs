@@ -1,7 +1,7 @@
 ---
 title: Block or Unblock a Station
 ms.custom: na
-ms.date: 07/15/2016
+ 
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,7 +11,8 @@ ms.topic: article
 ms.assetid: 12bdbb60-03a5-4e7d-acb1-e4fdcb950c29
 author: lizap
 manager: swadhwa
-
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Block or Unblock a Station
 You can block a user or users from the MultiPoint Services system if you need to get their attention. While users are blocked, their sessions remains active in the MultiPoint Services system’s computer memory until the stations are unblocked. You can customize a message to be displayed for a blocked user.  

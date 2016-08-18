@@ -1,7 +1,6 @@
 ---
 title: Save and Share Files on a USB Flash Drive
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 51f6564e-a07f-4b13-8567-a5f080cc2e0d
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Save and Share Files on a USB Flash Drive
 In addition to being able to share content using Public folders in Windows Explorer, you can also share content using a USB storage device, such as a USB flash drive or mass storage device. When you attach a USB storage device directly to the host computer or to a USB hub that is not a station hub, that storage device will appear as a removable storage device to all users, *standard users* and *administrative users*, across the MultiPoint Services system.  

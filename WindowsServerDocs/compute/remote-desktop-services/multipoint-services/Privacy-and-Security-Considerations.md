@@ -1,7 +1,6 @@
 ---
 title: Privacy and Security Considerations
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 00eb89e5-aaf5-450e-94d8-3ef759dc5e26
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Privacy and Security Considerations
 Because your MultiPoint Services system is, by design, a shared computing environment, you should consider the following privacy and safe computing issues.  

@@ -55,15 +55,17 @@ Windows Server includes the following software defined networking technologies.
   
 -   [Hyper-V Network Virtualization](#bkmk_hv)  
   
--   [Hyper-V Virtual Switch](#bkmk_switch)  
+-   [Hyper-V Virtual Switch](#bkmk_switch)
+
+-   [Internal DNS  Service &#40;iDNS&#41;](#bkmk_idns)
   
 -   [Network Function Virtualization](#bkmk_nfv)  
-  
--   [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma)  
+
+-   [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](#bkmk_rdma)  
   
 -   [RAS Gateway for SDN](#bkmk_rras)  
   
--   [Software Load Balancing (SLB)](#bkmk_slb)  
+-   [Software Load Balancing &#40;SLB&#41;](#bkmk_slb)  
   
  
   
@@ -98,7 +100,12 @@ The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch t
   
 In Hyper-V Virtual Switch in Windows Server 2016 Technical Preview, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
   
-For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
+For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+
+### <a name="bkmk_idns"></a>Internal DNS Service &#40;iDNS&#41;
+Hosted virtual machines \(VMs\) and applications require DNS to communicate within their own networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for their isolated, local name space and for Internet resources.
+
+For more information, see [Internal DNS Service &#40;iDNS&#41; for SDN](technologies/Idns-for-Sdn.md).
   
 ### <a name="bkmk_nfv"></a>Network Function Virtualization  
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
