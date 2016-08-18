@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 596f28ec-e154-4c2e-9e82-7e42afe0e9fa
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # What's New in File and Storage Services in Windows Server 2016 Technical Preview
 

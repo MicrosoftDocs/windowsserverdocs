@@ -11,6 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Storage Spaces Fault Tolerance
 

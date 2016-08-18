@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Server to Server Storage Replication
 
