@@ -15,12 +15,12 @@ author: kumudd
 ---
 # Storage Quality of Service
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Storage Quality of Service (Storage QoS) in Windows Server 2016 Technical Preview provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy basedminimum and maximum performance goals to be configured in units of normalized IOPs.  
+Storage Quality of Service (Storage QoS) in Windows Server 2016 provides a way to centrally monitor and manage storage performance for virtual machines using Hyper-V and the Scale-Out File Server roles. The feature automatically improves storage resource fairness between multiple virtual machines using the same file server cluster and allows policy basedminimum and maximum performance goals to be configured in units of normalized IOPs.  
 
 
-You can use Storage QoS in Windows Server 2016 Technical Preview to accomplish the following:  
+You can use Storage QoS in Windows Server 2016 to accomplish the following:  
 
 -   **Mitigate noisy neighbor issues.** By default, Storage QoS ensures that a single virtual machine cannot consume all storage resources and starve other virtual machines of storage bandwidth.  
 
@@ -36,14 +36,11 @@ This document outlines how your business can benefit from the new Storage QoS fu
 
 -   [How to create storage QoS policies](#BKMK_CreateQoSPolicies)  
 
--   [How to identify and address common issues](Storage-Quality-of-Service.md#BKMK_KnownIssues)  
+-   [How to identify and address common issues](#BKMK_KnownIssues)  
 
 -   [Monitor Health using Storage QoS](#BKMK_Health)  
 
--   [Updates from previous version of Windows Server Technical Preview](Storage-Quality-of-Service.md#BKMK_Updates)  
-
-> [!IMPORTANT]  
-> Windows Server 2016 Technical Preview is an early pre-release build. Features and scenarios are still in development and the experiences are still evolving. At this stage, Windows Server 2016 Technical Preview and Storage QoS are for evaluations only and should not be used in production environments.  
+-   [Updates from previous version of Windows Server Technical Preview](#BKMK_Updates)  
 
 > [!NOTE]  
 > There are two changes Windows Server 2016 Technical Preview (TP5) for Storage Quality of Service (sQoS). The policy type names have been changed in the PowerShell scripts. The new type names are **Dedicated** and **Aggregated**. This document includes more information on these features and also contains examples of configuring and managing them.  
@@ -60,7 +57,7 @@ Storage QoS supports two deployment scenarios:
 
     -   Compute cluster that has least one server with the Hyper-V role enabled  
 
-    For Storage QoS, the Failover Cluster is required on Storage servers, but the compute servers are not required to be in a failover cluster. All servers (used for both Storage and Compute) must be running Windows Server Technical Preview.  
+    For Storage QoS, the Failover Cluster is required on Storage servers, but the compute servers are not required to be in a failover cluster. All servers (used for both Storage and Compute) must be running Windows Server 2016.  
 
     If you do not have a Scale-Out File Server cluster deployed for evaluation purposes, for step by step instructions to build one using either existing servers or virtual machines, see [Windows Server 2012 R2 Storage: Step-by-step with Storage Spaces, SMB Scale-Out and Shared VHDX (Physical)](http://blogs.technet.com/b/josebda/archive/2013/07/31/windows-server-2012-r2-storage-step-by-step-with-storage-spaces-smb-scale-out-and-shared-vhdx-physical.aspx).  
 
@@ -70,7 +67,7 @@ Storage QoS supports two deployment scenarios:
 
     -   Hyper-V using Cluster Shared Volumes (CSV) for storage  
 
-Failover Cluster is required. All servers must be running the same version of Windows Server 2016 Technical Preview.  
+Failover Cluster is required. All servers must be running the same version of Windows Server 2016.  
 
 ### <a name="BKMK_SolutionOverview"></a>Using Storage QoS in a software-defined storage solution  
 Storage Quality of Service is built into the Microsoft software-defined storage solution provided by Scale-Out File Server and Hyper-V. The Scale-Out File Server exposes file shares to the Hyper-V servers using the SMB3 protocol. A new Policy Manager has been added to the File Server cluster, which provides the central storage performance monitoring.  
@@ -87,7 +84,7 @@ When there are changes to Storage QoS policies or to the performance demands by 
 
 |Term|Description|  
 |--------|---------------|  
-|Normalized IOPs|All of the storage usage is measured in "Normalized IOPs."  This is a count of the storage input/output operations per second.  Any IO that is 8KB or smaller is considered as one normalized IO.  Any IO that is larger than 8KB is treated as multiple normalized IOs. For example, a 256KB request is treated as 32 normalized IOPs.<br /><br />The Technical Preview includes the ability to specify the size used to normalize IOs.  On the storage cluster, the normalized size can be specified and take effect on the normalization calculations cluster wide.  The default remains 8KB.|  
+|Normalized IOPs|All of the storage usage is measured in "Normalized IOPs."  This is a count of the storage input/output operations per second.  Any IO that is 8KB or smaller is considered as one normalized IO.  Any IO that is larger than 8KB is treated as multiple normalized IOs. For example, a 256KB request is treated as 32 normalized IOPs.<br /><br />Windows Server 2016 includes the ability to specify the size used to normalize IOs.  On the storage cluster, the normalized size can be specified and take effect on the normalization calculations cluster wide.  The default remains 8KB.|  
 |Flow|Each file handle opened by a Hyper-V server to a VHD or VHDX file is considered a "flow". If a virtual machine has two virtual hard disks attached, it will have 1 flow to the file server cluster per file. If a VHDX is shared with multiple virtual machines, it will have 1 flow per virtual machine.|  
 |InitiatorName|Name of the virtual machine that is reported to the Scale-Out File Server for each flow.|  
 |InitiatorID|An identifier matching the virtual machine ID.  This can always be used to uniquely identify individual flows virtual machines even if the virtual machines have the same InitiatorName.|  
@@ -102,10 +99,10 @@ When there are changes to Storage QoS policies or to the performance demands by 
 This section describes how to enable the new Storage QoS feature and how to monitor storage performance without applying custom policies.  
 
 ### <a name="BKMK_SetupStorageQoSonStorageCluster"></a>Set up Storage QoS on a Storage Cluster  
-This section discusses how to enable Storage QoS on either a new or an existing Failover Cluster and Scale-Out File Server that is running Windows Server 2016 Technical Preview  
+This section discusses how to enable Storage QoS on either a new or an existing Failover Cluster and Scale-Out File Server that is running Windows Server 2016.  
 
 #### Set up Storage QoS on a new installation  
-If you have configured a new Failover Clusterand configured a Cluster Shared Volume(CSV) on Windows Server 2016 Technical Preview, then the Storage QoS feature will be set up automatically.  
+If you have configured a new Failover Cluster and configured a Cluster Shared Volume(CSV) on Windows Server 2016, then the Storage QoS feature will be set up automatically.  
 
 #### Verify Storage QoS installation  
 After you have created a Failover Cluster and configured a CSV disk, , **Storage QoS Resource** is displayed as a Cluster Core Resource and visible in both Failover Cluster Manager and Windows PowerShell. The intent is that the failover cluster system will manage this resource and you should not have to do any actions against this resource.  We display  it in both Failover Cluster Manager and PowerShell to be consistent with the other failover cluster system resources like the new Health Service.  
@@ -128,7 +125,7 @@ Storage Qos Resource   Online     Cluster Group     Storage QoS Policy Manager
 The Hyper-V role in Windows Server 2016 Technical Preview has built-in support for Storage QoS and is set up by default.  
 
 #### Install Remote Administration Tools to manage Storage QoS policies from remote computers  
-You can manage Storage QoS policies and monitor flows from compute hosts using the Remote Server Administration Tools.  These are available as optional features on all Windows Server 2016 Technical Preview installations, and can be downloaded separately for Windows 10 at the [Microsoft Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=44280) website. .  
+You can manage Storage QoS policies and monitor flows from compute hosts using the Remote Server Administration Tools.  These are available as optional features on all Windows Server 2016 installations, and can be downloaded separately for Windows 10 at the [Microsoft Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=44280) website. .  
 
 The **RSAT-Clustering** optional feature includes the Windows PowerShell module for remote management of Failover Clustering, including Storage QoS.  
 
@@ -827,9 +824,9 @@ while ($true)
 }  
 ```  
 
-## <a name="BKMK_Updates"></a>Updates from previous version of Windows Server Technical Preview  
+## <a name="BKMK_Updates"></a>Updates from previous version of Windows Server 2016 Technical Preview  
 
-This section lists what's new from the previous version of Windows Server Technical Preview.  
+This section lists what's new from the previous version of Windows Server 2016 Technical Preview.  
 
 -   **PowerShell**- The Hyper-V PowerShell module now includes the Storage QoS properties.  The scripts used in the Windows Server Technical Preview 1 (like Get-VMHardDiskDrivePolicy.ps1) are no longer required.  
 
@@ -916,9 +913,6 @@ In Windows Server 2016 Technical Preview 5 the Storage QoS Policy type names hav
     If you have a flow that is hitting a maximum of a policy and you change the policy to either make it higher or lower, and then you immediately determine the latency/IOPS/BandWidth of the flows using the PowerShell cmdlets, it will take up to 5 minutes to see the full effects of the policy change on the flows.  The new limits will be in effect within a few seconds, but the **Get-StorgeQoSFlow** PowerShell cmdlet uses an average of each counter using a 5 minute sliding window.  Otherwise, if it was showing a current value and you ran the PowerShell cmdlet multiple times in a row, you may see vastly different values because values for IOPS and latencies can fluctuate significantly from one second to another.  
 
 ## See Also  
-
--   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/storage-replica-windows-server-2016.md)  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
+-   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
+-   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  

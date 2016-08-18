@@ -15,9 +15,9 @@ ms.author: JGerend
 ---
 # Storage Replica Overview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-This topic provides an overview of the new Storage Replica feature in Windows Server 2016 Technical Preview and includes the following sections:  
+This topic provides an overview of the new Storage Replica feature in Windows Server 2016 and includes the following sections:  
 * [Goals and Supported Replication Scenarios](#BKMK_SR1)  
 * [Storage Replica Features](#BKMK_SR2)  
 * [Storage Replica Prerequisites](#BKMK_SR3)  
@@ -27,7 +27,7 @@ This topic provides an overview of the new Storage Replica feature in Windows Se
 This guide outlines how your business can benefit from this new functionality and the different replication scenarios that are supported by Storage Replica. It assumes that you have a previous working knowledge of Windows Server, Failover Clustering, File Servers, and Hyper-V, to include basic administration.  
 
 ### Why use Storage Replica?  
-Storage Replica offers new disaster recovery and preparedness capabilities in Windows Server 2016 Technical Preview. For the first time, Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data will exist elsewhere without any possibility of loss. The same applies *before* a disaster strikes; Storage Replica offers you the ability to switch workloads to safe locations prior to catastrophes when granted a few moments warning - again, with no data loss.  
+Storage Replica offers new disaster recovery and preparedness capabilities in Windows Server 2016. For the first time, Windows Server offers the peace of mind of zero data loss, with the ability to synchronously protect data on different racks, floors, buildings, campuses, counties, and cities. After a disaster strikes, all data will exist elsewhere without any possibility of loss. The same applies *before* a disaster strikes; Storage Replica offers you the ability to switch workloads to safe locations prior to catastrophes when granted a few moments warning - again, with no data loss.  
 
 Storage Replica allows more efficient use of multiple datacenters. By stretching clusters or replicating clusters, workloads can be run in multiple datacenters for quicker data access by local proximity users and applications, as well as better load distribution and use of compute resources. If a disaster takes one datacenter offline, you can move its typical workloads to the other site temporarily.  
 
@@ -35,8 +35,8 @@ Storage Replica may allow you to decommission existing file replication systems 
 
 Storage Replica also supports asynchronous replication for longer ranges and higher latency networks. Because it is not checkpoint-based, and instead continuously replicates, the delta of changes will tend to be far lower than snapshot-based products. Furthermore, Storage Replica operates at the partition layer and therefore replicates all VSS snapshots created by Windows Server or backup software; this allows use of application-consistent data snapshots for point in time recovery, especially unstructured user data replicated asynchronously.  
 
-### <a name="BKMK_SRSupportedScenarios"></a>Supported Storage Replica configurations in Windows Server 2016 Technical Preview  
-Using this guide and Windows Server 2016 Technical Preview, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3). To reiterate from the Windows Server 2016 Technical Preview EULA, this feature is provided "AS-IS" and is not supported in production environments.  
+### <a name="BKMK_SRSupportedScenarios"></a>Supported Storage Replica configurations in Windows Server 2016  
+Using this guide and Windows Server 2016, you can deploy storage replication in a stretch cluster, between cluster-to-cluster, and in server-to-server configurations (see Figures 1-3).
 
 **Stretch Cluster** allows configuration of computers and storage in a single cluster, where some nodes share one set of asymmetric storage and some nodes share another, then synchronously or asynchronously replicate with site awareness. This scenario can utilize shared Storage Spaces on JBOD, SAN and iSCSI-attached LUNs. It is managed with PowerShell and the Failover Cluster Manager graphical tool, and allows for automated workload failover.  
 
@@ -81,7 +81,7 @@ Using this guide and Windows Server 2016 Technical Preview, you can deploy stora
 
 * **Thin provisioning**. Support for thin provisioning in Storage Spaces and SAN devices is supported, in order to provide near-instantaneous initial replication times under many circumstances.  
 
-Windows Server 2016 Technical Preview implements the following features in Storage Replica:  
+Windows Server 2016 implements the following features in Storage Replica:  
 
 |Feature|Details|  
 |-----------|-----------|  
@@ -166,10 +166,8 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
     -   Updates to various cmdlets.  
 
 -   Fixes. Many bug fixes, stability improvements, provisioning, and de-provisioning improvements, and known issues resolved.  
+
 ### Key Evaluation Points and Behaviors  
-
--   Test only. You cannot deploy Storage Replica in production environments using Windows Server 2016 Technical Preview. This version is only for evaluation purposes in a test lab environment.  
-
 -   Performance. The Windows Server 2016 Technical Preview version of Storage Replica has not been fully optimized for performance.  
 
 -   Network bandwidth and latency with fastest storage. There are physical limitations around synchronous replication. Because SR implements an IO filtering mechanism using logs and requiring network round trips, synchronous replication is likely make application writes slower. By using low latency, high-bandwidth networks as well as high-throughput disk subsystems for the logs, you will minimize performance overhead.  
@@ -185,7 +183,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.  
 
 > [!NOTE]
-> This document contains a list of [known issues](Storage-Replica--Known-Issues.md) and expected behaviors as well as [frequently asked questions](Storage-Replica--Frequently-Asked-Questions.md)  
+> This document contains a list of [known issues](known-issues.md) and expected behaviors as well as [Frequently Asked Questions](frequently-asked-questions.md)  
  section.  
 ### Storage Replica terminology  
 This guide frequently uses the following terms:  
@@ -199,22 +197,13 @@ This guide frequently uses the following terms:
 -   A replication group is the organization of volumes and their replication configuration within a partnership, on a per server basis. A group may contain one or more volumes.  
 
 ## Related Topics  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
-
--   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
-
--   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
-
--   [Cluster to Cluster Storage Replication](Cluster-to-Cluster-Storage-Replication.md)  
-
--   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
-
--   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
+-   [Storage Replica in Windows Server 2016](overview.md)  
+-   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+-   [Server to Server Storage Replication](server-to-server.md)  
+-   [Cluster to Cluster Storage Replication](cluster-to-cluster.md)  
+-   [Storage Replica: Known Issues](known-issues.md)  
+-   [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
 
 ## See Also  
-
--   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
-
+-   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  

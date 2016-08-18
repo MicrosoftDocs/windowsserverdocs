@@ -16,15 +16,13 @@ ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: kumudd
 ---
 # Health Service in Windows Server 2016
+> Applies To: Windows Server 2016
 
->Applies To: Windows Server Technical Preview
-
-
-The Health Service is a new feature in Windows Server 2016 Technical Preview which significantly improves the day-to-day monitoring, operations, and maintenance experience of Storage Spaces. As of Technical Preview 5, it is supported only for Storage Spaces Direct.  
+The Health Service is a new feature in Windows Server 2016 which significantly improves the day-to-day monitoring, operations, and maintenance experience of Storage Spaces. In Windows Server 2016, it is supported only for Storage Spaces Direct.  
 
 ## Prerequisites  
 
-The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md).  
+The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces-direct/overview.md).  
 
 ## Metrics  
 
@@ -32,25 +30,17 @@ The Health Service vastly reduces the work required to get live performance and 
 
 ### Coverage  
 
-In Windows Server 2016 Technical Preview, the Health Service provides the following Metrics:  
-
+In Windows Server 2016, the Health Service provides the following Metrics:  
 -   IOPS (Read, Write, Total)  
-
 -   IO Throughput (Read, Write, Total)  
-
 -   IO Latency (Read, Write)  
-
 -   Physical Capacity (Total, Remaining)  
-
 -   Pool Capacity (Total, Remaining)  
-
 -   Volume Capacity (Total, Remaining)  
-
 -   CPU Utilization %, All Machines Average  
-
 -   Memory, All Machines (Total, Available)  
 
- ### Usage  
+### Usage  
 
 To get Metrics for the entire Storage Spaces Direct cluster run the following PowerShell cmdlet. The **&lt;Count&gt;** parameter indicates how many sets of values to return, at one second intervals.  
 
@@ -117,11 +107,11 @@ For example, here is a typical fault:
 
 
  >[!NOTE]
- > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016 Technical Preview](../storage-spaces/fault-domains-windows-server-2016.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
+ > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](../fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
 
 ### Coverage  
 
-In Windows Server 2016 Technical Preview 5, the Health Service provides the following Fault coverage:  
+In Windows Server 2016, the Health Service provides the following Fault coverage:  
 
 -   **Essential cluster hardware**:  
 
@@ -220,7 +210,7 @@ One new PowerShell cmdlet displays all Actions:
 
 ### Coverage  
 
-In Windows Server 2016 Technical Preview, the **Get-StorageHealthAction** cmdlet can return any of the following information:  
+In Windows Server 2016, the **Get-StorageHealthAction** cmdlet can return any of the following information:  
 
 -   Retiring failed, lost connectivity, or unresponsive physical disk  
 
@@ -321,7 +311,5 @@ You can verify using the following PowerShell cmdlet:
     Get-PhysicalDisk | Select Model, Manufacturer, FirmwareVersion  
 
 ## See also  
-
--   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](../../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
-
--  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
+- [Release Notes: Important Issues in Windows Server 2016](../../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+- [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces-direct/overview.md)  

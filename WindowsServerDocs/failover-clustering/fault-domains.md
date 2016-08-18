@@ -1,5 +1,5 @@
 ---
-title: Fault Domains in Windows Server 2016 Technical Preview
+title: Fault Domains in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,19 +13,16 @@ author: kumudd
 manager: dongill
 ms.author: JGerend
 ---
-# Fault Domains in Windows Server 2016 Technical Preview
-
->Applies To: Windows Server Technical Preview
-
+# Fault Domains in Windows Server 2016
+> Applies To: Windows Server 2016
 
 A fault domain is a set of hardware components that share a single point of failure. For example, all physical disk drives in one server are vulnerable to that server going down; similarly, all servers in one rack are vulnerable to that rack going down. Even, everything in one geographic site may be vulnerable to power outages or natural disasters.  
-
 
 Fault domains are closely related to the concept of "fault tolerance". To be fault tolerant to any given level, it is necessary to have multiple fault domains at that level. For example, to be "rack fault tolerant", your servers and your data must be distributed across multiple racks.  
 
 ## Benefits  
 
-The operating system on any particular server is very likely unaware of its physical circumstance. In general, two Windows Server instances may not be able to tell whether they are adjacent or hundreds of miles apart. In Windows Server 2016 Technical Preview, it is possible to make this distinction by specifying the arrangement of your hardware across several levels of fault domains.  
+The operating system on any particular server is very likely unaware of its physical circumstance. In general, two Windows Server instances may not be able to tell whether they are adjacent or hundreds of miles apart. In Windows Server 2016, it is possible to make this distinction by specifying the arrangement of your hardware across several levels of fault domains.  
 
 Benefits of doing so include:  
 
@@ -105,9 +102,8 @@ This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt
 
 >[!IMPORTANT]
 >The cluster cannot verify the correctness of your fault domains - they are accepted as-is. If hardware is moved or added later, the XML should be updated and reset accordingly. Stretch Clustering preferential ownership and Health Service alerts will dynamically adjust to these changes. However, once the pool and volumes have been created, Storage Spaces Direct will not retroactively move data in response to changes. For this reason, moving nodes between chassis, racks, or sites after enabling Storage Spaces Direct is not recommended nor supported unless you first evict the node and its drives from the pool.  
+
 ## See Also  
-
--   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](storage-spaces-direct-windows-server-2016.md)  
+-   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces-direct/overview.md)  
 

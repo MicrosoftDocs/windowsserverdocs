@@ -15,7 +15,7 @@ ms.author: JGerend
 ---
 # Frequently Asked Questions about Storage Replica
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic contains answers to the following frequently asked questions about Storage Replica:  
 
@@ -55,7 +55,7 @@ Install Storage Replica on Nano Server using  PowerShell remoting as follows:
     Install-windowsfeature -Name storage-replica -ComputerName <nano server> -Restart -IncludeManagementTools  
     ```  
 
-    Using the `Test-SRTopology` cmdlet with Nano Server in Windows Server 2016 Technical Preview requires remote script invocation with CredSSP. Unlike other Storage Replica cmdlets, `Test-SRTopology` requires running locally on the source server.   
+    Using the `Test-SRTopology` cmdlet with Nano Server in Windows Server 2016 requires remote script invocation with CredSSP. Unlike other Storage Replica cmdlets, `Test-SRTopology` requires running locally on the source server.   
 On the Nano server (through a remote PSSession) :  
 
     >[!NOTE]
@@ -118,22 +118,21 @@ For configuring network constraints on a stretch cluster:
     Set-SRNetworkConstraint -SourceComputerName sr-srv01 -SourceRGName group1 -SourceNWInterfaceIndex "Cluster Network 1","Cluster Network 2" -DestinationComputerName sr-srv03 -DestinationRGName group2 -DestinationNWInterfaceIndex "Cluster Network 1","Cluster Network 2"  
 
 ## <a name="FAQ4"></a> Can I configure one-to-many replication or transitive (A to B to C) replication?  
-Not in Windows Server 2016 Technical Preview. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release.  
+Not in Windows Server 2016. This release only supports one to one replication of a server, cluster, or stretch cluster node. This may change in a later release.  
 
 ## <a name="FAQ5"></a> Can I expand or shrink replicated volumes replicated by Storage Replica?  
-
-Not in Windows Server 2016 Technical Preview. You must remove replication, resize volumes, and then add replication back to the volumes. This may change in a later release.  
+Not in Windows Server 2016. You must remove replication, resize volumes, and then add replication back to the volumes. This may change in a later release.  
 
 ## <a name="FAQ6"></a>Can I bring a destination volume online for read-only access?  
-Not in Windows Server 2016 Technical Preview.   Storage Replica dismounts the destination volume and its drive letter or mount point when replication begins. This may change in a later release.  
+Not in Windows Server 2016. Storage Replica dismounts the destination volume and its drive letter or mount point when replication begins. This may change in a later release.  
 
 ## <a name="FAQ7"></a> Can I configure Scale-out File Server (SOFS) in a stretch cluster?  
-While technically possible, this is not a recommended configuration  in Windows Server 2016 Technical Preview due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration will probably work without issues.   
+While technically possible, this is not a recommended configuration in Windows Server 2016 due to the lack of site awareness in the compute nodes contacting the SOFS. If using campus-distance networking, where latencies are typically sub-millisecond, this configuration will probably work without issues.   
 
 If configuring cluster-to-cluster replication, Storage Replica fully supports Scale-out File Servers, including the use of Storage Spaces Direct, when replicating between two clusters.  
 
 ## <a name="FAQ8"></a>Can I configure Storage Spaces Direct in a stretch cluster with Storage Replica?  
-This is not a supported configuration in Windows Server 2016 Technical Preview.  This may change in a later release. If configuring cluster-to-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper-V Servers, including the use of Storage Spaces Direct.  
+This is not a supported configuration in Windows Server 2016.  This may change in a later release. If configuring cluster-to-cluster replication, Storage Replica fully supports Scale Out File Servers and Hyper-V Servers, including the use of Storage Spaces Direct.  
 
 ## <a name="FAQ9"></a>How do I configure asynchronous replication?  
 
@@ -153,7 +152,7 @@ You can also use seeded data volumes, by ensuring that the destination volume ha
 
 ## <a name="FAQ13"></a> Can I delegate users to administer replication?  
 
-You can use the `Grant-SRDelegation` cmdlet in Windows Server 2016 Technical Preview. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:  
+You can use the `Grant-SRDelegation` cmdlet in Windows Server 2016. This allows you to set specific users in server to server, cluster to cluster, and stretch cluster replication scenarios as having the permissions to create, modify, or remove replication, without being a member of the local administrators group. For example:  
 
     Grant-SRDelegation -UserName threshold\sradmin  
 
@@ -203,21 +202,12 @@ For technical assistance with Storage Replica, you can post at the Microsoft Tec
 
 
 ## Related Topics  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
-
--   [Storage Replica Overview](Storage-Replica-Overview.md)  
-
--   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
-
--   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
-
--   [Cluster to Cluster Storage Replication](Cluster-to-Cluster-Storage-Replication.md)  
-
--   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
+-   [Storage Replica Overview](overview.md) 
+-   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+-   [Server to Server Storage Replication](server-to-server.md)  
+-   [Cluster to Cluster Storage Replication](cluster-to-cluster.md)  
+-   [Storage Replica: Known Issues](known-issues.md)  
 
 ## See Also  
-
--   [Storage](../Storage.md)  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
+-   [Storage](../overview.md)  
+-   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  

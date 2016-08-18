@@ -16,10 +16,10 @@ ms.author: JGerend
 ---
 # Storage Spaces Fault Tolerance
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 
-Windows Server 2016 Technical Preview Storage Spaces Direct enhances the resiliency of virtual disks to enable resiliency to node failures. This is in addition to the existing disk and enclosure resiliency.  
+Windows Server 2016 Storage Spaces Direct enhances the resiliency of virtual disks to enable resiliency to node failures. This is in addition to the existing disk and enclosure resiliency.  
 
 When using Storage Spaces Direct, storage pools and virtual disks will, by default, be resilient to node failures. When a storage pool is created the "FaultDomainAwarenessDefault" property is set to "StorageScaleUnit". This controls the default for virtual disk creation. You can inspect the storage pool property by running the following command:  
 
@@ -86,27 +86,17 @@ In this scenario Storage Spaces will not automatically retire physical disks fro
 ### <a name="BKMK_FaultTolerance_Scenario5"></a>Scenario 5: Permanent storage node failure  
 In this scenario, Storage Spaces will require the administrator to retire all the affected physical disks from the storage pool, add additional storage nodes to the storage system if needed, and then start repair. The reason this not an automatic process is that Storage Spaces does not know if it is a temporary or permanent failure. It is not desirable to initiate a repair that could potentially result in significant I/O and CPU activity.  
 
-For more information on Fault Domains, see [Fault Domains in Windows Server 2016 Technical Preview](fault-domains-windows-server-2016.md)  
+For more information on Fault Domains, see [Fault Domains in Windows Server 2016](../../failover-clustering/fault-domains.md)  
 
 ## Related Topics  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](storage-spaces-direct-windows-server-2016.md)  
-
+-   [Storage Spaces Direct in Windows Server 2016](overview.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
-
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
-
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 
 ## See Also  
-
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
-
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
-
--   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/whats-new-failover-clustering-windows-server.md)  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/storage-replica-windows-server-2016.md)  
-
--   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
-
+-   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-failover-clustering-windows-server.md)  
+-   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
+-   [Storage Quality of Service](../storage-qos/overview.md)  

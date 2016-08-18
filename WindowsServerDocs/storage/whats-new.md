@@ -34,7 +34,7 @@ Storage Spaces Direct enables building highly available and scalable storage usi
 Storage Spaces Direct enables service providers and enterprises to use industry standard servers with local storage to build highly available and scalable software defined storage. Using servers with local storage decreases complexity, increases scalability, and enables use of storage devices that were not previously possible, such as SATA solid state disks to lower cost of flash storage, or NVMe solid state disks for better performance.  
 
 Storage Spaces Direct removes the need for a shared SAS fabric, simplifying deployment and configuration. Instead it uses the network as a storage fabric, leveraging SMB3 and SMB Direct (RDMA) for high-speed, low-latency CPU efficient storage. To scale out, simply add more servers to increase storage capacity and I/O performance  
-For more information, see the [Storage Spaces Direct in Windows Server 2016](storage-spaces/storage-spaces-direct-windows-server-2016.md).  
+For more information, see the [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct/overview.md).  
 
 **What works differently?**  
 This capability is new in Windows Server 2016.  
@@ -57,7 +57,7 @@ Storage Replication enables you to do the following:
 * Help reduce downtime, and increase reliability and productivity intrinsic to Windows.  
 * Provide supportability, performance metrics, and diagnostic capabilities.  
 
-For more information, see the [Storage Replica in Windows Server 2016](storage-replica/storage-replica-windows-server-2016.md).  
+For more information, see the [Storage Replica in Windows Server 2016](storage-replica/overview.md).  
 
 **What works differently?**  
 This capability is new in Windows Server 2016.  
@@ -79,7 +79,7 @@ You can now create storage QoS policies on a Scale-Out File Server and assign th
 **What works differently?**  
 This capability is new in Windows Server 2016. It was not possible to configure centralized policies for storage QoS in previous releases of Windows Server.  
 
-For more information, see [Storage Quality of Service](software-defined-storage/Storage-Quality-of-Service.md)
+For more information, see [Storage Quality of Service](storage-qos/overview.md)
 
 ## <a name="dedup"></a>Data Deduplication  
 <table>

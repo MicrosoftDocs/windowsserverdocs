@@ -15,11 +15,11 @@ author: kumudd
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Windows Server 2016 Technical Preview introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
+Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
-Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct (S2D), and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 Technical Preview and includes the following sections:  
+Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct (S2D), and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 and includes the following sections:  
 *  [How to use this guide](#BKMK_S2D1)  
 * [Hyper-converged Solution with Software Defined Storage Overview](#BKMK_S2D2)  
 *  [Hardware requirements](#BKMK_S2D3)  
@@ -50,7 +50,7 @@ The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storag
 
 We are working with our hardware partners to define and validate specific hardware configurations, including SAS HBA, SATA SSD and HDD, RDMA enabled network adapters etc. to ensure a good user experience. You should contact your hardware vendors for the solutions that they have verified are compatible for use with Storage Spaces Direct.  
 
-If you would like to evaluate Storage Spaces Direct in Windows Server 2016 Technical Preview without investing in hardware, you can use Hyper-V virtual machines, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
+If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
 
   > [!NOTE]
   > Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.  
@@ -88,20 +88,20 @@ The following information will be needed as inputs to configure provision and ma
         -   There are 2 types of RDMA protocols, note which type your RDMA adapter is (RoCEv2 or iWarp)  
 
     -   VLAN ID to be used for the 2 network interfaces used by the management OS on the hyper-converged hosts. You should be able to obtain this from your network administrator.  
--   **[Service Package KB3157663](https://support.microsoft.com/kb/3157663)**  This package has updates that are important to have the hyper-converged nodes, as well as any server managing a Windows Server 2016 Technical Preview hyper-converged deployment.  
+-   **[Service Package KB3157663](https://support.microsoft.com/kb/3157663)**  This package has updates that are important to have the hyper-converged nodes, as well as any server managing a Windows Server 2016 hyper-converged deployment.  
 
 ## <a name="BKMK_InstallOptions"></a>Nano or Full/Core Installation Options  
-Hyper-converged deployments can be done using either Nano or Full/Core installations of Windows Server 2016 Technical Preview. Nano is a new install type for Windows Server 2016 Technical Preview, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx) for more information on the advantages of using Nano and deploying and managing Nano server.   
+Hyper-converged deployments can be done using either Nano or Full/Core installations of Windows Server 2016. Nano is a new install type for Windows Server 2016, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx) for more information on the advantages of using Nano and deploying and managing Nano server.   
 This guide focuses on deploying hyper-converged systems using Nano server and the "Deploy the operating system" section is a step-by-step method of deploying Nano server.  
 However, the steps in the "Configure the Network" and "Configure Storage Spaces Direct" sections are identical whether you are using Nano or Full or Core installations.  
 For full and core installations, instead of following the "Deploy the operating system" in this guide, you can deploy Windows Server 2012 Datacenter like you would any other Failover Cluster deployment.  This includes joining them to an Active Directory domain and installing the Hyper-V role and Failover Cluster feature.   
 Nano server installations require all management to be done remotely, except what can be done through the Nano Recovery Console.  On Full and core installations you can use the remote management steps in this guide, or in some cases you can log into the servers and do the commands and management locally.  
 >[!IMPORTANT]
->The Mellanox driver for Windows Server 2016 Technical Preview Technical Preview 5 has some extra configuration required when installing on a Full or Core install (not on Nano).  See the section [Mellanox Driver Install for Full and Core Installations](#BKMK_S2D8).  
+>The Mellanox driver for Windows Server 2016 Technical Preview 5 has some extra configuration required when installing on a Full or Core install (not on Nano).  See the section [Mellanox Driver Install for Full and Core Installations](#BKMK_S2D8).  
 
 ## <a name="BKMK_S2D5"></a> Nano Server: Installing and configuring Hyper-Converged solution with Storage Spaces Direct  
 
-This section includes instructions to install and configure the components of a Hyper-Converged system using the Windows Server 2016 Technical Preview with a Nano Server configuration of the operating system. The act of deploying a Hyper-Converged system can be divided into three high level phases:  
+This section includes instructions to install and configure the components of a Hyper-Converged system using the Windows Server 2016 with a Nano Server configuration of the operating system. The act of deploying a Hyper-Converged system can be divided into three high level phases:  
 
 1.  [Deploy the operating system](#BKMK_S2D5a)  
 
@@ -109,11 +109,11 @@ This section includes instructions to install and configure the components of a 
 
 3.  [Configure Storage Spaces Direct](#BKMK_S2D5c)  
 
-Figure 2 illustrates the process for building a hyper-converged solution using Windows Server 2016 Technical Preview.  
+Figure 2 illustrates the process for building a hyper-converged solution using Windows Server 2016.  
 
 ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_HyperconvergedInfratsructureProcess.png)  
 
-**Figure 2: Process for building a hyper-converged solution using Windows Server 2016 Technical Preview.**  
+**Figure 2: Process for building a hyper-converged solution using Windows Server 2016.**  
 
 You can work on these steps a few at a time or all at once. However, they do need to be completed in the order shown in Figure 2. After describing some prerequisites and terminology, this guide describes each of the three phases in more detail and provides examples.  
 
@@ -134,7 +134,7 @@ The provisioning and deployment process for a Windows Server Nano server involve
 
 **Management machine.** For the purposes of this document, the machine that has the management tools to remotely manage the Nano servers will be referred to as the Management system. The management system machine has the following requirements:  
 
-- Running Windows Server 2016 Technical Preview 5, domain joined to the same domain or fully trusted domain as the Nano systems.  
+- Running Windows Server 2016, domain joined to the same domain or fully trusted domain as the Nano systems.  
 
 - Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server 2016 and can be installed without installing other features.  
 
@@ -145,7 +145,7 @@ The provisioning and deployment process for a Windows Server Nano server involve
 **Host machines.** In the example below, the expectation is that you start with physical machines that are booted to a Windows Server operating system (full or core). We'll be copying the VHDs files to the Host machines and then re-booting into Nano operation system that was created in the VHDx files. Booting from a VHDx file is the method of deployment being outlined in this guide. Other methods of deploying Nano Server can also be used.  
 
 > [!NOTE]
-> The Image creation machine and the Management machine (defined below) can be the same machine. The critical factor is that **the machine from which you are managing must be of the same version (or higher) as the Nano servers that are being managed.** For Windows Server 2016 Technical Preview 5 evaluation **we recommend that your Management machine be running WS2016 TP5 so you will be able to efficiently manage the Nano Servers (which are also running TP5).**  
+> The Image creation machine and the Management machine (defined below) can be the same machine. The critical factor is that **the machine from which you are managing must be of the same version (or higher) as the Nano servers that are being managed.** For Windows Server 2016 evaluation **we recommend that your Management machine be running Windows Server 2016 so you will be able to efficiently manage the Nano Servers (which are also running Windows Server 2016).**  
 
 ### <a name="BKMK_S2D5a"></a> Deploy the operating system  
 
@@ -163,7 +163,7 @@ Deploying the operating system includes the following tasks:
 
      ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step1HyperconvergedInfratsructureProcess.png)  
 
-**Figure 3: Process for deploying the operating system in a hyper-converged solution using Windows Server 2016 Technical Preview.**  
+**Figure 3: Process for deploying the operating system in a hyper-converged solution using Windows Server 2016.**  
 
 Complete the steps below to create and deploy the Nano Server as the operating system on your Host machines in a Hyper-Converged system.   
 
@@ -189,7 +189,7 @@ There are other methods to deploy Nano, but in the case of this example we'll pr
 > [!NOTE]
 > If you have drivers that are recommended by your hardware vendor, it is simplest to inject the network drivers into the image during the "New-NanoServerImage" step below. If you don't, you may be able to use the in-box drivers using the -OEMDrivers parameter in the "New-NanoServerImage" command, and then update the drivers using Windows Update after deployment. It is important to have the drivers that your hardware vender recommends, so that the networks provide the best reliability and performance possible.  
 
-1.  On the **Image creation machine**, mount the Windows Server Technical Preview .ISO. To mount the ISO, in File Explorer select and right click on the ISO, then choose **Mount**. Once the mounted drive is opened, navigate to the *\NanoServer\NanoServerImageGenerator* directory and **copy** the contents to a directory to **your desired working folder** on your **Image creation machine** where you want to create and store your new Nano Server Images.  
+1.  On the **Image creation machine**, mount the Windows Server 2016 .ISO. To mount the ISO, in File Explorer select and right click on the ISO, then choose **Mount**. Once the mounted drive is opened, navigate to the *\NanoServer\NanoServerImageGenerator* directory and **copy** the contents to a directory to **your desired working folder** on your **Image creation machine** where you want to create and store your new Nano Server Images.  
 
     In this example, the NanoServerImageGenerator directory will be copied to:  
 
@@ -364,7 +364,7 @@ The following assumes 2 RDMA NIC Ports (1 dual port, or 2 single port). In order
 
 ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step2HyperconvergedInfratsructureProcess.png)  
 
-**Figure 4: Process for configuring the network in a hyper-converged solution using Windows Server 2016 Technical Preview.**  
+**Figure 4: Process for configuring the network in a hyper-converged solution using Windows Server 2016.**  
 
 > [!NOTE]
 > Skip this **Network Configuration** section, if you are testing Storage Spaces Direct inside of virtual machines. RDMA is not available for networking inside a virtual machine.                                                                                                  
@@ -535,7 +535,7 @@ Do the following steps from a management system using [Enter-PSSession](https://
 
 ### <a name="BKMK_S2D5c"></a> Configure Storage Spaces Direct    
 
-Configuring Storage Spaces Direct in Windows Server 2016 Technical Preview includes the following steps:  
+Configuring Storage Spaces Direct in Windows Server 2016 includes the following steps:  
 
 -   [Step 1. Run cluster validation tool](#BKMK_S2D5c1)   
 
@@ -555,7 +555,7 @@ The following steps are done on a management system that is the same version as 
 
 ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_Step3HyperconvergedInfratsructureProcess.png)  
 
- **Figure 4: Process for configuring Storage Spaces Direct in a hyper-converged solution using Windows Server 2016 Technical Preview.**  
+ **Figure 4: Process for configuring Storage Spaces Direct in a hyper-converged solution using Windows Server 2016.**  
 
 
 #### <a name="BKMK_S2D5c1"></a> Step 1. Run the cluster validation tool  
@@ -665,7 +665,7 @@ When Storage Spaces Direct was enabled, it created a single pool using all the d
 The following PowerShell command creates a virtual disk with both mirror and parity resiliency on storage pool:  
 
  > [!NOTE]
- > Technical Preview 5 introduced "Multi-Resiliency Virtual Disks", which allows one virtual disk to include two different resiliency types. For instance, the example below sets the virtual disk to have 3-way mirror *and* parity. This allows for optimizing writes to the mirror for performance and in the background converting to parity when needed to optimize physical disk usage. To identify the tiers on the system you can use the **Get-StorageTier** cmdlet in a PSSession to one of the cluster nodes. |  
+ > "Multi-Resiliency Virtual Disks" allows one virtual disk to include two different resiliency types. For instance, the example below sets the virtual disk to have 3-way mirror *and* parity. This allows for optimizing writes to the mirror for performance and in the background converting to parity when needed to optimize physical disk usage. To identify the tiers on the system you can use the **Get-StorageTier** cmdlet in a PSSession to one of the cluster nodes. |  
 
 Complete the following from a management system without using a PSSession. (You can do the same command from within a PSSession to a cluster node but you would then not use the -CimSession parameter)  
 
@@ -706,17 +706,17 @@ You may use in-box tools or other tools to manage the storage and virtual machin
 ## <a name="BKMK_S2D7"></a>Storage Spaces Optimize Pool ##  
 
 
-Windows Server 2016 Technical Preview Storage Spaces Direct can optimize a storage pool to balance data equally across the set of physical disks that comprise the pool.  
+Windows Server 2016 Storage Spaces Direct can optimize a storage pool to balance data equally across the set of physical disks that comprise the pool.  
 
 Over time, as physical disks are added or removed or as data is written or deleted, the distribution of data among the set of physical disks that comprise the pool may become uneven. In some cases, this may result in certain physical disks becoming full while other disks in the same pool have much lower consumption.  
 
 Similarly, if new storage is added to the pool, optimizing the existing data to utilize the new storage will result in better storage efficiency across the pool and, potentially, improved performance from the newly available additional physical storage throughput. Optimizing the pool is a maintenance task which is performed by the administrator.  
 
-Limitations in Windows Server 2016 Technical Preview:  
+Limitations in Windows Server 2016:  
 
--   Optimize pool is supported only with Simple or Mirror Spaces; Parity Spaces are not supported in Windows Server 2016 Technical Preview.  
+-   Optimize pool is supported only with Simple or Mirror Spaces; Parity Spaces are not supported in Windows Server 2016.  
 
--   There may be cases in Windows Server 2016 Technical Preview where the rebalance operation does not complete. If the rebalance job has stopped making progress, then it is likely that the job is stuck. You can check the status of the optimize job using the command described above. To resolve this condition, run the following command: Get-VirtualDisk | Repair-VirtualDisk.  
+-   There may be cases in Windows Server 2016 where the rebalance operation does not complete. If the rebalance job has stopped making progress, then it is likely that the job is stuck. You can check the status of the optimize job using the command described above. To resolve this condition, run the following command: Get-VirtualDisk | Repair-VirtualDisk.  
 
 You can optimize a storage pool with the following command:  
 
@@ -756,14 +756,10 @@ Values should show **True** for RDMA Capable for the RDMA enabled interfaces. Th
 
 
 ## Related Topics  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
-
--   [Storage Spaces Direct Hardware Requirements](../storage-spaces/Storage-Spaces-Direct-Hardware-Requirements.md)  
-
--   [Storage Spaces Optimize Pool](../storage-spaces/Storage-Spaces-Optimize-Pool.md)  
-
--   [Storage Spaces Fault Tolerance](../storage-spaces/Storage-Spaces-Fault-Tolerance.md)  
+-   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct/overview.md)  
+-   [Storage Spaces Direct Hardware Requirements](storage-spaces-direct/Storage-Spaces-Direct-Hardware-Requirements.md)  
+-   [Storage Spaces Optimize Pool](../storage-spaces-direct/Storage-Spaces-Optimize-Pool.md)  
+-   [Storage Spaces Fault Tolerance](../failover-clustering/fault-tolerance.md)  
 ## See Also ##  
 
 

@@ -15,7 +15,7 @@ ms.author: JGerend
 ---
 # Stretch Cluster Replication Using Shared Storage
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 In this evaluation example, you will configure these computers and their storage in a single stretch cluster, where two nodes share one set of storage and two nodes share another set of storage, then replication keeps both sets of storage mirrored in the cluster to allow immediate failover. These nodes and their storage should be located in separate physical sites, although it is not required. There are separate steps for creating Hyper-V and File Server clusters as sample scenarios.  
 
@@ -37,8 +37,8 @@ This walkthrough uses the following environment as an example:
 **FIGURE:  Storage Replication in a stretch cluster**  
 
 ## Prerequisites  
--   Active Directory Domain Services forest (does not need to run  Windows Server 2016 Technical Preview).  
--   At least two servers with Windows Server 2016 Technical Preview installed. Supports up to 64 node cluster.  
+-   Active Directory Domain Services forest (does not need to run Windows Server 2016).  
+-   At least two servers with Windows Server 2016 installed. Supports up to 64 node cluster.  
 -   Two sets of shared storage, using SAS JBODs, Fibre Channel SAN, Shared VHDX, or iSCSI Target. The storage should contain a mix of HDD and SSD media and must support Persistent Reservation. You will make each storage set available to two of the servers only (asymmetric).  
 -   Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 -   At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
@@ -52,9 +52,9 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 ## Provision operating system, features, roles, storage, and network  
 
 > [!WARNING]
-> Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
+> Windows Server 2016 does not support Storage Replica on production servers.  
 
-1.  Install Windows Server 2016 Technical Preview Datacenter Edition on all server nodes. Do not choose Standard Edition if it is available, as it does not contain Storage Replica. Use of Windows Server Desktop Experience, Core, and Nano installation modes are all supported.  
+1.  Install Windows Server 2016 Datacenter Edition on all server nodes. Do not choose Standard Edition if it is available, as it does not contain Storage Replica. Use of Windows Server Desktop Experience, Core, and Nano installation modes are all supported.  
     > [!IMPORTANT]
     > From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.  
 2.  Add network information and join the nodes to the domain, then restart them.  
@@ -166,7 +166,7 @@ After you setup your server nodes, the next step is to create one of the followi
 >[!NOTE]
 > Skip this section and go to the  [Configure a file server for general use cluster](#BKMK_FileServer) section,  if you want to create a file server cluster and not a Hyper-V cluster.  
 
-You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 #### Graphical method  
 
@@ -182,7 +182,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 4.  Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
 
     > [!NOTE]  
-    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
     > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
@@ -210,7 +210,7 @@ You will now create a normal failover cluster. After configuration, validation, 
        (Get-Cluster).PreferredSite="Seattle"  
 
    > [!NOTE]
-   > There is no option to configure site awareness using Failover Cluster Manager in  Windows Server 2016 Technical Preview.  
+   > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.  
 
 10. **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
 
@@ -227,7 +227,7 @@ You will now create a normal failover cluster. After configuration, validation, 
     ```  
 
     > [!NOTE]
-    >  There is no option to configure VM resiliency using Failover Cluster Manager in  Windows Server 2016 Technical Preview.  
+    >  There is no option to configure VM resiliency using Failover Cluster Manager in  Windows Server 2016.  
 
 #### Windows PowerShell method  
 
@@ -253,7 +253,7 @@ You will now create a normal failover cluster. After configuration, validation, 
     ```  
 
     > [!NOTE]
-    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]
     > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
@@ -293,7 +293,7 @@ You will now create a normal failover cluster. After configuration, validation, 
     ```  
 
     > [!NOTE]  
-    > There is no option to VM Resiliency using Failover Cluster Manager in  Windows Server 2016 Technical Preview.  
+    > There is no option to VM Resiliency using Failover Cluster Manager in Windows Server 2016.  
 
 
 
@@ -302,7 +302,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 >[!NOTE]
 > Skip this section if you have already configured a Hyper-V Failover cluster as described in [Configure a Hyper-V Failover Cluster](#BKMK_HyperV).  
 
-You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+You will now create a normal failover cluster. After configuration, validation, and testing, you will stretch it using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 #### Graphical method  
 
@@ -315,7 +315,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 2.  Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.  
     >[!NOTE]
-    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
+    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
     >[!NOTE]
     >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).   |  
 
@@ -353,7 +353,7 @@ You will now create a normal failover cluster. After configuration, validation, 
          (Get-Cluster).PreferredSite="Seattle"  
 
        >[!NOTE]
-       > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016 Technical Preview.  
+       > There is no option to configure site awareness using Failover Cluster Manager in Windows Server 2016.  
 
 1.  (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
 
@@ -379,7 +379,7 @@ You will now create a normal failover cluster. After configuration, validation, 
        Set-ClusterQuorum -FileShareWitness \\someserver\someshare  
 
     >[!NOTE]
-    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     >[!NOTE]
     >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://technet.microsoft.com/library/hh847275.aspx).   
@@ -414,7 +414,7 @@ You will now create a normal failover cluster. After configuration, validation, 
       2.  Blog post: [Enable Change Notifications between Sites - How and Why?](http://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx)  
 
 ### Configure a stretch cluster  
-Now you will configure the stretch cluster, using either Failover Cluster Manager or Windows PowerShell. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+Now you will configure the stretch cluster, using either Failover Cluster Manager or Windows PowerShell. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 #### Failover Cluster Manager Method  
 
@@ -484,7 +484,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
         3.  On the destination server, navigate to **Applications and Services \ Microsoft \ Windows \ StorageReplica \ Admin** and examine events 5009, 1237, 5001, 5015, 5005, and 2200 to understand the processing progress. There should be no warnings of errors in this sequence. There will be many 1237 events; these indicate progress.  
 
             > [!WARNING]
-            > Windows Server 2016 Technical Preview, CPU and memory usage are likely to be higher than normal until initial synchronization completes.  
+            > Windows Server 2016, CPU and memory usage are likely to be higher than normal until initial synchronization completes.  
 
 #### Windows PowerShell method  
 
@@ -608,7 +608,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
     ```  
 
 ### Manage stretched cluster replication  
-Now you will manage and operate your stretch cluster. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+Now you will manage and operate your stretch cluster. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 #### Graphical Tools Method  
 
@@ -639,12 +639,12 @@ Now you will manage and operate your stretch cluster. You can perform all of the
     4.  To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.  
 
         > [!NOTE]
-        > In Windows Server 2016 Technical Preview, you may need to use Failover Cluster Manager or Move-ClusterGroup to move the destination disks back to the other site manually after the nodes come back online.  
+        > In Windows Server 2016, you may need to use Failover Cluster Manager or Move-ClusterGroup to move the destination disks back to the other site manually after the nodes come back online.  
 
         > [!NOTE]
         > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
 
-4.  To change the log size from the default 8GB in Windows Server 2016 Technical Preview, right-click both the source and destination log disks, click the **Replication Log** tab, then change the sizes on both the  disks to match.  
+4.  To change the log size from the default 8GB in Windows Server 2016, right-click both the source and destination log disks, click the **Replication Log** tab, then change the sizes on both the  disks to match.  
 
     > [!NOTE]  
     > The default log size is 8GB. Depending on the results of the `Test-SRTopology` cmdlet, you may decide to use `-LogSizeInBytes` with a higher or lower value.  
@@ -748,7 +748,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
         > [!NOTE]  
         > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
 
-4.  To change the log size from the default 8GB in Windows Server 2016 Technical Preview, use **Set-SRGroup** on both the source and destination Storage Replica Groups.   For example, to set all logs to 2GB:  
+4.  To change the log size from the default 8GB in Windows Server 2016, use **Set-SRGroup** on both the source and destination Storage Replica Groups.   For example, to set all logs to 2GB:  
 
     ```  
     Get-SRGroup | Set-SRGroup -LogSizeInBytes 2GB  
@@ -771,22 +771,14 @@ Now you will manage and operate your stretch cluster. You can perform all of the
     > If using a remote management computer you will need to specify the cluster name to these cmdlets and provide the two RG names.  
 
 ### Related Topics  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
-
--   [Storage Replica Overview](Storage-Replica-Overview.md)  
-
--   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
-
--   [Cluster to Cluster Storage Replication](Cluster-to-Cluster-Storage-Replication.md)  
-
--   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
-
--   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
+-   [Storage Replica Overview](overview.md)  
+-   [Server to Server Storage Replication](server-to-server.md)  
+-   [Cluster to Cluster Storage Replication](cluster-to-cluster.md)  
+-   [Storage Replica: Known Issues](known-issues.md) 
+-   [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
 
 ## See Also  
+-   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 
--   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)
+-   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)
 

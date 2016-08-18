@@ -14,19 +14,18 @@ ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: kumudd
 ---
 # Cluster to Cluster Storage Replication
+> Applies To: Windows Server 2016
 
->Applies To: Windows Server Technical Preview
-
-Cluster-to-cluster replication is now available in Windows Server 2016 Technical Preview, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct attached storage). The management and configuration is similar to server-to-server replication.  
+Cluster-to-cluster replication is now available in Windows Server 2016, including the replication of clusters using Storage Spaces Direct (i.e. shared nothing, direct attached storage). The management and configuration is similar to server-to-server replication.  
 
 You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.  
 
-There are no graphical tools in Windows Server 2016 Technical Preview that can configure Storage Replica for cluster-to-cluster replication.  
+There are no graphical tools in Windows Server 2016 that can configure Storage Replica for cluster-to-cluster replication.  
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster.  
 >   
-> If you wish to use Storage Spaces Direct, you will need a minimum of four nodes per cluster, for a total of eight. This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md).  
+> If you wish to use Storage Spaces Direct, you will need a minimum of four nodes per cluster, for a total of eight. This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md).  
 
 ### Terms  
 This walkthrough uses the following environment as an example:  
@@ -43,8 +42,8 @@ This walkthrough uses the following environment as an example:
 
 ### Prerequisites  
 
-* Active Directory Domain Services forest (does not need to run Windows Server 2016 Technical Preview).  
-* At least four servers (two servers in two clusters) with Windows Server 2016 Technical Preview installed. Supports up to two 64 node clusters.  
+* Active Directory Domain Services forest (does not need to run Windows Server 2016).  
+* At least four servers (two servers in two clusters) with Windows Server 2016 installed. Supports up to two 64 node clusters.  
 * Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.  
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.  
 * At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.   
@@ -55,11 +54,7 @@ This walkthrough uses the following environment as an example:
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.  
 
 ### Provision operating system, features, roles, storage, and network  
-
-> [!WARNING]  
-> Windows Server 2016 Technical Preview does not support Storage Replica on production servers.  
-
-1.  Install Windows Server 2016 Technical Preview on all four server nodes with an installation type of Windows Server 2016 Technical Preview **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
+1.  Install Windows Server 2016 on all four server nodes with an installation type of Windows Server 2016 **(Desktop Experience)**. Do not choose Standard Edition if it is available, as it does not contain Storage Replica.  
 
 2.  Add network information and join them to the domain, then restart them.  
 
@@ -161,7 +156,7 @@ For example, to validate two of the proposed stretch cluster nodes that each hav
     ![](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
 
 ### Configure two Scale-Out File Server Failover Clusters  
-You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 #### Graphical method  
 
@@ -174,7 +169,7 @@ You will now create two normal failover clusters. After configuration, validatio
 4.  Configure a File Share Witness or Cloud Witness.  
 
     > [!NOTE]  
-    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
     > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
@@ -206,7 +201,7 @@ You will now create two normal failover clusters. After configuration, validatio
     ```  
 
     > [!NOTE]  
-    > Windows Server 2016 Technical Preview now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
+    > Windows Server 2016 now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
     > [!WARNING]  
     > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster](http://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](http://technet.microsoft.com/library/hh847275.aspx).  
@@ -214,7 +209,7 @@ You will now create two normal failover clusters. After configuration, validatio
 4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)  
 
 ### Configure Cluster to Cluster Replication using Windows PowerShell  
-Now you will configure cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools  
+Now you will configure cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools  
 
 1.  Grant the first cluster full access to the other cluster by running the **Grant-ClusterAccess** cmdlet on any node in the first cluster, or remotely.  
 
@@ -296,7 +291,7 @@ Now you will configure cluster-to-cluster replication using Windows PowerShell. 
         > The destination cluster disk will always show as **Online (No Access)** when replicated.  
 
 ### Manage replication  
-Now you will manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 Technical Preview RSAT management tools.  
+Now you will manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server 2016 RSAT management tools.  
 
 1.  Use **Get-ClusterGroup** or **Failover Cluster Manager** to determine the current source and destination of replication and their status.  
 
@@ -363,14 +358,14 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     ```  
 
     > [!NOTE]  
-    > Windows Server 2016 Technical Preview does not prevent role switching when initial sync is ongoing, which can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not switch directions until initial sync is complete.  
+    > Windows Server 2016 does not prevent role switching when initial sync is ongoing, which can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not switch directions until initial sync is complete.  
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.  
 
     > [!NOTE]  
     > The destination cluster disk will always show as **Online (No Access)** when replicated.  
 
-4.  To change the log size from the default 8GB in Windows Server 2016 Technical Preview, use **Set-SRGroup** on both the source and destination Storage Replica groups.  
+4.  To change the log size from the default 8GB in Windows Server 2016, use **Set-SRGroup** on both the source and destination Storage Replica groups.  
 
     > [!IMPORTANT]  
     > The default log size is 8GB. Depending on the results of the **Test-SRTopology** cmdlet, you may decide to use -LogSizeInBytes with a higher or lower value.  
@@ -386,21 +381,12 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
 
 ### Related Topics  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](storage-replica-windows-server-2016.md)  
-
--   [Storage Replica Overview](Storage-Replica-Overview.md)  
-
--   [Stretch Cluster Replication Using Shared Storage](Stretch-Cluster-Replication-Using-Shared-Storage.md)  
-
--   [Server to Server Storage Replication](Server-to-Server-Storage-Replication.md)  
-
--   [Storage Replica: Known Issues](Storage-Replica--Known-Issues.md)  
-
--   [Storage Replica: Frequently Asked Questions](Storage-Replica--Frequently-Asked-Questions.md)  
+-   [Storage Replica Overview](overview.md)  
+-   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+-   [Server to Server Storage Replication](server-to-server.md)  
+-   [Storage Replica: Known Issues](known-issues.md)  
+-   [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
 
 ## See Also  
-
--   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-windows-server-2016.md)  
+-   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  
