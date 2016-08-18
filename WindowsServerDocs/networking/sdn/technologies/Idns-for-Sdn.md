@@ -68,7 +68,8 @@ You can use this section to gain an understanding of how iDNS is installed and c
 
 Following is a summary of the steps needed to deploy iDNS.
 
->[!NOTE] If you have deployed SDN by using scripts, you do not need to perform any of these steps. The steps are provided for information and troubleshooting purposes only.
+>[!NOTE]
+>If you have deployed SDN by using scripts, you do not need to perform any of these steps. The steps are provided for information and troubleshooting purposes only.
 
 ### Step 1: Deploy DNS
 You can deploy a DNS server by using the following example Windows PowerShell command.
