@@ -133,3 +133,6 @@ In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully s
 No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for '**Always**' workloads.
 
 **What are the memory requirements for Dedup?**
+In the minimum case, Dedup should have 300 MB + 50 MB for each TB of logical data. For instance, if you are optimizing a 10 TB volume, you would need a minimum of 800 MB of memory allocated for Dedup (`300 MB + 50 MB * 10 = 300 MB + 500 MB = 800 MB`). While Dedup can optimize a volume with this low amount of memory, having such constrained resources will slow down Dedup's jobs. 
+
+In the optimal case, Dedup should have 1 GB of memory for every 1 TB of logical data. For instance, if you are optimizing a 10 TB volume, you would optimally need 10 GB of memory allocated for Dedup (`1 GB * 10`). This ratio will ensure the maximum performance for Dedup's jobs.

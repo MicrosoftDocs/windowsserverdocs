@@ -31,7 +31,7 @@ The space savings that can be gained from Dedup are highly dependent on the data
 <table>
     <thead>
         <tr>
-            <th>Scneario</th>
+            <th>Scenario</th>
             <th>Content</th>
             <th>Typical Space Savings</th>
         </tr>
