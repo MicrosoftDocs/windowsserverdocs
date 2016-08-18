@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 5ec88ce5-a8b2-4ece-9062-366523c8b17f
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # To participate in replication, servers in failover clusters must have a Hyper-V Replica Broker configured
 

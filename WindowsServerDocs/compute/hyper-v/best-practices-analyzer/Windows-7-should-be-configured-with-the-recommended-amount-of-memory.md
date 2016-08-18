@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: d77d648c-6e26-43fa-be0a-6eb4b28f9cb4
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows 7 should be configured with the recommended amount of memory
 

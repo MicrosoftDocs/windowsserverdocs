@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Replica servers should be configured to identify specific primary servers authorized to send replication traffic
 

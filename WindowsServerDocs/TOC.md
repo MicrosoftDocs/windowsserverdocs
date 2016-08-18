@@ -55,6 +55,7 @@
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
 #### Get started
 ##### [Welcome to Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
+##### [Work with partners to host apps in Remote Desktop Services](compute/remote-desktop-services/rds-hosting-partners.md)
 #### Plan
 ##### [Desktop Hosting Reference Architecture](compute/remote-desktop-services/Desktop-Hosting-Reference-Architecture.md)
 ###### [Desktop hosting logical architecture](compute/remote-desktop-services/Desktop-hosting-logical-architecture.md)
@@ -707,6 +708,7 @@
 ###### [Hyper-V Network Virtualization Overview in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)
 ###### [Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md)
 ###### [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)
+##### [Internal DNS Service &#40;iDNS&#41; for SDN](networking/sdn/technologies/Idns-for-Sdn.md)
 ##### [Network Controller](networking/sdn/technologies/network-controller/Network-Controller.md)
 ###### [Install the Network Controller server role using Server Manager](networking/sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md)
 ###### [Post-Deployment Steps for Network Controller](networking/sdn/technologies/network-controller/post-deploy-steps-nc.md)
@@ -718,6 +720,7 @@
 ####### [RAS Gateway High Availability](networking/sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)
 ###### [Software Load Balancing (SLB) for SDN](networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md)
 ##### [Switch Embedded Teaming for SDN](networking/sdn/technologies/Set-for-Sdn.md)
+##### [Container Networking](networking\sdn\technologies\Containers\Container-networking-overview.md)
 #### [Plan Software Defined Networking](networking/sdn/plan/Plan-Software-Defined-Networking.md)
 ##### [Plan a Software Defined Network Infrastructure](networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
 ##### [Installation and Preparation Requirements for Deploying Network Controller](networking/sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
@@ -738,6 +741,7 @@
 ######[Configure Datacenter Firewall Access Control Lists (ACLs)](networking/sdn/manage/Configure-Datacenter-Firewall-ACLs.md)
 ######[Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)](networking/sdn/manage/Configure-SLB-and-NAT.md)
 ######[Use Network Virtual Appliances on a Virtual Network](networking/sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md)
+#####[Connect container endpoints to a tenant virtual network](networking\sdn\manage\Connect-container-endpoints-to-a-Tenant-Virtual-Network.md)
 #### [Troubleshoot Software Defined Networking](networking/sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 ##### [Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack](networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md)
 #### [System Center Technologies for Software Defined Networking](networking/sdn/Sc-Tech-for-Sdn.md)

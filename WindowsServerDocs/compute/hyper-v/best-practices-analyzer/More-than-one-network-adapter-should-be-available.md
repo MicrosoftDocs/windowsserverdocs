@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # More than one network adapter should be available
 

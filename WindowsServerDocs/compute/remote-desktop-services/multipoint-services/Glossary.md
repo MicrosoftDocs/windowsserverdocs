@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 807bce1d-b993-49c6-9783-b01a3c55846c
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Glossary
 **associate a station**  

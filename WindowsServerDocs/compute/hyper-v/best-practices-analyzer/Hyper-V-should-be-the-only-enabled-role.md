@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Hyper-V should be the only enabled role
 

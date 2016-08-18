@@ -1,7 +1,6 @@
 ---
 title: User Account Considerations
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: e225900b-cee9-48c9-b21c-394dc5e72b78
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # User Account Considerations
 This topic describes issues that you, as an administrative user, should consider as you create and manage user accounts. You manage user accounts in the Users tab in MultiPoint Manager. For more information, see the [Manage User Accounts](Manage-User-Accounts.md) topic.  

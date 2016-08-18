@@ -1,7 +1,7 @@
 ---
 title: Edit Server Settings
 ms.custom: na
-ms.date: 07/15/2016
+ 
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na

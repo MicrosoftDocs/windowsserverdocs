@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 1db68a42-6cd8-48fb-95ce-19aa79bf2ec7
 author: KBDAzure
 ms.author: kathydav
+ms.date: 8/16/2016
 ---
 # Plan for Hyper-V scalability in Windows Server 2016
 

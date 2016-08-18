@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: d78ebf4e-0968-4014-9a42-9f75cc50cb52
 author: evas
 manager: scottman
+ms.author: evas
+ms.date: 08/04/2016
 ---
 # Attach additional stations to MultiPoint Services
 In your MultiPoint Services environment, your users use stations to connect to MultiPoint Services and do their work. The stations are the user endpoints for connecting to the computer running Multipoint Services.  

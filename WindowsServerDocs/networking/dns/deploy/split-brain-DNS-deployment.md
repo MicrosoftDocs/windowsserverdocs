@@ -49,7 +49,9 @@ The following illustration depicts this scenario.
 
 ##<a name="bkmk_sbhow"></a>How DNS Split-Brain Deployment Works
 
-When the DNS server is configured with the required DNS policies, each name resolution request is evaluated against the policies on the DNS server. 
+When the DNS server is configured with the required DNS policies, each name resolution request is evaluated against the policies on the DNS server.
+
+The server Interface is used in this example as the criteria to differentiate between the internal and external clients.
 
 If the server interface upon which the query is received matches any of the policies, the associated zone scope is used to respond to the query. 
 
@@ -98,7 +100,12 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 For more information, see [Add-DnsServerResourceRecord](https://technet.microsoft.com/library/jj649925.aspx).
 
 ###<a name="bkmk_policies"></a>Create the DNS Policies
-After you have identified the server interfaces for the external network and internal network and you have created the zone scopes, you must create DNS policies that connect the internal and external zone scopes so that when the DNS server receives a query on the private interface, the DNS query response is returned from the internal zone scope. 
+After you have identified the server interfaces for the external network and internal network and you have created the zone scopes, you must create DNS policies that connect the internal and external zone scopes.
+
+>[!NOTE]
+>This example uses the server interface as the criteria to differentiate between the internal and external clients. Another method to differentiate between external and internal clients is by using client subnets as a criteria. If you can identify the subnets to which the internal clients belong, you can configure DNS policy to differentiate based on client subnet. For information on how to configure traffic management using client subnet criteria, see [Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/scenario--use-dns-policy-for-geo-location-based-traffic-management-with-primary-servers).
+
+When the DNS server receives a query on the private interface, the DNS query response is returned from the internal zone scope.
 
 >[!NOTE]
 >No policies are required for mapping the default zone scope. 

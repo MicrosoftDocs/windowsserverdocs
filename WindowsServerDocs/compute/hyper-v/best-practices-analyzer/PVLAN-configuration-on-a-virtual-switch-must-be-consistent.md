@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 4db63bcc-7a54-4f19-98a6-c274c3956d51
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # PVLAN configuration on a virtual switch must be consistent
 

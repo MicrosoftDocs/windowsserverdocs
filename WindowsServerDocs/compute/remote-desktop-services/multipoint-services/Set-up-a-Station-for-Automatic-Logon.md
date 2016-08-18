@@ -1,7 +1,6 @@
 ---
 title: Set up a Station for Automatic Logon
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 7a326085-7438-41de-9874-59aca393fa4a
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Set up a Station for Automatic Logon
 Auto-logon enables each station to be automatically logged on when the computer that is running MultiPoint Services starts, and display the desktop. An administrative user can set this feature for individual stations or for all stations.  
