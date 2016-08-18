@@ -1,12 +1,15 @@
 ---
 title: Working with Group Policy Preference Items Using the GPMC
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b068ca77-94d8-4e19-be5e-cbee5ac759f1
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Working with Group Policy Preference Items Using the GPMC
 This topic describes Group Policy Preferences and explains some common configuration procedures. It also contains links to topics about working with Preferences using the GPMC for Windows settings and Control Panel settings as well as item-level targeting.
@@ -15,11 +18,9 @@ Group Policy Preferences, introduced in  Windows Server® 2008 , provide more th
 
 For procedural information about using Preferences for Windows settings, Control Panel settings, and item-level targeting, see:
 
--   [Working with Windows Settings Preference Items Using the GPMC](assetId:///45086497-fa52-4bed-8651-5ea3dd8d7f71)
-
 -   [Working with Control Panel Settings Preference Items Using the GPMC](Working-with-Control-Panel-Settings-Preference-Items-Using-the-GPMC.md)
 
--   [Preference Item-Level Targeting Using the GPMC](assetId:///49c14e33-8cd1-4254-a5ab-3a3719922262)
+-   [Preference item-level targeting](https://technet.microsoft.com/library/cc733022.aspx)
 
 ## Overview
 Preferences let you manage all these additional settings by using the familiar Group Policy Management Console (GPMC). Within most preference items, the user interface mimics the relevant end-user interface for configuring these settings. This makes configuration more intuitive.

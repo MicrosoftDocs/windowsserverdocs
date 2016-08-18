@@ -1,12 +1,15 @@
 ---
 title: Editing Software Settings Using GPMC
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3641488e-c0a6-469c-8d3e-5e47e75d7827
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Editing Software Settings Using GPMC
 This topic contains procedures for using the GPMC tool to edit Group Policy Software Settings.

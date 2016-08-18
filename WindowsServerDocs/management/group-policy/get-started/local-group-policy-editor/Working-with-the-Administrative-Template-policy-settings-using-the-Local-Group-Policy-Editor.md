@@ -1,12 +1,15 @@
 ---
 title: Working with the Administrative Template policy settings using the Local Group Policy Editor
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18a19f90-c524-438a-b84c-376014a5bec9
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Working with the Administrative Template policy settings using the Local Group Policy Editor
 This topic describes how to use the Local Group Policy Editor (gpedit) to manage Administrative Template policy settings.

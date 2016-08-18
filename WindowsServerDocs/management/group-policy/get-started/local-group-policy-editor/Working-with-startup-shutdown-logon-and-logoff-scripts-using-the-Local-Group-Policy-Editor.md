@@ -1,13 +1,15 @@
 ---
 title: Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5079255a-674b-4c8c-b890-184c8b7b32a4
 author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor
 This topic describes how to use the Local Group Policy Editor (gpedit) to manage four types of event-driven scripting files.  
@@ -23,7 +25,7 @@ Group Policy allows you to associate one or more scripting files with four trigg
   
 -   User logoff  
   
-You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages are also used, including VBScript and Jscript. For more information about the editor, see [Local Group Policy Editor](assetId:///0408ec90-e65b-4e50-9e0d-dfd2bd2b4dcb).  
+You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages are also used, including VBScript and Jscript. For more information about the editor, see [Local Group Policy Editor](.//Local Group Policy Editor.md).  
   
 ### Additional considerations  
   

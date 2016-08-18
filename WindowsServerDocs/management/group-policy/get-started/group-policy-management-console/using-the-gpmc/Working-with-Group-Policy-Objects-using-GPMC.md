@@ -1,12 +1,15 @@
 ---
 title: Working with Group Policy Objects using GPMC
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9933e6fd-ea3c-493f-9ce7-853b46f08896
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Working with Group Policy Objects using GPMC
 This topic describes procedures for configuring, filtering, backing up, restoring and importing Group Policy Objects using the Group Policy Management Console (GPMC).

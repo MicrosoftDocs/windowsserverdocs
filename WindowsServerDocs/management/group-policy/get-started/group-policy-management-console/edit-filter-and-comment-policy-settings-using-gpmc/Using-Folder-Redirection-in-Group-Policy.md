@@ -1,12 +1,15 @@
 ---
 title: Using Folder Redirection in Group Policy
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dd8ecd23-db37-4db7-a5bc-ba7bdac086e4
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Using Folder Redirection in Group Policy
 This topic presents conceptual information about folder redirection and procedures using the GPMC.

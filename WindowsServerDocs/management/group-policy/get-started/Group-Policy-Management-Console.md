@@ -1,12 +1,15 @@
 ---
 title: Group Policy Management Console
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+mms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0bc23d72-34e0-414e-aa55-5461658ce8ea
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Group Policy Management Console
 

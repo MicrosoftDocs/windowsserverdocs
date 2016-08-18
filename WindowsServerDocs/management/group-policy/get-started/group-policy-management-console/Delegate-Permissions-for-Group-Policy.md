@@ -1,12 +1,16 @@
 ---
 title: Delegate Permissions for Group Policy
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b16fc36e-a445-4ec7-9e18-5f7d707d7854
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
+
 ---
 # Delegate Permissions for Group Policy
 This topic describes procedures for an administrator to delegate permissions to others using the GPMC so that they can perform some Group Policy administrative tasks.

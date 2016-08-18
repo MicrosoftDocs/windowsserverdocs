@@ -1,13 +1,16 @@
 ---
 title: Using the GPMC
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.assetid: efaa8001-67d6-4e4d-804f-220c1092e5a3
 ms.assetid: fd36cf4d-ea7d-4f0f-8be4-8bcc16bc6e2c
 author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Using the GPMC
 The Group Policy Management Console (GPMC) is a comprehensive administrative tool that administrators use to perform most Group Policy management tasks.  

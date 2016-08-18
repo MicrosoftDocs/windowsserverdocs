@@ -1,12 +1,15 @@
 ---
 title: Force a Remote Group Policy Refresh (GPUpdate)
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70b16238-3d4f-4b13-ac68-4ebb45e58087
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Force a Remote Group Policy Refresh (GPUpdate)
 Group Policy is a complicated infrastructure that enables you to apply policy settings to remotely configure a computer and user experience within a domain. When the Resultant Set of Policy settings does not conform to your expectations, a best practice is to first verify that the computer or user has received the latest policy settings. In previous versions of Windows, this was accomplished by having the user run **GPUpdate.exe** on their computer.
@@ -155,10 +158,5 @@ You can force an immediate Group Policy refresh for all Group Policy settings fo
 Get-ADComputer –filter * -Searchbase "ou=Accounting, dc=Contoso,dc=com" | foreach{ Invoke-GPUpdate –computer $_.name –force –-RandomDelayInMinutes 0}
 ```
 
-## <a name="BKMK_Links"></a>See also
-
--   [Group Policy Overview](Group-Policy-Overview.md)
-
--   [Group Policy Analysis and Troubleshooting Overview](Group-Policy-Analysis-and-Troubleshooting-Overview.md)
 
 

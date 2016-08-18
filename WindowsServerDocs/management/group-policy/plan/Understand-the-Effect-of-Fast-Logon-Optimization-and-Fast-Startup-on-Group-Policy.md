@@ -1,13 +1,18 @@
 ---
 title: Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8136e3ce-9db4-412d-8680-b73051587e8c
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
+
 ---
+
 # Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy
 This troubleshooting topic explains the interaction between the required synchronous processing for certain Group Policy client-side extensions (CSEs) and Fast Logon Optimization, which was introduced in Windows XP. Fast Logon Optimization may cause you to sign in or restart the computer multiple times before certain Group Policy settings are applied to the client computer. This topic also discusses the effect that the fast startup feature introduced in Windows 8 has on Group Policy settings that are applied during startup or shutdown.
 
@@ -199,10 +204,5 @@ Group Policy settings or scripts that are applied during startup or shutdown mig
 
 If you do not want fast startup to apply to computers in your enterprise, you can apply a GPO that disables the **Computer Configuration/Policies/Administrative Templates/System/Shutdown/Require use of fast startup** policy setting. Be aware that disabling this policy setting results in full shutdowns  and longer startup times for client computers. The enabled state of the **Require use of fast startup** policy setting does not take precedence over any Group Policy setting that disables hibernation.
 
-## Related resources
-
--   [Troubleshooting Group Policy Client-Side Extension Behavior](http://support.microsoft.com/kb/216358)
-
--   [Description of the Windows XP Professional Fast Logon Optimization feature](http://support.microsoft.com/kb/305293)
 
 

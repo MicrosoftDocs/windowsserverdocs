@@ -1,12 +1,16 @@
 ---
 title: Group Policy Preferences
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 169c602c-2084-4135-ab7e-d99110d261df
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
+
 ---
 # Group Policy Preferences
 Group Policy Preferences is a collection of Group Policy client-side extensions that deliver preference settings to domain-joined computers running Microsoft Windows desktop and server operating systems.  Preference settings are administrative configuration choices deployed to desktops and servers.  Preference settings differ from policy settings because users have a choice to alter the administrative configuration.  Policy settings administratively enforce setting, which restricts user choice.

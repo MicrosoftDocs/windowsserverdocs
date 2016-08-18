@@ -1,13 +1,15 @@
 ---
 title: Working with Control Panel Settings Preference Items Using the GPMC
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: dfcecce7-fa44-4e3a-88c3-e8bf5a0d50e4
+ms.assetid: efaa8001-67d6-4e4d-804f-220c1092e5a3
 author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Working with Control Panel Settings Preference Items Using the GPMC
 This topic describes how to configure Control Panel settings preferences when you edit any domain-based Group Policy Object using the GPMC. The preferences node appears under **Computer Configuration** and **User Configuration**.  

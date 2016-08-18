@@ -1,12 +1,15 @@
 ---
 title: Check Group Policy Infrastructure Status
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 444bc4b0-be08-407b-8aac-8a183b1c9d02
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Check Group Policy Infrastructure Status
 Group Policy is a complicated infrastructure that allows you to apply policy settings to remotely configure computer and user experiences within a domain. Most of the troubleshooting advice comes to IT administrators when Group Policy fails to perform in the expected manner. But this advice does not scale well when you have thousands of Group Policy Objects (GPOs) that apply to thousands of computers and users.
@@ -149,10 +152,6 @@ If you suspect that you have an issue with SYSVOL replication, see the following
 
 -   [Ask the Directory Services Team blog contains extensive troubleshooting information for Active Directory replication, DFSR and Group Policy](http://blogs.technet.com/b/askds/)
 
-## <a name="BKMK_Links"></a>See also
 
--   [Group Policy Overview](Group-Policy-Overview.md)
-
--   [Group Policy Analysis and Troubleshooting Overview](Group-Policy-Analysis-and-Troubleshooting-Overview.md)
 
 

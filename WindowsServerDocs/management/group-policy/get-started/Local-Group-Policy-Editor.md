@@ -1,12 +1,15 @@
 ---
 title: Local Group Policy Editor
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fdf90e76-a1a2-4ad7-ad72-d09c81951e6d
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Local Group Policy Editor
 Local Group Policy Editor is a Microsoft Management Console (MMC) snap-in that is used to configure and modify Group Policy settings within Group Policy Objects (GPOs).

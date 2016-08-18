@@ -1,12 +1,15 @@
 ---
 title: Configure Firewall Port Requirements for Group Policy
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91ce6c1e-98e4-4b9d-9f6c-b73a5faa49dd
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Configure Firewall Port Requirements for Group Policy
 You can use the information in this topic to configure the firewall port requirements for Group Policy. Group Policy requires that firewall ports are opened on client computers for an administrator to perform these two remote operations:

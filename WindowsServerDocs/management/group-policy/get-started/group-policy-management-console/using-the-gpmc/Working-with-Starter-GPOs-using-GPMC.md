@@ -1,12 +1,16 @@
 ---
 title: Working with Starter GPOs using GPMC
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 792b9e16-d8af-4ce9-8cac-500585a1de0a
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
+
 ---
 # Working with Starter GPOs using GPMC
 This topic contains procedures for managing Starter Group Policy Objects as a Group Policy administrator using the Group Policy Management Console in Windows Server® 2012.

@@ -1,12 +1,15 @@
 ---
 title: Use Resultant Set of Policy to Manage Group Policy
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16fe9efd-ccef-4c46-a688-e10e3248eab0
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Use Resultant Set of Policy to Manage Group Policy
 This topic describes how Resultant Set of Policy (RSoP) is used by Group Policy Management Console (GPMC) and describes the procedures to use.

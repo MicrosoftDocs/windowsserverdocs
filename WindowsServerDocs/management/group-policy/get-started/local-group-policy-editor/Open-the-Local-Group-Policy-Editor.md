@@ -1,12 +1,15 @@
 ---
 title: Open the Local Group Policy Editor
-ms.custom: na
-ms.prod: windows-server-2012-r2
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server-threshold
+ms.technology: 
+  - group-policy
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a85a590-20fb-4832-8eb1-54b10eb3b927
+author: coreyp
+ms.author: coreyp
+ms.date: 8/18/2016
 ---
 # Open the Local Group Policy Editor
 You can open the Local Group Policy Editor by using the command line or by using the Microsoft Management Console (MMC).
