@@ -25,7 +25,7 @@ Group Policy allows you to associate one or more scripting files with four trigg
   
 -   User logoff  
   
-You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages are also used, including VBScript and Jscript. For more information about the editor, see [Local Group Policy Editor](../Local Group Policy Editor.md).  
+You can use Windows PowerShell scripts, or author scripts in any other language supported by the client computer. Windows Script Host (WSH) supported languages are also used, including VBScript and Jscript. For more information about the editor, see [Local Group Policy Editor](../Local-Group-Policy-Editor.md).  
   
 ### Additional considerations  
   
