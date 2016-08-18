@@ -13,11 +13,9 @@ author: kumudd
 ms.author: kumud
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
+> Applies To: Windows Server 2016
 
->Applies To: Windows Server Technical Preview
-
-
-Simplified SMB Multichannel and Multi-NIC Cluster Networks is a new feature in Windows Server 2016 Technical Preview that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Mutichannel.  
+Simplified SMB Multichannel and Multi-NIC Cluster Networks is a new feature in Windows Server 2016 that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Mutichannel.  
 
 Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the following benefits:  
 
@@ -31,13 +29,8 @@ Simplified SMB Multichannel and Multi-NIC Cluster Networks provides the followin
 
 -   Cluster validation no longer issues warning messages when multiple NICs are found on the same subnet.  
 
-
 ## Requirements  
-
--   Windows Server 2016 Technical Preview  
-
 -   Multiple NICs per server, using the same switch / subnet.  
-
 
 ## How to take advantage of multi-NIC clusters networks and simplified SMB multichannel ##  
 
@@ -108,9 +101,4 @@ Windows Server 2016 automatically detects NIC capabilities and will attempt to u
      Yes.  
 
 ## See also  
-
- 
-
-
--   [What's New in Failover Clustering in Windows Server Technical Preview](whats-new-failover-clustering-windows-server.md)  
-
+- [What's New in Failover Clustering in Windows Server](whats-new.md)  

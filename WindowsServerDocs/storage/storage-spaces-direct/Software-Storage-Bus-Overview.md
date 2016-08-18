@@ -13,7 +13,7 @@ author: kumudd
 ---
 # Software Storage Bus Overview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 The Software Storage Bus  is a virtual storage bus spanning all the servers that make up the cluster. Software Storage Bus essentially makes it possible for each server to see all disks across all servers in the cluster providing full mesh connectivity. Software Storage Bus consists of two components on each server in the cluster; ClusPort and ClusBlft. ClusPort implements a virtual HBA that allows the node to connect to disk devices in all the other servers in the cluster. ClusBlft implements virtualization of the disk devices and enclosures in each server for ClusPort in other servers to connect to.  
 
@@ -44,26 +44,15 @@ In systems with rotational capacity devices (HDD), Software Storage Cache will a
 Software Bus Cache creates a special partition on each caching device that, by default, consumes all available capacity except 32GB. The 32GB is used for storage pool and virtual disk metadata. Software Bus Cache uses memory for runtime data structures, about 5GB of memory per TB of caching devices in the node. For instance, a system with 4x 800GB caching devices requires about 16GB of memory to manage the cache in addition to what is the for the base operating systems and any hosted hyper-converged virtual machines.  
 
 ## Related Topics  
-
--   [Storage Spaces Direct in Windows Server 2016 Technical Preview](storage-spaces-direct-windows-server-2016.md)  
-
+-   [Storage Spaces Direct in Windows Server 2016](overview.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
-
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
-
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
-
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 
 ## See Also  
-
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
-
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
-
--   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/whats-new-failover-clustering-windows-server.md)  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/storage-replica-windows-server-2016.md)  
-
--   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)  
-
+-   [What's New in Failover Clustering in Windows Server 2016](../../failover-clustering/whats-new.md)  
+-   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
+-   [Storage Quality of Service](../storage-qos/overview.md)  

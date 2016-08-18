@@ -13,16 +13,15 @@ author: kumudd
 ms.author: kumud
 ---
 # Deploy a Cloud Witness for a Failover Cluster
+> Applies To: Windows Server 2016
 
->Applies To: Windows Server Technical Preview
-
-Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016 Technical Preview. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016 Technical Preview.
+Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016.
 *    [Cloud Witness Overview](#BKMK_CloudWitnessOverview)
 *    [Cloud Witness Supported Scenarios](#BKMK_CloudWitnessSupportedScenarios)
 *    [Set up a Cloud Witness for a cluster](#BKMK_CloudWitnessSetUp)
 
 ## <a name="BKMK_CloudWitnessOverview"></a>Cloud Witness Overview
-Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016 Technical Preview. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.  
+Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.  
 
 ![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png)
 
@@ -197,5 +196,6 @@ In case you need to use a different endpoint (rare):
 *  The generated SAS token is valid as long as the Access Key remains valid. When rotating the Primary Access Key, it is important to first update the Cloud Witness (on all your clusters that are using that Storage Account) with the Secondary Access Key before regenerating the Primary Access Key.  
 
 *  Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.  
+
 ## See Also
--   [What's New in Failover Clustering in Windows Server Technical Preview](whats-new-failover-clustering-windows-server.md)
+-   [What's New in Failover Clustering in Windows Server](whats-new.md)

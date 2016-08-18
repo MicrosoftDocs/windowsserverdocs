@@ -1,5 +1,5 @@
 ---
-title: Storage Spaces Direct in Windows Server 2016 Technical Preview
+title: Storage Spaces Direct in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -11,13 +11,13 @@ ms.topic: get-started-article
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 author: kumudd
 ---
-# Storage Spaces Direct in Windows Server 2016 Technical Preview
+# Storage Spaces Direct in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Windows Server 2016 Technical Preview introduces Storage Spaces Direct, which enables building highly available and scalable storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
+Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available and scalable storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
-With Windows Server 2016 Technical Preview Storage Spaces Direct, you can now build HA Storage Systems using storage nodes with only local storage, which is either disk devices that are internal to each storage node (Figure 1). This eliminates the need for a shared SAS fabric and its complexities, but also enables using devices such as SATA solid state drives, which can help further reduce cost or NVMe solid state devices to improve performance.  
+With Windows Server 2016 Storage Spaces Direct, you can now build HA Storage Systems using storage nodes with only local storage, which is either disk devices that are internal to each storage node (Figure 1). This eliminates the need for a shared SAS fabric and its complexities, but also enables using devices such as SATA solid state drives, which can help further reduce cost or NVMe solid state devices to improve performance.  
 
 ![](media/storage-spaces-direct-in-windows-server-2016/StorageSpacesDirectwithInternalDisks.png)  
 
@@ -64,7 +64,7 @@ The Storage Spaces Direct stack includes the following, starting from the bottom
 Storage Spaces Direct can be deployed  either for primary storage of Hyper-V VM file, or, for secondary storage for Hyper-V Replica virtual machine files.  In addition, the deployment can be for backup or for archive of virtual machine files.  
 
 ### <a name="BKMK_StorageConfigurations"></a>Disaggregated and Hyper-converged Configurations  
-There are two targeted deployment scenarios for Windows Server 2016 Technical Preview Storage Spaces Direct. Both cases provide storage for Hyper-V, specifically focusing on Hyper-V IaaS (Infrastructure as a Service) for Service Providers and Enterprises.  
+There are two targeted deployment scenarios for Windows Server 2016 Storage Spaces Direct. Both cases provide storage for Hyper-V, specifically focusing on Hyper-V IaaS (Infrastructure as a Service) for Service Providers and Enterprises.  
 
 The **disaggregated** deployment scenario has the Hyper-V servers (compute component) in a separate cluster from the Storage Spaces Direct servers (storage component).  Virtual machines are configured to store their files on the Scale-Out File Server which is accessed through the network using the SMB3 protocol. This allows for scaling Hyper-V clusters (compute) and Scale Out File Server cluster (storage) independently. For example, the compute nodes are nearing capacity for the number of VMs that they can host but the storage has excess capacity (both disk and IOPS), more compute nodes can be added without adding additional storage nodes. Figure 4 illustrates the disaggregated deployment scenario.  
 
@@ -72,29 +72,19 @@ The **disaggregated** deployment scenario has the Hyper-V servers (compute compo
 
 **FIGURE 4:  Disaggregated deployment of Storage Spaces Direct**  
 
-The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on the local CSVs and does not implement a Scale-Out File Server. This allows for scaling Hyper-V compute clusters and storage together and removes requirement of configuring file server access and permissions.  Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. For step-by-step instructions about building a hyper-converged solution with Storage Spaces Direct, see [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md).   
+The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on the local CSVs and does not implement a Scale-Out File Server. This allows for scaling Hyper-V compute clusters and storage together and removes requirement of configuring file server access and permissions.  Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. For step-by-step instructions about building a hyper-converged solution with Storage Spaces Direct, see [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md).   
 
 
 ## Related Topics  
-
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
-
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)  
-
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
-
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 
 
 ## See Also  
-
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
-
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
-
--   [What's New in Failover Clustering in Windows Server Technical Preview](../../compute/failover-clustering/whats-new-failover-clustering-windows-server.md)  
-
--   [Storage Replica in Windows Server 2016 Technical Preview](../storage-replica/storage-replica-windows-server-2016.md)  
-
--   [Storage Quality of Service](../software-defined-storage/Storage-Quality-of-Service.md)
-
+-   [What's New in Failover Clustering in Windows Server](../failover-clustering/whats-new.md)  
+-   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
+-   [Storage Quality of Service](../storage-qos/overview.md)
