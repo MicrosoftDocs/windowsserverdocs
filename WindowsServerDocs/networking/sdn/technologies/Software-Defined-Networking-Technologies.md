@@ -42,6 +42,10 @@ There are many technologies that work together to create Microsoft's Software De
   
     Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure.  
   
+- **[Internal DNS Service &#40;iDNS&#41; for SDN](../../sdn/technologies/Idns-for-Sdn.md)**
+
+    Hosted virtual machines \(VMs\) and applications require DNS to communicate within their own networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for their isolated, local name space and for Internet resources.
+
 -   **[Network Controller](../../sdn/technologies/network-controller/Network-Controller.md)**  
   
     The network controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.  
