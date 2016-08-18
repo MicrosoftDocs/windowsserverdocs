@@ -1,7 +1,6 @@
 ---
 title: Manage MultiPoint Systems Using MultiPoint Dashboard
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 28b5383e-6996-4e1c-953d-00d5205ec55f
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Manage MultiPoint Systems Using MultiPoint Dashboard
 In MultiPoint Dashboard, on the **Systems** tab, you can do the following:  

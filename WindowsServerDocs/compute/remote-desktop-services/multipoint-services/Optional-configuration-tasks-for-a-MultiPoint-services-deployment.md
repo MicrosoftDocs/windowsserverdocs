@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 76ed6fa3-2efb-4ebd-a734-f3f9440523f0
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Optional configuration tasks for a MultiPoint Services deployment
 Topics in this section explain how to perform optional configuration tasks on your MultiPoint Services system.  

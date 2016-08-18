@@ -5,7 +5,10 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - remote-desktop-services
+  - remote-desktop-services 
+  - techgroup-compute
+ms.author: elizapo
+ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1905e1fc-bd2c-45d9-95f2-d4ff55ea2481
