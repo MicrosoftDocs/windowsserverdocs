@@ -1,7 +1,6 @@
 ---
 title: Managing Your MultiPoint Services System
 ms.custom: na
-ms.date: 07/15/2016
 ms.prod: windows-server-2016
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 8c7ffe24-f4e5-4fbf-b445-d860f935e4f3
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Managing Your MultiPoint Services System
 MultiPoint Services enables multiple stations to be connected to one computer. A traditional station consists of a [*station hub*](Switch-Between-Modes.md) or zero client, monitor, keyboard, and mouse. Network-connected Remote Desktop Protocol (RDP) clients are also supported.  
