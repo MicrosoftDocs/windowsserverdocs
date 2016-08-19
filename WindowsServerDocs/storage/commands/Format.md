@@ -14,11 +14,8 @@ ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
 ---
 
-<<<<<<< 592ff6484a9fc7738fbfb37b617360b04262042d
 >Applies To: Windows 10 (including versions 1511, 1607), Windows 10, Windows Server 2016
-=======
->Applies To: Windows 10 Anniversary Edition, Windows 10, Windows Server 2016
->>>>>>> Refactored Storage and Clustering. Fixing links. Removing "Technical Preview". Media content may still be broken.
+
 
 # Format
 
