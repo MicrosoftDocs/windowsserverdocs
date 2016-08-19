@@ -1,17 +1,17 @@
 ---
-title: Step 2 - Install the WSUS Server Role
-ms.custom: na
+title: Step 1 - Install the WSUS Server Role
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
+ms.technology: 
+  - WSUS
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fabc8619-350e-403b-96f8-116424931300
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 9/14/2016
 ---
-# Step 2: Install the WSUS Server Role
-
->Applies To: Windows Server Technical Preview
+# Step 1: Install the WSUS Server Role
 
 The next step in the deployment of your WSUS server is to install the WSUS server role. The following procedure describes how to install the WSUS server role by using Server Manager.
 
@@ -55,12 +55,12 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 14. In **Server Manager**, verify if a notification appears to inform you that a restart is required. This can vary according to the installed server role. If it requires a restart make sure to restart the server to complete the installation.
 
 > [!IMPORTANT]
-> At this point the installation process is finished, however for WSUS to be functional you need to proceed to [Step 3: Configure WSUS](Step-3--Configure-WSUS.md).
+> At this point the installation process is finished, however for WSUS to be functional you need to proceed to [Step 2: Configure WSUS](2--Configure-WSUS.md).
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Step 3: Configure WSUS](Step-3--Configure-WSUS.md)
+-   [Step 2: Configure WSUS](2--Configure-WSUS.md)
 
--   [Step 1: Prepare for Your WSUS Deployment](Step-1--Prepare-for-Your-WSUS-Deployment.md)
+-   [Plan Your WSUS Deployment](../plan/Plan-Your-WSUS-Deployment.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)

@@ -1,19 +1,17 @@
 ---
 title: Viewing and Managing Updates
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-management-and-automation
+ms.technology: 
+  - WSUS
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 9/14/2016
 ---
 # Viewing and Managing Updates
-
->Applies To: Windows Server Technical Preview
 
 You can use the WSUS console to view and manage updates.
 

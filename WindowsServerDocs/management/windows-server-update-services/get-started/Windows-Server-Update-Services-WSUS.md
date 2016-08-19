@@ -1,19 +1,17 @@
 ---
-title: Windows Server Update Services (WSUS)
-ms.custom: 
+title: Get Started with Windows Server Update Services (WSUS)
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: biztalk-services
-ms.suite: na
 ms.technology: 
-  - techgroup-management-and-automation
+  - WSUS
+  - techgroup-management
 ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 9/14/2016
 ---
 # Windows Server Update Services (WSUS)
-
->Applies To: Windows Server Technical Preview
 
 Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to  fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
 
@@ -62,8 +60,8 @@ In earlier versions of the Windows Server operating system, there were no Window
 ## In this collection
 The  following guides for planning, deploying, and managing WSUS are in this collection:
 
--   [Deploy Windows Server Update Services](deploy/Deploy-Windows-Server-Update-Services.md)
+-   [Deploy Windows Server Update Services](../deploy/Deploy-Windows-Server-Update-Services.md)
 
--   [Manage Updates using Windows Server Update Services](manage/Update-Management-with-Windows-Server-Update-Services.md)
+-   [Manage Updates using Windows Server Update Services](../manage/Update-Management-with-Windows-Server-Update-Services.md)
 
 
