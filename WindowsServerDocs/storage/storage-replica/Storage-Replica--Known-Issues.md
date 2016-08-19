@@ -163,7 +163,7 @@ When attempting to create a new replication partnership with `New-SRPartnership`
 
 This is caused by selecting a data volume that is on the same partition as the System Drive (i.e. the **C:** drive with its Windows folder). For instance, on a drive that contains both the **C:** and **D:** volumes created from the same partition. This is not supported in Storage Replica; you must pick a different volume to replicate.
 
-## Upgrading a stretch cluster from TP4 to TP5 failsUpgrading a stretch cluster from TP4 to TP5 fails
+## Upgrading a stretch cluster from TP4 to TP5 fails
 When upgrading a Windows Server 2016 Technical Preview 4 stretch cluster to Technical Preview 5 using cluster rolling upgrade, Storage Replica stops replicating and the replication partnership no longer appears to exist. When you attempt to recreate replication using Failover Cluster manager, you receive error:
 
     "Replication Group name Replication 1 already exists" 
