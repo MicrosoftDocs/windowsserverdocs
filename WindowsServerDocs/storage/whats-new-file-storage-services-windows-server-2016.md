@@ -1,19 +1,20 @@
 ---
 title:"What's New in Storage in Windows Server 2016"  
 description:"This topic explains the new and changed functionality in Storage in Windows Server 2016."   
-author:"kumudd"  
-ms.author:"kumud"  
-manager:"carmonm"  
 ms.date:"08/19/2016"  
 ms.topic: get-started-article  
 ms.prod:"windows-server-threshold"  
 ms.custom: na  
 ms.reviewer: na  
-ms.suite: na  
-ms.tgt_pltfrm: na  
-ms.assetid: 596f28ec-e154-4c2e-9e82-7e42afe0e9fa  
+ms.suite: na   
 ms.technology:
-  - techgroup-storage  
+  - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
+ms.assetid: 596f28ec-e154-4c2e-9e82-7e42afe0e9fa
+author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # What's New in Storage in Windows Server 2016
 
