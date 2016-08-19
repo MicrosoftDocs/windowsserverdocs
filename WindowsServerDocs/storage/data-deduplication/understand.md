@@ -147,7 +147,7 @@ Dedup, uses a post-processing strategy to optimize and maintain a volume's space
 	<tbody>
 		<tr>
 			<td><a id="dedup-term-always-workload"></a>Always Workload</td>
-			<td>An always workload is a workload that benefits so greatly from, and works so well with, Dedup that you should always enable it. See 'Always' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads) page.</td>
+			<td>An always workload is a workload that benefits so greatly from and works so well with Dedup that you should always enable it. See 'Always' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads) page.</td>
 		</tr>
 		<tr>
 			<td><a id="dedup-term-chunk"></a>Chunk</td>
@@ -175,7 +175,7 @@ Dedup, uses a post-processing strategy to optimize and maintain a volume's space
 		</tr>
 		<tr>
 			<td><a id="dedup-term-optimization"></a>Optimization</td>
-			<td>A file is considered optimized (or deduplicated) by Dedup if has been chunked and its unique chunks have been stored in the Chunk Store.</td>
+			<td>A file is considered optimized (or deduplicated) by Dedup if it has been chunked and its unique chunks have been stored in the Chunk Store.</td>
 		</tr>
 		<tr>
 			<td><a id="dedup-term-in-policy"></a>Optimization Policy</td>
