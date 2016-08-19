@@ -1,32 +1,31 @@
 ---
-title: Step 5 - Configure Group Policy Settings for Automatic Updates
-ms.custom: na
+title: Step 4 - Configure Group Policy Settings for Automatic Updates
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-management-and-automation
+ms.technology: 
+  - WSUS
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
-# Step 5: Configure Group Policy Settings for Automatic Updates
-
->Applies To: Windows Server Technical Preview
+# Step 4: Configure Group Policy Settings for Automatic Updates
 
 In an Active Directory environment, you can use Group Policy to define how computers and users (referred to in this document as WSUS clients) can interact with Windows Updates to obtain automatic updates from Windows Server Update Services (WSUS).
 
 This topic contains two main sections:
 
-[Group Policy settings for WSUS client updates](Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_PolSettings), which provides prescriptive guidance and behavioral details about the Windows Update and Maintenance Scheduler settings of Group Policy that control how WSUS clients can interact with Windows Update to obtain automatic updates.
+[Group Policy settings for WSUS client updates](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_PolSettings), which provides prescriptive guidance and behavioral details about the Windows Update and Maintenance Scheduler settings of Group Policy that control how WSUS clients can interact with Windows Update to obtain automatic updates.
 
-[Supplemental information](Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_Supplemental) has the following sections:
+[Supplemental information](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_Supplemental) has the following sections:
 
--   [Accessing the Windows Update settings in Group Policy](Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_OpenGPO), which provides general guidance about using Group Policy Management Editor, and information about accessing the Update Services policy extensions and Maintenance Scheduler settings in Group Policy.
+-   [Accessing the Windows Update settings in Group Policy](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_OpenGPO), which provides general guidance about using Group Policy Management Editor, and information about accessing the Update Services policy extensions and Maintenance Scheduler settings in Group Policy.
 
--   [Changes to WSUS relevant to this guide](Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_Changes): for administrators familiar with WSUS 3.2 and previous versions, this section gives a brief summary of key differences between the current and past version of WSUS relevant to this guide.
+-   [Changes to WSUS relevant to this guide](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_Changes): for administrators familiar with WSUS 3.2 and previous versions, this section gives a brief summary of key differences between the current and past version of WSUS relevant to this guide.
 
--   [Terms and Definitions](Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_Terms): definitions for various terms pertaining to WSUS and update services that are used in this guide.
+-   [Terms and Definitions](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md#BKMK_Terms): definitions for various terms pertaining to WSUS and update services that are used in this guide.
 
 ## <a name="BKMK_PolSettings"></a>Group Policy settings for WSUS client updates
 This section provides information about three extensions of Group Policy. In these extensions you will find the settings that you can use to configure how WSUS clients can interact with Windows Update to receive automatic updates.

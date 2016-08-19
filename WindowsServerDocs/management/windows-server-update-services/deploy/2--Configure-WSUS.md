@@ -1,27 +1,27 @@
 ---
 title: Step 3 - Configure WSUS
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
+ms.technology: 
+  - WSUS
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
 # Step 3: Configure WSUS
-
->Applies To: Windows Server Technical Preview
 
 After installing the WSUS server role on your server, you need to properly configure it. The following checklist summarises the steps involved in performing the initial configuration for your WSUS server.
 
 |Task|Description|
 |--------|---------------|
-|[3.1. Configure network connections](Step-3--Configure-WSUS.md#BKM_ConfigureNetworkConnections)|Configure the cluster network by using the Network Configuration Wizard.|
-|[3.2. Configure WSUS by using the WSUS Configuration Wizard](Step-3--Configure-WSUS.md#BKM_ConfigureWSUSusingConfigurationWizard)|Use the WSUS Configuration wizard to perform the base WSUS configuration.|
-|[3.3. Configure WSUS computer groups](Step-3--Configure-WSUS.md#BKMK_ConfigComputerGroups)|Create computer groups in the WSUS administration console to manage updates in your organization.|
-|[3.4. Configure client updates](Step-3--Configure-WSUS.md#BKM_ConfigureClientUpdates)|Specify how and when automatic updates are applied to client computers.|
-|[3.5. Secure WSUS with the Secure Sockets Layer Protocol](Step-3--Configure-WSUS.md#bkmk_3.5.ConfigSSL)|Configure Secure Sockets Layer (SSL) protocol to help protect Windows Server Update Services (WSUS).|
+|[2.1. Configure network connections](2--Configure-WSUS.md#BKM_ConfigureNetworkConnections)|Configure the cluster network by using the Network Configuration Wizard.|
+|[2.2. Configure WSUS by using the WSUS Configuration Wizard](2--Configure-WSUS.md#BKM_ConfigureWSUSusingConfigurationWizard)|Use the WSUS Configuration wizard to perform the base WSUS configuration.|
+|[2.3. Configure WSUS computer groups](2--Configure-WSUS.md#BKMK_ConfigComputerGroups)|Create computer groups in the WSUS administration console to manage updates in your organization.|
+|[2.4. Configure client updates](2--Configure-WSUS.md#BKM_ConfigureClientUpdates)|Specify how and when automatic updates are applied to client computers.|
+|[2.5. Secure WSUS with the Secure Sockets Layer Protocol](2--Configure-WSUS.md#bkmk_3.5.ConfigSSL)|Configure Secure Sockets Layer (SSL) protocol to help protect Windows Server Update Services (WSUS).|
 
 ## <a name="BKM_ConfigureNetworkConnections"></a>3.1. Configure network connections
 Before you start the configuration process, be sure that you know the answers to the following questions:
@@ -250,9 +250,9 @@ WSUS Setup automatically configures IIS to distribute the latest version of Auto
 
 Use the following procedures to configure Automatic Updates for client computers:
 
--   [Step 5: Configure Group Policy Settings for Automatic Updates](Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md)
+-   [Step 4: Configure Group Policy Settings for Automatic Updates](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md)
 
--   [3.3. Configure computer groups](Step-3--Configure-WSUS.md#BKMK_ConfigComputerGroups) in this topic
+-   [3.3. Configure computer groups](2--Configure-WSUS.md#BKMK_ConfigComputerGroups) in this topic
 
 ### <a name="BKMK_ConfigureAU"></a>Configure Automatic Updates in Group Policy
 If you have set up Active Directory in your network, you can configure one or multiple computers simultaneously by including them in a Group Policy Object (GPO), and then configuring that GPO with WSUS settings. We recommend that you create a new GPO that contains only WSUS settings.
@@ -444,8 +444,8 @@ WSUS has the ability to publish custom update packages to update Microsoft and n
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Step 4: Approve and Deploy Updates in WSUS](Step-4--Approve-and-Deploy-Updates-in-WSUS.md)
+-   [Step 3: Approve and Deploy Updates in WSUS](3--Approve-and-Deploy-Updates-in-WSUS.md)
 
--   [Step 2: Install the WSUS Server Role](Step-2--Install-the-WSUS-Server-Role.md)
+-   [Step 1: Install the WSUS Server Role](1--Install-the-WSUS-Server-Role.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)

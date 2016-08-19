@@ -1,29 +1,29 @@
 ---
-title: Step 1 - Prepare for Your WSUS Deployment
-ms.custom: na
+title: Plan Your WSUS Deployment
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
+ms.technology: 
+  - WSUS
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
-# Step 1: Prepare for Your WSUS Deployment
-
->Applies To: Windows Server Technical Preview
+# Plan Your WSUS Deployment
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
 |Task|Description|
 |--------|---------------|
-|[1.1. Review considerations and system requirements](Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.1)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
-|[1.2. Choose a WSUS deployment scenario](Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.2)|Decide which WSUS deployment scenario will be used.|
-|[1.3. Choose a WSUS storage strategy](Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.3.)|Decide which WSUS storage strategy best fits your deployment.|
-|[1.4. Choose WSUS update languages](Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.4.)|Decide which WSUS update languages will be installed.|
-|[1.5. Plan WSUS computer groups](Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.5)|Plan the WSUS computer group approach that you will use for your deployment.|
-|[1.6. Plan WSUS Performance Considerations: Background Intelligent Transfer Service](Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.6.)|Plan a WSUS design for optimized performance.|
-|[1.7. Plan Automatic Updates settings](Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.7.)|Plan how you will configure the automatic updates settings for your scenario.|
+|[1.1. Review considerations and system requirements](Plan-Your-WSUS-Deployment.md#BKMK_1.1)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
+|[1.2. Choose a WSUS deployment scenario](Plan-Your-WSUS-Deployment.md#BKMK_1.2)|Decide which WSUS deployment scenario will be used.|
+|[1.3. Choose a WSUS storage strategy](Plan-Your-WSUS-Deployment.md#BKMK_1.3.)|Decide which WSUS storage strategy best fits your deployment.|
+|[1.4. Choose WSUS update languages](Plan-Your-WSUS-Deployment.md#BKMK_1.4.)|Decide which WSUS update languages will be installed.|
+|[1.5. Plan WSUS computer groups](Plan-Your-WSUS-Deployment.md#BKMK_1.5)|Plan the WSUS computer group approach that you will use for your deployment.|
+|[1.6. Plan WSUS Performance Considerations: Background Intelligent Transfer Service](Plan-Your-WSUS-Deployment.md#BKMK_1.6.)|Plan a WSUS design for optimized performance.|
+|[1.7. Plan Automatic Updates settings](Plan-Your-WSUS-Deployment.md#BKMK_1.7.)|Plan how you will configure the automatic updates settings for your scenario.|
 
 ## <a name="BKMK_1.1"></a>1.1. Review considerations and system requirements
 **System Requirements:**
@@ -458,8 +458,6 @@ After the new updates are downloaded, Automatic Updates polls the WSUS server fo
 
 ## <a name="BKMK_Links"></a>See also
 
--   [Step 2: Install the WSUS Server Role](Step-2--Install-the-WSUS-Server-Role.md)
+-   [Deploy Step 1: Install the WSUS Server Role](../deploy/1--Install-the-WSUS-Server-Role.md)
 
--   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)
-
--   [Windows Server Update Services](../Windows-Server-Update-Services-WSUS.md)
+-   [Windows Server Update Services](../get-started/Windows-Server-Update-Services-WSUS.md)
