@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Setting up Update Synchronization
 

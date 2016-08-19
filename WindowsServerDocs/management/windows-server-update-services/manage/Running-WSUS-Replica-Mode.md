@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: d218cd6b-3b6b-4429-913b-31d412ce3356
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Running WSUS Replica Mode
 

@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Step 4: Configure Group Policy Settings for Automatic Updates
 

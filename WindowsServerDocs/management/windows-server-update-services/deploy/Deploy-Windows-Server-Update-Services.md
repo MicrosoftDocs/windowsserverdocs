@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 2708f6b2-4252-4b8f-9b7e-84c9b4222075
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Deploy
 

@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 7c351797-2716-4442-a668-60d5b4e77751
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # The Server Cleanup Wizard
 

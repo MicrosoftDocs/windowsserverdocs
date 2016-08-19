@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: fabc8619-350e-403b-96f8-116424931300
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Step 1: Install the WSUS Server Role
 
@@ -61,6 +61,6 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 
 -   [Step 2: Configure WSUS](2--Configure-WSUS.md)
 
--   [Plan Your WSUS Deployment](../plan/Plan-Your-WSUS-Deployment.md)
+-   [Plan Your WSUS Deployment](../../plan/Plan-Your-WSUS-Deployment.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)

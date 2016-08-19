@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Step 3: Approve and Deploy Updates in WSUS
 

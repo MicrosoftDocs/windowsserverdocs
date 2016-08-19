@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Plan Your WSUS Deployment
 

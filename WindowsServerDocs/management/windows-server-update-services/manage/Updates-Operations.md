@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Updates Operations
 

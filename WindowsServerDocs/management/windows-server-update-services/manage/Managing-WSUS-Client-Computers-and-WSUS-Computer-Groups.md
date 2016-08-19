@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 4b1ea915-0f9f-4f0e-8913-a1dd460d07ab
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Managing WSUS Client Computers and WSUS Computer Groups
 
@@ -21,7 +21,7 @@ Selecting one of the computer groups in the **Computers** node under **Options**
 You can also manage computer groups on the Computers page, which includes creating the groups and assigning computers to them. For more information about managing computer groups, see Managing Computer Groups in the next section of this guide, and section [1.5. Plan WSUS computer groups](../deploy/Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.5) in Step 1: Prepare for Your WSUS Deployment of the WSUS deployment guide.
 
 > [!NOTE]
-> You must first configure client computers to contact the WSUS server before you can manage them from that server. Until you perform this task, your WSUS server will not recognize your client computers and they will not be displayed in the list on the Computers page. For more information about setting up client computers, see [1.5. Plan WSUS computer groups](../deploy/Step-1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.5) of Step 1: Prepare for Your WSUS Deployment, and Step 3: Configure WSUS, in the WSUS deployment guide.
+> You must first configure client computers to contact the WSUS server before you can manage them from that server. Until you perform this task, your WSUS server will not recognize your client computers and they will not be displayed in the list on the Computers page. For more information about setting up client computers, see [1.5. Plan WSUS computer groups](../deploy/1--Prepare-for-Your-WSUS-Deployment.md#BKMK_1.5) of Step 1: Prepare for Your WSUS Deployment, and Step 3: Configure WSUS, in the WSUS deployment guide.
 
 ## Controlling when WSUS client computers install updates
 There are two methods to control when WSUS client computers install updates:
@@ -30,7 +30,7 @@ There are two methods to control when WSUS client computers install updates:
 
 -   WSUS Group Policies: Group Policies control when the Windows Update Agent scans and installs updates
 
-    For more information, see: [Step 5: Configure Group Policy Settings for Automatic Updates](../deploy/Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md), in the WSUS Deployment Guide.
+    For more information, see: [Step 4: Configure Group Policy Settings for Automatic Updates](../deploy/4--Configure-Group-Policy-Settings-for-Automatic-Updates.md), in the WSUS Deployment Guide.
 
 ## Managing Computer Groups
 WSUS allows you to target updates to groups of client computers, so you can ensure that specific computers always get the right updates at the most convenient times. For example, if all the computers in one department (such as the Accounting team) have a specific configuration, you can set up a group for that team, decide which updates their computers need and what time they should be installed, and then use WSUS reports to evaluate the updates for the team.

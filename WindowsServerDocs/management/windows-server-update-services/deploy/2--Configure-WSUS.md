@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # Step 3: Configure WSUS
 
@@ -250,9 +250,9 @@ WSUS Setup automatically configures IIS to distribute the latest version of Auto
 
 Use the following procedures to configure Automatic Updates for client computers:
 
--   [Step 5: Configure Group Policy Settings for Automatic Updates](Step-5--Configure-Group-Policy-Settings-for-Automatic-Updates.md)
+-   [Step 4: Configure Group Policy Settings for Automatic Updates](4--Configure-Group-Policy-Settings-for-Automatic-Updates.md)
 
--   [3.3. Configure computer groups](Step-3--Configure-WSUS.md#BKMK_ConfigComputerGroups) in this topic
+-   [3.3. Configure computer groups](2--Configure-WSUS.md#BKMK_ConfigComputerGroups) in this topic
 
 ### <a name="BKMK_ConfigureAU"></a>Configure Automatic Updates in Group Policy
 If you have set up Active Directory in your network, you can configure one or multiple computers simultaneously by including them in a Group Policy Object (GPO), and then configuring that GPO with WSUS settings. We recommend that you create a new GPO that contains only WSUS settings.
@@ -446,6 +446,6 @@ WSUS has the ability to publish custom update packages to update Microsoft and n
 
 -   [Step 3: Approve and Deploy Updates in WSUS](3--Approve-and-Deploy-Updates-in-WSUS.md)
 
--   [Step 1: Install the WSUS Server Role](Step-1
+-   [Step 1: Install the WSUS Server Role](1--Install-the-WSUS-Server-Role.md)
 
 -   [Deploy Windows Server Update Services](Deploy-Windows-Server-Update-Services.md)

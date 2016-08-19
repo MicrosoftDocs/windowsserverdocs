@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # WSUS Messages and Troubleshooting Tips
 

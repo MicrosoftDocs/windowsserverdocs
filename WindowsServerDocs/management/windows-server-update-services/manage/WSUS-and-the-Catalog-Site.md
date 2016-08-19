@@ -9,7 +9,7 @@ ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 author: coreyp
 ms.author: coreyp-at-msft
-ms.date: 9/14/2016
+ms.date: 09/14/2016
 ---
 # WSUS and the Catalog Site
 
