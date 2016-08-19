@@ -17,7 +17,7 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 
 |Task|Description|
 |--------|---------------|
-|[1.1. Review considerations and system requirements](Plan-for-Your-WSUS-Deployment.md#BKMK_1.1)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
+|[1.1. Review considerations and system requirements](Plan-Your-WSUS-Deployment.md#BKMK_1.1)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
 |[1.2. Choose a WSUS deployment scenario](Plan-Your-WSUS-Deployment.md#BKMK_1.2)|Decide which WSUS deployment scenario will be used.|
 |[1.3. Choose a WSUS storage strategy](Plan-Your-WSUS-Deployment.md#BKMK_1.3.)|Decide which WSUS storage strategy best fits your deployment.|
 |[1.4. Choose WSUS update languages](Plan-Your-WSUS-Deployment.md#BKMK_1.4.)|Decide which WSUS update languages will be installed.|
