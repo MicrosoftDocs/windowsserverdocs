@@ -178,7 +178,7 @@ When you attempt to recreate replication using PowerShell, you receive error:
     , CimException
     + FullyQualifiedErrorId : Windows System Error 5038,New-SRPartnership
 
-This is caused by a known issue in Windows Server 2016 Technical Preview. As a workaround, prior to upgrading the cluster, remove all replication partnerships and groups. You can use Remove-SRPartnership and Remove-SRGroup to perf these tasks, or use Failover Cluster manager. 
+This is caused by a known issue in Windows Server 2016 Technical Preview. As a workaround, prior to upgrading the cluster, remove all replication partnerships and groups. You can use Remove-SRPartnership and Remove-SRGroup to perform these tasks, or use Failover Cluster manager. 
 
 ### Related Topics  
 
