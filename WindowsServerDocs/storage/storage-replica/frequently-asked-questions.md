@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Frequently Asked Questions about Storage Replica
 

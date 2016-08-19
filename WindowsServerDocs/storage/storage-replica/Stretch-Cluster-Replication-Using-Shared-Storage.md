@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Stretch Cluster Replication Using Shared Storage
 

@@ -2,6 +2,10 @@
 title: Health Service in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
+manager: dongill
+ms.author: JGerend
+ms.technology:
+  - techgroup-storage
 ms.reviewer: na
 ms.suite: na
 ms.technology:

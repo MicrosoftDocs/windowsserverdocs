@@ -10,9 +10,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 
 author: jasongerend
+manager: dongill
+ms.author: JGerend
 ---
 
+
 >Applies To: Windows Server 2016, Windows 10 Anniversary Edition (Version 1607)
+
 
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 

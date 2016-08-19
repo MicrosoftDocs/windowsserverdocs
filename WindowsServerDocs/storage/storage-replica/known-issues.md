@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Known Issues with Storage Replica
 
