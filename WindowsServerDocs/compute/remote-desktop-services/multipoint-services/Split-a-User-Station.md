@@ -2,7 +2,7 @@
 title: Split a User Station
 ms.custom: na
 ms.date: 07/08/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
