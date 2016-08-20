@@ -708,7 +708,7 @@
 ###### [Hyper-V Network Virtualization Overview in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)
 ###### [Hyper-V Network Virtualization Technical Details in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md)
 ###### [What's New in Hyper-V Network Virtualization in Windows Server Technical Preview](networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)
-##### [Internal DNS Service &#40;iDNS&#41; for SDN](networking/sdn/technologies/Idns-for-Sdn.md)
+##### [Internal DNS Service (iDNS) for SDN](networking/sdn/technologies/Idns-for-Sdn.md)
 ##### [Network Controller](networking/sdn/technologies/network-controller/Network-Controller.md)
 ###### [Install the Network Controller server role using Server Manager](networking/sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md)
 ###### [Post-Deployment Steps for Network Controller](networking/sdn/technologies/network-controller/post-deploy-steps-nc.md)
