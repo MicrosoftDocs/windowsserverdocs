@@ -44,13 +44,13 @@ When optimized files are read, the file system hands off the files with a Repars
 
 ## <a id="usage-type"></a>Usage Types
 The following Usage Types provide reasonable Data Deduplication configuration for common workloads:  
-&nbsp;
-<table style="padding-top:0px;margin-top:0px;margin-bottom:20px">
+
+<table>
 	<thread>
 		<tr>
-			<th style="min-width:125px">Usage Type</th>
-			<th style="min-width:125px">Ideal Workloads</th>
-			<th style="min-width:125px">What's Different</th>
+			<th>Usage Type</th>
+			<th>Ideal Workloads</th>
+			<th>What's Different</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -103,105 +103,30 @@ The following Usage Types provide reasonable Data Deduplication configuration fo
 ## <a id="job-info"></a>Jobs
 Data Deduplication, uses a post-processing strategy to optimize and maintain a volume's space efficiency. 
 
-<table style="padding-top:0px;margin-top:0px;margin-bottom:20px">
-	<thead>
-		<tr>
-			<th style="min-width:125px">Job Name</th>
-			<th style="min-width:125px">Job Description</th>
-			<th style="min-width:125px;">Default Schedule</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a id="job-info-optimization"></a>Optimization</td>
-			<td>The **Optimization** job deduplicates by chunking data on a volume per the volume policy settings, (optionally) compressing those chunks, and storing chunks uniquely in the Chunk Store. The optimization process that Data Deduplication uses is described in detail [here](understand.md#how-does-dedup-work).</td>	
-			<td>Once every hour</td>
-		</tr>
-		<tr>
-			<td><a id="job-info-gc"></a>Garbage Collection</td>
-			<td>The **Garbage Collection** job is responsible for reclaiming disk space by removing unnecessary chunks that are no longer being referenced by files that have been recently modified or deleted.</td>
-			<td>Every Saturday at 2:35 am.</td>
-		</tr>
-		<tr>
-			<td><a id="job-info-scrubbing"></a>Integrity Scrubbing</td>
-			<td>The **Integrity Scrubbing** job is responsible for identifiying corruption in the chunk store due to disk failures or bad sectors. When possible, Data Deduplication can automatically use volume features (such as mirror or parity on a Storage Spaces volume) to reconstruct the corrupted data. Additionally, Data Deduplication keeps backup copies of popular chunks when they are referenced over 100 times in an area called the hotspot.</td>
-			<td>Every Saturday at 3:35 am.</td>
-		</tr>
-		<tr>
-			<td><a id="job-info-unoptimization"></a>Unoptimization</td>
-			<td>The **Unoptimization** job is a special job that can only be run manually that undoes the optimization done by deduplication and disables Data Deduplication for that volume.</td>
-			<td>[On-demand only](run.md#disabling-dedup)</td>
-		</tr>
-	</tbody>
-</table>
+| Job Name | Job Descriptions | Default Schedule |
+|----------|------------------|------------------|
+| <a id="job-info-optimization"></a>Optimization | The **Optimization** job deduplicates by chunking data on a volume per the volume policy settings, (optionally) compressing those chunks, and storing chunks uniquely in the Chunk Store. The optimization process that Data Deduplication uses is described in detail [here](understand.md#how-does-dedup-work). | Once every hour |
+| <a id="job-info-gc"></a>Garbage Collection | The **Garbage Collection** job is responsible for reclaiming disk space by removing unnecessary chunks that are no longer being referenced by files that have been recently modified or deleted. | Every Saturday at 2:35 am. |
+| <a id="job-info-scrubbing"></a>Integrity Scrubbing | The **Integrity Scrubbing** job is responsible for identifiying corruption in the chunk store due to disk failures or bad sectors. When possible, Data Deduplication can automatically use volume features (such as mirror or parity on a Storage Spaces volume) to reconstruct the corrupted data. Additionally, Data Deduplication keeps backup copies of popular chunks when they are referenced over 100 times in an area called the hotspot. | Every Saturday at 3:35 am. |
+| <a id="job-info-unoptimization"></a>Unoptimization | The **Unoptimization** job is a special job that can only be run manually that undoes the optimization done by deduplication and disables Data Deduplication for that volume. | [On-demand only](run.md#disabling-dedup) |
 
 ## <a id="dedup-term"></a>Data Deduplication Terminology
-<table>
-	<thead>
-		<tr>
-			<th style="min-width:125px">Term</th>
-			<th style="min-width:125px">Definition</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a id="dedup-term-always-workload"></a>Always Workload</td>
-			<td>An always workload is a workload that benefits so greatly from and works so well with deduplication that you should always enable it. See 'Always' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads) page.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-chunk"></a>Chunk</td>
-			<td>A chunk is a section of a file that has been selected by the Data Deduplication chunking algorithm as likely to occur in other, similiar files.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-chunk-store"></a>Chunk Store</td>
-			<td>The Chunk Store is an organized series of container files in the System Volume Information folder that Data Deduplication uses to uniquely store chunks.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-dedup"></a>Dedup</td>
-			<td>An abbrevation for Data Deduplication commonly used in PowerShell, Windows Server APIs and components, and in common usage in the Windows Server community.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-file-metadata"></a>File Metadata</td>
-			<td>Every file contains metadata that describe interesting properties about the file that are not related to the main content of the file. For instance, Date Created, Last Read Date, Author, etc.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-file-stream"></a>File Stream</td>
-			<td>The File Stream is the main content of the file. This is the part of the file that Data Deduplication optimizes.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-file-system"></a>File System</td>
-			<td>The File System is the software and on-disk data structure that allow the Operating System to store files on storage media. Data Deduplication is supported on NTFS formatted volumes.</td>
-		</tr>		
-		<tr>
-			<td><a id="dedup-term-file-system-filter"></a>File System Filter</td>
-			<td>A File System Filter is a plugin that modifies the default behavior of the File System. In order to preserve access semantics, Data Deduplication uses a File System Filter (Dedup.sys) to redirect reads to optimized content completely transparently to the user/application making the read request.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-optimization"></a>Optimization</td>
-			<td>A file is considered optimized (or deduplicated) by Data Deduplication if it has been chunked and its unique chunks have been stored in the Chunk Store.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-in-policy"></a>Optimization Policy</td>
-			<td>The Optimization Policy specifies which files should be considered for Data Deduplication. For example, files may be considered out-of-policy if they are brand new, open, in a certain path on the volume, or are of a certain file type.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-reparse-point"></a>Reparse Point</td>
-			<td>A Reparse Point is a special tag that notifies the File System to pass off IO to a specified File System Filter. When a file's file stream has been optimized, Data Deduplication replaces the file stream with a Reparse Point, which allows Data Deduplication to preserve the access semantics for that file. More information about Reparse Points can be found [here](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365503.aspx).</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-sometimes-workload"></a>Sometimes Workload</td>
-			<td>A sometimes workload is a workload that may benefit from Data Deduplication, but should be evaluated for its fitness for deduplication to ensure that you get maximum optimization and performance out of your storage. See 'Sometimes' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads)</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-volume"></a>Volume</td>
-			<td>A volume is a Windows construct for a logical storage drive that may span multiple physical storage devices across a one or more servers. Deduplication is enabled on a volume by volume basis.</td>
-		</tr>
-		<tr>
-			<td><a id="dedup-term-workload"></a>Workload</td>
-			<td>A workload is an application that runs on Windows Server. Example workloads include general purpose file server, Hyper-V, and SQL Server.</td>
-		</tr>
-	</tbody>
-</table>
+| Term | Definition |
+|------|------------|
+| <a id="dedup-term-always-workload"></a>Always Workload | An always workload is a workload that benefits so greatly from and works so well with deduplication that you should always enable it. See 'Always' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads) page. |
+| <a id="dedup-term-chunk"></a>Chunk | A chunk is a section of a file that has been selected by the Data Deduplication chunking algorithm as likely to occur in other, similiar files. |
+| <a id="dedup-term-chunk-store"></a>Chunk Store | The Chunk Store is an organized series of container files in the System Volume Information folder that Data Deduplication uses to uniquely store chunks. |
+| <a id="dedup-term-dedup"></a>Dedup | An abbrevation for Data Deduplication commonly used in PowerShell, Windows Server APIs and components, and in common usage in the Windows Server community. |
+| <a id="dedup-term-file-metadata"></a>File Metadata | Every file contains metadata that describe interesting properties about the file that are not related to the main content of the file. For instance, Date Created, Last Read Date, Author, etc. |
+| <a id="dedup-term-file-stream"></a>File Stream | The File Stream is the main content of the file. This is the part of the file that Data Deduplication optimizes. |
+| <a id="dedup-term-file-system"></a>File System | The File System is the software and on-disk data structure that allow the Operating System to store files on storage media. Data Deduplication is supported on NTFS formatted volumes. | 
+| <a id="dedup-term-file-system-filter"></a>File System Filter | A File System Filter is a plugin that modifies the default behavior of the File System. In order to preserve access semantics, Data Deduplication uses a File System Filter (Dedup.sys) to redirect reads to optimized content completely transparently to the user/application making the read request. |
+| <a id="dedup-term-optimization"></a>Optimization | A file is considered optimized (or deduplicated) by Data Deduplication if it has been chunked and its unique chunks have been stored in the Chunk Store. |
+| <a id="dedup-term-in-policy"></a>Optimization Policy | The Optimization Policy specifies which files should be considered for Data Deduplication. For example, files may be considered out-of-policy if they are brand new, open, in a certain path on the volume, or are of a certain file type. |
+| <a id="dedup-term-reparse-point"></a>Reparse Point | A Reparse Point is a special tag that notifies the File System to pass off IO to a specified File System Filter. When a file's file stream has been optimized, Data Deduplication replaces the file stream with a Reparse Point, which allows Data Deduplication to preserve the access semantics for that file. More information about Reparse Points can be found [here](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365503.aspx). |
+| <a id="dedup-term-sometimes-workload"></a>Sometimes Workload | A sometimes workload is a workload that may benefit from Data Deduplication, but should be evaluated for its fitness for deduplication to ensure that you get maximum optimization and performance out of your storage. See 'Sometimes' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads). |
+| <a id="dedup-term-volume"></a>Volume | A volume is a Windows construct for a logical storage drive that may span multiple physical storage devices across a one or more servers. Deduplication is enabled on a volume by volume basis. |
+| <a id="dedup-term-workload"></a>Workload | A workload is an application that runs on Windows Server. Example workloads include general purpose file server, Hyper-V, and SQL Server. |
 
 > [!Warning]  
 > Unless instructed by authorized Microsoft Support Personnel, do not attempt to manually modify the Chunk Store. Doing so may result in data corruption and/or loss.

@@ -67,9 +67,9 @@ The following settings can be toggled for new or scheduled Data Deduplication jo
 	<thead>
 		<tr>
 			<th style="min-width:125px">Parameter Name</th>
-			<th style="min-width:125px">Definition</th>
-			<th style="min-width:125px">Accepted Values</th>
-			<th style="min-width:125px">Why would you want to set this value?</th>
+			<th>Definition</th>
+			<th>Accepted Values</th>
+			<th>Why would you want to set this value?</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -198,9 +198,9 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 	<thead>
 		<tr>
 			<th style="min-width:125px">Setting Name</th>
-			<th style="min-width:125px">Definition</th>
-			<th style="min-width:125px">Accepted Values</th>
-			<th style="min-width:125px">Why would you want to modify this value?</th>
+			<th>Definition</th>
+			<th>Accepted Values</th>
+			<th>Why would you want to modify this value?</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -294,9 +294,9 @@ For example, you may wish to disable Full Garbage Collection. More information a
 	<thead>
 		<tr>
 			<th style="min-width:125px">Setting Name</th>
-			<th style="min-width:125px">Definition</th>
-			<th style="min-width:125px">Accepted Values</th>
-			<th style="min-width:125px">Why would you want to change this?</th>
+			<th>Definition</th>
+			<th>Accepted Values</th>
+			<th>Why would you want to change this?</th>
 		</tr>
 	</thead>
 	<tbody>

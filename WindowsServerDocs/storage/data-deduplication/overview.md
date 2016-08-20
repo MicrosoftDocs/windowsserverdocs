@@ -28,40 +28,14 @@ Data Deduplication is an important tool in a storage administrator's toolkit for
 
 The space savings that can be gained from Data Deduplication are highly dependent on the dataset or workload on the volume. Datasets with high duplication could see optimization rates of up to 95%, or a 20x reduction in storage utilization. The following table highlights typical deduplication savings for various content types:
 
-<table>
-    <thead>
-        <tr>
-            <th>Scenario</th>
-            <th>Content</th>
-            <th>Typical Space Savings</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>User documents</td>
-            <td>Office documents, photos, music, videos, etc</td>
-            <td>30-50%</td>
-        </tr>
-        <tr>
-            <td>Deployment shares</td>
-            <td>Software binaries, cab files, symbols files, etc</td>
-            <td>70-80%</td>
-        </tr>
-        <tr>
-            <td>Virtualization libraries</td>
-            <td>ISOs, Virtual hard disk files, etc</td>
-            <td>80-95%</td>
-        </tr>
-        <tr>
-            <td>General file share</td>
-            <td>All of the above</td>
-            <td>50-60%</td>
-        </tr>
-    </tbody>
-</table>
+| Scenario       | Content                                      | Typical Space Savings |
+|----------------|----------------------------------------------|-----------------------|
+| User Documents | Office documents, photos, music, videos, etc | 30-50%                |
+| Deployment shares | Software binaries, cab files, symbols, etc | 70-80%               |
+| Virtualization libraries | ISOs, virtual hard disk files, etc | 80-95%                |
+| General file share | All of the above                         | 50-60%                |
 
 ## <a id="when-can-dedup-be-used"></a>When can Data Deduplication be used?  
-
 <table>
     <tbody>
         <tr>
