@@ -18,9 +18,9 @@ ms.technology:
 
 ## <a id="running-dedup-jobs-manually"></a>Running Data Deduplication Jobs Manually
 Every scheduled Data Deduplication job can be run manually with the following PowerShell cmdlets:
-* [`Start-DedupJob`](https://technet.microsoft.com/en-us/library/hh848442.aspx), which starts a new Data Deduplication job
-* [`Stop-DedupJob`](https://technet.microsoft.com/en-us/library/hh848439.aspx), which stops a Data Deduplication job already in progress (or removes it from the queue)
-* [`Get-DedupJob`](https://technet.microsoft.com/en-us/library/hh848452.aspx), which shows all the active and queued Data Deduplication jobs
+* [`Start-DedupJob`](https://technet.microsoft.com/en-us/library/hh848442.aspx): starts a new Data Deduplication job
+* [`Stop-DedupJob`](https://technet.microsoft.com/en-us/library/hh848439.aspx): stops a Data Deduplication job already in progress (or removes it from the queue)
+* [`Get-DedupJob`](https://technet.microsoft.com/en-us/library/hh848452.aspx): shows all the active and queued Data Deduplication jobs
 
 All of the [settings available when scheduling a Data Deduplication job](advanced-settings.md#modifying-job-schedules-available-settings) are available when starting a job manually, with the exception of the scheduling specific ones. For example, to start an [Optimization](understand.md#job-info-optimization) job manually with high priority and maximum CPU and memory usage, execute the following PowerShell command with administrator privilege:
 

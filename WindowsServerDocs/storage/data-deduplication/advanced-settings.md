@@ -24,10 +24,10 @@ The [default Data Deduplication job schedules](understand.md#job-info) are desig
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication Schedule
 Data Deduplication jobs are scheduled via the Windows Task Scheduler, and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets however that make scheduling easy:
-* [`Get-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848446.aspx) which shows the current scheduled jobs
-* [`New-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848445.aspx) which creates a new scheduled job
-* [`Set-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848447.aspx) which modifies an existing scheduled job
-* [`Remove-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848451.aspx) which removes a scheduled job.
+* [`Get-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848446.aspx): shows the current scheduled jobs
+* [`New-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848445.aspx): creates a new scheduled job
+* [`Set-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848447.aspx): modifies an existing scheduled job
+* [`Remove-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848451.aspx): removes a scheduled job.
 
 The most common reason for changing when the Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Data Deduplication schedule for a 'sunny day' scenario: a hyper-converged Hyper-V host that is idle on weeknights starting at 7 PM and on weekends. To change the schedule, run the following PowerShell cmdlets in an Administrator context:
 
@@ -157,7 +157,7 @@ The following settings can be toggled for new or scheduled Data Deduplication jo
 			<td>ReadOnly</td>
 			<td>Indicates that the scrubbing job processes and reports on corruptions that it finds but does not run any repair actions.</td>
 			<td>Switch (True/False)</td>
-			<td>You would like to manually restore (like from backup) files which sit on bad sections of the disk.</td>
+			<td>You would like to manually restore (like from backup) files that sit on bad sections of the disk.</td>
 		</tr>
 		<tr>
 			<td>Start</td>
@@ -181,7 +181,7 @@ Data Deduplication's volume-wide default settings are set via the [Usage Type](u
 * [`Get-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848448.aspx)
 * [`Set-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848438.aspx)
 
-The main reasons to modify the volume settings from the selected Usage Type are (1) to improve read performance for specific files (such as multimedia or other already compressed file types) and/or (2) to tune Data Deduplication for better optimization for your specific workload. The following example shows how to modify the Data Deduplication volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files which change frequently:
+The main reasons to modify the volume settings from the selected Usage Type are (1) to improve read performance for specific files (such as multimedia or other already compressed file types) and/or (2) to tune Data Deduplication for better optimization for your specific workload. The following example shows how to modify the Data Deduplication volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files that change frequently:
 
 1. See what the current volume settings are for Cluster Shared Volume 1 are:
 	```PowerShell
@@ -212,13 +212,13 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 		</tr>
 		<tr>
 			<td>ExcludeFileType</td>
-			<td>File types which are excluded from optimization.</td>
+			<td>File types that are excluded from optimization.</td>
 			<td>Array of file extensions</td>
 			<td>Some file types, particularly multimedia or already compressed files, do not benefit very much from being optimized. This setting allows you to configure which types are excluded.</td>
 		</tr>
 		<tr>
 			<td>ExcludeFolder</td>
-			<td>Specifies folder paths which should not be considered for optimization.</td>
+			<td>Specifies folder paths that should not be considered for optimization.</td>
 			<td>Array of folder paths</td>
 			<td>It may be desirable, for performance, or because the content in particular paths does not benefit much from optimization, to exclude certain paths on the volume from consideration for optimization.</td>
 		</tr>
@@ -232,13 +232,13 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 			<td>MinimumFileAgeDays</td>
 			<td>Number of days after the file is created before the file is considered to be 'in-policy' for optimization.</td>
 			<td>Positive integers (inclusive of zero)</td>
-			<td>The 'Default' and 'HyperV' usage types by set this value to 3 days, which is meant to maximize performance on "hot" files, or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive ('I need all the space savings I can get') or if you do not care about the extra latency associated with Data Deduplication ('I'm on an all flash storage array').</td>
+			<td>The 'Default' and 'HyperV' usage types set this value to 3 days to maximize performance on "hot" files, or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive ('I need all the space savings I can get') or if you do not care about the extra latency associated with Data Deduplication ('I'm on an all flash storage array').</td>
 		</tr>
 		<tr>
 			<td>MinimumFileSize</td>
 			<td>Minimum file size that a file must have to be considered 'in-policy' for optimization.</td>
 			<td>Positive integers (bytes) greater than 32 KiB</td>
-			<td>The main reason to change this value would be to exclude small files which may have limited optimization value in the name of conserving compute time.</td>
+			<td>The main reason to change this value would be to exclude small files that may have limited optimization value in the name of conserving compute time.</td>
 		</tr>
 		<tr>
 			<td>NoCompress</td>
@@ -254,7 +254,7 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 		</tr>
 		<tr>
 			<td>OptimizeInUseFiles</td>
-			<td>When enabled, files which have active handles against them will be considered as 'in-policy' for optimization.</td>
+			<td>When enabled, files that have active handles against them will be considered as 'in-policy' for optimization.</td>
 			<td>True/False</td>
 			<td>The main reason to enable this setting is if your workload keeps files open for extended period of times. In this scenario, without this setting enabled, a file would never get optimized if the workload has an open handle to it even if it's only occasionally appending data at the end.</td>
 		</tr>
@@ -268,7 +268,7 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 			<td>Verify</td>
 			<td>When enabled, if the hash of a chunk matches a chunk we already have in our Chunk Store, the chunks is byte-by-byte compared to ensure they are identical.</td>
 			<td>True/False</td>
-			<td>This is an integrity feature which ensures that the hashing algorithm we use to compare chunks does not make a mistake by comparing two chunks of data which are actually different but which have the same hash. In practice, it is extremely improbable that this would ever happen. Enabling the verification feature adds significant overhead to the optimization job.</td>
+			<td>This is an integrity feature that ensures that the hashing algorithm we use to compare chunks does not make a mistake by comparing two chunks of data that are actually different but have the same hash. In practice, it is extremely improbable that this would ever happen. Enabling the verification feature adds significant overhead to the optimization job.</td>
 		</tr>
 	</tbody>
 </table>
@@ -308,7 +308,7 @@ For example, you may wish to disable Full Garbage Collection. More information a
 		</tr>
 		<tr>
 			<td>DeepGCInterval</td>
-			<td>This setting configures the interval at which Garbage Collection jobs become [Full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n (for example 2) would mean that every n<sup>th</sup> job was a Full Garbage Collection job.</td>
+			<td>This setting configures the interval that Garbage Collection jobs become [Full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n (for example 2) would mean that every n<sup>th</sup> job was a Full Garbage Collection job.</td>
 			<td>Positive Integers (inclusive of zero)</td>
 			<td>See [this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)</td>
 		</tr>

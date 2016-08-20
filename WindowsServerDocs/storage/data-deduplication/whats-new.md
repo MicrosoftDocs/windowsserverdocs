@@ -35,7 +35,7 @@ In Windows Server 2012 R2, in order to get the best performance out of Data Dedu
 In Windows Server 2016, Data Deduplication is highly performant on volumes up to 64 TB.
 
 **What works differently?**  
-In Windows Server 2012 R2, the Data Deduplication Job Pipeline uses a single-thread and I/O queue for each volume. In order to ensure that the Optimization Jobs do not fall behind (which would cause the overall savings rate for the volume to decrease), large datasets must be broken up into smaller volumes. The appropriate volume size depends on the expected churn for that volume, on average, something like a maximum of ~6-7 TB for high churn volumes and ~9-10 TB for low churn volumes. 
+In Windows Server 2012 R2, the Data Deduplication Job Pipeline uses a single-thread and I/O queue for each volume. In order to ensure that the Optimization Jobs do not fall behind, which would cause the overall savings rate for the volume to decrease, large datasets must be broken up into smaller volumes. The appropriate volume size depends on the expected churn for that volume, on average, something like a maximum of ~6-7 TB for high churn volumes and ~9-10 TB for low churn volumes. 
 
 In Windows Server 2016, the Data Deduplication Job pipeline has been redesigned to run multiple threads in parallel using multiple I/O queues for each volume, resulting in performance that was only possible before by dividing up data into multiple, smaller volumes. This change can be visualized as such:
 

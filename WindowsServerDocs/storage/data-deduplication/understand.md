@@ -25,7 +25,7 @@ Data Deduplication in Windows Server was created with the following two principl
 	This means that Data Deduplication optimizes data using a post-processing model; all data is written unoptimized to the disk, and then optimized later by Data Deduplication.
 
 2. **Optimization should not change access semantics**  
-	This means that users and applications which access data on an optimized volume are completely unaware that the files they are accessing have been deduplicated. 
+	This means that users and applications that access data on an optimized volume are completely unaware that the files they are accessing have been deduplicated. 
 
 Once enabled for a volume, Data Deduplication runs in the background to identify repeated patterns across files on that volume and to seamlessly move those portions, or chunks, with special pointers called Reparse Points that point to a unique copy of that chunk. This occurs in the following four steps:
 
@@ -136,7 +136,7 @@ Data Deduplication, uses a post-processing strategy to optimize and maintain a v
 There are several important differences between Data Deduplication, and other common storage optimization products:
 
 * *How does Data Deduplication differ from Single Instance Store?*  
-	Single Instance Store, or SIS, was a predecessor technology to Data Deduplication first introduced in Windows Storage Server 2008 R2. SIS optimized a volume by identifying files which were completely identical and replacing them with logical links to a single copy of a file stored in the SIS Common Store. Unlike SIS, Data Deduplication can get space savings from files which are not identical but share many common patterns and from files which themselves contain many repeated patterns. SIS was deprecated in Windows Server 2012 R2 and removed in Windows Server 2016 in favor of Data Deduplication.
+	Single Instance Store, or SIS, was a predecessor technology to Data Deduplication first introduced in Windows Storage Server 2008 R2. SIS optimized a volume by identifying files that were completely identical and replacing them with logical links to a single copy of a file stored in the SIS Common Store. Unlike SIS, Data Deduplication can get space savings from files that are not identical but share many common patterns and from files which themselves contain many repeated patterns. SIS was deprecated in Windows Server 2012 R2 and removed in Windows Server 2016 in favor of Data Deduplication.
 
 * *How does Data Deduplication differ from NTFS Compression?*  
 	NTFS Compression is a feature of NTFS that can be optionally enabled at the volume level. With NTFS Compression, each individual file is optimized individually via compression at write-time. Unlike NTFS Compression, Data Deduplication can get spacing savings across all the files on a volume. This is advantageous over NTFS Compression because files may have <u>both</u> internal duplication (which is addressed by NTFS Compression) and have similarities with other files on the volume (which is not addressed by NTFS Compression). Additionally, Data Deduplication has a post-processing model, which means that new files (or modifications to existing files), will be written to disk unoptimized and will be optimized later on by Data Deduplication.

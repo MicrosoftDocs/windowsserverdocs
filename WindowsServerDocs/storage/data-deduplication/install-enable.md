@@ -45,11 +45,11 @@ Remote into the Nano Server instance with PowerShell remoting and using dism to 
 ### <a id="enable-dedup-candidate-workloads"></a>Determine which workloads are candidates for Data Deduplication
 Data Deduplication can be very effective in minimizing the costs of a server application's data consumption by reducing the amount of disk space consumed by redundant data. Before enabling deduplication, it is important that you first understand if your server application, or 'workload', is an '**Always**' workload or a '**Sometimes**' workload. Understanding the characteristics of your workload will help you get the maximum optimization and performance out of your storage. 
 
-* '**Always**' workloads have been proven to have both datasets which benefit highly from deduplication and resource consumption patterns which are compatible with Data Deduplication's post-processing model. Always [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) on volumes serving the following workloads:
+* '**Always**' workloads have been proven to have both datasets that benefit highly from deduplication and have resource consumption patterns that are compatible with Data Deduplication's post-processing model. Always [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) on volumes serving the following workloads:
 	* General purpose file servers (GPFS) serving shares like team shares, user home folders, Work Folders, and software development shares.
 	* Virtualized Desktop Infrastructure (VDI) servers.
 	* Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx).
-* '**Sometimes**' workloads are other workloads which may benefit from enabling Data Deduplication. Not every workload in every circumstance is a good candidate for deduplication. 'Sometimes' workloads fitness for deduplication should be evaluated before enabling Data Deduplication. 'Sometimes' workloads includes workloads (but is not limited to) like:
+* '**Sometimes**' workloads are other workloads that may benefit from enabling Data Deduplication. Not every workload in every circumstance is a good candidate for deduplication. 'Sometimes' workloads fitness for deduplication should be evaluated before enabling Data Deduplication. 'Sometimes' workloads includes workloads (but is not limited to) like:
 	* General Purpose Hyper-V hosts
 	* SQL Servers
 	* Line-of-business (LOB) servers
@@ -124,7 +124,7 @@ These Usage Types give sensible defaults for '**Always**' workloads, and also pr
 
 ## <a id="faq"></a>Frequently Asked Questions (FAQ)
 **I want to run Data Deduplication on the dataset for X workload... is this supported?**  
-Aside from workloads which are [known not to interop with Data Deduplication](interop.md), we fully support the data integrity of Data Deduplication with any workload. Workloads that can be characterized as '**Sometimes**' workloads are not guaranteed to be as performant with Data Deduplication enabled as they are without it. It is left up to the workload owner, you, to determine what if any performance impacts Data Deduplication has on your workload and if this is acceptable for this workload.
+Aside from workloads that are [known not to interop with Data Deduplication](interop.md), we fully support the data integrity of Data Deduplication with any workload. Workloads that can be characterized as '**Sometimes**' workloads are not guaranteed to be as performant with Data Deduplication enabled as they are without it. It is left up to the workload owner, you, to determine what if any performance impacts Data Deduplication has on your workload and if this is acceptable for this workload.
 
 **What are the volume sizing requirements for deduplicated volumes?**  
 In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a deduplicated volume for a high churn workload was 1-2 TB, and the absolute maximum recommeneded size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, view [What's new in Data Deduplication](whats-new.md).
