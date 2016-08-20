@@ -74,7 +74,7 @@ The notion of available capacity in Storage Spaces is nuanced. To help you plan 
 
 The following diagram illustrates the relationship between these quantities.  
 
-![](media/Health-Service-in-Windows-Server-2016/CapacityMetricsBreakdown.png)  
+![Breakdown of Capacity Metrics](media/overview-CapacityMetricsBreakdown.png)  
 
 
 ## Faults  

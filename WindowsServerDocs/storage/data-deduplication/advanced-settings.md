@@ -68,7 +68,7 @@ The following settings can be toggled for new or scheduled Dedup jobs:
 		<tr>
 			<th style="min-width:125px">Parameter Name</th>
 			<th style="min-width:125px">Definition</th>
-			<th style="min-width:125px">Acceptable Values</th>
+			<th style="min-width:125px">Accepted Values</th>
 			<th style="min-width:125px">Why would you want to set this value?</th>
 		</tr>
 	</thead>
@@ -199,7 +199,7 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 		<tr>
 			<th style="min-width:125px">Setting Name</th>
 			<th style="min-width:125px">Definition</th>
-			<th style="min-width:125px">Acceptable Values</th>
+			<th style="min-width:125px">Accepted Values</th>
 			<th style="min-width:125px">Why would you want to modify this value?</th>
 		</tr>
 	</thead>
@@ -295,7 +295,7 @@ For example, you may wish to disable Full Garbage Collection. More information a
 		<tr>
 			<th style="min-width:125px">Setting Name</th>
 			<th style="min-width:125px">Definition</th>
-			<th style="min-width:125px">Acceptable Values</th>
+			<th style="min-width:125px">Accepted Values</th>
 			<th style="min-width:125px">Why would you want to change this?</th>
 		</tr>
 	</thead>
@@ -305,12 +305,6 @@ For example, you may wish to disable Full Garbage Collection. More information a
 			<td>This settings allows Dedup to use more memory than Dedup judges to be available. For example, setting to 300 would mean that the job would have to use 3x the assigned memory to get canceled.</td>
 			<td>Positive integers (a value of 300 means 300% or 3x)</td>
 			<td>If you have another task that will back off if Dedup starts taking more memory.</td>
-		</tr>
-		<tr>
-			<td>EstimatedCompressionRate</td>
-			<td></td>
-			<td></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>DeepGCInterval</td>
@@ -337,5 +331,5 @@ There are two types of [Garbage Collection](understand.md#job-info-gc):
 <a id="faq-why-disable-full-gc"></a>**Why would I want to disable Full Garbage Collection?**  
 Reasons to avoid running a regular scheduled Full GC job:
 
-- Because Full GC creates more churn, this could adversely impact the volume’s shadow copies life-time and the size of incremental backup. High churn or I/O intensive deduplication workloads may see large degradation in performance by Full GC jobs. See this KB article This link is external to TechNet Wiki. It will open in a new window. for more details to mitigate these types of scenarios.           
+- Because Full GC creates more churn, this could adversely impact the volume’s shadow copies life-time and the size of incremental backup. High churn or I/O intensive deduplication workloads may see large degradation in performance by Full GC jobs.
 - A Full Garbage Collection job can be always run manually from PowerShell to clean up leaks if you know your system crashed.

@@ -13,10 +13,8 @@ author: jasongerend
 manager: dongill
 ms.author: JGerend
 ---
-
->Applies To: Windows Server 2016, Windows 10 (version 1607)
-
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
+> Applies To: Windows Server 2016, Windows 10 (version 1607)
 
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 

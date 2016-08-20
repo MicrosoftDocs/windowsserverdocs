@@ -31,7 +31,7 @@ Dedup has the following enhancements in Windows Server 2016:
         <tr>
             <td>[Support for Large Volumes](whats-new.md#large-volume-support)</td>
             <td>Updated</td>
-            <td>Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for Dedup. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**.</td>
+            <td>Prior to Windows Server 2016, volumes had to be specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for Dedup. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**.</td>
         </tr>
         <tr>
             <td>[Support for Large Files](whats-new.md#large-file-support)</td>
@@ -80,7 +80,7 @@ In Windows Server 2016, Data Deduplication makes use of new stream map structure
 
 ## <a name="nano-server-support">Support for Nano Server</a>
 **What value does this change add?**<br />
-Nano Server is a new headless deployment option in Windows Server 2016 that has far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/getting-started-with-nano-server).
+Nano Server is a new headless deployment option in Windows Server 2016 that has a far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/getting-started-with-nano-server).
 
 ## <a name="simple-backup-support">Simplified Configuration for Virtualized Backup Applications</a>
 **What value does this change add?**<br />

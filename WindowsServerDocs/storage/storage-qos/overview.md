@@ -72,7 +72,7 @@ Failover Cluster is required. All servers must be running the same version of Wi
 ### <a name="BKMK_SolutionOverview"></a>Using Storage QoS in a software-defined storage solution  
 Storage Quality of Service is built into the Microsoft software-defined storage solution provided by Scale-Out File Server and Hyper-V. The Scale-Out File Server exposes file shares to the Hyper-V servers using the SMB3 protocol. A new Policy Manager has been added to the File Server cluster, which provides the central storage performance monitoring.  
 
-![](media/Storage-Quality-of-Service/Clustering_SOFSStorageQoS.png)  
+![Scale-Out File Server and Storage QoS](media/overview-Clustering_SOFSStorageQoS.png)  
 
 **Figure 1: Using Storage QoS in a software-defined storage solution in Scale-Out File Server**  
 
@@ -107,7 +107,7 @@ If you have configured a new Failover Cluster and configured a Cluster Shared Vo
 #### Verify Storage QoS installation  
 After you have created a Failover Cluster and configured a CSV disk, , **Storage QoS Resource** is displayed as a Cluster Core Resource and visible in both Failover Cluster Manager and Windows PowerShell. The intent is that the failover cluster system will manage this resource and you should not have to do any actions against this resource.  We display  it in both Failover Cluster Manager and PowerShell to be consistent with the other failover cluster system resources like the new Health Service.  
 
-![](media/Storage-Quality-of-Service/Clustering_StorageQoSFCM.png)  
+![Storage QoS Resource appears in Cluster Core Resources](media/overview-Clustering_StorageQoSFCM.png)  
 
 **Figure 2: Storage QoS Resource displayed as a Cluster Core Resource in Failover Cluster Manager**  
 

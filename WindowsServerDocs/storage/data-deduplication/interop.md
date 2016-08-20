@@ -18,7 +18,7 @@ ms.technology:
 
 ## <a id="supported"></a>Supported
 ### <a id="supported-branchcache"></a>BranchCache
-Access to the data over the network can be optimized by enabling [BranchCache](../../networking/branchcache/branchcache.md) on servers and clients. When a BranchCache-enabled system communicates over a WAN with a remote file server that is running data deduplication, all of the deduplicated files are already indexed and hashed, so requests for data from a branch office are quickly computed. This is similar to preindexing or prehashing a BranchCache-enabled server.
+Accessing data over the network can be optimized by enabling [BranchCache](../../networking/branchcache/branchcache.md) on servers and clients. When a BranchCache-enabled system communicates over a WAN with a remote file server that is running data deduplication, all of the deduplicated files are already indexed and hashed, so requests for data from a branch office are quickly computed. This is similar to preindexing or prehashing a BranchCache-enabled server.
 
 ### <a id="supported-clusters"></a>Failover Clusters
 [Failover Clustering](../../failover-clustering/failover-clustering) is fully supported, and provided that every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup), deduplicated volumes will failover gracefully. Other important notes: 
