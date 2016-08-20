@@ -1,7 +1,7 @@
 ---
 title: Log off or Disconnect User Sessions
 ms.custom: na
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na

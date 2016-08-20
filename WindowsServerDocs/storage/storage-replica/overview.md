@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Storage Replica Overview
 

@@ -1,9 +1,11 @@
 ---
 title: Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 ms.custom: na
-ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.prod: windows-server-threshold
+manager: dongill
+ms.author: JGerend
 ms.technology:
   - techgroup-storage
 ms.tgt_pltfrm: na

@@ -1,7 +1,11 @@
 ---
 title: Format
 ms.custom: na
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
+manager: dongill
+ms.author: JGerend
+ms.technology:
+  - techgroup-storage
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +14,7 @@ ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: JasonGerend
 ---
 
->Applies To: Windows 10 Anniversary Edition, Windows 10, Windows Server 2016
+> Applies To: Windows 10 (including versions 1511 and 1607), Windows Server 2016
 
 # Format
 

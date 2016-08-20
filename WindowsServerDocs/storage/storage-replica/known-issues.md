@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Known Issues with Storage Replica
 
@@ -161,6 +163,22 @@ When attempting to create a new replication partnership with `New-SRPartnership`
 
 This is caused by selecting a data volume that is on the same partition as the System Drive (i.e. the **C:** drive with its Windows folder). For instance, on a drive that contains both the **C:** and **D:** volumes created from the same partition. This is not supported in Storage Replica; you must pick a different volume to replicate.
 
+## Upgrading a stretch cluster from TP4 to TP5 fails
+When upgrading a Windows Server 2016 Technical Preview 4 stretch cluster to Technical Preview 5 using cluster rolling upgrade, Storage Replica stops replicating and the replication partnership no longer appears to exist. When you attempt to recreate replication using Failover Cluster manager, you receive error:
+
+    "Replication Group name Replication 1 already exists" 
+
+When you attempt to recreate replication using PowerShell, you receive error: 
+
+    New-SRPartnership : Unable to create replication group rg03, detailed reason: Provision succeeded but Storage Replica cluster role SQL 07CR01 (I203) failed to go online on cluster node SQL07A. Check Storage Replica event log and cluster log for detail.
+    At line:1 char:1
+    + New-SRPartnership -SourceComputerName srv1 -SourceRGName rg01 -Sour ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (MSFT_WvrAdminTasks:root/Microsoft/...T_WvrAdminTasks) [New-SRPartnership]
+    , CimException
+    + FullyQualifiedErrorId : Windows System Error 5038,New-SRPartnership
+
+This is caused by a known issue in Windows Server 2016 Technical Preview 5. As a workaround, prior to upgrading the cluster, remove all replication partnerships and groups. You can use Remove-SRPartnership and Remove-SRGroup to perform these tasks, or use Failover Cluster manager. 
 
 ### Related Topics  
 - [Storage Replica in Windows Server 2016](overview.md)  

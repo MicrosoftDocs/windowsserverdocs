@@ -2,6 +2,8 @@
 title: Storage Quality of Service
 ms.custom: na
 ms.prod: windows-server-threshold
+manager: dongill
+ms.author: JGerend
 ms.reviewer: na
 ms.suite: na
 ms.technology:

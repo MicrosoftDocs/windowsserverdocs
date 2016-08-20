@@ -10,6 +10,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d7cf0541-7346-409f-a827-f12dc864b4bb
 author: kumudd
+manager: dongill
+ms.author: JGerend
 ---
 # Fault Domains in Windows Server 2016
 > Applies To: Windows Server 2016
