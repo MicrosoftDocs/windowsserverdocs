@@ -17,19 +17,19 @@ ms.technology:
 
 > Applies to Windows Server 2016
 
-This document describes how to modify advanced [Data Deduplication](overview.md), or Dedup, settings. The default settings should be sufficient for ['Always' workloads](install-enable.md#enable-dedup-candidate-workloads); the main reason to modify these settings is to improve Dedup's performance with 'Sometimes' workloads.
+This document describes how to modify advanced [Data Deduplication](overview.md) settings. The default settings should be sufficient for ['Always' workloads](install-enable.md#enable-dedup-candidate-workloads); the main reason to modify these settings is to improve Data Deduplication's performance with 'Sometimes' workloads.
 
-## <a id="modifying-job-schedules"></a>Modifying Dedup Job Schedules
-The default Dedup job schedules are designed to (1) work well for 'Always' workloads, and (2) be as non-intrusive as possible (excluding the 'Priority Optimization' job that is enabled for the [Backup Usage Type](understand.md#usage-type-backup)). More information about the default schedules can be found [here](understand.md#job-info). Because 'Sometimes' workloads often have greater demands on the system, it is possible to ensure that jobs only run during idle hours and/or to reduce/increase the amount of system resources that a Dedup job is allowed to consume.
+## <a id="modifying-job-schedules"></a>Modifying Data Deduplication Job Schedules
+The default Data Deduplication job schedules are designed to (1) work well for 'Always' workloads, and (2) be as non-intrusive as possible (excluding the 'Priority Optimization' job that is enabled for the [Backup Usage Type](understand.md#usage-type-backup)). More information about the default schedules can be found [here](understand.md#job-info). Because 'Sometimes' workloads often have greater demands on the system, it is possible to ensure that jobs only run during idle hours and/or to reduce/increase the amount of system resources that a Data Deduplication job is allowed to consume.
 
-### <a id="modifying-job-schedules-change-schedule"></a>Changing a Dedup Schedule
-Dedup jobs are scheduled via the Windows Task Scheduler, and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Dedup includes several cmdlets however that make scheduling easy:
+### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication Schedule
+Data Deduplication jobs are scheduled via the Windows Task Scheduler, and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets however that make scheduling easy:
 * [`Get-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848446.aspx) which shows the current scheduled jobs
 * [`New-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848445.aspx) which creates a new scheduled job
 * [`Set-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848447.aspx) which modifies an existing scheduled job
 * [`Remove-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848451.aspx) which removes a scheduled job.
 
-The most common reason for changing when the Dedup jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Dedup schedule for a 'sunny day' scenario: a hyper-converged Hyper-V host that is idle on weeknights starting at 7 PM and on weekends. To change the schedule, run the following PowerShell cmdlets in an Administrator context:
+The most common reason for changing when the Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Data Deduplication schedule for a 'sunny day' scenario: a hyper-converged Hyper-V host that is idle on weeknights starting at 7 PM and on weekends. To change the schedule, run the following PowerShell cmdlets in an Administrator context:
 
 1. Disable the scheduled hourly [Optimization](understand.md#job-info-optimization) jobs:  
 	```PowerShell
@@ -61,7 +61,7 @@ The most common reason for changing when the Dedup jobs run is to ensure that jo
 	```
 
 ### <a id="modifying-job-schedules-available-settings"></a>Available Job-wide Settings
-The following settings can be toggled for new or scheduled Dedup jobs:
+The following settings can be toggled for new or scheduled Data Deduplication jobs:
 
 <table>
 	<thead>
@@ -113,13 +113,13 @@ The following settings can be toggled for new or scheduled Dedup jobs:
 		</tr>
 		<tr>
 			<td>Cores</td>
-			<td>The percentage of cores on the system that Dedup jobs should use.</td>
+			<td>The percentage of cores on the system that Data Deduplication jobs should use.</td>
 			<td>Integers 0-100 (indicates a percentage)</td>
-			<td>To control what level of impact Dedup will have on the compute resources on the system.</td>
+			<td>To control what level of impact Data Deduplication will have on the compute resources on the system.</td>
 		</tr>
 		<tr>
 			<td>DurationHours</td>
-			<td>The maximum amount of hours a Dedup job should be allowed to run.</td>
+			<td>The maximum amount of hours a Data Deduplication job should be allowed to run.</td>
 			<td>Positive integers</td>
 			<td>To prevent a job for running into a workload's non-idle hours.</td>
 		</tr>
@@ -143,13 +143,13 @@ The following settings can be toggled for new or scheduled Dedup jobs:
 		</tr>
 		<tr>
 			<td>Memory</td>
-			<td>The percentage of Memory on the system that Dedup jobs should use.</td>
+			<td>The percentage of Memory on the system that Data Deduplication jobs should use.</td>
 			<td>Integers 0-100 (indicates a percentage)</td>
-			<td>To control what level of impact Dedup will have on the memory resources of the system.</td>
+			<td>To control what level of impact Data Deduplication will have on the memory resources of the system.</td>
 		</tr>
 		<tr>
 			<td>Name</td>
-			<td>The name of the scheduled Dedup job.</td>
+			<td>The name of the scheduled Data Deduplication job.</td>
 			<td>String</td>
 			<td>A job must have a uniquely identifable name.</td>
 		</tr>
@@ -167,21 +167,21 @@ The following settings can be toggled for new or scheduled Dedup jobs:
 		</tr>
 		<tr>
 			<td>StopWhenSystemBusy</td>
-			<td>Specifies whether or not Dedup should back off if the system is busy.</td>
+			<td>Specifies whether or not Data Deduplication should back off if the system is busy.</td>
 			<td>Switch (True/False)</td>
-			<td>This switch gives you the desire to control Dedup's behavior - this is especially important if you desire to run Dedup while your workload is not idle.</td>
+			<td>This switch gives you the desire to control Data Deduplication's behavior - this is especially important if you desire to run Data Deduplication while your workload is not idle.</td>
 		</tr>
 	</tbody>
 </table>
 
-## <a id="modifying-volume-settings"></a>Modifying Dedup Volume-wide Settings
+## <a id="modifying-volume-settings"></a>Modifying Data Deduplication Volume-wide Settings
 ### <a id="modifying-volume-settings-how-to-toggle"></a>Toggling Volume Settings
-Dedup's volume-wide default settings are set via the [Usage Type](understanding-dedup.md#usage-type) that you select when you enable a Dedup for a volume. Dedup includes several cmdlets that make editing volume-wide settings easy:
+Data Deduplication's volume-wide default settings are set via the [Usage Type](understanding-dedup.md#usage-type) that you select when you enable a Data Deduplication for a volume. Data Deduplication includes several cmdlets that make editing volume-wide settings easy:
 
-* `Get-DedupVolume`
-* `Set-DedupVolume`
+* [`Get-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848448.aspx)
+* [`Set-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848438.aspx)
 
-The main reasons to modify the volume settings from the selected Usage Type are (1) to improve read performance for specific files (such as multimedia or other already compressed file types) and/or (2) to tune Dedup for better optimization for your specific workload. The following example shows how to modify the Dedup volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files which change frequently:
+The main reasons to modify the volume settings from the selected Usage Type are (1) to improve read performance for specific files (such as multimedia or other already compressed file types) and/or (2) to tune Data Deduplication for better optimization for your specific workload. The following example shows how to modify the Data Deduplication volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files which change frequently:
 
 1. See what the current volume settings are for Cluster Shared Volume 1 are:
 	```PowerShell
@@ -224,15 +224,15 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 		</tr>
 		<tr>
 			<td>InputOutputScale</td>
-			<td>Specifies the level of IO parallelization (IO queues) for Dedup to use on a volume during a post-processing job.</td>
+			<td>Specifies the level of IO parallelization (IO queues) for Data Deduplication to use on a volume during a post-processing job.</td>
 			<td>Positive integers ranging 1-36</td>
-			<td>The main reason to modify this value is to decrease the impact on the performance of a 'high' IO workload by restricting the number of IO queues that Dedup is allowed to use on a volume. Note that modifying this setting from the default may cause Dedup's post-processing jobs to run slowly.</td>
+			<td>The main reason to modify this value is to decrease the impact on the performance of a 'high' IO workload by restricting the number of IO queues that Data Deduplication is allowed to use on a volume. Note that modifying this setting from the default may cause Data Deduplication's post-processing jobs to run slowly.</td>
 		</tr>
 		<tr>
 			<td>MinimumFileAgeDays</td>
 			<td>Number of days after the file is created before the file is considered to be 'in-policy' for optimization.</td>
 			<td>Positive integers (inclusive of zero)</td>
-			<td>The 'Default' and 'HyperV' usage types by set this value to 3 days, which is meant to maximize performance on "hot" files, or recently created files. You may want to modify this if you want Dedup to be more aggressive ('I need all the space savings I can get') or if you do not care about the extra latency associated with Dedup ('I'm on an all flash storage array').</td>
+			<td>The 'Default' and 'HyperV' usage types by set this value to 3 days, which is meant to maximize performance on "hot" files, or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive ('I need all the space savings I can get') or if you do not care about the extra latency associated with Data Deduplication ('I'm on an all flash storage array').</td>
 		</tr>
 		<tr>
 			<td>MinimumFileSize</td>
@@ -273,18 +273,18 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 	</tbody>
 </table>
 
-## <a id="modifying-dedup-system-settings"></a>Modifying Dedup System-wide Settings
-Dedup has a few additional, system-wide settings that can be configured via [the Registry](https://technet.microsoft.com/en-us/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry. 
+## <a id="modifying-dedup-system-settings"></a>Modifying Data Deduplication System-wide Settings
+Data Deduplication has a few additional, system-wide settings that can be configured via [the Registry](https://technet.microsoft.com/en-us/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry. 
 
 For example, you may wish to disable Full Garbage Collection. More information about why this may be useful for your scenario can be found [below](#faq-why-disable-full-gc). To edit the registry with PowerShell:
 
-* If Dedup is running in a Cluster:
+* If Data Deduplication is running in a Cluster:
 	```PowerShell
 	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0
 	Set-ItemProperty -Path HKLM:\CLUSTER\Dedup -Name DeepGCInterval -Type DWord -Value 0
 	```
 
-* If Dedup is not running in a Cluster:
+* If Data Deduplication is not running in a Cluster:
 	```PowerShell
 	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0
 	```
@@ -302,9 +302,9 @@ For example, you may wish to disable Full Garbage Collection. More information a
 	<tbody>
 		<tr>
 			<td>WlmMemoryOverPercentThreshold</td>
-			<td>This settings allows Dedup to use more memory than Dedup judges to be available. For example, setting to 300 would mean that the job would have to use 3x the assigned memory to get canceled.</td>
+			<td>This settings allows jobs to use more memory than Data Deduplication judges to actually be available. For example, setting to 300 would mean that the job would have to use 3x the assigned memory to get canceled.</td>
 			<td>Positive integers (a value of 300 means 300% or 3x)</td>
-			<td>If you have another task that will back off if Dedup starts taking more memory.</td>
+			<td>If you have another task that will back off if Data Deduplication starts taking more memory.</td>
 		</tr>
 		<tr>
 			<td>DeepGCInterval</td>
@@ -316,17 +316,17 @@ For example, you may wish to disable Full Garbage Collection. More information a
 </table>
 
 ## <a id="faq"></a>Frequently Asked Questions
-<a id="faq-use-responsibly"></a>**I changed a Dedup setting and now Dedup jobs are slow or don't finish, or my workload performance has decreased. Why!?**  
-These Dedup settings give you a lot of power to control how Dedup runs. Use it responsibly, and [monitor performance](run.md#monitoring-dedup).
+<a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting and now Data Deduplication jobs are slow or don't finish, or my workload performance has decreased. Why!?**  
+These Data Deduplication settings give you a lot of power to control how Data Deduplication runs. Use it responsibly, and [monitor performance](run.md#monitoring-dedup).
 
-<a id="faq-running-dedup-jobs-manually"></a>**I want to run a Dedup job right now, but I don't want to create a new schedule - how can I do this?**  
-All Dedup jobs can be run manually with [`Start-DedupJob`](https://technet.microsoft.com/en-us/library/hh848442.aspx). Learn more [here](run.md#running-dedup-jobs-manually).
+<a id="faq-running-dedup-jobs-manually"></a>**I want to run a Data Deduplication job right now, but I don't want to create a new schedule - how can I do this?**  
+All Data Deduplication jobs can be run manually with [`Start-DedupJob`](https://technet.microsoft.com/en-us/library/hh848442.aspx). Learn more [here](run.md#running-dedup-jobs-manually).
 
 <a id="faq-full-v-regular-gc"></a>**What is the difference between *Full* and *Regular* Garbage Collection?** 
 There are two types of [Garbage Collection](understand.md#job-info-gc):
 
 - *Regular Garbage Collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular Garbage Collection compacts a chunk store container only if a minimum percentage of the chunks are unreferenced. This type of Garbage Collection runs much faster and uses much less resources than Full Garbage Collection. The default schedule of the Regular Garbage Collection job is to run once a week.
-- *Full Garbage Collection* does a much more thorough job finding unreferenced Dedup chunks and freeing more disk space. Full Garbage Collection compacts every container even if just a single chunk in the container is unreferenced. Full Garbage Collection will also free space that may have been in use if there was a crash or power failure during an optimization job. Full Garbage Collection jobs will recover 100% of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a Regular Garbage Collection job. The Full Garbage Collection job will typically find and release up to ~5% more of the unreferenced data than a Regular GC job. The default schedule of the Full GC job is to run every 4th time Garbage Collection is scheduled.
+- *Full Garbage Collection* does a much more thorough job finding unreferenced chunks and freeing more disk space. Full Garbage Collection compacts every container even if just a single chunk in the container is unreferenced. Full Garbage Collection will also free space that may have been in use if there was a crash or power failure during an optimization job. Full Garbage Collection jobs will recover 100% of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a Regular Garbage Collection job. The Full Garbage Collection job will typically find and release up to ~5% more of the unreferenced data than a Regular GC job. The default schedule of the Full GC job is to run every 4th time Garbage Collection is scheduled.
 
 <a id="faq-why-disable-full-gc"></a>**Why would I want to disable Full Garbage Collection?**  
 Reasons to avoid running a regular scheduled Full GC job:

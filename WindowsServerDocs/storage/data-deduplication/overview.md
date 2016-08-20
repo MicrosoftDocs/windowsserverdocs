@@ -17,7 +17,7 @@ ms.technology:
 >Applies to Windows Server 2016
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
-Data Deduplication, often called "**Dedup**" for short, is a feature of Windows Server 2016 which can help reduce the impact of redundant data on storage costs. When enabled, Dedup optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information on how Dedup works can be found [here](understand.md).
+Data Deduplication, often called "**<abbr label="Data Deduplication">Dedup</abbr>**" for short, is a feature of Windows Server 2016 which can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information on how Dedup works can be found [here](understand.md).
 
 ## <a name="why-is-dedup-useful"></a>Why is Data Deduplication useful?  
 Data Deduplication is an important tool in a storage administrator's toolkit for reducing costs associated with duplicated data. Large datasets often have **<u>a lot</u>** of duplication which increases the costs of storing the data. For example:
@@ -26,7 +26,7 @@ Data Deduplication is an important tool in a storage administrator's toolkit for
 - Virtualization guests may be virtually identical from VM-to-VM
 - Backup snapshots may have very minor differences from day-to-day.
 
-The space savings that can be gained from Dedup are highly dependent on the dataset or workload on the volume. Datasets with high duplication could see optimization rates of up to 95%, or a 20x reduction in storage utilization. The following table highlights typical deduplication savings for various content types:
+The space savings that can be gained from Data Deduplication are highly dependent on the dataset or workload on the volume. Datasets with high duplication could see optimization rates of up to 95%, or a 20x reduction in storage utilization. The following table highlights typical deduplication savings for various content types:
 
 <table>
     <thead>
@@ -75,7 +75,7 @@ The space savings that can be gained from Dedup are highly dependent on the data
                     <li><a href="https://technet.microsoft.com/en-us/library/dn265974(v=ws.11).aspx">Work Folders</a></li>
                     <li>Software development shares</li>
                 </ul>
-                General purpose file servers are a good candidate for Dedup because of the tendency for multiple users to have many copies or versions of the same file. Software development shares in particular benefit from Dedup because many binaries remain essentially unchanged from build to build. 
+                General purpose file servers are a good candidate for Data Deduplication because of the tendency for multiple users to have many copies or versions of the same file. Software development shares in particular benefit from Data Deduplication because many binaries remain essentially unchanged from build to build. 
             </td>
         </tr>
         <tr>
@@ -89,21 +89,21 @@ The space savings that can be gained from Dedup are highly dependent on the data
                     <li><b>Remote access</b>: Users can access enterprise applications from devices such as home computers, kiosks, low-powered hardware, and operating systems other than Windows.</li>
                     <li><b>Branch office access</b>: VDI deployments can provide better application performance for branch office workers who need access to centralized data stores. Data-intensive applications sometimes do not have client/server protocols that are optimized for low-speed connections.</li>
                 </ul>
-                VDI deployments are a great candidates for Dedup because the virtual hard disks that drive the remote desktops for users are essentially identical. Additionally, Dedup can help with the so-called "VDI boot storm" - the drop in storage performance when all of your users log on to their desktop for the start of day at the same time.
+                VDI deployments are a great candidates for Data Deduplication because the virtual hard disks that drive the remote desktops for users are essentially identical. Additionally, Data Deduplication can help with the so-called "VDI boot storm" - the drop in storage performance when all of your users log on to their desktop for the start of day at the same time.
             </td>
         </tr>
         <tr>
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-backup.png" /></td>
             <td style="vertical-align:top">
                 <b>Backup Targets, such as Virtualized Backup Applications</b><br />
-                Backup Applications, such as <a href="https://technet.microsoft.com/en-us/library/hh758173.aspx">Microsoft Data Protection Manager (DPM)</a>, are excellent candidates for Dedup because of the significant duplication between backup snapshots.
+                Backup Applications, such as <a href="https://technet.microsoft.com/en-us/library/hh758173.aspx">Microsoft Data Protection Manager (DPM)</a>, are excellent candidates for Data Deduplication because of the significant duplication between backup snapshots.
             </td>
         </tr>
         <tr>
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-other.png" /></td>
             <td style="vertical-align:top">
                 <b>Other Workloads</b><br />
-                Other workloads may also be excellent candidates for Dedup. More information on how to evaluate a workload for Dedup can be found [here](install-enable.md#enable-dedup-candidate-workloads).
+                Other workloads may also be excellent candidates for Data Deduplication. More information on how to evaluate a workload for Dedup can be found [here](install-enable.md#enable-dedup-candidate-workloads).
             </td>
         </tr>
     </tbody>

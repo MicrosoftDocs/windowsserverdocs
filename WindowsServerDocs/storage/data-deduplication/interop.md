@@ -22,10 +22,10 @@ Accessing data over the network can be optimized by enabling [BranchCache](../..
 
 ### <a id="supported-clusters"></a>Failover Clusters
 [Failover Clustering](../../compute/failover-clustering/failover-clustering) is fully supported, and provided that every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup), deduplicated volumes will failover gracefully. Other important notes: 
-* [Manually started Dedup jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
+* [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
 * Deduplication schedules are managed by using the task scheduler and when a cluster is formed, the schedule information is put into the cluster scheduler so that if a deduplicated volume is taken over by another node, the scheduled job will be applied on the next scheduled interval.
-* Dedup fully interoperates with the [Cluster OS Rolling Upgrade](../../compute/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
-* Dedup is fully supported on [Storage Spaces Direct (S2D)](../storage-spaces/storage-spaces-direct-windows-server-2016.md) NTFS-formatted volumes (mirror or parity). Dedup is not supported on Fused Volumes (also known as "Multi-Resilient Volumes"). See [Dedup on ReFS](interop.md#unsupported-refs) for more information.
+* Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../../compute/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
+* Data Deduplication is fully supported on [Storage Spaces Direct (S2D)](../storage-spaces/storage-spaces-direct-windows-server-2016.md) NTFS-formatted volumes (mirror or parity). Dedup is not supported on Fused Volumes (also known as "Multi-Resilient Volumes"). See [Data Deduplication on ReFS](interop.md#unsupported-refs) for more information.
 
 ### <a id="supported-dfsr"></a>DFS Replication
 Data Deduplication works fine with Distributed File System (DFS) Replication. Optimizing or unoptimizing a file will not trigger a replication because the file does not change. DFS Replication uses Remote Differential Compression (RDC), not the chunks in the chunk store, for over-the-wire savings. The files on the replica can also be optimized by using deduplication if the replica is using Data Deduplication.
@@ -68,10 +68,10 @@ Windows Server Backup has the ability to back up an optimized volume “as-is”
 
 ## <a id="unsupported"></a>Unsupported
 ### <a id="unsupported-refs"></a>ReFS
-Dedup on ReFS-formatted volumes is not supported in Windows Server 2016. This includes on "Fused Volumes" (also known as "Multi-Resilient Volumes") that take advantage of ReFS tiering to offer the benefits of both Mirror and Parity. 
+Data Deduplication on ReFS-formatted volumes is not supported in Windows Server 2016. This includes on "Fused Volumes" (also known as "Multi-Resilient Volumes") that take advantage of ReFS tiering to offer the benefits of both Mirror and Parity. 
 
 ### <a id="unsupported-windows-search"></a>Windows Search
 Windows Search unfortunately doesn’t support Data Deduplication. Because Data Deduplication uses reparse points, which Windows Search can’t index, Windows Search skips all deduplicated files, excluding them from the index. As a result, search results might be incomplete for deduplicated volumes.
 
 ### <a id="unsupported-robocopy"></a>Robocopy
-Running Robocopy with Dedup is not recommended because certain Robocopy commands can corrupt the Dedup Chunk Store. The Dedup Chunk Store is stored in the System Volume Information folder for a Volume. If the folder is deleted, the optimized files (reparse points) that are copied from the source volume become corrupted because the data chunks are not copied to the destination volume.  
+Running Robocopy with Data Deduplication is not recommended because certain Robocopy commands can corrupt the Chunk Store. The Chunk Store is stored in the System Volume Information folder for a Volume. If the folder is deleted, the optimized files (reparse points) that are copied from the source volume become corrupted because the data chunks are not copied to the destination volume.  
