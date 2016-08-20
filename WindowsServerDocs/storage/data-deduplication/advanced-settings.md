@@ -1,13 +1,13 @@
 ---
-title:"Advanced Data Deduplication Settings"  
-description:"Learn how to modify advanced Data Deduplication (Dedup) settings."  
-author:"wmgries"    
-ms.author:"wgries"   
-manager:"eldenc"  
-ms.date:"08/19/2016"   
-ms.topic:"get-started-article"  
-ms.prod:"windows-server-threshold"  
-ms.service:"na"  
+title:Advanced Data Deduplication Settings  
+description:Learn how to modify advanced Data Deduplication settings.  
+author:wmgries    
+ms.author:wgries   
+manager:eldenc  
+ms.date:08/19/2016   
+ms.topic:get-started-article  
+ms.prod:windows-server-threshold  
+ms.service:na  
 ms.technology:
 - techgroup-storage
 - dedup

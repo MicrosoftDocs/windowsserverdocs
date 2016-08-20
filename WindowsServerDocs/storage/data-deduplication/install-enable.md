@@ -1,13 +1,13 @@
 ---
-title:"Installing and Enabling Data Deduplication"  
-description:"Learn how to install the Data Deduplication (Dedup) feature, evaluate workloads for Dedup, and enable Dedup on targeted volumes."  
-author:"wmgries"  
-ms.author:"wgries"   
-manager:"eldenc"  
-ms.date:"08/19/2016"   
-ms.topic:"get-started-article"  
-ms.prod:"windows-server-threshold"  
-ms.service:"na"  
+title:Installing and Enabling Data Deduplication  
+description:Learn how to install the Data Deduplication (Dedup) feature, evaluate workloads for Dedup, and enable Dedup on targeted volumes.  
+author:wmgries  
+ms.author:wgries   
+manager:eldenc  
+ms.date:08/19/2016   
+ms.topic:get-started-article  
+ms.prod:windows-server-threshold  
+ms.service:na  
 ms.technology:
 - techgroup-storage
 - dedup

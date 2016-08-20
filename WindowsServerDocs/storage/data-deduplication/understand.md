@@ -1,13 +1,13 @@
 ---
-title:"Understanding Data Deduplication"  
-description:"Learn how Data Deduplication (Dedup) works, including Dedup's job model and default settings."  
-author:"wmgries"    
-ms.author:"wgries"   
-manager:"eldenc"  
-ms.date:"08/19/2016"   
-ms.topic:"get-started-article"  
-ms.prod:"windows-server-threshold"  
-ms.service:"na"  
+title:Understanding Data Deduplication  
+description:Learn how Data Deduplication works, including the Data Deduplication job model and default settings.  
+author:wmgries    
+ms.author:wgries   
+manager:eldenc  
+ms.date:08/19/2016   
+ms.topic:get-started-article  
+ms.prod:windows-server-threshold  
+ms.service:na  
 ms.technology:
 - techgroup-storage
 - dedup

@@ -1,6 +1,6 @@
 ---
-title:"Data Deduplication Interoperability"  
-description:""  
+title:Data Deduplication Interoperability  
+description:Explains how Data Deduplication interoperates with other products/services.  
 author:"wmgries"  
 ms.author:"wgries"   
 manager:"eldenc"  
