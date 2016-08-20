@@ -41,7 +41,7 @@ In Windows Server 2016, the Data Deduplication Job pipeline has been redesigned 
 
 ![A visualization comparing the Data Deduplication Job Pipeline in Windows Server 2012 R2 to Windows Server 2016](media/server-2016-dedup-job-pipeline.png)
 
-These optimizations apply to all Data Deduplication Jobs, not just the Optimization Job. More information on Jobs Data Deduplication runs can be found [here](understand.md#job-info).
+These optimizations apply to [all Data Deduplication Jobs](understand.md#job-info), not just the Optimization Job.
 
 ## <a name="large-file-support"></a>Support for Large Files
 **What value does this change add?**  

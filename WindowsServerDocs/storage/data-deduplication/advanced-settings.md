@@ -20,7 +20,7 @@ ms.technology:
 This document describes how to modify advanced [Data Deduplication](overview.md) settings. The default settings should be sufficient for ['Always' workloads](install-enable.md#enable-dedup-candidate-workloads); the main reason to modify these settings is to improve Data Deduplication's performance with 'Sometimes' workloads.
 
 ## <a id="modifying-job-schedules"></a>Modifying Data Deduplication Job Schedules
-The default Data Deduplication job schedules are designed to (1) work well for 'Always' workloads, and (2) be as non-intrusive as possible (excluding the 'Priority Optimization' job that is enabled for the [Backup Usage Type](understand.md#usage-type-backup)). More information about the default schedules can be found [here](understand.md#job-info). Because 'Sometimes' workloads often have greater demands on the system, it is possible to ensure that jobs only run during idle hours and/or to reduce/increase the amount of system resources that a Data Deduplication job is allowed to consume.
+The [default Data Deduplication job schedules](understand.md#job-info) are designed to (1) work well for 'Always' workloads, and (2) be as non-intrusive as possible (excluding the 'Priority Optimization' job that is enabled for the [Backup Usage Type](understand.md#usage-type-backup)). Because 'Sometimes' workloads often have greater demands on the system, it is possible to ensure that jobs only run during idle hours and/or to reduce/increase the amount of system resources that a Data Deduplication job is allowed to consume.
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication Schedule
 Data Deduplication jobs are scheduled via the Windows Task Scheduler, and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets however that make scheduling easy:
@@ -319,8 +319,8 @@ For example, you may wish to disable Full Garbage Collection. More information a
 <a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting and now Data Deduplication jobs are slow or don't finish, or my workload performance has decreased. Why!?**  
 These Data Deduplication settings give you a lot of power to control how Data Deduplication runs. Use it responsibly, and [monitor performance](run.md#monitoring-dedup).
 
-<a id="faq-running-dedup-jobs-manually"></a>**I want to run a Data Deduplication job right now, but I don't want to create a new schedule - how can I do this?**  
-All Data Deduplication jobs can be run manually with [`Start-DedupJob`](https://technet.microsoft.com/en-us/library/hh848442.aspx). Learn more [here](run.md#running-dedup-jobs-manually).
+<a id="faq-running-dedup-jobs-manually"></a>**I want to run a Data Deduplication job right now, but I don't want to create a new schedule - can I do this?**  
+Yes, [all Data Deduplication jobs can be run manually](run.md#running-dedup-jobs-manually).
 
 <a id="faq-full-v-regular-gc"></a>**What is the difference between *Full* and *Regular* Garbage Collection?** 
 There are two types of [Garbage Collection](understand.md#job-info-gc):

@@ -17,7 +17,7 @@ ms.technology:
 >Applies to Windows Server 2016
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
-Data Deduplication, often called "**<abbr label="Data Deduplication">Dedup</abbr>**" for short, is a feature of Windows Server 2016 which can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information on how Dedup works can be found [here](understand.md).
+Data Deduplication, often called "**<abbr label="Data Deduplication">Dedup</abbr>**" for short, is a feature of Windows Server 2016 which can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume for duplication. Once identified, duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. Further description of how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
 
 ## <a name="why-is-dedup-useful"></a>Why is Data Deduplication useful?  
 Data Deduplication is an important tool in a storage administrator's toolkit for reducing costs associated with duplicated data. Large datasets often have **<u>a lot</u>** of duplication which increases the costs of storing the data. For example:
@@ -77,7 +77,7 @@ The space savings that can be gained from Data Deduplication are highly dependen
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-other.png" /></td>
             <td style="vertical-align:top">
                 <b>Other Workloads</b><br />
-                Other workloads may also be excellent candidates for Data Deduplication. More information on how to evaluate a workload for Dedup can be found [here](install-enable.md#enable-dedup-candidate-workloads).
+                [Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads).
             </td>
         </tr>
     </tbody>
