@@ -3,13 +3,15 @@ title: Fault Domains in Windows Server 2016 Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
+ms.author: jgerend
+ms.manager: dongill
 ms.suite: na
 ms.technology:
   - techgroup-storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d7cf0541-7346-409f-a827-f12dc864b4bb
-author: kumudd
+author: cosmosdarwin
 ---
 # Fault Domains in Windows Server 2016 Technical Preview
 
