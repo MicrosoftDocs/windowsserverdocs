@@ -1,5 +1,5 @@
 ---
-title: Fault Domains in Windows Server 2016 Technical Preview
+title: Fault Domain Awareness in Windows Server 2016 Technical Preview
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: d7cf0541-7346-409f-a827-f12dc864b4bb
 author: cosmosdarwin
 ---
-# Fault Domains in Windows Server 2016 Technical Preview
+# Fault Domain Awareness in Windows Server 2016 Technical Preview
 
 >Applies To: Windows Server Technical Preview
 
@@ -44,7 +44,7 @@ There are four canonical levels of fault domains - site, rack, chassis, and node
 You can use Windows PowerShell or XML markup to specify fault domains. Both approaches are equivalent and provide full functionality.
 
 >[!IMPORTANT]
-> It is strongly recommended to specify fault domains before enabling Storage Spaces Direct. This will enable the automatic configuration to prepare the pool, tiers, and settings like resiliency and column count, for chassis or rack fault tolerance. Once the pool and volumes have been created, data will not retroactively move in response to changes to the fault domain topology. To move nodes between chassis or racks after enabling Storage Spaces Direct, you should first evict the node and its drives from the pool using `Remove-ClusterNode -CleanUpDisks`.
+> Specify fault domains before enabling Storage Spaces Direct, if possible. This enables the automatic configuration to prepare the pool, tiers, and settings like resiliency and column count, for chassis or rack fault tolerance. Once the pool and volumes have been created, data will not retroactively move in response to changes to the fault domain topology. To move nodes between chassis or racks after enabling Storage Spaces Direct, you should first evict the node and its drives from the pool using `Remove-ClusterNode -CleanUpDisks`.
 
 ### Windows PowerShell
 
