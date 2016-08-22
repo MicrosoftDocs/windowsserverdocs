@@ -2,7 +2,7 @@
 title: Collect hardware and device drivers needed for the installation
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: 4cf5fdbe-b871-4360-b003-d65ac43b491e
 author: evas
 manager: scottman
+ms.author: evas
+ms.date: 08/04/2016
 ---
 # Collect hardware and device drivers needed for the installation
 Before you start deploying your MultiPoint Services system, you will need:  

@@ -2,7 +2,7 @@
 title: Add printers
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: e1f6d3ca-8caf-4aa0-b0ea-93cdfd3f3f37
 author: evas
 manager: scottman
+ms.author: evas
+ms.date: 08/04/2016
 ---
 # Add printers
 Use the procedures in this topic to make a local printer available to all users on a MultiPoint Services system.  

@@ -2,7 +2,7 @@
 title: Limit Web Access
 ms.custom: na
 ms.date: 07/08/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 044f2fd5-5b87-42bb-ba0d-c06516ac48c8
 author: lizap
 manager: swadhwa
+ms.author: elizapo
 ---
 # Limit Web Access
 In addition to monitoring user activities on individual desktops, you, as an administrative user, can limit user access to specified websites by indicating permissible websites and websites to which you want to block user access.  

@@ -2,7 +2,7 @@
 title: Set up the physical computer and primary station
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 4e83b126-ce9a-4cd7-a0bd-6627c9e0f81b
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Set up the physical computer and primary station
 Before you install MultiPoint Services, you need to set up the primary station for your MultiPoint Services system. If you will use a local area network (LAN) connect the computer to the LAN.  

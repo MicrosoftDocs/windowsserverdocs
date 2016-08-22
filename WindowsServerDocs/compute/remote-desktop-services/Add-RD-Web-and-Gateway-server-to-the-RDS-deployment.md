@@ -6,10 +6,13 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: 
   - remote-desktop-services
+  - techgroup-compute
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac7e1cf8-b63f-4a3b-92ef-56dc8512f7db
 author: lizap
+ms.author: elizapo
+ms.date: 08/01/2016
 manager: msswadhwa
 ---
 # Add RD Web and Gateway server to the RDS deployment

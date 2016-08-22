@@ -1,8 +1,7 @@
 ---
 title: Take Control of a User Session
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 99e93b4c-17be-40c2-a9fc-2b4574abf6b6
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Take Control of a User Session
 As a MultiPoint Dashboard User, you can assist another user by remotely accessing his or her desktop using the Take Control feature.  

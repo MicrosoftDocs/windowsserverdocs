@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Certificate-based authentication is recommended for replication
 

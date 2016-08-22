@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 0c810b82-b06a-4382-b598-5c642e8534be
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows 10 should be configured with the recommended amount of memory
 

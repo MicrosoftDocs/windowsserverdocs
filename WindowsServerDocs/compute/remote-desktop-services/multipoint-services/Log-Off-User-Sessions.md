@@ -1,8 +1,7 @@
 ---
 title: Log Off User Sessions
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: e5b604fa-17d7-4d23-88ca-8ffa6caad4e8
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Log Off User Sessions
 Standard users, MultiPoint Dashboard users, and administrative users can log on and log off of their desktop sessions as they would with any Windows session. In addition, administrative users and MultiPoint Dashboard users can end the user sessions on all of the monitored sessions on the MultiPoint Services system.  

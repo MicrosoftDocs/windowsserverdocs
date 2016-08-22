@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: e4f5bd2f-b5be-4d43-80e0-0cf198182791
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows 10 should be configured with at least the minimum amount of memory
 

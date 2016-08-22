@@ -1,8 +1,7 @@
 ---
 title: Getting Started with MultiPoint Services
 ms.custom: na
-ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +10,8 @@ ms.topic: article
 ms.assetid: aca5f0be-f253-46b5-b1e7-0bffa15f3227
 author: lizap
 manager: swadhwa
-
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Getting Started with MultiPoint Services
 Your MultiPoint Services system allows many users to use multiple stations that are physically connected by using station hubs to only one computer. Each station typically consists of a station hub, mouse, keyboard, and video monitor. Each user at a MultiPoint Services station experiences a unique Windows computing session that you can manage using MultiPoint Manager.  

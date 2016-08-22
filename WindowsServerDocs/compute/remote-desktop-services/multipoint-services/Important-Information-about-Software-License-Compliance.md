@@ -2,7 +2,7 @@
 title: Important Information about Software License Compliance
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: cd42fbac-fa7b-484d-b97d-3911e9180e7b
 author: lizap
 manager: swadhwa
-
+ms.author: elizapo
 ---
 # Important Information about Software License Compliance
 You must comply with the license terms for the programs you use on the MultiPoint Services system. You must also have the proper number of licenses for the number of *stations* that you add to your MultiPoint Services system, as described in the following sections.  

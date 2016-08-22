@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 9b57c9b8-76c5-43c7-bfa6-2c95b3cb6510
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Avoid storing Smart Paging files on a system disk
 

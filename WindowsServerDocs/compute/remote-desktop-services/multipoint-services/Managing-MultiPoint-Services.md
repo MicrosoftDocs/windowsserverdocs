@@ -1,8 +1,7 @@
 ---
 title: Managing MultiPoint Services
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 81135740-e9ce-4b4c-a770-760d741f20b1
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Managing MultiPoint Services
 MultiPoint™ Services allows multiple users, each with their own independent Windows experience, to simultaneously share one computer. User stations, consisting of a monitor, keyboard, and mouse, are directly connected to the host computer through USB, video cables, or the network.  

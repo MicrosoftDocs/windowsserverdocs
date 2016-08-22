@@ -1,8 +1,7 @@
 ---
 title: Work with USB Devices
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: a33f2b83-bbc2-4fc1-8a94-aaa985dfe1f9
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Work with USB Devices
 You can connect devices to either the computer in your MultiPoint Services system or to a MultiPoint station hub. The location where a device is connected, and the type of device, affects whether a device is available to all users on the system, only to individual users, or not available to any users. The following are examples of the different connection types:  

@@ -2,7 +2,7 @@
 title: Predeployment Checklist
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 87ea20e4-46cf-49e9-86bf-70be9098c8db
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Predeployment Checklist
 Use the following checklist to help you plan your MultiPoint Services deployment.  

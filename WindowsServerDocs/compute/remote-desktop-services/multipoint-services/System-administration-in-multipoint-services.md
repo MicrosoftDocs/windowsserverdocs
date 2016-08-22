@@ -2,7 +2,7 @@
 title: System administration in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 8fce1bcf-5459-43a2-957e-c1bc1749bca2
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # System administration in MultiPoint Services
 Before you start using your MultiPoint Services system, it’s a good idea to do some basic system administration.  

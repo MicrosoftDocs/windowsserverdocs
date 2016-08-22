@@ -12,6 +12,7 @@ ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 author: KBDAzure
 ms.author: kathydav
+ms.date: 8/16/2016
 ---
 # Use live migration without Failover Clustering to move a virtual machine
 

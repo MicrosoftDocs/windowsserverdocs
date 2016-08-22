@@ -1,8 +1,7 @@
 ---
 title: Set Up a Station
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: dce05b6c-795e-43b2-9920-026550b873c5
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Set Up a Station
 A MultiPoint Services *station* typically consists of a *station hub*, mouse, keyboard, and video monitor. This topic describes how to connect the hardware devices to the station hub to create a MultiPoint Services station.  

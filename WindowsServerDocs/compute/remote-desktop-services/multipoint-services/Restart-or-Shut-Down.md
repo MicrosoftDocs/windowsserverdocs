@@ -1,8 +1,7 @@
 ---
 title: Restart or Shut Down
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: fc9ce813-6ecb-4422-8f4b-5226386823f3
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Restart or Shut Down
 You might have to restart the host computer and all of the *stations* in your MultiPoint Services system if instructed after you install hardware, software, and software updates. If you have added new hardware devices to a station, you might also want to associate the hardware devices to that station. For more information about how to *associate stations*, see the [Switch Between Modes](Switch-Between-Modes.md) topic.  

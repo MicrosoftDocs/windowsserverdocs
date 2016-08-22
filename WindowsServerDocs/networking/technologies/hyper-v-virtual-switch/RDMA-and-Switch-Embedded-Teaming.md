@@ -55,7 +55,7 @@ Enable-NetQosFlowControl  -Priority 3
 Disable-NetQosFlowControl  -Priority 0,1,2,4,5,6,7  
 #  
 # Apply policy to the target adapters  
-Enable-NetAdapterQos  -InterfaceAlias "SLOT 2*"  
+Enable-NetAdapterQos  -Name "SLOT 2"  
 #  
 # Give SMB Direct 30% of the bandwidth minimum  
 New-NetQosTrafficClass "SMB"  -Priority 3  -BandwidthPercentage 30  -Algorithm ETS  
@@ -114,8 +114,8 @@ Get-NetAdapterRdma | fl *
 # so make sure host adapters for RDMA are on VLANs. (This example assigns the two SMB_*  
 # host virtual adapters to VLAN 42.)  
 #  
-Set-VMNetworkAdapter -ManagementOS -VMNetworkAdapter SMB_1  -IsolationMode VLAN -DefaultIsolationID 42  
-Set-VMNetworkAdapter -ManagementOS -VMNetworkAdapter SMB_2  -IsolationMode VLAN -DefaultIsolationID 42  
+Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_1  -IsolationMode VLAN -DefaultIsolationID 42  
+Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -IsolationMode VLAN -DefaultIsolationID 42  
   
 ```  
   
@@ -178,7 +178,9 @@ SET is compatible with the following networking technologies in Windows Server 2
   
 -   Remote Direct Memory Access (RDMA)  
   
--   SDN Quality of Service (QoS)  
+-   SDN Quality of Service (QoS)
+
+-   Single root I/O virtualization (SR-IOV)
   
 -   Transmit-side Checksum offloads (IPv4, IPv6, TCP) - These are supported if all of the SET team members support them.  
   
@@ -197,8 +199,6 @@ SET is not compatible with the following networking technologies in Windows Serv
 -   Receive side coalescing (RSC)  
   
 -   Receive side scaling (RSS)  
-  
--   Single root I/O virtualization (SR-IOV)  
   
 -   TCP Chimney Offload  
   

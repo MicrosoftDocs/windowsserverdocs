@@ -2,7 +2,7 @@
 title: MultiPoint Services Site Planning
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # MultiPoint Services Site Planning
 You should consider the location where one or more computers running MultiPoint Services and its associated stations will be deployed.  

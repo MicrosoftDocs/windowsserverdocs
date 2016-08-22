@@ -2,7 +2,7 @@
 title: Install software on your MultiPoint Services system
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: d4fb5b8b-2d57-40bb-afc7-7cfefc2ae232
 author: lizap
 manager: swadhwa
+ms.author: elizapo
 ---
 # Install software on your MultiPoint Services system
 When you are logged on as an administrative user, you can install new programs either in console mode or, from a station, in station mode. However, we recommend that you install programs in console mode.  

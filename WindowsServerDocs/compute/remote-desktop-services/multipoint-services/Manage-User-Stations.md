@@ -1,8 +1,7 @@
 ---
 title: Manage User Stations
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: b418578d-3a4c-49b0-90db-8389b320b2f6
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Manage User Stations
 This section discusses managing the *stations* that make up the MultiPoint Services system. Managing a MultiPoint Services system includes both managing the hardware and software components of MultiPoint Manager. In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user station.  

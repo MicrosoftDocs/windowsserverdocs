@@ -2,7 +2,7 @@
 title: Set the date, time, and time zone
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 22a87c5f-3bfc-4da1-9905-24f768ede959
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Set the date, time, and time zone
 After you finish installing device drivers, set the date, time, and time zone on the MultiPoint server.  

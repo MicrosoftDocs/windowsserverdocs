@@ -1,8 +1,7 @@
 ---
 title: Remap Selected MultiPoint Systems
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: f6007f1a-95d3-4a6e-a9fb-a2b82fa6918a
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Remap Selected MultiPoint Systems
 Remapping stations in MultiPoint Dashboard allows you to associate keyboards and mice to monitors. Local user stations are suspended while a MultiPoint Services system is remapped.  

@@ -2,7 +2,7 @@
 title: Network Considerations and User Accounts
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: ef4859fc-b7ae-4827-ab9c-b1dc07ab6c16
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Network Considerations and User Accounts
 MultiPoint Services can be deployed in a variety of network environments, and it can support local user accounts and domain user accounts. Generally, MultiPoint Services user accounts will be managed in one of the following network environments:  

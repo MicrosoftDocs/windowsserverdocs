@@ -1,8 +1,8 @@
 ---
 title: Block or Unblock USB Storage
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ 
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: 63f99c10-0289-4e79-b596-7c19160b3ad0
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Block or Unblock USB Storage
 You can prevent users for using USB storage on their user stations.  

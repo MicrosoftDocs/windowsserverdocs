@@ -2,7 +2,7 @@
 title: Application Considerations
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: 445e6184-4e1e-4f10-ad3c-042f2a6c2f5f
 author: evas
 manager: scottman
+ms.author: evas
+ms.date: 08/04/2016
 ---
 # Application Considerations
   

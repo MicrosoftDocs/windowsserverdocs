@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Best Practices Analyzer for Hyper-V
 

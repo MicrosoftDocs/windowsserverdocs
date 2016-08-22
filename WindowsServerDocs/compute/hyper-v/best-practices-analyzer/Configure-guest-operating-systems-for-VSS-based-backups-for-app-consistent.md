@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 7638e996-d42d-47b8-a670-1e09e7183850
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Configure guest operating systems for VSS-based backups to enable application-consistent snapshots for Hyper-V Replica
 

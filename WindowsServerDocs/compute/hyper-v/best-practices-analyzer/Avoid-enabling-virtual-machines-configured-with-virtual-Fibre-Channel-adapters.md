@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: 9f5ddb52-bfb2-4d57-90e5-3e1bf595941c
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Avoid enabling virtual machines configured with virtual Fibre Channel adapters to allow live migrations when there are fewer paths to Fibre Channel logical units (LUNs) on the destination than on the source
 

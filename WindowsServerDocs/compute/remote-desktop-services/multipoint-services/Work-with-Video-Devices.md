@@ -1,8 +1,7 @@
 ---
 title: Work with Video Devices
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-servicesms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,6 +9,8 @@ ms.topic: article
 ms.assetid: 2f7f5a97-efd2-4184-8ad3-cf029d615eab
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Work with Video Devices
 Learn how video devices, such as a monitor or projector, function when they are connected to a computer in your MultiPoint Services system or to a MultiPoint Services *station*.  

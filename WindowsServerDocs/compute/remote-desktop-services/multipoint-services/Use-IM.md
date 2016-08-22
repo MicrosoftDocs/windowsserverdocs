@@ -1,8 +1,7 @@
 ---
 title: Use IM
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 475cde97-d05c-4589-afa9-96db891bd271
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Use IM
 If it has been enabled in the server settings, MultiPoint Dashboard users and station users can exchange private messages over IM.

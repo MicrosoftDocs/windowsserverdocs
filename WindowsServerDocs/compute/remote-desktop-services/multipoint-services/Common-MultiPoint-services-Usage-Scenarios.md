@@ -2,7 +2,7 @@
 title: Common MultiPoint Services Usage Scenarios
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: 9aefaf1b-3ba2-4f41-9068-9629a28157ad
 author: evas
 manager: scottman
+ms.author: evas
+ms.date: 08/04/2016
 ---
 # Common Usage Scenarios
 MultiPoint Services delivers individual user desktops with the most important elements of the Windows 10 desktop experience. It also offers a simple management tool, the MultiPoint Manager, that system administrators can use for discovery and control of multiple MultiPoint servers and clients. Additionally, MultiPoint Services includes the MultiPoint Dashboard for real-time visibility. Examples of what you can do with MultiPoint Services include the following:  

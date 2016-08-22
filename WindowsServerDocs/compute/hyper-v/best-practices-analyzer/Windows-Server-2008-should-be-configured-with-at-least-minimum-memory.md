@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: b5065a3f-364d-4aa9-8703-eafa7a46b575
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Windows Server 2008 should be configured with at least the minimum amount of memory
 

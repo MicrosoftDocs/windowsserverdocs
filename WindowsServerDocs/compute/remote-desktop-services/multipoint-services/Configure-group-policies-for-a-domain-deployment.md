@@ -2,7 +2,7 @@
 title: Configure group policies for a domain deployment
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: 13e5fa90-d330-4155-a6b8-78eb650cbbfa
 author: evas    
 manager: scottman
+ms.author: evas
+ms.date: 08/04/2016
 ---
 # Configure group policies for a domain deployment
 To ensure that your domain deployment of MultiPoint Services works properly, apply the following group policy settings to the WMSshell user account on a MultiPoint Services system.  

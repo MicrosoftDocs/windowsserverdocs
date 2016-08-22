@@ -1,8 +1,7 @@
 ---
 title: Manage System Tasks Using MultiPoint Manager
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: efb34298-391c-4435-afdf-1a749f1ce224
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Manage System Tasks Using MultiPoint Manager
 In MultiPoint Manager, you can use the **Home** tab to perform MultiPoint Services tasks and check the state of the system. Tasks that you can perform on the **Home** tab include:  

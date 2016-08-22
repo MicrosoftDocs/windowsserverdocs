@@ -11,6 +11,7 @@ ms.author: kathydav
 ms.topic: article
 ms.assetid: ac5992e6-3c0b-46c2-a48e-6ef37b679228
 author: KBDAzure
+ms.date: 8/16/2016
 ---
 # Display adapters should be enabled in virtual machines to provide video capabilities
 

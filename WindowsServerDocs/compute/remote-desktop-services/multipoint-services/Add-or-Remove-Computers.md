@@ -2,7 +2,7 @@
 title: Add or Remove Computers
 ms.custom: na
 ms.date: 07/11/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: 1c37739d-7ab0-4b80-8d05-0330e79fd631
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Add or Remove Computers
 You can add other computers to manage with MultiPoint Manager or remove computers from your MultiPoint Services system. Adding other PCs to MultiPoint Manager allows the MultiPoint Dashboard to orchestrate any user's session when logged on to that PC in the same way it can for MultiPoint stations.  

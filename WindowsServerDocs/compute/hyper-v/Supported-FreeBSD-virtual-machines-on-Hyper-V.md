@@ -10,12 +10,13 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
-author: cwatsonmsft
+author: shirgall
 ms.author: cwatson
+ms.date: 8/16/2016
 ---
 # Supported FreeBSD virtual machines on Hyper-V
 
->Applies To: Windows Server Technical Preview, Microsoft Hyper-V Server Technical Preview, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Hyper-V Server 2012, Hyper-V Server 2012 R2, Windows 8, Windows 8.1
+>Applies To: Windows Server 2016 Technical Preview, Hyper-V Server 2016 Technical Preview, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 The following feature distribution map indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.  
   
@@ -47,19 +48,20 @@ The following feature distribution map indicates the features in each version. T
 |TRIM support|2016, 2012 R2||||||  
 |SCSI WWN|2016, 2012 R2||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||| 
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2||||||
 |Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|Dynamic Memory - Hot Add|2016, 2012 R2, 2012|||||| 
+|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|||||| 
 |Dynamic Memory - Ballooning|2016, 2012 R2, 2012||||||  
-|Manual Memory Hot Add|2016||||||  
+|Runtime Memory Resize|2016||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|||||||
 |Hyper-V specific video device|2016, 2012 R2, 2012, 2008 R2||||||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||| 
 |Key/value pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 7|&#10004; Note 7|&#10004; Note 6, 7|&#10004; Note 7|&#10004; Note 7|  
 |Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|   
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2||||||  
 |File copy from host to guest|2016, 2012 R2||||||  
 |lsvmbus command|2016, 2012 R2, 2012, 2008 R2||||||  
 |Hyper-V Sockets|2016||||||  
+|PCI Passthrough/DDA|2016||||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|||||||  
 |Boot using UEFI|2016, 2012 R2||||||  
 |Secure boot|2016||||||| 

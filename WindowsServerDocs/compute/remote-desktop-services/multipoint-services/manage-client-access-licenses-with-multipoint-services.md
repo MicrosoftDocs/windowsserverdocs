@@ -2,7 +2,7 @@
 title: Manage Client Access Licenses with MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 97b358e6-d8fd-498d-aede-5a50559b2146
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Managing Client Access licenses with MultiPoint Services
 To enable users to use stations in MultiPoint Services, you must obtain and install a Client Access License (CAL) for each station. If you are using station virtual desktops instead of physical stations, you must install a CAL for each station virtual desktop.  

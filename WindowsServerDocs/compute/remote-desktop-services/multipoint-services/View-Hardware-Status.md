@@ -1,8 +1,7 @@
 ---
 title: View Hardware Status
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-servicesms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,6 +9,8 @@ ms.topic: article
 ms.assetid: 3a5ec549-e1f9-4714-9e6d-9ea959e1da60
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # View Hardware Status
 In MultiPoint Manager, use the **Stations** tab to view *station* information, such as:  

@@ -1,8 +1,7 @@
 ---
 title: Manage Station Hardware
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 429b8539-b17a-4e01-9576-860600466451
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Manage Station Hardware
 A MultiPoint Services system consists of a single computer and at least one station. Station hardware typically consists of a station hub, mouse, keyboard, and video monitor. Stations are typically physically wired to the computer.  

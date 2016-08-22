@@ -1,8 +1,7 @@
 ---
 title: Save Connection Settings to File
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: 93814c41-60ba-4154-8283-f5d7baf790c0
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Save Connection Settings to File
 Using Remote Desktop, you can connect to a MultiPoint Services system from another computer. If the remote computer supports Remote Desktop Protocol, the connection to the computer can be established automatically.  

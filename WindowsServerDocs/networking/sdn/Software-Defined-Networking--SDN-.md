@@ -24,17 +24,16 @@ You can use this topic to learn about the Software Defined Networking (SDN) tech
 > -   [Plan Software Defined Networking](../sdn/plan/Plan-Software-Defined-Networking.md)  
 > -   [Deploy Software Defined Networking](../sdn/deploy/Deploy-Software-Defined-Networking.md)  
 > -   [Manage Tenant Workloads and Virtual Networks](../sdn/manage/Manage-Tenant-Workloads-and-Virtual-Networks.md)  
-> -   [Troubleshoot Software Defined Networking](../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)  
+> -   [Troubleshoot Software Defined Networking](../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
+> -   [System Center Technologies for Software Defined Networking](Sc-Tech-for-Sdn.md)
+> -   [Microsoft Azure and Software Defined Networking](Azure_and_Sdn.md)  
   
 This topic contains the following sections.  
   
 -   [Software Defined Networking Overview](#bkmk_sdn)  
   
 -   [Windows Server Technologies for Software Defined Networking](#bkmk_ws)  
-  
--   [System Center Technologies for Software Defined Networking](#bkmk_sc)  
-  
--   [Microsoft Azure](#bkmk_az)  
+
   
 ## <a name="bkmk_sdn"></a>Software Defined Networking Overview  
 Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and Windows Server Gateway are designed to be integral elements of your software defined networking infrastructure. While you can still use your existing physical switches, routers, and other hardware devices, you can achieve deeper integration between the virtual network and the physical network if these devices are designed for compatibility with software defined networking.  
@@ -56,15 +55,17 @@ Windows Server includes the following software defined networking technologies.
   
 -   [Hyper-V Network Virtualization](#bkmk_hv)  
   
--   [Hyper-V Virtual Switch](#bkmk_switch)  
+-   [Hyper-V Virtual Switch](#bkmk_switch)
+
+-   [Internal DNS  Service &#40;iDNS&#41;](#bkmk_idns)
   
 -   [Network Function Virtualization](#bkmk_nfv)  
-  
--   [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma)  
+
+-   [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](#bkmk_rdma)  
   
 -   [RAS Gateway for SDN](#bkmk_rras)  
   
--   [Software Load Balancing (SLB)](#bkmk_slb)  
+-   [Software Load Balancing &#40;SLB&#41;](#bkmk_slb)  
   
  
   
@@ -99,14 +100,19 @@ The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch t
   
 In Hyper-V Virtual Switch in Windows Server 2016 Technical Preview, you can also deploy Switch Embedded Teaming (SET) and Remote Direct Memory Access (RDMA). For more information, see the section [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](#bkmk_rdma) in this topic.  
   
-For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
+For more information about Hyper-V Virtual Switch, see [Hyper-V Virtual Switch](../technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+
+### <a name="bkmk_idns"></a>Internal DNS Service &#40;iDNS&#41;
+Hosted virtual machines \(VMs\) and applications require DNS to communicate within their own networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for their isolated, local name space and for Internet resources.
+
+For more information, see [Internal DNS Service &#40;iDNS&#41; for SDN](technologies/Idns-for-Sdn.md).
   
 ### <a name="bkmk_nfv"></a>Network Function Virtualization  
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.  
   
 The following NFV technologies are now available.  
   
--   **Software Load Balancer (SLB) and Network Address Translation (NAT)**. The north-south and east-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer.  
+-   **Software Load Balancer (SLB) and Network Address Translation (NAT)**. The north-south and east-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer. For more information, see [Software Load Balancing (SLB) for SDN](technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).  
   
 -   **Datacenter Firewall**. This distributed firewall provides granular access control lists (ACLs),  enabling you to apply firewall policies at the VM interface level or at the subnet level.  
   
@@ -139,38 +145,3 @@ For more information, see [RAS Gateway for SDN](../sdn/technologies/network-func
 Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 Technical Preview can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   
 For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
-  
-## <a name="bkmk_sc"></a>System Center Technologies for Software Defined Networking  
-System Center includes the following technologies for use with software defined networking.  
-  
--   [System Center Operations Manager](#bkmk_scom)  
-  
--   [System Center Virtual Machine Manager](#bkmk_scvmm)  
-  
--   [Windows Server Gateway](#bkmk_wsgateway)  
-  
-### <a name="bkmk_scom"></a>System Center Operations Manager  
-System Center 2012 Operations Manager provides infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offers comprehensive monitoring for your datacenter and cloud, both private and public.  
-  
-For more information, see [Operations Manager](https://technet.microsoft.com/library/hh205987.aspx).  
-  
-### <a name="bkmk_scvmm"></a>System Center Virtual Machine Manager  
-With  System Center 2012 SP1 Virtual Machine Manager, you can provision and manage virtual networks at scale. You can define and control virtual network policies centrally and link them to your applications or workloads. When your workload is deployed or moved, the network configuration adjusts itself automatically. This is important because it removes the need for manual reconfiguration of network hardware, thereby reducing operational complexity while saving your valuable resources for higher-impact work. Virtual Machine Manager also helps you to control traffic flow between virtual networks, including the ability to define guaranteed bandwidth for your critical applications and workloads.  
-  
-For more information, see [Virtual Machine Manager](https://technet.microsoft.com/library/gg610610.aspx).  
-  
-### <a name="bkmk_wsgateway"></a>Windows Server Gateway  
-To deploy Windows Server Gateway, you must use System Center 2012 R2 and Virtual Machine Manager. The Windows Server Gateway router is designed for use with multitenant deployments. With the System Center 2012 R2 Virtual Machine Manager Windows Server Gateway router, only a very limited set of Border Gateway Protocol (BGP) configuration options are available in the Virtual Machine Manager software interface, including Local BGP IP Address and Autonomous System Numbers (ASN), List of BGP Peer IP Addresses, and ASN, values. You can, however, use Remote Access Windows PowerShell BGP commands to configure all other features of Windows Server Gateway.  
-  
-For more information, see [Windows Server Gateway](https://technet.microsoft.com/library/dn313101.aspx).  
-  
-## <a name="bkmk_az"></a>Microsoft Azure  
-Microsoft Azure is Microsoft's cloud platform: a growing collection of integrated services - compute, storage, data, networking, and app - that help you move faster, do more, and save money.  
-  
-Microsoft's approach to software defined networking includes designing, building, and operating global-scale datacenter networks for services like Microsoft Azure. Microsoft Azure global datacenters perform tens of thousands of network changes every day, which is possible only because of software defined networking.  
-  
-Microsoft Azure runs on the same Windows Server and Hyper-V platform that are included in Windows Server. Windows Server and System Center include improvements and best practices from Microsoft's experience in operating global scale datacenter networks like Microsoft Azure to you so that you can deploy the same technologies for flexibility, automation, and control when using software designed networking technologies.  
-  
-For more information, see [What is Microsoft Azure?](http://azure.microsoft.com/overview/what-is-azure/?WT.mc_id=azurebg_us_sem_bing_br_nontest_whatisazure_whatisazure&WT.srch=1).  
-  
-

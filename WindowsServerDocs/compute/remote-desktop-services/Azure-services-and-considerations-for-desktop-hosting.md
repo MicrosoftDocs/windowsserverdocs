@@ -6,6 +6,9 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: 
   - remote-desktop-services
+  - techgroup-compute
+ms.author: elizapo
+ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46

@@ -1,8 +1,7 @@
 ---
 title: Manage Virtual Desktops
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: fa9ac0ed-47cb-4811-91ff-4fcb62d7858b
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Manage Virtual Desktops
 Single computer VDI allows you to configure each *local* MultiPoint Services station to connect to a Windows 10 Enterprise guest operating system running in a Hyper-V virtual machine (VM) on the same MultiPoint Services computer as the station. These virtual desktop stations can be customized with application which cannot be installed on a Windows server version.  

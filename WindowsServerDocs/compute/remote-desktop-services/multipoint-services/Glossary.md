@@ -2,7 +2,7 @@
 title: Glossary
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: 807bce1d-b993-49c6-9783-b01a3c55846c
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Glossary
 **associate a station**  

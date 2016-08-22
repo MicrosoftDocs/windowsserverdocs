@@ -2,7 +2,7 @@
 title: Allow one account to have multiple sessions
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,8 @@ ms.topic: article
 ms.assetid: f14cf1bd-f176-4de4-b27d-f3d8e6334158
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Allow one account to have multiple sessions
 To enable a group of users use a shared account on multiple stations at the same time, configure the MultiPoint server to allow one account to be logged on to multiple stations simultaneously. By default, if a user logs on to a second station with a shared user account, the user account is logged off the first station.  

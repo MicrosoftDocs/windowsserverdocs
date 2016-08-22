@@ -1,8 +1,7 @@
 ---
 title: Manage User Desktops Using MultiPoint Dashboard
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +10,8 @@ ms.topic: article
 ms.assetid: eadfc544-4c13-4216-b0fd-89fbc659a80b
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # Manage User Desktops Using MultiPoint Dashboard
 In a MultiPoint Services system, a desktop is the software user interface presented on the monitor for each user *station*. The MultiPoint Dashboard is a tool which helps you manage those desktops.   

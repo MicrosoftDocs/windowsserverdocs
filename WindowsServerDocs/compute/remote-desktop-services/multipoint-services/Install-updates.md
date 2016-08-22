@@ -2,7 +2,7 @@
 title: Install updates
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: b201be28-b2d9-403c-a5e9-739d64c1b296
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Install updates
 We recommend that you install updates if available. Installing updates requires an Internet connection.  

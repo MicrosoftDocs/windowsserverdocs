@@ -2,7 +2,7 @@
 title: Install Server Backup on your MultiPoint server
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
 ms.suite: na
@@ -11,6 +11,7 @@ ms.topic: article
 ms.assetid: e4331370-ba07-4529-92ab-db14a41bfc3b
 author: evas
 manager: scottman
+ms.author: evas
 ---
 # Install Server Backup on your MultiPoint server
 It is recommended that you consider a backup and recovery plan for your MultiPoint servers.

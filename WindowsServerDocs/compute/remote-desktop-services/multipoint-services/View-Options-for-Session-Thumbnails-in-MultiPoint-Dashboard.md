@@ -1,8 +1,7 @@
 ---
 title: View Options for Session Thumbnails in MultiPoint Dashboard
 ms.custom: na
-ms.date: 07/15/2016
-ms.prod: windows-server-2016
+ms.prod: windows-server-threshold
 ms.technology: remote-desktop-servicesms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,6 +9,8 @@ ms.topic: article
 ms.assetid: 288a6504-418c-4489-acc6-930410c47cdb
 author: lizap
 manager: swadhwa
+ms.author: elizapo
+ms.date: 08/04/2016
 ---
 # View Options for Session Thumbnails in MultiPoint Dashboard
 An easy way to monitor user activities on individual desktops is to view thumbnail images of each active desktop on your MultiPoint Services system. By default, images of desktops are displayed in MultiPoint Dashboard on the **Home** tab.  
