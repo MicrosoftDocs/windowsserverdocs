@@ -17,13 +17,13 @@ author: cosmosdarwin
 
 >Applies To: Windows Server Technical Preview
 
-Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today’s businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That’s why Failover Clustering in Windows Server 2016 introduces Chassis, Rack, and Site fault tolerance as well.
+Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today’s businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That’s why Failover Clustering in Windows Server 2016 introduces chassis, rack, and site fault tolerance as well.
 
 Fault domains and fault tolerance are closely related concepts. A fault domain is a set of hardware components that share a single point of failure. To be fault tolerant to a certain level, you need multiple fault domains at that level. For example, to be "rack fault tolerant", your servers and your data must be distributed across multiple racks.
 
 This short video presents an overview of Fault Domains in Windows Server 2016:
 
-[VIDEO 1]
+   ![](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg )
 
 ## Benefits
 
@@ -31,27 +31,28 @@ This short video presents an overview of Fault Domains in Windows Server 2016:
 
 -   **The Health Service uses fault domains to provide more helpful alerts.** Each fault domain can be associated with location metadata, which will automatically be included in any subsequent alerts. These descriptors can assist operations or maintenance personnel and reduce errors by disambiguating hardware.  
 
--   **Stretch Clustering uses fault domains to determine preferred ownership.** Stretch clustering allows faraway servers to join a common cluster. For the best performance, applications or virtual machines should be run on servers that are nearby to those providing their storage. If fault domains are specified, the Stretch Cluster will do this automatically.  
+-   **Stretch clustering uses fault domains to determine preferred ownership.** Stretch clustering allows faraway servers to join a common cluster. For the best performance, applications or virtual machines should be run on servers that are nearby to those providing their storage. If fault domains are specified, the stretch cluster will do this automatically.  
 
 ## Levels of Fault Domains  
 
-There are four canonical levels of fault domains - Site, Rack, Chassis, and Node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment does not use blade servers, the Chassis level may not make sense for you.  
+There are four canonical levels of fault domains - site, rack, chassis, and node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment does not use blade servers, the chassis level may not make sense for you.  
 
-   ![](media/Fault-Domains-in-Windows-Server-2016/Clustering_FaultDomains.png)  
+   ![](media/Fault-Domains-in-Windows-Server-2016/Clustering_FaultDomains.png)
+
 ## Usage  
 
-You can use PowerShell or XML Markup to specify fault domains. Both approaches are equivalent and provide full functionality.
+You can use Windows PowerShell or XML markup to specify fault domains. Both approaches are equivalent and provide full functionality.
 
 >[!IMPORTANT]
 > It is strongly recommended to specify fault domains before enabling Storage Spaces Direct. This will enable the automatic configuration to prepare the pool, tiers, and settings like resiliency and column count, for chassis or rack fault tolerance. Once the pool and volumes have been created, data will not retroactively move in response to changes to the fault domain topology. To move nodes between chassis or racks after enabling Storage Spaces Direct, you should first evict the node and its drives from the pool using `Remove-ClusterNode -CleanUpDisks`.
 
-### PowerShell
+### Windows PowerShell
 
 Windows Server 2016 introduces the **Get-**, **Set-**, **New-**, and **Remove-** verbs with the **ClusterFaultDomain** noun.
 
-This short video demonstrates the usage of these PowerShell cmdlets.
+This short video demonstrates the usage of these cmdlets.
 
-[VIDEO 2]
+   ![](media/Fault-Domains-in-Windows-Server-2016/Part-2-Using-PowerShell.jpg)
 
 Use **Get-ClusterFaultDomain** to see the current fault domain topology. This will list all nodes in the cluster, plus any chassis, racks, or sites you have created. You can filter using parameters like **-Type** or **-Name**, but these are not required.
 
@@ -105,7 +106,7 @@ Fault domains can be specified using an XML-inspired syntax. We recommend using 
 
 This short video demonstrates the usage of XML Markup to specify fault domains.
 
-[VIDEO 3]
+   ![](media/Fault-Domains-in-Windows-Server-2016/Part-3-Using-XML-Markup.jpg)
 
 In PowerShell, run the following cmdlet.  
 
@@ -165,7 +166,7 @@ This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt
 
 This short video demonstrates the value of adding location descriptors to fault domains.
 
-[VIDEO 4]
+   ![](media/Fault-Domains-in-Windows-Server-2016/Part-4-Location Description.jpg)
 
 ## See Also  
 
