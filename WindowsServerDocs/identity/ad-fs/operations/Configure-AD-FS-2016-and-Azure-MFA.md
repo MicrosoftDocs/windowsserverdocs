@@ -3,7 +3,7 @@ title: Configure AD FS 2016 and Azure MFA
 description:
 author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 08/22/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -57,7 +57,7 @@ In order to enable the AD FS servers to communicate with the Azure Multi-Factor 
       
 1. **Get the X.509 interpretation of the certificate and convert it to X509**   
           
-    `$certX509 = New-Object.System.Security.Cryptography.X509Certificates.X509Certificate`  
+    `$certX509 = New-Object System.Security.Cryptography.X509Certificates.X509Certificate`  
     `$certX509.Import([System.Convert]::FromBase64String($certBase64))`  
       
 ![](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA2.PNG)  
