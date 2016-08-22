@@ -28,6 +28,8 @@ This document contains a list of all of the documentation operations for AD FS f
 * [Configure AD FS to authenticate users stored in LDAP directories](../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)  
   
 * [Configure AD FS to Send Password Expiry Claims](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)  
+
+* [Configure intranet forms-based authentication for devices that do not support WIA](../ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
   
 * [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)  
   

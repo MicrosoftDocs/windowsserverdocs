@@ -420,6 +420,7 @@
 ##### [AD FS support for alternate hostname binding for certificate authentication](identity/ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 ##### [Configure AD FS to authenticate users stored in LDAP directories](identity/ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
 ##### [Configure AD FS to Send Password Expiry Claims](identity/ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
+##### [Configure intranet forms-based authentication for devices that do not support WIA](identity/ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
 ##### [AD FS user sign-in customization](identity/ad-fs/operations/AD-FS-user-sign-in-customization.md)
 ##### [Improved interoperability with SAML 2.0](identity/ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 ##### [Updates for Active Directory Federation Services](identity/ad-fs/operations/Updates-for-Active-Directory-Federation-Services--AD-FS-.md)
