@@ -15,10 +15,10 @@ ms.technology: active-directory-federation-services
 
 This document contains a list of all of the documentation operations for AD FS for Windows Server 2016. This includes the following:  
   
-  
+* [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md)  
   
 * [AD FS 2016 Single Sign on settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)  
-  
+
 * [Auditing Enhancements to AD FS in Windows Server 2016](../ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)  
     
 *   [Access Control Policies in AD FS](../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
