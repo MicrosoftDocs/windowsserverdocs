@@ -23,7 +23,7 @@ Fault domains and fault tolerance are closely related concepts. A fault domain i
 
 This short video presents an overview of Fault Domains in Windows Server 2016:
 
-   ![](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg )
+   [![](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg )](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-1-Overview)
 
 ## Benefits
 
