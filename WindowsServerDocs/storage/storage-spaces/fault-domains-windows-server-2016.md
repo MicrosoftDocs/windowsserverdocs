@@ -52,7 +52,7 @@ Windows Server 2016 introduces the **Get-**, **Set-**, **New-**, and **Remove-**
 
 This short video demonstrates the usage of these cmdlets.
 
-   ![](media/Fault-Domains-in-Windows-Server-2016/Part-2-Using-PowerShell.jpg)
+   [![](media/Fault-Domains-in-Windows-Server-2016/Part-2-Using-PowerShell.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-2-Using-PowerShell)
 
 Use **Get-ClusterFaultDomain** to see the current fault domain topology. This will list all nodes in the cluster, plus any chassis, racks, or sites you have created. You can filter using parameters like **-Type** or **-Name**, but these are not required.
 
@@ -106,7 +106,7 @@ Fault domains can be specified using an XML-inspired syntax. We recommend using 
 
 This short video demonstrates the usage of XML Markup to specify fault domains.
 
-   ![](media/Fault-Domains-in-Windows-Server-2016/Part-3-Using-XML-Markup.jpg)
+   [![](media/Fault-Domains-in-Windows-Server-2016/Part-3-Using-XML-Markup.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-3-Using-XML)
 
 In PowerShell, run the following cmdlet.  
 
@@ -166,7 +166,7 @@ This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt
 
 This short video demonstrates the value of adding location descriptors to fault domains.
 
-   ![](media/Fault-Domains-in-Windows-Server-2016/Part-4-Location Description.jpg)
+   [![](media/Fault-Domains-in-Windows-Server-2016/Part-4-Location Description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-LocationDescription)
 
 ## See Also  
 
