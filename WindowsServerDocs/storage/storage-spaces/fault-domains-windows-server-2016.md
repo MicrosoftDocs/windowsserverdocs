@@ -108,7 +108,7 @@ This short video demonstrates the usage of XML Markup to specify fault domains.
 
    [![](media/Fault-Domains-in-Windows-Server-2016/Part-3-Using-XML-Markup.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-3-Using-XML)
 
-In PowerShell, run the following cmdlet.  
+In Windows PowerShell, run the following cmdlet.  
 
     Get-ClusterFaultDomainXML  
 
@@ -157,7 +157,7 @@ In addition to name, freeform **Location="..."** and **Description="..."** descr
           </Rack>  
         </Topology>  
 
-To set the new fault domain specification, save your XML and run the following in PowerShell.  
+To set the new fault domain specification, save your XML and run the following in Windows PowerShell.  
 
     $xml = Get-Content <Path> | Out-String  
     Set-ClusterFaultDomainXML -XML $xml  
