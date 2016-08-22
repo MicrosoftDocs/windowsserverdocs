@@ -72,8 +72,10 @@ There are many technologies that work together to create Microsoft's Software De
     Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 Technical Preview can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.  
   
   
--   **System Center**   
+-   **[System Center](../../sdn/Sc-Tech-for-Sdn.md)**   
     System Center Virtual Machine Manager (VMM) can be used to deploy and manage many SDN components.  
   
-
+- **[Windows Containers](../technologies/Containers/Container-networking-overview.md)**
+    
+    You can connect Windows Containers to virtual networks. 
 
