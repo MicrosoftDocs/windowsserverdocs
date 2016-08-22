@@ -19,13 +19,13 @@ Failover Clustering enables multiple servers to work together to provide high av
 
 Fault domains and fault tolerance are closely related concepts. A fault domain is a set of hardware components that share a single point of failure. To be fault tolerant to a certain level, you need multiple fault domains at that level. For example, to be "rack fault tolerant", your servers and your data must be distributed across multiple racks.
 
-## Benefits  
+This short video presents an overview of Fault Domains in Windows Server 2016:
 
-The operating system on any given server is typically unaware of its physical circumstance. In general, two Windows Server instances cannot tell whether they are adjacent or hundreds of miles apart. In Windows Server 2016 Technical Preview, it is possible to provide this awareness by specifying the arrangement of your hardware across several levels of fault domains.  
+[VIDEO 1]
 
-Benefits of doing so include:  
+## Benefits
 
--   **Storage Spaces, including Storage Spaces Direct, use fault domains to maximize data safety.** Resiliency in Storage Spaces arises from keeping multiple synchronized copies of any data. When one copy is lost, others are recopied to restore resiliency. To achieve the best possible resiliency, copies should be kept in separate fault domains.  
+-   **Storage Spaces, including Storage Spaces Direct, uses fault domains to maximize data safety.** Resiliency in Storage Spaces is conceptually like distributed, software-defined RAID. Multiple copies of all data are kept in sync, and if hardware fails and one copy is lost, others are recopied to restore resiliency. To achieve the best possible resiliency, copies should be kept in separate fault domains.
 
 -   **The Health Service uses fault domains to provide more helpful alerts.** Each fault domain can be associated with location metadata, which will automatically be included in any subsequent alerts. These descriptors can assist operations or maintenance personnel and reduce errors by disambiguating hardware.  
 
@@ -46,6 +46,10 @@ You can use PowerShell or XML Markup to specify fault domains. Both approaches a
 ### PowerShell
 
 Windows Server 2016 introduces the **Get-**, **Set-**, **New-**, and **Remove-** verbs with the **ClusterFaultDomain** noun.
+
+This short video demonstrates the usage of these PowerShell cmdlets.
+
+[VIDEO 2]
 
 Use **Get-ClusterFaultDomain** to see the current fault domain topology. This will list all nodes in the cluster, plus any chassis, racks, or sites you have created. You can filter using parameters like **-Type** or **-Name**, but these are not required.
 
@@ -78,14 +82,15 @@ Set-ClusterFaultDomain -Name "Rack A", "Rack B", "Rack C", "Rack D" -Parent "Sha
 
 You can see parent-child relationships in the output of **Get-ClusterFaultDomain**, in the **ParentName** and **ChildrenNames** columns.
 
-You can also use **Set-ClusterFaultDomain** to modify certain other properties of fault domains. For example, you can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service.
+You can also use **Set-ClusterFaultDomain** to modify certain other properties of fault domains. For example, you can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service. You can also rename fault domains using the **-NewName** parameter. Do not rename **Node** type fault domains.
 
 ```
 Set-ClusterFaultDomain -Name "Rack A" -Location "Building 34, Room 4010"
 Set-ClusterFaultDomain -Type Node -Description "Contoso XYZ Server"
+Set-ClusterFaultDomain -Name "Shanghai" -NewName "China Region"
 ```
 
-Use **Remove-ClusterFaultDomain** to remove chassis, racks, or sites you have created. The **-Name** parameter is required. You cannot remove a fault domain that contains children – first, either remove the children, or move them outside using **Set-ClusterFaultDomain**. To move a fault domain outside of all other fault domains, set its **-Parent** to the empty string (""). Do not remove **Node** type fault domains.
+Use **Remove-ClusterFaultDomain** to remove chassis, racks, or sites you have created. The **-Name** parameter is required. You cannot remove a fault domain that contains children – first, either remove the children, or move them outside using **Set-ClusterFaultDomain**. To move a fault domain outside of all other fault domains, set its **-Parent** to the empty string (""). You cannot remove **Node** type fault domains. To remove multiple fault domains at once, list their names.
 
 ```
 Set-ClusterFaultDomain -Name "server01.contoso.com" -Parent ""
@@ -94,7 +99,11 @@ Remove-ClusterFaultDomain -Name "Rack A"
 
 ### XML Markup
 
-Fault domains are specified using an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free *[here](https://code.visualstudio.com/)*) or Notepad, to create an XML document which you can save and reuse.  
+Fault domains can be specified using an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free *[here](https://code.visualstudio.com/)*) or Notepad, to create an XML document which you can save and reuse.  
+
+This short video demonstrates the usage of XML Markup to specify fault domains.
+
+[VIDEO 3]
 
 In PowerShell, run the following cmdlet.  
 
@@ -152,8 +161,10 @@ To set the new fault domain specification, save your XML and run the following i
 
 This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt;, &lt;**Chassis**&gt;, and &lt;**Node**&gt; tags can be mixed and matched in many additional ways to reflect the physical topology of your deployment, whatever that may be. We hope these examples illustrate the flexibility of these tags and the value of freeform location descriptors to disambiguate them.  
 
->[!IMPORTANT]
->The cluster cannot verify the correctness of your fault domains - they are accepted as-is. If hardware is moved or added later, the XML should be updated and reset accordingly. Stretch Clustering preferential ownership and Health Service alerts will dynamically adjust to these changes. However, once the pool and volumes have been created, Storage Spaces Direct will not retroactively move data in response to changes. For this reason, moving nodes between chassis, racks, or sites after enabling Storage Spaces Direct is not recommended nor supported unless you first evict the node and its drives from the pool.  
+This short video demonstrates the value of adding location descriptors to fault domains.
+
+[VIDEO 4]
+
 ## See Also  
 
 -   [Windows Server 2016 Technical Preview 5](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
