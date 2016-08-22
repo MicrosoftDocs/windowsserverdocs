@@ -17,7 +17,7 @@ ms.technology:
 
 > Applies to Windows Server 2016
 
-This document describes how to modify advanced [Data Deduplication](overview.md) settings. The default settings should be sufficient for ['Always' workloads](install-enable.md#enable-dedup-candidate-workloads); the main reason to modify these settings is to improve Data Deduplication's performance with workloads that aren't always a good fit for Data Deduplication (also known as ['Sometimes' workloads](install-enable.md#enable-dedup-candidate-workloads).
+This document describes how to modify advanced [Data Deduplication](overview.md) settings. The default settings should be sufficient for ['Always' workloads](install-enable.md#enable-dedup-candidate-workloads); the main reason to modify these settings is to improve Data Deduplication's performance with workloads that aren't always a good fit for Data Deduplication (also known as ['Sometimes' workloads](install-enable.md#enable-dedup-candidate-workloads)).
 
 ## <a id="modifying-job-schedules"></a>Modifying Data Deduplication Job Schedules
 The [default Data Deduplication job schedules](understand.md#job-info) are designed to (1) work well for 'Always' workloads, and (2) be as non-intrusive as possible (excluding the 'Priority Optimization' job that is enabled for the [Backup Usage Type](understand.md#usage-type-backup)). Because 'Sometimes' workloads often have greater demands on the system, it is possible to ensure that jobs only run during idle hours and/or to reduce/increase the amount of system resources that a Data Deduplication job is allowed to consume.
