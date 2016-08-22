@@ -1,6 +1,6 @@
 ---
 title:Installing and Enabling Data Deduplication  
-description:Learn how to install the Data Deduplication feature, evaluate workloads for deduplication, and enable Data Deduplication on targeted volumes.  
+description:Learn how to install Data Deduplication, evaluate workloads for deduplication, and enable Data Deduplication on targeted volumes.  
 author:wmgries  
 ms.author:wgries   
 manager:eldenc  
@@ -16,7 +16,7 @@ ms.technology:
 # Installing and Enabling Data Deduplication
 > Applies to Windows Server 2016
 
-This document explains how to install the [Data Deduplication](overview.md) feature, evaluate workloads for deduplication, and enable Data Deduplication on targeted volumes.
+This document explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on targeted volumes.
 
 ## <a id="install-dedup"></a>Install the Data Deduplication feature
 ### <a id="install-dedup-via-server-manager"></a>To install the Data Deduplication feature on the server using Server Manager
