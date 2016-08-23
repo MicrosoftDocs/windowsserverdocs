@@ -21,21 +21,21 @@ AD FS makes issuance decisions that are based on identity information that is pr
 
 The following topics will assist you in creating the rules that AD FS will process: 
   
--   [Create a Rule to Pass Through or Filter an Incoming Claim](Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)  
+-   [Create a Rule to Pass Through or Filter an Incoming Claim](../../ad-fs/operations/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)  
   
--   [Create a Rule to Permit All Users](Create-a-Rule-to-Permit-All-Users.md)  
+-   [Create a Rule to Permit All Users](../../ad-fs/operations/Create-a-Rule-to-Permit-All-Users.md)  
   
--   [Create a Rule to Permit or Deny Users Based on an Incoming Claim](Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md)  
+-   [Create a Rule to Permit or Deny Users Based on an Incoming Claim](../../ad-fs/operations/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md)  
   
--   [Create a Rule to Send LDAP Attributes as Claims](Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)  
+-   [Create a Rule to Send LDAP Attributes as Claims](../../ad-fs/operations/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)  
   
--   [Create a Rule to Send Group Membership as a Claim](Create-a-Rule-to-Send-Group-Membership-as-a-claim.md)  
+-   [Create a Rule to Send Group Membership as a Claim](../../ad-fs/operations/Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)  
   
--   [Create a Rule to Transform an Incoming Claim](Create-a-Rule-to-Transform-an-Incoming-Claim.md)  
+-   [Create a Rule to Transform an Incoming Claim](../../ad-fs/operations/Create-a-Rule-to-Transform-an-Incoming-Claim.md)  
   
--   [Create a Rule to Send an Authentication Method Claim](Create-a-Rule-to-Send-an-Authentication-Method-claim.md)  
+-   [Create a Rule to Send an Authentication Method Claim](../../ad-fs/operations/Create-a-Rule-to-Send-an-Authentication-Method-Claim.md)  
   
--   [Create a Rule to Send Claims Using a Custom Rule](Create-a-Rule-to-Send-Claims-Using-a-Custom-rule.md)  
+-   [Create a Rule to Send Claims Using a Custom Rule](../../ad-fs/operations/Create-a-Rule-to-Send-Claims-Using-a-Custom-rule.md)  
 
 ## See Also  
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
