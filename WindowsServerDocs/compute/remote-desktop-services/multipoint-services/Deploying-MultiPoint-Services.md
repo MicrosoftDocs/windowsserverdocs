@@ -9,7 +9,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
-author: evas
+author: evaseydl
+ms.author: evas
 manager: scottman
 ---
 # Deploying MultiPoint Services

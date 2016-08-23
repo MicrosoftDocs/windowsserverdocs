@@ -41,41 +41,41 @@ In this section:
 ## <a name="BKMK_rhc"></a>Red Hat Compatible Kernel Series  
 The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS support for Oracle Linux RHCK 6.0-6.3. Oracle Linux 7.x kernels are 64-bit only.  
   
-|**Feature**|**Windows server version**|**6.4-6.8 and 7.0-7.2**|**6.4-6.7 and 7.0-7.1**|**RHCK 7.0-7.2**|**RHCK 6.6, 6.7, 6.8**|**RHCK 6.5**|**RHCK6.4**|  
-|-|-|-|-|-|-|-|-|  
-|**Availability**||[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|[LIS 4.0](http://www.microsoft.com/download/details.aspx?id=46842)|Built in|Built in|Built in|Built in|  
+|**Feature**|**Windows server version**|**6.4-6.8 and 7.0-7.2**|**6.4-6.7 and 7.0-7.1**|**RHCK 7.0-7.2**|**RHCK 6.8**|**RHCK 6.6, 6.7**|**RHCK 6.5**|**RHCK6.4**|  
+|-|-|-|-|-|-|-|-|-|  
+|**Availability**||[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|[LIS 4.0](http://www.microsoft.com/download/details.aspx?id=46842)|Built in|Built in|Built in|Built in|Built in|  
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|  
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004; (Note 1 for 6.4-6.7)|&#10004; (Note 1 for 6.4-6.7)|&#10004;|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|  
-|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|Static IP Injection|2016, 2012 R2, 2012|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|vRSS|2016, 2012 R2|&#10004;|&#10004;||&#10004;|||  
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||&#10004;|||  
+|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
+|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004; (Note 1 for 6.4-6.8)|&#10004; (Note 1 for 6.4-6.8)|&#10004;|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|  
+|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
+|Static IP Injection|2016, 2012 R2, 2012|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
+|vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||  
+|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||  
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|  
-|VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||  
-|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||  
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4|&#10004; Note 3, 4|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 5, 11|&#10004; Note 3, 4, 5, 11|  
-|TRIM support|2016, 2012 R2|||||||  
-|SCSI WWN|2016, 2012 R2|&#10004;||||||  
+|VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||  
+|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||  
+|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4|&#10004; Note 3, 4|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 5, 11|&#10004; Note 3, 4, 5, 11|  
+|TRIM support|2016, 2012 R2|&#10004;||&#10004;|&#10004;||||  
+|SCSI WWN|2016, 2012 R2|&#10004;|||||||  
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|  
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004; (6.x only)|&#10004; (6.x only)|N/A|&#10004;|&#10004;|&#10004;|
-|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9||  
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9, 10|  
-|Runtime Memory Resize|2016|||||||  
+|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004; (6.x only)|&#10004; (6.x only)|N/A|&#10004;|&#10004;|&#10004;|&#10004;|
+|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
+|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9||  
+|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9, 10|  
+|Runtime Memory Resize|2016||||||||  
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|  
-|Hyper-V-specific  video device|2016,2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||  
+|Hyper-V-specific  video device|2016,2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||  
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|  
-|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|  
-|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
-|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;||&#10004;|||  
-|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;||||||  
-|Hyper-V Sockets|2016|&#10004;||||||  
-|PCI Passthrough/DDA|2016|||||||
+|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|  
+|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|  
+|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;||&#10004;||||  
+|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;|||||||  
+|Hyper-V Sockets|2016|&#10004;|||||||  
+|PCI Passthrough/DDA|2016||||||||
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|  
-|Boot using UEFI|2016, 2012 R2|&#10004; Note 13|&#10004; Note 13|&#10004; Note 13||||  
-|Secure boot|2016|||||||  
+|Boot using UEFI|2016, 2012 R2|&#10004; Note 13|&#10004; Note 13|&#10004; Note 13|&#10004; Note 13||||  
+|Secure boot|2016||||||||  
   
 ## <a name="BKMK_uek"></a>Unbreakable Enterprise Kernel Series  
 The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS support built-in.  
@@ -137,6 +137,8 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
     2.  Add the following content to the file: `SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`  
   
     3.  Reboot the system to enable Hot-Add support.  
+
+    While the Linux Integration Services download creates this rule on installation, the rule is also removed when LIS is uninstalled, so the rule must be recreated if dynamic memory is needed after uninstallation.
   
 8.  Dynamic memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:  
   
@@ -158,6 +160,8 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off  
       
     ```  
+
+    The Linux Integration Services download can be applied to existing Generation 2 VMs but does not impart Generation 2 capability.
   
 See Also  
   
