@@ -113,7 +113,6 @@ Data Deduplication, uses a post-processing strategy to optimize and maintain a v
 ## <a id="dedup-term"></a>Data Deduplication Terminology
 | Term | Definition |
 |------|------------|
-| <a id="dedup-term-always-workload"></a>Always Workload | An always workload is a workload that benefits so greatly from and works so well with deduplication that you should always enable it. See 'Always' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads) page. |
 | <a id="dedup-term-chunk"></a>Chunk | A chunk is a section of a file that has been selected by the Data Deduplication chunking algorithm as likely to occur in other, similiar files. |
 | <a id="dedup-term-chunk-store"></a>Chunk Store | The Chunk Store is an organized series of container files in the System Volume Information folder that Data Deduplication uses to uniquely store chunks. |
 | <a id="dedup-term-dedup"></a>Dedup | An abbrevation for Data Deduplication commonly used in PowerShell, Windows Server APIs and components, and in common usage in the Windows Server community. |
@@ -124,7 +123,6 @@ Data Deduplication, uses a post-processing strategy to optimize and maintain a v
 | <a id="dedup-term-optimization"></a>Optimization | A file is considered optimized (or deduplicated) by Data Deduplication if it has been chunked and its unique chunks have been stored in the Chunk Store. |
 | <a id="dedup-term-in-policy"></a>Optimization Policy | The Optimization Policy specifies which files should be considered for Data Deduplication. For example, files may be considered out-of-policy if they are brand new, open, in a certain path on the volume, or are of a certain file type. |
 | <a id="dedup-term-reparse-point"></a>Reparse Point | A [Reparse Point](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365503.aspx) is a special tag that notifies the File System to pass off IO to a specified File System Filter. When a file's file stream has been optimized, Data Deduplication replaces the file stream with a Reparse Point, which allows Data Deduplication to preserve the access semantics for that file. |
-| <a id="dedup-term-sometimes-workload"></a>Sometimes Workload | A sometimes workload is a workload that may benefit from Data Deduplication, but should be evaluated for its fitness for deduplication to ensure that you get maximum optimization and performance out of your storage. See 'Sometimes' workloads on the [Installing and Enabling Data Deduplication](install-enable.md#enable-dedup-candidate-workloads). |
 | <a id="dedup-term-volume"></a>Volume | A volume is a Windows construct for a logical storage drive that may span multiple physical storage devices across a one or more servers. Deduplication is enabled on a volume by volume basis. |
 | <a id="dedup-term-workload"></a>Workload | A workload is an application that runs on Windows Server. Example workloads include general purpose file server, Hyper-V, and SQL Server. |
 
@@ -145,7 +143,7 @@ There are several important differences between Data Deduplication, and other co
 	Archive file formats like zip, rar, 7z, cab, etc perform compression over a specified set of files. Like Data Deduplication, this means that both duplicated patterns within files and duplicated patterns across files are optimized, however this requires manual intervention, in the form of choosing which files should be included in the archive, and changes the access semantics, because now accessing a specific file within the archive means opening the archive, selecting the specific file desired, and decompressing that file for use. Data Deduplication operates transparently to users and administrators, and requires no manual kick-off. Additionally, Data Deduplication preserves access semantics - optimized files appear unchanged after optimization.
 
 **Can I change the Data Deduplication settings for my selected Usage Type?**  
-Yes, although Data Deduplication provides reasonable defaults for 'Always' workloads, you may still find it desirable to tweak Data Deduplication settings to get the most out of your storage. Additionally, 'Sometimes' workloads will [require some tweaking to ensure that Data Deduplication does not interfere with the workload](install-enable.md#enable-dedup-sometimes-considerations).
+Yes, although Data Deduplication provides reasonable defaults for **Recommended workloads**, you may still find it desirable to tweak Data Deduplication settings to get the most out of your storage. Additionally, other workloads will [require some tweaking to ensure that Data Deduplication does not interfere with the workload](install-enable.md#enable-dedup-sometimes-considerations).
 
 **Can I manually run a Data Deduplication job?**  
 Yes, [all Data Deduplication jobs may be run manually](run.md#running-dedup-jobs-manually). This may be desirable if scheduled jobs did not run due to insufficient system resources or because of an error. Additionally, the Unoptimization job can only be run manually.
@@ -154,4 +152,4 @@ Yes, [all Data Deduplication jobs may be run manually](run.md#running-dedup-jobs
 Yes, [all Data Deduplication jobs make entries in the Windows Event Log](run.md#monitoring-dedup).
 
 **Can I change the default schedules for the Data Deduplication jobs on my system?**  
-Yes, [all schedules are configurable](advanced-settings.md#modifying-job-schedules). Modifying the default Data Deduplication schedules is particularly desirable for 'Sometimes' workloads to ensure that the Data Deduplication jobs have time to finish and do not compete for resources with the workload.
+Yes, [all schedules are configurable](advanced-settings.md#modifying-job-schedules). Modifying the default Data Deduplication schedules is particularly desirable to ensure that the Data Deduplication jobs have time to finish and do not compete for resources with the workload.
