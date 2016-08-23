@@ -86,7 +86,7 @@ The following Usage Types provide reasonable Data Deduplication configuration fo
 		</tr>
 		<tr>
 			<td><a id="usage-type-backup"></a>Backup</th>
-			<td>Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx)</td>
+			<td>Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx)</td>
 			<td><ul>
 				<li>Priority Optimization</li>
 				<li>Default optimization policy:<ul>
@@ -122,7 +122,7 @@ Data Deduplication, uses a post-processing strategy to optimize and maintain a v
 | <a id="dedup-term-file-system-filter"></a>File System Filter | A File System Filter is a plugin that modifies the default behavior of the File System. In order to preserve access semantics, Data Deduplication uses a File System Filter (Dedup.sys) to redirect reads to optimized content completely transparently to the user/application making the read request. |
 | <a id="dedup-term-optimization"></a>Optimization | A file is considered optimized (or deduplicated) by Data Deduplication if it has been chunked and its unique chunks have been stored in the Chunk Store. |
 | <a id="dedup-term-in-policy"></a>Optimization Policy | The Optimization Policy specifies which files should be considered for Data Deduplication. For example, files may be considered out-of-policy if they are brand new, open, in a certain path on the volume, or are of a certain file type. |
-| <a id="dedup-term-reparse-point"></a>Reparse Point | A [Reparse Point](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365503.aspx) is a special tag that notifies the File System to pass off IO to a specified File System Filter. When a file's file stream has been optimized, Data Deduplication replaces the file stream with a Reparse Point, which allows Data Deduplication to preserve the access semantics for that file. |
+| <a id="dedup-term-reparse-point"></a>Reparse Point | A [Reparse Point](https://msdn.microsoft.com/library/windows/desktop/aa365503.aspx) is a special tag that notifies the File System to pass off IO to a specified File System Filter. When a file's file stream has been optimized, Data Deduplication replaces the file stream with a Reparse Point, which allows Data Deduplication to preserve the access semantics for that file. |
 | <a id="dedup-term-volume"></a>Volume | A volume is a Windows construct for a logical storage drive that may span multiple physical storage devices across a one or more servers. Deduplication is enabled on a volume by volume basis. |
 | <a id="dedup-term-workload"></a>Workload | A workload is an application that runs on Windows Server. Example workloads include general purpose file server, Hyper-V, and SQL Server. |
 

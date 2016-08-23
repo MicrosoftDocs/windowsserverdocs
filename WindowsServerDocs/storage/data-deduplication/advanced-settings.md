@@ -24,10 +24,10 @@ The [default Data Deduplication job schedules](understand.md#job-info) are desig
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication Schedule
 Data Deduplication jobs are scheduled via the Windows Task Scheduler, and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets however that make scheduling easy:
-* [`Get-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848446.aspx): shows the current scheduled jobs
-* [`New-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848445.aspx): creates a new scheduled job
-* [`Set-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848447.aspx): modifies an existing scheduled job
-* [`Remove-DedupSchedule`](https://technet.microsoft.com/en-us/library/hh848451.aspx): removes a scheduled job.
+* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx): shows the current scheduled jobs
+* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx): creates a new scheduled job
+* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx): modifies an existing scheduled job
+* [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx): removes a scheduled job.
 
 The most common reason for changing when the Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Data Deduplication schedule for a 'sunny day' scenario: a hyper-converged Hyper-V host that is idle on weeknights starting at 7 PM and on weekends. To change the schedule, run the following PowerShell cmdlets in an Administrator context:
 
@@ -178,8 +178,8 @@ The following settings can be toggled for new or scheduled Data Deduplication jo
 ### <a id="modifying-volume-settings-how-to-toggle"></a>Toggling Volume Settings
 Data Deduplication's volume-wide default settings are set via the [Usage Type](understanding-dedup.md#usage-type) that you select when you enable a Data Deduplication for a volume. Data Deduplication includes several cmdlets that make editing volume-wide settings easy:
 
-* [`Get-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848448.aspx)
-* [`Set-DedupVolume`](https://technet.microsoft.com/en-us/library/hh848438.aspx)
+* [`Get-DedupVolume`](https://technet.microsoft.com/library/hh848448.aspx)
+* [`Set-DedupVolume`](https://technet.microsoft.com/library/hh848438.aspx)
 
 The main reasons to modify the volume settings from the selected Usage Type are (1) to improve read performance for specific files (such as multimedia or other already compressed file types) and/or (2) to tune Data Deduplication for better optimization for your specific workload. The following example shows how to modify the Data Deduplication volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files that change frequently:
 
@@ -274,7 +274,7 @@ The main reasons to modify the volume settings from the selected Usage Type are 
 </table>
 
 ## <a id="modifying-dedup-system-settings"></a>Modifying Data Deduplication System-wide Settings
-Data Deduplication has a few additional, system-wide settings that can be configured via [the Registry](https://technet.microsoft.com/en-us/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry. 
+Data Deduplication has a few additional, system-wide settings that can be configured via [the Registry](https://technet.microsoft.com/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry. 
 
 For example, you may wish to disable Full Garbage Collection. More information about why this may be useful for your scenario can be found [below](#faq-why-disable-full-gc). To edit the registry with PowerShell:
 
