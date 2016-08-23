@@ -137,12 +137,15 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 Aside from workloads that are [known not to interop with Data Deduplication](interop.md), we fully support the data integrity of Data Deduplication with any workload. **Recommended workloads** are supported by Microsoft for performance as well. The performance of other workloads depends greatly on what they are doing on your server: it is left up to the workload owner, you, to determine what if any performance impacts Data Deduplication has on your workload and if this is acceptable for this workload.
 
 **What are the volume sizing requirements for deduplicated volumes?**  
-In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a deduplicated volume for a high churn workload was 1-2 TB, and the absolute maximum recommeneded size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, view [What's new in Data Deduplication](whats-new.md).
+In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a deduplicated volume for a high churn workload was 1-2 TB, and the absolute maximum recommeneded size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, view [What's new in Data Deduplication](whats-new.md#large-volume-support).
 
-**Do I need to modify the schedule or other Data Deduplication settings for 'Always' workloads?**  
-No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for '**Always**' workloads.
+**Do I need to modify the schedule or other Data Deduplication settings for Recommended workloads?**  
+No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for **Recommended workloads**.
 
 **What are the memory requirements for Data Deduplication?**  
 In the minimum case, Data Deduplication should have 300 MB + 50 MB for each TB of logical data. For instance, if you are optimizing a 10 TB volume, you would need a minimum of 800 MB of memory allocated for deduplication (`300 MB + 50 MB * 10 = 300 MB + 500 MB = 800 MB`). While Data Deduplication can optimize a volume with this low amount of memory, having such constrained resources will slow down Data Deduplication's jobs. 
 
 In the optimal case, Data Deduplication should have 1 GB of memory for every 1 TB of logical data. For instance, if you are optimizing a 10 TB volume, you would optimally need 10 GB of memory allocated for Data Deduplication (`1 GB * 10`). This ratio will ensure the maximum performance for Data Deduplication's jobs.
+
+**What are the storage requirements for Data Deduplication?**  
+In Windows Server 2016, Data Deduplication can support volume sizes up to 64 TB. For more information, view [What's new in Data Deduplication](whats-new.md#large-volume-support).
