@@ -30,11 +30,11 @@ The following topics will assist you in creating the rules that AD FS will proce
   
 -   [Create a Rule to Send Group Membership as a Claim](Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)  
   
--   [Create a Rule to Transform an Incoming Claim_1](Create-a-Rule-to-Transform-an-Incoming-Claim_1.md)  
+-   [Create a Rule to Transform an Incoming Claim_1](Create-a-Rule-to-Transform-an-Incoming-Claim.md)  
   
--   [Create a Rule to Send an Authentication Method Claim_1](Create-a-Rule-to-Send-an-Authentication-Method-Claim_1.md)  
+-   [Create a Rule to Send an Authentication Method Claim_1](Create-a-Rule-to-Send-an-Authentication-Method-Claim.md)  
   
--   [Create a Rule to Send Claims Using a Custom Rule_1](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule_1.md)  
+-   [Create a Rule to Send Claims Using a Custom Rule_1](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
 
 ## See Also  
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
