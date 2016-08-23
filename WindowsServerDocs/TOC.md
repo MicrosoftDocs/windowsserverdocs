@@ -414,6 +414,7 @@
 #### [AD FS 2016 Operations](identity/ad-fs/AD-FS-2016-Operations.md)
 ##### [Add an Attribute Store](identity/ad-fs/operations/Add-an-Attribute-Store.md)
 ##### [Create a Relying Party Trust](identity/ad-fs/operations/Create-a-Relying-Party-Trust.md) 
+##### [Create a Non-Claims Aware Relying Party Trust](identity/ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md) 
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configuring Alternate Login ID](identity/ad-fs/operations/Configuring-Alternate-Login-ID.md)
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
