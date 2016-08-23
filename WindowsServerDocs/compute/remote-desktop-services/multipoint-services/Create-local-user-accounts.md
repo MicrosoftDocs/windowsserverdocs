@@ -9,7 +9,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33321932-4266-4961-9924-2cb4620bfcb4
-author: evas
+author: evaseydl
+ms.author: evas
 manager: scottman
 ---
 # Create local user accounts

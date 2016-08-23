@@ -9,7 +9,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bac9d1b-bd21-4bc8-8f72-0dd9bb2b3f5d
-author: evas
+author: evaseydl
+ms.author: evas
 manager: scottman
 ---
 # Deploy a new Windows MultiPoint Services system
