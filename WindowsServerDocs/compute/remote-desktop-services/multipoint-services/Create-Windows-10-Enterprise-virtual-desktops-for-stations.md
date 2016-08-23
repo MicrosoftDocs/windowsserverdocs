@@ -9,7 +9,8 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
-author: evas
+author: evaseydl
+ms.author: evas
 manager: scottman
 ---
 # Create Windows 10 Enterprise virtual desktops for stations

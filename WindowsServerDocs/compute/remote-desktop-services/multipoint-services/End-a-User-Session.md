@@ -1,7 +1,6 @@
 ---
 title: End a User Session
 ms.custom: na
- 
 ms.prod: windows-server-threshold
 ms.technology: remote-desktop-services
 ms.reviewer: na
@@ -11,6 +10,7 @@ ms.topic: article
 ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
 author: lizap
 manager: swadhwa
+ms.author: elizapo
 ---
 # End a User Session
 You should end a user’s session when you have to log the user off from the MultiPoint Services system to return the desktop to its default settings. The user receives a warning that the connection is about to end. You should end a user’s connection when you want to:  

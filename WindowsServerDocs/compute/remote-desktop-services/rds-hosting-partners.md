@@ -8,16 +8,16 @@ ms.technology:
   - remote-desktop-services
   - techgroup-compute
 ms.author: elizapo
-ms.date: 08/17/2016  
+ms.date: 08/22/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
 manager: msswadhwa
 ---
-# Hosting Windows Desktop and Applications using Remote Desktop Services in Azure -  partner Cloud competency
+# Hosting Windows Desktop and applications using Remote Desktop Services in Azure -  new learning path to Cloud Platform competency
 
-Recently Microsoft delivered a new Cloud Platform competency for RDS: "Hosting Windows Desktop and Applications using Remote Desktop Services in Azure."
+Recently, Microsoft delivered a new learning path for the Cloud Platform competency: "Hosting Windows Desktop and Applications using Remote Desktop Services in Azure."
 
 While we are working on compiling a list of partners that have achieved this competency, here are the steps you can take to get it yourself:
 

@@ -9,7 +9,7 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9aefaf1b-3ba2-4f41-9068-9629a28157ad
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
