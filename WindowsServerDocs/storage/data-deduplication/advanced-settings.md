@@ -176,7 +176,7 @@ The following settings can be toggled for new or scheduled Data Deduplication jo
 
 ## <a id="modifying-volume-settings"></a>Modifying Data Deduplication Volume-wide Settings
 ### <a id="modifying-volume-settings-how-to-toggle"></a>Toggling Volume Settings
-Data Deduplication's volume-wide default settings are set via the [Usage Type](understanding-dedup.md#usage-type) that you select when you enable a Data Deduplication for a volume. Data Deduplication includes several cmdlets that make editing volume-wide settings easy:
+Data Deduplication's volume-wide default settings are set via the [Usage Type](understand.md#usage-type) that you select when you enable a Data Deduplication for a volume. Data Deduplication includes several cmdlets that make editing volume-wide settings easy:
 
 * [`Get-DedupVolume`](https://technet.microsoft.com/library/hh848448.aspx)
 * [`Set-DedupVolume`](https://technet.microsoft.com/library/hh848438.aspx)

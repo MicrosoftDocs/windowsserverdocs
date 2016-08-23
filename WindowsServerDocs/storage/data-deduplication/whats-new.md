@@ -16,7 +16,7 @@ ms.technology:
 # What's New in Data Deduplication
 > Applies to Windows Server 2016
 
-[Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at "Private Cloud" scale. For more information about the Software Defined Storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-file-storage-services-windows-server-2016).
+[Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at "Private Cloud" scale. For more information about the Software Defined Storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-file-storage-services-windows-server-2016.md).
 
 Data Deduplication has the following enhancements in Windows Server 2016: 
 
@@ -52,7 +52,7 @@ In Windows Server 2016, Data Deduplication makes use of new stream map structure
 
 ## <a name="nano-server-support"></a>Support for Nano Server
 **What value does this change add?**  
-Nano Server is a new headless deployment option in Windows Server 2016 that has a far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/getting-started-with-nano-server).
+Nano Server is a new headless deployment option in Windows Server 2016 that has a far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/getting-started-with-nano-server.md).
 
 ## <a name="simple-backup-support">Simplified Configuration for Virtualized Backup Applications</a>
 **What value does this change add?**  

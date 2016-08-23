@@ -111,7 +111,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 5. If you are running a **Recommended workload**, you are done! For other workloads, you should see the [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]  
-> More information on excluding file extensions or folders and selecting the deduplication schedule, including why you would want to do this, can be found on the [Configuring Data Deduplication](advanced-settings) page.
+> More information on excluding file extensions or folders and selecting the deduplication schedule, including why you would want to do this, can be found on the [Configuring Data Deduplication](advanced-settings.md) page.
 
 #### <a id="enable-dedup-via-powershell"></a>Using PowerShell to enable Data Deduplication
 1. With an administrator context, run the following PowerShell command:  
