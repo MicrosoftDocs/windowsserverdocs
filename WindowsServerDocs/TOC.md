@@ -416,6 +416,7 @@
 ##### [Create a Relying Party Trust](identity/ad-fs/operations/Create-a-Relying-Party-Trust.md) 
 ##### [Create a Non-Claims Aware Relying Party Trust](identity/ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 ##### [Create a Claims Provider Trust](identity/ad-fs/operations/Create-a-Claims-Provider-Trust.md) 
+##### [Configure Claim Rules](identity/ad-fs/operations/Configure-Claim-Rules.md) 
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configuring Alternate Login ID](identity/ad-fs/operations/Configuring-Alternate-Login-ID.md)
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
