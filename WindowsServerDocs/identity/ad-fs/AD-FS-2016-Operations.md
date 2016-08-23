@@ -19,7 +19,9 @@ This document contains a list of all of the documentation operations for AD FS f
 
 * [Create a Relying Party Trust](../ad-fs/operations/Create-a-Relying-Party-Trust.md)
 
-* [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)    
+* [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
+
+* [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md)     
   
 * [AD FS 2016 Single Sign on settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)  
 

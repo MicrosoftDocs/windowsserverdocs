@@ -1,9 +1,9 @@
 ---
-title: Create a Relying Party Trust
+title: Create a Non-Claims Aware Relying Party Trust
 description:
 author: billmath
 manager: femila
-ms.date: 08/22/2016
+ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
