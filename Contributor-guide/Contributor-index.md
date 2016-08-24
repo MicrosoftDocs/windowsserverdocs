@@ -11,9 +11,9 @@
 
 - [Contribute to Windows Server documentation]()
 
-- [Content channel guidance](content-channel-guidance.md)
+- [Content channel guidance](https://github.com/Azure/azure-content/blob/master/contributor-guide/content-channel-guidance.md)
 
-- [Style and voice](style-and-voice.md)
+- [Style and voice](https://github.com/Azure/azure-content/blob/master/contributor-guide/style-and-voice.md)
 
 ## Authoring articles: tools, processes, guidance
 
@@ -39,7 +39,7 @@
 
 - [GitHub-flavored markdown](https://help.github.com/articles/github-flavored-markdown/)
 
-- [Create tables in markdown](create-tables-markdown.md)
+- [Create tables in markdown](https://github.com/Azure/azure-content/blob/master/contributor-guide/create-tables-markdown.md)
 
 - [Create images in markdown](create-images-markdown.md)
 
