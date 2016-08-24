@@ -35,5 +35,5 @@ WDSUTIL is a command-line utility used for managing your Windows Deployment Serv
 |[The Start Server Command](The-Start-Server-Command.md)|Starts all services on the Windows Deployment Services server, including multicast transmissions, namespaces, and the Transport Server.|  
 |[The Stop Server Command](The-Stop-Server-Command.md)|Stops all services on the Windows Deployment Services server.|  
 |[The uninitialize-Server Option](The-uninitialize-Server-Option.md)|Reverts changes made during server initialization.|  
-|[The Update-ServerFiles Command](wdsutil/The-Update-ServerFiles-Command.md)|Updates server files on the RemoteInstall share.|  
+|[The Update-ServerFiles Command](The-Update-ServerFiles-Command.md)|Updates server files on the RemoteInstall share.|  
 |[The Verbose Command](The-Verbose-Command.md)|Displays verbose output for the specified command.|  

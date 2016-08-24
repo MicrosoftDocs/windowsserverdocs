@@ -8,7 +8,7 @@ ms.technology:
   - techgroup-storage
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221 JasonGerend
+ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221
 ---
 # Diskshadow
 DiskShadow.exe is a tool that exposes the functionality offered by the Volume Shadow Copy Service \(VSS\). By default, DiskShadow uses an interactive command interpreter similar to that of DiskRAID or DiskPart. DiskShadow also includes a scriptable mode.  
