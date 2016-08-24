@@ -55,7 +55,7 @@
 ### [Remote Desktop Services](compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
 #### Get started
 ##### [Welcome to Remote Desktop Services](compute/remote-desktop-services/welcome-to-rds.md)
-##### [Work with partners to host apps in Remote Desktop Services](compute/remote-desktop-services/rds-hosting-partners.md)
+##### [Host Windows Desktop and Applications using Remote Desktop Services in Azure](compute/remote-desktop-services/rds-hosting-partners.md)
 #### Plan
 ##### [Desktop Hosting Reference Architecture](compute/remote-desktop-services/Desktop-Hosting-Reference-Architecture.md)
 ###### [Desktop hosting logical architecture](compute/remote-desktop-services/Desktop-hosting-logical-architecture.md)
@@ -412,6 +412,11 @@
 ##### [Enabling Oauth Confidential Clients with AD FS 2016](identity/ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 ##### [Single Page Application with AD FS](identity/ad-fs/development/Single-Page-Application-with-AD-FS.md)
 #### [AD FS 2016 Operations](identity/ad-fs/AD-FS-2016-Operations.md)
+##### [Add an Attribute Store](identity/ad-fs/operations/Add-an-Attribute-Store.md)
+##### [Create a Relying Party Trust](identity/ad-fs/operations/Create-a-Relying-Party-Trust.md) 
+##### [Create a Non-Claims Aware Relying Party Trust](identity/ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
+##### [Create a Claims Provider Trust](identity/ad-fs/operations/Create-a-Claims-Provider-Trust.md) 
+##### [Configure Claim Rules](identity/ad-fs/operations/Configure-Claim-Rules.md) 
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configuring Alternate Login ID](identity/ad-fs/operations/Configuring-Alternate-Login-ID.md)
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
@@ -420,6 +425,7 @@
 ##### [AD FS support for alternate hostname binding for certificate authentication](identity/ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 ##### [Configure AD FS to authenticate users stored in LDAP directories](identity/ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
 ##### [Configure AD FS to Send Password Expiry Claims](identity/ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
+##### [Configure intranet forms-based authentication for devices that do not support WIA](identity/ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
 ##### [AD FS user sign-in customization](identity/ad-fs/operations/AD-FS-user-sign-in-customization.md)
 ##### [Improved interoperability with SAML 2.0](identity/ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 ##### [Updates for Active Directory Federation Services](identity/ad-fs/operations/Updates-for-Active-Directory-Federation-Services--AD-FS-.md)
