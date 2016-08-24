@@ -60,8 +60,8 @@ Data Deduplication can be very effective in minimizing the costs of a server app
 
 To determine whether a workload works well with deduplication, answer the following questions. If you're unsure about a workload, consider doing a pilot deployment of Data Deduplication on a test dataset for your workload to see how it performs. 
 
-1. **Does the workload generate data with duplicate data?**  
-	Before enabling Data Deduplication for a workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. After installing Data Deduplication you can find this tool at `C:\Windows\System32\DDPEval.exe`. DDPEval can evaluate the potential for optimization against directly connected volumes (including local disks or Cluster Shared Volumes) and mapped or unmapped network shares.  
+1. **Does my workload's dataset have enough duplication to benefit from enabling deduplication?**  
+	Before enabling Data Deduplication for a workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. After installing Data Deduplication, you can find this tool at `C:\Windows\System32\DDPEval.exe`. DDPEval can evaluate the potential for optimization against directly connected volumes (including local disks or Cluster Shared Volumes) and mapped or unmapped network shares.  
 	&nbsp;   
 	Running DDPEval.exe will return an output similar to the following:  
 	&nbsp;  
@@ -108,7 +108,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 ![Click on Configure Data Deduplication](media/enable-dedup-via-server-manager-3.png)
 4. Select the desired **Usage Type** from the drop-down box and select **OK**.  
 ![Select the desired Usage Type from the drop down](media/enable-dedup-via-server-manager-4.png)
-5. If you are running a **Recommended workload**, you are done! For other workloads, you should see the [Other considerations](#enable-dedup-sometimes-considerations).
+5. If you are running a **Recommended workload**, you're done! For other workloads, you should see the [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]  
 > More information on excluding file extensions or folders and selecting the deduplication schedule, including why you would want to do this, can be found on the [Configuring Data Deduplication](advanced-settings.md) page.
