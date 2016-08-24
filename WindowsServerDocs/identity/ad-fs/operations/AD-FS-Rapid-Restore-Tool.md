@@ -3,7 +3,7 @@ title: AD FS Rapid Restore Tool
 description:
 author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 08/23/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -37,7 +37,7 @@ The tool backs up the following AD FS configuration
 - A list of the custom authentication providers, attribute stores, and local claims provider trusts that are installed.
 
 ## How to use the tool
-First, download and install the MSI to your AD FS server.  
+First, [download](http://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
 From a PowerShell prompt, import-module ADFSRapidRecreationTool.dll
 
