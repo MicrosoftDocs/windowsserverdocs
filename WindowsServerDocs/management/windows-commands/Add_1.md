@@ -1,14 +1,17 @@
 ---
 title: Add_1
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-storage
+  - management
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd JasonGerend
+ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
 # Add_1
 Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. If used without subcommands, **add** lists the current volumes and aliases.  

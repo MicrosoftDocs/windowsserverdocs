@@ -1,12 +1,18 @@
 ---
 title: Add volume
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.technology: 
+  - management
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: b7d4d35d-8bda-46d2-8df5-eb598cecaaba JasonGerend
+ms.assetid: b7d4d35d-8bda-46d2-8df5-eb598cecaaba
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
+
 ---
 # Add volume
 Adds volumes to the Shadow Copy Set, which is the set of volumes to be shadow copied. This command is necessary to create shadow copies. If used without parameters, **add volume** displays help at the command prompt.  

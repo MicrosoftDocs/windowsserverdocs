@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-storage
+  - management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1f25da2e-87fc-4392-a7ee-f38d09b7873c
