@@ -169,7 +169,7 @@ This guide presents just two examples, but the &lt;**Site**&gt;, &lt;**Rack**&gt
 
 This short video demonstrates the value of adding location descriptors to fault domains.
 
-[![](media/Fault-Domains-in-Windows-Server-2016/Part-4-Location Description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-LocationDescription)
+[![](media/Fault-Domains-in-Windows-Server-2016/Part-4-Location Description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
 ## See also  
 
