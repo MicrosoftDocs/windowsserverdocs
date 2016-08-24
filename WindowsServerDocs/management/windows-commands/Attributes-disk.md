@@ -1,14 +1,18 @@
 ---
 title: Attributes disk
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-storage
+  - management
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92 JasonGerend
+ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92
+
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
 # Attributes disk
 Displays, sets, or clears the attributes of a disk.  

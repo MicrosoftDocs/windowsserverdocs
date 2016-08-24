@@ -1,14 +1,18 @@
 ---
 title: Attributes volume
 ms.custom: na
-ms.prod: windows-server-2012
+ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-storage
+  - management
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e40e8284-3d57-4de8-a46c-e4ade34a0d53 JasonGerend
+ms.assetid: e40e8284-3d57-4de8-a46c-e4ade34a0d53
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
+
 ---
 # Attributes volume
 Displays, sets, or clears the attributes of a volume.  

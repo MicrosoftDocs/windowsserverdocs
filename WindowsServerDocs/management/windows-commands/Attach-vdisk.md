@@ -5,10 +5,12 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-storage
+  - management
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 882ab875-0c14-4eb3-98ef-fd0e8fa40d9cauthor: coreyp
+ms.assetid: 882ab875-0c14-4eb3-98ef-fd0e8fa40d9c
+
+author: coreyp
 ms.author: coreyp-at-msft
 ms.date: 09/14/2016
 ---

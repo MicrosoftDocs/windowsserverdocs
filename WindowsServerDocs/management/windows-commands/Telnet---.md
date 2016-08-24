@@ -4,9 +4,12 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.technology: 
+  - management
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 9b47e811-3dcd-458d-8ed7-86ab30d54c5e vhorneauthor: coreyp
+ms.assetid: 9b47e811-3dcd-458d-8ed7-86ab30d54c5e vhorne
+author: coreyp
 ms.author: coreyp-at-msft
 ms.date: 09/14/2016
 ---

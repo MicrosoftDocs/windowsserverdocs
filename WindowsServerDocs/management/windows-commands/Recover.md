@@ -8,7 +8,8 @@ ms.technology:
   - techgroup-storage
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: cf9be2e3-90c8-4773-a201-dc503b91948eauthor: coreyp
+ms.assetid: cf9be2e3-90c8-4773-a201-dc503b91948e
+author: coreyp
 ms.author: coreyp-at-msft
 ms.date: 09/14/2016
 ---
