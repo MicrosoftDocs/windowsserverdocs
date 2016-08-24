@@ -26,7 +26,7 @@ Data Deduplication has the following enhancements in Windows Server 2016:
 | [Support for Large Files](whats-new.md#large-file-support) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for Data Deduplication. In Windows Server 2016, files **up to 1 TB** are fully supported. |
 | [Support for Nano Server](whats-new.md#nano-server-support) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
 | [Simplified Backup Support](whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications.|
-| [Support for Cluster OS Rolling Upgrades](whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../compute/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
+| [Support for Cluster OS Rolling Upgrades](whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../../compute/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
 ## <a name="large-volume-support"></a>Support for Large Volumes
 **What value does this change add?**  
@@ -52,7 +52,7 @@ In Windows Server 2016, Data Deduplication makes use of new stream map structure
 
 ## <a name="nano-server-support"></a>Support for Nano Server
 **What value does this change add?**  
-Nano Server is a new headless deployment option in Windows Server 2016 that has a far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/getting-started-with-nano-server.md).
+Nano Server is a new headless deployment option in Windows Server 2016 that has a far small system resource footprint, starts up significantly faster, and requires fewer updates and restarts than the Windows Server Core deployment option. Data Deduplication is fully supported on Nano Server. For more information about Nano Server, see [Getting Started with Nano Server](../../compute/nano-server/getting-started-with-nano-server.md).
 
 ## <a name="simple-backup-support">Simplified Configuration for Virtualized Backup Applications</a>
 **What value does this change add?**  

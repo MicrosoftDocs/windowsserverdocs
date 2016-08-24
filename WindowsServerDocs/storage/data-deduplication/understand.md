@@ -40,7 +40,7 @@ Once enabled for a volume, Data Deduplication runs in the background to identify
 5. Replace the original file stream of now optimized files with a Reparse Point to the Chunk Store.  
 ![Replace file stream with Reparse Point](media/understanding-dedup-how-dedup-works-5.gif)
 
-When optimized files are read, the file system hands off the files with a Reparse Point to the Deduplication file system filter, which redirects the read operation to the appropriate chunks in the Chunk Store that constitute the stream for that file. If/when a modifications are made to ranges of a deduplicated file, those modifications get written unoptimized to the disk and are optimized by the by the [Optimization job](understanding-dedup.md#usage-type-optimization) the next time it runs.
+When optimized files are read, the file system hands off the files with a Reparse Point to the Deduplication file system filter, which redirects the read operation to the appropriate chunks in the Chunk Store that constitute the stream for that file. If/when a modifications are made to ranges of a deduplicated file, those modifications get written unoptimized to the disk and are optimized by the by the [Optimization job](understanding.md#usage-type-optimization) the next time it runs.
 
 ## <a id="usage-type"></a>Usage Types
 The following Usage Types provide reasonable Data Deduplication configuration for common workloads:  
