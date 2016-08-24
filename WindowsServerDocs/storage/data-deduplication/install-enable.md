@@ -60,8 +60,8 @@ Data Deduplication can be very effective in minimizing the costs of a server app
 
 To determine whether a workload works well with deduplication, answer the following questions. If you're unsure about a workload, consider doing a pilot deployment of Data Deduplication on a test dataset for your workload to see how it performs. 
 
-1. **Does my workload's dataset has enough duplication within it to benefit from enabling deduplication?**  
-	Before enabling Data Deduplication for a workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. This tool can be found under `C:\Windows\System32\DDPEval.exe` when [Data Deduplication has been installed](install-enable.md#install-dedup). DDPEval can evaluate the potential for optimization against directly connected volumes (including local disks or Cluster Shared Volumes) and mapped or unmapped network shares.  
+1. **Does the workload generate data with duplicate data?**  
+	Before enabling Data Deduplication for a workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. After installing Data Deduplication you can find this tool at `C:\Windows\System32\DDPEval.exe`. DDPEval can evaluate the potential for optimization against directly connected volumes (including local disks or Cluster Shared Volumes) and mapped or unmapped network shares.  
 	&nbsp;   
 	Running DDPEval.exe will return an output similar to the following:  
 	&nbsp;  
@@ -82,7 +82,7 @@ To determine whether a workload works well with deduplication, answer the follow
 	`Files excluded by error: 0`  
 
 2. **What do my workload's IO patterns to its dataset look like? What performance do I have for my workload?**  
-	Writes to a deduplicated volume always occur un-deduplicated as Data Deduplication uses a post-processing model. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store, and attempts to lay the Chunk Store out by file as much as possible, read operations are most performant when they are to sequential ranges of a file.  
+	Data Deduplication doesn't deduplicate writes in realtime - instead it does so later. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store, and attempts to lay the Chunk Store out by file as much as possible, read operations perform the best when they are to sequential ranges of a file.  
 	
 	Database-like workloads typically have more random-like read patterns than sequential read patterns because databases do not typically guarantee that the database layout will be optimal for all possible queries that may be run. Because the sections of the Chunk Store may exist all over the volume, accessing data ranges in the Chunk Store for database queries may introduce additional latency. High performance workloads are particularly sensitive to this extra latency, however, other database-like workloads may not be. 
 
@@ -119,16 +119,16 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 	Enable-DedupVolume -Volume <Volume-Path> -UsageType <Selected-Usage-Type>
 	```
 
-2. If you are running a **Recommended workload**, you are done! For other workloads, you should see the [Other considerations](#enable-dedup-sometimes-considerations).
+2. If you are running a **Recommended workload**, you're done! For other workloads, see the [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]  
 > The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](https://technet.microsoft.com/library/hh848441.aspx), are remotable by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run [`New-CimSession`](https://technet.microsoft.com/library/jj590760.aspx). 
 
 #### <a id="enable-dedup-sometimes-considerations"></a>Other considerations
 > [!Important]  
-> If you are running a **Recommended workload**, you can skip this section because you are done!
+> If you are running a recommended workload, you can skip this section because you're done!
 
-* Data Deduplication's Usage Types give sensible defaults for **Recommended workloads**, but also provide a good starting point for all workloads. For workloads other than the **Recommended workloads**, it is possible to modify [Data Deduplication's advanced settings](advanced-settings.md) to improve deduplication performance.
+* Data Deduplication's Usage Types give sensible defaults for recommended workloads, but also provide a good starting point for all workloads. For workloads other than the recommended workloads, it is possible to modify [Data Deduplication's advanced settings](advanced-settings.md) to improve deduplication performance.
 * If your workload has high resource requirements on your server, the Data Deduplication jobs [should be scheduled to run during the expected idle times for that workload](advanced-settings.md#schedule-dedup-jobs). This is particularly important when running deduplication on a hyper-converged host, as running Data Deduplication during expected working hours can starve VMs.
 * If your workload does not have high resource requirements, or if it is more important that optimization jobs complete than workload requests be served, [the memory, CPU, and priority of the Data Deduplication jobs can be adjusted](advanced-settings.md#modifying-job-schedules).
 
