@@ -1,5 +1,5 @@
 ---
-title:Installing and Enabling Data Deduplication  
+title:Installing and enabling Data Deduplication  
 description:Learn how to install Data Deduplication, evaluate workloads for deduplication, and enable Data Deduplication on targeted volumes.  
 author:wmgries  
 ms.author:wgries   
@@ -13,26 +13,26 @@ ms.technology:
 - dedup
 ---
 
-# Installing and Enabling Data Deduplication
+# Installing and enabling Data Deduplication
 > Applies to Windows Server 2016
 
-This document explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on targeted volumes.
+This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
 
-## <a id="install-dedup"></a>Install the Data Deduplication
-### <a id="install-dedup-via-server-manager"></a>To install Data Deduplication on the server using Server Manager
-1. From the Add Roles and Feature Wizard, under Server Roles, select the **Data Deduplication** check box.  
+## <a id="install-dedup"></a>Install Data Deduplication
+### <a id="install-dedup-via-server-manager"></a>To install Data Deduplication using Server Manager
+1. From the Add Roles and Feature Wizard, under Server Roles, select the **Data Deduplication** checkbox.  
 ![Install Data Deduplication via Server Manager: Select Data Deduplication from Server Roles](media/install-dedup-via-server-manager-1.png)
 2. Click **Next** until the **Install** button is active, and then click **Install**.  
 ![Install Data Deduplication via Server Manager: Click Install](media/install-dedup-via-server-manager-2.png) 
 
-### <a id="install-dedup-via-powershell"></a>To install the Data Deduplication on the server using PowerShell
-#### On Full and Core versions of Windows Server
-1. Run the following PowerShell command as an administrator:  
+### <a id="install-dedup-via-powershell"></a>To install the Data Deduplication using PowerShell
+To install Data Deduplication, run the following PowerShell command as an administrator:  
 `Install-WindowsFeature -Name FS-Data-Deduplication`
 
-#### <a id="install-dedup-on-nano-server"></a>On Nano Server
+To install Data Deduplication in a Nano Server installation:
+
 1. Create a Nano Server installation with the 'Storage' installed per the [Getting Started with Nano Server](../../compute/nano-server/getting-started-with-nano-server.md#BKMK_CreateImage) guide.
-2. From a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed (or from a Full or Core Windows Server), install the Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
+2. From a server running Windows Server 2016 in any mode other than Nano Server or a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
 `Install-WindowsFeature -ComputerName <Nano-Server-Name> -Name FS-Data-Deduplication`  
 &nbsp;  
 **-- OR --**  
@@ -49,7 +49,7 @@ Data Deduplication can be very effective in minimizing the costs of a server app
 	* General purpose file servers (GPFS) serving shares like team shares, user home folders, Work Folders, and software development shares.
 	* Virtualized Desktop Infrastructure (VDI) servers.
 	* Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx).
-* Workloads that may sometimes benefit from deduplication, but may not always be a good candidate for deduplication. These workloads fitness for deduplication should be evaluated before enabling Data Deduplication, including, but not limited to:
+* Workloads that might benefit from deduplication, but aren't always good candidates for deduplication. For example, the following workloads could work well with deduplication, but you should evaluate them with deduplication first:
 	* General Purpose Hyper-V hosts
 	* SQL Servers
 	* Line-of-business (LOB) servers
@@ -58,7 +58,7 @@ Data Deduplication can be very effective in minimizing the costs of a server app
 > [!Important]  
 > If you are running a **Recommended workload**, you can skip this section and go [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) for your workload.
 
-In order to determine a workload's fitness for deduplication, there are several questions that should be answered. Whether or not the answers to these questions preclude you from enabling Data Deduplication for your workload is left up to you, the workload owner. It may be advisable to pilot Data Deduplication on a test dataset for your workload to see how it performs. 
+To determine whether a workload works well with deduplication, answer the following questions. If you're unsure about a workload, consider doing a pilot deployment of Data Deduplication on a test dataset for your workload to see how it performs. 
 
 1. **Does my workload's dataset has enough duplication within it to benefit from enabling deduplication?**  
 	Before enabling Data Deduplication for a workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. This tool can be found under `C:\Windows\System32\DDPEval.exe` when [Data Deduplication has been installed](install-enable.md#install-dedup). DDPEval can evaluate the potential for optimization against directly connected volumes (including local disks or Cluster Shared Volumes) and mapped or unmapped network shares.  
