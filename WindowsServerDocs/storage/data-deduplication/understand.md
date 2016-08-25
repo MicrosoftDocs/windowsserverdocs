@@ -45,60 +45,11 @@ When optimized files are read, the file system hands off the files with a Repars
 ## <a id="usage-type"></a>Usage Types
 The following Usage Types provide reasonable Data Deduplication configuration for common workloads:  
 
-<table>
-	<thread>
-		<tr>
-			<th>Usage Type</th>
-			<th>Ideal Workloads</th>
-			<th>What's Different</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a id="usage-type-default"></a>Default</th>
-			<td>General purpose file server:<ul>
-				<li>Team shares</li>
-				<li>Work Folders</li>
-				<li>Folder redirection</li>
-				<li>Software development shares</li>
-			</td>
-			<td><ul>
-				<li>Background Optimization</li>
-				<li>Default optimization policy:<ul>
-					<li>Minimum File Age = 3 days</li>
-					<li>Optimize in-use files = No</li>
-					<li>Optimize partial files = No</li>
-				</ul></li></ul>
-			</td>
-		</tr>
-		<tr>
-			<td><a id="usage-type-hyperv"></a>Hyper-V</th>
-			<td>Virtualized Desktop Infrastructure (VDI) servers</td>
-			<td><ul>
-				<li>Background Optimization</li>
-				<li>Default optimization policy:<ul>
-					<li>Minimum File Age = 3 days</li>
-					<li>Optimize in-use files = Yes</li>
-					<li>Optimize partial files = Yes</li>
-				</ul></li>
-				<li>"Under-the-hood" tweaks for Hyper-V interop</li></ul>
-			</td>
-		</tr>
-		<tr>
-			<td><a id="usage-type-backup"></a>Backup</th>
-			<td>Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx)</td>
-			<td><ul>
-				<li>Priority Optimization</li>
-				<li>Default optimization policy:<ul>
-					<li>Minimum File Age = 0 days</li>
-					<li>Optimize in-use files = Yes</li>
-					<li>Optimize partial files = No</li>
-				</ul></li>
-				<li>"Under-the-hood" tweaks for interop with DPM/DPM-like solutions</li></ul>
-			</td>
-		</tr>
-	</tbody>
-</table>
+| Usage Type | Ideal Workloads | What's Different |
+|------------|-----------------|------------------|
+| <a id="usage-type-default"></a>Default | General purpose file server:<ul><li>Team shares</li><li>Work Folders</li><li>Folder redirection</li><li>Software development shares</li></ul> | <ul><li>Background Optimization</li><li>Default optimization policy:<ul><li>Minimum File Age = 3 days</li><li>Optimize in-use files = No</li><li>Optimize partial files = No</li></ul></li></ul> |
+| <a id="usage-type-hyperv"></a>Hyper-V | Virtualized Desktop Infrastructure (VDI) servers | <ul><li>Background Optimization</li><li>Default optimization policy:<ul><li>Minimum File Age = 3 days</li><li>Optimize in-use files = Yes</li><li>Optimize partial files = Yes</li></ul></li><li>"Under-the-hood" tweaks for Hyper-V interop</li></ul> |
+| <a id="usage-type-backup"></a>Backup | Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx) | <ul><li>Priority Optimization</li><li>Default optimization policy:<ul><li>Minimum File Age = 0 days</li><li>Optimize in-use files = Yes</li><li>Optimize partial files = No</li></ul></li><li>"Under-the-hood" tweaks for interop with DPM/DPM-like solutions</li></ul> |
 
 ## <a id="job-info"></a>Jobs
 Data Deduplication, uses a post-processing strategy to optimize and maintain a volume's space efficiency. 
