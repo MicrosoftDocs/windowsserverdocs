@@ -12,7 +12,7 @@ ms.author: billmath
 ---
 # AD FS Rapid Restore Tool
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
@@ -43,7 +43,7 @@ From a PowerShell prompt, import-module ADFSRapidRecreationTool.dll
 
 
 >[!NOTE] 
->If you are using the Windows Integrated Database (WID), then you this tool needs to be run on the primary AD FS server.  You can use the `Get-ADFSSyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
+>If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-ADFSSyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
 
 ### System Requirements
 
