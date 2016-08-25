@@ -68,7 +68,7 @@ Windows Server Backup has the ability to back up an optimized volume “as-is”
 
 ## <a id="unsupported"></a>Unsupported
 ### <a id="unsupported-refs"></a>ReFS
-Data Deduplication on ReFS-formatted volumes is not supported in Windows Server 2016. This includes on "Fused Volumes" (also known as "Multi-Resilient Volumes") that take advantage of ReFS tiering to offer the benefits of both Mirror and Parity. 
+Data Deduplication on ReFS-formatted volumes is not supported in Windows Server 2016.
 
 ### <a id="unsupported-windows-search"></a>Windows Search
 Windows Search unfortunately doesn’t support Data Deduplication. Because Data Deduplication uses reparse points, which Windows Search can’t index, Windows Search skips all deduplicated files, excluding them from the index. As a result, search results might be incomplete for deduplicated volumes.
