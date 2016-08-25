@@ -144,7 +144,6 @@ This table shows the roles and features that are available in this release of Na
 |System Center Virtual Machine Manager agent|   -Packages Microsoft-NanoServer-SCVMM-Package<br />   -Packages Microsoft-NanoServer-SCVMM-Compute-Package <br>**Note:**     Use the SCVMM Compute package only if you are monitoring Hyper-V.|  
 |Network Performance Diagnostics Service (NPDS) (**Note:** Requires Windows Defender Anti-Malware package, which you should install before installing NPDS)|-Packages Microsoft-NanoServer-NPDS-Package |  
 |Data Center Bridging (including DCBQoS|-Packages Microsoft-NanoServer-DCB-Package|  
-|Ability to boot and run from a RAM disk|Microsoft-NanoServer-BootFromWim-Package|  
 |Deploying on a virtual machine|Microsoft-NanoServer-Guest-Package|  
 |Deploying on a physical machine|Microsoft-NanoServer-Host-Package|  
 |Secure Startup|-Packages Microsoft-NanoServer-SecureStartup-Package|  
@@ -461,11 +460,7 @@ To run custom commands as part of setupcomplete.cmd, use the -SetupCompleteComma
   
 `New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -SetupCompleteCommands @("echo foo", "echo bar")`  
   
-### Running Nano Server from a RAM disk  
-You can run Nano Server in an environment with no physical disk by using a RAM disk. To generate media that can boot from a RAM disk, use the -RamdiskBoot parameter and pass the path to a WIM file as -TargetPath:  
-  
-`New-NanoServerImage -DeploymentType Host -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -RamdiskBoot`  
-  
+
 ### Support for development scenarios  
 If you want to develop and test on Nano Server, you can use the -Development parameter. This will enable installation of unsigned drivers, copy debugger binaries, open a port for debugging, enable test signing and enable installation of AppX packages without a developer license:  
   
