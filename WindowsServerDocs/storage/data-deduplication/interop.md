@@ -33,7 +33,7 @@ Data Deduplication works fine with Distributed File System (DFS) Replication. Op
 ### <a id="supported-quotas"></a>Quotas
 Creating a hard quota on a volume root folder that also has deduplication enabled is not supported. When a hard quota is present on a volume root, the actual free space on the volume and the quota restricted space on the volume are not the same. This may cause deduplication optimization jobs to fail.
 
-Creating a soft quota on a volume root that has deduplication enabled is supported. When FSRM quotas encounter a deduplicated file, File Server Resource Manager accounts for it based on the file’s logical size. Quota usage (including any quota thresholds) does not change when a file is processed by deduplication. All other FSRM quota functionality, including volume-root soft quotas and quotas on subfolders, work normally when using deduplication.
+Creating a soft quota on a volume root that has deduplication enabled is supported. When quota encounter a deduplicated file, it accounts for it based on the file’s logical size. Quota usage (including any quota thresholds) does not change when a file is processed by deduplication. All other quota functionality, including volume-root soft quotas and quotas on subfolders, work normally when using deduplication.
 
 ### <a id="supported-windows-server-backup"></a>Windows Server Backup
 Windows Server Backup has the ability to back up an optimized volume “as-is” (that is, without removing deduplicated data). The following steps show how to back up a volume and how to restore a volume or selected files from a volume:
