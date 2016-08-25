@@ -16,7 +16,7 @@ ms.technology:
 # Understanding Data Deduplication
 > Applies to Windows Server 2016
 
-This document describes how the [Data Deduplication](overview.md) works. 
+This document describes how [Data Deduplication](overview.md) works. 
 
 ## <a name="how-does-dedup-work"></a>How does Data Deduplication work?
 Data Deduplication in Windows Server was created with the following two principles:
