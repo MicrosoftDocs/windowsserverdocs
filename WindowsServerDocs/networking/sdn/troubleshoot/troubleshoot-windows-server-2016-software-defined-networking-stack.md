@@ -40,76 +40,246 @@ Most errors can be classified into a small set of classes:
   
 Before discussing the troubleshooting workflows for each of these type of errors, let's examine the diagnostic tools available.   
   
-To use these tools, you must first install the RSAT-NetworkController feature and import the ``NetworkControllerDiagnostics`` module:  
+To use the Network Controller (control-path) diagnostic tools, you must first install the RSAT-NetworkController feature and import the ``NetworkControllerDiagnostics`` module:  
   
 ```  
 Add-WindowsFeature RSAT-NetworkController -IncludeManagementTools  
 Import-Module NetworkControllerDiagnostics  
 ```  
-  
-  
-### Network controller diagnostics  
-  
-* **``Debug-NetworkControllerConfigurationState -NcIpAddress <FQDN of NC REST>``**  
- This script can run from anywhere that has Layer-3 connectivity to the NetworkController REST IP Address and has the Network Controller REST certificate installed. It queries the Network Controller to see if there are any tenant or fabric resources which are in a failure or warning configuration state based on the actual configuration state of the component. It also returns detailed info containing the source of the error, a message, and error code. The resources on which Configuration State has been implemented and the list of error codes are provided in the Appendix of this topic.  
- * **``Debug-SlbConfigState -NcIp <NC REST IP Address> [-LogPath <string>]``**  
-  This script must be run from one of the Network Controller nodes. It queries the Network Controller Software Load Balancer (SLB) Manager service module and sends the output to a text file named ``SlbConfigState.txt``. The default log path location is under ``C:\Tools`` on the host from where the script ran. The text file includes information including the state of the SLB Multiplexers, how many Hyper-V Hosts are connected to the SLB Mux, BGP peering status, advertised routes, and VIPs.  
- * **``Debug-WinFabNodeStatus``**  
- This script must be run from one of the Network Controller nodes. It queries the Network Controller Service Fabric to show the replication status and health state of each Network Controller node. It also shows a "win-diff"-like evolution of the status of the nodes by regularly polling for changes.  
- * **``Get-Replica``**  
-This script must be run from one of the Network Controller nodes. It queries the Network Controller's Service Fabric to determine which node the specific Network Controller service modules (e.g. SDNAPI, SlbManagerService, etc.) are primary. It also checks to see if there is a quorum of service module replicas running which are required for consensus and correct operation.  
-* **``Test-VNetPing.ps1 -RestUri <string> -SenderIp <string> -ReceiverIp <string> -vNetResourceId <string>``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-VNetPing.ps1))  
- This script allows you to create an ICMP packet to send between two Customer Address (CA) IP Addresses. The tenant administrator specifies the sender and receiver CA IP Addresses and references the virtual network where these IP addresses are attached. The ICMP packet attempts to traverse the layers in the Virtual Filtering Platform (VFP) Hyper-V virtual switch extension. To get the results, query the Network Controller using the ``Get-ConnectivityResults`` command.  
-* **``Test-LogicalNetworkPing.ps1 -RestUri <string> -SenderIp <string> -ReceiverIp <string> -LogicalNetworkResourceId <string>``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-LogicalNetworkPing.ps1))  
-This script allows a user to create an ICMP packet to be sent between two Provider Address (PA) IP Addresses. The hosting provider administrator specifies the sender and receiver PA IP addresses and reference the HNV Provider logical network where these IPs are attached. To get the results, query the Network Controller using the ``Get-ConnectivityResults`` command.  
-* **``Get-ConnectivityResults.ps1 -RestUri <string> [-OperationId <string>]``** (available on [GitHub](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Get-ConnectivityResults.ps1))  
- This script checks the connectivity results from both CA and PA Connectivity checks. You can optionally supply an operation Id (returned by Test-*AConnectivity) as a parameter. If no Operation Id is given, all recent connectivity results are returned. Results are available for one hour.  
-   
-### Hyper-V host diagnostics  
-The following scripts can be run as Windows PowerShell cmdlets on the physical server. Before using these scripts, an administrator must import the ``hnvdiagnostics`` module:  
+
+To use the HNV Diagnostics (data-path) diagnostic tools, you must import the ``HNVDiagnostics`` module:
   
 ```  
+# Assumes RSAT-NetworkController feature has already been installed
 import-module hnvdiagnostics   
 ```  
-* **``GetPACAMapping``**  
- This script returns a table of virtual network information for virtual machines hosted on the physical server. Each row contains the following information:  
-  - **Customer Address (CA)**   
-  The IP address assigned to the virtual machine NIC on the tenant virtual machine which is connected to a virtual subnet.  
-  - **Virtual Subnet ID (VSID)**   
-  This value is unique per virtual subnet and corresponds to the VxLAN Network Identifier (VNI) or the NVGRE Tenant Network Identifier (TNI) in the VxLAN and NVGRE headers respectively.  
-  - **Provider Address (PA)**   
-  The IP Address assigned to a hidden network adapter on the Hyper-V Host. This IP address is used as the encapsulating packet's Layer-3 IP header.   
-  - **MAC Address**   
-  The CA MAC Address assigned to the tenant virtual machine.  
-* **``Get-CustomerRoute``**  
- This script returns a table listing the Customer Address (CA) Routing information as organized by Routing Domain ID (RDID). Each row contain the following information:  
-  - **Virtual Subnet ID (VSID)**  
-   This value is unique per virtual subnet and corresponds to the VxLAN Network Identifier (VNI) or the NVGRE Tenant Network Identifier (TNI) in the VxLAN and NVGRE headers respectively.   
-   -    **CA IP Prefix**  
-   The IP prefix for the virtual subnet.  
-  - **CA IP Prefix Length**  
-  The length (or subnet mask) of the CA IP Prefix.  
-  - **CA IP Next Hop**  
-  The next-hop required to reach the given CA IP Prefix, usually the default gateway assigned to the HNV distributed router.  
-  - **Routing Domain ID**  
-* **``Test-LogicalNetworkConnection [PA IP Address]``**  
-   This script pings the supplied Provider Address (PA) IP Address on a remote host and automatically determines the correct TCP/IP network compartment where the PA Host vNIC resides. This command is short-hand for the following:  ``ping -c <PA Host vNIC compartment> <PA IP Address>``. PA Connectivity can also be checked through the Network Controller using the ``Test-LogicalNetworkPing.ps1`` command documented previously.  
+
+### Network controller diagnostics  
+These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](https://technet.microsoft.com/en-us/library/mt490456.aspx). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between Network Controller and the NC Host Agents running on the Hyper-V hosts.
+
+ > The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node VMs. All other NC Diagnostic cmdlets can be run from any host which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller. 
+   
+### Hyper-V host diagnostics  
+These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics Cmdlet Topic](https://technet.microsoft.com/en-us/library/mt490472.aspx). They help identify problems in the data-path between tenant VMs (East/West) and ingress traffic through an SLB VIP (North/South). 
+
+> The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests which can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as descried above.
+ 
+### GitHub
+The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has a number of sample scripts and workflows which build on top of these in-box cmdlets. In particular, diagnostic scripts can be found [here](https://github.com/Microsoft/sdn/diagnostics). Please help us contribute to these scripts by submitting Pull Requests.
+
+## Troubleshooting Workflows and Guides  
+
+### [Hoster] Validate System Health
+There is an embedded resource named _Configuration State_ in several of the Network Controller resources. Configuration state provides information about system health including the consistency between the network controller's configuration and the actual (running) state on the Hyper-V hosts. 
+
+To check configuration state, execute the following from any Hyper-V host with connectivity to the Network Controller.
+
+> Note: The value for the *NetworkController* parameter should either be the FQDN or IP address based on the subject name of the X.509 certificate created for Network Controller.
+> Note: The *Credential* parameter only needs to be specified if the network controller is using Kerberos authentication (typical in SCVMM deployments). The credential must be for a user who is in the Network Controller Management Security Group.
+
+```none
+Debug-NetworkControllerConfigurationState -NetworkController <FQDN or NC IP> [-Credential <PS Credential>]
+
+# Healthy State Example
+$cred = Get-Credential
+Debug-NetworkControllerConfigurationState -NetworkController 10.127.132.211 -Credential $cred
+
+Fetching ResourceType:     accessControlLists
+Fetching ResourceType:     servers
+Fetching ResourceType:     virtualNetworks
+Fetching ResourceType:     networkInterfaces
+Fetching ResourceType:     virtualGateways
+Fetching ResourceType:     loadbalancerMuxes
+Fetching ResourceType:     Gateways
+
+```
+
+A sample Configuration State message is shown below:
+
+Fetching ResourceType:     servers
+---------------------------------------------------------------------------------------------------------
+ResourcePath:     https://10.127.132.211/Networking/v1/servers/4c4c4544-0056-4b10-8058-b8c04f395931
+Status:           Warning
+
+Source:           SoftwareLoadBalancerManager
+Code:             HostNotConnectedToController
+Message:          Host is not Connected.
+----------------------------------------------------------------------------------------------------------
+
+The table below shows the list of error codes, messages, and follow-up actions to take based on the configuration state observed.
+
   
-## Troubleshooting scenarios  
-The following are common troubleshooting scenarios, with a logical sequence of troubleshooting steps, specific diagnostic tools to use, required inputs, expected outputs, and follow-up actions for each output.  
+| **Code**| **Message**| **Action**                                                                                 |  
+|---------|------------|-----------|  
+| Unknown| Unknown error|                                                                                                                                                                                                                                                                                                          |  
+| HostUnreachable| The host machine is not reachable                                                             | Check the Management network connectivity between Network Controller and Host                                                                                                                                                                                                                                        |  
+| PAIpAddressExhausted| The PA Ip addresses exhausted                                                                 | Increase the HNV Provider logical subnet's IP Pool Size.                                                                                                                                                                                                                                                    |  
+| PAMacAddressExhausted| The PA Mac addresses exhausted.                                                               | Increase the Mac Pool Range.                                                                                                                                                                                                                                                                                |  
+| PAAddressConfigurationFailure         | Failed to plumb PA addresses to the host.                                                     | Check the Management network connectivity between Network Controller and Host.                                                                                                                                                                                                                                        |  
+| CertificateNotTrusted                 | Certificate is not trusted                                                                    |Fix the certificates used for communication with the host.                                                                                                                                                                                                                                                  |  
+| CertificateNotAuthorized              | Certificate not authorized.                                                                   | Fix the certificates used for communication with the host.                                                                                                                                                                                                                                                 |  
+| PolicyConfigurationFailureOnVfp       | Failure in configuring VFP policies.                                                         | This is a runtime failure.  No definite work arounds. Collect logs.                                                                                                                                                                                                                                        |  
+| PolicyConfigurationFailure            | Failure in pushing policies to the hosts, due to communication failures or others error in the NetworkController.| No definite actions.  This is due to failure in goal state processing in the Network Controller modules. Collect logs.                                                                                                                                                                                      |  
+| HostNotConnectedToController                           | The Host is not yet connected to the Network Controller.                                       | Port Profile not applied on the host or the host is not reachable from the Network Controller. Validate that HostID registry key (under HKLM/System/CurrentControlSet/Services/NcHostAgent/Parameters) matches the Instance ID of the server resource in question (``Get-NCServer`` &#124; ``convertto-json -depth 8``) |  
+| MultipleVfpEnabledSwitches| There are multiple VFp enabled Switches on the host                                           | Delete one of the switches, since Network Controller Host Agent only supports one vSwitch with the VFP extension enabled                                                                                                                                                                                   |  
+| PolicyConfigurationFailure            | Failed to push VNet policies for a VmNic due to certificate errors or connectivity errors.     | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                          |  
+| PolicyConfigurationFailure            | Failed to push vSwitch policies for a VmNic due to certificate errors or connectivity errors  | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                           |  
+| PolicyConfigurationFailure            | Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                          |  
+| DistributedRouterConfigurationFailure | Failed to configure the Distributed router settings on the host vNic                          | TCPIP stack error. May require cleaning up the PA and DR Host vNICs on the server on which this error was reported.                                                                                                                                                                                          
+| DhcpAddressAllocationFailure          | DHCP address allocation failed for a VMNic                                                    | Check if the static IP address attribute is configured on the NIC resource                                                                                                                                                                                                                                 |  
+| CertificateNotTrusted<br>CertificateNotAuthorized               | Failed to connect to Mux due to network or cert errors                                        | Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.)                                                                                                           |  
+| HostUnreachable                       | MUX is Unhealthy (Common case is BGPRouter disconnected)                                      | BGP peer on the RRAS (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource (``Get-NCLoadBalancerMux``  &#124; ``convertto-json -depth 8``) and BGP peer (ToR or RRAS VM)                                               |  
+| HostNotConnectedToController                           | SLB host agent is not connected                                                               | Refer to SLB host agent logs (auto running) for reasons why, in case SLBM (NC) rejected the cert presented by the host agent running state will show nuanced information                                                                                                                                   |  
+| PortBlocked                           | The VFP port is blocked, due to lack of VNET / ACL policies.                                  | Check if there are any other errors, which might cause the policies to be not configured.                                                                                                                                                                                                                  |  
+| Overloaded                            | Loadbalancer MUX is overloaded.                                                               | Performance issue with MUX.                                                                                                                                                                                                                                                                                |  
+| RoutePublicationFailure               | Loadbalancer MUX is not connected to a BGP router.                                            | Check if the MUX has connectivity with the BGP routers and that BGP peering is setup correctly.                                                                                                                                                                                                            |  
+| VirtualServerUnreachable              | Loadbalancer MUX is not connected to SLB manager.                                             | Check connectivity between SLBM and MUX.                                                                                                                                                                                                                                                                   |  
+| QosConfigurationFailure               | Failed to configure QOS policies.                                                             | See if sufficient bandwidth is available for all VM's if QOS reservation is used.                                                                                                                                                                                                                          |
+
+
+#### Check network connectivity between the network controller and Hyper-V Host (NC Host Agent service)
+Run the *netstat* command below to validate that there are three ESTABLISHED connections between the NC Host Agent and the Network Controller node(s) and one LISTENING socket on the Hyper-V Host
+- LISTENING on port TCP:6640 on Hyper-V Host (NC Host Agent Service)
+- Two established connections from Hyper-V host IP on port 6640 to NC node IP on ephemeral ports (> 32000)
+- One established connection from Hyper-V host IP on ephemeral port to Network Controller REST IP on port 6640
+
+> Note: There may only be two established connections on a Hyper-V host if there are no tenant VMs deployed on that particular host
+
+```none
+netstat -anp tcp |findstr 6640
+
+# Successful output
+  TCP    0.0.0.0:6640           0.0.0.0:0              LISTENING
+  TCP    10.127.132.153:6640    10.127.132.213:50095   ESTABLISHED
+  TCP    10.127.132.153:6640    10.127.132.214:62514   ESTABLISHED
+  TCP    10.127.132.153:50023   10.127.132.211:6640    ESTABLISHED
+```
+
+#### Check health of network controller
+If there are not three ESTABLISHED connections or if the Network Controller appears unresponsive, check to see that all nodes and service modules are up and running by using the following cmdlets. 
+
+```none
+# Prints a DIFF state (status is automatically updated if state is changed) of a particular service module replica 
+Debug-ServiceFabricNodeStatus <Service Module>
+```
+The network controller service modules are given below:
+- ControllerService
+- ApiService
+- SlbManagerService
+- ServiceInsertion
+- FirewallService
+- VSwitchService
+- GatewayManager
+- FnmService
+- HelperService
+- UpdateService
+
+Check that ReplicaStatus is Ready and HealthState is Ok.
+
+In a production deployment with a multi-node Network Controller, you can also check which node each service is primary on and its individual replica status.
+
+```none  
+Get-NetworkControllerReplica
+
+# Sample Output for the API service module
+Replicas for service: ApiService
+
+ReplicaRole   : Primary
+NodeName      : SA18N30NC3.sa18.nttest.microsoft.com
+ReplicaStatus : Ready
+
+```
+
+Check that the Replica Status is Ready for each service.
+ 
+#### Check for corresponding HostIDs and certificates between network controller and each Hyper-V Host 
+On a Hyper-V Host, run the following commands to check that the HostID corresponds to the Instance Id of a server resource on the Network Controller
+
+```none
+Get-ItemProperty "hklm:\system\currentcontrolset\services\nchostagent\parameters" -Name HostId |fl HostId
+
+HostId : **162cd2c8-08d4-4298-8cb4-10c2977e3cfe**
+
+Get-NetworkControllerServer -ConnectionUri $uri |where { $_.InstanceId -eq "162cd2c8-08d4-4298-8cb4-10c2977e3cfe"}
+
+Tags             :
+ResourceRef      : /servers/4c4c4544-0056-4a10-8059-b8c04f395931
+InstanceId       : **162cd2c8-08d4-4298-8cb4-10c2977e3cfe**
+Etag             : W/"50f89b08-215c-495d-8505-0776baab9cb3"
+ResourceMetadata : Microsoft.Windows.NetworkController.ResourceMetadata
+ResourceId       : 4c4c4544-0056-4a10-8059-b8c04f395931
+Properties       : Microsoft.Windows.NetworkController.ServerProperties
+```
+
+Check that the thumbprints of the X.509 certificates used by the Hyper-V host (the hostname will be the cert's Subject Name) for (SouthBound) communication between the Hyper-V Host (NC Host Agent service) and Network Controller nodes are the same. Also check that the Network Controller's REST certificate has subject name of *CN=<FQDN or IP>*.
+
+```  
+# On Hyper-V Host
+dir cert:\\localmachine\my  
+
+Thumbprint                                Subject
+----------                                -------
+2A3A674D07D8D7AE11EBDAC25B86441D68D774F9  CN=SA18n30-4.sa18.nttest.microsoft.com
+...
+
+dir cert:\\localmachine\root
+
+Thumbprint                                Subject
+----------                                -------
+30674C020268AA4E40FD6817BA6966531FB9ADA4  CN=10.127.132.211 **# NC REST IP ADDRESS**
+
+# On Network Controller Node VM
+dir cert:\\localmachine\root  
+
+Thumbprint                                Subject
+----------                                -------
+2A3A674D07D8D7AE11EBDAC25B86441D68D774F9  CN=SA18n30-4.sa18.nttest.microsoft.com
+30674C020268AA4E40FD6817BA6966531FB9ADA4  CN=10.127.132.211 **# NC REST IP ADDRESS**
+...
+```  
+
+You can also check the following parameters of each cert to make sure the subject name is what is expected (hostname or NC REST FQDN or IP), the certificate has not yet expired, and that all certificate authorities in the certificate chain are included in the trusted root authority.
+1.  Subject Name  
+2.  Expiration Date  
+3.  Trusted by Root Authority  
   
+ 
+4. Check the SLB Configuration State
+
+```none
+PS > Debug-NetworkController -NetworkController <FQDN or IP> [-Credential <PS Credential>]
+```
+
+The default output location will be indicated after the cmdlet launches. The output location can be changed by using the -OutputDirectory parameter.
+ 
+5. Check Provider Address - Customer Address (PA-CA) mappings in Host Agent
+
+```none
+PS > Get-PACAMapping
+```
+ 
+6. Look for HNV Provider Addresses (PA IPs) on the host
+
+```none
+PS > Get-ProviderAddress
+ ```
+ ### Basic Triage and Data Collection
+
+
 ### No network connectivity between two tenant virtual machines  
 1.  [Tenant] Ensure Windows Firewall in tenant virtual machines is not blocking traffic.  
-2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine's VM NIC.  
-3.  [Tenant] Run ``Test-VNetPing.ps1`` to validate connectivity between the two tenant virtual machines in question. Run the ``Get-NCVirtualNetwork`` command to determine the resource ID of the virtual network where the tenant virtual machines are attached. Specify the sender and receiver CA IP addresses.  
+2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine by running _ipconfig_. 
+3.  [Tenant] Run ``Test-VirtualNetworkConnection`` to validate connectivity between the two tenant virtual machines in question. 
+> Note: the VSID referes to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this value by doing X 
 4.  [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.   
 5.  [Tenant] If a failure is reported, run the ``Debug-NetworkControllerConfigurationScript`` to see if any resources are reporting an error. Consult the Appendix to determine next steps.  
-6.  [Hosting provider] If a problem still exists, run ``Test-LogicalNetworkPing.ps1`` to validate connectivity between the two Hyper-V hosts themselves. Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question. Run the ``Get-NCLogicalNetwork`` command to determine the resource ID of the HNV provider network. Specify the sender and receive PA IP addresses.  
-7.  [Hosting provider]] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.  
-8.  [Hosting provider]] If PA IP Addresses are not present and/or CA Connectivity is broken, check to ensure network policy has been received. Run ``Get-PACAMapping`` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.  
-9.  [Hosting provider]] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat -anp tcp |findstr 6640`` to see if the   
-10. [Hosting provider]] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.  
-11. [Hosting provider]] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.  
+6.  [Hoster] Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question. Run the ``Get-NCLogicalNetwork`` command to determine the resource ID of the HNV provider network. Specify the sender and receive PA IP addresses.  
+6.  [Hoster] If a problem still exists, run ``Test-LogicalNetworkPing.ps1`` to validate connectivity between the two Hyper-V hosts themselves. 
+7.  [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.  
+8.  [Hoster] If PA IP Addresses are not present and/or CA Connectivity is broken, check to ensure network policy has been received. Run ``Get-PACAMapping`` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.  
+9.  [Hoster] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat -anp tcp |findstr 6640`` to see if the   
+10. [Hoster] Check that the Host ID in HKLM/ matches the Instance ID of the server resources hosting the tenant virtual machines.  
+11. [Hoster] Check that the Port Profile ID matches the Instance ID of the VM Network Interfaces of the tenant virtual machines.  
   
   
 ### Software Load Balancer (SLB) failures  
@@ -141,36 +311,20 @@ Based on the following diagnostic information presented, fix the following:
 * Ensure Host ID in the registry matches Server Instance ID in Server Resource (reference Appendix for *HostNotConnected* error code)  
 * Collect logs  
 #### SLBM Tenant errors (Hosting service provider  and tenant actions)  
-1.  [Hosting provider] Check *Debug-NetworkControllerConfigurationState* to see if any LoadBalancer resources are in an error state. Try to mitigate by following the Action items Table in the Appendix.   
+1.  [Hoster] Check *Debug-NetworkControllerConfigurationState* to see if any LoadBalancer resources are in an error state. Try to mitigate by following the Action items Table in the Appendix.   
     1.  Check that a VIP endpoint is present and advertising routes  
     2.  Check how many DIP endpoints have been discovered for the VIP endpoint  
 2.  [Tenant] Validate Load Balancer Resources are correctly specified  
     1.  Validate DIP endpoints which are registered in SLBM are hosting tenant virtual machines which correspond to the LoadBalancer Back-end Address pool IP configurations  
-3.  [Hosting provider] If DIP endpoints are not discovered or connected:   
+3.  [Hoster] If DIP endpoints are not discovered or connected:   
     1.  Check *Debug-NetworkControllerConfigurationState*  
         1.  Validate that NC and SLB Host Agent is successfully connected to the Network Controller Event Coordinator using ``netstat -anp tcp |findstr 6640)``  
     2.  Check *HostId* in *nchostagent* service regkey (reference *HostNotConnected* error code in the Appendix) matches the corresponding server resource's instance Id (``Get-NCServer |convertto-json -depth 8``)  
     3.  Check port profile id for virtual machine port matches corresponding virtual machine NIC resource's Instance Id   
-4.  [Hosting provider] Collect logs   
+4.  [Hoster] Collect logs   
   
   
-### Underlay Network Error: Network Controller Cannot Communicate with Host  
-1.  [Hoster] Verify basic IP connectivity over management network using ping  
-2.  [Hoster] Query Network Controller for Configuration State of Server resource(s) using   
-Debug-NetworkControllerConfigurationState  
-    1.  [Hoster] Check socket connections:  
-        1.  OVSDB: from Hyper-V Host to Network Controller REST IP (TCP:6640)  
-        2.  (only after tenant resources are created) WCF: from Hyper-V Host to Network Controller Node (TCP: &lt;ephemeral port&gt;)   
-    2.  [Hoster] Check SouthBound channel Certificates  on Hyper-V Host and ensure they match with what is loaded in Network Controller node (VM)  
-  
-        ```  
-        dir cert:\\localmachine\my  
-        dir cert:\\localmachine\root  
-        ```  
-        1.  Subject Name  
-        2.  Expiration Date  
-        3.  Trusted by Root Authority  
-  
+
   
 ## Logging and advanced diagnostic  
 ### Network controller centralized logging  
@@ -225,7 +379,7 @@ If the packet is dropped due to rule misconfiguration, this is typically evident
 Rule/Drop Reason  |Description  |Action    
 ---------|---------|---------  
 No rule match     | Network Controller Host Agent was unable to program vSwitch layers or rules in Virtual Filtering Platform (VFP).        | Run the ``Debug-NetworkControllerConfigurationState`` to determine which resource is in an error state.          
-PA route rule     |No route to PA destination|PA network configuration. For example: Duplicate PA IP address<br><br>Hosting provider should use ``Test-LogicalNetworkConnectivity`` (or ``ping -c <compartmentId> <PA IP>``) to diagnose PA connectivity issue.|       
+PA route rule     |No route to PA destination|PA network configuration. For example: Duplicate PA IP address<br><br>Hoster should use ``Test-LogicalNetworkConnectivity`` (or ``ping -c <compartmentId> <PA IP>``) to diagnose PA connectivity issue.|       
 ACL rules     |Packet isn't allowed through firewall         |Tenant admin should inspect and fix any ACLs applied on the VM NIC or virtual subnet which may be precluding traffic from flowing           
 Address resolution failure(ARP/ND interception)|Address resolution failed for CA destination. This is likely a configuration issue.|Example: VM IP address was manually changed.<br><br>Network Controller configuration state should point out issues with address management (e.g. failure to assign IP through DHCP or duplicate CA)  
 MAP encap rule|Missing CA-PA mapping|Tenant admin should consult Network Controller Configuration State (VM NIC resource) and IP configuration to ensure the CA IP address is correctly specified.           
@@ -235,32 +389,3 @@ Redirection Rules|Misconfigured redirection rule causes the packet not to be red
 ### Network controller configuration state error codes and recovery actions  
   
   
-  
-| **Code**| **Message**| **Action**                                                                                 |  
-|---------|------------|-----------|  
-| Unknown| Unknown error|                                                                                                                                                                                                                                                                                                          |  
-| HostUnreachable| The host machine is not reachable                                                             | Check the Management network connectivity between Network Controller and Host                                                                                                                                                                                                                                        |  
-| PAIpAddressExhausted| The PA Ip addresses exhausted                                                                 | Increase the HNV Provider logical subnet's IP Pool Size.                                                                                                                                                                                                                                                    |  
-| PAMacAddressExhausted| The PA Mac addresses exhausted.                                                               | Increase the Mac Pool Range.                                                                                                                                                                                                                                                                                |  
-| PAAddressConfigurationFailure         | Failed to plumb PA addresses to the host.                                                     | Check the Management network connectivity between Network Controller and Host.                                                                                                                                                                                                                                        |  
-| CertificateNotTrusted                 | Certificate is not trusted                                                                    |Fix the certificates used for communication with the host.                                                                                                                                                                                                                                                  |  
-| CertificateNotAuthorized              | Certificate not authorized.                                                                   | Fix the certificates used for communication with the host.                                                                                                                                                                                                                                                 |  
-| PolicyConfigurationFailureOnVfp       | Failure in configuring VFP policies.                                                         | This is a runtime failure.  No definite work arounds. Collect logs.                                                                                                                                                                                                                                        |  
-| PolicyConfigurationFailure            | Failure in pushing policies to the hosts, due to communication            failures or others error in the NetworkController.| No definite actions.  This is due to failure in goal state processing in the Network Controller modules. Collect logs.                                                                                                                                                                                      |  
-| HostNotConnectedToController                           | The Host is not yet connected to the Network Controller.                                       | Port Profile not applied on the host or the host is not reachable from the Network Controller. Validate that HostID registry key (under HKLM/System/CurrentControlSet/Services/NcHostAgent/Parameters) matches the Instance ID of the server resource in question (``Get-NCServer`` &#124; ``convertto-json -depth 8``) |  
-| MultipleVfpEnabledSwitches| There are multiple VFp enabled Switches on the host                                           | Delete one of the switches, since Network Controller Host Agent only supports one vSwitch with the VFP extension enabled                                                                                                                                                                                   |  
-| PolicyConfigurationFailure            | Failed to push VNet policies for a VmNic due to certificate errors or connectivity errors.     | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                          |  
-| PolicyConfigurationFailure            | Failed to push vSwitch policies for a VmNic due to certificate errors or connectivity errors  | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                           |  
-| PolicyConfigurationFailure            | Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                          |  
-| DistributedRouterConfigurationFailure | Failed to configure the Distributed router settings on the host vNic                          | TCPIP stack error. May require cleaning up the PA and DR Host vNICs on the server on which this error was reported.                                                                                                                                                                                          
-| DhcpAddressAllocationFailure          | DHCP address allocation failed for a VMNic                                                    | Check if the static IP address attribute is configured on the NIC resource                                                                                                                                                                                                                                 |  
-| CertificateNotTrusted<br>CertificateNotAuthorized               | Failed to connect to Mux due to network or cert errors                                        | Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.)                                                                                                           |  
-| HostUnreachable                       | MUX is Unhealthy (Common case is BGPRouter disconnected)                                      | BGP peer on the RRAS (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource (``Get-NCLoadBalancerMux``  &#124; ``convertto-json -depth 8``) and BGP peer (ToR or RRAS VM)                                               |  
-| HostNotConnectedToController                           | SLB host agent is not connected                                                               | Refer to SLB host agent logs (auto running) for reasons why, in case SLBM (NC) rejected the cert presented by the host agent running state will show nuanced information                                                                                                                                   |  
-| PortBlocked                           | The VFP port is blocked, due to lack of VNET / ACL policies.                                  | Check if there are any other errors, which might cause the policies to be not configured.                                                                                                                                                                                                                  |  
-| Overloaded                            | Loadbalancer MUX is overloaded.                                                               | Performance issue with MUX.                                                                                                                                                                                                                                                                                |  
-| RoutePublicationFailure               | Loadbalancer MUX is not connected to a BGP router.                                            | Check if the MUX has connectivity with the BGP routers and that BGP peering is setup correctly.                                                                                                                                                                                                            |  
-| VirtualServerUnreachable              | Loadbalancer MUX is not connected to SLB manager.                                             | Check connectivity between SLBM and MUX.                                                                                                                                                                                                                                                                   |  
-| QosConfigurationFailure               | Failed to configure QOS policies.                                                             | See if sufficient bandwidth is available for all VM's if QOS reservation is used.                                                                                                                                                                                                                          |
-
-
