@@ -24,15 +24,180 @@ Depending on the requirements of your organization, use one of the following pro
   
 -   Create this rule by using the **Transform an Incoming Claim** rule template \- You can use this rule template when you want to change the existing authentication method to a new authentication method that works with a product that does not recognize standard AD FS authentication method claims.  
   
-#### To create this rule by using the Send Group Membership as Claims rule template  
+
+
+## To create by using the Send Group Membership as Claims rule template on a Relying Party Trust in Windows Server 2016 
+
+1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
-1.  In Server Manager, click **Tools**, and then click **AD FS Management**.  
+2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+  
+3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+  
+4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+
+5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Group Membership as Claim** from the list, and then click **Next**.  
+![](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)      
+
+6.  On the **Configure Rule** page, type a claim rule name.  
+  
+7.  Click **Browse**, select the group whose members should receive this authentication method claim, and then click **OK**.  
+  
+8.  In **Outgoing claim type**, select **Authentication method** in the list.  
+  
+9. In **Outgoing claim value**, type one of the default uniform resource identifier \(URI\) values in the following table, depending on your preferred authentication method, click **Finish**, and then click **OK** to save the rule.  
+  
+|Actual Authentication method|Corresponding URI|  
+|--------------------------------|---------------------|  
+|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+![](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
+  
+## To create by using the Send Group Membership as Claims rule template on a Claims Provider Trust in Windows Server 2016 
+  
+1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
+  
+2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+  
+3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+  
+4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+
+5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Group Membership as Claim** from the list, and then click **Next**.  
+![](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group3.PNG)     
+
+6.  On the **Configure Rule** page, type a claim rule name.  
+  
+7.  Click **Browse**, select the group whose members should receive this authentication method claim, and then click **OK**.  
+  
+8.  In **Outgoing claim type**, select **Authentication method** in the list.  
+  
+9. In **Outgoing claim value**, type one of the default uniform resource identifier \(URI\) values in the following table, depending on your preferred authentication method, click **Finish**, and then click **OK** to save the rule.  
+  
+|Actual Authentication method|Corresponding URI|  
+|--------------------------------|---------------------|  
+|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+![](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
+
+
+## To create this rule by using the transform an incoming claim rule template on a Relying Party Trust in Windows Server 2016 
+
+1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
+  
+2.  In the console tree, under **AD FS**, click **Relying Party Trusts**. 
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
+  
+3.  Right\-click the selected trust, and then click **Edit Claim Issuance Policy**.
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+  
+4.  In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules** click **Add Rule** to start the rule wizard. 
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+
+5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
+![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+
+6.  On the **Configure Rule** page, type a claim rule name.  
+  
+7.  In **Incoming claim type**, select **Authentication method** in the list.  
+  
+8.  In **Outgoing claim type**, select **Authentication method** in the list.  
+  
+9. Select **Replace an incoming claim value with a different outgoing claim value**, and then do the following:  
+  
+    1.  In **Incoming claim value**, type one of the following URI values that are based on the actual authentication method URI that was used originally, click **Finish**, and then click **OK** to save the rule.  
+  
+    2.  In **Outgoing claim value**, type one of the default URI values in the following table, which depends on your new preferred authentication method choice, click **Finish**, and then click **OK** to save the rule.  
+  
+|Actual authentication method|Corresponding URI|  
+|--------------------------------|---------------------|  
+|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|TLS mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+![](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
+  
+> [!NOTE]  
+> Other URI values can be used in addition to the values in the table. The URI values that are shown ion the previous table reflect the URIs that the relying party accepts by default.  
+
+## To create this rule by using the transform an incoming claim rule template on a Claims Provider Trust in Windows Server 2016 
+  
+1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
+  
+2.  In the console tree, under **AD FS**, click **Claims Provider Trusts**. 
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule1.PNG)  
+  
+3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule2.PNG)   
+  
+4.  In the **Edit Claim Rules** dialog box, under **Acceptance Transform Rules** click **Add Rule** to start the rule wizard.
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule3.PNG)    
+
+5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
+![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+
+6.  On the **Configure Rule** page, type a claim rule name.  
+  
+7.  In **Incoming claim type**, select **Authentication method** in the list.  
+  
+8.  In **Outgoing claim type**, select **Authentication method** in the list.  
+  
+9. Select **Replace an incoming claim value with a different outgoing claim value**, and then do the following:  
+  
+    1.  In **Incoming claim value**, type one of the following URI values that are based on the actual authentication method URI that was used originally, click **Finish**, and then click **OK** to save the rule.  
+  
+    2.  In **Outgoing claim value**, type one of the default URI values in the following table, which depends on your new preferred authentication method choice, click **Finish**, and then click **OK** to save the rule.  
+  
+|Actual authentication method|Corresponding URI|  
+|--------------------------------|---------------------|  
+|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|TLS mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+![](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## To create this rule by using the Send Group Membership as Claims rule template in Windows Server 2012 R2  
+  
+1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   
 2.  In the console tree, under **AD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
-3.  Right\-click the selected trust, and then click **Edit Claim Rules**.  
+3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)  
   
-4.  In the **Edit Claim Rules** dialog box, select one of the following tabs, depending on the trust that you are editing, and in which rule set you want to create this rule, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
+4.  In the **Edit Claim Rules** dialog box, select one the following tabs, depending on the trust that you are editing and which rule set you want to create this rule in, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
     -   **Acceptance Transform Rules**  
   
@@ -41,8 +206,10 @@ Depending on the requirements of your organization, use one of the following pro
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
-  
-5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Group Membership as a Claim** in the list, and then click **Next**.  
+![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+    
+5.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Group Membership as a Claim** from the list, and then click **Next**.  
+![](media/Create-a-Rule-to-Send-Group-Membership-as-a-Claim/group1.PNG)
   
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -54,23 +221,27 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual Authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/password|  
-|Windows authentication|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/windows|  
-|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/tlsclient|  
-|X.509\-based authentication that does not use TLS|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/x509|  
-  
+|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+![](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth1.PNG)
+ 
 > [!NOTE]  
 > Other URI values can be used in addition to the values in the table. The URI values that are shown in the previous table reflect the URIs that the relying party accepts by default.  
   
-#### To create this rule by using the Transform an Incoming Claim rule template  
+## To create this rule by using the Transform an Incoming Claim rule template in Windows Server 2012 R2  
+   
+  
   
 1.  In Server Manager, click **Tools**, and then click **AD FS Management**.  
   
 2.  In the console tree, under **AD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.  
   
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.  
-  
-4.  In the **Edit Claim Rules** dialog box, select one the following tabs, which depends on which trust you are editing and in which rule set you want to create this rule, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
+![](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG) 
+ 
+4.  In the **Edit Claim Rules** dialog box, select one the following tabs, which depends on the trust that you are editing and in which rule set you want to create this rule, and then click **Add Rule** to start the rule wizard that is associated with that rule set:  
   
     -   **Acceptance Transform Rules**  
   
@@ -79,8 +250,10 @@ Depending on the requirements of your organization, use one of the following pro
     -   **Issuance Authorization Rules**  
   
     -   **Delegation Authorization Rules**  
+![](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
   
-5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** in the list, and then click **Next**.  
+5.  On the **Select Rule Template** page, under **Claim rule template**, select **Transform an Incoming Claim** from the list, and then click **Next**.  
+![](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform1.PNG)    
   
 6.  On the **Configure Rule** page, type a claim rule name.  
   
@@ -96,10 +269,11 @@ Depending on the requirements of your organization, use one of the following pro
   
 |Actual authentication method|Corresponding URI|  
 |--------------------------------|---------------------|  
-|User name and password authentication|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/password|  
-|Windows authentication|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/windows|  
-|TLS mutual authentication that uses X.509 certificates|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/tlsclient|  
-|X.509\-based authentication that does not use TLS|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/authenticationmethod\/x509|  
+|User name and password authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password|  
+|Windows authentication|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows|  
+|TLS mutual authentication that uses X.509 certificates|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient|  
+|X.509\-based authentication that does not use TLS|http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509|  
+![](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth3.PNG)
   
 > [!NOTE]  
 > Other URI values can be used in addition to the values in the table. The URI values that are shown ion the previous table reflect the URIs that the relying party accepts by default.  
