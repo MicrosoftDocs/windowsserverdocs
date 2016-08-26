@@ -109,32 +109,32 @@ Message:          Host is not Connected.
 The table below shows the list of error codes, messages, and follow-up actions to take based on the configuration state observed.
 
   
-| **Code**| **Message**| **Action**                                                                                 |  
-|---------|------------|-----------|  
-| Unknown| Unknown error|                                                                                                                                                                                                                                                                                                          |  
-| HostUnreachable| The host machine is not reachable                                                             | Check the Management network connectivity between Network Controller and Host                                                                                                                                                                                                                                        |  
-| PAIpAddressExhausted| The PA Ip addresses exhausted                                                                 | Increase the HNV Provider logical subnet's IP Pool Size.                                                                                                                                                                                                                                                    |  
-| PAMacAddressExhausted| The PA Mac addresses exhausted.                                                               | Increase the Mac Pool Range.                                                                                                                                                                                                                                                                                |  
-| PAAddressConfigurationFailure         | Failed to plumb PA addresses to the host.                                                     | Check the Management network connectivity between Network Controller and Host.                                                                                                                                                                                                                                        |  
-| CertificateNotTrusted                 | Certificate is not trusted                                                                    |Fix the certificates used for communication with the host.                                                                                                                                                                                                                                                  |  
-| CertificateNotAuthorized              | Certificate not authorized.                                                                   | Fix the certificates used for communication with the host.                                                                                                                                                                                                                                                 |  
-| PolicyConfigurationFailureOnVfp       | Failure in configuring VFP policies.                                                         | This is a runtime failure.  No definite work arounds. Collect logs.                                                                                                                                                                                                                                        |  
-| PolicyConfigurationFailure            | Failure in pushing policies to the hosts, due to communication failures or others error in the NetworkController.| No definite actions.  This is due to failure in goal state processing in the Network Controller modules. Collect logs.                                                                                                                                                                                      |  
-| HostNotConnectedToController                           | The Host is not yet connected to the Network Controller.                                       | Port Profile not applied on the host or the host is not reachable from the Network Controller. Validate that HostID registry key (under HKLM/System/CurrentControlSet/Services/NcHostAgent/Parameters) matches the Instance ID of the server resource in question (``Get-NCServer`` &#124; ``convertto-json -depth 8``) |  
-| MultipleVfpEnabledSwitches| There are multiple VFp enabled Switches on the host                                           | Delete one of the switches, since Network Controller Host Agent only supports one vSwitch with the VFP extension enabled                                                                                                                                                                                   |  
-| PolicyConfigurationFailure            | Failed to push VNet policies for a VmNic due to certificate errors or connectivity errors.     | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                          |  
-| PolicyConfigurationFailure            | Failed to push vSwitch policies for a VmNic due to certificate errors or connectivity errors  | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                           |  
-| PolicyConfigurationFailure            | Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller.                                                                                                                                          |  
-| DistributedRouterConfigurationFailure | Failed to configure the Distributed router settings on the host vNic                          | TCPIP stack error. May require cleaning up the PA and DR Host vNICs on the server on which this error was reported.                                                                                                                                                                                          
-| DhcpAddressAllocationFailure          | DHCP address allocation failed for a VMNic                                                    | Check if the static IP address attribute is configured on the NIC resource                                                                                                                                                                                                                                 |  
-| CertificateNotTrusted<br>CertificateNotAuthorized               | Failed to connect to Mux due to network or cert errors                                        | Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.)                                                                                                           |  
-| HostUnreachable                       | MUX is Unhealthy (Common case is BGPRouter disconnected)                                      | BGP peer on the RRAS (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource (``Get-NCLoadBalancerMux``  &#124; ``convertto-json -depth 8``) and BGP peer (ToR or RRAS VM)                                               |  
-| HostNotConnectedToController                           | SLB host agent is not connected                                                               | Refer to SLB host agent logs (auto running) for reasons why, in case SLBM (NC) rejected the cert presented by the host agent running state will show nuanced information                                                                                                                                   |  
-| PortBlocked                           | The VFP port is blocked, due to lack of VNET / ACL policies.                                  | Check if there are any other errors, which might cause the policies to be not configured.                                                                                                                                                                                                                  |  
-| Overloaded                            | Loadbalancer MUX is overloaded.                                                               | Performance issue with MUX.                                                                                                                                                                                                                                                                                |  
-| RoutePublicationFailure               | Loadbalancer MUX is not connected to a BGP router.                                            | Check if the MUX has connectivity with the BGP routers and that BGP peering is setup correctly.                                                                                                                                                                                                            |  
-| VirtualServerUnreachable              | Loadbalancer MUX is not connected to SLB manager.                                             | Check connectivity between SLBM and MUX.                                                                                                                                                                                                                                                                   |  
-| QosConfigurationFailure               | Failed to configure QOS policies.                                                             | See if sufficient bandwidth is available for all VM's if QOS reservation is used.                                                                                                                                                                                                                          |
+| **Code**| **Message**| **Action**|  
+|:--------:|:-----------:|----------:|  
+| Unknown| Unknown error| |  
+| HostUnreachable                       | The host machine is not reachable | Check the Management network connectivity between Network Controller and Host |  
+| PAIpAddressExhausted                  | The PA Ip addresses exhausted | Increase the HNV Provider logical subnet's IP Pool Size |  
+| PAMacAddressExhausted                 | The PA Mac addresses exhausted | Increase the Mac Pool Range |  
+| PAAddressConfigurationFailure         | Failed to plumb PA addresses to the host | Check the Management network connectivity between Network Controller and Host. |  
+| CertificateNotTrusted                 | Certificate is not trusted  |Fix the certificates used for communication with the host. |  
+| CertificateNotAuthorized              | Certificate not authorized | Fix the certificates used for communication with the host. |  
+| PolicyConfigurationFailureOnVfp       | Failure in configuring VFP policies | This is a runtime failure.  No definite work arounds. Collect logs. |  
+| PolicyConfigurationFailure            | Failure in pushing policies to the hosts, due to communication failures or others error in the NetworkController.| No definite actions.  This is due to failure in goal state processing in the Network Controller modules. Collect logs. |  
+| HostNotConnectedToController          | The Host is not yet connected to the Network Controller | Port Profile not applied on the host or the host is not reachable from the Network Controller. Validate that HostID registry key matches the Instance ID of the server resource |  
+| MultipleVfpEnabledSwitches            | There are multiple VFp enabled Switches on the host  | Delete one of the switches, since Network Controller Host Agent only supports one vSwitch with the VFP extension enabled |  
+| PolicyConfigurationFailure            | Failed to push VNet policies for a VmNic due to certificate errors or connectivity errors  | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller |  
+| PolicyConfigurationFailure            | Failed to push vSwitch policies for a VmNic due to certificate errors or connectivity errors  | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller|
+| PolicyConfigurationFailure            | Failed to push Firewall policies for a VmNic due to certificate errors or connectivity errors | Check if proper certificates have been deployed (Certificate subject name must match FQDN of host). Also verify the host connectivity with the Network Controller|
+| DistributedRouterConfigurationFailure | Failed to configure the Distributed router settings on the host vNic                          | TCPIP stack error. May require cleaning up the PA and DR Host vNICs on the server on which this error was reported |
+| DhcpAddressAllocationFailure          | DHCP address allocation failed for a VMNic                                                    | Check if the static IP address attribute is configured on the NIC resource |  
+| CertificateNotTrusted<br>CertificateNotAuthorized | Failed to connect to Mux due to network or cert errors | Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.) |  
+| HostUnreachable                       | MUX is Unhealthy (Common case is BGPRouter disconnected) | BGP peer on the RRAS (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource  and BGP peer (ToR or RRAS VM) |  
+| HostNotConnectedToController          | SLB host agent is not connected  | Check that SLB Host Agent service is running; Refer to SLB host agent logs (auto running) for reasons why, in case SLBM (NC) rejected the cert presented by the host agent running state will show nuanced information  |  
+| PortBlocked                           | The VFP port is blocked, due to lack of VNET / ACL policies | Check if there are any other errors, which might cause the policies to be not configured. |  
+| Overloaded                            | Loadbalancer MUX is overloaded  | Performance issue with MUX |  
+| RoutePublicationFailure               | Loadbalancer MUX is not connected to a BGP router | Check if the MUX has connectivity with the BGP routers and that BGP peering is setup correctly |  
+| VirtualServerUnreachable              | Loadbalancer MUX is not connected to SLB manager | Check connectivity between SLBM and MUX |  
+| QosConfigurationFailure               | Failed to configure QOS policies | See if sufficient bandwidth is available for all VM's if QOS reservation is used |
 
 
 #### Check network connectivity between the network controller and Hyper-V Host (NC Host Agent service)
@@ -153,6 +153,17 @@ netstat -anp tcp |findstr 6640
   TCP    10.127.132.153:6640    10.127.132.213:50095   ESTABLISHED
   TCP    10.127.132.153:6640    10.127.132.214:62514   ESTABLISHED
   TCP    10.127.132.153:50023   10.127.132.211:6640    ESTABLISHED
+```
+#### Check Host Agent services
+The network controller communicates with two host agent services on the Hyper-V hosts: SLB Host Agent and NC Host Agent. It is possible that one or both of these services is not running. Check their state and restart if they're not running.
+
+```none
+Get-Service SlbHostAgent
+Get-Service NcHostAgent
+
+# (Re)start requires -Force flag
+Start-Service NcHostAgent -Force
+Start-Service SlbHostAgent -Force
 ```
 
 #### Check health of network controller
@@ -243,38 +254,56 @@ You can also check the following parameters of each cert to make sure the subjec
 2.  Expiration Date  
 3.  Trusted by Root Authority  
   
- 
-4. Check the SLB Configuration State
+#### Check the SLB Configuration State
+The SLB Configuration State can be determined by running the Debug-NetworkController cmdlet. This cmdlet will also output the current set of Network Controller resources in JSON format, IP configuraitons, and local network policy from Host Agent database tables. Additional traces will be collected by default. To not collect traces, add the -IncludeTraces:$false parameter.
 
 ```none
-PS > Debug-NetworkController -NetworkController <FQDN or IP> [-Credential <PS Credential>]
+Debug-NetworkController -NetworkController <FQDN or IP> [-Credential <PS Credential>] [-IncludeTraces:$false]
+
+# Don't collect traces
+$cred = Get-Credential 
+Debug-NetworkController -NetworkController 10.127.132.211 -Credential $cred -IncludeTraces:$false
+
+Transcript started, output file is C:\\NCDiagnostics.log
+Collecting Diagnostics data from NC Nodes
 ```
 
-The default output location will be indicated after the cmdlet launches. The output location can be changed by using the -OutputDirectory parameter.
+> Note: The default output location can be changed by using the -OutputDirectory parameter. 
+
+The SLB Configuration State information can be found in the _diagnostics-slbstateResults.Json_ file in this directory.
+
+TODO: Add more details about what is in SLB Configuration State
+ - BGP Peering
+ - Routes advertised
+ - SLB Hosts connected
+ - etc. 
  
-5. Check Provider Address - Customer Address (PA-CA) mappings in Host Agent
+#### Check Provider Address - Customer Address (PA-CA) mappings and PA 
 
 ```none
 PS > Get-PACAMapping
 ```
- 
-6. Look for HNV Provider Addresses (PA IPs) on the host
 
 ```none
 PS > Get-ProviderAddress
  ```
- ### Basic Triage and Data Collection
 
+### Specific Troubleshooting Scenarios
 
-### No network connectivity between two tenant virtual machines  
+#### No network connectivity between two tenant virtual machines  
 1.  [Tenant] Ensure Windows Firewall in tenant virtual machines is not blocking traffic.  
 2.  [Tenant] Check that IP addresses have been assigned to the tenant virtual machine by running _ipconfig_. 
-3.  [Tenant] Run ``Test-VirtualNetworkConnection`` to validate connectivity between the two tenant virtual machines in question. 
-> Note: the VSID referes to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this value by doing X 
-4.  [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.   
-5.  [Tenant] If a failure is reported, run the ``Debug-NetworkControllerConfigurationScript`` to see if any resources are reporting an error. Consult the Appendix to determine next steps.  
-6.  [Hoster] Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question. Run the ``Get-NCLogicalNetwork`` command to determine the resource ID of the HNV provider network. Specify the sender and receive PA IP addresses.  
-6.  [Hoster] If a problem still exists, run ``Test-LogicalNetworkPing.ps1`` to validate connectivity between the two Hyper-V hosts themselves. 
+3.  [Hoster] Run ``Test-VirtualNetworkConnection`` from the Hyper-V host to validate connectivity between the two tenant virtual machines in question. 
+> Note: the VSID referes to the Virtual Subnet ID. In the case of VXLAN, this is the VXLAN Network Identifier (VNI). You can find this value by doing X
+```none
+# Example
+``` 
+
+4.  [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.    
+5.  [Hoster] Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question and then run ``Test-LogicalNetworkConnection`` from the Hyper-V host to validate connectivity on the HNV Provider logical network
+
+ 
+# STOP HERE --- BELOW IS TODO #
 7.  [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.  
 8.  [Hoster] If PA IP Addresses are not present and/or CA Connectivity is broken, check to ensure network policy has been received. Run ``Get-PACAMapping`` to see if the encapsulation rules and CA-PA mappings required for creating overlay virtual networks are correctly established.  
 9.  [Hoster] Check that the Network Controller Host Agent is connected to the Network Controller. Run ``netstat -anp tcp |findstr 6640`` to see if the   
@@ -323,7 +352,8 @@ Based on the following diagnostic information presented, fix the following:
     3.  Check port profile id for virtual machine port matches corresponding virtual machine NIC resource's Instance Id   
 4.  [Hoster] Collect logs   
   
-  
+### Basic Triage and Data Collection
+
 
   
 ## Logging and advanced diagnostic  
