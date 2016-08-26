@@ -1,17 +1,18 @@
 ---
-title:Data Deduplication Interoperability  
-description:Explains how Data Deduplication interoperates with other products/services.  
-author:"wmgries"  
-ms.author:"wgries"   
-manager:"eldenc"  
-ms.date:"08/19/2016"   
-ms.topic:"get-started-article"  
-ms.prod:"windows-server-threshold"  
-ms.service:"na"  
+title: Data Deduplication Interoperability
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
 ms.technology:
-- techgroup-storage
-- dedup
----
+  - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: a6222e80-6f6c-4fb3-a570-391fac106998
+author: wmgries
+manager: eldenc
+ms.author: wgries
+--- 
 
 # Data Deduplication Interoperability
 > Applies to Windows Server 2016

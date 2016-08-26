@@ -1,17 +1,18 @@
 ---
-title:Operating Data Deduplication  
-description:Explains how to operate Data Deduplication.  
-author:wmgries  
-ms.author:wgries   
-manager:eldenc  
-ms.date:08/19/2016   
-ms.topic:get-started-article  
-ms.prod:windows-server-threshold  
-ms.service:na  
+title: Running Data Deduplication
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
 ms.technology:
-- techgroup-storage
-- dedup
----
+  - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: a6222e80-6f6c-4fb3-a570-391fac106998
+author: wmgries
+manager: eldenc
+ms.author: wgries
+--- 
 
 # Running Data Deduplication
 > Applies to Windows Server 2016
