@@ -32,7 +32,8 @@ The following topics will assist you in creating the rules that AD FS will proce
   
 -   [Create a Rule to Transform an Incoming Claim](Create-a-Rule-to-Transform-an-Incoming-Claim.md)  
   
--   [Create a Rule to Send an Authentication Method Claim](Create-a-Rule-to-Send-an-Authentication-Method-Claim.md)  
+-   [Create a Rule to Send an Authentication Method Claim](Create-a-Rule-to-Send-an-Authentication-Method-Claim.md) 
+-   [Create a Rule to Send an AD FS 1.x Compatible Claim](Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md) 
   
 -   [Create a Rule to Send Claims Using a Custom Rule](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
 
