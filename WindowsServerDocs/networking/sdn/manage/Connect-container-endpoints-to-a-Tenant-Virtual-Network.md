@@ -39,7 +39,7 @@ As documented in the [Container Networking](https://msdn.microsoft.com/en-us/vir
 4. [Create an *l2bridge* or *l2tunnel* network using docker](#Create)  (Container Host VM) 
  
 >[!NOTE]
->Multiple IP configurations is not supported on VM NIC resources created through System Center Virtual Machine Manager. It is >recommended for these deployments types that you create the VM NIC resource out of band using Network Controller PowerShell.
+>Multiple IP configurations is not supported on VM NIC resources created through System Center Virtual Machine Manager. It is recommended for these deployments types that you create the VM NIC resource out of band using Network Controller PowerShell.
 
 ### <a name="Add"></a>1. Add Multiple IP Configurations
 
