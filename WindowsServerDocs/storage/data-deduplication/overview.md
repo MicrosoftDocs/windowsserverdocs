@@ -10,7 +10,6 @@ ms.prod:windows-server-threshold
 ms.service:na  
 ms.technology:
 - techgroup-storage
-- dedup
 ---
 
 # Data Deduplication Overview
