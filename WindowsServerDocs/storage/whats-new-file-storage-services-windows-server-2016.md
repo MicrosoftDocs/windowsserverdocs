@@ -8,7 +8,6 @@ ms.technology:
   - techgroup-storage
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 596f28ec-e154-4c2e-9e82-7e42afe0e9fa
 author: JasonGerend
 manager: dongill
 ms.author: jgerend

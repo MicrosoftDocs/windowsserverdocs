@@ -8,7 +8,6 @@ ms.technology:
   - techgroup-storage
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: a6222e80-6f6c-4fb3-a570-391fac106998
 author: wmgries
 manager: eldenc
 ms.author: wgries
