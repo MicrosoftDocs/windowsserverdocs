@@ -74,6 +74,8 @@ Follow these steps to create a Nano Server VHD that will run in a virtual machin
 5.  Boot the virtual machine and in Hyper-V Manager connect to the virtual machine.  
   
 6.  Log on to the Recovery Console (see the "Nano Server Recovery Console" section in this guide), using the administrator and password you supplied while running the script in Step 3.  
+ > [!NOTE]  
+    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported.
   
 7.  Obtain the IP address of the Nano Server virtual machine and use Windows PowerShell remoting or other remote management tool to connect to and remotely manage the virtual machine.  
   
@@ -118,7 +120,9 @@ You can also create a VHD that will run Nano Server on a physical computer, usin
   
 6.  Boot the physical computer into the Nano Server VHD.  
   
-7.  Log on to the Recovery Console (see the "Nano Server Recovery Console" section in this guide), using the administrator and password you supplied while running the script in Step 3.  
+7.  Log on to the Recovery Console (see the "Nano Server Recovery Console" section in this guide), using the administrator and password you supplied while running the script in Step 3.
+> [!NOTE]  
+    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported. 
   
 8.  Obtain the IP address of the Nano Server computer and use Windows PowerShell remoting or other remote management tool to connect to and remotely manage the virtual machine.  
   
@@ -603,7 +607,9 @@ When you boot Nano Server in either a virtual machine or on a physical computer 
   
 -   Some screens have additional capabilities displayed on the last line of the screen. For example, if you explore a network adapter, F4 will disable the network adapter.  
   
-In Windows Server 2016 Technical Preview, the Recovery Console allows you to view and configure network adapters and TCP/IP settings, as well as firewall rules.  
+In Windows Server 2016 Technical Preview, the Recovery Console allows you to view and configure network adapters and TCP/IP settings, as well as firewall rules.
+> [!NOTE]  
+    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported.
   
 ## <a name="BKMK_ManageRemote"></a>Managing Nano Server remotely  
 Nano Server is managed remotely. There is no local logon capability at all, nor does it support Terminal Services. However, you have a wide variety of options for managing Nano Server remotely, including Windows PowerShell, Windows Management Instrumentation (WMI), Windows Remote Management, and Emergency Management Services (EMS).  

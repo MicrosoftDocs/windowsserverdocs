@@ -761,7 +761,7 @@
 #### [Installing and Enabling Data Deduplication](storage/data-deduplication/install-enable.md)
 #### [Running Data Deduplication](storage/data-deduplication/run.md)
 #### [Advanced Data Deduplication Settings](storage/data-deduplication/advanced-settings.md)
-#### [Data Deduplication Interop](storage/data-deduplication/interop.md)
+#### [Data Deduplication Interoperability](storage/data-deduplication/interop.md)
 ### [Storage Spaces Direct](storage/storage-spaces/storage-spaces-direct-windows-server-2016.md)
 #### [Hyper-converged solution using Storage Spaces Direct](storage/software-defined-storage/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016.md)
 #### [Storage Spaces Direct Hardware Requirements](storage/storage-spaces/Storage-Spaces-Direct-Hardware-Requirements.md)

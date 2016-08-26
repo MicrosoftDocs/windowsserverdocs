@@ -1,18 +1,17 @@
 ---
-title:Data Deduplication Overview  
-description:Data Deduplication, often called Dedup for short, is a feature of Windows Server 2016 that can help reduce the impact of redundant data on storage costs.  
-author:wmgries  
-ms.author:wgries  
-manager:eldenc  
-ms.date:08/19/2016   
-ms.topic:get-started-article  
-ms.prod:windows-server-threshold  
-ms.service:na  
+title: Data Deduplication Overview
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
 ms.technology:
-- techgroup-storage
-- dedup
----
-
+  - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: article
+author: wmgries
+manager: eldenc
+ms.author: wgries
+--- 
 # Data Deduplication Overview
 >Applies to Windows Server 2016
 

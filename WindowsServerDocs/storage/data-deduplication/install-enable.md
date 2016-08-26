@@ -1,17 +1,17 @@
 ---
-title:Installing and enabling Data Deduplication  
-description:Learn how to install Data Deduplication, evaluate workloads for deduplication, and enable Data Deduplication on targeted volumes.  
-author:wmgries  
-ms.author:wgries   
-manager:eldenc  
-ms.date:08/19/2016   
-ms.topic:get-started-article  
-ms.prod:windows-server-threshold  
-ms.service:na  
+title: Installing and enabling Data Deduplication
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
 ms.technology:
-- techgroup-storage
-- dedup
----
+  - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: article
+author: wmgries
+manager: eldenc
+ms.author: wgries
+--- 
 
 # Installing and enabling Data Deduplication
 > Applies to Windows Server 2016
