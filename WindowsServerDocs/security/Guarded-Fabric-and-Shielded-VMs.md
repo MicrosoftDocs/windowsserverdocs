@@ -26,7 +26,7 @@ A guarded fabric consists of:
 - 1 or more guarded hosts
 - A set of shielded virtual machines. The diagram below shows how the Host Guardian Service uses attestation to ensure that only known, valid hosts can start the shielded VMs, and key protection to securely release the keys for shielded VMs.
 
-When a tenant creates shielded VMs that run on a guarded fabric, the guarded hosts and the shielded VMs themselves are protected by the HGS. The HGS provides two distinct services: attestation and key protection. The Attestation service ensures only trusted hosts can run shielded VMs while the Key Protection Service provides the keys necessary to power them on and to live migrate them to other guarded hosts. 
+When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hosts and the shielded VMs themselves are protected by the HGS. The HGS provides two distinct services: attestation and key protection. The Attestation service ensures only trusted Hyper-V hosts can run shielded VMs while the Key Protection Service provides the keys necessary to power them on and to live migrate them to other guarded hosts. 
 
 ![Guarded host fabric](./media/Guarded-Host-Overview-Diagram.png)
 
