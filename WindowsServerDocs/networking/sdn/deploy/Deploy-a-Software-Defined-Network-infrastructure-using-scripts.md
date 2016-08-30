@@ -139,7 +139,7 @@ Assuming that the SDN Express script ran to completion without reporting any err
 
 - Use [diagnostic tools](../../sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md) to ensure there are no errors on any fabric resources in the network controller.  
       
-    ``Debug-NetworkControllerConfigurationState -NcIpAddress <FQDN of Network Controller Rest Name>``  
+    ``Debug-NetworkControllerConfigurationState -NetworkController <FQDN of Network Controller Rest Name>``  
         
    
 ### Deploy a sample tenant workload with the software load balancer  
@@ -157,14 +157,14 @@ To validate that the tenant deployment was successful, do the following:
 1.	Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
 2.	Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
 	  
-	``Debug-NetworkControllerConfigurationState -NCIP <FQDN of Network Controller REST Name>``
+	``Debug-NetworkControllerConfigurationState -NetworkController <FQDN of Network Controller REST Name>``
 3. To verify that the load balancer is running correctly, run the following from any Hyper-V host:
     
         wget <VIP IP address>/unique.htm -disablekeepalive -usebasicparsing
    
-   where `<VIP IP address>` is the IP address from the PublicVIP pool configured in the FabricConfig.psd1 file.
+   where `<VIP IP address>` is the web tier VIP IP address you configured in the TenantConfig.psd1 file. Search for the `VIPIP` variable in TenantConfig.psd1.
 
-   Run this muliple times to see the load balancer switch between the available DIPs. You can also observe this behavior using a web browser. Browse to `<VIP IP address>/unique.htm`. Close the brower and open a new instance and browse again. You will see the blue page and the green page, except when the browser caches the page before the cache times out.  
+   Run this muliple times to see the load balancer switch between the available DIPs. You can also observe this behavior using a web browser. Browse to `<VIP IP address>/unique.htm`. Close the brower and open a new instance and browse again. You will see the blue page and the green page alternate, except when the browser caches the page before the cache times out.  
   
 ## Deploy a simulated tenant enterprise infrastructure  
   
