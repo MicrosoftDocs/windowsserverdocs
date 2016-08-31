@@ -17,7 +17,7 @@ ms.technology: active-directory-federation-services
 >Applies To: Windows Server 2016, Windows Server 2012 R2
   
 ## Advanced Customization of AD FS Sign\-in Pages  
-AD FS in Windows Server 2012 R2 provides built\-in support for customizing the sign\-in experience. For a majority of these scenarios, the built\-in Windows PowerShell cmdlets are all that is required.  It is recommended that you use the built\-in Windows PowerShell commands to customize standard elements for AD FS sign\-in experience whenever possible.  See [Customizing the AD FS Sign\-in Pages](http://technet.microsoft.com/library/dn280950.aspx) for more information.  
+AD FS in Windows Server 2012 R2 provides built\-in support for customizing the sign\-in experience. For a majority of these scenarios, the built\-in Windows PowerShell cmdlets are all that is required.  It is recommended that you use the built\-in Windows PowerShell commands to customize standard elements for AD FS sign\-in experience whenever possible.  See [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md) for more information.  
   
 In some cases, AD FS administrators may want to provide additional sign\-in experiences that are not possible through the existing PowerShell commands that ship in\-box with AD FS. In certain instances, it is feasible \(within the guidelines provided below\) for administrators to customize the sign\-in experience further by adding additional logic to **onload.js** that is provided by AD FS and will be executed on all the AD FS pages.  
   
@@ -35,7 +35,7 @@ In some cases, AD FS administrators may want to provide additional sign\-in expe
   
 -   The original onload.js, the one that comes with the default web theme, contains code that handles page rendering for different form factors. It is recommended not to modify the original onload.js content but only append your code to the existing onload.js that handles custom logic.  
   
--   AD FS ships with a built\-in web theme which is called Default. You cannot modify the onload.js of the Default web theme. To update onload.js, you have to create and use a custom web theme for AD FS sign\-in pages.  See [Customizing the AD FS Sign\-in Pages](http://technet.microsoft.com/library/dn280950.aspx) for information on how to create a custom web theme.  
+-   AD FS ships with a built\-in web theme which is called Default. You cannot modify the onload.js of the Default web theme. To update onload.js, you have to create and use a custom web theme for AD FS sign\-in pages.  See [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md) for information on how to create a custom web theme.  
   
 -   The same onload.js will execute on all ADFS pages \(ex. form\-based logon page, home realm discovery page and etc.\). You need to make sure the code in your script only gets executed as it is designed and does not get executed unexpectedly.  
   
@@ -133,7 +133,7 @@ if (typeof Login != 'undefined'){
   
 ```  
   
-## See Also  
-[AD FS Operations](AD-FS-Operations.md)  
+## Additional references 
+[AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md)  
   
 
