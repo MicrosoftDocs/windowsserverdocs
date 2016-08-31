@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Virtual Machine Connect
+title: Hyper-V Virtual Machine Connection
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ author: cwatsonmsft
 ms.author: cwatson
 ms.date: 8/30/2016
 ---
-# Hyper-V Virtual Machine Connect
+# Hyper-V Virtual Machine Connection
 
 >Applies To: Windows Server 2016, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 8
 
@@ -44,7 +44,7 @@ You may find the following information helpful for using VMConnect:
 |Change saved VMConnect settings for a virtual machine|Run the following command in Windows PowerShell or the command prompt:<br /><br />`VMConnect.exe <ServerName> <VMName> \/edit`|  
 |Prevent a VMConnect user from taking over another user’s VMConnect session|[Turn on enhanced session mode on Hyper-V host](https://technet.microsoft.com/library/dn282274.aspx#BKMK_OVER).<br /><br />Not having enhanced session mode turned on may pose a security and privacy risk. If a user is connected and logged on to a virtual machine through VMConnect and another authorized user connects to the same virtual machine, the session will be taken over by the second user and the first user will lose the session. The second user will be able to view the first user's desktop, documents, and applications.|
 |Manage integration services or components that allow the VM to communicate with the Hyper-V host| On Hyper-V hosts that run Windows 10 or Windows Server 2016, you can't manage integration services with VMConnect. See these topics: <br />- [Turn on/turn off integration services from the Hyper-V host](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics) <br />- [Turn on/turn off integration services from a Windows virtual machine](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-windows)<br />- [Turn on/turn off integration services from a Linux virtual machine](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-linux) <br />- [Keep integration services updated for the virtual machine](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/managing_ics#integration-service-maintenance)  <br />For hosts that run Windows Server 2012 or Windows Server 2012 R2, see [Integration Services](https://technet.microsoft.com/library/dn798297(v=ws.11).aspx).|
-
+|Resize the VMConnect window|You can change the size of the VMConnect window for generation 2 virtual machines that run a Windows operating system. To do this, you may need to turn on enhanced session mode on the Hyper-V host. For more information, see [Use local resources on Hyper-V virtual machine with VMConnect](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md). For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/).|
 
 
 ## Keyboard shortcuts  
