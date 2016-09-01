@@ -49,6 +49,7 @@ You may find the following information helpful for using VMConnect:
 
 ## Keyboard shortcuts  
 By default, the keyboard input and mouse clicks are sent to the virtual machine. So you may need to press CTRL + ALT + LEFT arrow before you use the following shortcut keys. 
+
 |Key combination|Description|  
 |-------------------|---------------|  
 |CTRL\+ALT\+LEFT arrow|Mouse release|  
