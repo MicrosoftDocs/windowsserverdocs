@@ -1,6 +1,6 @@
-<properties title="" pageTitle="Windows technical content contributors' guide index" description="Lists the articles available in the Windows Server technical content contributors' guide for technet.microsoft.com." metaKeywords="" services="" solutions="" documentationCenter="" authors="Kathy-Davies" videoId="" scriptId="" manager="" />
+<properties title="" pageTitle="Windows technical content contributors' guide index" description="Lists the articles available in the Windows Server technical content contributors' guide for technet.microsoft.com." author="kathydav" manager="dongill" />
 
-<tags ms.service="contributor-guide" ms.devlang="" ms.topic="article" ms.tgt_pltfrm="" ms.workload="" ms.date="8/24/2016" ms.author="kathydav" />
+<tags ms.service="contributor-guide" ms.topic="article" ms.tgt_pltfrm="" ms.workload="" ms.date="8/31/2016" ms.author="kathydav" />
 
 # Windows Server technical content contributors' guide index
 
@@ -9,7 +9,7 @@
 
 ## General guidance
 
-- [Contribute to Windows Server documentation]()
+- [Contribute to Windows Server documentation](git-steps-create-update-content.md)
 
 - [Content channel guidance](https://github.com/Azure/azure-content/blob/master/contributor-guide/content-channel-guidance.md)
 
@@ -21,15 +21,15 @@
 
 - [Git commands for creating a new article or updating an existing article](git-steps-create-update-content.md)
 
-- [File names and locations for Azure technical articles](file-names-and-locations.md)
+- [File names and locations](file-names-and-locations.md)
 
 - [Linking guidelines](create-links-markdown.md/)
 
-- [Retire or rename an article](retire-or-rename-an-article.md)
+- [Rename or retire an article](rename-or-retire.md)
 
 - [How to undo almost anything with Git (GitHub blog)](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
 
-- [Quality criteria for pull request review]()
+- [Quality criteria for pull request review](contributor-guide-pr-criteria.md)
 
 ## Authoring articles: markdown
 
