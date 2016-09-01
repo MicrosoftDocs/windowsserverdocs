@@ -6,7 +6,7 @@
 
 If you're new to Git, learning how to work effectively can be frustrating. Here are some tips:
 
--  Your local branches should be based on branches in the shared repo, not on your remote fork. You'll push your local branches to your remote fork. The commands in this article use this approach.
+-  Base your local branches on a branch in the shared repo, not on your remote fork. Then, you'll push your local branches to your remote fork. From your remote fork, you'll request to have the updates in your fork merged into the shared repo. The commands in this article show you how to do this.
 
 -  Work in branches, not in your local copy of Master. This makes it easier to recover from problems in your branches and go back to a good, known point.
 
@@ -17,7 +17,7 @@ If you're new to Git, learning how to work effectively can be frustrating. Here 
 >To check your settings, type ```git config -l```
 
 ## 
-These steps give you the commands to create a branch, save your changes, and submit them for integration into the shared repo.
+Here's how to create a branch, save your changes, and submit them for integration into the shared repo.
 
 1. Start Git Bash (or the command-line tool you use for Git).
 
@@ -33,7 +33,9 @@ These steps give you the commands to create a branch, save your changes, and sub
 
     git checkout upstream/<upstream branch name> -b <local working branch name>
 
-This creates the local branch directly from the upstream branch and avoids inadvertently merging files from the remote repo to the wrong local branch.       
+This creates the local branch directly from the upstream branch and avoids inadvertently merging files from the remote repo to the wrong local branch. For example, to create a working branch based on the ga-threshold branch, you could run a command like this:
+      
+      git checkout upstream/ga-threshold -b working-8-31  
 
 4. Add the local working branch to your fork:
 
@@ -45,12 +47,12 @@ This creates the local branch directly from the upstream branch and avoids inadv
 
         git status
 
-  Review the results to make sure the files listed are the ones you changed. If all the files look accurate, run:
+  Review the results to make sure the files listed are the ones you changed. If ALL the files look accurate, run this command to add all of the files:
 
         git add .
         git commit –m "<comment>"
 
-   To add only the specific files you changed (for example, if git status reports changed files that you don't want to submit), run:
+   To add only the specific files (for example, if `git status` lists files that you don't want to submit), run:
 
         git add <file path>
         git commit –m "<comment>"
@@ -68,22 +70,25 @@ This creates the local branch directly from the upstream branch and avoids inadv
 
         git push origin <working branch>
 
-9. When you are ready to submit your content to the upstream master branch for staging, validation, and/or publishing, in the GitHub UI, create a pull request from your fork to the master branch.
+9. When you're ready to submit your content for staging, validation, and/or publishing, use the GitHub UI to create a pull request from your fork.
 
-10. If you are an employee working in the private repository, the changes you submit are automatically staged and a staging link is written to the pull request. Review your staged content and sign off in the pull request comments by adding the **#sign-off** comment.  This indicates the changes are ready to be pushed live.  If you don't want the pull request to be accepted - if you are just staging the changes - add the **#hold-off** note to the pull request.
+>[!IMPORTANT]
+> When you open a PR, triggers quality checks and publication to our internal staging site. It's your responsibility to review both, from links in comments \(from the Conversation tab of the PR\). After you've done this, indicate it by adding the "ready-to-merge" label to the PR. \(Click **Labels** or the gear icon to the right of the comment stream in the PR.)
 
-11. The pull request acceptor reviews your pull request, provides feedback, and/or accepts your pull request.
+10. The pull request acceptor reviews your pull request, provides feedback, and/or accepts your pull request.
 
-12. Optionally verify your published article or changes at
-
- http://technet.microsoft.com/system-center-docs///*name-of-your-article-without-the-MD-extension*
 
 ## Publishing
 
-- Articles are published at approximately 10:00 AM and 3:00 PM Pacific Time, Monday-Friday. It can take up to 30 minutes for articles to appear online after publishing. Remember your pull request has to be merged by a pull request reviewer before the changes can be included in the next scheduled publishing run. You need to work with your pull request reviewer ahead of time to ensure a pull request is merged for a specific publishing run. Otherwise, PRs are reviewed in the order they were submitted.
+- Articles are published at approximately 10:00 AM and 3:00 PM Pacific Time, Monday-Friday. It can take up to 30 minutes for articles to appear online after publishing. Remember your pull request has to be merged by a pull request reviewer before the changes can be included in the next scheduled publishing cycle. If you need an article published for a specific publication cycle, let a pull request reviewer know ahead of time.
 
-- All pull requests are subject to validation rules that need to be addressed before the pull request can be merged.
+- Before the pull request can be merged, you need to:
+  - Review build details to make sure it passed quality checks
+  - Review your updates on the staging site
+  - Indicate you've done this by adding the **ready-to-merge** label to the pull request.
 
+ See [Quality criteria for pull request review](contributor-guide-pr-criteria.md) for details.
+ 
 ## Another way to with release/milestone branches
 
 1.      Create a new local working branch based off the appropriate remote branch:
