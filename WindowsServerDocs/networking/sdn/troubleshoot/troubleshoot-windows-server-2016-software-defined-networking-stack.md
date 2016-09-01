@@ -57,25 +57,27 @@ import-module hnvdiagnostics
 ### Network controller diagnostics  
 These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](https://technet.microsoft.com/en-us/library/mt490456.aspx). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between Network Controller and the NC Host Agents running on the Hyper-V hosts.
 
- > The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node VMs. All other NC Diagnostic cmdlets can be run from any host which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller. 
+ The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node virtual machines. All other NC Diagnostic cmdlets can be run from any host which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller. 
    
 ### Hyper-V host diagnostics  
-These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics Cmdlet Topic](https://technet.microsoft.com/en-us/library/mt490472.aspx). They help identify problems in the data-path between tenant VMs (East/West) and ingress traffic through an SLB VIP (North/South). 
+These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics Cmdlet Topic](https://technet.microsoft.com/en-us/library/mt490472.aspx). They help identify problems in the data-path between tenant virtual machines (East/West) and ingress traffic through an SLB VIP (North/South). 
 
-> The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests which can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as descried above.
+The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests which can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as descried above.
  
 ### GitHub
-The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has a number of sample scripts and workflows which build on top of these in-box cmdlets. In particular, diagnostic scripts can be found [here](https://github.com/Microsoft/sdn/diagnostics). Please help us contribute to these scripts by submitting Pull Requests.
+The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has a number of sample scripts and workflows which build on top of these in-box cmdlets. In particular, diagnostic scripts can be found in the [Diagnostics](https://github.com/Microsoft/sdn/diagnostics) folder. Please help us contribute to these scripts by submitting Pull Requests.
 
 ## Troubleshooting Workflows and Guides  
 
 ### [Hoster] Validate System Health
 There is an embedded resource named _Configuration State_ in several of the Network Controller resources. Configuration state provides information about system health including the consistency between the network controller's configuration and the actual (running) state on the Hyper-V hosts. 
 
-To check configuration state, execute the following from any Hyper-V host with connectivity to the Network Controller.
+To check configuration state, run the following from any Hyper-V host with connectivity to the Network Controller.
 
-> Note: The value for the *NetworkController* parameter should either be the FQDN or IP address based on the subject name of the X.509 certificate created for Network Controller.
-> Note: The *Credential* parameter only needs to be specified if the network controller is using Kerberos authentication (typical in SCVMM deployments). The credential must be for a user who is in the Network Controller Management Security Group.
+>[!NOTE] 
+>The value for the *NetworkController* parameter should either be the FQDN or IP address based on the subject name of the X.509 >certificate created for Network Controller.
+>
+>The *Credential* parameter only needs to be specified if the network controller is using Kerberos authentication (typical in SCVMM deployments). The credential must be for a user who is in the Network Controller Management Security Group.
 
 ```none
 Debug-NetworkControllerConfigurationState -NetworkController <FQDN or NC IP> [-Credential <PS Credential>]
@@ -128,7 +130,7 @@ The table below shows the list of error codes, messages, and follow-up actions t
 | DistributedRouterConfigurationFailure | Failed to configure the Distributed router settings on the host vNic                          | TCPIP stack error. May require cleaning up the PA and DR Host vNICs on the server on which this error was reported |
 | DhcpAddressAllocationFailure          | DHCP address allocation failed for a VMNic                                                    | Check if the static IP address attribute is configured on the NIC resource |  
 | CertificateNotTrusted<br>CertificateNotAuthorized | Failed to connect to Mux due to network or cert errors | Check the numeric code provided in the error message code: this corresponds to the winsock error code. Certificate errors are granular (for example, cert cannot be verified, cert not authorized, etc.) |  
-| HostUnreachable                       | MUX is Unhealthy (Common case is BGPRouter disconnected) | BGP peer on the RRAS (BGP VM) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource  and BGP peer (ToR or RRAS VM) |  
+| HostUnreachable                       | MUX is Unhealthy (Common case is BGPRouter disconnected) | BGP peer on the RRAS (BGP virtual machine) or Top-of-Rack (ToR) switch is unreachable or not peering successfully. Check BGP settings on both Software Load Balancer Multiplexer resource  and BGP peer (ToR or RRAS virtual machine) |  
 | HostNotConnectedToController          | SLB host agent is not connected  | Check that SLB Host Agent service is running; Refer to SLB host agent logs (auto running) for reasons why, in case SLBM (NC) rejected the cert presented by the host agent running state will show nuanced information  |  
 | PortBlocked                           | The VFP port is blocked, due to lack of VNET / ACL policies | Check if there are any other errors, which might cause the policies to be not configured. |  
 | Overloaded                            | Loadbalancer MUX is overloaded  | Performance issue with MUX |  
@@ -143,7 +145,8 @@ Run the *netstat* command below to validate that there are three ESTABLISHED con
 - Two established connections from Hyper-V host IP on port 6640 to NC node IP on ephemeral ports (> 32000)
 - One established connection from Hyper-V host IP on ephemeral port to Network Controller REST IP on port 6640
 
-> Note: There may only be two established connections on a Hyper-V host if there are no tenant VMs deployed on that particular host
+>[!NOTE]
+>There may only be two established connections on a Hyper-V host if there are no tenant virtual machines deployed on that particular host.
 
 ```none
 netstat -anp tcp |findstr 6640
@@ -250,9 +253,10 @@ Thumbprint                                Subject
 ```  
 
 You can also check the following parameters of each cert to make sure the subject name is what is expected (hostname or NC REST FQDN or IP), the certificate has not yet expired, and that all certificate authorities in the certificate chain are included in the trusted root authority.
-1.  Subject Name  
-2.  Expiration Date  
-3.  Trusted by Root Authority  
+
+- Subject Name  
+- Expiration Date  
+- Trusted by Root Authority  
   
 #### Check the SLB Configuration State
 The SLB Configuration State can be determined by running the Debug-NetworkController cmdlet. This cmdlet will also output the current set of Network Controller resources in JSON format, IP configuraitons, and local network policy from Host Agent database tables. Additional traces will be collected by default. To not collect traces, add the -IncludeTraces:$false parameter.
@@ -268,7 +272,8 @@ Transcript started, output file is C:\\NCDiagnostics.log
 Collecting Diagnostics data from NC Nodes
 ```
 
-> Note: The default output location can be changed by using the -OutputDirectory parameter. 
+>[!NOTE]
+>The default output location can be changed by using the `-OutputDirectory` parameter. 
 
 The SLB Configuration State information can be found in the _diagnostics-slbstateResults.Json_ file in this directory.
 
@@ -320,7 +325,7 @@ PS > Get-ProviderAddress
     3.  Are hosts connected to SLBM? (HP  clients connected  == num servers)   
     4.  Is SLBM connected to Muxes? (Muxes Connected == Muxes Healthy on SLBM == Muxes reporting healthy = num Muxes).  
 3.  Ensure the BGP router configured is successfully peering with the SLB MUX  
-    1.  If using RRAS with Remote Access (i.e. BGP VM):  
+    1.  If using RRAS with Remote Access (i.e. BGP virtual machine):  
         1.  Get-BgpPeer should show connected  
         2.  Get-BgpRouteInformation should show at least a route for the SLBM self VIP  
     2.  If using physical Top-of-Rack (ToR) switch as BGP Peer, consult your documentation  
