@@ -1,10 +1,13 @@
 # Quality criteria for pull request review
 
-These criteria are intended for authors who create and maintain technical articles and for pull request reviewers who review content pull requests. Pull request reviewers generally review only what is new or changed. Pull request reviewers evaluate the changes in a pull request according to the blocking and non-blocking quality review items listed in this article.
+Pull requests must meet minimum criteria to be accepted for integration into the repo. Pull request reviewers generally review only what is new or changed, using the blocking and non-blocking quality review items listed in this article to evaluate the changes. Reviewers may ask for more information or for a requestor to fix issues before accepting a pull request. The requestor is responsible for making the changes.
+
+>[!IMPORTANT] 
+>Opening a pull request triggers quality checks and publication to our internal staging site. It's your responsibility to review both, from links in comments \(from the Conversation tab of the PR\). After you've done this, indicate it by adding the "ready-to-merge" label to the PR. \(Click **Labels** or the gear to the right of the comment stream in the PR.)
 
 ## Blocking content quality items
 
-The updates in the pull request must comply with the following criteria to be merged. Pull request reviewers provide feedback in pull request comments for these items and type `#hold-off` in the pull request to return it to you (the author) with feedback.
+The updates must comply with the following criteria to be merged.
 
 | Category | Quality review item |
 |----------|---------------------|
@@ -15,23 +18,22 @@ The updates in the pull request must comply with the following criteria to be me
 |Repo integrity| Pull request does not get merged by the person who created the pull request.|
 |Naming	|File names for new files follow the [file naming guidelines](file-names-and-locations.md).|
 |Naming	|New folders introduced into the repo follow the [folder naming guidelines](file-names-and-locations.md#folder-names-in-the-repo).|
-|Content|The article is a technical document, and therefore in the correct content channel. See the [what goes where guidance](content-channel-guidance.md).|
-|Content|The subject matter in the technical document is appropriate for a technical article. See the [what goes where guidance](content-channel-guidance.md).|
-|Content|The article contains an introductory paragraph, and a procedural or conceptual body of content. The article needs to contain sufficient, complete content to stand on its own as an article. It should not be a small fragment of information. (Exception: A "Limits" topic if it is in the context of a large article that lists all of the limits of a service.)|
+|Content|The article is a technical document, . See the [what goes where guidance](content-channel-guidance.md).|
+|Content|The article has an introductory paragraph, and a procedural or conceptual body of content. The article has enough content to stand on its own as an article. It should not be a small fragment of information. (Exception: A "Limits" topic if it is in the context of a large article that lists all of the limits of a service.)|
 |Content| Elements that should be numbered lists are numbered, elements that should be unordered lists are bulleted. This is basic usability.|
-|Content| Unusual or novel graphics, information architecture or structures, or obviously non-standard designs need to be vetted with the lead PR reviewer. Teams that are experimenting with new things need to have a problem/solution canvas or plan in place for evaluating experiments.|
-|Site/design functionality|	Manually authored TOCs are not permitted. The article must rely on H2s for its on-page TOC.|
+|Content| Unusual graphics, information architecture or structures, or obviously non-standard designs have been vetted with the content lead. Teams that are experimenting with new things need to have a plan in place to evaluate experiments.|
+|Site/design functionality|	The article doesn't have a manually authored TOCs within the body contents. The article must rely on H2s for its on-page TOC.|
 |Site/design functionality|	If H2 headings are present, the article contains at least two H2 headings. Using one H2 heading creates a single-item article TOC. H2 headings must be used before H3 headings to ensure a TOC is created.|
-|Markdown| No HTML at the block level – minor inline HTML is permitted – such as superscript, subscript, special characters, and other minor things that you can’t do with markdown. HTML tables are allowed ONLY if the table contains bulleted or numbered lists, but that is usually an indication the content needs to be simplified so the source can be coded in markdown.|
+|Markdown| Article contains no blocks of HTML; minor inline HTML is permitted – such as superscript, subscript, special characters, and other minor formatting that Markdown doesn't support. HTML tables are allowed ONLY if the table contains bulleted or numbered lists, but that usually indicates the content could be simplified so it can be coded in Markdown.|
 |Markdown	|Custom markdown elements are used where appropriate. Ex: Notes are coded using the !NOTE extension, not as plain text.|
-|SEO	|The H1 title contains enough information to describe the content of the article, to differentiate it from other System Center articles, and to map to likely customer keywords. For example "Overview" as the H1 title is a fail.|
+|SEO	|The H1 title contains enough information to describe the content of the article, to differentiate it from other articles, and to map to likely customer keywords. For example, an H1 title of "Overview" doesn't meet this criteria.|
 |Images	|Animated GIFs are not accepted into the repo.|
 |Images | Images have clear resolution, are free of misspelled words, and contain no private information |
-|Staging| The article preview must be clean on GitHub. It can't contain any obvious formatting issues: <br><br>- A numbered or bulleted list that appears as a paragraph <br> - Code in a code block appearing partly in the code block and partly outside it <br>- Numbered steps numbered incorrectly due to faulty indentation|
+|Staging| The article has been previewed on staging and doesn't contain any obvious formatting issues: <br><br>- A numbered or bulleted list that appears as a paragraph <br> - Code in a code block appearing partly in the code block and partly outside it <br>- Numbered steps numbered incorrectly due to faulty indentation|
 
 ## Non-blocking content quality items
 
-For these items, pull request reviewers provide feedback and instructions for the author to follow up with fixes in a later pull request. However, this feedback does not block the decision to merge. Authors should follow up within 3 business days with fixes.
+For these items, pull request reviewers provide feedback and instructions for the author to follow up with fixes in a later pull request. However, this feedback doesn't block the decision to merge. Authors should follow up within 3 business days with fixes.
 
 | Category | Quality review item |
 |----------|---------------------|
@@ -40,4 +42,4 @@ For these items, pull request reviewers provide feedback and instructions for th
 |Images|Images include alt text. [See the image guidance](https://github.com/Azure/azure-content/blob/master/contributor-guide/create-images-markdown.md).|
 |Site/design functionality|The H2 headings, when rendered in the on-page TOC, should ideally wrap to no more than 2 lines. Longer headings make the article TOC harder to scan.|
 |Style conventions|All titles and headings are sentence case.|
-|Process|When you delete or rename an article, make sure you follow the process. Pull request reviewers should add the following comment and link in a comment:<br><br>*Please verify you followed the process in the contributors’ guide for deleting articles: <https://github.com/Azure/azure-content/blob/master/contributor-guide/retire-or-rename-an-article.md> .*|
+|Process|When you delete or rename an article, make sure you follow the process. Pull request reviewers should add the following comment and link in a comment:<br><br>*Please verify you followed the process in the contributor's guide: [Change the name of an article or delete it](rename-or-retire.md).*|
