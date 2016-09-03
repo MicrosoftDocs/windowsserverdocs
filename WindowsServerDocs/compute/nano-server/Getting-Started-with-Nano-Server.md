@@ -211,14 +211,14 @@ To create a Nano Server image to serve as a Hyper-V host, run the following:
   
 Where  
 -   -MediaPath is the root of the DVD media or ISO image containing Windows Server Technical Preview .  
--   -BasePath will contain a copy of the Nano Server binaries, so you can use New-NanoServerWim -BasePath without having to specify -MediaPath in future runs.  
+-   -BasePath will contain a copy of the Nano Server binaries, so you can use New-NanoServerImage -BasePath without having to specify -MediaPath in future runs.  
 -   -TargetPath will contain the resulting .wim file containing the roles & features you selected. Make sure to specify the .wim extension.  
 -   -Compute adds the Hyper-V role.  
 -   -OemDrivers adds a number of common drivers.  
   
 You will be prompted to enter an administrator password.  
   
-For more information, run `Get-Help New-NanoServerWim -Full`.  
+For more information, run `Get-Help New-NanoServerImage -Full`.  
    
 Boot into WinPE and ensure that the .wim file just created is accessible from WinPE. (You could, for example, copy the .wim file to a bootable WinPE image on a USB flash drive.)  
   
