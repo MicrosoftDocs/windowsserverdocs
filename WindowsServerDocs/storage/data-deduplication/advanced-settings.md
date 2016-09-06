@@ -60,7 +60,7 @@ The most common reason for changing when data deduplication jobs run is to ensur
 	```
 
 ### <a id="modifying-job-schedules-available-settings"></a>Available job-wide settings
-The following settings can be toggled for new or scheduled data deduplication jobs:
+You can toggle the following settings for new or scheduled data deduplication jobs:
 
 <table>
 	<thead>
@@ -260,30 +260,30 @@ The main reasons to modify the volume settings from the selected usage type are 
 		<tr>
 			<td>OptimizePartialFiles</td>
 			<td>When enabled, the MinimumFileAge value applies to segments of a file rather than to the whole file.</td>
-			<td>True/False</td>
-			<td>The main reason to enable this setting is if your workload works with large, often edited files where most of the file content is untouched. In this scenario, without this setting enabled, this file would never get optimized because it kept getting changed, even though most of the file content is ready to be optimized.</td>
+			<td>True/false</td>
+			<td>Enable this setting if your workload works with large, often edited files where most of the file content is untouched. Without this setting enabled, these files would never get optimized because they kept getting changed, even though most of the file content is ready to be optimized.</td>
 		</tr>
 		<tr>
 			<td>Verify</td>
-			<td>When enabled, if the hash of a chunk matches a chunk we already have in our Chunk Store, the chunks is byte-by-byte compared to ensure they are identical.</td>
-			<td>True/False</td>
-			<td>This is an integrity feature that ensures that the hashing algorithm we use to compare chunks does not make a mistake by comparing two chunks of data that are actually different but have the same hash. In practice, it is extremely improbable that this would ever happen. Enabling the verification feature adds significant overhead to the optimization job.</td>
+			<td>When enabled, if the hash of a chunk matches a chunk we already have in our chunk store, the chunks are compared byte-by-byte to ensure they are identical.</td>
+			<td>True/false</td>
+			<td>This is an integrity feature that ensures that the hashing algorithm that compares chunks does not make a mistake by comparing two chunks of data that are actually different but have the same hash. In practice, it is extremely improbable that this would ever happen. Enabling the verification feature adds significant overhead to the optimization job.</td>
 		</tr>
 	</tbody>
 </table>
 
 ## <a id="modifying-dedup-system-settings"></a>Modifying data deduplication system-wide settings
-Data deduplication has a few additional, system-wide settings that can be configured via [the Registry](https://technet.microsoft.com/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry.
+Data deduplication has additional system-wide settings that can be configured via [the Registry](https://technet.microsoft.com/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs that run on the system and all of the volumes that run on the system. Extra care must be given whenever editing the Registry.
 
 For example, you may wish to disable full garbage collection. More information about why this may be useful for your scenario can be found [below](#faq-why-disable-full-gc). To edit the registry with PowerShell:
 
-* If data deduplication is running in a cluster:
+* If Data Deduplication is running in a cluster:
 	```PowerShell
 	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0
 	Set-ItemProperty -Path HKLM:\CLUSTER\Dedup -Name DeepGCInterval -Type DWord -Value 0
 	```
 
-* If Data deduplication is not running in a cluster:
+* If Data Deduplication is not running in a cluster:
 	```PowerShell
 	Set-ItemProperty -Path HKLM:\System\CurrentControlSet\Services\ddpsvc\Settings -Name DeepGCInterval -Type DWord -Value 0
 	```
@@ -294,21 +294,21 @@ For example, you may wish to disable full garbage collection. More information a
 		<tr>
 			<th style="min-width:125px">Setting Name</th>
 			<th>Definition</th>
-			<th>Accepted Values</th>
+			<th>Accepted values</th>
 			<th>Why would you want to change this?</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>WlmMemoryOverPercentThreshold</td>
-			<td>This settings allows jobs to use more memory than Data Deduplication judges to actually be available. For example, setting to 300 would mean that the job would have to use 3x the assigned memory to get canceled.</td>
+			<td>This settings allows jobs to use more memory than Data Deduplication judges to actually be available. For example, setting to 300 would mean that the job would have to use three times the assigned memory to get canceled.</td>
 			<td>Positive integers (a value of 300 means 300% or 3x)</td>
-			<td>If you have another task that will back off if Data Deduplication starts taking more memory.</td>
+			<td>If you have another task that will stop if Data Deduplication takes more memory.</td>
 		</tr>
 		<tr>
 			<td>DeepGCInterval</td>
-			<td>This setting configures the interval that garbage collection jobs become [full garbage collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n (for example 2) would mean that every n<sup>th</sup> job was a full garbage collection job.</td>
-			<td>Positive Integers (inclusive of zero)</td>
+			<td>This setting configures the interval at which regular garbage collection jobs become [full garbage collection jobs](advanced-settings.md#faq-full-v-regular-gc). A setting of n would mean that every n<sup>th</sup> job was a full garbage collection job.</td>
+			<td>Positive integers (inclusive of zero)</td>
 			<td>See [this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)</td>
 		</tr>
 	</tbody>
@@ -321,14 +321,14 @@ These data deduplication settings give you a lot of power to control how data de
 <a id="faq-running-dedup-jobs-manually"></a>**I want to run a data deduplication job right now, but I don't want to create a new schedule--can I do this?**  
 Yes, [all data deduplication jobs can be run manually](run.md#running-dedup-jobs-manually).
 
-<a id="faq-full-v-regular-gc"></a>**What is the difference between full and regular garbage collection?
+<a id="faq-full-v-regular-gc"></a>**What is the difference between full and regular garbage collection?**  
 There are two types of [garbage collection](understand.md#job-info-gc):
 
-- *Regular garbage collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular garbage collection compacts a chunk store container only if a minimum percentage of the chunks are unreferenced. This type of garbage collection runs much faster and uses much less resources than full garbage collection. The default schedule of the regular garbage collection job is to run once a week.
-- *Full garbage collection* does a much more thorough job finding unreferenced chunks and freeing more disk space. Full garbage collection compacts every container even if just a single chunk in the container is unreferenced. Full garbage collection will also free space that may have been in use if there was a crash or power failure during an optimization job. Full garbage collection jobs will recover 100 percent of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a regular garbage collection job. The full garbage collection job will typically find and release up to 5 percent more of the unreferenced data than a regular garbage collection job. The default schedule of the full garbage collection job is to run every fourth time garbage collection is scheduled.
+- *Regular garbage collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular garbage collection compacts a chunk store container only if a minimum percentage of the chunks are unreferenced. This type of garbage collection runs much faster and uses fewer resources than full garbage collection. The default schedule of the regular garbage collection job is to run once a week.
+- *Full garbage collection* does a much more thorough job of finding unreferenced chunks and freeing more disk space. Full garbage collection compacts every container even if just a single chunk in the container is unreferenced. Full garbage collection will also free space that may have been in use if there was a crash or power failure during an optimization job. Full garbage collection jobs will recover 100 percent of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a regular garbage collection job. The full garbage collection job will typically find and release up to 5 percent more of the unreferenced data than a regular garbage collection job. The default schedule of the full garbage collection job is to run every fourth time garbage collection is scheduled.
 
 <a id="faq-why-disable-full-gc"></a>**Why would I want to disable full garbage collection?**  
 Reasons to avoid running a regular scheduled full garbage collection job:
 
-- Because full garbage collection creates more churn, this could adversely impact the volume’s shadow copies life-time and the size of incremental backup. High churn or I/O intensive deduplication workloads may see large degradation in performance by full garbage collection jobs.           
-- A full garbage collection job can be always run manually from PowerShell to clean up leaks if you know your system crashed.
+- Because full garbage collection creates more churn, this could adversely impact the volume’s lifetime shadow copies and the size of incremental backup. High churn or I/O intensive deduplication workloads may see large degradation in performance by full garbage collection jobs.           
+- You can manually run a full garbage collection job from PowerShell to clean up leaks if you know your system crashed.
