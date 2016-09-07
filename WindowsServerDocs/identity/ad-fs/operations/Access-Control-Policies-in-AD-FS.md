@@ -3,7 +3,7 @@ title: Access Control Policies in AD FS
 description:
 author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 08/31/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -11,7 +11,7 @@ ms.technology: active-directory-federation-services
 ---
 # Access Control Policies in AD FS
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
   
 ## Access Control Policy Templates in AD FS  
