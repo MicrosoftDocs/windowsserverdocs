@@ -28,7 +28,7 @@ Data Deduplication jobs are scheduled via Windows Task Scheduler and can be view
 * [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) modifies an existing scheduled job.
 * [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) removes a scheduled job.
 
-The most common reason for changing when deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weekends and after 7:00 PM on weeknights. To change the schedule, run the following cmdlets in an Administrator context.
+The most common reason for changing when Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weekends and after 7:00 PM on weeknights. To change the schedule, run the following cmdlets in an Administrator context.
 
 1. Disable the scheduled hourly [optimization](understand.md#job-info-optimization) jobs.  
 	```PowerShell
