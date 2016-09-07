@@ -1,0 +1,25 @@
+---
+translation.priority.ht: 
+  - cs-cz
+  - de-at
+  - de-de
+  - es-es
+  - fr-be
+  - fr-fr
+  - hu-hu
+  - it-ch
+  - it-it
+  - ja-jp
+  - ko-kr
+  - nl-be
+  - nl-nl
+  - pl-pl
+  - pt-br
+  - pt-pt
+  - ru-ru
+  - sv-se
+  - tr-tr
+  - zh-cn
+  - zh-tw
+---
+Windows 7 Starter
