@@ -401,7 +401,7 @@
 ###### [Replication error 8451 The replication operation encountered a database error](identity/ad-ds/manage/troubleshoot/Replication-error-8451-The-replication-operation-encountered-a-database-error.md)
 #### [Additional Resources_12](identity/Additional-Resources_12.md)
 ### [Active Directory Federation Services](identity/Active-Directory-Federation-Services.md)
-#### [Getting Started with AD FS](identity/ad-fs/get-started/Getting-Started-with-AD-FS.md)
+#### [Getting Started with AD FS](identity/ad-fs/Getting-Started-with-AD-FS.md)
 
 ####[Configure Additional Authentication Methods for AD FS](identity/ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md)
 ####[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
