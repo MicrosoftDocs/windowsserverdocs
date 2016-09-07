@@ -1,5 +1,5 @@
 ---
-title: Advanced data deduplication settings
+title: Advanced Data Deduplication settings
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -19,16 +19,16 @@ ms.author: wgries
 This document describes how to modify advanced [Data Deduplication](overview.md) settings. For [recommended workloads](install-enable.md#enable-dedup-candidate-workloads), the default settings should be sufficient. The main reason to modify these settings is to improve Data Deduplication's performance with other kinds of workloads.
 
 ## <a id="modifying-job-schedules"></a>Modifying Data Deduplication job schedules
-The [default Data Deduplication job schedules](understand.md#job-info) are designed to work well for recommended workloads and be as non-intrusive as possible (excluding the *priority optimization* job that is enabled for the [**Backup** usage type](understand.md#usage-type-backup)). When workloads have large resource requirements, it is possible to ensure that jobs only run during idle hours, or to reduce or increase the amount of system resources that a data deduplication job is allowed to consume.
+The [default Data Deduplication job schedules](understand.md#job-info) are designed to work well for recommended workloads and be as non-intrusive as possible (excluding the *priority optimization* job that is enabled for the [**Backup** usage type](understand.md#usage-type-backup)). When workloads have large resource requirements, it is possible to ensure that jobs only run during idle hours, or to reduce or increase the amount of system resources that a deduplication job is allowed to consume.
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication schedule
-Data deduplication jobs are scheduled via Windows Task Scheduler and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets that make scheduling easy.
+Data Deduplication jobs are scheduled via Windows Task Scheduler and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets that make scheduling easy.
 * [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx) shows the current scheduled jobs.
 * [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx) creates a new scheduled job.
 * [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) modifies an existing scheduled job.
 * [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) removes a scheduled job.
 
-The most common reason for changing when data deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the data deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weeknights starting at 7 PM and on weekends. To change the schedule, run the following Windows PowerShell cmdlets in an Administrator context.
+The most common reason for changing when deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weekends and after 7:00 PM on weeknights. To change the schedule, run the following cmdlets in an Administrator context.
 
 1. Disable the scheduled hourly [optimization](understand.md#job-info-optimization) jobs.  
 	```PowerShell
@@ -47,7 +47,7 @@ The most common reason for changing when data deduplication jobs run is to ensur
 	New-DedupSchedule -Name "NightlyOptimization" -Type Optimization -DurationHours 11 -Memory 100 -Cores 100 -Priority High -Days @(1,2,3,4,5) -Start (Get-Date "2016-08-08 19:00:00")
 	```
 
-	>[AZURE.NOTE]  
+	>[!NOTE]  
 	> The *date* part of the `System.Datetime` provided to *Start* is irrelevant (as long as its in the past), but the *time* part specifies when the job should start.
 4. Create a weekly garbage collection job that runs on Saturday starting at 7:00 AM with high priority and all the CPUs and memory available on the system.
 	```PowerShell
@@ -60,7 +60,7 @@ The most common reason for changing when data deduplication jobs run is to ensur
 	```
 
 ### <a id="modifying-job-schedules-available-settings"></a>Available job-wide settings
-You can toggle the following settings for new or scheduled data deduplication jobs:
+You can toggle the following settings for new or scheduled deduplication jobs:
 
 <table>
 	<thead>
@@ -112,13 +112,13 @@ You can toggle the following settings for new or scheduled data deduplication jo
 		</tr>
 		<tr>
 			<td>Cores</td>
-			<td>The percentage of cores on the system that data deduplication jobs should use</td>
+			<td>The percentage of cores on the system that deduplication jobs should use</td>
 			<td>Integers 0-100 (indicates a percentage)</td>
-			<td>To control what level of impact data deduplication will have on the compute resources on the system</td>
+			<td>To control what level of impact deduplication will have on the compute resources on the system</td>
 		</tr>
 		<tr>
 			<td>DurationHours</td>
-			<td>The maximum number of hours a data deduplication job should be allowed to run</td>
+			<td>The maximum number of hours a deduplication job should be allowed to run</td>
 			<td>Positive integers</td>
 			<td>To prevent a job for running into a workload's non-idle hours</td>
 		</tr>
@@ -142,13 +142,13 @@ You can toggle the following settings for new or scheduled data deduplication jo
 		</tr>
 		<tr>
 			<td>Memory</td>
-			<td>The percentage of memory on the system that data deduplication jobs should use</td>
+			<td>The percentage of memory on the system that deduplication jobs should use</td>
 			<td>Integers 0-100 (indicates a percentage)</td>
-			<td>To control what level of impact data deduplication will have on the memory resources of the system</td>
+			<td>To control what level of impact deduplication will have on the memory resources of the system</td>
 		</tr>
 		<tr>
 			<td>Name</td>
-			<td>The name of the scheduled data deduplication job</td>
+			<td>The name of the scheduled deduplication job</td>
 			<td>String</td>
 			<td>A job must have a uniquely identifiable name.</td>
 		</tr>
@@ -175,7 +175,7 @@ You can toggle the following settings for new or scheduled data deduplication jo
 
 ## <a id="modifying-volume-settings"></a>Modifying Data Deduplication volume-wide settings
 ### <a id="modifying-volume-settings-how-to-toggle"></a>Toggling volume settings
-You can set the volume-wide default settings for Data Deduplication via the [usage type](understand.md#usage-type) that you select when you enable a data deduplication for a volume. Data Deduplication includes several cmdlets that make editing volume-wide settings easy:
+You can set the volume-wide default settings for Data Deduplication via the [usage type](understand.md#usage-type) that you select when you enable a deduplication for a volume. Data Deduplication includes several cmdlets that make editing volume-wide settings easy:
 
 * [`Get-DedupVolume`](https://technet.microsoft.com/library/hh848448.aspx)
 * [`Set-DedupVolume`](https://technet.microsoft.com/library/hh848438.aspx)
@@ -231,7 +231,7 @@ The main reasons to modify the volume settings from the selected usage type are 
 			<td>MinimumFileAgeDays</td>
 			<td>Number of days after the file is created before the file is considered to be in-policy for optimization.</td>
 			<td>Positive integers (inclusive of zero)</td>
-			<td>The **Default** and **HyperV** usage types set this value to 3 days to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with data deduplication.</td>
+			<td>The **Default** and **HyperV** usage types set this value to 3 days to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.</td>
 		</tr>
 		<tr>
 			<td>MinimumFileSize</td>
@@ -315,19 +315,19 @@ For example, you may want to disable full garbage collection. More information a
 </table>
 
 ## <a id="faq"></a>Frequently asked questions
-<a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting and now data deduplication jobs are slow or don't finish, or my workload performance has decreased. Why?**  
+<a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting and now deduplication jobs are slow or don't finish, or my workload performance has decreased. Why?**  
 These settings give you a lot of power to control how Data Deduplication runs. Use them responsibly, and [monitor performance](run.md#monitoring-dedup).
 
-<a id="faq-running-dedup-jobs-manually"></a>**I want to run a data deduplication job right now, but I don't want to create a new schedule--can I do this?**  
-Yes, [all data deduplication jobs can be run manually](run.md#running-dedup-jobs-manually).
+<a id="faq-running-dedup-jobs-manually"></a>**I want to run a deduplication job right now, but I don't want to create a new schedule--can I do this?**  
+Yes, [all deduplication jobs can be run manually](run.md#running-dedup-jobs-manually).
 
 <a id="faq-full-v-regular-gc"></a>**What is the difference between full and regular garbage collection?**  
 There are two types of [garbage collection](understand.md#job-info-gc):
 
-- *Regular garbage collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular garbage collection compacts a Chunk Store container only if a minimum percentage of the chunks are unreferenced. This type of garbage collection runs much faster and uses fewer resources than full garbage collection. The default schedule of the regular garbage collection job is to run once a week.
+- *Regular garbage collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular garbage collection compacts a chunk store container only if a minimum percentage of the chunks are unreferenced. This type of garbage collection runs much faster and uses fewer resources than full garbage collection. The default schedule of the regular garbage collection job is to run once a week.
 - *Full garbage collection* does a much more thorough job of finding unreferenced chunks and freeing more disk space. Full garbage collection compacts every container even if just a single chunk in the container is unreferenced. Full garbage collection will also free space that may have been in use if there was a crash or power failure during an optimization job. Full garbage collection jobs will recover 100 percent of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a regular garbage collection job. The full garbage collection job will typically find and release up to 5 percent more of the unreferenced data than a regular garbage collection job. The default schedule of the full garbage collection job is to run every fourth time garbage collection is scheduled.
 
 <a id="faq-why-disable-full-gc"></a>**Why would I want to disable full garbage collection?**  
 
-- Because full garbage collection creates more churn. This could adversely impact the volume’s lifetime shadow copies and the size of incremental backup. High churn or I/O-intensive deduplication workloads may see large degradation in performance by full garbage collection jobs.           
+- Garbage collection could adversely affect the volume’s lifetime shadow copies and the size of incremental backup. High churn or I/O-intensive deduplication workloads may see large degradation in performance by full garbage collection jobs.           
 - You can manually run a full garbage collection job from PowerShell to clean up leaks if you know your system crashed.
