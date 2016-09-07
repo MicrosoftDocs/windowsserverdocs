@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
 author: vhorne
-ms.author victorh
+ms.author: victorh
 ---
 # Deploy a Software Defined Network Infrastructure
 
