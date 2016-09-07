@@ -401,6 +401,21 @@
 ###### [Replication error 8451 The replication operation encountered a database error](identity/ad-ds/manage/troubleshoot/Replication-error-8451-The-replication-operation-encountered-a-database-error.md)
 #### [Additional Resources_12](identity/Additional-Resources_12.md)
 ### [Active Directory Federation Services](identity/Active-Directory-Federation-Services.md)
+#### [Getting Started with AD FS](identity/ad-fs/get-started/Getting-Started-with-AD-FS.md)
+
+####[Configure Additional Authentication Methods for AD FS](identity/ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md)
+####[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+####[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+####[Manage Risk with Conditional Access Control](identity/ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
+####[Walkthrough Guide: Manage Risk with Conditional Access Control](identity/ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+####[Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](identity/ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
+####[Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+####[Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+
+
+
+
+
 #### [AD FS Overview](identity/ad-fs/AD-FS-2016-Overview.md)
 ##### [What's new in Active Directory Federation Services for Windows Server 2016 Technical Preview](identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)
 ##### [AD FS Scenarios for Developers](identity/ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
@@ -411,7 +426,7 @@
 ##### [Enabling OpenId Connect with AD FS 2016](identity/ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md)
 ##### [Enabling Oauth Confidential Clients with AD FS 2016](identity/ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
 ##### [Single Page Application with AD FS](identity/ad-fs/development/Single-Page-Application-with-AD-FS.md)
-#### [AD FS 2016 Operations](identity/ad-fs/AD-FS-2016-Operations.md)
+#### [AD FS Operations](identity/ad-fs/AD-FS-2016-Operations.md)
 ##### [AD FS Rapid Restore Tool](identity/ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 ##### [Add an Attribute Store](identity/ad-fs/operations/Add-an-Attribute-Store.md)
 ##### [Create a Relying Party Trust](identity/ad-fs/operations/Create-a-Relying-Party-Trust.md) 

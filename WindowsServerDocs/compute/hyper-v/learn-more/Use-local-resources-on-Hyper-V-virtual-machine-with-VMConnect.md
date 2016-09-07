@@ -23,7 +23,7 @@ When you use Virtual Machine Connection (VMConnect), generation 2 virtual machin
 Enhanced session mode isn't available for generation 1 virtual machines or for virtual machines that run non-Windows operating systems. For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/). 
   
 ## <a name="BKMK_OVER"></a>Turn on enhanced session mode on Hyper-V host  
-If your Hyper-V host runs Windows 8 or Windows 8.1, you might not have to go through the following steps to turn on enhanced session mode. It's turn on by default. But if your host runs  Windows Server 2012  or  Windows Server 2012 R2 , you must turn on enhanced session mode to use it. It is turned off by default for those operating systems.  
+If your Hyper-V host runs Windows 10, Windows 8, or Windows 8.1, you might not have to go through the following steps to turn on enhanced session mode. It's turn on by default. But if your host runs Windows Server 2016, Windows Server 2012, or Windows Server 2012 R2, you must turn on enhanced session mode to use it. It is turned off by default for those operating systems. 
   
 To turn on enhanced session mode,  
   

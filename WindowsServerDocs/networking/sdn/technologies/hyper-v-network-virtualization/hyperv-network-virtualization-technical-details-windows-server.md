@@ -159,7 +159,7 @@ With Windows Server 2016 Technical Preview and later, HNV fully supports NVGRE a
 ## Multi-tenant deployment example  
 The following diagram shows an example deployment of two customers located in a cloud datacenter with the CA-PA relationship defined by the network policies.  
   
-![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF5.gif)  
+![](../../../media/hyper-v-network-virtualization-technical-details-in-windows-server/VNetF5.png)  
   
 Figure 8: Multi-tenant deployment example  
   
