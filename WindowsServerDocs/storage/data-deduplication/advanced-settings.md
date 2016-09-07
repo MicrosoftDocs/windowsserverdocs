@@ -19,7 +19,7 @@ ms.author: wgries
 This document describes how to modify advanced [Data Deduplication](overview.md) settings. For [recommended workloads](install-enable.md#enable-dedup-candidate-workloads), the default settings should be sufficient. The main reason to modify these settings is to improve Data Deduplication's performance with other kinds of workloads.
 
 ## <a id="modifying-job-schedules"></a>Modifying Data Deduplication job schedules
-The [default Data Deduplication job schedules](understand.md#job-info) are designed to work well for recommended workloads and be as non-intrusive as possible (excluding the *priority optimization* job that is enabled for the [**Backup** usage type](understand.md#usage-type-backup)). When workloads have large resource requirements, it is possible to ensure that jobs only run during idle hours, or to reduce or increase the amount of system resources that a deduplication job is allowed to consume.
+The [default Data Deduplication job schedules](understand.md#job-info) are designed to work well for recommended workloads and be as non-intrusive as possible (excluding the *priority optimization* job that is enabled for the [**Backup** usage type](understand.md#usage-type-backup)). When workloads have large resource requirements, it is possible to ensure that jobs run only during idle hours, or to reduce or increase the amount of system resources that a deduplication job is allowed to consume.
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication schedule
 Data Deduplication jobs are scheduled via Windows Task Scheduler and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets that make scheduling easy.
@@ -48,7 +48,7 @@ The most common reason for changing when deduplication jobs run is to ensure tha
 	```
 
 	>[!NOTE]  
-	> The *date* part of the `System.Datetime` provided to *Start* is irrelevant (as long as its in the past), but the *time* part specifies when the job should start.
+	> The *date* part of the `System.Datetime` provided to *Start* is irrelevant (as long as it's in the past), but the *time* part specifies when the job should start.
 4. Create a weekly garbage collection job that runs on Saturday starting at 7:00 AM with high priority and all the CPUs and memory available on the system.
 	```PowerShell
 	New-DedupSchedule -Name "WeeklyGarbageCollection" -Type GarbageCollection -DurationHours 23 -Memory 100 -Cores 100 -Priority High -Days @(6) -Start (Get-Date "2016-08-13 07:00:00")
@@ -98,7 +98,7 @@ You can toggle the following settings for new or scheduled deduplication jobs:
 		</tr>
 		<tr>
 			<td>Days</td>
-			<td>The days that the job is to be scheduled</td>
+			<td>The days that the job is scheduled</td>
 			<td>An array of integers 0-6 representing the days of the week:<ul>
 				<li>0 = Sunday</li>
 				<li>1 = Monday</li>
@@ -132,7 +132,7 @@ You can toggle the following settings for new or scheduled deduplication jobs:
 			<td>Full</td>
 			<td>For scheduling a full garbage collection job</td>
 			<td>Switch (true/false)</td>
-			<td>By default, only every fourth job is a full garbage collection job. This switch allows full garbage collection to be scheduled to run more frequently.</td>
+			<td>By default, every fourth job is a full garbage collection job. With this switch, you can schedule full garbage collection to run more frequently.</td>
 		</tr>
 		<tr>
 			<td>InputOutputThrottle</td>
@@ -156,7 +156,7 @@ You can toggle the following settings for new or scheduled deduplication jobs:
 			<td>ReadOnly</td>
 			<td>Indicates that the scrubbing job processes and reports on corruptions that it finds, but does not run any repair actions</td>
 			<td>Switch (true/false)</td>
-			<td>You would like to manually restore files that sit on bad sections of the disk.</td>
+			<td>You want to manually restore files that sit on bad sections of the disk.</td>
 		</tr>
 		<tr>
 			<td>Start</td>
@@ -168,19 +168,19 @@ You can toggle the following settings for new or scheduled deduplication jobs:
 			<td>StopWhenSystemBusy</td>
 			<td>Specifies whether Data Deduplication should stop if the system is busy</td>
 			<td>Switch (True/False)</td>
-			<td>This switch gives you the ability to control the behavior of Data Deduplication--this is especially important if you desire to run Data Deduplication while your workload is not idle.</td>
+			<td>This switch gives you the ability to control the behavior of Data Deduplication--this is especially important if you want to run Data Deduplication while your workload is not idle.</td>
 		</tr>
 	</tbody>
 </table>
 
 ## <a id="modifying-volume-settings"></a>Modifying Data Deduplication volume-wide settings
 ### <a id="modifying-volume-settings-how-to-toggle"></a>Toggling volume settings
-You can set the volume-wide default settings for Data Deduplication via the [usage type](understand.md#usage-type) that you select when you enable a deduplication for a volume. Data Deduplication includes several cmdlets that make editing volume-wide settings easy:
+You can set the volume-wide default settings for Data Deduplication via the [usage type](understand.md#usage-type) that you select when you enable a deduplication for a volume. Data Deduplication includes cmdlets that make editing volume-wide settings easy:
 
 * [`Get-DedupVolume`](https://technet.microsoft.com/library/hh848448.aspx)
 * [`Set-DedupVolume`](https://technet.microsoft.com/library/hh848438.aspx)
 
-The main reasons to modify the volume settings from the selected usage type are to improve read performance for specific files (such as multimedia or other already compressed file types) or to fine-tune Data Deduplication for better optimization for your specific workload. The following example shows how to modify the Data Deduplication volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files that change frequently.
+The main reasons to modify the volume settings from the selected usage type are to improve read performance for specific files (such as multimedia or other file types that are already compressed) or to fine-tune Data Deduplication for better optimization for your specific workload. The following example shows how to modify the Data Deduplication volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files that change frequently.
 
 1. See the current volume settings for Cluster Shared Volume 1.
 	```PowerShell
@@ -196,16 +196,16 @@ The main reasons to modify the volume settings from the selected usage type are 
 <table>
 	<thead>
 		<tr>
-			<th style="min-width:125px">Setting Name</th>
+			<th style="min-width:125px">Setting name</th>
 			<th>Definition</th>
-			<th>Accepted Values</th>
+			<th>Accepted values</th>
 			<th>Why would you want to modify this value?</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>ChunkRedundancyThreshold</td>
-			<td>The number of times that a chunk is referenced before a chunk is duplicated into the Hotspot section of the Chunk Store. The value of the Hotspot section is that so-called "hot" chunks that are referenced frequently have multiple access paths to improve access time.</td>
+			<td>The number of times that a chunk is referenced before a chunk is duplicated into the hotspot section of the Chunk Store. The value of the hotspot section is that so-called "hot" chunks that are referenced frequently have multiple access paths to improve access time.</td>
 			<td>Positive integers</td>
 			<td>The main reason to modify this number is to increase the savings rate for volumes with high duplication. In general, the default value (100) is the recommended setting, and you shouldn't need to modify this.</td>
 		</tr>
@@ -213,7 +213,7 @@ The main reasons to modify the volume settings from the selected usage type are 
 			<td>ExcludeFileType</td>
 			<td>File types that are excluded from optimization</td>
 			<td>Array of file extensions</td>
-			<td>Some file types, particularly multimedia or already compressed files, do not benefit very much from being optimized. This setting allows you to configure which types are excluded.</td>
+			<td>Some file types, particularly multimedia or files that are already compressed, do not benefit very much from being optimized. This setting allows you to configure which types are excluded.</td>
 		</tr>
 		<tr>
 			<td>ExcludeFolder</td>
@@ -231,7 +231,7 @@ The main reasons to modify the volume settings from the selected usage type are 
 			<td>MinimumFileAgeDays</td>
 			<td>Number of days after the file is created before the file is considered to be in-policy for optimization.</td>
 			<td>Positive integers (inclusive of zero)</td>
-			<td>The **Default** and **HyperV** usage types set this value to 3 days to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.</td>
+			<td>The **Default** and **HyperV** usage types set this value to 3 to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.</td>
 		</tr>
 		<tr>
 			<td>MinimumFileSize</td>
@@ -255,13 +255,13 @@ The main reasons to modify the volume settings from the selected usage type are 
 			<td>OptimizeInUseFiles</td>
 			<td>When enabled, files that have active handles against them will be considered as in-policy for optimization.</td>
 			<td>True/false</td>
-			<td>Enable this setting if your workload keeps files open for extended periods of time. Without this setting enabled, a file would never get optimized if the workload has an open handle to it, even if it's only occasionally appending data at the end.</td>
+			<td>Enable this setting if your workload keeps files open for extended periods of time. If this setting is not enabled, a file would never get optimized if the workload has an open handle to it, even if it's only occasionally appending data at the end.</td>
 		</tr>
 		<tr>
 			<td>OptimizePartialFiles</td>
 			<td>When enabled, the MinimumFileAge value applies to segments of a file rather than to the whole file.</td>
 			<td>True/false</td>
-			<td>Enable this setting if your workload works with large, often edited files where most of the file content is untouched. Without this setting enabled, these files would never get optimized because they keep getting changed, even though most of the file content is ready to be optimized.</td>
+			<td>Enable this setting if your workload works with large, often edited files where most of the file content is untouched. If this setting is not enabled, these files would never get optimized because they keep getting changed, even though most of the file content is ready to be optimized.</td>
 		</tr>
 		<tr>
 			<td>Verify</td>
@@ -315,7 +315,7 @@ For example, you may want to disable full garbage collection. More information a
 </table>
 
 ## <a id="faq"></a>Frequently asked questions
-<a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting and now deduplication jobs are slow or don't finish, or my workload performance has decreased. Why?**  
+<a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting, and now deduplication jobs are slow or don't finish, or my workload performance has decreased. Why?**  
 These settings give you a lot of power to control how Data Deduplication runs. Use them responsibly, and [monitor performance](run.md#monitoring-dedup).
 
 <a id="faq-running-dedup-jobs-manually"></a>**I want to run a deduplication job right now, but I don't want to create a new schedule--can I do this?**  
