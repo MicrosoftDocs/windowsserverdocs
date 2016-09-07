@@ -211,14 +211,14 @@ To create a Nano Server image to serve as a Hyper-V host, run the following:
   
 Where  
 -   -MediaPath is the root of the DVD media or ISO image containing Windows Server Technical Preview .  
--   -BasePath will contain a copy of the Nano Server binaries, so you can use New-NanoServerWim -BasePath without having to specify -MediaPath in future runs.  
+-   -BasePath will contain a copy of the Nano Server binaries, so you can use New-NanoServerImage -BasePath without having to specify -MediaPath in future runs.  
 -   -TargetPath will contain the resulting .wim file containing the roles & features you selected. Make sure to specify the .wim extension.  
 -   -Compute adds the Hyper-V role.  
 -   -OemDrivers adds a number of common drivers.  
   
 You will be prompted to enter an administrator password.  
   
-For more information, run `Get-Help New-NanoServerWim -Full`.  
+For more information, run `Get-Help New-NanoServerImage -Full`.  
    
 Boot into WinPE and ensure that the .wim file just created is accessible from WinPE. (You could, for example, copy the .wim file to a bootable WinPE image on a USB flash drive.)  
   
@@ -813,7 +813,10 @@ To provide Nano Server with the DNS Server role, add the Microsoft-NanoServer-DN
   
 ## <a name="BKMK_IIS"></a>Using IIS on Nano Server  
 For steps to use the Internet Information Services (IIS) role, see [IIS on Nano Server](IIS-on-Nano-Server.md).  
-  
+
+## <a name="BKMK_SSH"></a>Using SSH on Nano Server
+For instructions on how to install and use SSH on Nano Server with the OpenSSH project, see the [Win32-OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki).
+
 ## Appendix 1: Sample Unattend.xml file  
 In this sample, the **offlineServicing** section is applied by the DISM command as soon as you run it, but the other sections are added to the image later when the server starts for the first time.  
   

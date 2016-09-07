@@ -24,7 +24,7 @@ Cloud Witness is a new type of Failover Cluster quorum witness being introduced 
 ## <a name="BKMK_CloudWitnessOverview"></a>Cloud Witness Overview
 Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016 Technical Preview. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.  
 
-![](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png)
+![File Share Witness in a 3rd separate site with 2 nodes in 2 other sites](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "File Share Witness")
 
 **Figure 1: Using a File Share Witness as a quorum witness**  
 
