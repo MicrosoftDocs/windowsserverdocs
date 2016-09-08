@@ -37,7 +37,7 @@ This walkthrough uses the following environment as an example:
 
 -   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and one called **Bellevue**.  
 
-![](./media/Cluster-to-Cluster-Storage-Replication/Storage_SR_ClustertoCluster.png)  
+![](./media/Cluster-to-Cluster-Storage-Replication/SR_ClustertoCluster.png)  
 
 **FIGURE: Cluster to Cluster Replication**  
 
