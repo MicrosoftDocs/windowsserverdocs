@@ -30,7 +30,7 @@ The following feature distribution map indicates the features in each version. T
   
   
 |**Feature**|**Windows Server operating system version**|**10.3**|**10.2**|**10 - 10.1**|**9.1 - 9.3**|**8.4**|  
-|-|-|-|-|-|-|  
+|-|-|-|-|-|-|-|  
 |**Availability**||Built in|Built in|Built in|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 1|[Ports](http://svnweb.freebsd.org/ports/head/emulators/hyperv-is/) Note 2|  
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004; Note 3|&#10004; Note 3|  
 |**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||| 
