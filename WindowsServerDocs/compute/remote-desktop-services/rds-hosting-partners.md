@@ -4,16 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/30/2016  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Hosting Windows Desktop and applications using Remote Desktop Services in Azure -  new learning path within the Microsoft Partner Network
 

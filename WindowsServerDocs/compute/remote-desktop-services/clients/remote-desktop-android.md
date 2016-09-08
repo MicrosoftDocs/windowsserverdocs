@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Get started with Remote Desktop on Android
 
