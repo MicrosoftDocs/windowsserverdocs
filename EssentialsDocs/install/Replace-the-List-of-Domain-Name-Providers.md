@@ -85,7 +85,7 @@ You can replace the list of domain name providers that is displayed in the Set U
     >  A slash (/) is required at the end of the URL.  
   
 ###  <a name="BKMK_ReplaceDomainNameProviders"></a> Domain name status issues  
- If a partner adds domain name providers and uses an application programming interface (API) in the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] SDK to set the Unknown, Failed, and CertificateRequestNotSubmitted statuses for the certificate, the customer receives an incorrect message and configuration result. This is because the cases are handled by exceptions rather than returning a status.  
+ If a partner adds domain name providers and uses an application programming interface (API) in the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials SDK to set the Unknown, Failed, and CertificateRequestNotSubmitted statuses for the certificate, the customer receives an incorrect message and configuration result. This is because the cases are handled by exceptions rather than returning a status.  
   
  The following domain statuses are failures and should be reported as an error:  
   

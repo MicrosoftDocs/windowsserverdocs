@@ -27,51 +27,51 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot Windows Server Essentials installation
-This topic provides troubleshooting for issues that occur when installing [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)]. Guidance is provided in the following areas:  
+This topic provides troubleshooting for issues that occur when installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. Guidance is provided in the following areas:  
   
 -   [General troubleshooting steps](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_GeneralTroubleshootingSteps)  
   
 -   [Troubleshoot driver issues](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
   
 > [!NOTE]
->  For the most current troubleshooting information from the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
 ##  <a name="BKMK_GeneralTroubleshootingSteps"></a> General troubleshooting steps  
- If the installation of [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] fails, take these steps to help identify the issue that caused the failure.  
+ If the installation of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials fails, take these steps to help identify the issue that caused the failure.  
   
 > [!IMPORTANT]
->  It is important that you do not manually restart your server while installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. The server restarts automatically several times during setup and initial configuration. If you restarted the server manually before you saw the **Server installation successful** message, that might have interrupted the installation and caused it to fail.  
+>  It is important that you do not manually restart your server while installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. The server restarts automatically several times during setup and initial configuration. If you restarted the server manually before you saw the **Server installation successful** message, that might have interrupted the installation and caused it to fail.  
   
 #### To identify issues in a failed installation of Windows Server 2012 Essentials  
   
 1.  Verify that your server hardware meets the minimum requirements. For information about hardware requirements, see [System Requirements for Windows Server 2012 Essentials](../install/System-Requirements-for-Windows-Server-2012-Essentials.md).  
   
-2.  If you received the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] installation DVD from MSDN, verify that the DVD is valid by checking the SHA1 sum. For more information, see [Availability and description of the File Checksum Integrity Verifier utility](http://go.microsoft.com/fwlink/?LinkId=220495) (http://go.microsoft.com/fwlink/?LinkId=220495).  
+2.  If you received the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials installation DVD from MSDN, verify that the DVD is valid by checking the SHA1 sum. For more information, see [Availability and description of the File Checksum Integrity Verifier utility](http://go.microsoft.com/fwlink/?LinkId=220495) (http://go.microsoft.com/fwlink/?LinkId=220495).  
   
 3.  Verify that the network adapter on the server is connected to a router by a network cable.  
   
 4.  If the server has more than one network adapter, verify that only one network adapter is enabled.  
   
     > [!IMPORTANT]
-    >  Do not disconnect the network cable or restart the router while installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+    >  Do not disconnect the network cable or restart the router while installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 5.  Review "Server installation and deployment" in [Release Documentation for Windows Server 2012 Essentials](../install/Release-Documentation-for-Windows-Server-2012-Essentials.md) (http://technet.microsoft.com/library/jj200180.aspx) for known issues.  
   
-6.  If you receive the error message “An error occurred while setting up your server” during installation, use the Server Recovery DVD and the instructions provided by the manufacturer of your hardware to restore the server to factory default settings.  
+6.  If you receive the error message “An error occurred while setting up your server�? during installation, use the Server Recovery DVD and the instructions provided by the manufacturer of your hardware to restore the server to factory default settings.  
   
 ##  <a name="BKMK_TroubleshootDrivers"></a> Troubleshoot driver issues  
- The most common issue when installing [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] is storage controllers that need to have drivers manually installed. Windows includes drivers for many storage controllers, but it might not include drivers for your specific hardware.  
+ The most common issue when installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials is storage controllers that need to have drivers manually installed. Windows includes drivers for many storage controllers, but it might not include drivers for your specific hardware.  
   
  You might also need to manually install network-card drivers for your specific hardware.  
   
 ###  <a name="BKMK_StorageDrivers"></a> Adding drivers for storage controllers  
- If your hardware requires storage drivers that are not included with [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)], use the following information to complete Setup.  
+ If your hardware requires storage drivers that are not included with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, use the following information to complete Setup.  
   
  If you see the following message during Setup, you need to manually add drivers for your storage controller:  
   
  **Windows Server Setup Error**  
   
- Hard disk drive capable of hosting [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] was not found. Would you like to load additional storage drivers?  
+ Hard disk drive capable of hosting --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials was not found. Would you like to load additional storage drivers?  
   
  Use the following procedure to install a storage controller driver.  
   
@@ -83,11 +83,11 @@ This topic provides troubleshooting for issues that occur when installing [!INCL
   
 3.  Attach the floppy drive or USB flash drive with the drivers to the computer  
   
-4.  Boot the computer from the [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] DVD.  
+4.  Boot the computer from the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials DVD.  
   
-     If any storage controller drivers are missing, the [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] Setup Error dialog box is displayed.  
+     If any storage controller drivers are missing, the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Setup Error dialog box is displayed.  
   
-5.  In the [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] Setup Error dialog box, click **Yes** to load the additional storage drivers.  
+5.  In the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Setup Error dialog box, click **Yes** to load the additional storage drivers.  
   
 6.  At the **Please select your driver's inf file** prompt, navigate to the .inf file in the DRIVERS folder on your floppy disk or USB flash drive, select the file, right-click the file name, and then click **Open**. This loads the driver.  
   
@@ -99,9 +99,9 @@ This topic provides troubleshooting for issues that occur when installing [!INCL
  Setup should now continue normally.  
   
 ###  <a name="BKMK_AddingNICdrivers"></a> Adding drivers for network adapters  
- If a network adapter on the computer is not supported by [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)], your server will not have network connectivity after Setup completes, and you will not be able to connect computers to your server.  
+ If a network adapter on the computer is not supported by --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, your server will not have network connectivity after Setup completes, and you will not be able to connect computers to your server.  
   
- At the end of the [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] installation, you are informed if a network adapter driver was not automatically installed. You can also use **Network connections** in Control Panel to check for a missing network adapter driver. If you do not see a network connection associated with the network adapter on your server, you need to install a driver.  
+ At the end of the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials installation, you are informed if a network adapter driver was not automatically installed. You can also use **Network connections** in Control Panel to check for a missing network adapter driver. If you do not see a network connection associated with the network adapter on your server, you need to install a driver.  
   
  If the computer is missing a supported driver for any network adapter, you need to manually install the right network adapter driver and then restart the server. Use the following procedure.  
   
@@ -114,4 +114,4 @@ This topic provides troubleshooting for issues that occur when installing [!INCL
 3.  Restart the computer.  
   
     > [!IMPORTANT]
-    >  If you do not restart the server after you install the missing network adapter driver, installation of the [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] connector software on your client computers might fail.
+    >  If you do not restart the server after you install the missing network adapter driver, installation of the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials connector software on your client computers might fail.

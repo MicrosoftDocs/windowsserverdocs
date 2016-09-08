@@ -49,7 +49,7 @@ This section provides information about migrating data and settings from the Sou
   
 -   The **Client Computer Backup** folder cannot be migrated to the Destination Server. Before the server migration, make sure that all the client computers are healthy. After the server migration, it is recommended that you configure and start client computer backups to ensure that the data is backed up for all your important client computers.  
   
--   The **File History Backups** folder cannot be directly migrated to the Destination Server due to the folder structure and backup metadata changes in [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)]. However, it is possible to migrate the **File History Backups** folder for a specific user on a specific computer. To do so, you should locate the **Data** folder in the **File History Backups** folder for that user and computer, then copy that **Data** folder to the **File History Backups** folder on the Destination Server.  
+-   The **File History Backups** folder cannot be directly migrated to the Destination Server due to the folder structure and backup metadata changes in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. However, it is possible to migrate the **File History Backups** folder for a specific user on a specific computer. To do so, you should locate the **Data** folder in the **File History Backups** folder for that user and computer, then copy that **Data** folder to the **File History Backups** folder on the Destination Server.  
   
 #### To copy data from the Source Server to the Destination Server  
   
@@ -69,7 +69,7 @@ This section provides information about migrating data and settings from the Sou
   
     -   *<SharedDestinationFolderName\>* is the folder on the Destination Server to which the data will be copied  
   
-     For example,  `robocopy \\sourceserver\MyData “d:\ServerFolders\MyData” /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
+     For example,  `robocopy \\sourceserver\MyData “d:\ServerFolders\MyData�? /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
   
 3.  If you use Windows PowerShell, type the following command, and then press ENTER.  
   
@@ -101,7 +101,7 @@ This section provides information about migrating data and settings from the Sou
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] Dashboard.  
+1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

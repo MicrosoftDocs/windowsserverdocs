@@ -20,6 +20,6 @@ manager: stevenka
  Published: May 2012  
   
 ### Abstract  
- This document provides step-by-step instructions for installing and configuring [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials/includes/sbs_sbs8web_2_md.md)], including preinstallation tasks and information about system requirements.  
+ This document provides step-by-step instructions for installing and configuring --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, including preinstallation tasks and information about system requirements.  
   
  ![Microsoft logo](../windows-server-essentials-notinTOC/media/DocCoverBottom.gif "DocCoverBottom")

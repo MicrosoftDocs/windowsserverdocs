@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Additional Customizations
-You can make the following additional customizations to create and customize an image of [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)]:  
+You can make the following additional customizations to create and customize an image of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials:  
   
 -   [Add Branding to the Dashboard, Remote Web Access, and Launchpad](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
   

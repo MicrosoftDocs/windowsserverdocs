@@ -31,12 +31,12 @@ translation.priority.ht:
   - zh-tw
 ---
 # Join computers to the new Windows Server 2012 Essentials server2
-The next step in the migration process is to connect client computers to the new [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server.  
+The next step in the migration process is to connect client computers to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server.  
   
 > [!NOTE]
 >  You can skip this step for computers that are running the Windows XP or Windows Vista operating systems. The Windows Server Connector software does not support computers that are running Windows XP or Windows Vista.  
   
- Before you can join a client computer to the new [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server, you must first disconnect it from the Source Server by uninstalling the Windows Server Connector software on the client computer.  
+ Before you can join a client computer to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server, you must first disconnect it from the Source Server by uninstalling the Windows Server Connector software on the client computer.  
   
 ### To uninstall the Windows Server Connector on a client computer  
   
@@ -55,4 +55,4 @@ The next step in the migration process is to connect client computers to the new
   
 3.  In the address bar, type **http://<servername\>/Connect**, and then press ENTER.  
   
-4.  Follow the onscreen instructions to join the client computer to the new [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server.
+4.  Follow the onscreen instructions to join the client computer to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server.

@@ -27,7 +27,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Set up or customize server backup
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Server backup is not automatically configured during installation. You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days.  
   
@@ -60,7 +60,7 @@ translation.priority.ht:
     >  If you start the wizard before attaching the external hard drive to the server, click **Refresh list** on the **Select the backup destination** page after attaching the hard drive.  
   
 > [!NOTE]
->  In the default installation of [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
+>  In the default installation of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, the server is configured to automatically perform a defragmentation once each week. This can result in larger than normal backups if you use non-Microsoft imaging software. If it is not necessary to defragment the server on a regular basis, you can follow these steps to turn off the defragmentation schedule:  
 >   
 >  1.  Press the Windows key + W to open **Search**.  
 > 2.  In the Search text box, type **Defragment**.  
@@ -87,7 +87,7 @@ translation.priority.ht:
   
 -   If you choose a drive that contains previous backups as the backup target, the wizard allows you choose if you want to keep the previous backups. If you keep the backups, the wizard does not format the drive.  
   
--   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)].  
+-   You should visit the website for your external storage drive manufacturer to ensure that your backup drive is supported on computers running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 -   The drive cannot contain an Extensible Firmware Interface (EFI) system partition. If an EFI partition is present on a USB drive, it is assumed that the disk is a startup disk. If you are certain that you don’t need the data on the disk, you can reformat the disk and use it for backups.  
   

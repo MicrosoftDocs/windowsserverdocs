@@ -34,7 +34,7 @@ translation.priority.ht:
 ##  <a name="BKMK_MLHeadedRecovery"></a> Create a server setup and server recovery DVD for multiple language support on locally administered servers  
   
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] langauage pack into install.wim.  
+>  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials langauage pack into install.wim.  
   
  There are two phases of setup: the Windows Preinstallation Environment (Windows PE) and the initial configuration. By default, the language selection page in initial configuration will not be displayed.  
   
@@ -62,23 +62,23 @@ translation.priority.ht:
   
 -   A technician computer that provides all the tools and source files necessary to create a customized WinPE image. For more information, see [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md).  
   
--   A [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] DVD.  
+-   A --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials DVD.  
   
--   A [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Language Pack DVD.  
+-   A --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Language Pack DVD.  
   
 ###  <a name="BKMK_Steps"></a> Adding multiple language support  
- To add multiple language support to Windows Setup you update the Install.wim by adding the [!INCLUDE[win8_server_2](../install/includes/win8_server_2_md.md)] and the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] language packs to it.  
+ To add multiple language support to Windows Setup you update the Install.wim by adding the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 and the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials language packs to it.  
   
 #### Update Install.wim  
- In this step, you add [!INCLUDE[win8_server_2](../install/includes/win8_server_2_md.md)] and [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] language packs into Install.wim.  
+ In this step, you add --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials language packs into Install.wim.  
   
 > [!NOTE]
->  Verify that you install language packs for [!INCLUDE[win8_server_2](../install/includes/win8_server_2_md.md)]. This assures that you get the appropriate branding. The [!INCLUDE[win8_server_2](../install/includes/win8_server_2_md.md)] Multilingual User Interface Language Packs are available on [Microsoft.com](http://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Please follow the instructions as described in the [Walkthrough: Multilingual Windows Image Creation on creating a multilingual](http://technet.microsoft.com/library/jj126995.aspx) on creating a multilingual Windows image before you add the Windows Server 2012 Essentials language pack into install.wim.  
+>  Verify that you install language packs for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012. This assures that you get the appropriate branding. The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Multilingual User Interface Language Packs are available on [Microsoft.com](http://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Please follow the instructions as described in the [Walkthrough: Multilingual Windows Image Creation on creating a multilingual](http://technet.microsoft.com/library/jj126995.aspx) on creating a multilingual Windows image before you add the Windows Server 2012 Essentials language pack into install.wim.  
 >   
 >  Windows Server 2012 Essentials language packs are available in the Language pack media at \Language Packs\\<CultureName\>.  
   
 > [!NOTE]
->  Not all language packs may not available prior to the release of [!INCLUDE[win8_server_2](../install/includes/win8_server_2_md.md)].  
+>  Not all language packs may not available prior to the release of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012.  
   
 ###### To add language packs to Install.wim  
   

@@ -31,10 +31,10 @@ translation.priority.ht:
   - zh-tw
 ---
 # Hardware Requirements for the Target Computer
-This section provides hardware requirements for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+This section provides hardware requirements for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 ## Hardware requirements for Windows Server 2012 Essentials  
- You must install [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on the target computer that meets the requirements in the following table.  
+ You must install --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on the target computer that meets the requirements in the following table.  
   
 ### Table 1:  System Requirements for Windows Server 2012 Essentials  
   
@@ -44,7 +44,7 @@ This section provides hardware requirements for [!INCLUDE[sbs_sbs8web_2](../inst
 |Memory (RAM)|2 GB|16 GB|64 GB|  
 |Hard disks and available storage space|160 GB hard disk with a 60 GB system partition||No limit|  
   
- *Recommended hardware requirements to support [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] maximum user and device limits.  
+ *Recommended hardware requirements to support --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials maximum user and device limits.  
   
 ## Additional hardware and software requirements  
  The following table lists additional hardware and software requirements.  
@@ -61,7 +61,7 @@ This section provides hardware requirements for [!INCLUDE[sbs_sbs8web_2](../inst
   
  For more information about the hardware requirements, see the [Windows Server Catalog](http://www.windowsservercatalog.com).  
   
- All server hardware should meet the requirements established for the [!INCLUDE[win8_server_2](../install/includes/win8_server_2_md.md)] Logo Program for Systems. For more information, see [Windows Logo Program](http://www.microsoft.com/whdc/winlogo/hwrequirements.mspx).  
+ All server hardware should meet the requirements established for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Logo Program for Systems. For more information, see [Windows Logo Program](http://www.microsoft.com/whdc/winlogo/hwrequirements.mspx).  
   
 ## See Also  
  [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   

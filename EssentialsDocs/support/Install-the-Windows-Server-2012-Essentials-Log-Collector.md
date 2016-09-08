@@ -30,7 +30,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Install the Windows Server 2012 Essentials Log Collector
-The [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
+The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
   
 ###  <a name="BKMK_ToInstall"></a> To install the Log Collector  
   
@@ -65,7 +65,7 @@ The [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Colle
   
 ##### To manually install the Log Collector  
   
-1.  Rename the extension of the downloaded installation file from “.wssx” to “.cab”.  
+1.  Rename the extension of the downloaded installation file from “.wssx�? to “.cab�?.  
   
 2.  Double-click the installation file name.  
   

@@ -123,7 +123,7 @@ Move settings and data to the Destination Server as follows:
 >  If you have set up an on-premises Exchange server on a second server, you must ensure port 25 (for SMTP) is also open and that it is redirected to the IP address of the on-premises Exchange server.  
   
 ##  <a name="BKMK_RemoveLegacyADGPO"></a> Remove legacy Active Directory Group Policy objects (optional)  
- The Group Policy objects (GPOs) are updated for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. They are a superset of the Windows SBS 2008 GPOs. For [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a number of the Windows SBS 2008 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] GPOs and WMI filters.  
+ The Group Policy objects (GPOs) are updated for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. They are a superset of the Windows SBS 2008 GPOs. For --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, a number of the Windows SBS 2008 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials GPOs and WMI filters.  
   
 > [!NOTE]
 >  If you modified the original Windows SBS 2008 Group Policy objects, you should save copies of them in a different location, and then delete them from Windows SBS 2008.  
@@ -146,7 +146,7 @@ Move settings and data to the Destination Server as follows:
   
     -   Small Business Server Domain Password Policy  
   
-         We recommend you configure the password policy in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] to enforce strong passwords. To configure the password policy, use the Dashboard, which writes the configuration to the default domain policy. The password policy configuration is not written to the Small Business Server Domain Password Policy object, as it was in Windows SBS 2008.  
+         We recommend you configure the password policy in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials to enforce strong passwords. To configure the password policy, use the Dashboard, which writes the configuration to the default domain policy. The password policy configuration is not written to the Small Business Server Domain Password Policy object, as it was in Windows SBS 2008.  
   
     -   Small Business Server Internet Connection Firewall  
   
@@ -187,11 +187,11 @@ Move settings and data to the Destination Server as follows:
 7.  Confirm that these three WMI filters are deleted.  
   
 ##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
- In Windows SBS 2008, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows SBS 2008 must be mapped to one or more computers.  
+ In Windows SBS 2008, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows SBS 2008 must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard.  
+1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

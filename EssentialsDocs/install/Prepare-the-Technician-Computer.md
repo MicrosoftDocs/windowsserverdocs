@@ -35,7 +35,7 @@ The technician computer contains the tools and documentation in the Windows Asse
   
 -   Prepare a computer with the Windows 7 or Windows 8 Consumer Preview.  
   
--   Install Windows ADK on the computer running Windows 7 or [!INCLUDE[win8_client_2](../install/includes/win8_client_2_md.md)] from the [Microsoft website](http://go.microsoft.com/fwlink/?LinkID=248647).  
+-   Install Windows ADK on the computer running Windows 7 or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 8 from the [Microsoft website](http://go.microsoft.com/fwlink/?LinkID=248647).  
   
 ## See Also  
  [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   

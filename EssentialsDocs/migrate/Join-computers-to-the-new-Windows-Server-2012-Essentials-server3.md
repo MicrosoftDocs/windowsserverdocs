@@ -32,9 +32,9 @@ translation.priority.ht:
 ---
 # Join computers to the new Windows Server 2012 Essentials server3
 ##  <a name="BKMK_JoinComputers"></a>   
- The next step in the migration process is to join client computers to the new [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server by reinstalling the Windows Server Connector software.  
+ The next step in the migration process is to join client computers to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server by reinstalling the Windows Server Connector software.  
   
- Before you can connect a client computer to the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server, you must disconnect it from the Source Server by uninstalling the Windows Server Connector software.  
+ Before you can connect a client computer to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server, you must disconnect it from the Source Server by uninstalling the Windows Server Connector software.  
   
 #### To uninstall the Windows Server Connector software on a client computer  
   

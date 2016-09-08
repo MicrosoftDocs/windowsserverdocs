@@ -60,7 +60,7 @@ Complete the following preliminary steps to ensure that the settings and data on
  Before you begin the migration, you should install the latest updates and service packs on the Source Server.  
   
 ###  <a name="BKMK_Verify"></a> Verify the network configuration  
- Before you can migrate your network to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you must install and configure a router on your network and configure the Source Server to use one network adapter. When you are done, your network will look like the following figure.  
+ Before you can migrate your network to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you must install and configure a router on your network and configure the Source Server to use one network adapter. When you are done, your network will look like the following figure.  
   
  ![Example small business network](../migrate/media/WSE_Network.png "WSE_Network")  
   
@@ -68,7 +68,7 @@ Complete the following preliminary steps to ensure that the settings and data on
  If you are using a VPN on the Source Server, disable it.  
   
 ####  <a name="BKMK_VerifyTheDHCPSettings"></a> Verify the settings for the DHCP Server role  
- [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] does not run the DHCP Server role by default. During migration, you can manage the DHCP Server role from the Source Server or from the router, depending on your current network configuration:  
+ --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials does not run the DHCP Server role by default. During migration, you can manage the DHCP Server role from the Source Server or from the router, depending on your current network configuration:  
   
 -   If you are running the DHCP Server role on the Source Server, we recommend that you continue to run this role from the Source Server during migration. After you have removed the Source Server from the network, move the DHCP Server role to the router.  
   
@@ -92,7 +92,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 3.  If updates are found, click **Install updates**.  
   
 ####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> Synchronize the Source Server time with an external time source  
- The time on the Source Server must be set to within five minutes of the time on the Destination Server, and the date and time zone must be the same on both servers. If the Source Server is running in a virtual machine, the date, time, and time zone on the host server must match that of the Source Server and the Destination Server. To help ensure that [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] is installed successfully, you must synchronize the Source Server time to the Network Time Protocol (NTP) server on the Internet.  
+ The time on the Source Server must be set to within five minutes of the time on the Destination Server, and the date and time zone must be the same on both servers. If the Source Server is running in a virtual machine, the date, time, and time zone on the host server must match that of the Source Server and the Destination Server. To help ensure that --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials is installed successfully, you must synchronize the Source Server time to the Network Time Protocol (NTP) server on the Internet.  
   
 ###### To synchronize the Source Server time with the NTP server  
   
@@ -107,10 +107,10 @@ Complete the following preliminary steps to ensure that the settings and data on
 5.  At the command prompt, type **net start w32time**, and then press ENTER.  
   
 > [!IMPORTANT]
->  During the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] installation, you have an opportunity to verify the time on the Destination Server and change it, if necessary. Ensure that the time is within five minutes of the time that is set on the Source Server. When the installation finishes, the Destination Server synchronizes with the NTP. All domain-joined computers, including the Source Server, synchronize to the Destination Server, which assumes the role of the primary domain controller (PDC) emulator master.  
+>  During the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials installation, you have an opportunity to verify the time on the Destination Server and change it, if necessary. Ensure that the time is within five minutes of the time that is set on the Source Server. When the installation finishes, the Destination Server synchronizes with the NTP. All domain-joined computers, including the Source Server, synchronize to the Destination Server, which assumes the role of the primary domain controller (PDC) emulator master.  
   
 ###  <a name="BKMK_MPT"></a> Run the Migration Preparation Tool on the Source Server  
- You cannot perform a migration mode installation without first running the Migration Preparation Tool on your Source Server. This tool is designed to prepare your Source Server and domain to be migrated to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ You cannot perform a migration mode installation without first running the Migration Preparation Tool on your Source Server. This tool is designed to prepare your Source Server and domain to be migrated to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 > [!IMPORTANT]
 >  Back up your Source Server before you run the Migration Preparation Tool. All changes that the Migration Preparation Tool makes to the schema are irreversible. If you experience issues during the migration, the only way to return the Source Server to the state it was in before you ran the tool is to restore the server from a system backup.  
@@ -149,7 +149,7 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 ##### To install and run the Migration Preparation Tool on the Source Server  
   
-1.  Insert [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] DVD1 in the DVD drive on the Source Server.  
+1.  Insert --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials DVD1 in the DVD drive on the Source Server.  
   
 2.  Open Windows Explorer, browse to the **\support\tools** folder of the DVD, and then double-click the **sourcetool.msi** file.  
   
@@ -162,7 +162,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 3.  In the **Migration Preparation Tool**, select **I have a backup and am ready to proceed**, and then click **Next**.  
   
     > [!NOTE]
-    >  If you receive an error message relating to hotfix installation, see “Method 2: Rename the Catroot2 Folder” in [article 822798](http://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
+    >  If you receive an error message relating to hotfix installation, see “Method 2: Rename the Catroot2 Folder�? in [article 822798](http://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.  
   
      The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.  
   
@@ -176,10 +176,10 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 5.  In the Migration Preparation Tool, click **Finish**.  
   
-6.  When the Migration Preparation Tool finishes, you may be prompted to restart the Source Server before you can begin migrating to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+6.  When the Migration Preparation Tool finishes, you may be prompted to restart the Source Server before you can begin migrating to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 > [!NOTE]
->  You must complete a successful run of the Migration Preparation Tool on the Source Server within two weeks of installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on the Destination Server. Otherwise, installation of [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on the Destination Server will be blocked. If this occurs, you must run the Migration Preparation Tool on the Source Server again.  
+>  You must complete a successful run of the Migration Preparation Tool on the Source Server within two weeks of installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on the Destination Server. Otherwise, installation of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on the Destination Server will be blocked. If this occurs, you must run the Migration Preparation Tool on the Source Server again.  
   
 ###  <a name="BKMK_PlanToMigrateLineOfBusinessApplications"></a> Create a plan to migrate line-of-business applications  
  A line-of-business (LOB) application is a critical computer application that is vital to running a business. LOB applications include accounting, supply-chain management, and resource-planning applications.  
@@ -187,7 +187,7 @@ Complete the following preliminary steps to ensure that the settings and data on
  When you plan to migrate your LOB applications, consult with the LOB application providers to determine the appropriate method for migrating each application. You also must locate the media that is used to install the LOB applications on the Destination Server.  
   
 > [!NOTE]
->  If you used the Windows Server 2008 Foundation SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you must also update the add-in and deploy it on the Destination Server.  
+>  If you used the Windows Server 2008 Foundation SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you must also update the add-in and deploy it on the Destination Server.  
   
  You can fill in the following table as you collect LOB application information. A good place to start collecting information is to open Windows Control Panel, click **Add/Remove Programs**, and look in the **Program Files (x86)** and the **Program Files** folders.  
   

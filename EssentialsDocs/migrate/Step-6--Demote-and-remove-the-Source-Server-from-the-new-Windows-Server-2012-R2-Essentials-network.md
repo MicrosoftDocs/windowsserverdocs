@@ -30,7 +30,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Step 6: Demote and remove the Source Server from the new Windows Server 2012 R2 Essentials network
-After you finish installing [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] and you complete the migration, you must perform the following tasks:  
+After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials and you complete the migration, you must perform the following tasks:  
   
 1.  [Remove Active Directory Certificate Services](../Topic/Step%206:%20Demote%20and%20remove%20the%20Source%20Server%20from%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20network.md#BKMK_ADCS)  
   
@@ -73,7 +73,7 @@ After you finish installing [!INCLUDE[wseblue_2](../install/includes/wseblue_2_m
     >  Restart the server even if you are not prompted to do so.  
   
 ##  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
- Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)].  
+ Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials.  
   
 ##  <a name="BKMK_DemoteTheSourceServer"></a> Demote the Source Server  
  Before you demote the Source Server from the role of the AD DS domain controller to the role of a domain member server, ensure that Group Policy settings are applied to all client computers, as described in the following procedure.  
@@ -93,7 +93,7 @@ After you finish installing [!INCLUDE[wseblue_2](../install/includes/wseblue_2_m
   
  If you are migrating from Windows Server 2012 Essentials or its previous versions, to demote the server, see [Remove Active Directory Domain Services](http://technet.microsoft.com/library/hh472163.aspx). After you add the Source Server as a member of a workgroup and disconnect it from the network, you must remove it from AD DS on the Destination Server.  
   
- If you are migrating from [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)], use Server Manager to remove the Active Directory Domain Services role, thereby demoting the domain controller on the Source Server using the following procedure:  
+ If you are migrating from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, use Server Manager to remove the Active Directory Domain Services role, thereby demoting the domain controller on the Source Server using the following procedure:  
   
 #### To remove the Source Server from Active Directory  
   
@@ -114,6 +114,6 @@ After you finish installing [!INCLUDE[wseblue_2](../install/includes/wseblue_2_m
  After you demote the Source Server, it is not in a healthy state. If you want to repurpose the Source Server, the simplest way is to reformat it, install a server operating system, and then set it up for use as an additional server.  
   
 ## Next steps  
- You have demoted and removed the Source Server from the new [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] network. Now go to [Step 7: Perform post-migration tasks for the Windows Server 2012 R2 Essentials migration](../Topic/Step%207:%20Perform%20post-migration%20tasks%20for%20the%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
+ You have demoted and removed the Source Server from the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials network. Now go to [Step 7: Perform post-migration tasks for the Windows Server 2012 R2 Essentials migration](../Topic/Step%207:%20Perform%20post-migration%20tasks%20for%20the%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
   
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).

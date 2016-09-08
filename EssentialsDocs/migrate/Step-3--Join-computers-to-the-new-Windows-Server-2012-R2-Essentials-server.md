@@ -30,12 +30,12 @@ translation.priority.ht:
   - zh-tw
 ---
 # Step 3: Join computers to the new Windows Server 2012 R2 Essentials server
-The next step in the migration process is to connect client computers to the new server running [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)].  
+The next step in the migration process is to connect client computers to the new server running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials.  
   
 > [!NOTE]
 >  You can skip this step for computers that are running the Windows XP or Windows Vista operating systems. The Windows Server Connector software does not support computers that are running Windows XP or Windows Vista.  
   
- Before you can join a client computer to the new [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] server, you must disconnect it from the Source Server by uninstalling the Windows Server Connector software on the client computer.  
+ Before you can join a client computer to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials server, you must disconnect it from the Source Server by uninstalling the Windows Server Connector software on the client computer.  
   
 ### To uninstall Windows Server Connector on a client computer  
   
@@ -59,9 +59,9 @@ The next step in the migration process is to connect client computers to the new
   
 3.  In the address bar, type **http://<servername\>/Connect**, and then press ENTER.  
   
-4.  Follow the onscreen instructions to join the client computer to the new [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] server.  
+4.  Follow the onscreen instructions to join the client computer to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials server.  
   
 ## Next steps  
- You have joined your client computers to the new server running [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)]. Now go to [Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration](../Topic/Step%204:%20Move%20settings%20and%20data%20to%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
+ You have joined your client computers to the new server running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. Now go to [Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration](../Topic/Step%204:%20Move%20settings%20and%20data%20to%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
   
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).

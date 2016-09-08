@@ -30,9 +30,9 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage Server Folders in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- As a server administrator, you can manage access to any server folders (known as “shared folders” when accessed from the Launchpad, Remote Web Access, My Server app for Windows Phone, or My Server app for Windows 8) on the server by using the tasks on the **Server Folders** tab of the Dashboard, allowing users varying levels of access to a variety of files.  
+ As a server administrator, you can manage access to any server folders (known as “shared folders�? when accessed from the Launchpad, Remote Web Access, My Server app for Windows Phone, or My Server app for Windows 8) on the server by using the tasks on the **Server Folders** tab of the Dashboard, allowing users varying levels of access to a variety of files.  
   
  The following topics provide information that will help you understand, create, and manage server folders:  
   
@@ -175,7 +175,7 @@ translation.priority.ht:
  You can modify the server folder name, its description, and define which user accounts have access to a server folder through the **View the folder properties** task on the **Server Folders** tab of the Dashboard.  
   
 > [!NOTE]
->  In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] and [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed, you can also modify folder quota.  
+>  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed, you can also modify folder quota.  
   
 ##### To view or modify folder properties  
   
@@ -190,7 +190,7 @@ translation.priority.ht:
 5.  In **<Foldername\> Properties**, on the **General** tab, view or modify the name and description of the server folder.  
   
     > [!NOTE]
-    >  In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] and [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed, you can also modify folder quota that gives a warning message when a server folder reaches its specified size.  
+    >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed, you can also modify folder quota that gives a warning message when a server folder reaches its specified size.  
   
 ##  <a name="BKMK_5"></a> Add or move a server folder  
  You can **add more server folders** to store your files on the server in addition to the default server folders that are created during setup. You can add server folders on either the primary server or a member server running Windows Server Essentials.  
@@ -254,7 +254,7 @@ translation.priority.ht:
   
 -   A sub-folder of an existing shared folder  
   
--   A member server running [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] or [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed  
+-   A member server running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed  
   
 ### Steps to add or move a server folder  
   
@@ -295,7 +295,7 @@ translation.priority.ht:
   
  After you restore or recreate the missing folder, it should no longer be listed as **Missing**.  
   
- For information about restoring files from server backups, see the section “Learn more about restoring files and folders” in the topic [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
+ For information about restoring files from server backups, see the section “Learn more about restoring files and folders�? in the topic [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ##  <a name="BKMK_11"></a> Understand shared folders  
  There are several different ways that you can access your shared folders on Windows Server Essentials from a device that is connected to the server. For more information, see the topic [Use Shared Folders](../Topic/Use%20Shared%20Folders%20in%20Windows%20Server%20Essentials.md).  

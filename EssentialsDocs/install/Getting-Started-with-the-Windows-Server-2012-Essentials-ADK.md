@@ -31,10 +31,10 @@ translation.priority.ht:
   - zh-tw
 ---
 # Getting Started with the Windows Server 2012 Essentials ADK
-The Assessment and Deployment Kit (ADK) for the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server software is based on the ADK for the [!INCLUDE[win8_server_1](../install/includes/win8_server_1_md.md)] operating system, so the documentation for that ADK applies here, unless otherwise noted. The information included here is specific to partners who intend to preinstall the operating system for their customers.  
+The Assessment and Deployment Kit (ADK) for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server software is based on the ADK for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server® 2012 operating system, so the documentation for that ADK applies here, unless otherwise noted. The information included here is specific to partners who intend to preinstall the operating system for their customers.  
   
 > [!NOTE]
->  You can download the Assessment and Deployment Kit (ADK) for the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=34866).  
+>  You can download the Assessment and Deployment Kit (ADK) for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=34866).  
   
 ## In this section  
  This section includes the following topics:  

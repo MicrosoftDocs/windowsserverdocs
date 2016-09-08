@@ -30,9 +30,9 @@ translation.priority.ht:
   - zh-tw
 ---
 # Play Digital Media in Windows Server 2012 Essentials
-Digital media refers to audio, video, and photo content that has been digitally compressed. [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] makes it possible for networked computers and some networked digital media devices to play digital media files that are stored on the server.  
+Digital media refers to audio, video, and photo content that has been digitally compressed. --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials makes it possible for networked computers and some networked digital media devices to play digital media files that are stored on the server.  
   
- The following topics provide information about accessing and playing digital media files that are stored on [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]:  
+ The following topics provide information about accessing and playing digital media files that are stored on --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials:  
   
 -   [Digital media overview](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_1)  
   
@@ -54,7 +54,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
  Examples of digital media types include: Windows Media Audio (WMA), Windows Media Video (WMV), MP3, JPEG, and AVI. For information about the digital media types that are supported by Windows Media Player, see [File types supported by Windows Media Player](http://support.microsoft.com/kb/316992).  
   
 ### Why would I want to stream my digital media?  
- Many people store music, video, and pictures in shared folders in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. There may be times when you want to do following:  
+ Many people store music, video, and pictures in shared folders in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. There may be times when you want to do following:  
   
 -   **Watch videos**. Your server can be used to store and stream large collections of videos and recorded TV shows to your computers or other playback devices on your network. You can stream videos to an Xbox 360 or to a computer by using Windows Media Player.  
   
@@ -63,15 +63,15 @@ Digital media refers to audio, video, and photo content that has been digitally 
 -   **Present photo slide shows**. You can store your digital photos in the **Photos** shared folder on your server and then access them from any computer or from an Xbox 360 that is connected to a TV in your home or office. You can watch photo slide shows, which is like turning your TV into a large picture frame.  
   
 ### Sharing copy-protected media  
- [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] does not support sharing copy-protected media. This includes music that is purchased through an online music store.  
+ --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials does not support sharing copy-protected media. This includes music that is purchased through an online music store.  
   
- Copy-protected media can be played back only on the computer or device that you used to purchase it. Copy protection prevents you from playing media on more than one computer or device, even if you copy the media to your server and play it from there. However, you can store the copy-protected media on [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and continue to play back the media on the computer or device that you used to purchase it.  
+ Copy-protected media can be played back only on the computer or device that you used to purchase it. Copy protection prevents you from playing media on more than one computer or device, even if you copy the media to your server and play it from there. However, you can store the copy-protected media on --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and continue to play back the media on the computer or device that you used to purchase it.  
   
 ##  <a name="BKMK_2"></a> Play and share digital media  
  After you set up your network and successfully connect your computers and media devices to the server network, you can search for any digital media files that you store and share on the server.  
   
 > [!NOTE]
->  For a current list of digital media player/receive devices that are compatible with [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], see the [Windows Compatibility Center](http://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
+>  For a current list of digital media player/receive devices that are compatible with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, see the [Windows Compatibility Center](http://www.microsoft.com/windows/compatibility/CompatCenter/Home).  
   
  You can use either of the following ways to search for and play digital media files that are stored on your server:  
   
@@ -80,7 +80,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 -   [Send media files on Windows Server 2012 Essentials to Windows Media Player, Xbox 360, or to a networked digital media player in the network](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_SendToDevice)  
   
 ###  <a name="BKMK_2.1"></a> Search for and play media files on Windows Server 2012 Essentials from a computer or digital media player on the network  
- When your device is joined to the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] network, you can search for and play digital media files in any of the following ways:  
+ When your device is joined to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials network, you can search for and play digital media files in any of the following ways:  
   
 -   [Search for and play media files from a computer that is running Windows Media Center](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_WMC)  
   
@@ -115,7 +115,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
 1.  Connect your Xbox 360 console to your home network by using a wired or wireless connection.  
   
-2.  On the computer that is running [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], turn on media sharing. For more information, see the topic [Turn media streaming on or off](../manage/Manage-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_4).  
+2.  On the computer that is running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, turn on media sharing. For more information, see the topic [Turn media streaming on or off](../manage/Manage-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_4).  
   
 3.  To play digital media files using your Xbox 360 console:  
   
@@ -136,7 +136,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
   
 ####  <a name="BKMK_SharedFolders"></a> Search for and play media files by using the Shared Folders feature of the Launchpad  
   
-1.  Sign in to the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Launchpad.  
+1.  Sign in to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Launchpad.  
   
 2.  From the Launchpad, click **Shared Folders**. A Windows Explorer window opens and displays the shared folders on the server.  
   
@@ -157,7 +157,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
  Use **Windows Media Player** to search for the media file that you want. Right-click the media file and then click **Play To** to send the media file to a networked media device.  
   
 ##  <a name="BKMK_3"></a> Play shared digital media files from a remote location  
- You can play your media files when you are away from your [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] network by using Remote Web Access. You can use a cell phone, a remote computer, or a digital media player to search for and play the shared media files that you stored on your server.  
+ You can play your media files when you are away from your --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials network by using Remote Web Access. You can use a cell phone, a remote computer, or a digital media player to search for and play the shared media files that you stored on your server.  
   
 #### To play shared media files when you are away from the network  
   
@@ -178,7 +178,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 5.  When the media file name appears, click the file name to play the media.  
   
 ##  <a name="BKMK_4"></a> Add digital media files to the server  
- The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] site, or by using the My Server app for Windows Phone. For information about playing media, see [Play and share digital media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2).  
+ The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access site, or by using the My Server app for Windows Phone. For information about playing media, see [Play and share digital media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md#BKMK_2).  
   
 > [!NOTE]
 >  You can also upload media files to the server by using the My Server app for Windows Phone. You can download the My Server app from the [Windows Phone store](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). For more information about the My Server app for Windows Phone, see the blog post [My Server phone app for Windows Server 2012 Essentials](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx).  
@@ -217,7 +217,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
  Before the actual download begins, the .exe or .zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.  
   
 ##  <a name="BKMK_6"></a> Easy File Upload tool  
- The Easy File Upload tool streamlines the process of uploading files on your [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] server. You can add as many files as you want to the Easy File Upload tool, and then upload them to the Shared Folders on the [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] server in a single batch. For more information, see the blog post [Understanding Remote Web Access File Sharing](http://blogs.technet.com/b/sbs/archive/2012/04/19/understanding-remote-web-access-file-sharing.aspx).  
+ The Easy File Upload tool streamlines the process of uploading files on your --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server. You can add as many files as you want to the Easy File Upload tool, and then upload them to the Shared Folders on the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server in a single batch. For more information, see the blog post [Understanding Remote Web Access File Sharing](http://blogs.technet.com/b/sbs/archive/2012/04/19/understanding-remote-web-access-file-sharing.aspx).  
   
 ##  <a name="BKMK_7"></a> View and browse shared digital media  
  You can view or browse resources either by using the Dashboard, the Launchpad, the Remote Web Access website, or the My Server app for Windows Phone.  

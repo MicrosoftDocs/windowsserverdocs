@@ -33,14 +33,14 @@ translation.priority.ht:
 The following guides provide information about how to migrate to Windows Server Essentials from an existing installation of Windows Small Business Server or Windows Server Essentials, and include information about how to prepare and plan for specific Windows Server Essentials migration scenarios.  
   
 ## Migrate to Windows Server 2012 R2 Essentials  
- To avoid problems while migrating your existing server to [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)], read the migration guide before you begin the migration.  
+ To avoid problems while migrating your existing server to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, read the migration guide before you begin the migration.  
   
 -   [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
   
 -   [Transition to Windows Server 2012 R2 Standard](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
   
 ## Migrate to Windows Server 2012 Essentials  
- To avoid problems while migrating your existing server to [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)], read the migration guide that applies to your business scenario before you begin the migration.  
+ To avoid problems while migrating your existing server to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, read the migration guide that applies to your business scenario before you begin the migration.  
   
 -   [Transition to Windows Server 2012 Standard](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
@@ -60,11 +60,11 @@ The following guides provide information about how to migrate to Windows Server 
   
 ## End-to-end solution guides  
   
--   [!INCLUDE[wseblue_solution](../install/includes/wseblue_solution_md.md)]  
+-   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](http://technet.microsoft.com/library/dn582043.aspx).  
   
--   [!INCLUDE[wseblue_solution_secure_access](../install/includes/wseblue_solution_secure_access_md.md)]  
+-   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](http://technet.microsoft.com/library/dn629457.aspx).  
   
--   [!INCLUDE[wseblue_solution_collaboration](../install/includes/wseblue_solution_collaboration_md.md)]  
+-   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](http://technet.microsoft.com/library/dn747893.aspx).  
   
 ## See also  
   
