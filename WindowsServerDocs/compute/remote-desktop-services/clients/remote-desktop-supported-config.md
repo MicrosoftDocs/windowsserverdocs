@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb932dad-6f74-484f-8f7b-dd957b615d44 
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 
 # Remote Desktop client - supported configuration
