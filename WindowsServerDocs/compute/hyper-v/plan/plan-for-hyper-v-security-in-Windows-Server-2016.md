@@ -38,11 +38,11 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 - **Configure hosts to be part of a guarded fabric.** For more information, see [Guarded fabric](../../../security/Guarded-Fabric-and-Shielded-VMs.md).
 - **Secure devices.** Secure the storage devices where you keep virtual machine resource files.
 - **Secure the hard drive.** Use BitLocker Drive Encryption to protect resources.
-- **Harden the Hyper-V host operating system.** Use the baseline security setting recommendations described in the Windows Server Security Baseline. See [Security baseline for Windows Server 2016 Technical Preview 5](https://blogs.technet.microsoft.com/secguide/2016/05/27/security-baseline-for-windows-server-2016-technical-preview-5-tp5/).
+- **Harden the Hyper-V host operating system.** Use the baseline security setting recommendations described in the [Windows Server Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines). See [Security baseline for Windows Server 2016 Technical Preview 5](https://blogs.technet.microsoft.com/secguide/2016/05/27/security-baseline-for-windows-server-2016-technical-preview-5-tp5/).
 - **Grant appropriate permissions.**
     - Add users that need to manage the Hyper-V host to the Hyper-V administrators group.
     - Don't grant virtual machine administrators permissions on the Hyper-V host operating system.
-- **Configure anti-virus exclusions and options for Hyper-V**  For more information, see [Recommended antivirus exclusions for Hyper-V hosts](https://support.microsoft.com/kb/3105657). 
+- **Configure anti-virus exclusions and options for Hyper-V.**  Windows Defender already has [automatic exclusions](../../../security/windows-defender/automatic-exclusions-for-windows-defender.md) configured. For more information about exclusions, see [Recommended antivirus exclusions for Hyper-V hosts](https://support.microsoft.com/kb/3105657). 
 - **Don't mount unknown VHDs.** This can expose the host to file system level attacks.
 - **Don't enable nesting in your production environment unless it's required.** If you enable nesting, don't run unsupported hypervisors on a virtual machine.  
 
@@ -55,12 +55,13 @@ For more secure environments:
 - **Keep the guest OS secure.**
     - Install the latest security updates before you turn on a virtual machine in a production environment.
     - Install integration services for the supported guest operating systems that need it and keep it up to date. Integration service updates for guests that run supported Windows versions are available through Windows Update.
-    - Harden the operating system that runs in each virtual machine based on the role it performs. Use the baseline security setting recommendations that are described in the Windows Server Security Baseline. See [Security baseline for Windows Server 2016 Technical Preview 5](https://blogs.technet.microsoft.com/secguide/2016/05/27/security-baseline-for-windows-server-2016-technical-preview-5-tp5/).
+    - Harden the operating system that runs in each virtual machine based on the role it performs. Use the baseline security setting recommendations that are described in the [Windows Security Baseline](https://technet.microsoft.com/itpro/windows/keep-secure/windows-security-baselines). See [Security baseline for Windows Server 2016 Technical Preview 5](https://blogs.technet.microsoft.com/secguide/2016/05/27/security-baseline-for-windows-server-2016-technical-preview-5-tp5/).
 - **Use a secure network.** Make sure virtual network adapters connect to the correct virtual switch and have the appropriate security setting and limits applied.
 - **Store virtual hard disks and snapshot files in a secure location.**
 - **Secure devices.**	Configure only required devices for a virtual machine. Don't enable discrete device assignment in your production environment unless you need it for a specific scenario. If you do enable it, make sure to only expose devices from trusted vendors. 
-- **Configure antivirus, firewall, and intrusion detection software within virtual machines as appropriate based on the virtual machine role.**
+- **Configure antivirus, firewall, and intrusion detection software** within virtual machines as appropriate based on the virtual machine role.
 - **Enable virtualization based security for guests that run Windows 10 or Windows Server 2016.** For more information, see [Secure Hyper-V virtual machines using virtualization-based security](secure-hyper-v-virtual-machines-using-virtualization-based-security.md) and the [Device Guard Deployment Guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide).
+- **Only enable Discrete Device Assignment if needed for a specific workload**. Due to the nature of passing through a physical device, work with the device manufacturer to understand if it should be used in a secure environment.
 
 For more secure environments:
 
