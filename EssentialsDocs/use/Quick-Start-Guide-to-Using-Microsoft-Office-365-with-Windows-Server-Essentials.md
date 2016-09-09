@@ -83,7 +83,11 @@ translation.priority.ht:
   
 3.  Click a SharePoint Online library to display the documents in the library.  
   
+<<<<<<< HEAD
+     You can open, edit, upload, and download documents in the SharePoint Online library in the same way you work with documents on the server or SkyDrive. For more information, see [Use the My Server App](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
+=======
      You can open, edit, upload, and download documents in the SharePoint Online library in the same way you work with documents on the server or SkyDrive. For more information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## See also  
   
@@ -91,6 +95,12 @@ translation.priority.ht:
   
 -   [Manage Office 365](../manage/Manage-Office-365-in-Windows-Server-Essentials.md)  
   
+<<<<<<< HEAD
+-   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
+  
+-   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
+=======
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

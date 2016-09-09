@@ -34,7 +34,7 @@ translation.priority.ht:
 The screen resolution should be set according to the hardware that is attached to the server. For optimal display of the Dashboard, a setting of 1024 x 768 or greater is required. For more information about setting the screen resolution, see the [Windows Assessment and Deployment Kit](http://go.microsoft.com/fwlink/?LinkId=248694) documentation.  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

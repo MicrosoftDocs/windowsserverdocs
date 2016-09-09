@@ -35,13 +35,36 @@ The following guides provide information about how to migrate to Windows Server 
 ## Migrate to Windows Server 2012 R2 Essentials  
  To avoid problems while migrating your existing server to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, read the migration guide before you begin the migration.  
   
+<<<<<<< HEAD
+-   [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
+  
+-   [Transition to Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
+=======
 -   [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
   
 -   [Transition to Windows Server 2012 R2 Standard](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## Migrate to Windows Server 2012 Essentials  
  To avoid problems while migrating your existing server to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, read the migration guide that applies to your business scenario before you begin the migration.  
   
+<<<<<<< HEAD
+-   [Transition to Windows Server 2012 Standard](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
+  
+-   [Migrate from Windows SBS 2011 Essentials](Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-2012-Essentials.md)  
+  
+-   [Migrate from Windows SBS 2011 Standard](Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-2012-Essentials.md)  
+  
+-   [Migrate from Windows SBS 2008](Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-2012-Essentials.md)  
+  
+-   [Migrate from Windows Server 2008 Foundation](Migrate-Windows-Server-2008-Foundation-to-Windows-Server-2012-Essentials.md)  
+  
+-   [Migrate from Windows SBS 2003](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-2012-Essentials.md)  
+  
+-   [Migrate to New Hardware](Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md)  
+  
+-   [Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool](Rules-used-by-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
+=======
 -   [Transition to Windows Server 2012 Standard](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
 -   [Migrate from Windows SBS 2011 Essentials](../migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-2012-Essentials.md)  
@@ -57,6 +80,7 @@ The following guides provide information about how to migrate to Windows Server 
 -   [Migrate to New Hardware](../migrate/Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md)  
   
 -   [Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool](../migrate/Rules-used-by-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## End-to-end solution guides  
   

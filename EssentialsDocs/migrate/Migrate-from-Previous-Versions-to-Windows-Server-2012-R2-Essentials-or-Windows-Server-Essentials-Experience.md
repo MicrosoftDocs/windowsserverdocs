@@ -81,4 +81,8 @@ This guide describes how to migrate from previous versions of Windows Small Busi
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Migrate Server Data to Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
+=======
 -   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

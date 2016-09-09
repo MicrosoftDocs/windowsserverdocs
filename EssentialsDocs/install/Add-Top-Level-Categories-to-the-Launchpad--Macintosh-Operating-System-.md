@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Add Top-Level Categories to the Launchpad (Macintosh Operating System)
-You can add top-level categories to the Launchpad on a computer running the Macintosh operating system. To create a Launchpad add-in that adds top-level categories, you can use a combination of information from this page and from the topic titled “How-to: Add Tasks and Categories to the Launchpad” in the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648).  
+You can add top-level categories to the Launchpad on a computer running the Macintosh operating system. To create a Launchpad add-in that adds top-level categories, you can use a combination of information from this page and from the topic titled “How-to: Add Tasks and Categories to the Launchpad�? in the [Windows Server Solutions SDK](http://go.microsoft.com/fwlink/?LinkID=248648).  
   
  The following example shows how you can specify your Launchpad entry to be a top-level category in the .launchpad file:  
   
@@ -51,7 +51,7 @@ You can add top-level categories to the Launchpad on a computer running the Maci
  For the entry to be a top-level category, the Id attribute of the Category element must be "Microsoft.Launchpad.HomeCategory".  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

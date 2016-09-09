@@ -12,7 +12,11 @@ author: DonGill
 manager: stevenka
 ---
 # WSE_SrvrDeploy.cover
+<<<<<<< HEAD
+![Windows SBS8 Beta Logo](media/WindowsSBS8Betalogo.gif "WindowsSBS8Betalogo")  
+=======
 ![Windows SBS8 Beta Logo](../windows-server-essentials-notinTOC/media/WindowsSBS8Betalogo.gif "WindowsSBS8Betalogo")  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## Install and Configure Windows Small Business Server "8" Beta  
  Microsoft Corporation  
@@ -22,4 +26,8 @@ manager: stevenka
 ### Abstract  
  This document provides step-by-step instructions for installing and configuring --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, including preinstallation tasks and information about system requirements.  
   
+<<<<<<< HEAD
+ ![Microsoft logo](media/DocCoverBottom.gif "DocCoverBottom")
+=======
  ![Microsoft logo](../windows-server-essentials-notinTOC/media/DocCoverBottom.gif "DocCoverBottom")
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

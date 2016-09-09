@@ -36,6 +36,29 @@ translation.priority.ht:
   
  This topic provides solutions for the following issues:  
   
+<<<<<<< HEAD
+-   Issue 1: [Issue 1](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
+  
+-   Issue 2: [Issue 2](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
+  
+-   Issue 3: [Issue 3](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)  
+  
+-   Issue 4: [Issue 4](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)  
+  
+-   Issue 5: [Issue 5](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)  
+  
+-   Issue 6: [Issue 6](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)  
+  
+-   Issue 7: [Issue 7](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)  
+  
+-   Issue 8: [Issue 8](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)  
+  
+-   Issue 9: [Issue 9](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)  
+  
+-   Issue 10: [Issue 10](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
+  
+-   Issue 11: [Issue 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
+=======
 -   Issue 1: [Issue 1](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
   
 -   Issue 2: [Issue 2](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
@@ -57,6 +80,7 @@ translation.priority.ht:
 -   Issue 10: [Issue 10](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
   
 -   Issue 11: [Issue 11](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BMRK_Package"></a> Issue 1  
  **Issue**  

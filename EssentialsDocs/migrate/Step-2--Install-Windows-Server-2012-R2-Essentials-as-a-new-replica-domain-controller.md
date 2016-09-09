@@ -110,4 +110,8 @@ This section describes how to install --- translation.priority.ht:    - cs-cz   
 ## Next steps  
  You have installed --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials as a new replica domain controller. Now go to [Step 3: Join computers to the new Windows Server 2012 R2 Essentials server](../Topic/Step%203:%20Join%20computers%20to%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20server.md).  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

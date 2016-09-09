@@ -33,6 +33,17 @@ translation.priority.ht:
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network4
 After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and you complete the migration,   you must perform the following tasks:  
   
+<<<<<<< HEAD
+1.  [Uninstall Exchange Server 2010](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_UninstallExchangeServer2010)  
+  
+2.  [Remove Active Directory Certificate Services](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_ADCS)  
+  
+3.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_PhysicallyDisconnect)  
+  
+4.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_DemoteTheSourceServer)  
+  
+5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_RemoveTheSourceServer)  
+=======
 1.  [Uninstall Exchange Server 2010](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_UninstallExchangeServer2010)  
   
 2.  [Remove Active Directory Certificate Services](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_ADCS)  
@@ -42,6 +53,7 @@ After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   
 4.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_DemoteTheSourceServer)  
   
 5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_RemoveTheSourceServer)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_UninstallExchangeServer2010"></a> Uninstall Exchange Server 2010  
  You must uninstall Exchange Server 2010 from the Source Server before you demote it. This removes all references in Active Directory Domain Services (AD DS) to Exchange Server on the Source Server. You must have your Exchange Server 2010 media to remove Exchange Server 2010.  

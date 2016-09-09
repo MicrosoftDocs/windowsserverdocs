@@ -58,4 +58,8 @@ The content in this section describes what's new and changed in --- translation.
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
+=======
 -   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../intro/Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

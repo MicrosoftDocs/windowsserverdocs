@@ -212,7 +212,7 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
         1.  Open a command prompt with administrator privileges, and run the following command:  
   
-             **“%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe” –i**  
+             **“%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe�? –i**  
   
         2.  Refresh Device Manager. The driver should appear.  
   
@@ -251,4 +251,4 @@ Use these procedures to troubleshoot computer backups in Windows Server Essentia
   
 ## See also  
   
--   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)

@@ -146,7 +146,11 @@ This document includes information that is specific to hosters who intend to dep
   
  VPN enabling can be done during unattended deployment via our Windows PowerShell script, or it can be configured with our wizard after initial configuration.  
   
+<<<<<<< HEAD
+-   To enable VPN during unattended deployment, see [How do I automate the deployment?](Hosted-Windows-Server-2012-Essentials.md#BKMK_automatedeployment) in this document.  
+=======
 -   To enable VPN during unattended deployment, see [How do I automate the deployment?](../install/Hosted-Windows-Server-2012-Essentials.md#BKMK_automatedeployment) in this document.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 -   To enable VPN via Windows PowerShell, run the following cmdlet with administrative privilege and provide all necessary information.  
   

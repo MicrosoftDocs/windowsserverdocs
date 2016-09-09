@@ -30,7 +30,11 @@ translation.priority.ht:
   - zh-tw
 ---
 # Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials
+<<<<<<< HEAD
+**Windows Server 2012 R2 Essentials** (the latest version of Windows Server Essentials) is a flexible, affordable, and easy-to-use server solution designed and priced for small businesses with up to 25 users and 50 devices. --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials is an ideal first server, and it can also be used as the primary server in a multi-server environment for small businesses. For more information, see [What's New in Windows Server Essentials](What-s-New-in-Windows-Server-Essentials.md) and [download the Windows Server 2012 R2 Essentials evaluation](http://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7).  
+=======
 **Windows Server 2012 R2 Essentials** (the latest version of Windows Server Essentials) is a flexible, affordable, and easy-to-use server solution designed and priced for small businesses with up to 25 users and 50 devices. --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials is an ideal first server, and it can also be used as the primary server in a multi-server environment for small businesses. For more information, see [What's New in Windows Server Essentials](../intro/What-s-New-in-Windows-Server-Essentials.md) and [download the Windows Server 2012 R2 Essentials evaluation](http://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
  Windows Server Essentials is now available as the **Windows Server Essentials Experience server role** in the Standard and Datacenter editions of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2. Installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 provides you with all the features and functionalities (such as the Dashboard, client computer backups, and Remote Web Access) of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials without the locks and limits that are imposed on it. For more information about this new server role, see the [Windows Server Essentials Experience Overview](assetId:///958ecbde-ba6f-4789-88da-58542b8b1faf).  
   
@@ -39,7 +43,11 @@ translation.priority.ht:
 ## In this library  
  For information about installing, configuring, managing, using, and troubleshooting Windows Server Essentials, see the following documentation:  
   
+<<<<<<< HEAD
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
+=======
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 -   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)  
   

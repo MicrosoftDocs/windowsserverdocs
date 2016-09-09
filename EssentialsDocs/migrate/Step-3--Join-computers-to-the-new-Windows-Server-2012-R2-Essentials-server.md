@@ -64,4 +64,8 @@ The next step in the migration process is to connect client computers to the new
 ## Next steps  
  You have joined your client computers to the new server running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. Now go to [Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration](../Topic/Step%204:%20Move%20settings%20and%20data%20to%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

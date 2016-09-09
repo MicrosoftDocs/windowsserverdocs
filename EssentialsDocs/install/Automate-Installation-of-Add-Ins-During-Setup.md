@@ -32,7 +32,7 @@ translation.priority.ht:
 ---
 # Automate Installation of Add-Ins During Setup
 ##  <a name="BKMK_AddIns"></a> Automate installing add-ins during setup  
- To install add-ins during setup, use the PostIC.cmd method described in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](../install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section of this document.  
+ To install add-ins during setup, use the PostIC.cmd method described in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section of this document.  
   
  Add the following entry to your PostIC.cmd:  
   
@@ -126,7 +126,7 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
  Any failure invoking the exefile will lead to the same behavior as the exefile returns a code other than 0 or 1.  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

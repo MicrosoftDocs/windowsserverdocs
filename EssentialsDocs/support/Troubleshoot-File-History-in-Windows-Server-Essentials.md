@@ -78,13 +78,24 @@ translation.priority.ht:
   
 4.  Rename the subfolder for the user that you deleted, for example, **<*UserName*>_Deleted**. If you no longer need the user's file history, you can delete the folder.  
   
+<<<<<<< HEAD
+5.  You can now add the new user. For instructions, see “Add a user account�? in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+  
+### A user account was removed, but the user's file history remains  
+ In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  
+=======
 5.  You can now add the new user. For instructions, see “Add a user account” in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
 ### A user account was removed, but the user's file history remains  
  In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## See also  
   
 -   [Manage Client Backup](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)  
   
+<<<<<<< HEAD
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
+=======
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

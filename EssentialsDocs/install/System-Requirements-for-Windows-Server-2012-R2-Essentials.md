@@ -65,6 +65,12 @@ translation.priority.ht:
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
+  
+-   [System Requirements for Windows Server 2012 Essentials](System-Requirements-for-Windows-Server-2012-Essentials.md)
+=======
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   
 -   [System Requirements for Windows Server 2012 Essentials](../install/System-Requirements-for-Windows-Server-2012-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

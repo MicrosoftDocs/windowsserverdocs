@@ -35,6 +35,21 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 #### To prepare for migration  
   
+<<<<<<< HEAD
+1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
+  
+2.  [Install the most recent service packs](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+  
+3.  [Verify the network configuration](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_Verify)  
+  
+4.  [Evaluate the health of the Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_UseWindowsBestPracticeAnalyzer)  
+  
+5.  [Run the Migration Preparation Tool on the Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_MPT)  
+  
+6.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+  
+7.  [Create a plan to migrate email that is hosted on Windows Small Business Server 2008](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateEmail)  
+=======
 1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
 2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
@@ -48,6 +63,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 6.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
   
 7.  [Create a plan to migrate email that is hosted on Windows Small Business Server 2008](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateEmail)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
@@ -64,7 +80,11 @@ Complete the following preliminary steps to ensure that the settings and data on
 ###  <a name="BKMK_Verify"></a> Verify the network configuration  
  Before you can migrate your network to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you must install and configure a router on your network and configure the Source Server to use one network adapter. When you are done, your network will look like the following figure:  
   
+<<<<<<< HEAD
+ ![Example small business network](media/WSE_Network.png "WSE_Network")  
+=======
  ![Example small business network](../migrate/media/WSE_Network.png "WSE_Network")  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 #### Disable the VPN on the Source Server  
  If you are using a VPN on the Source Server, disable it.  
@@ -286,17 +306,28 @@ Complete the following preliminary steps to ensure that the settings and data on
 >  After you update and prepare your Source Server for migration, we recommend that you create a backup of the updated server before you continue the migration process.  
   
 #### Migrate email to Microsoft Office 365  
+<<<<<<< HEAD
+ If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in the topic  “[Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](http://go.microsoft.com/fwlink/p/?LinkId=248619)�? to start the email migration to Office 365. We recommend that you complete the email migration before you [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode1.md).  
+=======
  If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in the topic  “[Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](http://go.microsoft.com/fwlink/p/?LinkId=248619)�? to start the email migration to Office 365. We recommend that you complete the email migration before you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 > [!NOTE]
 >  The step to remove the on-premises Exchange Server on the Source Server is optional.  
 >   
 >  Office 365 does not support the use of public folders. For information about how to move messages from Exchange Public Folders to Office 365, see [Migrate from Exchange Public Folders to Microsoft Office 365](http://www.microsoft.com/download/en/details.aspx?id=27582)  
 >   
+<<<<<<< HEAD
+>  After you [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode1.md), you should turn on the Office 365 Integration feature on --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
+  
+#### Migrate email to another on-premises Exchange Server  
+ For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server Essentials](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md). We recommend that you set up the new on-premises Exchange Server after you [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode1.md), and then finish the email migration before demoting the Source Server.  
+=======
 >  After you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md), you should turn on the Office 365 Integration feature on --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 #### Migrate email to another on-premises Exchange Server  
  For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server Essentials](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md). We recommend that you set up the new on-premises Exchange Server after you [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode1.md), and then finish the email migration before demoting the Source Server.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 > [!NOTE]
 >  The Windows Small Business Server POP3 Connector is not included with Exchange Server. After you migrate email data to another Exchange Server, you can no longer use the POP3 Connector feature.  

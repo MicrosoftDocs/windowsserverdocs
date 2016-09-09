@@ -34,7 +34,11 @@ translation.priority.ht:
   
 -   **Read the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials FAQs and Evaluation Guide**. To view and print the FAQs, see [Windows Server 2012 Essentials Frequently Asked Questions](http://download.microsoft.com/download/0/B/2/0B22F531-338D-4843-B43B-814D922EB724/Windows%20Server%202012%20Essentials%20FAQ.pdf). To view and print the Evaluation Guide, visit the **Start Here** section of the [Windows Server 2012 Essentials Evaluation Resources](http://technet.microsoft.com/evalcenter/jj659308.aspx) page.  
   
+<<<<<<< HEAD
+-   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. For more information, see [System Requirements for Windows Server 2012 Essentials](System-Requirements-for-Windows-Server-2012-Essentials.md).  
+=======
 -   **Ensure that your computer meets the minimum hardware requirements**. This includes determining if you need additional hardware and verifying that the drivers for your hardware are supported by --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. For more information, see [System Requirements for Windows Server 2012 Essentials](../install/System-Requirements-for-Windows-Server-2012-Essentials.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
     > [!IMPORTANT]
     >  Before you install --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on a pre-existing computer, we recommend that you fully format and then repartition the hard disks of the pre-existing computer. By formatting and repartitioning the hard disks, you remove the possibility that hidden partitions remain on the hard disks.  
@@ -43,7 +47,11 @@ translation.priority.ht:
   
     -   Find a suitable place to put your server before you run --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Setup. The location you choose must have an available, wired network connection to your broadband router or to a switch that is connected to your broadband router as shown in the diagram. Verify that the broadband router and switch, if used, are powered on and functioning properly. Then connect your server to an electrical outlet.  
   
+<<<<<<< HEAD
+         ![Network Diagram](media/strt_WHS_NetworkOverviewc_new.gif "strt_WHS_NetworkOverviewc_new")  
+=======
          ![Network Diagram](../install/media/strt_WHS_NetworkOverviewc_new.gif "strt_WHS_NetworkOverviewc_new")  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
     -   **Upgrade operating system on your client computers** --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials supports the following operating systems: --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 8, Windows 7, and Macintosh OS X Lion or greater. These operating systems provide the necessary security features, reliability, performance, and functionality for the local network.  
   
@@ -66,8 +74,16 @@ translation.priority.ht:
     |Port 80|HTTP Web traffic|  
     |Port 443|HTTPS Web traffic|  
   
+<<<<<<< HEAD
+-   **Read the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. To view or print release documentation, see [Release Documentation for Windows Server 2012 Essentials](Release-Documentation-for-Windows-Server-2012-Essentials.md).  
+  
+## See also  
+  
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
+=======
 -   **Read the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials release documentation**. The release documentation contains the latest information that may be critical to properly installing and configuring --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. To view or print release documentation, see [Release Documentation for Windows Server 2012 Essentials](../install/Release-Documentation-for-Windows-Server-2012-Essentials.md).  
   
 ## See also  
   
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

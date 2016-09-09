@@ -60,7 +60,11 @@ translation.priority.ht:
 ### Prerequisites  
  To add multilingual support to Windows Setup, you need the following:  
   
+<<<<<<< HEAD
+-   A technician computer that provides all the tools and source files necessary to create a customized WinPE image. For more information, see [Prepare the Technician Computer](Prepare-the-Technician-Computer.md).  
+=======
 -   A technician computer that provides all the tools and source files necessary to create a customized WinPE image. For more information, see [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 -   A --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials DVD.  
   
@@ -92,7 +96,11 @@ translation.priority.ht:
   
     ```  
   
+<<<<<<< HEAD
+2.  Add Language specific files to support creating the Client Backup Restore USB flash drive, using the procedure described in [Build Multi-Language Client Restore Media](Build-Multi-Language-Client-Restore-Media.md).  
+=======
 2.  Add Language specific files to support creating the Client Backup Restore USB flash drive, using the procedure described in [Build Multi-Language Client Restore Media](../install/Build-Multi-Language-Client-Restore-Media.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 3.  Recreate the Lang.ini file in the loose media to reflect the additional language support by using the `DISM /Gen-LangINI` command, for example:  
   
@@ -108,7 +116,14 @@ translation.priority.ht:
     ```  
   
 ## See Also  
+<<<<<<< HEAD
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

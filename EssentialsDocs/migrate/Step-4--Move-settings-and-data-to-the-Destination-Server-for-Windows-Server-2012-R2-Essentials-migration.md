@@ -124,4 +124,8 @@ This section provides information about migrating data and settings from the Sou
 ## Next steps  
  You have moved your settings and data to the Destination Server. Now go to [Step 5: Enable folder redirection on the Destination Server for Windows Server 2012 R2 Essentials migration](../Topic/Step%205:%20Enable%20folder%20redirection%20on%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

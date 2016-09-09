@@ -39,6 +39,17 @@ The Assessment and Deployment Kit (ADK) for the --- translation.priority.ht:    
 ## In this section  
  This section includes the following topics:  
   
+<<<<<<< HEAD
+-   [Important Information for Using the Windows Server 2012 Essentials ADK](Important-Information-for-Using-the-Windows-Server-2012-Essentials-ADK.md)  
+  
+-   [Hardware Requirements for the Target Computer](Hardware-Requirements-for-the-Target-Computer.md)  
+  
+-   [Preconfiguring a Router](Preconfiguring-a-Router.md)  
+  
+-   [Prepare the Technician Computer](Prepare-the-Technician-Computer.md)  
+  
+-   [Configure Server Storage](Configure-Server-Storage.md)
+=======
 -   [Important Information for Using the Windows Server 2012 Essentials ADK](../install/Important-Information-for-Using-the-Windows-Server-2012-Essentials-ADK.md)  
   
 -   [Hardware Requirements for the Target Computer](../install/Hardware-Requirements-for-the-Target-Computer.md)  
@@ -48,3 +59,4 @@ The Assessment and Deployment Kit (ADK) for the --- translation.priority.ht:    
 -   [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md)  
   
 -   [Configure Server Storage](../install/Configure-Server-Storage.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

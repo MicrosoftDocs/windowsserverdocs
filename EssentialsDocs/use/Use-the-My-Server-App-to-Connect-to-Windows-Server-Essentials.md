@@ -32,6 +32,23 @@ The My Server apps for --- translation.priority.ht:    - cs-cz   - de-at   - de-
  If your server is running the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials operating system, use the original My Server app. If your server is running the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials operating system, you must use the updated My Server 2012 R2 app. Both apps can be downloaded from [Apps for Windows](http://windows.microsoft.com/windows-8/apps).  
   
 > [!TIP]
+<<<<<<< HEAD
+>  To access resources in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials from your Windows Phone, use the My Server phone app (for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials) or the My Server 2012 R2 phone app (for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials). For information about the My Server phone app, see [Use the My Server app for Windows Phone](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2). For information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
+  
+## In this topic  
+  
+-   [What’s new in My Server 2012 R2](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_WhatsNew)  
+  
+-   [Operating system requirements](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_OS)  
+  
+-   [Install My Server](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_Install)  
+  
+-   [Use My Server](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_UseServer)  
+  
+-   [Features of My Server](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_Features)  
+  
+-   [How to connect to your server from your local network](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_ConnectServer)  
+=======
 >  To access resources in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials from your Windows Phone, use the My Server phone app (for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials) or the My Server 2012 R2 phone app (for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials). For information about the My Server phone app, see [Use the My Server app for Windows Phone](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2). For information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
   
 ## In this topic  
@@ -47,6 +64,7 @@ The My Server apps for --- translation.priority.ht:    - cs-cz   - de-at   - de-
 -   [Features of My Server](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_Features)  
   
 -   [How to connect to your server from your local network](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md#BKMK_ConnectServer)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_WhatsNew"></a> What’s new in My Server 2012 R2  
  In addition to the features available in My Server, My Server 2012 R2 offers the following new features for customers with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials:  
@@ -169,6 +187,12 @@ The My Server apps for --- translation.priority.ht:    - cs-cz   - de-at   - de-
   
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
+<<<<<<< HEAD
+-   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
+  
+-   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
+=======
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

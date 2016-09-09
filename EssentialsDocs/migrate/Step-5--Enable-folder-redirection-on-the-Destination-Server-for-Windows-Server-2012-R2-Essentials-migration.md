@@ -63,4 +63,8 @@ If folder redirection is enabled on the Source Server, you can enable folder red
 ## Next steps  
  You have enabled folder redirection on the Destination Server. Now go to [Step 6: Demote and remove the Source Server from the new Windows Server 2012 R2 Essentials network](../Topic/Step%206:%20Demote%20and%20remove%20the%20Source%20Server%20from%20the%20new%20Windows%20Server%202012%20R2%20Essentials%20network.md).  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

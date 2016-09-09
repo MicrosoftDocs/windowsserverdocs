@@ -33,6 +33,15 @@ translation.priority.ht:
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network3
 After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and you complete the Migration, you must perform the following tasks:  
   
+<<<<<<< HEAD
+1.  [Remove Active Directory Certificate Services](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_ADCS)  
+  
+2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_PhysicallyDisconnect)  
+  
+3.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_DemoteTheSourceServer)  
+  
+4.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_RemoveTheSourceServer)  
+=======
 1.  [Remove Active Directory Certificate Services](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_ADCS)  
   
 2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_PhysicallyDisconnect)  
@@ -40,6 +49,7 @@ After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   
 3.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_DemoteTheSourceServer)  
   
 4.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_RemoveTheSourceServer)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_ADCS"></a> Remove Active Directory Certificate Services  
  The procedure is slightly different if you have multiple Active Directory Certificate Services (AD CS) role services installed on a single server. You can use the following procedure to uninstall an AD CS role service and to retain other AD CS role services.  
@@ -95,7 +105,11 @@ After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   
   
 1.  Log on to the client computer as an administrator.  
   
+<<<<<<< HEAD
+2.  Open a Command Prompt window as an administrator. For more information, see [To open a Command Prompt window as an Administrator](Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md#BKMK_OpenACommandPromptAsAdmin).  
+=======
 2.  Open a Command Prompt window as an administrator. For more information, see [To open a Command Prompt window as an Administrator](../migrate/Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md#BKMK_OpenACommandPromptAsAdmin).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 3.  At the command prompt, type **gpupdate /force**, and then press ENTER.  
   

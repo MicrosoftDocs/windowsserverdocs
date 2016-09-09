@@ -116,4 +116,8 @@ After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   
 ## Next steps  
  You have demoted and removed the Source Server from the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials network. Now go to [Step 7: Perform post-migration tasks for the Windows Server 2012 R2 Essentials migration](../Topic/Step%207:%20Perform%20post-migration%20tasks%20for%20the%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

@@ -31,16 +31,26 @@ translation.priority.ht:
 ---
 # Install and Configure Windows Server 2012 Essentials
 ##  <a name="BKMK_InstallConfigure"></a>   
+<<<<<<< HEAD
+ This document provides step-by-step instructions for installing and configuring --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server 2012 Essentials](Before-You-Install-Windows-Server-2012-Essentials.md).  
+=======
  This document provides step-by-step instructions for installing and configuring --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server 2012 Essentials](../install/Before-You-Install-Windows-Server-2012-Essentials.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 > [!NOTE]
 >  Are you looking for information about installing Windows Server 2012? If so, go to [Installing Windows Server 2012](assetId:///ddf71ebb-fc52-4ecb-aa88-109167c5f1c8) in the Windows Server TechNet Library.  
   
  You install and configure --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials in two steps:  
   
+<<<<<<< HEAD
+1.  [Step 1: Install the Windows Server 2012 Essentials operating system](Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_ManualInstallation) In this step, you install the operating system on your server.  
+  
+2.  [Step 2: Configure the Windows Server 2012 Essentials operating system](Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
+=======
 1.  [Step 1: Install the Windows Server 2012 Essentials operating system](../install/Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_ManualInstallation) In this step, you install the operating system on your server.  
   
 2.  [Step 2: Configure the Windows Server 2012 Essentials operating system](../install/Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_ManualInstallation"></a> Step 1: Install the Windows Server 2012 Essentials operating system  
   
@@ -180,4 +190,8 @@ translation.priority.ht:
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
+=======
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

@@ -33,9 +33,15 @@ translation.priority.ht:
 # Perform post-migration tasks for Windows Server 2012 Essentials migration2
 The following tasks help you finish setting up your Destination Server with some of the same settings that were on the Source Server. You may have disabled some of these settings on your Source Server during the migration process, so they were not migrated to the Destination Server.  
   
+<<<<<<< HEAD
+1.  [Delete DNS entries of the Source Server](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration2.md#BKMK_DeleteDNSEntries)  
+  
+2.  [Share line-of-business and other application data folders](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration2.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+=======
 1.  [Delete DNS entries of the Source Server](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration2.md#BKMK_DeleteDNSEntries)  
   
 2.  [Share line-of-business and other application data folders](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration2.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_DeleteDNSEntries"></a> Delete DNS entries of the Source Server  
   

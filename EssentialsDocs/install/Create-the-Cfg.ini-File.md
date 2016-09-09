@@ -156,8 +156,16 @@ The cfg.ini file is used to automate an installation of the operating system in 
 >  The Initial Configuration section of the cfg.ini should only be used by the end user to personalize the server or for a partner to test the user experience of the server by using an unattended answer file. This section of the file is not intended to be used for creating the image.  
   
 ## See Also  
+<<<<<<< HEAD
+ [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

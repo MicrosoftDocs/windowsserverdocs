@@ -34,6 +34,33 @@ The following documents provide step-by-step instructions for installing and con
   
 ## Install Windows Server 2012 R2 Essentials  
   
+<<<<<<< HEAD
+-   [System Requirements for Windows Server 2012 R2 Essentials](System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
+  
+-   [Install and Configure Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
+  
+-   [Deploy Windows Server Essentials Experience as a Hosted Server](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md)  
+  
+-   [Add Windows Server Essentials as a Member Server](Add-Windows-Server-Essentials-as-a-Member-Server.md)  
+  
+-   [Hosting Windows Server Essentials Experience on Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn520828.aspx) (MSDN)  
+  
+-   [Windows Server 2012 R2 - Customize and Deploy Windows Server Essentials](Customize-and-Deploy-Windows-Server-Essentials-in-Windows-Server-2012-R2.md)  
+  
+## Install Windows Server 2012 Essentials  
+  
+-   [Before You Install Windows Server 2012 Essentials](Before-You-Install-Windows-Server-2012-Essentials.md)  
+  
+-   [System Requirements for Windows Server 2012 Essentials](System-Requirements-for-Windows-Server-2012-Essentials.md)  
+  
+-   [Release Documentation for Windows Server 2012 Essentials](Release-Documentation-for-Windows-Server-2012-Essentials.md)  
+  
+-   [Install and Configure Windows Server 2012 Essentials](Install-and-Configure-Windows-Server-2012-Essentials.md)  
+  
+-   [Hosted Windows Server 2012 Essentials](Hosted-Windows-Server-2012-Essentials.md)  
+  
+-   [Windows Server 2012 Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)  
+=======
 -   [System Requirements for Windows Server 2012 R2 Essentials](../install/System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
   
 -   [Install and Configure Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
@@ -59,6 +86,7 @@ The following documents provide step-by-step instructions for installing and con
 -   [Hosted Windows Server 2012 Essentials](../install/Hosted-Windows-Server-2012-Essentials.md)  
   
 -   [Windows Server 2012 Essentials - Assessment and Deployment Kit](../install/Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## End-to-end solution guides  
   

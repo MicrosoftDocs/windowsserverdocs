@@ -29,9 +29,15 @@ translation.priority.ht:
 # Troubleshoot Windows Server Essentials installation
 This topic provides troubleshooting for issues that occur when installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. Guidance is provided in the following areas:  
   
+<<<<<<< HEAD
+-   [General troubleshooting steps](Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_GeneralTroubleshootingSteps)  
+  
+-   [Troubleshoot driver issues](Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
+=======
 -   [General troubleshooting steps](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_GeneralTroubleshootingSteps)  
   
 -   [Troubleshoot driver issues](../support/Troubleshoot-Windows-Server-Essentials-installation.md#BKMK_TroubleshootDrivers)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 > [!NOTE]
 >  For the most current troubleshooting information from the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  

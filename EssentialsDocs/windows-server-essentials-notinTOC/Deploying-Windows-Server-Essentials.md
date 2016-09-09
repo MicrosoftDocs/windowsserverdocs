@@ -34,6 +34,19 @@ translation.priority.ht:
   
 ## UI Help  
   
+<<<<<<< HEAD
+-   [What should I know before I personalize my server?](Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
+  
+-   [Which options should I choose for update settings?](Deploying-Windows-Server-Essentials.md#BKMK_Update)  
+  
+-   [Why are the data and time settings important?](Deploying-Windows-Server-Essentials.md#BKMK_DateTime)  
+  
+-   [How do I connect my computers to my server?](Deploying-Windows-Server-Essentials.md#BKMK_ConnectComputer)  
+  
+-   [Support information](Deploying-Windows-Server-Essentials.md#BKMK_Support)  
+  
+-   [Troubleshoot Windows Server 2012 R2 Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
+=======
 -   [What should I know before I personalize my server?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
   
 -   [Which options should I choose for update settings?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Update)  
@@ -45,6 +58,7 @@ translation.priority.ht:
 -   [Support information](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Support)  
   
 -   [Troubleshoot Windows Server 2012 R2 Essentials installation](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_Personalize"></a> What should I know before I personalize my server?  
  To distinguish and help secure your server on your network, you should identify your company name, choose a unique internal domain name, and give your server a unique name.  

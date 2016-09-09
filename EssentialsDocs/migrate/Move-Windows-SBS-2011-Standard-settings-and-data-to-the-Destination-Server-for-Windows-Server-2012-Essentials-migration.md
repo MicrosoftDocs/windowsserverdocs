@@ -32,6 +32,19 @@ translation.priority.ht:
 # Move Windows SBS 2011 Standard settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
   
+<<<<<<< HEAD
+1.  [Copy data to the Destination Server](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
+  
+2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
+  
+3.  [Move the DHCP Server role from the Source Server to the router](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MoveDHCP)  
+  
+4.  [Configure the network](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Network)  
+  
+5.  [Remove legacy Active Directory Group Policy Objects (optional)](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
+  
+6.  [Map permitted computers to user accounts](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+=======
 1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
@@ -43,6 +56,7 @@ Move settings and data to the Destination Server as follows:
 5.  [Remove legacy Active Directory Group Policy Objects (optional)](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
   
 6.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  

@@ -95,4 +95,8 @@ This topic applies to a server running Windows Server 2012 R2 Standard or Window
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
+=======
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

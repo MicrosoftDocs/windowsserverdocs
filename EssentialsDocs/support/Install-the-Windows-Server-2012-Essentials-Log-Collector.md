@@ -58,7 +58,11 @@ The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr
   
 2.  Click the **Add-in** tab, select **Log Collector** from the list, and then click **Uninstall**.  
   
+<<<<<<< HEAD
+3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
+=======
 3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ### Manually install the Log Collector  
  If the installation wizard failed to install the Log Collector, you can install the Log Collector on a single computer using the following procedure.  

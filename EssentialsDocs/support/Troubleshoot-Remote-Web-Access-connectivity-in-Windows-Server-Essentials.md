@@ -97,4 +97,8 @@ translation.priority.ht:
   
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
+<<<<<<< HEAD
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
+=======
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

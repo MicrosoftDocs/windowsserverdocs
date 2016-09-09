@@ -35,6 +35,21 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 #### To prepare for migration  
   
+<<<<<<< HEAD
+1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
+  
+2.  [Install the most recent service packs](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+  
+3.  [Verify the network configuration](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_Verify)  
+  
+4.  [Evaluate the health of the Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_UseWindowsBestPracticeAnalyzer)  
+  
+5.  [Run the Migration Preparation Tool on the Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_MPT)  
+  
+6.  [Synchronize the Source Server time with an external time source](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration6.md#BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource)  
+  
+7.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+=======
 1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
 2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
@@ -48,6 +63,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 6.  [Synchronize the Source Server time with an external time source](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration6.md#BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource)  
   
 7.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration3.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
