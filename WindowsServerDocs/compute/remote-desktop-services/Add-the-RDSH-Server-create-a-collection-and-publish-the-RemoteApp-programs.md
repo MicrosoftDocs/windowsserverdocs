@@ -4,7 +4,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - remote-desktop-services
   - techgroup-compute
 ms.author: elizapo
@@ -20,7 +20,7 @@ manager: msswadhwa
 >Applies To: Windows Server Technical Preview
 
 Use the following steps to deploy RemoteApp programs in your desktop hosting environment. Make sure you have reviewed and completed the prerequisites before starting.  
-  
+
 ## Add the RD Session Host to your deployment
 >[NOTE] Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if it does not already have one assigned.
 
@@ -53,7 +53,7 @@ Use the following steps to deploy RemoteApp programs in your desktop hosting env
     5.  Select **Share this folder**, and then click **Permissions**.  
    6.   Select **Everyone**, and then click **Remove**. Now click **Add**, enter **Domain Admins**, and click **OK**.  
     7.  Select **Allow Full Control**, and then click **OK > OK > Close**.  
-  
+
 ## Create a session collection and publish RemoteApp programs  
 1.  In Server Manager, click **Remote Desktop Services > Collections > Tasks > Create Session Collections**.  
 2.  Enter a name for the collection, for example **ContosoApps**.  
@@ -64,7 +64,3 @@ Use the following steps to deploy RemoteApp programs in your desktop hosting env
 8.  In Server Manager, select the new collection (**ContosoApps**).  
 9.  Under RemoteApp Programs, click **Publish RemoteApp programs**.  
 10. Select the programs you want to publish, and then click **Publish**.  
-  
-  
-
-
