@@ -14,58 +14,45 @@ ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
 caps.latest.revision: 13
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage System Health in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  This topic discusses how to view and respond to all alerts in your network by using the Dashboard.  
   
 > [!NOTE]
->  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed, the health alerts for the server and client computers in the network are no longer displayed in the Alert Viewer, but instead can be viewed on the **Health Reports** tab of the **Home** page.  
+>  In  Windows Server 2012 R2 Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, the health alerts for the server and client computers in the network are no longer displayed in the Alert Viewer, but instead can be viewed on the **Health Reports** tab of the **Home** page.  
   
- Windows Server Essentials actively monitors every computer that is connected to the server and alerts the administrator to issues related to the system’s health, including critical updates, missing malware protection, out-of-date virus definitions on client computers, and other important issues that require action. These issues are displayed as alerts in the Alert Viewer, which can be launched from the server’s Dashboard or the client computer’s Launchpad in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, or on the **Health Reports** tab in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. By default, the alerts are refreshed every thirty minutes, but you can evaluate your network for alerts at any time by clicking **Refresh** in the Alert Viewer or on the **Health Reports** tab.  
+ Windows Server Essentials actively monitors every computer that is connected to the server and alerts the administrator to issues related to the system’s health, including critical updates, missing malware protection, out-of-date virus definitions on client computers, and other important issues that require action. These issues are displayed as alerts in the Alert Viewer, which can be launched from the server’s Dashboard or the client computer’s Launchpad in  Windows Server 2012 Essentials, or on the **Health Reports** tab in  Windows Server 2012 R2 Essentials. By default, the alerts are refreshed every thirty minutes, but you can evaluate your network for alerts at any time by clicking **Refresh** in the Alert Viewer or on the **Health Reports** tab.  
   
  The following topics will help you understand, view, and respond to alerts in the Alert Viewer, and also provide instructions to configure your server to receive alert notifications in email:  
   
--   [About the Health Report Add-In](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_AddIn)  
+-   [About the Health Report Add-In](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_AddIn)  
   
--   [View alerts by using the Alert Viewer](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_View)  
+-   [View alerts by using the Alert Viewer](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_View)  
   
--   [Organize alerts in the Alert Viewer](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Organize)  
+-   [Organize alerts in the Alert Viewer](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Organize)  
   
--   [Respond to alerts](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Respond)  
+-   [Respond to alerts](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Respond)  
   
--   [Set up email notifications for alerts](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)  
+-   [Set up email notifications for alerts](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email)  
   
--   [Potential computer alerts](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Potential)  
+-   [Potential computer alerts](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Potential)  
   
 ##  <a name="BKMK_AddIn"></a> About the Health Report Add-In  
  The Health Report add-in for Windows Server Essentials provides you with consolidated information about the Windows Server Essentials network and enables you to distribute this information to other people. This information can be viewed on the **Reports** tab of the Dashboard. With the **Reports** tab, you can do the following:  
   
--   [Generate a report on demand or on schedule](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Generate)  
+-   [Generate a report on demand or on schedule](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Generate)  
   
--   [Customize the content of the report](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Customize)  
+-   [Customize the content of the report](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Customize)  
   
--   [Email the report](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_emailreport)  
+-   [Email the report](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_emailreport)  
   
 > [!NOTE]
->  **Windows Server 2012 Essentials:** You can download the Health Report add-in for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
+>  **Windows Server 2012 Essentials:** You can download the Health Report add-in for  Windows Server 2012 Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
 >   
->  **Windows Server 2012 R2 Essentials:** By default, the Health Report add-in is integrated with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard’s **Home** page.  
+>  **Windows Server 2012 R2 Essentials:** By default, the Health Report add-in is integrated with  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard’s **Home** page.  
   
 ###  <a name="BKMK_Generate"></a> Generate a report on demand or on schedule  
  After installing the Health Report add-in and restarting the Dashboard, a new tab, **Reports** is added to the Dashboard. You can generate a health report on demand at any time by clicking the **Generate a health report** task on the **Reports** tab.  
@@ -96,7 +83,7 @@ translation.priority.ht:
 ###  <a name="BKMK_emailreport"></a> Email the report  
  Having to log on to the Dashboard to read reports is still inconvenient for some administrators, especially if they have more than one server to manage. With the email feature turned on, after a report is generated, an email will be sent to a list of specified email addresses with the content of the report. The administrator can easily view this report from any device or any client application, and ensure that the server is running at its best state.  
   
- In the **Customize Health Report Settings** dialog box, after you enable email, change the SMTP settings, and specify a list of email recipients, you will notice that a new task shows up in the task pane: **Email the health report**. For more information about SMTP Settings, see [Set up email notifications for alerts](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email).  
+ In the **Customize Health Report Settings** dialog box, after you enable email, change the SMTP settings, and specify a list of email recipients, you will notice that a new task shows up in the task pane: **Email the health report**. For more information about SMTP Settings, see [Set up email notifications for alerts](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email).  
   
  You can select an existing report, and then click **Email the health report**. You can also generate a new report, and have it automatically sent to your Inbox. If you have configured a schedule for the report to be automatically generated, the report will be automatically delivered to your Inbox after being generated every day (or every hour) as scheduled.  
   
@@ -133,13 +120,13 @@ translation.priority.ht:
 ##  <a name="BKMK_Respond"></a> Respond to alerts  
  When you encounter an alert, you can opt to do one of the following:  
   
--   [Resolve an alert](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Resolve)  
+-   [Resolve an alert](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Resolve)  
   
--   [Ignore an alert](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Ignore an alert](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Enable an alert](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Enable an alert](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [Delete an alert](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [Delete an alert](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_4)  
   
 ###  <a name="BKMK_Resolve"></a> Resolve an alert  
  Follow the resolution instructions in the Alert Viewer to resolve the alert. After an alert is resolved, it is still displayed in the Alert Viewer until it is refreshed.  
@@ -273,7 +260,7 @@ translation.priority.ht:
  This section discusses how to configure your server to send email notifications for alerts.  
   
 > [!NOTE]
->  You can download the Health Report add-in for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
+>  You can download the Health Report add-in for  Windows Server 2012 Essentials from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=266342).  
   
 ##### To set up email notification for alerts  
   
@@ -318,7 +305,7 @@ translation.priority.ht:
  This section discusses how to configure the SMTP settings for your server so that you can receive health reports via email.  
   
 > [!NOTE]
->  By default, the Health Report add-in is integrated with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard’s **Home** page.  
+>  By default, the Health Report add-in is integrated with  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, and the health reports are displayed on the **Health Reports** tab of the Dashboard’s **Home** page.  
   
 ##### To set up email notification for health reports  
   
@@ -369,8 +356,8 @@ translation.priority.ht:
 |Alert Title|Alert Impact and Resolution|  
 |-----------------|---------------------------------|  
 |The current status of the Network Firewall provides reduced protection for this computer.|Unauthorized people or software might be able to access this computer if Windows Firewall is not turned on.|  
-|Virus protection is turned off, not installed, or not up to date.|The data on your computer is at risk if the **Virus protection** security setting is turned off or not updated. [To protect your computer](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect), follow the steps indicated.|  
-|Spyware and unwanted software protection is turned off, not installed, or not up to date.|The data on your computer is at risk if the **Spyware and unwanted software protection** is turned off or not updated. [To protect your computer](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect), follow the steps indicated.|  
+|Virus protection is turned off, not installed, or not up to date.|The data on your computer is at risk if the **Virus protection** security setting is turned off or not updated. [To protect your computer](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect), follow the steps indicated.|  
+|Spyware and unwanted software protection is turned off, not installed, or not up to date.|The data on your computer is at risk if the **Spyware and unwanted software protection** is turned off or not updated. [To protect your computer](Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Protect), follow the steps indicated.|  
 |Windows Update is turned off.|You will not be able to benefit from the new and corrected functionality of updates unless Windows Update is turned on. To turn on Windows Update, in Alert Viewer, click **Open Windows Update**.<br /><br /> If the **Open Windows Update** task is not displayed, you are not logged on to the computer where the alert was raised. You must be logged on to the computer on which the alert was raised to run this task in Alert Viewer.|  
 |Important updates should be installed.|You will not be able to benefit from the new and corrected functionality of updates unless Windows Update is turned on. To turn on Windows Update, in Alert Viewer, click **Open Windows Update**.<br /><br /> If the **Open Windows Update** task is not displayed, you are not logged on to the computer where the alert was raised. You must be logged on to the computer on which the alert was raised to run this task in Alert Viewer.|  
 |Restart the computer to apply updates.|You will not be able to benefit from the new and corrected functionality of the updates until they are applied. Save all your data and restart the computer to apply the updates.|  
@@ -398,4 +385,4 @@ translation.priority.ht:
   
 -   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

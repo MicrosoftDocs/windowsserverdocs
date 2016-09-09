@@ -14,26 +14,13 @@ ms.assetid: f695ae90-3160-407b-bebf-9e460f22c86d
 caps.latest.revision: 8
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Migrate Windows Server 2012 Essentials to New Hardware
-This guide describes how to migrate an existing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server® 2012 Essentials domain to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on new hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials network after you finish the migration.  
+This guide describes how to migrate an existing  Windows Server® 2012 Essentials domain to  Windows Server 2012 Essentials on new hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the  Windows Server 2012 Essentials network after you finish the migration.  
   
 > [!NOTE]
->  To avoid problems during migration, the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials product development team strongly recommends that you read this document before you begin the migration.  
+>  To avoid problems during migration, the  Windows Server 2012 Essentials product development team strongly recommends that you read this document before you begin the migration.  
   
 > [!NOTE]
 <<<<<<< HEAD
@@ -56,9 +43,9 @@ This guide describes how to migrate an existing --- translation.priority.ht:    
 <<<<<<< HEAD
 1.  [Prepare your Source Server for Windows Server 2012 Essentials migration](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration6.md).  You must ensure that your Source Server and network are ready for migration. This section guides you through backing up the Source Server, evaluating the Source Server system health, installing the most recent service packs and fixes, and verifying the network configuration.  
   
-2.  [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode3.md).  This section describes the steps you should take to install --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on the Destination Server in migration mode.  
+2.  [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode3.md).  This section describes the steps you should take to install  Windows Server 2012 Essentials on the Destination Server in migration mode.  
   
-3.  [Join computers to the new Windows Server 2012 Essentials server](Join-computers-to-the-new-Windows-Server-2012-Essentials-server3.md).  This section covers joining client computers to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server and updating Group Policy settings.  
+3.  [Join computers to the new Windows Server 2012 Essentials server](Join-computers-to-the-new-Windows-Server-2012-Essentials-server3.md).  This section covers joining client computers to the new  Windows Server 2012 Essentials server and updating Group Policy settings.  
   
 4.  [Move settings and data to the Destination Server for Windows Server 2012 Essentials migration](Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  This section provides information about migrating data and settings from the Source Server.  
   
@@ -66,15 +53,15 @@ This guide describes how to migrate an existing --- translation.priority.ht:    
   
 6.  [Demote and remove the Source Server from the new Windows Server 2012 Essentials network](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network3.md).  Prior to removing the Source Server from the network, you must force a Group Policy update and demote the Source Server.  
   
-7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration3.md).  After you finish migrating all settings and data to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
+7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration3.md).  After you finish migrating all settings and data to  Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
   
-8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer6.md).  After you finish migrating settings and data to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you should download and run the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials BPA.  
+8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer6.md).  After you finish migrating settings and data to  Windows Server 2012 Essentials, you should download and run the  Windows Server 2012 Essentials BPA.  
 =======
 1.  [Prepare your Source Server for Windows Server 2012 Essentials migration](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration6.md).  You must ensure that your Source Server and network are ready for migration. This section guides you through backing up the Source Server, evaluating the Source Server system health, installing the most recent service packs and fixes, and verifying the network configuration.  
   
-2.  [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode3.md).  This section describes the steps you should take to install --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on the Destination Server in migration mode.  
+2.  [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode3.md).  This section describes the steps you should take to install  Windows Server 2012 Essentials on the Destination Server in migration mode.  
   
-3.  [Join computers to the new Windows Server 2012 Essentials server](../migrate/Join-computers-to-the-new-Windows-Server-2012-Essentials-server3.md).  This section covers joining client computers to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server and updating Group Policy settings.  
+3.  [Join computers to the new Windows Server 2012 Essentials server](../migrate/Join-computers-to-the-new-Windows-Server-2012-Essentials-server3.md).  This section covers joining client computers to the new  Windows Server 2012 Essentials server and updating Group Policy settings.  
   
 4.  [Move settings and data to the Destination Server for Windows Server 2012 Essentials migration](../migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  This section provides information about migrating data and settings from the Source Server.  
   
@@ -82,9 +69,9 @@ This guide describes how to migrate an existing --- translation.priority.ht:    
   
 6.  [Demote and remove the Source Server from the new Windows Server 2012 Essentials network](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network3.md).  Prior to removing the Source Server from the network, you must force a Group Policy update and demote the Source Server.  
   
-7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration3.md).  After you finish migrating all settings and data to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
+7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration3.md).  After you finish migrating all settings and data to  Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
   
-8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](../migrate/Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer6.md).  After you finish migrating settings and data to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you should download and run the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials BPA.  
+8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](../migrate/Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer6.md).  After you finish migrating settings and data to  Windows Server 2012 Essentials, you should download and run the  Windows Server 2012 Essentials BPA.  
 >>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
  Several of the migration procedures require that you open a Command Prompt window as an administrator.  

@@ -14,23 +14,10 @@ ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 caps.latest.revision: 17
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Work Remotely in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  There are multiple ways to access resources that are located on the server when you are away from your network if Anywhere Access functionalities (Remote Web Access, virtual private network, and DirectAccess) are configured on the server.  
   
@@ -82,9 +69,9 @@ translation.priority.ht:
 4.  Log on to the Windows Server Essentials network by using your network user name and password.  
   
 ##  <a name="BKMK_App"></a> Use the My Server app to connect to Windows Server Essentials  
- The My Server app lets you connect to resources and perform light administrative tasks on your --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials server from your Windows-based PC, laptop, or Surface device. If your server is running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012, download the original My Server app from [Apps for Windows](http://windows.microsoft.com/windows-8/apps). If your server is running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, you must download the My Server 2012 R2 app instead.  
+ The My Server app lets you connect to resources and perform light administrative tasks on your  Windows Server Essentials server from your Windows-based PC, laptop, or Surface device. If your server is running  Windows Server 2012, download the original My Server app from [Apps for Windows](http://windows.microsoft.com/windows-8/apps). If your server is running  Windows Server 2012 R2 Essentials, you must download the My Server 2012 R2 app instead.  
   
- With the expanded My Server 2012 R2 app, you can connect to the server or client computers by using Remote Desktop. If your --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials server is integrated with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Office 365, and your subscription includes SharePoint Online, you also can work with documents in your SharePoint Online libraries and open your SharePoint team sites from My Server 2012 R2.  
+ With the expanded My Server 2012 R2 app, you can connect to the server or client computers by using Remote Desktop. If your  Windows Server 2012 R2 Essentials server is integrated with  Office 365, and your subscription includes SharePoint Online, you also can work with documents in your SharePoint Online libraries and open your SharePoint team sites from My Server 2012 R2.  
   
 <<<<<<< HEAD
  For information about installing and using these apps, see [Use the My Server App](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
@@ -93,7 +80,7 @@ translation.priority.ht:
 >>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_2"></a> Use the My Server app for Windows Phone  
- The My Server Windows app for Windows Phone (for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012) and the My Server 2012 R2 app for Windows Phone (for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials) are designed to help you stay seamlessly connected to your servers through smart phones while working at remote locations. This is one of the various ways to access --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials after you configure your server for remote access.  
+ The My Server Windows app for Windows Phone (for  Windows Server 2012) and the My Server 2012 R2 app for Windows Phone (for  Windows Server 2012 R2 Essentials) are designed to help you stay seamlessly connected to your servers through smart phones while working at remote locations. This is one of the various ways to access  Windows Server Essentials after you configure your server for remote access.  
   
  You can download either app from the Windows Phone store:  
   

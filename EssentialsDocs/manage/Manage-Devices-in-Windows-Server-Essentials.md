@@ -14,37 +14,24 @@ ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 caps.latest.revision: 11
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Devices in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  The following sections discuss the device management features of a server, and explain how to set up and use devices on your network:  
   
--   [Manage devices by using the Dashboard](../windows-server-essentials-manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Manage devices by using the Dashboard](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Assign user accounts permission to log on to specific network computers](../windows-server-essentials-manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Assign user accounts permission to log on to specific network computers](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Remove a computer from the server](../windows-server-essentials-manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Remove a computer from the server](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Configure Group Policy settings for folder redirection and security](../windows-server-essentials-manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Configure Group Policy settings for folder redirection and security](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [Connect to a network computer by using a Remote Desktop session](../windows-server-essentials-manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Connect to a network computer by using a Remote Desktop session](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_7)  
   
--   [View computer properties](../windows-server-essentials-manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_8)  
+-   [View computer properties](Manage-Devices-in-Windows-Server-Essentials.md#BKMK_8)  
   
 ##  <a name="BKMK_1"></a> Manage devices by using the Dashboard  
  Windows Server Essentials makes it possible to perform common administrative tasks by using the Windows Server Essentials Dashboard. The **Devices** page of the Dashboard provides the following:  
@@ -136,9 +123,9 @@ translation.priority.ht:
   
 2.  On the navigation bar, click **DEVICES**.  
   
-3.  For --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials: In the global **Users Tasks** pane, click **Implement Group Policy**.  
+3.  For  Windows Server 2012 Essentials: In the global **Users Tasks** pane, click **Implement Group Policy**.  
   
-     For --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials: In the global **Devices Tasks** pane, click **Implement Group Policy**.  
+     For  Windows Server 2012 R2 Essentials: In the global **Devices Tasks** pane, click **Implement Group Policy**.  
   
 4.  The Implement Group Policy Wizard opens.  
   
@@ -192,12 +179,12 @@ translation.priority.ht:
   
 ## See also  
   
--   [Manage Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
+-   [Manage Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
 -   [Use Remote Web Access](../Topic/Use%20Remote%20Web%20Access%20in%20Windows%20Server%20Essentials.md)  
   
--   [Manage user accounts using the Dashboard](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)  
+-   [Manage user accounts using the Dashboard](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)

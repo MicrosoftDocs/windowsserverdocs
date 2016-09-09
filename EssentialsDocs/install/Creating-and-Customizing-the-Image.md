@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Creating and Customizing the Image
-This section describes aspects of the customization process that are specific to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials . You typically perform these procedures on the reference computer with an answer file, before you capture the image for final deployment.  
+This section describes aspects of the customization process that are specific to  Windows Server 2012 Essentials . You typically perform these procedures on the reference computer with an answer file, before you capture the image for final deployment.  
   
  This section includes the following topics:  
   

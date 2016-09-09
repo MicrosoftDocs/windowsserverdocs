@@ -14,38 +14,25 @@ ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 caps.latest.revision: 13
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Transition from Windows Server 2012 Essentials to Windows Server 2012 Standard
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server® 2012 Essentials supports up to 25 users and 50 devices. When your business needs exceed the limit, you can perform an in-place license transition from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard to remain license compliant.  
+ Windows Server® 2012 Essentials supports up to 25 users and 50 devices. When your business needs exceed the limit, you can perform an in-place license transition from  Windows Server 2012 Essentials to  Windows Server 2012 Standard to remain license compliant.  
   
 ## How the transition affects user and device limits  
- After you transition to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard, the user account and devices limits are removed, but the features that are unique to Windows Server 2012 Essentials (such as the Dashboard, Remote Web Access, and client computer backup), still remain available. However, technical limitations for these features support a maximum of 75 user accounts and 75 devices. If it becomes necessary to add more than 75 user accounts or devices, you should turn off the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials features and use the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard native tools to manage user accounts and devices.  
+ After you transition to  Windows Server 2012 Standard, the user account and devices limits are removed, but the features that are unique to Windows Server 2012 Essentials (such as the Dashboard, Remote Web Access, and client computer backup), still remain available. However, technical limitations for these features support a maximum of 75 user accounts and 75 devices. If it becomes necessary to add more than 75 user accounts or devices, you should turn off the  Windows Server 2012 Essentials features and use the  Windows Server 2012 Standard native tools to manage user accounts and devices.  
   
 > [!IMPORTANT]
->  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard requires a Client Access License (CAL) for each user or device in your environment. This is different from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, which does not use the CAL model and does not come with any CALs.  When transitioning from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard, you will need to purchase the appropriate number and type of CALs for your environment (most customers purchase user CALs).  
+>   Windows Server 2012 Standard requires a Client Access License (CAL) for each user or device in your environment. This is different from  Windows Server 2012 Essentials, which does not use the CAL model and does not come with any CALs.  When transitioning from  Windows Server 2012 Essentials to  Windows Server 2012 Standard, you will need to purchase the appropriate number and type of CALs for your environment (most customers purchase user CALs).  
   
 ## Before the transition  
   
--   Before transitioning from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard, you should fully back up the server data.  
+-   Before transitioning from  Windows Server 2012 Essentials to  Windows Server 2012 Standard, you should fully back up the server data.  
   
     > [!IMPORTANT]
     >  Without a full backup of the server, you cannot restore the server to the state that it was in prior to the transition.  
   
--   In addition, make sure that you read and understand the End User License Agreement (EULA) for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard. To view the EULA:  
+-   In addition, make sure that you read and understand the End User License Agreement (EULA) for  Windows Server 2012 Standard. To view the EULA:  
   
     1.  Open a command window as Administrator.  
   
@@ -57,40 +44,40 @@ translation.priority.ht:
   
     3.  Open the location where you saved the file, and then double-click the file to open it.  
   
-## Transition to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard  
- After you have decided to transition from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard, complete these two steps:  
+## Transition to  Windows Server 2012 Standard  
+ After you have decided to transition from  Windows Server 2012 Essentials to  Windows Server 2012 Standard, complete these two steps:  
   
-1.  Purchase a license for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard and the appropriate number of user and/or device Client Access Licenses for your environment.  
+1.  Purchase a license for  Windows Server 2012 Standard and the appropriate number of user and/or device Client Access Licenses for your environment.  
   
-     You can purchase a license for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard from a Retail Outlet, a Distributor, or with the help of a [Microsoft Partner](http://pinpoint.microsoft.com/SelectCulture.aspx).  
+     You can purchase a license for  Windows Server 2012 Standard from a Retail Outlet, a Distributor, or with the help of a [Microsoft Partner](http://pinpoint.microsoft.com/SelectCulture.aspx).  
   
     > [!NOTE]
-    >  If you purchased --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard initially and exercised your downgrade rights to install one of your two virtual instances as --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you do not need to purchase anything additional.  
+    >  If you purchased  Windows Server 2012 Standard initially and exercised your downgrade rights to install one of your two virtual instances as  Windows Server 2012 Essentials, you do not need to purchase anything additional.  
     >   
-    >  If you purchase --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard through the Volume Licensing channel, you can download an ISO image and a product key for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard from the Volume Licensing Service Center (VLSC).  
+    >  If you purchase  Windows Server 2012 Standard through the Volume Licensing channel, you can download an ISO image and a product key for  Windows Server 2012 Standard from the Volume Licensing Service Center (VLSC).  
     >   
-    >  If you purchase --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard from all other channels can download an ISO image and an evaluation product key for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials from the [TechNet Evaluation Center](http://technet.microsoft.com/evalcenter/jj659306.aspx). Performing the transition as described in the next step will convert the evaluation product to a fully licensed and supported product.  
+    >  If you purchase  Windows Server 2012 Standard from all other channels can download an ISO image and an evaluation product key for  Windows Server 2012 Essentials from the [TechNet Evaluation Center](http://technet.microsoft.com/evalcenter/jj659306.aspx). Performing the transition as described in the next step will convert the evaluation product to a fully licensed and supported product.  
   
 2.  Open Windows PowerShell as Administrator, and then run the following command.  
   
      **dism /online /set-edition:ServerStandard /accepteula /productkey:** *Product Key*  
   
-     Where *Product Key* is the product key for your copy of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard.  
+     Where *Product Key* is the product key for your copy of  Windows Server 2012 Standard.  
   
      The server restarts to finish the transition process.  
   
- After the transition, the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials features remain on the server and are supported for up to 75 users and 75 devices. If you exceed either of these limits, you should use the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard native tools to manage user accounts and devices.  
+ After the transition, the  Windows Server 2012 Essentials features remain on the server and are supported for up to 75 users and 75 devices. If you exceed either of these limits, you should use the  Windows Server 2012 Standard native tools to manage user accounts and devices.  
   
- Additionally, after you transition to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Standard, the Media features of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials are no longer available. This includes the Media features of Remote Web Access, and the Media Settings on the Dashboard.  
+ Additionally, after you transition to  Windows Server 2012 Standard, the Media features of  Windows Server 2012 Essentials are no longer available. This includes the Media features of Remote Web Access, and the Media Settings on the Dashboard.  
   
-## Turn off --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials features  
- If you no longer need the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard or other value-add features to manage the server, you can turn the features off and remove them from your server.  
+## Turn off  Windows Server 2012 Essentials features  
+ If you no longer need the  Windows Server 2012 Essentials Dashboard or other value-add features to manage the server, you can turn the features off and remove them from your server.  
   
- The **Turn off Windows Server 2012 Essentials Features Wizard** helps you uninstall the features. It also cleans the server of files that were created by the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server software.  Some cleaning operations are performed immediately, while others are initiated after the server restarts.  
+ The **Turn off Windows Server 2012 Essentials Features Wizard** helps you uninstall the features. It also cleans the server of files that were created by the  Windows Server 2012 Essentials server software.  Some cleaning operations are performed immediately, while others are initiated after the server restarts.  
   
  The **Turn off Windows Server 2012 Essentials Features Wizard** requires that you manually uninstall all add-ins before you can complete the wizard. To view a list of installed add-ins, open the Application page in the Dashboard. The wizard will alert you if it detects installed add-ins, and prompts you to uninstall them.  
   
- The **Turn off Windows Server 2012 Essentials Features Wizard** allows you to choose whether to keep backup files for client computers after turning off the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials features.  
+ The **Turn off Windows Server 2012 Essentials Features Wizard** allows you to choose whether to keep backup files for client computers after turning off the  Windows Server 2012 Essentials features.  
   
  There are two ways to run the **Turn off Windows Server 2012 Essentials Features Wizard** from the Dashboard:  
   
@@ -98,7 +85,7 @@ translation.priority.ht:
   
 1.  From the Dashboard, open the Alert Viewer.  
   
-2.  In Organize list, select the alert that reports information about turning off --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials features after transition.  
+2.  In Organize list, select the alert that reports information about turning off  Windows Server 2012 Essentials features after transition.  
   
 3.  In the alert, click **Turn off Windows Server 2012 Essentials Features**.  
   

@@ -14,28 +14,15 @@ ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 caps.latest.revision: 8
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # System Requirements for Windows Server 2012 R2 Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. Table 2 defines additional hardware and software requirements for the server.  
+  Windows Server 2012 R2 Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for  Windows Server 2012 R2 Essentials. Table 2 defines additional hardware and software requirements for the server.  
   
 > [!NOTE]
->  Are you looking for system requirements for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2? If so, go to [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d) in the Windows Server TechNet Library.  
+>  Are you looking for system requirements for  Windows Server 2012 R2? If so, go to [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d) in the Windows Server TechNet Library.  
   
 ### Table 1. System requirements for Windows Server 2012 R2 Essentials  
   
@@ -61,7 +48,7 @@ translation.priority.ht:
   
  For more information about the hardware requirements, see the [Windows Server Catalog](http://www.windowsservercatalog.com/).  
   
- All server hardware should meet the requirements established for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](http://msdn.microsoft.com/windows/hardware/gg487403.aspx).  
+ All server hardware should meet the requirements established for the  Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](http://msdn.microsoft.com/windows/hardware/gg487403.aspx).  
   
 ## See also  
   

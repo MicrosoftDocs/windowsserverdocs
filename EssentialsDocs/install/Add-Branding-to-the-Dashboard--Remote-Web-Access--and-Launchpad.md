@@ -36,7 +36,7 @@ translation.priority.ht:
   
  All co-branding must meet the following logo requirements:  
   
--   The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials logo must have a minimum width of **170 pixels**, keeping the correct aspect ratio, with **96 DPI**.  
+-   The  Windows Server 2012 Essentials logo must have a minimum width of **170 pixels**, keeping the correct aspect ratio, with **96 DPI**.  
   
 #### To add branding by changing the registry  
   
@@ -83,7 +83,7 @@ translation.priority.ht:
 |Dashboard logo|Adds the logo image to the Dashboard. The Dashboard logo must be in .png format and must not be larger than 350 pixels wide by 38 pixels high.<br /><br /> **Important:** To cobrand the Dashboard with your logo, you must edit the artwork tile that is provided on the OPK DVD and append your company logo to the image while following the appropriate white space requirements. For additional information see the example tile that is provided.|DashboardLogo|Name of the logo image file|  
 |DashboardClientLogo|Adds the logo image to the Dashboard client login screen.|DashboardClientLogo|Name of the logo image file|  
 |Website background picture|Changes the background image that is displayed on the Remote Web Access logon page. Typical resolutions will appear as follows:<br /><br /> - 1024x768 pixel resolution will precisely fill the logon page<br /><br /> - 800x600 pixel resolution will be centered on the page and appear with a black border<br /><br /> - 1280x720 pixel resolution will be centered and the pixels that exceed 1024x768 will not appear|LogonBackground|Name of background image file|  
-|Website title|Replaces the title of the Remote Web Access site from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials to a title that you choose.|WebsiteName|New Remote Web Access site title|  
+|Website title|Replaces the title of the Remote Web Access site from  Windows Server 2012 Essentials to a title that you choose.|WebsiteName|New Remote Web Access site title|  
 |Website logo|Changes the default logo on the Remote Web Access site. The expected size of the logo is 32 pixels by 32 pixels. If your logo is smaller or larger than this, it will be stretched or made reduced to match these dimensions|WebsiteLogo|Name of the logo image file|  
 |Appended Website logo|Your partner logo will display just below the Microsoft logo that is displayed on the Remote Web Access site. The expected size of the logo is 200 pixels high by 50 pixels wide. If your logo is larger than this, it will be made smaller to fit while maintaining the original aspect ratio. If your logo is smaller than this, it will be centered within the 200 by 50 pixel space and neither the size nor aspect ratio will be changed.|OEMLogo|Name of the logo image file|  
 <<<<<<< HEAD

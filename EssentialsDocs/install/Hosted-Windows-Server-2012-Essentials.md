@@ -14,20 +14,7 @@ ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 caps.latest.revision: 7
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Hosted Windows Server 2012 Essentials
 This document includes information that is specific to hosters who intend to deploy Windows Server® 2012 Essentials in their lab and offer Windows Server 2012 Essentials as a service to their customers.  
@@ -317,11 +304,11 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 -   If you have another mechanism to back up the Windows Server 2012 Essentials VM, and you do not want your user to see the Windows Server 2012 Essentials native Server Backup feature, you could turn it off and remove all related user interface from the Windows Server 2012 Essentials Dashboard. For more information, refer to the “Customize Server Backup�? section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
- **Off-premises backup** allows you to periodically back up server data to a cloud service. You can download and install the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup Integration Module for Windows Server 2012 Essentials to leverage the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup provided by Microsoft.  
+ **Off-premises backup** allows you to periodically back up server data to a cloud service. You can download and install the  Microsoft Azure Backup Integration Module for Windows Server 2012 Essentials to leverage the  Azure Backup provided by Microsoft.  
   
  If you or your users prefer another cloud service, you should:  
   
-1.  Update the user interface of the Windows Server 2012 Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup. For more information, refer to the Customize the Image section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
+1.  Update the user interface of the Windows Server 2012 Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default  Azure Backup. For more information, refer to the Customize the Image section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
 2.  (Optional) Develop an add-in for Windows Server 2012 Essentials Dashboard to configure and manage the cloud backup service.  
   

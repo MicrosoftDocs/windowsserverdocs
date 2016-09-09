@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Important Information for Using the Windows Server 2012 Essentials ADK
-To create and customize an image of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you use many of the tools in the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials ADK.  
+To create and customize an image of  Windows Server 2012 Essentials, you use many of the tools in the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the  Windows Server 2012 Essentials ADK.  
   
  You should be aware of the following important differences:  
   

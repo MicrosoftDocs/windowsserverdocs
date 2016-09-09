@@ -14,20 +14,7 @@ ms.assetid: 86f158a5-c807-4242-b73d-e97b604adb5f
 caps.latest.revision: 6
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Use Windows Server Essentials
 The following topics provide information to help you get started using Windows Server Essentials:  

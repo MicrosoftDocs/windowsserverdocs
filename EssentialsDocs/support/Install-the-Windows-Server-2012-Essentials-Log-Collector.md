@@ -14,23 +14,10 @@ ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 caps.latest.revision: 8
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Install the Windows Server 2012 Essentials Log Collector
-The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
+The  Windows Server 2012 Essentials Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
   
 ###  <a name="BKMK_ToInstall"></a> To install the Log Collector  
   

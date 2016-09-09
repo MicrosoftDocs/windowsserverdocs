@@ -32,7 +32,7 @@ translation.priority.ht:
 ---
 # Build Multi-Language Client Restore Media
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials langauage pack into install.wim.  
+>  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the  Windows Server 2012 Essentials langauage pack into install.wim.  
   
  When building the multi-language server installation DVD, the language packs will be installed for Server install.wim. The localized resources for restore wizard will be installed as part of language pack.  
   

@@ -15,25 +15,12 @@ ms.assetid: 39ebd1f6-577c-4ec7-a676-c568410d1f36
 caps.latest.revision: 2
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Join computers to the new Windows Server 2012 Essentials network3
-The next step in the migration process is to join client computers to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials network.  
+The next step in the migration process is to join client computers to the new  Windows Server 2012 Essentials network.  
   
-### To join a computer to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials network  
+### To join a computer to the  Windows Server 2012 Essentials network  
   
 -   From a client computer, browse to **http://***destination-servername***/connect** and follow the onscreen instructions.  
   

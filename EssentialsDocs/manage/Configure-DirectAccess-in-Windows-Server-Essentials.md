@@ -27,24 +27,24 @@ translation.priority.ht:
   - zh-tw
 ---
 # Configure DirectAccess in Windows Server Essentials
-This topic provides step-by-step instructions for configuring DirectAccess in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials to enable your mobile workforce to seamlessly connect to your organization’s network from any Internet-equipped remote location without establishing a virtual private network (VPN) connection. DirectAccess can offer mobile workers the same connectivity experience inside and outside the office from their --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 8.1, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 8, and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 computers.  
+This topic provides step-by-step instructions for configuring DirectAccess in  Windows Server Essentials to enable your mobile workforce to seamlessly connect to your organization’s network from any Internet-equipped remote location without establishing a virtual private network (VPN) connection. DirectAccess can offer mobile workers the same connectivity experience inside and outside the office from their  Windows 8.1,  Windows 8, and  Windows 7 computers.  
   
- --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed. In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, if the domain contains more than one --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials server, DirectAccess must be configured on the domain controller.  
+  This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed. In  Windows Server 2012 R2 Essentials, if the domain contains more than one  Windows Server Essentials server, DirectAccess must be configured on the domain controller.  
   
 > [!NOTE]
->  This topic provides instructions for configuring DirectAccess when your --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials server is the domain controller. If the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials server is a domain member, follow the instructions to configure DirectAccess on a domain member in [Add DirectAccess to an Existing Remote Access (VPN) Deployment](http://technet.microsoft.com/library/jj574220.aspx) instead.  
+>  This topic provides instructions for configuring DirectAccess when your  Windows Server Essentials server is the domain controller. If the  Windows Server Essentials server is a domain member, follow the instructions to configure DirectAccess on a domain member in [Add DirectAccess to an Existing Remote Access (VPN) Deployment](http://technet.microsoft.com/library/jj574220.aspx) instead.  
   
 ## Process overview  
- To configure DirectAccess in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials, complete the following steps.  
+ To configure DirectAccess in  Windows Server Essentials, complete the following steps.  
   
 > [!IMPORTANT]
->  Before you use the procedures in this guide to configure DirectAccess in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials, you must enable VPN on the server. For instructions, see [Manage VPN](../windows-server-essentials-manage/Manage-VPN-in-Windows-Server-Essentials.md).  
+>  Before you use the procedures in this guide to configure DirectAccess in  Windows Server Essentials, you must enable VPN on the server. For instructions, see [Manage VPN](Manage-VPN-in-Windows-Server-Essentials.md).  
   
--   [Step 1: Add Remote Access Management Tools to your server](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_AddRAM)  
+-   [Step 1: Add Remote Access Management Tools to your server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_AddRAM)  
   
--   [Step 2: Change the network adapter address of the server to a static IP address](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_AddStaticIP)  
+-   [Step 2: Change the network adapter address of the server to a static IP address](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_AddStaticIP)  
   
--   [Step 3: Prepare a certificate and DNS record for the network location server](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)  
+-   [Step 3: Prepare a certificate and DNS record for the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)  
   
     -   [Step 3a: Grant full permissions to Authenticated Users for the Web server’s certificate template](#BKMK_GrantFullPermissions)  
   
@@ -54,27 +54,27 @@ This topic provides step-by-step instructions for configuring DirectAccess in --
   
 -   [Step 4: Create a security group for DirectAccess client computers](#BKMK_AddSecurityGroup)  
   
--   [Step 5: Enable and configure DirectAccess](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_EnableConfigureDA)  
+-   [Step 5: Enable and configure DirectAccess](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_EnableConfigureDA)  
   
-    -   [Step 5a: Enable DirectAccess by using the Remote Access Management Console](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_EnableDA)  
+    -   [Step 5a: Enable DirectAccess by using the Remote Access Management Console](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_EnableDA)  
   
-    -   [Step 5b: Remove the invalid IPv6Prefix in RRAS GPO (Windows Server 2012 Essentials only)](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_RemoveIPv6)  
+    -   [Step 5b: Remove the invalid IPv6Prefix in RRAS GPO (Windows Server 2012 Essentials only)](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_RemoveIPv6)  
   
     -   [Step 5c: Enable client computers running Windows 7 Enterprise to use DirectAccess](#BKMK_Step4cWindows7Setup)  
   
-    -   [Step 5d: Configure the network location server](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_NLS)  
+    -   [Step 5d: Configure the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_NLS)  
   
-    -   [Step 5e: Add a registry key to bypass CA certification when you establish an IPsec channel](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_CA)  
+    -   [Step 5e: Add a registry key to bypass CA certification when you establish an IPsec channel](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_CA)  
   
--   [Step 6: Configure Name Resolution Policy Table settings for the DirectAccess server](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_NRPT)  
+-   [Step 6: Configure Name Resolution Policy Table settings for the DirectAccess server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_NRPT)  
   
--   [Step 7: Configure TCP and UDP firewall rules for the DirectAccess server GPOs](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_TCPUDP)  
+-   [Step 7: Configure TCP and UDP firewall rules for the DirectAccess server GPOs](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_TCPUDP)  
   
--   [Step 8: Change the DNS64 configuration to listen to the IP-HTTPS interface](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS64)  
+-   [Step 8: Change the DNS64 configuration to listen to the IP-HTTPS interface](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS64)  
   
--   [Step 9: Reserve ports for the WinNat service](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_ExemptPort)  
+-   [Step 9: Reserve ports for the WinNat service](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_ExemptPort)  
   
--   [Step 10: Restart the WinNat service](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_WinNAT)  
+-   [Step 10: Restart the WinNat service](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_WinNAT)  
   
 > [!NOTE]
 >  [Appendix: Set up DirectAccess by using Windows PowerShell](#BKMK_AppendixBPowerShellScript) provides a Windows PowerShell script that you can use to perform the DirectAccess setup.  
@@ -85,7 +85,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in --
   
 1.  On the server, in the bottom left corner of the Start page, click the **Server Manager** icon.  
   
-     In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, you will need to search for Server Manager to open it. On the Start page, type **Server Manager**, and then click **Server Manager** in the search results. To pin Server Manager to the Start page, right-click Server Manager in the search results, and click **Pin to Start**.  
+     In  Windows Server 2012 R2 Essentials, you will need to search for Server Manager to open it. On the Start page, type **Server Manager**, and then click **Server Manager** in the search results. To pin Server Manager to the Start page, right-click Server Manager in the search results, and click **Pin to Start**.  
   
 2.  If a **User Account Control** warning message displays, click **Yes**.  
   
@@ -95,7 +95,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in --
   
     1.  On the **Installation Type** page, click **Role-based or feature-based installation**.  
   
-    2.  On the **Server Selection page** (or the **Select destination server** page in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials), click **Select a server from the server pool**.  
+    2.  On the **Server Selection page** (or the **Select destination server** page in  Windows Server 2012 Essentials), click **Select a server from the server pool**.  
   
     3.  On the **Features** page, expand **Remote Server Administration Tools (Installed)**, expand **Remote Access Management Tools (Installed)**, expand **Role Administration Tools (Installed)**, expand **Remote Access Management Tools**, and then select **Remote Access GUI and Command-Line Tools**.  
   
@@ -196,7 +196,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in --
 12. When certificate enrollment completes, click **Finish**.  
   
 ###  <a name="BKMK_MapNewHosttoServerAddress"></a> Step 3c: Add a new host on the DNS server and map it to the Windows Server Essentials server address  
- To complete the DNS configuration, add a new host on the DNS server and map it to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials server address.  
+ To complete the DNS configuration, add a new host on the DNS server and map it to the  Windows Server Essentials server address.  
   
 ####  <a name="BKMK_ToMapNewHosttoServerAddress"></a> To map a new host to the Windows Server Essentials server address  
   
@@ -242,20 +242,20 @@ This topic provides step-by-step instructions for configuring DirectAccess in --
 >  You can also use the **Member of** tab in the computer account properties to add the account to the security group.  
   
 ##  <a name="BKMK_EnableConfigureDA"></a> Step 5: Enable and configure DirectAccess  
- To enable and configure DirectAccess in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials, you must complete the following steps:  
+ To enable and configure DirectAccess in  Windows Server Essentials, you must complete the following steps:  
   
--   [Step 5a: Enable DirectAccess by using the Remote Access Management Console](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_EnableDA)  
+-   [Step 5a: Enable DirectAccess by using the Remote Access Management Console](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_EnableDA)  
   
--   [Step 5b: Remove the invalid IPv6Prefix in RRAS GPO (Windows Server 2012 Essentials only)](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_RemoveIPv6)  
+-   [Step 5b: Remove the invalid IPv6Prefix in RRAS GPO (Windows Server 2012 Essentials only)](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_RemoveIPv6)  
   
 -   [Step 5c: Enable client computers running Windows 7 Enterprise to use DirectAccess](#BKMK_Step4cWindows7Setup)  
   
--   [Step 5d: Configure the network location server](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_NLS)  
+-   [Step 5d: Configure the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_NLS)  
   
--   [Step 5e: Add a registry key to bypass CA certification when you establish an IPsec channel](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_CA)  
+-   [Step 5e: Add a registry key to bypass CA certification when you establish an IPsec channel](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_CA)  
   
 ###  <a name="BKMK_EnableDA"></a> Step 5a: Enable DirectAccess by using the Remote Access Management Console  
- This section provides step-by-step instructions to enable DirectAccess in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials. If you have not configured VPN on the server yet, you should do that before you start this procedure. For instructions, see [Manage VPN](../windows-server-essentials-manage/Manage-VPN-in-Windows-Server-Essentials.md).  
+ This section provides step-by-step instructions to enable DirectAccess in  Windows Server Essentials. If you have not configured VPN on the server yet, you should do that before you start this procedure. For instructions, see [Manage VPN](Manage-VPN-in-Windows-Server-Essentials.md).  
   
 ##### To enable DirectAccess by using the Remote Access Management Console  
   
@@ -287,7 +287,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in --
         ```  
   
 ###  <a name="BKMK_RemoveIPv6"></a> Step 5b: Remove the invalid IPv6Prefix in RRAS GPO (Windows Server 2012 Essentials only)  
- --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This section applies to a server running Windows Server 2012 Essentials.  
+  This section applies to a server running Windows Server 2012 Essentials.  
   
  Open Windows PowerShell as an Administrator and run the following commands:  
   
@@ -299,9 +299,9 @@ gpupdate
 ```  
   
 ###  <a name="BKMK_Step4cWindows7Setup"></a> Step 5c: Enable client computers running Windows 7 Enterprise to use DirectAccess  
- If you have client computers running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 Enterprise, complete the following procedure to enable DirectAccess from those computers.  
+ If you have client computers running  Windows 7 Enterprise, complete the following procedure to enable DirectAccess from those computers.  
   
-##### To enable --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 Enterprise computers to use DirectAccess  
+##### To enable  Windows 7 Enterprise computers to use DirectAccess  
   
 1.  On the server’s Start page, open **Remote Access Management**.  
   
@@ -309,17 +309,17 @@ gpupdate
   
      The Remote Access Server Setup Wizard opens.  
   
-3.  On the **Authentication** tab, choose the certification authority (CA) certificate that will be the trusted root certificate (you can choose the CA certificate of the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials server). Click **Enable Windows 7 client computers to connect via DirectAccess**, and then click **Next**.  
+3.  On the **Authentication** tab, choose the certification authority (CA) certificate that will be the trusted root certificate (you can choose the CA certificate of the  Windows Server Essentials server). Click **Enable Windows 7 client computers to connect via DirectAccess**, and then click **Next**.  
   
 4.  Follow the instructions to complete the wizard.  
   
 > [!IMPORTANT]
->  There is a known issue for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 Enterprise computers connecting over DirectAccess if the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server did not come with UR1 pre-installed. To enable DirectAccess connections in that environment, you must perform these additional steps:  
+>  There is a known issue for  Windows 7 Enterprise computers connecting over DirectAccess if the  Windows Server 2012 Essentials server did not come with UR1 pre-installed. To enable DirectAccess connections in that environment, you must perform these additional steps:  
 >   
 >  1.  Install the hotfix described in [Microsoft Knowledge Base (KB) article 2796394](http://support.microsoft.com/kb/2796394) on the Windows Server 2012 Essentials server. Then restart the server.  
-> 2.  Then install the hotfix described in [Microsoft Knowledge Base (KB) article 2615847](http://support.microsoft.com/kb/2615847) on each --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 computer.  
+> 2.  Then install the hotfix described in [Microsoft Knowledge Base (KB) article 2615847](http://support.microsoft.com/kb/2615847) on each  Windows 7 computer.  
 >   
->      This issue was resolved in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials.  
+>      This issue was resolved in  Windows Server 2012 R2 Essentials.  
   
 ###  <a name="BKMK_NLS"></a> Step 5d: Configure the network location server  
  This section provides step-by-step instructions to configure the network location server settings.  
@@ -333,7 +333,7 @@ gpupdate
   
 2.  In the Remote Access Management Console, click **Configuration**, and in the **Remote Access Setup** details pane, in **Step 3**, click **Edit**.  
   
-3.  In the Remote Access Server Setup Wizard, on the **Network Location Server** tab, select **The network location server is deployed on the Remote Access server**, and then select the certificate that was previously issued (in [Step 3: Prepare a certificate and DNS record for the network location server](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)).  
+3.  In the Remote Access Server Setup Wizard, on the **Network Location Server** tab, select **The network location server is deployed on the Remote Access server**, and then select the certificate that was previously issued (in [Step 3: Prepare a certificate and DNS record for the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS)).  
   
 4.  Follow the instructions to complete the wizard, and then click **Finish**.  
   
@@ -398,7 +398,7 @@ Set-NetDnsTransitionConfiguration –AcceptInterface IPHTTPSInterface
 ```  
   
 ##  <a name="BKMK_ExemptPort"></a> Step 9: Reserve ports for the WinNat service  
- Use the following Windows PowerShell command to reserve ports for the WinNat service. Replace "192.168.1.100" with the actual IPv4 address of your --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server.  
+ Use the following Windows PowerShell command to reserve ports for the WinNat service. Replace "192.168.1.100" with the actual IPv4 address of your  Windows Server 2012 Essentials server.  
   
 ```powershell  
 Set-NetNatTransitionConfiguration –IPv4AddressPortPool @("192.168.1.100, 10000-47000")  
@@ -420,14 +420,14 @@ Restart-Service winnat
 ### Preparation  
  Before you begin configuring your server for DirectAccess, you must complete the following:  
   
-1.  Follow the procedure in [Step 3: Prepare a certificate and DNS record for the network location server](../windows-server-essentials-manage/Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS) to enroll a certificate named **DirectAccess-NLS.contoso.com** (where **contoso.com** is replaced by your actual internal domain name), and to add a DNS record for the network location server (NLS).  
+1.  Follow the procedure in [Step 3: Prepare a certificate and DNS record for the network location server](Configure-DirectAccess-in-Windows-Server-Essentials.md#BKMK_DNS) to enroll a certificate named **DirectAccess-NLS.contoso.com** (where **contoso.com** is replaced by your actual internal domain name), and to add a DNS record for the network location server (NLS).  
   
 2.  Add a security group named **DirectAccessClients** in Active Directory, and then add client computers for which you want to provide the DirectAccess functionality. For more information, see [Step 4: Create a security group for DirectAccess client computers](#BKMK_AddSecurityGroup).  
   
 ### Commands  
   
 > [!IMPORTANT]
->  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, you do not need to remove the unnecessary IPv6 prefix GPO. Delete the code section with the following label: `# [WINDOWS SERVER 2012 ESSENTIALS ONLY] Remove the unnecessary IPv6 prefix GPO`.  
+>  In  Windows Server 2012 R2 Essentials, you do not need to remove the unnecessary IPv6 prefix GPO. Delete the code section with the following label: `# [WINDOWS SERVER 2012 ESSENTIALS ONLY] Remove the unnecessary IPv6 prefix GPO`.  
   
 ```powershell  
 # Add Remote Access role if not installed yet  
@@ -513,6 +513,6 @@ Restart-Service winnat
   
 ## See also  
   
--   [Manage Anywhere Access](../windows-server-essentials-manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
+-   [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)
