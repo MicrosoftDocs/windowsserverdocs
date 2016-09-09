@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8 
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Remote Desktop clients
 

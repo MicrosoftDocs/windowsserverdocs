@@ -32,7 +32,7 @@ translation.priority.ht:
 ---
 # Build Multi-Language Client Restore Media
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] langauage pack into install.wim.  
+>  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](http://technet.microsoft.com/library/jj126995) before you add the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials langauage pack into install.wim.  
   
  When building the multi-language server installation DVD, the language packs will be installed for Server install.wim. The localized resources for restore wizard will be installed as part of language pack.  
   
@@ -98,7 +98,14 @@ translation.priority.ht:
     ```  
   
 ## See Also  
+<<<<<<< HEAD
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

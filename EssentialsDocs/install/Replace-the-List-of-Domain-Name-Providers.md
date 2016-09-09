@@ -33,9 +33,15 @@ translation.priority.ht:
 # Replace the List of Domain Name Providers
 You can replace the list of domain name providers that is displayed in the Set Up Domain Name Wizard by completing the following tasks:  
   
+<<<<<<< HEAD
+-   [Create the referral service files](Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles)  
+  
+-   [Add an entry to the registry on the reference computer](Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
+=======
 -   [Create the referral service files](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles)  
   
 -   [Add an entry to the registry on the reference computer](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_ReferralFiles"></a> Create the referral service files  
  The Referral Service Administration Tool creates a set of files that are used to define the list of domain name providers that are displayed in the Set Up Domain Name Wizard. An XML formatted file is created for each worldwide region and contains information for the domain name providers that you specify in the tool. The files that are created by the tool must be located in a folder that can be accessed through a secure link (HTTPS) that you manage on the Internet.  
@@ -79,13 +85,17 @@ You can replace the list of domain name providers that is displayed in the Set U
   
 5.  Right-click the new **ReferralServerHttpsUri** string in the right pane, and then click **Modify**.  
   
+<<<<<<< HEAD
+6.  Type the HTTPS URL that is used to access the referral files that you created in [Create the referral service files](Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles), and then click **OK**.  
+=======
 6.  Type the HTTPS URL that is used to access the referral files that you created in [Create the referral service files](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles), and then click **OK**.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
     > [!IMPORTANT]
     >  A slash (/) is required at the end of the URL.  
   
 ###  <a name="BKMK_ReplaceDomainNameProviders"></a> Domain name status issues  
- If a partner adds domain name providers and uses an application programming interface (API) in the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] SDK to set the Unknown, Failed, and CertificateRequestNotSubmitted statuses for the certificate, the customer receives an incorrect message and configuration result. This is because the cases are handled by exceptions rather than returning a status.  
+ If a partner adds domain name providers and uses an application programming interface (API) in the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials SDK to set the Unknown, Failed, and CertificateRequestNotSubmitted statuses for the certificate, the customer receives an incorrect message and configuration result. This is because the cases are handled by exceptions rather than returning a status.  
   
  The following domain statuses are failures and should be reported as an error:  
   
@@ -110,7 +120,14 @@ You can replace the list of domain name providers that is displayed in the Set U
 -   InRenewal  
   
 ## See Also  
+<<<<<<< HEAD
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

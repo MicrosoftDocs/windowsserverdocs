@@ -30,12 +30,12 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot Anywhere Access in Windows Server Essentials
-This topic provides general instructions for using the Repair Anywhere Access wizard in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] to troubleshoot issues preventing network users from accessing server resources. Anywhere Access functionalities – Remote Web Access, virtual private network (VPN), and DirectAccess – enable network users to access server resources from any location with an Internet connection, at any time, from any device.  
+This topic provides general instructions for using the Repair Anywhere Access wizard in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials to troubleshoot issues preventing network users from accessing server resources. Anywhere Access functionalities – Remote Web Access, virtual private network (VPN), and DirectAccess – enable network users to access server resources from any location with an Internet connection, at any time, from any device.  
   
  The Repair Anywhere Access wizard attempts to identify and repair issues with your router, domain name, or firewall that are preventing network users from remotely accessing server resources.  
   
 > [!NOTE]
->  For the most current troubleshooting information from the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
 ### To repair Anywhere Access  
   
@@ -58,8 +58,14 @@ This topic provides general instructions for using the Repair Anywhere Access wi
 ## Additional troubleshooting for Anywhere Access  
  If the Repair Anywhere Access wizard cannot repair Anywhere Access, check the following troubleshooting resources for issues related to Remote Web Access, VPN, and DirectAccess:  
   
+<<<<<<< HEAD
+-   [Troubleshoot Remote Web Access connectivity](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
+  
+-   [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
+=======
 -   [Troubleshoot Remote Web Access connectivity](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
   
 -   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
--   Check the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads) for the most recent issues reported by the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] community.
+-   Check the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads) for the most recent issues reported by the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials community.

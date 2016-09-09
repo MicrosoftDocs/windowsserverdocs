@@ -63,8 +63,8 @@ You can add post-initial configuration customizations by writing your own code, 
 3.  Save SetupFailure.cmd in C:\Windows\Setup\Scripts.  
   
 ## See Also  
- [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

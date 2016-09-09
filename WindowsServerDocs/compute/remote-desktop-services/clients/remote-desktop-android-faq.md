@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f2524511-4624-4645-aa87-d71ccf6c42cc 
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Frequently asked questions about the Android Remote Desktop client
 

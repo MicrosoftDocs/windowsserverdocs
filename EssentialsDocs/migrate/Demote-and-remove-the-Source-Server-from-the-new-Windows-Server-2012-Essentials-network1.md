@@ -31,8 +31,19 @@ translation.priority.ht:
   - zh-tw
 ---
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network1
-After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and you complete the tasks in the Migration Wizard, you must perform the following tasks:  
+After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and you complete the tasks in the Migration Wizard, you must perform the following tasks:  
   
+<<<<<<< HEAD
+1.  [Uninstall Exchange Server 2003](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_UninstallExchangeServer2003).  
+  
+2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_PhysicallyDisconnect).  
+  
+3.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_DemoteTheSourceServer).  
+  
+4.  [Move the DHCP Server role from the Source Server to the router](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_MoveTheDHCPRole).  
+  
+5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+=======
 1.  [Uninstall Exchange Server 2003](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_UninstallExchangeServer2003).  
   
 2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_PhysicallyDisconnect).  
@@ -42,11 +53,12 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
 4.  [Move the DHCP Server role from the Source Server to the router](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_MoveTheDHCPRole).  
   
 5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_UninstallExchangeServer2003"></a> Uninstall Exchange Server 2003  
   
 > [!IMPORTANT]
->  If you add user accounts after you move mailboxes to the Destination Server and before you uninstall Exchange Server 2003 from the Source Server, the mailboxes are added on the Source Server. This is by design. You must move the mailboxes to the Destination Server for all user accounts that are added during this time. Repeat the instructions in Move Exchange Server mailboxes and settings for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] migration before you uninstall Exchange Server 2003.  
+>  If you add user accounts after you move mailboxes to the Destination Server and before you uninstall Exchange Server 2003 from the Source Server, the mailboxes are added on the Source Server. This is by design. You must move the mailboxes to the Destination Server for all user accounts that are added during this time. Repeat the instructions in Move Exchange Server mailboxes and settings for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials migration before you uninstall Exchange Server 2003.  
   
  You must uninstall Exchange Server 2003 from the Source Server before you demote it. This removes all references in Active Directory Domain Services (AD DS) to Exchange Server on the Source Server. You must have your Windows Small Business Server 2003 media to remove Exchange Server 2003.  
   
@@ -63,14 +75,18 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
 5.  On the Component Selection page, expand **Exchange Server**, and then choose **Remove**.  
   
     > [!NOTE]
+<<<<<<< HEAD
+    >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  
+=======
     >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 6.  Click **Next**.  
   
 7.  When prompted, insert Windows Small Business Server 2003 CD#3, and follow the onscreen instructions.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
- Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 ###  <a name="BKMK_DemoteTheSourceServer"></a> Demote the Source Server  
  Before you demote the Source Server from the role of the AD DS domain controller to the role of a domain member server, ensure that Group Policy settings are applied to all client computers, as described in the following procedure.  
@@ -120,7 +136,11 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
 ###  <a name="BKMK_MoveTheDHCPRole"></a> Move the DHCP Server role from the Source Server to the router  
   
 > [!NOTE]
+<<<<<<< HEAD
+>  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+=======
 >  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_RemoveTheSourceServer).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  
   

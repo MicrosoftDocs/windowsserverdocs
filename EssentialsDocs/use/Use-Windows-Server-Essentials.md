@@ -32,13 +32,13 @@ translation.priority.ht:
 # Use Windows Server Essentials
 The following topics provide information to help you get started using Windows Server Essentials:  
   
--   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
+-   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)  
   
--   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
+-   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
--   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
+-   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
   
--   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md)  
+-   [Play Digital Media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md)  
   
 ## See also  
   

@@ -30,20 +30,26 @@ translation.priority.ht:
   - zh-tw
 ---
 # Use the Windows Server 2012 Essentials Log Collector
-When you are troubleshooting computer issues, a representative from Microsoft Customer Service and Support may ask you to gather logs from servers, computers on the network, or both by using the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Collector.  
+When you are troubleshooting computer issues, a representative from Microsoft Customer Service and Support may ask you to gather logs from servers, computers on the network, or both by using the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Log Collector.  
   
  The Log Collector copies program logs, event reviewer logs, and related environment information into a single zip file at a specified location. You can run the Log Collector directly from the server or any computer on the network, or by using a remote connection to the computers.  
   
 > [!NOTE]
 >  -   The Log Collector does not analyze network issues or make changes to any server or computer on the network. For information about how to troubleshoot network issues, see the Help documentation for your server product.  
-> -   In this guide, the computers on your network, other than your server, are called “network computers.”  
+> -   In this guide, the computers on your network, other than your server, are called “network computers.�?  
 > -   [Download the Windows Server 2012 Essentials Log Collector installation package](http://go.microsoft.com/fwlink/?LinkID=266341).  
   
  To install and run the Log Collector, perform the steps in the following topics:  
   
+<<<<<<< HEAD
+1.  [Install the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md)  
+  
+2.  [Run the Log Collector](Run-the-Windows-Server-2012-Essentials-Log-Collector.md)  
+=======
 1.  [Install the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md)  
   
 2.  [Run the Log Collector](../support/Run-the-Windows-Server-2012-Essentials-Log-Collector.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## Environment information collected  
  For each network computer or server that you specify, the Log Collector gathers the following environment information and places it into the log collection file.  
@@ -166,4 +172,8 @@ When you are troubleshooting computer issues, a representative from Microsoft Cu
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Troubleshoot Log Collector Errors](Troubleshoot-Windows-Server-2012-Essentials-Log-Collector-Errors.md)
+=======
 -   [Troubleshoot Log Collector Errors](../support/Troubleshoot-Windows-Server-2012-Essentials-Log-Collector-Errors.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

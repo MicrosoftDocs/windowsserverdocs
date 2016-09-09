@@ -27,7 +27,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot Remote Web Access connectivity in Windows Server Essentials
-[!INCLUDE[wse_all](../manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Typically, Windows Server Essentials can automatically configure a broadband router if the router is a UPnP certified device and if the UPnP setting is enabled on the router.  
   
@@ -49,7 +49,7 @@ translation.priority.ht:
   
 -   Verify that the broadband device that connects to your Internet service provider (ISP) is turned on, functioning properly, and that your router is connected to the broadband device.  
   
--   Turn on the UPnP setting for your router. Connect to the configuration web page for your router to turn on the UPnP setting. For information about how to log on to your router and how to turn on the UPnP setting, see the documentation for your router. After you turn on the UPnP setting, run the Turn On [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] Wizard again to configure your router.  
+-   Turn on the UPnP setting for your router. Connect to the configuration web page for your router to turn on the UPnP setting. For information about how to log on to your router and how to turn on the UPnP setting, see the documentation for your router. After you turn on the UPnP setting, run the Turn On --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access Wizard again to configure your router.  
   
 -   If your router does not fully support the UPnP standard, it cannot be automatically configured. You must manually configure your router or purchase a router that supports the UPnP standard.  
   
@@ -80,7 +80,7 @@ translation.priority.ht:
     |192.168.0.100|TCP 80|Always|Allow All|  
     |192.168.0.100|TCP 443|Always|Allow All|  
   
-     After you manually configure your router, run the Turn On [!INCLUDE[sbs8_rwa](../manage/includes/sbs8_rwa_md.md)] Wizard, ensuring that you select the **Skip router setup** option on the **Getting started** page.  
+     After you manually configure your router, run the Turn On --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access Wizard, ensuring that you select the **Skip router setup** option on the **Getting started** page.  
   
 -   Purchase a new router if your router does not fully support the UPnP standard.  
   
@@ -97,4 +97,8 @@ translation.priority.ht:
   
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
+<<<<<<< HEAD
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
+=======
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

@@ -30,12 +30,12 @@ translation.priority.ht:
   - zh-tw
 ---
 # System Requirements for Windows Server 2012 R2 Essentials
-[!INCLUDE[wseblue_all](../install/includes/wseblue_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)]. Table 2 defines additional hardware and software requirements for the server.  
+ --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. Table 2 defines additional hardware and software requirements for the server.  
   
 > [!NOTE]
->  Are you looking for system requirements for [!INCLUDE[winblue_server_2](../install/includes/winblue_server_2_md.md)]? If so, go to [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d) in the Windows Server TechNet Library.  
+>  Are you looking for system requirements for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2? If so, go to [System Requirements and Installation Information for Windows Server 2012 R2](assetId:///5f4e3a1b-747a-47ba-b76c-04eac6502d1d) in the Windows Server TechNet Library.  
   
 ### Table 1. System requirements for Windows Server 2012 R2 Essentials  
   
@@ -61,10 +61,16 @@ translation.priority.ht:
   
  For more information about the hardware requirements, see the [Windows Server Catalog](http://www.windowsservercatalog.com/).  
   
- All server hardware should meet the requirements established for the [!INCLUDE[winblue_server_2](../install/includes/winblue_server_2_md.md)] Logo Program for Systems. For more information, see [Windows Logo Program](http://msdn.microsoft.com/windows/hardware/gg487403.aspx).  
+ All server hardware should meet the requirements established for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](http://msdn.microsoft.com/windows/hardware/gg487403.aspx).  
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
+  
+-   [System Requirements for Windows Server 2012 Essentials](System-Requirements-for-Windows-Server-2012-Essentials.md)
+=======
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   
 -   [System Requirements for Windows Server 2012 Essentials](../install/System-Requirements-for-Windows-Server-2012-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

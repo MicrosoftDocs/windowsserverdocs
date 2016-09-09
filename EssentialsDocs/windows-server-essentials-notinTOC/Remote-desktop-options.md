@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Remote desktop options
-[!INCLUDE[wse_all](../windows-server-essentials/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
 ## Connection speed  
  The speed of the connection to a network computer using Remote Web Access determines the desktop options that are available to you on the host computer. The following table tells you which desktop options are available for speed that you are connecting to the remote computer through Remote Web Access.  

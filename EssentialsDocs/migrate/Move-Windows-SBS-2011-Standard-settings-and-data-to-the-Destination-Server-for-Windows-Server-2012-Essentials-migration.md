@@ -32,6 +32,19 @@ translation.priority.ht:
 # Move Windows SBS 2011 Standard settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
   
+<<<<<<< HEAD
+1.  [Copy data to the Destination Server](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
+  
+2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
+  
+3.  [Move the DHCP Server role from the Source Server to the router](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MoveDHCP)  
+  
+4.  [Configure the network](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Network)  
+  
+5.  [Remove legacy Active Directory Group Policy Objects (optional)](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
+  
+6.  [Map permitted computers to user accounts](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+=======
 1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
@@ -43,6 +56,7 @@ Move settings and data to the Destination Server as follows:
 5.  [Remove legacy Active Directory Group Policy Objects (optional)](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
   
 6.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
@@ -123,7 +137,7 @@ Move settings and data to the Destination Server as follows:
 >  If you have set up an on-premises Exchange server on a second server, you must ensure port 25 (for SMTP) is also open and that it is redirected to the IP address of the on-premises Exchange server.  
   
 ##  <a name="BKMK_RemoveLegacyADGPO"></a> Remove legacy Active Directory Group Policy Objects (optional)  
- The Group Policy Objects (GPOs) are updated for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. They are a superset of the Windows Small Business Server 2011 GPOs. For [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a number of the Windows Small Business Server 2011 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] GPOs and WMI filters.  
+ The Group Policy Objects (GPOs) are updated for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. They are a superset of the Windows Small Business Server 2011 GPOs. For --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, a number of the Windows Small Business Server 2011 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials GPOs and WMI filters.  
   
 > [!NOTE]
 >  If you modified the original Windows Small Business Server 2011 Group Policy Objects, you should save copies of them in a different location, and then delete them from Windows Small Business Server 2011.  
@@ -177,11 +191,11 @@ Move settings and data to the Destination Server as follows:
 8.  Confirm that these three WMI filters are deleted.  
   
 ##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
- In Windows Small Business Server 2011, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Small Business Server 2011 must be mapped to one or more computers.  
+ In Windows Small Business Server 2011, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Small Business Server 2011 must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard.  
+1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

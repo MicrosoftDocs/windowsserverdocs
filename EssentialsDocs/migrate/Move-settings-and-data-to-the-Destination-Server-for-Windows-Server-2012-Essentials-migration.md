@@ -32,11 +32,19 @@ translation.priority.ht:
 # Move settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
   
+<<<<<<< HEAD
+1.  [Copy data to the Destination Server](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
+  
+2.  [Configure the network](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Network)  
+  
+3.  [Map permitted computers to user accounts](Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+=======
 1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Configure the network](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Network)  
   
 3.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
@@ -81,7 +89,7 @@ Move settings and data to the Destination Server as follows:
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard.  
+1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

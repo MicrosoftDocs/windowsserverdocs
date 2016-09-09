@@ -35,20 +35,20 @@ You can use the information in this section to customize an image of the operati
   
  This section includes the following topics:  
   
--   [Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links](../install/Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links.md)  
+-   [Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links](Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links.md)  
   
--   [Add Health Alerts](../install/Add-Health-Alerts.md)  
+-   [Add Health Alerts](Add-Health-Alerts.md)  
   
--   [Configure Support for a Wireless Network](../install/Configure-Support-for-a-Wireless-Network.md)  
+-   [Configure Support for a Wireless Network](Configure-Support-for-a-Wireless-Network.md)  
   
--   [Customize Disk Partitions](../install/Customize-Disk-Partitions.md)  
+-   [Customize Disk Partitions](Customize-Disk-Partitions.md)  
   
--   [Customize Server Backup](../install/Customize-Server-Backup.md)  
+-   [Customize Server Backup](Customize-Server-Backup.md)  
   
--   [Customize Shared Folders](../install/Customize-Shared-Folders.md)  
+-   [Customize Shared Folders](Customize-Shared-Folders.md)  
   
--   [Define Display Settings](../install/Define-Display-Settings.md)  
+-   [Define Display Settings](Define-Display-Settings.md)  
   
--   [Install Add-Ins](../install/Install-Add-Ins.md)  
+-   [Install Add-Ins](Install-Add-Ins.md)  
   
--   [Set the WinSAT Score on the Server](../install/Set-the-WinSAT-Score-on-the-Server.md)
+-   [Set the WinSAT Score on the Server](Set-the-WinSAT-Score-on-the-Server.md)

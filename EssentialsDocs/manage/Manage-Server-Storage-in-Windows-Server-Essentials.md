@@ -27,7 +27,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage Server Storage in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Windows Server Essentials enables you to manage all your server storage (including hard drives and storage spaces) from the **Hard Drives** pages on the **Storage** tab of the Dashboard.  
   
@@ -68,8 +68,8 @@ translation.priority.ht:
   
 |Task Name|Description|  
 |---------------|-----------------|  
-|**View the hard drive properties**|Opens the *HardDriveName***Properties** page. This task is displayed when the hard drive is selected. The **General** tab of the *HardDriveName* Properties page includes the following additional tasks:<br /><br /> -   **Drive cleanup**:  Allows you to clean up unused files on the hard drive (this task is only available in [!INCLUDE[sbs_sbs8_2](../windows-server-essentials-manage/includes/sbs_sbs8_2_md.md)]).<br />-   **Check and repair**:  Checks the hard drive for file system errors and attempts to repair detected errors automatically.<br /><br /> The **Shadow Copies** tab of the *HardDriveName***Properties** page allows you to enable shadow copies. This tab also displays the next time that shadow copies is scheduled to run.|  
-|**Manage Storage Spaces**|**Note:** For [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)], this task is only displayed when there is an existing storage space.<br /><br /> Opens the **Storage Spaces** control panel, from which you can create and manage storage pools and storage spaces.|  
+|**View the hard drive properties**|Opens the *HardDriveName***Properties** page. This task is displayed when the hard drive is selected. The **General** tab of the *HardDriveName* Properties page includes the following additional tasks:<br /><br /> -   **Drive cleanup**:  Allows you to clean up unused files on the hard drive (this task is only available in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials).<br />-   **Check and repair**:  Checks the hard drive for file system errors and attempts to repair detected errors automatically.<br /><br /> The **Shadow Copies** tab of the *HardDriveName***Properties** page allows you to enable shadow copies. This tab also displays the next time that shadow copies is scheduled to run.|  
+|**Manage Storage Spaces**|**Note:** For --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, this task is only displayed when there is an existing storage space.<br /><br /> Opens the **Storage Spaces** control panel, from which you can create and manage storage pools and storage spaces.|  
 |**Create a storage space**|Opens the Create a Storage Space Wizard, which allows you to use one or more hard drives to increase the capacity of a storage pool.|  
 |**Increase storage pool capacity**|**Note:** This task is only visible if the selected hard drive is located on a storage space.<br /><br /> Opens the Increase Capacity of a Storage Pool Wizard, which allows you to use one or more hard drives to increase the capacity of a storage pool.|  
   
@@ -86,7 +86,7 @@ translation.priority.ht:
   
 1.  Open the Dashboard.  
   
-2.  In the navigation pane, click the alert icon to launch the **Alert Viewer** in [!INCLUDE[sbs_sbs8_2](../windows-server-essentials-manage/includes/sbs_sbs8_2_md.md)], or the **Health Monitoring** tab in [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)].  
+2.  In the navigation pane, click the alert icon to launch the **Alert Viewer** in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, or the **Health Monitoring** tab in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials.  
   
 3.  In the **Alert Viewer** or the **Health Monitoring** tab, click the alert, and then in the tasks pane, click **Troubleshoot this issue**.  
   
@@ -202,7 +202,7 @@ translation.priority.ht:
  To create a storage space, all you need is one or more extra drives in addition to the drive on which Windows is installed. These drives can be internal or external hard drives, or solid state drives. You can use a variety of types of drives with Storage Spaces, including USB, SATA, and SAS drives.  
   
 > [!NOTE]
->  If you configure Storage Spaces on a server running [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
+>  If you configure Storage Spaces on a server running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
   
  For more information about Storage Spaces, see [Storage Spaces Frequently Asked Questions (FAQ)](http://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx).  
   
@@ -214,7 +214,7 @@ translation.priority.ht:
 -   A minimum of two physical drives are required to create a storage space with resiliency through parity or two-way mirroring.  
   
 > [!NOTE]
->  If you configure Storage Spaces on a server running [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
+>  If you configure Storage Spaces on a server running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.  
   
 #### To create a storage space in Windows Server 2012 Essentials  
   
@@ -230,7 +230,7 @@ translation.priority.ht:
   
 6.  Enter the maximum size the storage space can reach, and then click **Create storage space**.  
   
- In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)], you can create a two-way mirrored storage space by using the Create a Storage Space Wizard from the Dashboard.  
+ In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, you can create a two-way mirrored storage space by using the Create a Storage Space Wizard from the Dashboard.  
   
 #### To create a storage space in Windows Server 2012 R2 Essentials  
   

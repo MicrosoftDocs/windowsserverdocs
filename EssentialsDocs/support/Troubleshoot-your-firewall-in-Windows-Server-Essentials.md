@@ -27,7 +27,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot your firewall in Windows Server Essentials
-[!INCLUDE[wse_all](../manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  If you experience problems with remote access, run the Repair Anywhere Access Wizard.  
   
@@ -59,4 +59,8 @@ translation.priority.ht:
   
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
+<<<<<<< HEAD
+-   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
+=======
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

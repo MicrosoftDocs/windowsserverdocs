@@ -40,4 +40,4 @@ Windows Server Essentials Experience is a new server role in Windows Server 2012
   
 -   [Windows Deployment with the Windows ADK](http://technet.microsoft.com/library/hh824947.aspx)  
   
--   [Windows Server 2012 Essentials - Assessment and Deployment Kit](../install/Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)
+-   [Windows Server 2012 Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)

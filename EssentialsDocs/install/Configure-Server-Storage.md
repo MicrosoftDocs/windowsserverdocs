@@ -35,7 +35,7 @@ translation.priority.ht:
  The following table suggests sample hard disk configurations. The estimates are based on typical usage and functionality, but they do not address issues that affect optimal performance. You can use any type of supported hard disks for these configurations (such as SATA or SCSI), based on the preferences and needs of your customer.  
   
 > [!IMPORTANT]
->  [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] must be installed as C: volume, and the volume size must be at least 60 GB. It is recommended that you create two partitions on your operating system disk, and not use the C: (system partition) to store any business data.  
+>  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials must be installed as C: volume, and the volume size must be at least 60 GB. It is recommended that you create two partitions on your operating system disk, and not use the C: (system partition) to store any business data.  
   
 |Server level|Disk configuration|  
 |------------------|------------------------|  
@@ -52,8 +52,16 @@ translation.priority.ht:
  During Initial Configuration for the server, a set of default server folders that include shared folders and the client computer backup folder are created in the largest data partition on Disk 0.  
   
 ## See Also  
+<<<<<<< HEAD
+ [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
