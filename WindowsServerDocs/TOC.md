@@ -89,7 +89,7 @@
 ###### [Add RD Web and Gateway server to the RDS deployment](compute/remote-desktop-services/Add-RD-Web-and-Gateway-server-to-the-RDS-deployment.md)
 ###### [Configure the current RD Web and Gateway virtual machine for load balancing](compute/remote-desktop-services/Configure-the-current-RD-Web-and-Gateway-virtual-machine-for-load-balancing.md)
 ##### [Deploy RemoteApp programs](compute/remote-desktop-services/Deploy-RemoteApp-programs.md)
-###### [Add the RDSH Server, create a collection, and publish the RemoteApp programs](compute/remote-desktop-services/Add-the-RDSH-Server,-create-a-collection,-and-publish-the-RemoteApp-programs.md)
+###### [Add the RDSH Server, create a collection, and publish the RemoteApp programs](compute/remote-desktop-services/Add-the-RDSH-Server-create-a-collection-and-publish-the-RemoteApp-programs.md)
 #### [Remote Desktop clients](compute/remote-desktop-services/clients/remote-desktop-clients.md)
 ##### [Getting started with Remote Desktop client on Android](compute/remote-desktop-services/clients/remote-desktop-android.md)
 ##### [Remote Desktop client on Android FAQ](compute/remote-desktop-services/clients/remote-desktop-android-faq.md)
