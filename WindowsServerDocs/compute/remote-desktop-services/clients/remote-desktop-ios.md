@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Get started with Remote Desktop on iOS
 

@@ -30,7 +30,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Run the Windows Server 2012 Essentials Log Collector
-You can run the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Collector from the server or a computer on the network. If you run the Log Collector from the server, you can only collect logs from the server. If you run the Log Collector from a network computer, you can choose to collect logs from the server, in addition to the logs for that computer.  
+You can run the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Log Collector from the server or a computer on the network. If you run the Log Collector from the server, you can only collect logs from the server. If you run the Log Collector from a network computer, you can choose to collect logs from the server, in addition to the logs for that computer.  
   
  You must have appropriate administrative privileges to run the Log Collector. If you are collecting log files for a server, you must be a Server Administrator; if you are collecting log files on a network computer, you must be a Client Administrator for that computer.  
   
@@ -45,7 +45,7 @@ You can run the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md
 2.  When you are prompted for a location to save the collected log files, you can choose the default location, **\\\\<ServerName\>\logs**, or specify another location. To accept the default location, click **Next**. To change the location, click **Browse**, navigate to the folder where you want to save the log files, and then click **Save**.  
   
     > [!NOTE]
-    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name” and the “time stamp” of the file.  
+    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name�? and the “time stamp�? of the file.  
   
 3.  A progress bar is displayed while the logs are being collected.  
   
@@ -71,7 +71,7 @@ You can run the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md
 4.  Type or browse to the location where you want to save the log files, and then click **Next**.  
   
     > [!NOTE]
-    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name” and the “time stamp” of the file.  
+    >  You do not need to supply file names for the log files. The Log Collector names the zip file collection by concatenating the “computer name�? and the “time stamp�? of the file.  
   
 5.  A progress bar is displayed while the logs are being collected.  
   

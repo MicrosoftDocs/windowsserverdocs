@@ -30,7 +30,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Install the Windows Server 2012 Essentials Log Collector
-The [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
+The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Log Collector installation wizard installs the Log Collector as a Launchpad Add-in. You can install and use the Log Collector on network computers or the server, or both. After installation, the Log Collector will appear on the Dashboard.  
   
 ###  <a name="BKMK_ToInstall"></a> To install the Log Collector  
   
@@ -58,14 +58,18 @@ The [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Log Colle
   
 2.  Click the **Add-in** tab, select **Log Collector** from the list, and then click **Uninstall**.  
   
+<<<<<<< HEAD
+3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
+=======
 3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ### Manually install the Log Collector  
  If the installation wizard failed to install the Log Collector, you can install the Log Collector on a single computer using the following procedure.  
   
 ##### To manually install the Log Collector  
   
-1.  Rename the extension of the downloaded installation file from “.wssx” to “.cab”.  
+1.  Rename the extension of the downloaded installation file from “.wssx�? to “.cab�?.  
   
 2.  Double-click the installation file name.  
   

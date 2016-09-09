@@ -30,7 +30,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Overview of the Dashboard in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled include an administrative dashboard, which simplifies the tasks that you perform to manage your Windows Server Essentials network and server. By using the Windows Server Essentials Dashboard, you can:  
   
@@ -141,7 +141,7 @@ translation.priority.ht:
  In Windows Server Essentials, after you join a computer to the network, administrators can use the Launchpad to access the server Dashboard from the computer.  
   
 > [!WARNING]
->  In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)], to connect to the Dashboard from the client computer, right-click the tray icon, and then open the Dashboard from the context menu.  
+>  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, to connect to the Dashboard from the client computer, right-click the tray icon, and then open the Dashboard from the context menu.  
   
 ##### To access the Dashboard by using the Launchpad  
   
@@ -154,7 +154,7 @@ translation.priority.ht:
      A remote connection to the Windows Server Essentials Dashboard opens.  
   
 ###  <a name="BKMK_Remote"></a> Access the Dashboard from a remote computer  
- When you are working from a remote computer, you can access the Windows Server Essentials Dashboard by using the [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] site.  
+ When you are working from a remote computer, you can access the Windows Server Essentials Dashboard by using the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access site.  
   
 ##### To access the Dashboard by using Remote Web Access  
   
@@ -162,16 +162,16 @@ translation.priority.ht:
   
 2.  In the Internet browser address bar, type the following:**https://<DomainName\>/remote**, where *DomainName* is the external domain name of your organization (such as contoso.com).  
   
-3.  Type your username and password to sign in to the [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] site.  
+3.  Type your username and password to sign in to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access site.  
   
-4.  In the **Computers** section of the [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)]**Home** page; locate your server and click **Connect**.  
+4.  In the **Computers** section of the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access**Home** page; locate your server and click **Connect**.  
   
      A remote connection to the Dashboard opens.  
   
     > [!NOTE]
     >  If your server does not appear in the **Computers** section of the Home page, click **Connect to more computers**, find your server in the list, and then click the server to connect to it.  
     >   
-    >  To give a user permission to access the Dashboard from [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)], open the Properties page for the user account, and then select the **Server Dashboard** option on the **Anywhere Access** tab.  
+    >  To give a user permission to access the Dashboard from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access, open the Properties page for the user account, and then select the **Server Dashboard** option on the **Anywhere Access** tab.  
   
 ##  <a name="BKMK_UseSafeMode"></a> Use the Safe mode  
  The Safe mode feature of Windows Server Essentials monitors the add-ins that are installed on the server. If the Dashboard becomes unstable or unresponsive, Safe mode detects and isolates add-ins that might be causing the issue, and displays them on the **Safe Mode Settings** page the next time you open the Dashboard. From the **Safe Mode Settings** page, you can disable and enable add-ins one-by-one to determine which add-in is causing the issue. You can then choose to leave the add-in disabled for future startups, or you can uninstall the add-in.  

@@ -30,7 +30,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage Devices in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  The following sections discuss the device management features of a server, and explain how to set up and use devices on your network:  
   
@@ -117,7 +117,7 @@ translation.priority.ht:
  When you remove a computer from a server that is running Windows Server Essentials by using the Dashboard, it is no longer managed by the server. As a result, the server will stop creating computer backups or monitor its health after its removal from the network.  
   
 > [!NOTE]
->  Removal of a computer from the server does not disconnect the computer from the network. The computer can still access resources on the network in the same way it could before being connected to the server. To prevent the computer from accessing server resources and to disconnect it from the server, you must remove the computer from the domain. In addition, removal of the computer from the server does not automatically uninstall the Connector software or the Launchpad from the computer that is being removed. You must manually remove the Connector software from the computer. For more information, see the section “Uninstall the Connector software” in [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md).  
+>  Removal of a computer from the server does not disconnect the computer from the network. The computer can still access resources on the network in the same way it could before being connected to the server. To prevent the computer from accessing server resources and to disconnect it from the server, you must remove the computer from the domain. In addition, removal of the computer from the server does not automatically uninstall the Connector software or the Launchpad from the computer that is being removed. You must manually remove the Connector software from the computer. For more information, see the section “Uninstall the Connector software�? in [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md).  
   
 #### To remove a computer from the network by using the Dashboard  
   
@@ -136,9 +136,9 @@ translation.priority.ht:
   
 2.  On the navigation bar, click **DEVICES**.  
   
-3.  For [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)]: In the global **Users Tasks** pane, click **Implement Group Policy**.  
+3.  For --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials: In the global **Users Tasks** pane, click **Implement Group Policy**.  
   
-     For [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)]: In the global **Devices Tasks** pane, click **Implement Group Policy**.  
+     For --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials: In the global **Devices Tasks** pane, click **Implement Group Policy**.  
   
 4.  The Implement Group Policy Wizard opens.  
   

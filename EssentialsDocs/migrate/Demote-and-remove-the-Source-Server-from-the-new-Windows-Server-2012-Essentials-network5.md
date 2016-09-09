@@ -31,8 +31,19 @@ translation.priority.ht:
   - zh-tw
 ---
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network5
-After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and you complete the Migration, you must perform the following tasks:  
+After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and you complete the Migration, you must perform the following tasks:  
   
+<<<<<<< HEAD
+1.  [Uninstall Exchange Server 2007](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_UninstallExchangeServer2003)  
+  
+2.  [Remove Active Directory Certificate Services](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_ADCS)  
+  
+3.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_PhysicallyDisconnect)  
+  
+4.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_DemoteTheSourceServer)  
+  
+5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_RemoveTheSourceServer)  
+=======
 1.  [Uninstall Exchange Server 2007](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_UninstallExchangeServer2003)  
   
 2.  [Remove Active Directory Certificate Services](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_ADCS)  
@@ -42,6 +53,7 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
 4.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_DemoteTheSourceServer)  
   
 5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network5.md#BKMK_RemoveTheSourceServer)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_UninstallExchangeServer2003"></a> Uninstall Exchange Server 2007  
  You must uninstall Exchange Server 2007 from the Source Server before you demote it. This removes all references in Active Directory Domain Services (AD DS) to Exchange Server on the Source Server. You must have your Exchange Server 2007 media to remove Exchange Server 2007.  
@@ -79,7 +91,7 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
     >  Restart the server even if you are not prompted to do so.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
- Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 ###  <a name="BKMK_DemoteTheSourceServer"></a> Demote the Source Server  
  Before you demote the Source Server from the role of the AD DS domain controller to the role of a domain member server, ensure that Group Policy settings are applied to all client computers, as described in the following procedure.  
@@ -91,7 +103,11 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
   
 1.  Log on to the client computer as an administrator.  
   
+<<<<<<< HEAD
+2.  Open a Command Prompt window as an administrator. For more information, see [To open a Command Prompt window on the Source Server as an administrator](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-2012-Essentials.md#BKMK_OpenACommandPromptAsAdmin).  
+=======
 2.  Open a Command Prompt window as an administrator. For more information, see [To open a Command Prompt window on the Source Server as an administrator](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-2012-Essentials.md#BKMK_OpenACommandPromptAsAdmin).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 3.  At the command prompt, type **gpupdate /force**, and then press ENTER.  
   

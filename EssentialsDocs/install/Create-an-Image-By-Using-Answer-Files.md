@@ -33,14 +33,14 @@ translation.priority.ht:
 # Create an Image By Using Answer Files
 When creating a custom image, you should take advantage of the support files that can be used to add, change, or keep track of data, settings and conditions. The following support files can be used in the installation process:  
   
--   [Create the Oobe.xml File Including Logo and EULA](../install/Create-the-Oobe.xml-File-Including-Logo-and-EULA.md)  
+-   [Create the Oobe.xml File Including Logo and EULA](Create-the-Oobe.xml-File-Including-Logo-and-EULA.md)  
   
--   [Create the Cfg.ini File](../install/Create-the-Cfg.ini-File.md)  
+-   [Create the Cfg.ini File](Create-the-Cfg.ini-File.md)  
   
--   [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](../install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md)  
+-   [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md)  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

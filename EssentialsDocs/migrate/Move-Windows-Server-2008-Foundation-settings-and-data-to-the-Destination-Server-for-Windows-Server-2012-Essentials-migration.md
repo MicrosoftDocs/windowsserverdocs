@@ -32,6 +32,17 @@ translation.priority.ht:
 # Move Windows Server 2008 Foundation settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
   
+<<<<<<< HEAD
+1.  [Copy data to the Destination Server (optional)](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
+  
+2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
+  
+3.  [Move the DHCP Server role from the Source Server to the router](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MoveDHCP)  
+  
+4.  [Configure the network](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Network)  
+  
+5.  [Map permitted computers to user accounts](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+=======
 1.  [Copy data to the Destination Server (optional)](../migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](../migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
@@ -41,6 +52,7 @@ Move settings and data to the Destination Server as follows:
 4.  [Configure the network](../migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Network)  
   
 5.  [Map permitted computers to user accounts](../migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server (optional)  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
@@ -118,11 +130,11 @@ Move settings and data to the Destination Server as follows:
 -   Port 443: HTTPS Web traffic  
   
 ##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
- In [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Server 2008 Foundation must be mapped to one or more computers.  
+ In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Server 2008 Foundation must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard.  
+1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

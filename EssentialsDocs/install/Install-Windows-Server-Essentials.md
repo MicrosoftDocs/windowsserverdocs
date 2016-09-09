@@ -30,10 +30,37 @@ translation.priority.ht:
   - zh-tw
 ---
 # Install Windows Server Essentials
-The following documents provide step-by-step instructions for installing and configuring [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] and [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], including pre-installation tasks and information about system requirements.  
+The following documents provide step-by-step instructions for installing and configuring --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, including pre-installation tasks and information about system requirements.  
   
 ## Install Windows Server 2012 R2 Essentials  
   
+<<<<<<< HEAD
+-   [System Requirements for Windows Server 2012 R2 Essentials](System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
+  
+-   [Install and Configure Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
+  
+-   [Deploy Windows Server Essentials Experience as a Hosted Server](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md)  
+  
+-   [Add Windows Server Essentials as a Member Server](Add-Windows-Server-Essentials-as-a-Member-Server.md)  
+  
+-   [Hosting Windows Server Essentials Experience on Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn520828.aspx) (MSDN)  
+  
+-   [Windows Server 2012 R2 - Customize and Deploy Windows Server Essentials](Customize-and-Deploy-Windows-Server-Essentials-in-Windows-Server-2012-R2.md)  
+  
+## Install Windows Server 2012 Essentials  
+  
+-   [Before You Install Windows Server 2012 Essentials](Before-You-Install-Windows-Server-2012-Essentials.md)  
+  
+-   [System Requirements for Windows Server 2012 Essentials](System-Requirements-for-Windows-Server-2012-Essentials.md)  
+  
+-   [Release Documentation for Windows Server 2012 Essentials](Release-Documentation-for-Windows-Server-2012-Essentials.md)  
+  
+-   [Install and Configure Windows Server 2012 Essentials](Install-and-Configure-Windows-Server-2012-Essentials.md)  
+  
+-   [Hosted Windows Server 2012 Essentials](Hosted-Windows-Server-2012-Essentials.md)  
+  
+-   [Windows Server 2012 Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)  
+=======
 -   [System Requirements for Windows Server 2012 R2 Essentials](../install/System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
   
 -   [Install and Configure Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
@@ -59,14 +86,15 @@ The following documents provide step-by-step instructions for installing and con
 -   [Hosted Windows Server 2012 Essentials](../install/Hosted-Windows-Server-2012-Essentials.md)  
   
 -   [Windows Server 2012 Essentials - Assessment and Deployment Kit](../install/Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## End-to-end solution guides  
   
--   [!INCLUDE[wseblue_solution](../install/includes/wseblue_solution_md.md)]  
+-   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](http://technet.microsoft.com/library/dn582043.aspx).  
   
--   [!INCLUDE[wseblue_solution_secure_access](../install/includes/wseblue_solution_secure_access_md.md)]  
+-   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](http://technet.microsoft.com/library/dn629457.aspx).  
   
--   [!INCLUDE[wseblue_solution_collaboration](../install/includes/wseblue_solution_collaboration_md.md)]  
+-   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](http://technet.microsoft.com/library/dn747893.aspx).  
   
 ## See also  
   

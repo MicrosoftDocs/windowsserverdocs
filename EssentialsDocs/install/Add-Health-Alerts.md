@@ -58,7 +58,7 @@ A health add-in provides definitions for alerts, health checks, and repairs for 
     >  This task does not install binary files. You must manually copy the binary files to the **%ProgramFiles%\Windows Server\Bin** folder on the client computer.  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

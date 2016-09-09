@@ -34,8 +34,17 @@ translation.priority.ht:
 > [!NOTE]
 >  This is an optional task. You are not required to demote or remove the Source Server from the network. You can continue to use the Source Server as a domain controller or as an additional server.  
   
- After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and you complete the migration, you can remove the source server from the network. To remove the Source Server, perform the following tasks:  
+ After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and you complete the migration, you can remove the source server from the network. To remove the Source Server, perform the following tasks:  
   
+<<<<<<< HEAD
+1.  [Remove Active Directory Certificate Services](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_ADCS)  
+  
+2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_PhysicallyDisconnect)  
+  
+3.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_DemoteTheSourceServer)  
+  
+4.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_RemoveTheSourceServer)  
+=======
 1.  [Remove Active Directory Certificate Services](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_ADCS)  
   
 2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_PhysicallyDisconnect)  
@@ -43,6 +52,7 @@ translation.priority.ht:
 3.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_DemoteTheSourceServer)  
   
 4.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network6.md#BKMK_RemoveTheSourceServer)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_ADCS"></a> Remove Active Directory Certificate Services  
   
@@ -78,7 +88,7 @@ translation.priority.ht:
     >  Restart the server even if you are not prompted to do so.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
- Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
   
 ###  <a name="BKMK_DemoteTheSourceServer"></a> Demote the Source Server  
  Before you demote the Source Server from the role of the AD DS domain controller to the role of a domain member server, ensure that Group Policy settings are applied to all client computers, as described in the following procedure.  

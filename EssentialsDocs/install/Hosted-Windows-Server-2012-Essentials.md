@@ -69,7 +69,7 @@ This document includes information that is specific to hosters who intend to dep
   
 1.  Perform only unattended WinPE setup. This will automate only the WinPE setup, and let the installation stop before Initial Configuration so that end users can provide Corp, Domain, and Administrator information by themselves after RDP into server session. To do this:  
   
-    1.  Provide the Windows unattend.xml file. Follow the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248694) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the “Microsoft-Windows-Setup” section of the unattend.xml file, provide the information as below.  
+    1.  Provide the Windows unattend.xml file. Follow the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248694) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the “Microsoft-Windows-Setup�? section of the unattend.xml file, provide the information as below.  
   
         ```  
         <InstallFrom>  
@@ -84,7 +84,7 @@ This document includes information that is specific to hosters who intend to dep
            </InstallFrom>  
         ```  
   
-    2.  RDP port 3389 must be opened on a public IP so that the customer can use “Administrator” and the password specified in the unattend.xml file to RDP into the server to finish Initial Configuration.  
+    2.  RDP port 3389 must be opened on a public IP so that the customer can use “Administrator�? and the password specified in the unattend.xml file to RDP into the server to finish Initial Configuration.  
   
     > [!NOTE]
     >  If you do not change the default password, the server installation will stop on a screen asking for a password to be entered.**Note** End users must use the default administrator account to log on to the server and perform Initial Configuration.  
@@ -146,7 +146,11 @@ This document includes information that is specific to hosters who intend to dep
   
  VPN enabling can be done during unattended deployment via our Windows PowerShell script, or it can be configured with our wizard after initial configuration.  
   
+<<<<<<< HEAD
+-   To enable VPN during unattended deployment, see [How do I automate the deployment?](Hosted-Windows-Server-2012-Essentials.md#BKMK_automatedeployment) in this document.  
+=======
 -   To enable VPN during unattended deployment, see [How do I automate the deployment?](../install/Hosted-Windows-Server-2012-Essentials.md#BKMK_automatedeployment) in this document.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 -   To enable VPN via Windows PowerShell, run the following cmdlet with administrative privilege and provide all necessary information.  
   
@@ -227,7 +231,7 @@ $password = ConvertTo-SecureString "Passw0rd!" -asplaintext –force
 $Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test  
 ```  
   
- This command will add an administrator named “User2Test” with password “Passw0rd!”.  
+ This command will add an administrator named “User2Test�? with password “Passw0rd!�?.  
   
  **Enable/Disable User**  
   
@@ -239,7 +243,7 @@ $CurrentUser.UserStatus = 0
 $CurrentUser.Commit()  
 ```  
   
- This command will disable the user named “user2test”. Setting UserStatus to 1 will enable the user.  
+ This command will disable the user named “user2test�?. Setting UserStatus to 1 will enable the user.  
   
  **Add Server Folder**  
   
@@ -253,7 +257,7 @@ Add-WssFolder [-Name] <string> [-Path] <string> [[-Description] <string>] [-Keep
 $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"  
 ```  
   
- This command will add a server folder named “MyTestFolder” at the specified location.  
+ This command will add a server folder named “MyTestFolder�? at the specified location.  
   
 ## How do I add a second server to the Windows Server 2012 Essentials domain?  
  Because Windows Server 2012 Essentials is a domain controller, you can join a second server to the domain in the standard fashion.  
@@ -311,13 +315,13 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
  **On-premises backup** allows you to perform block-level incremental backup on a regular basis to a separate disk. As a hoster, you could attach a virtual disk to the Windows Server 2012 Essentials VM and configure server backup to this virtual disk. The virtual disk should be located on a different physical disk than the Windows Server 2012 Essentials VM.  
   
--   If you have another mechanism to back up the Windows Server 2012 Essentials VM, and you do not want your user to see the Windows Server 2012 Essentials native Server Backup feature, you could turn it off and remove all related user interface from the Windows Server 2012 Essentials Dashboard. For more information, refer to the “Customize Server Backup” section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
+-   If you have another mechanism to back up the Windows Server 2012 Essentials VM, and you do not want your user to see the Windows Server 2012 Essentials native Server Backup feature, you could turn it off and remove all related user interface from the Windows Server 2012 Essentials Dashboard. For more information, refer to the “Customize Server Backup�? section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
- **Off-premises backup** allows you to periodically back up server data to a cloud service. You can download and install the [!INCLUDE[sbs8_mob_1](../install/includes/sbs8_mob_1_md.md)] Integration Module for Windows Server 2012 Essentials to leverage the [!INCLUDE[sbs8_mob_2](../install/includes/sbs8_mob_2_md.md)] provided by Microsoft.  
+ **Off-premises backup** allows you to periodically back up server data to a cloud service. You can download and install the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup Integration Module for Windows Server 2012 Essentials to leverage the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup provided by Microsoft.  
   
  If you or your users prefer another cloud service, you should:  
   
-1.  Update the user interface of the Windows Server 2012 Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default [!INCLUDE[sbs8_mob_2](../install/includes/sbs8_mob_2_md.md)]. For more information, refer to the Customize the Image section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
+1.  Update the user interface of the Windows Server 2012 Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup. For more information, refer to the Customize the Image section of the [ADK document](http://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
 2.  (Optional) Develop an add-in for Windows Server 2012 Essentials Dashboard to configure and manage the cloud backup service.  
   
@@ -327,7 +331,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 > [!NOTE]
 >  Backing up the client might impact performance because the data needs to be transferred from the client to the server over VPN.  
   
- **Full client backup** is by default on for all the client devices connected to the Windows Server 2012 Essentials network. It backs up the full client (system and data) incrementally and supports data deduplication. The backup data will be on the server running Windows Server 2012 Essentials. A failed client can get its data back to a previous backup point. You could turn this feature off by following the steps in the “Create the Cfg.ini File” section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
+ **Full client backup** is by default on for all the client devices connected to the Windows Server 2012 Essentials network. It backs up the full client (system and data) incrementally and supports data deduplication. The backup data will be on the server running Windows Server 2012 Essentials. A failed client can get its data back to a previous backup point. You could turn this feature off by following the steps in the “Create the Cfg.ini File�? section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
   
  Some considerations for full client backup are:  
   
@@ -341,7 +345,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 -   Client Bare Metal Restore: because Windows Preinstall Environment does not support VPN connection, Client Bare Metal Restore is not supported.  
   
- **File History** is a Windows 8 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server 2012 Essentials, we allow central management of the File History setting of all the Windows 8 clients joined to Windows Server 2012 Essentials. The backup data is stored on the server running Windows Server 2012 Essentials. You can turn this feature off by following the steps in the “Create the Cfg.ini File” section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
+ **File History** is a Windows 8 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server 2012 Essentials, we allow central management of the File History setting of all the Windows 8 clients joined to Windows Server 2012 Essentials. The backup data is stored on the server running Windows Server 2012 Essentials. You can turn this feature off by following the steps in the “Create the Cfg.ini File�? section of the [ADK document](http://technet.microsoft.com/en-us/library/jj200150).  
   
 ### Storage management  
  The [new Storage Spaces feature](http://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. You can also attach an iSCSI disk to Windows Server 2012 Essentials to expand its storage.  

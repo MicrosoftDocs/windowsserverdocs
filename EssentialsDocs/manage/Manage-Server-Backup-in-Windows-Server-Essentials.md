@@ -30,7 +30,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage Server Backup in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  The following topics include information about common backup tasks that you can accomplish by using the Windows Server Essentials Dashboard:  
   
@@ -90,11 +90,11 @@ translation.priority.ht:
   
 3.  When prompted, enter your user name and password.  
   
-4.  When you click the name of the server in [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)], the logon page for the Dashboard is displayed.  
+4.  When you click the name of the server in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access, the logon page for the Dashboard is displayed.  
   
 5.  Log on to the Dashboard as an administrator, and then click **Devices**.  
   
- For more information about [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)], see [Remote Web Access overview](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview).  
+ For more information about --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Remote Web Access, see [Remote Web Access overview](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview).  
   
 ##  <a name="BKMK_4"></a> Disable server backup  
  You should protect your server and its data automatically by scheduling daily backups. It is recommended that you maintain a daily backup plan because most organizations cannot afford to lose the data that has been created over several days.  

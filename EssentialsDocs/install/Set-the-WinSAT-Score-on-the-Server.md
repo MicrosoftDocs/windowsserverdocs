@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Set the WinSAT Score on the Server
-You should set the WinSAT CPU score for a server that is running the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] operating system to optimize the video streaming resolution. You do this by creating and installing the .xml file that contains the WinSAT score information.  
+You should set the WinSAT CPU score for a server that is running the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials operating system to optimize the video streaming resolution. You do this by creating and installing the .xml file that contains the WinSAT score information.  
   
 ## Obtain the WinSAT CPU score  
  You are provided a program with the OPK called WinServerSAT.exe that discovers the WinSAT CPU score and puts that information in the WinServerSAT.xml file that the operating system reads.  

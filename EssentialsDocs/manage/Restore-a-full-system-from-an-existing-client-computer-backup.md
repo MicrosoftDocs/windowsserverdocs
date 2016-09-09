@@ -27,7 +27,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Restore a full system from an existing client computer backup
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Hardware and operating system failures are rare, but they can happen. A malfunctioning fan could overheat a computer motherboard and render it useless. The operating system could become corrupt and refuse to start. Fire and water damage can result in permanent hardware damage. A hard disk drive may fail or you may decide to replace it with a larger hard disk drive.  
   
@@ -59,7 +59,7 @@ translation.priority.ht:
  Windows PE does not support wireless connections. Because of this, the computer being restored must be physically connected to the small business network.  
   
 ### BitLocker  
- BitLocker Drive Encryption (BitLocker) is a data protection feature that is available in some versions of [!INCLUDE[nextref_vista](../windows-server-essentials-manage/includes/nextref_vista_md.md)], [!INCLUDE[nextref_client_7](../windows-server-essentials-manage/includes/nextref_client_7_md.md)], and [!INCLUDE[win8_client_2](../windows-server-essentials-manage/includes/win8_client_2_md.md)]. BitLocker protects against data theft or exposure on computers that are lost or stolen, and offers more secure data deletion when computers are decommissioned.  
+ BitLocker Drive Encryption (BitLocker) is a data protection feature that is available in some versions of --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Vista, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7, and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 8. BitLocker protects against data theft or exposure on computers that are lost or stolen, and offers more secure data deletion when computers are decommissioned.  
   
  **For Windows Server 2012 Essentials:** If the computer that you need to restore was encrypted using BitLocker (whether it was just the operating system drive or the operating system drive and single or multiple other fixed drives), you can still use the full system restore media contained on the CD provided with your server and the Full System Restore Wizard to re-install the hard drive image, including the operating system, from a backup and restore the data to the new or repaired computer.  
   
@@ -70,14 +70,14 @@ translation.priority.ht:
 > [!NOTE]
 >  After a successful full system restore, you must reactivate BitLocker on the computer.  
 >   
->  For instructions about how to enable BitLocker on computers that are running [!INCLUDE[win8_client_2](../windows-server-essentials-manage/includes/win8_client_2_md.md)], see [BitLocker: How to enable BitLocker](http://go.microsoft.com/fwlink/p/?LinkID=254918).  
+>  For instructions about how to enable BitLocker on computers that are running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 8, see [BitLocker: How to enable BitLocker](http://go.microsoft.com/fwlink/p/?LinkID=254918).  
 >   
->  For instructions about how to enable BitLocker on computers that are running [!INCLUDE[nextref_client_7](../windows-server-essentials-manage/includes/nextref_client_7_md.md)], see [BitLocker Drive Encryption Step-by-Step Guide for Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=140225).  
+>  For instructions about how to enable BitLocker on computers that are running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7, see [BitLocker Drive Encryption Step-by-Step Guide for Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=140225).  
   
  For more information about BitLocker Drive Encryption basics, see [BitLocker Frequently Asked Questions (FAQ)](http://go.microsoft.com/fwlink/p/?LinkID=254917).  
   
 ### Encrypting File System-encrypted files  
- The Encrypting File System (EFS) feature in Windows can provide additional user-based file level encryption for different levels of security among multiple users of the same computer. It is important to note that, unlike BitLocker-encrypted drives, EFS-encrypted folders and files continue to be encrypted in any computer backup. EFS is not available in Windows XP Home Edition, [!INCLUDE[nextref_vista](../windows-server-essentials-manage/includes/nextref_vista_md.md)] Starter, [!INCLUDE[nextref_vista](../windows-server-essentials-manage/includes/nextref_vista_md.md)] Home Basic, Windows Vista Home Premium, [!INCLUDE[nextref_client_7str](../windows-server-essentials-manage/includes/nextref_client_7str_md.md)], [!INCLUDE[nextref_client_7hb](../windows-server-essentials-manage/includes/nextref_client_7hb_md.md)], [!INCLUDE[nextref_client_7hp](../windows-server-essentials-manage/includes/nextref_client_7hp_md.md)], or Windows 8. It is only available in Windows 8 Pro.  
+ The Encrypting File System (EFS) feature in Windows can provide additional user-based file level encryption for different levels of security among multiple users of the same computer. It is important to note that, unlike BitLocker-encrypted drives, EFS-encrypted folders and files continue to be encrypted in any computer backup. EFS is not available in Windows XP Home Edition, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Vista Starter, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Vista Home Basic, Windows Vista Home Premium, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 Starter, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 Home Basic, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 7 Home Premium, or Windows 8. It is only available in Windows 8 Pro.  
   
 > [!WARNING]
 >  Unlike BitLocker, you can only access EFS-protected files from within the operating system that encrypted them.  
@@ -97,7 +97,7 @@ translation.priority.ht:
  Backing up redundant array of independent disks (RAID) and dynamic disks is not supported.  
   
 ##  <a name="BKMK_HowDoes"></a> How does the system restore environment work?  
- The system restore media supplied with [!INCLUDE[sbs_sbs8_1](../windows-server-essentials-manage/includes/sbs_sbs8_1_md.md)] installs Windows Preinstallation Environment (Windows PE) on the computer. Windows PE replaces the MS-DOS environment and contains the core program files for Windows. In Windows Server 2012 R2 Essentials, there are two supported ways to restore a system: using the client restore service, which uses a network and does not rely on media, or using the USB flash drive.  
+ The system restore media supplied with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server® 2012 Essentials installs Windows Preinstallation Environment (Windows PE) on the computer. Windows PE replaces the MS-DOS environment and contains the core program files for Windows. In Windows Server 2012 R2 Essentials, there are two supported ways to restore a system: using the client restore service, which uses a network and does not rely on media, or using the USB flash drive.  
   
 > [!NOTE]
 >  Windows PE does not support wireless connections. Because of this, the computer being restored must be physically connected to the small business network.  
@@ -133,7 +133,7 @@ translation.priority.ht:
  After successfully using the restore media, client restore service, or USB flash drive to start your computer and verify that all hardware drivers are loaded on the restored or new client computer, the Full System Restore Wizard appears. This wizard enables you to access the server, the computer backup, and the source volumes that you want to restore to the computer, and performs the actual restore process.  
   
 > [!NOTE]
->  [!INCLUDE[sbs_sbs8_2](../windows-server-essentials-manage/includes/sbs_sbs8_2_md.md)] does not support the following restore scenarios:  
+>  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials does not support the following restore scenarios:  
 >   
 >  -   Restoring a Master Boot Record (MBR) disk to a Unified Extensible Firmware Interface (UEFI)–based computer.  
 > -   Restoring a UEFI/GPT backup to a BIOS system.  
@@ -151,7 +151,7 @@ translation.priority.ht:
   
      For information about how to find the drivers for your computer, see [Where can I find the drivers for my hardware?](../windows-server-essentials-manage/Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)  
   
--   For Windows Server 2012 Essentials: If you cannot locate the [!INCLUDE[sbs_sbs8_2](../windows-server-essentials-manage/includes/sbs_sbs8_2_md.md)] Restore CD, you can create a bootable USB flash drive. For more information, see [Create a bootable USB flash drive to restore a client computer](../windows-server-essentials-manage/Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable).  
+-   For Windows Server 2012 Essentials: If you cannot locate the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Restore CD, you can create a bootable USB flash drive. For more information, see [Create a bootable USB flash drive to restore a client computer](../windows-server-essentials-manage/Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable).  
   
 #### To use the Full System Restore Wizard  
   
@@ -174,7 +174,7 @@ translation.priority.ht:
   
 4.  Choose the appropriate **Time and currency format**, and the **Keyboard or input method** for this computer. Click **Continue**.  
   
-5.  If drivers are missing, the message “The restore process cannot verify the drivers” is displayed. Click **Close**, and then on the Welcome dialog box click **Load drivers**.  
+5.  If drivers are missing, the message “The restore process cannot verify the drivers�? is displayed. Click **Close**, and then on the Welcome dialog box click **Load drivers**.  
   
     1.  On the **Detect Hardware** dialog box, click **Install drivers**.  
   

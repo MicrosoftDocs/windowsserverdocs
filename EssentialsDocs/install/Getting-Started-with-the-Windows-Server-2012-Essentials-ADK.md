@@ -31,14 +31,25 @@ translation.priority.ht:
   - zh-tw
 ---
 # Getting Started with the Windows Server 2012 Essentials ADK
-The Assessment and Deployment Kit (ADK) for the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server software is based on the ADK for the [!INCLUDE[win8_server_1](../install/includes/win8_server_1_md.md)] operating system, so the documentation for that ADK applies here, unless otherwise noted. The information included here is specific to partners who intend to preinstall the operating system for their customers.  
+The Assessment and Deployment Kit (ADK) for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server software is based on the ADK for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server® 2012 operating system, so the documentation for that ADK applies here, unless otherwise noted. The information included here is specific to partners who intend to preinstall the operating system for their customers.  
   
 > [!NOTE]
->  You can download the Assessment and Deployment Kit (ADK) for the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=34866).  
+>  You can download the Assessment and Deployment Kit (ADK) for the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=34866).  
   
 ## In this section  
  This section includes the following topics:  
   
+<<<<<<< HEAD
+-   [Important Information for Using the Windows Server 2012 Essentials ADK](Important-Information-for-Using-the-Windows-Server-2012-Essentials-ADK.md)  
+  
+-   [Hardware Requirements for the Target Computer](Hardware-Requirements-for-the-Target-Computer.md)  
+  
+-   [Preconfiguring a Router](Preconfiguring-a-Router.md)  
+  
+-   [Prepare the Technician Computer](Prepare-the-Technician-Computer.md)  
+  
+-   [Configure Server Storage](Configure-Server-Storage.md)
+=======
 -   [Important Information for Using the Windows Server 2012 Essentials ADK](../install/Important-Information-for-Using-the-Windows-Server-2012-Essentials-ADK.md)  
   
 -   [Hardware Requirements for the Target Computer](../install/Hardware-Requirements-for-the-Target-Computer.md)  
@@ -48,3 +59,4 @@ The Assessment and Deployment Kit (ADK) for the [!INCLUDE[sbs_sbs8web_2](../inst
 -   [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md)  
   
 -   [Configure Server Storage](../install/Configure-Server-Storage.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

@@ -30,9 +30,9 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage Applications in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- The server Dashboard in Windows Server Essentials and [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed makes it possible to perform common administrative tasks. To perform these tasks, see the following:  
+ The server Dashboard in Windows Server Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed makes it possible to perform common administrative tasks. To perform these tasks, see the following:  
   
 -   [Application management tasks in the Dashboard](../windows-server-essentials-manage/Manage-Applications-in-Windows-Server-Essentials.md#BKMK_1)  
   
