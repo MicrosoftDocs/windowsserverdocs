@@ -14,34 +14,21 @@ ms.assetid: 41000915-f6ff-4dbb-b7be-629ef36386d4
 caps.latest.revision: 18
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Backup and Restore in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Windows Server Essentials provides reliable ways to perform regular backups of your server and backups of your network computers. In the event of data loss, you can restore data from a successful backup on the server without restoring the entire computer. If necessary, you can perform a full system restore to your server or client computers in the network. The following table describes the different backup options available to you along with their advantages.  
   
 |Backup Feature|Description|Advantages|  
 |--------------------|-----------------|----------------|  
-|Server Backup|Backs up your server running Windows Server Essentials. The data is backed up to an external USB drive.<br /><br /> For more information, see [Manage Server Backup](../windows-server-essentials-manage/Manage-Server-Backup-in-Windows-Server-Essentials.md) and [Restore or repair your server](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md).|- Can restore files and folders on your server.<br /><br /> - Can perform full system restore of your server.|  
-|Client Computer Backup|Backs up your client computers in the network. The data is backed up on the server running Windows Server Essentials.<br /><br /> For more information, see [Manage Client Backup](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md) and [Restore a full system from an existing client computer backup](../windows-server-essentials-manage/Restore-a-full-system-from-an-existing-client-computer-backup.md).|- Can restore files and folders from your server.<br /><br /> - Can perform full system restore of your client computer.|  
-|--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup|Performs an online backup of files or folders on your server. When you use --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup to back up server data, the information is encrypted by using your passphrase before it is uploaded to a secure datacenter on the Internet.<br /><br /> For more information, see [Manage Online Backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md).|- Can restore files and folders from your server.<br /><br /> - With incremental backups, only changes to files are transferred to the cloud.<br /><br /> - Backups are stored in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure and are offsite, reducing the need to secure and protect onsite backup media.|  
+|Server Backup|Backs up your server running Windows Server Essentials. The data is backed up to an external USB drive.<br /><br /> For more information, see [Manage Server Backup](Manage-Server-Backup-in-Windows-Server-Essentials.md) and [Restore or repair your server](Restore-or-repair-your-server-running-Windows-Server-Essentials.md).|- Can restore files and folders on your server.<br /><br /> - Can perform full system restore of your server.|  
+|Client Computer Backup|Backs up your client computers in the network. The data is backed up on the server running Windows Server Essentials.<br /><br /> For more information, see [Manage Client Backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md) and [Restore a full system from an existing client computer backup](Restore-a-full-system-from-an-existing-client-computer-backup.md).|- Can restore files and folders from your server.<br /><br /> - Can perform full system restore of your client computer.|  
+| Microsoft Azure Backup|Performs an online backup of files or folders on your server. When you use  Azure Backup to back up server data, the information is encrypted by using your passphrase before it is uploaded to a secure datacenter on the Internet.<br /><br /> For more information, see [Manage Online Backup](Manage-Online-Backup-in-Windows-Server-Essentials.md).|- Can restore files and folders from your server.<br /><br /> - With incremental backups, only changes to files are transferred to the cloud.<br /><br /> - Backups are stored in  Microsoft Azure and are offsite, reducing the need to secure and protect onsite backup media.|  
   
 ## See also  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)

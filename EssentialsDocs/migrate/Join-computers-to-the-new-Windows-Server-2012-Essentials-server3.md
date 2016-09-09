@@ -15,26 +15,13 @@ ms.assetid: 2f651a16-7bc3-4bd1-907e-15deda425848
 caps.latest.revision: 2
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Join computers to the new Windows Server 2012 Essentials server3
 ##  <a name="BKMK_JoinComputers"></a>   
- The next step in the migration process is to join client computers to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server by reinstalling the Windows Server Connector software.  
+ The next step in the migration process is to join client computers to the new  Windows Server 2012 Essentials server by reinstalling the Windows Server Connector software.  
   
- Before you can connect a client computer to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server, you must disconnect it from the Source Server by uninstalling the Windows Server Connector software.  
+ Before you can connect a client computer to the  Windows Server 2012 Essentials server, you must disconnect it from the Source Server by uninstalling the Windows Server Connector software.  
   
 #### To uninstall the Windows Server Connector software on a client computer  
   

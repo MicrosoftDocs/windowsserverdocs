@@ -27,7 +27,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot File History in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
 ## Troubleshoot issues with user File History backups  
  The following issues might occur while managing File History backups for a user or a computer that has been added to a server running Windows Server Essentials.  
@@ -84,7 +84,7 @@ translation.priority.ht:
 ### A user account was removed, but the user's file history remains  
  In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  
 =======
-5.  You can now add the new user. For instructions, see “Add a user account” in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+5.  You can now add the new user. For instructions, see “Add a user account�? in [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
 ### A user account was removed, but the user's file history remains  
  In some cases the network administrator might choose to remove a user or computer from the server, but to keep the File History backup for future use. When you no longer need the file history, remove the File History Backups folder for the user or the computer from shared folders on the server. To do this, see [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).  

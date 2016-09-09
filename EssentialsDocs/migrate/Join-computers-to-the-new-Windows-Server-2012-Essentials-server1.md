@@ -15,24 +15,11 @@ ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 caps.latest.revision: 6
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Join computers to the new Windows Server 2012 Essentials server1
 ##  <a name="BKMK_JoinComputers"></a>   
- The next step in the migration process is to join client computers to the new --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials network and update Group Policy settings.  
+ The next step in the migration process is to join client computers to the new  Windows Server 2012 Essentials network and update Group Policy settings.  
   
 > [!NOTE]
 >  If a client computer is already joined to the Source Server, you must first uninstall the Connector software on the client computer before you can connect the computer to the Destination Server.  

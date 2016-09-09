@@ -14,23 +14,10 @@ ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
 caps.latest.revision: 12
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Use Shared Folders in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Windows Server Essentials provides a central location for all of your data and files through the shared folders that are located on your server.  
   
@@ -91,10 +78,10 @@ translation.priority.ht:
 ###  <a name="BKMK_3"></a> Upload and download files in Remote Web Access  
  On the Remote Web Access **Shared Folders** tab, you can upload and download files. For more information, see the section “Upload and download files in Remote Web Access�? in the topic [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 =======
- You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move or copy files and folders, and to delete files and folders on your server. For more information, see the section “Create, rename, move, delete, or copy files and folders in Remote Web Access” in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move or copy files and folders, and to delete files and folders on your server. For more information, see the section “Create, rename, move, delete, or copy files and folders in Remote Web Access�? in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_3"></a> Upload and download files in Remote Web Access  
- On the Remote Web Access **Shared Folders** tab, you can upload and download files. For more information, see the section “Upload and download files in Remote Web Access” in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ On the Remote Web Access **Shared Folders** tab, you can upload and download files. For more information, see the section “Upload and download files in Remote Web Access�? in the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 >>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_Phone"></a> Using My Server app for Windows Phone  

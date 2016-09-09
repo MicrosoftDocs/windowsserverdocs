@@ -14,27 +14,14 @@ ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 caps.latest.revision: 37
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Install and Configure Windows Server 2012 R2 Essentials or Windows Server Essentials Experience
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials is an ideal first server for small businesses with up to 25 users and 50 devices. For organizations with up to 100 users and 200 devices, you can now use --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed. This topic addresses both scenarios.  
+ Windows Server 2012 R2 Essentials is an ideal first server for small businesses with up to 25 users and 50 devices. For organizations with up to 100 users and 200 devices, you can now use  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed. This topic addresses both scenarios.  
   
- --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience, the new server role in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Standard and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Datacenter, enables you to take advantage of all the features (such as Remote Web Access and PC backup) that are available to you in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials without the locks and limits that are enforced in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. This server role is also available in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials and is enabled by default. For more information about this server role, see the [Windows Server Essentials Experience Overview &#91;fwlink_blue&#93;](assetId:///958ecbde-ba6f-4789-88da-58542b8b1faf).  
+  Windows Server Essentials Experience, the new server role in  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter, enables you to take advantage of all the features (such as Remote Web Access and PC backup) that are available to you in  Windows Server 2012 R2 Essentials without the locks and limits that are enforced in  Windows Server 2012 R2 Essentials. This server role is also available in  Windows Server 2012 R2 Essentials and is enabled by default. For more information about this server role, see the [Windows Server Essentials Experience Overview &#91;fwlink_blue&#93;](assetId:///958ecbde-ba6f-4789-88da-58542b8b1faf).  
   
- The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 has the following limitations.  
+ The  Windows Server Essentials Experience role in  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 has the following limitations.  
   
 |Windows Server Essentials Experience in Windows Server 2012 R2 Essentials|Windows Server Essentials Experience in Windows Server 2012 R2 Standard or Datacenter|  
 |-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|  
@@ -52,11 +39,11 @@ translation.priority.ht:
 ## Installation options  
  This document provides step-by-step instructions for installing and configuring Windows Server Essentials. Depending on your network environment, you have the following installation options available to you:  
   
--   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials (with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role enabled by default)  
+-    Windows Server 2012 R2 Essentials (with the  Windows Server Essentials Experience role enabled by default)  
   
--   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Standard with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed  
+-    Windows Server 2012 R2 Standard with the  Windows Server Essentials Experience role installed  
   
--   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Datacenter with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed  
+-    Windows Server 2012 R2 Datacenter with the  Windows Server Essentials Experience role installed  
   
 |Deployment environment|Description|Related section|  
 |----------------------------|-----------------|---------------------|  
@@ -89,7 +76,7 @@ translation.priority.ht:
  Windows Server Essentials provides a way for you to quickly set up an Active Directory environment and related server features.  
   
 ###  <a name="BKMK_WSEDeploy"></a> Deploying Windows Server 2012 R2 Essentials  
- If you are using --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience is already enabled. However, you must complete some steps to configure your server.  
+ If you are using  Windows Server 2012 R2 Essentials,  Windows Server Essentials Experience is already enabled. However, you must complete some steps to configure your server.  
   
 ##### To configure Windows Server 2012 R2 Essentials on a physical server  
   
@@ -117,7 +104,7 @@ translation.priority.ht:
  After you have completed the server configuration, the server that is running Windows Server Essentials will be set up as a domain controller.  
   
 ###  <a name="BKMK_DeployWSERole"></a> Deploying the Windows Server Essentials Experience role in Windows Server 2012 R2 Standard and Datacenter  
- You can use Server Manager to enable and configure the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Standard or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Datacenter by using the following procedure.  
+ You can use Server Manager to enable and configure the  Windows Server Essentials Experience role in  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter by using the following procedure.  
   
 ##### To deploy the Windows Server Essentials Experience role in Windows Server 2012 R2  
   
@@ -133,7 +120,7 @@ translation.priority.ht:
   
 6.  In the pages that follow, click **Next**, and then on the confirmation page, click **Install**.  
   
-7.  After the installation is complete, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience should be listed as a server role in Server Manager.  
+7.  After the installation is complete,  Windows Server Essentials Experience should be listed as a server role in Server Manager.  
   
 8.  In the flag notification area in Server Manager, click the flag, and then click **Configure Windows Server Essentials**.  
   
@@ -152,7 +139,7 @@ translation.priority.ht:
  You can also deploy Windows Server Essentials if your organization already has an existing Active Directory environment. In addition, you can choose if you want to deploy Windows Server Essentials as a domain controller.  
   
 > [!IMPORTANT]
->  This option is only available if you deploy the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Standard or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Datacenter.  
+>  This option is only available if you deploy the  Windows Server Essentials Experience role in  Windows Server 2012 R2 Standard or  Windows Server 2012 R2 Datacenter.  
   
 #### To deploy Windows Server Essentials in an existing Active Directory environment  
   
@@ -181,18 +168,18 @@ translation.priority.ht:
   
 9. In the pages that follow, click **Next**, and then on the confirmation page, click **Install**.  
   
-10. After the installation is complete, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience will be listed as a server role in Server Manager.  
+10. After the installation is complete,  Windows Server Essentials Experience will be listed as a server role in Server Manager.  
   
 11. In the flag notification area in **Server Manager**, click the flag, and then click **Configure Windows Server Essentials**.  
   
 12. Follow the wizard to configure Windows Server Essentials. Depending on your Active Directory configuration, you will be informed whether you are configuring Windows Server Essentials on a domain controller or as a domain member. Click **Configure** to begin the configuration. The configuration process takes approximately 10 minutes to complete.  
   
 ##  <a name="BKMK_VirtualWSE"></a> Virtualize your environment  
- --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials,  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Standard, and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Datacenter can be run as virtual machines. You run virtual machines by using the Hyper-V management tools on a server running Hyper-V. From a licensing perspective, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials allows you to set up the Hyper-V role and virtualize your environment. The license allows you to set up another guest operating system that is running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials. Depending on your system provider’s configuration, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials enables you to set up a virtualized environment seamlessly.  
+  Windows Server 2012 R2 Essentials,   Windows Server 2012 R2 Standard, and  Windows Server 2012 R2 Datacenter can be run as virtual machines. You run virtual machines by using the Hyper-V management tools on a server running Hyper-V. From a licensing perspective,  Windows Server 2012 R2 Essentials allows you to set up the Hyper-V role and virtualize your environment. The license allows you to set up another guest operating system that is running  Windows Server 2012 R2 Essentials. Depending on your system provider’s configuration,  Windows Server 2012 R2 Essentials enables you to set up a virtualized environment seamlessly.  
   
 #### To deploy Windows Server Essentials as a virtual machine  
   
-1.  After the Windows Welcome page (depending on your system provider’s configuration), the **Before you begin** page provides an option to set up Windows Server Essentials as a virtual instance or on physical hardware. The availability of these options is predefined by your system provider and both options may not always be available. To install --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials as a virtual machine, in **Install Windows Server Essentials**, select **Install as virtual instance**, and then click **Configure**.  
+1.  After the Windows Welcome page (depending on your system provider’s configuration), the **Before you begin** page provides an option to set up Windows Server Essentials as a virtual instance or on physical hardware. The availability of these options is predefined by your system provider and both options may not always be available. To install  Windows Server 2012 R2 Essentials as a virtual machine, in **Install Windows Server Essentials**, select **Install as virtual instance**, and then click **Configure**.  
   
 2.  The wizard will provision a virtual machine which takes about five minutes.  
   
@@ -209,7 +196,7 @@ translation.priority.ht:
   
 1.  Open the Windows PowerShell console from an elevated command prompt.  
   
-2.  Install the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role by using the following command:  
+2.  Install the  Windows Server Essentials Experience role by using the following command:  
   
     ```  
     Add-WindowsFeature ServerEssentialsRole  

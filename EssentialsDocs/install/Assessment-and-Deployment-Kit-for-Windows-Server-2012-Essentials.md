@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Assessment and Deployment Kit for Windows Server 2012 Essentials
-The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server® 2012 Essentials Assessment and Deployment Kit (ADK) is a collection of tools, binaries, and operating system language packs that you can use to customize, assess, and deploy --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials on new computers. This document includes information that is specific to partners who intend to preinstall the operating system for their customers and includes the following topics:  
+The  Windows Server® 2012 Essentials Assessment and Deployment Kit (ADK) is a collection of tools, binaries, and operating system language packs that you can use to customize, assess, and deploy  Windows Server 2012 Essentials on new computers. This document includes information that is specific to partners who intend to preinstall the operating system for their customers and includes the following topics:  
   
 <<<<<<< HEAD
 -   [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)  

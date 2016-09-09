@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Create a Bootable USB Flash Drive
-You can create a bootable USB flash drive to use to deploy --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials . The first step is to prepare the USB flash drive by using DiskPart, which is a command-line utility. For information about DiskPart, see [DiskPart Command-Line Options](http://go.microsoft.com/fwlink/?LinkId=207073).  
+You can create a bootable USB flash drive to use to deploy  Windows Server 2012 Essentials . The first step is to prepare the USB flash drive by using DiskPart, which is a command-line utility. For information about DiskPart, see [DiskPart Command-Line Options](http://go.microsoft.com/fwlink/?LinkId=207073).  
   
  For additional scenarios in which you may want to create or use a bootable USB flash drive, see the following topics:  
   

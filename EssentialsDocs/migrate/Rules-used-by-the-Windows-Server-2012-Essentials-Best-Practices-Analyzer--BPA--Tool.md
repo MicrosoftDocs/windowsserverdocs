@@ -27,12 +27,12 @@ translation.priority.ht:
   - zh-tw
 ---
 # Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool
-This article describes the rules used by the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Best Practices Analyzer (BPA). The BPA examines a server that is running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and presents a report that describes issues and provides recommendations for resolving them. The recommendations are developed by the product support organization for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
+This article describes the rules used by the  Windows Server 2012 Essentials Best Practices Analyzer (BPA). The BPA examines a server that is running  Windows Server 2012 Essentials and presents a report that describes issues and provides recommendations for resolving them. The recommendations are developed by the product support organization for  Windows Server 2012 Essentials.  
   
 ## Using the tool  
- It is a standard practice, when you migrate to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials from Windows Server 2011 Essentials, Windows Small Business Server 2011 Essentials, or Windows Home Server 2011, to run the BPA on the Destination Server after you finish migrating your settings and data. You can run the tool from the Dashboard at any time.  
+ It is a standard practice, when you migrate to  Windows Server 2012 Essentials from Windows Server 2011 Essentials, Windows Small Business Server 2011 Essentials, or Windows Home Server 2011, to run the BPA on the Destination Server after you finish migrating your settings and data. You can run the tool from the Dashboard at any time.  
   
-#### To run the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials BPA on the server  
+#### To run the  Windows Server 2012 Essentials BPA on the server  
   
 1.  Log on to the server as an administrator, and then open the Dashboard.  
   
@@ -877,21 +877,21 @@ This article describes the rules used by the --- translation.priority.ht:    - c
 ### NT Backup is installed  
  **Issue:**  The Windows NT Backup program is installed on the server.  
   
- **Impact:**  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials uses Windows Server Backup. If the Windows NT Backup program is also installed, conflicts can exist between the two backup programs. This can cause the Windows Server Backup process to fail. The conflicts might also prevent you from using a backup to restore the server.  
+ **Impact:**   Windows Server 2012 Essentials uses Windows Server Backup. If the Windows NT Backup program is also installed, conflicts can exist between the two backup programs. This can cause the Windows Server Backup process to fail. The conflicts might also prevent you from using a backup to restore the server.  
   
  **Resolution:** To resolve this Issue: , uninstall the NT Backup program from the server.  
   
 ### IIS does not own port 80 (0.0.0.0:80) or port 443 (0.0.0.0:443)  
  **Issue:**  Internet Information Services (IIS) does not own port 80 (0.0.0.0:80) or Port 443. These ports are currently bound by other applications.  
   
- **Impact:**  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials web applications require the use of port 80 and port 443 to make services available to users. If another process or application is already using port 80 or port 443, the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials web applications cannot run. If this occurs, Remote Web Access and other applications are not available to users.  
+ **Impact:**   Windows Server 2012 Essentials web applications require the use of port 80 and port 443 to make services available to users. If another process or application is already using port 80 or port 443, the  Windows Server 2012 Essentials web applications cannot run. If this occurs, Remote Web Access and other applications are not available to users.  
   
  **Resolution:**  To resolve this Issue: , either uninstall the application that is already using port 80 or port 443, or assign that application to a different port.  
   
 ### The default website is not running  
- **Issue:**  The default website is not running in your --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials environment.  
+ **Issue:**  The default website is not running in your  Windows Server 2012 Essentials environment.  
   
- **Impact:**  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials web applications require the use of the default website. If the default website is not running, Remote Web Access and other applications are not available to users.  
+ **Impact:**   Windows Server 2012 Essentials web applications require the use of the default website. If the default website is not running, Remote Web Access and other applications are not available to users.  
   
  **Resolution:**  
   
@@ -946,7 +946,7 @@ This article describes the rules used by the --- translation.priority.ht:    - c
 ### A host name exists for port 80 on the default website  
  **Issue:**  A host name is assigned for port 80 on the default website.  
   
- **Impact:**  If a host name is assigned for port 80 on the default website, you might not be able to connect to some --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials web applications. A host name is not required and is not recommended in this situation  
+ **Impact:**  If a host name is assigned for port 80 on the default website, you might not be able to connect to some  Windows Server 2012 Essentials web applications. A host name is not required and is not recommended in this situation  
   
  **Resolution:**  
   

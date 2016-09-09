@@ -14,31 +14,18 @@ ms.assetid: 95a9f593-fad7-4335-bd4d-c7bb8c033efb
 caps.latest.revision: 30
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Online Backup in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- After you integrate with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup, the **Online Backup** management page appears in the Windows Server Essentials Dashboard. The **Online Backup** page makes it possible to perform common administrative tasks. The features on the Online Backup page include:  
+ After you integrate with  Microsoft Azure Backup, the **Online Backup** management page appears in the Windows Server Essentials Dashboard. The **Online Backup** page makes it possible to perform common administrative tasks. The features on the Online Backup page include:  
   
 -   The following sub-section pages:  
   
     -   **Online Backup** After you register the server for online backup, this section displays the current backup status, storage status, and account information.  
   
-    -   **Protected Folders** This section lists all shared folders and all File History folders on the server, and any other folders that you have chosen to back up in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure. The list includes the folder name, folder path, and status for each shared folder.  
+    -   **Protected Folders** This section lists all shared folders and all File History folders on the server, and any other folders that you have chosen to back up in  Azure. The list includes the folder name, folder path, and status for each shared folder.  
   
     -   **Backup History** This section displays a list of recent online backups. The list includes the type of operation, and the time and status for each backup.  
   
@@ -54,23 +41,23 @@ translation.priority.ht:
   
 ## Online backup tasks in the Dashboard  
   
--   [Upload a certificate to the Azure Backup vault](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Upload a certificate to the Azure Backup vault](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Configure online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Configure online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Start an online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Start an online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Restore files and folders from an online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [Restore files and folders from an online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
   
--   [Register this server for backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Register this server for backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [Unregister server](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
+-   [Unregister server](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
   
 ###  <a name="BKMK_1"></a> Upload a certificate to the Azure Backup vault  
- Before you can use --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup for online backups in Windows Server Essentials, you must upload a public certificate to register with the backup vault. The certificate is used to authenticate the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup deployment (the agent), acting on behalf of the Microsoft Online Services subscription owner to manage resources associated with the subscription.  
+ Before you can use  Azure Backup for online backups in Windows Server Essentials, you must upload a public certificate to register with the backup vault. The certificate is used to authenticate the  Azure Backup deployment (the agent), acting on behalf of the Microsoft Online Services subscription owner to manage resources associated with the subscription.  
   
 > [!NOTE]
->  Before you upload the certificate, you must complete the procedures in [Sign up for Azure Backup Service](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_16).  
+>  Before you upload the certificate, you must complete the procedures in [Sign up for Azure Backup Service](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_16).  
   
 ##### To upload a certificate to use with the Azure Backup Service  
   
@@ -80,7 +67,7 @@ translation.priority.ht:
   
 3.  In the **ONLINE BACKUP** area, click **Upload certificate to Azure Backup vault**.  
   
-     That opens **Recovery Services** in the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Management Portal. If you aren’t already signed in to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure, you'll need to sign in using your Microsoft account.  
+     That opens **Recovery Services** in the  Azure Management Portal. If you aren’t already signed in to  Azure, you'll need to sign in using your Microsoft account.  
   
 4.  Click the name of the backup vault you'll use for online backups to open the **Quick Start** page for the backup vault.  
   
@@ -92,13 +79,13 @@ translation.priority.ht:
   
     2.  On the **Online Backup** page, copy the path of the generated certificate.  
   
-    3.  Switch to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Management Portal, and then in the **Manage Certificate** dialog box, paste the path to upload the generated public certificate.  
+    3.  Switch to the  Azure Management Portal, and then in the **Manage Certificate** dialog box, paste the path to upload the generated public certificate.  
   
     > [!NOTE]
     >  You can also use your own public certificate. To know what certificate is required, on the **Quick Start** page, click the **Acquire Certificate** link.  
   
     > [!NOTE]
-    >  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](http://msdn.microsoft.com/library/azure/dn169036.aspx).  
+    >   Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](http://msdn.microsoft.com/library/azure/dn169036.aspx).  
   
 7.  After you select the certificate, click **OK** (check mark).  
   
@@ -106,18 +93,18 @@ translation.priority.ht:
   
  After completing this procedure, do the following:  
   
-1.  Register the server with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup Service. For more information, see [Register this server for backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
+1.  Register the server with the  Azure Backup Service. For more information, see [Register this server for backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
   
-2.  Configure online backup of the server. For more information, see [Configure online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
+2.  Configure online backup of the server. For more information, see [Configure online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
   
 ###  <a name="BKMK_2"></a> Configure online backup  
- After you register the server with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup, you can configure the online backup settings in Windows Server Essentials.  
+ After you register the server with  Azure Backup, you can configure the online backup settings in Windows Server Essentials.  
   
 ##### To configure online backup  
   
 1.  Either from the Register Your Server Wizard or from the **Online Backup** page of the Windows Server Essentials Dashboard, click **Configure online backup**. The Configure Online Backup Wizard appears.  
   
-2.  On the **Configure Online Backup** page of the wizard, select the check box for each server folder that you want to back up to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup. Clear the check box for each server folder that you do not want to include in the backup. To add folders that are not shown in the list, click **Add Folders**. When you finish your selection, click **Next**.  
+2.  On the **Configure Online Backup** page of the wizard, select the check box for each server folder that you want to back up to  Azure Backup. Clear the check box for each server folder that you do not want to include in the backup. To add folders that are not shown in the list, click **Add Folders**. When you finish your selection, click **Next**.  
   
     > [!NOTE]
     >  You cannot select a folder that is not located on the local server, or a folder that is on a drive that is formatted as ReFS.  
@@ -133,12 +120,12 @@ translation.priority.ht:
 5.  On the **Specify the Backup Retention Policy** page of the wizard, select the number of days that you want to keep online backups, and then click **Next**. The default is 7 days. You can also choose to keep online backups for 15 or 30 days.  
   
     > [!NOTE]
-    >  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup always retains your most recent backup. If the backup destination does not have sufficient space available to store the backup, the backup process will not succeed. To avoid this situation, either purchase additional storage space, or shorten the data retention period. For pricing information, see [Pricing Details](http://azure.microsoft.com/pricing/details/backup/) for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup.  
+    >   Azure Backup always retains your most recent backup. If the backup destination does not have sufficient space available to store the backup, the backup process will not succeed. To avoid this situation, either purchase additional storage space, or shorten the data retention period. For pricing information, see [Pricing Details](http://azure.microsoft.com/pricing/details/backup/) for  Microsoft Azure Backup.  
   
 6.  On the **Choose your bandwidth usage** page of the wizard, if you want to restrict the amount of Internet bandwidth that is allocated to online backup, select **Enable Internet bandwidth usage**. Use the options on the page to specify how much Internet bandwidth to allow your online backup to use during work hours and during non-work hours. Then define your business hours and business days.  
   
     > [!NOTE]
-    >  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup allows you to customize how the integration software utilizes the network bandwidth when backing up or restoring information. Using a technique commonly known as “throttling,�? you can control the amount of network bandwidth that is available for use by the backup and restore processes during specific day and time intervals. After selecting the **Enable Internet bandwidth usage** check box in the Configure Online Backup wizard, you can specify the workdays and work hours during which to apply the work-hours bandwidth limit. The non-work-hours limit is used at all other times. Valid bandwidth ranges are from 256 Kbps to Unlimited for both limits.  
+    >   Azure Backup allows you to customize how the integration software utilizes the network bandwidth when backing up or restoring information. Using a technique commonly known as “throttling,�? you can control the amount of network bandwidth that is available for use by the backup and restore processes during specific day and time intervals. After selecting the **Enable Internet bandwidth usage** check box in the Configure Online Backup wizard, you can specify the workdays and work hours during which to apply the work-hours bandwidth limit. The non-work-hours limit is used at all other times. Valid bandwidth ranges are from 256 Kbps to Unlimited for both limits.  
   
 7.  When the online backup configuration completes, click **Close**.  
   
@@ -148,7 +135,7 @@ translation.priority.ht:
 ###  <a name="BKMK_3"></a> Start an online backup  
   
 > [!NOTE]
->  Before you can start an online backup, you must first [Register this server for backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5), and then [Configure online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
+>  Before you can start an online backup, you must first [Register this server for backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5), and then [Configure online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
   
 ##### To start an online backup immediately  
   
@@ -192,10 +179,10 @@ translation.priority.ht:
      The **Confirm Your Restoration Information** page provides a summary of the restore instructions that you have specified. To proceed with file restore, you must type the correct passphrase for your online backup account.  
   
 ###  <a name="BKMK_5"></a> Register this server for backup  
- To back up or restore files, folders, and file history on your Windows Server Essentials server to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup, you must first register your server with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup Service.  
+ To back up or restore files, folders, and file history on your Windows Server Essentials server to  Azure Backup, you must first register your server with the  Microsoft Azure Backup Service.  
   
 > [!NOTE]
->  Before you register your server, you must upload a certificate to use with the backup vault that will store the online backups. For more information, see [Upload a certificate to the Azure Backup vault](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
+>  Before you register your server, you must upload a certificate to use with the backup vault that will store the online backups. For more information, see [Upload a certificate to the Azure Backup vault](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
   
 ##### To register your server with Azure Backup  
   
@@ -212,7 +199,7 @@ translation.priority.ht:
 ###  <a name="BKMK_6"></a> Unregister server  
   
 > [!CAUTION]
->  If you unregister your Windows Server Essentials server from the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup Service, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup can no longer back up the server. Additionally, server data that was previously uploaded will be erased. To resume online backups, you must register the server again.  
+>  If you unregister your Windows Server Essentials server from the  Microsoft Azure Backup Service,  Azure Backup can no longer back up the server. Additionally, server data that was previously uploaded will be erased. To resume online backups, you must register the server again.  
   
 ##### To unregister your server with Azure Backup  
   
@@ -228,31 +215,31 @@ translation.priority.ht:
   
 ## Related tasks  
   
--   [Change the online backup policy](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Change the online backup policy](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
   
--   [View online backup storage usage](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_8)  
+-   [View online backup storage usage](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_8)  
   
--   [Include a new folder in online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_9)  
+-   [Include a new folder in online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_9)  
   
--   [Remove or exclude file history backups from the online backup policy](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_10)  
+-   [Remove or exclude file history backups from the online backup policy](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_10)  
   
--   [Disable or re-enable online server backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_11)  
+-   [Disable or re-enable online server backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_11)  
   
--   [Stop an online server backup in progress](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_12)  
+-   [Stop an online server backup in progress](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_12)  
   
--   [View online backup status](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_13)  
+-   [View online backup status](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_13)  
   
--   [View and manage online backup alerts](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_14)  
+-   [View and manage online backup alerts](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_14)  
   
--   [Reset online backup to default settings](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_15)  
+-   [Reset online backup to default settings](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_15)  
   
--   [Sign up for Azure Backup Service](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_16)  
+-   [Sign up for Azure Backup Service](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_16)  
   
--   [Integrate Azure Backup with Windows Server Essentials](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_17)  
+-   [Integrate Azure Backup with Windows Server Essentials](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_17)  
   
--   [Protect folders for online backup in Windows Server Essentials](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_18)  
+-   [Protect folders for online backup in Windows Server Essentials](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_18)  
   
--   [Online backup history in Windows Server Essentials](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_19)  
+-   [Online backup history in Windows Server Essentials](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_19)  
   
 ###  <a name="BKMK_7"></a> Change the online backup policy  
  It is easy to make changes to the online backup policy by using the Windows Server Essentials Dashboard.  
@@ -267,7 +254,7 @@ translation.priority.ht:
   
 4.  Follow the instructions in the wizard to customize the online backup policy.  
   
- For more detailed information about the settings that you can customize, see [Configure online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
+ For more detailed information about the settings that you can customize, see [Configure online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
   
 ###  <a name="BKMK_8"></a> View online backup storage usage  
   
@@ -299,7 +286,7 @@ translation.priority.ht:
   
 8.  Follow the instructions in the wizard to finish customizing the online backup policy.  
   
- For more detailed information about other settings that you can customize, see [Configure online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
+ For more detailed information about other settings that you can customize, see [Configure online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
   
 ###  <a name="BKMK_10"></a> Remove or exclude file history backups from the online backup policy  
   
@@ -314,9 +301,9 @@ translation.priority.ht:
 4.  Select the folder that you want to exclude from the online backup policy, and then in the task pane, click **Remove the folder from online backup**.  
   
 ###  <a name="BKMK_11"></a> Disable or re-enable online server backup  
- For instructions about how to use --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup to back up or restore server data, see [Register this server for backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
+ For instructions about how to use  Azure Backup to back up or restore server data, see [Register this server for backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
   
- For instructions about how to stop using --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup to back up or restore server data, see [Unregister server](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_6).  
+ For instructions about how to stop using  Azure Backup to back up or restore server data, see [Unregister server](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_6).  
   
 ###  <a name="BKMK_12"></a> Stop an online server backup in progress  
   
@@ -341,7 +328,7 @@ translation.priority.ht:
 3.  Click the **Backup History** tab. The list view displays the status for each backup job. Select a backup job to view additional details about that job.  
   
 ###  <a name="BKMK_14"></a> View and manage online backup alerts  
- Like many other alerts, alerts for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup are displayed in the Alert Viewer.  
+ Like many other alerts, alerts for  Azure Backup are displayed in the Alert Viewer.  
   
 ##### To view online backup alerts in the Alert Viewer  
   
@@ -349,19 +336,19 @@ translation.priority.ht:
   
 2.  Do one of the following:  
   
-     --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials: On the navigation pane, click the alerts icon \(may be Critical, Warning, or Informational\). This opens the Alert Viewer.  
+      Windows Server 2012 Essentials: On the navigation pane, click the alerts icon \(may be Critical, Warning, or Informational\). This opens the Alert Viewer.  
   
-     --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials: On the **Home** page, click the **Health Monitoring** tab.  
+      Windows Server 2012 R2 Essentials: On the **Home** page, click the **Health Monitoring** tab.  
   
-3.  Review the list of alerts for issues that are related to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup.  
+3.  Review the list of alerts for issues that are related to  Azure Backup.  
   
- For more information about using the Alert Viewer or Health Monitoring tab to manage alerts, see [Manage System Health](../windows-server-essentials-manage/Manage-System-Health-in-Windows-Server-Essentials.md).  
+ For more information about using the Alert Viewer or Health Monitoring tab to manage alerts, see [Manage System Health](Manage-System-Health-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_15"></a> Reset online backup to default settings  
  Windows Server Essentials provides a wizard that helps you configure the settings for online backup. If you want to restore the default settings, run the **Configure online backup** task, and choose the **Remove the online backup policy** option. Then, run the **Configure online backup** task again. Your previously uploaded data remains unchanged.  
   
 ###  <a name="BKMK_16"></a> Sign up for Azure Backup Service  
- To prepare to integrate --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup with Windows Server Essentials, you'll log on to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Management Portal with your Microsoft Online Services account, and then create a backup vault to store your online backups in --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure. You'll then download the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup Integration module, and use the downloaded file to install the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup Add-In on your Windows Server Essentials server. If you do not have a Microsoft account, you can sign up for a free trial.  
+ To prepare to integrate  Microsoft Azure Backup with Windows Server Essentials, you'll log on to the  Azure Management Portal with your Microsoft Online Services account, and then create a backup vault to store your online backups in  Azure. You'll then download the  Azure Backup Integration module, and use the downloaded file to install the  Azure Backup Add-In on your Windows Server Essentials server. If you do not have a Microsoft account, you can sign up for a free trial.  
   
  To perform this setup, complete the following tasks:  
   
@@ -369,9 +356,9 @@ translation.priority.ht:
   
 2.  Create a backup vault to store online backups.  
   
-3.  Download the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup Agent.  
+3.  Download the  Azure Backup Agent.  
   
-4.  Install the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup Add-In on the server.  
+4.  Install the  Azure Backup Add-In on the server.  
   
 ####  <a name="BKMK_SignupforaMicrosoftOnlineServiceAccount"></a> Sign up for a Microsoft Online Services account and the Backup preview  
   
@@ -379,19 +366,19 @@ translation.priority.ht:
   
 2.  On the Dashboard **Home** page, click the **ADD-INS** category, click **Integrate with Azure Backup**, and then click **Click to sign up for Azure Backup**.  
   
-3.  On the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure **Recovery Services** page, in the **Backup (Preview)** section, review the details.  
+3.  On the  Azure **Recovery Services** page, in the **Backup (Preview)** section, review the details.  
   
-4.  If you do not have an --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure subscription, click **Free Trial**, and then follow the instructions to get an --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure subscription.  
+4.  If you do not have an  Azure subscription, click **Free Trial**, and then follow the instructions to get an  Azure subscription.  
   
-     If you already have an --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure subscription, click **Portal** in the upper-right corner of the web page to go to the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Management Portal.  
+     If you already have an  Azure subscription, click **Portal** in the upper-right corner of the web page to go to the  Azure Management Portal.  
   
-5.  On the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Management Portal page, you'll see **Recovery Services** in the left pane. That’s where you’ll manage the backup vaults that store your online backups from Windows Server Essentials.  
+5.  On the  Azure Management Portal page, you'll see **Recovery Services** in the left pane. That’s where you’ll manage the backup vaults that store your online backups from Windows Server Essentials.  
   
 ####  <a name="BKMK_Createabackupvaulttostoreonlinebackups"></a> Create a backup vault to store online backups  
   
 1.  Sign in to the [Azure Management Portal](https://manage.windowsazure.com)from the web browser on your Windows Server Essentials server.  
   
-2.  In the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Management Portal, click **New**, click **Data Services**, click **Recovery Services**, click **Backup Vault**, and then click **Quick Create**.  
+2.  In the  Azure Management Portal, click **New**, click **Data Services**, click **Recovery Services**, click **Backup Vault**, and then click **Quick Create**.  
   
 3.  Enter a name for your backup vault, choose the region where you want to store your backups, and then click **Quick Create**.  
   
@@ -414,39 +401,39 @@ translation.priority.ht:
     > [!NOTE]
     >  You might be required to restart the server in order to install any prerequisite software.  
   
-     The **Installation** page is displayed. A progress indicator displays when the installation begins and shows the progress of the installation. When the installation is complete, you will receive a message that the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup Add-in was installed successfully.  
+     The **Installation** page is displayed. A progress indicator displays when the installation begins and shows the progress of the installation. When the installation is complete, you will receive a message that the  Azure Backup Add-in was installed successfully.  
   
 4.  Click **Finish**.  
   
 5.  Close and reopen the Dashboard.  
   
-     A new tab, **Online Backup**, is added to the Dashboard. From this tab, you can register your server, configure backup settings, and open **Recovery Services** in the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Management Portal to manage the backup vaults for your servers.  
+     A new tab, **Online Backup**, is added to the Dashboard. From this tab, you can register your server, configure backup settings, and open **Recovery Services** in the  Azure Management Portal to manage the backup vaults for your servers.  
   
  After completing these steps, do the following:  
   
-1.  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, upload a certificate to use for online backups. For more information, see [Upload a certificate to the Azure Backup vault](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
+1.  In  Windows Server 2012 Essentials, upload a certificate to use for online backups. For more information, see [Upload a certificate to the Azure Backup vault](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1).  
   
-2.  Register the server with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup vault. For more information, see [Register this server for backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
+2.  Register the server with the  Azure Backup vault. For more information, see [Register this server for backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
   
-3.  Configure online backup of the server. For more information, see [Configure online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
+3.  Configure online backup of the server. For more information, see [Configure online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2).  
   
 ###  <a name="BKMK_17"></a> Integrate Azure Backup with Windows Server Essentials  
- The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup integration module is a new feature of Windows Server Essentials that enables you to encrypt and back up files and folders from your server to an --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure-hosted storage system provided by Microsoft. By using --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup to encrypt and back up data on the server, you can help prevent catastrophic loss of critical business data due to fire, flood, theft, or other disasters. When you use --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup to back up server data, the information is encrypted using your passphrase before it is uploaded to a secure datacenter on the Internet. To access data from an online backup, you must have a server that is authenticated by a certificate and must provide the passphrase.  
+ The  Microsoft Azure Backup integration module is a new feature of Windows Server Essentials that enables you to encrypt and back up files and folders from your server to an  Azure-hosted storage system provided by Microsoft. By using  Azure Backup to encrypt and back up data on the server, you can help prevent catastrophic loss of critical business data due to fire, flood, theft, or other disasters. When you use  Azure Backup to back up server data, the information is encrypted using your passphrase before it is uploaded to a secure datacenter on the Internet. To access data from an online backup, you must have a server that is authenticated by a certificate and must provide the passphrase.  
   
- After integrating and registering the server with --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup, you can configure online backup settings to perform regularly scheduled backups. You can also initiate an online backup at any time by clicking the **Start backup now** task in the Online Backup Dashboard.  
+ After integrating and registering the server with  Azure Backup, you can configure online backup settings to perform regularly scheduled backups. You can also initiate an online backup at any time by clicking the **Start backup now** task in the Online Backup Dashboard.  
   
  The online backup setup involves these steps:  
   
-1.  [Sign up for Azure Backup Service](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_16) - After you sign up for the Backup service, you will create a backup vault, download and install the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup integration module.  
+1.  [Sign up for Azure Backup Service](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_16) - After you sign up for the Backup service, you will create a backup vault, download and install the  Azure Backup integration module.  
   
-2.  [Upload a certificate to the Azure Backup vault](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
+2.  [Upload a certificate to the Azure Backup vault](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
   
-3.  [Register this server for backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
+3.  [Register this server for backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
   
-4.  [Configure online backup](../windows-server-essentials-manage/Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
+4.  [Configure online backup](Manage-Online-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
   
 > [!NOTE]
->  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Azure Backup uses the passphrase to encrypt files and folders for the online backup. Changing the encryption passphrase will replace the passphrase that you specified when you registered the server. The passphrase accepts only ASCII-coded characters.  
+>   Azure Backup uses the passphrase to encrypt files and folders for the online backup. Changing the encryption passphrase will replace the passphrase that you specified when you registered the server. The passphrase accepts only ASCII-coded characters.  
   
 ###  <a name="BKMK_18"></a> Protect folders for online backup in Windows Server Essentials  
  The **Protected Folders** sub-section in the Online Backup section of the Dashboard displays a list of all shared folders on the server. The following table describes the information that is included in the list.  
@@ -468,10 +455,10 @@ translation.priority.ht:
   
 ## See also  
   
--   [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
--   [Manage Microsoft Online Services](../windows-server-essentials-manage/Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md)  
+-   [Manage Microsoft Online Services](Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)

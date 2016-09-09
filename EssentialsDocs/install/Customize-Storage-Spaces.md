@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Customize Storage Spaces
-To preconfigure Storage Spaces for a better user experience, you can run the Storage Spaces configuration script from PostIC.cmd. The Storage Spaces configuration script must be run on the target computer, after you have completed the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials installation. For more information about scripts that automate Storage Spaces management tasks, see [Deploy and Manage Storage Spaces with PowerShell](http://www.microsoft.com/download/confirmation.aspx?id=30125).  
+To preconfigure Storage Spaces for a better user experience, you can run the Storage Spaces configuration script from PostIC.cmd. The Storage Spaces configuration script must be run on the target computer, after you have completed the  Windows Server 2012 Essentials installation. For more information about scripts that automate Storage Spaces management tasks, see [Deploy and Manage Storage Spaces with PowerShell](http://www.microsoft.com/download/confirmation.aspx?id=30125).  
   
 ## See Also  
 <<<<<<< HEAD

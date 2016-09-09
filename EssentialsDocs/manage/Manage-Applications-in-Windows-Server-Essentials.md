@@ -14,29 +14,16 @@ ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
 caps.latest.revision: 12
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Applications in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- The server Dashboard in Windows Server Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 with the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server Essentials Experience role installed makes it possible to perform common administrative tasks. To perform these tasks, see the following:  
+ The server Dashboard in Windows Server Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed makes it possible to perform common administrative tasks. To perform these tasks, see the following:  
   
--   [Application management tasks in the Dashboard](../windows-server-essentials-manage/Manage-Applications-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Application management tasks in the Dashboard](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Install or remove add-ins using the Dashboard](../windows-server-essentials-manage/Manage-Applications-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Install or remove add-ins using the Dashboard](Manage-Applications-in-Windows-Server-Essentials.md#BKMK_2)  
   
 ##  <a name="BKMK_1"></a> Application management tasks in the Dashboard  
  The **Applications** management page of the Dashboard provides:  
@@ -109,6 +96,6 @@ translation.priority.ht:
   
 ## See also  
   
--   [Dashboard Overview](../windows-server-essentials-manage/Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)  
+-   [Dashboard Overview](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

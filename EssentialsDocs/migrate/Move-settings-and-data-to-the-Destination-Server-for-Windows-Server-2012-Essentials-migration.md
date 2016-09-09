@@ -14,20 +14,7 @@ ms.assetid: 2b882e87-347a-4010-b7fd-9599d61198dd
 caps.latest.revision: 2
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Move settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
@@ -89,7 +76,7 @@ Move settings and data to the Destination Server as follows:
   
 #### To map user accounts to computers  
   
-1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard.  
+1.  Open the  Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

@@ -14,20 +14,7 @@ ms.assetid: 3ff7d040-ebd1-421c-80db-765deacedd4c
 caps.latest.revision: 8
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Move Windows Server 2008 Foundation settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
@@ -130,11 +117,11 @@ Move settings and data to the Destination Server as follows:
 -   Port 443: HTTPS Web traffic  
   
 ##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
- In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Server 2008 Foundation must be mapped to one or more computers.  
+ In  Windows Server 2012 Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows Server 2008 Foundation must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
   
-1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard.  
+1.  Open the  Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

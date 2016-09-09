@@ -37,11 +37,11 @@ This guide provides information and basic instructions to help you set up and in
 ## Prerequisites  
  Before installing Exchange Server on a Windows Server Essentials network, make sure that you complete the tasks outlined in this section.  
   
--   [Set up a server that is running Windows Server Essentials](../windows-server-essentials-manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SetUpSBS8)  
+-   [Set up a server that is running Windows Server Essentials](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SetUpSBS8)  
   
--   [Prepare a second server on which to install Exchange Server](../windows-server-essentials-manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SecondServer)  
+-   [Prepare a second server on which to install Exchange Server](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SecondServer)  
   
--   [Configure your Internet domain name](../windows-server-essentials-manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_DomainNames)  
+-   [Configure your Internet domain name](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_DomainNames)  
   
 ###  <a name="BKMK_SetUpSBS8"></a> Set up a server that is running Windows Server Essentials  
  You must have already set up a server that is running Windows Server Essentials. This will be the domain controller for the server that is running Exchange Server. For information about how to set up Windows Server Essentials, see [Install Windows Server Essentials](../Topic/Install%20Windows%20Server%20Essentials.md).  
@@ -446,7 +446,7 @@ This guide provides information and basic instructions to help you set up and in
  If you disable integration with an on-premises Exchange Server, you will no longer be able to use the Windows Server Essentials Dashboard to view, create, or manage Exchange Server mailboxes.  
   
 ### What do I need to know about email accounts?  
- A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Office 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.  
+ A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft  Office 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.  
   
  The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is “*FrankM*�?, the user’s email address might be *FrankM@Contoso.com*.  
   
@@ -465,6 +465,6 @@ This guide provides information and basic instructions to help you set up and in
   
 -   [System Requirements for Windows Server 2012 Essentials](../Topic/System%20Requirements%20for%20Windows%20Server%202012%20Essentials.md)  
   
--   [Manage Email Service Integration](../windows-server-essentials-manage/Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
+-   [Manage Email Service Integration](Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

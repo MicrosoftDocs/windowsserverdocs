@@ -15,23 +15,10 @@ ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 caps.latest.revision: 9
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network1
-After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and you complete the tasks in the Migration Wizard, you must perform the following tasks:  
+After you finish installing  Windows Server 2012 Essentials and you complete the tasks in the Migration Wizard, you must perform the following tasks:  
   
 <<<<<<< HEAD
 1.  [Uninstall Exchange Server 2003](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network1.md#BKMK_UninstallExchangeServer2003).  
@@ -58,7 +45,7 @@ After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   
 ###  <a name="BKMK_UninstallExchangeServer2003"></a> Uninstall Exchange Server 2003  
   
 > [!IMPORTANT]
->  If you add user accounts after you move mailboxes to the Destination Server and before you uninstall Exchange Server 2003 from the Source Server, the mailboxes are added on the Source Server. This is by design. You must move the mailboxes to the Destination Server for all user accounts that are added during this time. Repeat the instructions in Move Exchange Server mailboxes and settings for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials migration before you uninstall Exchange Server 2003.  
+>  If you add user accounts after you move mailboxes to the Destination Server and before you uninstall Exchange Server 2003 from the Source Server, the mailboxes are added on the Source Server. This is by design. You must move the mailboxes to the Destination Server for all user accounts that are added during this time. Repeat the instructions in Move Exchange Server mailboxes and settings for  Windows Server 2012 Essentials migration before you uninstall Exchange Server 2003.  
   
  You must uninstall Exchange Server 2003 from the Source Server before you demote it. This removes all references in Active Directory Domain Services (AD DS) to Exchange Server on the Source Server. You must have your Windows Small Business Server 2003 media to remove Exchange Server 2003.  
   
@@ -86,7 +73,7 @@ After you finish installing --- translation.priority.ht:    - cs-cz   - de-at   
 7.  When prompted, insert Windows Small Business Server 2003 CD#3, and follow the onscreen instructions.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
- Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials.  
+ Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from  Windows Server 2012 Essentials.  
   
 ###  <a name="BKMK_DemoteTheSourceServer"></a> Demote the Source Server  
  Before you demote the Source Server from the role of the AD DS domain controller to the role of a domain member server, ensure that Group Policy settings are applied to all client computers, as described in the following procedure.  

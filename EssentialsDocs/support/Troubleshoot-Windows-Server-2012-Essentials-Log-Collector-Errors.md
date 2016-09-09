@@ -14,20 +14,7 @@ ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
 caps.latest.revision: 5
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Troubleshoot Windows Server 2012 Essentials Log Collector Errors
 When you run the Log Collector, you may encounter one of the following errors. To resolve an issue, follow the guidance provided for the associated error.  

@@ -142,7 +142,7 @@ The cfg.ini file is used to automate an installation of the operating system in 
     |StaticIPv6Gateway|(Optional) Specify default gateway address if you want to configure a static IP address instead of a dynamic one.|  
     |ClientBackupOn|(Optional) Turn off Client backup by default when new clients joined the server.|  
     |FileHistoryOn|(Optional) Turn off File History backup by default when new clients running Windows 8 Consumer Preview joined the server.|  
-    |EnableRWA|It will enable Remote Web Access when installing --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, but will skip router configuration. This is only supported in clean installation of the product. The default value is false.|  
+    |EnableRWA|It will enable Remote Web Access when installing  Windows Server 2012 Essentials, but will skip router configuration. This is only supported in clean installation of the product. The default value is false.|  
     |IPv4DNSForwarder|Set IPv4 DNS Forwarder.|  
     |IPv6DNSForwarder|Set IPv6 DNS Forwarder.|  
     |LaunchPadHiddenTasks|- (Optional) You can hide Backup entry or/and Admin Dashboard entry on Launchpad.<br /><br /> - To disable dashboard: LaunchPadHiddenTasks=Microsoft.LaunchPad.AdminDashboard<br /><br /> - To disable backup: LaunchPadHiddenTasks=Microsoft.LaunchPad.Backup<br /><br /> - To disable both backup and dashboard: LaunchPadHiddenTasks=Microsoft.LaunchPad.Backup,Microsoft.LaunchPad.AdminDashboard|  

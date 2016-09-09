@@ -18,7 +18,7 @@ manager: stevenka
  Published: September 2012  
   
 ### Abstract  
- This document describes how to install and run the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Log Collector. The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Log Collector obtains data from multiple sources that is used by Microsoft Customer Service and Support to assist you in solving problems that occur with your server and computers that are connected to the network.  
+ This document describes how to install and run the  Windows Server 2012 Essentials Log Collector. The  Windows Server 2012 Essentials Log Collector obtains data from multiple sources that is used by Microsoft Customer Service and Support to assist you in solving problems that occur with your server and computers that are connected to the network.  
   
  To view the most recent version of this guide, see [Using the Windows Server 2012 Essentials Log Collector](http://go.microsoft.com/fwlink/?LinkId=255211) at the Microsoft TechNet website.  
   

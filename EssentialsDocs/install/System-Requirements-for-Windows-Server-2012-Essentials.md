@@ -14,23 +14,10 @@ ms.assetid: 49565621-ecd6-412b-b91a-e12e3b8a8773
 caps.latest.revision: 21
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # System Requirements for Windows Server 2012 Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. Table 2 defines additional hardware and software requirements for the server.  
+ Windows Server 2012 Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for  Windows Server 2012 Essentials. Table 2 defines additional hardware and software requirements for the server.  
   
 > [!NOTE]
 >  Are you looking for system requirements for Windows Server 2012? If so, go to [Installing Windows Server 2012](assetId:///ddf71ebb-fc52-4ecb-aa88-109167c5f1c8) in the Windows Server TechNet Library.  
@@ -43,7 +30,7 @@ translation.priority.ht:
 |Memory (RAM)|2 GB|8 GB|  
 |Hard disks and available storage space|160 GB hard disk with a 60 GB system partition||  
   
- *Recommended hardware requirements to support --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials maximum user and device limits.  
+ *Recommended hardware requirements to support  Windows Server 2012 Essentials maximum user and device limits.  
   
 ### Table 2:  Additional Hardware and Software Requirements for Windows Server 2012 Essentials  
   
@@ -51,7 +38,7 @@ translation.priority.ht:
 |---------------|-----------------|  
 |Network adapter|Gigabit Ethernet adapter (10/100/1000baseT PHY/MAC).|  
 |Internet|Some functionality may require Internet access (fees may apply) or a Windows Live® ID Account.|  
-|Supported Client operating systems|--- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows 8, Windows 7, Macintosh OS X version 10.5 to 10.8.|  
+|Supported Client operating systems| Windows 8, Windows 7, Macintosh OS X version 10.5 to 10.8.|  
 |Router|A router or firewall that supports IPv4 NAT.|  
 |Additional requirements|- Super-VGA 800 x 600 (minimum) or  1024 × 768 (recommended) or higher-resolution monitor (headed mode only)<br /><br /> - Keyboard and Microsoft® Mouse or compatible pointing device (headed mode only)<br /><br /> - DVD-ROM drive|  
 |Supported networking configuration|- Your server computer must be connected via a network cable to a router.<br /><br /> - The router should be a UPnP-certified device, but it is not required.<br /><br /> - The router should be in the 192.168.x.x subnet, but it is not required.|  

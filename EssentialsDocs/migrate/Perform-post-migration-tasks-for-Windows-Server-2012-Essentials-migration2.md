@@ -15,20 +15,7 @@ ms.assetid: 5b48e800-14f2-4537-8a4f-74a6f55e712f
 caps.latest.revision: 2
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Perform post-migration tasks for Windows Server 2012 Essentials migration2
 The following tasks help you finish setting up your Destination Server with some of the same settings that were on the Source Server. You may have disabled some of these settings on your Source Server during the migration process, so they were not migrated to the Destination Server.  
@@ -73,6 +60,6 @@ The following tasks help you finish setting up your Destination Server with some
 10. Repeat steps 6 through 9 to remove all Reverse Lookup Zones that point to the Source Server.  
   
 ###  <a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a> Share line-of-business and other application data folders  
- You must set the shared folder permissions and the NTFS permissions for the line-of-business and other application data folders that you copied to the Destination Server. After you set the permissions, the shared folders are displayed in the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard on the **Storage** tab.  
+ You must set the shared folder permissions and the NTFS permissions for the line-of-business and other application data folders that you copied to the Destination Server. After you set the permissions, the shared folders are displayed in the  Windows Server 2012 Essentials Dashboard on the **Storage** tab.  
   
  If you are using a logon script to map drives to the shared folders, you must update the script to map to the drives on the Destination Server.

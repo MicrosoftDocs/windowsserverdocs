@@ -14,61 +14,48 @@ ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 caps.latest.revision: 14
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Client Computer Backup in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  This topic includes information about common backup tasks for client computers that you can accomplish by using the Windows Server Essentials Dashboard, and includes the following sections:  
   
--   [How the Repair the Backup Database Wizard works](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [How the Repair the Backup Database Wizard works](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Understand the computer backup settings](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Understand the computer backup settings](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Set up backup for a client computer](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Set up backup for a client computer](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Change the time that backup is scheduled to run](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [Change the time that backup is scheduled to run](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_4)  
   
--   [Change the computer backup retention policy](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Change the computer backup retention policy](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [Reset backup to default settings](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
+-   [Reset backup to default settings](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [Use repair and recovery tools](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Use repair and recovery tools](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_7)  
   
--   [Repair the backup database](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_8)  
+-   [Repair the backup database](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_8)  
   
--   [Disable backup for a computer](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_9)  
+-   [Disable backup for a computer](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_9)  
   
--   [Run the backup Cleanup task](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_10)  
+-   [Run the backup Cleanup task](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_10)  
   
--   [View alerts in the task bar on a client computer](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_11)  
+-   [View alerts in the task bar on a client computer](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_11)  
   
--   [View backup status from the Launchpad](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_12)  
+-   [View backup status from the Launchpad](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_12)  
   
--   [Stop a backup in progress from the Launchpad](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_13)  
+-   [Stop a backup in progress from the Launchpad](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_13)  
   
--   [Start a backup from the Launchpad](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_14)  
+-   [Start a backup from the Launchpad](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_14)  
   
--   [How computer backup works](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_15)  
+-   [How computer backup works](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_15)  
   
--   [Tips to help prevent data loss due to corruption of the client backup database](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_16)  
+-   [Tips to help prevent data loss due to corruption of the client backup database](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_16)  
   
--   [Restore files or folders from a client computer backup](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_17)  
+-   [Restore files or folders from a client computer backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_17)  
   
--   [Understanding File History](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_FileHistory)  
+-   [Understanding File History](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_FileHistory)  
   
 ##  <a name="BKMK_1"></a> How the Repair the Backup Database Wizard works  
  If Windows Server Essentials detects errors in your backup database, it sends you a health notification, and the alert status changes to red, which indicates a critical condition.  
@@ -102,7 +89,7 @@ translation.priority.ht:
 >  The computer must be online for you to set up backup.  
   
 > [!IMPORTANT]
->  --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials does not support backing up and restoring dynamic disks on client computers.  
+>   Windows Server 2012 Essentials does not support backing up and restoring dynamic disks on client computers.  
   
 #### To set up backup for a client computer  
   
@@ -155,7 +142,7 @@ translation.priority.ht:
 2.  In **Devices Tasks**, click **Customize Computer Backup and File History settings**.  
   
     > [!NOTE]
-    >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, this task has been renamed **Client computer backup tasks**.  
+    >  In  Windows Server 2012 R2 Essentials, this task has been renamed **Client computer backup tasks**.  
   
 3.  In **Client computer backup settings and tools**, on the **Computer Backup** tab, you can change the start and end times to meet your needs.  
   
@@ -181,7 +168,7 @@ translation.priority.ht:
 3.  In the **Devices Tasks** pane, click **Customize Computer Backup and File History settings**.  
   
     > [!NOTE]
-    >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, this task has been renamed **Client Computer backup tasks**.  
+    >  In  Windows Server 2012 R2 Essentials, this task has been renamed **Client Computer backup tasks**.  
   
 4.  In **Client computer backup settings and tools**, in the **Client computer backup retention policy** section, make the changes to the retention policy that meets your needs.  
   
@@ -212,7 +199,7 @@ translation.priority.ht:
 2.  In **Devices Tasks**, click **Customize Computer Backup and File History settings**.  
   
     > [!NOTE]
-    >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
+    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
   
 3.  On the **Computer Backup** tab of the **Client computer and backup settings and tools** page, click **Reset to defaults**.  
   
@@ -241,7 +228,7 @@ translation.priority.ht:
 3.  In the **Devices Tasks** pane, click **Customize Computer Backup and File History settings.**  
   
     > [!NOTE]
-    >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
+    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
   
 4.  In **Client computer backup settings and tools**, click the **Tools** tab.  
   
@@ -252,7 +239,7 @@ translation.priority.ht:
 7.  Depending on how large the backup database is, the database repair can take several hours. Click **Close**, and then click **OK** to close the **Customize Computer Backup and File History settings** page.  
   
     > [!NOTE]
-    >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, click **Client computer backup settings and tools**.  
+    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup settings and tools**.  
   
 #### To review the results of the backup database repair  
   
@@ -263,7 +250,7 @@ translation.priority.ht:
 3.  In the **Devices Tasks** pane, click **Customize Computer Backup and File History settings.**  
   
     > [!NOTE]
-    >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
+    >  In  Windows Server 2012 R2 Essentials, click **Client computer backup tasks**.  
   
 4.  In **Client computer backup settings and tools**, click the **Tools** tab.  
   
@@ -286,7 +273,7 @@ translation.priority.ht:
   
 6.  Click **Save changes**, and then click **Close**.  
   
- For information about how to enable backup for a computer after backup has been disabled, see [Set up backup for a client computer](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3).  
+ For information about how to enable backup for a computer after backup has been disabled, see [Set up backup for a client computer](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_3).  
   
 ##  <a name="BKMK_10"></a> Run the backup Cleanup task  
  The client computer backup cleanup task is scheduled to run at 11:59 PM every Saturday after all backups are complete. The cleanup task deletes backups from the client computer backup database according to the backup retention policy. The default settings for the backup retention policy are:  
@@ -297,7 +284,7 @@ translation.priority.ht:
   
 -   Number of months that the last backup of the month is retained: 6 months  
   
- For information about changing the backup retention policy, see [Change the computer backup retention policy](../windows-server-essentials-manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
+ For information about changing the backup retention policy, see [Change the computer backup retention policy](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md#BKMK_5).  
   
 #### To run the client backup database cleanup task  
   
@@ -318,7 +305,7 @@ translation.priority.ht:
   
 -   There is not a recent successful backup. The number of days since the last successful backup is included in the notice.  
   
--   --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials only: A new volume is added to your computer. The person who administers your network needs to run the Customize Backup Wizard to include or exclude the volume for future backups.  
+-    Windows Server 2012 Essentials only: A new volume is added to your computer. The person who administers your network needs to run the Customize Backup Wizard to include or exclude the volume for future backups.  
   
 ##  <a name="BKMK_12"></a> View backup status from the Launchpad  
  Use the Launchpad to view quick backup status for your computer.  
@@ -343,7 +330,7 @@ translation.priority.ht:
     -   **Cannot connect**: Backup cannot connect to the Windows Server Client Computer Backup Provider Service.  
   
         > [!NOTE]
-        >  In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, this service has been renamed Windows Server Essentials Client Computer Management Service.  
+        >  In  Windows Server 2012 R2 Essentials, this service has been renamed Windows Server Essentials Client Computer Management Service.  
   
     -   **Backup in progress**: Displays the percentage of backup completed.  
   
@@ -416,7 +403,7 @@ translation.priority.ht:
   
  To help prevent data loss due to corruption of the client backup database, consider the following:  
   
--   Enable an additional method of backing up the client backup database. For example, depending on the version of Windows Server Essentials you are running, use Server Backup, Online Backup, or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Microsoft Azure Backup to back up the database.  
+-   Enable an additional method of backing up the client backup database. For example, depending on the version of Windows Server Essentials you are running, use Server Backup, Online Backup, or  Microsoft Azure Backup to back up the database.  
   
     > [!IMPORTANT]
     >  Make sure that you select to back up all files in the **Client Computers Backup** folder.  
@@ -425,9 +412,9 @@ translation.priority.ht:
   
 -   Before you clean up or restore the client backup database, make sure to stop all client backups that are currently in progress.  
   
-     If you are running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you should also stop the Windows Server Client Computer Backup Service and the Windows Server Client Computer Backup Provider Service.  
+     If you are running  Windows Server 2012 Essentials, you should also stop the Windows Server Client Computer Backup Service and the Windows Server Client Computer Backup Provider Service.  
   
-     If you are running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, you should also stop the Windows Server Computer Backup Service.  
+     If you are running  Windows Server 2012 R2 Essentials, you should also stop the Windows Server Computer Backup Service.  
   
      After completing the restore operation, restart the service.  
   
@@ -453,7 +440,7 @@ translation.priority.ht:
 ##  <a name="BKMK_FileHistory"></a> Understanding File History  
  The File History feature of Windows Server Essentials automatically backs up files that are in the Libraries, Contacts, Desktop, and Favorites folders of network computers that have File History capability. If the originals are lost, damaged or deleted, you can restore them. You can also find different versions of your files from a specific point in time. Over time, you will have a complete history of your files.  
   
- In --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, you can customize File History settings from the **File History** page of **Client computer backup settings and tools**.  
+ In  Windows Server 2012 Essentials, you can customize File History settings from the **File History** page of **Client computer backup settings and tools**.  
   
  In Windows Server 2012 R2 Essentials, you can customize the File History settings by going to the **Users** tab, and then selecting the **Change the File History setting** task.  
   
@@ -470,8 +457,8 @@ translation.priority.ht:
   
 ## See also  
   
--   [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)

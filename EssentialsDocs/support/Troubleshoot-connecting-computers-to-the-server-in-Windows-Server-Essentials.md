@@ -27,12 +27,12 @@ translation.priority.ht:
   - zh-tw
 ---
 # Troubleshoot connecting computers to the server in Windows Server Essentials
---- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- This topic contains troubleshooting guidance for issues that you might encounter when you connect a computer to the server that is running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials.  
+ This topic contains troubleshooting guidance for issues that you might encounter when you connect a computer to the server that is running  Windows Server 2012 Essentials or  Windows Server 2012 R2 Essentials.  
   
 > [!NOTE]
->  For the most current troubleshooting information from the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the  Windows Server 2012 Essentials and  Windows Server 2012 R2 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
  This topic provides solutions for the following issues:  
   
@@ -89,7 +89,7 @@ translation.priority.ht:
   
  **Description**  
   
- This issue may occur if you connect a computer to a server that is running --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials while other Windows updates or application installations are pending and the Connector installation is canceled.  
+ This issue may occur if you connect a computer to a server that is running  Windows Server 2012 R2 Essentials while other Windows updates or application installations are pending and the Connector installation is canceled.  
   
  **Solution**  
   
@@ -98,11 +98,11 @@ translation.priority.ht:
 ##  <a name="BKMK_ConnectorIssue2"></a> Issue 2  
  **Issue**  
   
- Cannot join a computer to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials  
+ Cannot join a computer to  Windows Server 2012 Essentials  
   
  **Description**  
   
- Computers that have non-ASCII characters in the computer name cannot be joined to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials. If the computer name includes non-ASCII characters, you receive the error message "An unexpected error has occurred."  
+ Computers that have non-ASCII characters in the computer name cannot be joined to  Windows Server 2012 Essentials. If the computer name includes non-ASCII characters, you receive the error message "An unexpected error has occurred."  
   
  **Solution**  
   
@@ -115,7 +115,7 @@ translation.priority.ht:
   
  **Description**  
   
- To be able to connect a computer to the server, the SYSTEM account must have Full Control permissions on server folders displayed on the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard. If the required permissions have not been granted, you receive the "The Connector software installation is canceled" error message.  
+ To be able to connect a computer to the server, the SYSTEM account must have Full Control permissions on server folders displayed on the  Windows Server 2012 Essentials Dashboard. If the required permissions have not been granted, you receive the "The Connector software installation is canceled" error message.  
   
  **Solution**  
   
@@ -123,7 +123,7 @@ translation.priority.ht:
   
 #### To grant the SYSTEM account Full control permissions on a server folder  
   
-1.  Open the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials Dashboard.  
+1.  Open the  Windows Server 2012 Essentials Dashboard.  
   
 2.  Click **Storage**, and then click **Server Folders**.  
   
@@ -146,7 +146,7 @@ translation.priority.ht:
   
  **Description**  
   
- When you connect a computer to a server that is running Windows Server 2012 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials, the wizard attempts to install .NET Framework version 4.5.50709 on the computer. However, if an earlier release of .NET Framework version 4.5 is present, the updated release cannot be installed, and the connection attempt fails with this error message: “To run this application, you must install one of the following versions of the .NET Framework: V4.5.50709. Contact your allocation publisher for instructions about obtaining the appropriate version of the .NET Framework.�?  
+ When you connect a computer to a server that is running Windows Server 2012 Essentials or  Windows Server 2012 R2 Essentials, the wizard attempts to install .NET Framework version 4.5.50709 on the computer. However, if an earlier release of .NET Framework version 4.5 is present, the updated release cannot be installed, and the connection attempt fails with this error message: “To run this application, you must install one of the following versions of the .NET Framework: V4.5.50709. Contact your allocation publisher for instructions about obtaining the appropriate version of the .NET Framework.�?  
   
  **Solution**  
   
@@ -169,7 +169,7 @@ translation.priority.ht:
   
  **Description**  
   
- This can happen if the date and time on the connected computer are not synchronized with the date and time on the server. --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials and --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials use the time synchronization service to synchronize the date and time of computers running in a --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials network. Synchronized time is critical because the default authentication protocol uses server time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time, --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
+ This can happen if the date and time on the connected computer are not synchronized with the date and time on the server.  Windows Server 2012 Essentials and  Windows Server 2012 R2 Essentials use the time synchronization service to synchronize the date and time of computers running in a  Windows Server 2012 Essentials or  Windows Server 2012 R2 Essentials network. Synchronized time is critical because the default authentication protocol uses server time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time,  Windows Server 2012 Essentials or  Windows Server 2012 R2 Essentials authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
   
  This can happen if the server’s free memory is less than 5 percent.  
   
@@ -199,7 +199,7 @@ translation.priority.ht:
   
 #### To change the date and time on the server  
   
-1.  Log on to the server using the password that you set up during --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials or --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials installation and configuration.  
+1.  Log on to the server using the password that you set up during  Windows Server 2012 Essentials or  Windows Server 2012 R2 Essentials installation and configuration.  
   
     > [!NOTE]
     >  If you are managing the server remotely, you must log on to the server using Remote Desktop Connection.  
@@ -268,12 +268,12 @@ translation.priority.ht:
   
  **Description**  
   
- If auto logon is set for the user account when you connect the computer to --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials, the setting is overwritten when the connector software is installed on the computer.  
+ If auto logon is set for the user account when you connect the computer to  Windows Server 2012 Essentials, the setting is overwritten when the connector software is installed on the computer.  
   
  **Solution** To resolve this issue, when you connect the computer to the server, note the password that is used for the user account. After the connector software is installed, configure auto logon to use that account.  
   
 > [!NOTE]
->  The --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 R2 Essentials domain account requires a password that meets the default password policy requirements.  
+>  The  Windows Server 2012 R2 Essentials domain account requires a password that meets the default password policy requirements.  
   
 ##  <a name="BKMK_ConnectorIssueOldLogs"></a> Issue 10  
  **Issue**  
@@ -307,7 +307,7 @@ translation.priority.ht:
   
  **Solution**  
   
- Before you upgrade your client operating system to a different version (for example, you upgrade Windows XP to Windows Vista or Windows Vista to Windows 7), you should uninstall the connector software. Use **Add or remove programs** in Control Panel. After the client operating system upgrade is complete, you can reinstall the client connector by opening http://<*server*>/connect in a Web browser, where <*server*> is the name of the --- translation.priority.ht:    - cs-cz   - de-at   - de-de   - es-es   - fr-be   - fr-fr   - hu-hu   - it-ch   - it-it   - ja-jp   - ko-kr   - nl-be   - nl-nl   - pl-pl   - pt-br   - pt-pt   - ru-ru   - sv-se   - tr-tr   - zh-cn   - zh-tw --- Windows Server 2012 Essentials server.  
+ Before you upgrade your client operating system to a different version (for example, you upgrade Windows XP to Windows Vista or Windows Vista to Windows 7), you should uninstall the connector software. Use **Add or remove programs** in Control Panel. After the client operating system upgrade is complete, you can reinstall the client connector by opening http://<*server*>/connect in a Web browser, where <*server*> is the name of the  Windows Server 2012 Essentials server.  
   
  If you have already upgraded the client with the connector software installed, use **Add/Remove Programs** or **Programs and Features** to uninstall the connector software. Then install the connector software again.  
   
