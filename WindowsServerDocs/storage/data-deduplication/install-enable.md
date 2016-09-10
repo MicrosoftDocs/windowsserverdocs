@@ -45,7 +45,7 @@ Connect remotely to the Nano Server instance with PowerShell remoting and instal
 ### <a id="enable-dedup-candidate-workloads"></a>Determine which workloads are candidates for Data Deduplication
 Data Deduplication can effectively minimize the costs of a server application's data consumption by reducing the amount of disk space consumed by redundant data. Before enabling deduplication, it is important that you understand the characteristics of your workload to ensure that you get the maximum performance out of your storage. There are two classes of workloads to consider:
 
-* *Recommended workloads* that have datasets that would benefit from deduplication and resource consumption patterns that are compatible with Data Deduplication's post-processing model. We recommend that you always [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) on these workloads:
+* *Recommended workloads* that have been proven to have both datasets that benefit highly from deduplication and have resource consumption patterns that are compatible with Data Deduplication's post-processing model. We recommend that you always [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) on these workloads:
 	* General purpose file servers (GPFS) serving shares such as team shares, user home folders, work folders, and software development shares.
 	* Virtualized desktop infrastructure (VDI) servers.
 	* Virtualized backup applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx).
@@ -82,7 +82,7 @@ To determine whether a workload works well with deduplication, answer the follow
 	`Files excluded by error: 0`  
 
 2. **What do my workload's I/O patterns to its dataset look like? What performance do I have for my workload?**  
-	Data Deduplication doesn't deduplicate writes in real time--it does so later. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store and attempts to organize the Chunk Store by file as much as possible, read operations perform best when they are applied to sequential ranges of a file.  
+	Data Deduplication doesn't deduplicate writes in real time. It deduplicates later. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store and attempts to organize the Chunk Store by file as much as possible, read operations perform best when they are applied to sequential ranges of a file.  
 
 	Database-like workloads typically have more random read patterns than sequential read patterns because databases do not typically guarantee that the database layout will be optimal for all possible queries that may be run. Because the sections of the Chunk Store may exist all over the volume, accessing data ranges in the Chunk Store for database queries may introduce additional latency. High performance workloads are particularly sensitive to this extra latency, but other database-like workloads might not be.
 
@@ -93,7 +93,7 @@ To determine whether a workload works well with deduplication, answer the follow
 	Because Data Deduplication uses a post-processing model, Data Deduplication periodically needs to have sufficient system resources to complete its [optimization and other jobs](understand.md#job-info). This means that workloads that have idle time, such as in the evening or on weekends, are excellent candidates for deduplication, and workloads that run all day, every day may not be. Workloads that have no idle time may still be good candidates for deduplication if the workload does not have high resource requirements on the server.
 
 ### <a id="enable-dedup-lights-on"></a>Enable Data Deduplication
-Before enabling Data Deduplication, you must choose the [usage type](understand.md#usage-type) that most closely resembles your workload. There are three usage types included with Data Deduplication.
+Before enabling Data Deduplication, you must choose the [Usage Type](understand.md#usage-type) that most closely resembles your workload. There are three Usage Types included with Data Deduplication.
 
 * [Default](understand.md#usage-type-default) - tuned specifically for general purpose file servers
 * [Hyper-V](understand.md#usage-type-hyperv) - tuned specifically for VDI servers
@@ -128,7 +128,7 @@ Before enabling Data Deduplication, you must choose the [usage type](understand.
 > [!Important]  
 > If you are running a recommended workload, you can skip this section.
 
-* Data Deduplication's usage types give sensible defaults for recommended workloads, but they also provide a good starting point for all workloads. For workloads other than the recommended workloads, it is possible to modify [Data Deduplication's advanced settings](advanced-settings.md) to improve deduplication performance.
+* Data Deduplication's Usage Types give sensible defaults for recommended workloads, but they also provide a good starting point for all workloads. For workloads other than the recommended workloads, it is possible to modify [Data Deduplication's advanced settings](advanced-settings.md) to improve deduplication performance.
 * If your workload has high resource requirements on your server, the Data Deduplication jobs [should be scheduled to run during the expected idle times for that workload](advanced-settings.md#schedule-dedup-jobs). This is particularly important when running deduplication on a hyper-converged host, because running Data Deduplication during expected working hours can starve VMs.
 * If your workload does not have high resource requirements, or if it is more important that optimization jobs complete than workload requests be served, [the memory, CPU, and priority of the Data Deduplication jobs can be adjusted](advanced-settings.md#modifying-job-schedules).
 
@@ -140,7 +140,7 @@ Aside from workloads that are [known not to interoperate with Data Deduplication
 In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a deduplicated volume for a high-churn workload was 1-2 TB, and the absolute maximum recommended size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, see [What's new in Data Deduplication](whats-new.md#large-volume-support).
 
 **Do I need to modify the schedule or other Data Deduplication settings for recommended workloads?**  
-No, the provided [usage types](understand.md#usage-type) were created to provide reasonable defaults for recommended workloads.
+No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for recommended workloads.
 
 **What are the memory requirements for Data Deduplication?**  
 At a minimum, Data Deduplication should have 300 MB + 50 MB for each TB of logical data. For instance, if you are optimizing a 10 TB volume, you would need a minimum of 800 MB of memory allocated for deduplication (`300 MB + 50 MB * 10 = 300 MB + 500 MB = 800 MB`). While Data Deduplication can optimize a volume with this low amount of memory, having such constrained resources will slow down Data Deduplication's jobs.
