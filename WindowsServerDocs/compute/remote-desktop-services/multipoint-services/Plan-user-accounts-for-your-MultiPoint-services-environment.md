@@ -3,13 +3,13 @@ title: Plan user accounts for your MultiPoint Services environment
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d47be540-e891-47bd-85da-6df4bbf93b2f
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ---

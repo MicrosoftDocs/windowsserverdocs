@@ -3,13 +3,13 @@ title: Collect hardware and device drivers needed for the installation
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cf5fdbe-b871-4360-b003-d65ac43b491e
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016

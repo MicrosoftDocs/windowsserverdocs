@@ -3,13 +3,13 @@ title: MultiPoint Services Site Planning
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ---

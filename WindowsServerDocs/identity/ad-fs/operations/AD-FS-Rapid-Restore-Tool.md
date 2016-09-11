@@ -3,7 +3,7 @@ title: AD FS Rapid Restore Tool
 description:
 author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -12,7 +12,7 @@ ms.author: billmath
 ---
 # AD FS Rapid Restore Tool
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
@@ -37,9 +37,13 @@ The tool backs up the following AD FS configuration
 - A list of the custom authentication providers, attribute stores, and local claims provider trusts that are installed.
 
 ## How to use the tool
-First, download and install the MSI to your AD FS server.  
+First, [download](http://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
 From a PowerShell prompt, import-module ADFSRapidRecreationTool.dll
+
+
+>[!NOTE] 
+>If you are using the Windows Integrated Database (WID), then this tool needs to be run on the primary AD FS server.  You can use the `Get-ADFSSyncProperties` PowerShell cmdlet to determine whether or not the server you are on is the primary server.
 
 ### System Requirements
 
@@ -106,8 +110,12 @@ For the file system to be used, a storage path must be given. In that directory,
 ## Restore from backup
 To apply a configuration created using Backup-ADFS to a new AD FS installation, use the Restore-ADFS cmdlet.
 
-This cmdlet creates a new ADFS farm using the cmdlet Install-AdfsFarm and restores the ADFS configuration, database, certificates, etc.  If the ADFS role has not been installed on the server, the cmdlet will install it.  The cmdlet checks the restore location for existing backups and prompts the user to choose an appropriate backup based on the date/time it was taken and any backup comment that the user might have attached to the backup. If there are multiple ADFS configurations with different federation service names, then the user is prompted to first choose the appropriate ADFS configuration.
+This cmdlet creates a new AD FS farm using the cmdlet `Install-AdfsFarm` and restores the AD FS configuration, database, certificates, etc.  If the AD FS role has not been installed on the server, the cmdlet will install it.  The cmdlet checks the restore location for existing backups and prompts the user to choose an appropriate backup based on the date/time it was taken and any backup comment that the user might have attached to the backup. If there are multiple AD FS configurations with different federation service names, then the user is prompted to first choose the appropriate AD FS configuration.
 The user has to be both local and domain admin to run this cmdlet.
+
+
+>[!NOTE] 
+>Before using the AD FS Rapid Recovery Tool, ensure that the server is joined to the domain prior to restoring the backup. 
 
 The cmdlet takes the following parameters: 
 

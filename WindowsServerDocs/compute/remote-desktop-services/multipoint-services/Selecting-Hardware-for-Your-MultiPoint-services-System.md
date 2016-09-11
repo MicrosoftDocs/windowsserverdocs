@@ -3,13 +3,13 @@ title: Selecting Hardware for Your MultiPoint Services System
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ---

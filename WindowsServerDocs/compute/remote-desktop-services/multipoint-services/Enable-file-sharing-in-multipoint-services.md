@@ -3,13 +3,14 @@ title: Enable file sharing
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 508ad056-8e0c-4d59-a4fa-05775a54125d
-author: evas    
+author: evaseydl
+ms.author: evas    
 manager: Scottman
 ---
 # Enable file sharing in MultiPoint Services

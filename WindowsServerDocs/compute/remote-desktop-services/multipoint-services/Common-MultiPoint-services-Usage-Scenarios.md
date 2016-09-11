@@ -3,13 +3,13 @@ title: Common MultiPoint Services Usage Scenarios
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9aefaf1b-3ba2-4f41-9068-9629a28157ad
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016

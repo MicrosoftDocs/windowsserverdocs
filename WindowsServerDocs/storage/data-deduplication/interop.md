@@ -1,17 +1,17 @@
 ---
-title:"Data Deduplication Interoperability"  
-description:""  
-author:"wmgries"  
-ms.author:"wgries"   
-manager:"eldenc"  
-ms.date:"08/19/2016"   
-ms.topic:"get-started-article"  
-ms.prod:"windows-server-threshold"  
-ms.service:"na"  
+title: Data Deduplication Interoperability
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
 ms.technology:
-- techgroup-storage
-- dedup
----
+  - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: article
+author: wmgries
+manager: eldenc
+ms.author: wgries
+--- 
 
 # Data Deduplication Interoperability
 > Applies to Windows Server 2016
@@ -22,10 +22,10 @@ Accessing data over the network can be optimized by enabling [BranchCache](../..
 
 ### <a id="supported-clusters"></a>Failover Clusters
 [Failover Clustering](../../failover-clustering/failover-clustering) is fully supported, and provided that every node in the cluster has the [Data Deduplication feature installed](install-enable.md#install-dedup), deduplicated volumes will failover gracefully. Other important notes: 
-* [Manually started Dedup jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
+* [Manually started Data Deduplication jobs](run.md#running-dedup-jobs-manually) must be run on the Owner node for the Cluster Shared Volume.
 * Deduplication schedules are managed by using the task scheduler and when a cluster is formed, the schedule information is put into the cluster scheduler so that if a deduplicated volume is taken over by another node, the scheduled job will be applied on the next scheduled interval.
-* Dedup fully interoperates with the [Cluster OS Rolling Upgrade](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
-* Dedup is fully supported on [Storage Spaces Direct (S2D)](../storage-spaces-direct/overview.md) NTFS-formatted volumes (mirror or parity). Dedup is not supported on Fused Volumes (also known as "Multi-Resilient Volumes"). See [Dedup on ReFS](interop.md#unsupported-refs) for more information.
+* Data Deduplication fully interoperates with the [Cluster OS Rolling Upgrade](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) feature.
+* Data Deduplication is fully supported on [Storage Spaces Direct](../storage-spaces-direct/overview.md) NTFS-formatted volumes (mirror or parity). Deduplication isn't supported on volumes with multiple tiers, see [Data Deduplication on ReFS](interop.md#unsupported-refs) for more information.
 
 ### <a id="supported-dfsr"></a>DFS Replication
 Data Deduplication works fine with Distributed File System (DFS) Replication. Optimizing or unoptimizing a file will not trigger a replication because the file does not change. DFS Replication uses Remote Differential Compression (RDC), not the chunks in the chunk store, for over-the-wire savings. The files on the replica can also be optimized by using deduplication if the replica is using Data Deduplication.
@@ -33,7 +33,7 @@ Data Deduplication works fine with Distributed File System (DFS) Replication. Op
 ### <a id="supported-quotas"></a>Quotas
 Creating a hard quota on a volume root folder that also has deduplication enabled is not supported. When a hard quota is present on a volume root, the actual free space on the volume and the quota restricted space on the volume are not the same. This may cause deduplication optimization jobs to fail.
 
-Creating a soft quota on a volume root that has deduplication enabled is supported. When FSRM quotas encounter a deduplicated file, File Server Resource Manager accounts for it based on the file’s logical size. Quota usage (including any quota thresholds) does not change when a file is processed by deduplication. All other FSRM quota functionality, including volume-root soft quotas and quotas on subfolders, work normally when using deduplication.
+Creating a soft quota on a volume root that has deduplication enabled is supported. When quota encounter a deduplicated file, it accounts for it based on the file’s logical size. Quota usage (including any quota thresholds) does not change when a file is processed by deduplication. All other quota functionality, including volume-root soft quotas and quotas on subfolders, work normally when using deduplication.
 
 ### <a id="supported-windows-server-backup"></a>Windows Server Backup
 Windows Server Backup has the ability to back up an optimized volume “as-is” (that is, without removing deduplicated data). The following steps show how to back up a volume and how to restore a volume or selected files from a volume:
@@ -68,10 +68,10 @@ Windows Server Backup has the ability to back up an optimized volume “as-is”
 
 ## <a id="unsupported"></a>Unsupported
 ### <a id="unsupported-refs"></a>ReFS
-Dedup on ReFS-formatted volumes is not supported in Windows Server 2016. This includes on "Fused Volumes" (also known as "Multi-Resilient Volumes") that take advantage of ReFS tiering to offer the benefits of both Mirror and Parity. 
+Data Deduplication on ReFS-formatted volumes is not supported in Windows Server 2016.
 
 ### <a id="unsupported-windows-search"></a>Windows Search
 Windows Search unfortunately doesn’t support Data Deduplication. Because Data Deduplication uses reparse points, which Windows Search can’t index, Windows Search skips all deduplicated files, excluding them from the index. As a result, search results might be incomplete for deduplicated volumes.
 
 ### <a id="unsupported-robocopy"></a>Robocopy
-Running Robocopy with Dedup is not recommended because certain Robocopy commands can corrupt the Dedup Chunk Store. The Dedup Chunk Store is stored in the System Volume Information folder for a Volume. If the folder is deleted, the optimized files (reparse points) that are copied from the source volume become corrupted because the data chunks are not copied to the destination volume.  
+Running Robocopy with Data Deduplication is not recommended because certain Robocopy commands can corrupt the Chunk Store. The Chunk Store is stored in the System Volume Information folder for a Volume. If the folder is deleted, the optimized files (reparse points) that are copied from the source volume become corrupted because the data chunks are not copied to the destination volume.  

@@ -1,64 +1,67 @@
 ---
-title:"Installing and Enabling Data Deduplication"  
-description:"Learn how to install the Data Deduplication (Dedup) feature, evaluate workloads for Dedup, and enable Dedup on targeted volumes."  
-author:"wmgries"  
-ms.author:"wgries"   
-manager:"eldenc"  
-ms.date:"08/19/2016"   
-ms.topic:"get-started-article"  
-ms.prod:"windows-server-threshold"  
-ms.service:"na"  
+title: Installing and enabling Data Deduplication
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
 ms.technology:
-- techgroup-storage
-- dedup
----
+  - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: article
+author: wmgries
+manager: eldenc
+ms.author: wgries
+--- 
 
-# Installing and Enabling Data Deduplication
+# Installing and enabling Data Deduplication
 > Applies to Windows Server 2016
 
-This document explains how to install the [Data Deduplication](overview.md) (commonly referred to as Dedup) feature, evaluate workloads for deduplication, and enable Dedup on targeted volumes.
+This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
 
-## <a id="install-dedup"></a>Install the Data Deduplication feature
-### <a id="install-dedup-via-server-manager"></a>To install the Data Deduplication feature on the server using Server Manager
-1. From the Add Roles and Feature Wizard, under Server Roles, select the **Data Deduplication** check box.  
-![Install Dedup via Server Manager: Select Dedup from Server Roles](media/install-dedup-via-server-manager-1.png)
+## <a id="install-dedup"></a>Install Data Deduplication
+### <a id="install-dedup-via-server-manager"></a>To install Data Deduplication using Server Manager
+1. From the Add Roles and Feature Wizard, under Server Roles, select the **Data Deduplication** checkbox.  
+![Install Data Deduplication via Server Manager: Select Data Deduplication from Server Roles](media/install-dedup-via-server-manager-1.png)
 2. Click **Next** until the **Install** button is active, and then click **Install**.  
-![Install Dedup via Server Manager: Click Install](media/install-dedup-via-server-manager-2.png) 
+![Install Data Deduplication via Server Manager: Click Install](media/install-dedup-via-server-manager-2.png) 
 
-### <a id="install-dedup-via-powershell"></a>To install the Data Deduplication feature on the server using PowerShell
-#### On Full and Core versions of Windows Server
-1. Run the following PowerShell command as an administrator:  
+### <a id="install-dedup-via-powershell"></a>To install the Data Deduplication using PowerShell
+To install Data Deduplication, run the following PowerShell command as an administrator:  
 `Install-WindowsFeature -Name FS-Data-Deduplication`
 
-#### <a id="install-dedup-on-nano-server"></a>On Nano Server
+To install Data Deduplication in a Nano Server installation:
+
 1. Create a Nano Server installation with the 'Storage' installed per the [Getting Started with Nano Server](../../compute/nano-server/getting-started-with-nano-server.md#BKMK_CreateImage) guide.
-2. From a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/en-us/download/details.aspx?id=45520) (RSAT) installed (or from a Full or Core Windows Server), install the Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
+2. From a server running Windows Server 2016 in any mode other than Nano Server or a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
 `Install-WindowsFeature -ComputerName <Nano-Server-Name> -Name FS-Data-Deduplication`  
 &nbsp;  
 **-- OR --**  
 &nbsp;  
-Remote into the Nano Server instance with PowerShell remoting and using dism to install Dedup:  
+Remote into the Nano Server instance with PowerShell remoting and using dism to install Data Deduplication:  
 `Enter-PSSession -ComputerName MyNanoServer`  
 `dism /online /enable-feature /featurename:dedup-core /all`
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
-### <a id="enable-dedup-candidate-workloads"></a>Determine which workloads are candidates for Dedup
-Dedup can be very effective in minimizing the costs of a server application's data consumption by reducing the amount of disk space consumed by redundant data. Before enabling Dedup, it is important that you first understand if your server application, or 'workload', is an '**Always**' workload or a '**Sometimes**' workload. Understanding the characteristics of your workload will help you get the maximum optimization and performance out of your storage. 
+### <a id="enable-dedup-candidate-workloads"></a>Determine which workloads are candidates for Data Deduplication
+Data Deduplication can be very effective in minimizing the costs of a server application's data consumption by reducing the amount of disk space consumed by redundant data. Before enabling deduplication, it is important that you first understand the characteristics of your workload to ensure that you get the maximum performance out of your storage. There are two classes of workloads to consider:
 
-* '**Always**' workloads have been proven to have both datasets which benefit highly from Dedup and resource consumption patterns which are compatible with Dedup's post-processing model. Always [enable Dedup](install-enable.md#enable-dedup-lights-on) on volumes serving the following workloads:
+* **Recommended workloads** that have been proven to have both datasets that benefit highly from deduplication and have resource consumption patterns that are compatible with Data Deduplication's post-processing model. You should should always [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) on these workloads:
 	* General purpose file servers (GPFS) serving shares like team shares, user home folders, Work Folders, and software development shares.
 	* Virtualized Desktop Infrastructure (VDI) servers.
-	* Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx).
-* '**Sometimes**' workloads are other workloads which may benefit from enabling Dedup. Not every workload in every circumstance is a good candidate for Dedup. 'Sometimes' workloads fitness for Dedup should be evaluated before enabling Dedup. 'Sometimes' workloads includes workloads like:
+	* Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx).
+* Workloads that might benefit from deduplication, but aren't always good candidates for deduplication. For example, the following workloads could work well with deduplication, but you should evaluate them with deduplication first:
 	* General Purpose Hyper-V hosts
 	* SQL Servers
 	* Line-of-business (LOB) servers
 
-### <a id="enable-dedup-evaluating-sometimes-workloads"></a>Evaluating 'Sometimes' workloads
-In order to determine a 'Sometimes' workload's fitness for Dedup, there are several questions that should be answered. Whether or not the answers to these questions preclude you from enabling Dedup for a '**Sometimes**' workload is left up to you, the workload owner. It may be advisable to pilot Dedup on a test dataset for your workload to see how it performs. 
+### <a id="enable-dedup-evaluating-sometimes-workloads"></a>Evaluating workloads for Data Deduplication
+> [!Important]  
+> If you are running a **Recommended workload**, you can skip this section and go [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) for your workload.
 
-1. **Does my workload's dataset has enough duplication within it to benefit from enabling Dedup?**  
-	Before enabling Dedup for a 'Sometimes' workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. This tool can be found under `C:\Windows\System32\DDPEval.exe` when [Dedup has been installed](install-enable.md#install-dedup). DDPEval can evaluate the potential for optimization against directly connected volumes (including local disks or Cluster Shared Volumes) and mapped or unmapped network shares.  
+To determine whether a workload works well with deduplication, answer the following questions. If you're unsure about a workload, consider doing a pilot deployment of Data Deduplication on a test dataset for your workload to see how it performs. 
+
+1. **Does my workload's dataset have enough duplication to benefit from enabling deduplication?**  
+	Before enabling Data Deduplication for a workload, investigate how much duplication your workload's dataset has by using the Data Deduplication Savings Evaluation tool, or DDPEval. After installing Data Deduplication, you can find this tool at `C:\Windows\System32\DDPEval.exe`. DDPEval can evaluate the potential for optimization against directly connected volumes (including local disks or Cluster Shared Volumes) and mapped or unmapped network shares.  
 	&nbsp;   
 	Running DDPEval.exe will return an output similar to the following:  
 	&nbsp;  
@@ -79,26 +82,24 @@ In order to determine a 'Sometimes' workload's fitness for Dedup, there are seve
 	`Files excluded by error: 0`  
 
 2. **What do my workload's IO patterns to its dataset look like? What performance do I have for my workload?**  
-	Writes to a deduplicated volume always occur un-deduplicated as Dedup uses a post-processing model. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Dedup moves file content into the Dedup Chunk Store, and attempts to lay the Chunk Store out by file as much as possible, read operations are most performant when they are to sequential ranges of a file.  
-	&nbsp;  
+	Data Deduplication doesn't deduplicate writes in realtime - instead it does so later. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store, and attempts to lay the Chunk Store out by file as much as possible, read operations perform the best when they are to sequential ranges of a file.  
+	
 	Database-like workloads typically have more random-like read patterns than sequential read patterns because databases do not typically guarantee that the database layout will be optimal for all possible queries that may be run. Because the sections of the Chunk Store may exist all over the volume, accessing data ranges in the Chunk Store for database queries may introduce additional latency. High performance workloads are particularly sensitive to this extra latency, however, other database-like workloads may not be. 
 
 	> [!Note]  
-	> These concerns primarily apply to storage workloads on volumes made up of traditional rotational storage media (also known as Hard Disks drives, or HDDs). All flash storage infrastructure (also known as Solid State Disk drives, or SSDs), are less affected by random IO patterns because one of the properties of flash media is equal access time to all locations on the disk. Therefore, Dedup will not introduce the same amount of latency for reads to a workload's datasets stored on all flash media as it would on traditional rotational storage media.
+	> These concerns primarily apply to storage workloads on volumes made up of traditional rotational storage media (also known as Hard Disks drives, or HDDs). All flash storage infrastructure (also known as Solid State Disk drives, or SSDs), are less affected by random IO patterns because one of the properties of flash media is equal access time to all locations on the disk. Therefore, deduplication will not introduce the same amount of latency for reads to a workload's datasets stored on all flash media as it would on traditional rotational storage media.
 
 3. **What are the resource requirements of my workload on the server?**  
-	Because Dedup uses a post-processing model, Dedup needs to, periodically, have sufficient system resources to complete its optimization and other jobs (see more [here](understand.md#job-info)). This means that workloads that have idle time, such as in the evening or on weekends, are excellent candidates for Dedup, while workloads that run 24/7 may not be. Workloads that have no idle time may have still be good candidates for Dedup if the workload does not have high resource requirements on the server. 
+	Because Data Deduplication uses a post-processing model, Data Deduplication needs to, periodically, have sufficient system resources to complete its [optimization and other jobs](understand.md#job-info). This means that workloads that have idle time, such as in the evening or on weekends, are excellent candidates for deduplication, while workloads that run 24/7 may not be. Workloads that have no idle time may have still be good candidates for deduplication if the workload does not have high resource requirements on the server. 
 
-### <a id="enable-dedup-lights-on"></a>Enabling Dedup
-Before enabling Dedup, you must choose the [Usage Type](understand.md#usage-type) that most closely resembles your workload. There are three Usage Types included with Dedup:
+### <a id="enable-dedup-lights-on"></a>Enabling Data Deduplication
+Before enabling Data Deduplication, you must choose the [Usage Type](understand.md#usage-type) that most closely resembles your workload. There are three Usage Types included with Data Deduplication:
 
 * [Default](understand.md#usage-type-default) - tuned specifically for general purpose file server.
 * [Hyper-V](understand.md#usage-type-hyperv) - tuned specifically for Virtualized Desktop Intrastructure (VDI) servers.
-* [Backup](understand.md#usage-type-backup) - tuned specifically for Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/en-us/library/hh758173.aspx).
+* [Backup](understand.md#usage-type-backup) - tuned specifically for Virtualized Backup Applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx).
 
-These Usage Types give sensible defaults for '**Always**' workloads, and also provide a good starting point for '**Sometimes**' workloads. It is possible (and recommended for '**Sometimes** workloads) to modify [Dedup's advanced settings](advanced-settings.md) to improve Dedup's performance. It is not required to configure Dedup's settings for '**Always**' workloads.
-
-#### <a id="enable-dedup-via-server-manager"></a>Using Server Manager to enable Dedup
+#### <a id="enable-dedup-via-server-manager"></a>Using Server Manager to enable Data Deduplication
 1. Select **File and Storage Services** from the left-hand panel in Server Manager.  
 ![Click on File and Storage Services](media/enable-dedup-via-server-manager-1.PNG)
 2. Select **Volumes** from the **File and Storage Services** pop-out menu.  
@@ -107,32 +108,44 @@ These Usage Types give sensible defaults for '**Always**' workloads, and also pr
 ![Click on Configure Data Deduplication](media/enable-dedup-via-server-manager-3.png)
 4. Select the desired **Usage Type** from the drop-down box and select **OK**.  
 ![Select the desired Usage Type from the drop down](media/enable-dedup-via-server-manager-4.png)
+5. If you are running a **Recommended workload**, you're done! For other workloads, you should see the [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]  
-> More information on excluding file extensions or folders and selecting the deduplication schedule, including why you would want to do this, can be found here: [Configuring Data Deduplication](dedup-settings).
+> More information on excluding file extensions or folders and selecting the deduplication schedule, including why you would want to do this, can be found on the [Configuring Data Deduplication](advanced-settings.md) page.
 
-#### <a id="enable-dedup-via-powershell"></a>Using PowerShell to enable Dedup
+#### <a id="enable-dedup-via-powershell"></a>Using PowerShell to enable Data Deduplication
 1. With an administrator context, run the following PowerShell command:  
-`Enable-DedupVolume -Volume <Volume-Path> -UsageType <Selected-Usage-Type>`
+	```PowerShell
+	Enable-DedupVolume -Volume <Volume-Path> -UsageType <Selected-Usage-Type>
+	```
+
+2. If you are running a **Recommended workload**, you're done! For other workloads, see the [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]  
-> The Dedup PowerShell cmdlets, including `Enable-DedupVolume`, are remotable by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Dedup PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run `New-CimSession`. More information about creating CIM Sessions can be found here: [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx). 
+> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](https://technet.microsoft.com/library/hh848441.aspx), are remotable by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run [`New-CimSession`](https://technet.microsoft.com/library/jj590760.aspx). 
 
-#### <a id="enable-dedup-sometimes-considerations"></a>Special considerations for 'Sometimes' workloads
-* If the '**Sometimes**' workload have high resource requirements for on a server, Dedup jobs should be scheduled to run during the expected idle times for that workload. More information on how to configure the schedule for Dedup jobs can be found [here](advanced-settings.md#schedule-dedup-jobs). This is particularly important when running dedup on a hyper-converged host, as running Dedup during expected working hours can starve VMs.
-* If the '**Sometimes**' workload does not have high resource requirements, or if it is more important that Dedup optimization jobs complete than workload reqests be served, the memory, CPU, and priority of the Dedup jobs can be adjusted. More information on how to configure the memory, CPU, and prioritization of Dedup jobs can be found [here](jobs.md#change-dedup-jobs).
+#### <a id="enable-dedup-sometimes-considerations"></a>Other considerations
+> [!Important]  
+> If you are running a recommended workload, you can skip this section because you're done!
+
+* Data Deduplication's Usage Types give sensible defaults for recommended workloads, but also provide a good starting point for all workloads. For workloads other than the recommended workloads, it is possible to modify [Data Deduplication's advanced settings](advanced-settings.md) to improve deduplication performance.
+* If your workload has high resource requirements on your server, the Data Deduplication jobs [should be scheduled to run during the expected idle times for that workload](advanced-settings.md#schedule-dedup-jobs). This is particularly important when running deduplication on a hyper-converged host, as running Data Deduplication during expected working hours can starve VMs.
+* If your workload does not have high resource requirements, or if it is more important that optimization jobs complete than workload requests be served, [the memory, CPU, and priority of the Data Deduplication jobs can be adjusted](advanced-settings.md#modifying-job-schedules).
 
 ## <a id="faq"></a>Frequently Asked Questions (FAQ)
-**I want to run Dedup on the dataset for X workload... is this supported?**  
-Aside from workloads which are [known not to interop with Dedup](interop.md), we fully support the data integrity of Data Deduplication with any workload. Workloads that can be characterized as '**Sometimes**' workloads are not guaranteed to be as performant with Dedup enabled as they are without Dedup. It is left up to the workload owner, you, to determine what if any performance impacts Dedup has on your workload and if this is acceptable for this workload.
+**I want to run Data Deduplication on the dataset for X workload... is this supported?**  
+Aside from workloads that are [known not to interop with Data Deduplication](interop.md), we fully support the data integrity of Data Deduplication with any workload. **Recommended workloads** are supported by Microsoft for performance as well. The performance of other workloads depends greatly on what they are doing on your server: it is left up to the workload owner, you, to determine what if any performance impacts Data Deduplication has on your workload and if this is acceptable for this workload.
 
 **What are the volume sizing requirements for deduplicated volumes?**  
-In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a Dedup volume for a high churn workload was 1-2 TB, and the absolute maximum recommeneded size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, view [What's new in Data Deduplication](whats-new.md).
+In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a deduplicated volume for a high churn workload was 1-2 TB, and the absolute maximum recommeneded size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, view [What's new in Data Deduplication](whats-new.md#large-volume-support).
 
-**Do I need to modify the schedule or other Dedup settings for 'Always' workloads?**  
-No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for '**Always**' workloads.
+**Do I need to modify the schedule or other Data Deduplication settings for Recommended workloads?**  
+No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for **Recommended workloads**.
 
-**What are the memory requirements for Dedup?**  
-In the minimum case, Dedup should have 300 MB + 50 MB for each TB of logical data. For instance, if you are optimizing a 10 TB volume, you would need a minimum of 800 MB of memory allocated for Dedup (`300 MB + 50 MB * 10 = 300 MB + 500 MB = 800 MB`). While Dedup can optimize a volume with this low amount of memory, having such constrained resources will slow down Dedup's jobs. 
+**What are the memory requirements for Data Deduplication?**  
+In the minimum case, Data Deduplication should have 300 MB + 50 MB for each TB of logical data. For instance, if you are optimizing a 10 TB volume, you would need a minimum of 800 MB of memory allocated for deduplication (`300 MB + 50 MB * 10 = 300 MB + 500 MB = 800 MB`). While Data Deduplication can optimize a volume with this low amount of memory, having such constrained resources will slow down Data Deduplication's jobs. 
 
-In the optimal case, Dedup should have 1 GB of memory for every 1 TB of logical data. For instance, if you are optimizing a 10 TB volume, you would optimally need 10 GB of memory allocated for Dedup (`1 GB * 10`). This ratio will ensure the maximum performance for Dedup's jobs.
+In the optimal case, Data Deduplication should have 1 GB of memory for every 1 TB of logical data. For instance, if you are optimizing a 10 TB volume, you would optimally need 10 GB of memory allocated for Data Deduplication (`1 GB * 10`). This ratio will ensure the maximum performance for Data Deduplication's jobs.
+
+**What are the storage requirements for Data Deduplication?**  
+In Windows Server 2016, Data Deduplication can support volume sizes up to 64 TB. For more information, view [What's new in Data Deduplication](whats-new.md#large-volume-support).

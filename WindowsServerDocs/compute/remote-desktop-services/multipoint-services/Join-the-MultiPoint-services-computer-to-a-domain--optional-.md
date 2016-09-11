@@ -3,13 +3,13 @@ title: Join MultiPoint Services to a domain (optional)
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 623b7c21-dcbb-402e-8b5a-8e434cd225bd
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ---

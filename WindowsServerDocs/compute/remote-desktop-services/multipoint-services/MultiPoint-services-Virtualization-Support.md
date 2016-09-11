@@ -3,13 +3,13 @@ title: MultiPoint Services Virtualization Support
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3f0864b8-a087-4890-94ef-05efbd3c4241
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ---

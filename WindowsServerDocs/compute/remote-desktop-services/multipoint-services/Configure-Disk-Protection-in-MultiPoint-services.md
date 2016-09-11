@@ -3,13 +3,13 @@ title: Configure Disk Protection in MultiPoint Services
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd9bf5b9-e481-499b-9c15-7ee5a4f470c4
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016

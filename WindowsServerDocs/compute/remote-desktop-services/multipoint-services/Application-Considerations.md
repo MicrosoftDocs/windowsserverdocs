@@ -3,13 +3,13 @@ title: Application Considerations
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 445e6184-4e1e-4f10-ad3c-042f2a6c2f5f
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016

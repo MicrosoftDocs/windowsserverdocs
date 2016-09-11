@@ -73,4 +73,18 @@ Link  |Description
 Link  |Description  
 ---------|---------  
 [Datacenter Firewall Overview](https://technet.microsoft.com/library/dn920240.aspx)  |This overview discusses Datacenter Firewall, a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.   
-[What's New in DNS in Windows Server 2016](../networking/dns/What-s-New-in-DNS-Server.md)  |This overview topic provides brief descriptions of new capabilities in DNS along with links for more information.   
+[What's New in DNS in Windows Server 2016](../networking/dns/What-s-New-in-DNS-Server.md)  |This overview topic provides brief descriptions of new capabilities in DNS along with links for more information.
+
+## Credential Protection
+
+| Link | Description |
+| - | - |
+| [Protect derived domain credentials with Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard) | Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Credential Guard prevents these attacks by protecting NTLM password hashes and Kerberos Ticket Granting Tickets. |
+| [Protect Remote Desktop credentials with Remote Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard) | Remote Credential Guard helps you protect your credentials over a Remote Desktop connection by redirecting the Kerberos requests back to the device that's requesting the connection. It also provides single sign on experiences for Remote Desktop sessions. |
+
+## Code Integrity
+
+| Link | Description |
+| - | - |
+| [Device Guard Deployment Guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide) | Device Guard is a combination of enterprise-related hardware and software security features that, when configured together, will lock a device down so that it can only run trusted applications that you define in your code integrity policies. |
+   

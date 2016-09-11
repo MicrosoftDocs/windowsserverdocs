@@ -3,13 +3,13 @@ title: Predeployment Checklist
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87ea20e4-46cf-49e9-86bf-70be9098c8db
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ---

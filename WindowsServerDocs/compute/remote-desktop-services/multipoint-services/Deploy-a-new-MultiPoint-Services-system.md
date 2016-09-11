@@ -3,13 +3,14 @@ title: Deploy a new Windows MultiPoint Services system
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bac9d1b-bd21-4bc8-8f72-0dd9bb2b3f5d
-author: evas
+author: evaseydl
+ms.author: evas
 manager: scottman
 ---
 # Deploy a new Windows MultiPoint Services system

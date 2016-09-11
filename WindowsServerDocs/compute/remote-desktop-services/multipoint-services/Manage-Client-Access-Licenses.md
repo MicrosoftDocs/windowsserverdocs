@@ -2,7 +2,7 @@
 title: Manage Client Access Licenses
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

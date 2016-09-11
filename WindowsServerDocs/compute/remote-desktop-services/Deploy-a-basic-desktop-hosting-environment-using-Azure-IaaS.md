@@ -4,16 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 764d0c22-8800-485e-98a2-9e206d2544d4
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Deploy a basic desktop hosting environment using Azure IaaS
 

@@ -3,13 +3,13 @@ title: MultiPoint Stations
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
-author: evas
+author: evaseydl
 manager: scottman
 ms.author: evas
 ---

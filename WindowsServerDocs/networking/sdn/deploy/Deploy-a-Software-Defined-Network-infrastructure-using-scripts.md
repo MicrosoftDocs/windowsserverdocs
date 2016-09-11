@@ -42,26 +42,27 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
  `` New-VMSwitch "<switch name>" -NetAdapterName "<NetAdapter1>" [, "<NetAdapter2>" -EnableEmbeddedTeaming $True] -AllowManagementOS $True``  
  
  >[!NOTE] 
- >You  can skip steps 4 and 5 if you have separate Management NICs.
+ >You  can skip steps 3 and 4 if you have separate Management NICs.
 
- b. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to obtain the VLAN ID of the Management VLAN. Attach the Management vNIC of the newly created Virtual Switch to the Management VLAN. This step can be omitted if your environment does not use VLAN tags.  
+3. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to obtain the VLAN ID of the Management VLAN. Attach the Management vNIC of the newly created Virtual Switch to the Management VLAN. This step can be omitted if your environment does not use VLAN tags.  
  `` Set-VMNetworkAdapterIsolation -ManagementOS -IsolationMode Vlan -DefaultIsolationID <Management VLAN> -AllowUntaggedTraffic $True``  
  
- c. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to use either DHCP or static IP assignments to assign an IP address to the Management vNIC of the newly created vSwitch. The following example shows how to create a static IP address and assign it to the Management vNIC of the vSwitch:  
+4. Refer to the planning topic ([Plan a Software Defined Network Infrastructure](../../sdn/plan/../../sdn/plan/../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)) and work with your network administrator to use either DHCP or static IP assignments to assign an IP address to the Management vNIC of the newly created vSwitch. The following example shows how to create a static IP address and assign it to the Management vNIC of the vSwitch:  
  ``New-NetIPAddress -InterfaceAlias "vEthernet (<switch name>)" -IPAddress <IP> -DefaultGateway <Gateway IP> -AddressFamily IPv4 -PrefixLength <Length of Subnet Mask - for example: 24>``  
       
-3. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx) and a DNS Server.  
+5. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx) and a DNS Server.  
    
     a. Connect the Active Directory/DNS Server virtual machine to the Management VLAN:
     
-        ``Set-VMNetworkAdapterIsolation -VMName "<VM Name>" -Access -VlanId <Management VLAN> -AllowUntaggedTraffic $True``  
+            Set-VMNetworkAdapterIsolation -VMName "<VM Name>" -Access -VlanId <Management VLAN> -AllowUntaggedTraffic $True  
    
    b. Install Active Directory Domain Services and DNS.  
       >[!NOTE]
       >The network controller supports both Kerberos and X.509 certificates for authentication. This guide uses both authentication mechanisms for different purposes (although only one is required).  
         
-4. Join all Hyper-V hosts to the domain. Ensure the DNS server entry for the network adapter that has an IP address assigned to the Management network points to a DNS server that can resolve the domain name. For example:  
-``Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<switch name>)" -ServerAddresses <DNS Server IP>``  
+6. Join all Hyper-V hosts to the domain. Ensure the DNS server entry for the network adapter that has an IP address assigned to the Management network points to a DNS server that can resolve the domain name. For example:
+
+        Set-DnsClientServerAddress -InterfaceAlias "vEthernet (<switch name>)" -ServerAddresses <DNS Server IP>  
    
    a. Right-click **Start**, click **System**, and then click **Change Settings**.  
    b. Click **Change**.  
@@ -134,25 +135,12 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
     ``SDNExpress\scripts\SDNExpressUndo.ps1 -ConfigurationDataFile FabricConfig.psd1 -Verbose``  
       
 #### Validation  
-Assuming that the SDN Express script ran to completion without reporting any errors, you can perform the following steps to ensure the fabric resources have been deployed correctly and are available for tenant deployment.  
-1. Ensure that both the NC Host Agent and SLB Host Agent is running on all Hyper-V hosts.  
-    ``Get-Service NCHostAgent``  
-    ``Get-Service SlbHostAgent``  
-2.  Test network connectivity (on the Management logical network) between all Network Controller node virtual machines and Hyper-V hosts using ping.  
-3.  Check that the NC Host Agent is connected to the network controller on TCP:6640.  
+Assuming that the SDN Express script ran to completion without reporting any errors, you can perform the following step to ensure the fabric resources have been deployed correctly and are available for tenant deployment.  
+
+- Use [diagnostic tools](../../sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md) to ensure there are no errors on any fabric resources in the network controller.  
       
-    ``netstat -anp tcp |findstr 6640``  
-      
-4. Ensure that the DIPs (Dynamic IPs) associated with all Hyper-V hosts that will be hosting load-balanced tenant workload virtual machines have Layer-3 IP connectivity to the Software Load Balancer Manager (SLBM) Virtual IP (VIP) address. The SLBM VIP is usually the first IP address in the VIP IP Pool range specified in the FabricConfig.psd file   
-5.  Use [diagnostic tools](../../sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md) to ensure there are no errors on any fabric resources in the network controller.  
-      
-    ``Debug-NetworkControllerConfigurationState -NcIpAddress <FQDN of Network Controller Rest Name>``  
-      
-6.  Check the BGP peering state to ensure that the SLB/MUX is peered to the Top-of-Rack (ToR) switch or RRAS virtual machine (the BGP peer). Run the following command from a network controller node virtual machine:  
-      
-    ``Debug-SlbConfigState``  
-      
-    Output from this command is saved at C:\Tools\SlbConfigState.txt. You can change this location with the ``-LogPath <Path>`` parameter.  
+    ``Debug-NetworkControllerConfigurationState -NetworkController <FQDN of Network Controller Rest Name>``  
+        
    
 ### Deploy a sample tenant workload with the software load balancer  
     
@@ -169,20 +157,14 @@ To validate that the tenant deployment was successful, do the following:
 1.	Log into the database tier virtual machine and try to ping the IP address of one of the web tier virtual machines (ensure Windows Firewall is turned off in web tier virtual machines).  
 2.	Check the network controller tenant resources for any errors. Run the following from any Hyper-V host with Layer-3 connectivity to the network controller:  
 	  
-	``Debug-NetworkControllerConfigurationState -NCIP <FQDN of Network Controller REST Name>``  
-	  
-3.	Validate policy has been received and persisted in the Network Controller Host Agent  
-	  
-	``ovsdb-client.exe dump tcp:127.0.0.1:6641 ms_vtep``  
-	  
-4.	Check that an IP address has been assigned for a Provider Address (PA) Host vNIC and the ethernet adapters for the PA Host vNIC.  
-	  
-	``ipconfig /allcompartments /all``   
-	  
-5.	Check PA connectivity between two hosts using ping. Obtain the compartment ID from the output of the previous command (for example: Compartment 3)  
-	  
-	``ping -c <compartment Id> <Remote Hyper-V Host PA IP Address>``  
-  
+	``Debug-NetworkControllerConfigurationState -NetworkController <FQDN of Network Controller REST Name>``
+3. To verify that the load balancer is running correctly, run the following from any Hyper-V host:
+    
+        wget <VIP IP address>/unique.htm -disablekeepalive -usebasicparsing
+   
+   where `<VIP IP address>` is the web tier VIP IP address you configured in the TenantConfig.psd1 file. Search for the `VIPIP` variable in TenantConfig.psd1.
+
+   Run this muliple times to see the load balancer switch between the available DIPs. You can also observe this behavior using a web browser. Browse to `<VIP IP address>/unique.htm`. Close the brower and open a new instance and browse again. You will see the blue page and the green page alternate, except when the browser caches the page before the cache times out.  
   
 ## Deploy a simulated tenant enterprise infrastructure  
   
