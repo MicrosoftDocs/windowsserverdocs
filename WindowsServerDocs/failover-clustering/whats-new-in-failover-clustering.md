@@ -12,7 +12,7 @@ ms.assetid: 52f5ef26-971f-4269-b373-169dd0100688
 author: kumudd
 ms.author: kumud
 ---
-# What's New in Failover Clustering in Windows Server
+# What's New in Failover Clustering in Windows Server 2016
 > Applies To: Windows Server 2016
 
 This topic explains the new and changed functionality in Failover Clustering in Windows Server 2016.  
@@ -158,5 +158,5 @@ Failover Cluster networks are no longer limited to a single NIC per subnet / net
 For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks.md).
 
 ##See Also  
-* [Storage](../../storage/overview.md)  
-* [What's New in Storage in Windows Server 2016](../../storage/whats-new.md)  
+* [Storage](../../storage/storage-overview.md)  
+* [What's New in Storage in Windows Server 2016](../../storage/whats-new-in-storage.md)  

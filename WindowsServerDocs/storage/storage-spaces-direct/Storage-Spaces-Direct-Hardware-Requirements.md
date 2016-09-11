@@ -35,7 +35,7 @@ Storage Spaces Direct in Windows Server 2016 supports use of locally connected d
 
 ## See Also  
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
--   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new.md)  
+-   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Health Service](../../failover-clustering/health-service/overview.md)  
 -   [Storage Quality of Service](../storage-qos/overview.md)  
 -   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)

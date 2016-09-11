@@ -76,17 +76,15 @@ The **disaggregated** deployment scenario has the Hyper-V servers (compute compo
 
 The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on the local CSVs and does not implement a Scale-Out File Server. This allows for scaling Hyper-V compute clusters and storage together and removes requirement of configuring file server access and permissions.  Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. For step-by-step instructions about building a hyper-converged solution with Storage Spaces Direct, see [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md).   
 
-
 ## Related Topics  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 -   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 
-
 ## See Also  
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
--   [What's New in Failover Clustering in Windows Server](../failover-clustering/whats-new.md)  
+-   [What's New in Failover Clustering in Windows Server](../failover-clustering/whats-new-failover-clustering.md)  
 -   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
 -   [Storage Quality of Service](../storage-qos/overview.md)

@@ -97,6 +97,6 @@ For more information on Fault Domains, see [Fault Domains in Windows Server 2016
 ## See Also  
 -   [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 -   [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx) (blog)  
--   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-failover-clustering-windows-server.md)  
+-   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-failover-clustering.md)  
 -   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
 -   [Storage Quality of Service](../storage-qos/overview.md)  
