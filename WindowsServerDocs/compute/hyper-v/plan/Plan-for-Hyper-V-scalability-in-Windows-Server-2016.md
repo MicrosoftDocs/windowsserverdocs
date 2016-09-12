@@ -30,7 +30,7 @@ These maximums apply to each virtual machine. Not all components are available i
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
 |Checkpoints|50|The actual number may be lower, depending on the available storage. Each checkpoint is stored as an .avhd file that uses physical storage.|  
-|Memory|16 TB|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
+|Memory|12 TB|Review the requirements for the specific operating system to determine the minimum and recommended amounts.|  
 |Serial (COM) ports|2|None.|  
 |Size of physical disks attached directly to a virtual machine|Varies|Maximum size is determined by the guest operating system.|  
 |Virtual Fibre Channel adapters|4|As a best practice, we recommended that you connect each virtual Fibre Channel Adapter to a different virtual SAN.|  
