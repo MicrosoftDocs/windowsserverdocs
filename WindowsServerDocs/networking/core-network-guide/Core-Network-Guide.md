@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - techgroup-networking
+  - networking
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
+ms.author: jamesmci
 author: jamesmci
 ---
 # Core Network Guide

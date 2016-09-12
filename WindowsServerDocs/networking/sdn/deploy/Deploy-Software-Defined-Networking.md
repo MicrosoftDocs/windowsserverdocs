@@ -6,10 +6,11 @@ ms.reviewer: na
 ms.service: virtual-network
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eeaef968-a4f7-45fd-a242-90edfff963f8
+ms.author: vhorne
 author: vhorne
 ---
 # Deploy Software Defined Networking
