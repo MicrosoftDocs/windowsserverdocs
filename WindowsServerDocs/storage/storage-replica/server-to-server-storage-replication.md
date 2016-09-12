@@ -339,12 +339,12 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
  > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be permanently unavailable.  
 
 ## Related Topics  
--   [Storage Replica Overview](overview.md)  
--   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
--   [Cluster to Cluster Storage Replication](cluster-to-cluster.md)
--   [Storage Replica: Known Issues](known-issues.md)  
--   [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
+- [Storage Replica Overview](storage-replica-overview.md)  
+- [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+- [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
+- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
 
 ## See Also  
--   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
--   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  
+- [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+- [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

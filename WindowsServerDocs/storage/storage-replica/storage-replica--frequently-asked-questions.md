@@ -189,25 +189,16 @@ To remove the bandwidth limit, use:
 
     Remove-SmbBandwidthLimit -Category StorageReplication
 
-
-
-
-
-
 ## <a name="FAQ14"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at the Microsoft TechNet forums: [https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation.  
 
-
-
-
-
 ## Related Topics  
--   [Storage Replica Overview](overview.md) 
--   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
--   [Server to Server Storage Replication](server-to-server.md)  
--   [Cluster to Cluster Storage Replication](cluster-to-cluster.md)  
--   [Storage Replica: Known Issues](known-issues.md)  
+- [Storage Replica Overview](storage-replica-overview.md) 
+- [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+- [Server to Server Storage Replication](server-to-server-storage-replication.md)  
+- [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
+- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
 
 ## See Also  
--   [Storage](../overview.md)  
--   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  
+- [Storage Overview](../storage-overview.md)  
+- [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

@@ -783,7 +783,7 @@
 #### [Storage Replica Overview](storage/storage-replica/Storage-Replica-Overview.md)
 #### [Stretch Cluster Replication Using Shared Storage](storage/storage-replica/stretch-cluster-replication-using-shared-storage.md)
 #### [Server to Server Storage Replication](storage/storage-replica/server-to-server.md)
-#### [Cluster to Cluster Storage Replication](storage/storage-replica/cluster-to-cluster.md)
+#### [Cluster to Cluster Storage Replication](storage/storage-replica/cluster-to-cluster-storage-replication.md)
 #### [Storage Replica: Known Issues](storage/storage-replica/known-issues.md)
 #### [Storage Replica: Frequently Asked Questions](storage/storage-replica/frequently-asked-questions.md)
 ### [Storage Quality of Service](storage/storage-qos/storage-qos-overview.md)

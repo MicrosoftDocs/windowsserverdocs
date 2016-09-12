@@ -911,6 +911,6 @@ In Windows Server 2016 Technical Preview 5 the Storage QoS Policy type names hav
     If you have a flow that is hitting a maximum of a policy and you change the policy to either make it higher or lower, and then you immediately determine the latency/IOPS/BandWidth of the flows using the PowerShell cmdlets, it will take up to 5 minutes to see the full effects of the policy change on the flows.  The new limits will be in effect within a few seconds, but the **Get-StorgeQoSFlow** PowerShell cmdlet uses an average of each counter using a 5 minute sliding window.  Otherwise, if it was showing a current value and you ran the PowerShell cmdlet multiple times in a row, you may see vastly different values because values for IOPS and latencies can fluctuate significantly from one second to another.  
 
 ## See Also  
--   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
--   [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
--   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  
+- [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+- [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
+- [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

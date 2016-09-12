@@ -181,11 +181,11 @@ When you attempt to recreate replication using PowerShell, you receive error:
 This is caused by a known issue in Windows Server 2016 Technical Preview 5. As a workaround, prior to upgrading the cluster, remove all replication partnerships and groups. You can use Remove-SRPartnership and Remove-SRGroup to perform these tasks, or use Failover Cluster manager. 
 
 ### Related Topics  
-- [Storage Replica in Windows Server 2016](overview.md)  
+- [Storage Replica in Windows Server 2016](storage-replica-overview.md)  
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
-- [Server to Server Storage Replication](server-to-server.md)  
-- [Cluster to Cluster Storage Replication](cluster-to-cluster.md)  
-- [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
+- [Server to Server Storage Replication](server-to-server-storage-replication.md)  
+- [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
 
 ## See Also  
--  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces-direct/overview.md)  
+-  [Storage Spaces Direct in Windows Server 2016 Technical Preview](../storage-spaces/storage-spaces-direct-overview.md)  

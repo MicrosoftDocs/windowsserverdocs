@@ -197,13 +197,12 @@ This guide frequently uses the following terms:
 -   A replication group is the organization of volumes and their replication configuration within a partnership, on a per server basis. A group may contain one or more volumes.  
 
 ## Related Topics  
--   [Storage Replica in Windows Server 2016](overview.md)  
--   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
--   [Server to Server Storage Replication](server-to-server.md)  
--   [Cluster to Cluster Storage Replication](cluster-to-cluster.md)  
--   [Storage Replica: Known Issues](known-issues.md)  
--   [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
+- [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
+- [Server to Server Storage Replication](server-to-server-storage-replication.md)  
+- [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)  
+- [Storage Replica: Known Issues](storage-replica--known-issues.md)  
+- [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
 
 ## See Also  
--   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
--   [Storage Spaces Direct in Windows Server 2016](../storage-spaces-direct/overview.md)  
+- [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+- [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

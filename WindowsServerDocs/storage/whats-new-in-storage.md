@@ -30,7 +30,7 @@ Storage Spaces Direct enables building highly available and scalable storage usi
 Storage Spaces Direct enables service providers and enterprises to use industry standard servers with local storage to build highly available and scalable software defined storage. Using servers with local storage decreases complexity, increases scalability, and enables use of storage devices that were not previously possible, such as SATA solid state disks to lower cost of flash storage, or NVMe solid state disks for better performance.  
 
 Storage Spaces Direct removes the need for a shared SAS fabric, simplifying deployment and configuration. Instead it uses the network as a storage fabric, leveraging SMB3 and SMB Direct (RDMA) for high-speed, low-latency CPU efficient storage. To scale out, simply add more servers to increase storage capacity and I/O performance  
-For more information, see the [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct/overview.md).  
+For more information, see the [Storage Spaces Direct in Windows Server 2016](storage-spaces/storage-spaces-direct-overview.md).  
 
 **What works differently?**  
 This capability is new in Windows Server 2016.  
