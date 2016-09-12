@@ -1,16 +1,16 @@
 ---
-title:"Storage Overview"  
-description:"Learn about Storage and file services in Windows Server 2016."  
-author:"kumudd"  
-ms.author:"kumud"  
-manager:"carmonm"  
-ms.date:"08/26/2016"  
-ms.topic:"get-started-article"  
-ms.prod:"windows-server-threshold"  
-ms.service:"na"  
-ms.assetid: a6222e80-6f6c-4fb3-a570-391fac106998  
-ms.technology:  
+title: Storage Overview
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology:
   - techgroup-storage
+ms.tgt_pltfrm: na
+ms.topic: article
+author: kumudd
+manager: carmonm
+ms.author: kumud
 ---
 # Storage Overview
 >Applies To: Windows Server 2016
