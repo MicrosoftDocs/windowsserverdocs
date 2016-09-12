@@ -75,7 +75,7 @@ You can now create storage QoS policies on a Scale-Out File Server and assign th
 **What works differently?**  
 This capability is new in Windows Server 2016. It was not possible to configure centralized policies for storage QoS in previous releases of Windows Server.  
 
-For more information, see [Storage Quality of Service](storage-qos/overview.md)
+For more information, see [Storage Quality of Service](storage-qos/storage-qos-overview.md)
 
 ## <a name="dedup"></a>Data Deduplication  
 | Functionality | New or Updated | Description |

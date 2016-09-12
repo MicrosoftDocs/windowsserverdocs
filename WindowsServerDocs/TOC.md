@@ -786,7 +786,7 @@
 #### [Cluster to Cluster Storage Replication](storage/storage-replica/cluster-to-cluster.md)
 #### [Storage Replica: Known Issues](storage/storage-replica/known-issues.md)
 #### [Storage Replica: Frequently Asked Questions](storage/storage-replica/frequently-asked-questions.md)
-### [Storage Quality of Service](storage/storage-qos/overview.md)
+### [Storage Quality of Service](storage/storage-qos/storage-qos-overview.md)
 ### [Health Service](storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md)
 ### [Fault Domains](storage/storage-spaces/fault-domains-windows-server-2016.md)
 ### [Storage-class Memory Health Management](storage/storage-spaces/Storage-class-memory-health.md)
