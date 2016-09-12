@@ -32,10 +32,11 @@ fsutil fsinfo [volumeinfo] <RootPath>
 |drives|Lists all drives in the computer.|
 |drivetype|Queries a drive and lists its type, for example CD-ROM drive.|
 |ntfsinfo|Lists NTFS specific volume information for the specified volume, such as the number of sectors, total clusters, free clusters, and the start and end of the MFT Zone.|
+|sectorinfo|Lists information about the hardware's sector size and alignment.|
 |statistics|Lists file system statistics for the specified volume, such as metadata, log file, and MFT reads and writes.|
 |volumeinfo|Lists information for the specified volume, such as the file system, and whether the volume supports case-sensitive file names, unicode in file names, disk quotas, or is a DirectAccess (DAX) volume.|
-|<VolumePath>|Specifies the drive letter (followed by a colon).|
-|<RootPathname>|Specifies the drive letter (followed by a colon) of the root drive.|
+|<"VolumePath">|Specifies the drive letter (followed by a colon).|
+|<"RootPathname">|Specifies the drive letter (followed by a colon) of the root drive.|
 
 ## <a name="BKMK_examples"></a>Examples
 To list all of the drives in the computer, type:
@@ -104,6 +105,25 @@ Total Clusters :            0x000000000021d409
 .
 .
 Mft Zone End   :            0x0000000000004700       
+```
+
+To query the file system's underlying hardware for sector information, type:
+
+```
+fsinfo sectorinfo d:
+```
+
+Output similar to the following displays:
+
+```
+D:\>fsutil fsinfo sectorinfo d:
+LogicalBytesPerSector :                                 4096
+PhysicalBytesPerSectorForAtomicity :                    4096
+.
+.
+.
+Trim Not Supported
+DAX capable
 ```
 
 To query the file system statistics for drive E, type:
