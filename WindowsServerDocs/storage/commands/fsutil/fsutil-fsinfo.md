@@ -33,7 +33,7 @@ fsutil fsinfo [volumeinfo] <RootPath>
 |drivetype|Queries a drive and lists its type, for example CD-ROM drive.|
 |ntfsinfo|Lists NTFS specific volume information for the specified volume, such as the number of sectors, total clusters, free clusters, and the start and end of the MFT Zone.|
 |statistics|Lists file system statistics for the specified volume, such as metadata, log file, and MFT reads and writes.|
-|volumeinfo|Lists information for the specified volume, such as the file system, and whether the volume supports case-sensitive file names, unicode in file names, or disk quotas.|
+|volumeinfo|Lists information for the specified volume, such as the file system, and whether the volume supports case-sensitive file names, unicode in file names, disk quotas, or is a DirectAccess (DAX) volume.|
 |<VolumePath>|Specifies the drive letter (followed by a colon).|
 |<RootPathname>|Specifies the drive letter (followed by a colon) of the root drive.|
 
@@ -84,7 +84,8 @@ File System Name : NTFS
 .
 .
 .
-Supports Named Streams       
+Supports Named Streams
+Is DAX Volume
 ```
 
 To query drive F for NTFS-specific volume information, type:
