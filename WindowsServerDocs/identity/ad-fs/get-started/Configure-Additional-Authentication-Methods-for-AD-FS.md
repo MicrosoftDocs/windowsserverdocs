@@ -19,7 +19,7 @@ In order to enable multi-factor authentication (MFA), you must select at least o
 > [!NOTE]
 > If you select Certificate Authentication, ensure that the smart card certificates have been provisioned securely and have pin requirements.
 
-|||
+
 |-|-|
 ||Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> - [Learn about Azure Multi-Factor Authentication.](http://aka.ms/ey6o9r)<br /> - [Manage identities for single-forest hybrid environments using cloud authentication.](http://aka.ms/g1jat8)<br /> - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications.](http://aka.ms/kt1bbm)|
 
