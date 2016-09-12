@@ -38,83 +38,11 @@ This has many practical applications, including:
 
 
 ### General Failover Clustering Content
-<table>
-  <thead>
-    <tr>
-      <th>Content Type</th>
-      <th>References</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Planning</td>
-      <td>
-        <ul>
-          <li><a href="https://technet.microsoft.com/en-us/library/jj612869(v=ws.11).aspx">Failover Clustering Hardware Requirements and Storage Options</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/jj134244(v=ws.11).aspx">Validate Hrdware for Failover Clustering</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/dn550728(v=ws.11).aspx">Network Recommendations for a Hyper-V Cluster</a></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Deployment</td>
-      <td>
-        <ul>
-          <li><a href="http://go.microsoft.com/fwlink/p/?LinkId=253342">Installing the Failover Clustering Feature and Tools</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/jj134244(v=ws.11).aspx">Validate Hardware for a Failover Cluster</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/dn466519(v=ws.11).aspx">Prestage Cluster Computer Objects in Active Directory Domain Services</a></li>
-          <li><a href="http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx">Creating a Failover Cluster</a></li>
-          <li><a href="https://technet.microsoft.com/library/jj134187">Deploy Hyper-V over SMB</a></li>
-          <li><a href="https://technet.microsoft.com/library/hh831359">Deploy a Scale-Out File Server</a></li>
-          <li><a href="https://technet.microsoft.com/library/hh848268">iSCSI Target Block Storage, How To</a></li>
-          <li><a href="https://technet.microsoft.com/library/jj556313.aspx">Deploy an Active Directory Detached Cluster</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/jj863389(v=ws.11).aspx">Using Guest Clustering for High Availability</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/dn265980(v=ws.11).aspx">Deploy a Guest Cluster using a Shared Virtual Hard Disk</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/hh831441(v=ws.11).aspx">Building Your Cloud Infrastructure: Scenario Overview</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Operations</td>
-      <td>
-        <ul>
-          <li><a href="https://technet.microsoft.com/en-us/library/jj612870(v=ws.11).aspx">Configure and Manage the Quorum in a Failover Cluster</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/jj612868(v=ws.11).aspx">Use Cluster Shared Volumes in a Failover Cluster</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/hh831694(v=ws.11).aspx">Cluster-Aware Updating Overview</a></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Tools and Settings</td>
-      <td>
-        <ul>
-          <li><a href="http://go.microsoft.com/fwlink/p/?LinkId=233200">Failover Clustering Windows PowerShell Cmdlets</a></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Community Resources</td>
-      <td>
-        <ul>
-          <li><a href="http://go.microsoft.com/fwlink/p/?LinkId=230641">High Availability (Clustering) Forum</a></li>
-          <li><a href="http://blogs.msdn.com/b/clustering/">Failover Clustering and Network Load Balancing Team Blog</a></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Related Technologies</td>
-      <td>
-        <ul>
-          <li><a href="https://technet.microsoft.com/en-us/library/hh831531(v=ws.11).aspx">Hyper-V Overview</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/hh831487(v=ws.11).aspx">File and Storage Services Overview</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/hh831739(v=ws.11).aspx">Storage Spaces Overview</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/hh831349(v=ws.11).aspx">Scale-Out File Server for Application Data Overview</a></li>
-          <li><a href="https://technet.microsoft.com/en-us/library/hh831698(v=ws.11).aspx">Network Load Balancing Overview</a></li>
-          <li><a href="https://www.microsoft.com/sqlserver/default.aspx">Microsoft SQL Server</a></li>
-          <li><a href="https://www.microsoft.com/server-cloud/">Microsoft Server and Cloud Platform</a></li>
-          <li><a href="https://technet.microsoft.com/systemcenter/vmm/default.aspx">System Center Virtual Machine Manager</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Content Type | References |
+|--------------|------------|
+| Planning | <ul><li>[Failover Clustering Hardware Requirements and Storage Options](https://technet.microsoft.com/library/jj612869.aspx)</li><li>[Validate Hardware for Failover Clustering](https://technet.microsoft.com/library/jj134244.aspx)</li><li>[Network Recommendations for a Hyper-V Cluster](https://technet.microsoft.com/library/dn550728.aspx)</li></ul> |
+| Deployment | <ul><li>[Installing the Failover Clustering Feature and Tools](http://go.microsoft.com/fwlink/p/?LinkId=253342)</li><li>[Validate Hardware for a Failover Cluster](https://technet.microsoft.com/library/jj134244.aspx)</li><li>[Prestage Cluster Computer Objects in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519.aspx)</li><li>[Creating a Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx)</li><li>[Deploy Hyper-V over SMB](https://technet.microsoft.com/library/jj134187)</li><li>[Deploy a Scale-Out File Server](https://technet.microsoft.com/library/hh831359)</li><li>[iSCSI Target Block Storage, How To](https://technet.microsoft.com/library/hh848268)</li><li>[Deploy an Active Directory Detached Cluster](https://technet.microsoft.com/library/jj556313.aspx)</li><li>[Using Guest Clustering for High Availability](https://technet.microsoft.com/library/jj863389.aspx)</li><li>[Deploy a Guest Cluster using a Shared Virtual Hard Disk](https://technet.microsoft.com/library/dn265980.aspx)</li><li>[Building Your Cloud Infrastructure: Scenario Overview](https://technet.microsoft.com/library/hh831441.aspx)</li></ul> |
+| Operations | <ul><li>[Configure and Manage the Quorum in a Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx)</li><li>[Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)</li><li>[Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)</li></ul> |
+| Tools and Settings | <ul><li>[Failover Clustering PowerShell Cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=233200)</li></ul> |
+| Community Resources | <ul><li>[High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)</li><li>[Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)</li></ul> |
+| Related Technologies | <ul><li>[Hyper-V Overview](https://technet.microsoft.com/library/hh831531.aspx)</li><li>[Storage Overview](../storage/storage-overview.md)</li><li>[Storage Spaces Overview](https://technet.microsoft.com/library/hh831739.aspx)</li><li>[Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx)</li><li>[Network Load Balancing Overview](https://technet.microsoft.com/library/hh831698.aspx)</li><li>[Microsoft SQL Server](https://www.microsoft.com/sqlserver/default.aspx)</li><li>[Microsoft Server and Cloud Platform](https://www.microsoft.com/server-cloud/)</li><li>[System Center Virtual Machine Manager](https://technet.microsoft.com/systemcenter/vmm/default.aspx)</li></ul> 
