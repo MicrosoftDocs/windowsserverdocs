@@ -4,16 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0bbef1b-6333-4f86-81bf-fd739387f551
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Host desktops and apps in Remote Desktop Services on Azure
 

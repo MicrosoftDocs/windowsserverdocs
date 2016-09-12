@@ -14,20 +14,7 @@ ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 caps.latest.revision: 12
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration
 This section provides information about migrating data and settings from the Source Server. Move settings and data to the Destination Server as follows:  
@@ -49,7 +36,7 @@ This section provides information about migrating data and settings from the Sou
   
 -   The **Client Computer Backup** folder cannot be migrated to the Destination Server. Before the server migration, make sure that all the client computers are healthy. After the server migration, it is recommended that you configure and start client computer backups to ensure that the data is backed up for all your important client computers.  
   
--   The **File History Backups** folder cannot be directly migrated to the Destination Server due to the folder structure and backup metadata changes in [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)]. However, it is possible to migrate the **File History Backups** folder for a specific user on a specific computer. To do so, you should locate the **Data** folder in the **File History Backups** folder for that user and computer, then copy that **Data** folder to the **File History Backups** folder on the Destination Server.  
+-   The **File History Backups** folder cannot be directly migrated to the Destination Server due to the folder structure and backup metadata changes in  Windows Server 2012 R2 Essentials. However, it is possible to migrate the **File History Backups** folder for a specific user on a specific computer. To do so, you should locate the **Data** folder in the **File History Backups** folder for that user and computer, then copy that **Data** folder to the **File History Backups** folder on the Destination Server.  
   
 #### To copy data from the Source Server to the Destination Server  
   
@@ -69,7 +56,7 @@ This section provides information about migrating data and settings from the Sou
   
     -   *<SharedDestinationFolderName\>* is the folder on the Destination Server to which the data will be copied  
   
-     For example,  `robocopy \\sourceserver\MyData “d:\ServerFolders\MyData” /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
+     For example,  `robocopy \\sourceserver\MyData “d:\ServerFolders\MyData�? /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
   
 3.  If you use Windows PowerShell, type the following command, and then press ENTER.  
   
@@ -101,7 +88,7 @@ This section provides information about migrating data and settings from the Sou
   
 #### To map user accounts to computers  
   
-1.  Open the [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] Dashboard.  
+1.  Open the  Windows Server 2012 R2 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   
@@ -124,4 +111,8 @@ This section provides information about migrating data and settings from the Sou
 ## Next steps  
  You have moved your settings and data to the Destination Server. Now go to [Step 5: Enable folder redirection on the Destination Server for Windows Server 2012 R2 Essentials migration](../Topic/Step%205:%20Enable%20folder%20redirection%20on%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

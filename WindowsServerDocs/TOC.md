@@ -402,6 +402,7 @@
 #### [Additional Resources_12](identity/Additional-Resources_12.md)
 ### [Active Directory Federation Services](identity/Active-Directory-Federation-Services.md)
 #### [Getting Started with AD FS](identity/ad-fs/Getting-Started-with-AD-FS.md)
+
 #### [Configure Additional Authentication Methods for AD FS](identity/ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md)
 #### [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 #### [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
@@ -429,6 +430,10 @@
 ##### [Configure Claim Rules](identity/ad-fs/operations/Configure-Claim-Rules.md)
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configuring Alternate Login ID](identity/ad-fs/operations/Configuring-Alternate-Login-ID.md)
+
+##### [Configure Authentication Policies](identity/ad-fs/operations/Configure-Authentication-Policies.md)
+##### [Configure AD FS Extranet Lockout](identity/ad-fs/operations/Configure-AD-FS-Extranet-Lockout.md)
+
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
 ##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
 ##### [Access Control Policies in AD FS](identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
@@ -539,6 +544,11 @@
 ####### [Configure Server Certificate Autoenrollment](networking/core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)
 ####### [Refresh Group Policy](networking/core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)
 ####### [Verify Server Enrollment of a Server Certificate](networking/core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)
+##### [Deploy Password-Based 802.1X Authenticated Wireless Access](networking/core-network-guide/cncg/wireless/1-deploy-8021X-wireless-access.md)
+###### [Wireless Access Deployment Overview](networking/core-network-guide/cncg/wireless/2-wireless-access-deploy-overview.md)
+###### [Wireless Access Deployment Process](networking/core-network-guide/cncg/wireless/3-wireless-access-deploy-process.md)
+###### [Wireless Access Deployment Planning](networking/core-network-guide/cncg/wireless/4-wireless-access-planning.md)
+###### [Wireless Access Deployment](networking/core-network-guide/cncg/wireless/5-wireless-access-deployment.md)
 ### [BranchCache](networking/branchcache/BranchCache.md)
 #### [BranchCache Network Shell and Windows PowerShell Commands](networking/branchcache/BranchCache-Network-Shell-and-Windows-PowerShell-Commands.md)
 #### [BranchCache Deployment Guide](networking/branchcache/deploy/BranchCache-Deployment-Guide.md)

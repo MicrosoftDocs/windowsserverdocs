@@ -15,25 +15,12 @@ ms.assetid: 5ecb1b4f-5041-4b76-842c-56479f7b4e68
 caps.latest.revision: 3
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Enable folder redirection on the Windows Server 2012 Essentials Destination Server3
 You can perform this task if folder redirection is enabled on the Source Server.  
   
- First, delete the old Folder Redirection Group Policy setting, and then use the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard to enable folder redirection on the Destination Server.  
+ First, delete the old Folder Redirection Group Policy setting, and then use the  Windows Server 2012 Essentials Dashboard to enable folder redirection on the Destination Server.  
   
 ### To delete the old Folder Redirection Group Policy setting  
   
@@ -49,7 +36,7 @@ You can perform this task if folder redirection is enabled on the Source Server.
   
 ### To enable folder redirection on the Destination Server  
   
-1.  On the Destination Server, open the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard.  
+1.  On the Destination Server, open the  Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **DEVICES**.  
   

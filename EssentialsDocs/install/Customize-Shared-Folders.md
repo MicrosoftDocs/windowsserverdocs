@@ -55,15 +55,15 @@ By default, the server folders are created on the largest data partition on Disk
   
     9. Set the value of this new key to **1**, and then click **OK**.  
   
-2.  Use the PostIC.cmd script to move the folders to a different location or to create additional folders. See the following example: [Example 1: Create a custom folder and move the default folders to a new location from PostIC.cmd by using Windows PowerShell](../install/Customize-Shared-Folders.md#BKMK_Example1).  
+2.  Use the PostIC.cmd script to move the folders to a different location or to create additional folders. See the following example: [Example 1: Create a custom folder and move the default folders to a new location from PostIC.cmd by using Windows PowerShell](Customize-Shared-Folders.md#BKMK_Example1).  
   
-3.  Use the Windows Server Solutions SDK to move the folders to a different location or to create additional folders. See the following example: [Example 2: Create a custom folder and move an existing folder by using the Windows Server Solutions SDK](../install/Customize-Shared-Folders.md#BKMK_Example2).  
+3.  Use the Windows Server Solutions SDK to move the folders to a different location or to create additional folders. See the following example: [Example 2: Create a custom folder and move an existing folder by using the Windows Server Solutions SDK](Customize-Shared-Folders.md#BKMK_Example2).  
   
  Optionally, partners can leave the data folders on drive C. This allows the end user or reseller to determine the layout of the data folders on the data drives.  
   
 ###  <a name="BKMK_Example1"></a> Example 1: Create a custom folder and move the default folders to a new location from PostIC.cmd by using Windows PowerShell  
   
-1.  Create a PostIC.cmd file for running post Initial Configuration tasks as detailed in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](../install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section.  
+1.  Create a PostIC.cmd file for running post Initial Configuration tasks as detailed in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section.  
   
 2.  Using Notepad, create a file named **customizefolders.ps1** in the C:\Windows\Setup\Scripts folder, and then paste the following Windows PowerShell® commands into the file (unmark appropriate lines depending on the desired behavior).  
   
@@ -152,7 +152,7 @@ static void Main(string[] args)
 ```  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

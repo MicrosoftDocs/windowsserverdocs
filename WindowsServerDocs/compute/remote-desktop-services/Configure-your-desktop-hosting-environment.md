@@ -4,16 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa15d0c3-2aa1-48b0-9c39-6bfc0ca4299e
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Configure your desktop hosting environment
 

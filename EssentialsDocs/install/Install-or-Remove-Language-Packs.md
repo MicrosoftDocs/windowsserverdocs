@@ -32,9 +32,9 @@ translation.priority.ht:
 ---
 # Install or Remove Language Packs
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Language Packs and Deployment](http://technet.microsoft.com/library/hh824829) before you add the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] language pack.  
+>  You must first create a multilingual Windows image as described in the [Language Packs and Deployment](http://technet.microsoft.com/library/hh824829) before you add the  Windows Server 2012 Essentials language pack.  
   
- Language packs are only available for creating multi-lingual images. The information in this section is specific to installing or removing language packs on [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ Language packs are only available for creating multi-lingual images. The information in this section is specific to installing or removing language packs on  Windows Server 2012 Essentials.  
   
 > [!NOTE]
 >  If you intend to run Initial Configuration (IC) from a client computer that does not support East-Asian languages, such as ja-jp, and if English is not included in the multilingual image on the server, the IC webpage will display squares. For the IC webpage to default to English, the multilingual image that you create must include English.  
@@ -51,7 +51,7 @@ translation.priority.ht:
  **dism.exe /online /Add-Package /PackagePath:C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**  
   
 > [!IMPORTANT]
->  You must also apply language packs for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] to fully localize the operating system.  
+>  You must also apply language packs for  Windows Server 2012 Essentials to fully localize the operating system.  
   
 ## Removing language packs from an image  
  You can use the following command to remove a language pack that you no longer want to include in an image:  
@@ -63,7 +63,14 @@ translation.priority.ht:
  **dism.exe /online /Remove-Package /PackagePath:C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**  
   
 ## See Also  
+<<<<<<< HEAD
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

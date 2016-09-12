@@ -14,25 +14,12 @@ ms.assetid: e6ba701d-7183-4c26-960e-44cc280bf3e6
 caps.latest.revision: 11
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Step 8: Run the Windows Server 2012 R2 Essentials Best Practices Analyzer
-When you finish migrating your settings and data to [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)], you should run the [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] Best Practices Analyzer (BPA) on the Destination Server. The BPA examines a server that is running [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] and presents a report that describes issues and provides recommendations for resolving them. The recommendations are developed by the product support organization for [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)].  
+When you finish migrating your settings and data to  Windows Server 2012 R2 Essentials, you should run the  Windows Server 2012 R2 Essentials Best Practices Analyzer (BPA) on the Destination Server. The BPA examines a server that is running  Windows Server 2012 R2 Essentials and presents a report that describes issues and provides recommendations for resolving them. The recommendations are developed by the product support organization for  Windows Server 2012 R2 Essentials.  
   
-### To run the [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] BPA on the Destination Server  
+### To run the  Windows Server 2012 R2 Essentials BPA on the Destination Server  
   
 1.  Log on to the Destination Server as an administrator, and then open Server Manager.  
   
@@ -45,6 +32,10 @@ When you finish migrating your settings and data to [!INCLUDE[wseblue_2](../inst
 5.  Review each BPA message, and follow the instructions to resolve issues, if necessary.  
   
 ## Next steps  
- You have run the [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] Best Practices Analyzer. Your migration to [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] is now complete.  
+ You have run the  Windows Server 2012 R2 Essentials Best Practices Analyzer. Your migration to  Windows Server 2012 R2 Essentials is now complete.  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
