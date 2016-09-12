@@ -40,7 +40,7 @@ To set up this test environment, complete the following steps:
 ## <a name="BKMK_1"></a>Step 1: Configure the domain controller \(DC1\)  
 For the purposes of this test environment, you can call your root Active Directory domain **contoso.com** and specify **pass@word1** as the administrator password.  
   
--   Install the [!INCLUDE[ad_adds_3](includes/ad_adds_3_md.md)] role service and install Active Directory Domain Services \(AD DS\) to make your computer a domain controller in [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)]. This action upgrades your [!INCLUDE[ad_adds_3](includes/ad_adds_3_md.md)] schema as part of the domain controller creation. For more information and step\-by\-step instructions, see[http:\/\/technet.microsoft.com\/ library\/hh472162.aspx](http://technet.microsoft.com/library/hh472162.aspx).  
+-   Install the AD DS role service and install Active Directory Domain Services \(AD DS\) to make your computer a domain controller in  Windows Server 2012 R2 . This action upgrades your AD DS schema as part of the domain controller creation. For more information and step\-by\-step instructions, see[http:\/\/technet.microsoft.com\/ library\/hh472162.aspx](http://technet.microsoft.com/library/hh472162.aspx).  
   
 ### <a name="BKMK_2"></a>Create test Active Directory accounts  
 After your domain controller is functional, you can create a test group and test user accounts in this domain and add the user account to the group account. You use these accounts to complete the walkthroughs in the walkthrough guides that are referenced earlier in this topic.  
@@ -56,7 +56,7 @@ For information about how to create user and group accounts in Active Directory 
 Add the **Robert Hatley** account to the **Finance** group. For information on how to add a user to a group in Active Directory, see [http:\/\/technet.microsoft.com\/library\/cc737130%28v\=ws.10%29.aspx](http://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx).  
   
 ### Create a GMSA account  
-The group Managed Service Account \(GMSA\) account is required during the Active Directory Federation Services \([!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)]\) installation and configuration.  
+The group Managed Service Account \(GMSA\) account is required during the Active Directory Federation Services \(AD FS\) installation and configuration.  
   
 ##### To create a GMSA account  
   
@@ -69,7 +69,7 @@ The group Managed Service Account \(GMSA\) account is required during the Active
     ```  
   
 ## <a name="BKMK_4"></a>Step 2: Configure the federation server \(ADFS1\) by using Device Registration Service  
-To set up another virtual machine, install [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] and connect it to the domain **contoso.com**. Set up the computer after you have joined it to the domain, and then proceed to install and configure the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] role.  
+To set up another virtual machine, install  Windows Server 2012 R2  and connect it to the domain **contoso.com**. Set up the computer after you have joined it to the domain, and then proceed to install and configure the AD FS role.  
   
 For a video, see [Active Directory Federation Services How\-To Video Series: Installing an AD FS Server Farm](http://technet.microsoft.com/video/dn469436).  
   
@@ -149,7 +149,7 @@ The next step is to configure Device Registration Service on the ADFS1 server. F
 1.  > [!IMPORTANT]  
     > **The following step applies to the Windows Server 2012 R2 RTM build.**  
   
-    Open a [!INCLUDE[wps_2](includes/wps_2_md.md)] command window and type:  
+    Open a Windows PowerShell command window and type:  
   
     ```  
     Initialize-ADDeviceRegistration  
@@ -157,7 +157,7 @@ The next step is to configure Device Registration Service on the ADFS1 server. F
   
     When you are prompted for a service account, type **contoso\\fsgmsa$**.  
   
-    Now run the [!INCLUDE[wps_2](includes/wps_2_md.md)] cmdlet.  
+    Now run the Windows PowerShell cmdlet.  
   
     ```  
     Enable-AdfsDeviceRegistration  
@@ -170,7 +170,7 @@ On DC1, you must ensure that the following Domain Name System \(DNS\) records ar
   
 |Entry|Type|Address|  
 |---------|--------|-----------|  
-|adfs1|Host \(A\)|IP address of the [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)] server|  
+|adfs1|Host \(A\)|IP address of the AD FS server|  
 |enterpriseregistration|Alias \(CNAME\)|adfs1.contoso.com|  
   
 You can use the following procedure to add a host \(A\) resource record to corporate DNS name servers for the federation server and Device Registration Service.  
@@ -197,7 +197,7 @@ Membership in the Administrators group or an equivalent is the minimum requireme
     > In a real\-world deployment, if your company has multiple user principal name \(UPN\) suffixes, you must create multiple CNAME records, one for each of those UPN suffixes in DNS.  
   
 ## <a name="BKMK_5"></a>Step 3: Configure the web server \(WebServ1\) and a sample claims\-based application  
-Set up a virtual machine \(WebServ1\) by installing the [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] operating system and connect it to the domain **contoso.com**. After it is joined to the domain, you can proceed to install and configure the Web Server role.  
+Set up a virtual machine \(WebServ1\) by installing the  Windows Server 2012 R2  operating system and connect it to the domain **contoso.com**. After it is joined to the domain, you can proceed to install and configure the Web Server role.  
   
 To complete the walkthroughs that were referenced earlier in this topic, you must have a sample application that is secured by your federation server \(ADFS1\).  
   
@@ -206,7 +206,7 @@ You can download Windows Identity Foundation SDK \([http:\/\/www.microsoft.com\/
 You must complete the following steps to set up a web server with this sample claims\-based application.  
   
 > [!NOTE]  
-> These steps have been tested on a web server that runs the [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] operating system.  
+> These steps have been tested on a web server that runs the  Windows Server 2012 R2  operating system.  
   
 1.  [Install the Web Server Role and Windows Identity Foundation](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_15)  
   
@@ -219,7 +219,7 @@ You must complete the following steps to set up a web server with this sample cl
 ### <a name="BKMK_15"></a>Install the Web Server role and Windows Identity Foundation  
   
 1.  > [!NOTE]  
-    > You must have access to the [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] installation media.  
+    > You must have access to the  Windows Server 2012 R2  installation media.  
   
     Log on to WebServ1 by using **administrator@contoso.com** and the password **pass@word1**.  
   
@@ -239,7 +239,7 @@ You must complete the following steps to set up a web server with this sample cl
   
 9. On the **Select role services** page, select and expand **Application Development**. Select **ASP.NET 3.5**, click **Add Features**, and then click **Next**.  
   
-10. On the **Confirm installation selections** page, click **Specify an alternate source path**. Enter the path to the Sxs directory that is located in the [!INCLUDE[winblue_server_2](includes/winblue_server_2_md.md)] installation media. For example D:\\Sources\\Sxs. Click **OK**, and then click **Install**.  
+10. On the **Confirm installation selections** page, click **Specify an alternate source path**. Enter the path to the Sxs directory that is located in the  Windows Server 2012 R2  installation media. For example D:\\Sources\\Sxs. Click **OK**, and then click **Install**.  
   
 ### <a name="BKMK_13"></a>Install Windows Identity Foundation SDK  
   
@@ -312,9 +312,9 @@ You must complete the following steps to set up a web server with this sample cl
   
     6.  Select the check box next to **Schedule a task to perform daily WS\-Federation metadata updates**. Click **Finish**.  
   
-    7.  Your sample application is now configured. If you test the application URL **https:\/\/webserv1.contoso.com\/claimapp**, it should redirect you to your federation server. The federation server should display an error page because you have not yet configured the relying party trust. In other words, you have not secured this test application by [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)].  
+    7.  Your sample application is now configured. If you test the application URL **https:\/\/webserv1.contoso.com\/claimapp**, it should redirect you to your federation server. The federation server should display an error page because you have not yet configured the relying party trust. In other words, you have not secured this test application by AD FS.  
   
-You must now secure your sample application that runs on your web server with [!INCLUDE[nextref_adfs2](includes/nextref_adfs2_md.md)]. You can do this by adding a relying party trust on your federation server \(ADFS1\). For a video, see [Active Directory Federation Services How\-To Video Series: Add a Relying Party Trust](http://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust).  
+You must now secure your sample application that runs on your web server with AD FS. You can do this by adding a relying party trust on your federation server \(ADFS1\). For a video, see [Active Directory Federation Services How\-To Video Series: Add a Relying Party Trust](http://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust).  
   
 ### <a name="BKMK_11"></a>Create a relying party trust on your federation server  
   
@@ -346,7 +346,7 @@ You must now secure your sample application that runs on your web server with [!
 10. Click **Finish**, and then click **OK**.  
   
 ## <a name="BKMK_10"></a>Step 4: Configure the client computer \(Client1\)  
-Set up another virtual machine and install [!INCLUDE[winblue_client_2](includes/winblue_client_2_md.md)]. This virtual machine must be on the same virtual network as the other machines. This machine should NOT be joined to the Contoso domain.  
+Set up another virtual machine and install Windows 8.1. This virtual machine must be on the same virtual network as the other machines. This machine should NOT be joined to the Contoso domain.  
   
 The client MUST trust the SSL certificate that is used for the federation server \(ADFS1\), which you set up in [Step 2: Configure the federation server \(ADFS1\) with Device Registration Service](Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). It must also be able to validate certificate revocation information for the certificate.  
   
