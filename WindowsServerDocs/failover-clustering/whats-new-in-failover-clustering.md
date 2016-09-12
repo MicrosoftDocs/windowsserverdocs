@@ -8,7 +8,6 @@ ms.technology:
   - techgroup-storage
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: 52f5ef26-971f-4269-b373-169dd0100688
 author: kumudd
 ms.author: kumud
 ---
@@ -84,7 +83,7 @@ Storage Replication enables you to do the following:
 
 -   Provide supportability, performance metrics, and diagnostic capabilities.  
 
-For more information, see the [Storage Replica in Windows Server 2016](../../storage/storage-replica/overview.md).  
+For more information, see the [Storage Replica in Windows Server 2016](../storage/storage-replica/overview.md).  
 
 
 ## <a name="BKMK_CloudWitness"></a>Cloud Witness  
@@ -158,5 +157,5 @@ Failover Cluster networks are no longer limited to a single NIC per subnet / net
 For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks.md).
 
 ##See Also  
-* [Storage](../../storage/storage-overview.md)  
+* [Storage](../storage/storage-overview.md)  
 * [What's New in Storage in Windows Server 2016](../../storage/whats-new-in-storage.md)  

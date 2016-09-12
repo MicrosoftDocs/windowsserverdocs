@@ -755,7 +755,7 @@ Values should show **True** for RDMA Capable for the RDMA enabled interfaces. Th
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
--   [Storage Spaces Fault Tolerance](../../failover-clustering/fault-tolerance.md)  
+-   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)  
 ## See Also ##  
 
 

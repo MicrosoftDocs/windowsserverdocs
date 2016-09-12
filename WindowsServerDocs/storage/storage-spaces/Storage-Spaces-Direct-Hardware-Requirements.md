@@ -37,4 +37,4 @@ Storage Spaces Direct in Windows Server 2016 supports use of locally connected d
 - [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 - [Health Service](../../failover-clustering/health-service/health-service-overview.md)  
 - [Storage Quality of Service](../storage-qos/storage-qos-overview.md)  
-- [Storage Replica in Windows Server 2016](../storage-replica/overview.md)
+- [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)

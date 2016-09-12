@@ -912,5 +912,5 @@ In Windows Server 2016 Technical Preview 5 the Storage QoS Policy type names hav
 
 ## See Also  
 - [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
-- [Storage Replica in Windows Server 2016](../storage-replica/overview.md)  
+- [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  

@@ -30,7 +30,7 @@ The following experience guides have been created by the Windows Server 2016 Eng
 -   [Storage Spaces Direct in Windows Server Technical Preview](../storage/storage-spaces/storage-spaces-direct-overview.md)  
 Windows Server Technical Preview introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
--   [Storage Replica in Windows Server Technical Preview](../storage/storage-replica/overview.md)  
+-   [Storage Replica in Windows Server Technical Preview](../storage/storage-replica/storage-replica-overview.md)  
 Storage Replica is a new feature in Windows Server 2016 Technical Preview that enables storage-agnostic, block-level, synchronous replication between clusters or servers for disaster preparedness and recovery, as well as stretching of a failover cluster across sites for high availability. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes ensuring zero data loss at the file system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
 
 -   [Increasing Resiliency of Virtual Machines in Windows Server 2016](http://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx)  

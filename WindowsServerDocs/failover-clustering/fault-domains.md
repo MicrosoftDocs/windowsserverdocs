@@ -171,5 +171,5 @@ This short video demonstrates the value of adding location descriptors to fault 
 [![Click this image to see a short video demostrating the value of adding location descriptors to fault domains](media/Fault-Domains-in-Windows-Server-2016/Part-4-Location Description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
 ## See Also  
--   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  
+-   [Windows Server 2016](../get-started/Windows-Server-2016-Technical-Preview-5.md)  
 -   [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md) 

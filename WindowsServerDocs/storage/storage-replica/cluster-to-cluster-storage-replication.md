@@ -381,11 +381,11 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     > Storage Replica dismounts the destination volumes and their drive letters or mount points. This is by design.  
 
 ### Related Topics  
--   [Storage Replica Overview](overview.md)  
+-   [Storage Replica Overview](storage-replica-overview.md)  
 -   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)  
--   [Server to Server Storage Replication](server-to-server.md)  
--   [Storage Replica: Known Issues](known-issues.md)  
--   [Storage Replica: Frequently Asked Questions](frequently-asked-questions.md)  
+-   [Server to Server Storage Replication](server-to-server-storage-replication.md)  
+-   [Storage Replica: Known Issues](storage-replica--known-issues.md)  
+-   [Storage Replica: Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
 
 ## See Also  
 -   [Windows Server 2016](../../get-started/Windows-Server-2016-Technical-Preview-5.md)  

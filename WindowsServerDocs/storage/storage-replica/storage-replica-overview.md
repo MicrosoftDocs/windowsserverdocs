@@ -183,7 +183,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.  
 
 > [!NOTE]
-> This document contains a list of [known issues](known-issues.md) and expected behaviors as well as [Frequently Asked Questions](frequently-asked-questions.md)  
+> This document contains a list of [known issues](storage-replica--known-issues.md) and expected behaviors as well as [Frequently Asked Questions](storage-replica--frequently-asked-questions.md)  
  section.  
 ### Storage Replica terminology  
 This guide frequently uses the following terms:  
