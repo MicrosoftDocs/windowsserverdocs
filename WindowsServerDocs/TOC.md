@@ -401,25 +401,29 @@
 ###### [Replication error 8451 The replication operation encountered a database error](identity/ad-ds/manage/troubleshoot/Replication-error-8451-The-replication-operation-encountered-a-database-error.md)
 #### [Additional Resources_12](identity/Additional-Resources_12.md)
 ### [Active Directory Federation Services](identity/Active-Directory-Federation-Services.md)
-#### [Getting Started with AD FS](identity/ad-fs/Getting-Started-with-AD-FS.md)
-
-####[Configure Additional Authentication Methods for AD FS](identity/ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md)
-####[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-####[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-####[Manage Risk with Conditional Access Control](identity/ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
-####[Walkthrough Guide: Manage Risk with Conditional Access Control](identity/ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
-####[Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](identity/ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
-####[Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
-####[Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
-####[Set up an AD FS lab environment](identity/ad-fs/get-started/Set-up-an-AD-FS-lab-environment.md)
-
-
-
-
 
 #### [AD FS Overview](identity/ad-fs/AD-FS-2016-Overview.md)
 ##### [What's new in Active Directory Federation Services for Windows Server 2016 Technical Preview](identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)
 ##### [AD FS Scenarios for Developers](identity/ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+
+
+#### [Getting Started with AD FS](identity/ad-fs/Getting-Started-with-AD-FS.md)
+
+#####[Configure Additional Authentication Methods for AD FS](identity/ad-fs/get-started/Configure-Additional-Authentication-Methods-for-AD-FS.md)
+#####[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+#####[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](identity/ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+#####[Manage Risk with Conditional Access Control](identity/ad-fs/get-started/Manage-Risk-with-Conditional-Access-Control.md)
+#####[Walkthrough Guide: Manage Risk with Conditional Access Control](identity/ad-fs/get-started/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+#####[Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](identity/ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
+#####[Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+#####[Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+#####[Set up an AD FS lab environment](identity/ad-fs/get-started/Set-up-an-AD-FS-lab-environment.md)
+
+
+
+
+
+
 #### [AD FS Deployment](identity/ad-fs/AD-FS-Deployment.md)
 ##### [Upgrading to AD FS in Windows Server 2016](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
 #### [AD FS Development](identity/ad-fs/AD-FS-Development.md)
