@@ -27,7 +27,7 @@ Customer Experience Guides are available for a number of new features present in
 ## Customer Experience Guides for Windows Server 2016 Technical Preview  
 The following experience guides have been created by the Windows Server 2016 Engineering and Content Development Teams to help get you started with technologies and features being released in Windows Server 2016.  
 
--   [Storage Spaces Direct in Windows Server Technical Preview](../storage/storage-spaces-direct/overview.md)  
+-   [Storage Spaces Direct in Windows Server Technical Preview](../storage/storage-spaces/storage-spaces-direct-overview.md)  
 Windows Server Technical Preview introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
 -   [Storage Replica in Windows Server Technical Preview](../storage/storage-replica/overview.md)  

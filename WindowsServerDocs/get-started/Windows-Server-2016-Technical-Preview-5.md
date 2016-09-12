@@ -36,8 +36,8 @@ This is the fifth release of Windows Server 2016 Technical Preview. In this docu
 
 -   [Networking](../networking/Networking.md)  
 
--   [Storage](../storage/Storage.md)  
+-   [Storage](../storage/storage-overview.md)  
 
 -   [Security and Assurance](../security/Security-and-Assurance.md)  
 
-Want to provide feedback or make a suggestion? Is there something that  we could do better? You can use the [Windows Server User Voice site](http://windowsserver.uservoice.com/forums/295047-general-feedback) to give feedback, recommend features, and to see what others are saying.  
+Want to provide feedback or make a suggestion? Is there something that we could do better? You can use the [Windows Server User Voice site](http://windowsserver.uservoice.com/forums/295047-general-feedback) to give feedback, recommend features, and to see what others are saying.  

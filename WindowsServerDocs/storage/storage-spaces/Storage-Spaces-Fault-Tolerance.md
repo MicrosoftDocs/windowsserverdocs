@@ -89,9 +89,9 @@ In this scenario, Storage Spaces will require the administrator to retire all th
 For more information on Fault Domains, see [Fault Domains in Windows Server 2016](../../failover-clustering/fault-domains.md)  
 
 ## Related Topics  
--   [Storage Spaces Direct in Windows Server 2016](overview.md)  
+-   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md)  
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 
 ## See Also  

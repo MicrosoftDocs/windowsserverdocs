@@ -19,15 +19,10 @@ ms.author: JGerend
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 
 If you aren't familiar with Windows’ support for storage-class memory devices, these two short videos provide an overview:
+- [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
+- [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
 
-- [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows
-    Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
-
-- [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in
-    Windows Server
-    2016](https://channel9.msdn.com/Events/Build/2016/P470)
-
-JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows with native drivers, starting in Windows Server 2016 and Windows 10 Anniversary Edition. While these devices behave similar to other disks (HDDs and SSDs), there are some differences.
+JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows with native drivers, starting in Windows Server 2016 and Windows 10 (version 1607). While these devices behave similar to other disks (HDDs and SSDs), there are some differences.
 
 All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used.
 

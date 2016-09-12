@@ -74,11 +74,11 @@ The **disaggregated** deployment scenario has the Hyper-V servers (compute compo
 
 **FIGURE 4:  Disaggregated deployment of Storage Spaces Direct**  
 
-The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on the local CSVs and does not implement a Scale-Out File Server. This allows for scaling Hyper-V compute clusters and storage together and removes requirement of configuring file server access and permissions.  Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. For step-by-step instructions about building a hyper-converged solution with Storage Spaces Direct, see [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md).   
+The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storage Spaces Direct (storage) components on the same cluster. Virtual machine's files are stored on the local CSVs and does not implement a Scale-Out File Server. This allows for scaling Hyper-V compute clusters and storage together and removes requirement of configuring file server access and permissions.  Once Storage Spaces Direct is configured and the CSV volumes are available, configuring and provisioning Hyper-V is the same process and uses the same tools that you would use with any other Hyper-V deployment on a failover cluster. For step-by-step instructions about building a hyper-converged solution with Storage Spaces Direct, see [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md).   
 
 ## Related Topics  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md)  
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
 -   [Storage Spaces Optimize Pool](Storage-Spaces-Optimize-Pool.md)  
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 

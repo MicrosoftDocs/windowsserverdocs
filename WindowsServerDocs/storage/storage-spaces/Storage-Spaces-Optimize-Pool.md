@@ -38,8 +38,8 @@ Get-StorageJob | ? Name -eq Optimize
 ```  
 
 ## Related Topics  
--   [Storage Spaces Direct in Windows Server 2016](overview.md)  
--   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](../hyper-converged.md)  
+-   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)  
+-   [Hyper-converged solution using Storage Spaces Direct in Windows Server 2016](hyper-converged-solution-using-storage-spaces-direct.md)  
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)  
 -   [Storage Spaces Fault Tolerance](Storage-Spaces-Fault-Tolerance.md)  
 
