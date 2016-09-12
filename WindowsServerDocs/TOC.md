@@ -412,6 +412,7 @@
 ####[Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](identity/ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 ####[Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 ####[Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+####[Set up an AD FS lab environment](identity/ad-fs/get-started/Set-up-an-AD-FS-lab-environment.md)
 #### [AD FS Overview](identity/ad-fs/AD-FS-2016-Overview.md)
 ##### [What's new in Active Directory Federation Services for Windows Server 2016 Technical Preview](identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)
 ##### [AD FS Scenarios for Developers](identity/ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
@@ -431,6 +432,10 @@
 ##### [Configure Claim Rules](identity/ad-fs/operations/Configure-Claim-Rules.md) 
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configuring Alternate Login ID](identity/ad-fs/operations/Configuring-Alternate-Login-ID.md)
+
+##### [Configure Authentication Policies](identity/ad-fs/operations/Configure-Authentication-Policies.md)
+##### [Configure AD FS Extranet Lockout](identity/ad-fs/operations/Configure-AD-FS-Extranet-Lockout.md)
+
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
 ##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
 ##### [Access Control Policies in AD FS](identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
