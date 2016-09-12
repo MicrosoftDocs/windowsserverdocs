@@ -83,7 +83,7 @@ Storage Replication enables you to do the following:
 
 -   Provide supportability, performance metrics, and diagnostic capabilities.  
 
-For more information, see the [Storage Replica in Windows Server 2016](../storage/storage-replica/overview.md).  
+For more information, see the [Storage Replica in Windows Server 2016](../storage/storage-replica/storage-replica-overview.md).  
 
 
 ## <a name="BKMK_CloudWitness"></a>Cloud Witness  
@@ -158,4 +158,4 @@ For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Net
 
 ##See Also  
 * [Storage](../storage/storage-overview.md)  
-* [What's New in Storage in Windows Server 2016](../../storage/whats-new-in-storage.md)  
+* [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md)  
