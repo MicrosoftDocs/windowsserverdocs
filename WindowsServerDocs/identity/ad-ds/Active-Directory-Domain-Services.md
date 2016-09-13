@@ -6,7 +6,7 @@ ms.reviewer: na
 ms.service: 
 ms.suite: na
 ms.technology: identity-adds
-ms.author: markviactive-directory-domain-services
+ms.author: markvi
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5df97522-e05c-42de-ab79-65d02a1e0dd3
