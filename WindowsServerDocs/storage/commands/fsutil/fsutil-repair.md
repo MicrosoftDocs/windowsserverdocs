@@ -30,11 +30,11 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 |Parameter|Description|
 |-------------|---------------|
 |initiate|Initiates NTFS self-healing.|
-|<VolumePath>|Specifies the volume as the drive name followed by a colon.|
-|<FileReference>|Specifies the NTFS volume-specific file ID (file reference number). The file reference includes the segment number of the file.|
+|\<VolumePath>|Specifies the volume as the drive name followed by a colon.|
+|\<FileReference>|Specifies the NTFS volume-specific file ID (file reference number). The file reference includes the segment number of the file.|
 |query|Queries the self-healing state of the NTFS volume.|
 |set|Sets the self-healing state of the volume.|
-|<Flags>|Specifies the repair method to be used when setting the self-healing state of the volume.<br /><br />The **Flags** parameter can be set to three values:<br /><br />-   **0x01**: Enables general repair.<br />-   **0x09**: Warns about potential data loss without repair.<br />-   **0x00**: Disables NTFS self-healing repair operations.|
+|\<Flags>|Specifies the repair method to be used when setting the self-healing state of the volume.<br /><br />The **Flags** parameter can be set to three values:<br /><br />-   **0x01**: Enables general repair.<br />-   **0x09**: Warns about potential data loss without repair.<br />-   **0x00**: Disables NTFS self-healing repair operations.|
 |wait|Waits for repair(s) to complete. If NTFS has detected a problem on a volume on which it is performing repairs, this option allows the system to wait until the repair is complete before it runs any pending scripts.|
 |[WaitType {0&#124;1}]|Indicates whether to wait for the current repair to complete or to wait for all repairs to complete. *WaitType* can be set to the following values:<br /><br />-   **0**: Waits for all repairs to complete. (default value)<br />-   **1**: Waits for the current repair to complete.|
 
