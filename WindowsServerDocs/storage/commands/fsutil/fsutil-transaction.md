@@ -11,6 +11,8 @@ ms.topic: article
 ms.date: 09/06/2016
 ---
 # Fsutil transaction
+>Applies To: Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
+
 Manages NTFS transactions.
 
 For examples of how to use this command, see [Examples](#BKMK_examples) .
