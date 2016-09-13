@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
 ms.technology:
-  - techgroup-compute
+  - server-nano
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
