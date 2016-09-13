@@ -11,6 +11,9 @@ ms.topic: article
 ms.date: 09/06/2016
 ---
 # Fsutil 8dot3name
+
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
+
 Queries or changes the settings for short name (8dot3 name) behavior, which include:
 
 -   Query the current setting for the short name behavior
