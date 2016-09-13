@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.service:
 ms.suite: na
 ms.technology:
-  - active-directory-domain-services
+  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9fc56513-bb7f-4a89-a866-f9442f1a46ba
