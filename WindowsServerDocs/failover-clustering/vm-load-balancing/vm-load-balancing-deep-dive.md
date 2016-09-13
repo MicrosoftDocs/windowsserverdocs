@@ -1,5 +1,5 @@
 ---
-title: Virtual Machine Load Balancing Detailed
+title: Virtual Machine Load Balancing Deep-Dive
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,7 +12,7 @@ author: bhattacharyaz
 manager: eldenc
 ms.author: subhatt
 --- 
-# Virtual Machine Load Balancing Detailed
+# Virtual Machine Load Balancing Deep-Dive
 Windows Server 2016 introduces the Node Fairness feature to optimize the utilization of nodes in a Failover Cluster. During the lifecycle of your private cloud, certain operations (such as rebooting a node for patching), results in the Virtual Machines (VMs) in your cluster being moved. This could result in an unbalanced cluster where some nodes are hosting more VMs and others are underutilized (such as a freshly rebooted server). The Node Fairness feature seeks to identify over committed nodes and re-distribute VMs from those nodes. VMs are live migrated to idle nodes with no down time. Failure policies such as anti-affinity, fault domains and possible owners are honored. Thus, the Node Fairness feature seamlessly balances your private cloud.
 
 ## <a id="heuristics-for-balancing"></a>Heuristics for Balancing
