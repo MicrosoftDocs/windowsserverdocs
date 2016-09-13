@@ -13,37 +13,19 @@ ms.technology: active-directory-federation-services
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-AD FS provides a number of options for administrators to customize and tailor the end-user experience to meet their corporate needs.  The following page will serve as a central location for customization.  
+AD FS provides a number of options for administrators to customize and tailor the end-user experience to meet their corporate needs.  The following page will serve as a central location for customization.  You can use the table below to quickly find your customization option.
 
-The following is a list of improvements that have been added to AD FS:  
-  
--   **No more dependence on IIS** \- AD FS is now built directly on top of HTTP.SYS and does not require the installation of Internet Information Services \(IIS\).  
-  
--   **Built\-in webpage customization** – The appearance and behavior of webpages can be customized to provide a tailored user experience. These customizations include the following:  
-  
-    -   **Logo and illustration** \- The logo and illustration of pages can be easily updated and changed with a simple Windows PowerShell PowerShell cmdlet. It is no longer necessary to modify any of the webpage code in AD FS.  
-  
-    -   **Customization of standard Links** \- Most organizations have some notion of standard links for IT support, home page, and a privacy link. These elements can be configured and displayed on AD FS webpages.  
-  
-    -   **Customization of web themes** \- At the heart of the customizations is the notion of a web theme. This feature enables the administrator to customize the entire appearance and behavior of the AD FS pages. Each web theme supports all of the elements that were described previously. Customizing the web themes can now be done on a per RP level with Windows Server 2016.
+
 
 ![](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png) 
     
   
--   **Customization for error pages** \- When something goes wrong, an error page is displayed to the end user. A few enhancements have been made to provide a better user experience. For example, AD FS now support sending error details to an IT help desk if required by using one click.  
-  
-    -   **Customized "Access denied" messages** – End users often get confused when they get a generic "Access denied" message. AD FS now supports customized "Access denied" messages to enable organizations to provide customized instructions for its end users. This customization supports HTML content and can be set globally or on the basis of a relying party trust.  
-  
--   **Responsive design to cater to different form factors** \- AD FS now supports automatic adjustment of size and positioning of elements through cascading style sheets \(CSS\). For example, in the smartphone scenario where the form factor is limited in width, AD FS sign\-in pages would automatically adjust and also hide the illustration.  
-  
--   **Improved user experience for home realm discovery** –AD FS now supports home realm discovery by looking up organizational account suffixes that a claims provider supports or by looking up the claims provider list that is configured for a relying party trust. AD FS also supports by\-passing home realm discovery for intranet access.  
-  
--   **Support for updating the password** – Users can change their password without having to connect to the corporate network.  
 
 
 
 
-Use the table below to find detailed information on AD FS customization.
+
+
 
 Topic|Description|
 -----|-----|
