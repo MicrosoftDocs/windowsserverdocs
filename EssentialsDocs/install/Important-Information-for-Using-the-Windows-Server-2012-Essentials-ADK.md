@@ -31,7 +31,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Important Information for Using the Windows Server 2012 Essentials ADK
-To create and customize an image of [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you use many of the tools in the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] ADK.  
+To create and customize an image of  Windows Server 2012 Essentials, you use many of the tools in the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the  Windows Server 2012 Essentials ADK.  
   
  You should be aware of the following important differences:  
   
@@ -46,8 +46,16 @@ To create and customize an image of [!INCLUDE[sbs_sbs8web_2](../install/includes
 -   Refer to the [Windows 8 ADK](http://go.microsoft.com/fwlink/?LinkId=248694) documentation for details on creating an unattend.xml file.  
   
 ## See Also  
+<<<<<<< HEAD
+ [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

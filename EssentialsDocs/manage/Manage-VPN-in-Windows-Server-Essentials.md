@@ -27,17 +27,17 @@ translation.priority.ht:
   - zh-tw
 ---
 # Manage VPN in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  Virtual private network (VPN) connections enable users working at home or on the road to access a server on a private network by using the infrastructure provided by a public network, such as the Internet. To use VPN for accessing server resources, you must complete the following:  
   
--   [Enable VPN for remote access on the server](../windows-server-essentials-manage/Manage-VPN-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Enable VPN for remote access on the server](Manage-VPN-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Set VPN permissions for network users](../windows-server-essentials-manage/Manage-VPN-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Set VPN permissions for network users](Manage-VPN-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Connect client computers to the server](../windows-server-essentials-manage/Manage-VPN-in-Windows-Server-Essentials.md#BKMK_Connect)  
+-   [Connect client computers to the server](Manage-VPN-in-Windows-Server-Essentials.md#BKMK_Connect)  
   
--   [Use VPN to connect to Windows Server Essentials](../windows-server-essentials-manage/Manage-VPN-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Use VPN to connect to Windows Server Essentials](Manage-VPN-in-Windows-Server-Essentials.md#BKMK_3)  
   
 ##  <a name="BKMK_1"></a> Enable VPN for remote access on the server  
  Complete the following procedure to configure VPN in Windows Server Essentials to enable remote access.  
@@ -93,6 +93,6 @@ translation.priority.ht:
   
 -   [Work Remotely](../Topic/Work%20Remotely%20in%20Windows%20Server%20Essentials.md)  
   
--   [Manage Anywhere Access](../windows-server-essentials-manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
+-   [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

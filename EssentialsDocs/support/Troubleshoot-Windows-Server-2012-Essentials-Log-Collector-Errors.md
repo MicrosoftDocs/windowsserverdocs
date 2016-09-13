@@ -14,26 +14,13 @@ ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
 caps.latest.revision: 5
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Troubleshoot Windows Server 2012 Essentials Log Collector Errors
 When you run the Log Collector, you may encounter one of the following errors. To resolve an issue, follow the guidance provided for the associated error.  
   
 > [!NOTE]
->  In this document, the computers on your network, other than your server, are called “network computers.”  
+>  In this document, the computers on your network, other than your server, are called “network computers.�?  
   
 ###  <a name="BKMK_TheDestinationFolderIsNotValid"></a> The destination folder is not valid  
  **Cause:** The folder where you are attempting to copy the log files may not exist or may not have enough space to hold the files.  
@@ -48,7 +35,7 @@ When you run the Log Collector, you may encounter one of the following errors. T
 ###  <a name="BKMK_CannotCollectLogFiles"></a> Cannot collect log files for the computer  
  **Cause:** The Log Collector may not be installed on the computer because the computer did not successfully connect to the server using Connect Computer to the Server wizard.  
   
- **Solution:** For information about how to resolve issues regarding connections to your server, see “[Troubleshoot connecting computers to the server](http://go.microsoft.com/fwlink/p/?LinkID=241492)” (http://go.microsoft.com/fwlink/p/?LinkID=241492) at the Microsoft website.  
+ **Solution:** For information about how to resolve issues regarding connections to your server, see “[Troubleshoot connecting computers to the server](http://go.microsoft.com/fwlink/p/?LinkID=241492)�? (http://go.microsoft.com/fwlink/p/?LinkID=241492) at the Microsoft website.  
   
  If you are still unable to connect the computer to the server, then you can copy the log files manually to a USB flash drive as follows:  
   
@@ -62,11 +49,11 @@ When you run the Log Collector, you may encounter one of the following errors. T
 ###  <a name="BKMK_TheComputerIsNotConfiguredProperly"></a> The computer is not configured properly to collect the log files  
  **Cause:** The computer has not been configured properly for the Log Collector.  
   
- **Solution:** Re-install the Log Collector. See [Reinstalling the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_Reinstall).  
+ **Solution:** Re-install the Log Collector. See [Reinstalling the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_Reinstall).  
   
 ###  <a name="BKMK_AnUnknownErrorOccurred"></a> An unknown error occurred  
  **Cause:** Unknown.  
   
- **Solution 1:** Re-run the Log Collector. If the error occurs again, ensure there are no connectivity issues. You can also try reinstalling the Log Collector. See [Reinstalling the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_Reinstall). If you are unable to resolve the issue, contact the person who maintains your network for assistance.  
+ **Solution 1:** Re-run the Log Collector. If the error occurs again, ensure there are no connectivity issues. You can also try reinstalling the Log Collector. See [Reinstalling the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_Reinstall). If you are unable to resolve the issue, contact the person who maintains your network for assistance.  
   
- **Solution 2:** First, try to open the folder where the log files are saved. If the zip file with computer name is already generated, ignore this error and use the log files instead. If there are no log files generated, re-run the Log Collector. If the error occurs again, ensure there are no connectivity issues. You can also try reinstalling the Log Collector. See [Reinstalling the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_Reinstall). If you are unable to resolve the issue, contact the person who maintains your network for assistance.
+ **Solution 2:** First, try to open the folder where the log files are saved. If the zip file with computer name is already generated, ignore this error and use the log files instead. If there are no log files generated, re-run the Log Collector. If the error occurs again, ensure there are no connectivity issues. You can also try reinstalling the Log Collector. See [Reinstalling the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_Reinstall). If you are unable to resolve the issue, contact the person who maintains your network for assistance.

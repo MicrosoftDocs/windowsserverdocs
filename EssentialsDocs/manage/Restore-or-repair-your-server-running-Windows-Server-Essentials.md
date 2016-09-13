@@ -27,15 +27,15 @@ translation.priority.ht:
   - zh-tw
 ---
 # Restore or repair your server running Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- This topic provides an overview and supporting procedures for restoring or repairing a server running [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)], and includes the following sections:  
+ This topic provides an overview and supporting procedures for restoring or repairing a server running  Windows Server Essentials, and includes the following sections:  
   
--   [Overview of server system restores](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Overview)  
+-   [Overview of server system restores](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Overview)  
   
--   [Restore or repair the system drive](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore)  
+-   [Restore or repair the system drive](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore)  
   
--   [Restore files and folders on the server](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders)  
+-   [Restore files and folders on the server](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders)  
   
 ##  <a name="BKMK_Overview"></a> Overview of server system restores  
  The state of the server when you perform a restore affects the restore method that is available and how comprehensive a restore you can perform.  
@@ -52,9 +52,9 @@ translation.priority.ht:
   
  You can either restore the server from a backup, or you can restore the server to factory default settings.  
   
--   [Restoring the server from a backup](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFromBackup)  
+-   [Restoring the server from a backup](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFromBackup)  
   
--   [Resetting the server to factory default settings](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_FactoryReset)  
+-   [Resetting the server to factory default settings](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_FactoryReset)  
   
 ###  <a name="BKMK_RestoreFromBackup"></a> Restoring the server from a backup  
  This section provides guidance on what type of backup to choose.  
@@ -100,30 +100,30 @@ translation.priority.ht:
   
  After a factory reset, you will need to perform the following tasks:  
   
--   **Reconfigure the server.** On the server, use the Configure Server Wizard to reenter configuration settings. To configure a remotely managed [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)] server from a client computer, open a web browser, and then type **http://***<YourServerName\>* in the address bar.  
+-   **Reconfigure the server.** On the server, use the Configure Server Wizard to reenter configuration settings. To configure a remotely managed  Windows Server 2012 Essentials server from a client computer, open a web browser, and then type **http://***<YourServerName\>* in the address bar.  
   
--   **Reconnect client computers to the server.** If a computer was previously connected to the server, you must uninstall the [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] Connector software from the computer before you connect the computer to the server again. For more information, see [Uninstall the Connector software](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md#BKMK_13) and [Connect computers to the server](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md#BKMK_9).  
+-   **Reconnect client computers to the server.** If a computer was previously connected to the server, you must uninstall the  Windows Server Essentials Connector software from the computer before you connect the computer to the server again. For more information, see [Uninstall the Connector software](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md#BKMK_13) and [Connect computers to the server](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md#BKMK_9).  
   
 ##  <a name="BKMK_Restore"></a> Restore or repair the system drive  
  The first step in server restoration is to restore or repair the server system drive. After you restore the system drive, you will do whatever is needed to restore the data drives on the server and restore any sharing that was lost in the restore.  
   
  Three methods are available for performing the restore:  
   
--   [Restore or repair your server using installation media](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_1). Use the installation media from the server manufacturer to restore from a backup.  
+-   [Restore or repair your server using installation media](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_1). Use the installation media from the server manufacturer to restore from a backup.  
   
 -   **Use the installation media to restore the server to default factory settings**. To find out how to do this on your server, see the documentation from the server manufacturer.  
   
--   [Restore or reset your server from a client computer using the recovery DVD](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_2). If you need to restore a remotely administered server that is running [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], you must perform the restore from a client computer by using the restoration DVD from the server manufacturer.  
+-   [Restore or reset your server from a client computer using the recovery DVD](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_2). If you need to restore a remotely administered server that is running  Windows Server 2012 Essentials, you must perform the restore from a client computer by using the restoration DVD from the server manufacturer.  
   
 ###  <a name="BKMK_Restore_1"></a> Restore or repair your server using installation media  
- The following procedure describes how to restore your server system drive from a backup by using the [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] installation media. (To find out how to use the installation media to restore to factory default settings, see the documentation from the server manufacturer.)  
+ The following procedure describes how to restore your server system drive from a backup by using the  Windows Server Essentials installation media. (To find out how to use the installation media to restore to factory default settings, see the documentation from the server manufacturer.)  
   
 > [!NOTE]
->  If the server uses Storage Spaces, and you are restoring the data to a new server, you should recover the system drive first, and then log on to the [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] Dashboard, configure Storage Spaces in a similar way as on the old server, and then recover the data volumes.  
+>  If the server uses Storage Spaces, and you are restoring the data to a new server, you should recover the system drive first, and then log on to the  Windows Server Essentials Dashboard, configure Storage Spaces in a similar way as on the old server, and then recover the data volumes.  
   
 ##### To restore the server system drive from a backup using installation media  
   
-1.  Insert the [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] installation DVD in the server DVD drive, restart the server, and then press any key to start from the DVD.  
+1.  Insert the  Windows Server Essentials installation DVD in the server DVD drive, restart the server, and then press any key to start from the DVD.  
   
     > [!NOTE]
     >  If the restore process does not start automatically, check the BIOS settings for your server to ensure that the DVD drive appears first in the boot menu.  
@@ -165,16 +165,16 @@ translation.priority.ht:
 8.  After the server is successfully restored, remove the installation DVD if you used one, and then restart the server.  
   
 > [!NOTE]
->  To restore and share folders on the server, you may need to take additional steps. For more information, see [Restore files and folders on the server](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders).  
+>  To restore and share folders on the server, you may need to take additional steps. For more information, see [Restore files and folders on the server](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders).  
   
 ###  <a name="BKMK_Restore_2"></a> Restore or reset your server from a client computer using the recovery DVD  
- In [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)], you can start the server from a bootable USB flash drive that you create, and then you recover the server from a client computer by using the recovery DVD that you received from the server manufacturer. The client computer must be on the same network as the server. This method is not available in [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)].  
+ In  Windows Server 2012 Essentials, you can start the server from a bootable USB flash drive that you create, and then you recover the server from a client computer by using the recovery DVD that you received from the server manufacturer. The client computer must be on the same network as the server. This method is not available in  Windows Server 2012 R2 Essentials.  
   
  The following procedure provides general steps for performing a server restore. The steps are equally applicable for restoring from a back or restoring to factory default settings. For more specific instructions, see the documentation from your server manufacturer.  
   
 ##### To restore or reset the server from a client computer using the recovery DVD  
   
-1.  Insert the [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials-manage/includes/sbs_sbs8web_2_md.md)] server recovery media that you received from the server manufacturer in a client computer.  
+1.  Insert the  Windows Server 2012 Essentials server recovery media that you received from the server manufacturer in a client computer.  
   
      The Recover Your Server Wizard opens.  
   
@@ -190,28 +190,28 @@ translation.priority.ht:
 >  This method of server recovery ignores external storage devices that are attached to the server during the recovery. If you want to erase the data on an external storage device, you must do so manually.  
   
 > [!NOTE]
->  If you created additional shared folders on the server, after you restore the data from the backup, the additional shared folders might not be recognized by the server. You must share those folders again. For more information, see [Restore files and folders on the server](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders).  
+>  If you created additional shared folders on the server, after you restore the data from the backup, the additional shared folders might not be recognized by the server. You must share those folders again. For more information, see [Restore files and folders on the server](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesAndFolders).  
   
 ##  <a name="BKMK_RestoreFilesAndFolders"></a> Restore files and folders on the server  
  Depending on the method that you used to restore or repair your server, and the type of storage the server uses, you might need to recover the data volumes after you restore the system drive. In some case, you might need to share existing folders again so that the server recognizes them.  
   
  Following are some examples of when you may need to restore files and folders:  
   
--   [Restore files and folders from a server backup](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesFromBackup). If you replaced the system disk, or if the partition information on the system disk is unreadable, you can restore the system, but you cannot restore data from other volumes on this disk. To restore files and folders from other data volumes, you must use the Restore Files and Folders Wizard.  
+-   [Restore files and folders from a server backup](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_RestoreFilesFromBackup). If you replaced the system disk, or if the partition information on the system disk is unreadable, you can restore the system, but you cannot restore data from other volumes on this disk. To restore files and folders from other data volumes, you must use the Restore Files and Folders Wizard.  
   
--   [Restore shared folders on the server](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_ConfigreSharedFolders). If you created additional shared folders on the server, after you restore the system drive from the backup, the shared folders are still on the data partition or were restored to the data partition, but might not be recognized by the server. You must share those folders again.  
+-   [Restore shared folders on the server](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_ConfigreSharedFolders). If you created additional shared folders on the server, after you restore the system drive from the backup, the shared folders are still on the data partition or were restored to the data partition, but might not be recognized by the server. You must share those folders again.  
   
 ###  <a name="BKMK_RestoreFilesFromBackup"></a> Restore files and folders from a server backup  
- The Restore Files and Folders Wizard helps you protect your data if your hard disk stops working or your files are accidentally erased. With [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] Backup, you can create a copy of all the data on your hard drive and store the data on an external storage device. If the original data on your hard drive is accidentally erased, overwritten, or becomes inaccessible because of a malfunction, you can restore the data from the backup. The Restore Files or Folders Wizard helps you restore a single file or folder, multiple files or folders, or an entire hard drive from an existing backup.  
+ The Restore Files and Folders Wizard helps you protect your data if your hard disk stops working or your files are accidentally erased. With  Windows Server Essentials Backup, you can create a copy of all the data on your hard drive and store the data on an external storage device. If the original data on your hard drive is accidentally erased, overwritten, or becomes inaccessible because of a malfunction, you can restore the data from the backup. The Restore Files or Folders Wizard helps you restore a single file or folder, multiple files or folders, or an entire hard drive from an existing backup.  
   
  After a system restore, you might need to use the Restore Files and Folders Wizard to restore files and folders that were not retained during the restore. For example, if you replaced the system disk, or if the partition information on the system disk is unreadable, you cannot restore data from other volumes on the system disk.  
   
 > [!NOTE]
->  You cannot use the Restore Files and Folders Wizard to restore the full system drive. For information about how to restore the full system, see [Restore or repair your server using installation media](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_1) or [Restore or reset your server from a client computer using the recovery DVD](../windows-server-essentials-manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_2).  
+>  You cannot use the Restore Files and Folders Wizard to restore the full system drive. For information about how to restore the full system, see [Restore or repair your server using installation media](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_1) or [Restore or reset your server from a client computer using the recovery DVD](Restore-or-repair-your-server-running-Windows-Server-Essentials.md#BKMK_Restore_2).  
   
 ##### To restore files and folders from a server backup  
   
-1.  Open the [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] Dashboard, and then click the **Devices** tab.  
+1.  Open the  Windows Server Essentials Dashboard, and then click the **Devices** tab.  
   
 2.  Click the name of the server, and then click **Restore files or folders for the server** in the **Tasks** pane.  
   
@@ -220,7 +220,7 @@ translation.priority.ht:
 3.  Follow the instructions in the wizard to restore the files or folders.  
   
 > [!WARNING]
->  For more information about backing up and restoring files and folders, see [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
+>  For more information about backing up and restoring files and folders, see [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_ConfigreSharedFolders"></a> Restore shared folders on the server  
  After you restore the server’s system drive, if shared folders are still on the data partition or were restored to the data partition, you might need to configure the shared folders again in order for the server to recognize the folders. The following procedure describes how to add shared folders that have been shared before.  
@@ -231,7 +231,7 @@ translation.priority.ht:
   
 2.  Right-click the shared folder, click **Properties**, click the **Sharing** tab, and then write down the folder permissions.  
   
-3.  Log on to the [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] Dashboard, click the **Storage** tab, and then click **Add a folder** in the **Server Folders Tasks** pane.  
+3.  Log on to the  Windows Server Essentials Dashboard, click the **Storage** tab, and then click **Add a folder** in the **Server Folders Tasks** pane.  
   
      The Add a Folder Wizard opens.  
   
@@ -244,15 +244,15 @@ translation.priority.ht:
 7.  Specify the permissions that you wrote down in step 2, and then click **Add folder**.  
   
     > [!IMPORTANT]
-    >  These permissions will replace any existing permissions that were not added to the folder by using the [!INCLUDE[wsessentials](../windows-server-essentials-manage/includes/wsessentials_md.md)] Dashboard.  
+    >  These permissions will replace any existing permissions that were not added to the folder by using the  Windows Server Essentials Dashboard.  
   
 > [!IMPORTANT]
->  After you finish adding folders to the list of shared folders, ensure that the folders are included in the server backup. For information about adding folders to the server backup, see [Set up or customize server backup](../windows-server-essentials-manage/Set-up-or-customize-server-backup.md).  
+>  After you finish adding folders to the list of shared folders, ensure that the folders are included in the server backup. For information about adding folders to the server backup, see [Set up or customize server backup](Set-up-or-customize-server-backup.md).  
   
 ## See also  
   
--   [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
+-   [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)

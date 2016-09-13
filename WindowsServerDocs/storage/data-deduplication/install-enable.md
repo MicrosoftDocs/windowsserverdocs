@@ -33,13 +33,17 @@ To install Data Deduplication in a Nano Server installation:
 
 1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../compute/nano-server/getting-started-with-nano-server.md#BKMK_CreateImage).
 2. From a server running Windows Server 2016 in any mode other than Nano Server, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):  
-`Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication`  
-&nbsp;  
-**-- OR --**  
-&nbsp;  
-Connect remotely to the Nano Server instance with PowerShell remoting and install Data Deduplication by using DISM:  
-`Enter-PSSession -ComputerName MyNanoServer`  
-`dism /online /enable-feature /featurename:dedup-core /all`
+	```PowerShell
+	Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
+	```  
+	<br />
+	**-- OR --**
+	<br />
+	Connect remotely to the Nano Server instance with PowerShell remoting and install Data Deduplication by using DISM:  
+	```PowerShell
+	Enter-PSSession -ComputerName MyNanoServer 
+	dism /online /enable-feature /featurename:dedup-core /all
+	```
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
 ### <a id="enable-dedup-candidate-workloads"></a>Determine which workloads are candidates for Data Deduplication
@@ -82,7 +86,7 @@ To determine whether a workload works well with deduplication, answer the follow
 	`Files excluded by error: 0`  
 
 2. **What do my workload's I/O patterns to its dataset look like? What performance do I have for my workload?**  
-	Data Deduplication doesn't deduplicate writes in real time. It deduplicates later. Therefore, the primary thing to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store and attempts to organize the Chunk Store by file as much as possible, read operations perform best when they are applied to sequential ranges of a file.  
+	 Data Deduplication optimizes files as a periodic job, rather than when the file is written to disk. As a result, it is important to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store and attempts to organize the Chunk Store by file as much as possible, read operations perform best when they are applied to sequential ranges of a file.  
 
 	Database-like workloads typically have more random read patterns than sequential read patterns because databases do not typically guarantee that the database layout will be optimal for all possible queries that may be run. Because the sections of the Chunk Store may exist all over the volume, accessing data ranges in the Chunk Store for database queries may introduce additional latency. High performance workloads are particularly sensitive to this extra latency, but other database-like workloads might not be.
 

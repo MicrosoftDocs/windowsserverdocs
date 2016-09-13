@@ -3,7 +3,7 @@ title: Configure Additional Authentication Methods for AD FS
 description:
 author: billmath
 manager: femila
-ms.date: 07/13/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
@@ -12,16 +12,15 @@ ms.technology: active-directory-federation-services
 
 # Configure Additional Authentication Methods for AD FS
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016, Windows Server 2012 R2
 
 In order to enable multi-factor authentication (MFA), you must select at least one additional authentication method. By default, in Active Directory Federation Services (AD FS) in Windows Server 2012 R2, you can select Certificate Authentication (in other words, smart card-based authentication) as an additional authentication method.
 
 > [!NOTE]
 > If you select Certificate Authentication, ensure that the smart card certificates have been provisioned securely and have pin requirements.
 
-|||
-|-|-|
-||Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](http://aka.ms/m2w274).<br /><br />Create a hybrid identity solution in Microsoft Azure:<br /> - [Learn about Azure Multi-Factor Authentication.](http://aka.ms/ey6o9r)<br /> - [Manage identities for single-forest hybrid environments using cloud authentication.](http://aka.ms/g1jat8)<br /> - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications.](http://aka.ms/kt1bbm)|
+
+
 
 ## Microsoft and third-party additional authentication methods
 You can also configure and enable Microsoft and third-party authentication methods in AD FS in Windows Server 2012 R2. Once installed and registered with AD FS, you can enforce MFA as part of the global or per-relying-party authentication policy.

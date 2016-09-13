@@ -14,20 +14,7 @@ ms.assetid: d382e3fd-d393-4bd0-883f-db50104a969f
 caps.latest.revision: 11
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Step 7: Perform post-migration tasks for the Windows Server 2012 R2 Essentials migration
 The following tasks help you finish setting up your Destination Server with some of the same settings that were on the Source Server. You may have disabled some of these settings on your Source Server during the migration process, so they were not migrated to the Destination Server.  
@@ -67,6 +54,10 @@ The following tasks help you finish setting up your Destination Server with some
  If you are using a logon script to map drives to the shared folders, you must update the script to map to the drives on the Destination Server.  
   
 ## Next steps  
- You have performed the post-migration tasks for [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] migration. Now go to [Step 8: Run the Windows Server 2012 R2 Essentials Best Practices Analyzer](../Topic/Step%208:%20Run%20the%20Windows%20Server%202012%20R2%20Essentials%20Best%20Practices%20Analyzer.md).  
+ You have performed the post-migration tasks for  Windows Server 2012 R2 Essentials migration. Now go to [Step 8: Run the Windows Server 2012 R2 Essentials Best Practices Analyzer](../Topic/Step%208:%20Run%20the%20Windows%20Server%202012%20R2%20Essentials%20Best%20Practices%20Analyzer.md).  
   
+<<<<<<< HEAD
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+=======
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

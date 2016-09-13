@@ -14,33 +14,30 @@ ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 caps.latest.revision: 20
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Install and Configure Windows Server 2012 Essentials
 ##  <a name="BKMK_InstallConfigure"></a>   
- This document provides step-by-step instructions for installing and configuring [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server 2012 Essentials](../install/Before-You-Install-Windows-Server-2012-Essentials.md).  
+<<<<<<< HEAD
+ This document provides step-by-step instructions for installing and configuring  Windows Server 2012 Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server 2012 Essentials](Before-You-Install-Windows-Server-2012-Essentials.md).  
+=======
+ This document provides step-by-step instructions for installing and configuring  Windows Server 2012 Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server 2012 Essentials](../install/Before-You-Install-Windows-Server-2012-Essentials.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 > [!NOTE]
 >  Are you looking for information about installing Windows Server 2012? If so, go to [Installing Windows Server 2012](assetId:///ddf71ebb-fc52-4ecb-aa88-109167c5f1c8) in the Windows Server TechNet Library.  
   
- You install and configure [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] in two steps:  
+ You install and configure  Windows Server 2012 Essentials in two steps:  
   
+<<<<<<< HEAD
+1.  [Step 1: Install the Windows Server 2012 Essentials operating system](Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_ManualInstallation) In this step, you install the operating system on your server.  
+  
+2.  [Step 2: Configure the Windows Server 2012 Essentials operating system](Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
+=======
 1.  [Step 1: Install the Windows Server 2012 Essentials operating system](../install/Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_ManualInstallation) In this step, you install the operating system on your server.  
   
 2.  [Step 2: Configure the Windows Server 2012 Essentials operating system](../install/Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_ManualInstallation"></a> Step 1: Install the Windows Server 2012 Essentials operating system  
   
@@ -59,7 +56,7 @@ translation.priority.ht:
     > [!IMPORTANT]
     >  Do not disconnect your computer from the network during installation. Doing so may cause the installation to fail.  
   
-2.  Turn on your computer, and then insert the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] DVD into the DVD drive.  
+2.  Turn on your computer, and then insert the  Windows Server 2012 Essentials DVD into the DVD drive.  
   
      If you are performing an unattended installation, connect the removable media (such as a floppy disk or a USB flash drive) that contains your answer files. Depending on the contents of your answer files, you may not see some or any of the following installation screens.  
   
@@ -84,7 +81,7 @@ translation.priority.ht:
 9. In **Where do you want to install Windows?**, select the hard drive where you want to install the Windows operating system. Verify that all of your internal hard drives are available for installation.  
   
     > [!IMPORTANT]
-    >  [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] must be installed as C: volume, and the volume size must be at least 60 GB. It is recommended that you create two partitions on your operating system disk, and not use the C: (system partition) to store any business data.  
+    >   Windows Server 2012 Essentials must be installed as C: volume, and the volume size must be at least 60 GB. It is recommended that you create two partitions on your operating system disk, and not use the C: (system partition) to store any business data.  
   
     > [!NOTE]
     >  If a hard drive is not listed (for example, a Serial Advanced Technology Attachment (SATA) hard disk), you must load the device drivers for that hard disk. Obtain the device driver from the manufacturer and save it to removable media (such as a floppy disk or a USB flash drive). Attach the removable media to your computer, and then click **Load Driver**.  
@@ -103,12 +100,12 @@ translation.priority.ht:
         > [!IMPORTANT]
         >  You cannot move the operating system to a different partition after you finish this step.  
   
- During the installation, temporary files are copied to an installation folder on your computer, which takes about 30 minutes. After the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] operating system is installed, your computer restarts. Now, you are ready to configure the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] operating system.  
+ During the installation, temporary files are copied to an installation folder on your computer, which takes about 30 minutes. After the  Windows Server 2012 Essentials operating system is installed, your computer restarts. Now, you are ready to configure the  Windows Server 2012 Essentials operating system.  
   
 ###  <a name="BKMK_Step2Configure"></a> Step 2: Configure the Windows Server 2012 Essentials operating system  
   
 > [!IMPORTANT]
->  If you are migrating from a previous version of Windows Small Business Server to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you must follow a different process. For information about migration installations, see the following:  
+>  If you are migrating from a previous version of Windows Small Business Server to  Windows Server 2012 Essentials, you must follow a different process. For information about migration installations, see the following:  
 >   
 >  -   [Migrate from Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-2012-Essentials.md)  
 > -   [Migrate from Windows SBS 2008](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-2012-Essentials.md)  
@@ -125,13 +122,13 @@ translation.priority.ht:
 1.  On the **Verify the date and time settings** page, click **Change system date and time settings** to select the date, time, and time zone settings for your server. When you are finished, click **Next**.  
   
     > [!IMPORTANT]
-    >  If you are installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on a virtual machine, make sure that you choose the same time zone settings that are being used by the host operating system. If the time zone settings differ, the server installation might not succeed.  
+    >  If you are installing  Windows Server 2012 Essentials on a virtual machine, make sure that you choose the same time zone settings that are being used by the host operating system. If the time zone settings differ, the server installation might not succeed.  
   
 2.  On the **Choose server installation mode** page, do one of the following:  
   
-    1.  Choose **Clean install** to set up a full new installation of the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server software.  
+    1.  Choose **Clean install** to set up a full new installation of the  Windows Server 2012 Essentials server software.  
   
-    2.  Choose **Server migration** to install [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and join this server to an existing Windows domain.  
+    2.  Choose **Server migration** to install  Windows Server 2012 Essentials and join this server to an existing Windows domain.  
   
 3.  On the **Personalize your server** page, enter the name of your organization, an internal domain name, and the server name.  
   
@@ -143,7 +140,7 @@ translation.priority.ht:
 5.  On the **Provide your administrator account information** page, type the information for a new administrator account.  
   
     > [!CAUTION]
-    >  Do not name the network administrator account “Administrator” or “Network Administrator.” These account names are reserved for use by the system.  
+    >  Do not name the network administrator account “Administrator�? or “Network Administrator.�? These account names are reserved for use by the system.  
   
 6.  On the **Provide your standard user account information** page, type the information for a new standard user account, and then click **Next**.  
   
@@ -153,31 +150,35 @@ translation.priority.ht:
   
 9. After the last server restart, the **Your server is ready to be used** page appears. Click **Close**.  
   
-10. Click the Dashboard tile on the **Start** screen, and then on the Dashboard, complete the **Set Up My Server** tasks on the **Home** page. You should complete these tasks immediately after your [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] installation finishes.  
+10. Click the Dashboard tile on the **Start** screen, and then on the Dashboard, complete the **Set Up My Server** tasks on the **Home** page. You should complete these tasks immediately after your  Windows Server 2012 Essentials installation finishes.  
   
 > [!NOTE]
 >  After the installation finishes, you are automatically logged on to the server with the new administrator account that you added during installation. The built-in Administrator account password is set to the same password as the new administrator account, and then the built-in Administrator account is disabled.  
   
- You can use your newly installed server for a limited amount of time (known as the “evaluation period”) without entering a product key. After the evaluation period, you must enter a product key to activate the server or extend the evaluation period. You can extend the evaluation period a maximum of two times. When you reach the maximum number of days allowed for the evaluation period, you must activate your server with a product key.  
+ You can use your newly installed server for a limited amount of time (known as the “evaluation period�?) without entering a product key. After the evaluation period, you must enter a product key to activate the server or extend the evaluation period. You can extend the evaluation period a maximum of two times. When you reach the maximum number of days allowed for the evaluation period, you must activate your server with a product key.  
   
 ### Customize Windows Server 2012 Essentials  
- The **Home** page of the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard links to **SETUP** tasks that you should complete immediately after you install your server. By performing these tasks, you can help protect information that is stored on the server and enable the features that are available in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ The **Home** page of the  Windows Server 2012 Essentials Dashboard links to **SETUP** tasks that you should complete immediately after you install your server. By performing these tasks, you can help protect information that is stored on the server and enable the features that are available in  Windows Server 2012 Essentials.  
   
- If you choose not to perform the tasks, users might not have access to some network features. To return to these tasks later, return to the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard **Home** page.  
+ If you choose not to perform the tasks, users might not have access to some network features. To return to these tasks later, return to the  Windows Server 2012 Essentials Dashboard **Home** page.  
   
  The following table defines items that can appear in the list of setup tasks.  
   
 |Task|Description|  
 |----------|-----------------|  
-|Get updates for other Microsoft products|Click this task to access a link that runs a tool that allows you to specify if you want to use Microsoft Update to automatically obtain updates for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and other Microsoft products such as Office.|  
+|Get updates for other Microsoft products|Click this task to access a link that runs a tool that allows you to specify if you want to use Microsoft Update to automatically obtain updates for  Windows Server 2012 Essentials and other Microsoft products such as Office.|  
 |Add user accounts|Click this task to view brief information about adding user accounts. A link to run the **Add a User Account Wizard** is provided. For more information, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).|  
 |Add server folders|Click this task to view brief information about adding server folders. A link to run the **Add a Folder Wizard** is provided. Also provided is a link to an online help topic about using Server Folders. For more information, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).|  
 |Set up Server Backup|Click this task to view brief information about using Server Backup to protect your data. A link to run the **Set Up Server Backup Wizard** is provided. For more information, see [Set up or customize server backup](../manage/Manage-Server-Backup-in-Windows-Server-Essentials.md#BKMK_1).|  
-|Set up Anywhere Access|Click this task to view brief information about the Anywhere Access feature in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. A link to the **Anywhere Access Settings** page is provided. For more information, see [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).|  
+|Set up Anywhere Access|Click this task to view brief information about the Anywhere Access feature in  Windows Server 2012 Essentials. A link to the **Anywhere Access Settings** page is provided. For more information, see [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).|  
 |Set up email alert notification|Click this task to view brief information about email alert notification. A link to run the **Set up email notification for alerts** tool is provided. For more information, see [Set up email notifications for alerts](../manage/Manage-System-Health-in-Windows-Server-Essentials.md#BKMK_Email).|  
 |Set up Media Server|Click this task to view brief information about using Media Server to share music, video, and image files. A link to the  **Media Settings** page is provided. Also provided is a link to an online help topic to learn more about Media Server. For more information, see [Manage Digital Media](../manage/Manage-Digital-Media-in-Windows-Server-2012-Essentials.md).|  
 |Connect computers|Click this task to view brief information about how to connect a network computer to the server. For more information, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).|  
   
 ## See also  
   
+<<<<<<< HEAD
+-   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
+=======
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

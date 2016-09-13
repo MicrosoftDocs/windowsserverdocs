@@ -14,24 +14,24 @@ ms.assetid: 67087ccb-d820-4642-8ca2-7d2d38714014
 caps.latest.revision: 15
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Move Windows SBS 2003 settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
   
+<<<<<<< HEAD
+1.  [Copy data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
+  
+2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
+  
+3.  [Remove old logon scripts (optional)](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveScripts)  
+  
+4.  [Remove legacy Active Directory Group Policy Objects (optional)](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_RemoveLegacyADGPO)  
+  
+5.  [Configure the network](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Configure)  
+  
+6.  [Map permitted computers to user accounts](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+=======
 1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
@@ -43,6 +43,7 @@ Move settings and data to the Destination Server as follows:
 5.  [Configure the network](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Configure)  
   
 6.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  
@@ -81,7 +82,7 @@ Move settings and data to the Destination Server as follows:
      `Import-WssUser –SamAccountName [AD username]`  
   
 ##  <a name="BKMK_RemoveScripts"></a> Remove old logon scripts (optional)  
- Windows SBS 2003 uses logon scripts for tasks such as installing software and customizing desktops. [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] replaces the Windows SBS 2003 logon scripts with a combination of logon scripts and Group Policy Objects.  
+ Windows SBS 2003 uses logon scripts for tasks such as installing software and customizing desktops.  Windows Server 2012 Essentials replaces the Windows SBS 2003 logon scripts with a combination of logon scripts and Group Policy Objects.  
   
 > [!NOTE]
 >  If you modified the Windows SBS 2003 logon scripts, you should rename the scripts to preserve your customizations.  
@@ -102,7 +103,7 @@ Move settings and data to the Destination Server as follows:
 5.  Repeat steps 3 and 4 for each user.  
   
 ##  <a name="BKMK_RemoveLegacyADGPO"></a> Remove legacy Active Directory Group Policy Objects (optional)  
- The Group Policy Objects (GPOs) are updated for [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)]. They are a superset of the Windows SBS 2003 GPOs. For [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a number of the Windows SBS 2003 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] GPOs and WMI filters.  
+ The Group Policy Objects (GPOs) are updated for  Windows Server 2012 Essentials. They are a superset of the Windows SBS 2003 GPOs. For  Windows Server 2012 Essentials, a number of the Windows SBS 2003 GPOs and Windows Management Instrumentation (WMI) filters must be manually deleted to prevent conflicts with the  Windows Server 2012 Essentials GPOs and WMI filters.  
   
 > [!NOTE]
 >  If you modified the original Windows SBS 2003 Group Policy Objects, you should save copies of them in a different location, and then delete them from Windows SBS 2003.  
@@ -125,7 +126,7 @@ Move settings and data to the Destination Server as follows:
   
     -   Small Business Server Domain Password Policy  
   
-         We recommend you configure the password policy in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] to enforce strong passwords. To configure the password policy, use the Dashboard, which writes the configuration to the default domain policy. The password policy configuration is not written to the Small Business Server Domain Password Policy Object, like it was in Windows SBS 2003.  
+         We recommend you configure the password policy in  Windows Server 2012 Essentials to enforce strong passwords. To configure the password policy, use the Dashboard, which writes the configuration to the default domain policy. The password policy configuration is not written to the Small Business Server Domain Password Policy Object, like it was in Windows SBS 2003.  
   
     -   Small Business Server Internet Connection Firewall  
   
@@ -185,11 +186,11 @@ Move settings and data to the Destination Server as follows:
 >  If you have set up an on-premises Exchange server on a second server, you must ensure port 25 (for SMTP) is also open and that it is redirected to the IP address of the on-premises Exchange server.  
   
 ##  <a name="BKMK_MapPermittedComputers"></a> Map permitted computers to user accounts  
- In Windows SBS 2003, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows SBS 2003 must be mapped to one or more computers.  
+ In Windows SBS 2003, if a user connects to Remote Web Access, all the computers in the network are displayed. This may include computers that the user does not have permission to access. In  Windows Server 2012 Essentials, a user must be explicitly assigned to a computer for it to be displayed in Remote Web Access. Each user account that is migrated from Windows SBS 2003 must be mapped to one or more computers.  
   
 #### To map user accounts to computers  
   
-1.  On the Destination Server, open the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Dashboard.  
+1.  On the Destination Server, open the  Windows Server 2012 Essentials Dashboard.  
   
 2.  In the navigation bar, click **Users**.  
   

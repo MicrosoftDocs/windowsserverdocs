@@ -36,11 +36,11 @@ You can add a tab to Settings on the Dashboard by creating and installing a code
 ## Add a tab to Settings  
  You add a tab to Settings by performing the following tasks:  
   
--   [Add an implementation of the ISettingsData interface to the assembly](../install/Add-a-Tab-to-Settings.md#BKMK_ISettingsData).  
+-   [Add an implementation of the ISettingsData interface to the assembly](Add-a-Tab-to-Settings.md#BKMK_ISettingsData).  
   
--   [Sign the assembly with an Authenticode signature](../install/Add-a-Tab-to-Settings.md#BKMK_SignAssembly).  
+-   [Sign the assembly with an Authenticode signature](Add-a-Tab-to-Settings.md#BKMK_SignAssembly).  
   
--   [Install the assembly on the reference computer](../install/Add-a-Tab-to-Settings.md#BKMK_InstallAssembly).  
+-   [Install the assembly on the reference computer](Add-a-Tab-to-Settings.md#BKMK_InstallAssembly).  
   
 ###  <a name="BKMK_ISettingsData"></a> Add an implementation of the ISettingsData interface to the assembly  
  The ISettingsData interface is included in the Microsoft.WindowsServerSolutions.Settings namespace of the AdminCommon.dll assembly which is located in \Program Files\Windows Server\Bin.  
@@ -166,7 +166,7 @@ You can add a tab to Settings on the Dashboard by creating and installing a code
  **%Programfiles%\Windows Server\Bin\OEM**  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

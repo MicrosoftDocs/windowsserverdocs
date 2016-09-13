@@ -20,4 +20,4 @@ manager: stevenka
  Version: 12.10.01  
   
 ### Abstract  
- This guide describes how to migrate an existing [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials/includes/sbs_sbs8web_2_md.md)] domain to new or significantly modified computer hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the [!INCLUDE[sbs_sbs8web_2](../windows-server-essentials/includes/sbs_sbs8web_2_md.md)] network after you finish the migration.
+ This guide describes how to migrate an existing  Windows Server 2012 Essentials domain to new or significantly modified computer hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the  Windows Server 2012 Essentials network after you finish the migration.

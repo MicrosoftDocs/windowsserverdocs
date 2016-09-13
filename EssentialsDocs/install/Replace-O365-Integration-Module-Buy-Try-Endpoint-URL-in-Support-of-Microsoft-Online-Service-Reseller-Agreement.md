@@ -32,7 +32,7 @@ translation.priority.ht:
 ---
 # Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement
 ##  <a name="BKMK_O365"></a>   
- If you are a Microsoft Online Service Reseller Agreement (MOSRA) partner, to ensure that customer signup transactions are processed via your portal, you will need to replace the endpoint URLs used by the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] Office 365 integration module.  
+ If you are a Microsoft Online Service Reseller Agreement (MOSRA) partner, to ensure that customer signup transactions are processed via your portal, you will need to replace the endpoint URLs used by the  Windows Server 2012 Essentials Office 365 integration module.  
   
  The integration module uses the following four endpoint URLs:  
   
@@ -56,7 +56,7 @@ translation.priority.ht:
   
     -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/enterprisetry.html  
   
-3.  An [!INCLUDE[office365_sbp_2](../install/includes/office365_sbp_2_md.md)] subscription purchase endpoint.  
+3.  An  Office 365 Small Business Premium subscription purchase endpoint.  
   
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\  
   
@@ -66,7 +66,7 @@ translation.priority.ht:
   
     -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/smallbizbuy.html  
   
-4.  An [!INCLUDE[office365_sbp_2](../install/includes/office365_sbp_2_md.md)] subscription trial endpoint.  
+4.  An  Office 365 Small Business Premium subscription trial endpoint.  
   
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\  
   
@@ -101,7 +101,14 @@ translation.priority.ht:
 7.  Repeat steps 4-6 for each string name listed in step 4.  
   
 ## See Also  
+<<<<<<< HEAD
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)
+=======
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

@@ -35,12 +35,12 @@ You can use the information in this section to manage third-level domain names a
   
  This section includes the following topics:  
   
--   [Add Third-Level Domain Names](../install/Add-Third-Level-Domain-Names.md)  
+-   [Add Third-Level Domain Names](Add-Third-Level-Domain-Names.md)  
   
--   [Replace the List of Domain Name Providers](../install/Replace-the-List-of-Domain-Name-Providers.md)  
+-   [Replace the List of Domain Name Providers](Replace-the-List-of-Domain-Name-Providers.md)  
   
 ## See Also  
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
+ [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
+ [Additional Customizations](Additional-Customizations.md)   
+ [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)

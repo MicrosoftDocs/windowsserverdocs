@@ -14,26 +14,26 @@ ms.assetid: 04f680d2-8d3a-42ac-a916-82634e5f5154
 caps.latest.revision: 21
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Deploying Windows Server Essentials
-[!INCLUDE[wseblue_all](../windows-server-essentials/includes/wseblue_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
 ## UI Help  
   
+<<<<<<< HEAD
+-   [What should I know before I personalize my server?](Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
+  
+-   [Which options should I choose for update settings?](Deploying-Windows-Server-Essentials.md#BKMK_Update)  
+  
+-   [Why are the data and time settings important?](Deploying-Windows-Server-Essentials.md#BKMK_DateTime)  
+  
+-   [How do I connect my computers to my server?](Deploying-Windows-Server-Essentials.md#BKMK_ConnectComputer)  
+  
+-   [Support information](Deploying-Windows-Server-Essentials.md#BKMK_Support)  
+  
+-   [Troubleshoot Windows Server 2012 R2 Essentials installation](Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
+=======
 -   [What should I know before I personalize my server?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Personalize)  
   
 -   [Which options should I choose for update settings?](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Update)  
@@ -45,6 +45,7 @@ translation.priority.ht:
 -   [Support information](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Support)  
   
 -   [Troubleshoot Windows Server 2012 R2 Essentials installation](../windows-server-essentials-notinTOC/Deploying-Windows-Server-Essentials.md#BKMK_Troubleshoot)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_Personalize"></a> What should I know before I personalize my server?  
  To distinguish and help secure your server on your network, you should identify your company name, choose a unique internal domain name, and give your server a unique name.  
@@ -79,7 +80,7 @@ translation.priority.ht:
 -   Must not contain only numbers  
   
 ### Reserved words  
- Some words are used by the operating system. These are called “reserved words.” If you attempt to use a reserved word when you name your server, you will receive an error message. For non-English installations, do not use the English or localized (reserved) words.  
+ Some words are used by the operating system. These are called “reserved words.�? If you attempt to use a reserved word when you name your server, you will receive an error message. For non-English installations, do not use the English or localized (reserved) words.  
   
  Reserved words include:  
   
@@ -169,9 +170,9 @@ translation.priority.ht:
  By participating in the Customer Experience Improvement Program (CEIP), you can help Microsoft improve your server software. CEIP collects information about how customers use Microsoft programs and about some of the issues that customers encounter. Microsoft uses this information to improve the products and features that customers use most often and to help create solutions to common issues. Participation in the program is voluntary, and the end results are software improvements to better meet the needs of our customers. When you participate in the program, we collect basic information about how you use your programs, your computer, and your connected devices. We also collect information about how each of these is set up and performing.  
   
 ##  <a name="BKMK_DateTime"></a> Why are the data and time settings important?  
- Computers keep the time on their internal clocks, which allows them to perform any function that requires the date or time. For scheduling purposes, however, the clocks must be set to the correct date and time, and they must be synchronized with the other clocks in the network. With time synchronization, computers set their clocks automatically to match another computer's clock. [!INCLUDE[wseblue_2](../windows-server-essentials/includes/wseblue_2_md.md)] maintains very accurate time, and then all other computers set their clocks to match the server’s time. In this way, you can set an accurate time on all computers.  
+ Computers keep the time on their internal clocks, which allows them to perform any function that requires the date or time. For scheduling purposes, however, the clocks must be set to the correct date and time, and they must be synchronized with the other clocks in the network. With time synchronization, computers set their clocks automatically to match another computer's clock.  Windows Server 2012 R2 Essentials maintains very accurate time, and then all other computers set their clocks to match the server’s time. In this way, you can set an accurate time on all computers.  
   
- [!INCLUDE[wseblue_2](../windows-server-essentials/includes/wseblue_2_md.md)] uses the time synchronization service to synchronize the date and time of computers running in a [!INCLUDE[wseblue_2](../windows-server-essentials/includes/wseblue_2_md.md)] network. Synchronized time is critical because the default authentication protocol uses the server’s time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time, [!INCLUDE[wseblue_2](../windows-server-essentials/includes/wseblue_2_md.md)] authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
+  Windows Server 2012 R2 Essentials uses the time synchronization service to synchronize the date and time of computers running in a  Windows Server 2012 R2 Essentials network. Synchronized time is critical because the default authentication protocol uses the server’s time as part of the authentication process. For example, if the clock on a client computer is not synchronized to the correct date and time,  Windows Server 2012 R2 Essentials authentication might falsely interpret a logon request as an intrusion attempt and deny access to the user.  
   
 #### To verify the date and time settings on your computer  
   
@@ -203,7 +204,7 @@ translation.priority.ht:
 9. Click **OK** to close the **Date and Time** dialog box.  
   
 ##  <a name="BKMK_ConnectComputer"></a> How do I connect my computers to my server?  
- When you connect a computer to the server running [!INCLUDE[wseblue_2](../windows-server-essentials/includes/wseblue_2_md.md)], [!INCLUDE[winblue_server_2](../windows-server-essentials/includes/winblue_server_2_md.md)] with the Windows Server Essentials Experience role installed, make sure your client computer has a valid connection to the Internet. In addition, you need the following information:  
+ When you connect a computer to the server running  Windows Server 2012 R2 Essentials,  Windows Server 2012 R2 with the Windows Server Essentials Experience role installed, make sure your client computer has a valid connection to the Internet. In addition, you need the following information:  
   
 -   The user name and password of the person who will use the computer on the new network.  
   
@@ -246,7 +247,7 @@ translation.priority.ht:
   
         -   For all other computers, first create a network user account on the server by using the Dashboard. Create the user account with Administrator or Standard user rights, based on the tasks that are performed by the person who is using the computer.  
   
-    3.  If your computer is running [!INCLUDE[win8_client_2](../windows-server-essentials/includes/win8_client_2_md.md)] or [!INCLUDE[winblue_client_2](../windows-server-essentials/includes/winblue_client_2_md.md)], skip this step. If your computer is running Windows 7, and if you have documents, pictures, or personal preferences (such as desktop backgrounds, screen savers, or Internet Explorer favorites) that you want to keep after you join the computer to the new network, on the **Choose if you want to move your existing data and settings** page of the wizard, select the **Move my data and settings to my new network user account**.  
+    3.  If your computer is running  Windows 8 or  Windows 8.1, skip this step. If your computer is running Windows 7, and if you have documents, pictures, or personal preferences (such as desktop backgrounds, screen savers, or Internet Explorer favorites) that you want to keep after you join the computer to the new network, on the **Choose if you want to move your existing data and settings** page of the wizard, select the **Move my data and settings to my new network user account**.  
   
     4.  Choose if you want to automatically wake the computer to create a backup on the **Choose if you want to wake this computer to create its backup** page.  
   
@@ -255,22 +256,22 @@ translation.priority.ht:
 8.  After you join your computer to the network, use your new user name and password to log on to the computer.  
   
     > [!NOTE]
-    >  When you log on to a computer that is running [!INCLUDE[win8_client_2](../windows-server-essentials/includes/win8_client_2_md.md)] for the first time by using your network account, after it connects to the server, instructions for migrating files and applications from the old user account appear. Follow the instructions on the **How do I migrate files and applications from my old user account?** page to migrate all files and applications to the network user account.  
+    >  When you log on to a computer that is running  Windows 8 for the first time by using your network account, after it connects to the server, instructions for migrating files and applications from the old user account appear. Follow the instructions on the **How do I migrate files and applications from my old user account?** page to migrate all files and applications to the network user account.  
   
 9. After the computer is successfully connected to the server, shortcuts to the Connector Tray app and the server Dashboard appear on the Start menu, which can be used as follows:  
   
     > [!NOTE]
-    >  If your computer is running [!INCLUDE[win8_client_2](../windows-server-essentials/includes/win8_client_2_md.md)] or [!INCLUDE[winblue_client_2](../windows-server-essentials/includes/winblue_client_2_md.md)], the Dashboard and the Connector TrayApp will be searchable as applications.  
+    >  If your computer is running  Windows 8 or  Windows 8.1, the Dashboard and the Connector TrayApp will be searchable as applications.  
   
     1.  From the Connector TrayApp, you can enable or disable the **Keep me remotely connected** feature. You can also double-click the Connector Tray app to start the Launchpad. From the Launchpad, you can access the Shared folders shortcut, configure computer backups, address alerts, and open Remote Web Access.  
   
     2.  From the **Dashboard** link, you can administer your server.  
   
 ##  <a name="BKMK_Support"></a> Support information  
- For help resolving issues in [!INCLUDE[wseblue_2](../windows-server-essentials/includes/wseblue_2_md.md)], you can post your questions on the [Windows Server 2012 R2 Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
+ For help resolving issues in  Windows Server 2012 R2 Essentials, you can post your questions on the [Windows Server 2012 R2 Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
   
 ##  <a name="BKMK_Troubleshoot"></a> Troubleshoot Windows Server 2012 R2 Essentials installation  
- Troubleshooting information that is related to a [!INCLUDE[wseblue_2](../windows-server-essentials/includes/wseblue_2_md.md)] installation is currently not available. For help resolving installation issues, you can post your questions on the [Windows Server 2012 R2 Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
+ Troubleshooting information that is related to a  Windows Server 2012 R2 Essentials installation is currently not available. For help resolving installation issues, you can post your questions on the [Windows Server 2012 R2 Essentials Forums](http://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials) website.  
   
 ## See also  
   

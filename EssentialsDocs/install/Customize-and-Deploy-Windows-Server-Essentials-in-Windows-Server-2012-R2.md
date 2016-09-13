@@ -14,20 +14,7 @@ ms.assetid: d1c70cf2-0db8-4b75-af46-73620b9e81c8
 caps.latest.revision: 5
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Customize and Deploy Windows Server Essentials in Windows Server 2012 R2
 Windows Server Essentials Experience is a new server role in Windows Server 2012 R2. OEMs can customize and deploy Windows Server 2012 R2 Essentials before you ship the server to your customers.  
@@ -40,4 +27,4 @@ Windows Server Essentials Experience is a new server role in Windows Server 2012
   
 -   [Windows Deployment with the Windows ADK](http://technet.microsoft.com/library/hh824947.aspx)  
   
--   [Windows Server 2012 Essentials - Assessment and Deployment Kit](../install/Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)
+-   [Windows Server 2012 Essentials - Assessment and Deployment Kit](Assessment-and-Deployment-Kit-for-Windows-Server-2012-Essentials.md)

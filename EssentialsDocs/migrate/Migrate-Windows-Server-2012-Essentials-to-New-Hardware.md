@@ -14,29 +14,20 @@ ms.assetid: f695ae90-3160-407b-bebf-9e460f22c86d
 caps.latest.revision: 8
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Migrate Windows Server 2012 Essentials to New Hardware
-This guide describes how to migrate an existing [!INCLUDE[sbs_sbs8web_1](../install/includes/sbs_sbs8web_1_md.md)] domain to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on new hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] network after you finish the migration.  
+This guide describes how to migrate an existing  Windows Server® 2012 Essentials domain to  Windows Server 2012 Essentials on new hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the  Windows Server 2012 Essentials network after you finish the migration.  
   
 > [!NOTE]
->  To avoid problems during migration, the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] product development team strongly recommends that you read this document before you begin the migration.  
+>  To avoid problems during migration, the  Windows Server 2012 Essentials product development team strongly recommends that you read this document before you begin the migration.  
   
 > [!NOTE]
+<<<<<<< HEAD
+>  To migrate your server data to the latest version of Windows Server Essentials, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
+=======
 >  To migrate your server data to the latest version of Windows Server Essentials, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## Additional resources  
  For links to additional information, tools, and community resources to help guide you through the migration process, visit the [Windows Small Business Server Migration](http://go.microsoft.com/fwlink/?LinkId=217520) website.  
@@ -49,11 +40,28 @@ This guide describes how to migrate an existing [!INCLUDE[sbs_sbs8web_1](../inst
 ## Migration process summary  
  This Migration Guide includes the following steps:  
   
+<<<<<<< HEAD
+1.  [Prepare your Source Server for Windows Server 2012 Essentials migration](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration6.md).  You must ensure that your Source Server and network are ready for migration. This section guides you through backing up the Source Server, evaluating the Source Server system health, installing the most recent service packs and fixes, and verifying the network configuration.  
+  
+2.  [Install Windows Server 2012 Essentials in migration mode](Install-Windows-Server-2012-Essentials-in-migration-mode3.md).  This section describes the steps you should take to install  Windows Server 2012 Essentials on the Destination Server in migration mode.  
+  
+3.  [Join computers to the new Windows Server 2012 Essentials server](Join-computers-to-the-new-Windows-Server-2012-Essentials-server3.md).  This section covers joining client computers to the new  Windows Server 2012 Essentials server and updating Group Policy settings.  
+  
+4.  [Move settings and data to the Destination Server for Windows Server 2012 Essentials migration](Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  This section provides information about migrating data and settings from the Source Server.  
+  
+5.  [Configure folder redirection on the Windows Server 2012 Essentials Destination Server](Configure-folder-redirection-on-the-Windows-Server-2012-Essentials-Destination-Server.md).  If folder redirection is enabled on the Source Server, you can enable folder redirection on the Destination Server, and then delete the old Folder Redirection Group Policy setting.  
+  
+6.  [Demote and remove the Source Server from the new Windows Server 2012 Essentials network](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network3.md).  Prior to removing the Source Server from the network, you must force a Group Policy update and demote the Source Server.  
+  
+7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration3.md).  After you finish migrating all settings and data to  Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
+  
+8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer6.md).  After you finish migrating settings and data to  Windows Server 2012 Essentials, you should download and run the  Windows Server 2012 Essentials BPA.  
+=======
 1.  [Prepare your Source Server for Windows Server 2012 Essentials migration](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration6.md).  You must ensure that your Source Server and network are ready for migration. This section guides you through backing up the Source Server, evaluating the Source Server system health, installing the most recent service packs and fixes, and verifying the network configuration.  
   
-2.  [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode3.md).  This section describes the steps you should take to install [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] on the Destination Server in migration mode.  
+2.  [Install Windows Server 2012 Essentials in migration mode](../migrate/Install-Windows-Server-2012-Essentials-in-migration-mode3.md).  This section describes the steps you should take to install  Windows Server 2012 Essentials on the Destination Server in migration mode.  
   
-3.  [Join computers to the new Windows Server 2012 Essentials server](../migrate/Join-computers-to-the-new-Windows-Server-2012-Essentials-server3.md).  This section covers joining client computers to the new [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] server and updating Group Policy settings.  
+3.  [Join computers to the new Windows Server 2012 Essentials server](../migrate/Join-computers-to-the-new-Windows-Server-2012-Essentials-server3.md).  This section covers joining client computers to the new  Windows Server 2012 Essentials server and updating Group Policy settings.  
   
 4.  [Move settings and data to the Destination Server for Windows Server 2012 Essentials migration](../migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md).  This section provides information about migrating data and settings from the Source Server.  
   
@@ -61,9 +69,10 @@ This guide describes how to migrate an existing [!INCLUDE[sbs_sbs8web_1](../inst
   
 6.  [Demote and remove the Source Server from the new Windows Server 2012 Essentials network](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network3.md).  Prior to removing the Source Server from the network, you must force a Group Policy update and demote the Source Server.  
   
-7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration3.md).  After you finish migrating all settings and data to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you may want to map permitted computers to user accounts.  
+7.  [Perform post-migration tasks for Windows Server 2012 Essentials migration](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration3.md).  After you finish migrating all settings and data to  Windows Server 2012 Essentials, you may want to map permitted computers to user accounts.  
   
-8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](../migrate/Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer6.md).  After you finish migrating settings and data to [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you should download and run the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] BPA.  
+8.  [Run the Windows Server 2012 Essentials Best Practices Analyzer](../migrate/Run-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer6.md).  After you finish migrating settings and data to  Windows Server 2012 Essentials, you should download and run the  Windows Server 2012 Essentials BPA.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
  Several of the migration procedures require that you open a Command Prompt window as an administrator.  
   

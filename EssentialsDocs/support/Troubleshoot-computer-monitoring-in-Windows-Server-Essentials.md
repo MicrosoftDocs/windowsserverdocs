@@ -14,32 +14,19 @@ ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 caps.latest.revision: 13
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Troubleshoot computer monitoring in Windows Server Essentials
-This topic provides troubleshooting for issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+This topic provides troubleshooting for issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in  Windows Server 2012 Essentials.  
   
 > [!NOTE]
->  For the most current troubleshooting information from the [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
+>  For the most current troubleshooting information from the  Windows Server 2012 Essentials community, we suggest that you visit the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.  
   
 ##  <a name="BKMK_TS"></a> Troubleshooting email notifications for alerts  
  This section lists various issues that you might encounter when using email notifications for alerts.  
   
 ### Cannot send the test email for the alert  
- **Issue** You get an error message that says, “Cannot send the test email for alert.”  
+ **Issue** You get an error message that says, “Cannot send the test email for alert.�?  
   
  **Cause** This error might occur due to any of the following issues in the settings for alert notifications:  
   

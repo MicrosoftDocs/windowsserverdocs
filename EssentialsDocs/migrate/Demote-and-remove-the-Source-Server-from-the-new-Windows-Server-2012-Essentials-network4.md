@@ -15,24 +15,22 @@ ms.assetid: 9ca50697-89a4-4d65-a230-3b18a7e01637
 caps.latest.revision: 7
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network4
-After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] and you complete the migration,   you must perform the following tasks:  
+After you finish installing  Windows Server 2012 Essentials and you complete the migration,   you must perform the following tasks:  
   
+<<<<<<< HEAD
+1.  [Uninstall Exchange Server 2010](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_UninstallExchangeServer2010)  
+  
+2.  [Remove Active Directory Certificate Services](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_ADCS)  
+  
+3.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_PhysicallyDisconnect)  
+  
+4.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_DemoteTheSourceServer)  
+  
+5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_RemoveTheSourceServer)  
+=======
 1.  [Uninstall Exchange Server 2010](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_UninstallExchangeServer2010)  
   
 2.  [Remove Active Directory Certificate Services](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_ADCS)  
@@ -42,6 +40,7 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
 4.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_DemoteTheSourceServer)  
   
 5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network4.md#BKMK_RemoveTheSourceServer)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_UninstallExchangeServer2010"></a> Uninstall Exchange Server 2010  
  You must uninstall Exchange Server 2010 from the Source Server before you demote it. This removes all references in Active Directory Domain Services (AD DS) to Exchange Server on the Source Server. You must have your Exchange Server 2010 media to remove Exchange Server 2010.  
@@ -79,7 +78,7 @@ After you finish installing [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs
     >  Restart the server even if you are not prompted to do so.  
   
 ###  <a name="BKMK_PhysicallyDisconnect"></a> Disconnect printers that are directly connected to the Source Server  
- Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ Before you demote the Source Server, physically disconnect any printers that are directly connected to the Source Server and are shared through the Source Server. Ensure that no Active Directory objects remain for the printers that were directly connected to the Source Server. The printers can then be directly connected to the Destination Server and shared from  Windows Server 2012 Essentials.  
   
 ###  <a name="BKMK_DemoteTheSourceServer"></a> Demote the Source Server  
  Before you demote the Source Server from the role of the AD DS domain controller to the role of a domain member server, ensure that Group Policy settings are applied to all client computers, as described in the following procedure.  
