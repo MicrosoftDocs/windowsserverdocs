@@ -33,4 +33,6 @@ This collection contains tool and reference information for IT pros who want to 
     The content in this section describes how to configure and manage WSUS. In this section you will find information about installing the WSUS Server Role, configuring WSUS servers, as well as managing updates, and managing WSUS client computers and WSUS computer groups.  
 
 ## See Also  
-[Windows Server Technical Preview](http://technet.microsoft.com/library/mt126143.aspx)  
+- [Windows Server Technical Preview](http://technet.microsoft.com/library/mt126143.aspx)  
+- [Manage connections from Windows operating system components to Microsoft services](https://technet.microsoft.com/itpro/windows/manage/manage-connections-from-windows-operating-system-components-to-microsoft-services)
+- [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)

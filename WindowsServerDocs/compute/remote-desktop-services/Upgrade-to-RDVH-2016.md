@@ -5,9 +5,7 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 08/01/2016  
 ms.tgt_pltfrm: na

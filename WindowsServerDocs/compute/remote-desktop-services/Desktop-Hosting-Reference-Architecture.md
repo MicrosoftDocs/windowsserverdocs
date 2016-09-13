@@ -4,16 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1bac5dd3-8430-46ee-8bef-10cc4b7cc437
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Desktop Hosting Reference Architecture
 

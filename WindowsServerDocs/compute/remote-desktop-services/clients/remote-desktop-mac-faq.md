@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d4b1009-79f7-40bd-ad8a-46544e82acfb 
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Frequently asked questions about the Mac Remote Desktop client
 

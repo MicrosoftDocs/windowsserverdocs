@@ -4,16 +4,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - remote-desktop-services
-  - techgroup-compute
+ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: afcbc712-3c8d-4b4e-a78f-38ec57e50c31
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Create a second RD Connection Broker virtual machine
 

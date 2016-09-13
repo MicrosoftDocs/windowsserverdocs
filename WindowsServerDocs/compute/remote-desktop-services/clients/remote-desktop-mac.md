@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Get started with Remote Desktop on Mac
 
