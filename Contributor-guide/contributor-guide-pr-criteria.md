@@ -3,7 +3,7 @@
 Pull requests must meet minimum criteria to be accepted for integration into the repo. Pull request reviewers generally review only what is new or changed, using the blocking and non-blocking quality review items listed in this article to evaluate the changes. Reviewers may ask for more information or for a requestor to fix issues before accepting a pull request. The requestor is responsible for making the changes.
 
 >[!IMPORTANT] 
->Opening a pull request triggers quality checks and publication to our internal staging site. It's your responsibility to review both, from links in comments \(from the Conversation tab of the PR\). After you've done this, indicate it by adding the "ready-to-merge" label to the PR. \(Click **Labels** or the gear to the right of the comment stream in the PR.)
+>Opening a pull request triggers quality checks and publication to our internal staging site. It's your responsibility to review both, from links in comments \(on the Conversation tab of the PR, click **Show all checks** > **Details**\). After you've done this, indicate it by adding the **"ready-to-merge"** label to the PR. \(Click **Labels** or the gear to the right of the comment stream in the PR.)
 
 ## Blocking content quality items
 
