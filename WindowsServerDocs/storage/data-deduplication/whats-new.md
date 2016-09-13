@@ -15,7 +15,7 @@ ms.author: wgries
 # What's new in Data Deduplication
 > Applies to Windows Server 2016
 
-[Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at "private cloud" scale. For more information about the software-defined storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-file-storage-services-windows-server-2016.md).
+[Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at private cloud scale. For more information about the software-defined storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-file-storage-services-windows-server-2016.md).
 
 Data Deduplication has the following enhancements in Windows Server 2016:
 
@@ -62,4 +62,4 @@ Data Deduplication for Virtualized Backup Applications is a supported scenario i
 Windows Server Failover Clusters running Data Deduplication can have a mix of nodes running Windows Server 2012 R2 versions of Data Deduplication alongside nodes running Windows Server 2016 versions of Data Deduplication. This enhancement provides full data access to all deduplicated volumes during a cluster rolling upgrade, allowing for the gradual rollout of the new version of Data Deduplication on an existing Windows Server 2012 R2 cluster without incurring downtime to upgrade all nodes at once.
 
 **What works differently?**<br />
-With previous versions of Windows Server, a Windows Server Failover Cluster required all nodes in the cluster to be at the exact same Windows Server version. Starting with the Windows Server 2016, the cluster rolling upgrade functionality allows a cluster to run in a mixed-mode. Deduplication supports this new mixed-mode cluster configuration to enable full data access during a cluster rolling upgrade.
+With previous versions of Windows Server, a Windows Server Failover Cluster required all nodes in the cluster to have the same Windows Server version. Starting with the Windows Server 2016, the cluster rolling upgrade functionality allows a cluster to run in a mixed-mode. Data Deduplication supports this new mixed-mode cluster configuration to enable full data access during a cluster rolling upgrade.
