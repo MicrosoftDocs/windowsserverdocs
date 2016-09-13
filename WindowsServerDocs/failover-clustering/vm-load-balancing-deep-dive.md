@@ -13,6 +13,8 @@ manager: eldenc
 ms.author: subhatt
 --- 
 # Virtual Machine Load Balancing Deep-Dive
+> Applies to Windows Server 2016
+
 Windows Server 2016 introduces the [Virtual Machine Load Balancing feature](vm-load-balancing-overview.md) to optimize the utilization of nodes in a Failover Cluster. This document describes how to configure and control <abbr title="virtual machine">VM</abbr> Load Balancing. 
 
 ## <a id="heuristics-for-balancing"></a>Heuristics for Balancing
