@@ -341,7 +341,7 @@ b.  We strongly recommend enabling Volume Shadow Copies and periodically taking 
 9.  Users can then access their data.  
 
  > [!NOTE]
- > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be permanently unavailable.  
+ > Disaster Recovery planning is a complex subject and requires great attention to detail. Creation of runbooks and the performance of annual live failover drills is highly recommended. When an actual disaster strikes, chaos will rule and experienced personnel may be unavailable.  
 
 ## Related Topics  
 
