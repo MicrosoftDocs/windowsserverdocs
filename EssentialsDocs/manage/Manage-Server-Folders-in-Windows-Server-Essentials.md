@@ -14,39 +14,26 @@ ms.assetid: 090cf1b8-7b9b-48b9-ae85-b98477b8d7cc
 caps.latest.revision: 14
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Server Folders in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- As a server administrator, you can manage access to any server folders (known as “shared folders” when accessed from the Launchpad, Remote Web Access, My Server app for Windows Phone, or My Server app for Windows 8) on the server by using the tasks on the **Server Folders** tab of the Dashboard, allowing users varying levels of access to a variety of files.  
+ As a server administrator, you can manage access to any server folders (known as “shared folders�? when accessed from the Launchpad, Remote Web Access, My Server app for Windows Phone, or My Server app for Windows 8) on the server by using the tasks on the **Server Folders** tab of the Dashboard, allowing users varying levels of access to a variety of files.  
   
  The following topics provide information that will help you understand, create, and manage server folders:  
   
--   [Manage server folders using the Dashboard](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Manage server folders using the Dashboard](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Manage access to server folders](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Manage access to server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Add or move a server folder](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Add or move a server folder](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5)  
   
--   [Add a missing server folder](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_9)  
+-   [Add a missing server folder](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_9)  
   
--   [Understand shared folders](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_11)  
+-   [Understand shared folders](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_11)  
   
--   [Understand shadow copies](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_Shadow)  
+-   [Understand shadow copies](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_Shadow)  
   
 ##  <a name="BKMK_2"></a> Manage server folders using the Dashboard  
  Windows Server Essentials makes it possible to perform common administrative tasks by using the Dashboard. The **Server Folders** page of the Dashboard provides the following:  
@@ -108,11 +95,11 @@ translation.priority.ht:
   
  To hide or set permissions for server folders, or to modify server folder properties, see the following procedures:  
   
--   [Hide server folders](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_Hide)  
+-   [Hide server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_Hide)  
   
--   [Set permissions to server folders](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_Perms)  
+-   [Set permissions to server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_Perms)  
   
--   [View or modify server folder properties](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_10)  
+-   [View or modify server folder properties](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_10)  
   
 ###  <a name="BKMK_Hide"></a> Hide server folders  
  As a network administrator, you can choose to hide any of these server folders and prevent them from being displayed on the Remote Web Access website or Web Services applications (such as My Server).  
@@ -175,7 +162,7 @@ translation.priority.ht:
  You can modify the server folder name, its description, and define which user accounts have access to a server folder through the **View the folder properties** task on the **Server Folders** tab of the Dashboard.  
   
 > [!NOTE]
->  In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] and [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed, you can also modify folder quota.  
+>  In  Windows Server 2012 R2 Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, you can also modify folder quota.  
   
 ##### To view or modify folder properties  
   
@@ -190,7 +177,7 @@ translation.priority.ht:
 5.  In **<Foldername\> Properties**, on the **General** tab, view or modify the name and description of the server folder.  
   
     > [!NOTE]
-    >  In [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] and [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed, you can also modify folder quota that gives a warning message when a server folder reaches its specified size.  
+    >  In  Windows Server 2012 R2 Essentials and  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, you can also modify folder quota that gives a warning message when a server folder reaches its specified size.  
   
 ##  <a name="BKMK_5"></a> Add or move a server folder  
  You can **add more server folders** to store your files on the server in addition to the default server folders that are created during setup. You can add server folders on either the primary server or a member server running Windows Server Essentials.  
@@ -254,7 +241,7 @@ translation.priority.ht:
   
 -   A sub-folder of an existing shared folder  
   
--   A member server running [!INCLUDE[wseblue_2](../windows-server-essentials-manage/includes/wseblue_2_md.md)] or [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed  
+-   A member server running  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed  
   
 ### Steps to add or move a server folder  
   
@@ -273,7 +260,7 @@ translation.priority.ht:
   
     > [!NOTE]
     >  -   If you browse for a specific folder by using the Browse button to specify the server folder location, the folder that you have navigated to is added as a server folder.  
-    > -   You can define which server folders can be accessed via Remote Web Access. For more information, see [Manage access to server folders](../windows-server-essentials-manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_1).  
+    > -   You can define which server folders can be accessed via Remote Web Access. For more information, see [Manage access to server folders](Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_1).  
   
 ##### To move a server folder  
   
@@ -295,7 +282,7 @@ translation.priority.ht:
   
  After you restore or recreate the missing folder, it should no longer be listed as **Missing**.  
   
- For information about restoring files from server backups, see the section “Learn more about restoring files and folders” in the topic [Manage Backup and Restore](../windows-server-essentials-manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
+ For information about restoring files from server backups, see the section “Learn more about restoring files and folders�? in the topic [Manage Backup and Restore](Manage-Backup-and-Restore-in-Windows-Server-Essentials.md).  
   
 ##  <a name="BKMK_11"></a> Understand shared folders  
  There are several different ways that you can access your shared folders on Windows Server Essentials from a device that is connected to the server. For more information, see the topic [Use Shared Folders](../Topic/Use%20Shared%20Folders%20in%20Windows%20Server%20Essentials.md).  
@@ -313,8 +300,8 @@ translation.priority.ht:
   
 ## See also  
   
--   [Manage Server Storage](../windows-server-essentials-manage/Manage-Server-Storage-in-Windows-Server-Essentials.md)  
+-   [Manage Server Storage](Manage-Server-Storage-in-Windows-Server-Essentials.md)  
   
 -   [Use Shared Folders](../Topic/Use%20Shared%20Folders%20in%20Windows%20Server%20Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

@@ -14,65 +14,52 @@ ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 caps.latest.revision: 15
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Remote Web Access in Windows Server Essentials
-[!INCLUDE[wse_all](../windows-server-essentials-manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
- Remote Web Access in Windows Server Essentials, or in [!INCLUDE[winblue_server_2](../windows-server-essentials-manage/includes/winblue_server_2_md.md)] with the [!INCLUDE[wseblue_experience](../windows-server-essentials-manage/includes/wseblue_experience_md.md)] role installed, provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere that you have an Internet connection and by using almost any device. To use the Remote Web Access functionality, you must first turn it on by using the Set Up Anywhere Access Wizard, and then set up your router and domain name.  
+ Remote Web Access in Windows Server Essentials, or in  Windows Server 2012 R2 with the  Windows Server Essentials Experience role installed, provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere that you have an Internet connection and by using almost any device. To use the Remote Web Access functionality, you must first turn it on by using the Set Up Anywhere Access Wizard, and then set up your router and domain name.  
   
 ## In this topic  
   
--   [Turn on and configure Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Turn on and configure Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Set up your router](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Set up your router](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Set up your domain name](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Set up your domain name](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Customize Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [Customize Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_4)  
   
--   [Troubleshoot Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_5)  
+-   [Troubleshoot Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_5)  
   
 ##  <a name="BKMK_1"></a> Turn on and configure Remote Web Access  
  The following topics will help you turn on and configure Remote Web Access:  
   
--   [Remote Web Access overview](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview)  
+-   [Remote Web Access overview](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Overview)  
   
--   [Turn on Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA)  
+-   [Turn on Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA)  
   
--   [Change your region](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Region)  
+-   [Change your region](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Region)  
   
--   [Manage Remote Web Access permissions](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ManagePerms)  
+-   [Manage Remote Web Access permissions](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ManagePerms)  
   
--   [Secure Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SecureRWA)  
+-   [Secure Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SecureRWA)  
   
--   [Manage Remote Web Access and VPN users](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ManageRWAVPN)  
+-   [Manage Remote Web Access and VPN users](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ManageRWAVPN)  
   
 ###  <a name="BKMK_Overview"></a> Remote Web Access overview  
- When you are away from your office, you can open a web browser and access [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] from anywhere that has Internet access. In [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)], you can:  
+ When you are away from your office, you can open a web browser and access  Remote Web Access from anywhere that has Internet access. In  Remote Web Access, you can:  
   
 -   Access shared files and folders on the server.  
   
 -   Access your server and computers on the network. This means that you can access the desktop of a networked computer as if you were sitting in front of it at your office.  
   
- [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] is not turned on by default. When you run the Set up Anywhere Access Wizard, the wizard attempts to set up your router and Internet connectivity. After [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] is turned on, you can set up a domain name for your server and customize [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)]. You can also set up the router again if you change your router.  
+  Remote Web Access is not turned on by default. When you run the Set up Anywhere Access Wizard, the wizard attempts to set up your router and Internet connectivity. After  Remote Web Access is turned on, you can set up a domain name for your server and customize  Remote Web Access. You can also set up the router again if you change your router.  
   
- Permission to access [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] is not automatically granted when you add a new user account. When you add a user account, you can choose to allow access to shared folders, the Media Library, computers, Home page links, and the server Dashboard. You can also specify that a user not be allowed to use [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)].  
+ Permission to access  Remote Web Access is not automatically granted when you add a new user account. When you add a user account, you can choose to allow access to shared folders, the Media Library, computers, Home page links, and the server Dashboard. You can also specify that a user not be allowed to use  Remote Web Access.  
   
- The [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] setting is displayed for each user account on the **USERS** tab of the Windows Server Essentials Dashboard. To change the [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] setting, right-click the user account, and then click **View the account properties**.  
+ The  Remote Web Access setting is displayed for each user account on the **USERS** tab of the Windows Server Essentials Dashboard. To change the  Remote Web Access setting, right-click the user account, and then click **View the account properties**.  
   
 ###  <a name="BKMK_TurnOnRWA"></a> Turn on Remote Web Access  
  You can turn on Remote Web Access by running the Set up Anywhere Access Wizard from the server Dashboard.  
@@ -117,7 +104,7 @@ translation.priority.ht:
   
 5.  Click **Apply**, and then click **OK**.  
   
- For more information, see [Manage User Accounts](../windows-server-essentials-manage/Manage-User-Accounts-in-Windows-Server-Essentials.md).  
+ For more information, see [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).  
   
 ###  <a name="BKMK_SecureRWA"></a> Secure Remote Web Access  
  Windows Server Essentials uses a security certificate to help secure the information that is exchanged between the software and a web browser. When you install the Connector software on your computers, the security certificate for Windows Server Essentials is added to the trusted certificate list on your computers. The best way for users to access Remote Web Access when they are away from your office is to use a portable computer that has the Connector software installed on it.  
@@ -151,13 +138,13 @@ translation.priority.ht:
 ##  <a name="BKMK_2"></a> Set up your router  
  When you configure your server for Remote Web Access, the Set Up Anywhere Access Wizard attempts to set up the router. If you change routers or change settings on the router, you must rerun the Set Up Your Router Wizard. For more information, see the following topics:  
   
--   [Set up your router](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetUpRouter)  
+-   [Set up your router](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetUpRouter)  
   
--   [Replace a router](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ReplaceRouter)  
+-   [Replace a router](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ReplaceRouter)  
   
--   [Network location defined](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_NetworkLocation)  
+-   [Network location defined](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_NetworkLocation)  
   
--   [Enable Remote Desktop Services ActiveX controls](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ActiveX)  
+-   [Enable Remote Desktop Services ActiveX controls](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ActiveX)  
   
 ###  <a name="BKMK_SetUpRouter"></a> Set up your router  
  During this step, Windows Server Essentials attempts to automatically configure your router by using UPnP commands. To do this, your router must support UPnP standards, and the UPnP setting must be enabled on your router.  
@@ -194,7 +181,7 @@ translation.priority.ht:
 -   **Domain** Choose this network for domains such as those at enterprise workplaces. This type of network location is controlled by your network administrator, and it cannot be selected or changed.  
   
 ###  <a name="BKMK_ActiveX"></a> Enable Remote Desktop Services ActiveX controls  
- The Remote Desktop Services ActiveX controls allows you to access your home or business computer, via the Internet, from another computer by using [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)].  
+ The Remote Desktop Services ActiveX controls allows you to access your home or business computer, via the Internet, from another computer by using  Remote Web Access.  
   
 ##### To enable Remote Desktop Services ActiveX controls  
   
@@ -213,41 +200,41 @@ translation.priority.ht:
 ##  <a name="BKMK_3"></a> Set up your domain name  
  After Remote Web Access is turned on, you can set up a domain name for your server that is running Windows Server Essentials. This is a necessary step if you plan to use Remote Web Access from a remote computer. For more information, see the following topics:  
   
--   [Domain names overview](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_DNOverview)  
+-   [Domain names overview](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_DNOverview)  
   
--   [Understand Microsoft personalized domain names](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_PersonalizedNames)  
+-   [Understand Microsoft personalized domain names](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_PersonalizedNames)  
   
--   [Use a new or existing domain name](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UseNewName)  
+-   [Use a new or existing domain name](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UseNewName)  
   
--   [Set up a domain name](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetUpName)  
+-   [Set up a domain name](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetUpName)  
   
--   [Choose a domain name service provider](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ChooseProvider)  
+-   [Choose a domain name service provider](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ChooseProvider)  
   
--   [Choose a domain name](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ChooseDomainName)  
+-   [Choose a domain name](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ChooseDomainName)  
   
--   [Choose a domain name prefix](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Prefixes)  
+-   [Choose a domain name prefix](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Prefixes)  
   
--   [Choose a domain name extension](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Extension)  
+-   [Choose a domain name extension](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Extension)  
   
--   [Update or upgrade your domain name service](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UpdateService)  
+-   [Update or upgrade your domain name service](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UpdateService)  
   
--   [Export or import your certificate on your server](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ExportCert)  
+-   [Export or import your certificate on your server](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ExportCert)  
   
--   [Set up a domain name manually](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetNameManually)  
+-   [Set up a domain name manually](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SetNameManually)  
   
--   [Find your domain name service provider](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Find)  
+-   [Find your domain name service provider](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Find)  
   
 ###  <a name="BKMK_DNOverview"></a> Domain names overview  
- A domain name uniquely identifies your server on the Internet. Domain names consist of at least two parts: a top level domain name (TLD) and a second level domain name. For example, in contoso.com, “com” is the TLD and “contoso” is the second level domain name.  
+ A domain name uniquely identifies your server on the Internet. Domain names consist of at least two parts: a top level domain name (TLD) and a second level domain name. For example, in contoso.com, “com�? is the TLD and “contoso�? is the second level domain name.  
   
  While you are away from your office, you can use your domain name to access shared files on the server or computers on the network. You can also manage your server when you are away. For example, you register contoso.com for your server. When you are away from your office, you can open a web browser on your laptop and type **contoso.com** in the address text box to connect to the instance of Remote Web Access that you set up on Windows Server Essentials.  
   
 ###  <a name="BKMK_PersonalizedNames"></a> Understand Microsoft personalized domain names  
  A Microsoft personalized domain name includes the following features:  
   
--   A custom domain name for [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] (for example, *yourhostname*.remotewebaccess.com). Your domain name is associated with your public IP address.  
+-   A custom domain name for  Remote Web Access (for example, *yourhostname*.remotewebaccess.com). Your domain name is associated with your public IP address.  
   
--   A DNS dynamic update protocol service so that [!INCLUDE[sbs8_rwa](../windows-server-essentials-manage/includes/sbs8_rwa_md.md)] using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organization’s broadband connections provide dynamic public IP addresses that can change.  
+-   A DNS dynamic update protocol service so that  Remote Web Access using your domain name will not be interrupted if your public IP address changes. Typically, Internet Service Providers (ISPs) for your organization’s broadband connections provide dynamic public IP addresses that can change.  
   
 -   A trusted certificate associated with the domain name.  
   
@@ -301,9 +288,9 @@ translation.priority.ht:
 ###  <a name="BKMK_Prefixes"></a> Choose a domain name prefix  
  A domain name consists of hierarchical labels.  
   
- **The top-level domain extension** is the right-most label in the domain name. For example, in www.contoso.com, “com” is the top-level domain name extension.  
+ **The top-level domain extension** is the right-most label in the domain name. For example, in www.contoso.com, “com�? is the top-level domain name extension.  
   
- **The second-level domain name** is the label next to the top-level domain name extension. The second-level domain name is often created based on the company name, products, or services. For example, in www.contoso.com, “contoso” is the second-level domain name and was chosen for the company name Contoso Pharmaceuticals. The second-level domain is sometimes referred to as the hostname, which has an IP address associated with it.  
+ **The second-level domain name** is the label next to the top-level domain name extension. The second-level domain name is often created based on the company name, products, or services. For example, in www.contoso.com, “contoso�? is the second-level domain name and was chosen for the company name Contoso Pharmaceuticals. The second-level domain is sometimes referred to as the hostname, which has an IP address associated with it.  
   
  **The domain name prefix** identifies a subdomain. The subdomain name can be used to identify services, devices, or regions. For example, Contoso Pharmaceuticals wants to allow remote users to log on to Remote Web Access, but does not want the website to be available to the public, so they create a subdomain that allows only users with appropriate permissions to access the website. Contoso Pharmaceuticals sets up remote.contoso.com as the subdomain, and remote is the domain name prefix.  
   
@@ -311,7 +298,7 @@ translation.priority.ht:
 >  It is recommended that you use the default **Remote** as the prefix for your domain name.  
   
 ###  <a name="BKMK_Extension"></a> Choose a domain name extension  
- When you choose a domain name for your Internet website, you also need to specify the domain name extension that you want to use. The extension is identified by the letters that follow the final period of any domain name. (The formal term for the extension is the “top-level domain” or “TLD.”)  
+ When you choose a domain name for your Internet website, you also need to specify the domain name extension that you want to use. The extension is identified by the letters that follow the final period of any domain name. (The formal term for the extension is the “top-level domain�? or “TLD.�?)  
   
  There are two main types of domain extensions that you can use: generic and country-code.  
   
@@ -364,13 +351,13 @@ translation.priority.ht:
   
 -   The wizard does not list the domain name extension that you want to use, but the extension is available from a domain name provider that is not currently a partner.  
   
- If you choose to set up your domain name manually, work with your domain name service provider to create an “A Record” for your domain.  
+ If you choose to set up your domain name manually, work with your domain name service provider to create an “A Record�? for your domain.  
   
-##### To create an “A Record”  
+##### To create an “A Record�?  
   
-1.  Decide on a host name, such as “remote.” This is the domain name prefix. The domain name prefix plus your domain name will define the URL to open your Remote Web Access logon page; for example, **http://remote.contoso.com**.  
+1.  Decide on a host name, such as “remote.�? This is the domain name prefix. The domain name prefix plus your domain name will define the URL to open your Remote Web Access logon page; for example, **http://remote.contoso.com**.  
   
-2.  In your domain name service providers configuration dashboard (usually on their webpage), create the “A record” for the host name that you decided on in Step 1. Ensure that the IP address that you specify in the “A record” is the IP address on the WAN side of your router (the Internet facing side). Consult your router documentation to find your WAN IP address.  
+2.  In your domain name service providers configuration dashboard (usually on their webpage), create the “A record�? for the host name that you decided on in Step 1. Ensure that the IP address that you specify in the “A record�? is the IP address on the WAN side of your router (the Internet facing side). Consult your router documentation to find your WAN IP address.  
   
 3.  It is recommended that you contact your Internet Service Provider (ISP) to purchase a static IP address for your network. This ensures that the IP address does not change and that your DNS entry does not become outdated.  
   
@@ -395,11 +382,11 @@ translation.priority.ht:
 ##  <a name="BKMK_4"></a> Customize Remote Web Access  
  You can customize your Remote Web Access site by adding a personal logo or background image. You can also add links on the Home page so that this information is available to all of your users. For more information, see the following topics:  
   
--   [Customize Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_CustomizeRWA)  
+-   [Customize Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_CustomizeRWA)  
   
--   [Customize images for backgrounds and logos](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_CustomizeImages)  
+-   [Customize images for backgrounds and logos](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_CustomizeImages)  
   
--   [Repair Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_RepairRWA)  
+-   [Repair Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_RepairRWA)  
   
 ###  <a name="BKMK_CustomizeRWA"></a> Customize Remote Web Access  
  You can customize Remote Web Access by changing the title of the website, changing the background image and logo, and adding links to other websites on the home page.  
@@ -445,7 +432,7 @@ translation.priority.ht:
 -   An alert in the Alert Viewer.  
   
 > [!NOTE]
->  The Repair Wizard is not available until you turn on Remote Web Access. For information about turning on Remote Web Access, see [Turn on Remote Web Access](../windows-server-essentials-manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).  
+>  The Repair Wizard is not available until you turn on Remote Web Access. For information about turning on Remote Web Access, see [Turn on Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).  
   
 ##### To repair Remote Web Access  
   
@@ -473,6 +460,6 @@ translation.priority.ht:
   
 -   [Use Remote Web Access](../Topic/Use%20Remote%20Web%20Access%20in%20Windows%20Server%20Essentials.md)  
   
--   [Manage Anywhere Access](../windows-server-essentials-manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
+-   [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

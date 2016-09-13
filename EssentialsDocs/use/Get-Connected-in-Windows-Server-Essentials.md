@@ -14,37 +14,52 @@ ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 caps.latest.revision: 26
 author: DonGill
 manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # Get Connected in Windows Server Essentials
-[!INCLUDE[wse_all](../manage/includes/wse_all_md.md)]  
+ This topic applies to a server running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed.  
   
  You can connect your computers to the Windows Server Essentials server by using the Connector software. The Connector software is installed when you connect a computer to the server by using the Connect a Computer to the Server Wizard. You can start this wizard by typing **http://<servername\>/connect**, where **<servername\>** is the name of your server.  
   
  In this topic:  
   
+<<<<<<< HEAD
+-   [Prepare to connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_A)  
+  
+-   [Connect computers to the server by using the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_B)  
+  
+-   [Use the Launchpad](Get-Connected-in-Windows-Server-Essentials.md#BKMK_C)  
+=======
 -   [Prepare to connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_A)  
   
 -   [Connect computers to the server by using the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_B)  
   
 -   [Use the Launchpad](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_C)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##  <a name="BKMK_A"></a> Prepare to connect computers to the server  
  This section discusses the Connector software, the operating systems that are supported by Windows Server Essentials, the prerequisite tasks that must be completed before connecting your computers to the server, and the changes the server makes to the computers when you run the Connector software.  
   
+<<<<<<< HEAD
+-   [Connector software overview](Get-Connected-in-Windows-Server-Essentials.md#BKMK_1)  
+  
+-   [Prerequisites for connecting a computer to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2)  
+  
+-   [Prerequisites for connecting a Mac computer to the network](Get-Connected-in-Windows-Server-Essentials.md#BKMK_3)  
+  
+-   [Supported operating systems for client computers](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4)  
+  
+-   [Changes the server makes to a client computer](Get-Connected-in-Windows-Server-Essentials.md#BKMK_5)  
+  
+-   [Network user name and password information](Get-Connected-in-Windows-Server-Essentials.md#BKMK_6)  
+  
+-   [Server administrator’s account](Get-Connected-in-Windows-Server-Essentials.md#BKMK_7)  
+  
+-   [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8)  
+  
+###  <a name="BKMK_1"></a> Connector software overview  
+ The Connector software for the Windows Server Essentials operating system connects the computers in your network to the Windows Server Essentials server. When you connect computers to the server, the Connector software enables you to automatically back up the computers and monitor their health. The Connector software also enables you to configure and remotely administer the Windows Server Essentials server. The Connector software is installed when you connect a client computer to the server. For detailed instructions about connecting client computers to the Windows Server Essentials server, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9) later in this topic.  
+=======
 -   [Connector software overview](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_1)  
   
 -   [Prerequisites for connecting a computer to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_2)  
@@ -63,13 +78,18 @@ translation.priority.ht:
   
 ###  <a name="BKMK_1"></a> Connector software overview  
  The Connector software for the Windows Server Essentials operating system connects the computers in your network to the Windows Server Essentials server. When you connect computers to the server, the Connector software enables you to automatically back up the computers and monitor their health. The Connector software also enables you to configure and remotely administer the Windows Server Essentials server. The Connector software is installed when you connect a client computer to the server. For detailed instructions about connecting client computers to the Windows Server Essentials server, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9) later in this topic.  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_2"></a> Prerequisites for connecting a computer to the server  
  The following requirements must be met before you connect a computer to the network:  
   
 -   The installation of Windows Server Essentials is complete, and the server is running. The Connector software will exit its installation if it is unable to communicate with the server.  
   
+<<<<<<< HEAD
+-   The client computer is running a supported operating system. For more information, see [Supported operating systems for client computers](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4).  
+=======
 -   The client computer is running a supported operating system. For more information, see [Supported operating systems for client computers](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_4).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 -   The client computer must have a valid connection to the Internet.  
   
@@ -98,9 +118,15 @@ translation.priority.ht:
 -   A client computer that is already joined to another Active Directory domain cannot join a Windows Server Essentials domain.  
   
 > [!NOTE]
->  In an on-premises client deployment for [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] or [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you can connect computers to the server without adding them to the Windows Server Essentials domain. This method is not available for all supported client operating systems, and features such as Group Policy and virtual private networks (VPNs), which require that a computer be connected to the domain, are not available. For requirements and instructions, see [Connect computers to a Windows Server Essentials server without joining the domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+<<<<<<< HEAD
+>  In an on-premises client deployment for  Windows Server 2012 R2 Essentials or  Windows Server 2012 Essentials, you can connect computers to the server without adding them to the Windows Server Essentials domain. This method is not available for all supported client operating systems, and features such as Group Policy and virtual private networks (VPNs), which require that a computer be connected to the domain, are not available. For requirements and instructions, see [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+  
+ For step-by-step instructions to connect a computer to the server running Windows Server Essentials, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+=======
+>  In an on-premises client deployment for  Windows Server 2012 R2 Essentials or  Windows Server 2012 Essentials, you can connect computers to the server without adding them to the Windows Server Essentials domain. This method is not available for all supported client operating systems, and features such as Group Policy and virtual private networks (VPNs), which require that a computer be connected to the domain, are not available. For requirements and instructions, see [Connect computers to a Windows Server Essentials server without joining the domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
   
  For step-by-step instructions to connect a computer to the server running Windows Server Essentials, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_3"></a> Prerequisites for connecting a Mac computer to the network  
  The following requirements must be met before you connect a Mac computer to the network:  
@@ -130,21 +156,21 @@ translation.priority.ht:
 >  Windows Server Essentials does not support joining computers running the Home, Starter, or Media Center versions of Windows to the domain. In addition, you cannot use Remote Web Access to connect to these computers.  
   
 #### Windows Server 2012 R2 Essentials  
- [!INCLUDE[wseblue_section](../use/includes/wseblue_section_md.md)] The following computer operating systems are supported:  
+  This section applies to a server running Windows Server 2012 R2 Essentials, or to a server running Windows Server 2012 R2 Standard or Windows Server 2012 R2 Datacenter with the Windows Server Essentials Experience role installed. The following computer operating systems are supported:  
   
  **Windows 7 operating systems**  
   
--   [!INCLUDE[nextref_client_7hb](../manage/includes/nextref_client_7hb_md.md)] SP1 (x86 and x64)  
+-    Windows 7 Home Basic SP1 (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7hp](../manage/includes/nextref_client_7hp_md.md)] SP1 (x86 and x64)  
+-    Windows 7 Home Premium SP1 (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7pro](../use/includes/nextref_client_7pro_md.md)] SP1 (x86 and x64)  
+-    Windows 7 Professional SP1 (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7ult](../manage/includes/nextref_client_7ult_md.md)] SP1 (x86 and x64)  
+-    Windows 7 Ultimate SP1 (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7ent](../manage/includes/nextref_client_7ent_md.md)] SP1 (x86 and x64)  
+-    Windows 7 Enterprise SP1 (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7str](../manage/includes/nextref_client_7str_md.md)] SP1 (x86)  
+-    Windows 7 Starter SP1 (x86)  
   
  **Windows 8 operating systems**  
   
@@ -183,24 +209,24 @@ translation.priority.ht:
 -   Mac OS X v10.8 Mountain Lion  
   
 > [!NOTE]
->  You can view the health and backup status for a Mac computer from the [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)] Dashboard. However, you cannot configure computer backup or start a backup from the Dashboard. In addition, you cannot use Remote Web Access to connect a Mac computer.  
+>  You can view the health and backup status for a Mac computer from the  Windows Server 2012 Essentials Dashboard. However, you cannot configure computer backup or start a backup from the Dashboard. In addition, you cannot use Remote Web Access to connect a Mac computer.  
   
 #### Windows Server 2012 Essentials  
- [!INCLUDE[wse_section](../manage/includes/wse_section_md.md)] The following computer operating systems are supported:  
+  This section applies to a server running Windows Server 2012 Essentials. The following computer operating systems are supported:  
   
  **Windows 7 operating systems**  
   
--   [!INCLUDE[nextref_client_7hb](../manage/includes/nextref_client_7hb_md.md)] (x86 and x64)  
+-    Windows 7 Home Basic (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7hp](../manage/includes/nextref_client_7hp_md.md)] (x86 and x64)  
+-    Windows 7 Home Premium (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7pro](../use/includes/nextref_client_7pro_md.md)] (x86 and x64)  
+-    Windows 7 Professional (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7ult](../manage/includes/nextref_client_7ult_md.md)] (x86 and x64)  
+-    Windows 7 Ultimate (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7ent](../manage/includes/nextref_client_7ent_md.md)] (x86 and x64)  
+-    Windows 7 Enterprise (x86 and x64)  
   
--   [!INCLUDE[nextref_client_7str](../manage/includes/nextref_client_7str_md.md)] (x86)  
+-    Windows 7 Starter (x86)  
   
  **Windows 8 operating systems**  
   
@@ -264,12 +290,19 @@ translation.priority.ht:
   
 -   Opens TCP port 3389 in client computers running Windows clients to allow Remote Desktop Services to run  
   
--   Deploys VPN on the client computer and provides a single click experience if the VPN functionality is enabled on [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)], or provides an auto-connect experience if the VPN functionality is enabled on [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)]  
+-   Deploys VPN on the client computer and provides a single click experience if the VPN functionality is enabled on  Windows Server 2012 Essentials, or provides an auto-connect experience if the VPN functionality is enabled on  Windows Server 2012 R2 Essentials  
   
+<<<<<<< HEAD
+ For information about connecting your computer to the server, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+  
+###  <a name="BKMK_6"></a> Network user name and password information  
+ You can obtain your network user name and password information from the person who manages your server. You can use these credentials to connect your computer to the server and access information from the server. For more information about connecting your computer to the server, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+=======
  For information about connecting your computer to the server, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
   
 ###  <a name="BKMK_6"></a> Network user name and password information  
  You can obtain your network user name and password information from the person who manages your server. You can use these credentials to connect your computer to the server and access information from the server. For more information about connecting your computer to the server, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
  If you are the server administrator, you can create the network credentials by adding a user account from the **Users** tab of the Dashboard. For more information about user accounts, see [Manage user accounts using the Dashboard](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8).  
   
@@ -288,7 +321,7 @@ translation.priority.ht:
   
 -   Monitoring daily activities on the network  
   
- In [!INCLUDE[sbs_sbs8_2](../install/includes/sbs_sbs8_2_md.md)], [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)], and [!INCLUDE[winblue_server_2](../install/includes/winblue_server_2_md.md)] with the Windows Server Essentials Experience role installed, you can assign the network administrator access level to any user account. This grants the required permissions to perform network administrator tasks. When a user is assigned the network administrator access level, the **User Access Control** prompt opens for any task that requires administrator permissions.  
+ In  Windows Server 2012 Essentials,  Windows Server 2012 R2 Essentials, and  Windows Server 2012 R2 with the Windows Server Essentials Experience role installed, you can assign the network administrator access level to any user account. This grants the required permissions to perform network administrator tasks. When a user is assigned the network administrator access level, the **User Access Control** prompt opens for any task that requires administrator permissions.  
   
 ###  <a name="BKMK_8"></a> Remove a computer from a Windows domain  
  To remove a computer from its domain, you will be prompted for the user name and password of the domain account.  
@@ -316,6 +349,23 @@ translation.priority.ht:
 ##  <a name="BKMK_B"></a> Connect computers to the server by using the Connector software  
  This section provides access to procedures and information that will help you install the Connector software, connect your computer to the server, and troubleshoot connecting computers to the server.  
   
+<<<<<<< HEAD
+-   [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)  
+  
+-   [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)  
+  
+-   [Install the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)  
+  
+-   [Move computer data and settings manually](Get-Connected-in-Windows-Server-Essentials.md#BKMK_12)  
+  
+-   [Transfer multiple user profiles during computer deployment](Get-Connected-in-Windows-Server-Essentials.md#BKMK_Transfer)  
+  
+-   [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)  
+  
+-   [Disconnect your computer from or reconnect your computer to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_14)  
+  
+-   [How backup works with sleep and hibernate modes](Get-Connected-in-Windows-Server-Essentials.md#BKMK_Sleep)  
+=======
 -   [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)  
   
 -   [Connect computers to a Windows Server Essentials server without joining the domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)  
@@ -331,9 +381,10 @@ translation.priority.ht:
 -   [Disconnect your computer from or reconnect your computer to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_14)  
   
 -   [How backup works with sleep and hibernate modes](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_Sleep)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_9"></a> Connect computers to the server  
- When you connect a computer to a server that is running [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] or [!INCLUDE[winblue_server_2](../install/includes/winblue_server_2_md.md)] with the Windows Server Essentials Experience role installed, ensure that your client computer has a valid connection to the Internet.  
+ When you connect a computer to a server that is running  Windows Server 2012 R2 Essentials or  Windows Server 2012 R2 with the Windows Server Essentials Experience role installed, ensure that your client computer has a valid connection to the Internet.  
   
  Complete the following procedure on all client computers to connect them to your server.  
   
@@ -344,7 +395,11 @@ translation.priority.ht:
 -   The user name and password of the computer’s local administrator account  
   
 > [!NOTE]
->  In an on-premises client deployment for [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] or [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)], you can connect computers to the server without adding them to the Windows Server Essentials domain. This method is not available for all supported client operating systems, and features such as Group Policy and virtual private networks (VPNs), which require that a computer be connected to the domain, are not available. For requirements and instructions, see [Connect computers to a Windows Server Essentials server without joining the domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+<<<<<<< HEAD
+>  In an on-premises client deployment for  Windows Server 2012 R2 Essentials or  Windows Server 2012 Essentials, you can connect computers to the server without adding them to the Windows Server Essentials domain. This method is not available for all supported client operating systems, and features such as Group Policy and virtual private networks (VPNs), which require that a computer be connected to the domain, are not available. For requirements and instructions, see [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+=======
+>  In an on-premises client deployment for  Windows Server 2012 R2 Essentials or  Windows Server 2012 Essentials, you can connect computers to the server without adding them to the Windows Server Essentials domain. This method is not available for all supported client operating systems, and features such as Group Policy and virtual private networks (VPNs), which require that a computer be connected to the domain, are not available. For requirements and instructions, see [Connect computers to a Windows Server Essentials server without joining the domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ##### To connect a client computer to the server  
   
@@ -382,7 +437,7 @@ translation.priority.ht:
   
         -   For all other computers, first create a network user account on the server by using the Dashboard. Create the user account with Administrator or Standard user privileges, based on the tasks that are performed by the person using the computer.  
   
-    4.  If your computer is running [!INCLUDE[win8_client_2](../install/includes/win8_client_2_md.md)], [!INCLUDE[winblue_client_2](../manage/includes/winblue_client_2_md.md)] or Windows 10, skip this step. If your computer is running Windows 7, and if you have documents, pictures, or personal preferences (such as desktop backgrounds, screen savers, or Internet Explorer favorites) that you want to keep after you join the computer to the new network, on the **Choose if you want to move your existing data and settings** page of the wizard, select the **Move my data and settings to my new network user account**.  
+    4.  If your computer is running  Windows 8,  Windows 8.1 or Windows 10, skip this step. If your computer is running Windows 7, and if you have documents, pictures, or personal preferences (such as desktop backgrounds, screen savers, or Internet Explorer favorites) that you want to keep after you join the computer to the new network, on the **Choose if you want to move your existing data and settings** page of the wizard, select the **Move my data and settings to my new network user account**.  
   
     5.  Choose if you want to automatically wake the computer to create a backup on the **Choose if you want to wake this computer to create its backup** page.  
   
@@ -393,16 +448,16 @@ translation.priority.ht:
     > [!NOTE]
     >  When you log on to a computer that is running Windows 8 for the first time by using your network account, after it connects to the server, instructions for migrating files and applications from the old user account appear. Follow the instructions on the **How do I migrate files and applications from my old user account?** page to migrate all files and applications to the network user account.  
   
-9. After the computer is successfully connected to the server, shortcuts to the Connector TrayApp and the server Dashboard appear on the Start menu, which can be used as follows (if your computer is running [!INCLUDE[win8_client_2](../install/includes/win8_client_2_md.md)], [!INCLUDE[winblue_client_2](../manage/includes/winblue_client_2_md.md)] or Windows 10, the Dashboard and Connector TrayApp will be available from the computer’s Start screen):  
+9. After the computer is successfully connected to the server, shortcuts to the Connector TrayApp and the server Dashboard appear on the Start menu, which can be used as follows (if your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be available from the computer’s Start screen):  
   
-    -   If your computer is running [!INCLUDE[win8_client_2](../install/includes/win8_client_2_md.md)], [!INCLUDE[winblue_client_2](../manage/includes/winblue_client_2_md.md)] or Windows 10, the Dashboard and Connector TrayApp will be searchable as an App.  
+    -   If your computer is running  Windows 8,  Windows 8.1 or Windows 10, the Dashboard and Connector TrayApp will be searchable as an App.  
   
     -   From the Connector TrayApp, you can enable or disable the **Keep me remotely connected** feature. You can also double-click the TrayApp to start the Launchpad. From the Launchpad, you can access the Shared folders shortcut, configure computer backups, address alerts, and open the Remote Web Access website.  
   
     -   From the **Dashboard** link, you can administer your server.  
   
 ###  <a name="BKMK_10"></a> Connect computers to a Windows Server Essentials server without joining the domain  
- This topic describes how to add a [!INCLUDE[nextref_client_7](../manage/includes/nextref_client_7_md.md)], [!INCLUDE[win8_client_2](../install/includes/win8_client_2_md.md)], [!INCLUDE[winblue_client_2](../manage/includes/winblue_client_2_md.md)] or Windows 10 computer to a Windows Server Essentials network without joining the computer to the Windows Server Essentials domain in an on-premises client deployment. This connection method is supported in [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] and [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)].  
+ This topic describes how to add a  Windows 7,  Windows 8,  Windows 8.1 or Windows 10 computer to a Windows Server Essentials network without joining the computer to the Windows Server Essentials domain in an on-premises client deployment. This connection method is supported in  Windows Server 2012 R2 Essentials and  Windows Server 2012 Essentials.  
   
  This is an alternative to the usual method, which requires joining the computer to the Windows Server Essentials domain. With that method, if the computer is in another domain, it must be removed from that domain before it can be added to the Windows Server Essentials domain.  
   
@@ -423,11 +478,15 @@ translation.priority.ht:
   
     -   Windows 10 Pro, Windows 10 Enterprise  
   
-    -   [!INCLUDE[winblue_client_pro_2](../use/includes/winblue_client_pro_2_md.md)], [!INCLUDE[winblue_client_ent_2](../manage/includes/winblue_client_ent_2_md.md)], [!INCLUDE[win8_client_pro_2](../use/includes/win8_client_pro_2_md.md)], [!INCLUDE[win8_client_ent_2](../manage/includes/win8_client_ent_2_md.md)]  
+    -    Windows 8.1 Pro,  Windows 8.1 Enterprise,  Windows 8 Pro,  Windows 8 Enterprise  
   
-    -   [!INCLUDE[nextref_client_7pro](../use/includes/nextref_client_7pro_md.md)] (x86 and x64), [!INCLUDE[nextref_client_7ent](../manage/includes/nextref_client_7ent_md.md)] (x86 and x64), [!INCLUDE[nextref_client_7ult](../manage/includes/nextref_client_7ult_md.md)] (x86 and x64)  
+    -    Windows 7 Professional (x86 and x64),  Windows 7 Enterprise (x86 and x64),  Windows 7 Ultimate (x86 and x64)  
   
+<<<<<<< HEAD
+-   The computer must meet all other requirements for client computers in Windows Server Essentials. For more information, see [Prerequisites for connecting a computer to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2).  
+=======
 -   The computer must meet all other requirements for client computers in Windows Server Essentials. For more information, see [Prerequisites for connecting a computer to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_2).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 -   To enable a connection without joining the domain, you must sign on to the computer with an account that is a member of the local Administrators group.  
   
@@ -448,9 +507,9 @@ translation.priority.ht:
   
     -   In Windows 10, click the **Start** button, select **All Apps** -> **Windows System Tools** -> **Command Prompt**, right-click Command Prompt, and then click **Run as administrator**.  
   
-    -   In [!INCLUDE[win8_client_2](../install/includes/win8_client_2_md.md)], on the **Start** page, type **command** and then press Enter. In the results, right-click **Command Prompt**, and then click **Run as administrator**.  
+    -   In  Windows 8, on the **Start** page, type **command** and then press Enter. In the results, right-click **Command Prompt**, and then click **Run as administrator**.  
   
-    -   In [!INCLUDE[nextref_client_7](../manage/includes/nextref_client_7_md.md)], on the **Start** menu, enter **command** in the search box, right-click **Command Prompt**, and then click **Run as Administrator**.  
+    -   In  Windows 7, on the **Start** menu, enter **command** in the search box, right-click **Command Prompt**, and then click **Run as Administrator**.  
   
 3.  At the command prompt, type the following command, and then press Enter:  
   
@@ -458,7 +517,11 @@ translation.priority.ht:
     reg add "HKLM\SOFTWARE\Microsoft\Windows Server\ClientDeployment" /v SkipDomainJoin /t REG_DWORD /d 1  
     ```  
   
+<<<<<<< HEAD
+4.  Complete the steps in [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+=======
 4.  Complete the steps in [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ####  <a name="BKMK_SecondServer"></a> Join a second server to the network  
   
@@ -486,7 +549,11 @@ translation.priority.ht:
   
     3.  Refresh the web page.  
   
+<<<<<<< HEAD
+    4.  To connect the second server to a server running Windows Server Essentials, follow the instructions in [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+=======
     4.  To connect the second server to a server running Windows Server Essentials, follow the instructions in [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
     > [!NOTE]
     >  Connecting a second server to a server running Windows Server Essentials differs from connecting to a client computer as follows:  
@@ -534,12 +601,16 @@ translation.priority.ht:
   
 -   Enables you to configure and remotely administer Windows Server Essentials from your home computer  
   
+<<<<<<< HEAD
+ For step-by-step instructions about connecting your computer to the Windows Server Essentials server, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+=======
  For step-by-step instructions about connecting your computer to the Windows Server Essentials server, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_12"></a> Move computer data and settings manually  
- [!INCLUDE[wseblue_2](../install/includes/wseblue_2_md.md)] and [!INCLUDE[sbs_sbs8web_2](../install/includes/sbs_sbs8web_2_md.md)] support user profile migration only for client computers that are running the Windows 7 operating system. When you connect a Windows 7-based computer to the server, the Connect Computer to the Server Wizard can automatically migrate the user profile.  
+  Windows Server 2012 R2 Essentials and  Windows Server 2012 Essentials support user profile migration only for client computers that are running the Windows 7 operating system. When you connect a Windows 7-based computer to the server, the Connect Computer to the Server Wizard can automatically migrate the user profile.  
   
- The user profile cannot be transferred automatically when connecting a Windows 8, [!INCLUDE[winblue_client_2](../manage/includes/winblue_client_2_md.md)] or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](http://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.  
+ The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](http://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.  
   
 ###  <a name="BKMK_Transfer"></a> Transfer multiple user profiles during computer deployment  
  Before you connect a computer running the Windows 7 or Windows 7 SP1 operating system to the Windows Server Essentials server, in order to transfer multiple local user profiles you must first create the corresponding network user accounts on the server. For more information about creating network user accounts, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).  
@@ -569,12 +640,20 @@ translation.priority.ht:
 > [!NOTE]
 >  -   Uninstalling the Connector software does not remove the computer from the list of computers that are displayed on the **DEVICES** tab of the Dashboard. To remove the computer from the Dashboard, see [Remove a computer from the server](../manage/Manage-Devices-in-Windows-Server-Essentials.md#BKMK_3).  
 > -   When you uninstall the Connector software, shared folders on the client computer that were mapped to the server are not deleted. You must manually delete the shared folders that are mapped to the server.  
+<<<<<<< HEAD
+> -   Uninstalling the Connector software does not make the computer unjoin the original domain. You must manually unjoin the computer from the domain. For instructions, see [Remove a computer from a Windows domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_8).  
+=======
 > -   Uninstalling the Connector software does not make the computer unjoin the original domain. You must manually unjoin the computer from the domain. For instructions, see [Remove a computer from a Windows domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_8).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_14"></a> Disconnect your computer from or reconnect your computer to the server  
  To disconnect a computer from the server, you must complete the following steps:  
   
+<<<<<<< HEAD
+1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
+=======
 1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](http://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
   
@@ -582,11 +661,19 @@ translation.priority.ht:
   
  To reconnect a computer to the server that was previously disconnected from your Windows Server Essentials server network, you must complete the following steps:  
   
+<<<<<<< HEAD
+1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
+  
+2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](http://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
+  
+3.  Connect the computer to the server by using the Connect Computer Wizard. For step-by-step instructions, see [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+=======
 1.  Uninstall the Connector software from the computer by using the Control Panel. For step-by-step instructions, see [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
   
 2.  Unjoin the computer from the Windows Server Essentials domain and join it to the workgroup. For step-by-step instructions for joining Windows to a workgroup, [Join or create a workgroup](http://windows.microsoft.com/windows7/Join-or-create-a-workgroup).  
   
 3.  Connect the computer to the server by using the Connect Computer Wizard. For step-by-step instructions, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ###  <a name="BKMK_Sleep"></a> How backup works with sleep and hibernate modes  
  If you select the **Wake This Computer for Backup** option when you connect a computer to the server, the computer will automatically wake up from sleep or hibernate mode every day as specified in the Backup schedule so that it can be backed up. After the backup is finished, the computer will return to sleep or hibernate mode, based on its power management settings. If you do not select this option, the server will not back up a computer if the computer is sleeping or hibernating. For more information, see [Manage Client Backup](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md).  
@@ -604,8 +691,16 @@ translation.priority.ht:
   
 -   [Manage User Accounts](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md)  
   
+<<<<<<< HEAD
+-   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
+  
+-   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
+  
+-   [Play Digital Media](Play-Digital-Media-in-Windows-Server-2012-Essentials.md)
+=======
 -   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-2012-Essentials.md)
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8

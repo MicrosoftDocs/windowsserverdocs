@@ -50,6 +50,25 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool](../migrate/Rules-used-by-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
   
+<<<<<<< HEAD
+-   [Troubleshoot Anywhere Access](Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)  
+  
+-   [Troubleshoot computer backup and restore errors](Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)  
+  
+-   [Troubleshoot computer monitoring](Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md)  
+  
+-   [Troubleshoot connecting computers to the server](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md)  
+  
+-   [Troubleshoot File History](Troubleshoot-File-History-in-Windows-Server-Essentials.md)  
+  
+-   [Troubleshoot installation](Troubleshoot-Windows-Server-Essentials-installation.md)  
+  
+-   [Troubleshoot Remote Web Access connectivity](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
+  
+-   [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
+  
+-   [Use the Windows Server 2012 Essentials Log Collector](Use-the-Windows-Server-2012-Essentials-Log-Collector.md)  
+=======
 -   [Troubleshoot Anywhere Access](../support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
 -   [Troubleshoot computer backup and restore errors](../support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)  
@@ -67,6 +86,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
 -   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
   
 -   [Use the Windows Server 2012 Essentials Log Collector](../support/Use-the-Windows-Server-2012-Essentials-Log-Collector.md)  
+>>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
   
 ## Ask a question in the forums  
   
@@ -104,11 +124,11 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 ## End-to-end solution guides  
   
--   [!INCLUDE[wseblue_solution](../install/includes/wseblue_solution_md.md)]  
+-    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](http://technet.microsoft.com/library/dn582043.aspx).  
   
--   [!INCLUDE[wseblue_solution_secure_access](../install/includes/wseblue_solution_secure_access_md.md)]  
+-    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](http://technet.microsoft.com/library/dn629457.aspx).  
   
--   [!INCLUDE[wseblue_solution_collaboration](../install/includes/wseblue_solution_collaboration_md.md)]  
+-    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](http://technet.microsoft.com/library/dn747893.aspx).  
   
 ## See also  
   

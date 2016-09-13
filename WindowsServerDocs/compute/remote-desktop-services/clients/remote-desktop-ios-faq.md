@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2322701c-8cf5-411a-8a09-98aacd49be2a 
 author: lizap
-manager: msswadhwa
+manager: dongill
 ---
 # Frequently asked questions about the iOS Remote Desktop client
 

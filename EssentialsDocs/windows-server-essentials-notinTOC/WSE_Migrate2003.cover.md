@@ -12,7 +12,7 @@ author: DonGill
 manager: stevenka
 ---
 # WSE_Migrate2003.cover
-## Migrating Windows Small Business Server 2003 to Windows Small Business Server “8” Beta  
+## Migrating Windows Small Business Server 2003 to Windows Small Business Server “8�? Beta  
  Microsoft Corporation  
   
  Published: May 2012  
@@ -20,4 +20,4 @@ manager: stevenka
  Version: 12.05.15  
   
 ### Abstract  
- This guide explains how to install [!INCLUDE[sbs_sbs8_2](../windows-server-essentials/includes/sbs_sbs8_2_md.md)] in migration mode on a new server, and then migrate the settings and data from the old server that is running Windows Small Business Server 2003 to the new server that is running [!INCLUDE[sbs_sbs8_2](../windows-server-essentials/includes/sbs_sbs8_2_md.md)]. This guide also helps you demote and remove your old server from the network after you finish the migration process.
+ This guide explains how to install  Windows Server 2012 Essentials in migration mode on a new server, and then migrate the settings and data from the old server that is running Windows Small Business Server 2003 to the new server that is running  Windows Server 2012 Essentials. This guide also helps you demote and remove your old server from the network after you finish the migration process.

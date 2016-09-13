@@ -37,11 +37,11 @@ This guide provides information and basic instructions to help you set up and in
 ## Prerequisites  
  Before installing Exchange Server on a Windows Server Essentials network, make sure that you complete the tasks outlined in this section.  
   
--   [Set up a server that is running Windows Server Essentials](../windows-server-essentials-manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SetUpSBS8)  
+-   [Set up a server that is running Windows Server Essentials](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SetUpSBS8)  
   
--   [Prepare a second server on which to install Exchange Server](../windows-server-essentials-manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SecondServer)  
+-   [Prepare a second server on which to install Exchange Server](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_SecondServer)  
   
--   [Configure your Internet domain name](../windows-server-essentials-manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_DomainNames)  
+-   [Configure your Internet domain name](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md#BKMK_DomainNames)  
   
 ###  <a name="BKMK_SetUpSBS8"></a> Set up a server that is running Windows Server Essentials  
  You must have already set up a server that is running Windows Server Essentials. This will be the domain controller for the server that is running Exchange Server. For information about how to set up Windows Server Essentials, see [Install Windows Server Essentials](../Topic/Install%20Windows%20Server%20Essentials.md).  
@@ -49,7 +49,7 @@ This guide provides information and basic instructions to help you set up and in
 ###  <a name="BKMK_SecondServer"></a> Prepare a second server on which to install Exchange Server  
  You must install Exchange Server on a second server that is running a version of the Windows Server operating system that officially supports running Exchange Server 2010 or Exchange Server 2013. You must then join the second server to the Windows Server Essentials domain.  
   
- For information about how to join a second server to the Windows Server Essentials domain, see “Join a second server to the network” in [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md).  
+ For information about how to join a second server to the Windows Server Essentials domain, see “Join a second server to the network�? in [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md).  
   
 > [!NOTE]
 >  Microsoft does not support installing Exchange Server on a server that is running Windows Server Essentials.  
@@ -64,7 +64,7 @@ This guide provides information and basic instructions to help you set up and in
 |mail|host (A)|Address=*public IP address assigned by your ISP*|Exchange Server will receive mail addressed to mail.contoso.com.<br /><br /> You can use a different name at your own selection.|  
 |MX|mail exchanger (MX)|Hostname=@<br /><br /> Address=mail.contoso.com<br /><br /> Preference=0|Provides email message routing for email@contoso.com to arrive at your on-premises server that is running Exchange Server.|  
 |SPF|text (TXT)|v=spf1 a mx ~all|Resource record that helps prevent email sent from your server as being identified as spam.|  
-|autodiscover._tcp|service (SRV)|Service: _autodiscover<br /><br /> Protocol: _tcp<br /><br /> Priority: 0<br /><br /> Weight: 0<br /><br /> Port: 443<br /><br /> Target host: mail.contoso.com|Enables Microsoft Office Outlook and mobile devices to automatically discover your on-premises server that is running Exchange Server.<br /><br /> **Note:** You can also configure an “autodiscover” host (A) resource record and point the record to the public IP address of your on-premises server that is running Exchange Server. However, if you implement this option, you must also provide subject alternative name (SAN) SSL certificate that supports both the mail.contoso.com and autodiscover.contoso.com domain names.|  
+|autodiscover._tcp|service (SRV)|Service: _autodiscover<br /><br /> Protocol: _tcp<br /><br /> Priority: 0<br /><br /> Weight: 0<br /><br /> Port: 443<br /><br /> Target host: mail.contoso.com|Enables Microsoft Office Outlook and mobile devices to automatically discover your on-premises server that is running Exchange Server.<br /><br /> **Note:** You can also configure an “autodiscover�? host (A) resource record and point the record to the public IP address of your on-premises server that is running Exchange Server. However, if you implement this option, you must also provide subject alternative name (SAN) SSL certificate that supports both the mail.contoso.com and autodiscover.contoso.com domain names.|  
   
 > [!NOTE]
 >  -   Replace instances of *contoso.com* in this example with the Internet domain name that you registered.  
@@ -379,18 +379,18 @@ This guide provides information and basic instructions to help you set up and in
   
     -   If you are performing a clean setup, run the following command:  
   
-         **ARRConfig config –cert “** *path to the certificate file* **” –hostnames “** *host names for Exchange Server* **”**  
+         **ARRConfig config –cert “** *path to the certificate file* **�? –hostnames “** *host names for Exchange Server* **�?**  
   
         > [!NOTE]
-        >  For example; **ARRConfig config –cert “***c:\temp\certificate.pfx***” –hostnames “***mail.contoso.com***”**  
+        >  For example; **ARRConfig config –cert “***c:\temp\certificate.pfx***�? –hostnames “***mail.contoso.com***�?**  
         >   
         >  Replace *mail.contoso.com* with the name of your domain that is protected by the certificate.  
   
     -   In you are migrating from Windows Small Business Server, run the following command:  
   
-         **ARRConfig config –cert “** *path to the certificate file* **” –hostnames “** *host names for Exchange Server* **” –targetserver “** *server name of Exchange Server* **”**  
+         **ARRConfig config –cert “** *path to the certificate file* **�? –hostnames “** *host names for Exchange Server* **�? –targetserver “** *server name of Exchange Server* **�?**  
   
-         For example; **ARRConfig config –cert “***c:\temp\certificate.pfx***” –hostnames “***mail.contoso.com***”–targetserver “***ExchangeSvr***”**  
+         For example; **ARRConfig config –cert “***c:\temp\certificate.pfx***�? –hostnames “***mail.contoso.com***�?–targetserver “***ExchangeSvr***�?**  
   
          Replace *mail.contoso.com* with the name of your domain. Replace *ExchangeSvr* with the name of your server that is running Exchange Server.  
   
@@ -446,9 +446,9 @@ This guide provides information and basic instructions to help you set up and in
  If you disable integration with an on-premises Exchange Server, you will no longer be able to use the Windows Server Essentials Dashboard to view, create, or manage Exchange Server mailboxes.  
   
 ### What do I need to know about email accounts?  
- A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft [!INCLUDE[office_365_2](../windows-server-essentials-manage/includes/office_365_2_md.md)], can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.  
+ A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft  Office 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.  
   
- The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is “*FrankM*”, the user’s email address might be *FrankM@Contoso.com*.  
+ The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is “*FrankM*�?, the user’s email address might be *FrankM@Contoso.com*.  
   
  In addition, the password that you set for the user in the Add a User Account Wizard will be the initial password of the user in the hosted email solution.  
   
@@ -457,7 +457,7 @@ This guide provides information and basic instructions to help you set up and in
  For user information about how to set up required email client software, or how to access an email account, refer to the help documentation provided by your hosted email provider.  
   
 ### What is a mailbox quota?  
- The amount of storage space that is allocated for a network user’s Exchange mailbox data is known as the “mailbox quota.”  
+ The amount of storage space that is allocated for a network user’s Exchange mailbox data is known as the “mailbox quota.�?  
   
  When you run the **Set up Exchange Server Integration** task on the Dashboard, the wizard adds a page to the Add User Account Wizard that allows you to choose whether to enforce mailbox quotas, and to specify the quota size. By default, the **Enforce mailbox quotas** option is selected (on), and user mailboxes are assigned 2 GB of storage space. Exchange administrators can customize the mailbox quota settings to suit the needs of their business.  
   
@@ -465,6 +465,6 @@ This guide provides information and basic instructions to help you set up and in
   
 -   [System Requirements for Windows Server 2012 Essentials](../Topic/System%20Requirements%20for%20Windows%20Server%202012%20Essentials.md)  
   
--   [Manage Email Service Integration](../windows-server-essentials-manage/Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
+-   [Manage Email Service Integration](Manage-Email-Service-Integration-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../windows-server-essentials-manage/Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)
