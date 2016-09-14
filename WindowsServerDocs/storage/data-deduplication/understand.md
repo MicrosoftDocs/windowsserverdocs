@@ -34,7 +34,7 @@ Once enabled for a volume, Data Deduplication runs in the background to:
 
 This occurs in the following four steps:
 
-1. Scan the file system for files that a policy makes eligible for optimization.  
+1. Scan the file system for files meeting the optimization policy.  
 ![Scan file system](media/understanding-dedup-how-dedup-works-1.gif)  
 2. Break files into variable-size chunks.  
 ![Break files into chunks](media/understanding-dedup-how-dedup-works-2.gif)
@@ -52,7 +52,7 @@ The following Usage Types provide reasonable Data Deduplication configuration fo
 
 | Usage Type | Ideal workloads | What's different |
 |------------|-----------------|------------------|
-| <a id="usage-type-default"></a>Default | General purpose file server:<ul><li>Team shares</li><li>Work folders</li><li>Folder redirection</li><li>Software development shares</li></ul> | <ul><li>Background optimization</li><li>Default optimization policy:<ul><li>Minimum file age = 3 days</li><li>Optimize in-use files = No</li><li>Optimize partial files = No</li></ul></li></ul> |
+| <a id="usage-type-default"></a>Default | General purpose file server:<ul><li>Team shares</li><li>Work Folders</li><li>Folder redirection</li><li>Software development shares</li></ul> | <ul><li>Background optimization</li><li>Default optimization policy:<ul><li>Minimum file age = 3 days</li><li>Optimize in-use files = No</li><li>Optimize partial files = No</li></ul></li></ul> |
 | <a id="usage-type-hyperv"></a>Hyper-V | Virtualized Desktop Infrastructure (VDI) servers | <ul><li>Background optimization</li><li>Default optimization policy:<ul><li>Minimum file age = 3 days</li><li>Optimize in-use files = Yes</li><li>Optimize partial files = Yes</li></ul></li><li>"Under-the-hood" tweaks for Hyper-V interop</li></ul> |
 | <a id="usage-type-backup"></a>Backup | Virtualized backup applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx) | <ul><li>Priority optimization</li><li>Default optimization policy:<ul><li>Minimum file age = 0 days</li><li>Optimize in-use files = Yes</li><li>Optimize partial files = No</li></ul></li><li>"Under-the-hood" tweaks for interop with DPM/DPM-like solutions</li></ul> |
 
@@ -64,7 +64,7 @@ Data Deduplication uses a post-processing strategy to optimize and maintain a vo
 | <a id="job-info-optimization"></a>Optimization | The **Optimization** job deduplicates by chunking data on a volume per the volume policy settings, (optionally) compressing those chunks, and storing chunks uniquely in the chunk store. The optimization process that Data Deduplication uses is described in detail in [How does Data Deduplication work?](understand.md#how-does-dedup-work). | Once every hour |
 | <a id="job-info-gc"></a>Garbage Collection | The **Garbage Collection** job reclaims disk space by removing unnecessary chunks that are no longer being referenced by files that have been recently modified or deleted. | Every Saturday at 2:35 AM |
 | <a id="job-info-scrubbing"></a>Integrity Scrubbing | The **Integrity Scrubbing** job identifies corruption in the chunk store due to disk failures or bad sectors. When possible, Data Deduplication can automatically use volume features (such as mirror or parity on a Storage Spaces volume) to reconstruct the corrupted data. Additionally, Data Deduplication keeps backup copies of popular chunks when they are referenced more than 100 times in an area called the hotspot. | Every Saturday at 3:35 AM |
-| <a id="job-info-unoptimization"></a>Unoptimization | The **Unoptimization** job, which is a special job that can only be run manually, undoes the optimization done by deduplication and disables Data Deduplication for that volume. | [On-demand only](run.md#disabling-dedup) |
+| <a id="job-info-unoptimization"></a>Unoptimization | The **Unoptimization** job, which is a special job that should only be run manually, undoes the optimization done by deduplication and disables Data Deduplication for that volume. | [On-demand only](run.md#disabling-dedup) |
 
 ## <a id="dedup-term"></a>Data Deduplication terminology
 | Term | Definition |
