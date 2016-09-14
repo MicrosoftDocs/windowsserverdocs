@@ -4,8 +4,7 @@ description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: DonGill
-ms.technology:
-  - server-nano
+ms.technology: server-nano
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fff84002-d2f8-4f11-a603-624d824a030e
