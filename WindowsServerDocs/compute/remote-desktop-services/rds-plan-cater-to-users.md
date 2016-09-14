@@ -1,0 +1,21 @@
+---
+title: Remote Desktop Services - Cater to different kinds of users
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: remote-desktop-services
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: da522a18-c33f-468e-b9d6-3ad7d3cfba26
+author: lizap
+ms.author: elizapo
+ms.date: 09/07/2016
+manager: dongill
+---
+# Remote Desktop Services - Cater to different kinds of users
+
+>Applies To: Windows Server Technical Preview
+
+Scale your deployment depending on the expected need of each type of user.
+For example, users may carry out data entry on lightweight apps, manipulate large datasets with productivity apps like Office, or work with heavy-duty engineering or graphics apps. 

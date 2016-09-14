@@ -43,9 +43,6 @@ Troubleshooting packs comprise a set of **root causes**, each of which describes
 |1|**Present, but not fixed:** The troubleshooter identified one or more root causes that remain in a **not fixed** state. This code is returned even if another root cause was fixed.|
 |2|**Not found:** The troubleshooter did not identify any root causes.|
 
-### Available troubleshooting packs
-Troubleshooting packs that are used by the Troubleshooting Engine to perform diagnostic tasks are included with all versions of [!INCLUDE[firstref_client_7](includes/firstref_client_7_md.md)] and [!INCLUDE[firstref_server_7](includes/firstref_server_7_md.md)] except the Server Core SKU. In addition, some optional operating system features and Microsoft applications include troubleshooting packs. The following table lists troubleshooting packs included with the operating system and with certain features and applications. The Application or Feature Dependency column describes any requirements for the troubleshooting pack to be available; in all cases, [!INCLUDE[nextref_client_7](includes/nextref_client_7_md.md)] or [!INCLUDE[nextref_server_7](includes/nextref_server_7_md.md)] must be installed.
-
 |Troubleshooting Pack ID|Description|Application or Feature Dependency|Windows 8|Windows RT|Windows 7|Windows Server 2008|Windows Server 2012|
 |---------------------------|---------------|-------------------------------------|-------------|--------------|-------------|-----------------------|-----------------------|
 |AeroDiagnostic|Troubleshoots problems displaying Aero effects such as transparency.|Aero Display Theme installed|Deprecated|Deprecated|Yes|No|No|

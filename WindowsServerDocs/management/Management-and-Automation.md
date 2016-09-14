@@ -1,21 +1,19 @@
 ---
 title: Management and Automation
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-management-and-automation
+ms.technology: 
+  - WSUS
+  - techgroup-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d33d4506-2dad-404e-a93e-0e0780dc1f85
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 08/19/2016
 ---
 # Management
 
->Applies To: Windows Server Technical Preview
- and  Automation
-This collection contains tool and reference information for IT pros who want to run and manage Windows Server&reg; 2016 Technical Preview.  
+This collection contains tool and reference information for IT pros who want to run and manage Windows Server&reg;.  
 
 ## In this collection  
 
@@ -28,7 +26,7 @@ This collection contains tool and reference information for IT pros who want to 
     To ease remote server management, you can download and install Remote Server Administration Tools for Windows 10&reg;. Remote Server Administration Tools for Windows 10&reg; includes Server Manager, Microsoft Management Console (MMC) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server 2016 Technical Preview.  
 
 
--   [Windows Server Update Services &#40;WSUS&#41;](windows-server-update-services/Windows-Server-Update-Services-WSUS.md)  
+-   [Windows Server Update Services &#40;WSUS&#41;](windows-server-update-services/get-started/Windows-Server-Update-Services-WSUS.md)  
 
     The content in this section describes how to configure and manage WSUS. In this section you will find information about installing the WSUS Server Role, configuring WSUS servers, as well as managing updates, and managing WSUS client computers and WSUS computer groups.  
 
