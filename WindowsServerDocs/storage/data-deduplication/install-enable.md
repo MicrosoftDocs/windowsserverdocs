@@ -40,6 +40,7 @@ To install Data Deduplication in a Nano Server installation:
 	**-- OR --**
 	<br />
 	Connect remotely to the Nano Server instance with PowerShell remoting and install Data Deduplication by using DISM:  
+	
 	```PowerShell
 	Enter-PSSession -ComputerName MyNanoServer 
 	dism /online /enable-feature /featurename:dedup-core /all
