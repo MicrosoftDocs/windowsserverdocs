@@ -3,12 +3,13 @@
 title: Home Realm Discovery Customization 
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 08/31/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 # Home Realm Discovery Customization
 
