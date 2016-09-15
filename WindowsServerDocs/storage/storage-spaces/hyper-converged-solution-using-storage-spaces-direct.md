@@ -1,24 +1,20 @@
 ---
 title: Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: kumudd
+ms.date: 08/18/2016
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
-Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
+Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available storage systems with local storage. This is a significant step forward in Windows Server software-defined storage (SDS) as it simplifies the deployment and management of storage and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
-Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct (S2D), and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 and includes the following sections:  
+Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct , and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 and includes the following sections:  
 * [How to use this guide](#BKMK_S2D1)  
 * [Hyper-converged Solution with Software Defined Storage Overview](#BKMK_S2D2)  
 * [Hardware requirements](#BKMK_S2D3)  

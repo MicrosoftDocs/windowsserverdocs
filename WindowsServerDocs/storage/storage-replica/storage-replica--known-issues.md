@@ -1,17 +1,13 @@
 ---
 title: Known Issues with Storage Replica
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
-author: kumudd
 manager: dongill
 ms.author: JGerend
+ms.technology: storage-replica
+ms.topic: get-started-article
+author: kumudd
+ms.date: 08/18/2016
+ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 # Known Issues with Storage Replica
 

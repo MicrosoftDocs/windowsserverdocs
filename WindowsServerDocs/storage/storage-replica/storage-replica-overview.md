@@ -1,17 +1,13 @@
 ---
 title: Storage Replica Overview
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
-author: kumudd
 manager: dongill
 ms.author: JGerend
+ms.technology: storage-replica
+ms.topic: get-started-article
+author: kumudd
+ms.date: 08/18/2016
+ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
 # Storage Replica Overview
 

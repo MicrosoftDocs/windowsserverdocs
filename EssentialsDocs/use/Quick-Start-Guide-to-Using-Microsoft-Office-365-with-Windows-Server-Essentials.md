@@ -2,18 +2,17 @@
 title: "Quick Start Guide to Using Microsoft Office 365 with Windows Server Essentials"
 ms.custom: na
 ms.date: 04/22/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d
 caps.latest.revision: 20
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Quick Start Guide to Using Microsoft Office 365 with Windows Server Essentials
@@ -70,11 +69,11 @@ manager: stevenka
   
 3.  Click a SharePoint Online library to display the documents in the library.  
   
-<<<<<<< HEAD
+
      You can open, edit, upload, and download documents in the SharePoint Online library in the same way you work with documents on the server or SkyDrive. For more information, see [Use the My Server App](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
-=======
+
      You can open, edit, upload, and download documents in the SharePoint Online library in the same way you work with documents on the server or SkyDrive. For more information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## See also  
   
@@ -82,12 +81,12 @@ manager: stevenka
   
 -   [Manage Office 365](../manage/Manage-Office-365-in-Windows-Server-Essentials.md)  
   
-<<<<<<< HEAD
+
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
-=======
+
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

@@ -1,17 +1,13 @@
 ---
 title: Storage Quality of Service
-ms.custom: na
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-qos
 ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd
+ms.date: 08/18/2016
 ---
 # Storage Quality of Service
 > Applies To: Windows Server 2016

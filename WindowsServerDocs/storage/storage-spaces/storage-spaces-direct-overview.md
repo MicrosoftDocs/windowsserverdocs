@@ -2,19 +2,15 @@
 title: Storage Spaces Direct in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
+ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage-spaces
+ms.topic: article
 author: kumudd
-manager: dongill
-ms.author: JGerend
+ms.date: 08/18/2016
+ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 ---
 # Storage Spaces Direct in Windows Server 2016
-
 >Applies To: Windows Server 2016
 
 Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available and scalable storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  

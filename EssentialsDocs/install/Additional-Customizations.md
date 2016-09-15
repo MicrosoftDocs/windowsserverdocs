@@ -2,38 +2,23 @@
 title: "Additional Customizations"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 65a195d5-0098-4c3c-b4ba-07f7319c8f1e
 caps.latest.revision: 8
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Additional Customizations
 You can make the following additional customizations to create and customize an image of  Windows Server 2012 Essentials:  
   
-<<<<<<< HEAD
+
 -   [Add Branding to the Dashboard, Remote Web Access, and Launchpad](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
   
 -   [Add a Tab to Settings](Add-a-Tab-to-Settings.md)  
@@ -65,7 +50,7 @@ You can make the following additional customizations to create and customize an 
 -   [Create a Server Recovery DVD for Remotely Administered Servers](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)  
   
 -   [Create a Server Recovery DVD for Multi-Language Support](Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
-=======
+
 -   [Add Branding to the Dashboard, Remote Web Access, and Launchpad](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
   
 -   [Add a Tab to Settings](../install/Add-a-Tab-to-Settings.md)  
@@ -97,4 +82,4 @@ You can make the following additional customizations to create and customize an 
 -   [Create a Server Recovery DVD for Remotely Administered Servers](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)  
   
 -   [Create a Server Recovery DVD for Multi-Language Support](../install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

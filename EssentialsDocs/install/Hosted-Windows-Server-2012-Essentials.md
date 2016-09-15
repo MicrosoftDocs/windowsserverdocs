@@ -2,18 +2,17 @@
 title: "Hosted Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Hosted Windows Server 2012 Essentials
@@ -133,11 +132,11 @@ This document includes information that is specific to hosters who intend to dep
   
  VPN enabling can be done during unattended deployment via our Windows PowerShell script, or it can be configured with our wizard after initial configuration.  
   
-<<<<<<< HEAD
+
 -   To enable VPN during unattended deployment, see [How do I automate the deployment?](Hosted-Windows-Server-2012-Essentials.md#BKMK_automatedeployment) in this document.  
-=======
+
 -   To enable VPN during unattended deployment, see [How do I automate the deployment?](../install/Hosted-Windows-Server-2012-Essentials.md#BKMK_automatedeployment) in this document.  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 -   To enable VPN via Windows PowerShell, run the following cmdlet with administrative privilege and provide all necessary information.  
   

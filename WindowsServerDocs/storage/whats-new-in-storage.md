@@ -1,16 +1,12 @@
 ---
 title: What's New in Storage in Windows Server
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: article
-author: JasonGerend
-manager: dongill
 ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage
+ms.topic: article
+author: kumudd
+ms.date: 08/18/2016
 --- 
 # What's New in Storage in Windows Server 2016
 

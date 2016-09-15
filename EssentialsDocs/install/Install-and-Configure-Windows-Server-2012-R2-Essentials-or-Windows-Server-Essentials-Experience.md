@@ -2,18 +2,17 @@
 title: "Install and Configure Windows Server 2012 R2 Essentials or Windows Server Essentials Experience"
 ms.custom: na
 ms.date: 01/21/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 caps.latest.revision: 37
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Install and Configure Windows Server 2012 R2 Essentials or Windows Server Essentials Experience
@@ -47,17 +46,17 @@ manager: stevenka
   
 |Deployment environment|Description|Related section|  
 |----------------------------|-----------------|---------------------|  
-<<<<<<< HEAD
+
 |New Active Directory environment|You can install Windows Server Essentials to create a new Active Directory environment.|[Deploy Windows Server Essentials to set up a new Active Directory environment](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
 |Existing Active Directory environment|You can install Windows Server Essentials in an existing Active Directory environment.|[Deploy Windows Server Essentials in an existing Active Directory environment](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|  
 |Virtual environment|You can deploy Windows Server Essentials as a virtual machine.|[Virtualize your environment](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|  
 |Automated deployment|You can automate deployment of Windows Server Essentials by using Windows PowerShell.|[Install and configure Windows Server Essentials by using Windows PowerShell](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
-=======
-|New Active Directory environment|You can install Windows Server Essentials to create a new Active Directory environment.|[Deploy Windows Server Essentials to set up a new Active Directory environment](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
-|Existing Active Directory environment|You can install Windows Server Essentials in an existing Active Directory environment.|[Deploy Windows Server Essentials in an existing Active Directory environment](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|  
+
+|New Active Directory environment|You can install Windows Server Essentials to create a new Active Directory environment.|[Deploy Windows Server Essentials to set up a new Active Directory environment]Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
+|Existing Active Directory environment|You can install Windows Server Essentials in an existing Active Directory environment.|[Deploy Windows Server Essentials in an existing Active Directory environment](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|  
 |Virtual environment|You can deploy Windows Server Essentials as a virtual machine.|[Virtualize your environment](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|  
-|Automated deployment|You can automate deployment of Windows Server Essentials by using Windows PowerShell.|[Install and configure Windows Server Essentials by using Windows PowerShell](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+|Automated deployment|You can automate deployment of Windows Server Essentials by using Windows PowerShell.|[Install and configure Windows Server Essentials by using Windows PowerShell](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
+
   
 ## Before you begin  
  Before you begin the installation, review the following documentation:  
@@ -66,11 +65,11 @@ manager: stevenka
   
 -   [Release Notes: Important Issues in Windows Server 2012 R2](assetId:///84f5dec4-fc3b-47d3-b8a0-128fbad2fec0)  
   
-<<<<<<< HEAD
+
 -   [System Requirements for Windows Server 2012 R2 Essentials](System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
-=======
+
 -   [System Requirements for Windows Server 2012 R2 Essentials](../install/System-Requirements-for-Windows-Server-2012-R2-Essentials.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ##  <a name="BKMK_NewAD"></a> Deploy Windows Server Essentials to set up a new Active Directory environment  
  Windows Server Essentials provides a way for you to quickly set up an Active Directory environment and related server features.  
@@ -129,11 +128,11 @@ manager: stevenka
     > [!IMPORTANT]
     >  You cannot change the server name after you have configured Windows Server Essentials.  
   
-<<<<<<< HEAD
+
 10. Follow the wizard to configure Windows Server Essentials as described earlier in the [Deploying Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
-=======
-10. Follow the wizard to configure Windows Server Essentials as described earlier in the [Deploying Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+10. Follow the wizard to configure Windows Server Essentials as described earlier in the [Deploying Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
+
   
 ##  <a name="BKMK_ExistingAD"></a> Deploy Windows Server Essentials in an existing Active Directory environment  
  You can also deploy Windows Server Essentials if your organization already has an existing Active Directory environment. In addition, you can choose if you want to deploy Windows Server Essentials as a domain controller.  
@@ -183,11 +182,11 @@ manager: stevenka
   
 2.  The wizard will provision a virtual machine which takes about five minutes.  
   
-<<<<<<< HEAD
+
 3.  Next, configure Windows Server Essentials as described earlier in the [Deploying Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
-=======
-3.  Next, configure Windows Server Essentials as described earlier in the [Deploying Windows Server 2012 R2 Essentials](../install/Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+3.  Next, configure Windows Server Essentials as described earlier in the [Deploying Windows Server 2012 R2 Essentials](Install-and-Configure-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
+
   
 ##  <a name="BKMK_PowerShell"></a> Install and configure Windows Server Essentials by using Windows PowerShell  
  You can automate the installation of Windows Server Essentials by using Windows PowerShell cmdlets.  
@@ -225,12 +224,12 @@ manager: stevenka
   
 ## See also  
   
--   [What's New in Windows Server Essentials](../Topic/What's%20New%20in%20Windows%20Server%20Essentials.md)  
+-   [What's New in Windows Server Essentials](../What-s-New-in-Windows-Server-Essentials.md)  
   
-<<<<<<< HEAD
+
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
-=======
+
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
--   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../Topic/Windows%20Server%202012%20R2%20Essentials%20and%20Windows%20Server%202012%20Essentials.md)
+-   [Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials](../Windows-Server-2012-R2-Essentials-and-Windows-Server-2012-Essentials.md)

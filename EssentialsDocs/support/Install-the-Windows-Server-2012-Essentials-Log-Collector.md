@@ -2,18 +2,17 @@
 title: "Install the Windows Server 2012 Essentials Log Collector"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 caps.latest.revision: 8
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Install the Windows Server 2012 Essentials Log Collector
@@ -45,11 +44,11 @@ The  Windows Server 2012 Essentials Log Collector installation wizard installs t
   
 2.  Click the **Add-in** tab, select **Log Collector** from the list, and then click **Uninstall**.  
   
-<<<<<<< HEAD
+
 3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
-=======
+
 3.  Download and install the Log Collector by performing the steps in the previous procedure, [To install the Log Collector](../support/Install-the-Windows-Server-2012-Essentials-Log-Collector.md#BKMK_ToInstall).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ### Manually install the Log Collector  
  If the installation wizard failed to install the Log Collector, you can install the Log Collector on a single computer using the following procedure.  

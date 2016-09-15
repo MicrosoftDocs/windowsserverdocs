@@ -1,36 +1,29 @@
 ---
 title: Health Service in Windows Server 2016
-ms.custom: na
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
-ms.technology:
-  - techgroup-storage
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-health-service
 ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: kumudd
+ms.date: 09/15/2016
 ---
 # Health Service in Windows Server 2016
-> Applies To: Windows Server 2016
-
-The Health Service is a new feature in Windows Server 2016 which significantly improves the day-to-day monitoring, operations, and maintenance experience of Storage Spaces. In Windows Server 2016, it is supported only for Storage Spaces Direct.  
+>Applies To: Windows Server 2016
+The Health Service is a new feature in Windows Server 2016 which significantly improves the day-to-day monitoring, operations, and maintenance experience of cluster resources. In Windows Server 2016, it is supported only for Storage Spaces Direct.   
 
 ## Prerequisites  
 
-The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces/storage-spaces-direct-overview.md).  
+The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-windows-server-2016.md).  
+>>>>>>> e6e83134c430d5e7f90dc257001f1cac9e7ad31f:WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md
 
 ## Metrics  
 
-The Health Service vastly reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential Metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.  
+The Health Service vastly reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.  
 
 ### Coverage  
-
-In Windows Server 2016, the Health Service provides the following Metrics:  
+In Windows Server 2016, the Health Service provides the following metrics:  
 -   IOPS (Read, Write, Total)  
 -   IO Throughput (Read, Write, Total)  
 -   IO Latency (Read, Write)  
@@ -42,23 +35,23 @@ In Windows Server 2016, the Health Service provides the following Metrics:
 
 ### Usage  
 
-To get Metrics for the entire Storage Spaces Direct cluster run the following PowerShell cmdlet. The **&lt;Count&gt;** parameter indicates how many sets of values to return, at one second intervals.  
+To get metrics for the entire Storage Spaces Direct cluster run the following PowerShell cmdlet. The **&lt;Count&gt;** parameter indicates how many sets of values to return, at one second intervals.  
 
         Get-StorageSubSystem clus* | Get-StorageHealthReport -Count <Count>  
 
-You can also get Metrics for one specific volume or node using the following cmdlets:  
+You can also get metrics for one specific volume or node using the following cmdlets:  
 
          Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>  
 
          Get-StorageNode -Name <NAME> | Get-StorageHealthReport -Count <Count>  
 
 > [!NOTE]
-> The Metrics returned in each case will be the subset applicable to that scope.  
+> The metrics returned in each case will be the subset applicable to that scope.  
 
 
 ### Capacity: Putting It All Together  
 
-The notion of available capacity in Storage Spaces is nuanced. To help you plan effectively, the Health Service provides six distinct Metrics for capacity. Here is what each represents:  
+The notion of available capacity in Storage Spaces is nuanced. To help you plan effectively, the Health Service provides six distinct metrics for capacity. Here is what each represents:  
 
 -   Physical Capacity Total: The sum of the raw capacity of all physical storage devices managed by the cluster.  
 
@@ -110,7 +103,6 @@ For example, here is a typical fault:
  > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](../fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
 
 ### Coverage  
-
 In Windows Server 2016, the Health Service provides the following Fault coverage:  
 
 -   **Essential cluster hardware**:  
@@ -190,7 +182,7 @@ You can also view Faults that are affecting only specific volumes or file shares
 This returns returns any Faults which affect only the specific volume or file share. Most often, these Faults relate to data resiliency or features like Storage QoS or Storage Replica.  
 
 >[!NOTE]
-> In Windows Server 2016 Technical Preview, it may take up to 30 minutes for certain Faults to appear. Improvements are forthcoming in subsequent releases.   
+> In Windows Server 2016, it may take up to 30 minutes for certain Faults to appear. Improvements are forthcoming in subsequent releases.   
 
 ### Root Cause Analysis  
 

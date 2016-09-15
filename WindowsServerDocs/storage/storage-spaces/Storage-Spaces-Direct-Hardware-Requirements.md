@@ -1,15 +1,16 @@
 ---
 title: Storage Spaces Direct Hardware Requirements
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 0a988dc0-37e6-4b56-a411-5896af814eda
+ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage-spaces
+ms.topic: article
 author: kumudd
+<<<<<<< HEAD
+=======
+ms.date: 08/18/2016
+ms.assetid: 0a988dc0-37e6-4b56-a411-5896af814eda
+>>>>>>> e6e83134c430d5e7f90dc257001f1cac9e7ad31f
 ---
 # Storage Spaces Direct Hardware Requirements
 > Applies To: Windows Server 2016

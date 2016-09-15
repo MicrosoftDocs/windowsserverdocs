@@ -1,17 +1,13 @@
 ---
 title: Cluster to Cluster Storage Replication
-ms.custom: na
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-replica
 ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: kumudd
+ms.date: 08/18/2016
 ---
 # Cluster to Cluster Storage Replication
 > Applies To: Windows Server 2016

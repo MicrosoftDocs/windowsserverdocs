@@ -2,12 +2,13 @@
 title: Configure Additional Authentication Methods for AD FS
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 09/12/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Configure Additional Authentication Methods for AD FS

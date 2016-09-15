@@ -1,17 +1,12 @@
 ---
 title: Storage-class Memory (NVDIMM-N) Health Management in Windows
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage-spaces
 ms.topic: article
-ms.assetid: 
-author: jasongerend
-manager: dongill
-ms.author: JGerend
+author: JasonGerend
+ms.date: 08/24/2016
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 > Applies To: Windows Server 2016, Windows 10 (version 1607)

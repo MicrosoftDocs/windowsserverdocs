@@ -1,17 +1,13 @@
 ---
 title: Software Storage Bus Overview
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 7266d237-4d46-4a37-8165-d68df509e215
+ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage-spaces
+ms.topic: article
 author: kumudd
-manager: dongill
-ms.author: JGerend
+ms.date: 08/24/2016
+ms.assetid: 7266d237-4d46-4a37-8165-d68df509e215
 ---
 # Software Storage Bus Overview
 > Applies To: Windows Server 2016

@@ -1,17 +1,13 @@
 ---
 title: Storage Spaces Optimize Pool
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage-spaces
 ms.topic: article
-ms.assetid: 0eec0e7e-28f3-4fb2-bd41-e97bc3560bcb
 author: kumudd
-manager: dongill
-ms.author: JGerend
+ms.date: 08/18/2016
+ms.assetid: 0eec0e7e-28f3-4fb2-bd41-e97bc3560bcb
 ---
 # Storage Spaces Optimize Pool
 
