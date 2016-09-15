@@ -1,17 +1,13 @@
 ---
 title: Server to Server Storage Replication
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
-author: kumudd
 manager: dongill
 ms.author: JGerend
+ms.technology: storage-replica
+ms.topic: get-started-article
+author: kumudd
+ms.date: 08/18/2016
+ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server to Server Storage Replication
 

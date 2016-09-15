@@ -1,18 +1,13 @@
-
 ---
 title: Storage Spaces Fault Tolerance
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage-spaces
 ms.topic: article
-ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 author: kumudd
-manager: dongill
-ms.author: JGerend
+ms.date: 08/18/2016
+ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 ---
 # Storage Spaces Fault Tolerance
 
