@@ -94,10 +94,10 @@ For more information on these security improvements - also referred to as UNC ha
 ## Work Folders
 Improved change notification when the Work Folders sever is running Windows Server 2016 and the Work Folders client is Windows 10.
 
-**What value does this change add?**
+**What value does this change add?**<br>
 For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients are not notified of the change and wait up to 10 minutes to get the update.  When using Windows Sever 2016, the Work Folders server immediately notifies Windows 10 clients and the file changes are synced immediately.
 
-**What works differently?**
+**What works differently?**<br>
 This capability is new in Windows Server 2016. This requires a Windows Server 2016 Work Folders server and the client must be Windows 10.
 
 If you’re using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
