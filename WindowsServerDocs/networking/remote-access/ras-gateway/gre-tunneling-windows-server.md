@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
+ms.author: vhorne
 author: vhorne
 ---
 # GRE Tunneling in Windows Server Technical Preview
