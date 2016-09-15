@@ -1,17 +1,13 @@
 ---
 title: Fault domain awareness in Windows Server 2016
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
 ms.author: jgerend
 ms.manager: dongill
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-spaces
 ms.topic: article
-ms.assetid: d7cf0541-7346-409f-a827-f12dc864b4bb
 author: cosmosdarwin
+ms.date: 08/24/2016
+ms.assetid: d7cf0541-7346-409f-a827-f12dc864b4bb
 ---
 # Fault domain awareness in Windows Server 2016
 
