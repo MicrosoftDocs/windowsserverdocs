@@ -1,5 +1,5 @@
 ---
-title: What's New in Failover Clustering in Windows Server Technical Preview
+title: What's New in Failover Clustering in Windows Server 2016
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,7 +14,7 @@ ms.author: kumud
 ---
 # What's New in Failover Clustering in Windows Server Technical Preview
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
 This topic explains the new and changed functionality in Failover Clustering in Windows Server 2016 Technical Preview.  
 
