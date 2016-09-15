@@ -2,33 +2,18 @@
 title: "Add Microsoft Online Service Partner Agreement Partner-of-Record Information"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 9bd191d6-ecc5-4230-a88e-f3fc281cb956
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Add Microsoft Online Service Partner Agreement Partner-of-Record Information
 ##  <a name="BKMK_3rdLevelDomanNames"></a>   
@@ -61,14 +46,14 @@ translation.priority.ht:
 8.  Type your POR ID in the **Value data** text box, and then click **OK**.  
   
 ## See Also  
-<<<<<<< HEAD
+
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-=======
+
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

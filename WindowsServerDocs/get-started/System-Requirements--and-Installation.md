@@ -1,11 +1,11 @@
 --- 
 title: System Requirements
-description: "What's the minimum requirements for storage, CPU, network, memory, RAM in a clean installation of each installation option." 
+description: "What are the minimum requirements for storage, CPU, network, memory, RAM in a clean installation of each installation option." 
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 09/14/2016
+ms.date: 09/15/2016
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -18,7 +18,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016
 
-This topic addresses the minimum system requirements to run Windows Server&reg; 2016. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 Technical Preview deployment.  
+This topic addresses the minimum system requirements to run Windows Server&reg; 2016.
 
 
 > [!Note]  
@@ -26,7 +26,7 @@ This topic addresses the minimum system requirements to run Windows Server&reg; 
 >   
 
 > [!NOTE]  
-> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016 Technical Preview. For more information, see [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
+> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Getting Started with Nano Server](../compute/nano-server/Getting-Started-with-Nano-Server.md)  
 
 
 ## Review system requirements  
@@ -73,7 +73,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 **Minimum**: 32 GB  
 
    > [!NOTE]  
-    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 Technical Preview in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
+    > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2016 in Server Core mode, with the Web Services (IIS) server role. A server in Server Core mode is about 4 GB smaller than the same server in Server with a GUI mode. For the smallest possible installation footprint, start with a Server Core installation and then completely remove any server roles or features you do not need by using Features on Demand. For more information about Server Core and Minimal Server Interface modes, see [Installation Options for Windows Server 2016 Technical Preview](Installation-Options-for-Windows-Server-2016-Technical-Preview.md).  
     >   
     > The system partition will need extra space for any of the following circumstances:  
     >   

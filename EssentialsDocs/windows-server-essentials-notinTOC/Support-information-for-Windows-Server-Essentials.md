@@ -12,8 +12,8 @@ applies_to:
   - Windows Server 2012 R2 Essentials
 ms.assetid: e8a4e0bd-5b0c-44f1-83b7-ac76f50ed25c
 caps.latest.revision: 13
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 ---
 # Support information for Windows Server Essentials
-This content has moved to [Support Windows Server Essentials](../windows-server-essentials/Support-Windows-Server-Essentials.md).
+This content has moved to [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md).

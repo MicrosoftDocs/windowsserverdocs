@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aded2881-99ed-4f18-868b-b765ab926597
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device

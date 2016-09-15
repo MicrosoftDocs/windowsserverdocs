@@ -2,18 +2,17 @@
 title: "Migrate Server Data to Windows Server Essentials"
 ms.custom: na
 ms.date: 05/20/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: dff2bf27-5d97-409b-81e8-286f7d933d90
 caps.latest.revision: 19
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Migrate Server Data to Windows Server Essentials
@@ -22,20 +21,20 @@ The following guides provide information about how to migrate to Windows Server 
 ## Migrate to Windows Server 2012 R2 Essentials  
  To avoid problems while migrating your existing server to  Windows Server 2012 R2 Essentials, read the migration guide before you begin the migration.  
   
-<<<<<<< HEAD
+
 -   [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
   
 -   [Transition to Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
-=======
+
 -   [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md)  
   
 -   [Transition to Windows Server 2012 R2 Standard](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## Migrate to Windows Server 2012 Essentials  
  To avoid problems while migrating your existing server to  Windows Server 2012 Essentials, read the migration guide that applies to your business scenario before you begin the migration.  
   
-<<<<<<< HEAD
+
 -   [Transition to Windows Server 2012 Standard](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
 -   [Migrate from Windows SBS 2011 Essentials](Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-2012-Essentials.md)  
@@ -51,7 +50,7 @@ The following guides provide information about how to migrate to Windows Server 
 -   [Migrate to New Hardware](Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md)  
   
 -   [Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool](Rules-used-by-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
-=======
+
 -   [Transition to Windows Server 2012 Standard](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
 -   [Migrate from Windows SBS 2011 Essentials](../migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-2012-Essentials.md)  
@@ -67,7 +66,7 @@ The following guides provide information about how to migrate to Windows Server 
 -   [Migrate to New Hardware](../migrate/Migrate-Windows-Server-2012-Essentials-to-New-Hardware.md)  
   
 -   [Rules used by the Windows Server 2012 Essentials Best Practices Analyzer (BPA) Tool](../migrate/Rules-used-by-the-Windows-Server-2012-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ## End-to-end solution guides  
   

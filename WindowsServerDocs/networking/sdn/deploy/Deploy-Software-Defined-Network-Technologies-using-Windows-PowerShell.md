@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 842ed937-559a-4f30-86dc-c93475433b4e
+ms.author: jamesmci
 author: jamesmci
 ---
 # Deploy Software Defined Network Technologies using Windows PowerShell

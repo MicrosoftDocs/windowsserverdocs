@@ -2,14 +2,13 @@
 title: "Step 1: Prepare your Source Server for Windows Server 2012 R2 Essentials migration"
 ms.custom: na
 ms.date: 08/20/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 caps.latest.revision: 19
 author: DonGill
@@ -22,15 +21,15 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 ## To prepare for migration  
  Complete the following preliminary steps to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.  
   
-1.  [Back up your Source Server](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
+1.  [Back up your Source Server](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
-2.  [Install the most recent service packs](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+2.  [Install the most recent service packs](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
   
-3.  [Delete the “Log on as a service�? account setting](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_DeleteSvcAcctSetting)  
+3.  [Delete the “Log on as a service�? account setting](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_DeleteSvcAcctSetting)  
   
-4.  [Evaluate the health of the Source Server](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_EvaluateHealth)  
+4.  [Evaluate the health of the Source Server](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_EvaluateHealth)  
   
-5.  [Create a plan to migrate line-of-business applications](../Topic/Step%201:%20Prepare%20your%20Source%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md#BKMK_MigrateLOB)  
+5.  [Create a plan to migrate line-of-business applications](Step-1--Prepare-your-Source-Server-for-Windows-Server-2012-R2-Essentials-migration.md#BKMK_MigrateLOB)  
   
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
@@ -196,10 +195,9 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 >  After you update and prepare your Source Server for migration, you should create a backup of the updated server before you continue the migration process.  
   
 ## Next steps  
- You have prepared your Source Server for migration to  Windows Server 2012 R2 Essentials.  Now go to [Step 2: Install Windows Server 2012 R2 Essentials as a new replica domain controller](../Topic/Step%202:%20Install%20Windows%20Server%202012%20R2%20Essentials%20as%20a%20new%20replica%20domain%20controller.md).  
-  
-<<<<<<< HEAD
+ You have prepared your Source Server for migration to  Windows Server 2012 R2 Essentials.  Now go to [Step 2: Install Windows Server 2012 R2 Essentials as a new replica domain controller](Step-2--Install-Windows-Server-2012-R2-Essentials-as-a-new-replica-domain-controller.md).  
+
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
-=======
- To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+

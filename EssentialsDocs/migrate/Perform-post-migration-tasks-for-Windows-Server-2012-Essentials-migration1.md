@@ -2,25 +2,24 @@
 title: "Perform post-migration tasks for Windows Server 2012 Essentials migration1"
 ms.custom: na
 ms.date: 04/01/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Perform post-migration tasks for Windows Server 2012 Essentials migration
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 caps.latest.revision: 9
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Perform post-migration tasks for Windows Server 2012 Essentials migration1
 The following tasks help you finish setting up your Destination Server with some of the same settings that were on the Source Server. You may have disabled some of these settings on your Source Server during the migration process, so they were not migrated to the Destination Server. Or they are optional configuration steps that you may want to perform.  
   
-<<<<<<< HEAD
+
 -   [Delete DNS entries of the Source Server](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_DeleteDNSEntries)  
   
 -   [Share line-of-business and other application data folders](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
@@ -28,7 +27,7 @@ The following tasks help you finish setting up your Destination Server with some
 -   [Fix client computer issues after migrating](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_FixClientComputerIssuesAfterMigrating)  
   
 -   [Give the built-in Administrators group the right to log on as a batch job](Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_AdminGroup)  
-=======
+
 -   [Delete DNS entries of the Source Server](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_DeleteDNSEntries)  
   
 -   [Share line-of-business and other application data folders](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
@@ -36,7 +35,7 @@ The following tasks help you finish setting up your Destination Server with some
 -   [Fix client computer issues after migrating](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_FixClientComputerIssuesAfterMigrating)  
   
 -   [Give the built-in Administrators group the right to log on as a batch job](../migrate/Perform-post-migration-tasks-for-Windows-Server-2012-Essentials-migration1.md#BKMK_AdminGroup)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ##  <a name="BKMK_DeleteDNSEntries"></a> Delete DNS entries of the Source Server  
  After you decommission the Source Server, the Domain Name Service (DNS) server may still contain entries that point to the Source Server. Delete these DNS entries.  
@@ -124,12 +123,12 @@ The following tasks help you finish setting up your Destination Server with some
   
 ## See also  
   
-<<<<<<< HEAD
+
 -   [Migrate from Windows SBS 2003](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-2012-Essentials.md)  
   
 -   [Migrate Server Data to Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
-=======
+
 -   [Migrate from Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-2012-Essentials.md)  
   
 -   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

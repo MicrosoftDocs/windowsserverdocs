@@ -2,18 +2,17 @@
 title: "Manage Remote Web Access in Windows Server Essentials"
 ms.custom: na
 ms.date: 04/01/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 caps.latest.revision: 15
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Remote Web Access in Windows Server Essentials
@@ -448,17 +447,17 @@ manager: stevenka
   
 ##  <a name="BKMK_5"></a> Troubleshoot Remote Web Access  
   
--   [Troubleshoot Remote Web Access connectivity](../Topic/Troubleshoot%20Remote%20Web%20Access%20connectivity%20in%20Windows%20Server%20Essentials.md)  
+-   [Troubleshoot Remote Web Access connectivity](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
   
--   [Troubleshoot your firewall](../Topic/Troubleshoot%20your%20firewall%20in%20Windows%20Server%20Essentials.md)  
+-   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
   
--   [Troubleshoot Anywhere Access](../Topic/Troubleshoot%20Anywhere%20Access%20in%20Windows%20Server%20Essentials.md)  
+-   [Troubleshoot Anywhere Access](../support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
 ## See also  
   
--   [Remote desktop options](../Topic/Remote%20desktop%20options.md)  
+-   [Remote desktop options](../windows-server-essentials-notinTOC/Remote-desktop-options.md)  
   
--   [Use Remote Web Access](../Topic/Use%20Remote%20Web%20Access%20in%20Windows%20Server%20Essentials.md)  
+-   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
 -   [Manage Anywhere Access](Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
