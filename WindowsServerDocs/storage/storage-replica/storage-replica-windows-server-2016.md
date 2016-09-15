@@ -1,17 +1,13 @@
 ---
 title: Storage Replica in Windows Server 2016 Technical Preview
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: a7041853-df43-4ced-96da-b638ba7c0603
-author: kumudd
 manager: dongill
 ms.author: JGerend
+ms.technology: storage-replica
+ms.topic: get-started-article
+author: kumudd
+ms.date: 08/18/2016
+ms.assetid: a7041853-df43-4ced-96da-b638ba7c0603
 ---
 # Storage Replica in Windows Server 2016 Technical Preview
 
