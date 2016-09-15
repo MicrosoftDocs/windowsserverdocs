@@ -1,16 +1,11 @@
 ---
 title: Deploy a Cloud Witness for a Failover Cluster
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: storage-failover-clustering
 author: AmitabhTamhane
 ms.author: amitabht
 manager:eldenc
+ms.date: 09/15/2016
 ---
 # Deploy a Cloud Witness for a Failover Cluster
 > Applies to Windows Server 2016

@@ -1,19 +1,14 @@
 ---
 title: Failover Clustering  
-ms.custom: na  
 ms.prod: windows-server-threshold  
-ms.reviewer: na  
-ms.service:  na  
-ms.suite: na  
-ms.tgt_pltfrm: na  
 ms.topic: article  
-ms.assetid: na
-author: Kumud  
+author: KumudD
 ms.author: kumud  
-ms.technology:
-  - Failover Clustering
+ms.technology: storage-failover-clustering
+ms.date: 09/15/2016
 ---
 # Failover Clustering
+
 >Applies To: Windows Server 2016
 
 Failover clusters provide high availability and scalability to many server workloads. These include server applications such as Microsoft Exchange Server, Hyper-V, Microsoft SQL Server, and file servers. The server applications can run on physical servers or virtual machines. This topic describes the Failover Clustering feature and provides links to additional guidance about creating, configuring, and managing failover clusters that can scale to 64 physical nodes and to 8,000 virtual machines.
@@ -29,8 +24,8 @@ This has many practical applications, including:
 ### Windows Server 2016-specific content
 * **[Cluster Operating System Rolling Upgrade](Cluster-Operating-System-Rolling-Upgrade.md)**  
   Cluster Operating System Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
-* **[Deploy a Cloud Witness for a Failover Cluster](Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md)**
-* **[Simplified SMB Multichannel and Multi-NIC Cluster Networks](Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks.md)**
+* **[Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)**
+* **[Simplified SMB Multichannel and Multi-NIC Cluster Networks](smb-multichannel.md)**
 * **[Health Service](health-service/health-service-overview.md)**  
   Health Service is a new feature in Windows Server 2016 that which significantly improves the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct.
 * **[Fault Domains](fault-domains.md)**  
