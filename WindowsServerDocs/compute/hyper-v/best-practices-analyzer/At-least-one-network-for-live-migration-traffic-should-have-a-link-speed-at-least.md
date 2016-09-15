@@ -4,9 +4,7 @@ description: " "
 ms.prod: windows-server-threshold
 ms.service: na
 manager: timlt
-ms.technology: 
-  - hyper-v
-  - techgroup-compute
+ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 5714df3f-f810-4618-8c93-e24881651100
