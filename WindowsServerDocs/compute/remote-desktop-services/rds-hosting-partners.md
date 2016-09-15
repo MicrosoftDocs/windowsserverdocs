@@ -32,31 +32,43 @@ If you are a customer looking for a partner to help you host Windows desktops an
 2. Clear the **Location** field.
 3. Enter the name of the partner in the **I'm looking for help with** field.
 
-## Partners who have passed the learning path assessment (as of 08/31/2016)
+## Partners who have passed the learning path assessment (as of 09/12/2016)
 
 ### Hosting partners:
 Hosting partners typically offer a fully managed hosted Windows desktop and application service, which may include managing the Azure resources, operating systems, applications, and helpdesk using the partner’s licensing agreements with Microsoft and other software providers.
 
 - ACUUTECH LTD
+- ANK Business Services GmbH
+- Aspex
 - Atea AS
 - Camarate B.V.
+- CGI Group Inc.
+- Conexlink
+- Connectria Hosting
 - Copaco Nederland B.V.
 - Ericom Software
+- Fujitsu Services United Kingdom
 - GIVHAN TECHNOLOGIES LLC, DBA PARTNER I.T.
 - INSIGHT ENTERPRISES AUSTRALIA PTY LTD
 - ITON
+- SaaSplaza
 - Sierra Systems
 - Sogeti
 - Telecomputing Sweden AB
+- TIETO CORPORATION
 - Trustmarque Solutions Ltd
+
 
 ### Technology consulting partners
 
 Technology consulting partners typically provide a flexible set of services to help customers deploy and manage hosted Windows desktops and applications in Azure using the customer’s licensing agreements with Microsoft and other software providers.
 
+- AVALERIS INC
 - COMPUREP-COMPUTER SPECIALIST CC
+- Computacenter AG & Co. oHG
 - COMPUTER 2000 DISTRIBUTION LTD
 - Convergence Northwest, Inc.
+- EUCafrica
 - FyrSoft LLC
 - Gill IT-Service
 - Good Data Systems, S.A. de C.V.
@@ -64,10 +76,12 @@ Technology consulting partners typically provide a flexible set of services to h
 - INTEGRIT S.A.
 - Interchange UC B.V.
 - Peters&Associates
+- Powel ASA
 - Salcon Technology Solutions
 - SCCT
 - Spusht Technologies L.L.C
 - Strateco GmbH & Co.KG
+- Synergics c.v.b.a
 - Terawe
 - Wortell
 - Zirous, Inc.
