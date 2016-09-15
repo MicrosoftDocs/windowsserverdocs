@@ -411,6 +411,7 @@
 ####[Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](identity/ad-fs/get-started/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 ####[Walkthrough: Workplace Join with an iOS Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 ####[Walkthrough: Workplace Join with a Windows Device](identity/ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+####[Set up an AD FS lab environment](identity/ad-fs/get-started/Set-up-an-AD-FS-lab-environment.md)
 
 
 
@@ -435,6 +436,10 @@
 ##### [Configure Claim Rules](identity/ad-fs/operations/Configure-Claim-Rules.md) 
 ##### [Configure AD FS 2016 and Azure MFA](identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
 ##### [Configuring Alternate Login ID](identity/ad-fs/operations/Configuring-Alternate-Login-ID.md)
+
+##### [Configure Authentication Policies](identity/ad-fs/operations/Configure-Authentication-Policies.md)
+##### [Configure AD FS Extranet Lockout](identity/ad-fs/operations/Configure-AD-FS-Extranet-Lockout.md)
+
 ##### [AD FS 2016 Single Sign On Settings](identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
 ##### [Auditing Enhancements to AD FS in Windows Server 2016](identity/ad-fs/operations/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016.md)
 ##### [Access Control Policies in AD FS](identity/ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
@@ -505,6 +510,11 @@
 ####### [Configure Server Certificate Autoenrollment](networking/core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md)
 ####### [Refresh Group Policy](networking/core-network-guide/cncg/server-certs/Refresh-Group-Policy.md)
 ####### [Verify Server Enrollment of a Server Certificate](networking/core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md)
+##### [Deploy Password-Based 802.1X Authenticated Wireless Access](networking/core-network-guide/cncg/wireless/1-deploy-8021X-wireless-access.md)
+###### [Wireless Access Deployment Overview](networking/core-network-guide/cncg/wireless/2-wireless-access-deploy-overview.md)
+###### [Wireless Access Deployment Process](networking/core-network-guide/cncg/wireless/3-wireless-access-deploy-process.md)
+###### [Wireless Access Deployment Planning](networking/core-network-guide/cncg/wireless/4-wireless-access-planning.md)
+###### [Wireless Access Deployment](networking/core-network-guide/cncg/wireless/5-wireless-access-deployment.md)
 ### [BranchCache](networking/branchcache/BranchCache.md)
 #### [BranchCache Network Shell and Windows PowerShell Commands](networking/branchcache/BranchCache-Network-Shell-and-Windows-PowerShell-Commands.md)
 #### [BranchCache Deployment Guide](networking/branchcache/deploy/BranchCache-Deployment-Guide.md)

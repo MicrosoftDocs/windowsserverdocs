@@ -32,6 +32,7 @@ The following document is provided as a reference to some of the most common sce
     -   [Walkthrough: Workplace Join with an iOS Device](../ad-fs/get-started/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
     -   [Walkthrough: Workplace Join with a Windows Device](../ad-fs/get-started/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+- [Set up an AD FS lab environment](../ad-fs/get-started/Set-up-an-AD-FS-lab-environment.md)
 
 
 ## See Also
