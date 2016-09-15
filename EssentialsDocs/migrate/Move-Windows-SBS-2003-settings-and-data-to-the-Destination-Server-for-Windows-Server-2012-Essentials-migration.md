@@ -2,24 +2,23 @@
 title: "Move Windows SBS 2003 settings and data to the Destination Server for Windows Server 2012 Essentials migration"
 ms.custom: na
 ms.date: 02/28/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 67087ccb-d820-4642-8ca2-7d2d38714014
 caps.latest.revision: 15
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Move Windows SBS 2003 settings and data to the Destination Server for Windows Server 2012 Essentials migration
 Move settings and data to the Destination Server as follows:  
   
-<<<<<<< HEAD
+
 1.  [Copy data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
@@ -31,7 +30,7 @@ Move settings and data to the Destination Server as follows:
 5.  [Configure the network](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Configure)  
   
 6.  [Map permitted computers to user accounts](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
-=======
+
 1.  [Copy data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_CopyData)  
   
 2.  [Import Active Directory user accounts to the Windows Server 2012 Essentials Dashboard (optional)](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_ImportADaccounts)  
@@ -43,7 +42,7 @@ Move settings and data to the Destination Server as follows:
 5.  [Configure the network](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_Configure)  
   
 6.  [Map permitted computers to user accounts](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-Essentials-migration.md#BKMK_MapPermittedComputers)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ##  <a name="BKMK_CopyData"></a> Copy data to the Destination Server  
  Before you copy data from the Source Server to the Destination Server, perform the following tasks:  

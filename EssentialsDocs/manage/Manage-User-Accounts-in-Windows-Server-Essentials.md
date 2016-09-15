@@ -2,28 +2,22 @@
 title: "Manage User Accounts in Windows Server Essentials"
 ms.custom: na
 ms.date: 04/22/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 caps.latest.revision: 18
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage User Accounts in Windows Server Essentials
 The Users page of the Windows Server Essentials Dashboard centralizes information and tasks that help you manage the user accounts on your small business network. For an overview of the Users Dashboard, see [Dashboard Overview](Overview-of-the-Dashboard-in-Windows-Server-Essentials.md).  
   
- In this topic:  
-  
--   [Managing user accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_ManageAccounts)  
-  
--   [Managing passwords and access](Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_ManageAccess)  
   
 ##  <a name="BKMK_ManageAccounts"></a> Managing user accounts  
  The following topics provide information about how to use the Windows Server Essentials Dashboard to manage the user accounts on the server:  
@@ -79,7 +73,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  When you choose to remove a user account from the server, a wizard deletes the selected account. Because of this, you can no longer use the account to log on to the network or to access any of the network resources. As an option, you can also delete the files for the user account at the same time that you remove the account. If you do not want to permanently remove the user account, you can deactivate the user account instead to suspend access to network resources.  
   
 > [!IMPORTANT]
->  If a user account has a Microsoft online account assigned, when you remove the user account, the online account also is removed from Microsoft Online Services, and the user’s data, including email, is subject to data retention policies in Microsoft Online Services. If you want to retain user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+>  If a user account has a Microsoft online account assigned, when you remove the user account, the online account also is removed from Microsoft Online Services, and the user’s data, including email, is subject to data retention policies in Microsoft Online Services. If you want to retain user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ##### To remove a user account  
   
@@ -233,7 +227,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  The following table describes the various user account tasks that are available from the **Users** tab. Some of the tasks are user account-specific, and they are only visible when you select a user account in the list.  
   
 > [!NOTE]
->  If you integrate  Office 365 with Windows Server Essentials, additional tasks will become available. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+>  If you integrate  Office 365 with Windows Server Essentials, additional tasks will become available. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ### User account tasks in the Dashboard  
   
@@ -302,7 +296,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
     > [!IMPORTANT]
     >  -   You may not be able to change your password if the password policy for your account has been set to **Passwords never expire**.  
     > -   Non-ASCII characters are not supported in  Azure AD. Therefore, if your server is integrated with  Azure AD, do not use any non-ASCII characters in your password.  
-    > -   If a Microsoft online account (known in  Windows Server 2012 Essentials as an “ Office 365 account�?) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Office 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+    > -   If a Microsoft online account (known in  Windows Server 2012 Essentials as an “ Office 365 account�?) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Office 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ###  <a name="BKMK_Access3"></a> What you should know about password policies  
  The password policy is a set of rules that define how users create and use passwords. The policy helps to prevent unauthorized access to user data and other information that is stored on the server. The password policy is applied to all user accounts that access the network.  
@@ -368,7 +362,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  The network administrator can remove a user account and choose to keep the user’s files for future use. In this scenario, the removed user account can no longer be used to sign in to the network; however, the files for this user will be saved in a shared folder, which can be shared with another user.  
   
 > [!IMPORTANT]
->  Be aware that if you remove a user account that has a Microsoft online account assigned, the online account is also removed, and the user data, including email, is subject to data retention policies in Microsoft Online Services. To retain the user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+>  Be aware that if you remove a user account that has a Microsoft online account assigned, the online account is also removed, and the user data, including email, is subject to data retention policies in Microsoft Online Services. To retain the user data for the online account, deactivate the user account instead of removing it. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 ##### To remove a user account but retain access to the user’s files  
   
@@ -625,10 +619,10 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   
 ## See also  
   
--   [Manage Online Accounts for Users](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md)  
+-   [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md)  
   
--   [Get Connected](../Topic/Get%20Connected%20in%20Windows%20Server%20Essentials.md)  
+-   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)  
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)  
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

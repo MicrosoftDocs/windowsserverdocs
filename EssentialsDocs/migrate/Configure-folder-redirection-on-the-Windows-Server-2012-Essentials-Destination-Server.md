@@ -2,18 +2,17 @@
 title: "Configure folder redirection on the Windows Server 2012 Essentials Destination Server"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: fe77ba67-128c-4fc3-9361-30fa6af42516
 caps.latest.revision: 3
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Configure folder redirection on the Windows Server 2012 Essentials Destination Server

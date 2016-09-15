@@ -2,42 +2,41 @@
 title: "Install and Configure Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 06/17/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: e95cf219-46a4-4041-bd81-0c4c2a0622cf
 caps.latest.revision: 20
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Install and Configure Windows Server 2012 Essentials
 ##  <a name="BKMK_InstallConfigure"></a>   
-<<<<<<< HEAD
+
  This document provides step-by-step instructions for installing and configuring  Windows Server 2012 Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server 2012 Essentials](Before-You-Install-Windows-Server-2012-Essentials.md).  
-=======
+
  This document provides step-by-step instructions for installing and configuring  Windows Server 2012 Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server 2012 Essentials](../install/Before-You-Install-Windows-Server-2012-Essentials.md).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 > [!NOTE]
 >  Are you looking for information about installing Windows Server 2012? If so, go to [Installing Windows Server 2012](assetId:///ddf71ebb-fc52-4ecb-aa88-109167c5f1c8) in the Windows Server TechNet Library.  
   
  You install and configure  Windows Server 2012 Essentials in two steps:  
   
-<<<<<<< HEAD
+
 1.  [Step 1: Install the Windows Server 2012 Essentials operating system](Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_ManualInstallation) In this step, you install the operating system on your server.  
   
 2.  [Step 2: Configure the Windows Server 2012 Essentials operating system](Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
-=======
+
 1.  [Step 1: Install the Windows Server 2012 Essentials operating system](../install/Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_ManualInstallation) In this step, you install the operating system on your server.  
   
 2.  [Step 2: Configure the Windows Server 2012 Essentials operating system](../install/Install-and-Configure-Windows-Server-2012-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_ManualInstallation"></a> Step 1: Install the Windows Server 2012 Essentials operating system  
   
@@ -177,8 +176,8 @@ manager: stevenka
   
 ## See also  
   
-<<<<<<< HEAD
+
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
-=======
+
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

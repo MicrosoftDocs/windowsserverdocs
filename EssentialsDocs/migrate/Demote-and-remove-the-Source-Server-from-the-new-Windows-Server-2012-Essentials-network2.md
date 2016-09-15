@@ -2,25 +2,24 @@
 title: "Demote and remove the Source Server from the new Windows Server 2012 Essentials network2"
 ms.custom: na
 ms.date: 11/20/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Demote and remove the Source Server from the new Windows Server 2012 Essentials network
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: a4bd55f2-ff66-4088-b83c-8bf3728b062c
 caps.latest.revision: 5
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Demote and remove the Source Server from the new Windows Server 2012 Essentials network2
 After you finish installing  Windows Server 2012 Essentials and you complete the migration, you must perform the following tasks:  
   
-<<<<<<< HEAD
+
 1.  [Remove Active Directory Certificate Services](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_ADCS)  
   
 2.  [Disconnect printers that are directly connected to the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_PhysicallyDisconnect)  
@@ -28,7 +27,7 @@ After you finish installing  Windows Server 2012 Essentials and you complete the
 3.  [Demote the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_DemoteTheSourceServer)  
   
 4.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_RemoveTheSourceServer)  
-=======
+
 1.  [Remove Active Directory Certificate Services](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_ADCS)  
   
 2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_PhysicallyDisconnect)  
@@ -36,7 +35,7 @@ After you finish installing  Windows Server 2012 Essentials and you complete the
 3.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_DemoteTheSourceServer)  
   
 4.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-2012-Essentials-network2.md#BKMK_RemoveTheSourceServer)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_ADCS"></a> Remove Active Directory Certificate Services  
  The procedure is slightly different if you have multiple Active Directory Certificate Services (AD CS) role services installed on a single server. You can use the following procedure to uninstall an AD CS role service and to retain other AD CS role services.  

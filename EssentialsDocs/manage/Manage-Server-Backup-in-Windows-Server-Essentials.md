@@ -2,18 +2,17 @@
 title: "Manage Server Backup in Windows Server Essentials"
 ms.custom: na
 ms.date: 03/25/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 0302d070-c58a-40f2-b56d-7e7842813d02
 caps.latest.revision: 12
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Server Backup in Windows Server Essentials
@@ -195,4 +194,4 @@ manager: stevenka
   
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

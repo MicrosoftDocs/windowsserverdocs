@@ -2,18 +2,17 @@
 title: "Manage Windows Server Essentials"
 ms.custom: na
 ms.date: 05/20/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 4f1902f1-a0e0-49a6-afa7-3c4b61a11b48
 caps.latest.revision: 14
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Windows Server Essentials
@@ -57,10 +56,10 @@ The following topics provide information about the server and network management
   
 ## See also  
   
--   [Install Windows Server Essentials](../Topic/Install%20Windows%20Server%20Essentials.md)  
+-   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   
--   [Migrate Server Data to Windows Server Essentials](../Topic/Migrate%20Server%20Data%20to%20Windows%20Server%20Essentials.md)  
+-   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../Topic/Use%20Windows%20Server%20Essentials.md)  
+-   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)  
   
--   [Support Windows Server Essentials](../Topic/Support%20Windows%20Server%20Essentials.md)
+-   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)

@@ -2,33 +2,18 @@
 title: "Add Third-Level Domain Names"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: e5b4a362-1881-4024-ae4e-cc3b05e50103
 caps.latest.revision: 13
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Add Third-Level Domain Names
 You can add the ability for users to request third-level domain names in the Set Up Domain Name Wizard. You do this by creating and installing a code assembly that is used by the Domain Manager in the operating system.  
