@@ -421,7 +421,6 @@
 #### [AD FS Overview](identity/ad-fs/AD-FS-2016-Overview.md)
 ##### [What's new in Active Directory Federation Services for Windows Server 2016 Technical Preview](identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md)
 ##### [AD FS Scenarios for Developers](identity/ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
->>>>>>> 62c6ce1faec640d5e2d7c2f17c64e0899fb51a3c
 #### [AD FS Deployment](identity/ad-fs/AD-FS-Deployment.md)
 ##### [Upgrading to AD FS in Windows Server 2016](identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
 #### [AD FS Development](identity/ad-fs/AD-FS-Development.md)
