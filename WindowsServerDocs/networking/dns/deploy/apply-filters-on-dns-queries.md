@@ -1,3 +1,4 @@
+---
 title: Use DNS Policy for Applying Filters on DNS Queries
 ms.custom: na
 ms.prod: windows-server-threshold
