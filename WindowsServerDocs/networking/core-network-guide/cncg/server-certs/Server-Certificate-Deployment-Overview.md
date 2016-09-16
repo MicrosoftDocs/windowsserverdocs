@@ -6,6 +6,9 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ca5c3e04-ae25-4590-97f3-0376a9c2a9a2
+ms.prod: windows-server-threshold
+ms.technology: networking
+ms.author: jamesmci
 author: jamesmci
 ---
 # Server Certificate Deployment Overview

@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 68b0f5a0-1ae8-489e-b8f8-1190267a0e1d
+ms.author: jamesmci
 author: jamesmci
 ---
 # Configure the File Services server role

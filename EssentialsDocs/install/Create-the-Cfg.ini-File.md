@@ -2,38 +2,23 @@
 title: "Create the Cfg.ini File"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 93a73556-22ef-402d-b8d4-582b74c22bcf
 caps.latest.revision: 35
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Create the Cfg.ini File
 The cfg.ini file is used to automate an installation of the operating system in the following scenario:  
   
--   When testing the experience of the end user with a preinstalled image on the target computer, the Initial Configuration section is used to walk through the installation in either an attended or unattended mode. To do this, see [Create the Initial Configuration section](../Topic/Create%20the%20Cfg.ini%20File.md#BKMK_CreateInit2).  
+-   When testing the experience of the end user with a preinstalled image on the target computer, the Initial Configuration section is used to walk through the installation in either an attended or unattended mode. To do this, see [Create the Initial Configuration section](Create-the-Cfg.ini-File.md#BKMK_CreateInit2).  
   
 ##  <a name="BKMK_CreateInit2"></a> Create the Initial Configuration section  
  Use the Initial Configuration section in the cfg.ini file to walk through the installation in either an attended or unattended mode.  
@@ -156,16 +141,16 @@ The cfg.ini file is used to automate an installation of the operating system in 
 >  The Initial Configuration section of the cfg.ini should only be used by the end user to personalize the server or for a partner to test the user experience of the server by using an unattended answer file. This section of the file is not intended to be used for creating the image.  
   
 ## See Also  
-<<<<<<< HEAD
+
  [Getting Started with the Windows Server 2012 Essentials ADK](Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-=======
+
  [Getting Started with the Windows Server 2012 Essentials ADK](../install/Getting-Started-with-the-Windows-Server-2012-Essentials-ADK.md)   
  [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](../install/Additional-Customizations.md)   
  [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

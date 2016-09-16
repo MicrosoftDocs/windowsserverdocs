@@ -2,33 +2,18 @@
 title: "Customize Server Backup"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 19b2559c-6090-45af-9a08-2eefc28473c8
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Customize Server Backup
 ## Turn off Server Backup by Default  
@@ -36,7 +21,7 @@ translation.priority.ht:
   
  When this key is set, the Server Backup User interface will not be exposed through Dashboard or Launchpad. This allows you to utilize third-party applications for Server Backup.  
   
-#### To add “ServerBackup\ProviderDisabled” registry key and set the value to 1  
+#### To add “ServerBackup\ProviderDisabled�? registry key and set the value to 1  
   
 1.  On the server, click **Start**, click **Run**, type **regedit** in the **Open** textbox, and then click **OK**.  
   
@@ -53,7 +38,7 @@ translation.priority.ht:
   
  You need to delete the key **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Server\ServerBackup\ProviderDisabled** in order to enable default server backup, change the service start type of Windows Server Server Backup Service and restart the server.  
   
-#### To delete “ServerBackup\ProviderDisabled” registry key  
+#### To delete “ServerBackup\ProviderDisabled�? registry key  
   
 1.  On the server, move your mouse to the upper right corner of the screen, and click **Search**.  
   

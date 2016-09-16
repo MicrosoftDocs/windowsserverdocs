@@ -2,18 +2,17 @@
 title: "Step 8: Run the Windows Server 2012 R2 Essentials Best Practices Analyzer"
 ms.custom: na
 ms.date: 08/20/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: e6ba701d-7183-4c26-960e-44cc280bf3e6
 caps.latest.revision: 11
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Step 8: Run the Windows Server 2012 R2 Essentials Best Practices Analyzer
@@ -34,8 +33,8 @@ When you finish migrating your settings and data to  Windows Server 2012 R2 Esse
 ## Next steps  
  You have run the  Windows Server 2012 R2 Essentials Best Practices Analyzer. Your migration to  Windows Server 2012 R2 Essentials is now complete.  
   
-<<<<<<< HEAD
+
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
-=======
- To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+

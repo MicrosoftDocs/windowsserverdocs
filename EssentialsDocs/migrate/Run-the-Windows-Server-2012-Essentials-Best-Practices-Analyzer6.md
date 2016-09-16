@@ -2,19 +2,18 @@
 title: "Run the Windows Server 2012 Essentials Best Practices Analyzer6"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Run the Windows Server 2012 Essentials Best Practices Analyzer
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 00addf78-8999-4c8e-8ac4-4ebdde00c5a3
 caps.latest.revision: 2
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Run the Windows Server 2012 Essentials Best Practices Analyzer6

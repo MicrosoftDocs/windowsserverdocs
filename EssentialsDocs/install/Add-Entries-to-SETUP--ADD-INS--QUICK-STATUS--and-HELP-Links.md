@@ -2,33 +2,18 @@
 title: "Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 caps.latest.revision: 18
-author: DonGill
-manager: stevenka
-translation.priority.ht: 
-  - de-at
-  - de-de
-  - es-es
-  - fr-be
-  - fr-fr
-  - it-ch
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-hk
-  - zh-tw
+author: coreyp-at-msft
+ms.author: coreyp
+
 ---
 # Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links
 You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, and you can add links to the Community Links section in the home page of the Dashboard. Tasks and links are added to these lists and section by placing an XML file named OEMHomePageContent.home file or an embedded resource file named OEMHomePageContent.dll in %ProgramFiles%\Windows Server\Bin\Addins\Home. The embedded resource file can be used to localize the text in the tasks and links that you add. The .home file contains the XML definitions of the tasks and links.  

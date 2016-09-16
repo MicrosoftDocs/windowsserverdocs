@@ -2,18 +2,17 @@
 title: "Manage Office 365 in Windows Server Essentials"
 ms.custom: na
 ms.date: 04/22/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
 caps.latest.revision: 40
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Manage Office 365 in Windows Server Essentials
@@ -47,8 +46,6 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
     -   On a  Windows Server 2012 R2 Essentials server, manage Exchange Online distribution groups for email also.  
   
-     To learn more about managing your online accounts from the Dashboard, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
-  
 -   Send and receive email from your organization’s Internet domain (for example, contoso.com) by linking a custom Internet domain to your  Office 365 subscription.  
   
 -   Manage your subscription and  Office 365 integration from the Dashboard.  
@@ -58,7 +55,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
     -   Create and manage your  SharePoint Online libraries from the Dashboard.  
   
         > [!NOTE]
-        >  You’ll also be able to use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. This feature is only available for  Windows Server 2012 R2 Essentials. For more information, see [Use the My Server App](../Topic/Use%20the%20My%20Server%20App%20to%20Connect%20to%20Windows%20Server%20Essentials.md).  
+        >  You’ll also be able to use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. This feature is only available for  Windows Server 2012 R2 Essentials. For more information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
   
     -   Change permissions for a  SharePoint Online team site from the Dashboard, or open the team site from the Dashboard to make other changes.  
   
@@ -74,9 +71,9 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 -    Office 365 integration gives you new ways to connect to  Office 365 services and resources:  
   
-    -   Open  Office 365 services from the  Windows Server Essentials Launchpad. For information, see [Quick Start Guide to Using Microsoft Office 365](../Topic/Quick%20Start%20Guide%20to%20Using%20Microsoft%20Office%20365%20with%20Windows%20Server%20Essentials.md).  
+    -   Open  Office 365 services from the  Windows Server Essentials Launchpad. For information, see [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).  
   
-    -   Use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. For information, see [Use the My Server App](../Topic/Use%20the%20My%20Server%20App%20to%20Connect%20to%20Windows%20Server%20Essentials.md). This feature is only available in  Windows Server 2012 R2 Essentials.  
+    -   Use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. For information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md). This feature is only available in  Windows Server 2012 R2 Essentials.  
   
 ##  <a name="BKMK_Configure"></a> Set up Office 365 integration  
  You can integrate your server with  Office 365 at any time after you complete the server installation. If you don’t already have an  Office 365 subscription, you can purchase one or sign up for a free trial subscription.  
@@ -103,7 +100,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 -   If you want to use your organization’s Internet domain in email addresses and with your  SharePoint Online resources, you’ll need to register the domain name so you can link the domain to  Office 365 during integration. For more information, see [How to buy a domain name](http://office.microsoft.com/office365-suite-help/how-to-buy-a-domain-name-HA102819883.aspx?CTT=5&origin=HA102818660).  
   
 > [!NOTE]
->  You don’t need to subscribe to  Office 365 in advance. You’ll be able to buy a subscription or sign up for a free trial during  Office 365 integration. If you’d like to take a look at plans and pricing for  Office 365, [compare Office 365 plans for businesses](http://office.microsoft.com/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_subscribe%20to%20office%20365_Text).  
+>  You don’t need to subscribe to  Office 365 in advance. You’ll be able to buy a subscription or sign up for a free trial during  Office 365 integration. If you’d like to take a look at plans and pricing for  Office 365, [compare Office 365 plans for businesses](http://office.microsoft.com/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_subscribe-to-office-365_Text).  
   
 ###  <a name="BKMK_StepTwo"></a> Step 2: Integrate the server with Microsoft Office 365  
  Perform the following procedure on the domain controller to integrate your  Windows Server Essentials server with  Office 365.  
@@ -202,7 +199,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 -   Create Microsoft Online Services accounts for your users.  
   
-     To use  Office 365 services, your users must have a Microsoft Online Services account associated with their network user account. The Dashboard makes this easy. If you’re using a new  Office 365 subscription, you can bulk-create online accounts for your existing user accounts. If you’re integrating a new server with an  Office 365 subscription that you’re already using, you can import user accounts from your existing online accounts. For procedures, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Windows-Server-Essentials-Users.md).  
+     To use  Office 365 services, your users must have a Microsoft Online Services account associated with their network user account. The Dashboard makes this easy. If you’re using a new  Office 365 subscription, you can bulk-create online accounts for your existing user accounts. If you’re integrating a new server with an  Office 365 subscription that you’re already using, you can import user accounts from your existing online accounts. For procedures, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).  
   
 > [!NOTE]
 >  On the Dashboard in  Windows Server 2012 Essentials, Microsoft Online Services accounts are referred to as “Office 365 accounts.�? The accounts are the same; only the terminology changed.  
@@ -290,8 +287,8 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 -   [Services Integration Overview for Windows Server 2012 R2 Essentials - Part 2](http://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)  
   
--   [Quick Start Guide to Using Microsoft Office 365](../Topic/Quick%20Start%20Guide%20to%20Using%20Microsoft%20Office%20365%20with%20Windows%20Server%20Essentials.md)  
+-   [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)  
   
--   [Manage Microsoft Online Services](Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md)  
+-   [Manage Microsoft Online Services](../manage/Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)
+-   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)

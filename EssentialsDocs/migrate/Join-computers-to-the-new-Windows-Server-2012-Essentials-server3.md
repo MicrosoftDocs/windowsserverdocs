@@ -2,19 +2,18 @@
 title: "Join computers to the new Windows Server 2012 Essentials server3"
 ms.custom: na
 ms.date: 10/03/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Join computers to the new Windows Server 2012 Essentials server
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 2f651a16-7bc3-4bd1-907e-15deda425848
 caps.latest.revision: 2
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Join computers to the new Windows Server 2012 Essentials server3

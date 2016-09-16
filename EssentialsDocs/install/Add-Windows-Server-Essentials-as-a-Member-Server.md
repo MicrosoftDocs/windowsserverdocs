@@ -2,18 +2,17 @@
 title: "Add Windows Server Essentials as a Member Server"
 ms.custom: na
 ms.date: 02/25/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 caps.latest.revision: 10
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Add Windows Server Essentials as a Member Server
@@ -82,8 +81,8 @@ This topic applies to a server running Windows Server 2012 R2 Standard or Window
   
 ## See also  
   
-<<<<<<< HEAD
+
 -   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)
-=======
+
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+

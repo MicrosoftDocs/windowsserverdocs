@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # STEP 4 Create the Network Load Balanced Remote Access Cluster
