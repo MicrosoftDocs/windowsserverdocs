@@ -1,16 +1,12 @@
 ---
 title: Fault domain awareness
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
 ms.author: cosdar
 ms.manager: eldenc
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-failover-clustering
 ms.topic: article
 author: cosmosdarwin
+ms.date: 09/15/2016
 ---
 # Fault domain awareness in Windows Server 2016
 > Applies To: Windows Server 2016
@@ -26,7 +22,7 @@ This short video presents an overview of fault domains in Windows Server 2016:
 - **Storage Spaces, including Storage Spaces Direct, uses fault domains to maximize data safety.**  
     Resiliency in Storage Spaces is conceptually like distributed, software-defined RAID. Multiple copies of all data are kept in sync, and if hardware fails and one copy is lost, others are recopied to restore resiliency. To achieve the best possible resiliency, copies should be kept in separate fault domains.
 
-- **The [Health Service](health-service/health-service-overview.md) uses fault domains to provide more helpful alerts.**  
+- **The [Health Service](health-service-overview.md) uses fault domains to provide more helpful alerts.**  
     Each fault domain can be associated with location metadata, which will automatically be included in any subsequent alerts. These descriptors can assist operations or maintenance personnel and reduce errors by disambiguating hardware.  
 
 - **Stretch clustering uses fault domains to determine preferred ownership.**  

@@ -15,8 +15,7 @@ The Health Service is a new feature in Windows Server 2016 which significantly i
 
 ## Prerequisites  
 
-The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-windows-server-2016.md).  
->>>>>>> e6e83134c430d5e7f90dc257001f1cac9e7ad31f:WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md
+The Health Service is enabled by default with Storage Spaces Direct. No additional action is required to set it up or start it. To learn more about Storage Spaces Direct, see [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md).  
 
 ## Metrics  
 
@@ -67,7 +66,7 @@ The notion of available capacity in Storage Spaces is nuanced. To help you plan 
 
 The following diagram illustrates the relationship between these quantities.  
 
-![Breakdown of Capacity Metrics](media/overview-CapacityMetricsBreakdown.png)  
+![Breakdown of Capacity Metrics](media/health-service-overview/overview-CapacityMetricsBreakdown.png)  
 
 
 ## Faults  
@@ -100,7 +99,7 @@ For example, here is a typical fault:
 
 
  >[!NOTE]
- > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](../fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
+ > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
 
 ### Coverage  
 In Windows Server 2016, the Health Service provides the following Fault coverage:  
@@ -303,5 +302,5 @@ You can verify using the following PowerShell cmdlet:
     Get-PhysicalDisk | Select Model, Manufacturer, FirmwareVersion  
 
 ## See also  
-- [Release Notes: Important Issues in Windows Server 2016](../../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
-- [Storage Spaces Direct in Windows Server 2016](../../storage/storage-spaces/storage-spaces-direct-overview.md)  
+- [Release Notes: Important Issues in Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+- [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)  

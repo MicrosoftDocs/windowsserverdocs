@@ -6,13 +6,11 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: kumudd
-<<<<<<< HEAD
-=======
 ms.date: 08/18/2016
 ms.assetid: 0a988dc0-37e6-4b56-a411-5896af814eda
->>>>>>> e6e83134c430d5e7f90dc257001f1cac9e7ad31f
 ---
-# Storage Spaces Direct Hardware Requirements
+# Storage Spaces Direct hardware requirements
+
 > Applies To: Windows Server 2016
 
 We are working with our hardware partners to define and validate specific hardware configurations, including SAS HBA, SATA SSD and HDD, RDMA enabled network adapters etc. to make sure of a good user experience.
@@ -36,6 +34,6 @@ Storage Spaces Direct in Windows Server 2016 supports use of locally connected d
 ## See Also  
 - [Enabling Private Cloud Storage Using Servers with Local Disks](http://channel9.msdn.com/Events/Ignite/2015/BRK3474) (video)  
 - [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
-- [Health Service](../../failover-clustering/health-service/health-service-overview.md)  
+- [Health Service](../../failover-clustering/health-service-overview.md)  
 - [Storage Quality of Service](../storage-qos/storage-qos-overview.md)  
 - [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)

@@ -1,31 +1,16 @@
 ---
-title: What's New in Failover Clustering in Windows Server
-ms.custom: na
+title: What's new in Failover Clustering in Windows Server
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 author: kumudd
 ms.author: kumud
+ms.date: 09/15/2016
 ---
-# What's New in Failover Clustering in Windows Server 2016
+# What's new in Failover Clustering in Windows Server 2016
 > Applies To: Windows Server 2016
 
 This topic explains the new and changed functionality in Failover Clustering in Windows Server 2016.  
-
--   [Cluster Operating System Rolling Upgrade](#BKMK_RollingUpgrade) 
--   [Storage Replica](#BKMK_SR)  
--   [Cloud Witness](#BKMK_CloudWitness)
--   [Virtual Machine Resiliency](#BKMK_VMs)  
--   [Diagnostic Improvements](#BKMK_Diagnostics)  
--   [Site-aware Failover Clusters](#BKMK_SiteAware)  
--   [Workgroup and Multi-domain Clusters](#BKMK_multidomainclusters)  
--   [Virtual Machine Node Fairness](#BKMK_VMNodeFairness)  
--   [Virtual Machine Start Order](#BKMK_VMStartOrder)  
--   [Simplified SMB Multichannel and Multi-NIC Cluster Networks](#BKMK_SMBMultiChannel)  
 
 ## <a name="BKMK_RollingUpgrade"></a>Cluster Operating System Rolling Upgrade  
 A new feature in Failover Clustering, Cluster Operating System Rolling Upgrade, enables an administrator to upgrade the operating system of the cluster nodes from  Windows Server 2012 R2  to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.  
@@ -52,7 +37,7 @@ The cluster operating systems for the upgrade in phases are as follows for each 
 -   Eventually, all nodes are upgraded to Windows Server 2016.  
 -   Cluster functional level is then changed to Windows Server 2016 using the Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`. At this point, you can take advantage of the Windows Server 2016 features.  
 
-For more information, see [Cluster Operating System Rolling Upgrade](Cluster-Operating-System-Rolling-Upgrade.md).  
+For more information, see [Cluster Operating System Rolling Upgrade](cluster-operating-system-rolling-upgrade.md).  
 
 ## <a name="BKMK_SR"></a>Storage Replica  
 Storage Replica (SR) is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.  
@@ -101,7 +86,7 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Provides a very low on-going cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes' state changes).  
 
-For more information, see   [Deploy a Cloud Witness For a Failover Cluster](Deploy-a-Cloud-Witness-for-a-Failover-Cluster.md).  
+For more information, see [Deploy a Cloud Witness For a Failover Cluster](deploy-cloud-witness.md).  
 
 **What works differently?**  
 
@@ -154,7 +139,7 @@ Virtual machine Start Order is a new feature in Failover Clustering that introdu
 ## <a name="BKMK_SMBMultiChannel"></a> Simplified SMB Multichannel and Multi-NIC Cluster Networks  
 Failover Cluster networks are no longer limited to a single NIC per subnet / network. With Simplified SMB Multichannel and Multi-NIC Cluster Networks, network configuration is automatic and every NIC on the subnet can be used for cluster and workload traffic. This enhancement allows customers to maximize network throughput for Hyper-V, SQL Server Failover Cluster Instance, and other SMB workloads.  
 
-For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks.md).
+For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](smb-multichannel.md).
 
 ##See Also  
 * [Storage](../storage/storage-overview.md)  
