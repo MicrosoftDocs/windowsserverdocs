@@ -1,18 +1,13 @@
 ---
-title: What's new in Data Deduplication
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+title: What's New in Data Deduplication
+ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: eldenc
 ms.author: wgries
----
-# What's new in Data Deduplication
+ms.date: 09/15/2016
+--- 
+# What's New in Data Deduplication
 > Applies to Windows Server 2016
 
 [Data Deduplication](overview.md) in Windows Server 2016 has been optimized to be highly performant, flexible, and manageable at private cloud scale. For more information about the software-defined storage stack in Windows Server 2016, please see [What's New in Storage in Windows Server 2016](../whats-new-file-storage-services-windows-server-2016.md).

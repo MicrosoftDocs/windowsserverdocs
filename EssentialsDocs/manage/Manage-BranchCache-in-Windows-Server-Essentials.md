@@ -2,18 +2,17 @@
 title: "Manage BranchCache in Windows Server Essentials"
 ms.custom: na
 ms.date: 08/29/2016
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: f6e05aec-d07c-4e0b-94ab-f20279e9ffd1
 caps.latest.revision: 18
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es

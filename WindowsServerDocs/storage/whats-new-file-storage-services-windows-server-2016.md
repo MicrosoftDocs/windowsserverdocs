@@ -1,27 +1,18 @@
 ---
-title: What's New in Storage in Windows Server
-ms.custom: na
+title: What's new in storage in Windows Server
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: article
-author: JasonGerend
-manager: dongill
 ms.author: jgerend
+ms.manager: dongill
+ms.technology: storage
+ms.topic: article
+author: kumudd
+ms.date: 09/15/2016
 --- 
-# What's New in Storage in Windows Server 2016
+# What's new in storage in Windows Server 2016
 
 >Applies To: Windows Server 2016
 
-This topic explains the new and changed functionality in Storage in Windows Server 2016.  
-* [Storage Spaces Direct](#s2d)
-* [Storage Replica](#storage-replica)  
-* [Storage Quality of Service](#storage-qos)  
-* [Data Deduplication](#dedup)  
-* [SMB hardening improvements](#smb-hardening-improvements)   
+This topic explains the new and changed functionality in Storage in Windows Server 2016.
 
 ## <a name="s2d"></a>Storage Spaces Direct  
 Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies the deployment and management of software-defined storage systems and unlocks use of new classes of disk devices, such as SATA SSD and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
@@ -86,7 +77,7 @@ For more information, see [Storage Quality of Service](software-defined-storage/
 | [Simplified Backup Support](data-deduplication/whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](https://technet.microsoft.com/en-us/library/hh758173.aspx), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
 | [Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](../compute/failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
-### <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections  
+## <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections  
 In Windows 10 and Windows Server 2016 client connections to the Active Directory Domain Services default SYSVOL and NETLOGON shares on domain controllers now require SMB signing and mutual authentication (such as Kerberos).   
 
 **What value does this change add?**  
@@ -99,6 +90,18 @@ If SMB signing and mutual authentication are unavailable, a Windows 10 or Window
 > The registry values for these settings aren't present by default, but the hardening rules still apply until overridden by Group Policy or other registry values.  
 
 For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](http://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](http://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
+
+## Work Folders
+Improved change notification when the Work Folders sever is running Windows Server 2016 and the Work Folders client is Windows 10.
+
+**What value does this change add?**<br>
+For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients are not notified of the change and wait up to 10 minutes to get the update.  When using Windows Sever 2016, the Work Folders server immediately notifies Windows 10 clients and the file changes are synced immediately.
+
+**What works differently?**<br>
+This capability is new in Windows Server 2016. This requires a Windows Server 2016 Work Folders server and the client must be Windows 10.
+
+If you’re using an older client or the Work Folders server is Windows Server 2012 R2, the client will continue to poll every 10 minutes for changes.
+
 
 ## See also  
 * [What's New in Windows Server 2016](../get-started/What-s-New-in-Windows-Server-2016-Technical-Preview-5.md)  

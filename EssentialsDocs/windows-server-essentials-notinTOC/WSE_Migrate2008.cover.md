@@ -8,8 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0b07a61f-7a38-4284-87c2-18c3afa1dc2f
 caps.latest.revision: 5
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 ---
 # WSE_Migrate2008.cover
 ## Migrating Windows Small Business Server 2008 to Windows Server 2012 Essentials  

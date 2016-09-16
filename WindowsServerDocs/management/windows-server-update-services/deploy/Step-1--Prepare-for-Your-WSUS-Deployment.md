@@ -3,11 +3,12 @@ title: Step 1 - Prepare for Your WSUS Deployment
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
-ms.suite: na
-ms.technology:
-ms.tgt_pltfrm: na
+ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
 # Step 1: Prepare for Your WSUS Deployment
 

@@ -13,12 +13,13 @@ Knowing and following the rules helps you get your pull request accepted faster.
 ##Rules
 
 - All files must be in markdown and use the .md file extension.
-- Use sentence case and only letters, numbers, and hyphens. [Sentence case](http://grammar.about.com/od/rs/g/Sentence-Case.htm) means capitalize the first word and proper nouns only. Trademarked names such as Windows are proper nouns, but features generally aren't.
+- Keep the file names to 3-5 words if possible - 10 words is really too long for readability and SEO.
+- Use lower case and only letters, numbers, and hyphens.
 - No spaces or punctuation characters. Use a hyphen to separate words and numbers in the file name.
-- No more than 80 characters - this is a publishing system limit.
-- Use the short form of action verbs, not the '-ing' form:"Deploy-Nano-Server" not "Deploying-Nano-Server"
+- Use the short form of action verbs, not the '-ing' form:"deploy-nano-server" not "Deploying-Nano-Server"
 - Leave out small words, such as a, and, the, in, or.
 - Spell words out; avoid unapproved or unnecessary acronyms in file names
+- File names should be unique - instead of "overview.md" use "storage-spaces-overview.md"
 
 Acronyms and initialisms in file names - specific guidelines:
 
@@ -29,7 +30,9 @@ Acronyms and initialisms in file names - specific guidelines:
 
 Review the list of articles in the repository to get an idea of existing names. Here's the general pattern:
 
- **component-platform-language-content-product-version.md**
+ **component-topic-title.md**
+ 
+For example, "storage-spaces-direct-overview.md"
 
 ##File name approval
 
@@ -38,6 +41,12 @@ When you submit a new file, pull request reviewers review the name and provide f
 ##Folders in the repo
 
 Use the existing folder structure. Don't create folders without getting approval from a repository admin. Talk to them if you think you need a new folder.
+
+The GitHub repository should have a simple and relatively flat folder structure – \<area>\\\<technology> - for example storage\data-deduplication. Doing so has the following advantages:
+ - It’s very simple.
+ - It’s closer to how Azure.com works
+ - It makes it easy for writers/PMs to quickly find their topics – no need to dig around through other folders looking for where a particular technology is nested.
+ - It keeps the URL short, which is good for SEO and user experience, customers occasionally look at the URL for cues.
 
 ##Changing case in file names
 

@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: db15dcf5-4d64-48d7-818a-06c2839e1289
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB

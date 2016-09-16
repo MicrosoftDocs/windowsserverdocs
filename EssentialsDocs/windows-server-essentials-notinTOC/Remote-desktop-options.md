@@ -13,8 +13,8 @@ applies_to:
   - Windows Storage Server 2012 R2 Essentials
 ms.assetid: 51076946-ea9b-4ac7-9a6e-d6023816b97d
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Remote desktop options
@@ -64,6 +64,6 @@ manager: stevenka
   
 ## See also  
   
--   [Manage Remote Web Access](../windows-server-essentials/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
+-   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
--   [Use Remote Web Access](../windows-server-essentials/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)
+-   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)

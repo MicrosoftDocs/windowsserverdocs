@@ -8,8 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 073090f7-6880-43fe-a7d1-92eb3dba901c
 caps.latest.revision: 4
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 ---
 # WSE_Migrate2003.cover
 ## Migrating Windows Small Business Server 2003 to Windows Small Business Server “8�? Beta  

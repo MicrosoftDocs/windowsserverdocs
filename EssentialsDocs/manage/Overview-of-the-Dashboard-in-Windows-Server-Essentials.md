@@ -2,18 +2,17 @@
 title: "Overview of the Dashboard in Windows Server Essentials"
 ms.custom: na
 ms.date: 01/14/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: f70a79de-9c56-4496-89b5-20a1bff2293e
 caps.latest.revision: 17
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Overview of the Dashboard in Windows Server Essentials
@@ -94,7 +93,7 @@ manager: stevenka
   
 |Section|Description|  
 |-------------|-----------------|  
-|Home|The **Home** page appears by default each time that you open the Dashboard. It includes tasks and information in the following categories:<br /><br /> **SETUP** – Complete the tasks in this category to configure your server for the first time. For information about these tasks, see [Install and Configure Windows Server 2012 Essentials](../Topic/Install%20and%20Configure%20Windows%20Server%202012%20Essentials.md).<br /><br /> **EMAIL** – Choose an option in this category to integrate an email service with the server.<br /><br /> **Note:** This category is only available in Windows Server 2012 Essentials.<br /><br /> **SERVICES** – Choose a task in this category to integrate Microsoft online services with the server.<br /><br /> **Note:** This category is only available in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> **ADD-INS** – Click this category to install valuable add-ins for your business.<br /><br /> **QUICK STATUS** – Displays high-level server status. Click a status to view information and configuration options for that feature. If you complete all of the tasks in the SETUP category, this category appears at the top of the Category pane.<br /><br /> **HELP** – Use the Search box to search for help on the Web. Click a link to visit the website for the selected support option.|  
+|Home|The **Home** page appears by default each time that you open the Dashboard. It includes tasks and information in the following categories:<br /><br /> **SETUP** – Complete the tasks in this category to configure your server for the first time. For information about these tasks, see [Install and Configure Windows Server 2012 Essentials](../install/Install-and-Configure-Windows-Server-2012-Essentials.md).<br /><br /> **EMAIL** – Choose an option in this category to integrate an email service with the server.<br /><br /> **Note:** This category is only available in Windows Server 2012 Essentials.<br /><br /> **SERVICES** – Choose a task in this category to integrate Microsoft online services with the server.<br /><br /> **Note:** This category is only available in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> **ADD-INS** – Click this category to install valuable add-ins for your business.<br /><br /> **QUICK STATUS** – Displays high-level server status. Click a status to view information and configuration options for that feature. If you complete all of the tasks in the SETUP category, this category appears at the top of the Category pane.<br /><br /> **HELP** – Use the Search box to search for help on the Web. Click a link to visit the website for the selected support option.|  
 |Users|For users to access the resources that Windows Server Essentials provides, you need to create user accounts by using the Windows Server Essentials Dashboard. After creating user accounts, you can manage the accounts by using the tasks that are available on the **Users** page of the Dashboard. Tasks that you can perform on this page include:<br /><br /> - View a list of user accounts.<br /><br /> - View and manage user account properties.<br /><br /> - Activate or deactivate user accounts.<br /><br /> - Add or remove user accounts.<br /><br /> - Assign local network accounts to Microsoft online services accounts if your server is integrated with Office 365.<br /><br /> - Change user account passwords and manage the password policy.<br /><br /> For information about managing user accounts, see [Manage User Accounts](Manage-User-Accounts-in-Windows-Server-Essentials.md).|  
 |User groups|**Note:** This feature is available only in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> Tasks that you can perform on this page include:<br /><br /> - View a list of user groups.<br /><br /> - View and manage user groups.<br /><br /> - Add or remove user groups.|  
 |Distribution groups|**Note:** This feature is available only in Windows Server 2012 R2 Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled. This tab is only displayed when Windows Server Essentials is integrated with Office 365.<br /><br /> Tasks that you can perform on this page include:<br /><br /> - View a list of distribution groups.<br /><br /> - Add or remove distribution groups.|  
