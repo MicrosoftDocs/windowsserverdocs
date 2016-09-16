@@ -4,11 +4,11 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-networking
+ms.technology: networking-hv-switch
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 68c35b64-4d24-42be-90c9-184f2b5f19be
+ms.author: jamesmci
 author: jamesmci
 ---
 # Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)

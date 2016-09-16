@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
+ms.author: jamesmci
 author: jamesmci
 ---
 # Create, Delete, or Update Tenant Virtual Networks

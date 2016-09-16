@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-nict
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abc08a10-4b97-47d0-8876-9223c7b79691
+ms.author: jamesmci
 author: jamesmci
 ---
 # Create a New NIC Team

@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # DirectAccess Test Lab Guides

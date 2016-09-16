@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Step 2 Plan the Multisite Infrastructure

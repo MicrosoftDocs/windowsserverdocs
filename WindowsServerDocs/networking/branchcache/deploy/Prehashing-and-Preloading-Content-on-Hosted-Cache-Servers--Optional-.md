@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
+ms.author: jamesmci
 author: jamesmci
 ---
 # Prehashing and Preloading Content on Hosted Cache Servers (Optional)

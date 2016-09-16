@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - techgroup-management-and-automation
+ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # View Task Details and Notifications
 
 >Applies To: Windows Server 2016 Technical Preview

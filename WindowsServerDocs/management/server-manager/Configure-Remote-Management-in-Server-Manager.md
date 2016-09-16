@@ -4,13 +4,15 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
-  - techgroup-management-and-automation
+ms.technology: manage-server-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
-author: coreyp-at-msft
+author: coreyp
+ms.author: coreyp-at-msft
+ms.date: 09/14/2016
 ---
+
 # Configure Remote Management in Server Manager
 
 >Applies To: Windows Server Technical Preview
