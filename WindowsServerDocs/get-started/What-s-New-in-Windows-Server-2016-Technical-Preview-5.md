@@ -107,12 +107,11 @@ For more details and instructions for working with shielded virtual machines, se
 ## <a name="BKMK_Storage"></a>Storage  
 This area covers storage products and features for the IT professional to design, deploy, and maintain Windows Server Technical Preview.  
   
--   [What's New in File and Storage Services in Windows Server 2016 Technical Preview](../storage/whats-new-file-storage-services-windows-server-2016.md). **For Technical Preview 5**, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.   
+-   [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md). **For Technical Preview 5**, enhancements include simplification, manageability, and smaller scale Storage Spaces Direct. The new Health Service continues to improve the day-to-day monitoring, operations, and maintenance experience of Storage Spaces Direct. Storage Replica brings flexibility by expanding stretch clusters to asynchronous support, delegation of administration, and improved efficiency with support for thinly provisioned storage.   
   
--   [What's New in Failover Clustering in Windows Server Technical Preview](../compute/failover-clustering/whats-new-failover-clustering-windows-server.md). **For Technical Preview 5** new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
+-   [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md). **For Technical Preview 5** new additions include VM Node Fairness to seamless load balancing of Virtual Machines (VMs) across the nodes in a cluster, VM Start Order introduces start order orchestration for virtual machines (and all groups) in a cluster, and Simplified SMB Multi-channel and Multi-NIC Cluster Networks to make it easier to set up high speed networks on Scale-out File Servers.  
   
 ## See Also  
-  
 -   [Release Notes: Important Issues in Windows Server 2016 Technical Preview](Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
   
 

@@ -131,12 +131,12 @@ Shielded virtual machines use several features to make it harder for Hyper-V adm
   
 >[!NOTE]  
 > As of Technical Preview 5, shielded virtual machines are compatible with Hyper-V Replica. To replicate a shielded virtual machine, the host you want to replicate to must be authorized to run that shielded virtual machine.  
-  
+
 ## <a name="BKMK_StartOrder"></a>Start order priority for clustered virtual machines \(New\)
 This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as New-ClusterGroupSet, Get-ClusterGroupSet, and Add-ClusterGroupSetDependency.
 .  
 ## <a name="BKMK_QoS"></a>Storage quality of service (QoS) \(Updated\)
-You can now create storage QoS policies on a Scale-Out File Server and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](../../storage/software-defined-storage/Storage-Quality-of-Service.md).  
+You can now create storage QoS policies on a Scale-Out File Server and assign them to one or more virtual disks on Hyper-V virtual machines. Storage performance is automatically readjusted to meet policies as the storage load fluctuates. For details, see [Storage Quality of Service](../../storage/storage-qos/storage-qos-overview.md).  
   
 ## <a name="BKMK_Config"></a>Virtual machine configuration file format \(Updated\)
 Virtual machine configuration files use a new format that makes reading and writing configuration data more efficient. The format also makes data corruption less likely if a storage failure occurs. Virtual machine configuration data files use a .vmcx file name extension and runtime state data files use a .vmrs file name extension.  
