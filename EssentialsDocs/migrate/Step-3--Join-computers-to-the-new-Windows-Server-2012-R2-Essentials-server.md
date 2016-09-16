@@ -2,18 +2,17 @@
 title: "Step 3: Join computers to the new Windows Server 2012 R2 Essentials server"
 ms.custom: na
 ms.date: 08/20/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: a0e07d1a-8409-429b-87d7-0f4a7e14d668
 caps.latest.revision: 11
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Step 3: Join computers to the new Windows Server 2012 R2 Essentials server
@@ -49,10 +48,10 @@ The next step in the migration process is to connect client computers to the new
 4.  Follow the onscreen instructions to join the client computer to the new  Windows Server 2012 R2 Essentials server.  
   
 ## Next steps  
- You have joined your client computers to the new server running  Windows Server 2012 R2 Essentials. Now go to [Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration](../Topic/Step%204:%20Move%20settings%20and%20data%20to%20the%20Destination%20Server%20for%20Windows%20Server%202012%20R2%20Essentials%20migration.md).  
+ You have joined your client computers to the new server running  Windows Server 2012 R2 Essentials. Now go to [Step 4: Move settings and data to the Destination Server for Windows Server 2012 R2 Essentials migration](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-2012-R2-Essentials-migration.md).  
   
-<<<<<<< HEAD
+
  To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
-=======
- To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+ To view all the steps, see [Migrate to Windows Server 2012 R2 Essentials](Migrate-from-Previous-Versions-to-Windows-Server-2012-R2-Essentials-or-Windows-Server-Essentials-Experience.md).
+

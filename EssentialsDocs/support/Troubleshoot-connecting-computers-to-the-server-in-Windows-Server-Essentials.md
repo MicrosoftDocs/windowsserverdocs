@@ -2,18 +2,17 @@
 title: "Troubleshoot connecting computers to the server in Windows Server Essentials"
 ms.custom: na
 ms.date: 08/22/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 caps.latest.revision: 22
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 translation.priority.ht: 
   - de-de
   - es-es
@@ -36,7 +35,7 @@ translation.priority.ht:
   
  This topic provides solutions for the following issues:  
   
-<<<<<<< HEAD
+
 -   Issue 1: [Issue 1](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
   
 -   Issue 2: [Issue 2](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
@@ -58,7 +57,7 @@ translation.priority.ht:
 -   Issue 10: [Issue 10](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
   
 -   Issue 11: [Issue 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
-=======
+
 -   Issue 1: [Issue 1](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
   
 -   Issue 2: [Issue 2](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
@@ -80,7 +79,7 @@ translation.priority.ht:
 -   Issue 10: [Issue 10](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
   
 -   Issue 11: [Issue 11](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ##  <a name="BMRK_Package"></a> Issue 1  
  **Issue**  

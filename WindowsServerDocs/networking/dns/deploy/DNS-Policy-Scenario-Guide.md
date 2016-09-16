@@ -4,11 +4,13 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
+ms.prod: windows-server-threshold
 ms.technology: 
-  - techgroup-networking
+  - networking-dns
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
+ms.author: jamesmci
 author: jamesmci
 ---
 # DNS Policy Scenario Guide

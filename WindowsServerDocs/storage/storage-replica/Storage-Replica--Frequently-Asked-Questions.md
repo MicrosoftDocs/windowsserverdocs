@@ -1,17 +1,13 @@
 ---
 title: Frequently Asked Questions about Storage Replica
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-author: kumudd
 manager: dongill
 ms.author: JGerend
+ms.technology: storage-replica
+ms.topic: get-started-article
+author: kumudd
+ms.date: 08/18/2016
+ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
 

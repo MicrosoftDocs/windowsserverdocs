@@ -5,10 +5,11 @@ ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
-  - techgroup-networking
+  - networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de285d13-9e54-4c46-88f0-607182e5e3dc
+ms.author: coreyp
 author: coreyp-at-msft
 ---
 # Monitor the configuration distribution status of the Remote Access server

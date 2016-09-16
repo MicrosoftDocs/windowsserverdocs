@@ -2,19 +2,18 @@
 title: "Prepare your Source Server for Windows Server 2012 Essentials migration2"
 ms.custom: na
 ms.date: 11/20/2012
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 H1: Prepare your Source Server for Windows Server 2012 Essentials migration
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: c6e25f9e-1018-42d2-ac20-0b08ca4f4630
 caps.latest.revision: 7
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Prepare your Source Server for Windows Server 2012 Essentials migration2
@@ -22,7 +21,7 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 #### To prepare for migration  
   
-<<<<<<< HEAD
+
 1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
 2.  [Install the most recent service packs](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
@@ -34,7 +33,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 5.  [Run the Migration Preparation Tool on the Source Server](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_MPT)  
   
 6.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
-=======
+
 1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
 2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
@@ -46,7 +45,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 5.  [Run the Migration Preparation Tool on the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_MPT)  
   
 6.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-2012-Essentials-migration2.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
@@ -63,11 +62,11 @@ Complete the following preliminary steps to ensure that the settings and data on
 ###  <a name="BKMK_Verify"></a> Verify the network configuration  
  Before you can migrate your network to  Windows Server 2012 Essentials, you must install and configure a router on your network and configure the Source Server to use one network adapter. When you are done, your network will look like the following figure.  
   
-<<<<<<< HEAD
+
  ![Example small business network](media/WSE_Network.png "WSE_Network")  
-=======
+
  ![Example small business network](../migrate/media/WSE_Network.png "WSE_Network")  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 #### Disable the VPN on the Source Server  
  If you are using a VPN on the Source Server, disable it.  

@@ -2,12 +2,13 @@
 title: Set up the lab environment for AD FS in Windows Server 2012 R2
 description:
 author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.service: active-directory
-ms.technology: active-directory-federation-services
+ms.technology: identity-adfs
 ---
 
 # Set up the lab environment for AD FS in Windows Server 2012 R2

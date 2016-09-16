@@ -1,25 +1,21 @@
 ---
 title: Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
 ms.prod: windows-server-threshold
 manager: dongill
 ms.author: JGerend
-ms.technology:
-  - techgroup-storage
-ms.tgt_pltfrm: na
+ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: kumudd
+ms.date: 08/18/2016
 ---
 # Hyper-converged solution using Storage Spaces Direct in Windows Server 2016
 
->Applies To: Windows Server Technical Preview
+>Applies To: Windows Server 2016
 
-Windows Server 2016 Technical Preview introduces Storage Spaces Direct, which enables building highly available (HA) storage systems with local storage. This is a significant step forward in Microsoft Windows Server software-defined storage (SDS) as it simplifies the deployment and management of SDS systems and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
+Windows Server 2016 introduces Storage Spaces Direct, which enables building highly available storage systems with local storage. This is a significant step forward in Windows Server software-defined storage (SDS) as it simplifies the deployment and management of storage and also unlocks use of new classes of disk devices, such as SATA and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.  
 
-Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct (S2D), and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 Technical Preview and includes the following sections:  
+Windows Server 2016 provides a hyper-converged solution by allowing the same set of servers to provide SDS, through Storage Spaces Direct , and serve as the hosts for virtual machines using Hyper-V. This guide provides instructions to create a hyper-converged solution using Storage Spaces Direct in Windows Server 2016 and includes the following sections:  
 *  [How to use this guide](#BKMK_S2D1)  
 * [Hyper-converged Solution with Software Defined Storage Overview](#BKMK_S2D2)  
 *  [Hardware requirements](#BKMK_S2D3)  
@@ -50,7 +46,7 @@ The **hyper-converged** deployment scenario has the Hyper-V (compute) and Storag
 
 We are working with our hardware partners to define and validate specific hardware configurations, including SAS HBA, SATA SSD and HDD, RDMA enabled network adapters etc. to ensure a good user experience. You should contact your hardware vendors for the solutions that they have verified are compatible for use with Storage Spaces Direct.  
 
-If you would like to evaluate Storage Spaces Direct in Windows Server 2016 Technical Preview without investing in hardware, you can use Hyper-V virtual machines, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
+If you would like to evaluate Storage Spaces Direct in Windows Server 2016 without investing in hardware, you can use Hyper-V virtual machines, see [Testing Storage Spaces Direct using Windows Server 2016 virtual machines](http://blogs.msdn.com/b/clustering/archive/2015/05/27/10617612.aspx).  
 
   > [!NOTE]
   > Storage Spaces Direct does not support disks connected via multiple paths, and the Microsoft Multipath MPIO software stack.  
@@ -88,10 +84,10 @@ The following information will be needed as inputs to configure provision and ma
         -   There are 2 types of RDMA protocols, note which type your RDMA adapter is (RoCEv2 or iWarp)  
 
     -   VLAN ID to be used for the 2 network interfaces used by the management OS on the hyper-converged hosts. You should be able to obtain this from your network administrator.  
--   **[Service Package KB3157663](https://support.microsoft.com/kb/3157663)**  This package has updates that are important to have the hyper-converged nodes, as well as any server managing a Windows Server 2016 Technical Preview hyper-converged deployment.  
+-   **[Service Package KB3157663](https://support.microsoft.com/kb/3157663)**  This package has updates that are important to have the hyper-converged nodes, as well as any server managing a Windows Server 2016 hyper-converged deployment.  
 
 ## <a name="BKMK_InstallOptions"></a>Nano or Full/Core Installation Options  
-Hyper-converged deployments can be done using either Nano or Full/Core installations of Windows Server 2016 Technical Preview. Nano is a new install type for Windows Server 2016 Technical Preview, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx) for more information on the advantages of using Nano and deploying and managing Nano server.   
+Hyper-converged deployments can be done using either Nano or Full/Core installations of Windows Server 2016. Nano is a new install type for Windows Server 2016, see [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx) for more information on the advantages of using Nano and deploying and managing Nano server.   
 This guide focuses on deploying hyper-converged systems using Nano server and the "Deploy the operating system" section is a step-by-step method of deploying Nano server.  
 However, the steps in the "Configure the Network" and "Configure Storage Spaces Direct" sections are identical whether you are using Nano or Full or Core installations.  
 For full and core installations, instead of following the "Deploy the operating system" in this guide, you can deploy Windows Server 2012 Datacenter like you would any other Failover Cluster deployment.  This includes joining them to an Active Directory domain and installing the Hyper-V role and Failover Cluster feature.   
@@ -101,7 +97,7 @@ Nano server installations require all management to be done remotely, except wha
 
 ## <a name="BKMK_S2D5"></a> Nano Server: Installing and configuring Hyper-Converged solution with Storage Spaces Direct  
 
-This section includes instructions to install and configure the components of a Hyper-Converged system using the Windows Server 2016 Technical Preview with a Nano Server configuration of the operating system. The act of deploying a Hyper-Converged system can be divided into three high level phases:  
+This section includes instructions to install and configure the components of a Hyper-Converged system using the Windows Server 2016 with a Nano Server configuration of the operating system. The act of deploying a Hyper-Converged system can be divided into three high level phases:  
 
 1.  [Deploy the operating system](#BKMK_S2D5a)  
 
@@ -109,7 +105,7 @@ This section includes instructions to install and configure the components of a 
 
 3.  [Configure Storage Spaces Direct](#BKMK_S2D5c)  
 
-Figure 2 illustrates the process for building a hyper-converged solution using Windows Server 2016 Technical Preview.  
+Figure 2 illustrates the process for building a hyper-converged solution using Windows Server 2016.  
 
 ![](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/S2D_HyperconvergedInfratsructureProcess.png)  
 
@@ -134,7 +130,7 @@ The provisioning and deployment process for a Windows Server Nano server involve
 
 **Management machine.** For the purposes of this document, the machine that has the management tools to remotely manage the Nano servers will be referred to as the Management system. The management system machine has the following requirements:  
 
-- Running Windows Server 2016 Technical Preview 5, domain joined to the same domain or fully trusted domain as the Nano systems.  
+- Running Windows Server 2016, domain joined to the same domain or fully trusted domain as the Nano systems.  
 
 - Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server 2016 and can be installed without installing other features.  
 

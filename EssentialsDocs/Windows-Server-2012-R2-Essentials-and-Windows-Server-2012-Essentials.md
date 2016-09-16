@@ -2,26 +2,24 @@
 title: "Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials"
 ms.custom: na
 ms.date: 05/20/2014
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
-caps.latest.revision: 26
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Windows Server 2012 R2 Essentials and Windows Server 2012 Essentials
-<<<<<<< HEAD
+
 **Windows Server 2012 R2 Essentials** (the latest version of Windows Server Essentials) is a flexible, affordable, and easy-to-use server solution designed and priced for small businesses with up to 25 users and 50 devices.  Windows Server 2012 R2 Essentials is an ideal first server, and it can also be used as the primary server in a multi-server environment for small businesses. For more information, see [What's New in Windows Server Essentials](What-s-New-in-Windows-Server-Essentials.md) and [download the Windows Server 2012 R2 Essentials evaluation](http://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7).  
-=======
-**Windows Server 2012 R2 Essentials** (the latest version of Windows Server Essentials) is a flexible, affordable, and easy-to-use server solution designed and priced for small businesses with up to 25 users and 50 devices.  Windows Server 2012 R2 Essentials is an ideal first server, and it can also be used as the primary server in a multi-server environment for small businesses. For more information, see [What's New in Windows Server Essentials](../intro/What-s-New-in-Windows-Server-Essentials.md) and [download the Windows Server 2012 R2 Essentials evaluation](http://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7).  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+**Windows Server 2012 R2 Essentials** (the latest version of Windows Server Essentials) is a flexible, affordable, and easy-to-use server solution designed and priced for small businesses with up to 25 users and 50 devices.  Windows Server 2012 R2 Essentials is an ideal first server, and it can also be used as the primary server in a multi-server environment for small businesses. For more information, see [What's New in Windows Server Essentials](What-s-New-in-Windows-Server-Essentials.md) and [download the Windows Server 2012 R2 Essentials evaluation](http://technet.microsoft.com/evalcenter/dn205288.aspx?wt.mc_id=TEC_144_1_7).  
+
   
  Windows Server Essentials is now available as the **Windows Server Essentials Experience server role** in the Standard and Datacenter editions of  Windows Server 2012 R2. Installing  Windows Server Essentials Experience in  Windows Server 2012 R2 provides you with all the features and functionalities (such as the Dashboard, client computer backups, and Remote Web Access) of  Windows Server 2012 R2 Essentials without the locks and limits that are imposed on it. For more information about this new server role, see the [Windows Server Essentials Experience Overview](assetId:///958ecbde-ba6f-4789-88da-58542b8b1faf).  
   
@@ -30,19 +28,19 @@ manager: stevenka
 ## In this library  
  For information about installing, configuring, managing, using, and troubleshooting Windows Server Essentials, see the following documentation:  
   
-<<<<<<< HEAD
--   [Install Windows Server Essentials](Install-Windows-Server-Essentials.md)  
-=======
--   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
+-   [Install Windows Server Essentials](install/Install-Windows-Server-Essentials.md)  
+
+-   [Install Windows Server Essentials](install/Install-Windows-Server-Essentials.md)  
+
   
--   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)  
+-   [Migrate Server Data to Windows Server Essentials](migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)  
   
--   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
+-   [Manage Windows Server Essentials](manage/Manage-Windows-Server-Essentials.md)  
   
--   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)  
+-   [Use Windows Server Essentials](use/Use-Windows-Server-Essentials.md)  
   
--   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)  
+-   [Support Windows Server Essentials](support/Support-Windows-Server-Essentials.md)  
   
 ## Updates and downloads  
   
@@ -56,7 +54,7 @@ manager: stevenka
   
 -   [Windows Server Essentials Media Pack](http://www.microsoft.com/download/details.aspx?id=40837)  
   
--   **Updates:** see [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)  
+-   **Updates:** see [Support Windows Server Essentials](support/Support-Windows-Server-Essentials.md)  
   
 ## Training and virtual labs  
  Before you start, read the minimum [system requirements](https://portal.holsystems.com/support/SitePages/Requirements.aspx). Select a virtual lab from the list, and then in the application called "holSystems LaunchPad Online," click **Run** to launch the lab.  

@@ -2,18 +2,17 @@
 title: "Troubleshoot Anywhere Access in Windows Server Essentials"
 ms.custom: na
 ms.date: 07/31/2013
-ms.prod: windows-server-2012-r2-essentials
+ms.prod: windows-server-2016-essentials
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 applies_to: 
-  - Windows Server 2012 Essentials
-  - Windows Server 2012 R2 Essentials
+  - Windows Server 2016 Essentials
 ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 caps.latest.revision: 8
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 
 ---
 # Troubleshoot Anywhere Access in Windows Server Essentials
@@ -45,14 +44,14 @@ This topic provides general instructions for using the Repair Anywhere Access wi
 ## Additional troubleshooting for Anywhere Access  
  If the Repair Anywhere Access wizard cannot repair Anywhere Access, check the following troubleshooting resources for issues related to Remote Web Access, VPN, and DirectAccess:  
   
-<<<<<<< HEAD
+
 -   [Troubleshoot Remote Web Access connectivity](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
   
 -   [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
-=======
+
 -   [Troubleshoot Remote Web Access connectivity](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
   
 -   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
->>>>>>> 4bac1739fd0378146de6c9af26f683b8076754b8
+
   
 -   Check the [Windows Server Essentials Forum](http://social.technet.microsoft.com/Forums/winserveressentials/threads) for the most recent issues reported by the  Windows Server 2012 Essentials community.

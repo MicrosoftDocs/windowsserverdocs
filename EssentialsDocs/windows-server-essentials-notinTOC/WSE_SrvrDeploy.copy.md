@@ -8,12 +8,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b0c52599-c519-40b8-852f-ff92d6840d8d
 caps.latest.revision: 2
-author: DonGill
-manager: stevenka
+author: coreyp-at-msft
+ms.author: coreyp
 ---
 # WSE_SrvrDeploy.copy
 ## Copyright information  
- This document is provided “as-is”. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
+ This document is provided “as-is�?. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
   
  Some examples depicted herein are provided for illustration only and are fictitious.  No real association or connection is intended or should be inferred.  
   
