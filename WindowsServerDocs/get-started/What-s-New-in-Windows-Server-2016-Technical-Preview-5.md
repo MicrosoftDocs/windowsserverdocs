@@ -70,8 +70,6 @@ You can now both mirror and route traffic to new or existing virtual appliances.
 ### TCP performance improvements
 The default Initial Congestion Window (ICW) has been increased from 4 to 10 and TCP Fast Open (TFO) has been implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
-TCP Tail Loss Probe (TLP) and Recent ACKnowledgement (RACK)
-
 In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgement (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.  
   
 ## <a name="BKMK_Security"></a>Security  
