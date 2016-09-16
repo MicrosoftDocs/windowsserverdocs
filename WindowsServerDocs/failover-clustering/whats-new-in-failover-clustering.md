@@ -142,5 +142,5 @@ Failover Cluster networks are no longer limited to a single NIC per subnet / net
 For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Networks](smb-multichannel.md).
 
 ## See Also  
-* [Storage](../storage/storage-overview.md)  
+* [Storage](../storage/storage.md)  
 * [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md)  

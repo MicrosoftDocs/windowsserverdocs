@@ -15,8 +15,7 @@ ms.author: jaimeo
 manager: dongill
 ---
 # Windows Server 2016 Technical Preview 5
-
->Applies To: Windows Server Technical Preview
+> Applies To: Windows Server Technical Preview
 
 **[This information is preliminary and subject to change.]**  
 
@@ -36,7 +35,7 @@ This is the fifth release of Windows Server 2016 Technical Preview. In this docu
 
 -   [Networking](../networking/Networking.md)  
 
--   [Storage](../storage/storage-overview.md)  
+-   [Storage](../storage/storage.md)  
 
 -   [Security and Assurance](../security/Security-and-Assurance.md)  
 

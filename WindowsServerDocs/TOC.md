@@ -767,7 +767,7 @@
 ##### [Troubleshoot the Windows Server 2016 Technical Preview Software Defined Networking Stack](networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md)
 #### [System Center Technologies for Software Defined Networking](networking/sdn/Sc-Tech-for-Sdn.md)
 #### [Microsoft Azure and Software Defined Networking](networking/sdn/Azure_and_Sdn.md)
-## [Storage](storage/storage-overview.md)
+## [Storage](storage/storage.md)
 ### [What's New in Storage](storage/whats-new-in-storage.md)
 ### [Data Deduplication](storage/data-deduplication/overview.md)
 #### [What's New in Data Deduplication](storage/data-deduplication/whats-new.md)

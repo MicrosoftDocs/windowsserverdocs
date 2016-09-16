@@ -8,8 +8,7 @@ ms.technology: storage-failover-clustering
 ms.date: 09/15/2016
 ---
 # Failover Clustering
-
->Applies To: Windows Server 2016
+> Applies To: Windows Server 2016
 
 Failover clusters provide high availability and scalability to many server workloads. These include server applications such as Microsoft Exchange Server, Hyper-V, Microsoft SQL Server, and file servers. The server applications can run on physical servers or virtual machines. This topic describes the Failover Clustering feature and provides links to additional guidance about creating, configuring, and managing failover clusters that can scale to 64 physical nodes and to 8,000 virtual machines.
 
@@ -40,4 +39,4 @@ This has many practical applications, including:
 | Operations | <ul><li>[Configure and Manage the Quorum in a Failover Cluster](https://technet.microsoft.com/library/jj612870.aspx)</li><li>[Use Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/jj612868.aspx)</li><li>[Cluster-Aware Updating Overview](https://technet.microsoft.com/library/hh831694.aspx)</li></ul> |
 | Tools and Settings | <ul><li>[Failover Clustering PowerShell Cmdlets](http://go.microsoft.com/fwlink/p/?LinkId=233200)</li></ul> |
 | Community Resources | <ul><li>[High Availability (Clustering) Forum](http://go.microsoft.com/fwlink/p/?LinkId=230641)</li><li>[Failover Clustering and Network Load Balancing Team Blog](http://blogs.msdn.com/b/clustering/)</li></ul> |
-| Related Technologies | <ul><li>[Hyper-V Overview](https://technet.microsoft.com/library/hh831531.aspx)</li><li>[Storage Overview](../storage/storage-overview.md)</li><li>[Storage Spaces Overview](https://technet.microsoft.com/library/hh831739.aspx)</li><li>[Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx)</li><li>[Network Load Balancing Overview](https://technet.microsoft.com/library/hh831698.aspx)</li><li>[Microsoft SQL Server](https://www.microsoft.com/sqlserver/default.aspx)</li><li>[Microsoft Server and Cloud Platform](https://www.microsoft.com/server-cloud/)</li><li>[System Center Virtual Machine Manager](https://technet.microsoft.com/systemcenter/vmm/default.aspx)</li></ul> 
+| Related Technologies | <ul><li>[Hyper-V Overview](https://technet.microsoft.com/library/hh831531.aspx)</li><li>[Storage Overview](../storage/storage.md)</li><li>[Storage Spaces Overview](https://technet.microsoft.com/library/hh831739.aspx)</li><li>[Scale-Out File Server for Application Data Overview](https://technet.microsoft.com/library/hh831349.aspx)</li><li>[Network Load Balancing Overview](https://technet.microsoft.com/library/hh831698.aspx)</li><li>[Microsoft SQL Server](https://www.microsoft.com/sqlserver/default.aspx)</li><li>[Microsoft Server and Cloud Platform](https://www.microsoft.com/server-cloud/)</li><li>[System Center Virtual Machine Manager](https://technet.microsoft.com/systemcenter/vmm/default.aspx)</li></ul> 

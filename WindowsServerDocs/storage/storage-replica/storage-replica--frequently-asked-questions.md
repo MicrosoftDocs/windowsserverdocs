@@ -196,5 +196,5 @@ For technical assistance with Storage Replica, you can post at the Microsoft Tec
 - [Storage Replica: Known Issues](storage-replica--known-issues.md)  
 
 ## See Also  
-- [Storage Overview](../storage-overview.md)  
+- [Storage Overview](../storage.md)  
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)  
